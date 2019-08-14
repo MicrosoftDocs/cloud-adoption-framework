@@ -39,7 +39,9 @@
     "globalMetadata": {
       "breadcrumb_path": "/azure/cloud-adoption-framework/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/cloud-adoption-framework",
+      "feedback_product_url": " https://azure-architecture.uservoice.com/forums/918625-architecture-guidance"   
     },
     "fileMetadata": {},
     "template": [],
