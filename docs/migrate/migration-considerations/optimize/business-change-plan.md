@@ -20,7 +20,7 @@ User adoption plans focus on how users will adopt a new technology or change to 
 
 Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason Matrix, illustrated in the figure below, represents the drivers behind those themes across a spectrum of adoption types.
 
-![Eason Matrix of user adoption concerns](../../../_images/eason-matrix.gif)
+![Eason Matrix of user adoption concerns](../../../_images/eason-matrix.jpg)
 
 *Eason Matrix of user adoption types.*
 

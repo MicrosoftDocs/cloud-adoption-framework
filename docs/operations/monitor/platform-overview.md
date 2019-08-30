@@ -25,7 +25,7 @@ In 2000, we entered the operations management field with Microsoft Operations Ma
 
 ## Story of Azure Monitor
 
-When Azure was released in 2010, monitoring of cloud services was provided with the Azure Diagnostics agent, which delivered a way to collect diagnostic data from Azure resources. This capability was considered a general monitoring tool vs an enterprise-class monitoring platform.  
+When Azure was released in 2010, monitoring of cloud services was provided with the Azure Diagnostics agent, which provided a way to collect diagnostic data from Azure resources. This capability was considered a general monitoring tool rather than an enterprise-class monitoring platform.  
 
 Application Insights was introduced to shift with changes in the industry where proliferation of cloud, mobile and IoT devices was growing and the introduction of DevOps practices. It grew from Application Performance Monitoring in Operations Manager to a service in Azure, where it delivers rich monitoring of web applications written in a variety of languages. In 2015, the preview of Application Insights for Visual Studio was announced and later, it became known just as Application Insights. It collects details on application performance, requests and exceptions, and traces.
 

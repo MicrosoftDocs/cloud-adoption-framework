@@ -14,7 +14,7 @@ ms.subservice: operate
 
 As your enterprise begins to operate workloads in Azure, the next step is to establish a process for *operational fitness review*. This process enumerates, implements, and iteratively reviews the *nonfunctional requirements* for these workloads. Nonfunctional requirements are related to the expected operational behavior of the service.
 
-There are five essential categories of nonfunctional requirements, which are called the [pillars of software quality](../../guide/pillars.md):
+There are five essential categories of nonfunctional requirements, which are called the [pillars of software quality](https://docs.microsoft.com/azure/architecture/guide/pillars):
 
 - Scalability
 - Availability
@@ -34,16 +34,16 @@ The processes that Microsoft follows form the basis for the processes outlined i
 
 ## Understand the problem
 
-As you learned in [Getting started](../../cloud-adoption/getting-started/index.md), the first step in an enterprise's digital transformation is to identify the business problems to be solved by adopting Azure. The next step is to determine a high-level solution to the problem, such as migrating a workload to the cloud or adapting an existing, on-premises service to include cloud functionality. Finally, the solution is designed and implemented.
+As you learned in [Getting started](../getting-started/migrate.md), the first step in an enterprise's digital transformation is to identify the business problems to be solved by adopting Azure. The next step is to determine a high-level solution to the problem, such as migrating a workload to the cloud or adapting an existing, on-premises service to include cloud functionality. Finally, the solution is designed and implemented.
 
 During this process, the focus is often on the features of the service: the set of _functional_ requirements that you want the service to perform. For example, a product-delivery service requires features for determining the source and destination locations of the product, tracking the product during delivery, customer notifications, and others.
 
-The _nonfunctional_ requirements, in contrast, relate to properties such as the service's [availability](../../checklist/availability.md), [resiliency](../../resiliency/index.md), and [scalability](../../checklist/scalability.md). These properties differ from the functional requirements because they don't directly affect the final function of any particular feature in the service. However, nonfunctional requirements do relate to the performance and continuity of the service.
+The _nonfunctional_ requirements, in contrast, relate to properties such as the service's [availability](https://docs.microsoft.com/azure/architecture/checklist/availability), [resiliency](https://docs.microsoft.com/azure/architecture/resiliency), and [scalability](https://docs.microsoft.com/azure/architecture/checklist/scalability). These properties differ from the functional requirements because they don't directly affect the final function of any particular feature in the service. However, nonfunctional requirements do relate to the performance and continuity of the service.
 
 Some nonfunctional requirements can be specified in terms of a service-level agreement (SLA). For service continuity, as an example, an availability requirement for the service can be expressed as a percentage: "Available 99.99% of the time". Other nonfunctional requirements might be more difficult to define and might change as production needs change. For example, a consumer-oriented service might face unanticipated throughput requirements after a surge of popularity.
 
 > [!NOTE]
-> Requirements for resiliency are explored in more depth in [Designing reliable Azure applications](../../reliability/index.md#define-requirements). That article includes explanations of concepts like recovery-point objective (RPO), recovery-time objective (RTO), SLA, and others.
+> Requirements for resiliency are explored in more depth in [Designing reliable Azure applications](https://docs.microsoft.com/azure/architecture/reliability#define-requirements). That article includes explanations of concepts like recovery-point objective (RPO), recovery-time objective (RTO), SLA, and others.
 
 ## Process for operational fitness review
 
@@ -117,11 +117,11 @@ Adapt the details of the process and meeting to fit your specific needs. We reco
 
 ## Recommended resources
 
-- [Pillars of software quality](../../guide/pillars.md).
+- [Pillars of software quality](https://docs.microsoft.com/azure/architecture/guide/pillars).
     This section of the Azure Application Architecture Guide describes the five pillars of software quality: scalability, availability, resiliency, management, and security.
-- [Ten design principles for Azure applications](../../guide/design-principles/index.md).
+- [Ten design principles for Azure applications](https://docs.microsoft.com/azure/architecture/guide/design-principles).
     This section of the Azure Application Architecture Guide discusses a set of design principles to make your application more scalable, resilient, and manageable.
-- [Designing resilient applications for Azure](../../resiliency/index.md).
+- [Designing resilient applications for Azure](https://docs.microsoft.com/azure/architecture/resiliency).
     This guide starts with a definition of the term _resiliency_ and related concepts. Then, it describes a process for achieving resiliency by using a structured approach over the lifetime of an application, from design and implementation to deployment and operations.
-- [Cloud design patterns](../../patterns/index.md).
+- [Cloud design patterns](https://docs.microsoft.com/azure/architecture/patterns).
     These design patterns are useful for engineering teams when building applications on the pillars of software quality.

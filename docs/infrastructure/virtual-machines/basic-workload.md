@@ -2,7 +2,7 @@
 title: "Deploy a basic workload"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describes how to deploy a basic workload to Azure
-author: petertaylor9999
+author: alexbuckgit
 ms.author: abuck
 ms.date: 12/31/2018
 ms.topic: guide

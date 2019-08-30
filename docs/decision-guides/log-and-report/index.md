@@ -64,7 +64,7 @@ On-premises&ndash;only assumptions:
 
 ### Gateway aggregation
 
-For scenarios where the amount of cloud-based telemetry data is large or existing on-premises monitoring systems need log data modified before it can be processed, a log data [gateway aggregation](../../../patterns/gateway-aggregation.md) service may be required.
+For scenarios where the amount of cloud-based telemetry data is large or existing on-premises monitoring systems need log data modified before it can be processed, a log data [gateway aggregation](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation.md) service may be required.
 
 A gateway service is deployed to your cloud provider. Then, relevant applications and services are configured to submit telemetry data to the gateway instead of a default logging system. The gateway can then process the data: aggregating, combining, or otherwise formatting it before then submitting it to your monitoring service for ingestion and analysis.
 

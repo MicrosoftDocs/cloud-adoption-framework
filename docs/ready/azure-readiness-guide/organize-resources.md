@@ -75,7 +75,7 @@ To learn more, see:
 
 - [Azure fundamentals](../considerations/fundamental-concepts.md)
 - [Scaling with multiple Azure subscriptions](../considerations/scaling-subscriptions.md)
-- [Understand resource access management in Azure](../../getting-started/azure-resource-access.md)
+- [Understand resource access management in Azure](../../governance/resource-consistency/azure-resource-access.md)
 - [Organize your resources with Azure management groups](/azure/azure-resource-manager/management-groups-overview)
 - [Subscription service limits](/azure/azure-subscription-service-limits)
 

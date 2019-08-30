@@ -15,7 +15,7 @@ ms.custom: governance
 
 The Cloud DMZ network architecture allows limited access between your on-premises and cloud-based networks, using a virtual private network (VPN) to connect the networks. Although a DMZ model is commonly used when you want to secure external access to a network, the Cloud DMZ architecture discussed here is intended specifically to secure access to the on-premises network from cloud-based resources and vice versa.
 
-![Secure hybrid network architecture](../../../reference-architectures/dmz/images/dmz-private.png)
+![Secure hybrid network architecture](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/images/dmz-private.png)
 
 This architecture is designed to support scenarios where your organization wants to start integrating cloud-based workloads with on-premises workloads but may not have fully matured cloud security policies or acquired a secure dedicated WAN connection between the two environments. As a result, cloud networks should be treated like a demilitarized zone to ensure on-premises services are secure.
 
@@ -39,4 +39,4 @@ Your cloud adoption teams should consider the following issues when looking at i
 
 For more information about implementing a Cloud DMZ in Azure, see:
 
-- [Implement a DMZ between Azure and your on-premises datacenter](../../../reference-architectures/dmz/secure-vnet-hybrid.md). This article discusses how to implement a secure hybrid network architecture in Azure.
+- [Implement a DMZ between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid). This article discusses how to implement a secure hybrid network architecture in Azure.

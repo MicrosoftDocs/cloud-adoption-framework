@@ -2,7 +2,7 @@
 title: "Initial organization alignment"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Provides an overview of the initial organization alignment.
-author: petertaylor9999
+author: alexbuckgit
 ms.author: abuck
 ms.date: 04/04/2019
 ms.topic: guide
@@ -50,7 +50,7 @@ The next step in your enterprise's digital transformation is for the members of 
 
 ![Cloud strategy, governance, and security teams learn best practices for operating in the cloud.](../_images/getting-started-overview-2.png)
 
-The starting point for understanding the cloud is learning [how Azure works](../getting-started/what-is-azure.md) at a high level. Next, learn about the basics of [governance in Azure](../getting-started/what-is-governance.md) in preparation for [understanding resource access management](../getting-started/azure-resource-access.md).
+The starting point for understanding the cloud is learning [how Azure works](../getting-started/what-is-azure.md) at a high level. Next, learn about the basics of [governance in Azure](../governance/resource-consistency/what-is-governance.md) in preparation for [understanding resource access management](../governance/resource-consistency/azure-resource-access.md).
 
 For advanced learning, the governance team should review the concepts and design guides in the governance section of the table of contents. The infrastructure and workloads sections are useful for learning about typical architectures and workloads in the cloud.
 

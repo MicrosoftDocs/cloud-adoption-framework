@@ -27,7 +27,7 @@ This model aims to address each of the following concerns:
 
 The following diagram shows an example hub and spoke architecture including centrally managed hybrid connectivity.
 
-![Hub and spoke network architecture](../../../reference-architectures/hybrid-networking/images/hub-spoke.png)
+![Hub and spoke network architecture](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/images/hub-spoke.png)
 
 The hub and spoke architecture is often used alongside the hybrid networking architecture, providing a centrally managed connection to your on-premises environment shared between multiple workloads. In this scenario, all traffic traveling between the workloads and on-premises passes through the hub where it can be managed and secured.
 
@@ -48,5 +48,5 @@ Hub and spoke architectures are commonly implemented with virtual networks deplo
 
 For examples of how to implement hub and spoke networks on Azure, see the following examples on the Azure Reference Architectures site:
 
-- [Implement a hub and spoke network topology in Azure](../../../reference-architectures/hybrid-networking/hub-spoke.md)
-- [Implement a hub and spoke network topology with shared services in Azure](../../../reference-architectures/hybrid-networking/shared-services.md)
+- [Implement a hub and spoke network topology in Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
+- [Implement a hub and spoke network topology with shared services in Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services)

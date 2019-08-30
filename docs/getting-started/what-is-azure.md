@@ -2,7 +2,7 @@
 title: "How does Azure work?"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the internal functioning of Azure
-author: petertaylor9999
+author: alexbuckgit
 ms.author: abuck
 ms.date: 04/04/2019
 ms.topic: guide
@@ -40,7 +40,7 @@ So fundamentally, Azure is a huge collection of servers and networking hardware 
 Now that you understand Azure internals, learn about cloud resource governance.
 
 > [!div class="nextstepaction"]
-> [Learn about resource governance](what-is-governance.md)
+> [Learn about resource governance](../governance/resource-consistency/what-is-governance.md)
 
 <!-- links -->
 

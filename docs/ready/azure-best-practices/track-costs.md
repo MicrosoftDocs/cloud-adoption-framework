@@ -111,7 +111,7 @@ Azure Cost Management is a well-documented tool for setting budgets and gaining 
 
 ### Get started with Azure Cost Management
 
-For more information on getting started with Azure Cost Management, see [How to optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management/cost-mgt-best-practices?toc=https://docs.microsoft.com/azure/architecture/toc.json&bc=https://docs.microsoft.com/azure/architecture/bread/toc.json).
+For more information on getting started with Azure Cost Management, see [How to optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management/cost-mgt-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json).
 
 ### Use Azure Cost Management
 

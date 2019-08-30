@@ -79,7 +79,7 @@ The following table summarizes the primary scenarios that these patterns support
 
 ### Azure Virtual Datacenter
 
-In addition using one of these architecture patterns, if your enterprise IT group manages large cloud environments, consider consulting the [Azure Virtual Datacenter guidance](../../../vdc/index.md) when you design your Azure-based cloud infrastructure. Azure Virtual Datacenter provides a combined approach to networking, security, management, and infrastructure if your organization meets the following criteria:
+In addition using one of these architecture patterns, if your enterprise IT group manages large cloud environments, consider consulting the [Azure Virtual Datacenter guidance](https://docs.microsoft.com/azure/architecture/vdc) when you design your Azure-based cloud infrastructure. Azure Virtual Datacenter provides a combined approach to networking, security, management, and infrastructure if your organization meets the following criteria:
 
 - Your enterprise is subject to regulatory compliance that requires centralized monitoring and audit capabilities.
 - Your cloud estate will consist of more than 10,000 IaaS VMs or an equivalent scale of PaaS services.
@@ -91,6 +91,6 @@ In addition using one of these architecture patterns, if your enterprise IT grou
 
 As part of your networking design process, see these articles:
 
-- [Virtual network planning](/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=https://docs.microsoft.com/azure/architecture/toc.json&bc=https://docs.microsoft.com/azure/architecture/bread/toc.json). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
-- [Azure best practices for network security](/azure/security/azure-security-network-security-best-practices?toc=https://docs.microsoft.com/azure/architecture/toc.json&bc=https://docs.microsoft.com/azure/architecture/bread/toc.json). Learn about Azure best practices that can help you enhance your network security.
-- [Best practices for networking when you migrate workloads to Azure](/azure/migrate/migrate-best-practices-networking?toc=https://docs.microsoft.com/azure/architecture/toc.json&bc=https://docs.microsoft.com/azure/architecture/bread/toc.json). Get additional guidance about how to implement Azure networking to support IaaS-based and PaaS-based workloads.
+- [Virtual network planning](/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json). Learn how to plan for virtual networks based on your isolation, connectivity, and location requirements.
+- [Azure best practices for network security](/azure/security/azure-security-network-security-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json). Learn about Azure best practices that can help you enhance your network security.
+- [Best practices for networking when you migrate workloads to Azure](/azure/migrate/migrate-best-practices-networking?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json). Get additional guidance about how to implement Azure networking to support IaaS-based and PaaS-based workloads.

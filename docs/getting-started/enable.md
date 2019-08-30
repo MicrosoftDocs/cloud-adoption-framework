@@ -52,13 +52,13 @@ In addition to the Cloud Adoption Framework, Microsoft covers additional topics 
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="../../reliability/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="https://docs.microsoft.com/azure/architecture/reliability" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img alt="Resilient architecture" src="../../resiliency/images/redundancy.svg" data-linktype="external" />
+                            <img alt="Resilient architecture" src="https://docs.microsoft.com/azure/architecture/resiliency/images/redundancy.svg" data-linktype="external" />
                         </div>
                     </div>
                     <div class="cardText">

@@ -2,7 +2,7 @@
 title: "Resource access management in Azure"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Explanation of resource access management constructs in Azure: Azure Resource Manager, subscriptions, resource groups, and resources"
-author: petertaylor9999
+author: alexbuckgit
 ms.author: abuck
 ms.date: 02/11/2019
 ms.topic: guide

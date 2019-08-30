@@ -174,9 +174,9 @@ Each section of the Cloud Adoption Framework represents a different specializati
 
 ## How to use the Microsoft Cloud Adoption Framework for Azure
 
-If your enterprise is new to Azure, begin by reading [Get started with the Cloud Adoption Framework](./getting-started/index.md). This overview provides prescriptive guidance for your enterprise's digital transformation as it walks you through each step of the process.
+If your enterprise is new to Azure, begin by reading [Get started with the Cloud Adoption Framework](./getting-started/migrate.md). This overview provides prescriptive guidance for your enterprise's digital transformation as it walks you through each step of the process.
 
 If your enterprise has experience with Azure and you're seeking more detailed guidance or best practices for specific areas, review the [governance overview](./governance/index.md) and the [architectural decision guides](./decision-guides/index.md). We'll add more sections as the GA release approaches.
 
 > [!div class="nextstepaction"]
-> [Get started](./getting-started/index.md)
+> [Get started](./getting-started/migrate.md)

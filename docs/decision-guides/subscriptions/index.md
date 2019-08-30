@@ -90,7 +90,7 @@ Management group hierarchies can be up to six levels deep. This provides you wit
 
 ## Related resources
 
-- [Resource access management in Azure](../../getting-started/azure-resource-access.md)
+- [Resource access management in Azure](../../governance/resource-consistency/azure-resource-access.md)
 - [Multiple layers of governance in large enterprises](/azure/architecture/cloud-adoption/governance/journeys/large-enterprise/multiple-layers-of-governance)
 - [Multiple geographic regions](/azure/architecture/cloud-adoption/migrate/expanded-scope/multiple-regions)
 

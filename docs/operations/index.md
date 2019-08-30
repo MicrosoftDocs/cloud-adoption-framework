@@ -38,6 +38,6 @@ Both of these best practices build towards a future state methodology for operat
 * Platform operations: All IT environments contain a set of commonly used platforms. Those platforms could include data stores like SQL Server or HDInsights. Other common platforms could include container solutions like kubernetes or AKS. Regardless of the platforms, the platform operations maturity focuses on customizing operations based on how those common platforms are deployed, configured, and used by workloads.
 * Workload operations: At the highest level of operational maturity, cloud operations teams are able tune operations for workloads that are crucial to the success of the business. For those high-criticality workloads, available data can aid in automating remediation, sizing, or protection of workloads based on their utilization.
 
-Additional guidance like the [Design Review Framework (Codename: Cloud Design Principles)](/azure/architecture/reliability/) can aid in making detailed architectural decisions regarding each workload, within the disciplines above.
+Additional guidance like the [Design Review Framework (Codename: Cloud Design Principles)](/azure/architecture/reliability) can aid in making detailed architectural decisions regarding each workload, within the disciplines above.
 
 This section of the cloud adoption framework will build on each of these topics to mature cloud operations within your organization.
