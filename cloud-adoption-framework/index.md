@@ -1,1 +1,0 @@
-# Welcome to cloud-adoption-framework!
