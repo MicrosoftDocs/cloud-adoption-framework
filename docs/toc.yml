@@ -301,7 +301,7 @@
           - name: Additional Best Practices from the Azure Architecture Center
             items:
             - name: Azure boundary security best practices
-              href: /vdc/networking-virtual-datacenter.md
+              href: https://docs.microsoft.com/azure/architecture/vdc/networking-virtual-datacenter?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json
             - name: Azure database security best practices
               href: https://docs.microsoft.com/azure/security/azure-database-security-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json
             - name: Azure data security and encryption best practices
@@ -726,6 +726,6 @@
     - name: Implementing Azure enterprise scaffold
       href: appendix/azure-scaffold-examples.md
     - name: Virtual Datacenter (VDC)
-      href: vdc/index.md
+      href: https://docs.microsoft.com/azure/architecture/vdc/index.md?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json
     - name: How does Azure work?
       href: getting-started/what-is-azure.md
