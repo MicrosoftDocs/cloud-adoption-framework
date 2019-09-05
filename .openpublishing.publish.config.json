@@ -2,7 +2,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "cloud-adoption-framework",
-      "build_source_folder": "cloud-adoption-framework",
+      "build_source_folder": "docs",
       "build_output_subfolder": "cloud-adoption-framework",
       "locale": "en-us",
       "monikers": [],
