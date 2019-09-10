@@ -63,7 +63,7 @@ Operations Manager requires significant infrastructure and maintenance to suppor
 
 ### Azure Monitor
 
-Azure Monitor is a SaaS service, where all the infrastructure supporting it is running in Azure and is managed by Microsoft. It's designed to do monitoring, analytics, and diagnostics at scale, and is available in all national clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) necessary to support Azure Monitor are maintained by Microsoft.  
+Azure Monitor is a SaaS service, where all the infrastructure supporting it is running in Azure and is managed by Microsoft. It's designed to perform monitoring, analytics, and diagnostics at scale, and is available in all national clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) necessary to support Azure Monitor are maintained by Microsoft.  
 
 ![Diagram of Azure Monitor](./media/monitoring-management-guidance-cloud-and-on-premises/azure-monitor-greyed-optimized.svg)
 

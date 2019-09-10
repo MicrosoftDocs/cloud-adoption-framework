@@ -470,8 +470,6 @@
         items:
         - name: Evaluate corporate policy
           href: governance/corporate-policy.md
-        - name: Disciplines of cloud governance
-          href: governance/governance-disciplines.md
         - name: Cloud-ready corporate policy and compliance
           items:
             - name: Make corporate policy cloud-ready
@@ -494,6 +492,8 @@
               href: governance/policy-compliance/what-is-a-cloud-policy-review.md
             - name: Data classification
               href: governance/policy-compliance/what-is-data-classification.md
+        - name: Disciplines of cloud governance
+          href: governance/governance-disciplines.md
         - name: Implement disciplines of cloud governance
           items:
           - name: Cost management
