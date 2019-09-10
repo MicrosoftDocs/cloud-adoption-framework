@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise guide: Improve the Identity Baseline discipline"
+title: "Complex Enterprise guide: Improve the Identity Baseline discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Large enterprise guide: Improve the Identity Baseline discipline"
+description: "Complex Enterprise guide: Improve the Identity Baseline discipline"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/06/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Improve the Identity Baseline discipline
+# Complex Enterprise guide: Improve the Identity Baseline discipline
 
 This article advances the narrative by adding Identity Baseline controls to the governance MVP.
 
@@ -19,10 +19,10 @@ This article advances the narrative by adding Identity Baseline controls to the 
 
 The business justification for the cloud migration of the two datacenters was approved by the CFO. During the technical feasibility study, several roadblocks were discovered:
 
-- Protected data and mission-critical applications represent 25% of the workloads in the two datacenters. Neither can be eliminated until the current governance policies regarding sensitive personal data and mission-critical applications have been modernized.
-- 7% of the assets in those datacenters are not cloud-compatible. They will be moved to an alternate datacenter before termination of the datacenter contract.
-- 15% of the assets in the datacenter (750 virtual machines) have a dependency on legacy authentication or third-party multi-factor authentication.
-- The VPN connection that connects existing datacenters and Azure does not offer sufficient data transmission speeds or latency to migrate the volume of assets within the two-year timeline to retire the datacenter.
+1. Protected data and mission-critical applications represent 25% of the workloads in the two datacenters. Neither can be eliminated until the current governance policies regarding sensitive personal data and mission-critical applications have been modernized.
+2. 7% of the assets in those datacenters are not cloud-compatible. They will be moved to an alternate datacenter before termination of the datacenter contract.
+3. 15% of the assets in the datacenter (750 virtual machines) have a dependency on legacy authentication or third-party multi-factor authentication.
+4. The VPN connection that connects existing datacenters and Azure does not offer sufficient data transmission speeds or latency to migrate the volume of assets within the two-year timeline to retire the datacenter.
 
 The first two roadblocks are being managed in parallel. This article will address the resolution of the third and fourth roadblocks.
 
@@ -50,11 +50,11 @@ The changes to current and future state expose new risks that will require new p
 
 This business risk can be expanded into a few technical risks:
 
-- Legacy authentication might not be available in the cloud, limiting deployment of some applications.
-- The current third-party multi-factor authentication solution might not be available in the cloud, limiting deployment of some applications.
-- Retooling or moving either could create outages and add costs.
-- The speed and stability of the VPN might impede migration.
-- Traffic entering the cloud could cause security issues in other parts of the global network.
+1. Legacy authentication might not be available in the cloud, limiting deployment of some applications.
+2. The current third-party multi-factor authentication solution might not be available in the cloud, limiting deployment of some applications.
+3. Retooling or moving either could create outages and add costs.
+4. The speed and stability of the VPN might impede migration.
+5. Traffic entering the cloud could cause security issues in other parts of the global network.
 
 ## Incremental improvement of the policy statements
 

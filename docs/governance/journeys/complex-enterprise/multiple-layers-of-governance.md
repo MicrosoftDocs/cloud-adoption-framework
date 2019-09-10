@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise guide: Multiple layers of governance"
+title: "Complex Enterprise guide: Multiple layers of governance"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Large enterprise guide: Multiple layers of governance"
+description: "Complex Enterprise guide: Multiple layers of governance"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Multiple layers of governance
+# Complex Enterprise guide: Multiple layers of governance
 
 When large enterprises require multiple layers of governance, there are greater levels of complexity that must be factored into the governance MVP and later governance improvements.
 

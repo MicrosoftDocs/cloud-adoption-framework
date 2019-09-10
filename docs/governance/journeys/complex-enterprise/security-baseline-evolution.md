@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise guide: Improve the Security Baseline discipline"
+title: "Complex Enterprise guide: Improve the Security Baseline discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Large enterprise guide: Improve the Security Baseline discipline"
+description: "Complex Enterprise guide: Improve the Security Baseline discipline"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Improve the Security Baseline discipline
+# Complex Enterprise guide: Improve the Security Baseline discipline
 
 This article advances the narrative by adding security controls that support moving protected data to the cloud.
 
@@ -33,18 +33,18 @@ In the previous phase of this narrative, the company had begun the process of re
 
 Since then, some things have changed that will affect governance:
 
-- Thousands of IT and business assets have been deployed to the cloud.
-- The application development team has implemented a continuous integration and continuous deployment (CI/CD) pipeline to deploy a cloud-native application with an improved user experience. That application doesn’t interact with protected data yet, so it’s not production ready.
-- The Business Intelligence team within IT actively curates data in the cloud from logistics, inventory, and third-party data. This data is being used to drive new predictions, which could shape business processes. However, those predictions and insights are not actionable until customer and financial data can be integrated into the data platform.
-- The IT team is progressing on the CIO and CFO's plans to retire two datacenters. Almost 3,500 of the assets in the two datacenters have been retired or migrated.
-- The policies regarding sensitive personal and financial data have been modernized. However, the new corporate policies are contingent on the implementation of related security and governance policies. Teams are still stalled.
+1. Thousands of IT and business assets have been deployed to the cloud.
+2. The application development team has implemented a continuous integration and continuous deployment (CI/CD) pipeline to deploy a cloud-native application with an improved user experience. That application doesn’t interact with protected data yet, so it’s not production ready.
+3. The Business Intelligence team within IT actively curates data in the cloud from logistics, inventory, and third-party data. This data is being used to drive new predictions, which could shape business processes. However, those predictions and insights are not actionable until customer and financial data can be integrated into the data platform.
+4. The IT team is progressing on the CIO and CFO's plans to retire two datacenters. Almost 3,500 of the assets in the two datacenters have been retired or migrated.
+5. The policies regarding sensitive personal and financial data have been modernized. However, the new corporate policies are contingent on the implementation of related security and governance policies. Teams are still stalled.
 
 ### Incrementally improve the future state
 
-- Early experiments from the application development and BI teams have shown potential improvements in customer experiences and data-driven decisions. Both teams would like to expand adoption of the cloud over the next 18 months by deploying those solutions to production.
-- IT has developed a business justification to migrate five more datacenters to Azure, which will further decrease IT costs and provide greater business agility. While smaller in scale, the retirement of those datacenters is expected to double the total cost savings.
-- Capital expense and operating expense budgets have approved to implement the required security and governance policies, tools, and processes. The expected cost savings from the datacenter retirement are more than enough to pay for this new initiative. IT and business leadership are confident this investment will accelerate the realization of returns in other areas. The grassroots cloud governance team became a recognized team with dedicated leadership and staffing.
-- Collectively, the cloud adoption teams, the cloud governance team, the IT security team, and the IT governance team will implement security and governance requirements to allow cloud adoption teams to migrate protected data into the cloud.
+1. Early experiments from the application development and BI teams have shown potential improvements in customer experiences and data-driven decisions. Both teams would like to expand adoption of the cloud over the next 18 months by deploying those solutions to production.
+2. IT has developed a business justification to migrate five more datacenters to Azure, which will further decrease IT costs and provide greater business agility. While smaller in scale, the retirement of those datacenters is expected to double the total cost savings.
+3. Capital expense and operating expense budgets have approved to implement the required security and governance policies, tools, and processes. The expected cost savings from the datacenter retirement are more than enough to pay for this new initiative. IT and business leadership are confident this investment will accelerate the realization of returns in other areas. The grassroots cloud governance team became a recognized team with dedicated leadership and staffing.
+4. Collectively, the cloud adoption teams, the cloud governance team, the IT security team, and the IT governance team will implement security and governance requirements to allow cloud adoption teams to migrate protected data into the cloud.
 
 ## Changes in tangible risks
 
@@ -52,18 +52,18 @@ Since then, some things have changed that will affect governance:
 
 This business risk can be expanded into a few technical risks:
 
-- Mission-critical apps or protected data might be deployed unintentionally.
-- Protected data might be exposed during storage due to poor encryption decisions.
-- Unauthorized users might access protected data.
-- External intrusion could result in access to protected data.
-- External intrusion or denial of service attacks could cause a business interruption.
-- Organization or employment changes could allow for unauthorized access to protected data.
-- New exploits might create opportunities for intrusion or unauthorized access.
-- Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
-- Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
-- Disparate edge devices might increase network operations costs.
-- Disparate device configurations might lead to oversights in configuration and compromises in security.
-- The Cybersecurity team insists there is a risk of vendor lock-in from generating encryption keys on a single cloud provider's platform. While this claim is unsubstantiated, it was accepted by the team for the time being.
+1. Mission-critical apps or protected data might be deployed unintentionally.
+2. Protected data might be exposed during storage due to poor encryption decisions.
+3. Unauthorized users might access protected data.
+4. External intrusion could result in access to protected data.
+5. External intrusion or denial of service attacks could cause a business interruption.
+6. Organization or employment changes could allow for unauthorized access to protected data.
+7. New exploits might create opportunities for intrusion or unauthorized access.
+8. Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
+9. Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
+10. Disparate edge devices might increase network operations costs.
+11. Disparate device configurations might lead to oversights in configuration and compromises in security.
+    1. The Cybersecurity team insists there is a risk of vendor lock-in from generating encryption keys on a single cloud provider's platform. While this claim is unsubstantiated, it was accepted by the team for the time being.
 
 ## Incremental improvement of the policy statements
 

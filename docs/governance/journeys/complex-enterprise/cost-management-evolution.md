@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise guide: Improve the Cost Management discipline"
+title: "Complex Enterprise guide: Improve the Cost Management discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Large enterprise guide: Improve the Cost Management discipline"
+description: "Complex Enterprise guide: Improve the Cost Management discipline"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Improve the Cost Management discipline
+# Complex Enterprise guide: Improve the Cost Management discipline
 
 This article advances the narrative by adding cost controls to the minimum viable product (MVP) governance.
 
@@ -27,13 +27,13 @@ In the previous phase of this narrative, the IT team was actively moving product
 
 Since then, some things have changed that will affect governance:
 
-- 5,000 assets have been removed from the two datacenters flagged for retirement. Procurement and IT security are now deprovisioning the remaining physical assets.
-- The application development teams have implemented CI/CD pipelines to deploy some cloud-native applications, significantly affecting customer experiences.
-- The BI team has created aggregation, curation, insight, and prediction processes driving tangible benefits for business operations. Those predictions are now empowering creative new products and services.
+1. 5,000 assets have been removed from the two datacenters flagged for retirement. Procurement and IT security are now deprovisioning the remaining physical assets.
+2. The application development teams have implemented CI/CD pipelines to deploy some cloud-native applications, significantly affecting customer experiences.
+3. The BI team has created aggregation, curation, insight, and prediction processes driving tangible benefits for business operations. Those predictions are now empowering creative new products and services.
 
 ### Incrementally improve the future state
 
-- Cost monitoring and reporting should be added to the cloud solution. Reporting should tie direct operating expenses to the functions that are consuming the cloud costs. Additional reporting should allow IT to monitor spending and provide technical guidance on cost management. For the Canadian branch, the department will be billed directly.
+1. Cost monitoring and reporting should be added to the cloud solution. Reporting should tie direct operating expenses to the functions that are consuming the cloud costs. Additional reporting should allow IT to monitor spending and provide technical guidance on cost management. For the Canadian branch, the department will be billed directly.
 
 ## Changes in risk
 
@@ -41,9 +41,9 @@ Since then, some things have changed that will affect governance:
 
 This business risk can be expanded into a few technical risks:
 
-- There is a risk of actual costs exceeding the plan.
-- Business conditions change. When they do, there will be cases when a business function needs to consume more cloud services than expected, leading to spending anomalies. There is a risk that these additional costs will be considered overages as opposed to a required adjustment to the plan. If successful, the Canadian experiment should help remediate this risk.
-- There is a risk of systems being overprovisioned, resulting in excess spending.
+1. There is a risk of actual costs exceeding the plan.
+2. Business conditions change. When they do, there will be cases when a business function needs to consume more cloud services than expected, leading to spending anomalies. There is a risk that these additional costs will be considered overages as opposed to a required adjustment to the plan. If successful, the Canadian experiment should help remediate this risk.
+3. There is a risk of systems being overprovisioned, resulting in excess spending.
 
 ## Changes to the policy statements
 

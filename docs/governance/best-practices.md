@@ -25,12 +25,12 @@ At any time, the following prescriptive guidance can be applied to the initial g
 
 |Risk/Need | Small-medium enterprise | Large enterprise |
 |---|---|---|
-|Sensitive data in the cloud|[Prescriptive guidance](./journeys/small-to-medium-enterprise/security-baseline-evolution.md)|[Prescriptive guidance](./journeys/large-enterprise/security-baseline-evolution.md)|
-|Mission critical apps in the cloud|[Prescriptive guidance](./journeys/small-to-medium-enterprise/resource-consistency-evolution.md)|[Prescriptive guidance](./journeys/large-enterprise/resource-consistency-evolution.md)|
-|Cloud cost management|[Prescriptive guidance](./journeys/small-to-medium-enterprise/cost-management-evolution.md)|[Prescriptive guidance](./journeys/large-enterprise/cost-management-evolution.md)|
-|Multicloud|[Prescriptive guidance](./journeys/small-to-medium-enterprise/multicloud-evolution.md)|[Prescriptive guidance](./journeys/large-enterprise/multicloud-evolution.md)|
-|Complex/legacy identity management|         |[Prescriptive guidance](./journeys/large-enterprise/identity-baseline-evolution.md)|
-|Multiple layers of governance|         |[Prescriptive guidance](./journeys/large-enterprise/multiple-layers-of-governance.md)|
+|Sensitive data in the cloud|[Prescriptive guidance](./journeys/standard-enterprise/security-baseline-evolution.md)|[Prescriptive guidance](./journeys/complex-enterprise/security-baseline-evolution.md)|
+|Mission critical apps in the cloud|[Prescriptive guidance](./journeys/standard-enterprise/resource-consistency-evolution.md)|[Prescriptive guidance](./journeys/complex-enterprise/resource-consistency-evolution.md)|
+|Cloud cost management|[Prescriptive guidance](./journeys/standard-enterprise/cost-management-evolution.md)|[Prescriptive guidance](./journeys/complex-enterprise/cost-management-evolution.md)|
+|Multicloud|[Prescriptive guidance](./journeys/standard-enterprise/multicloud-evolution.md)|[Prescriptive guidance](./journeys/complex-enterprise/multicloud-evolution.md)|
+|Complex/legacy identity management|         |[Prescriptive guidance](./journeys/complex-enterprise/identity-baseline-evolution.md)|
+|Multiple layers of governance|         |[Prescriptive guidance](./journeys/complex-enterprise/multiple-layers-of-governance.md)|
 
 ## Next steps
 

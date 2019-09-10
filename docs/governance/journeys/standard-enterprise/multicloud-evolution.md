@@ -1,10 +1,10 @@
 ---
-title: "Small-to-medium enterprise guide: Multicloud improvement"
+title: "Standard Enterprise guide: Multicloud improvement"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Small-to-medium enterprise guide: Multicloud improvement"
+description: "Standard Enterprise guide: Multicloud improvement"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern

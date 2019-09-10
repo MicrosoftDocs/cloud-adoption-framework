@@ -1,19 +1,19 @@
 ---
-title: "Small-to-medium enterprise guide: The narrative behind the governance strategy"
+title: "Standard Enterprise guide: The narrative behind the governance strategy"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: This narrative establishes a use case for governance during a small-to-medium enterprise's cloud adoption journey.
+description: This narrative establishes a use case for governance during a standard enterprise's cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise guide: The narrative behind the governance strategy
+# Standard Enterprise guide: The narrative behind the governance strategy
 
-The following narrative describes the use case for governance during a [small-to-medium enterprise's cloud adoption journey](./index.md). Before implementing the journey, it’s important to understand the assumptions and rationale that are reflected in this narrative. Then you can better align the governance strategy to your own organization’s journey.
+The following narrative describes the use case for governance during a [standard enterprise's cloud adoption journey](./index.md). Before implementing the journey, it’s important to understand the assumptions and rationale that are reflected in this narrative. Then you can better align the governance strategy to your own organization’s journey.
 
 ## Back story
 

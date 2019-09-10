@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise guide: Prescriptive guidance explained"
+title: "Complex Enterprise guide: Prescriptive guidance explained"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about prescriptive guidance for governance in large enterprises.
+description: Learn about prescriptive guidance for governance in complex enterprises.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Prescriptive guidance explained
+# Complex Enterprise guide: Prescriptive guidance explained
 
 The governance guide begins with a set of initial [corporate policies](./initial-corporate-policy.md). These policies are used to establish a minimum viable product (MVP) for governance that reflects [best practices](./index.md).
 
@@ -48,19 +48,19 @@ The cloud governance team will be responsible for the following decisions and im
 
 The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has chosen the **[Mixed](../../../decision-guides/subscriptions/index.md#mixed-patterns)** subscription design pattern.
 
-- As new requests for Azure resources arise, a "Department" should be established for each major business unit in each operating geography. Within each of the Departments, "Subscriptions" should be created for each application archetype.
-- An application archetype is a means of grouping applications with similar needs. Common examples include: Applications with protected data, governed applications (such as HIPAA or FedRAMP), low-risk applications, applications with on-premises dependencies, SAP or other mainframe applications in Azure, or applications that extend on-premises SAP or mainframe applications. Each organization has unique needs based on data classifications and the types of applications that support the business. Dependency mapping of the digital estate can help define the application archetypes in an organization.
-- A common naming convention should be agreed on as part of the subscription design, based on the above two bullets.
+1. As new requests for Azure resources arise, a "Department" should be established for each major business unit in each operating geography. Within each of the Departments, "Subscriptions" should be created for each application archetype.
+2. An application archetype is a means of grouping applications with similar needs. Common examples include: Applications with protected data, governed applications (such as HIPAA or FedRAMP), low-risk applications, applications with on-premises dependencies, SAP or other mainframe applications in Azure, or applications that extend on-premises SAP or mainframe applications. Each organization has unique needs based on data classifications and the types of applications that support the business. Dependency mapping of the digital estate can help define the application archetypes in an organization.
+3. A common naming convention should be agreed on as part of the subscription design, based on the above two bullets.
 
 ### Resource consistency
 
 Resource consistency decisions determine the tools, processes, and effort required to ensure Azure resources are deployed, configured, and managed consistently within a subscription. In this narrative, **[Hierarchical Consistency](../../../decision-guides/resource-consistency/index.md#hierarchical-consistency)** has been chosen as the primary resource consistency pattern.
 
-- Resource groups should be created for each application. Management groups should be created for each application archetype. Azure Policy should be applied to all subscriptions in the associated management group.
-- As part of the deployment process, Resource Consistency templates for all assets should be stored in source control.
-- Each resource group should align to a specific workload or application.
-- The Azure management group hierarchy defined should represent billing responsibility and application ownership using nested groups.
-- Extensive implementation of Azure Policy could exceed the team’s time commitments and may not provide much value at this point. However, a simple default policy should be created and applied to each resource group to enforce the first few cloud governance policy statements. This serves to define the implementation of specific governance requirements. Those implementations can then be applied across all deployed assets.
+1. Resource groups should be created for each application. Management groups should be created for each application archetype. Azure Policy should be applied to all subscriptions in the associated management group.
+2. As part of the deployment process, Resource Consistency templates for all assets should be stored in source control.
+3. Each resource group should align to a specific workload or application.
+4. The Azure management group hierarchy defined should represent billing responsibility and application ownership using nested groups.
+5. Extensive implementation of Azure Policy could exceed the team’s time commitments and may not provide much value at this point. However, a simple default policy should be created and applied to each resource group to enforce the first few cloud governance policy statements. This serves to define the implementation of specific governance requirements. Those implementations can then be applied across all deployed assets.
 
 ### Resource tagging
 
@@ -82,9 +82,9 @@ Resource tagging decisions determine how metadata is applied to Azure resources 
 
 Logging and reporting decisions determine how your store log data and how the monitoring and reporting tools that keep IT staff informed on operational health are structured. In this narrative a **[Hybrid monitoring](../../../decision-guides/log-and-report/index.md)** pattern for logging and reporting is suggested, but not required of any development team at this point.
 
-- No governance requirements are currently set regarding the specific data points to be collected for logging or reporting purposes. This is specific to this fictional narrative and should be considered an antipattern. Logging standards should be determined and enforced as soon as possible.
-- Additional analysis is required before the release of any protected data or mission-critical workloads.
-- Before supporting protected data or mission-critical workloads, the existing on-premises operational monitoring solution must be granted access to the workspace used for logging. Applications are required to meet security and logging requirements associated with the use of that tenant, if the application is to be supported with a defined SLA.
+1. No governance requirements are currently set regarding the specific data points to be collected for logging or reporting purposes. This is specific to this fictional narrative and should be considered an antipattern. Logging standards should be determined and enforced as soon as possible.
+2. Additional analysis is required before the release of any protected data or mission-critical workloads.
+3. Before supporting protected data or mission-critical workloads, the existing on-premises operational monitoring solution must be granted access to the workspace used for logging. Applications are required to meet security and logging requirements associated with the use of that tenant, if the application is to be supported with a defined SLA.
 
 ## Incremental of governance processes
 

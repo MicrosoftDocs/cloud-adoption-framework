@@ -1,17 +1,17 @@
 ---
-title: "Small-to-medium enterprise guide: Improving Resource Consistency"
+title: "Standard Enterprise guide: Improving Resource Consistency"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Small-to-medium enterprise guide: Improving Resource Consistency"
+description: "Standard Enterprise guide: Improving Resource Consistency"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise guide: Improving Resource Consistency
+# Standard Enterprise guide: Improving Resource Consistency
 
 This article advances the narrative by adding Resource Consistency controls to support mission-critical apps.
 
@@ -25,9 +25,9 @@ In the previous phase of this narrative, the application development and BI team
 
 Since then, some things have changed that will affect governance:
 
-- IT has retired 100% of the DR datacenter, ahead of schedule. In the process, a set of assets in the Production datacenter were identified as cloud migration candidates.
-- The application development teams are now ready for production traffic.
-- The BI team is ready to feed predictions and insights back into operation systems in the Production datacenter.
+1. IT has retired 100% of the DR datacenter, ahead of schedule. In the process, a set of assets in the Production datacenter were identified as cloud migration candidates.
+2. The application development teams are now ready for production traffic.
+3. The BI team is ready to feed predictions and insights back into operation systems in the Production datacenter.
 
 ### Incrementally improve the future state
 
@@ -41,17 +41,17 @@ The changes to current and future state expose new risks that will require new p
 
 This business risk can be expanded into several technical risks:
 
-- External intrusion or denial of service attacks might cause a business interruption.
-- Mission-critical assets may not be properly discovered, and therefore might not be properly operated.
-- Undiscovered or mislabeled assets might not be supported by existing operational management processes.
-- The configuration of deployed assets may not meet performance expectations.
-- Logging might not be properly recorded and centralized to allow for remediation of performance issues.
-- Recovery policies may fail or take longer than expected.
-- Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
-- Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
-- Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
-- Deployed operating systems or applications might fail to meet hardening requirements.
-- With so many teams working in the cloud, there is a risk of inconsistency.
+1. External intrusion or denial of service attacks might cause a business interruption.
+2. Mission-critical assets may not be properly discovered, and therefore might not be properly operated.
+3. Undiscovered or mislabeled assets might not be supported by existing operational management processes.
+4. The configuration of deployed assets may not meet performance expectations.
+5. Logging might not be properly recorded and centralized to allow for remediation of performance issues.
+6. Recovery policies may fail or take longer than expected.
+7. Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
+8. Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
+9. Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
+10. Deployed operating systems or applications might fail to meet hardening requirements.
+11. With so many teams working in the cloud, there is a risk of inconsistency.
 
 ## Incremental improvement of the policy statements
 
@@ -76,9 +76,7 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of governance practices
 
-
 This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
-
 
 1. The cloud operations team will define operational monitoring tooling and automated remediation tooling. The cloud governance team will support those discovery processes. In this use case, the cloud operations team chose Azure Monitor as the primary tool for monitoring mission-critical applications.
 2. Create a repository in Azure DevOps to store and version all relevant Resource Manager templates and scripted configurations.

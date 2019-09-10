@@ -1,5 +1,5 @@
 ---
-title: "Large enterprise guide: Multicloud improvement"
+title: "Complex Enterprise guide: Multicloud improvement"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Large enterprise guide: Multicloud improvement"
 author: BrianBlanchard
@@ -25,12 +25,12 @@ In the previous phase of this narrative, the company had begun to implement cost
 
 Since then, some things have changed that will affect governance:
 
-- Identity is controlled by an on-premises instance of Active Directory. Hybrid Identity is facilitated through replication to Azure Active Directory.
-- IT Operations or Cloud Operations are largely managed by Azure Monitor and related automation capabilities.
-- Disaster recovery and business continuity (DRBC) is controlled by Azure Vault instances.
-- Azure Security Center is used to monitor security violations and attacks.
-- Azure Security Center and Azure Monitor are both used to monitor governance of the cloud.
-- Azure Blueprints, Azure Policy, and management groups are used to automate compliance to policy.
+1. Identity is controlled by an on-premises instance of Active Directory. Hybrid Identity is facilitated through replication to Azure Active Directory.
+2. IT Operations or Cloud Operations are largely managed by Azure Monitor and related automation capabilities.
+3. Disaster recovery and business continuity (DRBC) is controlled by Azure Vault instances.
+4. Azure Security Center is used to monitor security violations and attacks.
+5. Azure Security Center and Azure Monitor are both used to monitor governance of the cloud.
+6. Azure Blueprints, Azure Policy, and management groups are used to automate compliance to policy.
 
 ### Incrementally improve the future state
 
@@ -42,8 +42,8 @@ The goal is to integrate the acquisition company into existing operations wherev
 
 This business risk can be expanded into a few technical risks
 
-- There is risk of cloud migration producing additional acquisition costs.
-- There is also a risk of the new environment not being properly governed or resulting in policy violations.
+1. There is risk of cloud migration producing additional acquisition costs.
+2. There is also a risk of the new environment not being properly governed or resulting in policy violations.
 
 ## Incremental improvement of the policy statements
 

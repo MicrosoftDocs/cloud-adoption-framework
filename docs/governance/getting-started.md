@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Get started with cloud governance by establishing an initial cloud governance foundation.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/03/2019
+ms.date: 09/05/2019
 ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -30,13 +30,13 @@ The following are two different examples of initial governance foundations (also
 
 <ul class="panelContent cardsZ">
 <li style="display: flex; flex-direction: column;">
-    <a href="./journeys/small-to-medium-enterprise/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="./journeys/standard-enterprise/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Small-to-Medium Enterprise</h3>
-                        <p>A governance guide for enterprises that own fewer than five datacenters and manage costs through a central IT or showback model.</p>
+                        <h3>The Standard Enterprise</h3>
+                        <p>A governance guide for most enterprises based on the recommended two subscription model with deployments in a variety of regions but not spanning public and sovereign/government clouds.</p>
                     </div>
                 </div>
             </div>
@@ -44,13 +44,13 @@ The following are two different examples of initial governance foundations (also
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="./journeys/large-enterprise/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="./journeys/complex-enterprise/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Large Enterprise</h3>
-                        <p>A governance guide for enterprises that own more than five datacenters and manage costs across multiple business units.</p>
+                        <h3>The Complex Enterprise</h3>
+                        <p>A governance guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.</p>
                     </div>
                 </div>
             </div>
@@ -58,6 +58,7 @@ The following are two different examples of initial governance foundations (also
     </a>
 </li>
 </ul>
+<!-- markdownlint-enable MD033 -->
 
 ## Next steps
 

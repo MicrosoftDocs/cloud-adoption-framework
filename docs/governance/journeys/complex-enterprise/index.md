@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise governance guide"
+title: "Complex Enterprise governance guide"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Large enterprise governance guide
+description: Complex Enterprise governance guide
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise governance guide
+# Complex Enterprise governance guide
 
 ## Overview of best practices
 

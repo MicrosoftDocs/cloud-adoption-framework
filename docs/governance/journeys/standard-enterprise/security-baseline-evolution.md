@@ -1,7 +1,7 @@
 ---
-title: "Small-to-medium enterprise guide: Improve the Security Baseline discipline"
+title: "Standard Enterprise guide: Improve the Security Baseline discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Small-to-medium enterprise guide: Improve the Security Baseline discipline"
+description: "Standard Enterprise guide: Improve the Security Baseline discipline"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/11/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise guide: Improve the Security Baseline discipline
+# Standard Enterprise guide: Improve the Security Baseline discipline
 
 This article advances the narrative by adding security controls that support moving protected data to the cloud.
 
@@ -31,10 +31,10 @@ At the start of this narrative, the application development teams were still wor
 
 Since then, some things have changed that will affect governance:
 
-- The application development team has implemented a CI/CD pipeline to deploy a cloud-native application with an improved user experience. That app doesn’t yet interact with protected data, so it is not production ready.
-- The Business Intelligence team within IT actively curates data in the cloud from logistics, inventory, and third-party sources. This data is being used to drive new predictions, which could shape business processes. However, those predictions and insights are not actionable until customer and financial data can be integrated into the data platform.
-- The IT team is progressing on the CIO and CFO's plans to retire the DR datacenter. More than 1,000 of the 2,000 assets in the DR datacenter have been retired or migrated.
-- The loosely defined policies regarding personal data and financial data have been modernized. However, the new corporate policies are contingent on the implementation of related security and governance policies. Teams are still stalled.
+1. The application development team has implemented a CI/CD pipeline to deploy a cloud-native application with an improved user experience. That app doesn’t yet interact with protected data, so it is not production ready.
+2. The Business Intelligence team within IT actively curates data in the cloud from logistics, inventory, and third-party sources. This data is being used to drive new predictions, which could shape business processes. However, those predictions and insights are not actionable until customer and financial data can be integrated into the data platform.
+3. The IT team is progressing on the CIO and CFO's plans to retire the DR datacenter. More than 1,000 of the 2,000 assets in the DR datacenter have been retired or migrated.
+4. The loosely defined policies regarding personal data and financial data have been modernized. However, the new corporate policies are contingent on the implementation of related security and governance policies. Teams are still stalled.
 
 ### Incrementally improve the future state
 
@@ -50,15 +50,15 @@ The changes to current and future state expose new risks that require new policy
 
 This business risk can be expanded into a few technical risks:
 
-- Mission-critical applications or protected data might be deployed unintentionally.
-- Protected data might be exposed during storage due to poor encryption decisions.
-- Unauthorized users might access protected data.
-- External intrusion might result in access to protected data.
-- External intrusion or denial of service attacks might cause a business interruption.
-- Organization or employment changes might allow for unauthorized access to protected data.
-- New exploits could create new intrusion or access opportunities.
-- Inconsistent deployment processes might result in security gaps, which could lead to data leaks or interruptions.
-- Configuration drift or missed patches might result in unintended security gaps, which could lead to data leaks or interruptions.
+1. Mission-critical applications or protected data might be deployed unintentionally.
+2. Protected data might be exposed during storage due to poor encryption decisions.
+3. Unauthorized users might access protected data.
+4. External intrusion might result in access to protected data.
+5. External intrusion or denial of service attacks might cause a business interruption.
+6. Organization or employment changes might allow for unauthorized access to protected data.
+7. New exploits could create new intrusion or access opportunities.
+8. Inconsistent deployment processes might result in security gaps, which could lead to data leaks or interruptions.
+9. Configuration drift or missed patches might result in unintended security gaps, which could lead to data leaks or interruptions.
 
 ## Incremental improvement of the policy statements
 
@@ -85,9 +85,7 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of governance practices
 
-
 The governance MVP design will change to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
-
 
 1. The Networking and IT Security teams will define network requirements. The cloud governance team will support the conversation.
 2. The Identity and IT Security teams will define identity requirements and make any necessary changes to local Active Directory implementation. The cloud governance team will review changes.

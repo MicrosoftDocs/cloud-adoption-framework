@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Tracking costs across business units, environments, or projects
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/19/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -31,11 +31,11 @@ Tagging is a primary way to understand the data in any cost reporting. It's a fu
 The first step in accurately tracking cost information across business units, environments, and projects is to define a tagging standard. The second step is to ensure that the tagging standard is consistently applied. The following articles can help you accomplish each of these steps:
 
 - [Develop naming and tagging standards](../considerations/name-and-tag.md)
-- [Establish a governance MVP to enforce tagging standards](../../governance/journeys/large-enterprise/index.md)
+- [Establish a governance MVP to enforce tagging standards](../../governance/journeys/complex-enterprise/index.md)
 
 ### Resource organization
 
-There are several approaches to organizing assets. This section outlines a best practice based on the needs of a large enterprise with cost structures spread across business units, geographies, and IT organizations. A similar best practice for a smaller, less complex organization is available in [Small-to-medium enterprise governance journey](../../governance/journeys/small-to-medium-enterprise/index.md).
+There are several approaches to organizing assets. This section outlines a best practice based on the needs of a large enterprise with cost structures spread across business units, geographies, and IT organizations. A similar best practice for a smaller, less complex organization is available in [Small-to-medium enterprise governance journey](../../governance/journeys/standard-enterprise/index.md).
 
 For a large enterprise, the following model for management groups, subscriptions, and resource groups will create a hierarchy that allows each team to have the right level of visibility to perform their duties. When the enterprise needs cost controls to prevent budget overrun, it can apply governance tooling like Azure Blueprints or Azure Policy to the subscriptions within this structure to quickly block future cost errors.
 
@@ -55,7 +55,7 @@ The diagram shows best practices but doesn't include these options:
 The rest of this article assumes the use of the best-practice approach in the preceding diagram. However, the following articles can help you apply the approach to a resource organization that best fits your company:
 
 - [Scaling with multiple Azure subscriptions](../considerations/scaling-subscriptions.md)
-- [Deploying a Governance MVP to govern well-managed environment standards](../../governance/journeys/large-enterprise/index.md)
+- [Deploying a Governance MVP to govern well-managed environment standards](../../governance/journeys/complex-enterprise/index.md)
 
 ## Provide the right level of cost access
 

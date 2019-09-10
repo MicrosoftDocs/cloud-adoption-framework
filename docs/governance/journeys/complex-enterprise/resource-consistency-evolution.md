@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise guide: Improve the Resource Consistency discipline"
+title: "Complex Enterprise guide: Improve the Resource Consistency discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Large enterprise guide: Improve the Resource Consistency discipline"
+description: "Complex Enterprise guide: Improve the Resource Consistency discipline"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Improve the Resource Consistency discipline
+# Complex Enterprise guide: Improve the Resource Consistency discipline
 
 This article advances the narrative by adding Resource Consistency controls to the governance MVP to support mission-critical applications.
 
@@ -21,15 +21,14 @@ The cloud adoption teams have met all requirements to move protected data. With 
 
 ### Changes in the current state
 
-- IT is actively moving production workloads with protected data into Azure. Some low-priority workloads are serving production traffic. More can be cut over as soon as IT Operations signs off on readiness to support the workloads.
-- The application development teams are ready for production traffic.
-- The BI team is ready to integrate predictions and insights into the systems that run operations for the three business units.
+1. IT is actively moving production workloads with protected data into Azure. Some low-priority workloads are serving production traffic. More can be cut over as soon as IT Operations signs off on readiness to support the workloads.
+2. The application development teams are ready for production traffic.
+3. The BI team is ready to integrate predictions and insights into the systems that run operations for the three business units.
 
 ### Incrementally improve the future state
 
-- IT operations is new to cloud operations and needs to quickly integrate existing operational processes.
-
-The changes to current and future state expose new risks that will require new policy statements.
+1. IT operations is new to cloud operations and needs to quickly integrate existing operational processes.
+2. The changes to current and future state expose new risks that will require new policy statements.
 
 ## Changes in tangible risks
 
@@ -37,18 +36,18 @@ The changes to current and future state expose new risks that will require new p
 
 This business risk can be expanded into several technical risks:
 
-- Misaligned operational processes might lead to outages that can’t be detected or mitigated quickly.
-- External intrusion or denial of service attacks might cause a business interruption.
-- Mission-critical assets might not be properly discovered and therefore not properly operated.
-- Undiscovered or mislabeled assets might not be supported by existing operational management processes.
-- Configuration of deployed assets might not meet performance expectations.
-- Logging might not be properly recorded and centralized to allow for remediation of performance issues.
-- Recovery policies may fail or take longer than expected.
-- Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
-- Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
-- Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
-- Deployed operating systems or applications might not meet OS and application hardening requirements.
-- There is a risk of inconsistency due to multiple teams working in the cloud.
+1. Misaligned operational processes might lead to outages that can’t be detected or mitigated quickly.
+2. External intrusion or denial of service attacks might cause a business interruption.
+3. Mission-critical assets might not be properly discovered and therefore not properly operated.
+4. Undiscovered or mislabeled assets might not be supported by existing operational management processes.
+5. Configuration of deployed assets might not meet performance expectations.
+6. Logging might not be properly recorded and centralized to allow for remediation of performance issues.
+7. Recovery policies may fail or take longer than expected.
+8. Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
+9. Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
+10. Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
+11. Deployed operating systems or applications might not meet OS and application hardening requirements.
+12. There is a risk of inconsistency due to multiple teams working in the cloud.
 
 ## Incremental improvement of the policy statements
 
@@ -73,9 +72,7 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of the best practices
 
-
 This section of the article will improve the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
-
 
 Following the experience of this fictional example, it is assumed that the Protected Data changes have already occurred. Building on that best practice, the following will add operational monitoring requirements, readying a subscription for mission-critical applications.
 
