@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Establish team structures
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/04/2019
+ms.date: 09/10/2019
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -13,76 +13,84 @@ ms.custom: organize
 
 # Establish team structures
 
-Every cloud capability is provided by someone during every cloud-adoption effort. These assignments and team structures can develop organically, or they can be purposefully and explicitly designed to match a defined team structure.
+Every cloud capability is provided by someone during every cloud adoption effort. These assignments and team structures can develop organically, or they can be intentionally designed to match a defined team structure.
 
-As adoption needs grow, so does the need to create balance and structure. This article provides examples of common team structures at various stages of organizational maturity. The following graphic and list outline those structures based on commonly seen maturation stages. Use these examples to find the org structure that best aligns with your operational needs.
+As adoption needs grow, so does the need for balance and structure. This article provides examples of common team structures at various stages of organizational maturity. The following graphic and list outline those structures based on typical maturation stages. Use these examples to find the organizational structure that best aligns with your operational needs.
 
 ![Organizational maturity cycle](../_images/ready/org-ready-maturity.png)
 
 Organizational structures tend to move through the common maturity model that's outlined here:
 
 1. [Cloud adoption team only](#cloud-adoption-team-only)
-2. [MVP best practice](#best-practice-minimum-viable-product) - Best practice: minimum viable product (MVP)
-3. [Cloud center of excellence](#cloud-center-of-excellence)
+2. [MVP best practice](#best-practice-minimum-viable-product-mvp)
+3. [Central IT](#central-it)
 4. [Strategic alignment](#strategic-alignment)
-5. [Operational alignment](#strategic-alignment)
-6. [Fully staffed best practice](#best-practice-fully-staffed)
+5. [Operational alignment](#operational-alignment)
+6. [Cloud center of excellence (CCoE)](#cloud-center-of-excellence)
 
-Most companies start with little more than a *cloud adoption team*. But we recommend that you establish an organizational structure that more closely resembles the [MVP best practice](#best-practice-minimum-viable-product) structure.
+Most companies start with little more than a *cloud adoption team*. However, we recommend that you establish an organizational structure that more closely resembles the [MVP best practice](#best-practice-minimum-viable-product-mvp) structure.
 
 ## Cloud adoption team only
 
-The nucleus of all cloud adoption efforts is the cloud adoption team. This team is responsible for driving the technical changes that make adoption possible. Depending on the objectives of the adoption effort, this team may include a diverse range of team members who handle a wide range of technical and business tasks.
+The nucleus of all cloud adoption efforts is the cloud adoption team. This team drives the technical changes that enable adoption. Depending on the objectives of the adoption effort, this team may include a diverse range of team members who handle a broad set of technical and business tasks.
 
 ![Cloud adoption team, with governance and security teams](../_images/ready/org-ready-adoption-only.png)
 
-For small or early-adoption efforts, this team might be as small as one person. In larger and late-stage efforts, it's common to have several cloud adoption teams, each with about six engineers. Regardless of size or tasks, the consistent aspect of any cloud adoption team is that it serves as the mechanism for on-boarding solutions into the cloud. For some organizations, this may be a sufficient organizational structure. The [cloud adoption team](./cloud-adoption.md) article provides more insight into the structure, composition, and function of the cloud adoption team.
+For small-scale or early-stage adoption efforts, this team might be as small as one person. In larger-scale or late-stage efforts, it's common to have several cloud adoption teams, each with around six engineers. Regardless of size or tasks, the consistent aspect of any cloud adoption team is that it provides the means to onboarding solutions into the cloud. For some organizations, this may be a sufficient organizational structure. The [cloud adoption team](./cloud-adoption.md) article provides more insight into the structure, composition, and function of the cloud adoption team.
 
 > [!WARNING]
-> Operating with *only* a cloud adoption team (or multiple cloud adoption teams) is considered an *antipattern* and should be avoided. At minimum, consider the [MVP best practice](#best-practice-minimum-viable-product).
+> Operating with *only* a cloud adoption team (or multiple cloud adoption teams) is considered an *antipattern* and should be avoided. At a minimum, consider the [MVP best practice](#best-practice-minimum-viable-product-mvp).
 
-## Best practice: minimum viable product
+## Best practice: minimum viable product (MVP)
 
-As a minimum, we recommend that you have two teams to create balance across cloud-adoption efforts. These two teams are responsible for various capabilities throughout the adoption effort.
+We recommend that you have two teams to create balance across cloud adoption efforts. These two teams are responsible for various capabilities throughout the adoption effort.
 
-- **Cloud adoption team:** Accountable for technical solutions, business alignment, project management, and operations of the solutions that are adopted.
+- **Cloud adoption team:** This team is accountable for technical solutions, business alignment, project management, and operations for solutions that are adopted.
 - **Cloud governance team:** To balance the cloud adoption team, a cloud governance team is dedicated to ensuring excellence in the solutions that are adopted. The cloud governance team is accountable for platform maturity, platform operations, governance, and automation.
 
-![Cloud adoption with a cloud center of excellence](../_images/ready/org-ready-best-practice.png)
+![Cloud adoption with cloud governance counterbalance](../_images/ready/org-ready-best-practice.png)
 
-This best-practice approach is considered an MVP because it may not be sustainable. Each team is wearing many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](./raci-alignment.md).
+This proven approach is considered an MVP because it may not be sustainable. Each team is wearing many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](./raci-alignment.md).
 
-The next sections describe a fully staffed, best-practice organizational structure and approaches to aligning the appropriate structure to your organization.
+The following sections describe a fully staffed, proven organizational structure along with approaches to aligning the appropriate structure to your organization.
 
-## Cloud center of excellence
+## Central IT
 
-One of the first signs of maturity in adoption efforts is a desire to move beyond governance to a *cloud center of excellence* (CCoE) structure. Such a structure is similar to the [MVP best practice](#best-practice-minimum-viable-product) organizational structure. But there's one fundamental difference between a cloud center of excellence model and the MVP best practice. The capabilities of the governance team are realigned to accelerate adoption and innovation.
+As adoption scales, the cloud governance team may struggle to keep pace with the flow of innovation from multiple cloud adoption teams. This is especially true in environments which have heavy compliance, operations, or security requirements. At this stage, it is common for companies to shift cloud responsibilities to an existing central IT team. If that team is able to reassess tools, processes, and people to better support cloud adoption at scale, then including the central IT team can add significant value. Bringing in subject matter experts from operations, automation, security, and administration to modernize Central IT can drive effective operational innovations.
 
-![Cloud adoption with a cloud center of excellence](../_images/ready/org-ready-fully-staffed.png)
+![Cloud adoption with a central IT model](../_images/ready/org-ready-central-it.png)
+
+Unfortunately, the central IT phase can be one of the riskiest phases of organizational maturity. The central IT team must come to the table with a strong growth mindset. If the team views the cloud as an opportunity to grow and adapt their capabilities, then it can provide great value throughout the process. However, if the central IT team views cloud adoption primarily as a threat to their existing model, then the central IT team becomes an obstacle to the cloud adoption teams and the business objectives they support. Some central IT teams have spent months or even years attempting to force the cloud into alignment with on-premises approaches, with only negative results. The cloud doesn't require that everything change within Central IT, but it does require change. If resistance to change is prevalent within the central IT team, this phase of maturity can quickly become a cultural antipattern.
+
+Cloud adoption plans heavily focused on platform as a service (PaaS), DevOps, or other solutions that require less operations support are less likely to see value during this phase of maturity. On the contrary, these types of solutions are the most likely to be hindered or blocked by attempts to centralize IT. A higher level of maturity, like a [cloud center of excellence (CCoE)](#cloud-center-of-excellence), is more likely to yield positive results for those types of transformational efforts. To understand the differences between Central IT in the cloud and a CCoE, see [Cloud center of excellence](./cloud-center-excellence.md).
 
 ## Strategic alignment
 
-When the motivations that drive cloud adoption are aligned to business outcomes, it's important to add a defined cloud strategy team, as the following image illustrates. This model works well as an addition to the [MVP best practice](#best-practice-minimum-viable-product) or [cloud center of excellence](#cloud-center-of-excellence) model.
+As the investment in cloud adoption grows and business values are realized, business stakeholders often become more engaged. A defined cloud strategy team, as the following image illustrates, aligns those business stakeholders to maximize the value realized by cloud adoption investments.
 
 ![Add a defined cloud strategy team](../_images/ready/org-ready-strategy-aligned.png)
 
+When maturity happens organically, as a result of IT-led cloud adoption efforts, strategic alignment is usually preceded by a governance or central IT team. When cloud adoption efforts are lead by the business, the focus on operating model and organization tends to happen earlier. Whenever possible, business outcomes and the cloud strategy team should both be defined early in the process.
+
 ## Operational alignment
 
-When stable IT operations are required to achieve business outcomes, it's important to add a defined cloud operations team, as the following images shows. This model works well as an addition to the [MVP best practice](#best-practice-minimum-viable-product), [cloud center of excellence](#cloud-center-of-excellence), or [strategic alignment](#strategic-alignment) model.
+Realizing business value from cloud adoption efforts requires stable operations. Operations in the cloud may require new tools, processes, or skills. When stable IT operations are required to achieve business outcomes, it's important to add a defined cloud operations team, as shown here.
 
 ![Add a defined cloud operations team](../_images/ready/org-ready-operations-aligned.png)
 
-## Best practice: Fully staffed
+Cloud operations can be delivered by the existing IT operations roles. But it's not uncommon for cloud operations to be delegated to other parties outside of IT operations. Managed service providers, DevOps teams, and business unit IT often assume the responsibilities associated with cloud operations, with support and guardrails provided by IT operations. This is increasingly common for cloud adoption efforts that focus heavily on DevOps or PaaS deployments.
 
-At the other end of the spectrum, the following graphic outlines a fully staffed, best practice organizational structure. In this setup, there are six dedicated teams. Each team is accountable for a distinct set of capabilities.
+## Cloud center of excellence
 
-![Fully staffed best practice organizational structure](../_images/ready/org-ready-fully-staffed.png)
+At the highest state of maturity, a cloud center of excellence aligns teams around a cloud-first modern operating model. This approach provides central IT functions like governance, security, platform, and automation.
 
-It's impractical to maintain a fully staffed, best-practice organizational structure for long. For most companies, this model quickly creates diminishing returns when it's used to shape a traditional org chart. But it's common for large companies to define virtual teams (v-teams) in an effort to align available skills with defined capabilities. A scaled-out v-team model, like the image above or the RACI charts cited in the next section, is more sustainable.
+![Cloud center of excellence](../_images/ready/org-ready-ccoe.png)
+
+The primary difference between this structure and the Central IT structure above is a focus on self-service. The teams in this structure organize with the intent of delegating control as much as possible. Aligning governance and compliance practices to cloud-native solutions creates guardrails and protection mechanisms. Unlike the Central IT model, the cloud-native approach maximizes innovation and minimizes operational overhead. For this model to be adopted, mutual agreement to modernize IT processes will be required from business and IT leadership. This model is unlikely to occur organically and often requires executive support.
 
 ## Next steps
 
-After aligning to a certain level of organizational structure maturity, you can use [RACI charts](./raci-alignment.md) to align accountability and responsibility across each team.
+After aligning to a certain stage of organizational structure maturity, you can use [RACI charts](./raci-alignment.md) to align accountability and responsibility across each team.
 
 > [!div class="nextstepaction"]
 > [Align the appropriate RACI chart](./raci-alignment.md)

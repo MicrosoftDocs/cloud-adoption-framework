@@ -25,7 +25,7 @@ This framework is designed primarily for cloud architects and the cloud strategy
 
 ## Motivations
 
-Cloud migrations can help companies deliver on their desired business outcomes. Clear communication of motivations, business drivers, and measurements of success are important foundations for making wise decisions throughout cloud migration efforts. The following table classifies motivations to facilitate this conversation. It is assumed that most companies will have motivations across each classification. The objective of this table is not to limit outcomes, but instead make it easier to prioritize overall objectives and motivations:
+Cloud migrations can help companies achieve their desired business outcomes. Clear communication of motivations, business drivers, and measurements of success are important foundations for making wise decisions throughout cloud migration efforts. The following table classifies motivations to facilitate this conversation. It is assumed that most companies will have motivations across each classification. The objective of this table is not to limit outcomes, but instead make it easier to prioritize overall objectives and motivations:
 
 <!-- markdownlint-disable MD033 -->
 
