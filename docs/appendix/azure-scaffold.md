@@ -50,7 +50,7 @@ The foundation of the scaffold is the hierarchy and relationship of the Azure En
 
 ![hierarchy](./_images/agreement.png)
 
-An Azure subscription is the basic unit where all resources are contained. It also defines several limits within Azure, such as number of cores, virtual networks and other resources. Azure Resource Groups are used to further refine the subscription model and enable a more natural grouping of resources.
+An Azure subscription is the basic unit where all resources are contained. It also defines several limits within Azure, such as number of cores, virtual networks and other resources. Resource groups are used to further refine the subscription model and enable a more natural grouping of resources.
 
 Every enterprise is different and the hierarchy in the above image allows for significant flexibility in how Azure is organized within your company. Modeling your hierarchy to reflect your company's billing, resource management, and resource access needs is the first and most important decision you make when starting in the public cloud.
 
@@ -89,7 +89,7 @@ When deciding on your Departments and Accounts (or management groups), you are p
 - **Lifecycle:** Subscriptions represent a lifecycle of a service, such as Production or Development.
 - **Department:** Subscriptions represent departments in the organization.
 
-The first two patterns are the most commonly used, and both are highly recommended. The Lifecycle approach is appropriate for most organizations. In this case, the general recommendation is to use two base subscriptions. "Production" and "Nonproduction," and then use resource groups to break out the environments further.
+The first two patterns are the most commonly used, and both are highly recommended. The Lifecycle approach is appropriate for most organizations. In this case, the general recommendation is to use two base subscriptions, `Production` and `Nonproduction`, and then use resource groups to separate the environments further.
 
 ### Resource groups
 

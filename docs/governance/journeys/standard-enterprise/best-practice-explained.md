@@ -46,7 +46,7 @@ The cloud governance team is responsible for the following decisions and impleme
 
 ### Subscription design
 
-The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has chosen the **[Production-and-preproduction]](../../../decision-guides/subscriptions/index.md#Production-and-preproduction subscription pattern])** subscription design pattern.
+The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has chosen the [production-and-nonproduction](../../../decision-guides/subscriptions/index.md#production-and-nonproduction-pattern) subscription design pattern.
 
 - Departments are not likely to be required given the current focus. Deployments are expected to be constrained within a single billing unit. At the stage of adoption, there may not even be an enterprise agreement to centralize billing. It's likely that this level of adoption is being managed by a single pay-as-you-go Azure subscription.
 - Regardless of the use of the EA portal or the existence of an enterprise agreement, a subscription model should still be defined and agreed on to minimize administrative overheard beyond just billing.
@@ -56,15 +56,15 @@ The decision on what subscription design to use determines how Azure subscriptio
 
 Resource consistency decisions determine the tools, processes, and effort required to ensure Azure resources are deployed, configured, and managed consistently within a subscription. In this narrative, **[Deployment Consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency)** has been chosen as the primary resource consistency pattern.
 
-- Resource Groups are created for applications using the lifecycle approach: Everything that is created together, gets maintained together, and retires together can go into a single resource group
+- Resource groups are created for applications using the lifecycle approach: everything that is created together is maintained together, and retires together can reside a single resource group.
 - Azure Policy should be applied to all subscriptions from the associated management group.
 - As part of the deployment process, Azure Resource Consistency templates for the resource group should be stored in source control.
 - Each resource group is associated with a specific workload or application based on the lifecycle approach described above.
 - Azure management groups enable updating governance designs as corporate policy matures.
 - Extensive implementation of Azure Policy could exceed the team’s time commitments and may not provide a great deal of value at this time. However, a simple default policy should be created and applied to each management group to enforce the small number of current cloud governance policy statements. This policy will define the implementation of specific governance requirements. Those implementations can then be applied across all deployed assets.
 
->[!Important]
->Any time a resource in a Resource Group no longer shares the same lifecycle, it should be moved to another Resource Group. Examples include common databases and networking components. While they may serve the application being developed, they may also serve other purposes and should therefore exist in other Resource Groups.
+>[!IMPORTANT]
+>Any time a resource in a resource group no longer shares the same lifecycle, it should be moved to another resource group. Examples include common databases and networking components. While they may serve the application being developed, they may also serve other purposes and should therefore exist in other resource groups.
 
 ### Resource tagging
 

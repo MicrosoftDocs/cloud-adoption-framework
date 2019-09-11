@@ -1,7 +1,7 @@
 ---
-title: "Complex Enterprise guide: Initial corporate policy behind the governance strategy"
+title: "Governance guide for complex enterprises: Initial corporate policy behind the governance strategy"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Complex Enterprise guide: Initial corporate policy behind the governance strategy"
+description: "Governance guide for complex enterprises: Initial corporate policy behind the governance strategy"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Complex Enterprise guide: Initial corporate policy behind the governance strategy
+# Governance guide for complex enterprises: Initial corporate policy behind the governance strategy
 
 The following corporate policy defines the initial governance position, which is the starting point for this guide. This article defines early-stage risks, initial policy statements, and early processes to enforce policy statements.
 

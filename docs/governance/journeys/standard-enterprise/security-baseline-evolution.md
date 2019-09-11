@@ -31,10 +31,10 @@ At the start of this narrative, the application development teams were still wor
 
 Since then, some things have changed that will affect governance:
 
-1. The application development team has implemented a CI/CD pipeline to deploy a cloud-native application with an improved user experience. That app doesn’t yet interact with protected data, so it is not production ready.
-2. The Business Intelligence team within IT actively curates data in the cloud from logistics, inventory, and third-party sources. This data is being used to drive new predictions, which could shape business processes. However, those predictions and insights are not actionable until customer and financial data can be integrated into the data platform.
-3. The IT team is progressing on the CIO and CFO's plans to retire the DR datacenter. More than 1,000 of the 2,000 assets in the DR datacenter have been retired or migrated.
-4. The loosely defined policies regarding personal data and financial data have been modernized. However, the new corporate policies are contingent on the implementation of related security and governance policies. Teams are still stalled.
+- The application development team has implemented a CI/CD pipeline to deploy a cloud-native application with an improved user experience. That app doesn’t yet interact with protected data, so it is not production ready.
+- The Business Intelligence team within IT actively curates data in the cloud from logistics, inventory, and third-party sources. This data is being used to drive new predictions, which could shape business processes. However, those predictions and insights are not actionable until customer and financial data can be integrated into the data platform.
+- The IT team is progressing on the CIO and CFO's plans to retire the DR datacenter. More than 1,000 of the 2,000 assets in the DR datacenter have been retired or migrated.
+- The loosely defined policies regarding personal data and financial data have been modernized. However, the new corporate policies are contingent on the implementation of related security and governance policies. Teams are still stalled.
 
 ### Incrementally improve the future state
 
@@ -88,35 +88,35 @@ The following changes to policy will help remediate the new risks and guide impl
 The governance MVP design will change to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
 
 1. The Networking and IT Security teams will define network requirements. The cloud governance team will support the conversation.
-2. The Identity and IT Security teams will define identity requirements and make any necessary changes to local Active Directory implementation. The cloud governance team will review changes.
-3. Create a repository in Azure DevOps to store and version all relevant Azure Resource Manager templates and scripted configurations.
-4. Azure Security Center implementation:
+1. The Identity and IT Security teams will define identity requirements and make any necessary changes to local Active Directory implementation. The cloud governance team will review changes.
+1. Create a repository in Azure DevOps to store and version all relevant Azure Resource Manager templates and scripted configurations.
+1. Azure Security Center implementation:
     1. Configure Azure Security Center for any management group that contains protected data classifications.
-    2. Set automatic provisioning to on by default to ensure patching compliance.
-    3. Establish OS security configurations. The IT Security team will define the configuration.
-    4. Support the IT Security team in the initial use of Security Center. Transition the use of Security Center to the IT Security team, but maintain access for the purpose of continually improving governance.
-    5. Create a Resource Manager template that reflects the changes required for Security Center configuration within a subscription.
-5. Update Azure policies for all subscriptions:
+    1. Set automatic provisioning to on by default to ensure patching compliance.
+    1. Establish OS security configurations. The IT Security team will define the configuration.
+    1. Support the IT Security team in the initial use of Security Center. Transition the use of Security Center to the IT Security team, but maintain access for the purpose of continually improving governance.
+    1. Create a Resource Manager template that reflects the changes required for Security Center configuration within a subscription.
+1. Update Azure policies for all subscriptions:
     1. Audit and enforce the criticality and data classification across all management groups and subscriptions, to identify any subscriptions with protected data classifications.
-    2. Audit and enforce the use of approved images only.
-6. Update Azure policies for all subscriptions that contains protected data classifications:
+    1. Audit and enforce the use of approved images only.
+1. Update Azure policies for all subscriptions that contains protected data classifications:
     1. Audit and enforce the use of standard Azure RBAC roles only.
-    2. Audit and enforce encryption for all storage accounts and files at rest on individual nodes.
-    3. Audit and enforce the application of an NSG to all NICs and subnets. The Networking and IT Security teams will define the NSG.
-    4. Audit and enforce the use of approved network subnet and vNet per network interface.
-    5. Audit and enforce the limitation of user-defined routing tables.
-    6. Apply the Built-in Policies for Guest Configuration as follows:
+    1. Audit and enforce encryption for all storage accounts and files at rest on individual nodes.
+    1. Audit and enforce the application of an NSG to all NICs and subnets. The Networking and IT Security teams will define the NSG.
+    1. Audit and enforce the use of approved network subnet and vNet per network interface.
+    1. Audit and enforce the limitation of user-defined routing tables.
+    1. Apply the Built-in Policies for Guest Configuration as follows:
         1. Audit that Windows web servers are using secure communication protocols.
-        2. Audit that password security settings are set correctly inside Linux and Windows machines.
-7. Firewall configuration:
+        1. Audit that password security settings are set correctly inside Linux and Windows machines.
+1. Firewall configuration:
     1. Identify a configuration of Azure Firewall that meets necessary security requirements. Alternatively, identify a compatible third-party appliance that is compatible with Azure.
-    2. Create a Resource Manager template to deploy the firewall with required configurations.
-8. Azure blueprint:
+    1. Create a Resource Manager template to deploy the firewall with required configurations.
+1. Azure blueprint:
     1. Create a new blueprint named `protected-data`.
-    2. Add the firewall and Azure Security Center templates to the blueprint.
-    3. Add the new policies for protected data subscriptions.
-    4. Publish the blueprint to any management group that currently plans on hosting protected data.
-    5. Apply the new blueprint to each affected subscription, in addition to existing blueprints.
+    1. Add the firewall and Azure Security Center templates to the blueprint.
+    1. Add the new policies for protected data subscriptions.
+    1. Publish the blueprint to any management group that currently plans on hosting protected data.
+    1. Apply the new blueprint to each affected subscription, in addition to existing blueprints.
 
 ## Conclusion
 

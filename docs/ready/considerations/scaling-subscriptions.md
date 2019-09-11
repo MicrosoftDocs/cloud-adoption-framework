@@ -14,16 +14,16 @@ ms.subservice: ready
 
 Organizations often need more than one Azure subscription as a result of resource limits and other governance considerations. Having a strategy for scaling your subscriptions is important.
 
-## Production and Preproduction workloads
+## Production and nonproduction workloads
 
-When deploying your first production workload in Azure, you should start with two subscriptions: one for your production environment and one for your preproduction (dev/test) environment.
+When deploying your first production workload in Azure, you should start with two subscriptions: one for your production environment and one for your nonproduction (dev/test) environment.
 
-![A basic subscription model showing keys next to boxes labeled "Production" and "Preproduction"](../../_images/ready/basic-subscription-model.png)
+![A basic subscription model showing keys next to boxes labeled "Production" and "Nonproduction"](../../_images/ready/basic-subscription-model.png)
 
 We recommend this approach for several reasons:
 
 - Azure has specific subscription offerings for dev/test workloads. These offerings provide discounted rates on Azure services and licensing.
-- Your production and preproduction environments will likely have different sets of Azure policies. Using separate subscriptions makes it simple to apply each distinct policy set at the subscription level.
+- Your production and nonproduction environments will likely have different sets of Azure policies. Using separate subscriptions makes it simple to apply each distinct policy set at the subscription level.
 - You might want certain types of Azure resources in a dev/test subscription for testing. With a separate subscription, you can use those resource types without making them available in your production environment.
 - You can use dev/test subscriptions as isolated sandbox environments. Such sandboxes allow admins and developers to rapidly build up and tear down entire sets of Azure resources. This isolation can also help with data protection and security concerns.
 - Acceptable cost thresholds will likely vary between production and dev/test subscriptions.

@@ -34,9 +34,9 @@ The following diagram shows the governance MVP hierarchy for organizing resource
 
 Every application should be deployed in the proper area of the management group, subscription, and resource group hierarchy. During deployment planning, the cloud governance team will create the necessary nodes in the hierarchy to empower the cloud adoption teams.
 
-1. A management group for each type of environment (such as Production, Development, and Test).
-2. A subscription for production and non-production.
-3. Appropriate Resource Groups with RBAC applied within these subscriptions.
+1. One management group for each type of environment (such as production, development, and test).
+2. Two subscriptions, one for production and another for nonproduction.
+3. Appropriate resource groups with RBAC applied within these subscriptions.
 4. [Consistent nomenclature](../../../ready/considerations/name-and-tag.md) should be applied at each level of this grouping hierarchy.
 
 Here is an example of this pattern in use:

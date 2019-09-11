@@ -18,13 +18,13 @@ The goal of this guidance is to help you learn the process for designing a resou
 The requirements are:
 
 - The enterprise plans to transition new cloud roles and responsibilities to a set of users and therefore requires identity management for multiple teams with different resource access needs in Azure. This identity management system is required to store the identity of the following users:
-  1. The individual in your organization responsible for ownership of **subscriptions**.
-  2. The individual in your organization responsible for the **shared infrastructure resources** used to connect your on-premises network to an Azure virtual network.
-  3. Two individuals in your organization responsible for managing a **workload**.
+  - The individual in your organization responsible for ownership of **subscriptions**.
+  - The individual in your organization responsible for the **shared infrastructure resources** used to connect your on-premises network to an Azure virtual network.
+  - Two individuals in your organization responsible for managing a **workload**.
 - Support for multiple **environments**. An environment is a logical grouping of resources, such as virtual machines, virtual networking, and network traffic routing services. These groups of resources have similar management and security requirements and are typically used for a specific purpose such as testing or production. In this example, the requirement is for three environments:
-  1. A **shared infrastructure environment** that includes resources shared by workloads in other environments. For example, a virtual network with a gateway subnet that provides connectivity to on-premises.
-  2. A **production environment** with the most restrictive security policies. May include internal or external facing workloads.
-  3. A **development environment** for proof-of-concept and testing work. This environment has security, compliance, and cost policies that differ from those in the production environment.
+  - A **shared infrastructure environment** that includes resources shared by workloads in other environments. For example, a virtual network with a gateway subnet that provides connectivity to on-premises.
+  - A **production environment** with the most restrictive security policies. May include internal or external facing workloads.
+  - A **development environment** for proof-of-concept and testing work. This environment has security, compliance, and cost policies that differ from those in the production environment.
 - A **permissions model of least privilege** in which users have no permissions by default. The model must support the following:
   - A single trusted user at the subscription scope with permission to assign resource access rights.
   - Each workload owner is denied access to resources by default. Resource access rights are granted explicitly by the single trusted user at the subscription scope.

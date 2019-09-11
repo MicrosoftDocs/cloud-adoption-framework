@@ -43,7 +43,7 @@ An Azure subscription serves several purposes. An Azure subscription is:
 When you create an Azure subscription, you make several key choices about the subscription:
 
 - **Who is responsible for paying for the subscription?** The party associated with the email address that you provide when you create a subscription by default is the subscription’s account administrator. The party associated with this email address is responsible for paying for all costs that are incurred by the subscription’s resources.
-- **Which Azure offer am I interested in?** Each subscription is associated with a specific [Azure offer](https://azure.microsoft.com/support/legal/offer-details). You can choose the Azure offer that best meets your needs. For example, if you intend to use a subscription to run preproduction workloads, you might choose the Pay-As-You-Go Dev/Test offer or the Enterprise Dev/Test offer.
+- **Which Azure offer am I interested in?** Each subscription is associated with a specific [Azure offer](https://azure.microsoft.com/support/legal/offer-details). You can choose the Azure offer that best meets your needs. For example, if you intend to use a subscription to run nonproduction workloads, you might choose the Pay-As-You-Go Dev/Test offer or the Enterprise Dev/Test offer.
 
 > [!NOTE]
 > When you sign up for Azure, you might see the phrase *create an Azure account*. You create an Azure account when you create an Azure subscription and associate the subscription with an email account.

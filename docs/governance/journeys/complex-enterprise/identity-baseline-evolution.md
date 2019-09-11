@@ -1,7 +1,7 @@
 ---
-title: "Complex Enterprise guide: Improve the Identity Baseline discipline"
+title: "Governance guide for complex enterprises: Improve the Identity Baseline discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Complex Enterprise guide: Improve the Identity Baseline discipline"
+description: "Governance guide for complex enterprises: Improve the Identity Baseline discipline"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/06/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Complex Enterprise guide: Improve the Identity Baseline discipline
+# Governance guide for complex enterprises: Improve the Identity Baseline discipline
 
 This article advances the narrative by adding Identity Baseline controls to the governance MVP.
 
@@ -19,10 +19,10 @@ This article advances the narrative by adding Identity Baseline controls to the 
 
 The business justification for the cloud migration of the two datacenters was approved by the CFO. During the technical feasibility study, several roadblocks were discovered:
 
-1. Protected data and mission-critical applications represent 25% of the workloads in the two datacenters. Neither can be eliminated until the current governance policies regarding sensitive personal data and mission-critical applications have been modernized.
-2. 7% of the assets in those datacenters are not cloud-compatible. They will be moved to an alternate datacenter before termination of the datacenter contract.
-3. 15% of the assets in the datacenter (750 virtual machines) have a dependency on legacy authentication or third-party multi-factor authentication.
-4. The VPN connection that connects existing datacenters and Azure does not offer sufficient data transmission speeds or latency to migrate the volume of assets within the two-year timeline to retire the datacenter.
+- Protected data and mission-critical applications represent 25% of the workloads in the two datacenters. Neither can be eliminated until the current governance policies regarding sensitive personal data and mission-critical applications have been modernized.
+- 7% of the assets in those datacenters are not cloud-compatible. They will be moved to an alternate datacenter before termination of the datacenter contract.
+- 15% of the assets in the datacenter (750 virtual machines) have a dependency on legacy authentication or third-party multi-factor authentication.
+- The VPN connection that connects existing datacenters and Azure does not offer sufficient data transmission speeds or latency to migrate the volume of assets within the two-year timeline to retire the datacenter.
 
 The first two roadblocks are being managed in parallel. This article will address the resolution of the third and fourth roadblocks.
 
@@ -50,20 +50,20 @@ The changes to current and future state expose new risks that will require new p
 
 This business risk can be expanded into a few technical risks:
 
-1. Legacy authentication might not be available in the cloud, limiting deployment of some applications.
-2. The current third-party multi-factor authentication solution might not be available in the cloud, limiting deployment of some applications.
-3. Retooling or moving either could create outages and add costs.
-4. The speed and stability of the VPN might impede migration.
-5. Traffic entering the cloud could cause security issues in other parts of the global network.
+- Legacy authentication might not be available in the cloud, limiting deployment of some applications.
+- The current third-party multi-factor authentication solution might not be available in the cloud, limiting deployment of some applications.
+- Retooling or moving could create outages or add costs.
+- The speed and stability of the VPN might impede migration.
+- Traffic entering the cloud could cause security issues in other parts of the global network.
 
 ## Incremental improvement of the policy statements
 
 The following changes to policy will help remediate the new risks and guide implementation.
 
-1. The chosen cloud provider must offer a means of authenticating via legacy methods.
-2. The chosen cloud provider must offer a means of authentication with the current third-party multi-factor authentication solution.
-3. A high-speed private connection should be established between the cloud provider and the company’s telco provider, connecting the cloud provider to the global network of datacenters.
-4. Until sufficient security requirements are established, no inbound public traffic may access company assets hosted in the cloud. All ports are blocked from any source outside of the global WAN.
+- The chosen cloud provider must offer a means of authenticating via legacy methods.
+- The chosen cloud provider must offer a means of authentication with the current third-party multi-factor authentication solution.
+- A high-speed private connection should be established between the cloud provider and the company’s telco provider, connecting the cloud provider to the global network of datacenters.
+- Until sufficient security requirements are established, no inbound public traffic may access company assets hosted in the cloud. All ports are blocked from any source outside of the global WAN.
 
 ## Incremental improvement of the best practices
 
@@ -71,12 +71,12 @@ The governance MVP design changes to include new Azure policies and an implement
 
 Here are the new best practices:
 
-1. Secure hybrid VNet blueprint: The on-premises side of the hybrid network should be configured to allow communication between the following solution and the on-premises Active Directory servers. This best practice requires a DMZ to enable Active Directory Domain Services across network boundaries.
-2. Azure Resource Manager templates:
+- **Secure hybrid VNet blueprint:** The on-premises side of the hybrid network should be configured to allow communication between the following solution and the on-premises Active Directory servers. This best practice requires a DMZ to enable Active Directory Domain Services across network boundaries.
+- **Azure Resource Manager templates:**
     1. Define an NSG to block external traffic and allow internal traffic.
     1. Deploy two Active Directory virtual machines in a load-balanced pair based on a golden image. On first boot, that image runs a PowerShell script to join the domain and register with domain services. For more information, see [Extend Active Directory Domain Services (AD DS) to Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adds-extend-domain).
-3. Azure Policy: Apply the NSG to all resources.
-4. Azure blueprint:
+- Azure Policy: Apply the NSG to all resources.
+- Azure blueprint:
     1. Create a blueprint named `active-directory-virtual-machines`.
     1. Add each of the Active Directory templates and policies to the blueprint.
     1. Publish the blueprint to any applicable management group.

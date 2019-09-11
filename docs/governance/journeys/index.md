@@ -29,8 +29,8 @@ To begin your cloud adoption journey, choose one of the following governance gui
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>The Standard Enterprise</h3>
-                        <p>A governance guide for most enterprises based on the recommended two subscription model with deployments in a variety of regions but not spanning public and sovereign/government clouds.</p>
+                        <h3>Standard governance guide</h3>
+                        <p>A guide for most organizations based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.</p>
                     </div>
                 </div>
             </div>
@@ -43,8 +43,8 @@ To begin your cloud adoption journey, choose one of the following governance gui
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>The Complex Enterprise</h3>
-                        <p>A governance guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.</p>
+                        <h3>Governance guide for complex enterprises</h3>
+                        <p>A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ To begin a governance journey, choose one of the two options below. The options 
 
 ### Business characteristics
 
-| Characteristic | Standard Enterprise                                                                              | Complex Enterprise                                                                                               |
+| Characteristic | Standard Organization                                                                              | Complex Enterprise                                                                                               |
 |--------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Geography (country or geopolitical region) | Customers or staff reside largely in one geography                                                      | Customers or staff reside in multiple geographies or require sovereign clouds.                                                             |
 | Business units affected                    | Business Units that share a common IT infrastructure                                                                                    | Multiple business units that do not share a common IT infrastructure                                                                                        |
@@ -88,7 +88,7 @@ To begin a governance journey, choose one of the two options below. The options 
 
 ### Desired future state after incremental improvement of cloud governance
 
-| State | Staandard Enterprise                                                                        | Complex Enterprise                                                                                        |
+| State | Standard Organization                                                                        | Complex Enterprise                                                                                        |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Cost Management – cloud accounting           | Showback model. Billing is centralized through IT.                                                | Chargeback model. Billing could be distributed through IT procurement.                                  |
 | Security Baseline – protected data           | Company financial data and IP. Limited customer data. No third-party compliance requirements.     | Multiple collections of customers’ financial and personal data. May need to consider third-party compliance. |
@@ -119,6 +119,6 @@ For more information, visit the [Azure Virtual Datacenter](/azure/architecture/v
 Choose one of these guides:
 
 > [!div class="nextstepaction"]
-> [Standard Enterprise governance guide](./standard-enterprise/index.md)
+> [Standard governance guide](./standard-enterprise/index.md)
 >
-> [Complex Enterprise governance guide](./complex-enterprise/index.md)
+> [Governance guide for complex enterprises](./complex-enterprise/index.md)

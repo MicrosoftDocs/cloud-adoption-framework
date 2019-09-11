@@ -43,8 +43,8 @@ Dave creates a subscription to support developer tools that are common across al
 | Item | Name | Description |
 | --- | --- | --- |
 | Subscription |Contoso ETS DeveloperTools Production |Supports common developer tools |
-| Resource Group |bitbucket-prod-rg |Contains the application web server and database server |
-| Resource Group |corenetworks-prod-rg |Contains the virtual networks and site-to-site gateway connection |
+| Resource group |bitbucket-prod-rg |Contains the application web server and database server |
+| Resource group |corenetworks-prod-rg |Contains the virtual networks and site-to-site gateway connection |
 
 ### Role-based access control
 

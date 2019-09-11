@@ -35,8 +35,8 @@ The following are two different examples of initial governance foundations (also
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>The Standard Enterprise</h3>
-                        <p>A governance guide for most enterprises based on the recommended two subscription model with deployments in a variety of regions but not spanning public and sovereign/government clouds.</p>
+                        <h3>Standard governance guide</h3>
+                        <p>A guide for most organizations based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.</p>
                     </div>
                 </div>
             </div>
@@ -49,8 +49,8 @@ The following are two different examples of initial governance foundations (also
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
                     <div class="cardText">
-                        <h3>The Complex Enterprise</h3>
-                        <p>A governance guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.</p>
+                        <h3>Governance guide for complex enterprises</h3>
+                        <p>A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.</p>
                     </div>
                 </div>
             </div>
