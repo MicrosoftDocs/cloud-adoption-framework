@@ -152,7 +152,7 @@ On Azure, it’s more common to use separate VMs to serve this purpose. Azure ar
 
 In addition, each tier can also provide appropriate disaster recovery services. For example, production and database VMs might require a hot or warm recovery, while the development and testing VMs support a cold recovery.
 
-The following figure shows a possible Azure deployment using a primary and a secondary site. In the primary site, the production, preproduction, and testing VMs are deployed with high availability. The secondary site is for backup and disaster recovery.
+The following figure shows a possible Azure deployment using a primary and a secondary site. In the primary site, the production, staging, and testing VMs are deployed with high availability. The secondary site is for backup and disaster recovery.
 
 ![A possible Azure deployment using a primary and a secondary site](../../_images/mainframe-migration/migration-backup-DR.png)
 

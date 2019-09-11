@@ -1,17 +1,17 @@
 ---
-title: "Small-to-medium enterprise governance guide"
+title: "Standard Enterprise Governance Guide"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Small-to-medium enterprise governance guide
+description: Standard Enterprise governance guide
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise governance guide
+# Standard Enterprise governance guide
 
 ## Overview of best practices
 
@@ -24,7 +24,7 @@ As a quick starting point, this overview defines a minimum viable product (MVP) 
 
 ### Governance best practices
 
-These best practices serve as a foundation for an organization to quickly and consistently add governance guardrails across multiple Azure subscriptions.
+These best practices serve as a foundation for an organization to quickly and consistently add governance guardrails across your subscriptions.
 
 ### Resource organization
 
@@ -32,13 +32,11 @@ The following diagram shows the governance MVP hierarchy for organizing resource
 
 ![Diagram of resource organization](../../../_images/governance/resource-organization.png)
 
-<!-- Same comment from large enterprise about linking together -->
-
 Every application should be deployed in the proper area of the management group, subscription, and resource group hierarchy. During deployment planning, the cloud governance team will create the necessary nodes in the hierarchy to empower the cloud adoption teams.
 
-1. A management group for each type of environment (such as Production, Development, and Test).
-2. A subscription for each "application categorization".
-3. A separate resource group for each application.
+1. One management group for each type of environment (such as production, development, and test).
+2. Two subscriptions, one for production and another for nonproduction.
+3. Appropriate resource groups with RBAC applied within these subscriptions.
 4. [Consistent nomenclature](../../../ready/considerations/name-and-tag.md) should be applied at each level of this grouping hierarchy.
 
 Here is an example of this pattern in use:

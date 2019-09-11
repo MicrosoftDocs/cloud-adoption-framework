@@ -1,43 +1,43 @@
 ---
-title: "Aligning responsibilities"
+title: "Aligning responsibilities across teams"
 titleSuffix: Microsoft Cloud adoption Framework for Azure
-description: Provides an overview of aligning responsibilities across teams.
+description: Learn to align responsibilities across teams.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/04/2019
+ms.date: 09/10/2019
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: organize
 ---
 
-# Develop a cross-team RACI diagram
+# Align responsibilities across teams
 
-This article provides an example of a *responsible, accountable, consulted, and informed* (RACI) matrix for the organizational structures that are described at [Establish team structures](./organization-structures.md):
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies *responsible, accountable, consulted, and informed* (RACI) parties. This article provides an example RACI matrix for the organizational structures described in [Establish team structures](./organization-structures.md):
 
 - [Cloud adoption team only](#cloud-adoption-team-only)
 - [MVP best practice](#best-practice-minimum-viable-product-mvp)
-- [Cloud center of excellence (CCoE)](#cloud-center-of-excellence-ccoe)
+- [Central IT](#central-it)
 - [Strategic alignment](#strategic-alignment)
-- [Operational alignment](#strategic-alignment)
-- [Fully staffed best practice](#best-practice-fully-staffed)
+- [Operational alignment](#operational-alignment)
+- [Cloud center of excellence (CCoE)](#cloud-center-of-excellence-ccoe)
 
-To track organization structure decisions over time, download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+To track organizational structure decisions over time, download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
 
 The examples in this article specify these RACI constructs:
 
-- The one team that's *accountable* for a function
-- The teams that are *responsible* for the outcomes
-- The teams that should be *consulted* during planning
-- The teams that should be *informed* when work is completed
+- The one team that is *accountable* for a function.
+- The teams that are *responsible* for the outcomes.
+- The teams that should be *consulted* during planning.
+- The teams that should be *informed* when work is completed.
 
-The last row of each table except the first one contains a link to the most-aligned cloud capability for additional information.
+The last row of each table (except the first) contains a link to the most-aligned cloud capability for additional information.
 
 ## Cloud adoption team only
 
 |  |Solution delivery  |Business alignment  |Change management  |Solution operations  |Governance |Platform maturity  |Platform operations  |Platform automation  |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|
-|Cloud strategy team  |Accountable|Accountable|Accountable|Accountable|Accountable|Accountable|Accountable|Accountable|
+|Cloud adoption team |Accountable|Accountable|Accountable|Accountable|Accountable|Accountable|Accountable|Accountable|
 
 ## Best practice: minimum viable product (MVP)
 
@@ -48,16 +48,15 @@ The last row of each table except the first one contains a link to the most-alig
 ||||||||||
 |Aligned cloud capability|[Cloud adoption](./cloud-adoption.md)|[Cloud strategy](./cloud-strategy.md)|[Cloud strategy](./cloud-strategy.md)|[Cloud operations](./cloud-operations.md)|[CCoE](./cloud-center-excellence.md)-[Cloud governance](./cloud-governance.md)|[CCoE](./cloud-center-excellence.md)-[Cloud platform](./cloud-platform.md)|[CCoE](./cloud-center-excellence.md)-[Cloud platform](./cloud-platform.md)|[CCoE](./cloud-center-excellence.md)-[Cloud automation](./cloud-automation.md)|
 
-## Cloud center of excellence (CCoE)
+## Central IT
 
-|  |Solution delivery  |Business alignment  |Change management  |Solution operations  |Governance |Platform maturity  |Platform operations  |Platform automation  |
+| |Solution delivery  |Business alignment  |Change management  |Solution operations  |Governance |Platform maturity  |Platform operations  |Platform automation  |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|
-|Cloud adoption team  |Accountable|Accountable|Accountable|Accountable|Informed   |Informed   |Informed   |Informed   |
+|Cloud adoption team  |Accountable|Accountable|Responsible    |Responsible|Informed   |Informed   |Informed   |Informed   |
 |Cloud governance team|Consulted  |Informed   |Informed   |Informed   |Accountable|Consulted  |Responsible|Informed   |
-|Cloud platform team  |Consulted  |Informed   |Informed   |Informed   |Consulted  |Accountable|Accountable|Responsible|
-|Cloud automation team|Consulted  |Informed   |Informed   |Informed   |Consulted  |Responsible|Responsible|Accountable|
+|Central IT           |Consulted  |Informed   |Accountable   |Accountable   |Responsible  |Accountable|Accountable|Accountable|
 ||||||||||
-|Aligned cloud capability|[Cloud adoption](./cloud-adoption.md)|[Cloud strategy](./cloud-strategy.md)|[Cloud strategy](./cloud-strategy.md)|[Cloud operations](./cloud-operations.md)|[CCoE](./cloud-center-excellence.md)-[Cloud governance](./cloud-governance.md)|[CCoE](./cloud-center-excellence.md)-[Cloud platform](./cloud-platform.md)|[CCoE](./cloud-center-excellence.md)-[Cloud platform](./cloud-platform.md)|[CCoE](./cloud-center-excellence.md)-[Cloud automation](./cloud-automation.md)|
+|Aligned cloud capability|[Cloud adoption](./cloud-adoption.md)|[Cloud strategy](./cloud-strategy.md)|[Cloud strategy](./cloud-strategy.md)|[Cloud operations](./cloud-operations.md)|[Cloud governance](./cloud-governance.md)|[Central IT](./central-it.md)|[Central IT](./central-it.md)|[Central IT](./central-it.md)|
 
 ## Strategic alignment
 
@@ -80,7 +79,7 @@ The last row of each table except the first one contains a link to the most-alig
 ||||||||||
 |Aligned cloud capability|[Cloud adoption](./cloud-adoption.md)|[Cloud strategy](./cloud-strategy.md)|[Cloud strategy](./cloud-strategy.md)|[Cloud operations](./cloud-operations.md)|[CCoE](./cloud-center-excellence.md)-[Cloud governance](./cloud-governance.md)|[CCoE](./cloud-center-excellence.md)-[Cloud platform](./cloud-platform.md)|[CCoE](./cloud-center-excellence.md)-[Cloud platform](./cloud-platform.md)|[CCoE](./cloud-center-excellence.md)-[Cloud automation](./cloud-automation.md)|
 
-## Best practice: Fully staffed
+## Cloud center of excellence (CCoE)
 
 |  |Solution delivery  |Business alignment  |Change management  |Solution operations  |Governance |Platform maturity  |Platform operations  |Platform automation  |
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|
@@ -95,7 +94,7 @@ The last row of each table except the first one contains a link to the most-alig
 
 ## Next steps
 
-To track organization-structure decisions over time, download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx). Copy and modify the most closely aligned sample from the RACI matrices in this article.
+To track decisions about organization structure over time, download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx). Copy and modify the most closely aligned sample from the RACI matrices in this article.
 
 > [!div class="nextstepaction"]
 > [Download the RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx)

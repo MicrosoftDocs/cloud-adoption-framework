@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describes the formation of cloud platform capabilities
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/04/2019
+ms.date: 09/10/2019
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -13,7 +13,7 @@ ms.custom: organize
 
 # Cloud platform capabilities
 
-The cloud introduces many technical changes as well as opportunities to stream technical solutions. However, general IT principles and business needs stay the same. You still need to protect sensitive business data. If your IT platform depends on a local area network, there's a good chance that you'll need network definitions in the cloud. Users who need to access applications and data will want their current identities to access relevant cloud resources.
+The cloud introduces many technical changes as well as opportunities to streamline technical solutions. However, general IT principles and business needs stay the same. You still need to protect sensitive business data. If your IT platform depends on a local area network, there's a good chance that you'll need network definitions in the cloud. Users who need to access applications and data will want their current identities to access relevant cloud resources.
 
 While the cloud presents the opportunity to learn new skills, your current architects should be able to directly apply their experiences and subject matter expertise. Cloud platform capabilities are usually provided by a select group of architects who focus on learning about the cloud platform. These architects then aid others in decision making and the proper application of controls to cloud environments.
 

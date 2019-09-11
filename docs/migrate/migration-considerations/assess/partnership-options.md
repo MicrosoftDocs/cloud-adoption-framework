@@ -79,7 +79,7 @@ The main phases of a typical FastTrack for Azure engagement are:
 
 **Migrate/Optimize:** Microsoft Services' [Cloud Modernization Solution](https://download.microsoft.com/download/3/7/3/373F90E3-8568-44F3-B096-CD9C1CD28AB7/Cloud_Modernization_Datasheet_EN_US.pdf) offers a comprehensive approach to move applications and infrastructure to Azure, as well as to optimize and modernize once in the cloud backed by streamlined migration.
 
-**Innovate:** Microsoft Services' [Cloud Center of Excellence (CCoE)](https://download.microsoft.com/download/F/8/B/F8BBE4BD-E5F8-4DFB-82F7-C0A4E17051BB/Cloud_Center_of_Excellence_Datasheet_EN_US.pdf) solution offers a DevOps coaching engagement and uses DevOps principles combined with prescriptive cloud-native service management and security controls to help drive business innovation, increase agility, and reduce time to value within a secure, predictable and flexible services delivery and operations management capability.
+**Innovate:** Microsoft Services' [Cloud Center of Excellence (CCoE) solution](https://download.microsoft.com/download/F/8/B/F8BBE4BD-E5F8-4DFB-82F7-C0A4E17051BB/Cloud_Center_of_Excellence_Datasheet_EN_US.pdf) offers a DevOps coaching engagement and uses DevOps principles combined with prescriptive cloud-native service management and security controls to help drive business innovation, increase agility, and reduce time to value within a secure, predictable, and flexible services delivery and operations management capability.
 
 ## Azure Support
 

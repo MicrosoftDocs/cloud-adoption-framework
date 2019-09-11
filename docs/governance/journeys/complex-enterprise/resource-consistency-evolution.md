@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise guide: Improve the Resource Consistency discipline"
+title: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Large enterprise guide: Improve the Resource Consistency discipline"
+description: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Improve the Resource Consistency discipline
+# Governance guide for complex enterprises: Improve the Resource Consistency discipline
 
 This article advances the narrative by adding Resource Consistency controls to the governance MVP to support mission-critical applications.
 
@@ -28,8 +28,7 @@ The cloud adoption teams have met all requirements to move protected data. With 
 ### Incrementally improve the future state
 
 - IT operations is new to cloud operations and needs to quickly integrate existing operational processes.
-
-The changes to current and future state expose new risks that will require new policy statements.
+- The changes to current and future state expose new risks that will require new policy statements.
 
 ## Changes in tangible risks
 
@@ -37,18 +36,18 @@ The changes to current and future state expose new risks that will require new p
 
 This business risk can be expanded into several technical risks:
 
-- Misaligned operational processes might lead to outages that can’t be detected or mitigated quickly.
-- External intrusion or denial of service attacks might cause a business interruption.
-- Mission-critical assets might not be properly discovered and therefore not properly operated.
-- Undiscovered or mislabeled assets might not be supported by existing operational management processes.
-- Configuration of deployed assets might not meet performance expectations.
-- Logging might not be properly recorded and centralized to allow for remediation of performance issues.
-- Recovery policies may fail or take longer than expected.
-- Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
-- Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
-- Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
-- Deployed operating systems or applications might not meet OS and application hardening requirements.
-- There is a risk of inconsistency due to multiple teams working in the cloud.
+1. Misaligned operational processes might lead to outages that can’t be detected or mitigated quickly.
+2. External intrusion or denial of service attacks might cause a business interruption.
+3. Mission-critical assets might not be properly discovered and therefore not properly operated.
+4. Undiscovered or mislabeled assets might not be supported by existing operational management processes.
+5. Configuration of deployed assets might not meet performance expectations.
+6. Logging might not be properly recorded and centralized to allow for remediation of performance issues.
+7. Recovery policies may fail or take longer than expected.
+8. Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
+9. Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
+10. Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
+11. Deployed operating systems or applications might not meet OS and application hardening requirements.
+12. There is a risk of inconsistency due to multiple teams working in the cloud.
 
 ## Incremental improvement of the policy statements
 
@@ -73,9 +72,7 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of the best practices
 
-
 This section of the article will improve the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
-
 
 Following the experience of this fictional example, it is assumed that the Protected Data changes have already occurred. Building on that best practice, the following will add operational monitoring requirements, readying a subscription for mission-critical applications.
 
@@ -83,25 +80,25 @@ Following the experience of this fictional example, it is assumed that the Prote
 
 1. As an external dependency, the cloud operations team will need to define operational monitoring tooling, business continuity and disaster recovery (BCDR) tooling, and automated remediation tooling. The cloud governance team can then support necessary discovery processes.
     1. In this use case, the cloud operations team chose Azure Monitor as the primary tool for monitoring mission-critical applications.
-    2. The team also chose Azure Site Recovery as the primary BCDR tooling.
-2. Azure Site Recovery implementation.
+    1. The team also chose Azure Site Recovery as the primary BCDR tooling.
+1. Azure Site Recovery implementation.
     1. Define and deploy Azure Vault for backup and recovery processes.
-    2. Create an Azure Resource Management template for creation of a vault in each subscription.
-3. Azure Monitor implementation.
+    1. Create an Azure Resource Management template for creation of a vault in each subscription.
+1. Azure Monitor implementation.
     1. Once a mission-critical subscription is identified, a log analytics workspace can be created using PowerShell. This is a predeployment process.
 
 **Individual cloud adoption subscription:** The following will ensure that each subscription is discoverable by the monitoring solution and ready to be included in BCDR practices.
 
-1. Azure Policy for mission-critical nodes
+1. Azure Policy for mission-critical nodes:
     1. Audit and enforce use of standard roles only.
-    2. Audit and enforce application of encryption for all storage accounts.
-    3. Audit and enforce use of approved network subnet and VNet per network interface.
-    4. Audit and enforce the limitation of user-defined routing tables.
-    5. Audit and enforce the deployment of Log Analytics agents for Windows and Linux virtual machines.
-2. Azure blueprint
+    1. Audit and enforce application of encryption for all storage accounts.
+    1. Audit and enforce use of approved network subnet and VNet per network interface.
+    1. Audit and enforce the limitation of user-defined routing tables.
+    1. Audit and enforce the deployment of Log Analytics agents for Windows and Linux virtual machines.
+2. Azure blueprint:
     1. Create a blueprint named `mission-critical-workloads-and-protected-data`. This blueprint will apply assets in addition to the protected data blueprint.
-    2. Add the new Azure policies to the blueprint.
-    3. Apply the blueprint to any subscription that is expected to host a mission-critical application.
+    1. Add the new Azure policies to the blueprint.
+    1. Apply the blueprint to any subscription that is expected to host a mission-critical application.
 
 ## Conclusion
 

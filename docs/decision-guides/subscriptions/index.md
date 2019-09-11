@@ -41,21 +41,21 @@ The following subscription patterns reflect an initial increase in subscription 
 
 A single subscription per account may suffice for organizations that need to deploy a small number of cloud-hosted assets. This is the first subscription pattern you'll implement when beginning your cloud adoption process, allowing small-scale experimental or proof-of-concept deployments to explore the capabilities of the cloud.
 
-### Production-and-preproduction pattern
+### Production-and-nonproduction pattern
 
 Once you're ready to deploy a workload to a production environment, you should add an additional subscription. This helps you keep your production data and other assets out of your dev/test environments. You can also easily apply two different sets of policies across the resources in the two subscriptions.
 
-![Production-and-preproduction subscription pattern](../../_images/ready/basic-subscription-model.png)
+![Production-and-nonproduction subscription pattern](../../_images/ready/basic-subscription-model.png)
 
 ### Workload separation pattern
 
-As an organization adds new workloads to the cloud, different ownership of subscriptions or basic separation of responsibility may result in multiple subscriptions in both the production and preproduction management groups. While this approach does provide basic workload separation, it doesn't take significant advantage of the inheritance model to automatically apply policies across a subset of your subscriptions.
+As an organization adds new workloads to the cloud, different ownership of subscriptions or basic separation of responsibility may result in multiple subscriptions in both the production and nonproduction management groups. While this approach does provide basic workload separation, it doesn't take significant advantage of the inheritance model to automatically apply policies across a subset of your subscriptions.
 
 ![Workload separation pattern](../../_images/ready/management-group-hierarchy.png)
 
 ### Application category pattern
 
-As an organization's cloud footprint grows, additional subscriptions are typically created to support applications with fundamental differences in business criticality, compliance requirements, access controls, or data protection needs. Building from the production-and-preproduction subscription pattern, the subscriptions supporting these application categories are organized under either the production or preproduction management group as applicable. These subscriptions are typically owned and administered by central IT operations staff.
+As an organization's cloud footprint grows, additional subscriptions are typically created to support applications with fundamental differences in business criticality, compliance requirements, access controls, or data protection needs. Building from the production-and-nonproduction subscription pattern, the subscriptions supporting these application categories are organized under either the production or nonproduction management group as applicable. These subscriptions are typically owned and administered by central IT operations staff.
 
 ![Application category pattern](../../_images/infra-subscriptions/application.png)
 

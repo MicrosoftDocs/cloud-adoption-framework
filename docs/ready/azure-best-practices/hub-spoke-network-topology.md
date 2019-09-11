@@ -48,7 +48,7 @@ The hub often contains the common service components that the spokes consume. Th
 
 You can minimize redundancy, simplify management, and reduce overall cost by using the shared hub infrastructure to support multiple spokes.
 
-The role of each spoke can be to host different types of workloads. The spokes also provide a modular approach for repeatable deployments of the same workloads. Examples are dev and test, user acceptance testing, preproduction, and production.
+The role of each spoke can be to host different types of workloads. The spokes also provide a modular approach for repeatable deployments of the same workloads. Examples are dev and test, user acceptance testing, staging, and production.
 
 The spokes can also segregate and enable different groups within your organization. An example is Azure DevOps groups. Inside a spoke, it's possible to deploy a basic workload or complex multitier workloads with traffic control between the tiers.
 

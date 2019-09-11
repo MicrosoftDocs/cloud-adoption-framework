@@ -689,7 +689,7 @@ Contoso has long been using the ITIL framework for the management of its systems
 Contoso is going to implement locks as follows:
 
 - Any production or failover component must be in a resource group that has a ReadOnly lock. This means that to modify or delete production items, the lock must be removed.
-- Nonproduction resource groups will have CanNotDelete locks. This means that authorized users can read or modify a resource, but can't delete it.
+- Nonproduction resource groups will have CanNotDelete locks. This means that authorized users can read or modify a resource, but cannot delete it.
 
 [Learn more](/azure/azure-resource-manager/resource-group-lock-resources) about locks.
 

@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Provides an overview of an approach to managing organization alignment.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2019
+ms.date: 09/10/2019
 ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: organize

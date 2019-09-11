@@ -234,7 +234,7 @@ Contoso admins run a quick test failover, and then a full failover to migrate th
 
     ![Test migration](./media/contoso-migration-rehost-vm/test-migrate.png)
 
-3. In **Test Migration**, select the Azure VNet in which the Azure VM will be located after the migration. We recommend you use a non-production VNet.
+3. In **Test Migration**, select the Azure VNet in which the Azure VM will be located after the migration. We recommend you use a nonproduction VNet.
 4. The **Test migration** job starts. Monitor the job in the portal notifications.
 5. After the migration finishes, view the migrated Azure VM in **Virtual Machines** in the Azure portal. The machine name has a suffix **-Test**.
 6. After the test is done, right-click the Azure VM in **Replicating machines**, and click **Clean up test migration**.

@@ -1,17 +1,17 @@
 ---
-title: "Small-to-medium enterprise guide: Prescriptive guidance explained"
+title: "Standard Enterprise guide: Prescriptive guidance explained"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about prescriptive guidance for governance in small-to-medium enterprises.
+description: Learn about prescriptive guidance for governance in standard enterprises.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise guide: Prescriptive guidance explained
+# Standard Enterprise guide: Prescriptive guidance explained
 
 The governance guide starts with a set of initial [corporate policies](./initial-corporate-policy.md). These policies are used to establish a governance MVP that reflects [recommended practices](./index.md).
 
@@ -33,7 +33,7 @@ The implementation of the governance MVP has dependencies on Identity, Security,
 
 This implementation can also be described using a simple checklist:
 
-1. Solicit decisions regarding core dependencies: Identity, Network, and Encryption.
+1. Solicit decisions regarding core dependencies: Identity, Networking, Monitoring, and Encryption.
 2. Determine the pattern to be used during corporate policy enforcement.
 3. Determine the appropriate governance patterns for the Resource Consistency, Resource Tagging, and Logging and Reporting disciplines.
 4. Implement the governance tools aligned to the chosen policy enforcement pattern to apply the dependent decisions and governance decisions.
@@ -46,23 +46,25 @@ The cloud governance team is responsible for the following decisions and impleme
 
 ### Subscription design
 
-The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has chosen the **[Application Category](../../../decision-guides/subscriptions/index.md#application-category-pattern)** subscription design pattern.
+The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has chosen the [production-and-nonproduction](../../../decision-guides/subscriptions/index.md#production-and-nonproduction-pattern) subscription design pattern.
 
-- An application archetype is a way to group applications with similar needs. Common examples include: Applications with protected data, governed applications (such as HIPAA or FedRAMP), low- risk applications, applications with on-premises dependencies, SAP or other mainframes in Azure, or applications that extend on-premises SAP or mainframes. These archetypes are unique per organization, based on data classifications and the types of applications that power the business. Dependency mapping of the digital estate can aid in defining the application archetypes in an organization.
 - Departments are not likely to be required given the current focus. Deployments are expected to be constrained within a single billing unit. At the stage of adoption, there may not even be an enterprise agreement to centralize billing. It's likely that this level of adoption is being managed by a single pay-as-you-go Azure subscription.
 - Regardless of the use of the EA portal or the existence of an enterprise agreement, a subscription model should still be defined and agreed on to minimize administrative overheard beyond just billing.
-- In the **Application Category** pattern, subscriptions are created for each application archetype. Each subscription belongs to an account per environment (Development, Test, and Production).
 - A common naming convention should be agreed on as part of the subscription design, based on the previous two points.
 
 ### Resource consistency
 
 Resource consistency decisions determine the tools, processes, and effort required to ensure Azure resources are deployed, configured, and managed consistently within a subscription. In this narrative, **[Deployment Consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency)** has been chosen as the primary resource consistency pattern.
 
-- Resource groups are created for each application. Management groups are created for each application archetype. Azure Policy should be applied to all subscriptions from the associated management group.
+- Resource groups are created for applications using the lifecycle approach: everything that is created together is maintained together, and retires together can reside a single resource group.
+- Azure Policy should be applied to all subscriptions from the associated management group.
 - As part of the deployment process, Azure Resource Consistency templates for the resource group should be stored in source control.
-- Each resource group is associated with a specific workload or application.
+- Each resource group is associated with a specific workload or application based on the lifecycle approach described above.
 - Azure management groups enable updating governance designs as corporate policy matures.
 - Extensive implementation of Azure Policy could exceed the team’s time commitments and may not provide a great deal of value at this time. However, a simple default policy should be created and applied to each management group to enforce the small number of current cloud governance policy statements. This policy will define the implementation of specific governance requirements. Those implementations can then be applied across all deployed assets.
+
+>[!IMPORTANT]
+>Any time a resource in a resource group no longer shares the same lifecycle, it should be moved to another resource group. Examples include common databases and networking components. While they may serve the application being developed, they may also serve other purposes and should therefore exist in other resource groups.
 
 ### Resource tagging
 
@@ -78,10 +80,7 @@ Resource tagging decisions determine how metadata is applied to Azure resources 
 
 ### Logging and reporting
 
-Logging and reporting decisions determine how your store log data and how the monitoring and reporting tools that keep IT staff informed on operational health are structured. In this narrative, a [cloud-native pattern](../../../decision-guides/log-and-report/index.md#cloud-native)** for logging and reporting is suggested, but not required of any development team at this point.
-
-- No governance requirements have been set regarding the data to be collected for logging or reporting purposes.
-- Additional analysis will be needed before releasing any protected data or mission-critical workloads.
+Logging and reporting decisions determine how your store log data and how the monitoring and reporting tools that keep IT staff informed on operational health are structured. In this narrative, a [cloud-native pattern](../../../decision-guides/log-and-report/index.md#cloud-native)** for logging and reporting is suggested.
 
 ## Incremental improvement of governance processes
 

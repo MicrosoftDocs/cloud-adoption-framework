@@ -1,17 +1,17 @@
 ---
-title: "Small-to-medium enterprise guide: Improve the Cost Management discipline"
+title: "Standard Enterprise guide: Improve the Cost Management discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Small-to-medium enterprise guide: Improve the Cost Management discipline"
+description: "Standard Enterprise guide: Improve the Cost Management discipline"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise guide: Improve the Cost Management discipline
+# Standard Enterprise guide: Improve the Cost Management discipline
 
 This article advances the narrative by adding cost controls to the governance MVP.
 
@@ -50,25 +50,25 @@ This business risk can be expanded into a few technical risks:
 
 The following changes to policy will help remediate the new risks and guide implementation.
 
-1. All cloud costs should be monitored against plan on a weekly basis by the governance team. Reporting on deviations between cloud costs and plan is to be shared with IT leadership and finance monthly. All cloud costs and plan updates should be reviewed with IT leadership and finance monthly.
-2. All costs must be allocated to a business function for accountability purposes.
-3. Cloud assets should be continually monitored for optimization opportunities.
-4. Cloud Governance tooling must limit Asset sizing options to an approved list of configurations. The tooling must ensure that all assets are discoverable and tracked by the cost monitoring solution.
-5. During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as reserved instances or license cost reductions.
-6. All application owners are required to attend trained on practices for optimizing workloads to better control cloud costs.
+- All cloud costs should be monitored against plan on a weekly basis by the governance team. Reporting on deviations between cloud costs and plan is to be shared with IT leadership and finance monthly. All cloud costs and plan updates should be reviewed with IT leadership and finance monthly.
+- All costs must be allocated to a business function for accountability purposes.
+- Cloud assets should be continually monitored for optimization opportunities.
+- Cloud governance tooling must limit Asset sizing options to an approved list of configurations. The tooling must ensure that all assets are discoverable and tracked by the cost monitoring solution.
+- During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as reserved instances or license cost reductions.
+- All application owners are required to attend trained on practices for optimizing workloads to better control cloud costs.
 
 ## Incremental improvement of the best practices
 
 This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
 
-1. Implement Azure Cost Management
+1. Implement Azure Cost Management.
     1. Establish the right scope of access to align with the subscription pattern and the Resource Consistency discipline. Assuming alignment with the governance MVP defined in prior articles, this requires **Enrollment Account Scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance may require **Resource Group Scope** access.
-    2. Establish a budget in Azure Cost Management.
-    3. Review and act on initial recommendations. Have a recurring process to support reporting.
-    4. Configure and execute Azure Cost Management Reporting, both initial and recurring.
+    1. Establish a budget in Azure Cost Management.
+    1. Review and act on initial recommendations. Have a recurring process to support reporting.
+    1. Configure and execute Azure Cost Management Reporting, both initial and recurring.
 2. Update Azure Policy
     1. Audit the tagging, management group, subscription, and resource group values to identify any deviation.
-    2. Establish SKU size options to limit deployments to SKUs listed in deployment planning documentation.
+    1. Establish SKU size options to limit deployments to SKUs listed in deployment planning documentation.
 
 ## Conclusion
 

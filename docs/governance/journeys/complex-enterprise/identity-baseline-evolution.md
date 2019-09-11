@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise guide: Improve the Identity Baseline discipline"
+title: "Governance guide for complex enterprises: Improve the Identity Baseline discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Large enterprise guide: Improve the Identity Baseline discipline"
+description: "Governance guide for complex enterprises: Improve the Identity Baseline discipline"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/06/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Improve the Identity Baseline discipline
+# Governance guide for complex enterprises: Improve the Identity Baseline discipline
 
 This article advances the narrative by adding Identity Baseline controls to the governance MVP.
 
@@ -52,7 +52,7 @@ This business risk can be expanded into a few technical risks:
 
 - Legacy authentication might not be available in the cloud, limiting deployment of some applications.
 - The current third-party multi-factor authentication solution might not be available in the cloud, limiting deployment of some applications.
-- Retooling or moving either could create outages and add costs.
+- Retooling or moving could create outages or add costs.
 - The speed and stability of the VPN might impede migration.
 - Traffic entering the cloud could cause security issues in other parts of the global network.
 
@@ -60,10 +60,10 @@ This business risk can be expanded into a few technical risks:
 
 The following changes to policy will help remediate the new risks and guide implementation.
 
-1. The chosen cloud provider must offer a means of authenticating via legacy methods.
-2. The chosen cloud provider must offer a means of authentication with the current third-party multi-factor authentication solution.
-3. A high-speed private connection should be established between the cloud provider and the company’s telco provider, connecting the cloud provider to the global network of datacenters.
-4. Until sufficient security requirements are established, no inbound public traffic may access company assets hosted in the cloud. All ports are blocked from any source outside of the global WAN.
+- The chosen cloud provider must offer a means of authenticating via legacy methods.
+- The chosen cloud provider must offer a means of authentication with the current third-party multi-factor authentication solution.
+- A high-speed private connection should be established between the cloud provider and the company’s telco provider, connecting the cloud provider to the global network of datacenters.
+- Until sufficient security requirements are established, no inbound public traffic may access company assets hosted in the cloud. All ports are blocked from any source outside of the global WAN.
 
 ## Incremental improvement of the best practices
 
@@ -71,12 +71,12 @@ The governance MVP design changes to include new Azure policies and an implement
 
 Here are the new best practices:
 
-1. Secure hybrid VNet blueprint: The on-premises side of the hybrid network should be configured to allow communication between the following solution and the on-premises Active Directory servers. This best practice requires a DMZ to enable Active Directory Domain Services across network boundaries.
-2. Azure Resource Manager templates:
+- **Secure hybrid VNet blueprint:** The on-premises side of the hybrid network should be configured to allow communication between the following solution and the on-premises Active Directory servers. This best practice requires a DMZ to enable Active Directory Domain Services across network boundaries.
+- **Azure Resource Manager templates:**
     1. Define an NSG to block external traffic and allow internal traffic.
     1. Deploy two Active Directory virtual machines in a load-balanced pair based on a golden image. On first boot, that image runs a PowerShell script to join the domain and register with domain services. For more information, see [Extend Active Directory Domain Services (AD DS) to Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adds-extend-domain).
-3. Azure Policy: Apply the NSG to all resources.
-4. Azure blueprint:
+- Azure Policy: Apply the NSG to all resources.
+- Azure blueprint:
     1. Create a blueprint named `active-directory-virtual-machines`.
     1. Add each of the Active Directory templates and policies to the blueprint.
     1. Publish the blueprint to any applicable management group.

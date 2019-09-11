@@ -1,17 +1,17 @@
 ---
-title: "Large enterprise guide: Prescriptive guidance explained"
+title: "Governance guide for complex enterprises: Prescriptive guidance explained"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about prescriptive guidance for governance in large enterprises.
+description: Learn about prescriptive guidance for governance in complex enterprises.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Prescriptive guidance explained
+# Governance guide for complex enterprises: Prescriptive guidance explained
 
 The governance guide begins with a set of initial [corporate policies](./initial-corporate-policy.md). These policies are used to establish a minimum viable product (MVP) for governance that reflects [best practices](./index.md).
 
@@ -34,9 +34,9 @@ The implementation of the governance MVP has dependencies on Identity, Security,
 This implementation can also be described using a simple checklist:
 
 1. Solicit decisions regarding core dependencies: Identity, Network, and Encryption.
-2. Determine the pattern to be used during corporate policy enforcement.
-3. Determine the appropriate governance patterns for the Resource Consistency, Resource Tagging, and Logging and Reporting disciplines.
-4. Implement the governance tools aligned to the chosen policy enforcement pattern to apply the dependent decisions and governance decisions.
+1. Determine the pattern to be used during corporate policy enforcement.
+1. Determine the appropriate governance patterns for the Resource Consistency, Resource Tagging, and Logging and Reporting disciplines.
+1. Implement the governance tools aligned to the chosen policy enforcement pattern to apply the dependent decisions and governance decisions.
 
 [!INCLUDE [implementation-process](../../../../includes/implementation-process.md)]
 
@@ -50,7 +50,7 @@ The decision on what subscription design to use determines how Azure subscriptio
 
 - As new requests for Azure resources arise, a "Department" should be established for each major business unit in each operating geography. Within each of the Departments, "Subscriptions" should be created for each application archetype.
 - An application archetype is a means of grouping applications with similar needs. Common examples include: Applications with protected data, governed applications (such as HIPAA or FedRAMP), low-risk applications, applications with on-premises dependencies, SAP or other mainframe applications in Azure, or applications that extend on-premises SAP or mainframe applications. Each organization has unique needs based on data classifications and the types of applications that support the business. Dependency mapping of the digital estate can help define the application archetypes in an organization.
-- A common naming convention should be agreed on as part of the subscription design, based on the above two bullets.
+- A common naming convention should be agreed upon as part of the subscription design, based on the above two bullets.
 
 ### Resource consistency
 

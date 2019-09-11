@@ -1,7 +1,7 @@
 ---
-title: "Small-to-medium enterprise guide: Improve the Security Baseline discipline"
+title: "Standard Enterprise guide: Improve the Security Baseline discipline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Small-to-medium enterprise guide: Improve the Security Baseline discipline"
+description: "Standard Enterprise guide: Improve the Security Baseline discipline"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/11/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise guide: Improve the Security Baseline discipline
+# Standard Enterprise guide: Improve the Security Baseline discipline
 
 This article advances the narrative by adding security controls that support moving protected data to the cloud.
 
@@ -50,15 +50,15 @@ The changes to current and future state expose new risks that require new policy
 
 This business risk can be expanded into a few technical risks:
 
-- Mission-critical applications or protected data might be deployed unintentionally.
-- Protected data might be exposed during storage due to poor encryption decisions.
-- Unauthorized users might access protected data.
-- External intrusion might result in access to protected data.
-- External intrusion or denial of service attacks might cause a business interruption.
-- Organization or employment changes might allow for unauthorized access to protected data.
-- New exploits could create new intrusion or access opportunities.
-- Inconsistent deployment processes might result in security gaps, which could lead to data leaks or interruptions.
-- Configuration drift or missed patches might result in unintended security gaps, which could lead to data leaks or interruptions.
+1. Mission-critical applications or protected data might be deployed unintentionally.
+2. Protected data might be exposed during storage due to poor encryption decisions.
+3. Unauthorized users might access protected data.
+4. External intrusion might result in access to protected data.
+5. External intrusion or denial of service attacks might cause a business interruption.
+6. Organization or employment changes might allow for unauthorized access to protected data.
+7. New exploits could create new intrusion or access opportunities.
+8. Inconsistent deployment processes might result in security gaps, which could lead to data leaks or interruptions.
+9. Configuration drift or missed patches might result in unintended security gaps, which could lead to data leaks or interruptions.
 
 ## Incremental improvement of the policy statements
 
@@ -85,40 +85,38 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of governance practices
 
-
 The governance MVP design will change to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
 
-
 1. The Networking and IT Security teams will define network requirements. The cloud governance team will support the conversation.
-2. The Identity and IT Security teams will define identity requirements and make any necessary changes to local Active Directory implementation. The cloud governance team will review changes.
-3. Create a repository in Azure DevOps to store and version all relevant Azure Resource Manager templates and scripted configurations.
-4. Azure Security Center implementation:
+1. The Identity and IT Security teams will define identity requirements and make any necessary changes to local Active Directory implementation. The cloud governance team will review changes.
+1. Create a repository in Azure DevOps to store and version all relevant Azure Resource Manager templates and scripted configurations.
+1. Azure Security Center implementation:
     1. Configure Azure Security Center for any management group that contains protected data classifications.
-    2. Set automatic provisioning to on by default to ensure patching compliance.
-    3. Establish OS security configurations. The IT Security team will define the configuration.
-    4. Support the IT Security team in the initial use of Security Center. Transition the use of Security Center to the IT Security team, but maintain access for the purpose of continually improving governance.
-    5. Create a Resource Manager template that reflects the changes required for Security Center configuration within a subscription.
-5. Update Azure policies for all subscriptions:
+    1. Set automatic provisioning to on by default to ensure patching compliance.
+    1. Establish OS security configurations. The IT Security team will define the configuration.
+    1. Support the IT Security team in the initial use of Security Center. Transition the use of Security Center to the IT Security team, but maintain access for the purpose of continually improving governance.
+    1. Create a Resource Manager template that reflects the changes required for Security Center configuration within a subscription.
+1. Update Azure policies for all subscriptions:
     1. Audit and enforce the criticality and data classification across all management groups and subscriptions, to identify any subscriptions with protected data classifications.
-    2. Audit and enforce the use of approved images only.
-6. Update Azure policies for all subscriptions that contains protected data classifications:
+    1. Audit and enforce the use of approved images only.
+1. Update Azure policies for all subscriptions that contains protected data classifications:
     1. Audit and enforce the use of standard Azure RBAC roles only.
-    2. Audit and enforce encryption for all storage accounts and files at rest on individual nodes.
-    3. Audit and enforce the application of an NSG to all NICs and subnets. The Networking and IT Security teams will define the NSG.
-    4. Audit and enforce the use of approved network subnet and vNet per network interface.
-    5. Audit and enforce the limitation of user-defined routing tables.
-    6. Apply the Built-in Policies for Guest Configuration as follows:
+    1. Audit and enforce encryption for all storage accounts and files at rest on individual nodes.
+    1. Audit and enforce the application of an NSG to all NICs and subnets. The Networking and IT Security teams will define the NSG.
+    1. Audit and enforce the use of approved network subnet and vNet per network interface.
+    1. Audit and enforce the limitation of user-defined routing tables.
+    1. Apply the Built-in Policies for Guest Configuration as follows:
         1. Audit that Windows web servers are using secure communication protocols.
-        2. Audit that password security settings are set correctly inside Linux and Windows machines.
-7. Firewall configuration:
+        1. Audit that password security settings are set correctly inside Linux and Windows machines.
+1. Firewall configuration:
     1. Identify a configuration of Azure Firewall that meets necessary security requirements. Alternatively, identify a compatible third-party appliance that is compatible with Azure.
-    2. Create a Resource Manager template to deploy the firewall with required configurations.
-8. Azure blueprint:
+    1. Create a Resource Manager template to deploy the firewall with required configurations.
+1. Azure blueprint:
     1. Create a new blueprint named `protected-data`.
-    2. Add the firewall and Azure Security Center templates to the blueprint.
-    3. Add the new policies for protected data subscriptions.
-    4. Publish the blueprint to any management group that currently plans on hosting protected data.
-    5. Apply the new blueprint to each affected subscription, in addition to existing blueprints.
+    1. Add the firewall and Azure Security Center templates to the blueprint.
+    1. Add the new policies for protected data subscriptions.
+    1. Publish the blueprint to any management group that currently plans on hosting protected data.
+    1. Apply the new blueprint to each affected subscription, in addition to existing blueprints.
 
 ## Conclusion
 

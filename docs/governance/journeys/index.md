@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about the actionable governance guides provided in the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -23,34 +23,34 @@ To begin your cloud adoption journey, choose one of the following governance gui
 <!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsZ">
-    <li style="display: flex; flex-direction: column;">
-        <a href="./small-to-medium-enterprise/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-            <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-                <div class="cardPadding" style="display: flex;">
-                    <div class="card">
-                        <div class="cardText">
-                            <h3>Small-to-Medium Enterprise</h3>
-                            <p>A governance guide for enterprises that own fewer than five datacenters and manage costs through a central IT or showback model.</p>
-                        </div>
+<li style="display: flex; flex-direction: column;">
+    <a href="./standard-enterprise/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Standard governance guide</h3>
+                        <p>A guide for most organizations based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.</p>
                     </div>
                 </div>
             </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./large-enterprise/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-            <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-                <div class="cardPadding" style="display: flex;">
-                    <div class="card">
-                        <div class="cardText">
-                            <h3>Large Enterprise</h3>
-                            <p>A governance guide for enterprises that own five or more datacenters and manage costs across multiple business units.</p>
-                        </div>
+        </div>
+    </a>
+</li>
+<li style="display: flex; flex-direction: column;">
+    <a href="./complex-enterprise/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
+            <div class="cardPadding" style="display: flex;">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Governance guide for complex enterprises</h3>
+                        <p>A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.</p>
                     </div>
                 </div>
             </div>
-        </a>
-    </li>
+        </div>
+    </a>
+</li>
 </ul>
 
 <!-- markdownlint-enable MD033 -->
@@ -59,9 +59,9 @@ To begin your cloud adoption journey, choose one of the following governance gui
 
 ## Choosing a governance guide
 
-The guides demonstrate how to implement a governance MVP. From there, each guide shows how the cloud governance team can work ahead of the cloud adoption teams as a partner to accelerate adoption efforts. The Cloud Adoption Framework governance model guides the application of governance from foundation through subsequent improvements.
+The guides demonstrate how to implement a governance MVP. From there, each guide shows how the cloud governance team can work ahead of the cloud adoption teams as a partner to accelerate adoption efforts. The Cloud Adoption Framework governance model guides the application of governance from foundation through subsequent improvements and evolutions.
 
-To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the size of the enterprise for ease of navigation. However, the reader's decision may be more complex. The following tables outline the differences between the two options.
+To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the complexity of the enterprise for ease of navigation. However, the reader's decision may be more complex. The following tables outline the differences between the two options.
 
 > [!WARNING]
 > A more robust governance starting point may be required. In such cases, consider the [Azure Virtual Datacenter](#azure-virtual-datacenter) approach briefly described [below](#azure-virtual-datacenter). This approach is commonly suggested during enterprise-scale adoption efforts, and especially for efforts which exceed 10,000 assets. It is also the de facto choice for complex governance scenarios when any of the following are required: extensive third-party compliance requirements, deep domain expertise, or parity with mature IT governance policies and compliance requirements.
@@ -71,30 +71,27 @@ To begin a governance journey, choose one of the two options below. The options 
 
 ### Business characteristics
 
-| Characteristic | Small-to-medium enterprise                                                                              | Large enterprise                                                                                               |
+| Characteristic | Standard Organization                                                                              | Complex Enterprise                                                                                               |
 |--------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Geography (country or geopolitical region) | Customers or staff reside largely in one geography                                                      | Customers or staff reside in multiple geographies                                                              |
-| Business units affected                    | Single business unit                                                                                    | Multiple business units                                                                                        |
-| IT budget                                  | Single IT budget                                                                                        | Budget allocated across business units                                                                         |
+| Geography (country or geopolitical region) | Customers or staff reside largely in one geography                                                      | Customers or staff reside in multiple geographies or require sovereign clouds.                                                             |
+| Business units affected                    | Business Units that share a common IT infrastructure                                                                                    | Multiple business units that do not share a common IT infrastructure                                                                                        |
+| IT budget                                  | Single IT budget                                                                                        | Budget allocated across business units and currencies                                                                         |
 | IT investments                             | Capital expense-driven investments are planned yearly and usually cover only basic maintenance. | Capital expense-driven investments are planned yearly and often include maintenance and a refresh cycle of three to five years. |
 
 ### Current state before adopting cloud governance
 
-| State | Small-to-medium enterprise                                                                               | Large enterprise                                                                                                          |
+| State | Standard Enterprise                                                                               | Complex enterprise                                                                                                          |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Datacenter or third-party hosting providers | Fewer than five datacenters                                                                                  | More than five datacenters                                                                                                   |
 | Networking                                  | No WAN, or 1 &ndash; 2 WAN providers                                                                             | Complex network or global WAN                                                                                             |
-| Identity                                    | Single forest, single domain. No requirement for claims-based authentication or third-party multi-factor authentication devices. | Complex, multiple forests, multiple domains. Applications require claims-based authentication or third-party multi-factor authentication devices. |
+| Identity                                    | Single forest, single domain. | Complex, multiple forests, multiple domains.  |
 
 ### Desired future state after incremental improvement of cloud governance
 
-| State | Small-to-medium enterprise                                                                        | Large enterprise                                                                                        |
+| State | Standard Organization                                                                        | Complex Enterprise                                                                                        |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Cost Management – cloud accounting           | Showback model. Billing is centralized through IT.                                                | Chargeback model. Billing could be distributed through IT procurement.                                  |
 | Security Baseline – protected data           | Company financial data and IP. Limited customer data. No third-party compliance requirements.     | Multiple collections of customers’ financial and personal data. May need to consider third-party compliance. |
-| Resource Consistency – mission-critical applications | Outages are painful but not financially damaging. Existing IT Operations are relatively immature. | Outages have defined and monitored financial impacts. IT operations are established and mature.         |
-
-These two guides represent two extremes of experience for customers who invest in cloud governance. Most companies reflect a combination of the two scenarios above. After reviewing the guide, use the Cloud Adoption Framework governance model to start the governance conversation and modify the baseline guides to more closely meet your needs.
 
 ## Azure Virtual Datacenter
 
@@ -122,6 +119,6 @@ For more information, visit the [Azure Virtual Datacenter](/azure/architecture/v
 Choose one of these guides:
 
 > [!div class="nextstepaction"]
-> [Small-to-medium enterprise governance guide](./small-to-medium-enterprise/index.md)
+> [Standard governance guide](./standard-enterprise/index.md)
 >
-> [Large enterprise governance guide](./large-enterprise/index.md)
+> [Governance guide for complex enterprises](./complex-enterprise/index.md)

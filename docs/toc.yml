@@ -429,43 +429,43 @@
         - name: Small-to-medium enterprise guide
           items:
           - name: Overview
-            href: governance/journeys/small-to-medium-enterprise/index.md
+            href: governance/journeys/standard-enterprise/index.md
           - name: Narrative
-            href: governance/journeys/small-to-medium-enterprise/narrative.md
+            href: governance/journeys/standard-enterprise/narrative.md
           - name: Initial corporate policy
-            href: governance/journeys/small-to-medium-enterprise/initial-corporate-policy.md
+            href: governance/journeys/standard-enterprise/initial-corporate-policy.md
           - name: Prescriptive guidance
-            href: governance/journeys/small-to-medium-enterprise/best-practice-explained.md
+            href: governance/journeys/standard-enterprise/best-practice-explained.md
           - name: Improve the security baseline discipline
-            href: governance/journeys/small-to-medium-enterprise/security-baseline-evolution.md
+            href: governance/journeys/standard-enterprise/security-baseline-evolution.md
           - name: Improve resource consistency discipline
-            href: governance/journeys/small-to-medium-enterprise/resource-consistency-evolution.md
+            href: governance/journeys/standard-enterprise/resource-consistency-evolution.md
           - name: Improve cost management discipline
-            href: governance/journeys/small-to-medium-enterprise/cost-management-evolution.md
+            href: governance/journeys/standard-enterprise/cost-management-evolution.md
           - name: Multicloud scenarios
-            href: governance/journeys/small-to-medium-enterprise/multicloud-evolution.md
+            href: governance/journeys/standard-enterprise/multicloud-evolution.md
         - name: Large enterprise guide
           items:
           - name: Overview
-            href: governance/journeys/large-enterprise/index.md
+            href: governance/journeys/complex-enterprise/index.md
           - name: Narrative
-            href: governance/journeys/large-enterprise/narrative.md
+            href: governance/journeys/complex-enterprise/narrative.md
           - name: Initial corporate policy
-            href: governance/journeys/large-enterprise/initial-corporate-policy.md
+            href: governance/journeys/complex-enterprise/initial-corporate-policy.md
           - name: Prescriptive guidance
-            href: governance/journeys/large-enterprise/best-practice-explained.md
+            href: governance/journeys/complex-enterprise/best-practice-explained.md
           - name: Improve the identity baseline discipline
-            href: governance/journeys/large-enterprise/identity-baseline-evolution.md
+            href: governance/journeys/complex-enterprise/identity-baseline-evolution.md
           - name: Improve the security baseline discipline
-            href: governance/journeys/large-enterprise/security-baseline-evolution.md
+            href: governance/journeys/complex-enterprise/security-baseline-evolution.md
           - name: Improve the resource consistency discipline
-            href: governance/journeys/large-enterprise/resource-consistency-evolution.md
+            href: governance/journeys/complex-enterprise/resource-consistency-evolution.md
           - name: Improve the cost management discipline
-            href: governance/journeys/large-enterprise/cost-management-evolution.md
+            href: governance/journeys/complex-enterprise/cost-management-evolution.md
           - name: Multicloud scenarios
-            href: governance/journeys/large-enterprise/multicloud-evolution.md
+            href: governance/journeys/complex-enterprise/multicloud-evolution.md
           - name: Multiple layers of governance
-            href: governance/journeys/large-enterprise/multiple-layers-of-governance.md
+            href: governance/journeys/complex-enterprise/multiple-layers-of-governance.md
       - name: Governance considerations
         items:
         - name: Evaluate corporate policy
@@ -608,6 +608,8 @@
           href: organization/cloud-adoption.md
         - name: Cloud governance
           href: organization/cloud-governance.md
+        - name: Central IT
+          href: organization/central-it.md
         - name: Cloud operations
           href: organization/cloud-operations.md
         - name: Cloud center of excellence

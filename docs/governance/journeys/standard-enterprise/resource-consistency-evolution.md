@@ -1,17 +1,17 @@
 ---
-title: "Small-to-medium enterprise guide: Improving Resource Consistency"
+title: "Standard Enterprise guide: Improving Resource Consistency"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Small-to-medium enterprise guide: Improving Resource Consistency"
+description: "Standard Enterprise guide: Improving Resource Consistency"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/05/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise guide: Improving Resource Consistency
+# Standard Enterprise guide: Improving Resource Consistency
 
 This article advances the narrative by adding Resource Consistency controls to support mission-critical apps.
 
@@ -41,17 +41,17 @@ The changes to current and future state expose new risks that will require new p
 
 This business risk can be expanded into several technical risks:
 
-- External intrusion or denial of service attacks might cause a business interruption.
-- Mission-critical assets may not be properly discovered, and therefore might not be properly operated.
-- Undiscovered or mislabeled assets might not be supported by existing operational management processes.
-- The configuration of deployed assets may not meet performance expectations.
-- Logging might not be properly recorded and centralized to allow for remediation of performance issues.
-- Recovery policies may fail or take longer than expected.
-- Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
-- Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
-- Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
-- Deployed operating systems or applications might fail to meet hardening requirements.
-- With so many teams working in the cloud, there is a risk of inconsistency.
+1. External intrusion or denial of service attacks might cause a business interruption.
+2. Mission-critical assets may not be properly discovered, and therefore might not be properly operated.
+3. Undiscovered or mislabeled assets might not be supported by existing operational management processes.
+4. The configuration of deployed assets may not meet performance expectations.
+5. Logging might not be properly recorded and centralized to allow for remediation of performance issues.
+6. Recovery policies may fail or take longer than expected.
+7. Inconsistent deployment processes might result in security gaps that could lead to data leaks or interruptions.
+8. Configuration drift or missed patches might result in unintended security gaps that could lead to data leaks or interruptions.
+9. Configuration might not enforce the requirements of defined SLAs or committed recovery requirements.
+10. Deployed operating systems or applications might fail to meet hardening requirements.
+11. With so many teams working in the cloud, there is a risk of inconsistency.
 
 ## Incremental improvement of the policy statements
 
@@ -76,36 +76,34 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of governance practices
 
-
 This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
 
-
 1. The cloud operations team will define operational monitoring tooling and automated remediation tooling. The cloud governance team will support those discovery processes. In this use case, the cloud operations team chose Azure Monitor as the primary tool for monitoring mission-critical applications.
-2. Create a repository in Azure DevOps to store and version all relevant Resource Manager templates and scripted configurations.
-3. Azure Vault implementation:
+1. Create a repository in Azure DevOps to store and version all relevant Resource Manager templates and scripted configurations.
+1. Azure Vault implementation:
     1. Define and deploy Azure Vault for backup and recovery processes.
-    2. Create a Resource Manager template for creation of a vault in each subscription.
-4. Update Azure Policy for all subscriptions:
+    1. Create a Resource Manager template for creation of a vault in each subscription.
+1. Update Azure Policy for all subscriptions:
     1. Audit and enforce criticality and data classification across all subscriptions to identify any subscriptions with mission-critical assets.
-    2. Audit and enforce the use of approved images only.
-5. Azure Monitor implementation:
+    1. Audit and enforce the use of approved images only.
+1. Azure Monitor implementation:
     1. Once a mission-critical subscription is identified, create an Azure Monitor workspace using PowerShell. This is a predeployment process.
-    2. During deployment testing, the cloud operations team deploys the necessary agents and tests discovery.
-6. Update Azure Policy for all subscriptions that contain mission-critical applications.
+    1. During deployment testing, the cloud operations team deploys the necessary agents and tests discovery.
+1. Update Azure Policy for all subscriptions that contain mission-critical applications.
     1. Audit and enforce the application of an NSG to all NICs and subnets. Networking and IT Security define the NSG.
-    2. Audit and enforce the use of approved network subnets and VNets for each network interface.
-    3. Audit and enforce the limitation of user-defined routing tables.
-    4. Audit and enforce deployment of Azure Monitor agents for all virtual machines.
-    5. Audit and enforce that Azure Vault exists in the subscription.
-7. Firewall configuration:
+    1. Audit and enforce the use of approved network subnets and VNets for each network interface.
+    1. Audit and enforce the limitation of user-defined routing tables.
+    1. Audit and enforce deployment of Azure Monitor agents for all virtual machines.
+    1. Audit and enforce that Azure Vault exists in the subscription.
+1. Firewall configuration:
     1. Identify a configuration of Azure Firewall that meets security requirements. Alternatively, identify a third-party appliance that is compatible with Azure.
-    2. Create a Resource Manager template to deploy the firewall with required configurations.
-8. Azure blueprint:
+    1. Create a Resource Manager template to deploy the firewall with required configurations.
+1. Azure blueprint:
     1. Create a new Azure blueprint named `protected-data`.
-    2. Add the firewall and Azure Vault templates to the blueprint.
-    3. Add the new policies for protected data subscriptions.
-    4. Publish the blueprint to any management group intended to host mission-critical applications.
-    5. Apply the new blueprint to each affected subscription as well as existing blueprints.
+    1. Add the firewall and Azure Vault templates to the blueprint.
+    1. Add the new policies for protected data subscriptions.
+    1. Publish the blueprint to any management group intended to host mission-critical applications.
+    1. Apply the new blueprint to each affected subscription as well as existing blueprints.
 
 ## Conclusion
 

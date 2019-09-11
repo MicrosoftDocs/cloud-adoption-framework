@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn best practices for building a cost-conscious organization.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/04/2019
+ms.date: 09/10/2019
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: organize
