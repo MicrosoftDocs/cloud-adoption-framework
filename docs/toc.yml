@@ -298,7 +298,7 @@
           items:
           - name: Securing and managing workloads after migration
             href: migrate/azure-best-practices/migrate-best-practices-security-management.md
-          - name: Additional Best Practices from the Azure Architecture Center
+          - name: Additional best practices
             items:
             - name: Azure boundary security best practices
               href: https://docs.microsoft.com/azure/architecture/vdc/networking-virtual-datacenter?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json
