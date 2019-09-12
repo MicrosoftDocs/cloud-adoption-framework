@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-# Examples of agility outcomes
+# Examples of agility outcomes 
 
 As discussed in the [business outcomes overview](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on the timeliest business measure: business agility. Understanding your company's market position and competitive landscape can help you articulate the business outcomes that are the target of the business's transformation journey.
 
