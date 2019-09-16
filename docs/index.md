@@ -14,7 +14,7 @@ ms.date: 07/04/2019
 
 The Cloud Adoption Framework is the One Microsoft approach to cloud adoption in Azure, consolidating and sharing best practices from Microsoft employees, partners, and customers. The framework gives enterprise customers a set of tools, guidance, and narratives that help shape technology, business, and people strategies for driving desired business outcomes during their adoption effort. This guidance aligns to various stages and iterations of the typical cloud adoption lifecycle, ensuring easy access to the right guidance at the right time.
 
-![Cloud Adoption Framework overview](./_images/cloud-adoption-framework-overview.png)
+![Cloud Adoption Framework overview](./_images/caf-overview.png)
 
 ## Getting started: Executive summaries
 
@@ -30,7 +30,7 @@ Each section of the Cloud Adoption Framework maps to the overview diagram above.
 
 <ul class="panelContent cardsF">
     <li style="display: flex; flex-direction: column;">
-        <a href="./business-strategy/index.md">
+        <a href="./strategy/index.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">
@@ -106,7 +106,7 @@ Each section of the Cloud Adoption Framework maps to the overview diagram above.
         </a>
     </li>
     <li style="display: flex; flex-direction: column;">
-        <a href="./governance/index.md">
+        <a href="./govern/index.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">
@@ -125,7 +125,7 @@ Each section of the Cloud Adoption Framework maps to the overview diagram above.
         </a>
     </li>
     <li style="display: flex; flex-direction: column;">
-        <a href="./organization/index.md">
+        <a href="./organize/index.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">
@@ -149,12 +149,12 @@ Each section of the Cloud Adoption Framework maps to the overview diagram above.
 
 The Cloud Adoption Framework is currently offered as a public preview. The framework will reach general availability (GA) when the aspirational intent described in the next section has been met in full. In this preview release, the primary areas of focus are:
 
-- [Cloud adoption strategy](./business-strategy/index.md)
+- [Cloud adoption strategy](./strategy/index.md)
 - [Cloud adoption planning](./plan/index.md)
 - [Cloud migration](./migrate/index.md)
-- [Cloud governance](./governance/journeys/index.md)
+- [Cloud governance](./govern/guides/index.md)
 
-We'll expand the Cloud Adoption Framework frequently as it moves closer to the GA release. The expansion will add depth to each section as well as new sections of content. For more information, see the [Cloud Adoption Framework roadmap](./appendix/roadmap.md).
+We'll expand the Cloud Adoption Framework frequently as it moves closer to the GA release. The expansion will add depth to each section as well as new sections of content. For more information, see the [Cloud Adoption Framework roadmap](./reference/roadmap.md).
 
 ## Intent
 
@@ -176,7 +176,7 @@ Each section of the Cloud Adoption Framework represents a different specializati
 
 If your enterprise is new to Azure, begin by reading [Get started with the Cloud Adoption Framework](./getting-started/migrate.md). This overview provides prescriptive guidance for your enterprise's digital transformation as it walks you through each step of the process.
 
-If your enterprise has experience with Azure and you're seeking more detailed guidance or best practices for specific areas, review the [governance overview](./governance/index.md) and the [architectural decision guides](./decision-guides/index.md). We'll add more sections as the GA release approaches.
+If your enterprise has experience with Azure and you're seeking more detailed guidance or best practices for specific areas, review the [governance overview](./govern/index.md) and the [architectural decision guides](./decision-guides/index.md). We'll add more sections as the GA release approaches.
 
 > [!div class="nextstepaction"]
 > [Get started](./getting-started/migrate.md)

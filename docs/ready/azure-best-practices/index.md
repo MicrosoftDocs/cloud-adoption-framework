@@ -19,7 +19,7 @@ A large part of cloud readiness is equipping staff with the technical skills nee
 Use the following guidance when organizing and deploying your assets in the Azure environment:
 
 - [Azure fundamental concepts](../considerations/fundamental-concepts.md). Learn fundamental concepts and terms used in Azure. Also learn how these concepts relate to one another.
-- [Recommended naming and tagging conventions](../considerations/name-and-tag.md). Review detailed recommendations for naming and tagging your resources. These recommendations support enterprise cloud adoption efforts.
+- [Recommended naming and tagging conventions](../considerations/naming-and-tagging.md). Review detailed recommendations for naming and tagging your resources. These recommendations support enterprise cloud adoption efforts.
 - [Scaling with multiple Azure subscriptions](../considerations/scaling-subscriptions.md). Understand strategies for scaling with multiple Azure subscriptions.
 - [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/governance/management-groups/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json). Learn how Azure management groups can manage resources, roles, policies, and deployment across multiple subscriptions.
 - [Create hybrid cloud consistency](../../infrastructure/misc/hybrid-consistency.md). Create hybrid cloud solutions that provide the benefits of cloud innovation while maintaining many of the conveniences of on-premises management.

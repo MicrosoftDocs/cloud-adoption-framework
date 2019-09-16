@@ -41,7 +41,7 @@ The migration backlog allows you to track your top-level portfolio of migratable
 
 Initially, workloads on the migration backlog are unlikely to meet the INVEST criteria outlined in the previous section. Instead, they serve as a logical grouping of assets from an initial inventory as a placeholder for future work. Those placeholders may not be technically accurate, but they serve as the basis for coordination with the business.
 
-![Relationship between the migration, release, and iteration backlogs used during the migration process](../../../_images/migration/migrate-release-iteration-backlog-relationship.png)
+![Relationship between the migration, release, and iteration backlogs used during the migration process](../../../_images/migrate/backlog-relationships.png)
 
 *The migration, release, and iteration backlogs track different levels of activity during migration processes.*
 

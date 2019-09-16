@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # Governance, security, and compliance in Azure
 
-As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [Governance Benchmark tool](http://aka.ms/caf/gov/assess) to identify potential gaps in your organization's cloud governance approach. For more information on how to develop governance processes, see the [Cloud Adoption Framework for Azure's governance guidance](../../governance/index.md).
+As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [Governance Benchmark tool](http://aka.ms/caf/gov/assess) to identify potential gaps in your organization's cloud governance approach. For more information on how to develop governance processes, see the [Cloud Adoption Framework for Azure's governance guidance](../../govern/index.md).
 
 # [Azure Blueprints](#tab/AzureBlueprints)
 
@@ -85,9 +85,9 @@ To publish a blueprint artifacts to your subscription:
 
 To learn more, see:
 
-- [Azure Blueprints](/azure/governance/blueprints)
+- [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints)
 - [Cloud Adoption Framework: Resource consistency decision guide](../../decision-guides/resource-consistency/index.md)
-- [Standards-based blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
+- [Standards-based blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples/index.md#standards-based-blueprint-samples)
 
 ::: zone-end
 
@@ -125,7 +125,7 @@ To apply a policy to a resource group:
 
 To learn more, see:
 
-- [Azure Policy](/azure/azure-policy)
+- [Azure Policy](https://docs.microsoft.com/azure/azure-policy)
 - [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ::: zone-end
@@ -152,10 +152,10 @@ To explore Azure Security Center, go to the [Azure portal](https://portal.azure.
 
 To learn more, see:
 
-- [Azure Security Center](/azure/security-center)
-- [Just-in-time VM access](/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
+- [Azure Security Center](https://docs.microsoft.com/azure/security-center)
+- [Just-in-time VM access](https://docs.microsoft.com/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
 - [Standard vs. free pricing tier](https://azure.microsoft.com/pricing/details/security-center)
-- [Cloud Adoption Framework: Security Baseline governance discipline](../../governance/security-baseline/index.md)
+- [Cloud Adoption Framework: Security Baseline governance discipline](../../govern/security-baseline/index.md)
 
 ::: zone-end
 

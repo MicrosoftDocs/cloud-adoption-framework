@@ -34,7 +34,7 @@ Other situations might require additional subscriptions. Keep the following in m
 
 - Subscriptions have different limits for different resource types. For example, the number of virtual networks in a subscription is limited. When a subscription approaches any of its limits, you'll need to create another subscription and put new resources there.
 
-  For more information, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-subscription-service-limits).
+  For more information, see [Azure subscription and service limits, quotas, and constraints](https://docs.microsoft.com/azure/azure-subscription-service-limits).
 
 - Each subscription can implement its own policies for deployable resource types and supported regions.
 
@@ -54,7 +54,7 @@ Other situations might require additional subscriptions. Keep the following in m
 
 You might also opt to create additional subscriptions for other business or technical reasons specific to your organization. There might be some additional costs for data ingress and egress between subscriptions.
 
-You can move many types of resources from one subscription to another or use automated deployments to migrate resources to another subscription. For more information, see [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/resource-group-move-resources).
+You can move many types of resources from one subscription to another or use automated deployments to migrate resources to another subscription. For more information, see [Move Azure resources to another resource group or subscription](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-move-resources).
 
 ## Managing multiple subscriptions
 
@@ -71,7 +71,7 @@ Azure provides four levels of management scope: management groups, subscriptions
 
 By relying on this inheritance model, you can arrange the subscriptions in your hierarchy so that each subscription follows appropriate policies and security controls.
 
-![The four scope levels for organizing your Azure resources](/azure/architecture/cloud-adoption/ready/azure-readiness-guide/media/organize-resources/scope-levels.png)
+![The four scope levels for organizing your Azure resources](../../ready/azure-readiness-guide/media/organize-resources/scope-levels.png)
 
 Any access or policy assignment on the root management group applies to all resources in the directory. Carefully consider which items you define at this scope. Include only the assignments you must have.
 
@@ -81,26 +81,26 @@ When you move a subscription to an existing management group, it inherits the po
 
 ![Example of a management-group hierarchy](../../_images/ready/management-group-hierarchy.png)
 
-For more information, see [Organizing your resources with Azure management groups](/azure/governance/management-groups).
+For more information, see [Organizing your resources with Azure management groups](https://docs.microsoft.com/azure/governance/management-groups).
 
 ## Tips for creating new subscriptions
 
 - Identify who will be responsible for creating new subscriptions.
 - Decide which resources will be in a subscription by default.
 - Decide what all standard subscriptions should look like. Considerations include RBAC access, policies, tags, and infrastructure resources.
-- If possible, [use a service principal](/azure/azure-resource-manager/grant-access-to-create-subscription) to create new subscriptions. Define a security group that can request new subscriptions via an automated workflow.
+- If possible, [use a service principal](https://docs.microsoft.com/azure/azure-resource-manager/grant-access-to-create-subscription) to create new subscriptions. Define a security group that can request new subscriptions via an automated workflow.
 - If you're an Enterprise Agreement (EA) customer, ask Azure support to block creation of non-EA subscriptions for your organization.
 
 ## Related resources
 
 - [Azure fundamental concepts](./fundamental-concepts.md).
-- [Organize your resources with Azure management groups](/azure/governance/management-groups).
-- [Elevate access to manage all Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin).
-- [Move Azure resources to another resource group or subscription](/azure/azure-resource-manager/resource-group-move-resources).
+- [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/governance/management-groups).
+- [Elevate access to manage all Azure subscriptions and management groups](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin).
+- [Move Azure resources to another resource group or subscription](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-move-resources).
 
 ## Next steps
 
-Review [recommended naming and tagging conventions](./name-and-tag.md) to follow when deploying your Azure resources.
+Review [recommended naming and tagging conventions](./naming-and-tagging.md) to follow when deploying your Azure resources.
 
 > [!div class="nextstepaction"]
-> [Recommended naming and tagging conventions](./name-and-tag.md)
+> [Recommended naming and tagging conventions](./naming-and-tagging.md)

@@ -36,9 +36,9 @@ Before Contoso can migrate to Azure, it's critical to prepare an Azure infrastru
 Before we start looking at the infrastructure, you might want to read some background information about the Azure capabilities we discuss in this article:
 
 - Several options are available for purchasing Azure access, including Pay-As-You-Go, Enterprise Agreements (EA), Open Licensing from Microsoft resellers, or from Microsoft Partners known as Cloud Solution Providers (CSPs). Learn about [purchase options](https://azure.microsoft.com/pricing/purchase-options), and read about how [Azure subscriptions are organized](https://azure.microsoft.com/blog/organizing-subscriptions-and-resource-groups-within-the-enterprise).
-- Get an overview of Azure [identity and access management](https://www.microsoft.com/trustcenter/security/identity). In particular, learn about [Azure AD and extending on-premises Active Directory to the cloud](/azure/active-directory/identity-fundamentals). There's a useful downloadable e-book about [identity and access management (IAM) in a hybrid environment](https://azure.microsoft.com/resources/hybrid-cloud-identity).
-- Azure provides a robust networking infrastructure with options for hybrid connectivity. Get an overview of [networking and network access control](/azure/security/security-network-overview).
-- Get an introduction to [Azure Security](/azure/security/azure-security), and read about creating a plan for [governance](/azure/security/governance-in-azure).
+- Get an overview of Azure [identity and access management](https://www.microsoft.com/trustcenter/security/identity). In particular, learn about [Azure AD and extending on-premises Active Directory to the cloud](https://docs.microsoft.com/azure/active-directory/identity-fundamentals). There's a useful downloadable e-book about [identity and access management (IAM) in a hybrid environment](https://azure.microsoft.com/resources/hybrid-cloud-identity).
+- Azure provides a robust networking infrastructure with options for hybrid connectivity. Get an overview of [networking and network access control](https://docs.microsoft.com/azure/security/security-network-overview).
+- Get an introduction to [Azure Security](https://docs.microsoft.com/azure/security/azure-security), and read about creating a plan for [governance](https://docs.microsoft.com/azure/security/governance-in-azure).
 
 ## On-premises architecture
 
@@ -72,12 +72,12 @@ Contoso is going with an [Enterprise Agreement (EA)](https://azure.microsoft.com
 After paying for Azure, Contoso needs to figure out how to manage Azure subscriptions. Contoso has an EA, and thus no limit on the number of Azure subscriptions it can set up.
 
 - An Azure Enterprise Enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
-- As a first step, Contoso has defined a structure known as an enterprise scaffold for Enterprise Enrollment. Contoso used [this article](/azure/azure-resource-manager/resource-manager-subscription-governance) to help understand and design a scaffold.
+- As a first step, Contoso has defined a structure known as an enterprise scaffold for Enterprise Enrollment. Contoso used [this article](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-subscription-governance) to help understand and design a scaffold.
 - For now, Contoso has decided to use a functional approach to manage subscriptions.
   - Inside the enterprise it will use a single IT department that controls the Azure budget. This will be the only group with subscriptions.
   - Contoso will extend this model in the future, so that other corporate groups can join as departments in the Enterprise Enrollment.
   - Inside the IT department Contoso has structured two subscriptions, Production and Development.
-  - If Contoso requires additional subscriptions in the future, it needs to manage access, policies and compliance for those subscriptions. Contoso will do that by introducing [Azure management groups](/azure/azure-resource-manager/management-groups-overview), as an additional layer above subscriptions.
+  - If Contoso requires additional subscriptions in the future, it needs to manage access, policies and compliance for those subscriptions. Contoso will do that by introducing [Azure management groups](https://docs.microsoft.com/azure/azure-resource-manager/management-groups-overview), as an additional layer above subscriptions.
 
   ![Enterprise structure](./media/contoso-migration-infrastructure/enterprise-structure.png)
 
@@ -111,7 +111,7 @@ Giving and controlling user access to Azure resources with identity and access m
 - It creates an Azure-based Active Directory to do this.
 - Contoso doesn't have Office 365 in place, so it needs to provision a new Azure AD.
 - Office 365 uses Azure AD for user management. If Contoso was using Office 365, it would already have an Azure AD tenant, and can use that as the primary directory.
-- [Learn more](https://support.office.com/article/understanding-office-365-identity-and-azure-active-directory-06a189e7-5ec6-4af2-94bf-a22ea225a7a9) about Azure AD for Office 365, and learn [how to add a subscription](/azure/active-directory/active-directory-how-subscriptions-associated-directory) to an existing Azure AD tenant.
+- [Learn more](https://support.office.com/article/understanding-office-365-identity-and-azure-active-directory-06a189e7-5ec6-4af2-94bf-a22ea225a7a9) about Azure AD for Office 365, and learn [how to add a subscription](https://docs.microsoft.com/azure/active-directory/active-directory-how-subscriptions-associated-directory) to an existing Azure AD tenant.
 
 ### Create an Azure AD
 
@@ -191,9 +191,9 @@ In future, Contoso will add other resource groups based on needs. For example, t
 Contoso wants to provide a common identity for accessing resources on-premises and in the cloud. To do this, it will integrate the on-premises Active Directory with Azure AD. With this model:
 
 - Users and organizations can take advantage of a single identity to access on-premises applications and cloud services such as Office 365, or thousands of other sites on the internet.
-- Admins can use the groups in Active Directory to implement [Role Based Access Control (RBAC)](/azure/role-based-access-control/role-assignments-portal) in Azure.
+- Admins can use the groups in Active Directory to implement [Role Based Access Control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) in Azure.
 
-To facilitate integration, Contoso uses the [Azure AD Connect tool](/azure/active-directory/connect/active-directory-aadconnect). When you install and configure the tool on a domain controller, it synchronizes the local on-premises Active Directory identities to Azure AD.
+To facilitate integration, Contoso uses the [Azure AD Connect tool](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect). When you install and configure the tool on a domain controller, it synchronizes the local on-premises Active Directory identities to Azure AD.
 
 ### Download the tool
 
@@ -217,7 +217,7 @@ To facilitate integration, Contoso uses the [Azure AD Connect tool](/azure/activ
 
 Note that:
 
-- Contoso has a direct connection to Azure. If your on-premises Active Directory is behind a proxy, read this [article](/azure/active-directory/connect/active-directory-aadconnect-troubleshoot-connectivity).
+- Contoso has a direct connection to Azure. If your on-premises Active Directory is behind a proxy, read this [article](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-troubleshoot-connectivity).
 
 - After the first synchronization, on-premises Active Directory objects are visible in the Azure AD directory.
 
@@ -229,7 +229,7 @@ Note that:
 
 ### Set up RBAC
 
-Azure [role-based access control (RBAC)](/azure/role-based-access-control/role-assignments-portal) enables fine-grained access management for Azure. Using RBAC, you can grant only the amount of access that users need to perform tasks. You assign the appropriate RBAC role to users, groups, and applications at a scope level. The scope of a role assignment can be a subscription, a resource group, or a single resource.
+Azure [role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) enables fine-grained access management for Azure. Using RBAC, you can grant only the amount of access that users need to perform tasks. You assign the appropriate RBAC role to users, groups, and applications at a scope level. The scope of a role assignment can be a subscription, a resource group, or a single resource.
 
 Contoso admins now assigns roles to the Active Directory groups that they synchronized from on-premises.
 
@@ -249,7 +249,7 @@ Azure resources are deployed within regions.
 - Regions are organized into geographies, and data residency, sovereignty, compliance and resiliency requirements are honored within geographical boundaries.
 - A region is composed of a set of datacenters. These datacenters are deployed within a latency-defined perimeter, and connected through a dedicated regional low-latency network.
 - Each Azure region is paired with a different region for resiliency.
-- Read about [Azure regions](https://azure.microsoft.com/global-infrastructure/regions), and understand [how regions are paired](/azure/best-practices-availability-paired-regions).
+- Read about [Azure regions](https://azure.microsoft.com/global-infrastructure/regions), and understand [how regions are paired](https://docs.microsoft.com/azure/best-practices-availability-paired-regions).
 
 Contoso has decided to go with the East US 2 (located in Virginia) as the primary region, and Central US (located in Iowa) as the secondary region. There are a couple of reasons for this:
 
@@ -271,7 +271,7 @@ Availability sets help protect apps and data from a local hardware and networkin
 - Fault domains represent underlying hardware with a common power source and network switch within the datacenter. VMs in an availability set are distributed across different fault domains to minimize outages caused by a single hardware or networking failure.
 - Update domains represent underlying hardware that can undergo maintenance or be rebooted at the same time. Availability sets also distribute VMs across multiple update domains to ensure at least one instance will be running at all times.
 
-Contoso will implement availability sets whenever VM workloads require high availability. [Learn more](/azure/virtual-machines/windows/manage-availability).
+Contoso will implement availability sets whenever VM workloads require high availability. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability).
 
 **Availability zones:**
 
@@ -282,7 +282,7 @@ Availability zones help protect apps and data from failures affecting an entire 
 - There's a minimum of three separate zones in all enabled regions.
 - The physical separation of zones within a region protects applications and data from datacenter failures.
 
-Contoso will deploy availability zones as apps call for scalability, high-availability, and resiliency. [Learn more](/azure/availability-zones/az-overview).
+Contoso will deploy availability zones as apps call for scalability, high-availability, and resiliency. [Learn more](https://docs.microsoft.com/azure/availability-zones/az-overview).
 
 ### Set up backup
 
@@ -294,9 +294,9 @@ Azure Backup allows you to back up and restore Azure VM disks.
 - Backups are application consistent, ensuring backed up data is transactionally consistent and that applications will boot up post-restore.
 - Azure Backup supports locally redundant storage (LRS) to replicate multiple copies of your backup data within a datacenter, in case of a local hardware failure.
 - In the event of a regional outage, Azure Backup also supports geo-redundant storage (GRS), replicating your backup data to a secondary paired region.
-- Azure Backup encrypts data in-transit using AES 256. Backed-up data at-rest is encrypted using [Storage Service Encryption (SSE)](/azure/storage/common/storage-service-encryption?toc=%2fazure%2fstorage%2fqueues%2ftoc.json).
+- Azure Backup encrypts data in-transit using AES 256. Backed-up data at-rest is encrypted using [Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption?toc=%2fazure%2fstorage%2fqueues%2ftoc.json).
 
-Contoso will use Azure Backup with GRS on all production VMs to ensure workload data is backed up and can be quickly restored in case of outage or other disruption. [Learn more](/azure/backup/backup-introduction-to-azure-backup).
+Contoso will use Azure Backup with GRS on all production VMs to ensure workload data is backed up and can be quickly restored in case of outage or other disruption. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup).
 
 ### Set up disaster recovery
 
@@ -308,7 +308,7 @@ Azure Site Recovery helps ensure business continuity by keeping business apps an
 - In the event of an outage in the primary region, your application or service fails over to using VMs instances replicated in the secondary region, minimizing potential disruption.
 - When operations return to normal, your applications or services can fail back to VMs in the primary region.
 
-Contoso will implement Azure Site Recovery for all production VMs used in mission-critical workloads, ensuring minimal disruption during an outage in the primary region. [Learn more](/azure/site-recovery/site-recovery-overview)
+Contoso will implement Azure Site Recovery for all production VMs used in mission-critical workloads, ensuring minimal disruption during an outage in the primary region. [Learn more](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
 ## Step 4: Design a network infrastructure
 
@@ -320,7 +320,7 @@ With the regional design in place, Contoso is ready to consider a networking str
 
 ### Plan hybrid network connectivity
 
-Contoso considered a [number of architectures](/azure/architecture/reference-architectures/hybrid-networking) for hybrid networking between Azure and the on-premises datacenter. [Read more](/azure/architecture/reference-architectures/hybrid-networking/considerations) about comparing options.
+Contoso considered a [number of architectures](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking) for hybrid networking between Azure and the on-premises datacenter. [Read more](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/considerations) about comparing options.
 
 As a reminder, the Contoso on-premises network infrastructure currently consists of the datacenter in New York, and local branches in the eastern portion of the US. All locations have a business class connection to the internet. Each of the branches is then connected to the datacenter via an IPSec VPN tunnel over the internet.
 
@@ -331,8 +331,8 @@ Here's how Contoso decided to implement hybrid connectivity:
 1. Set up a new site-to-site VPN connection between the Contoso datacenter in New York and the two Azure regions in East US 2 and Central US.
 2. Branch office traffic bound for Azure virtual networks will route through the main Contoso datacenter.
 3. As Contoso scales up Azure deployment, it will establish an ExpressRoute connection between the datacenter and the Azure regions. When this happens, Contoso will retain the VPN site-to-site connection for failover purposes only.
-    - [Learn more](/azure/architecture/reference-architectures/hybrid-networking/considerations) about choosing between a VPN and ExpressRoute hybrid solution.
-    - Verify [ExpressRoute locations and support](/azure/expressroute/expressroute-locations-providers).
+    - [Learn more](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/considerations) about choosing between a VPN and ExpressRoute hybrid solution.
+    - Verify [ExpressRoute locations and support](https://docs.microsoft.com/azure/expressroute/expressroute-locations-providers).
 
 **VPN only:**
 
@@ -344,7 +344,7 @@ Here's how Contoso decided to implement hybrid connectivity:
 
 ### Design the Azure network infrastructure
 
-It's critical that Contoso puts networks in place in a way that makes the hybrid deployment secure and scalable. To do this, Contoso are taking a long-term approach, and are designing virtual networks (VNets) to be resilient and enterprise ready. [Learn more](/azure/virtual-network/virtual-network-vnet-plan-design-arm) about planning VNets.
+It's critical that Contoso puts networks in place in a way that makes the hybrid deployment secure and scalable. To do this, Contoso are taking a long-term approach, and are designing virtual networks (VNets) to be resilient and enterprise ready. [Learn more](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm) about planning VNets.
 
 To connect the two regions, Contoso has decided to implement a hub-to-hub network model:
 
@@ -359,7 +359,7 @@ Azure provides network peering to connect VNets and hubs. Global peering allows 
 - Traffic between the VNets is kept on the Microsoft backbone network. No public internet, gateways, or encryption is required in the communication between the VNets.
 - Peering provides a default, low-latency, high-bandwidth connection between resources in different VNets.
 
-[Learn more](/azure/virtual-network/virtual-network-peering-overview) about network peering.
+[Learn more](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview) about network peering.
 
 #### Hub-to-hub across regions
 
@@ -399,7 +399,7 @@ With a network and routing topology in place, Contoso is ready to set up Azure n
 - Contoso will implement a Class A private network in Azure (0.0.0.0 to 127.255.255.255). This works, since on-premises it currently has a Class B private address space 172.160.0/16 so Contoso can be sure there won't be any overlap between address ranges.
 - It's going to deploy VNets in the primary and secondary regions.
 - Contoso will use a naming convention that includes the prefix **VNET** and the region abbreviation **EUS2** or **CUS**. Using this standard, the hub networks will be named **VNET-HUB-EUS2** (East US 2), and **VNET-HUB-CUS** (Central US).
-- Contoso doesn't have an [IPAM solution](/windows-server/networking/technologies/ipam/ipam-top), so it needs to plan for network routing without NAT.
+- Contoso doesn't have an [IPAM solution](https://docs.microsoft.com/windows-server/networking/technologies/ipam/ipam-top), so it needs to plan for network routing without NAT.
 
 #### Virtual networks in East US 2
 
@@ -549,7 +549,7 @@ For Contoso's production networks in both regions to see each other, Contoso adm
 
 ### Set up DNS
 
-When you deploy resources in virtual networks, you have a couple of choices for domain name resolution. You can use name resolution provided by Azure, or provide DNS servers for resolution. The type of name resolution you use depends on how your resources need to communicate with each other. Get [more information](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#azure-provided-name-resolution) about the Azure DNS service.
+When you deploy resources in virtual networks, you have a couple of choices for domain name resolution. You can use name resolution provided by Azure, or provide DNS servers for resolution. The type of name resolution you use depends on how your resources need to communicate with each other. Get [more information](https://docs.microsoft.com/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#azure-provided-name-resolution) about the Azure DNS service.
 
 Contoso admins have decided that the Azure DNS service isn't a good choice in the hybrid environment. Instead, they will use the on-premises DNS servers.
 
@@ -579,7 +579,7 @@ After updating network settings, Contoso admins are ready to build out the domai
 2. They create availability sets in each location for the VM. Availability sets do the following:
 
     - Ensure that the Azure fabric separates the VMs into different infrastructures in the Azure Region.
-    - Allows Contoso to be eligible for the 99.95% SLA for VMs in Azure. [Learn more](/azure/virtual-machines/windows/tutorial-availability-sets).
+    - Allows Contoso to be eligible for the 99.95% SLA for VMs in Azure. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/tutorial-availability-sets).
 
     ![Availability group](./media/contoso-migration-infrastructure/availability-group.png)
 
@@ -633,7 +633,7 @@ Active Directory is a critical service in networking, and must be configured cor
 
 ## Step 5: Plan for governance
 
-Azure provides a range of governance controls across services and the Azure platform. [Read more](/azure/security/governance-in-azure) for a basic understanding of options.
+Azure provides a range of governance controls across services and the Azure platform. [Read more](https://docs.microsoft.com/azure/security/governance-in-azure) for a basic understanding of options.
 
 As they configure identity and access control, Contoso has already begun to put some aspects of governance and security in place. Broadly, there are three areas it needs to consider:
 
@@ -645,7 +645,7 @@ As they configure identity and access control, Contoso has already begun to put 
 
 The Azure Policy service evaluates your resources, scanning for those not compliant with the policy definitions you have in place. For example, you might have a policy that only allows certain types of VMs, or requires resources to have a specific tag.
 
-Policies specify a policy definition, and a policy assignment specifies the scope in which a policy should be applied. The scope can range from a management group to a resource group. [Learn](/azure/governance/policy/tutorials/create-and-manage) about creating and managing policies.
+Policies specify a policy definition, and a policy assignment specifies the scope in which a policy should be applied. The scope can range from a management group to a resource group. [Learn](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage) about creating and managing policies.
 
 Contoso wants to get started with a couple of policies:
 
@@ -691,7 +691,7 @@ Contoso is going to implement locks as follows:
 - Any production or failover component must be in a resource group that has a ReadOnly lock. This means that to modify or delete production items, the lock must be removed.
 - Nonproduction resource groups will have CanNotDelete locks. This means that authorized users can read or modify a resource, but cannot delete it.
 
-[Learn more](/azure/azure-resource-manager/resource-group-lock-resources) about locks.
+[Learn more](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-lock-resources) about locks.
 
 ### Set up tagging
 
@@ -723,9 +723,9 @@ Security is crucial in the cloud, and Azure provides a wide array of security to
 
 There are a few aspects for Contoso to consider:
 
-- **Azure Security Center:** Azure Security Center provides unified security management and advanced threat protection across hybrid cloud workloads. With Security Center, you can apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks. [Learn more](/azure/security-center/security-center-intro).
-- **Network security groups (NSGs):** An NSG is a filter (firewall) that contains a list of security rules which, when applied, allow or deny network traffic to resources connected to Azure VNets. [Learn more](/azure/virtual-network/security-overview).
-- **Data encryption:** Azure Disk Encryption is a capability that helps you encrypt your Windows and Linux IaaS virtual machine disks. [Learn more](/azure/security/azure-security-encryption-atrest).
+- **Azure Security Center:** Azure Security Center provides unified security management and advanced threat protection across hybrid cloud workloads. With Security Center, you can apply security policies across your workloads, limit your exposure to threats, and detect and respond to attacks. [Learn more](https://docs.microsoft.com/azure/security-center/security-center-intro).
+- **Network security groups (NSGs):** An NSG is a filter (firewall) that contains a list of security rules which, when applied, allow or deny network traffic to resources connected to Azure VNets. [Learn more](https://docs.microsoft.com/azure/virtual-network/security-overview).
+- **Data encryption:** Azure Disk Encryption is a capability that helps you encrypt your Windows and Linux IaaS virtual machine disks. [Learn more](https://docs.microsoft.com/azure/security/azure-security-encryption-atrest).
 
 ### Work with the Azure Security Center
 

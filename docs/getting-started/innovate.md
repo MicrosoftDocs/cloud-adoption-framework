@@ -38,7 +38,7 @@ As the innovation content within the Cloud Adoption Framework is developed, it w
 - Follow practices that encourage a growth mindset
 - Integrate DevOps strategies
 
-![Cloud Adoption Framework overview](../_images/cloud-adoption-framework-overview.png)
+![Cloud Adoption Framework overview](../_images/caf-overview.png)
 
 ## Common workload examples associated with a cloud innovation
 

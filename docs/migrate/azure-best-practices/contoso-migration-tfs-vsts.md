@@ -42,7 +42,7 @@ The Contoso cloud team has pinned down goals for the migration to Azure DevOps S
 - TFS will be migrated to Azure DevOps Services.
 - Currently Contoso has one TFS collection named `ContosoDev`, which will be migrated to an Azure DevOps Services organization called `contosodevmigration.visualstudio.com`.
 - The projects, work items, bugs and iterations from the last year will be migrated to Azure DevOps Services.
-- Contoso will use their Azure Active Directory, which they set up when they [deployed their Azure infrastructure](contoso-migration-infrastructure.md) at the beginning of their migration planning.
+- Contoso will use their Azure Active Directory, which they set up when they [deployed their Azure infrastructure](./contoso-migration-infrastructure.md) at the beginning of their migration planning.
 
 ![Scenario architecture](./media/contoso-migration-tfs-vsts/architecture.png)
 
@@ -66,8 +66,8 @@ Here's what Contoso needs to run this scenario.
 
 **Requirements** | **Details**
 --- | ---
-**Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial).<br/><br/> If you create a free account, you're the administrator of your subscription and can perform all actions.<br/><br/> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.<br/><br/> If you need more granular permissions, review [this article](/azure/site-recovery/site-recovery-role-based-linked-access-control).
-**Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](contoso-migration-infrastructure.md).
+**Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial).<br/><br/> If you create a free account, you're the administrator of your subscription and can perform all actions.<br/><br/> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.<br/><br/> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control).
+**Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md).
 **On-premises TFS server** | On-premises need to either be running TFS 2018 Upgrade 2 or be upgraded to it as part of this process.
 
 ## Scenario steps
@@ -90,15 +90,15 @@ Here's how Contoso will complete the migration:
 
 **Need more help?**
 
-- [Introduction to Azure storage](/azure/storage/common/storage-introduction).
-- [Create a storage account](/azure/storage/common/storage-create-storage-account).
+- [Introduction to Azure storage](https://docs.microsoft.com/azure/storage/common/storage-introduction).
+- [Create a storage account](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account).
 
 ## Step 2: Upgrade TFS
 
 Contoso admins upgrade the TFS server to TFS 2018 Update 2. Before they start:
 
 - They download [TFS 2018 Update 2](https://visualstudio.microsoft.com/downloads)
-- They verify the [hardware requirements](/tfs/server/requirements), and read through the [release notes](/visualstudio/releasenotes/tfs2018-relnotes) and [upgrade gotchas](/tfs/server/upgrade/get-started#before-you-upgrade-to-tfs-2018).
+- They verify the [hardware requirements](https://docs.microsoft.com/tfs/server/requirements), and read through the [release notes](https://docs.microsoft.com/visualstudio/releasenotes/tfs2018-relnotes) and [upgrade gotchas](https://docs.microsoft.com/tfs/server/upgrade/get-started#before-you-upgrade-to-tfs-2018).
 
 They upgrade as follows:
 
@@ -123,7 +123,7 @@ They upgrade as follows:
      ![TFS](./media/contoso-migration-tfs-vsts/upgrade5.png)
 
 > [!NOTE]
-> Some TFS upgrades need to run the Configure Features Wizard after the upgrade completes. [Learn more](/azure/devops/reference/configure-features-after-upgrade?utm_source=ms&utm_medium=guide&utm_campaign=vstsdataimportguide&view=vsts).
+> Some TFS upgrades need to run the Configure Features Wizard after the upgrade completes. [Learn more](https://docs.microsoft.com/azure/devops/reference/configure-features-after-upgrade?utm_source=ms&utm_medium=guide&utm_campaign=vstsdataimportguide&view=vsts).
 
 **Need more help?**
 
@@ -460,13 +460,13 @@ With migration complete, Contoso wants to move from TFVC to Git for source code 
 
 **Need more help?**
 
-[Learn more](/azure/devops/repos/git/import-from-TFVC?view=vsts) about importing from TFVC.
+[Learn more](https://docs.microsoft.com/azure/devops/repos/git/import-from-TFVC?view=vsts) about importing from TFVC.
 
 ## Clean up after migration
 
 With migration complete, Contoso needs to do the following:
 
-- Review the [post-import](/azure/devops/articles/migration-post-import?view=vsts) article for information about additional import activities.
+- Review the [post-import](https://docs.microsoft.com/azure/devops/articles/migration-post-import?view=vsts) article for information about additional import activities.
 - Either delete the TFVC repos, or place them in read-only mode. The code bases mustn't used, but can be referenced for their history.
 
 ## Post-migration training

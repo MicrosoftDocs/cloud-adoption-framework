@@ -14,9 +14,9 @@ ms.subservice: plan
 
 The most important aspect of any cloud adoption plan is the alignment of people who will make the plan a reality. No plan is complete until you understand its people-related aspects.
 
-True organizational alignment takes time. It will become important to establish long-term organizational alignment, especially as cloud adoption scales across the business and IT culture. Alignment is so important that [an entire section](../organization/index.md) has been dedicated to it in the Operate section of the Cloud Adoption Framework.
+True organizational alignment takes time. It will become important to establish long-term organizational alignment, especially as cloud adoption scales across the business and IT culture. Alignment is so important that [an entire section](../organize/index.md) has been dedicated to it in the Operate section of the Cloud Adoption Framework.
 
-Full organization alignment is not a required component of the cloud adoption plan. However, some initial organization alignment is needed. This article outlines a best-practice starting point for organizational alignment. The guidance here can help complete your plan and get your teams ready for cloud adoption. When you're ready, you can use the [organization alignment](../organization/index.md) section to customize this guidance to fit your organization.
+Full organization alignment is not a required component of the cloud adoption plan. However, some initial organization alignment is needed. This article outlines a best-practice starting point for organizational alignment. The guidance here can help complete your plan and get your teams ready for cloud adoption. When you're ready, you can use the [organization alignment](../organize/index.md) section to customize this guidance to fit your organization.
 
 ## Initial best-practice structure
 
@@ -26,7 +26,7 @@ To create a balance between speed and control, we recommend that during cloud ad
 
 It's fairly intuitive that cloud adoption tasks require people to execute those tasks. So, few people are surprised that a cloud adoption team is a requirement. However, those who are new to the cloud may not fully appreciate the importance of a cloud governance team. This challenge often occurs early in adoption cycles. The cloud governance team provides the necessary checks and balances to ensure that cloud adoption doesn't expose the business to any new risks. When risks must be taken, this team ensures that proper processes and controls are implemented to mitigate or govern those risks.
 
-To learn more about cloud adoption, cloud governance, and other such capabilities, see the brief section on [understanding required cloud capabilities](../organization/index.md?#understand-required-cloud-capabilities).
+To learn more about cloud adoption, cloud governance, and other such capabilities, see the brief section on [understanding required cloud capabilities](../organize/index.md?#understand-required-cloud-capabilities).
 
 ## Map people to capabilities
 

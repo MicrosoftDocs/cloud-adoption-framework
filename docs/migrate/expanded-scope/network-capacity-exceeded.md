@@ -24,11 +24,11 @@ Most of this effort required in this scope expansion will occur during the prere
 
 **Offline transfer of independent data stores:** Pictured in the diagram below are examples of both online and offline data transfers with Azure Data Box. These approaches could be used to ship large volumes of data to the cloud prior to workload migration. In an offline data transfer, source data is copied to Azure Data Box, which is then physically shipped to Microsoft for transfer into an Azure storage account as a file or a blob. This process can be used to ship data that isn't directly tied to a specific workload, prior to other migration efforts. Doing so reduces the amount of data that needs to be shipped over the network, in an effort to complete a migration within network constraints.
 
-This approach could be used to transfer data HDFS, backups, archives, File Servers, applications, etc… Existing technical guidance explains how to use this approach to transfer data from [an HDFS store](/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster) or from disks using [SMB](/azure/databox/data-box-deploy-copy-data), [NFS](/azure/databox/data-box-deploy-copy-data-via-nfs), [REST](/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
+This approach could be used to transfer data HDFS, backups, archives, File Servers, applications, etc… Existing technical guidance explains how to use this approach to transfer data from [an HDFS store](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster) or from disks using [SMB](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data), [NFS](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-nfs), [REST](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
 
 There are also [third-party partner solutions](https://azuremarketplace.microsoft.com/campaigns/databox/azure-data-box) that use Azure Data Box for a "Seed and Feed" migration, where a large volume of data is moved via an offline transfer but is later synchronized at a lower scale over the network.
 
-![Offline and online data transfer with Azure Data Box](../../_images/migration/databox.png)
+![Offline and online data transfer with Azure Data Box](../../_images/migrate/databox.png)
 
 ## Assess process changes
 
@@ -53,13 +53,13 @@ When using offline transfer mechanisms, [replication processes](../migration-con
 
 ### Suggested action during the migrate process
 
-**Copy storage:** This approach could be used to transfer data HDFS, backups, archives, File Servers, applications, etc… Existing technical guidance explains how to use this approach to transfer data from [an HDFS store](/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster) or from disks using [SMB](/azure/databox/data-box-deploy-copy-data), [NFS](/azure/databox/data-box-deploy-copy-data-via-nfs), [REST](/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
+**Copy storage:** This approach could be used to transfer data HDFS, backups, archives, File Servers, applications, etc… Existing technical guidance explains how to use this approach to transfer data from [an HDFS store](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster) or from disks using [SMB](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data), [NFS](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-nfs), [REST](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
 
 There are also [third-party partner solutions](https://azuremarketplace.microsoft.com/campaigns/databox/azure-data-box) that use Azure Data Box for a "seed and sync" migration, where a large volume of data is moved via an offline transfer but is later synchronized at a lower scale over the network.
 
-**Ship the device:** Once the data is copied, the device can be [shipped to Microsoft](/azure/databox/data-box-deploy-picked-up). Once received and imported, the data is available in an Azure storage account.
+**Ship the device:** Once the data is copied, the device can be [shipped to Microsoft](https://docs.microsoft.com/azure/databox/data-box-deploy-picked-up). Once received and imported, the data is available in an Azure storage account.
 
-**Restore the asset:** [Verify the data](/azure/databox/data-box-deploy-picked-up#verify-data-upload-to-azure) is available in the storage account. Once verified, the data can be used as a blob or in Azure Files. If the data is a VHD/VHDX file, the file can be converted managed disks. Those managed disks can then be used to instantiate a virtual machine, which creates a replica of the original on-premises asset.
+**Restore the asset:** [Verify the data](https://docs.microsoft.com/azure/databox/data-box-deploy-picked-up#verify-data-upload-to-azure) is available in the storage account. Once verified, the data can be used as a blob or in Azure Files. If the data is a VHD/VHDX file, the file can be converted managed disks. Those managed disks can then be used to instantiate a virtual machine, which creates a replica of the original on-premises asset.
 
 **Synchronization:** If synchronization of drift is a requirement for a migrated asset, one of the [third-party partner solutions](https://azuremarketplace.microsoft.com/campaigns/databox/azure-data-box) could be used to synchronize the files until the asset is restored.
 

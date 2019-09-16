@@ -70,9 +70,9 @@ Create a resource group to hold resources like web apps, databases, and storage 
 
 To learn more, see:
 
-- [Understanding resource access management in Azure](../../governance/resource-consistency/azure-resource-access.md)
-- [Organize your resources with Azure Management Groups](/azure/azure-resource-manager/management-groups-overview)
-- [Subscription service limits](/azure/azure-subscription-service-limits)
+- [Understanding resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
+- [Organize your resources with Azure Management Groups](https://docs.microsoft.com/azure/azure-resource-manager/management-groups-overview)
+- [Subscription service limits](https://docs.microsoft.com/azure/azure-subscription-service-limits)
 
 ::: zone-end
 
@@ -118,7 +118,7 @@ A good naming standard helps identify resources in the portal, on a bill, and in
 
 ::: zone target="docs"
 
-We recommend you review and adopt the [Patterns and Practices guidance](/azure/architecture/best-practices/naming-conventions).
+We recommend you review and adopt the [Patterns and Practices guidance](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions).
 
 >[!TIP]
 >Avoid using any special characters (`-` or `_`) as the first or last character in any name. These characters cause most validation rules to fail.
@@ -145,7 +145,7 @@ You can also use tags for many other things. Common uses include:
 
 Each resource or resource group can have a maximum of 15 tag name/value pairs. However, this limitation only applies to tags directly applied to the resource group or resource.
 
-For further information on tagging refer to [Azure Architecture Center's naming conventions for Azure resources](../../ready/considerations/name-and-tag.md#metadata-tags)
+For further information on tagging refer to [Azure Architecture Center's naming conventions for Azure resources](../../ready/considerations/naming-and-tagging.md#metadata-tags)
 
 ::: zone target="docs"
 
@@ -160,7 +160,7 @@ To apply a tag to a resource group:
 
 ## Learn more
 
-To learn more, see [Use tags to organize your Azure resources](/azure/azure-resource-manager/resource-group-using-tags).
+To learn more, see [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags).
 
 ::: zone-end
 

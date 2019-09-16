@@ -82,7 +82,7 @@ Contoso will complete the migration process as follows:
 --- | --- | ---
 [Azure App Service](https://azure.microsoft.com/services/app-service) | The service runs and scales applications using the Azure PaaS service for websites. | Pricing is based on the size of the instances, and the features required. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows).
 [Traffic Manager](https://azure.microsoft.com/services/traffic-manager) | A load balancer that uses DNS to direct users to Azure, or external websites and services. | Pricing is based on the number of DNS queries received, and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager).
-[Azure Database for MySQL](/azure/mysql) | The database is based on the open-source MySQL Server engine. It provides a fully managed, enterprise-ready community MySQL database, as a service for app development and deployment. | Pricing based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql).
+[Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL Server engine. It provides a fully managed, enterprise-ready community MySQL database, as a service for app development and deployment. | Pricing based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql).
 
 ## Prerequisites
 
@@ -93,7 +93,7 @@ Here's what Contoso needs to run this scenario.
 **Requirements** | **Details**
 --- | ---
 **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial).<br/><br/> If you create a free account, you're the administrator of your subscription and can perform all actions.<br/><br/> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.
-**Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](contoso-migration-infrastructure.md).
+**Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md).
 
 <!-- markdownlint-enable MD033 -->
 
@@ -133,8 +133,8 @@ Contoso admins provision two web apps (one in each region) using Azure App Servi
 
 **Need more help?**
 
-- Learn about [Azure App Service web apps](/azure/app-service/overview).
-- Learn about [Azure App Service on Linux](/azure/app-service/containers/app-service-linux-intro).
+- Learn about [Azure App Service web apps](https://docs.microsoft.com/azure/app-service/overview).
+- Learn about [Azure App Service on Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro).
 
 ## Step 2: Set up Traffic Manager
 
@@ -154,8 +154,8 @@ Contoso admins set up Traffic Manager to direct inbound web requests to the web 
 
 **Need more help?**
 
-- Learn about [Traffic Manager](/azure/traffic-manager/traffic-manager-overview).
-- Learn about [routing traffic to a priority endpoint](/azure/traffic-manager/traffic-manager-configure-priority-routing-method).
+- Learn about [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).
+- Learn about [routing traffic to a priority endpoint](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-configure-priority-routing-method).
 
 ## Step 3: Provision Azure Database for MySQL
 
@@ -279,7 +279,7 @@ As the final step in the migration process, Contoso admins configure the web app
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app4.png)
 
 5. They repeat the above steps for the secondary web app (**osticket-cus**).
-6. After the site is configured, it's accessible via the Traffic Manager profile. The DNS name is the new location of the osTicket app. [Learn more](/azure/app-service/app-service-web-tutorial-custom-domain#map-a-cname-record).
+6. After the site is configured, it's accessible via the Traffic Manager profile. The DNS name is the new location of the osTicket app. [Learn more](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain#map-a-cname-record).
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app5.png)
 
@@ -322,14 +322,14 @@ With the app now running, Contoso need to fully operationalize and secure their 
 
 ### Security
 
-The Contoso security team reviewed the app to determine any security issues. They identified that the communication between the osTicket app and the MySQL database instance isn't configured for SSL. They will need to do this to ensure that database traffic can't be hacked. [Learn more](/azure/mysql/howto-configure-ssl).
+The Contoso security team reviewed the app to determine any security issues. They identified that the communication between the osTicket app and the MySQL database instance isn't configured for SSL. They will need to do this to ensure that database traffic can't be hacked. [Learn more](https://docs.microsoft.com/azure/mysql/howto-configure-ssl).
 
 ### Backups
 
 - The osTicket web apps don't contain state data and thus don't need to be backed up.
-- They don't need to configure backup for the database. Azure Database for MySQL automatically creates server backups and stores. They selected to use geo-redundancy for the database, so it's resilient and production-ready. Backups can be used to restore your server to a point-in-time. [Learn more](/azure/mysql/concepts-backup).
+- They don't need to configure backup for the database. Azure Database for MySQL automatically creates server backups and stores. They selected to use geo-redundancy for the database, so it's resilient and production-ready. Backups can be used to restore your server to a point-in-time. [Learn more](https://docs.microsoft.com/azure/mysql/concepts-backup).
 
 ### Licensing and cost optimization
 
 - There are no licensing issues for the PaaS deployment.
-- Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multicloud cost management solution that helps you use and manage Azure and other cloud resources. [Learn more](/azure/cost-management/overview) about Azure Cost Management.
+- Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multicloud cost management solution that helps you use and manage Azure and other cloud resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.

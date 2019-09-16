@@ -15,7 +15,7 @@ ms.custom: governance
 
 In any environment, whether on-premises, hybrid, or cloud-only, IT needs to control which administrators, users, and groups have access to resources. Identity and access management (IAM) services enable you to manage access control in the cloud.
 
-![Plotting identity options from least to most complex, aligned with jump links below](../../_images/discovery-guides/discovery-guide-identity.png)
+![Plotting identity options from least to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-identity.png)
 
 Jump to: [Determine Identity Integration Requirements](#determine-identity-integration-requirements) | [Cloud baseline](#cloud-baseline) | [Directory Synchronization](#directory-synchronization) | [Cloud hosted domain services](#cloud-hosted-domain-services) | [Active Directory Federation Services](#active-directory-federation-services) | [Learn more](#learn-more)
 
@@ -56,7 +56,7 @@ Azure AD is the native Identity and Access Management (IAM) system for granting 
 
 For organizations with existing on-premises Active Directory infrastructure, directory synchronization is often the best solution for preserving existing user and access management while providing the required IAM capabilities for managing cloud resources. This process continuously replicates directory information between Azure AD and on-premises directory services, allowing common credentials for users and a consistent identity, role, and permission system across your entire organization.
 
-Note: Organizations that have adopted Office 365 may have already implemented [directory synchronization](/office365/enterprise/set-up-directory-synchronization) between their on-premises Active Directory infrastructure and Azure Active Directory.
+Note: Organizations that have adopted Office 365 may have already implemented [directory synchronization](https://docs.microsoft.com/office365/enterprise/set-up-directory-synchronization) between their on-premises Active Directory infrastructure and Azure Active Directory.
 
 **Directory synchronization assumptions:** Using a synchronized identity solution assumes the following:
 
@@ -86,16 +86,16 @@ It's likely that your existing directories and domain services will continue to 
 
 Identity federation establishes trust relationships across multiple identity management systems to allow common authentication and authorization capabilities. You can then support single sign-on capabilities across multiple domains within your organization or identity systems managed by your customers or business partners.
 
-Azure AD supports federation of on-premises Active Directory domains using [Active Directory Federation Services](/azure/active-directory/hybrid/how-to-connect-fed-whatis) (AD FS). See the reference architecture [Extend AD FS to Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adfs) to see how this can be implemented in Azure.
+Azure AD supports federation of on-premises Active Directory domains using [Active Directory Federation Services](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-fed-whatis) (AD FS). See the reference architecture [Extend AD FS to Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adfs) to see how this can be implemented in Azure.
 
 ## Learn more
 
 For more information about identity services in Azure, see:
 
 - [Azure AD](https://azure.microsoft.com/services/active-directory). Azure AD provides cloud-based identity services. It allows you to manage access to your Azure resources and control identity management, device registration, user provisioning, application access control, and data protection.
-- [Azure AD Connect](/azure/active-directory/hybrid/whatis-hybrid-identity). The Azure AD Connect tool allows you to connect Azure AD instances with your existing identity management solutions, allowing synchronization of your existing directory in the cloud.
-- [Role-based access control](/azure/role-based-access-control/overview) (RBAC). Azure AD provides RBAC to efficiently and securely manage access to resources in the management plane. Jobs and responsibilities are organized into roles, and users are assigned to these roles. RBAC allows you to control who has access to a resource along with which actions a user can perform on that resource.
-- [Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) (PIM). PIM lowers the exposure time of resource access privileges and increases your visibility into their use through reports and alerts. It limits users to taking on their privileges "just in time" (JIT), or by assigning privileges for a shorter duration, after which privileges are revoked automatically.
+- [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity). The Azure AD Connect tool allows you to connect Azure AD instances with your existing identity management solutions, allowing synchronization of your existing directory in the cloud.
+- [Role-based access control](https://docs.microsoft.com/azure/role-based-access-control/overview) (RBAC). Azure AD provides RBAC to efficiently and securely manage access to resources in the management plane. Jobs and responsibilities are organized into roles, and users are assigned to these roles. RBAC allows you to control who has access to a resource along with which actions a user can perform on that resource.
+- [Azure AD Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) (PIM). PIM lowers the exposure time of resource access privileges and increases your visibility into their use through reports and alerts. It limits users to taking on their privileges "just in time" (JIT), or by assigning privileges for a shorter duration, after which privileges are revoked automatically.
 - [Integrate on-premises Active Directory domains with Azure Active Directory](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/azure-ad). This reference architecture provides an example of directory synchronization between on-premises Active Directory domains and Azure AD.
 - [Extend Active Directory Domain Services (AD DS) to Azure.](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adds-extend-domain) This reference architecture provides an example of deploying AD DS servers to extend domain services to cloud-based resources.
 - [Extend Active Directory Federation Services (AD FS) to Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/adfs). This reference architecture configures Active Directory Federation Services (AD FS) to perform federated authentication and authorization with your Azure AD directory.

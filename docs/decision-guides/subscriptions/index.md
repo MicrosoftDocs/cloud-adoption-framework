@@ -32,7 +32,7 @@ Because every organization is different, Azure management groups are designed to
 
 Before finalizing your subscription design, also consider how [resource consistency](../resource-consistency/index.md) considerations might influence your design choices.
 
-> ![NOTE]
+> [!NOTE]
 > Azure Enterprise Agreements (EAs) allows you to define another organizational hierarchy for billing purposes. This hierarchy is distinct from your management group hierarchy, which focuses on providing an inheritance model for easily applying suitable policies and access control to your resources.
 
 The following subscription patterns reflect an initial increase in subscription design sophistication, followed by several more advanced hierarchies that may align well to your organization:
@@ -90,9 +90,9 @@ Management group hierarchies can be up to six levels deep. This provides you wit
 
 ## Related resources
 
-- [Resource access management in Azure](../../governance/resource-consistency/azure-resource-access.md)
-- [Multiple layers of governance in large enterprises](/azure/architecture/cloud-adoption/governance/journeys/large-enterprise/multiple-layers-of-governance)
-- [Multiple geographic regions](/azure/architecture/cloud-adoption/migrate/expanded-scope/multiple-regions)
+- [Resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
+- [Multiple layers of governance in large enterprises](../../govern/guides/complex/multiple-layers-of-governance.md)
+- [Multiple geographic regions](../../migrate/expanded-scope/multiple-regions.md)
 
 ## Next steps
 

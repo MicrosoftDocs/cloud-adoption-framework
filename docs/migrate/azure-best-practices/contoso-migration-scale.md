@@ -41,7 +41,7 @@ After pinning down goals and requirements, Contoso reviews the IT footprint, and
 
 ## Current deployment
 
-After planning and setting up an [Azure infrastructure](contoso-migration-infrastructure.md) and trying out different proof-of-concept (POC) migration combinations as detailed in the table above, Contoso is ready to embark on a full migration to Azure at scale. Here's what Contoso wants to migrate.
+After planning and setting up an [Azure infrastructure](./contoso-migration-infrastructure.md) and trying out different proof-of-concept (POC) migration combinations as detailed in the table above, Contoso is ready to embark on a full migration to Azure at scale. Here's what Contoso wants to migrate.
 
 <!--markdownlint-disable MD033 -->
 
@@ -118,7 +118,7 @@ POC candidate | Y/N | Can the app be used as a POC or early adopter for cloud mi
 Technical debt | None/Some/Severe | Is the inventory item running or using an out-of-support product, platform or operating system?
 Firewall implications | Y/N | Does the app communicate with the Internet/outside traffic?  Does it integrate with a firewall?
 Security issues | Y/N | Are there known security issues with the app?  Does the app use unencrypted data or out-of-date platforms?
-Migration strategy | Rehost/Refactor/Rearchitect/Rebuild | What kind of migration is needed for the app? How will the app be deployed in Azure? [Learn more](contoso-migration-overview.md#migration-patterns).
+Migration strategy | Rehost/Refactor/Rearchitect/Rebuild | What kind of migration is needed for the app? How will the app be deployed in Azure? [Learn more](./contoso-migration-overview.md#migration-patterns).
 Technical complexity | 1-5 | How complex is the migration? This value should be defined by Contoso DevOps and relevant partners.
 Business criticality | 1-5 | How important is the app for the business? For example, a small workgroup app might be assigned a score of one, while a critical app used across the org might be assigned a score of five. This score will affect the migration priority level.
 Migration priority | 1/2/3 | What the migration priority for the app?
@@ -151,7 +151,7 @@ The Azure Migrate service helps you to discover and assess on-premises VMware VM
 Contoso needs to use Azure Migrate correctly given the scale of this migration.
 
 - Contoso will do an app-by-app assessment with Azure Migrate. This ensures that Azure Migrate returns timely data to the Azure portal.
-- Contoso admins read about [deploying Azure Migrate at scale](/azure/migrate/how-to-scale-assessment)
+- Contoso admins read about [deploying Azure Migrate at scale](https://docs.microsoft.com/azure/migrate/how-to-scale-assessment)
 - Contoso notes the Azure Migrate limits summarized in the following table.
 
 **Action** | **Limit**
@@ -204,8 +204,8 @@ Data must also be considered, especially with the volume of databases that Conto
 
 Contoso are primarily using a couple of Azure services and tools for the migration:
 
-- [Azure Site Recovery](/azure/site-recovery/site-recovery-overview): Orchestrates disaster recovery, and migrates on-premises VMs to Azure.
-- [Azure Database Migration Service](/azure/dms/dms-overview): Migrates on-premises databases such as SQL Server, MySQL, and Oracle to Azure.
+- [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview): Orchestrates disaster recovery, and migrates on-premises VMs to Azure.
+- [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview): Migrates on-premises databases such as SQL Server, MySQL, and Oracle to Azure.
 
 #### Azure Site Recovery
 
@@ -214,7 +214,7 @@ Azure Site Recovery is the primary Azure service for orchestrating disaster reco
 1. Site Recovery enables, orchestrates replication from your on-premises sites to Azure.
 2. When replication is set up and running, on-premises machines can be failed over to Azure, completing the migration.
 
-Contoso already [completed a POC](contoso-migration-rehost-vm.md) to see how Site Recovery can help them to migrate to the cloud.
+Contoso already [completed a POC](./contoso-migration-rehost-vm.md) to see how Site Recovery can help them to migrate to the cloud.
 
 ##### Using Site Recovery at scale
 
@@ -228,7 +228,7 @@ Contoso plans on running multiple "lift and shift" migrations. To ensure this wo
 
 ###### Gather on-premises information
 
-Contoso can use the [Site Recovery Deployment Planner](/azure/site-recovery/site-recovery-deployment-planner) tool to complete these steps:
+Contoso can use the [Site Recovery Deployment Planner](https://docs.microsoft.com/azure/site-recovery/site-recovery-deployment-planner) tool to complete these steps:
 
 - Contoso can use the tool to remotely profile VMs without an impact on the production environment. This helps pinpoint bandwidth and storage requirements for replication and failover.
 - Contoso can run the tool without installing any Site Recovery components on-premises.
@@ -257,10 +257,10 @@ Contoso needs to figure out how to deploy these components, based on capacity co
 --- | ---
 **Maximum daily change rate** | A single process server can handle a daily change rate up to 2 TB. Since a VM can only use one process server, the maximum daily data change rate that’s supported for a replicated VM is 2 TB.
 **Maximum throughput** | A standard Azure storage account can handle a maximum of 20,000 requests per second, and input/output operations per second (IOPS) across a replicating VM should be within this limit. For example, if a VM has 5 disks, and each disk generates 120 IOPS (8K size) on the VM, then it will be within the Azure per disk IOPS limit of 500.<br/><br/> Note that the number of storage accounts needed is equal to the total source machine IOPS, divided by 20,000. A replicated machine can only belong to a single storage account in Azure.
-**Configuration server** | Based on Contoso's estimate of replicating 100=200 VMs together, and the [configuration server sizing requirements](/azure/site-recovery/site-recovery-plan-capacity-vmware#size-recommendations-for-the-configuration-server-and-inbuilt-process-server), Contoso estimate is needs a configuration server machine as follows:<br/><br/> CPU: 16 vCPUs (2 sockets * 8 cores @ 2.5 GHz)<br/><br/> Memory: 32 GB<br/><br/> Cache disk: 1 TB<br/><br/> Data change rate: 1 TB to 2 TB.<br/><br/> In addition to sizing requirements Contoso will need to make sure that the configuration server is optimally located, on the same network and LAN segment as the VMs that will be migrated.
+**Configuration server** | Based on Contoso's estimate of replicating 100=200 VMs together, and the [configuration server sizing requirements](https://docs.microsoft.com/azure/site-recovery/site-recovery-plan-capacity-vmware#size-recommendations-for-the-configuration-server-and-inbuilt-process-server), Contoso estimate is needs a configuration server machine as follows:<br/><br/> CPU: 16 vCPUs (2 sockets * 8 cores @ 2.5 GHz)<br/><br/> Memory: 32 GB<br/><br/> Cache disk: 1 TB<br/><br/> Data change rate: 1 TB to 2 TB.<br/><br/> In addition to sizing requirements Contoso will need to make sure that the configuration server is optimally located, on the same network and LAN segment as the VMs that will be migrated.
 **Process server** | Contoso will deploy a standalone dedicated process server with the ability to replicate 100-200 VMs:<br/><br/> CPU: 16 vCPUs (2 sockets * 8 cores @ 2.5 GHz)<br/><br/> Memory: 32 GB<br/><br/> Cache disk: 1 TB<br/><br/> Data change rate: 1 TB to 2 TB.<br/><br/> The process server will be working hard, and as such should be located on an ESXi host that can handle the disk I/O, network traffic and CPU required for the replication. Contoso will consider a dedicated host for this purpose.
-**Networking** | Contoso has reviewed the current site-to-site VPN infrastructure, and decided to implement Azure ExpressRoute. The implementation is critical because it will lower latency, and improve bandwidth to Contoso's primary East US 2 Azure region.<br/><br/> **Monitoring:** Contoso will need to carefully monitor data flowing from the process server. If the data overloads the network bandwidth Contoso will consider [throttling the process server bandwidth](/azure/site-recovery/site-recovery-plan-capacity-vmware#control-network-bandwidth).
-**Azure storage** | For migration, Contoso must identify the right type and number of target Azure storage accounts. Site Recovery replicates VM data to Azure storage.<br/><br/> Site Recovery can replicate to standard or premium (SSD) storage accounts.<br/><br/> To decide about storage, Contoso must review [storage limits](/azure/virtual-machines/windows/disks-types), and factor in expected growth and increased usage over time. Given the speed and priority of migrations, Contoso has decided to use premium SSDs<br/><br/>
+**Networking** | Contoso has reviewed the current site-to-site VPN infrastructure, and decided to implement Azure ExpressRoute. The implementation is critical because it will lower latency, and improve bandwidth to Contoso's primary East US 2 Azure region.<br/><br/> **Monitoring:** Contoso will need to carefully monitor data flowing from the process server. If the data overloads the network bandwidth Contoso will consider [throttling the process server bandwidth](https://docs.microsoft.com/azure/site-recovery/site-recovery-plan-capacity-vmware#control-network-bandwidth).
+**Azure storage** | For migration, Contoso must identify the right type and number of target Azure storage accounts. Site Recovery replicates VM data to Azure storage.<br/><br/> Site Recovery can replicate to standard or premium (SSD) storage accounts.<br/><br/> To decide about storage, Contoso must review [storage limits](https://docs.microsoft.com/azure/virtual-machines/windows/disks-types), and factor in expected growth and increased usage over time. Given the speed and priority of migrations, Contoso has decided to use premium SSDs<br/><br/>
 Contoso has made the decision to use Managed disks for all VMs that are deployed to Azure. The IOPS required will determine if the disks will be Standard HDD, Standard SSD, or Premium (SSD).<br/><br/>
 
 <!--markdownlint-enable MD033 -->
@@ -304,7 +304,7 @@ To make the most of their cloud investment, Contoso will take advantage of the f
 - This licensed solution built by Cloudyn, a Microsoft subsidiary, allows Contoso to manage cloud spending with transparency and accuracy. It provides tools to monitor, allocate, and trim cloud costs.
 - Azure Cost Management provides simple dashboard reports to help with cost allocation, showbacks and chargebacks.
 - Cost Management can optimize cloud spending by identifying underutilized resources that Contoso can then manage and adjust.
-- [Learn more](/azure/cost-management/overview) about Azure Cost Management.
+- [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.
 
 ![Cost management](./media/contoso-migration-scale/cost-management.png)
 
@@ -345,16 +345,16 @@ Contoso needs visibility into the health and performance of the newly migrated a
 
 - Using these tools Contoso can easily collect data from sources and gain rich insights. For example, Contoso can gauge CPU disk and memory utilization for VMs, view applications and network dependencies across multiple VMs, and track application performance.
 - Contoso will use these cloud monitoring tools to take action and integrate with service solutions.
-- [Learn more](/azure/monitoring-and-diagnostics/monitoring-overview) about Azure monitoring.
+- [Learn more](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview) about Azure monitoring.
 
 ### Business continuity and disaster recovery
 
 Contoso will need a business continuity and disaster recovery (BCDR) strategy for their Azure resources.
 
-- Azure provides [built-in BCDR features](/azure/architecture/resiliency/disaster-recovery-azure-applications) to keep data safe and apps/services up and running.
+- Azure provides [built-in BCDR features](https://docs.microsoft.com/azure/architecture/resiliency/disaster-recovery-azure-applications) to keep data safe and apps/services up and running.
 - In addition to built-in features, Contoso wants to ensure that it can recover from failures, avoid costly business disruptions, meet compliance goals, and protect data against ransomware and human errors. To do this:
   - Contoso will deploy Azure Backup as a cost-efficient solution for backup of Azure resources. Because it’s built-in, Contoso can set up cloud backups in a few simple steps.
-  - Contoso will set up disaster recovery for Azure VMs using Azure Site Recovery for replication, failover, and failback between Azure regions that it specifies. This ensures that apps running on Azure VMs will remain available in a secondary region of Contoso's choosing if an outage occurs in the primary region. [Learn more](/azure/site-recovery/azure-to-azure-quickstart).
+  - Contoso will set up disaster recovery for Azure VMs using Azure Site Recovery for replication, failover, and failback between Azure regions that it specifies. This ensures that apps running on Azure VMs will remain available in a secondary region of Contoso's choosing if an outage occurs in the primary region. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ## Conclusion
 

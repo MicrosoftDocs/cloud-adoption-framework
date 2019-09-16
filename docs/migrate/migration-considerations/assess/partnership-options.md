@@ -29,10 +29,10 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 
 - **Assessment and migration tools.** Azure provides a wide range of tools to be used in different phases for your cloud transformation, including assessing your existing infrastructure. For more , refer to the "Assess" section in the "Migration" chapter that follows.
 - **[Microsoft Cloud Adoption Framework](../../index.md).** This framework presents a structured approach to cloud adoption and migration. It is based on proven practices across many Microsoft-supported customer engagements and is organized as a series of steps, from architecture and design to implementation. For each step, supporting guidance helps you with the design of your application architecture.
-- **[Cloud design patterns](/azure/architecture/patterns).** Azure provides some useful cloud design patterns for building reliable, scalable, secure workloads in the cloud. Each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Azure. Most of the patterns include code samples or snippets that show how to implement the pattern on Azure. However, they are relevant to any distributed system, whether hosted on Azure or on other cloud platforms.
-- **[Cloud fundamentals](/azure/architecture/guide).** Fundamentals help teach the basic approaches to implementation of core concepts. This guide helps technicians think about solutions that go beyond a single Azure service.
-- **[Example scenarios](/azure/architecture/example-scenario).** The guide provides references from real customer implementations, outlining the tools, approaches, and processes that past customers have followed to accomplish specific business goals.
-- **[Reference architectures](/azure/architecture/reference-architectures).** Reference architectures are arranged by scenario, with related architectures grouped together. Each architecture includes recommended practices, along with considerations for scalability, availability, manageability, and security. Most also include a deployable solution.
+- **[Cloud design patterns](https://docs.microsoft.com/azure/architecture/patterns).** Azure provides some useful cloud design patterns for building reliable, scalable, secure workloads in the cloud. Each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Azure. Most of the patterns include code samples or snippets that show how to implement the pattern on Azure. However, they are relevant to any distributed system, whether hosted on Azure or on other cloud platforms.
+- **[Cloud fundamentals](https://docs.microsoft.com/azure/architecture/guide).** Fundamentals help teach the basic approaches to implementation of core concepts. This guide helps technicians think about solutions that go beyond a single Azure service.
+- **[Example scenarios](https://docs.microsoft.com/azure/architecture/example-scenario).** The guide provides references from real customer implementations, outlining the tools, approaches, and processes that past customers have followed to accomplish specific business goals.
+- **[Reference architectures](https://docs.microsoft.com/azure/architecture/reference-architectures).** Reference architectures are arranged by scenario, with related architectures grouped together. Each architecture includes recommended practices, along with considerations for scalability, availability, manageability, and security. Most also include a deployable solution.
 
 ## FastTrack for Azure
 
@@ -71,7 +71,7 @@ The main phases of a typical FastTrack for Azure engagement are:
 
 ## Microsoft Services offerings aligned to Cloud Adoption Framework approaches
 
-![Microsoft Services Cloud Adoption Framework approach](../../../_images/mcs-program-approach.jpg)
+![Microsoft Services Cloud Adoption Framework approach](../../../_images/migrate/mcs-program-approach.jpg)
 
 **Assess:** Microsoft Services uses a [unified, data and tool driven approach](https://download.microsoft.com/download/C/7/C/C7CEA89D-7BDB-4E08-B998-737C13107361/Secure_Cloud_Insights_Datasheet_EN_US.pdf) consisting of architectural workshops, Azure real-time information, security and identity threat models and various tools to provide insights into challenges, risks, recommendations and issues to an existing Azure environment with a key outcome such as [high-level modernization roadmap](https://download.microsoft.com/download/F/7/2/F72FAD7E-8BBD-4E04-8C7B-9AC4FE04A150/Cloud_Adoption_Discovery_and_Roadmap_Datasheet.pdf).
 
