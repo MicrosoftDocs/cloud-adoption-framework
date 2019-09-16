@@ -17,12 +17,12 @@ The Microsoft Cloud Adoption Framework for Azure is provided as a free self-serv
 
 Throughout this framework, enablement is a core theme. The following checklist contains a series of topics that should be embedded in any cloud adoption effort to ensure the journey is a success in the eyes of both IT and the business:
 
-- **Plan:** Establishing clear [business outcomes](../business-strategy/business-outcomes/index.md), a defined [digital estate plan](../digital-estate/index.md), and well understood [adoption backlogs](../migrate/migration-considerations/prerequisites/migration-backlog-review.md).
+- **Plan:** Establishing clear [business outcomes](../strategy/business-outcomes/index.md), a defined [digital estate plan](../digital-estate/index.md), and well understood [adoption backlogs](../migrate/migration-considerations/prerequisites/migration-backlog-review.md).
 - **Ready:** Ensure the readiness of staff through [skills and learning plans](../ready/technical-skills.md).
 - **Operate:** Define a manageable operating model to guide activities during and long after adoption.
-  - **[Organize](../organization/index.md):** Align people and teams to deliver proper cloud operations and adoption.
-  - **Govern:** Align proper [governance disciplines](../governance/index.md) to consistently apply cost management, risk mitigation, compliance, and security baselines across all cloud adoption.
-  - **Manage:** Ongoing [operations](../operations/index.md) of the IT portfolio to minimize interruptions to business processes and ensure stability of the IT portfolio.
+  - **[Organize](../organize/index.md):** Align people and teams to deliver proper cloud operations and adoption.
+  - **Govern:** Align proper [governance disciplines](../govern/index.md) to consistently apply cost management, risk mitigation, compliance, and security baselines across all cloud adoption.
+  - **Manage:** Ongoing [operational management](../manage/index.md) of the IT portfolio to minimize interruptions to business processes and ensure stability of the IT portfolio.
   - **Support:** Align proper [partnership and support options](../migrate/migration-considerations/assess/partnership-options.md).
 
 ## Additional tools
@@ -33,7 +33,7 @@ In addition to the Cloud Adoption Framework, Microsoft covers additional topics 
 
 <ul class="panelContent cardsH">
 <li style="display: flex; flex-direction: column;">
-    <a href="../governance/journeys/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="../govern/guides/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">

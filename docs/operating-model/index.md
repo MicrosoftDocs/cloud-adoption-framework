@@ -21,13 +21,13 @@ Current operating models can scale to support your adoption of the cloud. A mode
 
 This section of the Cloud Adoption Framework provides an actionable operating model to guide nontechnical decisions. This operating model consists of three methodologies to aid in creating your own cloud operating model:
 
-- [Govern](../governance/index.md): Ensure consistency across adoption efforts. Align to governance or compliance requirements to maintain a well-managed cross-cloud environment.
-- [Organize](../organization/index.md): Align the organization to ensure success across the operating model and various cloud adoption efforts.
-- [Manage](../operations/index.md): Align ongoing processes for operational management of the technology to maximize value attainment and minimize disruptions.
+- [Govern](../govern/index.md): Ensure consistency across adoption efforts. Align to governance or compliance requirements to maintain a well-managed cross-cloud environment.
+- [Organize](../organize/index.md): Align the organization to ensure success across the operating model and various cloud adoption efforts.
+- [Manage](../manage/index.md): Align ongoing processes for operational management of the technology to maximize value attainment and minimize disruptions.
 
 ## Next steps
 
 Governance is a common first step toward establishing an operating model for the cloud.
 
 > [!div class="nextstepaction"]
-> [Learn about cloud governance](../governance/index.md)
+> [Learn about cloud governance](../govern/index.md)

@@ -22,16 +22,16 @@ This article is not intended to capture all possible evaluation activities. It i
 
 ## Common infrastructure evaluation activities
 
-- VMware requirements: [Review the Azure Site Recovery requirements for VMware](/azure/site-recovery/vmware-physical-azure-support-matrix).
-- Hyper-V requirements: [Review the Azure Site Recovery requirements for Hyper-V](/azure/site-recovery/hyper-v-azure-support-matrix).
+- VMware requirements: [Review the Azure Site Recovery requirements for VMware](https://docs.microsoft.com/azure/site-recovery/vmware-physical-azure-support-matrix).
+- Hyper-V requirements: [Review the Azure Site Recovery requirements for Hyper-V](https://docs.microsoft.com/azure/site-recovery/hyper-v-azure-support-matrix).
 
 Be sure to document any discrepancies in host configuration, replicated VM configuration, storage requirements, or network configuration.
 
 ## Common database evaluation activities
 
 - Document the Recovery Point Objectives and Recovery Time Objectives of the current database deployment. These are used in [architecture activities](./architect.md) to aid in decision-making.
-- Document any requirements for high-availability configuration. For assistance understanding SQL Server requirements, see the [SQL Server High Availability Solutions Guide](/sql/sql-server/failover-clusters/high-availability-solutions-sql-server).
-- Evaluate PaaS compatibility. The [Azure Data Migration Guide](https://datamigration.microsoft.com) maps on-premises databases to compatible Azure PaaS solutions, like [Cosmos DB](/azure/cosmos-db) or [Azure DB](/azure/sql-database) for [MySQL](/azure/mysql), [Postgres](/azure/postgresql), or [MariaDB](/azure/mariadb).
+- Document any requirements for high-availability configuration. For assistance understanding SQL Server requirements, see the [SQL Server High Availability Solutions Guide](https://docs.microsoft.com/sql/sql-server/failover-clusters/high-availability-solutions-sql-server).
+- Evaluate PaaS compatibility. The [Azure Data Migration Guide](https://datamigration.microsoft.com) maps on-premises databases to compatible Azure PaaS solutions, like [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) or [Azure DB](https://docs.microsoft.com/azure/sql-database) for [MySQL](https://docs.microsoft.com/azure/mysql), [Postgres](https://docs.microsoft.com/azure/postgresql), or [MariaDB](https://docs.microsoft.com/azure/mariadb).
 - When PaaS compatibility is an option without the need for any remediation, consult the team responsible for [architecture activities](./architect.md). PaaS migrations can produce significant time savings and reductions in the total cost of ownership (TCO) of most cloud solutions.
 - When PaaS compatibility is an option but remediation is required, consult the teams responsible for [architecture activities](./architect.md) and [remediation activities](../migrate/remediate.md). In many scenarios, the advantages of PaaS migrations for database solutions can outweigh the increase in remediation time.
 - Document the size and rate of change for each database to be migrated.

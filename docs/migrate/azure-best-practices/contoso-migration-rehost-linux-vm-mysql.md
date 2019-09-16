@@ -74,8 +74,8 @@ To migrate the database:
 
 **Service** | **Description** | **Cost**
 --- | --- | ---
-[Azure Site Recovery](/azure/site-recovery) | The service orchestrates and manages migration and disaster recovery for Azure VMs, and on-premises VMs and physical servers. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when failover occurs. [Learn more](https://azure.microsoft.com/pricing/details/site-recovery) about charges and pricing.
-[Azure Database for MySQL](/azure/mysql) | The database is based on the open-source MySQL Server engine. It provides a fully managed enterprise-ready community MySQL database, as a service for app development and deployment.
+[Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery) | The service orchestrates and manages migration and disaster recovery for Azure VMs, and on-premises VMs and physical servers. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when failover occurs. [Learn more](https://azure.microsoft.com/pricing/details/site-recovery) about charges and pricing.
+[Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL Server engine. It provides a fully managed enterprise-ready community MySQL database, as a service for app development and deployment.
 
 ## Prerequisites
 
@@ -85,10 +85,10 @@ Here's what Contoso needs for this scenario.
 
 **Requirements** | **Details**
 --- | ---
-**Azure subscription** | Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial).<br/><br/> If you create a free account, you're the administrator of your subscription and can perform all actions.<br/><br/> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.<br/><br/> If you need more granular permissions, review [this article](/azure/site-recovery/site-recovery-role-based-linked-access-control).
-**Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](contoso-migration-infrastructure.md).<br/><br/> Learn more about specific [network](/azure/site-recovery/vmware-physical-azure-support-matrix#network) and [storage](/azure/site-recovery/vmware-physical-azure-support-matrix#storage) requirements for Site Recovery.
+**Azure subscription** | Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial).<br/><br/> If you create a free account, you're the administrator of your subscription and can perform all actions.<br/><br/> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.<br/><br/> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control).
+**Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md).<br/><br/> Learn more about specific [network](https://docs.microsoft.com/azure/site-recovery/vmware-physical-azure-support-matrix#network) and [storage](https://docs.microsoft.com/azure/site-recovery/vmware-physical-azure-support-matrix#storage) requirements for Site Recovery.
 **On-premises servers** | The on-premises vCenter server should be running version 5.5, 6.0, or 6.5<br/><br/> An ESXi host running version 5.5, 6.0 or 6.5<br/><br/> One or more VMware VMs running on the ESXi host.
-**On-premises VMs** | [Review Linux VM requirements](/azure/site-recovery/vmware-physical-azure-support-matrix#replicated-machines) that are supported for migration with Site Recovery.<br/><br/> Verify supported [Linux file and storage systems](/azure/site-recovery/vmware-physical-azure-support-matrix#linux-file-systemsguest-storage).<br/><br/> VMs must meet [Azure requirements](/azure/site-recovery/vmware-physical-azure-support-matrix#azure-vm-requirements).
+**On-premises VMs** | [Review Linux VM requirements](https://docs.microsoft.com/azure/site-recovery/vmware-physical-azure-support-matrix#replicated-machines) that are supported for migration with Site Recovery.<br/><br/> Verify supported [Linux file and storage systems](https://docs.microsoft.com/azure/site-recovery/vmware-physical-azure-support-matrix#linux-file-systemsguest-storage).<br/><br/> VMs must meet [Azure requirements](https://docs.microsoft.com/azure/site-recovery/vmware-physical-azure-support-matrix#azure-vm-requirements).
 
 <!-- markdownlint-enable MD033 -->
 
@@ -109,7 +109,7 @@ Here's how Contoso admins will complete the migration:
 
 Contoso needs a couple of Azure components for Site Recovery:
 
-- A VNet in which failed over resources are located. Contoso already created the VNet during [Azure infrastructure deployment](contoso-migration-infrastructure.md)
+- A VNet in which failed over resources are located. Contoso already created the VNet during [Azure infrastructure deployment](./contoso-migration-infrastructure.md)
 - A new Azure storage account to hold replicated data.
 - A Recovery Services vault in Azure.
 
@@ -128,7 +128,7 @@ The Contoso admins create a storage account and vault as follows:
 
 **Need more help?**
 
-[Learn about](/azure/site-recovery/tutorial-prepare-azure) setting up Azure for Site Recovery.
+[Learn about](https://docs.microsoft.com/azure/site-recovery/tutorial-prepare-azure) setting up Azure for Site Recovery.
 
 ## Step 2: Prepare on-premises VMware for Site Recovery
 
@@ -169,8 +169,8 @@ After failover to Azure, Contoso wants to be able to connect to the Azure VMs. T
 
 **Need more help?**
 
-- [Learn about](/azure/site-recovery/vmware-azure-tutorial-prepare-on-premises#prepare-an-account-for-automatic-discovery) creating and assigning a role for automatic discovery.
-- [Learn about](/azure/site-recovery/vmware-azure-tutorial-prepare-on-premises#prepare-an-account-for-mobility-service-installation) creating an account for push installation of the Mobility service.
+- [Learn about](https://docs.microsoft.com/azure/site-recovery/vmware-azure-tutorial-prepare-on-premises#prepare-an-account-for-automatic-discovery) creating and assigning a role for automatic discovery.
+- [Learn about](https://docs.microsoft.com/azure/site-recovery/vmware-azure-tutorial-prepare-on-premises#prepare-an-account-for-mobility-service-installation) creating an account for push installation of the Mobility service.
 
 ## Step 3: Provision Azure Database for MySQL
 
@@ -282,9 +282,9 @@ With the source and target set up, Contoso admins are ready to create a replicat
 
 **Need more help?**
 
-- You can read a full walkthrough of all these steps in [Set up disaster recovery for on-premises VMware VMs](/azure/site-recovery/vmware-azure-tutorial).
-- Detailed instructions are available to help you [set up the source environment](/azure/site-recovery/vmware-azure-set-up-source), [deploy the configuration server](/azure/site-recovery/vmware-azure-deploy-configuration-server), and [configure replication settings](/azure/site-recovery/vmware-azure-set-up-replication).
-- [Learn more](/azure/virtual-machines/extensions/agent-linux) about the Azure Guest agent for Linux.
+- You can read a full walkthrough of all these steps in [Set up disaster recovery for on-premises VMware VMs](https://docs.microsoft.com/azure/site-recovery/vmware-azure-tutorial).
+- Detailed instructions are available to help you [set up the source environment](https://docs.microsoft.com/azure/site-recovery/vmware-azure-set-up-source), [deploy the configuration server](https://docs.microsoft.com/azure/site-recovery/vmware-azure-deploy-configuration-server), and [configure replication settings](https://docs.microsoft.com/azure/site-recovery/vmware-azure-set-up-replication).
+- [Learn more](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-linux) about the Azure Guest agent for Linux.
 
 ### Enable replication for the Web VM
 
@@ -312,7 +312,7 @@ Now Contoso admins can start replicating the **OSTICKETWEB** VM.
 
 **Need more help?**
 
-You can read a full walkthrough of all these steps in [Enable replication](/azure/site-recovery/vmware-azure-enable-replication).
+You can read a full walkthrough of all these steps in [Enable replication](https://docs.microsoft.com/azure/site-recovery/vmware-azure-enable-replication).
 
 ## Step 5: Migrate the database
 
@@ -383,9 +383,9 @@ To migrate the VM, Contoso admins creates a recovery plan that includes the VM, 
 
 **Need more help?**
 
-- [Learn about](/azure/site-recovery/tutorial-dr-drill-azure) running a test failover.
-- [Learn](/azure/site-recovery/site-recovery-create-recovery-plans) how to create a recovery plan.
-- [Learn about](/azure/site-recovery/site-recovery-failover) failing over to Azure.
+- [Learn about](https://docs.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure) running a test failover.
+- [Learn](https://docs.microsoft.com/azure/site-recovery/site-recovery-create-recovery-plans) how to create a recovery plan.
+- [Learn about](https://docs.microsoft.com/azure/site-recovery/site-recovery-failover) failing over to Azure.
 
 ### Connect the VM to the database
 
@@ -441,17 +441,17 @@ The Contoso security team review the VM and database to determine any security i
 - They consider securing the data on the VM disks using Disk encryption and Azure Key Vault.
 - Communication between the VM and database instance isn't configured for SSL. They will need to do this to ensure that database traffic can't be hacked.
 
-[Read more](/azure/security/azure-security-best-practices-vms) about security practices for VMs.
+[Read more](https://docs.microsoft.com/azure/security/azure-security-best-practices-vms) about security practices for VMs.
 
 ### BCDR
 
 For business continuity and disaster recovery, Contoso takes the following actions:
 
-- **Keep data safe.** Contoso backs up the data on the app VM using the Azure Backup service. [Learn more](/azure/backup/backup-introduction-to-azure-backup?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json). They don't need to configure backup for the database. Azure Database for MySQL automatically creates and stores server backups. They selected to use geo-redundancy for the database, so it's resilient and production-ready.
-- **Keep apps up and running.** Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. [Learn more](/azure/site-recovery/azure-to-azure-quickstart).
+- **Keep data safe.** Contoso backs up the data on the app VM using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json). They don't need to configure backup for the database. Azure Database for MySQL automatically creates and stores server backups. They selected to use geo-redundancy for the database, so it's resilient and production-ready.
+- **Keep apps up and running.** Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 
-- After deploying resources, Contoso assigns Azure tags, in accordance with decisions they made during the [Azure infrastructure](contoso-migration-infrastructure.md#set-up-tagging) deployment.
+- After deploying resources, Contoso assigns Azure tags, in accordance with decisions they made during the [Azure infrastructure](./contoso-migration-infrastructure.md#set-up-tagging) deployment.
 - There are no licensing issues for the Contoso Ubuntu servers.
-- Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multicloud cost management solution that helps you to use and manage Azure and other cloud resources. [Learn more](/azure/cost-management/overview) about Azure Cost Management.
+- Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multicloud cost management solution that helps you to use and manage Azure and other cloud resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.

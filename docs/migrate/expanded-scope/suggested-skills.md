@@ -18,16 +18,16 @@ There are four distinct processes that are completed iteratively during the "Mig
 
 ## Prerequisites skilling resources
 
-Implementation of "Migrate" processes will build on the skills acquired during "[Plan](../../business-strategy/suggested-skills.md)" and "[Ready](../../organization/suggested-skills.md)" phases of the migration journey.
+Implementation of "Migrate" processes will build on the skills acquired during "[Plan](../../strategy/suggested-skills.md)" and "[Ready](../../organize/suggested-skills.md)" phases of the migration journey.
 
 ## Assess skilling resources
 
 The following tools can aid the team in execution of assess activities:
 
 - [Balance the portfolio](./balance-the-portfolio.md): Ensure balance and proper investment allocations across an application portfolio.
-- [Build a business justification](../../business-strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
+- [Build a business justification](../../strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
 - [Rationalize the digital estate](../../digital-estate/rationalize.md): Rationalize assets in the digital estate.
-- [Application portfolio assessment](/learn/modules/app-and-infra-migration-and-modernization): Criteria for making decisions regarding migration or innovation options within the application portfolio.
+- [Application portfolio assessment](https://docs.microsoft.com/learn/modules/app-and-infra-migration-and-modernization): Criteria for making decisions regarding migration or innovation options within the application portfolio.
 - [Assessing and Planning Microsoft Azure Migration](https://www.pluralsight.com/courses/microsoft-azure-migration-assessing-planning): PluralSight course to aid in assessing on-premises workloads
 
 During Assess processes, architects will be called upon to architect solutions for each workload. The following skilling resources can prepare architects for these tasks:
@@ -40,7 +40,7 @@ During Assess processes, architects will be called upon to architect solutions f
 
 The following tutorial can prepare the team for migration activities:
 
-- [Migrate to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure): Using Azure Site Recovery to migrate VMs to Azure.
+- [Migrate to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure): Using Azure Site Recovery to migrate VMs to Azure.
 - [Rehost workloads to Azure](https://aka.ms/rehostcourse): PluralSight course that teaches viewers how to rehost workloads to Azure
 - [Migrating Physical and Virtual Servers to Azure](https://app.pluralsight.com/library/courses/microsoft-azure-migrating-physical-virtual-servers/table-of-contents): PluralSight course for migrating servers to Azure
 - [Import and Export Data to Azure](https://app.pluralsight.com/library/courses/microsoft-azure-import-export-data/table-of-contents): PluralSight course on the movement of data to and from Azure

@@ -20,7 +20,7 @@ User adoption plans focus on how users will adopt a new technology or change to 
 
 Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason Matrix, illustrated in the figure below, represents the drivers behind those themes across a spectrum of adoption types.
 
-![Eason Matrix of user adoption concerns](../../../_images/eason-matrix.jpg)
+![Eason Matrix of user adoption concerns](../../../_images/migrate/eason-matrix.jpg)
 
 *Eason Matrix of user adoption types.*
 
@@ -32,8 +32,8 @@ A business change plan looks beyond the technical change and assumes that every 
 
 **Upstream questions.** Upstream questions look at impacts or changes that come before user adoption happens:
 
-- Has an expected [business outcome](../../../business-strategy/business-outcomes/index.md) been quantified?
-- Does the business impact map to defined [learning metrics](../../../business-strategy/learning-metrics.md)?
+- Has an expected [business outcome](../../../strategy/business-outcomes/index.md) been quantified?
+- Does the business impact map to defined [learning metrics](../../../strategy/learning-metrics.md)?
 - Which business processes and teams take advantage of this technical solution?
 - Who in the business can best align power users for testing and feedback?
 - Have the affected business leaders been involved in the prioritization and migration planning?

@@ -64,7 +64,7 @@ When you create an Azure subscription, you can associate it with an existing Azu
 
 An email account can be associated with multiple Azure subscriptions. The account administrator can transfer a subscription to another account.
 
-For a detailed description of the roles defined in Azure, see [Classic subscription administrator roles, Azure RBAC roles, and Azure AD administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles).
+For a detailed description of the roles defined in Azure, see [Classic subscription administrator roles, Azure RBAC roles, and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 ## Subscriptions and regions
 
@@ -79,13 +79,13 @@ A subscription isn't tied to a specific Azure region. However, each Azure resour
 
 The following resources provide detailed information about the concepts discussed in this article:
 
-- [How does Azure work?](/azure/architecture/cloud-adoption/getting-started/what-is-azure)
-- [Resource access management in Azure](../../governance/resource-consistency/azure-resource-access.md)
-- [Azure Resource Manager overview](/azure/azure-resource-manager/resource-group-overview)
-- [Role-based access control (RBAC) for Azure resources](/azure/role-based-access-control/overview)
-- [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
-- [Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
-- [Topologies for Azure AD Connect](/azure/active-directory/hybrid/plan-connect-topologies)
+- [How does Azure work?](../../getting-started/what-is-azure.md)
+- [Resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
+- [Azure Resource Manager overview](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)
+- [Role-based access control (RBAC) for Azure resources](https://docs.microsoft.com/azure/role-based-access-control/overview)
+- [What is Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
+- [Associate or add an Azure subscription to your Azure Active Directory tenant](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
+- [Topologies for Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies)
 - [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/office365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)
 
 ## Next steps

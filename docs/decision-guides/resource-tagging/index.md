@@ -21,7 +21,7 @@ Organizing cloud-based resources is one of the most important tasks for IT, unle
 
 ## Tagging decision guide
 
-![Plotting tagging options from least to most complex, aligned with jump links below](../../_images/discovery-guides/discovery-guide-tagging.png)
+![Plotting tagging options from least to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-resource-tagging.png)
 
 Jump to: [Baseline naming conventions](#baseline-naming-conventions) | [Resource tagging patterns](#resource-tagging-patterns) | [Learn more](#learn-more)
 
@@ -69,7 +69,7 @@ The common tagging patterns listed below provide examples of how tagging can be 
 For more information about naming and tagging in Azure, see:
 
 - [Naming conventions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions). Refer to this guidance for recommended naming conventions for Azure resources.
-- [Use tags to organize your Azure resources](/azure/azure-resource-manager/resource-group-using-tags?toc=/azure/billing/TOC.json). You can apply tags in Azure at both the resource group and individual resource level, giving you flexibility in the granularity of any accounting reports based on applied tags.
+- [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags?toc=/azure/billing/TOC.json). You can apply tags in Azure at both the resource group and individual resource level, giving you flexibility in the granularity of any accounting reports based on applied tags.
 
 ## Next steps
 

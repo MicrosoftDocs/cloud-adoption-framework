@@ -43,9 +43,9 @@ When you create VNets as part of your migration, it's important to plan out your
 
 **Learn more:**
 
-- [Get an overview](/azure/virtual-network/virtual-networks-overview) of Azure VNets.
-- [Read](/azure/virtual-network/virtual-networks-faq) the networking FAQ.
-- [Learn about](/azure/azure-subscription-service-limits?toc=%2fazure%2fvirtual-network%2ftoc.json#networking-limits) networking limitations.
+- [Get an overview](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) of Azure VNets.
+- [Read](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq) the networking FAQ.
+- [Learn about](https://docs.microsoft.com/azure/azure-subscription-service-limits?toc=%2fazure%2fvirtual-network%2ftoc.json#networking-limits) networking limitations.
 
 ## Best practice: Implement a hub and spoke network topology
 
@@ -67,9 +67,9 @@ Consider the following:
 
 **Learn more:**
 
-- [Read about](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) a hub and spoke topology.
-- Get network recommendations for running Azure [Windows](/azure/architecture/reference-architectures/n-tier/windows-vm) and [Linux](/azure/architecture/reference-architectures/n-tier/linux-vm) VMs.
-- [Learn about](/azure/virtual-network/virtual-network-peering-overview) VNet peering.
+- [Read about](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) a hub and spoke topology.
+- Get network recommendations for running Azure [Windows](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/windows-vm) and [Linux](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/linux-vm) VMs.
+- [Learn about](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview) VNet peering.
 
 ## Best practice: Design subnets
 
@@ -94,8 +94,8 @@ DEV-DB-EUS2 | 10.245.24.0/23 | 507 | Database VMs
 
 **Learn more:**
 
-- [Learn about](/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation) designing subnets.
-- [Learn how](/azure/migrate/contoso-migration-infrastructure) a fictional company (Contoso) prepared their networking infrastructure for migration.
+- [Learn about](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation) designing subnets.
+- [Learn how](https://docs.microsoft.com/azure/migrate/contoso-migration-infrastructure) a fictional company (Contoso) prepared their networking infrastructure for migration.
 
 ## Best practice: Set up a DNS server
 
@@ -115,8 +115,8 @@ Azure adds a DNS server by default when you deploy a VNet. This allows you to ra
 
 **Learn more:**
 
-- [Learn about](/azure/migrate/contoso-migration-infrastructure) name resolution when you use your own DNS server.
-- [Learn about](/azure/architecture/best-practices/naming-conventions?toc=%2fazure%2fvirtual-network%2ftoc.json#naming-subscriptions) DNS naming rules and restrictions.
+- [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-infrastructure) name resolution when you use your own DNS server.
+- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions?toc=%2fazure%2fvirtual-network%2ftoc.json#naming-subscriptions) DNS naming rules and restrictions.
 
 ## Best practice: Set up availability zones
 
@@ -141,7 +141,7 @@ Availability zones increase high-availability to protect your apps and data from
 
 **Learn more:**
 
-- [Get an overview](/azure/availability-zones/az-overview) of availability zones.
+- [Get an overview](https://docs.microsoft.com/azure/availability-zones/az-overview) of availability zones.
 
 ## Design hybrid cloud networking
 
@@ -152,7 +152,7 @@ For a successful migration, it's critical to connect on-premises corporate netwo
 
 **Learn more:**
 
-- [Learn more](/azure/architecture/reference-architectures/hybrid-networking/vpn) about hybrid-cloud networking.
+- [Learn more](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn) about hybrid-cloud networking.
 
 ## Best practice: Implement a highly available site-to-site VPN
 
@@ -184,13 +184,13 @@ When setting up a site-to-site VPN, you do the following:
 
 **Learn more:**
 
-- [Review](/azure/vpn-gateway/vpn-gateway-about-vpn-devices) compatible on-premises VPN devices.
-- [Get an overview](/azure/vpn-gateway/vpn-gateway-about-vpngateways) of VPN gateways.
-- [Learn about](/azure/vpn-gateway/vpn-gateway-highlyavailable) highly available VPN connections.
-- [Learn about](/azure/vpn-gateway/vpn-gateway-plan-design) planning and designing a VPN gateway.
-- [Review](/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings#gwsku) VPN gateway settings.
-- [Review](/azure/vpn-gateway/vpn-gateway-about-vpngateways#gwsku) gateway SKUs.
-- [Read about](/azure/vpn-gateway/vpn-gateway-bgp-overview) setting up BGP with Azure VPN gateways.
+- [Review](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices) compatible on-premises VPN devices.
+- [Get an overview](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) of VPN gateways.
+- [Learn about](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable) highly available VPN connections.
+- [Learn about](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-plan-design) planning and designing a VPN gateway.
+- [Review](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings#gwsku) VPN gateway settings.
+- [Review](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways#gwsku) gateway SKUs.
+- [Read about](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-bgp-overview) setting up BGP with Azure VPN gateways.
 
 ### Best practice: Configure a gateway for VPN Gateways
 
@@ -214,7 +214,7 @@ For multiple VPN connections, Azure Virtual WAN is a networking service that pro
 - The Azure WAN built-in dashboard provides instant troubleshooting insights that save time, and provide an easy way to track large-scale site-to-site connectivity.
 
 **Learn more:**
-[Learn about](/azure/virtual-wan/virtual-wan-about) Azure Virtual WAN.
+[Learn about](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about) Azure Virtual WAN.
 
 ### Best practice: Implement ExpressRoute for mission-critical connections
 
@@ -230,8 +230,8 @@ Deploying ExpressRoute connections usually involves engaging with an ExpressRout
 
 **Learn more:**
 
-- [Read an overview](/azure/expressroute/expressroute-introduction) of ExpressRoute.
-- [Learn about](/azure/expressroute/expressroute-erdirect-about) ExpressRoute Direct.
+- [Read an overview](https://docs.microsoft.com/azure/expressroute/expressroute-introduction) of ExpressRoute.
+- [Learn about](https://docs.microsoft.com/azure/expressroute/expressroute-erdirect-about) ExpressRoute Direct.
 
 ### Best practice: Optimize ExpressRoute routing with BGP communities
 
@@ -274,7 +274,7 @@ To optimize routing for both office users, you need to know which prefix is from
 
 **Learn more:**
 
-- [Learn about](/azure/expressroute/expressroute-optimize-routing) optimizing routing.
+- [Learn about](https://docs.microsoft.com/azure/expressroute/expressroute-optimize-routing) optimizing routing.
 
 ## Securing VNets
 
@@ -282,8 +282,8 @@ The responsibility for securing VNets is shared between Microsoft and you. Micro
 
 **Learn more:**
 
-- [Get an overview](/azure/security/azure-security-network-security-best-practices) of best practices for network security.
-- [Learn how to](/azure/virtual-network/virtual-network-vnet-plan-design-arm#security) design for secure networks.
+- [Get an overview](https://docs.microsoft.com/azure/security/azure-security-network-security-best-practices) of best practices for network security.
+- [Learn how to](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#security) design for secure networks.
 
 ## Best practice: Implement an Azure perimeter network
 
@@ -304,7 +304,7 @@ The following figure shows an example of a single subnet perimeter network in a 
 
 **Learn more:**
 
-- [Learn about](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) deploying a perimeter network between Azure and your on-premises datacenter.
+- [Learn about](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) deploying a perimeter network between Azure and your on-premises datacenter.
 
 ## Best practice: Filter VNet traffic with NSGs
 
@@ -344,8 +344,8 @@ Service tags take the manual work out of assigning a rule to groups of Azure ser
 
 **Learn more:**
 
-- [Read about](/azure/virtual-network/security-overview) NSGs.
-- [Review](/azure/virtual-network/security-overview#service-tags) the service tags available for NSGs.
+- [Read about](https://docs.microsoft.com/azure/virtual-network/security-overview) NSGs.
+- [Review](https://docs.microsoft.com/azure/virtual-network/security-overview#service-tags) the service tags available for NSGs.
 
 ## Best practice: Use application security groups
 
@@ -384,7 +384,7 @@ Allow-Database-BusinessLogic | Allow traffic from the AsgLogic application secur
 
 **Learn more:**
 
-- [Learn about](/azure/virtual-network/security-overview#application-security-groups) application security groups.
+- [Learn about](https://docs.microsoft.com/azure/virtual-network/security-overview#application-security-groups) application security groups.
 
 ### Best practice: Secure access to PaaS using VNet service endpoints
 
@@ -399,7 +399,7 @@ VNet service endpoints extend your VNet private address space and identity to Az
 
 **Learn more:**
 
-- [Learn about](/azure/virtual-network/virtual-network-service-endpoints-overview) VNet service endpoints.
+- [Learn about](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview) VNet service endpoints.
 
 ## Best practice: Control public IP addresses
 
@@ -415,8 +415,8 @@ Public IP addresses in Azure can be associated with VMs, load balancers, applica
 
 **Learn more:**
 
-- [Learn about](/azure/virtual-network/virtual-network-ip-addresses-overview-arm#public-ip-addresses) public IP addresses in Azure.
-- [Read more](/azure/security-center/security-center-just-in-time) on just-in-time VM access in the Azure Security Center.
+- [Learn about](https://docs.microsoft.com/azure/virtual-network/virtual-network-ip-addresses-overview-arm#public-ip-addresses) public IP addresses in Azure.
+- [Read more](https://docs.microsoft.com/azure/security-center/security-center-just-in-time) on just-in-time VM access in the Azure Security Center.
 
 ## Take advantage of Azure security features for networking
 
@@ -439,8 +439,8 @@ Azure Firewall is a managed cloud-based network security service that protects y
 
 **Learn more:**
 
-- [Get an overview](/azure/firewall/overview) of Azure Firewall.
-- [Learn about](/azure/firewall/fqdn-tags) FQDN tags.
+- [Get an overview](https://docs.microsoft.com/azure/firewall/overview) of Azure Firewall.
+- [Learn about](https://docs.microsoft.com/azure/firewall/fqdn-tags) FQDN tags.
 
 ## Best practice: Deploy a web application firewall (WAF)
 
@@ -457,8 +457,8 @@ The web application firewall (WAF) is a feature of Azure Application Gateway.
 
 **Learn more:**
 
-- [Learn about](/azure/application-gateway/waf-overview) WAF.
-- [Review](/azure/application-gateway/application-gateway-waf-configuration) WAF limitations and exclusions.
+- [Learn about](https://docs.microsoft.com/azure/application-gateway/waf-overview) WAF.
+- [Review](https://docs.microsoft.com/azure/application-gateway/application-gateway-waf-configuration) WAF limitations and exclusions.
 
 ## Best practice: Implement Azure Network Watcher
 
@@ -476,8 +476,8 @@ Azure Network Watcher provides tools to monitor resources and communications in 
 
 **Learn more:**
 
-- [Get an overview](/azure/network-watcher) of Network Watcher.
-- [Learn more](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) about NSG flow Logs.
+- [Get an overview](https://docs.microsoft.com/azure/network-watcher) of Network Watcher.
+- [Learn more](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview) about NSG flow Logs.
 
 ## Use partner tools in the Azure Marketplace
 
@@ -508,11 +508,11 @@ We recommend using one set of Azure Firewalls (or NVAs) for traffic originating 
 
 **Learn more:**
 
-- [Learn about](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) using NVAs in an Azure VNet.
+- [Learn about](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) using NVAs in an Azure VNet.
 
 ## Next steps
 
 Review other best practices:
 
-- [Best practices](migrate-best-practices-security-management.md) for security and management after migration.
-- [Best practices](migrate-best-practices-costs.md) for cost management after migration.
+- [Best practices](./migrate-best-practices-security-management.md) for security and management after migration.
+- [Best practices](./migrate-best-practices-costs.md) for cost management after migration.

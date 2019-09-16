@@ -56,7 +56,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 ### Proposed solution
 
-- For the database tier of the app, Contoso compared Azure SQL Database with SQL Server using [this article](/azure/sql-database/sql-database-features). Contoso decided to go with Azure SQL Database for a few reasons:
+- For the database tier of the app, Contoso compared Azure SQL Database with SQL Server using [this article](https://docs.microsoft.com/azure/sql-database/sql-database-features). Contoso decided to go with Azure SQL Database for a few reasons:
   - Azure SQL Database is a relational-database managed service. It delivers predictable performance at multiple service levels, with near-zero administration. Advantages include dynamic scalability with no downtime, built-in intelligent optimization, and global scalability and availability.
   - Contoso can use the lightweight Data Migration Assistant (DMA) to assess and migrate the on-premises database to Azure SQL.
   - With Software Assurance, Contoso can exchange existing licenses for discounted rates on a SQL Database, using the Azure Hybrid Benefit for SQL Server. This could provide savings of up to 30%.
@@ -94,8 +94,8 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 --- | --- | ---
 [Data Migration Assistant (DMA)](/sql/dma/dma-overview?view=ssdt-18vs2017) | Contoso will use DMA to assess and detect compatibility issues that might affect their database functionality in Azure. DMA assesses feature parity between SQL sources and targets, and recommends performance and reliability improvements. | It's a downloadable tool free of charge.
 [Azure SQL Database](https://azure.microsoft.com/services/sql-database) | An intelligent, fully managed relational cloud database service. | Cost based on features, throughput, and size. [Learn more](https://azure.microsoft.com/pricing/details/sql-database/managed).
-[Azure App Service](/azure/app-service/overview) | Create powerful cloud apps using a fully managed platform | Cost based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows).
-[Azure DevOps](/azure/azure-portal/tutorial-azureportal-devops) | Provides a continuous integration and continuous deployment (CI/CD) pipeline for app development. The pipeline starts with a Git repository for managing app code, a build system for producing packages and other build artifacts, and a Release Management system to deploy changes in dev, test, and production environments.
+[Azure App Service](https://docs.microsoft.com/azure/app-service/overview) | Create powerful cloud apps using a fully managed platform | Cost based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows).
+[Azure DevOps](https://docs.microsoft.com/azure/azure-portal/tutorial-azureportal-devops) | Provides a continuous integration and continuous deployment (CI/CD) pipeline for app development. The pipeline starts with a Git repository for managing app code, a build system for producing packages and other build artifacts, and a Release Management system to deploy changes in dev, test, and production environments.
 
 ## Prerequisites
 
@@ -106,7 +106,7 @@ Here's Contoso needs to run this scenario:
 **Requirements** | **Details**
 --- | ---
 **Azure subscription** | Contoso created subscriptions during an early article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial).<br/><br/> If you create a free account, you're the administrator of your subscription and can perform all actions.<br/><br/> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.
-**Azure infrastructure** | [Learn how](contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure.
+**Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure.
 
 <!--markdownlint-enable MD033 -->
 
@@ -152,8 +152,8 @@ Here's how Contoso will run the migration:
 
 **Need more help?**
 
-- [Get help](/azure/sql-database/sql-database-get-started-portal) provisioning a SQL Database.
-- [Learn about](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools) v-Core resource limits.
+- [Get help](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal) provisioning a SQL Database.
+- [Learn about](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools) v-Core resource limits.
 
 ## Step 2: Migrate the database with DMA
 
@@ -377,21 +377,21 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ### Security
 
-- Contoso needs to ensure that their new **SmartHotel-Registration** database is secure. [Learn more](/azure/sql-database/sql-database-security-overview).
+- Contoso needs to ensure that their new **SmartHotel-Registration** database is secure. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview).
 - In particular, Contoso should update the web apps to use SSL with certificates.
 
 ### Backups
 
-- Contoso needs to review backup requirements for the Azure SQL Database. [Learn more](/azure/sql-database/sql-database-automated-backups).
-- Contoso also needs to learn about managing SQL Database backups and restores. [Learn more](/azure/sql-database/sql-database-automated-backups) about automatic backups.
-- Contoso should consider implementing failover groups to provide regional failover for the database. [Learn more](/azure/sql-database/sql-database-geo-replication-overview).
+- Contoso needs to review backup requirements for the Azure SQL Database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+- Contoso also needs to learn about managing SQL Database backups and restores. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups) about automatic backups.
+- Contoso should consider implementing failover groups to provide regional failover for the database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview).
 - Contoso needs to consider deploying the web app in the main East US 2 and Central US region for resilience. Contoso could configure Traffic Manager to ensure failover in case of regional outages.
 
 ### Licensing and cost optimization
 
-- After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](contoso-migration-infrastructure.md#set-up-tagging).
+- After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
 - All licensing is built into the cost of the PaaS services that Contoso is consuming. This will be deducted from the EA.
-- Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multicloud cost management solution that helps you to use and manage Azure and other cloud resources. [Learn more](/azure/cost-management/overview) about Azure Cost Management.
+- Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multicloud cost management solution that helps you to use and manage Azure and other cloud resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.
 
 ## Conclusion
 

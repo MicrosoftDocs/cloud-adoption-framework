@@ -15,50 +15,50 @@ ms.custom: virtual-network
 
 # Role-based access control
 
-Group-based access rights and privileges are a good practice. Dealing with groups rather than individual users simplifies maintenance of access policies, provides consistent access management across teams, and reduces configuration errors. Assigning users to and removing users from appropriate groups helps keep current the privileges of a specific user. Azure [role-based access control (RBAC)](/azure/role-based-access-control/overview) offers fine-grained access management for resources organized around user roles.
+Group-based access rights and privileges are a good practice. Dealing with groups rather than individual users simplifies maintenance of access policies, provides consistent access management across teams, and reduces configuration errors. Assigning users to and removing users from appropriate groups helps keep current the privileges of a specific user. Azure [role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview) offers fine-grained access management for resources organized around user roles.
 
-For an overview of recommended RBAC practices as part of an identity and security strategy, see [Azure identity management and access control security best practices](/azure/security/azure-security-identity-management-best-practices#use-role-based-access-control).
+For an overview of recommended RBAC practices as part of an identity and security strategy, see [Azure identity management and access control security best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices#use-role-based-access-control).
 
 ## Overview of role-based access control
 
-By using [role-based access control](/azure/role-based-access-control/overview), you can separate duties within your team and grant only enough access for specific Azure Active Directory (Azure AD) users, groups, service principals, or managed identities to perform their jobs. Instead of giving everybody unrestricted access to your Azure subscription or resources, you can limit permissions for each set of resources.
+By using [role-based access control](https://docs.microsoft.com/azure/role-based-access-control/overview), you can separate duties within your team and grant only enough access for specific Azure Active Directory (Azure AD) users, groups, service principals, or managed identities to perform their jobs. Instead of giving everybody unrestricted access to your Azure subscription or resources, you can limit permissions for each set of resources.
 
-[RBAC role definitions](/azure/role-based-access-control/role-definitions) list operations that are permitted or disallowed for users or groups assigned to that role. A role's [scope](/azure/role-based-access-control/overview#scope) specifies which resources these defined permissions apply to. Scopes can be specified at multiple levels: management group, subscription, resource group, or resource. Scopes are structured in a parent/child relationship.
+[RBAC role definitions](https://docs.microsoft.com/azure/role-based-access-control/role-definitions) list operations that are permitted or disallowed for users or groups assigned to that role. A role's [scope](https://docs.microsoft.com/azure/role-based-access-control/index.md#scope) specifies which resources these defined permissions apply to. Scopes can be specified at multiple levels: management group, subscription, resource group, or resource. Scopes are structured in a parent/child relationship.
 
-![RBAC scope hierarchy](./images/rbac-scope.png)
+![RBAC scope hierarchy](../../_images/azure-best-practices/rbac-scope.png)
 
-For detailed instructions for assigning users and groups to specific roles and assigning roles to scopes, see [Manage access to Azure resources using RBAC](/azure/role-based-access-control/role-assignments-portal).
+For detailed instructions for assigning users and groups to specific roles and assigning roles to scopes, see [Manage access to Azure resources using RBAC](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
 
 When planning your access control strategy, use a least-privilege access model that grants users only the permissions required to perform their work. The following diagram shows a suggested pattern for using RBAC through this approach.
 
-![Suggested pattern for using RBAC](./images/rbac-least-privilege.png)
+![Suggested pattern for using RBAC](../../_images/azure-best-practices/rbac-least-privilege.png)
 
 > [!NOTE]
-> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, [use management groups](/azure/governance/management-groups) for enterprise-wide access control and [resource groups](/azure/azure-resource-manager/resource-group-overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](/azure/active-directory/fundamentals/active-directory-manage-groups).
+> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, [use management groups](https://docs.microsoft.com/azure/governance/management-groups) for enterprise-wide access control and [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups).
 
 ## Using built-in RBAC roles
 
 Azure provides a many built-in role definitions, with three core roles for providing access:
 
-- The [Owner](/azure/role-based-access-control/built-in-roles#owner) role can manage everything, including access to resources.
-- The [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role can manage everything except access to resources.
-- The [Reader](/azure/role-based-access-control/built-in-roles#reader) role can view everything but not make any changes.
+- The [Owner](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) role can manage everything, including access to resources.
+- The [Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) role can manage everything except access to resources.
+- The [Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#reader) role can view everything but not make any changes.
 
 Beginning from these core access levels, additional built-in roles provide more detailed controls for accessing specific resource types or Azure features. For example, you can manage access to virtual machines by using the following built-in roles:
 
-- The [Virtual Machine Administrator Login](/azure/role-based-access-control/built-in-roles#virtual-machine-administrator-login) role can view virtual machines in the portal and sign in as _administrator_.
-- The [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role can manage virtual machines, but it can't access them or the virtual network or storage account they're connected to.
-- The [Virtual Machine User Login](/azure/role-based-access-control/built-in-roles#virtual-machine-user-login) role can view virtual machines in the portal and sign in as a regular user.
+- The [Virtual Machine Administrator Login](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#virtual-machine-administrator-login) role can view virtual machines in the portal and sign in as _administrator_.
+- The [Virtual Machine Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role can manage virtual machines, but it can't access them or the virtual network or storage account they're connected to.
+- The [Virtual Machine User Login](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#virtual-machine-user-login) role can view virtual machines in the portal and sign in as a regular user.
 
 For another example of using built-in roles to manage access to particular features, see the discussion on controlling access to cost-tracking features in [Tracking costs across business units, environments, or projects](./track-costs.md#provide-the-right-level-of-cost-access).
 
-For a complete list of available built-in roles, see [Built-in roles for Azure resources](/azure/role-based-access-control/built-in-roles).
+For a complete list of available built-in roles, see [Built-in roles for Azure resources](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles).
 
 ## Using custom roles
 
 Although the roles built in to Azure support a wide variety of access control scenarios, they might not meet all the needs of your organization or team. For example, if you have a single group of users responsible for managing virtual machines and Azure SQL Database resources, you might want to create a custom role to optimize management of the required access controls.
 
-The Azure RBAC documentation contains instructions on [creating custom roles](/azure/role-based-access-control/custom-roles), along with details on [how role definitions work](/azure/role-based-access-control/role-definitions).
+The Azure RBAC documentation contains instructions on [creating custom roles](https://docs.microsoft.com/azure/role-based-access-control/custom-roles), along with details on [how role definitions work](https://docs.microsoft.com/azure/role-based-access-control/role-definitions).
 
 ## Separation of responsibilities and roles for large organizations
 

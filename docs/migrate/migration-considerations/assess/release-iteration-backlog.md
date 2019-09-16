@@ -12,7 +12,7 @@ ms.subservice: migrate
 
 # Manage change in an incremental migration effort
 
-This article assumes that migration processes are incremental in nature, running parallel to the [govern process](../../../governance/index.md). However, the same guidance could be used to populate initial tasks in a work breakdown structure for traditional waterfall change management approaches.
+This article assumes that migration processes are incremental in nature, running parallel to the [govern process](../../../govern/index.md). However, the same guidance could be used to populate initial tasks in a work breakdown structure for traditional waterfall change management approaches.
 
 ## Release backlog
 
