@@ -54,7 +54,7 @@ The clearest view of the cloud adoption plan comes from the **Epics** backlog vi
 
 ## Align the cloud adoption plan
 
-The overview pages for the strategy and planning phases of the cloud adoption lifecycle each reference the [Cloud Adoption Framework strategy and planning template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx). That template organizes the decisions and data points that will align the template for the cloud adoption plan with your specific plans for adoption. If you haven't done so already, you might want to complete the exercises related to [strategy](../business-strategy/index.md) and [planning](../plan/index.md) before aligning your new project.
+The overview pages for the strategy and planning phases of the cloud adoption lifecycle each reference the [Cloud Adoption Framework strategy and planning template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx). That template organizes the decisions and data points that will align the template for the cloud adoption plan with your specific plans for adoption. If you haven't done so already, you might want to complete the exercises related to [strategy](../strategy/index.md) and [planning](../plan/index.md) before aligning your new project.
 
 The following articles support alignment of the cloud adoption plan:
 

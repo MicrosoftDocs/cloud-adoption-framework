@@ -81,7 +81,7 @@ To grant a user access to a subscription:
 
 To learn more, see:
 
-- [What is role-based access control (RBAC)?](/azure/role-based-access-control/overview)
+- [What is role-based access control (RBAC)?](https://docs.microsoft.com/azure/role-based-access-control/overview)
 - [Cloud Adoption Framework: Use role-based access control](../azure-best-practices/roles.md)
 
 ::: zone-end

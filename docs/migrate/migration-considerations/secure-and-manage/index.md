@@ -21,7 +21,7 @@ After a migration is complete, migrated assets should be managed by controlled I
 - **Core monitoring.** Core monitoring provides fundamental, required monitoring across Azure resources. These services require minimal configuration and collect core telemetry that the premium monitoring services use.
 - **Deep application and infrastructure monitoring.** Azure services provide rich capabilities for collecting and analyzing monitoring data at a deeper level. These services build on core monitoring and take advantage of common functionality in Azure. They provide powerful analytics with collected data to give you unique insights into your applications and infrastructure.
 
-Learn more about [Azure Monitor](/azure/azure-monitor/overview) for monitoring migrated assets.
+Learn more about [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) for monitoring migrated assets.
 
 ## Security monitoring
 
@@ -34,7 +34,7 @@ Rely on the Azure Security Center for unified security monitoring and advanced t
 - **Prioritized alerts and incidents.** Focus on the most critical threats first, with prioritized security alerts and incidents.
 - **Integrated security solutions.** Collect, search, and analyze security data from a variety of sources, including connected partner solutions.
 
-Learn more about [Azure Security Center](/azure/security-center) for securing migrated assets.
+Learn more about [Azure Security Center](https://docs.microsoft.com/azure/security-center) for securing migrated assets.
 
 ## Protect assets and data
 
@@ -45,4 +45,4 @@ Azure Backup provides a means of protecting VMs, files, and data. Azure Backup c
 - Backing up SQL Server databases.
 - Recovering protected assets.
 
-Learn more about [Azure Backup](/azure/backup) for protecting migrated assets.
+Learn more about [Azure Backup](https://docs.microsoft.com/azure/backup) for protecting migrated assets.

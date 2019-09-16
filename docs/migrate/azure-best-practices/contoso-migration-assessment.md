@@ -19,7 +19,7 @@ This article shows how the fictional company Contoso assesses an on-premises app
 
 As Contoso considers migrating to Azure, the company needs a technical and financial assessment to determine whether its on-premises workloads are good candidates for cloud migration. In particular, the Contoso team wants to assess machine and database compatibility for migration. It wants to estimate capacity and costs for running Contoso's resources in Azure.
 
-To get started and to better understand the technologies involved, Contoso assesses two of its on-premises apps, summarized in the following table. The company assesses for migration scenarios that rehost and refactor apps for migration. Learn more about rehosting and refactoring in the [migration examples overview](contoso-migration-overview.md).
+To get started and to better understand the technologies involved, Contoso assesses two of its on-premises apps, summarized in the following table. The company assesses for migration scenarios that rehost and refactor apps for migration. Learn more about rehosting and refactoring in the [migration examples overview](./contoso-migration-overview.md).
 
 <!-- markdownlint-disable MD033 -->
 
@@ -69,8 +69,8 @@ Contoso uses Microsoft tools for its migration assessment. The tools align with 
 Technology | Description | Cost
 --- | --- | ---
 [Data Migration Assistant](/sql/dma/dma-overview?view=ssdt-18vs2017) | Contoso uses Data Migration Assistant to assess and detect compatibility issues that might affect its database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets. It recommends performance and reliability improvements. | Data Migration Assistant is a free, downloadable tool.
-[Azure Migrate](/azure/migrate/migrate-overview) | Contoso uses the Azure Migrate service to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | As of May 2018, Azure Migrate is a free service.
-[Service Map](/azure/operations-management-suite/operations-management-suite-service-map) | Azure Migrate uses Service Map to show dependencies between machines that the company wants to migrate. | Service Map is part of Azure Monitor logs. Currently, Contoso can use Service Map for 180 days without incurring charges.
+[Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-overview) | Contoso uses the Azure Migrate service to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | As of May 2018, Azure Migrate is a free service.
+[Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map) | Azure Migrate uses Service Map to show dependencies between machines that the company wants to migrate. | Service Map is part of Azure Monitor logs. Currently, Contoso can use Service Map for 180 days without incurring charges.
 
 In this scenario, Contoso downloads and runs Data Migration Assistant to assess the on-premises SQL Server database for its travel app. Contoso uses Azure Migrate with dependency mapping to assess the app VMs before migration to Azure.
 
@@ -105,8 +105,8 @@ Contoso and other users must meet the following prerequisites for the assessment
 - At least two on-premises VMware VMs, one running a SQL Server database.
 - Permissions to install Azure Migrate agents on each VM.
 - The VMs should have direct internet connectivity.
-  - You can restrict internet access to the [required URLs](/azure/migrate/concepts-collector).
-  - If your VMs don't have internet connectivity, the Azure [Log Analytics Gateway](/azure/azure-monitor/platform/gateway) must be installed on them, and agent traffic directed through it.
+  - You can restrict internet access to the [required URLs](https://docs.microsoft.com/azure/migrate/concepts-collector).
+  - If your VMs don't have internet connectivity, the Azure [Log Analytics Gateway](https://docs.microsoft.com/azure/azure-monitor/platform/gateway) must be installed on them, and agent traffic directed through it.
 - The FQDN of the VM running the SQL Server instance, for database assessment.
 - Windows Firewall running on the SQL Server VM should allow external connections on TCP port 1433 (default). This setup allows Data Migration Assistant to connect.
 
@@ -213,7 +213,7 @@ Contoso verifies that it has permissions to create a VM by importing a file in .
 
 ### Verify ports
 
-The Contoso assessment uses dependency mapping. Dependency mapping requires an agent to be installed on VMs that will be assessed. The agent must be able to connect to Azure from TCP port 443 on each VM. Learn about [connection requirements](/azure/log-analytics/log-analytics-concept-hybrid).
+The Contoso assessment uses dependency mapping. Dependency mapping requires an agent to be installed on VMs that will be assessed. The agent must be able to connect to Azure from TCP port 443 on each VM. Learn about [connection requirements](https://docs.microsoft.com/azure/log-analytics/log-analytics-concept-hybrid).
 
 ## Step 4: Discover VMs
 
@@ -274,7 +274,7 @@ Before deploying the VM, Contoso checks that the OVA file is secure:
     **Example:**
 
     ```C:\>CertUtil -HashFile C:\AzureMigrate\AzureMigrate.ova SHA256```
-3. The generated hash should match the hash values listed in the [Verify security](/azure/migrate/tutorial-assess-vmware#verify-security) section of the [Assess VMWare VMs for migration](/azure/migrate/tutorial-assess-vmware) tutorial.
+3. The generated hash should match the hash values listed in the [Verify security](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware#verify-security) section of the [Assess VMWare VMs for migration](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware) tutorial.
 
 ### Create the collector appliance
 
@@ -444,7 +444,7 @@ Contoso can now verify machine dependencies and create a group. Then, it runs th
 
 2. To view the assessment, Contoso selects **Manage** > **Assessments**.
 
-Contoso uses the default assessment settings, but you can [customize settings](/azure/migrate/how-to-modify-assessment).
+Contoso uses the default assessment settings, but you can [customize settings](https://docs.microsoft.com/azure/migrate/how-to-modify-assessment).
 
 ### Analyze the VM assessment
 
@@ -514,4 +514,4 @@ In this scenario, Contoso assesses its SmartHotel360 app database by using the D
 
 ## Next steps
 
-After Contoso assesses this workload as a potential migration candidate, it can begin preparing its on-premises infrastructure and its Azure infrastructure for migration. See the [deploy Azure infrastructure](contoso-migration-infrastructure.md) article in the Cloud Adoption Framework migrate best practices section for an example of how Contoso performs these processes.
+After Contoso assesses this workload as a potential migration candidate, it can begin preparing its on-premises infrastructure and its Azure infrastructure for migration. See the [deploy Azure infrastructure](./contoso-migration-infrastructure.md) article in the Cloud Adoption Framework migrate best practices section for an example of how Contoso performs these processes.

@@ -65,7 +65,7 @@ Cloud migrations are often considered a single project within a broader program 
 
 Cloud strategy and planning is a methodology that focuses on aligning business outcomes, priorities, and constraints to establish a clear migration strategy and plan. The resultant plan (or migration backlog) outlines the approach to migration and modernization across the IT portfolio, which may span entire datacenters, multiple workloads, or miscellaneous collections of infrastructure, applications, and data. Proper management of the IT portfolio across cloud implementation efforts will help drive the desired business outcomes.
 
-![Cloud Adoption Framework overview](../_images/cloud-adoption-framework-overview.png)
+![Cloud Adoption Framework overview](../_images/caf-overview.png)
 
 **Getting started:** The remainder of this article prepares the reader for the proper application of the Cloud Adoption Framework's Cloud strategy and planning methodology. It also outlines additional resources and links that can help the reader adopt this approach to guide cloud implementation efforts.
 
@@ -75,14 +75,14 @@ The Cloud Adoption Framework's Cloud strategy and planning methodology is based 
 
 As depicted in the image above, this framework aligns strategic decisions to a small number of contained processes, which operate within an iterative model. While described in a linear document, each of the following processes is expected to mature in parallel with iterations of the cloud implementation. The links for each process will aid in defining the end state and the means of maturing toward the desired end state:
 
-- **[Plan](../business-strategy/index.md):** When technical implementation is aligned with clear business objectives, it's much easier to measure and align success across multiple cloud implementation efforts, regardless of technical decisions.
+- **[Plan](../strategy/index.md):** When technical implementation is aligned with clear business objectives, it's much easier to measure and align success across multiple cloud implementation efforts, regardless of technical decisions.
 - **[Ready](../ready/index.md):** Preparing the business, culture, people, and environment for coming changes leads to success in each effort and accelerates implementation and change projects.
 - **Adopt:** Ensure proper implementation of desired changes, across IT and business processes, to achieve business outcomes.
   - **[Migrate](../migrate/index.md):** Iterative execution of the [cloud implementation methodology](#cloud-implementation) adhering to the tested process of Assess, Migrate, Optimize, and Secure & Manage to create a repeatable process for migrating workloads.
 - **[Operate](../operating-model/index.md):** Define a manageable operating model to guide activities during and long after adoption.
-  - **[Organize](../organization/index.md):** Align people and teams to deliver proper cloud operations and adoption.
-  - **[Govern](../governance/index.md):** Align corporate policy to tangible risks, mitigated through policy, process, and cloud-based governance tooling.
-  - **[Manage](../operations/index.md):** Expand IT operations to ensure cloud-based solutions can be operated through secure, cost effective processes using modern, cloud-first operations tools.
+  - **[Organize](../organize/index.md):** Align people and teams to deliver proper cloud operations and adoption.
+  - **[Govern](../govern/index.md):** Align corporate policy to tangible risks, mitigated through policy, process, and cloud-based governance tooling.
+  - **[Manage](../manage/index.md):** Expand IT operations to ensure cloud-based solutions can be operated through secure, cost effective processes using modern, cloud-first operations tools.
 
 Throughout this migration experience this framework will be used to address ambiguity, manage change, and guide cross-functional teams through the realization of business outcomes.
 
@@ -135,6 +135,6 @@ The Cloud Adoption Framework is a lifecycle solution. It is designed to help rea
 >
 > [Migrate](../migrate/index.md)
 >
-> [Operate](../operations/index.md)
+> [Manage](../manage/index.md)
 >
-> [Govern](../governance/index.md)
+> [Govern](../govern/index.md)

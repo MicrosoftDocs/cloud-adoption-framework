@@ -62,7 +62,7 @@ This guide helps answer these questions. It suggests the tasks and features to c
 
 ::: zone target="docs"
 
-To learn more about organizing and structuring your subscriptions, managing your deployed resources, and complying with your corporate policy requirements, see [Governance in Azure](/azure/security/governance-in-azure).
+To learn more about organizing and structuring your subscriptions, managing your deployed resources, and complying with your corporate policy requirements, see [Governance in Azure](https://docs.microsoft.com/azure/security/governance-in-azure).
 
 ::: zone-end
 
@@ -107,8 +107,8 @@ These methods are not mutually exclusive&mdash;for example, while your initial m
 
 ::: zone target="docs"
 
-These methods are not mutually exclusive&mdash;for example, while your initial migration might use a **rehost** model, you may choose to implement **refactor** or **rearchitect** as part of the post-migration optimization phase. This is revisited in the [Optimize and transform](optimize-and-transform.md) section of this guide.
+These methods are not mutually exclusive&mdash;for example, while your initial migration might use a **rehost** model, you may choose to implement **refactor** or **rearchitect** as part of the post-migration optimization phase. This is revisited in the [Optimize and transform](./optimize-and-transform.md) section of this guide.
 
 ::: zone-end
 
-![Infographic of the migration options](../../_images/migration/migration-options.png)
+![Infographic of the migration options](../../_images/migrate/migration-options.png)

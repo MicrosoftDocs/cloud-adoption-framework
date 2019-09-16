@@ -13,7 +13,7 @@ ms.custom: governance
 
 # Rationalize the digital estate
 
-Cloud rationalization is the process of evaluating assets to determine the best approach to hosting them in the cloud. After you've determined an [approach](approach.md) and aggregated an [inventory](inventory.md), cloud rationalization can begin. [Cloud rationalization](rationalize.md) discusses the most common rationalization options.
+Cloud rationalization is the process of evaluating assets to determine the best approach to hosting them in the cloud. After you've determined an [approach](./approach.md) and aggregated an [inventory](./inventory.md), cloud rationalization can begin. [Cloud rationalization](./rationalize.md) discusses the most common rationalization options.
 
 ## Traditional view of rationalization
 
@@ -25,7 +25,7 @@ It's easy to understand rationalization when you visualize the traditional proce
 
 **Qualitative analysis:** The next set of decisions requires human intelligence in the form of qualitative analysis. Often, the questions that come up here are unique to the solution and can only be answered by business stakeholders and power users. These decisions typically delay the process, slowing things down considerably. This analysis generally consumes 40 to 80 FTE hours per application.
 
-For guidance about building a list of qualitative analysis questions, see [Approaches to digital estate planning](approach.md).
+For guidance about building a list of qualitative analysis questions, see [Approaches to digital estate planning](./approach.md).
 
 **Rationalization decision:** In the hands of an experienced rationalization team, the qualitative and quantitative data creates clear decisions. Unfortunately, teams with a high degree of rationalization experience are expensive to hire or take months to train.
 
@@ -55,7 +55,7 @@ In an incremental rationalization process, an agent-less solution could be used 
 
 ### Quantitative analysis: Streamline decisions
 
-Regardless of the approach to inventory discovery, quantitative analysis can drive initial decisions and assumptions. This is especially true when trying to identify the first workload or when the goal of rationalization is a high-level cost comparison. In an incremental rationalization process, the cloud strategy team and the cloud adoption teams limit the [five Rs of rationalization](5-rs-of-rationalization.md) to two concise decisions and only apply those quantitative factors. This streamlines the analysis and reduces the amount of initial data that's required to drive change.
+Regardless of the approach to inventory discovery, quantitative analysis can drive initial decisions and assumptions. This is especially true when trying to identify the first workload or when the goal of rationalization is a high-level cost comparison. In an incremental rationalization process, the cloud strategy team and the cloud adoption teams limit the [five Rs of rationalization](./5-rs-of-rationalization.md) to two concise decisions and only apply those quantitative factors. This streamlines the analysis and reduces the amount of initial data that's required to drive change.
 
 For example, if an organization is in the midst of an IaaS migration to the cloud, you can assume that most workloads will either be retired or rehosted.
 
@@ -111,7 +111,7 @@ The first workload is often deployed in an experimental environment with no oper
 
 ### Qualitative analysis
 
-The cloud adoption teams and the cloud strategy team can work together to analyze this small workload. This collaboration creates a controlled opportunity to create and test qualitative analysis criteria. The smaller population creates an opportunity to survey the affected users, and to complete a detailed qualitative analysis in a week or less. For common qualitative analysis factors, see the specific rationalization target in the [5 Rs of rationalization](5-rs-of-rationalization.md).
+The cloud adoption teams and the cloud strategy team can work together to analyze this small workload. This collaboration creates a controlled opportunity to create and test qualitative analysis criteria. The smaller population creates an opportunity to survey the affected users, and to complete a detailed qualitative analysis in a week or less. For common qualitative analysis factors, see the specific rationalization target in the [5 Rs of rationalization](./5-rs-of-rationalization.md).
 
 ### Migration
 
@@ -156,4 +156,4 @@ In some cases, the financial model might be too tight to make a decision without
 The output of a rationalization effort is a prioritized backlog of all assets that are affected by the chosen transformation. This backlog is now ready to serve as the foundation for costing models of cloud services.
 
 > [!div class="nextstepaction"]
-> [Align cost models with the digital estate](calculate.md)
+> [Align cost models with the digital estate](./calculate.md)

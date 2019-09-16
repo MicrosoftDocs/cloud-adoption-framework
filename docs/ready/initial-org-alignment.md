@@ -38,7 +38,7 @@ For instance, a cloud strategy team could be driven by the CTO and consist of me
 
 It's also important to form two other high-level teams: a governance team and a security team. These teams are responsible for designing, implementing, and the ongoing audit of the enterprise's governance and security policies. The governance team requires members that have worked with asset protection, cost management, group policy, and related topics. The security team requires members that are well versed in current industry security standards as well as the enterprise's security requirements.
 
-![Cloud strategy team, with governance and security teams](../_images/getting-started-overview-1.png)
+![Cloud strategy team, with governance and security teams](../_images/ready/getting-started-overview-1.png)
 
 The governance team is responsible for designing and implementing the enterprise's governance model in the cloud, as well as deploying and maintaining the shared infrastructure assets that are part of the digital transformation. These assets include hardware, software, and cloud resources necessary to connect the on-premises network to virtual networking in the cloud.
 
@@ -48,9 +48,9 @@ The security team is responsible for designing and implementing the enterprise's
 
 The next step in your enterprise's digital transformation is for the members of the cloud strategy team to learn about how cloud technology will change the way the enterprise does business. This is preparation and planning for the changes to your business, people, and technology. It's important for the members of the cloud strategy team to understand what's new and different in the cloud as compared to on-premises.
 
-![Cloud strategy, governance, and security teams learn best practices for operating in the cloud.](../_images/getting-started-overview-2.png)
+![Cloud strategy, governance, and security teams learn best practices for operating in the cloud.](../_images/ready/getting-started-overview-2.png)
 
-The starting point for understanding the cloud is learning [how Azure works](../getting-started/what-is-azure.md) at a high level. Next, learn about the basics of [governance in Azure](../governance/resource-consistency/what-is-governance.md) in preparation for [understanding resource access management](../governance/resource-consistency/azure-resource-access.md).
+The starting point for understanding the cloud is learning [how Azure works](../getting-started/what-is-azure.md) at a high level. Next, learn about the basics of [governance in Azure](../govern/resource-consistency/what-is-governance.md) in preparation for [understanding resource access management](../govern/resource-consistency/resource-access-management.md).
 
 For advanced learning, the governance team should review the concepts and design guides in the governance section of the table of contents. The infrastructure and workloads sections are useful for learning about typical architectures and workloads in the cloud.
 
@@ -88,7 +88,7 @@ Now that the goals of the digital transformation have been enumerated, prioritiz
 
 The teams take the prioritized lists and work through each high-level solution to design each solution. The design process will involve the specification of new infrastructure and new workloads. There may also be changes to the roles of the people and the processes they follow. It's also important at this stage for each of the design teams to include both the governance and security teams for review of each design. Each design must fall within with the policies and procedures defined by the governance and security teams, and these teams must be included in the final approval of each design.
 
-![cloud strategy team delivers high-level solutions to design and implementation teams.](../_images/getting-started-overview-3.png)
+![cloud strategy team delivers high-level solutions to design and implementation teams.](../_images/ready/getting-started-overview-3.png)
 
 The design of each solution is a nontrivial task. As designs are created, they must be considered in the context of other solution designs from other teams. For example, if several of the designs result in a migration of existing on-premises applications and services to the cloud, it may be more efficient to group these together and design an overall migration strategy. In another example, it may not be possible to migrate some existing on-premises applications and services and the solution may be to replace them with either new development or third-party services. In this case, it may be more efficient to group these together and determine the overlap between them to determine if a third-party service can be used for more than one solution.
 

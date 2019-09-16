@@ -39,10 +39,10 @@ An analysis of the digital estate drives cloud adoption activities. It also info
 
 To complete the digital estate analysis, take the following steps:
 
-1. [Determine analysis approach](approach.md).
-1. [Collect current state inventory](inventory.md).
-1. [Rationalize the assets in the digital estate](rationalize.md).
-1. [Align assets to cloud offerings to calculate pricing](calculate.md).
+1. [Determine analysis approach](./approach.md).
+1. [Collect current state inventory](./inventory.md).
+1. [Rationalize the assets in the digital estate](./rationalize.md).
+1. [Align assets to cloud offerings to calculate pricing](./calculate.md).
 
 Financial models and migration backlogs can be modified to reflect the rationalized and priced estate.
 
@@ -51,4 +51,4 @@ Financial models and migration backlogs can be modified to reflect the rationali
 Before digital estate planning begins, determine which approach to use.
 
 > [!div class="nextstepaction"]
-> [Approaches to digital estate planning](approach.md)
+> [Approaches to digital estate planning](./approach.md)

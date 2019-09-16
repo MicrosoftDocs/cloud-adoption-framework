@@ -45,7 +45,7 @@ To perform a migration using Azure Migrate follow these steps:
 
 ### Read more
 
-- [Azure Migrate tutorial - Migrate physical or virtualized servers to Azure](/azure/migrate/tutorial-migrate-physical-virtual-machines)
+- [Azure Migrate tutorial - Migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
 
 ## Azure Site Recovery
 
@@ -54,7 +54,7 @@ The Azure Site Recovery service can manage the migration of on-premises resource
 The following steps outline the process to use Site Recovery to migrate:
 
 > [!TIP]
-> Depending on your scenario, these steps may differ slightly. For more information, see the [Migrate on-premises machines to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure) article.
+> Depending on your scenario, these steps may differ slightly. For more information, see the [Migrate on-premises machines to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure) article.
 
 ### Prepare Azure Site Recovery service
 
@@ -97,7 +97,7 @@ The following steps outline the process to use Site Recovery to migrate:
 
 For more information, see:
 
-- [Migrate on-premises machines to Azure](/azure/site-recovery/migrate-tutorial-on-premises-azure)
+- [Migrate on-premises machines to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure)
 
 ::: zone-end
 
@@ -136,8 +136,8 @@ The service is now ready to migrate the supported source databases (for example,
 
 For more information, see:
 
-- [Azure Database Migration Service overview](/azure/dms/dms-overview)
-- [Create an instance of the Azure Database Migration Service](/azure/dms/quickstart-create-data-migration-service-portal)
+- [Azure Database Migration Service overview](https://docs.microsoft.com/azure/dms/dms-overview)
+- [Create an instance of the Azure Database Migration Service](https://docs.microsoft.com/azure/dms/quickstart-create-data-migration-service-portal)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade)
 - [Azure portal: Create a migration project](https://portal.azure.com/#create/Microsoft.AzureMigrate)
 
@@ -161,21 +161,21 @@ To get started with the Data Migration Assistant follow these steps.
 1. Click **Next** to start the assessment.
 1. View results within the Data Migration Assistant tool set.
 
-For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports and then use provided Power BI reports to analyze the results.
+For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](https://docs.microsoft.com/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports and then use provided Power BI reports to analyze the results.
 
 For more information, including detailed usage steps, see:
 
-- [Data Migration Assistant overview](/sql/dma/dma-overview)
-- [Assess an enterprise and consolidate assessment reports with DMA](/sql/dma/dma-consolidatereports)
-- [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](/sql/dma/dma-powerbiassesreport)
+- [Data Migration Assistant overview](https://docs.microsoft.com/sql/dma/dma-overview)
+- [Assess an enterprise and consolidate assessment reports with DMA](https://docs.microsoft.com/sql/dma/dma-consolidatereports)
+- [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](https://docs.microsoft.com/sql/dma/dma-powerbiassesreport)
 
 ## SQL Server Migration Assistant
 
-Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE. The general concept is to collect, assess, and then review with these tools, however, due to the variances in the process for each of the source systems we recommend reviewing the detailed [SQL Server Migration Assistant documentation](/sql/ssma/sql-server-migration-assistant).
+Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE. The general concept is to collect, assess, and then review with these tools, however, due to the variances in the process for each of the source systems we recommend reviewing the detailed [SQL Server Migration Assistant documentation](https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant).
 
 For more information, see:
 
-- [SQL Server Migration Assistant overview](/sql/ssma/sql-server-migration-assistant)
+- [SQL Server Migration Assistant overview](https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant)
 
 ## Database Experimentation Assistant
 
@@ -189,7 +189,7 @@ The Database Experimentation Assistant contains the following workflow activitie
 
 For more information, see:
 
-- [Overview of Database Experimentation Assistant](/sql/dea/database-experimentation-assistant-overview)
+- [Overview of Database Experimentation Assistant](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-overview)
 
 # [Third-party migration tools](#tab/third-party-tools)
 
@@ -240,4 +240,4 @@ As you migrate into cloud technologies this presents a great opportunity to set 
 
 # [Cost management](#tab/ManageCost)
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload (discussed in more detail in the **[Optimize and Transform](optimize-and-transform.md)** section).
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload (discussed in more detail in the **[Optimize and Transform](./optimize-and-transform.md)** section).

@@ -16,7 +16,7 @@ The strategy and tools you use to migrate an application to Azure will largely d
 
 The choice to migrate using platform as a service (PaaS) or infrastructure as a service (IaaS) technologies is driven by the balance between cost, time, existing technical debt, and long-term returns. IaaS is often the fastest path to the cloud with the least amount of required change to the workload. PaaS could require modifications to data structures or source code, but produces substantial long-term returns in the form of reduced operating costs and greater technical flexibility. In the following diagram, the term _modernize_ is used to reflect a decision to modernize an asset during migration and migrate the modernized asset to a PaaS platform.
 
-![Example migration tools decision tree.](../../_images/migration/migration-tools-decision-tree.png)
+![Example migration tools decision tree.](../../_images/migrate/migration-tools-decision-tree.png)
 
 ## Key questions
 
@@ -35,7 +35,7 @@ In line with the Cloud Adoption Frameworks emphasis on [incremental migration](.
 
 ## Learn more
 
-- **[Cloud fundamentals: Overview of Azure compute options](/azure/architecture/guide/technology-choices/compute-overview)**. Provides information on the capabilities of Azure IaaS and PaaS compute options.
-- **[Cloud fundamentals: Choose the right data store](/azure/architecture/guide/technology-choices/data-store-overview)**. Discusses PaaS storage options available on the Azure platform.
+- **[Cloud fundamentals: Overview of Azure compute options](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-overview)**. Provides information on the capabilities of Azure IaaS and PaaS compute options.
+- **[Cloud fundamentals: Choose the right data store](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview)**. Discusses PaaS storage options available on the Azure platform.
 - **[Expanded scope migration: Storage requirements exceed network capacity during a migration effort](../../migrate/expanded-scope/network-capacity-exceeded.md)**. Discusses alternative data migration mechanisms for scenarios where data migration is hindered by available network bandwidth.
-- **[SQL Database: Choose the right SQL Server option in Azure](/azure/sql-database/sql-database-paas-vs-sql-server-iaas#business-motivations-for-choosing-databases-managed-instances-or-sql-virtual-machines)**. Discussion of the options and business justifications for choosing to host your SQL Server workloads in a hosted infrastructure (IaaS) or a hosted service (PaaS) environment.
+- **[SQL Database: Choose the right SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas#business-motivations-for-choosing-databases-managed-instances-or-sql-virtual-machines)**. Discussion of the options and business justifications for choosing to host your SQL Server workloads in a hosted infrastructure (IaaS) or a hosted service (PaaS) environment.
