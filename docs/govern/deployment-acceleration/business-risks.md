@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about the discipline of Deployment Acceleration as part of a cloud governance strategy.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -17,7 +17,7 @@ This article discusses the reasons that customers typically adopt a Deployment A
 
 <!-- markdownlint-disable MD026 -->
 
-## Is Deployment Acceleration relevant?
+## Deployment Acceleration relevancy
 
 On-premises systems are often deployed using baseline images or installation scripts. Additional configuration is usually necessary, which may involve multiple steps or human intervention. These manual processes are error-prone and often result in "configuration drift", requiring time-consuming troubleshooting and remediation tasks.
 

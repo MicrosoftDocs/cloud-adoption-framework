@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to establish policy to reflect and remediate risks.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/02/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern

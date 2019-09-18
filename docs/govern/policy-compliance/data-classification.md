@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: What is data classification?
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -35,7 +35,7 @@ The following is a list of classifications Microsoft uses. Depending on your ind
 
 ## Tagging data classification in Azure
 
-Every cloud provider should offer a mechanism for recording metadata about any asset. In the case of Azure, resource tags are the suggested approach for metadata storage, and these tags can be used to apply data classification information to deployed resources. Although tagging cloud assets by classification is not a replacement for a formal data classification process, it provides a valuable tool for managing resources and applying policy.
+Resource tags are the suggested approach for metadata storage, and these tags can be used to apply data classification information to deployed resources. Although tagging cloud assets by classification is not a replacement for a formal data classification process, it provides a valuable tool for managing resources and applying policy. [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/what-is-information-protection) is an excellent solution to help you classify _data_ itself regardless of where it sits (on prem, in Azure, somewhere else) and should be considered as part of an overall classification strategy.
 
 For additional information on resource tagging in Azure, see the article on [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags).
 

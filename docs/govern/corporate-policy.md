@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Evaluate corporate policy as part of your cloud governance strategy.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/03/2019
+ms.date: 09/17/2019
 ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: govern

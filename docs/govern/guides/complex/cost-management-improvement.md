@@ -61,14 +61,14 @@ The following changes to policy will help remediate the new risks and guide impl
 This section of the article will improve the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
 
 1. Make changes in the Azure Enterprise Portal to bill the Department administrator for the Canadian deployment.
-1. Implement Azure Cost Management.
+2. Implement Azure Cost Management.
     1. Establish the right level of access scope to align with the subscription pattern and resource grouping pattern. Assuming alignment with the governance MVP defined in prior articles, this would require **Enrollment Account Scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance, like the Canadian procurement team, will require **Resource Group Scope** access.
-    1. Establish a budget in Azure Cost Management.
-    1. Review and act on initial recommendations. It's recommended to have a recurring process to support the reporting process.
-    1. Configure and execute Azure Cost Management Reporting, both initial and recurring.
-1. Update Azure Policy.
+    2. Establish a budget in Azure Cost Management.
+    3. Review and act on initial recommendations. It's recommended to have a recurring process to support the reporting process.
+    4. Configure and execute Azure Cost Management Reporting, both initial and recurring.
+3. Update Azure Policy.
     1. Audit tagging, management group, subscription, and resource group values to identify any deviation.
-    1. Establish SKU size options to limit deployments to SKUs listed in deployment planning documentation.
+    2. Establish SKU size options to limit deployments to SKUs listed in deployment planning documentation.
 
 ## Conclusion
 

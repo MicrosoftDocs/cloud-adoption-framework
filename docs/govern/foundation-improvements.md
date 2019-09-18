@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to incrementally improve your initial cloud governance foundation.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/03/2019
+ms.date: 09/13/2019
 ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -23,14 +23,14 @@ At any time, the following prescriptive guidance can be applied to the initial g
 > [!IMPORTANT]
 > Resource organization can affect how this prescriptive guidance is applied. It is important to start with the recommendations that best align with the initial cloud governance foundation you implemented in the previous step.
 
-|Risk/Need | Small-medium enterprise | Large enterprise |
+|Risk/Need | Standard Enterprise | Complex Enterprise |
 |---|---|---|
 |Sensitive data in the cloud|[Prescriptive guidance](./guides/standard/security-baseline-improvement.md)|[Prescriptive guidance](./guides/complex/security-baseline-improvement.md)|
 |Mission critical apps in the cloud|[Prescriptive guidance](./guides/standard/resource-consistency-improvement.md)|[Prescriptive guidance](./guides/complex/resource-consistency-improvement.md)|
 |Cloud cost management|[Prescriptive guidance](./guides/standard/cost-management-improvement.md)|[Prescriptive guidance](./guides/complex/cost-management-improvement.md)|
 |Multicloud|[Prescriptive guidance](./guides/standard/multicloud-improvement.md)|[Prescriptive guidance](./guides/complex/multicloud-improvement.md)|
-|Complex/legacy identity management|         |[Prescriptive guidance](./guides/complex/identity-baseline-improvement.md)|
-|Multiple layers of governance|         |[Prescriptive guidance](./guides/complex/multiple-layers-of-governance.md)|
+|Complex/legacy identity management|N/A|[Prescriptive guidance](./guides/complex/identity-baseline-improvement.md)|
+|Multiple layers of governance|N/A|[Prescriptive guidance](./guides/complex/multiple-layers-of-governance.md)|
 
 ## Next steps
 

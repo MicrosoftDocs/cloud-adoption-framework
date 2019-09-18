@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Identity Baseline metrics, indicators, and risk tolerance
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -23,13 +23,13 @@ The following are examples of useful metrics that you should gather to help eval
 
 - **Identity systems size.** Total number of users, groups, or other objects managed through your identity systems.
 - **Overall size of directory services infrastructure.** Number of directory forests, domains, and tenants used by your organization.
-- **Dependency on legacy or on-premises authentication mechanisms.** Number of workloads that depend on legacy authentication mechanisms or third-party multi-factor authentication services.
+- **Dependency on legacy or on-premises authentication mechanisms.** Number of workloads that depend on legacy or third-party or multi-factor authentication mechanisms.
 - **Extent of cloud-deployed directory services.** Number of directory forests, domains, and tenants you've deployed to the cloud.
 - **Cloud-deployed Active Directory servers.** Number of Active Directory servers deployed to the cloud.
 - **Cloud-deployed organizational units.** Number of Active Directory organizational units (OUs) deployed to the cloud.
 - **Extent of federation.** Number of Identity Baseline systems federated with your organization's systems.
 - **Elevated users.** Number of user accounts with elevated access to resources or management tools.
-- **Use of role-based access control.** Number of subscriptions, resource groups, or individual resources not managed through role-based access control (RBAC).
+- **Use of role-based access control.** Number of subscriptions, resource groups, or individual resources not managed through role-based access control (RBAC) via groups.
 - **Authentication claims.** Number of successful and failed user authentication attempts.
 - **Authorization claims.** Number of successful and failed attempts by users to access resources.
 - **Compromised accounts.** Number of user accounts that have been compromised.
@@ -51,7 +51,7 @@ Once you have a baseline, establish minimum benchmarks representing an unaccepta
 - **RBAC trigger.** A company with under _x%_ of resources using role-based access control methods should consider investing in the Identity Baseline discipline to identify optimized ways to assign user access to resources.
 - **Authentication failure trigger.** A company where authentication failures represent more than _x%_ of attempts should invest in the Identity Baseline discipline to ensure that authentication methods are not under external attack, and that users are able to use the authentication methods correctly.
 - **Authorization failure trigger.** A company where access attempts are rejected more than _x%_ of the time should invest in the Identity Baseline discipline to improve the application and updating of access controls, and identify potentially malicious access attempts.
-- **Compromised account trigger.** A company with more than _x_ compromised accounts should invest in the Identity Baseline discipline to improve the strength and security of authentication mechanisms and improve mechanisms to remediate risks related to compromised accounts.
+- **Compromised account trigger.** A company with more than 1 compromised account should invest in the Identity Baseline discipline to improve the strength and security of authentication mechanisms and improve mechanisms to remediate risks related to compromised accounts.
 
 The exact metrics and triggers you use to gauge risk tolerance and the level of investment in the Identity Baseline discipline will be specific to your organization, but the examples above should serve as a useful base for discussion within your cloud governance team.
 

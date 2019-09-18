@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Establish processes to ensure compliance with corporate policies.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -14,10 +14,6 @@ ms.custom: governance
 <!-- markdownlint-disable MD026 -->
 
 # Establish policy adherence processes
-
-<!---
-I've defined policies, I've provided an architecture guide. Now how do I monitor adherence to policy? If there is a violation, how do I enforce the policy?
---->
 
 After establishing your cloud policy statements and drafting a design guide, you'll need to create a strategy for ensuring your cloud deployment stays in compliance with your policy requirements. This strategy will need to encompass your cloud governance team's ongoing review and communication processes, establish criteria for when policy violations require action, and defining the requirements for automated monitoring and compliance systems that will detect violations and trigger remediation actions.
 
@@ -52,6 +48,8 @@ Plan to evaluate new potential risks and update policy statements and design gui
 Policy compliance requires IT staff and developers to understand the policy requirements that affect their areas of responsibility. Plan to devote resources to document decisions and requirements, and educate all relevant teams on the design guides that support your policy requirements.
 
 As policy changes, regularly update documentation and training materials, and ensure education efforts communicate updated requirements and guidance to relevant IT staff.
+
+At various stages of your cloud journey, you may find it best to consult with partners and professional training programs to enhance the education of your team, both technically, and procedurally. Additionally, many find that formal certifications are a valuable addition to your education portfolio and should be considered.
 
 ### Establish escalation paths
 
