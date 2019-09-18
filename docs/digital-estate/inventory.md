@@ -24,6 +24,9 @@ The inventory that supports a digital estate changes depending on the desired di
 
 - **Data innovation:** Cloud-enabled data innovation efforts focus on the product or service. An inventory also includes a mapping of the opportunities for disrupting the market, as well as the capabilities needed.
 
+- **Security:** Inventory provides security the understanding to help assess, protect, and monitor the organization's assets.
+
+
 ## Accuracy and completeness of an inventory
 
 An inventory is rarely complete in its first iteration. We strongly recommend the cloud strategy team aligns stakeholders and power users to validate the inventory. When possible, use additional tools like network and dependency analysis to identify assets that are being sent traffic, but that are not in the inventory.
