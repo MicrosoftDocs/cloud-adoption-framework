@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Resource Consistency discipline improvement
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -96,7 +96,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Determine whether your organization requires clearer financial alignment to P&Ls for business units.
 - For global organizations, implement your SLA compliance or sovereignty requirements.
 - For cloud aggregation, deploy a gateway solution to a cloud provider.
-- For tools that don't allow for hybrid or gateway options, tightly couple monitoring with an operational monitoring tool.
+- For tools that don't allow for hybrid or gateway options, tightly couple monitoring with an operational monitoring tool that spans all datacenters and clouds.
 
 ## Operate and post-implementation
 

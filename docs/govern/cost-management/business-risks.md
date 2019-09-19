@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cost Management motivations and business risks
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -32,9 +32,9 @@ The Cost Management discipline attempts to address core business risks related t
 Risks will differ between organization, but the following serve as common cost-related risks that you can use as a starting point for discussions within your cloud governance team:
 
 - **Budget control:** Not controlling budget can lead to excessive spending with a cloud vendor.
-- **Utilization loss:** Prepurchases or precommitments that go unused can result in wasted investments.
+- **Utilization loss:** Prepurchases or precommitments that go unused can result in lost investments.
 - **Spending anomalies:** Unexpected spikes in either direction can be indicators of improper usage.
-- **Overprovisioned assets:** When assets are deployed in a configuration that exceed the needs of an application or virtual machine (VM), they can increase costs and create waste.
+- **Overprovisioned assets:** When assets are deployed in a configuration that exceed the needs of an application or virtual machine (VM), they can create waste.
 
 ## Next steps
 

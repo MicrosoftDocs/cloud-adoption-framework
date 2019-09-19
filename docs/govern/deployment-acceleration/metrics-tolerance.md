@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Deployment Acceleration metrics, indicators, and risk tolerance
 author: alexbuckgit
 ms.author: abuck
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -29,7 +29,7 @@ Risks related to Deployment Acceleration are largely related to the number and c
 
 <!-- "en-us" location is required for the URL below. -->
 
-Consider adopting a DevOps or [DevSecOps](https://www.microsoft.com/en-us/securityengineering/devsecops) organizational culture early in your cloud adoption journey. Traditional corporate IT organizations often have siloed operations, security, and development teams that often do not collaborate well or are even adversarial or hostile toward one another. Recognizing these challenges early and integrating key stakeholders from each of the teams can help ensure agility in your cloud adoption while remaining secure and well-governed.
+Traditional corporate IT organizations often have siloed operations, security, and development teams that often do not collaborate well or are even adversarial or hostile toward one another. Recognizing these challenges early and integrating key stakeholders from each of the teams can help ensure agility in your cloud adoption while remaining secure and well-governed. Therefore, one should consider adopting a DevOps or [DevSecOps](https://www.microsoft.com/en-us/securityengineering/devsecops) organizational culture early in your cloud adoption journey. 
 
 Work with your DevSecOps team and business stakeholders to identify [business risks](./business-risks.md) related to configuration, then determine an acceptable baseline for configuration risk tolerance. This section of the Cloud Adoption Framework guidance provides examples, but the detailed risks and baselines for your company or deployments will likely differ.
 

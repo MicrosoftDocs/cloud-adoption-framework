@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Identity Baseline discipline improvement
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -41,7 +41,7 @@ This phase of governance maturity bridges the divide between business outcomes a
 - Define roles and assignments that will govern identity and access management in the cloud.
 - Define your on-premises groups and map to corresponding cloud-based roles.
 - Inventory identity providers (including database-driven identities used by custom applications).
-- Consider options for consolidation or integration of identity providers where duplication exists, to simplify the overall identity solution.
+- Consolidate and integrate identity providers where duplication exists, to simplify the overall identity solution and reduce risk.
 - Evaluate hybrid compatibility of existing identity providers.
 - For identity providers that are not hybrid compatible, evaluate consolidation or replacement options.
 
@@ -93,7 +93,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Validate and refine your [Hybrid Identity Strategy](../../decision-guides/identity/index.md).
 - Ensure that each application or workload continues to align with the identity strategy before release.
 - Validate that single sign-on (SSO) and seamless SSO is working as expected for your applications.
-- Reduce or eliminate the number of alternative identity stores, when possible.
+- Reduce or eliminate the number of alternative identity stores.
 - Scrutinize the need for any in-app or in-database identity stores. Identities that fall outside of a proper identity provider (first-party or third-party) can represent risk to the application and the users.
 - Enable conditional access for [on-premises federated applications](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup).
 - Distribute identity across global regions in multiple hubs with synchronization between regions.
@@ -115,6 +115,7 @@ Once the transformation is complete, governance and operations must live on for 
 **Potential activities:**
 
 - Conduct periodic audits of identity policies and adherence practices.
+- Ensure sensitive user accounts (CEO, CFO, VP, etc) are always enabled for multi-factor authentication and anomalous login detection.
 - Scan for malicious actors and data breaches regularly, particularly those related to identity fraud, such as potential admin account takeovers.
 - Configure a monitoring and reporting tool.
 - Consider integrating more closely with security and fraud-prevention systems.

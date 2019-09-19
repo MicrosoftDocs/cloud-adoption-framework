@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Identity Baseline motivations and business risks
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -17,11 +17,11 @@ This article discusses the reasons that customers typically adopt an Identity Ba
 
 <!-- markdownlint-disable MD026 -->
 
-## Is Identity Baseline relevant?
+## Identity Baseline relevancy
 
 Traditional on-premises directories are designed to allow businesses to strictly control permissions and policies for users, groups, and roles within their internal networks and datacenters. This is usually intended to support single tenant implementations, with services applicable only within the on-premises environment.
 
-Cloud identity services are intended to expand an organization's authentication and access control capabilities to the internet. They support multitenancy and can be used to manage users and access policy across cloud applications and deployments. Public cloud platforms have some form of cloud-native identity services supporting management and deployment tasks and are capable of [varying levels of integration](../../decision-guides/identity/index.md) with your existing on-premises identity solutions. All of these features can result in cloud identity policy being more complicated than your traditional on-premises solutions require.
+Cloud identity services are intended to expand an organization's authentication and access control capabilities to the internet. They support multitenancy and can be used to manage users and access policy across cloud applications and deployments. Public cloud platforms have cloud-native identity services supporting management and deployment tasks and are capable of [varying levels of integration](../../decision-guides/identity/index.md) with your existing on-premises identity solutions. All of these features can result in cloud identity policy being more complicated than your traditional on-premises solutions require.
 
 The importance of the Identity Baseline discipline to your cloud deployment will depend on the size of your team and need to integrate your cloud-based identity solution with an existing on-premises identity service. Initial test deployments may not require much in the way of user organization or management, but as your cloud estate matures, you will likely need to support more complicated organizational integration and centralized management.
 

@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Resource Consistency metrics, indicators, and risk tolerance
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -28,7 +28,7 @@ Every organization has different operational scenarios, but the following items 
 - **Resource age.** Time since resource was last deployed or modified.
 - **VMs in critical condition.** Number of deployed VMs where one or more critical issues are detected which need to be addressed in order to restore normal functionality.
 - **Alerts by severity.** Total number of alerts on a deployed asset, broken down by severity.
-- **Unhealthy subnet links.** Number of resources with network connectivity issues.
+- **Unhealthy network links.** Number of resources with network connectivity issues.
 - **Unhealthy service endpoints.** Number of issues with external network endpoints.
 - **Cloud provider service health incidents.** Number of disruptions or performance incidents caused by the cloud provider.
 - **Service level agreements.** This can include both Microsoft’s commitments for uptime and connectivity of Azure services, as well as commitments made by the business to its external and internal customers.
