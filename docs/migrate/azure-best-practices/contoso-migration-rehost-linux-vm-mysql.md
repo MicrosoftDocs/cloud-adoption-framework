@@ -427,7 +427,7 @@ Now, Contoso needs to do the following:
 - Remove the on-premises VMs from local backup jobs.
 - Update internal documentation show new locations and IP addresses.
 - Review any resources that interact with the on-premises VMs, and update any relevant settings or documentation to reflect the new configuration.
-- Contoso used the Azure Migrate service with dependency mapping to assess the **OSTICKETWEB** VM for migration. They should now remove the agents (Microsoft Monitoring Agent/Dependency Agent) they installed for this purpose, from the VM.
+- Contoso used the Azure Migrate service with dependency mapping to assess the **OSTICKETWEB** VM for migration. They should now remove the agents (the Microsoft Monitoring Agent and the Microsoft Dependency agent) they installed for this purpose, from the VM.
 
 ## Review the deployment
 

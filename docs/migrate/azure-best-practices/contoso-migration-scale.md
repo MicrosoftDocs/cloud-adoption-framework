@@ -297,7 +297,7 @@ In addition to DMS, Contoso can use other tools and services to identify VM info
 
 After Contoso moves resources to Azure, they need to streamline them to improve performance, and maximize ROI with cost management tools. Given that Azure is a pay-for-use service, it's critical for Contoso to understand how systems are performing, and to ensure they're sized properly.
 
-### Azure cost management
+### Azure Cost Management
 
 To make the most of their cloud investment, Contoso will take advantage of the free Azure Cost Management tool.
 

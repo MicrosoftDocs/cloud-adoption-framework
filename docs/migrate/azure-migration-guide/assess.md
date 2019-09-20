@@ -70,7 +70,7 @@ Azure Migrate uses Service Map to enhance the reporting capabilities and depende
 To use dependency visualization, you need to download and install agents on each on-premises machine that you want to analyze.
 
 - [Microsoft Monitoring agent (MMA)](https://docs.microsoft.com/azure/log-analytics/log-analytics-agent-windows) needs to be installed on each machine.
-- The [dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows) needs to be installed on each machine.
+- The [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows) needs to be installed on each machine.
 - In addition, if you have machines with no internet connectivity, you need to download and install Log Analytics gateway on them.
 
 <!-- markdownlint-disable MD024 -->
@@ -79,7 +79,6 @@ To use dependency visualization, you need to download and install agents on each
 
 - [Using Service Map solution in Azure](https://docs.microsoft.com/azure/azure-monitor/insights/service-map)
 - [Azure Migrate and Service Map: Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization)
-
 
 # [Scenarios and Stakeholders](#tab/Scenarios)
 

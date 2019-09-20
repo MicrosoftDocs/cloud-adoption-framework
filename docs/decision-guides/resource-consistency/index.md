@@ -27,7 +27,7 @@ As these factors increase in importance, the benefits of ensuring consistent dep
 
 In Azure, [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) are a core resource organization mechanism to logically group resources within a subscription.
 
-resource groups act as containers for resources with a common lifecycle AND shared management constraints such as policy or role-based access control (RBAC) requirements. resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
+Resource groups act as containers for resources with a common lifecycle AND shared management constraints such as policy or role-based access control (RBAC) requirements. resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
 
 1. Are the contents of the resource group developed together?
 1. Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
@@ -60,7 +60,7 @@ For a more in-depth discussion of enforcing your policy decisions within a cloud
 
 ## Hierarchical consistency
 
-resource groups allow you to support additional levels of hierarchy within your organization within the subscription, applying Azure Policy rules and access controls at a resource group level. However, As the size of your cloud estate grows, you may need to support more complicated cross-subscription governance requirements than can be supported using the Azure Enterprise Agreement's Enterprise/Department/Account/Subscription hierarchy.
+Resource groups allow you to support additional levels of hierarchy within your organization within the subscription, applying Azure Policy rules and access controls at a resource group level. However, As the size of your cloud estate grows, you may need to support more complicated cross-subscription governance requirements than can be supported using the Azure Enterprise Agreement's Enterprise/Department/Account/Subscription hierarchy.
 
 [Azure management groups](https://docs.microsoft.com/azure/governance/management-groups) allow you to organize subscriptions into more sophisticated organizational structures by grouping subscriptions in a hierarchy distinct from your enterprise agreement's hierarchy. This alternate hierarchy allows you to apply access control and policy enforcement mechanisms across multiple subscriptions and the resources they contain. Management group hierarchies can be used to match your cloud estate's subscriptions with operations or business governance requirements. For more information, see the [subscription decision guide](../subscriptions/index.md).
 

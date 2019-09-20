@@ -163,7 +163,7 @@ One of the first, and most crucial, questions you ask yourself when starting wit
 
 To secure access to your resources you will first configure your identity provider and then configure Roles and access. Azure Active Directory (Azure AD), connected to your on-premises Active Directory, is the foundation of Azure Identity. That said, Azure AD is *not* the same as on-premises Active Directory, and it's important to understand what an Azure AD tenant is and how it relates to your Azure enrollment. Review the available [information](../govern/resource-consistency/resource-access-management.md) to gain a solid foundation on Azure AD and on-premises Active Directory. To connect and synchronize your Active Directory to Azure AD, install and configure the [Azure AD Connect tool](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) on-premises.
 
-![Architecture diagram](../_images/reference/ad-architecture.png)
+![Diagram of AD architecture](../_images/reference/ad-architecture.png)
 
 When Azure was initially released, access controls to a subscription were basic: Administrator or Co-Administrator. Access to a subscription in the Classic model implied access to all the resources in the portal. This lack of fine-grained control led to the proliferation of subscriptions to provide a level of reasonable access control for an Azure Enrollment. This proliferation of subscriptions is no longer needed. With role-based access control (RBAC), you can assign users to standard roles that provide common access such as "owner", "contributor" or "reader" or even create your own roles.
 

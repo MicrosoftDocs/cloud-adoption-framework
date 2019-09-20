@@ -64,7 +64,7 @@ To publish a blueprint artifacts to your subscription:
 1. Goto **Blueprints - Blueprint definitions**.
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition and select **Publish blueprint**.
-1. Provide a **Version** (e.g. 1.0) and any **Change notes**, then select **Publish**.
+1. Provide a **Version** (such as _1.0_) and any **Change notes**, then select **Publish**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints]" submitText="Blueprint definitions" :::
 
@@ -75,7 +75,7 @@ To publish a blueprint artifacts to your subscription:
 1. Goto [Blueprints - Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition and select **Publish blueprint**.
-1. Provide a **Version** (e.g. 1.0) and any **Change notes**, then select **Publish**.
+1. Provide a **Version** (such as _1.0_) and any **Change notes**, then select **Publish**.
 
 ::: zone-end
 

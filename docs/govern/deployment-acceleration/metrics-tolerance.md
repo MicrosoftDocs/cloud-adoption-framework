@@ -13,7 +13,7 @@ ms.custom: governance
 
 # Deployment Acceleration metrics, indicators, and risk tolerance
 
-This article is intended to help you quantify business risk tolerance as it relates to Deployment Acceleration. Defining metrics and indicators helps you create a business case for making an investment in the maturity of the Deployment Acceleration discipline.
+This article will help you quantify business risk tolerance as it relates to Deployment Acceleration. Defining metrics and indicators helps you create a business case for making an investment in the maturity of the Deployment Acceleration discipline.
 
 ## Metrics
 

@@ -157,7 +157,7 @@ In prior iterative changes to the best practice, we defined network security gro
     3. Ensure the template for Active Directory from the previous iteration is **not** included in the blueprint. Any dependencies on Active Directory will be provided by the corporate IT subscription.
     4. Terminate any existing Active Directory VMs deployed in the previous iteration.
     5. Add the new policies for protected data subscriptions.
-    6. Publish the blueprint to any management group intended to host protected data.
+    6. Publish the blueprint to any management group that will host protected data.
     7. Apply the new blueprint to each affected subscription along with existing blueprints.
 
 ## Conclusion

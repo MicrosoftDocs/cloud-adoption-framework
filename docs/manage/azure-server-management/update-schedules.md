@@ -37,69 +37,70 @@ Before you run the example script, you'll need to sign in by using the [Connect-
 - Your Azure Automation account name
 
 ```powershell
-<#
-    .SYNOPSIS
-        This script orchestrates the deployment of the solutions and the agents.
-    .Parameter SubscriptionName
-    .Parameter WorkspaceName
-    .Parameter AutomationAccountName
-    .Parameter ResourceGroupName
 
-#>
+    <#
+        .SYNOPSIS
+            This script orchestrates the deployment of the solutions and the agents.
+        .Parameter SubscriptionName
+        .Parameter WorkspaceName
+        .Parameter AutomationAccountName
+        .Parameter ResourceGroupName
 
-param (
-    [Parameter(Mandatory=$true)]
-    [string]$SubscriptionId,
+    #>
 
-    [Parameter(Mandatory=$true)]
-    [string]$ResourceGroupName,
+    param (
+        [Parameter(Mandatory=$true)]
+        [string]$SubscriptionId,
 
-    [Parameter(Mandatory=$true)]
-    [string]$WorkspaceName,
+        [Parameter(Mandatory=$true)]
+        [string]$ResourceGroupName,
 
-    [Parameter(Mandatory=$true)]
-    [string]$AutomationAccountName,
+        [Parameter(Mandatory=$true)]
+        [string]$WorkspaceName,
 
-    [Parameter(Mandatory=$false)]
-    [string]$scheduleName = "SaturdayCritialSecurity"
-)
+        [Parameter(Mandatory=$true)]
+        [string]$AutomationAccountName,
 
-Import-Module Az.Automation
+        [Parameter(Mandatory=$false)]
+        [string]$scheduleName = "SaturdayCritialSecurity"
+    )
 
-$startTime = ([DateTime]::Now).AddMinutes(10)
-$schedule = New-AzAutomationSchedule -ResourceGroupName $ResourceGroupName `
-                                     -AutomationAccountName $AutomationAccountName `
-                                     -StartTime $startTime `
-                                     -Name $scheduleName `
-                                     -Description "Saturday patches" `
-                                     -DaysOfWeek Saturday `
-                                     -WeekInterval 1 `
-                                     -ForUpdateConfiguration
+    Import-Module Az.Automation
 
-# Using AzAutomationUpdateManagementAzureQuery to create dynamic groups.
+    $startTime = ([DateTime]::Now).AddMinutes(10)
+    $schedule = New-AzAutomationSchedule -ResourceGroupName $ResourceGroupName `
+        -AutomationAccountName $AutomationAccountName `
+        -StartTime $startTime `
+        -Name $scheduleName `
+        -Description "Saturday patches" `
+        -DaysOfWeek Saturday `
+        -WeekInterval 1 `
+        -ForUpdateConfiguration
 
-$queryScope = @("/subscriptions/$SubscriptionID/resourceGroups/")
+    # Using AzAutomationUpdateManagementAzureQuery to create dynamic groups.
 
-$query1Location =@("westus", "eastus", "eastus2")
-$query1FilterOperator = "Any"
-$ownerTag = @{"Owner"= @("JaneSmith")}
-$ownerTag.add("Production", "true")
+    $queryScope = @("/subscriptions/$SubscriptionID/resourceGroups/")
 
-$DGQuery = New-AzAutomationUpdateManagementAzureQuery -ResourceGroupName $ResourceGroupName `
-                                       -AutomationAccountName $AutomationAccountName `
-                                       -Scope $queryScope `
-                                       -Tag $ownerTag
+    $query1Location =@("westus", "eastus", "eastus2")
+    $query1FilterOperator = "Any"
+    $ownerTag = @{"Owner"= @("JaneSmith")}
+    $ownerTag.add("Production", "true")
 
-$AzureQueries = @($DGQuery)
+    $DGQuery = New-AzAutomationUpdateManagementAzureQuery -ResourceGroupName $ResourceGroupName `
+        -AutomationAccountName $AutomationAccountName `
+        -Scope $queryScope `
+        -Tag $ownerTag
 
-$UpdateConfig = New-AzAutomationSoftwareUpdateConfiguration -ResourceGroupName $ResourceGroupName `
-                                                             -AutomationAccountName $AutomationAccountName `
-                                                             -Schedule $schedule `
-                                                             -Windows `
-                                                             -Duration (New-TimeSpan -Hours 2) `
-                                                             -AzureQuery $AzureQueries `
-                                                             -IncludedUpdateClassification Security,Critical
-```
+    $AzureQueries = @($DGQuery)
+
+    $UpdateConfig = New-AzAutomationSoftwareUpdateConfiguration -ResourceGroupName $ResourceGroupName `
+        -AutomationAccountName $AutomationAccountName `
+        -Schedule $schedule `
+        -Windows `
+        -Duration (New-TimeSpan -Hours 2) `
+        -AzureQuery $AzureQueries `
+        -IncludedUpdateClassification Security,Critical
+    ```
 
 ## Next steps
 

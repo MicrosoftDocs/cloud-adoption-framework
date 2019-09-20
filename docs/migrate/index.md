@@ -13,7 +13,7 @@ layout: LandingPage
 
 # Cloud migration in the Cloud Adoption Framework
 
-Any enterprise-scale [cloud adoption plan](../plan/index.md), will include workloads which do not warrant significant investments in the creation of new business logic. Those workloads could be moved to the cloud through any number of approaches; Lift & Shift, Lift & Optimize, or Modernize. Each of which is considered a migration. The following exercises will help establish the iterative processes to assess, migrate, optimize, secure and manage those workloads.
+Any enterprise-scale [cloud adoption plan](../plan/index.md), will include workloads which do not warrant significant investments in the creation of new business logic. Those workloads could be moved to the cloud through any number of approaches: lift and shift; lift and optimize; or modernize. Each of these approaches is considered a migration. The following exercises will help establish the iterative processes to assess, migrate, optimize, secure, and manage those workloads.
 
 ## Getting started
 
@@ -121,7 +121,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
 
 ## Iterative migration process
 
-At its core, migration to the cloud consists of four simple phases: Assess, Migrate, Optimize, and Secure & Manage. This section of CAF teaches readers to maximize the return from each phase of the process and align those phases with your cloud adoption plan. The following graphic illustrates those phases in an iterative approach:
+At its core, migration to the cloud consists of four simple phases: Assess, Migrate, Optimize, and Secure & Manage. This section of the Cloud Adoption Framework teaches readers to maximize the return from each phase of the process and align those phases with your cloud adoption plan. The following graphic illustrates those phases in an iterative approach:
 
 ![Cloud Adoption Framework migration model](../_images/operational-transformation-migrate.png)
 

@@ -102,7 +102,7 @@ This section of the article will change the governance MVP design to include new
     1. Create a new Azure blueprint named `protected-data`.
     2. Add the firewall and Azure Vault templates to the blueprint.
     3. Add the new policies for protected data subscriptions.
-    4. Publish the blueprint to any management group intended to host mission-critical applications.
+    4. Publish the blueprint to any management group that will host mission-critical applications.
     5. Apply the new blueprint to each affected subscription as well as existing blueprints.
 
 ## Conclusion
