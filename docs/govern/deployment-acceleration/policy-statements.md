@@ -27,7 +27,7 @@ The following sample policy statements address common configuration-related busi
 
 **Policy statement:** All assets deployed to the cloud should be deployed using templates or automation scripts whenever possible.
 
-**Potential design options:** [Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#template-deployment) provides an infrastructure-as-code approach to deploying your resources to Azure. You could also leverage [Terraform](https://docs.microsoft.com/azure/terraform/terraform-overview) as a consistent on-premises and cloud-based deployment tool.
+**Potential design options:** [Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#template-deployment) provides an infrastructure-as-code approach to deploying your resources to Azure. You could also use [Terraform](https://docs.microsoft.com/azure/terraform/terraform-overview) as a consistent on-premises and cloud-based deployment tool.
 
 ## Lack of visibility into system issues
 
