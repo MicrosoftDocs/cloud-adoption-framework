@@ -60,7 +60,7 @@ Use subscriptions to manage costs and resources that are created by users, teams
 
 Create a resource group to hold resources like web apps, databases, and storage accounts that share the same lifecycle, permissions, and policies.
 
-1. Go to [resource groups](https://portal.azure.com/#create/Microsoft.ResourceGroup).
+1. Go to [Resource groups](https://portal.azure.com/#create/Microsoft.ResourceGroup).
 1. Select **Add**.
 1. Select the **Subscription** that you want your resource group created under.
 1. Enter a name for the **Resource group**.
@@ -102,7 +102,7 @@ Use subscriptions to manage costs and resources that are created by users, teams
 
 Create a resource group to hold resources like web apps, databases, and storage accounts that share the same lifecycle, permissions, and policies.
 
-1. Go to **resource groups**.
+1. Go to **Resource Groups**.
 1. Select **Add**.
 1. Select the **Subscription** that you want your resource group created under.
 1. Enter a name for the **Resource group**.

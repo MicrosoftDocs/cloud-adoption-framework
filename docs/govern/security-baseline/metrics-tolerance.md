@@ -13,7 +13,7 @@ ms.custom: governance
 
 # Security Baseline metrics, indicators, and risk tolerance
 
-This article is intended to help you quantify business risk tolerance as it relates to Security Baseline. Defining metrics and indicators helps you create a business case for making an investment in maturing the Security Baseline discipline.
+This article will help you quantify business risk tolerance as it relates to Security Baseline. Defining metrics and indicators helps you create a business case for making an investment in maturing the Security Baseline discipline.
 
 ## Metrics
 

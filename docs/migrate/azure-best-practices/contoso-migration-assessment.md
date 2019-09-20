@@ -237,8 +237,8 @@ Set up a new Azure Migrate project as follows.
 
 6. In **Project Details*, specify the project name, and the geography in which you want to create the project. United States, Asia, Europe, Australia, United Kingdom, Canada, India and Japan are supported.
 
-    * The project geography is used only to store the metadata gathered from on-premises VMs.
-    * You can select any target region when you run a migration.
+    - The project geography is used only to store the metadata gathered from on-premises VMs.
+    - You can select any target region when you run a migration.
 
 7. Click **Next**.
 
@@ -307,14 +307,13 @@ Now, Contoso runs the collector to discover VMs. Currently, the collector curren
 
     ![Azure Migrate Collector - Verify prerequisites](./media/contoso-migration-assessment/collector-verify-prereqs-v2.png)
 
-6. Login to you **Azure** account and select the subscription and Migrate project you created earlier. Also enter a name for the **appliance** so you can identify it in the Azure Portal. 
-7. In **Specify vCenter Server details**, Contoso enters the name (FQDN) or IP address of the vCenter Server instance and the read-only credentials used for discovery.
-8. Contoso selects a scope for VM discovery. The collector can discover only VMs that are within the specified scope. The scope can be set to a specific folder, datacenter, or cluster. 
+5. Login to you **Azure** account and select the subscription and Migrate project you created earlier. Also enter a name for the **appliance** so you can identify it in the Azure portal.
+6. In **Specify vCenter Server details**, Contoso enters the name (FQDN) or IP address of the vCenter Server instance and the read-only credentials used for discovery.
+7. Contoso selects a scope for VM discovery. The collector can discover only VMs that are within the specified scope. The scope can be set to a specific folder, datacenter, or cluster.
 
     ![Specify vCenter Server details](./media/contoso-migration-assessment/collector-connect-vcenter.png)
 
-
-8. The collector will now start to discovery and collect information about the Contoso environment. 
+8. The collector will now start to discovery and collect information about the Contoso environment.
 
     ![View collection progress](./media/contoso-migration-assessment/migrate-disccovery.png)
 
@@ -344,8 +343,8 @@ To keep a copy of the VMs before modifying them, Contoso takes a snapshot before
 
 1. In **Machines**, Contoso selects the machine. In the **Dependencies** column, Contoso selects **Requires installation**.
 2. In the **Discover machines** pane, Contoso:
-    - Downloads the Microsoft Monitoring Agent (MMA) and Dependency Agent for each Windows VM.
-    - Downloads the MMA and Dependency Agent for each Linux VM.
+    - Downloads the Microsoft Monitoring Agent (MMA) and the Microsoft Dependency agent for each Windows VM.
+    - Downloads the MMA and Dependency agent for each Linux VM.
 3. Contoso copies the workspace ID and key. Contoso needs the workspace ID and key when it installs the MMA.
 
     ![Agent download](./media/contoso-migration-assessment/download-agents.png)
@@ -370,10 +369,10 @@ Contoso runs the installation on each VM.
 
 #### Install the Dependency agent on Windows VMs
 
-1. Contoso double-clicks the downloaded Dependency Agent.
+1. Contoso double-clicks the downloaded Dependency agent.
 2. Contoso accepts the license terms and waits for the installation to finish.
 
-    ![Dependency Agent Setup - Installing](./media/contoso-migration-assessment/dependency-agent.png)
+    ![Dependency Agent setup - Installing](./media/contoso-migration-assessment/dependency-agent.png)
 
 ### Install the agents on Linux VMs
 
@@ -384,9 +383,11 @@ Contoso runs the installation on each VM.
 1. Contoso installs the Python ctypes library on each VM by using the following command:
 
     `sudo apt-get install python-ctypeslib`
+
 2. Contoso must run the command to install the MMA agent as root. To become root, Contoso runs the following command, and then enters the root password:
 
     `sudo -i`
+
 3. Contoso installs the MMA:
     - Contoso enters the workspace ID and key in the command.
     - Commands are for 64-bit.
@@ -399,11 +400,11 @@ Contoso runs the installation on each VM.
 
 #### Install the Dependency Agent on Linux VMs
 
-After the MMA is installed, Contoso installs the Dependency Agent on the Linux VMs:
+After the MMA is installed, Contoso installs the Dependency agent on the Linux VMs:
 
-1. The Dependency Agent is installed on Linux computers by using InstallDependencyAgent-Linux64.bin, a shell script that has a self-extracting binary. Contoso runs the file by using sh, or it adds execute permissions to the file itself.
+1. The Dependency agent is installed on Linux computers by using InstallDependencyAgent-Linux64.bin, a shell script that has a self-extracting binary. Contoso runs the file by using sh, or it adds execute permissions to the file itself.
 
-2. Contoso installs the Linux Dependency Agent as root:
+2. Contoso installs the Linux Dependency agent as root:
 
     ```console
     wget --content-disposition https://aka.ms/dependencyagentlinux -O InstallDependencyAgent-Linux64.bin && sudo sh InstallDependencyAgent-Linux64.bin -s

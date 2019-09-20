@@ -111,7 +111,7 @@ If any of the patterns selected in this governance guide don't align with the re
 
 ## Next steps
 
-Once this guide is implemented, each cloud adoption team can go forth with a sound governance foundation. The cloud governance team will work in parallel to continuously update the corporate policies and governance disciplines.
+Once this guide is implemented, each cloud adoption team can go forth with a sound governance foundation. At the same time, the cloud governance team will work to continuously update the corporate policies and governance disciplines.
 
 The two teams will use the tolerance indicators to identify the next set of improvements needed to continue supporting cloud adoption. For the fictional company in this guide, the next step is improving the Security Baseline to support moving protected data to the cloud.
 

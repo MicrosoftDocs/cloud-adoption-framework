@@ -13,7 +13,7 @@ ms.custom: governance
 
 # Identity Baseline metrics, indicators, and risk tolerance
 
-This article is intended to help you quantify business risk tolerance as it relates to Identity Baseline. Defining metrics and indicators helps you create a business case for making an investment in maturing the Identity Baseline discipline.
+This article will help you quantify business risk tolerance as it relates to Identity Baseline. Defining metrics and indicators helps you create a business case for making an investment in maturing the Identity Baseline discipline.
 
 ## Metrics
 

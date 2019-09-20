@@ -491,7 +491,7 @@ The VNets in Central US are summarized in the following table.
 
 #### Subnets in the Central US Production network (VNET-PROD-CUS)
 
-In parallel to the production network in the primary East US 2 region, there's a production network in the secondary Central US region.
+In parallel with the production network in the primary East US 2 region, there's a production network in the secondary Central US region.
 
 **Subnet** | **CIDR** | **Addresses** | **In subnet**
 --- | --- | --- | ---

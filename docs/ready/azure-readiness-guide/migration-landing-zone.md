@@ -68,7 +68,7 @@ The following decisions are represented in the landing zone blueprint.
 
 ## Customize or deploy a landing zone from this blueprint
 
-Learn more and download a reference sample of the Cloud Adoption Framework migrate landing zone blueprint for deployment or customization from [Azure Blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples/index).
+Learn more and download a reference sample of the Cloud Adoption Framework migrate landing zone blueprint for deployment or customization from [Azure Blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples).
 
 The blueprint samples are also available within the portal. For details of how to deploy a blueprint see [Azure Blueprints](./govern-org-compliance.md?tabs=azureblueprints#create-a-blueprint).
 

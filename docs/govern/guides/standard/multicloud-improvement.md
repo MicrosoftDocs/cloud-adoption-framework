@@ -17,7 +17,7 @@ This article advances the narrative by adding controls for multicloud adoption.
 
 ## Advancing the narrative
 
-Microsoft recognizes that customers may adopt multiple clouds for specific purposes. The fictional customer in this guide is no exception. In parallel to the Azure adoption journey, the business success has led to the acquisition of a small, but complementary business. That business is running all of their IT operations on a different cloud provider.
+Microsoft recognizes that customers may adopt multiple clouds for specific purposes. The fictional customer in this guide is no exception. In parallel with their Azure adoption journey, business success has led to the acquisition of a small but complementary business. That business is running all of their IT operations on a different cloud provider.
 
 This article describes how things change when integrating the new organization. For purposes of the narrative, we assume this company has completed each of the governance iterations outlined in this governance guide.
 

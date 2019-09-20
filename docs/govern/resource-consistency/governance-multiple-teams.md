@@ -43,7 +43,7 @@ Before you can design identity management for your governance model, it's import
 - **Authorization:** Determining which resources an authenticated user is allowed to access or what operations they have permission to perform.
 - **Auditing:** Periodically reviewing logs and other information to discover security issues related to user identity. This includes reviewing suspicious usage patterns, periodically reviewing user permissions to verify they are accurate, and other functions.
 
-There is only one service trusted by Azure for identity, and that is Azure Active Directory (AAD). You'll be adding users to Azure AD and using it for all of the functions listed above. But before looking at how to configure Azure AD, it's important to understand the privileged accounts that are used to manage access to these services.
+There is only one service trusted by Azure for identity, and that is Azure Active Directory (Azure AD). You'll be adding users to Azure AD and using it for all of the functions listed above. But before looking at how to configure Azure AD, it's important to understand the privileged accounts that are used to manage access to these services.
 
 When your organization signed up for an Azure account, at least one Azure **account owner** was assigned. Also, an Azure AD **tenant** was created, unless an existing tenant was already associated with your organization's use of other Microsoft services such as Office 365. A **global administrator** with full permissions on the Azure AD tenant was associated when it was created.
 
