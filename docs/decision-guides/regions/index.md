@@ -11,47 +11,45 @@ ms.subservice: decision-guide
 ms.custom: governance
 ---
 
-<!--C:\Users\dermar\Documents\GitHub\cloud-adoption-framework-pr\docs\migrate\expanded-scope\multiple-regions.md should go here and then expand-->
+# Azure regions
 
-# Azure Regions
+Azure is comprised of many regions around the world. Each of the [Azure regions](https://azure.microsoft.com/global-infrastructure/regions) have a specific set of characteristics that make selecting which region to use incredibly important.
 
-Azure is comprised of many regions around the world. Each of the [Azure Regions](https://azure.microsoft.com/global-infrastructure/regions/) have a specific set of characteristics that make selecting which region to use incredibly important.
+1. **Available services:** Services that are deployed to each region differ based on a variety of factors. You will need to select a region to deploy your workload to that contains your desired service. For more information about which services are available in which regions, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services).
+1. **Capacity:** Each region has a maximum capacity. While this is typically abstracted away from the end user, it can impact which types of subscriptions are able to deploy which types of services and under what circumstances. This is different that subscription quotas. If you are planning a massive datacenter migration to Azure, you may want to consult with your local Azure field team or account manager to confirm you are able to deploy at the scale necessary.
+1. **Constraints:** Certain constraints are placed on the deployment of services in certain regions. For example, some regions are only available as a backup or failover target. Other constraints that are important to note are [data sovereignty requirements](https://azure.microsoft.com/global-infrastructure/geographies).
+1. **Sovereignty:** There are specific regions dedicated to specific sovereign entities. While all regions are Azure regions, these sovereign regions are completely isolated from the rest of Azure, are not necessarily managed by Microsoft, and may carry customer type constraints. These sovereign regions are:
+    1. [Azure China](https://azure.microsoft.com/global-infrastructure/china)
+    1. [Azure Germany](https://azure.microsoft.com/global-infrastructure/germany) (deprecating in favor of standard Azure German regions (non-sovereign))
+    1. [Azure US Government](https://azure.microsoft.com/global-infrastructure/government)
+    1. Note: there are two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia) that are managed by Microsoft but are provided for the Australian government and its customers and contractors, and therefore carry similar client constraints to the other sovereign clouds.
 
-1. Available Services: Services that are deployed to each region differ based on a variety of factors. You will need to select a region to deploy your workload to that contains your desired service. You can learn about which services are available in which regions [here](https://azure.microsoft.com/global-infrastructure/services/)
-1. Capacity: Each region has a maximum capacity. While this is typically abstracted away from the end user, it can impact which types of subscriptions are able to deploy which types of services and under what circumstances. This is different that subscription quotas. If you are planning a massive datacenter migration to Azure, you may want to consult with your local Azure field team or account manager to confirm you are able to deploy at the scale necessary.
-1. Constraints: Certain constraints are placed on the deployment of services in certain regions. For example, some regions are only available as a backup / failover target. Other constraints that are important to note are [data sovereignty requirements](https://azure.microsoft.com/global-infrastructure/geographies/).
-1. Sovereignty: There are specific regions dedicated to specific sovereign entities. While all regions are Azure regions, these sovereign regions are completely isolated from the rest of Azure, are not necessarily managed by Microsoft, and may carry customer type constraints. These sovereign regions are:
-    1. [Azure China](https://azure.microsoft.com/global-infrastructure/china/)
-    1. [Azure Germany](https://azure.microsoft.com/global-infrastructure/germany/) (deprecating in favor of standard Azure German Regions (non-sovereign))
-    1. [Azure US Government](https://azure.microsoft.com/global-infrastructure/government/)
-    1. Note: there are two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia/) that are managed by Microsoft but are provided for the Australian government and its customers/contractors and therefore carry similar client constraints to the other sovereign clouds.
-
-# Operating in Multiple Geographic Regions
+## Operating in multiple geographic regions
 
 When businesses operate in multiple geographic regions, while essential for resiliency, additional complexity can be introduced. These complexities manifest in four primary forms:
 
-- Asset Distribution
-- User Access Profiles
-- Compliance Requirements
-- Regional Resiliency
+- Asset distribution
+- User access profiles
+- Compliance requirements
+- Regional resiliency
 
 As we consider the above complexities further, you will begin to understand how important regional selection is to your overall cloud adoption strategy. Let's start with network considerations.
 
-## Networking Considerations
+## Networking considerations
 
-Any robust cloud deployment requires a well thought out network that takes into account Azure regions. After considering the above characteristics for which regions to deploy to, the network must be deployed. While an exhaustive discussion on networking is beyond the scope of this article, some considerations must be accounted for:
+Any robust cloud deployment requires a well-considered network that takes into account Azure regions. After considering the above characteristics for which regions to deploy to, the network must be deployed. While an exhaustive discussion on networking is beyond the scope of this article, some considerations must be accounted for:
 
 1. Azure regions are deployed in pairs. In the event of a catastrophic failure of a region, another region within the same geopolitical boundary* is designated as its paired region. Thought should be given to deployment into paired regions as a primary and secondary resiliency strategy. *Azure Brazil is a notable exception whose paired region happens to be US South Central. For more, see [here](https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions).
     1. Azure Storage supports [Geographically Redundant Storage (GRS)](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs) which means three copies of your data are stored within your primary region and three additional copies are stored in the paired region. You cannot change the storage pairing for GRS.
     1. Services that rely on Azure Storage GRS can take advantage of this paired region capability. To do so, your applications and the network must be oriented to support that.
     1. If you don't plan to leverage GRS to support your regional resiliency needs, it is suggested that you do _NOT_ leverage the paired region as your secondary. In the event of a regional failure, there will be intense pressure on resources in the paired region as resources migrate. Avoiding that pressure can provide you with additional speed during your recovery by recovering to an alternate site.
     > [!WARNING]
-    > Do not attempt to leverage Azure GRS for VM backups or recovery. Instead, leverage [Azure Backup](https://azure.microsoft.com/services/backup/) and [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) along with [Managed Disks](https://docs.microsoft.com/azure/virtual-machines/windows/managed-disks-overview) to support your IaaS workload resiliency.
+    > Do not attempt to leverage Azure GRS for VM backups or recovery. Instead, leverage [Azure Backup](https://azure.microsoft.com/services/backup) and [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery) along with [Managed Disks](https://docs.microsoft.com/azure/virtual-machines/windows/managed-disks-overview) to support your IaaS workload resiliency.
 2. Azure Backup and Azure Site Recovery work in tandem with your network design to facilitate regional resiliency for your IaaS and data backup needs. Make sure the network is optimized so data transfers remain on the Microsoft backbone and leverage [VNet Peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview) if possible. Some larger organizations with global deployments may instead use [ExpressRoute Premium](https://docs.microsoft.com/azure/expressroute/expressroute-introduction) to route traffic between regions which can save regional egress charges.
 3. Azure resource groups are regional specific constructs. It is normal, however, for resources within a resource group to span multiple regions. When doing so, it is important to consider that in the event of a regional failure, control plane operations against a resource group will fail in the impacted region, even though the resources in other regions (within that resource group) will continue to operate. This can impact both your network and your resource group design.
 4. Many PaaS services within Azure support [Service Endpoints](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview) and/or [Private Link](https://docs.microsoft.com/azure/private-link/private-link-overview). Both of these solutions impact your network considerations substantially when considering regional resiliency, migration and governance.
 5. Many PaaS services rely on their own regional resiliency solutions. For example, Azure SQL Database allows you to easily replicate to N additional regions as does CosmosDB. Some services carry no region dependency like Azure DNS. As you consider which services you will be leveraging in your adoption process, make sure to clearly understand the failover capabilities and recovery steps that may be required for each Azure service.
-6. In addition to deploying into multiple regions to support disaster recovery, many organizations choose to deploy in an Active-Active pattern so that no failover is necessary. This has the added benefit of providing global load balancing and additional fault tolerance and network performace boosts. To take advantage of this pattern, your application(s) must support running Active-Active in multiple regions.
+6. In addition to deploying into multiple regions to support disaster recovery, many organizations choose to deploy in an Active-Active pattern so that no failover is necessary. This has the added benefit of providing global load balancing and additional fault tolerance and network performance boosts. To take advantage of this pattern, your application(s) must support running Active-Active in multiple regions.
 
 > [!WARNING]
 > Azure regions are highly available constructs with SLAs applied to the services running in them. However, you should never take a single region dependency on mission critical applications. Always plan for regional failure and practice recovery and mitigation steps.
@@ -80,7 +78,7 @@ The following table can aid in documenting the findings from the steps above:
 
 <!-- markdownlint-disable MD026 -->
 
-## Data Sovereignty Relevancy
+## Data sovereignty relevancy
 
 Around the world, government organizations have begun establishing data sovereignty requirements, like General Data Protection Regulation (GDPR). Compliance requirements of this nature often require localization within a specific region or even within a specific country to protect their citizens. In some cases, data pertaining to customers, employees, or partners must be stored on a cloud platform within the same region as the end user.
 

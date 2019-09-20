@@ -28,7 +28,7 @@ The following image shows the Cloud Adoption Framework migrate landing zone blue
 ![Blueprint alignment](../../_images/ready/blueprint-overview.png)
 
 - The letter A sits inside of a curved line that marks the scope of this blueprint. That scope is meant to convey that this blueprint covers limited architectural complexity but is built on relatively mid-line compliance requirements.
-- Customers who have a high degree of complexity and stringent compliance requirements might be better served by using a partner's extended blueprint or one of the [standards-based blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples/).
+- Customers who have a high degree of complexity and stringent compliance requirements might be better served by using a partner's extended blueprint or one of the [standards-based blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples).
 - Most customers' needs will fall somewhere between these two extremes. The letter B represents the process outlined in the [landing zone considerations](../considerations/index.md) articles. For customers in this space, you can use the decision guides found in those articles to identify nodes to be added to the Cloud Adoption Framework migrate landing zone blueprint. This approach allows you to customize the blueprint to fit your needs.
 
 ## Use this blueprint

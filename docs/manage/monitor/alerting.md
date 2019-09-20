@@ -89,7 +89,7 @@ That said, there are some important footnotes to this rule.
 
 **Guest OS telemetry** has a number of paths to get into the system.
 
-- The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure Diagnostics extension, and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor/).
+- The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure Diagnostics extension, and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor).
 
 - The cheapest but slowest method is to send it to the Azure logs Kusto store. Running the Log Analytics agent on the VM is the best way to get all guest operating system metric and log data into this store.
 
@@ -108,9 +108,9 @@ If you aren’t using Azure Monitor for VMs, explore the following features to m
 
 - [Dynamic thresholds](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-dynamic-thresholds). Dynamic thresholds look at the activity of the resource over a time period, and create upper and lower "normal behavior" thresholds. When the metric being monitored falls outside of these thresholds, you get an alert.
 
-- [Multisignal alerts](https://azure.microsoft.com/blog/monitor-at-scale-in-azure-monitor-with-multi-resource-metric-alerts/). You can create a metric alert that uses the combination of two different inputs from two different resource types. For example, if you want to fire an alert when the CPU of a VM is over 90 percent, and the number of messages in a certain Azure Service Bus queue feeding that VM exceeds a certain amount, you can do that without creating a log query. This only works for two signals. If you have a more complex query, feed your metric data into the Azure Monitor log store, and use a log query.
+- [Multisignal alerts](https://azure.microsoft.com/blog/monitor-at-scale-in-azure-monitor-with-multi-resource-metric-alerts). You can create a metric alert that uses the combination of two different inputs from two different resource types. For example, if you want to fire an alert when the CPU of a VM is over 90 percent, and the number of messages in a certain Azure Service Bus queue feeding that VM exceeds a certain amount, you can do that without creating a log query. This only works for two signals. If you have a more complex query, feed your metric data into the Azure Monitor log store, and use a log query.
 
-- [Multiresource alerts](https://azure.microsoft.com/blog/monitor-at-scale-in-azure-monitor-with-multi-resource-metric-alerts/). Azure Monitor allows a single metric alert rule that applies to all VM resources. This feature can save you time because you don't need to create individual alerts for each VM. Pricing for this type of alert is the same. If you created 50 alerts for monitoring CPU usage for 50 VMs, or 1 alert that monitors CPU usage for all 50 VMs, it costs you the same amount. You can use these types of alerts in combination with dynamic thresholds as well.
+- [Multiresource alerts](https://azure.microsoft.com/blog/monitor-at-scale-in-azure-monitor-with-multi-resource-metric-alerts). Azure Monitor allows a single metric alert rule that applies to all VM resources. This feature can save you time because you don't need to create individual alerts for each VM. Pricing for this type of alert is the same. If you created 50 alerts for monitoring CPU usage for 50 VMs, or 1 alert that monitors CPU usage for all 50 VMs, it costs you the same amount. You can use these types of alerts in combination with dynamic thresholds as well.
 
 Used together, these features can save time by minimizing alert notifications and the management of the underlying alerts.
 
