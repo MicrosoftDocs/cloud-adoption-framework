@@ -38,7 +38,7 @@ Every application should be deployed in the proper area of the management group,
 2. Two subscriptions, one for production and another for not production.
 3. [Consistent nomenclature](../../../ready/considerations/naming-and-tagging.md) should be applied at each level of this grouping hierarchy.
 4. Resource groups should be deployed in a manner that considers its contents lifecycle: everything that is developed together, is managed together, and retires together goes together. For more information on resource group best practices, [see here](../../../decision-guides/resource-consistency/index.md).
-5. [Region selection](../../../decision-guides/regions/index.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services/).
+5. [Region selection](../../../decision-guides/regions/index.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
 
 Here is an example of this pattern in use:
 

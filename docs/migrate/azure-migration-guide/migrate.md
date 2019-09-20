@@ -235,7 +235,7 @@ You can choose from a variety of experienced systems integrator partners and too
 
 Visit the [Azure Migration Center](https://azure.microsoft.com/migration/support) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
 
-Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com/) to see a range of database migration options and step-by-step guidance with native and partners.
+Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) to see a range of database migration options and step-by-step guidance with native and partners.
 
 # [Project management tools](#tab/project-management-tools)
 
