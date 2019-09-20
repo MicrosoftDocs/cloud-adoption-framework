@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cloud migration expanded scope checklist
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 09/19/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -22,7 +22,7 @@ The following checklist outlines the common areas of complexity which could requ
 
 - **Business-driven scope changes:**
   - [Balancing the portfolio](./balance-the-portfolio.md)
-  - [Support global markets](./multiple-regions.md)
+  - [Support global markets](../../decision-guides/regions/index.md)
   - Cost consciousness during a migration *(Coming Q3 2019)*
 - **Culture-driven scope changes:**
   - Change management and approval processes *(Coming Q3 2019)*

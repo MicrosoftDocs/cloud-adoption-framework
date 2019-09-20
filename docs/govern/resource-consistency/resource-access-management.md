@@ -28,7 +28,7 @@ In Azure, the term _resource_ refers to an entity managed by Azure. For example,
 
 ## What is an Azure resource group?
 
-Each resource in Azure must belong to a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). A resource group is simply a logical construct that groups multiple resources together so they can be managed as a single entity _based on lifecycle and security_. For example, resources that share a similar lifecycle, such as the resources for an [n-tier application](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) may be created or deleted as a group. Put another way: everything that is born together, gets managed together, and deprecates together, goes together in a Resource Group.
+Each resource in Azure must belong to a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). A resource group is simply a logical construct that groups multiple resources together so they can be managed as a single entity _based on lifecycle and security_. For example, resources that share a similar lifecycle, such as the resources for an [n-tier application](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) may be created or deleted as a group. Put another way: everything that is born together, gets managed together, and deprecates together, goes together in a resource group.
 
 ![Diagram of a resource group containing a resource](../../_images/govern/design/governance-1-10.png)
 *Figure 2 - A resource group contains a resource.*

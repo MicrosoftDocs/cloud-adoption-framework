@@ -2,9 +2,9 @@
 title: "Resource consistency decision guide"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about resource consistency when planning an Azure migration.
-author: rotycenh
-ms.author: v-tyhopk
-ms.date: 02/11/2019
+author: doodlemania2
+ms.author: dermar
+ms.date: 09/19/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
@@ -27,10 +27,16 @@ As these factors increase in importance, the benefits of ensuring consistent dep
 
 In Azure, [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) are a core resource organization mechanism to logically group resources within a subscription.
 
-Resource groups act as containers for resources with a common lifecycle or shared management constraints such as policy or role-based access control (RBAC) requirements. Resource groups can't be nested, and resources can only belong to one resource group. Some actions can act on all resources in a resource group. For example, deleting a resource group removes all resources within that group. Common patterns for creating resource groups are often divided into two categories:
+resource groups act as containers for resources with a common lifecycle AND shared management constraints such as policy or role-based access control (RBAC) requirements. resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
 
-- **Traditional IT workloads:** Most often grouped by items within the same lifecycle, such as an application. Grouping by application allows for individual application management.
-- **Agile IT workloads:** Focus on external customer-facing cloud applications. These resource groups often reflect the functional layers of deployment (such as web tier or app tier) and management.
+1. Are the contents of the resource group developed together?
+1. Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
+1. Are the contents of the resource group retired together?
+
+If you answered _NO_ to any of the above points, the resource in question should be placed elsewhere, in another resource group.
+
+> [!IMPORTANT]
+> resource groups are also region specific, however, it is common for resources to be in different regions within the same resource group because they are managed together as described above. Please see [here](../regions/index.md) for more information on region selection.
 
 ## Deployment consistency
 
@@ -54,7 +60,7 @@ For a more in-depth discussion of enforcing your policy decisions within a cloud
 
 ## Hierarchical consistency
 
-Resource groups allow you to support additional levels of hierarchy within your organization within the subscription, applying Azure Policy rules and access controls at a resource group level. However, As the size of your cloud estate grows, you may need to support more complicated cross-subscription governance requirements than can be supported using the Azure Enterprise Agreement's Enterprise/Department/Account/Subscription hierarchy.
+resource groups allow you to support additional levels of hierarchy within your organization within the subscription, applying Azure Policy rules and access controls at a resource group level. However, As the size of your cloud estate grows, you may need to support more complicated cross-subscription governance requirements than can be supported using the Azure Enterprise Agreement's Enterprise/Department/Account/Subscription hierarchy.
 
 [Azure management groups](https://docs.microsoft.com/azure/governance/management-groups) allow you to organize subscriptions into more sophisticated organizational structures by grouping subscriptions in a hierarchy distinct from your enterprise agreement's hierarchy. This alternate hierarchy allows you to apply access control and policy enforcement mechanisms across multiple subscriptions and the resources they contain. Management group hierarchies can be used to match your cloud estate's subscriptions with operations or business governance requirements. For more information, see the [subscription decision guide](../subscriptions/index.md).
 

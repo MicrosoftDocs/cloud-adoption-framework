@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about cloud platform subscriptions as a core service in Azure migrations.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 06/07/2019
+ms.date: 09/19/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
@@ -62,13 +62,8 @@ As an organization's cloud footprint grows, additional subscriptions are typical
 Each organization will categorize their applications differently, often separating subscriptions based on specific applications or services or along the lines of application archetypes. This categorization is often designed to support workloads that are likely to consume most of the resource limits of a subscription, or separate mission-critical workloads to ensure they aren't competing with other workloads under these limits. Some workloads that might justify a separate subscription under this pattern include:
 
 - Mission-critical workloads.
-- Applications with protected data.
-- Experimental applications.
-- Applications subject to regulatory requirements (such as HIPAA or FedRAMP).
-- Batch workloads.
-- Big data workloads such as Hadoop.
-- Containerized workloads using deployment orchestrators such as Kubernetes.
-- Analytics workloads.
+- Applications which are part of "Cost of Goods Sold" (COGS) within your company. Example: every instance of Company X's widget contains an Azure IoT module that sends telemetry. This may necessitate a dedicated subscription for accounting/governance purposes as part of COGS.
+- Applications subject to regulatory requirements such as HIPAA or FedRAMP.
 
 ### Functional pattern
 
@@ -92,7 +87,7 @@ Management group hierarchies can be up to six levels deep. This provides you wit
 
 - [Resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
 - [Multiple layers of governance in large enterprises](../../govern/guides/complex/multiple-layers-of-governance.md)
-- [Multiple geographic regions](../../migrate/expanded-scope/multiple-regions.md)
+- [Multiple geographic regions](../regions/index.md)
 
 ## Next steps
 
