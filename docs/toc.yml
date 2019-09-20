@@ -219,7 +219,7 @@
           - name: Balance the portfolio
             href: migrate/expanded-scope/balance-the-portfolio.md
           - name: Multiple geographic regions
-            href: migrate/expanded-scope/multiple-regions.md
+            href: decision-guides/regions/index.md
         - name: Culture-driven scope changes
           items:
           - name: Skills readiness

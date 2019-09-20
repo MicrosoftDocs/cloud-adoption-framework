@@ -62,7 +62,7 @@ The following changes to policy will help remediate the new risks and guide impl
 This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
 
 1. Implement Azure Cost Management.
-    1. Establish the right scope of access to align with the subscription pattern and the Resource Consistency discipline. Assuming alignment with the governance MVP defined in prior articles, this requires **Enrollment Account Scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance may require **Resource Group Scope** access.
+    1. Establish the right scope of access to align with the subscription pattern and the Resource Consistency discipline. Assuming alignment with the governance MVP defined in prior articles, this requires **Enrollment Account Scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance may require **resource group Scope** access.
     1. Establish a budget in Azure Cost Management.
     1. Review and act on initial recommendations. Have a recurring process to support reporting.
     1. Configure and execute Azure Cost Management Reporting, both initial and recurring.
