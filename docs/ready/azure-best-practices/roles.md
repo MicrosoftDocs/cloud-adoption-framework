@@ -23,7 +23,7 @@ For an overview of recommended RBAC practices as part of an identity and securit
 
 By using [role-based access control](https://docs.microsoft.com/azure/role-based-access-control/overview), you can separate duties within your team and grant only enough access for specific Azure Active Directory (Azure AD) users, groups, service principals, or managed identities to perform their jobs. Instead of giving everybody unrestricted access to your Azure subscription or resources, you can limit permissions for each set of resources.
 
-[RBAC role definitions](https://docs.microsoft.com/azure/role-based-access-control/role-definitions) list operations that are permitted or disallowed for users or groups assigned to that role. A role's [scope](/azure/role-based-access-control/index.md#scope) specifies which resources these defined permissions apply to. Scopes can be specified at multiple levels: management group, subscription, resource group, or resource. Scopes are structured in a parent/child relationship.
+[RBAC role definitions](https://docs.microsoft.com/azure/role-based-access-control/role-definitions) list operations that are permitted or disallowed for users or groups assigned to that role. A role's [scope](/azure/role-based-access-control/index#scope) specifies which resources these defined permissions apply to. Scopes can be specified at multiple levels: management group, subscription, resource group, or resource. Scopes are structured in a parent/child relationship.
 
 ![RBAC scope hierarchy](../../_images/azure-best-practices/rbac-scope.png)
 

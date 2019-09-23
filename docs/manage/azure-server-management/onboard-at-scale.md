@@ -25,7 +25,7 @@ Onboarding the Azure management services to your servers involves two tasks: dep
 
 All of the management solutions discussed in [Azure management tools and services](./tools-services.md) require the Log Analytics agent to be installed on Azure virtual machines (VMs) and on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on all your Azure VMs and connected to the correct Log Analytics workspace.
 
-Azure Policy has a built-in [policy initiative](/azure/governance/policy/index.md#initiative-definition) that includes both the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
+Azure Policy has a built-in [policy initiative](/azure/governance/policy/index#initiative-definition) that includes both the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
 <!-- TODO: Add these when available.
 - [Preview]: Enable Azure Monitor for virtual machine scale sets.
