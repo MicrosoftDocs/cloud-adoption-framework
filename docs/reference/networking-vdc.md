@@ -436,7 +436,7 @@ The following features were discussed in this document. Follow the links to lear
 [vWAN]: https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about
 [NVA]: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha
 [AzFW]: https://docs.microsoft.com/azure/firewall/overview
-[SubMgmt]: https://docs.microsoft.com/azure/architecture/cloud-adoption/reference/azure-scaffold
+[SubMgmt]: /azure/architecture/cloud-adoption/appendix/azure-scaffold
 [RGMgmt]: https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview
 [DMZ]: https://docs.microsoft.com/azure/best-practices-network-security
 [ALB]: https://docs.microsoft.com/azure/load-balancer/load-balancer-overview
