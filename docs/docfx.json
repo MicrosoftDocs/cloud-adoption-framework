@@ -17,6 +17,13 @@
           "LICENSE-CODE",
           "ThirdPartyNotices"
         ]
+      },
+      {
+        "src": "_bread",
+        "dest": "bread",
+        "files": [
+          "**/*.yml"
+        ]
       }
     ],
     "resource": [
@@ -38,8 +45,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/azure/cloud-adoption-framework/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
+      "breadcrumb_path": "/azure/cloud-adoption-framework/_bread/toc.json",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/cloud-adoption-framework",
       "feedback_product_url": " https://azure-architecture.uservoice.com/forums/918625-architecture-guidance",
