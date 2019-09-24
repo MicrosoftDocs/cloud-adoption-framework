@@ -39,9 +39,9 @@ During the ready phase, technical staff have to create a migration landing zone 
 
 During the ready phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
 
-- [Foundations for cloud architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations/): A PluralSight course to help architect the right foundational solutions.
-- [Microsoft Azure architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations/): A PluralSight course to ground architects in Azure architecture.
-- [Designing migrations for Microsoft Azure](https://app.pluralsight.com/library/courses/cloud-architecture-foundations/): A PluralSight course to help architects design a migration solution.
+- [Foundations for cloud architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to help architect the right foundational solutions.
+- [Microsoft Azure architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to ground architects in Azure architecture.
+- [Designing migrations for Microsoft Azure](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to help architects design a migration solution.
 
 ## Deeper skills exploration
 
@@ -70,4 +70,4 @@ The following are a few examples of role-specific learning paths on Microsoft Le
 
 - [Developers](/learn/browse/?roles=developer&term=infrastructure) can use Learn resources to help during architecture, governance, modernization activities.
 
-For additional learning paths, browse the [Learn catalog](/learn/browse/). Use the Roles filter to align learning paths with your role.
+For additional learning paths, browse the [Learn catalog](/learn/browse). Use the Roles filter to align learning paths with your role.

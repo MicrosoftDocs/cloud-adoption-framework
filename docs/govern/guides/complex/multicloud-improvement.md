@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Large enterprise guide: Multicloud improvement"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -15,7 +15,7 @@ ms.custom: governance
 
 ## Advancing the narrative
 
-Microsoft recognizes that customers are adopting multiple clouds for specific purposes. The fictional company in this guide is no exception. In parallel to the Azure adoption journey, the business success has led to the acquisition of a small, but complementary business. That business is running all of their IT operations on a different cloud provider.
+Microsoft recognizes that customers may adopt multiple clouds for specific purposes. The fictional company in this guide is no exception. In parallel with their Azure adoption journey, business success has led to the acquisition of a small but complementary business. That business is running all of their IT operations on a different cloud provider.
 
 This article describes how things change when integrating the new organization. For purposes of the narrative, we assume this company has completed each of the governance iterations outlined in this governance guide.
 
@@ -59,23 +59,23 @@ This section of the article improves the governance MVP design to include new Az
 
 1. Connect the networks. Executed by Networking and IT Security, supported by governance.
     1. Adding a connection from the MPLS or leased-line provider to the new cloud will integrate networks. Adding routing tables and firewall configurations will control access and traffic between the environments.
-1. Consolidate identity providers. Depending on the workloads being hosted in the secondary cloud, there are a variety of options to identity provider consolidation. The following are a few examples:
+2. Consolidate identity providers. Depending on the workloads being hosted in the secondary cloud, there are a variety of options to identity provider consolidation. The following are a few examples:
     1. For applications that authenticate using OAuth 2, users in the Active Directory in the secondary cloud could simply be replicated to the existing Azure AD tenant.
-    1. On the other extreme, federation between the two on-premises identity providers, would allow users from the new Active Directory domains to be replicated to Azure.
-1. Add assets to Azure Site Recovery.
+    2. On the other extreme, federation between the two on-premises identity providers, would allow users from the new Active Directory domains to be replicated to Azure.
+3. Add assets to Azure Site Recovery.
     1. Azure Site Recovery was built as a hybrid and multicloud tool from the beginning.
-    1. Virtual machines in the secondary cloud might be able to be protected by the same Azure Site Recovery processes used to protect on-premises assets.
-1. Add assets to Azure Cost Management.
+    2. Virtual machines in the secondary cloud might be able to be protected by the same Azure Site Recovery processes used to protect on-premises assets.
+4. Add assets to Azure Cost Management.
     1. Azure Cost Management was built as a multicloud tool from the beginning.
-    1. Virtual machines in the secondary cloud might be compatible with Azure Cost Management for some cloud providers. Additional costs may apply.
-1. Add assets to Azure Monitor.
+    2. Virtual machines in the secondary cloud might be compatible with Azure Cost Management for some cloud providers. Additional costs may apply.
+5. Add assets to Azure Monitor.
     1. Azure Monitor was built as a hybrid cloud tool from the beginning.
-    1. Virtual machines in the secondary cloud might be compatible with Azure Monitor agents, allowing them to be included in Azure Monitor for operational monitoring.
-1. Governance enforcement tools.
+    2. Virtual machines in the secondary cloud might be compatible with Azure Monitor agents, allowing them to be included in Azure Monitor for operational monitoring.
+6. Governance enforcement tools.
     1. Governance enforcement is cloud-specific.
-    1. The corporate policies established in the governance guide are not cloud-specific. While the implementation may vary from cloud to cloud, the policy statements can be applied to the secondary provider.
+    2. The corporate policies established in the governance guide are not cloud-specific. While the implementation may vary from cloud to cloud, the policy statements can be applied to the secondary provider.
 
-As multicloud adoption grows, the governance design above will continue to mature.
+Multi-cloud adoption should be contained to where it is required based on technical needs or specific business requirements. As multi-cloud adoption grows, so does complexity and security risks.
 
 ## Next steps
 

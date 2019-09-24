@@ -4,17 +4,11 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Align your cloud governance design guide with corporate policy"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 01/04/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
-<!---
-I've established policies. How to help developers adopt these policies?
-Draft an architecture design guide.
-
-[Aspirational statement] If you're using Azure, you can use one of ours as a starting point. The choose one of the following 6 as a starting point and mold it to fit your policies.
---->
 
 # Align your cloud governance design guide with corporate policy
 

@@ -16,7 +16,7 @@ To improve the efficiency of deploying Azure server management services, conside
 
 ## Onboarding by using Automation
 
-This guidance has a supporting GitHub repository of sample code, [CloudAdoptionFramework](https://aka.ms/CAF/manage/automation-samples), which provides example scripts and Azure Resource Manager templates to help you automate the deployment of Azure server management services.
+This guidance has a supporting GitHub repository of sample code, [CloudAdoptionFramework](https://aka.ms/caf/manage/automation-samples), which provides example scripts and Azure Resource Manager templates to help you automate the deployment of Azure server management services.
 
 These sample files illustrate how to use Azure PowerShell cmdlets to automate the following tasks:
 
@@ -28,7 +28,7 @@ These sample files illustrate how to use Azure PowerShell cmdlets to automate th
 
 4. Enable Update Management and Change Tracking and Inventory for the workspace.
 
-5. Onboard Azure VMs using Azure Policy (a policy installs the Log Analytics Agent and Dependency Agent on the Azure VMs).
+5. Onboard Azure VMs using Azure Policy (a policy installs the Log Analytics Agent and the Dependency agent on the Azure VMs).
 
 6. Onboard on-premises servers by installing the Log Analytics agent on them.
 

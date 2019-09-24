@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the business risks associated with a cloud transformation
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -42,7 +42,7 @@ Identifying risk is a fairly direct process. IT-related risks are generally stan
 To help understand risk tolerance, let's examine customer data. If a company in any industry posts customer data on an unsecured server, the technical risk of that data being compromised or stolen is roughly the same. However, a company's tolerance for that risk will vary wildly based on the nature and potential value of the data.
 
 - Companies in healthcare and finance in the United States, are governed by rigid, third-party compliance requirements. It is assumed that personal data or healthcare-related data is extremely confidential. There are severe consequences for these types of companies, if they are involved in the risks scenario above. Their tolerance will be extremely low. Any customer data published inside or outside of the network will need to be governed by those third-party compliance policies.
-- A gaming company whose customer data is limited to a user name, play times, and high scores is not as likely to suffer any significant consequences, if they engage in the risky behavior above. While any unsecured data is at risk, the impact of that risk is small. Therefore, the tolerance for risk in this case is high.
+- A gaming company whose customer data is limited to a user name, play times, and high scores is not as likely to suffer significant consequences beyond loss to reputation, if they engage in the risky behavior above. While any unsecured data is at risk, the impact of that risk is small. Therefore, the tolerance for risk in this case is high.
 - A medium-sized enterprise that provides carpet cleaning services to thousands of customers would fall in between these two tolerance extremes. There, customer data may be more robust, containing details like address or phone number. Both could be considered personal data and should be protected. However, there may not be any specific governance requirement mandating that the data be secured. From an IT perspective, the answer is simple, secure the data. From a business perspective, it may not be as simple. The business would need more details before they could determine a level of tolerance for this risk.
 
 The next section shares a few sample questions that could help the business determine a level of risk tolerance for the use case above or others.
@@ -51,12 +51,13 @@ The next section shares a few sample questions that could help the business dete
 
 This section lists conversation provoking questions in three categories: loss impact, probability of loss, and remediation costs. When business and IT partner to address each of these areas, the decision to expend effort on managing risks and the overall tolerance to a particular risk can easily be determined.
 
-**Loss impact:** Questions to determine the impact of a risk. These questions can be difficult (sometimes impossible) to answer. Quantifying the impact is best, but sometimes the conversation alone is enough to understand tolerance. Ranges are also acceptable, especially if they include assumptions that determined those ranges.
+**Loss impact:** Questions to determine the impact of a risk. These questions can be difficult to answer. Quantifying the impact is best, but sometimes the conversation alone is enough to understand tolerance. Ranges are also acceptable, especially if they include assumptions that determined those ranges.
 
-- Does this risk violate third-party compliance requirements?
-- Does this risk violate internal corporate policies?
+- Could this risk violate third-party compliance requirements?
+- Could this risk violate internal corporate policies?
+- Could this risk cause the loss of life, limb or property?
 - Could this risk cost customers or market share? If so, can this cost be quantified?
-- Could this risk create negative customer experiences? Are those experiences likely to affect sales or revenue realization?
+- Could this risk create negative customer experiences? Are those experiences likely to affect sales or revenue?
 - Could this risk create new legal liability? If so, is there a precedence for damage awards in these types of cases?
 - Could this risk stop business operations? If so, how long would operations be down?
 - Could this risk slow business operations? If so, how slow and how long?
@@ -69,7 +70,7 @@ These basic questions will lead to many more. After exploring a healthy dialogue
 
 **Risk remediation costs:** Questions to determine the cost of removing or otherwise minimizing the risk. These questions can be fairly direct, especially when represented in a range.
 
-- Is there a clear solution? What does it cost?
+- Is there a clear solution and what does it cost?
 - Are there options for preventing or minimizing this risk? What is the range of costs for those solutions?
 - What is needed from the business to select the best, clear solution?
 - What is needed from the business to validate costs?

@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/05/2019
+ms.date: 09/19/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -60,7 +60,7 @@ The following changes to policy will help remediate the new risks and guide impl
 5. Governance tooling must validate that the appropriate level of logging data is being collected for all mission-critical applications or protected data.
 6. Governance process must validate that backup, recovery, and SLA adherence are properly implemented for mission-critical applications and protected data.
 7. Governance tooling must limit virtual machine deployment to approved images only.
-8. Governance tooling must enforce that automatic updates are **prevented** on all deployed assets that support mission-critical applications. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
+8. Governance tooling must enforce that automatic updates are **prevented** on all deployed assets that support mission-critical applications. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations to quickly and effectively update those servers.
 9. Governance tooling must validate tagging related to cost, criticality, SLA, application, and data classification. All values must align to predefined values managed by the cloud governance team.
 10. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
 11. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tooling used in the cloud.
@@ -80,25 +80,25 @@ Following the experience of this fictional example, it is assumed that the Prote
 
 1. As an external dependency, the cloud operations team will need to define operational monitoring tooling, business continuity and disaster recovery (BCDR) tooling, and automated remediation tooling. The cloud governance team can then support necessary discovery processes.
     1. In this use case, the cloud operations team chose Azure Monitor as the primary tool for monitoring mission-critical applications.
-    1. The team also chose Azure Site Recovery as the primary BCDR tooling.
-1. Azure Site Recovery implementation.
-    1. Define and deploy Azure Vault for backup and recovery processes.
-    1. Create an Azure Resource Management template for creation of a vault in each subscription.
-1. Azure Monitor implementation.
-    1. Once a mission-critical subscription is identified, a log analytics workspace can be created using PowerShell. This is a predeployment process.
+    2. The team also chose Azure Site Recovery as the primary BCDR tooling.
+2. Azure Site Recovery implementation.
+    1. Define and deploy Azure Site Recovery Vault for backup and recovery processes.
+    2. Create an Azure Resource Management template for creation of a vault in each subscription.
+3. Azure Monitor implementation.
+    1. Once a mission-critical subscription is identified, a log analytics workspace can be created.
 
 **Individual cloud adoption subscription:** The following will ensure that each subscription is discoverable by the monitoring solution and ready to be included in BCDR practices.
 
 1. Azure Policy for mission-critical nodes:
     1. Audit and enforce use of standard roles only.
-    1. Audit and enforce application of encryption for all storage accounts.
-    1. Audit and enforce use of approved network subnet and VNet per network interface.
-    1. Audit and enforce the limitation of user-defined routing tables.
-    1. Audit and enforce the deployment of Log Analytics agents for Windows and Linux virtual machines.
+    2. Audit and enforce application of encryption for all storage accounts.
+    3. Audit and enforce use of approved network subnet and VNet per network interface.
+    4. Audit and enforce the limitation of user-defined routing tables.
+    5. Audit and enforce the deployment of Log Analytics agents for Windows and Linux virtual machines.
 2. Azure blueprint:
     1. Create a blueprint named `mission-critical-workloads-and-protected-data`. This blueprint will apply assets in addition to the protected data blueprint.
-    1. Add the new Azure policies to the blueprint.
-    1. Apply the blueprint to any subscription that is expected to host a mission-critical application.
+    2. Add the new Azure policies to the blueprint.
+    3. Apply the blueprint to any subscription that is expected to host a mission-critical application.
 
 ## Conclusion
 

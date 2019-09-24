@@ -28,7 +28,7 @@ The following image shows the Cloud Adoption Framework migrate landing zone blue
 ![Blueprint alignment](../../_images/ready/blueprint-overview.png)
 
 - The letter A sits inside of a curved line that marks the scope of this blueprint. That scope is meant to convey that this blueprint covers limited architectural complexity but is built on relatively mid-line compliance requirements.
-- Customers who have a high degree of complexity and stringent compliance requirements might be better served by using a partner's extended blueprint or one of the [standards-based blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples/).
+- Customers who have a high degree of complexity and stringent compliance requirements might be better served by using a partner's extended blueprint or one of the [standards-based blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples).
 - Most customers' needs will fall somewhere between these two extremes. The letter B represents the process outlined in the [landing zone considerations](../considerations/index.md) articles. For customers in this space, you can use the decision guides found in those articles to identify nodes to be added to the Cloud Adoption Framework migrate landing zone blueprint. This approach allows you to customize the blueprint to fit your needs.
 
 ## Use this blueprint
@@ -60,7 +60,7 @@ The following decisions are represented in the landing zone blueprint.
 |Subscription design|N/A - Designed for a single production subscription.|[Scaling subscriptions](../considerations/scaling-subscriptions.md)|
 |Management groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../considerations/scaling-subscriptions.md)         |
 |Resource groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../considerations/scaling-subscriptions.md)         |
-|Data|N/A|[Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json)         |
+|Data|N/A|[Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas?toc=https://docs.microsoft.com/azure/architecture/toc.json&bc=https://docs.microsoft.com/azure/architecture/bread/toc.json) and [Azure Data Store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
 |Storage|N/A|[Azure Storage guidance](../considerations/storage-guidance.md)         |
 |Naming and tagging standards|N/A|[Naming and tagging best practices](../considerations/naming-and-tagging.md)         |
 |Cost management|N/A|[Tracking costs](../azure-best-practices/track-costs.md)|
@@ -68,7 +68,7 @@ The following decisions are represented in the landing zone blueprint.
 
 ## Customize or deploy a landing zone from this blueprint
 
-Learn more and download a reference sample of the Cloud Adoption Framework migrate landing zone blueprint for deployment or customization from [Azure Blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples/index).
+Learn more and download a reference sample of the Cloud Adoption Framework migrate landing zone blueprint for deployment or customization from [Azure Blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples).
 
 The blueprint samples are also available within the portal. For details of how to deploy a blueprint see [Azure Blueprints](./govern-org-compliance.md?tabs=azureblueprints#create-a-blueprint).
 

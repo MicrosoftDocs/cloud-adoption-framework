@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Security Baseline sample policy statements
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -35,7 +35,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** All protected data must be encrypted when at rest.
 
-**Potential design option:** See the [Azure encryption overview](https://docs.microsoft.com/azure/security/security-azure-encryption-overview) article for a discussion of how data at rest encryption is performed on the Azure platform.
+**Potential design option:** See the [Azure encryption overview](https://docs.microsoft.com/azure/security/security-azure-encryption-overview) article for a discussion of how data at rest encryption is performed on the Azure platform. Additional controls such as in account data encryption and control over how storage account settings can be changed should also be considered.
 
 ## Network isolation
 
@@ -49,17 +49,17 @@ The following sample policy statements address common security-related business 
 
 **Technical risk:** Allowing access to workloads from the public internet introduces a risk of intrusion resulting in unauthorized data exposure or business disruption.
 
-**Policy statement:** No subnet containing protected data can be directly accessed over public internet or across datacenters. Access to those subnets must be routed through intermediate subnet works. All access into those subnets must come through a firewall solution capable of performing packet scanning and blocking functions.
+**Policy statement:** No subnet containing protected data can be directly accessed over public internet or across datacenters. Access to those subnets must be routed through intermediate subnets. All access into those subnets must come through a firewall solution capable of performing packet scanning and blocking functions.
 
-**Potential design option:** In Azure, secure public endpoints by deploying a [DMZ between the public internet and your cloud-based network](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
+**Potential design option:** In Azure, secure public endpoints by deploying a [DMZ between the public internet and your cloud-based network](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). Consider deployment, configuration and automation of [Azure Firewall](https://docs.microsoft.com/azure/firewall).
 
 ## DDoS protection
 
 **Technical risk:** Distributed denial of service (DDoS) attacks can result in a business interruption.
 
-**Policy statement:** Deploy automated DDoS mitigation mechanisms to all publicly accessible network endpoints.
+**Policy statement:** Deploy automated DDoS mitigation mechanisms to all publicly accessible network endpoints. No public facing web site backed by IaaS should be exposed to the internet without DDoS.
 
-**Potential design option:** Use [Azure DDoS Protection](https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview) to minimize disruptions caused by DDoS attacks.
+**Potential design option:** Use [Azure DDoS Protection](https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview) Standard to minimize disruptions caused by DDoS attacks.
 
 ## Secure on-premises connectivity
 
@@ -83,7 +83,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Trends and potential exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tooling used in the cloud.
 
-**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tooling, and update policy to remediate any new risks.
+**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tooling, and update policy to remediate any new risks. Leverage [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) and [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) to gain actionable insights on emerging threats specific to your deployments.
 
 ## Next steps
 

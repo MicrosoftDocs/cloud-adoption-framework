@@ -42,21 +42,23 @@ You can use the following example PowerShell script to deploy these policies:
  Before you run this script, you'll need to sign in by using the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet. When you run the script, you'll need to provide the name of the subscription you want to apply the policies to.
 
 ```powershell
-#Assign Guest Configuration policy.
-param (
-    [Parameter(Mandatory=$true)]
-    [string]$SubscriptionName
-)
 
-$Subscription = Get-AzSubscription -SubscriptionName $SubscriptionName
-$scope = "/subscriptions/" + $Subscription.Id
+    #Assign Guest Configuration policy.
+    param (
+        [Parameter(Mandatory=$true)]
+        [string]$SubscriptionName
+    )
 
-$PasswordPolicy = Get-AzPolicySetDefinition -Name "3fa7cbf5-c0a4-4a59-85a5-cca4d996d5a6"
-$CertExpirePolicy = Get-AzPolicySetDefinition -Name "b6f5e05c-0aaa-4337-8dd4-357c399d12ae"
+    $Subscription = Get-AzSubscription -SubscriptionName $SubscriptionName
+    $scope = "/subscriptions/" + $Subscription.Id
 
-New-AzPolicyAssignment -Name "PasswordPolicy" -DisplayName "[Preview]: Audit that password security settings are set correctly inside Linux and Windows machines" -Scope $scope -PolicySetDefinition $PasswordPolicy -AssignIdentity -Location eastus
+    $PasswordPolicy = Get-AzPolicySetDefinition -Name "3fa7cbf5-c0a4-4a59-85a5-cca4d996d5a6"
+    $CertExpirePolicy = Get-AzPolicySetDefinition -Name "b6f5e05c-0aaa-4337-8dd4-357c399d12ae"
 
-New-AzPolicyAssignment -Name "CertExpirePolicy" -DisplayName "[Preview]: Audit that certificates are not expiring on Windows VMs" -Scope $scope -PolicySetDefinition $CertExpirePolicy -AssignIdentity -Location eastus
+    New-AzPolicyAssignment -Name "PasswordPolicy" -DisplayName "[Preview]: Audit that password security settings are set correctly inside Linux and Windows machines" -Scope $scope -PolicySetDefinition $PasswordPolicy -AssignIdentity -Location eastus
+
+    New-AzPolicyAssignment -Name "CertExpirePolicy" -DisplayName "[Preview]: Audit that certificates are not expiring on Windows VMs" -Scope $scope -PolicySetDefinition $CertExpirePolicy -AssignIdentity -Location eastus
+
 ```
 
 ## Next steps

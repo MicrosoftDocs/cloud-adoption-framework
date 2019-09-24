@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Identity Baseline sample policy statements
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -62,11 +62,11 @@ The following sample policy statements address common identity-related business 
 
 **Policy statement:** Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users.
 
-**Potential design options:** Implement [Federation with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-fed) between your internal and customer identity providers.
+**Potential design options:** Implement [Federation with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-fed) between your internal and customer identity providers or leverage [Azure Active Directory B2B](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b)
 
 ## Identity reviews
 
-**Technical risk:** Over time business change, the addition of new cloud deployments or other security concerns can increase the risks of unauthorized access to secure resources.
+**Technical risk:** As business changes over time, the addition of new cloud deployments or other security concerns can increase the risks of unauthorized access to secure resources.
 
 **Policy statement:** Cloud Governance processes must include quarterly review with identity management teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
 

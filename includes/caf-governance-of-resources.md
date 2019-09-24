@@ -53,6 +53,7 @@ Until trust in the cloud environment is fully established it's important to tigh
     1. The [VPN reference architecture](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn) establishes a pattern and deployment model for creating a VPN Gateway in Azure.
     2. Validate that on-premises security and traffic management mechanisms treat connected cloud networks as untrusted. Resources and services hosted in the cloud should only have access to authorized on-premises services.
     3. Validate that the local edge device in the on-premises datacenter is compatible with [Azure VPN Gateway requirements](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices) and is configured to access the public internet.
+    4. Note that VPN tunnels should not be considered production ready circuits for anything but the most simple workloads. Anything beyond a few simple workloads requiring on premise connectivity should leverage Azure ExpressRoute.
 1. In the root management group, create a second blueprint definition named `secure-hybrid-vnet`.
     1. Add the Resource Manager template for the VPN Gateway as an artifact to the blueprint definition.
     2. Add the Resource Manager template for the virtual network as an artifact to the blueprint definition.

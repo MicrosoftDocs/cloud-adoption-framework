@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Review the options available for rationalizing a digital estate.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/10/2018
+ms.date: 09/16/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -64,7 +64,7 @@ Common drivers might include:
 
 - Faster and shorter updates
 - Code portability
-- Greater cloud efficiency (resources, speed, cost)
+- Greater cloud efficiency (resources, speed, cost, managed operations)
 
 Quantitative analysis factors:
 
@@ -72,6 +72,7 @@ Quantitative analysis factors:
 - Dependencies (network traffic)
 - User traffic (page views, time on page, load time)
 - Development platform (languages, data platform, middle-tier services)
+- Database (CPU, memory, storage, version)
 
 Qualitative analysis factors:
 
@@ -97,6 +98,7 @@ Quantitative analysis factors:
 - Dependencies (network traffic)
 - User traffic (page views, time on page, load time)
 - Development platform (languages, data platform, middle tier services)
+- Database (CPU, memory, storage, version)
 
 Qualitative analysis factors:
 
@@ -120,6 +122,7 @@ Quantitative analysis factors:
 - Dependencies (network traffic)
 - User traffic (page views, time on page, load time)
 - Development platform (languages, data platform, middle tier services)
+- Database (CPU, memory, storage, version)
 
 Qualitative analysis factors:
 
@@ -143,6 +146,7 @@ Quantitative analysis factors:
 - VM size (CPU, memory, storage)
 - Dependencies (network traffic)
 - Assets to be retired
+- Database (CPU, memory, storage, version)
 
 Qualitative analysis factors:
 

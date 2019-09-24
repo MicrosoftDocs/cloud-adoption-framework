@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Explanation of resource access management constructs in Azure: Azure Resource Manager, subscriptions, resource groups, and resources"
 author: alexbuckgit
 ms.author: abuck
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -28,7 +28,7 @@ In Azure, the term _resource_ refers to an entity managed by Azure. For example,
 
 ## What is an Azure resource group?
 
-Each resource in Azure must belong to a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). A resource group is simply a logical construct that groups multiple resources together so they can be managed as a single entity. For example, resources that share a similar lifecycle, such as the resources for an [n-tier application](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) may be created or deleted as a group.
+Each resource in Azure must belong to a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). A resource group is simply a logical construct that groups multiple resources together so they can be managed as a single entity _based on lifecycle and security_. For example, resources that share a similar lifecycle, such as the resources for an [n-tier application](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) may be created or deleted as a group. Put another way: everything that is born together, gets managed together, and deprecates together, goes together in a resource group.
 
 ![Diagram of a resource group containing a resource](../../_images/govern/design/governance-1-10.png)
 *Figure 2 - A resource group contains a resource.*
@@ -37,7 +37,7 @@ Resource groups and the resources they contain are associated with an Azure **su
 
 ## What is an Azure subscription?
 
-An Azure subscription is similar to a resource group in that it's a logical construct that groups together resource groups and their resources. However, an Azure subscription is also associated with the controls used by Azure Resource Manager. What does this mean? Take a closer look at Azure Resource Manager to learn about the relationship between it and an Azure subscription.
+An Azure subscription is similar to a resource group in that it's a logical construct that groups together resource groups and their resources. However, an Azure subscription is also associated with the controls used by Azure Resource Manager. Take a closer look at Azure Resource Manager to learn about the relationship between it and an Azure subscription.
 
 ![Diagram of an Azure subscription](../../_images/govern/design/governance-1-11.png)
 *Figure 3 - An Azure subscription.*

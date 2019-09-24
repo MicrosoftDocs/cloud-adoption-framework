@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: How can a CISO prepare for the cloud
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/03/2018
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern

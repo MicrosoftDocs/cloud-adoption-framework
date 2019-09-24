@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: What security guidance does Microsoft provide?
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -13,9 +13,9 @@ ms.custom: governance
 
 <!-- markdownlint-disable MD026 -->
 
-# What security guidance does Microsoft provide?
+# Microsoft Security Guidance
 
-## Security guidance and tools
+## Tools
 
 Microsoft introduced the [Service Trust Platform](https://servicetrust.microsoft.com) and Compliance Manager to help with the following:
 
@@ -47,7 +47,7 @@ These tools are designed to help organizations meet complex compliance obligatio
 
 ## Unique intelligent insights
 
-As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats.
+As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats. [Read More](https://docs.microsoft.com/azure/security-center/security-center-intro)
 
 ## Azure threat intelligence
 

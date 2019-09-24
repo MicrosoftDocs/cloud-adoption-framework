@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Guidance for configuring Azure governance controls for multiple teams, multiple workloads, and multiple environments.
 author: alexbuckgit
 ms.author: abuck
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -21,16 +21,17 @@ The requirements are:
   - The individual in your organization responsible for ownership of **subscriptions**.
   - The individual in your organization responsible for the **shared infrastructure resources** used to connect your on-premises network to an Azure virtual network.
   - Two individuals in your organization responsible for managing a **workload**.
-- Support for multiple **environments**. An environment is a logical grouping of resources, such as virtual machines, virtual networking, and network traffic routing services. These groups of resources have similar management and security requirements and are typically used for a specific purpose such as testing or production. In this example, the requirement is for three environments:
+- Support for multiple **environments**. An environment is a logical grouping of resources, such as virtual machines, virtual networking, and network traffic routing services. These groups of resources have similar management and security requirements and are typically used for a specific purpose such as testing or production. In this example, the requirement is for four environments:
   - A **shared infrastructure environment** that includes resources shared by workloads in other environments. For example, a virtual network with a gateway subnet that provides connectivity to on-premises.
   - A **production environment** with the most restrictive security policies. May include internal or external facing workloads.
-  - A **development environment** for proof-of-concept and testing work. This environment has security, compliance, and cost policies that differ from those in the production environment.
+  - A **not production environment** for development and testing work. This environment has security, compliance, and cost policies that differ from those in the production environment. In Azure, this takes the form of an Enterprise Dev/Test subscription.
+  - A **sandbox environment** for proof of concept and education purposes. This environment is typically assigned per employee participating in development activities and has strict procedural and operational security controls in place to prevent corporate data from landing here. In Azure, these take the form of Visual Studio subscriptions. These subscriptions should also _not_ be tied to the enterprise Azure Active Directory.
 - A **permissions model of least privilege** in which users have no permissions by default. The model must support the following:
-  - A single trusted user at the subscription scope with permission to assign resource access rights.
-  - Each workload owner is denied access to resources by default. Resource access rights are granted explicitly by the single trusted user at the subscription scope.
-  - Management access for the shared infrastructure resources limited to the shared infrastructure owner.
-  - Management access for each workload restricted to the workload owner.
-  - The enterprise does not want to have to manage roles independently in each of the three environments, and therefore requires the use of only [built-in roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) available in Azure's role-based access control (RBAC). If the enterprise used custom RBAC roles, an additional process would be needed to synchronize custom roles across the three environments.
+  - A single trusted user (a quasi service account) at the subscription scope with permission to assign resource access rights.
+  - Each workload owner is denied access to resources by default. Resource access rights are granted explicitly by the single trusted user at the resource group scope.
+  - Management access for the shared infrastructure resources limited to the shared infrastructure owners.
+  - Management access for each workload restricted to the workload owner (in production) and increasing levels of control as development increases from Dev to Test to Stage to Prod.
+  - The enterprise does not want to have to manage roles independently in each of the three main environments, and therefore requires the use of only [built-in roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) available in Azure's role-based access control (RBAC). If the enterprise absolutely requires custom RBAC roles, additional processes would be needed to synchronize custom roles across the three environments.
 - Cost tracking by workload owner name, environment, or both.
 
 ## Identity management
@@ -49,7 +50,7 @@ When your organization signed up for an Azure account, at least one Azure **acco
 The user identities for both the Azure Account Owner and the Azure AD global administrator are stored in a highly secure identity system that is managed by Microsoft. The Azure Account Owner is authorized to create, update, and delete subscriptions. The Azure AD global administrator is authorized to perform many actions in Azure AD, but for this design guide you'll focus on the creation and deletion of user identity.
 
 > [!NOTE]
-> Your organization may already have an existing Azure AD tenant if there's an existing Office 365 or Intune license associated with your account.
+> Your organization may already have an existing Azure AD tenant if there's an existing Office 365, Intune, or Dynamics license associated with your account.
 
 The Azure Account Owner has permission to create, update, and delete subscriptions:
 
@@ -131,11 +132,11 @@ If you compare each example to the requirements, you'll see that both examples s
 
 Now that you've designed a permissions model of least privilege, let's move on to take a look at some practical applications of these governance models. Recall from the requirements that you must support the following three environments:
 
-1. **Shared infrastructure:** A single group of resources shared by all workloads. These are resources such as network gateways, firewalls, and security services.
-2. **Development:** Multiple groups of resources representing multiple nonproduction ready workloads. These resources are used for proof-of-concept, testing, and other developer activities. These resources may have a more relaxed governance model to enable increased developer agility.
-3. **Production:** Multiple groups of resources representing multiple production workloads. These resources are used to host the private and public facing application artifacts. These resources typically have the tightest governance and security models to protect the resources, application code, and data from unauthorized access.
+1. **Shared infrastructure:** A group of resources shared by all workloads. These are resources such as network gateways, firewalls, and security services.
+2. **Production:** Multiple groups of resources representing multiple production workloads. These resources are used to host the private and public facing application artifacts. These resources typically have the tightest governance and security models to protect the resources, application code, and data from unauthorized access.
+3. **Not Production:** Multiple groups of resources representing multiple nonproduction ready workloads. These resources are used for development and testing These resources may have a more relaxed governance model to enable increased developer agility. Security within these groups should increase the closer to "production" an application development process gets.
 
-For each of these three environments, there is a requirement to track cost data by **workload owner**, **environment**, or both. That is, you'll want to know the ongoing cost of the **shared infrastructure**, the costs incurred by individuals in both the **development** and **production** environments, and finally the overall cost of **development** and **production**.
+For each of these three environments, there is a requirement to track cost data by **workload owner**, **environment**, or both. That is, you'll want to know the ongoing cost of the **shared infrastructure**, the costs incurred by individuals in both the **not-production** and **production** environments, and finally the overall cost of **not-production** and **production**.
 
 You have already learned that resources are scoped to two levels: **subscription** and **resource group**. Therefore, the first decision is how to organize environments by **subscription**. There are only two possibilities: a single subscription, or, multiple subscriptions.
 

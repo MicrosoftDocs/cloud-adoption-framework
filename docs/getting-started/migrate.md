@@ -79,7 +79,7 @@ As depicted in the image above, this framework aligns strategic decisions to a s
 - **[Ready](../ready/index.md):** Preparing the business, culture, people, and environment for coming changes leads to success in each effort and accelerates implementation and change projects.
 - **Adopt:** Ensure proper implementation of desired changes, across IT and business processes, to achieve business outcomes.
   - **[Migrate](../migrate/index.md):** Iterative execution of the [cloud implementation methodology](#cloud-implementation) adhering to the tested process of Assess, Migrate, Optimize, and Secure & Manage to create a repeatable process for migrating workloads.
-- **[Operate](../operating-model/index.md):** Define a manageable operating model to guide activities during and long after adoption.
+- **[Operate](../operate/index.md):** Define a manageable operating model to guide activities during and long after adoption.
   - **[Organize](../organize/index.md):** Align people and teams to deliver proper cloud operations and adoption.
   - **[Govern](../govern/index.md):** Align corporate policy to tangible risks, mitigated through policy, process, and cloud-based governance tooling.
   - **[Manage](../manage/index.md):** Expand IT operations to ensure cloud-based solutions can be operated through secure, cost effective processes using modern, cloud-first operations tools.

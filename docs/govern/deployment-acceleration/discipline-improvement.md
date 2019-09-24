@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Deployment Acceleration discipline improvement
 author: alexbuckgit
 ms.author: abuck
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -47,6 +47,7 @@ This phase of governance maturity bridges the divide between business outcomes a
 
 - For new cloud-based applications, introduce fully automated deployments early in the development process. This investment will improve the reliability of your testing processes and ensure consistency across your development, QA, and production environments.
 - Store all deployment artifacts such as deployment templates or configuration scripts using a source-control platform such as GitHub or Azure DevOps.
+- Store all secrets, passwords, certificates, and connection strings in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault)
 - Consider a pilot test before implementing your [Deployment Acceleration toolchain](./toolchain.md), making sure it streamlines your deployments as much as possible. Apply feedback from pilot tests during the predeployment phase, repeating as needed.
 - Evaluate the logical and physical architecture of your applications, and identify opportunities to automate the deployment of application resources or improve portions of the architecture using other cloud-based resources.
 - Update the Architecture Guidelines document to include deployment and user adoption plans, and distribute to key stakeholders.

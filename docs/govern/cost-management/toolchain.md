@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cost Management tools in Azure
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -26,6 +26,6 @@ The following is a list of Azure native tools that can help mature the policies 
 |Control spending on single resource     | Yes - manual sizing         | Yes         | No         | Yes         |
 |Enforce spending across multiple resources    | No         | Yes         | No         | Yes         |
 |Enforce accounting metadata on resources    | No         | No         | No         | Yes         |
-|Monitor and detect trends     | Yes - limited         | Yes        | Yes         | No         |
+|Monitor and detect trends     | Yes          | Yes        | Yes         | No         |
 |Detect spending anomalies     | No         | Yes        | Yes         | No        |
 |Socialize deviations     | No        | Yes        | Yes        | No        |

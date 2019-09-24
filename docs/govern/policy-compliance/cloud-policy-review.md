@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to conduct a cloud policy review.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -26,7 +26,7 @@ As companies mature corporate IT policies, dependencies on past technical decisi
 Cloud transformations create a natural inflection point to reconsider the legacy policy decisions of the past. Technical capabilities and default processes change considerably in the cloud, as do the inherit risks. Using the prior example, the tape backup policy stemmed from the risk of a single point of failure by keeping data in one location and the business need to minimize the risk profile by mitigating this risk. In a cloud deployment, there are several options that deliver the same risk mitigation, with much lower recovery time objectives (RTO). For example:
 
 - A cloud-native solution could enable geo-replication of the Azure SQL Database.
-- A hybrid solution could use Azure Site Recovery to replicate an IaaS workload to multiple datacenters.
+- A hybrid solution could use Azure Site Recovery to replicate an IaaS workload to Azure.
 
 When executing a cloud transformation, policies often govern many of the tools, services, and processes available to the cloud adoption teams. If those policies are based on legacy technologies, they may hinder the team's efforts to drive change. In the worst case, important policies are entirely ignored by the migration team to enable workarounds. Neither is an acceptable outcome.
 
@@ -38,8 +38,8 @@ For each of these disciplines, the review process follows these steps:
 
 1. Review existing on-premises policies related to the specific discipline, looking for two key data points: legacy dependencies and identified business risks.
 2. Evaluate each business risk by asking a simple question: "Does the business risk still exist in a cloud model?"
-3. If the risk still exists, rewrite the policy by documenting the necessary mitigation, not the technical solution.
-4. Review the updated policy with the cloud adoption teams to understand potential solutions to the required mitigation.
+3. If the risk still exists, rewrite the policy by documenting the necessary business mitigation, not the technical solution.
+4. Review the updated policy with the cloud adoption teams to understand potential technical solutions to the required mitigation.
 
 ## Example of a policy review for a legacy policy
 
@@ -50,6 +50,7 @@ To provide an example of the process, let's again use the tape backup policy in 
   - An assumed business risk associated with the storage of backups in the same physical location as the production equipment.
 - Does the risk still exist? Yes. Even in the cloud, a dependence on a single facility does create some risk. There is a lower probability of this risk affecting the business than was present in the on-premises solution, but the risk still exists.
 - Rewrite of the policy. In the case of a datacenter-wide disaster, there must exist a means of restoring production systems within 24 hours of the outage in a different datacenter and different geographic location.
+  - It is also important to consider that the timeline specified in the above requirement may have been set by technical constraints that are no longer present in the cloud. Make sure to understand the technical constraints and capabilities of the cloud before simply applying a legacy RTO/RPO.
 - Review with the cloud adoption teams. Depending on the solution being implemented, there are multiple means of adhering to this Resource Consistency policy.
 
 ## Next steps

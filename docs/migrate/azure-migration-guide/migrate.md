@@ -191,6 +191,14 @@ For more information, see:
 
 - [Overview of Database Experimentation Assistant](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-overview)
 
+## Cosmos DB Data Migration Tool
+
+Azure Cosmos DB Data Migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The Data Migration tool can also be used when migrating from a single partition collection to a multi-partition collection for the SQL API.
+
+For more information, see:
+
+- [Cosmos DB Data Migration Tool](https://docs.microsoft.com/en-us/azure/cosmos-db/import-data)
+
 # [Third-party migration tools](#tab/third-party-tools)
 
 Several third-party migration tools and ISV services can assist you with the migration process. Each offers different benefits and strengths. These tools include:
@@ -219,16 +227,28 @@ Movere is a discovery solution that provides the data and insights needed to pla
 
 [Learn more](https://www.movere.io)
 
+## Cosmos DB Partners
+
+You can choose from a variety of experienced systems integrator partners and tools to support your Azure Cosmos DB migrations for your NoSQL database requirements.
+
+[Learn more](https://docs.microsoft.com/en-us/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
+
 Visit the [Azure Migration Center](https://azure.microsoft.com/migration/support) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
+
+Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) to see a range of database migration options and step-by-step guidance with native and partners.
 
 # [Project management tools](#tab/project-management-tools)
 
-Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, we think it's important that you use a project management tool. There are many different tools available and project managers in your organization may already have a favorite. Microsoft offers the following project management tools, which can work together to provide broader capabilities:
+Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, we think it's important that you use a project management tool. There are many different tools available and project managers in your organization may already have a favorite.
+
+Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using [these instructions](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/template). You can then modify the template to reflect the [workloads](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/workloads) and [assets](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/assets) to be migrated.
+
+Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 
 - [Microsoft Planner](https://tasks.office.com): A simple, visual way to organize teamwork.
 - [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and Portfolio Management, Resource Capacity Management, Financial Management, Timesheet and Schedule Management.
 - [Microsoft Teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates Planner and other tools to improve collaboration.
-- [Azure DevOps](https://dev.azure.com): Using Azure DevOps, you can manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
+- [Azure DevOps](https://dev.azure.com): The Cloud Adoption Framework planing template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
 These are not the only tools available. Many other third-party tools are widely used in the project management community.
 

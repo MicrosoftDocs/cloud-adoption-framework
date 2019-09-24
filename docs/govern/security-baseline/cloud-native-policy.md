@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cloud-Native Security Baseline policy
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -16,7 +16,7 @@ ms.custom: governance
 [Security Baseline](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on general security topics including protection of the network, digital assets, data, etc. As outlined in the [policy review guide](../policy-compliance/cloud-policy-review.md), the Cloud Adoption Framework includes three levels of **sample policy**: Cloud-Native, Enterprise, and Cloud Design Principle Compliant for each of the disciplines. This article discusses the Cloud-Native sample policy for the Security Baseline Discipline.
 
 > [!NOTE]
-> Microsoft is in no position to dictate corporate or IT policy. This article is intended to help you prepare for an internal policy review. It is assumed that this sample policy will be extended, validated, and tested against your corporate policy before attempting to use it. Any use of this sample policy, as is, is discouraged.
+> Microsoft is in no position to dictate corporate or IT policy. This article will help you prepare for an internal policy review. It is assumed that this sample policy will be extended, validated, and tested against your corporate policy before attempting to use it. Any use of this sample policy as-is is discouraged.
 
 ## Policy alignment
 
@@ -49,10 +49,10 @@ Network control includes the configuration, management, and securing of network 
 
 A cloud-native policy for network controls may include requirements like the following:
 
-- Hybrid connections to on-premises resources (While technically possible in Azure), might not be allowed in a cloud-native policy. Should a hybrid connection prove necessary, a more robust Enterprise Security Policy sample would be a more relevant reference.
+- Hybrid connections to on-premises resources, might not be allowed in a cloud-native policy. Should a hybrid connection prove necessary, a more robust Enterprise Security Policy sample would be a more relevant reference.
 - Users can establish secure connections to and within Azure using virtual networks and network security groups.
-- Native Windows Azure Firewall protects hosts from malicious network traffic by limited port access. A good example of this policy is a requirement to block (or not enable) traffic directly to a VM over RDP - TCP/UDP port 3389.
-- Services like the Azure Application Gateway web application firewall (WAF) and Azure DDoS Protection safeguard applications and ensure availability for virtual machines running in Azure. These features should not be disabled or misused.
+- Native Windows Azure Firewall protects hosts from malicious network traffic by limited port access. A good example of this policy is a requirement to block (or not enable) traffic directly to a VM over SSH/RDP.
+- Services like the Azure Application Gateway web application firewall (WAF) and Azure DDoS Protection safeguard applications and ensure availability for virtual machines running in Azure. These features should not be disabled.
 
 ### Data protection
 
@@ -60,8 +60,8 @@ One of the keys to data protection in the cloud is accounting for the possible s
 
 - Data encryption controls are built into services from virtual machines to storage and SQL Database.
 - As data moves between clouds and customers, it can be protected using industry-standard encryption protocols.
-- Azure Key Vault enables users to safeguard and control cryptographic keys and other secrets used by cloud apps and services.
-- Azure Information Protection will help classify, label, and protect your sensitive data in apps.
+- Azure Key Vault enables users to safeguard and control cryptographic keys, passwords, connection strings and certificates used by cloud apps and services.
+- Azure Information Protection will help classify, label, and protect your sensitive data within apps.
 
 While these features are built into Azure, each of the above requires configuration and could increase costs. Alignment of each cloud-native feature with a [data classification strategy](../policy-compliance/data-classification.md) is highly suggested.
 
@@ -73,6 +73,7 @@ Security monitoring is a proactive strategy that audits your resources to identi
 - Continuous monitoring and security assessments to ensure compliance and remediate any vulnerabilities.
 - Interactive tools and contextual threat intelligence for streamlined investigation.
 - Extensive logging and integration with existing security information.
+- Reduces the need for expensive, non-integrated, one off security solutions.
 
 ### Extending cloud-native policies
 
@@ -82,7 +83,9 @@ Even with this investment in a cloud-native Security Baseline, it is suggested t
 
 - **Secure VMs.** Security should be every organization's top priority, and doing it effectively requires several things. You must assess your security state, protect against security threats, and then detect and respond rapidly to threats that occur.
 - **Protect VM contents.** Setting up regular automated backups is essential to protect against user errors. This isn’t enough, though; you must also make sure that your backups are safe from cyberattacks and are available when you need them.
-- **Monitor VMs and applications.** This pattern encompasses several tasks, including getting insight into the health of your VMs, understanding interactions among them, and establishing ways to monitor the applications these VMs run. All of these tasks are essential in keeping your applications running around the clock.
+- **Monitor applications.** This pattern encompasses several tasks, including getting insight into the health of your VMs, understanding interactions among them, and establishing ways to monitor the applications these VMs run. All of these tasks are essential in keeping your applications running around the clock.
+- **Secure and Audit data access.** Organizations should audit all data access and leverage advanced machine learning capabilities to call out deviations from regular access patterns.
+- **Failover practice.** Cloud operations that have low tolerances for failure must be able to fail over and/or recovery from a cybersecurity or platform incident. These procedures must not simply be documented, but should be practiced quarterly.
 
 ## Next steps
 

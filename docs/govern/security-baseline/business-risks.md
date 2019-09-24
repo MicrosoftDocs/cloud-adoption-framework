@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Security Baseline motivations and business risks
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -17,7 +17,7 @@ This article discusses the reasons that customers typically adopt a Security Bas
 
 <!-- markdownlint-disable MD026 -->
 
-## Is a Security Baseline relevant?
+## Security Baseline relevancy
 
 Security is a key concern for any IT organization. Cloud deployments face many of the same security risks as workloads hosted in traditional on-premises datacenters. However, the nature of public cloud platforms, with a lack of direct ownership of the physical hardware storing and running your workloads, means cloud security requires its own policy and processes.
 

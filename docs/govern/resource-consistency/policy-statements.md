@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Resource Consistency sample policy statements
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -69,8 +69,8 @@ The following sample policy statements address common business risks related to 
 
 **Policy statement:** The following policies will be implemented:
 
-- Governance tooling must validate that all assets related to mission-critical applications or protected data are included in monitoring for resource depletion and optimization.
-- Governance tooling must validate that the appropriate level of logging data is being collected for all mission-critical applications or protected data.
+- Governance tooling must validate that all assets are included in monitoring for resource depletion, security, compliance, and optimization.
+- Governance tooling must validate that the appropriate level of logging data is being collected for all applications and data.
 
 **Potential design options:** [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) is the default monitoring service in Azure, and consistent monitoring can be enforced via [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints) when deploying resources.
 
@@ -80,7 +80,7 @@ The following sample policy statements address common business risks related to 
 
 **Policy statement:** All mission-critical applications and protected data must have backup and recovery solutions implemented to minimize business impact of outages or system failures.
 
-**Potential design options:** The [Azure Site Recovery] service provides backup, recovery, and replication capabilities intended to minimize outage duration in business continuity and disaster recovery (BCDR) scenarios.
+**Potential design options:** The [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) service provides backup, recovery, and replication capabilities that minimize outage duration in business continuity and disaster recovery (BCDR) scenarios.
 
 ## Next steps
 

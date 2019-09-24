@@ -3,7 +3,7 @@ title: "Governance in the Microsoft Cloud Adoption Framework for Azure"
 description: Learn about governance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/11/2019
+ms.date: 09/11/2019
 ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: govern

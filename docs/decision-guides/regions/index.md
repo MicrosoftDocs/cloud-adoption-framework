@@ -1,32 +1,71 @@
 ---
-title: "Addressing the complexity of migrating multiple geographical regions"
+title: "Regions decision guide"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Addressing the complexity of migrating multiple geographical regions.
-author: BrianBlanchard
-ms.author: brblanch
-ms.date: 04/04/2019
+description: Learn about cloud platform region selections.
+author: doodlemania2
+ms.author: dermar
+ms.date: 09/19/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
+ms.subservice: decision-guide
+ms.custom: governance
 ---
 
-# Multiple geographic regions
+# Azure regions
 
-When businesses operate in multiple geographic regions, additional complexity can be introduced into cloud migration efforts. These complexities manifest in three primary forms: asset distribution, user access profiles, and compliance requirements. Before addressing complexities related to multiple regions, it's important to understand the extent of the potential complexity.
+Azure is comprised of many regions around the world. Each of the [Azure regions](https://azure.microsoft.com/global-infrastructure/regions) have a specific set of characteristics that make selecting which region to use incredibly important.
 
-## General scope expansion
+1. **Available services:** Services that are deployed to each region differ based on a variety of factors. You will need to select a region to deploy your workload to that contains your desired service. For more information about which services are available in which regions, see [Products available by region](https://azure.microsoft.com/global-infrastructure/services).
+1. **Capacity:** Each region has a maximum capacity. While this is typically abstracted away from the end user, it can impact which types of subscriptions are able to deploy which types of services and under what circumstances. This is different that subscription quotas. If you are planning a massive datacenter migration to Azure, you may want to consult with your local Azure field team or account manager to confirm you are able to deploy at the scale necessary.
+1. **Constraints:** Certain constraints are placed on the deployment of services in certain regions. For example, some regions are only available as a backup or failover target. Other constraints that are important to note are [data sovereignty requirements](https://azure.microsoft.com/global-infrastructure/geographies).
+1. **Sovereignty:** There are specific regions dedicated to specific sovereign entities. While all regions are Azure regions, these sovereign regions are completely isolated from the rest of Azure, are not necessarily managed by Microsoft, and may carry customer type constraints. These sovereign regions are:
+    1. [Azure China](https://azure.microsoft.com/global-infrastructure/china)
+    1. [Azure Germany](https://azure.microsoft.com/global-infrastructure/germany) (deprecating in favor of standard Azure German regions (non-sovereign))
+    1. [Azure US Government](https://azure.microsoft.com/global-infrastructure/government)
+    1. Note: there are two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia) that are managed by Microsoft but are provided for the Australian government and its customers and contractors, and therefore carry similar client constraints to the other sovereign clouds.
 
-The following approach can help assess the potential challenges and establish a general course of action:
+## Operating in multiple geographic regions
+
+When businesses operate in multiple geographic regions, while essential for resiliency, additional complexity can be introduced. These complexities manifest in four primary forms:
+
+- Asset distribution
+- User access profiles
+- Compliance requirements
+- Regional resiliency
+
+As we consider the above complexities further, you will begin to understand how important regional selection is to your overall cloud adoption strategy. Let's start with network considerations.
+
+## Networking considerations
+
+Any robust cloud deployment requires a well-considered network that takes into account Azure regions. After considering the above characteristics for which regions to deploy to, the network must be deployed. While an exhaustive discussion on networking is beyond the scope of this article, some considerations must be accounted for:
+
+1. Azure regions are deployed in pairs. In the event of a catastrophic failure of a region, another region within the same geopolitical boundary* is designated as its paired region. Thought should be given to deployment into paired regions as a primary and secondary resiliency strategy. *Azure Brazil is a notable exception whose paired region happens to be US South Central. For more, see [here](https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions).
+    1. Azure Storage supports [Geographically Redundant Storage (GRS)](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs) which means three copies of your data are stored within your primary region and three additional copies are stored in the paired region. You cannot change the storage pairing for GRS.
+    1. Services that rely on Azure Storage GRS can take advantage of this paired region capability. To do so, your applications and the network must be oriented to support that.
+    1. If you don't plan to leverage GRS to support your regional resiliency needs, it is suggested that you do _NOT_ leverage the paired region as your secondary. In the event of a regional failure, there will be intense pressure on resources in the paired region as resources migrate. Avoiding that pressure can provide you with additional speed during your recovery by recovering to an alternate site.
+    > [!WARNING]
+    > Do not attempt to leverage Azure GRS for VM backups or recovery. Instead, leverage [Azure Backup](https://azure.microsoft.com/services/backup) and [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery) along with [Managed Disks](https://docs.microsoft.com/azure/virtual-machines/windows/managed-disks-overview) to support your IaaS workload resiliency.
+2. Azure Backup and Azure Site Recovery work in tandem with your network design to facilitate regional resiliency for your IaaS and data backup needs. Make sure the network is optimized so data transfers remain on the Microsoft backbone and leverage [VNet Peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview) if possible. Some larger organizations with global deployments may instead use [ExpressRoute Premium](https://docs.microsoft.com/azure/expressroute/expressroute-introduction) to route traffic between regions which can save regional egress charges.
+3. Azure resource groups are regional specific constructs. It is normal, however, for resources within a resource group to span multiple regions. When doing so, it is important to consider that in the event of a regional failure, control plane operations against a resource group will fail in the impacted region, even though the resources in other regions (within that resource group) will continue to operate. This can impact both your network and your resource group design.
+4. Many PaaS services within Azure support [Service Endpoints](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview) and/or [Private Link](https://docs.microsoft.com/azure/private-link/private-link-overview). Both of these solutions impact your network considerations substantially when considering regional resiliency, migration and governance.
+5. Many PaaS services rely on their own regional resiliency solutions. For example, Azure SQL Database allows you to easily replicate to N additional regions as does CosmosDB. Some services carry no region dependency like Azure DNS. As you consider which services you will be leveraging in your adoption process, make sure to clearly understand the failover capabilities and recovery steps that may be required for each Azure service.
+6. In addition to deploying into multiple regions to support disaster recovery, many organizations choose to deploy in an Active-Active pattern so that no failover is necessary. This has the added benefit of providing global load balancing and additional fault tolerance and network performance boosts. To take advantage of this pattern, your application(s) must support running Active-Active in multiple regions.
+
+> [!WARNING]
+> Azure regions are highly available constructs with SLAs applied to the services running in them. However, you should never take a single region dependency on mission critical applications. Always plan for regional failure and practice recovery and mitigation steps.
+
+After considering the network topology that will be required to keep you up and running, additional documentation and process alignment will be necessary. The following approach can help assess the potential challenges and establish a general course of action:
 
 - Consider a more robust readiness and governance implementation.
-- Inventory the affected geographies. Compile a list of the regions and countries that are affected by the cloud migration.
+- Inventory the affected geographies. Compile a list of the regions and countries that are impacted.
 - Document data sovereignty requirements: Do the countries identified have compliance requirements that govern data sovereignty?
 - Document the user base: Will employees, partners, or customers in the identified country be affected by the cloud migration?
 - Document datacenters and assets: Are there assets in the identified country that might be included in the migration effort?
+- Document regional SKU availability and failover requirements.
 
 Align changes across the migration process to address the initial inventory.
 
-### Documenting complexity
+## Documenting complexity
 
 The following table can aid in documenting the findings from the steps above:
 
@@ -39,7 +78,7 @@ The following table can aid in documenting the findings from the steps above:
 
 <!-- markdownlint-disable MD026 -->
 
-### Why is data sovereignty relevant?
+## Data sovereignty relevancy
 
 Around the world, government organizations have begun establishing data sovereignty requirements, like General Data Protection Regulation (GDPR). Compliance requirements of this nature often require localization within a specific region or even within a specific country to protect their citizens. In some cases, data pertaining to customers, employees, or partners must be stored on a cloud platform within the same region as the end user.
 
@@ -63,14 +102,10 @@ The location of existing datacenters can affect a migration strategy. THe follow
 
 This approach is driven by quantifiable information. As such, the following approach will follow a data-driven model for addressing the global migration complexities.
 
-## Suggested prerequisites
-
-It is suggested that the cloud adoption team begin with the migration of a simple workload using the [Azure migration guide](../azure-migration-guide/index.md), before attempting to address global scale. This will ensure the team is familiar with the general process of cloud migration prior to attempting a more complex migration scenario.
-
 When scope for a migration includes multiple regions, the following readiness considerations should be evaluated by the cloud adoption team:
 
 - Data sovereignty might require localization of some assets, but there are a many assets that may not be governed by those compliance constraints. Things like logging, reporting, network routing, identity, and other central IT services may be eligible to be hosted as shared services across multiple subscriptions or even multiple regions. It is advised that the cloud adoption team evaluate a share service model to those services, as outlined in the [reference architecture for a hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services)
-- When deploying multiple instances of similar environments, an environment factory could create consistency, improve governance, and accelerate deployment. The [large enterprise governance journey](../../govern/guides/complex/index.md) establishes an approach that creates an environment factory that scales across multiple regions.
+- When deploying multiple instances of similar environments, an environment factory could create consistency, improve governance, and accelerate deployment. The [large enterprise governance journey](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
 
 Once the team is comfortable with the baseline approach and readiness is aligned, there are a few data-driven prerequisites to consider:
 
@@ -136,10 +171,3 @@ Addressing global complexity during optimization and promotion could require dup
 **Promotion flights:** Often promotion happens as a single activity, rerouting production traffic to the migrated workloads. In the case of global release efforts, it is advised that promotion be delivered in flights (or predefined collections of users). This allows the cloud strategy team and the cloud adoption team to better observe performance and improve support of users in each region. Promotion flights are often controlled at the networking level by changing the routing of specific IP ranges from the source workload assets to the newly migrated assets. After a specified collection of end users have been migrated, the next group can be rerouted.
 
 **Flight optimization:** One of the benefits of promotion flights, is that it allows for deeper observations and additional optimization of the deployed assets. After a brief period of production usage by the first flight, additional refinement of the migrated assets is suggested, when allowed by IT operation procedures.
-
-## Next steps
-
-A separate point of complexity, often related to multiple regions, is the need to prepare for the migration of [multiple datacenters](./multiple-datacenters.md). While similar in nature, this complexity deals with the volume of assets to be migrated when moving multiple datacenters to the cloud.
-
-> [!div class="nextstepaction"]
-> [Migrating multiple datacenters](./multiple-datacenters.md)
