@@ -12,6 +12,10 @@
     - name: Plan
       tocHref: /azure/cloud-adoption-framework/plan/
       topicHref: /azure/cloud-adoption-framework/plan
+      items:
+      - name: Digital Estate
+        tocHref: /azure/cloud-adoption-framework/digital-estate/
+        topicHref: /azure/cloud-adoption-framework/digital-estate
     - name: Ready 
       tocHref: /azure/cloud-adoption-framework/ready/
       topicHref: /azure/cloud-adoption-framework/ready
@@ -36,3 +40,10 @@
       - name: Manage
         tocHref: /azure/cloud-adoption-framework/manage/
         topicHref: /azure/cloud-adoption-framework/manage
+    - name: Reference 
+      tocHref: /azure/cloud-adoption-framework/reference/
+      topicHref: /azure/cloud-adoption-framework/reference
+      items:
+      - name: Decision guides 
+        tocHref: /azure/cloud-adoption-framework/decision-guides/
+        topicHref: /azure/cloud-adoption-framework/decision-guides
