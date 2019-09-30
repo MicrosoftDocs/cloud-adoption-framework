@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to set up governance, security, and compliance for your Azure environment.
 author: tvuylsteke
 ms.author: kfollis
-ms.date: 04/09/2019
+ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -33,7 +33,7 @@ To create a blueprint:
 
 ::: zone target="chromeless"
 
-1. Goto **Blueprints - Getting started**.
+1. Go To **Blueprints - Getting started**.
 1. In the **Create a Blueprint** section, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. Enter the **Blueprint name**, and select the appropriate **Definition location**.
@@ -72,8 +72,8 @@ To publish a blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-1. Goto [Blueprints - Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
-1. Select the blueprint you created in the previous steps.
+1. Go to [Blueprints - Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
+1. Select the blueprint definition you created in the previous steps.
 1. Review the blueprint definition and select **Publish blueprint**.
 1. Provide a **Version** (such as _1.0_) and any **Change notes**, then select **Publish**.
 
