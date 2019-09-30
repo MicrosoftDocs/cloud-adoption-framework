@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # Governance, security, and compliance in Azure
 
-As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [Governance Benchmark tool](http://aka.ms/caf/gov/assess) to identify potential gaps in your organization's cloud governance approach. For more information on how to develop governance processes, see the [Cloud Adoption Framework for Azure's governance guidance](../../govern/index.md).
+As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [Governance Benchmark tool](https://cafbaseline.com) to identify potential gaps in your organization's cloud governance approach. For more information on how to develop governance processes, see the [Cloud Adoption Framework for Azure's governance guidance](../../govern/index.md).
 
 # [Azure Blueprints](#tab/AzureBlueprints)
 
@@ -33,7 +33,7 @@ To create a blueprint:
 
 ::: zone target="chromeless"
 
-1. Go To **Blueprints - Getting started**.
+1. Go to **Blueprints - Getting started**.
 1. In the **Create a Blueprint** section, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. Enter the **Blueprint name**, and select the appropriate **Definition location**.
@@ -160,6 +160,7 @@ To learn more, see:
 ::: zone-end
 
 ::: zone target="chromeless"
+
 ## Action
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0]" submitText="Explore Azure Security Center" :::
