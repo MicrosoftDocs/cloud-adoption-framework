@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Establish team structures
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/10/2019
+ms.date: 09/27/2019
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: organize
