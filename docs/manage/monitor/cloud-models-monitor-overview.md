@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
 author: MGoedtel
 ms.author: magoedte
-ms.date: 09/10/2019
+ms.date: 10/03/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -62,6 +62,8 @@ The following table summarizes the requirements that Azure Monitor and System Ce
 |Limited connectivity - controlled internet access | **Yes** | **Yes** |
 |Limited connectivity - frequently disconnected | **Yes** | **Yes** |
 |Configurable health monitoring | **No** | **Yes** |
+| Web app availability test (isolated network) | **Yes**  | **Yes, limited**<br> Azure Monitor has limited support in this area and requires custom firewall exceptions. | 
+| Web app availability test (globally distributed) | **No** | **Yes** |
 |Monitor VM workloads | **Yes, limited**<br> Can collect IIS and SQL Server error logs, Windows events, and performance counters. Requires creating custom queries, alerts, and visualizations. | **Yes**<br> Supports monitoring most of the server workloads with available management packs. Requires either the Log Analytics Windows agent or Operations Manager agent on the VM, reporting back to the management group on the corporate network.|
 |Monitor Azure IaaS | **Yes** | **Yes**<br> Supports monitoring most of the infrastructure from the corporate network. Tracks availability state, metrics, and alerts for Azure VMs, SQL, and storage via the Azure management pack.|
 |Monitor Azure PaaS | **Yes** | **Yes, limited**<br> Based on what's supported in the Azure management pack. | 
