@@ -424,7 +424,7 @@
         items:
         - name: Overview
           href: govern/guides/index.md
-        - name: Small-to-medium enterprise guide
+        - name: Standard enterprise governance guide
           items:
           - name: Overview
             href: govern/guides/standard/index.md
@@ -442,7 +442,7 @@
             href: govern/guides/standard/cost-management-improvement.md
           - name: Multicloud scenarios
             href: govern/guides/standard/multicloud-improvement.md
-        - name: Large enterprise guide
+        - name: Governance guide for complex enterprises
           items:
           - name: Overview
             href: govern/guides/complex/index.md

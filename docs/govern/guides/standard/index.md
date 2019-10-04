@@ -1,7 +1,7 @@
 ---
-title: "Standard Enterprise Governance Guide"
+title: "Standard enterprise governance guide"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Standard Enterprise governance guide
+description: Standard enterprise governance guide
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Standard Enterprise governance guide
+# Standard enterprise governance guide
 
 ## Overview of best practices
 
