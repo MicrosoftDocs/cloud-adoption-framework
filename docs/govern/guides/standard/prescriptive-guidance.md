@@ -1,5 +1,5 @@
 ---
-title: "Standard Enterprise guide: Prescriptive guidance explained"
+title: "Standard enterprise governance guide: Prescriptive guidance explained"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about prescriptive guidance for governance in standard enterprises.
 author: BrianBlanchard
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Standard Enterprise guide: Prescriptive guidance explained
+# Standard enterprise governance guide: Prescriptive guidance explained
 
 The governance guide starts with a set of initial [corporate policies](./initial-corporate-policy.md). These policies are used to establish a governance MVP that reflects [recommended practices](./index.md).
 
