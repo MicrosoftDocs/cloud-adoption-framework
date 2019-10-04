@@ -66,8 +66,6 @@
         href: digital-estate/calculate.md
     - name: Initial organization alignment
       href: plan/initial-org-alignment.md
-    - name: Skills readiness - Adapt roles, skills, and processes
-      href: plan/adapt-roles-skills-processes.md
     - name: Cloud adoption plan
       items: 
       - name: Introduction
@@ -685,8 +683,9 @@
     - name: Cloud Adoption Framework roadmap
       href: reference/roadmap.md
     - name: Decision guides
-      href: decision-guides/index.md
       items:
+      - name: Overview
+        href: decision-guides/index.md
       - name: Subscriptions
         href: decision-guides/subscriptions/index.md
       - name: Identity
@@ -721,8 +720,8 @@
       items:
       - name: Virtual machines
         items:
-          - name: Deploy a basic workload
-            href: infrastructure/virtual-machines/basic-workload.md
+        - name: Deploy a basic workload
+          href: infrastructure/virtual-machines/basic-workload.md
     - name: Cloud Operating Model
       href: reference/cloud-operating-model.md
     - name: Azure enterprise scaffold
