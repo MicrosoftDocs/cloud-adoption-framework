@@ -1,7 +1,7 @@
 ---
-title: "Standard Enterprise guide: Multicloud improvement"
+title: "Standard enterprise governance guide: Multicloud improvement"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Standard Enterprise guide: Multicloud improvement"
+description: "Standard enterprise governance guide: Multicloud improvement"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise guide: Multicloud improvement
+# Standard enterprise governance guide: Multicloud improvement
 
 This article advances the narrative by adding controls for multicloud adoption.
 

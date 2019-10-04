@@ -38,9 +38,11 @@ Assuming that the suggested structure aligns to your cloud adoption plan, the ne
 - What person will be accountable for the defining those governance controls?
 - Are there other capabilities or people that will have accountability or responsibility within the cloud adoption plan?
 
+After you've documented the answers to these questions, you can establish [plans for skills readiness](./adapt-roles-skills-processes.md) to define plans to prepare these people for forthcoming work.
+
 ## Next steps
 
-After you've documented the answers to these questions, continue to the [skills-readiness article](./adapt-roles-skills-processes.md) to define plans for preparing these people for the work to come.
+Learn how to plan for cloud adoption.
 
 > [!div class="nextstepaction"]
-> [Define a skills readiness plan](./adapt-roles-skills-processes.md)
+> [Plan for cloud adoption](./plan-intro.md)

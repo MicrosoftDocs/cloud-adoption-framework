@@ -1,7 +1,7 @@
 ---
-title: "Standard Enterprise guide: Initial corporate policy behind the governance strategy"
+title: "Standard enterprise governance guide: Initial corporate policy behind the governance strategy"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Standard Enterprise guide: Initial corporate policy behind the governance strategy"
+description: "Standard enterprise governance guide: Initial corporate policy behind the governance strategy"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Standard Enterprise guide: Initial corporate policy behind the governance strategy
+# Standard enterprise governance guide: Initial corporate policy behind the governance strategy
 
 The following corporate policy defines an initial governance position, which is the starting point for this guide. This article defines early-stage risks, initial policy statements, and early processes to enforce policy statements.
 

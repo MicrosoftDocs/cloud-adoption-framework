@@ -105,7 +105,7 @@ This approach is driven by quantifiable information. As such, the following appr
 When scope for a migration includes multiple regions, the following readiness considerations should be evaluated by the cloud adoption team:
 
 - Data sovereignty might require localization of some assets, but there are a many assets that may not be governed by those compliance constraints. Things like logging, reporting, network routing, identity, and other central IT services may be eligible to be hosted as shared services across multiple subscriptions or even multiple regions. It is advised that the cloud adoption team evaluate a share service model to those services, as outlined in the [reference architecture for a hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services)
-- When deploying multiple instances of similar environments, an environment factory could create consistency, improve governance, and accelerate deployment. The [large enterprise governance journey](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
+- When deploying multiple instances of similar environments, an environment factory could create consistency, improve governance, and accelerate deployment. The [governance guide for complex enterprises](../../govern/guides/complex/index.md) establishes an approach that creates an environment that scales across multiple regions.
 
 Once the team is comfortable with the baseline approach and readiness is aligned, there are a few data-driven prerequisites to consider:
 

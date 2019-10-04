@@ -71,27 +71,27 @@ To begin a governance journey, choose one of the two options below. The options 
 
 ### Business characteristics
 
-| Characteristic | Standard Organization                                                                              | Complex Enterprise                                                                                               |
-|--------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Geography (country or geopolitical region) | Customers or staff reside largely in one geography                                                      | Customers or staff reside in multiple geographies or require sovereign clouds.                                                             |
-| Business units affected                    | Business Units that share a common IT infrastructure                                                                                    | Multiple business units that do not share a common IT infrastructure                                                                                        |
-| IT budget                                  | Single IT budget                                                                                        | Budget allocated across business units and currencies                                                                         |
-| IT investments                             | Capital expense-driven investments are planned yearly and usually cover only basic maintenance. | Capital expense-driven investments are planned yearly and often include maintenance and a refresh cycle of three to five years. |
+| Characteristic | Standard Organization | Complex Enterprise |
+|---|---|---|
+| Geography (country or geopolitical region) | Customers or staff reside largely in one geography | Customers or staff reside in multiple geographies or require sovereign clouds. |
+| Business units affected | Business Units that share a common IT infrastructure | Multiple business units that do not share a common IT infrastructure |
+| IT budget | Single IT budget | Budget allocated across business units and currencies |
+| IT investments | Capital expense-driven investments are planned yearly and usually cover only basic maintenance. | Capital expense-driven investments are planned yearly and often include maintenance and a refresh cycle of three to five years. |
 
 ### Current state before adopting cloud governance
 
-| State | Standard Enterprise                                                                               | Complex enterprise                                                                                                          |
-|---------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| Datacenter or third-party hosting providers | Fewer than five datacenters                                                                                  | More than five datacenters                                                                                                   |
-| Networking                                  | No WAN, or 1 &ndash; 2 WAN providers                                                                             | Complex network or global WAN                                                                                             |
-| Identity                                    | Single forest, single domain. | Complex, multiple forests, multiple domains.  |
+| State | Standard Enterprise | Complex enterprise |
+|---|---|---|
+| Datacenter or third-party hosting providers | Fewer than five datacenters | More than five datacenters |
+| Networking | No WAN, or 1 &ndash; 2 WAN providers | Complex network or global WAN |
+| Identity | Single forest, single domain. | Complex, multiple forests, multiple domains. |
 
 ### Desired future state after incremental improvement of cloud governance
 
-| State | Standard Organization                                                                        | Complex Enterprise                                                                                        |
-|----------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Cost Management – cloud accounting           | Showback model. Billing is centralized through IT.                                                | Chargeback model. Billing could be distributed through IT procurement.                                  |
-| Security Baseline – protected data           | Company financial data and IP. Limited customer data. No third-party compliance requirements.     | Multiple collections of customers’ financial and personal data. May need to consider third-party compliance. |
+| State | Standard Organization | Complex Enterprise |
+|---|---|---|
+| Cost Management – cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
+| Security Baseline – protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers’ financial and personal data. May need to consider third-party compliance. |
 
 ## Azure Virtual Datacenter
 
@@ -119,6 +119,6 @@ For more information, visit the [Azure Virtual Datacenter](../../reference/vdc.m
 Choose one of these guides:
 
 > [!div class="nextstepaction"]
-> [Standard governance guide](./standard/index.md)
+> [Standard enterprise governance guide](./standard/index.md)
 >
 > [Governance guide for complex enterprises](./complex/index.md)

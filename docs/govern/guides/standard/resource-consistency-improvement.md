@@ -1,7 +1,7 @@
 ---
-title: "Standard Enterprise guide: Improving Resource Consistency"
+title: "Standard enterprise governance guide: Improving Resource Consistency"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Standard Enterprise guide: Improving Resource Consistency"
+description: "Standard enterprise governance guide: Improving Resource Consistency"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Standard Enterprise guide: Improving Resource Consistency
+# Standard enterprise governance guide: Improving Resource Consistency
 
 This article advances the narrative by adding Resource Consistency controls to support mission-critical apps.
 
