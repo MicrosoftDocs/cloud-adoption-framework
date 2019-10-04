@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
 author: MGoedtel
 ms.author: magoedte
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -57,8 +57,8 @@ The following table summarizes the requirements that Azure Monitor and System Ce
 
 |Requirement | Azure Monitor | Operations Manager |
 |:--|:---|:---|
-|Infrastructure requirements | **No** | **Yes**<br> Requires at a minimum a management server, and a SQL server to host the operational database and the reporting data warehouse database. Becomes more complex when HA/DR are required, machines in multiple sites, un-truested systems, and other complex design considerations.|
-|Limited connectivity - no internet<br> or isolated newtork | **No** | **Yes** | 
+|Infrastructure requirements | **No** | **Yes**<br> Requires at a minimum a management server, and a SQL server to host the operational database and the reporting data warehouse database. Becomes more complex when HA/DR are required, machines in multiple sites, un-trusted systems, and other complex design considerations.|
+|Limited connectivity - no internet<br> or isolated network | **No** | **Yes** | 
 |Limited connectivity - controlled internet access | **Yes** | **Yes** |
 |Limited connectivity - frequently disconnected | **Yes** | **Yes** |
 |Configurable health monitoring | **No** | **Yes** |
@@ -106,7 +106,7 @@ To monitor the workloads running in Azure, you need:
 
 Knowledge is defined in the management pack which describes how to monitor the individual dependencies and components. Both Azure management packs require performing a set of configuration steps in Azure and Operations Manager in order to begin monitoring these resources. 
 
-At the application tier, Operations Manager offers basic application performance monitoring capabilities for some legacy versions of .NET and Java. If certain applications within your hybrid cloud environment operate in an offline or network-isolated mode, such that they can't communicate with a public cloud service, Operations Manager Application Performance Monitoring (APM) may be a viable option for certain limited scenarios. For applications not running on legacy platforms, hosted both on-premises and in any public cloud that allow communication through a firewall (either direct or via a proxy) to Azure, use Azure Monitor Application Insights. This offers deep, code-level monitoring, with first-class support for ASP.NET, ASP.NET Core, Java, JavaScript, and Node.js.
+At the application tier, Operations Manager offers basic application performance monitoring capabilities for some legacy versions of .NET and Java. If certain applications within your hybrid cloud environment operate in an offline or network-isolated mode, such that they can't communicate with a public cloud service, Operations Manager Application Performance Monitoring (APM) may be a viable option for certain limited scenarios. For applications not running on legacy platforms, hosted both on-premises and in any public cloud that allows communication through a firewall (either direct or via a proxy) to Azure, use Azure Monitor Application Insights. This offers deep, code-level monitoring, with first-class support for ASP.NET, ASP.NET Core, Java, JavaScript, and Node.js.
 
 For any web application that can be reached externally, you should enable a type of synthetic transactions known as [availability monitoring]( https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability). It's extremely important to know if your application or a critical HTTP/HTTPS endpoint that your app relies on, is available and responsive. Application Insights availability monitoring allows you to run tests from multiple Azure datacenters, and provide insight into the health of your application from a global perspective.
 
@@ -116,7 +116,7 @@ While Operations Manager is capable of monitoring resources hosted in Azure, the
 
 #### Disadvantage of using Operations Manager by itself
 
-1. Analyzing monitoring data in Operations Manager is commonly performed using pre-defined views defined in management packs that are accessed from the console, from SQL Server Reporting Services (SSRS) reports, or custom views created by the end-user. Performing ad-hoc analysis of the data isn't possible out of the box. Operations Manager reporting is inflexible, the data warehouse which provides long-term retention of the monitoring data doesn't scale or perform well, and expertise in writing T-SQL statements, developing a Power BI solution, or using third-party solutions is required to support requirements for the different personas in the IT organization. 
+1. Analyzing monitoring data in Operations Manager is commonly performed using pre-defined views defined in management packs that are accessed from the console, from SQL Server Reporting Services (SSRS) reports, or custom views created by the end user. Performing ad-hoc analysis of the data isn't possible out of the box. Operations Manager reporting is inflexible, the data warehouse which provides long-term retention of the monitoring data doesn't scale or perform well, and expertise in writing T-SQL statements, developing a Power BI solution, or using third-party solutions is required to support requirements for the different personas in the IT organization. 
 
 2. Alerting in Operations Manager doesn't provide support for complex expressions and include correlation logic in an effort to help reduce alert noise and group alerts together in an effort to show the relationship between them to help identify the root cause of the issue. 
 
