@@ -1,7 +1,7 @@
 ---
 title: "Governance guide for complex enterprises: Multicloud improvement"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Large enterprise guide: Multicloud improvement"
+description: "Governance guide for complex enterprises: Multicloud improvement"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Multicloud improvement
+# Governance guide for complex enterprises: Multicloud improvement
 
 ## Advancing the narrative
 
