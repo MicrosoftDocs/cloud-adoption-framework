@@ -43,7 +43,7 @@ Azure tenant|Azure Active Directory || Enable diagnostic logging, and configure 
 
 ## Hybrid cloud monitoring
 
-For many organizations the cloud must be approached gradually, with the hybrid cloud model the most common first step in the journey. You carefully select the appropriate subset of applications, and infrastructure to begin your migration while avoiding disruption to your business. However, because we offer two monitoring platforms that support this cloud model, IT decision makers are confused as to which one is the best choice to support their business and IT operational goals. We are going to review several factors to address the uncertainty and provide you with an understanding of which platform to consider.
+For many organizations, the cloud must be approached gradually, where the hybrid cloud model is the most common first step in the journey. You carefully select the appropriate subset of applications, and infrastructure to begin your migration while avoiding disruption to your business. However, because we offer two monitoring platforms that support this cloud model, IT decision makers are confused as to which one is the best choice to support their business and IT operational goals. We are going to review several factors to address the uncertainty and provide you with an understanding of which platform to consider.
 
 Some of the key technical aspects to be considered are:
 
