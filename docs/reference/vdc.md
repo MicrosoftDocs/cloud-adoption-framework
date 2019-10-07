@@ -14,9 +14,9 @@ layout: LandingPage
 # Azure Virtual Datacenter
 
 > [!WARNING]
-> Azure Virtual Datacenter has been integrated into the cloud adoption framework. This guidance serves as a strong part of the foundation for the Ready and Governance methodologies within the framework. To support customers in this transition, the following resources have been archived and will be maintained in a seperate github repository.  
+> Azure Virtual Datacenter has been integrated into the Microsoft Cloud Adoption Framework for Azure. This guidance serves as a significant part of the foundation for the Ready and Governance methodologies within the Cloud Adoption Framework. To support customers making this transition, the following resources have been archived and will be maintained in a separate GitHub repository.
 
-## Archived Resources
+## Archived resources
 
 <!-- markdownlint-disable MD033 -->
 
@@ -39,7 +39,7 @@ layout: LandingPage
     <td style="width: 64px; vertical-align: middle;"><a href="https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/archive/vdc/Azure_Virtual_Datacenter_Lift_and_Shift_Guide.pdf"><img src="../_images/vdc/vdc-lift-and-shift.png" alt="Lift and Shift Guide" /></a></td>
     <td>
         <h3><a href="https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/archive/vdc/Azure_Virtual_Datacenter_Lift_and_Shift_Guide.pdf">Azure Virtual Datacenter: Lift and Shift Guide </a></h3>
-        <p>This whitepaper discusses the process that enterprise IT staff and decision makers can use to identify and plan the migration of applications and servers to Azure using a "lift and shift" method, minimizing any additional development costs while optimizing cloud hosting options.</p>
+        <p>This white paper discusses the process that enterprise IT staff and decision makers can use to identify and plan the migration of applications and servers to Azure using a "lift and shift" approach, minimizing any additional development costs while optimizing cloud hosting options.</p>
     </td>
 </tr>
 </table>
