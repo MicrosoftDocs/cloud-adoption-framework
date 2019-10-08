@@ -681,7 +681,7 @@
   - name: Reference
     items:
     - name: Cloud Adoption Framework roadmap
-      href: reference/roadmap.md
+      href: reference/index.md
     - name: Decision guides
       items:
       - name: Overview
