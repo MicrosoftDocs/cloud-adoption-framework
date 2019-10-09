@@ -15,7 +15,7 @@ ms.custom: readiness
 
 Organizing cloud-based assets in ways that aid operational management and support accounting requirements is a common challenge that faces large cloud adoption efforts. By applying well-defined naming and metadata tagging conventions to cloud-hosted resources, IT staff can quickly find and manage resources. Well-defined names and tags also help to align cloud usage costs with business teams by using chargeback and showback accounting mechanisms.
 
-The Azure Architecture Center's [naming conventions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions) guidance provides general recommendations on naming conventions and discussions of naming limitations and platform rules. The following discussion extends that generic guidance with more detailed recommendations aimed specifically at supporting enterprise cloud adoption efforts.
+The Azure Architecture Center's [naming rules and restrictions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) guidance provides general recommendations on naming conventions and discussions of naming limitations and platform rules. The following discussion extends that generic guidance with more detailed recommendations aimed specifically at supporting enterprise cloud adoption efforts.
 
 Resource names can be difficult to change. Make it a priority for your cloud adoption teams to establish a comprehensive naming convention before you begin any large cloud deployment.
 
@@ -136,6 +136,8 @@ What tags you apply to resources and what tags are required or optional differs 
 ## Sample naming convention
 
 The following section provides examples of naming schemes for common Azure resource types that are deployed during an enterprise cloud deployment.
+
+<!-- markdownlint-disable MD033 -->
 
 ### Subscriptions
 
