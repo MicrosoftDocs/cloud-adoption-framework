@@ -404,196 +404,196 @@
       items:
       - name: Overview
         href: innovate/index.md
+  - name: Govern
+    items:
+    - name: Overview 
+      href: govern/index.md
+    - name: Methodology 
+      href: govern/methodology.md
+    - name: Benchmark
+      href: govern/benchmark.md
+    - name: Initial governance foundation
+      href: govern/initial-foundation.md
+    - name: Governance foundation improvements
+      href: govern/foundation-improvements.md
+    - name: Governance guides
+      items:
+      - name: Overview
+        href: govern/guides/index.md
+      - name: Standard enterprise governance guide
+        items:
+        - name: Overview
+          href: govern/guides/standard/index.md
+        - name: Narrative
+          href: govern/guides/standard/narrative.md
+        - name: Initial corporate policy
+          href: govern/guides/standard/initial-corporate-policy.md
+        - name: Prescriptive guidance
+          href: govern/guides/standard/prescriptive-guidance.md
+        - name: Improve the security baseline discipline
+          href: govern/guides/standard/security-baseline-improvement.md
+        - name: Improve resource consistency discipline
+          href: govern/guides/standard/resource-consistency-improvement.md
+        - name: Improve cost management discipline
+          href: govern/guides/standard/cost-management-improvement.md
+        - name: Multicloud scenarios
+          href: govern/guides/standard/multicloud-improvement.md
+      - name: Governance guide for complex enterprises
+        items:
+        - name: Overview
+          href: govern/guides/complex/index.md
+        - name: Narrative
+          href: govern/guides/complex/narrative.md
+        - name: Initial corporate policy
+          href: govern/guides/complex/initial-corporate-policy.md
+        - name: Prescriptive guidance
+          href: govern/guides/complex/prescriptive-guidance.md
+        - name: Improve the identity baseline discipline
+          href: govern/guides/complex/identity-baseline-improvement.md
+        - name: Improve the security baseline discipline
+          href: govern/guides/complex/security-baseline-improvement.md
+        - name: Improve the resource consistency discipline
+          href: govern/guides/complex/resource-consistency-improvement.md
+        - name: Improve the cost management discipline
+          href: govern/guides/complex/cost-management-improvement.md
+        - name: Multicloud scenarios
+          href: govern/guides/complex/multicloud-improvement.md
+        - name: Multiple layers of governance
+          href: govern/guides/complex/multiple-layers-of-governance.md
+    - name: Governance considerations
+      items:
+      - name: Evaluate corporate policy
+        href: govern/corporate-policy.md
+      - name: Cloud-ready corporate policy and compliance
+        items:
+          - name: Make corporate policy cloud-ready
+            href: govern/policy-compliance/index.md
+          - name: Understand business risks
+            href: govern/policy-compliance/business-risk.md
+          - name: Evaluate risk tolerance
+            href: govern/policy-compliance/risk-tolerance.md
+          - name: Define corporate policy
+            href: govern/policy-compliance/policy-definition.md
+          - name: Align design with policy
+            href: govern/policy-compliance/governance-alignment.md
+          - name: Establish policy adherence processes
+            href: govern/policy-compliance/processes.md
+          - name: Regulatory compliance
+            href: govern/policy-compliance/regulatory-compliance.md
+          - name: Cloud security readiness
+            href: govern/policy-compliance/cloud-security-readiness.md
+          - name: Cloud policy review
+            href: govern/policy-compliance/cloud-policy-review.md
+          - name: Data classification
+            href: govern/policy-compliance/data-classification.md
+      - name: Disciplines of cloud governance
+        href: govern/governance-disciplines.md
+      - name: Implement disciplines of cloud governance
+        items:
+        - name: Cost management
+          items:
+            - name: Overview of cost management
+              href: govern/cost-management/index.md
+            - name: Download the template
+              href: govern/cost-management/template.md
+            - name: Understand business risks
+              href: govern/cost-management/business-risks.md
+            - name: Risk tolerance metrics and indicators
+              href: govern/cost-management/metrics-tolerance.md
+            - name: Sample cost management policies
+              href: govern/cost-management/policy-statements.md
+            - name: Policy compliance processes
+              href: govern/cost-management/compliance-processes.md
+            - name: Improve cost management 
+              href: govern/cost-management/discipline-improvement.md
+            - name: Azure tools for cost management
+              href: govern/cost-management/toolchain.md
+        - name: Security baseline
+          items:
+            - name: Overview of the security baseline
+              href: govern/security-baseline/index.md
+            - name: Download the template
+              href: govern/security-baseline/template.md
+            - name: Understand business risks
+              href: govern/security-baseline/business-risks.md
+            - name: Risk tolerance metrics and indicators
+              href: govern/security-baseline/metrics-tolerance.md
+            - name: Sample security baseline policies
+              href: govern/security-baseline/policy-statements.md
+            - name: Policy compliance processes
+              href: govern/security-baseline/compliance-processes.md
+            - name: Improve the security baseline
+              href: govern/security-baseline/discipline-improvement.md
+            - name: Cloud-native security baseline
+              href: govern/security-baseline/cloud-native-policy.md
+            - name: Additional Azure security guidance
+              href: govern/security-baseline/azure-security-guidance.md
+            - name: Azure tools for security baseline
+              href: govern/security-baseline/toolchain.md
+        - name: Identity baseline
+          items:
+            - name: Overview of the identity baseline
+              href: govern/identity-baseline/index.md
+            - name: Download the template
+              href: govern/identity-baseline/template.md
+            - name: Understand business risks
+              href: govern/identity-baseline/business-risks.md
+            - name: Risk tolerance metrics and indicators
+              href: govern/identity-baseline/metrics-tolerance.md
+            - name: Sample identity baseline policies
+              href: govern/identity-baseline/policy-statements.md
+            - name: Policy compliance processes
+              href: govern/identity-baseline/compliance-processes.md
+            - name: Improve the identity baseline
+              href: govern/identity-baseline/discipline-improvement.md
+            - name: Azure tools for identity baseline
+              href: govern/identity-baseline/toolchain.md
+        - name: Resource consistency
+          items:
+            - name: Overview of resource consistency
+              href: govern/resource-consistency/index.md
+            - name: Download the template
+              href: govern/resource-consistency/template.md
+            - name: Understand business risks
+              href: govern/resource-consistency/business-risks.md
+            - name: Risk tolerance metrics and indicators
+              href: govern/resource-consistency/metrics-tolerance.md
+            - name: Sample resource consistency policies
+              href: govern/resource-consistency/policy-statements.md
+            - name: Policy compliance processes
+              href: govern/resource-consistency/compliance-processes.md
+            - name: Improve resource consistency
+              href: govern/resource-consistency/discipline-improvement.md
+            - name: Azure tools for resource consistency
+              href: govern/resource-consistency/toolchain.md
+            - name: Resource access management
+              href: govern/resource-consistency/resource-access-management.md
+            - name: Governance design for a simple workload
+              href: govern/resource-consistency/governance-simple-workload.md
+            - name: Governance design for multiple teams
+              href: govern/resource-consistency/governance-multiple-teams.md
+        - name: Deployment acceleration
+          items:
+            - name: Overview of deployment acceleration
+              href: govern/deployment-acceleration/index.md
+            - name: Download the template
+              href: govern/deployment-acceleration/template.md
+            - name: Understand business risks
+              href: govern/deployment-acceleration/business-risks.md
+            - name: Risk tolerance metrics and indicators
+              href: govern/deployment-acceleration/metrics-tolerance.md
+            - name: Sample deployment acceleration policies
+              href: govern/deployment-acceleration/policy-statements.md
+            - name: Policy compliance processes
+              href: govern/deployment-acceleration/compliance-processes.md
+            - name: Improve deployment acceleration
+              href: govern/deployment-acceleration/discipline-improvement.md
+            - name: Azure tools for deployment acceleration
+              href: govern/deployment-acceleration/toolchain.md
   - name: Operate
     items:
     - name: Overview
       href: operate/index.md
-    - name: Govern
-      items:
-      - name: Overview 
-        href: govern/index.md
-      - name: Methodology 
-        href: govern/methodology.md
-      - name: Benchmark
-        href: govern/benchmark.md
-      - name: Initial governance foundation
-        href: govern/initial-foundation.md
-      - name: Governance foundation improvements
-        href: govern/foundation-improvements.md
-      - name: Governance guides
-        items:
-        - name: Overview
-          href: govern/guides/index.md
-        - name: Standard enterprise governance guide
-          items:
-          - name: Overview
-            href: govern/guides/standard/index.md
-          - name: Narrative
-            href: govern/guides/standard/narrative.md
-          - name: Initial corporate policy
-            href: govern/guides/standard/initial-corporate-policy.md
-          - name: Prescriptive guidance
-            href: govern/guides/standard/prescriptive-guidance.md
-          - name: Improve the security baseline discipline
-            href: govern/guides/standard/security-baseline-improvement.md
-          - name: Improve resource consistency discipline
-            href: govern/guides/standard/resource-consistency-improvement.md
-          - name: Improve cost management discipline
-            href: govern/guides/standard/cost-management-improvement.md
-          - name: Multicloud scenarios
-            href: govern/guides/standard/multicloud-improvement.md
-        - name: Governance guide for complex enterprises
-          items:
-          - name: Overview
-            href: govern/guides/complex/index.md
-          - name: Narrative
-            href: govern/guides/complex/narrative.md
-          - name: Initial corporate policy
-            href: govern/guides/complex/initial-corporate-policy.md
-          - name: Prescriptive guidance
-            href: govern/guides/complex/prescriptive-guidance.md
-          - name: Improve the identity baseline discipline
-            href: govern/guides/complex/identity-baseline-improvement.md
-          - name: Improve the security baseline discipline
-            href: govern/guides/complex/security-baseline-improvement.md
-          - name: Improve the resource consistency discipline
-            href: govern/guides/complex/resource-consistency-improvement.md
-          - name: Improve the cost management discipline
-            href: govern/guides/complex/cost-management-improvement.md
-          - name: Multicloud scenarios
-            href: govern/guides/complex/multicloud-improvement.md
-          - name: Multiple layers of governance
-            href: govern/guides/complex/multiple-layers-of-governance.md
-      - name: Governance considerations
-        items:
-        - name: Evaluate corporate policy
-          href: govern/corporate-policy.md
-        - name: Cloud-ready corporate policy and compliance
-          items:
-            - name: Make corporate policy cloud-ready
-              href: govern/policy-compliance/index.md
-            - name: Understand business risks
-              href: govern/policy-compliance/business-risk.md
-            - name: Evaluate risk tolerance
-              href: govern/policy-compliance/risk-tolerance.md
-            - name: Define corporate policy
-              href: govern/policy-compliance/policy-definition.md
-            - name: Align design with policy
-              href: govern/policy-compliance/governance-alignment.md
-            - name: Establish policy adherence processes
-              href: govern/policy-compliance/processes.md
-            - name: Regulatory compliance
-              href: govern/policy-compliance/regulatory-compliance.md
-            - name: Cloud security readiness
-              href: govern/policy-compliance/cloud-security-readiness.md
-            - name: Cloud policy review
-              href: govern/policy-compliance/cloud-policy-review.md
-            - name: Data classification
-              href: govern/policy-compliance/data-classification.md
-        - name: Disciplines of cloud governance
-          href: govern/governance-disciplines.md
-        - name: Implement disciplines of cloud governance
-          items:
-          - name: Cost management
-            items:
-              - name: Overview of cost management
-                href: govern/cost-management/index.md
-              - name: Download the template
-                href: govern/cost-management/template.md
-              - name: Understand business risks
-                href: govern/cost-management/business-risks.md
-              - name: Risk tolerance metrics and indicators
-                href: govern/cost-management/metrics-tolerance.md
-              - name: Sample cost management policies
-                href: govern/cost-management/policy-statements.md
-              - name: Policy compliance processes
-                href: govern/cost-management/compliance-processes.md
-              - name: Improve cost management 
-                href: govern/cost-management/discipline-improvement.md
-              - name: Azure tools for cost management
-                href: govern/cost-management/toolchain.md
-          - name: Security baseline
-            items:
-              - name: Overview of the security baseline
-                href: govern/security-baseline/index.md
-              - name: Download the template
-                href: govern/security-baseline/template.md
-              - name: Understand business risks
-                href: govern/security-baseline/business-risks.md
-              - name: Risk tolerance metrics and indicators
-                href: govern/security-baseline/metrics-tolerance.md
-              - name: Sample security baseline policies
-                href: govern/security-baseline/policy-statements.md
-              - name: Policy compliance processes
-                href: govern/security-baseline/compliance-processes.md
-              - name: Improve the security baseline
-                href: govern/security-baseline/discipline-improvement.md
-              - name: Cloud-native security baseline
-                href: govern/security-baseline/cloud-native-policy.md
-              - name: Additional Azure security guidance
-                href: govern/security-baseline/azure-security-guidance.md
-              - name: Azure tools for security baseline
-                href: govern/security-baseline/toolchain.md
-          - name: Identity baseline
-            items:
-              - name: Overview of the identity baseline
-                href: govern/identity-baseline/index.md
-              - name: Download the template
-                href: govern/identity-baseline/template.md
-              - name: Understand business risks
-                href: govern/identity-baseline/business-risks.md
-              - name: Risk tolerance metrics and indicators
-                href: govern/identity-baseline/metrics-tolerance.md
-              - name: Sample identity baseline policies
-                href: govern/identity-baseline/policy-statements.md
-              - name: Policy compliance processes
-                href: govern/identity-baseline/compliance-processes.md
-              - name: Improve the identity baseline
-                href: govern/identity-baseline/discipline-improvement.md
-              - name: Azure tools for identity baseline
-                href: govern/identity-baseline/toolchain.md
-          - name: Resource consistency
-            items:
-              - name: Overview of resource consistency
-                href: govern/resource-consistency/index.md
-              - name: Download the template
-                href: govern/resource-consistency/template.md
-              - name: Understand business risks
-                href: govern/resource-consistency/business-risks.md
-              - name: Risk tolerance metrics and indicators
-                href: govern/resource-consistency/metrics-tolerance.md
-              - name: Sample resource consistency policies
-                href: govern/resource-consistency/policy-statements.md
-              - name: Policy compliance processes
-                href: govern/resource-consistency/compliance-processes.md
-              - name: Improve resource consistency
-                href: govern/resource-consistency/discipline-improvement.md
-              - name: Azure tools for resource consistency
-                href: govern/resource-consistency/toolchain.md
-              - name: Resource access management
-                href: govern/resource-consistency/resource-access-management.md
-              - name: Governance design for a simple workload
-                href: govern/resource-consistency/governance-simple-workload.md
-              - name: Governance design for multiple teams
-                href: govern/resource-consistency/governance-multiple-teams.md
-          - name: Deployment acceleration
-            items:
-              - name: Overview of deployment acceleration
-                href: govern/deployment-acceleration/index.md
-              - name: Download the template
-                href: govern/deployment-acceleration/template.md
-              - name: Understand business risks
-                href: govern/deployment-acceleration/business-risks.md
-              - name: Risk tolerance metrics and indicators
-                href: govern/deployment-acceleration/metrics-tolerance.md
-              - name: Sample deployment acceleration policies
-                href: govern/deployment-acceleration/policy-statements.md
-              - name: Policy compliance processes
-                href: govern/deployment-acceleration/compliance-processes.md
-              - name: Improve deployment acceleration
-                href: govern/deployment-acceleration/discipline-improvement.md
-              - name: Azure tools for deployment acceleration
-                href: govern/deployment-acceleration/toolchain.md
     - name: Organize
       items:
       - name: Managing organization alignment
