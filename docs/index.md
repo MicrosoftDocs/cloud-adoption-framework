@@ -158,11 +158,11 @@ We'll expand the Cloud Adoption Framework frequently as it moves closer to the G
 
 ## Intent
 
-The cloud fundamentally changes how enterprises procure and use technology resources. Traditionally, enterprises assumed ownership of and responsibility for all aspects of technology, from infrastructure to software. By moving to the cloud, enterprises can provision and consume resources only when they're needed. Although the cloud offers tremendous flexibility in design choices, enterprises need a proven and consistent methodology for adopting cloud technologies. The Microsoft Cloud Adoption Framework for Azure meets that need, helping guide decisions throughout cloud adoption.
+The cloud fundamentally changes how enterprises procure, use, and secure technology resources. Traditionally, enterprises assumed ownership of and responsibility for all aspects of technology, from infrastructure to software. By moving to the cloud, enterprises can provision and consume resources only when they're needed. Although the cloud offers tremendous flexibility in design choices, enterprises need a proven and consistent methodology for adopting cloud technologies. The Microsoft Cloud Adoption Framework for Azure meets that need, helping guide decisions throughout cloud adoption.
 
 However, cloud adoption is only a means to an end. Successful cloud adoption starts well before a cloud platform vendor is selected. It begins when business and IT decision makers realize that the cloud can accelerate a specific business transformation objective. The Cloud Adoption Framework can help them align strategies for business, culture, and technical change to achieve their desired business outcomes.
 
-The Cloud Adoption Framework provides technical guidance for Microsoft Azure. Because enterprise customers might still be in the process of choosing a cloud vendor, the framework provides cloud-agnostic guidance for strategic decisions whenever possible.
+The Cloud Adoption Framework provides technical guidance for Microsoft Azure. Because enterprise customers might still be in the process of choosing a cloud vendor or may have an intentional multi-cloud strategy, the framework provides cloud-agnostic guidance for strategic decisions whenever possible.
 
 ## Intended audience
 
