@@ -88,13 +88,13 @@ Throughout this migration experience this framework will be used to address ambi
 
 ### Common cultural changes resulting from adherence to this methodology
 
-The effort to realize the desired business outcomes may trigger slight changes to the culture of IT, and to some degree the culture of the business. The following are a few common cultural changes seen in this process:
+The effort to realize the desired business outcomes may trigger slight changes to the culture of IT, to security, and to some degree the culture of the business. The following are a few common cultural changes seen in this process:
 
-- The IT team is likely to adopt new skills to support workloads in the cloud.
+- The IT and security teams are  likely to adopt new skills to support workloads in the cloud.
 - Execution of a cloud migration encourages iterative or agile approaches.
 - Inclusion of cloud governance also tends to inspire DevOps approaches.
 - Creation of a cloud strategy team can lead to tighter integration between business and IT leaders.
-- Collectively, these changes tend to lead to business and IT agility.
+- Collectively, these changes tend to lead to greater business and IT agility.
 
 Cultural change is not a goal of cloud migration or the Cloud Adoption Framework, but it is a commonly experienced outcome.
 Cultural changes are not directly guided, instead subtle changes to the culture are embedded in the suggested process improvements and approaches throughout the guidance.
