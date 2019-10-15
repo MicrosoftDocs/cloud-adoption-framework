@@ -97,7 +97,7 @@ This first release helped test the Cloud Adoption Framework's unification of an 
 
 **Q2 2019 release (April 15, 2019):** Cloud migration tools can easily migrate tens of thousands of IT assets to the cloud. However, customer feedback indicates that cloud migrations are blocked by culture and technical readiness. The spring release addresses these blockers by defining an iterative approach to cloud migration. The core methodology includes a streamlined Azure migration guide for learning the tools and basic processes, with expanded scope and best practices sections for building on this baseline guidance.
 
-This release also includes expansions to the Plan section of the Cloud Adoption Framework that focus on business planning. It also incorporates the existing Azure readiness guide within the new Ready section of the Cloud Adoption Framework.
+This release also includes expansions to the Plan section of the Cloud Adoption Framework that focus on business planning. It also incorporates the existing Azure setup guide within the new Ready section of the Cloud Adoption Framework.
 
 _Table of Contents (Left Navigation) changes:_ The left navigation pane has been streamlined to follow the Plan, Ready, and Adopt approach. The Getting Started section has been realigned to provide the reader with an executive summary of the three journeys supported in the vision for the Cloud Adoption Framework.
 
