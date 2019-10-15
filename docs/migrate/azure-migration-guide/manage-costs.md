@@ -86,7 +86,7 @@ The following steps provide cost recommendations for assets (infrastructure, app
 
 Azure Cost Management can provide a more holistic view of spending habits, including detailed view of costs and spending trends over time. For large or complex migrations, this view may provide the insights needed to make broad sweeping cost management decisions.
 
-Prerequisites: The remainder of this tab assumes the reader has completed setup of Azure Cost Management during completion of the Azure readiness guide. For more details on configuring Azure Cost Management see this [article in the Azure readiness guide](../../ready/azure-readiness-guide/manage-costs.md). Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
+Prerequisites: The remainder of this tab assumes the reader has completed setup of Azure Cost Management during completion of the Azure setup guide. For more details on configuring Azure Cost Management see this [article in the Azure setup guide](../../ready/azure-setup-guide/manage-costs.md). Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
 
 The following steps will load Azure Cost Management cost analysis data for your subscriptions:
 
