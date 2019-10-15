@@ -52,7 +52,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Migrate your first workload</h3>
-                            Leverage the Azure Migration Guide to guide the migration of your first workload. This will help you become familiar with the tools and approaches needed to scale adoption efforts.
+                            Leverage the Azure migration guide to guide the migration of your first workload. This will help you become familiar with the tools and approaches needed to scale adoption efforts.
                         </div>
                     </div>
                 </div>

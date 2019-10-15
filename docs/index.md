@@ -154,7 +154,7 @@ The Cloud Adoption Framework is currently offered as a public preview. The frame
 - [Cloud migration](./migrate/index.md)
 - [Cloud governance](./govern/guides/index.md)
 
-We'll expand the Cloud Adoption Framework frequently as it moves closer to the GA release. The expansion will add depth to each section as well as new sections of content. For more information, see the [Cloud Adoption Framework roadmap](./reference/roadmap.md).
+We'll expand the Cloud Adoption Framework frequently as it moves closer to the GA release. The expansion will add depth to each section as well as new sections of content. For more information, see the [Cloud Adoption Framework roadmap](./reference/index.md).
 
 ## Intent
 
