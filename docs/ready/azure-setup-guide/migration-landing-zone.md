@@ -8,7 +8,7 @@ ms.date: 09/27/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: fasttrack-edit
+ms.custom: fasttrack-edit, setup
 ---
 
 # Deploy a migration landing zone

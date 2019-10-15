@@ -55,7 +55,7 @@ In addition to the high-level accountability, there are actions that an individu
 - **Change management readiness.** Establish and communicate the plan for tracking technical change during migration. More information on this topic will be available in Q3 2019.
 - **Business user alignment.** Establish a plan for readying the business user community for migration execution. More information on this topic will be available in Q3 2019.
 - **Digital estate inventory and analysis.** Execution of the tools required to inventory and analyze the digital estate. See the Cloud Adoption Framework discussion of the [digital estate](../../../digital-estate/index.md) for more information.
-- **Cloud readiness.** Evaluate the target deployment environment to ensure that it complies with requirements of the first few workload candidates. See the [Azure readiness guide](../../../ready/azure-readiness-guide/index.md) for more information.
+- **Cloud readiness.** Evaluate the target deployment environment to ensure that it complies with requirements of the first few workload candidates. See the [Azure setup guide](../../../ready/azure-setup-guide/index.md) for more information.
 
 The remaining articles in this series help with the execution of each.
 

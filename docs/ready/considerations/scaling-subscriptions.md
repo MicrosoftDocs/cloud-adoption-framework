@@ -71,7 +71,7 @@ Azure provides four levels of management scope: management groups, subscriptions
 
 By relying on this inheritance model, you can arrange the subscriptions in your hierarchy so that each subscription follows appropriate policies and security controls.
 
-![The four scope levels for organizing your Azure resources](../../ready/azure-readiness-guide/media/organize-resources/scope-levels.png)
+![The four scope levels for organizing your Azure resources](../../ready/azure-setup-guide/media/organize-resources/scope-levels.png)
 
 Any access or policy assignment on the root management group applies to all resources in the directory. Carefully consider which items you define at this scope. Include only the assignments you must have.
 

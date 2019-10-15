@@ -95,24 +95,24 @@
     items:
     - name: Overview
       href: ready/index.md
-    - name: Azure readiness guide
+    - name: Azure setup guide
       items:
       - name: Before you start
-        href: ready/azure-readiness-guide/index.md
+        href: ready/azure-setup-guide/index.md
       - name: Organize your resources
-        href: ready/azure-readiness-guide/organize-resources.md
+        href: ready/azure-setup-guide/organize-resources.md
       - name: Manage access
-        href: ready/azure-readiness-guide/manage-access.md
+        href: ready/azure-setup-guide/manage-access.md
       - name: Manage costs and billing
-        href: ready/azure-readiness-guide/manage-costs.md
+        href: ready/azure-setup-guide/manage-costs.md
       - name: Plan governance, security, and compliance
-        href: ready/azure-readiness-guide/govern-org-compliance.md
+        href: ready/azure-setup-guide/govern-org-compliance.md
       - name: Use monitoring and reporting
-        href: ready/azure-readiness-guide/monitoring-reporting.md
+        href: ready/azure-setup-guide/monitoring-reporting.md
       - name: Staying current with Azure
-        href: ready/azure-readiness-guide/staying-current.md
+        href: ready/azure-setup-guide/staying-current.md
       - name: Deploy a migration landing zone
-        href: ready/azure-readiness-guide/migration-landing-zone.md
+        href: ready/azure-setup-guide/migration-landing-zone.md
     - name: Landing zone considerations
       items: 
       - name: Overview
