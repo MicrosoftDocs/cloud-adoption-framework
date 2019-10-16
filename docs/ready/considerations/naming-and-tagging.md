@@ -41,7 +41,7 @@ From the name, you can quickly identify the resource's type, its associated work
 
 #### Naming scope
 
-All Azure resource types have a scope that defines how these assets can be managed relative to other resource types. In terms of naming conventions, this means that a resource must have a unique name within its scope.
+All Azure resource types have a scope which define the level that resource names must be unique. A resource must have a unique name within its scope.
 
 For example, a virtual network has a resource group scope, which means that there can be only one network named `vnet-prod-westus-001` in a given resource group. Other resource groups can have their own virtual network named `vnet-prod-westus-001`. Subnets, to give another example, are scoped to virtual networks, which means that each subnet within a virtual network must be uniquely named.
 
@@ -83,6 +83,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | Public IP                           | pip-                 |
 | Azure Load Balancer                 | lb-                  |
 | NIC                                 | nic-                 |
+| Azure Key Vault                     | kv-                  |
 | Azure Kubernetes Service            | aks-                 |
 | Azure Service Bus                   | sb-                  |
 | Azure Service Bus queues            | sbq-                 |
