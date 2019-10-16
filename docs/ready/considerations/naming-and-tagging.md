@@ -15,7 +15,7 @@ ms.custom: readiness
 
 Organizing cloud-based assets in ways that aid operational management and support accounting requirements is a common challenge that faces large cloud adoption efforts. By applying well-defined naming and metadata tagging conventions to cloud-hosted resources, IT staff can quickly find and manage resources. Well-defined names and tags also help to align cloud usage costs with business teams by using chargeback and showback accounting mechanisms.
 
-The Azure Architecture Center's [naming rules and restrictions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) guidance provides general recommendations on naming conventions and discussions of naming limitations and platform rules. The following discussion extends that generic guidance with more detailed recommendations aimed specifically at supporting enterprise cloud adoption efforts.
+The Azure Architecture Center's [naming rules and restrictions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) guidance provides general recommendations and platform limitations. The following discussion extends that generic guidance with more detailed recommendations aimed specifically at supporting enterprise cloud adoption efforts.
 
 Resource names can be difficult to change. Make it a priority for your cloud adoption teams to establish a comprehensive naming convention before you begin any large cloud deployment.
 
@@ -41,7 +41,7 @@ From the name, you can quickly identify the resource's type, its associated work
 
 #### Naming scope
 
-All Azure resource types have a scope which define the level that resource names must be unique. A resource must have a unique name within its scope.
+All Azure resource types have a scope which defines the level that resource names must be unique. A resource must have a unique name within its scope.
 
 For example, a virtual network has a resource group scope, which means that there can be only one network named `vnet-prod-westus-001` in a given resource group. Other resource groups can have their own virtual network named `vnet-prod-westus-001`. Subnets, to give another example, are scoped to virtual networks, which means that each subnet within a virtual network must be uniquely named.
 
