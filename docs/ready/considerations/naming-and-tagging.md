@@ -72,45 +72,47 @@ The following list provides recommended Azure resource type prefixes to use when
 | Resource type                       | Resource name prefix |
 | ----------------------------------- | -------------------- |
 | Resource group                      | rg-                  |
-| Azure Virtual Network                     | vnet-                |
+| Azure Virtual Network               | vnet-                |
 | Virtual network gateway             | vnet-gw-             |
 | Gateway connection                  | cn-                  |
 | Subnet                              | snet-                |
 | Network security group              | nsg-                 |
-| Azure Virtual Machines                    | vm-                  |
+| Route table                         | route-               |
+| Azure Virtual Machines              | vm-                  |
 | VM storage account                  | stvm                 |
 | Public IP                           | pip-                 |
-| Azure Load Balancer                       | lb-                  |
+| Azure Load Balancer                 | lb-                  |
 | NIC                                 | nic-                 |
-| Azure Service Bus                         | sb-                  |
-| Azure Service Bus queues                  | sbq-                 |
-| Azure App Service apps                    | azapp-               |
-| Azure Functions apps                       | azfun-               |
-| Azure Cloud Services                      | azcs-                |
+| Azure Kubernetes Service            | aks-                 |
+| Azure Service Bus                   | sb-                  |
+| Azure Service Bus queues            | sbq-                 |
+| Azure App Service apps              | azapp-               |
+| Azure Functions apps                | azfun-               |
+| Azure Cloud Services                | azcs-                |
 | Azure SQL Database                  | sqldb-               |
 | Azure Cosmos DB (formerly Azure DocumentDB) | cosdb-               |
 | Azure Cache for Redis               | redis-               |
 | Azure Database for MySQL            | mysql-               |
-| Azure SQL Data Warehouse                  | sqldw-               |
+| Azure SQL Data Warehouse            | sqldw-               |
 | SQL Server Stretch Database         | sqlstrdb-            |
 | Azure Storage                       | stor                 |
-| Azure StorSimple                          | ssimp                |
+| Azure StorSimple                    | ssimp                |
 | Azure Search                        | srch-                |
-| Azure Cognitive Services                  | cs-                  |
+| Azure Cognitive Services            | cs-                  |
 | Azure Machine Learning workspace    | aml-                 |
 | Azure Data Lake Storage             | dls                  |
 | Azure Data Lake Analytics           | dla                  |
-| Azure HDInsight - Spark                   | hdis-                |
-| Azure HDInsight - Hadoop                  | hdihd-               |
-| Azure HDInsight - R Server                | hdir-                |
-| Azure HDInsight - HBase                   | hdihb-               |
+| Azure HDInsight - Spark             | hdis-                |
+| Azure HDInsight - Hadoop            | hdihd-               |
+| Azure HDInsight - R Server          | hdir-                |
+| Azure HDInsight - HBase             | hdihb-               |
 | Power BI Embedded                   | pbiemb               |
-| Azure Stream Analytics                    | asa-                 |
-| Azure Data Factory                        | df-                  |
-| Azure Event Hubs                           | evh-                 |
+| Azure Stream Analytics              | asa-                 |
+| Azure Data Factory                  | df-                  |
+| Azure Event Hubs                    | evh-                 |
 | Azure IoT Hub                       | aih-                 |
-| Azure Notification Hubs                   | anh-                 |
-| Azure Notification Hubs namespace          | anhns-               |
+| Azure Notification Hubs             | anh-                 |
+| Azure Notification Hubs namespace   | anhns-               |
 
 ### Metadata tags
 
