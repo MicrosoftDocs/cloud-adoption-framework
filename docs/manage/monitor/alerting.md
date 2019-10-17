@@ -56,7 +56,7 @@ There are six repositories that store monitoring data, depending on the feature 
 
 There are four types of alerts in Azure Monitor, which are somewhat tied to the repository the data is stored in.
 
-- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric). Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold,  and then again when it returns to “normal” state.
+- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric). Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to “normal” state.
 
 - [Log query alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-log-query). Available to alerts on content in the Application Insights or Azure logs stores. Can also alert based on cross-workspace queries.
 
@@ -76,7 +76,7 @@ Azure Monitor includes support for integrating with other monitoring platforms, 
 
 Solution| Data type | Alert behavior
 :---|:---|:---
-Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics store. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over a period of time.
+Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics store. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over time.
 || Calculated performance data that uses percentiles from nodes, controllers, containers, and pods are written to the logs store. Container logs and inventory information are also written to the logs store. | Create log query alerts if you want to be alerted based on variation of measured utilization from clusters and containers. Log query alerts can also be configured based on pod-phase counts and status node counts.
 Azure Monitor for VMs | Health criteria are metrics written to the metrics store. | Alerts are generated when health state changes from healthy to unhealthy condition. Only supports Action Groups configured to send SMS or email notification.
 || Map and guest operating system performance log data are written to the logs store. | Create log query alerts.
@@ -101,7 +101,7 @@ That said, there are some important footnotes to this rule.
 
 If you use a solution like Azure Monitor for VMs and find the default health criteria that monitors performance utilization acceptable, then don’t create overlapping metric or log query alerts based on the same performance counters.
 
-If you aren’t using Azure Monitor for VMs, explore the following features to make your job of creating alerts and managing notifications easier:  
+If you aren’t using Azure Monitor for VMs, explore the following features to make your job of creating alerts and managing notifications easier:
 
 > [!NOTE]
 > These features apply only to metric alerts; that is, alerts based on data being sent to the Azure Monitor metric database. They don't apply to the other types of alerts. As mentioned previously, the primary objective of metric alerts is speed. If getting an alert in less than 5 minutes isn't of primary concern, you can use a log query alert instead.

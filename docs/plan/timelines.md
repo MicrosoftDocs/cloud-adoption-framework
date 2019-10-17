@@ -14,7 +14,7 @@ ms.subservice: plan
 
 In the previous article in this series, workloads and tasks were assigned to [releases and iterations](./iteration-paths.md). Those assignments feed the timeline estimates in this article.
 
-Work breakdown structures (WBS) are commonly used in sequential project-management tools. They represent how dependent tasks will be completed over a period of time. Such structures work well when tasks are sequential in nature. The interdependencies in tasks found in cloud adoption make such structures difficult to manage. To fill this gap, you can estimate timelines based on iteration-path assignments by hiding complexity.
+Work breakdown structures (WBS) are commonly used in sequential project-management tools. They represent how dependent tasks will be completed over time. Such structures work well when tasks are sequential in nature. The interdependencies in tasks found in cloud adoption make such structures difficult to manage. To fill this gap, you can estimate timelines based on iteration-path assignments by hiding complexity.
 
 ## Estimate timelines
 

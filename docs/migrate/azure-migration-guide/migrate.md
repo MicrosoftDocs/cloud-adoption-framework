@@ -16,6 +16,8 @@ ms.localizationpriority: high
 
 In this phase of the journey, you use the output of the assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
 
+<!-- markdownlint-disable MD025 -->
+
 # [Native migration tools](#tab/Tools)
 
 The following sections describe the native Azure tools available to perform or assist with migration. For information on choosing the right tools to support your migration efforts, see the [Cloud Adoption Framework's Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
@@ -39,7 +41,7 @@ To perform a migration using Azure Migrate follow these steps:
 1. Select **Add a tool** to start your migration project.
 1. Select the subscription, resource group, and geography to host the migration.
 1. Select **Select assessment tool** > **Azure Migrate: Server Assessment** >  **Next**.
-1. Select **Review + add tool(s)**, and verify the configuration. Click **Add tool(s)** to initiate the job to create the migration project and register the selected solutions.
+1. Select **Review + add tools**, and verify the configuration. Click **Add tools** to initiate the job to create the migration project and register the selected solutions.
 
 <!-- TODO: TBA -->
 
@@ -197,7 +199,9 @@ Azure Cosmos DB Data Migration tool can import data from various sources into Az
 
 For more information, see:
 
-- [Cosmos DB Data Migration Tool](https://docs.microsoft.com/en-us/azure/cosmos-db/import-data)
+- [Cosmos DB Data Migration Tool](https://docs.microsoft.com/azure/cosmos-db/import-data)
+
+<!-- markdownlint-disable MD025 -->
 
 # [Third-party migration tools](#tab/third-party-tools)
 
@@ -231,7 +235,7 @@ Movere is a discovery solution that provides the data and insights needed to pla
 
 You can choose from a variety of experienced systems integrator partners and tools to support your Azure Cosmos DB migrations for your NoSQL database requirements.
 
-[Learn more](https://docs.microsoft.com/en-us/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
+[Learn more](https://docs.microsoft.com/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
 
 Visit the [Azure Migration Center](https://azure.microsoft.com/migration/support) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
 

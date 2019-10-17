@@ -1,7 +1,7 @@
 ---
-title: "Standard enterprise governance guide: Prescriptive guidance explained"
+title: "Standard enterprise governance guide: Best practices explained"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about prescriptive guidance for governance in standard enterprises.
+description: Learn about best practices for governance in standard enterprises.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -11,9 +11,9 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Standard enterprise governance guide: Prescriptive guidance explained
+# Standard enterprise governance guide: Best practices explained
 
-The governance guide starts with a set of initial [corporate policies](./initial-corporate-policy.md). These policies are used to establish a governance MVP that reflects [recommended practices](./index.md).
+The governance guide starts with a set of initial [corporate policies](./initial-corporate-policy.md). These policies are used to establish a governance MVP that reflects [best practices](./index.md).
 
 In this article, we discuss the high-level strategies that are required to create a governance MVP. The core of the governance MVP is the [Deployment Acceleration](../../deployment-acceleration/index.md) discipline. The tools and patterns applied at this stage will enable the incremental improvements needed to expand governance in the future.
 
@@ -56,7 +56,7 @@ The decision on what subscription design to use determines how Azure subscriptio
 
 Resource consistency decisions determine the tools, processes, and effort required to ensure Azure resources are deployed, configured, and managed consistently within a subscription. In this narrative, **[Deployment Consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency)** has been chosen as the primary resource consistency pattern.
 
-- Resource groups are created for applications using the lifecycle approach: everything that is created, maintained, and retired together should reside a single resource group. For more on resource groups, see [here](../../../decision-guides/resource-consistency/index.md#basic-grouping).
+- Resource groups are created for applications using the lifecycle approach. Everything that is created, maintained, and retired together should reside a single resource group. For more on resource groups, see [here](../../../decision-guides/resource-consistency/index.md#basic-grouping).
 - Azure Policy should be applied to all subscriptions from the associated management group.
 - As part of the deployment process, Azure Resource Consistency templates for the resource group should be stored in source control.
 - Each resource group is associated with a specific workload or application based on the lifecycle approach described above.

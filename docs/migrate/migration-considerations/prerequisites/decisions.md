@@ -85,7 +85,7 @@ Before proceeding, document the following assumptions and share them with the cl
 
 After the process is understood among the team, it’s time to review technical prerequisites. The [migration environment planning checklist](./planning-checklist.md) helps to ensure that the technical foundation is ready for migration.
 
-Once the process is understood amongst the team, its time to review technical prerequisites the [Migration Planning Checklist] will help ensure the technical foundation is ready for migration.
+Once the process is understood among the team, its time to review technical prerequisites the [Migration Planning Checklist] will help ensure the technical foundation is ready for migration.
 
 > [!div class="nextstepaction"]
 > [Review the migration planning checklist](./planning-checklist.md)

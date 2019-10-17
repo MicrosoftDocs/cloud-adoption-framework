@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Getting started with a cloud migration journey
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 10/10/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -71,7 +71,7 @@ Cloud strategy and planning is a methodology that focuses on aligning business o
 
 ### Methodology explained
 
-The Cloud Adoption Framework's Cloud strategy and planning methodology is based on an incremental approach to cloud implementation that aligns to agile technology strategies, cultural maturity based on growth mindset approaches, and strategies driven by business outcomes. This methodology consists of the following high-level components that guide the implementation of each strategy.
+The Cloud Adoption Framework's cloud strategy and planning methodology is based on an incremental approach to cloud implementation that aligns to agile technology strategies, cultural maturity based on growth mindset approaches, and strategies driven by business outcomes. This methodology consists of the following high-level components that guide the implementation of each strategy.
 
 As depicted in the image above, this framework aligns strategic decisions to a small number of contained processes, which operate within an iterative model. While described in a linear document, each of the following processes is expected to mature in parallel with iterations of the cloud implementation. The links for each process will aid in defining the end state and the means of maturing toward the desired end state:
 
@@ -79,10 +79,10 @@ As depicted in the image above, this framework aligns strategic decisions to a s
 - **[Ready](../ready/index.md):** Preparing the business, culture, people, and environment for coming changes leads to success in each effort and accelerates implementation and change projects.
 - **Adopt:** Ensure proper implementation of desired changes, across IT and business processes, to achieve business outcomes.
   - **[Migrate](../migrate/index.md):** Iterative execution of the [cloud implementation methodology](#cloud-implementation) adhering to the tested process of Assess, Migrate, Optimize, and Secure & Manage to create a repeatable process for migrating workloads.
-- **[Operate](../operate/index.md):** Define a manageable operating model to guide activities during and long after adoption.
-  - **[Organize](../organize/index.md):** Align people and teams to deliver proper cloud operations and adoption.
-  - **[Govern](../govern/index.md):** Align corporate policy to tangible risks, mitigated through policy, process, and cloud-based governance tooling.
-  - **[Manage](../manage/index.md):** Expand IT operations to ensure cloud-based solutions can be operated through secure, cost effective processes using modern, cloud-first operations tools.
+  - **[Innovate](../innovate/index.md):** Drive business value through innovation activities that unlock new technical skills and expanded business capabilities.
+- **[Govern](../govern/index.md):** Align corporate policy to tangible risks, mitigated through policy, process, and cloud-based governance tooling.
+- **[Manage](../manage/index.md):** Expand IT operations to ensure cloud-based solutions can be operated through secure, cost effective processes using modern, cloud-first operations tools.
+- **[Organize](../organize/index.md):** Align people and teams to deliver proper cloud operations and adoption.
 
 Throughout this migration experience this framework will be used to address ambiguity, manage change, and guide cross-functional teams through the realization of business outcomes.
 
@@ -129,12 +129,18 @@ The technologies migrated to the cloud constantly expand as cloud providers add 
 The Cloud Adoption Framework is a lifecycle solution. It is designed to help readers who are just beginning their journey and as well as readers who are deep into their migration. As such, content is very context and audience specific. Next steps are best aligned to the high-level process the reader would like to improve next.
 
 > [!div class="nextstepaction"]
+> [Strategy](../strategy/index.md)
+>
 > [Plan](../plan/index.md)
 >
 > [Ready](../ready/index.md)
 >
 > [Migrate](../migrate/index.md)
 >
-> [Manage](../manage/index.md)
+> [Innovate](../innovate/index.md)
 >
 > [Govern](../govern/index.md)
+>
+> [Manage](../manage/index.md)
+>
+> [Organize](../organize/index.md)

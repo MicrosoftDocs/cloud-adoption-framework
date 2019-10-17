@@ -1,7 +1,7 @@
 ---
-title:  Cloud monitoring guide – monitoring platforms overview
+title: "Cloud monitoring guide: Monitoring platforms overview"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
+description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure.
 author: mgoedtel
 ms.author: magoedte
 ms.date: 07/31/2019
@@ -11,7 +11,7 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
-# Cloud monitoring guide: Overview of our monitoring platforms
+# Cloud monitoring guide: Monitoring platforms overview
 
 Microsoft provides a range of monitoring capabilities from two products: System Center Operations Manager which was designed for on-premises and then extended to the cloud and Azure Monitor, which was designed for the cloud but can also monitor on-premises systems. These two offerings deliver core monitoring services, such as alerting, service uptime tracking, application and infrastructure health monitoring, diagnostics, and analytics.
 
@@ -29,7 +29,7 @@ When Azure was released in 2010, monitoring of cloud services was provided with 
 
 Application Insights was introduced to shift with changes in the industry where proliferation of cloud, mobile and IoT devices was growing and the introduction of DevOps practices. It grew from Application Performance Monitoring in Operations Manager to a service in Azure, where it delivers rich monitoring of web applications written in a variety of languages. In 2015, the preview of Application Insights for Visual Studio was announced and later, it became known just as Application Insights. It collects details on application performance, requests and exceptions, and traces.
 
-In 2015, Azure Operational Insights was made generally available. It delivered the Log Analytics analysis service that collected and searched data from machines in Azure, on-prem or other cloud environments, and connected to System Center Operations Manager. Intelligence packs were offered that delivered different pre-packaged management and monitoring configurations that contained a collection of query and analytic logic, visualizations, and data collection rules for such scenarios as security auditing, health assessments, and alert management.  Later Azure Operational Insights became known as Log Analytics.  
+In 2015, Azure Operational Insights was made generally available. It delivered the Log Analytics analysis service that collected and searched data from machines in Azure, on-premises or other cloud environments, and connected to System Center Operations Manager. Intelligence packs were offered that delivered different pre-packaged management and monitoring configurations that contained a collection of query and analytic logic, visualizations, and data collection rules for such scenarios as security auditing, health assessments, and alert management. Later Azure Operational Insights became known as Log Analytics.  
 
 In 2016, the preview of Azure Monitor was announced Ignite. It provided a common framework to collect platform metrics, resource diagnostics logs, and subscription-level activity log events from any Azure service that started using the framework. Previously, each Azure service had its own monitoring method.
 
@@ -91,7 +91,7 @@ For example, a monitor might sample a performance counter every few minutes. If 
 
 Because these monitoring settings are isolated from each other and work from the individual sources of data, Operations Manager has challenges correlating data between multiple sources. It’s also difficult to react to data after it’s been collected. You can run workflows that access the Operations Manager database, but this scenario isn’t common and it's typically used for a limited number of special purpose workflows.
 
-![Diagram of Operations Manager Management Group](./media/monitoring-management-guidance-cloud-and-on-premises/operations-manager-management-group-optimized.svg)
+![Diagram of Operations Manager management group](./media/monitoring-management-guidance-cloud-and-on-premises/operations-manager-management-group-optimized.svg)
 
 ### Azure Monitor
 

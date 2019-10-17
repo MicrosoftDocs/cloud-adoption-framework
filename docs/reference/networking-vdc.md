@@ -94,7 +94,7 @@ The Azure fabric allocates infrastructure resources to tenant workloads and mana
 
 #### Connectivity to the cloud
 
-A virtual datacenter implementation requires connectivity to external networks to offer services to customers, partners and/or internal users. This need for connectivity refers not only to the Internet, but also to on-premises networks and datacenters.
+A virtual datacenter implementation requires connectivity to external networks to offer services to customers, partners, and internal users. This need for connectivity refers not only to the Internet, but also to on-premises networks and datacenters.
 
 Customers control which services have access to and are accessible from the public internet by using [Azure Firewall][AzFW] or other types of virtual network appliances (NVAs), custom routing policies by using [user-defined routes][user-defined-routes], and network filtering by using [network security groups][network-security-groups]. We recommend that all internet-facing resources also be protected by the [Azure DDoS Protection Standard][DDoS].
 
@@ -199,7 +199,7 @@ This component type is where most of the supporting infrastructure resides. It's
 
 [![6]][6]
 
-Infrastructure components provide an interconnection for the different components of a virtual datacenter implementation, and are present in both the hub and the spokes. The responsibility for managing and maintaining the infrastructure components is typically assigned to the central IT and/or security team.
+Infrastructure components provide an interconnection for the different components of a virtual datacenter implementation, and are present in both the hub and the spokes. The responsibility for managing and maintaining the infrastructure components is typically assigned to the central IT or security team.
 
 One of the primary tasks of the IT infrastructure team is to guarantee the consistency of IP address schemas across the enterprise. The private IP address space assigned to a virtual datacenter implementation must be consistent and NOT overlapping with private IP addresses assigned on your on-premises networks.
 
@@ -236,7 +236,7 @@ Usually, the central IT and security teams have responsibility for requirement d
 
 [![7]][7]
 
-The preceding diagram shows the enforcement of two perimeters with access to the internet and an on-premises network, both resident in the DMZ hub. In the DMZ hub, the perimeter network to internet can scale up to support large numbers of LOBs, using multiple farms of Web Application Firewalls (WAFs) and/or Azure Firewalls. In hub also allows for connectivity via VPN or ExpressRoute as needed.
+The preceding diagram shows the enforcement of two perimeters with access to the internet and an on-premises network, both resident in the DMZ hub. In the DMZ hub, the perimeter network to internet can scale up to support large numbers of LOBs, using multiple farms of Web Application Firewalls (WAFs) or Azure Firewalls. In hub also allows for connectivity via VPN or ExpressRoute as needed.
 
 [**Virtual networks**][VNet]. The hub is typically built on a virtual network with multiple subnets to host the different types of services that filter and inspect traffic to or from the internet via NVAs, WAF, and Azure Application Gateway instances.
 
@@ -324,7 +324,7 @@ The workload possibilities are endless. The following are just a few of the poss
 - **Data driven**&mdash;data intensive with frequent access to databases or other storage.
 - **Integrated**&mdash;offer integration with other systems within or outside the organization.
 
-**Customer facing web sites (Internet or Internal facing)**: Most applications that interact with the Internet are web sites. Azure offers the capability to run a web site on an IaaS VM or from an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps support integration with VNets that allow the deployment of the Web Apps in a spoke network zone. Internal facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet routable addresses from the private VNet.
+**Customer facing web sites (Internet or Internal facing)**: Most applications that interact with the Internet are web sites. Azure offers the capability to run a web site on an IaaS VM or from an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps support integration with VNets that allow the deployment of the Web Apps in a spoke network zone. Internal facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet-routable addresses from the private VNet.
 
 **Big Data/Analytics**: When data needs to scale up to a large volume, databases may not scale up properly. Hadoop technology offers a system to run distributed queries in parallel on large number of nodes. Customers have the option to run data workloads in IaaS VMs or PaaS ([HDInsight][HDI]). HDInsight supports deploying into a location-based VNet, can be deployed to a cluster in a spoke of a virtual datacenter.
 
@@ -371,7 +371,7 @@ We recommend that customers run network qualification tests to verify the latenc
 
 [Azure Traffic Manager][traffic-manager] periodically checks the service health of public endpoints in different virtual datacenter implementations and, if those endpoints fail, it routes automatically to the secondary virtual datacenter using the Domain Name System (DNS).
 
-Because it uses DNS, Traffic Manager is only for use with Azure public endpoints.  The service is typically used to control or divert traffic to Azure VMs and Web Apps in the healthy instance of a virtual datacenter implementation. Traffic Manager is resilient even in the face of an entire Azure region failing and can control the distribution of user traffic for service endpoints in different virtual datacenters based on several criteria. For example, failure of a service in a specific virtual datacenter implementation, or selecting the virtual datacenter implementation with the lowest network latency.
+Because it uses DNS, Traffic Manager is only for use with Azure public endpoints. The service is typically used to control or divert traffic to Azure VMs and Web Apps in the healthy instance of a virtual datacenter implementation. Traffic Manager is resilient even in the face of an entire Azure region failing and can control the distribution of user traffic for service endpoints in different virtual datacenters based on several criteria. For example, failure of a service in a specific virtual datacenter implementation, or selecting the virtual datacenter implementation with the lowest network latency.
 
 ### Summary
 
@@ -393,7 +393,7 @@ The following features were discussed in this document. Follow the links to lear
 
 |Other Azure Services|
 |-|
-|[Azure Web Apps][WebApps]</br>[HDInsights (Hadoop)][HDI]</br>[Event Hubs][EventHubs]</br>[Service Bus][ServiceBus]|
+|[Azure Web Apps][WebApps]</br>[HDInsight (Hadoop)][HDI]</br>[Event Hubs][EventHubs]</br>[Service Bus][ServiceBus]|
 
 <!-- markdownlint-enable MD033 -->
 

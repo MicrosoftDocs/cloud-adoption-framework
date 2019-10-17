@@ -17,7 +17,7 @@ Defining organizational policy is not effective unless it can be enforced across
 
 ![Plotting policy enforcement options from least to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-policy-enforcement.png)
 
-Jump to: [Baseline recommended practices](#baseline-recommended-practices) | [Policy compliance monitoring](#policy-compliance-monitoring) | [Policy enforcement](#policy-enforcement) | [Cross-organization policy](#cross-organization-policy) | [Automated enforcement](#automated-enforcement)
+Jump to: [Baseline best practices](#baseline-best-practices) | [Policy compliance monitoring](#policy-compliance-monitoring) | [Policy enforcement](#policy-enforcement) | [Cross-organization policy](#cross-organization-policy) | [Automated enforcement](#automated-enforcement)
 
 As your cloud estate grows, you will be faced with a corresponding need to maintain and enforce policy across a larger array of resources, and subscriptions. As your estate gets larger and your organization's policy requirements increase, the scope of your policy enforcement processes needs to expand to ensure consistent policy adherence and fast violation detection.
 
@@ -25,7 +25,7 @@ Platform-provided policy enforcement mechanisms at the resource or subscription 
 
 The primary factors in determining the scope of your policy enforcement processes is your organization's [cloud governance requirements](../../govern/index.md), the size and nature of your cloud estate, and how your organization is reflected in your [subscription design](../subscriptions/index.md). An increase in size of your estate or a greater need to centrally manage policy enforcement can both justify an increase in enforcement scope.
 
-## Baseline recommended practices
+## Baseline best practices
 
 For single subscription and simple cloud deployments, many corporate policies can be enforced using features that are native to resources and subscriptions in Azure. The consistent use of the patterns discussed throughout the Cloud Adoption Framework [decision guides](../index.md) can help establish a baseline level of policy compliance without specific investment in policy enforcement. These features include:
 
@@ -38,7 +38,7 @@ Start your cloud policy enforcement planning by examining how the application of
 
 ## Policy compliance monitoring
 
-A first step beyond simply relying on the policy enforcement mechanisms provided by the Azure platform, is ensuring ability to verify cloud-based applications and services comply with organizational policy. This includes implementing notification capabilities for alerting responsible parties if a resource becomes noncompliant. Effective [logging and reporting](../logging-and-reporting/index.md) of the compliance status of your cloud workloads is a critical part of a corporate policy enforcement strategy.
+A first step beyond simply relying on the policy enforcement mechanisms provided by the Azure platform is ensuring ability to verify cloud-based applications and services comply with organizational policy. This includes implementing notification capabilities for alerting responsible parties if a resource becomes noncompliant. Effective [logging and reporting](../logging-and-reporting/index.md) of the compliance status of your cloud workloads is a critical part of a corporate policy enforcement strategy.
 
 As your cloud estate grows, additional tools such as [Azure Security Center](https://docs.microsoft.com/azure/security-center) can provide integrated security and threat detection, and help apply centralized policy management and alerting for both your on-premises and cloud assets.
 

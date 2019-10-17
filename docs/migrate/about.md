@@ -23,7 +23,7 @@ The guidance in this section of the Cloud Adoption Framework is designed for two
 
 This content is intended for the cloud adoption team. It is also relevant to cloud architects that need to develop a strong foundation in cloud migration.
 
-## Intended Audience
+## Intended audience
 
 The guidance in the Cloud Adoption Framework affects the business, technology, and culture of enterprises. This section significantly affects application owners, change management personnel (such as PMO and agile management personnel) finance and line-of-business leaders, and the cloud adoption team. There are various dependencies on these personas that will require facilitation by the cloud architects using this guidance. Facilitation with these teams may be a one-time effort, but in some cases, it will result in recurring interactions with these other personas.
 
@@ -33,7 +33,7 @@ The Cloud Architect serves as the thought leader and facilitator to bring these 
 
 **Separation of Duties:** In many enterprises, separation of duties exists to limit access to production systems or segments of the corporate environment. In such a case, the process of migration becomes more complex. In some cases, those roles and responsibilities may require multiple cloud architects to span the entire migration process.
 
-**Partnership options** Across each of these processes, teams will be learning new skills and approaches to technical execution. Expanding technical skills amongst the existing team members is one option during execution. Hiring additional staff another. Partnering with third parties can often provide significant acceleration and risk reductions. [Partnership options](./migration-considerations/assess/partnership-options.md) can help guide decisions to choose the best partnership option.
+**Partnership options** Across each of these processes, teams will be learning new skills and approaches to technical execution. Expanding technical skills among the existing team members is one option during execution. Hiring additional staff another. Partnering with third parties can often provide significant acceleration and risk reductions. [Partnership options](./migration-considerations/assess/partnership-options.md) can help guide decisions to choose the best partnership option.
 
 ## Next steps
 

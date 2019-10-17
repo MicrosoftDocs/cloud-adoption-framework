@@ -422,7 +422,7 @@ Public IP addresses in Azure can be associated with VMs, load balancers, applica
 
 Azure has platform security features that are easy to use, and provide rich countermeasures to common network attacks. These include Azure Firewall, web application firewall, and Network Watcher.
 
-## Best Practice: Deploy Azure Firewall
+## Best practice: Deploy Azure Firewall
 
 Azure Firewall is a managed cloud-based network security service that protects your VNet resources. It is a fully stateful managed firewall with built-in high availability and unrestricted cloud scalability.
 
