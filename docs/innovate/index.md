@@ -34,7 +34,7 @@ Modern approaches to infrastructure deployment, operations, and governance are r
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 Here are a couple of examples of role-specific learning paths on Microsoft Learn which align with the Innovate portion of the Cloud Adoption Framework
 
-[Administer containers in Azure](https://docs.microsoft.com/en-us/learn/paths/administer-containers-in-azure/): Azure Container Instances are the quickest and easiest way to run containers in Azure. This learning path will teach you how to create and manage your containers, and how ACI can be used to provide elastic scale for Kubernetes.
+[Administer containers in Azure](https://docs.microsoft.com/learn/paths/administer-containers-in-azure/): Azure Container Instances (ACI) are the quickest and easiest way to run containers in Azure. This learning path will teach you how to create and manage your containers, and how ACI can be used to provide elastic scale for Kubernetes.
 
-[Create serverless applications](https://docs.microsoft.com/en-us/learn/paths/create-serverless-applications/):Azure Functions enable the creation of event driven, compute-on-demand systems that can be triggered by various external events. Learn how to leverage functions to execute server-side logic and build serverless architectures.
+[Create serverless applications](https://docs.microsoft.com/learn/paths/create-serverless-applications/): Azure Functions enable the creation of event driven, compute-on-demand systems that can be triggered by various external events. Learn how to leverage functions to execute server-side logic and build serverless architectures.
 
