@@ -35,7 +35,7 @@ For organizations throughout the world&mdash;whether governments, nonprofits, or
 
 However, as organizations continue to take advantage of the benefits of cloud services, such as increased choice, agility, and flexibility while boosting efficiency and lowering IT cost, they must consider how the introduction of cloud services affects their privacy, security, and compliance posture. Microsoft has worked to make their cloud offerings not only scalable, reliable, and manageable, but also to ensure our customers data is protected and used in a transparent manner.
 
-Security is an essential component of strong data safeguards in all online computing environments. But security alone is not sufficient. Consumers’ and businesses’ willingness to use a particular cloud computing product also depends on their ability to trust that the privacy of their information will be protected, and that their data will only be used in a manner consistent with customer expectations. Learn more about Microsoft's approach to [Protecting data and privacy in the cloud](https://go.microsoft.com/fwlink/?LinkId=808242&clcid=0x409)
+Security is an essential component of strong data safeguards in all online computing environments. But security alone is not sufficient. Consumers' and businesses' willingness to use a particular cloud computing product also depends on their ability to trust that the privacy of their information will be protected, and that their data will only be used in a manner consistent with customer expectations. Learn more about Microsoft's approach to [Protecting data and privacy in the cloud](https://go.microsoft.com/fwlink/?LinkId=808242&clcid=0x409)
 
 ## Risk mitigation
 

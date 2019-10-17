@@ -31,7 +31,7 @@ The goal of this guide is to provide a detailed reference to help enterprise IT 
 * The best-fit solution for monitoring hybrid, private, and Azure native workloads.
 * The recommended monitoring approach for both infrastructure and applications as a whole, from end-to-end. This includes deployable solutions for these common workloads migrating to Azure.
 
-This guide isn't a how-to guide for using or configuring individual Azure services and solutions, but does reference those sources when applicable or available. After reading this guide, you'll understand how to successfully operate a workload following recommended practices and patterns.
+This guide isn't a how-to guide for using or configuring individual Azure services and solutions, but does reference those sources when applicable or available. After reading this guide, you'll understand how to successfully operate a workload following best practices and patterns.
 
 If you are unfamiliar with Azure Monitor and System Center Operations Manager and you would like to get a better understanding of what makes them unique and how they compare to each other before going any further, review the [Overview of our monitoring platforms](./platform-overview.md).
 

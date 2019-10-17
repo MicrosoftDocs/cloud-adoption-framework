@@ -17,20 +17,20 @@ For years, IT organizations have struggled to combat alert fatigue created by th
 
 ## Successful alerting strategy
 
-*You can’t fix what you don’t know is broken.*
+*You can't fix what you don't know is broken.*
 
 Alerting on what matters is critical. It's underpinned by collecting and measuring the right metrics and logs. You also need a monitoring tool capable of storing, aggregating, visualizing, analyzing, and initiating an automated response when conditions are met. Improving the observability of your services and applications can only be accomplished if you fully understand its composition. You map that composition into a detailed monitoring configuration to be applied by the monitoring platform. This includes the predictable failure states (the symptoms not the cause of the failure) that make sense to alert for.
 
 Consider the following principles for determining if a symptom is an appropriate candidate for alerting:
 
-- **Does it matter?** Is the issue symptomatic of a real problem or issue influencing overall health of the application? For example, do you care if the CPU utilization is high on the resource? Or that a particular SQL query running on a SQL database instance on that resource is consuming high CPU utilization over a sustained period? Because the CPU utilization condition is a real issue, you should alert on it. But you don't need to notify the team, because it doesn’t help point to what is causing the condition in the first place. Alerting and notifying on the SQL query process utilization issue is both relevant and actionable.
+- **Does it matter?** Is the issue symptomatic of a real problem or issue influencing overall health of the application? For example, do you care if the CPU utilization is high on the resource? Or that a particular SQL query running on a SQL database instance on that resource is consuming high CPU utilization over a sustained period? Because the CPU utilization condition is a real issue, you should alert on it. But you don't need to notify the team, because it doesn't help point to what is causing the condition in the first place. Alerting and notifying on the SQL query process utilization issue is both relevant and actionable.
 - **Is it urgent?** Is the issue real, and does it need urgent attention? If so, the team responsible should be immediately notified.
 - **Are your customers affected?** Are users of the service or application affected as a result of the issue?
 - **Are other dependent systems affected?** Are there alerts from dependencies that are interrelated, and that can possibly be correlated to avoid notifying different teams all working on the same problem?
 
 Ask these questions when you're initially developing a monitoring configuration. Test and validate the assumptions in a nonproduction environment, and then deploy into production. Monitoring configurations are derived from known failure modes, test results of simulated failures, and experience from different members of the team.
 
-After the release of your monitoring configuration, you can learn a lot about what's working and what's not. Consider high alert volume, issues unnoticed by monitoring but noticed by end users, and what were the best actions to have taken as part of this evaluation. Identify changes to implement to improve service delivery, as part of an ongoing, continuous monitoring improvement process. It’s not just about evaluating alert noise or missed alerts, but also the effectiveness of how you're monitoring the workload. It's about the effectiveness of your alert policies, process, and overall culture to determine if you're improving.
+After the release of your monitoring configuration, you can learn a lot about what's working and what's not. Consider high alert volume, issues unnoticed by monitoring but noticed by end users, and what were the best actions to have taken as part of this evaluation. Identify changes to implement to improve service delivery, as part of an ongoing, continuous monitoring improvement process. It's not just about evaluating alert noise or missed alerts, but also the effectiveness of how you're monitoring the workload. It's about the effectiveness of your alert policies, process, and overall culture to determine if you're improving.
 
 Both System Center Operations Manager and Azure Monitor support alerts based on static or even dynamic thresholds and actions set up on top of them. Examples include alerts for email, SMS, and voice calls for simple notifications. Both of these services also support ITSM integration, to automate the creation of incident records and escalate to the correct support team, or any other alert management system using a webhook.
 
@@ -56,7 +56,7 @@ There are six repositories that store monitoring data, depending on the feature 
 
 There are four types of alerts in Azure Monitor, which are somewhat tied to the repository the data is stored in.
 
-- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric). Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold,  and then again when it returns to “normal” state.
+- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric). Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to “normal” state.
 
 - [Log query alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-log-query). Available to alerts on content in the Application Insights or Azure logs stores. Can also alert based on cross-workspace queries.
 
@@ -66,7 +66,7 @@ There are four types of alerts in Azure Monitor, which are somewhat tied to the 
 
 ### Alerting through partner tools
 
-If you're using an external alerting solution, then route as much as you can through Azure Event Hubs, as that’s the fastest path out of Azure Monitor. You’ll have to pay for ingestion into Event Hub. If cost is an issue and speed isn't, you can use Azure Storage as a cheaper alternative. Just make sure that your monitoring or ITSM tools can read Azure Storage to extract the data.
+If you're using an external alerting solution, then route as much as you can through Azure Event Hubs, as that's the fastest path out of Azure Monitor. You'll have to pay for ingestion into Event Hub. If cost is an issue and speed isn't, you can use Azure Storage as a cheaper alternative. Just make sure that your monitoring or ITSM tools can read Azure Storage to extract the data.
 
 Azure Monitor includes support for integrating with other monitoring platforms, and ITSM software such as ServiceNow. You can use Azure alerting and still trigger actions outside of Azure, as required by your incident management or DevOps process. If you want to alert in Azure Monitor and automate the response, you can initiate automated actions by using Azure Functions, Azure Logic Apps, or Azure Automation, based on your scenario and requirements.
 
@@ -76,7 +76,7 @@ Azure Monitor includes support for integrating with other monitoring platforms, 
 
 Solution| Data type | Alert behavior
 :---|:---|:---
-Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics store. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over a period of time.
+Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics store. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over time.
 || Calculated performance data that uses percentiles from nodes, controllers, containers, and pods are written to the logs store. Container logs and inventory information are also written to the logs store. | Create log query alerts if you want to be alerted based on variation of measured utilization from clusters and containers. Log query alerts can also be configured based on pod-phase counts and status node counts.
 Azure Monitor for VMs | Health criteria are metrics written to the metrics store. | Alerts are generated when health state changes from healthy to unhealthy condition. Only supports Action Groups configured to send SMS or email notification.
 || Map and guest operating system performance log data are written to the logs store. | Create log query alerts.
@@ -99,9 +99,9 @@ That said, there are some important footnotes to this rule.
 
 ### Minimize alerts
 
-If you use a solution like Azure Monitor for VMs and find the default health criteria that monitors performance utilization acceptable, then don’t create overlapping metric or log query alerts based on the same performance counters.
+If you use a solution like Azure Monitor for VMs and find the default health criteria that monitors performance utilization acceptable, then don't create overlapping metric or log query alerts based on the same performance counters.
 
-If you aren’t using Azure Monitor for VMs, explore the following features to make your job of creating alerts and managing notifications easier:  
+If you aren't using Azure Monitor for VMs, explore the following features to make your job of creating alerts and managing notifications easier:
 
 > [!NOTE]
 > These features apply only to metric alerts; that is, alerts based on data being sent to the Azure Monitor metric database. They don't apply to the other types of alerts. As mentioned previously, the primary objective of metric alerts is speed. If getting an alert in less than 5 minutes isn't of primary concern, you can use a log query alert instead.
@@ -120,4 +120,4 @@ Be sure to note the [limitations](https://docs.microsoft.com/azure/azure-subscri
 
 ### Best query experience
 
-If you're looking for trends across all your data, it makes sense to import all your data into Azure Logs, unless it’s already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import Activity log and Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This also gives you the ability to create complex query conditions and alert on them.
+If you're looking for trends across all your data, it makes sense to import all your data into Azure Logs, unless it's already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import Activity log and Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This also gives you the ability to create complex query conditions and alert on them.

@@ -18,6 +18,8 @@ In an ideal migration, every asset (infrastructure, app, or data) would be compa
 
 The resources in this section will help you assess of your environment to determine its suitability for migration and which methods to consider.
 
+<!-- markdownlint-disable MD025 -->
+
 # [Tools](#tab/Tools)
 
 The following tools help you assess your environment to determine the suitability of migration and best approach to use. For helpful information on choosing the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
@@ -34,7 +36,7 @@ To get started with a server migration assessment using Azure Migrate, follow th
 
 1. Select **Azure Migrate**.
 1. In **Overview**, click **Assess and migrate servers**.
-1. Select **Add tool(s)**.
+1. Select **Add tools**.
 1. In **Discover, assess and migrate servers**, click **Add tools**.
 1. In **Migrate project**, select your Azure subscription, and create a resource group if you don't have one.
 1. In **Project Details**, specify the project name, and geography in which you want to create the project, and click **Next**.

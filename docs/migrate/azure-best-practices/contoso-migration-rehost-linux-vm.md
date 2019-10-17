@@ -30,7 +30,7 @@ The IT Leadership team has worked closely with business partners to understand w
 The Contoso cloud team has pinned down goals for this migration, to determine the best migration method:
 
 - After migration, the app in Azure should have the same performance capabilities as it does today in their on-premises VMware environment. The app will remain as critical in the cloud as it is on-premises.
-- Contoso doesn’t want to invest in this app. It is important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
+- Contoso doesn't want to invest in this app. It is important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
 - Contoso doesn't want to change the ops model for this app. It wants to interact with the app in the cloud in the same way that they do now.
 - Contoso doesn't want to change app functionality. Only the app location will change.
 - Having completed a couple of Windows app migrations, Contoso wants to learn how to use a Linux-based infrastructure in Azure.

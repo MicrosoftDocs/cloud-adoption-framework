@@ -40,7 +40,7 @@ Other situations might require additional subscriptions. Keep the following in m
 
 - Subscriptions in public cloud regions and sovereign or government cloud regions have different limitations. These are often driven by different data-classification levels between environments.
 
-- If you completely segregate different sets of users for security or compliance reasons, you might require separate subscriptions. For example, national government organizations might need to limit a subscription’s access to citizens only.
+- If you completely segregate different sets of users for security or compliance reasons, you might require separate subscriptions. For example, national government organizations might need to limit a subscription's access to citizens only.
 
 - Different subscriptions might have different types of offerings, each with its own terms and benefits.
 
@@ -48,7 +48,7 @@ Other situations might require additional subscriptions. Keep the following in m
 
 - Rigid financial or geopolitical controls might require separate financial arrangements for specific subscriptions. These concerns might include considerations of data sovereignty, companies with multiple subsidiaries, or separate accounting and billing for business units in different countries and different currencies.
 
-- Azure resources created using the classic deployment model should be isolated in their own subscription. The security for classic resources differs from that of resources deployed via Azure Resource Manager. Azure policies can’t be applied to classic resources.
+- Azure resources created using the classic deployment model should be isolated in their own subscription. The security for classic resources differs from that of resources deployed via Azure Resource Manager. Azure policies can't be applied to classic resources.
 
 - Service admins using classic resources have the same permissions as role-based access control (RBAC) owners of a subscription. It's difficult to sufficiently narrow these service admins' access in a subscription that mixes classic resources and Resource Manager resources.
 
@@ -60,9 +60,9 @@ You can move many types of resources from one subscription to another or use aut
 
 If you have only a few subscriptions, managing them independently is relatively simple. But if you have many subscriptions, you should consider creating a management-group hierarchy to simplify managing your subscriptions and resources.
 
-Management groups allow efficient management of access, policies, and compliance for an organization’s subscriptions. Each management group is a container for one or more subscriptions.
+Management groups allow efficient management of access, policies, and compliance for an organization's subscriptions. Each management group is a container for one or more subscriptions.
 
-Management groups are arranged in a single hierarchy. You define this hierarchy in your Azure Active Directory (Azure AD) tenant to align with your organization’s structure and needs. The top level is called the *root management group*. You can define up to six levels of management groups in your hierarchy. Each subscription is contained by only one management group.
+Management groups are arranged in a single hierarchy. You define this hierarchy in your Azure Active Directory (Azure AD) tenant to align with your organization's structure and needs. The top level is called the *root management group*. You can define up to six levels of management groups in your hierarchy. Each subscription is contained by only one management group.
 
 Azure provides four levels of management scope: management groups, subscriptions, resource groups, and resources. Any access or policy applied at one level in the hierarchy is inherited by the levels below it. A resource owner or subscription owner can't alter an inherited policy. This limitation helps improve governance.
 

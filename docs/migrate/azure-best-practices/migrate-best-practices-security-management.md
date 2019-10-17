@@ -48,7 +48,7 @@ In addition to assessments and recommendations, the Azure Security Center provid
   - Adaptive application controls allow you to approve apps, and prevent rogue users or administrators from installing unapproved or vetting software apps on your VMs.
     - You can block or alert attempts to run malicious apps, avoid unwanted or malicious apps, and ensure compliance with your organization's app security policy.
 - **File Integrity Monitoring.** Ensure the integrity of files running on VMs.
-  - You donâ€™t need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File integrity Monitoring examines system files and registry settings for changes, and notifies you if something is updated.
+  - You don't need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File integrity Monitoring examines system files and registry settings for changes, and notifies you if something is updated.
   - Security Center recommends which files you should monitor.
 
 **Learn more:**
@@ -275,7 +275,7 @@ Just as blueprint allows engineers and architects to sketch a project's design p
 
 Building secure, scalable, and manageable workloads in Azure can be daunting. With continual changes, it can be difficult to keep up with different features for an optimal environment. Having a reference to learn from can be helpful when designing and migrating your workloads. Azure and Azure partners have built several sample reference architectures for various types of environments. These samples are designed to provide ideas that you can learn from and build on.
 
-Reference architectures are arranged by scenario. They contain recommended practices and advice on management, availability, scalability, and security.
+Reference architectures are arranged by scenario. They contain best practices and advice on management, availability, scalability, and security.
 The Azure App Service Environment provides a fully isolated and dedicated environment in which to run App Service apps, including Windows and Linux web apps, Docker containers, mobile apps, and functions. App Service adds the power of Azure to your application, with security, load balancing, autoscaling, and automated management. You can also take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps and GitHub, package management, staging environments, custom domain, and SSL certificates. App Service is useful for apps that need isolation and secure network access, and those that use high amounts of memory and other resources that need to scale.
 
 **Learn more:**
@@ -424,7 +424,7 @@ Azure managed disks simplify disk management for Azure IaaS VMs by managing theÂ
 - [Learn about](https://docs.microsoft.com/azure/virtual-machines/windows/convert-unmanaged-to-managed-disks) converting disks to managed.
 - [Learn how to](https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability) manage the availability of Windows VMs in Azure.
 
-## Best Practice: Monitor resource usage and performance
+## Best practice: Monitor resource usage and performance
 
 You might have moved your workloads to Azure for its immense scaling capabilities. However, moving your workload doesn't mean that Azure will automatically implement scaling without your input. As an example:
 

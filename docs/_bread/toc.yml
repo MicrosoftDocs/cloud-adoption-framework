@@ -13,7 +13,7 @@
       tocHref: /azure/cloud-adoption-framework/plan/
       topicHref: /azure/cloud-adoption-framework/plan
       items:
-      - name: Digital Estate
+      - name: Digital estate
         tocHref: /azure/cloud-adoption-framework/digital-estate/
         topicHref: /azure/cloud-adoption-framework/digital-estate
     - name: Ready 
@@ -27,9 +27,13 @@
       - name: Innovate
         tocHref: /azure/cloud-adoption-framework/innovate/
         topicHref: /azure/cloud-adoption-framework/innovate
-    - name: Operate
-      tocHref: /azure/cloud-adoption-framework/operate/
-      topicHref: /azure/cloud-adoption-framework/operate
+        items:
+        - name: Azure innovation guide
+          tocHref: /azure/cloud-adoption-framework/innovate/innovation-guide/
+          topicHref: /azure/cloud-adoption-framework/innovate/innovation-guide
+    - name: Operating model
+      tocHref: /azure/cloud-adoption-framework/operating-model/
+      topicHref: /azure/cloud-adoption-framework/operating-model
       items:
       - name: Govern
         tocHref: /azure/cloud-adoption-framework/govern/

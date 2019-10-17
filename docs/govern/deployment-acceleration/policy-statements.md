@@ -38,7 +38,7 @@ The following sample policy statements address common configuration-related busi
 - Key metrics and diagnostics measures will be identified for all production systems and components, and monitoring and diagnostic tools will be applied to these systems and monitored regularly by operations personnel.
 - Operations will consider using monitoring and diagnostic tools in nonproduction environments such as Staging and QA to identify system issues before they occur in the production environment.
 
-**Potential design options:** [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor), which also includes Log Analytics and Application Insights, provides tools for collecting and analyzing telemetry to help you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. Additionally, [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) reports all changes that are being made at the platform level and should be monitored/audited for non-compliant changes.
+**Potential design options:** [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor), which also includes Log Analytics and Application Insights, provides tools for collecting and analyzing telemetry to help you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. Additionally, [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) reports all changes that are being made at the platform level and should be monitored/audited for noncompliant changes.
 
 ## Configuration security reviews
 

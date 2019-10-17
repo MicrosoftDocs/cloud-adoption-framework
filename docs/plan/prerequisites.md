@@ -22,7 +22,7 @@ Accurate strategic inputs ensure that the work being done contributes to achieve
 - **Defined business outcomes**: What results do we expect to see from adopting the cloud?
 - **Business justification**: How will the business measure success?
 
-Every member of the team that implements the cloud adoption plan should be able to answer these three strategic questions. Managers and leaders who are accountable for implementation of the plan should understand the metrics behind each question and any progress towards realizing those metrics.
+Every member of the team that implements the cloud adoption plan should be able to answer these three strategic questions. Managers and leaders who are accountable for implementation of the plan should understand the metrics behind each question and any progress toward realizing those metrics.
 
 ## Tactical inputs
 

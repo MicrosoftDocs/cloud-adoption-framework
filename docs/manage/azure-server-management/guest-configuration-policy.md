@@ -12,7 +12,7 @@ ms.subservice: operate
 
 # Guest Configuration policy
 
-The Azure Policy [Guest Configuration](/azure/governance/policy/concepts/guest-configuration) extension allows you to audit the configuration settings in a virtual machine. Guest Configuration is currently supported only on Azure VMs.
+The Azure Policy [Guest Configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration) extension allows you to audit the configuration settings in a virtual machine. Guest Configuration is currently supported only on Azure VMs.
 
 You can find the list of Guest Configuration policies by searching for the category "Guest Configuration" on the Azure Policy portal page. You can also find the list by running this cmdlet in a PowerShell window:
 

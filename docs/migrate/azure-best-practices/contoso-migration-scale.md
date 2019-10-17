@@ -83,7 +83,7 @@ Contoso runs thousands of apps across a range of servers. In addition to the CMD
 
 ### Identify classifications
 
-Contoso identifies some common categories to classify assets in the inventory. These classifications are critical to Contoso’s decision making for migration. The classification list helps to establish migration priorities, and identify complex issues.
+Contoso identifies some common categories to classify assets in the inventory. These classifications are critical to Contoso's decision making for migration. The classification list helps to establish migration priorities, and identify complex issues.
 
 **Category** | **Assigned Value** | **Details**
 --- | --- | ---
@@ -255,7 +255,7 @@ Contoso needs to figure out how to deploy these components, based on capacity co
 
 **Component** | **Capacity requirements**
 --- | ---
-**Maximum daily change rate** | A single process server can handle a daily change rate up to 2 TB. Since a VM can only use one process server, the maximum daily data change rate that’s supported for a replicated VM is 2 TB.
+**Maximum daily change rate** | A single process server can handle a daily change rate up to 2 TB. Since a VM can only use one process server, the maximum daily data change rate that's supported for a replicated VM is 2 TB.
 **Maximum throughput** | A standard Azure storage account can handle a maximum of 20,000 requests per second, and input/output operations per second (IOPS) across a replicating VM should be within this limit. For example, if a VM has 5 disks, and each disk generates 120 IOPS (8K size) on the VM, then it will be within the Azure per disk IOPS limit of 500.<br/><br/> Note that the number of storage accounts needed is equal to the total source machine IOPS, divided by 20,000. A replicated machine can only belong to a single storage account in Azure.
 **Configuration server** | Based on Contoso's estimate of replicating 100=200 VMs together, and the [configuration server sizing requirements](https://docs.microsoft.com/azure/site-recovery/site-recovery-plan-capacity-vmware#size-recommendations-for-the-configuration-server-and-inbuilt-process-server), Contoso estimate is needs a configuration server machine as follows:<br/><br/> CPU: 16 vCPUs (2 sockets * 8 cores @ 2.5 GHz)<br/><br/> Memory: 32 GB<br/><br/> Cache disk: 1 TB<br/><br/> Data change rate: 1 TB to 2 TB.<br/><br/> In addition to sizing requirements Contoso will need to make sure that the configuration server is optimally located, on the same network and LAN segment as the VMs that will be migrated.
 **Process server** | Contoso will deploy a standalone dedicated process server with the ability to replicate 100-200 VMs:<br/><br/> CPU: 16 vCPUs (2 sockets * 8 cores @ 2.5 GHz)<br/><br/> Memory: 32 GB<br/><br/> Cache disk: 1 TB<br/><br/> Data change rate: 1 TB to 2 TB.<br/><br/> The process server will be working hard, and as such should be located on an ESXi host that can handle the disk I/O, network traffic and CPU required for the replication. Contoso will consider a dedicated host for this purpose.
@@ -313,7 +313,7 @@ To make the most of their cloud investment, Contoso will take advantage of the f
 Contoso will also use scripts to locate unused resources.
 
 - During large migrations, there are often leftover pieces of data such as virtual hard drives (VHDs), which incur a charge, but provide no value to the company. Scripts are available in the GitHub repo.
-- Contoso will take advantage of work done by Microsoft’s IT department, and consider implementing the Azure Resource Optimization (ARO) Toolkit.
+- Contoso will take advantage of work done by Microsoft's IT department, and consider implementing the Azure Resource Optimization (ARO) Toolkit.
 - Contoso can deploy an Azure Automation account with preconfigured runbooks and schedules to its subscription, and start saving money. Azure resource optimization happens automatically on a subscription after a schedule is enabled or created, including optimization on new resources.
 - This provides decentralized automation capabilities to reduce costs. Features include:
   - Autosnooze Azure VMs based on low CPU.
@@ -353,7 +353,7 @@ Contoso will need a business continuity and disaster recovery (BCDR) strategy fo
 
 - Azure provides [built-in BCDR features](https://docs.microsoft.com/azure/architecture/resiliency/disaster-recovery-azure-applications) to keep data safe and apps/services up and running.
 - In addition to built-in features, Contoso wants to ensure that it can recover from failures, avoid costly business disruptions, meet compliance goals, and protect data against ransomware and human errors. To do this:
-  - Contoso will deploy Azure Backup as a cost-efficient solution for backup of Azure resources. Because it’s built-in, Contoso can set up cloud backups in a few simple steps.
+  - Contoso will deploy Azure Backup as a cost-efficient solution for backup of Azure resources. Because it's built-in, Contoso can set up cloud backups in a few simple steps.
   - Contoso will set up disaster recovery for Azure VMs using Azure Site Recovery for replication, failover, and failback between Azure regions that it specifies. This ensures that apps running on Azure VMs will remain available in a secondary region of Contoso's choosing if an outage occurs in the primary region. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ## Conclusion

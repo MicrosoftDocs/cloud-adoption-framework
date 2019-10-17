@@ -66,8 +66,10 @@ To begin a governance journey, choose one of the two options below. The options 
 > [!WARNING]
 > A more robust governance starting point may be required. In such cases, consider the [Azure Virtual Datacenter](#azure-virtual-datacenter) approach briefly described [below](#azure-virtual-datacenter). This approach is commonly suggested during enterprise-scale adoption efforts, and especially for efforts which exceed 10,000 assets. It is also the de facto choice for complex governance scenarios when any of the following are required: extensive third-party compliance requirements, deep domain expertise, or parity with mature IT governance policies and compliance requirements.
 
+<!-- markdownlint-disable MD028 -->
+
 > [!NOTE]
-> It’s unlikely that either guide aligns completely to your situation. Choose whichever guide is closest and use it as a starting point. Throughout the guide, additional information is provided to help you customize decisions to meet specific criteria.
+> It's unlikely that either guide aligns completely to your situation. Choose whichever guide is closest and use it as a starting point. Throughout the guide, additional information is provided to help you customize decisions to meet specific criteria.
 
 ### Business characteristics
 
@@ -91,7 +93,7 @@ To begin a governance journey, choose one of the two options below. The options 
 | State | Standard Organization | Complex Enterprise |
 |---|---|---|
 | Cost Management – cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
-| Security Baseline – protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers’ financial and personal data. May need to consider third-party compliance. |
+| Security Baseline – protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. May need to consider third-party compliance. |
 
 ## Azure Virtual Datacenter
 

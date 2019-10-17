@@ -38,7 +38,7 @@ The IT team has approval to move forward with the CIO and CFO's plans to retire 
 
 The new future state plans require a more robust Identity Baseline solution to migrate the 750 virtual machines with legacy authentication requirements. Beyond these two datacenters, this challenge is expected to affect similar percentages of assets in other datacenters.
 
-The future state now also requires a connection from the cloud provider to the company’s MPLS/leased-line solution.
+The future state now also requires a connection from the cloud provider to the company's MPLS/leased-line solution.
 
 The changes to current and future state expose new risks that will require new policy statements.
 
@@ -62,7 +62,7 @@ The following changes to policy will help remediate the new risks and guide impl
 
 - The chosen cloud provider must offer a means of authenticating via legacy methods.
 - The chosen cloud provider must offer a means of authentication with the current third-party multi-factor authentication solution.
-- A high-speed private connection should be established between the cloud provider and the company’s telco provider, connecting the cloud provider to the global network of datacenters.
+- A high-speed private connection should be established between the cloud provider and the company's telco provider, connecting the cloud provider to the global network of datacenters.
 - Until sufficient security requirements are established, no inbound public traffic may access company assets hosted in the cloud. All ports are blocked from any source outside of the global WAN.
 
 ## Incremental improvement of the best practices

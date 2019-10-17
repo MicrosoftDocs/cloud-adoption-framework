@@ -71,7 +71,7 @@ This model is similar to the staged promotion model. However, there is one funda
 
 **Cons.** Negative aspects of this approach include:
 
-- The chosen migration tool can’t facilitate ongoing replication after migration.
+- The chosen migration tool can't facilitate ongoing replication after migration.
 - A secondary means of data replication is required to synchronize data platforms during the staged time frame.
 
 ## Next steps

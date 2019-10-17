@@ -36,7 +36,7 @@ The cloud can help create opportunities to deliver new products to customers or 
 
 With global scale and digital reach, the cloud can help businesses to increase revenues from existing revenue streams. Often, this type of outcome comes from an alignment with sales or marketing leadership.
 
-- **Example**: A company that sells widgets could sell more widgets, if the salespeople could securely access the company’s digital catalog and stock levels. Unfortunately, that data is only in the company’s ERP system, which can be accessed only via a network-connected device. Creating a service façade to interface with the ERP and exposing the catalog list and nonsensitive stock levels to an application in the cloud would allow the salespeople to access the data they need while onsite with a customer. Extending on-premises Active Directory using Azure Active Directory (Azure AD) and integrating role-based access into the application would allow the company to help ensure that the data stays safe. This simple project could affect revenue from an existing product line by _x%_.
+- **Example**: A company that sells widgets could sell more widgets, if the salespeople could securely access the company's digital catalog and stock levels. Unfortunately, that data is only in the company's ERP system, which can be accessed only via a network-connected device. Creating a service façade to interface with the ERP and exposing the catalog list and nonsensitive stock levels to an application in the cloud would allow the salespeople to access the data they need while onsite with a customer. Extending on-premises Active Directory using Azure Active Directory (Azure AD) and integrating role-based access into the application would allow the company to help ensure that the data stays safe. This simple project could affect revenue from an existing product line by _x%_.
 
 ### Profit increases
 
@@ -54,7 +54,7 @@ Cloud computing can reduce capital expenses for hardware and software, setting u
 
 ### Example: Coverdell
 
-Coverdell modernizes their infrastructure to drive record cost savings with Azure. Coverdell’s decision to invest in Azure, and to unite their network of websites, applications, data, and infrastructure within this environment, led to more cost savings than the company could have ever expected. The migration to an Azure-only environment eliminated 54,000 USD in monthly costs for colocation services. With the company’s new, united infrastructure alone, Coverdell expects to save an estimated 1 million USD over the next two to three years.
+Coverdell modernizes their infrastructure to drive record cost savings with Azure. Coverdell's decision to invest in Azure, and to unite their network of websites, applications, data, and infrastructure within this environment, led to more cost savings than the company could have ever expected. The migration to an Azure-only environment eliminated 54,000 USD in monthly costs for colocation services. With the company's new, united infrastructure alone, Coverdell expects to save an estimated 1 million USD over the next two to three years.
 
 > "Having access to the Azure technology stack opens the door for some scalable, easy-to-implement, and highly available solutions that are cost effective. This allows our architects to be much more creative with the solutions they provide."  
 > Ryan Sorensen  
@@ -65,7 +65,7 @@ Coverdell modernizes their infrastructure to drive record cost savings with Azur
 
 Terminating a datacenter can also provide cost avoidance, by preventing future refresh cycles. A refresh cycle is the process of buying new hardware and software to replace aging on-premises systems. In Azure, hardware and OS are routinely maintained, patched, and refreshed at no additional cost to customers. This allows a CFO to remove planned future spend from long-term financial forecasts. Cost avoidance is measured in dollars. It differs from cost reduction, generally focusing on a future budget that has not been fully approved yet.
 
-- **Example**: A company’s datacenter is up for a lease renewal in six months. The datacenter has been in service for eight years. Four years ago, all servers were refreshed and virtualized, costing the company millions of dollars. Next year, the company plans to refresh the hardware and software again. Migrating the assets in that datacenter as part of a cloud migration would allow cost avoidance by removing the planned refresh from next year’s forecasted budget. It could also produce cost reduction by decreasing or eliminating the real estate lease costs.
+- **Example**: A company's datacenter is up for a lease renewal in six months. The datacenter has been in service for eight years. Four years ago, all servers were refreshed and virtualized, costing the company millions of dollars. Next year, the company plans to refresh the hardware and software again. Migrating the assets in that datacenter as part of a cloud migration would allow cost avoidance by removing the planned refresh from next year's forecasted budget. It could also produce cost reduction by decreasing or eliminating the real estate lease costs.
 
 ### Capital expenses vs. operating expenses
 
@@ -78,7 +78,7 @@ The following terms will help you understand the differences between capital exp
 - **Operating expenditures** are ongoing costs of doing business. Consuming cloud services in a pay-as-you-go model could qualify as an operating expenditure.
 - **Assets** are economic resources that can be owned or controlled to produce value. Servers, data lakes, and applications can all be considered assets.
 - **Depreciation** is a decrease in the value of an asset over time. More relevant to the capital expense versus operating expense conversation, depreciation is how the costs of an asset are allocated across the periods in which they are used. For instance, if you build an application this year but it's expected to have an average shelf life of five years (like most commercial apps), the cost of the dev team and necessary tools required to create and deploy the code base would be depreciated evenly over five years.
-- **Valuation** is the process of estimating how much a company is worth. In most industries, valuation is based on the company’s ability to generate revenue and profit, while respecting the operating costs required to create the goods that provide that revenue. In some industries, such as retail, or in some transaction types, such as private equity, assets and depreciation can play a large part in the company’s valuation.
+- **Valuation** is the process of estimating how much a company is worth. In most industries, valuation is based on the company's ability to generate revenue and profit, while respecting the operating costs required to create the goods that provide that revenue. In some industries, such as retail, or in some transaction types, such as private equity, assets and depreciation can play a large part in the company's valuation.
 
 It is often a safe bet that various executives, including the chief investment officer (CIO), debate the best use of capital to grow the company in the desired direction. Giving the CIO a means of converting contentious capital expense conversations into clear accountability for operating expenses could be an attractive outcome by itself. In many industries, chief financial officers (CFOs) are actively seeking ways of better associating fiscal accountability to the cost of goods being sold.
 
@@ -86,7 +86,7 @@ However, before you associate any transformation journey with this type of capit
 
 If an operating expense model is desirable, the following example could be a viable business outcome:
 
-- **Example**: The company’s datacenter is currently depreciating at _x USD_ per year for the next three years. It is expected to require an additional _y USD_ to refresh the hardware next year. We can convert the capital expenses to an operating expense model at an even rate of _z USD_ per month, allowing for better management of and accountability for the operating costs of technology.
+- **Example**: The company's datacenter is currently depreciating at _x USD_ per year for the next three years. It is expected to require an additional _y USD_ to refresh the hardware next year. We can convert the capital expenses to an operating expense model at an even rate of _z USD_ per month, allowing for better management of and accountability for the operating costs of technology.
 
 ## Next steps
 
