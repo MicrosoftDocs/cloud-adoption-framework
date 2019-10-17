@@ -23,7 +23,7 @@ ms.localizationpriority: high
 
 Before you start building and deploying solutions using Azure services, you need to prepare your environment. In this guide, we introduce features that help you organize resources, control costs, and secure and manage your organization. For more information, best practices, and considerations related to preparing your cloud environment, see the [Cloud Adoption Framework's readiness section](../index.md).
 
-You’ll learn how to:
+You'll learn how to:
 
 ::: zone target="chromeless"
 
@@ -58,6 +58,6 @@ Next steps: [Organize your resources to simplify how you apply settings](./organ
 
 ::: zone target="chromeless"
 
-This guide provides interactive steps that let you try features as they’re introduced. To come back to where you left off, use the breadcrumb for navigation.
+This guide provides interactive steps that let you try features as they're introduced. To come back to where you left off, use the breadcrumb for navigation.
 
 ::: zone-end

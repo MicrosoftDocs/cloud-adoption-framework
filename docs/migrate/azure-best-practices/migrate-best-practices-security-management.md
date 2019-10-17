@@ -48,7 +48,7 @@ In addition to assessments and recommendations, the Azure Security Center provid
   - Adaptive application controls allow you to approve apps, and prevent rogue users or administrators from installing unapproved or vetting software apps on your VMs.
     - You can block or alert attempts to run malicious apps, avoid unwanted or malicious apps, and ensure compliance with your organization's app security policy.
 - **File Integrity Monitoring.** Ensure the integrity of files running on VMs.
-  - You don’t need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File integrity Monitoring examines system files and registry settings for changes, and notifies you if something is updated.
+  - You don't need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File integrity Monitoring examines system files and registry settings for changes, and notifies you if something is updated.
   - Security Center recommends which files you should monitor.
 
 **Learn more:**

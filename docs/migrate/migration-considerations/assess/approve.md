@@ -16,9 +16,9 @@ During the assess process of migration, each workload is evaluated, architected,
 
 ## Business impact and approval
 
-During migration, some things are likely to change in ways that impact the business. Although change sometimes can’t be avoided, surprises as a result of undisclosed or undocumented changes should be. To maintain stakeholder support throughout the migration effort, it’s important to avoid surprises. Surprising application owners or business stakeholders can slow or halt a cloud adoption effort.
+During migration, some things are likely to change in ways that impact the business. Although change sometimes can't be avoided, surprises as a result of undisclosed or undocumented changes should be. To maintain stakeholder support throughout the migration effort, it's important to avoid surprises. Surprising application owners or business stakeholders can slow or halt a cloud adoption effort.
 
-Prior to migration, it is important to prepare the workload’s business owner for any changes that could affect business processes, such as changes to:
+Prior to migration, it is important to prepare the workload's business owner for any changes that could affect business processes, such as changes to:
 
 - Service-level agreements.
 - Access patterns or security requirements that impact the end user.

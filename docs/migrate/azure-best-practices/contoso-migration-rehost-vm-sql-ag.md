@@ -31,7 +31,7 @@ The IT leadership team has worked closely with business partners to understand w
 The Contoso cloud team has pinned down goals for this migration. These goals were used to determine the best migration method:
 
 - After migration, the app in Azure should have the same performance capabilities as it does today in VMware. The app will remain as critical in the cloud as it is on-premises.
-- Contoso doesn’t want to invest in this app. It is important to the business, but in its current form Contoso simply want to move it safely to the cloud.
+- Contoso doesn't want to invest in this app. It is important to the business, but in its current form Contoso simply want to move it safely to the cloud.
 - The on-premises database for the app has had availability issues. Contoso would like to deploy it in Azure as a high-availability cluster, with failover capabilities.
 - Contoso wants to upgrade from their current SQL Server 2008 R2 platform, to SQL Server 2017.
 - Contoso doesn't want to use an Azure SQL Database for this app, and is looking for alternatives.

@@ -138,7 +138,7 @@ Contoso admins run a deployment script to create the managed Kubernetes cluster 
 
 The Contoso admins provision as follows:
 
-1.They open the folder using Visual Studio Code, and moves to the **/deploy/k8s** directory, which contains the script **gen-aks-env.ps1**.
+1.They open the folder using Visual Studio Code, and move to the **/deploy/k8s** directory, which contains the script **gen-aks-env.ps1**.
 2. They run the script to create the managed Kubernetes cluster, using AKS and ACR.
     ![AKS](./media/contoso-migration-rebuild/aks1.png)
 3. With the file open, they update the $location parameter to **eastus2**, and save the file.

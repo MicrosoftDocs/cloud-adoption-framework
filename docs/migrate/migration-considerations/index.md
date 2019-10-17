@@ -25,7 +25,7 @@ The Cloud Adoption Framework migration model depends on your organization having
 
 ## Envision an end state
 
-It’s important to establish a rough vision of your end state before starting your migration efforts. The diagram below shows an on-premises starting point of infrastructure, applications, and data, which defines your *digital estate*. During the migration process, those assets are transitioned using one of the five migration strategies described in [The five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md).
+It's important to establish a rough vision of your end state before starting your migration efforts. The diagram below shows an on-premises starting point of infrastructure, applications, and data, which defines your *digital estate*. During the migration process, those assets are transitioned using one of the five migration strategies described in [The five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md).
 
 ![Infographic of the migration options](../../_images/migrate/migration-options.png)
 

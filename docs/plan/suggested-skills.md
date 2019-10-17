@@ -12,7 +12,7 @@ ms.subservice: plan
 
 # Getting started on a skills readiness path
 
-IT staff members might feel anxious about their roles and positions as they realize a different set of skills is needed to support cloud solutions. Agile employees who explore and learn new cloud technologies don’t need to have that fear. They can lead the adoption of cloud services by helping the organization understand and embrace the associated changes.
+IT staff members might feel anxious about their roles and positions as they realize a different set of skills is needed to support cloud solutions. Agile employees who explore and learn new cloud technologies don't need to have that fear. They can lead the adoption of cloud services by helping the organization understand and embrace the associated changes.
 
 ![Mapping of skills to IT roles in a cloud hosted environment](../_images/skills-guidance.png)
 *Figure 1 - Mapping of skills to IT roles in a cloud-hosted environment.*

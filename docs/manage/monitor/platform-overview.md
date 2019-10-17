@@ -77,7 +77,7 @@ Operations Manager only collects data directly from agents installed on [Windows
 
 ![Diagram of Operations Manager agent](./media/monitoring-management-guidance-cloud-and-on-premises/data-collection-opsman-agents-optimized.svg)
 
-The Operations Manager agent can collect from multiple data sources on the local computer, such as the event log, custom logs, and performance counters. It can also run scripts, which can collect data from the local computer or from external sources. You can write custom scripts to collect data that can’t be collected by other means, or from a variety of remote devices that can’t otherwise be monitored.
+The Operations Manager agent can collect from multiple data sources on the local computer, such as the event log, custom logs, and performance counters. It can also run scripts, which can collect data from the local computer or from external sources. You can write custom scripts to collect data that can't be collected by other means, or from a variety of remote devices that can't otherwise be monitored.
 
 #### Management packs
 
@@ -89,7 +89,7 @@ Management packs can contain hundreds of rules, monitors, and object discovery r
 
 For example, a monitor might sample a performance counter every few minutes. If that counter exceeds a threshold, it immediately sets the health state of its target object, which immediately triggers an alert in the management group. A scheduled rule might watch for a particular event to be created, and immediately fire an alert when that event is created in the local event log.
 
-Because these monitoring settings are isolated from each other and work from the individual sources of data, Operations Manager has challenges correlating data between multiple sources. It’s also difficult to react to data after it’s been collected. You can run workflows that access the Operations Manager database, but this scenario isn’t common and it's typically used for a limited number of special purpose workflows.
+Because these monitoring settings are isolated from each other and work from the individual sources of data, Operations Manager has challenges correlating data between multiple sources. It's also difficult to react to data after it's been collected. You can run workflows that access the Operations Manager database, but this scenario isn't common and it's typically used for a limited number of special purpose workflows.
 
 ![Diagram of Operations Manager management group](./media/monitoring-management-guidance-cloud-and-on-premises/operations-manager-management-group-optimized.svg)
 
@@ -101,7 +101,7 @@ Azure Monitor collects data from a variety of sources, including Azure infrastru
 
 #### Monitoring solutions and insights
 
-Monitoring solutions use the logs platform in Azure Monitor to provide monitoring for a particular application or service. They typically define data collection from agents or from Azure services, and provide log queries and views to analyze that data. They typically don’t provide alert rules, meaning that you must define your own alert criteria based on collected data.
+Monitoring solutions use the logs platform in Azure Monitor to provide monitoring for a particular application or service. They typically define data collection from agents or from Azure services, and provide log queries and views to analyze that data. They typically don't provide alert rules, meaning that you must define your own alert criteria based on collected data.
 
 Insights, such as Azure Monitor for containers and Azure Monitor for VMs, use the logs and metrics platform of Azure Monitor to provide a customized monitoring experience for an application or service in the Azure portal. They might provide health monitoring and alerting conditions, in addition to customized analysis of collected data.
 
@@ -121,7 +121,7 @@ Management Packs in Operations Manager include a service model that describes th
 
 ### Azure Monitor
 
-Azure Monitor doesn’t provide a user definable method of implementing a service model or monitors that indicate the current health state of any service components. Because monitoring solutions are based on standard features of Azure Monitor, they don’t provide state level monitoring. The following features of Azure Monitor can be helpful:
+Azure Monitor doesn't provide a user definable method of implementing a service model or monitors that indicate the current health state of any service components. Because monitoring solutions are based on standard features of Azure Monitor, they don't provide state level monitoring. The following features of Azure Monitor can be helpful:
 
 - **Application Insights** builds a composite map of your web application, and provides a health state for each application component or dependency. This includes alerts status and drill-down to more detailed diagnostics of your application.
 
@@ -133,7 +133,7 @@ Azure Monitor doesn’t provide a user definable method of implementing a servic
 
 ### Operations Manager
 
-Operations Manager provides four basic ways to analyze data after it’s collected.
+Operations Manager provides four basic ways to analyze data after it's collected.
 
 - With **Health Explorer**, you can find out which monitors are identifying a health state issue and review knowledge about the monitor and possible causes for actions related to it.
 
@@ -167,7 +167,7 @@ While monitoring solutions can include alert rules, typically you create them ba
 
 Management packs in Operations Manager contain hundreds of individual workflows, and determine both what data to collect and what action to perform with that data. For example, a rule might sample a performance counter every few minutes, storing its results for analysis. A monitor might sample the same performance counter, and compare its value to a threshold to determine the health state of a monitored object. Another rule might run a script to collect and analyze some data on an agent computer, and fire an alert if it returned a particular value.
 
-Workflows in Operations Manager are independent of each other, so analysis across multiple monitored objects is difficult. These monitoring scenarios must be based on data after it's collected, which is possible but can be difficult, and isn’t common.
+Workflows in Operations Manager are independent of each other, so analysis across multiple monitored objects is difficult. These monitoring scenarios must be based on data after it's collected, which is possible but can be difficult, and isn't common.
 
 ### Azure Monitor
 

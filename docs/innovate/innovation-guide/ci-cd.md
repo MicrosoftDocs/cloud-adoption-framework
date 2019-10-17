@@ -33,12 +33,12 @@ Organizations recognize that innovation is critical to business success. Innovat
 > - Regardless of industry, every organization is trying to do one thing: drive constant value generation.
 > - The focus on innovation is essentially a process to help your organization find new ways of generating value.
 > - Perhaps the greatest mistake organizations make repeatedly is trying to create new value by looking to technology for the answer.
-> - Sometimes the prevailing attitude is "if we just use more technology, we’ll see things improve." However, innovation is first and foremost a people story.
+> - Sometimes the prevailing attitude is "if we just use more technology, we'll see things improve." However, innovation is first and foremost a people story.
 > - Innovation is about the combination of people and technology.
 
 Organizations that successfully innovate see vision, strategy, culture, unique potential, and capabilities as the foundational elements, then turn to technology with a specific purpose in mind. Every company is becoming a software company. Software engineer hiring is growing at faster rate outside the tech industry than inside, according to LinkedIn data.
 
-Innovation is achieved when organizations support their people to create the value they seek. One group of people that is a catalyst for innovation is your developers. Developers play an increasingly vital role in value creation and growth across every industry. Developers are the builders of our era, writing the world’s code and sitting at the heart of innovation. Innovative organizations build a culture that empowers developers to achieve more.
+Innovation is achieved when organizations support their people to create the value they seek. One group of people that is a catalyst for innovation is your developers. Developers play an increasingly vital role in value creation and growth across every industry. Developers are the builders of our era, writing the world's code and sitting at the heart of innovation. Innovative organizations build a culture that empowers developers to achieve more.
 
 # [Developer productivity](#tab/DeveloperProductivity)
 
@@ -55,7 +55,7 @@ There are two areas of opportunity where Azure can help you build productively:
 > - Ensuring developers become and stay proficient in their domain by helping them advance their knowledge.
 > - Hone the right skills by giving them the right tools.
 
-One of the best ways to improve your developers' skills is giving them tools they know and love. Azure tools meet developers where they are today and introduce them to new technologies in the context of the code they’re writing. With Azure's commitment to open source software, and support for all languages and frameworks in our tools, your developers can build how they want and deploy where you want.
+One of the best ways to improve your developers' skills is giving them tools they know and love. Azure tools meet developers where they are today and introduce them to new technologies in the context of the code they're writing. With Azure's commitment to open source software, and support for all languages and frameworks in our tools, your developers can build how they want and deploy where you want.
 
 Azure DevOps provides best-in-class tools for every developer. Azure developer services infuse modern development practices and emerging trends into our tools. With the Azure platform, developers have access to the latest technologies as well as a cutting-edge toolchain that supports the way they work.
 
@@ -91,7 +91,7 @@ Software development is a team sport. Collaboration with peers and knowledge sha
 
 ## Open-source innovation
 
-To innovate, many developers leverage open-source code&mdash;80% to 90% of new application development begins with open-source code. Open source isn't just about code, it's also about interconnected communities and developers around the globe building together. Leveraging an open development model using GitHub, teams innovate and collaborate, identify security vulnerabilities early, and discover expert talent. Enterprise development teams can integrate GitHub repos with Microsoft Teams and Azure. Teams is the only solution that brings together chat, voice, and collaboration with the power of Microsoft Office apps, meetings, and business process workflows, all in a single user experience. It’s the hub for teamwork and innovation.
+To innovate, many developers leverage open-source code&mdash;80% to 90% of new application development begins with open-source code. Open source isn't just about code, it's also about interconnected communities and developers around the globe building together. Leveraging an open development model using GitHub, teams innovate and collaborate, identify security vulnerabilities early, and discover expert talent. Enterprise development teams can integrate GitHub repos with Microsoft Teams and Azure. Teams is the only solution that brings together chat, voice, and collaboration with the power of Microsoft Office apps, meetings, and business process workflows, all in a single user experience. It's the hub for teamwork and innovation.
 
 **Go to the [Microsoft Azure repo on GitHub](https://github.com/azure)**.
 
@@ -115,7 +115,7 @@ Sparking innovation for customer experiences and line-of-business applications i
 
 ## Future-ready: LiveOps
 
-LiveOps is a design process for continual engagement with customers where the end-to-end customer journey is the focus. It’s an approach to design and direction&mdash;focused on delivering value to your customers, emphasizing customer satisfaction and outcomes. LiveOps also helps humanize data. A LiveOps approach makes data more actionable, so your organization can take actions, in real time, that will have an impact on your apps, your customers, and your business. It’s a process focused on experimentation, emphasizing iteration and evolution, driving consistent and frequent change. LiveOps is an approach to combining DevOps with your CRM. Innovative organizations are embracing a mentality of live operations (LiveOps).
+LiveOps is a design process for continual engagement with customers where the end-to-end customer journey is the focus. It's an approach to design and direction&mdash;focused on delivering value to your customers, emphasizing customer satisfaction and outcomes. LiveOps also helps humanize data. A LiveOps approach makes data more actionable, so your organization can take actions, in real time, that will have an impact on your apps, your customers, and your business. It's a process focused on experimentation, emphasizing iteration and evolution, driving consistent and frequent change. LiveOps is an approach to combining DevOps with your CRM. Innovative organizations are embracing a mentality of live operations (LiveOps).
 
 ## LiveOps transition
 
@@ -123,6 +123,6 @@ Game development is an example of an industry embracing LiveOps today. Modern ga
 
 ## Azure PlayFab
 
-[Azure PlayFab](https://azure.microsoft.com/services/playfab) is a complete backend platform for live games and an example of an application platform leading in LiveOps. Azure PlayFab, offers the ability to continuously monitor your code, get real-time analytics, and release real-time updates to optimize your apps and increase monetization. PlayFab’s objective is to deliver the intelligent cloud for games, empowering developers to better engage, retain, and monetize their players. PlayFab offers differentiated, higher-margin LiveOps tools and services to boost profitability and extend game lifespans. PlayFab is fully device agnostic and platform agnostic, and can be easily integrated with social identity providers such as Facebook or Steam, store platforms to orchestrate commerce, and device platforms such as iOS, Android, Xbox, or PlayStation. The Azure data estate enables PlayFab to provide intelligent services to help our customers make better games and smarter decisions, acquire and keep players, and learn faster by running more experiments and iterating more quickly.
+[Azure PlayFab](https://azure.microsoft.com/services/playfab) is a complete backend platform for live games and an example of an application platform leading in LiveOps. Azure PlayFab, offers the ability to continuously monitor your code, get real-time analytics, and release real-time updates to optimize your apps and increase monetization. PlayFab's objective is to deliver the intelligent cloud for games, empowering developers to better engage, retain, and monetize their players. PlayFab offers differentiated, higher-margin LiveOps tools and services to boost profitability and extend game lifespans. PlayFab is fully device agnostic and platform agnostic, and can be easily integrated with social identity providers such as Facebook or Steam, store platforms to orchestrate commerce, and device platforms such as iOS, Android, Xbox, or PlayStation. The Azure data estate enables PlayFab to provide intelligent services to help our customers make better games and smarter decisions, acquire and keep players, and learn faster by running more experiments and iterating more quickly.
 
 **Go to [Azure PlayFab documentation](https://docs.microsoft.com/gaming/playfab/personas/liveops/liveops)**.

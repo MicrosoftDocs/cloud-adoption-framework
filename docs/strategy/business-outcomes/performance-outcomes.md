@@ -28,13 +28,13 @@ Transform your business and reduce costs with an energy-efficient infrastructure
 
 ## Reliability
 
-Cloud computing makes data backup, disaster recovery, and business continuity easier and less expensive, because data can be mirrored at multiple redundant sites on the cloud provider’s network.
+Cloud computing makes data backup, disaster recovery, and business continuity easier and less expensive, because data can be mirrored at multiple redundant sites on the cloud provider's network.
 
-One of IT’s crucial functions is ensuring that corporate data is never lost and applications stay available despite server crashes, power outages, or natural disasters. You can keep your data safe and recoverable by backing it up to Azure.
+One of IT's crucial functions is ensuring that corporate data is never lost and applications stay available despite server crashes, power outages, or natural disasters. You can keep your data safe and recoverable by backing it up to Azure.
 
 Azure Backup is a simple solution that decreases your infrastructure costs while providing enhanced security mechanisms to protect your data against ransomware. With one solution, you can protect workloads that are running in Azure and on-premises across Linux, Windows, VMware, and Hyper-V. You can ensure business continuity by keeping your applications running in Azure.
 
-Azure Site Recovery makes it simple to test disaster recovery by replicating applications between Azure regions. You can also replicate on-premises VMware and Hyper-V virtual machines and physical servers to Azure to stay available if the primary site goes down. And you can recover workloads to the primary site when it’s up and running again.
+Azure Site Recovery makes it simple to test disaster recovery by replicating applications between Azure regions. You can also replicate on-premises VMware and Hyper-V virtual machines and physical servers to Azure to stay available if the primary site goes down. And you can recover workloads to the primary site when it's up and running again.
 
 - **Example**: An oil and gas company used Azure technologies to implement a full site recovery. The company chose not to fully embrace the cloud for day-to-day operations, but the cloud's disaster recovery and business continuity (DRBC) features still protected their datacenter. As a hurricane formed hundreds of miles away, their implementation partner started recovering the site to Azure. Before the storm touched down, all mission-critical assets were running in Azure, preventing any downtime.
 

@@ -50,7 +50,7 @@ You can use this same script to apply the other policies discussed in this artic
 
 ### Block certain resource types
 
-Another common built-in policy that’s used to control costs allows you to block certain resource types. You can find this policy in the portal by searching for "allowed resource types" on the policy definition page.
+Another common built-in policy that's used to control costs allows you to block certain resource types. You can find this policy in the portal by searching for "allowed resource types" on the policy definition page.
 
 Or you can run this cmdlet to find the policy:
 

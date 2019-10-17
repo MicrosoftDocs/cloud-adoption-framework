@@ -40,7 +40,7 @@ Use the following guidance when designing your identity and access control infra
 
 - [Azure identity management and access control security best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for identity management and access control using built-in Azure capabilities.
 - [Best practices for role-based access control](./roles.md). Azure role-based access control (RBAC) offers fine-grained group-based access management for resources organized around user roles.
-- [Securing privileged access for hybrid and cloud deployments in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Use Azure Active Directory to help ensure that your organization’s administrative access and admin accounts are secure across your cloud and on-premises environment.
+- [Securing privileged access for hybrid and cloud deployments in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Use Azure Active Directory to help ensure that your organization's administrative access and admin accounts are secure across your cloud and on-premises environment.
 
 ## Storage
 

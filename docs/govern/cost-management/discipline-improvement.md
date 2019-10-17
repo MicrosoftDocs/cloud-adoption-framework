@@ -86,7 +86,7 @@ Once the transformation is complete, governance and operations must live on for 
 
 **Minimum suggested activities:**
 
-- Customize your [Cost Management toolchain](./toolchain.md) based on changes in your organization’s cost management needs.
+- Customize your [Cost Management toolchain](./toolchain.md) based on changes in your organization's cost management needs.
 - Consider automating any notifications and reports to reflect actual spending.
 - Refine Architecture Guidelines to guide future adoption processes.
 - Educate affected teams on a periodic basis to ensure ongoing adherence to the Architecture Guidelines.

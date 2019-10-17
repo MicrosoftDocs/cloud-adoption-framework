@@ -61,7 +61,7 @@ For example, if an organization is in the midst of an IaaS migration to the clou
 
 ### Qualitative analysis: Temporary assumptions
 
-By reducing the number of potential outcomes, it’s easier to reach an initial decision about the future state of an asset. When you reduce the options, you also reduce the number of questions asked of the business at this early stage.
+By reducing the number of potential outcomes, it's easier to reach an initial decision about the future state of an asset. When you reduce the options, you also reduce the number of questions asked of the business at this early stage.
 
 For example, if the options are limited to rehosting or retiring, the business needs to answer only one question during initial rationalization, which is whether to retire the asset.
 
@@ -101,7 +101,7 @@ Implementing the first workload is key to testing and learning. It's the first o
 
 ### Business criteria
 
-To ensure business transparency, identify a workload that is supported by a member of the cloud strategy team’s business unit. Preferably choose one in which the team has a vested stake and strong motivation to move to the cloud.
+To ensure business transparency, identify a workload that is supported by a member of the cloud strategy team's business unit. Preferably choose one in which the team has a vested stake and strong motivation to move to the cloud.
 
 ### Technical criteria
 
@@ -117,7 +117,7 @@ The cloud adoption teams and the cloud strategy team can work together to analyz
 
 In parallel with continued rationalization, the cloud adoption team can begin migrating the small workload to expand learning in the following key areas:
 
-- Strengthen skills with the cloud provider’s platform.
+- Strengthen skills with the cloud provider's platform.
 - Define the core services (and Azure standards) needed to fit the long-term vision.
 - Better understand how operations might need to change later in the transformation.
 - Understand any inherent business risks and the business' tolerance for those risks.
@@ -143,7 +143,7 @@ After the assessment has moved into the incremental execution process of migrati
 
 Not all of the prioritized applications will be ready for migration. Sequencing is likely to change as the team does deeper qualitative analysis and discovers business events and dependencies that might prompt reprioritization of the backlog. Some releases might group together a small number of workloads. Others might just contain a single workload.
 
-The cloud adoption team is likely to run iterations that don’t produce a complete workload migration. The smaller the workload, and the fewer dependencies, the more likely a workload is to fit into a single sprint or iteration. For this reason, we recommend that the first few applications in the release backlog be small and contain few external dependencies.
+The cloud adoption team is likely to run iterations that don't produce a complete workload migration. The smaller the workload, and the fewer dependencies, the more likely a workload is to fit into a single sprint or iteration. For this reason, we recommend that the first few applications in the release backlog be small and contain few external dependencies.
 
 ## End state
 

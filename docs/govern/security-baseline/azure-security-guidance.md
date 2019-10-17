@@ -71,7 +71,7 @@ Attackers are increasingly automated and sophisticated. They use data science to
 
 ## Simplified Security Baseline
 
-Making effective security decisions is not easy. It requires security experience and expertise. While some large organizations have such experts on staff, many companies don’t. Azure Machine Learning enables customers to benefit from the wisdom of other organizations when making security decisions.
+Making effective security decisions is not easy. It requires security experience and expertise. While some large organizations have such experts on staff, many companies don't. Azure Machine Learning enables customers to benefit from the wisdom of other organizations when making security decisions.
 
 ## Behavioral analytics
 

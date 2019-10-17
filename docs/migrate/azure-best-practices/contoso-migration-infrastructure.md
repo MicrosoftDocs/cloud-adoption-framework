@@ -97,7 +97,7 @@ License Mobility through SA gives Microsoft Volume Licensing customers like Cont
 
 #### Reserve instances for predictable workloads
 
-Predictable workloads are those that always need to be available with VMs running. For example, line-of-business apps such as a SAP ERP system. On the other hand, unpredictable workloads are those that are variable, such as VMs that are on during high demand and off when demand is low.
+Predictable workloads are those that always need to be available with VMs running. For example, line-of-business apps such as an SAP ERP system. On the other hand, unpredictable workloads are those that are variable, such as VMs that are on during high demand and off when demand is low.
 
 ![Reserved instance](./media/contoso-migration-infrastructure/reserved-instance.png)
 
@@ -745,7 +745,7 @@ With centralized policy management, Contoso will ensure compliance with security
 
 Contoso will take advantage of the continuous security assessment which monitors the security of machines, networks, storage, data, and applications; to discover potential security issues.
 
-- Security Center will analyze the security state of Contoso’s compute, infrastructure, and data resources, and of Azure apps and services.
+- Security Center will analyze the security state of Contoso's compute, infrastructure, and data resources, and of Azure apps and services.
 - Continuous assessment helps the Contoso operations team to discover potential security issues, such as systems with missing security updates or exposed network ports.
 - In particular Contoso wants to make sure all of the VMs are protected. Security Center helps with this, verifying VM health, and making prioritized and actionable recommendations to remediate security vulnerabilities before they're exploited.
 

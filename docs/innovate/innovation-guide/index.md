@@ -23,7 +23,7 @@ ms.localizationpriority: high
 
 Before you start developing innovative solutions using Azure services, you need to prepare your environment, which includes management of customer feedback loops. In this guide, we introduce features that help you engage customers, build solutions, and drive adoption. For more information, best practices, and considerations related to preparing your cloud environment, see the [Cloud Adoption Framework's innovate section](../index.md).
 
-You’ll learn how to:
+You'll learn how to:
 
 > [!div class="checklist"]
 >
@@ -45,6 +45,6 @@ Next steps: [Prepare for innovation with a shared repository and ideation manage
 
 ::: zone target="chromeless"
 
-This guide provides interactive steps that let you try features as they’re introduced. To come back to where you left off, use the breadcrumb for navigation.
+This guide provides interactive steps that let you try features as they're introduced. To come back to where you left off, use the breadcrumb for navigation.
 
 ::: zone-end

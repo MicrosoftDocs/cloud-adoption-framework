@@ -91,7 +91,7 @@ Azure offers a distributed content delivery network (CDN) that allows you to ens
 
 ### What are cloud-native applications?
 
-Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They’re based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. Cloud-native applications are typically built using a microservices, serverless, or container-based approach.
+Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They're based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. Cloud-native applications are typically built using a microservices, serverless, or container-based approach.
 
 ### Choose the best approach for your cloud-native applications
 
@@ -167,7 +167,7 @@ Use a fully managed Kubernetes service to handle provisioning, upgrading, and sc
 
 ### Azure Web App for Containers
 
-Azure App Service provides an easy way to bring containers and deploy full web apps in minutes, with the ease of configuration settings at the hands of the app owner. Built-in features such as secure sockets layer (SSL) certificates, custom domains, autoscaling, setting up a continuous integration and deployment (CI/CD) pipeline, diagnostics, troubleshooting, and much more, provides a powerful platform for full-cycle build and management of the applications. Azure Web Apps for Containers is perfect when you don’t need the complexity of Kubernetes or orchestration and want to run single-container or multicontainer app in your existing environment.
+Azure App Service provides an easy way to bring containers and deploy full web apps in minutes, with the ease of configuration settings at the hands of the app owner. Built-in features such as secure sockets layer (SSL) certificates, custom domains, autoscaling, setting up a continuous integration and deployment (CI/CD) pipeline, diagnostics, troubleshooting, and much more, provides a powerful platform for full-cycle build and management of the applications. Azure Web Apps for Containers is perfect when you don't need the complexity of Kubernetes or orchestration and want to run single-container or multicontainer app in your existing environment.
 
 **Go to [Azure Web Apps for Containers](https://docs.microsoft.com/azure/app-service/containers/quickstart-docker)**
 

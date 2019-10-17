@@ -77,7 +77,7 @@ Over time, this governance MVP will be used to improve governance practices. As 
 
 ## Next steps
 
-Now that you’re familiar with the governance MVP and have an idea of the governance improvements to follow, read the supporting narrative for additional context.
+Now that you're familiar with the governance MVP and have an idea of the governance improvements to follow, read the supporting narrative for additional context.
 
 > [!div class="nextstepaction"]
 > [Read the supporting narrative](./narrative.md)

@@ -109,7 +109,7 @@ In addition to the tools mentioned in this article, there are some tips and tric
 
 ## Avoid unnecessary spending
 
-Most assets (infrastructure, apps, and data) in an existing datacenter could theoretically be migrated to the cloud. However, that doesn’t mean they should be. During assessment of each workload, validate that the workload should be migrated. The Cloud Adoption Framework article on [incremental rationalization](../../digital-estate/rationalize.md) can help determine which assets should be migrated.
+Most assets (infrastructure, apps, and data) in an existing datacenter could theoretically be migrated to the cloud. However, that doesn't mean they should be. During assessment of each workload, validate that the workload should be migrated. The Cloud Adoption Framework article on [incremental rationalization](../../digital-estate/rationalize.md) can help determine which assets should be migrated.
 
 ## Reduce waste
 

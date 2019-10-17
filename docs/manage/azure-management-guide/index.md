@@ -51,6 +51,6 @@ Next steps: [Inventory and visibility](./inventory.md)
 
 ::: zone target="chromeless"
 
-This guide provides interactive steps that let you try features as they’re introduced. To come back to where you left off, use the breadcrumb for navigation.
+This guide provides interactive steps that let you try features as they're introduced. To come back to where you left off, use the breadcrumb for navigation.
 
 ::: zone-end

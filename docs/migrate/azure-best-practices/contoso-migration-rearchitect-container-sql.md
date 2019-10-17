@@ -77,7 +77,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 **Consideration** | **Details**
 --- | ---
 **Pros** | The SmartHotel360 app code will need to be altered for migration to Azure Service Fabric. However, the effort is minimal, using the Service Fabric SDK tools for the changes.<br/><br/> With the move to Service Fabric, Contoso can start to develop microservices to add to the application quickly over time, without risk to the original code base.<br/><br/> Windows Containers offer the same benefits as containers in general. They improve agility, portability, and control.<br/><br/> Contoso can take advantage of its investment in Software Assurance using the Azure Hybrid Benefit for both SQL Server and Windows Server.<br/><br/> After the migration it will no longer need to support Windows Server 2008 R2. [Learn more](https://support.microsoft.com/lifecycle).<br/><br/> Contoso can configure the web tier of the app with multiple instances, so that it's no longer a single point of failure.<br/><br/> It will no longer depend on the aging SQL Server 2008 R2.<br/><br/> SQL Database supports Contoso's technical requirements. Contoso admins assessed the on-premises database using the Data Migration Assistant and found it compatible.<br/><br/> SQL Database has built-in fault tolerance that Contoso doesn't need to set up. This ensures that the data tier is no longer a single point of failover.
-**Cons** | Containers are more complex than other migration options. The learning curve on containers could be an issue for Contoso. They introduce a new level of complexity that provides a lot of value in spite of the curve.<br/><br/> The operations team at Contoso will need to ramp up to understand and support Azure, containers and microservices for the app.<br/><br/> If Contoso uses the Data Migration Assistant instead of Azure Database Migration Service to migrate the database, it won’t have the infrastructure ready for migrating databases at scale.
+**Cons** | Containers are more complex than other migration options. The learning curve on containers could be an issue for Contoso. They introduce a new level of complexity that provides a lot of value in spite of the curve.<br/><br/> The operations team at Contoso will need to ramp up to understand and support Azure, containers and microservices for the app.<br/><br/> If Contoso uses the Data Migration Assistant instead of Azure Database Migration Service to migrate the database, it won't have the infrastructure ready for migrating databases at scale.
 
 <!-- markdownlint-enable MD033 -->
 
@@ -479,7 +479,7 @@ Contoso admins now configure Azure DevOps Services to perform build and release 
 
 After the SmartHotel360 app and database are running in Azure, Contoso wants to extend the app.
 
-- Contoso’s developers are prototyping a new .NET Core application which will run on the Service Fabric cluster.
+- Contoso's developers are prototyping a new .NET Core application which will run on the Service Fabric cluster.
 - The app will be used to pull sentiment data from Cosmos DB.
 - This data will be in the form of Tweets that are processed using a Serverless Azure Function, and the Azure Cognitive Services Text Analysis API.
 
