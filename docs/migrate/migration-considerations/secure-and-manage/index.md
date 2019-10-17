@@ -47,9 +47,9 @@ Azure Backup provides a means of protecting VMs, files, and data. Azure Backup c
 
 Learn more about [Azure Backup](https://docs.microsoft.com/azure/backup) for protecting migrated assets.
 
-## Suggested Skils
+## Suggested Skills
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
-Here is an examples of a tailored learning paths on Microsoft Learn which is aligned to the Secure and Manage portion of the Cloud Adoption Framwork:
+Here is an examples of a tailored learning paths on Microsoft Learn which is aligned to the Secure and Manage portion of the Cloud Adoption Framework. 
 
-[Secure your cloud data](https://docs.microsoft.com/en-us/learn/paths/secure-your-cloud-data/):Azure was designed for security and compliance. Learn how to leverage the built-in services to store your app data securely to ensure that only authorized services and clients have access to it.
+[Secure your cloud data](https://docs.microsoft.com/learn/paths/secure-your-cloud-data/):Azure was designed for security and compliance. Learn how to leverage the built-in services to store your app data securely to ensure that only authorized services and clients have access to it.
