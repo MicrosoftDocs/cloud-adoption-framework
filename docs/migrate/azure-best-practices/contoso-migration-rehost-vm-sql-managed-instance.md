@@ -34,7 +34,7 @@ Contoso's IT leadership team has worked closely with the company's business part
 The Contoso cloud team has identified goals for this migration. The company uses migration goals to determine the best migration method.
 
 - After migration, the app in Azure should have the same performance capabilities that the app has today in Contoso's on-premises VMware environment. Moving to the cloud doesn't mean that app performance is less critical.
-- Contoso doesn’t want to invest in the app. The app is critical and important to the business, but Contoso simply wants to move the app in its current form to the cloud.
+- Contoso doesn't want to invest in the app. The app is critical and important to the business, but Contoso simply wants to move the app in its current form to the cloud.
 - Database administration tasks should be minimized after the app is migrated.
 - Contoso doesn't want to use an Azure SQL Database for this app. It's looking for alternatives.
 
@@ -76,7 +76,7 @@ As part of the solution design process, Contoso did a feature comparison between
 - Contoso can simply do a "lift and shift" migration to Managed Instance using the fully automated Azure Database Migration Service. With this service in place, Contoso can reuse it for future database migrations.
 - SQL Managed Instance supports SQL Server Agent which is an important issue for the SmartHotel360 app. Contoso needs this compatibility, otherwise it will have to redesign maintenance plans required by the app.
 - With Software Assurance, Contoso can exchange their existing licenses for discounted rates on a SQL Database Managed Instance using the Azure Hybrid Benefit for SQL Server. This can allow Contoso to save up to 30% on Managed Instance.
-- SQL Managed Instance is fully contained in the virtual network, so it provides greater isolation and security for Contoso’s data. Contoso can get the benefits of the public cloud, while keeping the environment isolated from the public Internet.
+- SQL Managed Instance is fully contained in the virtual network, so it provides greater isolation and security for Contoso's data. Contoso can get the benefits of the public cloud, while keeping the environment isolated from the public Internet.
 - Managed Instance supports many security features including Always-encrypted, dynamic data masking, row-level security, and threat detection.
 
 ### Solution review

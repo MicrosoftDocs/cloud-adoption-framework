@@ -1,7 +1,7 @@
 ---
-title: "Balancing the portfolio"
+title: "Balance the portfolio"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Balancing the portfolio
+description: Lean to balance your cloud portfolio.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
@@ -12,7 +12,7 @@ ms.subservice: migrate
 
 # Balance the portfolio
 
-Cloud adoption is a portfolio management effort, cleverly disguised as technical implementation. Like any portfolio management exercise, balance of the portfolio is a critical element to success. At a strategic level, this means balancing migration, innovation, and experimentation to get the most out of the cloud. When the cloud adoption effort leans too far in one direction or another, complexity finds its way into the migration effort. This article will guide the reader through approaches to achieve balance in the portfolio.
+Cloud adoption is a portfolio management effort, cleverly disguised as technical implementation. Like any portfolio management exercise, balancing the portfolio is critical. At a strategic level, this means balancing migration, innovation, and experimentation to get the most out of the cloud. When the cloud adoption effort leans too far in one direction or another, complexity finds its way into the migration effort. This article will guide the reader through approaches to achieve balance in the portfolio.
 
 ## General scope expansion
 
@@ -61,7 +61,7 @@ If the answer to either question is "No", it may be wise to establish a plan for
 
 ## Suggested prerequisites
 
-The prerequisites specified in the baseline guide should still be sufficient for addressing this complexity topic. However, the asset inventory and digital estate should be highlighted and bolded amongst those prerequisites, as that data will drive the following activities.
+The prerequisites specified in the baseline guide should still be sufficient for addressing this complexity topic. However, the asset inventory and digital estate should be highlighted and bolded among those prerequisites, as that data will drive the following activities.
 
 ## Assess process changes
 

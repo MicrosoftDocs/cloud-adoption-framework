@@ -23,7 +23,7 @@ The following tools are included in the discovery guide on Hybrid Identity.
 
 **Active Directory (IaaS):** An instance of the Active Directory application running in a virtual machine in Azure.
 
-Identity is the control plane for IT security. So authentication is an organization’s access guard to the cloud. Organizations need an identity control plane that strengthens their security and keeps their cloud apps safe from intruders.
+Identity is the control plane for IT security. So authentication is an organization's access guard to the cloud. Organizations need an identity control plane that strengthens their security and keeps their cloud apps safe from intruders.
 
 ## Cloud authentication
 
@@ -40,7 +40,7 @@ When you choose this method, Azure AD handles users' sign-in process. Coupled wi
 
 **Federated authentication:**
 
-When you choose this method, Azure AD passes the authentication process to a separate trusted authentication system, such as on-premises Active Directory Federation Services (AD FS) or a trusted third-party federation provider, to validate the user’s password.
+When you choose this method, Azure AD passes the authentication process to a separate trusted authentication system, such as on-premises Active Directory Federation Services (AD FS) or a trusted third-party federation provider, to validate the user's password.
 
 The article [choosing the right authentication method for Azure Active Directory](https://docs.microsoft.com/azure/security/azure-ad-choose-authn) contains a decision tree to help you choose the best solution for your organization.
 

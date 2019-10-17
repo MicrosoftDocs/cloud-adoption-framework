@@ -28,7 +28,7 @@ Security is integrated into every aspect of Azure, offering unique security adva
 
 ### Built-in security controls
 
-It’s hard to maintain a strong security infrastructure when security controls are not intuitive and need to be configured separately. Azure includes built-in security controls across a variety of services that help you protect data and workloads quickly and manage risk across hybrid environments. Integrated partner solutions also let you easily transition existing protections to the cloud.
+It's hard to maintain a strong security infrastructure when security controls are not intuitive and need to be configured separately. Azure includes built-in security controls across a variety of services that help you protect data and workloads quickly and manage risk across hybrid environments. Integrated partner solutions also let you easily transition existing protections to the cloud.
 
 ### Cloud-native identity policies
 
@@ -73,7 +73,7 @@ Security monitoring is a proactive strategy that audits your resources to identi
 - Continuous monitoring and security assessments to ensure compliance and remediate any vulnerabilities.
 - Interactive tools and contextual threat intelligence for streamlined investigation.
 - Extensive logging and integration with existing security information.
-- Reduces the need for expensive, non-integrated, one off security solutions.
+- Reduces the need for expensive, nonintegrated, one off security solutions.
 
 ### Extending cloud-native policies
 
@@ -82,10 +82,10 @@ Using the cloud can reduce some of the security burden. Microsoft provides physi
 Even with this investment in a cloud-native Security Baseline, it is suggested that any Security Baseline policy extend the default cloud-native policies. The following are examples of extended policies that should be considered, even in a cloud-native environment:
 
 - **Secure VMs.** Security should be every organization's top priority, and doing it effectively requires several things. You must assess your security state, protect against security threats, and then detect and respond rapidly to threats that occur.
-- **Protect VM contents.** Setting up regular automated backups is essential to protect against user errors. This isn’t enough, though; you must also make sure that your backups are safe from cyberattacks and are available when you need them.
+- **Protect VM contents.** Setting up regular automated backups is essential to protect against user errors. This isn't enough, though; you must also make sure that your backups are safe from cyberattacks and are available when you need them.
 - **Monitor applications.** This pattern encompasses several tasks, including getting insight into the health of your VMs, understanding interactions among them, and establishing ways to monitor the applications these VMs run. All of these tasks are essential in keeping your applications running around the clock.
 - **Secure and Audit data access.** Organizations should audit all data access and leverage advanced machine learning capabilities to call out deviations from regular access patterns.
-- **Failover practice.** Cloud operations that have low tolerances for failure must be able to fail over and/or recovery from a cybersecurity or platform incident. These procedures must not simply be documented, but should be practiced quarterly.
+- **Failover practice.** Cloud operations that have low tolerances for failure must be able to fail over or recover from a cybersecurity or platform incident. These procedures must not simply be documented, but should be practiced quarterly.
 
 ## Next steps
 

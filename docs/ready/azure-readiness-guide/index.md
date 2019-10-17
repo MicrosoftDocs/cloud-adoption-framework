@@ -15,14 +15,15 @@ ms.localizationpriority: high
 # Before you start
 
 ::: zone target="docs"
+
 > [!NOTE]
-> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in the Azure Quickstart Center. See the tip in the article for a link.
+> This guide provides a starting point for innovation guidance in the Cloud Adoption Framework. It is also available in the Azure Quickstart Center. See the tip later in this article for a link to the Azure Quickstart Center.
 
 ::: zone-end
 
 Before you start building and deploying solutions using Azure services, you need to prepare your environment. In this guide, we introduce features that help you organize resources, control costs, and secure and manage your organization. For more information, best practices, and considerations related to preparing your cloud environment, see the [Cloud Adoption Framework's readiness section](../index.md).
 
-You’ll learn how to:
+You'll learn how to:
 
 ::: zone target="chromeless"
 
@@ -57,6 +58,6 @@ Next steps: [Organize your resources to simplify how you apply settings](./organ
 
 ::: zone target="chromeless"
 
-This guide provides interactive steps that let you try features as they’re introduced. To come back to where you left off, use the breadcrumb for navigation.
+This guide provides interactive steps that let you try features as they're introduced. To come back to where you left off, use the breadcrumb for navigation.
 
 ::: zone-end

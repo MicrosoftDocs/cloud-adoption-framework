@@ -23,7 +23,7 @@ To deploy the cloud adoption plan, open the [Azure DevOps Demo Generator](https:
 1. Verify that the **Selected Template** field is set to **Cloud Adoption Plan**. If it isn't, select **Choose template** to choose the right template.
 2. Select your Azure DevOps organization from the **Select Organization** drop-down list box.
 3. Enter a name for your new project. The cloud adoption plan will have this name when it's deployed to your Azure DevOps tenant.
-4. Select **Create Project** to create a new project in your tenant, based on the plan template. A progress bar show your progress towards deploying the project.
+4. Select **Create Project** to create a new project in your tenant, based on the plan template. A progress bar show your progress toward deploying the project.
 5. When deployment is finished, select **Navigate to project** to see your new project.
 
 After your project has been created, continue through this article series to see how you can modify the template to align to your cloud adoption plan.

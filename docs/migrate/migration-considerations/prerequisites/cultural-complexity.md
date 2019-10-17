@@ -14,7 +14,7 @@ ms.subservice: migrate
 
 An understanding of the culture required to operate the existing datacenters is important to the success of any migration. In some organizations, datacenter management is contained within centralized IT operations teams. In these centralized teams, roles and responsibilities tend to be well defined and well understood throughout the team. For larger enterprises, especially those bound by third-party compliance requirements, the culture tends to be more nuanced and complex. Cultural complexity can lead to roadblocks that are difficult to understand and time consuming to overcome.
 
-In either scenario, it’s wise to invest in the documentation of roles and responsibilities required to complete a migration. This article outlines some of the roles and responsibilities seen in a datacenter migration, to serve as a template for documentation that can drive clarity throughout execution.
+In either scenario, it's wise to invest in the documentation of roles and responsibilities required to complete a migration. This article outlines some of the roles and responsibilities seen in a datacenter migration, to serve as a template for documentation that can drive clarity throughout execution.
 
 ## Business functions
 
@@ -57,7 +57,7 @@ Each process within the discussion of the Cloud Adoption Framework migration pri
 
 ## Next steps
 
-When the team has a general understanding of roles and responsibilities, it’s time to begin preparing the technical details of the migration. Understanding [technical complexity and change management](./technical-complexity.md) can help prepare the cloud adoption team for the technical complexity of migration by aligning to an incremental change management process.
+When the team has a general understanding of roles and responsibilities, it's time to begin preparing the technical details of the migration. Understanding [technical complexity and change management](./technical-complexity.md) can help prepare the cloud adoption team for the technical complexity of migration by aligning to an incremental change management process.
 
 > [!div class="nextstepaction"]
 > [Technical complexity and change management](./technical-complexity.md)

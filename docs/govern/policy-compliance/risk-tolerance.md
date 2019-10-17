@@ -25,7 +25,7 @@ True business risks are based on the details of specific transformations. Severa
 > [!IMPORTANT]
 > Before reading the following, be aware that each of these risks can be managed. The goal of this article is to inform and prepare readers for more productive risk management discussions.
 
-- **Data breach:** The number one risk associated with any transformation, is the protection of data. Data leaks can cause significant damage to your company, leading to loss of customers, decrease in business, or even legal liability. Any changes to the way data is stored, processed, or used creates risk. Cloud transformations create a high degree of change regarding data management, so the risk should not be taken lightly. [Security Baseline](../security-baseline/index.md), [Data Classification](./data-classification.md), and [Incremental Rationalization](../../digital-estate/rationalize.md#incremental-rationalization) can each help manage this risk.
+- **Data breach:** The top risk associated with any transformation is a data breach. Data leaks can cause significant damage to your company, leading to loss of customers, decrease in business, or even legal liability. Any changes to the way data is stored, processed, or used creates risk. Cloud transformations create a high degree of change regarding data management, so the risk should not be taken lightly. [Security Baseline](../security-baseline/index.md), [Data Classification](./data-classification.md), and [Incremental Rationalization](../../digital-estate/rationalize.md#incremental-rationalization) can each help manage this risk.
 
 - **Service disruption:** Business operations and customer experiences rely heavily on technical operations. Cloud transformations will create change in IT operations. In some organizations, that change is small and easily adjusted. In other organizations, these changes could require retooling, retraining, or new approaches to support cloud operations. The bigger the change, the bigger the potential impact on business operations and customer experience. Managing this risk will require the involvement of the business in transformation planning. Release planning and first workload selection in the [incremental rationalization](../../digital-estate/rationalize.md#incremental-rationalization) article discuss ways to choose workloads for transformation projects. The business's role in that activity is to communicate the business operations risk of changing prioritized workloads. Helping IT choose workloads that have a lower impact on operations will reduce the overall risk.
 
@@ -61,7 +61,7 @@ This section lists conversation provoking questions in three categories: loss im
 - Could this risk create new legal liability? If so, is there a precedence for damage awards in these types of cases?
 - Could this risk stop business operations? If so, how long would operations be down?
 - Could this risk slow business operations? If so, how slow and how long?
-- At this stage in the transformation, is this a one-off risk or will it repeat?
+- At this stage in the transformation is this a one-off risk or will it repeat?
 - Does the risk increase or decrease in frequency as the transformation progresses?
 - Does the risk increase or decrease in probability over time?
 - Is the risk time sensitive in nature? Will the risk pass or get worse, if not addressed?

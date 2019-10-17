@@ -16,7 +16,7 @@ ms.subservice: strategy
 
 The most successful transformation journeys start with a business outcome in mind. Cloud adoption can be a costly and time-consuming effort. Fostering the right level of support from IT and other areas of the business is crucial to success. The Microsoft [business outcome framework](../index.md) is designed to help customers identify business outcomes that are concise, defined, and drive observable results or change in business performance, supported by a specific measure.
 
-During any cloud transformation, the ability to speak in terms of business outcomes supports transparency and cross-functional partnerships. The business outcome framework starts with a simple template to help technically minded individuals document and gain consensus. This template can be used with several business stakeholders to collect a variety of business outcomes, which could each be influenced by a company’s transformation journey. Feel free to use this template electronically or, better still, draw it on a whiteboard to engage business leaders and stakeholders in outcome-focused discussions.
+During any cloud transformation, the ability to speak in terms of business outcomes supports transparency and cross-functional partnerships. The business outcome framework starts with a simple template to help technically minded individuals document and gain consensus. This template can be used with several business stakeholders to collect a variety of business outcomes, which could each be influenced by a company's transformation journey. Feel free to use this template electronically or, better still, draw it on a whiteboard to engage business leaders and stakeholders in outcome-focused discussions.
 
 To learn more about business outcomes and the business outcome template, see [documenting business outcomes](./business-outcome-template.md), or download the [business outcome template](https://archcenter.blob.core.windows.net/cdn/business-outcome-template.xlsx).
 
@@ -43,7 +43,7 @@ View samples of [fiscal outcomes](./fiscal-outcomes.md).
 
 ## Agility outcomes
 
-Today’s fast-changing business environment places a premium on time. The ability to respond to and drive market change quickly is the fundamental measure of business agility.
+Today's fast-changing business environment places a premium on time. The ability to respond to and drive market change quickly is the fundamental measure of business agility.
 
 View samples of [agility outcomes](./agility-outcomes.md).
 

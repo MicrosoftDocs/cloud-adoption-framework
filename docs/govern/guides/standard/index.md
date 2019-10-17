@@ -15,9 +15,9 @@ ms.custom: governance
 
 ## Overview of best practices
 
-This governance guide follows the experiences of a fictional company through various stages of governance maturity. It is based on real customer experiences. The recommended practices are based on the constraints and needs of the fictional company.
+This governance guide follows the experiences of a fictional company through various stages of governance maturity. It is based on real customer experiences. The best practices are based on the constraints and needs of the fictional company.
 
-As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on prescriptive guidance. It also provides links to some governance improvements that add further recommended practices as new business or technical risks emerge.
+As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on best practices. It also provides links to some governance improvements that add further best practices as new business or technical risks emerge.
 
 > [!WARNING]
 > This MVP is a baseline starting point, based on a set of assumptions. Even this minimal set of best practices is based on corporate policies driven by unique business risks and risk tolerances. To see if these assumptions apply to you, read the [longer narrative](./narrative.md) that follows this article.
@@ -77,7 +77,7 @@ Over time, this governance MVP will be used to improve governance practices. As 
 
 ## Next steps
 
-Now that you’re familiar with the governance MVP and have an idea of the governance improvements to follow, read the supporting narrative for additional context.
+Now that you're familiar with the governance MVP and have an idea of the governance improvements to follow, read the supporting narrative for additional context.
 
 > [!div class="nextstepaction"]
 > [Read the supporting narrative](./narrative.md)

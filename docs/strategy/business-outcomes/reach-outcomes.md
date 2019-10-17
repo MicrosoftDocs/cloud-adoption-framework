@@ -12,7 +12,7 @@ ms.subservice: strategy
 
 # Examples of global reach outcomes
 
-As discussed in [business outcomes](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: reach. Understanding the company’s globalization strategy will help to better articulate the business outcomes that are the target of a business's transformation journey.
+As discussed in [business outcomes](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: reach. Understanding the company's globalization strategy will help to better articulate the business outcomes that are the target of a business's transformation journey.
 
 Across the Fortune 500 and smaller enterprises, globalization of services and customer base has been a focus for over three decades. As the world shrinks, it is increasingly likely for any business to engage in global commerce. Supporting global operations is challenging and costly. Hosting datacenters around the world can consume more than 80 percent of an annual IT budget. By themselves, wide area networks using private lines to connect those datacenters can cost millions of dollars per year.
 
@@ -20,7 +20,7 @@ Cloud solutions move the cost of globalization to the cloud provider. In Azure, 
 
 ## Global access
 
-Expanding into a new market can be one of the most valuable business outcomes during a transformation. The ability to quickly deploy resources in market without a longer-term commitment allows sales and operations leaders to explore options that wouldn’t have been considered in the past.
+Expanding into a new market can be one of the most valuable business outcomes during a transformation. The ability to quickly deploy resources in market without a longer-term commitment allows sales and operations leaders to explore options that wouldn't have been considered in the past.
 
 - **Example**: A cosmetics manufacturer has identified a trend. Some products are being shipped to the Asia Pacific region even though no sales teams are operating in that region. The minimum systems required by a remote sales force are small, but latency prevents a remote access solution. To capitalize on this trend, the VP of sales would like to experiment with sales teams in Japan and Korea. Because the company has undergone a cloud migration, it was able to deploy the necessary systems in both Japan and Korea within days. This allowed the VP of Sales to grow revenue in the region by _x percent_ within three months. Those two markets continue to outperform other parts of the world, leading to sales operations throughout the region.
 
