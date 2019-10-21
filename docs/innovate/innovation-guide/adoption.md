@@ -1,7 +1,7 @@
 ---
-title: "Azure innovation guide: Shared solutions and feedback loops" 
+title: "Azure innovation guide: Prepare for customer feedback" 
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Azure innovation guide - Shared solutions and feedback loops
+description: Prepare for customer feedback
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -12,13 +12,23 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-# Azure innovation guide: Empower adoption through feedback loops
+::: zone target="docs"
+
+# Azure innovation guide: Prepare for customer feedback
+
+::: zone-end
+
+::: zone target="chromeless"
+
+# Prepare for customer feedback
+
+::: zone-end
 
 User adoption, engagement and retention is key to successful innovation. Why?
 
 Building an innovative new solution is not about giving the user what they want or think they want. It's about the formulation of a hypothesis which can be tested and improved upon. That testing comes in two forms: Quantitative (testing feedback) which means the actions we hope to see. Qualitative (customer feedback) which tell us what those metrics mean in the customer's voice. Together they inform the next hypothesis and the next improvement to the solution. These feedback loops are the foundation of the [Build-Measure-Learn process](../considerations/adoption.md) at the core of this methodology.
 
-Before integrating feedback loops, a shared repository for your solution is a must-have requirement. A centralized repo will provide a way to record and act on all of the feedback coming in about your project.  [GitHub](https://github.com/) is the home for open source software. It also one of the most commonly used platforms for hosting the source code repository for commercially developed applications. The article on [building GitHub repositories](https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml) can help get you started with your repo.
+Before integrating feedback loops, a shared repository for your solution is a must-have requirement. A centralized repo will provide a way to record and act on all of the feedback coming in about your project.  [GitHub](https://github.com/) is the home for open source software. It also one of the most commonly used platforms for hosting the source code repository for commercially developed applications. The article on [building GitHub repositories](https://docs.microsoft.com/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml) can help get you started with your repo.
 
 Each of the following tools in Azure integrate with (or is compatible with) projects hosted in GitHub:
 
@@ -51,15 +61,15 @@ To view your data regarding your apps, go to the [Azure portal](https://ms.porta
 
 ::: zone-end
 
-### Learn More
+### Learn more
 
-- [Set up Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-monitor-portal)
-- [Get started with Azure Monitor App Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-users)
-- [Build a telemitry dashboard](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-app-dashboards)
+- [Set up Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/learn/quick-monitor-portal)
+- [Get started with Azure Monitor App Insights](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-users)
+- [Build a telemitry dashboard](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)
 
 ## [Quantitative feedback for APIs](#tab/Quantitative-APIs)
 
-Connected economy is changing the way businesses innovate.  Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the **‘innovator’s dilemma’**: how to set the pace of change without stumbling over ongoing business activity. 
+Connected economy is changing the way businesses innovate.  Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the **‘innovator’s dilemma’**: how to set the pace of change without stumbling over ongoing business activity.
 
 Enterprises are using APIs externally to change how they interact with customers and their partners. Internally they are using API’s to seamlessly connect distinct parts of the business. API economy operates on four building blocks: social, mobile, analytics and cloud. Apps and services can be linked rapidly and cost-effectively to create an extended value proposition.
 
@@ -93,9 +103,9 @@ To open API Management Service, go to the [Azure portal](https://ms.portal.azure
 
 ::: zone-end
 
-### Learn More
+### Learn more
 
-This article can help you use [Azure Monitor to get feedback on APIs](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-use-azure-monitor)
+This article can help you use [Azure Monitor to get feedback on APIs](https://docs.microsoft.com/azure/api-management/api-management-howto-use-azure-monitor)
 
 ## [Qualitative feedback](#tab/Qualitative)
 
@@ -106,12 +116,12 @@ The backlog (or board) is where feedback is recorded as user stories. It is also
 Azure Board and Azure Pipelines require a separate portal from GitHub and Azure.
 To get started with either tool, go to [Azure DevOps](https://dev.azure.com/)
 
-### Learn More
+### Learn more
 
 The following links will help centralize and manage feedback using Azure Boards in conjunction with GitHub:
 
-- [Get started with Azure Boards](https://docs.microsoft.com/en-us/azure/devops/boards/boards/kanban-quickstart?view=azure-devops)
-- [Azure Boards & GitHub](https://docs.microsoft.com/en-us/azure/devops/boards/boards/kanban-quickstart?view=azure-devops)
+- [Get started with Azure Boards](https://docs.microsoft.com/azure/devops/boards/boards/kanban-quickstart?view=azure-devops)
+- [Azure Boards & GitHub](https://docs.microsoft.com/azure/devops/boards/boards/kanban-quickstart?view=azure-devops)
 
 ## [Close the loop with pipelines](#tab/pipelines)
 
@@ -143,9 +153,9 @@ To view your applications in App Service, go to the [Azure portal](https://ms.po
 
 ::: zone-end
 
-### Learn More
+### Learn more
 
 The following are addition links to start building out your deployment pipelines:
 
-- [Create your first pipeline](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2)
-- [GitHub Release Tasks](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops)
+- [Create your first pipeline](https://docs.microsoft.com/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2)
+- [GitHub Release Tasks](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops)

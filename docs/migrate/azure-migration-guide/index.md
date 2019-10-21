@@ -12,15 +12,15 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="chromeless"
+::: zone target="docs"
 
-# Before you start
+# Azure migration guide: Before you start
 
 ::: zone-end
 
-::: zone target="docs"
+::: zone target="chromeless"
 
-# Introduction to the Azure migration guide
+# Before you start
 
 ::: zone-end
 

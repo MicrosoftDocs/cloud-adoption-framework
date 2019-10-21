@@ -196,7 +196,7 @@
         href: migrate/index.md
       - name: Azure migration guide
         items:
-        - name: Introduction to the Azure migration guide
+        - name: Before you start
           href: migrate/azure-migration-guide/index.md
         - name: Prerequisites for Azure migration 
           href: migrate/azure-migration-guide/prerequisites.md
@@ -552,7 +552,7 @@
         href: innovate/index.md
       - name: Azure innovation guide
         items:
-        - name: Introduction
+        - name: Before you start
           href: innovate/innovation-guide/index.md
         - name: Prepare for customer feedback
           href: innovate/innovation-guide/adoption.md
@@ -691,23 +691,23 @@
             - name: Infusing intelligence
               items: 
               - name: Computer vision in Visual Studio
-                href: https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vs-computer-vision-connected-service
+                href: https://docs.microsoft.com/azure/cognitive-services/computer-vision/vs-computer-vision-connected-service
               - name: Translate text in real time
-                href: https://docs.microsoft.com/en-us/azure/cognitive-services/translator/quickstart-translate
+                href: https://docs.microsoft.com/azure/cognitive-services/translator/quickstart-translate
               - name: Understand sentiment using LUIS
-                href: https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-quickstart-intent-and-sentiment-analysis
+                href: https://docs.microsoft.com/azure/cognitive-services/luis/luis-quickstart-intent-and-sentiment-analysis
               - name: Convert speech to text
-                href: https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/quickstart-csharp-dotnet-windows
+                href: https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstart-csharp-dotnet-windows
               - name: Bing web search
-                href: https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app
+                href: https://docs.microsoft.com/azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app
               - name: Visual search from an image
-                href: https://docs.microsoft.com/en-us/azure/cognitive-services/bing-visual-search/index
+                href: https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/index
             - name: ChatBots
               items: 
               - name: Create and deploy a basic bot
-                href: https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-basic-deploy
+                href: https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-basic-deploy
               - name: Learning path - Create bots with Azure Bot services
-                href: https://docs.microsoft.com/en-us/learn/paths/create-bots-with-the-azure-bot-service/
+                href: https://docs.microsoft.com/learn/paths/create-bots-with-the-azure-bot-service/
               - name: Repo - Azure Bots samples on github
                 href: https://github.com/microsoft/botframework-sdk
           - name: Cloud native applications
@@ -719,13 +719,13 @@
               - name: Reference architecture for microservices with Azure Kubernetes Services (AKS)
                 href: https://docs.microsoft.com/azure/architecture/azure/architecture/reference-architectures/microservices/aks?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Reference architecture - Serverless microservices sample
-                href: https://docs.microsoft.com/en-us/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Containers
               items: 
               - name: What is Kubernetes? 
-                href: https://azure.microsoft.com/en-us/topic/what-is-kubernetes/
+                href: https://azure.microsoft.com/topic/what-is-kubernetes/
               - name: Prepare an application for Azure Kubernetes Service (AKS)
-                href: https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://docs.microsoft.com/azure/aks/tutorial-kubernetes-prepare-app?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Create an Azure Red Hat OpenShift cluster
                 href: https://docs.microsoft.com/azure/openshift/tutorial-create-cluster?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Spring Boot microservices
@@ -735,17 +735,17 @@
               - name: Distributed Tracing with Azure Spring Cloud
                 href: https://docs.microsoft.com/azure/spring-cloud/spring-cloud-tutorial-distributed-tracing?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Bind an Azure Cosmos DB to your Azure Spring Cloud application
-                href: https://docs.microsoft.com/en-us/azure/spring-cloud/spring-cloud-tutorial-bind-cosmos?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://docs.microsoft.com/azure/spring-cloud/spring-cloud-tutorial-bind-cosmos?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Event-driven applications
               items: 
               - name: Learning path - Create serverless applications
-                href: https://docs.microsoft.com/en-us/learn/paths/create-serverless-applications/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://docs.microsoft.com/learn/paths/create-serverless-applications/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Functions developer guide
-                href: https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://docs.microsoft.com/azure/azure-functions/functions-reference?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: eBook - Serverless computing cookbook
-                href: https://azure.microsoft.com/en-us/resources/azure-serverless-computing-cookbook/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://azure.microsoft.com/resources/azure-serverless-computing-cookbook/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Documentation - Azure Functions
-                href: https://docs.microsoft.com/en-us/azure/azure-functions/
+                href: https://docs.microsoft.com/azure/azure-functions/
 
         - name: Empower adoption
           items:
