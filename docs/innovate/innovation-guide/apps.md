@@ -28,15 +28,56 @@ Azure App Service provides a hosting environment for your applications that remo
 
 Azure App Service provides first-class support for languages such as ASP.NET, ASP.NET Core, Java, Ruby, Node.js, PHP, or Python. If you have the need to host another runtime stack, Azure Web Apps for Containers offers the ability to quickly and easily host a Docker container within the App Service environment to allow you to host your custom code stack in an environment that gets you out of the server business.
 
-## Azure Functions
+### Action
 
-Azure Functions provides a platform for running small pieces of code or functions within the cloud. Functions can be a way to start refactoring your code base into a microservices architecture.
+To configure or monitor Azure App Service deployments:
 
-The Azure Functions runtime supports many languages including C#, Java, JavaScript, and Python. For a complete listing, see [Supported languages in Azure Functions](https://docs.microsoft.com/azure/azure-functions/supported-languages).
+1. Go to **App Services**.
+2. Configure a new App Service: click the **Add +** link and follow the prompts.
+3. Manage existing App Services: Select the desired App from the list of hosted applications.
 
-Another benefit of functions is the ability to be triggered by different actions and events such as HTTPTrigger, TimerTriggers, as well as triggers from other Azure services such as Blob Storage, EventGrid, ServiceBus, and more. For more information on triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites]" submitText="Go to App Services" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
 
-Another way to get feedback quickly is by automating your build and release pipeline with integrated testing. Azure offers services that can help you with both of these cases across the platforms of your choice.
+## Cognitive Services
+
+Azure Cognitive Services allow you to infuse advanced intelligence directly into your application through a set of APIs, which expose Microsoft supported AI and Machine Learning algorithms.
+
+### Action
+
+To configure or monitor Azure Cognitive Service deployments:
+
+1. Go to **Cognitive Services**.
+2. Configure a new Cognitive Service: click the **Add +** link and follow the prompts.
+3. Manage existing Cognitive Services: Select the desired cognitive service from the list of hosted services.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2Faccounts]" submitText="Go to Cognitive Services" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
+
+## Bot Services
+
+Azure Bot Services can extend your standard application to include a natural, bot interface which uses AI and Machine Learning to create a new interaction for your customers.
+
+### Action
+
+To configure or monitor Bot Cognitive Service deployments:
+
+1. Go to **Bot Services**.
+2. Configure a new Bot Service: click the **Add +** link and follow the prompts.
+3. Manage existing Bot Services: Select the desired Bot from the list of hosted services.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FbotServices]" submitText="Go to Bot Services" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
+
 
 ## Azure DevOps
 
@@ -61,41 +102,14 @@ App Service also provides a notification service that lets a single call to send
 - [Azure SDK for Go documentation](https://docs.microsoft.com/azure/go)
 - [DevOps Solutions](https://azure.microsoft.com/solutions/devops)
 
-# [Isolate points of failure](#tab/IsolatePointsOfFailure)
+# [Cloud native apps](#tab/CloudNative)
 
-As you begin transitioning from your initial testing phase, you will want to evaluate ways to isolate and remove points of failure. Due to the distributed nature of the Azure cloud, you are able to design your application to minimize failure while at the same time improving performance.
-
-## Azure Front Door
-
-Azure Front Door provides a scalable, secure entry point that can help deliver your application around the globe. Azure Front Door combines optimization of traffic for best performance and instant global failover. Azure Front Door should be considered over Traffic Manager if you have a need for Transport Layer Security (TLS) protocol termination (SSL offload) or per-HTTP/HTTPS request, application-layer processing.
-
-## Traffic Manager
-
-Traffic Manager provides DNS-based load balancing that can be routed based on different rules. This helps you ensure that you have resiliency if one or more deployed services fails. You can also stack Traffic Manager to have both failure as well as performance-based routing to provide the best experience possible based on geography.
-
-## Azure Content Delivery Network
-
-Azure offers a distributed content delivery network (CDN) that allows you to ensure timely delivery of assets by caching them close to your end users. This caching helps to improve the experience of your customers and prevents issues downloading content that might be caused by network issues between the CDN endpoint and the datacenter that hosts your application. This CDN can also be used by applications not hosted in Azure.
-
-### Read more
-
-- [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview)
-- [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager)
-- [Content Delivery Network](https://docs.microsoft.com/azure/cdn)
-
-# [Scale services](#tab/ScaleServices)
-
-## Cloud-native apps
-
-<!-- markdownlint-disable MD026 -->
-
-### What are cloud-native applications?
+## What are cloud-native applications?
 
 Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They're based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. Cloud-native applications are typically built using a microservices, serverless, or container-based approach.
 
-### Choose the best approach for your cloud-native applications
 
-### Microservices
+## Microservices
 
 Microservices are a software architecture style in which applications are composed of small independent modules that communicate with each other using well-defined API contracts. These service modules are highly decoupled building blocks that are small enough to implement a single functionality. Microservices helps you:
 
@@ -105,19 +119,47 @@ Microservices are a software architecture style in which applications are compos
 - Isolate points of failure.
 - Deliver value faster.
 
-### Select the best microservices approach for your business
-
 ### Azure Kubernetes Service (AKS)
 
 Use a fully managed Kubernetes service to handle provisioning, upgrading, and scaling cluster resources on demand. AKS makes deploying and managing containerized applications easy. It offers serverless Kubernetes, an integrated continuous integration and continuous delivery (CI/CD) experience, and enterprise-grade security and governance. Unite your development and operations teams on a single platform to rapidly build, deliver, and scale applications with confidence.
 
-**Go to [Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/intro-kubernetes)**
+#### Action
+
+To configure or monitor Azure Kubernetes Services:
+
+1. Go to **Kubernetes Services**.
+2. Configure a new Kubernetes Services: click the **Add +** link and follow the prompts.
+3. Manage existing Kubernetes Services: Select the desired Kubernetes service from the list.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerService%2FmanagedClusters]" submitText="Go to Kubernetes Services" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
+
+## Event-based solutions
 
 ### Azure Functions
 
-Build apps with simple serverless functions that scale on demand based on the number of executions without managing infrastructure. Azure Functions is a solution for easily running small pieces of code called _functions_ in the cloud. You can write the code you need for the problem at hand without worrying about a whole application or the infrastructure to run it. Functions can make development even more productive, and you can use your development language of choice, such as C#, Java, JavaScript, PowerShell, and Python.
+Azure Functions provides a platform for running small pieces of code or functions within the cloud. Functions can be a way to start refactoring your code base into a microservices architecture.
 
-**Go to [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)**
+The Azure Functions runtime supports many languages including C#, Java, JavaScript, and Python. For a complete listing, see [Supported languages in Azure Functions](https://docs.microsoft.com/azure/azure-functions/supported-languages).
+
+Another benefit of functions is the ability to be triggered by different actions and events such as HTTPTrigger, TimerTriggers, as well as triggers from other Azure services such as Blob Storage, EventGrid, ServiceBus, and more. For more information on triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
+
+#### Action
+
+To configure or monitor Azure Function deployments:
+
+1. Go to **Function App**.
+2. Configure a new Function App: click the **Add +** link and follow the prompts.
+3. Manage existing Function Apps: Select the desired Function App from the list of Function Apps.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp]" submitText="Go to Azure Functions" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
 
 ## Serverless solutions
 
@@ -127,52 +169,130 @@ Build cloud-native apps without provisioning and managing infrastructure using a
 - Boosting team performance
 - Improving organizational impact
 
-### Selecting the right Azure serverless solution
-
-### Azure Functions
-
-Execute code written in the language of your choice with Azure Functions, an event-driven compute experience. Scale on demand and pay only for the time your code is executed. Available as a managed service in Azure and Azure Stack, the open-source Azure Functions runtime also works on multiple destinations, including Kubernetes, Azure IoT Edge, on-premises, and even in other clouds.
-
-**Go to [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)**
-
 ### Azure Logic Apps
 
 Integrate data and apps instead of writing complex glue code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft Office 365, and Dropbox.
 
-**Go to [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps/logic-apps-overview)**
+#### Action
+
+To configure or monitor Azure Logic Apps:
+
+1. Go to **Logic Apps**.
+2. Configure a new Logic App: click the **Add +** link and follow the prompts.
+3. Manage existing Logic Apps: Select the desired Logic App from the list.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Logic%2Fworkflows]" submitText="Go to Azure Logic Apps" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
 
 ### Serverless API management
 
 Publish, secure, transform, maintain, and monitor APIs with Azure API Management, a fully managed service that offers a usage model designed and implemented to be an organic fit for serverless applications.
 
-**Go to [Azure API Management](https://docs.microsoft.com/azure/api-management)**
+#### Action
+
+To configure or monitor API Management services:
+
+1. Go to **API Management services**.
+2. Configure a new service: click the **Add +** link and follow the prompts.
+3. Manage existing service: Select the desired Service from the list.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2Fservice]" submitText="Go to API Management Services" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
 
 ## Containers
 
 When it comes to modernizing your application portfolio, Azure provides various container services to lift and shift your existing applications to containers and build cloud native microservices applications to deliver value to your users faster. Use end-to-end developer and CI/CD tools to develop, update, and deploy your containerized applications. Manage containers at scale with a fully managed Kubernetes container orchestration service that integrates with Azure Active Directory. Wherever you are in your app modernization journey, accelerate your containerized application development while meeting your security requirements.
 
-### Selecting the right Azure service for your container needs
-
-### Azure Kubernetes Service (AKS)
-
-Use a fully managed Kubernetes service to handle provisioning, upgrading, and scaling cluster resources on demand. AKS makes deploying and managing containerized applications easy. It offers serverless Kubernetes, an integrated continuous integration and continuous delivery (CI/CD) experience, and enterprise-grade security and governance. Unite your development and operations teams on a single platform to rapidly build, deliver, and scale applications with confidence.
-
-**Go to [Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/intro-kubernetes)**
-
-### Azure Web App for Containers
-
-Azure App Service provides an easy way to bring containers and deploy full web apps in minutes, with the ease of configuration settings at the hands of the app owner. Built-in features such as secure sockets layer (SSL) certificates, custom domains, autoscaling, setting up a continuous integration and deployment (CI/CD) pipeline, diagnostics, troubleshooting, and much more, provides a powerful platform for full-cycle build and management of the applications. Azure Web Apps for Containers is perfect when you don't need the complexity of Kubernetes or orchestration and want to run single-container or multicontainer app in your existing environment.
-
-**Go to [Azure Web Apps for Containers](https://docs.microsoft.com/azure/app-service/containers/quickstart-docker)**
-
 ### Azure Container Instances
 
 Run Docker containers on-demand in a managed serverless Azure environment. Azure Container Instances (ACI) is a solution for any scenario that can operate in isolated containers without orchestration. By running your workloads in ACI, you can focus on designing and building your applications instead of managing the infrastructure that runs them.
 
-**Go to [Azure Container Instances](https://docs.microsoft.com/azure/container-instances)**
+### Action
+
+To configure or monitor Container instances:
+
+1. Go to **Container instances**.
+2. Configure a new Container instance: click the **Add +** link and follow the prompts.
+3. Manage existing Container instances: Select the desired container service from the list.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ContainerInstance%2FcontainerGroups]" submitText="Go to Container instances" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
 
 ### Azure Red Hat OpenShift
 
 Azure Red Hat OpenShift provides flexible self-service deployment of fully managed OpenShift clusters. Maintain regulatory compliance and focus on your application development, while your master, infrastructure, and application nodes are patched, updated, and monitored by both Microsoft and Red Hat. Choose your own registry, networking, storage, or CI/CD solutions. Or begin quickly using built-in solutions with automated source code management, container and application builds, deployments, scaling, health management, and more.
 
 **Go to [Azure Red Hat OpenShift](https://docs.microsoft.com/azure/openshift/intro-openshift)**
+
+# [Isolate points of failure](#tab/IsolatePointsOfFailure)
+
+As you begin transitioning from your initial testing phase, you will want to evaluate ways to isolate and remove points of failure. Due to the distributed nature of the Azure cloud, you are able to design your application to minimize failure while at the same time improving performance.
+
+## Azure Front Door
+
+Azure Front Door provides a scalable, secure entry point that can help deliver your application around the globe. Azure Front Door combines optimization of traffic for best performance and instant global failover. Azure Front Door should be considered over Traffic Manager if you have a need for Transport Layer Security (TLS) protocol termination (SSL offload) or per-HTTP/HTTPS request, application-layer processing.
+
+### Action
+
+To configure or monitor Front Doors:
+
+1. Go to **Front Doors**.
+2. Configure a new Front Door: click the **Add +** link and follow the prompts.
+3. Manage existing Front Doors: Select the desired front door from the list.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Network%2Ffrontdoors]" submitText="Go to Front Doors" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
+
+## Traffic Manager
+
+Traffic Manager provides DNS-based load balancing that can be routed based on different rules. This helps you ensure that you have resiliency if one or more deployed services fails. You can also stack Traffic Manager to have both failure as well as performance-based routing to provide the best experience possible based on geography.
+
+### Action
+
+To configure or monitor Traffic Manager profiles:
+
+1. Go to **Traffic Manager profiles**.
+2. Configure a new Traffic Manager profile: click the **Add +** link and follow the prompts.
+3. Manage existing Traffic Manager profiles: Select the desired profile from the list.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Network%2Ftrafficmanagerprofiles]" submitText="Go to Traffic Manager profiles" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
+
+## Azure Content Delivery Network
+
+Azure offers a distributed content delivery network (CDN) that allows you to ensure timely delivery of assets by caching them close to your end users. This caching helps to improve the experience of your customers and prevents issues downloading content that might be caused by network issues between the CDN endpoint and the datacenter that hosts your application. This CDN can also be used by applications not hosted in Azure.
+
+### Action
+
+To configure or monitor CDN profiles:
+
+1. Go to **CDN profiles**.
+2. Configure a new CDN profile: click the **Add +** link and follow the prompts.
+3. Manage existing CDN profiles: Select the desired profile from the list.
+
+::: zone target="chromeless"
+<!-- markdownlint-disable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/microsoft.cdn%2Fprofiles]" submitText="Go to CDN profiles" :::
+<!-- markdownlint-enable DOCSMD001 -->
+::: zone-end
+
+### Read more
+
+- [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview)
+- [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager)
+- [Content Delivery Network](https://docs.microsoft.com/azure/cdn)
