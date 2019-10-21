@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cloud management in the Cloud Adoption Framework
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/07/2019
+ms.date: 10/17/2019
 ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: operate

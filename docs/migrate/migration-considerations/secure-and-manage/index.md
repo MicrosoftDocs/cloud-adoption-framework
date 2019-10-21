@@ -36,6 +36,16 @@ Rely on the Azure Security Center for unified security monitoring and advanced t
 
 Learn more about [Azure Security Center](https://docs.microsoft.com/azure/security-center) for securing migrated assets.
 
+## Service health monitoring
+
+Azure Service Health provides personalized alerts and guidance when Azure service issues affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue is resolved. It can also help you prepare for planned maintenance and changes that could affect the availability of your resources.
+
+- **Service health dashboard.** Check the overall health of your Azure services and regions, with detailed updates on any current service issues, upcoming planned maintenance, and service transitions.
+- **Service health alerts.** Configure alerts that will notify you and your teams in the event of a service issue like an outage or upcoming planned maintenance.
+- **Service health history.** Review past service issues and download official summaries and reports from Microsoft.
+
+Learn more about [Azure Service Health](https://docs.microsoft.com/azure/service-health) for staying informed about the health of your migrated resources.
+
 ## Protect assets and data
 
 Azure Backup provides a means of protecting VMs, files, and data. Azure Backup can help with many functions, including:
@@ -46,3 +56,13 @@ Azure Backup provides a means of protecting VMs, files, and data. Azure Backup c
 - Recovering protected assets.
 
 Learn more about [Azure Backup](https://docs.microsoft.com/azure/backup) for protecting migrated assets.
+
+## Optimize resources
+
+Azure Advisor is your personalized guide to Azure best practices. It analyzes your configuration and usage telemetry and offers recommendations to help you optimize your Azure resources for high availability, security, performance, and cost. Advisor’s inline actions help you quickly and easily remediate your recommendations and optimize your deployments.
+
+- **Azure best practices.** Optimize migrated resources for high availability, security, performance, and cost.
+- **Step-by-step guidance.** Remediate recommendations efficiently with guided quick links.
+- **New recommendations alerts.** Stay informed about new recommendations, such as additional opportunities to rightsize VMs and save money.
+
+Learn more about [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) for optimizing your migrated resources.

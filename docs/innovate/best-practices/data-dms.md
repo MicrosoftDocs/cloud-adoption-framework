@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cloud innovation - Data Migration Service
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/24/2019
+ms.date: 10/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -41,5 +41,5 @@ When leveraging DMS for migration and modernization of data, it's important to u
 |PostgreSQL|Azure Database for PostgreSQL|DMS|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)|
 |MondoDB|Azure Cosmos DB Mongo API|DMS|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db)|
 |MongoDB|Azure Cosmos DB Mongo API|DMS|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db-online)|
-|Oracle|Range of PaaS & IaaS options|Third party or Azure Migrate|Various|[Decision Tree](../considerations/data-oracle-migration.md)|
-|Various NoSQL DBs|Cosmo DB or IaaS options|Procedural migrations or Azure Migrate|Various|[Decision Tree](../considerations/data-no-sql-migration.md)|
+|Oracle|Range of PaaS & IaaS options|Third party or Azure Migrate|Various|[Decision Tree](../../migrate/expanded-scope/data-oracle-migration.md)|
+|Various NoSQL DBs|Cosmo DB or IaaS options|Procedural migrations or Azure Migrate|Various|[Decision Tree](../../migrate/expanded-scope/data-no-sql-migration.md)|
