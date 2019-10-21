@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Guidance on operational fundamentals
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/20/2018
+ms.date: 10/17/2018
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
