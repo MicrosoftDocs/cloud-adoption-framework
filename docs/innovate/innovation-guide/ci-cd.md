@@ -1,7 +1,7 @@
 ---
-title: "Azure innovation guide: Continuous adoption" 
+title: "Azure innovation guide: Empower adoption" 
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn to innovate with continuous adoption using Azure.
+description: Learn to empower adoption using Azure.
 author: absheik
 ms.author: absheik
 ms.date: 10/17/2019
@@ -14,13 +14,13 @@ ms.localizationpriority: high
 
 ::: zone target="docs"
 
-# Azure innovation guide: Continuous adoption
+# Azure innovation guide: Empower adoption
 
 ::: zone-end
 
 ::: zone target="chromeless"
 
-# Continuous adoption
+# Empower adoption
 
 ::: zone-end
 

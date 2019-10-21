@@ -1,7 +1,7 @@
 ---
 title: "Azure innovation guide: Predict and influence" 
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Azure innovation guide - Predict and influence
+description: Learn to predict and influence using Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -11,6 +11,7 @@ ms.subservice: innovate
 ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
+
 ::: zone target="docs"
 
 # Azure innovation guide: Predict and influence
