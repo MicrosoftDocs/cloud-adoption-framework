@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to Cloud innovation - Engage through applications
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/24/2019
+ms.date: 10/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -15,6 +15,8 @@ ms.subservice: innovate
 As discussed in the article on [democratizing data](./data.md), data is the new oil. It fuels most innovations across the digital economy. Building on that analogy, applications are the fueling station and infrastructure required to get that fuel into the right hands.
 
 In some cases, data is enough to drive change and meet the customers' needs. More commonly, the solution to customer needs will require applications to shape the data and create an experience. Applications are the way we engage the user. They are the home for the processes required to respond to customer triggers. They are the customers means of providing data and receiving guidance. This article will outline a few principles that will aid in aligning the right application solution, based on the hypotheses to be validated.
+
+![Engage via apps](../../_images/innovate/engage-via-apps.png)
 
 ## Shared code
 
@@ -31,11 +33,27 @@ Citizen developers may be wise approach when early hypotheses can be validated u
 > [!NOTE]
 > When leveraging citizen developers to test hypotheses, it is advised that the professional developers provide support, review, and guidance. Once a hypothesis is validated at scale, a process to transitioning the application into a more robust programming model will accelerate returns on the innovation. Involving professional developers in early process definitions can result in cleaner transitions later.
 
-## Modern web experiences
+## Intelligent experiences
+
+Intelligent experiences combine the speed and scale of modern web applications, with the intelligence of cognitive services and bots. Alone, each may be sufficient to meet your customers' needs. Combined the spectrum of needs that can be met through a digital experience is expanded, but the development investments can still be contained.
+
+### Modern web apps
 
 When an application or experience is required to meet a customer need, modern web applications can be the fastest way to meet that need. Modern web experiences can engage internal or external customers quickly and allow for rapid iteration on the solution.
 
-Azure App Service provides a hosting environment for your applications that removes the burden of infrastructure management and OS patching. It provides for automation of scale to meet the demands of your users but bound by limits you define to keep costs in check. App Service provides first-class support for languages such as ASP.NET, ASP.NET Core, Java, Ruby, Node.js, PHP, or Python. If you have the need to host another run-time stack, Web App for Container offers the ability to quickly and easily host a Docker container within the App Service environment to allow you to host your custom code stack in an environment that gets you out of the server business.
+### Infusing intelligence
+
+Machine learning and artificial intelligence are becoming increasingly more available to developers. The wide-spread availability of common APIs with predictive capabilities, allows developers to better meet the needs of the customer through expanded access to data and predictions.
+
+Adding intelligence to a solution can enable speech to text, text translation, computer vision, and even visual search. With these expanded capabilities, it's easier for developers to build solutions that leverage intelligence to create an interactive and modern experience.
+
+### Bots
+
+Bots provide an experience that feels less like using a computer and more like dealing with a person - or at least an intelligent robot. They can be used to shift simple, repetitive tasks, such as taking a dinner reservation or gathering profile information, on to automated systems that may no longer require direct human intervention. Users converse with a bot using text, interactive cards, and speech. A bot interaction can be a quick question and answer, or it can be a sophisticated conversation that intelligently provides access to services.
+
+Bots are a lot like modern web applications, living on the internet and use APIs to send and receive messages. What's in a bot varies widely depending on what kind of bot it is. Modern bot software relies on a stack of technology and tools to deliver increasingly complex experiences on a wide variety of platforms. However, a simple bot could just receive a message and echo it back to the user with very little code involved.
+
+Bots can do the same things other types of software can do - read and write files, use databases and APIs, and do the regular computational tasks. What makes bots unique is their use of mechanisms generally reserved for human-to-human communication.
 
 ## Cloud-native solutions
 
@@ -49,7 +67,7 @@ Many customer hypotheses can best be delivered by a modernized version of an exi
 
 Most forms of modernization, including slight refactoring of the application, are included in the [Migrate methodology](../../migrate/index.md) within the Cloud Adoption Framework. That methodology guides cloud adoption teams through the processes for migrating a [digital estate](../../digital-estate/index.md) to the cloud. The [Azure Migration Guide](../../migrate/azure-migration-guide/index.md) provides a streamlined approach to the same methodology, which is suitable for a small number of workloads or even a single application.
 
-Once migrated and modernized, there are a variety of ways the solution could be leveraged in the creation of new innovative solutions to customer needs. For instance, [citizen developers](#citizen-developers) could test hypotheses or professional developers could create [Modern web experiences](#modern-web-experiences) or [cloud-native solutions](#cloud-native-solutions).
+Once migrated and modernized, there are a variety of ways the solution could be leveraged in the creation of new innovative solutions to customer needs. For instance, [citizen developers](#citizen-developers) could test hypotheses or professional developers could create [intelligent experiences](#intelligent-experiences) or [cloud-native solutions](#cloud-native-solutions).
 
 ### Extend an existing solution
 
@@ -64,7 +82,7 @@ Extending a solution is one common form of modernization. This is approach can b
 If an application can't be easily extended, it may be necessary to refactor the solution. In this approach, the workload is migrated to the cloud. Once migrated, parts of the application are modified or duplicated, as web services or [microservices](/azure/architecture/guide/architecture-styles/microservices), which are deployed in parallel to the existing solution. The parallel service-based solution could be treated like an extended solution. This solution would simply wrap the existing solution with a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Services.
 
 > [!CAUTION]
-> Refactoring/rearchitecting solutions or centralizing business logic can quickly become a time-consuming [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes), as opposed to a source of customer value. This is a risk to innovation, especially early in hypothesis validation. With a bit of creativity in the design of a solution, there should be a path to MVP that doesn't require refactoring of existing solutions. It is wise to delay refactoring, until the initial hypothesis can be validated at scale.
+> Refactoring or rearchitecting solutions or centralizing business logic can quickly become a time-consuming [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes), as opposed to a source of customer value. This is a risk to innovation, especially early in hypothesis validation. With a bit of creativity in the design of a solution, there should be a path to MVP that doesn't require refactoring of existing solutions. It is wise to delay refactoring, until the initial hypothesis can be validated at scale.
 
 ## Operating model innovations
 
@@ -80,7 +98,7 @@ The more there is to maintain within a solution, the slower that solution will i
 
 To prepare for the many iterations required to deliver an innovative solution, it is important to think ahead. Minimize operational burdens early in the process, by favoring serverless options.
 
-In Azure, serverless application options could include [Azure App Service](https://docs.microsoft.com/azure/app-service/overview), [Service Fabric](https://docs.microsoft.com/azure/architecture/example-scenario/infrastructure/service-fabric-microservices), [containers](https://docs.microsoft.com/azure/architecture/cloud-adoption/migrate/azure-best-practices/contoso-migration-rearchitect-container-sql), etc.
+In Azure, serverless application options could include [Azure App Service](https://docs.microsoft.com/azure/app-service/overview) or [containers](https://docs.microsoft.com/azure/architecture/cloud-adoption/migrate/azure-best-practices/contoso-migration-rearchitect-container-sql).
 
 In parallel, Azure provides serverless transaction data options which also reduce overhead. The [database products list](https://docs.microsoft.com/azure/#pivot=products&panel=databases) provides  options for hosting data, without the need for a full data platform.
 

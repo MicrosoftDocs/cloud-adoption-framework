@@ -119,12 +119,6 @@ Build apps with simple serverless functions that scale on demand based on the nu
 
 **Go to [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)**
 
-### Azure Service Fabric
-
-Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers. Developers and administrators can avoid complex infrastructure problems and focus on implementing demanding mission-critical workloads that are scalable, reliable, and manageable.
-
-**Go to [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric)**
-
 ## Serverless solutions
 
 Build cloud-native apps without provisioning and managing infrastructure using a fully managed platform where scaling, availability, and performance are handled for you. Benefits of Azure serverless solutions include:
