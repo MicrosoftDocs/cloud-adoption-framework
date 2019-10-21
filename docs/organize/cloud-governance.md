@@ -58,7 +58,7 @@ Cloud governance capability is usually delivered by a working team. The time com
 The following represent participants who will frequently participate in cloud governance activities:
 
 - Leaders from middle management and direct contributors in key roles who have been appointed to represent the business will help evaluate risk tolerances.
-- The cloud governance capabilities are offered delivered be an extension of the [cloud strategy capability](./cloud-strategy.md). Just as the CIO and business leaders are expected to participate in cloud strategy capabilities, their direct reports are expected to participate in cloud governance activities.
+- The cloud governance capabilities are delivered by an extension of the [cloud strategy capability](./cloud-strategy.md). Just as the CIO and business leaders are expected to participate in cloud strategy capabilities, their direct reports are expected to participate in cloud governance activities.
 - Business employees that are members of the business unit who work closely with the leadership of the line-of-business should be empowered to make decisions regarding corporate and technical risk.
 - Information Technology (IT) and Information Security (IS) employees who understand the technical aspects of the cloud transformation may serve in a rotating capacity instead of being a consistent provider of cloud governance capabilities.
 
