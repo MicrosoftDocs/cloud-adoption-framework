@@ -60,6 +60,8 @@ To configure or monitor Azure App Service deployments:
 
 Azure Cognitive Services allows you to infuse advanced intelligence directly into your application through a set of APIs, which let you take advantage of Microsoft-supported AI and Machine Learning algorithms.
 
+<!-- markdownlint-disable MD024 -->
+
 ### Action
 
 To configure or monitor Azure Cognitive Service deployments:
@@ -125,9 +127,15 @@ Visual Studio App Center also provides a notification service that lets a single
 
 # [Cloud native apps](#tab/CloudNative)
 
+<!-- markdownlint-disable MD026 -->
+
 ## What are cloud-native applications?
 
-Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They're based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. Cloud-native applications are typically built using a microservices, serverless, or container-based approach.
+Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They're loosely coupled based on microservices architecture, use managed services, can be observable, and take advantage of continuous delivery to achieve reliability and faster time to market. Generally they are portable and can run on dynamic environments such as public, private, and hybrid clouds. Cloud-native applications are typically built using one or more of the following approach:
+
+- Microservices
+- Serverless
+- Container
 
 ## Microservices
 
@@ -180,9 +188,13 @@ To configure or monitor Azure Functions deployments:
 3. Manage existing apps: Select the desired app from the list of Function Apps.
 
 ::: zone target="chromeless"
+
 <!-- markdownlint-disable DOCSMD001 -->
+
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp]" submitText="Go to Azure Functions" :::
+
 <!-- markdownlint-enable DOCSMD001 -->
+
 ::: zone-end
 
 ## Serverless solutions

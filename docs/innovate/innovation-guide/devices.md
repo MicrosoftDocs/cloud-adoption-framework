@@ -2,8 +2,8 @@
 title: "Azure innovation guide: Interact through devices" 
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Azure innovation guide - Interact through devices
-author: absheik
-ms.author: absheik
+author: umarmohamedusman
+ms.author: umarm
 ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -40,7 +40,7 @@ Azure customers employ continually expanding set of connected systems and device
 
 <!-- markdownlint-disable MD025 -->
 
-# [Global scale IoT service](#tab/IoTHub)
+## [Global scale IoT service](#tab/IoTHub)
 
 <!-- markdownlint-enable MD025 -->
 
@@ -53,9 +53,9 @@ Architect solutions that exercise bidirectional communication with IoT devices a
 
 ::: zone target="docs"
 
-**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-dps).**
+**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-dps)**
 
-**Go to [Device Provisioning Services](https://docs.microsoft.com/azure/iot-dps).**
+**Go to [Device Provisioning Services](https://docs.microsoft.com/azure/iot-dps)**
 
 ::: zone-end
 
@@ -63,7 +63,25 @@ Architect solutions that exercise bidirectional communication with IoT devices a
 
 <!-- markdownlint-disable DOCSMD001 -->
 
+### Action
+
+To create IoT Hub:
+
+1. Go to **IoT Hub**.
+2. Click **Create IoT hub**.
+
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Devices%2FIotHubs]" submitText="Go to IoT Hub" :::
+
+The IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning.
+
+<!-- markdownlint-disable MD024 -->
+
+### Action
+
+To create IoT Hub Device Provisioning Services:
+
+1. Go to **IoT Hub Device Provisioning Services**.
+2. Click **Create Device Provisioning Services**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Devices%2FProvisioningServices]" submitText="Go to Device Provisioning Services" :::
 
@@ -73,7 +91,7 @@ Architect solutions that exercise bidirectional communication with IoT devices a
 
 <!-- markdownlint-disable MD025 -->
 
-# [Azure Digital Twins](#tab/DigitalTwins)
+## [Azure Digital Twins](#tab/DigitalTwins)
 
 Build reusable, highly scalable, spatially aware experiences that link streaming data across the physical and digital world. Enhance your customer engagement using comprehensive models of physical environments. Generate spatial intelligence graphs to model the relationships and interactions between people, places, and devices. Query data from a physical space rather than disparate sensors.
 
@@ -83,13 +101,22 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 ::: zone target="docs"
 
-**Go to [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins).**
+**Go to [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins)**
 
 ::: zone-end
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
+
+### Action
+
+To create Azure Digital Twins:
+
+1. From the left pane, select **Create a resource**.
+2. Search for digital twins, and select **Digital Twins**.
+3. Select **Create** to start the deployment process.
+4. Click on the button below to review existing Digital Twins.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.IoTSpaces%2FGraph]" submitText="Go to Digital Twins" :::
 
@@ -99,7 +126,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 <!-- markdownlint-disable MD025 -->
 
-# [Location intelligence](#tab/AzureMaps)
+## [Location intelligence](#tab/AzureMaps)
 
 In addition to traditional location capabilities like nearby, traffic, and routing, Azure Maps service enables enterprises to create solutions using real-time location intelligence powered by world-class mobility technology partners **TomTom** and **Moovit**. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
@@ -111,7 +138,7 @@ In addition to traditional location capabilities like nearby, traffic, and routi
 
 ::: zone target="docs"
 
-**Go to [Azure Maps](https://docs.microsoft.com/azure/azure-maps).**
+**Go to [Azure Maps](https://docs.microsoft.com/azure/azure-maps)**
 
 ::: zone-end
 
@@ -119,13 +146,20 @@ In addition to traditional location capabilities like nearby, traffic, and routi
 
 <!-- markdownlint-disable DOCSMD001 -->
 
+### Action
+
+To use Location Intelligence:
+
+1. Go to **Azure Maps Accounts**.
+2. Click **Create Azure Maps accounts**.
+
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Maps%2Faccounts]" submitText="Go to Azure Maps Account" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
-# [Spatial experiences](#tab/spatial)
+## [Spatial experiences](#tab/spatial)
 
 Azure Spatial Anchors enables developers to work with mixed reality platforms to perceive spaces, designate precise points of interest, and to recall those points of interest from supported devices.
 
@@ -139,13 +173,20 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ::: zone target="docs"
 
-**Go to [Azure Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors).**
+**Go to [Azure Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors)**
 
 ::: zone-end
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
+
+### Action
+
+To use Spatial experiences:
+
+1. Go to **Spatial Anchors Accounts**.
+2. Click **Create spatial anchors accounts**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.MixedReality%2FspatialAnchorsAccounts]" submitText="Go to Spatial Anchors Accounts" :::
 
@@ -153,7 +194,7 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ::: zone-end
 
-# [Azure Remote Rendering](#tab/RemoteRender)
+## [Azure Remote Rendering](#tab/RemoteRender)
 
 Render high-quality interactive 3D content in the cloud and stream it to your devices in real time. Rendering workloads are heavily used for special effects (VFX) in the media and entertainment industry. Rendering is also used in many other industries such as advertising, retail, oil and gas, and manufacturing.
 
@@ -161,15 +202,22 @@ The process of rendering is computationally intensive. There can be many frames 
 
 ::: zone target="docs"
 
-**Go to [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering).**
+**Go to [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering)**
 
-**Go to [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service).**
+**Go to [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)**
 
 ::: zone-end
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
+
+### Action
+
+To use Remote Rendering:
+
+1. Go to **Batch Accounts**.
+2. Click **Create batch accounts**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Batch%2FbatchAccounts]" submitText="Go to Azure Batch" :::
 
