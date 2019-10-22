@@ -40,7 +40,7 @@ Azure customers employ continually expanding set of connected systems and device
 
 <!-- markdownlint-disable MD025 -->
 
-# [Global scale IoT service](#tab/IoTHub)
+## [Global scale IoT service](#tab/IoTHub)
 
 <!-- markdownlint-enable MD025 -->
 
@@ -65,21 +65,23 @@ Architect solutions that exercise bidirectional communication with IoT devices a
 
 ### Action
 
-To create IoT Hub
+To create IoT Hub:
 
-1. Go to **IoT Hub**
-2. Click Create IoT hub
+1. Go to **IoT Hub**.
+2. Click **Create IoT hub**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Devices%2FIotHubs]" submitText="Go to IoT Hub" :::
 
 The IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning.
 
+<!-- markdownlint-disable MD024 -->
+
 ### Action
 
-To create IoT Hub Device Provisioning Services
+To create IoT Hub Device Provisioning Services:
 
-1. Go to **IoT Hub Device Provisioning Services**
-2. Click Create Device Provisioning Services
+1. Go to **IoT Hub Device Provisioning Services**.
+2. Click **Create Device Provisioning Services**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Devices%2FProvisioningServices]" submitText="Go to Device Provisioning Services" :::
 
@@ -89,7 +91,7 @@ To create IoT Hub Device Provisioning Services
 
 <!-- markdownlint-disable MD025 -->
 
-# [Azure Digital Twins](#tab/DigitalTwins)
+## [Azure Digital Twins](#tab/DigitalTwins)
 
 Build reusable, highly scalable, spatially aware experiences that link streaming data across the physical and digital world. Enhance your customer engagement using comprehensive models of physical environments. Generate spatial intelligence graphs to model the relationships and interactions between people, places, and devices. Query data from a physical space rather than disparate sensors.
 
@@ -109,11 +111,11 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 ### Action
 
-To create Azure Digital Twins
+To create Azure Digital Twins:
 
-1. From the left pane, select Create a resource.
-2. Search for digital twins, and select Digital Twins.
-3. Select Create to start the deployment process.
+1. From the left pane, select **Create a resource**.
+2. Search for digital twins, and select **Digital Twins**.
+3. Select **Create** to start the deployment process.
 4. Click on the button below to review existing Digital Twins.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.IoTSpaces%2FGraph]" submitText="Go to Digital Twins" :::
@@ -124,7 +126,7 @@ To create Azure Digital Twins
 
 <!-- markdownlint-disable MD025 -->
 
-# [Location intelligence](#tab/AzureMaps)
+## [Location intelligence](#tab/AzureMaps)
 
 In addition to traditional location capabilities like nearby, traffic, and routing, Azure Maps service enables enterprises to create solutions using real-time location intelligence powered by world-class mobility technology partners **TomTom** and **Moovit**. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
@@ -143,12 +145,13 @@ In addition to traditional location capabilities like nearby, traffic, and routi
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
+
 ### Action
 
-To use Location Intelligence
+To use Location Intelligence:
 
-1. Go to **Azure Maps Accounts**
-2. Click Create azure maps accounts
+1. Go to **Azure Maps Accounts**.
+2. Click **Create Azure Maps accounts**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Maps%2Faccounts]" submitText="Go to Azure Maps Account" :::
 
@@ -156,7 +159,7 @@ To use Location Intelligence
 
 ::: zone-end
 
-# [Spatial experiences](#tab/spatial)
+## [Spatial experiences](#tab/spatial)
 
 Azure Spatial Anchors enables developers to work with mixed reality platforms to perceive spaces, designate precise points of interest, and to recall those points of interest from supported devices.
 
@@ -180,10 +183,10 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ### Action
 
-To use Spatial experiences
+To use Spatial experiences:
 
-1. Go to **Spatial Anchors Accounts**
-2. Click Create spatial anchors accounts
+1. Go to **Spatial Anchors Accounts**.
+2. Click **Create spatial anchors accounts**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.MixedReality%2FspatialAnchorsAccounts]" submitText="Go to Spatial Anchors Accounts" :::
 
@@ -191,7 +194,7 @@ To use Spatial experiences
 
 ::: zone-end
 
-# [Azure Remote Rendering](#tab/RemoteRender)
+## [Azure Remote Rendering](#tab/RemoteRender)
 
 Render high-quality interactive 3D content in the cloud and stream it to your devices in real time. Rendering workloads are heavily used for special effects (VFX) in the media and entertainment industry. Rendering is also used in many other industries such as advertising, retail, oil and gas, and manufacturing.
 
@@ -211,10 +214,10 @@ The process of rendering is computationally intensive. There can be many frames 
 
 ### Action
 
-To use Remote Rendering
+To use Remote Rendering:
 
-1. Go to **Batch Accounts**
-2. Click create batch accounts
+1. Go to **Batch Accounts**.
+2. Click **Create batch accounts**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Batch%2FbatchAccounts]" submitText="Go to Azure Batch" :::
 

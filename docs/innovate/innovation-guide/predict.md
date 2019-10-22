@@ -67,8 +67,9 @@ Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com
 
 ## [Azure Machine Learning Studio](#tab/MachineLearningStudio)
 
-
 If the existing models within cognitive services don't align with the desired prediction, Azure Machine Learning Studio may provide a way to build the desired predictions, without requiring deep data scientist skills.
+
+<!-- markdownlint-disable MD024 -->
 
 ### Action
 

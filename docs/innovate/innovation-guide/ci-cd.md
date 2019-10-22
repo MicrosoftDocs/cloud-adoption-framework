@@ -77,11 +77,11 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 ### Action
 
-To create DevOps project
+To create a DevOps project:
 
 1. Go to **Azure DevOps project**.
-2. Click Create DevOps project
-3. Choose Runtime, Framework and Service
+2. Click **Create DevOps project**.
+3. Choose **Runtime, Framework and Service**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/microsoft.visualstudio%2Faccount%2Fproject]" submitText="Go to Azure DevOps Project" :::
 
@@ -93,13 +93,13 @@ To create DevOps project
 
 ## Innovate through collaboration
 
-Software development is a team sport. Collaboration with peers and knowledge sharing within the team is fundamental. Breaking down barriers between development and operations is essential. There is also a wealth of organizational knowledge outside of the core product team that can be tapped through platforms like GitHub. GitHub, the largest developer community, is at the heart of the open-source community and will always be an open platform that supports all developers. Collaboration is at the heart of GitHub&mdash;developers made over 1 billion contributions over the course of a year to the open-source projects and private repos that are hosted on GitHub. It is where developers collaborate, store their source code, and manage continuous integration.
+Software development is a team sport. Collaboration with peers and knowledge sharing within the team is fundamental. Breaking down barriers between development and operations is essential. There is also a wealth of organizational knowledge outside of the core product team that can be tapped through platforms like GitHub. GitHub, the largest developer community, is at the heart of the open-source community and will always be an open platform that supports all developers. Collaboration is at the heart of GitHub&mdash;developers made over 1 billion contributions over the course of a year to the open-source projects and private repositories that are hosted on GitHub. It is where developers collaborate, store their source code, and manage continuous integration.
 
 **Go to [Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams)**
 
 ## Open-source innovation
 
-To innovate, many developers leverage open-source code&mdash;80% to 90% of new application development begins with open-source code. Open source isn't just about code, it's also about interconnected communities and developers around the globe building together. Leveraging an open development model using GitHub, teams innovate and collaborate, identify security vulnerabilities early, and discover expert talent. Enterprise development teams can integrate GitHub repos with Microsoft Teams and Azure. Teams is the only solution that brings together chat, voice, and collaboration with the power of Microsoft Office apps, meetings, and business process workflows, all in a single user experience. It's the hub for teamwork and innovation.
+To innovate, many developers leverage open-source code&mdash;80% to 90% of new application development begins with open-source code. Open source isn't just about code, it's also about interconnected communities and developers around the globe building together. Leveraging an open development model using GitHub, teams innovate and collaborate, identify security vulnerabilities early, and discover expert talent. Enterprise development teams can integrate GitHub repositories with Microsoft Teams and Azure. Teams is the only solution that brings together chat, voice, and collaboration with the power of Microsoft Office apps, meetings, and business process workflows, all in a single user experience. It's the hub for teamwork and innovation.
 
 **Go to the [Microsoft Azure repo on GitHub](https://github.com/azure)**.
 

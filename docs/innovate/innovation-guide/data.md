@@ -85,14 +85,16 @@ Achieving balance between openly sharing data and having control over what data 
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
+<!-- markdownlint-disable MD024 -->
 
 ### Action
 
-To create Azure Data Share
+To create an Azure Data Share:
 
 1. Go to **Azure Data Share**.
-2. Click Create Data Share
+2. Click **Create Data Share**.
+
+<!-- markdownlint-disable DOCSMD001 -->
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.DataShare%2Faccounts]" submitText="Go to Azure Data Share" :::
 
@@ -130,11 +132,11 @@ Making near real-time data exploration of data streams and multilayered storage 
 
 ### Action
 
-To create Azure Time Series Insights
+To create an Azure Time Series Insights environment:
 
 1. Go to **Azure Time Series Insights**.
-2. Click Create Time Series Insights environment
-3. Point this environment to an event source, either IoT Hub or Event Hub
+2. Click **Create Time Series Insights environment**.
+3. Point this environment to an event source, either IoT Hub or Event Hub.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.TimeSeriesInsights%2Fenvironments]" submitText="Go to Azure Time Series Insights" :::
 
