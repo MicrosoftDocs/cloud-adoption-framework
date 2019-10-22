@@ -708,7 +708,7 @@
                 href: https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp&toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Learning path - Create bots with Azure Bot services
                 href: https://docs.microsoft.com/learn/paths/create-bots-with-the-azure-bot-service?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Repo - Azure Bots samples on github
+              - name: Repo - Azure Bots samples on GitHub
                 href: https://github.com/microsoft/botframework-sdk
           - name: Cloud native applications
             items: 
