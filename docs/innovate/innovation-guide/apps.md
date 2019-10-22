@@ -127,7 +127,11 @@ Visual Studio App Center also provides a notification service that lets a single
 
 ## What are cloud-native applications?
 
-Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They're based on microservices architectures, use managed services, and take advantage of continuous delivery to achieve reliability and faster time to market. Cloud-native applications are typically built using a microservices, serverless, or container-based approach.
+Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They're loosely coupled based on microservices architecture, use managed services, can be observable, and take advantage of continuous delivery to achieve reliability and faster time to market. Generally they are portable and can run on dynamic environments such as public, private, and hybrid clouds. Cloud-native applications are typically built using one or more of the following approach:
+
+- Microservices
+- Serverless
+- Container
 
 ## Microservices
 

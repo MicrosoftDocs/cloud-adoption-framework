@@ -2,8 +2,8 @@
 title: "Azure innovation guide: Interact through devices" 
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Azure innovation guide - Interact through devices
-author: absheik
-ms.author: absheik
+author: umarmohamedusman
+ms.author: umarm
 ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -53,9 +53,9 @@ Architect solutions that exercise bidirectional communication with IoT devices a
 
 ::: zone target="docs"
 
-**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-dps).**
+**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-dps)**
 
-**Go to [Device Provisioning Services](https://docs.microsoft.com/azure/iot-dps).**
+**Go to [Device Provisioning Services](https://docs.microsoft.com/azure/iot-dps)**
 
 ::: zone-end
 
@@ -63,7 +63,23 @@ Architect solutions that exercise bidirectional communication with IoT devices a
 
 <!-- markdownlint-disable DOCSMD001 -->
 
+### Action
+
+To create IoT Hub
+
+1. Go to **IoT Hub**
+2. Click Create IoT hub
+
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Devices%2FIotHubs]" submitText="Go to IoT Hub" :::
+
+The IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning.
+
+### Action
+
+To create IoT Hub Device Provisioning Services
+
+1. Go to **IoT Hub Device Provisioning Services**
+2. Click Create Device Provisioning Services
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Devices%2FProvisioningServices]" submitText="Go to Device Provisioning Services" :::
 
@@ -83,13 +99,22 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 ::: zone target="docs"
 
-**Go to [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins).**
+**Go to [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins)**
 
 ::: zone-end
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
+
+### Action
+
+To create Azure Digital Twins
+
+1. From the left pane, select Create a resource.
+2. Search for digital twins, and select Digital Twins.
+3. Select Create to start the deployment process.
+4. Click on the button below to review existing Digital Twins.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.IoTSpaces%2FGraph]" submitText="Go to Digital Twins" :::
 
@@ -111,13 +136,19 @@ In addition to traditional location capabilities like nearby, traffic, and routi
 
 ::: zone target="docs"
 
-**Go to [Azure Maps](https://docs.microsoft.com/azure/azure-maps).**
+**Go to [Azure Maps](https://docs.microsoft.com/azure/azure-maps)**
 
 ::: zone-end
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
+### Action
+
+To use Location Intelligence
+
+1. Go to **Azure Maps Accounts**
+2. Click Create azure maps accounts
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Maps%2Faccounts]" submitText="Go to Azure Maps Account" :::
 
@@ -139,13 +170,20 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ::: zone target="docs"
 
-**Go to [Azure Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors).**
+**Go to [Azure Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors)**
 
 ::: zone-end
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
+
+### Action
+
+To use Spatial experiences
+
+1. Go to **Spatial Anchors Accounts**
+2. Click Create spatial anchors accounts
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.MixedReality%2FspatialAnchorsAccounts]" submitText="Go to Spatial Anchors Accounts" :::
 
@@ -161,15 +199,22 @@ The process of rendering is computationally intensive. There can be many frames 
 
 ::: zone target="docs"
 
-**Go to [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering).**
+**Go to [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering)**
 
-**Go to [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service).**
+**Go to [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)**
 
 ::: zone-end
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
+
+### Action
+
+To use Remote Rendering
+
+1. Go to **Batch Accounts**
+2. Click create batch accounts
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Batch%2FbatchAccounts]" submitText="Go to Azure Batch" :::
 

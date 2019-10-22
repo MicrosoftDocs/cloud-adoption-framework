@@ -91,7 +91,7 @@ To view quantitative data on your APIs:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2Fservice]" submitText="Go to App Service" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2Fservice]" submitText="Go to API Management Service" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -111,10 +111,31 @@ This article can help you use [Azure Monitor to get feedback on APIs](https://do
 
 The backlog (or board) is where feedback is recorded as user stories. It is also where the related work is tracked as actionable tasks. Azure Boards can be directly integrated into GitHub, allowing for a seamless experience between feedback-work management and any source code.
 
+::: zone target="docs"
 ### Action
 
 Azure Board and Azure Pipelines require a separate portal from GitHub and Azure.
 To get started with either tool, go to [Azure DevOps](https://dev.azure.com/)
+
+::: zone-end
+
+::: zone target="chromeless"
+
+<!-- markdownlint-disable DOCSMD001 -->
+
+### Action
+
+To create DevOps project
+
+1. Go to **Azure DevOps project**.
+2. Click Create DevOps project
+3. Choose Runtime, Framework and Service
+
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/microsoft.visualstudio%2Faccount%2Fproject]" submitText="Go to Azure DevOps Project" :::
+
+<!-- markdownlint-enable DOCSMD001 -->
+
+::: zone-end
 
 ### Learn more
 

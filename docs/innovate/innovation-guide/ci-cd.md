@@ -75,6 +75,14 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 <!-- markdownlint-disable DOCSMD001 -->
 
+### Action
+
+To create DevOps project
+
+1. Go to **Azure DevOps project**.
+2. Click Create DevOps project
+3. Choose Runtime, Framework and Service
+
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/microsoft.visualstudio%2Faccount%2Fproject]" submitText="Go to Azure DevOps Project" :::
 
 <!-- markdownlint-enable DOCSMD001 -->

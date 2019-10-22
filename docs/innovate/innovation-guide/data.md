@@ -48,6 +48,15 @@ Azure data catalog addresses the discovery challenges of data consumers in addit
 
 ::: zone target="chromeless"
 
+### Action
+
+Only one Azure Data Catalog is supported per organization. If a Catalog has already been created for your organization, you cannot add additional catalogs.
+
+To create Azure Data Catalog for your organization:
+
+1. Go to **Azure Data Catalog**.
+2. Click Create button
+
 <!-- markdownlint-disable DOCSMD001 -->
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.DataCatalog%2Fcatalogs]" submitText="Go to Azure Data Catalog" :::
@@ -77,6 +86,13 @@ Achieving balance between openly sharing data and having control over what data 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
+
+### Action
+
+To create Azure Data Share
+
+1. Go to **Azure Data Share**.
+2. Click Create Data Share
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.DataShare%2Faccounts]" submitText="Go to Azure Data Share" :::
 
@@ -112,7 +128,15 @@ Making near real-time data exploration of data streams and multilayered storage 
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.TimeSeriesInsights%2Fenvironments]" submitText="Go to Azure Data Share" :::
+### Action
+
+To create Azure Time Series Insights
+
+1. Go to **Azure Time Series Insights**.
+2. Click Create Time Series Insights environment
+3. Point this environment to an event source, either IoT Hub or Event Hub
+
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.TimeSeriesInsights%2Fenvironments]" submitText="Go to Azure Time Series Insights" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

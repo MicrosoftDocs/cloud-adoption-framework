@@ -34,16 +34,7 @@ The following table is designed to help find the best solution based on your imp
 |Azure Machine Learning Studio|Yes|Yes|No|General understanding of predictive algorithms|
 |Azure Machine Learning Service|Yes|Yes|Yes|Data Scientist|
 
-::: zone target="docs"
-
-## Cognitive services
-
-::: zone-end
-::: zone target="chromeless"
-
 ## [Azure Cognitive Services](#tab/CognitiveServices)
-
-::: zone-end
 
 The fastest and easiest path to predictions is Azure Cognitive Services. Cognitive Services allows predictions to be made based on existing models, which require no additional training. These services are optimal, when there isn't an existing data scientist on staff to train the predictive model. For some services, no training is required. Others require only minimal training.
 
@@ -72,14 +63,10 @@ To use a cognitive service API:
 
 Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2Faccounts).
 
-## Azure Machine Learning Studio
-
 ::: zone-end
-::: zone target="chromeless"
 
 ## [Azure Machine Learning Studio](#tab/MachineLearningStudio)
 
-::: zone-end
 
 If the existing models within cognitive services don't align with the desired prediction, Azure Machine Learning Studio may provide a way to build the desired predictions, without requiring deep data scientist skills.
 
@@ -105,14 +92,9 @@ You can use an Azure Machine Learning Studio to build a model and experiment wit
 
 Go directly to Azure Machine Learning Studio in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2Fworkspaces).
 
-## Azure Machine Learning Service
-
 ::: zone-end
-::: zone target="chromeless"
 
 ## [Azure Machine Learning Service](#tab/MachineLearningService)
-
-::: zone-end
 
 Azure Machine Learning service provides the deeper code-based approach required for deeper training of customer data sets. Using languages like Python, data scientists can train and then build an algorithm to predict customer needs.
 
@@ -128,7 +110,7 @@ A data scientist can use an Azure Machine Learning Service to train and build a 
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2Fworkspaces]" submitText="Go to Azure Machine Learning Studio" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2Fworkspaces]" submitText="Go to Azure Machine Learning Service" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
