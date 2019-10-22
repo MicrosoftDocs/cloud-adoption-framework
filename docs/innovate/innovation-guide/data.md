@@ -55,7 +55,7 @@ Only one Azure Data Catalog is supported per organization. If a Catalog has alre
 To create Azure Data Catalog for your organization:
 
 1. Go to **Azure Data Catalog**.
-2. Click Create button
+2. Click the **Create** button.
 
 <!-- markdownlint-disable DOCSMD001 -->
 
