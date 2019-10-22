@@ -65,13 +65,15 @@ To view your data regarding your apps, go to the [Azure portal](https://ms.porta
 
 - [Set up Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/learn/quick-monitor-portal)
 - [Get started with Azure Monitor App Insights](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-users)
-- [Build a telemitry dashboard](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)
+- [Build a telemetry dashboard](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)
 
 ## [Quantitative feedback for APIs](#tab/Quantitative-APIs)
 
 Connected economy is changing the way businesses innovate.  Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the **‘innovator’s dilemma’**: how to set the pace of change without stumbling over ongoing business activity.
 
-Enterprises are using APIs externally to change how they interact with customers and their partners. Internally they are using API’s to seamlessly connect distinct parts of the business. API economy operates on four building blocks: social, mobile, analytics and cloud. Apps and services can be linked rapidly and cost-effectively to create an extended value proposition.
+Enterprises are using APIs externally to change how they interact with customers and their partners. Internally they are using APIs to seamlessly connect distinct parts of the business. API economy operates on four building blocks: social, mobile, analytics and cloud. Apps and services can be linked rapidly and cost-effectively to create an extended value proposition.
+
+<!-- markdownlint-disable MD024 -->
 
 ### Action
 
@@ -91,7 +93,7 @@ To view quantitative data on your APIs:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2Fservice]" submitText="Go to App Service" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2Fservice]" submitText="Go to API Management Service" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -111,10 +113,32 @@ This article can help you use [Azure Monitor to get feedback on APIs](https://do
 
 The backlog (or board) is where feedback is recorded as user stories. It is also where the related work is tracked as actionable tasks. Azure Boards can be directly integrated into GitHub, allowing for a seamless experience between feedback-work management and any source code.
 
+::: zone target="docs"
+
 ### Action
 
 Azure Board and Azure Pipelines require a separate portal from GitHub and Azure.
 To get started with either tool, go to [Azure DevOps](https://dev.azure.com/)
+
+::: zone-end
+
+::: zone target="chromeless"
+
+<!-- markdownlint-disable DOCSMD001 -->
+
+### Action
+
+To create a DevOps project:
+
+1. Go to **Azure DevOps project**.
+2. Click **Create DevOps project**.
+3. Choose **Runtime, Framework and Service**.
+
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/microsoft.visualstudio%2Faccount%2Fproject]" submitText="Go to Azure DevOps Project" :::
+
+<!-- markdownlint-enable DOCSMD001 -->
+
+::: zone-end
 
 ### Learn more
 

@@ -32,7 +32,7 @@ Cloud solutions were first designed to host single, relatively isolated applicat
 
 The following cloud deployment diagram shows an example of a security gap in the **red box**. The **yellow box** shows room for optimizing network virtual appliances across workloads.
 
-[![0]][0]
+![0][0]
 
 A virtual datacenter is a concept born of the necessity for scaling to support enterprise workloads while balancing the need to deal with the problems introduced when supporting large-scale applications in the public cloud.
 
@@ -118,7 +118,7 @@ Deploying ExpressRoute connections usually involves engaging with an ExpressRout
 
 *Hub and spoke* is a model for designing the network topology for a virtual datacenter implementation.
 
-[![1]][1]
+![1][1]
 
 As shown, two types of hub and spoke design can be used in Azure. For communication, shared resources, and centralized security policy (VNet Hub in the diagram), or a Virtual WAN type (Virtual WAN in the diagram) for large-scale branch-to-branch and branch-to-Azure communications.
 
@@ -143,7 +143,7 @@ In Azure, every component, whatever the type, is deployed in an Azure Subscripti
 
 A single virtual datacenter implementation can scale up to large number of spokes, although, as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits (for example, a maximum number of VNet peerings; see [Azure subscription and service limits, quotas, and constraints][limits] for details). In cases where limits may be an issue, the architecture can scale up further by extending the model from a single hub-spokes to a cluster of hub and spokes. Multiple hubs in one or more Azure regions can be interconnected using VNet Peering, ExpressRoute, Virtual WAN, or site-to-site VPN.
 
-[![2]][2]
+![2][2]
 
 The introduction of multiple hubs increases the cost and management effort of the system. It would only be justified by scalability, system limits or redundancy and regional replication for end-user performance or disaster recovery. In scenarios requiring multiple hubs, all the hubs should strive to offer the same set of services for operational ease.
 
@@ -153,7 +153,7 @@ Inside a single spoke, it is possible to implement complex multitier workloads. 
 
 An architect might want to deploy a multitier workload across multiple virtual networks. With virtual network peering, spokes can connect to other spokes in the same hub or different hubs. A typical example of this scenario is the case where application processing servers are in one spoke, or virtual network. The database deploys in a different spoke, or virtual network. In this case, it's easy to interconnect the spokes with virtual network peering and thereby avoid transiting through the hub. A careful architecture and security review should be performed to ensure that bypassing the hub doesn't bypass important security or auditing points that might exist only in the hub.
 
-[![3]][3]
+![3][3]
 
 Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level (level 0) becomes the hub of lower spokes (level 1) of the hierarchy. The spokes of a virtual datacenter implementation are required to forward the traffic to the central hub so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub-spoke relationship.
 
@@ -165,7 +165,7 @@ A virtual datacenter is made up of four basic component types: **Infrastructure*
 
 Each component type consists of various Azure features and resources. Your virtual datacenter implementation is made up of instances of multiple components types and multiple variations of the same component type. For instance, you may have many different, logically separated, workload instances that represent different applications. You use these different component types and instances to ultimately build a virtual datacenter.
 
-[![4]][4]
+![4][4]
 
 The preceding high-level conceptual architecture of a virtual datacenter shows different component types used in different zones of the hub-spokes topology. The diagram shows infrastructure components in various parts of the architecture.
 
@@ -183,7 +183,7 @@ A virtual datacenter is designed so that groups created for the central IT group
 
 A virtual datacenter is partitioned to securely host multiple projects across different lines of business. All projects require different isolated environments (Dev, UAT, production). Separate Azure subscriptions for each of these environments provide natural isolation.
 
-[![5]][5]
+![5][5]
 
 The preceding diagram shows the relationship between an organization's projects, users, and groups and the environments where the Azure components are deployed.
 
@@ -197,7 +197,7 @@ The presence of different Azure AD tenants enforces the separation between envir
 
 This component type is where most of the supporting infrastructure resides. It's also where your centralized IT, security, and compliance teams spend most of their time.
 
-[![6]][6]
+![6][6]
 
 Infrastructure components provide an interconnection for the different components of a virtual datacenter implementation, and are present in both the hub and the spokes. The responsibility for managing and maintaining the infrastructure components is typically assigned to the central IT or security team.
 
@@ -234,7 +234,7 @@ Perimeter network components provide the following features:
 
 Usually, the central IT and security teams have responsibility for requirement definition and operation of the perimeter networks.
 
-[![7]][7]
+![7][7]
 
 The preceding diagram shows the enforcement of two perimeters with access to the internet and an on-premises network, both resident in the DMZ hub. In the DMZ hub, the perimeter network to internet can scale up to support large numbers of LOBs, using multiple farms of Web Application Firewalls (WAFs) or Azure Firewalls. In hub also allows for connectivity via VPN or ExpressRoute as needed.
 
@@ -282,7 +282,7 @@ There are two major types of logs in Azure:
 
 - [Azure Monitor diagnostic logs][DiagLog] are logs generated by a resource that provides rich, frequent data about the operation of that resource. The content of these logs varies by resource type.
 
-[![9]][9]
+![9][9]
 
 It is important to track the logs for the network security groups, particularly this information:
 
@@ -332,7 +332,7 @@ The workload possibilities are endless. The following are just a few of the poss
 
 You can implement a highly reliable cloud messaging service between applications and services through [Azure Service Bus][ServiceBus]. It offers asynchronous brokered messaging between client and server, structured first-in-first-out (FIFO) messaging, and publish and subscribe capabilities.
 
-[![10]][10]
+![10][10]
 
 ### Making a virtual datacenter highly available: multiple virtual datacenters
 
