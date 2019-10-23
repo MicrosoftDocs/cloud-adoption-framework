@@ -12,9 +12,9 @@ ms.subservice: operate
 
 # Overview of Azure server management services
 
-Azure server management services provide customers with a consistent experience for managing their servers at-scale. These services cover both Linux and Windows operating systems and can be used in production, development, and test environments. Additionally, they can support Azure IaaS virtual machines, physical servers, and virtual machines that are hosted either on-premises or in other hosting environments. 
+Azure server management services provide customers a consistent experience for managing their servers at scale. These services cover both Linux and Windows operating systems and can be used in production, development, and test environments. Additionally, Azure server management services can support Azure IaaS virtual machines, physical servers, and virtual machines that are hosted on-premises or in other hosting environments.
 
-Azure server management services suite includes the services shown in the following diagram. 
+The Azure server management services suite includes the services that the shown in the following diagram.
 
 ![Diagram of the Azure operations model](./media/operations-diagram.png)
 

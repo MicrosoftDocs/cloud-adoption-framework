@@ -12,19 +12,19 @@ ms.subservice: operate
 
 # Enable tracking and alerting for critical changes
 
-Azure Change Tracking and Inventory provides alerts on the configuration state of your hybrid environment and on any changes to that environment. You can monitor critical file, service, software, and registry changes that might affect your deployed servers.
+Azure Change Tracking and Inventory provides alerts on the configuration state of your hybrid environment and any changes to that environment. It can report critical file, service, software, and registry changes that might affect your deployed servers.
 
-By default, the Azure Automation inventory service doesn't monitor files or registry settings. The solution does provide a list of registry keys that we recommend for monitoring. To see this list, go to your Automation account in the Azure portal and select **Inventory** > **Edit Settings**:
+By default, the Azure Automation inventory service doesn't monitor files or registry settings. But it does provide a list of registry keys that we recommend monitoring. To see this list, go to your Automation account in the Azure portal and select **Inventory** > **Edit Settings**:
 
 ![Screenshot of the Azure Automation Inventory view in the Azure portal](./media/change-tracking1.png)
 
-For more information about each registry key, see [Registry key change tracking](https://docs.microsoft.com/azure/automation/automation-change-tracking#registry-key-change-tracking). You can evaluate and then enable each key by selecting it. The setting is applied to all VMs enabled in the current workspace.
+For more information about each registry key, see [Registry key change tracking](https://docs.microsoft.com/azure/automation/automation-change-tracking#registry-key-change-tracking). Select any key to evaluate and then enable it. The setting is applied to all VMs that are enabled in the current workspace.
 
-You can also track critical file changes. For example, you might want to track the C:\windows\system32\drivers\etc\hosts file because the OS uses it to map host names to IP addresses. Any changes to this file could cause connectivity problems or redirect traffic to dangerous websites.
+You can also use the service to track critical file changes. For example, you might want to track the C:\windows\system32\drivers\etc\hosts file because the OS uses it to map host names to IP addresses. Changes to this file could cause connectivity problems or redirect traffic to dangerous websites.
 
 To enable file content tracking for the hosts file, follow the steps in [Enable file content tracking](https://docs.microsoft.com/azure/automation/change-tracking-file-contents#enable-file-content-tracking).
 
-You can also add an alert for changes made to files that you're tracking. For example, say you want to set an alert for changes made to the hosts file. Start by going to Log Analytics by selecting **Log Analytics** on the command bar or by opening Log Search for the linked Log Analytics workspace. After you're in Log Analytics, search for content changes to the hosts file by using the following query:
+You can also add an alert for changes made to files that you're tracking. For example, say you want to set an alert for changes made to the hosts file. Selecting **Log Analytics** on the command bar or by open Log Search for the linked Log Analytics workspace. In Log Analytics, use the following query to search for content changes to the hosts file:
 
 ```kusto
 ConfigurationChange | where FieldsChanged contains "FileContentChecksum" and FileSystemPath contains "hosts"
@@ -48,11 +48,11 @@ After you've set all the parameters and logic, apply the alert to the environmen
 
 ## More tracking and alerting examples
 
-Here are some other common scenarios for tracking and alerting that you might want to consider:
+This section shows show some other common scenarios for tracking and alerting that you might want to use.
 
 ### Driver file changed
 
-Detect if driver files are changed, added, or removed. Useful for tracking changes to critical system files.
+Use the following query to detect if driver files are changed, added, or removed. It's useful for tracking changes to critical system files.
 
   ```kusto
   ConfigurationChange | where ConfigChangeType == "Files" and FileSystemPath contains " c:\\windows\\system32\\drivers\\"
@@ -60,7 +60,7 @@ Detect if driver files are changed, added, or removed. Useful for tracking chang
 
 ### Specific service stopped
 
-Useful for tracking changes to system-critical services.
+Use the following query to track changes to system-critical services.
 
   ```kusto
   ConfigurationChange | where SvcState == "Stopped" and SvcName contains "w3svc"
@@ -68,7 +68,7 @@ Useful for tracking changes to system-critical services.
 
 ### New software installed
 
-Useful for environments that need to lock down software configurations.
+Use the following query for environments that need to lock down software configurations.
 
   ```kusto
   ConfigurationChange | where ConfigChangeType == "Software" and ChangeCategory == "Added"
@@ -76,7 +76,7 @@ Useful for environments that need to lock down software configurations.
 
 ### Specific software version is or isn't installed on a machine
 
-Useful for assessing security. Note that this query references `ConfigurationData`, which contains the logs for Inventory and reports the last reported configuration state, not changes.
+Use the following query to for assess security. Note that this query references `ConfigurationData`, which contains the logs for inventory and reports the last reported configuration state, not changes.
 
   ```kusto
   ConfigurationData | where SoftwareName contains "Monitoring Agent" and CurrentVersion != "8.0.11081.0"
@@ -84,7 +84,7 @@ Useful for assessing security. Note that this query references `ConfigurationDat
 
 ### Known DLL changed through registry
 
-Useful for detecting changes to well-known registry keys.
+Use the following query to detect changes to well-known registry keys.
 
   ```kusto
   ConfigurationChange | where RegistryKey == "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\KnownDlls"
@@ -92,7 +92,7 @@ Useful for detecting changes to well-known registry keys.
 
 ## Next steps
 
-Learn how to manage updates to your servers by [creating update schedules](./update-schedules.md) with Azure Automation.
+Learn how to manage updates to your servers by using Azure Automatic to [create update schedules](./update-schedules.md).
 
 > [!div class="nextstepaction"]
 > [Create update schedules](./update-schedules.md)
