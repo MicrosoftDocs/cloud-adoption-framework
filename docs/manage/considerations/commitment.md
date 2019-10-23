@@ -49,6 +49,8 @@ The operations management baseline will serve as an initial starting point to be
 
 In a traditional on-premises environment, the cost of managing the environment is commonly assumed to be a sunk cost owned by IT operations. In the cloud, management is a purposeful decision with direct budgetary impact. The costs of each management function can be more directly attributed to each workload deployed to the cloud. This approach allows for greater control, but it does create a requirement for cloud operations teams and cloud strategy teams to first commit to an agreement regarding responsibilities.
 
+Organizations may also choose to [outsource some of their ongoing management functions to a service provider](https://www.microsoft.com/cloud-adoption-framework-offers?ot=manage). These service providers can use [Azure Lighthouse](https://azure.com/lighthouse) to give organizations more precision and control in granting access to their resources, along with greater transparency into the actions performed by the service providers.
+
 **Delegated responsibility:** Since there is no need to centralize and assume operational management overhead, IT operations for many organizations are considering new approaches. One common approach is referred to as delegated responsibility. In a cloud center of excellence model, platform operations and platform automation provide self-service management tools that can be leveraged by business-led operations teams, independent of a central IT operations team. This approach provides the business stakeholders with complete control over management-related budgets. It also allows the CCoE to ensure that a minimum set of guardrails are properly implemented. In this model, IT acts as a broker and a guide to help the business make wise decisions. Business operations oversee day to day operations of dependent workloads.
 
 **Centralized responsibility:** Compliance requirements, technical complexity, and some shared service models may require a Central IT model. In this model, IT continues to maintain operations management responsibilities. As such, environmental design, management controls, and governance tooling may be centrally managed and controlled, which restricts the role of the business stakeholders when making management commitments. But, the cost and architecture visibility of cloud approaches make it much easier for centralized IT to communicate the cost and level of management for each workload.
@@ -61,7 +63,7 @@ The first step is committing to a responsibility approach, which will shape the 
 
 ## Cloud tenancy
 
-While not advised, it is not uncommon for a business to support assets in multiple tenants. The article on Lighthouse for multitenancy provides a few examples of reasons for multitenant Azure environments. Based on the examples in that article, the next commitment is to tenancy.
+For most businesses, management is easier when all assets reside in a single tenant. However, some organizations may need to maintain multiple tenants. The article on [centralizing management operations with Azure Lighthouse](../centralize-operations.md) provides a few examples where businesses may require multi-tenant Azure environments.
 
 **Will this workload reside in a single Azure tenant, alongside all other workloads?**
 
