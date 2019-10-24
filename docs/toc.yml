@@ -1,7 +1,6 @@
-- name: Cloud Adoption Framework
-  items:
-  - name: Introduction
+  - name: Cloud Adoption Framework
     href: index.md
+    pdf_name: Microsoft Cloud Adoption Framework for Azure
   - name: Getting started
     items:
     - name: Understand the migration journey
@@ -1261,3 +1260,6 @@
       href: reference/vdc.md
     - name: How does Azure work?
       href: getting-started/what-is-azure.md
+
+  - name: Azure Architecture Center
+    href: https://docs.microsoft.com/azure/architecture

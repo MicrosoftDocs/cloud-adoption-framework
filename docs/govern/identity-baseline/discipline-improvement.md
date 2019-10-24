@@ -121,7 +121,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Consider integrating more closely with security and fraud-prevention systems.
 - Regularly review access rights for elevated users or roles.
   - Identify every user who is eligible to activate admin privilege.
-- Review on-boarding, off-boarding, and credential update processes.
+- Review onboarding, offboarding, and credential update processes.
 - Investigate increasing levels of automation and communication between identity access management (IAM) modules.
 - Consider implementing a development security operations (DevSecOps) approach.
 - Carry out an impact analysis to gauge results on costs, security, and user adoption.
