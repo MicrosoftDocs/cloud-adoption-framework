@@ -21,7 +21,7 @@ Jump to: [Planning your monitoring infrastructure](#planning-your-monitoring-inf
 
 The inflection point when determining a cloud logging and reporting strategy is based primarily on existing investments your organization has made in operational processes, and to some degree any requirements you have to support a multicloud strategy.
 
-There are multiple ways to log and report on activities in the cloud. Cloud-native and centralized logging are two common software as a service (SaaS) options that are driven by the subscription design and the number of subscriptions.
+There are multiple ways to log and report on activities in the cloud. Cloud-native and centralized logging are two common managed service options that are driven by the subscription design and the number of subscriptions.
 
 ## Planning your monitoring infrastructure
 
