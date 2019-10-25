@@ -23,7 +23,7 @@ The following sections describe some commonly used policies.
 
 ### Restrict resource regions
 
-Regulatory and policy compliance will often depend on control of the physical location where resources are deployed. You can use a built-in policy to allow users to create resources only in whitelisted Azure regions. You can find this policy in the portal by searching for "location" on the policy definition page.
+Regulatory and policy compliance often depend on control of the physical location where resources are deployed. You can use a built-in policy to allow users to create resources only in "whitelisted" Azure regions. To find this policy in the portal, search for "location" on the policy definition page.
 
 Or you can run this cmdlet to find the policy:
 
@@ -31,7 +31,7 @@ Or you can run this cmdlet to find the policy:
 Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq "BuiltIn") -and ($_.Properties.displayName -like "*location*") }
 ```
 
-The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value so that it points to the subscription you want to assign the policy to. Before running the script, you'll need to sign in by using the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet.
+The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
 
 ```powershell
 #Specify the value for $SubscriptionID.

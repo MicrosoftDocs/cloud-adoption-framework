@@ -82,7 +82,7 @@ Use the following query to for assess security. Note that this query references 
   ConfigurationData | where SoftwareName contains "Monitoring Agent" and CurrentVersion != "8.0.11081.0"
   ```
 
-### Known DLL changed through registry
+### Known DLL changed through the registry
 
 Use the following query to detect changes to well-known registry keys.
 
@@ -92,7 +92,7 @@ Use the following query to detect changes to well-known registry keys.
 
 ## Next steps
 
-Learn how to manage updates to your servers by using Azure Automatic to [create update schedules](./update-schedules.md).
+Learn how to use Azure Automation to [create update schedules](./update-schedules.md) to manage updates to your servers.
 
 > [!div class="nextstepaction"]
 > [Create update schedules](./update-schedules.md)
