@@ -16,9 +16,16 @@
       - name: Digital estate
         tocHref: /azure/cloud-adoption-framework/digital-estate/
         topicHref: /azure/cloud-adoption-framework/digital-estate
-    - name: Ready 
+    - name: Ready
       tocHref: /azure/cloud-adoption-framework/ready/
       topicHref: /azure/cloud-adoption-framework/ready
+      items:
+      - name: Best practices
+        tocHref: /azure/cloud-adoption-framework/ready/azure-best-practices/
+        topicHref: /azure/cloud-adoption-framework/ready/azure-best-practices
+      - name: Best practices
+        tocHref: /azure/security/fundamentals/
+        topicHref: /azure/cloud-adoption-framework/ready/azure-best-practices
     - name: Adopt
       items:
       - name: Migrate
