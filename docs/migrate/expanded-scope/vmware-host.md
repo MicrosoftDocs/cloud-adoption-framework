@@ -12,29 +12,25 @@ ms.subservice: migrate
 
 # Accelerate migration with VMWare hosts
 
-Migrating entire VMWare hosts can move multiple workloads and several assets in a single migration effort. The following guidance will expand the scope of the [Azure migration guide](../azure-migration-guide/index.md) through a VMWare host migration.
-
-## General scope expansion
-
-Most of this effort required in this scope expansion will occur during the prerequisites and migration processes of a migration effort.
+Migrating entire VMWare hosts can move multiple workloads and several assets in a single migration effort. The following guidance expands the scope of the [Azure migration guide](../azure-migration-guide/index.md) through a VMWare host migration. Most of the effort required in this scope expansion occurs during the prerequisites and migration processes of a migration effort.
 
 ## Suggested prerequisites
 
-When migrating your first VMWare host to Azure, there are a number of prerequisites that must be met to prepare identity, network, and management requirements. Once these prerequisites are met, each additional host should require significantly less effort to migrate. These prerequisites align to a few key efforts: secure your Azure environment, private cloud management, and private cloud networking.
+When migrating your first VMWare host to Azure, you must meet a number of prerequisites to prepare identity, network, and management requirements. After these prerequisites are met, each additional host should require significantly less effort to migrate. The following sections provide more detail about the prerequisites.
 
 ### Secure your Azure environment
 
-Implement the appropriate cloud solution for RBAC and Network connectivity in your Azure environment. The [secure your environment guide](https://docs.microsoft.com/azure/vmware-cloudsimple/private-cloud-secure?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json) can help with this implementation.
+Implement the appropriate cloud solution for role-based access control and network connectivity in your Azure environment. The [secure your environment guide](https://docs.microsoft.com/azure/vmware-cloudsimple/private-cloud-secure?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json) can help with this implementation.
 
 ### Private cloud management
 
 There are two required tasks and one optional task to establish the private cloud management. [Escalate private cloud privileges](https://docs.microsoft.com/azure/vmware-cloudsimple/escalate-privileges?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json) and [workload DNS and DHCP setup](https://docs.microsoft.com/azure/vmware-cloudsimple/dns-dhcp-setup?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json) are each required best practices.
 
-If the objective is to [migrate workloads using Layer 2 stretched networks](https://docs.microsoft.com/azure/vmware-cloudsimple/migration-layer-2-vpn?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json), this third best practice will be required.
+If the objective is to [migrate workloads by using Layer 2 stretched networks](https://docs.microsoft.com/azure/vmware-cloudsimple/migration-layer-2-vpn?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json), this third best practice is also required.
 
-### Private cloud Networking
+### Private cloud networking
 
-Once the management requirements are established, the private cloud networking can be established using the following best practices:
+After the management requirements are established, you can establish private cloud networking by using the following best practices:
 
 - [VPN connection to Private Cloud](https://docs.microsoft.com/azure/vmware-cloudsimple/set-up-vpn?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
 - [On-premises network connection with ExpressRoute](https://docs.microsoft.com/azure/vmware-cloudsimple/on-premises-connection?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
@@ -43,20 +39,18 @@ Once the management requirements are established, the private cloud networking c
 
 ### Integration with the cloud adoption plan
 
-Once the prerequisites have been met, each VMWare host be included in the [cloud adoption plan](../../plan/template.md). Within the cloud adoption plan, add each host to be migrated, as a [distinct workload](../../plan/workloads.md). Within each workload, the VMs to be migrated can each be added as [assets](../../plan/workloads.md). To bulk add workloads and assets to the adoption plan, see [adding/editing work items with Excel](https://docs.microsoft.com/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel?view=azure-devops).
+After you've met the other prerequisites, you should include each VMWare host in the [cloud adoption plan](../../plan/template.md). Within the cloud adoption plan, add each host to be migrated, as a [distinct workload](../../plan/workloads.md). Within each workload, add the VMs to be migrated as [assets](../../plan/workloads.md). To add workloads and assets to the adoption plan in bulk, see [adding/editing work items with Excel](https://docs.microsoft.com/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel?view=azure-devops).
 
 ## Migrate process changes
 
 During each iteration, the adoption team works through the backlog to migrate the highest priority workloads. The process doesn't really change for VMWare hosts. When the next workload on the backlog is a VMWare host, the only change will be the tool used.
 
-### Suggested action during the migrate process
-
-The following are a few examples of the tools that can be used in the migration effort:
+You can use the following tools in the migration effort:
 
 - [Native VMWare tools](https://docs.microsoft.com/azure/vmware-cloudsimple/migrate-workloads?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
 - [Azure Data Box](https://docs.microsoft.com/azure/vmware-cloudsimple/migration-using-azure-data-box?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
 
-Alternatively, workloads can be migrated through a disaster recovery failover using the following tools:
+Alternatively, you can migrate workloads through a disaster recovery failover by using the following tools:
 
 - [Back up workload virtual machines](https://docs.microsoft.com/azure/vmware-cloudsimple/backup-workloads-veeam?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
 - [Configure Private Cloud as disaster recovery site using Zerto](https://docs.microsoft.com/azure/vmware-cloudsimple/disaster-recovery-zerto?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
@@ -64,7 +58,7 @@ Alternatively, workloads can be migrated through a disaster recovery failover us
 
 ## Next steps
 
-Return to the [Expanded Scope Checklist](./index.md) to ensure your migration method is fully aligned.
+Return to the expanded scope checklist to ensure your migration method is fully aligned.
 
 > [!div class="nextstepaction"]
 > [Expanded scope checklist](./index.md)
