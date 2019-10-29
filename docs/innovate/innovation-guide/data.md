@@ -1,7 +1,7 @@
 ---
 title: "Azure innovation guide: Democratize data" 
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn to democratize data using Azure.
+description: Learn how to democratize data by using Azure
 author: absheik
 ms.author: absheik
 ms.date: 10/17/2019
@@ -24,25 +24,25 @@ ms.localizationpriority: high
 
 ::: zone-end
 
-One of the first steps to democratize data is to enhance data discoverability. Cataloging and managing data sharing can help enterprises get the most value from their existing information assets. A data catalog makes data sources easily discoverable and understandable by the users who manage the data. Azure Data Catalog enables management inside an enterprise whereas Azure Data Share enables management and sharing outside the enterprise.
+One of the first steps in democratizing data is to enhance data discoverability. Cataloging and managing data sharing can help enterprises get the most value from their existing information assets. A data catalog makes data sources easy to discover and understand by the users who manage the data. Azure Data Catalog enables management inside an enterprise, whereas Azure Data Share enables management and sharing outside the enterprise.
 
-Azure services that provide data processing like Azure Time Series Insights and Stream Analytics are other capabilities that customers and partners are successfully leveraging for their innovation needs.
+Azure services that provide data processing, like Azure Time Series Insights and Stream Analytics, are other capabilities that customers and partners are successfully using for their innovation needs.
 
 # [Catalog](#tab/Catalog)
 
 ## Azure Data Catalog
 
-Azure data catalog addresses the discovery challenges of data consumers in addition to enabling data producers maintaining information assets. Bridge the gap between IT and the business, allowing everyone to contribute their insights. Let your data live where you want it, connect with the tools you choose. Control who can discover registered data assets. Integrate into existing tools and processes with open REST APIs.
+Azure Data Catalog addresses the discovery challenges of data consumers and enables data producers who maintain information assets. It bridges the gap between IT and the business, allowing everyone to contribute their insights. You can store your data where you want it and connect with the tools you want to use. With Azure Data Catalog, you can control who can discover registered data assets. You can integrate into existing tools and processes by using open REST APIs.
 
 > [!div class="checklist"]
 >
 > - Register
-> - Search and Annotate
-> - Connect and Manage
+> - Search and annotate
+> - Connect and manage
 
 ::: zone target="docs"
 
-**Go to [Azure Data Catalog](https://docs.microsoft.com/azure/data-catalog).**
+**Go to the [Azure Data Catalog documentation](https://docs.microsoft.com/azure/data-catalog)**
 
 ::: zone-end
 
@@ -50,12 +50,12 @@ Azure data catalog addresses the discovery challenges of data consumers in addit
 
 ### Action
 
-Only one Azure Data Catalog is supported per organization. If a Catalog has already been created for your organization, you cannot add additional catalogs.
+You can use only one Azure data catalog per organization. If a data catalog has already been created for your organization, you can't add more catalogs.
 
-To create Azure Data Catalog for your organization:
+To create an Azure data catalog for your organization:
 
 1. Go to **Azure Data Catalog**.
-2. Click the **Create** button.
+2. Select **Create**.
 
 <!-- markdownlint-disable DOCSMD001 -->
 
@@ -69,7 +69,7 @@ To create Azure Data Catalog for your organization:
 
 ## Azure Data Share
 
-Achieving balance between openly sharing data and having control over what data is shared and with whom is a key driver of innovation. While endeavoring to democratize data, organizations can easily be overwhelmed by the enormity of the volume, pace, and lifecycle of such data. Using Azure Data Share ensures the provider can stay in control of how their data is handled by specifying terms of use for their data share. The data consumer must accept these terms before being able to receive the data. Data providers can specify the frequency at which their data consumers receive updates. Access to new updates can be revoked at any time by the data provider.
+Achieving a balance between openly sharing data and exercising control over what data is shared and with whom is a key driver of innovation. When trying to democratize data, organizations can easily be overwhelmed by the enormity of the volume, pace, and lifecycle of the data. Azure Data Share ensures providers can control how their data is handled by specifying terms of use for their data share. The data consumer must accept these terms before being able to receive the data. Data providers can specify the frequency at which their data consumers receive updates. Access to new updates can be revoked at any time by the data provider.
 
 > [!div class="checklist"]
 >
@@ -79,7 +79,7 @@ Achieving balance between openly sharing data and having control over what data 
 > - Add recipients to your Data Share.
 
 ::: zone target="docs"
-**Go to [Azure Data Share](https://docs.microsoft.com/azure/data-share).**
+**Go to the [Azure Data Share documentation](https://docs.microsoft.com/azure/data-share)**
 
 ::: zone-end
 
@@ -92,7 +92,7 @@ Achieving balance between openly sharing data and having control over what data 
 To create an Azure Data Share:
 
 1. Go to **Azure Data Share**.
-2. Click **Create Data Share**.
+2. Select **Create Data Share**.
 
 <!-- markdownlint-disable DOCSMD001 -->
 
@@ -103,15 +103,15 @@ To create an Azure Data Share:
 ::: zone-end
 
 Use [Azure Open Datasets](https://docs.microsoft.com/azure/open-datasets/overview-what-are-open-datasets) to enhance your analysis by incorporating [holiday](https://azure.microsoft.com/services/open-datasets/catalog/public-holidays), [weather](https://azure.microsoft.com/services/open-datasets/catalog/noaa-global-forecast-system), and
-[spatial imagery](https://azure.microsoft.com/services/open-datasets/catalog/hls) data in to your models.
+[spatial imagery](https://azure.microsoft.com/services/open-datasets/catalog/hls) data into your models.
 
-Information on [democratizing business processes](https://docs.microsoft.com/business-applications-release-notes/october18/microsoft-flow/democratize-business-processes) and [empowering citizen developers](https://docs.microsoft.com/business-applications-release-notes/october18/microsoft-flow/empower-citizen-developers) found here are next steps.
+Next steps include [democratizing business processes](https://docs.microsoft.com/business-applications-release-notes/october18/microsoft-flow/democratize-business-processes) and [empowering citizen developers](https://docs.microsoft.com/business-applications-release-notes/october18/microsoft-flow/empower-citizen-developers).
 
 # [Insights](#tab/Insights)
 
 ## Azure Time Series Insights
 
-Making near real-time data exploration of data streams and multilayered storage for IoT-scale time series data and models to contextualize raw telemetry and derive asset-based insights, the Data innovation capabilities are endless. You can deliver smooth and continuous integration with other data solutions, provide root-cause analysis and anomaly detection, including custom-built application options on Time Series Insights platform.
+The data innovation capabilities of Azure Time Series Insights are endless. It provides near-real-time data exploration of data streams and multilayered storage for IoT-scale time series data. It also provides models to contextualize raw telemetry and derive asset-based insights. You can deliver smooth and continuous integration with other data solutions and provide root-cause analysis and anomaly detection, including custom-built application options, on the Time Series Insights platform.
 
 > [!div class="checklist"]
 >
@@ -122,7 +122,7 @@ Making near real-time data exploration of data streams and multilayered storage 
 
 ::: zone target="docs"
 
-**Go to [Azure Time Series Insights](https://docs.microsoft.com/azure/time-series-insights/time-series-insights-update-overview).**.
+**Go to the [Azure Time Series Insights overview](https://docs.microsoft.com/azure/time-series-insights/time-series-insights-update-overview)**
 
 ::: zone-end
 
@@ -135,8 +135,8 @@ Making near real-time data exploration of data streams and multilayered storage 
 To create an Azure Time Series Insights environment:
 
 1. Go to **Azure Time Series Insights**.
-2. Click **Create Time Series Insights environment**.
-3. Point this environment to an event source, either IoT Hub or Event Hub.
+2. Select **Create Time Series Insights environment**.
+3. Point this environment to an event source, either Azure IoT Hub or Event Hubs.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.TimeSeriesInsights%2Fenvironments]" submitText="Go to Azure Time Series Insights" :::
 
