@@ -155,9 +155,9 @@ Use a fully managed Kubernetes service to handle provisioning, upgrading, and sc
 
 #### Action
 
-To configure or monitor Azure Kubernetes Service:
+To configure or monitor an Azure Kubernetes service:
 
-1. Go to **Kubernetes Services**.
+1. Go to **Azure Kubernetes services**.
 2. Configure a new service: Select **Add** and follow the prompts.
 3. Manage existing services: Select the desired Kubernetes service from the list.
 
@@ -165,7 +165,7 @@ To configure or monitor Azure Kubernetes Service:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerService%2FmanagedClusters]" submitText="Go to Kubernetes Services" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerService%2FmanagedClusters]" submitText="Go to Azure Kubernetes services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

@@ -89,14 +89,14 @@ Achieving a balance between openly sharing data and exercising control over what
 
 ### Action
 
-To create an Azure Data Share:
+To create a data share:
 
-1. Go to **Azure Data Share**.
-2. Select **Create Data Share**.
+1. Go to **Azure Data Shares**.
+2. Select **Create data share**.
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.DataShare%2Faccounts]" submitText="Go to Azure Data Share" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.DataShare%2Faccounts]" submitText="Go to Azure Data Shares" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -132,8 +132,8 @@ The data innovation capabilities of Azure Time Series Insights are endless. It p
 
 To create an Azure Time Series Insights environment:
 
-1. Go to **Azure Time Series Insights**.
-2. Select **Create Time Series Insights environment**.
+1. Go to **Azure Time Series Insights environments**.
+2. Select **Create time series insights environment**.
 3. Point this environment to an event source, either Azure IoT Hub or Event Hubs.
 
 <!-- markdownlint-disable DOCSMD001 -->
