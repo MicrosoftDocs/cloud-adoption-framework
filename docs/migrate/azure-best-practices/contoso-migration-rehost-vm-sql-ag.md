@@ -654,7 +654,7 @@ The Contoso security team reviews the Azure VMs WEBVM, SQLAOG1 and SQLAOG2 to de
 - The team considers securing the data on the disk using Azure Disk Encryption and Key Vault.
 - The team should evaluate transparent data encryption (TDE), and then enable it on the SmartHotel360 database running on the new SQL AOG. [Learn more](/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017).
 
-[Read more](https://docs.microsoft.com/azure/security/azure-security-best-practices-vms) about security practices for VMs.
+For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
 ## BCDR
 

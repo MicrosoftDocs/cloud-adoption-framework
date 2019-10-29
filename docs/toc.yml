@@ -130,6 +130,12 @@
         href: ready/azure-best-practices/roles.md
       - name: Create hybrid cloud consistency
         href: infrastructure/misc/hybrid-consistency.md
+    - name: Expanded scope
+      items: 
+      - name: Terraform landing zones
+        href: ready/expanded-scope/terraform-landing-zone.md
+      - name: Network boundary security
+        href: reference/networking-vdc.md
     - name: Best practices
       items: 
       - name: Overview
@@ -443,8 +449,6 @@
             href: migrate/azure-best-practices/migrate-best-practices-security-management.md
           - name: Additional best practices
             items:
-            - name: Azure boundary security best practices
-              href: reference/networking-vdc.md
             - name: Azure database security best practices
               href: https://docs.microsoft.com/azure/security/fundamentals/database-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Azure data security and encryption best practices

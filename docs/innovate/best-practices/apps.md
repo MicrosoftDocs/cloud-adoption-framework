@@ -23,10 +23,10 @@ This type of digital invention can be accelerated through each approach listed b
 For this article, assume that all inventions resulting in an application will stem from a shared solution (described in the [empower adoption](./ci-cd.md) article). Also assume that each application results in some type of customer experience (for an internal or external customer). Based on those assumptions, the following three paths are most common for cloud adoption teams who are developing digital inventions:
 
 - **Citizen developers:** Business subject matter experts choose to use citizen developer tools to rapidly test and validate that a customer hypothesis can meet the needs of the customer, before engaging professional developers.
-- **Intelligent Experiences:** Create modern experiences using cloud platforms to drive rapid deployment and short feedback loops. Expand on web applications to infuse intelligence or even integrate bots.
+- **Intelligent experiences:** Create modern experiences using cloud platforms to drive rapid deployment and short feedback loops. Expand on web applications to infuse intelligence or even integrate bots.
 - **Cloud-native:** Build a new invention which naturally takes advantage of cloud capabilities.
 
-Each path results in short-term and long-term advantages and disadvantages. When the Cloud Governance, Cloud Operations, and Cloud Center of Excellence teams are prepared to support each approach, adoption can be accelerated with minimal impact to sustainable business operations.
+Each path results in short-term and long-term advantages and disadvantages. When the cloud governance team, the cloud operations team, and the cloud center of excellence team are prepared to support each approach, adoption can be accelerated with minimal impact to sustainable business operations.
 
 ## Toolchain
 

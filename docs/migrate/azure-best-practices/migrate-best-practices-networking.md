@@ -415,8 +415,8 @@ Public IP addresses in Azure can be associated with VMs, load balancers, applica
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/virtual-network/virtual-network-ip-addresses-overview-arm#public-ip-addresses) public IP addresses in Azure.
-- [Read more](https://docs.microsoft.com/azure/security-center/security-center-just-in-time) on just-in-time VM access in the Azure Security Center.
+- [Public IP addresses in Azure](https://docs.microsoft.com/azure/virtual-network/virtual-network-ip-addresses-overview-arm#public-ip-addresses)
+- [Manage virtual machine access using just-in-time](https://docs.microsoft.com/azure/security-center/security-center-just-in-time)
 
 ## Take advantage of Azure security features for networking
 

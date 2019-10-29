@@ -43,7 +43,7 @@ Application Insights is a monitoring tool that provides near-real-time quantitat
 
 To view quantitative data on your applications:
 
-1. Go to **App Insights**.
+1. Go to **Application Insights**.
    - If your application doesn't appear in the list, select **Add** and follow the prompts to start configuring Application Insights.
    - If the desired app is in the list, select the application.
 1. The **Overview** pane includes some statistics on the application. Select **Application Dashboard** to build a custom dashboard for data that's more relevant to your hypothesis.
@@ -52,7 +52,7 @@ To view quantitative data on your applications:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/microsoft.insights%2Fcomponents]" submitText="Go to App Insights" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/microsoft.insights%2Fcomponents]" submitText="Go to Application Insights" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -72,7 +72,7 @@ To view the data about your apps, go to the [Azure portal](https://ms.portal.azu
 
 ## [Quantitative feedback for APIs](#tab/Quantitative-APIs)
 
-The connected economy is changing the way businesses innovate. Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the *innovator’s dilemma*: how to set the pace of change without stumbling over ongoing business activity.
+The connected economy is changing the way businesses innovate. Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the _innovator’s dilemma_: how to set the pace of change without stumbling over ongoing business activity.
 
 Enterprises are using APIs externally to change how they interact with their customers and partners. Internally, they're using APIs to seamlessly connect distinct parts of the business. API economy operates on four building blocks: social, mobile, analytics, and cloud. Apps and services can be linked rapidly and cost-effectively to create an extended value proposition.
 
@@ -82,7 +82,7 @@ Enterprises are using APIs externally to change how they interact with their cus
 
 To record quantitative data on your APIs:
 
-1. Go to **API Management Service**.
+1. Go to **API Management services**.
 2. Select the desired API from the list.
 3. Select **Diagnostic Settings** in the **Monitoring** section.
 
@@ -96,7 +96,7 @@ To view quantitative data on your APIs:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2Fservice]" submitText="Go to API Management Service" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2Fservice]" submitText="Go to API Management services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

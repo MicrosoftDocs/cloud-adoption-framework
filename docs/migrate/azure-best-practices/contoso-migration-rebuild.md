@@ -127,11 +127,11 @@ Here's how Contoso will run the migration:
 Contoso admins run a deployment script to create the managed Kubernetes cluster using AKS and the Azure Container Registry (ACR).
 
 - The instructions for this section use the **SmartHotel360-Azure-backend** repository.
-- The **SmartHotel360-Azure-backend** GitHub repository contains all of the software for this part of the deployment.
+- The **SmartHotel360-Azure-backend** GitHub repository contains all of the software for this part of the deployment.  
 
 ### Prerequisites
 
-1. Before they start, Contoso admins ensure that all prerequisitie software in installed on the dev machine they're using for the deployment.
+1. Before they start, Contoso admins ensure that all prerequisite software in installed on the dev machine they're using for the deployment.
 2. They clone the repository local to the dev machine using Git: `git clone https://github.com/Microsoft/SmartHotel360-Azure-backend.git`
 
 ### Provision AKS and ACR
@@ -147,7 +147,7 @@ The Contoso admins provision as follows:
     ![AKS](./media/contoso-migration-rebuild/aks3.png)
 5. In the PowerShell Integrated terminal, they sign into Azure using the Connect-AzureRmAccount command. [Learn more](https://docs.microsoft.com/powershell/azure/get-started-azureps) about getting started with PowerShell.
     ![AKS](./media/contoso-migration-rebuild/aks4.png)
-6. They authenticate Azure CLI by running the **az login** command, and following the instructions to authenticate using their web browser. [Learn more](/cli/azure/authenticate-azure-cli?view=azure-cli-latest) about logging in with Azure CLI.
+6. They authenticate Azure CLI by running the `az login` command, and following the instructions to authenticate using their web browser. [Learn more](/cli/azure/authenticate-azure-cli?view=azure-cli-latest) about logging in with Azure CLI.
     ![AKS](./media/contoso-migration-rebuild/aks5.png)
 7. They run the following command, passing the resource group name of ContosoRG, the name of the AKS cluster smarthotel-aks-eus2, and the new registry name.
 
@@ -173,7 +173,9 @@ The Contoso admins provision as follows:
 
 11. They run the following command to start the Kubernetes Dashboard:
 
-    **az aks browse --resource-group ContosoRG --name smarthotelakseus2**
+    ```console
+    az aks browse --resource-group ContosoRG --name smarthotelakseus2
+    ```
 
 12. A browser tab opens to the Dashboard. This is a tunneled connection using the Azure CLI.
 
@@ -273,7 +275,7 @@ Now, Contoso admins do the following:
 - Deploy the microservices to the AKS cluster.
 - As a first step they update the connection strings to the microservices using Azure DevOps. They then configure a new Azure DevOps Release pipeline to deploy the microservices.
 - The instructions in this section use the [SmartHotel360-Azure-Backend](https://github.com/Microsoft/SmartHotel360-Azure-backend) repo.
-- Note that Some of the configuration settings (for example Active Directory B2C) aren’t covered in this article. Read more information about these settings in the repo.
+- Some of the configuration settings (for example Active Directory B2C) aren’t covered in this article. For more information about these settings, review the repo above.
 
 They create the pipeline:
 
