@@ -79,7 +79,7 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 To create a DevOps project:
 
-1. Go to **Azure DevOps project**.
+1. Go to **Azure DevOps Projects**.
 2. Select **Create DevOps project**.
 3. Select **Runtime, Framework and Service**.
 
