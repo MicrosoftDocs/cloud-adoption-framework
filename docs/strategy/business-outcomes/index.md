@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- markdownlint-disable -->
+<!-- markdownlint-disable MD026 -->
 
 # What business outcomes are associated with transformation journeys?
 
@@ -24,42 +24,42 @@ To learn more about business outcomes and the business outcome template, see [do
 
 The following are a few business outcomes that tend to trigger conversations with various personas:
 
-- **Finance Leadership**: Increase profitability while driving compliance.
-- **Marketing**: Acquire and retain customers, build reputation.
-- **Sales**: Accelerate sales, improve customer lifetime value.
-- **HR**: Retain, recruit, and empower employees.
+- **Finance leadership:** Increase profitability while driving compliance.
+- **Marketing:** Acquire and retain customers, build reputation.
+- **Sales:** Accelerate sales, improve customer lifetime value.
+- **Human Resources:** Retain, recruit, and empower employees.
 
-# Sample outcomes by category
+## Sample outcomes by category
 
 Speaking in business outcomes can feel like a foreign language to many technically minded individuals. To help ease translation, Microsoft curates a set of business outcome examples in the [business outcome framework](../index.md). Use these samples to help inspire and demonstrate business outcomes that are based on actual transformation journeys.
 
 To help you find business outcomes more easily, we've separated them into the following categories. This approach tends to drive consensus-building conversations across business units.
 
-## Fiscal outcomes
+### Fiscal outcomes
 
 Financial or fiscal performance is the cleanest business outcome for many business leaders, but not the only one.
 
 View samples of [fiscal outcomes](./fiscal-outcomes.md).
 
-## Agility outcomes
+### Agility outcomes
 
 Today's fast-changing business environment places a premium on time. The ability to respond to and drive market change quickly is the fundamental measure of business agility.
 
 View samples of [agility outcomes](./agility-outcomes.md).
 
-## Reach outcomes
+### Reach outcomes
 
 In a constantly shrinking market, global reach (ability to support global customers and users) can be measured by compliance in geographies that are relevant to the business.
 
 View outcomes related to [global reach](./reach-outcomes.md).
 
-## Customer engagement outcomes
+### Customer engagement outcomes
 
 Social marketplaces are redefining winners and losers at an unheard-of pace. Responding to user needs is a key measure of customer engagement.
 
 Read more about [customer engagement outcomes](./engagement-outcomes.md).
 
-## Performance outcomes
+### Performance outcomes
 
 Performance and reliability are assumed. When either falters, reputation damage can be painful and long-lasting.
 

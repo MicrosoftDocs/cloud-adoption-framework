@@ -46,15 +46,15 @@ Discovery is a fundamental tenet of enterprise architecture. If discovery is lim
 
 *Figure 3 - Five areas of focus in discovery: stakeholders, outcomes, drivers, KPIs, and capabilities.*
 
-**Stakeholders**: Who in the organization is likely to see the greatest value in a specific business outcome? Who is most likely to support this transformation, especially when things get tough or time consuming? Who has the greatest stake in the success of this transformation? This person is a potential stakeholder.
+**Stakeholders:** Who in the organization is likely to see the greatest value in a specific business outcome? Who is most likely to support this transformation, especially when things get tough or time consuming? Who has the greatest stake in the success of this transformation? This person is a potential stakeholder.
 
-**Business outcomes**: A business outcome is a concise, defined, and observable result or change in business performance, supported by a specific measure. How does the stakeholder want to change the business? How will the business be affected? What is the value of this transformation?
+**Business outcomes:** A business outcome is a concise, defined, and observable result or change in business performance, supported by a specific measure. How does the stakeholder want to change the business? How will the business be affected? What is the value of this transformation?
 
-**Business drivers**: Business drivers capture the current challenge that's preventing the company from achieving desired outcomes. They can also capture new opportunities that the business can capitalize on with the right solution. How would you describe the current challenges or future state of the business? What business functions would be changing to meet the desired outcomes?
+**Business drivers:** Business drivers capture the current challenge that's preventing the company from achieving desired outcomes. They can also capture new opportunities that the business can capitalize on with the right solution. How would you describe the current challenges or future state of the business? What business functions would be changing to meet the desired outcomes?
 
-**KPIs**: How will this change be measured? How does the business know if they are successful? How frequently will this KPI be observed? Understanding each KPI helps enable incremental change and experimentation.
+**KPIs:** How will this change be measured? How does the business know if they are successful? How frequently will this KPI be observed? Understanding each KPI helps enable incremental change and experimentation.
 
-**Capabilities**: When you define any transformation journey, how will technical capabilities accelerate realization of the business outcome? What applications must be included in the transformation to achieve business objectives? How do various applications or workloads get prioritized to deliver on capabilities? How do parts of the solution need to be expanded or rearchitected to meet each of the outcomes? Can execution approaches (or timelines) be rearranged to prioritize high-impact business outcomes?
+**Capabilities:** When you define any transformation journey, how will technical capabilities accelerate realization of the business outcome? What applications must be included in the transformation to achieve business objectives? How do various applications or workloads get prioritized to deliver on capabilities? How do parts of the solution need to be expanded or rearchitected to meet each of the outcomes? Can execution approaches (or timelines) be rearranged to prioritize high-impact business outcomes?
 
 ## Next steps
 

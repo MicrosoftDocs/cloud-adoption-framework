@@ -30,11 +30,11 @@ The acquisition models of the cloud change the core dependencies that made a seq
 
 This article series walks through each step of translating strategy and effort into an actionable cloud adoption plan:
 
-1. **Prerequisites**: Confirm that all prerequisite steps have been completed before you create your plan.
-2. **Define and prioritize workloads**: Prioritize your first 10 workloads to establish an initial adoption backlog.
-3. **Align assets**: Identify which assets (proposed or existing) are required to support the prioritized workloads.
-4. **Review rationalization**: Review rationalization decisions to refine adoption-path decisions: Migrate or Innovate.
-5. **Define iterations and releases**: *Iterations* are the time blocks allocated to do work. *Releases* are the definition of the work to be done before triggering a change to production processes.
+1. **Prerequisites:** Confirm that all prerequisite steps have been completed before you create your plan.
+2. **Define and prioritize workloads:** Prioritize your first 10 workloads to establish an initial adoption backlog.
+3. **Align assets:** Identify which assets (proposed or existing) are required to support the prioritized workloads.
+4. **Review rationalization:** Review rationalization decisions to refine adoption-path decisions: Migrate or Innovate.
+5. **Define iterations and releases:** *Iterations* are the time blocks allocated to do work. *Releases* are the definition of the work to be done before triggering a change to production processes.
 6. **Estimate timelines:** Establish rough timelines for release planning purposes, based on initial estimates.
 
 ## Next steps
