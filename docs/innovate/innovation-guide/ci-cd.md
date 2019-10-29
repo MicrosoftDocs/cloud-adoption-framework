@@ -48,7 +48,7 @@ Empowering developers to invent means accelerating developer velocity, enabling 
 
 ## Build productively
 
-There are two areas of opportunity where Azure can help you build productively:
+There are several areas of opportunity where Azure can help you build productively:
   
 > [!div class="checklist"]
 >

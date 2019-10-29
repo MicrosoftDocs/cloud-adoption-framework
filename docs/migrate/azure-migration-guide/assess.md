@@ -53,7 +53,7 @@ To get started with a server migration assessment using Azure Migrate, follow th
 
 ::: zone target="docs"
 
-### Read more
+### Learn more
 
 - [Azure Migrate overview](https://docs.microsoft.com/azure/migrate/migrate-services-overview)
 - [Migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
@@ -77,7 +77,7 @@ To use dependency visualization, you need to download and install agents on each
 
 <!-- markdownlint-disable MD024 -->
 
-### Read more
+### Learn more
 
 - [Using Service Map solution in Azure](https://docs.microsoft.com/azure/azure-monitor/insights/service-map)
 - [Azure Migrate and Service Map: Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization)

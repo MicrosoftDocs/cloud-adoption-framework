@@ -584,7 +584,7 @@ The Contoso security team reviews the Azure VMs and SQL Database Managed Instanc
 
      ![Managed Instance security - Threat detection](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-security.png)
 
-To learn more about security practices for VMs, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/azure-security-best-practices-vms).
+To learn more about security practices for VMs, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
 ### BCDR
 

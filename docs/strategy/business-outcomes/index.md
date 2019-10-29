@@ -57,13 +57,13 @@ View outcomes related to [global reach](./reach-outcomes.md).
 
 Social marketplaces are redefining winners and losers at an unheard-of pace. Responding to user needs is a key measure of customer engagement.
 
-Read more about [customer engagement outcomes](./engagement-outcomes.md).
+Learn more about [customer engagement outcomes](./engagement-outcomes.md).
 
 ### Performance outcomes
 
 Performance and reliability are assumed. When either falters, reputation damage can be painful and long-lasting.
 
-Read more about [performance outcomes](./performance-outcomes.md).
+Learn more about [performance outcomes](./performance-outcomes.md).
 
 Each of the business outcomes listed in the preceding categories can help facilitate a focused conversation among your business and technical team members. However, you shouldn't limit your conversations to these generic samples. Understanding the unique needs of your own business, and building outcomes that match, maximizes the value of a cloud transformation.
 

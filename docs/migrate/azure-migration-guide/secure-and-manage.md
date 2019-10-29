@@ -34,7 +34,7 @@ Azure Monitor maximizes the availability and performance of your applications by
 
 ::: zone target="docs"
 
-## Read more
+## Learn more
 
 - [Azure Monitor overview](https://docs.microsoft.com/azure/azure-monitor/overview).
 
@@ -65,7 +65,7 @@ Combined, these experiences give you a comprehensive view of Azure health, at a 
 
 ::: zone target="docs"
 
-## Read more
+## Learn more
 
 To learn more, see the [Azure Service Health documentation](https://docs.microsoft.com/azure/service-health).
 
@@ -88,7 +88,7 @@ Azure Advisor is a personalized cloud consultant that helps you follow best prac
 
 ::: zone target="docs"
 
-## Read more
+## Learn more
 
 [Overview](https://docs.microsoft.com/azure/advisor/advisor-overview).
 
@@ -111,7 +111,7 @@ Azure Security Center is a unified infrastructure security management system tha
 
 ::: zone target="docs"
 
-## Read more
+## Learn more
 
 [Overview](https://docs.microsoft.com/azure/security-center/security-center-intro)
 

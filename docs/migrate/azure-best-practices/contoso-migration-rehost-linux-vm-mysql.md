@@ -441,7 +441,7 @@ The Contoso security team review the VM and database to determine any security i
 - They consider securing the data on the VM disks using Disk encryption and Azure Key Vault.
 - Communication between the VM and database instance isn't configured for SSL. They will need to do this to ensure that database traffic can't be hacked.
 
-[Read more](https://docs.microsoft.com/azure/security/azure-security-best-practices-vms) about security practices for VMs.
+For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
 ### BCDR
 
