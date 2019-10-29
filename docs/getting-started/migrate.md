@@ -1,7 +1,7 @@
 ---
-title: "Getting started with a cloud migration journey"
+title: "Begin a cloud migration journey in Azure"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Getting started with a cloud migration journey
+description: Begin a cloud migration journey in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/10/2019
@@ -10,13 +10,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Getting started with a cloud migration journey
+# Begin a cloud migration journey in Azure
 
-Learn about using the Microsoft Cloud Adoption Framework for Azure to begin a cloud migration journey. This framework provides comprehensive guidance for transitioning legacy application workloads using innovative cloud-based technologies.
+Use the Microsoft Cloud Adoption Framework for Azure to begin a cloud migration journey. This framework provides comprehensive guidance for transitioning legacy application workloads to the cloud using innovative cloud-based technologies.
 
 ## Executive summary
 
-The Cloud Adoption Framework helps customers undertake a simplified cloud adoption journey. This framework contains detailed information covering an end-to-end cloud adoption journey, starting with targeted business outcomes and aligning cloud readiness and assessments with clearly defined business objectives. Those outcomes are achieved through a defined path for cloud adoption. With migration-based adoption, the defined path focuses largely on completing a migration of on-premises workloads to the cloud. Sometimes this journey includes modernization of workloads to increase the return on investment from the migration effort.
+The Cloud Adoption Framework helps customers undertake a simplified cloud adoption journey. This framework contains detailed information about an end-to-end cloud adoption journey, starting with targeted business outcomes, and then aligning cloud readiness and assessments with clearly defined business objectives. Those outcomes are achieved through a defined path for cloud adoption. With migration-based adoption, the defined path focuses largely on migrating on-premises workloads to the cloud. Sometimes this journey includes modernization of workloads to increase the return on investment from the migration effort.
 
 This framework is designed primarily for cloud architects and the cloud strategy teams leading cloud adoption efforts. However, many topics in this framework are relevant to other roles across the business and IT. Cloud architects frequently serve as facilitators to engage each of the relevant roles. This executive summary is designed to prepare the various roles before facilitating conversations.
 
