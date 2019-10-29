@@ -1,0 +1,10 @@
+{
+    "redirections": [
+       {
+          "source_path": "docs/ready/initial-org-alignment.md",
+          "redirect_url": "/azure/cloud-adoption-framework/plan/initial-org-alignment",
+          "redirect_document_id": true
+       }
+    ]
+}
+ 

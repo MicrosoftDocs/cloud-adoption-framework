@@ -128,8 +128,6 @@ The data innovation capabilities of Azure Time Series Insights are endless. It p
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
 ### Action
 
 To create an Azure Time Series Insights environment:
@@ -137,6 +135,8 @@ To create an Azure Time Series Insights environment:
 1. Go to **Azure Time Series Insights**.
 2. Select **Create Time Series Insights environment**.
 3. Point this environment to an event source, either Azure IoT Hub or Event Hubs.
+
+<!-- markdownlint-disable DOCSMD001 -->
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.TimeSeriesInsights%2Fenvironments]" submitText="Go to Azure Time Series Insights" :::
 

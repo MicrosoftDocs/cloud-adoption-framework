@@ -40,10 +40,10 @@ To prepare your workstation for bulk editing, see [Bulk add or modify work items
 
 The cloud adoption plan organizes activities by activity type:
 
-- **Epics**: An *epic* represents an overall phase of the cloud adoption lifecycle.
-- **Features**: Features are used to organize specific objectives within each phase. For instance, migration of a specific workload would be one feature.
-- **User stories**: User stories group work into logical collections of activities based on a specific goal.
-- **Tasks**: Tasks are the actual work to be done.
+- **Epics:** An *epic* represents an overall phase of the cloud adoption lifecycle.
+- **Features:** Features are used to organize specific objectives within each phase. For instance, migration of a specific workload would be one feature.
+- **User stories:** User stories group work into logical collections of activities based on a specific goal.
+- **Tasks:** Tasks are the actual work to be done.
 
 At each layer, activities are then sequenced based on dependencies. Activities are linked to articles in the Cloud Adoption Framework to clarify the objective or task at hand.
 

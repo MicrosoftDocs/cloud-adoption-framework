@@ -99,7 +99,7 @@ The complete list of stakeholders varies between migration projects. It is best 
 
 Establishing a core cloud strategy team, built around these key high-level stakeholders, can help prepare your organization for cloud adoption and guide your overall cloud migration efforts. This team is responsible for understanding cloud technologies and migration processes, identifying the business justification for migrations, and determining the best high-level solutions for migration efforts. They also help identify and work with specific application and business stakeholders to ensure a successful migration.
 
-For more information on how to prepare your organization for cloud migration efforts, see the Cloud Adoption Framework's article on [initial organization alignment](../../ready/initial-org-alignment.md).
+For more information on how to prepare your organization for cloud migration efforts, see the Cloud Adoption Framework's article on [initial organization alignment](../../plan/initial-org-alignment.md).
 
 # [Timelines](#tab/Timelines)
 

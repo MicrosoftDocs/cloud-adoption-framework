@@ -27,8 +27,9 @@ ms.localizationpriority: high
 User adoption, engagement, and retention are key to successful innovation. Why?
 
 Building an innovative new solution isn't about giving users what they want or think they want. It's about the formulation of a hypothesis that can be tested and improved upon. That testing comes in two forms:
-- Quantitative (testing feedback). This feedback measures the actions we hope to see. 
-- Qualitative (customer feedback). This feedback tells us what those metrics mean in the customer's voice.
+
+- **Quantitative (testing feedback):** This feedback measures the actions we hope to see.
+- **Qualitative (customer feedback):** This feedback tells us what those metrics mean in the customer's voice.
 
 Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com/) is the home for open source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed apps. The article on [building GitHub repositories](https://docs.microsoft.com/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml) can help you get started with your repo.
 
@@ -45,7 +46,7 @@ To view quantitative data on your applications:
 1. Go to **App Insights**.
    - If your application doesn't appear in the list, select **Add** and follow the prompts to start configuring Application Insights.
    - If the desired app is in the list, select the application.
-4. The **Overview** pane includes some statistics on the application. Select **Application Dashboard** to build a custom dashboard for data that's more relevant to your hypothesis.
+1. The **Overview** pane includes some statistics on the application. Select **Application Dashboard** to build a custom dashboard for data that's more relevant to your hypothesis.
 
 ::: zone target="chromeless"
 

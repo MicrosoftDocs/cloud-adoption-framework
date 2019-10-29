@@ -20,7 +20,7 @@ This article outlines a series of approaches that align with the Migrate process
 
 ## Primary toolset
 
-When migrating and modernizing data that current resides on-prem, the most common Azure tool choice is [Data Migration Service (DMS)](https://docs.microsoft.com/azure/dms) which is part of the broader [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) toolchain. For existing SQL Server data sources, the [Data Migration Assistant (DMA)](/sql/dma/dma-overview) could also provide assistance in assessing and migrating a smaller number of data structures.
+When migrating and modernizing data that current resides on-prem, the most common Azure tool choice is [Data Migration Service (DMS)](https://docs.microsoft.com/azure/dms) which is part of the broader [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) toolchain. For existing SQL Server data sources, the [Data Migration Assistant (DMA)](https://docs.microsoft.com/sql/dma/dma-overview) could also provide assistance in assessing and migrating a smaller number of data structures.
 
 To support Oracle and NoSQL migrations, the [Data Migration Service (DMS)](https://docs.microsoft.com/azure/dms) can also be used for certain types of source to target databases, such as Oracle to PostgreSQL or MongoDB to Cosmos DB. It is more common for adoption teams to leverage third-party tools or custom migration scripts to migrate to Cosmos DB, HDInsight, or IaaS-based VM options.
 
