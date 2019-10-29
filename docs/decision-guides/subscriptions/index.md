@@ -21,7 +21,7 @@ As your digital estate in Azure grows, you will likely need to create additional
 
 Some basic examples of using management groups to separate different workloads include:
 
-- **Production vs. nonproduction:** Some enterprises create management groups to separate their production and nonproduction subscriptions. Management groups allow these customers to more easily manage roles and policies. For example, a nonproduction subscription may allow developers **contributor** access, but in production, they have only **reader** access.
+- **Production vs. nonproduction workloads:** Some enterprises create management groups to separate their production and nonproduction subscriptions. Management groups allow these customers to more easily manage roles and policies. For example, a nonproduction subscription may allow developers **contributor** access, but in production, they have only **reader** access.
 - **Internal services vs. external services:** Much like production versus nonproduction workloads, enterprises often have different requirements, policies, and roles for internal services versus external customer-facing services.
 
 This decision guide helps you consider different approaches to organizing your management group hierarchy.

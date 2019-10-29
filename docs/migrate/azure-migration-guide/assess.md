@@ -53,7 +53,7 @@ To get started with a server migration assessment using Azure Migrate, follow th
 
 ::: zone target="docs"
 
-### Read more
+### Learn more
 
 - [Azure Migrate overview](https://docs.microsoft.com/azure/migrate/migrate-services-overview)
 - [Migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
@@ -77,7 +77,7 @@ To use dependency visualization, you need to download and install agents on each
 
 <!-- markdownlint-disable MD024 -->
 
-### Read more
+### Learn more
 
 - [Using Service Map solution in Azure](https://docs.microsoft.com/azure/azure-monitor/insights/service-map)
 - [Azure Migrate and Service Map: Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization)
@@ -99,7 +99,7 @@ The complete list of stakeholders varies between migration projects. It is best 
 
 Establishing a core cloud strategy team, built around these key high-level stakeholders, can help prepare your organization for cloud adoption and guide your overall cloud migration efforts. This team is responsible for understanding cloud technologies and migration processes, identifying the business justification for migrations, and determining the best high-level solutions for migration efforts. They also help identify and work with specific application and business stakeholders to ensure a successful migration.
 
-For more information on how to prepare your organization for cloud migration efforts, see the Cloud Adoption Framework's article on [initial organization alignment](../../ready/initial-org-alignment.md).
+For more information on how to prepare your organization for cloud migration efforts, see the Cloud Adoption Framework's article on [initial organization alignment](../../plan/initial-org-alignment.md).
 
 # [Timelines](#tab/Timelines)
 

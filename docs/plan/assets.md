@@ -14,10 +14,10 @@ ms.subservice: plan
 
 Workload is a conceptual description of a collection of assets: VMs, applications, and data sources. The previous article, [Prioritize and define workloads](./workloads.md), gave guidance for collecting the data that will define the workload. Before migration, a few of the technical inputs in that list require additional validation. This article helps with validation of the following inputs:
 
-- **Applications**: List any applications included in this workload.
-- **VMs/Servers**: List any VMs or servers included in the workload.
-- **Data sources**: List any data sources included in the workload.
-- **Dependencies**: List any asset dependencies not included in the workload.
+- **Applications:** List any applications included in this workload.
+- **VMs and servers:** List any VMs or servers included in the workload.
+- **Data sources:** List any data sources included in the workload.
+- **Dependencies:** List any asset dependencies not included in the workload.
 
 There are several options for assembling this data. The following are a few of the most common approaches.
 

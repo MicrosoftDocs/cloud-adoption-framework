@@ -29,7 +29,7 @@ Before you migrate resources to Azure, you need to choose the migration method a
 ::: zone target="docs"
 
 > [!TIP]
-> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal and select **Migrate your environment to Azure**.
+> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Migrate your environment to Azure**, and then follow the step-by-step instructions.
 
 ::: zone-end
 

@@ -15,9 +15,9 @@ ms.custom: governance
 
 At the top level, fiscal conversations consist of three basic concepts:
 
-- **Revenue**: Will more money come into the business as a result of the sales of goods or services.
-- **Cost**: Will less money be spent in the creation, marketing, sales, or delivery of goods or services.
-- **Profit**: Although they're rare, some transformations can both increase revenue and decrease costs. This is a profit outcome.
+- **Revenue:** Will more money come into the business as a result of the sales of goods or services.
+- **Cost:** Will less money be spent in the creation, marketing, sales, or delivery of goods or services.
+- **Profit:** Although they're rare, some transformations can both increase revenue and decrease costs. This is a profit outcome.
 
 The remainder of this article explains these fiscal outcomes in the context of a cloud transformation.
 
@@ -30,13 +30,13 @@ The remainder of this article explains these fiscal outcomes in the context of a
 
 The cloud can help create opportunities to deliver new products to customers or deliver existing products in a new way. New revenue streams are innovative, entrepreneurial, and exciting for many people in the business world. New revenue streams are also prone to failure and are considered by many companies to be high risk. When revenue-related outcomes are proposed by IT, there will likely be resistance. To add credibility to these outcomes, partner with a business leader who's a proven innovator. Validation of the revenue stream early in the process helps avoid roadblocks from the business.
 
-- **Example**: A company has been selling books for over a hundred years. An employee of the company realizes that the content can be delivered electronically. The employee creates a device that can be sold in the bookstore, which allows the same books to be downloaded directly, driving $X in new book sales.
+- **Example:** A company has been selling books for over a hundred years. An employee of the company realizes that the content can be delivered electronically. The employee creates a device that can be sold in the bookstore, which allows the same books to be downloaded directly, driving $X in new book sales.
 
 ### Revenue increases
 
 With global scale and digital reach, the cloud can help businesses to increase revenues from existing revenue streams. Often, this type of outcome comes from an alignment with sales or marketing leadership.
 
-- **Example**: A company that sells widgets could sell more widgets, if the salespeople could securely access the company's digital catalog and stock levels. Unfortunately, that data is only in the company's ERP system, which can be accessed only via a network-connected device. Creating a service façade to interface with the ERP and exposing the catalog list and nonsensitive stock levels to an application in the cloud would allow the salespeople to access the data they need while onsite with a customer. Extending on-premises Active Directory using Azure Active Directory (Azure AD) and integrating role-based access into the application would allow the company to help ensure that the data stays safe. This simple project could affect revenue from an existing product line by _x%_.
+- **Example:** A company that sells widgets could sell more widgets, if the salespeople could securely access the company's digital catalog and stock levels. Unfortunately, that data is only in the company's ERP system, which can be accessed only via a network-connected device. Creating a service façade to interface with the ERP and exposing the catalog list and nonsensitive stock levels to an application in the cloud would allow the salespeople to access the data they need while onsite with a customer. Extending on-premises Active Directory using Azure Active Directory (Azure AD) and integrating role-based access into the application would allow the company to help ensure that the data stays safe. This simple project could affect revenue from an existing product line by _x%_.
 
 ### Profit increases
 
@@ -48,9 +48,9 @@ Seldom does a single effort simultaneously increase revenue and decrease costs. 
 
 Cloud computing can reduce capital expenses for hardware and software, setting up datacenters, running on-site datacenters, and so on. The costs of racks of servers, round-the-clock electricity for power and cooling, and IT experts for managing the infrastructure add up fast. Shutting down a datacenter can reduce capital expense commitments. This is commonly referred to as "getting out of the datacenter business." Cost reduction is typically measured in dollars in the current budget, which could span one to five years depending on how the CFO manages finances.
 
-- **Example #1**: A company's datacenter consumes a large percentage of the annual IT budget. IT chooses to conduct a cloud migration and transitions the assets in that datacenter to infrastructure as a service (IaaS) solutions, creating a three-year cost reduction.
-- **Example #2**: A holding company recently acquired a new company. In the acquisition, the terms dictate that the new entity should be removed from the current datacenters within six months. Failure to do so will result in a fine of 1 million USD per month to the holding company. Moving the digital assets to the cloud in a cloud migration could allow for a quick decommission of the old assets.
-- **Example #3**: An income tax company that caters to consumers experiences 70 percent of its annual revenue during the first three months of the year. The remainder of the year, its large IT investment sits relatively dormant. A cloud migration could allow IT to deploy the compute/hosting capacity required for those three months. During the remaining nine months, the IaaS costs could be significantly reduced by shrinking the compute footprint.
+- **Example #1:** A company's datacenter consumes a large percentage of the annual IT budget. IT chooses to conduct a cloud migration and transitions the assets in that datacenter to infrastructure as a service (IaaS) solutions, creating a three-year cost reduction.
+- **Example #2:** A holding company recently acquired a new company. In the acquisition, the terms dictate that the new entity should be removed from the current datacenters within six months. Failure to do so will result in a fine of 1 million USD per month to the holding company. Moving the digital assets to the cloud in a cloud migration could allow for a quick decommission of the old assets.
+- **Example #3:** An income tax company that caters to consumers experiences 70 percent of its annual revenue during the first three months of the year. The remainder of the year, its large IT investment sits relatively dormant. A cloud migration could allow IT to deploy the compute/hosting capacity required for those three months. During the remaining nine months, the IaaS costs could be significantly reduced by shrinking the compute footprint.
 
 ### Example: Coverdell
 
@@ -65,7 +65,7 @@ Coverdell modernizes their infrastructure to drive record cost savings with Azur
 
 Terminating a datacenter can also provide cost avoidance, by preventing future refresh cycles. A refresh cycle is the process of buying new hardware and software to replace aging on-premises systems. In Azure, hardware and OS are routinely maintained, patched, and refreshed at no additional cost to customers. This allows a CFO to remove planned future spend from long-term financial forecasts. Cost avoidance is measured in dollars. It differs from cost reduction, generally focusing on a future budget that has not been fully approved yet.
 
-- **Example**: A company's datacenter is up for a lease renewal in six months. The datacenter has been in service for eight years. Four years ago, all servers were refreshed and virtualized, costing the company millions of dollars. Next year, the company plans to refresh the hardware and software again. Migrating the assets in that datacenter as part of a cloud migration would allow cost avoidance by removing the planned refresh from next year's forecasted budget. It could also produce cost reduction by decreasing or eliminating the real estate lease costs.
+- **Example:** A company's datacenter is up for a lease renewal in six months. The datacenter has been in service for eight years. Four years ago, all servers were refreshed and virtualized, costing the company millions of dollars. Next year, the company plans to refresh the hardware and software again. Migrating the assets in that datacenter as part of a cloud migration would allow cost avoidance by removing the planned refresh from next year's forecasted budget. It could also produce cost reduction by decreasing or eliminating the real estate lease costs.
 
 ### Capital expenses vs. operating expenses
 
@@ -86,7 +86,7 @@ However, before you associate any transformation journey with this type of capit
 
 If an operating expense model is desirable, the following example could be a viable business outcome:
 
-- **Example**: The company's datacenter is currently depreciating at _x USD_ per year for the next three years. It is expected to require an additional _y USD_ to refresh the hardware next year. We can convert the capital expenses to an operating expense model at an even rate of _z USD_ per month, allowing for better management of and accountability for the operating costs of technology.
+- **Example:** The company's datacenter is currently depreciating at _x USD_ per year for the next three years. It is expected to require an additional _y USD_ to refresh the hardware next year. We can convert the capital expenses to an operating expense model at an even rate of _z USD_ per month, allowing for better management of and accountability for the operating costs of technology.
 
 ## Next steps
 
