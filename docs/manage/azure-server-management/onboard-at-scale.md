@@ -10,22 +10,26 @@ ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
-# Configure Azure management services at scale
+# Configure Azure server management services at scale
 
-Onboarding the Azure management services to your servers involves two tasks: deploying service agents to your servers and enabling the management solutions. This article covers the following processes that will allow you to complete these tasks:
+Adding Azure server management services to your servers involves two tasks:
+- Deploy service agents to your servers
+- Enablw the management solutions
 
-- [Deploying required agents to Azure VMs using Azure Policy](#deploy-extensions-to-azure-vms-using-azure-policy)
-- [Deploying required agents to on-premises servers](#install-required-agents-on-on-premises-servers)
-- [Enable and configuring solutions](#enable-and-configure-solutions)
+This article covers three process that you need to do to complete these tasks:
+
+1. Deploy required agents to Azure VMs by using Azure Policy]
+1. Deploy required agents to on-premises servers
+1. Enable and configuring solutions
 
 > [!NOTE]
-> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before onboarding virtual machines to Azure management services.
+> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you add virtual machines to Azure server management services.
 
-## Deploy extensions to Azure VMs using Azure Policy
+## Use Azure Policy to deploy extensions to Azure VMs
 
-All of the management solutions discussed in [Azure management tools and services](./tools-services.md) require the Log Analytics agent to be installed on Azure virtual machines (VMs) and on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on all your Azure VMs and connected to the correct Log Analytics workspace.
+All the management solutions discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can add your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
 
-Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes both the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
+Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
 <!-- TODO: Add these when available.
 - [Preview]: Enable Azure Monitor for virtual machine scale sets.
@@ -43,36 +47,36 @@ To assign the policies listed in the preceding section:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale1.png)
 
-2. On the **Assign Policy** page, select the **Scope** by clicking the ellipsis (…), and then select either a management group or subscription. Optionally, select a resource group. A scope determines which resources or group of resources the policy is assigned to. Then choose **Select** at the bottom of the **Scope** page.
+2. On the **Assign Policy** page, select the **Scope** by clicking the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. A scope determines which resources or group of resources the policy is assigned to. Then choose **Select** at the bottom of the **Scope** page.
 
 3. Select the ellipsis (…) next to **Policy definition** to open the list of available definitions. You can filter the initiative definition by entering **Azure Monitor** in the **Search** box:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale2.png)
 
-4. The **Assignment name** is automatically populated with the policy name that you selected, but you can change it. You can also add an optional description to provide more information about this policy assignment. The **Assigned by** field is automatically filled based on who is signed in. This field is optional and custom values can be entered.
+4. The **Assignment name** is automatically populated with the policy name that you selected, but you can change it. You can also add an optional description to provide more information about this policy assignment. The **Assigned by** field is automatically filled based on who is signed in. This field is optional, and you can enter custom values.
 
 5. For this policy, select **Log Analytics workspace** for the Log analytics agent to associate.
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale3.png)
 
-6. Check the **Managed Identity location**. If this policy is the type [DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), it will require a managed identity to deploy the policy. In the portal, the account will be created as indicated with the check box selection.
+6. Check the **Managed Identity location**. If this policy is the type [DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
 
 7. Select **Assign**.
 
-After completing the wizard, the policy assignment will be deployed to the environment. It can take up to 30 minutes for the policy to take effect. You can test it by creating new VMs after 30 minutes and then checking if the Microsoft Monitoring Agent (MMA) is enabled on the VM by default.
+After you complete the wizard, the policy assignment will be deployed to the environment. It can take up to 30 minutes for the policy to take effect. To test it, create new VMs after 30 minutes, and check if the Microsoft Monitoring Agent is enabled on the VM by default.
 
 ## Install required agents on on-premises servers
 
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before onboarding servers to Azure management services.
 
-For on-premises servers, you'll need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. Do so by specifying the Workspace ID and key information, which you can find by going to your Log Analytics workspace in the Azure portal and selecting **Settings** > **Advanced settings**.
+For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. When you do this, specify the Workspace ID and key information. To get that informaiton, go to your Log Analytics workspace in the Azure portal and select **Settings** > **Advanced settings**.
 
 ![Screenshot of Log Analytics workspace advanced settings in the Azure portal](./media/onboarding-on-premises.png)
 
 ## Enable and configure solutions
 
-To enable solutions, you need to configure the Log Analytics workspace. Onboarded Azure VMs and on-premises servers will get the solutions from the Log Analytics workspaces they are connected to.
+To enable solutions, you need to configure the Log Analytics workspace. Azure VMs that you've added and on-premises servers will get the solutions from the Log Analytics workspaces that they're connected to.
 
 The following solutions are covered in this section:
 
@@ -86,9 +90,9 @@ The following solutions are covered in this section:
 
 ### Update Management
 
-Update Management, Change Tracking, and Inventory solutions require both a Log Analytics workspace and an Automation account. To ensure these resources are properly configured, we recommend that you onboard through the Automation account. For more information, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
+Update Management, Change Tracking, and Inventory solutions require both a Log Analytics workspace and an Automation account. To ensure that these resources are properly configured, we recommend that you work through the Automation account. For more information, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
 
-We recommend enabling the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account#scope-configuration) is created in the workspace. You'll need to manually update the scope to include machines covered by the update service.
+We recommend that you enable the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account#scope-configuration) is created in the workspace. You must manually update the scope to include machines covered by the update service.
 
 To cover all existing servers, as well as future servers, you need to remove the scope configuration. To do so, view your Automation account in the Azure portal, and select **Update Management** > **Manage machine** > **Enable on all available and future machines**. Enabling this setting allows all Azure VMs connected to the workspace to use Update Management.
 
