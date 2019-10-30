@@ -94,22 +94,22 @@ Update Management, Change Tracking, and Inventory solutions require both a Log A
 
 We recommend that you enable the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account#scope-configuration) is created in the workspace. You must manually update the scope to include machines covered by the update service.
 
-To cover all existing servers, as well as future servers, you need to remove the scope configuration. To do so, view your Automation account in the Azure portal, and select **Update Management** > **Manage machine** > **Enable on all available and future machines**. Enabling this setting allows all Azure VMs connected to the workspace to use Update Management.
+To cover all existing servers as well as future servers, you need to remove the scope configuration. To do this, view your Automation account in the Azure portal. Select **Update Management** > **Manage machine** > **Enable on all available and future machines**. This setting allows all Azure VMs that are connected to the workspace to use Update Management.
 
 ![Screenshot of Update Management in the Azure portal](./media/onboarding-configuration1.png)
 
 ### Change Tracking and Inventory solutions
 
-To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about onboarding these solutions from your Automation account, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
+To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about adding these solutions from your Automation account, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
 
-The Change Tracking solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers Change Tracking, Inventory, and Desired State Configuration. If you would like to enroll only specific on-premises servers, you can opt in those servers. We recommend that you onboard all your production servers.
+The Change Tracking solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers Change Tracking, Inventory, and Desired State Configuration. If you want to enroll only specific on-premises servers, you can opt in those servers. We recommend that you implement the Change Tracking solution on all your production servers.
 
 #### Opt in via the Azure portal
 
 1. Go to the Automation account that has Change Tracking and Inventory enabled.
 2. Select **Change tracking**.
-3. Select **Manage machines** on the right top pane.
-4. Select **Enable on selected machines**, and select the machines to be enabled by clicking **Add** next to the machine name.
+3. Select **Manage machines** in the upper-right pane.
+4. Select **Enable on selected machines**. Then, select **Add** next to the machine name.
 5. Select **Enable** to enable the solution for those machines.
 
 ![Screenshot of Change Tracking in the Azure portal](./media/onboarding-configuration2.png)
@@ -118,15 +118,15 @@ The Change Tracking solution is free for Azure VMs and costs $6 per node per mon
 
 Alternatively, you can configure the scope configuration to opt in on-premises servers. Scope configuration uses saved searches.
 
-To create or modify the saved search, use the following steps:
+To create or modify the saved search, follow these steps:
 
 1. Go to the Log Analytics workspace that is linked to your Automation account that you configured in the preceding steps.
 
-2. Under **General**, select **Saved searches**.
+1. Under **General**, select **Saved searches**.
 
-3. In the **Filter** box, enter **Change Tracking** to filter the list of saved searches. In the results, select **MicrosoftDefaultComputerGroup**.
+1. In the **Filter** box, enter **Change Tracking** to filter the list of saved searches. In the results, select **MicrosoftDefaultComputerGroup**.
 
-4. Enter the computer name or the VMUUID to include the computers that you want to opt in for Change Tracking.
+1. Enter the computer name or the VMUUID to include the computers that you want to opt in for Change Tracking.
 
     ```kusto
     Heartbeat
@@ -137,9 +137,7 @@ To create or modify the saved search, use the following steps:
     > [!NOTE]
     > The server name must exactly match the value included in the expression, and it shouldn't contain a domain name suffix.
 
-5. Select **Save**.
-
-6. By default, the Scope Configuration is linked to the **MicrosoftDefaultComputerGroup** saved search and will be automatically updated.
+1. Select **Save**. By default, the Scope Configuration is linked to the **MicrosoftDefaultComputerGroup** saved search. It will be automatically updated.
 
 ### Azure Activity Log
 
