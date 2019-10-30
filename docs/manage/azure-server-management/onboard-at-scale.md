@@ -47,7 +47,7 @@ To assign the policies listed in the preceding section:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale1.png)
 
-2. On the **Assign Policy** page, select the **Scope** by clicking the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. A scope determines which resources or group of resources the policy is assigned to. Then choose **Select** at the bottom of the **Scope** page.
+2. On the **Assign Policy** page, select the **Scope** by selecting the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. A scope determines which resources or group of resources the policy is assigned to. Then choose **Select** at the bottom of the **Scope** page.
 
 3. Select the ellipsis (…) next to **Policy definition** to open the list of available definitions. You can filter the initiative definition by entering **Azure Monitor** in the **Search** box:
 
@@ -154,7 +154,7 @@ You will need to specify the **Workspace name** of the workspace that you create
 
 ### Azure Log Analytics Agent Health
 
-The Azure Log Analytics Agent Health solution gives you insight into the health, performance and availability of your Windows and Linux servers.
+The Azure Log Analytics Agent Health solution gives you insight into the health, performance, and availability of your Windows and Linux servers.
 
 To add this solution:
 
@@ -163,7 +163,7 @@ To add this solution:
 3. Search for **Azure Log Analytics agent health** and select it.
 4. Select **Create**.
 
-You will need to specify the **Workspace name** of the workspace that you created in the previous section where the solution is enabled.
+You need to specify the **Workspace name** of the workspace that you created in the previous section where the solution is enabled.
 
 After creation is complete, the workspace resource instance displays **AgentHealthAssessment** when you select **View** > **Solutions**.
 
@@ -175,26 +175,26 @@ To add this solution:
 
 1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
-3. Search for **Antimalware Assessment** and select it.
+3. Search for and select **Antimalware Assessment**.
 4. Select **Create**.
 
-You will need to specify the **Workspace name** of the workspace that you created in the previous section where the solution is enabled.
+You need to specify the **Workspace name** of the workspace that you created in the previous section where the solution is enabled.
 
 After creation is complete, the workspace resource instance displays **AntiMalware** when you select **View** > **Solutions**.
 
 ### Azure Monitor for VMs
 
-You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in the previous article, [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You should not enable solutions directly from the **Solutions** page as you did for the other solutions described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
+You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You should not enable solutions directly from the **Solutions** page as you did for the other solutions described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
 
 ### Azure Security Center
 
-In this guidance, we recommend that you onboard all the servers to the Azure Security Center's *Free* tier by default. This option gives you a basic level of security assessments and actionable security recommendations for your environment. Upgrading to Security Center's *Standard* tier offers additional benefits, which are discussed in detail on the [Security Center pricing page](https://docs.microsoft.com/azure/security-center/security-center-pricing).
+We recommend that you add all your servers at least to the Azure Security Center *Free* tier. This option gives you a basic level of security assessments and actionable security recommendations for your environment. If you upgrade to the *Standard* tier, you get additional benefits, which are discussed in detail on the [Security Center pricing page](https://docs.microsoft.com/azure/security-center/security-center-pricing).
 
-To enable the Azure Security Center Free tier, use the following steps:
+To enable the Azure Security Center Free tier, follow these steps:
 
 1. Go to the **Security Center** portal page.
-2. Select **Security policy** under **POLICY & COMPLIANCE**.
-3. Find the Log Analytics workspace resource that you have created in the rightmost pane.
+2. Under **POLICY & COMPLIANCE**, select **Security policy**.
+3. Find the Log Analytics workspace resource that you  created in the pane on the right side.
 4. Select **Edit settings >** for that workspace.
 5. Select **Pricing tier**.
 6. Choose the **Free** option.
@@ -202,7 +202,7 @@ To enable the Azure Security Center Free tier, use the following steps:
 
 ## Next steps
 
-Learn how to use automation to onboard servers and create alerts.
+Learn how to use automation to add servers and create alerts.
 
 > [!div class="nextstepaction"]
 > [Automate onboarding and alert configuration](./onboarding-automation.md)
