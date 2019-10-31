@@ -154,7 +154,7 @@ You can also use tags for many other things. Common uses include:
 - **Automation:** You might have regularly running scripts that can take an action based on a tag value like "ShutdownTime" or "DeprovisionDate."
 - **Billing:** Tags can appear on your invoice. You can use them to help segment your bill by using tags like "CostCenter" or "BillTo."
 
-Each resource or resource group can have a maximum of 15 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
+Each resource or resource group can have a maximum of 50 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
 
 For more tagging recommendations and examples, see the Cloud Adoption Framework's [guidance on tagging](../azure-best-practices/naming-and-tagging.md).
 

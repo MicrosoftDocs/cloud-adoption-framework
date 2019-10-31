@@ -76,24 +76,16 @@ Beyond these initial options for developing skills, a variety of learning option
 
 Microsoft and partners offer various options to help all audiences develop their skills with Azure services:
 
-- [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/microsoft-azure). Offers training from the people who helped build Azure. From a basic overview to deep technical training, these courses help IT implementers learn how to use Azure for their business.
-- [Microsoft IT Pro Cloud Essentials](https://www.microsoft.com/azureessentials). Provides a free annual subscription that includes cloud services, education, and support benefits. IT Pro Cloud Essentials provides IT implementers with hands-on experience, targeted educational opportunities, and access to experts in areas that matter most to increase knowledge and create a path to career advancement.
 - [Microsoft IT Pro Center](https://www.microsoft.com/itpro). Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
 
 We recommend turning knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/azure-certification.aspx).
 
 ## Microsoft Learn
 
-Microsoft Learn is a new approach to learning. Readiness for the new responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
+Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points, levels and achieve more!
 
-Here are a few examples of role-specific learning paths on Microsoft Learn:
+Here is an example of a tailored learning paths which aligns to the Strategy potion of the Cloud Adoption Framework. 
 
-[Business users](/learn/browse/?roles=business-user) might experience a steep learning curve when asked to participate in the planning, testing, and adoption of cloud-based technology. Microsoft Learn modules focused on adopting cloud models and tools can help these users manage their business through cloud-based services.
+[Learn the business value of Microsoft Azure](/learn/paths/learn-business-value-of-azure/): This learning experience will take you on a journey that will begin by showing you how digital transformation and the power of the cloud can transform your business. We will cover how Microsoft Azure cloud services can power your organization on a trusted cloud platform. Finally, we will wrap up by illustrating how to make this journey real for your organization. 
 
-[Solution architects](/learn/browse/?roles=solution-architect) can interact with hundreds of modules and learning paths. The available topics range from core infrastructure services to advanced data transformation.
-
-[Administrators](/learn/browse/?roles=administrator) can interact with modules that focus on Azure fundamentals, configuring containers, and even advanced administration in the cloud.
-
-[Developers](/learn/browse/?roles=developer&term=infrastructure) play an important role in the migration of assets to the cloud. Developers can learn about ways to help during architecture, governance, modernization activities.
-
-To discover additional learning paths, browse the [Learn catalog](/learn/browse). Use the Roles filter to align learning paths with your role.
+To discover additional learning paths, browse the [Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
