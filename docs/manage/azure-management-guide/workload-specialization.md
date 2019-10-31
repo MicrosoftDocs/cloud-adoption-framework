@@ -18,18 +18,18 @@ Workload specialization builds on the concepts outlined in [Platform Specializat
 
 ![Beyond the cloud management baseline](../../_images/manage/beyond-the-baseline.png)
 
-- **Workload operations**: The largest per-workload operations investment and highest degree of resiliency. We suggest workload operations for the approximately 20% of workloads that drive business value. This specialization is usually reserved for high criticality or mission critical workloads.
-- **Platform operations**: Operations investment is spread across many workloads. Resiliency improvements affect all workloads that use the defined platform. We suggest platform operations for the approximately 20% of platforms that have the highest criticality. This specialization is usually reserved for medium to high criticality workloads.
-- **Enhanced management baseline**: The relatively lowest operations investment. This specialization slightly improves business commitments by using additional cloud-native operations tools and processes.
+- **Workload operations:** The largest per-workload operations investment and highest degree of resiliency. We suggest workload operations for the approximately 20% of workloads that drive business value. This specialization is usually reserved for high criticality or mission critical workloads.
+- **Platform operations:** Operations investment is spread across many workloads. Resiliency improvements affect all workloads that use the defined platform. We suggest platform operations for the approximately 20% of platforms that have the highest criticality. This specialization is usually reserved for medium to high criticality workloads.
+- **Enhanced management baseline:** The relatively lowest operations investment. This specialization slightly improves business commitments by using additional cloud-native operations tools and processes.
 
 ## High-level process
 
 Workload specialization consists of a disciplined execution of the following four processes in an iterative approach. Each process is explained in more detail in [Platform Specialization](./platform-specialization.md).
 
-- **Improve system design**: Improve the design of a specific workload to effectively minimize interruptions.
-- **Automate remediation**: Some improvements aren't cost effective. In such cases, it might make more sense to automate remediation and reduce the effect of interruptions.
-- **Scale the solution**: As you improve systems design and automated remediation, you can scale those changes across the environment through the service catalog.
-- **Continuous improvement**: You can use different monitoring tools to discover incremental improvements. These improvements can be addressed in the next pass of system design, automation, and scale.
+- **Improve system design:** Improve the design of a specific workload to effectively minimize interruptions.
+- **Automate remediation:** Some improvements aren't cost effective. In such cases, it might make more sense to automate remediation and reduce the effect of interruptions.
+- **Scale the solution:** As you improve systems design and automated remediation, you can scale those changes across the environment through the service catalog.
+- **Continuous improvement:** You can use different monitoring tools to discover incremental improvements. These improvements can be addressed in the next pass of system design, automation, and scale.
 
 ## Cultural change
 

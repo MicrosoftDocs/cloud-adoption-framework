@@ -42,17 +42,17 @@ If you're using Azure Monitor exclusively, follow these guidelines as you consid
 
 Depending on the feature and configuration you're using, you can store monitoring data in any of six repositories:
 
-- **Azure Monitor metrics database**: A time-series database used primarily for Azure Monitor platform metrics, but also has Application Insights metric data mirrored into it. Information entering this database has the fastest alert times.
+- **Azure Monitor metrics database:** A time-series database used primarily for Azure Monitor platform metrics, but also has Application Insights metric data mirrored into it. Information entering this database has the fastest alert times.
 
-- **Application Insights logs store**: A database that stores most Application Insights telemetry in log form.
+- **Application Insights logs store:** A database that stores most Application Insights telemetry in log form.
 
-- **Azure Monitor logs store**: The primary store for Azure log data. Other tools can route data to it and can be analyzed in Azure Monitor logs. Because of ingestion and indexing, log alert queries have higher latency. This latency is generally 5-10 minutes, but can be higher under certain circumstances.
+- **Azure Monitor logs store:** The primary store for Azure log data. Other tools can route data to it and can be analyzed in Azure Monitor logs. Because of ingestion and indexing, log alert queries have higher latency. This latency is generally 5-10 minutes, but can be higher under certain circumstances.
 
-- **Activity log store**: Used for all activity log and service health events. Dedicated alerting is possible. Holds subscription level events that occur on objects in your subscription, as seen from the outside of those objects. An example might be when a policy is set or a resource is accessed or deleted.
+- **Activity log store:** Used for all activity log and service health events. Dedicated alerting is possible. Holds subscription level events that occur on objects in your subscription, as seen from the outside of those objects. An example might be when a policy is set or a resource is accessed or deleted.
 
-- **Azure Storage**: General-purpose storage that's supported by Azure Diagnostics and other monitoring tools. It's a low-cost option for long-term retention of monitoring telemetry. Alerting isn't supported from data that's stored in this service.
+- **Azure Storage:** General-purpose storage that's supported by Azure Diagnostics and other monitoring tools. It's a low-cost option for long-term retention of monitoring telemetry. Alerting isn't supported from data that's stored in this service.
 
-- **Event Hubs**: Generally used to stream data into on-premises or other partners' monitoring or ITSM tools.
+- **Event Hubs:** Generally used to stream data into on-premises or other partners' monitoring or ITSM tools.
 
 Azure Monitor has four types of alerts, each somewhat tied to the repository that the data is stored in:
 
@@ -95,7 +95,7 @@ That said, there are some important footnotes to this rule.
 
 - You can send it to both stores by running both the extension and the agent on the same VM. You can then alert quickly but also use the guest operating system data as part of more complex searches when you combine it with other telemetry.
 
-**Importing data from on-premises**: If you're trying to query and monitor across machines running in Azure and on-premises, you can use the Log Analytics agent to collect guest operating system data. You can then use a feature called [logs to metrics](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric-logs) to streamline the metrics into the metrics store. This method bypasses part of the ingestion process into the Azure logs store, and the data is thus available sooner in the metrics database.
+**Importing data from on-premises:** If you're trying to query and monitor across machines running in Azure and on-premises, you can use the Log Analytics agent to collect guest operating system data. You can then use a feature called [logs to metrics](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric-logs) to streamline the metrics into the metrics store. This method bypasses part of the ingestion process into the Azure logs store, and the data is thus available sooner in the metrics database.
 
 ### Minimize alerts
 

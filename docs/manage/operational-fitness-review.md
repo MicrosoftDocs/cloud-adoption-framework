@@ -89,13 +89,13 @@ This process is iterative, and ideally your enterprise has a team dedicated to i
 
 The team responsible for operational fitness review is composed of the following roles:
 
-- **Business owner**: Provides knowledge of the business to identify and prioritize each mission-critical business operation. This role also compares the mitigation cost to the business impact, and drives the final decision on remediation.
+- **Business owner:** Provides knowledge of the business to identify and prioritize each mission-critical business operation. This role also compares the mitigation cost to the business impact, and drives the final decision on remediation.
 
-- **Business advocate**: Breaks down business operations into discreet parts, and maps those parts to services and infrastructure, whether on-premises or in the cloud. The role requires deep knowledge of the technology associated with each business operation.
+- **Business advocate:** Breaks down business operations into discreet parts, and maps those parts to services and infrastructure, whether on-premises or in the cloud. The role requires deep knowledge of the technology associated with each business operation.
 
-- **Engineering owner**: Implements the services associated with the business operation. These individuals might participate in the design, implementation, and deployment of any solutions for nonfunctional requirement problems that are uncovered by the review team.
+- **Engineering owner:** Implements the services associated with the business operation. These individuals might participate in the design, implementation, and deployment of any solutions for nonfunctional requirement problems that are uncovered by the review team.
 
-- **Service owner**: Operates the business's applications and services. These individuals collect logging and usage data for these applications and services. This data is used both to identify problems and to verify fixes after they're deployed.
+- **Service owner:** Operates the business's applications and services. These individuals collect logging and usage data for these applications and services. This data is used both to identify problems and to verify fixes after they're deployed.
 
 ## Review meeting
 

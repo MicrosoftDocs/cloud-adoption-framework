@@ -22,17 +22,17 @@ However, you might need a greater commitment to the business beyond the standard
 
 ![Beyond the cloud management baseline](../../_images/manage/beyond-the-baseline.png)
 
-- **Workload operations**:
+- **Workload operations:**
   - Largest per-workload operations investment.
   - Highest degree of resiliency.
   - Suggested for the approximately 20% of workloads that drive business value.
   - Typically reserved for high-criticality or mission-critical workloads.
-- **Platform operations**:
+- **Platform operations:**
   - Operations investment is spread across many workloads.
   - Resiliency improvements affect all workloads that use the defined platform.
   - Suggested for the approximately 20% of platforms that have highest criticality.
   - Typically reserved for medium-criticality to high-criticality workloads.
-- **Enhanced management baseline**:
+- **Enhanced management baseline:**
   - Lowest relative operations investment.
   - Slightly improved business commitments using additional cloud-native operations tools and processes.
 

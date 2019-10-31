@@ -18,9 +18,9 @@ Much like the enhanced management baseline, platform specialization is extension
 
 ![Beyond the cloud management baseline](../../_images/manage/beyond-the-baseline.png)
 
-- **Workload operations**: The largest per-workload operations investment and the highest degree of resiliency. We suggest workload operations for the approximately 20% of workloads that drive business value. This specialization is usually reserved for high criticality or mission critical workloads.
-- **Platform operations**: Operations investment is spread across many workloads. Resiliency improvements affect all workloads that use the defined platform. We suggest platform operations for the approximately 20% of platforms that have the highest criticality. This specialization is usually reserved for medium to high criticality workloads.
-- **Enhanced management baseline**: The relatively lowest operations investment. This specialization slightly improves business commitments by using additional cloud-native operations tools and processes.
+- **Workload operations:** The largest per-workload operations investment and the highest degree of resiliency. We suggest workload operations for the approximately 20% of workloads that drive business value. This specialization is usually reserved for high criticality or mission critical workloads.
+- **Platform operations:** Operations investment is spread across many workloads. Resiliency improvements affect all workloads that use the defined platform. We suggest platform operations for the approximately 20% of platforms that have the highest criticality. This specialization is usually reserved for medium to high criticality workloads.
+- **Enhanced management baseline:** The relatively lowest operations investment. This specialization slightly improves business commitments by using additional cloud-native operations tools and processes.
 
 Both workload and platform operations require changes to design and architecture principles. Those changes can take time and might result in increased operating expenses. To reduce the number of workloads requiring such investments, an enhanced management baseline might provide enough of an improvement to the business commitment.
 
@@ -39,10 +39,10 @@ This table outlines a few common processes, tools, and potential effects common 
 
 Platform specialization consists of a disciplined execution of the following four processes in an iterative approach. Each process is explained in more detail in later sections of this article.
 
-- **Improve system design**: Improve the design of common systems or platforms to effectively minimize interruptions.
-- **Automate remediation**: Some improvements aren't cost effective. In such cases, it might make more sense to automate remediation and reduce the effect of interruptions.
-- **Scale the solution**: As systems design and automated remediation are improved, those changes can be scaled across the environment through the service catalog.
-- **Continuous improvement**: Different monitoring tools can be used to discover incremental improvements. These improvements can be addressed in the next pass of system design, automation, and scale.
+- **Improve system design:** Improve the design of common systems or platforms to effectively minimize interruptions.
+- **Automate remediation:** Some improvements aren't cost effective. In such cases, it might make more sense to automate remediation and reduce the effect of interruptions.
+- **Scale the solution:** As systems design and automated remediation are improved, those changes can be scaled across the environment through the service catalog.
+- **Continuous improvement:** Different monitoring tools can be used to discover incremental improvements. These improvements can be addressed in the next pass of system design, automation, and scale.
 
 ::: zone target="docs"
 
@@ -61,11 +61,11 @@ As a complement to Cloud Adoption Framework, Azure Architecture Framework provid
 
 Azure Architecture Framework focuses on improvement across five pillars of system design:
 
-- **Scalability**: Scaling the common platform assets to handle increased load
-- **Availability**: Reducing business interruptions by improving uptime potential
-- **Resiliency**: Improving recovery times to reduce the duration of interruptions
-- **Security**: Protecting applications and data from external threats
-- **Management**: Operational processes specific to those common platform assets
+- **Scalability:** Scaling the common platform assets to handle increased load
+- **Availability:** Reducing business interruptions by improving uptime potential
+- **Resiliency:** Improving recovery times to reduce the duration of interruptions
+- **Security:** Protecting applications and data from external threats
+- **Management:** Operational processes specific to those common platform assets
 
 Technical debt and architectural flaws cause most business interruptions. For existing deployments, you can view system-design improvements as payments against existing technical debt. For new deployments, you can view those improvements as avoidance of technical debt.
 

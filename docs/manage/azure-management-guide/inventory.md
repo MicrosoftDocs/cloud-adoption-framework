@@ -50,9 +50,9 @@ We also publish planned maintenance events to Service Health so you'll know abou
 
 Azure Service Health includes:
 
-- **Azure status**: A global view of the health of Azure services.
-- **Service health**: A personalized view of the health of your Azure services.
-- **Resource health**: A deeper view of the health of your individual resources.
+- **Azure status:** A global view of the health of Azure services.
+- **Service health:** A personalized view of the health of your Azure services.
+- **Resource health:** A deeper view of the health of your individual resources.
 
 ::: zone target="chromeless"
 
