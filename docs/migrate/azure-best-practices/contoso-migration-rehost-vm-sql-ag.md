@@ -1,5 +1,5 @@
 ---
-title: "Rehost an app by migrating it to Azure VMs and SQL Server Always On availability group"
+title: "Rehost an app by migrating it to Azure VMs and SQL Server Always On availability groups"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso rehosts an on-premises app by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: BrianBlanchard
@@ -11,7 +11,7 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
-# Rehost an on-premises app on Azure VMs and SQL Server Always On availability group
+# Rehost an on-premises app on Azure VMs and SQL Server Always On availability groups
 
 This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET app running on VMware VMs as part of a migration to Azure. Contoso migrates the app front-end VM to an Azure VM, and the app database to an Azure SQL Server VM, running in a Windows Server failover cluster with SQL Server Always On availability groups.
 
@@ -136,7 +136,7 @@ Here's how Contoso will run the migration:
 > - **Step 5: Prepare on-premises VMware for Site Recovery.** Prepare accounts for VM discovery and agent installation. Prepare on-premises VMs so that users can connect to Azure VMs after migration.
 > - **Step 6: Replicate VMs.** Enable VM replication to Azure.
 > - **Step 7: Install DMA.** Download and install the Data Migration Assistant.
-> - **Step 7: Migrate the database with DMA.** Migrate the database to Azure.
+> - **Step 8: Migrate the database with DMA.** Migrate the database to Azure.
 > - **Step 9: Protect the database.** Create an Always On availability group for the cluster.
 > - **Step 10: Migrate the web app VM.** Run a test failover to make sure everything's working as expected. Then run a full failover to Azure.
 
@@ -219,7 +219,7 @@ Before setting up the cluster, Contoso admins take a snapshot of the OS disk on 
 
      ![Create cluster](media/contoso-migration-rehost-vm-sql-ag/create-cluster2.png)
 
-## Configure the cloud witness
+### Configure the cloud witness
 
 1. Contoso admins configure the cloud witness using the **Quorum Configuration Wizard** in Failover Cluster Manager.
 2. In the wizard they select to create a cloud witness with the storage account.
@@ -529,7 +529,7 @@ Contoso admins will migrate the SmartHotel360 database to Azure VM **SQLAOG1** u
 
 DMA connects to the on-premises SQL Server VM across a site-to-site VPN connection between the Contoso datacenter and Azure, and then migrates the database.
 
-## Step 7: Protect the database with Always On
+## Step 9: Protect the database with Always On
 
 With the app database running on **SQLAOG1**, Contoso admins can now protect it using Always On availability groups. They configure Always On using SQL Management Studio, and then assign a listener using Windows clustering.
 
@@ -576,7 +576,7 @@ With everything set up, Contoso now has a functional availability group in Azure
 - Manually [set up the cluster to use the load balancer IP address](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#configure-the-cluster-to-use-the-load-balancer-ip-address).
 - [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2) about creating and using SAS.
 
-## Step 8: Migrate the VM with Site Recovery
+## Step 10: Migrate the VM with Site Recovery
 
 Contoso admins run a quick test failover, and then migrate the VM.
 
@@ -630,7 +630,7 @@ As the final step in the migration process, Contoso admins update the connection
 - [Learn](https://docs.microsoft.com/azure/site-recovery/site-recovery-create-recovery-plans) how to create a recovery plan.
 - [Learn about](https://docs.microsoft.com/azure/site-recovery/site-recovery-failover) failing over to Azure.
 
-## Clean up after migration
+### Clean up after migration
 
 After migration, the SmartHotel360 app is running on an Azure VM, and the SmartHotel360 database is located in the Azure SQL cluster.
 
@@ -642,7 +642,7 @@ Now, Contoso needs to complete these cleanup steps:
 - Review any resources that interact with the decommissioned VMs, and update any relevant settings or documentation to reflect the new configuration.
 - Add the two new VMs (SQLAOG1 and SQLAOG2) should be added to production monitoring systems.
 
-## Review the deployment
+### Review the deployment
 
 With the migrated resources in Azure, Contoso needs to fully operationalize and secure their new infrastructure.
 
@@ -658,11 +658,11 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 ## BCDR
 
- For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
+For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
 
-- Keep data safe: Contoso backs up the data on the WEBVM, SQLAOG1 and SQLAOG2 VMs using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+- To keep data safe, Contoso backs up the data on the WEBVM, SQLAOG1 and SQLAOG2 VMs using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 - Contoso will also learn about how to use Azure Storage to back up SQL Server directly to blob storage. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore).
-- Keep apps up and running: Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- To keep apps up and running, Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 

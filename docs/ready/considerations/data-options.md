@@ -1,7 +1,7 @@
 ---
-title: Azure readiness database design decisions
+title: Review your data options
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Azure readiness database design decisions
+description: Review your data options for Azure workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2019
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Data design decisions
+# Review your data options
 
 When you prepare your landing zone environment for your cloud adoption, you need to determine the data requirements for hosting your workloads. Azure database products and services support a wide variety of data storage scenarios and capabilities. How you configure your landing zone environment to support your data requirements depends on your workload governance, technical, and business requirements.
 

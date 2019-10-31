@@ -12,7 +12,7 @@ ms.subservice: ready
 
 # Use Terraform to build your landing zones
 
-Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use deploy landing zones is Hashicorp's Terraform to. This section shows how to use a prototype landing zone to deploy fundamental logging, accounting, and security capabilities for an Azure subscription.
+Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use deploy landing zones is Hashicorp's Terraform. This section shows how to use a prototype landing zone to deploy fundamental logging, accounting, and security capabilities for an Azure subscription.
 
 ## Purpose of the landing zone
 
@@ -51,7 +51,7 @@ The following assumptions or constraints were considered when this initial landi
 - **Subscription limits:** This adoption effort is unlikely to exceed [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
 - **Compliance:** No third-party compliance requirements are needed for this landing zone.
 - **Architectural complexity:** Architectural complexity doesn't require additional production subscriptions.
-- **Shared services:** There are no existing shared services in Azure that require this subscription to be treated like a spoke in a hub-and-spoke architecture.
+- **Shared services:** There are no existing shared services in Azure that require this subscription to be treated like a spoke in a hub and spoke architecture.
 
 If these assumptions match your current environment, then this blueprint might be a good way to start building your landing zone.
 
@@ -62,17 +62,17 @@ The following decisions are represented in the Terraform landing zone:
 | Component | Decisions | Alternative approaches |
 | --- | --- | --- |
 |Logging and monitoring | Azure Monitor Log Analytics workspace will be used. A diagnostics storage account as well as Event Hub will be provisioned. |         |
-|Network | N/A - Network will be implemented in another landing zone. |[Networking decisions](../considerations/network-decisions.md) |
+|Network | N/A - Network will be implemented in another landing zone. |[Networking decisions](../considerations/networking-options.md) |
 |Identity | It's assumed that the subscription is already associated with an Azure Active Directory instance. | [Identity management best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices) |
 | Policy | This landing zone currently assumes that no Azure policies are to be applied. | |
-|Subscription design | N/A - Designed for a single production subscription. | [Scaling subscriptions](../considerations/scaling-subscriptions.md) |
-| Management groups | N/A - Designed for a single production subscription. |[Scaling subscriptions](../considerations/scaling-subscriptions.md) |
-| Resource groups | N/A - Designed for a single production subscription. | [Scaling subscriptions](../considerations/scaling-subscriptions.md) |
+|Subscription design | N/A - Designed for a single production subscription. | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md) |
+| Management groups | N/A - Designed for a single production subscription. |[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md) |
+| Resource groups | N/A - Designed for a single production subscription. | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md) |
 | Data | N/A | [Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and [Azure Data Store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
-|Storage|N/A|[Azure Storage guidance](../considerations/storage-guidance.md) |
-| Naming standards | When the environment is created, a unique prefix will be also created. Resources that require a globally unique name (such as storage accounts) use this prefix. The custom name will be appended with a random suffix. Tag usage is mandated as described in the table below. | [Naming and tagging best practices](../considerations/naming-and-tagging.md) |
+|Storage|N/A|[Azure Storage guidance](../considerations/storage-options.md) |
+| Naming standards | When the environment is created, a unique prefix will be also created. Resources that require a globally unique name (such as storage accounts) use this prefix. The custom name will be appended with a random suffix. Tag usage is mandated as described in the table below. | [Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md) |
 | Cost management | N/A | [Tracking costs](../azure-best-practices/track-costs.md) |
-| Compute | N/A | [Compute options](../considerations/compute-decisions.md) |
+| Compute | N/A | [Compute options](../considerations/compute-options.md) |
 
 ### Tagging standards
 

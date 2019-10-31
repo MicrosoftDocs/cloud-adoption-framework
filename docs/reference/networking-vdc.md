@@ -375,7 +375,7 @@ Because it uses DNS, Traffic Manager is only for use with Azure public endpoints
 
 ### Summary
 
-A virtual datacenter is an approach to datacenter migration to create a scalable architecture in Azure that maximizes cloud resource use, reduces costs, and simplifies system governance. A virtual datacenter is based on a hub and spoke network topology, providing common shared services in the hub and allowing specific applications and workloads in the spokes. A virtual datacenter also matches the structure of company roles, where different departments such as Central IT, DevOps, and operations and maintenance all work together while performing their specific roles. A virtual datacenter satisfies the requirements for a "lift and shift" migration, but also provides many advantages to native cloud deployments.
+A virtual datacenter is an approach to datacenter migration to create a scalable architecture in Azure that maximizes cloud resource use, reduces costs, and simplifies system governance. A virtual datacenter is based on a hub and spoke network topology, providing common shared services in the hub and allowing specific applications and workloads in the spokes. A virtual datacenter also matches the structure of company roles, where different departments such as Central IT, DevOps, and operations and maintenance all work together while performing their specific roles. A virtual datacenter satisfies the requirements for a lift and shift migration, but also provides many advantages to native cloud deployments.
 
 ## References
 

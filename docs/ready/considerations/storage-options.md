@@ -1,7 +1,7 @@
 ---
-title: Azure readiness storage design guidance
+title: Review your storage options
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Azure readiness storage design guidance
+description: Review your storage options for Azure workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2019
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Storage design decisions
+# Review your storage options
 
 Storage capabilities are critical for supporting workloads and services that are hosted in the cloud. As part of your cloud adoption readiness preparations, review this article to help you plan for and address your storage needs.
 

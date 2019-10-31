@@ -133,11 +133,11 @@ To get started with either tool, go to [Azure DevOps](https://dev.azure.com/).
 
 To create a DevOps project:
 
-1. Go to **Azure DevOps project**.
+1. Go to **Azure DevOps Projects**.
 2. Select **Create DevOps project**.
 3. Select **Runtime, Framework and Service**.
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/microsoft.visualstudio%2Faccount%2Fproject]" submitText="Go to Azure DevOps Project" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/microsoft.visualstudio%2Faccount%2Fproject]" submitText="Go to Azure DevOps Projects" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -158,7 +158,7 @@ Acting on feedback might not always mean adding the feature requested by the cus
 
 To view current deployments in your pipeline:
 
-1. Go to **App Service**.
+1. Go to **App Services**.
 2. Select the desired application from the list.
 3. Select **Deployment Center** in the **Deployment** section of the app services pane.
 
@@ -166,7 +166,7 @@ To view current deployments in your pipeline:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites]" submitText="Go to App Service" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites]" submitText="Go to App Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

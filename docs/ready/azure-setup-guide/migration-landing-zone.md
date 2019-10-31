@@ -42,7 +42,7 @@ The following assumptions or constraints were used when this initial landing zon
 - **Subscription limits:** This adoption effort isn't expected to exceed [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
 - **Compliance:** No third-party compliance requirements are needed in this landing zone.
 - **Architectural complexity:** Architectural complexity doesn't require additional production subscriptions.
-- **Shared services:** There are no existing shared services in Azure that require this subscription to be treated like a spoke in a hub-and-spoke architecture.
+- **Shared services:** There are no existing shared services in Azure that require this subscription to be treated like a spoke in a hub and spoke architecture.
 
 If these assumptions seem aligned with your current environment, then this blueprint might be a good place to start building your landing zone.
 
@@ -54,17 +54,17 @@ The following decisions are represented in the landing zone blueprint.
 |---------|---------|---------|
 |Migration tools|Azure Site Recovery will be deployed and an Azure Migrate project will be created.|[Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)|
 |Logging and monitoring|Operational Insights workspace and diagnostic storage account will be provisioned.|         |
-|Network|A virtual network will be created with subnets for gateway, firewall, jumpbox, and landing zone.|[Networking decisions](../considerations/network-decisions.md)|
+|Network|A virtual network will be created with subnets for gateway, firewall, jumpbox, and landing zone.|[Networking decisions](../considerations/networking-options.md)|
 |Identity|It's assumed that the subscription is already associated with an Azure Active Directory instance.|[Identity management best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json)         |
 |Policy|This blueprint currently assumes that no Azure policies are to be applied.|         |
-|Subscription design|N/A - Designed for a single production subscription.|[Scaling subscriptions](../considerations/scaling-subscriptions.md)|
-|Management groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../considerations/scaling-subscriptions.md)         |
-|Resource groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../considerations/scaling-subscriptions.md)         |
+|Subscription design|N/A - Designed for a single production subscription.|[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)|
+|Management groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)         |
+|Resource groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)         |
 |Data|N/A|[Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas?toc=https://docs.microsoft.com/azure/architecture/toc.json&bc=https://docs.microsoft.com/azure/architecture/bread/toc.json) and [Azure Data Store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
-|Storage|N/A|[Azure Storage guidance](../considerations/storage-guidance.md)         |
-|Naming and tagging standards|N/A|[Naming and tagging best practices](../considerations/naming-and-tagging.md)         |
+|Storage|N/A|[Azure Storage guidance](../considerations/storage-options.md)         |
+|Naming and tagging standards|N/A|[Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md)         |
 |Cost management|N/A|[Tracking costs](../azure-best-practices/track-costs.md)|
-|Compute|N/A|[Compute options](../considerations/compute-decisions.md)|
+|Compute|N/A|[Compute options](../considerations/compute-options.md)|
 
 ## Customize or deploy a landing zone from this blueprint
 

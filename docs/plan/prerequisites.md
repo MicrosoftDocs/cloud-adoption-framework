@@ -1,7 +1,7 @@
 ---
-title: "Prerequisites checklist for an effective cloud adoption plan"
+title: "Prerequisites for an effective cloud adoption plan"
 titleSuffix: Microsoft Cloud Adoption Framework
-description: Prerequisites checklist for an effective cloud adoption plan
+description: Understand the prerequisites for an effective cloud adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# Prerequisites checklist for an effective cloud adoption plan
+# Prerequisites for an effective cloud adoption plan
 
 A plan is only as effective as the data that's put into it. For a cloud adoption plan to be effective, there are two categories of input: *strategic* and *tactical*. The following sections outline the minimum data points required in each category.
 

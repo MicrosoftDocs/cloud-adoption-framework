@@ -39,7 +39,7 @@ layout: LandingPage
     <td style="width: 64px; vertical-align: middle;"><a href="https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/archive/vdc/Azure_Virtual_Datacenter_Lift_and_Shift_Guide.pdf"><img src="../_images/vdc/vdc-lift-and-shift.png" alt="Lift and Shift Guide" /></a></td>
     <td>
         <h3><a href="https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/archive/vdc/Azure_Virtual_Datacenter_Lift_and_Shift_Guide.pdf">Azure Virtual Datacenter: Lift and Shift Guide </a></h3>
-        <p>This white paper discusses the process that enterprise IT staff and decision makers can use to identify and plan the migration of applications and servers to Azure using a "lift and shift" approach, minimizing any additional development costs while optimizing cloud hosting options.</p>
+        <p>This white paper discusses the process that enterprise IT staff and decision makers can use to identify and plan the migration of applications and servers to Azure using a lift and shift approach, minimizing any additional development costs while optimizing cloud hosting options.</p>
     </td>
 </tr>
 </table>
