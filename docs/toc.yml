@@ -3,7 +3,7 @@
     pdf_name: Microsoft Cloud Adoption Framework for Azure
   - name: Getting started
     items:
-    - name: Understand the migration journey
+    - name: Begin a migration journey
       href: getting-started/migrate.md
     - name: Understand the innovation journey
       href: getting-started/innovate.md
@@ -24,25 +24,25 @@
         href: strategy/business-outcomes/fiscal-outcomes.md
       - name: Agility outcomes
         href: strategy/business-outcomes/agility-outcomes.md
-      - name: Reach outcomes
+      - name: Global reach outcomes
         href: strategy/business-outcomes/reach-outcomes.md
-      - name: Engagement outcomes
+      - name: Customer engagement outcomes
         href: strategy/business-outcomes/engagement-outcomes.md
       - name: Performance outcomes
         href: strategy/business-outcomes/performance-outcomes.md
-      - name: How to use business outcomes
+      - name: Business outcome template
         href: strategy/business-outcomes/business-outcome-template.md
-      - name: Align technical effort to learning metrics 
+      - name: Align efforts to learning metrics 
         href: strategy/learning-metrics.md
     - name: Business justification
       items:
-      - name: Build a cloud migration business case
+      - name: Build a business justification
         href: strategy/cloud-migration-business-case.md
-      - name: Create a financial model for cloud transformation
+      - name: Create a financial model
         href: strategy/financial-models.md
-      - name: What is cloud accounting?
+      - name: Understand cloud accounting
         href: strategy/cloud-accounting.md
-    - name: First adoption project
+    - name: First cloud adoption project
       href: strategy/first-adoption-project.md
     - name: Suggested skills
       href: strategy/suggested-skills.md
@@ -52,42 +52,42 @@
     - name: Overview
       href: plan/index.md
     - name: Digital estate
-      items: 
+      items:
       - name: The 5 Rs of rationalization 
         href: digital-estate/5-rs-of-rationalization.md
       - name: What is a digital estate?
         href: digital-estate/index.md
-      - name: Approaches to digital estate planning
+      - name: Digital estate planning
         href: digital-estate/approach.md
       - name: Gather inventory data
         href: digital-estate/inventory.md
       - name: Rationalize the digital estate
         href: digital-estate/rationalize.md
-      - name: Align cost models to forecast cost
+      - name: Align cost models to forecast costs
         href: digital-estate/calculate.md
     - name: Initial organization alignment
       href: plan/initial-org-alignment.md
     - name: Cloud adoption plan
-      items: 
-      - name: Introduction
+      items:
+      - name: Overview
         href: plan/plan-intro.md
       - name: Prerequisites
         href: plan/prerequisites.md
-      - name: Deploy the cloud adoption plan template to Azure DevOps
+      - name: Deploy the template to Azure DevOps
         href: plan/template.md
-      - name: Define and prioritize workloads
+      - name: Prioritize and define workloads
         href: plan/workloads.md
       - name: Align assets to workloads
         href: plan/assets.md
       - name: Review rationalization decisions 
         href: plan/review-rationalization.md
-      - name: Update iteration paths (define releases and iterations)
+      - name: Establish iterations and release plans
         href: plan/iteration-paths.md
-      - name: Create timelines
+      - name: Estimate timelines
         href: plan/timelines.md
     - name: Suggested skills
       href: plan/suggested-skills.md
-    - name: Adapt existing roles, skills, and processes 
+    - name: Adapt for the cloud
       href: plan/adapt-roles-skills-processes.md
 
   - name: Ready
@@ -106,65 +106,65 @@
         href: ready/azure-setup-guide/manage-costs.md
       - name: Plan governance, security, and compliance
         href: ready/azure-setup-guide/govern-org-compliance.md
-      - name: Use monitoring and reporting
+      - name: Establish monitoring and reporting
         href: ready/azure-setup-guide/monitoring-reporting.md
-      - name: Staying current with Azure
+      - name: Stay current with Azure
         href: ready/azure-setup-guide/staying-current.md
       - name: Deploy a migration landing zone
         href: ready/azure-setup-guide/migration-landing-zone.md
     - name: Landing zone considerations
-      items: 
+      items:
       - name: Overview
         href: ready/considerations/index.md
       - name: Azure fundamental concepts
         href: ready/considerations/fundamental-concepts.md
-      - name: Choosing compute services
-        href: ready/considerations/compute-decisions.md
-      - name: Networking decisions
-        href: ready/considerations/network-decisions.md
-      - name: Storage guidance
-        href: ready/considerations/storage-guidance.md
-      - name: Choosing a data store
-        href: ready/considerations/data-decisions.md
+      - name: Review compute options
+        href: ready/considerations/compute-options.md
+      - name: Review networking options
+        href: ready/considerations/networking-options.md
+      - name: Review storage options
+        href: ready/considerations/storage-options.md
+      - name: Review data options
+        href: ready/considerations/data-options.md
       - name: Role-based access controls
-        href: ready/azure-best-practices/roles.md
+        href: ready/considerations/roles.md
       - name: Create hybrid cloud consistency
-        href: infrastructure/misc/hybrid-consistency.md
+        href: ready/considerations/hybrid-consistency.md
     - name: Expanded scope
-      items: 
+      items:
       - name: Terraform landing zones
         href: ready/expanded-scope/terraform-landing-zone.md
       - name: Network boundary security
         href: reference/networking-vdc.md
     - name: Best practices
-      items: 
+      items:
       - name: Overview
         href: ready/azure-best-practices/index.md
-      - name: Azure primitives
+      - name: Resource organization
         items:
         - name: Scaling with multiple subscriptions
-          href: ready/considerations/scaling-subscriptions.md
+          href: ready/azure-best-practices/scaling-subscriptions.md
         - name: Naming and tagging
-          href: ready/considerations/naming-and-tagging.md
+          href: ready/azure-best-practices/naming-and-tagging.md
       - name: Networking
         items:
-        - name: Planning virtual networks
+        - name: Plan virtual networks
           href: https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
         - name: Best practices for network security
           href: https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Workload migration networking best practices
+        - name: Best practices for networking migrated workloads
           href: migrate/azure-best-practices/migrate-best-practices-networking.md
         - name: Perimeter networks
           href: ready/azure-best-practices/perimeter-networks.md
-        - name: Hub-spoke network topology
+        - name: Hub and spoke network topology
           href: ready/azure-best-practices/hub-spoke-network-topology.md
       - name: Identity and access controls
         items:
         - name: Identity management best practices
           href: https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Securing admin access in Azure AD
+        - name: Secure privileged access
           href: https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Choose Azure AD authentication
+        - name: Choose an authentication method
           href: https://docs.microsoft.com/azure/security/fundamentals/choose-ad-authn?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
       - name: Storage
         items:
@@ -174,21 +174,21 @@
         items:
         - name: Database security best practices
           href: https://docs.microsoft.com/azure/security/fundamentals/database-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Choosing a version of Azure SQL 
+        - name: Choose a deployment option in Azure SQL 
           href: https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
       - name: Cost management
         items:
-        - name: Tracking costs across business units, environments, and projects
+        - name: Track costs
           href: ready/azure-best-practices/track-costs.md
-        - name: Azure Cost Management best practices
+        - name: Optimize your cloud investment
           href: https://docs.microsoft.com/azure/cost-management/cost-mgt-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
         - name: Create and manage budgets
           href: https://docs.microsoft.com/azure/cost-management/tutorial-acm-create-budgets?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
         - name: Export cost data
           href: https://docs.microsoft.com/azure/cost-management/tutorial-export-acm-data?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Optimize costs based on recommendations
+        - name: Optimize costs from recommendations
           href: https://docs.microsoft.com/azure/cost-management/tutorial-acm-opt-recommendations?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Use cost alerts to monitor usage and spending
+        - name: Monitor usage and spending
           href: https://docs.microsoft.com/azure/cost-management/cost-mgt-alerts-monitor-usage-spending?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
     - name: Suggested skills
       href: ready/suggested-skills.md
@@ -205,9 +205,9 @@
           href: migrate/azure-migration-guide/index.md
         - name: Prerequisites for Azure migration 
           href: migrate/azure-migration-guide/prerequisites.md
-        - name: Assess individual workloads prior to migration
+        - name: Assess your digital estate
           href: migrate/azure-migration-guide/assess.md
-        - name: Migrate assets that make up a workload
+        - name: Migrate workload assets
           href: migrate/azure-migration-guide/migrate.md
         - name: Migration-focused cost control mechanisms
           href: migrate/azure-migration-guide/manage-costs.md
@@ -215,7 +215,7 @@
           href: migrate/azure-migration-guide/optimize-and-transform.md
         - name: Secure and manage
           href: migrate/azure-migration-guide/secure-and-manage.md
-        - name: Obtain assistance during your migration to Azure
+        - name: Obtain assistance
           href: migrate/azure-migration-guide/assistance.md
       - name: Expanded scope
         items:
@@ -239,25 +239,25 @@
         items:
         - name: Overview
           href: migrate/azure-best-practices/index.md
-        - name: Best practices for assessing workloads
+        - name: Assessing workloads
           items:
-          - name: Assess on-premises resources for migration
+          - name: Assess on-premises workloads
             href: migrate/azure-best-practices/contoso-migration-assessment.md
-        - name: Best practices for migrating workloads
+        - name: Migrating workloads
           items:
           - name: Set up networking for migrated workloads
             href: migrate/azure-best-practices/migrate-best-practices-networking.md
-          - name: Application migration patterns and examples
+          - name: Application migration
             items:
             - name: Overview
               href: migrate/azure-best-practices/contoso-migration-overview.md
-            - name: Deploy an Azure infrastructure
+            - name: Deploy a migration infrastructure
               href: migrate/azure-best-practices/contoso-migration-infrastructure.md
             - name: Windows Server workloads
               items:
-              - name: Rehost an app on Azure VMs
+              - name: Rehost a Windows app on Azure VMs
                 href: migrate/azure-best-practices/contoso-migration-rehost-vm.md
-              - name: Rearchitect an app to use Azure containers and Azure SQL Database
+              - name: Rearchitect a Windows app with containers and Azure SQL
                 href: migrate/azure-best-practices/contoso-migration-rearchitect-container-sql.md
             - name: Linux workloads
               items:
@@ -284,7 +284,7 @@
             - name: Scale a migration
               href: migrate/azure-best-practices/contoso-migration-scale.md
 
-        - name: Best practices for migrating VMWare hosts
+        - name: Migrating VMWare hosts
           items:
           - name: Overview
             href: migrate/azure-best-practices/vmware-host.md
@@ -294,57 +294,53 @@
               href: https://docs.microsoft.com/azure/vmware-cloudsimple/private-cloud-secure?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Private cloud management
               items:
-              - name: Escalate Private Cloud privileges
+              - name: Escalate CloudSimple privileges
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/escalate-privileges?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Workload DNS and DHCP setup
+              - name: Set up DNS and DHCP workloads
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/dns-dhcp-setup?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json  
               - name: Migrate workloads using Layer 2 stretched networks
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/migration-layer-2-vpn?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Private cloud networking
               items:
-              - name: VPN connection to Private Cloud
+              - name: On-premises network connection using VPN
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/set-up-vpn?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: On-premises network connection with ExpressRoute
+              - name: On-premises network connection  using ExpressRoute
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/on-premises-connection?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Azure virtual network connection with ExpressRoute
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/azure-expressroute-connection?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Configure DNS name resolution
+              - name: Configure DNS for name resolution
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/on-premises-dns-setup?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: VMware platform
               items:
-              - name: Learn Private Cloud permission model
+              - name: Private Cloud permission model
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/learn-private-cloud-permissions?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: vCenter identity sources
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/set-vcenter-identity?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Azure Application Gateway with VMware VMs
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/azure-application-gateway?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Configure Private Cloud vCenter server as vRealize automation endpoint
+              - name: vCenter server as vRealize Automation endpoint
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/configure-server-vrealize-automation-endpoint?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Ensuring Application high availability in VMware on Azure
+              - name: Ensure application high availability in VMware on Azure
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/ensuring-high-availability?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Choose a load balancing solution
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/load-balancers?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Azure Core Integration
+            - name: Azure core integration
               items:
-              - name: Azure AD identity source on Private Cloud vCenter
+              - name: Azure AD as identity provider for vCenter
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/azure-ad?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: On-premises network connection with ExpressRoute 
-                href: https://docs.microsoft.com/azure/vmware-cloudsimple/on-premises-connection?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Azure virtual network connection with ExpressRoute
-                href: https://docs.microsoft.com/azure/vmware-cloudsimple/azure-expressroute-connection?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
           - name: Migration and disaster recovery options
             items:
-            - name: Migrating workload VMs to a Private Cloud
+            - name: Migrate workload VMs to Private Cloud vCenter
               href: https://docs.microsoft.com/azure/vmware-cloudsimple/migrate-workloads?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migration using Azure Data Box
+            - name: Migrate data using Azure Data Box
               href: https://docs.microsoft.com/azure/vmware-cloudsimple/migration-using-azure-data-box?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Back up workload virtual machines
+            - name: Back up workload VMs
               href: https://docs.microsoft.com/azure/vmware-cloudsimple/backup-workloads-veeam?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Configure Private Cloud as disaster recovery site using Zerto
+            - name: Set up Private Cloud as disaster recovery site using Zerto
               href: https://docs.microsoft.com/azure/vmware-cloudsimple/disaster-recovery-zerto?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Configure Private Cloud as disaster recovery site using VMware SRM
+            - name: Set up Private Cloud as disaster recovery site using VMware SRM
               href: https://docs.microsoft.com/azure/vmware-cloudsimple/disaster-recovery-site-recovery-manager?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Best practices for migrating data platforms
+        - name: Migrate data platforms
           items:
           - name: Overview
             href: migrate/azure-best-practices/sql-migration.md
@@ -428,22 +424,22 @@
               href: https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db-online?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Migrate Oracle to Azure DB for PostgreSQL online
               href: https://docs.microsoft.com/azure/dms/tutorial-oracle-azure-postgresql-online?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-        - name: Best practices for migrating mainframes
+        - name: Migrate mainframes
           items:
           - name: Overview
             href: infrastructure/mainframe-migration/index.md
           - name: Myths and facts
             href: infrastructure/mainframe-migration/myths-and-facts.md
-          - name: Migration strategies
+          - name: Switch from mainframes to Azure
             href: infrastructure/mainframe-migration/migration-strategies.md
-          - name: Application strategies
+          - name: Mainframe application migration
             href: infrastructure/mainframe-migration/application-strategies.md
 
-        - name: Best practices for optimizing workloads
+        - name: Optimize workloads
           items:
           - name: Costing and sizing workloads
             href: migrate/azure-best-practices/migrate-best-practices-costs.md
-        - name: Best practices for securing and managing workloads
+        - name: Secure and manage workloads
           items:
           - name: Securing and managing workloads after migration
             href: migrate/azure-best-practices/migrate-best-practices-security-management.md
@@ -678,9 +674,9 @@
             - name: Data loss prevention policies for citizen developer solutions
               href: https://docs.microsoft.com/power-platform/admin/wp-data-loss-prevention?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
           - name: Intelligent experiences
-            items: 
+            items:
             - name: Modern web apps
-              items: 
+              items:
               - name: Reference solutions for web apps
                 href: https://azure.microsoft.com/solutions/architecture/?product=app-service
               - name: Create a .Net Core app with SQL DB
@@ -692,7 +688,7 @@
               - name: Create a Node.js with MongoDB
                 href: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-nodejs-mongodb-app?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Infusing intelligence
-              items: 
+              items:
               - name: Computer vision in Visual Studio
                 href: https://docs.microsoft.com/azure/cognitive-services/computer-vision/vs-computer-vision-connected-service?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Translate text in real time
@@ -706,17 +702,17 @@
               - name: Visual search from an image
                 href: https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/index?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: ChatBots
-              items: 
+              items:
               - name: Create and deploy a basic bot
                 href: https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp&toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Learning path - Create bots with Azure Bot services
                 href: https://docs.microsoft.com/learn/paths/create-bots-with-the-azure-bot-service?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Repo - Azure Bots samples on GitHub
                 href: https://github.com/microsoft/botframework-sdk
-          - name: Cloud native applications
-            items: 
-            - name: Microservice architecture
-              items: 
+          - name: Cloud-native applications
+            items:
+            - name: Microservices architecture
+              items:
               - name: Design, build, and operate microservices in Azure
                 href: https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Reference architecture for microservices with Azure Kubernetes Service (AKS)
@@ -724,7 +720,7 @@
               - name: Reference architecture - Serverless microservices sample
                 href: https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Containers
-              items: 
+              items:
               - name: What is Kubernetes? 
                 href: https://azure.microsoft.com/topic/what-is-kubernetes/
               - name: Prepare an application for Azure Kubernetes Service (AKS)
@@ -732,7 +728,7 @@
               - name: Create an Azure Red Hat OpenShift cluster
                 href: https://docs.microsoft.com/azure/openshift/tutorial-create-cluster?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Spring Boot microservices
-              items: 
+              items:
               - name: Launch an Azure Spring Cloud application
                 href: https://docs.microsoft.com/azure/spring-cloud/spring-cloud-quickstart-launch-app-portal?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Distributed Tracing with Azure Spring Cloud
@@ -740,14 +736,14 @@
               - name: Bind an Azure Cosmos DB to your Azure Spring Cloud application
                 href: https://docs.microsoft.com/azure/spring-cloud/spring-cloud-tutorial-bind-cosmos?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Event-driven applications
-              items: 
-              - name: Learning path - Create serverless applications
+              items:
+              - name: Learning path for creating serverless applications
                 href: https://docs.microsoft.com/learn/paths/create-serverless-applications/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Functions developer guide
+              - name: Azure Functions developer guide
                 href: https://docs.microsoft.com/azure/azure-functions/functions-reference?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: eBook - Serverless computing cookbook
+              - name: Azure Serverless computing Cookbook
                 href: https://azure.microsoft.com/resources/azure-serverless-computing-cookbook/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Documentation - Azure Functions
+              - name: Azure Functions documentation
                 href: https://docs.microsoft.com/azure/azure-functions/
 
         - name: Empower adoption
@@ -1120,7 +1116,7 @@
           href: manage/azure-server-management/tools-services.md
       - name: Monitoring
         items:
-        - name: Introduction
+        - name: Overview
           href: manage/monitor/index.md
         - name: Monitoring cloud models
           href: manage/monitor/cloud-models-monitor-overview.md

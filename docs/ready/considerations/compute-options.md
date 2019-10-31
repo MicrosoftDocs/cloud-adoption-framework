@@ -1,7 +1,7 @@
 ---
-title: Azure readiness compute design decisions
+title: Review your compute options
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Azure readiness compute design decisions
+description: Review your compute options for Azure workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2019
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Compute design decisions
+# Review your compute options
 
 Determining the compute requirements for hosting your workloads is a key consideration as you prepare for your cloud adoption. Azure compute products and services support a wide variety of workload computing scenarios and capabilities. How you configure your landing zone environment to support your compute requirements depends on your workload's governance, technical, and business requirements.
 
@@ -38,7 +38,7 @@ Answer the following questions about your workloads to help you make decisions b
 - **Will your applications use a microservices architecture?** Applications that use a microservices-based architecture can take advantage of several optimized compute technologies. Self-contained, event-driven workloads can use [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) to build scalable, serverless applications that don't need an infrastructure. For applications that require more control over the environment where microservices run, you can use container services like [Azure Container Instances](https://docs.microsoft.com/azure/container-instances/container-instances-overview), [Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/intro-kubernetes), and [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).
 
 > [!NOTE]
-> Most Azure compute services are used in combination with Azure Storage. Consult the [storage decisions guidance](./storage-guidance.md) for related storage decisions.
+> Most Azure compute services are used in combination with Azure Storage. Consult the [storage decisions guidance](./storage-options.md) for related storage decisions.
 
 ## Common compute scenarios
 
@@ -77,4 +77,3 @@ When you prepare your landing zone environment, you can establish controls that 
 After you identify and document your landing zone's requirements, you can use [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) to control the compute resources that you allow users to create. Controls can take the form of [allowing or denying the creation of compute resource types](https://docs.microsoft.com/azure/governance/policy/samples/allowed-resource-types). For example, you might restrict users to creating only Azure App Service or Azure Functions resources. You also can use policy to control the allowable options when a resource is created, like [restricting what virtual machine SKUs can be provisioned](https://docs.microsoft.com/azure/governance/policy/samples/allowed-skus-storage) or [allowing only specific VM images](https://docs.microsoft.com/azure/governance/policy/samples/allowed-custom-images).
 
 Policies can be scoped to resources, resource groups, subscriptions, and management groups. You can include your policies in [Azure Blueprint](https://docs.microsoft.com/azure/governance/blueprints/overview) definitions and apply them repeatedly throughout your cloud estate.
-

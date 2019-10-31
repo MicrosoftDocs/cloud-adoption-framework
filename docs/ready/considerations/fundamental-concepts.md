@@ -90,7 +90,7 @@ The following resources provide detailed information about the concepts discusse
 
 ## Next steps
 
-Now that you understand fundamental Azure concepts, learn how to [scale with multiple Azure subscriptions](./scaling-subscriptions.md).
+Now that you understand fundamental Azure concepts, learn how to [scale with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md).
 
 > [!div class="nextstepaction"]
-> [Scale with multiple Azure subscriptions](./scaling-subscriptions.md)
+> [Scale with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md)

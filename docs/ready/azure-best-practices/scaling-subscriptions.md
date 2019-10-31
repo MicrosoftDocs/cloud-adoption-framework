@@ -93,7 +93,7 @@ For more information, see [Organizing your resources with Azure management group
 
 ## Related resources
 
-- [Azure fundamental concepts](./fundamental-concepts.md).
+- [Azure fundamental concepts](../considerations/fundamental-concepts.md).
 - [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/governance/management-groups).
 - [Elevate access to manage all Azure subscriptions and management groups](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin).
 - [Move Azure resources to another resource group or subscription](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-move-resources).

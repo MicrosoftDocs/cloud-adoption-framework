@@ -17,7 +17,7 @@ Effective subscription design helps organizations establish a structure for orga
 
 Each resource in Azure, such as a virtual machine or a database, is associated with a subscription. Adopting Azure begins by creating an Azure subscription, associating it with an account, and deploying resources to the subscription. For an overview of these concepts, see [Azure fundamental concepts](../../ready/considerations/fundamental-concepts.md).
 
-As your digital estate in Azure grows, you will likely need to create additional subscriptions to meet your requirements. Azure allows you to define a hierarchy of management groups to organize your subscriptions and easily apply the right policy to the right resources. For more information, see [Scaling with multiple Azure subscriptions](../../ready/considerations/scaling-subscriptions.md).
+As your digital estate in Azure grows, you will likely need to create additional subscriptions to meet your requirements. Azure allows you to define a hierarchy of management groups to organize your subscriptions and easily apply the right policy to the right resources. For more information, see [Scaling with multiple Azure subscriptions](../../ready/azure-best-practices/scaling-subscriptions.md).
 
 Some basic examples of using management groups to separate different workloads include:
 

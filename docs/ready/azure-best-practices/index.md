@@ -19,32 +19,32 @@ A large part of cloud readiness is equipping staff with the technical skills nee
 Use the following guidance when organizing and deploying your assets in the Azure environment:
 
 - [Azure fundamental concepts](../considerations/fundamental-concepts.md). Learn fundamental concepts and terms used in Azure. Also learn how these concepts relate to one another.
-- [Recommended naming and tagging conventions](../considerations/naming-and-tagging.md). Review detailed recommendations for naming and tagging your resources. These recommendations support enterprise cloud adoption efforts.
-- [Scaling with multiple Azure subscriptions](../considerations/scaling-subscriptions.md). Understand strategies for scaling with multiple Azure subscriptions.
+- [Recommended naming and tagging conventions](../azure-best-practices/naming-and-tagging.md). Review detailed recommendations for naming and tagging your resources. These recommendations support enterprise cloud adoption efforts.
+- [Scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md). Understand strategies for scaling with multiple Azure subscriptions.
 - [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/governance/management-groups/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn how Azure management groups can manage resources, roles, policies, and deployment across multiple subscriptions.
-- [Create hybrid cloud consistency](../../infrastructure/misc/hybrid-consistency.md). Create hybrid cloud solutions that provide the benefits of cloud innovation while maintaining many of the conveniences of on-premises management.
+- [Create hybrid cloud consistency](../considerations/hybrid-consistency.md). Create hybrid cloud solutions that provide the benefits of cloud innovation while maintaining many of the conveniences of on-premises management.
 
 ## Networking
 
 Use the following guidance to prepare your cloud networking infrastructure to support your workloads:
 
-- [Networking decisions](../considerations/network-decisions.md). Choose the networking services, tools, and architectures that will support your organization's workload, governance, and connectivity requirements.
+- [Networking decisions](../considerations/networking-options.md). Choose the networking services, tools, and architectures that will support your organization's workload, governance, and connectivity requirements.
 - [Virtual network planning](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn to plan virtual networks based on your isolation, connectivity, and location requirements.
 - [Best practices for network security](https://docs.microsoft.com/azure/security/azure-security-network-security-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for addressing common network security issues by using built-in Azure capabilities.
 - [Perimeter networks](./perimeter-networks.md). Also known as demilitarized zones (DMZs), perimeter networks enable secure connectivity between your cloud networks and your on-premises or physical datacenter networks, along with any connectivity to and from the internet.
-- [Hub-and-spoke network topology](./hub-spoke-network-topology.md). Hub and spoke is a networking model for efficient management of common communication or security requirements for complicated workloads. It also addresses potential Azure subscription limitations.
+- [Hub and spoke network topology](./hub-spoke-network-topology.md). Hub and spoke is a networking model for efficient management of common communication or security requirements for complicated workloads. It also addresses potential Azure subscription limitations.
 
 ## Identity and access control
 
 Use the following guidance when designing your identity and access control infrastructure to improve the security and management efficiency of your workloads:
 
 - [Azure identity management and access control security best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for identity management and access control using built-in Azure capabilities.
-- [Best practices for role-based access control](./roles.md). Azure role-based access control (RBAC) offers fine-grained group-based access management for resources organized around user roles.
+- [Best practices for role-based access control](../considerations/roles.md). Azure role-based access control (RBAC) offers fine-grained group-based access management for resources organized around user roles.
 - [Securing privileged access for hybrid and cloud deployments in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Use Azure Active Directory to help ensure that your organization's administrative access and admin accounts are secure across your cloud and on-premises environment.
 
 ## Storage
 
-- [Azure Storage guidance](../considerations/storage-guidance.md). Select the right Azure Storage solution to support your usage scenarios.
+- [Azure Storage guidance](../considerations/storage-options.md). Select the right Azure Storage solution to support your usage scenarios.
 - [Azure Storage security guide](https://docs.microsoft.com/azure/storage/common/storage-security-guide?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn about security features in Azure Storage.
 
 ## Databases

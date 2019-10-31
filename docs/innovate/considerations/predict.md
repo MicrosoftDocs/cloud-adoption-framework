@@ -73,7 +73,7 @@ Learn more about the interactions within an [adjusted reality solution](./device
 
 ## Next steps
 
-Based on the knowledge gained regarding the [Disciplines of innovation](./invention.md) within the [innovate methodology](./index.md) you know have the technical tools required to [build with empathy](./build.md).
+Based on the knowledge gained regarding the [Disciplines of invention](./invention.md) within the [innovate methodology](./index.md) you know have the technical tools required to [build with empathy](./build.md).
 
 > [!div class="nextstepaction"]
 > [Build with empathy](./build.md)

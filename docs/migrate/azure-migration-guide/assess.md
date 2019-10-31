@@ -26,7 +26,7 @@ The following tools help you assess your environment to determine the suitabilit
 
 ## Azure Migrate
 
-The Azure Migrate service assesses on-premises infrastructure, applications and data for migration to Azure. The service assesses the migration suitability of on-premises assets, performs performance-based sizing, and provides cost estimates for running on-premises assets in Azure. If you're considering "lift and shift" migrations, or are in the early assessment stages of migration, this service is for you. After completing the assessment, Azure Migrate can be utilized to execute the migration.
+The Azure Migrate service assesses on-premises infrastructure, applications and data for migration to Azure. The service assesses the migration suitability of on-premises assets, performs performance-based sizing, and provides cost estimates for running on-premises assets in Azure. If you're considering lift and shift migrations, or are in the early assessment stages of migration, this service is for you. After completing the assessment, Azure Migrate can be utilized to execute the migration.
 
 ![Azure Migrate overview](./media/assess/azuremigrate-overview-1.png)
 
