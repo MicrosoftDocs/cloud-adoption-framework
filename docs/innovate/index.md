@@ -13,9 +13,11 @@ layout: LandingPage
 
 # Cloud innovation in the Cloud Adoption Framework
 
-Every IT portfolio has a small collection of workloads and ideas that could significantly improve the company's position in the market. While most cloud adoption efforts focus on migration and modernization of existing workloads, the greatest business value derived from cloud adoption comes from innovation activities that unlock new technical skills and expanded business capabilities. This section of the Cloud Adoption Framework focuses on the part of the portfolio that drives the greatest return on investment.
+All IT portfolios contain a few workloads and ideas that could significantly improve a company's position in the market. Most cloud adoption efforts focus on the migration and modernization of existing workloads. It's innovation, however, that can provide the greatest business value. Cloud adoption-related innovation can unlock new technical skills and expanded business capabilities.
 
-## Getting started
+This section of the Cloud Adoption Framework focuses on the elements of your portfolio that drive the greatest return on investment.
+
+## Get started
 
 To prepare you for this phase of the cloud adoption lifecycle, the framework suggests the following exercises:
 
@@ -34,7 +36,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Business value consensus</h3>
-                            Before deciding on technical solutions, it's important to align the desired business value. That value should map to the cloud strategy. In this incremental methodology, business value is represented by a hypothesis about customer needs.
+                            Before you decide on technical solutions, identify how new innovation can drive business value. Map that value to your cloud strategy. In this incremental methodology, business value is represented by a hypothesis about customer needs.
                         </div>
                     </div>
                 </div>
@@ -53,7 +55,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Azure innovation guide</h3>
-                            Many cloud native tools available in Azure can accelerate development of innovative solutions. Depending on the customer hypothesis, various combinations of tools may apply. Building a minimum viable product (MVP) with basic tools is suggested.
+                            Azure includes a number of cloud tools that can accelerate the deployment of innovative solutions. Depending on your hypothesis, you might consider various combinations of tools. The creation of a minimum viable product (MVP) with basic tools is suggested.
                         </div>
                     </div>
                 </div>
@@ -72,7 +74,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Best practices</h3>
-                            Validate that architectural decisions follow best practices for each tool in the toolchain. These best practices help accelerate solution development and provide a reference for solid architectural designs.
+                            Your architectural decisions should follow best practices for each tool in the tool chain. By adhering to such guidance, you can better  accelerate solution development and provide a reference for solid architectural designs.
                         </div>
                     </div>
                 </div>
@@ -91,7 +93,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Feedback loops</h3>
-                            During each development iteration, the solutions under development provide a way for teams to learn alongside customers. Fast and accurate feedback loops with customers help test, measure, and learn to reduce time to market impact. Learn how Azure and GitHub accelerate feedback loops.
+                            During each iteration, the solutions under development offer a way for your teams to learn alongside customers. Fast and accurate feedback loops with your customers can help you better test, measure, learn, and ultimately reduce the time to market impact. Learn how Azure and GitHub accelerate feedback loops.
                         </div>
                     </div>
                 </div>
@@ -103,15 +105,15 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
 
 ## Methodology summary
 
-The [considerations section of the innovate methodology](./considerations/index.md) establishes a common language for innovation across application development, DevOps, IT, and business teams. The exercises above make this methodology actionable during the development of innovative solutions.
+- The [considerations overview](./considerations/index.md) establishes a common language for innovation across application development, DevOps, IT, and business teams.
+- The exercises in the [Get started](#get-started) section help make the methodology actionable during the development of innovative solutions.
 
 ![The Innovate methodology of the Cloud Adoption Framework](../_images/innovate/innovate-methodology.png)
 
-This methodology builds on existing lean methodologies to create a cloud-focused conversation about customer adoption and a scientific model for the creation of business value. It also aligns existing Azure services with manageable decision processes, making it easier to find the right technical options to address a specific customer need or hypothesis.
+This approach builds on existing lean methodologies. It's designed to help you create a cloud-focused conversation about customer adoption and a scientific model for creating business value. The approach also maps existing Azure services to manageable decision processes. This alignment can help you find the right technical options to address specific customer needs or hypotheses.
 
 ## Next steps
 
-The first exercise during cloud innovation is to [build consensus for the business value](./business-value.md).
-
+The first exercise for cloud innovation is to:
 > [!div class="nextstepaction"]
-> [Build consensus for the business value](./business-value.md)
+> [Build consensus for business value of innovation](./business-value.md)
