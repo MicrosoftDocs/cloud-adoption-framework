@@ -14,35 +14,35 @@ ms.localizationpriority: high
 
 # Platform specialization for cloud management
 
-Much like the enhanced management baseline, platform specialization is extension beyond the standard management baseline. See below for a visual and bulleted list of the ways to expand the management baseline. This article addresses the platform specialization option.
+Much like the enhanced management baseline, platform specialization is extension beyond the standard management baseline. See the following image and list that show the ways to expand the management baseline. This article addresses the platform specialization options.
 
 ![Beyond the cloud management baseline](../../_images/manage/beyond-the-baseline.png)
 
-- **Workload operations:** Largest per workload operations investment. Highest degree of resiliency. Suggested for the +/- 20% of workloads that drive business value. Usually reserved for High criticality or mission critical workloads.
-- **Platform operations:** Operations investment is spread across many workloads. Resiliency improvements impact all workloads which leverage the defined platform. Suggested for the +/- 20% of the highest criticality platforms. Usually reserved for medium to high criticality workloads.
-- **Enhanced management baseline:** Lowest relative operations investment. Slightly improved business commitments using additional cloud-native operations tools and processes.
+- **Workload operations**: The largest per-workload operations investment and the highest degree of resiliency. We suggest workload operations for the approximately 20% of workloads that drive business value. This specialization is usually reserved for high criticality or mission critical workloads.
+- **Platform operations**: Operations investment is spread across many workloads. Resiliency improvements affect all workloads that use the defined platform. We suggest platform operations for the approximately 20% of platforms that have the highest criticality. This specialization is usually reserved for medium to high criticality workloads.
+- **Enhanced management baseline**: The relatively lowest operations investment. This specialization slightly improves business commitments by using additional cloud-native operations tools and processes.
 
-Both workload and platform operations will require changes to design and architecture principles. Those changes could take time and may result in increased operating expenses. To reduce the number of workloads requiring such investments, an enhanced management baseline could provide enough of an improvement to the business commitment.
+Both workload and platform operations require changes to design and architecture principles. Those changes can take time and might result in increased operating expenses. To reduce the number of workloads requiring such investments, an enhanced management baseline might provide enough of an improvement to the business commitment.
 
-The following table outlines a few common processes, tools, and potential impacts common in customers' enhanced management baselines.
+This table outlines a few common processes, tools, and potential effects common in customers' enhanced management baselines:
 
-|Process  |Tool  |Purpose  |Suggested Management Level  |
+|Process  |Tool  |Purpose  |Suggested management level  |
 |---------|---------|---------|---------|
-|Improve system design|Azure Architecture Framework|Improve the architectural design of the platform to improve operations|
-|Automate remediation|Azure Automation|Respond to advanced platform data with platform specific automation|Platform Operations|
-|Service Catalog|Managed applications center|Provide a self-service catalog of approved solutions that meet organizational standards|Platform Operations|
-|Container performance|Azure Monitor for Containers|Monitoring and diagnostics of containers|Platform Operations|
-|PaaS data performance|Azure SQL Analytics|Monitoring and diagnostics for PaaS DBs|Platform Operations|
-|IaaS data performance|SQL Server Health Check|Monitoring and diagnostics for IaaS DBs|Platform Operations|
+|Improve system design|Azure Architecture Framework|Improving the architectural design of the platform to improve operations|N/A|
+|Automate remediation|Azure Automation|Responding to advanced platform data with platform-specific automation|Platform operations|
+|Service catalog|Managed applications center|Providing a self-service catalog of approved solutions that meet organizational standards|Platform operations|
+|Container performance|Azure Monitor for containers|Monitoring and diagnostics of containers|Platform operations|
+|Platform as a service (PaaS) data performance|Azure SQL Analytics|Monitoring and diagnostics for PaaS databases|Platform operations|
+|Infrastructure as a service (IaaS) data performance|SQL Server Health Check|Monitoring and diagnostics for IaaS databases|Platform operations|
 
 ## High-level process
 
-Platform specialization consists of a disciplined execution of the following four processes in an iterative approach. Each process is explained in more detail in the following sections of this article.
+Platform specialization consists of a disciplined execution of the following four processes in an iterative approach. Each process is explained in more detail in later sections of this article.
 
-- **Improve system design:** Improve the design of common systems (or platforms) to effectively minimize interruptions.
-- **Automate remediation:** Some improvements are not cost effective. In such cases, it may make more sense to automate remediation and reduce the impact of interruptions.
-- **Scale the solution:** As systems design and automated remediation are improved, those changes can be scaled across the environment through the service catalog.
-- **Continuous improvement:** Various monitoring tools can be used to discover incremental improvements that can be addressed in the next pass of system design, automation, and scale.
+- **Improve system design**: Improve the design of common systems or platforms to effectively minimize interruptions.
+- **Automate remediation**: Some improvements aren't cost effective. In such cases, it might make more sense to automate remediation and reduce the effect of interruptions.
+- **Scale the solution**: As systems design and automated remediation are improved, those changes can be scaled across the environment through the service catalog.
+- **Continuous improvement**: Different monitoring tools can be used to discover incremental improvements. These improvements can be addressed in the next pass of system design, automation, and scale.
 
 ::: zone target="docs"
 
@@ -55,17 +55,21 @@ Platform specialization consists of a disciplined execution of the following fou
 
 ::: zone-end
 
-Improving system design is the most effective approach to improving operations of any common platform. Through system design improvements, stability can increase and business interruptions can decrease. Design of individual systems is out of scope for the environment view taken throughout the Cloud Adoption Framework. As a complement to this framework, the Azure Architecture Framework provides best practices for improving the resiliency and design of a specific system. Those design improvements can be applied to the systems design of a platform or a specific workload.
+Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is out of scope for the environment view that is taken throughout Cloud Adoption Framework for Azure.
 
-The Azure Architecture Framework focuses on improvement across five pillars of system design:
+As a complement to Cloud Adoption Framework, Azure Architecture Framework provides best practices for improving the resiliency and design of a specific system. Those design improvements can be applied to the systems design of either a platform or a specific workload.
 
-- **Scalability:** Scaling the common platform assets to handle increased load.
-- **Availability:** Decreasing business interruptions by improving uptime potential.
-- **Resiliency:** Improve recovery times to reduce duration of interruptions.
-- **Security:** Protect applications and data from external threats.
-- **Management:** Operational processes specific to those common platform assets.
+Azure Architecture Framework focuses on improvement across five pillars of system design:
 
-Most business interruptions equate to some form of technical debt, or deficiency in the architecture. For existing deployments, systems design improvements can be viewed as payments against existing technical debt. For new deployments, systems design improvements can be viewed as avoidance of technical debt. The next tab, "Automated remediation", looks at ways to address technical debt that can't or shouldn't be addressed.
+- **Scalability**: Scaling the common platform assets to handle increased load
+- **Availability**: Reducing business interruptions by improving uptime potential
+- **Resiliency**: Improving recovery times to reduce the duration of interruptions
+- **Security**: Protecting applications and data from external threats
+- **Management**: Operational processes specific to those common platform assets
+
+Technical debt and architectural flaws cause most business interruptions. For existing deployments, you can view system-design improvements as payments against existing technical debt. For new deployments, you can view those improvements as avoidance of technical debt.
+
+The following **Automated remediation** tab shows ways to remediate technical debt that can't or shouldn't be addressed.
 
 Learn more about [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) to improve system design.
 
@@ -73,20 +77,20 @@ As system design improves, return to this article to find new opportunities to i
 
 ::: zone target="docs"
 
-## Automated Remediation
+## Automated remediation
 
 ::: zone-end
 ::: zone target="chromeless"
 
-## [Automated Remediation](#tab/AutomatedRemediation)
+## [Automated remediation](#tab/AutomatedRemediation)
 
 ::: zone-end
 
-Some technical debt can't be addressed. Resolution could be too expensive to correct. Resolution could be planned, but have a long project duration. It could be that the business interruption doesn't have a significant business impact or that the business priority is to recover quickly instead of investing in resiliency.
+Some technical debt can't be addressed. Resolution might be too expensive to correct or might be planned but have a long project duration. The business interruption might not have a significant business effect. Or the business priority might be to recover quickly instead of investing in resiliency.
 
-When resolution of technical debt isn't the desired path, automated remediation is commonly the desired next step. Using Azure Automation and Azure Monitor to detect trends and provide automated remediation is the most common approach to automated remediation.
+When resolution of technical debt isn't the wanted path, automated remediation is commonly the next step. Using Azure Automation and Azure Monitor to detect trends and provide automated remediation is the most common approach to automated remediation.
 
-For guidance on automated remediation, see this article on [Azure Automation and alerts](https://docs.microsoft.com/azure/automation/automation-create-alert-triggered-runbook).
+For guidance on automated remediation, see [Azure Automation and alerts](https://docs.microsoft.com/azure/automation/automation-create-alert-triggered-runbook).
 
 ::: zone target="docs"
 
@@ -99,19 +103,21 @@ For guidance on automated remediation, see this article on [Azure Automation and
 
 ::: zone-end
 
-The cornerstone of platform specialization and platform operations is a well-managed service catalog. This is how improvements to systems design and remediation are scaled across an environment. The cloud platform team and cloud automation team align to create repeatable solutions to the most common platforms in any environment. But, if those solutions aren't consistently leveraged, cloud management can provide little more than a baseline offering.
+A well-managed service catalog is the cornerstone of platform specialization and platform operations. Use of a catalog is how improvements to systems design and remediation are scaled across an environment.
 
-To maximize adoption and minimize maintenance overhead of any optimized platform, the platform should be added to a service catalog within Azure. Each application in the catalog can be deployed for internal consumption via the service catalog, or as a marketplace offering for external consumers.
+The cloud platform team and cloud automation team align to create repeatable solutions to the most common platforms in any environment. But if those solutions aren't consistently used, cloud management can provide little more than a baseline offering.
+
+To maximize adoption and minimize maintenance overhead of any optimized platform, you should add the platform to an Azure service catalog. You can deploy each application in the catalog for internal consumption via the service catalog or as a marketplace offering for external consumers.
 
 For instructions on publishing to a service catalog, see the article series on [publishing to a service catalog](https://docs.microsoft.com/azure/managed-applications/publish-service-catalog-app).
 
 ### Deploy applications from the service catalog
 
-1. In the Azure portal, search for **Managed applications center (preview)**.
-2. Click on **Service Catalog applications** under the **Browse** section of the portal navigation.
-3. Click **+ Add** to chose an application definition from your company's service catalog.
+1. In the Azure portal, go to **Managed applications center (preview)**.
+2. On the **Browse** blade, select **Service Catalog applications**.
+3. Click **+ Add** to choose an application definition from your company's service catalog.
 
-Any managed applications you are servicing are displayed here.
+Any managed applications you're servicing are displayed.
 
 ::: zone target="chromeless"
 
@@ -125,10 +131,10 @@ Any managed applications you are servicing are displayed here.
 
 ### Manage service catalog applications
 
-1. In the Azure portal, search for **Managed applications center (preview)**.
-2. Click on **Service Catalog applications** under the **Service** section of the portal navigation.
+1. In the Azure portal, go to **Managed applications center (preview)**.
+1. On the **Service** blade, select **Service Catalog applications**.
 
-Any managed applications you are servicing are displayed here.
+Any managed applications you're servicing are displayed.
 
 ::: zone target="chromeless"
 
@@ -143,12 +149,14 @@ Any managed applications you are servicing are displayed here.
 ::: zone-end
 ::: zone target="chromeless"
 
-## [Continuous Improvement](#tab/ContinuousImprovement)
+## [Continuous improvement](#tab/ContinuousImprovement)
 
 ::: zone-end
 
-Platform specialization and platform operations both depend on strong feedback loops between adoption, platform, automation, and management teams. Grounding those feedback loops in data empowers each team to make wise decisions. For platform operations to achieve long-term business commitments, it is important to leverage insights specific to the centralized platform. Since containers and SQL Server are the two most common centrally managed platforms, the following are a few articles to help get you started with continuous improvement data collection.
+Platform specialization and platform operations both depend on strong feedback loops among adoption, platform, automation, and management teams. Grounding those feedback loops in data helps each team make wise decisions. For platform operations to achieve long-term business commitments, it's important to use insights specific to the centralized platform.
 
-[Container performance](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)
-[PaaS database performance](https://docs.microsoft.com/azure/azure-monitor/insights/azure-sql)
-[IaaS database performance](https://docs.microsoft.com/azure/azure-monitor/insights/sql-assessment)
+Containers and SQL Server are the two most common centrally managed platforms. These articles can help you get started with continuous-improvement data collection on those platforms:
+
+- [Container performance](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)
+- [PaaS database performance](https://docs.microsoft.com/azure/azure-monitor/insights/azure-sql)
+- [IaaS database performance](https://docs.microsoft.com/azure/azure-monitor/insights/sql-assessment)
