@@ -35,8 +35,8 @@ The following diagram shows the governance MVP hierarchy for organizing resource
 Every application should be deployed in the proper area of the management group, subscription, and resource group hierarchy. During deployment planning, the cloud governance team will create the necessary nodes in the hierarchy to empower the cloud adoption teams.
 
 1. One management group for each type of environment (such as production, development, and test).
-2. Two subscriptions, one for production and another for not production.
-3. [Consistent nomenclature](../../../ready/considerations/naming-and-tagging.md) should be applied at each level of this grouping hierarchy.
+2. Two subscriptions, one for production workloads and another for nonproduction workloads.
+3. [Consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) should be applied at each level of this grouping hierarchy.
 4. Resource groups should be deployed in a manner that considers its contents lifecycle: everything that is developed together, is managed together, and retires together goes together. For more information on resource group best practices, [see here](../../../decision-guides/resource-consistency/index.md).
 5. [Region selection](../../../decision-guides/regions/index.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
 

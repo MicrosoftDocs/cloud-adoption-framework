@@ -53,13 +53,13 @@ During each iteration of a build-measure-learn feedback loop, your attempt to bu
 
 An MVP is the smallest unit of effort (invention, engineering, application development, or data architecture) required to create enough of a solution to learn _with the customer_. The goal of every MVP is to test some or all of the prior hypotheses and to receive feedback directly from the customer. The output is not a beautiful application with all the features required to change your industry. The desired output of each iteration is a learning opportunity&mdash;a chance to more deeply test a hypothesis.
 
-_Timeboxing_ is a standard way to make sure a product remains minimal. For example, make sure your development team thinks the solution can be created in a single iteration to allow for rapid testing. To better understand using velocity, iterations, and releases to define what minimal means, see [Planning velocity, iterations, release, and iteration paths](../../plan/iteration-paths.md).
+_Timeboxing_ is a standard way to make sure a product remains lean. For example, make sure your development team thinks the solution can be created in a single iteration to allow for rapid testing. To better understand using velocity, iterations, and releases to define what minimal means, see [Planning velocity, iterations, release, and iteration paths](../../plan/iteration-paths.md).
 
 ### Reduce complexity and delay technical spikes
 
 The [disciplines of invention](./invention.md) found in the [Innovate methodology](./index.md) describe the functionality that's often required to deliver a mature innovation or scale-ready MVP solution. Use these disciplines as a long-term guide for feature inclusion. Likewise, use them as a cautionary guide during early testing of customer value and empathy in your solution.
 
-Feature breadth and the different disciplines of innovation can't all be created in a single iteration. It might take several releases for an MVP solution to include the complexity of multiple disciplines. Depending on the investment in development, there might be multiple parallel teams working within different disciplines to test multiple hypotheses. Although it's smart to maintain architectural alignment between those teams, it's unwise to try to build complex, integrated solutions until value hypotheses can be validated.
+Feature breadth and the different disciplines of invention can't all be created in a single iteration. It might take several releases for an MVP solution to include the complexity of multiple disciplines. Depending on the investment in development, there might be multiple parallel teams working within different disciplines to test multiple hypotheses. Although it's smart to maintain architectural alignment between those teams, it's unwise to try to build complex, integrated solutions until value hypotheses can be validated.
 
 Complexity is best detected in the frequency or volume of *technical spikes*. Technical spikes are efforts to create technical solutions that can't be easily tested with customers. When customer value and customer empathy are untested, technical spikes represent a risk to innovation and should be minimized. For the types of mature tested solutions found in a migration effort, technical spikes can be common throughout adoption. However, they delay the testing of hypotheses in innovation efforts and should be postponed whenever possible.
 
@@ -79,7 +79,7 @@ Typically, an MVP solution consists of a simple web app or data solution with mi
 - A manual process that recreates the benefits of the application to follow.
 - A wireframe or video that's detailed enough to allow the customer to interact.
 
-Developing an MVP shouldn't require massive amounts of development investment. Preferably, investment should be as constrained as possible to minimize the number of hypotheses being tested at one time. Then, in each iteration and with each release, the solution is intentionally improved toward a scale-ready solution that represents multiple disciplines of innovation.
+Developing an MVP shouldn't require massive amounts of development investment. Preferably, investment should be as constrained as possible to minimize the number of hypotheses being tested at one time. Then, in each iteration and with each release, the solution is intentionally improved toward a scale-ready solution that represents multiple disciplines of invention.
 
 ### Accelerate MVP development
 

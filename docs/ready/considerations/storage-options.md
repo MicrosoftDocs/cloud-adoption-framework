@@ -1,7 +1,7 @@
 ---
-title: Azure readiness storage design guidance
+title: Review your storage options
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Azure readiness storage design guidance
+description: Review your storage options for Azure workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2019
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Storage design decisions
+# Review your storage options
 
 Storage capabilities are critical for supporting workloads and services that are hosted in the cloud. As part of your cloud adoption readiness preparations, review this article to help you plan for and address your storage needs.
 
@@ -56,7 +56,7 @@ Azure offers multiple products and services for different storage capabilities. 
 | I am running containers with persistent volumes. | [Azure Files (Standard or Premium)](https://docs.microsoft.com/azure/storage/files/storage-files-planning) <br/><br/> [Azure Disk Storage (Standard, Premium, or Ultra SSD)](https://docs.microsoft.com/azure/virtual-machines/windows/disks-types) | File (RWX) and block (RWO) volumes driver options are available for both Azure Kubernetes Service (AKS) and custom Kubernetes deployments. Persistent volumes can map to either an Azure Disk Storage disk or a managed Azure Files share. Choose premium versus standard options bases on workload requirements for persistent volumes. |
 | I have a data lake (such as a Hadoop cluster for HDFS data). | [Azure Data Lake Storage Gen 2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) <br/><br/> [Azure Disk Storage (Standard or Premium SSD)](https://docs.microsoft.com/azure/virtual-machines/windows/disks-types) | The Data Lake Storage Gen 2 feature of Azure Blob storage provides server-side HDFS compatibility and petabyte scale for parallel analytics. It also offers HA and reliability. Software like Cloudera can use Premium or Standard SSD on master/worker nodes, if needed. |
 | I have an SAP or SAP HANA deployment. | [Azure Disk Storage (Premium or Ultra SSD)](https://docs.microsoft.com/azure/virtual-machines/windows/disks-types) | Ultra SSD is optimized to offer submillisecond latency for tier-1 SAP workloads. Ultra SSD is now in preview. Premium SSD coupled with M-Series offers a general availability (GA) option. |
-| I have a disaster recovery site with strict RPO/RTO that syncs from my primary servers. | [Azure page blobs](https://docs.microsoft.com/azure/storage/blobs/storage-blob-pageblob-overview) | Azure page blobs are used by replication software to enable low-cost replication to Azure without the need for compute VMs until failover occurs. For more information, see the [Azure Disk Storage documentation](https://docs.microsoft.com/azure/virtual-machines/windows/backup-and-disaster-recovery-for-azure-iaas-disks). **Note**: Page blobs support a maximum of 8 TB. |
+| I have a disaster recovery site with strict RPO/RTO that syncs from my primary servers. | [Azure page blobs](https://docs.microsoft.com/azure/storage/blobs/storage-blob-pageblob-overview) | Azure page blobs are used by replication software to enable low-cost replication to Azure without the need for compute VMs until failover occurs. For more information, see the [Azure Disk Storage documentation](https://docs.microsoft.com/azure/virtual-machines/windows/backup-and-disaster-recovery-for-azure-iaas-disks). **Note:** Page blobs support a maximum of 8 TB. |
 
 ### File and object storage scenarios
 
@@ -128,7 +128,7 @@ These security features apply to Azure Blob storage (block and page) and to Azur
 
 [Storage service encryption](https://docs.microsoft.com/azure/storage/storage-service-encryption) provides encryption at rest and safeguards your data to meet your organization's security and compliance commitments. Storage service encryption is enabled by default for all managed disks, snapshots, and images in all the Azure regions. Starting June 10, 2017, all new managed disks, snapshots, images, and new data written to existing managed disks are automatically encrypted at rest with keys managed by Microsoft. Visit the [FAQ for managed disks](https://docs.microsoft.com/azure/virtual-machines/windows/faq-for-disks#managed-disks-and-storage-service-encryption) for more details.
 
-Azure Disk Encryption allows you to encrypt managed disks that are attached to IaaS VMs as OS and data disks at rest and in transit by using your keys stored in [Azure Key Vault](https://azure.microsoft.com/documentation/services/key-vault). For Windows, the drives are encrypted by using industry-standard [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview) encryption technology. For Linux, the disks are encrypted by using the [dm-crypt](https://wikipedia.org/wiki/Dm-crypt) subsystem. The encryption process is integrated with Azure Key Vault to allow you to control and manage the disk encryption keys. For more information, see [Azure Disk Encryption for Windows and Linux IaaS VMs](https://docs.microsoft.com/azure/security/azure-security-disk-encryption-overview).
+Azure Disk Encryption allows you to encrypt managed disks that are attached to IaaS VMs as OS and data disks at rest and in transit by using your keys stored in [Azure Key Vault](https://azure.microsoft.com/documentation/services/key-vault). For Windows, the drives are encrypted by using industry-standard [BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview) encryption technology. For Linux, the disks are encrypted by using the [dm-crypt](https://wikipedia.org/wiki/Dm-crypt) subsystem. The encryption process is integrated with Azure Key Vault to allow you to control and manage the disk encryption keys. For more information, see [Azure Disk Encryption for Windows and Linux IaaS VMs](https://docs.microsoft.com/azure/security/azure-security-disk-encryption-overview).
 
 ## Regional availability
 

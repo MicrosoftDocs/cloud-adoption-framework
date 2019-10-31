@@ -320,7 +320,7 @@ With the regional design in place, Contoso is ready to consider a networking str
 
 ### Plan hybrid network connectivity
 
-Contoso considered a [number of architectures](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking) for hybrid networking between Azure and the on-premises datacenter. [Read more](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/considerations) about comparing options.
+Contoso considered a [number of architectures](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking) for hybrid networking between Azure and the on-premises datacenter. For more information, see [Choose a solution for connecting an on-premises network to Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/considerations).
 
 As a reminder, the Contoso on-premises network infrastructure currently consists of the datacenter in New York, and local branches in the eastern portion of the US. All locations have a business class connection to the internet. Each of the branches is then connected to the datacenter via an IPSec VPN tunnel over the internet.
 
@@ -633,7 +633,7 @@ Active Directory is a critical service in networking, and must be configured cor
 
 ## Step 5: Plan for governance
 
-Azure provides a range of governance controls across services and the Azure platform. [Read more](https://docs.microsoft.com/azure/security/governance-in-azure) for a basic understanding of options.
+Azure provides a range of governance controls across services and the Azure platform. For more information, see the [Azure governance options](https://docs.microsoft.com/azure/security/governance-in-azure).
 
 As they configure identity and access control, Contoso has already begun to put some aspects of governance and security in place. Broadly, there are three areas it needs to consider:
 

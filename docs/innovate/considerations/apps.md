@@ -20,15 +20,18 @@ In some cases, data alone is enough to drive change and meet customer needs. Mor
 
 ## Shared code
 
-Teams that more quickly and accurately respond to customer feedback, market changes, and opportunities to innovate typically lead their respective markets in innovation. The first principle of innovative applications is summed up in the [growth mindset overview](./learn.md#growth-mindset): "Share the code." Over time, innovation comes out of a cultural focus. To sustain innovation, diverse perspectives and contributions are required.
+Teams that more quickly and accurately respond to customer feedback, market changes, and opportunities to innovate typically lead their respective markets in innovation. The first principle of innovative applications is summed up in the [growth mindset overview](./learn.md#growth-mindset): "Share the code." Over time, innovation emerges from a cultural focus. To sustain innovation, diverse perspectives and contributions are required.
 
-To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com/), which lets you create a shared code repository with a just few clicks. Alternatively, the [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) feature of Azure DevOps can be used to create a [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git) or [Team Foundation](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc) repository.
+To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. Alternatively, [Azure Repos](/azure/devops/repos/get-started/what-is-repos?view=azure-devops) is a set of version control tools in Azure DevOps Services that you can use to manage your code. Azure Repos provides two types of version control:
+
+- [Git](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git): distributed version control
+- [Team Foundation Version Control (TFVC)](/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc): centralized version control
 
 ## Citizen developers
 
 Professional developers are a vital component of innovation. When a hypothesis proves accurate at scale, professional developers are required to stabilize and prepare the solution for scale. Most of the principles referenced in this article require support from professional developers. Unfortunately, current trends suggest there's a greater demand for professional developers than there are developers. Moreover, the cost and pace of innovation can be less favorable when professional development is deemed necessary. In response to these challenges, citizen developers provide a way to scale development efforts and accelerate early hypothesis testing.
 
-The use of citizen developers can be viable and effective when early hypotheses can be validated through tools like [PowerApps](https://docs.microsoft.com/powerapps/powerapps-overview) for app interfaces, [AI Builder](/powerapps/use-ai-builder) for processes and predictions, [Microsoft Flow](https://docs.microsoft.com/flow) for workflows, and [Power BI](https://docs.microsoft.com/power-bi) for data consumption.
+The use of citizen developers can be viable and effective when early hypotheses can be validated through tools like [PowerApps](https://docs.microsoft.com/powerapps/powerapps-overview) for app interfaces, [AI Builder](https://docs.microsoft.com/powerapps/use-ai-builder) for processes and predictions, [Microsoft Flow](https://docs.microsoft.com/flow) for workflows, and [Power BI](https://docs.microsoft.com/power-bi) for data consumption.
 
 > [!NOTE]
 > When you rely on citizen developers to test hypotheses, it's advisable to have some professional developers on hand to provide support, review, and guidance. After a hypothesis is validated at scale, a process for transitioning the application into a more robust programming model will accelerate returns on the innovation. By involving professional developers in process definitions early on, you can realize cleaner transitions later.

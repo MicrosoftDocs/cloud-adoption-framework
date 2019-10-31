@@ -42,7 +42,7 @@ The cloud has overcome many of these invention challenges by providing self-serv
 
 The invention challenges of today are different. The endless potential of cloud technologies also produces more implementation options and deeper considerations about how those implementations might be leveraged.
 
-The Innovate methodology uses the following five innovation disciplines to help align your implementation decisions with your invention and adoption goals:
+The Innovate methodology uses the following innovation disciplines to help align your implementation decisions with your invention and adoption goals:
 
 - **Data platforms:** New sources and variations on data are available. Many of these couldn't be integrated into legacy or on-premises applications to create cost-effective solutions. Understanding the change you hope to drive in customers will inform your data platform decisions. Those decisions will be an extension of selected approaches to ingest, integrate, categorize, and share data. Microsoft refers to this decision-making process as the democratization of data.
 - **Device interactions:** IoT, mobile, and augmented reality blur the lines between digital and physical, accelerating the digital economy. Understanding the real-world interactions surrounding customer behavior will drive decisions about device integration.

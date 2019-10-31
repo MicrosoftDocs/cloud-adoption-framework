@@ -1,7 +1,7 @@
 ---
 title: "Network capacity exceeded"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Storage requirements exceed network capacity during a migration effort.
+description: Data requirements exceed network capacity during a migration effort.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Storage requirements exceed network capacity during a migration effort
+# Data requirements exceed network capacity during a migration effort
 
 In a cloud migration, assets are replicated and synchronized over the network between the existing datacenter and the cloud. It is not uncommon for the existing data size requirements of various workloads to exceed network capacity. In such a scenario, the process of migration can be radically slowed, or in some cases, stopped entirely. The following guidance will expand the scope of the [Azure migration guide](../azure-migration-guide/index.md) to provide a solution that works around network limitations.
 

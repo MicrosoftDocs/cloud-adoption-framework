@@ -43,7 +43,7 @@ You'll learn how to:
 ::: zone target="docs"
 
 > [!TIP]
-> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal and select **Introduction to Azure Setup**. Then follow the step-by-step instructions.
+> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Introduction to Azure Setup**, and then follow the step-by-step instructions.
 
 Next steps: [Organize your resources to simplify how you apply settings](./organize-resources.md)
 

@@ -28,7 +28,7 @@ A standard web experience is the most common application development technique u
 
 Ambient experiences typically require more than a web app these days. Through [measurement](./measure.md) and [learning with the customer](./learn.md) the behavior that triggers the customer's need can be observed, tracked, and used to build a more ambient experience. The following list summarizes a few approaches to integration of ambient solutions into your hypotheses, with more details about each in the following paragraphs.
 
-- **[Mobile experience](#mobile-experience)**: As with laptops, mobile apps are exceedingly common in the customer environment. In some situations, this might provide a sufficient level of interactivity to make a solution ambient.
+- **[Mobile experience](#mobile-experience):** As with laptops, mobile apps are ubiquitous in customer environments. In some situations, this might provide a sufficient level of interactivity to make a solution ambient.
 - **[Mixed reality](#mixed-reality):** Sometimes a customer's typical surroundings must be altered to make an interaction ambient. This factor creates something of a false reality in which the customer interacts with the solution and has a need met. In this case, the solution is ambient within the false reality.
 - **[Integrated reality](#integrated-reality):** Moving closer to true ambience, integrated reality solutions focus on the use of a device that exists within the customer's reality to integrate the solution into their natural behaviors. A virtual assistant is a great example of integrating reality into the surrounding environment. A lesser known option concerns Internet of Things (IoT) technologies, which integrate devices that already exist in the customer's surroundings.
 - **[Adjusted reality](#adjusted-reality):** When any of these ambient solutions use predictive analysis in the cloud to define and provide an interaction with the customer through the natural surroundings, the solution has adjusted reality.
@@ -41,7 +41,7 @@ In the first stage of ambient experience, the user moves away from the computer.
 
 When customers are mobile and change locations frequently, that may represent the most relevant form of ambient experience for a particular solution. Over the past decade, innovation has frequently been triggered by the integration of existing solutions with a mobile experience.
 
-Azure App Services is a great example of this approach. During early iterations, the [web app feature of Azure App Services](/azure/app-service/overview) can be used to test the hypothesis. As the hypotheses become more complex, the [mobile app feature of Azure App Services](/azure/app-service-mobile/) can extend the web app to run in a variety of mobile platforms.
+Azure App Services is a great example of this approach. During early iterations, the [web app feature of Azure App Services](https://docs.microsoft.com/azure/app-service/overview) can be used to test the hypothesis. As the hypotheses become more complex, the [mobile app feature of Azure App Services](https://docs.microsoft.com/azure/app-service-mobile) can extend the web app to run in a variety of mobile platforms.
 
 ## Mixed reality
 

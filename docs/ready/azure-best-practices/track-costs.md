@@ -20,7 +20,7 @@ ms.subservice: ready
 
 Cost control, much like governance and other management constructs, depends on a well-managed environment. Establishing such an environment (especially a complex one) requires consistent processes in the classification and organization of all assets.
 
-Assets (also known as resources) include all virtual machines, data sources, and applications deployed to the cloud. Azure provides several mechanisms for classifying and organizing assets. [Scaling with multiple Azure subscriptions](../considerations/scaling-subscriptions.md) details options for organizing resources based on multiple criteria to establish a well-managed environment. This article focuses on the application of Azure fundamental concepts to provide cloud cost visibility.
+Assets (also known as resources) include all virtual machines, data sources, and applications deployed to the cloud. Azure provides several mechanisms for classifying and organizing assets. [Scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md) details options for organizing resources based on multiple criteria to establish a well-managed environment. This article focuses on the application of Azure fundamental concepts to provide cloud cost visibility.
 
 ### Classification
 
@@ -30,7 +30,7 @@ Tagging is a primary way to understand the data in any cost reporting. It's a fu
 
 The first step in accurately tracking cost information across business units, environments, and projects is to define a tagging standard. The second step is to ensure that the tagging standard is consistently applied. The following articles can help you accomplish each of these steps:
 
-- [Develop naming and tagging standards](../considerations/naming-and-tagging.md)
+- [Develop naming and tagging standards](../azure-best-practices/naming-and-tagging.md)
 - [Establish a governance MVP to enforce tagging standards](../../govern/guides/complex/index.md)
 
 ### Resource organization
@@ -54,7 +54,7 @@ The diagram shows best practices but doesn't include these options:
 
 The rest of this article assumes the use of the best-practice approach in the preceding diagram. However, the following articles can help you apply the approach to a resource organization that best fits your company:
 
-- [Scaling with multiple Azure subscriptions](../considerations/scaling-subscriptions.md)
+- [Scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md)
 - [Deploying a Governance MVP to govern well-managed environment standards](../../govern/guides/complex/index.md)
 
 ## Provide the right level of cost access
@@ -98,7 +98,7 @@ The following scope and role settings will create the required visibility into c
 
 - [Cloud center of excellence](../../organize/cloud-center-of-excellence.md). Responsibility for managing costs related to shared services requires Cost Management Contributor access at the subscription level. Additionally, this team might require Cost Management Contributor access to resource groups or subscriptions that contain assets deployed by CCoE automations to understand how those automations affect costs.
 
-  - **Shared services**. When a cloud center of excellence is engaged, best practice suggests that assets managed by the CCoE are supported from a centralized shared service subscription within a hub/spoke model. In this scenario, the CCoE likely has contributor or owner access to that subscription, making additional scope assignment for [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor) unnecessary.
+  - **Shared services**. When a cloud center of excellence is engaged, best practice suggests that assets managed by the CCoE are supported from a centralized shared service subscription within a hub and spoke model. In this scenario, the CCoE likely has contributor or owner access to that subscription, making additional scope assignment for [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor) unnecessary.
   - **CCoE automation/controls**. The CCoE commonly provides controls and automated deployment scripts to cloud adoption teams. The CCoE has a responsibility to understand how these accelerators affect costs. To gain that visibility, the team needs [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor) access to any resource groups or subscriptions running those accelerators.
 
 - **Cloud operations team**. Responsibility for managing ongoing costs of production environments requires Cost Management Contributor access to all production subscriptions.

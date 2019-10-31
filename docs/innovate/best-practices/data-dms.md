@@ -1,7 +1,7 @@
 ---
-title: "Cloud innovation: Data Migration Service"
+title: "Cloud innovation: Azure Database Migration Service"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Cloud innovation - Data Migration Service
+description: Cloud innovation - Azure Database Migration Service
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -12,34 +12,46 @@ ms.subservice: innovate
 
 # Collect data through the migration and modernization of existing data sources
 
-Companies often have a variety of existing data that can be [democratized](../considerations/data.md). When the customer hypothesis requires the use of existing data to build modern solutions, a first step may be the migration and modernization of data to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, the migration and modernization could be more easily executed within the [Migrate methodology](../../migrate/index.md).
+Companies often have different kinds of existing data that they can [democratize](../considerations/data.md). When a customer hypothesis requires the use of existing data to build modern solutions, a first step might be the migration and modernization of data to prepare for inventions and innovations. To align with existing migration efforts within a cloud adoption plan, you can more easily do the migration and modernization within the [Migrate methodology](../../migrate/index.md).
 
 ## Use of this article
 
-This article outlines a series of approaches that align with the Migrate process, but could be best aligned to the standard Migrate toolchain. During the Assess process within the migrate methodology, the cloud adoption team would assess the current state and desire the future state for the asset to be migrated. When that process is part of an innovation effort, both cloud adoption teams could use this article to make those decisions.
+This article outlines a series of approaches that align with the Migrate process. You can best align these approaches to the standard Migrate toolchain.
+
+During the Assess process within the Migrate methodology, a cloud adoption team assesses the current state and desired future state for the migrated asset. When that process is part of an innovation effort, both cloud adoption teams can use this article to help make those assessments.
 
 ## Primary toolset
 
-When migrating and modernizing data that current resides on-prem, the most common Azure tool choice is [Data Migration Service (DMS)](https://docs.microsoft.com/azure/dms) which is part of the broader [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) toolchain. For existing SQL Server data sources, the [Data Migration Assistant (DMA)](/sql/dma/dma-overview) could also provide assistance in assessing and migrating a smaller number of data structures.
+When you migrate and modernize on-premises data, the most common Azure tool choice is [Azure Database Migration Service](https://docs.microsoft.com/azure/dms). This service is part of the broader [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) toolchain. For existing SQL Server data sources, [Data Migration Assistant](/sql/dma/dma-overview) can help you assess and migrate a small number of data structures.
 
-To support Oracle and NoSQL migrations, the [Data Migration Service (DMS)](https://docs.microsoft.com/azure/dms) can also be used for certain types of source to target databases, such as Oracle to PostgreSQL or MongoDB to Cosmos DB. It is more common for adoption teams to leverage third-party tools or custom migration scripts to migrate to Cosmos DB, HDInsight, or IaaS-based VM options.
+To support Oracle and NoSQL migrations, you can also use [Database Migration Service](https://docs.microsoft.com/azure/dms) for certain types of source-to-target databases. Examples include Oracle to PostgreSQL and MongoDB to Cosmos DB. More commonly, adoption teams use partner tools or custom scripts to migrate to Azure Cosmos DB, Azure HDInsight, or virtual machine options based on infrastructure as a service (IaaS).
 
 ## Considerations and guidance
 
-When leveraging DMS for migration and modernization of data, it's important to understand the current platform for hosting the data (source), version, and the future platform and version that would best support the customer hypothesis (target). The following is a list of source and target pairs to review with the migration team. Each includes a tool choice and a link to a guide based on those considerations.
+When you use Database Migration Service for migration and modernization of data, it's important to understand:
 
-**Migrate type:** With an offline migration, application downtime starts when the migration starts. With an online migration, downtime is limited to the time to cut over at the end of migration. We suggest that you understand what is the acceptable business downtime and test an offline migration to determine if the restoration time meets this; if not, do an online migration.
+- The current platform for hosting the data source.
+- The current version.
+- The future platform and version that best supports the customer hypothesis or target.
 
-|Source  |Target  |Tool  |Migration Type  |Guidance  |
+The following table shows source and target pairs to review with the migration team. Each pair includes a tool choice and a link to a related guide.
+
+### Migration type
+
+With an offline migration, application downtime starts when the migration starts. With an online migration, downtime is limited to the time to cut over at the end of migration.
+
+We suggest that you decide your acceptable business downtime and test an offline migration. You do so to check if the restoration time meets the acceptable downtime. If the restoration time is unacceptable, do an online migration.
+
+|Source  |Target  |Tool  |Migration type  |Guidance  |
 |---------|---------|---------|---------|---------|
-|SQL Server|Azure SQL Database|DMS|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql)|
-|SQL Server|Azure SQL Database|DMS|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online)|
-|SQL Server|Azure SQL Database Managed Instance|DMS|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)|
-|SQL Server|Azure SQL Database Managed Instance|DMS|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)|
-|RDS SQL Server|Azure SQL Database (or Managed Instance)|DMS|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online)|
-|MySQL|Azure Database for MySQL|DMS|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online)|
-|PostgreSQL|Azure Database for PostgreSQL|DMS|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)|
-|MondoDB|Azure Cosmos DB Mongo API|DMS|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db)|
-|MongoDB|Azure Cosmos DB Mongo API|DMS|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db-online)|
-|Oracle|Range of PaaS & IaaS options|Third party or Azure Migrate|Various|[Decision Tree](../../migrate/expanded-scope/data-oracle-migration.md)|
-|Various NoSQL DBs|Cosmo DB or IaaS options|Procedural migrations or Azure Migrate|Various|[Decision Tree](../../migrate/expanded-scope/data-no-sql-migration.md)|
+|SQL Server|Azure SQL Database|Database Migration Service|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql)|
+|SQL Server|Azure SQL Database|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online)|
+|SQL Server|Azure SQL Database managed instance|Database Migration Service|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)|
+|SQL Server|Azure SQL Database managed instance|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)|
+|RDS SQL Server|Azure SQL Database or Azure SQL Database managed instance|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online)|
+|MySQL|Azure Database for MySQL|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online)|
+|PostgreSQL|Azure Database for PostgreSQL|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)|
+|MongoDB|Azure Cosmos DB Mongo API|Database Migration Service|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db)|
+|MongoDB|Azure Cosmos DB Mongo API|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db-online)|
+|Oracle|Different platform as a service (PaaS) and IaaS options|A partner's tool or Azure Migrate|Offline or online|[Decision tree](../../migrate/expanded-scope/data-oracle-migration.md)|
+|Different NoSQL DB options|Cosmo DB or IaaS options|Procedural migrations or Azure Migrate|Offline or online|[Decision tree](../../migrate/expanded-scope/data-no-sql-migration.md)|

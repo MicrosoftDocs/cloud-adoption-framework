@@ -13,15 +13,15 @@ ms.custom: governance
 
 # Subscription decision guide
 
-Effective subscription design helps organizations establish a structure for organize assets in Azure during a cloud adoption.
+Effective subscription design helps organizations establish a structure to organize assets in Azure during a cloud adoption.
 
 Each resource in Azure, such as a virtual machine or a database, is associated with a subscription. Adopting Azure begins by creating an Azure subscription, associating it with an account, and deploying resources to the subscription. For an overview of these concepts, see [Azure fundamental concepts](../../ready/considerations/fundamental-concepts.md).
 
-As your digital estate in Azure grows, you will likely need to create additional subscriptions to meet your requirements. Azure allows you to define a hierarchy of management groups to organize your subscriptions and easily apply the right policy to the right resources. For more information, see [Scaling with multiple Azure subscriptions](../../ready/considerations/scaling-subscriptions.md).
+As your digital estate in Azure grows, you will likely need to create additional subscriptions to meet your requirements. Azure allows you to define a hierarchy of management groups to organize your subscriptions and easily apply the right policy to the right resources. For more information, see [Scaling with multiple Azure subscriptions](../../ready/azure-best-practices/scaling-subscriptions.md).
 
 Some basic examples of using management groups to separate different workloads include:
 
-- **Production vs. nonproduction:** Some enterprises create management groups to separate their production and nonproduction subscriptions. Management groups allow these customers to more easily manage roles and policies. For example, a nonproduction subscription may allow developers **contributor** access, but in production, they have only **reader** access.
+- **Production vs. nonproduction workloads:** Some enterprises create management groups to separate their production and nonproduction subscriptions. Management groups allow these customers to more easily manage roles and policies. For example, a nonproduction subscription may allow developers **contributor** access, but in production, they have only **reader** access.
 - **Internal services vs. external services:** Much like production versus nonproduction workloads, enterprises often have different requirements, policies, and roles for internal services versus external customer-facing services.
 
 This decision guide helps you consider different approaches to organizing your management group hierarchy.

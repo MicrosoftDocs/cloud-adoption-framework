@@ -45,7 +45,7 @@ To perform a migration using Azure Migrate follow these steps:
 
 <!-- TODO: TBA -->
 
-### Read more
+### Learn more
 
 - [Azure Migrate tutorial - Migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
 

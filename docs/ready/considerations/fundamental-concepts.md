@@ -18,25 +18,25 @@ Learn fundamental concepts and terms that are used in Azure, and how the concept
 
 It's helpful to know the following definitions as you begin your Azure cloud adoption efforts:
 
-- **Resource**: An entity that's managed by Azure. Examples include Azure virtual machines, virtual networks, and storage accounts.
-- **Subscription**: A logical container for your resources. Each Azure resource is associated with only one subscription. Creating a subscription is the first step in adopting Azure.
-- **Azure account**: The email address that you provide when you create an Azure subscription is the Azure account for the subscription. The party that's associated with the email account is responsible for the monthly costs that are incurred by the resources in the subscription. When you create an Azure account, you provide contact information and billing details, like a credit card. You can use the same Azure account (email address) for multiple subscriptions. Each subscription is associated with only one Azure account.
-- **Account administrator**: The party associated with the email address that's used to create an Azure subscription. The account administrator is responsible for paying for all costs that are incurred by the subscription's resources.
-- **Azure Active Directory** (Azure AD): The Microsoft cloud-based identity and access management service. Azure AD allows your employees to sign in and access resources.
-- **Azure AD tenant**: A dedicated and trusted instance of Azure AD. An Azure AD tenant is automatically created when your organization first signs up for a Microsoft cloud service subscription like Microsoft Azure, Microsoft Intune, or Office 365. An Azure tenant represents a single organization.
-- **Azure AD directory**: Each Azure AD tenant has a single, dedicated, and trusted directory. The directory includes the tenant's users, groups, and apps. The directory is used to perform identity and access management functions for tenant resources. A directory can be associated with multiple subscriptions, but each subscription is associated with only one directory.
-- **Resource groups**: Logical containers that you use to group related resources in a subscription. Each resource can exist in only one resource group.
-- **Management groups**: Logical containers that you use for one or more subscriptions. You can define a hierarchy of management groups, subscriptions, resource groups, and resources to efficiently manage access, policies, and compliance through inheritance.
-- **Region**: A set of Azure datacenters that are deployed inside a latency-defined perimeter. The datacenters are connected through a dedicated, regional, low-latency network. Most Azure resources run in a specific Azure region.
+- **Resource:** An entity that's managed by Azure. Examples include Azure virtual machines, virtual networks, and storage accounts.
+- **Subscription:** A logical container for your resources. Each Azure resource is associated with only one subscription. Creating a subscription is the first step in adopting Azure.
+- **Azure account:** The email address that you provide when you create an Azure subscription is the Azure account for the subscription. The party that's associated with the email account is responsible for the monthly costs that are incurred by the resources in the subscription. When you create an Azure account, you provide contact information and billing details, like a credit card. You can use the same Azure account (email address) for multiple subscriptions. Each subscription is associated with only one Azure account.
+- **Account administrator:** The party associated with the email address that's used to create an Azure subscription. The account administrator is responsible for paying for all costs that are incurred by the subscription's resources.
+- **Azure Active Directory (Azure AD):** The Microsoft cloud-based identity and access management service. Azure AD allows your employees to sign in and access resources.
+- **Azure AD tenant:** A dedicated and trusted instance of Azure AD. An Azure AD tenant is automatically created when your organization first signs up for a Microsoft cloud service subscription like Microsoft Azure, Microsoft Intune, or Office 365. An Azure tenant represents a single organization.
+- **Azure AD directory:** Each Azure AD tenant has a single, dedicated, and trusted directory. The directory includes the tenant's users, groups, and apps. The directory is used to perform identity and access management functions for tenant resources. A directory can be associated with multiple subscriptions, but each subscription is associated with only one directory.
+- **Resource groups:** Logical containers that you use to group related resources in a subscription. Each resource can exist in only one resource group.
+- **Management groups:** Logical containers that you use for one or more subscriptions. You can define a hierarchy of management groups, subscriptions, resource groups, and resources to efficiently manage access, policies, and compliance through inheritance.
+- **Region:** A set of Azure datacenters that are deployed inside a latency-defined perimeter. The datacenters are connected through a dedicated, regional, low-latency network. Most Azure resources run in a specific Azure region.
 
 ## Azure subscription purposes
 
 An Azure subscription serves several purposes. An Azure subscription is:
 
-- **A legal agreement**. Each subscription is associated with an [Azure offer](https://azure.microsoft.com/support/legal/offer-details) (such as a Free Trial or Pay-As-You-Go). Each offer has a specific rate plan, benefits, and associated terms and conditions. You choose an Azure offer when you create a subscription.
-- **A payment agreement**. When you create a subscription, you provide payment information for that subscription, such as a credit card number. Each month, the costs incurred by the resources deployed to that subscription are calculated and billed via that payment method.
-- **A boundary of scale**. Scale limits are defined for a subscription. The subscription's resources can't exceed the set scale limits. For example, there's a limit on the number of virtual machines that you can create in a single subscription.
-- **An administrative boundary**. A subscription can act as a boundary for administration, security, and policy. Azure also provides other mechanisms to meet these needs, such as management groups, resource groups, and role-based access control.
+- **A legal agreement.** Each subscription is associated with an [Azure offer](https://azure.microsoft.com/support/legal/offer-details) (such as a Free Trial or Pay-As-You-Go). Each offer has a specific rate plan, benefits, and associated terms and conditions. You choose an Azure offer when you create a subscription.
+- **A payment agreement.** When you create a subscription, you provide payment information for that subscription, such as a credit card number. Each month, the costs incurred by the resources deployed to that subscription are calculated and billed via that payment method.
+- **A boundary of scale.** Scale limits are defined for a subscription. The subscription's resources can't exceed the set scale limits. For example, there's a limit on the number of virtual machines that you can create in a single subscription.
+- **An administrative boundary.** A subscription can act as a boundary for administration, security, and policy. Azure also provides other mechanisms to meet these needs, such as management groups, resource groups, and role-based access control.
 
 ## Azure subscription considerations
 
@@ -86,11 +86,11 @@ The following resources provide detailed information about the concepts discusse
 - [What is Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
 - [Associate or add an Azure subscription to your Azure Active Directory tenant](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
 - [Topologies for Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies)
-- [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/office365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)
+- [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](https://docs.microsoft.com/office365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)
 
 ## Next steps
 
-Now that you understand fundamental Azure concepts, learn how to [scale with multiple Azure subscriptions](./scaling-subscriptions.md).
+Now that you understand fundamental Azure concepts, learn how to [scale with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md).
 
 > [!div class="nextstepaction"]
-> [Scale with multiple Azure subscriptions](./scaling-subscriptions.md)
+> [Scale with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md)

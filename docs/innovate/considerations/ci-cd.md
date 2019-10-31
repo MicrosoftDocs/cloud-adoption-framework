@@ -20,12 +20,11 @@ There are a few key friction points to adoption that can be minimized through a 
 
 As described in [Measure for customer impact](./measure.md), positive validation of any hypothesis requires iteration and determination. You'll experience far more failures than wins during any innovation cycle. This is expected. However, when a customer need, hypothesis, and solution align at scale, the world changes quickly. This article aims to minimize [technical spikes](./build.md#reduce-complexity-and-delay-technical-spikes) that slow innovation but still make sure you keep a few solid best practices in place. Doing so will help the team design for future success while delivering on current customer needs.
 
-## Empowering adoption - maturity model
+## Empowering adoption: the maturity model
 
-The primary objective of the [Innovate methodology](./index.md) is to build customer partnerships and accelerate feedback loops, which will lead to market innovations.
-The following image and sections describe initial implementations that support this methodology.
+The primary objective of the [Innovate methodology](./index.md) is to build customer partnerships and accelerate feedback loops, which will lead to market innovations. The following image and sections describe initial implementations that support this methodology.
 
-![Empower adoption—the maturity model](../../_images/innovate/empower-adoption-maturity.png)
+![Empower adoption: the maturity model](../../_images/innovate/empower-adoption-maturity.png)
 
 - [Shared solution](#shared-solution): Establish a centralized repository for all aspects of the solution.
 - [Feedback loops](#feedback-loops): Make sure that feedback loops can be managed consistently through iterations.
@@ -79,7 +78,7 @@ The are several methods for solution deployment. The following represent the thr
 - During early stages of development, **continuous delivery** might be more appropriate. In continuous delivery, any code changes are automatically deployed to a production-like environment. Developers, business decision-makers, and others on the team can use this environment to verify that their work is production-ready. You can also use this method to test a hypothesis with customers without affecting on-going business activities.
 - **Manual deployment** is the least sophisticated approach to release management. As the name suggests, someone on the team manually deploys the most recent code changes. This approach is error prone, unreliable, and considered an antipattern by most seasoned engineers.
 
-During the first iteration of an MVP solution, manual deployment is common, despite the preceding assessment. When the solution is extremely fluid and customer feedback is unknown, there's a significant risk in resetting the entire solution (or even the core hypothesis). Here's the general rule for manual deployment: no customer proof, no deployment automation. 
+During the first iteration of an MVP solution, manual deployment is common, despite the preceding assessment. When the solution is extremely fluid and customer feedback is unknown, there's a significant risk in resetting the entire solution (or even the core hypothesis). Here's the general rule for manual deployment: no customer proof, no deployment automation.
 
 Investing early can lead to lost time. More importantly, it can create dependencies on the release pipeline that make the team more resistant to an early pivot. After the first few iterations or when customer feedback suggests potential success, a more advanced model of deployment should be quickly adopted.
 

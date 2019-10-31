@@ -1,7 +1,7 @@
 ---
-title: Azure readiness networking design decisions
+title: Review your network options
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Azure readiness networking design decisions
+description: Review your network options for Azure workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2019
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Networking design decisions
+# Review your network options
 
 Designing and implementing Azure networking capabilities is a critical part of your cloud adoption efforts. You'll need to make networking design decisions to properly support the workloads and services that will be hosted in the cloud. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
 
