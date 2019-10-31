@@ -31,7 +31,7 @@ Building an innovative new solution isn't about giving users what they want or t
 - **Quantitative (testing feedback):** This feedback measures the actions we hope to see.
 - **Qualitative (customer feedback):** This feedback tells us what those metrics mean in the customer's voice.
 
-Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com/) is the home for open source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed apps. The article on [building GitHub repositories](https://docs.microsoft.com/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml) can help you get started with your repo.
+Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed apps. The article on [building GitHub repositories](https://docs.microsoft.com/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml) can help you get started with your repo.
 
 Each of the following tools in Azure integrates with (or is compatible with) projects hosted in GitHub:
 
@@ -121,7 +121,7 @@ The backlog (or board) is where feedback is recorded as user stories. It's also 
 ### Action
 
 Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure.
-To get started with either tool, go to [Azure DevOps](https://dev.azure.com/).
+To get started with either tool, go to [Azure DevOps](https://dev.azure.com).
 
 ::: zone-end
 
