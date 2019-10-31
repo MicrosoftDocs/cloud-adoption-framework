@@ -49,7 +49,7 @@ A management baseline is the minimum set of tools and processes that should be a
 ::: zone target="docs"
 
 > [!TIP]
-> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal and select **Azure Management Guide**. Then follow the step-by-step instructions.
+> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Azure Management Guide**, and then follow the step-by-step instructions.
 
 Next steps: [Inventory and visibility](./inventory.md)
 
