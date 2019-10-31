@@ -50,24 +50,24 @@ Beyond these initial options for developing skills, there are a variety of learn
 
 Microsoft and partners offer a variety of options for all audiences to develop their skills with Azure services:
 
-- [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/microsoft-azure): Offers training from the people who helped build Azure. Instruction ranges from a basic overview to deep technical training so that IT staff learn how to use Azure for their business.
-- [Microsoft IT Pro Cloud Essentials](https://www.microsoft.com/azureessentials): Provides a free annual subscription that includes cloud services, education, and support benefits. IT Pro Cloud Essentials provides IT implementers with hands-on experience and targeted educational opportunities. Subscribers also have access to experts in areas that matter most to increase knowledge and create a path to career advancement.
 - [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
 
 Turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/azure-certification.aspx).
 
 ## Microsoft Learn
 
-Microsoft Learn is a new approach to learning. Readiness for the new responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels and achieve more.
+Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels and achieve more.
 
-The following examples are a few of the role-specific learning paths on Microsoft Learn:
+The following examples are a few tailored learning paths on Microsoft Learn which align to the Ready portion of the Cloud Adoption Framework:
 
-[Business users](/learn/browse/?roles=business-user) might experience a steep learning curve when they're asked to participate in planning, testing, and adoption of cloud-based technology. Microsoft Learn helps business users with modules that are focused on adopting cloud models and tools for better managing the business through cloud-based services.
+[Azure fundamentals](learn/paths/azure-for-the-data-engineer/):Learn cloud concepts such as High Availability, Scalability, Elasticity, Agility, Fault Tolerance, and Disaster Recovery.  Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage and security. 
 
-[Solution architects](/learn/browse/?roles=solution-architect) can access hundreds of modules and learning paths. The available topics range from core infrastructure services to advanced data transformation.
+[Manage resources in Azure](learn/paths/azure-for-the-data-engineer/):Learn how to work with the Azure command line and web portal to create, manage, and control cloud based resources.
 
-[Administrators](/learn/browse/?roles=administrator) have access to modules that focus on Azure fundamentals, configuring containers, or even advanced administration in the cloud.
+[Administer infrastructure resources in Azure](learn/paths/administer-infrastructure-resources-in-azure/):Learn how to create, manage, secure and scale virtual machine resources.
 
-[Developers](/learn/browse/?roles=developer&term=infrastructure) play an important role in the migration of assets to the cloud. Learn about ways to help during architecture, governance, and modernization activities.
+[Store data in Azure](learn/paths/store-data-in-azure/):Azure provides a variety of ways to store data: unstructured, archival, relational, and more. Learn the basics of storage management in Azure, how to create a Storage Account, and how to choose the right model for the data you want to store in the cloud.
+
+[Architect great solutions in Azure](learn/paths/architect-great-solutions-in-azure/):Learn how to design and build secure, scalable, performant solutions in Azure by examining the core principles found in every good architecture.
 
 For additional learning paths, browse the [Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
