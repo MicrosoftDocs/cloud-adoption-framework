@@ -324,7 +324,7 @@ The workload possibilities are endless. The following are just a few of the poss
 - **Data driven:** Data intensive workloads with frequent access to databases or other storage.
 - **Integrated:** Workloads offering integration with other systems within or outside the organization.
 
-**Customer facing web sites (internet or internal facing)**: Most applications that interact with the Internet are web sites. Azure offers the capability to run a web site on an IaaS VM or from an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps support integration with VNets that allow the deployment of the Web Apps in a spoke network zone. Internal facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet-routable addresses from the private VNet.
+**Customer facing web sites (internet or internal facing):** Most applications that interact with the Internet are web sites. Azure offers the capability to run a web site on an IaaS VM or from an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps support integration with VNets that allow the deployment of the Web Apps in a spoke network zone. Internal facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet-routable addresses from the private VNet.
 
 **Big Data and Analytics:** When data needs to scale up to a large volume, databases may not scale up properly. Hadoop technology offers a system to run distributed queries in parallel on large number of nodes. Customers have the option to run data workloads in IaaS VMs or PaaS ([HDInsight][HDI]). HDInsight supports deploying into a location-based VNet, can be deployed to a cluster in a spoke of a virtual datacenter.
 
