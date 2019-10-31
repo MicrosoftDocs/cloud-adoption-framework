@@ -42,7 +42,7 @@ Here are a couple examples of tailored learning paths on Microsoft Learn which a
 
 [Azure for the Data Engineer](learn/paths/azure-for-the-data-engineer/):Explore how the world of data has evolved and how the advent of cloud technologies is providing new opportunities for business to explore. You will learn the various data platform technologies that are available, and how a Data Engineer can take advantage of this technology to an organization benefit.     
 
-To discover additional learning paths, browse the [Learn catalog] (/learn/browse). Use the Roles filter to align learning paths with your role.
+To discover additional learning paths, browse the [Learn catalog] (https://docs.microsoft.com/learn/browse). Use the Roles filter to align learning paths with your role.
 
 
 

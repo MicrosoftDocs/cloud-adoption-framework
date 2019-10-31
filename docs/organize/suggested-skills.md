@@ -28,14 +28,14 @@ During the ready phase, technical staff have to create a migration landing zone 
 
 - [Create an Azure account](https://docs.microsoft.com/learn/modules/create-an-azure-account): The first step to using Azure is to create an account. Your account holds the Azure services that you provision and handles your personal settings, like identity, billing, and preferences.
 - [Azure portal](https://docs.microsoft.com/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
-- [Introduction to Azure](/learn/modules/welcome-to-azure): Get started with Azure. Create and configure your first virtual machine in the cloud.
-- [Introduction to security in Azure](/learn/modules/intro-to-security-in-azure): Learn the basic concepts to protect your infrastructure and data in the cloud. Understand what responsibilities are yours and what Azure handles.
-- [Manage resources in Azure](/learn/paths/manage-resources-in-azure): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
-- [Create a VM](/learn/modules/create-windows-virtual-machine-in-azure): Use the Azure portal to create a virtual machine.
-- [Azure network services](/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
-- [Azure compute options](/learn/modules/intro-to-azure-compute): Review the Azure compute services.
-- [Secure resources with RBAC](/learn/modules/secure-azure-resources-with-rbac): Use role-based access control (RBAC) to secure resources.
-- [Azure Storage options](/learn/modules/intro-to-data-in-azure/index): Learn about the benefits of Azure data storage.
+- [Introduction to Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure): Get started with Azure. Create and configure your first virtual machine in the cloud.
+- [Introduction to security in Azure](https://docs.microsoft.com/learn/modules/intro-to-security-in-azure): Learn the basic concepts to protect your infrastructure and data in the cloud. Understand what responsibilities are yours and what Azure handles.
+- [Manage resources in Azure](https://docs.microsoft.com/learn/paths/manage-resources-in-azure): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
+- [Create a VM](https://docs.microsoft.com/learn/modules/create-windows-virtual-machine-in-azure): Use the Azure portal to create a virtual machine.
+- [Azure network services](https://docs.microsoft.com/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
+- [Azure compute options](https://docs.microsoft.com/learn/modules/intro-to-azure-compute): Review the Azure compute services.
+- [Secure resources with RBAC](https://docs.microsoft.com/learn/modules/secure-azure-resources-with-rbac): Use role-based access control (RBAC) to secure resources.
+- [Azure Storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure/index): Learn about the benefits of Azure data storage.
 
 During the ready phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
 
@@ -62,12 +62,12 @@ Microsoft Learn is a new approach to learning. Readiness for the new responsibil
 
 The following are a few examples of role-specific learning paths on Microsoft Learn:
 
-- [Business users](/learn/browse/?roles=business-user) may experience a steep learning curve when they help plan, test, and adopt cloud-based technology. Microsoft Learn modules focus on adopting cloud models and tools for better managing business through cloud-based services.
+- [Business users](https://docs.microsoft.com/learn/browse/?roles=business-user) may experience a steep learning curve when they help plan, test, and adopt cloud-based technology. Microsoft Learn modules focus on adopting cloud models and tools for better managing business through cloud-based services.
 
-- [Solution architects](/learn/browse/?roles=solution-architect) can access hundreds of modules and learning paths. The available topics range from core infrastructure services to advanced data transformation.
+- [Solution architects](https://docs.microsoft.com/learn/browse/?roles=solution-architect) can access hundreds of modules and learning paths. The available topics range from core infrastructure services to advanced data transformation.
 
-- [Administrators](/learn/browse/?roles=administrator) have access to modules that focus on Azure fundamentals, configuring containers, and even advanced administration in the cloud.
+- [Administrators](https://docs.microsoft.com/learn/browse/?roles=administrator) have access to modules that focus on Azure fundamentals, configuring containers, and even advanced administration in the cloud.
 
-- [Developers](/learn/browse/?roles=developer&term=infrastructure) can use Learn resources to help during architecture, governance, modernization activities.
+- [Developers](https://docs.microsoft.com/learn/browse/?roles=developer&term=infrastructure) can use Learn resources to help during architecture, governance, modernization activities.
 
-For additional learning paths, browse the [Learn catalog](/learn/browse). Use the Roles filter to align learning paths with your role.
+For additional learning paths, browse the [Learn catalog](https://docs.microsoft.com/learn/browse). Use the Roles filter to align learning paths with your role.

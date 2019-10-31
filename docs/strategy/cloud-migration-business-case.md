@@ -68,7 +68,7 @@ We can unpack this equation to get a migration-specific view of the formulas for
 - Some cloud providers also provide cost-delta calculators. The [Azure Total Cost of Ownership (TCO) Calculator](https://azure.com/tco) is one example.
 - For more refined cost structures, consider a [digital estate planning](../digital-estate/index.md) exercise.
 - Estimate the cost of migration.
-- Estimate the cost of any expected training opportunities. [Microsoft Learn](/learn) might be able to help mitigate those costs.
+- Estimate the cost of any expected training opportunities. [Microsoft Learn](https://docs.microsoft.com/learn) might be able to help mitigate those costs.
 - At some companies, the time invested by existing staff members might need to be included in the initial costs. Consult the finance office for guidance.
 - Discuss any additional costs or burden costs with the finance office for validation.
 
