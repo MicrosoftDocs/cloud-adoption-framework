@@ -44,7 +44,7 @@ The following table outlines a few common processes, tools, and potential impact
 |Inventory and visibility|IT Service Management (ITSM) integration|IT Service Management Connector|Automated ITSM connection creates awareness sooner|[Azure ITSM connector](https://docs.microsoft.com/azure/azure-monitor/platform/itsmc-overview)|
 |Operational compliance|Operations automation|Azure Automation|Automate operational compliance for faster and more accurate response to change|See below|
 |Operational compliance|Multicloud operations|Azure Automation Hybrid Runbook Worker|Automate operations across multiple clouds|[Hybrid Runbook overview](https://docs.microsoft.com/azure/automation/automation-hybrid-runbook-worker)|
-|Operational compliance|Guest automation|Desire State Configuration (DSC)|Code-based configuration of Guest OSs to reduce errors and config drift|[DSC Overview](/powershell/scripting/dsc/overview/overview)|
+|Operational compliance|Guest automation|Desire State Configuration (DSC)|Code-based configuration of Guest OSs to reduce errors and config drift|[DSC Overview](https://docs.microsoft.com/powershell/scripting/dsc/overview/overview)|
 |Protect and recover|Breach notification|Azure Security Center|Extend protection to include security breach recovery triggers|See below|
 
 ::: zone target="docs"
