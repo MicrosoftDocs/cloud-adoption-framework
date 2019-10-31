@@ -28,6 +28,8 @@ If the answers to all four questions are well documented, you may not need the r
 > [!NOTE]
 > The existing documentation **should not** be shared with either team prior to the meeting. If true alignment exists, the guiding hypotheses should be referenced (or better yet, recited) by members of each group.
 
+<!-- -->
+
 > [!WARNING]
 > Don't facilitate the meeting. This is a test of alignment, not an alignment creation exercise. When starting the meeting, ensure the attendees are aware of the objective to test directional alignment with existing agreements within the team. Establish only a time limit. Commit to five minutes per question and set a timer for each. Close that question in five minutes, even if the answer isn't agreed upon.
 
@@ -61,7 +63,7 @@ It's fairly common for the answers to questions 1 and 2 (customer need and busin
 - **Training opportunity:** When either team is misaligned because they need deep technical requirements and extensive functional requirements, it reveals an opportunity for training in agile methodologies. When the team culture isn't ready for agile processes, it can be challenging to innovate and keep pace with the market. For training resources about DevOps and agile practices, see:
   - [Evolve your DevOps practices](https://docs.microsoft.com/learn/paths/evolve-your-devops-practices)
   - [Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops)
-  - [Deploy applications with Azure DevOps](https://docs.microsoft.com/learn/paths/deploy-applications-with-azure-devops/)
+  - [Deploy applications with Azure DevOps](https://docs.microsoft.com/learn/paths/deploy-applications-with-azure-devops)
 
 Using this methodology and the backlog management tools in each section listed above can help create solution alignment.
 

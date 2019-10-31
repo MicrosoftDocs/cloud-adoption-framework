@@ -22,9 +22,9 @@ For perimeter networks to be effective, incoming packets must flow through secur
 Perimeter networks make use of the following Azure features and services:
 
 - [Virtual networks][virtual-networks], [user-defined routes][user-defined-routes], and [network security groups][network-security-groups]
-- [Network virtual appliances][NVA] (NVAs)
+- [Network virtual appliances (NVAs)][NVA]
 - [Azure Load Balancer][ALB]
-- [Azure Application Gateway][AppGW] and [web application firewall][AppGWWAF] (WAF)
+- [Azure Application Gateway][AppGW] and [web application firewall (WAF)][AppGWWAF]
 - [Public IPs][PIP]
 - [Azure Front Door][AFD] with [web application firewall][AFDWAF]
 - [Azure Firewall][AzFW]

@@ -49,7 +49,7 @@ Management tools and processes can improve platform operations. But that is ofte
 
 The [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
 
-## Getting started with specific platforms
+## Get started with specific platforms
 
 Across typical Azure customers the following are common platforms, which can easily justify an investment in platform operations. Cloud management teams tend to start with these when building out platform operations requirements or a full service catalog.
 
