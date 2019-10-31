@@ -73,7 +73,7 @@ Azure Monitor is a software as a service (SaaS) service, where all the infrastru
 
 #### Agents
 
-Operations Manager collects data directly only from agents that are installed on [Windows computers](https://docs.microsoft.com//system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#windows-agent). It can accept data from the Operations Manager SDK, but this approach is typically used for partners that extend the product with custom applications, not for collecting monitoring data. It can collect data from other sources, such as [Linux computers](https://docs.microsoft.com/system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#linuxunix-agent) and network devices, by using special modules that run on the Windows agent that remotely accesses these other devices.
+Operations Manager collects data directly only from agents that are installed on [Windows computers](https://docs.microsoft.com/system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#windows-agent). It can accept data from the Operations Manager SDK, but this approach is typically used for partners that extend the product with custom applications, not for collecting monitoring data. It can collect data from other sources, such as [Linux computers](https://docs.microsoft.com/system-center/scom/plan-planning-agent-deployment?view=sc-om-1807#linuxunix-agent) and network devices, by using special modules that run on the Windows agent that remotely accesses these other devices.
 
 ![Diagram of Operations Manager agent](./media/monitoring-management-guidance-cloud-and-on-premises/data-collection-opsman-agents-optimized.svg)
 

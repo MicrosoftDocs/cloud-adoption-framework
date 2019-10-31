@@ -86,7 +86,7 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills and 
 
 Here is an example of a tailored learning paths which aligns to the Strategy potion of the Cloud Adoption Framework.
 
-[Learn the business value of Microsoft Azure](https://docs.microsoft.com//learn/paths/learn-business-value-of-azure): This learning experience will take you on a journey that will begin by showing you how digital transformation and the power of the cloud can transform your business. We will cover how Microsoft Azure cloud services can power your organization on a trusted cloud platform. Finally, we will wrap up by illustrating how to make this journey real for your organization.
+[Learn the business value of Microsoft Azure](https://docs.microsoft.com/learn/paths/learn-business-value-of-azure): This learning experience will take you on a journey that will begin by showing you how digital transformation and the power of the cloud can transform your business. We will cover how Microsoft Azure cloud services can power your organization on a trusted cloud platform. Finally, we will wrap up by illustrating how to make this journey real for your organization.
 
 ## Learn more
 
