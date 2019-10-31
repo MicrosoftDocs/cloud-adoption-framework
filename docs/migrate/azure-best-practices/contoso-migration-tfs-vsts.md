@@ -127,7 +127,7 @@ They upgrade as follows:
 
 **Need more help?**
 
-Learn about [upgrading TFS](/tfs/server/upgrade/get-started).
+Learn about [upgrading TFS](https://docs.microsoft.com/tfs/server/upgrade/get-started).
 
 ## Step 3: Validate the TFS collection
 

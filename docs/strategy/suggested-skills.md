@@ -50,16 +50,16 @@ Convert the business case and rationalized digital estate into an actionable mig
 
 During the Ready phase, technical staff creates a migration landing zone capable of hosting, operating, and governing workloads that have been migrated to the cloud. These learning paths can help you develop the necessary skills:
 
-- [Create an Azure account](/learn/modules/create-an-azure-account). The first step to using Azure is to create an account. Your account holds the Azure services you provision and handles your personal settings, like identity, billing, and preferences.
-- [Azure portal](/learn/modules/tour-azure-portal). Tour the Azure portal features and services, and customize the portal.
-- [Introduction to Azure](/learn/modules/welcome-to-azure). Get started with Azure by creating and configuring your first virtual machine in the cloud.
-- [Introduction to security in Azure](/learn/modules/intro-to-security-in-azure). Learn the basic concepts for protecting your infrastructure and data when you work in the cloud. Understand what responsibilities are yours and what Azure takes care of for you.
-- [Manage resources in Azure](/learn/paths/manage-resources-in-azure). Learn how to work with the Azure command line and web portal to create, manage, and control cloud-based resources.
-- [Create a VM](/learn/modules/create-windows-virtual-machine-in-azure). Create a virtual machine by using the Azure portal.
-- [Azure networking](/learn/modules/intro-to-azure-networking). Learn the basics of Azure networking and how Azure networking helps you improve resiliency and reduce latency.
-- [Azure compute options](/learn/modules/intro-to-azure-compute). Learn about the Azure compute services.
-- [Secure resources with RBAC](/learn/modules/secure-azure-resources-with-rbac). Use RBAC to secure resources.
-- [Data storage options](/learn/modules/intro-to-data-in-azure/index). Learn about the benefits of Azure data storage.
+- [Create an Azure account](https://docs.microsoft.com/learn/modules/create-an-azure-account). The first step to using Azure is to create an account. Your account holds the Azure services you provision and handles your personal settings, like identity, billing, and preferences.
+- [Azure portal](https://docs.microsoft.com/learn/modules/tour-azure-portal). Tour the Azure portal features and services, and customize the portal.
+- [Introduction to Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure). Get started with Azure by creating and configuring your first virtual machine in the cloud.
+- [Introduction to security in Azure](https://docs.microsoft.com/learn/modules/intro-to-security-in-azure). Learn the basic concepts for protecting your infrastructure and data when you work in the cloud. Understand what responsibilities are yours and what Azure takes care of for you.
+- [Manage resources in Azure](https://docs.microsoft.com/learn/paths/manage-resources-in-azure). Learn how to work with the Azure command line and web portal to create, manage, and control cloud-based resources.
+- [Create a VM](https://docs.microsoft.com/learn/modules/create-windows-virtual-machine-in-azure). Create a virtual machine by using the Azure portal.
+- [Azure networking](https://docs.microsoft.com/learn/modules/intro-to-azure-networking). Learn the basics of Azure networking and how Azure networking helps you improve resiliency and reduce latency.
+- [Azure compute options](https://docs.microsoft.com/learn/modules/intro-to-azure-compute). Learn about the Azure compute services.
+- [Secure resources with RBAC](https://docs.microsoft.com/learn/modules/secure-azure-resources-with-rbac). Use RBAC to secure resources.
+- [Data storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure/index). Learn about the benefits of Azure data storage.
 
 ## Organizational skills
 
