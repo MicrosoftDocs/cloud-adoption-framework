@@ -70,4 +70,6 @@ The following are a few examples of role-specific learning paths on Microsoft Le
 
 - [Developers](/learn/browse/?roles=developer&term=infrastructure) can use Learn resources to help during architecture, governance, modernization activities.
 
-For additional learning paths, browse the [Learn catalog](/learn/browse). Use the Roles filter to align learning paths with your role.
+## Learn more
+
+For additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the Roles filter to align learning paths with your role.

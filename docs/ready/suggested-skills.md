@@ -60,14 +60,16 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills and 
 
 The following examples are a few tailored learning paths on Microsoft Learn which align to the Ready portion of the Cloud Adoption Framework:
 
-[Azure fundamentals](learn/paths/azure-for-the-data-engineer/):Learn cloud concepts such as High Availability, Scalability, Elasticity, Agility, Fault Tolerance, and Disaster Recovery.  Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage and security. 
+[Azure fundamentals](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn cloud concepts such as High Availability, Scalability, Elasticity, Agility, Fault Tolerance, and Disaster Recovery.  Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage and security.
 
-[Manage resources in Azure](learn/paths/azure-for-the-data-engineer/):Learn how to work with the Azure command line and web portal to create, manage, and control cloud based resources.
+[Manage resources in Azure](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn how to work with the Azure command line and web portal to create, manage, and control cloud based resources.
 
-[Administer infrastructure resources in Azure](learn/paths/administer-infrastructure-resources-in-azure/):Learn how to create, manage, secure and scale virtual machine resources.
+[Administer infrastructure resources in Azure](https://docs.microsoft.com/learn/paths/administer-infrastructure-resources-in-azure): Learn how to create, manage, secure and scale virtual machine resources.
 
-[Store data in Azure](learn/paths/store-data-in-azure/):Azure provides a variety of ways to store data: unstructured, archival, relational, and more. Learn the basics of storage management in Azure, how to create a Storage Account, and how to choose the right model for the data you want to store in the cloud.
+[Store data in Azure](https://docs.microsoft.com/learn/paths/store-data-in-azure): Azure provides a variety of ways to store data: unstructured, archival, relational, and more. Learn the basics of storage management in Azure, how to create a Storage Account, and how to choose the right model for the data you want to store in the cloud.
 
-[Architect great solutions in Azure](learn/paths/architect-great-solutions-in-azure/):Learn how to design and build secure, scalable, performant solutions in Azure by examining the core principles found in every good architecture.
+[Architect great solutions in Azure](https://docs.microsoft.com/learn/paths/architect-great-solutions-in-azure): Learn how to design and build secure, scalable, high-performing solutions in Azure by examining the core principles found in every good architecture.
 
-For additional learning paths, browse the [Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
+## Learn more
+
+For additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.

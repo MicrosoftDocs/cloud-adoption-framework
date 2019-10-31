@@ -41,7 +41,7 @@ In the first stage of ambient experience, the user moves away from the computer.
 
 When customers are mobile and change locations frequently, that may represent the most relevant form of ambient experience for a particular solution. Over the past decade, innovation has frequently been triggered by the integration of existing solutions with a mobile experience.
 
-Azure App Services is a great example of this approach. During early iterations, the [web app feature of Azure App Services](/azure/app-service/overview) can be used to test the hypothesis. As the hypotheses become more complex, the [mobile app feature of Azure App Services](/azure/app-service-mobile/) can extend the web app to run in a variety of mobile platforms.
+Azure App Services is a great example of this approach. During early iterations, the [web app feature of Azure App Services](https://docs.microsoft.com/azure/app-service/overview) can be used to test the hypothesis. As the hypotheses become more complex, the [mobile app feature of Azure App Services](https://docs.microsoft.com/azure/app-service-mobile) can extend the web app to run in a variety of mobile platforms.
 
 ## Mixed reality
 
