@@ -20,9 +20,9 @@ The first step in creating business alignment is term alignment. IT management, 
 
 Fortunately, the processes for developing a cloud adoption strategy and cloud adoption plan, creates an ideal situation for the remapping of terms. It also creates a great opportunity to rethink commitments to operational management, in partnership with the business. The following article series walks through this new approach across three specific terms that can improve conversations with business stakeholders:
 
-- **[Criticality](./criticality.md)**: Mapping workloads to business processes. Ranking criticality to focus investments.
-- **[Impact](./impact.md)**: Understand the impact of potential outages to aid in evaluating return on investment for cloud management.
-- **[Commitment](./commitment.md)**: Develop true partnerships, by creating and documenting agreements **with the business**.
+- **[Criticality](./criticality.md):** Mapping workloads to business processes. Ranking criticality to focus investments.
+- **[Impact](./impact.md):** Understand the impact of potential outages to aid in evaluating return on investment for cloud management.
+- **[Commitment](./commitment.md):** Develop true partnerships, by creating and documenting agreements **with the business**.
 
 > [!NOTE]
 > Beneath each of these terms are classic IT terms like SLA, RTO, and RPO. Mapping business and IT terms is covered in more detail in the article on commitment.

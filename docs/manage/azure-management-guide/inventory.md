@@ -46,7 +46,7 @@ For any enterprise-grade environment, the following table outlines the suggested
 
 Azure Service Health provides a personalized view of the health of your Azure services and regions. Information about active issues is posted to Service Health to help you understand the effect on your resources. Regular updates keep you informed as issues are resolved.
 
-We also publish planned maintenance events to Service Health so you'll know about changes that can affect your resources' availability. Set up Service Health alerts to notify you when service issues, planned maintenance, or other changes might affect your Azure services and regions.
+We also publish planned maintenance events to Service Health so you'll know about changes that can affect resource availability. Set up Service Health alerts to notify you when service issues, planned maintenance, or other changes might affect your Azure services and regions.
 
 Azure Service Health includes:
 

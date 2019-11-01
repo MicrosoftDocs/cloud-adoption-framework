@@ -88,7 +88,7 @@ As system design improves, return to this article to find new opportunities to i
 
 Some technical debt can't be addressed. Resolution might be too expensive to correct or might be planned but have a long project duration. The business interruption might not have a significant business effect. Or the business priority might be to recover quickly instead of investing in resiliency.
 
-When resolution of technical debt isn't the wanted path, automated remediation is commonly the next step. Using Azure Automation and Azure Monitor to detect trends and provide automated remediation is the most common approach to automated remediation.
+When resolution of technical debt isn't the desired approach, automated remediation is commonly the next step. Using Azure Automation and Azure Monitor to detect trends and provide automated remediation is the most common approach to automated remediation.
 
 For guidance on automated remediation, see [Azure Automation and alerts](https://docs.microsoft.com/azure/automation/automation-create-alert-triggered-runbook).
 
@@ -114,7 +114,7 @@ For instructions on publishing to a service catalog, see the article series on [
 ### Deploy applications from the service catalog
 
 1. In the Azure portal, go to **Managed applications center (preview)**.
-2. On the **Browse** blade, select **Service Catalog applications**.
+2. On the **Browse** pane, select **Service Catalog applications**.
 3. Click **+ Add** to choose an application definition from your company's service catalog.
 
 Any managed applications you're servicing are displayed.
@@ -132,7 +132,7 @@ Any managed applications you're servicing are displayed.
 ### Manage service catalog applications
 
 1. In the Azure portal, go to **Managed applications center (preview)**.
-1. On the **Service** blade, select **Service Catalog applications**.
+1. On the **Service** pane, select **Service Catalog applications**.
 
 Any managed applications you're servicing are displayed.
 

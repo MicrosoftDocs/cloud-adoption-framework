@@ -20,12 +20,12 @@ As described in [Empower adoption](../considerations/ci-cd.md), building true in
 
 You can accelerate this type of digital invention through the following levels of maturity. These levels align with the maturity model in the preceding image. Technical guidance to accelerate digital invention is listed in the table of contents on the left side of this page. Those articles are grouped by maturity level.
 
-- **Shared solution**: Establish a centralized repository for all aspects of the solution.
-- **Feedback loops**: Ensure feedback loops can be managed consistently throughout iterations.
-- **Continuous integration**: Regularly build and consolidate a solution.
-- **Reliable testing**: Validate solution quality and expected changes to drive ensuring measurements.
-- **Solution deployment**: Deploy a solution to allow a team to quickly share changes with customers.
-- **Integrated measurement**: Add learning metrics to the feedback loop for clear analysis by the full team.
+- **Shared solution:** Establish a centralized repository for all aspects of the solution.
+- **Feedback loops:** Ensure feedback loops can be managed consistently throughout iterations.
+- **Continuous integration:** Regularly build and consolidate a solution.
+- **Reliable testing:** Validate solution quality and expected changes to drive ensuring measurements.
+- **Solution deployment:** Deploy a solution to allow a team to quickly share changes with customers.
+- **Integrated measurement:** Add learning metrics to the feedback loop for clear analysis by the full team.
 
 ## Toolchain
 

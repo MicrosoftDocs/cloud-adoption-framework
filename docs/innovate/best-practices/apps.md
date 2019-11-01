@@ -24,9 +24,9 @@ For this article, assume all inventions that result in an application stem from 
 
 Based on these assumptions, the following three paths are the most common for cloud adoption teams who are developing digital inventions:
 
-- **Citizen developers**: Before engaging professional developers, business subject matter experts use citizen developer tools. These tools rapidly test and validate that a customer hypothesis can meet the needs of that customer.
-- **Intelligent experiences**: Create modern experiences by using cloud platforms to drive rapid deployment and short feedback loops. Expand on web applications to infuse intelligence or even integrate bots.
-- **Cloud-native**: Build a new invention that naturally takes advantage of cloud capabilities.
+- **Citizen developers:** Before engaging professional developers, business subject matter experts use citizen developer tools. These tools rapidly test and validate that a customer hypothesis can meet the needs of that customer.
+- **Intelligent experiences:** Create modern experiences by using cloud platforms to drive rapid deployment and short feedback loops. Expand on web applications to infuse intelligence or even integrate bots.
+- **Cloud-native:** Build a new invention that naturally takes advantage of cloud capabilities.
 
 Each path results in advantages and disadvantages that are both short-term and long-term. When the cloud governance team, the cloud operations team, and and the cloud center of excellence team are ready to support every approach, you can accelerate adoption with minimal effect on sustainable business operations.
 

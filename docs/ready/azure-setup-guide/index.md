@@ -17,7 +17,7 @@ ms.localizationpriority: high
 # Azure setup guide: Before you start
 
 > [!NOTE]
-> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in the Azure Quickstart Center. See the tip in the article for a link.
+> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in Azure Quickstart Center. See the tip in the article for a link.
 
 ::: zone-end
 

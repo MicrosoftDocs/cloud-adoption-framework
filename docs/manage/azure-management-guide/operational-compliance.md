@@ -152,7 +152,7 @@ To create a blueprint:
 ::: zone target="chromeless"
 
 1. Go to **Blueprints - Getting started**.
-1. On the **Create a Blueprint** blade, select **Create**.
+1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
@@ -166,7 +166,7 @@ To create a blueprint:
 ::: zone target="docs"
 
 1. Go to [Blueprints - Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
-1. On the **Create a Blueprint** blade, select **Create**.
+1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
@@ -200,6 +200,8 @@ To publish blueprint artifacts to your subscription:
 1. In the **Version** box, enter a version like "1.0".
 1. In the **Change notes** box, enter your notes.
 1. Select **Publish**.
+
+<!-- markdownlint-disable MD024 -->
 
 ### Learn more
 
