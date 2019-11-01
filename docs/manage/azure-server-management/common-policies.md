@@ -23,7 +23,7 @@ The following sections describe some commonly used policies.
 
 ### Restrict resource regions
 
-Regulatory and policy compliance often depends on control of the physical location where resources are deployed. You can use a built-in policy to allow users to create resources only in certain allowed Azure regions.
+Regulatory and policy compliance often depend on control of the physical location where resources are deployed. You can use a built-in policy to allow users to create resources only in certain allowed Azure regions.
 
 To find this policy in the portal, search for "location" on the policy definition page. Or run this cmdlet to find the policy:
 
@@ -31,7 +31,7 @@ To find this policy in the portal, search for "location" on the policy definitio
 Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq "BuiltIn") -and ($_.Properties.displayName -like "*location*") }
 ```
 
-The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
+The following script shows how to assign the policy. Change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
 
 ```powershell
 #Specify the value for $SubscriptionID.
@@ -46,7 +46,7 @@ $policyParam = '{"listOfAllowedLocations":{"value":["eastus","westus"]}}'
 New-AzPolicyAssignment -Name "Allowed Location" -DisplayName "Allowed locations for resource creation" -Scope $scope -PolicyDefinition $AllowedLocationPolicy -Location eastus -PolicyParameter $policyparam
 ```
 
-You can use this same script to apply the other policies that are discussed in this article. Just replace the GUID in the line that sets `$AllowedLocationPolicy` with the GUID of the policy that you want to apply.
+You can also use this script to apply the other policies that are discussed in this article. Just replace the GUID in the line that sets `$AllowedLocationPolicy` with the GUID of the policy that you want to apply.
 
 ### Block certain resource types
 
@@ -62,11 +62,11 @@ After you identify the policy that you want to use, you can modify the PowerShel
 
 ### Restrict VM size
 
-Azure offers a wide range of VM sizes to support various types of workloads. To control your budget, you could create a policy that allows only a subset of VM sizes in your subscriptions.
+Azure offers a wide range of VM sizes to support various workloads. To control your budget, you could create a policy that allows only a subset of VM sizes in your subscriptions.
 
 ### Deploy antimalware
 
-You can use this policy to deploy a Microsoft IaaSAntimalware extension with a default configuration to VMs that aren't protected by antimalware.
+You can use this policy to deploy a Microsoft *IaaSAntimalware* extension with a default configuration to VMs that aren't protected by antimalware.
 
 The policy GUID is `2835b622-407b-4114-9198-6f7064cbe0dc`.
 

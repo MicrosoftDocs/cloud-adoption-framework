@@ -12,7 +12,7 @@ ms.subservice: operate
 
 # Enable tracking and alerting for critical changes
 
-Azure Change Tracking and Inventory provides alerts on the configuration state of your hybrid environment and changes to that environment. It can report critical file, service, software, and registry changes that might affect your deployed servers.
+Azure Change Tracking and Inventory provide alerts on the configuration state of your hybrid environment and changes to that environment. It can report critical file, service, software, and registry changes that might affect your deployed servers.
 
 By default, the Azure Automation inventory service doesn't monitor files or registry settings. The solution does provide a list of registry keys that we recommend for monitoring. To see this list, go to your Automation account in the Azure portal and select **Inventory** > **Edit Settings**.
 
@@ -24,7 +24,7 @@ You can also use the service to track critical file changes. For example, you mi
 
 To enable file-content tracking for the hosts file, follow the steps in [Enable file content tracking](https://docs.microsoft.com/azure/automation/change-tracking-file-contents#enable-file-content-tracking).
 
-You can also add an alert for changes to files that you're tracking. For example, say you want to set an alert for changes that are made to the hosts file. Select **Log Analytics** on the command bar or Log Search for the linked Log Analytics workspace. In Log Analytics, use the following query to search for changes to the hosts file:
+You can also add an alert for changes to files that you're tracking. For example, say you want to set an alert for changes to the hosts file. Select **Log Analytics** on the command bar or Log Search for the linked Log Analytics workspace. In Log Analytics, use the following query to search for changes to the hosts file:
 
 ```kusto
 ConfigurationChange | where FieldsChanged contains "FileContentChecksum" and FileSystemPath contains "hosts"
@@ -34,19 +34,19 @@ ConfigurationChange | where FieldsChanged contains "FileContentChecksum" and Fil
 
 This query searches for changes to the contents of files that have a path that contains the word “hosts.” You can also search for a specific file by changing the path parameter. (For example, `FileSystemPath ==  "c:\\windows\\system32\\drivers\\etc\\hosts"`.)
   
-After the query returns the results, select **New alert rule** to open the alert rule editor. You can also get to this editor via Azure Monitor in the Azure portal.
+After the query returns the results, select **New alert rule** to open the alert-rule editor. You can also get to this editor via Azure Monitor in the Azure portal.
 
-In the alert rule editor, review the query and change the alert logic if you need to. In this case, we want the alert to be raised if any changes are detected on any machine in the environment.
+In the alert-rule editor, review the query and change the alert logic if you need to. In this case, we want the alert to be raised if any changes are detected on any machine in the environment.
 
 ![Screenshot of the Log Analytics alert rule editor in the Azure portal](./media/change-tracking3.png)
 
-After you set the condition logic, you can assign action groups to perform actions in response to the alert. In this example, when the alert is raised, emails are sent, and an ITSM ticket is created. You can take many other useful actions, like triggering an Azure function, an Azure Automation runbook, a webhook, or a logic app.
+After you set the condition logic, you can assign action groups to perform actions in response to the alert. In this example, when the alert is raised, emails are sent and an ITSM ticket is created. You can take many other useful actions, like triggering an Azure function, an Azure Automation runbook, a webhook, or a logic app.
 
 ![Screenshot of the sample alert rule summary in the Azure portal](./media/change-tracking4.png)
 
 After you've set all the parameters and logic, apply the alert to the environment.
 
-## More tracking and alerting examples
+## Tracking and alerting examples
 
 This section shows other common scenarios for tracking and alerting that you might want to use.
 
@@ -76,7 +76,7 @@ Use the following query for environments that need to lock down software configu
 
 ### Specific software version is or isn't installed on a machine
 
-Use the following query to for assess security. Note that this query references `ConfigurationData`, which contains the logs for inventory and provides the last reported configuration state, not changes.
+Use the following query to assess security. This query references `ConfigurationData`, which contains the logs for inventory and provides the last-reported configuration state, not changes.
 
   ```kusto
   ConfigurationData | where SoftwareName contains "Monitoring Agent" and CurrentVersion != "8.0.11081.0"

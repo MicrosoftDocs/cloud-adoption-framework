@@ -17,7 +17,7 @@ Learn how to enable server management services on a single VM for evaluation.
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you implement Azure management services on a VM.
 
-Adding Azure server management services to individual virtual machines is simple in the Azure portal. You can familiarize yourself with these services before you add them to your VMs. When you select a VM instance, all the solutions on the list of [management tools and services](./tools-services.md) appear on the **Operations** or **Monitoring** menu. You select a solution and follow the wizard to add it.
+It's simple to add Azure server management services to individual virtual machines in the Azure portal. You can familiarize yourself with these services before you add them. When you select a VM instance, all the solutions on the list of [management tools and services](./tools-services.md) appear on the **Operations** or **Monitoring** menu. You select a solution and follow the wizard to add it.
 
 ![Screenshot of virtual machine settings in the Azure portal](./media/onboarding-single-vm.png)
 

@@ -65,10 +65,10 @@ To assign the policies that listed in the previous section:
 
 After you complete the wizard, the policy assignment will be deployed to the environment. It can take up to 30 minutes for the policy to take effect. To test it, create new VMs after 30 minutes, and check if the Microsoft Monitoring Agent is enabled on the VM by default.
 
-## Install the required agents on on-premises servers
+## Install the agents on on-premises servers
 
 > [!NOTE]
-> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before adding servers to Azure management services.
+> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you add Azure management services to servers.
 
 For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal and select **Settings** > **Advanced settings**.
 
@@ -77,16 +77,6 @@ For on-premises servers, you need to download and install the [Log Analytics age
 ## Enable and configure solutions
 
 To enable solutions, you need to configure the Log Analytics workspace. Azure VMs and on-premises servers will get the solutions from the Log Analytics workspaces that they're connected to.
-
-The following solutions are covered in this section:
-
-- [Update Management](#update-management)
-- [Change Tracking and Inventory](#change-tracking-and-inventory-solutions)
-- [Azure Activity Log](#azure-activity-log)
-- [Azure Log Analytics Agent Health](#azure-log-analytics-agent-health)
-- [Antimalware Assessment](#antimalware-assessment)
-- [Azure Monitor for VMs](#azure-monitor-for-vms)
-- [Azure Security Center](#azure-security-center)
 
 ### Update Management
 
