@@ -27,7 +27,7 @@ The following checklist outlines the common areas of complexity which could requ
 
 ### Technology driven scope expansion
 
-- **[VMWare migration](./vmware-host.md):** Migrating VMWare hosts can accelerate the overall migration process. Each migrated VMWare host can move multiple workloads to the cloud using a lift and shift approach. After migration, those VMs and workloads can stay in VMWare or be migrated to modern cloud capabilities.
+- **[VMware migration](./vmware-host.md):** Migrating VMware hosts can accelerate the overall migration process. Each migrated VMware host can move multiple workloads to the cloud using a lift and shift approach. After migration, those VMs and workloads can stay in VMware or be migrated to modern cloud capabilities.
 - **[SQL Server migration](./sql-migration.md):** Migrating SQL Servers can accelerate the overall migration process. Each SQL Server migrated can move multiple databases and services, potentially accelerating multiple workloads.
 - **[Multiple datacenters](./multiple-datacenters.md):** Migrating multiple datacenters adds a lot of complexity. During the Assess, Migrate, Optimization, and Manage processes, additional considerations are discussed to prepare for more complex environments.
 - **[Data requirements exceed network capacity](./network-capacity-exceeded.md):** Companies frequently choose to migrate to the cloud because the capacity, speed, or stability of an existing datacenter is no longer satisfactory. Unfortunately, those same constraints add complexity to the migration process, requiring additional planning during the assessment and migration processes.

@@ -29,7 +29,7 @@ The goal of this guide is to provide a detailed reference to help enterprise IT 
 
 * Azure monitoring platforms, with an overview and comparison of their capabilities.
 * The best-fit solution for monitoring hybrid, private, and Azure native workloads.
-* The recommended monitoring approach for both infrastructure and applications as a whole, end to end. This approach includes deployable solutions for migrating these common workloads to Azure.
+* The recommended end-to-end monitoring approach for both infrastructure and applications. This approach includes deployable solutions for migrating these common workloads to Azure.
 
 This guide isn't a how-to article for using or configuring individual Azure services and solutions, but it does reference those sources when they're applicable or available. After you've read it, you'll understand how to successfully operate a workload by following best practices and patterns.
 

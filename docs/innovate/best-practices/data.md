@@ -22,10 +22,10 @@ Starting with data is a quick way to test a hypothesis before expanding into bro
 
 This type of digital invention can be accelerated through each phase of the following processes, as shown in the preceding image. Technical guidance to accelerate digital invention is listed in the table of contents on the left side of this page. Those articles are grouped by phase to align guidance with the overall methodology.
 
-- **Share data**: The first step of democratizing data is to share openly.
-- **Govern data**: Ensure that any sensitive data is secured, tracked, and governed before sharing.
-- **Centralize data**: Sometimes you need to provide a centralized platform for data sharing and governance.
-- **Collect data**: Migration, integration, ingestion, and virtualization can each collect existing data to be centralized, governed, and shared.
+- **Share data:** The first step of democratizing data is to share openly.
+- **Govern data:** Ensure that any sensitive data is secured, tracked, and governed before sharing.
+- **Centralize data:** Sometimes you need to provide a centralized platform for data sharing and governance.
+- **Collect data:** Migration, integration, ingestion, and virtualization can each collect existing data to be centralized, governed, and shared.
 
 In every iteration, cloud adoption teams should go only as deep into the stack as they require to put the focus on customer needs over architecture. Delaying technical spikes in favor of customer needs accelerates validation of your hypothesis.
 

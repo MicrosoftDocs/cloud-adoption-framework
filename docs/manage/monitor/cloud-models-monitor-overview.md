@@ -83,7 +83,7 @@ The following table summarizes the requirements that Azure Monitor and System Ce
 |Modern web application monitoring | Yes | No |
 |Legacy web application monitoring | Yes, limited, varies by SDK<br> Supports monitoring older versions of .NET and Java web applications. | Yes, limited |
 |Monitor Azure Kubernetes Service containers | Yes | No |
-|Monitor Docker / Windows containers | Yes | No |
+|Monitor Docker or Windows containers | Yes | No |
 |Network performance monitoring | Yes | Yes, limited<br> Supports availability checks, and collects basic statistics from network devices by using the Simple Network Management Protocol (SNMP) from the corporate network.|
 |Interactive data analysis | Yes | No<br> Relies on SQL Server Reporting Services pre-canned or custom reports, third-party visualization solutions, or a custom Power BI implementation. There are scale and performance limitations with the Operations Manager data warehouse. Integrate with Azure Monitor logs as an alternative for data aggregation requirements. You achieve integration by configuring the Log Analytics connector.|
 |End-to-end diagnostics, root-cause analysis, and timely troubleshooting | Yes | Yes, limited<br> Supports end-to-end diagnostics and troubleshooting only for on-premises infrastructure and applications. Uses other System Center components or partner solutions.|
@@ -126,7 +126,7 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
 #### Disadvantages of using Operations Manager by itself
 
-- Analyzing monitoring data in Operations Manager is commonly performed by using pre-defined views that are defined in management packs that you access from the console, from SQL Server Reporting Services (SSRS) reports, or custom views that end users have created. Performing ad-hoc analyses of the data isn't possible out of the box. Operations Manager reporting is inflexible. The data warehouse that provides long-term retention of the monitoring data doesn't scale or perform well. And expertise in writing T-SQL statements, developing a Power BI solution, or using third-party solutions is required to support the requirements for the various personas in the IT organization.
+- Analyzing monitoring data in Operations Manager is commonly performed by using predefined views that are provided by management packs accessed from the console, from SQL Server Reporting Services (SSRS) reports, or from custom views that end users have created. Ad-hoc data analysis isn't possible out of the box. Operations Manager reporting is inflexible. The data warehouse that provides long-term retention of the monitoring data doesn't scale or perform well. And expertise in writing T-SQL statements, developing a Power BI solution, or using third-party solutions is required to support the requirements for the various personas in the IT organization.
 
 - Alerting in Operations Manager doesn't support complex expressions or include correlation logic. To help reduce noise, alerts are grouped to show the relationships between them and to identify their causes.
 
@@ -160,7 +160,7 @@ Although a migration to the cloud presents numerous challenges, it also includes
 
 - Enable Azure Monitor for VMs, Azure Monitor for containers, and Application Insights to detect and diagnose issues between infrastructure and applications. For a more thorough analysis and correlation of data collected from the multiple components or dependencies supporting the application, you need to use Azure Monitor logs.
 
-- Create intelligent alerts that can apply to a core set of applications and service components, help reduce alert noise with dynamic thresholds for complex signals, and utilize alert aggregation based on machine learning algorithms to help quickly identify the issue.
+- Create intelligent alerts that apply to a core set of applications and service components, help reduce alert noise with dynamic thresholds for complex signals, and use alert aggregation based on machine learning algorithms to help identify the issue quickly.
 
 - Define a library of queries and dashboards to support the requirements of the various personas in the IT organization.
 

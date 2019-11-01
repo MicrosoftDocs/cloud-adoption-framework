@@ -258,7 +258,7 @@ This information can be viewed and acted on at multiple levels and are continual
 - **Service Map:** Service Map provides a graphical view into your infrastructure components, their processes, and interdependencies on other computers and external processes. It integrates events, performance data, and management solutions in Log Analytics.
 
 > [!TIP]
-> Before creating individual alerts, create and maintain a set of shared Action Groups that can be used across Azure Alerts. This will enable you to centrally maintain the lifecycle of your recipient lists, notification delivery methods (email, SMS phone numbers) and webhooks to external actions (Azure Automation runbooks, Azure Functions / Logic Apps, ITSM).
+> Before creating individual alerts, create and maintain a set of shared Action Groups that can be used across Azure Alerts. This will enable you to centrally maintain the lifecycle of your recipient lists, notification delivery methods (email, SMS phone numbers) and webhooks to external actions (Azure Automation runbooks, Azure Functions and Logic Apps, ITSM).
 
 ## Cost management
 

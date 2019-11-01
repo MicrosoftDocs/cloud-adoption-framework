@@ -27,7 +27,7 @@ As these factors increase in importance, the benefits of ensuring consistent dep
 
 In Azure, [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) are a core resource organization mechanism to logically group resources within a subscription.
 
-Resource groups act as containers for resources with a common lifecycle AND shared management constraints such as policy or role-based access control (RBAC) requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
+Resource groups act as containers for resources with a common lifecycle as well as shared management constraints such as policy or role-based access control (RBAC) requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
 
 1. Are the contents of the resource group developed together?
 1. Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
@@ -36,7 +36,7 @@ Resource groups act as containers for resources with a common lifecycle AND shar
 If you answered _NO_ to any of the above points, the resource in question should be placed elsewhere, in another resource group.
 
 > [!IMPORTANT]
-> resource groups are also region specific, however, it is common for resources to be in different regions within the same resource group because they are managed together as described above. Please see [here](../regions/index.md) for more information on region selection.
+> Resource groups are also region specific; however, it is common for resources to be in different regions within the same resource group because they are managed together as described above. For more information on region selection, see the [Regions decision guide](../regions/index.md).
 
 ## Deployment consistency
 

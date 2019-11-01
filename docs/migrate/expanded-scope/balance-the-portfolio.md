@@ -108,7 +108,7 @@ It is advised that these diverse efforts are segmented across two or more cloud 
 
 **Minor Refactoring:** Some applications can be modernized with minor refactoring at the data or application level. This work requires team members to deploy data to cloud-based data platforms or to make minor configuration changes to the application. This may require limited support for data or application development subject matter experts. However, this work is similar to the work conducted by IT implementors when deploying third-party apps. This work could easily align with the cloud migration team or the cloud strategy team. While this effort is not nearly as fast as a rehost migration, it takes less time to execute than refactor efforts.
 
-During migration, it is recommended that efforts are segmented in the three ways listed above, and that those efforts are executed by the appropriate team in the appropriate iteration. While it is advised that the portfolio be diversified, it is also advised that efforts stay very focused and segregated.
+During migration, efforts should be segmented in the three ways listed above and executed by the appropriate team in the appropriate iteration. While you should diversify the portfolio, also ensure that efforts stay very focused and segregated.
 
 ## Optimize and promote process changes
 

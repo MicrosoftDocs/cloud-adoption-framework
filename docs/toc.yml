@@ -225,7 +225,7 @@
           href: migrate/expanded-scope/balance-the-portfolio.md
         - name: Skills readiness
           href: migrate/expanded-scope/suggested-skills.md
-        - name: VMWare host migration
+        - name: VMware host migration
           href: migrate/expanded-scope/vmware-host.md
         - name: SQL Server migration
           href: migrate/expanded-scope/sql-migration.md
@@ -284,7 +284,7 @@
             - name: Scale a migration
               href: migrate/azure-best-practices/contoso-migration-scale.md
 
-        - name: Migrating VMWare hosts
+        - name: Migrating VMware hosts
           items:
           - name: Overview
             href: migrate/azure-best-practices/vmware-host.md

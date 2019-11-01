@@ -20,9 +20,9 @@ During the [strategy phase](../../strategy/index.md) of the cloud adoption lifec
 
 Before establishing learning metrics, define a small number of strategic metrics that you want this innovation to affect. Generally those strategic metrics align with one or more of the following outcome areas: [business agility](../../strategy/business-outcomes/agility-outcomes.md), [customer engagement](../../strategy/business-outcomes/engagement-outcomes.md), [customer reach](../../strategy/business-outcomes/reach-outcomes.md), [financial impact](../../strategy/business-outcomes/fiscal-outcomes.md), or in the case of operational innovation: [solution performance](../../strategy/business-outcomes/fiscal-outcomes.md).
 
-Document the agreed-upon metrics and track their impact frequently. But don't expect results in any of these metrics to emerge for several iterations. See [commitment to iteration](./index.md#commitment-to-iteration) to set and align expectations across the parties involved.
+Document the agreed-upon metrics and track their impact frequently. But don't expect results in any of these metrics to emerge for several iterations. For more information about setting and aligning expectations across the parties involved, see [Commitment to iteration](./index.md#commitment-to-iteration).
 
-Aside from motivation and business outcome metrics, the remainder of this article focuses on learning metrics designed to guide transparent discovery and customer-focused iterations. For more on these aspects, see [commitment to transparency](./index.md#commitment-to-transparency).
+Aside from motivation and business outcome metrics, the remainder of this article focuses on learning metrics designed to guide transparent discovery and customer-focused iterations. For more information about these aspects, see [Commitment to transparency](./index.md#commitment-to-transparency).
 
 ## Learning metrics
 

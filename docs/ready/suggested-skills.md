@@ -62,7 +62,7 @@ The following examples are a few tailored learning paths on Microsoft Learn whic
 
 [Azure fundamentals](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn cloud concepts such as High Availability, Scalability, Elasticity, Agility, Fault Tolerance, and Disaster Recovery.  Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage and security.
 
-[Manage resources in Azure](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn how to work with the Azure command line and web portal to create, manage, and control cloud based resources.
+[Manage resources in Azure](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn how to work with the Azure command line and web portal to create, manage, and control cloud-based resources.
 
 [Administer infrastructure resources in Azure](https://docs.microsoft.com/learn/paths/administer-infrastructure-resources-in-azure): Learn how to create, manage, secure and scale virtual machine resources.
 
@@ -72,4 +72,4 @@ The following examples are a few tailored learning paths on Microsoft Learn whic
 
 ## Learn more
 
-For additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
+For additional learning paths, browse the [Microsoft Learn catalog](https://docs.microsoft.com/learn/browse). Use the **Roles** filter to align learning paths with your role.

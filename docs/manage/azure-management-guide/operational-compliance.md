@@ -63,7 +63,7 @@ For more information, see [Update Management solution](https://docs.microsoft.co
 To apply a policy to a resource group:
 
 1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts).
-1. Select **automation accounts**, and choose one of the listed accounts.
+1. Select **Automation accounts**, and choose one of the listed accounts.
 1. Go to **Configuration Management**.
 1. **Inventory**, **Change Management**, and **State Configuration** can be used to control the state and operational compliance of the managed VMs.
 
@@ -152,7 +152,7 @@ To create a blueprint:
 ::: zone target="chromeless"
 
 1. Go to **Blueprints - Getting started**.
-1. On the **Create a Blueprint** blade, select **Create**.
+1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
@@ -166,7 +166,7 @@ To create a blueprint:
 ::: zone target="docs"
 
 1. Go to [Blueprints - Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
-1. On the **Create a Blueprint** blade, select **Create**.
+1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
@@ -200,6 +200,8 @@ To publish blueprint artifacts to your subscription:
 1. In the **Version** box, enter a version like "1.0".
 1. In the **Change notes** box, enter your notes.
 1. Select **Publish**.
+
+<!-- markdownlint-disable MD024 -->
 
 ### Learn more
 

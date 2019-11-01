@@ -22,9 +22,9 @@ You can accelerate this type of digital invention through each phase of the foll
 
 In the preceding image, data and insights align with the best practices outlined in the [democratizing data](./data.md) article. As subject matter experts discover insights that might be repeatable, they can use the following three steps to mature those insights:
 
-- **Patterns**: Find and define patterns to create predictive models.
-- **Predictions**: Apply patterns to customer data to predict outcomes based on the model and underlying pattern.
-- **Interactions**: Consume the predictions from within an application or data source to drive an interaction with your customer.
+- **Patterns:** Find and define patterns to create predictive models.
+- **Predictions:** Apply patterns to customer data to predict outcomes based on the model and underlying pattern.
+- **Interactions:** Consume the predictions from within an application or data source to drive an interaction with your customer.
 
 ## Toolchain
 

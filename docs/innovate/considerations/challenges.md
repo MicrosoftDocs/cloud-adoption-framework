@@ -50,7 +50,7 @@ The Innovate methodology uses the following innovation disciplines to help align
 - **Source code and deployment:** Collaboration between developers of all walks improves both quality and speed to market. Integration of feedback and a rapid response to learning shape market leaders. Commitments to the build, measure, and learn processes help accelerate tool adoption decisions.
 - **Predictive solutions:** In a digital economy, it's seldom sufficient to simply meet the current needs of your customers. Customers expect businesses to anticipate their next steps and predict their future needs. Continuous learning often evolves into prediction tooling. The complexity of customer needs and the availability of data will help define the best tools and approaches to predict and influence.
 
-In a digital economy, the greatest challenge architects face is to clearly understand their customers' invention and adoption needs and to then determine the best cloud-based tool chain to deliver on those needs.
+In a digital economy, the greatest challenge architects face is to clearly understand their customers' invention and adoption needs and to then determine the best cloud-based toolchain to deliver on those needs.
 
 ## Next steps
 

@@ -21,7 +21,7 @@ To validate rationalization decisions, use the following questions to facilitate
 
 ## Innovation indicators
 
-If the joint review of the following questions results in a "Yes" answer, a workload might be a better candidate for innovation. Such a workload wouldn't be migrated via a shift/lift or modernize model. Instead, the business logic or data structures would be recreated as a new or rearchitected application. This approach can be more labor-intensive and time-consuming. But for a workload that represents significant business returns, the investment is justified.
+If the joint review of the following questions results in a "Yes" answer, a workload might be a better candidate for innovation. Such a workload wouldn't be migrated via a lift and shift or modernize model. Instead, the business logic or data structures would be re-created as a new or rearchitected application. This approach can be more labor-intensive and time-consuming. But for a workload that represents significant business returns, the investment is justified.
 
 - Do the applications in this workload create market differentiation?
 - Is there a proposed or approved investment aimed at improving the experiences associated with the applications in this workload?

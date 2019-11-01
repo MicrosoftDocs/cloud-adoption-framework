@@ -18,7 +18,7 @@ _Protect and recover_ is the third and final discipline in any cloud-management 
 
 ![Cloud Management Baseline](../../_images/manage/management-baseline.png)
 
-In the preceding article titled "Operational compliance in Azure," the objective is to reduce the likelihood of a business interruption. The current article aims to reduce the duration and impact of outages that can't be prevented.
+In [Operational compliance in Azure](.\operational-compliance.md) the objective is to reduce the likelihood of a business interruption. The current article aims to reduce the duration and impact of outages that can't be prevented.
 
 For any enterprise-grade environment, this table outlines the suggested minimum for any management baseline:
 
@@ -43,7 +43,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 ### Enable backup for an Azure VM
 
 1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
-1. On the **Operations** blade, select **Backup**.
+1. On the **Operations** pane, select **Backup**.
 1. Create or select an existing Azure Recovery Services vault.
 1. Select **Create (or edit) a new policy**.
 1. Configure the schedule and retention period.
@@ -84,7 +84,7 @@ The following steps outline the process to use Site Recovery for Azure-to-Azure 
 ### Enable replication for the Azure VM
 
 1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
-1. On the **Operations** blade, select **Disaster recovery**.
+1. On the **Operations** pane, select **Disaster recovery**.
 1. Select **Configure disaster recovery** > **Target region**, and choose the target region to which you'll replicate.
 1. For this quickstart, accept the default values for all other options.
 1. Select **Enable replication**, which starts a job to enable replication for the VM.

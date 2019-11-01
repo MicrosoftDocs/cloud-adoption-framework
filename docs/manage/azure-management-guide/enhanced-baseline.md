@@ -40,13 +40,13 @@ Both workload operations and platform operations require changes to design and a
 
 This table outlines a few processes, tools, and potential effects common in customers' enhanced management baselines:
 
-|Discipline  |Process  |Tool  |Potential effect| Learn more |
-|---------|---------|---------|---------|---------|
+| Discipline  | Process  | Tool | Potential impact | Learn more |
+|---|---|---|---|---|
 |Inventory and visibility|Service change tracking|Azure Resource Graph|Greater visibility into changes to Azure services might help detect negative effects sooner or remediate faster.|[Overview of Azure Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview)|
 |Inventory and visibility|IT service management (ITSM) integration|IT Service Management Connector|Automated ITSM connection creates awareness sooner.|[IT Service Management Connector (ITSMC)](https://docs.microsoft.com/azure/azure-monitor/platform/itsmc-overview)|
 |Operational compliance|Operations automation|Azure Automation|Automate operational compliance for faster and more accurate response to change.|See the following sections|
 |Operational compliance|Multicloud operations|Azure Automation Hybrid Runbook Worker|Automate operations across multiple clouds.|[Hybrid Runbook Worker overview](https://docs.microsoft.com/azure/automation/automation-hybrid-runbook-worker)|
-|Operational compliance|Guest automation| Desired State Configuration (DSC)|Code-based configuration of guest operating systems to reduce errors and configuration drift.|[DSC Overview](/powershell/scripting/dsc/overview/overview)|
+|Operational compliance|Guest automation| Desired State Configuration (DSC)|Code-based configuration of guest operating systems to reduce errors and configuration drift.|[DSC Overview](https://docs.microsoft.com/powershell/scripting/dsc/overview/overview)|
 |Protect and recover|Breach notification|Azure Security Center|Extend protection to include security-breach recovery triggers.|See the following sections|
 
 ::: zone target="docs"
@@ -71,7 +71,7 @@ The basic unit of code for delivering automated remediation is a runbook. Runboo
 To create or manage runbooks:
 
 1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts).
-1. Select **automation accounts** and choose one of the listed accounts.
+1. Select **Automation accounts** and choose one of the listed accounts.
 1. Go to **Process automation**.
 1. With the options presented, you can create or manage runbooks, schedules, and other automated remediation functionality.
 
@@ -109,7 +109,7 @@ Azure Security Center is offered in two tiers: Free and Standard. Features like 
 
 #### Try Standard tier for free for your first 30 days
 
-After you enable and configure security policies for a subscription's resources, you can view the security state of your resources and any issues on the **Prevention** blade. You can also view a list of those issues on the **Recommendations** tile.
+After you enable and configure security policies for a subscription's resources, you can view the security state of your resources and any issues on the **Prevention** pane. You can also view a list of those issues on the **Recommendations** tile.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0]" submitText="Explore Azure Security Center" :::
 

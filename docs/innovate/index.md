@@ -74,7 +74,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Best practices</h3>
-                            Your architectural decisions should follow best practices for each tool in the tool chain. By adhering to such guidance, you can better  accelerate solution development and provide a reference for solid architectural designs.
+                            Your architectural decisions should follow best practices for each tool in the toolchain. By adhering to such guidance, you can better  accelerate solution development and provide a reference for solid architectural designs.
                         </div>
                     </div>
                 </div>

@@ -147,8 +147,8 @@ To create a DevOps project:
 
 These articles will help you centralize and manage feedback by using Azure Boards together with GitHub:
 
-- [Get started with Azure Boards](https://docs.microsoft.com/azure/devops/boards/boards/kanban-quickstart?view=azure-devops)
-- [Azure Boards & GitHub](https://docs.microsoft.com/azure/devops/boards/boards/kanban-quickstart?view=azure-devops)
+- [Get started with Azure Boards](https://docs.microsoft.com/azure/devops/boards/github?view=azure-devops)
+- [Azure Boards & GitHub](https://docs.microsoft.com/azure/devops/boards/get-started/?view=azure-devops)
 
 ## [Close the loop with pipelines](#tab/pipelines)
 
@@ -160,7 +160,7 @@ To view current deployments in your pipeline:
 
 1. Go to **App Services**.
 2. Select the desired application from the list.
-3. Select **Deployment Center** in the **Deployment** section of the app services pane.
+3. Select **Deployment Center** in the **Deployment** section of the App Services pane.
 
 ::: zone target="chromeless"
 

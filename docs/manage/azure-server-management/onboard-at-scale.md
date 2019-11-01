@@ -1,7 +1,7 @@
 ---
-title: "Configure Azure management services for a subscription"
+title: "Configure Azure server management services for a subscription"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Configure Azure management services for a subscription
+description: Configure Azure server management services for a subscription
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
@@ -14,13 +14,13 @@ ms.subservice: operate
 
 Adding Azure server management services to your servers involves two tasks:
 - Deploy service agents to your servers
-- Enablw the management solutions
+- Enable the management solutions
 
-This article covers three process that you need to do to complete these tasks:
+This article covers the three processes that are necessary complete these tasks:
 
-1. Deploy required agents to Azure VMs by using Azure Policy]
-1. Deploy required agents to on-premises servers
-1. Enable and configuring solutions
+1. Deploy required agents to Azure VMs by using Azure Policy
+1. Deploy the required agents to on-premises servers
+1. Enable and configuring the solutions
 
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you add virtual machines to Azure server management services.
@@ -41,42 +41,42 @@ Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure
 
 ### Assign policies
 
-To assign the policies listed in the preceding section:
+To assign the policies that listed in the previous section:
 
 1. In the Azure portal, go to **Azure Policy** > **Assignments** > **Assign initiative**.
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale1.png)
 
-2. On the **Assign Policy** page, select the **Scope** by selecting the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. A scope determines which resources or group of resources the policy is assigned to. Then choose **Select** at the bottom of the **Scope** page.
+2. On the **Assign Policy** page, set the **Scope** by selecting the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
 
-3. Select the ellipsis (…) next to **Policy definition** to open the list of available definitions. You can filter the initiative definition by entering **Azure Monitor** in the **Search** box:
+3. Select the ellipsis (…) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale2.png)
 
-4. The **Assignment name** is automatically populated with the policy name that you selected, but you can change it. You can also add an optional description to provide more information about this policy assignment. The **Assigned by** field is automatically filled based on who is signed in. This field is optional, and you can enter custom values.
+4. The **Assignment name** is automatically populated with the policy name that you selected, but you can change it. You can also add an optional description to provide more information about this policy assignment. The **Assigned by** field is automatically filled based on who is signed in. This field is optional, and it supports custom values.
 
 5. For this policy, select **Log Analytics workspace** for the Log analytics agent to associate.
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale3.png)
 
-6. Check the **Managed Identity location**. If this policy is the type [DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
+6. Check the **Managed Identity location**. If this policy is of the type [DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
 
 7. Select **Assign**.
 
 After you complete the wizard, the policy assignment will be deployed to the environment. It can take up to 30 minutes for the policy to take effect. To test it, create new VMs after 30 minutes, and check if the Microsoft Monitoring Agent is enabled on the VM by default.
 
-## Install required agents on on-premises servers
+## Install the required agents on on-premises servers
 
 > [!NOTE]
-> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before onboarding servers to Azure management services.
+> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before adding servers to Azure management services.
 
-For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. When you do this, specify the Workspace ID and key information. To get that informaiton, go to your Log Analytics workspace in the Azure portal and select **Settings** > **Advanced settings**.
+For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal and select **Settings** > **Advanced settings**.
 
 ![Screenshot of Log Analytics workspace advanced settings in the Azure portal](./media/onboarding-on-premises.png)
 
 ## Enable and configure solutions
 
-To enable solutions, you need to configure the Log Analytics workspace. Azure VMs that you've added and on-premises servers will get the solutions from the Log Analytics workspaces that they're connected to.
+To enable solutions, you need to configure the Log Analytics workspace. Azure VMs and on-premises servers will get the solutions from the Log Analytics workspaces that they're connected to.
 
 The following solutions are covered in this section:
 
@@ -90,11 +90,11 @@ The following solutions are covered in this section:
 
 ### Update Management
 
-Update Management, Change Tracking, and Inventory solutions require both a Log Analytics workspace and an Automation account. To ensure that these resources are properly configured, we recommend that you work through the Automation account. For more information, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
+The Update Management, Change Tracking, and Inventory solutions require both a Log Analytics workspace and an Automation account. To ensure that these resources are properly configured, we recommend that you work through your Automation account. For more information, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
 
-We recommend that you enable the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account#scope-configuration) is created in the workspace. You must manually update the scope to include machines covered by the update service.
+We recommend that you enable the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account#scope-configuration) is created in the workspace. Manually update the scope to include machines that are covered by the Update Management service.
 
-To cover all existing servers as well as future servers, you need to remove the scope configuration. To do this, view your Automation account in the Azure portal. Select **Update Management** > **Manage machine** > **Enable on all available and future machines**. This setting allows all Azure VMs that are connected to the workspace to use Update Management.
+To cover your existing servers as well as future servers, you need to remove the scope configuration. To do this, view your Automation account in the Azure portal. Select **Update Management** > **Manage machine** > **Enable on all available and future machines**. This setting allows all Azure VMs that are connected to the workspace to use Update Management.
 
 ![Screenshot of Update Management in the Azure portal](./media/onboarding-configuration1.png)
 
@@ -109,7 +109,7 @@ The Change Tracking solution is free for Azure VMs and costs $6 per node per mon
 1. Go to the Automation account that has Change Tracking and Inventory enabled.
 2. Select **Change tracking**.
 3. Select **Manage machines** in the upper-right pane.
-4. Select **Enable on selected machines**. Then, select **Add** next to the machine name.
+4. Select **Enable on selected machines**. Then select **Add** next to the machine name.
 5. Select **Enable** to enable the solution for those machines.
 
 ![Screenshot of Change Tracking in the Azure portal](./media/onboarding-configuration2.png)
@@ -135,28 +135,28 @@ To create or modify the saved search, follow these steps:
     ```
 
     > [!NOTE]
-    > The server name must exactly match the value included in the expression, and it shouldn't contain a domain name suffix.
+    > The server name must exactly match the value in the expression, and it shouldn't contain a domain name suffix.
 
-1. Select **Save**. By default, the Scope Configuration is linked to the **MicrosoftDefaultComputerGroup** saved search. It will be automatically updated.
+1. Select **Save**. By default, the scope configuration is linked to the **MicrosoftDefaultComputerGroup** saved search. It will be automatically updated.
 
 ### Azure Activity Log
 
 [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) is also part of Azure Monitor. It provides insight into subscription-level events that occur in Azure.
 
-To add this solution:
+To implement this solution:
 
 1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
 3. Search for **Activity Log Analytics** and select it.
 4. Select **Create**.
 
-You will need to specify the **Workspace name** of the workspace that you created in the previous section where the solution is enabled.
+You need to specify the **Workspace name** of the workspace that you created in the previous section where the solution is enabled.
 
 ### Azure Log Analytics Agent Health
 
-The Azure Log Analytics Agent Health solution gives you insight into the health, performance, and availability of your Windows and Linux servers.
+The Azure Log Analytics Agent Health solution reports on the health, performance, and availability of your Windows and Linux servers.
 
-To add this solution:
+To implement this solution:
 
 1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
@@ -171,7 +171,7 @@ After creation is complete, the workspace resource instance displays **AgentHeal
 
 The Antimalware Assessment solution helps you identify servers that are infected or at increased risk of infection by malware.
 
-To add this solution:
+To implement this solution:
 
 1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
@@ -184,18 +184,18 @@ After creation is complete, the workspace resource instance displays **AntiMalwa
 
 ### Azure Monitor for VMs
 
-You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You should not enable solutions directly from the **Solutions** page as you did for the other solutions described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
+You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
 
 ### Azure Security Center
 
-We recommend that you add all your servers at least to the Azure Security Center *Free* tier. This option gives you a basic level of security assessments and actionable security recommendations for your environment. If you upgrade to the *Standard* tier, you get additional benefits, which are discussed in detail on the [Security Center pricing page](https://docs.microsoft.com/azure/security-center/security-center-pricing).
+We recommend that you add all your servers at least to the Azure Security Center *Free* tier. This option provides a basic level of security assessments and actionable security recommendations for your environment. If you upgrade to the *Standard* tier, you get additional benefits, which are discussed in detail on the [Security Center pricing page](https://docs.microsoft.com/azure/security-center/security-center-pricing).
 
 To enable the Azure Security Center Free tier, follow these steps:
 
 1. Go to the **Security Center** portal page.
 2. Under **POLICY & COMPLIANCE**, select **Security policy**.
-3. Find the Log Analytics workspace resource that you  created in the pane on the right side.
-4. Select **Edit settings >** for that workspace.
+3. Find the Log Analytics workspace resource that you created in the pane on the right side.
+4. Select **Edit settings** for that workspace.
 5. Select **Pricing tier**.
 6. Choose the **Free** option.
 7. Select **Save**.
