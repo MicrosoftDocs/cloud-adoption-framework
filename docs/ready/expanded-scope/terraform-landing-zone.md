@@ -16,7 +16,7 @@ Azure provides native services for deploying your landing zones. Other third-par
 
 ## Purpose of the landing zone
 
-The Cloud Adoption Framework for Azure foundational landing zone for Terraform has a limited set of responsibilities and features to enforce logging, accounting, and security. This landing zone uses standard components known as Terraform modules to enforce consistency across resources deployed in the environment.
+The Cloud Adoption Framework foundational landing zone for Terraform has a limited set of responsibilities and features to enforce logging, accounting, and security. This landing zone uses standard components known as Terraform modules to enforce consistency across resources deployed in the environment.
 
 ## Use standard modules
 
@@ -95,7 +95,7 @@ You can [clone your Terraform foundation landing zone](https://github.com/micros
 
 Let's look at the different variable sections.
 
-In this first object, we create two resource groups in the `southeastasia` region named "-hub-core-sec" and "-hub-core-sec" along with a prefix added at runtime.
+In this first object, we create two resource groups in the `southeastasia` region named `-hub-core-sec` and `-hub-operations` along with a prefix added at runtime.
 
 ```hcl
 resource_groups_hub = {
@@ -200,4 +200,4 @@ Layering landing zones is a good practice for decoupling systems, versioning eac
 Future reference architectures will demonstrate this concept for a hub-and-spoke topology.
 
 > [!div class="nextstepaction"]
-> [Review the foundation landing zone sample by using Terraform](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready)
+> [Review the foundation Terraform landing zone sample](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready)

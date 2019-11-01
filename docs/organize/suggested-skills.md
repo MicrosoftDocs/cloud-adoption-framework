@@ -72,4 +72,4 @@ The following are a few examples of role-specific learning paths on Microsoft Le
 
 ## Learn more
 
-For additional learning paths, browse the [Microsoft Learn catalog](/learn/browse). Use the Roles filter to align learning paths with your role.
+For additional learning paths, browse the [Microsoft Learn catalog](https://docs.microsoft.com/learn/browse). Use the Roles filter to align learning paths with your role.

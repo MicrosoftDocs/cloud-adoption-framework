@@ -40,9 +40,9 @@ If your organization currently lacks established logging and reporting systems, 
 
 In this scenario, all log data is recorded and stored in the cloud, while the logging and reporting tools that process and surface information to IT staff are provided by the Azure platform and Azure Monitor.
 
-CustomAzure Monitor-based logging solutions can be implemented ad hoc for each subscription or workload in smaller or experimental deployments, and are organized in a centralized manner to monitor log data across your entire cloud estate.
+Custom Azure Monitor-based logging solutions can be implemented ad hoc for each subscription or workload in smaller or experimental deployments, and are organized in a centralized manner to monitor log data across your entire cloud estate.
 
-**Cloud-native assumptions.** Using a cloud-native logging and reporting system assumes the following:
+**Cloud-native assumptions:** Using a cloud-native logging and reporting system assumes the following:
 
 - You do not need to integrate the log data from you cloud workloads into existing on-premises systems.
 - You will not be using your cloud-based reporting systems to monitor on-premises systems.
@@ -82,7 +82,7 @@ A hybrid monitoring solution combines log data from both your on-premises and cl
 
 If you have an existing investment in on-premises monitoring systems that would be difficult or costly to replace, you may need to integrate the telemetry from your cloud workloads into preexisting on-premises monitoring solutions. In a hybrid on-premises monitoring system, on-premises telemetry data continues to use the existing on-premises monitoring system. Cloud-based telemetry data is either sent to the on-premises monitoring system directly, or the data is sent to Azure Monitor then compiled and ingested into the on-premises system at regular intervals.
 
-**On-premises hybrid monitoring assumptions.** Using an on-premises logging and reporting system for hybrid monitoring assumes the following:
+**On-premises hybrid monitoring assumptions:** Using an on-premises logging and reporting system for hybrid monitoring assumes the following:
 
 - You need to use existing on-premises reporting systems to monitor cloud workloads.
 - You need to maintain ownership of log data on-premises.
