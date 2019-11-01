@@ -29,7 +29,7 @@ How you answer those questions, and the criteria for alerting, determines how yo
 
 ## Develop a monitoring configuration
 
-The monitoring service owner and team typically follow a common set of activities to develop a monitoring configuration. These activities start at the initial planning stages, continue through testing and validating in a nonproduction environment, and extend to deploying into production. Monitoring configurations are derived from known failure modes, test results of simulated failures, and the experience of several people in the organization (the service desk, operations, engineers, and developers). Such configurations assume that the service already exists, is being migrated to the cloud, and hasn't been re-architected.
+The monitoring service owner and team typically follow a common set of activities to develop a monitoring configuration. These activities start at the initial planning stages, continue through testing and validating in a nonproduction environment, and extend to deploying into production. Monitoring configurations are derived from known failure modes, test results of simulated failures, and the experience of several people in the organization (the service desk, operations, engineers, and developers). Such configurations assume that the service already exists, it's being migrated to the cloud, and it hasn't been rearchitected.
 
 For service-level quality results, monitor the health and availability of these services early in the development process. If you monitor the design of that service or application as an afterthought, your results won't be as successful.
 

@@ -83,7 +83,7 @@ The articles in the series are summarized below.
 [Rehost an app on an Azure VM and SQL Database Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift and shift migration to Azure for an on-premises app. This involves migrating the app front-end VM using [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview), and the app database to an Azure SQL Database Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
 [Rehost an app on Azure VMs and in a SQL Server Always On availability group](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure hosted SQL Server VMs. It uses Site Recovery to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group.
 
-### ASP.NET / PHP / Java apps
+### ASP.NET, PHP, and Java apps
 
 **Article** | **Details**
 --- | ---

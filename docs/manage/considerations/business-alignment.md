@@ -25,7 +25,7 @@ Fortunately, the process of developing a cloud adoption strategy and cloud adopt
 - **[Commitment](./commitment.md):** Developing true partnerships, by creating and documenting agreements *with the business*.
 
 > [!NOTE]
-> Underlying these three terms are classic IT terms such as SLA, RTO, and RPO. Mapping specific business and IT terms is covered in more detail in the [Commitment](./commitment.md) article.
+> Underlying these terms are classic IT terms such as SLA, RTO, and RPO. Mapping specific business and IT terms is covered in more detail in the [Commitment](./commitment.md) article.
 
 ## Ops Management planning workbook
 

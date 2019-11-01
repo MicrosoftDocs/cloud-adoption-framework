@@ -39,9 +39,9 @@ Each suggested management level can call on a variety of cloud management discip
 
 In most cases, the previously discussed *management baseline level* consists of processes and tools from the following disciplines. In each case, a few processes and tools are highlighted to demonstrate *enhanced baseline functions*.
 
-- **Inventory and visibility:**: At a minimum, a management baseline should include a means of inventorying assets and creating visibility into the run state of each asset.
-- **Operational compliance:**: Regular management of configuration, sizing, cost, and performance of assets is key to maintaining performance expectations and a management baseline.
-- **Protect and recover:**: Minimizing operational interruptions and expediting recovery can help you avoid performance losses and revenue impacts. Detection and recovery are essential aspects of this discipline within any management baseline.
+- **Inventory and visibility:** At a minimum, a management baseline should include a means of inventorying assets and creating visibility into the run state of each asset.
+- **Operational compliance:** Regular management of configuration, sizing, cost, and performance of assets is key to maintaining performance expectations and a management baseline.
+- **Protect and recover:** Minimizing operational interruptions and expediting recovery can help you avoid performance losses and revenue impacts. Detection and recovery are essential aspects of this discipline within any management baseline.
 
 The platform specialization level of management pulls from the processes and tools that are aligned with the platform operations disciplines. Likewise, the workload specialization level of management pulls from the processes and tools that are aligned with the workload operations disciplines.
 

@@ -22,7 +22,7 @@ Unfortunately, customers often take a myopic view that leads to decisions based 
 
 A variety of applications and ambient experiences use data to make predictions:
 
-- **eCommerce:** Based on what other similar consumers have purchased, an eCommerce website suggests products that may be worth adding to your cart.
+- **E-commerce:** Based on what other similar consumers have purchased, an e-commerce website suggests products that may be worth adding to your cart.
 - **Adjusted reality:** IoT offers more advanced instances of predictive functionality. For example, a device on an assembly line detects a rise in a machine's temperature. A cloud-based predictive model determines how to respond. Based on that prediction, another device slows down the assembly line until the machine can cool.
 - **Consumer products:** Cell phones, smart homes, even your car, all use predictive capabilities, which they exploit to suggest user behavior based on factors like location or time of day. When a prediction and the initial hypothesis are aligned, the prediction leads to action. At a very mature stage, this alignment can make products like a self-driving car a reality.
 

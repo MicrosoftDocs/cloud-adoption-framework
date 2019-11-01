@@ -63,7 +63,7 @@ For more information, see [Update Management solution](https://docs.microsoft.co
 To apply a policy to a resource group:
 
 1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts).
-1. Select **automation accounts**, and choose one of the listed accounts.
+1. Select **Automation accounts**, and choose one of the listed accounts.
 1. Go to **Configuration Management**.
 1. **Inventory**, **Change Management**, and **State Configuration** can be used to control the state and operational compliance of the managed VMs.
 

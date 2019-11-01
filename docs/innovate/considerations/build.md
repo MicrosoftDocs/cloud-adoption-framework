@@ -76,7 +76,7 @@ Typically, an MVP solution consists of a simple web app or data solution with mi
 - A predictive algorithm that's wrong 99% of the time but that demonstrates specific desired outcomes.
 - An IoT device that doesn't communicate securely at production scale but that demonstrates the value of nearly real-time data within a process.
 - An application built by a citizen developer to test a hypothesis or meet smaller-scale needs.
-- A manual process that recreates the benefits of the application to follow.
+- A manual process that re-creates the benefits of the application to follow.
 - A wireframe or video that's detailed enough to allow the customer to interact.
 
 Developing an MVP shouldn't require massive amounts of development investment. Preferably, investment should be as constrained as possible to minimize the number of hypotheses being tested at one time. Then, in each iteration and with each release, the solution is intentionally improved toward a scale-ready solution that represents multiple disciplines of invention.

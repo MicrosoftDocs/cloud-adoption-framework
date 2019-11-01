@@ -12,7 +12,7 @@ ms.subservice: operate
 
 # Business criticality in cloud management
 
-Across every business, there exist a small number of workloads that are too important to fail. They're considered to be mission critical. When those workloads experience outages or performance degradation, the adverse impact on revenue and profitability can be felt across the entire company. 
+Across every business, there exist a small number of workloads that are too important to fail. They're considered to be mission critical. When those workloads experience outages or performance degradation, the adverse impact on revenue and profitability can be felt across the entire company.
 
 At the other end of the spectrum, some workloads can go months at a time without being used. Poor performance or outages for those workloads is not desirable, but the impact is isolated and limited.
 
@@ -25,20 +25,20 @@ The following diagram illustrates a common alignment between the criticality sca
 
 The first step in any business criticality alignment effort is to create a criticality scale. The following table presents a sample scale to be used as a reference, or template, for creating your own scale.
 
-| Criticality   | Business view   | 
-| --------- | --------- | 
-| Mission Critical |  Affects the company's mission and might noticeably affect corporate profit-and-loss statements. | 
-| Unit Critical | Affects the mission of a specific business unit and its profit-and-loss statements. | 
-| High | Might not hinder the mission, but affects high-importance processes. Measurable losses can be quantified in the case of outages. | 
-| Medium | Impact on processes is likely. Losses are low or immeasurable, but brand damage or upstream losses are likely. | 
-| Low | Impact on business processes isn't measurable. Neither brand damage nor upstream losses are likely. Localized impact on a single team is likely. | 
-| Unsupported | No business owner, team, or process that's associated with this workload can justify any investment in the ongoing management of the workload. | 
+| Criticality | Business view |
+| --------- | --------- |
+| Mission-critical |  Affects the company's mission and might noticeably affect corporate profit-and-loss statements. |
+| Unit-critical | Affects the mission of a specific business unit and its profit-and-loss statements. |
+| High | Might not hinder the mission, but affects high-importance processes. Measurable losses can be quantified in the case of outages. |
+| Medium | Impact on processes is likely. Losses are low or immeasurable, but brand damage or upstream losses are likely. |
+| Low | Impact on business processes isn't measurable. Neither brand damage nor upstream losses are likely. Localized impact on a single team is likely. |
+| Unsupported | No business owner, team, or process that's associated with this workload can justify any investment in the ongoing management of the workload. |
 
 It's common for businesses to include additional criticality classifications that are specific to their industry, vertical, or specific business processes. Examples of additional classifications include:
 
-- **Compliance-critical**: In heavily regulated industries, some workloads might be critical as part of an effort to maintain compliance requirements.
-- **Security-critical**: Some workloads might not be mission critical, but outages could result in loss of data or unintended access to protected information.
-- **Safety-critical**: When lives or the physical safety of employees and customers is at risk during an outage, it can be wise to classify workloads as safety-critical.
+- **Compliance-critical:** In heavily regulated industries, some workloads might be critical as part of an effort to maintain compliance requirements.
+- **Security-critical:** Some workloads might not be mission critical, but outages could result in loss of data or unintended access to protected information.
+- **Safety-critical:** When lives or the physical safety of employees and customers is at risk during an outage, it can be wise to classify workloads as safety-critical.
 
 ## Importance of accurate criticality
 

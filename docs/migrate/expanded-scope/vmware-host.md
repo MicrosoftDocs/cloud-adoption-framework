@@ -1,7 +1,7 @@
 ---
-title: "Accelerate migration with VMWare hosts"
+title: "Accelerate migration with VMware hosts"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Accelerate migration with VMWare hosts
+description: Accelerate migration with VMware hosts
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/10/2019
@@ -10,13 +10,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Accelerate migration with VMWare hosts
+# Accelerate migration with VMware hosts
 
-Migrating entire VMWare hosts can move multiple workloads and several assets in a single migration effort. The following guidance expands the scope of the [Azure migration guide](../azure-migration-guide/index.md) through a VMWare host migration. Most of the effort required in this scope expansion occurs during the prerequisites and migration processes of a migration effort.
+Migrating entire VMware hosts can move multiple workloads and several assets in a single migration effort. The following guidance expands the scope of the [Azure migration guide](../azure-migration-guide/index.md) through a VMware host migration. Most of the effort required in this scope expansion occurs during the prerequisites and migration processes of a migration effort.
 
 ## Suggested prerequisites
 
-When migrating your first VMWare host to Azure, you must meet a number of prerequisites to prepare identity, network, and management requirements. After these prerequisites are met, each additional host should require significantly less effort to migrate. The following sections provide more detail about the prerequisites.
+When migrating your first VMware host to Azure, you must meet a number of prerequisites to prepare identity, network, and management requirements. After these prerequisites are met, each additional host should require significantly less effort to migrate. The following sections provide more detail about the prerequisites.
 
 ### Secure your Azure environment
 
@@ -39,15 +39,15 @@ After the management requirements are established, you can establish private clo
 
 ### Integration with the cloud adoption plan
 
-After you've met the other prerequisites, you should include each VMWare host in the [cloud adoption plan](../../plan/template.md). Within the cloud adoption plan, add each host to be migrated, as a [distinct workload](../../plan/workloads.md). Within each workload, add the VMs to be migrated as [assets](../../plan/workloads.md). To add workloads and assets to the adoption plan in bulk, see [adding/editing work items with Excel](https://docs.microsoft.com/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel?view=azure-devops).
+After you've met the other prerequisites, you should include each VMware host in the [cloud adoption plan](../../plan/template.md). Within the cloud adoption plan, add each host to be migrated, as a [distinct workload](../../plan/workloads.md). Within each workload, add the VMs to be migrated as [assets](../../plan/workloads.md). To add workloads and assets to the adoption plan in bulk, see [adding/editing work items with Excel](https://docs.microsoft.com/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel?view=azure-devops).
 
 ## Migrate process changes
 
-During each iteration, the adoption team works through the backlog to migrate the highest priority workloads. The process doesn't really change for VMWare hosts. When the next workload on the backlog is a VMWare host, the only change will be the tool used.
+During each iteration, the adoption team works through the backlog to migrate the highest priority workloads. The process doesn't really change for VMware hosts. When the next workload on the backlog is a VMware host, the only change will be the tool used.
 
 You can use the following tools in the migration effort:
 
-- [Native VMWare tools](https://docs.microsoft.com/azure/vmware-cloudsimple/migrate-workloads?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
+- [Native VMware tools](https://docs.microsoft.com/azure/vmware-cloudsimple/migrate-workloads?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
 - [Azure Data Box](https://docs.microsoft.com/azure/vmware-cloudsimple/migration-using-azure-data-box?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
 
 Alternatively, you can migrate workloads through a disaster recovery failover by using the following tools:
