@@ -27,7 +27,7 @@ The inflection point in this guide depends on several key decisions that your cl
 
 Small single-region deployments of fewer than 1,000 VMs are less likely to be significantly affected by this inflection point. Conversely, large adoption efforts with more than 1,000 VMs, multiple business units, or multiple geopolitical markets, could be substantially affected by your SDN decision and this key inflection point.
 
-## Choosing the right virtual networking architectures
+## Choose the right virtual networking architectures
 
 This section expands on the decision guide to help you choose the right virtual networking architectures.
 

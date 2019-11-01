@@ -129,7 +129,7 @@ Azure Monitor doesn't provide a user-definable method of implementing a service 
 
 - **Azure Monitor for containers:** Monitors the performance and health of Azure Kubernetes Service or Azure Container Instances. It collects memory and processor metrics from controllers, nodes, and containers that are available in Kubernetes through the Metrics API. It also collects container logs and inventory data about containers and their images. Predefined health criteria that are based on the collected performance data help you identify whether a resource bottleneck or capacity issue exists. You can also understand the overall performance, or the performance from a specific Kubernetes object type (pod, node, controller, or container).
 
-## Analyzing data
+## Analyze data
 
 ### Operations Manager
 
@@ -173,7 +173,7 @@ Workflows in Operations Manager are independent of each other, which makes analy
 
 Azure Monitor separates data collection from actions and analysis taken from that data. Agents and other data sources write log data to a Log Analytics workspace and write metric data to the metric database, without any analysis of that data or knowledge of how it might be used. Monitor performs alerting and other actions from the stored data, which allows you to perform analysis across data from all sources.
 
-## Extending base platform
+## Extend the base platform
 
 ### Operations Manager
 

@@ -31,7 +31,7 @@ This section of the Cloud Adoption Framework provides an actionable operating mo
 - [Manage](../manage/index.md): Align ongoing processes for operational management of the technology to maximize value attainment and minimize disruptions.
 - [Organize](../organize/index.md): As the operating model matures, so will the organization of various teams and capabilities supporting the operating model.
 
-## Aligning operating models
+## Align operating models
 
 The cloud and the digital economy have exposed the need for multiple operating models. Sometimes this need is driven by a requirement to support multiple public clouds. More commonly, the need is highlighted by the transition from on-premises to the cloud. In either scenario, it's important to align operating models for maximum performance and minimum redundancy.
 

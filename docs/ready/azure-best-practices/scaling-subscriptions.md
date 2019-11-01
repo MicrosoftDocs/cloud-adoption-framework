@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Scaling with multiple Azure subscriptions
+# Scale with multiple Azure subscriptions
 
 Organizations often need more than one Azure subscription as a result of resource limits and other governance considerations. Having a strategy for scaling your subscriptions is important.
 
@@ -56,7 +56,7 @@ You might also opt to create additional subscriptions for other business or tech
 
 You can move many types of resources from one subscription to another or use automated deployments to migrate resources to another subscription. For more information, see [Move Azure resources to another resource group or subscription](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-move-resources).
 
-## Managing multiple subscriptions
+## Manage multiple subscriptions
 
 If you have only a few subscriptions, managing them independently is relatively simple. But if you have many subscriptions, you should consider creating a management-group hierarchy to simplify managing your subscriptions and resources.
 

@@ -334,7 +334,7 @@ You can implement a highly reliable cloud messaging service between applications
 
 ![10][10]
 
-### Making a virtual datacenter highly available: multiple virtual datacenters
+### Make a virtual datacenter highly available: multiple virtual datacenters
 
 So far, this article has focused on the design of a single virtual datacenter, describing the basic components and architecture that contribute to resiliency. Azure features such as Azure load balancer, NVAs, availability sets, scale sets, along with other mechanisms contribute to a system that enables you to build solid SLA levels into your production services.
 

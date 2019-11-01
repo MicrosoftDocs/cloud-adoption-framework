@@ -20,7 +20,7 @@ In the foundational adoption stage, our goal is to deploy a simple workload to A
 - Identity management for a single **workload owner** who is responsible for deploying and maintaining the simple workload. The workload owner requires permission to create, read, update, and delete resources as well as permission to delegate these rights to other users in the identity management system.
 - Manage all resources for the simple workload as a single management unit.
 
-## Licensing Azure
+## Azure licensing
 
 Before you begin designing our governance model, it's important to understand how Azure is licensed. This is because the administrative accounts associated with your Azure license have the highest level of access to your Azure resources. These administrative accounts form the basis of your governance model.
 
@@ -94,7 +94,7 @@ The lowest level of management scope is at the **resource** level. Operations ap
 
 The **workload owner** inherits the owner role at the resource scope, which means the workload owner has all permissions for the virtual network.
 
-## Implementing the basic resource access management model
+## Implement the basic resource access management model
 
 Let's move on to learn how to implement the governance model designed earlier.
 

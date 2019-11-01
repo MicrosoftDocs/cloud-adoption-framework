@@ -26,7 +26,7 @@ A variety of applications and ambient experiences use data to make predictions:
 - **Adjusted reality:** IoT offers more advanced instances of predictive functionality. For example, a device on an assembly line detects a rise in a machine's temperature. A cloud-based predictive model determines how to respond. Based on that prediction, another device slows down the assembly line until the machine can cool.
 - **Consumer products:** Cell phones, smart homes, even your car, all use predictive capabilities, which they exploit to suggest user behavior based on factors like location or time of day. When a prediction and the initial hypothesis are aligned, the prediction leads to action. At a very mature stage, this alignment can make products like a self-driving car a reality.
 
-## Developing predictive capabilities
+## Develop predictive capabilities
 
 Solutions that consistently provide accurate predictive capabilities commonly include five core characteristics: *data*, *insights*, *patterns*, *predictions*, and *interactions*. Each aspect is required to develop predictive capabilities. Like all great innovations, the development of predictive capabilities requires a [commitment to iteration](./index.md#commitment-to-iteration). In each iteration, one or more of the following characteristics is matured to validate increasingly complex customer hypotheses.
 

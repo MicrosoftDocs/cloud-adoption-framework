@@ -481,13 +481,13 @@
           items:
           - name: Overview
             href: migrate/migration-considerations/prerequisites/index.md
-          - name: Decisions that affect migration activities
+          - name: Decisions that affect migration
             href: migrate/migration-considerations/prerequisites/decisions.md
           - name: Environment planning checklist
             href: migrate/migration-considerations/prerequisites/planning-checklist.md
           - name: Align roles and responsibilities
             href: migrate/migration-considerations/prerequisites/cultural-complexity.md
-          - name: Structure backlogs to manage change
+          - name: Agile change management
             href: migrate/migration-considerations/prerequisites/technical-complexity.md
           - name: Migration backlog review
             href: migrate/migration-considerations/prerequisites/migration-backlog-review.md
@@ -497,31 +497,31 @@
             href: migrate/migration-considerations/assess/index.md
           - name: Keep priorities aligned
             href: migrate/migration-considerations/assess/business-priorities.md
-          - name: Evaluate workload and asset readiness
+          - name: Evaluate workload readiness
             href: migrate/migration-considerations/assess/evaluate.md
           - name: Architect workloads
             href: migrate/migration-considerations/assess/architect.md
           - name: Estimate cloud costs
             href: migrate/migration-considerations/assess/estimate.md
-          - name: Engage migration partners and support
+          - name: Understand partnership options
             href: migrate/migration-considerations/assess/partnership-options.md
-          - name: Manage incremental processes
+          - name: Manage change
             href: migrate/migration-considerations/assess/release-iteration-backlog.md
-          - name: Change approval processes
+          - name: Approve architecture changes
             href: migrate/migration-considerations/assess/approve.md
         - name: Migrate individual assets
           items:
           - name: Overview
             href: migrate/migration-considerations/migrate/index.md
-          - name: Promotion models - single-step, staged, or flight
+          - name: Promotion models
             href: migrate/migration-considerations/migrate/promotion-models.md
-          - name: Remediation tasks
+          - name: Remediate assets
             href: migrate/migration-considerations/migrate/remediate.md
-          - name: Replicate assets to the cloud
+          - name: Replicate assets
             href: migrate/migration-considerations/migrate/replicate.md
           - name: Replicate options
             href: migrate/migration-considerations/migrate/replicate-options.md
-          - name: Stage workloads for testing and promotion
+          - name: Stage workloads
             href: migrate/migration-considerations/migrate/stage.md
         - name: Optimize and promote workloads
           items:
@@ -531,15 +531,15 @@
             href: migrate/migration-considerations/optimize/business-change-plan.md
           - name: Business testing
             href: migrate/migration-considerations/optimize/business-test.md
-          - name: Benchmark and optimize assets
+          - name: Benchmark and resize assets
             href: migrate/migration-considerations/optimize/optimize.md
-          - name: Ready for promotion
+          - name: Prepare for promotion
             href: migrate/migration-considerations/optimize/ready.md
-          - name: Promote workloads to production
+          - name: Promote to production
             href: migrate/migration-considerations/optimize/promote.md
           - name: Decommission retired assets
             href: migrate/migration-considerations/optimize/decommission.md
-          - name: Retrospective
+          - name: Conduct retrospectives
             href: migrate/migration-considerations/optimize/retrospective.md
         - name: Secure and manage workloads in production
           items:

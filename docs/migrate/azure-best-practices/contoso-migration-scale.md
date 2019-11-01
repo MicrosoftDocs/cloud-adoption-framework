@@ -216,7 +216,7 @@ Azure Site Recovery is the primary Azure service for orchestrating disaster reco
 
 Contoso already [completed a POC](./contoso-migration-rehost-vm.md) to see how Site Recovery can help them to migrate to the cloud.
 
-##### Using Site Recovery at scale
+##### Use Site Recovery at scale
 
 Contoso plans to perform multiple lift and shift migrations. To ensure this works, Site Recovery will be replicating batches of around 100 VMs at a time. To figure out how this will work, Contoso needs to perform capacity planning for the proposed Site Recovery migration.
 
@@ -276,7 +276,7 @@ The Azure Database Migration Service is a fully managed service that enables sea
 
 DMS isn't the only Microsoft database migration tool. Get a [comparison of tools and services](https://blogs.msdn.microsoft.com/datamigration/2017/10/13/differentiating-microsofts-database-migration-tools-and-services).
 
-##### Using DMS at scale
+##### Use DMS at scale
 
 Contoso will use DMS when migrating from SQL Server.
 
@@ -286,7 +286,7 @@ Contoso will use DMS when migrating from SQL Server.
 
 - Another scaling tactic for Contoso is temporarily scale up the Azure SQL or MySQL Database target instance to the Premium tier SKU during the data migration. This minimizes database throttling that could affect data transfer activities when using lower-level SKUs.
 
-##### Using other tools
+##### Use other tools
 
 In addition to DMS, Contoso can use other tools and services to identify VM information.
 

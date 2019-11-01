@@ -18,7 +18,7 @@ _Protect and recover_ is the third and final discipline in any cloud-management 
 
 ![Cloud Management Baseline](../../_images/manage/management-baseline.png)
 
-In [Operational compliance in Azure](.\operational-compliance.md) the objective is to reduce the likelihood of a business interruption. The current article aims to reduce the duration and impact of outages that can't be prevented.
+In [Operational compliance in Azure](./operational-compliance.md) the objective is to reduce the likelihood of a business interruption. The current article aims to reduce the duration and impact of outages that can't be prevented.
 
 For any enterprise-grade environment, this table outlines the suggested minimum for any management baseline:
 

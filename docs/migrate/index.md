@@ -125,7 +125,7 @@ At its core, migration to the cloud consists of four simple phases: Assess, Migr
 
 ![Cloud Adoption Framework migration model](../_images/operational-transformation-migrate.png)
 
-## Creating a balanced cloud portfolio
+## Create a balanced cloud portfolio
 
 Any balanced technology portfolio has a mixture of assets in various states. Some applications are scheduled for retirement and given minimal support. Other applications or assets are supported in a maintenance state, but the features of those solutions are stable. For newer business processes, changing market conditions will likely spur ongoing feature enhancements or modernization. When opportunities to drive new revenue streams arise, new applications or assets are introduced into the environment. At each stage of an asset's lifecycle, the impact any investment has on revenue and profit will change. The later the lifecycle stage, the less likely a new feature or modernization effort will yield a strong return on investment.
 

@@ -22,7 +22,7 @@ While cloud design guides should take into account some of the technical details
 
 <!-- markdownlint-enable MD033 -->
 
-## Using the actionable governance guides
+## Use the actionable governance guides
 
 If you're planning to use the Azure platform for your cloud adoption, the Cloud Adoption Framework provides [actionable governance guides](../guides/index.md) illustrating the incremental approach of the Cloud Adoption Framework governance model. These narrative guides cover a range of common adoption scenarios, including the business risks, tolerance requirements, and policy statements that went into creating a governance minimum viable product (MVP). These guides represent a synthesis of real-world customer experience of the cloud adoption process in Azure.
 

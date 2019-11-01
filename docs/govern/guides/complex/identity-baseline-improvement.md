@@ -26,7 +26,7 @@ The business justification for the cloud migration of the two datacenters was ap
 
 The first two roadblocks are being managed in parallel. This article will address the resolution of the third and fourth roadblocks.
 
-### Expanding the cloud governance team
+### Expand the cloud governance team
 
 The cloud governance team is expanding. Given the need for additional support regarding identity management, a systems administrator from the Identity Baseline team now participates in a weekly meeting to keep the existing team members aware of changes.
 

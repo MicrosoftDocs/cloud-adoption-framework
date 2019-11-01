@@ -57,7 +57,7 @@ To begin your cloud adoption journey, choose one of the following governance gui
 
 ## An incremental approach to cloud governance
 
-## Choosing a governance guide
+## Choose a governance guide
 
 The guides demonstrate how to implement a governance MVP. From there, each guide shows how the cloud governance team can work ahead of the cloud adoption teams as a partner to accelerate adoption efforts. The Cloud Adoption Framework governance model guides the application of governance from foundation through subsequent improvements and evolutions.
 

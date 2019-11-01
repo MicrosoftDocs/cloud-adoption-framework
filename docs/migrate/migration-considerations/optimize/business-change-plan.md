@@ -26,7 +26,7 @@ Although approaches may vary, general themes are present in most user adoption p
 
 These themes are often based on the assumption that introduction of new solutions to users should focus largely on risk control and facilitation of change. Additionally, IT has focused mostly on risk from the technology change and facilitation of that change.
 
-## Creating business change plans
+## Create business change plans
 
 A business change plan looks beyond the technical change and assumes that every release in a migration effort drives some level of business process change. It looks upstream and downstream from the technical changes. The following questions help participants think about user adoption from a business change perspective, to maximize business impact:
 
