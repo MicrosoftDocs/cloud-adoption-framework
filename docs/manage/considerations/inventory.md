@@ -14,10 +14,11 @@ ms.subservice: operate
 
 Operational management has a clear dependency on data. Consistent management requires an understanding about what is managed (inventory) and how those managed workloads and assets change over time (visibility). Clear insights about inventory and visibility help empower the team to manage the environment effectively. All other operational management activities and processes build on these two areas.
 
-A few classic phrases about the importance of measurements set the tone for this article: 
-- Manage what matters. 
-- You can only manage what you can measure. 
-- If you can't measure it, it might not matter. 
+A few classic phrases about the importance of measurements set the tone for this article:
+
+- Manage what matters.
+- You can only manage what you can measure.
+- If you can't measure it, it might not matter.
 
 The inventory and visibility discipline builds on these timeless phrases. Before you can effectively establish operational management processes, it's important to gather data and create the right level of visibility for the right teams.
 
@@ -53,7 +54,7 @@ When you establish commitments for each workload, [management responsibility](./
 
 ### Inventory
 
-If no one knows that an asset exists, it's very difficult for the asset to be managed. Before an asset or workload can be managed, it must be inventoried and classified. The first technical step toward stable operations is a validation of inventory and classification of that inventory.
+If no one knows that an asset exists, it's difficult to manage the asset. Before an asset or workload can be managed, it must be inventoried and classified. The first technical step toward stable operations is a validation of inventory and classification of that inventory.
 
 ### Central logging
 
@@ -75,11 +76,11 @@ The ongoing health and operations of the network, DNS, operating systems, and ot
 
 Perhaps more important than the features of the cloud management platform, the cloud management processes will realize operations commitments with the business. Any cloud management methodology should include, at minimum, the following processes:
 
-- **Reactive monitoring**: When deviations adversely affect business operations, who addresses those deviations? What actions do they take to remediate the deviations?
-- **Proactive monitoring**: When deviations are detected but business operations are not affected, how are those deviations addressed, and by whom?
-- **Commitment reporting**: How is adherence to the business commitment communicated to business stakeholders?
-- **Budgetary reviews**: What is the process for reviewing those commitments against budgeted costs? What is the process for adjusting the deployed solution or the commitments to create alignment?
-- **Escalation paths**: What escalation paths are available when any of the preceding processes fail to meet the needs of the business?
+- **Reactive monitoring:** When deviations adversely affect business operations, who addresses those deviations? What actions do they take to remediate the deviations?
+- **Proactive monitoring:** When deviations are detected but business operations are not affected, how are those deviations addressed, and by whom?
+- **Commitment reporting:** How is adherence to the business commitment communicated to business stakeholders?
+- **Budgetary reviews:** What is the process for reviewing those commitments against budgeted costs? What is the process for adjusting the deployed solution or the commitments to create alignment?
+- **Escalation paths:** What escalation paths are available when any of the preceding processes fail to meet the needs of the business?
 
 There are several more processes related to inventory and visibility. The preceding list is designed to provoke thought within the operations team. Answering these questions will help develop some of the necessary processes, as well as likely trigger new, deeper questions.
 

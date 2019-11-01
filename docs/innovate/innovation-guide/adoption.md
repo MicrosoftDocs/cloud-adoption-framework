@@ -160,7 +160,7 @@ To view current deployments in your pipeline:
 
 1. Go to **App Services**.
 2. Select the desired application from the list.
-3. Select **Deployment Center** in the **Deployment** section of the app services pane.
+3. Select **Deployment Center** in the **Deployment** section of the App Services pane.
 
 ::: zone target="chromeless"
 

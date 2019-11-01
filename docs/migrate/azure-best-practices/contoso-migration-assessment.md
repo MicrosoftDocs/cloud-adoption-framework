@@ -256,7 +256,7 @@ Set up a new Azure Migrate project as follows.
 
 1. In **Migration Goals** > **Servers** > **Azure Migrate: Server Assessment**, **click Discover**.
 
-2. In **Discover machines** > **Are your machines virtualized?**, click **Yes, with VMWare vSphere hypervisor**.
+2. In **Discover machines** > **Are your machines virtualized?**, click **Yes, with VMware vSphere hypervisor**.
 
 3. Click **Download** to download the .OVA template file.
 
@@ -274,7 +274,7 @@ Before deploying the VM, Contoso checks that the OVA file is secure:
     **Example:**
 
     ```C:\>CertUtil -HashFile C:\AzureMigrate\AzureMigrate.ova SHA256```
-3. The generated hash should match the hash values listed in the [Verify security](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware#verify-security) section of the [Assess VMWare VMs for migration](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware) tutorial.
+3. The generated hash should match the hash values listed in the [Verify security](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware#verify-security) section of the [Assess VMware VMs for migration](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware) tutorial.
 
 ### Create the collector appliance
 
@@ -389,6 +389,7 @@ Contoso runs the installation on each VM.
     `sudo -i`
 
 3. Contoso installs the MMA:
+
     - Contoso enters the workspace ID and key in the command.
     - Commands are for 64-bit.
     - The workspace ID and primary key are located in the Log Analytics workspace in the Azure portal. Select **Settings**, and then select the **Connected Sources** tab.

@@ -18,7 +18,7 @@ In return, the investment in workload operations can lead to improved performanc
 
 ## When to invest in workload operations
 
-The *Pareto Principle* (also known as the *80/20 Rule*) states that 80 percent of effects come from 20 percent of the causes. When IT portfolios are allowed to grow organically over time, this rule can commonly be seen illustrated in a review of the IT portfolio. Depending on the effect that requires investment, the cause can vary but the general principle holds true:
+The _Pareto Principle_ (also known as the _80/20 Rule_) states that 80 percent of effects come from 20 percent of the causes. When IT portfolios are allowed to grow organically over time, this rule is often illustrated in a review of the IT portfolio. Depending on the effect that requires investment, the cause can vary but the general principle holds true:
 
 - 80 percent of system failures tend to be the result of 20 percent of the common errors or bugs.
 - 80 percent of business value tends to come from 20 percent of the workloads in a portfolio.
@@ -44,7 +44,7 @@ Initial data and ongoing telemetry can help formulate and test theories about th
 
 At the application level, the first requirements of workload operations, is an investment in deep testing. For any application that's supported through workload operations, a test plan should be established and regularly executed to deliver functional and scale testing across the applications.
 
-Regular test telemetry can provide immediate validation of various hypotheses about the operation of the workload. Improving operational and architectural patterns can be executed and tested. The result deltas provide a clear impact analysis to guide continued investments.
+Regular test telemetry can provide immediate validation of various hypotheses about the operation of the workload. Improving operational and architectural patterns can be executed and tested. The resulting deltas provide a clear impact analysis to guide continued investments.
 
 ### Understand releases
 
@@ -52,7 +52,7 @@ A clear understanding of release cycles and release pipelines is an important el
 
 An understanding of cycles can prepare for potential interruptions and allow the team to proactively address any releases that might produce an adverse effect on operations. This understanding also allows the cloud management team to partner with adoption teams to continuously improve the quality of the product and address any bugs that might affect stability.
 
-More importantly, an understanding of release pipelines can significantly improve the recovery point objective (RTO) of a workload. In many scenarios, the fastest and most accurate path to the recovery of an application is a release pipeline. For application layers that change only when a new release happens, it might be wise to invest more heavily in pipeline optimization than on the recovery of the application from traditional back-up processes.
+More importantly, an understanding of release pipelines can significantly improve the recovery point objective (RPO) of a workload. In many scenarios, the fastest and most accurate path to the recovery of an application is a release pipeline. For application layers that change only when a new release happens, it might be wise to invest more heavily in pipeline optimization than on the recovery of the application from traditional back-up processes.
 
 Although a deployment pipeline can be the fastest path to recovery, it can also be the fastest path to remediation. When an application has a fast, efficient, and reliable release pipeline, the cloud management team has an option to automate deployment to a new host as a form of automated remediation.
 
@@ -64,7 +64,7 @@ Change to any workload is among the biggest risks to workload operations. For an
 
 ## Improve outcomes
 
-The data and communication investments in a workload will yield suggestions for improvements to ongoing operations in one of three areas: 
+The data and communication investments in a workload will yield suggestions for improvements to ongoing operations in one of three areas:
 
 - Technical debt resolution
 - Automated remediation
@@ -82,11 +82,11 @@ By applying the Pareto Principle, we can say that 80 percent of negative busines
 
 In the cases of technical debt resolution and automated remediation, system flaws are the common cause of most system outages. You can have the greatest impact on overall workload operations by adhering to a few design principles:
 
-- **Scalability**: The ability of a system to handle increased load.
-- **Availability**: The percentage of time that a system is functional and working.
-- **Resiliency**: The ability of a system to recover from failures and continue to function.
-- **Management**: Operations processes that keep a system running in production.
-- **Security**: Protecting applications and data from threats.
+- **Scalability:** The ability of a system to handle increased load.
+- **Availability:** The percentage of time that a system is functional and working.
+- **Resiliency:** The ability of a system to recover from failures and continue to function.
+- **Management:** Operations processes that keep a system running in production.
+- **Security:** Protecting applications and data from threats.
 
 To help improve overall operations, the [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) provides an approach to evaluating specific workloads for adherence to these pillars. You can apply the pillars can be applied to both platform operations and workload operations.
 

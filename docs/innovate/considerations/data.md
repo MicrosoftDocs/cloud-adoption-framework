@@ -75,7 +75,7 @@ You can integrate these various forms of data into a central data store on an OL
 
 **Virtualize:** Integration and ingestion of data can sometimes slow innovation. When a solution for data virtualization is already available, it might represent a more reasonable approach. Ingestion and integration can both duplicate storage and development requirements, add data latency, increase attack surface area, trigger quality issues, and increase governance efforts. Data virtualization is a more contemporary alternative that leaves the original data in a single location and creates pass-through or cached queries of the source data.
 
-SQL Server 2017 and Azure SQL Data Warehouse both support [PolyBase](/sql/relational-databases/polybase/polybase-guide) which is the approach to data virtualization most commonly used in Azure.
+SQL Server 2017 and Azure SQL Data Warehouse both support [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) which is the approach to data virtualization most commonly used in Azure.
 
 ## Next steps
 

@@ -14,7 +14,7 @@ ms.subservice: operate
 
 A cloud management baseline that spans [inventory and visibility](./inventory.md), [operational compliance](./operational-compliance.md), and [protection and recovery](./protect.md) might provide a sufficient level of cloud management for most workloads in the IT portfolio. However, that baseline is seldom enough to support the full portfolio. This article builds on the most common next step in cloud management, portfolio operations.
 
-A quick study of the assets in the IT portfolio highlights patterns across the workloads that are being supported. Within those workloads, there will be a number of common platforms. Depending on the past technical decisions within the company, those platforms could vary widely. 
+A quick study of the assets in the IT portfolio highlights patterns across the workloads that are being supported. Within those workloads, there will be a number of common platforms. Depending on the past technical decisions within the company, those platforms could vary widely.
 
 For some organizations, there will be a heavy dependence on SQL Server, Oracle, or other open-source data platforms. In other organizations, the commonalities might be rooted in the hosting platforms for virtual machines (VMs) or containers. Still others might have a common dependency on applications or Enterprise Resource Planning (ERP) systems, such as SAP, Oracle, or others.
 
@@ -26,9 +26,9 @@ The objective of platform operations is to create reliable and repeatable soluti
 
 As the cloud management team establishes higher degrees of operational management and specialization related to specific platforms, those platforms are added to a growing service catalog. The service catalog provides self-service deployment of platforms in a specific configuration, which adheres to ongoing platform operations. During the business-alignment conversation, cloud management and cloud strategy teams can propose service catalog solutions as a way for the business to improve reliability, uptime, and recovery commitments in a controlled, repeatable process.
 
-For reference, some organizations refer to an early-stage service catalog as an "approved list." The primary difference is that a service catalog comes with ongoing operational commitments from the Cloud Center of Excellence (CCoE). An "approved list" is similar, in that it provides a pre-approved list of solutions that a team can use in the cloud. But there is not usually an operational benefit associated with "approved list" applications. 
+For reference, some organizations refer to an early-stage service catalog as an _approved list_. The primary difference is that a service catalog comes with ongoing operational commitments from the cloud center of excellence (CCoE). An approved list is similar, in that it provides a preapproved list of solutions that a team can use in the cloud. However, typically there isn't an operational benefit associated with applications on an approved list.
 
-Much like the debate between Central IT and CCoE, the difference is one of priorities. A service catalog assumes good intent but provides operational, governance, and security guardrails that accelerate innovation. An "approved list" hinders innovation until operations, compliance, and security gates can be passed for a solution. Both solutions are viable, but they require the company to make subtle prioritization decisions to invest more in innovation or compliance.
+Much like the debate between Central IT and CCoE, the difference is one of priorities. A service catalog assumes good intent but provides operational, governance, and security guardrails that accelerate innovation. An approved list hinders innovation until operations, compliance, and security gates can be passed for a solution. Both solutions are viable, but they require the company to make subtle prioritization decisions to invest more in innovation or compliance.
 
 ### Build the service catalog
 
@@ -45,11 +45,11 @@ After the platform is packaged, the cloud management team can add it to the grow
 
 Although management tools and processes can help improve platform operations, that is often not enough to achieve the desired states of stability and reliability. True platform operations requires a focus on architecture-quality pillars. When a platform justifies a deeper investment in operations, the following five pillars should be considered before the platform becomes a part of any service catalog:
 
-- **Scalability**: The ability of a system to handle increased load.
-- **Availability**: The percentage of time that a system is functional and working.
-- **Resiliency**: The ability of a system to recover from failures and continue to function.
-- **Management**: The operations processes that keep a system running in production.
-- **Security**: Protecting applications and data from threats.
+- **Scalability:** The ability of a system to handle increased load.
+- **Availability:** The percentage of time that a system is functional and working.
+- **Resiliency:** The ability of a system to recover from failures and continue to function.
+- **Management:** The operations processes that keep a system running in production.
+- **Security:** Protecting applications and data from threats.
 
 The [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
 
@@ -71,7 +71,7 @@ When modernization isn't an option, cloud management teams commonly prioritize I
 
 ### Other common platform operations
 
-In addition to data platforms, virtual machine hosts tend to be a common platform for operations improvements. Most commonly, cloud platform and cloud management teams invest in improvements to VMWare hosts or container solutions. Such investments can improve the stability and reliability of the hosts, which support the VMs, which in turn power the workloads. Proper operations on one host or container can improve the RPO or RTO of several workloads. This approach creates improved business commitments, but distributes the investment. Improved commitments and reduced costs combine to make it much easier to justify improvements to cloud management and platform operations.
+In addition to data platforms, virtual machine hosts tend to be a common platform for operations improvements. Most commonly, cloud platform and cloud management teams invest in improvements to VMware hosts or container solutions. Such investments can improve the stability and reliability of the hosts, which support the VMs, which in turn power the workloads. Proper operations on one host or container can improve the RPO or RTO of several workloads. This approach creates improved business commitments, but distributes the investment. Improved commitments and reduced costs combine to make it much easier to justify improvements to cloud management and platform operations.
 
 ## Next steps
 

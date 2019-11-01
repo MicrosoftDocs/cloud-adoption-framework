@@ -22,7 +22,7 @@ During the Assess process within the Migrate methodology, a cloud adoption team 
 
 ## Primary toolset
 
-When you migrate and modernize on-premises data, the most common Azure tool choice is [Azure Database Migration Service](https://docs.microsoft.com/azure/dms). This service is part of the broader [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) toolchain. For existing SQL Server data sources, [Data Migration Assistant](/sql/dma/dma-overview) can help you assess and migrate a small number of data structures.
+When you migrate and modernize on-premises data, the most common Azure tool choice is [Azure Database Migration Service](https://docs.microsoft.com/azure/dms). This service is part of the broader [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) toolchain. For existing SQL Server data sources, [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview) can help you assess and migrate a small number of data structures.
 
 To support Oracle and NoSQL migrations, you can also use [Database Migration Service](https://docs.microsoft.com/azure/dms) for certain types of source-to-target databases. Examples include Oracle to PostgreSQL and MongoDB to Cosmos DB. More commonly, adoption teams use partner tools or custom scripts to migrate to Azure Cosmos DB, Azure HDInsight, or virtual machine options based on infrastructure as a service (IaaS).
 

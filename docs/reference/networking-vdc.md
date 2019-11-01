@@ -28,9 +28,9 @@ Customers can choose to access these cloud services either via the internet or w
 
 At its inception, the cloud was essentially a platform for hosting public-facing applications. Enterprises began to understand the value of the cloud and began to move internal line-of-business applications to the cloud. These types of applications brought additional security, reliability, performance, and cost considerations that required additional flexibility in the way cloud services were delivered. This paved the way for new infrastructure and networking services designed to provide this flexibility but also new features for scale, disaster recovery, and other considerations.
 
-Cloud solutions were first designed to host single, relatively isolated applications in the public spectrum. This approach worked well for a few years. Then the benefits of cloud solutions became apparent, and multiple large-scale workloads were hosted on the cloud. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the life-cycle of the cloud service.
+Cloud solutions were first designed to host single, relatively isolated applications in the public spectrum. This approach worked well for a few years. Then the benefits of cloud solutions became apparent, and multiple large-scale workloads were hosted on the cloud. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the lifecycle of the cloud service.
 
-The following cloud deployment diagram shows an example of a security gap in the **red box**. The **yellow box** shows room for optimizing network virtual appliances across workloads.
+The following cloud deployment diagram shows an example of a security gap, highlighted in the red box. The yellow box shows room for optimizing network virtual appliances across workloads.
 
 ![0][0]
 
@@ -397,7 +397,7 @@ The following features were discussed in this document. Follow the links to lear
 
 <!-- markdownlint-enable MD033 -->
 
-## Next Steps
+## Next steps
 
 - Explore [VNet Peering][VNetPeering], the underpinning technology for virtual datacenter hub and spoke designs.
 - Implement [Azure AD][azure-ad] to get started with [RBAC][RBAC] exploration.

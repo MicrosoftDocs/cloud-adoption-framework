@@ -52,7 +52,7 @@ The following changes to policy will help remediate the new risks and guide impl
 - All cloud costs should be monitored against plan on a weekly basis by the cloud governance team. Reporting on deviations between cloud costs and plan is to be shared with IT leadership and finance monthly. All cloud costs and plan updates should be reviewed with IT leadership and finance monthly.
 - All costs must be allocated to a business function for accountability purposes.
 - Cloud assets should be continually monitored for optimization opportunities.
-- Cloud Governance tooling must limit Asset sizing options to an approved list of configurations. The tooling must ensure that all assets are discoverable and tracked by the cost monitoring solution.
+- Cloud governance tooling must limit asset sizing options to an approved list of configurations. The tooling must ensure that all assets are discoverable and tracked by the cost monitoring solution.
 - During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation tools to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as Reserved Instances or License cost reductions.
 - All application owners are required to attend trained on practices for optimizing workloads to better control cloud costs.
 
