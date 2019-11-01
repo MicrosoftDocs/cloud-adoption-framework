@@ -15,7 +15,7 @@ ms.subservice: operate
 [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) can help you apply governance to your cloud resources. This service can help you create guardrails that ensure company-wide compliance to governance policy requirements. To create policies, use either the Azure portal or PowerShell cmdlets. This article provides PowerShell cmdlet examples.
 
 > [!NOTE]
-> With Azure Policy, enforcement policies (**deployIfNotExists**) aren't automatically deployed to existing VMs. Remediation is required to keep these VMs in compliance. For more information, see [Remediate noncompliant resources with Azure Policy](https://docs.microsoft.com/azure/governance/policy/how-to/remediate-resources).
+> With Azure Policy, enforcement policies (**deployIfNotExists**) aren't automatically deployed to existing VMs. Remediation is required to keep VMs in compliance. For more information, see [Remediate noncompliant resources with Azure Policy](https://docs.microsoft.com/azure/governance/policy/how-to/remediate-resources).
 
 ## Common policy examples
 
@@ -23,9 +23,9 @@ The following sections describe some commonly used policies.
 
 ### Restrict resource regions
 
-Regulatory and policy compliance often depend on control of the physical location where resources are deployed. You can use a built-in policy to allow users to create resources only in "whitelisted" Azure regions. To find this policy in the portal, search for "location" on the policy definition page.
+Regulatory and policy compliance often depends on control of the physical location where resources are deployed. You can use a built-in policy to allow users to create resources only in certain allowed Azure regions.
 
-Or you can run this cmdlet to find the policy:
+To find this policy in the portal, search for "location" on the policy definition page. Or run this cmdlet to find the policy:
 
 ```powershell
 Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq "BuiltIn") -and ($_.Properties.displayName -like "*location*") }
@@ -50,9 +50,9 @@ You can use this same script to apply the other policies that are discussed in t
 
 ### Block certain resource types
 
-Another common built-in policy that's used to control costs can also be used to block certain resource types. To find this policy in the portal, saerch for "allowed resource types" on the policy definition page.
+Another common built-in policy that's used to control costs can also be used to block certain resource types.
 
-Or you can run this cmdlet to find the policy:
+To find this policy in the portal, search for "allowed resource types" on the policy definition page. Or run this cmdlet to find the policy:
 
 ```powershell
 Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq "BuiltIn") -and ($_.Properties.displayName -like "*allowed resource types") }
@@ -86,7 +86,7 @@ New-AzPolicyAssignment -Name "Deploy Antimalware" -DisplayName "Deploy default M
 
 ## Next steps
 
-Learn about other server management tools and services that are available.
+Learn about other server-management tools and services that are available.
 
 > [!div class="nextstepaction"]
 > [Azure server management tools and services](./tools-services.md)
