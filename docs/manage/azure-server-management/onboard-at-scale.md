@@ -16,7 +16,7 @@ Adding Azure server management services to your servers involves two tasks:
 - Deploy service agents to your servers
 - Enable the management solutions
 
-This article covers the three processes that are necessary complete these tasks:
+This article covers the three processes that are necessary to complete these tasks:
 
 1. Deploy required agents to Azure VMs by using Azure Policy
 1. Deploy the required agents to on-premises servers
