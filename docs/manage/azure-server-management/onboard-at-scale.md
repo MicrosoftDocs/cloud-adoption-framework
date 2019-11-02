@@ -27,7 +27,7 @@ This article covers the three processes that are necessary complete these tasks:
 
 ## Use Azure Policy to deploy extensions to Azure VMs
 
-All the management solutions discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can add your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
+All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can add your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
 
 Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
@@ -41,7 +41,7 @@ Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure
 
 ### Assign policies
 
-To assign the policies that listed in the previous section:
+To assign the policies that described in the previous section:
 
 1. In the Azure portal, go to **Azure Policy** > **Assignments** > **Assign initiative**.
 
@@ -49,7 +49,7 @@ To assign the policies that listed in the previous section:
 
 2. On the **Assign Policy** page, set the **Scope** by selecting the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
 
-3. Select the ellipsis (…) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
+3. Select the ellipsis (**…**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale2.png)
 
@@ -59,16 +59,16 @@ To assign the policies that listed in the previous section:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale3.png)
 
-6. Check the **Managed Identity location**. If this policy is of the type [DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
+6. Select the **Managed Identity location** check box. If this policy is of the type [DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
 
 7. Select **Assign**.
 
 After you complete the wizard, the policy assignment will be deployed to the environment. It can take up to 30 minutes for the policy to take effect. To test it, create new VMs after 30 minutes, and check if the Microsoft Monitoring Agent is enabled on the VM by default.
 
-## Install the agents on on-premises servers
+## Install agents on on-premises servers
 
 > [!NOTE]
-> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you add Azure management services to servers.
+> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you add Azure server management services to servers.
 
 For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal and select **Settings** > **Advanced settings**.
 
@@ -110,7 +110,7 @@ Alternatively, you can configure the scope configuration to opt in on-premises s
 
 To create or modify the saved search, follow these steps:
 
-1. Go to the Log Analytics workspace that is linked to your Automation account that you configured in the preceding steps.
+1. Go to the Log Analytics workspace that is linked to the Automation account that you configured in the preceding steps.
 
 1. Under **General**, select **Saved searches**.
 
@@ -174,7 +174,7 @@ After creation is complete, the workspace resource instance displays **AntiMalwa
 
 ### Azure Monitor for VMs
 
-You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
+You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
 
 ### Azure Security Center
 
