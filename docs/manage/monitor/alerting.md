@@ -64,7 +64,7 @@ Azure Monitor has four types of alerts, each somewhat tied to the repository tha
 
 - [Service Health alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log-service-notifications?toc=%2fazure%2fservice-health%2ftoc.json): A special type of alert, just for Service Health issues that come from the activity log store.
 
-### Alerting through partner tools
+### Enable alerting through partner tools
 
 If you're using an external alerting solution, route as much as you can through Azure Event Hubs, which is the fastest path out of Azure Monitor. You'll have to pay for ingestion into Event Hub. If cost is an issue and speed isn't, you can use Azure Storage as a less expensive alternative. Just make sure that your monitoring or ITSM tools can read Azure Storage to extract the data.
 

@@ -174,7 +174,7 @@ They create resource groups as follows:
 
     ![Resource groups](./media/contoso-migration-infrastructure/resource-groups.png)
 
-##### Scaling resource groups
+##### Scale resource groups
 
 In future, Contoso will add other resource groups based on needs. For example, they could define a resource group for each app or service, so that they can be managed and secured independently.
 

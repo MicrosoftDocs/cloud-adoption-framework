@@ -47,7 +47,7 @@ The first decision to make regarding Deployment Acceleration is the pattern for 
 - Although Azure management groups are being used, a relatively simple hierarchy is expected.
 - Azure Blueprints will be used to deploy and update subscriptions by applying RBAC requirements, Resource Manager Templates, and Azure Policy across management groups.
 
-## Applying the dependent patterns
+## Apply the dependent patterns
 
 The following decisions represent the patterns to be enforced through the policy enforcement strategy above:
 

@@ -78,7 +78,7 @@ Some examples of violation triggers and actions:
 | Security Baseline | Detect suspicious user login activity. | Notify IT security team and disable suspect user account. |
 | Resource Consistency | CPU utilization for workload is greater than 90%. | Notify the IT Operations team and scale out additional resources to handle load. |
 
-## Monitoring and compliance automation
+## Automation of monitoring and compliance
 
 After you've defined your compliance violation triggers and actions, you can start planning how best to use the logging and reporting tools and other features of the cloud platform to help automate your monitoring and policy compliance strategy.
 

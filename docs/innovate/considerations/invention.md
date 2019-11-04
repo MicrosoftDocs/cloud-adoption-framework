@@ -1,7 +1,7 @@
 ---
-title: "Cloud innovation: Developing digital inventions"
+title: "Cloud innovation: Develop digital inventions"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Introduction to Cloud Innovation - Developing digital inventions
+description: Introduction to Cloud Innovation - Develop digital inventions
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# Developing digital inventions
+# Develop digital inventions
 
 As described in [Innovation in the digital economy](./index.md), innovation requires a balance of *invention* and *adoption*. Customer feedback and partnership are required to drive adoption. The disciplines described in the next section define a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind. Each of the disciplines is briefly described, along with deeper links into each process.
 

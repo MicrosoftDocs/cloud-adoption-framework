@@ -47,7 +47,7 @@ In most cases, a customer flow will have an easily defined starting point and no
 
 Each step of the customer flow generates learning metrics. After each iteration (or release), a new version of the hypothesis is tested. At the same time, tweaks to the solution are tested to reflect adjustments in the hypothesis. When customers follow the prescribed path in any given step, a positive metric is recorded. When customers deviate from the prescribed path, a negative metric is recorded.
 
-These alignment and deviation counters create learning metrics. Each should be recorded and tracked as the cloud adoption team progresses toward business outcomes and true innovation. In [Learning with customers](./learn.md), we'll discuss ways to apply these metrics to learn and build better solutions.
+These alignment and deviation counters create learning metrics. Each should be recorded and tracked as the cloud adoption team progresses toward business outcomes and true innovation. In [Learn with customers](./learn.md), we'll discuss ways to apply these metrics to learn and build better solutions.
 
 ### Grouping and observing customer partners
 
