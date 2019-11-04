@@ -12,7 +12,7 @@ ms.subservice: operate
 
 # Configure Azure server management services at scale
 
-Adding Azure server management services to your servers involves two tasks:
+You must complete these two tasks to onboard Azure server management services to your servers:
 - Deploy service agents to your servers
 - Enable the management solutions
 
@@ -23,11 +23,11 @@ This article covers the three processes that are necessary to complete these tas
 1. Enable and configuring the solutions
 
 > [!NOTE]
-> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you add virtual machines to Azure server management services.
+> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard virtual machines to Azure server management services.
 
 ## Use Azure Policy to deploy extensions to Azure VMs
 
-All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can add your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
+All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
 
 Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
@@ -68,7 +68,7 @@ After you complete the wizard, the policy assignment will be deployed to the env
 ## Install agents on on-premises servers
 
 > [!NOTE]
-> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you add Azure server management services to servers.
+> Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard Azure server management services to servers.
 
 For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal and select **Settings** > **Advanced settings**.
 
@@ -76,11 +76,11 @@ For on-premises servers, you need to download and install the [Log Analytics age
 
 ## Enable and configure solutions
 
-To enable solutions, you need to configure the Log Analytics workspace. Azure VMs and on-premises servers will get the solutions from the Log Analytics workspaces that they're connected to.
+To enable solutions, you need to configure the Log Analytics workspace. Onboarded Azure VMs and on-premises servers will get the solutions from the Log Analytics workspaces that they're connected to.
 
 ### Update Management
 
-The Update Management, Change Tracking, and Inventory solutions require both a Log Analytics workspace and an Automation account. To ensure that these resources are properly configured, we recommend that you work through your Automation account. For more information, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
+The Update Management, Change Tracking, and Inventory solutions require both a Log Analytics workspace and an Automation account. To ensure that these resources are properly configured, we recommend that you onboard through your Automation account. For more information, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
 
 We recommend that you enable the Update Management solution for all servers. Update Management is free for Azure VMs and on-premises servers. If you enable Update Management through your Automation account, a [scope configuration](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account#scope-configuration) is created in the workspace. Manually update the scope to include machines that are covered by the Update Management service.
 
@@ -92,7 +92,7 @@ To cover your existing servers as well as future servers, you need to remove the
 
 To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about adding these solutions from your Automation account, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
 
-The Change Tracking solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers Change Tracking, Inventory, and Desired State Configuration. If you want to enroll only specific on-premises servers, you can opt in those servers. We recommend that you implement the Change Tracking solution on all your production servers.
+The Change Tracking solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers Change Tracking, Inventory, and Desired State Configuration. If you want to enroll only specific on-premises servers, you can opt in those servers. We recommend that you onboard all your production servers.
 
 #### Opt in via the Azure portal
 
