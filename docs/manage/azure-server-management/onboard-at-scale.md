@@ -90,7 +90,7 @@ To cover your existing servers as well as future servers, you need to remove the
 
 ### Change Tracking and Inventory solutions
 
-To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about adding these solutions from your Automation account, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
+To onboard the Change Tracking and Inventory solutions, follow the same steps as for Update Management. For more information about how to onboard these solutions from your Automation account, see [Onboard Update Management, Change Tracking, and Inventory solutions](https://docs.microsoft.com/azure/automation/automation-onboard-solutions-from-automation-account).
 
 The Change Tracking solution is free for Azure VMs and costs $6 per node per month for on-premises servers. This cost covers Change Tracking, Inventory, and Desired State Configuration. If you want to enroll only specific on-premises servers, you can opt in those servers. We recommend that you onboard all your production servers.
 
@@ -174,11 +174,11 @@ After creation is complete, the workspace resource instance displays **AntiMalwa
 
 ### Azure Monitor for VMs
 
-You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
+You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace. 
 
 ### Azure Security Center
 
-We recommend that you add all your servers at least to the Azure Security Center *Free* tier. This option provides a basic level of security assessments and actionable security recommendations for your environment. If you upgrade to the *Standard* tier, you get additional benefits, which are discussed in detail on the [Security Center pricing page](https://docs.microsoft.com/azure/security-center/security-center-pricing).
+We recommend that you onboard all your servers at least to the Azure Security Center *Free* tier. This option provides a basic level of security assessments and actionable security recommendations for your environment. If you upgrade to the *Standard* tier, you get additional benefits, which are discussed in detail on the [Security Center pricing page](https://docs.microsoft.com/azure/security-center/security-center-pricing).
 
 To enable the Azure Security Center Free tier, follow these steps:
 
@@ -192,7 +192,7 @@ To enable the Azure Security Center Free tier, follow these steps:
 
 ## Next steps
 
-Learn how to use automation to add servers and create alerts.
+Learn how to use automation to onboard servers and create alerts.
 
 > [!div class="nextstepaction"]
 > [Automate onboarding and alert configuration](./onboarding-automation.md)
