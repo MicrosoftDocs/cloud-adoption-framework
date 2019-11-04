@@ -23,7 +23,7 @@ The following sections describe some commonly used policies.
 
 ### Restrict resource regions
 
-Regulatory and policy compliance often depend on control of the physical location where resources are deployed. You can use a built-in policy to allow users to create resources only in certain allowed Azure regions.
+Regulatory and policy compliance often depends on control of the physical location where resources are deployed. You can use a built-in policy to allow users to create resources only in certain allowed Azure regions.
 
 To find this policy in the portal, search for "location" on the policy definition page. Or run this cmdlet to find the policy:
 
