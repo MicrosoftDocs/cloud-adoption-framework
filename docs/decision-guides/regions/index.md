@@ -24,7 +24,7 @@ Azure is comprised of many regions around the world. Each of the [Azure regions]
     1. [Azure US Government](https://azure.microsoft.com/global-infrastructure/government)
     1. Note: there are two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia) that are managed by Microsoft but are provided for the Australian government and its customers and contractors, and therefore carry similar client constraints to the other sovereign clouds.
 
-## Operating in multiple geographic regions
+## Operate in multiple geographic regions
 
 When businesses operate in multiple geographic regions, while essential for resiliency, additional complexity can be introduced. These complexities manifest in four primary forms:
 
@@ -71,7 +71,7 @@ After considering the network topology that will be required to keep you up and 
 
 Align changes across the migration process to address the initial inventory.
 
-## Documenting complexity
+## Document complexity
 
 The following table can aid in documenting the findings from the steps above:
 
@@ -115,7 +115,7 @@ When scope for a migration includes multiple regions, the following readiness co
 
 Once the team is comfortable with the baseline approach and readiness is aligned, there are a few data-driven prerequisites to consider:
 
-- **General discovery:** Complete the [Documenting complexity](#documenting-complexity) table above.
+- **General discovery:** Complete the [Documenting complexity](#document-complexity) table above.
 - **Perform a user profile analysis on each affected country:** It is important to understand general end-user routing early in the migration process. Changing global lease lines and adding connections like ExpressRoute to a cloud datacenter can require months of networking delays. Address this as early in the process as possible.
 - **Initial digital estate rationalization:** Whenever complexity is introduced into a migration strategy, an initial digital estate rationalization should be completed. See the guidance on [digital estate rationalization](../../digital-estate/index.md) for assistance.
   - **Additional digital estate requirements:** Establish tagging policies to identify any workload affected by data sovereignty requirements. Required tags should begin in the digital estate rationalization and carry through to the migrated assets.

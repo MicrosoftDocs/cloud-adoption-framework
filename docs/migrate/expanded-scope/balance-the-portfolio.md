@@ -18,7 +18,7 @@ Cloud adoption is a portfolio management effort, cleverly disguised as technical
 
 This topic is strategic in nature. As such, the approach taken in this article is equally strategic. To ground the strategy in data-driven decisions, this article assumes the reader has evaluated the existing [digital estate](../../digital-estate/index.md) (or is in the process of doing so). The objective of this approach is to aid in evaluating workloads to ensure proper balance across the portfolio through qualitative questions and portfolio refinement.
 
-### Documenting business outcomes
+### Document business outcomes
 
 Before balancing the portfolio, it is important to document and share the business outcomes driving the cloud migration effort. For a few examples of general business outcomes related to cloud migrations, see the [Cloud migration executive summary](../../getting-started/migrate.md).
 
@@ -42,7 +42,7 @@ The guidance regarding [incremental rationalization of the digital estate](../..
 
 ### Importance of sunset and retire decisions
 
-The table in the [documenting business outcomes](#documenting-business-outcomes) section above misses a key outcome that would support the number one objective of reducing IT costs. When IT costs reductions rank anywhere in the list of business outcomes, it is important to consider the potential to sunset or retire workloads. In some scenarios, cost savings can come from NOT migrating workloads that don't warrant a short-term investment. Some customers have reported cost savings in excess of 20% total cost reductions by retiring underutilized workloads.
+The table in the [documenting business outcomes](#document-business-outcomes) section above misses a key outcome that would support the number one objective of reducing IT costs. When IT costs reductions rank anywhere in the list of business outcomes, it is important to consider the potential to sunset or retire workloads. In some scenarios, cost savings can come from NOT migrating workloads that don't warrant a short-term investment. Some customers have reported cost savings in excess of 20% total cost reductions by retiring underutilized workloads.
 
 To balance the portfolio, better reflecting sunset and retire decisions, the cloud strategy team and the cloud adoption team are encouraged to ask the following questions of each workload within assess and migrate processes:
 
@@ -69,7 +69,7 @@ Balancing the portfolio requires additional qualitative analysis during the asse
 
 ### Suggested action during the assess process
 
-Based on the data from the table in the [documenting business outcomes](#documenting-business-outcomes) section above, there is a likely risk of the portfolio leaning too far into a migration-focused execution model. If customer experience was top priority, an innovation heavy portfolio would be more likely. Neither is right or wrong, but leaning too far in one direction commonly results in diminishing returns, adds unnecessary complexity, and increases execution time related to cloud adoption efforts.
+Based on the data from the table in the [documenting business outcomes](#document-business-outcomes) section above, there is a likely risk of the portfolio leaning too far into a migration-focused execution model. If customer experience was top priority, an innovation heavy portfolio would be more likely. Neither is right or wrong, but leaning too far in one direction commonly results in diminishing returns, adds unnecessary complexity, and increases execution time related to cloud adoption efforts.
 
 To reduce complexity, it is advised that the reader follow a traditional approach to portfolio rationalization, but in an iterative model. The following steps outline a qualitative model to such an approach:
 

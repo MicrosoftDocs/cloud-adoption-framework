@@ -16,7 +16,7 @@ When an entire datacenter can be deprovisioned and re-created with a single line
 
 When shifting to an agile model where flexibility and iteration are emphasized, technical complexity and change management are handled differently than they are in a traditional waterfall model focusing on a linear series of migration steps. This article outlines a high-level approach to change management in an agile-based migration effort. At the end of this article, you should have a general understanding of the levels of change management and documentation involved in an incremental migration approach. Additional training and decisions are required to select and implement agile practices based on that understanding. The intention of this article is to prepare cloud architects for a facilitated conversation with project management to explain the general concept of change management in this approach.
 
-## Addressing technical complexity
+## Address technical complexity
 
 When changing any technical system, complexity and interdependency inject risk into project plans. Cloud migrations are no exception. When moving thousands&mdash;or tens of thousands&mdash;of assets to the cloud, these risks are amplified. Detecting and mapping all dependencies across a large digital estate could take years. Few businesses can tolerate such a long analysis cycle. To balance the need for architectural analysis and business acceleration, the Cloud Adoption Framework focuses on an INVEST model for product backlog management. The following sections summarize this type of model.
 

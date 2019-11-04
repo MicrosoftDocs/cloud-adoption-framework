@@ -17,13 +17,13 @@ All organizations need mechanisms for notifying IT teams of performance, uptime,
 
 ![Plotting logging, reporting, and monitoring options from least to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-logging-and-reporting.png)
 
-Jump to: [Planning your monitoring infrastructure](#planning-your-monitoring-infrastructure) | [Cloud-native](#cloud-native) | [On-premises extension](#on-premises-extension) | [Gateway aggregation](#gateway-aggregation) | [Hybrid monitoring (on-premises)](#hybrid-monitoring-on-premises) | [Hybrid monitoring (cloud-based)](#hybrid-monitoring-cloud-based) | [Multicloud](#multicloud) | [Learn more](#learn-more)
+Jump to: [Planning your monitoring infrastructure](#plan-your-monitoring-infrastructure) | [Cloud-native](#cloud-native) | [On-premises extension](#on-premises-extension) | [Gateway aggregation](#gateway-aggregation) | [Hybrid monitoring (on-premises)](#hybrid-monitoring-on-premises) | [Hybrid monitoring (cloud-based)](#hybrid-monitoring-cloud-based) | [Multicloud](#multicloud) | [Learn more](#learn-more)
 
 The inflection point when determining a cloud logging and reporting strategy is based primarily on existing investments your organization has made in operational processes, and to some degree any requirements you have to support a multicloud strategy.
 
 There are multiple ways to log and report on activities in the cloud. Cloud-native and centralized logging are two common managed service options that are driven by the subscription design and the number of subscriptions.
 
-## Planning your monitoring infrastructure
+## Plan your monitoring infrastructure
 
 When planning your deployment, you need to consider where logging data is stored and how you will integrate cloud-based reporting and monitoring services with your existing processes and tools.
 

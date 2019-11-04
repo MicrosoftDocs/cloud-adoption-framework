@@ -152,7 +152,7 @@ The Cloud Adoption Framework is the One Microsoft approach to cloud adoption in 
     </li>
 </ul>
 
-## Understanding the lifecycle
+## Understand the lifecycle
 
 Each of the phases captured above are part of a broad cloud adoption lifecycle. The following image ties together each phase to demonstrate the overall lifecycle. The Cloud Adoption Framework is a full lifecycle framework, supporting customers throughout each phase.
 

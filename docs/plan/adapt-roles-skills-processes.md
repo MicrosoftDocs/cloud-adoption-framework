@@ -20,7 +20,7 @@ IT staff members might feel anxious about their roles and positions because they
 
 For guidance on building a new skill set, see the [Skills readiness path](./suggested-skills.md).
 
-## Capturing concerns
+## Capture concerns
 
 As the organization prepares for a cloud adoption effort, each team should document staff concerns as they arise by identifying:
 

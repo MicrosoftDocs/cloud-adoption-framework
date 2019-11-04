@@ -14,7 +14,7 @@ ms.subservice: innovate
 
 The ultimate test of innovation is customer reaction to your invention. Did the hypothesis prove true? Do customers use the solution? Does it scale to meet the needs of the desired percentage of users? Most importantly, do they keep coming back? None of these questions can be asked until the minimum viable product (MVP) solution has been deployed. In this article, we'll focus on the discipline of empowering adoption.
 
-## Reducing friction to adoption
+## Reduce friction that affects adoption
 
 There are a few key friction points to adoption that can be minimized through a combination of technology and processes. For readers with knowledge of continuous integration (CI) and continuous deployment (CD) or DevOps processes, the following will seem very familiar. This article intends to establish a starting point for cloud adoption teams, which will fuel innovation and feedback loops. Longer term, this starting point could foster more robust CI/CD or DevOps approaches as the products and teams mature.
 

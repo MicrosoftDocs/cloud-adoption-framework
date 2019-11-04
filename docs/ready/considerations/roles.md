@@ -36,7 +36,7 @@ When planning your access control strategy, use a least-privilege access model t
 > [!NOTE]
 > The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, [use management groups](https://docs.microsoft.com/azure/governance/management-groups) for enterprise-wide access control and [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups).
 
-## Using built-in RBAC roles
+## Use built-in RBAC roles
 
 Azure provides a many built-in role definitions, with three core roles for providing access:
 
@@ -54,7 +54,7 @@ For another example of using built-in roles to manage access to particular featu
 
 For a complete list of available built-in roles, see [Built-in roles for Azure resources](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles).
 
-## Using custom roles
+## Use custom roles
 
 Although the roles built in to Azure support a wide variety of access control scenarios, they might not meet all the needs of your organization or team. For example, if you have a single group of users responsible for managing virtual machines and Azure SQL Database resources, you might want to create a custom role to optimize management of the required access controls.
 
