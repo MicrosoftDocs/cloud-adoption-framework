@@ -102,11 +102,6 @@ To create a data share:
 
 ::: zone-end
 
-Use [Azure Open Datasets](https://docs.microsoft.com/azure/open-datasets/overview-what-are-open-datasets) to enhance your analysis by incorporating [holiday](https://azure.microsoft.com/services/open-datasets/catalog/public-holidays), [weather](https://azure.microsoft.com/services/open-datasets/catalog/noaa-global-forecast-system), and
-[spatial imagery](https://azure.microsoft.com/services/open-datasets/catalog/hls) data into your models.
-
-Next steps include [democratizing business processes](https://docs.microsoft.com/business-applications-release-notes/october18/microsoft-flow/democratize-business-processes) and [empowering citizen developers](https://docs.microsoft.com/business-applications-release-notes/october18/microsoft-flow/empower-citizen-developers).
-
 # [Insights](#tab/Insights)
 
 ## Azure Time Series Insights

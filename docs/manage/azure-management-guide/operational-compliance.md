@@ -14,19 +14,19 @@ ms.localizationpriority: high
 
 # Operational compliance in Azure
 
-Operational compliance is the second discipline in any cloud management baseline.
+_Operational compliance_ is the second discipline in any cloud management baseline.
 
 ![Cloud Management Baseline](../../_images/manage/management-baseline.png)
 
-Improving operational compliance reduces the likelihood of an outage related to configuration drift or vulnerabilities related to systems not being properly patched.
+Improving operational compliance reduces the likelihood of an outage related to configuration drift or vulnerabilities related to systems being improperly patched.
 
-For any enterprise-grade environment, the following table outlines the suggested minimum for any management baseline.
+For any enterprise-grade environment, this table outlines the suggested minimum for a management baseline.
 
 |Process  |Tool  |Purpose  |
 |---------|---------|---------|
 |Patch management|Update Management|Management and scheduling of updates|
-|Policy enforcement|Azure Policy|Policy enforcement to ensure env and guest compliance|
-|Env. Configuration|Azure Blueprint|Automated compliance for core services|
+|Policy enforcement|Azure Policy|Policy enforcement to ensure environment and guest compliance|
+|Environment configuration|Azure Blueprints|Automated compliance for core services|
 
 ::: zone target="docs"
 
@@ -39,30 +39,33 @@ For any enterprise-grade environment, the following table outlines the suggested
 
 ::: zone-end
 
-Computers that are managed by Update Management use the following configurations to perform assessment and update deployments:
+Computers that are managed by Update Management use the following configurations to do assessment and update deployments:
 
 - Microsoft Monitoring Agent (MMA) for Windows or Linux
 - PowerShell Desired State Configuration (DSC) for Linux
-- Automation Hybrid Runbook Worker
+- Azure Automation Hybrid Runbook Worker
 - Microsoft Update or Windows Server Update Services (WSUS) for Windows computers
 
-For more information, see [Update Management solution](https://docs.microsoft.com/azure/automation/automation-update-management)
+For more information, see [Update Management solution](https://docs.microsoft.com/azure/automation/automation-update-management).
 
 > [!WARNING]
-> Before using update management, you must onboard VMs or an entire subscription into Log Analytics and Azure Automation.
-> There are two approaches to onboarding, one should be followed before proceeding with update management.
+> Before using Update Management, you must onboard virtual machines or an entire subscription into Log Analytics and Azure Automation.
+>
+> There are two approaches to onboarding:
 >
 > - [Single VM](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-server-management/onboard-single-vm)
 > - [Entire subscription](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-server-management/onboard-at-scale)
+>
+> You should follow one before proceeding with Update Management.
 
 ### Manage updates
 
 To apply a policy to a resource group:
 
 1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts).
-2. Choose one of the listed **automation accounts**.
-3. Find the **Configuration Management** section of the portal navigation.
-4. Inventory, Change Management, and State Configuration can each be used to control the state and operational compliance of the managed VMs.
+1. Select **Automation accounts**, and choose one of the listed accounts.
+1. Go to **Configuration Management**.
+1. **Inventory**, **Change Management**, and **State Configuration** can be used to control the state and operational compliance of the managed VMs.
 
 ::: zone target="chromeless"
 
@@ -85,13 +88,13 @@ To apply a policy to a resource group:
 
 ::: zone-end
 
-Azure Policy is used throughout governance processes. But, it's also highly valuable within cloud management processes. In addition to auditing and remediating Azure resources, Azure Policy can audit settings inside a machine. The validation is performed by the Guest Configuration extension and client. The extension, through the client, validates settings such as:
+Azure Policy is used throughout governance processes. It's also highly valuable within cloud management processes. Azure Policy can audit and remediate Azure resources and can also audit settings inside a machine. The validation is performed by the Guest Configuration extension and client. The extension, through the client, validates settings like:
 
-- Operating system configuration
-- Application configuration or presence
-- Environment settings
+- Operating system configuration.
+- Application configuration or presence.
+- Environment settings.
 
-At this time, Azure Policy Guest Configuration only audits settings inside the machine. It doesn't apply configurations.
+Azure Policy Guest Configuration currently only audits settings inside the machine. It doesn't apply configurations.
 
 ::: zone target="chromeless"
 
@@ -129,16 +132,18 @@ To learn more, see:
 
 ::: zone-end
 
-Azure Blueprints enables cloud architects and central information technology groups to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints makes it possible for development teams to rapidly build and stand up new environments and trust that they're building within organizational compliance using a set of built-in components--such as networking--to speed up development and delivery.
+With Azure Blueprints, cloud architects and central information-technology groups can define a repeatable set of Azure resources. These resources implement and adhere to an organization's standards, patterns, and requirements.
 
-Blueprints are a declarative way to orchestrate the deployment of various resource templates and other artifacts like:
+With Azure Blueprints, development teams can rapidly build and stand up new environments. Teams can also trust they're building within organizational compliance. They do so by using a set of built-in components like networking to speed up development and delivery.
+
+Blueprints are a declarative way to orchestrate the deployment of different resource templates and other artifacts like:
 
 - Role assignments.
 - Policy assignments.
 - Azure Resource Manager templates.
 - Resource groups.
 
-Applying a blueprint can enforce operational compliance in an environment, if this hasn't already been done by the cloud governance team.
+Applying a blueprint can enforce operational compliance in an environment if this enforcement isn't done by the cloud governance team.
 
 ### Create a blueprint
 
@@ -146,12 +151,13 @@ To create a blueprint:
 
 ::: zone target="chromeless"
 
-1. Goto **Blueprints - Getting started**.
-1. In the **Create a Blueprint** section, select **Create**.
+1. Go to **Blueprints - Getting started**.
+1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
-1. Enter the **Blueprint name**, and select the appropriate **Definition location**.
-1. Click **Next : Artifacts >>** and review the artifacts included in the blueprint.
-1. Click **Save Draft**.
+1. In the **Blueprint name** box, enter the blueprint name.
+1. Select **Definition location**, and choose the appropriate location.
+1. Select **Next : Artifacts >>**, and review the artifacts included in the blueprint.
+1. Select **Save Draft**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted]" submitText="Create a blueprint" :::
 
@@ -160,11 +166,12 @@ To create a blueprint:
 ::: zone target="docs"
 
 1. Go to [Blueprints - Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
-1. In the **Create a Blueprint** section, select **Create**.
+1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
-1. Enter the **Blueprint name**, and select the appropriate **Definition location**.
-1. Click **Next : Artifacts >>** and review the artifacts included in the blueprint.
-1. Click **Save Draft**.
+1. In the **Blueprint name** box, enter the blueprint name.
+1. Select **Definition location**, and choose the appropriate location.
+1. Select **Next : Artifacts >>**, and review the artifacts included in the blueprint.
+1. Select **Save Draft**.
 
 ::: zone-end
 
@@ -174,10 +181,12 @@ To publish blueprint artifacts to your subscription:
 
 ::: zone target="chromeless"
 
-1. Goto **Blueprints - Blueprint definitions**.
+1. Go to **Blueprints - Blueprint definitions**.
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition and select **Publish blueprint**.
-1. Provide a **Version** (such as "1.0") and any **Change notes**, then select **Publish**.
+1. In the **Version** box, enter a version like "1.0".
+1. In the **Change notes** box, enter your notes.
+1. Select **Publish**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints]" submitText="Blueprint definitions" :::
 
@@ -185,10 +194,14 @@ To publish blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-1. Goto [Blueprints - Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
+1. Go to [Blueprints - Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition and select **Publish blueprint**.
-1. Provide a **Version** (such as "1.0") and any **Change notes**, then select **Publish**.
+1. In the **Version** box, enter a version like "1.0".
+1. In the **Change notes** box, enter your notes.
+1. Select **Publish**.
+
+<!-- markdownlint-disable MD024 -->
 
 ### Learn more
 

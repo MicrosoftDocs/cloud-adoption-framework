@@ -98,7 +98,9 @@ Encryption for data at rest also encompasses more advanced database encryption t
 
 Your overall policy and compliance requirements, the sensitivity of the data being stored, and the performance requirements of your workloads should determine which assets require encryption.
 
-**Assumptions about encrypting data at rest.** Encrypting data at rest assumes the following:
+### Assumptions about encrypting data at rest
+
+Encrypting data at rest assumes the following:
 
 - You are storing data that is not meant for public consumption.
 - Your workloads can accept the added latency cost of disk encryption.

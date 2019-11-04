@@ -276,7 +276,7 @@ To optimize routing for both office users, you need to know which prefix is from
 
 - [Learn about](https://docs.microsoft.com/azure/expressroute/expressroute-optimize-routing) optimizing routing.
 
-## Securing VNets
+## Secure VNets
 
 The responsibility for securing VNets is shared between Microsoft and you. Microsoft provides many networking features, as well as services that help keep resources secure. When designing security for VNets, best practices you should follow include implementing a perimeter network, using filtering and security groups, securing access to resources and IP addresses, and implementing attack protection.
 

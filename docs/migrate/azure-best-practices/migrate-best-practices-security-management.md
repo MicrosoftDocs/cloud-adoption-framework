@@ -350,7 +350,7 @@ Azure Backup creates data recovery points that are stored in Azure storage. Azur
 
 You can use Azure Backup to back up VMs in a couple of ways.
 
-- **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once and day, and restore the VM disk as needed. Azure Backup takes app-aware data snapshots (VSS), and no agent is installed on the VM.
+- **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once per day, and you can restore the VM disk as needed. Azure Backup takes app-aware data snapshots (VSS), and no agent is installed on the VM.
 - **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups as well as granular backup and restore options. Backup is up to three times a day, at the file/folder level. It isn't app-aware and Linux isn't supported. Install the Microsoft Azure Recovery Services (MARS) agent on each VM that you want to back up using this method.
 - **Protect the VM to Azure Backup Server.** Azure Backup Server is provided free with Azure Backup. The VM is backed up to local Azure Backup Server storage. You then back up the Azure Backup Server to Azure in a vault. Backup is app-aware, with full granularity over backup frequency and retention. You can back up at the app level, for example by backing up SQL Server or SharePoint.
 

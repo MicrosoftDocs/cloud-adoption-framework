@@ -31,7 +31,7 @@ Cloud migrations can help companies achieve their desired business outcomes. Cle
 
 |Critical Business Events | Migration Motivations | Innovation Motivations |
 |---------|---------|---------|
-| Datacenter exit<br/><br/>Mergers, acquisition, or divestiture<br/><br/>Reductions in capital expenses<br/><br/>End of support for mission-critical technologies<br/><br/>Response to regulatory compliance changes<br/><br/>Meet new data sovereignty requirements<br/><br/>Reduce disruptions and improve IT stability|Cost savings<br/><br/>Reduction in vendor or technical complexity<br/><br/>Optimization of internal operations<br/><br/>Increase business agility<br/><br/>Prepare for new technical capabilities<br/><br/>Scale to meet market demands<br/><br/>Scale to meet geographic demands|Prepare for new technical capabilities<br/><br/>Build new technical capabilities<br/><br/>Scale to meet market demands<br/><br/>Scale to meet geographic demands<br/><br/>Improve customer experiences / engagements<br/><br/>Transform products or services<br/><br/>Disrupt the market with new products or services|
+| Datacenter exit<br/><br/>Mergers, acquisition, or divestiture<br/><br/>Reductions in capital expenses<br/><br/>End of support for mission-critical technologies<br/><br/>Response to regulatory compliance changes<br/><br/>Meet new data sovereignty requirements<br/><br/>Reduce disruptions and improve IT stability|Cost savings<br/><br/>Reduction in vendor or technical complexity<br/><br/>Optimization of internal operations<br/><br/>Increase business agility<br/><br/>Prepare for new technical capabilities<br/><br/>Scale to meet market demands<br/><br/>Scale to meet geographic demands|Prepare for new technical capabilities<br/><br/>Build new technical capabilities<br/><br/>Scale to meet market demands<br/><br/>Scale to meet geographic demands<br/><br/>Improve customer experiences and engagements<br/><br/>Transform products or services<br/><br/>Disrupt the market with new products or services|
 
 <!-- markdownlint-enable MD033 -->
 
@@ -45,7 +45,7 @@ Preparing all participants across the migration effort with an awareness of the 
 
 ## Migration approach
 
-The Cloud Adoption Framework establishes a high-level construct of Plan, Ready, Adopt to group the types of effort required across any cloud adoption. This executive summary builds on that high-level flow to establish iterative processes that can facilitate lift/shift/optimize efforts **and** modernization efforts in a single approach across all cloud migration activities.
+The Cloud Adoption Framework establishes a high-level construct of Plan, Ready, Adopt to group the types of effort required across any cloud adoption. This executive summary builds on that high-level flow to establish iterative processes that can facilitate lift-shift-optimize efforts and modernization efforts in a single approach across all cloud migration activities.
 
 This approach consists of two methodologies or areas of focus: Cloud Strategy & Planning and Cloud Implementation. The [motivation](#motivations) or desired business outcome for a cloud migration often determines how much a team should invest in [strategy and planning](#cloud-strategy-and-planning) and [implementation](#cloud-implementation). Those motivations can also influence decisions to execute each sequentially or in parallel.
 

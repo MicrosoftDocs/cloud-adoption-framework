@@ -117,7 +117,7 @@ The new best practices fall into two categories: Corporate IT (hub) and Cloud Ad
     4. Apply the `corporate-it-subscription-blueprint` blueprint to each regional instance.
     5. This will establish a hub for each business unit in each region. Note: Further cost savings could be achieved, but sharing hubs across business units in each region.
 6. Integrate group policy objects (GPO) through Desired State Configuration (DSC):
-    1. Convert GPO to DSC – The [Microsoft Baseline Management project](https://github.com/Microsoft/BaselineManagement) in GitHub can accelerate this effort. * Be sure to store DSC in the repository in parallel with Resource Manager templates.
+    1. Convert GPO to DSC – The [Microsoft Baseline Management project](https://github.com/Microsoft/BaselineManagement) in GitHub can accelerate this effort. Be sure to store DSC in the repository in parallel with Resource Manager templates.
     2. Deploy Azure Automation State Configuration to any instances of the Corporate IT subscription. Azure Automation can be used to apply DSC to VMs deployed in supported subscriptions within the management group.
     3. The current roadmap plans to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
 

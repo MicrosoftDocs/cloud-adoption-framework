@@ -28,9 +28,9 @@ Customers can choose to access these cloud services either via the internet or w
 
 At its inception, the cloud was essentially a platform for hosting public-facing applications. Enterprises began to understand the value of the cloud and began to move internal line-of-business applications to the cloud. These types of applications brought additional security, reliability, performance, and cost considerations that required additional flexibility in the way cloud services were delivered. This paved the way for new infrastructure and networking services designed to provide this flexibility but also new features for scale, disaster recovery, and other considerations.
 
-Cloud solutions were first designed to host single, relatively isolated applications in the public spectrum. This approach worked well for a few years. Then the benefits of cloud solutions became apparent, and multiple large-scale workloads were hosted on the cloud. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the life-cycle of the cloud service.
+Cloud solutions were first designed to host single, relatively isolated applications in the public spectrum. This approach worked well for a few years. Then the benefits of cloud solutions became apparent, and multiple large-scale workloads were hosted on the cloud. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the lifecycle of the cloud service.
 
-The following cloud deployment diagram shows an example of a security gap in the **red box**. The **yellow box** shows room for optimizing network virtual appliances across workloads.
+The following cloud deployment diagram shows an example of a security gap, highlighted in the red box. The yellow box shows room for optimizing network virtual appliances across workloads.
 
 ![0][0]
 
@@ -259,7 +259,7 @@ We recommend that you use one set of Azure Firewall instances, or NVAs, for traf
 
 Azure Load Balancer can probe the health of the various server instances as well, and when an instance fails to respond to a probe, the load balancer stops sending traffic to the unhealthy instance. In a virtual datacenter, an external load balancer is deployed to the hub and the spokes. In the hub, the load balancer is used to efficiently route traffic to services in the spokes, and in the spokes, load balancers are used to manage application traffic.
 
-[**Azure Front Door**][AFD] (AFD) is Microsoft's highly available and scalable Web Application Acceleration Platform, Global HTTP Load Balancer, Application Protection, and Content Delivery Network. Running in more than 100 locations at the edge of Microsoft's Global Network, AFD enables you to build, operate, and scale out your dynamic web application and static content. AFD provides your application with world-class end-user performance, unified regional/stamp maintenance automation, BCDR automation, unified client/user information, caching, and service insights. The platform offers performance, reliability and support SLAs, compliance certifications and auditable security practices developed, operated, and supported natively by Azure.
+[Azure Front Door (AFD)][AFD] is Microsoft's highly available and scalable Web Application Acceleration Platform, Global HTTP Load Balancer, Application Protection, and Content Delivery Network. Running in more than 100 locations at the edge of Microsoft's Global Network, AFD enables you to build, operate, and scale out your dynamic web application and static content. AFD provides your application with world-class end-user performance, unified regional/stamp maintenance automation, BCDR automation, unified client/user information, caching, and service insights. The platform offers performance, reliability and support SLAs, compliance certifications and auditable security practices developed, operated, and supported natively by Azure.
 
 [**Application Gateway**][AppGW]
 Microsoft Azure Application Gateway is a dedicated virtual appliance providing application delivery controller (ADC) as a service, offering various layer 7 load-balancing capabilities for your application. It allows you to optimize web farm productivity by offloading CPU intensive SSL termination to the application gateway. It also provides other layer 7 routing capabilities including round robin distribution of incoming traffic, cookie-based session affinity, URL path-based routing, and the ability to host multiple websites behind a single Application Gateway. A web application firewall (WAF) is also provided as part of the application gateway WAF SKU. This SKU provides protection to web applications from common web vulnerabilities and exploits. Application Gateway can be configured as internet facing gateway, internal only gateway, or a combination of both.
@@ -324,7 +324,7 @@ The workload possibilities are endless. The following are just a few of the poss
 - **Data driven:** Data intensive workloads with frequent access to databases or other storage.
 - **Integrated:** Workloads offering integration with other systems within or outside the organization.
 
-**Customer facing web sites (internet or internal facing)**: Most applications that interact with the Internet are web sites. Azure offers the capability to run a web site on an IaaS VM or from an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps support integration with VNets that allow the deployment of the Web Apps in a spoke network zone. Internal facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet-routable addresses from the private VNet.
+**Customer facing web sites (internet or internal facing):** Most applications that interact with the Internet are web sites. Azure offers the capability to run a web site on an IaaS VM or from an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps support integration with VNets that allow the deployment of the Web Apps in a spoke network zone. Internal facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet-routable addresses from the private VNet.
 
 **Big Data and Analytics:** When data needs to scale up to a large volume, databases may not scale up properly. Hadoop technology offers a system to run distributed queries in parallel on large number of nodes. Customers have the option to run data workloads in IaaS VMs or PaaS ([HDInsight][HDI]). HDInsight supports deploying into a location-based VNet, can be deployed to a cluster in a spoke of a virtual datacenter.
 
@@ -334,7 +334,7 @@ You can implement a highly reliable cloud messaging service between applications
 
 ![10][10]
 
-### Making a virtual datacenter highly available: multiple virtual datacenters
+### Make a virtual datacenter highly available: multiple virtual datacenters
 
 So far, this article has focused on the design of a single virtual datacenter, describing the basic components and architecture that contribute to resiliency. Azure features such as Azure load balancer, NVAs, availability sets, scale sets, along with other mechanisms contribute to a system that enables you to build solid SLA levels into your production services.
 
@@ -397,7 +397,7 @@ The following features were discussed in this document. Follow the links to lear
 
 <!-- markdownlint-enable MD033 -->
 
-## Next Steps
+## Next steps
 
 - Explore [VNet Peering][VNetPeering], the underpinning technology for virtual datacenter hub and spoke designs.
 - Implement [Azure AD][azure-ad] to get started with [RBAC][RBAC] exploration.

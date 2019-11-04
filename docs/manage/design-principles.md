@@ -14,7 +14,7 @@ ms.subservice: operate
 
 The first three cloud management disciplines describe a management baseline. At a minimum, a management baseline should include a standard business commitment to minimize business interruptions and accelerate recovery if service is interrupted. Most management baselines include a disciplined focus on maintaining "inventory and visibility," "operational compliance," and "protection and recovery."
 
-The purpose of a management baseline is to create a consistent offering that provides a minimum level of business commitment for all supported workloads. This baseline of common, repeatable management offerings allows the team to deliver a highly optimized degree of operational management, with minimal deviation. But that standard offering might not provide a rich enough commitment to the business. 
+The purpose of a management baseline is to create a consistent offering that provides a minimum level of business commitment for all supported workloads. This baseline of common, repeatable management offerings allows the team to deliver a highly optimized degree of operational management, with minimal deviation. But that standard offering might not provide a rich enough commitment to the business.
 
 The diagram in the next section illustrates three ways to go beyond the management baseline.
 
@@ -40,8 +40,8 @@ For workloads that warrant a higher investment to meet a business commitment, sp
 
 There are two areas of specialization:
 
-- **Platform specialization**: Invest in ongoing operations of a shared platform, distributing the investment across multiple workloads.
-- **Workload specialization**: Invest in ongoing operations of a specific workload, generally reserved for mission-critical workloads.
+- **Platform specialization:** Invest in ongoing operations of a shared platform, distributing the investment across multiple workloads.
+- **Workload specialization:** Invest in ongoing operations of a specific workload, generally reserved for mission-critical workloads.
 
 ### Central IT or Cloud Center of Excellence (CCoE)
 
@@ -49,12 +49,13 @@ Decisions between platform specialization and workload specialization are based 
 
 Workload specialization often triggers a cultural change. Traditional IT and Central IT both build processes that can provide support at scale. Scale support is more achievable for repeatable services found in a management baseline, enhanced baseline, or even platform operations. Workload specialization doesn't often scale. This lack of scale makes it difficult for a centralized IT organization to provide necessary support without reaching organizational scale limitations.
 
-Alternatively, the Cloud Center of Excellence approach scales through purposeful delegation of responsibility and selective centralization. Workload specialization tends to better align with the delegated responsibility approach of a CCoE. 
+Alternatively, the Cloud Center of Excellence approach scales through purposeful delegation of responsibility and selective centralization. Workload specialization tends to better align with the delegated responsibility approach of a CCoE.
 
 The natural alignment of roles in a CCoE is outlined as follows:
-- The cloud platform team helps build common platforms that support multiple cloud adoption teams. 
-- The cloud automation team extends those platforms into deployable assets in a service catalog. 
-- Cloud management delivers the management baseline centrally and helps support the use of the service catalog. 
+
+- The cloud platform team helps build common platforms that support multiple cloud adoption teams.
+- The cloud automation team extends those platforms into deployable assets in a service catalog.
+- Cloud management delivers the management baseline centrally and helps support the use of the service catalog.
 - But the business unit (in the form of a business DevOps team or cloud adoption team) holds responsibility for day-to-day operations of the workload, pipeline, or performance.
 
 As for the alignment of areas of management, Central IT and CCoE models can generally deliver on Platform Specialization, with minimal cultural change. Delivering on workload specialization might be a little more complex for Central IT teams.
@@ -63,10 +64,10 @@ As for the alignment of areas of management, Central IT and CCoE models can gene
 
 Within each specialization, the following four-step process is delivered in a disciplined, iterative approach. This approach requires partnership among cloud adoption, cloud platform, cloud automation, and cloud management experts to create a viable and informed feedback loop.
 
-- **Improve system design**: Improve the design of common systems (platforms) or specific workloads to effectively minimize interruptions.
-- **Automate remediation**: Some improvements are not cost effective. In such cases, it might make more sense to automate remediation and reduce the impact of interruptions.
-- **Scale the solution**: As systems design and automated remediation are improved, you can scale those changes across the environment through the service catalog.
-- **Continuous improvement**: You can use various monitoring tools to discover incremental improvements to address in the next pass of system design, automation, and scale.
+- **Improve system design:** Improve the design of common systems (platforms) or specific workloads to effectively minimize interruptions.
+- **Automate remediation:** Some improvements are not cost effective. In such cases, it might make more sense to automate remediation and reduce the impact of interruptions.
+- **Scale the solution:** As systems design and automated remediation are improved, you can scale those changes across the environment through the service catalog.
+- **Continuous improvement:** You can use various monitoring tools to discover incremental improvements to address in the next pass of system design, automation, and scale.
 
 ### Improve system design
 
@@ -74,11 +75,11 @@ Improving system design is the most effective approach to improving operations o
 
 The Azure Architecture Framework focuses on improvement across five pillars of system design:
 
-- **Scalability**: Scaling the common platform assets to handle increased load.
-- **Availability**: Decreasing business interruptions by improving uptime potential.
-- **Resiliency**: Improving recovery times to reduce duration of interruptions.
-- **Security**: Protecting applications and data from external threats.
-- **Management**: Operations processes specific to those common platform assets.
+- **Scalability:** Scaling the common platform assets to handle increased load.
+- **Availability:** Decreasing business interruptions by improving uptime potential.
+- **Resiliency:** Improving recovery times to reduce duration of interruptions.
+- **Security:** Protecting applications and data from external threats.
+- **Management:** Operations processes specific to those common platform assets.
 
 Most business interruptions equate to some form of technical debt, or deficiency in the architecture. For existing deployments, systems design improvements can be viewed as payments against existing technical debt. For new deployments, systems design improvements can be viewed as avoidance of technical debt. The next section, "Automated remediation," looks at ways to address technical debt that can't or shouldn't be addressed.
 
@@ -102,7 +103,7 @@ For information about publishing to a service catalog, see the series on [publis
 
 ### Continuous improvement
 
-Platform specialization and platform operations both depend on strong feedback loops between adoption, platform, automation, and management teams. Grounding those feedback loops in data empowers each team to make wise decisions. For platform operations to achieve long-term business commitments, it's important to take advantage of insights that are specific to the centralized platform. Because containers and SQL Server are the two most common centrally managed platforms, consider getting started with continuous improvement data collection by reviewing the following articles: 
+Platform specialization and platform operations both depend on strong feedback loops between adoption, platform, automation, and management teams. Grounding those feedback loops in data empowers each team to make wise decisions. For platform operations to achieve long-term business commitments, it's important to take advantage of insights that are specific to the centralized platform. Because containers and SQL Server are the two most common centrally managed platforms, consider getting started with continuous improvement data collection by reviewing the following articles:
 
 - [Container performance](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)
 - [PaaS database performance](https://docs.microsoft.com/azure/azure-monitor/insights/azure-sql)

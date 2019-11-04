@@ -27,7 +27,7 @@ However, some data structures can be migrated more effectively through a separat
 - **High density, low usage databases:** The instance of SQL Server has a high density of databases. Each of those databases has low transaction volumes, and requires little in the way of compute resources. You should consider other, more modern solutions, but an infrastructure as a service (IaaS) approach might result in significantly reduced operating cost.
 - **Total cost of ownership:** When applicable, you can apply [Azure Hybrid Benefits](https://azure.microsoft.com/pricing/hybrid-benefit) to the list price creating the lowest cost of ownership for instances of SQL Server. This is especially common for customers who host SQL Server in multicloud scenarios.
 - **Migration accelerator:** "Lift-and-shift" migration of a SQL Server instance can move several databases in one iteration. This approach sometimes allows future iterations to focus more specifically on applications and VMs, meaning that you can migrate more workloads in a single iteration.
-- **VMWare migration:** A common on-premises architecture includes applications and VMs on a virtual host, and databases on bare metal. In this scenario, you can migrate entire SQL Server instances to support your migration of the VMWare host to Azure VMWare Service. For more information, see [VMWare host migration](./vmware-host.md).
+- **VMware migration:** A common on-premises architecture includes applications and VMs on a virtual host, and databases on bare metal. In this scenario, you can migrate entire SQL Server instances to support your migration of the VMware host to Azure VMware Service. For more information, see [VMware host migration](./vmware-host.md).
 
 If none of the above criteria apply to this migration, it might be best to continue with the [standard migration process](../index.md). In the standard process, data structures are migrated iteratively, alongside each workload.
 
@@ -76,7 +76,7 @@ If any database in the plan can be migrated to a platform as a service (PaaS) da
 
 For databases that can be migrated to a PaaS solution, the following actions are completed during the assessment process.
 
-- **Assess with DMA:** Use Data Migration Assistant to detect compatibility issues that can affect database functionality in your target Azure SQL Database managed instance. Use DMA to recommend performance and reliability improvements, and to move the schema, data, and uncontained objects from your source server to your target server. For more information, see [Data Migration Assistant](/sql/dma/dma-overview).
+- **Assess with DMA:** Use Data Migration Assistant to detect compatibility issues that can affect database functionality in your target Azure SQL Database managed instance. Use DMA to recommend performance and reliability improvements, and to move the schema, data, and uncontained objects from your source server to your target server. For more information, see [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview).
 - **Remediate and convert:** Based on the output of DMA, convert the source data schema to remediate compatibility issues. Test the converted data schema with the dependent applications.
 
 ## Migrate process changes
@@ -91,9 +91,9 @@ The suggested path for migration and synchronization uses a combination of the f
 
 |Migration option|Purpose|
 |---------|---------|
-|[Azure Database Migration Service](/sql/dma/dma-overview)|Supports online (minimal downtime) and offline (one time) migrations at scale to an Azure SQL Database managed instance. Supports migration from: SQL Server 2005, SQL Server 2008 and SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016, and SQL Server 2017.|
-|[Transactional replication](/sql/relational-databases/replication/administration/enhance-transactional-replication-performance)|Transactional replication to an Azure SQL Database managed instance is supported for migrations from: SQL Server 2012 (SP2 CU8, SP3, or later), SQL Server 2014 (RTM CU10 or later, or SP1 CU3 or later), SQL Server 2016, SQL Server 2017.|
-|[Bulk load](/sql/t-sql/statements/bulk-insert-transact-sql)|Use bulk load to an Azure SQL Database managed instance for data stored in: SQL Server 2005, SQL Server 2008 and SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016, and SQL Server 2017.|
+|[Azure Database Migration Service](https://docs.microsoft.com/sql/dma/dma-overview)|Supports online (minimal downtime) and offline (one time) migrations at scale to an Azure SQL Database managed instance. Supports migration from: SQL Server 2005, SQL Server 2008 and SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016, and SQL Server 2017.|
+|[Transactional replication](https://docs.microsoft.com/sql/relational-databases/replication/administration/enhance-transactional-replication-performance)|Transactional replication to an Azure SQL Database managed instance is supported for migrations from: SQL Server 2012 (SP2 CU8, SP3, or later), SQL Server 2014 (RTM CU10 or later, or SP1 CU3 or later), SQL Server 2016, SQL Server 2017.|
+|[Bulk load](https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql)|Use bulk load to an Azure SQL Database managed instance for data stored in: SQL Server 2005, SQL Server 2008 and SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016, and SQL Server 2017.|
 
 ### Guidance and tutorials for suggested migration process
 
@@ -115,7 +115,7 @@ After moving databases from an instance of SQL Server to Database Migration Serv
 |---------|---------|---------|---------|---------|
 |SQL Server Integration Services|Azure Data Factory integration runtime|Azure Data Factory|Offline|[Tutorial](https://docs.microsoft.com/azure/data-factory/create-azure-ssis-integration-runtime)|
 |SQL Server Analysis Services - tabular model|Azure Analysis Services|SQL Server Data Tools|Offline|[Tutorial](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)|
-|SQL Server Reporting Services|Power BI Report Server|Power BI|Offline|[Tutorial](/power-bi/report-server/migrate-report-server)|
+|SQL Server Reporting Services|Power BI Report Server|Power BI|Offline|[Tutorial](https://docs.microsoft.com/power-bi/report-server/migrate-report-server)|
 
 ### Guidance and tutorials for migration from SQL Server to an IaaS instance of SQL Server
 

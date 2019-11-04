@@ -12,30 +12,55 @@ ms.subservice: innovate
 
 # Tools to democratize data in Azure
 
-As described in the theory article on [democratizing data](../considerations/data.md), many innovations can be delivered with minimal technical investment. There are countless examples of major innovations that required little more than raw data. Democratizing data is about investing as little as is needed to engage your customers using data to capitalizing on their existing knowledge. Starting with data is a quick way to test a hypothesis before expanding into broader, more costly digital inventions. As more of the hypothesis is refined and the inventions begin to be adopted at scale, the processes below will each aid in preparing for operational support of the innovation.
+As described in the conceptual article on [democratizing data](../considerations/data.md), you can deliver many innovations with little technical investment. Many major innovations require little more than raw data. Democratizing data is about investing as little resource as needed to engage your customers who use data to take advantage of their existing knowledge.
+
+Starting with data is a quick way to test a hypothesis before expanding into broader, more costly digital inventions. As you refine more of the hypothesis and begin to adopt the inventions at scale, the following processes will help you prepare for operational support of the innovation.
 
 ![Cloud Adoption Framework approach to democratizing data](../../_images/innovate/democratize-data.png)
 
 ## Alignment to the methodology
 
-This type of digital invention can be accelerated through each phase of the following process, also pictured above. Technical guidance to accelerate digital invention is listed in the table of contents on the left. Those articles have been grouped into the same phases to align guidance with the overall methodology:
+This type of digital invention can be accelerated through each phase of the following processes, as shown in the preceding image. Technical guidance to accelerate digital invention is listed in the table of contents on the left side of this page. Those articles are grouped by phase to align guidance with the overall methodology.
 
-- **Share data:** First step of democratizing data is to share openly.
+- **Share data:** The first step of democratizing data is to share openly.
 - **Govern data:** Ensure that any sensitive data is secured, tracked, and governed before sharing.
-- **Centralize data:** Sometimes it's necessary to provide a centralize platform for data sharing and governance.
+- **Centralize data:** Sometimes you need to provide a centralized platform for data sharing and governance.
 - **Collect data:** Migration, integration, ingestion, and virtualization can each collect existing data to be centralized, governed, and shared.
 
-It is advised that cloud adoption teams only go as deep into the stack as is required to prioritize the focus on customer needs over architecture in every iteration. Delaying technical spikes in favor of customer needs will accelerate validation of your hypothesis. As such, all guidance maps to the four processes above from highest customer impact to highest technical impact. Across each, you will encounter guidance on a variety of potential ways that Azure could accelerate your ability to [build with customer empathy](../considerations/build.md).
+In every iteration, cloud adoption teams should go only as deep into the stack as they require to put the focus on customer needs over architecture. Delaying technical spikes in favor of customer needs accelerates validation of your hypothesis.
+
+All guidance maps to the four preceding processes. Guidance ranges from the highest customer effect to the highest technical effect. Across each process, you'll see guidance on different potential ways that Azure can accelerate your ability to [build with customer empathy](../considerations/build.md).
 
 ## Toolchain
 
-In Azure the following tools are commonly leveraged to accelerate digital invention across each of the phases above: Power BI, Azure Data Catalog, Azure SQL Data Warehouse, Cosmos DB, Azure Databases for PostgreSQL, MySQL, MariaDB, PostgreSQL Hyperscale, Azure Data Lake, Azure Data Migration Service, Azure SQL Database (with or without managed instances), Azure Data Factory, Azure Stream Analytics, SQL Server Integration Services, Azure Stack, Azure SQL stretch databases, StorSimple, Azure Files, File Sync, and Polybase.
+In Azure, the following tools are commonly used to accelerate digital invention across the preceding phases:
 
-As the invention approaches adoption at scale, the aspects of each solution will require refinement and technical maturity. As that happens, it is likely that more of these services will be required. For now, use the table of contents to the left to find guidance on Azure tools relevant to the process required to test your hypothesis.
+- Power BI
+- Azure Data Catalog
+- Azure SQL Data Warehouse
+- Azure Cosmos DB
+- Azure Database for PostgreSQL
+- Azure Database for MySQL
+- Azure Database for MariaDB
+- Azure Database for PostgreSQL Hyperscale
+- Azure Data Lake
+- Azure Database Migration Service
+- Azure SQL Database, with or without managed instances
+- Azure Data Factory
+- Azure Stream Analytics
+- SQL Server Integration Services
+- Azure Stack
+- SQL Server Stretch Database
+- Microsoft Azure StorSimple
+- Azure Files
+- Azure File Sync
+- PolyBase
+
+As the invention approaches adoption at scale, the aspects of each solution require refinement and technical maturity. As that happens, more of these services are likely to be required. Use the table of contents on the left side of this page for Azure tools guidance relevant to your hypothesis-testing process.
 
 ## Get started
 
-The table of contents on the left outlines many articles to get you started with each of the tools in this toolchain.
+The table of contents on the left side of this page outlines many articles. These articles help you get started with each of the tools in this toolchain.
 
 > [!NOTE]
-> Some links may leave the Cloud Adoption Framework to help go beyond the scope of this framework.
+> Some links might leave the Cloud Adoption Framework to help you go beyond the scope of this framework.

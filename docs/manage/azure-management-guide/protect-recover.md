@@ -1,7 +1,7 @@
 ---
 title: Protect and recover in Azure
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Ensure business stability by decreasing recovery time
+description: Ensure business stability by reducing recovery time
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -14,18 +14,18 @@ ms.localizationpriority: high
 
 # Protect and recover in Azure
 
-Protect and recovery is the third and final discipline in any cloud management baseline.
+_Protect and recover_ is the third and final discipline in any cloud-management baseline.
 
 ![Cloud Management Baseline](../../_images/manage/management-baseline.png)
 
-In the last article "Operational compliance", the objective is to reduce the likelihood of a business interruption. This article "Protect and recover" aims to reduce the duration and impact of outages that can't be prevented.
+In [Operational compliance in Azure](./operational-compliance.md) the objective is to reduce the likelihood of a business interruption. The current article aims to reduce the duration and impact of outages that can't be prevented.
 
-For any enterprise-grade environment, the following table outlines the suggested minimum for any management baseline.
+For any enterprise-grade environment, this table outlines the suggested minimum for any management baseline:
 
 |Process  |Tool  |Purpose  |
 |---------|---------|---------|
-|Protect data|Azure Backup|Back up data and VMs in the cloud|
-|Protect the environment|Azure Security Center|
+|Protect data|Azure Backup|Back up data and virtual machines in the cloud.|
+|Protect the environment|Azure Security Center|Strengthen security and provide advanced threat protection across your hybrid workloads.|
 
 ::: zone target="docs"
 
@@ -38,13 +38,13 @@ For any enterprise-grade environment, the following table outlines the suggested
 
 ::: zone-end
 
-Azure Backup is the Azure-based service you can use to back up (or protect) and recover your data in the Microsoft cloud. Azure Backup replaces your existing on-premises or offsite backup solution with a cloud-based solution that is reliable, secure, and cost-competitive. It can also be used to protect and recover on-premises assets through one consistent solution.
+With Azure Backup, you can back up, protect, and recover your data in the Microsoft cloud. Azure Backup replaces your existing on-premises or offsite backup solution with a cloud-based solution. This new solution is reliable, secure, and cost competitive. Azure Backup can also help protect and recover on-premises assets through one consistent solution.
 
 ### Enable backup for an Azure VM
 
 1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
-1. In **Operations**, select **Backup**.
-1. Create or select an existing Recovery Services vault.
+1. On the **Operations** pane, select **Backup**.
+1. Create or select an existing Azure Recovery Services vault.
 1. Select **Create (or edit) a new policy**.
 1. Configure the schedule and retention period.
 1. Select **OK**.
@@ -71,23 +71,22 @@ Azure Backup is the Azure-based service you can use to back up (or protect) and 
 
 Azure Site Recovery is a critical component in your disaster recovery strategy.
 
-The Azure Site Recovery service allows you to replicate virtual machines and workloads hosted in a primary Azure region to a copy hosted in a secondary region. When an outage occurs in your primary region, you can fail over to the copy running in the secondary region and continue to access your applications and services from there. This proactive approach to recovery can significantly reduce recovery times. When the recovery environment is no longer necessary, production traffic can fall back over to the original environment.
+Site Recovery replicates VMs and workloads that are hosted in a primary Azure region. It replicates them to a copy that is hosted in a secondary region. When an outage occurs in your primary region, you fail over to the copy running in the secondary region. You then continue to access your applications and services from there. This proactive approach to recovery can significantly reduce recovery times. When the recovery environment is no longer needed, production traffic can fall back to the original environment.
 
-### Replicate an Azure VM to another region with Site Recovery service
+### Replicate an Azure VM to another region with Site Recovery
 
-The following steps outline the process to use Site Recovery service to replicate an Azure VM to another region (Azure-to-Azure):
-
+The following steps outline the process to use Site Recovery for Azure-to-Azure replication, which is replication of an Azure VM to another region.
 >
 > [!TIP]
-> Depending on your scenario, the exact steps may differ slightly.
+> Depending on your scenario, the exact steps might differ slightly.
 >
 
 ### Enable replication for the Azure VM
 
 1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
-1. In **Operations**, select **Disaster recovery**.
-1. In **Configure disaster recovery** > **Target region**, select the target region to which you'll replicate.
-1. For this Quickstart, accept the other default settings.
+1. On the **Operations** pane, select **Disaster recovery**.
+1. Select **Configure disaster recovery** > **Target region**, and choose the target region to which you'll replicate.
+1. For this quickstart, accept the default values for all other options.
 1. Select **Enable replication**, which starts a job to enable replication for the VM.
 
 ::: zone target="chromeless"
@@ -101,7 +100,7 @@ The following steps outline the process to use Site Recovery service to replicat
 After the replication job has finished, you can check the replication status, verify replication health, and test the deployment.
 
 1. In the VM menu, select **Disaster recovery**.
-2. Verify replication health, the recovery points that have been created, and source and target regions on the map.
+1. Verify replication health, the recovery points that have been created, and source and target regions on the map.
 
 ::: zone target="chromeless"
 
