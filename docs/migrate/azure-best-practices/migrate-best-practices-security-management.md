@@ -214,7 +214,7 @@ Ensuring that your resource groups have meaningful names that admins and support
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions) naming conventions.
+- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) naming conventions.
 
 ## Best practice: Implement delete locks for resource groups
 
