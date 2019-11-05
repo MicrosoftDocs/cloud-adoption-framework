@@ -110,7 +110,7 @@ The first pillar of the scaffold is a consistent naming standard. Well-designed 
 > [!TIP]
 > For naming conventions:
 >
-> - Review and adopt where possible the [Patterns and Practices guidance](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions). This guidance helps you decide on a meaningful naming standard and provides extensive examples.
+> - Review and adopt where possible the [Patterns and Practices guidance](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming). This guidance helps you decide on a meaningful naming standard and provides extensive examples.
 > - Using Resource Manager Policies to help enforce naming standards.
 >
 > Remember that it's difficult to change names later, so a few minutes now will save you trouble later.
