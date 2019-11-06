@@ -12,7 +12,6 @@ ms.subservice: migrate
 
 # NoSQL migration decision tree
 
-The following decision tree outlines options available for migrating a NoSQL data structure to various data platforms in Azure.
-This reference can aid in determining the most appropriate migration path for NoSQL.
+The following decision tree outlines the available options for migrating a NoSQL data structure to various data platforms in Azure. This reference can help you determine the most appropriate migration path for NoSQL.
 
 ![NoSQL migration decision tree](../../_images/innovate/considerations/no-sql-decision-tree.png)
