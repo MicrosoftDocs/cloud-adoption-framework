@@ -97,7 +97,7 @@ The suggested path for migration and synchronization uses a combination of the f
 
 ### Guidance and tutorials for suggested migration process
 
-Choosing the best guidance for migration by using Database Migration Service is contingent on the source and target platform of choice. The following table links to tutorials for each of the standard approaches for migrating a SQL database by using Database Migration Service.
+Choosing the best guidance for migration by using Azure Database Migration Service is contingent on the source and target platform of choice. The following table links to tutorials for each of the standard approaches for migrating a SQL database by using Azure Database Migration Service.
 
 |Source  |Target  |Tool  |Migration Type  |Guidance  |
 |---------|---------|---------|---------|---------|
@@ -109,7 +109,7 @@ Choosing the best guidance for migration by using Database Migration Service is 
 
 ### Guidance and tutorials for various services to equivalent PaaS solutions
 
-After moving databases from an instance of SQL Server to Database Migration Service, the schema and data can be rehosted in a number of PaaS solutions. However, other required services might still be running on that server. The following three tutorials aid in moving SSIS, SSAS, and SSRS to equivalent PaaS services on Azure.
+After moving databases from an instance of SQL Server to Azure Database Migration Service, the schema and data can be rehosted in a number of PaaS solutions. However, other required services might still be running on that server. The following three tutorials aid in moving SSIS, SSAS, and SSRS to equivalent PaaS services on Azure.
 
 |Source  |Target  |Tool  |Migration type  |Guidance  |
 |---------|---------|---------|---------|---------|

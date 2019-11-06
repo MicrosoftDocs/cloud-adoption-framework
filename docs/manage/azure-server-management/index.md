@@ -17,7 +17,7 @@ Azure server management services provide a consistent experience for managing se
 The Azure server management services suite includes the services in the following diagram:
 ![Diagram of the Azure operations model](./media/operations-diagram.png)
 
-This section of the Microsoft Cloud Adoption Framework provides an actionable and prescriptive plan for deploying server management services in your environment. This plan  helps orient you quickly to these services, guiding you through an incremental set of management stages for all environment sizes.
+This section of the Microsoft Cloud Adoption Framework provides an actionable and prescriptive plan for deploying server management services in your environment. This plan helps orient you quickly to these services, guiding you through an incremental set of management stages for all environment sizes.
 
 For simplicity, we've categorized this guidance into three stages:
 

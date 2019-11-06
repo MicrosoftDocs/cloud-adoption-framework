@@ -22,4 +22,4 @@ The [expanded scope article on SQL Server migration](../expanded-scope/sql-migra
 
 ## Migration best practices
 
-The table of contents to the left outlines a number of best practices around Microsoft which can guide the execution of SQL Server Migration using Azure Database Migration Guide, Azure Data Migration Service (DMS), or other tools. Bookmark this page for quick reference to the full list of best practices.
+The table of contents to the left outlines a number of best practices around Microsoft which can guide the execution of SQL Server Migration using Azure Database Migration Guide, Azure Database Migration Service (DMS), or other tools. Bookmark this page for quick reference to the full list of best practices.
