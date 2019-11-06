@@ -62,7 +62,7 @@ This table outlines a few processes, tools, and potential effects common in cust
 
 Azure Automation provides a centralized system for the management of automated controls. In Azure Automation, you can run simple remediation, scale, and optimization processes in response to environmental metrics. These processes reduce the overhead associated with manual incident processing.
 
-Most importantly, automated remediation can be delivered in near real time, significantly reducing interruptions to business processes. A study of the most common business interruptions  identifies activities within your environment that could be automated.
+Most importantly, automated remediation can be delivered in near-real-time, significantly reducing interruptions to business processes. A study of the most common business interruptions identifies activities within your environment that could be automated.
 
 ### Runbooks
 

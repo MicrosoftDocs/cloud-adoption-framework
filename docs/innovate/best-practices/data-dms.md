@@ -28,7 +28,7 @@ To support Oracle and NoSQL migrations, you can also use [Database Migration Ser
 
 ## Considerations and guidance
 
-When you use Database Migration Service for migration and modernization of data, it's important to understand:
+When you use Azure Database Migration Service for migration and modernization of data, it's important to understand:
 
 - The current platform for hosting the data source.
 - The current version.

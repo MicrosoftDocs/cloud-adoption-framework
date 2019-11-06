@@ -39,9 +39,9 @@ When workload specialization is required, operational management commonly evolve
 
 In this model, operational tasks like monitoring, deployment, DevOps, and other innovation-focused functions shift to an application-development or business-unit organization. The Cloud Platform and core Cloud Monitoring team still delivers on the management baseline across the environment.
 
-Those centralized teams also guide and instruct workload-specialized teams on operations of their workloads. But the day-to-day operational responsibility falls on a cloud management team that is managed outside of IT. This type of distributed control is one of the primary indicators of Cloud Center of Excellence maturity.
+Those centralized teams also guide and instruct workload-specialized teams on operations of their workloads. But the day-to-day operational responsibility falls on a cloud management team that is managed outside of IT. This type of distributed control is one of the primary indicators of maturity in a cloud center of excellence.
 
-## Beyond platform specialization - Application Insights
+## Beyond platform specialization: Application Insights
 
 Greater detail on the specific workload is required to provide clear workload operations. During the continuous improvement phase, Application Insights will be a necessary addition to the cloud management toolchain.
 

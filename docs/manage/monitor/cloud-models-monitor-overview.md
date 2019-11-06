@@ -1,5 +1,5 @@
 ---
-title: Cloud monitoring guide – Monitoring strategy for cloud deployment models
+title: "Cloud monitoring guide: Monitoring strategy for cloud deployment models"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
 author: MGoedtel
@@ -25,12 +25,13 @@ Our strategy includes support for monitoring infrastructure (compute, storage, a
 ## Azure cloud monitoring
 
 Azure Monitor is the Azure native platform service that provides a single source for monitoring Azure resources. It's designed for cloud solutions that:
-* Are built on Azure.
-* Support a business capability that’s based on virtual machine (VM) workloads or complex architectures that use microservices and other platform resources.
 
-It monitors all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, and subscription-level events and Azure service health. 
+- Are built on Azure.
+- Support a business capability that’s based on virtual machine (VM) workloads or complex architectures that use microservices and other platform resources.
 
-It also monitors infrastructure resources, such as VMs, storage, and network resources. At the top layer, it monitors your application. 
+It monitors all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, and subscription-level events and Azure service health.
+
+It also monitors infrastructure resources, such as VMs, storage, and network resources. At the top layer, it monitors your application.
 
 By monitoring each of these dependencies, and collecting the right signals that each can emit, you get the observability of applications and the key infrastructure you need.
 
@@ -51,7 +52,7 @@ Azure tenant | Azure Active Directory || Enable diagnostics logging, and configu
 
 ## Hybrid cloud monitoring
 
-For many organizations, transition to the cloud must be approached gradually, where the hybrid cloud model is the most common first step in the journey. You carefully select the appropriate subset of applications and infrastructure to begin your migration, while you avoid disruption to your business. However, because we offer two monitoring platforms that support this cloud model, IT decision makers might be uncertain as to which is the best choice to support their business and IT operational goals. 
+For many organizations, transition to the cloud must be approached gradually, where the hybrid cloud model is the most common first step in the journey. You carefully select the appropriate subset of applications and infrastructure to begin your migration, while you avoid disruption to your business. However, because we offer two monitoring platforms that support this cloud model, IT decision makers might be uncertain as to which is the best choice to support their business and IT operational goals.
 
 In this section, we address the uncertainty by reviewing several factors and offering an understanding of which platform to consider.
 
@@ -85,7 +86,7 @@ The following table summarizes the requirements that Azure Monitor and System Ce
 |Monitor Azure Kubernetes Service containers | Yes | No |
 |Monitor Docker or Windows containers | Yes | No |
 |Network performance monitoring | Yes | Yes, limited<br> Supports availability checks, and collects basic statistics from network devices by using the Simple Network Management Protocol (SNMP) from the corporate network.|
-|Interactive data analysis | Yes | No<br> Relies on SQL Server Reporting Services pre-canned or custom reports, third-party visualization solutions, or a custom Power BI implementation. There are scale and performance limitations with the Operations Manager data warehouse. Integrate with Azure Monitor logs as an alternative for data aggregation requirements. You achieve integration by configuring the Log Analytics connector.|
+|Interactive data analysis | Yes | No<br> Relies on SQL Server Reporting Services canned or custom reports, third-party visualization solutions, or a custom Power BI implementation. There are scale and performance limitations with the Operations Manager data warehouse. Integrate with Azure Monitor logs as an alternative for data aggregation requirements. You achieve integration by configuring the Log Analytics connector.|
 |End-to-end diagnostics, root-cause analysis, and timely troubleshooting | Yes | Yes, limited<br> Supports end-to-end diagnostics and troubleshooting only for on-premises infrastructure and applications. Uses other System Center components or partner solutions.|
 |Interactive visualizations (Dashboards) | Yes | Yes, limited<br> Delivers essential dashboards with its HTML5 web console or an advanced experience from partner solutions, such as Squared Up and Savision. |
 |Integration with IT or DevOps tools | Yes | Yes, limited |
@@ -110,7 +111,7 @@ If you've already invested in Operations Manager, you don't need to focus on pla
 
 To monitor the workloads that are running in Azure, you need:
 
-- The [Management Pack for Azure](https://www.microsoft.com/download/details.aspx?id=50013). It collects performance metrics emitted by Azure services such as web and worker roles, Application Insights availability tests (web tests), Azure Service Bus, and so on. The management pack uses the Azure REST API to monitor the availability and performance of these resources. Some Azure service types have no metrics or pre-defined monitors in the Management Pack, but you can still monitor them through the relationships defined in the Azure Management Pack for discovered services.
+- The [Management Pack for Azure](https://www.microsoft.com/download/details.aspx?id=50013). It collects performance metrics emitted by Azure services such as web and worker roles, Application Insights availability tests (web tests), Azure Service Bus, and so on. The management pack uses the Azure REST API to monitor the availability and performance of these resources. Some Azure service types have no metrics or predefined monitors in the Management Pack, but you can still monitor them through the relationships defined in the Azure Management Pack for discovered services.
 
 - The [Management Pack for Azure SQL Database](https://www.microsoft.com/download/details.aspx?id=38829) to monitor the availability and performance of Azure SQL databases and Azure SQL database servers using the Azure REST API and T-SQL queries to SQL Server system views.
 
@@ -132,7 +133,7 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
 #### Advantages of using Operations Manager with Azure Monitor
 
-- Azure Monitor is the way to work around the limitations of Operations Manager. It complements the Operations Manager data warehouse database by collecting important performance and log data. Azure Monitor delivers better analytics, performance (when querying large data volume), and retention than the Operations Manager data warehouse. 
+- Azure Monitor is the way to work around the limitations of Operations Manager. It complements the Operations Manager data warehouse database by collecting important performance and log data. Azure Monitor delivers better analytics, performance (when querying large data volume), and retention than the Operations Manager data warehouse.
 
   With the Azure Monitor query language, you can create much more complex and sophisticated queries. You can run queries across terabytes of data in seconds. You can quickly transform your data into pie charts, time charts, and many other visualizations. To analyze this data, you're no longer constrained by working with Operations Manager reports that are based on SQL Server Reporting Services, custom SQL queries, or other workarounds.
 
@@ -145,12 +146,11 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 - By using the Map feature of Azure Monitor for VMs, you can monitor standard connectivity metrics from network connections between your Azure VMs and on-premises VMs. These metrics include response time, requests per minute, traffic throughput, and links. You can identify failed connections, troubleshoot, perform migration validation, perform security analysis, and verify the overall architecture of the service. Map can automatically discover application components on Windows and Linux systems, and map the communication between services. This automation helps you identify connections and dependencies you were unaware of, plan and validate migration to Azure, and minimize speculation during incident resolution.
 
 - By using Network Performance Monitor, you can monitor the network connectivity between:
+  - Your corporate network and Azure.
+  - Mission critical multitier applications and microservices.
+  - User locations and web-based applications (HTTP/HTTPS).
 
-   - Your corporate network and Azure.
-   - Mission critical multitier applications and microservices.
-   - User locations and web-based applications (HTTP/HTTPS).
-
-   This strategy delivers visibility of the network layer, without the need for SNMP. It can also present, in an interactive topology map, the hop-by-hop topology of routes between the source and destination endpoint. It's a better choice than attempting to accomplish the same result with network monitoring in Operations Manager or with other network monitoring tools currently used in your environment.
+This strategy delivers visibility of the network layer, without the need for SNMP. It can also present, in an interactive topology map, the hop-by-hop topology of routes between the source and destination endpoint. It's a better choice than attempting to accomplish the same result with network monitoring in Operations Manager or with other network monitoring tools currently used in your environment.
 
 ### Monitor with Azure Monitor
 
@@ -172,7 +172,7 @@ Although a migration to the cloud presents numerous challenges, it also includes
 
 ## Private cloud monitoring
 
-You can achieve holistic monitoring of Azure Stack with System Center Operations Manager. Specifically, you can monitor the workloads that are running in the tenant, the resource level, on the virtual machines, and the infrastructure hosting Azure Stack (physical servers and network switches). 
+You can achieve holistic monitoring of Azure Stack with System Center Operations Manager. Specifically, you can monitor the workloads that are running in the tenant, the resource level, on the virtual machines, and the infrastructure hosting Azure Stack (physical servers and network switches).
 
 You can also achieve holistic monitoring with a combination of [infrastructure monitoring capabilities](https://docs.microsoft.com/azure/azure-stack/azure-stack-monitor-health) that are included in Azure Stack. These capabilities help you view health and alerts for an Azure Stack region and the [Azure Monitor service](https://docs.microsoft.com/azure/azure-stack/user/azure-stack-metrics-azure-data) in Azure Stack, which provides base-level infrastructure metrics and logs for most services.
 

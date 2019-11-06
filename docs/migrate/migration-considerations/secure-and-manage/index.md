@@ -12,7 +12,7 @@ ms.subservice: migrate
 
 # Secure monitoring and management tools
 
-After a migration is complete, migrated assets should be managed by controlled IT operations. This article is not intended to suggest a deviation from operational best practices. Instead, the following should be considered a minimum viable product for securing and managing migrated assets, either from IT operations or independently as IT operations come online.
+After a migration is complete, migrated assets should be managed by controlled IT operations. This article does not represent a deviation from operational best practices. Instead, the following should be considered a minimum viable product for securing and managing migrated assets, either from IT operations or independently as IT operations come online.
 
 ## Monitoring
 

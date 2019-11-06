@@ -101,7 +101,7 @@ The more there is to maintain within a solution, the slower that solution will i
 
 To prepare for the many iterations required to deliver an innovative solution, it's important to think ahead. For example, minimize operational burdens early in the process by favoring serverless options. In Azure, serverless application options could include [Azure App Service](https://docs.microsoft.com/azure/app-service/overview) or [containers](https://docs.microsoft.com/azure/architecture/cloud-adoption/migrate/azure-best-practices/contoso-migration-rearchitect-container-sql).
 
-In parallel, Azure provides serverless transaction data options that also reduce overhead. The [database products list](https://docs.microsoft.com/azure/#pivot=products&panel=databases) provides  options for hosting data without the need for a full data platform.
+In parallel, Azure provides serverless transaction data options that also reduce overhead. The [database products list](https://docs.microsoft.com/azure/#pivot=products&panel=databases) provides options for hosting data without the need for a full data platform.
 
 ## Next steps
 

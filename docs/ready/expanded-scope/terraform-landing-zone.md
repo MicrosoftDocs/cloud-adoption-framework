@@ -195,9 +195,9 @@ The foundation landing zone lays the groundwork for a complex environment in a d
 - Adding other modules to the blueprint.
 - Layering additional landing zones on top of it.
 
-Layering landing zones is a good practice for decoupling systems, versioning each component that you're using, and allowing fast innovation and stability for your infrastructure-as-code deployment.
+Layering landing zones is a good practice for decoupling systems, versioning each component that you're using, and allowing fast innovation and stability for your infrastructure as code deployment.
 
-Future reference architectures will demonstrate this concept for a hub-and-spoke topology.
+Future reference architectures will demonstrate this concept for a hub and spoke topology.
 
 > [!div class="nextstepaction"]
 > [Review the foundation Terraform landing zone sample](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready)
