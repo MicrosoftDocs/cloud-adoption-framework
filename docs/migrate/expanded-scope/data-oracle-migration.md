@@ -12,7 +12,6 @@ ms.subservice: migrate
 
 # Oracle migration decision tree
 
-The following decision tree outlines options available for migrating an Oracle data structure to various data platforms in Azure.
-This reference can aid in determining the most appropriate migration path for Oracle.
+The following decision tree outlines the available options for migrating an Oracle data structure to various data platforms in Azure. This reference can help you determine the most appropriate migration path for Oracle.
 
 ![Oracle migration decision tree](../../_images/innovate/considerations/oracle-migration-decision-tree.png)
