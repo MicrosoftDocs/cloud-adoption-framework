@@ -66,7 +66,7 @@ The following changes to policy will help remediate the new risks and guide impl
 
 1. All deployed assets must be categorized by criticality and data classification. Classifications are to be reviewed by the cloud governance team and the application owner before deployment to the cloud.
 2. Applications that store or access protected data are to be managed differently than those that don't. At a minimum, they should be segmented to avoid unintended access of protected data.
-3. All protected data must be encrypted when at rest. While this is the default for all Azure Storage Accounts, additional encryption strategies may be needed, including encryption of the data within the storage account, encryption of VMs, and database level encryption if leveraging SQL in a VM (TDE and column encryption).
+3. All protected data must be encrypted when at rest. While this is the default for all Azure Storage Accounts, additional encryption strategies may be needed, including encryption of the data within the storage account, encryption of VMs, and database-level encryption when using SQL in a VM (TDE and column encryption).
 4. Elevated permissions in any segment containing protected data should be an exception. Any such exceptions will be recorded with the cloud governance team and audited regularly.
 5. Network subnets containing protected data must be isolated from any other subnets. Network traffic between protected data subnets will be audited regularly.
 6. No subnet containing protected data can be directly accessed over the public internet or across datacenters. Access to those subnets must be routed through intermediate subnets. All access into those subnets must come through a firewall solution that can perform packet scanning and blocking functions.

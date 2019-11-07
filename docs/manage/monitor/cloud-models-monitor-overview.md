@@ -70,7 +70,7 @@ The following table summarizes the requirements that Azure Monitor and System Ce
 
 |Requirement | Azure Monitor | Operations Manager |
 |:--|:---|:---|
-|Infrastructure requirements | No | Yes<br> Requires at minimum a management server, and a SQL server to host the operational database and the reporting data warehouse database. The complexity increases when high availability and disaster recovery are required, and there are machines in multiple sites, untrusted systems, and other complex design considerations.|
+|Infrastructure requirements | No | Yes<br> Requires, at a minimum, a management server and a SQL server to host the operational database and the reporting data warehouse database. The complexity increases when high availability and disaster recovery are required, and there are machines in multiple sites, untrusted systems, and other complex design considerations.|
 |Limited connectivity - no internet<br> or isolated network | No | Yes |
 |Limited connectivity - controlled internet access | Yes | Yes |
 |Limited connectivity - frequently disconnected | Yes | Yes |

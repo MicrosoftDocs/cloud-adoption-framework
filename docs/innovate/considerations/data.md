@@ -14,7 +14,7 @@ ms.subservice: innovate
 
 Coal, oil, and human potential were the three most consequential assets during the Industrial Revolution. These assets built companies, shifted markets, and ultimately changed nations. In the digital economy, there are three equally important assets: data, devices, and human potential. Each of these assets holds great innovation potential. For any innovation effort in the modern era, data is the new oil.
 
-Across every company today, there are pockets of data that could be leveraged to find and meet customer needs more effectively. Unfortunately, the process of mining that data to drive innovation has long been costly and time-consuming. Many of the most valuable solutions to customer needs go unmet because the right people can't access the data they need.
+Across every company today, there are pockets of data that could be used to find and meet customer needs more effectively. Unfortunately, the process of mining that data to drive innovation has long been costly and time-consuming. Many of the most valuable solutions to customer needs go unmet because the right people can't access the data they need.
 
 Democratization of data is the process of getting this data into the right hands to drive innovation. This process can take several forms, but they generally include solutions for ingested or integrated raw data, centralization of data, sharing data, and securing data. When these methods are successful, experts around the company can use the data to test hypotheses. In many cases, cloud adoption teams can [build with customer empathy](./build.md) using only data, and rapidly addressing existing customer needs.
 
@@ -41,7 +41,7 @@ Sharing data can quickly produce an MVP that you can use in customer conversatio
 
 Data governance is a broad topic that could require it's own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.md). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
 
-- **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) prior to any public sharing to protect the interests of customers and the company.
+- **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) before being shared publicly to protect the interests of customers and the company.
 - **If the data is sensitive, has it been secured?** Protection of sensitive data should be a requirement for any democratized data. The example workload focused on [securing data solutions](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/securing-data-solutions) provides a few references for securing data.
 - **Is the data catalogued?** Capturing details about the data being shared will aid in long-term data management. Tools for documenting data, like Azure Data Catalog, can make this process much easier in the cloud. Guidance regarding the [annotation of data](https://docs.microsoft.com/azure/data-catalog/data-catalog-how-to-annotate) and [documentation of data sources](https://docs.microsoft.com/azure/data-catalog/data-catalog-how-to-documentation) can help accelerate the process.
 

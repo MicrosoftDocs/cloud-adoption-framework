@@ -74,7 +74,7 @@ The ongoing health and operations of the network, DNS, operating systems, and ot
 
 ## Processes
 
-Perhaps more important than the features of the cloud management platform, the cloud management processes will realize operations commitments with the business. Any cloud management methodology should include, at minimum, the following processes:
+Perhaps more important than the features of the cloud management platform, the cloud management processes will realize operations commitments with the business. Any cloud management methodology should include, at a minimum, the following processes:
 
 - **Reactive monitoring:** When deviations adversely affect business operations, who addresses those deviations? What actions do they take to remediate the deviations?
 - **Proactive monitoring:** When deviations are detected but business operations are not affected, how are those deviations addressed, and by whom?

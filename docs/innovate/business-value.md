@@ -26,7 +26,7 @@ Before you develop any solution (in the cloud or on-premises), validate your bus
 If the answers to all four questions are well documented, you might not need to complete the rest of this exercise. Fortunately, you can easily test any documentation. Set up two short meetings to test both the documentation and your organization's internal alignment. Invite committed business stakeholders to one meeting and set up a separate meeting with the engaged development team. Ask the four questions above to each group, and then compare the results.
 
 > [!NOTE]
-> The existing documentation **should not** be shared with either team prior to the meeting. If true alignment exists, the guiding hypotheses should be referenced or even recited by members of each group.
+> The existing documentation **should not** be shared with either team before the meeting. If true alignment exists, the guiding hypotheses should be referenced or even recited by members of each group.
 
 <!-- -->
 

@@ -22,7 +22,7 @@ This is an introductory article on the general topic of a cloud security baselin
 
 Cloud security is an extension of traditional information security practices. Traditional IT security would include policies and controls governing computer security, network security, data protection, information usage, and so forth. These same policies and controls are needed in the cloud. During any cloud transformation, it is imperative that the CISO be actively involved and understand the cloud landscape, to ensure legacy IT policies map to proper levels of control in the cloud.
 
-At minimum, any cloud security strategy should consider the following topics:
+At a minimum, any cloud security strategy should consider the following topics:
 
 - **Classify data.** Proper data classification to understand any data sources that are private, protected, or highly confidential. This will help manage risk during planning.
 - **Plan for a hybrid cloud scenario.** Understanding how legacy, on-premises networks will connect to the cloud will help the CISO identify and remediate risks.

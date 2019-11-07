@@ -382,7 +382,7 @@ To set up the source environment Contoso admins do the following:
 3. When they turn on the VM for the first time, it starts in a Windows Server 2016 installation experience. They accept the license agreement and enters an administrator password.
 4. When the installation is finished, they sign in to the VM as the administrator. At first time sign-in, the Azure Site Recovery Configuration Tool runs automatically.
 5. In the Site Recovery Configuration Tool, they enter a name to use to register the configuration server in the vault.
-6. The tool checks the VM's connection to Azure. After the connection is established, they select **Sign in** to sign in to the Azure subscription. The credentials must have access to the vault in which the configuration server is registered.
+6. The tool checks the virtual machine's connection to Azure. After the connection is established, they select **Sign in** to sign in to the Azure subscription. The credentials must have access to the vault in which the configuration server is registered.
 
     ![Register the configuration server](./media/contoso-migration-rehost-vm-sql-managed-instance/config-server-register2.png)
 
