@@ -21,7 +21,7 @@ Jump to: [Planning your monitoring infrastructure](#plan-your-monitoring-infrast
 
 The inflection point when determining a cloud logging and reporting strategy is based primarily on existing investments your organization has made in operational processes, and to some degree any requirements you have to support a multicloud strategy.
 
-There are multiple ways to log and report on activities in the cloud. Cloud-native and centralized logging are two common managed service options that are driven by the subscription design and the number of subscriptions.
+Activities in the cloud can be logged and reported in multiple ways. Cloud-native and centralized logging are two common managed service options that are driven by the subscription design and the number of subscriptions.
 
 ## Plan your monitoring infrastructure
 
@@ -49,7 +49,7 @@ Custom Azure Monitor-based logging solutions can be implemented ad hoc for each 
 
 ### On-premises extension
 
-It may require substantial redevelopment effort for applications and services migrating to the cloud to make use of cloud-based logging and reporting solutions such as Azure Monitor. In these cases it may make sense to allow these workloads to continue to send telemetry data to existing on-premises systems.
+It might require substantial redevelopment effort for applications and services migrating to the cloud to use cloud-based logging and reporting solutions such as Azure Monitor. In these cases, consider allowing these workloads to continue sending telemetry data to existing on-premises systems.
 
 To support this approach, your cloud resources will need to be able to communicate directly with your on-premises systems through a combination of [hybrid networking](../software-defined-network/hybrid.md) and [cloud hosted domain services](../identity/index.md#cloud-hosted-domain-services). With this in place, the cloud virtual network functions as a network extension of the on-premises environment. Therefore, cloud hosted workloads can communicate directly with your on-premises logging and reporting system.
 
@@ -64,7 +64,7 @@ On-premises&ndash;only assumptions:
 
 ### Gateway aggregation
 
-For scenarios where the amount of cloud-based telemetry data is large or existing on-premises monitoring systems need log data modified before it can be processed, a log data [gateway aggregation](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation) service may be required.
+For scenarios where the amount of cloud-based telemetry data is large or existing on-premises monitoring systems need log data modified before it can be processed, a log data [gateway aggregation](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation) service might be required.
 
 A gateway service is deployed to your cloud provider. Then, relevant applications and services are configured to submit telemetry data to the gateway instead of a default logging system. The gateway can then process the data: aggregating, combining, or otherwise formatting it before then submitting it to your monitoring service for ingestion and analysis.
 
@@ -80,7 +80,7 @@ Gateway aggregation assumptions:
 
 A hybrid monitoring solution combines log data from both your on-premises and cloud resources to provide an integrated view into your IT estate's operational status.
 
-If you have an existing investment in on-premises monitoring systems that would be difficult or costly to replace, you may need to integrate the telemetry from your cloud workloads into preexisting on-premises monitoring solutions. In a hybrid on-premises monitoring system, on-premises telemetry data continues to use the existing on-premises monitoring system. Cloud-based telemetry data is either sent to the on-premises monitoring system directly, or the data is sent to Azure Monitor then compiled and ingested into the on-premises system at regular intervals.
+If you have an existing investment in on-premises monitoring systems that would be difficult or costly to replace, you might need to integrate the telemetry from your cloud workloads into preexisting on-premises monitoring solutions. In a hybrid on-premises monitoring system, on-premises telemetry data continues to use the existing on-premises monitoring system. Cloud-based telemetry data is either sent to the on-premises monitoring system directly, or the data is sent to Azure Monitor then compiled and ingested into the on-premises system at regular intervals.
 
 **On-premises hybrid monitoring assumptions:** Using an on-premises logging and reporting system for hybrid monitoring assumes the following:
 

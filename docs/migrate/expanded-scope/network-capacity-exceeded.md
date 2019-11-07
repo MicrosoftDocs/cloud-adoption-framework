@@ -34,7 +34,7 @@ There are also [third-party partner solutions](https://azuremarketplace.microsof
 
 If the storage requirements of a workload (or workloads) exceed network capacity, then Azure Data Box can still be used in an offline data transfer.
 
-The general Microsoft position is that network transmission is the advised approach, unless the network is unavailable. This suggestion is a result of transfer speeds. Transferring data over the network (even when bandwidth is constrained) is typically faster than physically shipping the same amount of data using an offline transfer mechanism, like Data Box.
+Network transmission is the recommended approach unless the network is unavailable. The speed of transferring data over the network, even when bandwidth is constrained, is typically faster than physically shipping the same amount of data using an offline transfer mechanism such as Data Box.
 
 If connectivity to Azure is available, an analysis should be conducted before using Data Box, especially if migration of the workload is time sensitive. Data Box is only advisable when the time to transfer the necessary data exceeds the time to populate, ship, and restore data using Data Box.
 

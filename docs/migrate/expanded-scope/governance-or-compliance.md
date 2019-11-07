@@ -43,7 +43,7 @@ During assessment, additional decisions are required to align to the required go
 
 ### Suggested action during the assess process
 
-Governance and compliance assessment requirements are too customer-specific to provide general guidance on the actual steps taken during assessment. However, it is advised that the process includes tasks and time allocations for "alignment to compliance/governance requirements". For additional understanding of these requirements, see the following links:
+Governance and compliance assessment requirements are too customer-specific to provide general guidance on the actual steps taken during assessment. However, the process should include tasks and time allocations for "alignment to compliance/governance requirements". For additional understanding of these requirements, see the following links:
 
 For a deeper understanding of governance, review the [Five Disciplines of Cloud Governance overview](../../govern/governance-disciplines.md). This section of the Cloud Adoption Framework also includes templates to document the policies, guidance, and requirements for each of the five sections:
 
@@ -57,15 +57,15 @@ For guidance on developing governance guidance based on the Cloud Adoption Frame
 
 ## Optimize and promote process changes
 
-During the optimization and promotion processes, it is advised that the cloud governance team invest time to test and validate adherence to governance and compliance standards. Additionally, this step is a good time to inject processes for the cloud governance team to curate templates that could provide additional [deployment acceleration](../../govern/deployment-acceleration/index.md) for future projects.
+During the optimization and promotion processes, the cloud governance team shluld invest time to test and validate adherence to governance and compliance standards. Additionally, this step is a good time to inject processes for the cloud governance team to curate templates that could provide additional [deployment acceleration](../../govern/deployment-acceleration/index.md) for future projects.
 
 ### Suggested action during the optimize and promote process
 
-During this process, it is advised that the project plan includes time allocations for the cloud governance team to execute a compliance review for each workload planned for production promotion.
+During this process, the project plan should include time allocations for the cloud governance team to execute a compliance review for each workload planned for production promotion.
 
 ## Next steps
 
-As the final item on the [expanded scope checklist](./index.md), the reader is advised to return to the checklist and reevaluate any additional scope requirements for the migration effort.
+As the final item on the [expanded scope checklist](./index.md), return to the checklist and reevaluate any additional scope requirements for the migration effort.
 
 > [!div class="nextstepaction"]
 > [Expanded scope checklist](./index.md)

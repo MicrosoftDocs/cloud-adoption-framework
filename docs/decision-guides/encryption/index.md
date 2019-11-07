@@ -58,7 +58,7 @@ With a bring your own key approach, you generate keys on dedicated HSM hardware 
 
 ### On-premises (hold your own key)
 
-In certain scenarios, there may be regulatory, policy, or technical reasons why you can't store keys on a cloud-based key management system. In these cases, you must generate keys using on-premises hardware, store and manage them using an on-premises key management system, and provision a mechanism to allow cloud-based resource to access these keys for encryption purposes. Note that holding your own key may not be compatible with all Azure-based services.
+Certain scenarios might have regulatory, policy, or technical reasons prohibiting the storage of keys on a cloud-based key management system. If so, you must generate keys using on-premises hardware, store and manage them using an on-premises key management system, and establish a way for cloud-based resources to access these keys for encryption purposes. Note that holding your own key might not be compatible with all Azure-based services.
 
 **On-premises key management assumptions:** Using an on-premises key management system includes these assumptions:
 
@@ -79,7 +79,7 @@ Consider several different states of data with different encryption needs when p
 
 Data in transit is data moving between resources on the internal, between datacenters or external networks, or over the internet.
 
-Encrypting data in transit is usually done by requiring SSL/TLS protocols for traffic. Traffic transiting between your cloud-hosted resources to external network or the public internet should always be encrypted. PaaS resources generally also enforce SSL/TLS encryption to traffic by default. Whether you enforce encryption for traffic between IaaS resources hosted inside your virtual networks is a decision for your cloud adoption teams and workload owners and is generally recommended.
+Data in transit is usually encrypted by requiring SSL/TLS protocols for network traffic. Always encrypt traffic between your cloud-hosted resources and external networks or the public internet. PaaS resources typically enforce SSL/TLS encryption by default. Your cloud adoption teams and workload owners should consider enforcing encryption for traffic between IaaS resources hosted inside your virtual networks.
 
 **Assumptions about encrypting data in transit:** Implementing proper encryption policy for data in transit assumes the following:
 

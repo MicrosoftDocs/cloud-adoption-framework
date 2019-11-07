@@ -71,7 +71,7 @@ Balancing the portfolio requires additional qualitative analysis during the asse
 
 Based on the data from the table in the [documenting business outcomes](#document-business-outcomes) section above, there is a likely risk of the portfolio leaning too far into a migration-focused execution model. If customer experience was top priority, an innovation heavy portfolio would be more likely. Neither is right or wrong, but leaning too far in one direction commonly results in diminishing returns, adds unnecessary complexity, and increases execution time related to cloud adoption efforts.
 
-To reduce complexity, it is advised that the reader follow a traditional approach to portfolio rationalization, but in an iterative model. The following steps outline a qualitative model to such an approach:
+To reduce complexity, you should follow a traditional approach to portfolio rationalization, but in an iterative model. The following steps outline a qualitative model to such an approach:
 
 - The cloud strategy team maintains a prioritized backlog of workloads to be migrated.
 - The cloud strategy team and the cloud adoption team host a release planning meeting prior to the completion of each release.
@@ -84,8 +84,8 @@ To reduce complexity, it is advised that the reader follow a traditional approac
   - Will the data within this workload contribute to a downstream innovation related to BI, Machine Learning, IoT, or related technologies?
   - Is the workload compatible with modern application platforms like Azure App Service?
 - The answers to the above questions and any other required qualitative analysis would then influence adjustments to the prioritized backlog. These adjustments may include:
-  - If a workload could be replaced with a PaaS solution, it may be removed from the migration backlog entirely. At minimum, additional due diligence to decide between rehost and replace would be added as a task, temporarily reducing that workload's priority from the migration backlog.
-  - If a workload is undergoing development advancement (or should be), then it may best fit into a refactor/rearchitect/rebuild model. Since innovation and migration require different technical skills, it is often advised that applications, which align to a refactor/rearchitect/rebuild approach be managed through an innovation backlog, as opposed to a migration backlog.
+  - If a workload could be replaced with a PaaS solution, it may be removed from the migration backlog entirely. At a minimum, additional due diligence to decide between rehost and replace would be added as a task, temporarily reducing that workload's priority from the migration backlog.
+  - If a workload is (or should be) undergoing development advancement, then it may best fit into a refactor-rearchitect-rebuild model. Since innovation and migration require different technical skills, applications that align to a refactor-rearchitect-rebuild approach should be managed through an innovation backlog rather than a migration backlog.
   - If a workload is part of a downstream innovation, then it may make sense to refactor the data platform, but leave the application layers as a rehost candidate. Minor refactoring of a workload's data platform can often be addressed in a migration or an innovation backlog. This rationalization outcome may result in more detailed work items in the backlog, but otherwise no change to priorities.
   - If a workload isn't strategic but is compatible with modern, cloud-based application hosting platforms, then it may be wise to perform minor refactoring on the application to deploy it as a modern app. This can contribute to the overall savings by reducing the overall IaaS and OS licensing requirements of the cloud migration.
   - If a workload is a third-party application and that workload's data isn't planned for use in a downstream innovation, then it may be best to leave as a rehost option on the backlog.
@@ -100,7 +100,7 @@ During migration, portfolio balancing activities can have a negative impact on m
 
 Portfolio rationalization requires diversity of technical effort. It is tempting for cloud adoption teams to match that portfolio diversity within migration efforts. Business stakeholders of ask for a single cloud adoption team to address the entire migration backlog. This is seldom an advisable approach, in many cases this can be counter productive.
 
-It is advised that these diverse efforts are segmented across two or more cloud adoption teams. Using a two team model as an example mode of execution, Team 1 is the Migration Team and Team 2 is the Innovation Team. For larger efforts, these teams could be further segmented to address other approaches like Replace/PaaS efforts or Minor Refactoring. The following outlines the skills and roles needed to Rehost, Refactor, or Minor Refactoring:
+These diverse efforts should be segmented across two or more cloud adoption teams. Using a two team model as an example mode of execution, Team 1 is the Migration Team and Team 2 is the Innovation Team. For larger efforts, these teams could be further segmented to address other approaches like Replace/PaaS efforts or Minor Refactoring. The following outlines the skills and roles needed to Rehost, Refactor, or Minor Refactoring:
 
 **Rehost:** Rehost requires team members to implement infrastructure focused changes. Generally using a tool like Azure Site Recovery to migrate VMs or other assets to Azure. This work aligns well to datacenter admins or IT implementors. The cloud migration team is well structured to deliver this work at high scale. This is the fastest approach to migrate existing assets in most scenarios.
 

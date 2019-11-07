@@ -27,7 +27,7 @@ Throughout this framework, enablement is a core theme. The following checklist i
 
 ## Additional tools
 
-In addition to the Cloud Adoption Framework, Microsoft covers additional topics that can enable success. This article highlights a few common tools that can significantly improve success beyond the scope of the Cloud Adoption Framework. Establishing cloud governance, resilient architectures, technical skills, and a DevOps approach are each important to the success of any cloud adoption effort. The reader is advised to bookmark this page as a resource to revisit throughout any cloud adoption journey.
+In addition to the Cloud Adoption Framework, Microsoft covers additional topics that can enable success. This article highlights a few common tools that can significantly improve success beyond the scope of the Cloud Adoption Framework. Establishing cloud governance, resilient architectures, technical skills, and a DevOps approach are each important to the success of any cloud adoption effort. Bookmark this page as a resource to revisit throughout any cloud adoption journey.
 
 <!-- markdownlint-disable MD033 -->
 

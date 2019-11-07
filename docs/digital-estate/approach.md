@@ -54,7 +54,7 @@ We strongly suggest an incremental approach, as we do for many processes in the 
 
 ## Next steps
 
-Once an approach is selected, the inventory can be collected.
+After an approach is selected, the inventory can be collected.
 
 > [!div class="nextstepaction"]
 > [Gather inventory data](./inventory.md)
