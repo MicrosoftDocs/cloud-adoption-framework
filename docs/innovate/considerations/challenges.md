@@ -40,7 +40,7 @@ The cloud has overcome many of these invention challenges by providing self-serv
 
 ### Invention challenges in a digital economy
 
-The invention challenges of today are different. The endless potential of cloud technologies also produces more implementation options and deeper considerations about how those implementations might be leveraged.
+The invention challenges of today are different. The endless potential of cloud technologies also produces more implementation options and deeper considerations about how those implementations might be used.
 
 The Innovate methodology uses the following innovation disciplines to help align your implementation decisions with your invention and adoption goals:
 

@@ -80,7 +80,7 @@ To provide isolation within a VNet, you segment it into one or more subnets, and
 - Your subnet decisions are based on your technical and organizational requirements.
 - You create subnets using CIDR notation.
 - When deciding on network range for subnets, it's important to note that Azure retains five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of /29 (with eight IP addresses), Azure will retain five addresses, so you only have three usable addresses that can be assigned to hosts on the subnet.
-- In most cases, using /28 as the smallest subnet is recommended.
+- For most cases, use /28 as the smallest subnet.
 
 **Example:**
 
@@ -158,8 +158,8 @@ For a successful migration, it's critical to connect on-premises corporate netwo
 
 To implement a site-to-site VPN, you set up a VPN gateway in Azure.
 
-- A VPN gateway is a specific type of VNet gateway that's used to send encrypted traffic between an Azure VNet and an on-premises location over the public Internet.
-- You can also use a VPN gateway to send encrypted traffic between Azure VNets over the Microsoft network.
+- A VPN gateway is a specific type of VNet gateway that sends encrypted traffic between an Azure VNet and an on-premises location over the public internet.
+- A VPN gateway can also send encrypted traffic between Azure VNets over the Microsoft network.
 - Each VNet can have only one VPN gateway.
 - You can create multiple connections to the same VPN gateway. When you create multiple connections, all VPN tunnels share the available gateway bandwidth.
 - Every Azure VPN gateway consists of two instances in an active-standby configuration.
@@ -173,7 +173,7 @@ When setting up a site-to-site VPN, you do the following:
 
 - You need a VNet whose address range doesn't overlap with the on-premises network to which the VPN will connect.
 - You create a gateway subnet in the network.
-- You create a VPN gateway, specify the gateway type (VPN) and whether the gateway is policy-based or route-based. A RouteBased VPN is recommended as more capable and future-proof.
+- You create a VPN gateway, specify the gateway type (VPN) and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
 - You create a local network gateway on-premises, and configure your on-premises VPN device.
 - You create a failover site-to-site VPN connection between the VNet gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. Route-based also supports both site-to-site (from any computer) and point-to-site (from a single computer) connections concurrently.
 - You specify the gateway SKU that you want to use. This will depend on your workload requirements, throughputs, features, and SLAs.

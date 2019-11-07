@@ -14,7 +14,7 @@ ms.subservice: innovate
 
 Coal, oil, and human potential were the three most consequential assets during the Industrial Revolution. These assets built companies, shifted markets, and ultimately changed nations. In the digital economy, there are three equally important assets: data, devices, and human potential. Each of these assets holds great innovation potential. For any innovation effort in the modern era, data is the new oil.
 
-Across every company today, there are pockets of data that could be leveraged to find and meet customer needs more effectively. Unfortunately, the process of mining that data to drive innovation has long been costly and time-consuming. Many of the most valuable solutions to customer needs go unmet because the right people can't access the data they need.
+Across every company today, there are pockets of data that could be used to find and meet customer needs more effectively. Unfortunately, the process of mining that data to drive innovation has long been costly and time-consuming. Many of the most valuable solutions to customer needs go unmet because the right people can't access the data they need.
 
 Democratization of data is the process of getting this data into the right hands to drive innovation. This process can take several forms, but they generally include solutions for ingested or integrated raw data, centralization of data, sharing data, and securing data. When these methods are successful, experts around the company can use the data to test hypotheses. In many cases, cloud adoption teams can [build with customer empathy](./build.md) using only data, and rapidly addressing existing customer needs.
 
@@ -28,7 +28,7 @@ The following phases will guide the decisions and approaches required to adopt a
 
 When you [build with customer empathy](./build.md), all processes elevate customer need over a technical solution. Because democratizing data is no exception, we start by sharing data. To democratize data, it must include a solution that shares data with a data consumer. The data consumer could be a direct customer or a proxy who makes decisions for customers. Approved data consumers can analyze, interrogate, and report on centralized data, with no support from IT staff.
 
-Many successful innovations have been launched as minimum viable products (MVPs) that deliver manual, data-driven processes on behalf of the customer. In this concierge model, an employee is the data consumer. That employee uses data to aid the customer. Each time the customer engages manual support, a hypothesis can be tested and validated. This approach is often a cost effective means of testing a customer-focused hypothesis before you invest heavily in integrated solutions.
+Many successful innovations have been launched as an minimum viable product (MVP) that deliver manual, data-driven processes on behalf of the customer. In this concierge model, an employee is the data consumer. That employee uses data to aid the customer. Each time the customer engages manual support, a hypothesis can be tested and validated. This approach is often a cost effective means of testing a customer-focused hypothesis before you invest heavily in integrated solutions.
 
 The primary tools for sharing data directly with data consumers include self-service reporting or data embedded within other experiences, using tools like [Power BI](https://docs.microsoft.com/power-bi).
 
@@ -41,7 +41,7 @@ Sharing data can quickly produce an MVP that you can use in customer conversatio
 
 Data governance is a broad topic that could require it's own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.md). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
 
-- **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) prior to any public sharing to protect the interests of customers and the company.
+- **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) before being shared publicly to protect the interests of customers and the company.
 - **If the data is sensitive, has it been secured?** Protection of sensitive data should be a requirement for any democratized data. The example workload focused on [securing data solutions](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/securing-data-solutions) provides a few references for securing data.
 - **Is the data catalogued?** Capturing details about the data being shared will aid in long-term data management. Tools for documenting data, like Azure Data Catalog, can make this process much easier in the cloud. Guidance regarding the [annotation of data](https://docs.microsoft.com/azure/data-catalog/data-catalog-how-to-annotate) and [documentation of data sources](https://docs.microsoft.com/azure/data-catalog/data-catalog-how-to-documentation) can help accelerate the process.
 
@@ -67,7 +67,7 @@ When you need data to be centralized to address a customer need, it's very likel
 
 **Integration:** Data that resides in an existing data store can be integrated into the centralized data store by using traditional data movement techniques. This is especially common for scenarios that involve multicloud data storage. These techniques involve extracting the data from the existing data store and then loading it into the central data store. At some point in this process, the data is typically transformed to be more usable and relevant in the central store.
 
-Cloud-based tools have turned these techniques into pay-per-use tools, reducing the barrier to entry for data collection and centralization. Tools like Data Migration Service and Data Factory are two examples in Azure. The reference architecture for [data factory with an OLAP data store](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/etl) is an example of one such solution.
+Cloud-based tools have turned these techniques into pay-per-use tools, reducing the barrier to entry for data collection and centralization. Tools like Azure Database Migration Service and Azure Data Factory are two examples. The reference architecture for [data factory with an OLAP data store](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/etl) is an example of one such solution.
 
 **Ingestion:** Some data doesn't reside in an existing data store. When this transient data is a primary source of innovation, you'll want to consider alternative approaches. Transient data can be found in a variety of existing sources like applications, APIs, data streams, IoT devices, a blockchain, an application cache, in media content, or even in flat files.
 

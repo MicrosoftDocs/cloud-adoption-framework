@@ -638,7 +638,7 @@ Azure provides a range of governance controls across services and the Azure plat
 As they configure identity and access control, Contoso has already begun to put some aspects of governance and security in place. Broadly, there are three areas it needs to consider:
 
 - **Policy:** Azure Policy applies and enforces rules and effects over your resources, so that resources stay compliant with corporate requirements and SLAs.
-- **Locks:** Azure allows you to lock subscriptions, resources groups, and other resources, so that they can only be modified by those with authority to do so.
+- **Locks:** Azure allows you to lock subscriptions, resources groups, and other resources, so that they can be modified only by those with authority to do so.
 - **Tags:** Resources can be controlled, audited, and managed with tags. Tags attach metadata to resources, providing information about resources or owners.
 
 ### Set up policies
@@ -649,7 +649,7 @@ Policies specify a policy definition, and a policy assignment specifies the scop
 
 Contoso wants to get started with a couple of policies:
 
-- It wants a policy to ensure that resources can only be deployed in the EUS2 and CUS regions.
+- It wants a policy to ensure that resources can be deployed in the EUS2 and CUS regions only.
 - It wants to limit VM SKUs to approved SKUs only. The intention is to ensure that expensive VM SKUs aren't used.
 
 #### Limit resources to regions
@@ -775,7 +775,7 @@ The NSGs associated with the ASGs will be configured with least privilege to ens
 
 **Action** | **Name** | **Source** | **Target** | **Port**
 --- | --- | --- | --- | ---
-Allow | AllowiInternetToFE | VNET-HUB-EUS1/IB-TrustZone | APP1-FE 80, 443
+Allow | AllowInternetToFE | VNET-HUB-EUS1/IB-TrustZone | APP1-FE 80, 443
 Allow | AllowWebToApp | APP1-FE | APP1-APP | 80, 443
 Allow | AllowAppToDB | APP1-APP | APP1-DB | 1433
 Deny | DenyAllInbound | Any | Any | Any

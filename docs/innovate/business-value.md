@@ -26,7 +26,7 @@ Before you develop any solution (in the cloud or on-premises), validate your bus
 If the answers to all four questions are well documented, you might not need to complete the rest of this exercise. Fortunately, you can easily test any documentation. Set up two short meetings to test both the documentation and your organization's internal alignment. Invite committed business stakeholders to one meeting and set up a separate meeting with the engaged development team. Ask the four questions above to each group, and then compare the results.
 
 > [!NOTE]
-> The existing documentation **should not** be shared with either team prior to the meeting. If true alignment exists, the guiding hypotheses should be referenced or even recited by members of each group.
+> The existing documentation **should not** be shared with either team before the meeting. If true alignment exists, the guiding hypotheses should be referenced or even recited by members of each group.
 
 <!-- -->
 
@@ -51,8 +51,8 @@ The Cloud Adoption Framework follows a prescribed path through these phases: str
 
 These big picture opportunities often reveal ways to better align the innovative solution with the cloud strategy. This exercise has two common outcomes:
 
-- These conversations can help your team improve your organization's cloud strategy and better represent  important customer needs. Such a change can result in greater executive support for your team.
-- Conversely, these conversations might show that your cloud adoption team should invest in a different solution. In this case, consider migrating this solution before continuing to invest in innovation. Alternately, these conversations might indicate that you adopt a citizen developer approach  to test the business value first. In either case, they will help your team avoid making a large investment with limited business returns.
+- These conversations can help your team improve your organization's cloud strategy and better represent important customer needs. Such a change can result in greater executive support for your team.
+- Conversely, these conversations might show that your cloud adoption team should invest in a different solution. In this case, consider migrating this solution before continuing to invest in innovation. Alternately, these conversations might indicate that you adopt a citizen developer approach to test the business value first. In either case, they will help your team avoid making a large investment with limited business returns.
 
 ## Address solution alignment
 
@@ -60,7 +60,7 @@ It's fairly common for the answers to questions one and two to be misaligned. Du
 
 - **Hypothesis opportunity:** It's common for various stakeholders and development teams to have too many expectations for a solution. Unrealistic expectations can be a sign that the hypothesis is too vague. Follow the guidance on [building with customer empathy](./considerations/build.md) to construct a clearer hypothesis.
 - **Build opportunity:** Teams might be misaligned because they disagree on the way to solve the customer need. Such disagreement typically indicates that the team is being [delayed by a premature technical spike](./considerations/build.md#reduce-complexity-and-delay-technical-spikes). To keep the team focused on the customer, start the first iteration and build a small minimum viable product (MVP) to address part of the hypothesis. For more guidance to help the team move forward, see [Develop digital inventions](./considerations/invention.md).
-- **Training opportunity:** Either team can be  misaligned because they need deep technical requirements and extensive functional requirements. This need can lead to an opportunity for training in agile methodologies. When the team culture isn't ready for agile processes, you might find innovation and keeping pace with the market to be a challenge.  For training resources about DevOps and agile practices, see:
+- **Training opportunity:** Either team can be misaligned because they need deep technical requirements and extensive functional requirements. This need can lead to an opportunity for training in agile methodologies. When the team culture isn't ready for agile processes, you might find innovation and keeping pace with the market to be a challenge.  For training resources about DevOps and agile practices, see:
   - [Evolve your DevOps practices](https://docs.microsoft.com/learn/paths/evolve-your-devops-practices)
   - [Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops)
   - [Deploy applications with Azure DevOps](https://docs.microsoft.com/learn/paths/deploy-applications-with-azure-devops)
@@ -69,6 +69,7 @@ By following the methodology and the backlog management tools in each section of
 
 ## Next steps
 
-After you've aligned your business value proposition  and communicated it, you're ready to start building your solution.
+After you've aligned your business value proposition and communicated it, you're ready to start building your solution.
+
 > [!div class="nextstepaction"]
 > [Return to the innovate exercises for next steps](./index.md)

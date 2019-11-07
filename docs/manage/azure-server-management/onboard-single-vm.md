@@ -30,7 +30,7 @@ For more information about how to onboard these solutions to individual VMs, see
 
 ## Next steps
 
-Learn how to use Azure policy to onboard Azure VMs at scale.
+Learn how to use Azure Policy to onboard Azure VMs at scale.
 
 > [!div class="nextstepaction"]
 > [Configure Azure management services for a subscription](./onboard-at-scale.md)

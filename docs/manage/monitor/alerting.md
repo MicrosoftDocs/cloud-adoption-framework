@@ -1,5 +1,5 @@
 ---
-title: Cloud monitoring guide – Alerting
+title: "Cloud monitoring guide: Alerting"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
 author: MGoedtel
@@ -83,7 +83,7 @@ Azure Monitor for VMs | Health criteria are metrics written to the metrics store
 
 ### Fastest speed driven by cost
 
-Latency is one of the most critical decisions driving alerting and a quick resolution of issues affecting your service. If you require near-real time alerting under five minutes, evaluate first if you have or can get alerts on your telemetry where it is stored by default. In general, this strategy is also the cheapest option, because the tool you're using is already sending its data to that location.
+Latency is one of the most critical decisions driving alerting and a quick resolution of issues affecting your service. If you require near-real-time alerting under five minutes, evaluate first if you have or can get alerts on your telemetry where it is stored by default. In general, this strategy is also the cheapest option, because the tool you're using is already sending its data to that location.
 
 That said, there are some important footnotes to this rule.
 

@@ -16,7 +16,7 @@ Cloud migration is an excellent option for your existing workloads. But creating
 
 ## Motivations behind innovation
 
-Innovation isn't the right adoption path for every workload. An innovation path typically requires a larger investment in custom code and data management than other paths. Innovation also takes longer than migration or other forms of modernization. This path is recommended when customers target the following business outcomes:
+Innovation isn't the right adoption path for every workload. An innovation path typically requires a larger investment in custom code and data management than other paths. Innovation also takes longer than migration or other forms of modernization. Follow this path when you're targeting the following business outcomes:
 
 - Prepare for new technical capabilities.
 - Scale to meet market demands.

@@ -30,7 +30,7 @@ When the first version of any minimum viable product (MVP) is shared with custom
 
 ### Customer flow and learning metrics
 
-If an MVP solution validates a customer-focused hypothesis, the solution will drive some change in customer behaviors. Those behavior changes across customer cohorts should improve business outcomes. Keep in mind that changing customer behavior is typically a multi-step process. Because each step provides an opportunity to measure impact, the adoption team can keep learning along the way and build a better solution.
+If an MVP solution validates a customer-focused hypothesis, the solution will drive some change in customer behaviors. Those behavior changes across customer cohorts should improve business outcomes. Keep in mind that changing customer behavior is typically a multistep process. Because each step provides an opportunity to measure impact, the adoption team can keep learning along the way and build a better solution.
 
 Learning about changes to customer behavior starts by mapping the flow that you hope to see from an MVP solution.
 

@@ -45,7 +45,7 @@ Initially, workloads on the migration backlog are unlikely to meet the INVEST cr
 
 *The migration, release, and iteration backlogs track different levels of activity during migration processes.*
 
-In any migration backlog, the change management team should strive to obtain the following information for any workload in the plan. At minimum, this data should be available for any workloads prioritized for migration in the next two or three releases.
+In any migration backlog, the change management team should strive to obtain the following information for any workload in the plan. At a minimum, this data should be available for any workloads prioritized for migration in the next two or three releases.
 
 ### Migration backlog data points
 
@@ -102,7 +102,7 @@ For a small migration with a self-contained migration team, a single sprint coul
 
 ### Sprint backlog data points
 
-The outcome of a sprint captures and documents the changes made to a workload, thus closing the change-management loop. When completed, at minimum, the following should be documented. Throughout the execution of a sprint, this documentation should be completed in tandem with the technical work items.
+The outcome of a sprint captures and documents the changes made to a workload, thus closing the change-management loop. When completed, at a minimum, the following should be documented. Throughout the execution of a sprint, this documentation should be completed in tandem with the technical work items.
 
 - **Assets deployed.** Any assets deployed to the cloud to host the workload.
 - **Remediation.** Any changes to the assets to prepare for cloud migration.

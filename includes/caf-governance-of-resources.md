@@ -5,7 +5,7 @@
 
 ### Governance of resources
 
-A set of global policies and RBAC roles will provide a baseline level of governance enforcement. To meet the Cloud Governance team's policy requirements, implementation of the governance MVP requires completing the following tasks:
+A set of global policies and RBAC roles will provide a baseline level of governance enforcement. To meet the cloud governance team's policy requirements, implementing the governance MVP requires completing the following tasks:
 
 1. Identify the Azure Policy definitions needed to enforce business requirements. This can include using built-in definitions and creating new custom definitions.
 2. Create a blueprint definition using these built-in and custom policy and the role assignments required by the governance MVP.
@@ -19,8 +19,8 @@ Custom policy definitions are saved to either a management group or a subscripti
 
 Since the policies required to support the governance MVP are meant to apply to all current subscriptions, the following business requirements will be implemented using a combination of built-in definitions and custom definitions created in the root management group:
 
-1. Restrict the list of available role assignments to a set of built-in Azure roles authorized by your Cloud Governance team. This will require a [custom policy definition](https://github.com/Azure/azure-policy/tree/master/samples/Authorization/allowed-role-definitions).
-2. Require the use of the following tags on all resources: *Department/Billing Unit*, *Geography*, *Data Classification*, *Criticality*, *SLA*, *Environment*, *Application Archetype*, *Application*, and *Application Owner*. This can be handled using the `Require specified tag` built-in definition.
+1. Restrict the list of available role assignments to a set of built-in Azure roles authorized by your cloud governance team. This requires a [custom policy definition](https://github.com/Azure/azure-policy/tree/master/samples/Authorization/allowed-role-definitions).
+2. Require the following tags on all resources: *Department/Billing Unit*, *Geography*, *Data Classification*, *Criticality*, *SLA*, *Environment*, *Application Archetype*, *Application*, and *Application Owner*. This can be handled using the `Require specified tag` built-in definition.
 3. Require that the `Application` tag for resources should match the name of the relevant resource group. This can be handled using the "Require tag and its value" built-in definition.
 
 For information on defining custom policies see the [Azure Policy documentation](https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition). For guidance and examples of custom policies, consult the [Azure Policy samples site](https://docs.microsoft.com/azure/governance/policy/samples) and the associated [GitHub repository](https://github.com/Azure/azure-policy).
@@ -31,7 +31,7 @@ Azure policies can be assigned at the resource group, subscription, and manageme
 
 Azure Blueprints allow the consistent assignment of policy and roles, application of Resource Manager templates, and deployment of resource groups across multiple subscriptions. As with policy definitions, blueprint definitions are saved to management groups or subscriptions, and are available through inheritance to any children in the management group hierarchy.
 
-The Cloud Governance team has decided that enforcement of required Azure Policy and RBAC assignments across subscriptions will be implemented through Azure Blueprints and associated artifacts:
+The cloud governance team has decided that enforcement of required Azure Policy and RBAC assignments across subscriptions will be implemented through Azure Blueprints and associated artifacts:
 
 1. In the root management group, create a blueprint definition named `governance-baseline`.
 2. Add the following blueprint artifacts to the blueprint definition:
@@ -53,7 +53,7 @@ Until trust in the cloud environment is fully established it's important to tigh
     1. The [VPN reference architecture](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn) establishes a pattern and deployment model for creating a VPN Gateway in Azure.
     2. Validate that on-premises security and traffic management mechanisms treat connected cloud networks as untrusted. Resources and services hosted in the cloud should only have access to authorized on-premises services.
     3. Validate that the local edge device in the on-premises datacenter is compatible with [Azure VPN Gateway requirements](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices) and is configured to access the public internet.
-    4. Note that VPN tunnels should not be considered production ready circuits for anything but the most simple workloads. Anything beyond a few simple workloads requiring on-premises connectivity should leverage Azure ExpressRoute.
+    4. Note that VPN tunnels should not be considered production ready circuits for anything but the most simple workloads. Anything beyond a few simple workloads requiring on-premises connectivity should use Azure ExpressRoute.
 1. In the root management group, create a second blueprint definition named `secure-hybrid-vnet`.
     1. Add the Resource Manager template for the VPN Gateway as an artifact to the blueprint definition.
     2. Add the Resource Manager template for the virtual network as an artifact to the blueprint definition.

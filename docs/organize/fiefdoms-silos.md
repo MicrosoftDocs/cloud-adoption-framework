@@ -77,7 +77,7 @@ During review of the competing solution, use the practices outlined in [Define c
 
 When IT silos start to resist, it's important to be boundaryless in your own solutions. Be mindful of one simple truth: cloud-native isn't always the best solution. Consider hybrid solutions that might provide an opportunity to extend the existing investments of the IT silo into the future.
 
-Also consider cloud-based versions of the solution that the IT silo team uses now. Experiment with those solutions and expose yourself to the viewpoint of those living in the IT silo. At minimum, you will gain a fresh perspective. In many situations, you might earn enough of the IT silo's respect to lessen resistance.
+Also consider cloud-based versions of the solution that the IT silo team uses now. Experiment with those solutions and expose yourself to the viewpoint of those living in the IT silo. At a minimum, you will gain a fresh perspective. In many situations, you might earn enough of the IT silo's respect to lessen resistance.
 
 **Invest in education:** Many people living in an IT silo became passionate about the current solution as a result of expanding their own education. Investing in the education of these teams is seldom misplaced. Allocate time for these individuals to engage in self-learning, classes, or even conferences to break the day-to-day focus on the current solution.
 

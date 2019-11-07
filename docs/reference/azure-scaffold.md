@@ -190,13 +190,13 @@ The [Azure Security Center](https://docs.microsoft.com/azure/security-center/sec
 > [!TIP]
 >Azure Security Center is a powerful tool that is regularly improved with new capabilities you can use to detect threats and protect your enterprise. It is highly recommended to always enable Azure Security Center.
 
-### Azure resource locks
+### Locks for Azure resources
 
-As your organization adds core services to subscriptions, it becomes increasingly important to avoid business disruption. One type of disruption that we often see is unintended consequences of scripts and tools working against an Azure subscription deleting resources mistakenly. [Resource Locks](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-lock-resources) enable you to restrict operations on high-value resources where modifying or deleting them would have a significant impact. Locks are applied to a subscription, resource group, or even individual resources. The common use case is to apply locks to foundational resources such as virtual networks, gateways, network security groups, and key storage accounts.
+As your organization adds core services to subscriptions, it becomes increasingly important to avoid business disruption. One common disruption occurs when a script or tool executing in an Azure subscription unintentionally deletes a resource. [Locks](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-lock-resources) restrict operations on high-value resources where modifying or deleting them would have a significant impact. You can apply locks to subscriptions, resource groups, or individual resources. Apply locks to foundational resources such as virtual networks, gateways, network security groups, and key storage accounts.
 
-### Secure DevOps Toolkit
+### Secure DevOps Kit for Azure
 
-The Secure DevOps Kit for Azure (AzSK) is a collection of scripts, tools, extensions, and automation capabilities originally created by Microsoft's own IT team and [released as open source via GitHub](https://github.com/azsk/DevOpsKit-docs). AzSK caters to the end-to-end Azure subscription and resource security needs for teams using extensive automation and smoothly integrating security into native DevOps workflows helping accomplish secure DevOps with these six focus areas:
+The Secure DevOps Kit for Azure (AzSK) is a collection of scripts, tools, extensions, and automation capabilities originally created by Microsoft's own IT team and [released as open source via GitHub](https://github.com/azsk/devopskit-docs). AzSK caters to the end-to-end Azure subscription and resource security needs for teams using extensive automation and smoothly integrating security into native DevOps workflows helping accomplish secure DevOps with these six focus areas:
 
 - Secure the subscription
 - Enable secure development
@@ -205,9 +205,9 @@ The Secure DevOps Kit for Azure (AzSK) is a collection of scripts, tools, extens
 - Alerting and monitoring
 - Cloud risk governance
 
-![Azure DevOps Toolkit](../_images/reference/secure-devops-kit.png)
+![Overview diagram of the Secure DevOps Kit for Azure](../_images/reference/secure-devops-kit.png)
 
-The AzSK is a rich set of tools, scripts, and information that are an important part of a full Azure governance plan and incorporating this into your scaffold is crucial to supporting your organizations risk management goals.
+AzSK is a rich set of tools, scripts, and information that are an important part of a full Azure governance plan and incorporating this into your scaffold is crucial to supporting your organizations risk management goals.
 
 ### Azure Update Management
 
