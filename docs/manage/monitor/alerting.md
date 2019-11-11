@@ -62,7 +62,7 @@ Azure Monitor has four types of alerts, each somewhat tied to the repository tha
 
 - [Activity log alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log): Alerts on items in the activity log store, with the exception of Service Health data.
 
-- [Service Health alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log-service-notifications?toc=%2fazure%2fservice-health%2ftoc.json): A special type of alert, just for Service Health issues that come from the activity log store.
+- [Service Health alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log-service-notifications?toc=%2fazure%2fservice-health%2ftoc.json): A special type of alert that's used only for Service Health issues that come from the activity log store, such as outages and upcoming planned maintenance. Note that this type of alert is configured through [Azure Service Health](https://docs.microsoft.com/azure/service-health/service-health-overview), a companion service to Azure Monitor.
 
 ### Enable alerting through partner tools
 
