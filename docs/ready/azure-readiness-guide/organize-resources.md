@@ -35,7 +35,7 @@ You can apply management settings, like policies and role-based access controls,
 
 Usually, it makes sense to apply critical settings at higher levels and project-specific requirements at lower levels. For example, you might want to make sure all resources for your organization are deployed to certain regions. To do that, apply a policy to the subscription that specifies the allowed locations. As other users in your organization add new resource groups and resources, the allowed locations are automatically enforced. Learn more about policies in the governance, security, and compliance section of this guide.
 
-If you have only a few subscriptions, it's relatively simple to manage them independently. If the number of subscriptions you use increases, consider creating a management group hierarchy to simplify the management of your subscriptions and resources. For more information on how to manage multiple subscriptions, see [scaling with multiple Azure subscriptions](../considerations/scaling-subscriptions.md).
+If you have only a few subscriptions, it's relatively simple to manage them independently. If the number of subscriptions you use increases, consider creating a management group hierarchy to simplify the management of your subscriptions and resources. For more information on how to manage multiple subscriptions, see [scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md).
 
 As you plan your compliance strategy, work with people in your organization with these roles: security and compliance, IT administration, enterprise architect, networking, finance, and procurement.
 
@@ -74,7 +74,7 @@ Create a resource group to hold resources like web apps, databases, and storage 
 To learn more, see:
 
 - [Azure fundamentals](../considerations/fundamental-concepts.md)
-- [Scaling with multiple Azure subscriptions](../considerations/scaling-subscriptions.md)
+- [Scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md)
 - [Understand resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
 - [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/azure-resource-manager/management-groups-overview)
 - [Subscription service limits](https://docs.microsoft.com/azure/azure-subscription-service-limits)
@@ -125,7 +125,7 @@ A good naming standard helps to identify resources in the Azure portal, on a bil
 
 - The operational side should ensure that names include information that IT teams need. Use the details that identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
-Different resource types might have different length limits and allowable characters, many of which are listed in the Azure best practices [naming conventions article](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions). For more information and recommendations aimed specifically at supporting enterprise cloud adoption efforts, see the Cloud Adoption Framework's [guidance on naming and tagging](../considerations/naming-and-tagging.md).
+Different resource types might have different length limits and allowable characters, many of which are listed in the Azure best practices [naming conventions article](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions). For more information and recommendations aimed specifically at supporting enterprise cloud adoption efforts, see the Cloud Adoption Framework's [guidance on naming and tagging](../azure-best-practices/naming-and-tagging.md).
 
 The following table includes naming patterns for a few sample types of Azure resources.
 
@@ -154,9 +154,9 @@ You can also use tags for many other things. Common uses include:
 - **Automation:** You might have regularly running scripts that can take an action based on a tag value like "ShutdownTime" or "DeprovisionDate."
 - **Billing:** Tags can appear on your invoice. You can use them to help segment your bill by using tags like "CostCenter" or "BillTo."
 
-Each resource or resource group can have a maximum of 15 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
+Each resource or resource group can have a maximum of 50 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
 
-For more tagging recommendations and examples, see the Cloud Adoption Framework's [guidance on tagging](../considerations/naming-and-tagging.md).
+For more tagging recommendations and examples, see the Cloud Adoption Framework's [guidance on tagging](../azure-best-practices/naming-and-tagging.md).
 
 ::: zone target="docs"
 

@@ -23,7 +23,7 @@ To deploy the cloud adoption plan, open the [Azure DevOps Demo Generator](https:
 1. Verify that the **Selected Template** field is set to **Cloud Adoption Plan**. If it isn't, select **Choose template** to choose the right template.
 2. Select your Azure DevOps organization from the **Select Organization** drop-down list box.
 3. Enter a name for your new project. The cloud adoption plan will have this name when it's deployed to your Azure DevOps tenant.
-4. Select **Create Project** to create a new project in your tenant, based on the plan template. A progress bar show your progress towards deploying the project.
+4. Select **Create Project** to create a new project in your tenant, based on the plan template. A progress bar show your progress toward deploying the project.
 5. When deployment is finished, select **Navigate to project** to see your new project.
 
 After your project has been created, continue through this article series to see how you can modify the template to align to your cloud adoption plan.
@@ -40,10 +40,10 @@ To prepare your workstation for bulk editing, see [Bulk add or modify work items
 
 The cloud adoption plan organizes activities by activity type:
 
-- **Epics**: An *epic* represents an overall phase of the cloud adoption lifecycle.
-- **Features**: Features are used to organize specific objectives within each phase. For instance, migration of a specific workload would be one feature.
-- **User stories**: User stories group work into logical collections of activities based on a specific goal.
-- **Tasks**: Tasks are the actual work to be done.
+- **Epics:** An *epic* represents an overall phase of the cloud adoption lifecycle.
+- **Features:** Features are used to organize specific objectives within each phase. For instance, migration of a specific workload would be one feature.
+- **User stories:** User stories group work into logical collections of activities based on a specific goal.
+- **Tasks:** Tasks are the actual work to be done.
 
 At each layer, activities are then sequenced based on dependencies. Activities are linked to articles in the Cloud Adoption Framework to clarify the objective or task at hand.
 

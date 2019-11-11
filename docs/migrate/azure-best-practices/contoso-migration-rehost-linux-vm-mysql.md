@@ -29,7 +29,7 @@ The IT Leadership team has worked closely with business partners to understand w
 The Contoso cloud team has pinned down goals for this migration, in order to determine the best migration method:
 
 - After migration, the app in Azure should have the same performance capabilities as it does today in their on-premises VMware environment. The app will remain as critical in the cloud as it is on-premises.
-- Contoso doesn’t want to invest in this app. It's important to the business, but in its current form Contoso simply want to move it safely to the cloud.
+- Contoso doesn't want to invest in this app. It's important to the business, but in its current form Contoso simply want to move it safely to the cloud.
 - Having completed a couple of Windows app migrations, Contoso wants to learn how to use a Linux-based infrastructure in Azure.
 - Contoso wants to minimize database admin tasks after the application is moved to the cloud.
 
@@ -441,7 +441,7 @@ The Contoso security team review the VM and database to determine any security i
 - They consider securing the data on the VM disks using Disk encryption and Azure Key Vault.
 - Communication between the VM and database instance isn't configured for SSL. They will need to do this to ensure that database traffic can't be hacked.
 
-[Read more](https://docs.microsoft.com/azure/security/azure-security-best-practices-vms) about security practices for VMs.
+For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
 ### BCDR
 

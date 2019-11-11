@@ -1,7 +1,7 @@
 ---
 title: "Governance guide for complex enterprises: Multicloud improvement"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Large enterprise guide: Multicloud improvement"
+description: "Governance guide for complex enterprises: Multicloud improvement"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Large enterprise guide: Multicloud improvement
+# Governance guide for complex enterprises: Multicloud improvement
 
 ## Advancing the narrative
 
@@ -75,7 +75,7 @@ This section of the article improves the governance MVP design to include new Az
     1. Governance enforcement is cloud-specific.
     2. The corporate policies established in the governance guide are not cloud-specific. While the implementation may vary from cloud to cloud, the policy statements can be applied to the secondary provider.
 
-Multi-cloud adoption should be contained to where it is required based on technical needs or specific business requirements. As multi-cloud adoption grows, so does complexity and security risks.
+Multicloud adoption should be contained to where it is required based on technical needs or specific business requirements. As multicloud adoption grows, so does complexity and security risks.
 
 ## Next steps
 

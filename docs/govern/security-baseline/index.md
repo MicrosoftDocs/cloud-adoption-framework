@@ -30,7 +30,7 @@ Actionable policy statements and the resulting architecture requirements serve a
 > [!CAUTION]
 > The sample policies come from common customer experiences. To better align these policies to specific cloud governance needs, execute the following steps to create policy statements that meet your unique business needs.
 
-## Developing Security Baseline governance policy statements
+## Develop governance policy statements
 
 The following six steps offer examples and potential options to consider when developing Security Baseline governance. Use each step as a starting point for discussions within your cloud governance team and with affected business, IT, and security teams across your organization to establish the policies and processes needed to manage security-related risks.
 

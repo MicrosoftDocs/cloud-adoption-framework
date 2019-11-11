@@ -93,7 +93,7 @@ The exercises in this section can help you document your business strategy effic
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Choose the right first project</h3>
-                            Your first cloud project will help align motivations with technical effort. This article can help you choose your first project wisely.
+                            Your first cloud adoption project will help align motivations with technical effort. This article can help you choose your first project wisely.
                         </div>
                     </div>
                 </div>

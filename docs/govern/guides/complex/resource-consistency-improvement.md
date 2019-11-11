@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/19/2019
+ms.date: 10/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -36,7 +36,7 @@ The cloud adoption teams have met all requirements to move protected data. With 
 
 This business risk can be expanded into several technical risks:
 
-1. Misaligned operational processes might lead to outages that can’t be detected or mitigated quickly.
+1. Misaligned operational processes might lead to outages that can't be detected or mitigated quickly.
 2. External intrusion or denial of service attacks might cause a business interruption.
 3. Mission-critical assets might not be properly discovered and therefore not properly operated.
 4. Undiscovered or mislabeled assets might not be supported by existing operational management processes.

@@ -25,7 +25,7 @@ The following exercises help guide you through the process of creating a landing
 
 <ul class="panelContent cardsF">
     <li style="display: flex; flex-direction: column;">
-        <a href="./azure-readiness-guide/index.md">
+        <a href="./azure-setup-guide/index.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">
@@ -35,8 +35,8 @@ The following exercises help guide you through the process of creating a landing
                             </div>
                         </div>
                         <div class="cardText" style="padding-left:0px;">
-                            <h3>Azure Readiness Guide</h3>
-                            Review the Azure Readiness Guide to become familiar with the tools and approaches you need to use to create a landing zone.
+                            <h3>Azure setup guide</h3>
+                            Review the Azure setup guide to become familiar with the tools and approaches you need to use to create a landing zone.
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ The following exercises help guide you through the process of creating a landing
         </a>
     </li>
     <li style="display: flex; flex-direction: column;">
-        <a href="./azure-readiness-guide/migration-landing-zone.md">
+        <a href="./azure-setup-guide/migration-landing-zone.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">
@@ -106,7 +106,7 @@ The following exercises help guide you through the process of creating a landing
 
 ## Next steps
 
-To get ready for cloud adoption, review the [Azure Readiness Guide](./azure-readiness-guide/index.md).
+To get ready for cloud adoption, review the [Azure setup guide](./azure-setup-guide/index.md).
 
 > [!div class="nextstepaction"]
-> [Azure Readiness Guide](./azure-readiness-guide/index.md)
+> [Azure setup guide](./azure-setup-guide/index.md)

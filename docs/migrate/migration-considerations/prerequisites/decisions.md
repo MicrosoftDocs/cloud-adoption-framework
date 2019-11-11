@@ -1,7 +1,7 @@
 ---
-title: "Decisions that affect migrations"
+title: "Decisions that affect migration"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Important decisions to be made regarding the migration process
+description: Important decisions to be made about the migration process.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Decisions that affect migrations
+# Decisions that affect migration
 
 During migration, several factors affect decisions and execution activities. This article explains the central theme of those decisions and explores a few questions that carry through the discussions of migration principles in this section of the Cloud Adoption Framework guidance.
 
@@ -19,26 +19,26 @@ During migration, several factors affect decisions and execution activities. Thi
 The objective or goal of any adoption effort can have a significant impact on the suggested approach to execution.
 
 - **Migration.** Urgent business drivers, speed of adoption, or cost savings are examples of operational outcomes. These outcomes are central to efforts that drive business value from transitive change in IT or operations models. The Migrate section of the Cloud Adoption Framework focuses heavily on Migration focused business outcomes.
-- **Application Innovation.** Improving customer experience and growing market share are examples of incremental outcomes. The outcomes result from a collection of incremental changes focused on the needs and desires of current customers.
-- **Data Driven Innovation.** New products or services, especially those that come from the power of data, are examples of disruptive outcomes. These outcomes are the result of experimentation and predictions that use data to disrupt status quo in the market.
+- **Application innovation.** Improving customer experience and growing market share are examples of incremental outcomes. The outcomes result from a collection of incremental changes focused on the needs and desires of current customers.
+- **Data-driven innovation.** New products or services, especially those that come from the power of data, are examples of disruptive outcomes. These outcomes are the result of experimentation and predictions that use data to disrupt status quo in the market.
 
 No business would pursue just one of these outcomes. Without operations, there are no customers, and vice versa. Cloud adoption is no different. Companies commonly work to achieve each of these outcomes, but trying to focus on all of them simultaneously can spread your efforts too thin and slow progress on work that could most benefit your business needs.
 
 This prerequisite isn't a demand for you to pick one of these three goals, but instead to help your cloud strategy team and your cloud adoption team establish a set of operational priorities that will guide execution for the next three to six months. These priorities are set by ranking each of the three itemized options from *most significant* to *least significant*, as they relate to the efforts this team can contribute to in the next one or two quarters.
 
-### Acting on migration outcomes
+### Act on migration outcomes
 
-If operational outcomes rank highest in the list, this section of the Cloud Adoption Framework will work well for your team. In this section, it is assumed that you need to prioritize speed and cost savings as primary key performance indicators (KPIs), in which case a migration model to adoption would be well aligned with the outcomes. A migration-focused model is heavily predicated on "lift and shift" migration of infrastructure as a service (IaaS) assets to deplete a datacenter and to produce cost savings. In such a model, modernization may occur but is a secondary focus until the primary migration mission is realized.
+If operational outcomes rank highest in the list, this section of the Cloud Adoption Framework will work well for your team. In this section, it is assumed that you need to prioritize speed and cost savings as primary key performance indicators (KPIs), in which case a migration model to adoption would be well aligned with the outcomes. A migration-focused model is heavily predicated on lift and shift migration of infrastructure as a service (IaaS) assets to deplete a datacenter and to produce cost savings. In such a model, modernization may occur but is a secondary focus until the primary migration mission is realized.
 
-### Acting on application innovations
+### Act on application innovations
 
 If market share and customer experience are your primary drivers, this may not be the best section of the Cloud Adoption Framework to guide your teams' efforts. Application innovation requires a plan that focuses on the modernization and transition of workloads, regardless of the underlying infrastructure. In such a case, the guidance in this section can be informative but may not be the best approach to guide core decisions.
 
-### Acting on data innovations
+### Act on data innovations
 
 If data, experimentation, research and development (R&D), or new products are your priority for the next six months or so, this may not be the best section of the Cloud Adoption Framework to guide your teams' efforts. Any data innovation effort could benefit from guidance regarding the migration of existing source data. However, the broader focus of that effort would be on the ingress and integration of additional data sources. Extending that guidance with predictions and new experiences is much more important than the migration of IaaS assets.
 
-## Balancing the portfolio
+## Balance the portfolio
 
 This section of the Cloud Adoption Framework establishes the theory to help readers understand different approaches to addressing change within a balanced portfolio. The article on [balancing the portfolio](../../expanded-scope/balance-the-portfolio.md) is one example of an expanded scope, designed to help act on this theory.
 
@@ -83,9 +83,9 @@ Before proceeding, document the following assumptions and share them with the cl
 
 ## Next steps
 
-After the process is understood among the team, it’s time to review technical prerequisites. The [migration environment planning checklist](./planning-checklist.md) helps to ensure that the technical foundation is ready for migration.
+After the process is understood among the team, it's time to review technical prerequisites. The [migration environment planning checklist](./planning-checklist.md) helps to ensure that the technical foundation is ready for migration.
 
-Once the process is understood amongst the team, its time to review technical prerequisites the [Migration Planning Checklist] will help ensure the technical foundation is ready for migration.
+Once the process is understood among the team, its time to review technical prerequisites the [Migration Planning Checklist] will help ensure the technical foundation is ready for migration.
 
 > [!div class="nextstepaction"]
 > [Review the migration planning checklist](./planning-checklist.md)

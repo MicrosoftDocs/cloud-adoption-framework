@@ -1,7 +1,7 @@
 ---
-title: "Enable customer success across any cloud adoption journey"
+title: "Enable customer success during a cloud adoption journey"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Enable customer success across any cloud adoption journey
+description: Enable customer success throughout a cloud adoption journey
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
@@ -11,13 +11,13 @@ ms.subservice: overview
 layout: LandingPage
 ---
 
-# Enable success across any cloud adoption journey
+# Enable success during a cloud adoption journey
 
-The Microsoft Cloud Adoption Framework for Azure is provided as a free self-service tool to guide readers through various cloud adoption efforts. The focus of this content is to help customers succeed at realizing business goals that can be enabled by Azure. However, this content also respects that the reader may be addressing business, culture, or technical challenges that can be broad in nature and may at times require a cloud-neutral position. As such, each section of this guidance starts with an Azure first approach, but follows with cloud neutral theory that can scale across business and technical decisions.
+The Cloud Adoption Framework is a free self-service tool that guides readers through various cloud adoption efforts. The framework helps customers succeed at realizing business objectives that can be enabled by Microsoft Azure. However, this content also recognizes that the reader may be addressing broad business, culture, or technical challenges and that sometimes might require a cloud-neutral position. Therefore, each section of this guidance begins with an Azure-first approach, and then follows with cloud-neutral theory that can scale across many business and technical decisions.
 
-Throughout this framework, enablement is a core theme. The following checklist contains a series of topics that should be embedded in any cloud adoption effort to ensure the journey is a success in the eyes of both IT and the business:
+Throughout this framework, enablement is a core theme. The following checklist itemizes fundamental cloud adoption principles that ensure an adoption journey is considered successful by both IT and the business:
 
-- **Plan:** Establishing clear [business outcomes](../strategy/business-outcomes/index.md), a defined [digital estate plan](../digital-estate/index.md), and well understood [adoption backlogs](../migrate/migration-considerations/prerequisites/migration-backlog-review.md).
+- **Plan:** Establishing clear [business outcomes](../strategy/business-outcomes/index.md), a clearly defined [digital estate plan](../digital-estate/index.md), and well-understood [adoption backlogs](../migrate/migration-considerations/prerequisites/migration-backlog-review.md).
 - **Ready:** Ensure the readiness of staff through [skills and learning plans](../ready/technical-skills.md).
 - **Operate:** Define a manageable operating model to guide activities during and long after adoption.
   - **[Organize](../organize/index.md):** Align people and teams to deliver proper cloud operations and adoption.
@@ -27,7 +27,7 @@ Throughout this framework, enablement is a core theme. The following checklist c
 
 ## Additional tools
 
-In addition to the Cloud Adoption Framework, Microsoft covers additional topics that can enable success. This article highlights a few common tools that can significantly improve success beyond the scope of the Cloud Adoption Framework. Establishing cloud governance, resilient architectures, technical skills, and a DevOps approach are each important to the success of any cloud adoption effort. The reader is advised to bookmark this page as a resource to revisit throughout any cloud adoption journey.
+In addition to the Cloud Adoption Framework, Microsoft covers additional topics that can enable success. This article highlights a few common tools that can significantly improve success beyond the scope of the Cloud Adoption Framework. Establishing cloud governance, resilient architectures, technical skills, and a DevOps approach are each important to the success of any cloud adoption effort. Bookmark this page as a resource to revisit throughout any cloud adoption journey.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -52,7 +52,7 @@ In addition to the Cloud Adoption Framework, Microsoft covers additional topics 
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="https://docs.microsoft.com/azure/architecture/reliability" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="https://docs.microsoft.com/azure/architecture/framework/resiliency/overview" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">

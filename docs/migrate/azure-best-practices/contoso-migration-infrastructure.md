@@ -97,7 +97,7 @@ License Mobility through SA gives Microsoft Volume Licensing customers like Cont
 
 #### Reserve instances for predictable workloads
 
-Predictable workloads are those that always need to be available with VMs running. For example, line-of-business apps such as a SAP ERP system. On the other hand, unpredictable workloads are those that are variable, such as VMs that are on during high demand and off when demand is low.
+Predictable workloads are those that always need to be available with VMs running. For example, line-of-business apps such as an SAP ERP system. On the other hand, unpredictable workloads are those that are variable, such as VMs that are on during high demand and off when demand is low.
 
 ![Reserved instance](./media/contoso-migration-infrastructure/reserved-instance.png)
 
@@ -174,7 +174,7 @@ They create resource groups as follows:
 
     ![Resource groups](./media/contoso-migration-infrastructure/resource-groups.png)
 
-##### Scaling resource groups
+##### Scale resource groups
 
 In future, Contoso will add other resource groups based on needs. For example, they could define a resource group for each app or service, so that they can be managed and secured independently.
 
@@ -320,7 +320,7 @@ With the regional design in place, Contoso is ready to consider a networking str
 
 ### Plan hybrid network connectivity
 
-Contoso considered a [number of architectures](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking) for hybrid networking between Azure and the on-premises datacenter. [Read more](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/considerations) about comparing options.
+Contoso considered a [number of architectures](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking) for hybrid networking between Azure and the on-premises datacenter. For more information, see [Choose a solution for connecting an on-premises network to Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/considerations).
 
 As a reminder, the Contoso on-premises network infrastructure currently consists of the datacenter in New York, and local branches in the eastern portion of the US. All locations have a business class connection to the internet. Each of the branches is then connected to the datacenter via an IPSec VPN tunnel over the internet.
 
@@ -633,12 +633,12 @@ Active Directory is a critical service in networking, and must be configured cor
 
 ## Step 5: Plan for governance
 
-Azure provides a range of governance controls across services and the Azure platform. [Read more](https://docs.microsoft.com/azure/security/governance-in-azure) for a basic understanding of options.
+Azure provides a range of governance controls across services and the Azure platform. For more information, see the [Azure governance options](https://docs.microsoft.com/azure/security/governance-in-azure).
 
 As they configure identity and access control, Contoso has already begun to put some aspects of governance and security in place. Broadly, there are three areas it needs to consider:
 
 - **Policy:** Azure Policy applies and enforces rules and effects over your resources, so that resources stay compliant with corporate requirements and SLAs.
-- **Locks:** Azure allows you to lock subscriptions, resources groups, and other resources, so that they can only be modified by those with authority to do so.
+- **Locks:** Azure allows you to lock subscriptions, resources groups, and other resources, so that they can be modified only by those with authority to do so.
 - **Tags:** Resources can be controlled, audited, and managed with tags. Tags attach metadata to resources, providing information about resources or owners.
 
 ### Set up policies
@@ -649,7 +649,7 @@ Policies specify a policy definition, and a policy assignment specifies the scop
 
 Contoso wants to get started with a couple of policies:
 
-- It wants a policy to ensure that resources can only be deployed in the EUS2 and CUS regions.
+- It wants a policy to ensure that resources can be deployed in the EUS2 and CUS regions only.
 - It wants to limit VM SKUs to approved SKUs only. The intention is to ensure that expensive VM SKUs aren't used.
 
 #### Limit resources to regions
@@ -745,7 +745,7 @@ With centralized policy management, Contoso will ensure compliance with security
 
 Contoso will take advantage of the continuous security assessment which monitors the security of machines, networks, storage, data, and applications; to discover potential security issues.
 
-- Security Center will analyze the security state of Contoso’s compute, infrastructure, and data resources, and of Azure apps and services.
+- Security Center will analyze the security state of Contoso's compute, infrastructure, and data resources, and of Azure apps and services.
 - Continuous assessment helps the Contoso operations team to discover potential security issues, such as systems with missing security updates or exposed network ports.
 - In particular Contoso wants to make sure all of the VMs are protected. Security Center helps with this, verifying VM health, and making prioritized and actionable recommendations to remediate security vulnerabilities before they're exploited.
 
@@ -775,7 +775,7 @@ The NSGs associated with the ASGs will be configured with least privilege to ens
 
 **Action** | **Name** | **Source** | **Target** | **Port**
 --- | --- | --- | --- | ---
-Allow | AllowiInternetToFE | VNET-HUB-EUS1/IB-TrustZone | APP1-FE 80, 443
+Allow | AllowInternetToFE | VNET-HUB-EUS1/IB-TrustZone | APP1-FE 80, 443
 Allow | AllowWebToApp | APP1-FE | APP1-APP | 80, 443
 Allow | AllowAppToDB | APP1-APP | APP1-DB | 1433
 Deny | DenyAllInbound | Any | Any | Any

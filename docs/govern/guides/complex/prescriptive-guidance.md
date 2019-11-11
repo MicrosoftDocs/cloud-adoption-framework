@@ -1,7 +1,7 @@
 ---
-title: "Governance guide for complex enterprises: Prescriptive guidance explained"
+title: "Governance guide for complex enterprises: Best practices explained"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about prescriptive guidance for governance in complex enterprises.
+description: Learn about best practices for governance in complex enterprises.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Governance guide for complex enterprises: Prescriptive guidance explained
+# Governance guide for complex enterprises: Best practices explained
 
 The governance guide begins with a set of initial [corporate policies](./initial-corporate-policy.md). These policies are used to establish a minimum viable product (MVP) for governance that reflects [best practices](./index.md).
 
@@ -56,12 +56,12 @@ The decision on what subscription design to use determines how Azure subscriptio
 
 Resource consistency decisions determine the tools, processes, and effort required to ensure Azure resources are deployed, configured, and managed consistently within a subscription. In this narrative, **[Deployment Consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency)** has been chosen as the primary resource consistency pattern.
 
-- Resource groups are created for applications using the lifecycle approach: everything that is created, maintained, and retired together should reside a single resource group. For more on resource groups, see [here](../../../decision-guides/resource-consistency/index.md#basic-grouping).
+- Resource groups are created for applications using the lifecycle approach. Everything that is created, maintained, and retired together should reside a single resource group. For more on resource groups, see [here](../../../decision-guides/resource-consistency/index.md#basic-grouping).
 - Azure Policy should be applied to all subscriptions from the associated management group.
 - As part of the deployment process, Azure Resource Consistency templates for the resource group should be stored in source control.
 - Each resource group is associated with a specific workload or application based on the lifecycle approach described above.
 - Azure management groups enable updating governance designs as corporate policy matures.
-- Extensive implementation of Azure Policy could exceed the team’s time commitments and may not provide a great deal of value at this time. However, a simple default policy should be created and applied to each management group to enforce the small number of current cloud governance policy statements. This policy will define the implementation of specific governance requirements. Those implementations can then be applied across all deployed assets.
+- Extensive implementation of Azure Policy could exceed the team's time commitments and may not provide a great deal of value at this time. However, a simple default policy should be created and applied to each management group to enforce the small number of current cloud governance policy statements. This policy will define the implementation of specific governance requirements. Those implementations can then be applied across all deployed assets.
 
 >[!IMPORTANT]
 >Any time a resource in a resource group no longer shares the same lifecycle, it should be moved to another resource group. Examples include common databases and networking components. While they may serve the application being developed, they may also serve other purposes and should therefore exist in other resource groups.

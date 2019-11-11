@@ -1,7 +1,7 @@
 ---
-title: "Standard Enterprise guide: Multicloud improvement"
+title: "Standard enterprise governance guide: Multicloud improvement"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Standard Enterprise guide: Multicloud improvement"
+description: "Standard enterprise governance guide: Multicloud improvement"
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -11,7 +11,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Small-to-medium enterprise guide: Multicloud improvement
+# Standard enterprise governance guide: Multicloud improvement
 
 This article advances the narrative by adding controls for multicloud adoption.
 
@@ -29,7 +29,7 @@ Since then, some things have changed that will affect governance:
 
 - Identity is controlled by an on-premises instance of Active Directory. Hybrid identity is facilitated through replication to Azure Active Directory.
 - IT Operations or Cloud Operations are largely managed by Azure Monitor and related automations.
-- Disaster Recovery / Business Continuity is controlled by Azure Vault instances.
+- Disaster recovery and business continuity is controlled by Azure Vault instances.
 - Azure Security Center is used to monitor security violations and attacks.
 - Azure Security Center and Azure Monitor are both used to monitor governance of the cloud.
 - Azure Blueprints, Azure Policy, and Azure management groups are used to automate compliance with policy.
@@ -76,8 +76,8 @@ This section of the article will change the governance MVP design to include new
     1. Governance enforcement is cloud-specific.
     2. The corporate policies established in the governance guide are not cloud-specific. While the implementation may vary from cloud to cloud, the policies can be applied to the secondary provider.
 
-Multi-cloud adoption should be contained to where it is required based on technical needs or specific business requirements. As multi-cloud adoption grows, so does complexity and security risks.
+Multicloud adoption should be contained to where it is required based on technical needs or specific business requirements. As multicloud adoption grows, so does complexity and security risks.
 
 ## Conclusion
 
-This series of articles described the incremental development of governance best practices, aligned with the experiences of this fictional company. By starting small, but with the right foundation, the company could move quickly and yet still apply the right amount of governance at the right time. The MVP by itself did not protect the customer. Instead, it created the foundation to manage risks and add protections. From there, layers of governance were applied to remediate tangible risks. The exact journey presented here won't align 100% with the experiences of any reader. Rather, it serves as a pattern for incremental governance. The reader is advised to mold these best practices to fit their own unique constraints and governance requirements.
+This series of articles described the incremental development of governance best practices, aligned with the experiences of this fictional company. By starting small, but with the right foundation, the company could move quickly and yet still apply the right amount of governance at the right time. The MVP by itself did not protect the customer. Instead, it created the foundation to manage risks and add protections. From there, layers of governance were applied to remediate tangible risks. The exact journey presented here won't align 100% with the experiences of any reader. Rather, it serves as a pattern for incremental governance. You should mold these best practices to fit your own unique constraints and governance requirements.

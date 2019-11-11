@@ -1,7 +1,7 @@
 ---
-title: "Standard Enterprise Governance Guide"
+title: "Standard enterprise governance guide"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Standard Enterprise governance guide
+description: Standard enterprise governance guide
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -11,13 +11,13 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Standard Enterprise governance guide
+# Standard enterprise governance guide
 
 ## Overview of best practices
 
-This governance guide follows the experiences of a fictional company through various stages of governance maturity. It is based on real customer experiences. The recommended practices are based on the constraints and needs of the fictional company.
+This governance guide follows the experiences of a fictional company through various stages of governance maturity. It is based on real customer experiences. The best practices are based on the constraints and needs of the fictional company.
 
-As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on prescriptive guidance. It also provides links to some governance improvements that add further recommended practices as new business or technical risks emerge.
+As a quick starting point, this overview defines a minimum viable product (MVP) for governance based on best practices. It also provides links to some governance improvements that add further best practices as new business or technical risks emerge.
 
 > [!WARNING]
 > This MVP is a baseline starting point, based on a set of assumptions. Even this minimal set of best practices is based on corporate policies driven by unique business risks and risk tolerances. To see if these assumptions apply to you, read the [longer narrative](./narrative.md) that follows this article.
@@ -35,8 +35,8 @@ The following diagram shows the governance MVP hierarchy for organizing resource
 Every application should be deployed in the proper area of the management group, subscription, and resource group hierarchy. During deployment planning, the cloud governance team will create the necessary nodes in the hierarchy to empower the cloud adoption teams.
 
 1. One management group for each type of environment (such as production, development, and test).
-2. Two subscriptions, one for production and another for not production.
-3. [Consistent nomenclature](../../../ready/considerations/naming-and-tagging.md) should be applied at each level of this grouping hierarchy.
+2. Two subscriptions, one for production workloads and another for nonproduction workloads.
+3. [Consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) should be applied at each level of this grouping hierarchy.
 4. Resource groups should be deployed in a manner that considers its contents lifecycle: everything that is developed together, is managed together, and retires together goes together. For more information on resource group best practices, [see here](../../../decision-guides/resource-consistency/index.md).
 5. [Region selection](../../../decision-guides/regions/index.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
 
@@ -77,7 +77,7 @@ Over time, this governance MVP will be used to improve governance practices. As 
 
 ## Next steps
 
-Now that you’re familiar with the governance MVP and have an idea of the governance improvements to follow, read the supporting narrative for additional context.
+Now that you're familiar with the governance MVP and have an idea of the governance improvements to follow, read the supporting narrative for additional context.
 
 > [!div class="nextstepaction"]
 > [Read the supporting narrative](./narrative.md)

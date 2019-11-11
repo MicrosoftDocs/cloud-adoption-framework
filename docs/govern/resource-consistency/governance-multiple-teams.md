@@ -24,10 +24,10 @@ The requirements are:
 - Support for multiple **environments**. An environment is a logical grouping of resources, such as virtual machines, virtual networking, and network traffic routing services. These groups of resources have similar management and security requirements and are typically used for a specific purpose such as testing or production. In this example, the requirement is for four environments:
   - A **shared infrastructure environment** that includes resources shared by workloads in other environments. For example, a virtual network with a gateway subnet that provides connectivity to on-premises.
   - A **production environment** with the most restrictive security policies. May include internal or external facing workloads.
-  - A **not production environment** for development and testing work. This environment has security, compliance, and cost policies that differ from those in the production environment. In Azure, this takes the form of an Enterprise Dev/Test subscription.
+  - A **preproduction environment** for development and testing work. This environment has security, compliance, and cost policies that differ from those in the production environment. In Azure, this takes the form of an Enterprise Dev/Test subscription.
   - A **sandbox environment** for proof of concept and education purposes. This environment is typically assigned per employee participating in development activities and has strict procedural and operational security controls in place to prevent corporate data from landing here. In Azure, these take the form of Visual Studio subscriptions. These subscriptions should also _not_ be tied to the enterprise Azure Active Directory.
 - A **permissions model of least privilege** in which users have no permissions by default. The model must support the following:
-  - A single trusted user (a quasi service account) at the subscription scope with permission to assign resource access rights.
+  - A single trusted user (treated like a service account) at the subscription scope with permission to assign resource access rights.
   - Each workload owner is denied access to resources by default. Resource access rights are granted explicitly by the single trusted user at the resource group scope.
   - Management access for the shared infrastructure resources limited to the shared infrastructure owners.
   - Management access for each workload restricted to the workload owner (in production) and increasing levels of control as development increases from Dev to Test to Stage to Prod.
@@ -132,11 +132,11 @@ If you compare each example to the requirements, you'll see that both examples s
 
 Now that you've designed a permissions model of least privilege, let's move on to take a look at some practical applications of these governance models. Recall from the requirements that you must support the following three environments:
 
-1. **Shared infrastructure:** A group of resources shared by all workloads. These are resources such as network gateways, firewalls, and security services.
-2. **Production:** Multiple groups of resources representing multiple production workloads. These resources are used to host the private and public facing application artifacts. These resources typically have the tightest governance and security models to protect the resources, application code, and data from unauthorized access.
-3. **Not Production:** Multiple groups of resources representing multiple nonproduction ready workloads. These resources are used for development and testing These resources may have a more relaxed governance model to enable increased developer agility. Security within these groups should increase the closer to "production" an application development process gets.
+1. **Shared infrastructure environment:** A group of resources shared by all workloads. These are resources such as network gateways, firewalls, and security services.
+2. **Production environment:** Multiple groups of resources representing multiple production workloads. These resources are used to host the private and public facing application artifacts. These resources typically have the tightest governance and security models to protect the resources, application code, and data from unauthorized access.
+3. **Preproduction environment:** Multiple groups of resources representing multiple nonproduction ready workloads. These resources are used for development and testing These resources may have a more relaxed governance model to enable increased developer agility. Security within these groups should increase the closer to "production" an application development process gets.
 
-For each of these three environments, there is a requirement to track cost data by **workload owner**, **environment**, or both. That is, you'll want to know the ongoing cost of the **shared infrastructure**, the costs incurred by individuals in both the **not-production** and **production** environments, and finally the overall cost of **not-production** and **production**.
+For each of these three environments, there is a requirement to track cost data by **workload owner**, **environment**, or both. That is, you'll want to know the ongoing cost of the **shared infrastructure**, the costs incurred by individuals in both the **preproduction** and **production** environments, and finally the overall cost of **preproduction** and **production** environments.
 
 You have already learned that resources are scoped to two levels: **subscription** and **resource group**. Therefore, the first decision is how to organize environments by **subscription**. There are only two possibilities: a single subscription, or, multiple subscriptions.
 
@@ -222,7 +222,7 @@ This management model has the benefits of the second example above. However, the
 
 Therefore, you can select any of these two examples resource management models depending on the priority of your requirements. If you anticipate that your organization will not reach the service limits for a single subscription, you can use a single subscription with multiple resource groups. Conversely, if your organization anticipates many workloads, multiple subscriptions for each environment may be better.
 
-## Implementing the resource management model
+## Implement the resource management model
 
 You've learned about several different models for governing access to Azure resources. Now you'll walk through the steps necessary to implement the resource management model with one subscription for each of the **shared infrastructure**, **production**, and **development** environments from the design guide. You'll have one **subscription owner** for all three environments. Each workload will be isolated in a **resource group** with a **workload owner** added with the **contributor** role.
 
@@ -252,11 +252,11 @@ Follow these steps:
     - A subscription for the **shared infrastructure** environment.
     - A subscription for the **production** environment.
     - A subscription for the **development** environment.
-5. The Azure account administrator [adds the subscription service owner to each subscription](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#assign-a-user-as-an-administrator-of-a-subscription).
+5. The Azure account administrator [adds the subscription service owner to each subscription](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#to-assign-a-user-as-an-administrator).
 6. Create an approval process for **workload owners** to request the creation of resource groups. The approval process can be implemented in many ways, such as over email, or you can using a process management tool such as [SharePoint workflows](https://support.office.com/article/introduction-to-sharepoint-workflow-07982276-54e8-4e17-8699-5056eff4d9e3). The approval process can follow these steps:
     - The **workload owner** prepares a bill of materials for required Azure resources in either the **development** environment, **production** environment, or both, and submits it to the **subscription owner**.
     - The **subscription owner** reviews the bill of materials and validates the requested resources to ensure that the requested resources are appropriate for their planned use - for example, checking that the requested [virtual machine sizes](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) are correct.
-    - If the request is not approved, the **workload owner** is notified. If the request is approved, the **subscription owner** [creates the requested resource group](https://docs.microsoft.com/azure/azure-resource-manager/manage-resource-groups-portal#create-resource-groups) following your organization's [naming conventions](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions), [adds the **workload owner**](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment) with the [**contributor** role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and sends notification to the **workload owner** that the resource group has been created.
+    - If the request is not approved, the **workload owner** is notified. If the request is approved, the **subscription owner** [creates the requested resource group](https://docs.microsoft.com/azure/azure-resource-manager/manage-resource-groups-portal#create-resource-groups) following your organization's [naming conventions](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming), [adds the **workload owner**](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment) with the [**contributor** role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and sends notification to the **workload owner** that the resource group has been created.
 7. Create an approval process for workload owners to request a virtual network peering connection from the shared infrastructure owner. As with the previous step, this approval process can be implemented using email or a process management tool.
 
 Now that you've implemented your governance model, you can deploy your shared infrastructure services.

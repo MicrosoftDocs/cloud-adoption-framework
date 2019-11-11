@@ -1,5 +1,5 @@
 ---
-title: "Promotion models - Promote, Stage, or Flight"
+title: "Promotion models: single-step, staged, or flight"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Understand the impact of promotion on migration activities
 author: BrianBlanchard
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Promotion models - single-step, staged, or flight
+# Promotion models: single-step, staged, or flight
 
 Workload migration is often discussed as a single activity. In reality, it is a collection of smaller activities that facilitate the movement of a digital asset to the cloud. One of the last activities in a migration is the promotion of an asset to production. Promotion is the point at which the production system changes for end users. It can often be as simple as changing the network routing, redirecting end users to the new production asset. Promotion is also the point at which IT operations or cloud operations change the focus of operational management processes from the previous production system to the new production systems.
 
@@ -71,7 +71,7 @@ This model is similar to the staged promotion model. However, there is one funda
 
 **Cons.** Negative aspects of this approach include:
 
-- The chosen migration tool can’t facilitate ongoing replication after migration.
+- The chosen migration tool can't facilitate ongoing replication after migration.
 - A secondary means of data replication is required to synchronize data platforms during the staged time frame.
 
 ## Next steps
