@@ -93,7 +93,7 @@ To learn more, see the [Azure Service Health documentation](https://docs.microso
 
 # [Azure Advisor](#tab/AzureAdvisor)
 
-Azure Advisor is a free, personalized cloud consultant that helps you follow and implement best practices for Azure deployments. It analyzes your resource configuration and usage telemetry and recommends solutions that can help optimize your environment. The recommendations are divided into five categories:
+Azure Advisor is a free, personalized cloud consultant that helps you follow and implement best practices for Azure deployments. It analyzes your resource configuration and usage telemetry and recommends solutions that can help optimize your environment. The recommendations are divided into the following categories:
 
 - **High availability:** To improve the continuity of your business-critical applications. Recommendations might include adding virtual machines to an availability set or adding geo-redundant endpoints.
 - **Security:** To detect threats and vulnerabilities that might lead to security breaches. Recommendations might include applying disk encryption or enabling network security groups.
