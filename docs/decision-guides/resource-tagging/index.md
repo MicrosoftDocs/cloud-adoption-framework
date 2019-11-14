@@ -68,7 +68,7 @@ The common tagging patterns listed below provide examples of how tagging can be 
 
 For more information about naming and tagging in Azure, see:
 
-- [Naming conventions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions). Refer to this guidance for recommended naming conventions for Azure resources.
+- [Naming conventions for Azure resources](/azure/architecture/best-practices/resource-naming). Refer to this guidance for recommended naming conventions for Azure resources.
 - [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags?toc=/azure/billing/TOC.json). You can apply tags in Azure at both the resource group and individual resource level, giving you flexibility in the granularity of any accounting reports based on applied tags.
 
 ## Next steps
