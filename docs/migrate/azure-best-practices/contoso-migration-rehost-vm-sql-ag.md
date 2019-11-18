@@ -209,7 +209,7 @@ Contoso admins create a storage account as follows:
 
 Before setting up the cluster, Contoso admins take a snapshot of the OS disk on each machine.
 
-![snapshot](media/contoso-migration-rehost-vm-sql-ag/snapshot.png)
+![Create snapshot](media/contoso-migration-rehost-vm-sql-ag/snapshot.png)
 
 1. Then, they run a script they've put together to create the Windows Failover Cluster.
 
@@ -434,7 +434,7 @@ Contoso admins perform these steps as follows:
 8. They sign in to the machine again, and the Configuration Server Management Wizard starts automatically.
 9. In the wizard, they select the NIC to receive replication traffic. This setting can't be changed after it's configured.
 10. They select the subscription, resource group, and vault in which to register the configuration server.
-        ![vault](./media/contoso-migration-rehost-vm-sql-ag/cswiz1.png)
+        ![Select Recovery Services vault](./media/contoso-migration-rehost-vm-sql-ag/cswiz1.png)
 
 11. They then download and install MySQL Server, and VMware PowerCLI.
 12. After validation, they specify the FQDN or IP address of the vCenter server or vSphere host. They leave the default port, and specify a friendly name for the vCenter server.

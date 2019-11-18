@@ -12,7 +12,7 @@ ms.subservice: operate
 
 # Business criticality in cloud management
 
-Across every business, there exist a small number of workloads that are too important to fail. They're considered to be mission critical. When those workloads experience outages or performance degradation, the adverse impact on revenue and profitability can be felt across the entire company.
+Across every business, there exist a small number of workloads that are too important to fail. These workloads are considered mission critical. When those workloads experience outages or performance degradation, the adverse impact on revenue and profitability can be felt across the entire company.
 
 At the other end of the spectrum, some workloads can go months at a time without being used. Poor performance or outages for those workloads is not desirable, but the impact is isolated and limited.
 

@@ -23,7 +23,7 @@ The following sample policy statements address common identity-related business 
 
 ## Lack of access controls
 
-**Technical risk:** Insufficient or ad-hoc access control settings can introduce risk of unauthorized access to sensitive or mission-critical resources.
+**Technical risk:** Insufficient or ad hoc access control settings can introduce risk of unauthorized access to sensitive or mission-critical resources.
 
 **Policy statement:** All assets deployed to the cloud should be controlled using identities and roles approved by current governance policies.
 

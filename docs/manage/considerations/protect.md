@@ -26,7 +26,7 @@ At a minimum, each asset that supports any given workload should have a baseline
 
 ### Recovery time objectives (RTO)
 
-When disaster strikes, a recovery time objective is the amount of time it should take to recovery any system to its pre-disaster state. For each workload, that would include the time required to restore minimum necessary functionality for the VMs and apps. It also includes the amount of time required to restore the data that's required by the applications.
+When disaster strikes, a recovery time objective is the amount of time it should take to recovery any system to its state prior to the disaster. For each workload, that would include the time required to restore minimum necessary functionality for the VMs and apps. It also includes the amount of time required to restore the data that's required by the applications.
 
 In business terms, RTO represents the amount of time that the business process will be out of service. For mission-critical workloads, this variable should be relatively low, allowing the business processes to resume quickly. For lower-priority workloads, a standard level of RTO might not have a noticeable impact on company performance.
 

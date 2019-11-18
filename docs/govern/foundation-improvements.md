@@ -26,7 +26,7 @@ At any time, the following best practices can be applied to the initial governan
 |Risk/Need | Standard Enterprise | Complex Enterprise |
 |---|---|---|
 |Sensitive data in the cloud|[Discipline improvement](./guides/standard/security-baseline-improvement.md)|[Discipline improvement](./guides/complex/security-baseline-improvement.md)|
-|Mission critical apps in the cloud|[Discipline improvement](./guides/standard/resource-consistency-improvement.md)|[Discipline improvement](./guides/complex/resource-consistency-improvement.md)|
+|Mission-critical apps in the cloud|[Discipline improvement](./guides/standard/resource-consistency-improvement.md)|[Discipline improvement](./guides/complex/resource-consistency-improvement.md)|
 |Cloud cost management|[Discipline improvement](./guides/standard/cost-management-improvement.md)|[Discipline improvement](./guides/complex/cost-management-improvement.md)|
 |Multicloud|[Discipline improvement](./guides/standard/multicloud-improvement.md)|[Discipline improvement](./guides/complex/multicloud-improvement.md)|
 |Complex/legacy identity management|N/A|[Discipline improvement](./guides/complex/identity-baseline-improvement.md)|

@@ -60,7 +60,7 @@ The following decisions are represented in the landing zone blueprint.
 |Subscription design|N/A - Designed for a single production subscription.|[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)|
 |Management groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)         |
 |Resource groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)         |
-|Data|N/A|[Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas?toc=https://docs.microsoft.com/azure/architecture/toc.json&bc=https://docs.microsoft.com/azure/architecture/bread/toc.json) and [Azure Data Store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
+|Data|N/A|[Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and [Azure Data Store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
 |Storage|N/A|[Azure Storage guidance](../considerations/storage-options.md)         |
 |Naming and tagging standards|N/A|[Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md)         |
 |Cost management|N/A|[Tracking costs](../azure-best-practices/track-costs.md)|

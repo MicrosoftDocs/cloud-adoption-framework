@@ -60,7 +60,7 @@ Azure Migrate calculates **monthly cost estimates** based on data captured by th
 
 The resulting estimate, pictured below, identifies the monthly costs of compute and storage, which often represent the largest portion of cloud costs.
 
-![compute-storage-monthly-cost-estimate.png](./media/manage-costs/compute-storage-monthly-cost-estimate.png)
+![Cost details view](./media/manage-costs/compute-storage-monthly-cost-estimate.png)
 *Figure 1 - Image of the Cost Details view of an assessment in Azure Migrate.*
 
 ## Additional resources

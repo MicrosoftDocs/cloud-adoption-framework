@@ -223,7 +223,7 @@ Zerto provides virtual replication handling both Microsoft Hyper-V and VMware vS
 
 Carbonite provides server and data migration solutions to migrate workloads to, from, or between any physical, virtual, or cloud-based environment.
 
-[Learn More](https://www.carbonite.com/data-protection/data-migration-software)
+[Learn more](https://www.carbonite.com/data-protection/data-migration-software)
 
 ## Movere
 
@@ -260,7 +260,7 @@ These are not the only tools available. Many other third-party tools are widely 
 
 As you migrate into cloud technologies this presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
 
-[Azure DevOps](https://dev.azure.com) provides all of the required functionality and integration with Azure, On-premises, or even other clouds. Find out more [here](https://azure.microsoft.com/services/devops). For a guided training, see [CI and CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
+Azure DevOps provides all of the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops). For guided training, see [CI and CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
 # [Cost management](#tab/ManageCost)
 

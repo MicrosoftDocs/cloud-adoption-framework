@@ -294,7 +294,7 @@ Azure Backup allows you to back up and restore Azure VM disks.
 - Backups are application consistent, ensuring backed up data is transactionally consistent and that applications will boot up post-restore.
 - Azure Backup supports locally redundant storage (LRS) to replicate multiple copies of your backup data within a datacenter, in case of a local hardware failure.
 - In the event of a regional outage, Azure Backup also supports geo-redundant storage (GRS), replicating your backup data to a secondary paired region.
-- Azure Backup encrypts data in-transit using AES 256. Backed-up data at-rest is encrypted using [Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption?toc=%2fazure%2fstorage%2fqueues%2ftoc.json).
+- Azure Backup encrypts data in-transit using AES 256. Backed-up data at-rest is encrypted using [Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
 
 Contoso will use Azure Backup with GRS on all production VMs to ensure workload data is backed up and can be quickly restored in case of outage or other disruption. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup).
 

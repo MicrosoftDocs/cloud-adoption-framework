@@ -15,10 +15,10 @@ services: azure-monitor
 
 This article includes our recommended monitoring strategy for each of the cloud deployment models, based on the following criteria:
 
-- You need to maintain your commitment to Operations Manager or another enterprise monitoring platform, because it's integrated with your IT operations processes, knowledge, and expertise, or certain functionality isn't available yet in Azure Monitor.
-- You need to monitor workloads both on-premises and in the public cloud, or just in the cloud.
+- You must maintain your commitment to Operations Manager or another enterprise monitoring platform, because it's integrated with your IT operations processes, knowledge, and expertise, or certain functionality isn't available yet in Azure Monitor.
+- You must monitor workloads both on-premises and in the public cloud, or just in the cloud.
 - Your cloud migration strategy includes modernizing IT operations and moving to our cloud monitoring services and solutions.
-- You might have critical systems that are air-gapped or physically isolated, hosted in a private cloud or on physical hardware. And the systems need to be monitored.
+- You might have critical systems that are air-gapped or physically isolated, or are hosted in a private cloud or on physical hardware, and these systems need to be monitored.
 
 Our strategy includes support for monitoring infrastructure (compute, storage, and server workloads), application (end-user, exceptions, and client), and network resources. It delivers a complete, service-oriented monitoring perspective.
 
@@ -99,7 +99,7 @@ To collect metrics and logs from Azure infrastructure and platform resources, yo
 
 ### Monitor with System Center Operations Manager
 
-Although System Center Operations Manager was originally designed as an on-premises solution to monitor across applications, workloads, and infrastructure that are running in your IT environment, it evolved to include cloud-monitoring capabilities. It integrates with Azure, Office 365, and Amazon Web Services (AWS). It can monitor across these diverse environments with management packs that are designed and updated to support them.  
+Although System Center Operations Manager was originally designed as an on-premises solution to monitor across applications, workloads, and infrastructure components that are running in your IT environment, it evolved to include cloud-monitoring capabilities. It integrates with Azure, Office 365, and Amazon Web Services (AWS). It can monitor across these diverse environments with management packs that are designed and updated to support them.  
 
 For customers who have made significant investments in Operations Manager to achieve comprehensive monitoring that's tightly integrated with their IT service management processes and tools, or for customers new to Azure, it's understandable to ask the following questions:
 
@@ -127,7 +127,7 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
 #### Disadvantages of using Operations Manager by itself
 
-- Analyzing monitoring data in Operations Manager is commonly performed by using predefined views that are provided by management packs accessed from the console, from SQL Server Reporting Services (SSRS) reports, or from custom views that end users have created. Ad-hoc data analysis isn't possible out of the box. Operations Manager reporting is inflexible. The data warehouse that provides long-term retention of the monitoring data doesn't scale or perform well. And expertise in writing T-SQL statements, developing a Power BI solution, or using third-party solutions is required to support the requirements for the various personas in the IT organization.
+- Analyzing monitoring data in Operations Manager is commonly performed by using predefined views that are provided by management packs accessed from the console, from SQL Server Reporting Services (SSRS) reports, or from custom views that end users have created. Ad hoc data analysis isn't possible out of the box. Operations Manager reporting is inflexible. The data warehouse that provides long-term retention of the monitoring data doesn't scale or perform well. And expertise in writing T-SQL statements, developing a Power BI solution, or using third-party solutions is required to support the requirements for the various personas in the IT organization.
 
 - Alerting in Operations Manager doesn't support complex expressions or include correlation logic. To help reduce noise, alerts are grouped to show the relationships between them and to identify their causes.
 
@@ -147,7 +147,7 @@ Although Operations Manager is capable of monitoring resources that are hosted i
 
 - By using Network Performance Monitor, you can monitor the network connectivity between:
   - Your corporate network and Azure.
-  - Mission critical multitier applications and microservices.
+  - Mission-critical multitier applications and microservices.
   - User locations and web-based applications (HTTP/HTTPS).
 
 This strategy delivers visibility of the network layer, without the need for SNMP. It can also present, in an interactive topology map, the hop-by-hop topology of routes between the source and destination endpoint. It's a better choice than attempting to accomplish the same result with network monitoring in Operations Manager or with other network monitoring tools currently used in your environment.
@@ -176,7 +176,7 @@ You can achieve holistic monitoring of Azure Stack with System Center Operations
 
 You can also achieve holistic monitoring with a combination of [infrastructure monitoring capabilities](https://docs.microsoft.com/azure/azure-stack/azure-stack-monitor-health) that are included in Azure Stack. These capabilities help you view health and alerts for an Azure Stack region and the [Azure Monitor service](https://docs.microsoft.com/azure/azure-stack/user/azure-stack-metrics-azure-data) in Azure Stack, which provides base-level infrastructure metrics and logs for most services.
 
-If you've already invested in Operations Manager, use the Azure Stack management pack to monitor the availability and health state of Azure Stack deployments. This includes regions, resource providers, updates, update runs, scale units, unit nodes, infrastructure roles, and their instances (logical entities comprised of the hardware resources). It uses the Health and Update resource provider REST APIs to communicate with Azure Stack. To monitor physical servers and storage devices, use the OEM vendors' management pack (for example, provided by Lenovo, Hewlett Packard, or Dell). Operations Manager can natively monitor the network switches to collect basic statistics by using SNMP. Monitoring the tenant workloads is possible with the Azure management pack by following two basic steps. Configure the subscription that you want to monitor, and then add the monitors for that subscription.
+If you've already invested in Operations Manager, use the Azure Stack management pack to monitor the availability and health state of Azure Stack deployments, including regions, resource providers, updates, update runs, scale units, unit nodes, infrastructure roles, and their instances (logical entities comprised of the hardware resources). This management pack uses the Health and Update resource provider REST APIs to communicate with Azure Stack. To monitor physical servers and storage devices, use the OEM vendors' management pack (for example, provided by Lenovo, Hewlett Packard, or Dell). Operations Manager can natively monitor the network switches to collect basic statistics by using SNMP. Monitoring the tenant workloads is possible with the Azure management pack by following two basic steps. Configure the subscription that you want to monitor, and then add the monitors for that subscription.
 
 ## Next steps
 

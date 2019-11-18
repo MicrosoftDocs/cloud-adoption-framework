@@ -33,10 +33,10 @@ After migration, the most critical task is to secure migrated workloads from int
 
 Microsoft works hard to ensure that Azure tenant admins have the information needed to enable security features that protect workloads from attacks. Azure Security Center provides unified security management. From the Security Center, you can apply security policies across workloads, limit threat exposure, and detect and respond to attacks. Security Center analyzes resources and configurations across Azure tenants and makes security recommendations, including:
 
-- **Centralized policy management** – Ensure compliance with company or regulatory security requirements by centrally managing security policies across all your hybrid cloud workloads.
-- **Continuous security assessment** – Monitor the security posture of machines, networks, storage and data services, and applications to discover potential security issues.
-- **Actionable recommendations** – Remediate security vulnerabilities before they can be exploited by attackers with prioritized and actionable security recommendations.
-- **Prioritized alerts and incidents** - Focus on the most critical threats first with prioritized security alerts and incidents.
+- **Centralized policy management:** Ensure compliance with company or regulatory security requirements by centrally managing security policies across all your hybrid cloud workloads.
+- **Continuous security assessment:** Monitor the security posture of machines, networks, storage and data services, and applications to discover potential security issues.
+- **Actionable recommendations:** Remediate security vulnerabilities before they can be exploited by attackers with prioritized and actionable security recommendations.
+- **Prioritized alerts and incidents:** Focus on the most critical threats first with prioritized security alerts and incidents.
 
 In addition to assessments and recommendations, the Azure Security Center provides other security features that can be enabled for specific resources.
 
@@ -131,7 +131,6 @@ Azure provides a couple of solutions:
   - A web application firewall can be monitored using Azure Monitor, and is integrated into Azure Security Center.
 
 ![Secure web apps](./media/migrate-best-practices-security-management/web-apps.png)
-
 *Azure Key Vault*
 
 **Learn more:**
@@ -170,7 +169,6 @@ Azure Active Directory (Azure AD) provides activity logs that appear in Azure Mo
 - Make it a common practice to review the logs or integrate your security information and event management (SIEM) tools to automatically review abnormalities. If you're not using Premium 1 or 2, you'll need to do a lot of analysis yourself or using your SIEM system. Analysis includes looking for risky sign-ins and events, and other user attack patterns.
 
 ![Users and Groups](./media/migrate-best-practices-security-management/azure-ad.png)
-
 *Azure AD Users and Groups*
 
 **Learn more:**
@@ -209,7 +207,6 @@ Ensuring that your resource groups have meaningful names that admins and support
 - If you're synchronizing your on-premises Active Directory to Azure AD using Azure AD Connect, consider matching the names of security groups on-premises to the names of resource groups in Azure.
 
 ![Naming](./media/migrate-best-practices-security-management/naming.png)
-
 *Resource group naming*
 
 **Learn more:**
@@ -221,7 +218,6 @@ Ensuring that your resource groups have meaningful names that admins and support
 The last thing you need is for a resource group to disappear because it was deleted accidentally. We recommend that you implement delete locks so that this doesn't happen.
 
 ![Delete locks](./media/migrate-best-practices-security-management/locks.png)
-
 *Delete locks*
 
 **Learn more:**
@@ -354,7 +350,7 @@ You can use Azure Backup to back up VMs in a couple of ways.
 - **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups as well as granular backup and restore options. Backup is up to three times a day, at the file/folder level. It isn't app-aware and Linux isn't supported. Install the Microsoft Azure Recovery Services (MARS) agent on each VM that you want to back up using this method.
 - **Protect the VM to Azure Backup Server.** Azure Backup Server is provided free with Azure Backup. The VM is backed up to local Azure Backup Server storage. You then back up the Azure Backup Server to Azure in a vault. Backup is app-aware, with full granularity over backup frequency and retention. You can back up at the app level, for example by backing up SQL Server or SharePoint.
 
-For security, Azure Backup encrypts data in-flight using AES 256 and sends it over HTTPS to Azure. Backed-up data at-rest in Azure is encrypted using [Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), and data for transmission and storage.
+For security, Azure Backup encrypts data in-flight using AES 256 and sends it over HTTPS to Azure. Backed-up data at-rest in Azure is encrypted using [Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption?toc=/azure/storage/queues/toc.json), and data for transmission and storage.
 
 ![Azure Backup](./media/migrate-best-practices-security-management/iaas-backup.png)
 *Azure Backup*
@@ -396,7 +392,6 @@ Azure Site Recovery is the primary Azure service for ensuring that Azure VMs can
 Site Recovery replicates VMs from a primary to secondary Azure region. When disaster strikes, you fail VMs over from the primary region, and continue accessing them as normal in the secondary region. When operations return to normal, you can fail back VMs to the primary region.
 
 ![Azure Site Recovery](./media/migrate-best-practices-security-management/site-recovery.png)
-
 *Site Recovery*
 
 **Learn more:**
@@ -415,7 +410,6 @@ Azure managed disks simplify disk management for Azure IaaS VMs by managing the�
 - You should create VMs in availability sets for high resilience and availability. When planned or unplanned outages occur, availability sets ensure that at least one of your VMs in the set continues to be available.
 
 ![Managed disks](./media/migrate-best-practices-security-management/managed-disks.png)
-
 *Managed disks*
 
 **Learn more:**

@@ -245,7 +245,7 @@ Contoso admins do this as follows:
 10. In the wizard, they select the NIC to receive replication traffic. This setting can't be changed after it's configured.
 11. They select the subscription, resource group, and vault in which to register the configuration server.
 
-    ![vault](./media/contoso-migration-rehost-linux-vm-mysql/cswiz1.png)
+    ![Select Recovery Services vault](./media/contoso-migration-rehost-linux-vm-mysql/cswiz1.png)
 
 12. Now, they download and install MySQL Server, and VMware PowerCLI.
 13. After validation, they specify the FQDN or IP address of the vCenter server or vSphere host. They leave the default port, and specify a friendly name for the vCenter server.

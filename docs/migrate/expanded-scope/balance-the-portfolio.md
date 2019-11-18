@@ -90,7 +90,7 @@ To reduce complexity, you should follow a traditional approach to portfolio rati
   - If a workload isn't strategic but is compatible with modern, cloud-based application hosting platforms, then it may be wise to perform minor refactoring on the application to deploy it as a modern app. This can contribute to the overall savings by reducing the overall IaaS and OS licensing requirements of the cloud migration.
   - If a workload is a third-party application and that workload's data isn't planned for use in a downstream innovation, then it may be best to leave as a rehost option on the backlog.
 
-These questions should not be the extent of the qualitative analysis completed for each workload, but they are intended to guide a conversation that helps address the complexity of an imbalanced portfolio.
+These questions shouldn't be the extent of the qualitative analysis completed for each workload, but they help guide a conversation about addressing the complexity of an imbalanced portfolio.
 
 ## Migrate process changes
 

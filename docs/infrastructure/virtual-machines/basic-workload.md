@@ -31,20 +31,20 @@ Regardless of whether the workload is a web application or a VM, each of these d
 
 ## Basic web application (PaaS)
 
-For a basic web application, select one of the 5-minute quickstarts from the [web apps documentation](https://docs.microsoft.com/azure/app-service?toc=/azure/architecture/cloud-adoption-guide/toc.json) and follow the steps.
+For a basic web application, select one of the 5-minute quickstarts from the [web apps documentation](https://docs.microsoft.com/azure/app-service) and follow the steps.
 
 > [!NOTE]
 > Some of the Quickstart guides will deploy a resource group by default. In this case, it's not necessary to create a resource group explicitly. Otherwise, deploy the web application to the resource group created above.
 
-Once you deploy a simple workload, you can learn more about the best practices for deploying a [basic web application](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app?toc=/azure/architecture/cloud-adoption-guide/toc.json) to Azure.
+Once you deploy a simple workload, you can learn more about the best practices for deploying a [basic web application](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app) to Azure.
 
 ## Single Windows or Linux VM (IaaS)
 
-For a simple workload that runs on a VM, the first step is to deploy a virtual network. All infrastructure as a service (IaaS) resources in Azure such as virtual machines, load balancers, and gateways, require a virtual network. Learn about [Azure virtual networks](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview?toc=/azure/architecture/cloud-adoption-guide/toc.json), and then follow the steps to [deploy a Virtual Network to Azure using the portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal?toc=/azure/architecture/cloud-adoption-guide/toc.json). When you specify the settings for the virtual network in the Azure portal, be sure to specify the name of the resource group created above.
+For a simple workload that runs on a VM, the first step is to deploy a virtual network. All infrastructure as a service (IaaS) resources in Azure such as virtual machines, load balancers, and gateways, require a virtual network. Learn about [Azure virtual networks](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview), and then follow the steps to [deploy a Virtual Network to Azure using the portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal). When you specify the settings for the virtual network in the Azure portal, be sure to specify the name of the resource group created above.
 
-The next step is to decide whether to deploy a single Windows or Linux VM. For Windows VM, follow the steps to [deploy a Windows VM to Azure with the portal](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal?toc=/azure/architecture/cloud-adoption-guide/toc.json). Again, when you specify the settings for the virtual machine in the Azure portal, specify the name of the resource group created above.
+The next step is to decide whether to deploy a single Windows or Linux VM. For Windows VM, follow the steps to [deploy a Windows VM to Azure with the portal](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal). Again, when you specify the settings for the virtual machine in the Azure portal, specify the name of the resource group created above.
 
-Once you've followed the steps and deployed the VM, you can learn about [best practices for running a Windows VM on Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/single-vm?toc=/azure/architecture/cloud-adoption-guide/toc.json). For a Linux VM, follow the steps to [deploy a Linux VM to Azure with the portal](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-portal?toc=/azure/architecture/cloud-adoption-guide/toc.json). You can also learn more about [best practices for running a Linux VM on Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-linux/single-vm?toc=/azure/architecture/cloud-adoption-guide/toc.json).
+Once you've followed the steps and deployed the VM, you can learn about [best practices for running a Windows VM on Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/single-vm). For a Linux VM, follow the steps to [deploy a Linux VM to Azure with the portal](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-portal). You can also learn more about [best practices for running a Linux VM on Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-linux/single-vm).
 
 ## Next steps
 

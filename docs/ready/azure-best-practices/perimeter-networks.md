@@ -33,7 +33,7 @@ Perimeter networks make use of the following Azure features and services:
 > Azure reference architectures provide example templates that you can use to implement your own perimeter networks:
 >
 > - [Implement a DMZ between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid)
-> - [Implement a DMZ between Azure and the internet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
+> - [Implement a DMZ between Azure and the internet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
 
 Usually, your central IT and security teams are responsible for defining requirements for operating your perimeter networks.
 

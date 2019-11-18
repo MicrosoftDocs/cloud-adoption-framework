@@ -28,7 +28,7 @@ To deploy the cloud adoption plan, open the [Azure DevOps Demo Generator](https:
 
 After your project has been created, continue through this article series to see how you can modify the template to align to your cloud adoption plan.
 
-For additional support and guidance on this tool, see [Azure DevOps Services Demo Generator](https://docs.microsoft.com/azure/devops/demo-gen/?toc=%2Fazure%2Fdevops%2Fdemo-gen%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fdemo-gen%2Fbreadcrumb%2Ftoc.json&view=azure-devops).
+For additional support and guidance on this tool, see [Azure DevOps Services Demo Generator](https://docs.microsoft.com/azure/devops/demo-gen/?toc=/azure/devops/demo-gen/toc.json&bc=/azure/devops/demo-gen/breadcrumb/toc.json&view=azure-devops).
 
 ## Bulk edit the cloud adoption plan
 

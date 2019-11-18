@@ -33,15 +33,15 @@ Before defining triggers for policy compliance remediation, you need establish t
 
 ### Assign cloud governance team members
 
-Your cloud governance team will provide ongoing guidance on policy compliance and handle policy-related issues that emerge when deploying and operating your cloud assets. When building this team, invite staff from your organization that have expertise in areas covered by your defined policy statements and identified risks.
+Your cloud governance team will provide ongoing guidance on policy compliance and handle policy-related issues that emerge when deploying and operating your cloud assets. When building this team, invite staff members that have expertise in areas covered by your defined policy statements and identified risks.
 
-For initial test deployments this can be limited to a few system administrators responsible for establishing the basics of governance. As your governance processes mature, review the cloud guidance team's membership regularly to ensure that you can properly address new potential risks and policy requirements. Identify members of your IT and business staff with relevant experience or interest in specific areas of governance and include them in your teams on a permanent or ad-hoc basis as-needed.
+For initial test deployments, this can be limited to a few system administrators responsible for establishing the basics of governance. As your governance processes mature, review the cloud guidance team's membership regularly to ensure that you can properly address new potential risks and policy requirements. Identify members of your IT and business staff with relevant experience or interest in specific areas of governance and include them in your teams on a permanent or temporary basis as needed.
 
 ### Reviews and policy iteration
 
 As additional resources and workloads are deployed, the cloud governance team will need to ensure that new workloads or assets comply with policy requirements. Evaluate new requirements from workload development teams to ensure their planned deployments will align with your design guides, and update your policies to support these requirements when appropriate.
 
-Plan to evaluate new potential risks and update policy statements and design guides as needed. Work with IT staff and workload teams to evaluate new Azure features and services on an ongoing basis. Also schedule regular review cycles each of the five governance disciplines to ensure policy is up-to-date and being met.
+Plan to evaluate new potential risks and update policy statements and design guides as needed. Work with IT staff and workload teams to evaluate new Azure features and services on an ongoing basis. Also schedule regular review cycles each of the five governance disciplines to ensure policy is current and in compliance.
 
 ### Education
 
@@ -74,15 +74,15 @@ Some examples of violation triggers and actions:
 
 | Cloud governance discipline | Sample trigger | Sample action |
 |-----------------------------|----------------|---------------|
-| Cost Management | Monthly cloud spending is more than 20% higher than expected. | Notify billing unit leader who will begin a review of resource usage. |
-| Security Baseline | Detect suspicious user login activity. | Notify IT security team and disable suspect user account. |
-| Resource Consistency | CPU utilization for workload is greater than 90%. | Notify the IT Operations team and scale out additional resources to handle load. |
+| Cost Management | Monthly cloud spending is more than 20% higher than expected. | Notify the billing unit leader who will begin a review of resource usage. |
+| Security Baseline | Detect suspicious user activity. | Notify the IT security team and disable the suspect user account. |
+| Resource Consistency | CPU utilization for a workload is greater than 90%. | Notify the IT Operations team and scale out additional resources to handle the load. |
 
 ## Automation of monitoring and compliance
 
 After you've defined your compliance violation triggers and actions, you can start planning how best to use the logging and reporting tools and other features of the cloud platform to help automate your monitoring and policy compliance strategy.
 
-Consult the Cloud Adoption Framework [logging and reporting decision guide](../../decision-guides/logging-and-reporting/index.md) topic for guidance on choosing the best monitoring pattern for your deployment.
+For help choosing the best monitoring pattern for your deployment, see the [logging and reporting decision guide](../../decision-guides/logging-and-reporting/index.md).
 
 ## Next steps
 

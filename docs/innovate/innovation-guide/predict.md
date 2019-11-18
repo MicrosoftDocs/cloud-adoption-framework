@@ -28,7 +28,7 @@ As an innovator, your company has insights into the data, behavior, and needs of
 
 The following table can help you find the best solution, based on your implementation needs.
 
-|Service  |Pre-built models  |Build and experiment  |Train and build with Python|Required skills|
+|Service  |Prebuilt models  |Build and experiment  |Train and build with Python|Required skills|
 |---------|---------|---------|---------|---------|
 |Azure Cognitive Services|Yes|No|No|API and developer skills|
 |Azure Machine Learning Studio|Yes|Yes|No|General understanding of predictive algorithms|

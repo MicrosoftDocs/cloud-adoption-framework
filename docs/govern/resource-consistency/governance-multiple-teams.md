@@ -77,21 +77,22 @@ Therefore, to create a model of least-privilege access you have to decide the ac
 Let's take a look at two example permission models to understand this concept a little better. In the first example, the model trusts only the service administrator to create resource groups. In the second example, the model assigns the built-in owner role to each workload owner at the subscription scope.
 
 In both examples, there is a subscription service administrator that is assigned the built-in owner role at the subscription scope. Recall that the built-in owner role grants all permissions including the management of access to resources.
-![subscription service administrator with owner role](../../_images/govern/design/governance-2-1.png)
+
+![Subscription service administrator with owner role](../../_images/govern/design/governance-2-1.png)
 *Figure 3 - A subscription with a service administrator assigned the built-in owner role.*
 
 1. In the first example, there is **workload owner A** with no permissions at the subscription scope - they have no resource access management rights by default. This user wants to deploy and manage the resources for their workload. They must contact the **service administrator** to request creation of a resource group.
-    ![workload owner requests creation of resource group A](../../_images/govern/design/governance-2-2.png)
+    ![Workload owner requests creation of resource group A](../../_images/govern/design/governance-2-2.png)
 2. The **service administrator** reviews their request and creates **resource group A**. At this point, **workload owner A** still doesn't have permission to do anything.
-    ![service administrator creates resource group A](../../_images/govern/design/governance-2-3.png)
+    ![Service administrator creates resource group A](../../_images/govern/design/governance-2-3.png)
 3. The **service administrator** adds **workload owner A** to **resource group A** and assigns the [built-in contributor role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor). The contributor role grants all permissions on **resource group A** except managing access permission.
-    ![service administrator adds workload owner a to resource group a](../../_images/govern/design/governance-2-4.png)
+    ![Service administrator adds workload owner a to resource group a](../../_images/govern/design/governance-2-4.png)
 4. Let's assume that **workload owner A** has a requirement for a pair of team members to view the CPU and network traffic monitoring data as part of capacity planning for the workload. Because **workload owner A** is assigned the contributor role, they do not have permission to add a user to **resource group A**. They must send this request to the **service administrator**.
-    ![workload owner requests workload contributors be added to resource group](../../_images/govern/design/governance-2-5.png)
+    ![Workload owner requests workload contributors be added to resource group](../../_images/govern/design/governance-2-5.png)
 5. The **service administrator** reviews the request, and adds the two **workload contributor** users to **resource group A**. Neither of these two users require permission to manage resources, so they are assigned the [built-in reader role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor).
-    ![service administrator adds workload contributors to resource group A](../../_images/govern/design/governance-2-6.png)
+    ![Service administrator adds workload contributors to resource group A](../../_images/govern/design/governance-2-6.png)
 6. Next, **workload owner B** also requires a resource group to contain the resources for their workload. As with **workload owner A**, **workload owner B** initially does not have permission to take any action at the subscription scope so they must send a request to the **service administrator**.
-    ![workload owner B requests creation of resource group B](../../_images/govern/design/governance-2-7.png)
+    ![Workload owner B requests creation of resource group B](../../_images/govern/design/governance-2-7.png)
 7. The **service administrator** reviews the request and creates **resource group B**.
     ![Service Administrator creates resource group B](../../_images/govern/design/governance-2-8.png)
 8. The **service administrator** then adds **workload owner B** to **resource group B** and assigns the built-in contributor role.
@@ -99,7 +100,7 @@ In both examples, there is a subscription service administrator that is assigned
 
 At this point, each of the workload owners is isolated in their own resource group. None of the workload owners or their team members have management access to the resources in any other resource group.
 
-![subscription with resource groups A and B](../../_images/govern/design/governance-2-10.png)
+![Subscription with resource groups A and B](../../_images/govern/design/governance-2-10.png)
 *Figure 4 - A subscription with two workload owners isolated with their own resource group.*
 
 This model is a least-privilege model&mdash;each user is assigned the correct permission at the correct resource management scope.
@@ -121,7 +122,7 @@ Let's take a look at second example that reduces the number of tasks performed b
 
 Note that in this model, the **service administrator** performed fewer actions than they did in the first example due to the delegation of management access to each of the individual workload owners.
 
-![subscription with resource groups A and B](../../_images/govern/design/governance-2-16.png)
+![Subscription with resource groups A and B](../../_images/govern/design/governance-2-16.png)
 *Figure 5 - A subscription with a service administrator and two workload owners, all assigned the built-in owner role.*
 
 However, because both **workload owner A** and **workload owner B** are assigned the built-in owner role at the subscription scope, they have each inherited the built-in owner role for each other's resource group. This means that not only do they have full access to one another's resources, they are also able to delegate management access to each other's resource groups. For example, **workload owner B** has rights to add any other user to **resource group A** and can assign any role to them, including the built-in owner role.

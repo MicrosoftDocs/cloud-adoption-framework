@@ -35,20 +35,20 @@ When creating a building, scaffolding is used to create the basis of a structure
 
 The scaffold is based on practices we have gathered from many engagements with clients of various sizes. Those clients range from small organizations developing solutions in the cloud to large multinational enterprises and independent software vendors who are migrating workloads and developing cloud-native solutions. The enterprise scaffold is "purpose-built" to be flexible to support both traditional IT workloads and agile workloads, such as developers creating software as a service (SaaS) applications based on Azure platform capabilities.
 
-The enterprise scaffold is intended to be the foundation of each new subscription within Azure. It enables administrators to ensure workloads meet the minimum governance requirements of an organization without preventing business groups and developers from quickly meeting their own goals. Our experience shows that this greatly speeds, rather than impedes, public cloud growth.
+The enterprise scaffold can serve as the foundation of each new subscription within Azure. It enables administrators to ensure workloads meet the minimum governance requirements of an organization without preventing business groups and developers from quickly meeting their own goals. Our experience shows that this greatly accelerates, rather than impedes, public cloud growth.
 
 > [!NOTE]
 > Microsoft has released into preview a new capability called [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) that will enable you to package, manage, and deploy common images, templates, policies, and scripts across subscriptions and management groups. This capability is the bridge between the scaffold's purpose as reference model and deploying that model to your organization.
 >
 The following image shows the components of the scaffold. The foundation relies on a solid plan for the management hierarchy and subscriptions. The pillars consist of Resource Manager policies and strong naming standards. The rest of the scaffold are core Azure capabilities and features that enable and connect a secure and manageable environment.
 
-![enterprise scaffold](../_images/reference/scaffoldv2.png)
+![Enterprise scaffold](../_images/reference/scaffoldv2.png)
 
 ## Define your hierarchy
 
 The foundation of the scaffold is the hierarchy and relationship of the Azure Enterprise Enrollment through to subscriptions and resource groups. The enterprise enrollment defines the shape and use of Azure services within your company from a contractual point of view. Within the Enterprise Agreement, you can further subdivide the environment into departments, accounts, subscriptions, and resource groups to match your organization's structure.
 
-![hierarchy](../_images/reference/agreement.png)
+![Hierarchy](../_images/reference/agreement.png)
 
 An Azure subscription is the basic unit where all resources are contained. It also defines several limits within Azure, such as number of cores, virtual networks and other resources. Resource groups are used to further refine the subscription model and enable a more natural grouping of resources.
 
@@ -223,7 +223,7 @@ Collecting and analyzing telemetry that provides line of sight into the activiti
 
 This information can be viewed and acted on at multiple levels and are continually being improved. Azure provides **shared**, **core**, and **deep** monitoring capabilities of Azure resources through the services outlined in the diagram below.
 
-![monitoring](../_images/reference/monitoring.png)
+![Monitoring](../_images/reference/monitoring.png)
 
 ### Shared capabilities
 
@@ -339,4 +339,4 @@ Azure provides you both internal capabilities and third-party capabilities from 
 
 Governance is crucial to the success of Azure. This article targets the technical implementation of an enterprise scaffold but only touches on the broader process and relationships between the components. Policy governance flows from the top down and is determined by what the business wants to achieve. Naturally, the creation of a governance model for Azure includes representatives from IT, but more importantly it should have strong representation from business group leaders, and security and risk management. In the end, an enterprise scaffold is about mitigating business risk to facilitate an organization's mission and objectives.
 
-Now that you have learned about subscription governance, it's time to see these recommendations in practice. See [Examples of implementing Azure subscription governance](./azure-scaffold-examples.md).
+Now that you have learned about subscription governance, it's time to see these recommendations in practice. For more information, see the [Best practices for Azure readiness](../ready/azure-best-practices/index.md).
