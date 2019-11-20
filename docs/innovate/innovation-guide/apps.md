@@ -5,7 +5,7 @@ description: Learn to innovate by engaging customers through apps by using Azure
 author: billyclaymyersmsft
 ms.author: wimyers
 ms.date: 10/17/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-edit, AQC

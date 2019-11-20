@@ -5,7 +5,7 @@ description: Learn how to empower adoption by using Azure
 author: absheik
 ms.author: absheik
 ms.date: 10/17/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-new, AQC

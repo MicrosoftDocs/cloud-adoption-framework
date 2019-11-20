@@ -5,7 +5,7 @@ description: Learn to create innovative new solutions for your customers using A
 author: matticusau
 ms.author: mlavery
 ms.date: 10/17/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-edit, AQC

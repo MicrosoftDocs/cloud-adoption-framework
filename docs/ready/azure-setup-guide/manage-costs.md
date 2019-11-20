@@ -5,7 +5,7 @@ description: Understand invoices and learn how to set up budgets and payments fo
 author: dchimes
 ms.author: kfollis
 ms.date: 04/09/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC, setup

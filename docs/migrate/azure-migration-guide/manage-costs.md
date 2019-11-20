@@ -5,7 +5,7 @@ description: Learn how to set up budgets, payments, and understand invoices for 
 author: bandersmsft
 ms.author: banders
 ms.date: 08/08/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-edit, AQC

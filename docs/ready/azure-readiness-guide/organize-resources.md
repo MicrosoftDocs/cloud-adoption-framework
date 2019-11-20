@@ -5,7 +5,7 @@ description: Best practices to effectively organize your Azure resources for eas
 author: laraaleite
 ms.author: kfollis
 ms.date: 04/09/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC
