@@ -5,7 +5,7 @@ description: How to obtain assistance during your journey to Azure
 author: matticusau
 ms.author: mlavery
 ms.date: 04/04/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC

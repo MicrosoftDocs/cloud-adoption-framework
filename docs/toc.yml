@@ -1254,8 +1254,6 @@
       href: reference/cloud-operating-model.md
     - name: Azure enterprise scaffold
       href: reference/azure-scaffold.md
-    - name: Implementing Azure enterprise scaffold
-      href: reference/azure-scaffold-examples.md
     - name: Virtual Datacenter (VDC)
       href: reference/vdc.md
     - name: How does Azure work?

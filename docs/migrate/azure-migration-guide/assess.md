@@ -5,7 +5,7 @@ description: Assess the digital estate
 author: matticusau
 ms.author: mlavery
 ms.date: 08/08/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC

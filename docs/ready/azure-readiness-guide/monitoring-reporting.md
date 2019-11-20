@@ -5,7 +5,7 @@ description: Learn how to set up monitoring, reporting, and alerts for your Azur
 author: timleyden
 ms.author: tileyden
 ms.date: 04/09/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC

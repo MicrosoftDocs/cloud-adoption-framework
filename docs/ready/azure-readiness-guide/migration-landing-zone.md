@@ -5,7 +5,7 @@ description: Learn how to deploy a migration landing zone in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit

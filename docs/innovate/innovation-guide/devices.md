@@ -5,7 +5,7 @@ description: Azure innovation guide - Interact through devices
 author: umarmohamedusman
 ms.author: umarm
 ms.date: 10/10/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-new, AQC

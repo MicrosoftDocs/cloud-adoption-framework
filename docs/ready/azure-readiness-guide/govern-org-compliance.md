@@ -5,7 +5,7 @@ description: Learn how to set up governance, security, and compliance for your A
 author: tvuylsteke
 ms.author: kfollis
 ms.date: 09/27/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC
