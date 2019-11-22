@@ -47,10 +47,8 @@ The following resources can help you stay current with Azure:
 
 For deeper content that helps you stay current with Azure, take a look at the resources listed here:
 
-- [Azure Charts: SLA Board](https://azurecharts.com/sla)
-  - Azure services SLA chart, use for quick SLA reference, change tracking and comparison. Automatically rebuilt from Published SLA daily.
-- [Azure Charts: Heat Map](https://azurecharts.com/)
-  - Azure Updates data for last 6 months visualized. Automatically rubuild every 2 hours.
+- [Azure Charts](https://azurecharts.com/)
+  - This unofficial resource visualizes all the Azure updates that have happened in the last 6 months, and contains other useful charts and utilities that can help you keep track of changes in Azure.
 - [Azure Friday](https://channel9.msdn.com/Shows/Azure-Friday)
   - Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights.
   - Subscribe via [RSS](https://channel9.msdn.com/Shows/Azure-Friday/feed).
