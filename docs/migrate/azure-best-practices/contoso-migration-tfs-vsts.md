@@ -98,7 +98,7 @@ Here's how Contoso will complete the migration:
 Contoso admins upgrade the TFS server to TFS 2018 Update 2. Before they start:
 
 - They download [TFS 2018 Update 2](https://visualstudio.microsoft.com/downloads)
-- They verify the [hardware requirements](https://docs.microsoft.com/tfs/server/requirements), and read through the [release notes](https://docs.microsoft.com/visualstudio/releasenotes/tfs2018-relnotes) and [upgrade gotchas](/azure/devops/server/upgrade/get-started#before-you-upgrade-to-tfs-2018).
+- They verify the [hardware requirements](/azure/devops/server/requirements), and read through the [release notes](https://docs.microsoft.com/visualstudio/releasenotes/tfs2018-relnotes) and [upgrade gotchas](/azure/devops/server/upgrade/get-started#before-you-upgrade-to-tfs-2018).
 
 They upgrade as follows:
 
