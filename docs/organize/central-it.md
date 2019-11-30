@@ -15,7 +15,7 @@ ms.custom: organize
 
 As cloud adoption scales, cloud governance capabilities alone may not be sufficient to govern adoption efforts. When adoption is gradual, teams tend to organically develop the skills and processes needed to be ready for the cloud over time.
 
-However, when one cloud adoption team leverages the cloud to achieve a high-profile business outcome, gradual adoption is seldom the case. Success follows success. This is also true for cloud adoption, but it happens at cloud scale. When cloud adoption expands from one team to multiple teams in a relatively short period of time, additional support from existing IT staff is needed. However, those staff members may lack the training and experience required to support the cloud using cloud-native IT tools. This often drives the formation of a central IT team governing the cloud.
+However, when one cloud adoption team uses the cloud to achieve a high-profile business outcome, gradual adoption is seldom the case. Success follows success. This is also true for cloud adoption, but it happens at cloud scale. When cloud adoption expands from one team to multiple teams relatively quickly, additional support from existing IT staff is needed. However, those staff members may lack the training and experience required to support the cloud using cloud-native IT tools. This often drives the formation of a central IT team governing the cloud.
 
 > [!CAUTION]
 > While this is a common maturity step, it can present a high risk to adoption, potentially blocking innovation and migration efforts if not managed effectively. See the risk section below to learn how to mitigate the risk of centralization becoming a cultural antipattern.
@@ -88,7 +88,7 @@ The measures of this risk are speed and flexibility. The cloud simplifies adopti
 
 Many industries require rigid adherence to third-party compliance. Some compliance requirements still demand centralized IT control. Delivering on these compliance measures can add time to deployment processes, especially for new technologies that haven't been used broadly. In these scenarios, expect delays in deployment during the early stages of adoption. Similar situations my exist for companies that deal with sensitive customer data, but may not be governed by a third-party compliance requirement.
 
-### Operating within the exceptions
+### Operate within the exceptions
 
 When centralized IT processes are required and those processes create appropriate checkpoints in adoption of new technologies, these innovation checkpoints can still be addressed quickly. Governance and compliance requirements are designed to protect those things that are sensitive, not to protect everything. The cloud provides simple mechanisms for acquiring and deploying isolated resources while maintaining proper guardrails.
 
@@ -100,7 +100,7 @@ This example narrative illustrates the approach taken by a mature Central IT tea
 
 Contoso, LLC has adopted a Central IT model for the support of the business's cloud resources. To deliver this model, they have implemented tight controls for various shared services such as ingress network connections. This wise move reduced the exposure of their cloud environment and provided a single "break-glass" device to block all traffic in case of a breach. Their security baseline policies state that all ingress traffic must come through a shared device managed by the Central IT team.
 
-However, one of their cloud adoption teams now requires an environment with a dedicated and specially configured ingress network connection to leverage a specific cloud technology. An immature Central IT team would simply refuse the request and prioritize its existing processes over adoption needs. Contoso's Central IT team is different. They quickly identified a simple four-part solution to this dilemma: Classification, Negotiation, Isolation, and Automation.
+However, one of their cloud adoption teams now requires an environment with a dedicated and specially configured ingress network connection to use a specific cloud technology. An immature Central IT team would simply refuse the request and prioritize its existing processes over adoption needs. Contoso's Central IT team is different. They quickly identified a simple four-part solution to this dilemma: Classification, Negotiation, Isolation, and Automation.
 
 **Classification:** Since the cloud adoption team was in the early stages of building a new solution and didn't have any sensitive data or mission-critical support needs, the assets in the environment were classified as low risk and noncritical. Effective classification is a sign of maturity in Central IT. Classifying all assets and environments allows for clearer policies.
 

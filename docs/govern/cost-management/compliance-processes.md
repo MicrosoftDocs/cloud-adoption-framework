@@ -37,7 +37,7 @@ This quarterly planning process is also a good time to evaluate the current memb
 
 These basic processes will help align spending and establish a foundation for the Cost Management discipline.
 
-## Ongoing monitoring processes
+## Processes for ongoing monitoring
 
 A successful Cost Management governance strategy depends on visibility into the past, current, and planned future cloud-related spending. Without the ability to analyze the relevant metrics and data of your existing costs, you cannot identify changes in your risks or detect violations of your risk tolerances. The ongoing governance processes discussed above require quality data to ensure policy can be modified to better protect your infrastructure against changing business requirements and cloud usage.
 
@@ -49,8 +49,8 @@ When violations are detected, you should take enforcement actions to realign wit
 
 The following are examples of triggers:
 
-- **Monthly budget deviations.** Discuss any deviations in monthly spending that exceed 20% forecast-versus-actual ratio with the billing unit leader. Record resolutions and changes in forecast.
-- **Pace of adoption.** Any deviation at a subscription level exceeding 20% will trigger a review with billing unit leader. Record resolutions and changes in forecast.
+- **Monthly budget deviations:** Discuss any deviations in monthly spending that exceed 20% forecast-versus-actual ratio with the billing unit leader. Record resolutions and changes in forecast.
+- **Pace of adoption:** Any deviation at a subscription level exceeding 20% will trigger a review with billing unit leader. Record resolutions and changes in forecast.
 
 ## Next steps
 

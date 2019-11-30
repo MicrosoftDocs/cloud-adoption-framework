@@ -56,7 +56,7 @@ It's best if these teams meet daily in a self-organizing way. The goal of daily 
 
 Release schedules and iteration durations are unique to each company. However, a range of one to four weeks per iteration seems to be the average duration. Regardless of iteration or release cadence, we recommend that the team meets all supporting teams at the end of each release to communicate the outcome of the release, and to reprioritize upcoming efforts. Likewise, it's valuable to meet as a team at the end of each sprint, with the [cloud center of excellence](./cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) to stay aligned on common efforts and any needs for support.
 
-Some of the technical tasks associated with cloud adoption can become repetitive. It's advised that team members rotate every 3&ndash;6 months to avoid employee satisfaction issues and maintain relevant skills. A rotating seat on [cloud center of excellence](./cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) can provide an excellent opportunity to keep employees fresh and harness new innovations.
+Some of the technical tasks associated with cloud adoption can become repetitive. Team members should rotate every 3&ndash;6 months to avoid employee satisfaction issues and maintain relevant skills. A rotating seat on [cloud center of excellence](./cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) can provide an excellent opportunity to keep employees fresh and harness new innovations.
 
 ## Next steps
 

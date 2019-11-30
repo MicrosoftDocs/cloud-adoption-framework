@@ -17,7 +17,7 @@ This article advances the narrative by adding security controls that support mov
 
 ## Advancing the narrative
 
-The CIO has spent months collaborating with colleagues and the company’s legal staff. A management consultant with expertise in cybersecurity was engaged to help the existing IT Security and IT Governance teams draft a new policy regarding protected data. The group was able to foster board support to replace the existing policy, allowing sensitive personal and financial data to be hosted by approved cloud providers. This required adopting a set of security requirements and a governance process to verify and document adherence to those policies.
+The CIO has spent months collaborating with colleagues and the company's legal staff. A management consultant with expertise in cybersecurity was engaged to help the existing IT Security and IT Governance teams draft a new policy regarding protected data. The group was able to foster board support to replace the existing policy, allowing sensitive personal and financial data to be hosted by approved cloud providers. This required adopting a set of security requirements and a governance process to verify and document adherence to those policies.
 
 For the past 12 months, the cloud adoption teams have cleared most of the 5,000 assets from the two datacenters to be retired. The 350 incompatible assets were moved to an alternate datacenter. Only the 1,250 virtual machines that contain protected data remain.
 
@@ -34,7 +34,7 @@ In the previous phase of this narrative, the company had begun the process of re
 Since then, some things have changed that will affect governance:
 
 - Thousands of IT and business assets have been deployed to the cloud.
-- The application development team has implemented a continuous integration and continuous deployment (CI/CD) pipeline to deploy a cloud-native application with an improved user experience. That application doesn’t interact with protected data yet, so it’s not production ready.
+- The application development team has implemented a continuous integration and continuous deployment (CI/CD) pipeline to deploy a cloud-native application with an improved user experience. That application doesn't interact with protected data yet, so it isn't production ready.
 - The Business Intelligence team within IT actively curates data in the cloud from logistics, inventory, and third-party data. This data is being used to drive new predictions, which could shape business processes. However, those predictions and insights are not actionable until customer and financial data can be integrated into the data platform.
 - The IT team is progressing on the CIO and CFO's plans to retire two datacenters. Almost 3,500 of the assets in the two datacenters have been retired or migrated.
 - The policies regarding sensitive personal and financial data have been modernized. However, the new corporate policies are contingent on the implementation of related security and governance policies. Teams are still stalled.
@@ -70,7 +70,7 @@ This business risk can be expanded into several technical risks:
 The following changes to policy will help remediate the new risks and guide implementation. The list looks long, but the adoption of these policies may be easier than it would appear.
 
 1. All deployed assets must be categorized by criticality and data classification. Classifications are to be reviewed by the cloud governance team and the application before deployment to the cloud.
-2. Applications that store or access protected data are to be managed differently than those that don’t. At a minimum, they should be segmented to avoid unintended access of protected data.
+2. Applications that store or access protected data are to be managed differently than those that don't. At a minimum, they should be segmented to avoid unintended access of protected data.
 3. All protected data must be encrypted when at rest.
 4. Elevated permissions in any segment containing protected data should be an exception. Any such exceptions will be recorded with the cloud governance team and audited regularly.
 5. Network subnets containing protected data must be isolated from any other subnets. Network traffic between protected data subnets will be audited regularly.
@@ -93,9 +93,9 @@ The following changes to policy will help remediate the new risks and guide impl
 
 ## Incremental improvement of the best practices
 
-This section of the article will change the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
+This section modifies the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
 
-The new best practices fall into two categories: Corporate IT (hub) and Cloud Adoption (spoke).
+The new best practices fall into two categories: corporate IT (hub) and cloud adoption (spoke).
 
 **Establishing a corporate IT hub and spoke subscription to centralize the Security Baseline:** In this best practice, the existing governance capacity is wrapped by a [hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services), with a few key additions from the cloud governance team.
 
@@ -103,7 +103,7 @@ The new best practices fall into two categories: Corporate IT (hub) and Cloud Ad
 2. Hub and spoke template:
     1. The guidance in the [hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services) reference architecture can be used to generate Resource Manager templates for the assets required in a corporate IT hub.
     2. Using those templates, this structure can be made repeatable, as part of a central governance strategy.
-    3. In addition to the current reference architecture, it is advised that a network security group template should be created capturing any port blocking or whitelisting requirements for the VNet to host the firewall. This network security group differs from prior groups, because it will be the first network security group to allow public traffic into a VNet.
+    3. In addition to the current reference architecture, a network security group template should be created to capture any port blocking or whitelisting requirements for the VNet to host the firewall. This network security group differs from prior groups, because it will be the first network security group to allow public traffic into a VNet.
 3. Create Azure policies. Create a policy named `Hub NSG Enforcement` to enforce the configuration of the network security group assigned to any VNet created in this subscription. Apply the built-in Policies for guest configuration as follows:
     1. Audit that Windows web servers are using secure communication protocols.
     2. Audit that password security settings are set correctly inside Linux and Windows machines.
@@ -117,7 +117,7 @@ The new best practices fall into two categories: Corporate IT (hub) and Cloud Ad
     4. Apply the `corporate-it-subscription-blueprint` blueprint to each regional instance.
     5. This will establish a hub for each business unit in each region. Note: Further cost savings could be achieved, but sharing hubs across business units in each region.
 6. Integrate group policy objects (GPO) through Desired State Configuration (DSC):
-    1. Convert GPO to DSC – The [Microsoft Baseline Management project](https://github.com/Microsoft/BaselineManagement) in GitHub can accelerate this effort. * Be sure to store DSC in the repository in parallel with Resource Manager templates.
+    1. Convert GPO to DSC – The [Microsoft Baseline Management project](https://github.com/Microsoft/BaselineManagement) in GitHub can accelerate this effort. Be sure to store DSC in the repository in parallel with Resource Manager templates.
     2. Deploy Azure Automation State Configuration to any instances of the Corporate IT subscription. Azure Automation can be used to apply DSC to VMs deployed in supported subscriptions within the management group.
     3. The current roadmap plans to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
 
@@ -129,7 +129,7 @@ In prior iterative changes to the best practice, we defined network security gro
     1. The reference architecture from the prior section, [hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services), generated a Resource Manager template for enabling VNet peering.
     2. That template can be used as a guide to modify the DMZ template from the prior governance iteration.
     3. We are now adding VNet peering to the DMZ VNet that was previously connected to the local edge device over VPN.
-    4. *** It is also advised that the VPN should be removed from this template as well to ensure no traffic is routed directly to the on-premises datacenter, without passing through the corporate IT subscription and Firewall solution. You could also set this VPN as a failover circuit in the event of an ExpressRoute circuit outge.
+    4. *** The VPN should also be removed from this template as well to ensure no traffic is routed directly to the on-premises datacenter, without passing through the corporate IT subscription and Firewall solution. You could also set this VPN as a failover circuit in the event of an ExpressRoute circuit outge.
     5. Additional [network configuration](https://docs.microsoft.com/azure/automation/automation-dsc-overview#network-planning) will be required by Azure Automation to apply DSC to hosted VMs.
 2. Modify the network security group. Block all public **and** direct on-premises traffic in the network security group. The only inbound traffic should be coming through the VNet peer in the corporate IT subscription.
     1. In the prior iteration, a network security group was created blocking all public traffic and whitelisting all internal traffic. Now we want to shift this network security group a bit.

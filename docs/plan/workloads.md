@@ -24,7 +24,7 @@ In the context of a cloud adoption, a workload is a collection of IT assets (ser
 
 ## Prerequisites
 
-The strategic inputs from the prerequisites checklist make the following tasks much easier to accomplish. For help with gathering the data discussed in this article, review the [prerequisites checklist](./prerequisites.md).
+The strategic inputs from the prerequisites list make the following tasks much easier to accomplish. For help with gathering the data discussed in this article, review the [prerequisites](./prerequisites.md).
 
 ## Initial workload prioritization
 

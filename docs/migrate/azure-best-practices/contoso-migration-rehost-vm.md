@@ -1,7 +1,7 @@
 ---
-title: "Rehost an app with migration to Azure VMs with Azure Site Recovery"
+title: "Rehost an app on Azure VMs with Azure Site Recovery"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn how Contoso rehosts an on-premises app with a "lift and shift" migration of on-premises machines to Azure, using the Azure Site Recovery service.
+description: Learn how Contoso rehosts an on-premises app with a lift and shift migration of on-premises machines to Azure, using the Azure Site Recovery service.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/11/2018
@@ -11,7 +11,7 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
-# Rehost an on-premises app to Azure VMs
+# Rehost an on-premises app on Azure VMs
 
 This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end app running on VMware VMs, by migrating the app VMs to Azure VMs.
 
@@ -30,7 +30,7 @@ The IT Leadership team has worked closely with business partners to understand w
 The Contoso cloud team has pinned down goals for this migration. These goals are used to determine the best migration method:
 
 - After migration, the app in Azure should have the same performance capabilities as it does today in VMware. The app will remain as critical in the cloud as it is on-premises.
-- Contoso doesn’t want to invest in this app. It is important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
+- Contoso doesn't want to invest in this app. It is important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
 - Contoso doesn't want to change the ops model for this app. Contoso do want to interact with it in the cloud in the same way that they do now.
 - Contoso doesn't want to change any app functionality. Only the app location will change.
 
@@ -70,7 +70,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 **Consideration** | **Details**
 --- | ---
-**Pros** | Both the app VMs will be moved to Azure without changes, making the migration simple.<br/><br/> Since Contoso is using "lift and shift" for both app VMs, no special configuration or migration tools are needed for the app database.<br/><br/> Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit.<br/><br/> Contoso will retain full control of the app VMs in Azure.
+**Pros** | Both the app VMs will be moved to Azure without changes, making the migration simple.<br/><br/> Since Contoso is using a lift and shift approach for both app VMs, no special configuration or migration tools are needed for the app database.<br/><br/> Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit.<br/><br/> Contoso will retain full control of the app VMs in Azure.
 **Cons** | WEBVM and SQLVM are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles (July 2018). [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).<br/><br/> The web and data tiers of the app will remain a single point of failover.<br/><br/> SQLVM is running on SQL Server 2008 R2 which isn't in mainstream support. However it is supported for Azure VMs (July 2018). [Learn more](https://support.microsoft.com/help/956893).<br/><br/> Contoso will need to continue supporting the app as Azure VMs rather than moving to a managed service such as Azure App Service and Azure SQL Database.
 
 <!-- markdownlint-enable MD033 -->
@@ -193,16 +193,16 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 
 6. In **Target settings**, select the subscription, and target region to which you'll migrate, and specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure VNet/subnet to which the Azure VMs will be joined after migration.
 
-7. In **Azure Hybrid Benefit**:
+7. In **Azure Hybrid Benefit**, select the following:
 
     - Select **No** if you don't want to apply Azure Hybrid Benefit. Then click **Next**.
     - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and you want to apply the benefit to the machines you're migrating. Then click **Next**.
 
 8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#agentless-migration-vmware-vm-requirements).
 
-    - **VM size**: If you're using assessment recommendations, the VM size dropdown will contain the recommended size. Otherwise Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
-    - **OS disk**: Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
-    - **Availability set**: If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group you specify for the migration.
+    - **VM size:** If you're using assessment recommendations, the VM size dropdown will contain the recommended size. Otherwise Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
+    - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
+    - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group you specify for the migration.
 
 9. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (standard SSD/HDD or premium-managed disks) in Azure. Then click **Next**.
     - You can exclude disks from replication.
@@ -278,7 +278,7 @@ The Contoso security team reviews the Azure VMs, to determine any security issue
 - To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the app can reach it.
 - The team also consider securing the data on the disk using Azure Disk Encryption and Key Vault.
 
-[Read more](https://docs.microsoft.com/azure/security/azure-security-best-practices-vms) about security practices for VMs.
+For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
 ## BCDR
 

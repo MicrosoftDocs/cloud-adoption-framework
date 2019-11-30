@@ -12,7 +12,7 @@ ms.subservice: plan
 
 # Getting started on a skills readiness path
 
-IT staff members might feel anxious about their roles and positions as they realize a different set of skills is needed to support cloud solutions. Agile employees who explore and learn new cloud technologies don’t need to have that fear. They can lead the adoption of cloud services by helping the organization understand and embrace the associated changes.
+IT staff members might feel anxious about their roles and positions as they realize a different set of skills is needed to support cloud solutions. Agile employees who explore and learn new cloud technologies don't need to have that fear. They can lead the adoption of cloud services by helping the organization understand and embrace the associated changes.
 
 ![Mapping of skills to IT roles in a cloud hosted environment](../_images/skills-guidance.png)
 *Figure 1 - Mapping of skills to IT roles in a cloud-hosted environment.*
@@ -32,3 +32,16 @@ The Cloud Adoption Framework guides readers through the full adoption lifecycle.
   - **Manage:** Gain the skills needed to manage a cloud environment.
 
 Each of the previous learning paths shares opportunities across multiple media types to maximize knowledge acquisition.
+
+## Microsoft Learn
+
+Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
+Here are a couple examples of tailored learning paths on Microsoft Learn which align to the Plan section of Cloud Adoption Framework:
+
+[Evolve your DevOps practices](https://docs.microsoft.com/learn/paths/evolve-your-devops-practices):DevOps is the union of people, process, and products to enable continuous delivery of value to your end users. Azure DevOps is a set of services that gives you the tools you need to do just that. With Azure DevOps, you can build, test, and deploy any application, either to the cloud or on premises.
+
+[Azure for the Data Engineer](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer):Explore how the world of data has evolved and how the advent of cloud technologies is providing new opportunities for business to explore. You will learn the various data platform technologies that are available, and how a Data Engineer can take advantage of this technology to an organization benefit.
+
+## Learn more
+
+To discover additional learning paths, browse the [Microsoft Learn catalog](https://docs.microsoft.com/learn/browse). Use the Roles filter to align learning paths with your role.

@@ -1,0 +1,54 @@
+{
+   "redirections": [
+      {
+         "source_path": "docs/ready/initial-org-alignment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/initial-org-alignment",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/considerations/naming-and-tagging.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/considerations/scaling-subscriptions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/scaling-subscriptions",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/considerations/compute-decisions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/compute-options",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/considerations/data-decisions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/data-options",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/considerations/network-decisions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/networking-options",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/considerations/storage-guidance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/storage-options",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/roles.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/roles",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/infrastructure/misc/hybrid-consistency.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/hybrid-consistency",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/azure-scaffold-examples.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/index",
+         "redirect_document_id": true
+      }
+   ]
+}
