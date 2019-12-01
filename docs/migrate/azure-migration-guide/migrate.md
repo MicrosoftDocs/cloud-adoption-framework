@@ -258,12 +258,13 @@ As you migrate into cloud technologies this presents a great opportunity to set 
 
 [Azure DevOps](https://dev.azure.com) provides all of the required functionality and integration with Azure, On-premises, or even other clouds. Find out more [here](https://azure.microsoft.com/services/devops). For a guided training, see [CI and CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
-## Suggested Skills
+## Suggested skills
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
-Here is an examples of a tailored learning paths on Microsoft Learn which complements the set up for DevOps guidance in the Cloud Adoption Framework. 
 
-[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops/):Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents. 
+Here is an example of a tailored learning path on Microsoft Learn that complements the setup for DevOps guidance in the Cloud Adoption Framework. 
+
+[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents. 
 
 # [Cost management](#tab/ManageCost)
 
