@@ -17,7 +17,7 @@ Cloud migrations can generate early return on investment (ROI) from cloud transf
 
 ## Dispelling cloud migration myths
 
-**Myth: The cloud is always cheaper.** It's commonly believed that operating a datacenter in the cloud is always cheaper than operating one on-premises. While this assumption might generally be true, it's not always the case. Sometimes cloud operating costs are higher. These higher costs are often caused by poor cost governance, misaligned system architectures, process duplication, atypical system configurations, or greater staffing costs. Fortunately, you can mitigate many of these problems to create early ROI. Following the guidance in [Building the business justification](#building-the-business-justification) can help you detect and avoid these misalignments. Dispelling the other myths described here can help too.
+**Myth: The cloud is always cheaper.** It's commonly believed that operating a datacenter in the cloud is always cheaper than operating one on-premises. While this assumption might generally be true, it's not always the case. Sometimes cloud operating costs are higher. These higher costs are often caused by poor cost governance, misaligned system architectures, process duplication, atypical system configurations, or greater staffing costs. Fortunately, you can mitigate many of these problems to create early ROI. Following the guidance in [Build the business justification](#build-the-business-justification) can help you detect and avoid these misalignments. Dispelling the other myths described here can help too.
 
 **Myth: Everything should go into the cloud.** In fact, some business drivers might lead you to choose a hybrid solution. Before you finalize a business model, it's smart to complete a first-round quantitative analysis, as described in the [digital estate articles](../digital-estate/5-rs-of-rationalization.md). For more information on the individual quantitative drivers involved in rationalization, see [The 5 Rs of rationalization](../digital-estate/5-rs-of-rationalization.md). Either approach will use easily obtained inventory data and a brief quantitative analysis to identify workloads or applications that could result in higher costs in the cloud. These approaches could also identify dependencies or traffic patterns that would necessitate a hybrid solution.
 
@@ -52,7 +52,7 @@ Technical and cultural impediments can slow cloud adoption. When time is an impo
 
 To maximize readiness and mitigation of timeline risks, prepare executive stakeholders by firmly aligning business value and business outcomes. Help those stakeholders understand the changes that will come with the transformation. Be clear and set realistic expectations from the beginning. When people or technologies slow the process, it will be easier to enlist executive support.
 
-## Building the business justification
+## Build the business justification
 
 The following process defines an approach to developing the business justification for cloud migrations. For more information about the calculations and financial terms, see the article on [financial models](./financial-models.md).
 
@@ -68,7 +68,7 @@ We can unpack this equation to get a migration-specific view of the formulas for
 - Some cloud providers also provide cost-delta calculators. The [Azure Total Cost of Ownership (TCO) Calculator](https://azure.com/tco) is one example.
 - For more refined cost structures, consider a [digital estate planning](../digital-estate/index.md) exercise.
 - Estimate the cost of migration.
-- Estimate the cost of any expected training opportunities. [Microsoft Learn](/learn) might be able to help mitigate those costs.
+- Estimate the cost of any expected training opportunities. [Microsoft Learn](https://docs.microsoft.com/learn) might be able to help mitigate those costs.
 - At some companies, the time invested by existing staff members might need to be included in the initial costs. Consult the finance office for guidance.
 - Discuss any additional costs or burden costs with the finance office for validation.
 

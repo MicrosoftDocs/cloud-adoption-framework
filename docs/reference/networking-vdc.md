@@ -28,11 +28,11 @@ Customers can choose to access these cloud services either via the internet or w
 
 At its inception, the cloud was essentially a platform for hosting public-facing applications. Enterprises began to understand the value of the cloud and began to move internal line-of-business applications to the cloud. These types of applications brought additional security, reliability, performance, and cost considerations that required additional flexibility in the way cloud services were delivered. This paved the way for new infrastructure and networking services designed to provide this flexibility but also new features for scale, disaster recovery, and other considerations.
 
-Cloud solutions were first designed to host single, relatively isolated applications in the public spectrum. This approach worked well for a few years. Then the benefits of cloud solutions became apparent, and multiple large-scale workloads were hosted on the cloud. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the life-cycle of the cloud service.
+Cloud solutions were first designed to host single, relatively isolated applications in the public spectrum. This approach worked well for a few years. Then the benefits of cloud solutions became apparent, and multiple large-scale workloads were hosted on the cloud. Addressing security, reliability, performance, and cost concerns of deployments in one or more regions became vital throughout the lifecycle of the cloud service.
 
-The following cloud deployment diagram shows an example of a security gap in the **red box**. The **yellow box** shows room for optimizing network virtual appliances across workloads.
+The following cloud deployment diagram shows an example of a security gap, highlighted in the red box. The yellow box shows room for optimizing network virtual appliances across workloads.
 
-[![0]][0]
+![0][0]
 
 A virtual datacenter is a concept born of the necessity for scaling to support enterprise workloads while balancing the need to deal with the problems introduced when supporting large-scale applications in the public cloud.
 
@@ -94,7 +94,7 @@ The Azure fabric allocates infrastructure resources to tenant workloads and mana
 
 #### Connectivity to the cloud
 
-A virtual datacenter implementation requires connectivity to external networks to offer services to customers, partners and/or internal users. This need for connectivity refers not only to the Internet, but also to on-premises networks and datacenters.
+A virtual datacenter implementation requires connectivity to external networks to offer services to customers, partners, and internal users. This need for connectivity refers not only to the Internet, but also to on-premises networks and datacenters.
 
 Customers control which services have access to and are accessible from the public internet by using [Azure Firewall][AzFW] or other types of virtual network appliances (NVAs), custom routing policies by using [user-defined routes][user-defined-routes], and network filtering by using [network security groups][network-security-groups]. We recommend that all internet-facing resources also be protected by the [Azure DDoS Protection Standard][DDoS].
 
@@ -118,7 +118,7 @@ Deploying ExpressRoute connections usually involves engaging with an ExpressRout
 
 *Hub and spoke* is a model for designing the network topology for a virtual datacenter implementation.
 
-[![1]][1]
+![1][1]
 
 As shown, two types of hub and spoke design can be used in Azure. For communication, shared resources, and centralized security policy (VNet Hub in the diagram), or a Virtual WAN type (Virtual WAN in the diagram) for large-scale branch-to-branch and branch-to-Azure communications.
 
@@ -143,7 +143,7 @@ In Azure, every component, whatever the type, is deployed in an Azure Subscripti
 
 A single virtual datacenter implementation can scale up to large number of spokes, although, as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits (for example, a maximum number of VNet peerings; see [Azure subscription and service limits, quotas, and constraints][limits] for details). In cases where limits may be an issue, the architecture can scale up further by extending the model from a single hub-spokes to a cluster of hub and spokes. Multiple hubs in one or more Azure regions can be interconnected using VNet Peering, ExpressRoute, Virtual WAN, or site-to-site VPN.
 
-[![2]][2]
+![2][2]
 
 The introduction of multiple hubs increases the cost and management effort of the system. It would only be justified by scalability, system limits or redundancy and regional replication for end-user performance or disaster recovery. In scenarios requiring multiple hubs, all the hubs should strive to offer the same set of services for operational ease.
 
@@ -151,9 +151,9 @@ The introduction of multiple hubs increases the cost and management effort of th
 
 Inside a single spoke, it is possible to implement complex multitier workloads. Multitier configurations can be implemented using subnets (one for every tier) in the same VNet and filtering the flows using network security groups.
 
-An architect might want to deploy a multitier workload across multiple virtual networks. With virtual network peering, spokes can connect to other spokes in the same hub or different hubs. A typical example of this scenario is the case where application processing servers are in one spoke, or virtual network. The database deploys in a different spoke, or virtual network. In this case, it's easy to interconnect the spokes with virtual network peering and thereby avoid transiting through the hub. A careful architecture and security review should be performed to ensure that bypassing the hub doesn’t bypass important security or auditing points that might exist only in the hub.
+An architect might want to deploy a multitier workload across multiple virtual networks. With virtual network peering, spokes can connect to other spokes in the same hub or different hubs. A typical example of this scenario is the case where application processing servers are in one spoke, or virtual network. The database deploys in a different spoke, or virtual network. In this case, it's easy to interconnect the spokes with virtual network peering and thereby avoid transiting through the hub. A careful architecture and security review should be performed to ensure that bypassing the hub doesn't bypass important security or auditing points that might exist only in the hub.
 
-[![3]][3]
+![3][3]
 
 Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level (level 0) becomes the hub of lower spokes (level 1) of the hierarchy. The spokes of a virtual datacenter implementation are required to forward the traffic to the central hub so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub-spoke relationship.
 
@@ -165,7 +165,7 @@ A virtual datacenter is made up of four basic component types: **Infrastructure*
 
 Each component type consists of various Azure features and resources. Your virtual datacenter implementation is made up of instances of multiple components types and multiple variations of the same component type. For instance, you may have many different, logically separated, workload instances that represent different applications. You use these different component types and instances to ultimately build a virtual datacenter.
 
-[![4]][4]
+![4][4]
 
 The preceding high-level conceptual architecture of a virtual datacenter shows different component types used in different zones of the hub-spokes topology. The diagram shows infrastructure components in various parts of the architecture.
 
@@ -176,20 +176,20 @@ Each role group should have a unique prefix on their names. This prefix makes it
 Many organizations use a variation of the following groups to provide a major breakdown of roles:
 
 - The central IT group, **Corp,** has the ownership rights to control infrastructure components. Examples are networking and security. The group needs to have the role of contributor on the subscription, control of the hub, and network contributor rights in the spokes. Large organizations frequently split up these management responsibilities between multiple teams. Examples are a network operations **CorpNetOps** group with exclusive focus on networking and a security operations **CorpSecOps** group responsible for the firewall and security policy. In this specific case, two different groups need to be created for assignment of these custom roles.
-- The dev-test group, **AppDevOps,** has the responsibility to deploy app or service workloads. This group takes the role of virtual machine contributor for IaaS deployments or one or more PaaS contributor’s roles. See [Built-in roles for Azure resources][Roles]. Optionally, the dev/test team might need visibility on security policies (network security groups) and routing policies (user-defined routes) inside the hub or a specific spoke. In addition to the role of contributor for workloads, this group would also need the role of network reader.
+- The dev-test group, **AppDevOps,** has the responsibility to deploy app or service workloads. This group takes the role of virtual machine contributor for IaaS deployments or one or more PaaS contributor's roles. See [Built-in roles for Azure resources][Roles]. Optionally, the dev/test team might need visibility on security policies (network security groups) and routing policies (user-defined routes) inside the hub or a specific spoke. In addition to the role of contributor for workloads, this group would also need the role of network reader.
 - The operation and maintenance group, **CorpInfraOps** or **AppInfraOps,** has the responsibility of managing workloads in production. This group needs to be a subscription contributor on workloads in any production subscriptions. Some organizations might also evaluate if they need an additional escalation support team group with the role of subscription contributor in production and the central hub subscription. The additional group fixes potential configuration issues in the production environment.
 
 A virtual datacenter is designed so that groups created for the central IT group, managing the hub, have corresponding groups at the workload level. In addition to managing hub resources only, the central IT group is able to control external access and top-level permissions on the subscription. Workload groups are also able to control resources and permissions of their VNet independently from central IT.
 
 A virtual datacenter is partitioned to securely host multiple projects across different lines of business. All projects require different isolated environments (Dev, UAT, production). Separate Azure subscriptions for each of these environments provide natural isolation.
 
-[![5]][5]
+![5][5]
 
 The preceding diagram shows the relationship between an organization's projects, users, and groups and the environments where the Azure components are deployed.
 
 Typically in IT, an environment (or tier) is a system in which multiple applications are deployed and executed. Large enterprises use a development environment (where changes are made and tested) and a production environment (what end-users use). Those environments are separated, often with several staging environments in between them to allow phased deployment (rollout), testing, and rollback if problems arise. Deployment architectures vary significantly, but usually the basic process of starting at development (DEV) and ending at production (PROD) is still followed.
 
-A common architecture for these types of multitier environments consists of Azure DevOps for development and testing, UAT for staging, and production environments. Organizations can leverage single or multiple Azure AD tenants to define access and rights to these environments. The previous diagram shows a case where two different Azure AD tenants are used: one for Azure DevOps and UAT, and the other exclusively for production.
+A common architecture for these types of multitier environments consists of Azure DevOps for development and testing, UAT for staging, and production environments. Organizations can use single or multiple Azure AD tenants to define access and rights to these environments. The previous diagram shows a case where two different Azure AD tenants are used: one for Azure DevOps and UAT, and the other exclusively for production.
 
 The presence of different Azure AD tenants enforces the separation between environments. The same group of users, such as the central IT, needs to authenticate by using a different URI to access a different Azure AD tenant to modify the roles or permissions of either the Azure DevOps or production environments of a project. The presence of different user authentications to access different environments reduces possible outages and other issues caused by human errors.
 
@@ -197,9 +197,9 @@ The presence of different Azure AD tenants enforces the separation between envir
 
 This component type is where most of the supporting infrastructure resides. It's also where your centralized IT, security, and compliance teams spend most of their time.
 
-[![6]][6]
+![6][6]
 
-Infrastructure components provide an interconnection for the different components of a virtual datacenter implementation, and are present in both the hub and the spokes. The responsibility for managing and maintaining the infrastructure components is typically assigned to the central IT and/or security team.
+Infrastructure components provide an interconnection for the different components of a virtual datacenter implementation, and are present in both the hub and the spokes. The responsibility for managing and maintaining the infrastructure components is typically assigned to the central IT or security team.
 
 One of the primary tasks of the IT infrastructure team is to guarantee the consistency of IP address schemas across the enterprise. The private IP address space assigned to a virtual datacenter implementation must be consistent and NOT overlapping with private IP addresses assigned on your on-premises networks.
 
@@ -234,9 +234,9 @@ Perimeter network components provide the following features:
 
 Usually, the central IT and security teams have responsibility for requirement definition and operation of the perimeter networks.
 
-[![7]][7]
+![7][7]
 
-The preceding diagram shows the enforcement of two perimeters with access to the internet and an on-premises network, both resident in the DMZ hub. In the DMZ hub, the perimeter network to internet can scale up to support large numbers of LOBs, using multiple farms of Web Application Firewalls (WAFs) and/or Azure Firewalls. In hub also allows for connectivity via VPN or ExpressRoute as needed.
+The preceding diagram shows the enforcement of two perimeters with access to the internet and an on-premises network, both resident in the DMZ hub. In the DMZ hub, the perimeter network to internet can scale up to support large numbers of LOBs, using multiple farms of Web Application Firewalls (WAFs) or Azure Firewalls. In hub also allows for connectivity via VPN or ExpressRoute as needed.
 
 [**Virtual networks**][VNet]. The hub is typically built on a virtual network with multiple subnets to host the different types of services that filter and inspect traffic to or from the internet via NVAs, WAF, and Azure Application Gateway instances.
 
@@ -259,7 +259,7 @@ We recommend that you use one set of Azure Firewall instances, or NVAs, for traf
 
 Azure Load Balancer can probe the health of the various server instances as well, and when an instance fails to respond to a probe, the load balancer stops sending traffic to the unhealthy instance. In a virtual datacenter, an external load balancer is deployed to the hub and the spokes. In the hub, the load balancer is used to efficiently route traffic to services in the spokes, and in the spokes, load balancers are used to manage application traffic.
 
-[**Azure Front Door**][AFD] (AFD) is Microsoft's highly available and scalable Web Application Acceleration Platform, Global HTTP Load Balancer, Application Protection, and Content Delivery Network. Running in more than 100 locations at the edge of Microsoft's Global Network, AFD enables you to build, operate, and scale out your dynamic web application and static content. AFD provides your application with world-class end-user performance, unified regional/stamp maintenance automation, BCDR automation, unified client/user information, caching, and service insights. The platform offers performance, reliability and support SLAs, compliance certifications and auditable security practices developed, operated, and supported natively by Azure.
+[Azure Front Door (AFD)][AFD] is Microsoft's highly available and scalable Web Application Acceleration Platform, Global HTTP Load Balancer, Application Protection, and Content Delivery Network. Running in more than 100 locations at the edge of Microsoft's Global Network, AFD enables you to build, operate, and scale out your dynamic web application and static content. AFD provides your application with world-class end-user performance, unified regional/stamp maintenance automation, BCDR automation, unified client/user information, caching, and service insights. The platform offers performance, reliability and support SLAs, compliance certifications and auditable security practices developed, operated, and supported natively by Azure.
 
 [**Application Gateway**][AppGW]
 Microsoft Azure Application Gateway is a dedicated virtual appliance providing application delivery controller (ADC) as a service, offering various layer 7 load-balancing capabilities for your application. It allows you to optimize web farm productivity by offloading CPU intensive SSL termination to the application gateway. It also provides other layer 7 routing capabilities including round robin distribution of incoming traffic, cookie-based session affinity, URL path-based routing, and the ability to host multiple websites behind a single Application Gateway. A web application firewall (WAF) is also provided as part of the application gateway WAF SKU. This SKU provides protection to web applications from common web vulnerabilities and exploits. Application Gateway can be configured as internet facing gateway, internal only gateway, or a combination of both.
@@ -282,7 +282,7 @@ There are two major types of logs in Azure:
 
 - [Azure Monitor diagnostic logs][DiagLog] are logs generated by a resource that provides rich, frequent data about the operation of that resource. The content of these logs varies by resource type.
 
-[![9]][9]
+![9][9]
 
 It is important to track the logs for the network security groups, particularly this information:
 
@@ -318,23 +318,23 @@ Workload components are where your actual applications and services reside. It's
 
 The workload possibilities are endless. The following are just a few of the possible workload types:
 
-**Internal LOB Applications**: Line-of-business applications are computer applications critical to the ongoing operation of an enterprise. LOB applications have some common characteristics:
+**Internal LOB applications:** Line-of-business applications are computer applications critical to the ongoing operation of an enterprise. LOB applications have some common characteristics:
 
-- **Interactive** by nature. Data is entered, and results or reports are returned.
-- **Data driven**&mdash;data intensive with frequent access to databases or other storage.
-- **Integrated**&mdash;offer integration with other systems within or outside the organization.
+- **Interactive by nature:** Data is entered, and results or reports are returned.
+- **Data driven:** Data intensive workloads with frequent access to databases or other storage.
+- **Integrated:** Workloads offering integration with other systems within or outside the organization.
 
-**Customer facing web sites (Internet or Internal facing)**: Most applications that interact with the Internet are web sites. Azure offers the capability to run a web site on an IaaS VM or from an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps support integration with VNets that allow the deployment of the Web Apps in a spoke network zone. Internal facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet routable addresses from the private VNet.
+**Customer facing web sites (internet or internal facing):** Most applications that interact with the Internet are web sites. Azure offers the capability to run a web site on an IaaS VM or from an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps support integration with VNets that allow the deployment of the Web Apps in a spoke network zone. Internal facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet-routable addresses from the private VNet.
 
-**Big Data/Analytics**: When data needs to scale up to a large volume, databases may not scale up properly. Hadoop technology offers a system to run distributed queries in parallel on large number of nodes. Customers have the option to run data workloads in IaaS VMs or PaaS ([HDInsight][HDI]). HDInsight supports deploying into a location-based VNet, can be deployed to a cluster in a spoke of a virtual datacenter.
+**Big Data and Analytics:** When data needs to scale up to a large volume, databases may not scale up properly. Hadoop technology offers a system to run distributed queries in parallel on large number of nodes. Customers have the option to run data workloads in IaaS VMs or PaaS ([HDInsight][HDI]). HDInsight supports deploying into a location-based VNet, can be deployed to a cluster in a spoke of a virtual datacenter.
 
-**Events and Messaging**: [Azure Event Hubs][EventHubs] is a hyperscale telemetry ingestion service that collects, transforms, and stores millions of events. As a distributed streaming platform, it offers low latency and configurable time retention, enabling you to ingest massive amounts of telemetry into Azure and read that data from multiple applications. With Event Hubs, a single stream can support both real-time and batch-based pipelines.
+**Events and Messaging:** [Azure Event Hubs][EventHubs] is a hyperscale telemetry ingestion service that collects, transforms, and stores millions of events. As a distributed streaming platform, it offers low latency and configurable time retention, enabling you to ingest massive amounts of telemetry into Azure and read that data from multiple applications. With Event Hubs, a single stream can support both real-time and batch-based pipelines.
 
 You can implement a highly reliable cloud messaging service between applications and services through [Azure Service Bus][ServiceBus]. It offers asynchronous brokered messaging between client and server, structured first-in-first-out (FIFO) messaging, and publish and subscribe capabilities.
 
-[![10]][10]
+![10][10]
 
-### Making a virtual datacenter highly available: multiple virtual datacenters
+### Make a virtual datacenter highly available: multiple virtual datacenters
 
 So far, this article has focused on the design of a single virtual datacenter, describing the basic components and architecture that contribute to resiliency. Azure features such as Azure load balancer, NVAs, availability sets, scale sets, along with other mechanisms contribute to a system that enables you to build solid SLA levels into your production services.
 
@@ -371,11 +371,11 @@ We recommend that customers run network qualification tests to verify the latenc
 
 [Azure Traffic Manager][traffic-manager] periodically checks the service health of public endpoints in different virtual datacenter implementations and, if those endpoints fail, it routes automatically to the secondary virtual datacenter using the Domain Name System (DNS).
 
-Because it uses DNS, Traffic Manager is only for use with Azure public endpoints.  The service is typically used to control or divert traffic to Azure VMs and Web Apps in the healthy instance of a virtual datacenter implementation. Traffic Manager is resilient even in the face of an entire Azure region failing and can control the distribution of user traffic for service endpoints in different virtual datacenters based on several criteria. For example, failure of a service in a specific virtual datacenter implementation, or selecting the virtual datacenter implementation with the lowest network latency.
+Because it uses DNS, Traffic Manager is only for use with Azure public endpoints. The service is typically used to control or divert traffic to Azure VMs and Web Apps in the healthy instance of a virtual datacenter implementation. Traffic Manager is resilient even in the face of an entire Azure region failing and can control the distribution of user traffic for service endpoints in different virtual datacenters based on several criteria. For example, failure of a service in a specific virtual datacenter implementation, or selecting the virtual datacenter implementation with the lowest network latency.
 
 ### Summary
 
-A virtual datacenter is an approach to datacenter migration to create a scalable architecture in Azure that maximizes cloud resource use, reduces costs, and simplifies system governance. A virtual datacenter is based on a hub and spoke network topology, providing common shared services in the hub and allowing specific applications and workloads in the spokes. A virtual datacenter also matches the structure of company roles, where different departments such as Central IT, DevOps, and operations and maintenance all work together while performing their specific roles. A virtual datacenter satisfies the requirements for a "lift and shift" migration, but also provides many advantages to native cloud deployments.
+A virtual datacenter is an approach to datacenter migration to create a scalable architecture in Azure that maximizes cloud resource use, reduces costs, and simplifies system governance. A virtual datacenter is based on a hub and spoke network topology, providing common shared services in the hub and allowing specific applications and workloads in the spokes. A virtual datacenter also matches the structure of company roles, where different departments such as Central IT, DevOps, and operations and maintenance all work together while performing their specific roles. A virtual datacenter satisfies the requirements for a lift and shift migration, but also provides many advantages to native cloud deployments.
 
 ## References
 
@@ -393,11 +393,11 @@ The following features were discussed in this document. Follow the links to lear
 
 |Other Azure Services|
 |-|
-|[Azure Web Apps][WebApps]</br>[HDInsights (Hadoop)][HDI]</br>[Event Hubs][EventHubs]</br>[Service Bus][ServiceBus]|
+|[Azure Web Apps][WebApps]</br>[HDInsight (Hadoop)][HDI]</br>[Event Hubs][EventHubs]</br>[Service Bus][ServiceBus]|
 
 <!-- markdownlint-enable MD033 -->
 
-## Next Steps
+## Next steps
 
 - Explore [VNet Peering][VNetPeering], the underpinning technology for virtual datacenter hub and spoke designs.
 - Implement [Azure AD][azure-ad] to get started with [RBAC][RBAC] exploration.

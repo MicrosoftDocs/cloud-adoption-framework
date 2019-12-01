@@ -13,7 +13,7 @@ ms.subservice: reference
 # Azure enterprise scaffold: Prescriptive subscription governance
 
 > [!NOTE]
-> Azure enterprise scaffolding has been integrated into the Microsoft Cloud Adoption Framework. The content in this article is now represented in the [Ready](../ready/index.md) section of the new framework. This article will be deprecated in early 2020. To begin using the new process, see the [Ready overview](../ready/index.md), [creating your first landing zone](../ready/azure-readiness-guide/migration-landing-zone.md), and/or [landing zone considerations](../ready/considerations/index.md).
+> Azure enterprise scaffolding has been integrated into the Microsoft Cloud Adoption Framework. The content in this article is now represented in the [Ready](../ready/index.md) section of the new framework. This article will be deprecated in early 2020. To begin using the new process, see the [Ready overview](../ready/index.md), [creating your first landing zone](../ready/azure-setup-guide/migration-landing-zone.md), and [landing zone considerations](../ready/considerations/index.md).
 
 Enterprises are increasingly adopting the public cloud for its agility and flexibility. They rely on the cloud's strengths to generate revenue and optimize resource usage for the business. Microsoft Azure provides a multitude of services and capabilities that enterprises assemble like building blocks to address a wide array of workloads and applications.
 
@@ -35,20 +35,20 @@ When creating a building, scaffolding is used to create the basis of a structure
 
 The scaffold is based on practices we have gathered from many engagements with clients of various sizes. Those clients range from small organizations developing solutions in the cloud to large multinational enterprises and independent software vendors who are migrating workloads and developing cloud-native solutions. The enterprise scaffold is "purpose-built" to be flexible to support both traditional IT workloads and agile workloads, such as developers creating software as a service (SaaS) applications based on Azure platform capabilities.
 
-The enterprise scaffold is intended to be the foundation of each new subscription within Azure. It enables administrators to ensure workloads meet the minimum governance requirements of an organization without preventing business groups and developers from quickly meeting their own goals. Our experience shows that this greatly speeds, rather than impedes, public cloud growth.
+The enterprise scaffold can serve as the foundation of each new subscription within Azure. It enables administrators to ensure workloads meet the minimum governance requirements of an organization without preventing business groups and developers from quickly meeting their own goals. Our experience shows that this greatly accelerates, rather than impedes, public cloud growth.
 
 > [!NOTE]
 > Microsoft has released into preview a new capability called [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) that will enable you to package, manage, and deploy common images, templates, policies, and scripts across subscriptions and management groups. This capability is the bridge between the scaffold's purpose as reference model and deploying that model to your organization.
 >
 The following image shows the components of the scaffold. The foundation relies on a solid plan for the management hierarchy and subscriptions. The pillars consist of Resource Manager policies and strong naming standards. The rest of the scaffold are core Azure capabilities and features that enable and connect a secure and manageable environment.
 
-![enterprise scaffold](../_images/reference/scaffoldv2.png)
+![Enterprise scaffold](../_images/reference/scaffoldv2.png)
 
 ## Define your hierarchy
 
 The foundation of the scaffold is the hierarchy and relationship of the Azure Enterprise Enrollment through to subscriptions and resource groups. The enterprise enrollment defines the shape and use of Azure services within your company from a contractual point of view. Within the Enterprise Agreement, you can further subdivide the environment into departments, accounts, subscriptions, and resource groups to match your organization's structure.
 
-![hierarchy](../_images/reference/agreement.png)
+![Hierarchy](../_images/reference/agreement.png)
 
 An Azure subscription is the basic unit where all resources are contained. It also defines several limits within Azure, such as number of cores, virtual networks and other resources. Resource groups are used to further refine the subscription model and enable a more natural grouping of resources.
 
@@ -110,7 +110,7 @@ The first pillar of the scaffold is a consistent naming standard. Well-designed 
 > [!TIP]
 > For naming conventions:
 >
-> - Review and adopt where possible the [Patterns and Practices guidance](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions). This guidance helps you decide on a meaningful naming standard and provides extensive examples.
+> - Review and adopt where possible the [Patterns and Practices guidance](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming). This guidance helps you decide on a meaningful naming standard and provides extensive examples.
 > - Using Resource Manager Policies to help enforce naming standards.
 >
 > Remember that it's difficult to change names later, so a few minutes now will save you trouble later.
@@ -124,7 +124,7 @@ Resource tags are tightly aligned with naming standards. As resources are added 
 > [!IMPORTANT]
 > Tags can contain personal information and may fall under the regulations of GDPR. Plan for management of your tags carefully. If you're looking for general information about GDPR, see the GDPR section of the [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
-Tags are used in many ways beyond billing and management. They are often used as part of automation (see later section). This can cause conflicts if not considered up front. The recommended practice is to identify all the common tags at the enterprise level (such as ApplicationOwner and CostCenter) and apply them consistently when deploying resources using automation.
+Tags are used in many ways beyond billing and management. They are often used as part of automation (see later section). This can cause conflicts if not considered up front. The best practice is to identify all the common tags at the enterprise level (such as ApplicationOwner and CostCenter) and apply them consistently when deploying resources using automation.
 
 ## Azure Policy and Initiatives
 
@@ -190,13 +190,13 @@ The [Azure Security Center](https://docs.microsoft.com/azure/security-center/sec
 > [!TIP]
 >Azure Security Center is a powerful tool that is regularly improved with new capabilities you can use to detect threats and protect your enterprise. It is highly recommended to always enable Azure Security Center.
 
-### Azure resource locks
+### Locks for Azure resources
 
-As your organization adds core services to subscriptions, it becomes increasingly important to avoid business disruption. One type of disruption that we often see is unintended consequences of scripts and tools working against an Azure subscription deleting resources mistakenly. [Resource Locks](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-lock-resources) enable you to restrict operations on high-value resources where modifying or deleting them would have a significant impact. Locks are applied to a subscription, resource group, or even individual resources. The common use case is to apply locks to foundational resources such as virtual networks, gateways, network security groups, and key storage accounts.
+As your organization adds core services to subscriptions, it becomes increasingly important to avoid business disruption. One common disruption occurs when a script or tool executing in an Azure subscription unintentionally deletes a resource. [Locks](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-lock-resources) restrict operations on high-value resources where modifying or deleting them would have a significant impact. You can apply locks to subscriptions, resource groups, or individual resources. Apply locks to foundational resources such as virtual networks, gateways, network security groups, and key storage accounts.
 
-### Secure DevOps Toolkit
+### Secure DevOps Kit for Azure
 
-The Secure DevOps Kit for Azure (AzSK) is a collection of scripts, tools, extensions, and automation capabilities originally created by Microsoft's own IT team and [released as open source via GitHub](https://github.com/azsk/DevOpsKit-docs). AzSK caters to the end-to-end Azure subscription and resource security needs for teams using extensive automation and smoothly integrating security into native DevOps workflows helping accomplish secure DevOps with these six focus areas:
+The Secure DevOps Kit for Azure (AzSK) is a collection of scripts, tools, extensions, and automation capabilities originally created by Microsoft's own IT team and [released as open source via GitHub](https://github.com/azsk/devopskit-docs). AzSK caters to the end-to-end Azure subscription and resource security needs for teams using extensive automation and smoothly integrating security into native DevOps workflows helping accomplish secure DevOps with these six focus areas:
 
 - Secure the subscription
 - Enable secure development
@@ -205,9 +205,9 @@ The Secure DevOps Kit for Azure (AzSK) is a collection of scripts, tools, extens
 - Alerting and monitoring
 - Cloud risk governance
 
-![Azure DevOps Toolkit](../_images/reference/secure-devops-kit.png)
+![Overview diagram of the Secure DevOps Kit for Azure](../_images/reference/secure-devops-kit.png)
 
-The AzSK is a rich set of tools, scripts, and information that are an important part of a full Azure governance plan and incorporating this into your scaffold is crucial to supporting your organizations risk management goals.
+AzSK is a rich set of tools, scripts, and information that are an important part of a full Azure governance plan and incorporating this into your scaffold is crucial to supporting your organizations risk management goals.
 
 ### Azure Update Management
 
@@ -223,7 +223,7 @@ Collecting and analyzing telemetry that provides line of sight into the activiti
 
 This information can be viewed and acted on at multiple levels and are continually being improved. Azure provides **shared**, **core**, and **deep** monitoring capabilities of Azure resources through the services outlined in the diagram below.
 
-![monitoring](../_images/reference/monitoring.png)
+![Monitoring](../_images/reference/monitoring.png)
 
 ### Shared capabilities
 
@@ -258,11 +258,11 @@ This information can be viewed and acted on at multiple levels and are continual
 - **Service Map:** Service Map provides a graphical view into your infrastructure components, their processes, and interdependencies on other computers and external processes. It integrates events, performance data, and management solutions in Log Analytics.
 
 > [!TIP]
-> Before creating individual alerts, create and maintain a set of shared Action Groups that can be used across Azure Alerts. This will enable you to centrally maintain the lifecycle of your recipient lists, notification delivery methods (email, SMS phone numbers) and webhooks to external actions (Azure Automation runbooks, Azure Functions / Logic Apps, ITSM).
+> Before creating individual alerts, create and maintain a set of shared Action Groups that can be used across Azure Alerts. This will enable you to centrally maintain the lifecycle of your recipient lists, notification delivery methods (email, SMS phone numbers) and webhooks to external actions (Azure Automation runbooks, Azure Functions and Logic Apps, ITSM).
 
 ## Cost management
 
-One of the major changes that you will face when you move from on-premises cloud to the public cloud is the switch from capital expenditure (buying hardware) to operating expenditure (paying for service as you use it). This switch also requires more careful management of your costs. The benefit of the cloud is that you can fundamentally and positively affect the cost of a service you use by merely shutting down or resizing it when it's not needed. Deliberately managing your costs in the cloud is a recommended practice and one that mature customers do daily.
+One of the major changes that you will face when you move from on-premises cloud to the public cloud is the switch from capital expenditure (buying hardware) to operating expenditure (paying for service as you use it). This switch also requires more careful management of your costs. The benefit of the cloud is that you can fundamentally and positively affect the cost of a service you use by merely shutting down or resizing it when it's not needed. Deliberately managing your costs in the cloud is a best practice and one that mature customers do daily.
 
 Microsoft provides several tools for you to be able to visualize, track, and manage your costs. We also provide a full set of APIs to enable you to customize and integrate cost management into your own tools and dashboards. These tools are loosely grouped into Azure portal capabilities and external capabilities.
 
@@ -279,9 +279,9 @@ These are tools to provide you instant information on cost as well as the abilit
 
 - **Power BI Azure Consumption Insights:** Do you want to create your own visualizations for your organization? If so, then the Azure Consumption Insights content pack for Power BI is your tool of choice. Using this content pack and Power BI you can create custom visualizations to represent your organization, do deeper analysis on costs and add in other data sources for further enrichment.
 
-- **Consumption API:** The [consumption APIs](/rest/api/consumption) give you programmatic access to cost and usage data in addition to information on budgets, reserved instances, and marketplace charges. These APIs are accessible only for Enterprise Enrollments and some Web Direct subscriptions however they give you the ability to integrate your cost data into your own tools and data warehouses. You can also [access these APIs via the Azure CLI](/cli/azure/consumption?view=azure-cli-latest).
+- **Consumption API:** The [consumption APIs](https://docs.microsoft.com/rest/api/consumption) give you programmatic access to cost and usage data in addition to information on budgets, reserved instances, and marketplace charges. These APIs are accessible only for Enterprise Enrollments and some Web Direct subscriptions however they give you the ability to integrate your cost data into your own tools and data warehouses. You can also [access these APIs via the Azure CLI](https://docs.microsoft.com/cli/azure/consumption?view=azure-cli-latest).
 
-Customers who are long-term and mature cloud users follow some highly recommended practices:
+Customers who are long-term and mature cloud users follow certain best practices:
 
 - **Actively monitor costs.** Organizations that are mature Azure users constantly monitor costs and take actions when needed. Some organizations even dedicate people to do analysis and suggest changes to usage, and these people more than pay for themselves the first time they find an unused HDInsight cluster that's been running for months.
 - **Use Reserved VM Instances.** Another key tenet for managing costs in the cloud is to use the right tool for the job. If you have an IaaS VM that must stay on 24x7, then using a Reserved VM Instance will save you significant money. Finding the right balance between automating the shutdown of VMs and using Reserved VM Instances takes experience and analysis.
@@ -298,7 +298,7 @@ Several tools can help you build out this capability, from first-party tools suc
 
 - **Azure Automation** Is a cloud-based capability that allows you to author runbooks (in either PowerShell or Python) and allows you automate processes, configure resources, and even apply patches. [Azure Automation](https://docs.microsoft.com/azure/automation/automation-intro) has an extensive set of cross platform capabilities that are integral to your deployment but are too extensive to be covered in depth here.
 - **Event Grid** is a fully managed event routing system that allows you to react to events within your Azure environment. Just as Azure Automation is the connective tissue of mature cloud organizations, [Event Grid](https://docs.microsoft.com/azure/event-grid) is the connective tissue of good automation. Using Event Grid, you can create a simple serverless action to send an email to an administrator whenever a new resource is created and log that resource to a database. That same Event Grid can notify when a resource is deleted and remove the item from the database.
-- **Azure Cloud Shell** is an interactive, browser-based [shell](https://docs.microsoft.com/azure/cloud-shell/overview) for managing resources in Azure. It provides a complete environment for either PowerShell or Bash that is launched as needed (and maintained for you) so that you have a consistent environment from which to run your scripts. The Azure Cloud Shell provides access to additional key tools -already installed-- to automate your environment including [Azure CLI](/cli/azure/get-started-with-azure-cli?view=azure-cli-latest), [Terraform](https://docs.microsoft.com/azure/virtual-machines/linux/terraform-install-configure) and a growing list of additional [tools](https://azure.microsoft.com/updates/cloud-shell-new-cli-tools-and-font-size-selection) to manage containers, databases (sqlcmd), and more.
+- **Azure Cloud Shell** is an interactive, browser-based [shell](https://docs.microsoft.com/azure/cloud-shell/overview) for managing resources in Azure. It provides a complete environment for either PowerShell or Bash that is launched as needed (and maintained for you) so that you have a consistent environment from which to run your scripts. The Azure Cloud Shell provides access to additional key tools -already installed-- to automate your environment including [Azure CLI](https://docs.microsoft.com/cli/azure/get-started-with-azure-cli?view=azure-cli-latest), [Terraform](https://docs.microsoft.com/azure/virtual-machines/linux/terraform-install-configure) and a growing list of additional [tools](https://azure.microsoft.com/updates/cloud-shell-new-cli-tools-and-font-size-selection) to manage containers, databases (sqlcmd), and more.
 
 Automation is a full-time job, and it will rapidly become one of the most important operational tasks within your cloud team. Organizations that take the approach of "automate first" have greater success in using Azure:
 
@@ -339,4 +339,4 @@ Azure provides you both internal capabilities and third-party capabilities from 
 
 Governance is crucial to the success of Azure. This article targets the technical implementation of an enterprise scaffold but only touches on the broader process and relationships between the components. Policy governance flows from the top down and is determined by what the business wants to achieve. Naturally, the creation of a governance model for Azure includes representatives from IT, but more importantly it should have strong representation from business group leaders, and security and risk management. In the end, an enterprise scaffold is about mitigating business risk to facilitate an organization's mission and objectives.
 
-Now that you have learned about subscription governance, it's time to see these recommendations in practice. See [Examples of implementing Azure subscription governance](./azure-scaffold-examples.md).
+Now that you have learned about subscription governance, it's time to see these recommendations in practice. For more information, see the [Best practices for Azure readiness](../ready/azure-best-practices/index.md).

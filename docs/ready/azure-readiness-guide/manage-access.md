@@ -5,7 +5,7 @@ description: Learn how to set up access control for your Azure environment with 
 author: LijuKodicheraJayadevan
 ms.author: kfollis
 ms.date: 04/09/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC
@@ -23,7 +23,7 @@ When you plan your access control strategy, grant users the least privilege requ
 
 When you plan your access control methodology, we recommend that you work with people in your organizations with the following roles: security and compliance, IT administration, and enterprise architect.
 
-The Cloud Adoption Framework offers additional guidance on how to [use role-based access control](../azure-best-practices/roles.md) as part of your cloud adoption efforts.
+The Cloud Adoption Framework offers additional guidance on how to [use role-based access control](../considerations/roles.md) as part of your cloud adoption efforts.
 
 ::: zone target="chromeless"
 
@@ -82,6 +82,6 @@ To grant a user access to a subscription:
 To learn more, see:
 
 - [What is role-based access control (RBAC)?](https://docs.microsoft.com/azure/role-based-access-control/overview)
-- [Cloud Adoption Framework: Use role-based access control](../azure-best-practices/roles.md)
+- [Cloud Adoption Framework: Use role-based access control](../considerations/roles.md)
 
 ::: zone-end

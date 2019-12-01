@@ -21,9 +21,9 @@ In October 2018, we began a review of all the models that had proliferated acros
 
 For a similar approach to COM, readers should begin with one of the following:
 
-- [Getting started with cloud migration](../getting-started/migrate.md)
-- [Getting started with cloud-enabled innovation](../getting-started/innovate.md)
-- [Enabling adoption success](../getting-started/enable.md)
+- [Begin a cloud migration journey](../getting-started/migrate.md)
+- [Innovate through cloud adoption](../getting-started/innovate.md)
+- [Enable successful cloud adoption](../getting-started/enable.md)
 
 The guidance previously provided in COM is still relevant to the Cloud Adoption Framework. The experience is different, but the structure of the Cloud Adoption Framework is simply an expansion of that guidance. To transition from COM to the Cloud Adoption Framework, an understanding of scope and structure is important. The following two sections describe that transition.
 

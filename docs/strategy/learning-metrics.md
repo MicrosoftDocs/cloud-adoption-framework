@@ -36,7 +36,7 @@ The challenge with customer behavior metrics is that they can easily be influenc
 
 ## Data innovation
 
-Changing an industry, disrupting markets, or transforming products/services can take years. In a cloud-enabled data innovation effort, experimentation is key to measuring success. Be transparent by sharing prediction metrics like percent probability, number of failed experiments, and amount of models trained. Failures will accumulate faster than successes. These metrics can be discouraging and it is important that the executive team understands the time and investment needed to leverage on data properly.
+Changing an industry, disrupting markets, or transforming products and services can take years. In a cloud-enabled data innovation effort, experimentation is key to measuring success. Be transparent by sharing prediction metrics like percent probability, number of failed experiments, and number of models trained. Failures will accumulate faster than successes. These metrics can be discouraging, and the executive team must understand the time and investment needed to use these metrics properly.
 
 On the other hand, some positive indicators are often associated with data-driven learning: centralization of heterogeneous data sets, data ingress, and democratization of data. While the team is learning about the customer of tomorrow, real results can be produced today. Supporting learning metrics could include:
 

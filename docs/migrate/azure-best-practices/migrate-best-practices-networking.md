@@ -80,7 +80,7 @@ To provide isolation within a VNet, you segment it into one or more subnets, and
 - Your subnet decisions are based on your technical and organizational requirements.
 - You create subnets using CIDR notation.
 - When deciding on network range for subnets, it's important to note that Azure retains five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of /29 (with eight IP addresses), Azure will retain five addresses, so you only have three usable addresses that can be assigned to hosts on the subnet.
-- In most cases, using /28 as the smallest subnet is recommended.
+- For most cases, use /28 as the smallest subnet.
 
 **Example:**
 
@@ -116,7 +116,7 @@ Azure adds a DNS server by default when you deploy a VNet. This allows you to ra
 **Learn more:**
 
 - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-infrastructure) name resolution when you use your own DNS server.
-- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions?toc=%2fazure%2fvirtual-network%2ftoc.json#naming-subscriptions) DNS naming rules and restrictions.
+- [Learn about](../../ready/azure-best-practices/naming-and-tagging.md) DNS naming rules and restrictions.
 
 ## Best practice: Set up availability zones
 
@@ -158,8 +158,8 @@ For a successful migration, it's critical to connect on-premises corporate netwo
 
 To implement a site-to-site VPN, you set up a VPN gateway in Azure.
 
-- A VPN gateway is a specific type of VNet gateway that's used to send encrypted traffic between an Azure VNet and an on-premises location over the public Internet.
-- You can also use a VPN gateway to send encrypted traffic between Azure VNets over the Microsoft network.
+- A VPN gateway is a specific type of VNet gateway that sends encrypted traffic between an Azure VNet and an on-premises location over the public internet.
+- A VPN gateway can also send encrypted traffic between Azure VNets over the Microsoft network.
 - Each VNet can have only one VPN gateway.
 - You can create multiple connections to the same VPN gateway. When you create multiple connections, all VPN tunnels share the available gateway bandwidth.
 - Every Azure VPN gateway consists of two instances in an active-standby configuration.
@@ -173,7 +173,7 @@ When setting up a site-to-site VPN, you do the following:
 
 - You need a VNet whose address range doesn't overlap with the on-premises network to which the VPN will connect.
 - You create a gateway subnet in the network.
-- You create a VPN gateway, specify the gateway type (VPN) and whether the gateway is policy-based or route-based. A RouteBased VPN is recommended as more capable and future-proof.
+- You create a VPN gateway, specify the gateway type (VPN) and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
 - You create a local network gateway on-premises, and configure your on-premises VPN device.
 - You create a failover site-to-site VPN connection between the VNet gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. Route-based also supports both site-to-site (from any computer) and point-to-site (from a single computer) connections concurrently.
 - You specify the gateway SKU that you want to use. This will depend on your workload requirements, throughputs, features, and SLAs.
@@ -276,7 +276,7 @@ To optimize routing for both office users, you need to know which prefix is from
 
 - [Learn about](https://docs.microsoft.com/azure/expressroute/expressroute-optimize-routing) optimizing routing.
 
-## Securing VNets
+## Secure VNets
 
 The responsibility for securing VNets is shared between Microsoft and you. Microsoft provides many networking features, as well as services that help keep resources secure. When designing security for VNets, best practices you should follow include implementing a perimeter network, using filtering and security groups, securing access to resources and IP addresses, and implementing attack protection.
 
@@ -415,14 +415,14 @@ Public IP addresses in Azure can be associated with VMs, load balancers, applica
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/virtual-network/virtual-network-ip-addresses-overview-arm#public-ip-addresses) public IP addresses in Azure.
-- [Read more](https://docs.microsoft.com/azure/security-center/security-center-just-in-time) on just-in-time VM access in the Azure Security Center.
+- [Public IP addresses in Azure](https://docs.microsoft.com/azure/virtual-network/virtual-network-ip-addresses-overview-arm#public-ip-addresses)
+- [Manage virtual machine access using just-in-time](https://docs.microsoft.com/azure/security-center/security-center-just-in-time)
 
 ## Take advantage of Azure security features for networking
 
 Azure has platform security features that are easy to use, and provide rich countermeasures to common network attacks. These include Azure Firewall, web application firewall, and Network Watcher.
 
-## Best Practice: Deploy Azure Firewall
+## Best practice: Deploy Azure Firewall
 
 Azure Firewall is a managed cloud-based network security service that protects your VNet resources. It is a fully stateful managed firewall with built-in high availability and unrestricted cloud scalability.
 

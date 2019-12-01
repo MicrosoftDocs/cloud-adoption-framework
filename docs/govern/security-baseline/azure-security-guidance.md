@@ -47,7 +47,7 @@ These tools are designed to help organizations meet complex compliance obligatio
 
 ## Unique intelligent insights
 
-As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats. [Read More](https://docs.microsoft.com/azure/security-center/security-center-intro)
+As the volume and complexity of security signals grow, determining if those signals are credible threats, and then acting, takes far too long. Microsoft offers an unparalleled breadth of security intelligence delivered at cloud scale to help quickly detect and remediate threats. For more information, see the [Azure Security Center overview](https://docs.microsoft.com/azure/security-center/security-center-intro).
 
 ## Azure threat intelligence
 
@@ -71,7 +71,7 @@ Attackers are increasingly automated and sophisticated. They use data science to
 
 ## Simplified Security Baseline
 
-Making effective security decisions is not easy. It requires security experience and expertise. While some large organizations have such experts on staff, many companies don’t. Azure Machine Learning enables customers to benefit from the wisdom of other organizations when making security decisions.
+Making effective security decisions is not easy. It requires security experience and expertise. While some large organizations have such experts on staff, many companies don't. Azure Machine Learning enables customers to benefit from the wisdom of other organizations when making security decisions.
 
 ## Behavioral analytics
 

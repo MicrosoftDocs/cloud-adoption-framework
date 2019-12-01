@@ -18,7 +18,7 @@ This article expands on the assessment process by reviewing activities associate
 
 The following assumptions are typical for any migration effort:
 
-- **IaaS.** It is commonly assumed that migrating workloads primarily involves the movement of virtual machines from a physical datacenter to a cloud datacenter via an IaaS migration, requiring a minimum of redevelopment or reconfiguration. This is known as a "lift and shift" migration. (Exceptions follow.)
+- **IaaS.** It is commonly assumed that migrating workloads primarily involves the movement of virtual machines from a physical datacenter to a cloud datacenter via an IaaS migration, requiring a minimum of redevelopment or reconfiguration. This is known as a _lift and shift_ migration. (Exceptions follow.)
 - **Architecture consistency.** Changes to core architecture during a migration considerably increase complexity. Debugging a changed system on a new platform introduces many variables that can be difficult to isolate. For this reason, workloads should undergo only minor changes during migration and any changes should be thoroughly tested.
 - **Retirement test.** Migrations and the hosting of assets consume operational and potential capital expenses. It is assumed that any workloads being migrated have been reviewed to validate ongoing usage. The choice to retire unused assets produces immediate cost savings.
 - **Resize assets.** It is assumed that few on-premises assets are fully using the allocated resources. Prior to migration, it is assumed that assets will be resized to best fit actual usage requirements.
@@ -32,7 +32,7 @@ The itemized assumptions can create roadblocks that could slow progress or cause
 - **Paying for technical debt.** Some aging workloads carry with them a high amount of technical debt. This can lead to long-term challenges by increasing hosting costs with any cloud provider. When technical debt unnaturally increases hosting costs, alternative architectures should be evaluated.
 - **User traffic patterns.** Existing solutions may depend on existing network routing patterns. These patterns could slow performance considerably. Further, introduction of new hybrid wide area network (WAN) solutions can take weeks or even months. Prepare early in the architecture process for these roadblocks by considering traffic patterns and changes to any core infrastructure services.
 
-## Accelerating business value
+## Accelerate business value
 
 Some scenarios could require an different architecture than the assumed IaaS rehosting strategy. The following are a few examples:
 

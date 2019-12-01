@@ -1,43 +1,141 @@
 ---
-title: "Introduction to operational management"
+title: "Cloud management"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Understand operational management within Cloud Adoption Framework.
+description: Cloud management in the Cloud Adoption Framework
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/19/2019
-ms.topic: article
+ms.date: 10/17/2019
+ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: operate
-ms.custom: manage
+layout: LandingPage
 ---
 
-# Establishing operational management practices in the cloud
+# Cloud management in the Cloud Adoption Framework
 
-Cloud adoption is a catalyst for enabling business value. However, real business value is realized through ongoing, stable operations of the technology assets deployed to the cloud. This section of the Cloud Adoption Framework guides the reader through various transitions into operational management in the cloud.
+Delivering on a [cloud strategy](../strategy/index.md) requires solid planning, readiness, and adoption. But it's the ongoing operation of the digital assets that delivers tangible business outcomes. Without a plan for reliable, well-managed operations of the cloud solutions, those efforts will yield little value. The following exercises help develop the business and technical approaches needed to provide cloud management that powers ongoing operations.
 
-## Actionable best practices
+## Getting started
 
-Modern operations management solutions provide a multicloud view of operations. Assets managed through the following recommended practices may live in the cloud, in an existing datacenter, or even in a competing cloud provider. Currently, the framework includes two reference recommended practices to mature operations management in the cloud:
+To prepare you for this phase of the cloud adoption lifecycle, the framework suggests the following exercises:
 
-- [Azure Server Management](./azure-server-management/index.md): This onboarding guide to incorporate the cloud-native tools and services needed to manage operations.
-- [Hybrid monitoring](./monitor/index.md): Many customers have already made a substantial investment in System Center Operations Manager. For those customers, this guide to hybrid monitoring helps to compare and contrast the cloud-native reporting tools with Operations Manager tooling. This comparison will make it easier to decide which tools to use for operational management.
+<!-- markdownlint-disable MD033 -->
+<ul class="panelContent cardsF">
+    <li style="display: flex; flex-direction: column;">
+        <a href="./azure-management-guide/index.md">
+            <div class="cardSize">
+                <div class="cardPadding" style="padding-bottom:10px;">
+                    <div class="card" style="padding-bottom:10px;">
+                        <div class="cardImageOuter">
+                            <div class="cardImage">
+                                <img alt="" src="../_images/icons/1.png" data-linktype="external">
+                            </div>
+                        </div>
+                        <div class="cardText" style="padding-left:0px;">
+                            <h3>Establish a management baseline</h3>
+                            Define the criticality classifications, cloud management tools, and processes required to deliver your minimum commitment to operations management.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li style="display: flex; flex-direction: column;">
+        <a href="./considerations/business-alignment.md">
+            <div class="cardSize">
+                <div class="cardPadding" style="padding-bottom:10px;">
+                    <div class="card" style="padding-bottom:10px;">
+                        <div class="cardImageOuter">
+                            <div class="cardImage">
+                                <img alt="" src="../_images/icons/2.png" data-linktype="external">
+                            </div>
+                        </div>
+                        <div class="cardText" style="padding-left:0px;">
+                            <h3>Define business commitments</h3>
+                            Document supported workloads to establish operational commitments with the business and agree on cloud management investments for each workload.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li style="display: flex; flex-direction: column;">
+        <a href="./best-practices.md">
+            <div class="cardSize">
+                <div class="cardPadding" style="padding-bottom:10px;">
+                    <div class="card" style="padding-bottom:10px;">
+                        <div class="cardImageOuter">
+                            <div class="cardImage">
+                                <img alt="" src="../_images/icons/3.png" data-linktype="external">
+                            </div>
+                        </div>
+                        <div class="cardText" style="padding-left:0px;">
+                            <h3>Expand the management baseline</h3>
+                            Based on business commitments and operations decisions, make use of the included best practices to implement the required cloud management tooling.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li style="display: flex; flex-direction: column;">
+        <a href="./design-principles.md">
+            <div class="cardSize">
+                <div class="cardPadding" style="padding-bottom:10px;">
+                    <div class="card" style="padding-bottom:10px;">
+                        <div class="cardImageOuter">
+                            <div class="cardImage">
+                                <img alt="" src="../_images/icons/4.png" data-linktype="external">
+                            </div>
+                        </div>
+                        <div class="cardText" style="padding-left:0px;">
+                            <h3>Advanced operations and design principles</h3>
+                            Platforms or Workloads that require a higher level of business commitment might require a deeper architecture review to deliver on resiliency and reliability commitments.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
+<!-- markdownlint-enable MD033 -->
 
-## Cloud operations
+## Scalable cloud management methodology
 
-Both of these best practices build towards a future state methodology for operations management.
+The preceding steps create actionable approaches to deliver on the Cloud Adoption Framework's Manage methodology.
 
-![CAF Manage methodology](../_images/manage/caf-manage.png)
+![Manage methodology in the Cloud Adoption Framework](../_images/manage/caf-manage.png)
 
-**Business alignment:** In the Manage methodology, all workloads are classified by criticality and business value. That classification can then be measured through an impact analysis, which calculates the lost value associated with performance degradation or business interruptions. Using that tangible revenue impact, cloud operations teams can work with the business to establish a commitment that balances cost and performance.
+## Create a balanced cloud portfolio
 
-**Cloud operations disciplines:** Once the business is aligned, it is much easier to track and report on the proper disciplines of cloud operations for each workload. Making decisions along each discipline can then drive commitments that are easily understood by the business. This collaborative approach makes the business stakeholder a partner in finding the right balance between cost and performance.
+As outlined in the [business alignment](./considerations/business-alignment.md) article, not all workloads are mission critical. Within any portfolio are various degrees of operational management needs. Business alignment efforts aid in capturing the business impact and negotiating management costs with the business, to ensure the most appropriate operational management processes and tools.
 
-- **Inventory and visibility:** At a minimum, operations management requires a means to inventory assets and create visibility into the run state of each asset.
-- **Operational compliance:** Regular management of configuration, sizing, cost, and performance of assets is key to maintaining performance expectations.
-- **Protect and recover:** Minimizing operational interruptions and expediting recovery each help to avoid performance losses and revenue impacts. Detection and recovery are essential aspects of this discipline.
-- **Platform operations:** All IT environments contain a set of commonly used platforms. Those platforms could include data stores like SQL Server or HDInsight. Other common platforms could include container solutions like Kubernetes or AKS. Regardless of the platforms, the platform operations maturity focuses on customizing operations based on how those common platforms are deployed, configured, and used by workloads.
-- **Workload operations:** At the highest level of operational maturity, cloud operations teams are able tune operations for workloads that are crucial for business success. For those critical workloads, available data can aid in automating remediation, sizing, or protection of workloads based on their utilization.
+## Objective of this content
 
-Additional guidance like the [Design Review Framework (Codename: Cloud Design Principles)](https://docs.microsoft.com/azure/architecture/reliability) can aid in making detailed architectural decisions regarding each workload, within the disciplines above.
+The guidance in this section of the Cloud Adoption Framework serves two purposes:
 
-This section of the Cloud Adoption Framework will build on each of these topics to mature cloud operations within your organization.
+- Provides examples of actionable operations management approaches that represent common experiences often encountered by customers.
+- Helps you create personalized management solutions based on business commitments.
+
+This content is intended for use by the cloud operations team. It's also relevant to cloud architects who need to develop a strong foundation in cloud operations or cloud design principles.
+
+## Intended audience
+
+The content in the Cloud Adoption Framework affects the business, technology, and culture of enterprises. This section of the Cloud Adoption Framework interacts heavily with IT operations, IT governance, finance, line-of-business leaders, networking, identity, and cloud adoption teams. Various dependencies on these personnel require a facilitative approach by the cloud architects who are using this guidance. Facilitation with these teams is seldom a one-time effort.
+
+The cloud architect serves as the thought leader and facilitator to bring these audiences together. The content in this collection of guides is designed to help the cloud architect facilitate the right conversation, with the right audience, to drive necessary decisions. Business transformation that's empowered by the cloud depends on the cloud architect to help guide decisions throughout the business and IT.
+
+**Cloud architect specialization in this section:** Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. This section of the Cloud Adoption Framework is designed for cloud architects with a passion for operations and management of deployment solutions. Within this framework, these specialists are referred to frequently as *cloud operations*, or collectively as the *cloud operations team*.
+
+## Use this guide
+
+If you want to follow this guide from beginning to end, this content aids in developing a robust cloud operations strategy. The guidance walks you through the theory and implementation of such a strategy.
+
+<!-- For a crash course on the theory and quick access to Azure implementation, get started with the [governance guides overview](./guide/index.md). Using this guidance, you can start small and iteratively improve your governance needs in parallel with cloud adoption efforts. -->
+
+## Next steps
+
+Apply the methodology to establish clear business commitments.
+
+> [!div class="nextstepaction"]
+> [Establish clear business commitments](./considerations/business-alignment.md)

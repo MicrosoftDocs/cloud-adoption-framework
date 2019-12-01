@@ -1,7 +1,7 @@
 ---
 title: "What is data classification?"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: What is data classification?
+description: Data classification allows you to determine and assign value to your organization's data, and is a common starting point for governance.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -15,29 +15,29 @@ ms.custom: governance
 
 # What is data classification?
 
-Data classification allows you to determine and assign value to your organization's data, and is a common starting point for governance. The data classification process categorizes data by sensitivity and business impact in order to identify risks. Once data is classified, it can be managed in ways that protect sensitive or important data from theft or loss.
+Data classification allows you to determine and assign value to your organization's data, and is a common starting point for governance. The data classification process categorizes data by sensitivity and business impact in order to identify risks. When data is classified, you can manage it in ways that protect sensitive or important data from theft or loss.
 
 ## Understand data risks, then manage them
 
-Before any risk can be managed, it must be understood. In the case of data breach liability, that understanding starts with data classification. Data classification is the process of associating a meta data characteristic to every asset in a digital estate, which identifies the type of data associated with that asset.
+Before any risk can be managed, it must be understood. In the case of data breach liability, that understanding starts with data classification. Data classification is the process of associating a metadata characteristic to every asset in a digital estate, which identifies the type of data associated with that asset.
 
-Microsoft suggests that any asset which has been identified as a potential candidate for migration or deployment to the cloud should have documented meta data to record the data classification, business criticality, and billing responsibility. These three points of classification can go a long way to understanding and mitigating risks.
+Any asset identified as a potential candidate for migration or deployment to the cloud should have documented metadata to record the data classification, business criticality, and billing responsibility. These three points of classification can go a long way to understanding and mitigating risks.
 
-## Microsoft's data classification
+## Classifications Microsoft uses
 
-The following is a list of classifications Microsoft uses. Depending on your industry or existing security requirements, data classifications standards may already exist within your organization. If no standard exists, we invite you to use this sample classification to better understand your own digital estate and risk profile.
+The following is a list of classifications Microsoft uses. Depending on your industry or existing security requirements, data classification standards might already exist within your organization. If no standard exists, you might want to use this sample classification to better understand your own digital estate and risk profile.
 
-- **Non-business:** Data from your personal life that does not belong to Microsoft.
+- **Non-business:** Data from your personal life that doesn't belong to Microsoft.
 - **Public:** Business data that is freely available and approved for public consumption.
-- **General:** Business data that is not meant for a public audience.
-- **Confidential:** Business data that could cause harm to Microsoft if overshared.
+- **General:** Business data that isn't meant for a public audience.
+- **Confidential:** Business data that can cause harm to Microsoft if overshared.
 - **Highly confidential:** Business data that would cause extensive harm to Microsoft if overshared.
 
 ## Tagging data classification in Azure
 
-Resource tags are the suggested approach for metadata storage, and these tags can be used to apply data classification information to deployed resources. Although tagging cloud assets by classification is not a replacement for a formal data classification process, it provides a valuable tool for managing resources and applying policy. [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/what-is-information-protection) is an excellent solution to help you classify _data_ itself regardless of where it sits (on prem, in Azure, somewhere else) and should be considered as part of an overall classification strategy.
+Resource tags are a good approach for metadata storage, and you can use these tags to apply data classification information to deployed resources. Although tagging cloud assets by classification isn't a replacement for a formal data classification process, it provides a valuable tool for managing resources and applying policy. [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/what-is-information-protection) is an excellent solution to help you classify _data_ itself, regardless of where it sits (on-premises, in Azure, or somewhere else). Consider it as part of an overall classification strategy.
 
-For additional information on resource tagging in Azure, see the article on [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags).
+For additional information on resource tagging in Azure, see [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags).
 
 ## Next steps
 

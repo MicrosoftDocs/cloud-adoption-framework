@@ -5,22 +5,22 @@ description: Learn how to effectively migrate your organization's services to Az
 author: matticusau
 ms.author: mlavery
 ms.date: 04/04/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="chromeless"
+::: zone target="docs"
 
-# Before you start
+# Azure migration guide: Before you start
 
 ::: zone-end
 
-::: zone target="docs"
+::: zone target="chromeless"
 
-# Introduction to the Azure migration guide
+# Before you start
 
 ::: zone-end
 
@@ -29,7 +29,7 @@ Before you migrate resources to Azure, you need to choose the migration method a
 ::: zone target="docs"
 
 > [!TIP]
-> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal and select **Migrate your environment to Azure**.
+> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Migrate your environment to Azure**, and then follow the step-by-step instructions.
 
 ::: zone-end
 
@@ -37,7 +37,7 @@ Before you migrate resources to Azure, you need to choose the migration method a
 
 This guide walks you through the basics of migrating applications and resources from your on-premises environment to Azure. It is designed for migration scopes with minimal complexity. To determine the suitability of this guide for your migration, see the **When to use this guide** tab.
 
-When you migrate to Azure, you may migrate your applications as-is using IaaS-based virtual machine solutions (known as a "rehost" or "lift and shift" migration), or you may have the flexibility to use managed services and other cloud-native features to modernize your applications. See the **Migration options** tab for more information on these choices. As you develop your migration strategy, you might consider:
+When you migrate to Azure, you may migrate your applications as-is using IaaS-based virtual machine solutions (known as a _rehost_ or _lift and shift_ migration), or you may have the flexibility to use managed services and other cloud-native features to modernize your applications. See the **Migration options** tab for more information on these choices. As you develop your migration strategy, you might consider:
 
 - Will my migrating applications work in the cloud?
 - What is the best strategy (with regard to technology, tools, and migrations) for my application? See the Microsoft Cloud Adoption Framework's [Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md) for more information.
