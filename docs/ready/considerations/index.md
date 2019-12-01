@@ -22,10 +22,10 @@ This image shows the major considerations for implementing any landing zone depl
 
 All landing zones provide structure for hosting options. The structure is created explicitly through governance controls or organically through the adoption of services within the landing zone. The following articles can help you make decisions that will be reflected in the blueprint or other automation scripts that create your landing zone:
 
-- **[Compute decisions](./compute-decisions.md)**. To minimize operational complexity, align compute options with the purpose of the landing zone. This decision can be enforced by using automation toolchains, like Azure Policy initiatives and landing zone blueprints.
-- **[Storage decisions](./storage-guidance.md)**. Choose the right Azure Storage solution to support your workload requirements.
-- **[Networking decisions](./network-decisions.md)**. Choose the networking services, tools, and architectures to support your organization's workload, governance, and connectivity requirements.
-- **[Database decisions](./data-decisions.md)**. Determine which database technology is best suited for your workload requirements.
+- **[Compute decisions](./compute-options.md)**. To minimize operational complexity, align compute options with the purpose of the landing zone. This decision can be enforced by using automation toolchains, like Azure Policy initiatives and landing zone blueprints.
+- **[Storage decisions](./storage-options.md)**. Choose the right Azure Storage solution to support your workload requirements.
+- **[Networking decisions](./networking-options.md)**. Choose the networking services, tools, and architectures to support your organization's workload, governance, and connectivity requirements.
+- **[Database decisions](./data-options.md)**. Determine which database technology is best suited for your workload requirements.
 
 ## Azure fundamentals
 
@@ -42,6 +42,6 @@ The following articles can help you make governance-related decisions about your
 
 - **Cost requirements**. Based on an organization's motivation for cloud adoption and operational commitments made about its environment, various cost management configurations might need to be changed for the landing zone.
 - **Monitoring decisions**. Depending on the operational requirements for a landing zone, various monitoring tools can be deployed. The monitoring decisions article can help you determine the most appropriate tools to deploy.
-- **Using role-based access control**. Azure [role-based access control (RBAC)](../azure-best-practices/roles.md) offers fine-grained, group-based access management for resources that are organized around user roles.
+- **Using role-based access control**. Azure [role-based access control (RBAC)](../considerations/roles.md) offers fine-grained, group-based access management for resources that are organized around user roles.
 - **Policy decisions**. [Azure Blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples) provide premade compliance blueprints, each with predefined policy initiatives. Policy decisions help inform a selection of the best blueprint or policy initiative based on your requirements and constraints.
-- **[Create hybrid cloud consistency](../../infrastructure/misc/hybrid-consistency.md)**. Create hybrid cloud solutions that give your organization the benefits of cloud innovation while maintaining many of the conveniences of on-premises management.
+- **[Create hybrid cloud consistency](./hybrid-consistency.md)**. Create hybrid cloud solutions that give your organization the benefits of cloud innovation while maintaining many of the conveniences of on-premises management.

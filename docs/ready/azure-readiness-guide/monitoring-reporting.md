@@ -5,7 +5,7 @@ description: Learn how to set up monitoring, reporting, and alerts for your Azur
 author: timleyden
 ms.author: tileyden
 ms.date: 04/09/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC
@@ -134,7 +134,7 @@ Azure Security Center is offered in two tiers: free and standard. Features like 
 
 **Try Standard tier for free for your first 30 days.**
 
-After you turn on and set up security policies for a subscription’s resources, you can view the security state of your resources and any issues in the **Prevention** section. You can also view a list of those issues on the **Recommendations** tile.
+After you turn on and set up security policies for a subscription's resources, you can view the security state of your resources and any issues in the **Prevention** section. You can also view a list of those issues on the **Recommendations** tile.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0]" submitText="Explore Azure Security Center" :::
 

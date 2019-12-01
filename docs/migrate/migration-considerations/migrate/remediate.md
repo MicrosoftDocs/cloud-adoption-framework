@@ -26,7 +26,7 @@ In any corporate environment, technical debt exists. Some of this is healthy and
 - **Application configuration changes.** Migrated applications may require changes to variables, such as network paths to dependent assets, service account changes, or updates to dependent IP addresses.
 - **Minor changes to network paths.** Routing patterns may need to be modified to properly route user traffic to the new assets.
     > [!NOTE]
-    > This is not production routing to the new assets but is configuration to allow for proper routing to the assets in general.
+    > This isn't production routing to the new assets, but rather configuration to allow for proper routing to the assets in general.
 
 ## Large-scale remediation tasks
 

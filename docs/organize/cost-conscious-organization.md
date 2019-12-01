@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: organize
 ---
 
-# Building a cost-conscious organization
+# Build a cost-conscious organization
 
 As outlined in [Motivations: Why are we moving to the cloud?](../strategy/motivations.md), there are many sound reasons for a company to adopt the cloud. When cost reduction is a primary driver, it's important to create a cost-conscious organization.
 

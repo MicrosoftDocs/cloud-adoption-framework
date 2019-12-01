@@ -31,7 +31,7 @@ Every organization has different operational scenarios, but the following items 
 - **Unhealthy network links.** Number of resources with network connectivity issues.
 - **Unhealthy service endpoints.** Number of issues with external network endpoints.
 - **Cloud provider service health incidents.** Number of disruptions or performance incidents caused by the cloud provider.
-- **Service level agreements.** This can include both Microsoft’s commitments for uptime and connectivity of Azure services, as well as commitments made by the business to its external and internal customers.
+- **Service level agreements.** This can include both Microsoft's commitments for uptime and connectivity of Azure services, as well as commitments made by the business to its external and internal customers.
 - **Service availability.** Percentage of actual uptime cloud-hosted workloads compared to the expected uptime.
 - **Recovery time objective (RTO).** The maximum acceptable time that an application can be unavailable after an incident.
 - **Recovery point objective (RPO).** The maximum duration of data loss that is acceptable during a disaster. For example, if you store data in a single database, with no replication to other databases, and perform hourly backups, you could lose up to an hour of data.

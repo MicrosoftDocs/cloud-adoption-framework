@@ -12,7 +12,7 @@ ms.custom: organize
 layout: LandingPage
 ---
 
-# Managing organizational alignment
+# Manage organizational alignment
 
 Cloud adoption can't happen without well-organized people. Successful cloud adoption is the result of properly skilled people doing the appropriate types of work, in alignment with clearly defined business goals, and in a well-managed environment. To deliver an effective cloud operating model, it's important to establish appropriately staffed organizational structures. This article outlines an approach to establishing and maintaining the proper organizational structures in four steps.
 
@@ -125,7 +125,7 @@ The following is a list of cloud capabilities that are required to succeed at cl
 - [Cloud platform](./cloud-platform.md): Operate and mature the platform.
 - [Cloud automation](./cloud-automation.md): Accelerate adoption and innovation.
 
-## Maturing organizational structures
+## Mature organizational structures
 
 To some degree, each of the above capabilities is delivered in every cloud adoption effort, either explicitly or in accordance with a defined team structure.
 As adoption needs grow, so does the need to create balance and structure. To meet those needs, companies often follow a process of maturing organizational structures.
@@ -134,7 +134,7 @@ As adoption needs grow, so does the need to create balance and structure. To mee
 
 The article on [determining organizational structure maturity](./organization-structures.md) provides additional detail regarding each level of maturity.
 
-## Aligning RACI charts
+## Align RACI charts
 
 At each level of maturity, accountability for various cloud capabilities shifts to new teams. This shifting of accountability enables faster migration and innovation cycles by removing and automating barriers to change. To align assignments properly, the article on [RACI alignment](./raci-alignment.md) shares a RACI chart for each of the referenced organizational structures.
 

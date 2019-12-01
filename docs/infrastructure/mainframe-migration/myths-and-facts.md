@@ -24,7 +24,7 @@ Mainframes also remain as vulnerable to disasters as any other servers do, and r
 
 ## Myth: Mainframes have limitless scalability
 
-A mainframe’s scalability depends on the capacity of its system software, such as the customer information control system (CICS), and the capacity of new instances of mainframe engines and storage. Some large companies that use mainframes have customized their CICS for performance, and have otherwise outgrown the capability of the largest available mainframes.
+A mainframe's scalability depends on the capacity of its system software, such as the customer information control system (CICS), and the capacity of new instances of mainframe engines and storage. Some large companies that use mainframes have customized their CICS for performance, and have otherwise outgrown the capability of the largest available mainframes.
 
 ## Myth: Intel-based servers are not as powerful as mainframes
 
@@ -36,7 +36,7 @@ Although there may be some isolated instances where cloud solutions fall short, 
 
 ## Summary
 
-By comparison, Azure offers an alternative platform that is capable of delivering equivalent mainframe functionality and features, and at a much lower cost. In addition, the total cost of ownership (TCO) of the cloud’s subscription-based, usage-driven cost model is far less expensive than mainframe computers.
+By comparison, Azure offers an alternative platform that is capable of delivering equivalent mainframe functionality and features, and at a much lower cost. In addition, the total cost of ownership (TCO) of the cloud's subscription-based, usage-driven cost model is far less expensive than mainframe computers.
 
 ## Next steps
 

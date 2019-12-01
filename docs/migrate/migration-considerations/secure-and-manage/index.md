@@ -12,7 +12,7 @@ ms.subservice: migrate
 
 # Secure monitoring and management tools
 
-After a migration is complete, migrated assets should be managed by controlled IT operations. This article is not intended to suggest a deviation from operational best practices. Instead, the following should be considered a minimum viable product for securing and managing migrated assets, either from IT operations or independently as IT operations come online.
+After a migration is complete, migrated assets should be managed by controlled IT operations. This article does not represent a deviation from operational best practices. Instead, the following should be considered a minimum viable product for securing and managing migrated assets, either from IT operations or independently as IT operations come online.
 
 ## Monitoring
 
@@ -36,6 +36,16 @@ Rely on the Azure Security Center for unified security monitoring and advanced t
 
 Learn more about [Azure Security Center](https://docs.microsoft.com/azure/security-center) for securing migrated assets.
 
+## Service health monitoring
+
+Azure Service Health provides personalized alerts and guidance when Azure service issues affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue is resolved. It can also help you prepare for planned maintenance and changes that could affect the availability of your resources.
+
+- **Service health dashboard.** Check the overall health of your Azure services and regions, with detailed updates on any current service issues, upcoming planned maintenance, and service transitions.
+- **Service health alerts.** Configure alerts that will notify you and your teams in the event of a service issue like an outage or upcoming planned maintenance.
+- **Service health history.** Review past service issues and download official summaries and reports from Microsoft.
+
+Learn more about [Azure Service Health](https://docs.microsoft.com/azure/service-health) for staying informed about the health of your migrated resources.
+
 ## Protect assets and data
 
 Azure Backup provides a means of protecting VMs, files, and data. Azure Backup can help with many functions, including:
@@ -46,3 +56,21 @@ Azure Backup provides a means of protecting VMs, files, and data. Azure Backup c
 - Recovering protected assets.
 
 Learn more about [Azure Backup](https://docs.microsoft.com/azure/backup) for protecting migrated assets.
+
+## Optimize resources
+
+Azure Advisor is your personalized guide to Azure best practices. It analyzes your configuration and usage telemetry and offers recommendations to help you optimize your Azure resources for high availability, security, performance, and cost. Advisor’s inline actions help you quickly and easily remediate your recommendations and optimize your deployments.
+
+- **Azure best practices.** Optimize migrated resources for high availability, security, performance, and cost.
+- **Step-by-step guidance.** Remediate recommendations efficiently with guided quick links.
+- **New recommendations alerts.** Stay informed about new recommendations, such as additional opportunities to rightsize VMs and save money.
+
+Learn more about [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) for optimizing your migrated resources.
+
+## Suggested skills
+
+Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
+
+Here is an example of a tailored learning path on Microsoft Learn that's aligned with the Secure and Manage portion of the Cloud Adoption Framework: 
+
+[Secure your cloud data](https://docs.microsoft.com/learn/paths/secure-your-cloud-data/): Azure was designed for security and compliance. Learn how to leverage the built-in services to store your app data securely to ensure that only authorized services and clients have access to it.

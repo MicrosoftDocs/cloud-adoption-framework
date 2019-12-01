@@ -5,7 +5,7 @@ description: Migrate assets
 author: matticusau
 ms.author: mlavery
 ms.date: 08/08/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
@@ -15,6 +15,8 @@ ms.localizationpriority: high
 # Migrate assets (infrastructure, apps, and data)
 
 In this phase of the journey, you use the output of the assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
+
+<!-- markdownlint-disable MD025 -->
 
 # [Native migration tools](#tab/Tools)
 
@@ -39,11 +41,11 @@ To perform a migration using Azure Migrate follow these steps:
 1. Select **Add a tool** to start your migration project.
 1. Select the subscription, resource group, and geography to host the migration.
 1. Select **Select assessment tool** > **Azure Migrate: Server Assessment** >  **Next**.
-1. Select **Review + add tool(s)**, and verify the configuration. Click **Add tool(s)** to initiate the job to create the migration project and register the selected solutions.
+1. Select **Review + add tools**, and verify the configuration. Click **Add tools** to initiate the job to create the migration project and register the selected solutions.
 
 <!-- TODO: TBA -->
 
-### Read more
+### Learn more
 
 - [Azure Migrate tutorial - Migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
 
@@ -193,11 +195,13 @@ For more information, see:
 
 ## Cosmos DB Data Migration Tool
 
-Azure Cosmos DB Data Migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The Data Migration tool can also be used when migrating from a single partition collection to a multi-partition collection for the SQL API.
+Azure Cosmos DB Data Migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The Data Migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
 
 For more information, see:
 
-- [Cosmos DB Data Migration Tool](https://docs.microsoft.com/en-us/azure/cosmos-db/import-data)
+- [Cosmos DB Data Migration Tool](https://docs.microsoft.com/azure/cosmos-db/import-data)
+
+<!-- markdownlint-disable MD025 -->
 
 # [Third-party migration tools](#tab/third-party-tools)
 
@@ -219,7 +223,7 @@ Zerto provides virtual replication handling both Microsoft Hyper-V and VMware vS
 
 Carbonite provides server and data migration solutions to migrate workloads to, from, or between any physical, virtual, or cloud-based environment.
 
-[Learn More](https://www.carbonite.com/data-protection/data-migration-software)
+[Learn more](https://www.carbonite.com/data-protection/data-migration-software)
 
 ## Movere
 
@@ -231,7 +235,7 @@ Movere is a discovery solution that provides the data and insights needed to pla
 
 You can choose from a variety of experienced systems integrator partners and tools to support your Azure Cosmos DB migrations for your NoSQL database requirements.
 
-[Learn more](https://docs.microsoft.com/en-us/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
+[Learn more](https://docs.microsoft.com/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
 
 Visit the [Azure Migration Center](https://azure.microsoft.com/migration/support) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
 
@@ -256,7 +260,7 @@ These are not the only tools available. Many other third-party tools are widely 
 
 As you migrate into cloud technologies this presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
 
-[Azure DevOps](https://dev.azure.com) provides all of the required functionality and integration with Azure, On-premises, or even other clouds. Find out more [here](https://azure.microsoft.com/services/devops). For a guided training, see [CI and CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
+Azure DevOps provides all of the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops). For guided training, see [CI and CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
 # [Cost management](#tab/ManageCost)
 

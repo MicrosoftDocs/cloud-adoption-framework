@@ -13,11 +13,11 @@ ms.custom: organize
 
 # Cloud center of excellence
 
-Business and technical agility are core objectives of most IT organizations. Cloud center of excellence (CCoE) is a function that creates a balance between speed and stability.
+Business and technical agility are core objectives of most IT organizations. A cloud center of excellence (CCoE) is a function that creates a balance between speed and stability.
 
 ## Function structure
 
-CCoE requires collaboration between each of the following capabilities:
+A CCoE model requires collaboration between each of the following capabilities:
 
 - Cloud adoption (specifically solution architects)
 - Cloud strategy (specifically the program and project managers)
@@ -87,7 +87,7 @@ In exchange for these benefits, the existing IT function may be trading the foll
 
 In healthy cloud-forward companies, this negotiation process is a dynamic conversation between peers and partnering IT teams. The technical details may be complex, but are manageable when IT understands the objective and is supportive of the CCoE efforts. When IT is less than supportive, the following section on enabling CCoE success can help overcome cultural blockers.
 
-## Enabling CCoE success
+## Enable CCoE success
 
 Before proceeding with this model, it is important to validate the company's tolerance for a growth mindset and IT's comfort with releasing central responsibilities. As mentioned above, the purpose of a CCoE is to exchange control for agility and speed.
 
@@ -128,7 +128,7 @@ Additionally, we recommend that the business stakeholders stay informed of the p
 
 ## Next steps
 
-Cloud center of excellence requires both a [cloud platform capabilities](./cloud-platform.md) and [cloud automation capabilities](./cloud-automation.md). The next step is to align [cloud platform capabilities](./cloud-platform.md).
+A CCoE model requires both a [cloud platform capabilities](./cloud-platform.md) and [cloud automation capabilities](./cloud-automation.md). The next step is to align [cloud platform capabilities](./cloud-platform.md).
 
 > [!div class="nextstepaction"]
 > [Align a cloud platform capabilities](./cloud-platform.md)

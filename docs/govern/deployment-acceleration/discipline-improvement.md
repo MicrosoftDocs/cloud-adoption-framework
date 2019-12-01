@@ -78,7 +78,7 @@ Once the transformation is complete, governance and operations must live on for 
 
 **Minimum suggested activities:**
 
-- Customize your [Deployment Acceleration toolchain](./toolchain.md) based on changes to your organization’s changing identity needs.
+- Customize your [Deployment Acceleration toolchain](./toolchain.md) based on changes to your organization's changing identity needs.
 - Automate notifications and reports to alert you of potential configuration issues or malicious threats.
 - Monitor and report on application and resource usage.
 - Report on post-deployment metrics and distribute to stakeholders.

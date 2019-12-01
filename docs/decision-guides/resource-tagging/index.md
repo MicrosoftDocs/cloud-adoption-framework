@@ -2,8 +2,8 @@
 title: "Resource naming and tagging decision guide"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about resource organization and tagging as a core service in Azure migrations.
-author: rotycenh
-ms.author: v-tyhopk
+author: alexbuckgit
+ms.author: abuck
 ms.date: 02/11/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
@@ -35,7 +35,7 @@ Tagging schemes that include a business aligned focus, such as accounting, busin
 
 A standardized naming convention is the starting point for organizing your cloud-hosted resources. A properly structured naming system allows you to quickly identify resources for both management and accounting purposes. If you have existing IT naming conventions in other parts of your organization, consider whether your cloud naming conventions should align with them or if you should establish separate cloud-based standards.
 
-Note also that different Azure resource types have different [naming requirements](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions#naming-rules-and-restrictions). Your naming conventions must be compatible with these naming requirements.
+Note also that different Azure resource types have different [naming requirements](../../ready/azure-best-practices/naming-and-tagging.md). Your naming conventions must be compatible with these naming requirements.
 
 ## Resource tagging patterns
 
@@ -68,8 +68,8 @@ The common tagging patterns listed below provide examples of how tagging can be 
 
 For more information about naming and tagging in Azure, see:
 
-- [Naming conventions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions). Refer to this guidance for recommended naming conventions for Azure resources.
-- [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags?toc=/azure/billing/TOC.json). You can apply tags in Azure at both the resource group and individual resource level, giving you flexibility in the granularity of any accounting reports based on applied tags.
+- [Naming conventions for Azure resources](/azure/architecture/best-practices/resource-naming). Refer to this guidance for recommended naming conventions for Azure resources.
+- [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags). You can apply tags in Azure at both the resource group and individual resource level, giving you flexibility in the granularity of any accounting reports based on applied tags.
 
 ## Next steps
 

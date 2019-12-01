@@ -59,7 +59,7 @@ Team members in an IT silo are likely to define themselves through their alignme
 
 This antipattern often emerges from of a common passion for a specific solution. IT silos are then reinforced by the team's advanced skills as a result of the investment in that specific solution. This superior skill can be an accelerator to cloud adoption efforts if the resistance to change can be overcome. It can also become a major blocker if the silos are broken down or if the team members can't accurately evaluate options. Fortunately, IT silos can often be overcome without any significant changes to the organizational chart.
 
-### Addressing resistance from IT silos
+### Address resistance from IT silos
 
 IT silos can be addressed through the following approaches. The best approach will depend on the root cause of the resistance.
 
@@ -77,7 +77,7 @@ During review of the competing solution, use the practices outlined in [Define c
 
 When IT silos start to resist, it's important to be boundaryless in your own solutions. Be mindful of one simple truth: cloud-native isn't always the best solution. Consider hybrid solutions that might provide an opportunity to extend the existing investments of the IT silo into the future.
 
-Also consider cloud-based versions of the solution that the IT silo team uses now. Experiment with those solutions and expose yourself to the viewpoint of those living in the IT silo. At minimum, you will gain a fresh perspective. In many situations, you might earn enough of the IT silo's respect to lessen resistance.
+Also consider cloud-based versions of the solution that the IT silo team uses now. Experiment with those solutions and expose yourself to the viewpoint of those living in the IT silo. At a minimum, you will gain a fresh perspective. In many situations, you might earn enough of the IT silo's respect to lessen resistance.
 
 **Invest in education:** Many people living in an IT silo became passionate about the current solution as a result of expanding their own education. Investing in the education of these teams is seldom misplaced. Allocate time for these individuals to engage in self-learning, classes, or even conferences to break the day-to-day focus on the current solution.
 
@@ -107,16 +107,18 @@ Fiefdoms are especially common in organizations that have experienced IT downsiz
 
 Generally, fiefdoms are the result of a line manager who fears loss of the team and the associated power base. These leaders often have a sense of duty to their team and feel a need to protect their subordinates from negative consequences. Phrases like "shelter the team from change" and "protect the team from process disruption" can be indicators of an overly guarded manager who might need more support from leadership.
 
-### Addressing resistance from IT fiefdoms
+### Address resistance from IT fiefdoms
 
-IT fiefdoms can demonstrate some growth by following the approaches to [addressing IT silo resistance](#addressing-resistance-from-it-silos). Before you try to address resistance from an IT fiefdom, we recommend that you treat the team like an IT silo first. If those types of approaches fail to yield any significant change, the resistant team might be suffering from an IT fiefdom antipattern. The root cause of IT fiefdoms is a little more complex to address, because that resistance tends to come from the direct line manager (or a leader higher up the organizational chart). Challenges that are IT silo-driven are typically simpler to overcome.
+IT fiefdoms can demonstrate some growth by following the approaches to [addressing IT silo resistance](#address-resistance-from-it-silos). Before you try to address resistance from an IT fiefdom, we recommend that you treat the team like an IT silo first. If those types of approaches fail to yield any significant change, the resistant team might be suffering from an IT fiefdom antipattern. The root cause of IT fiefdoms is a little more complex to address, because that resistance tends to come from the direct line manager (or a leader higher up the organizational chart). Challenges that are IT silo-driven are typically simpler to overcome.
 
 When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders should carefully consider insights from the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and [cloud governance team](./cloud-governance.md) before making decisions.
 
 > [!NOTE]
-> IT leaders should never take changes to the organizational chart lightly. They should also validate and analyze feedback from each of the supporting teams. However, transformative efforts like cloud adoption tend to magnify underlying issues that have gone unnoticed or unaddressed long before this effort. When fiefdoms are preventing the company's success, leadership changes are a likely necessity.
+> IT leaders should never take changes to the organizational chart lightly. They should also validate and analyze feedback from each of the supporting teams. However, transformational efforts like cloud adoption tend to magnify underlying issues that have gone unnoticed or unaddressed long before this effort. When fiefdoms are preventing the company's success, leadership changes are a likely necessity.
 >
 > Fortunately, removing the leader of a fiefdom doesn't often end in termination. These strong, passionate leaders can often move into a management role after a brief period of reflection. With the right support, this change can be healthy for the leader of the fiefdom and the current team.
+
+<!-- -->
 
 > [!CAUTION]
 > For managers of IT fiefdoms, protecting the team from risk is a clear leadership value. However, there's a fine line between protection and isolation. When the team is blocked from participating in driving changes, it can have psychological and professional consequences on the team. The urge to resist change might be strong, especially during times of visible change.

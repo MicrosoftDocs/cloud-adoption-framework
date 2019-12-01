@@ -1,22 +1,22 @@
 ---
-title: "Getting started with a cloud migration journey"
+title: "Begin a cloud migration journey in Azure"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Getting started with a cloud migration journey
+description: Begin a cloud migration journey in Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 10/10/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Getting started with a cloud migration journey
+# Begin a cloud migration journey in Azure
 
-Learn about using the Microsoft Cloud Adoption Framework for Azure to begin a cloud migration journey. This framework provides comprehensive guidance for transitioning legacy application workloads using innovative cloud-based technologies.
+Use the Microsoft Cloud Adoption Framework for Azure to begin a cloud migration journey. This framework provides comprehensive guidance for transitioning legacy application workloads to the cloud using innovative cloud-based technologies.
 
 ## Executive summary
 
-The Cloud Adoption Framework helps customers undertake a simplified cloud adoption journey. This framework contains detailed information covering an end-to-end cloud adoption journey, starting with targeted business outcomes and aligning cloud readiness and assessments with clearly defined business objectives. Those outcomes are achieved through a defined path for cloud adoption. With migration-based adoption, the defined path focuses largely on completing a migration of on-premises workloads to the cloud. Sometimes this journey includes modernization of workloads to increase the return on investment from the migration effort.
+The Cloud Adoption Framework helps customers undertake a simplified cloud adoption journey. This framework contains detailed information about an end-to-end cloud adoption journey, starting with targeted business outcomes, and then aligning cloud readiness and assessments with clearly defined business objectives. Those outcomes are achieved through a defined path for cloud adoption. With migration-based adoption, the defined path focuses largely on migrating on-premises workloads to the cloud. Sometimes this journey includes modernization of workloads to increase the return on investment from the migration effort.
 
 This framework is designed primarily for cloud architects and the cloud strategy teams leading cloud adoption efforts. However, many topics in this framework are relevant to other roles across the business and IT. Cloud architects frequently serve as facilitators to engage each of the relevant roles. This executive summary is designed to prepare the various roles before facilitating conversations.
 
@@ -31,7 +31,7 @@ Cloud migrations can help companies achieve their desired business outcomes. Cle
 
 |Critical Business Events | Migration Motivations | Innovation Motivations |
 |---------|---------|---------|
-| Datacenter exit<br/><br/>Mergers, acquisition, or divestiture<br/><br/>Reductions in capital expenses<br/><br/>End of support for mission-critical technologies<br/><br/>Response to regulatory compliance changes<br/><br/>Meet new data sovereignty requirements<br/><br/>Reduce disruptions and improve IT stability|Cost savings<br/><br/>Reduction in vendor or technical complexity<br/><br/>Optimization of internal operations<br/><br/>Increase business agility<br/><br/>Prepare for new technical capabilities<br/><br/>Scale to meet market demands<br/><br/>Scale to meet geographic demands|Prepare for new technical capabilities<br/><br/>Build new technical capabilities<br/><br/>Scale to meet market demands<br/><br/>Scale to meet geographic demands<br/><br/>Improve customer experiences / engagements<br/><br/>Transform products or services<br/><br/>Disrupt the market with new products or services|
+| Datacenter exit<br/><br/>Mergers, acquisition, or divestiture<br/><br/>Reductions in capital expenses<br/><br/>End of support for mission-critical technologies<br/><br/>Response to regulatory compliance changes<br/><br/>Meet new data sovereignty requirements<br/><br/>Reduce disruptions and improve IT stability|Cost savings<br/><br/>Reduction in vendor or technical complexity<br/><br/>Optimization of internal operations<br/><br/>Increase business agility<br/><br/>Prepare for new technical capabilities<br/><br/>Scale to meet market demands<br/><br/>Scale to meet geographic demands|Prepare for new technical capabilities<br/><br/>Build new technical capabilities<br/><br/>Scale to meet market demands<br/><br/>Scale to meet geographic demands<br/><br/>Improve customer experiences and engagements<br/><br/>Transform products or services<br/><br/>Disrupt the market with new products or services|
 
 <!-- markdownlint-enable MD033 -->
 
@@ -45,7 +45,7 @@ Preparing all participants across the migration effort with an awareness of the 
 
 ## Migration approach
 
-The Cloud Adoption Framework establishes a high-level construct of Plan, Ready, Adopt to group the types of effort required across any cloud adoption. This executive summary builds on that high-level flow to establish iterative processes that can facilitate lift/shift/optimize efforts **and** modernization efforts in a single approach across all cloud migration activities.
+The Cloud Adoption Framework establishes a high-level construct of Plan, Ready, Adopt to group the types of effort required across any cloud adoption. This executive summary builds on that high-level flow to establish iterative processes that can facilitate lift-shift-optimize efforts and modernization efforts in a single approach across all cloud migration activities.
 
 This approach consists of two methodologies or areas of focus: Cloud Strategy & Planning and Cloud Implementation. The [motivation](#motivations) or desired business outcome for a cloud migration often determines how much a team should invest in [strategy and planning](#cloud-strategy-and-planning) and [implementation](#cloud-implementation). Those motivations can also influence decisions to execute each sequentially or in parallel.
 
@@ -59,7 +59,7 @@ The focus of this effort is the migration or modernization of workloads. A workl
 
 Cloud migrations are often considered a single project within a broader program to streamline IT operations, costs, or complexity. The cloud implementation methodology helps align the technical efforts within a series of workload migrations to higher-level business values outlined in the cloud strategy and plan.
 
-**Getting started:** To get started with a cloud implementation, the [Azure migration guide](../migrate/azure-migration-guide/index.md) and [Azure readiness guide](../ready/azure-readiness-guide/index.md) outline the tools and high-level processes needed to be successful in the execution of a cloud implementation. Migrating your first workload using those guides will help the team overcome initial learning curves early in the planning process. Afterwards, additional considerations should be given to the [expanded scope checklist](../migrate/expanded-scope/index.md), [migration best practices](../migrate/azure-best-practices/index.md) and [migration consideration](../migrate/migration-considerations/index.md), to align the baseline guidance with your effort's unique constraints, processes, team structures, and objectives.
+**Getting started:** To get started with a cloud implementation, the [Azure migration guide](../migrate/azure-migration-guide/index.md) and [Azure setup guide](../ready/azure-setup-guide/index.md) outline the tools and high-level processes needed to be successful in the execution of a cloud implementation. Migrating your first workload using those guides will help the team overcome initial learning curves early in the planning process. Afterwards, additional considerations should be given to the [expanded scope checklist](../migrate/expanded-scope/index.md), [migration best practices](../migrate/azure-best-practices/index.md) and [migration consideration](../migrate/migration-considerations/index.md), to align the baseline guidance with your effort's unique constraints, processes, team structures, and objectives.
 
 ## Cloud strategy and planning
 
@@ -71,7 +71,7 @@ Cloud strategy and planning is a methodology that focuses on aligning business o
 
 ### Methodology explained
 
-The Cloud Adoption Framework's Cloud strategy and planning methodology is based on an incremental approach to cloud implementation that aligns to agile technology strategies, cultural maturity based on growth mindset approaches, and strategies driven by business outcomes. This methodology consists of the following high-level components that guide the implementation of each strategy.
+The Cloud Adoption Framework's cloud strategy and planning methodology is based on an incremental approach to cloud implementation that aligns to agile technology strategies, cultural maturity based on growth mindset approaches, and strategies driven by business outcomes. This methodology consists of the following high-level components that guide the implementation of each strategy.
 
 As depicted in the image above, this framework aligns strategic decisions to a small number of contained processes, which operate within an iterative model. While described in a linear document, each of the following processes is expected to mature in parallel with iterations of the cloud implementation. The links for each process will aid in defining the end state and the means of maturing toward the desired end state:
 
@@ -79,10 +79,10 @@ As depicted in the image above, this framework aligns strategic decisions to a s
 - **[Ready](../ready/index.md):** Preparing the business, culture, people, and environment for coming changes leads to success in each effort and accelerates implementation and change projects.
 - **Adopt:** Ensure proper implementation of desired changes, across IT and business processes, to achieve business outcomes.
   - **[Migrate](../migrate/index.md):** Iterative execution of the [cloud implementation methodology](#cloud-implementation) adhering to the tested process of Assess, Migrate, Optimize, and Secure & Manage to create a repeatable process for migrating workloads.
-- **[Operate](../operate/index.md):** Define a manageable operating model to guide activities during and long after adoption.
-  - **[Organize](../organize/index.md):** Align people and teams to deliver proper cloud operations and adoption.
-  - **[Govern](../govern/index.md):** Align corporate policy to tangible risks, mitigated through policy, process, and cloud-based governance tooling.
-  - **[Manage](../manage/index.md):** Expand IT operations to ensure cloud-based solutions can be operated through secure, cost effective processes using modern, cloud-first operations tools.
+  - **[Innovate](../innovate/index.md):** Drive business value through innovation activities that unlock new technical skills and expanded business capabilities.
+- **[Govern](../govern/index.md):** Align corporate policy to tangible risks, mitigated through policy, process, and cloud-based governance tooling.
+- **[Manage](../manage/index.md):** Expand IT operations to ensure cloud-based solutions can be operated through secure, cost effective processes using modern, cloud-first operations tools.
+- **[Organize](../organize/index.md):** Align people and teams to deliver proper cloud operations and adoption.
 
 Throughout this migration experience this framework will be used to address ambiguity, manage change, and guide cross-functional teams through the realization of business outcomes.
 
@@ -129,12 +129,18 @@ The technologies migrated to the cloud constantly expand as cloud providers add 
 The Cloud Adoption Framework is a lifecycle solution. It is designed to help readers who are just beginning their journey and as well as readers who are deep into their migration. As such, content is very context and audience specific. Next steps are best aligned to the high-level process the reader would like to improve next.
 
 > [!div class="nextstepaction"]
+> [Strategy](../strategy/index.md)
+>
 > [Plan](../plan/index.md)
 >
 > [Ready](../ready/index.md)
 >
 > [Migrate](../migrate/index.md)
 >
-> [Manage](../manage/index.md)
+> [Innovate](../innovate/index.md)
 >
 > [Govern](../govern/index.md)
+>
+> [Manage](../manage/index.md)
+>
+> [Organize](../organize/index.md)
