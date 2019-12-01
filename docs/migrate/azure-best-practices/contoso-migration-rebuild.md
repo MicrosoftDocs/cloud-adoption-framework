@@ -138,34 +138,45 @@ Contoso admins run a deployment script to create the managed Kubernetes cluster 
 
 The Contoso admins provision as follows:
 
-1.They open the folder using Visual Studio Code, and moves to the **/deploy/k8s** directory, which contains the script **gen-aks-env.ps1**.
+1. They open the folder using Visual Studio Code, and moves to the **/deploy/k8s** directory, which contains the script **gen-aks-env.ps1**.
+
 2. They run the script to create the managed Kubernetes cluster, using AKS and ACR.
-    ![AKS](./media/contoso-migration-rebuild/aks1.png)
+
+   ![AKS](./media/contoso-migration-rebuild/aks1.png)
+
 3. With the file open, they update the $location parameter to **eastus2**, and save the file.
-    ![AKS](./media/contoso-migration-rebuild/aks2.png)
+
+   ![AKS](./media/contoso-migration-rebuild/aks2.png)
+
 4. They select **View** > **Integrated Terminal** to open the integrated terminal in Visual Studio Code.
-    ![AKS](./media/contoso-migration-rebuild/aks3.png)
+
+   ![AKS](./media/contoso-migration-rebuild/aks3.png)
+
 5. In the PowerShell Integrated terminal, they sign into Azure using the Connect-AzureRmAccount command. [Learn more](https://docs.microsoft.com/powershell/azure/get-started-azureps) about getting started with PowerShell.
-    ![AKS](./media/contoso-migration-rebuild/aks4.png)
+
+   ![AKS](./media/contoso-migration-rebuild/aks4.png)
+
 6. They authenticate Azure CLI by running the **az login** command, and following the instructions to authenticate using their web browser. [Learn more](/cli/azure/authenticate-azure-cli?view=azure-cli-latest) about logging in with Azure CLI.
-    ![AKS](./media/contoso-migration-rebuild/aks5.png)
+
+   ![AKS](./media/contoso-migration-rebuild/aks5.png)
+
 7. They run the following command, passing the resource group name of ContosoRG, the name of the AKS cluster smarthotel-aks-eus2, and the new registry name.
 
-    ```PowerShell
-    .\gen-aks-env.ps1  -resourceGroupName ContosoRg -orchestratorName smarthotelakseus2 -registryName smarthotelacreus2
-    ```
+   ```PowerShell
+   .\gen-aks-env.ps1  -resourceGroupName ContosoRg -orchestratorName smarthotelakseus2 -registryName smarthotelacreus2
+   ```
 
-    ![AKS](./media/contoso-migration-rebuild/aks6.png)
+   ![AKS](./media/contoso-migration-rebuild/aks6.png)
 
 8. Azure creates another resource group, containing the resources for the AKS cluster.
 
-    ![AKS](./media/contoso-migration-rebuild/aks7.png)
+   ![AKS](./media/contoso-migration-rebuild/aks7.png)
 
 9. After the deployment is finished, they install the **kubectl** command-line tool. The tool is already installed on the Azure CloudShell.
 
-    ```console
-    az aks install-cli
-    ```
+   ```console
+   az aks install-cli
+   ```
 
 10. They verify the connection to the cluster by running the **kubectl get nodes** command. The node is the same name as the VM in the automatically created resource group.
 
@@ -409,11 +420,11 @@ In the Azure portal, Contoso admins provision the Function App.
 
 1. They select **Function App**.
 
-    ![Create function app](./media/contoso-migration-rebuild/function-app1.png)
+   ![Create function app](./media/contoso-migration-rebuild/function-app1.png)
 
 2. They provide an app name (**smarthotelpetchecker**). They place the app in the production resource group **ContosoRG**.They set the hosting place to **Consumption Plan**, and place the app in the East US 2 region. A new storage account is created, along with an Application Insights instance for monitoring.
 
-    ![Function app settings](./media/contoso-migration-rebuild/function-app2.png)
+   ![Function app settings](./media/contoso-migration-rebuild/function-app2.png)
 
 3. After the app is deployed, they browse to the app address to check it's been created successfully.
 
@@ -423,9 +434,10 @@ Contoso admins create two different projects for the front-end site.
 
 1. In Azure DevOps, they create a project **SmartHotelFrontend**.
 
-    ![Front-end project](./media/contoso-migration-rebuild/function-app1.png)
+   ![Front-end project](./media/contoso-migration-rebuild/function-app1.png)
 
 2. They import the [SmartHotel360 front end](https://github.com/Microsoft/SmartHotel360-public-web.git) Git repository into the new project.
+
 3. For the function app, they create another Azure DevOps project (SmartHotelPetChecker), and import the [PetChecker](https://github.com/Microsoft/SmartHotel360-PetCheckerFunction ) Git repository into this project.
 
 ### Configure the web app
@@ -565,14 +577,21 @@ Contoso admins deploy the app as follows.
 14. After the function is deployed, it appears in the Azure portal, with the **Running** status.
 
     ![Deploy the function](./media/contoso-migration-rebuild/function6.png)
-
+    
 15. They browse to the app to test that the Pet Checker app is working as expected, at [http://smarthotel360public.azurewebsites.net/Pets](http://smarthotel360public.azurewebsites.net/Pets).
+
 16. They select the avatar to upload a picture.
+
     ![Deploy the function](./media/contoso-migration-rebuild/function7.png)
+    
 17. The first photo they want to check is of a small dog.
+
     ![Deploy the function](./media/contoso-migration-rebuild/function8.png)
+    
 18. The app returns a message of acceptance.
+
     ![Deploy the function](./media/contoso-migration-rebuild/function9.png)
+    
 
 ## Review the deployment
 
@@ -601,12 +620,13 @@ With the migrated resources in Azure, Contoso now needs to fully operationalize 
 
 In this article, Contoso rebuilds the SmartHotel360 app in Azure. The on-premises app front-end VM is rebuilt to Azure App Service web apps. The application back end is built using microservices deployed to containers managed by Azure Kubernetes Service (AKS). Contoso enhanced app functionality with a pet photo app.
 
-## Suggested Skills
+## Suggested skills
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
-Here are a couple of examples of tailored learning paths on Microsoft Learn which align with the Contoso SmartHotel360 app in Azure.
+
+Here are a couple of examples of tailored learning paths on Microsoft Learn that align with the Contoso SmartHotel360 app in Azure.
 
 [Deploy a website to Azure with Azure App Service](https://docs.microsoft.com/learn/paths/deploy-a-website-with-azure-app-service/): Web apps in Azure allow you to publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to provide secure access to your site.
 
-[Process and classify images with the Azure Cognitive Vision Services](https://docs.microsoft.com/learn/paths/classify-images-with-vision-services/): Azure Functions enable the creation of event driven, compute-on-demand systems that can be triggered by various external events. Learn how to leverage functions to execute server-side logic and build serverless architectures.
+[Process and classify images with the Azure Cognitive Vision Services](https://docs.microsoft.com/learn/paths/classify-images-with-vision-services/): Azure Cognitive Services offers pre-built functionality to enable computer vision functionality in your applications. Learn how to use the Cognitive Vision Services to detect faces, tag and classify images, and identify objects.
 
