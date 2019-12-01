@@ -33,10 +33,10 @@ After migration, the most critical task is to secure migrated workloads from int
 
 Microsoft works hard to ensure that Azure tenant admins have the information needed to enable security features that protect workloads from attacks. Azure Security Center provides unified security management. From the Security Center, you can apply security policies across workloads, limit threat exposure, and detect and respond to attacks. Security Center analyzes resources and configurations across Azure tenants and makes security recommendations, including:
 
-- **Centralized policy management** – Ensure compliance with company or regulatory security requirements by centrally managing security policies across all your hybrid cloud workloads.
-- **Continuous security assessment** – Monitor the security posture of machines, networks, storage and data services, and applications to discover potential security issues.
-- **Actionable recommendations** – Remediate security vulnerabilities before they can be exploited by attackers with prioritized and actionable security recommendations.
-- **Prioritized alerts and incidents** - Focus on the most critical threats first with prioritized security alerts and incidents.
+- **Centralized policy management:** Ensure compliance with company or regulatory security requirements by centrally managing security policies across all your hybrid cloud workloads.
+- **Continuous security assessment:** Monitor the security posture of machines, networks, storage and data services, and applications to discover potential security issues.
+- **Actionable recommendations:** Remediate security vulnerabilities before they can be exploited by attackers with prioritized and actionable security recommendations.
+- **Prioritized alerts and incidents:** Focus on the most critical threats first with prioritized security alerts and incidents.
 
 In addition to assessments and recommendations, the Azure Security Center provides other security features that can be enabled for specific resources.
 
@@ -48,7 +48,7 @@ In addition to assessments and recommendations, the Azure Security Center provid
   - Adaptive application controls allow you to approve apps, and prevent rogue users or administrators from installing unapproved or vetting software apps on your VMs.
     - You can block or alert attempts to run malicious apps, avoid unwanted or malicious apps, and ensure compliance with your organization's app security policy.
 - **File Integrity Monitoring.** Ensure the integrity of files running on VMs.
-  - You don’t need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File integrity Monitoring examines system files and registry settings for changes, and notifies you if something is updated.
+  - You don't need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File integrity Monitoring examines system files and registry settings for changes, and notifies you if something is updated.
   - Security Center recommends which files you should monitor.
 
 **Learn more:**
@@ -131,7 +131,6 @@ Azure provides a couple of solutions:
   - A web application firewall can be monitored using Azure Monitor, and is integrated into Azure Security Center.
 
 ![Secure web apps](./media/migrate-best-practices-security-management/web-apps.png)
-
 *Azure Key Vault*
 
 **Learn more:**
@@ -170,7 +169,6 @@ Azure Active Directory (Azure AD) provides activity logs that appear in Azure Mo
 - Make it a common practice to review the logs or integrate your security information and event management (SIEM) tools to automatically review abnormalities. If you're not using Premium 1 or 2, you'll need to do a lot of analysis yourself or using your SIEM system. Analysis includes looking for risky sign-ins and events, and other user attack patterns.
 
 ![Users and Groups](./media/migrate-best-practices-security-management/azure-ad.png)
-
 *Azure AD Users and Groups*
 
 **Learn more:**
@@ -209,19 +207,17 @@ Ensuring that your resource groups have meaningful names that admins and support
 - If you're synchronizing your on-premises Active Directory to Azure AD using Azure AD Connect, consider matching the names of security groups on-premises to the names of resource groups in Azure.
 
 ![Naming](./media/migrate-best-practices-security-management/naming.png)
-
 *Resource group naming*
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/naming-conventions) naming conventions.
+- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) naming conventions.
 
 ## Best practice: Implement delete locks for resource groups
 
 The last thing you need is for a resource group to disappear because it was deleted accidentally. We recommend that you implement delete locks so that this doesn't happen.
 
 ![Delete locks](./media/migrate-best-practices-security-management/locks.png)
-
 *Delete locks*
 
 **Learn more:**
@@ -275,7 +271,7 @@ Just as blueprint allows engineers and architects to sketch a project's design p
 
 Building secure, scalable, and manageable workloads in Azure can be daunting. With continual changes, it can be difficult to keep up with different features for an optimal environment. Having a reference to learn from can be helpful when designing and migrating your workloads. Azure and Azure partners have built several sample reference architectures for various types of environments. These samples are designed to provide ideas that you can learn from and build on.
 
-Reference architectures are arranged by scenario. They contain recommended practices and advice on management, availability, scalability, and security.
+Reference architectures are arranged by scenario. They contain best practices and advice on management, availability, scalability, and security.
 The Azure App Service Environment provides a fully isolated and dedicated environment in which to run App Service apps, including Windows and Linux web apps, Docker containers, mobile apps, and functions. App Service adds the power of Azure to your application, with security, load balancing, autoscaling, and automated management. You can also take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps and GitHub, package management, staging environments, custom domain, and SSL certificates. App Service is useful for apps that need isolation and secure network access, and those that use high amounts of memory and other resources that need to scale.
 
 **Learn more:**
@@ -350,11 +346,11 @@ Azure Backup creates data recovery points that are stored in Azure storage. Azur
 
 You can use Azure Backup to back up VMs in a couple of ways.
 
-- **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once and day, and restore the VM disk as needed. Azure Backup takes app-aware data snapshots (VSS), and no agent is installed on the VM.
+- **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once per day, and you can restore the VM disk as needed. Azure Backup takes app-aware data snapshots (VSS), and no agent is installed on the VM.
 - **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups as well as granular backup and restore options. Backup is up to three times a day, at the file/folder level. It isn't app-aware and Linux isn't supported. Install the Microsoft Azure Recovery Services (MARS) agent on each VM that you want to back up using this method.
 - **Protect the VM to Azure Backup Server.** Azure Backup Server is provided free with Azure Backup. The VM is backed up to local Azure Backup Server storage. You then back up the Azure Backup Server to Azure in a vault. Backup is app-aware, with full granularity over backup frequency and retention. You can back up at the app level, for example by backing up SQL Server or SharePoint.
 
-For security, Azure Backup encrypts data in-flight using AES 256 and sends it over HTTPS to Azure. Backed-up data at-rest in Azure is encrypted using [Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), and data for transmission and storage.
+For security, Azure Backup encrypts data in-flight using AES 256 and sends it over HTTPS to Azure. Backed-up data at-rest in Azure is encrypted using [Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption?toc=/azure/storage/queues/toc.json), and data for transmission and storage.
 
 ![Azure Backup](./media/migrate-best-practices-security-management/iaas-backup.png)
 *Azure Backup*
@@ -396,7 +392,6 @@ Azure Site Recovery is the primary Azure service for ensuring that Azure VMs can
 Site Recovery replicates VMs from a primary to secondary Azure region. When disaster strikes, you fail VMs over from the primary region, and continue accessing them as normal in the secondary region. When operations return to normal, you can fail back VMs to the primary region.
 
 ![Azure Site Recovery](./media/migrate-best-practices-security-management/site-recovery.png)
-
 *Site Recovery*
 
 **Learn more:**
@@ -415,7 +410,6 @@ Azure managed disks simplify disk management for Azure IaaS VMs by managing the�
 - You should create VMs in availability sets for high resilience and availability. When planned or unplanned outages occur, availability sets ensure that at least one of your VMs in the set continues to be available.
 
 ![Managed disks](./media/migrate-best-practices-security-management/managed-disks.png)
-
 *Managed disks*
 
 **Learn more:**
@@ -424,7 +418,7 @@ Azure managed disks simplify disk management for Azure IaaS VMs by managing the�
 - [Learn about](https://docs.microsoft.com/azure/virtual-machines/windows/convert-unmanaged-to-managed-disks) converting disks to managed.
 - [Learn how to](https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability) manage the availability of Windows VMs in Azure.
 
-## Best Practice: Monitor resource usage and performance
+## Best practice: Monitor resource usage and performance
 
 You might have moved your workloads to Azure for its immense scaling capabilities. However, moving your workload doesn't mean that Azure will automatically implement scaling without your input. As an example:
 

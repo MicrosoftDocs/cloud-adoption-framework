@@ -104,7 +104,7 @@ Once the transformation is complete, governance and operations must live on for 
 
 **Minimum suggested activities:**
 
-- Customize your [Resource Consistency toolchain](./toolchain.md) based on updates to your organization’s changing Cost Management needs.
+- Customize your [Resource Consistency toolchain](./toolchain.md) based on updates to your organization's changing Cost Management needs.
 - Consider automating any notifications and reports to reflect actual resource usage.
 - Refine Architecture Guidelines to guide future adoption processes.
 - Educate affected teams periodically to ensure ongoing adherence to the architecture guidelines.

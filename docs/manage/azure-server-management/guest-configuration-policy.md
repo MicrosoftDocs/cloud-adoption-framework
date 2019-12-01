@@ -12,34 +12,34 @@ ms.subservice: operate
 
 # Guest Configuration policy
 
-The Azure Policy [Guest Configuration](/azure/governance/policy/concepts/guest-configuration) extension allows you to audit the configuration settings in a virtual machine. Guest Configuration is currently supported only on Azure VMs.
+You can use the Azure Policy [Guest Configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration) extension to audit the configuration settings in a virtual machine. Guest Configuration is currently supported only on Azure VMs.
 
-You can find the list of Guest Configuration policies by searching for the category "Guest Configuration" on the Azure Policy portal page. You can also find the list by running this cmdlet in a PowerShell window:
+To find the list of Guest Configuration policies, search for "Guest Configuration" on the Azure Policy portal page. Or run this cmdlet in a PowerShell window to find the list:
 
 ```powershell
 Get-AzPolicySetDefinition | where-object {$_.Properties.metadata.category -eq "Guest Configuration"}
 ```
 
 > [!NOTE]
-> Guest Configuration functionality is regularly updated to support additional policy sets. Check for new supported policies periodically and evaluate whether they're useful for your needs.
+> Guest Configuration functionality is regularly updated to support additional policy sets. Check for new supported policies periodically and evaluate whether they'll be useful.
 
 <!-- TODO: Update these links when available. 
 
-By default, we recommend enabling the following policies:
+By default, we recommend that you enable the following policies:
 
-- [Preview]: Audit to verify password security settings are set correctly inside Linux and Windows machines.
+- [Preview]: Audit to verify that password-security settings are correct on Linux and Windows machines.
 - Audit to verify that certificates are not nearing expiration on Windows VMs.
 
 -->
 
 ## Deployment
 
-You can use the following example PowerShell script to deploy these policies:
+Use the following example PowerShell script to deploy these policies to:
 
 - Verify that password security settings in Windows and Linux computers are set correctly.
 - Verify that certificates aren't close to expiration on Windows VMs.
 
- Before you run this script, you'll need to sign in by using the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet. When you run the script, you'll need to provide the name of the subscription you want to apply the policies to.
+ Before you run this script, use the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in. When you run the script, you must provide the name of the subscription that you want to apply the policies to.
 
 ```powershell
 

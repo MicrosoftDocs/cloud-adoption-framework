@@ -51,7 +51,7 @@ In addition to the high-level accountability, there are actions that an individu
   - To avoid surprises later in the process, at least one representative of the business should be involved in the approval process.
 
 > [!CAUTION]
-> This full list of responsibilities and actions can support large and complex migrations involving multiple roles with varying levels of responsibility, and requiring a detailed approval process. Smaller and simpler migration efforts may not require all of roles and actions described here. To determine which of these activities add value and which are unnecessary overhead, your cloud adoption team and the cloud strategy team are advised to use this full process as part of your first workload migration. After the workload has been verified and tested, the team can evaluate this process and choose which actions to use moving forward.
+> This full list of responsibilities and actions can support large and complex migrations involving multiple roles with varying levels of responsibility, and requiring a detailed approval process. Smaller and simpler migration efforts may not require all of roles and actions described here. To determine which of these activities add value and which are unnecessary, your cloud adoption team and the cloud strategy team should use this complete process as part of your first workload migration. After the workload has been verified and tested, the team can evaluate this process and choose which actions to use moving forward.
 
 ## Next steps
 
