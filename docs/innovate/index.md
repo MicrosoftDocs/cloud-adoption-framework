@@ -122,8 +122,11 @@ Here are a couple of examples of role-specific learning paths on Microsoft Learn
 
 [Create serverless applications](https://docs.microsoft.com/learn/paths/create-serverless-applications/): Azure Functions enable the creation of event-driven, compute-on-demand systems that can be triggered by various external events. Learn how to leverage functions to execute server-side logic and build serverless architectures.
 
+To discover additional learning paths, browse the [Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
+
 ## Next steps
 
 The first exercise for cloud innovation is to:
 > [!div class="nextstepaction"]
 > [Build consensus for business value of innovation](./business-value.md)
+
