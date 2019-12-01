@@ -116,7 +116,7 @@ This approach builds on existing lean methodologies. It's designed to help you c
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 
-Here are a couple of examples of role-specific learning paths on Microsoft Learn that align with the Innovate portion of the Cloud Adoption Framework:
+Here are a couple of examples of role-specific learning paths on Microsoft Learn that align with the Innovate portion of the Cloud Adoption Framework.
 
 [Administer containers in Azure](https://docs.microsoft.com/learn/paths/administer-containers-in-azure/): Azure Container Instances (ACI) are the quickest and easiest way to run containers in Azure. This learning path will teach you how to create and manage your containers, and how you can use ACI to provide elastic scale for Kubernetes.
 
