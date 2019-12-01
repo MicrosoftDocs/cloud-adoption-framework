@@ -23,13 +23,13 @@ Return on investment (ROI) is often an important criteria for the C-suite or the
 
 In the next sections, we'll walk through the data you'll need to calculate the initial investment and the gain from investment (earnings).
 
-## Calculating initial investment
+## Calculate initial investment
 
 Initial investment is the capital expense and operating expense required to complete a transformation. The classification of costs can vary depending on accounting models and CFO preference. But this category would include items like professional services to transform, software licenses used only during the transformation, the cost of cloud services during the transformation, and potentially the cost of salaried employees during the transformation.
 
 Add these costs to create an estimate of the initial investment.
 
-## Calculating the gain from investment
+## Calculate the gain from investment
 
 Calculating the gain from investment often requires a second formula that's specific to the business outcomes and associated technical changes. Calculating earnings is harder than calculating cost reductions.
 

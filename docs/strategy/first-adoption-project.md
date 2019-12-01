@@ -44,7 +44,7 @@ To support the preceding criteria, this list provides an example of a first proj
 
 - **Critical business events:** When a critical business event is the primary motivation, implementation of a tool like [Azure Site Recovery](../migrate/azure-migration-guide/migrate.md?tabs=Tools#azure-site-recovery) might be a good first project. During migration, you can use this tool to quickly migrate datacenter assets. But during the first project, you could use it purely as a disaster recovery tool, reducing dependencies on disaster recovery assets within the datacenter.
 
-- **Migration motivations:** When migration is the primary motivation, it's wise to start with the migration of a noncritical workload. The [Azure readiness guide](../ready/azure-readiness-guide/index.md) and the [Azure migration guide](../migrate/azure-migration-guide/index.md) can provide guidance for the migration of your first workload.
+- **Migration motivations:** When migration is the primary motivation, it's wise to start with the migration of a noncritical workload. The [Azure setup guide](../ready/azure-setup-guide/index.md) and the [Azure migration guide](../migrate/azure-migration-guide/index.md) can provide guidance for the migration of your first workload.
 
 - **Innovation motivations:** When innovation is the primary motivation, creation of a targeted dev/test environment can be a great first project.
 
@@ -58,7 +58,7 @@ Additional examples of first adoption projects include:
 - **Dev/test:** Remove dev/test from on-premises environments to give developers control, agility, and self-service capacity.
 - **Simple apps (less than five):** Modernize and migrate a simple app to quickly gain developer and operations experience.
 - **Performance labs:** When you need high-scale performance in a lab setting, use the cloud to quickly and cost-effectively provision those labs for a short time.
-- **Data Platform:** Creating a data lake with scalable compute for analytics, reporting or machine learning workloads and migrating to managed databases using dump/restore methods or data migration services.
+- **Data Platform:** Creating a data lake with scalable compute for analytics, reporting, or machine learning workloads, and migrating to managed databases using dump/restore methods or data migration services.
 
 ## Next steps
 

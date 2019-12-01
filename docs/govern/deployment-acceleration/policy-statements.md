@@ -15,9 +15,9 @@ ms.custom: governance
 
 Individual cloud policy statements are guidelines for addressing specific risks identified during your risk assessment process. These statements should provide a concise summary of risks and plans to deal with them. Each statement definition should include these pieces of information:
 
-- **Technical risk.** A summary of the risk this policy will address.
-- **Policy statement.** A clear summary explanation of the policy requirements.
-- **Design options.** Actionable recommendations, specifications, or other guidance that IT teams and developers can use when implementing the policy.
+- **Technical risk:** A summary of the risk this policy will address.
+- **Policy statement:** A clear summary explanation of the policy requirements.
+- **Design options:** Actionable recommendations, specifications, or other guidance that IT teams and developers can use when implementing the policy.
 
 The following sample policy statements address common configuration-related business risks. These statements are examples you can reference when drafting policy statements to address your organization's needs. These examples are not meant to be proscriptive, and there are potentially several policy options for dealing with each identified risk. Work closely with business and IT teams to identify the best policies for your unique set of risks.
 
@@ -27,7 +27,7 @@ The following sample policy statements address common configuration-related busi
 
 **Policy statement:** All assets deployed to the cloud should be deployed using templates or automation scripts whenever possible.
 
-**Potential design options:** [Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/template-deployment-overview) provides an infrastructure-as-code approach to deploying your resources to Azure. You could also use [Terraform](https://docs.microsoft.com/azure/terraform/terraform-overview) as a consistent on-premises and cloud-based deployment tool.
+**Potential design options:** [Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/template-deployment-overview) provides an infrastructure as code approach to deploying your resources to Azure. You could also use [Terraform](https://docs.microsoft.com/azure/terraform/terraform-overview) as a consistent on-premises and cloud-based deployment tool.
 
 ## Lack of visibility into system issues
 
@@ -38,13 +38,13 @@ The following sample policy statements address common configuration-related busi
 - Key metrics and diagnostics measures will be identified for all production systems and components, and monitoring and diagnostic tools will be applied to these systems and monitored regularly by operations personnel.
 - Operations will consider using monitoring and diagnostic tools in nonproduction environments such as Staging and QA to identify system issues before they occur in the production environment.
 
-**Potential design options:** [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor), which also includes Log Analytics and Application Insights, provides tools for collecting and analyzing telemetry to help you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. Additionally, [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) reports all changes that are being made at the platform level and should be monitored/audited for non-compliant changes.
+**Potential design options:** [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor), which includes Log Analytics and Application Insights, provides tools for collecting and analyzing telemetry to help you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. Additionally, [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) reports all changes that are being made at the platform level and should be monitored and audited for noncompliant changes.
 
 ## Configuration security reviews
 
 **Technical risk:** Over time, new security threats or concerns can increase the risks of unauthorized access to secure resources.
 
-**Policy statement:** Cloud Governance processes must include monthly review with configuration management teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
+**Policy statement:** Cloud governance processes must include monthly review with configuration management teams to identify malicious actors or usage patterns that should be prevented by cloud asset configuration.
 
 **Potential design options:** Establish a monthly security review meeting that includes both governance team members and IT staff responsible for configuration cloud applications and resources. Review existing security data and metrics to establish gaps in current Deployment Acceleration policy and tooling, and update policy to remediate any new risks.
 

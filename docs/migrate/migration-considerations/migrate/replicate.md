@@ -31,9 +31,9 @@ A *toolchain* that aligns with the new platform and source binaries must be impl
 When planning for the replication of any binary source to a new destination, there are a few fundamental laws to seriously consider during planning and execution.
 
 - **Speed of light.** When moving high volumes of data, fiber is still the fastest option. Unfortunately, those cables can only move data at two-thirds the speed of light. This means that there is no method for instantaneous or unlimited replication of data.
-- **Speed of WAN pipeline.** More consequential than the speed of data movement is the uplink bandwidth, which defines the volume of data per second that can be carried over a company’s existing WAN to the target datacenter.
+- **Speed of WAN pipeline.** More consequential than the speed of data movement is the uplink bandwidth, which defines the volume of data per second that can be carried over a company's existing WAN to the target datacenter.
 - **Speed of WAN expansion.** If budgets allow, additional bandwidth can be added to a company's WAN solution. However, it can take weeks or months to procure, provision, and integrate additional fiber connections.
-- **Speed of disks.** If data could move faster and there was no limit to the bandwidth between the source binary and the target destination, physics would still be a limiter. Data can only be replicated as quickly as it can be read from source disks. Reading every one or zero from every spinning disk in a datacenter takes time.
+- **Speed of disks.** If data could move faster and there was no limit to the bandwidth between the source binary and the target destination, physics would still be a limiter. Data can be replicated only as quickly as it can be read from source disks. Reading every one or zero from every spinning disk in a datacenter takes time.
 - **Speed of human calculations.** Disks and light move faster than human decision processes. When a group of humans is required to collaborate and make decisions together, the results will come even more slowly. Replication can never overcome delays related to human intelligence.
 
 Each of these laws of physics drive the following risks that commonly affect migration plans:

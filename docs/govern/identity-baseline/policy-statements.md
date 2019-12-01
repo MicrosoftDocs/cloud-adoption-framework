@@ -23,7 +23,7 @@ The following sample policy statements address common identity-related business 
 
 ## Lack of access controls
 
-**Technical risk:** Insufficient or ad-hoc access control settings can introduce risk of unauthorized access to sensitive or mission-critical resources.
+**Technical risk:** Insufficient or ad hoc access control settings can introduce risk of unauthorized access to sensitive or mission-critical resources.
 
 **Policy statement:** All assets deployed to the cloud should be controlled using identities and roles approved by current governance policies.
 
@@ -62,7 +62,7 @@ The following sample policy statements address common identity-related business 
 
 **Policy statement:** Deployment of any applications that require customer authentication must use an approved identity provider that is compatible with the primary identity provider for internal users.
 
-**Potential design options:** Implement [Federation with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-fed) between your internal and customer identity providers or leverage [Azure Active Directory B2B](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b)
+**Potential design options:** Implement [Federation with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-fed) between your internal and customer identity providers or use [Azure Active Directory B2B](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b)
 
 ## Identity reviews
 

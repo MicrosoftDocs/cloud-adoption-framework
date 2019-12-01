@@ -16,7 +16,7 @@ A plan is an essential requirement for a successful cloud adoption. A cloud adop
 
 ## Align strategy and planning
 
-Cloud adoption plans start with a well-defined strategy. At minimum, the strategy should outline the motivations, business outcomes, and business justifications for cloud adoption. Those positive returns are then balanced by the effort required to realize them.
+Cloud adoption plans start with a well-defined strategy. At a minimum, the strategy should outline the motivations, business outcomes, and business justifications for cloud adoption. Those positive returns are then balanced by the effort required to realize them.
 
 The effort starts with the digital estate (proposed or existing), which translates the strategy into more tangible workloads and assets. You can then map these tangible elements to technical work. From there, skilled people in a proper organizational structure can execute the technical work. The cloud adoption plan combines all of these topics into one plan that can be forecasted, budgeted, implemented, and managed by means of agile project-management practices. This article series helps you build the plan and provides a few templates to make the job easier.
 
@@ -30,11 +30,11 @@ The acquisition models of the cloud change the core dependencies that made a seq
 
 This article series walks through each step of translating strategy and effort into an actionable cloud adoption plan:
 
-1. **Prerequisites**: Confirm that all prerequisite steps have been completed before you create your plan.
-2. **Define and prioritize workloads**: Prioritize your first 10 workloads to establish an initial adoption backlog.
-3. **Align assets**: Identify which assets (proposed or existing) are required to support the prioritized workloads.
-4. **Review rationalization**: Review rationalization decisions to refine adoption-path decisions: Migrate or Innovate.
-5. **Define iterations and releases**: *Iterations* are the time blocks allocated to do work. *Releases* are the definition of the work to be done before triggering a change to production processes.
+1. **Prerequisites:** Confirm that all prerequisite steps have been completed before you create your plan.
+2. **Define and prioritize workloads:** Prioritize your first 10 workloads to establish an initial adoption backlog.
+3. **Align assets:** Identify which assets (proposed or existing) are required to support the prioritized workloads.
+4. **Review rationalization:** Review rationalization decisions to refine adoption-path decisions: Migrate or Innovate.
+5. **Define iterations and releases:** *Iterations* are the time blocks allocated to do work. *Releases* are the definition of the work to be done before triggering a change to production processes.
 6. **Estimate timelines:** Establish rough timelines for release planning purposes, based on initial estimates.
 
 ## Next steps

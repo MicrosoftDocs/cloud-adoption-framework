@@ -7,24 +7,12 @@ ms.custom: homepage
 layout: LandingPage
 ms.topic: landing-page
 author: BrianBlanchard
-ms.date: 07/04/2019
+ms.date: 10/14/2019
 ---
 
 # Microsoft Cloud Adoption Framework for Azure
 
-The Cloud Adoption Framework is the One Microsoft approach to cloud adoption in Azure, consolidating and sharing best practices from Microsoft employees, partners, and customers. The framework gives enterprise customers a set of tools, guidance, and narratives that help shape technology, business, and people strategies for driving desired business outcomes during their adoption effort. This guidance aligns to various stages and iterations of the typical cloud adoption lifecycle, ensuring easy access to the right guidance at the right time.
-
-![Cloud Adoption Framework overview](./_images/caf-overview.png)
-
-## Getting started: Executive summaries
-
-For customers who are new to the Cloud Adoption Framework, we offer three introductory articles: [Migrate](./getting-started/migrate.md), [Innovate](./getting-started/innovate.md), and [Enable](./getting-started/enable.md). Each article provides an executive summary and a high-level journey through an enterprise's adoption lifecycle.
-
-For more specific guidance, continue reading for links to each stage of the adoption lifecycle.
-
-## Use the Cloud Adoption Framework throughout the adoption lifecycle
-
-Each section of the Cloud Adoption Framework maps to the overview diagram above. This list will help you align to the section that best matches your current stage in the cloud adoption lifecycle.
+The Cloud Adoption Framework is the One Microsoft approach to cloud adoption in Azure, consolidating and sharing best practices from Microsoft employees, partners, and customers. The framework gives customers a set of tools, guidance, and narratives that help shape technology, business, and people strategies for driving desired business outcomes during their adoption effort. This guidance aligns to the following phases of the cloud adoption lifecycle, ensuring easy access to the right guidance at the right time.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -93,12 +81,31 @@ Each section of the Cloud Adoption Framework maps to the overview diagram above.
                     <div class="card" style="padding-bottom:10px;">
                         <div class="cardImageOuter">
                             <div class="cardImage">
-                                <img alt="" src="./_images/caf-adopt.png" data-linktype="external">
+                                <img alt="" src="./_images/caf-migrate.png" data-linktype="external">
                             </div>
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Migrate</h3>
                             Migrate and modernize existing workloads.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li style="display: flex; flex-direction: column;">
+        <a href="./innovate/index.md">
+            <div class="cardSize">
+                <div class="cardPadding" style="padding-bottom:10px;">
+                    <div class="card" style="padding-bottom:10px;">
+                        <div class="cardImageOuter">
+                            <div class="cardImage">
+                                <img alt="" src="./_images/caf-adopt.png" data-linktype="external">
+                            </div>
+                        </div>
+                        <div class="cardText" style="padding-left:0px;">
+                            <h3>Innovate</h3>
+                            Develop new cloud-native or hybrid solutions.
                         </div>
                     </div>
                 </div>
@@ -125,7 +132,7 @@ Each section of the Cloud Adoption Framework maps to the overview diagram above.
         </a>
     </li>
     <li style="display: flex; flex-direction: column;">
-        <a href="./organize/index.md">
+        <a href="./manage/index.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">
@@ -135,8 +142,8 @@ Each section of the Cloud Adoption Framework maps to the overview diagram above.
                             </div>
                         </div>
                         <div class="cardText" style="padding-left:0px;">
-                            <h3>Organize</h3>
-                            Align people to enable cloud adoption and operations.
+                            <h3>Manage</h3>
+                            Operations management for cloud and hybrid solutions.
                         </div>
                     </div>
                 </div>
@@ -145,16 +152,11 @@ Each section of the Cloud Adoption Framework maps to the overview diagram above.
     </li>
 </ul>
 
-## Product roadmap
+## Understand the lifecycle
 
-The Cloud Adoption Framework is currently offered as a public preview. The framework will reach general availability (GA) when the aspirational intent described in the next section has been met in full. In this preview release, the primary areas of focus are:
+Each of the phases captured above are part of a broad cloud adoption lifecycle. The following image ties together each phase to demonstrate the overall lifecycle. The Cloud Adoption Framework is a full lifecycle framework, supporting customers throughout each phase.
 
-- [Cloud adoption strategy](./strategy/index.md)
-- [Cloud adoption planning](./plan/index.md)
-- [Cloud migration](./migrate/index.md)
-- [Cloud governance](./govern/guides/index.md)
-
-We'll expand the Cloud Adoption Framework frequently as it moves closer to the GA release. The expansion will add depth to each section as well as new sections of content. For more information, see the [Cloud Adoption Framework roadmap](./reference/roadmap.md).
+![Cloud Adoption Framework overview](./_images/caf-overview.png)
 
 ## Intent
 
@@ -174,9 +176,7 @@ Each section of the Cloud Adoption Framework represents a different specializati
 
 ## How to use the Microsoft Cloud Adoption Framework for Azure
 
-If your enterprise is new to Azure, begin by reading [Get started with the Cloud Adoption Framework](./getting-started/migrate.md). This overview provides prescriptive guidance for your enterprise's digital transformation as it walks you through each step of the process.
-
-If your enterprise has experience with Azure and you're seeking more detailed guidance or best practices for specific areas, review the [governance overview](./govern/index.md) and the [architectural decision guides](./decision-guides/index.md). We'll add more sections as the GA release approaches.
+If your enterprise is new to Azure, begin by reading [Get started with the Cloud Adoption Framework](./getting-started/migrate.md). This overview provides best practices for your enterprise's digital transformation as it walks you through each step of the process.
 
 > [!div class="nextstepaction"]
 > [Get started](./getting-started/migrate.md)

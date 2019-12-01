@@ -52,10 +52,10 @@ A single member of each team should be identified as accountable for each of the
 In addition to the high-level accountability, there are actions that an individual or group needs to be directly responsible for. The following are a few such responsibilities that affect these activities:
 
 - **Business prioritization.** Make business decisions regarding the workloads to be migrated and general timing constraints. For more information, see [Cloud migration business motivations](../../../strategy/motivations.md).
-- **Change management readiness.** Establish and communicate the plan for tracking technical change during migration. More information on this topic will be available in Q3 2019.
-- **Business user alignment.** Establish a plan for readying the business user community for migration execution. More information on this topic will be available in Q3 2019.
+- **Change management readiness.** Establish and communicate the plan for tracking technical change during migration.
+- **Business user alignment.** Establish a plan for readying the business user community for migration execution.
 - **Digital estate inventory and analysis.** Execution of the tools required to inventory and analyze the digital estate. See the Cloud Adoption Framework discussion of the [digital estate](../../../digital-estate/index.md) for more information.
-- **Cloud readiness.** Evaluate the target deployment environment to ensure that it complies with requirements of the first few workload candidates. See the [Azure readiness guide](../../../ready/azure-readiness-guide/index.md) for more information.
+- **Cloud readiness.** Evaluate the target deployment environment to ensure that it complies with requirements of the first few workload candidates. See the [Azure setup guide](../../../ready/azure-setup-guide/index.md) for more information.
 
 The remaining articles in this series help with the execution of each.
 

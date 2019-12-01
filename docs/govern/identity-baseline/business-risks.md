@@ -19,7 +19,7 @@ This article discusses the reasons that customers typically adopt an Identity Ba
 
 ## Identity Baseline relevancy
 
-Traditional on-premises directories are designed to allow businesses to strictly control permissions and policies for users, groups, and roles within their internal networks and datacenters. This is usually intended to support single tenant implementations, with services applicable only within the on-premises environment.
+Traditional on-premises directories are designed to allow businesses to strictly control permissions and policies for users, groups, and roles within their internal networks and datacenters. These directories typically support single-tenant implementations, with services applicable only within the on-premises environment.
 
 Cloud identity services expand an organization's authentication and access control capabilities to the internet. They support multitenancy and can be used to manage users and access policy across cloud applications and deployments. Public cloud platforms have cloud-native identity services supporting management and deployment tasks and are capable of [varying levels of integration](../../decision-guides/identity/index.md) with your existing on-premises identity solutions. All of these features can result in cloud identity policy being more complicated than your traditional on-premises solutions require.
 

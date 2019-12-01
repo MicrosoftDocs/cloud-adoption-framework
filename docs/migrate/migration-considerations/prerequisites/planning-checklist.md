@@ -1,5 +1,5 @@
 ---
-title: "Migration Environment - Planning Checklist"
+title: "Migration environment planning checklist"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Validate environmental readiness prior to migration
 author: BrianBlanchard
@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Migration environment planning checklist - Validate environmental readiness prior to migration
+# Migration environment planning checklist: validate environmental readiness prior to migration
 
 As an initial step in the migration process, you need to create the right environment in the cloud to receive, host, and support migrating assets. This article provides a list of things to validate in the current environment prior to migration.
 
@@ -22,7 +22,7 @@ This article and checklist assume a _rehost_ or _cloud transition_ approach to c
 
 ## Governance alignment
 
-The first and most important decision regarding any migration-ready environment is the choice of governance alignment. Has a consensus been achieved regarding alignment of governance with the migration foundation? At minimum, the cloud adoption team should understand whether this migration is landing in a single environment with limited governance, a fully governed environment factory, or some variant in between. For more options and guidance on governance alignment, see the article on [Governance and compliance alignment](../../expanded-scope/governance-or-compliance.md).
+The first and most important decision regarding any migration-ready environment is the choice of governance alignment. Has a consensus been achieved regarding alignment of governance with the migration foundation? At a minimum, the cloud adoption team should understand whether this migration is landing in a single environment with limited governance, a fully governed environment factory, or some variant in between. For more options and guidance on governance alignment, see the article on [Governance and compliance alignment](../../expanded-scope/governance-or-compliance.md).
 
 ## Cloud readiness implementation
 
@@ -30,7 +30,7 @@ Whether you choose to align with a broader cloud governance strategy or not for 
 
 If you're planning to align your migration with a cloud governance strategy from the start, you'll need to apply the [Five Disciplines of Cloud Governance](../../../govern/governance-disciplines.md) to help inform decisions on policies, toolchains, and enforcement mechanisms that will align your cloud environment with overall corporate requirements. Consult the Cloud Adoption Framework [actionable governance design guides](../../../govern/guides/index.md) for examples of how to implement this model using Azure services.
 
-If your initial migrations are not closely aligned with a broader cloud governance strategy, the general issues of organization, access, and infrastructure planning still need to be managed. Consult the [Azure readiness guide](../../../ready/azure-readiness-guide/index.md) for help with these cloud readiness decisions.
+If your initial migrations are not closely aligned with a broader cloud governance strategy, the general issues of organization, access, and infrastructure planning still need to be managed. Consult the [Azure setup guide](../../../ready/azure-setup-guide/index.md) for help with these cloud readiness decisions.
 
 > [!CAUTION]
 > We highly recommend that you develop a governance strategy for anything beyond your initial workload migration.
@@ -47,7 +47,7 @@ A consistent approach for naming resources, along with consistent naming schemas
 
 ### Resource governance
 
-A decision regarding the tools to govern resources should be made prior to migration. The tools do not need to be fully implemented, but a direction should be selected and tested. It is advised that the cloud governance team define and require the implementation of a minimum viable product (MVP) for governance tooling prior to migration.
+A decision regarding the tools to govern resources should be made prior to migration. The tools do not need to be fully implemented, but a direction should be selected and tested. The cloud governance team should define and require the implementation of a minimum viable product (MVP) for governance tooling prior to migration.
 
 ## Network
 

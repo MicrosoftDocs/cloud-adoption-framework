@@ -26,7 +26,7 @@ Depending on the desired business outcomes, the skills needed to provide full cl
 - Networking
 - Identity
 - Virtualization
-- Business continuity / Disaster recovery
+- Business continuity and disaster recovery
 - Application owners within IT
 
 The cloud governance capability identifies risks related to current and future releases. This capability is seen in the efforts to evaluate risk, understand the potential impacts, and make decisions regarding risk tolerance. In doing so, plans can quickly be updated to reflect the changing needs of the [cloud adoption capability](./cloud-adoption.md).
@@ -58,7 +58,7 @@ Cloud governance capability is usually delivered by a working team. The time com
 The following represent participants who will frequently participate in cloud governance activities:
 
 - Leaders from middle management and direct contributors in key roles who have been appointed to represent the business will help evaluate risk tolerances.
-- The cloud governance capabilities are offered delivered be an extension of the [cloud strategy capability](./cloud-strategy.md). Just as the CIO and business leaders are expected to participate in cloud strategy capabilities, their direct reports are expected to participate in cloud governance activities.
+- The cloud governance capabilities are delivered by an extension of the [cloud strategy capability](./cloud-strategy.md). Just as the CIO and business leaders are expected to participate in cloud strategy capabilities, their direct reports are expected to participate in cloud governance activities.
 - Business employees that are members of the business unit who work closely with the leadership of the line-of-business should be empowered to make decisions regarding corporate and technical risk.
 - Information Technology (IT) and Information Security (IS) employees who understand the technical aspects of the cloud transformation may serve in a rotating capacity instead of being a consistent provider of cloud governance capabilities.
 
@@ -68,7 +68,7 @@ Some large organizations have existing, dedicated teams that focus on IT governa
 
 **No governance:** It is common for organizations to move into the cloud with no clear plans for governance. Before long, concerns around security, cost, scale, and operations begin to trigger conversations about the need for a governance model and people to staff the processes associated with that model. Starting those conversations before they become concerns is always a good first step to overcome the antipattern of "no governance." The section on [defining corporate policy](../govern/corporate-policy.md) can help facilitate those conversations.
 
-**Governance blocked:** When concerns around security, cost, scale, and operations go unanswered, projects and business goals tend to get blocked. Lack of proper governance generates fear, uncertainty, and doubt amongst stakeholders and engineers. Stop this in its tracks by taking action early. The two governance guides defined in the Cloud Adoption Framework can help you start small, set initially limiting policies to minimize uncertainty and mature governance over time. Choose from the [complex enterprise guide](../govern/guides/complex/index.md) or [standard enterprise guide](../govern/guides/standard/index.md).
+**Governance blocked:** When concerns around security, cost, scale, and operations go unanswered, projects and business goals tend to get blocked. Lack of proper governance generates fear, uncertainty, and doubt among stakeholders and engineers. Stop this in its tracks by taking action early. The two governance guides defined in the Cloud Adoption Framework can help you start small, set initially limiting policies to minimize uncertainty and mature governance over time. Choose from the [complex enterprise guide](../govern/guides/complex/index.md) or [standard enterprise guide](../govern/guides/standard/index.md).
 
 **Voluntary governance:** There tend to be brave souls in every enterprise. Those gallant few who are willing to jump in and help the team learn from their mistakes. Often this is how governance starts, especially in smaller companies. These brave souls volunteer time to fix some issues and push cloud adoption teams toward a consistent well-managed set of best practices.
 

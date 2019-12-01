@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Governance guide for complex enterprises
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/19/2019
+ms.date: 10/17/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: govern
@@ -34,15 +34,15 @@ The following diagram shows the governance MVP hierarchy for organizing resource
 
 Every application should be deployed in the proper area of the management group, subscription, and resource group hierarchy. During deployment planning, the cloud governance team will create the necessary nodes in the hierarchy to empower the cloud adoption teams.
 
-1. Define a management group for each business unit with a detailed hierarchy that reflects geography then environment type (for example, production or not production).
-2. Create a production and nonproduction subscription for each unique combination of discrete business unit or geography. Care should be taken if creating multiple subscriptions. See [here](../../../decision-guides/subscriptions/index.md) for more.
-3. Apply [consistent nomenclature](../../../ready/considerations/naming-and-tagging.md) at each level of this grouping hierarchy.
-4. Resource groups should be deployed in a manner that considers its contents lifecycle: everything that is developed together, is managed together, and retires together goes together. For more information on resource group best practices, [see here](../../../decision-guides/resource-consistency/index.md).
+1. Define a management group for each business unit with a detailed hierarchy that reflects geography first, then environment type (for example, production or nonproduction environments).
+2. Create a production subscription and a nonproduction subscription for each unique combination of discrete business unit or geography. Creating multiple subscriptions requires careful consideration. For more information, see the [Subscription decision guide](../../../decision-guides/subscriptions/index.md).
+3. Apply [consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) at each level of this grouping hierarchy.
+4. Resource groups should be deployed in a manner that considers its contents lifecycle. Resources that are developed together, managed together, and retired together belong in the same resource group. For more information on best practices for using resource groups, [see here](../../../decision-guides/resource-consistency/index.md).
 5. [Region selection](../../../decision-guides/regions/index.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
 
 ![Diagram of large enterprise resource organization](../../../_images/govern/large-enterprise-resource-organization.png)
 
-These patterns provide room for growth without complicating the hierarchy unnecessarily.
+These patterns provide room for growth without making the hierarchy needlessly complicated.
 
 [!INCLUDE [governance-of-resources](../../../../includes/caf-governance-of-resources.md)]
 
@@ -78,7 +78,7 @@ Over time, this governance MVP will be used to incrementally improve governance 
 
 ## Next steps
 
-Now that you’re familiar with the governance MVP and the forthcoming governance changes, read the supporting narrative for additional context.
+Now that you're familiar with the governance MVP and the forthcoming governance changes, read the supporting narrative for additional context.
 
 > [!div class="nextstepaction"]
 > [Read the supporting narrative](./narrative.md)

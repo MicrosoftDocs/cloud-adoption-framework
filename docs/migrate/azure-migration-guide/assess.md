@@ -5,7 +5,7 @@ description: Assess the digital estate
 author: matticusau
 ms.author: mlavery
 ms.date: 08/08/2019
-ms.topic: conceptual
+ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
@@ -18,13 +18,15 @@ In an ideal migration, every asset (infrastructure, app, or data) would be compa
 
 The resources in this section will help you assess of your environment to determine its suitability for migration and which methods to consider.
 
+<!-- markdownlint-disable MD025 -->
+
 # [Tools](#tab/Tools)
 
 The following tools help you assess your environment to determine the suitability of migration and best approach to use. For helpful information on choosing the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
 
 ## Azure Migrate
 
-The Azure Migrate service assesses on-premises infrastructure, applications and data for migration to Azure. The service assesses the migration suitability of on-premises assets, performs performance-based sizing, and provides cost estimates for running on-premises assets in Azure. If you're considering "lift and shift" migrations, or are in the early assessment stages of migration, this service is for you. After completing the assessment, Azure Migrate can be utilized to execute the migration.
+The Azure Migrate service assesses on-premises infrastructure, applications and data for migration to Azure. The service assesses the migration suitability of on-premises assets, performs performance-based sizing, and provides cost estimates for running on-premises assets in Azure. If you're considering lift and shift migrations, or are in the early assessment stages of migration, this service is for you. After completing the assessment, Azure Migrate can be used to execute the migration.
 
 ![Azure Migrate overview](./media/assess/azuremigrate-overview-1.png)
 
@@ -34,7 +36,7 @@ To get started with a server migration assessment using Azure Migrate, follow th
 
 1. Select **Azure Migrate**.
 1. In **Overview**, click **Assess and migrate servers**.
-1. Select **Add tool(s)**.
+1. Select **Add tools**.
 1. In **Discover, assess and migrate servers**, click **Add tools**.
 1. In **Migrate project**, select your Azure subscription, and create a resource group if you don't have one.
 1. In **Project Details**, specify the project name, and geography in which you want to create the project, and click **Next**.
@@ -51,7 +53,7 @@ To get started with a server migration assessment using Azure Migrate, follow th
 
 ::: zone target="docs"
 
-### Read more
+### Learn more
 
 - [Azure Migrate overview](https://docs.microsoft.com/azure/migrate/migrate-services-overview)
 - [Migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
@@ -75,7 +77,7 @@ To use dependency visualization, you need to download and install agents on each
 
 <!-- markdownlint-disable MD024 -->
 
-### Read more
+### Learn more
 
 - [Using Service Map solution in Azure](https://docs.microsoft.com/azure/azure-monitor/insights/service-map)
 - [Azure Migrate and Service Map: Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization)
@@ -97,7 +99,7 @@ The complete list of stakeholders varies between migration projects. It is best 
 
 Establishing a core cloud strategy team, built around these key high-level stakeholders, can help prepare your organization for cloud adoption and guide your overall cloud migration efforts. This team is responsible for understanding cloud technologies and migration processes, identifying the business justification for migrations, and determining the best high-level solutions for migration efforts. They also help identify and work with specific application and business stakeholders to ensure a successful migration.
 
-For more information on how to prepare your organization for cloud migration efforts, see the Cloud Adoption Framework's article on [initial organization alignment](../../ready/initial-org-alignment.md).
+For more information on how to prepare your organization for cloud migration efforts, see the Cloud Adoption Framework's article on [initial organization alignment](../../plan/initial-org-alignment.md).
 
 # [Timelines](#tab/Timelines)
 
