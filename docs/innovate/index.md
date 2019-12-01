@@ -112,15 +112,15 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
 
 This approach builds on existing lean methodologies. It's designed to help you create a cloud-focused conversation about customer adoption and a scientific model for creating business value. The approach also maps existing Azure services to manageable decision processes. This alignment can help you find the right technical options to address specific customer needs or hypotheses.
 
-## Microsoft Learn
+## Suggested skills
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 
-Here are a couple of examples of tailored learning paths on Microsoft Learn which align to the Innovate portion of the Cloud Adoption Framework. 
+Here are a couple of examples of role-specific learning paths on Microsoft Learn that align with the Innovate portion of the Cloud Adoption Framework.
 
-[Administer containers in Azure](https://docs.microsoft.com/learn/paths/administer-containers-in-azure/): Azure Container Instances (ACI) are the quickest and easiest way to run containers in Azure. This learning path will teach you how to create and manage your containers, and how ACI can be used to provide elastic scale for Kubernetes.
+[Administer containers in Azure](https://docs.microsoft.com/learn/paths/administer-containers-in-azure/): Azure Container Instances (ACI) are the quickest and easiest way to run containers in Azure. This learning path will teach you how to create and manage your containers, and how you can use ACI to provide elastic scale for Kubernetes.
 
-[Create Serverless Applications](https://docs.microsoft.com/learn/paths/create-serverless-applications/): Azure Functions enable the creation of event driven, compute-on-demand systems that can be triggered by various external events. Learn how to leverage functions to execute server-side logic and build serverless architectures.
+[Create serverless applications](https://docs.microsoft.com/learn/paths/create-serverless-applications/): Azure Functions enable the creation of event-driven, compute-on-demand systems that can be triggered by various external events. Learn how to leverage functions to execute server-side logic and build serverless architectures.
 
 To discover additional learning paths, browse the [Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
 
