@@ -262,6 +262,14 @@ As you migrate into cloud technologies this presents a great opportunity to set 
 
 Azure DevOps provides all of the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops). For guided training, see [CI and CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
+## Suggested skills
+
+Microsoft Learn is a new approach to learning. Readiness for the new skills responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
+
+Here is an example of a tailored learning path on Microsoft Learn that complements the setup for DevOps guidance in the Cloud Adoption Framework. 
+
+[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents. 
+
 # [Cost management](#tab/ManageCost)
 
 As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload (discussed in more detail in the **[Optimize and Transform](./optimize-and-transform.md)** section).
