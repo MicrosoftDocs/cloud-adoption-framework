@@ -5,7 +5,7 @@ description: Learn how a landing zone provides the basic building block of any c
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/20/2019
-ms.topic: guide
+ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
