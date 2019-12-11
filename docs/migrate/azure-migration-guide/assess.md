@@ -47,7 +47,7 @@ To get started with a server migration assessment using Azure Migrate, follow th
 
 ::: zone target="chromeless"
 
-::: form action="Blade[#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview]" submitText="Assess and migrate servers" :::
+::: form action="OpenBlade[#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview]" submitText="Assess and migrate servers" :::
 
 ::: zone-end
 
