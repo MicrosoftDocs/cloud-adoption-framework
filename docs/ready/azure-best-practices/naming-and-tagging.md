@@ -35,7 +35,7 @@ A naming and tagging strategy includes business and operational details as compo
 
 ### Resource naming
 
-An effective naming convention assembles resource names by using important resource information as parts of a resource's name. For example, using the recommended naming conventions discussed [later in this article](#sample-naming-convention), a public IP resource for a production SharePoint workload is named like this: `pip-sharepoint-prod-westus-001`.
+An effective naming convention assembles resource names by using important resource information as parts of a resource's name. For example, using the recommended naming conventions discussed [later in this article](#sample-naming-convention), a public IP resource for a production SharePoint workload is named like this: `sharepoint-prod-westus-001-pip`.
 
 From the name, you can quickly identify the resource's type, its associated workload, its deployment environment, and the Azure region hosting it.
 
@@ -43,7 +43,7 @@ From the name, you can quickly identify the resource's type, its associated work
 
 All Azure resource types have a scope which defines the level that resource names must be unique. A resource must have a unique name within its scope.
 
-For example, a virtual network has a resource group scope, which means that there can be only one network named `vnet-prod-westus-001` in a given resource group. Other resource groups can have their own virtual network named `vnet-prod-westus-001`. Subnets, to give another example, are scoped to virtual networks, which means that each subnet within a virtual network must be uniquely named.
+For example, a virtual network has a resource group scope, which means that there can be only one network named `prod-westus-001-vnet` in a given resource group. Other resource groups can have their own virtual network named `prod-westus-001-vnet`. Subnets, to give another example, are scoped to virtual networks, which means that each subnet within a virtual network must be uniquely named.
 
 Some resource names, such as PaaS services with public endpoints or virtual machine DNS labels, have global scopes, which means that they must be unique across the entire Azure platform.
 
@@ -63,57 +63,59 @@ Keep the length of naming components short to prevent exceeding resource name le
 | Deployment environment | The stage of the development lifecycle for the workload that the resource supports. | *prod, dev, qa, stage, test* |
 | Region | The Azure region where the resource is deployed. | *westus, eastus2, westeurope, usgovia* |
 
-#### Recommended resource-type prefixes
+#### Recommended resource-type suffixes
 
-Each workload can consist of many individual resources and services. Incorporating resource type prefixes into your resource names makes it easier to visually identify application or service components.
+Each workload can consist of many individual resources and services. Incorporating resource type suffixes into your resource names makes it easier to visually identify application or service components. Further, by using resource suffixes allows for the sorting of resources alphabetically to determine the actual individual resource. 
 
-The following list provides recommended Azure resource type prefixes to use when you define your naming conventions.
 
-| Resource type                       | Resource name prefix |
+The following list provides recommended Azure resource type suffixes to use when you define your naming conventions.
+
+| Resource type                       | Resource name suffixes|
 | ----------------------------------- | -------------------- |
-| Resource group                      | rg-                  |
-| Azure Virtual Network               | vnet-                |
-| Virtual network gateway             | vnet-gw-             |
-| Gateway connection                  | cn-                  |
-| Subnet                              | snet-                |
-| Network security group              | nsg-                 |
-| Route table                         | route-               |
-| Azure Virtual Machines              | vm-                  |
-| VM storage account                  | stvm                 |
-| Public IP                           | pip-                 |
-| Azure Load Balancer                 | lb-                  |
-| NIC                                 | nic-                 |
-| Azure Key Vault                     | kv-                  |
-| Azure Kubernetes Service            | aks-                 |
-| Azure Service Bus                   | sb-                  |
-| Azure Service Bus queues            | sbq-                 |
-| Azure App Service apps              | azapp-               |
-| Azure Functions apps                | azfun-               |
-| Azure Cloud Services                | azcs-                |
-| Azure SQL Database                  | sqldb-               |
-| Azure Cosmos DB (formerly Azure DocumentDB) | cosdb-               |
-| Azure Cache for Redis               | redis-               |
-| Azure Database for MySQL            | mysql-               |
-| Azure SQL Data Warehouse            | sqldw-               |
-| SQL Server Stretch Database         | sqlstrdb-            |
+| Resource group                      | -rg                  |
+| Azure Virtual Network               | -vn                  |
+| Virtual network gateway             | -vn-gw               |
+| Gateway connection                  | -cn                  |
+| Subnet                              | -sn                  |
+| Network security group              | -nsg                 |
+| Route table                         | -rt                  |
+| Azure Virtual Machines              | -vm                  |
+| VM storage account                  | -stvm                |
+| Public IP                           | -pip                 |
+| Azure Load Balancer                 | -lb                  |
+| NIC                                 | -nic                 |
+| Azure Key Vault                     | -kv                  |
+| Azure Kubernetes Service            | -aks                 |
+| Azure Service Bus                   | -sb                  |
+| Azure Service Bus queues            | -sbq                 |
+| Azure App Service apps              | -appsv               |
+| Azure Functions apps                | -func                |
+| Azure Cloud Services                | -cs                  |
+| Azure SQL Database                  | -sqldb               |
+| Azure Cosmos DB (formerly Azure DocumentDB) | -cosdb       |
+| Azure Cache for Redis               | -redis               |
+| Azure Database for MySQL            | -mysql               |
+| Azure SQL Data Warehouse            | -sqldw               |
+| SQL Server Stretch Database         | -sqlstrdb            |
 | Azure Storage                       | stor                 |
 | Azure StorSimple                    | ssimp                |
-| Azure Search                        | srch-                |
-| Azure Cognitive Services            | cs-                  |
-| Azure Machine Learning workspace    | aml-                 |
+| Azure Search                        | -srch                |
+| Azure Cognitive Services            | -cs                  |
+| Azure Machine Learning workspace    | -aml                 |
 | Azure Data Lake Storage             | dls                  |
 | Azure Data Lake Analytics           | dla                  |
-| Azure HDInsight - Spark             | hdis-                |
-| Azure HDInsight - Hadoop            | hdihd-               |
-| Azure HDInsight - R Server          | hdir-                |
-| Azure HDInsight - HBase             | hdihb-               |
+| Azure HDInsight - Spark             | -hdis                |
+| Azure HDInsight - Hadoop            | -hdihd               |
+| Azure HDInsight - R Server          | -hdir                |
+| Azure HDInsight - HBase             | -hdihb               |
 | Power BI Embedded                   | pbiemb               |
-| Azure Stream Analytics              | asa-                 |
-| Azure Data Factory                  | df-                  |
-| Azure Event Hubs                    | evh-                 |
-| Azure IoT Hub                       | aih-                 |
-| Azure Notification Hubs             | anh-                 |
-| Azure Notification Hubs namespace   | anhns-               |
+| Azure Stream Analytics              | 1asa                 |
+| Azure Data Factory                  | 1df                  |
+| Azure Event Hubs                    | -evh                 |
+| Azure IoT Hub                       | -aih                 |
+| Azure Notification Hubs             | -anh                 |
+| Azure Notification Hubs namespace   | -anhns               |
+
 
 ### Metadata tags
 
