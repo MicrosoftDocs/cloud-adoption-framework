@@ -21,6 +21,7 @@ Depending on the desired business outcomes, the skills needed to provide full cl
 
 - IT governance
 - Enterprise architecture
+- Security
 - IT operations
 - IT infrastructure
 - Networking
@@ -28,6 +29,7 @@ Depending on the desired business outcomes, the skills needed to provide full cl
 - Virtualization
 - Business continuity and disaster recovery
 - Application owners within IT
+- Finance owners
 
 The cloud governance capability identifies risks related to current and future releases. This capability is seen in the efforts to evaluate risk, understand the potential impacts, and make decisions regarding risk tolerance. In doing so, plans can quickly be updated to reflect the changing needs of the [cloud adoption capability](./cloud-adoption.md).
 
