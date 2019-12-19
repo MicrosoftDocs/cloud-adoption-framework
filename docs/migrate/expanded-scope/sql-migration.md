@@ -10,7 +10,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Accelerate migration by migrating an instance of SQL Server
+# Accelerate migration by migrating multiple databases or entire SQL Servers
 
 Migrating entire SQL Server instances can accelerate workload migration efforts. The following guidance expands the scope of the [Azure migration guide](../azure-migration-guide/index.md) by migrating an instance of SQL Server outside of a workload-focused migration effort. This approach can seed the migration of multiple workloads with a single data-platform migration. Most of the effort required in this scope expansion occurs during the prerequisites, assessment, migration, and optimization processes of a migration effort.
 
@@ -22,7 +22,7 @@ The approach recommended in the [Azure migration guide](../azure-migration-guide
 
 However, some data structures can be migrated more effectively through a separate data-platform migration. The following are a few examples:
 
-- **End of service:** Quickly moving a SQL Server instance to avoid end-of-service challenges can justify the use of this guide outside of standard migration efforts.
+- **End of service:** Quickly moving a SQL Server instance as an isolated iteration within a larger migration effort can avoid end-of-service challenges. This guide will help integrate the migration of a SQL Server in the broader migration process. However, if you are migrating/upgrading a SQL Server independent of any other cloud adoption effort, the [SQL Server End of Life overview](/sql-server/end-of-support/sql-server-end-of-life-overview) or [SQL Server migration documentation](sql-server/migrate/index.yml) articles may provide clearer guidance.
 - **SQL Server services:** The data structure is part of a broader solution that requires SQL Server running on a virtual machine. This is common for solutions that use SQL Server services such as SQL Server Reporting Services, SQL Server Integration Services, or SQL Server Analysis Services.
 - **High density, low usage databases:** The instance of SQL Server has a high density of databases. Each of those databases has low transaction volumes, and requires little in the way of compute resources. You should consider other, more modern solutions, but an infrastructure as a service (IaaS) approach might result in significantly reduced operating cost.
 - **Total cost of ownership:** When applicable, you can apply [Azure Hybrid Benefits](https://azure.microsoft.com/pricing/hybrid-benefit) to the list price creating the lowest cost of ownership for instances of SQL Server. This is especially common for customers who host SQL Server in multicloud scenarios.
@@ -57,10 +57,10 @@ The following is an example of a database inventory for one of the servers above
 |---------|---------|---------|---------|---------|---------|---------|
 |sql-01|DB-1|Mission-critical|Highly Confidential|Compatible|N/A|Azure SQL Database|
 |sql-01|DB-2|High|Confidential|Schema change required|Changes implemented|Azure SQL Database|
-|sql-01|DB-1|High|General|Compatible|N/A|Azure SQL managed instance|
-|sql-01|DB-1|Low|Highly Confidential|Schema change required|Changes scheduled|Azure SQL managed instance|
-|sql-01|DB-1|Mission-critical|General|Compatible|N/A|Azure SQL managed instance|
-|sql-01|DB-2|High|Confidential|Compatible|N/A|Azure SQL Database|
+|sql-01|DB-3|High|General|Compatible|N/A|Azure SQL managed instance|
+|sql-01|DB-4|Low|Highly Confidential|Schema change required|Changes scheduled|Azure SQL managed instance|
+|sql-01|DB-5|Mission-critical|General|Compatible|N/A|Azure SQL managed instance|
+|sql-01|DB-6|High|Confidential|Compatible|N/A|Azure SQL Database|
 
 ### Integration with the cloud adoption plan
 
