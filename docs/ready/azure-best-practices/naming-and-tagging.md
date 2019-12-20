@@ -96,7 +96,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | Azure Database for MySQL            | mysql-               |
 | Azure SQL Data Warehouse            | sqldw-               |
 | SQL Server Stretch Database         | sqlstrdb-            |
-| Azure Storage                       | stor                 |
+| Azure Storage                       | st                   |
 | Azure StorSimple                    | ssimp                |
 | Azure Search                        | srch-                |
 | Azure Cognitive Services            | cs-                  |
