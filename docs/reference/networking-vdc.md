@@ -300,7 +300,7 @@ Azure offers different types of logging and monitoring services to track the beh
 
 [**Azure Monitor**][AzureMonitor]. Azure includes multiple services that individually perform a specific role or task in the monitoring space. Together, these services deliver a comprehensive solution for collecting, analyzing, and acting on telemetry from your applications and the Azure resources that support them. They can also work to monitor critical on-premises resources in order to provide a hybrid monitoring environment. Understanding the tools and data that are available is the first step in developing a complete monitoring strategy for your applications.
 
-There are two major types of logs in Azure:
+There are two major types of logs in Azure Monitor:
 
 - [Metrics][Metrics] are numerical values that describe some aspect of a system at a particular point in time. They are lightweight and capable of supporting near real-time scenarios. For many Azure resources, you'll see data collected by Azure Monitor right in their Overview page in the Azure portal. Look at any virtual machine for example, and you'll see several charts displaying performance metrics. Click on any of the graphs to open the data in metrics explorer in the Azure portal, which allows you to chart the values of multiple metrics over time. You can view the charts interactively or pin them to a dashboard to view them with other visualizations.
 
@@ -315,7 +315,7 @@ Azure Monitor can collect data from a variety of sources. You can think of monit
 - Azure resource monitoring data: Data about the operation of an Azure resource.
 - Azure subscription monitoring data: Data about the operation and management of an Azure subscription, as well as data about the health and operation of Azure itself.
 - Azure tenant monitoring data: Data about the operation of tenant-level Azure services, such as Azure Active Directory.
-- Logs sent from on-prem sources can be included as well, examples could include on-premises server events, or network device syslog output.
+- Custom Sources: Logs sent from on-prem sources can be included as well, examples could be on-premises server events, or network device syslog output.
 
 Monitoring data is only useful if it can increase your visibility into the operation of your computing environment. Azure Monitor includes several features and tools that provide valuable insights into your applications and other resources that they depend on. Monitoring solutions and features such as Application Insights and Azure Monitor for containers provide deep insights into different aspects of your application and specific Azure services.
 
@@ -362,9 +362,9 @@ The workload possibilities are endless. The following are just a few of the poss
 
 You can implement a highly reliable cloud messaging service between applications and services through [Azure Service Bus][ServiceBus]. It offers asynchronous brokered messaging between client and server, structured first-in-first-out (FIFO) messaging, and publish and subscribe capabilities.
 
-These examples barely scratch the surface of the types of workloads you can create in Azure; everything from a basic Web and SQL app to the latest in IoT, Big Data, Machine Learning, AI, and so much more.
-
 [![10]][10]
+
+These examples barely scratch the surface of the types of workloads you can create in Azure; everything from a basic Web and SQL app to the latest in IoT, Big Data, Machine Learning, AI, and so much more.
 
 ### Making the VDC highly available: multiple VDCs
 
@@ -423,8 +423,8 @@ The following features were discussed in this document. Follow the links to lear
 |[Azure Active Directory][azure-ad]</br>[Multi-Factor Authentication][multi-factor-authentication]</br>[Role Base Access Controls][RBAC]</br>[Default Azure AD Roles][Roles]</br></br></br> |[Network Watcher][NetWatch]</br>[Azure Monitor][MonitorOverview]</br>[Log Analytics][LogAnalytics]</br> |[Perimeter Networks Best Practices][DMZ]</br>[Subscription Management][SubMgmt]</br>[Resource Group Management][RGMgmt]</br>[Azure Subscription Limits][limits] </br></br></br>|
 
 Security|Other Azure Services|
-|-|-|
-|[Azure Firewall][AzFW]</br>[Firewall Manager][AzFWMgr]</br>[Application Gateway WAF][AppGWWAF]</br>[Front Door WAF][AFDWAF]</br>[Azure DDoS][DDoS]</br>|[Azure Storage][Storage]</br>[Azure SQL][SQL]</br>[Azure Web Apps][WebApps]</br>[Cosmos DB][Cosmos]</br>[HDInsights][HDInsights]</br>[Event Hubs][EventHubs]</br>[Service Bus][ServiceBus]|
+|-|-|-|
+|[Azure Firewall][AzFW]</br>[Firewall Manager][AzFWMgr]</br>[Application Gateway WAF][AppGWWAF]</br>[Front Door WAF][AFDWAF]</br>[Azure DDoS][DDoS]</br>|[Azure Storage][Storage]</br>[Azure SQL][SQL]</br>[Azure Web Apps][WebApps]</br>[Cosmos DB][Cosmos]|[HDInsight][HDInsight]</br>[Event Hubs][EventHubs]</br>[Service Bus][ServiceBus]</br>[Azure IoT][IoT]</br>[Azure Machine Learning][ML]|
 
 <!-- markdownlint-enable MD033 -->
 
@@ -499,3 +499,5 @@ Security|Other Azure Services|
 [Storage]: https://docs.microsoft.com/azure/storage/common/storage-introduction
 [SQL]: https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview
 [Cosmos]: https://docs.microsoft.com/azure/cosmos-db/introduction
+[IoT]: https://docs.microsoft.com/azure/iot-fundamentals/iot-introduction
+[ML]: https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml
