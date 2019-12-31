@@ -87,7 +87,7 @@ To learn more, see:
 
 - [Azure Blueprints](/azure/governance/blueprints)
 - [Cloud Adoption Framework: Resource consistency decision guide](../../decision-guides/resource-consistency/index.md)
-- [Standards-based blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
+- [Standards-based blueprints samples](/azure/governance/blueprints/samples/index#standards-based-blueprint-samples)
 
 ::: zone-end
 
@@ -152,8 +152,8 @@ To explore Azure Security Center, go to the [Azure portal](https://portal.azure.
 
 To learn more, see:
 
-- [Azure Security Center](https://docs.microsoft.com/azure/security-center)
-- [Just-in-time VM access](https://docs.microsoft.com/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
+- [Azure Security Center](/azure/security-center)
+- [Just-in-time VM access](/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
 - [Standard vs. free pricing tier](https://azure.microsoft.com/pricing/details/security-center)
 - [Cloud Adoption Framework: Security Baseline governance discipline](../../govern/security-baseline/index.md)
 
