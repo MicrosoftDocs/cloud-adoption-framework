@@ -109,7 +109,7 @@ VNets are also anchor points for integrating Platform as a Service (PaaS) Azure 
 
 ### Topologies
 
-The Virtual datacenter can build built with four general, high-level topologies based on your needs and scale. These topologies, at the highest level, are:
+The Virtual datacenter can be built based on four general, high level topologies based on your needs and scale. These topologies, at the highest level, are:
 
 *Flat* is a model in which all resources are deployed in a single virtual network. Subnets allow for flow control and segregation.
 
@@ -119,7 +119,7 @@ The Virtual datacenter can build built with four general, high-level topologies 
 
 [![12]][12]
 
-*Hub and spoke* is a model for designing a network topology for distributed applications/teams and delegation.
+VNet Peering *Hub and spoke* is a model for designing a network topology for distributed applications/teams and delegation.
 
 [![13]][13]
 
@@ -127,7 +127,7 @@ The Virtual datacenter can build built with four general, high-level topologies 
 
 [![14]][14]
 
-As shown, two types of hub and spoke design can be used in Azure (Hub-and-spoke and Azure Virtual WAN). For communication, shared resources, and centralized security policy (Hub Virtual Network in the diagram), or a Virtual WAN type (Azure Virtual WAN in the diagram) for large scale branch-to-branch and branch-to-Azure communications.
+As shown above, two of the design types are hub and spoke (VNet Peering hub-and-spoke and Azure Virtual WAN). Hub and spoke designs are optimal for communication, shared resources, and centralized security policy. Hubs are built either using a VNet Peering hub (Hub Virtual Network in the diagram) or a Virtual WAN Hub (Azure Virtual WAN in the diagram). Virtual WAN is good for large scale branch-to-branch and branch-to-Azure communications, or where you opt to avoid the complexities of building all the components individually in a VNet Peering Hub. In some cases, such as the need to use Network Virtual Appliances in the hub, a vWAN Hub can't be used and a VNet Peering Hub design dictated by the requirements.
 
 In both hub and spoke topologies, the hub is the central network zone that controls and inspects ingress or egress traffic between different zones: internet, on-premises, and the spokes. The hub and spoke topology gives the IT department an effective way to enforce security policies in a central location. It also reduces the potential for misconfiguration and exposure.
 
