@@ -109,7 +109,7 @@ VNets are also anchor points for integrating Platform as a Service (PaaS) Azure 
 
 ### Topologies
 
-The Virtual datacenter can build built with four general, high-level topologies based on your needs and scale. These , at the highest level, are:
+The Virtual datacenter can build built with four general, high-level topologies based on your needs and scale. These topologies, at the highest level, are:
 
 *Flat* is a model in which all resources are deployed in a single virtual network. Subnets allow for flow control and segregation.
 
@@ -199,7 +199,7 @@ The VDC is partitioned to securely host multiple projects across different Lines
 
 The preceding diagram shows the relationship between an organization's projects, users, and groups and the environments where the Azure components are deployed.
 
-Typically in IT, an environment (or tier) is a system in which multiple applications are deployed and executed. Large enterprises use a development environment (where changes are made and tested) and a production environment (what end users use). Those environments are separated, often with several staging environments in between them to allow phased deployment (rollout), testing, and rollback if problems arise. Deployment architectures vary significantly, but usually the basic process of starting at development (DEV) and ending at production (PROD) is still followed.
+Typically in IT, an environment (or tier) is a system in which multiple applications are deployed and executed. Large enterprises use a development environment (where changes are made and tested) and a production environment (what end-users use). Those environments are separated, often with several staging environments in between them to allow phased deployment (rollout), testing, and rollback if problems arise. Deployment architectures vary significantly, but usually the basic process of starting at development (DEV) and ending at production (PROD) is still followed.
 
 A common architecture for these types of multi-tier environments consists of Azure DevOps for development and testing, UAT for staging, and production environments. Organizations can leverage single or multiple Azure AD tenants to define access and rights to these environments. The previous diagram shows a case where two different Azure AD tenants are used: one for Azure DevOps and UAT, and the other exclusively for production.
 
