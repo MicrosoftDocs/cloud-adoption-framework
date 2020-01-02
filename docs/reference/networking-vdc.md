@@ -127,7 +127,7 @@ VNet Peering *Hub and spoke* is a model for designing a network topology for dis
 
 [![14]][14]
 
-As shown above, two of the design types are hub and spoke (VNet Peering hub-and-spoke and Azure Virtual WAN). Hub and spoke designs are optimal for communication, shared resources, and centralized security policy. Hubs are built either using a VNet Peering hub (Hub Virtual Network in the diagram) or a Virtual WAN Hub (Azure Virtual WAN in the diagram). Virtual WAN is good for large-scale branch-to-branch and branch-to-Azure communications, or where you opt to avoid the complexities of building all the components individually in a VNet Peering Hub. In some cases, a vWAN Hub can't be used and a VNet Peering Hub design is dictated by the requirements. An example of a dictating requirement would be the need to use a Network Virtual Appliances in the hub.
+As shown above, two of the design types are hub and spoke (VNet Peering hub-and-spoke and Azure Virtual WAN). Hub and spoke designs are optimal for communication, shared resources, and centralized security policy. Hubs are built either using a VNet Peering hub (Hub Virtual Network in the diagram) or a Virtual WAN Hub (Azure Virtual WAN in the diagram). Virtual WAN is good for large-scale branch-to-branch and branch-to-Azure communications, or if you opt to avoid the complexities of building all the components individually in a VNet Peering Hub. In some cases, a VNet Peering Hub design is dictated by your requirements. An example of a dictating requirement would be the need to use a Network Virtual Appliances in the hub.
 
 In both hub and spoke topologies, the hub is the central network zone that controls and inspects ingress or egress traffic between different zones: internet, on-premises, and the spokes. The hub and spoke topology gives the IT department an effective way to enforce security policies in a central location. It also reduces the potential for misconfiguration and exposure.
 
@@ -161,7 +161,7 @@ The introduction of multiple hubs increases the cost and management effort of th
 
 ### Interconnection between spokes
 
-Inside a single spoke, or a flat network design, it's possible to implement complex multi-tier workloads. Multi-tier configurations can be implemented using subnets, one for every tier or application, in the same VNet. Traffic control and filtering is done using network security groups and user defined routes.
+Inside a single spoke, or a flat network design, it's possible to implement complex multi-tier workloads. Multi-tier configurations can be implemented using subnets, one for every tier or application, in the same VNet. Traffic control and filtering are done using network security groups and user-defined routes.
 
 An architect might want to deploy a multi-tier workload across multiple virtual networks. With virtual network peering, spokes can connect to other spokes in the same hub or different hubs. A typical example of this scenario is the case where application processing servers are in one spoke, or virtual network. The database deploys in a different spoke, or virtual network. In this case, it's easy to interconnect the spokes with virtual network peering and, by doing that, avoid transiting through the hub. A careful architecture and security review should be done to ensure that bypassing the hub doesn’t bypass important security or auditing points that might exist only in the hub.
 
@@ -203,7 +203,7 @@ Typically in IT, an environment (or tier) is a system in which multiple applicat
 
 A common architecture for these types of multi-tier environments consists of DevOps for development and testing, UAT for staging, and production environments. Organizations can leverage single or multiple Azure AD tenants to define access and rights to these environments. The previous diagram shows a case where two different Azure AD tenants are used: one for DevOps and UAT, and the other exclusively for production.
 
-The presence of different Azure AD tenants enforces the separation between environments. The same group of users, such as the central IT, needs to authenticate by using a different URI to access a different Azure AD tenant to modify the roles or permissions of either the DevOps or production environments of a project. The presence of different user authentications to access different environments reduces possible outages and other issues caused by human errors.
+The presence of different Azure AD tenants enforces the separation between environments. The same group of users, such as the central IT, need to authenticate by using a different URI to access a different Azure AD tenant to modify the roles or permissions of either the DevOps or production environments of a project. The presence of different user authentications to access different environments reduces possible outages and other issues caused by human errors.
 
 #### Component type: Infrastructure
 
@@ -284,7 +284,7 @@ Microsoft Azure Application Gateway is a dedicated virtual appliance providing a
 
 [**Public IPs**][PIP]. With some Azure features, you can associate service endpoints to a public IP address so that your resource is accessible from the internet. This endpoint uses network address translation (NAT) to route traffic to the internal address and port on the Azure virtual network. This path is the primary way for external traffic to pass into the virtual network. You can configure public IP addresses to determine which traffic is passed in and how and where it's translated onto the virtual network.
 
-[**Azure DDoS Protection Standard**][DDoS] provides additional mitigation capabilities over the [Basic service][DDoS] tier that are tuned specifically to Azure Virtual Network resources. DDoS Protection Standard is simple to enable and requires no application changes. Protection policies are tuned through dedicated traffic monitoring and machine learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples are Azure Load Balancer, Azure Application Gateway, and Azure Service Fabric instances. Real-time telemetry is available through Azure Monitor views during an attack and for history. Application layer protection can be added through the Azure Application Gateway web application firewall. Protection is provided for IPv4 and IPv6 Azure public IP addresses.
+[**Azure DDoS Protection Standard**][DDoS] provides additional mitigation capabilities over the [Basic service][DDoS] tier that are tuned specifically to Azure Virtual Network resources. DDoS Protection Standard is simple to enable and requires no application changes. Protection policies are tuned through dedicated traffic monitoring and machine learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples are Azure Load Balancer, Azure Application Gateway, and Azure Service Fabric instances. Near real-time, system-generated logs are available through Azure Monitor views during an attack and for history. Application layer protection can be added through the Azure Application Gateway web application firewall. Protection is provided for IPv4 and IPv6 Azure public IP addresses.
 
 The Hub and Spoke topology at a detail level uses VNet Peering and UDRs to route traffic properly
 
@@ -298,7 +298,7 @@ Monitoring components provide visibility and alerting from all the other compone
 
 Azure offers different types of logging and monitoring services to track the behavior of Azure-hosted resources. Governance and control of workloads in Azure is based not just on collecting log data but also on the ability to trigger actions based on specific reported events.
 
-[**Azure Monitor**][AzureMonitor]. Azure includes multiple services that individually perform a specific role or task in the monitoring space. Together, these services deliver a comprehensive solution for collecting, analyzing, and acting on telemetry from your applications and the Azure resources that support them. They can also work to monitor critical on-premises resources in order to provide a hybrid monitoring environment. Understanding the tools and data that are available is the first step in developing a complete monitoring strategy for your applications.
+[**Azure Monitor**][AzureMonitor]. Azure includes multiple services that individually perform a specific role or task in the monitoring space. Together, these services deliver a comprehensive solution for collecting, analyzing, and acting on system-generated logs from your applications and the Azure resources that support them. They can also work to monitor critical on-premises resources in order to provide a hybrid monitoring environment. Understanding the tools and data that are available is the first step in developing a complete monitoring strategy for your applications.
 
 There are two fundamental types of logs in Azure Monitor:
 
@@ -360,7 +360,7 @@ The workload possibilities are endless. The following are just a few of the poss
 
 **Events and Messaging**: [Azure Event Hubs][EventHubs] is a hyperscale telemetry ingestion service that collects, transforms, and stores millions of events. As a distributed streaming platform, it offers low latency and configurable time retention, enabling you to ingest massive amounts of telemetry into Azure and read that data from multiple applications. With Event Hubs, a single stream can support both real-time and batch-based pipelines.
 
-You can implement a highly reliable cloud messaging service between applications and services through [Azure Service Bus][ServiceBus]. It offers asynchronous brokered messaging between client and server, structured first-in-first-out (FIFO) messaging, and publish and subscribe capabilities.
+You can implement a highly reliable cloud messaging service between applications and services through [Azure Service Bus][ServiceBus]. It offers asynchronous brokered messaging between client and server, structured first-in-first-out (FIFO) messaging, and publishes and subscribe capabilities.
 
 [![10]][10]
 
@@ -437,20 +437,20 @@ Security|Other Azure Services|
 <!-- images -->
 
 [0]: ../_images/vdc/networking-vdc-redundant.png "Examples of component overlap"
-[1]: ../_images/vdc/networking-vdc-high-level.png "High-level example of hub and spoke VDC"
+[1]: ../_images/vdc/networking-vdc-high-level.png "Example of hub and spoke VDC"
 [2]: ../_images/vdc/networking-vdc-cluster.png "Cluster of hubs and spokes"
 [3]: ../_images/vdc/networking-vdc-spoke-to-spoke.png "Spoke-to-spoke"
 [4]: ../_images/vdc/networking-vdc-block-level-diagram.png "Block level diagram of the VDC"
 [5]: ../_images/vdc/networking-vdc-users-groups-subscriptions.png "Users, groups, subscriptions, and projects"
-[6]: ../_images/vdc/networking-vdc-infrastructure.png "High-level infrastructure diagram"
-[7]: ../_images/vdc/networking-vdc-perimeter.png "High-level infrastructure diagram"
+[6]: ../_images/vdc/networking-vdc-infrastructure.png "Infrastructure diagram"
+[7]: ../_images/vdc/networking-vdc-perimeter.png "Infrastructure diagram"
 [8]: ../_images/vdc/networking-vdc-perimeter-peering.png "VNet Peering and perimeter networks"
-[9]: ../_images/vdc/networking-vdc-monitoring.png "High-level diagram of Azure Monitor"
-[10]: ../_images/vdc/networking-vdc-workloads.png "High-level diagram of Workloads"
-[11]: ../_images/vdc/networking-vdc-brief-flat.png "High-level example of a flat network"
-[12]: ../_images/vdc/networking-vdc-brief-mesh.png "High-level example of a meshed network"
-[13]: ../_images/vdc/networking-vdc-brief-hub.png "High-level example of a hub and spoke VDC"
-[14]: ../_images/vdc/networking-vdc-brief-vwan.png "High-level example of a Virtual WAN VDC"
+[9]: ../_images/vdc/networking-vdc-monitoring.png "Diagram of Azure Monitor"
+[10]: ../_images/vdc/networking-vdc-workloads.png "Diagram of Workloads"
+[11]: ../_images/vdc/networking-vdc-brief-flat.png "Example of a flat network"
+[12]: ../_images/vdc/networking-vdc-brief-mesh.png "Example of a meshed network"
+[13]: ../_images/vdc/networking-vdc-brief-hub.png "Example of a hub and spoke VDC"
+[14]: ../_images/vdc/networking-vdc-brief-vwan.png "Example of a Virtual WAN VDC"
 
 <!-- links -->
 
