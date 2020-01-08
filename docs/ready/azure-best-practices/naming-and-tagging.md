@@ -1,5 +1,5 @@
 ---
-title: "Ready: Recommended naming and tagging conventions"
+title: "Recommended naming and tagging conventions"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: This article provides detailed resource naming and tagging recommendations aimed specifically at supporting enterprise cloud adoption efforts.
 author: BrianBlanchard
