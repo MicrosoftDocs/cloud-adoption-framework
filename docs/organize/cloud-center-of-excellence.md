@@ -131,4 +131,4 @@ Additionally, we recommend that the business stakeholders stay informed of the p
 A CCoE model requires both a [cloud platform capabilities](./cloud-platform.md) and [cloud automation capabilities](./cloud-automation.md). The next step is to align [cloud platform capabilities](./cloud-platform.md).
 
 > [!div class="nextstepaction"]
-> [Align a cloud platform capabilities](./cloud-platform.md)
+> [Align cloud platform capabilities](./cloud-platform.md)
