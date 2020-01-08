@@ -32,7 +32,7 @@ All landing zones provide structure for hosting options. The structure is create
 Each landing zone is part of a broader solution for organizing resources across a cloud environment. Azure fundamentals are the foundational building blocks for organization.
 
 - **[Azure fundamental concepts](./fundamental-concepts.md)**. Learn fundamental concepts and terms that are used to organize resources in Azure, and how the concepts relate to one another.
-- **Resource organization decision guide**. When you understand each of the fundamentals, the resource organization decision guide can help you make decisions that shape the landing zone.
+- **[Resource consistency decision guide](../../decision-guides/resource-consistency/)**. When you understand each of the fundamentals, the resource organization decision guide can help you make decisions that shape the landing zone.
 
 ## Governance considerations
 
