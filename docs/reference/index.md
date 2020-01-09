@@ -11,23 +11,23 @@ ms.subservice: reference
 layout: LandingPage
 ---
 
-# Microsoft Cloud Adoption Framework for Azure
+# Cloud Adoption Framework roadmap
 
 The cloud fundamentally changes how enterprises procure and use technology resources. Traditionally, enterprises assumed ownership and responsibility of all aspects of technology, from infrastructure to software. The cloud allows enterprises to provision and to consume resources only as needed. However, cloud adoption is a means to an end. Businesses adopt the cloud when they realize it can address any of these business opportunities:
 
 - Businesses are motivated to **migrate** to the cloud to:
-  - Optimize operations.
-  - Simplify technology.
-  - Increase business agility.
-  - Reduce costs.
-  - Prepare for new technical capabilities.
-  - Scaling to market demands or geos.
+  - Optimize operations
+  - Simplify technology
+  - Increase business agility
+  - Reduce costs
+  - Prepare for new technical capabilities
+  - Scaling to market demands or new geographical regions
 - Businesses are motivated to **innovate** using the cloud to:
-  - Improve customer experiences.
-  - Increase customer engagements.
-  - Transform products.
-  - Prepare for and build new technical capabilities.
-  - Scale to market demands or geos.
+  - Improve customer experiences
+  - Increase customer engagements
+  - Transform products
+  - Prepare for and build new technical capabilities
+  - Scale to market demands or new geographical regions
 
 ## Vision and objectives
 
@@ -41,7 +41,7 @@ Removing key obstacles and enabling change requires more than implementation gui
 
 The Cloud Adoption Framework is an overarching framework that covers Plan, Ready, and Adopt phases across the Migration and Innovation motivations for cloud adoption, supported by Governance and Operations guidance.
 
-Microsoft is actively building this aspirational framework in collaboration with customers, partners, and internal teams. To encourage partnership, content will be released in public preview as it becomes available. These public preview releases enable testing, validating, and incrementally refining the guidance. The framework will reach general availability (GA) when the aspirational goals are met.
+The framework has reached general availability (GA). However, we are still actively building this framework in collaboration with customers, partners, and internal teams. To encourage partnership, content is released as it becomes available. These public releases enable testing, validating, and incrementally refining the guidance. 
 
 To successfully adopting the cloud, a customer must prepare its people, technologies, and processes for this digital transformation. The Cloud Adoption Framework includes a section outlining the overall adoption journeys, both Migration and Innovation, as an overview for the customers. This section is composed of the following adoption journey phases:
 
