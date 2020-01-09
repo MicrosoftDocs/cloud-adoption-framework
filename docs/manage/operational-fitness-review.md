@@ -125,3 +125,5 @@ Adapt the details of the process and meeting to fit your specific needs. We reco
     This guide starts with a definition of the term _resiliency_ and related concepts. Then, it describes a process for achieving resiliency by using a structured approach over the lifetime of an application, from design and implementation to deployment and operations.
 - [Cloud design patterns](https://docs.microsoft.com/azure/architecture/patterns).
     These design patterns are useful for engineering teams when building applications on the pillars of software quality.
+- [Azure Advisor](https://docs.microsoft.com/en-us/azure/advisor/).
+    Advisor provides recommendations that are personalized based on your usage and configurations to help you optimize your resources for high availability, security, performance, and cost. 
