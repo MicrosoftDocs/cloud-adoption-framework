@@ -27,7 +27,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 |Patch management|Update Management|Management and scheduling of updates|
 |Policy enforcement|Azure Policy|Policy enforcement to ensure environment and guest compliance|
 |Environment configuration|Azure Blueprints|Automated compliance for core services|
-|Resource Configuration | Desired State Configuration
+|Resource Configuration|Desired State Configuration|Automated configuration on Guest OS and some aspects of the environment|
 
 ::: zone target="docs"
 
