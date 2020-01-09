@@ -97,8 +97,8 @@ Here's how Contoso will complete the migration:
 
 Contoso admins upgrade the TFS server to TFS 2018 Update 2. Before they start:
 
-- They download [TFS 2018 Update 2](https://visualstudio.microsoft.com/downloads)
-- They verify the [hardware requirements](/azure/devops/server/requirements), and read through the [release notes](https://docs.microsoft.com/visualstudio/releasenotes/tfs2018-relnotes) and [upgrade gotchas](/azure/devops/server/upgrade/get-started#before-you-upgrade-to-tfs-2018).
+- They download [TFS 2018 Update 2](https://visualstudio.microsoft.com/downloads).
+- They verify the [hardware requirements](https://docs.microsoft.com/azure/devops/server/requirements), and read through the [release notes](https://docs.microsoft.com/visualstudio/releasenotes/tfs2018-relnotes) and [upgrade gotchas](https://docs.microsoft.com/azure/devops/server/upgrade/get-started#before-you-upgrade-to-tfs-2018).
 
 They upgrade as follows:
 
@@ -127,7 +127,7 @@ They upgrade as follows:
 
 **Need more help?**
 
-Learn about [upgrading TFS](/azure/devops/server/upgrade/get-started).
+Learn about [upgrading TFS](https://docs.microsoft.com/azure/devops/server/upgrade/get-started).
 
 ## Step 3: Validate the TFS collection
 
@@ -261,8 +261,7 @@ Before starting, Contoso admins take a local SQL Server backup, and VMware snaps
 Contoso creates a backup (DACPAC) for import into Azure DevOps Services.
 
 - SqlPackage.exe in SQL Server Data Tools is used to create the DACPAC. There are multiple versions of SqlPackage.exe installed with SQL Server Data Tools, located under folders with names such as 120, 130, and 140. It's important to use the right version to prepare the DACPAC.
-- TFS 2018 imports need to use SqlPackage.exe from the 140 folder or higher. For CONTOSOTFS, this file is located in folder:
-**C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\140**.
+- TFS 2018 imports need to use SqlPackage.exe from the 140 folder or higher. For CONTOSOTFS, this file is located in folder: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\140
 
 Contoso admins generate the DACPAC as follows:
 
