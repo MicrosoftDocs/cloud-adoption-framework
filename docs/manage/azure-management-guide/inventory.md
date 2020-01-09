@@ -28,7 +28,7 @@ For any enterprise-grade environment, the following table outlines the suggested
 |Log centralization|Log Analytics|Central logging for all visibility purposes|
 |Monitoring centralization|Azure Monitor|Central monitoring of operational data and trends|
 |Virtual machine inventory and change tracking|Azure Change Tracking and Inventory|Inventory VMs and monitor changes for guest OS level|
-|Service health|Azure Activity Log|Monitoring change at the subscription level|
+|Subscription Monitoring|Azure Activity Log|Monitoring change at the subscription level|
 |Guest OS monitoring|Azure Monitor for VMs|Monitoring changes and performance of VMs|
 |Network monitoring|Azure Network Watcher|Monitoring network changes and performance|
 |DNS monitoring|DNS Analytics|Security, performance, and operations of DNS|

@@ -21,6 +21,7 @@ Depending on the desired business outcomes, the skills needed to provide full cl
 
 - IT governance
 - Enterprise architecture
+- Security
 - IT operations
 - IT infrastructure
 - Networking
@@ -28,6 +29,7 @@ Depending on the desired business outcomes, the skills needed to provide full cl
 - Virtualization
 - Business continuity and disaster recovery
 - Application owners within IT
+- Finance owners
 
 The cloud governance capability identifies risks related to current and future releases. This capability is seen in the efforts to evaluate risk, understand the potential impacts, and make decisions regarding risk tolerance. In doing so, plans can quickly be updated to reflect the changing needs of the [cloud adoption capability](./cloud-adoption.md).
 
@@ -64,7 +66,7 @@ The following represent participants who will frequently participate in cloud go
 
 ## Maturation of cloud governance capability
 
-Some large organizations have existing, dedicated teams that focus on IT governance. These teams specialize in risk management across the IT portfolio through methodologies like ITIL or ITSM. When those teams exist, the following maturity models can be accelerated quickly. However, the IT governance team is encouraged to review the cloud governance model to understand how governance shifts slightly in the cloud. Key articles include [Extending corporate policy to the cloud](../govern/corporate-policy.md) and the [Five Disciplines of Cloud Governance](../govern/governance-disciplines.md).
+Some large organizations have existing, dedicated teams that focus on IT governance. These teams specialize in risk management across the IT portfolio. When those teams exist, the following maturity models can be accelerated quickly. However, the IT governance team is encouraged to review the cloud governance model to understand how governance shifts slightly in the cloud. Key articles include [Extending corporate policy to the cloud](../govern/corporate-policy.md) and the [Five Disciplines of Cloud Governance](../govern/governance-disciplines.md).
 
 **No governance:** It is common for organizations to move into the cloud with no clear plans for governance. Before long, concerns around security, cost, scale, and operations begin to trigger conversations about the need for a governance model and people to staff the processes associated with that model. Starting those conversations before they become concerns is always a good first step to overcome the antipattern of "no governance." The section on [defining corporate policy](../govern/corporate-policy.md) can help facilitate those conversations.
 

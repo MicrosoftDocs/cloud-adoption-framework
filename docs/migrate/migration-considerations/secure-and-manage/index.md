@@ -1,5 +1,5 @@
 ---
-title: "Secure and Manage"
+title: "Secure, monitor, and manage assets"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Secure monitoring and management tools
 author: BrianBlanchard
