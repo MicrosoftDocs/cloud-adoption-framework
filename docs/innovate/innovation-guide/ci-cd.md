@@ -67,7 +67,7 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 ::: zone target="docs"
 
-**Go to the [Start using Azure DevOps documentation](https://docs.microsoft.com/en-us/azure/devops/user-guide/?view=azure-devops)**
+**Go to the [Get started documentation for Azure DevOps](https://docs.microsoft.com/azure/devops/user-guide/?view=azure-devops)**
 
 ::: zone-end
 
