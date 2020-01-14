@@ -140,6 +140,35 @@
       items:
       - name: Overview
         href: ready/azure-best-practices/index.md
+      - name: Northstar landing zone architecture
+        items:
+        - name: Overview
+          href: ready/azure-best-practices/northstar-landingzone/index.md
+        - name: Design principles
+          href: ready/azure-best-practices/northstar-landingzone/design-principles.md
+        - name: Design Guidelines
+          items:
+          - name: Overview
+            href: ready/azure-best-practices/northstar-landingzone/design-guidelines.md
+          - name: A - Enterprise Enrolment and Azure AD Tenants
+            href: ready/azure-best-practices/northstar-landingzone/a-enterprise-enrolment-and-azure-ad-tenants.md
+          - name: B - Identity and Access Management
+            href: ready/azure-best-practices/northstar-landingzone/b-identity-and-access-management.md
+          - name: C - Management Group and Subscription Organization
+            href: ready/azure-best-practices/northstar-landingzone/c-management-group-and-subscription-organization.md
+          - name: D - Network Topology and Connectivity
+            href: ready/azure-best-practices/northstar-landingzone/d-network-topology-and-connectivity.md
+          - name: E - Management and Monitoring
+            href: ready/azure-best-practices/northstar-landingzone/e-management-and-monitoring.md
+          - name: F - Business Continuity and Disaster Recovery
+            href: ready/azure-best-practices/northstar-landingzone/f-business-continuity-and-disaster-recovery.md
+          - name: G - Identity and Access Management
+            href: ready/azure-best-practices/northstar-landingzone/g-security-governance-and-compliance.md
+          - name: H - Platform Automation and DevOps
+            href: ready/azure-best-practices/northstar-landingzone/h-platform-automation-and-devops.md
+        - name: Implementation Guide
+          href: ready/azure-best-practices/northstar-landingzone/implementation-guide.md
+
       - name: Resource organization
         items:
         - name: Scaling with multiple subscriptions
