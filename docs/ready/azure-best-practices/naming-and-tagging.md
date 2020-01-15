@@ -11,18 +11,18 @@ ms.subservice: ready
 ms.custom: readiness
 ---
 
-# Ready: Recommended naming and tagging conventions
+# Recommended naming and tagging conventions
 
-Organizing cloud-based assets in ways that aid operational management and support accounting requirements is a common challenge that faces large cloud adoption efforts. By applying well-defined naming and metadata tagging conventions to cloud-hosted resources, IT staff can quickly find and manage resources. Well-defined names and tags also help to align cloud usage costs with business teams by using chargeback and showback accounting mechanisms.
+Organizing cloud-based assets in ways that aid operational management and support accounting requirements is a common challenge in large cloud adoption efforts. By applying well-defined naming and metadata tagging conventions to cloud-hosted resources, IT staff can quickly find and manage resources. Well-defined names and tags also help to align cloud usage costs with business teams by using chargeback and showback accounting mechanisms.
 
-The Azure Architecture Center's [naming rules and restrictions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) guidance provides general recommendations and platform limitations. The following discussion extends that generic guidance with more detailed recommendations aimed specifically at supporting enterprise cloud adoption efforts.
+The Azure Architecture Center's guidance for [naming rules and restrictions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) provides general recommendations and platform limitations. The following discussion extends that guidance with more detailed recommendations aimed specifically at supporting enterprise cloud adoption efforts.
 
-Resource names can be difficult to change. Make it a priority for your cloud adoption teams to establish a comprehensive naming convention before you begin any large cloud deployment.
+Resource names can be difficult to change. Prioritize establishing a comprehensive naming convention before you begin any large cloud deployment.
 
 > [!NOTE]
-> Every business has different organizational and management requirements. The recommendations in this article serve as a starting point for discussions within your cloud adoption teams.
+> Every business has different organizational and management requirements. These recommendations provide a starting point for discussions within your cloud adoption teams.
 >
-> As these discussions progress, use the following template to capture the naming and tagging decisions you make when you align these recommendations to your specific business needs.
+> As these discussions proceed, use the following template to capture the naming and tagging decisions you make when you align these recommendations to your specific business needs.
 >
 > Download the [naming and tagging convention tracking template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/CAF%20Readiness%20Naming%20and%20Tagging%20tracking%20template.xlsx).
 
@@ -30,7 +30,7 @@ Resource names can be difficult to change. Make it a priority for your cloud ado
 
 A naming and tagging strategy includes business and operational details as components of resource names and metadata tags:
 
-- The business-related side of this strategy ensures that resource names and tags include the organizational information that's needed to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
+- The business side of this strategy ensures that resource names and tags include the organizational information that's needed to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
 - The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other information useful for managing resources.
 
 ### Resource naming
