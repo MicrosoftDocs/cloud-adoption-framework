@@ -36,5 +36,12 @@ The “North Star” architecture should focus on application centric migrations
 
 The North Star architecture strongly advocates the use of native platform services and capabilities wherever possible, which should be fully aligned with Azure platform roadmaps from the offset to ensure new capabilities are swiftly made available within customer environments. More specifically, Azure platform roadmaps should help to inform the migration strategy and ”North Star” trajectory.
 
--   Be prepared to trade off functionality as not everything will likely be required on day one.
--   Leverage preview services and take dependencies on service roadmaps in order to remove technical blockers.
+- Be prepared to trade off functionality as not everything will likely be required on day one.
+- Leverage preview services and take dependencies on service roadmaps in order to remove technical blockers.
+
+## Next steps
+
+[TODO DEFINE NEXT STEP](./index.md)
+
+> [!div class="nextstepaction"]
+> [TODO DEFINE NEXT STEP](./index.md)

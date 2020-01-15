@@ -21,7 +21,7 @@ The “North Star” architecture represents the strategic design path and targe
 
 It is important to highlight that not all enterprises adopt Azure in the same way, and as a result the “North Star” architecture may vary between customers. Ultimately, the technical considerations and design recommendations presented within this guide may yield different trade-offs based on the customer scenario. Some variation is therefore expected, but provided core recommendations are followed, the resultant target architecture will position the customer on a path to sustainable scale.
 
-## landing zone Definition
+## Landing zone definition
 
 Within the context of the “North Star” architecture, a “landing zone” is a logical construct capturing everything that must be true to enable application migrations and greenfield development at an enterprise scale in Azure. It considers all platform resources that are required to support the customer’s application portfolio and does not differentiate between IaaS or PaaS.
 
@@ -33,31 +33,37 @@ The principle purpose of the “landing zone” is therefore to ensure that when
 _Using an analogy, this is similar to how city utilities such as water, gas, and electricity are accessible before new houses are constructed. In this context, the network, IAM, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process._
 ***
 
-[![landing zone](./media/lz-design.png "landing zone")](#)
-
+![landing zone](./media/lz-design.png "landing zone")
 Figure 1 – “landing zone” Design
 
 The following list expands on the “landing zone” illustration by iterating through the core technical constructs which must be designed and developed within the context of customer requirements to create compliant technical “landing zone” environments and the conditions for successful Azure adoption.
 
--   ***Identity and Access Management***: Azure AD design and integration must be built to ensure both server and user authentication. RBAC must be modelled and deployed to enforce separation of duties and the required entitlements for platform operation and management. Key management must be designed and deployed to ensure secure access to resources and support operations such as rotation and recovery. Ultimately, access roles are assigned to application owners at the control and data planes to create and manage resources autonomously.
+- ***Identity and Access Management***: Azure AD design and integration must be built to ensure both server and user authentication. RBAC must be modelled and deployed to enforce separation of duties and the required entitlements for platform operation and management. Key management must be designed and deployed to ensure secure access to resources and support operations such as rotation and recovery. Ultimately, access roles are assigned to application owners at the control and data planes to create and manage resources autonomously.
 
--   ***Policy Management*** Holistic and “landing zone” specific policies must be identified, described, built and deployed onto the target Azure platform to ensure corporate, regulatory and line of business controls are in place. Ultimately, policies should be used to guarantee the compliance of applications and underlying resources without any abstraction provisioning/administration capability.
+- ***Policy Management*** Holistic and “landing zone” specific policies must be identified, described, built and deployed onto the target Azure platform to ensure corporate, regulatory and line of business controls are in place. Ultimately, policies should be used to guarantee the compliance of applications and underlying resources without any abstraction provisioning/administration capability.
 
--   ***Management and Monitoring***: Platform level holistic (horizontal) resource monitoring and alerting must be designed, deployed, and integrated. Operational tasks such as patching and backup must also be defined and streamlined. Security operations, monitoring, and logging must be designed and integrated with both resources on Azure as well as existing on-premises systems. All Subscription activity logs , which capture control plane operations across resources, should be streamed into Log Analytics to make them available for query and analysis, subject to RBAC permissions.
+- ***Management and Monitoring***: Platform level holistic (horizontal) resource monitoring and alerting must be designed, deployed, and integrated. Operational tasks such as patching and backup must also be defined and streamlined. Security operations, monitoring, and logging must be designed and integrated with both resources on Azure as well as existing on-premises systems. All Subscription activity logs , which capture control plane operations across resources, should be streamed into Log Analytics to make them available for query and analysis, subject to RBAC permissions.
 
--   ***Network Topology and Connectivity***: The end-to-end network topology must be built and deployed across Azure regions and on-premises customer environments to ensure North-South and East-West connectivity between platform deployments. Network security must also be designed with the required services and resources identified, deployed and configured, such as Firewalls and NVAs to ensure security requirements are fully met.
+- ***Network Topology and Connectivity***: The end-to-end network topology must be built and deployed across Azure regions and on-premises customer environments to ensure North-South and East-West connectivity between platform deployments. Network security must also be designed with the required services and resources identified, deployed and configured, such as Firewalls and NVAs to ensure security requirements are fully met.
 
--   ***Shared Services Infrastructure***: Centrally controlled but de-centrally deployed services, such as Domain Controllers, must be designed, configured, and built to make requisite common services and resources available for application teams to consume and integrate with. It is important to note that not all “traditional” on premise shared services should be provided in the cloud. For example, file shares and HSMs should be considered as application level resources using native-Azure services.
+- ***Shared Services Infrastructure***: Centrally controlled but de-centrally deployed services, such as Domain Controllers, must be designed, configured, and built to make requisite common services and resources available for application teams to consume and integrate with. It is important to note that not all “traditional” on premise shared services should be provided in the cloud. For example, file shares and HSMs should be considered as application level resources using native-Azure services.
 
--   ***DevOps***: An end-to-end DevOps experience with robust SDLC practices must be designed, built and deployed to ensure the safe, repeatable and consistent delivery of Infrastructure as Code artefacts. Such artefacts are to be developed, tested and deployed using dedicated integration, release and deployment pipelines with strong source control and traceability.
+- ***DevOps***: An end-to-end DevOps experience with robust SDLC practices must be designed, built and deployed to ensure the safe, repeatable and consistent delivery of Infrastructure as Code artefacts. Such artefacts are to be developed, tested and deployed using dedicated integration, release and deployment pipelines with strong source control and traceability.
 
 In addition to the key aspects denoted above, the design, configuration, deployment, and integration of each “landing zone” should meet critical customer requirements relating to:
 
--   Business Continuity and Disaster Recovery, both at the platform and application level.
--   Service Management, such as incident response and support.
--   Service Catalogue, such as CMDB.
+- Business Continuity and Disaster Recovery, both at the platform and application level.
+- Service Management, such as incident response and support.
+- Service Catalogue, such as CMDB.
 
 ## High Level Architecture
-[![North Star Architecture](./media/ns-arch.png "North Star Architecture")](#)
 
+![North Star Architecture](./media/ns-arch.png "North Star Architecture")
 Figure 2 – “North Star” Architecture
+
+## Next steps
+
+Review the [Design Principles](./design-principles.md)
+
+> [!div class="nextstepaction"]
+> [Design Principles](./design-principles.md)

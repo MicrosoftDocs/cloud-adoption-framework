@@ -132,6 +132,35 @@
         href: ready/considerations/hybrid-consistency.md
     - name: Expanded scope
       items:
+      - name: Northstar landing zone architecture
+        items:
+        - name: Overview
+          href: ready/expanded-scope/northstar-landingzone/index.md
+        - name: Design principles
+          href: ready/expanded-scope/northstar-landingzone/design-principles.md
+        - name: Design Guidelines
+          items:
+          - name: Overview
+            href: ready/expanded-scope/northstar-landingzone/design-guidelines.md
+          - name: A - Enterprise Enrolment and Azure AD Tenants
+            href: ready/expanded-scope/northstar-landingzone/a-enterprise-enrolment-and-azure-ad-tenants.md
+          - name: B - Identity and Access Management
+            href: ready/expanded-scope/northstar-landingzone/b-identity-and-access-management.md
+          - name: C - Management Group and Subscription Organization
+            href: ready/expanded-scope/northstar-landingzone/c-management-group-and-subscription-organization.md
+          - name: D - Network Topology and Connectivity
+            href: ready/expanded-scope/northstar-landingzone/d-network-topology-and-connectivity.md
+          - name: E - Management and Monitoring
+            href: ready/expanded-scope/northstar-landingzone/e-management-and-monitoring.md
+          - name: F - Business Continuity and Disaster Recovery
+            href: ready/expanded-scope/northstar-landingzone/f-business-continuity-and-disaster-recovery.md
+          - name: G - Identity and Access Management
+            href: ready/expanded-scope/northstar-landingzone/g-security-governance-and-compliance.md
+          - name: H - Platform Automation and DevOps
+            href: ready/expanded-scope/northstar-landingzone/h-platform-automation-and-devops.md
+        - name: Implementation Guide
+          href: ready/expanded-scope/northstar-landingzone/implementation-guide.md
+
       - name: Terraform landing zones
         href: ready/expanded-scope/terraform-landing-zone.md
       - name: Network boundary security
@@ -140,35 +169,6 @@
       items:
       - name: Overview
         href: ready/azure-best-practices/index.md
-      - name: Northstar landing zone architecture
-        items:
-        - name: Overview
-          href: ready/azure-best-practices/northstar-landingzone/index.md
-        - name: Design principles
-          href: ready/azure-best-practices/northstar-landingzone/design-principles.md
-        - name: Design Guidelines
-          items:
-          - name: Overview
-            href: ready/azure-best-practices/northstar-landingzone/design-guidelines.md
-          - name: A - Enterprise Enrolment and Azure AD Tenants
-            href: ready/azure-best-practices/northstar-landingzone/a-enterprise-enrolment-and-azure-ad-tenants.md
-          - name: B - Identity and Access Management
-            href: ready/azure-best-practices/northstar-landingzone/b-identity-and-access-management.md
-          - name: C - Management Group and Subscription Organization
-            href: ready/azure-best-practices/northstar-landingzone/c-management-group-and-subscription-organization.md
-          - name: D - Network Topology and Connectivity
-            href: ready/azure-best-practices/northstar-landingzone/d-network-topology-and-connectivity.md
-          - name: E - Management and Monitoring
-            href: ready/azure-best-practices/northstar-landingzone/e-management-and-monitoring.md
-          - name: F - Business Continuity and Disaster Recovery
-            href: ready/azure-best-practices/northstar-landingzone/f-business-continuity-and-disaster-recovery.md
-          - name: G - Identity and Access Management
-            href: ready/azure-best-practices/northstar-landingzone/g-security-governance-and-compliance.md
-          - name: H - Platform Automation and DevOps
-            href: ready/azure-best-practices/northstar-landingzone/h-platform-automation-and-devops.md
-        - name: Implementation Guide
-          href: ready/azure-best-practices/northstar-landingzone/implementation-guide.md
-
       - name: Resource organization
         items:
         - name: Scaling with multiple subscriptions

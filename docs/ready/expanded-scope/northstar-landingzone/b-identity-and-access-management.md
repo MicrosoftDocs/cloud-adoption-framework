@@ -25,33 +25,33 @@ Enterprise organisations will typically follow a least-privileged approach to op
 
 ***Design Considerations***
 
--   There is a limit of 2000 custom RBAC role assignments per subscription.
+- There is a limit of 2000 custom RBAC role assignments per subscription.
 
--   There is a limit of 500 custom RBAC role assignments per management group.
+- There is a limit of 500 custom RBAC role assignments per management group.
 
--   Centralized versus federated resource ownership.
+- Centralized versus federated resource ownership.
 
-    -   Shared resources such as the network will need managed centrally.
+    - Shared resources such as the network will need managed centrally.
 
-    -   The management of application resources can be delegated to application teams.
+    - The management of application resources can be delegated to application teams.
 
--   Custom role definitions can be used to map responsibility boundaries between central and application teams.
+- Custom role definitions can be used to map responsibility boundaries between central and application teams.
 
 ***Design Recommendations***
 
--   Use AAD RBAC to manage data plane access to resources where possible (e.g. Key Vault, Storage Account, Azure SQL DB).
+- Use AAD RBAC to manage data plane access to resources where possible (e.g. Key Vault, Storage Account, Azure SQL DB).
 
--   Use AAD PIM to establish zero standing access.
+- Use AAD PIM to establish zero standing access.
 
--   Use “AAD only” groups for Azure control plane resources in PIM when creating entitlements.
+- Use “AAD only” groups for Azure control plane resources in PIM when creating entitlements.
 
-    -   Add on-premise groups to the “AAD only” group if there is an existing group management system already in place.
+    - Add on-premise groups to the “AAD only” group if there is an existing group management system already in place.
 
--   Use AAD PIM access reviews to periodically validate resource entitlements.
+- Use AAD PIM access reviews to periodically validate resource entitlements.
 
--   Integrate Azure AD logs with Azure Log Analytics.
+- Integrate Azure AD logs with Azure Log Analytics.
 
--   Use Custom RBAC role definitions within the AAD tenant, considering the following key roles
+- Use Custom RBAC role definitions within the AAD tenant, considering the following key roles
 
 | Role                             | Usage                                                                                                     | Actions:                                                                                                                                                                                                           | No Actions:                                                                                                                                                                   |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -61,15 +61,15 @@ Enterprise organisations will typically follow a least-privileged approach to op
 | Subscription Owner               | Delegated Role for Subscription Owner derived from subscription Owner role                                | *                                                                                                                                                                                                                  | Microsoft.Authorization/*/write, Microsoft.Network/vpnGateways/*, Microsoft.Network/expressRouteCircuits/*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/* |
 | Application Owners DevOps/AppOps | Contributor role granted for application/operations team at resource group level                          |                                                                                                                                                                                                                    | Microsoft.Network/publicIPAddresses/write, Microsoft.Network/virtualNetworks/write, Microsoft.KeyVault/locations/deletedVaults/purge/action                                   |
 
--   Use JIT for all IaaS Resources to enable network level protection.
+- Use JIT for all IaaS Resources to enable network level protection.
 
--   Use AAD Managed Service Identities (MSI) for Azure resources, avoiding username and password-based authentication.
+- Use AAD Managed Service Identities (MSI) for Azure resources, avoiding username and password-based authentication.
 
--   Use privileged identities for automation runbooks that require elevated access permissions.
+- Use privileged identities for automation runbooks that require elevated access permissions.
 
 <!-- -->
 
--   Do not add users directly to Azure resource scopes.
+- Do not add users directly to Azure resource scopes.
 
 ## 2. Planning for Authentication Inside the landing zone
 
@@ -77,28 +77,35 @@ A critical design decision enterprise organisation must make when adopting Azure
 
 ***Design Considerations***
 
--   Centralized and delegated responsibilities to manage resources deployed inside the “landing zone”.
+- Centralized and delegated responsibilities to manage resources deployed inside the “landing zone”.
 
--   Capability and performance differences between AD, AAD, and AAD Domain Services.
+- Capability and performance differences between AD, AAD, and AAD Domain Services.
 
--   There are some Azure services that rely on AAD-DS, such as HDInsight, Azure File Service, WVD.
+- There are some Azure services that rely on AAD-DS, such as HDInsight, Azure File Service, WVD.
 
--   Handling of privileged operations, such as creating a Service Principal within the AAD tenant, Registering Graph applications inside AAD, and procuring a wildcard certificate.
+- Handling of privileged operations, such as creating a Service Principal within the AAD tenant, Registering Graph applications inside AAD, and procuring a wildcard certificate.
 
--   AAD Proxy frontend authentication for applications relying on Integrated Windows Authentication (IWA), Forms/Header based authentication as well as rich client apps integrated with ADAL.
+- AAD Proxy frontend authentication for applications relying on Integrated Windows Authentication (IWA), Forms/Header based authentication as well as rich client apps integrated with ADAL.
 
 ***Design Recommendations***
 
--   Evaluate the compatibility of workloads for AD and AAD-DS.
+- Evaluate the compatibility of workloads for AD and AAD-DS.
 
--   Deploy AAD-DS within the primary region as this service can be projected into only one subscription.
+- Deploy AAD-DS within the primary region as this service can be projected into only one subscription.
 
-    -   Use Virtual Network Peering to support its usage as an authentication service.
+    - Use Virtual Network Peering to support its usage as an authentication service.
 
--   Use Manged Identities instead of Service Principles for authentication to Azure services.
+- Use Manged Identities instead of Service Principles for authentication to Azure services.
 
--   Use Just-In-Time access for both VM access and Azure control plane administration.
+- Use Just-In-Time access for both VM access and Azure control plane administration.
 
 <!-- -->
 
--   Do not assume existing workloads are agnostic of AD and AAD-DS authentication, as there are differences between both approaches.
+- Do not assume existing workloads are agnostic of AD and AAD-DS authentication, as there are differences between both approaches.
+
+## Next steps
+
+[TODO DEFINE NEXT STEP](./index.md)
+
+> [!div class="nextstepaction"]
+> [TODO DEFINE NEXT STEP](./index.md)

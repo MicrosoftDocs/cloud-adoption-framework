@@ -30,3 +30,10 @@ The impact of decisions made within these critical areas will reverberate across
 * [F - Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
 * [G - Identity and Access Management](./G-Security-Governance-and-Compliance.md)
 * [H - Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
+
+## Next steps
+
+[TODO DEFINE NEXT STEP](./index.md)
+
+> [!div class="nextstepaction"]
+> [TODO DEFINE NEXT STEP](./index.md)

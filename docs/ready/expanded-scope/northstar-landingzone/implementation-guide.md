@@ -17,11 +17,11 @@ ms.custom: csu
 There are two categories of activities that must take place in order to implement the “North Star” architecture.
 
 1. **What-must-be-true** for a the “North Star”
-    -   Encompasses activities that must be performed by the Azure and AAD administrators to establish an initial configuration; these are sequential by nature and primarily one-off activities.
+    - Encompasses activities that must be performed by the Azure and AAD administrators to establish an initial configuration; these are sequential by nature and primarily one-off activities.
 
 2. **File -&gt; New -&gt; Region** and **File -&gt; New -&gt; landing zone**
-    -   These are reoccurring activities that are required to instantiate a “landing zone” and require user input to kickstart the workflow which will coordinate resource creation within AAD and AD.
-    -   To operationalize at scale, it is paramount that these activities follow the principal of “Infrastructure-as-Code” and automated using deployment pipelines.
+    - These are reoccurring activities that are required to instantiate a “landing zone” and require user input to kickstart the workflow which will coordinate resource creation within AAD and AD.
+    - To operationalize at scale, it is paramount that these activities follow the principal of “Infrastructure-as-Code” and automated using deployment pipelines.
 
 ## 1. *What-must-be-true for the “North Star”*
 
@@ -232,3 +232,10 @@ The table below provides a list of example Azure Policies to enforce typical ent
 |                   | 22. Network interfaces should not have public IPs                                                      |
 |                   | 23. Virtual machines should be connected to an approved virtual network                                |
 |                   | 24. Virtual networks should use specified virtual network gateway                                      |
+
+## Next steps
+
+[TODO DEFINE NEXT STEP](./index.md)
+
+> [!div class="nextstepaction"]
+> [TODO DEFINE NEXT STEP](./index.md)
