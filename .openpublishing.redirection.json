@@ -49,6 +49,51 @@
          "source_path": "docs/reference/azure-scaffold-examples.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/index",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-readiness-guide/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-readiness-guide/govern-org-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/govern-org-compliance",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-readiness-guide/manage-access.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/manage-access",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-readiness-guide/manage-costs.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/manage-costs",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-readiness-guide/migration-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/migration-landing-zone",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-readiness-guide/monitoring-reporting.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/monitoring-reporting",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-readiness-guide/organize-resources.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-readiness-guide/staying-current.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/staying-current",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/azure-migration-guide/organize-resources.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/index",
+         "redirect_document_id": true
       }
    ]
 }
