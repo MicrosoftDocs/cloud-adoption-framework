@@ -130,6 +130,7 @@
         href: ready/considerations/roles.md
       - name: Create hybrid cloud consistency
         href: ready/considerations/hybrid-consistency.md
+        
     - name: Expanded scope
       items:
       - name: North Star architecture
