@@ -47,7 +47,7 @@
       },
       {
          "source_path": "docs/reference/azure-scaffold-examples.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/index",
+         "redirect_url": "/azure/cloud-adoption-framework/reference/azure-scaffold",
          "redirect_document_id": true
       },
       {
