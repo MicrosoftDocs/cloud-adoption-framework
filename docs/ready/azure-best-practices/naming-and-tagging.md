@@ -35,7 +35,7 @@ A naming and tagging strategy includes business and operational details as compo
 
 ### Resource naming
 
-An effective naming convention assembles resource names by using important resource information as parts of a resource's name. For example, using the recommended naming conventions discussed [later in this article](#sample-naming-convention), a public IP resource for a production SharePoint workload is named like this: `pip-sharepoint-prod-westus-001`.
+An effective naming convention assembles resource names by using important resource information as parts of a resource's name. For example, using these [recommended naming conventions](#sample-naming-convention), a public IP resource for a production SharePoint workload is named like this: `pip-sharepoint-prod-westus-001`.
 
 From the name, you can quickly identify the resource's type, its associated workload, its deployment environment, and the Azure region hosting it.
 
@@ -57,11 +57,11 @@ Keep the length of naming components short to prevent exceeding resource name le
 
 | Naming component | Description | Examples |
 | --- | --- | --- |
-| Business unit | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. | *fin*, *mktg*, *product*, *it*, *corp* |
-| Subscription type | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads. | *prod,* s*hared, client* |
-| Application or service name | Name of the application, workload, or service that the resource is a part of. | *navigator*, *emissions*, *sharepoint*, *hadoop* |
-| Deployment environment | The stage of the development lifecycle for the workload that the resource supports. | *prod, dev, qa, stage, test* |
-| Region | The Azure region where the resource is deployed. | *westus, eastus2, westeurope, usgovia* |
+| Business unit | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. | _fin_, _mktg_, _product_, _it_, _corp_ |
+| Subscription type | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads. | _prod_, _shared_, _client_ |
+| Application or service name | Name of the application, workload, or service that the resource is a part of. | _navigator_, _emissions_, _sharepoint_, _hadoop_ |
+| Deployment environment | The stage of the development lifecycle for the workload that the resource support4s. | _prod_, _dev_, _qa_, _stage_, _test_ |
+| Region | The Azure region where the resource is deployed. | _westus_, _eastus2_, _westeurope_, _usgovia_ |
 
 #### Recommended resource-type prefixes
 
@@ -72,35 +72,38 @@ The following list provides recommended Azure resource type prefixes to use when
 | Resource type                       | Resource name prefix |
 | ----------------------------------- | -------------------- |
 | Resource group                      | rg-                  |
-| Azure Virtual Network               | vnet-                |
+| Availability set                    | avail-               |
+| API management service              | api-                 |
+| Virtual network                     | vnet-                |
 | Virtual network gateway             | vnetgw-              |
 | Gateway connection                  | cn-                  |
 | Subnet                              | snet-                |
 | Network security group              | nsg-                 |
 | Route table                         | route-               |
-| Azure Virtual Machines              | vm-                  |
+| Virtual machine                     | vm                   |
 | VM storage account                  | stvm                 |
 | Public IP                           | pip-                 |
-| Azure Load Balancer                 | lb-                  |
+| Load balancer                       | lb-                  |
 | NIC                                 | nic-                 |
-| Azure Key Vault                     | kv-                  |
-| Azure Kubernetes Service            | aks-                 |
-| Azure Service Bus                   | sb-                  |
-| Azure Service Bus queues            | sbq-                 |
-| Azure Service Bus topics            | sbt-                 |
-| Azure App Service Plans             | plan-                |
-| Azure Web Apps                      | app-                 |
-| Azure Functions                     | func-                |
-| Azure Cloud Services                | cld-                 |
-| Azure SQL Database Server           | sql-                 |
-| Azure SQL Database                  | sqldb-               |
-| Azure Cosmos DB                     | cosmos-              |
-| Azure Cache for Redis               | redis-               |
-| Azure Database for MySQL            | mysql-               |
-| Azure Database for PostgreSQL       | psql-                |
+| Key vault                           | kv-                  |
+| AKS cluster                         | aks-                 |
+| AKS container                       | con-                 |
+| Service bus                         | sb-                  |
+| Service bus queue                   | sbq-                 |
+| Service bus topic                   | sbt-                 |
+| App Service plan                    | plan-                |
+| Web app                             | app-                 |
+| Function app                        | func-                |
+| Cloud service                       | cld-                 |
+| Azure SQL Database server           | sql-                 |
+| Azure SQL database                  | sqldb-               |
+| Cosmos DB database                  | cosmos-              |
+| Azure Cache for Redis cache         | redis-               |
+| MySQL database                      | mysql-               |
+| PostgreSQL database                 | psql-                |
 | Azure SQL Data Warehouse            | sqldw-               |
 | SQL Server Stretch Database         | sqlstrdb-            |
-| Azure Storage                       | st                   |
+| Storage account                     | st                   |
 | Azure StorSimple                    | ssimp                |
 | Azure Search                        | srch-                |
 | Azure Cognitive Services            | cog-                 |
@@ -114,10 +117,10 @@ The following list provides recommended Azure resource type prefixes to use when
 | Power BI Embedded                   | pbi-                 |
 | Azure Stream Analytics              | asa-                 |
 | Azure Data Factory                  | adf-                 |
-| Azure Event Hubs                    | evh-                 |
-| Azure IoT Hub                       | iot-                 |
-| Azure Notification Hubs             | ntf-                 |
-| Azure Notification Hubs namespace   | ntfns-               |
+| Event hub                           | evh-                 |
+| IoT hub                             | iot-                 |
+| Notification hubs                   | ntf-                 |
+| Notification Hubs namespace         | ntfns-               |
 
 ### Metadata tags
 
@@ -127,18 +130,18 @@ What tags you apply to resources and what tags are required or optional differs 
 
 | Tag Name                  | Description                                                                                                                                                                                                    | Key               | Example value                                   |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------|
-| Application name          | Name of the application, service, or workload the resource is associated with.                                                                                                                                 | *ApplicationName* | *{app name}*                                    |
-| Approver name             | Person responsible for approving costs related to this resource.                                                                                                                                               | *Approver*        | *{email}*                                       |
-| Budget required/approved  | Money allocated for this application, service, or workload.                                                                                                                                                    | *BudgetAmount*    | *{\$}*                                          |
-| Business unit             | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this tag might represent a single corporate or shared top-level organizational element. | *BusinessUnit*    | *FINANCE, MARKETING,{Product Name}, CORP, SHARED* |
-| Cost center               | Accounting cost center associated with this resource.                                                                                                                                                          | *CostCenter*      | *{number}*                                      |
-| Disaster recovery         | Business criticality of the application, workload, or service.                                                                                                                                                | *DR*              | *Mission-critical, Critical, Essential*         |
-| End date of the project   | Date when the application, workload, or service is scheduled for retirement.                                                                                                                                  | *EndDate*         | *{date}*                                        |
-| Environment               | Deployment environment of the application, workload, or service.                                                                                                                                              | *Env*             | *Prod, Dev, QA, Stage, Test*                    |
-| Owner name                | Owner of the application, workload, or service.                                                                                                                                                                | *Owner*           | *{email}*                                       |
-| Requester name            | User who requested the creation of this application.                                                                                                                                                          | *Requestor*       | *{email}*                                       |
-| Service class             | Service level agreement level of the application, workload, or service.                                                                                                                                       | *ServiceClass*    | *Dev, Bronze, Silver, Gold*                     |
-| Start date of the project | Date when the application, workload, or service was first deployed.                                                                                                                                           | *StartDate*       | *{date}*                                        |
+| Application name          | Name of the application, service, or workload the resource is associated with.                                                                                                                                 | _ApplicationName_ | _{app name}_                                    |
+| Approver name             | Person responsible for approving costs related to this resource.                                                                                                                                               | _Approver_        | _{email}_                                       |
+| Budget required/approved  | Money allocated for this application, service, or workload.                                                                                                                                                    | _BudgetAmount_    | _{\$}_                                          |
+| Business unit             | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this tag might represent a single corporate or shared top-level organizational element. | _BusinessUnit_    | _FINANCE_, _MARKETING_, _{Product Name}_, _CORP_, _SHARED_ |
+| Cost center               | Accounting cost center associated with this resource.                                                                                                                                                          | _CostCenter_      | _{number}_                                      |
+| Disaster recovery         | Business criticality of the application, workload, or service.                                                                                                                                                | _DR_              | _Mission-critical_, _Critical_, _Essential_         |
+| End date of the project   | Date when the application, workload, or service is scheduled for retirement.                                                                                                                                  | _EndDate_         | _{date}_                                        |
+| Environment               | Deployment environment of the application, workload, or service.                                                                                                                                              | _Env_             | _Prod_, _Dev_, _QA_, _Stage_, _Test_                    |
+| Owner name                | Owner of the application, workload, or service.                                                                                                                                                                | _Owner_           | _{email}_                                       |
+| Requester name            | User who requested the creation of this application.                                                                                                                                                          | _Requestor_       | _{email}_                                       |
+| Service class             | Service level agreement level of the application, workload, or service.                                                                                                                                       | _ServiceClass_    | _Dev_, _Bronze_, _Silver_, _Gold_                     |
+| Start date of the project | Date when the application, workload, or service was first deployed.                                                                                                                                           | _StartDate_       | _{date}_                                        |
 
 ## Sample naming convention
 
@@ -163,8 +166,8 @@ The following section provides examples of naming schemes for common Azure resou
 | Asset type               | Scope           | Format                                                                | Examples                                                                                              |
 |--------------------------|-----------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 | Azure Virtual Network          | Resource group  | vnet-\<Subscription type\>-\<Region\>-\<\#\#\#\>                      | <ul><li>vnet-shared-eastus2-001 </li><li>vnet-prod-westus-001 </li><li>vnet-client-eastus2-001</li></ul>                                  |
-| Virtual network virtual gateway     | Virtual network | vnetgw-v-\<Subscription type\>-\<Region\>-\<\#\#\#\>                 | <ul><li>vnet-gw-v-shared-eastus2-001 </li><li>vnet-gw-v-prod-westus-001 </li><li>vnet-gw-v-client-eastus2-001</li></ul>                   |
-| Virtual network local gateway       | Virtual gateway | vnetgw-l-\<Subscription type\>-\<Region\>-\<\#\#\#\>                 | <ul><li>vnet-gw-l-shared-eastus2-001 </li><li>vnet-gw-l-prod-westus-001 </li><li>vnet-gw-l-client-eastus2-001</li></ul>                   |
+| Virtual network virtual gateway     | Virtual network | vnetgw-v-\<Subscription type\>-\<Region\>-\<\#\#\#\>                 | <ul><li>vnetgw-v-shared-eastus2-001 </li><li>vnetgw-v-prod-westus-001 </li><li>vnetgw-v-client-eastus2-001</li></ul>                   |
+| Virtual network local gateway       | Virtual gateway | vnetgw-l-\<Subscription type\>-\<Region\>-\<\#\#\#\>                 | <ul><li>vnetgw-l-shared-eastus2-001 </li><li>vnetgw-l-prod-westus-001 </li><li>vnetgw-l-client-eastus2-001</li></ul>                   |
 | Site-to-site connections | Resource group  | cn-\<local gateway name\>-to-\<virtual gateway name\>                 | <ul><li>cn-l-gw-shared-eastus2-001-to-v-gw-shared-eastus2-001 </li><li>cn-l-gw-shared-eastus2-001-to-shared-westus-001</li></ul> |
 | Virtual network connections         | Resource group  | cn-\<subscription1\>\<region1\>-to-\<subscription2\>\<region2\>-      | <ul><li>cn-shared-eastus2-to-shared-westus </li><li>cn-prod-eastus2-to-prod-westus</li></ul>                                     |
 | Subnet                   | Virtual network | snet-\<subscription\>-\<subregion\>-\<\#\#\#\>                       | <ul><li>snet-shared-eastus2-001 </li><li>snet-prod-westus-001 </li><li>snet-client-eastus2-001</li></ul>                                  |
@@ -185,9 +188,9 @@ The following section provides examples of naming schemes for common Azure resou
 
 | Asset type           | Scope  | Format                                                              | Examples                                                                                 |
 |----------------------|--------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| Azure Web Apps       | Global | app-\<App Name\>-\<Environment\>-\<\#\#\#\>.[{azurewebsites.net}] | <ul><li>azapp-navigator-prod-001.azurewebsites.net </li><li>app-accountlookup-dev-001.azurewebsites.net</li></ul> |
-| Azure Functions      | Global | func-\<App Name\>-\<Environment\>-\<\#\#\#\>.[{azurewebsites.net}] | <ul><li>azfun-navigator-prod-001.azurewebsites.net </li><li>func-accountlookup-dev-001.azurewebsites.net</li></ul> |
-| Azure Cloud Services | Global | cld-\<App Name\>-\<Environment\>-\<\#\#\#\>.[{cloudapp.net}]       | <ul><li>azcs-navigator-prod-001.azurewebsites.net </li><li>cld-accountlookup-dev-001.azurewebsites.net</li></ul>   |
+| Azure Web Apps       | Global | app-\<App Name\>-\<Environment\>-\<\#\#\#\>.[{azurewebsites.net}] | <ul><li>app-navigator-prod-001.azurewebsites.net </li><li>app-accountlookup-dev-001.azurewebsites.net</li></ul> |
+| Azure Functions      | Global | func-\<App Name\>-\<Environment\>-\<\#\#\#\>.[{azurewebsites.net}] | <ul><li>func-navigator-prod-001.azurewebsites.net </li><li>func-accountlookup-dev-001.azurewebsites.net</li></ul> |
+| Azure Cloud Services | Global | cld-\<App Name\>-\<Environment\>-\<\#\#\#\>.[{cloudapp.net}]       | <ul><li>cld-navigator-prod-001.azurewebsites.net </li><li>cld-accountlookup-dev-001.azurewebsites.net</li></ul>   |
 
 ### Azure Service Bus
 
@@ -203,7 +206,7 @@ The following section provides examples of naming schemes for common Azure resou
 |-------------------------------------|--------------------|---------------------------------------|------------------------------------------------|
 | Azure SQL Database Server           | Global             | sql-\<App Name\>-\<Environment\>      | <ul><li>sql-navigator-prod </li><li>sql-emissions-dev</li></ul>           |
 | Azure SQL Database                  | Azure SQL Database | sqldb-\<Database Name>-\<Environment\>| <ul><li>sqldb-users-prod </li><li>sqldb-users-dev</li></ul>               |
-| Azure Cosmos DB                     | Global             | cosmos-\<App Name\>-\<Environment\>   | <ul><li>cosdb-navigator-prod </li><li>cosdb-emissions-dev</li></ul>       |
+| Azure Cosmos DB                     | Global             | cosmos-\<App Name\>-\<Environment\>   | <ul><li>cosmos-navigator-prod </li><li>cosmos-emissions-dev</li></ul>       |
 | Azure Cache for Redis               | Global             | redis-\<App Name\>-\<Environment\>    | <ul><li>redis-navigator-prod </li><li>redis-emissions-dev</li></ul>       |
 | Azure Database for MySQL            | Global             | mysql-\<App Name\>-\<Environment\>    | <ul><li>mysql-navigator-prod </li><li>mysql-emissions-dev</li></ul>       |
 | Azure Database for PostgreSQL       | Global             | psql-\<App Name\>-\<Environment\>     | <ul><li>psql-navigator-prod </li><li>psql-emissions-dev</li></ul>         |
