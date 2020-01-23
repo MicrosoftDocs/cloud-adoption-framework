@@ -51,4 +51,4 @@ As a next step to understanding this methodology, [Common blockers and challenge
 > [!div class="nextstepaction"]
 > [Understanding common blockers and challenges](./challenges.md)
 
-Some of the concepts in this article build on topics first described in [The Lean Startup](https://theleanstartup.com/book), written by Eric Ries.
+Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.
