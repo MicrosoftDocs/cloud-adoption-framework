@@ -41,7 +41,7 @@ From the name, you can quickly identify the resource's type, its associated work
 
 #### Naming scope
 
-All Azure resource types have a scope which defines the level that resource names must be unique. A resource must have a unique name within its scope.
+All Azure resource types have a scope that defines the level that resource names must be unique. A resource must have a unique name within its scope.
 
 For example, a virtual network has a resource group scope, which means that there can be only one network named `vnet-prod-westus-001` in a given resource group. Other resource groups can have their own virtual network named `vnet-prod-westus-001`. Subnets, to give another example, are scoped to virtual networks, which means that each subnet within a virtual network must be uniquely named.
 
@@ -60,7 +60,7 @@ Keep the length of naming components short to prevent exceeding resource name le
 | Business unit | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. | _fin_, _mktg_, _product_, _it_, _corp_ |
 | Subscription type | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads. | _prod_, _shared_, _client_ |
 | Application or service name | Name of the application, workload, or service that the resource is a part of. | _navigator_, _emissions_, _sharepoint_, _hadoop_ |
-| Deployment environment | The stage of the development lifecycle for the workload that the resource support4s. | _prod_, _dev_, _qa_, _stage_, _test_ |
+| Deployment environment | The stage of the development lifecycle for the workload that the resource supports. | _prod_, _dev_, _qa_, _stage_, _test_ |
 | Region | The Azure region where the resource is deployed. | _westus_, _eastus2_, _westeurope_, _usgovia_ |
 
 #### Recommended resource-type prefixes
@@ -88,9 +88,9 @@ The following list provides recommended Azure resource type prefixes to use when
 | Key vault                           | kv-                  |
 | AKS cluster                         | aks-                 |
 | AKS container                       | con-                 |
-| Service bus                         | sb-                  |
-| Service bus queue                   | sbq-                 |
-| Service bus topic                   | sbt-                 |
+| Service Bus                         | sb-                  |
+| Service Bus queue                   | sbq-                 |
+| Service Bus topic                   | sbt-                 |
 | App Service plan                    | plan-                |
 | Web app                             | app-                 |
 | Function app                        | func-                |

@@ -36,7 +36,7 @@ The Contoso cloud team has pinned down app requirements for this migration. Thes
 - The API service used for pet photos should be accurate and reliable in the real world, since decisions made by the app must be honored in their hotels. Any pet granted access is allowed to stay at the hotels.
 - To meet requirements for a DevOps pipeline, Contoso will use Azure DevOps for source code management (SCM), with Git Repos. Automated builds and releases will be used to build code and deploy to Azure App Service, Azure Functions, and AKS.
 - Different CI/CD pipelines are needed for microservices on the back end, and for the web site on the front end.
-- The back-end services have a different release cycle from the front-end web app. To meet this requirement, they will deploy two different DevOps pipelines.
+- The back-end services have a different release cycle from the front-end web app. To meet this requirement, they will deploy two different pipelines.
 - Contoso needs management approval for all front-end website deployment, and the CI/CD pipeline must provide this.
 
 ## Solution design
@@ -53,7 +53,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 ### Proposed architecture
 
-- The front-end of the app is deployed as an Azure App Service web app in the primary Azure region.
+- The front end of the app is deployed as an Azure App Service web app in the primary Azure region.
 - An Azure function provides uploads of pet photos, and the site interacts with this functionality.
 - The pet photo function uses the Azure Cognitive Services Vision API and Cosmos DB.
 - The back end of the site is built using microservices. These will be deployed to containers managed on the Azure Kubernetes service (AKS).
