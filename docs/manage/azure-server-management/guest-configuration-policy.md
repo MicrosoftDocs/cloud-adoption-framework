@@ -1,6 +1,5 @@
 ---
 title: "Guest Configuration policy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Guest Configuration policy
 author: BrianBlanchard
 ms.author: brblanch

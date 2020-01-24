@@ -1,6 +1,5 @@
 ---
 title: Manage access to your Azure environment
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to set up access control for your Azure environment with role-based access control (RBAC).
 author: LijuKodicheraJayadevan
 ms.author: kfollis

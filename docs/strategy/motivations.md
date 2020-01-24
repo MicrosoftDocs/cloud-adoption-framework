@@ -1,6 +1,5 @@
 ---
 title: "Motivations: Why are we moving to the cloud?"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cloud accounting and moving to the cloud
 author: BrianBlanchard
 ms.author: brblanch

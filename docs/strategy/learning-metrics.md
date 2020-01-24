@@ -1,6 +1,5 @@
 ---
 title: "How can we align efforts to meaningful learning metrics?"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the concept of learning metrics
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Cloud management"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cloud management in the Cloud Adoption Framework
 author: BrianBlanchard
 ms.author: brblanch
