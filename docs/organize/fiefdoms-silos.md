@@ -1,6 +1,5 @@
 ---
 title: "Silos and fiefdoms"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Understand the antipatterns of silos and fiefdoms.
 author: BrianBlanchard
 ms.author: brblanch

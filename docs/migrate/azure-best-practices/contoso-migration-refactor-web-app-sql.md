@@ -1,6 +1,5 @@
 ---
 title: "Refactor an app by migrating it to Azure App Service and Azure SQL Database"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso rehosts an on-premises app by migrating it to an Azure App Service web app and Azure SQL Server database.
 author: BrianBlanchard
 ms.author: brblanch

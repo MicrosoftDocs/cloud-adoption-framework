@@ -1,6 +1,5 @@
 ---
 title: "NoSQL migration decision tree"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: NoSQL migration decision tree
 author: BrianBlanchard
 ms.author: brblanch

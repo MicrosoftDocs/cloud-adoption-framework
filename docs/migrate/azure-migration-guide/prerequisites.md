@@ -1,6 +1,5 @@
 ---
 title: "Prerequisites for migrating to Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Prerequisites for migrating to Azure
 author: matticusau
 ms.author: mlavery
