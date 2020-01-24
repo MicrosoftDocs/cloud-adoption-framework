@@ -1,7 +1,7 @@
 ---
 title: "Multiple datacenters"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Multiple datacenters
+description: Use this guidance when multiple datacenters are included in your Azure migration. This guidance expands the scope of the Azure migration guide.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
