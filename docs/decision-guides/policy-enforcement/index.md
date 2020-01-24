@@ -1,6 +1,5 @@
 ---
 title: "Policy enforcement decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about policy enforcement subscriptions as a core design priority in Azure migrations.
 author: rotycenh
 ms.author: v-tyhopk

@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Learn"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to Cloud innovation - Learn content
 author: BrianBlanchard
 ms.author: brblanch
