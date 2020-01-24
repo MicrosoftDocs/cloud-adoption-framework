@@ -1,6 +1,5 @@
 ---
 title: "Cloud automation capabilities"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describe the formation of cloud automation capabilities
 author: BrianBlanchard
 ms.author: brblanch

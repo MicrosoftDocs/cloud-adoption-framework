@@ -1,6 +1,5 @@
 ---
 title: "Building technical skills"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Overview of skills readiness path during the Ready phase of migration. 
 author: BrianBlanchard
 ms.author: brblanch

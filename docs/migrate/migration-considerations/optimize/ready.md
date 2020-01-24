@@ -1,6 +1,5 @@
 ---
 title: "Prepare a migrated application for production promotion"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
 author: BrianBlanchard
 ms.author: brblanch

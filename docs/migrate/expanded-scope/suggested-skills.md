@@ -1,6 +1,5 @@
 ---
 title: "Skills readiness for cloud migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Skills readiness for cloud migration
 author: BrianBlanchard
 ms.author: brblanch

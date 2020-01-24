@@ -1,6 +1,5 @@
 ---
 title: "Manage organization alignment"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Provides an overview of an approach to managing organization alignment.
 author: BrianBlanchard
 ms.author: brblanch

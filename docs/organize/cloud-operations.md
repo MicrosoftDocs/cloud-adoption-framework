@@ -1,6 +1,5 @@
 ---
 title: "Cloud operation capabilities"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describes the formation of cloud operation capabilities
 author: BrianBlanchard
 ms.author: brblanch
