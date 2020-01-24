@@ -1,7 +1,7 @@
 ---
 title: "Optimize and Transform"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Optimize and Transform
+description: This part of the Azure migration guide covers areas of optimization, including reviewing the design of the solution, right sizing the services, and analyzing costs.
 author: matticusau
 ms.author: mlavery
 ms.date: 04/04/2019
