@@ -1,6 +1,5 @@
 ---
 title: "Azure management guide: Before you start" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to manage your Azure operations with step-by-step guidance.
 author: BrianBlanchard
 ms.author: brblanch

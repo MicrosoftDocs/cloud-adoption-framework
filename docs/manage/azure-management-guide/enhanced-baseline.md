@@ -1,6 +1,5 @@
 ---
 title: Enhanced management baseline in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Common improvements to the management baseline
 author: BrianBlanchard
 ms.author: brblanch

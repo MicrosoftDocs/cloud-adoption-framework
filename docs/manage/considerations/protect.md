@@ -1,6 +1,5 @@
 ---
 title: "Protect and recover - Cloud Management and Operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Protect and recover - Cloud Management and Operations
 author: BrianBlanchard
 ms.author: brblanch

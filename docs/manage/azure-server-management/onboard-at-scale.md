@@ -1,6 +1,5 @@
 ---
 title: "Configure Azure server management services for a subscription"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Configure Azure server management services for a subscription
 author: BrianBlanchard
 ms.author: brblanch

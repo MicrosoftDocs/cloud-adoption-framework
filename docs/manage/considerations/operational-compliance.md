@@ -1,6 +1,5 @@
 ---
 title: "Operational compliance - Cloud Management and Operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Operational compliance - Cloud Management and Operations
 author: BrianBlanchard
 ms.author: brblanch
