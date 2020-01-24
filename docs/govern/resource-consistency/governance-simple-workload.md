@@ -1,6 +1,5 @@
 ---
 title: "Governance design for a simple workload"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Guidance for configuring Azure governance controls to enable a user to deploy a simple workload.
 author: alexbuckgit
 ms.author: abuck

@@ -1,6 +1,5 @@
 ---
 title: "Evaluate corporate policy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Evaluate corporate policy as part of your cloud governance strategy.
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Identity Baseline sample policy statements"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Identity Baseline sample policy statements
 author: BrianBlanchard
 ms.author: brblanch

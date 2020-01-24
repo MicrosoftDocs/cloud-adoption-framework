@@ -1,6 +1,5 @@
 ---
 title: "Identity Baseline template"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Identity Baseline template
 author: BrianBlanchard
 ms.author: brblanch

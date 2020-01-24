@@ -1,6 +1,5 @@
 ---
 title: "Standard enterprise guide: Improve the Cost Management discipline"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Standard enterprise guide: Improve the Cost Management discipline"
 author: BrianBlanchard
 ms.author: brblanch
