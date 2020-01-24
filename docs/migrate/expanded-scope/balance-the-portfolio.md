@@ -1,7 +1,7 @@
 ---
 title: "Balance the portfolio"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Lean to balance your cloud portfolio.
+description: Discover strategies for balancing migration, innovation, and experimentation to get the most out of your cloud migration efforts.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
