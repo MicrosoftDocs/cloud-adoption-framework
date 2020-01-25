@@ -1,6 +1,5 @@
 ---
 title: "Resource Consistency tools in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Resource Consistency tools in Azure
 author: BrianBlanchard
 ms.author: brblanch

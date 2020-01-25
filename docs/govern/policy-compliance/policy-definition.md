@@ -1,6 +1,5 @@
 ---
 title: "Define corporate policy for cloud governance"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to establish policy to reflect and remediate risks.
 author: BrianBlanchard
 ms.author: brblanch

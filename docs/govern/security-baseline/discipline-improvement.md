@@ -1,6 +1,5 @@
 ---
 title: "Security Baseline discipline improvement"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Security Baseline discipline improvement
 author: BrianBlanchard
 ms.author: brblanch

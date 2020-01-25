@@ -1,6 +1,5 @@
 ---
 title: "Prepare corporate IT policy for the cloud"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the concept of corporate policy in relation to cloud governance.
 author: BrianBlanchard
 ms.author: brblanch

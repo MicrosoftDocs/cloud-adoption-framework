@@ -1,6 +1,5 @@
 ---
 title: "Deployment Acceleration policy compliance processes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Deployment Acceleration policy compliance processes
 author: alexbuckgit
 ms.author: abuck

@@ -1,6 +1,5 @@
 ---
 title: "Deployment Acceleration tools in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Deployment Acceleration tools in Azure
 author: BrianBlanchard
 ms.author: brblanch

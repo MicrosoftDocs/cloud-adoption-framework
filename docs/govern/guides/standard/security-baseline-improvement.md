@@ -1,6 +1,5 @@
 ---
 title: "Standard enterprise governance guide: Improve the Security Baseline discipline"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Standard enterprise governance guide: Improve the Security Baseline discipline"
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Cost Management metrics, indicators, and risk tolerance"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of Cost Management in relation to cloud governance
 author: BrianBlanchard
 ms.author: brblanch
