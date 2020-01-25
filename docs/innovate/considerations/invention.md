@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Develop digital inventions"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to Cloud Innovation - Develop digital inventions
 author: BrianBlanchard
 ms.author: brblanch

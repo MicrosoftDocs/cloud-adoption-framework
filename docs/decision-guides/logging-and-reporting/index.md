@@ -1,6 +1,5 @@
 ---
 title: "Logging and reporting decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about logging, reporting, and monitoring as core services in Azure migrations.
 author: rotycenh
 ms.author: v-tyhopk

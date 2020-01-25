@@ -1,6 +1,5 @@
 ---
 title: "Approaches to digital estate planning"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about various approaches to digital estate planning.
 author: BrianBlanchard
 ms.author: brblanch

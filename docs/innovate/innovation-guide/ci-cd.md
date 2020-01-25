@@ -1,6 +1,5 @@
 ---
 title: "Azure innovation guide: Empower adoption" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to empower adoption by using Azure
 author: absheik
 ms.author: absheik

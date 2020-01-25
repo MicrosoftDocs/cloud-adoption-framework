@@ -1,6 +1,5 @@
 ---
 title: "Mainframe migration: Make the switch from mainframes to Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Migrate applications from mainframe environments to Azure for systems that currently run on mainframes.
 author: njray
 ms.author: v-nanra

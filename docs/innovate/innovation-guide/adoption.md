@@ -1,6 +1,5 @@
 ---
 title: "Azure innovation guide: Prepare for customer feedback" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Prepare for customer feedback
 author: BrianBlanchard
 ms.author: brblanch
