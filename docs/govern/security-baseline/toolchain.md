@@ -1,6 +1,5 @@
 ---
 title: "Security Baseline tools in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the tools that can facilitate improved Security Baseline in Azure.
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Aligning assets to prioritized workloads"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Aligning assets to prioritized workloads
 author: BrianBlanchard
 ms.author: brblanch

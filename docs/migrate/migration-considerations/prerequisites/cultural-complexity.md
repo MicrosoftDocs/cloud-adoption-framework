@@ -1,6 +1,5 @@
 ---
 title: "Prepare for cultural complexity: aligning roles and responsibilities"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Prepare for cultural complexity by aligning roles and responsibilities.
 author: BrianBlanchard
 ms.author: brblanch

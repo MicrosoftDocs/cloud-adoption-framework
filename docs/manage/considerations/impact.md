@@ -1,6 +1,5 @@
 ---
 title: "Business impact - Cloud Management and Operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Business impact - Cloud Management and Operations
 author: BrianBlanchard
 ms.author: brblanch

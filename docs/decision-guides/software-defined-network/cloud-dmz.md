@@ -1,6 +1,5 @@
 ---
 title: "Software Defined Networking: Cloud DMZ"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: This network architecture allows limited access between your on-premises and cloud-based networks.
 author: rotycenh
 ms.author: v-tyhopk

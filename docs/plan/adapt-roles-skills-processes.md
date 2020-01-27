@@ -1,6 +1,5 @@
 ---
 title: "Adapt existing roles, skills, and processes for the cloud" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describes a process to adapt existing roles, skills, and processes for the cloud.
 author: BrianBlanchard
 ms.author: brblanch

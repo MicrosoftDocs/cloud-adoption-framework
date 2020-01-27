@@ -1,6 +1,5 @@
 ---
 title: "Azure security guidance"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: What security guidance does Microsoft provide?
 author: BrianBlanchard
 ms.author: brblanch

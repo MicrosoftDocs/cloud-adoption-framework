@@ -1,6 +1,5 @@
 ---
 title: "What is a digital estate?"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: What is a digital estate?
 author: BrianBlanchard
 ms.author: brblanch

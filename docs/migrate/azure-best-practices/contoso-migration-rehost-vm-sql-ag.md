@@ -1,6 +1,5 @@
 ---
 title: "Rehost an app by migrating it to Azure VMs and SQL Server Always On availability groups"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso rehosts an on-premises app by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: BrianBlanchard
 ms.author: brblanch

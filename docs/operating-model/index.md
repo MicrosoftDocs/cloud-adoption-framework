@@ -1,6 +1,5 @@
 ---
 title: "Introduction to the operating model"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Understand the operating model of the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch

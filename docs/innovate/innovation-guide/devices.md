@@ -1,6 +1,5 @@
 ---
 title: "Azure innovation guide: Interact through devices" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Azure innovation guide - Interact through devices
 author: umarmohamedusman
 ms.author: umarm

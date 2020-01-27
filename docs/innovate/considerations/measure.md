@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Measure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to Cloud innovation - Measure content
 author: BrianBlanchard
 ms.author: brblanch

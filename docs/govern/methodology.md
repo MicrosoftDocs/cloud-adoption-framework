@@ -1,6 +1,5 @@
 ---
 title: "Cloud governance methodology" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework. 
 author: BrianBlanchard
 ms.author: brblanch

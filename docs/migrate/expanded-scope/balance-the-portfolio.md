@@ -1,6 +1,5 @@
 ---
 title: "Balance the portfolio"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Lean to balance your cloud portfolio.
 author: BrianBlanchard
 ms.author: brblanch

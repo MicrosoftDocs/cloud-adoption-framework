@@ -1,6 +1,5 @@
 ---
 title: "Deployment Acceleration metrics, indicators, and risk tolerance"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Deployment Acceleration metrics, indicators, and risk tolerance
 author: alexbuckgit
 ms.author: abuck

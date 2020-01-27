@@ -1,6 +1,5 @@
 ---
 title: "Oracle migration decision tree"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Oracle migration decision tree
 author: BrianBlanchard
 ms.author: brblanch

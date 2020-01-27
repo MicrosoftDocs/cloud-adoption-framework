@@ -1,6 +1,5 @@
 ---
 title: Inventory and visibility in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to set up inventory, monitoring, reporting, and alerts for your Azure management environment.
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Create customer partnerships via the build-measure-learn feedback loop"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn to create partnerships with customers via the build-measure-learn feedback loop.
 author: BrianBlanchard
 ms.author: brblanch

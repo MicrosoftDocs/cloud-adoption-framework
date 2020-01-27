@@ -1,6 +1,5 @@
 ---
 title: "Define a cloud adoption plan"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Guide technical efforts with a defined cloud adoption plan
 author: BrianBlanchard
 ms.author: brblanch

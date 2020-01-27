@@ -1,6 +1,5 @@
 ---
 title: "Review rationalization decisions"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Review rationalization decisions
 author: BrianBlanchard
 ms.author: brblanch

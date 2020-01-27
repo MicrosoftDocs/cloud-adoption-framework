@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation in the Cloud Adoption Framework"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about cloud innovation in the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch

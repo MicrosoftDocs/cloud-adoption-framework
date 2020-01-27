@@ -1,6 +1,5 @@
 ---
 title: "Cloud-native Security Baseline policy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cloud-Native Security Baseline policy
 author: BrianBlanchard
 ms.author: brblanch

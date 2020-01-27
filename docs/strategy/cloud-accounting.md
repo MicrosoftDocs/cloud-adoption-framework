@@ -1,6 +1,5 @@
 ---
 title: "What is cloud accounting?"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the concept of cloud accounting
 author: BrianBlanchard
 ms.author: brblanch
