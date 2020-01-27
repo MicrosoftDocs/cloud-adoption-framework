@@ -1,6 +1,5 @@
 ---
 title: "Decommission retired assets"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Decommission retired assets
 author: BrianBlanchard
 ms.author: brblanch

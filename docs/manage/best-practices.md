@@ -1,6 +1,5 @@
 ---
 title: "Introduction to operational management"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Understand operational management within the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch

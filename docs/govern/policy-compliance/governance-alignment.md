@@ -1,6 +1,5 @@
 ---
 title: "Align your cloud governance design guide with corporate policy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Align your cloud governance design guide with corporate policy"
 author: BrianBlanchard
 ms.author: brblanch

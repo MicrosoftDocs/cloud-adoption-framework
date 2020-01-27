@@ -1,6 +1,5 @@
 ---
 title: "Resource Consistency template"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Resource Consistency template
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: Conduct a cloud policy review
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to conduct a cloud policy review.
 author: BrianBlanchard
 ms.author: brblanch

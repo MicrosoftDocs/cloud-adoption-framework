@@ -1,6 +1,5 @@
 ---
 title: "Deployment Acceleration sample policy statements"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Deployment Acceleration sample policy statements
 author: alexbuckgit
 ms.author: abuck

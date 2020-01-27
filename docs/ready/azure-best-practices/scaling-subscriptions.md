@@ -1,6 +1,5 @@
 ---
 title: "Scaling with multiple Azure subscriptions"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to scale with multiple Azure subscriptions.
 author: alexbuckgit
 ms.author: abuck

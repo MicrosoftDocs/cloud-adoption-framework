@@ -1,6 +1,5 @@
 ---
 title: "Governance guide for complex enterprises: Improve the Security Baseline discipline"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Governance guide for complex enterprises: Improve the Security Baseline discipline"
 author: BrianBlanchard
 ms.author: brblanch

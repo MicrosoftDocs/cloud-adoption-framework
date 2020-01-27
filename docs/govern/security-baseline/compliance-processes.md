@@ -1,6 +1,5 @@
 ---
 title: "Security Baseline policy compliance processes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Security Baseline policy compliance processes
 author: BrianBlanchard
 ms.author: brblanch

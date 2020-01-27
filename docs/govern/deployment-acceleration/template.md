@@ -1,6 +1,5 @@
 ---
 title: "Deployment Acceleration template"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Deployment Acceleration template
 author: alexbuckgit
 ms.author: abuck

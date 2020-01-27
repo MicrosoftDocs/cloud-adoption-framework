@@ -1,6 +1,5 @@
 ---
 title: "How to use the business outcome template"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the business outcome template
 author: BrianBlanchard
 ms.author: brblanch

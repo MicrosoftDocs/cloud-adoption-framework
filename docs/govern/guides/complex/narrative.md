@@ -1,6 +1,5 @@
 ---
 title: "Governance guide for complex enterprises: The supporting narrative"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: This narrative establishes a use case for governance during a complex enterprise's cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch

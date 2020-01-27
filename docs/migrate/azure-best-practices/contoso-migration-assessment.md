@@ -1,6 +1,5 @@
 ---
 title: "Assess on-premises workloads for migration to Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso assesses its on-premises machines for migration to Azure by using Azure Migrate and Data Migration Assistant.
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Building a cost-conscious organization"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn best practices for building a cost-conscious organization.
 author: BrianBlanchard
 ms.author: brblanch

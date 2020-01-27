@@ -1,6 +1,5 @@
 ---
 title: "Skills readiness path"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Overview of skills readiness path
 author: BrianBlanchard
 ms.author: brblanch
