@@ -1,6 +1,5 @@
 ---
 title: "Cost Management discipline improvement"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cost Management discipline improvement
 author: BrianBlanchard
 ms.author: brblanch

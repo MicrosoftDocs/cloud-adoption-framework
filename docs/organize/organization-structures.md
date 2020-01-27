@@ -1,6 +1,5 @@
 ---
 title: "Establish team structures"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Establish team structures
 author: BrianBlanchard
 ms.author: brblanch

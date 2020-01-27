@@ -1,6 +1,5 @@
 ---
 title: "Use Terraform to build your landing zones"
-titleSuffix: "Microsoft Cloud Adoption Framework for Azure"
 description: Learn to use Terraform to build your landing zones.
 author: arnaudlh
 ms.author: arnaul

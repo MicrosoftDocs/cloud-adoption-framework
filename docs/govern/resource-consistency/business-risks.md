@@ -1,6 +1,5 @@
 ---
 title: "Resource Consistency motivations and business risks"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Resource Consistency motivations and business risks
 author: alexbuckgit
 ms.author: abuck

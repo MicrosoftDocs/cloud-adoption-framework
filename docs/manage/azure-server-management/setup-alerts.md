@@ -1,6 +1,5 @@
 ---
 title: "Set up basic alerts"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Set up basic alerts
 author: BrianBlanchard
 ms.author: brblanch

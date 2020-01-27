@@ -1,6 +1,5 @@
 ---
 title: "Examples of performance outcomes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Examples of Performance Outcomes
 author: BrianBlanchard
 ms.author: brblanch

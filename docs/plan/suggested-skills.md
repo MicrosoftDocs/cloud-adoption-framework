@@ -1,6 +1,5 @@
 ---
 title: "Getting started on a skills readiness path"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Getting started on a skills readiness path
 author: BrianBlanchard
 ms.author: brblanch

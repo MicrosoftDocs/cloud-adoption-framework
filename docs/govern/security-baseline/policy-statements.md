@@ -1,6 +1,5 @@
 ---
 title: "Security Baseline sample policy statements"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Security Baseline sample policy statements
 author: BrianBlanchard
 ms.author: brblanch

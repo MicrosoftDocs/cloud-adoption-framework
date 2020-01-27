@@ -1,6 +1,5 @@
 ---
 title: "Establish an initial cloud governance foundation"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Get started with cloud governance by establishing an initial cloud governance foundation.
 author: BrianBlanchard
 ms.author: brblanch

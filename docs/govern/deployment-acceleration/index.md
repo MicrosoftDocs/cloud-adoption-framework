@@ -1,6 +1,5 @@
 ---
 title: "Deployment Acceleration discipline overview"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of Deployment Acceleration in relation to cloud governance.
 author: BrianBlanchard
 ms.author: brblanch

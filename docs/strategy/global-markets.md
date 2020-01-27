@@ -1,6 +1,5 @@
 ---
 title: "Understand the impact of global market decisions"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the concept of global markets
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Resource naming and tagging decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about resource organization and tagging as a core service in Azure migrations.
 author: alexbuckgit
 ms.author: abuck

@@ -1,6 +1,5 @@
 ---
 title: "What is cloud resource governance?"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation cloud resource governance on Azure
 author: alexbuckgit
 ms.author: abuck

@@ -1,6 +1,5 @@
 ---
 title: "Examples of fiscal outcomes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Examples of fiscal outcomes
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Software Defined Networking: Hub and spoke"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Discussion of cloud-native virtual networking services.
 author: rotycenh
 ms.author: v-tyhopk

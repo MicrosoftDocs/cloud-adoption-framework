@@ -1,6 +1,5 @@
 ---
 title: "Cost Management sample policy statements"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cost Management sample policy statements
 author: BrianBlanchard
 ms.author: brblanch

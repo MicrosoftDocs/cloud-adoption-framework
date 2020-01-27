@@ -1,6 +1,5 @@
 ---
 title: "Prepare for technical complexity: agile change management"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Preparing for technical complexity - agile change management
 author: BrianBlanchard
 ms.author: brblanch

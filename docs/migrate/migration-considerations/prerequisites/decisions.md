@@ -1,6 +1,5 @@
 ---
 title: "Decisions that affect migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Important decisions to be made about the migration process.
 author: BrianBlanchard
 ms.author: brblanch

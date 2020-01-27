@@ -1,6 +1,5 @@
 ---
 title: "Security Baseline metrics, indicators, and risk tolerance"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Security Baseline metrics, indicators, and risk tolerance
 author: BrianBlanchard
 ms.author: brblanch

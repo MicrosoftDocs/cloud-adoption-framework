@@ -1,6 +1,5 @@
 ---
 title: "Automate onboarding"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Automate onboarding
 author: BrianBlanchard
 ms.author: brblanch

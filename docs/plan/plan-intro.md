@@ -1,6 +1,5 @@
 ---
 title: "Plan for cloud adoption"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Planning for cloud adoption
 author: BrianBlanchard
 ms.author: brblanch

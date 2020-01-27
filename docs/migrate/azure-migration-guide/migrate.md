@@ -1,6 +1,5 @@
 ---
 title: "Migrate assets"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Migrate assets
 author: matticusau
 ms.author: mlavery

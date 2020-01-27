@@ -1,6 +1,5 @@
 ---
 title: "Balance the portfolio"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Discover strategies for balancing migration, innovation, and experimentation to get the most out of your cloud migration efforts.
 author: BrianBlanchard
 ms.author: brblanch

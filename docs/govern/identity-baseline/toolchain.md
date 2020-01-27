@@ -1,6 +1,5 @@
 ---
 title: "Identity Baseline tools in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Identity Baseline tools in Azure
 author: BrianBlanchard
 ms.author: brblanch

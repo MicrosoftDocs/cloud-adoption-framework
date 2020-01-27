@@ -1,6 +1,5 @@
 ---
 title: "Examples of customer engagement outcomes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Examples of customer engagement outcomes
 author: BrianBlanchard
 ms.author: brblanch
