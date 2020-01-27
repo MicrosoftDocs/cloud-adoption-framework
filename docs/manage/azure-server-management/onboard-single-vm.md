@@ -1,6 +1,5 @@
 ---
 title: "Enable server management services on a single VM for evaluation"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Enable server management services on a single VM for evaluation
 author: BrianBlanchard
 ms.author: brblanch

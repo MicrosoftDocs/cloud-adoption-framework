@@ -1,6 +1,5 @@
 ---
 title: Protect and recover in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Ensure business stability by reducing recovery time
 author: BrianBlanchard
 ms.author: brblanch

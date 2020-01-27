@@ -1,6 +1,5 @@
 ---
 title: "Central IT capabilities"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about the formation of central IT capabilities.
 author: BrianBlanchard
 ms.author: brblanch

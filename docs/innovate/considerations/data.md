@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Democratize data"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to Cloud innovation - Democratize data
 author: BrianBlanchard
 ms.author: brblanch

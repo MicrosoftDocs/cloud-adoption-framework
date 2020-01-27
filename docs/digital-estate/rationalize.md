@@ -1,6 +1,5 @@
 ---
 title: "Rationalize the digital estate"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Evaluate your digital assets to determine how best to host them in the cloud.
 author: BrianBlanchard
 ms.author: brblanch

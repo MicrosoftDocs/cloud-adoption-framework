@@ -1,6 +1,5 @@
 ---
 title: "What is data classification?"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Data classification allows you to determine and assign value to your organization's data, and is a common starting point for governance.
 author: BrianBlanchard
 ms.author: brblanch

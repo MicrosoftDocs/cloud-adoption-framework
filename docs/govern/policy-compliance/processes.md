@@ -1,6 +1,5 @@
 ---
 title: "Establish policy adherence processes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Establish processes to ensure compliance with corporate policies.
 author: BrianBlanchard
 ms.author: brblanch

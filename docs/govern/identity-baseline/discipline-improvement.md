@@ -1,6 +1,5 @@
 ---
 title: "Identity Baseline discipline improvement"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Identity Baseline discipline improvement
 author: BrianBlanchard
 ms.author: brblanch

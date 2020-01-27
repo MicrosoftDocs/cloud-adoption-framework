@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Tools to interact with devices in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Tools to interact with devices in Azure
 author: BrianBlanchard
 ms.author: brblanch

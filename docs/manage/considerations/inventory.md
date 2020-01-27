@@ -1,6 +1,5 @@
 ---
 title: "Inventory and visibility - Cloud Management and Operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Inventory and visibility - Cloud Management and Operations
 author: BrianBlanchard
 ms.author: brblanch

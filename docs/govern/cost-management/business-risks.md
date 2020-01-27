@@ -1,6 +1,5 @@
 ---
 title: "Cost Management motivations and business risks"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cost Management motivations and business risks
 author: BrianBlanchard
 ms.author: brblanch

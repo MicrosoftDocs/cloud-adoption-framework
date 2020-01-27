@@ -1,6 +1,5 @@
 ---
 title: "Optimize and Transform"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Optimize and Transform
 author: matticusau
 ms.author: mlavery

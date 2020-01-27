@@ -1,6 +1,5 @@
 ---
 title: "Build consensus on the business value of cloud innovation"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn to build consensus on the business value of cloud innovation.
 author: BrianBlanchard
 ms.author: brblanch

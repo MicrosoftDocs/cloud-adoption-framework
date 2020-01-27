@@ -1,6 +1,5 @@
 ---
 title: "Azure innovation guide: Predict and influence" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn to predict and influence using Azure.
 author: BrianBlanchard
 ms.author: brblanch

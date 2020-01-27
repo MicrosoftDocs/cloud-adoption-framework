@@ -1,6 +1,5 @@
 ---
 title: "Cloud strategy capabilities" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describes the formation of cloud strategy capabilities
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Innovate through cloud adoption"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn to innovate through cloud adoption using the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Examples of agility outcomes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Examples of agility outcomes
 author: BrianBlanchard
 ms.author: brblanch

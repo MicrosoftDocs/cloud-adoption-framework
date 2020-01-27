@@ -1,6 +1,5 @@
 ---
 title: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
 author: BrianBlanchard
 ms.author: brblanch

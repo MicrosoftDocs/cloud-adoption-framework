@@ -1,6 +1,5 @@
 ---
 title: "Rebuild an on-premises app to Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso rebuilds an app to Azure using Azure App Service, Azure Kubernetes Service, Cosmos DB, Azure Functions, and Azure Cognitive Services.
 author: BrianBlanchard
 ms.author: brblanch

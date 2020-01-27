@@ -1,6 +1,5 @@
 ---
 title: "Business alignment: Cloud management and operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Business Alignment - Cloud Management and Operations
 author: BrianBlanchard
 ms.author: brblanch

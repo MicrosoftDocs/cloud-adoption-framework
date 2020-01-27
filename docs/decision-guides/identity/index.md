@@ -1,6 +1,5 @@
 ---
 title: "Identity decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about identity as a core service in Azure migrations.
 author: rotycenh
 ms.author: v-tyhopk

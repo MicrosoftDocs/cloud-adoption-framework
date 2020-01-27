@@ -1,6 +1,5 @@
 ---
 title: "Governance guide for complex enterprises"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Governance guide for complex enterprises
 author: BrianBlanchard
 ms.author: brblanch

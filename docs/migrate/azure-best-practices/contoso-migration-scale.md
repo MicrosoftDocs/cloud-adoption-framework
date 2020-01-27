@@ -1,6 +1,5 @@
 ---
 title: "Scale a migration to Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso handles a scaled migration to Azure.
 author: BrianBlanchard
 ms.author: brblanch

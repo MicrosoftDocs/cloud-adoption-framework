@@ -1,6 +1,5 @@
 ---
 title: "SQL Server migration best practices for Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to SQL Server Migration Best Practices for Azure
 author: BrianBlanchard
 ms.author: brblanch

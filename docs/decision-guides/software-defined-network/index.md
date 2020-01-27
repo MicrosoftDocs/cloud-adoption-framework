@@ -1,6 +1,5 @@
 ---
 title: "Software Defined Networking decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about Software Defined Networks as a core service in Azure migrations.
 author: rotycenh
 ms.author: v-tyhopk

@@ -1,6 +1,5 @@
 ---
 title: "Create update schedules"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Create update schedules
 author: BrianBlanchard
 ms.author: brblanch

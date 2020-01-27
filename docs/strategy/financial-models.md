@@ -1,6 +1,5 @@
 ---
 title: "Create a financial model for cloud transformation"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: How to create a financial model for cloud transformation.
 author: BrianBlanchard
 ms.author: brblanch

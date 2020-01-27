@@ -1,6 +1,5 @@
 ---
 title: "Enable customer success during a cloud adoption journey"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Enable customer success throughout a cloud adoption journey
 author: BrianBlanchard
 ms.author: brblanch

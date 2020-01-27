@@ -1,6 +1,5 @@
 ---
 title: "Governance design in Azure for multiple teams"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Guidance for configuring Azure governance controls for multiple teams, multiple workloads, and multiple environments.
 author: alexbuckgit
 ms.author: abuck

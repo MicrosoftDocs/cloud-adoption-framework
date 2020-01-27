@@ -1,6 +1,5 @@
 ---
 title: "Azure innovation guide: Before you start" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn to create innovative new solutions for your customers using Azure.
 author: matticusau
 ms.author: mlavery

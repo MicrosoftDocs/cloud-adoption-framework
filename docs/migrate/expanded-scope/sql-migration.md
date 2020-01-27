@@ -1,6 +1,5 @@
 ---
 title: "Accelerate migration by migrating an instance of SQL Server"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Migrating entire SQL Server instances can accelerate workload migration efforts.
 author: BrianBlanchard
 ms.author: brblanch
