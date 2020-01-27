@@ -1,6 +1,5 @@
 ---
 title: "Azure readiness best practices"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to best practices for Azure readiness
 author: BrianBlanchard
 ms.author: brblanch

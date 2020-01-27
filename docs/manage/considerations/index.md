@@ -1,6 +1,5 @@
 ---
 title: "Cloud Management and Operations - Guiding theory"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cloud Management and Operations - Guiding theory
 author: BrianBlanchard
 ms.author: brblanch

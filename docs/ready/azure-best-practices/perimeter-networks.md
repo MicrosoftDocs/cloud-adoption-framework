@@ -1,6 +1,5 @@
 ---
 title: "Perimeter networks"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Perimeter networks
 author: tracsman
 ms.author: jonor

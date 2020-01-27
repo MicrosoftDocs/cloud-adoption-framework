@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Tools to democratize data in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Tools to democratize data in Azure
 author: BrianBlanchard
 ms.author: brblanch

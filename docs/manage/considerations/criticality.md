@@ -1,6 +1,5 @@
 ---
 title: "Business criticality: Cloud management and operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Business criticality: Cloud management and operations"
 author: BrianBlanchard
 ms.author: brblanch

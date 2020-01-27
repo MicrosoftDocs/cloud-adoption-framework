@@ -1,6 +1,5 @@
 ---
 title: "Resource consistency decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about resource consistency when planning an Azure migration.
 author: doodlemania2
 ms.author: dermar

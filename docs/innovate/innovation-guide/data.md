@@ -1,6 +1,5 @@
 ---
 title: "Azure innovation guide: Democratize data" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to democratize data by using Azure
 author: absheik
 ms.author: absheik

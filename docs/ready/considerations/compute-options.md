@@ -1,6 +1,5 @@
 ---
 title: Review your compute options
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Review your compute options for Azure workloads.
 author: BrianBlanchard
 ms.author: brblanch

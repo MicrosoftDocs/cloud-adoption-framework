@@ -1,6 +1,5 @@
 ---
 title: "Security Baseline template"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the concept Security Baseline in relation to cloud governance.
 author: BrianBlanchard
 ms.author: brblanch

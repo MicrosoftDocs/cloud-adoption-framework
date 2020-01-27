@@ -1,6 +1,5 @@
 ---
 title: "Rehost an on-premises Linux app to Azure VMs"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso rehosts an on-premises Linux app by migrating to Azure VMs.
 author: BrianBlanchard
 ms.author: brblanch

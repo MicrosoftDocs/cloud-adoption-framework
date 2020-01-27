@@ -1,6 +1,5 @@
 ---
 title: "Overview of Azure server management services"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to Azure server management services
 author: BrianBlanchard
 ms.author: brblanch

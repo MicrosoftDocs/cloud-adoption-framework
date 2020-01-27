@@ -1,6 +1,5 @@
 ---
 title: "Cloud adoption capabilities" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describes the formation of cloud adoption capabilities
 author: BrianBlanchard
 ms.author: brblanch

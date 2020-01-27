@@ -1,6 +1,5 @@
 ---
 title: "Prepare for cloud adoption"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Prepare the environment for the cloud adoption to follow
 author: BrianBlanchard
 ms.author: brblanch

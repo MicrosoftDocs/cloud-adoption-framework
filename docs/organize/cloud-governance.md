@@ -1,6 +1,5 @@
 ---
 title: "Cloud governance capabilities" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describes the formation of cloud governance capabilities
 author: BrianBlanchard
 ms.author: brblanch

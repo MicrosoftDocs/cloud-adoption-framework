@@ -1,6 +1,5 @@
 ---
 title: "Promotion models: single-step, staged, or flight"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Understand the impact of promotion on migration activities
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Regions decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about cloud platform region selections.
 author: doodlemania2
 ms.author: dermar

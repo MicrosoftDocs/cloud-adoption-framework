@@ -1,6 +1,5 @@
 ---
 title: Operational compliance in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Ensure business stability by increasing operational compliance
 author: BrianBlanchard
 ms.author: brblanch

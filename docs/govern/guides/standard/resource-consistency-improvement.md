@@ -1,6 +1,5 @@
 ---
 title: "Standard enterprise governance guide: Improving Resource Consistency"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Standard enterprise governance guide: Improving Resource Consistency"
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Rehost a Linux service desk app to Azure and Azure Database for MySQL"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso rehosts an on-premises Linux app by migrating it to Azure VMs and Azure Database for MySQL.
 author: BrianBlanchard
 ms.author: brblanch

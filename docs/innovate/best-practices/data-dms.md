@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Azure Database Migration Service"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cloud innovation - Azure Database Migration Service
 author: BrianBlanchard
 ms.author: brblanch

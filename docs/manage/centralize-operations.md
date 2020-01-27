@@ -1,6 +1,5 @@
 ---
 title: "Centralize management operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Guidance on centralizing management operations
 author: JnHs
 ms.author: jenhayes

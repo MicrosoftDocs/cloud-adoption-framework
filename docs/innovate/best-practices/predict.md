@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Tools to predict and influence in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Tools to predict and influence in Azure
 author: BrianBlanchard
 ms.author: brblanch

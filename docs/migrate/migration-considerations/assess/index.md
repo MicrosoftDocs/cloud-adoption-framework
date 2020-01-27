@@ -1,6 +1,5 @@
 ---
 title: "Assess assets prior to migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Assess assets prior to migration
 author: BrianBlanchard
 ms.author: brblanch
