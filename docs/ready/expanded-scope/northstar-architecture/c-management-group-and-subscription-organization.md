@@ -140,7 +140,7 @@ Cost transparency across a technical estate is a critical management challenge f
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Suggested design for [Network Topology and Connectivity](./D-Network-Topology-and-Connectivity.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Network Topology and Connectivity](./D-Network-Topology-and-Connectivity.md)

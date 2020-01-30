@@ -80,7 +80,7 @@ This section strives to help readers capture customer disaster recovery requirem
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Suggested design for [Security, Governance, and Compliance](./G-Security-Governance-and-Compliance.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Security, Governance, and Compliance](./G-Security-Governance-and-Compliance.md)

@@ -357,7 +357,7 @@ In many industries customers require that traffic in Azure, particularly inbound
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Suggested design for [Management and Monitoring](./E-Management-and-Monitoring.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Management and Monitoring](./E-Management-and-Monitoring.md)

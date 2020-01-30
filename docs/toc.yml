@@ -143,7 +143,7 @@
           href: ready/expanded-scope/northstar-architecture/design-principles.md
         - name: Design Guidelines
           items:
-          - name: Overview
+          - name: Critical Design Areas
             href: ready/expanded-scope/northstar-architecture/design-guidelines.md
           - name: A - Enterprise Enrolment and Azure AD Tenants
             href: ready/expanded-scope/northstar-architecture/a-enterprise-enrolment-and-azure-ad-tenants.md
@@ -157,7 +157,7 @@
             href: ready/expanded-scope/northstar-architecture/e-management-and-monitoring.md
           - name: F - Business Continuity and Disaster Recovery
             href: ready/expanded-scope/northstar-architecture/f-business-continuity-and-disaster-recovery.md
-          - name: G - Identity and Access Management
+          - name: G - Security, Governance, and Compliance
             href: ready/expanded-scope/northstar-architecture/g-security-governance-and-compliance.md
           - name: H - Platform Automation and DevOps
             href: ready/expanded-scope/northstar-architecture/h-platform-automation-and-devops.md

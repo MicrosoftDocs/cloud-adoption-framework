@@ -19,6 +19,12 @@ This guide expands the initial scope of the Cloud Adoption Framework's Ready met
 
 In this regard, this guide is intended to support enterprise Azure adoption by leveraging learnings from previous engineering engagements to provide a common “North Star” design pattern, where the “North Star” represents a strategic and ever-evolving design path for the platform, that is fully aligned with growth and advancement of the Azure platform.
 
+## Distinct technical and business advantage
+
+For most customers, the Cloud Adoption Framework provides separate methodologies for implementing and maturing along the following pillars: adoption readiness/landing zones (CAF Ready), governance (CAF Govern), operational management (CAF Manage), and deployment automation (CAF innovate). In the standard approach featured throughout the framework, each methodology progresses at it's own pace based on the adoption plan and each teams' existing processes.
+
+However, a number of scenarios require all three methodologies to reach a minimum level of maturity in unison. Examples of these scenarios include things like Large-scale migrations, extending a cloud center of excellence to a new cloud provider, hard commitments to exit a data center by a specific date, etc... For these complex scenarios and a number of others, the North Star architecture pulls aspects of each methodology into a single, united implementation plan to ensure specific standards are met before adoption begins.
+
 ## Objective
 
 The primary objective of this guide is to **help define a “North Star” architecture**, considering requisite design decisions across fundamental technical topics and “what-must-be-true” before organization wide Azure adoption can occur at large scale. This guide also outlines architectural guidance for large-scale Azure adoption to provide critical insights in support of enterprise-scale migration/transformation projects.

@@ -16,7 +16,7 @@ ms.custom: csu
 
 The “North Star” architecture prescribed within this guide is underpinned by following fundamental design principals, which serve as a compass for subsequent design decisions across critical technical domains. Readers are strongly advised to familiarize themselves with these principals to better understand their impact and the trade-offs associated with non-adherence.
 
-**Subscription Democratisation**
+**Subscription Democratization**
 
 Subscriptions should be used as a unit of management and scale aligned with business needs and priorities, to support business areas and portfolio owners to accelerate application migrations and net-new application development. Subscriptions should be provided to business lines to support the design and development/testing of both migrating and net-new workloads.
 

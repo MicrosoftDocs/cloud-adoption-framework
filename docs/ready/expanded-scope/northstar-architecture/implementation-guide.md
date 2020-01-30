@@ -232,10 +232,3 @@ The table below provides a list of example Azure Policies to enforce typical ent
 |                   | 22. Network interfaces should not have public IPs                                                      |
 |                   | 23. Virtual machines should be connected to an approved virtual network                                |
 |                   | 24. Virtual networks should use specified virtual network gateway                                      |
-
-## Next steps
-
-[TODO DEFINE NEXT STEP](./index.md)
-
-> [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)

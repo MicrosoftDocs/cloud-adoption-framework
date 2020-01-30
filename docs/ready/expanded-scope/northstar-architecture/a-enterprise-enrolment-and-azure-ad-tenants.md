@@ -83,7 +83,7 @@ An Azure AD tenant is an instance of Azure Active Directory which contains accou
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Suggested design for [Identity and Access Management](./B-Identity-and-Access-Management.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Identity and Access Management](./B-Identity-and-Access-Management.md)

@@ -122,7 +122,7 @@ Expanding on the previous section, this next section will now consider the feder
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Suggested design for [Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)

@@ -20,7 +20,9 @@ For example, a customer is likely to question how many subscriptions they requir
 
 ## Critical Design Areas
 
-The following eight critical design areas are intended to support the translation of customer requirements to Azure constructs and capabilities, to address the mismatch between on-premises infrastructure and cloud-design which typically creates dissonance and friction with respect to the "North Star" definition and Azure adoption. 
+The following eight critical design areas are intended to support the translation of customer requirements to Azure constructs and capabilities, to address the mismatch between on-premises infrastructure and cloud-design which typically creates dissonance and friction with respect to the "North Star" definition and Azure adoption.
+
+[![Critical Design Areas](./media/critical-design-areas.png "Critical Design Areas")](./media/critical-design-areas.png)
 
 The impact of decisions made within these critical areas will reverberate across the "North Star" architecture and influence other decisions. Readers are strongly advised to familiarize themselves with these eight areas, to better understand the consequences of encompassed decisions, which may later produce trade-offs within related areas.
 
@@ -30,12 +32,12 @@ The impact of decisions made within these critical areas will reverberate across
 * [D - Network Topology and Connectivity](./D-Network-Topology-and-Connectivity.md)
 * [E - Management and Monitoring](./E-Management-and-Monitoring.md)
 * [F - Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
-* [G - Identity and Access Management](./G-Security-Governance-and-Compliance.md)
+* [G - Security, Governance, and Compliance](./G-Security-Governance-and-Compliance.md)
 * [H - Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Configuration of [Enterprise Enrolment and Azure AD Tenants](./A-Enterprise-Enrolment-and-Azure-AD-Tenants.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Enterprise Enrolment and Azure AD Tenants](./A-Enterprise-Enrolment-and-Azure-AD-Tenants.md)

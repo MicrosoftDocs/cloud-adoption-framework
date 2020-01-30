@@ -106,7 +106,7 @@ A critical design decision enterprise organisation must make when adopting Azure
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Suggested design for [Management Group and Subscription Organization](./C-Management-Group-and-Subscription-Organization.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Management Group and Subscription Organization](./C-Management-Group-and-Subscription-Organization.md)

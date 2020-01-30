@@ -154,7 +154,7 @@ The distribution of roles, responsibilities, and trust between central IT teams 
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Review the [implementation Guidance](./implementation-guidance.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Implementation Guidance](./implementation-guidance.md)

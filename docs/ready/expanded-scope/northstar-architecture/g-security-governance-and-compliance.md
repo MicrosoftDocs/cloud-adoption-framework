@@ -243,7 +243,7 @@ The following table provides a framework to assess enterprise security readiness
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Suggested design for [Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
