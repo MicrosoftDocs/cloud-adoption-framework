@@ -1,7 +1,7 @@
 ---
-title: "North Star architecture guide"
+title: "CAF North Star architecture guide"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: North Star landing zone - Enterprise Enrolment and Azure AD Tenants
+description: CAF North Star architecture
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -11,13 +11,16 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# North Star architecture guide
+# CAF North Star architecture guide
 
-![North Star architecture guide](./media/icon.png)
+![CAF North Star architecture guide](./media/icon.png)
 
 This guide expands the initial scope of the Cloud Adoption Framework's Ready methodology by exploring actionable architectural and implementation guidelines for large-scale enterprise Azure adoption, focusing on the platform “North Star” design that must occur prior to application deployments, to support cloud migrations and position customers on a strategic transformation path for cloud-native innovation.
 
 In this regard, this guide is intended to support enterprise Azure adoption by leveraging learnings from previous engineering engagements to provide a common “North Star” design pattern, where the “North Star” represents a strategic and ever-evolving design path for the platform, that is fully aligned with growth and advancement of the Azure platform.
+
+> [!WARNING]
+> The CAF North Star guidance is currently an internal FTE only asset. While in development it is not customer ready & requires Microsoft FTE access to access this PR's review site. Upon general availability of this content, the shortlink [https://aka.ms/adopt/northstar](https://aka.ms/adopt/northstar) will be redirected to the production home for this guidance. Until then, this site is safe for use for internal collaboration. Expect frequent changes and potential editing errors in this pre-release version of the content.
 
 ## Distinct technical and business advantage
 
