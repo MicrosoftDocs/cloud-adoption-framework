@@ -2,7 +2,7 @@
 title: "Enterprise Enrolment and Azure AD Tenants"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: North Star landing zone - Enterprise Enrolment and Azure AD Tenants
-author: 
+author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide
@@ -69,7 +69,7 @@ An Azure AD tenant is an instance of Azure Active Directory which contains accou
 
 ***Design Recommendations***
 
-- Leverage AAD SSO based on the selected [planning topology](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-topologies).
+- Leverage AAD SSO based on the selected [planning topology](/azure/active-directory/hybrid/plan-connect-topologies).
 
 - Enforce MFA and conditional access policies for all privileged accounts.
 

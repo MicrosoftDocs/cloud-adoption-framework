@@ -2,7 +2,7 @@
 title: "Design Principles"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: North Star landing zone - Design Principles
-author: 
+author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide

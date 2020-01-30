@@ -2,7 +2,7 @@
 title: "Security, Governance and Compliance"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: North Star landing zone - Security, Governance and Compliance
-author: 
+author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide

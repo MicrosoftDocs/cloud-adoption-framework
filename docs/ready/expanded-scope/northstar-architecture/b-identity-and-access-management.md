@@ -2,7 +2,7 @@
 title: "Identity and Access Management"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: North Star landing zone - Identity and Access Management
-author: 
+author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide

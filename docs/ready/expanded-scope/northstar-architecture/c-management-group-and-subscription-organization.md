@@ -2,7 +2,7 @@
 title: "Management Group and Subscription Organization"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: North Star landing zone - Management Group and Subscription Organization
-author: 
+author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide
@@ -56,7 +56,7 @@ Subscriptions are a unit of management and scale within Azure, and therefore pla
 
 - Subscriptions serve as a policy boundary for the assignment of Azure policies. For example, secure workloads such as PCI typically require additional policies to achieve compliance, and this additional overhead does not need considered holistically if a separate subscription is used.
 
-- Subscriptions serve as a scale unit so that component workloads can scale within platform [subscription limits](https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits).
+- Subscriptions serve as a scale unit so that component workloads can scale within platform [subscription limits](/azure/azure-subscription-service-limits).
 
 - Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns.
 

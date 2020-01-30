@@ -2,7 +2,7 @@
 title: "Network Topology and Connectivity"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: North Star landing zone - Network Topology and Connectivity
-author: 
+author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide
@@ -32,7 +32,7 @@ It is vital that enterprise customers plan for IP addressing in Azure to ensure 
 
 - Azure reserves 5 IP addresses within each subnet which should be factored in when sizing Virtual Networks and encompassed subnets.
 
-- Some Azure services do require [dedicated subnets](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-for-azure-services#services-that-can-be-deployed-into-a-virtual-network), such as Azure Firewall or Virtual Network Gateway.
+- Some Azure services do require [dedicated subnets](/azure/virtual-network/virtual-network-for-azure-services#services-that-can-be-deployed-into-a-virtual-network), such as Azure Firewall or Virtual Network Gateway.
 
 - Subnets can be delegated to certain services to create instances of that service within the subnet.
 
@@ -104,7 +104,7 @@ Figure 7 – Example Network Topology
 
 - If third party network virtual appliances are required, deploy them to a separate Virtual Network (i.e. NVA VNet) and connect it to the regional VHub.
 
-- Use [Azure Monitor Network Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/network-insights-overview) (currently in preview) to monitor the end-to-end state of customer networks on Azure.
+- Use [Azure Monitor Network Insights](/azure/azure-monitor/insights/network-insights-overview) (currently in preview) to monitor the end-to-end state of customer networks on Azure.
 
 - If Azure VWAN is not used, deploy global networking infrastructure using Azure Virtual Networks in a hub and spoke model.
 
@@ -184,7 +184,7 @@ This section will explore recommended models for connecting resources within Azu
 
 - Virtual Network Peering applies not transitive routing.
 
-- There are [limitations](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks) associated with Global VNet Peering.
+- There are [limitations](/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks) associated with Global VNet Peering.
 
 - ExpressRoute circuits can be used to establish connectivity across Virtual Networks within the same geo-political region or by leveraging the Premium add-on for connectivity across geo-political regions.
 
@@ -228,7 +228,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
     - VNet injection provides dedicated private deployments for supported services.
 
-    - [Private Link](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access using private IP addresses to Azure PaaS instances, or custom services behind a Azure Load Balancer Standard.
+    - [Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access using private IP addresses to Azure PaaS instances, or custom services behind a Azure Load Balancer Standard.
 
     - VNet Service Endpoints provide service level access from selected subnets to selected PaaS services.
 
@@ -246,7 +246,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
 - Use Azure Private Link, where available, for Azure PaaS services that cannot be injected into a VNet.
 
-    - Private Link is in public preview for numerous [services](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview#private-link-resource), and customer requirements should be carefully aligned with the product [roadmap](https://aka.ms/privatePaaS).
+    - Private Link is in public preview for numerous [services](/azure/private-link/private-endpoint-overview#private-link-resource), and customer requirements should be carefully aligned with the product [roadmap](https://aka.ms/privatePaaS).
 
 - Access Azure PaaS services from on-premises via ExpressRoute Private Peering, using either VNet injection for dedicated Azure services or Azure Private Link for available shared Azure services.
 
@@ -319,9 +319,9 @@ Figure 8 – Encryption Flows
 
 - When establishing VPN connections from on-premises to Azure using VPN Gateways, traffic is encrypted at a protocol level using IPSec tunnels, as depicted in flow A in the diagram above.
 
-- When utilising ExpressRoute Direct, configure [MACSec](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-howto-macsec) in order to encrypt traffic at L2 level between the customer’s routers and MSEE, as depicted in flow B in the diagram above.
+- When utilising ExpressRoute Direct, configure [MACSec](/azure/expressroute/expressroute-howto-macsec) in order to encrypt traffic at L2 level between the customer’s routers and MSEE, as depicted in flow B in the diagram above.
 
-- When utilising regular ExpressRoute circuits, use Azure VWAN VPN Gateway to establish [IPSec tunnels over ExpressRoute](https://docs.microsoft.com/en-us/azure/virtual-wan/vpn-over-expressroute) Private Peering. This is depicted by flow *C* in the diagram above.
+- When utilising regular ExpressRoute circuits, use Azure VWAN VPN Gateway to establish [IPSec tunnels over ExpressRoute](/azure/virtual-wan/vpn-over-expressroute) Private Peering. This is depicted by flow *C* in the diagram above.
 
     - If additional scale or capabilities are required use 3^rd^ party NVAs connected to Azure VWAN.
 
