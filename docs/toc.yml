@@ -137,6 +137,8 @@
         items:
         - name: Overview
           href: ready/expanded-scope/northstar-architecture/index.md
+        - name: Architecture
+          href: ready/expanded-scope/northstar-architecture/northstar-architecture.md
         - name: Design Principles
           href: ready/expanded-scope/northstar-architecture/design-principles.md
         - name: Design Guidelines

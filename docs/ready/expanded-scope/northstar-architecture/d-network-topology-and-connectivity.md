@@ -13,7 +13,8 @@ ms.custom: csu
 
 
 # D. Network Topology and Connectivity
-[![Network Topology and Connectivity](./media/net-con.png "Network Topology and Connectivity")](#)
+
+[![Network Topology and Connectivity](./media/net-con.png "Network Topology and Connectivity")](./media/net-con.png)
 
 Figure 6 – Networking and Connectivity
 
@@ -91,7 +92,7 @@ Network topology is a critical foundational element of the “North Star” arch
 
     - The following illustration depicts a sample global customer deployment with datacentres spread across Europe and the United States, as well as a large number of branch offices within both regions. The environment is globally connected via Azure Virtual WAN and ExpressRoute Global Reach.
 
-[![Example Network Topology](./media/eg-net-top.png "Example Network Topology")](#)
+[![Example Network Topology](./media/eg-net-top.png "Example Network Topology")](./media/eg-net-top.png)
 
 Figure 7 – Example Network Topology
 
@@ -312,7 +313,7 @@ This section explores key recommendations to achieve network encryption between 
     - If encryption between Azure regions is required today, it is possible to connect VNets using VPN Gateways rather than Global VNet Peering.
 
 ***Design Recommendations***
-[![Encryption Flows](./media/enc-flows.png "Encryption Flows")](#)
+[![Encryption Flows](./media/enc-flows.png "Encryption Flows")](./media/enc-flows.png)
 
 Figure 8 – Encryption Flows
 

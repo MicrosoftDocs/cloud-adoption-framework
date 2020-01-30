@@ -12,11 +12,13 @@ ms.custom: csu
 ---
 
 # A. Enterprise Enrolment and Azure AD Tenants
-[![EA Enrolment](./media/ea.png "EA Enrolment")](#)
+
+[![EA Enrolment](./media/ea.png "EA Enrolment")](./media/ea.png)
 
 Figure 3 – EA Enrolment Hierarchy
 
-## 1. Planning for Enterprise Enrolment 
+## 1. Planning for Enterprise Enrolment
+
 An Enterprise Enrolment, often referred to as the Enterprise Agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
 
 ***Design Considerations***

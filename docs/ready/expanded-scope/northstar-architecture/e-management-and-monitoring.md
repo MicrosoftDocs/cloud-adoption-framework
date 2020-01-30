@@ -13,7 +13,8 @@ ms.custom: csu
 
 
 # E. Management and Monitoring
-[![Management and Monitoring](./media/mgmt-mon.png "Management and Monitoring")](#)
+
+[![Management and Monitoring](./media/mgmt-mon.png "Management and Monitoring")](./media/mgmt-mon.png)
 
 Figure 9 – Platform Management and Monitoring
 

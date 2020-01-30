@@ -13,7 +13,8 @@ ms.custom: csu
 
 
 # B. Identity and Access Management
-[![Identity and Access Management](./media/iam.png "Identity and Access Management")](#)
+
+[![Identity and Access Management](./media/iam.png "Identity and Access Management")](./media/iam.png)
 
 Figure 4 – Identity and Access Management
 

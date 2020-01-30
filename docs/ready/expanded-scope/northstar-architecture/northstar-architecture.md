@@ -34,6 +34,7 @@ _Using an analogy, this is similar to how city utilities such as water, gas, and
 ***
 
 ![landing zone](./media/lz-design.png "landing zone")
+
 Figure 1 – “landing zone” Design
 
 The following list expands on the “landing zone” illustration by iterating through the core technical constructs which must be designed and developed within the context of customer requirements to create compliant technical “landing zone” environments and the conditions for successful Azure adoption.
@@ -59,6 +60,7 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 ## High Level Architecture
 
 ![North Star Architecture](./media/ns-arch.png "North Star Architecture")
+
 Figure 2 – “North Star” Architecture
 
 ## Next steps

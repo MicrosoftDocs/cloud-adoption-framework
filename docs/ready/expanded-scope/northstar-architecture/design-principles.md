@@ -41,7 +41,7 @@ The North Star architecture strongly advocates the use of native platform servic
 
 ## Next steps
 
-[TODO DEFINE NEXT STEP](./index.md)
+Review the [Design Guidelines](./design-guidelines.md)
 
 > [!div class="nextstepaction"]
-> [TODO DEFINE NEXT STEP](./index.md)
+> [Design Guidelines](./design-guidelines.md)

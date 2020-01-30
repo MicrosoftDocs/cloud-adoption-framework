@@ -13,7 +13,8 @@ ms.custom: csu
 
 
 # C. Management Group and Subscription Organization
-[![Management Group Hierarchy](./media/sub-org.png "Management Group Hierarchy")](#)
+
+[![Management Group Hierarchy](./media/sub-org.png "Management Group Hierarchy")](./media/sub-org.png)
 
 Figure 5 – Management Group Hierarchy
 

@@ -13,7 +13,8 @@ ms.custom: csu
 
 
 # H. Platform Automation and DevOps
-[![Platform Automation and DevOps](./media/devops.png "Platform Automation and DevOps")](#)
+
+[![Platform Automation and DevOps](./media/devops.png "Platform Automation and DevOps")](./media/devops.png)
 
 Figure 10 – Platform Automation and DevOps
 
