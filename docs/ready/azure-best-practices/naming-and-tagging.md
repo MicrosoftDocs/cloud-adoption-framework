@@ -3,7 +3,7 @@ title: "Recommended naming and tagging conventions"
 description: This article provides detailed resource naming and tagging recommendations aimed specifically at supporting enterprise cloud adoption efforts.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/01/2019
+ms.date: 01/29/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -32,13 +32,13 @@ A naming and tagging strategy includes business and operational details as compo
 - The business side of this strategy ensures that resource names and tags include the organizational information that's needed to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
 - The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other information useful for managing resources.
 
-### Resource naming
+## Resource naming
 
 An effective naming convention assembles resource names by using important resource information as parts of a resource's name. For example, using these [recommended naming conventions](#sample-naming-convention), a public IP resource for a production SharePoint workload is named like this: `pip-sharepoint-prod-westus-001`.
 
 From the name, you can quickly identify the resource's type, its associated workload, its deployment environment, and the Azure region hosting it.
 
-#### Naming scope
+### Naming scope
 
 All Azure resource types have a scope that defines the level that resource names must be unique. A resource must have a unique name within its scope.
 
@@ -48,7 +48,7 @@ Some resource names, such as PaaS services with public endpoints or virtual mach
 
 Resource names have length limits. Balancing the context embedded in a name with its scope and length is important when you develop your naming conventions. For more information about naming rules for allowed characters, scopes, and name lengths for resource types, see [Naming conventions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming).
 
-#### Recommended naming components
+### Recommended naming components
 
 When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types. The following list provides examples of information that are useful when you construct resource names.
 
@@ -62,66 +62,130 @@ Keep the length of naming components short to prevent exceeding resource name le
 | Deployment environment | The stage of the development lifecycle for the workload that the resource supports. | _prod_, _dev_, _qa_, _stage_, _test_ |
 | Region | The Azure region where the resource is deployed. | _westus_, _eastus2_, _westeurope_, _usgovia_ |
 
-#### Recommended resource-type prefixes
+### Recommended resource-type prefixes
 
 Each workload can consist of many individual resources and services. Incorporating resource type prefixes into your resource names makes it easier to visually identify application or service components.
 
 The following list provides recommended Azure resource type prefixes to use when you define your naming conventions.
 
-| Resource type                       | Resource name prefix |
+### General
+
+| Asset type                          | Name prefix          |
 | ----------------------------------- | -------------------- |
 | Resource group                      | rg-                  |
-| Availability set                    | avail-               |
-| API management service              | api-                 |
-| Virtual network                     | vnet-                |
-| Virtual network gateway             | vnetgw-              |
-| Gateway connection                  | cn-                  |
+| Policy assignment                   | policy-              |
+| API management service instance     | apim-                |
+
+### Networking
+
+| Asset type                          | Name prefix          |
+| ----------------------------------- | -------------------- |
+| Virtual network (VNet)              | vnet-                |
 | Subnet                              | snet-                |
-| Network security group              | nsg-                 |
-| Route table                         | route-               |
-| Virtual machine                     | vm                   |
-| VM storage account                  | stvm                 |
-| Public IP                           | pip-                 |
+| Network interface (NIC)             | nic-                 |
+| Public IP address                   | pip-                 |
 | Load balancer                       | lb-                  |
-| NIC                                 | nic-                 |
-| Key vault                           | kv-                  |
+| Network security group (NSG)        | nsg-                 |
+| Application security group (ASG)    | asg-                 |
+| Local network gateway               | lgw-                 |
+| Virtual network gateway             | vgw-                 |
+| VPN connection                      | cn-                  |
+| Application gateway                 | agw-                 |
+| Route table                         | route-               |
+
+### Compute
+
+| Asset type                          | Name prefix          |
+| ----------------------------------- | -------------------- |
+| Virtual machine                     | vm                   |
+| Virtual machine scale set           | vmss-                |
+| Availability set                    | avail-               |
+| VM storage account                  | stvm                 |
+| Container instance                  | con-                 |
 | AKS cluster                         | aks-                 |
-| AKS container                       | con-                 |
-| Service Bus                         | sb-                  |
-| Service Bus queue                   | sbq-                 |
-| Service Bus topic                   | sbt-                 |
+| Service Fabric cluster              | sf-                  |
+| App service environment             | ase-                 |
 | App Service plan                    | plan-                |
 | Web app                             | app-                 |
 | Function app                        | func-                |
 | Cloud service                       | cld-                 |
+
+### Databases
+
+| Asset type                          | Name prefix          |
+| ----------------------------------- | -------------------- |
 | Azure SQL Database server           | sql-                 |
 | Azure SQL database                  | sqldb-               |
 | Cosmos DB database                  | cosmos-              |
-| Azure Cache for Redis cache         | redis-               |
+| Azure Cache for Redis instance      | redis-               |
 | MySQL database                      | mysql-               |
 | PostgreSQL database                 | psql-                |
 | Azure SQL Data Warehouse            | sqldw-               |
 | SQL Server Stretch Database         | sqlstrdb-            |
+
+### Storage
+
+| Asset type                          | Name prefix          |
+| ----------------------------------- | -------------------- |
 | Storage account                     | st                   |
 | Azure StorSimple                    | ssimp                |
-| Azure Search                        | srch-                |
+
+### AI + Machine Learning
+
+| Asset type                          | Name prefix          |
+| ----------------------------------- | -------------------- |
+| Azure Cognitive Search              | srch-                |
 | Azure Cognitive Services            | cog-                 |
 | Azure Machine Learning workspace    | mlw-                 |
-| Azure Data Lake Storage             | dls                  |
-| Azure Data Lake Analytics           | dla                  |
-| Azure HDInsight - Spark             | hdis-                |
-| Azure HDInsight - Hadoop            | hdihd-               |
-| Azure HDInsight - R Server          | hdir-                |
-| Azure HDInsight - HBase             | hdihb-               |
-| Power BI Embedded                   | pbi-                 |
+
+## Analytics
+
+| Asset type                          | Name prefix          |
+| ----------------------------------- | -------------------- |
+| Azure Analysis Services server      | aas-                 |
+| Azure Databricks workspace          | adbw-                |
 | Azure Stream Analytics              | asa-                 |
 | Azure Data Factory                  | adf-                 |
+| Data Lake Store account             | dls                  |
+| Data Lake Analytics account         | dla                  |
 | Event hub                           | evh-                 |
+| HDInsight - Apache Hadoop cluster   | hadoop-              |
+| HDInsight - Apache HBase cluster    | hbase-               |
+| HDInsight - Apache Kafka cluster    | kafka-               |
+| HDInsight - Apache Spark cluster    | spark-               |
+| HDInsight - Apache Storm cluster    | storm-               |
+| HDInsight - ML Services cluster     | mls-                 |
+| Power BI Embedded                   | pbi-                 |
+
+### Integration
+
+| Asset type                          | Name prefix          |
+| ----------------------------------- | -------------------- |
+| Service Bus                         | sb-                  |
+| Service Bus queue                   | sbq-                 |
+| Service Bus topic                   | sbt-                 |
+
+### Internet of Things (IoT)
+
+| Asset type                          | Name prefix          |
+| ----------------------------------- | -------------------- |
 | IoT hub                             | iot-                 |
-| Notification hubs                   | ntf-                 |
+| Notification Hubs                   | ntf-                 |
 | Notification Hubs namespace         | ntfns-               |
 
-### Metadata tags
+### Management and governance
+
+| Blueprint                           | bp-                  |
+| Key vault                           | kv-                  |
+| Log Analytics workspace             | law-                 |
+
+### Migration
+
+| Azure Migrate project               | migr-                |
+| Database Migration Service instance | dms-                 |
+| Recovery Services vault             | rsv-                 |
+
+## Metadata tags
 
 When you apply metadata tags to your cloud resources, you can include information about those assets that couldn't be included in the resource name. You can use that information to perform more sophisticated filtering and reporting on resources. You want these tags to include context about the resource's associated workload or application, operational requirements, and ownership information. This information can be used by IT or business teams to find resources or generate reports about resource usage and billing.
 
@@ -146,32 +210,32 @@ What tags you apply to resources and what tags are required or optional differs 
 
 The following section provides examples of naming schemes for common Azure resource types that are deployed during an enterprise cloud deployment.
 
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD024 MD033 -->
 
-### Subscriptions
+### General
 
-| Asset type   | Scope                        | Format                                             | Examples                                     |
-|--------------|------------------------------|----------------------------------------------------|----------------------------------------------|
-| Subscription | Account/Enterprise Agreement | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\> | <ul><li>mktg-prod-001 </li><li>corp-shared-001 </li><li>fin-client-001</li></ul> |
+| Asset type             | Scope                          | Format                                                         | Examples                                       |
+| ---                    | ---                            | ---                                                            | --- |
+| Subscription           | Account/Enterprise Agreement   | \<Business Unit\>-\<Subscription type\>-\<\#\#\#\>             | <ul><li>mktg-prod-001 </li><li>corp-shared-001 </li><li>fin-client-001</li></ul> |
+| Resource group         | Subscription                   | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\>    | <ul><li>rg-mktgsharepoint-prod-001 </li><li>rg-acctlookupsvc-share-001 </li><li>rg-ad-dir-services-shared-001</li></ul> |
+| API management service | Global                         | apim-\<App or service name\>                                    | apim-navigator-prod |
 
-### Resource groups
+### Networking
 
-| Asset type     | Scope        | Format                                                     | Examples                                                                            |
-|----------------|--------------|------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| Resource group | Subscription | rg-\<App or Service name\>-\<Subscription type\>-\<\#\#\#\> | <ul><li>rg-mktgsharepoint-prod-001 </li><li>rg-acctlookupsvc-share-001 </li><li>rg-ad-dir-services-shared-001</li></ul> |
-
-### Virtual networking
-
-| Asset type               | Scope           | Format                                                                | Examples                                                                                              |
-|--------------------------|-----------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| Azure Virtual Network          | Resource group  | vnet-\<Subscription type\>-\<Region\>-\<\#\#\#\>                      | <ul><li>vnet-shared-eastus2-001 </li><li>vnet-prod-westus-001 </li><li>vnet-client-eastus2-001</li></ul>                                  |
-| Virtual network virtual gateway     | Virtual network | vnetgw-v-\<Subscription type\>-\<Region\>-\<\#\#\#\>                 | <ul><li>vnetgw-v-shared-eastus2-001 </li><li>vnetgw-v-prod-westus-001 </li><li>vnetgw-v-client-eastus2-001</li></ul>                   |
-| Virtual network local gateway       | Virtual gateway | vnetgw-l-\<Subscription type\>-\<Region\>-\<\#\#\#\>                 | <ul><li>vnetgw-l-shared-eastus2-001 </li><li>vnetgw-l-prod-westus-001 </li><li>vnetgw-l-client-eastus2-001</li></ul>                   |
-| Site-to-site connections | Resource group  | cn-\<local gateway name\>-to-\<virtual gateway name\>                 | <ul><li>cn-l-gw-shared-eastus2-001-to-v-gw-shared-eastus2-001 </li><li>cn-l-gw-shared-eastus2-001-to-shared-westus-001</li></ul> |
-| Virtual network connections         | Resource group  | cn-\<subscription1\>\<region1\>-to-\<subscription2\>\<region2\>-      | <ul><li>cn-shared-eastus2-to-shared-westus </li><li>cn-prod-eastus2-to-prod-westus</li></ul>                                     |
-| Subnet                   | Virtual network | snet-\<subscription\>-\<subregion\>-\<\#\#\#\>                       | <ul><li>snet-shared-eastus2-001 </li><li>snet-prod-westus-001 </li><li>snet-client-eastus2-001</li></ul>                                  |
-| Network security group   | Subnet or NIC   | nsg-\<policy name or appname\>-\<\#\#\#\>                             | <ul><li>nsg-weballow-001 </li><li>nsg-rdpallow-001 </li><li>nsg-sqlallow-001 </li><li>nsg-dnsbloked-001</li></ul>                                  |
-| Public IP                | Resource group  | pip-\<vm name or app name\>-\<Environment\>-\<subregion\>-\<\#\#\#\> | <ul><li>pip-dc1-shared-eastus2-001 </li><li>pip-hadoop-prod-westus-001</li></ul>                                                 |
+| Asset type                       | Scope           | Format                                                                | Examples
+| ---                              | ---             | ---
+| Virtual network (VNet)           | Resource group  | vnet-\<Subscription type\>-\<Region\>-\<\#\#\#\>                      | <ul><li>vnet-shared-eastus2-001 </li><li>vnet-prod-westus-001 </li><li>vnet-client-eastus2-001</li></ul>
+| Subnet                           | Virtual network | snet-\<subscription\>-\<subregion\>-\<\#\#\#\>                       | <ul><li>snet-shared-eastus2-001 </li><li>snet-prod-westus-001 </li><li>snet-client-eastus2-001</li></ul>
+| Network interface (NIC)          | Resource group  | nic-\<\#\#\>-\<vmname\>-\<subscription\>\<\#\#\#\>                  | <ul><li>nic-01-dc1-shared-001 </li><li>nic-02-vmhadoop1-prod-001 </li><li>nic-02-vmtest1-client-001</li></ul>            |
+| Network security group (NSG)     | Subnet or NIC   | nsg-\<policy name or appname\>-\<\#\#\#\>                             | <ul><li>nsg-weballow-001 </li><li>nsg-rdpallow-001 </li><li>nsg-sqlallow-001 </li><li>nsg-dnsbloked-001</li></ul>
+| Virtual network virtual gateway  | Virtual network | vgw-\<Subscription type\>-\<Region\>-\<\#\#\#\>                 | <ul><li>vgw-shared-eastus2-001 </li><li>vgw-prod-westus-001 </li><li>vgw-client-eastus2-001</li></ul>
+| Virtual network local gateway    | Virtual gateway | lgw-\<Subscription type\>-\<Region\>-\<\#\#\#\>                 | <ul><li>lgw-shared-eastus2-001 </li><li>lgw-prod-westus-001 </li><li>lgw-client-eastus2-001</li></ul>
+| Site-to-site connection          | Resource group  | cn-\<local gateway name\>-to-\<virtual gateway name\>                 | <ul><li>cn-lgw-shared-eastus2-001-to-vgw-shared-eastus2-001 </li><li>cn-lgw-shared-eastus2-001-to-shared-westus-001</li></ul>
+| Virtual network connection       | Resource group  | cn-\<subscription1\>\<region1\>-to-\<subscription2\>\<region2\>-      | <ul><li>cn-shared-eastus2-to-shared-westus </li><li>cn-prod-eastus2-to-prod-westus</li></ul>
+| Public IP address                | Resource group  | pip-\<vm name or app name\>-\<Environment\>-\<subregion\>-\<\#\#\#\> | <ul><li>pip-dc1-shared-eastus2-001 </li><li>pip-hadoop-prod-westus-001</li></ul>                                                 |
+| Load balancer                    | Resource group  | lb-\<app name or role\>\<Environment\>\<\#\#\#\>                    | <ul><li>lb-navigator-prod-001 </li><li>lb-sharepoint-dev-001</li></ul>
+| Route table                      | Resource group  | route-\<route table name\>                                          | <ul><li>lb-navigator-prod-001 </li><li>lb-sharepoint-dev-001</li></ul>
+| DNS label                        | Global          | \<A record of vm\>.[\<region\>.cloudapp.azure.com]                  | <ul><li>dc1.westus.cloudapp.azure.com </li><li>web1.eastus2.cloudapp.azure.com</li></ul>
 
 ### Azure Virtual Machines
 
@@ -179,9 +243,6 @@ The following section provides examples of naming schemes for common Azure resou
 |--------------------|----------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | Azure Virtual Machines    | Resource group | vm\<policy name or appname\>\<\#\#\#\>                              | <ul><li>vmnavigator001 </li><li>vmsharepoint001 </li><li>vmsqlnode001 </li><li>vmhadoop001</li></ul>                              |
 | VM storage account | Global         | stvm\<performance type\>\<appname or prodname\>\<region\>\<\#\#\#\> | <ul><li>stvmstcoreeastus2001 </li><li>stvmpmcoreeastus2001 </li><li>stvmstplmeastus2001 </li><li>stvmsthadoopeastus2001</li></ul> |
-| DNS label          | Global         | \<A record of vm\>.[\<region\>.cloudapp.azure.com]                  | <ul><li>dc1.westus.cloudapp.azure.com </li><li>web1.eastus2.cloudapp.azure.com</li></ul>                        |
-| Azure Load Balancer      | Resource group | lb-\<app name or role\>\<Environment\>\<\#\#\#\>                    | <ul><li>lb-navigator-prod-001 </li><li>lb-sharepoint-dev-001</li></ul>                                          |
-| NIC                | Resource group | nic-\<\#\#\>-\<vmname\>-\<subscription\>\<\#\#\#\>                  | <ul><li>nic-01-dc1-shared-001 </li><li>nic-02-vmhadoop1-prod-001 </li><li>nic-02-vmtest1-client-001</li></ul>            |
 
 ### PaaS services
 
@@ -235,10 +296,9 @@ The following section provides examples of naming schemes for common Azure resou
 | Azure Data Factory        | Global | adf-\<App Name\>\<Environment\>    | <ul><li>adf-navigator-prod </li><li>adf-emissions-dev</li></ul>     |
 | Azure Data Lake Storage   | Global | dls\<App Name\>\<Environment\>     | <ul><li>dlsnavigatorprod </li><li>dlsemissionsdev</li></ul>         |
 | Azure Data Lake Analytics | Global | dla\<App Name\>\<Environment\>     | <ul><li>dlanavigatorprod </li><li>dlaemissionsdev</li></ul>         |
-| Azure HDInsight - Spark   | Global | hdis-\<App Name\>-\<Environment\>  | <ul><li>hdis-navigator-prod </li><li>hdis-emissions-dev </li></ul>  |
-| Azure HDInsight - Hadoop  | Global | hdihd-\<App Name\>-\<Environment\> | <ul><li>hdihd-hadoop-prod </li><li>hdihd-emissions-dev</li></ul>    |
-| Azure HDInsight - R Server| Global | hdir-\<App Name\>-\<Environment\>  | <ul><li>hdir-navigator-prod </li><li>hdir-emissions-dev</li></ul>   |
-| Azure HDInsight - HBase   | Global | hdihb-\<App Name\>-\<Environment\> | <ul><li>hdihb-navigator-prod </li><li>hdihb-emissions-dev</li></ul> |
+| Azure HDInsight - Spark   | Global | spark-\<App Name\>-\<Environment\> | <ul><li>spark-navigator-prod </li><li>spark-emissions-dev </li></ul>  |
+| Azure HDInsight - Hadoop  | Global | hadoop-\<App Name\>-\<Environment\> | <ul><li>hadoop-navigator-prod </li><li>hadoop-emissions-dev</li></ul>    |
+| Azure HDInsight - HBase   | Global | hbase-\<App Name\>-\<Environment\> | <ul><li>hbase-navigator-prod </li><li>hbase-emissions-dev</li></ul> |
 | Power BI Embedded         | Global | pbi-\<App Name\>\<Environment\>    | <ul><li>pbi-navigator-prod </li><li>pbi-emissions-dev</li></ul> |
 
 ### Data Streams / Internet of Things (IoT)
