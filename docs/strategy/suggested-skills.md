@@ -1,6 +1,5 @@
 ---
 title: "Skills readiness path during planning"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Overview of skills readiness path during the Plan phase of migration.
 author: BrianBlanchard
 ms.author: brblanch

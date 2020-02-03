@@ -1,6 +1,5 @@
 ---
 title: "Deployment Acceleration discipline improvement"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Deployment Acceleration discipline improvement
 author: alexbuckgit
 ms.author: abuck

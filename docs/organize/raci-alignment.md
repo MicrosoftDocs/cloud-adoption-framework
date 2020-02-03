@@ -1,6 +1,5 @@
 ---
 title: "Aligning responsibilities across teams"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn to align responsibilities across teams.
 author: BrianBlanchard
 ms.author: brblanch

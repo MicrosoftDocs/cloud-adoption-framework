@@ -1,6 +1,5 @@
 ---
 title: "Build a business justification for cloud migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Considerations for building a business justification for cloud migration.
 author: BrianBlanchard
 ms.author: brblanch

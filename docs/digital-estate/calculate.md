@@ -1,6 +1,5 @@
 ---
 title: "Align cost models with the digital estate"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Align cost models with the digital estate to forecast cloud costs.
 author: BrianBlanchard
 ms.author: brblanch

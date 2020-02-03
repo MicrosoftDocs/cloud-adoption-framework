@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Challenges and blockers"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to Cloud innovation - Challenges and blockers
 author: BrianBlanchard
 ms.author: brblanch

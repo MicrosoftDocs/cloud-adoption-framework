@@ -1,6 +1,5 @@
 ---
 title: "First cloud adoption project"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about implementing your first cloud adoption project.
 author: BrianBlanchard
 ms.author: brblanch

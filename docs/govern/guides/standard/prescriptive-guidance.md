@@ -1,6 +1,5 @@
 ---
 title: "Standard enterprise governance guide: Best practices explained"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about best practices for governance in standard enterprises.
 author: BrianBlanchard
 ms.author: brblanch

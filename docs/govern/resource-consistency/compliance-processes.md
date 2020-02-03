@@ -1,6 +1,5 @@
 ---
 title: "Resource Consistency policy compliance processes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Resource Consistency policy compliance processes
 author: BrianBlanchard
 ms.author: brblanch

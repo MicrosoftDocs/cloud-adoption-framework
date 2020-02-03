@@ -1,6 +1,5 @@
 ---
 title: "Cost Management template"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cost Management template
 author: BrianBlanchard
 ms.author: brblanch

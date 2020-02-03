@@ -1,6 +1,5 @@
 ---
 title: Workload specialization for cloud management in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Improve workload-specific cloud management operations
 author: BrianBlanchard
 ms.author: brblanch

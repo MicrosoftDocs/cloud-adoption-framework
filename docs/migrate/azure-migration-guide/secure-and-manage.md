@@ -1,6 +1,5 @@
 ---
 title: "Secure and Manage"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Secure and Manage
 author: matticusau
 ms.author: mlavery

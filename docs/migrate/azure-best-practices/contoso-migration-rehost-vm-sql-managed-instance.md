@@ -1,6 +1,5 @@
 ---
 title: "Rehost an on-premises app by migrating to Azure VMs and Azure SQL Database Managed Instance"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso rehosts an on-premises app on Azure VMs and by using Azure SQL Database Managed Instance.
 author: BrianBlanchard
 ms.author: brblanch

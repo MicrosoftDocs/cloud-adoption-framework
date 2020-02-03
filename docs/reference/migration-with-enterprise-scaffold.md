@@ -1,6 +1,5 @@
 ---
 title: Azure enterprise scaffold
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describes an enterprise scaffold that can help ensure a secure and manageable environment.
 author: rdendtler
 ms.author: rodend
