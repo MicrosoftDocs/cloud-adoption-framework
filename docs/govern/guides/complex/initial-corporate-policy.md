@@ -1,6 +1,5 @@
 ---
 title: "Governance guide for complex enterprises: Initial corporate policy behind the governance strategy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Governance guide for complex enterprises: Initial corporate policy behind the governance strategy"
 author: BrianBlanchard
 ms.author: brblanch

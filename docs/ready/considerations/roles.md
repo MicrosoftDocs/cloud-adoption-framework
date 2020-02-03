@@ -1,6 +1,5 @@
 ---
 title: "Recommended role-based access control"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Recommended role-based access control
 author: rotycenh
 ms.author: brblanch

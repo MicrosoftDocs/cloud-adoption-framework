@@ -1,6 +1,5 @@
 ---
 title: "Governance guide for complex enterprises: Improve the Cost Management discipline"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Governance guide for complex enterprises: Improve the Cost Management discipline"
 author: BrianBlanchard
 ms.author: brblanch

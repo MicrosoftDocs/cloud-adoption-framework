@@ -1,6 +1,5 @@
 ---
 title: "Perimeter networks"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about how Perimeter networks, also known as demilitarized zones (DMZs), use Azure features and services.
 author: tracsman
 ms.author: jonor

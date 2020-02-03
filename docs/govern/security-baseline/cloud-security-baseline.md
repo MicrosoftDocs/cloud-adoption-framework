@@ -1,6 +1,5 @@
 ---
 title: "Understand the cloud security baseline"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about the cloud security baseline.
 author: BrianBlanchard
 ms.author: brblanch

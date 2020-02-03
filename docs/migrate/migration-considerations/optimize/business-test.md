@@ -1,6 +1,5 @@
 ---
 title: "Guidance for business testing (UAT) during migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
 author: BrianBlanchard
 ms.author: brblanch

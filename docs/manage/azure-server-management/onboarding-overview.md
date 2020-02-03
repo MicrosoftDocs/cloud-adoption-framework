@@ -1,6 +1,5 @@
 ---
 title: "Onboard to Azure server management services"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Onboard to Azure server management services
 author: BrianBlanchard
 ms.author: brblanch

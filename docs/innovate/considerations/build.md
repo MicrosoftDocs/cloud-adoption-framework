@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Build with customer empathy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn to build with customer empathy.
 author: BrianBlanchard
 ms.author: brblanch

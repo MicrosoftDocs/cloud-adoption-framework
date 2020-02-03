@@ -1,6 +1,5 @@
 ---
 title: "Platform operations - Cloud Management and Operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Platform operations - Cloud Management and Operations
 author: BrianBlanchard
 ms.author: brblanch

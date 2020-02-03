@@ -1,6 +1,5 @@
 ---
 title: "Architectural decision guides"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about architectural decision guides in the Cloud Adoption Framework.
 author: rotycenh
 ms.author: v-tyhopk

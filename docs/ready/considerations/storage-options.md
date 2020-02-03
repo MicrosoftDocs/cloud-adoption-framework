@@ -1,6 +1,5 @@
 ---
 title: Review your storage options
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Review your storage options for Azure workloads.
 author: BrianBlanchard
 ms.author: brblanch

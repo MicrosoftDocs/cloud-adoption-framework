@@ -1,6 +1,5 @@
 ---
 title: "Hub and spoke network topology"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about hub and spoke network topologies.
 author: tracsman
 ms.author: jonor

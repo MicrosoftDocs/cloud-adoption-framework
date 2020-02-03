@@ -1,6 +1,5 @@
 ---
 title: "Ongoing management and security"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Ongoing management and security
 author: BrianBlanchard
 ms.author: brblanch

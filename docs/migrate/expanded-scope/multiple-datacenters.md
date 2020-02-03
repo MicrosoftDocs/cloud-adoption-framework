@@ -1,6 +1,5 @@
 ---
 title: "Multiple datacenters"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Multiple datacenters
 author: BrianBlanchard
 ms.author: brblanch

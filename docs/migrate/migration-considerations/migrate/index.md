@@ -1,11 +1,10 @@
 ---
 title: "Executing a migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Executing a migration
+description: Get an overview of the articles that explain the various activities that may be involved in migrating a workload in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

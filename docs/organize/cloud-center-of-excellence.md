@@ -1,6 +1,5 @@
 ---
 title: "Cloud center of excellence"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Describes the formation of a cloud center of excellence (CCoE).
 author: BrianBlanchard
 ms.author: brblanch

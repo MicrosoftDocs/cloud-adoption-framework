@@ -1,6 +1,5 @@
 ---
 title: "Deploy the cloud adoption plan to Azure DevOps"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Deploy the template for the cloud adoption plan
 author: BrianBlanchard
 ms.author: brblanch
