@@ -1,6 +1,6 @@
 ---
 title: "Perimeter networks"
-description: Perimeter networks
+description: Learn about how Perimeter networks, also known as demilitarized zones (DMZs), use Azure features and services.
 author: tracsman
 ms.author: jonor
 ms.date: 05/10/2019
