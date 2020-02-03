@@ -1,6 +1,5 @@
 ---
 title: "Governance or compliance strategy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Governance or compliance strategy
 author: BrianBlanchard
 ms.author: brblanch

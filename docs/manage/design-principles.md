@@ -1,6 +1,5 @@
 ---
 title: "Apply design principles and advanced operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Apply design principles and advanced operations
 author: BrianBlanchard
 ms.author: brblanch

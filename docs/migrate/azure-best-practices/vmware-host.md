@@ -1,6 +1,5 @@
 ---
 title: "VMware host migration best practices for Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to VMware host migration best practices for Azure
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Secure and Manage"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn more about security and management methods that you can use to manage your environment after you migrate to Azure. 
 author: matticusau
 ms.author: mlavery

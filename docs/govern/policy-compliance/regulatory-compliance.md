@@ -1,6 +1,5 @@
 ---
 title: "Introduction to regulatory compliance"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to regulatory compliance
 author: BrianBlanchard
 ms.author: brblanch

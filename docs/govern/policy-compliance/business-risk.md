@@ -1,6 +1,5 @@
 ---
 title: Understand business risk during cloud migration
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Understand business risk during cloud migration
 author: BrianBlanchard
 ms.author: brblanch

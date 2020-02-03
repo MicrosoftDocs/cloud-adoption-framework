@@ -1,6 +1,5 @@
 ---
 title: "Deploy a migration infrastructure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso sets up an Azure infrastructure for migration to Azure.
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Standard enterprise governance guide: Initial corporate policy behind the governance strategy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Standard enterprise governance guide: Initial corporate policy behind the governance strategy"
 author: BrianBlanchard
 ms.author: brblanch

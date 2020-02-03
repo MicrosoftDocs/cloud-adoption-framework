@@ -1,6 +1,5 @@
 ---
 title: "Understand staging activities during a migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Understand staging activities during a migration
 author: BrianBlanchard
 ms.author: brblanch

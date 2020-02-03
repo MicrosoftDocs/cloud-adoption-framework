@@ -1,6 +1,5 @@
 ---
 title: "Cloud monitoring guide: Monitoring platforms overview"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure.
 author: mgoedtel
 ms.author: magoedte

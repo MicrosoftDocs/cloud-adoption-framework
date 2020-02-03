@@ -1,6 +1,5 @@
 ---
 title: "Common Azure Policy examples"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Common Azure Policy examples
 author: BrianBlanchard
 ms.author: brblanch
