@@ -1,6 +1,6 @@
 ---
 title: "Migrate assets"
-description: Migrate assets
+description: This guide helps you initiate the migration of your environment by identifying the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
 author: matticusau
 ms.author: mlavery
 ms.date: 08/08/2019
