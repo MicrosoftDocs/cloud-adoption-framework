@@ -1,6 +1,5 @@
 ---
 title: "Approve architecture changes before migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Understanding the importance of approval before migration
 author: BrianBlanchard
 ms.author: brblanch

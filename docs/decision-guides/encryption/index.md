@@ -1,6 +1,5 @@
 ---
 title: "Encryption decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about encryption as a core service in Azure migrations.
 author: rotycenh
 ms.author: v-tyhopk

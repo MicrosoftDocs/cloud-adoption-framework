@@ -1,6 +1,5 @@
 ---
 title: "Operating model terminology"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Understand the terminology related to an operating model.
 author: BrianBlanchard
 ms.author: brblanch

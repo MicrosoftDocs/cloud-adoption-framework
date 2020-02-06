@@ -1,6 +1,5 @@
 ---
 title: "Begin a cloud migration journey in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Begin a cloud migration journey in Azure.
 author: BrianBlanchard
 ms.author: brblanch

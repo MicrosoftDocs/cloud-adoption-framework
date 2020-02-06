@@ -1,6 +1,5 @@
 ---
 title: "Establish iterations and release plans"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Establish iterations and release plans
 author: BrianBlanchard
 ms.author: brblanch

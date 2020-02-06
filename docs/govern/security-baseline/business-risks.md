@@ -1,6 +1,5 @@
 ---
 title: "Security Baseline motivations and business risks"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Security Baseline motivations and business risks
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Governance guide for complex enterprises: Best practices explained"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about best practices for governance in complex enterprises.
 author: BrianBlanchard
 ms.author: brblanch

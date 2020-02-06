@@ -1,6 +1,5 @@
 ---
 title: "Prerequisites to migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Prerequisites to migration
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Innovation in the digital economy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about the guiding theory of cloud innovation in the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch

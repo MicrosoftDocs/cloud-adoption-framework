@@ -1,6 +1,5 @@
 ---
 title: "Develop a cloud adoption strategy"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Use the cloud to advance your business strategy.
 author: BrianBlanchard
 ms.author: brblanch

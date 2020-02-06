@@ -1,6 +1,5 @@
 ---
 title: Platform specialization for cloud management in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Improve platform-specific cloud management operations.
 author: BrianBlanchard
 ms.author: brblanch

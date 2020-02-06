@@ -1,6 +1,5 @@
 ---
 title: Assess your transformation journey
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Assess your transformation journey
 author: alexbuckgit
 ms.author: abuck

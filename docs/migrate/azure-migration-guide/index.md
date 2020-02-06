@@ -1,6 +1,5 @@
 ---
 title: "Introduction to the Azure migration guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to effectively migrate your organization's services to Azure with step-by-step guidance.
 author: matticusau
 ms.author: mlavery

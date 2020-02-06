@@ -1,6 +1,5 @@
 ---
 title: "Evaluate risk tolerance"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the business risks associated with a cloud transformation
 author: BrianBlanchard
 ms.author: brblanch

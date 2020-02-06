@@ -1,6 +1,5 @@
 ---
 title: "Cost Management policy compliance processes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Cost Management policy compliance processes
 author: BrianBlanchard
 ms.author: brblanch
