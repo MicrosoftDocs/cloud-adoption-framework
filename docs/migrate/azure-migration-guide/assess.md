@@ -1,6 +1,6 @@
 ---
 title: "Assess the digital estate"
-description: Assess the digital estate
+description: This section of the Azure migration guide helps you assess of your environment to determine what should be migrated and which migration methods to consider.
 author: matticusau
 ms.author: mlavery
 ms.date: 08/08/2019
