@@ -1,6 +1,6 @@
 ---
 title: "What is a digital estate?"
-description: What is a digital estate?
+description: Learn what a digital estate is, how it can be measured, and how to update a financial model to reflect your digital estate. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018
