@@ -1,6 +1,6 @@
 ---
 title: "Create update schedules"
-description: Create update schedules
+description: Use the Azure portal or the new PowerShell cmdlet modules to manage update schedules. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
