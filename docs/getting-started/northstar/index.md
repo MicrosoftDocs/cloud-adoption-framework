@@ -23,16 +23,18 @@ When navigating long distances, the North Star (Ursae Minoris or Polaris) has lo
 
 ## What guidance and tools are provided in this journey?
 
-Codename: CAF NorthStar includes four sets of assets to support cloud teams: [Implementations](./implementation.md) | [Architecture](./architecture.md) | [Road map](./roadmap.md) | [Template](./template.md)
+Codename: CAF NorthStar includes four sets of assets to support cloud teams: [Implementations](./implementation.md) | [Architecture](./architecture.md) | [Design Guidelines](./design-guidelines.md) | [Template](./template.md)
 
 - [Implementations](./implementation.md): Teams who do not yet have an existing cloud environment can leverage the full implementations to quickly deploy a well-governed cloud environment. Note: Before implementing the CAF NorthStar, readers are advised to review the architecture and road map.
 - [Architecture](./architecture.md): Cloud governance teams who have an existing environment can use the  architecture as a reference when implementing best practices within their current environment.
-- [Road map](./roadmap.md): Discovery, decisions, and implementation can require weeks or months of time to properly align requirements. The road map walks readers through the design principles and implementation guidance to keep cloud teams on a straight path during implementation.
+- [Design Guidelines](./design-guidelines.md): Discovery, decisions, and implementation can require weeks or months of time to properly align requirements. The road map walks readers through the design principles and implementation guidance to keep cloud teams on a straight path during implementation.
 - [Template](./template.md): Documentation template and process to quickly capture decisions and any deviation from the suggested architecture and/or implementation.
 
 ## Who should follow the guidance outlined in this journey?
 
-This journey is designed for teams whose adoption plan calls for a mid-term objective to host more than 1,000 IaaS VMs in the cloud. This journey is especially relevant for customer who also have a heightened responsibility to maintain governance, security, and operational management requirements within the cloud environment. This journey is even more relevant when workload hosting requirements are likely to require a high number of "[landing zones](../../ready/considerations/index.md)", as it will help provide a mechanism for the creation and management of new landing zones.
+This journey is designed for teams whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 IaaS VMs in the cloud**. 
+
+This journey is especially relevant for customer who also have a heightened responsibility to maintain governance, security, and operational management requirements within the cloud environment. This journey is even more relevant when workload hosting requirements are likely to require a high number of "[landing zones](../../ready/considerations/index.md)", as it will help provide a mechanism for the creation and management of new landing zones.
 
 ## Why should the defined audience follow this journey?
 

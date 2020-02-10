@@ -18,6 +18,10 @@ At the centre of the CAF NorthStar architecture lies a critical design path, com
 
 For example, a customer is likely to question how many subscriptions they require for their estate. In this instance, the reader should review the *C - Management Group and Subscription Organization -&gt; 2. Subscription Organization and Governance* section, using the outlined recommendations to help drive subscription decisions.
 
+## Design Principles
+
+CAF Northstar is based on a series of design principles, which influence how the architecture is implemented. These design principles lead to decisions that may differ from standard design options found elsewhere in the cloud adoption framework. The article on [design principles](./design-principles.md) provides more information.
+
 ## Critical Design Areas
 
 The following eight critical design areas are intended to support the translation of customer requirements to Azure constructs and capabilities, to address the mismatch between on-premises infrastructure and cloud-design which typically creates dissonance and friction with respect to the CAF NorthStar definition and Azure adoption.

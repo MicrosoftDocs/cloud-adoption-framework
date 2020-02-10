@@ -21,20 +21,27 @@ The CAF NorthStar architecture represents the strategic design path and target t
 
 It is important to highlight that not all enterprises adopt Azure in the same way, and as a result the CAF NorthStar architecture may vary between customers. Ultimately, the technical considerations and design recommendations presented within this guide may yield different trade-offs based on the customer scenario. Some variation is therefore expected, but provided core recommendations are followed, the resultant target architecture will position the customer on a path to sustainable scale.
 
-## Landing zone definition
+## Landing zone - expanded definition
 
-A “landing zone” is a logical construct capturing everything that must be true to enable application migrations and greenfield development at an enterprise scale in Azure. It considers all platform resources that are required to support the customer’s application portfolio and does not differentiate between IaaS or PaaS.
+In the [landing zone considerations article](../../ready/considerations/index.md), the term landing zone is defined in detail. However, the specific needs of the CAF Northstar's audience requires an expansion of that definition.
 
-Every large enterprise software estate will encompass a myriad of application archetypes and each “landing zone” essentially represents the common elements, such as networking and IAM, that are shared across instances of these archetypes and must be in place to ensure that migrating applications have access to requisite components when deployed. Each “landing zones” must consequently be designed and deployed in accordance with the requirements of archetypes within the customer’s application portfolio.
+**Scope:** Within the CAF Northstar, the scope of a landing zone grows considerably to to enable application migrations and greenfield development at an enterprise scale in Azure. This expansion allows for a design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
 
-The principle purpose of the “landing zone” is therefore to ensure that when an application lands on Azure, the required “plumbing” is already in place, providing greater agility and compliance with enterprise security and governance requirements.
+**Refactoring:** The number of subscriptions required to support a full enterprise scale IT portfolio can be quite large. The cloud adoption framework encourages an initially high-frequency of refactoring, but that should be stablized before the 10th production workload is deployed to the cloud. When working across an enterprise portfolio, 10 applications could be deployed rather quickly, making refactoring impractical. Instead it is suggested that Central IT or the Cloud Center of Excellence deliver a more complete landing zone during the first release.
+
+**Goal:** Provide consistent landing zones based on **application archetype** subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise, see image below.
+
+**Principle purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to more quickly mature the customer's landing zones. CAF Northstar expands the principle purpose to pull forward aspects of governance and operational management, addressing both in the first release of the landing zone(s) and supporting shared services.
 
 ---
 _Using an analogy, this is similar to how city utilities such as water, gas, and electricity are accessible before new houses are constructed. In this context, the network, IAM, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process._
 ***
 
 ![landing zone](./media/lz-design.png "landing zone")
+
 Figure 1 – “landing zone” Design
+
+## Expanded list of requisite components
 
 The following list expands on the “landing zone” illustration by iterating through the core technical constructs which must be designed and developed within the context of customer requirements to create compliant technical “landing zone” environments and the conditions for successful Azure adoption.
 
@@ -63,7 +70,7 @@ Figure 2 – CAF NorthStar Architecture
 
 ## Next steps
 
-Review the [Design Principles](./design-principles.md)
+Customize implementation of this architecture using the [Design Guidelines](./design-guidelines.md)
 
 > [!div class="nextstepaction"]
-> [Design Principles](./design-principles.md)
+> [Design Guidelines](./design-guidelines.md)

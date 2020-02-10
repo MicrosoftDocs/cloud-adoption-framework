@@ -12,11 +12,21 @@ ms.subservice: ready
 
 # Landing zone considerations
 
-A landing zone is the basic building block of any cloud adoption environment. The term *landing zone* refers to an environment that's been provisioned and prepared to host workloads in a cloud environment like Azure. A fully functioning landing zone is the final deliverable of any iteration of the Cloud Adoption Framework's Ready methodology.
+Once a first landing zone has been deployed, it is important to evaluate the configuration based on lessons learned and the overall cloud adoption plan. This article expands on the definition, considerations, and components within a landing zone.
 
 ![Landing zone considerations](../../_images/ready/landing-zone-considerations.png)
 
 This image shows the major considerations for implementing any landing zone deployment. The considerations can be broken into three categories or types of considerations: hosting, Azure fundamentals, and governance.
+
+## Defining a landing zone
+
+**Scope:** A landing zone is the basic building block of any cloud adoption environment. The term *landing zone* refers to a logical construct capturing everything that must be true to enable the desired cloud adoption. A fully functioning landing zone considers all platform resources that are required to support the customer’s adoption needs and does not necessarily differentiate between IaaS or PaaS adoption.
+
+**Refactoring:** A functioning landing zone is the final deliverable of any iteration of the Cloud Adoption Framework's Ready methodology. During each iteration, the codebase which defines the landing zone will be refactored and/or expanded. After refactoring, the landing zone may be modified (or redeployed) allowing for new cloud adoption needs.
+
+**Goal:** The goal of the landing zone approach is to create a common set of consistent platform implementations. Those consistent implementations must be in place to ensure that your applications have access to requisite components when deployed. Each landing zone iteration must consequently be designed and deployed in accordance with the requirements of the cloud adoption plan and the subscription design strategy.
+
+**Principle purpose:** The principle purpose of the landing zone is therefore to ensure that when an application lands on Azure, the required "plumbing" is already in place, providing greater agility and compliance with enterprise security and governance requirements. The following considerations outline the types of plumbing that are likely to be found in all landing zones.
 
 ## Hosting considerations
 
