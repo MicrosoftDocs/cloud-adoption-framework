@@ -133,7 +133,7 @@
         
     - name: Expanded scope
       items:
-      - name: North Star architecture
+      - name: CAF NorthStar architecture
         items:
         - name: Overview
           href: ready/expanded-scope/northstar-architecture/index.md

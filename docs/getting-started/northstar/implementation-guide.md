@@ -1,7 +1,7 @@
 ---
 title: "Implementation Guideline"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: North Star landing zone - Implementation Guideline
+description: CAF NorthStar landing zone - Implementation Guideline
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -14,16 +14,16 @@ ms.custom: csu
 
 # Implementation Guideline
 
-There are two categories of activities that must take place in order to implement the “North Star” architecture.
+There are two categories of activities that must take place in order to implement the CAF NorthStar architecture.
 
-1. **What-must-be-true** for a the “North Star”
+1. **What-must-be-true** for a the CAF NorthStar
     - Encompasses activities that must be performed by the Azure and AAD administrators to establish an initial configuration; these are sequential by nature and primarily one-off activities.
 
 2. **File -&gt; New -&gt; Region** and **File -&gt; New -&gt; landing zone**
     - These are reoccurring activities that are required to instantiate a “landing zone” and require user input to kickstart the workflow which will coordinate resource creation within AAD and AD.
     - To operationalize at scale, it is paramount that these activities follow the principal of “Infrastructure-as-Code” and automated using deployment pipelines.
 
-## 1. *What-must-be-true for the “North Star”*
+## 1. *What-must-be-true for the CAF NorthStar*
 
 | No         | Area                               | Activities                                                                                                                                                     |
 |------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|

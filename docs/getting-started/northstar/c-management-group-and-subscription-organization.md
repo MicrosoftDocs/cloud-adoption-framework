@@ -1,7 +1,7 @@
 ---
 title: "Management Group and Subscription Organization"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: North Star landing zone - Management Group and Subscription Organization
+description: CAF NorthStar landing zone - Management Group and Subscription Organization
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020

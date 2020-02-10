@@ -1,7 +1,7 @@
 ---
 title: "Network Topology and Connectivity"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: North Star landing zone - Network Topology and Connectivity
+description: CAF NorthStar landing zone - Network Topology and Connectivity
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -54,7 +54,7 @@ It is vital that enterprise customers plan for IP addressing in Azure to ensure 
 
 ## 2. Configure DNS and name resolution for on-premises and Azure resources
 
-DNS is a critical design topic in the overall “North Star” architecture, and while some customers may want to use their existing investments in DNS, others may see cloud adoption as an opportunity to modernize their internal DNS infrastructure and leverage native Azure capabilities.
+DNS is a critical design topic in the overall CAF NorthStar architecture, and while some customers may want to use their existing investments in DNS, others may see cloud adoption as an opportunity to modernize their internal DNS infrastructure and leverage native Azure capabilities.
 
 ***Design Considerations***
 
@@ -76,7 +76,7 @@ DNS is a critical design topic in the overall “North Star” architecture, and
 
 ## 3. Define an Azure Networking Topology
 
-Network topology is a critical foundational element of the “North Star” architecture as it ultimately defines how applications can communicate with one another. This section will therefore explore relevant technologies and topology approaches for enterprise Azure deployments.
+Network topology is a critical foundational element of the CAF NorthStar architecture as it ultimately defines how applications can communicate with one another. This section will therefore explore relevant technologies and topology approaches for enterprise Azure deployments.
 
 ***Design Considerations***
 
@@ -270,7 +270,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Azure native network security services such as Azure Firewall, Application Gateway WAF, and Azure Front Door WAF are fully managed services, meaning that customers do not incur the operational and management costs associated with infrastructure deployments, which can become complex at scale.
 
-- The “North Star” architecture is fully compatible with third party network virtual appliances, should the customer prefer to use NVAs or for situations where native services do not satisfy specific customer requirements.
+- The CAF NorthStar architecture is fully compatible with third party network virtual appliances, should the customer prefer to use NVAs or for situations where native services do not satisfy specific customer requirements.
 
 ***Design Recommendations***
 

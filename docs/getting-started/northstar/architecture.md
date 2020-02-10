@@ -1,7 +1,7 @@
 ---
-title: "North Star Architecture"
+title: "NorthStar Architecture"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: North Star Architecture
+description: CAF NorthStar Architecture
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -11,19 +11,19 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# North Star Architecture
+# CAF NorthStar Architecture
 
-The principal challenges facing enterprise customers adopting Azure are 1) how to allow applications (legacy or modern) to seamlessly move at their own pace, and 2) how to provide secure and streamlined operations, management, and governance across the entire platform and all encompassed applications. To address these challenges, customers require a forward looking and Azure-native design approach, which in the context of this guide is represented by the “North Star” architecture.
+The principal challenges facing enterprise customers adopting Azure are 1) how to allow applications (legacy or modern) to seamlessly move at their own pace, and 2) how to provide secure and streamlined operations, management, and governance across the entire platform and all encompassed applications. To address these challenges, customers require a forward looking and Azure-native design approach, which in the context of the CAF NorthStar architecture.
 
-## What is the North Star Architecture?
+## What is the CAF NorthStar Architecture?
 
-The “North Star” architecture represents the strategic design path and target technical state for the customer’s Azure environment. It will continue to evolve in lockstep with the Azure platform and is ultimately defined by the various design decisions the customer organization must make to define their Azure journey.
+The CAF NorthStar architecture represents the strategic design path and target technical state for the customer’s Azure environment. It will continue to evolve in lockstep with the Azure platform and is ultimately defined by the various design decisions the customer organization must make to define their Azure journey.
 
-It is important to highlight that not all enterprises adopt Azure in the same way, and as a result the “North Star” architecture may vary between customers. Ultimately, the technical considerations and design recommendations presented within this guide may yield different trade-offs based on the customer scenario. Some variation is therefore expected, but provided core recommendations are followed, the resultant target architecture will position the customer on a path to sustainable scale.
+It is important to highlight that not all enterprises adopt Azure in the same way, and as a result the CAF NorthStar architecture may vary between customers. Ultimately, the technical considerations and design recommendations presented within this guide may yield different trade-offs based on the customer scenario. Some variation is therefore expected, but provided core recommendations are followed, the resultant target architecture will position the customer on a path to sustainable scale.
 
 ## Landing zone definition
 
-Within the context of the “North Star” architecture, a “landing zone” is a logical construct capturing everything that must be true to enable application migrations and greenfield development at an enterprise scale in Azure. It considers all platform resources that are required to support the customer’s application portfolio and does not differentiate between IaaS or PaaS.
+A “landing zone” is a logical construct capturing everything that must be true to enable application migrations and greenfield development at an enterprise scale in Azure. It considers all platform resources that are required to support the customer’s application portfolio and does not differentiate between IaaS or PaaS.
 
 Every large enterprise software estate will encompass a myriad of application archetypes and each “landing zone” essentially represents the common elements, such as networking and IAM, that are shared across instances of these archetypes and must be in place to ensure that migrating applications have access to requisite components when deployed. Each “landing zones” must consequently be designed and deployed in accordance with the requirements of archetypes within the customer’s application portfolio.
 
@@ -58,8 +58,8 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 
 ## High Level Architecture
 
-![North Star Architecture](./media/ns-arch.png "North Star Architecture")
-Figure 2 – “North Star” Architecture
+![NorthStar Architecture](./media/ns-arch.png "NorthStar Architecture")
+Figure 2 – CAF NorthStar Architecture
 
 ## Next steps
 

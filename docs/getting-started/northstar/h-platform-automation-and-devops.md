@@ -1,7 +1,7 @@
 ---
 title: "Platform Automation and DevOps"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: North Star landing zone - Platform Automation and DevOps
+description: CAF NorthStar landing zone - Platform Automation and DevOps
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -36,7 +36,7 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 ***Design Recommendations***
 
-- Establish a cross-cutting central DevOps “Platform Team” to build, manage and maintain the “North Star” architecture.
+- Establish a cross-cutting central DevOps “Platform Team” to build, manage and maintain the CAF NorthStar architecture.
 
 - The list below presents a recommended set of DevOps roles for the central “Platform Team”.
 
@@ -92,7 +92,7 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 - In the spirit of accelerating Azure adoption, the central “Platform Team” should be leveraged to establish a common set of templates and libraries for application teams to draw upon.
 
-    - For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and more importantly, ensure alignment with the overall target “North Star” architecture.
+    - For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and more importantly, ensure alignment with the overall target CAF NorthStar architecture.
 
 <!-- -->
 
