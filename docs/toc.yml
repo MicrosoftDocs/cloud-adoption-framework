@@ -9,40 +9,40 @@
       href: getting-started/innovate.md
     - name: Enable successful cloud adoption
       href: getting-started/enable.md
-      - name: CAF NorthStar architecture
+    - name: CAF NorthStar architecture
+    items:
+    - name: Overview
+      href: getting-started/northstar/index.md
+    - name: Implementations
+      href: getting-started/northstar/implelemntations.md
+    - name: Architecture
+      href: getting-started/northstar/architecture.md
+    - name: Design guidelines
+      href: getting-started/northstar/design-guidelines.md
+    - name: Critical design areas
       items:
-      - name: Overview
-        href: getting-started/northstar/index.md
-      - name: Implementations
-        href: getting-started/northstar/implelemntations.md
-      - name: Architecture
-        href: getting-started/northstar/architecture.md
-      - name: Design guidelines
-        href: getting-started/northstar/design-guidelines.md
-      - name: Critical design areas
-        items:
-        - name: A - Enterprise Enrolment and Azure AD Tenants
-          href: getting-started/northstar/a-enterprise-enrolment-and-azure-ad-tenants.md
-        - name: B - Identity and Access Management
-          href: getting-started/northstar/b-identity-and-access-management.md
-        - name: C - Management Group and Subscription Organization
-          href: getting-started/northstar/c-management-group-and-subscription-organization.md
-        - name: D - Network Topology and Connectivity
-          href: getting-started/northstar/d-network-topology-and-connectivity.md
-        - name: E - Management and Monitoring
-          href: getting-started/northstar/e-management-and-monitoring.md
-        - name: F - Business Continuity and Disaster Recovery
-          href: getting-started/northstar/f-business-continuity-and-disaster-recovery.md
-        - name: G - Security, Governance, and Compliance
-          href: getting-started/northstar/g-security-governance-and-compliance.md
-        - name: H - Platform Automation and DevOps
-          href: getting-started/northstar/h-platform-automation-and-devops.md
-        - name: Design principles
-          href: getting-started/northstar/design-principles.md
-      - name: Implementation Guide
-        href: getting-started/implementation-guide.md
-      - name: Decision Template
-        href: getting-started/template.md
+      - name: A - Enterprise Enrolment and Azure AD Tenants
+        href: getting-started/northstar/a-enterprise-enrolment-and-azure-ad-tenants.md
+      - name: B - Identity and Access Management
+        href: getting-started/northstar/b-identity-and-access-management.md
+      - name: C - Management Group and Subscription Organization
+        href: getting-started/northstar/c-management-group-and-subscription-organization.md
+      - name: D - Network Topology and Connectivity
+        href: getting-started/northstar/d-network-topology-and-connectivity.md
+      - name: E - Management and Monitoring
+        href: getting-started/northstar/e-management-and-monitoring.md
+      - name: F - Business Continuity and Disaster Recovery
+        href: getting-started/northstar/f-business-continuity-and-disaster-recovery.md
+      - name: G - Security, Governance, and Compliance
+        href: getting-started/northstar/g-security-governance-and-compliance.md
+      - name: H - Platform Automation and DevOps
+        href: getting-started/northstar/h-platform-automation-and-devops.md
+      - name: Design principles
+        href: getting-started/northstar/design-principles.md
+    - name: Implementation Guide
+      href: getting-started/northstar/implementation-guide.md
+    - name: Decision Template
+      href: getting-started/northstar/template.md
 
   - name: Strategy
     items:
