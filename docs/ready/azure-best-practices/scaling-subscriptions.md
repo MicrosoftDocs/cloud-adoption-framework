@@ -20,7 +20,10 @@ When deploying your first production workload in Azure, you should start with tw
 
 ![A basic subscription model showing keys next to boxes labeled "Production" and "Nonproduction"](../../_images/ready/basic-subscription-model.png)
 
-We recommend this approach for several reasons:
+> [!IMPORTANT]
+> For customers whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 VMs (or compute instances) in the cloud**, we suggest a third subscription for "Shared Services" to create an n+1 model. This approach will allow for a smoother transition into end-state enterprise architectures like CAF Northstar.
+
+We recommend this minimalist approach to subscriptions for several reasons:
 
 - Azure has specific subscription offerings for dev/test workloads. These offerings provide discounted rates on Azure services and licensing.
 - Your production and nonproduction environments will likely have different sets of Azure policies. Using separate subscriptions makes it simple to apply each distinct policy set at the subscription level.
