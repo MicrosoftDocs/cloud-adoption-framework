@@ -25,14 +25,14 @@ When navigating long distances, the North Star (Ursae Minoris or Polaris) has lo
 
 Codename: CAF NorthStar includes four sets of assets to support cloud teams: [Implementations](./implementation.md) | [Architecture](./architecture.md) | [Design Guidelines](./design-guidelines.md) | [Template](./template.md)
 
-- [Implementations](./implementation.md): Teams who do not yet have an existing cloud environment can leverage the full implementations to quickly deploy a well-governed cloud environment. Note: Before implementing the CAF NorthStar, readers are advised to review the architecture and road map.
-- [Architecture](./architecture.md): Cloud governance teams who have an existing environment can use the  architecture as a reference when implementing best practices within their current environment.
-- [Design Guidelines](./design-guidelines.md): Discovery, decisions, and implementation can require weeks or months of time to properly align requirements. The road map walks readers through the design principles and implementation guidance to keep cloud teams on a straight path during implementation.
-- [Template](./template.md): Documentation template and process to quickly capture decisions and any deviation from the suggested architecture and/or implementation.
+- [Implementations](./implementation.md): Scripted implementations of the architecture to accelerate adoption.*
+- [Architecture](./architecture.md): Conceptual reference architecture to demonstrate design areas and best practices.
+- [Design Guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive CAF NorthStar.
+- [Template](./template.md): Documentation template to quickly capture decisions and any deviation from the suggested architecture and/or implementation.
 
 ## Who should follow the guidance outlined in this journey?
 
-This journey is designed for teams whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 IaaS VMs in the cloud**. 
+This journey is designed for teams whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 VMs (or compute instances) in the cloud**.
 
 This journey is especially relevant for customer who also have a heightened responsibility to maintain governance, security, and operational management requirements within the cloud environment. This journey is even more relevant when workload hosting requirements are likely to require a high number of "[landing zones](../../ready/considerations/index.md)", as it will help provide a mechanism for the creation and management of new landing zones.
 
@@ -41,6 +41,14 @@ This journey is especially relevant for customer who also have a heightened resp
 The Cloud Adoption Framework provides distinct methodologies to guide architectural decisions across the full cloud adoption life cycle. For most customers, cloud governance, cloud management, cloud platform, and cloud adoption teams will each mature at their own pace to deliver on the company's digital transformation strategy. For most teams that maturity is an ongoing, iterative process of identifying and addressing opportunities to learn and improve.
 
 For companies to be successful in the large scale adoption efforts described above require all platform, governance, and management to reach a minimum level of maturity in unison and early in the lifecycle. Codename CAF NorthStar pulls forward and adds to each methodology in the form of a single, united implementation. This implementation of a common architecture ensures that specific standards are met across all landing zones.
+
+## How should I use this journey?
+
+How you use this guidance depends on where you are in your journey:
+
+- **New to the cloud**: If you are new to the cloud, the implementations provide a rich starting point. From there an understanding of the architecture and design guidelines will help you customize that code base to fit your needs.
+- **10 or less existing landing zones**: As long as the code base for your landing zones is manageable, it may be possible to refactor those landing zones to align with an implementation of the core architecture in the listed implementations of CAF NorthStar.
+- **Extensive existing implementation**: When refactoring is not possible, consider using the architecture as a long-term roadmap. Reference that architecture and the design areas to evaluate gaps in your current platform implementation. Some of the implementation options, like the collection of defined policies may be compatible with your existing landing zones immediately. Other implementation modules, like shared services, may require more time and consideration. Using this journey will help keep you on a linear path as you extend all of your existing landing zones.
 
 ## Community
 
