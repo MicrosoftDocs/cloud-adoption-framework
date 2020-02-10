@@ -1,6 +1,6 @@
 ---
 title: "Guest Configuration policy"
-description: Guest Configuration policy
+description: Learn how to use the Azure Policy Guest Configuration extension to audit the configuration settings in an Azure virtual machine (VM). 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
