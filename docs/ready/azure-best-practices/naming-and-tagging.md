@@ -12,11 +12,11 @@ ms.custom: readiness
 
 # Recommended naming and tagging conventions
 
-Organizing cloud-based assets in ways that aid operational management and support accounting requirements is a common challenge in large cloud adoption efforts. By applying well-defined naming and metadata tagging conventions to cloud-hosted resources, IT staff can quickly find and manage resources. Well-defined names and tags also help to align cloud usage costs with business teams by using chargeback and showback accounting mechanisms.
+Organize your cloud assets to support operational management and accounting requirements. Well-defined naming and metadata tagging conventions help to quickly locate and manage resources. These conventions also help associate cloud usage costs with business teams via chargeback and showback accounting mechanisms.
 
 The Azure Architecture Center's guidance for [naming rules and restrictions for Azure resources](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) provides general recommendations and platform limitations. The following discussion extends that guidance with more detailed recommendations aimed specifically at supporting enterprise cloud adoption efforts.
 
-Resource names can be difficult to change. Prioritize establishing a comprehensive naming convention before you begin any large cloud deployment.
+Changing resource names can be difficult. Establish a comprehensive naming convention before you begin any large cloud deployment.
 
 > [!NOTE]
 > Every business has different organizational and management requirements. These recommendations provide a starting point for discussions within your cloud adoption teams.
@@ -29,7 +29,7 @@ Resource names can be difficult to change. Prioritize establishing a comprehensi
 
 A naming and tagging strategy includes business and operational details as components of resource names and metadata tags:
 
-- The business side of this strategy ensures that resource names and tags include the organizational information that's needed to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
+- The business side of this strategy ensures that resource names and tags include the organizational information needed to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
 - The operational side ensures that names and tags include information that IT teams use to identify the workload, application, environment, criticality, and other information useful for managing resources.
 
 ## Resource naming
@@ -80,7 +80,7 @@ The following list provides recommended Azure resource type prefixes to use when
 
 | Asset type                       | Name prefix |
 |----------------------------------|-------------|
-| Virtual network (VNet)           | vnet-       |
+| Virtual network                  | vnet-       |
 | Subnet                           | snet-       |
 | Network interface (NIC)          | nic-        |
 | Public IP address                | pip-        |
@@ -228,7 +228,7 @@ The following section provides some example names for common Azure resource type
 
 | Asset type                   | Scope           | Format                                                               | Examples                                                                                                                      |
 |------------------------------|-----------------|----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Virtual network (VNet)       | Resource group  | vnet-\<Subscription type\>-\<Region\>-\<\#\#\#\>                     | <ul><li>vnet-shared-eastus2-001 </li><li>vnet-prod-westus-001 </li><li>vnet-client-eastus2-001</li></ul>                      |
+| Virtual network              | Resource group  | vnet-\<Subscription type\>-\<Region\>-\<\#\#\#\>                     | <ul><li>vnet-shared-eastus2-001 </li><li>vnet-prod-westus-001 </li><li>vnet-client-eastus2-001</li></ul>                      |
 | Subnet                       | Virtual network | snet-\<subscription\>-\<subregion\>-\<\#\#\#\>                       | <ul><li>snet-shared-eastus2-001 </li><li>snet-prod-westus-001 </li><li>snet-client-eastus2-001</li></ul>                      |
 | Network interface (NIC)      | Resource group  | nic-\<\#\#\>-\<vmname\>-\<subscription\>\<\#\#\#\>                   | <ul><li>nic-01-dc1-shared-001 </li><li>nic-02-vmhadoop1-prod-001 </li><li>nic-02-vmtest1-client-001</li></ul>                 |
 | Public IP address            | Resource group  | pip-\<vm name or app name\>-\<Environment\>-\<subregion\>-\<\#\#\#\> | <ul><li>pip-dc1-shared-eastus2-001 </li><li>pip-hadoop-prod-westus-001</li></ul>                                              |
@@ -250,7 +250,7 @@ The following section provides some example names for common Azure resource type
 | Web app                     | Global         | app-\<App Name\>-\<Environment\>-\<\#\#\#\>.[{azurewebsites.net}]   | <ul><li>app-navigator-prod-001.azurewebsites.net </li><li>app-accountlookup-dev-001.azurewebsites.net</li></ul>                   |
 | Function app                | Global         | func-\<App Name\>-\<Environment\>-\<\#\#\#\>.[{azurewebsites.net}]  | <ul><li>func-navigator-prod-001.azurewebsites.net </li><li>func-accountlookup-dev-001.azurewebsites.net</li></ul>                 |
 | Cloud service               | Global         | cld-\<App Name\>-\<Environment\>-\<\#\#\#\>.[{cloudapp.net}]        | <ul><li>cld-navigator-prod-001.azurewebsites.net </li><li>cld-accountlookup-dev-001.azurewebsites.net</li></ul>                   |
-| Notification hubs           | Resource group | ntf-\<App Name\>-\<Environment\>                                    | <ul><li>ntf-navigator-prod </li><li>ntf-emissions-dev</li></ul>                                                                   |
+| Notification hub            | Resource group | ntf-\<App Name\>-\<Environment\>                                    | <ul><li>ntf-navigator-prod </li><li>ntf-emissions-dev</li></ul>                                                                   |
 | Notification Hubs namespace | Global         | ntfns-\<App Name\>-\<Environment\>                                  | <ul><li>ntfns-navigator-prod </li><li>ntfns-emissions-dev</li></ul>                                                               |
 
 ### Example names: Databases
