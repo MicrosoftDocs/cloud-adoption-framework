@@ -1,5 +1,5 @@
 ---
-title: "Motivations and business risks that drive Deployment Acceleration"
+title: Deployment Acceleration motive, business risk
 description: Learn about the discipline of Deployment Acceleration as part of a cloud governance strategy.
 author: alexbuckgit
 ms.author: abuck

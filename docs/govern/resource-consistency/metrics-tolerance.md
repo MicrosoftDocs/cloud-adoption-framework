@@ -1,5 +1,5 @@
 ---
-title: "Resource Consistency metrics, indicators, and risk tolerance"
+title: Resource Consistency metrics, risk tolerance
 description: Resource Consistency metrics, indicators, and risk tolerance
 author: BrianBlanchard
 ms.author: brblanch

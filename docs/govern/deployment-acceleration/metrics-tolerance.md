@@ -1,5 +1,5 @@
 ---
-title: "Deployment Acceleration metrics, indicators, and risk tolerance"
+title: Deployment Acceleration metrics, risk tolerance
 description: Deployment Acceleration metrics, indicators, and risk tolerance
 author: alexbuckgit
 ms.author: abuck

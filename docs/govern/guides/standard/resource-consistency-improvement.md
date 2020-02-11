@@ -1,5 +1,5 @@
 ---
-title: "Standard enterprise governance guide: Improving Resource Consistency"
+title: "Standard guide: Improve Resource Consistency"
 description: "Standard enterprise governance guide: Improving Resource Consistency"
 author: BrianBlanchard
 ms.author: brblanch
