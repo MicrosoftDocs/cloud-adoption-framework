@@ -4,7 +4,7 @@ description: Understand operational management within the Cloud Adoption Framewo
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
