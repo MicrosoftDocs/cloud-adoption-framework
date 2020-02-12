@@ -1,6 +1,6 @@
 ---
 title: Deployment Acceleration motive, business risk
-description: Learn about the discipline of Deployment Acceleration as part of a cloud governance strategy.
+description: Learn about the discipline of Deployment Acceleration as part of a cloud governance strategy in Microsoft Cloud Adoption Framework for Azure.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019
