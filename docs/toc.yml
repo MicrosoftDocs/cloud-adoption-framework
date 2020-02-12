@@ -1,3 +1,4 @@
+items:
   - name: Cloud Adoption Framework
     href: index.md
     pdf_name: Microsoft Cloud Adoption Framework for Azure
@@ -1080,6 +1081,8 @@
         href: manage/azure-management-guide/workload-specialization.md
     - name: Best practices
       items:
+      - name: Overview
+        href: manage/best-practices.md  
       - name: Azure Server Management
         items:
         - name: Introduction to Azure Server Management
