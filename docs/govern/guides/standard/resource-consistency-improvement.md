@@ -1,6 +1,6 @@
 ---
-title: "Standard enterprise governance guide: Improve Resource Consistency"
-description: Advance the narrative by adding Resource Consistency controls to support mission-critical apps in Microsoft Cloud Adoption Framework for Azure. 
+title: "Standard enterprise governance: Improve Resource Consistency"
+description: Improve governance baseline and remediate resource governance risks by adding recovery, sizing, and monitoring controls in Microsoft Cloud Adoption Framework for Azure. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
