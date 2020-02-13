@@ -1,6 +1,7 @@
 ---
 title: "Identity decision guide"
-description: Learn about identity as a core service in Azure migrations.
+description: Learn how to manage identity and access management services for cloud-based resources and environments. 
+as a core service for Azure migrations in the Microsoft Cloud Adoption Framework for Azure.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019
