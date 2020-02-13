@@ -1,6 +1,6 @@
 ---
 title: "Subscription decision guide"
-description: Learn about cloud platform subscriptions as a core service in Azure migrations.
+description: Understand subscription design patterns and management groups to help organize Azure assets during cloud adoption.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 10/17/2019
