@@ -1,6 +1,6 @@
 ---
 title: "Logging and reporting decision guide"
-description: Develop a core logging, reporting, and monitoring strategy to ensure your organization meets uptime, security, and policy compliance goals.
+description: Learn about logging, reporting, and monitoring as core services in Azure migrations.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

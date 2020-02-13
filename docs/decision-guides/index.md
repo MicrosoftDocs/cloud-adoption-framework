@@ -1,6 +1,6 @@
 ---
 title: "Architectural decision guides"
-description: Supplement the sample governance journeys with alternative patterns and models that help customize your cloud governance design guidance. 
+description: Learn about architectural decision guides in the Cloud Adoption Framework.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

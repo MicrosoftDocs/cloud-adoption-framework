@@ -1,6 +1,6 @@
 ---
 title: "Migration tools decision guide"
-description: Use this decision tree as high-level guidance for selecting strategy and tools to migrate an application to Azure.
+description: Migration tools decision guide
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

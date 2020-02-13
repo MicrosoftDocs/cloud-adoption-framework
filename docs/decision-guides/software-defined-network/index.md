@@ -1,6 +1,6 @@
 ---
 title: "Software Defined Networking decision guide"
-description: Learn how Software Defined Networking provides centrally-managed virtualized networking through software.
+description: Learn about Software Defined Networks as a core service in Azure migrations.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

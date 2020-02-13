@@ -1,6 +1,6 @@
 ---
 title: "Encryption decision guide"
-description: Learn how to properly implement an encryption policy that provides additional layers of security for your cloud-based workloads and data.
+description: Learn about encryption as a core service in Azure migrations.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

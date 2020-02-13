@@ -1,6 +1,6 @@
 ---
 title: "Resource consistency decision guide"
-description: Understand the importance of resource consistency when organizing and managing resources for an Azure migration.
+description: Learn about resource consistency when planning an Azure migration.
 author: doodlemania2
 ms.author: dermar
 ms.date: 10/17/2019
