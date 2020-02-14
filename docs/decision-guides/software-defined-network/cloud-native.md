@@ -1,6 +1,6 @@
 ---
 title: "Software Defined Networking: Cloud-native"
-description: Learn about cloud-native virtual networks, which require explicit provisioning for access from external sources. 
+description: Learn about cloud-native virtual networks that require explicit provisioning for access from external sources. 
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

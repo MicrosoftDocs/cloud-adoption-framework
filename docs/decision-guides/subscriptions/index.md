@@ -1,6 +1,6 @@
 ---
 title: "Subscription decision guide"
-description: Understand subscription design patterns and management groups to help organize Azure assets during cloud adoption.
+description: Understand subscription design patterns and management groups as a core service to organize assets during Azure migrations.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 10/17/2019

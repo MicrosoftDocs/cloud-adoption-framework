@@ -1,6 +1,6 @@
 ---
 title: "Encryption decision guide"
-description: Learn how to properly implement an encryption policy that provides additional layers of security for your cloud-based workloads and data.
+description: Implement an encryption policy, a core service that provides additional layers of security for your cloud-based workloads and data.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019
