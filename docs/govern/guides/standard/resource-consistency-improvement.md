@@ -1,6 +1,6 @@
 ---
-title: "Standard enterprise governance guide: Improving Resource Consistency"
-description: "Standard enterprise governance guide: Improving Resource Consistency"
+title: "Standard enterprise governance: Improve Resource Consistency"
+description: Improve governance baseline and remediate resource governance risks by adding recovery, sizing, and monitoring controls in the Microsoft Cloud Adoption Framework for Azure. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
