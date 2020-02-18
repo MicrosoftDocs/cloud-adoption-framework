@@ -31,7 +31,8 @@ In the [landing zone considerations article](../../ready/considerations/index.md
 
 **Goal:** Provide consistent landing zones based on **application archetype** subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise, see image below.
 
-**Principle purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to more quickly mature the customer's landing zones. CAF Northstar expands the principle purpose to pull forward aspects of governance and operational management, addressing both in the first release of the landing zone(s) and supporting shared services.
+**Principle purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to more quickly mature the customer's landing zones. CAF Northstar expands the principle purpose of the landing zones to pull forward aspects of governance, compliance, security and operational management. Each of these is addressed in the first release of the landing zone(s) and supporting shared services.
+
 
 ---
 _Using an analogy, this is similar to how city utilities such as water, gas, and electricity are accessible before new houses are constructed. In this context, the network, IAM, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process._

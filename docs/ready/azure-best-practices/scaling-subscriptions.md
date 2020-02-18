@@ -21,7 +21,7 @@ When deploying your first production workload in Azure, you should start with tw
 ![A basic subscription model showing keys next to boxes labeled "Production" and "Nonproduction"](../../_images/ready/basic-subscription-model.png)
 
 > [!IMPORTANT]
-> For customers whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 VMs (or compute instances) in the cloud**, we suggest a third subscription for "Shared Services" to create an n+1 model. This approach will allow for a smoother transition into end-state enterprise architectures like CAF Northstar.
+> For customers whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 VMs (or compute instances) in the cloud**, we suggest a third subscription for "Shared Services" to create an n+1 model. This approach will allow for a smoother transition into end-state enterprise architectures like [CAF Northstar](../../getting-started/northstar/architecture.md).
 
 We recommend this minimalist approach to subscriptions for several reasons:
 
