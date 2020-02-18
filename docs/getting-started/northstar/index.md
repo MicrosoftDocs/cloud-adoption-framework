@@ -32,7 +32,7 @@ Codename: CAF NorthStar includes four sets of assets to support cloud teams: [Im
 
 ## Who should follow the guidance outlined in this journey?
 
-This journey is designed for teams whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 VMs (or compute instances) in the cloud**.
+This journey is designed for teams whose adoption plan calls for a mid-term objective (within 24 months) to host **more than 1,000 assets (apps, infra, or data assets) in the cloud**.
 
 This journey is especially relevant for customer who also have a heightened responsibility to maintain governance, security, and operational management requirements within the cloud environment. This journey is even more relevant when workload hosting requirements are likely to require a high number of "[landing zones](../../ready/considerations/index.md)", as it will help provide a mechanism for the creation and management of new landing zones.
 
