@@ -1,6 +1,6 @@
 ---
 title: "Regions decision guide"
-description: Learn about cloud platform region factors and characteristics that can affect your Azure region selections.
+description: Learn about cloud platform regions, and the factors and characteristics that can affect your Azure region selections.
 author: doodlemania2
 ms.author: dermar
 ms.date: 10/17/2019

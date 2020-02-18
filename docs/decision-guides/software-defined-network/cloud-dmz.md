@@ -1,6 +1,6 @@
 ---
 title: "Software Defined Networking: Cloud DMZ"
-description: Learn about the Cloud DMZ network architecture, which allows limited access between your on-premises and cloud-based networks.
+description: Learn about the Cloud DMZ network architecture, which allows limited access between your on-premises and cloud-based networks by using a VPN.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

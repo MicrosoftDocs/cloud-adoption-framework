@@ -1,6 +1,6 @@
 ---
 title: "Software Defined Networking: Cloud-native"
-description: Learn about cloud-native virtual networks that require explicit provisioning for access from external sources. 
+description: Learn about cloud-native virtual networks, which are required when deploying VMs to the cloud, and need explicit provisioning to allow external access.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019
@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Software Defined Networking: Cloud-native
 
-A cloud-native virtual network is a required when deploying IaaS resources such as virtual machines to a cloud platform. Access to virtual networks from external sources, similar to the web, need to be explicitly provisioned. These types of virtual networks support the creation of subnets, routing rules, and virtual firewall and traffic management devices.
+A cloud-native virtual network is required when deploying IaaS resources such as virtual machines to a cloud platform. Access to virtual networks from external sources, similar to the web, need to be explicitly provisioned. These types of virtual networks support the creation of subnets, routing rules, and virtual firewall and traffic management devices.
 
 A cloud-native virtual network has no dependencies on your organization's on-premises or other noncloud resources to support the cloud-hosted workloads. All required resources are provisioned either in the virtual network itself or by using managed PaaS offerings.
 

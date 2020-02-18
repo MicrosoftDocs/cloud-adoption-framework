@@ -1,6 +1,6 @@
 ---
 title: "Architectural decision guides"
-description: Supplement the sample governance journeys with alternative patterns and models to help customize your cloud governance design guidance. 
+description: Use these core cloud deployment infrastructure component patterns and models to support your specific cloud deployment scenarios.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019
