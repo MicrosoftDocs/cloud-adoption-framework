@@ -1,6 +1,6 @@
 ---
 title: "Cloud governance guides"
-description: Learn about the actionable governance guides provided in the Cloud Adoption Framework.
+description: Choose an actionable governance guide illustrating an agile approach that grows to meet the needs of any cloud governance scenario.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
