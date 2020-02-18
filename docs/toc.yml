@@ -1,7 +1,8 @@
 items:
-    - name: Cloud Adoption Framework
+  - name: Cloud Adoption Framework
     href: index.md
     pdf_name: Microsoft Cloud Adoption Framework for Azure
+
   - name: Getting started
     items:
     - name: Begin a migration journey
