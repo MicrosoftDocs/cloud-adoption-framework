@@ -216,7 +216,7 @@ items:
           href: ready/azure-best-practices/naming-and-tagging.md
       - name: Networking
         items:
-        - name: Network options
+        - name: Network boundary security
           href: reference/networking-vdc.md
         - name: Plan virtual networks
           href: https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
@@ -1304,6 +1304,5 @@ items:
       href: reference/vdc.md
     - name: How does Azure work?
       href: getting-started/what-is-azure.md
-
-  - name: Azure Architecture Center
-    href: https://docs.microsoft.com/azure/architecture
+    - name: Azure Architecture Center
+      href: https://docs.microsoft.com/azure/architecture
