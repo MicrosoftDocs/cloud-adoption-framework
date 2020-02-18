@@ -1,54 +1,30 @@
 ---
-title: Deploy a migration landing zone in Azure
+title: Deploy a CAF foundation blueprint in Azure
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn how to deploy a migration landing zone in Azure.
+description: Learn how to deploy a CAF foundation blueprint in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: fasttrack-edit, setup
 ---
 
-# Deploy a migration landing zone
+# Deploy a CAF foundation blueprint
 
-*Migration landing zone* is a term used to describe an environment that has been provisioned and prepared to host workloads being migrated from an on-premises environment into Azure. A migration landing zone is the final deliverable of the Azure setup guide. This article ties together all of the readiness subjects discussed in this guide and applies the decisions made to the deployment of your first migration landing zone.
+TODO: Intro... This is not a landing zone but adds governance tooling to the landing zone
 
-The following sections outline a landing zone commonly used to establish an environment that's suitable for use during a migration. The environment or landing zone described in this article is also captured in an Azure blueprint. You can use the Cloud Adoption Framework migrate landing zone blueprint to deploy the defined environment with a single click.
+## Deploy the blueprint
 
-## Purpose of the blueprint
-
-The Cloud Adoption Framework migrate landing zone blueprint creates a landing zone. That landing zone is intentionally limited. It's designed to create a consistent starting point that provides room to learn infrastructure as code. For some migration efforts, this landing zone might be sufficient to meet your needs. It's also likely that you will need to change something in the blueprint to meet your unique constraints.
-
-## Blueprint alignment
-
-The following image shows the Cloud Adoption Framework migrate landing zone blueprint in relation to architectural complexity and compliance requirements.
-
-![Blueprint alignment](../../_images/ready/blueprint-overview.png)
-
-- The letter A sits inside of a curved line that marks the scope of this blueprint. That scope is meant to convey that this blueprint covers limited architectural complexity but is built on relatively mid-line compliance requirements.
-- Customers who have a high degree of complexity and stringent compliance requirements might be better served by using a partner's extended blueprint or one of the [standards-based blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples).
-- Most customers' needs will fall somewhere between these two extremes. The letter B represents the process outlined in the [landing zone considerations](../considerations/index.md) articles. For customers in this space, you can use the decision guides found in those articles to identify nodes to be added to the Cloud Adoption Framework migrate landing zone blueprint. This approach allows you to customize the blueprint to fit your needs.
-
-## Use this blueprint
-
-Before you use the Cloud Adoption Framework migration landing zone blueprint, review the following assumptions, decisions, and implementation guidance.
+TODO: Deployment steps
 
 ## Assumptions
 
-The following assumptions or constraints were used when this initial landing zone was defined. If these assumptions align with your constraints, you can use the blueprint to create your first landing zone. The blueprint also can be extended to create a landing zone blueprint that meets your unique constraints.
-
-- **Subscription limits:** This adoption effort isn't expected to exceed [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
-- **Compliance:** No third-party compliance requirements are needed in this landing zone.
-- **Architectural complexity:** Architectural complexity doesn't require additional production subscriptions.
-- **Shared services:** There are no existing shared services in Azure that require this subscription to be treated like a spoke in a hub and spoke architecture.
-
-If these assumptions seem aligned with your current environment, then this blueprint might be a good place to start building your landing zone.
+TODO: Key assumptions before choosing this with your first landing zone
 
 ## Decisions
 
-The following decisions are represented in the landing zone blueprint.
+TODO: Update the table below to outline the inherent decisions made by the blueprint
 
 | Component | Decisions | Alternative approaches |
 |---------|---------|---------|
@@ -66,18 +42,13 @@ The following decisions are represented in the landing zone blueprint.
 |Cost management|N/A|[Tracking costs](../azure-best-practices/track-costs.md)|
 |Compute|N/A|[Compute options](../considerations/compute-options.md)|
 
-## Customize or deploy a landing zone from this blueprint
+## Customize or deploy
 
-Learn more and download a reference sample of the Cloud Adoption Framework migrate landing zone blueprint for deployment or customization from [Azure Blueprints samples](https://docs.microsoft.com/azure/governance/blueprints/samples).
-
-The blueprint samples are also available within the portal. For details of how to create a blueprint, see [Azure Blueprints](./govern-org-compliance.md?tabs=azureblueprints#create-a-blueprint).
-
-For guidance on customization that should be made to this blueprint or the resulting landing zone, see the [landing zone considerations](../considerations/index.md) articles.
+TODO: Deployment steps
 
 ## Next steps
 
-After a migration landing zone is deployed, you're ready to migrate workloads to Azure.
-For guidance on the tools and processes that are required to migrate your first workload, see the [Azure migration guide](../../migrate/azure-migration-guide/index.md).
+After deploying your first landing zone, you are ready to [Expand your landing zone](../ready/considerations/index.md)
 
 > [!div class="nextstepaction"]
-> [Migrate your first workload with the Azure migration guide](../../migrate/azure-migration-guide/index.md)
+> [Expand your landing zone](../ready/considerations/index.md)
