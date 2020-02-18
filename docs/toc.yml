@@ -156,8 +156,8 @@ items:
         href: ready/azure-setup-guide/staying-current.md
     - name: First landing zone
       items:
-      - name: Choose a landing zone - TODO create article w/ theory & grid
-        href: ready/azure-setup-guide/migration-landing-zone.md
+      - name: Choose a landing zone
+        href: ready/first-landing-zone/index.md
       - name: Blueprint landing zone
         href: ready/azure-setup-guide/migration-landing-zone.md
       - name: Terraform landing zones
