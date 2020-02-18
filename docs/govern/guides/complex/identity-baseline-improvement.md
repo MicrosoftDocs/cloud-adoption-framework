@@ -1,6 +1,6 @@
 ---
-title: "Governance guide for complex enterprises: Improve the Identity Baseline discipline"
-description: "Governance guide for complex enterprises: Improve the Identity Baseline discipline"
+title: "Complex enterprise governance: Improve Identity Baseline discipline"
+description: Advance the narrative by adding Identity Baseline controls to the minimum viable product (MVP) governance in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/06/2019

@@ -1,6 +1,6 @@
 ---
-title: "Governance guide for complex enterprises: Multicloud improvement"
-description: "Governance guide for complex enterprises: Multicloud improvement"
+title: "Complex enterprise governance: Multicloud improvement"
+description: Learn about multiple clouds and how to integrate multicloud organizations for complex enterprises in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

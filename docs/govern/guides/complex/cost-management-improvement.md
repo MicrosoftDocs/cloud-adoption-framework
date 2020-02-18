@@ -1,6 +1,6 @@
 ---
-title: "Governance guide for complex enterprises: Improve the Cost Management discipline"
-description: "Governance guide for complex enterprises: Improve the Cost Management discipline"
+title: "Complex enterprise governance: Improve Cost Management discipline"
+description: Advance the narrative by adding cost controls to the minimum viable product (MVP) governance in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

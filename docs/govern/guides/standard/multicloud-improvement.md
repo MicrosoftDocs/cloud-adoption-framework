@@ -1,6 +1,6 @@
 ---
-title: "Standard enterprise governance guide: Multicloud improvement"
-description: "Standard enterprise governance guide: Multicloud improvement"
+title: "Standard enterprise governance: Multicloud improvement"
+description: Learn about multiple clouds and how to integrate multicloud organizations in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

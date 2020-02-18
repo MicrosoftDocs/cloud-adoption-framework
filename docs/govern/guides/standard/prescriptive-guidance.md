@@ -1,6 +1,6 @@
 ---
-title: "Standard enterprise governance guide: Best practices explained"
-description: Learn about best practices for governance in standard enterprises.
+title: "Standard enterprise governance: Best practices explained"
+description: Use best practices to set initial corporate policies and minimum viable product for standard enterprise governance in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

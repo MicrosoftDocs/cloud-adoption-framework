@@ -1,6 +1,6 @@
 ---
-title: "Governance guide for complex enterprises: The supporting narrative"
-description: This narrative establishes a use case for governance during a complex enterprise's cloud adoption journey.
+title: "Complex enterprise governance: The supporting narrative"
+description: Use this narrative to establish a use case for governance during your complex enterprise's cloud adoption journey in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

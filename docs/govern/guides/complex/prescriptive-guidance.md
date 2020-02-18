@@ -1,6 +1,6 @@
 ---
-title: "Governance guide for complex enterprises: Best practices explained"
-description: Learn about best practices for governance in complex enterprises.
+title: "Complex enterprise governance: Best practices explained"
+description: Use best practices for complex enterprise governance to set initial corporate policies and minimum viable product in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

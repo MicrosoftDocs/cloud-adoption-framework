@@ -1,6 +1,6 @@
 ---
-title: "Standard enterprise governance guide: Improve the Security Baseline discipline"
-description: "Standard enterprise governance guide: Improve the Security Baseline discipline"
+title: "Standard enterprise governance: Improve Security Baseline discipline"
+description: Advance the narrative by adding security controls that support moving protected data to the cloud in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

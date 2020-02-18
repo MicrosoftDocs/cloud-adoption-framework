@@ -1,6 +1,6 @@
 ---
-title: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
-description: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
+title: "Complex enterprise governance: Improve Resource Consistency discipline"
+description: Add recovery, sizing, and monitoring controls to improve governance baseline and remediate resource governance risks in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
