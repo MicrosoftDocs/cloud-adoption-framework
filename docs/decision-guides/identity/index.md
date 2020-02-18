@@ -1,6 +1,6 @@
 ---
 title: "Identity decision guide"
-description: Learn how to manage identity and access management services for cloud-based resources and environmentsn as a core service in Azure migrations. 
+description: Learn how to manage identity and access management services for cloud-based resources and environments as a core service in Azure migrations.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019
