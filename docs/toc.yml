@@ -1252,7 +1252,7 @@ items:
     - name: Antipatterns - IT fiefdoms and IT silos
       href: organize/fiefdoms-silos.md
 
-  - name: Reference
+  - name: Resources
     items:
     - name: Cloud Adoption Framework roadmap
       href: reference/index.md
