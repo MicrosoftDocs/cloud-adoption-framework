@@ -159,8 +159,10 @@ items:
       - name: Choose a landing zone
         href: ready/first-landing-zone/index.md
       - name: Blueprint landing zone
-        href: ready/azure-setup-guide/migration-landing-zone.md
-      - name: Terraform landing zones
+        href: ready/first-landing-zone/migration-landing-zone.md
+      - name: CAF NorthStar landing zone - TODO Create article
+        href: ready/first-landing-zone/migration-landing-zone.md
+      - name: Terraform landing zones - TODO Move
         href: ready/expanded-scope/terraform-landing-zone.md
     - name: Expand the landing zone
       items:
@@ -202,7 +204,11 @@ items:
           href: ready/TODO
       - name: Improve landing zone governance (Scale adoption)
         items:
-        - name: Transition to Northstar article - TODO pull over
+        - name: Foundations blueprint - TODO Create article
+          href: ready/TODO
+        - name: Governance MVP - TODO Create article
+          href: ready/TODO
+        - name: Transition to Northstar article - TODO Create article
           href: ready/TODO
     - name: Best practices
       items:
