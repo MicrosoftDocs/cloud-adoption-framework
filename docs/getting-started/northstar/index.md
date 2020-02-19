@@ -19,7 +19,7 @@ The CAF NorthStar is a journey which customers can follow to leverage the princi
 
 ## What is Codename: CAF NorthStar?
 
-When navigating long distances, the North Star (Ursae Minoris or Polaris) has long been used to help travelers find true north and stay on course. Likewise, the CAF NorthStar establishes a true north (or a suggested end state) for platform architecture. This effort helps keep the iterative efforts throughout the Cloud Adoption Framework focused towards a clear destination along a linear path.
+When navigating long distances, the North Star (Ursae Minoris or Polaris) has long been used to help travelers find true north and stay on course. Likewise, the CAF NorthStar establishes a true north (or a suggested end state) for platform architecture. This effort helps keep the iterative efforts throughout the Cloud Adoption Framework focused towards a clear destination along a linear path. In short, the NorthStar architecture is a prescriptive guidance on how to build a production ready and future proof Azure data center, based on best practices from strategic projects at customers.
 
 ## What guidance and tools are provided in this journey?
 
