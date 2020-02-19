@@ -156,12 +156,14 @@ items:
         href: ready/azure-setup-guide/staying-current.md
     - name: First landing zone
       items:
-      - name: Choose a landing zone
-        href: ready/first-landing-zone/index.md
+      - name: What is a landing zone
+        href: ready/landing-zone/index.md
+      - name: Choose your first landing zone
+        href: ready/landing-zone/first-landing-zone.md
       - name: Blueprint landing zone
-        href: ready/first-landing-zone/migration-landing-zone.md
+        href: ready/landing-zone/migration-landing-zone.md
       - name: CAF NorthStar landing zone - TODO Create article
-        href: ready/first-landing-zone/migration-landing-zone.md
+        href: ready/landing-zone/migration-landing-zone.md
       - name: Terraform landing zones - TODO Move
         href: ready/expanded-scope/terraform-landing-zone.md
     - name: Expand the landing zone
