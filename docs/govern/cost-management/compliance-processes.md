@@ -1,6 +1,6 @@
 ---
 title: "Cost Management policy compliance processes"
-description: Cost Management policy compliance processes
+description: Learn an approach to creating processes that support a Cost Management governance discipline in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

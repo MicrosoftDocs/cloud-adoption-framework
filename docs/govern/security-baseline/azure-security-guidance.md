@@ -1,6 +1,6 @@
 ---
 title: "Azure security guidance"
-description: What security guidance does Microsoft provide?
+description: Use the Microsoft Service Trust Platform and Compliance Manager to help meet complex compliance obligations and improve data protection.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

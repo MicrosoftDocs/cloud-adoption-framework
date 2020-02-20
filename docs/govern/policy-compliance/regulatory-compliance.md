@@ -1,6 +1,6 @@
 ---
 title: "Introduction to regulatory compliance"
-description: Introduction to regulatory compliance
+description: Learn about compliance regulations in various industries and geographies that may affect cloud governance.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
 title: "Cost Management sample policy statements"
-description: Cost Management sample policy statements
+description: Refer to these sample Cost Management policy statements to help draft policy statements that address your organization's needs.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

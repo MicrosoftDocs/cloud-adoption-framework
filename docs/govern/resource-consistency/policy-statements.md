@@ -1,6 +1,6 @@
 ---
 title: "Resource Consistency sample policy statements"
-description: Resource Consistency sample policy statements
+description: Use these sample Resource Consistency policy statements to help draft your organization's policy statements in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
-title: "Resource Consistency motivations and business risks"
-description: Resource Consistency motivations and business risks
+title: Resource Consistency business risks
+description: Understand typical customer adoption of a Resource Consistency discipline within a cloud governance strategy in the Cloud Adoption Framework for Azure.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019

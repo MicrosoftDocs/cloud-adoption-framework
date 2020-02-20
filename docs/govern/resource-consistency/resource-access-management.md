@@ -1,6 +1,6 @@
 ---
 title: "Resource access management in Azure"
-description: "Explanation of resource access management constructs in Azure: Azure Resource Manager, subscriptions, resource groups, and resources"
+description: Understand Azure resource access management concepts like Azure Resource Manager, subscriptions, resource groups, and resources.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
-title: "Cost Management motivations and business risks"
-description: Cost Management motivations and business risks
+title: Cost Management business risks
+description: Understand and see samples of typical customer adoption of a Cost Management discipline within a cloud governance strategy. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

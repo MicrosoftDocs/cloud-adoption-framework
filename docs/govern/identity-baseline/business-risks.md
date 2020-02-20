@@ -1,6 +1,6 @@
 ---
-title: "Identity Baseline motivations and business risks"
-description: Identity Baseline motivations and business risks
+title: "Identity Baseline business risks"
+description: Understand and see samples of typical customer adoption of an Identity Baseline discipline within a cloud governance strategy. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

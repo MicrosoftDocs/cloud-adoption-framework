@@ -1,6 +1,6 @@
 ---
 title: "Cost Management template"
-description: Use this template as a model for capturing the business risks, risk tolerances, compliance processes, and tooling needed to define your organization's Cost Management policy statements.
+description: Use this template to define Cost Management policy statements that capture business risks, risk tolerance, compliance processes, and tooling.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
-title: "Evaluate corporate policy"
-description: Evaluate corporate policy as part of your cloud governance strategy.
+title: Evaluate and define corporate policy
+description: Identify corporate policy business risk, risk tolerance, and policy and compliance processes as part of a cloud governance strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

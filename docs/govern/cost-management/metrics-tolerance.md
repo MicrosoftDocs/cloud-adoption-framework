@@ -1,6 +1,6 @@
 ---
-title: "Cost Management metrics, indicators, and risk tolerance"
-description: Explanation of Cost Management in relation to cloud governance
+title: Cost Management risk tolerance metrics and indicators
+description: Quantify Cost Management risk tolerance metrics and indicators in relation to cloud governance in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

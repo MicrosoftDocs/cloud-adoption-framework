@@ -1,6 +1,6 @@
 ---
-title: "Define corporate policy for cloud governance"
-description: Learn how to establish policy to reflect and remediate risks.
+title: Define cloud governance corporate policy
+description: Establish policy to address known risks and risk tolerances for your cloud transformation journey in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

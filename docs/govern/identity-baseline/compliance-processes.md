@@ -1,6 +1,6 @@
 ---
 title: "Identity Baseline policy compliance processes"
-description: Identity Baseline policy compliance processes
+description: Learn an approach to creating processes that support an Identity Baseline governance discipline in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
 title: "Deployment Acceleration discipline overview"
-description: Explanation of Deployment Acceleration in relation to cloud governance.
+description: Understand Deployment Acceleration in relation to cloud governance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

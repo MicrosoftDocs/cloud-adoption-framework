@@ -1,6 +1,6 @@
 ---
 title: Understand business risk during cloud migration
-description: Understand business risk during cloud migration
+description: Learn risk management processes to assess, understand, balance, and remediate migration risks in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
