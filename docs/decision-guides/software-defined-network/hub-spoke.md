@@ -1,6 +1,6 @@
 ---
 title: "Software Defined Networking: Hub and spoke"
-description: Learn how the hub and spoke networking model organizes your Azure-based cloud network infrastructure into multiple connected virtual networks. 
+description: Learn how hub and spoke networking organizes your network infrastructure into multiple connected virtual networks in the Cloud Adoption Framework for Azure.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

@@ -1,6 +1,6 @@
 ---
 title: "Software Defined Networking: Cloud-native"
-description: Learn about cloud-native virtual networks, which are required when deploying VMs to the cloud, and need explicit provisioning to allow external access.
+description: Learn about cloud-native virtual networks, which are required for deploying VMs to the cloud in the Cloud Adoption Framework for Azure.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019
