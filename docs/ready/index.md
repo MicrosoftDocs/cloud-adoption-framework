@@ -7,7 +7,6 @@ ms.date: 07/01/2019
 ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-layout: LandingPage
 ---
 
 <!-- markdownlint-disable MD026 -->
