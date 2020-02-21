@@ -1,15 +1,22 @@
 items:
   - name: Cloud Adoption Framework
-    href: index.md
-    pdf_name: Microsoft Cloud Adoption Framework for Azure
+    href: index.yml
+  - name: Overview
+    href: overview.md
   - name: Getting started
     items:
-    - name: Begin a migration journey
-      href: getting-started/migrate.md
-    - name: Understand the innovation journey
-      href: getting-started/innovate.md
-    - name: Enable successful cloud adoption
-      href: getting-started/enable.md
+    - name: Overview
+      href: getting-started/index.yml
+    - name: Overcoming blockers
+      items:
+      - name: Begin a migration journey
+        href: getting-started/migrate.md
+      - name: Understand the innovation journey
+        href: getting-started/innovate.md
+      - name: Security journey
+        href: getting-started/security-roadmap.md        
+      - name: Enable successful cloud adoption
+        href: getting-started/enable.md
 
   - name: Strategy
     items:

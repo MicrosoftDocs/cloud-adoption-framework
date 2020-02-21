@@ -1,0 +1,76 @@
+### YamlMime:Landing
+
+title: Roadmaps through the Cloud Adoption Framework # < 60 chars
+summary: The CAF is not designed to be read from beginning to end. It is designed for modular consumption, to help you overcome project blockers, improve team processes, and manage compliance and change across your IT portfolio. To guide you through the journey, we’ve outlined a number of common scenarios and the journey through the Cloud Adoption Framework that maps most closely to that scenario.
+
+metadata:
+  title: Roadmaps through the Cloud Adoption Framework # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Explore common scenarios and the journey through the Cloud Adoption Framework that maps most closely to these scenarios. # Required; article description that is displayed in search results. < 160 chars.
+  services: cloud-adoption-framework
+  ms.service: cloud-adoption-framework #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: JanetCThomas #Required; your GitHub user alias, with correct capitalization.
+  ms.author: janet #Required; microsoft alias of author; optional team alias.
+  ms.date: 02/18/2020 #Required; mm/dd/yyyy format.
+
+
+landingContent:
+
+# Cards and links should be based on top customer tasks or top subjects
+
+# Start card title with a verb
+
+  # Card
+  - title: Overcome blockers
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Migrate existing workloads
+            url: migrate.md
+          - text: Build new products and services in the cloud
+            url: innovate.md
+          - text: Align your organization
+            url: enable.md
+          - text: Controls, compliance and governance needs
+            url: enable.md
+          - text: Environment design and configuration
+            url: enable.md
+
+  # Card
+  - title: Team roadmaps
+
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Strategy team
+            url: enable.md
+          - text: Technical decision makers
+            url: enable.md
+          - text: Business decision makers
+            url: enable.md
+          - text: Migration team
+            url: enable.md
+          - text: Innovation team
+            url: enable.md
+          - text: Data team
+            url: enable.md
+          - text: Cloud center of excellence
+            url: enable.md
+          - text: Governance team
+            url: enable.md
+          - text: Platform team
+            url: enable.md
+          - text: Automation team
+            url: enable.md
+
+  # Card
+  - title: Industry specific roadmaps
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Financial
+            url: enable.md
+          - text: Retail 
+            url: enable.md
+          - text: Healthcare
+            url: enable.md
