@@ -1,6 +1,6 @@
 ---
 title: "Rationalize the digital estate"
-description: Evaluate your digital assets to determine how best to host them in the cloud.
+description: Understand cloud rationalization, the process of evaluating assets to determine the best approach to hosting them in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018

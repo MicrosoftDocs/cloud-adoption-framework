@@ -1,6 +1,6 @@
 ---
-title: "Microsoft Cloud Adoption Framework for Azure"
-description: An overview of the Microsoft Cloud Adoption Framework for Azure.
+title: The Microsoft Cloud Adoption Framework for Azure
+description: Get tools, guidance, and narratives to help shape strategies and drive desired business outcomes in all phases of the cloud adoption lifecycle.
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.custom: homepage

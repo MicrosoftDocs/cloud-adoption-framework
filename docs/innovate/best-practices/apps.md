@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Tools to engage via apps in Azure"
-description: Tools to engage via apps in Azure
+title: Innovation tools to engage via apps
+description: Learn the tools Azure provides to accelerate development of applications that align to the innovate methodology.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

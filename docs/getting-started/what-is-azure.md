@@ -1,6 +1,6 @@
 ---
 title: "How does Azure work?"
-description: Explanation of the internal functioning of Azure
+description: Learn the basics about the internal structure and functioning of the Azure cloud platform and cloud virtualization.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 04/04/2019
