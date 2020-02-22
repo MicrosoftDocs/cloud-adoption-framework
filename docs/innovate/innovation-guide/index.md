@@ -1,6 +1,6 @@
 ---
-title: "Azure innovation guide: Before you start" 
-description: Learn to create innovative new solutions for your customers using Azure.
+title: "Innovation guide: Before you start" 
+description: Prepare your environment for Azure innovation with features that help you engage customers, build solutions, and drive adoption.
 author: matticusau
 ms.author: mlavery
 ms.date: 10/17/2019

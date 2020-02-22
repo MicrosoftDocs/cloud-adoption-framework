@@ -1,6 +1,6 @@
 ---
 title: "Innovation in the digital economy"
-description: Learn about the guiding theory of cloud innovation in the Cloud Adoption Framework.
+description: Focus on understanding customer needs and rapidly building cloud innovations that shape how your customers interact with your products.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019

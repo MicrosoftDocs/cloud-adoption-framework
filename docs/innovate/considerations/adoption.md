@@ -1,6 +1,6 @@
 ---
-title: "Create customer partnerships via the build-measure-learn feedback loop"
-description: Learn to create partnerships with customers via the build-measure-learn feedback loop.
+title: The build-measure-learn feedback loop
+description: Create customer partnerships by building solutions with customer empathy, measuring impact on customers, and learning with customers.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

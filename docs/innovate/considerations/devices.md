@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Interact with devices"
-description: Introduction to Cloud innovation - Interact with devices
+title: Interact with devices via digital invention
+description: Learn about advanced approaches to reduce innovation effort through customer interaction with ambient experiences and devices, rather than apps.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

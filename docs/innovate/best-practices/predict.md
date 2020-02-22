@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Tools to predict and influence in Azure"
-description: Tools to predict and influence in Azure
+title: Innovation tools to predict and influence
+description: Use cloud-based analytics tools to easily detect patterns, integrate predictions, and influence customer behavior in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

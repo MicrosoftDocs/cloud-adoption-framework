@@ -1,6 +1,6 @@
 ---
-title: "Build consensus on the business value of cloud innovation"
-description: Learn to build consensus on the business value of cloud innovation.
+title: Build consensus on innovation business value
+description: Learn how to align stakeholders' definitions of cloud innovation business value in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

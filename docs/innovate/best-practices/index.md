@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Develop digital inventions in Azure"
-description: Develop digital inventions in Azure
+title: Develop digital inventions for innovation
+description: Build on the innovate methodology to create a toolchain for digital invention in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

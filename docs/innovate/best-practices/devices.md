@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Tools to interact with devices in Azure"
-description: Tools to interact with devices in Azure
+title: Innovation tools for device interaction
+description: Learn about Azure tools to interact with customers through devices and ambient experiences that augment natural surroundings.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

@@ -1,6 +1,6 @@
 ---
-title: "Azure innovation guide: Predict and influence" 
-description: Learn to predict and influence using Azure.
+title: "Innovation guide: Predict and influence" 
+description: Learn Azure solutions for predicting customers' needs and integrating the predictions back into your solution to influence customer behaviors.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

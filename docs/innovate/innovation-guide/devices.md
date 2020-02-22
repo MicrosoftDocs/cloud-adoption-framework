@@ -1,6 +1,6 @@
 ---
-title: "Azure innovation guide: Interact through devices" 
-description: Azure innovation guide - Interact through devices
+title: "Innovation guide: Interact via devices" 
+description: Learn how Azure provides a framework for building immersive and effective business solutions through connected and perceptive edge devices.
 author: umarmohamedusman
 ms.author: umarm
 ms.date: 10/10/2019

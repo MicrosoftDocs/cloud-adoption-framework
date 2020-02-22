@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Develop digital inventions"
-description: Introduction to Cloud Innovation - Develop digital inventions
+title: Develop innovative digital inventions
+description: Balance invention and adoption to develop digital inventions while keeping customer adoption and customer empathy in mind.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
