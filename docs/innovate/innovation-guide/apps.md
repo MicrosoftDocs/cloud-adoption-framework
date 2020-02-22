@@ -1,5 +1,5 @@
 ---
-title: "Innovation guide: Engage via apps" 
+title: "Azure innovation: Engage via apps" 
 description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native apps.
 author: billyclaymyersmsft
 ms.author: wimyers

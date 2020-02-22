@@ -1,6 +1,6 @@
 ---
-title: "Innovation guide: Before you start" 
-description: Prepare your environment for Azure innovation with features that help you engage customers, build solutions, and drive adoption.
+title: "Azure innovation: Before you start" 
+description: Prepare your environment for cloud innovation with Azure features that help you engage customers, build solutions, and drive adoption.
 author: matticusau
 ms.author: mlavery
 ms.date: 10/17/2019

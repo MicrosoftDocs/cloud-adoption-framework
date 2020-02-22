@@ -1,5 +1,5 @@
 ---
-title: "Innovation guide: Democratize data"
+title: "Azure innovation: Democratize data"
 description: Learn about Azure Data Catalog, Azure Data Share, and other tools that enhance data discoverability and understanding.
 author: absheik
 ms.author: absheik

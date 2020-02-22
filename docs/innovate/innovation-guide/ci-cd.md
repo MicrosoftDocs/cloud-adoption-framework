@@ -1,5 +1,5 @@
 ---
-title: "Innovation guide: Empower adoption" 
+title: "Azure innovation: Empower adoption" 
 description: Help developer teams build productively, foster global and secure collaboration, and remove barriers to scaling innovation in Azure.
 author: absheik
 ms.author: absheik
