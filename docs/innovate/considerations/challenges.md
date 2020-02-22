@@ -1,6 +1,6 @@
 ---
 title: Customer adoption challenges and blockers
-description: Understand common adoption and invention related challenges to innovation in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to understand common adoption and invention-related challenges to innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
