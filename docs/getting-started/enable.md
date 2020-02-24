@@ -1,5 +1,5 @@
 ---
-title: Enable successful cloud adoption
+title: Enable cloud adoption journey success
 description: Use the free, self-service Cloud Adoption Framework and other tools to help you make cloud adoption decisions that enable customer success.
 author: BrianBlanchard
 ms.author: brblanch

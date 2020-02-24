@@ -1,6 +1,6 @@
 ---
 title: Innovation tools to predict and influence
-description: Use the Cloud Adoption Framework for Azure to find cloud-based analytics tools to easily detect patterns, integrate predictions, and influence customer behavior.
+description: Use the Cloud Adoption Framework for Azure to find analytics tools that help detect patterns, integrate predictions, and influence customer behavior.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

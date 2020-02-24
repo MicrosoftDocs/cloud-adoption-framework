@@ -1,6 +1,6 @@
 ---
-title: Azure innovation tools to engage via apps
-description: Use the Cloud Adoption Framework for Azure to develop tools that accelerate development of apps to align to the innovate methodology.
+title: Innovation tools to engage via apps
+description: Find out about Azure tools to accelerate development of apps that align to the innovate methodology of the Cloud Adoption Framework.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

@@ -1,6 +1,6 @@
 ---
 title: "Azure innovation: Empower adoption" 
-description: Help developer teams build productively, foster global and secure collaboration, and remove barriers to scaling innovation in Azure.
+description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation in Azure.
 author: absheik
 ms.author: absheik
 ms.date: 10/17/2019

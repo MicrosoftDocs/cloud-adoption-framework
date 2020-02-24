@@ -1,6 +1,6 @@
 ---
 title: Innovation tools for device interaction
-description: Learn about Azure tools to interact with customers through devices and ambient experiences that augment natural surroundings.
+description: Learn about Azure tools to interact through devices and ambient experiences that augment customers' natural surroundings and behaviors.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
