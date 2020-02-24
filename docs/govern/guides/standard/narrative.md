@@ -1,6 +1,6 @@
 ---
 title: "Standard enterprise governance: Narrative behind governance strategy"
-description: Use this narrative to establish a use case for governance during your standard enterprise's cloud adoption journey in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to learn about establishing a use case for governance during a standard enterprise cloud adoption journey.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

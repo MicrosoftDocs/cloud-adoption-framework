@@ -1,6 +1,6 @@
 ---
 title: "Complex enterprise governance: Improve Security Baseline discipline"
-description: Advance the narrative by adding security controls that support moving protected data to the cloud in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to learn about adding security controls that support moving protected data to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

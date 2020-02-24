@@ -1,6 +1,6 @@
 ---
 title: "Complex enterprise governance: Improve Resource Consistency discipline"
-description: Add recovery, sizing, and monitoring controls to improve governance baseline and remediate resource governance risks in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to learn about recovery, sizing, and monitoring controls to improve governance baseline and remediate risks.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

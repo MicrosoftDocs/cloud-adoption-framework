@@ -1,6 +1,6 @@
 ---
 title: "Standard enterprise governance: Best practices explained"
-description: Use best practices to set initial corporate policies and minimum viable product for standard enterprise governance in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to establish a minimum viable product (MVP) for governance that reflects best practices for a standard enterprise.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

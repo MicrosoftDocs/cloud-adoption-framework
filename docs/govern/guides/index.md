@@ -1,6 +1,6 @@
 ---
 title: "Cloud governance guides"
-description: Choose an actionable governance guide illustrating an agile approach that grows to meet the needs of any cloud governance scenario.
+description: Review cloud governance guides that illustrate best practices for an incremental approach to any governance scenario.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

@@ -1,6 +1,6 @@
 ---
 title: "Complex enterprise governance: Multiple governance layers"
-description: Learn about greater levels of complexity with multiple layers of governance for large enterprises in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to learn about greater levels of complexity with multiple layers of governance in large enterprises.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

@@ -1,6 +1,6 @@
 ---
 title: "Standard enterprise governance: Improve Resource Consistency"
-description: Improve governance baseline and remediate resource governance risks by adding recovery, sizing, and monitoring controls in the Cloud Adoption Framework for Azure. 
+description: Use the Cloud Adoption Framework for Azure to learn about improving a governance baseline and remediating risks by adding recovery, sizing, and monitoring controls.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

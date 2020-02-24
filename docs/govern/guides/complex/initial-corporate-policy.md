@@ -1,6 +1,6 @@
 ---
 title: "Complex enterprise governance: Initial corporate policy"
-description: Define initial governance position, early-stage risks, initial policy statements, and early enforcement processes in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to define initial governance position, early-stage risks, initial policy statements, and early enforcement processes.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
