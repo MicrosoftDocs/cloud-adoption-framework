@@ -1,6 +1,6 @@
 ---
 title: "Software Defined Networking: Hybrid network"
-description: Learn how hybrid networks can connect cloud virtual networks to on-premises resources in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to learn how hybrid networks can connect cloud virtual networks to on-premises resources.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019
