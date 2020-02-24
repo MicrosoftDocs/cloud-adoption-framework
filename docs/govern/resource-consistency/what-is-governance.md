@@ -1,6 +1,6 @@
 ---
 title: "What is cloud resource governance?"
-description: Learn about the process of managing, monitoring, and auditing Azure resource use to meet the goals and requirements of your organization.
+description: Learn about the process of managing, monitoring, and auditing Azure resources to meet the goals and requirements of your organization.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019

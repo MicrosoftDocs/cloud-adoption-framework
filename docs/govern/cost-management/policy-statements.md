@@ -1,6 +1,6 @@
 ---
 title: "Cost Management sample policy statements"
-description: Refer to these sample Cost Management policy statements to help draft policy statements in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to get sample Cost Management policy statements that will help you draft policy statements.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
 title: Establish initial cloud governance foundation
-description: Get started with cloud governance by establishing an initial cloud governance foundation in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to get started with cloud governance by establishing an initial cloud governance foundation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

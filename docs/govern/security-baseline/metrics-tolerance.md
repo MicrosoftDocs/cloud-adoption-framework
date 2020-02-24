@@ -1,6 +1,6 @@
 ---
 title: Security Baseline risk tolerance metrics and indicators
-description: Learn to quantify business risk tolerance related to Security Baseline in the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to learn how to quantify business risk tolerance related to Security Baseline.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

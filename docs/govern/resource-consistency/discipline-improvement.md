@@ -1,6 +1,6 @@
 ---
 title: "Resource Consistency discipline improvement"
-description: Understand the tasks to develop and mature the Resource Consistency discipline in each phase of the Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to understand tasks necessary to develop and mature the Resource Consistency discipline in each phase of adoption.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
 title: Align governance design to corporate policy
-description: Establish architecture choices and design patterns that meet your policy requirements in the Cloud Adoption Framework for Azure. 
+description: Use the Cloud Adoption Framework for Azure to learn how to establish architecture choices and design patterns that meet your policy requirements.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
