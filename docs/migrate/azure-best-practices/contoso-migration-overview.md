@@ -2,8 +2,8 @@
 title: "Overview of application migration examples for Azure"
 description: Provides an overview of the application migration examples included as part of the Cloud Adoption Framework Migrate section.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 10/11/2018
+ms.author: givenscj
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -65,22 +65,22 @@ The articles in the series are summarized below.
 
 **Article** | **Details**
 --- | ---
-[Rehost an app on Azure VMs](./contoso-migration-rehost-vm.md) | This article provides an example of migrating on-premises app VMs to Azure VMs using the Site Recovery service.
+[Rehost an app on Azure VMs](./contoso-migration-rehost-vm.md) | This article provides an example of migrating on-premises app VMs to Azure VMs using the Azure Migrate service.
 [Rearchitect an app in Azure containers and Azure SQL Database](./contoso-migration-rearchitect-container-sql.md) | This article provides an example of migrating an app while rearchitecting the app web tier as a Windows container running in Azure Service Fabric, and the database with Azure SQL Database.
 
 ### Linux workloads
 
 **Article** | **Details**
 --- | ---
-[Rehost a Linux app on Azure VMs and Azure Database for MySQL](./contoso-migration-rehost-linux-vm-mysql.md) | This article provides an example of migrating a Linux-hosted app to Azure VMs by using Site Recovery. It migrates the app database to Azure Database for MySQL by using MySQL Workbench.
-[Rehost a Linux app on Azure VMs](./contoso-migration-rehost-linux-vm.md) | This example shows how to complete a lift and shift migration of a Linux-based app to Azure VMs, using the Site Recovery service.
+[Rehost a Linux app on Azure VMs and Azure Database for MySQL](./contoso-migration-rehost-linux-vm-mysql.md) | This article provides an example of migrating a Linux-hosted app to Azure VMs by using Azure Migrate. It migrates the app database to Azure Database for MySQL by using MySQL Workbench.
+[Rehost a Linux app on Azure VMs](./contoso-migration-rehost-linux-vm.md) | This example shows how to complete a lift and shift migration of a Linux-based app to Azure VMs, using the Azure Migrate service.
 
 ### SQL Server workloads
 
 **Article** | **Details**
 --- | ---
-[Rehost an app on an Azure VM and SQL Database Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift and shift migration to Azure for an on-premises app. This involves migrating the app front-end VM using [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview), and the app database to an Azure SQL Database Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
-[Rehost an app on Azure VMs and in a SQL Server Always On availability group](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure hosted SQL Server VMs. It uses Site Recovery to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group.
+[Rehost an app on an Azure VM and SQL Database Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift and shift migration to Azure for an on-premises app. This involves migrating the app front-end VM using Azure Migrate, and the app database to an Azure SQL Database Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
+[Rehost an app on Azure VMs and in a SQL Server Always On availability group](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure hosted SQL Server VMs. It uses Azure Migrate to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group.
 
 ### ASP.NET, PHP, and Java apps
 

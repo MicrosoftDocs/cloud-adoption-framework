@@ -203,6 +203,7 @@ Data must also be considered, especially with the volume of databases that Conto
 
 Contoso are primarily using a couple of Azure services and tools for the migration:
 
+- [Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-services-overview): Service for migrating on-premises Virtual Machines and other resources to Azure.
 - [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview): Orchestrates disaster recovery, and migrates on-premises VMs to Azure.
 - [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview): Migrates on-premises databases such as SQL Server, MySQL, and Oracle to Azure.
 

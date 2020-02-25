@@ -2,12 +2,12 @@
 title: "Rehost an on-premises Linux app to Azure VMs"
 description: Learn how Contoso rehosts an on-premises Linux app by migrating to Azure VMs.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 04/04/2019
+ms.author: givenscj
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: site-recovery
+services: azure-migrate
 ---
 
 # Rehost an on-premises Linux app to Azure VMs
@@ -135,7 +135,7 @@ They set these up as follows:
 
 [Learn about](https://docs.microsoft.com/azure/migrate) setting up Azure Migrate Server Migration tool.
 
-### Prepare to connect to Azure VMs after failover
+## Step 2: Prepare on-premises VMware for Azure Migrate Server Migration
 
 After failover to Azure, Contoso wants to be able to connect to the replicated VMs in Azure. To do this, there's a couple of things that the Contoso admins need to do:
 
@@ -232,7 +232,7 @@ Now Contoso admins run a full failover to complete the migration.
 
 ### Connect the VM to the database
 
-As the final step in the migration process, Contoso adins update the connection string of the application to point to the app database running on the **OSTICKETMYSQL** VM.
+As the final step in the migration process, Contoso admins update the connection string of the application to point to the app database running on the **OSTICKETMYSQL** VM.
 
 1. They make an SSH connection to the **OSTICKETWEB** VM using Putty or another SSH client. The VM is private so they connect using the private IP address.
 
@@ -275,7 +275,7 @@ Now, Contoso needs to clean up as follows:
 - Remove the on-premises VMs from local backup jobs.
 - Update their internal documentation to show the new location, and IP addresses for OSTICKETWEB and OSTICKETMYSQL.
 - Review any resources that interact with the VMs, and update any relevant settings or documentation to reflect the new configuration.
-- Contoso used the Azure Migrate service with dependency mapping to assess the VMs for migration. Admins should remove the Microsoft Monitoring Agent, and the Microsoft Dependency agent they installed for this purpose, from the VM.
+- Contoso used the Azure Migrate service with management VM to assess the VMs for migration. Admins should remove the migration VM and web VMs from VmWare ESX server.
 
 ## Review the deployment
 

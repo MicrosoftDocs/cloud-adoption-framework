@@ -7,7 +7,7 @@ ms.date: 10/11/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: site-recovery
+services: azure-migrate
 ---
 
 # Refactor an on-premises app to an Azure App Service web app and Azure SQL database
@@ -57,7 +57,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 - For the database tier of the app, Contoso compared Azure SQL Database with SQL Server using [this article](https://docs.microsoft.com/azure/sql-database/sql-database-features). Contoso decided to go with Azure SQL Database for a few reasons:
   - Azure SQL Database is a relational-database managed service. It delivers predictable performance at multiple service levels, with near-zero administration. Advantages include dynamic scalability with no downtime, built-in intelligent optimization, and global scalability and availability.
-  - Contoso can use the lightweight Data Migration Assistant (DMA) to assess and migrate the on-premises database to Azure SQL.
+  - Contoso can use the Azure Database Migration Service to assess and migrate the on-premises database to Azure SQL.
   - With Software Assurance, Contoso can exchange existing licenses for discounted rates on a SQL Database, using the Azure Hybrid Benefit for SQL Server. This could provide savings of up to 30%.
   - SQL Database provides security features such as always encrypted, dynamic data masking, and row-level security/threat detection.
 - For the app web tier, Contoso has decided to use Azure App Service. This PaaS service enables that to deploy the app with just a few configuration changes. Contoso will use Visual Studio to make the change, and deploy two web apps. One for the website, and one for the WCF service.
@@ -71,8 +71,8 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 **Consideration** | **Details**
 --- | ---
-**Pros** | The SmartHotel360 app code won't need to be altered for migration to Azure.<br/><br/> Contoso can take advantage of their investment in Software Assurance using the Azure Hybrid Benefit for both SQL Server and Windows Server.<br/><br/> After the migration Windows Server 2008 R2 won't need to be supported. [Learn more](https://support.microsoft.com/lifecycle).<br/><br/> Contoso can configure the web tier of the app with multiple instances, so that it's no longer a single point of failure.<br/><br/> The database will no longer depend on the aging SQL Server 2008 R2.<br/><br/> SQL Database supports the technical requirements. Contoso assessed the on-premises database using the Data Migration Assistant and found that it's compatible.<br/><br/> Azure SQL Database has built-in fault tolerance that Contoso don't need to set up. This ensures that the data tier is no longer a single point of failover.
-**Cons** | Azure App Service only supports one app deployment for each web app. This means that two web apps must be provisioned (one for the website and one for the WCF service).<br/><br/> If Contoso uses the Data Migration Assistant instead of Azure Database Migration Service to migrate their database, it won't have the infrastructure ready for migrating databases at scale. Contoso will need to build another region to ensure failover if the primary region is unavailable.
+**Pros** | The SmartHotel360 app code won't need to be altered for migration to Azure.<br/><br/> Contoso can take advantage of their investment in Software Assurance using the Azure Hybrid Benefit for both SQL Server and Windows Server.<br/><br/> After the migration Windows Server 2008 R2 won't need to be supported. [Learn more](https://support.microsoft.com/lifecycle).<br/><br/> Contoso can configure the web tier of the app with multiple instances, so that it's no longer a single point of failure.<br/><br/> The database will no longer depend on the aging SQL Server 2008 R2.<br/><br/> SQL Database supports the technical requirements. Contoso assessed the on-premises database using the Data Migration Assistant and found that it's compatible.<br/><br/> Azure SQL Database has built-in fault tolerance that Contoso don't need to set up. This ensures that the data tier is no longer a single point of failover.<br/><br/> If Contoso uses the Azure Database Migration Service to migrate their database, it will have the infrastructure ready for migrating databases at scale. 
+**Cons** | Azure App Service only supports one app deployment for each web app. This means that two web apps must be provisioned (one for the website and one for the WCF service).<br/><br/>
 
 <!-- markdownlint-enable MD033 -->
 
@@ -82,7 +82,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 ### Migration process
 
-1. Contoso provisions an Azure SQL instance, and migrates the SmartHotel360 database to it.
+1. Contoso provisions an Azure SQL instance, and migrates the SmartHotel360 database to it using Azure Database Migration Service (DMS).
 2. Contoso provisions and configures web apps, and deploys the SmartHotel360 app to them.
 
     ![Migration process](media/contoso-migration-refactor-web-app-sql/migration-process.png)
@@ -91,7 +91,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 **Service** | **Description** | **Cost**
 --- | --- | ---
-[Data Migration Assistant (DMA)](https://docs.microsoft.com/sql/dma/dma-overview?view=ssdt-18vs2017) | Contoso will use DMA to assess and detect compatibility issues that might affect their database functionality in Azure. DMA assesses feature parity between SQL sources and targets, and recommends performance and reliability improvements. | It's a downloadable tool free of charge.
+[Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | The Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration).
 [Azure SQL Database](https://azure.microsoft.com/services/sql-database) | An intelligent, fully managed relational cloud database service. | Cost based on features, throughput, and size. [Learn more](https://azure.microsoft.com/pricing/details/sql-database/managed).
 [Azure App Service](https://docs.microsoft.com/azure/app-service/overview) | Create powerful cloud apps using a fully managed platform | Cost based on size, location, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows).
 [Azure DevOps](https://docs.microsoft.com/azure/azure-portal/tutorial-azureportal-devops) | Provides a continuous integration and continuous deployment (CI/CD) pipeline for app development. The pipeline starts with a Git repository for managing app code, a build system for producing packages and other build artifacts, and a Release Management system to deploy changes in dev, test, and production environments.
@@ -116,11 +116,11 @@ Here's how Contoso will run the migration:
 > [!div class="checklist"]
 >
 > - **Step 1: Provision a SQL Database instance in Azure.** Contoso provisions a SQL instance in Azure. After the app website is migrate to Azure, the WCF service web app will point to this instance.
-> - **Step 2: Migrate the database with DMA.** Contoso migrates the app database with the Data Migration Assistant.
+> - **Step 2: Migrate the database with DMS.** Contoso migrates the app database with the Azure Data Migration Service.
 > - **Step 3: Provision web apps.** Contoso provisions the two web apps.
 > - **Step 4: Set up Azure DevOps.** Contoso creates a new Azure DevOps project, and imports the Git repo.
 > - **Step 5: Configure connection strings.** Contoso configures connection strings so that the web tier web app, the WCF service web app, and the SQL instance can communicate.
-> - **Step 6: Set up build and release pipelines.** As a final step, Contoso sets up build and release pipelines to create the app, and deploys them to two separate web wpps.
+> - **Step 6: Set up build and release pipelines.** As a final step, Contoso sets up build and release pipelines to create the app, and deploys them to two separate web apps.
 
 ## Step 1: Provision an Azure SQL Database
 
@@ -154,54 +154,25 @@ Here's how Contoso will run the migration:
 - [Get help](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal) provisioning a SQL Database.
 - [Learn about](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools) v-Core resource limits.
 
-## Step 2: Migrate the database with DMA
+## Step 2: Assess the database with Database Migration Assistant (DMA) and migrate with Azure Database Migration Service (DMS)
 
-Contoso admins will migrate the SmartHotel360 database using DMA.
+Contoso admins assess the database using Database Migration Assistant (DMA) and then migrate it using Azure Database Migration Services (DMS) with the step-by-step guidance [here](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-azure-sql-online). They can perform both online, offline and hybrid (preview) migrations.
 
-### Install DMA
+As a summary, you must perform the following:
 
-1. They download the tool from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595) to the on-premises SQL Server VM (**SQLVM**).
-2. They run setup (DownloadMigrationAssistant.msi) on the VM.
-3. On the **Finish** page, they select **Launch Microsoft Data Migration Assistant** before finishing the wizard.
-
-### Migrate the database with DMA
-
-1. In the DMA, they create a new project (**SmartHotelDB**) and select **Migration**.
-2. They select the source server type as **SQL Server**, and the target as **Azure SQL Database**.
-
-    ![DMA](media/contoso-migration-refactor-web-app-sql/dma-1.png)
-
-3. In the migration details, they add **SQLVM** as the source server, and the **SmartHotel.Registration** database.
-
-     ![DMA](media/contoso-migration-refactor-web-app-sql/dma-2.png)
-
-4. They receive an error which seems to be associated with authentication. However after investigating, the issue is the period (.) in the database name. As a workaround, they decided to provision a new SQL database using the name **SmartHotel-Registration**, to resolve the issue. When they run DMA again, they're able to select **SmartHotel-Registration**, and continue with the wizard.
-
-    ![DMA](media/contoso-migration-refactor-web-app-sql/dma-3.png)
-
-5. In **Select Objects**, they select the database tables, and generate a SQL script.
-
-    ![DMA](media/contoso-migration-refactor-web-app-sql/dma-4.png)
-
-6. After DMA creates the script, they select **Deploy schema**.
-
-    ![DMA](media/contoso-migration-refactor-web-app-sql/dma-5.png)
-
-7. DMA confirms that the deployment succeeded.
-
-    ![DMA](media/contoso-migration-refactor-web-app-sql/dma-6.png)
-
-8. Now they start the migration.
-
-    ![DMA](media/contoso-migration-refactor-web-app-sql/dma-7.png)
-
-9. After the migration finishes, Contoso admins can verify that the database is running on the Azure SQL instance.
-
-    ![DMA](media/contoso-migration-refactor-web-app-sql/dma-8.png)
-
-10. They delete the extra SQL database **SmartHotel.Registration** in the Azure portal.
-
-    ![DMA](media/contoso-migration-refactor-web-app-sql/dma-9.png)
+- Utilize the Database Migration Assistant (DMA) to discover and resolve any migration issues
+- Migrate the sample schema by using the Data Migration Assistant.
+- Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet
+- Ensure that the Azure Database Migration Service (DMS) can access the remote SQL Server via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the Virtual Network level, the network VPN and the machine hosting SQL Server.
+- Configure the Azure Database Migration Service
+  - Create a migration project
+  - Add a source (on-premises database)
+  - Select a target
+  - Select the database(s) to migrate
+  - Configure advanced settings
+  - Start the replication
+  - Resolve any errors
+  - Perform final cut-over
 
 ## Step 3: Provision web apps
 

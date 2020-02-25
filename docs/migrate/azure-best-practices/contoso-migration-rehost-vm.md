@@ -1,13 +1,13 @@
 ---
-title: "Rehost an app on Azure VMs with Azure Site Recovery"
-description: Learn how Contoso rehosts an on-premises app with a lift and shift migration of on-premises machines to Azure, using the Azure Site Recovery service.
+title: "Rehost an app on Azure VMs with Azure Migrate"
+description: Learn how Contoso rehosts an on-premises app with a lift and shift migration of on-premises machines to Azure, using the Azure Migrate service.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 10/11/2018
+ms.author: givenscj
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-services: site-recovery
+services: azure-migrate
 ---
 
 # Rehost an on-premises app on Azure VMs
@@ -50,7 +50,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 - The app VMs will be migrated to the primary Azure region (East US 2) and placed in the production network (VNET-PROD-EUS2).
 - The web front-end VM will reside in the front-end subnet (PROD-FE-EUS2) in the production network.
 - The database VM will reside in the database subnet (PROD-DB-EUS2) in the production network.
-- The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
+- The on-premises VMs in the Contoso data-center will be decommissioned after the migration is done.
 
 ![Scenario architecture](./media/contoso-migration-rehost-vm/architecture.png)
 
@@ -112,9 +112,9 @@ Here's how Contoso admins will run the migration:
 > [!div class="checklist"]
 >
 > - **Step 1: Prepare Azure for Azure Migrate Server Migration.** They add the Server Migration tool to their Azure Migrate project.
-> - **Step 2: Prepare on-premises VMware for Azure Migrate Server Migration.** They prepare accounts for VM discovery, and prepare to connect to Azure VMs after failover.
+> - **Step 2: Prepare on-premises VMware for Azure Migrate Server Migration.** They prepare accounts for VM discovery, and prepare to connect to Azure VMs after fail-over.
 > - **Step 3: Replicate VMs.** They set up replication, and start replicating VMs to Azure storage.
-> - **Step 4: Migrate the VMs with Azure Migrate Server Migration.** They run a test failover to make sure everything's working, and then run a full failover to migrate the VMs to Azure.
+> - **Step 4: Migrate the VMs with Azure Migrate Server Migration.** They run a test fail-over to make sure everything's working, and then run a full fail-over to migrate the VMs to Azure.
 
 ## Step 1: Prepare Azure for the Azure Migrate Server Migration tool
 
@@ -289,8 +289,8 @@ For business continuity and disaster recovery (BCDR), Contoso takes the followin
 ### Licensing and cost optimization
 
 1. Contoso has existing licensing for their VMs, and will take advantage of the Azure Hybrid Benefit. Contoso will convert the existing Azure VMs, to take advantage of this pricing.
-2. Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multicloud cost management solution that helps to use and manage Azure and other cloud resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.
+2. Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multi-cloud cost management solution that helps to use and manage Azure and other cloud resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.
 
 ## Conclusion
 
-In this article, Contoso rehosted the SmartHotel360 app in Azure by migrating the app VMs to Azure VMs using the Azure Migrate Server Migration tool.
+In this article, Contoso re-hosted the SmartHotel360 app in Azure by migrating the app VMs to Azure VMs using the Azure Migrate Server Migration tool.
