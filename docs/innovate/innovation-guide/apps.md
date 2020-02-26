@@ -1,6 +1,5 @@
 ---
 title: "Azure innovation guide: Engage customers through apps" 
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn to innovate by engaging customers through apps by using Azure
 author: billyclaymyersmsft
 ms.author: wimyers

@@ -1,7 +1,6 @@
 ---
 title: "Identity decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about identity as a core service in Azure migrations.
+description: Learn how Identity and access management (IAM) services enable you to manage access control in the cloud.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

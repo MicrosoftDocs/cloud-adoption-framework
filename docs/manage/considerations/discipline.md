@@ -1,6 +1,5 @@
 ---
 title: "Management leveling across cloud management disciplines"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: This article discusses management leveling across cloud management disciplines.
 author: BrianBlanchard
 ms.author: brblanch

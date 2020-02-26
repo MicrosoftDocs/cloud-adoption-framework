@@ -1,6 +1,5 @@
 ---
 title: "Resource access management in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: "Explanation of resource access management constructs in Azure: Azure Resource Manager, subscriptions, resource groups, and resources"
 author: alexbuckgit
 ms.author: abuck
@@ -54,7 +53,7 @@ The following figure shows three clients: [PowerShell](https://docs.microsoft.co
 ![Diagram of Azure clients connecting to the Azure Resource Manager API](../../_images/govern/design/governance-1-13.png)
 *Figure 5 - Azure clients connect to the Azure Resource Manager RESTful API.*
 
-While these clients connect to Azure Resource Manager using the RESTful API, Azure Resource Manager does not include functionality to manage resources directly. Rather, most resource types in Azure have their own [**resource provider**](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#terminology).
+While these clients connect to Azure Resource Manager using the RESTful API, Azure Resource Manager does not include functionality to manage resources directly. Rather, most resource types in Azure have their own [resource provider](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#terminology).
 
 ![Azure resource providers](../../_images/govern/design/governance-1-14.png)
 *Figure 6 - Azure resource providers.*

@@ -1,6 +1,5 @@
 ---
 title: "Accelerate migration with VMware hosts"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Accelerate migration with VMware hosts
 author: BrianBlanchard
 ms.author: brblanch

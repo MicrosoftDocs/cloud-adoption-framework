@@ -1,7 +1,6 @@
 ---
-title: "Resource Consistency metrics, indicators, and risk tolerance"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Resource Consistency metrics, indicators, and risk tolerance
+title: Resource Consistency risk tolerance metrics and indicators
+description: Quantify business risk tolerance related to Resource Consistency in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

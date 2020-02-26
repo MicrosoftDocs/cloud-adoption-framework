@@ -1,6 +1,5 @@
 ---
 title: "Enable tracking and alerting for critical changes"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Enable tracking and alerting for critical changes
 author: BrianBlanchard
 ms.author: brblanch

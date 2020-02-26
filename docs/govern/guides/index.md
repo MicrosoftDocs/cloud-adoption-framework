@@ -1,7 +1,6 @@
 ---
 title: "Cloud governance guides"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about the actionable governance guides provided in the Cloud Adoption Framework.
+description: Review cloud governance guides that illustrate best practices for an incremental approach to any governance scenario.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

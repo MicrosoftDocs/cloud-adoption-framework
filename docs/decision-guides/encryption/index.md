@@ -1,7 +1,6 @@
 ---
 title: "Encryption decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about encryption as a core service in Azure migrations.
+description: Implement an encryption policy, a core service in Azure migrations that provides additional layers of security for your cloud-based workloads and data.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

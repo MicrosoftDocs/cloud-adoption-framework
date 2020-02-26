@@ -1,6 +1,5 @@
 ---
 title: "Rebuild an on-premises app to Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso rebuilds an app to Azure using Azure App Service, Azure Kubernetes Service, Cosmos DB, Azure Functions, and Azure Cognitive Services.
 author: BrianBlanchard
 ms.author: brblanch
@@ -36,7 +35,7 @@ The Contoso cloud team has pinned down app requirements for this migration. Thes
 - The API service used for pet photos should be accurate and reliable in the real world, since decisions made by the app must be honored in their hotels. Any pet granted access is allowed to stay at the hotels.
 - To meet requirements for a DevOps pipeline, Contoso will use Azure DevOps for source code management (SCM), with Git Repos. Automated builds and releases will be used to build code and deploy to Azure App Service, Azure Functions, and AKS.
 - Different CI/CD pipelines are needed for microservices on the back end, and for the web site on the front end.
-- The back-end services have a different release cycle from the front-end web app. To meet this requirement, they will deploy two different DevOps pipelines.
+- The back-end services have a different release cycle from the front-end web app. To meet this requirement, they will deploy two different pipelines.
 - Contoso needs management approval for all front-end website deployment, and the CI/CD pipeline must provide this.
 
 ## Solution design
@@ -53,7 +52,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 ### Proposed architecture
 
-- The front-end of the app is deployed as an Azure App Service web app in the primary Azure region.
+- The front end of the app is deployed as an Azure App Service web app in the primary Azure region.
 - An Azure function provides uploads of pet photos, and the site interacts with this functionality.
 - The pet photo function uses the Azure Cognitive Services Vision API and Cosmos DB.
 - The back end of the site is built using microservices. These will be deployed to containers managed on the Azure Kubernetes service (AKS).
@@ -129,7 +128,7 @@ Contoso admins run a deployment script to create the managed Kubernetes cluster 
 - The instructions for this section use the **SmartHotel360-Azure-backend** repository.
 - The **SmartHotel360-Azure-backend** GitHub repository contains all of the software for this part of the deployment.  
 
-### Prerequisites
+### Ensure prerequisites
 
 1. Before they start, Contoso admins ensure that all prerequisite software in installed on the dev machine they're using for the deployment.
 2. They clone the repository local to the dev machine using Git: `git clone https://github.com/Microsoft/SmartHotel360-Azure-backend.git`
@@ -440,7 +439,7 @@ Contoso admins create two different projects for the front-end site.
 
 2. They import the [SmartHotel360 front end](https://github.com/Microsoft/SmartHotel360-public-web.git) Git repository into the new project.
 
-3. For the function app, they create another Azure DevOps project (SmartHotelPetChecker), and import the [PetChecker](https://github.com/Microsoft/SmartHotel360-PetCheckerFunction ) Git repository into this project.
+3. For the function app, they create another Azure DevOps project (SmartHotelPetChecker), and import the [PetChecker](https://github.com/sonahander/SmartHotel360-PetCheckerFunction) Git repository into this project.
 
 ### Configure the web app
 
@@ -579,21 +578,20 @@ Contoso admins deploy the app as follows.
 14. After the function is deployed, it appears in the Azure portal, with the **Running** status.
 
     ![Deploy the function](./media/contoso-migration-rebuild/function6.png)
-    
+
 15. They browse to the app to test that the Pet Checker app is working as expected, at [http://smarthotel360public.azurewebsites.net/Pets](http://smarthotel360public.azurewebsites.net/Pets).
 
 16. They select the avatar to upload a picture.
 
     ![Deploy the function](./media/contoso-migration-rebuild/function7.png)
-    
+
 17. The first photo they want to check is of a small dog.
 
     ![Deploy the function](./media/contoso-migration-rebuild/function8.png)
-    
+
 18. The app returns a message of acceptance.
 
     ![Deploy the function](./media/contoso-migration-rebuild/function9.png)
-    
 
 ## Review the deployment
 
@@ -631,4 +629,3 @@ Here are a couple of examples of tailored learning paths on Microsoft Learn that
 [Deploy a website to Azure with Azure App Service](https://docs.microsoft.com/learn/paths/deploy-a-website-with-azure-app-service/): Web apps in Azure allow you to publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to provide secure access to your site.
 
 [Process and classify images with the Azure Cognitive Vision Services](https://docs.microsoft.com/learn/paths/classify-images-with-vision-services/): Azure Cognitive Services offers pre-built functionality to enable computer vision functionality in your applications. Learn how to use the Cognitive Vision Services to detect faces, tag and classify images, and identify objects.
-

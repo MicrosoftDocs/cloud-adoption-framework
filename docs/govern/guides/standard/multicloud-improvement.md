@@ -1,7 +1,6 @@
 ---
-title: "Standard enterprise governance guide: Multicloud improvement"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Standard enterprise governance guide: Multicloud improvement"
+title: "Standard enterprise governance: Multicloud improvement"
+description: Use the Cloud Adoption Framework for Azure to learn about multiple clouds and how to integrate multiple clouds into existing operations.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019

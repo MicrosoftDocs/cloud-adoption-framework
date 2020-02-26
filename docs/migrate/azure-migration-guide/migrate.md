@@ -1,7 +1,6 @@
 ---
 title: "Migrate assets"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Migrate assets
+description: This guide helps you initiate the migration of your environment by identifying the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
 author: matticusau
 ms.author: mlavery
 ms.date: 08/08/2019
@@ -217,7 +216,7 @@ Cloudamize is an ISV service that covers all phases of the migration strategy.
 
 Zerto provides virtual replication handling both Microsoft Hyper-V and VMware vSphere environments.
 
-[Learn more](https://www.zerto.com/solutions/use-cases/data-center-migration-software)
+[Learn more](https://www.zerto.com/modernize)
 
 ## Carbonite
 
@@ -266,9 +265,9 @@ Azure DevOps provides all of the required functionality and integration with Azu
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 
-Here is an example of a tailored learning path on Microsoft Learn that complements the setup for DevOps guidance in the Cloud Adoption Framework. 
+Here is an example of a tailored learning path on Microsoft Learn that complements the setup for DevOps guidance in the Cloud Adoption Framework.
 
-[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents. 
+[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
 
 # [Cost management](#tab/ManageCost)
 

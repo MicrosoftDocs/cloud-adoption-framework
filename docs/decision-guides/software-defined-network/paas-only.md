@@ -1,7 +1,6 @@
 ---
 title: "Software Defined Networking: PaaS-only"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Discussion of the PaaS-only model for Software Defined Networking in the cloud.
+description: Learn about the advantages and limitations of a PaaS-only architectural model in Software Defined Networking in the cloud.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019

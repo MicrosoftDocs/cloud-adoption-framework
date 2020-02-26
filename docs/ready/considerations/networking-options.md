@@ -1,6 +1,5 @@
 ---
 title: Review your network options
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Review your network options for Azure workloads.
 author: BrianBlanchard
 ms.author: brblanch

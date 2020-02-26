@@ -1,6 +1,5 @@
 ---
 title: "How does Azure work?"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of the internal functioning of Azure
 author: alexbuckgit
 ms.author: abuck

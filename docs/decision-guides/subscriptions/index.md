@@ -1,7 +1,6 @@
 ---
 title: "Subscription decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about cloud platform subscriptions as a core service in Azure migrations.
+description: Understand subscription design patterns and management groups as a core service for organizing assets during Azure migrations.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 10/17/2019

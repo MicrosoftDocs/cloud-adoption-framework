@@ -1,6 +1,5 @@
 ---
 title: "Enable customer success during a cloud adoption journey"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Enable customer success throughout a cloud adoption journey
 author: BrianBlanchard
 ms.author: brblanch
@@ -65,7 +64,7 @@ In addition to the Cloud Adoption Framework, Microsoft covers additional topics 
                     </div>
                     <div class="cardText">
                         <h3>Reliable Architecture (Resiliency)</h3>
-                        <p>Building a reliable application in the cloud is different from traditional application development. While historically you may have purchased higher-end hardware to scale up, in a cloud environment you scale out instead of up. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component.</p>
+                        <p>Building a reliable application in the cloud is different from traditional application development. While historically you may have purchased levels of redundant higher-end hardware to minimize the chance of an entire application platform failing. In the cloud, we acknowledge up front that failures will happen. Instead of trying to prevent failures altogether, the goal is to minimize the effects of a single failing component.</p>
                     </div>
                 </div>
             </div>

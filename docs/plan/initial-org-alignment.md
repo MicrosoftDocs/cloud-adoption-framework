@@ -1,6 +1,5 @@
 ---
 title: "Initial organization alignment" 
-titleSuffix: Microsoft Cloud Adoption Framework
 description: Initial organization alignment
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Prerequisites for an effective cloud adoption plan"
-titleSuffix: Microsoft Cloud Adoption Framework
 description: Understand the prerequisites for an effective cloud adoption plan.
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,5 @@
 ---
 title: "Azure server management tools and services"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Azure server management tools and services
 author: BrianBlanchard
 ms.author: brblanch

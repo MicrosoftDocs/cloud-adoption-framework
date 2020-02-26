@@ -1,7 +1,6 @@
 ---
 title: "Cost Management template"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Cost Management template
+description: Use this template as a model for capturing the business risks, risk tolerances, compliance processes, and tooling needed to define your organization's Cost Management policy statements.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

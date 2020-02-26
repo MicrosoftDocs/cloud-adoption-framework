@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Tools to engage via apps in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Tools to engage via apps in Azure
 author: BrianBlanchard
 ms.author: brblanch

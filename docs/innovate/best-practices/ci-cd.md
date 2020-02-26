@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Tools to empower adoption in Azure"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Tools to empower adoption in Azure
 author: BrianBlanchard
 ms.author: brblanch

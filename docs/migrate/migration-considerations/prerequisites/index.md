@@ -1,7 +1,6 @@
 ---
 title: "Prerequisites to migration"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Prerequisites to migration
+description: Understand the prerequisites that help you prepare for migration to the cloud, and help you avoid common reasons for migration failures. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

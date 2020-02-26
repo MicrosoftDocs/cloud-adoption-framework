@@ -1,7 +1,6 @@
 ---
 title: "Assess the digital estate"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Assess the digital estate
+description: This section of the Azure migration guide helps you assess of your environment to determine what should be migrated and which migration methods to consider.
 author: matticusau
 ms.author: mlavery
 ms.date: 08/08/2019
@@ -47,7 +46,7 @@ To get started with a server migration assessment using Azure Migrate, follow th
 
 ::: zone target="chromeless"
 
-::: form action="Blade[#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview]" submitText="Assess and migrate servers" :::
+::: form action="OpenBlade[#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview]" submitText="Assess and migrate servers" :::
 
 ::: zone-end
 

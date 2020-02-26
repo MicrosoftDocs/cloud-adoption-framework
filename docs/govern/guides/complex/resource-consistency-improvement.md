@@ -1,7 +1,6 @@
 ---
-title: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Governance guide for complex enterprises: Improve the Resource Consistency discipline"
+title: "Complex enterprise governance: Improve Resource Consistency discipline"
+description: Use the Cloud Adoption Framework for Azure to learn about recovery, sizing, and monitoring controls to improve governance baseline and remediate risks.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

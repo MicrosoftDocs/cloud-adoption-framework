@@ -1,7 +1,6 @@
 ---
 title: "Establish team structures"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Establish team structures
+description: Use these examples of common team structures, to find the organizational structure that best aligns with your operational needs.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019

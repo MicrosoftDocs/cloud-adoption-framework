@@ -1,6 +1,5 @@
 ---
 title: "Prioritize and define workloads for a cloud adoption plan"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Prioritize and define workloads for a cloud adoption plan
 author: BrianBlanchard
 ms.author: brblanch

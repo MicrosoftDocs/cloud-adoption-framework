@@ -1,6 +1,5 @@
 ---
 title: Governance, security, and compliance in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to set up governance, security, and compliance for your Azure environment.
 author: tvuylsteke
 ms.author: kfollis

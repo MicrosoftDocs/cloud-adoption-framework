@@ -1,6 +1,5 @@
 ---
 title: "Rehost an app on Azure VMs with Azure Site Recovery"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how Contoso rehosts an on-premises app with a lift and shift migration of on-premises machines to Azure, using the Azure Site Recovery service.
 author: BrianBlanchard
 ms.author: brblanch
@@ -198,7 +197,7 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
     - Select **No** if you don't want to apply Azure Hybrid Benefit. Then click **Next**.
     - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and you want to apply the benefit to the machines you're migrating. Then click **Next**.
 
-8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#agentless-migration-vmware-vm-requirements).
+8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
     - **VM size:** If you're using assessment recommendations, the VM size dropdown will contain the recommended size. Otherwise Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.

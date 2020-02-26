@@ -1,7 +1,6 @@
 ---
 title: "Resource consistency decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Learn about resource consistency when planning an Azure migration.
+description: Understand the importance of your cloud estate’s resource consistency and the factors that drive requirements for resource consistency.
 author: doodlemania2
 ms.author: dermar
 ms.date: 10/17/2019

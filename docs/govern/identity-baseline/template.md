@@ -1,7 +1,6 @@
 ---
 title: "Identity Baseline template"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Identity Baseline template
+description: Download the identity baseline template and start documenting and communicating policy statements that govern identity services in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

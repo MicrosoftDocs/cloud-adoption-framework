@@ -1,6 +1,5 @@
 ---
 title: "CISO cloud readiness guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: How can a CISO prepare for the cloud
 author: BrianBlanchard
 ms.author: brblanch

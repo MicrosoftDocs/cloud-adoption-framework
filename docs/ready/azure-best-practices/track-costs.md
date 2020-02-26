@@ -1,6 +1,5 @@
 ---
 title: "Track costs across business units, environments, or projects"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Tracking costs across business units, environments, or projects
 author: BrianBlanchard
 ms.author: brblanch
@@ -122,7 +121,7 @@ For more information on getting started with Azure Cost Management, see [How to 
 
 ### Use Azure Cost Management to govern AWS costs
 
-- [AWS Cost and Usage report integration](https://docs.microsoft.com/azure/cost-management/aws-integration-set-up-configure)
+- [AWS Cost and Usage report integration](https://docs.microsoft.com/azure/cost-management-billing/costs/aws-integration-set-up-configure)
 - [Manage AWS costs](https://docs.microsoft.com/azure/cost-management/aws-integration-manage)
 
 ### Establish access, roles, and scope

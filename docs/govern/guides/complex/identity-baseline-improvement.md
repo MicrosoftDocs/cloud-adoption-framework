@@ -1,7 +1,6 @@
 ---
-title: "Governance guide for complex enterprises: Improve the Identity Baseline discipline"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: "Governance guide for complex enterprises: Improve the Identity Baseline discipline"
+title: "Complex enterprise governance: Improve Identity Baseline discipline"
+description: Use the Cloud Adoption Framework for Azure to learn about adding Identity Baseline controls to a governance minimum viable product (MVP).
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/06/2019

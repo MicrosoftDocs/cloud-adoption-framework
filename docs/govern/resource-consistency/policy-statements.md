@@ -1,6 +1,5 @@
 ---
 title: "Resource Consistency sample policy statements"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Resource Consistency sample policy statements
 author: BrianBlanchard
 ms.author: brblanch

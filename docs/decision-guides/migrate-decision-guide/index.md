@@ -1,7 +1,6 @@
 ---
 title: "Migration tools decision guide"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Migration tools decision guide
+description: Use this decision tree as high-level guidance for selecting the best tools to use based on your migration decisions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

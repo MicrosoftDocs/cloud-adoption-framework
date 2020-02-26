@@ -1,6 +1,5 @@
 ---
 title: "Resource Consistency discipline improvement"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Resource Consistency discipline improvement
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,7 +1,6 @@
 ---
-title: "Skills readiness path"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: Overview of skills readiness path
+title: "Building technical skills"
+description: Overview of skills readiness path during the Ready phase of migration. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019
@@ -11,7 +10,7 @@ ms.subservice: organize
 ms.custom: organize
 ---
 
-# Skills readiness path during the "ready" phase of a migration
+# Skills readiness path during the Ready phase of a migration
 
 During the *ready* phase of a migration, the objective is to prepare for the journey ahead. This phase is accomplished in two primary areas: organizational and environmental (technical) readiness. Both may require new skills for technical and nontechnical contributors. The following information can help your organization build the necessary skills.
 

@@ -1,6 +1,5 @@
 ---
 title: "Cloud innovation: Engage through applications"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Introduction to Cloud innovation - engage through applications.
 author: BrianBlanchard
 ms.author: brblanch

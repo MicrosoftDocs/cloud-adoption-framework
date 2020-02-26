@@ -1,6 +1,5 @@
 ---
 title: "Identity Baseline discipline overview"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Explanation of Identity Baseline in relation to cloud governance
 author: BrianBlanchard
 ms.author: brblanch
