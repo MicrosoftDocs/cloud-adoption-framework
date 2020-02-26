@@ -31,8 +31,8 @@ layout: LandingPage
 <tr>
     <td style="width: 64px; vertical-align: middle;"><a href="./networking-vdc.md"><img src="../_images/vdc/vdc-network.png" alt="Network Perspective" /></a></td>
     <td>
-        <h3><a href="./networking-vdc.md">Azure Virtual Datacenter: A Network Perspective</a></h3>
-        <p>This online article provides an overview of networking patterns and designs that can be used to solve the architectural scale, performance, and security concerns that many customers face when thinking about moving en masse to the cloud.</p>
+        <h3><a href="./networking-vdc.md">The Virtual Datacenter: A Network Perspective</a></h3>
+        <p>This overview of networking patterns and designs addresses the architectural scale, performance, and security concerns that customers face when planning a large-scale cloud migration.</p>
     </td>
 </tr>
 <tr>
