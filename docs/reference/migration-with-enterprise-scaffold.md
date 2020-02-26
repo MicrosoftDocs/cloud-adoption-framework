@@ -333,7 +333,7 @@ The final component of the Azure scaffold reference model is core to how your or
 
 ### Azure Virtual Datacenter
 
-Azure provides you both internal capabilities and third-party capabilities from our extensive partner network that enable you to have an effective security stance. More importantly, Microsoft provides best practices and guidance in the form of the [Azure Virtual Datacenter (VDC)](./networking-vdc.md). As you move from a single workload to multiple workloads that use hybrid capabilities, the VDC guidance will provide you with "recipes" to enable a flexible, network that will grow as your workloads in Azure grow.
+Azure provides both internal and third-party capabilities from our extensive partner network that give you an effective security stance. More importantly, Microsoft provides best practices and guidance in the form of the [Azure Virtual Datacenter (VDC)](./networking-vdc.md). As you move from a single workload to multiple workloads that use hybrid capabilities, the VDC guidance will provide you with "recipes" to enable a flexible, network that will grow as your workloads in Azure grow.
 
 ## Next steps
 
