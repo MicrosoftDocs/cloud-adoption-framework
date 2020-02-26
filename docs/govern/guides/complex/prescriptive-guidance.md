@@ -1,6 +1,6 @@
 ---
-title: "Governance guide for complex enterprises: Best practices explained"
-description: Learn about best practices for governance in complex enterprises.
+title: "Complex enterprise governance: Best practices explained"
+description: Use the Cloud Adoption Framework for Azure to establish a minimum viable product (MVP) for governance that reflects best practices for a complex enterprise.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
