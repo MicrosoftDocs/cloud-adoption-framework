@@ -15,11 +15,11 @@ Cloud adoption is a portfolio management effort, cleverly disguised as technical
 
 ## General scope expansion
 
-This topic is strategic in nature. As such, the approach taken in this article is equally strategic. To ground the strategy in data-driven decisions, this article assumes the reader has evaluated the existing [digital estate](../../digital-estate/index.md) (or is in the process of doing so). The objective of this approach is to aid in evaluating workloads to ensure proper balance across the portfolio through qualitative questions and portfolio refinement.
+This topic is strategic in nature. As such, the approach taken in this article is equally strategic. To ground the strategy in data-driven decisions, this article assumes the reader has evaluated the existing [digital estate](../digital-estate/index.md) (or is in the process of doing so). The objective of this approach is to aid in evaluating workloads to ensure proper balance across the portfolio through qualitative questions and portfolio refinement.
 
 ### Document business outcomes
 
-Before balancing the portfolio, it is important to document and share the business outcomes driving the cloud migration effort. For a few examples of general business outcomes related to cloud migrations, see the [Cloud migration executive summary](../../getting-started/migrate.md).
+Before balancing the portfolio, it is important to document and share the business outcomes driving the cloud migration effort. For a few examples of general business outcomes related to cloud migrations, see the [Cloud migration executive summary](../getting-started/migrate.md).
 
 The following table can help document and share desired business outcomes. It's important to note that most businesses are pursuing several outcomes at a time. The importance of this exercise is to clarify the outcomes that are most directly related to the cloud migration effort:
 
@@ -37,7 +37,7 @@ The above table could accurately represent the priorities of the cloud strategy 
 
 ### Move fast while maintaining balance
 
-The guidance regarding [incremental rationalization of the digital estate](../../digital-estate/index.md) suggests an approach in which the rationalization starts with an unbalanced position. The cloud strategy team should evaluate every workload for compatibility with a rehost approach. Such an approach is suggested because it allows for the rapid evaluation of a complex digital estate based on quantitative data. Making such an initial assumption allows the cloud adoption team to engage quickly, reducing time to business outcomes. However, as stated in that article, qualitative questions will provide the necessary balance in the portfolio. This article documents the process for creating the promised balance.
+The guidance regarding [incremental rationalization of the digital estate](../digital-estate/index.md) suggests an approach in which the rationalization starts with an unbalanced position. The cloud strategy team should evaluate every workload for compatibility with a rehost approach. Such an approach is suggested because it allows for the rapid evaluation of a complex digital estate based on quantitative data. Making such an initial assumption allows the cloud adoption team to engage quickly, reducing time to business outcomes. However, as stated in that article, qualitative questions will provide the necessary balance in the portfolio. This article documents the process for creating the promised balance.
 
 ### Importance of sunset and retire decisions
 

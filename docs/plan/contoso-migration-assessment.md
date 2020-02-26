@@ -18,7 +18,7 @@ This article shows how the fictional company Contoso assesses an on-premises app
 
 As Contoso considers migrating to Azure, the company needs a technical and financial assessment to determine whether its on-premises workloads are good candidates for cloud migration. In particular, the Contoso team wants to assess machine and database compatibility for migration. It wants to estimate capacity and costs for running Contoso's resources in Azure.
 
-To get started and to better understand the technologies involved, Contoso assesses two of its on-premises apps, summarized in the following table. The company assesses for migration scenarios that rehost and refactor apps for migration. Learn more about rehosting and refactoring in the [migration examples overview](./contoso-migration-overview.md).
+To get started and to better understand the technologies involved, Contoso assesses two of its on-premises apps, summarized in the following table. The company assesses for migration scenarios that rehost and refactor apps for migration. Learn more about rehosting and refactoring in the [migration examples overview](../migrate/azure-best-practices/contoso-migration-overview.md).
 
 <!-- markdownlint-disable MD033 -->
 
@@ -33,7 +33,7 @@ osTicket<br/><br/> (Contoso service desk app) | Runs on Linux/Apache with MySQL 
 
 This diagram shows the current Contoso on-premises infrastructure:
 
-![Current Contoso architecture](./media/contoso-migration-assessment/contoso-architecture.png)
+![Current Contoso architecture](../migrate/azure-best-practices/media/contoso-migration-assessment/contoso-architecture.png)
 
 - Contoso has one main datacenter. The datacenter is located in the city of New York in the Eastern United States.
 - Contoso has three additional local branches across the United States.
@@ -75,7 +75,7 @@ In this scenario, Contoso downloads and runs Data Migration Assistant to assess 
 
 ## Assessment architecture
 
-![Migration assessment architecture](./media/contoso-migration-assessment/migration-assessment-architecture.png)
+![Migration assessment architecture](../migrate/azure-best-practices/media/contoso-migration-assessment/migration-assessment-architecture.png)
 
 - Contoso is a fictional name that represents a typical enterprise organization.
 - Contoso has an on-premises datacenter (**contoso-datacenter**) and on-premises domain controllers (**CONTOSODC1**, **CONTOSODC2**).
@@ -140,7 +140,7 @@ Now, Contoso can run an assessment to analyze its on-premises SQL Server databas
 1. In Data Migration Assistant, Contoso selects **New** > **Assessment**, and then gives the assessment a project name.
 2. For **Source server type**, Contoso selects **SQL Server** and for **Target Server type**, Contoso selects **SQL Server on Azure Virtual Machines**
 
-    ![Data Migration Assistant - Select source](./media/contoso-migration-assessment/dma-assessment-1.png)
+    ![Data Migration Assistant - Select source](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-1.png)
 
     > [!NOTE]
     > Currently, Data Migration Assistant doesn't support assessment for migrating to an Azure SQL Database Managed Instance. As a workaround, Contoso uses SQL Server on an Azure VM as the supposed target for the assessment.
@@ -150,16 +150,16 @@ Now, Contoso can run an assessment to analyze its on-premises SQL Server databas
     - **Compatibility issues** note changes that might break migration or that require a minor adjustment before migration. This report keeps Contoso informed about any features currently in use that are deprecated. Issues are organized by compatibility level.
     - **New feature recommendation** notes new features in the target SQL Server platform that can be used for the database after migration. New feature recommendations are organized under the headings **Performance**, **Security**, and **Storage**.
 
-    ![Data Migration Assistant - Compatibility issues and new features](./media/contoso-migration-assessment/dma-assessment-2.png)
+    ![Data Migration Assistant - Compatibility issues and new features](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-2.png)
 
 5. In **Connect to a server**, Contoso enters the name of the VM that's running the database and credentials to access it. Contoso selects **Trust server certificate** to make sure the VM can access SQL Server. Then, Contoso selects **Connect**.
 
-    ![Data Migration Assistant - Connect to a server](./media/contoso-migration-assessment/dma-assessment-3.png)
+    ![Data Migration Assistant - Connect to a server](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-3.png)
 
 6. In **Add source**, Contoso adds the database it wants to assess, and then selects **Next** to start the assessment.
 7. The assessment is created.
 
-    ![Data Migration Assistant - Create assessment](./media/contoso-migration-assessment/dma-assessment-4.png)
+    ![Data Migration Assistant - Create assessment](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-4.png)
 
 8. In **Review results**, Contoso views the assessment results.
 
@@ -175,11 +175,11 @@ Results are displayed as soon as they're available. If Contoso fixes issues, it 
     - 130: SQL Server 2016/Azure SQL Database
     - 140: SQL Server 2017/Azure SQL Database
 
-    ![Data Migration Assistant - Compatibility issues report](./media/contoso-migration-assessment/dma-assessment-5.png)
+    ![Data Migration Assistant - Compatibility issues report](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-5.png)
 
 2. In the **Feature recommendations** report, Contoso views performance, security, and storage features that the assessment recommends after migration. A variety of features are recommended, including In-Memory OLTP, columnstore indexes, Stretch Database, Always Encrypted, dynamic data masking, and transparent data encryption.
 
-    ![Data Migration Assistant - Feature recommendations report](./media/contoso-migration-assessment/dma-assessment-6.png)
+    ![Data Migration Assistant - Feature recommendations report](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-6.png)
 
     > [!NOTE]
     > Contoso should [enable transparent data encryption](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017) for all SQL Server databases. This is even more critical when a database is in the cloud than when it's hosted on-premises. Transparent data encryption should be enabled only after migration. If transparent data encryption is already enabled, Contoso must move the certificate or asymmetric key to the master database of the target server. Learn how to [move a transparent data encryption-protected database to another SQL Server instance](https://docs.microsoft.com/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server?view=sql-server-2017).
@@ -228,7 +228,7 @@ Set up a new Azure Migrate project as follows.
 
 3. In **Overview**, under **Discover, assess and migrate servers**, click **Assess and migrate servers**.
 
-    ![Azure Migrate - Create migration project](./media/contoso-migration-assessment/assess-migrate.png)
+    ![Azure Migrate - Create migration project](../migrate/azure-best-practices/media/contoso-migration-assessment/assess-migrate.png)
 
 4. In **Getting started**, click **Add tools**.
 
@@ -243,7 +243,7 @@ Set up a new Azure Migrate project as follows.
 
 8. In **Select assessment tool**, select **Azure Migrate: Server Assessment** > **Next**.
 
-    ![Azure Migrate - Assessment Tool](./media/contoso-migration-assessment/assessment-tool.png)
+    ![Azure Migrate - Assessment Tool](../migrate/azure-best-practices/media/contoso-migration-assessment/assessment-tool.png)
 
 9. In **Select migration tool**, select **Skip adding a migration tool for now** > **Next**.
 
@@ -259,7 +259,7 @@ Set up a new Azure Migrate project as follows.
 
 3. Click **Download** to download the .OVA template file.
 
-     ![Azure Migrate - Download Collector](./media/contoso-migration-assessment/download-ovav2.png)
+     ![Azure Migrate - Download Collector](../migrate/azure-best-practices/media/contoso-migration-assessment/download-ovav2.png)
 
 ### Verify the collector appliance
 
@@ -281,7 +281,7 @@ Now, Contoso can import the downloaded file to the vCenter Server instance and p
 
 1. In the vSphere Client console, Contoso selects **File** > **Deploy OVF Template**.
 
-    ![vSphere Web Client - Deploy OVF template](./media/contoso-migration-assessment/vcenter-wizard.png)
+    ![vSphere Web Client - Deploy OVF template](../migrate/azure-best-practices/media/contoso-migration-assessment/vcenter-wizard.png)
 
 2. In the Deploy OVF Template Wizard, Contoso selects **Source**, and then specifies the location of the OVA file.
 3. In **Name and Location**, Contoso specifies a display name for the collector VM. Then, it selects the inventory location in which to host the VM. Contoso also specifies the host or cluster on which to run the collector appliance.
@@ -296,7 +296,7 @@ Now, Contoso runs the collector to discover VMs. Currently, the collector curren
 1. In the vSphere Client console, Contoso selects **Open Console**. Contoso specifies the accepts the licensing terms, and password preferences for the collector VM.
 2. On the desktop, Contoso selects the **Microsoft Azure Appliance Configuration Manager** shortcut.
 
-    ![vSphere Client console - Collector shortcut](./media/contoso-migration-assessment/collector-shortcut-v2.png)
+    ![vSphere Client console - Collector shortcut](../migrate/azure-best-practices/media/contoso-migration-assessment/collector-shortcut-v2.png)
 
 3. In Azure Migrate Collector, Contoso selects **Set up prerequisites**. Contoso accepts the license terms and reads the third-party information.
 4. The collector checks that the VM has internet access, that the time is synced, and that the collector service is running. (The collector service is installed by default on the VM.) Contoso also installs the VMware vSphere Virtual Disk Development Kit.
@@ -304,17 +304,17 @@ Now, Contoso runs the collector to discover VMs. Currently, the collector curren
     > [!NOTE]
     > It's assumed that the VM has direct access to the internet without using a proxy.
 
-    ![Azure Migrate Collector - Verify prerequisites](./media/contoso-migration-assessment/collector-verify-prereqs-v2.png)
+    ![Azure Migrate Collector - Verify prerequisites](../migrate/azure-best-practices/media/contoso-migration-assessment/collector-verify-prereqs-v2.png)
 
 5. Login to you **Azure** account and select the subscription and Migrate project you created earlier. Also enter a name for the **appliance** so you can identify it in the Azure portal.
 6. In **Specify vCenter Server details**, Contoso enters the name (FQDN) or IP address of the vCenter Server instance and the read-only credentials used for discovery.
 7. Contoso selects a scope for VM discovery. The collector can discover only VMs that are within the specified scope. The scope can be set to a specific folder, datacenter, or cluster.
 
-    ![Specify vCenter Server details](./media/contoso-migration-assessment/collector-connect-vcenter.png)
+    ![Specify vCenter Server details](../migrate/azure-best-practices/media/contoso-migration-assessment/collector-connect-vcenter.png)
 
 8. The collector will now start to discovery and collect information about the Contoso environment.
 
-    ![View collection progress](./media/contoso-migration-assessment/migrate-disccovery.png)
+    ![View collection progress](../migrate/azure-best-practices/media/contoso-migration-assessment/migrate-disccovery.png)
 
 ### Verify VMs in the portal
 
@@ -322,11 +322,11 @@ When collection is finished, Contoso checks that the VMs appear in the portal:
 
 1. In the Azure Migrate project, Contoso selects **Servers** > **Discovered Servers**. Contoso checks that the VMs that it wants to discover are shown.
 
-    ![Azure Migrate - Discovered machines](./media/contoso-migration-assessment/discovery-complete.png)
+    ![Azure Migrate - Discovered machines](../migrate/azure-best-practices/media/contoso-migration-assessment/discovery-complete.png)
 
 2. Currently, the machines don't have the Azure Migrate agents installed. Contoso must install the agents to view dependencies.
 
-    ![Azure Migrate - Agent installation is required](./media/contoso-migration-assessment/machines-no-agent.png)
+    ![Azure Migrate - Agent installation is required](../migrate/azure-best-practices/media/contoso-migration-assessment/machines-no-agent.png)
 
 ## Step 5: Prepare for dependency analysis
 
@@ -336,7 +336,7 @@ To view dependencies between VMs that it wants to assess, Contoso downloads and 
 
 To keep a copy of the VMs before modifying them, Contoso takes a snapshot before the agents are installed.
 
-![Machine snapshot](./media/contoso-migration-assessment/snapshot-vm.png)
+![Machine snapshot](../migrate/azure-best-practices/media/contoso-migration-assessment/snapshot-vm.png)
 
 ### Download and install the VM agents
 
@@ -346,7 +346,7 @@ To keep a copy of the VMs before modifying them, Contoso takes a snapshot before
     - Downloads the MMA and Dependency agent for each Linux VM.
 3. Contoso copies the workspace ID and key. Contoso needs the workspace ID and key when it installs the MMA.
 
-    ![Agent download](./media/contoso-migration-assessment/download-agents.png)
+    ![Agent download](../migrate/azure-best-practices/media/contoso-migration-assessment/download-agents.png)
 
 ### Install the agents on Windows VMs
 
@@ -358,11 +358,11 @@ Contoso runs the installation on each VM.
 2. In **Destination Folder**, Contoso keeps the default installation folder, and then selects **Next**.
 3. In **Agent Setup Options**, Contoso selects **Connect the agent to Azure Log Analytics** > **Next**.
 
-    ![Microsoft Monitoring Agent Setup - Agent Setup Options](./media/contoso-migration-assessment/mma-install.png)
+    ![Microsoft Monitoring Agent Setup - Agent Setup Options](../migrate/azure-best-practices/media/contoso-migration-assessment/mma-install.png)
 
 4. In **Azure Log Analytics**, Contoso pastes the workspace ID and key that it copied from the portal.
 
-    ![Microsoft Monitoring Agent Setup - Azure Log Analytics](./media/contoso-migration-assessment/mma-install2.png)
+    ![Microsoft Monitoring Agent Setup - Azure Log Analytics](../migrate/azure-best-practices/media/contoso-migration-assessment/mma-install2.png)
 
 5. In **Ready to Install**, Contoso installs the MMA.
 
@@ -371,7 +371,7 @@ Contoso runs the installation on each VM.
 1. Contoso double-clicks the downloaded Dependency agent.
 2. Contoso accepts the license terms and waits for the installation to finish.
 
-    ![Dependency Agent setup - Installing](./media/contoso-migration-assessment/dependency-agent.png)
+    ![Dependency Agent setup - Installing](../migrate/azure-best-practices/media/contoso-migration-assessment/dependency-agent.png)
 
 ### Install the agents on Linux VMs
 
@@ -418,7 +418,7 @@ Contoso can now verify machine dependencies and create a group. Then, it runs th
 
 1. To determine which machines to analyze, Contoso selects **View Dependencies**.
 
-    ![Azure Migrate - View machine dependencies](./media/contoso-migration-assessment/view-machine-dependencies.png)
+    ![Azure Migrate - View machine dependencies](../migrate/azure-best-practices/media/contoso-migration-assessment/view-machine-dependencies.png)
 
 2. For SQLVM, the dependency map shows the following details:
 
@@ -429,7 +429,7 @@ Contoso can now verify machine dependencies and create a group. Then, it runs th
 
 3. For machines that have the agent installed (WEBVM), Contoso selects the machine box to view more information. The information includes the FQDN, operating system, and MAC address.
 
-    ![Azure Migrate - View group dependencies](./media/contoso-migration-assessment/sqlvm-dependencies.png)
+    ![Azure Migrate - View group dependencies](../migrate/azure-best-practices/media/contoso-migration-assessment/sqlvm-dependencies.png)
 
 4. Contoso selects the VMs to add to the group (SQLVM and WEBVM). Contoso holds the Ctrl key while clicking to select multiple VMs.
 5. Contoso selects **Create Group**, and then enters a name (**smarthotelapp**).
@@ -441,7 +441,7 @@ Contoso can now verify machine dependencies and create a group. Then, it runs th
 
 1. In **Groups**, Contoso opens the group (**smarthotelapp**), and then selects **Create assessment**.
 
-    ![Azure Migrate - Create an assessment](./media/contoso-migration-assessment/run-vm-assessment.png)
+    ![Azure Migrate - Create an assessment](../migrate/azure-best-practices/media/contoso-migration-assessment/run-vm-assessment.png)
 
 2. To view the assessment, Contoso selects **Manage** > **Assessments**.
 
@@ -451,11 +451,11 @@ Contoso uses the default assessment settings, but you can [customize settings](h
 
 An Azure Migrate assessment includes information about the compatibility of on-premises with Azure, suggested right-sizing for Azure VM, and estimated monthly Azure costs.
 
-![Azure Migrate - Assessment report](./media/contoso-migration-assessment/assessment-overview.png)
+![Azure Migrate - Assessment report](../migrate/azure-best-practices/media/contoso-migration-assessment/assessment-overview.png)
 
 #### Review confidence rating
 
-![Azure Migrate - Assessment display](./media/contoso-migration-assessment/assessment-display.png)
+![Azure Migrate - Assessment display](../migrate/azure-best-practices/media/contoso-migration-assessment/assessment-display.png)
 
 An assessment has a confidence rating of from 1 star to 5 stars (1 star is the lowest and 5 stars is the highest).
 
@@ -474,7 +474,7 @@ An assessment has a confidence rating of from 1 star to 5 stars (1 star is the l
 
 #### Verify Azure readiness
 
-![Azure Migrate - Assessment readiness](./media/contoso-migration-assessment/azure-readiness.png)
+![Azure Migrate - Assessment readiness](../migrate/azure-best-practices/media/contoso-migration-assessment/azure-readiness.png)
 
 The assessment report shows the information that's summarized in the table. To show performance-based sizing, Azure Migrate needs the following information. If the information can't be collected, sizing assessment might not be accurate.
 
@@ -497,7 +497,7 @@ Setting | Indication | Details
 
 This view shows the total compute and storage cost of running the VMs in Azure. It also shows details for each machine.
 
-![Azure Migrate -  Azure costs](./media/contoso-migration-assessment/azure-costs.png)
+![Azure Migrate -  Azure costs](../migrate/azure-best-practices/media/contoso-migration-assessment/azure-costs.png)
 
 - Cost estimates are calculated by using the size recommendations for a machine.
 - Estimated monthly costs for compute and storage are aggregated for all VMs in the group.
@@ -515,4 +515,4 @@ In this scenario, Contoso assesses its SmartHotel360 app database by using the D
 
 ## Next steps
 
-After Contoso assesses this workload as a potential migration candidate, it can begin preparing its on-premises infrastructure and its Azure infrastructure for migration. See the [deploy Azure infrastructure](./contoso-migration-infrastructure.md) article in the Cloud Adoption Framework migrate best practices section for an example of how Contoso performs these processes.
+After Contoso assesses this workload as a potential migration candidate, it can begin preparing its on-premises infrastructure and its Azure infrastructure for migration. See the [deploy Azure infrastructure](../migrate/azure-best-practices/contoso-migration-infrastructure.md) article in the Cloud Adoption Framework migrate best practices section for an example of how Contoso performs these processes.

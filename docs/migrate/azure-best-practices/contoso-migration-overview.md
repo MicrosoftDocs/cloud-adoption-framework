@@ -53,7 +53,7 @@ The articles in the series are summarized below.
 
 **Article** | **Details**
 --- | ---
-[Assess on-premises resources for migration to Azure](./contoso-migration-assessment.md) | This article shows how to run an assessment of an on-premises app running on VMware. In the example, an example organization assesses app VMs using the Azure Migrate service, and the app SQL Server database using Data Migration Assistant.
+[Assess on-premises resources for migration to Azure](../../plan/contoso-migration-assessment.md) | This best practice article in the CAF Plan methodology shows how to run an assessment of an on-premises app running on VMware. In the example, an example organization assesses app VMs using the Azure Migrate service, and the app SQL Server database using Data Migration Assistant.
 
 ### Infrastructure
 
