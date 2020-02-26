@@ -79,13 +79,14 @@ The following table summarizes the primary scenarios that these patterns support
 
 ### Azure Virtual Datacenter
 
-In addition using one of these architecture patterns, if your enterprise IT group manages large cloud environments, consider consulting the [Azure Virtual Datacenter guidance](../../reference/vdc.md) when you design your Azure-based cloud infrastructure. Azure Virtual Datacenter provides a combined approach to networking, security, management, and infrastructure if your organization meets the following criteria:
+In addition using one of these architecture patterns, if your enterprise IT group manages large cloud environments, consider consulting the [CAF Northstar](../../getting-started/northstar/index.md). When you design your Azure-based cloud infrastructure. CAF NorthStar provides a combined approach to networking, security, management, and infrastructure if you have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**.
 
-- Your enterprise is subject to regulatory compliance that requires centralized monitoring and audit capabilities.
-- Your cloud estate will consist of more than 10,000 IaaS VMs or an equivalent scale of PaaS services.
-- You need to enable agile deployment capabilities for workloads to support developer and operations teams while maintaining common policy and governance compliance and central IT control over core services.
-- Your industry depends on a complex platform that requires deep domain expertise (for example, finance, oil and gas, or manufacturing).
-- Your existing IT governance policies require tighter parity with existing features, even during early-stage adoption.
+For organizations that meet the following criteria, you may also want to start with the [CAF Northstar](../../getting-started/northstar/index.md):
+
+- Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
+- You need to maintain common policy and governance compliance and central IT control over core services.
+- Your industry depends on a complex platform which requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, oil and gas, or manufacturing.
+- Your existing IT governance policies require tighter parity with existing features, even during early stage adoption.
 
 ## Follow Azure networking best practices
 

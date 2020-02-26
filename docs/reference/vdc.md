@@ -14,9 +14,12 @@ layout: LandingPage
 # Azure Virtual Datacenter
 
 > [!WARNING]
-> Azure Virtual Datacenter has been integrated into the Microsoft Cloud Adoption Framework for Azure. This guidance serves as a significant part of the foundation for the Ready and Governance methodologies within the Cloud Adoption Framework. To support customers making this transition, the following resources have been archived and will be maintained in a separate GitHub repository.
+> A more robust platform architecture and implementation has been created to build on the prior Azure Virtual DataCenter (VDC) approach. Going forward, the [CAF Northstar](../../getting-started/northstar/index.md) is the defacto choice for larger cloud adoption efforts. Adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud, should start with the [CAF Northstar](../../getting-started/northstar/index.md).
 
-## Archived resources
+## Deprecated resources (For support references only)
+
+> [!WARNING]
+> Azure Virtual Datacenter has been integrated into the Microsoft Cloud Adoption Framework for Azure. This guidance serves as a significant part of the foundation for the Ready and Governance methodologies within the Cloud Adoption Framework. To support customers making this transition, the following resources have been archived and will be maintained in a separate GitHub repository.
 
 <!-- markdownlint-disable MD033 -->
 

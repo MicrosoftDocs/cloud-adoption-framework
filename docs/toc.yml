@@ -1306,9 +1306,9 @@ items:
           href: infrastructure/virtual-machines/basic-workload.md
     - name: Cloud Operating Model
       href: reference/cloud-operating-model.md
-    - name: Azure enterprise scaffold
+    - name: Azure enterprise scaffold - Depreciated
       href: reference/azure-scaffold.md
-    - name: Virtual Datacenter (VDC)
+    - name: Virtual Datacenter (VDC) - Depreciated
       href: reference/vdc.md
     - name: How does Azure work?
       href: getting-started/what-is-azure.md

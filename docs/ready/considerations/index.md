@@ -31,7 +31,7 @@ This image shows the major considerations for implementing any landing zone depl
 The purpose and scope of the overall cloud adoption plan will define what "plumbing" is required. Additional governance, compliance, security, and operational management requirements will likely add to the initial landing zone scope. During early stages of adoption, landing zones may include less "plumbing" as a result of defined requirements and acceptable risks. The following considerations outline the types of plumbing that are likely to be found in all landing zones.
 
 > [!IMPORTANT]
-> One example of an expanded principle purpose, is the [CAF Northstar](../../getting-started/northstar/index.md). The northstar approach focuses on adoption teams who have mid-term objective (within 24 months) to more than 1,000 assets (apps, infra, or data assets) in the cloud. For those teams, the scope and principle purpose of landing zones is much richer, as seen in the [CAF Northstar architecture article](../../getting-started/northstar/architecture.md#landing-zone---expanded-definition).
+> One example of an expanded principle purpose, is the [CAF Northstar](../../getting-started/northstar/index.md). The CAF NorthStar approach focuses on adoption teams who have mid-term objective (within 24 months) to more than 1,000 assets (apps, infra, or data assets) in the cloud. For those teams, the scope and principle purpose of landing zones is much richer, as seen in the [CAF Northstar architecture article](../../getting-started/northstar/architecture.md#landing-zone---expanded-definition).
 
 ## Hosting considerations
 
