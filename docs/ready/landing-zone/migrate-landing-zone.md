@@ -64,7 +64,7 @@ For guidance on customization that should be made to this blueprint or the resul
 
 ## Next steps
 
-After deploying your first landing zone, you are ready to [Expand your landing zone](../ready/considerations/index.md)
+After deploying your first landing zone, you are ready to [Expand your landing zone](../considerations/index.md)
 
 > [!div class="nextstepaction"]
-> [Expand your landing zone](../ready/considerations/index.md)
+> [Expand your landing zone](../considerations/index.md)
