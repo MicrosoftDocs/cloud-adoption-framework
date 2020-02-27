@@ -1,6 +1,6 @@
 ---
 title: "Cost Management tools in Azure"
-description: Cost Management tools in Azure
+description: See how Azure native tools can help mature policies and processes that support the Cost Management governance discipline.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
 title: "Cost Management discipline improvement"
-description: Cost Management discipline improvement
+description: Understand the potential tasks a company performs to develop and mature its Cost Management discipline in each phase of cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

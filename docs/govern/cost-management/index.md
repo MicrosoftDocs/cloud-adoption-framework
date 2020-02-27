@@ -1,6 +1,6 @@
 ---
 title: "Cost Management discipline overview"
-description: Explanation of Cost Management in relation to cloud governance
+description: Understand the approach to developing a Cost Management discipline as part of a cloud governance strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

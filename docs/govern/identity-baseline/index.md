@@ -1,6 +1,6 @@
 ---
 title: "Identity Baseline discipline overview"
-description: Explanation of Identity Baseline in relation to cloud governance
+description: Understand the approach to developing an Identity Baseline discipline as part of a cloud governance strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
