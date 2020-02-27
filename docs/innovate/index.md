@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation in the Cloud Adoption Framework"
-description: Learn about cloud innovation in the Cloud Adoption Framework.
+title: Cloud adoption-related innovation
+description: Learn how cloud adoption-related innovation can provide business value by unlocking new technical skills and expanded business capabilities.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/14/2019

@@ -1,6 +1,6 @@
 ---
-title: "Mainframe migration: Myths and facts"
-description: Migrate applications from mainframe environments to Azure, a proven, highly available, and scalable infrastructure for systems that currently run on mainframes.
+title: Mainframe migration myths and facts 
+description: Learn to distinguish the myths from the reality about mainframes, and evaluate the mainframe workloads that are most suitable for Azure.
 author: njray
 ms.author: v-nanra
 ms.date: 12/27/2018

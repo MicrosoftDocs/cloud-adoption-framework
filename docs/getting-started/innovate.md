@@ -1,6 +1,6 @@
 ---
 title: "Innovate through cloud adoption"
-description: Learn to innovate through cloud adoption using the Cloud Adoption Framework.
+description: Learn about the innovate methodology as an approach to guide the development of new cloud products and services.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Azure Database Migration Service"
-description: Cloud innovation - Azure Database Migration Service
+title: Innovation tools to migrate data
+description: Learn about the Azure Database Migration Service and other tools that migrate and modernize data to prepare for cloud inventions and innovations.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

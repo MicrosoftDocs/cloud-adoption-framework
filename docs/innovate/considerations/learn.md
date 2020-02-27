@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Learn"
-description: Introduction to Cloud innovation - Learn content
+title: Learn with customers to drive innovation
+description: Learn with and from customer partners to build a minimum viable product (MVP) solution with empathy, and generate customer impact metrics.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

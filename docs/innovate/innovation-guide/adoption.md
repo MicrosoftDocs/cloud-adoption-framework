@@ -1,6 +1,6 @@
 ---
-title: "Azure innovation guide: Prepare for customer feedback" 
-description: Prepare for customer feedback
+title: "Azure innovation: Prepare for feedback"
+description: Learn how to use Azure tools to collect quantitative and qualitative feedback on web apps and APIs hosted in GitHub.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

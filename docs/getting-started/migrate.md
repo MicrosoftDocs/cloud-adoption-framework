@@ -1,6 +1,6 @@
 ---
 title: "Begin a cloud migration journey in Azure"
-description: Begin a cloud migration journey in Azure.
+description: Get comprehensive guidance for transitioning legacy application workloads to the cloud using innovative cloud-based technologies.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/10/2019
