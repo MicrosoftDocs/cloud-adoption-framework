@@ -1,6 +1,6 @@
 ---
 title: "Architectural decision guides"
-description: Learn about architectural decision guides in the Cloud Adoption Framework.
+description: Use these core cloud deployment infrastructure component patterns and models to support your specific cloud deployment scenarios.
 author: rotycenh
 ms.author: v-tyhopk
 ms.date: 02/11/2019
