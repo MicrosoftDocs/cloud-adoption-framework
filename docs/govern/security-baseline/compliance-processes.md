@@ -1,6 +1,6 @@
 ---
 title: "Security Baseline policy compliance processes"
-description: Security Baseline policy compliance processes
+description: Learn an approach to creating processes that support a Security Baseline governance discipline in the Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

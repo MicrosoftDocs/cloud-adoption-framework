@@ -1,6 +1,6 @@
 ---
 title: "Identity Baseline tools in Azure"
-description: Identity Baseline tools in Azure
+description: See how Azure native tools can help mature policies and processes that support the Identity Baseline governance discipline.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

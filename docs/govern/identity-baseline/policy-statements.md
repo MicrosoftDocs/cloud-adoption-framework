@@ -1,6 +1,6 @@
 ---
 title: "Identity Baseline sample policy statements"
-description: Identity Baseline sample policy statements
+description: Use the Cloud Adoption Framework for Azure to get sample Identity Baseline policy statements that can help you draft policy statements.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

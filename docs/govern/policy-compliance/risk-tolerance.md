@@ -1,6 +1,6 @@
 ---
 title: "Evaluate risk tolerance"
-description: Explanation of the business risks associated with a cloud transformation
+description: Understand the business risks associated with various forms of cloud transformation, and ways to evaluate risk tolerance for a business.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

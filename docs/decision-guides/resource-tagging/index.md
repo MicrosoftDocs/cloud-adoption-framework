@@ -1,6 +1,6 @@
 ---
 title: "Resource naming and tagging decision guide"
-description: Learn about resource organization and tagging as a core service in Azure migrations.
+description: Learn about naming and tagging approaches and options when organizing cloud-based resources, as part of the Cloud Adoption Framework for Azure.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 02/11/2019

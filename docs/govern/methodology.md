@@ -1,6 +1,6 @@
 ---
 title: "Cloud governance methodology" 
-description: Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework. 
+description: Use an incremental governance approach based on a minimum viable product (MVP) to support corporate policies and move quickly toward cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/04/2019
