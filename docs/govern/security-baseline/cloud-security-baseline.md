@@ -1,6 +1,6 @@
 ---
 title: "Understand the cloud security baseline"
-description: Learn about the cloud security baseline.
+description: Learn about a cloud security baseline that builds on the Five Disciplines of Cloud Governance to establish a governance framework.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
