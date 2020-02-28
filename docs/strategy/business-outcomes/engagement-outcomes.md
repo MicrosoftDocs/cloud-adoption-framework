@@ -1,6 +1,6 @@
 ---
-title: "Examples of customer engagement outcomes"
-description: Examples of customer engagement outcomes
+title: "Customer engagement outcome examples"
+description: Learn about examples of customer engagement to understanding the needs of customers and the ecosystem around them during their business transformation journey.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
