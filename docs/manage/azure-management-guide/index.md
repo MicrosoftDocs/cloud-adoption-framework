@@ -1,6 +1,6 @@
 ---
-title: "Azure management guide: Before you start" 
-description: Learn how to manage your Azure operations with step-by-step guidance.
+title: "Azure management overview" 
+description: Learn about the Cloud Adoption Framework for Azure with this information about the basic tools needed to manage Azure production environments.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

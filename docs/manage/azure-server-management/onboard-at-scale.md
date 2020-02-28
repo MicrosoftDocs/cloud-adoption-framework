@@ -1,6 +1,6 @@
 ---
-title: "Configure Azure server management services for a subscription"
-description: Configure Azure server management services for a subscription
+title: "Configure the service for a subscription"
+description: Learn to configure Azure server management services for a subscription by deploying service agents to your servers and enabling management solutions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019

@@ -1,6 +1,6 @@
 ---
-title: "Cloud monitoring guide: Monitoring strategy for cloud deployment models"
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
+title: "Monitoring strategy for cloud deployment models"
+description: Use the Cloud Adoption Framework for Azure to learn which monitoring strategy for cloud management to employ.
 author: MGoedtel
 ms.author: magoedte
 ms.date: 10/04/2019

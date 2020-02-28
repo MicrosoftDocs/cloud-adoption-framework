@@ -1,6 +1,6 @@
 ---
-title: "Enable server management services on a single VM for evaluation"
-description: Enable server management services on a single VM for evaluation
+title: "Enable server management services on a VM"
+description: Use the Cloud Adoption Framework for Azure to learn how to enable Azure server management services on a single VM.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019

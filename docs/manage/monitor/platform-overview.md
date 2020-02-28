@@ -1,6 +1,6 @@
 ---
-title: "Cloud monitoring guide: Monitoring platforms overview"
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure.
+title: "Cloud monitoring platforms overview"
+description: Gain a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: mgoedtel
 ms.author: magoedte
 ms.date: 07/31/2019
