@@ -1,6 +1,6 @@
 ---
-title: "Cloud Operating Model is now the Microsoft Cloud Adoption Framework for Azure"
-description: Learn about using Cloud Operating Model practices within the Cloud Adoption Framework.
+title: "Cloud Operating Model is now the Cloud Adoption Framework for Azure"
+description: Use the Cloud Adoption Framework for Azure to learn the what, why, and how of accelerating your accelerating your cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
