@@ -97,7 +97,7 @@ Security issues | Y/N | Are there known security issues with the app?  Does the 
 As part of the assessment process, Contoso needs to identify where apps are running, and figure out the dependencies and connections between app servers. Contoso maps the environment in steps.
 
 1. As a first step, Contoso discovers how servers and machines map to individual apps, network locations, and groups.
-2. With this information, Contoso can clearly identify apps that have few dependencies, and are thus suitable for a quick migration.
+2. With this information, Contoso can clearly identify apps that have few dependencies and are suitable for a quick migration.
 3. Contoso can use mapping to help them identify more complex dependencies and communications between app servers. Contoso can then group these servers logically to represent apps, and plan a migration strategy based on these groups.
 
 With mapping completed, Contoso can ensure that all app components are identified and accounted for when building the migration plan.
@@ -201,7 +201,7 @@ Data must also be considered, especially with the volume of databases that Conto
 
 ### Evaluate migration tools
 
-Contoso are primarily using a couple of Azure services and tools for the migration:
+Contoso is primarily using a couple of Azure services and tools for the migration:
 
 - [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview): Orchestrates disaster recovery, and migrates on-premises VMs to Azure.
 - [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview): Migrates on-premises databases such as SQL Server, MySQL, and Oracle to Azure.

@@ -27,7 +27,7 @@ Expanding into a new market can be one of the most valuable business outcomes du
 
 Operating in new markets introduces additional governance constraints. GDPR is one example of governance criteria that could cause significant financial recourse. Azure provides compliance offerings that help customers meet compliance obligations across regulated industries and global markets. For more information, see the [overview of Microsoft Azure compliance](https://aka.ms/AzureCompliance).
 
-- **Example:** A US-based utilities provider was awarded a contract to provide utilities in Canada. Canadian data sovereignty law requires that Canadian data stay in Canada. This company had been working their way through a cloud-enabled application innovation effort for years. As a result, their software was able to be deployed through fully scripted DevOps processes. With a few minor changes to the code base, they were able to deploy a working copy of the code to an Azure datacenter in Canada, meeting data sovereignty compliance and keeping the customer.
+- **Example:** A US-based utilities provider was awarded a contract to provide utilities in Canada. Canadian data sovereignty law requires that Canadian data stay in Canada. This company had been working their way through a cloud-enabled application innovation effort for years. As a result, their software could be deployed through fully scripted DevOps processes. With a few minor changes to the code base, they were able to deploy a working copy of the code to an Azure datacenter in Canada, meeting data sovereignty compliance and keeping the customer.
 
 ## Next steps
 

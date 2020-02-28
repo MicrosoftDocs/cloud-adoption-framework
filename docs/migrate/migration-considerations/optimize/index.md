@@ -17,7 +17,7 @@ The objective of optimization is to prepare a migrated workload for promotion to
 
 ## Definition of *done*
 
-The optimization process is complete when a workload has been properly configured, sized, and is being used in production.
+The optimization process is complete when a workload has been properly configured, sized, and deployed to production.
 
 ## Accountability during optimization
 
