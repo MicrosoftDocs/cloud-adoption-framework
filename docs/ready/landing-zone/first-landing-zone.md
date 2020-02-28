@@ -38,7 +38,7 @@ Selection of the first landing depends on a number of variables. The following g
 |---------|---------|---------|---------|---------|---------|---------|---------|
 |[CAF Migrate](./migrate-landing-zone.md)|New to cloud|< 1,000 assets|1 - 5 days|Limited scope ->|Expansion required|Expansion required|Expansion required|Expansion required|
 |[CAF Foundation](./foundation-blueprint.md)|Moderate experience|< 1,000 assets|1 - 5 days|Additive to CAF Migrate|Expansion required|Expansion required|Expansion required|Compliance tools deployed - configuration required|
-|[CAF NorthStar](./northstar.md)|Deep expertise|> 1,000 assets|10 - 20 weeks|Yes|Configured|Configured|Configured|Compliance tools deployed - configuration required|
+|[CAF NorthStar](./northstar-landing-zone.md)|Deep expertise|> 1,000 assets|10 - 20 weeks|Yes|Configured|Configured|Configured|Compliance tools deployed - configuration required|
 |[CAF Terraform](./terraform-landing-zone.md)|Various templates|Various templates|10 - 20 weeks|Limited scope ->|Modules available|Modules available|Modules available|Modules available|
 
 The following table looks at the same landing zones from a slightly different perspective to guide more technical decision processes.
@@ -47,7 +47,7 @@ The following table looks at the same landing zones from a slightly different pe
 |---------|---------|---------|---------|---------|---------|---------|---------|
 |[CAF Migrate](./migrate-landing-zone.md)|Refactor required|Included|Azure only|Azure Blueprint|
 |[CAF Foundation](./foundation-blueprint.md)|Refactor required|Included|Azure only|Azure Blueprint|
-|[CAF NorthStar](./northstar.md)|Included|Included|Azure only|Azure Resource Manager|
+|[CAF NorthStar](./northstar-landing-zone.md)|Included|Included|Azure only|Azure Resource Manager|
 |[CAF Terraform](./terraform-landing-zone.md)|Included in NorthStar (rename pending) module|Included|Multi-cloud|Terraform|
 
 ## Next steps

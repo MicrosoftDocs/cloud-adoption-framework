@@ -161,7 +161,7 @@ items:
       - name: Choose your first landing zone
         href: ready/landing-zone/first-landing-zone.md
       - name: Migration landing zone blueprint
-        href: ready/landing-zone/migration-landing-zone.md
+        href: ready/landing-zone/migrate-landing-zone.md
       - name: CAF NorthStar landing zone - TODO Create article
         href: ready/landing-zone/northstar-landing-zone.md
       - name: Terraform landing zones

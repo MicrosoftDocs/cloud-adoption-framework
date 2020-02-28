@@ -21,7 +21,7 @@ The following checklist outlines the common areas of complexity which could requ
 
 ### Business driven scope expansion
 
-- **[Balance the portfolio](./balance-the-portfolio.md):** The cloud strategy team is interested in investing more heavily in migration (rehosting existing workloads and applications with a minimum of modifications) or innovation (refactoring or rebuilding those workloads and applications using modern cloud technology). Often, a balance between the two priorities is the key to success. In this guide, the topic of balancing the cloud adoption portfolio is a common one, addressed in each of the migrate processes.
+- **[Balance the portfolio](../../strategy/balance-the-portfolio.md):** The cloud strategy team is interested in investing more heavily in migration (rehosting existing workloads and applications with a minimum of modifications) or innovation (refactoring or rebuilding those workloads and applications using modern cloud technology). Often, a balance between the two priorities is the key to success. In this guide, the topic of balancing the cloud adoption portfolio is a common one, addressed in each of the migrate processes.
 - **[Support global markets](../../decision-guides/regions/index.md):** The business operates in multiple geographic regions with disparate data sovereignty requirements. To meet those requirements, additional considerations should be factored into the prerequisite review and distribution of assets during migration.
 
 ### Technology driven scope expansion
@@ -38,7 +38,7 @@ Each of these scenarios is addressed by the various articles in this section of 
 
 ## Next steps
 
-Browse the table of contents on the left to address specific needs or scope changes. Alternatively, the first scope enhancement on the list, [Balance the portfolio](./balance-the-portfolio.md), is a good starting point when reviewing these scenarios.
+Browse the table of contents on the left to address specific needs or scope changes. Alternatively, the first scope enhancement on the list, [Balance the portfolio](../../strategy/balance-the-portfolio.md), is a good starting point when reviewing these scenarios.
 
 > [!div class="nextstepaction"]
-> [Balance the portfolio](./balance-the-portfolio.md)
+> [Balance the portfolio](../../strategy/balance-the-portfolio.md)
