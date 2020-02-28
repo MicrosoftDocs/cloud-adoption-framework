@@ -1,6 +1,6 @@
 ---
-title: "Gather inventory data for a digital estate"
-description: How to gather inventory for a digital estate.
+title: Inventory data for a digital estate
+description: Learn to make an inventory list of IT assets that support specific business functions, for later analysis and rationalization.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018

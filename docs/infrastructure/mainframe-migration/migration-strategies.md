@@ -1,6 +1,6 @@
 ---
-title: "Mainframe migration: Make the switch from mainframes to Azure"
-description: Migrate applications from mainframe environments to Azure for systems that currently run on mainframes.
+title: Migrate apps from mainframes to Azure
+description: Get technical guidance for making the switch from a mainframe platform to Azure hyperscale compute and storage in a high availability environment. 
 author: njray
 ms.author: v-nanra
 ms.date: 12/26/2018

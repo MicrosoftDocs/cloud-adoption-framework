@@ -1,6 +1,6 @@
 ---
-title: "Azure innovation guide: Engage customers through apps" 
-description: Learn to innovate by engaging customers through apps by using Azure
+title: "Azure innovation: Engage via apps" 
+description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native apps.
 author: billyclaymyersmsft
 ms.author: wimyers
 ms.date: 10/17/2019
