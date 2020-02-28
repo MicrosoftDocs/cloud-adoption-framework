@@ -1,6 +1,6 @@
 ---
-title: Deploy a migration landing zone in Azure
-description: Learn how to deploy a migration landing zone in Azure.
+title: Deploy an Azure migration landing zone
+description: Use the Cloud Adoption Framework for Azure to learn how to use a landing zone blueprint to deploy a defined environment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019

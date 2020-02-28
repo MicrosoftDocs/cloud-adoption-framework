@@ -1,6 +1,6 @@
 ---
-title: "Use Terraform to build your landing zones"
-description: Learn to use Terraform to build your landing zones.
+title: "Use Terraform to build landing zones"
+description: Learn to use Terraform to build a prototype landing zone for deploying fundamental logging, accounting, and security capabilities for an Azure subscription.
 author: arnaudlh
 ms.author: arnaul
 ms.date: 10/16/2019

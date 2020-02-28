@@ -1,6 +1,6 @@
 ---
-title: "Track costs across business units, environments, or projects"
-description: Tracking costs across business units, environments, or projects
+title: "Track costs across business units and environments"
+description: Use the Cloud Adoption Framework for Azure to understand the decisions and implementation approaches to creating tracking mechanisms.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
