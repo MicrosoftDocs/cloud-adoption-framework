@@ -1,6 +1,6 @@
 ---
-title: "What is required to promote a migrated resource to production?"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+title: "Requirements to promote a migrated resource to production"
+description: Use the Cloud Adoption Framework for Azure to understand the common tasks and standard prerequisites for promoting a migrated resource to production.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

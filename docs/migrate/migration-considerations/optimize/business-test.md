@@ -1,6 +1,6 @@
 ---
-title: "Guidance for business testing (UAT) during migration"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+title: "Business testing guidance during migration"
+description: Learn how business testing is used to solicit validation that solution performance is in line with expectations and doesn't impede business processes.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

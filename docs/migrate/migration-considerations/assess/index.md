@@ -1,6 +1,6 @@
 ---
 title: "Assess assets prior to migration"
-description: Assess assets prior to migration
+description: Use the Cloud Adoption Framework for Azure to learn about the processes and activities that can be applied to any cloud migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

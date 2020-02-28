@@ -1,6 +1,6 @@
 ---
 title: Migration-focused cost control mechanisms
-description: Learn how to set up budgets, payments, and understand invoices for your Azure resources.
+description: Use the Cloud Adoption Framework for Azure to learn how to set up budgets, payments, and understand invoices for your Azure resources.
 author: bandersmsft
 ms.author: banders
 ms.date: 08/08/2019

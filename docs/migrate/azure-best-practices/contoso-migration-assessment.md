@@ -1,6 +1,6 @@
 ---
-title: "Assess on-premises workloads for migration to Azure"
-description: Learn how Contoso assesses its on-premises machines for migration to Azure by using Azure Migrate and Data Migration Assistant.
+title: "Assess on-premises workloads for Azure migration"
+description: Learn through an illustrative example how to assess an on-premises application for migration to Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 01/30/2019

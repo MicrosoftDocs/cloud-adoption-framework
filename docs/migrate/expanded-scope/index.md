@@ -1,6 +1,6 @@
 ---
 title: "Cloud migration expanded scope checklist"
-description: Cloud migration expanded scope checklist
+description: Review the prerequisites, tools, and approaches to migrating virtual machines to the cloud. Also, learn complexities that occur during a rehost migration to Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/10/2019

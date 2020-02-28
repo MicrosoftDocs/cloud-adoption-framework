@@ -1,6 +1,6 @@
 ---
-title: "Rehost a Linux service desk app to Azure and Azure Database for MySQL"
-description: Learn how Contoso rehosts an on-premises Linux app by migrating it to Azure VMs and Azure Database for MySQL.
+title: "Rehost a Linux service desk app on Azure and Azure Database for MySQL"
+description: Use the Cloud Adoption Framework for Azure to learn how to rehost an on-premises Linux app by migrating it to Azure VMs and Azure Database for MySQL.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

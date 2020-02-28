@@ -1,6 +1,6 @@
 ---
-title: "SQL Server migration best practices for Azure"
-description: Introduction to SQL Server Migration Best Practices for Azure
+title: "Server migration for Azure"
+description: Use the Cloud Adoption Framework for Azure to learn SQL Server migration best practices to reduce complexity and standardize the migration process.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/10/2019

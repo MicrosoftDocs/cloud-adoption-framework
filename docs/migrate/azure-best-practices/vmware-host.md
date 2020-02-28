@@ -1,6 +1,6 @@
 ---
-title: "VMware host migration best practices for Azure"
-description: Introduction to VMware host migration best practices for Azure
+title: "Vmware host migration for Azure"
+description: Use the Cloud Adoption Framework for Azure to learn Vmware host migration best practices to reduce complexity and standardize the migration process.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/10/2019

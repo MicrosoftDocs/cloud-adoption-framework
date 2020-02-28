@@ -1,6 +1,6 @@
 ---
 title: "Prepare a migrated application for production promotion"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+description: Use the Cloud Adoption Framework for Azure to understand considerations you need when preparing a migrated application for production promotion.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

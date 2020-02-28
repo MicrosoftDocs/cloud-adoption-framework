@@ -1,6 +1,6 @@
 ---
-title: "Best practices for costing and sizing workloads migrated to Azure"
-description: Get best practices for costing and sizing workloads migrated to Azure.
+title: "Costing and sizing workloads migrated to azure"
+description: Use the Cloud Adoption Framework for Azure to learn best practices for costing and sizing workloads migrated to Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/08/2018

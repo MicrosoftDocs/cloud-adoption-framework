@@ -1,6 +1,6 @@
 ---
-title: "Understand staging activities during a migration"
-description: Understand staging activities during a migration
+title: "Staging activities during a migration"
+description: Use the Cloud Adoption Framework for Azure to understand staging activities and associated deliverables needed during a migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
