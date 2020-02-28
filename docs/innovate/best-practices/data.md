@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Tools to democratize data in Azure"
-description: Tools to democratize data in Azure
+title: Innovation tools to democratize data
+description: Learn about Azure Data Catalog and other services that help you quickly test a hypothesis before expanding into broader, more costly digital inventions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

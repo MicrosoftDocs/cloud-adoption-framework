@@ -1,6 +1,6 @@
 ---
 title: "Cloud rationalization"
-description: Review the options available for rationalizing a digital estate.
+description: Learn about cloud rationalization, the process of evaluating assets to determine the best way to migrate or modernize each asset in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/16/2019
