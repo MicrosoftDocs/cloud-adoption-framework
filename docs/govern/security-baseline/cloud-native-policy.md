@@ -85,7 +85,7 @@ Even with this investment in a cloud-native Security Baseline, it is suggested t
 - **Protect VM contents.** Setting up regular automated backups is essential to protect against user errors. This isn't enough, though; you must also make sure that your backups are safe from cyberattacks and are available when you need them.
 - **Monitor applications.** This pattern encompasses several tasks, including getting insight into the health of your VMs, understanding interactions among them, and establishing ways to monitor the applications these VMs run. All of these tasks are essential in keeping your applications running around the clock.
 - **Secure and Audit data access.** Organizations should audit all data access and use advanced machine learning capabilities to call out deviations from regular access patterns.
-- **Failover practice.** Cloud operations that have low tolerances for failure must be able to fail over or recover from a cybersecurity or platform incident. These procedures must not simply be documented, but should be practiced quarterly.
+- **Failover practice.** Cloud operations that have low tolerances for failure must be capable of failing over or recovering from a cybersecurity or platform incident. These procedures must not simply be documented, but should be practiced quarterly.
 
 ## Next steps
 

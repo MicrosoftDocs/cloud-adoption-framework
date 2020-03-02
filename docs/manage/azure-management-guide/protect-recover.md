@@ -41,7 +41,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 
 ### Enable backup for an Azure VM
 
-1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
+1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
 1. On the **Operations** pane, select **Backup**.
 1. Create or select an existing Azure Recovery Services vault.
 1. Select **Create (or edit) a new policy**.
@@ -82,7 +82,7 @@ The following steps outline the process to use Site Recovery for Azure-to-Azure 
 
 ### Enable replication for the Azure VM
 
-1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
+1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
 1. On the **Operations** pane, select **Disaster recovery**.
 1. Select **Configure disaster recovery** > **Target region**, and choose the target region to which you'll replicate.
 1. For this quickstart, accept the default values for all other options.

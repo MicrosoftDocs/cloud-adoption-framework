@@ -7,7 +7,7 @@ ms.custom: homepage
 layout: LandingPage
 ms.topic: landing-page
 author: BrianBlanchard
-ms.date: 10/14/2019
+ms.date: 02/28/2020
 ---
 
 # Microsoft Cloud Adoption Framework for Azure
@@ -154,7 +154,7 @@ The Cloud Adoption Framework is the One Microsoft approach to cloud adoption in 
 
 ## Understand the lifecycle
 
-Each of the phases captured above are part of a broad cloud adoption lifecycle. The following image ties together each phase to demonstrate the overall lifecycle. The Cloud Adoption Framework is a full lifecycle framework, supporting customers throughout each phase.
+Each of the methodologies captured above are part of a broad cloud adoption lifecycle. The following image ties together each methodology to demonstrate the overall lifecycle. The Cloud Adoption Framework is a full lifecycle framework, supporting customers throughout each phase of adoption by providing methodologies as specific approaches to overcoming common blockers.
 
 ![Cloud Adoption Framework overview](./_images/caf-overview.png)
 

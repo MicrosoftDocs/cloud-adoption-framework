@@ -17,7 +17,7 @@ A plan is an essential requirement for a successful cloud adoption. A cloud adop
 
 Cloud adoption plans start with a well-defined strategy. At a minimum, the strategy should outline the motivations, business outcomes, and business justifications for cloud adoption. Those positive returns are then balanced by the effort required to realize them.
 
-The effort starts with the digital estate (proposed or existing), which translates the strategy into more tangible workloads and assets. You can then map these tangible elements to technical work. From there, skilled people in a proper organizational structure can execute the technical work. The cloud adoption plan combines all of these topics into one plan that can be forecasted, budgeted, implemented, and managed by means of agile project-management practices. This article series helps you build the plan and provides a few templates to make the job easier.
+The effort starts with the digital estate (proposed or existing), which translates the strategy into more tangible workloads and assets. You can then map these tangible elements to technical work. From there, skilled people in a proper organizational structure can execute the technical work. The cloud adoption plan combines these topics into one plan that can be forecasted, budgeted, implemented, and managed by means of agile project-management practices. This article series helps you build the plan and provides a few templates to make the job easier.
 
 ## Transition from sequential to iterative planning
 

@@ -39,7 +39,7 @@ If your organization currently lacks established logging and reporting systems, 
 
 In this scenario, all log data is recorded and stored in the cloud, while the logging and reporting tools that process and surface information to IT staff are provided by the Azure platform and Azure Monitor.
 
-Custom Azure Monitor-based logging solutions can be implemented ad hoc for each subscription or workload in smaller or experimental deployments, and are organized in a centralized manner to monitor log data across your entire cloud estate.
+Custom logging solutions based on Azure Monitor can be implemented as needed for each subscription or workload in smaller or experimental deployments. These solutions are organized centrally to monitor log data across your entire cloud estate.
 
 **Cloud-native assumptions:** Using a cloud-native logging and reporting system assumes the following:
 

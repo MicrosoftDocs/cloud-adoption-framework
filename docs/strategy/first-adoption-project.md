@@ -49,7 +49,7 @@ To support the preceding criteria, this list provides an example of a first proj
 
 Additional examples of first adoption projects include:
 
-- **Disaster recovery and business continuity (DRBC):** Beyond Azure Site Recovery, you can implement multiple DRBC strategies as a first project.
+- **Business continuity and disaster recovery (BCDR):** Beyond Azure Site Recovery, you can implement multiple BCDR strategies as a first project.
 - **Nonproduction:** Deploy a nonproduction instance of a workload.
 - **Archive:** Cold storage can place a strain on datacenter resources. Moving that data to the cloud is a solid quick win.
 - **End of support (EOS):** Migrating assets that have reached the end of support is another quick win that builds technical skills. It could also provide some cost avoidance from expensive support contracts or licensing costs.
