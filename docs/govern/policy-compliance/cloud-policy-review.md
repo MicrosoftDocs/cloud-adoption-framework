@@ -1,6 +1,6 @@
 ---
 title: Conduct a cloud policy review
-description: Learn how to conduct a cloud policy review.
+description: Learn how to modernize existing corporate IT policies to provide an equivalent level of risk management for cloud-based resources.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

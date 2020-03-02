@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Predict and influence"
-description: Introduction to Cloud innovation - Predict and influence
+title: Predict and influence customer behavior
+description: Use predictive modeling to develop predictive capabilities through data, insights, patterns, predictions, and interactions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

@@ -54,7 +54,7 @@ Even in toxic cultures, the efforts of the CCoE and the cloud governance team sh
 
 ## IT silos
 
-Team members in an IT silo are likely to define themselves through their alignment to a small number of IT vendors or an area of technical specialization. However, don't confuse IT silos with IT fiefdoms. IT silos tend to be driven by comfort and passion, and are generally easier to overcome than the fear-driven motives behind fiefdoms.
+Team members in an IT silo are likely to define themselves through their alignment to a small number of IT vendors or an area of technical specialization. However, don't confuse silos with IT fiefdoms. Silos tend to be driven by comfort and passion, and silos are often easier to overcome than the fear-driven motives behind fiefdoms.
 
 This antipattern often emerges from of a common passion for a specific solution. IT silos are then reinforced by the team's advanced skills as a result of the investment in that specific solution. This superior skill can be an accelerator to cloud adoption efforts if the resistance to change can be overcome. It can also become a major blocker if the silos are broken down or if the team members can't accurately evaluate options. Fortunately, IT silos can often be overcome without any significant changes to the organizational chart.
 
@@ -72,9 +72,9 @@ Experimentation and exposure are powerful tools for breaking down barriers in si
 
 During review of the competing solution, use the practices outlined in [Define corporate policy](../govern/corporate-policy.md) to document tangible risks of the experiment and establish policies that help the siloed team become more comfortable with the future state. This will expose the team to new solutions and harden the future solution.
 
-**Be "boundaryless":** The teams that drive cloud adoption find it easy to push boundaries by exploring exciting, new cloud-native solutions. This is one half of the approach to removing boundaries. However, that thinking can further reinforce IT silos. Pushing for change too quickly and without respect to existing cultures can create unhealthy friction and lead to natural resistance.
+**Be "boundary-less":** The teams that drive cloud adoption find it easy to push boundaries by exploring exciting, new cloud-native solutions. This is one half of the approach to removing boundaries. However, that thinking can further reinforce IT silos. Pushing for change too quickly and without respect to existing cultures can create unhealthy friction and lead to natural resistance.
 
-When IT silos start to resist, it's important to be boundaryless in your own solutions. Be mindful of one simple truth: cloud-native isn't always the best solution. Consider hybrid solutions that might provide an opportunity to extend the existing investments of the IT silo into the future.
+When IT silos start to resist, it's important to be "boundary-less" in your own solutions. Be mindful of one simple truth: cloud-native isn't always the best solution. Consider hybrid solutions that might provide an opportunity to extend the existing investments of the IT silo into the future.
 
 Also consider cloud-based versions of the solution that the IT silo team uses now. Experiment with those solutions and expose yourself to the viewpoint of those living in the IT silo. At a minimum, you will gain a fresh perspective. In many situations, you might earn enough of the IT silo's respect to lessen resistance.
 

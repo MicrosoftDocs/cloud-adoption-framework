@@ -1,6 +1,6 @@
 ---
-title: "Azure innovation guide: Democratize data" 
-description: Learn how to democratize data by using Azure
+title: "Azure innovation: Democratize data"
+description: Learn about Azure Data Catalog, Azure Data Share, and other tools that enhance data discoverability and understanding.
 author: absheik
 ms.author: absheik
 ms.date: 10/17/2019
@@ -10,6 +10,8 @@ ms.subservice: innovate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
+
+<!-- cspell:ignore Fcatalogs Faccounts FEnvironments -->
 
 ::: zone target="docs"
 
@@ -68,7 +70,7 @@ To create an Azure data catalog for your organization:
 
 ## Azure Data Share
 
-Achieving a balance between openly sharing data and exercising control over what data is shared and with whom is a key driver of innovation. When trying to democratize data, organizations can easily be overwhelmed by the enormity of the volume, pace, and lifecycle of the data. Azure Data Share ensures providers can control how their data is handled by specifying terms of use for their data share. The data consumer must accept these terms before being able to receive the data. Data providers can specify the frequency at which their data consumers receive updates. Access to new updates can be revoked at any time by the data provider.
+Achieving a balance between openly sharing data and exercising control over what data is shared and with whom is a key driver of innovation. When trying to democratize data, organizations can easily be overwhelmed by the enormity of the volume, pace, and lifecycle of the data. Azure Data Share ensures providers can control how their data is handled by specifying terms of use for their data share. The data consumer must accept these terms before receiving the data. Data providers can specify the frequency at which their data consumers receive updates. Access to new updates can be revoked at any time by the data provider.
 
 > [!div class="checklist"]
 >

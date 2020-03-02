@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- cSpell:ignore paas NVAs VPNs -->
+
 # Review your network options
 
 Designing and implementing Azure networking capabilities is a critical part of your cloud adoption efforts. You'll need to make networking design decisions to properly support the workloads and services that will be hosted in the cloud. Azure networking products and services support a wide variety of networking capabilities. How you structure these services and the networking architectures you choose depends on your organization's workload, governance, and connectivity requirements.
@@ -67,14 +69,14 @@ After you identify the Azure networking services that you need to support your w
 
 The following table summarizes the primary scenarios that these patterns support:
 
-| **Scenario** | **Suggested network architecture**
-| --- | --- |
-| All of the Azure-hosted workloads deployed to your landing zone will be entirely PaaS-based, won't require a virtual network, and aren't part of a wider cloud adoption effort that will include IaaS resources. | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md) |
-| Your Azure-hosted workloads will deploy IaaS-based resources like virtual machines or otherwise require a virtual network, but don't require connectivity to your on-premises environment. | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md) |
-| Your Azure-hosted workloads require limited access to on-premises resources, but you're required to treat cloud connections as untrusted. | [Cloud DMZ](../../decision-guides/software-defined-network/cloud-dmz.md) |
-| Your Azure-hosted workloads require limited access to on-premises resources, and you plan to implement mature security policies and secure connectivity between the cloud and your on-premises environment. | [Hybrid](../../decision-guides/software-defined-network/hybrid.md) |
-| You need to deploy and manage a large number of VMs and workloads, potentially exceeding [Azure subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits), you need to share services across subscriptions, or you need a more segmented structure for role, application, or permission segregation. | [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md) |
-| You have many branch offices that need to connect to each other and to Azure. | [Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about) |
+| **Scenario**                                                                                                                                                                                                                                                                                                                        | **Suggested network architecture**                                                  |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| All of the Azure-hosted workloads deployed to your landing zone will be entirely PaaS-based, won't require a virtual network, and aren't part of a wider cloud adoption effort that includes IaaS resources.                                                                                                                        | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md)            |
+| Your Azure-hosted workloads will deploy IaaS-based resources like virtual machines or otherwise require a virtual network, but don't require connectivity to your on-premises environment.                                                                                                                                          | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md)      |
+| Your Azure-hosted workloads require limited access to on-premises resources, but you're required to treat cloud connections as untrusted.                                                                                                                                                                                           | [Cloud DMZ](../../decision-guides/software-defined-network/cloud-dmz.md)            |
+| Your Azure-hosted workloads require limited access to on-premises resources, and you plan to implement mature security policies and secure connectivity between the cloud and your on-premises environment.                                                                                                                         | [Hybrid](../../decision-guides/software-defined-network/hybrid.md)                  |
+| You need to deploy and manage a large number of VMs and workloads, potentially exceeding [Azure subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits), you need to share services across subscriptions, or you need a more segmented structure for role, application, or permission segregation. | [Hub and spoke](../../decision-guides/software-defined-network/hub-spoke.md)        |
+| You have many branch offices that need to connect to each other and to Azure.                                                                                                                                                                                                                                                       | [Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about) |
 
 ### Azure Virtual Datacenter
 

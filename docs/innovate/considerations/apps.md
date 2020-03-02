@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Engage through applications"
-description: Introduction to Cloud innovation - engage through applications.
+title: Engage via apps for digital invention
+description: Understand how to create app solutions to shape data and create experiences that engage customers and support innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

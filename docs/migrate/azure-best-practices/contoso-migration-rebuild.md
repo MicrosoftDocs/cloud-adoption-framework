@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
+<!-- cSpell:ignore reqs contosohost contosodc contosoacreus contososmarthotel smarthotel smarthotelcontoso smarthotelakseus smarthotelacreus smarthotelpets smarthotelpetchecker smarthotelsettingsurl vcenter WEBVM SQLVM eastus kubectl contosodevops visualstudio azuredeploy cloudapp publishfront petchecker appsettings -->
+
 # Rebuild an on-premises app on Azure
 
 This article demonstrates how the fictional company Contoso rebuilds a two-tier Windows .NET app running on VMware VMs as part of a migration to Azure. Contoso migrates the app's front-end VM to an Azure App Service web app. The app back end is built using microservices deployed to containers managed by Azure Kubernetes Service (AKS). The site interacts with Azure Functions to provide pet photo functionality.
@@ -22,7 +24,7 @@ The IT leadership team has worked closely with business partners to understand w
 
 - **Address business growth.** Contoso is growing, and wants to provide differentiated experiences for customers on Contoso websites.
 - **Be agile.** Contoso must be able to react faster than the changes in the marketplace, to enable the success in a global economy.
-- **Scale.** As the business grows successfully, the Contoso IT team must provide systems that are able to grow at the same pace.
+- **Scale.** As the business grows successfully, the Contoso IT team must provide systems that can grow at the same pace.
 - **Reduce costs.** Contoso wants to minimize licensing costs.
 
 ## Migration goals
@@ -70,7 +72,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 **Consideration** | **Details**
 --- | ---
-**Pros** | Using PaaS and serverless solutions for the end-to-end deployment significantly reduces management time that Contoso must provide.<br/><br/> Moving to a microservice architecture allows Contoso to easily extend the solution over time.<br/><br/> New functionality can be brought online without disrupting any of the existing solutions code bases.<br/><br/> The web app will be configured with multiple instances with no single point of failure.<br/><br/> Autoscaling will be enabled so that the app can handle differing traffic volumes.<br/><br/> With the move to PaaS services, Contoso can retire out-of-date solutions running on Windows Server 2008 R2 operating system.<br/><br/> Cosmos DB has built-in fault tolerance, which requires no configuration by Contoso. This means that the data tier is no longer a single point of failover.
+**Pros** | Using PaaS and serverless solutions for the end-to-end deployment significantly reduces management time that Contoso must provide.<br/><br/> Moving to a microservices architecture allows Contoso to easily extend the solution over time.<br/><br/> New functionality can be brought online without disrupting any of the existing solutions code bases.<br/><br/> The web app will be configured with multiple instances with no single point of failure.<br/><br/> Autoscaling will be enabled so that the app can handle differing traffic volumes.<br/><br/> With the move to PaaS services, Contoso can retire out-of-date solutions running on Windows Server 2008 R2 operating system.<br/><br/> Cosmos DB has built-in fault tolerance, which requires no configuration by Contoso. This means that the data tier is no longer a single point of failover.
 **Cons** | Containers are more complex than other migration options. The learning curve could be an issue for Contoso. They introduce a new level of complexity that provides a lot of value in spite of the curve.<br/><br/> The operations team at Contoso needs to ramp up to understand and support Azure, containers and microservices for the app.<br/><br/> Contoso hasn't fully implemented DevOps for the entire solution. Contoso needs to consider that for the deployment of services to AKS, Azure Functions, and Azure App Service.
 
 <!-- markdownlint-enable MD033 -->
@@ -173,7 +175,7 @@ The Contoso admins provision as follows:
 
 9. After the deployment is finished, they install the **kubectl** command-line tool. The tool is already installed on the Azure CloudShell.
 
-   ```console
+   ```azurecli
    az aks install-cli
    ```
 
@@ -183,7 +185,7 @@ The Contoso admins provision as follows:
 
 11. They run the following command to start the Kubernetes Dashboard:
 
-    ```console
+    ```azurecli
     az aks browse --resource-group ContosoRG --name smarthotelakseus2
     ```
 
@@ -239,7 +241,7 @@ Contoso creates an Azure DevOps project, and configures a CI Build to create the
 
     ![Azure DevOps](./media/contoso-migration-rebuild/vsts10.png)
 
-12. Again, they enter the file to the docker-compose.yaml file, and select **Push service images** and include the latest tag. When the action changes to **Push service images**, the name of the Azure DevOps task changes to **Push services automatically**.
+12. Again, they enter the file to the docker-compose.yaml file, then select **Push service images** and include the latest tag. When the action changes to **Push service images**, the name of the Azure DevOps task changes to **Push services automatically**.
 
     ![Azure DevOps](./media/contoso-migration-rebuild/vsts11.png)
 
@@ -264,10 +266,11 @@ With the AKS cluster created and the Docker images built, Contoso admins now dep
 
 They deploy as follows:
 
-1. They open a developer command prompt, and use the command az login for the Azure subscription.
+1. They open a developer command prompt, and use the command `az login` for the Azure subscription.
+
 2. They use the deploy.cmd file to deploy the Azure resources in the ContosoRG resource group and EUS2 region, by typing the following command:
 
-    ```console
+    ```azurecli
     .\deploy.cmd azuredeploy ContosoRG -c eastus2
     ```
 
@@ -348,7 +351,7 @@ Instructions for this section use the [SmartHotel360-public-web](https://github.
 
 ### Create blob storage containers
 
-1. In the Azure portal, they open the storage account that was created and select **Blobs**.
+1. In the Azure portal, they open the storage account that was created, then select **Blobs**.
 2. They create a new container (**Pets**) with the public access level set to container. Users will upload their pet photos to this container.
 
     ![Storage blob](./media/contoso-migration-rebuild/blob1.png)
@@ -369,7 +372,7 @@ Contoso admins provision a Cosmos database to be used for pet information.
 
     ![Cosmos DB](./media/contoso-migration-rebuild/cosmos1.png)
 
-2. They specify a name (**contosomarthotel**), select the SQL API, and place it in the production resource group ContosoRG, in the main East US 2 region.
+2. They specify a name (**contososmarthotel**), select the SQL API, and place it in the production resource group ContosoRG, in the main East US 2 region.
 
     ![Cosmos DB](./media/contoso-migration-rebuild/cosmos2.png)
 
@@ -515,7 +518,7 @@ Contoso admins can now publish the website.
     ![New environment](./media/contoso-migration-rebuild/vsts-publishfront8.png)
 
 14. They select **Azure App Service deployment with slot**, and name the environment **Prod**.
-15. They select **1 job, 2 tasks**, and select the subscription, app service name, and the **staging** slot.
+15. They select **1 job, 2 tasks**, then select the subscription, app service name, and the **staging** slot.
 
     ![Environment name](./media/contoso-migration-rebuild/vsts-publishfront10.png)
 
@@ -560,12 +563,12 @@ Contoso admins deploy the app as follows.
     ![Deploy the function](./media/contoso-migration-rebuild/function5.png)
 
 4. They commit the code, and sync it back to Azure DevOps, pushing their changes.
-5. They add a new Build pipeline, and select **Azure DevOps Git** for the source.
+5. They add a new Build pipeline, then select **Azure DevOps Git** for the source.
 6. They select the **ASP.NET Core (.NET Framework)** template.
 7. They accept the defaults for the template.
-8. In **Triggers**, then select to **Enable continuous integration**, and select **Save & Queue** to start a build.
+8. In **Triggers**, then select to **Enable continuous integration**, then select **Save & Queue** to start a build.
 9. After the build succeeds, they build a Release pipeline, adding **Azure App Service deployment with slot**.
-10. They name the environment **Prod**, and select the subscription. They set the **App type** to **Function App**, and the app service name as **smarthotelpetchecker**.
+10. They name the environment **Prod**, then select the subscription. They set the **App type** to **Function App**, and the app service name as **smarthotelpetchecker**.
 
     ![Function app](./media/contoso-migration-rebuild/petchecker2.png)
 
@@ -573,7 +576,7 @@ Contoso admins deploy the app as follows.
 
     ![Artifact](./media/contoso-migration-rebuild/petchecker3.png)
 
-12. They enable **Continuous deployment trigger**, and select **Save**.
+12. They enable **Continuous deployment trigger**, then select **Save**.
 13. They select **Queue new build** to run the full CI/CD pipeline.
 14. After the function is deployed, it appears in the Azure portal, with the **Running** status.
 
@@ -628,4 +631,4 @@ Here are a couple of examples of tailored learning paths on Microsoft Learn that
 
 [Deploy a website to Azure with Azure App Service](https://docs.microsoft.com/learn/paths/deploy-a-website-with-azure-app-service/): Web apps in Azure allow you to publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to provide secure access to your site.
 
-[Process and classify images with the Azure Cognitive Vision Services](https://docs.microsoft.com/learn/paths/classify-images-with-vision-services/): Azure Cognitive Services offers pre-built functionality to enable computer vision functionality in your applications. Learn how to use the Cognitive Vision Services to detect faces, tag and classify images, and identify objects.
+[Process and classify images with the Azure Cognitive Vision Services](https://docs.microsoft.com/learn/paths/classify-images-with-vision-services/): Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Cognitive Vision Services to detect faces, tag and classify images, and identify objects.

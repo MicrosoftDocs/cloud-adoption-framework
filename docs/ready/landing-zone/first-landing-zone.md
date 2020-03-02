@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/20/2019
+ms.date: 02/25/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready

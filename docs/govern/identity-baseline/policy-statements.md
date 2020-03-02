@@ -1,6 +1,6 @@
 ---
 title: "Identity Baseline sample policy statements"
-description: Identity Baseline sample policy statements
+description: Use the Cloud Adoption Framework for Azure to get sample Identity Baseline policy statements that can help you draft policy statements.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -41,7 +41,7 @@ The following sample policy statements address common identity-related business 
 
 ## Lack of shared management accounts between on-premises and the cloud
 
-**Technical risk:** IT management or administrative staff with accounts on your on-premises Active Directory may not have sufficient access to cloud resources may not be able to efficiently resolve operational or security issues.
+**Technical risk:** IT management or administrative staff with accounts on your on-premises Active Directory may not have sufficient access to cloud resources might not be able to efficiently resolve operational or security issues.
 
 **Policy statement:** All groups in the on-premises Active Directory infrastructure that have elevated privileges should be mapped to an approved RBAC role.
 

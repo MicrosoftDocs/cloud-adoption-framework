@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
+<!-- cSpell:ignore OSTICKETWEB OSTICKETMYSQL contosohost contosodc contosovmsacc contosoosticket vcenter cswiz osticket NSGs systemctl -->
+
 # Rehost an on-premises Linux app to Azure VMs and Azure Database for MySQL
 
 This article shows how the fictional company Contoso rehosts a two-tier Linux-based Apache/MySQL/PHP (LAMP) app, migrating it from on-premises to Azure using Azure VMs and Azure Database for MySQL.
@@ -160,7 +162,7 @@ The Mobility service must be installed on each VM that Contoso wants to migrate.
 
 ### Prepare to connect to Azure VMs after failover
 
-After failover to Azure, Contoso wants to be able to connect to the Azure VMs. To do this, Contoso admins need to do the following:
+After failover to Azure, Contoso wants to connect to the Azure VMs. To enable this, Contoso admins must do the following:
 
 - To access over the internet, they enable SSH on the on-premises Linux VM before the migration. For Ubuntu this can be completed using the following command: **Sudo apt-get ssh install -y**.
 - After the failover, they should check **Boot diagnostics** to view a screenshot of the VM.
@@ -209,7 +211,7 @@ Before they can migrate the web VM to Azure, Contoso admins set up and enable re
 
 ### Confirm deployment planning
 
-To continue, they confirm that they've completed deployment planning, by selecting **Yes, I have done it**. Contoso are only migrating a single VM in this scenario, and don't need deployment planning.
+To continue, they confirm completion by selecting **Yes, I have done it**. Contoso is migrating just one virtual machine in this scenario, which doesn't require deployment planning.
 
 ### Set up the source environment
 
@@ -306,7 +308,7 @@ Now Contoso admins can start replicating the **OSTICKETWEB** VM.
 
      ![Mobility service](./media/contoso-migration-rehost-linux-vm-mysql/linux-mobility.png)
 
-6. In **Replication settings** > **Configure replication settings**, they check that the correct replication policy is applied, and select **Enable Replication**. The Mobility service will be automatically installed.
+6. In **Replication settings** > **Configure replication settings**, they check that the correct replication policy is applied, then select **Enable Replication**. The Mobility service will be automatically installed.
 7. They track replication progress in **Jobs**. After the **Finalize Protection** job runs, the machine is ready for failover.
 
 **Need more help?**
@@ -437,7 +439,7 @@ With the app now running, Contoso need to fully operationalize and secure their 
 The Contoso security team review the VM and database to determine any security issues.
 
 - They review the network security groups (NSGs) for the VM, to control access. NSGs are used to ensure that only traffic allowed to the application can pass.
-- They consider securing the data on the VM disks using Disk encryption and Azure Key Vault.
+- They consider securing the data on the VM disks using disk encryption and Azure Key Vault.
 - Communication between the VM and database instance isn't configured for SSL. They will need to do this to ensure that database traffic can't be hacked.
 
 For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).

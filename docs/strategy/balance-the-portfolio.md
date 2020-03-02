@@ -3,7 +3,7 @@ title: "Balance the portfolio"
 description: Discover strategies for balancing migration, innovation, and experimentation to get the most out of your cloud migration efforts.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 02/25/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -15,7 +15,7 @@ Cloud adoption is a portfolio management effort, cleverly disguised as technical
 
 ## General scope expansion
 
-This topic is strategic in nature. As such, the approach taken in this article is equally strategic. To ground the strategy in data-driven decisions, this article assumes the reader has evaluated the existing [digital estate](../digital-estate/index.md) (or is in the process of doing so). The objective of this approach is to aid in evaluating workloads to ensure proper balance across the portfolio through qualitative questions and portfolio refinement.
+Balancing the portfolio is strategic in nature. As such, the approach taken in this article is equally strategic. To ground the strategy in data-driven decisions, this article assumes the reader has evaluated the existing [digital estate](../digital-estate/index.md) (or is in the process of doing so). The objective of this approach is to aid in evaluating workloads to ensure proper balance across the portfolio through qualitative questions and portfolio refinement.
 
 ### Document business outcomes
 

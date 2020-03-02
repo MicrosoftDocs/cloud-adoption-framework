@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- cspell:ignore CSPs domainname IPAM CIDR Untrust RRAS CONTOSODC sysvol ITIL NSGs ASGs -->
+
 # Deploy a migration infrastructure
 
 This article shows how the fictional company Contoso prepares its on-premises infrastructure for migration, sets up an Azure infrastructure in preparation for migration, and runs the business in a hybrid environment. When you use this example to help plan your own infrastructure migration efforts, keep the following in mind:
@@ -47,11 +49,11 @@ Here's a diagram showing the current Contoso on-premises infrastructure.
 
 - Contoso has one main datacenter located in the city of New York in the Eastern United States.
 - There are three additional local branches across the United States.
-- The main datacenter is connected to the internet with a fiber metro ethernet connection (500 mbps).
+- The main datacenter is connected to the internet with a fiber metro ethernet connection (500 Mbps).
 - Each branch is connected locally to the internet using business class connections, with IPSec VPN tunnels back to the main datacenter. This allows the entire network to be permanently connected, and optimizes internet connectivity.
 - The main datacenter is fully virtualized with VMware. Contoso has two ESXi 6.5 virtualization hosts, managed by vCenter Server 6.5.
 - Contoso uses Active Directory for identity management, and DNS servers on the internal network.
-- The domain controllers in the datacenter run on VMware VMs. The domain controllers at local branches run on physical servers.
+- The domain controllers in the datacenter run on VMware virtual machines. The domain controllers at local branches run on physical servers.
 
 ## Step 1: Buy and subscribe to Azure
 
@@ -71,7 +73,7 @@ Contoso is going with an [Enterprise Agreement (EA)](https://azure.microsoft.com
 After paying for Azure, Contoso needs to figure out how to manage Azure subscriptions. Contoso has an EA, and thus no limit on the number of Azure subscriptions it can set up.
 
 - An Azure Enterprise Enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
-- As a first step, Contoso has defined a structure known as an enterprise scaffold for Enterprise Enrollment. Contoso used [this article](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-subscription-governance) to help understand and design a scaffold.
+- As a first step, Contoso has defined a structure known as an enterprise scaffold for Enterprise Enrollment. Contoso used the [Azure enterprise scaffold guidance](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-subscription-governance) to help understand and design a scaffold.
 - For now, Contoso has decided to use a functional approach to manage subscriptions.
   - Inside the enterprise it will use a single IT department that controls the Azure budget. This will be the only group with subscriptions.
   - Contoso will extend this model in the future, so that other corporate groups can join as departments in the Enterprise Enrollment.
@@ -82,7 +84,7 @@ After paying for Azure, Contoso needs to figure out how to manage Azure subscrip
 
 ### Examine licensing
 
-With subscriptions configured, Contoso can look at Microsoft licensing. The licensing strategy will depend on the resources that Contoso wants to migrate into Azure and how Azure VMs and services are selected and deployed.
+With subscriptions configured, Contoso can look at Microsoft licensing. The licensing strategy will depend on the resources that Contoso wants to migrate into Azure and how Azure virtual machines (VMs) and services are selected and deployed.
 
 #### Azure Hybrid Benefit
 
@@ -343,16 +345,16 @@ Here's how Contoso decided to implement hybrid connectivity:
 
 ### Design the Azure network infrastructure
 
-It's critical that Contoso puts networks in place in a way that makes the hybrid deployment secure and scalable. To do this, Contoso are taking a long-term approach, and are designing virtual networks (VNets) to be resilient and enterprise ready. [Learn more](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm) about planning VNets.
+Contoso's network configuration must make the hybrid deployment secure and scalable. Contoso is taking a long-term approach to this, designing virtual networks (VNets) to be resilient and enterprise ready. [Learn more](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm) about planning VNets.
 
-To connect the two regions, Contoso has decided to implement a hub-to-hub network model:
+To connect the two regions, Contoso will implement a hub-to-hub network model:
 
 - Within each region, Contoso will use a hub and spoke model.
 - To connect networks and hubs, Contoso will use Azure network peering.
 
 #### Network peering
 
-Azure provides network peering to connect VNets and hubs. Global peering allows connections between VNets/hubs in different regions. Local peering connects VNets in the same region. VNet peering provides several advantages:
+Azure network peering connects virtual networks and hubs. Global peering allows connections between virtual network or hubs in different regions. Local peering connects virtual networks in the same region. Virtual network peering provides several advantages:
 
 - Network traffic between peered VNets is private.
 - Traffic between the VNets is kept on the Microsoft backbone network. No public internet, gateways, or encryption is required in the communication between the VNets.
@@ -466,7 +468,7 @@ Central US is Contoso's secondary region. Here's how Contoso will architect netw
   - VNET-PROD-CUS. This VNet is a production network, similar to VNET-PROD_EUS2.
   - VNET-ASR-CUS. This VNet will act as a location in which VMs are created after failover from on-premises, or as a location for Azure VMs that are failed over from the primary to the secondary region. This network is similar to the production networks, but without any domain controllers on it.
   - Each VNet in the region will have its own address space, with no overlap. Contoso will configure routing without NAT.
-- **Subnets:** The subnets will be architected in a similar way to those in East US 2. The exception is that Contoso doesn't need a subnet for domain controllers.
+- **Subnets:** The subnets will be designed in a similar way to those in East US 2. The exception is that Contoso doesn't need a subnet for domain controllers.
 
 The VNets in Central US are summarized in the following table.
 
@@ -552,14 +554,14 @@ When you deploy resources in virtual networks, you have a couple of choices for 
 
 Contoso admins have decided that the Azure DNS service isn't a good choice in the hybrid environment. Instead, they will use the on-premises DNS servers.
 
-- Since this is a hybrid network all the VMs on-premises and in Azure need to be able to resolve names to function properly. This means that custom DNS settings must be applied to all the VNets.
+- Since this is a hybrid network, all the VMs on premises and in Azure must be able to resolve names to function properly. This means that custom DNS settings must be applied to all the VNets.
 - Contoso currently has DCs deployed in the Contoso datacenter and at the branch offices. The primary DNS servers are CONTOSODC1(172.16.0.10) and CONTOSODC2(172.16.0.1)
 - When the VNets are deployed, the on-premises domain controllers will be set to be used as DNS servers in the networks.
 - To configure this, when using custom DNS on the VNet, Azure's recursive resolvers IP address (such as 168.63.129.16) must be added to the DNS list. To do this, Contoso configures DNS server settings on each VNet. For example, the custom DNS settings for the VNET-HUB-EUS2 network would be as follows:
 
     ![Custom DNS](./media/contoso-migration-infrastructure/custom-dns.png)
 
-In addition to the on-premises domain controllers, Contoso are going to implement four more to support the Azure networks, two for each region. Here's what Contoso will deploy in Azure.
+In addition to the on-premises domain controllers, Contoso will implement four more domain controllers to support the Azure networks, two for each region. Here's what Contoso will deploy in Azure.
 
 **Region** | **DC** | **VNet** | **Subnet** | **IP address**
 --- | --- | --- | --- | ---
@@ -790,9 +792,9 @@ Azure Disk Encryption integrates with Azure Key Vault to help control and manage
 
 In this article, Contoso set up an Azure infrastructure and policy for Azure subscription, hybrid identify, disaster recovery, networking, governance, and security.
 
-Not all of the steps that Contoso completed here are required for a migration to the cloud. In this case, it wanted to plan a network infrastructure that can be used for all types of migrations, and is secure, resilient, and scalable.
+Not every step taken here is required for a cloud migration. In this case, Contoso planned a network infrastructure that could handle all types of migrations while being secure, resilient, and scalable.
 
-With this infrastructure in place, Contoso is ready to move on and try out migration.
+With this infrastructure, Contoso is ready to move on and try out migration.
 
 ## Next steps
 

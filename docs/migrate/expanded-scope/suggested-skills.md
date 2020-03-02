@@ -3,7 +3,7 @@ title: "Skills readiness for cloud migration"
 description: Skills readiness for cloud migration
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/19/2019
+ms.date: 02/25/2020
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

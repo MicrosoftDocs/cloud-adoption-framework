@@ -129,7 +129,7 @@ items:
         href: plan/adapt-roles-skills-processes.md
       - name: Map roles and skills
         href: plan/suggested-skills.md
-    - name: Best Practices
+    - name: Best practices
       items:
       - name: Digital estate assessment in Azure
         href: plan/contoso-migration-assessment.md
@@ -188,6 +188,8 @@ items:
           href: ready/considerations/hybrid-consistency.md
       - name: Improve landing zone security (Sensitive data)
         items:
+          - name: Implementing a secure hybrid network architecture in Azure
+            href: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
           - name: Azure identity management and access control security best practices
             href: https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
           - name: Azure network security best practices
@@ -282,7 +284,7 @@ items:
         items:
         - name: Before you start
           href: migrate/azure-migration-guide/index.md
-        - name: Assess each workload & refine plans
+        - name: Assess each workload and refine plans
           href: migrate/azure-migration-guide/assess.md
         - name: Migrate workload assets
           href: migrate/azure-migration-guide/migrate.md
@@ -607,7 +609,7 @@ items:
           - name: Conduct retrospectives
             href: migrate/migration-considerations/optimize/retrospective.md
 
-      - name: Skills relevant to migration
+      - name: Skills relevant to Migration
         href: migrate/expanded-scope/suggested-skills.md
 
     - name: Innovate

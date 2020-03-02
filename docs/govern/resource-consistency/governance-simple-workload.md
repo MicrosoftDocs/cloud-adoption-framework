@@ -1,6 +1,6 @@
 ---
 title: "Governance design for a simple workload"
-description: Guidance for configuring Azure governance controls to enable a user to deploy a simple workload.
+description: Learn the process for designing a resource governance model in Azure to support a single team and a simple workload. 
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019
@@ -42,7 +42,7 @@ Our Azure AD global administrator will create the **workload owner** account for
 ![The Azure AD global administrator creates the workload owner account](../../_images/govern/design/governance-1-2.png)
 *Figure 2 - The Azure AD global administrator creates the workload owner user account.*
 
-You aren't able to assign resource access permission until this user is added to a **subscription**, so you'll do that in the next two sections.
+You can't assign resource access permission until this user is added to a **subscription**, so you'll do that in the next two sections.
 
 ## Resource management scope
 

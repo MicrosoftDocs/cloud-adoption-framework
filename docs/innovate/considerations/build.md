@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Build with customer empathy"
-description: Learn to build with customer empathy.
+title: Build adoption with customer empathy
+description: Learn to create solutions that drive innovation based on customer empathy, a deep understanding of the customer's experience.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019
