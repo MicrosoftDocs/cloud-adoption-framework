@@ -29,9 +29,9 @@ The following image shows a variety of landing zone options. The following optio
 - D. When a partner is providing on-going managed services or is contracted to deliver on the adoption plan, they will commonly provide their own landing zone. Leveraging a partner landing zone could accelerate adoption efforts and ensure consistent operational management requirements. However, additional considerations should be given to internal governance and security requirements to ensure alignment.
 
 - E. Adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**, should look to the CAF NorthStar as a guide platform architecture and landing zones. CAF Northstar is a more advanced approach, which includes both target-state platform architecture **and** reference implementations.
-    - This approach pulls forward aspects of parallel methodologies including governance and operations to better prepare for mission-critical, secure, complex, and compliance governed adoption. 
+    - This approach pulls forward aspects of parallel methodologies including governance and operations to better prepare for mission-critical, secure, complex, and compliance governed adoption.
     - This approach also creates the ability to generate multiple landing zones from a common architecture.
-    - If options A through B are the best starting point, this option can still serve as a reference implementation and architecture to guide refactoring efforts.
+    - If options A through D are the best starting point, platform teams are still encouraged to leverage the CAF NorthStar implementation and architecture as an end-state reference during refactoring efforts.
 
 ## Other data points to influence the choice of a first landing zone
 
