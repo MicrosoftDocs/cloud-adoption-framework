@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Measure"
-description: Introduction to Cloud innovation - Measure content
+title: Measure customer impact
+description: Define the desired customer flow and establish learning metrics to measure customer behavior and adoption.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019

@@ -1,6 +1,6 @@
 ---
 title: "Mainframe migration overview"
-description: Migrate applications from mainframe environments to Azure, a proven, highly available, and scalable infrastructure for systems that currently run on mainframes.
+description: Migrate mainframe workloads, apps, and databases to Azure, for a proven, highly available, scalable infrastructure without many of the drawbacks of mainframes.
 author: njray
 ms.author: v-nanra
 ms.date: 12/27/2018
@@ -8,6 +8,8 @@ ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cspell:ignore nanra njray dbspaces dbextents VSAM RACF LPARS ASSGN DLBL EXTENT LIBDEF EXEC IPLs -->
 
 # Mainframe migration overview
 
@@ -29,13 +31,13 @@ This guidance helps IT organizations start the migration conversation. You may b
 
 In the late 1950s, mainframes were designed as scale-up servers to run high-volume online transactions and batch processing. Because of this, mainframes have software for online transaction forms (sometimes called green screens) and high-performance I/O systems for processing batch runs.
 
-Mainframes have a reputation for high reliability and availability, and are known for their ability to run huge online transactions and batch jobs. A transaction results from a piece of processing initiated by a single request, typically from a user at a terminal. Transactions can also come from multiple other sources, including web pages, remote workstations, and applications from other information systems. A transaction can also be triggered automatically at a predefined time as the following figure shows.
+Mainframes are known for high reliability and availability as well as their ability to run huge online transactions and batch jobs. A transaction results from a piece of processing initiated by a single request, typically from a user at a terminal. Transactions can also come from multiple other sources, including web pages, remote workstations, and applications from other information systems. A transaction can also be triggered automatically at a predefined time as the following figure shows.
 
 ![Components in a typical IBM mainframe architecture](../../_images/mainframe-migration/mainframe-architecture.png)
 
 A typical IBM mainframe architecture includes these common components:
 
-- **Front-end systems:** Users can initiate transactions from terminals, web pages, or remote workstations. Mainframe applications often have custom user interfaces that can be preserved after migration to Azure. Terminal emulators are still used to access mainframe applications, and are also called green-screen terminals.
+- **Front-end systems:** Users can initiate transactions from terminals, web pages, or remote workstations. Mainframe applications often have custom user interfaces that can be preserved after migration to Azure. Terminal emulators (also called green-screen terminals) are still used to access mainframe applications.
 
 - **Application tier:** Mainframes typically include a customer information control system (CICS), a leading transaction management suite for the IBM z/OS mainframe that is often used with IBM Information Management System (IMS), a message-based transaction manager. Batch systems handle high-throughput data updates for large volumes of account records.
 

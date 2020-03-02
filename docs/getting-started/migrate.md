@@ -1,9 +1,9 @@
 ---
 title: "Begin a cloud migration journey in Azure"
-description: Begin a cloud migration journey in Azure.
+description: Get comprehensive guidance for transitioning legacy application workloads to the cloud using innovative cloud-based technologies.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/10/2019
+ms.date: 02/25/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -17,7 +17,7 @@ Use the Microsoft Cloud Adoption Framework for Azure to begin a cloud migration 
 
 The Cloud Adoption Framework helps customers undertake a simplified cloud adoption journey. This framework contains detailed information about an end-to-end cloud adoption journey, starting with targeted business outcomes, and then aligning cloud readiness and assessments with clearly defined business objectives. Those outcomes are achieved through a defined path for cloud adoption. With migration-based adoption, the defined path focuses largely on migrating on-premises workloads to the cloud. Sometimes this journey includes modernization of workloads to increase the return on investment from the migration effort.
 
-This framework is designed primarily for cloud architects and the cloud strategy teams leading cloud adoption efforts. However, many topics in this framework are relevant to other roles across the business and IT. Cloud architects frequently serve as facilitators to engage each of the relevant roles. This executive summary is designed to prepare the various roles before facilitating conversations.
+This framework is designed primarily for cloud architects and the cloud strategy teams leading cloud adoption efforts. However, many subjects in this framework are relevant to other roles across the business and IT. Cloud architects frequently serve as facilitators to engage each of the relevant roles. This executive summary is designed to prepare the various roles before facilitating conversations.
 
 > [!NOTE]
 > This guidance is currently a public preview. Terminology, approaches, and guidance are being thoroughly tested with customers, partners, and Microsoft teams during this preview. As such, the TOC and guidance may change slightly over time.
@@ -50,7 +50,7 @@ This approach consists of two methodologies or areas of focus: Cloud Strategy & 
 
 ## Cloud implementation
 
-Cloud implementation is an iterative process for migrating and modernizing the digital estate in alignment with targeted business outcomes and change management controls. During each iteration, workloads are migrated or modernized in alignment with the strategy and plan. Decisions regarding IaaS, PaaS, or hybrid are made during the assess phase to optimized control and execution. Those decisions will drive the tools used during the Migrate phase. This model can be used with minimal strategy and planning. However, to ensure the greatest business returns, it is highly suggested that both IT and the business align on a clear strategy and plan to guide implementation activities.
+Cloud implementation is an iterative process for migrating and modernizing the digital estate, aligned with targeted business outcomes and change management controls. During each iteration, workloads are migrated or modernized in alignment with the strategy and plan. Decisions regarding IaaS, PaaS, or hybrid are made during the assess phase of the [Migrate methodology](../migrate/index.md) to optimize control and execution. Those decisions will drive the tools used during each iteration of the migration phase within the same methodology. This model can be used with minimal strategy and planning. However, to ensure the greatest business returns, both IT and the business should align on a clear strategy and plan to guide implementation activities.
 
 ![Cloud Adoption Framework's Cloud implementation methodology](../_images/operational-transformation-migrate.png)
 
@@ -119,7 +119,7 @@ The technologies migrated to the cloud constantly expand as cloud providers add 
 
 - Windows and SQL Server
 - Linux and Open Source (OSS) databases
-- Unstructure/NoSQL databases
+- Unstructured and NoSQL databases
 - SAP on Azure
 - Analytics (Data Warehouse, Data Lake)
 

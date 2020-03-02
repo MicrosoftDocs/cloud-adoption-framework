@@ -1,6 +1,6 @@
 ---
 title: Deployment Acceleration business risks
-description: Understand business risks of the Deployment Acceleration discipline, which can be used in governance strategy in the Microsoft Cloud Adoption Framework for Azure.
+description: Use the the Cloud Adoption Framework for Azure to understand business risks of the Deployment Acceleration discipline, which can be used in governance strategy.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019

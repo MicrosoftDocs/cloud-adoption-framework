@@ -10,6 +10,8 @@ ms.subservice: organize
 ms.custom: organize
 ---
 
+<!-- cSpell:ignore ccoe -->
+
 # Establish team structures
 
 Every cloud capability is provided by someone during every cloud adoption effort. These assignments and team structures can develop organically, or they can be intentionally designed to match a defined team structure.
@@ -55,7 +57,7 @@ The following sections describe a fully staffed, proven organizational structure
 
 ## Central IT
 
-As adoption scales, the cloud governance team may struggle to keep pace with the flow of innovation from multiple cloud adoption teams. This is especially true in environments which have heavy compliance, operations, or security requirements. At this stage, it is common for companies to shift cloud responsibilities to an existing central IT team. If that team is able to reassess tools, processes, and people to better support cloud adoption at scale, then including the central IT team can add significant value. Bringing in subject matter experts from operations, automation, security, and administration to modernize Central IT can drive effective operational innovations.
+As adoption scales, the cloud governance team may struggle to keep pace with the flow of innovation from multiple cloud adoption teams. This is especially true in environments which have heavy compliance, operations, or security requirements. At this stage, it is common for companies to shift cloud responsibilities to an existing central IT team. If that team can reassess tools, processes, and people to better support cloud adoption at scale, then including the central IT team can add significant value. Bringing in subject matter experts from operations, automation, security, and administration to modernize Central IT can drive effective operational innovations.
 
 ![Cloud adoption with a central IT model](../_images/ready/org-ready-central-it.png)
 

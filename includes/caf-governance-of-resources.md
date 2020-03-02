@@ -29,7 +29,7 @@ For information on defining custom policies see the [Azure Policy documentation]
 
 Azure policies can be assigned at the resource group, subscription, and management group level, and can be included in [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) definitions. Although the policy requirements defined in this governance MVP apply to all current subscriptions, it's very likely that future deployments will require exceptions or alternative policies. As a result, assigning policy using management groups, with all child subscriptions inheriting these assignments, may not be flexible enough to support these scenarios.
 
-Azure Blueprints allow the consistent assignment of policy and roles, application of Resource Manager templates, and deployment of resource groups across multiple subscriptions. As with policy definitions, blueprint definitions are saved to management groups or subscriptions, and are available through inheritance to any children in the management group hierarchy.
+Azure Blueprints allows consistent assignment of policy and roles, application of Resource Manager templates, and deployment of resource groups across multiple subscriptions. Like policy definitions, blueprint definitions are saved to management groups or subscriptions. The policy definitions are available through inheritance to any children in the management group hierarchy.
 
 The cloud governance team has decided that enforcement of required Azure Policy and RBAC assignments across subscriptions will be implemented through Azure Blueprints and associated artifacts:
 

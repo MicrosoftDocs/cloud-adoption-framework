@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Challenges and blockers"
-description: Introduction to Cloud innovation - Challenges and blockers
+title: Customer adoption challenges and blockers
+description: Use the Cloud Adoption Framework for Azure to understand common adoption and invention-related challenges to innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

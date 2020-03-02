@@ -1,6 +1,6 @@
 ---
 title: "Security Baseline template"
-description: Explanation of the concept Security Baseline in relation to cloud governance.
+description: Use this template as a starting point for documenting and communicating policy statements that govern security related issues in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
-title: "Deploy a basic workload"
-description: Describes how to deploy a basic workload to Azure
+title: Deploy a basic workload in Azure
+description: Learn about core cloud infrastructure components and basic workloads, like basic web apps, single virtual machines, and virtual networks.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 12/31/2018

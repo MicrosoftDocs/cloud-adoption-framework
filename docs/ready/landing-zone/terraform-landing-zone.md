@@ -3,15 +3,17 @@ title: "Use Terraform to build your landing zones"
 description: Learn to use Terraform to build your landing zones.
 author: arnaudlh
 ms.author: arnaul
-ms.date: 10/16/2019
+ms.date: 02/25/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- cSpell:ignore arnaudlh arnaul Arnaud Hashicorp's vCPUs eastasia southeastasia lalogs tfvars -->
+
 # Use Terraform to build your landing zones
 
-Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Hashicorp's Terraform. This section shows how to use a prototype landing zone to deploy fundamental logging, accounting, and security capabilities for an Azure subscription.
+Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Hashicorp's Terraform. This section shows how to use a prototype landing zone to deploy foundational logging, accounting, and security capabilities for an Azure subscription.
 
 ## Purpose of the landing zone
 
@@ -25,19 +27,19 @@ Reuse of components is a fundamental principle of infrastructure as code. Module
 
 The first landing zone deploys the following components in your subscription:
 
-![Foundation landing zone using Terraform](../../_images/ready/foundations-terraform-landingzone.png)
+![Foundational landing zone using Terraform](../../_images/ready/foundations-terraform-landing-zone.png)
 
 ## Capabilities
 
 The components deployed and their purpose include the following:
 
-| Component | Responsibility |
-|---------|---------|
-| Resource groups | Core resource groups needed for the foundation |
-| Activity logging | Auditing all subscription activities and archiving: </br> - Storage account </br> - Azure Event Hubs |  
-| Diagnostics logging | All operation logs kept for a specific number of days: </br> - Storage account </br> - Event Hubs |
-| Log Analytics | Stores all the operation logs </br> Deploy common solutions for deep application best practices review: </br> - NetworkMonitoring </br> - ADAssessment </br> - ADReplication </br> - AgentHealthAssessment </br> - DnsAnalytics </br> - KeyVaultAnalytics
-| Azure Security Center | Security hygiene metrics and alerts sent to email and phone number |
+| Component             | Responsibility                                                                                                                                                                                                                                            |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Resource groups       | Core resource groups needed for the foundation                                                                                                                                                                                                            |
+| Activity logging      | Auditing all subscription activities and archiving: </br> - Storage account </br> - Azure Event Hubs                                                                                                                                                      |
+| Diagnostics logging   | All operation logs kept for a specific number of days: </br> - Storage account </br> - Event Hubs                                                                                                                                                         |
+| Log Analytics         | Stores all the operation logs </br> Deploy common solutions for deep application best practices review: </br> - NetworkMonitoring </br> - ADAssessment </br> - ADReplication </br> - AgentHealthAssessment </br> - DnsAnalytics </br> - KeyVaultAnalytics |
+| Azure Security Center | Security hygiene metrics and alerts sent to email and phone number                                                                                                                                                                                        |
 
 ## Use this blueprint
 
@@ -58,39 +60,39 @@ If these assumptions match your current environment, this blueprint might be a g
 
 The following decisions are represented in the Terraform landing zone:
 
-| Component | Decisions | Alternative approaches |
-| --- | --- | --- |
-|Logging and monitoring | Azure Monitor Log Analytics workspace is used. A diagnostics storage account as well as Event Hub is provisioned. |         |
-|Network | N/A - Network is implemented in another landing zone. |[Networking decisions](../considerations/networking-options.md) |
-|Identity | It's assumed that the subscription is already associated with an Azure Active Directory instance. | [Identity management best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices) |
-| Policy | This landing zone currently assumes that no Azure policies are to be applied. | |
-|Subscription design | N/A - Designed for a single production subscription. | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md) |
-| Management groups | N/A - Designed for a single production subscription. |[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md) |
-| Resource groups | N/A - Designed for a single production subscription. | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md) |
-| Data | N/A | [Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and [Azure Data Store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
-|Storage|N/A|[Azure Storage guidance](../considerations/storage-options.md) |
-| Naming standards | When the environment is created, a unique prefix is also created. Resources that require a globally unique name (such as storage accounts) use this prefix. The custom name is appended with a random suffix. Tag usage is mandated as described in the following table. | [Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md) |
-| Cost management | N/A | [Tracking costs](../azure-best-practices/track-costs.md) |
-| Compute | N/A | [Compute options](../considerations/compute-options.md) |
+| Component              | Decisions                                                                                                                                                                                                                                                                | Alternative approaches                                                                                                                                                                                                                                          |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Logging and monitoring | Azure Monitor Log Analytics workspace is used. A diagnostics storage account as well as Event Hub is provisioned.                                                                                                                                                        |                                                                                                                                                                                                                                                                 |
+| Network                | N/A - Network is implemented in another landing zone.                                                                                                                                                                                                                    | [Networking decisions](../considerations/networking-options.md)                                                                                                                                                                                                 |
+| Identity               | It's assumed that the subscription is already associated with an Azure Active Directory instance.                                                                                                                                                                        | [Identity management best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices)                                                                                                                               |
+| Policy                 | This landing zone currently assumes that no Azure policies are to be applied.                                                                                                                                                                                            |                                                                                                                                                                                                                                                                 |
+| Subscription design    | N/A - Designed for a single production subscription.                                                                                                                                                                                                                     | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)                                                                                                                                                                                       |
+| Management groups      | N/A - Designed for a single production subscription.                                                                                                                                                                                                                     | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)                                                                                                                                                                                       |
+| Resource groups        | N/A - Designed for a single production subscription.                                                                                                                                                                                                                     | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)                                                                                                                                                                                       |
+| Data                   | N/A                                                                                                                                                                                                                                                                      | [Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and [Azure Data Store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
+| Storage                | N/A                                                                                                                                                                                                                                                                      | [Azure Storage guidance](../considerations/storage-options.md)                                                                                                                                                                                                  |
+| Naming standards       | When the environment is created, a unique prefix is also created. Resources that require a globally unique name (such as storage accounts) use this prefix. The custom name is appended with a random suffix. Tag usage is mandated as described in the following table. | [Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md)                                                                                                                                                                              |
+| Cost management        | N/A                                                                                                                                                                                                                                                                      | [Tracking costs](../azure-best-practices/track-costs.md)                                                                                                                                                                                                        |
+| Compute                | N/A                                                                                                                                                                                                                                                                      | [Compute options](../considerations/compute-options.md)                                                                                                                                                                                                         |
 
 ### Tagging standards
 
-The following set of minimum tags must be present on all resources and resource groups:
+The minimum set of tags shown below must be present on all resources and resource groups:
 
-| Tag name | Description | Key | Example value |
-|--|--|--|--|
-| Business Unit | Top-level division of your company that owns the subscription or workload the resource belongs to. | BusinessUnit | FINANCE, MARKETING, {Product Name}, CORP, SHARED |
-| Cost Center | Accounting cost center associated with this resource.| CostCenter | Number |
-| Disaster Recovery | Business criticality of the application, workload, or service. | DR | DR-ENABLED, NON-DR-ENABLED |
-| Environment | Deployment environment of the application, workload, or service. |  Env | Prod, Dev, QA, Stage, Test, Training |
-| Owner Name | Owner of the application, workload, or service.| Owner | email |
-| Deployment Type | Defines how the resources are being maintained. | deploymentType | Manual, Terraform |
-| Version | Version of the blueprint deployed. | version | v0.1 |
-| Application Name | Name of the associated application, service, or workload associated with the resource. | ApplicationName | "app name" |
+| Tag name          | Description                                                                                        | Key             | Example value                                    |
+|-------------------|----------------------------------------------------------------------------------------------------|-----------------|--------------------------------------------------|
+| Business Unit     | Top-level division of your company that owns the subscription or workload the resource belongs to. | BusinessUnit    | FINANCE, MARKETING, {Product Name}, CORP, SHARED |
+| Cost Center       | Accounting cost center associated with this resource.                                              | CostCenter      | Number                                           |
+| Disaster Recovery | Business criticality of the application, workload, or service.                                     | DR              | DR-ENABLED, NON-DR-ENABLED                       |
+| Environment       | Deployment environment of the application, workload, or service.                                   | Env             | Prod, Dev, QA, Stage, Test, Training             |
+| Owner Name        | Owner of the application, workload, or service.                                                    | Owner           | email                                            |
+| Deployment Type   | Defines how the resources are being maintained.                                                    | deploymentType  | Manual, Terraform                                |
+| Version           | Version of the blueprint deployed.                                                                 | version         | v0.1                                             |
+| Application Name  | Name of the associated application, service, or workload associated with the resource.             | ApplicationName | "app name"                                       |
 
 ## Customize and deploy your first landing zone
 
-You can [clone your Terraform foundation landing zone](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready). It's easy to get started with the landing zone by modifying the Terraform variables. In our example, we use **blueprint_foundations.sandbox.auto.tfvars**, so Terraform automatically sets the values in this file for you.
+You can [clone your Terraform foundation landing zone](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready). Get started easily with the landing zone by modifying the Terraform variables. In our example, we use **blueprint_foundations.sandbox.auto.tfvars**, so Terraform automatically sets the values in this file for you.
 
 Let's look at the different variable sections.
 

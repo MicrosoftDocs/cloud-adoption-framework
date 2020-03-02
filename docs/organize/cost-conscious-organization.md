@@ -40,7 +40,7 @@ Building cost consciousness into cloud-adoption efforts starts at the leadership
 
 - **Accountability:** Budgets should be established between the cloud strategy, [cloud governance](./cloud-governance.md), and [cloud adoption](./cloud-adoption.md) teams based on expected adoption activities. When deviations from budget occur, the cloud strategy team and the cloud governance team must partner to quickly determine the best course of action to remediate the deviations.
 
-- **Optimization:** During optimization efforts, the cloud strategy team can represent the investment and return value of specific workloads. If a workload has strategic value or financial impact on the business, cost-optimization efforts should be monitored closely. If there's no strategic impact on the organization and no inherent cost for poor performance of a workload, the cloud strategy team may approve overoptimization. To drive these decisions, the team must be able to view costs on a per-project scope.
+- **Optimization:** During optimization efforts, the cloud strategy team can represent the investment and return value of specific workloads. If a workload has strategic value or financial impact on the business, cost-optimization efforts should be monitored closely. If there's no strategic impact on the organization and no inherent cost for poor performance of a workload, the cloud strategy team may approve over-optimization. To drive these decisions, the team must be able to view costs on a per-project scope.
 
 ## Cloud adoption team
 

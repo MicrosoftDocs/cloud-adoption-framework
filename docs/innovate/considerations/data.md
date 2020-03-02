@@ -1,6 +1,6 @@
 ---
-title: "Cloud innovation: Democratize data"
-description: Introduction to Cloud innovation - Democratize data
+title: Democratize data with digital invention
+description: Learn about democratization, the process of getting data into the right hands to test hypotheses and drive innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

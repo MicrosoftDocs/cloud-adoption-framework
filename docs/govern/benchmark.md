@@ -1,6 +1,6 @@
 ---
-title: Assess your transformation journey
-description: Assess your transformation journey
+title: Assess your cloud governance journey
+description: Use this governance benchmark tool to get a personalized report and tailored resources for your organization to get started with cloud governance.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 08/27/2019
