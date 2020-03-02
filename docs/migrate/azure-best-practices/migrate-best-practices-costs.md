@@ -81,7 +81,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 Tuning and maintaining on-premises storage (SAN or NAS), and the networks to support them, can be costly and time-consuming. File (storage) data is commonly migrated to the cloud to help alleviate operational and management headaches. Microsoft provides several options for moving data to Azure, and you need to make decisions about those options. Picking the right storage type for data can save your organization several thousands of dollars every month. A few considerations:
 
-- Data that isn't accessed much, and isn't business-critical, doesn't need to be placed on the most expensive storage.
+- Data that isn't accessed much and isn't business-critical doesn't need to be placed on the most expensive storage.
 - Conversely, important business-critical data should be located on higher tier storage options.
 - During migration planning, take an inventory of data and classify it by importance, in order to map it to the most suitable storage. Consider budget and costs, as well as performance. Cost shouldn't necessarily be the main decision-making factor. Picking the least expensive option could expose the workload to performance and availability risks.
 

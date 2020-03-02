@@ -11,6 +11,10 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore tvuylsteke kfollis >
+
+<!-- markdownlint-disable MD024 MD025 -->
+
 # Governance, security, and compliance in Azure
 
 As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [Governance Benchmark tool](https://cafbaseline.com) to identify potential gaps in your organization's cloud governance approach. For more information on how to develop governance processes, see the [Cloud Adoption Framework for Azure's governance guidance](../../govern/index.md).
@@ -35,9 +39,9 @@ To create a blueprint:
 1. Go to **Blueprints - Getting started**.
 1. In the **Create a Blueprint** section, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
-1. Enter the **Blueprint name**, and select the appropriate **Definition location**.
-1. Click **Next : Artifacts >>** and review the artifacts included in the blueprint.
-1. Click **Save Draft**.
+1. Enter the **Blueprint name**, then select the appropriate **Definition location**.
+1. Select **Next : Artifacts >>**, then review the artifacts included in the blueprint.
+1. Select **Save Draft**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted]" submitText="Create a blueprint" :::
 
@@ -48,9 +52,9 @@ To create a blueprint:
 1. Go to [Blueprints - Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
 1. In the **Create a Blueprint** section, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
-1. Enter the **Blueprint name**, and select the appropriate **Definition location**.
-1. Click **Next : Artifacts >>** and review the artifacts included in the blueprint.
-1. Click **Save Draft**.
+1. Enter the **Blueprint name**, then select the appropriate **Definition location**.
+1. Select **Next : Artifacts >>**, then review the artifacts included in the blueprint.
+1. Select **Save Draft**.
 
 ::: zone-end
 
@@ -62,7 +66,7 @@ To publish a blueprint artifacts to your subscription:
 
 1. Goto **Blueprints - Blueprint definitions**.
 1. Select the blueprint you created in the previous steps.
-1. Review the blueprint definition and select **Publish blueprint**.
+1. Review the blueprint definition , then select **Publish blueprint**.
 1. Provide a **Version** (such as _1.0_) and any **Change notes**, then select **Publish**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints]" submitText="Blueprint definitions" :::
@@ -73,7 +77,7 @@ To publish a blueprint artifacts to your subscription:
 
 1. Go to [Blueprints - Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint definition you created in the previous steps.
-1. Review the blueprint definition and select **Publish blueprint**.
+1. Review the blueprint definition, then select **Publish blueprint**.
 1. Provide a **Version** (such as _1.0_) and any **Change notes**, then select **Publish**.
 
 ::: zone-end

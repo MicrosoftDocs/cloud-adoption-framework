@@ -18,7 +18,7 @@ To observe the health and availability of your cloud solution, you must configur
 
 Plan for monitoring and migration carefully. Start by including the monitoring service owner, the manager of operations, and other related personnel during the planning phase, and continue engaging them throughout the development and release cycle. Their focus will be to develop a monitoring configuration that's based on the following criteria:
 
-- What's the composition of the service, and are those dependencies monitored today? If so, are there multiple tools involved? Is there an opportunity to consolidate, without introducing risks?
+- What is the composition of the service? Are those dependencies monitored today? If so, are there multiple tools involved? Is there an opportunity to consolidate, without introducing risks?
 - What is the SLA of the service, and how will I measure and report it?
 - What should the service dashboard look like when an incident is raised? What should the dashboard look like for the service owner, and for the team that supports the service?
 - What metrics does the resource produce that I need to monitor?  

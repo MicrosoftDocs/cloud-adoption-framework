@@ -101,7 +101,7 @@ For more information about identity services in Azure, see:
 
 ## Next steps
 
-Identity is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../index.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
+Identity is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the [Decision guides overview](../index.md).
 
 > [!div class="nextstepaction"]
 > [Architectural decision guides](../index.md)
