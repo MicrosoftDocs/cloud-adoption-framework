@@ -7,7 +7,7 @@ ms.date: 04/01/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: readiness
+ms.custom: readiness, fasttrack-edit
 ---
 
 # Recommended naming and tagging conventions
@@ -94,6 +94,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | App Service plan                    | plan-                |
 | Web app                             | app-                 |
 | Function app                        | func-                |
+| Logic app                           | logic-               |
 | Cloud service                       | cld-                 |
 | Azure SQL Database server           | sql-                 |
 | Azure SQL database                  | sqldb-               |
