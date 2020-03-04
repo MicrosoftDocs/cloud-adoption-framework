@@ -93,7 +93,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | App Service plan                    | plan-                |
 | Web app                             | app-                 |
 | Function app                        | func-                |
-| Logic app                           | la-                  |
+| Logic app                           | logic-               |
 | Cloud service                       | cld-                 |
 | Azure SQL Database server           | sql-                 |
 | Azure SQL database                  | sqldb-               |
