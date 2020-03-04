@@ -1,6 +1,6 @@
 ---
-title: "Azure server management tools and services"
-description: Azure server management tools and services
+title: "Azure server management services"
+description: Use the Cloud Adoption Framework for Azure to learn about areas within the suite of Azure server management services.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
