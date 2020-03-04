@@ -80,6 +80,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | Network security group              | nsg-                 |
 | Route table                         | route-               |
 | Virtual machine                     | vm                   |
+| Azure Arc connected machines        | arcm-                |
 | VM storage account                  | stvm                 |
 | Public IP                           | pip-                 |
 | Load balancer                       | lb-                  |
