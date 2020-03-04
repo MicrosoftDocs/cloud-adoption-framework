@@ -1,6 +1,6 @@
 ---
-title: "What business outcomes are associated with transformation journeys?"
-description: Explanation of the business outcomes associated with cloud transformations.
+title: "Business outcomes from transformation journeys"
+description: Use the Cloud Adoption Framework for Azure to understand the business outcomes associated with cloud transformations.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
