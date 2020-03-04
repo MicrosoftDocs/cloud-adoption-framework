@@ -1,6 +1,6 @@
 ---
 title: "Business alignment in cloud management"
-description: Use the Cloud Adoption Framework for Azure to learn how better manage your cloud operations and develop tighter business alignment.
+description: Use the Cloud Adoption Framework for Azure to learn how to better manage your cloud operations and develop tighter business alignment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
