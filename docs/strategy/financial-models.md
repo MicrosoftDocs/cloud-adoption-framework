@@ -1,6 +1,6 @@
 ---
-title: "Create a financial model for cloud transformation"
-description: How to create a financial model for cloud transformation.
+title: "Financial model for cloud migration"
+description: Learn what you need to create a financial model that accurately represents the full business value of a cloud transformation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018

@@ -1,6 +1,6 @@
 ---
-title: "Understand the impact of global market decisions"
-description: Explanation of the concept of global markets
+title: "Impact of global market decisions"
+description: Use the Cloud Adoption Framework for Azure to understand how global market decisions can affect the transformation journey to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
