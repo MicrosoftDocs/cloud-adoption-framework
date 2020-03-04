@@ -82,7 +82,8 @@ The following list provides recommended Azure resource type prefixes to use when
 | Virtual machine                     | vm                   |
 | VM storage account                  | stvm                 |
 | Public IP                           | pip-                 |
-| Load balancer                       | lb-                  |
+| Load balancer (Internal)            | ilb-                 |
+| Load balancer (External)            | elb-                 |
 | NIC                                 | nic-                 |
 | Key vault                           | kv-                  |
 | AKS cluster                         | aks-                 |
@@ -120,6 +121,9 @@ The following list provides recommended Azure resource type prefixes to use when
 | IoT hub                             | iot-                 |
 | Notification hubs                   | ntf-                 |
 | Notification Hubs namespace         | ntfns-               |
+| Log Analytics Workspace             | log-                 |
+| Application Insights                | appi-                |
+| Recovery Services Vault             | rsv-                 |
 
 ### Metadata tags
 
