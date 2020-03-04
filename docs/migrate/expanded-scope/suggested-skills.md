@@ -3,7 +3,7 @@ title: "Skills readiness for cloud migration"
 description: Skills readiness for cloud migration
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/19/2019
+ms.date: 02/25/2020
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -23,7 +23,7 @@ Implementation of "Migrate" processes will build on the skills acquired during "
 
 The following tools can aid the team in execution of assess activities:
 
-- [Balance the portfolio](./balance-the-portfolio.md): Ensure balance and proper investment allocations across an application portfolio.
+- [Balance the portfolio](../../strategy/balance-the-portfolio.md): Ensure balance and proper investment allocations across an application portfolio.
 - [Build a business justification](../../strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
 - [Rationalize the digital estate](../../digital-estate/rationalize.md): Rationalize assets in the digital estate.
 - [Application portfolio assessment](https://docs.microsoft.com/learn/modules/app-and-infra-migration-and-modernization): Criteria for making decisions regarding migration or innovation options within the application portfolio.

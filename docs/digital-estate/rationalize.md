@@ -3,7 +3,7 @@ title: "Rationalize the digital estate"
 description: Use cloud rationalization to evaluate your digital assets and determine the best approach to hosting them in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/10/2018
+ms.date: 02/25/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -78,7 +78,7 @@ In a traditional on-premises environment, hosting small, unused assets seldom ca
 
 However, when you move to a cloud accounting model, retiring assets can produce significant savings in annual operating costs and up-front migration efforts.
 
-It's not uncommon for organizations to retire 20% or more of their digital estate after completing a quantitative analysis. We recommend doing further qualitative analysis before deciding on such an action. After it's confirmed, the retirement of those assets can produce the first ROI victory in the cloud migration. In many cases, this is one of the biggest cost-saving factors. As such, we recommend that the cloud strategy team oversee the validation and retirement of assets, in parallel with the build phase of the migration process, to allow for an early financial win.
+It's not uncommon for organizations to retire 20% or more of their digital estate after completing a quantitative analysis. We recommend conducting further qualitative analysis before taking action. After it's confirmed, retiring those assets can produce the first ROI victory of the cloud migration. This is often one of the biggest cost-saving factors. Therefore, the cloud strategy team should oversee the validation and retirement of assets, in parallel with execution of the [Migrate methodology](../migrate/index.md), to achieve an early financial win.
 
 ### Program adjustments
 

@@ -13,7 +13,7 @@ ms.subservice: operate
 
 Azure Change Tracking and Inventory provide alerts on the configuration state of your hybrid environment and changes to that environment. It can report critical file, service, software, and registry changes that might affect your deployed servers.
 
-By default, the Azure Automation inventory service doesn't monitor files or registry settings. The solution does provide a list of registry keys that we recommend for monitoring. To see this list, go to your Automation account in the Azure portal and select **Inventory** > **Edit Settings**.
+By default, the Azure Automation inventory service doesn't monitor files or registry settings. The solution does provide a list of registry keys that we recommend for monitoring. To see this list, go to your Automation account in the Azure portal, then select **Inventory** > **Edit Settings**.
 
 ![Screenshot of the Azure Automation Inventory view in the Azure portal](./media/change-tracking1.png)
 

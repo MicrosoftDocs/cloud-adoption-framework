@@ -10,6 +10,8 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
+<!-- cspell:ignore opsman ITSM -->
+
 # Cloud monitoring guide: Monitoring platforms overview
 
 Microsoft provides a range of monitoring capabilities from two products: System Center Operations Manager, which was designed for on-premises and then extended to the cloud, and Azure Monitor, which was designed for the cloud but can also monitor on-premises systems. These two offerings deliver core monitoring services, such as alerting, service uptime tracking, application and infrastructure health monitoring, diagnostics, and analytics.
@@ -62,7 +64,7 @@ Operations Manager requires significant infrastructure and maintenance to suppor
 
 ### Azure Monitor
 
-Azure Monitor is a software as a service (SaaS) service, where all the infrastructure supporting it is running in Azure and managed by Microsoft. It's designed to perform monitoring, analytics, and diagnostics at scale, and is available in all national clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) that are necessary to support Azure Monitor are maintained by Microsoft.  
+Azure Monitor is a software as a service (SaaS) offering, so its supporting infrastructure runs in Azure and is managed by Microsoft. It's performs monitoring, analytics, and diagnostics at scale. It is available in all national clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) that support Azure Monitor are maintained by Microsoft.  
 
 ![Diagram of Azure Monitor](./media/monitoring-management-guidance-cloud-and-on-premises/azure-monitor-greyed-optimized.svg)
 
@@ -110,9 +112,9 @@ Insights, such as Azure Monitor for containers and Azure Monitor for VMs, use th
 
 Azure Monitor separates data collection from actions taken against that data, which supports distributed microservices in a cloud environment. It consolidates data from multiple sources into a common data platform, and provides analysis, visualization, and alerting capabilities based on the collected data.
 
-All data that's collected by Azure Monitor is stored as either logs or metrics, and different features of Monitor rely on either. Metrics contain numerical values in time series that are well suited for near-real-time alerting and fast detection of issues. Logs contain text or numerical data, and are supported by a powerful query language that make them especially useful for performing complex analysis.
+Data collected by Azure Monitor is stored as either logs or metrics, and different features of Azure Monitor rely on either. Metrics contain numerical values in time series that are well suited for near-real-time alerting and quick detection of issues. Logs contain text or numerical data and can be queried using a powerful language especially useful for performing complex analysis.
 
-Because Monitor separates data collection from actions against that data, it might not be able to provide near-real-time alerting in many cases. To alert on log data, queries are run on a recurring schedule defined in the alert. This behavior allows Azure Monitor to easily correlate data from all monitored sources, and you can interactively analyze data in a variety of ways. This is especially helpful for doing root cause analysis and identifying where else an issue might occur.
+Because Azure Monitor separates data collection from actions against that data, it might be unable to provide near-real-time alerting in many cases. To alert on log data, queries are run on a recurring schedule defined in the alert. This behavior allows Azure Monitor to easily correlate data from all monitored sources, and you can interactively analyze data in a variety of ways. This is especially helpful for doing root cause analysis and identifying where else an issue might occur.
 
 ## Health monitoring
 

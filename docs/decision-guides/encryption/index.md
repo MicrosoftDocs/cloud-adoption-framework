@@ -47,12 +47,12 @@ Using a cloud-native key management system includes these assumptions:
 
 ### Bring your own key
 
-With a bring your own key approach, you generate keys on dedicated HSM hardware within your on-premises environment, then securely transferring these keys to a cloud-based management system such as Azure Key Vault for use with your cloud-hosted resources.
+With a bring-your-own-key approach, you generate keys on dedicated HSM hardware within your on-premises environment, then securely transferring these keys to a cloud-based management system such as Azure Key Vault for use with your cloud-hosted resources.
 
-**Bring your own key assumptions:** Generating keys on-premises and using them with a cloud-based key management system includes these assumptions:
+**Bring-your-own-key assumptions:** Generating keys on-premises and using them with a cloud-based key management system includes these assumptions:
 
 - You trust the underlying security and access control infrastructure of the cloud platform for hosting and using your keys and secrets.
-- Your cloud-hosted applications or services are able to access and use keys and secrets in a robust and secure way.
+- Your cloud-hosted applications or services can access and use keys and secrets in a robust and secure way.
 - You are required by regulatory or organizational policy to keep the creation and management of your organization's secrets and keys on-premises.
 
 ### On-premises (hold your own key)
@@ -123,7 +123,7 @@ For more information about encryption and key management in Azure, see:
 
 ## Next steps
 
-Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../index.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
+Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the [Decision guides overview](../index.md).
 
 > [!div class="nextstepaction"]
 > [Architectural decision guides](../index.md)

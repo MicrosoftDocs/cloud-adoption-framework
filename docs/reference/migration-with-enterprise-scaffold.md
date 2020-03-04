@@ -10,6 +10,8 @@ ms.subservice: reference
 ROBOTS: NOINDEX
 ---
 
+<!-- cSpell:ignore rodend subscope ITSM -->
+
 # Azure enterprise scaffold: Prescriptive subscription governance
 
 > [!NOTE]
@@ -42,7 +44,7 @@ The enterprise scaffold can serve as the foundation of each new subscription wit
 >
 The following image shows the components of the scaffold. The foundation relies on a solid plan for the management hierarchy and subscriptions. The pillars consist of Resource Manager policies and strong naming standards. The rest of the scaffold are core Azure capabilities and features that enable and connect a secure and manageable environment.
 
-![Enterprise scaffold](../_images/reference/scaffoldv2.png)
+![Enterprise scaffold](../_images/reference/scaffold-v2.png)
 
 ## Define your hierarchy
 
@@ -264,7 +266,7 @@ This information can be viewed and acted on at multiple levels and are continual
 
 One of the major changes that you will face when you move from on-premises cloud to the public cloud is the switch from capital expenditure (buying hardware) to operating expenditure (paying for service as you use it). This switch also requires more careful management of your costs. The benefit of the cloud is that you can fundamentally and positively affect the cost of a service you use by merely shutting down or resizing it when it's not needed. Deliberately managing your costs in the cloud is a best practice and one that mature customers do daily.
 
-Microsoft provides several tools for you to be able to visualize, track, and manage your costs. We also provide a full set of APIs to enable you to customize and integrate cost management into your own tools and dashboards. These tools are loosely grouped into Azure portal capabilities and external capabilities.
+Microsoft provides several tools that help you visualize, track, and manage your costs. We also provide a full set of APIs to enable you to customize and integrate cost management into your own tools and dashboards. These tools are loosely grouped into Azure portal capabilities and external capabilities.
 
 ### Azure portal capabilities
 

@@ -1,6 +1,6 @@
 ---
 title: Deployment Acceleration risk tolerance metrics and indicators
-description: Quantify business risk tolerance related to Deployment Acceleration in the Microsoft Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to quantify business risk tolerance related to Deployment Acceleration.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019
