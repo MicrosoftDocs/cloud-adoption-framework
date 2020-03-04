@@ -11,9 +11,11 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+# Azure management guide: Before you start
+
+
 ::: zone target="docs"
 
-# Azure management guide: Before you start
 
 > [!NOTE]
 > This guide is a starting point for innovation guidance in the Cloud Adoption Framework. It is also available in Azure Quickstart Center. See the tip later in this article for a link to Azure Quickstart Center.
