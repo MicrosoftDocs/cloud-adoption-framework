@@ -1,6 +1,6 @@
 ---
-title: "Prerequisites for an effective cloud adoption plan"
-description: Understand the prerequisites for an effective cloud adoption plan.
+title: "Prerequisites for a cloud adoption plan"
+description: Use the Cloud Adoption Framework for Azure to understand the prerequisites for an effective cloud adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019
