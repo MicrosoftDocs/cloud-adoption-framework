@@ -1,6 +1,6 @@
 ---
 title: "Recommended naming and tagging conventions"
-description: This article provides detailed resource naming and tagging recommendations aimed specifically at supporting enterprise cloud adoption efforts.
+description: Learn detailed resource naming and tagging recommendations aimed specifically at supporting enterprise cloud adoption efforts.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/01/2019

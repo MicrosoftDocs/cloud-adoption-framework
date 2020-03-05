@@ -1,6 +1,6 @@
 ---
-title: "Scaling with multiple Azure subscriptions"
-description: Learn how to scale with multiple Azure subscriptions.
+title: "Scaling with Azure subscriptions"
+description: Use the Cloud Adoption Framework for Azure to learn how to develop a strategy for scaling with multiple Azure subscriptions.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 05/20/2019
