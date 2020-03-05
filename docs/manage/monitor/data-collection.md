@@ -1,6 +1,6 @@
 ---
-title: "Cloud monitoring guide: Collect the right data"
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
+title: "Collect monitoring data in the cloud"
+description: Learn to observe the health and availability of your cloud solution to collect the right monitoring data.
 author: MGoedtel
 ms.author: magoedte
 ms.date: 06/26/2019

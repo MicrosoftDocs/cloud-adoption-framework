@@ -1,6 +1,6 @@
 ---
-title: "Workload operations - Cloud Management and Operations"
-description: Workload operations - Cloud Management and Operations
+title: "Workload operations in cloud management"
+description: Understand an approach to investing in the continued operations of these high priority workloads to drive improved business commitments.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

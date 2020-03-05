@@ -1,6 +1,6 @@
 ---
-title: Workload specialization for cloud management in Azure
-description: Improve workload-specific cloud management operations
+title: Specialized workloads for cloud management
+description: Use the Cloud Adoption Framework for Azure to learn about specialized workload cloud management operations. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

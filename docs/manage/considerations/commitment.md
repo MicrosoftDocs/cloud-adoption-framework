@@ -1,6 +1,6 @@
 ---
-title: "Business commitment: Cloud management and operations"
-description: "Business commitment: Cloud management and operations"
+title: "Business commitment in cloud management"
+description: "Calculate future returns from the classification and impact of interruptions to various workloads to make better business decisions and commitments."
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

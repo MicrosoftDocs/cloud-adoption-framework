@@ -1,6 +1,6 @@
 ---
-title: "Business impact - Cloud Management and Operations"
-description: Business impact - Cloud Management and Operations
+title: "Business impact in cloud management"
+description: Use the Cloud Adoption Framework for Azure to learn how to determine and understand the impact that outages or performance degradation can have on your business.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

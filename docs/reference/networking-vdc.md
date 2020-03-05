@@ -1,6 +1,6 @@
 ---
 title: "The virtual datacenter: A network perspective"
-description: Learn how to build your virtual datacenter in Azure.
+description: Use the Cloud Adoption Framework for Azure to learn how to use Azure to seamlessly extend your infrastructure into the cloud and build multitier architectures.
 author: tracsman
 ms.author: jonor
 ms.date: 02/25/2020

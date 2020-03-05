@@ -1,6 +1,6 @@
 ---
 title: "Establish an operational fitness review"
-description: Guidance on operational fundamentals
+description: Establish an operational fitness review process to fully understand the problems that result from running workloads in a production environment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2018
