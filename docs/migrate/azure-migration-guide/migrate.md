@@ -40,9 +40,7 @@ To perform a migration using Azure Migrate follow these steps:
 1. Select **Add a tool** to start your migration project.
 1. Select the subscription, resource group, and geography to host the migration.
 1. Select **Select assessment tool** > **Azure Migrate: Server Assessment** >  **Next**.
-1. Select **Review + add tools**, and verify the configuration. Click **Add tools** to initiate the job to create the migration project and register the selected solutions.
-
-<!-- TODO: TBA -->
+1. Select **Review + add tools**, and verify the configuration. Select **Add tools** to initiate the job to create the migration project and register the selected solutions.
 
 ### Learn more
 
@@ -71,7 +69,7 @@ The following steps outline the process to use Site Recovery to migrate:
 
 1. Set up the source environment as appropriate.
 1. Set up the target environment.
-    1. Click **Prepare infrastructure > Target**, and select the Azure subscription you want to use.
+    1. Select **Prepare infrastructure > Target**, then select the Azure subscription you want to use.
     1. Specify the Resource Manager deployment model.
     1. Site Recovery checks that you have one or more compatible Azure storage accounts and networks.
 1. Set up a replication policy.
@@ -123,7 +121,7 @@ If this is the first time using Azure Database Migration Service, you need to re
 After you register the resource provider, you can create an instance of Azure Database Migration Service.
 
 1. Select **+Create a resource** and search the marketplace for **Azure Database Migration Service**.
-1. Complete the **Create Migration Service** wizard, and select **Create**.
+1. Complete the **Create Migration Service** wizard, then select **Create**.
 
 The service is now ready to migrate the supported source databases (for example, SQL Server, MySQL, PostgreSQL, or MongoDb).
 
@@ -155,11 +153,11 @@ The Data Migration Assistant (DMA) helps you upgrade to a modern data platform b
 To get started with the Data Migration Assistant follow these steps.
 
 1. Download and Install the Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
-1. Create an assessment by clicking the **New (+)** icon and select the **Assessment** project type.
-1. Set the source and target server type. Click **Create**.
+1. Create an assessment by selecting the **New (+)** icon, then select the **Assessment** project type.
+1. Set the source and target server type, then select **Create**.
 1. Configure the assessment options as required (recommend all defaults).
 1. Add the databases to assess.
-1. Click **Next** to start the assessment.
+1. Select **Next** to start the assessment.
 1. View results within the Data Migration Assistant tool set.
 
 For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](https://docs.microsoft.com/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports and then use provided Power BI reports to analyze the results.
@@ -205,6 +203,12 @@ For more information, see:
 # [Third-party migration tools](#tab/third-party-tools)
 
 Several third-party migration tools and ISV services can assist you with the migration process. Each offers different benefits and strengths. These tools include:
+
+## UnifyCloud
+
+UnifyCloud is an ISV service that provides assessment, migration and modernization automation tools.
+
+[Learn more](https://www.unifycloud.com/)
 
 ## Cloudamize
 

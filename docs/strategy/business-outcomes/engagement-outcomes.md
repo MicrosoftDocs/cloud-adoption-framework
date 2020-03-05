@@ -1,6 +1,6 @@
 ---
-title: "Examples of customer engagement outcomes"
-description: Examples of customer engagement outcomes
+title: "Customer engagement outcome examples"
+description: Learn about examples of customer engagement to understanding the needs of customers and the ecosystem around them during their business transformation journey.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
@@ -8,6 +8,8 @@ ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
+
+<!-- cSpell:ignore Exak -->
 
 # Examples of customer engagement outcomes
 
@@ -23,7 +25,7 @@ The following are examples and outcomes related to customer engagement:
 
 During customer-obsessed transformations, like a cloud-enabled application innovation effort, customers respond from direct engagement and the ability to see their needs met quickly by the development team. Cycle time is a Six Sigma term that refers to the duration from the start to finish of a function. For business leaders who are customer-obsessed and investing heavily in improving customer engagement, cycle time can be a strong business outcome.
 
-- **Example:** A services company that provides business-to-business (B2B) services is attempting to hold on to market share in a competitive market. Customers who've left for a competing service provider have stated that their overly complex technical solution interferes with their business processes and is the primary reason for leaving. In this case, cycle time is imperative. Today, it takes 12 months for a feature to go from request to release. If it's prioritized by the executive team, that cycle can be reduced to six to nine months. Through a cloud-enabled application innovation effort, cloud-native application models and Azure DevOps integration, the team was able to cut cycle time down to one month, allowing the business and application development teams to interact more directly with customers.
+- **Example:** A services company that provides business-to-business (B2B) services is trying to retain market share in a competitive market. Customers who've left for a competing service provider found that their overly complex technical solution interferes with their business processes and is the primary reason for leaving. In this case, cycle time is imperative. Today, it takes 12 months for a feature to progress from request to release. If it's prioritized by the executive team, that cycle can be reduced to six to nine months. Through a cloud-enabled application innovation effort, cloud-native application models, and Azure DevOps integration, the team cut cycle time down to one month, allowing the business and application development teams to interact more directly with customers.
 
 > **ExakTime**
 >

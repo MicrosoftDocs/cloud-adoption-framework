@@ -1,6 +1,6 @@
 ---
-title: Platform specialization for cloud management in Azure
-description: Improve platform-specific cloud management operations.
+title: Specialized platforms for cloud management
+description: Use the Cloud Adoption Framework for Azure to improve platform-specific cloud management operations, including improving the system design and automated remediation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -114,7 +114,7 @@ For instructions on publishing to a service catalog, see the article series on [
 
 1. In the Azure portal, go to **Managed applications center (preview)**.
 2. On the **Browse** pane, select **Service Catalog applications**.
-3. Click **+ Add** to choose an application definition from your company's service catalog.
+3. Select **+ Add** to choose an application definition from your company's service catalog.
 
 Any managed applications you're servicing are displayed.
 

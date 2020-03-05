@@ -1,6 +1,6 @@
 ---
 title: "What is data classification?"
-description: Use data classification as a starting point for cloud governance by determining and assigning value to your organization's data.
+description: Data classification allows you to determine and assign value to your organization's data and provides a common starting point for governance.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -14,7 +14,7 @@ ms.custom: governance
 
 # What is data classification?
 
-Data classification allows you to determine and assign value to your organization's data, and is a common starting point for governance. The data classification process categorizes data by sensitivity and business impact in order to identify risks. When data is classified, you can manage it in ways that protect sensitive or important data from theft or loss.
+Data classification allows you to determine and assign value to your organization's data and provides a common starting point for governance. The data classification process categorizes data by sensitivity and business impact in order to identify risks. When data is classified, you can manage it in ways that protect sensitive or important data from theft or loss.
 
 ## Understand data risks, then manage them
 

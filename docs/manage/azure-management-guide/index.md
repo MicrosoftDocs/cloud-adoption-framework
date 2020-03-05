@@ -1,6 +1,6 @@
 ---
-title: "Azure management guide: Before you start" 
-description: Learn how to manage your Azure operations with step-by-step guidance.
+title: "Azure management overview" 
+description: Learn about the Cloud Adoption Framework for Azure with this information about the basic tools needed to manage Azure production environments.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -11,9 +11,11 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+# Azure management guide: Before you start
+
+
 ::: zone target="docs"
 
-# Azure management guide: Before you start
 
 > [!NOTE]
 > This guide is a starting point for innovation guidance in the Cloud Adoption Framework. It is also available in Azure Quickstart Center. See the tip later in this article for a link to Azure Quickstart Center.
@@ -48,7 +50,7 @@ A management baseline is the minimum set of tools and processes that should be a
 ::: zone target="docs"
 
 > [!TIP]
-> For an interactive experience, view this guide in the Azure portal. Go to [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal and select **Azure Management Guide**. Then follow the step-by-step instructions.
+> For an interactive experience, view this guide in the Azure portal. Go to [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, then select **Azure Management Guide**. Then follow the step-by-step instructions.
 
 The next step is [Inventory and visibility](./inventory.md).
 

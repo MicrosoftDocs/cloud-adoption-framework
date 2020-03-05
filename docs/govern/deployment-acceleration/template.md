@@ -1,6 +1,6 @@
 ---
 title: "Deployment Acceleration template"
-description: Deployment Acceleration template
+description: Use this template to document and communicate policy statements for governing configuration and deployment issues in the cloud.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019

@@ -1,6 +1,6 @@
 ---
-title: "Configure Azure server management services for a subscription"
-description: Configure Azure server management services for a subscription
+title: "Configure the service for a subscription"
+description: Learn to configure Azure server management services for a subscription by deploying service agents to your servers and enabling management solutions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
@@ -69,7 +69,7 @@ After you complete the wizard, the policy assignment will be deployed to the env
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard Azure server management services to servers.
 
-For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal and select **Settings** > **Advanced settings**.
+For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal, then select **Settings** > **Advanced settings**.
 
 ![Screenshot of Log Analytics workspace advanced settings in the Azure portal](./media/onboarding-on-premises.png)
 
@@ -134,7 +134,7 @@ To create or modify the saved search, follow these steps:
 
 To implement this solution:
 
-1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
+1. In the Azure portal, open **All services**, then select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
 3. Search for **Activity Log Analytics** and select it.
 4. Select **Create**.
@@ -147,7 +147,7 @@ The Azure Log Analytics Agent Health solution reports on the health, performance
 
 To implement this solution:
 
-1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
+1. In the Azure portal, open **All services**, then select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
 3. Search for **Azure Log Analytics agent health** and select it.
 4. Select **Create**.
@@ -162,9 +162,9 @@ The Antimalware Assessment solution helps you identify servers that are infected
 
 To implement this solution:
 
-1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
+1. In the Azure portal, open **All services**, select select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
-3. Search for and select **Antimalware Assessment**.
+3. Search for and then select **Antimalware Assessment**.
 4. Select **Create**.
 
 You need to specify the **Workspace name** of the workspace that you created in the previous section where the solution is enabled.

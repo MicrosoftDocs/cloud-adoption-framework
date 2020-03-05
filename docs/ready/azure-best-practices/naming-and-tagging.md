@@ -7,7 +7,7 @@ ms.date: 04/01/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: ready
-ms.custom: readiness
+ms.custom: readiness, fasttrack-edit
 ---
 
 # Recommended naming and tagging conventions
@@ -80,9 +80,11 @@ The following list provides recommended Azure resource type prefixes to use when
 | Network security group              | nsg-                 |
 | Route table                         | route-               |
 | Virtual machine                     | vm                   |
+| Azure Arc connected machines        | arcm-                |
 | VM storage account                  | stvm                 |
 | Public IP                           | pip-                 |
-| Load balancer                       | lb-                  |
+| Load balancer (Internal)            | ilb-                 |
+| Load balancer (External)            | elb-                 |
 | NIC                                 | nic-                 |
 | Key vault                           | kv-                  |
 | AKS cluster                         | aks-                 |
@@ -93,6 +95,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | App Service plan                    | plan-                |
 | Web app                             | app-                 |
 | Function app                        | func-                |
+| Logic app                           | logic-               |
 | Cloud service                       | cld-                 |
 | Azure SQL Database server           | sql-                 |
 | Azure SQL database                  | sqldb-               |
@@ -120,6 +123,9 @@ The following list provides recommended Azure resource type prefixes to use when
 | IoT hub                             | iot-                 |
 | Notification hubs                   | ntf-                 |
 | Notification Hubs namespace         | ntfns-               |
+| Log Analytics Workspace             | log-                 |
+| Application Insights                | appi-                |
+| Recovery Services Vault             | rsv-                 |
 
 ### Metadata tags
 

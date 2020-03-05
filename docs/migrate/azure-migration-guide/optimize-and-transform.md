@@ -1,9 +1,9 @@
 ---
-title: "Optimize and Transform"
+title: "Optimize and promote"
 description: This part of the Azure migration guide covers areas of optimization, including reviewing the design of the solution, right sizing the services, and analyzing costs.
 author: matticusau
 ms.author: mlavery
-ms.date: 04/04/2019
+ms.date: 02/25/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -11,11 +11,17 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-# Optimize and transform
+<!-- cSpell:ignore Fservers Fdatabases -->
 
-Now that you have migrated your services to Azure, the next phase includes reviewing the solution for possible areas of optimization. This could include reviewing the design of the solution, right-sizing the services, and analyzing costs.
+<!-- markdownlint-disable MD025 DOCSMD001 -->
+
+# Test, optimize, and promote
+
+Now that you have migrated your services to Azure, the next phase includes reviewing the solution for possible areas of optimization. This effort could include reviewing the design of the solution, right-sizing the services, and analyzing costs.
 
 This phase is also an opportunity to optimize your environment and perform possible transformations of the environment. For example, you may have performed a "rehost" migration, and now that your services are running on Azure you can revisit the solutions configuration or consumed services, and possibly perform some "refactoring" to modernize and increase the functionality of your solution.
+
+The remainder of this article focuses on tools for optimizing the migrated workload. When the balance of performance and cost have been reached, a workload is ready to be promoted to production. For guidance on promotion options, see the process improvement articles on [Optimize and promote](../migration-considerations/optimize/index.md).
 
 # [Right-size assets](#tab/optimize)
 
@@ -43,8 +49,7 @@ However, for virtual machines created or migrated using other methods, or in cas
 1. Select **Size** and the desired new size from the list. You may need to adjust the filters to find the size you need.
 1. Select **Resize**.
 
-Note that resizing production virtual machines has the potential to cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
-
+Resizing production virtual machines can cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
 
 ::: zone target="chromeless"
 
@@ -92,7 +97,7 @@ Partners can use the Partner Center to review the usage.
 
 # [Cost Management](#tab/ManageCost)
 
-It's important to perform ongoing cost analysis and review. This provides you with an opportunity to resize resources as needed to balance cost and workload.
+It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 
 Azure Cost Management works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
 

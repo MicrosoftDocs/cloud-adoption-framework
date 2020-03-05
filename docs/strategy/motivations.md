@@ -1,6 +1,6 @@
 ---
-title: "Motivations: Why are we moving to the cloud?"
-description: Cloud accounting and moving to the cloud
+title: "Why are we moving to the cloud?"
+description: Use the cloud Adoption Framework for Azure to understand the motivations behind cloud migration that can help produce more successful business outcomes.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 5/19/2019
