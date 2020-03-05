@@ -1,6 +1,21 @@
 {
    "redirections": [
       {
+         "source_path": "ready/expanded-scope/terraform-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/terraform-landing-zone",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "migrate/azure-best-practices/contoso-migration-assessment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/contoso-migration-assessment",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "migrate/expanded-scope/balance-the-portfolio.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/balance-the-portfolio",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/ready/initial-org-alignment.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/initial-org-alignment",
          "redirect_document_id": true

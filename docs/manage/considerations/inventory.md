@@ -1,6 +1,6 @@
 ---
-title: "Inventory and visibility - Cloud Management and Operations"
-description: Inventory and visibility - Cloud Management and Operations
+title: "Inventory and visibility in Azure"
+description: Learn about what to manage (inventory) and how those managed workloads and assets change over time (visibility). 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

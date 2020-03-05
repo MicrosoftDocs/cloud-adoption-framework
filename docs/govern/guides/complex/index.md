@@ -34,10 +34,14 @@ The following diagram shows the governance MVP hierarchy for organizing resource
 Every application should be deployed in the proper area of the management group, subscription, and resource group hierarchy. During deployment planning, the cloud governance team will create the necessary nodes in the hierarchy to empower the cloud adoption teams.
 
 1. Define a management group for each business unit with a detailed hierarchy that reflects geography first, then environment type (for example, production or nonproduction environments).
-2. Create a production subscription and a nonproduction subscription for each unique combination of discrete business unit or geography. Creating multiple subscriptions requires careful consideration. For more information, see the [Subscription decision guide](../../../decision-guides/subscriptions/index.md).
-3. Apply [consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) at each level of this grouping hierarchy.
-4. Resource groups should be deployed in a manner that considers its contents lifecycle. Resources that are developed together, managed together, and retired together belong in the same resource group. For more information on best practices for using resource groups, [see here](../../../decision-guides/resource-consistency/index.md).
-5. [Region selection](../../../decision-guides/regions/index.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
+
+1. Create a production subscription and a nonproduction subscription for each unique combination of discrete business unit or geography. Creating multiple subscriptions requires careful consideration. For more information, see the [Subscription decision guide](../../../decision-guides/subscriptions/index.md).
+
+1. Apply [consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) at each level of this grouping hierarchy.
+
+1. Resource groups should be deployed in a manner that considers its contents lifecycle. Resources that are developed together, managed together, and retired together belong in the same resource group. For more information on best practices for using resource groups, [see here](../../../decision-guides/resource-consistency/index.md).
+
+1. [Region selection](../../../decision-guides/regions/index.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
 
 ![Diagram of large enterprise resource organization](../../../_images/govern/large-enterprise-resource-organization.png)
 

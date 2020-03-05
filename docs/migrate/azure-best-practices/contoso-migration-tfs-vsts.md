@@ -10,9 +10,11 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
+<!-- cSpell:ignore contosodevmigration contosomigration onmicrosoft visualstudio sourceconnectionstring CONTOSOTFS DACPAC SQLDB SQLSERVERNAME INSTANCENAME azuredevopsmigration validateonly -->
+
 # Refactor a Team Foundation Server deployment to Azure DevOps Services
 
-This article shows how the fictional company Contoso refactors their on-premises Team Foundation Server (TFS) deployment by migrating it to Azure DevOps Services in Azure. Contoso's development team have used TFS for team collaboration and source control for the past five years. Now, they want to move to a cloud-based solution for dev and test work, and for source control. Azure DevOps Services will play a role as they move to an Azure DevOps model, and develop new cloud-native apps.
+This article shows how the fictional company Contoso refactors their on-premises Team Foundation Server (TFS) deployment by migrating it to Azure DevOps Services in Azure. The Contoso development team has used TFS for team collaboration and source control for the past five years. Now, they want to move to a cloud-based solution for dev and test work, and for source control. Azure DevOps Services will play a role as they move to an Azure DevOps model, and develop new cloud-native apps.
 
 ## Business drivers
 
@@ -30,7 +32,7 @@ The Contoso cloud team has pinned down goals for the migration to Azure DevOps S
 - Work item data and history for the last year must be migrated.
 - They don't want to set up new user names and passwords. All current system assignments must be maintained.
 - They want to move away from Team Foundation Version Control (TFVC) to Git for source control.
-- The cutover to Git will be a "tip migration" that imports only the latest version of the source code. It will happen during a downtime when all work will be halted as the codebase shifts. They understand that only the current master branch history will be available after the move.
+- The transition to Git will be a "tip migration" that imports only the latest version of the source code. It will happen during a downtime when all work will be halted as the codebase shifts. They understand that only the current master branch history will be available after the move.
 - They're concerned about the change and want to test it before doing a full move. They want to retain access to TFS even after the move to Azure DevOps Services.
 - They have multiple collections, and want to start with one that has only a few projects to better understand the process.
 - They understand that TFS collections are a one-to-one relationship with Azure DevOps Services organizations, so they'll have multiple URLs. However, this matches their current model of separation for code bases and projects.
@@ -164,7 +166,7 @@ Contoso admins run the TFS Migration Tool against the ContosoDev collection data
 
      ![TFS](./media/contoso-migration-tfs-vsts/collection8.png)
 
-9. The validation passes, and is confirmed by the tool.
+9. The validation passes and is confirmed by the tool.
 
     ![TFS](./media/contoso-migration-tfs-vsts/collection9.png)
 
@@ -217,10 +219,10 @@ With preparation in place, Contoso admins can now focus on the migration. After 
 Before they start, the admins schedule downtime with the dev team, to take the collection offline for migration. These are the steps for the migration process:
 
 1. **Detach the collection.** Identity data for the collection resides in the TFS server configuration database while the collection is attached and online. When a collection is detached from the TFS server, it takes a copy of that identity data, and packages it with the collection for transport. Without this data, the identity portion of the import cannot be executed. It's recommended that the collection stay detached until the import has been completed, as there's no way to import the changes which occurred during the import.
-2. **Generate a backup.** The next step of the migration process is to generate a backup that can be imported into Azure DevOps Services. Data-tier Application Component Packages (DACPAC), is a SQL Server feature that allows database changes to be packaged into a single file, and deployed to other instances of SQL. It can also be restored directly to Azure DevOps Services, and is therefore used as the packaging method for getting collection data into the cloud. Contoso will use the SqlPackage.exe tool to generate the DACPAC. This tool is included in SQL Server Data Tools.
+2. **Generate a backup.** The next step of the migration process is to generate a backup that can be imported into Azure DevOps Services. Data-tier Application Component Packages (DACPAC), is a SQL Server feature that allows database changes to be packaged into a single file, and deployed to other instances of SQL. It can also be restored directly to Azure DevOps Services, and it is used as the packaging method for getting collection data into the cloud. Contoso will use the SqlPackage.exe tool to generate the DACPAC. This tool is included in SQL Server Data Tools.
 3. **Upload to storage.** After the DACPAC is created, they upload it to Azure Storage. After it's uploaded, they get a shared access signature (SAS), to allow the TFS Migration Tool access to the storage.
 4. **Fill out the import.** Contoso can then fill out missing fields in the import file, including the DACPAC setting. To start with they'll specify that they want to do a **dry run** import, to check that everything's working properly before the full migration.
-5. **Do a dry run.** Dry run imports help test collection migration. Dry runs have limited life, and are deleted before a production migration runs. They're deleted automatically after a set duration. A note about when the dry run will be deleted is included in the success email received after the import finishes. Take note and plan accordingly.
+5. **Do a dry run.** Dry run imports help test collection migration. Dry runs have limited life, so they're deleted before a production migration runs. They're deleted automatically after a set duration. A note about when the dry run will be deleted is included in the success email received after the import finishes. Take note and plan accordingly.
 6. **Complete the production migration.** With the dry run migration completed, Contoso admins do the final migration by updating the **import.json** file, and running import again.
 
 ### Detach the collection
@@ -239,7 +241,7 @@ Before starting, Contoso admins take a local SQL Server backup, and VMware snaps
 
     ![Migrate](./media/contoso-migration-tfs-vsts/migrate3.png)
 
-4. In **Detach Progress**, they monitor progress and select **Next** when the process finishes.
+4. In **Detach Progress**, they monitor progress and then select **Next** when the process finishes.
 
     ![Migrate](./media/contoso-migration-tfs-vsts/migrate4.png)
 
@@ -259,16 +261,16 @@ Before starting, Contoso admins take a local SQL Server backup, and VMware snaps
 
 Contoso creates a backup (DACPAC) for import into Azure DevOps Services.
 
-- SqlPackage.exe in SQL Server Data Tools is used to create the DACPAC. There are multiple versions of SqlPackage.exe installed with SQL Server Data Tools, located under folders with names such as 120, 130, and 140. It's important to use the right version to prepare the DACPAC.
-- TFS 2018 imports need to use SqlPackage.exe from the 140 folder or higher. For CONTOSOTFS, this file is located in folder: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\140
+- SqlPackage.exe in SQL Server Data Tools is used to create the DACPAC. There are multiple versions of SqlPackage.exe installed with SQL Server Data Tools, located under folders with names like 120, 130, and 140. It's important to use the right version to prepare the DACPAC.
+
+- TFS 2018 imports need to use SqlPackage.exe from the 140 folder or higher. For CONTOSOTFS, this file is located in:
+    `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\140`
 
 Contoso admins generate the DACPAC as follows:
 
 1. They open a command prompt and navigate to the SQLPackage.exe location. They type this following command to generate the DACPAC:
 
-    ``` console
-    SqlPackage.exe /sourceconnectionstring:"Data Source=SQLSERVERNAME\INSTANCENAME;Initial Catalog=Tfs_ContosoDev;Integrated Security=True" /targetFile:C:\TFSMigrator\Tfs_ContosoDev.dacpac /action:extract /p:ExtractAllTableData=true /p:IgnoreUserLoginMappings=true /p:IgnorePermissions=true /p:Storage=Memory
-    ```
+    `SqlPackage.exe /sourceconnectionstring:"Data Source=SQLSERVERNAME\INSTANCENAME;Initial Catalog=Tfs_ContosoDev;Integrated Security=True" /targetFile:C:\TFSMigrator\Tfs_ContosoDev.dacpac /action:extract /p:ExtractAllTableData=true /p:IgnoreUserLoginMappings=true /p:IgnorePermissions=true /p:Storage=Memory`
 
     ![Backup](./media/contoso-migration-tfs-vsts/backup1.png)
 
@@ -296,11 +298,11 @@ After the DACPAC is created, Contoso uploads it to Azure Storage.
 
     ![Upload](./media/contoso-migration-tfs-vsts/backup7.png)
 
-4. After the file is uploaded, they select the file name > **Generate SAS**. They expand the blob containers under the storage account, select the container with the import files, and select **Get Shared Access Signature**.
+4. After the file is uploaded, they select the file name > **Generate SAS**. They expand the blob containers under the storage account, select the container with the import files, then select **Get Shared Access Signature**.
 
     ![Upload](./media/contoso-migration-tfs-vsts/backup8.png)
 
-5. They accept the defaults and select **Create**. This enables access for 24 hours.
+5. They accept the defaults, then select **Create**. This enables access for 24 hours.
 
     ![Upload](./media/contoso-migration-tfs-vsts/backup9.png)
 

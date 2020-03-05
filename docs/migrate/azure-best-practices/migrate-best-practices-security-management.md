@@ -127,7 +127,7 @@ Azure provides a couple of solutions:
 - **Web application firewall:** A feature of Azure Application Gateway that provides centralized protection for web apps.
   - It protects web apps without requiring back-end code modifications.
   - It protects multiple web apps at the same time behind an application gateway.
-  - A web application firewall can be monitored using Azure Monitor, and is integrated into Azure Security Center.
+  - A web application firewall can be monitored using Azure Monitor and is integrated into Azure Security Center.
 
 ![Secure web apps](./media/migrate-best-practices-security-management/web-apps.png)
 *Azure Key Vault*
@@ -147,7 +147,7 @@ As you migrate your workloads and run them in Azure, staff with workload access 
 - RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by apps and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
 - RBAC can assign roles to security principles, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
 - RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
-- Ensure that admins with Azure access are only able to access resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
+- Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
 
 ![Access control](./media/migrate-best-practices-security-management/subscription.png)
 *Access control - IAM*
@@ -400,13 +400,13 @@ Site Recovery replicates VMs from a primary to secondary Azure region. When disa
 
 ## Best practice: Use managed disks and availability sets
 
-Azure uses availability sets to logically group VMs together, and to isolate VMs in a set from other resources. VMs in an availability set are spread across multiple fault domains with separate subsystems, to protect against local failures, and are also spread across multiple update domains so that not all VMs in a set reboot at the same time.
+Azure uses availability sets to logically group VMs together, and to isolate VMs in a set from other resources. VMs in an availability set are spread across multiple fault domains with separate subsystems, which protects against local failures. The VMs are also spread across multiple update domains, preventing a simultaneous reboot of all VMs in the set.
 
-Azure managed disks simplify disk management for Azure IaaS VMs by managing the storage accounts associated with the VM disks.
+Azure managed disks simplify disk management for Azure virtual machines by managing the storage accounts associated with the VM disks.
 
-- We recommend that you use managed disks where possible. You only have to specify the type of storage you want to use and the size of disk you need, and Azure creates and manages the disk for you, behind the scenes.
-- You can convert existing disks to managed.
-- You should create VMs in availability sets for high resilience and availability. When planned or unplanned outages occur, availability sets ensure that at least one of your VMs in the set continues to be available.
+- Use managed disks wherever possible. You only have to specify the type of storage you want to use and the size of disk you need, and Azure creates and manages the disk for you.
+- You can convert existing disks to managed disks.
+- You should create VMs in availability sets for high resilience and availability. When planned or unplanned outages occur, availability sets ensure that at least one VM in the set remains available.
 
 ![Managed disks](./media/migrate-best-practices-security-management/managed-disks.png)
 *Managed disks*

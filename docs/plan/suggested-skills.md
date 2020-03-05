@@ -1,6 +1,6 @@
 ---
-title: "Getting started on a skills readiness path"
-description: Getting started on a skills readiness path
+title: "Get started on a skills readiness path"
+description: Lead the adoption of cloud services by helping the organization understand and embrace the associated changes by getting started on a skills readiness path.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019

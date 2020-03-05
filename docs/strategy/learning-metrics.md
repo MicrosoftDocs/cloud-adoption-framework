@@ -1,6 +1,6 @@
 ---
-title: "How can we align efforts to meaningful learning metrics?"
-description: Explanation of the concept of learning metrics
+title: "Align efforts to learning metrics"
+description: Understand how to align efforts to measure and communicate the impact a transformation will have on the business.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

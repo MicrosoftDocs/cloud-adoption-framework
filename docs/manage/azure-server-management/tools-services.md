@@ -1,6 +1,6 @@
 ---
-title: "Azure server management tools and services"
-description: Azure server management tools and services
+title: "Azure server management services"
+description: Use the Cloud Adoption Framework for Azure to learn about areas within the suite of Azure server management services.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
@@ -32,7 +32,7 @@ Migration services can help you migrate your workloads into Azure. To provide th
 
 ## Protect
 
-To protect your data, you need to plan for backup, high availability, encryption, authorization, and related operational issues. These topics are covered extensively online, so here we'll focus on building a Business Continuity Disaster Recovery (BCDR) plan. We'll include references to documentation that describes in detail how to implement and deploy this type of plan.
+To protect your data, you need to plan for backup, high availability, encryption, authorization, and related operational issues. These topics are covered extensively online, so here we'll focus on building a business continuity and disaster recovery (BCDR) plan. We'll include references to documentation that describes in detail how to implement and deploy this type of plan.
 
 When you build data-protection strategies, first consider breaking down your workload applications into their different tiers. This approach helps because each tier typically requires its own unique protection plan. To learn more about designing applications to be resilient, see [Designing resilient applications for Azure](https://docs.microsoft.com/azure/architecture/resiliency).
 

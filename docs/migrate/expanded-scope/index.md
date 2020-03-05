@@ -3,7 +3,7 @@ title: "Cloud migration expanded scope checklist"
 description: Review the prerequisites, tools, and approaches to migrating virtual machines to the cloud. Also, learn complexities that occur during a rehost migration to Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/10/2019
+ms.date: 02/25/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -17,18 +17,17 @@ While this guide is an effective baseline to familiarize you with this type of m
 
 ## Cloud migration expanded scope checklist
 
-The following checklist outlines the common areas of complexity which could require the scope of the migration to be expanded beyond the [Azure migration guide](../azure-migration-guide/index.md).
+The following checklist outlines the common areas of complexity that could require the scope of the migration to be expanded beyond the [Azure migration guide](../azure-migration-guide/index.md).
 
 ### Business driven scope expansion
 
-- **[Balance the portfolio](./balance-the-portfolio.md):** The cloud strategy team is interested in investing more heavily in migration (rehosting existing workloads and applications with a minimum of modifications) or innovation (refactoring or rebuilding those workloads and applications using modern cloud technology). Often, a balance between the two priorities is the key to success. In this guide, the topic of balancing the cloud adoption portfolio is a common one, addressed in each of the migrate processes.
 - **[Support global markets](../../decision-guides/regions/index.md):** The business operates in multiple geographic regions with disparate data sovereignty requirements. To meet those requirements, additional considerations should be factored into the prerequisite review and distribution of assets during migration.
 
 ### Technology driven scope expansion
 
 - **[VMware migration](./vmware-host.md):** Migrating VMware hosts can accelerate the overall migration process. Each migrated VMware host can move multiple workloads to the cloud using a lift and shift approach. After migration, those VMs and workloads can stay in VMware or be migrated to modern cloud capabilities.
 - **[SQL Server migration](./sql-migration.md):** Migrating SQL Servers can accelerate the overall migration process. Each SQL Server migrated can move multiple databases and services, potentially accelerating multiple workloads.
-- **[Multiple datacenters](./multiple-datacenters.md):** Migrating multiple datacenters adds a lot of complexity. During the Assess, Migrate, Optimization, and Manage processes, additional considerations are discussed to prepare for more complex environments.
+- **[Multiple datacenters](./multiple-datacenters.md):** Migrating multiple datacenters adds significant complexity. During the Assess, Migrate, Optimization, and Manage processes, additional considerations are discussed to prepare for more complex environments.
 - **[Data requirements exceed network capacity](./network-capacity-exceeded.md):** Companies frequently choose to migrate to the cloud because the capacity, speed, or stability of an existing datacenter is no longer satisfactory. Unfortunately, those same constraints add complexity to the migration process, requiring additional planning during the assessment and migration processes.
 - **[Governance or compliance strategy](./governance-or-compliance.md):** When governance and compliance are vital to the success of a migration, additional alignment between IT governance teams and the cloud adoption team is required.
 
@@ -38,7 +37,7 @@ Each of these scenarios is addressed by the various articles in this section of 
 
 ## Next steps
 
-Browse the table of contents on the left to address specific needs or scope changes. Alternatively, the first scope enhancement on the list, [Balance the portfolio](./balance-the-portfolio.md), is a good starting point when reviewing these scenarios.
+Browse the table of contents on the left to address specific needs or scope changes. Alternatively, the first scope enhancement on the list, [Support global markets](../../decision-guides/regions/index.md), is a good starting point when reviewing these scenarios.
 
 > [!div class="nextstepaction"]
-> [Balance the portfolio](./balance-the-portfolio.md)
+> [Support global markets](../../decision-guides/regions/index.md)

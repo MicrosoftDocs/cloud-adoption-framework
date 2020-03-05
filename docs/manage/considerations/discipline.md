@@ -1,6 +1,6 @@
 ---
-title: "Management leveling across cloud management disciplines"
-description: This article discusses management leveling across cloud management disciplines.
+title: "Management levels in cloud management"
+description: Learn how to narrow cloud management options to a consistent set of processes and tools that you can offer for workloads hosted in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

@@ -1,6 +1,6 @@
 ---
 title: "Prepare a migrated application for production promotion"
-description: Use the Cloud Adoption Framework for Azure to understand considerations you need when preparing a migrated application for production promotion.
+description: Use the Cloud Adoption Framework for Azure to understand validation that's involved in preparing a migrated application for production promotion.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

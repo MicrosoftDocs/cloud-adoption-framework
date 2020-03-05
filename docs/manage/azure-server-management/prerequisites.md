@@ -1,6 +1,6 @@
 ---
-title: "Prerequisite planning for Azure server management services"
-description: Prerequisite tools and planning for Azure server management services
+title: "Planning for Azure server management services"
+description: Learn about the tools and prepare for the resources needed to manage Azure server management services. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019

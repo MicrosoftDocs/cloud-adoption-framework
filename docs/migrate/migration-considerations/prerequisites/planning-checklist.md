@@ -21,7 +21,11 @@ This article and checklist assume a _rehost_ or _cloud transition_ approach to c
 
 ## Governance alignment
 
-The first and most important decision regarding any migration-ready environment is the choice of governance alignment. Has a consensus been achieved regarding alignment of governance with the migration foundation? At a minimum, the cloud adoption team should understand whether this migration is landing in a single environment with limited governance, a fully governed environment factory, or some variant in between. For more options and guidance on governance alignment, see the article on [Governance and compliance alignment](../../expanded-scope/governance-or-compliance.md).
+The first and most important decision regarding any migration-ready environment is the choice of governance alignment. Has a consensus been achieved regarding alignment of governance with the migration foundation? At a minimum, the cloud adoption team should understand whether this migration is landing in a single environment with limited governance, a fully governed environment factory, or some variant in between. For additional guidance on governance alignment, see the [Govern methodology](../../../govern/index.md).
+
+## Operations management alignment
+
+Before migrating assets into the cloud, it is important to understand any requirements or constraints regarding operations management. At a minimum, the migration environment should include any implementations required to meet the operations baseline. For additional guidance on operations alignment, see the [Manage methodology](../../../manage/index.md).
 
 ## Cloud readiness implementation
 

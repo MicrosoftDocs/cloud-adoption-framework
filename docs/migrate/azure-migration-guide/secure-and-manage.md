@@ -11,6 +11,8 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
+<!-- markdownlint-disable MD024 MD025 DOCSMD001 -->
+
 # Secure and manage
 
 After migrating your environment to Azure, it's important to consider the security and methods used to manage the environment. Azure provides many features and capabilities to meet these needs in your solution.
@@ -122,7 +124,7 @@ Azure Backup is the Azure-based service you can use to backup (or protect) and r
 
 ## Enable backup for an Azure VM
 
-1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
+1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
 1. In **Operations**, select **Backup**.
 1. Create or select an existing Recovery Services vault.
 1. Select **Create (or edit) a new policy**.
@@ -159,7 +161,7 @@ The following steps outline the process to use Site Recovery service to replicat
 
 ## Enable replication for the Azure VM
 
-1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
+1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
 1. In **Operations**, select **Disaster recovery**.
 1. In **Configure disaster recovery** > **Target region** select the target region to which you'll replicate.
 1. For this Quickstart, accept the other default settings.

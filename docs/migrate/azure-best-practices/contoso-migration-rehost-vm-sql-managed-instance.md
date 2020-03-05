@@ -326,7 +326,7 @@ Learn how to [create an account for push installation of the Mobility Service](h
 
 ### Prepare to connect to Azure VMs after failover
 
-After failover to Azure, Contoso wants to be able to connect to the replicated VMs in Azure. To connect to the replicated VMs in Azure, Contoso admins must complete a few tasks on the on-premises VM before the migration:
+After failover to Azure, Contoso wants to connect to the replicated VMs in Azure. To do this, Contoso admins must complete a few tasks on the on-premises VM before the migration:
 
 1. For access over the internet, they enable RDP on the on-premises VM before failover. They ensure that TCP and UDP rules are added for the **Public** profile, and that RDP is allowed in **Windows Firewall** > **Allowed Apps** for all profiles.
 2. For access over Contoso's site-to-site VPN, they enable RDP on the on-premises machine. They allow RDP in **Windows Firewall** > **Allowed apps and features** for **Domain and Private** networks.

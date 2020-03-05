@@ -49,13 +49,13 @@ These manual cost calculators can be used on their own to forecast potential spe
 Azure Migrate calculates **monthly cost estimates** based on data captured by the collector and service map. The following steps will load the cost estimates:
 
 1. Navigate to Azure Migrate Assessment in the portal.
-2. In the project **Overview** page, select **+Create assessment**.
-3. Click **View all** to review the assessment properties.
-4. Create the group, and specify a group name.
-5. Select the machines that you want to add to the group.
-6. Click **Create Assessment**, to create the group and the assessment.
-7. After the assessment is created, view it in Overview > Dashboard.
-8. In the Assessment Details section of the portal navigation, select **Cost details**.
+1. In the project **Overview** page, select **+Create assessment**.
+1. Select **View all** to review the assessment properties.
+1. Create the group, and specify a group name.
+1. Select the machines that you want to add to the group.
+1. Select **Create Assessment**, to create the group and the assessment.
+1. After the assessment is created, view it in Overview > Dashboard.
+1. In the Assessment Details section of the portal navigation, select **Cost details**.
 
 The resulting estimate, pictured below, identifies the monthly costs of compute and storage, which often represent the largest portion of cloud costs.
 
@@ -89,7 +89,7 @@ Prerequisites: The remainder of this tab assumes the reader has completed setup 
 
 The following steps will load Azure Cost Management cost analysis data for your subscriptions:
 
-1. Navigate to **Cost Management + Billing** in the portal. If you do not see Cost Management + Billing in the left pane, click **All services**. In the service menu pane, under **Monitoring and Management**, click **Cost Management + Billing**.
+1. Navigate to **Cost Management + Billing** in the portal. If you do not see Cost Management + Billing in the left pane, select **All services**. In the service menu pane, under **Monitoring and Management**, select **Cost Management + Billing**.
 2. In Cost Management + Billing, select **Cost Management** in the left navigation pane to begin analyzing and optimizing cloud costs.
 3. In Cost Management, select **Cost analysis**.
     a. Use the **Scope** pill to switch to a different scope in cost analysis.

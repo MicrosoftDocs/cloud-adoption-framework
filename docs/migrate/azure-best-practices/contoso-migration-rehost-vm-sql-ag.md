@@ -10,9 +10,9 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
-# Rehost an on-premises app on Azure VMs and SQL Server Always On availability groups
+# Rehost an on-premises app with Azure Virtual Machines and SQL Server Always On availability groups
 
-This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET app running on VMware VMs as part of a migration to Azure. Contoso migrates the app front-end VM to an Azure VM, and the app database to an Azure SQL Server VM, running in a Windows Server failover cluster with SQL Server Always On availability groups.
+This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET app running on VMware virtual machines (VMs) as part of a migration to Azure. Contoso migrates the app front-end VM to an Azure VM, and the app database to an Azure SQL Server VM, running in a Windows Server failover cluster with SQL Server Always On availability groups.
 
 The SmartHotel360 app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
@@ -22,8 +22,8 @@ The IT leadership team has worked closely with business partners to understand w
 
 - **Address business growth.** Contoso is growing, and as a result there is pressure on on-premises systems and infrastructure.
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable the success in a global economy. IT mustn't get in the way, or become a business blocker.
-- **Scale.** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
+- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must react faster than the changes in the marketplace to enable success in a global economy. IT must not get in the way or become a business blocker.
+- **Scale.** As the business grows successfully, Contoso IT must provide systems that can grow at the same pace.
 
 ## Migration goals
 
@@ -32,8 +32,8 @@ The Contoso cloud team has pinned down goals for this migration. These goals wer
 - After migration, the app in Azure should have the same performance capabilities as it does today in VMware. The app will remain as critical in the cloud as it is on-premises.
 - Contoso doesn't want to invest in this app. It is important to the business, but in its current form Contoso simply want to move it safely to the cloud.
 - The on-premises database for the app has had availability issues. Contoso would like to deploy it in Azure as a high-availability cluster, with failover capabilities.
-- Contoso wants to upgrade from their current SQL Server 2008 R2 platform, to SQL Server 2017.
-- Contoso doesn't want to use an Azure SQL Database for this app, and is looking for alternatives.
+- Contoso wants to upgrade from their current SQL Server 2008 R2 platform to SQL Server 2017.
+- Contoso is looking for alternatives to Azure SQL Database for this app.
 
 ## Solution design
 
@@ -363,7 +363,7 @@ The Mobility service must be installed on each VM.
 
 ### Prepare to connect to Azure VMs after failover
 
-After failover, Contoso wants to be able to connect to Azure VMs. To do this, Contoso admins do the following before migration:
+After failover, Contoso wants to connect to Azure VMs. To do this, Contoso admins must perform the following steps before migration:
 
 1. For access over the internet they:
 
@@ -379,7 +379,7 @@ After failover, Contoso wants to be able to connect to Azure VMs. To do this, Co
 
 In addition, when they run a failover they need to check the following:
 
-- There should be no Windows updates pending on the VM when triggering a failover. If there are, users won't be able to log into the VM until the update completes.
+- There should be no Windows updates pending on the VM when triggering a failover. If there are, users will be unable to log into the VM until the update completes.
 - After failover, they can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
@@ -400,7 +400,7 @@ Before they can run a migration to Azure, Contoso admins need to set up and enab
 
 ### Confirm deployment planning
 
-To continue, they need to confirm that they have completed deployment planning, by selecting **Yes, I have done it**. In this scenario Contoso are only migrating a VM, and don't need deployment planning.
+To continue, they need to confirm that they have completed deployment planning, by selecting **Yes, I have done it**. In this scenario, Contoso is only migrating a VM and doesn't need deployment planning.
 
 ### Set up the source environment
 

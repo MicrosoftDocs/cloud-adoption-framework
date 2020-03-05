@@ -1,6 +1,6 @@
 ---
-title: "Build a business justification for cloud migration"
-description: Considerations for building a business justification for cloud migration.
+title: "Business justification for cloud migration"
+description: Use the Cloud Adoption Framework for Azure to learn to start developing a business justification for cloud migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018
