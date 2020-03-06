@@ -35,7 +35,7 @@ When planning your VNet topology, you should consider how to arrange IP address 
 
 When you create VNets as part of your migration, it's important to plan out your VNet IP address space.
 
-- You should assign an address space that isn't larger than a CIDR range of /16 for each VNet. VNets allow for the use of 65536 IP addresses, and assigning a smaller prefix than /16 would result in the loss of IP addresses. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
+- You should assign an address space that isn't larger than a CIDR range of /16 for each VNet. VNets allow for the use of 65,536 IP addresses, and assigning a smaller prefix than /16, such as a /15 which has 131,072 addresses, would result in the the excess IP addresses becoming unusuable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
 - The VNet address space shouldn't overlap with on-premises network ranges.
 - Network Address Translation (NAT) shouldn't be used.
 - Overlapping addresses can cause networks that can't be connected and routing that doesn't work properly. If networks overlap, you'll need to redesign the network or use network address translation (NAT).
