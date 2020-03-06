@@ -23,7 +23,7 @@ The Cloud Adoption Framework guides readers through the full adoption lifecycle.
 - **[Ready](../ready/suggested-skills.md):** Develop the skills needed to prepare the business, culture, people, and environment for coming changes.
 
 - **Adopt:** Adoption skills are aligned to various technical efforts:
-  - **[Migrate](../migrate/expanded-scope/suggested-skills.md):** Gain the skills required to implement the cloud migration plan.
+  - **[Migrate](../migrate/suggested-skills.md):** Gain the skills required to implement the cloud migration plan.
   - **Innovate:** Gain the skills needed to deliver innovative new solutions.
 
 - **Operate:** Skills related to the operating model for cloud adoption are aligned to various opportunities to gain skills:

@@ -43,7 +43,7 @@ The following exercises help guide you through the process of creating a landing
         </a>
     </li>
     <li style="display: flex; flex-direction: column;">
-        <a href="./azure-setup-guide/migration-landing-zone.md">
+        <a href="./landing-zone/migrate-landing-zone.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">

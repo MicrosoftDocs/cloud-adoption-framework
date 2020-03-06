@@ -1,6 +1,6 @@
 ---
 title: "Perimeter networks"
-description: Learn about how Perimeter networks, also known as demilitarized zones (DMZs), use Azure features and services.
+description: Learn how perimeter networks (also called DMZs) use Azure features and services.
 author: tracsman
 ms.author: jonor
 ms.date: 05/10/2019
@@ -11,6 +11,8 @@ manager: rossort
 tags: azure-resource-manager
 ms.custom: virtual-network
 ---
+
+<!-- cSpell:ignore tracsman jonor rossort NVAs WAFs -->
 
 # Perimeter networks
 
@@ -36,9 +38,9 @@ Perimeter networks make use of the following Azure features and services:
 
 Usually, your central IT and security teams are responsible for defining requirements for operating your perimeter networks.
 
-![Example of a hub and spoke network topology][7]
+![Example of a hub and spoke network topology](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
 
-The preceding diagram shows an example [hub and spoke network topology](./hub-spoke-network-topology.md) that implements enforcement of two perimeters with access to the internet and an on-premises network. Both perimeters reside in the DMZ hub. In the DMZ hub, the perimeter network to the internet can scale up to support many lines of business (LOBs), by using multiple farms of WAFs and Azure Firewall instances that help protect the spoke virtual networks. The hub also allows for connectivity via VPN or Azure ExpressRoute as needed.
+The diagram above shows an example [hub and spoke network topology](./hub-spoke-network-topology.md) that implements enforcement of two perimeters with access to the internet and an on-premises network. Both perimeters reside in the DMZ hub. In the DMZ hub, the perimeter network to the internet can scale up to support many lines of business (LOBs), by using multiple farms of WAFs and Azure Firewall instances that help protect the spoke virtual networks. The hub also allows for connectivity via VPN or Azure ExpressRoute as needed.
 
 ## Virtual networks
 
@@ -102,40 +104,13 @@ You can tune protection policies through dedicated traffic monitoring and machin
 
 Real-time telemetry is available through Azure Monitor views both during an attack and for historical purposes. You can add application-layer protection by using the web application firewall in Azure Application Gateway. Protection is provided for IPv4 Azure public IP addresses.
 
-<!-- images -->
-
-[0]: ../../_images/azure-best-practices/network-redundant-equipment.png "Examples of component overlap"
-[1]: ../../_images/azure-best-practices/network-hub-spoke-high-level.png "High-level example of hub and spoke"
-[2]: ../../_images/azure-best-practices/network-hub-spokes-cluster.png "Cluster of hubs and spokes"
-[3]: ../../_images/azure-best-practices/network-spoke-to-spoke.png "Spoke-to-spoke"
-[4]: ../../_images/azure-best-practices/network-hub-spoke-block-level-diagram.png "Block level diagram of the hub-spoke"
-[5]: ../../_images/azure-best-practices/network-users-groups-subscriptions.png "Users, groups, subscriptions, and projects"
-[6]: ../../_images/azure-best-practices/network-infrastructure-high-level.png "High-level infrastructure diagram"
-[7]: ../../_images/azure-best-practices/network-high-level-perimeter-networks.png "High-level infrastructure diagram"
-[8]: ../../_images/azure-best-practices/network-vnet-peering-perimeter-networks.png "VNet Peering and perimeter networks"
-[9]: ../../_images/azure-best-practices/network-high-level-diagram-monitoring.png "High-level diagram for Monitoring"
-[10]: ../../_images/azure-best-practices/network-high-level-workloads.png "High-level diagram for Workload"
-
 <!-- links -->
 
-[Limits]: https://docs.microsoft.com/azure/azure-subscription-service-limits
-[Roles]: https://docs.microsoft.com/azure/role-based-access-control/built-in-roles
 [virtual-networks]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview
 [network-security-groups]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-nsg
-[DNS]: https://docs.microsoft.com/azure/dns/dns-overview
-[PrivateDNS]: https://docs.microsoft.com/azure/dns/private-dns-overview
-[VNetPeering]: https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview
 [user-defined-routes]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview
-[RBAC]: https://docs.microsoft.com/azure/role-based-access-control/overview
-[azure-ad]: https://docs.microsoft.com/azure/active-directory/active-directory-whatis
-[VPN]: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways
-[ExR]: https://docs.microsoft.com/azure/expressroute/expressroute-introduction
-[ExRD]: https://docs.microsoft.com/azure/expressroute/expressroute-erdirect-about
-[vWAN]: https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about
 [NVA]: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha
 [AzFW]: https://docs.microsoft.com/azure/firewall/overview
-[SubMgmt]: https://docs.microsoft.com/azure/architecture/cloud-adoption/reference/azure-scaffold
-[RGMgmt]: https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview
 [perimeter-network]: https://docs.microsoft.com/azure/best-practices-network-security
 [ALB]: https://docs.microsoft.com/azure/load-balancer/load-balancer-overview
 [DDoS]: https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview
@@ -144,15 +119,3 @@ Real-time telemetry is available through Azure Monitor views both during an atta
 [AFDWAF]: https://docs.microsoft.com/azure/frontdoor/waf-overview
 [AppGW]: https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction
 [AppGWWAF]: https://docs.microsoft.com/azure/application-gateway/application-gateway-web-application-firewall-overview
-[Monitor]: https://docs.microsoft.com/azure/monitoring-and-diagnostics/
-[ActLog]: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs
-[DiagLog]: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs
-[nsg-log]: https://docs.microsoft.com/azure/virtual-network/virtual-network-nsg-manage-log
-[OMS]: https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview
-[NPM]: https://docs.microsoft.com/azure/log-analytics/log-analytics-network-performance-monitor
-[NetWatch]: https://docs.microsoft.com/azure/network-watcher/network-watcher-monitoring-overview
-[WebApps]: https://docs.microsoft.com/azure/app-service/
-[HDI]: https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-introduction
-[EventHubs]: https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs
-[ServiceBus]: https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview
-[traffic-manager]: https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview

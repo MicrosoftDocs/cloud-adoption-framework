@@ -1,6 +1,6 @@
 ---
 title: "Resource consistency decision guide"
-description: Understand the importance of your cloud estate’s resource consistency and the factors that drive requirements for resource consistency.
+description: Understand the importance of your cloud estate's resource consistency and the factors that drive requirements for resource consistency.
 author: doodlemania2
 ms.author: dermar
 ms.date: 10/17/2019
@@ -35,7 +35,7 @@ Resource groups act as containers for resources with a common lifecycle as well 
 If you answered _NO_ to any of the above points, the resource in question should be placed elsewhere, in another resource group.
 
 > [!IMPORTANT]
-> Resource groups are also region specific; however, it is common for resources to be in different regions within the same resource group because they are managed together as described above. For more information on region selection, see the [Regions decision guide](../regions/index.md).
+> Resource groups are also region specific; however, it is common for resources to be in different regions within the same resource group because they are managed together as described above. For more information on region selection, see [Multiple regions](../../migrate/azure-best-practices/multiple-regions.md).
 
 ## Deployment consistency
 

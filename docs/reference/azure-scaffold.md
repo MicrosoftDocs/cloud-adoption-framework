@@ -16,7 +16,7 @@ The Azure enterprise scaffold has been integrated into the Microsoft Cloud Adopt
 To begin using the Cloud Adoption Framework, see:
 
 - [Ready overview](../ready/index.md)
-- [Creating your first landing zone](../ready/azure-setup-guide/migration-landing-zone.md)
+- [Creating your first landing zone](../ready/landing-zone/migrate-landing-zone.md)
 - [Landing zone considerations](../ready/considerations/index.md).
 
 If you need to review the deprecated content, see the [Azure enterprise scaffold](.\migration-with-enterprise-scaffold.md).

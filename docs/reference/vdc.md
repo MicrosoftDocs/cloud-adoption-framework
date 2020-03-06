@@ -11,6 +11,8 @@ keywords: Azure
 layout: LandingPage
 ---
 
+<!-- cSpell:ignore tracsman jonor -->
+
 # Azure Virtual Datacenter
 
 > [!WARNING]
