@@ -123,7 +123,7 @@ To help you protect your data in the cloud, Azure Storage offers several best pr
 - Grant delegated access to the data objects in Azure Storage by using shared access signatures.
 - Use analytics to track the authentication method that someone is using when they access storage in Azure.
 
-These security features apply to Azure Blob storage (block and page) and to Azure Files. Get detailed storage security guidance in the [Azure Storage security guide](https://docs.microsoft.com/azure/storage/common/storage-security-guide).
+These security features apply to Azure Blob storage (block and page) and to Azure Files. Get detailed storage security guidance in the [Azure Storage security guide](https://docs.microsoft.com/azure/storage/blobs/security-recommendations).
 
 [Storage service encryption](https://docs.microsoft.com/azure/storage/storage-service-encryption) provides encryption at rest and safeguards your data to meet your organization's security and compliance commitments. Storage service encryption is enabled by default for all managed disks, snapshots, and images in all the Azure regions. Starting June 10, 2017, all new managed disks, snapshots, images, and new data written to existing managed disks are automatically encrypted at rest with keys managed by Microsoft. Visit the [FAQ for managed disks](https://docs.microsoft.com/azure/virtual-machines/windows/faq-for-disks#managed-disks-and-storage-service-encryption) for more details.
 

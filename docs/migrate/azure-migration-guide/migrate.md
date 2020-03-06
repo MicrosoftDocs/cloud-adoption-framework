@@ -11,6 +11,8 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore Cloudamize agentless uncontained SSMA Carbonite Movere -->
+
 # Migrate assets (infrastructure, apps, and data)
 
 In this phase of the journey, you use the output of the assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
@@ -150,9 +152,9 @@ The Data Migration Assistant (DMA) helps you upgrade to a modern data platform b
 > For large migrations (in terms of number and size of databases), we recommend that you use the Azure Database Migration Service, which can migrate databases at scale.
 >
 
-To get started with the Data Migration Assistant follow these steps.
+Start using the Data Migration Assistant with these steps:
 
-1. Download and Install the Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
+1. Download and install the Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
 1. Create an assessment by selecting the **New (+)** icon, then select the **Assessment** project type.
 1. Set the source and target server type, then select **Create**.
 1. Configure the assessment options as required (recommend all defaults).
@@ -275,4 +277,4 @@ Here is an example of a tailored learning path on Microsoft Learn that complemen
 
 # [Cost management](#tab/ManageCost)
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload (discussed in more detail in the **[Optimize and Transform](./optimize-and-transform.md)** section).
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload (discussed in more detail in the **[Optimize and transform](./optimize-and-transform.md)** section).

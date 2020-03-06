@@ -648,7 +648,7 @@ The Azure Policy service evaluates your resources, scanning for those not compli
 
 Policies specify a policy definition, and a policy assignment specifies the scope in which a policy should be applied. The scope can range from a management group to a resource group. [Learn](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage) about creating and managing policies.
 
-Contoso wants to get started with a couple of policies:
+Contoso wants to begin a couple of policies:
 
 - It wants a policy to ensure that resources can be deployed in the EUS2 and CUS regions only.
 - It wants to limit VM SKUs to approved SKUs only. The intention is to ensure that expensive VM SKUs aren't used.

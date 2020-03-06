@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Scale with multiple Azure subscriptions
 
-Organizations often need more than one Azure subscription as a result of resource limits and other governance considerations. Having a strategy for scaling your subscriptions is important.
+Organizations typically need multiple Azure subscriptions as a result of resource limits and other governance considerations. Defining a strategy for scaling your subscriptions is important.
 
 ## Production and nonproduction workloads
 

@@ -71,7 +71,7 @@ To view the data about your apps, go to the [Azure portal](https://ms.portal.azu
 
 ## [Quantitative feedback for APIs](#tab/Quantitative-APIs)
 
-The connected economy is changing the way businesses innovate. Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the _innovator’s dilemma_: how to set the pace of change without stumbling over ongoing business activity.
+The connected economy is changing the way businesses innovate. Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the _innovator's dilemma_: how to set the pace of change without stumbling over ongoing business activity.
 
 Enterprises are using APIs externally to change how they interact with their customers and partners. Internally, they're using APIs to seamlessly connect distinct parts of the business. API economy operates on four building blocks: social, mobile, analytics, and cloud. Apps and services can be linked rapidly and cost-effectively to create an extended value proposition.
 
@@ -119,8 +119,7 @@ The backlog (or board) is where feedback is recorded as user stories. It's also 
 
 ### Action
 
-Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure.
-To get started with either tool, go to [Azure DevOps](https://dev.azure.com).
+Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps](https://dev.azure.com).
 
 ::: zone-end
 

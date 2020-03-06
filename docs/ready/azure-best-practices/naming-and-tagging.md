@@ -10,6 +10,8 @@ ms.subservice: ready
 ms.custom: readiness, fasttrack-edit
 ---
 
+<!-- cSpell:ignore eastus westus westeurope usgovia accountlookup messagequery -->
+
 # Recommended naming and tagging conventions
 
 Organize your cloud assets to support operational management and accounting requirements. Well-defined naming and metadata tagging conventions help to quickly locate and manage resources. These conventions also help associate cloud usage costs with business teams via chargeback and showback accounting mechanisms.
