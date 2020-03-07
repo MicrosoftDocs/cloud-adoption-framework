@@ -1,6 +1,6 @@
 ---
 title: Operational compliance in Azure
-description: Ensure business stability by increasing operational compliance
+description: Learn how to ensure business stability through operational compliance by reducing the likelihood of outages or vulnerabilities.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

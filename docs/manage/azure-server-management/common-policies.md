@@ -1,6 +1,6 @@
 ---
 title: "Common Azure Policy examples"
-description: Common Azure Policy examples
+description: Use the Cloud Adoption Framework for Azure to ensure compliance to governance policy requirements by creating policies with PowerShell cmdlets.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
