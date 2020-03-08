@@ -1,6 +1,6 @@
 ---
 title: Roadmap
-description: Learn about the roadmap for the Microsoft Cloud Adoption Framework for Azure.
+description: Use the Cloud Adoption Framework for Azure to learn to align strategies for business, culture, and technology to enable the desired business outcomes.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

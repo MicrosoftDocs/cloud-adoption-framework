@@ -1,6 +1,6 @@
 ---
 title: Azure Virtual Datacenter
-description: Resources for the Microsoft Azure Virtual Datacenter
+description: Learn about Microsoft Virtual Datacenter, which has been integrated into the Cloud Adoption Framework for Azure.
 author: tracsman
 ms.author: jonor
 ms.date: 06/12/2019

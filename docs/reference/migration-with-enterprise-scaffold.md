@@ -1,6 +1,6 @@
 ---
 title: Azure enterprise scaffold
-description: Describes an enterprise scaffold that can help ensure a secure and manageable environment.
+description: Use the Cloud Adoption Framework for Azure to understand an enterprise scaffold that can help ensure a secure and manageable environment.
 author: rdendtler
 ms.author: rodend
 ms.date: 09/22/2018
