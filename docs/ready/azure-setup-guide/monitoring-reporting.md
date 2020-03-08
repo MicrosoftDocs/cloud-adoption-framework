@@ -1,6 +1,6 @@
 ---
 title: Monitoring and reporting in Azure
-description: Learn how to set up monitoring, reporting, and alerts for your Azure management environment.
+description: Use the Cloud Adoption Framework for Azure to learn how to set up monitoring, reporting, and alerts for your Azure management environment.
 author: timleyden
 ms.author: tileyden
 ms.date: 04/09/2019
