@@ -1,6 +1,6 @@
 ---
 title: "Examples of agility outcomes"
-description: Examples of agility outcomes
+description: Use the Cloud Adoption Framework for Azure to understand your company's market position and competitive landscape.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

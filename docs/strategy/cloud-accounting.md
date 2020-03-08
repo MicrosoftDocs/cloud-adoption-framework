@@ -1,6 +1,6 @@
 ---
 title: "What is cloud accounting?"
-description: Explanation of the concept of cloud accounting
+description: Use the Cloud Adoption Framework for Azure to understand common cloud accounting models for IT as you begin your cloud migration journey.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

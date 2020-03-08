@@ -1,6 +1,6 @@
 ---
 title: "Examples of fiscal outcomes"
-description: Examples of fiscal outcomes
+description: Use the Cloud Adoption Framework for Azure to understand fiscal outcomes in the context of a cloud transformation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
