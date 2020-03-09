@@ -19,7 +19,7 @@ Create a security team to address security concerns.
 
 ## Take the governance benchmark assessment
 
-Take the governance benchmark assessment to understand the  security gaps that need to be addressed.
+Take the governance benchmark assessment to understand the security gaps that need to be addressed.
 
 ## Create a security baseline and a maturity plan
 

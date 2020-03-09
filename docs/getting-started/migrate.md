@@ -89,7 +89,7 @@ Throughout this migration experience this framework will be used to address ambi
 
 The effort to realize the desired business outcomes may trigger slight changes to the culture of IT, to security, and to some degree the culture of the business. The following are a few common cultural changes seen in this process:
 
-- The IT and security teams are  likely to adopt new skills to support workloads in the cloud.
+- The IT and security teams are likely to adopt new skills to support workloads in the cloud.
 - Execution of a cloud migration encourages iterative or agile approaches.
 - Inclusion of cloud governance also tends to inspire DevOps approaches.
 - Creation of a cloud strategy team can lead to tighter integration between business and IT leaders.
