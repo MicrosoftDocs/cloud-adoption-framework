@@ -11,6 +11,8 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore laraaleite profx fsubscriptions fresource -->
+
 # Organize your Azure resources
 
 Organizing your cloud-based resources is critical to securing, managing, and tracking the costs related to your workloads. To organize your resources, use the management hierarchies within the Azure platform, implement well-thought-out naming conventions, and apply resource tagging.

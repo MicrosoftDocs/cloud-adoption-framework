@@ -70,6 +70,8 @@ Each workload can consist of many individual resources and services. Incorporati
 
 The following list provides recommended Azure resource type prefixes to use when you define your naming conventions.
 
+<!-- cSpell:disable -->
+
 ### General
 
 | Asset type                      | Name prefix |
@@ -95,6 +97,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | VPN connection                   | cn-         |
 | Application gateway              | agw-        |
 | Route table                      | route-      |
+| Traffic Manager profile          | traf-       |
 
 ### Compute and Web
 
@@ -144,7 +147,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | Azure Cognitive Services         | cog-        |
 | Azure Machine Learning workspace | mlw-        |
 
-## Analytics and IoT
+### Analytics and IoT
 
 | Asset type                      | Name prefix |
 |---------------------------------|-------------|
@@ -191,6 +194,8 @@ The following list provides recommended Azure resource type prefixes to use when
 | Database Migration Service instance | dms-        |
 | Recovery Services vault             | rsv-        |
 
+<!-- cSpell:enable -->
+
 ## Metadata tags
 
 When you apply metadata tags to your cloud resources, you can include information about those assets that couldn't be included in the resource name. You can use that information to perform more sophisticated filtering and reporting on resources. You want these tags to include context about the resource's associated workload or application, operational requirements, and ownership information. This information can be used by IT or business teams to find resources or generate reports about resource usage and billing.
@@ -215,6 +220,8 @@ What tags you apply to resources and what tags are required or optional differs 
 ## Example names
 
 The following section provides some example names for common Azure resource types in an enterprise cloud deployment.
+
+<!-- cSpell:disable -->
 
 <!-- markdownlint-disable MD024 MD033 -->
 

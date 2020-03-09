@@ -10,7 +10,7 @@ ms.subservice: reference
 ROBOTS: NOINDEX
 ---
 
-<!-- cSpell:ignore rodend subscope ITSM -->
+<!-- cSpell:ignore rodend subscope ITSM Hashi -->
 
 # Azure enterprise scaffold: Prescriptive subscription governance
 
@@ -309,7 +309,7 @@ Automation is a full-time job, and it will rapidly become one of the most import
 
 ## Templates and DevOps
 
-As highlighted in the Automate section, your goal as an organization should be to provision resources through source-controlled templates and scripts and to minimize interactive configuration of your environments. This approach of "infrastructure as code" along with a disciplined DevOps process for continuous deployment can ensure consistency and reduce drift across your environments. Almost every Azure resource is deployable through [Azure Resource Manager JSON templates](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy) in conjunction with PowerShell or the Azure cross platform CLI and tools such as Terraform from Hashicorp (which has first class support and integrated into the Azure Cloud Shell).
+As highlighted in the Automate section, your goal as an organization should be to provision resources through source-controlled templates and scripts and to minimize interactive configuration of your environments. This approach of "infrastructure as code" along with a disciplined DevOps process for continuous deployment can ensure consistency and reduce drift across your environments. Almost every Azure resource is deployable through [Azure Resource Manager JSON templates](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy) in conjunction with PowerShell or the Azure cross platform CLI and tools such as Terraform from HashiCorp (which has first class support and integrated into the Azure Cloud Shell).
 
 Article such as [Best practices for using Azure Resource Manager templates](https://blogs.msdn.microsoft.com/mvpawardprogram/2018/05/01/azure-resource-manager) provide an excellent discussion of best practices and lessons learned for applying a DevOps approach to Azure Resource Manager templates with the [Azure DevOps](https://docs.microsoft.com/azure/devops/user-guide/?view=vsts) toolchain. Take the time and effort to develop a core set of templates specific to your organization's requirements, and to develop continuous delivery pipelines with DevOps toolchains (such as Azure DevOps, Jenkins, Bamboo, TeamCity, and Concourse), especially for your production and QA environments. There is a large library of [Azure Quickstart templates](https://github.com/Azure/azure-quickstart-templates) on GitHub that you can use as a starting point for templates, and you can quickly create cloud-based delivery pipelines with Azure DevOps.
 
