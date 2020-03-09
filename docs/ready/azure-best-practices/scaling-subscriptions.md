@@ -1,6 +1,6 @@
 ---
-title: "Scaling with multiple Azure subscriptions"
-description: Learn how to scale with multiple Azure subscriptions.
+title: "Scaling with Azure subscriptions"
+description: Use the Cloud Adoption Framework for Azure to learn how to develop a strategy for scaling with multiple Azure subscriptions.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 05/20/2019
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Scale with multiple Azure subscriptions
 
-Organizations often need more than one Azure subscription as a result of resource limits and other governance considerations. Having a strategy for scaling your subscriptions is important.
+Organizations typically need multiple Azure subscriptions as a result of resource limits and other governance considerations. Defining a strategy for scaling your subscriptions is important.
 
 ## Production and nonproduction workloads
 

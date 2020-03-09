@@ -17,7 +17,7 @@ The Cloud Adoption Framework is a free self-service tool that guides readers thr
 Throughout this framework, enablement is a core theme. The following checklist itemizes fundamental cloud adoption principles that ensure an adoption journey is considered successful by both IT and the business:
 
 - **Plan:** Establishing clear [business outcomes](../strategy/business-outcomes/index.md), a clearly defined [digital estate plan](../digital-estate/index.md), and well-understood [adoption backlogs](../migrate/migration-considerations/prerequisites/migration-backlog-review.md).
-- **Ready:** Ensure the readiness of staff through [skills and learning plans](../ready/technical-skills.md).
+- **Ready:** Ensure the readiness of staff through [skills and learning plans](../ready/suggested-skills.md).
 - **Operate:** Define a manageable operating model to guide activities during and long after adoption.
   - **[Organize](../organize/index.md):** Align people and teams to deliver proper cloud operations and adoption.
   - **Govern:** Align proper [governance disciplines](../govern/index.md) to consistently apply cost management, risk mitigation, compliance, and security baselines across all cloud adoption.
@@ -72,7 +72,7 @@ In addition to the Cloud Adoption Framework, Microsoft covers additional topics 
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="../ready/technical-skills.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="../ready/suggested-skills.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">

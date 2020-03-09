@@ -36,7 +36,7 @@ So fundamentally, Azure is a huge collection of servers and networking hardware 
 
 ## Next steps
 
-Now that you understand Azure internals, learn about cloud resource governance.
+Learn more about cloud adoption with the [Microsoft Cloud Adoption Framework for Azure](https://docs.microsoft.com/azure/cloud-adoption-framework).
 
 > [!div class="nextstepaction"]
-> [Learn about resource governance](../govern/resource-consistency/what-is-governance.md)
+> [Learn about the Microsoft Cloud Adoption Framework for Azure](https://docs.microsoft.com/azure/cloud-adoption-framework)

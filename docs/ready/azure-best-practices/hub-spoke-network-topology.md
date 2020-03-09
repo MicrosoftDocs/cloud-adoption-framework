@@ -12,6 +12,8 @@ tags: azure-resource-manager
 ms.custom: virtual-network
 ---
 
+<!-- cSpell:ignore tracsman jonor rossort NVAs -->
+
 # Hub and spoke network topology
 
 *Hub and spoke* is a networking model for more efficient management of common communication or security requirements. It also helps avoid Azure subscription limitations. This model addresses the following concerns:
@@ -77,48 +79,6 @@ Spokes can also be interconnected to a spoke that acts as a hub. This approach c
 
 <!-- images -->
 
-[0]: ../../_images/azure-best-practices/network-redundant-equipment.png "Examples of component overlap"
 [1]: ../../_images/azure-best-practices/network-hub-spoke-high-level.png "High-level example of hub and spoke"
 [2]: ../../_images/azure-best-practices/network-hub-spokes-cluster.png "Cluster of hubs and spokes"
 [3]: ../../_images/azure-best-practices/network-spoke-to-spoke.png "Spoke-to-spoke"
-[4]: ../../_images/azure-best-practices/network-hub-spoke-block-level-diagram.png "Block-level diagram of the hub and spoke"
-[5]: ../../_images/azure-best-practices/network-users-groups-subscriptions.png "Users, groups, subscriptions, and projects"
-[6]: ../../_images/azure-best-practices/network-infrastructure-high-level.png "High-level infrastructure diagram"
-[7]: ../../_images/azure-best-practices/network-high-level-perimeter-networks.png "High-level infrastructure diagram"
-[8]: ../../_images/azure-best-practices/network-vnet-peering-perimeter-networks.png "Virtual network peering and perimeter networks"
-[9]: ../../_images/azure-best-practices/network-high-level-diagram-monitoring.png "High-level diagram for monitoring"
-[10]: ../../_images/azure-best-practices/network-high-level-workloads.png "High-level diagram for workload"
-
-<!-- links -->
-
-[PrivateDNS]: https://docs.microsoft.com/azure/dns/private-dns-overview
-[VNetPeering]: https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview
-[user-defined-routes]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview
-[RBAC]: https://docs.microsoft.com/azure/role-based-access-control/overview
-[azure-ad]: https://docs.microsoft.com/azure/active-directory/active-directory-whatis
-[VPN]: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways
-[ExR]: https://docs.microsoft.com/azure/expressroute/expressroute-introduction
-[ExRD]: https://docs.microsoft.com/azure/expressroute/expressroute-erdirect-about
-[vWAN]: https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about
-[NVA]: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha
-[AzFW]: https://docs.microsoft.com/azure/firewall/overview
-[SubMgmt]: ../../reference/azure-scaffold.md
-[RGMgmt]: https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview
-[DMZ]: https://docs.microsoft.com/azure/best-practices-network-security
-[ALB]: https://docs.microsoft.com/azure/load-balancer/load-balancer-overview
-[PIP]: https://docs.microsoft.com/azure/virtual-network/resource-groups-networking#public-ip-address
-[AFD]: https://docs.microsoft.com/azure/frontdoor/front-door-overview
-[AppGW]: https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction
-[WAF]: https://docs.microsoft.com/azure/application-gateway/application-gateway-web-application-firewall-overview
-[Monitor]: https://docs.microsoft.com/azure/monitoring-and-diagnostics/
-[ActLog]: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs
-[DiagLog]: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs
-[nsg-log]: https://docs.microsoft.com/azure/virtual-network/virtual-network-nsg-manage-log
-[OMS]: https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview
-[NPM]: https://docs.microsoft.com/azure/log-analytics/log-analytics-network-performance-monitor
-[NetWatch]: https://docs.microsoft.com/azure/network-watcher/network-watcher-monitoring-overview
-[WebApps]: https://docs.microsoft.com/azure/app-service/
-[HDI]: https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-introduction
-[EventHubs]: https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs
-[ServiceBus]: https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview
-[traffic-manager]: https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview

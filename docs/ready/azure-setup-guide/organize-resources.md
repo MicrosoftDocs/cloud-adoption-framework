@@ -1,6 +1,6 @@
 ---
-title: Organize your Azure resources effectively
-description: Best practices to effectively organize your Azure resources for ease of management.
+title: Organize Azure resources effectively
+description: Understand the best practices you need to effectively organize your Azure resources for ease of management.
 author: laraaleite
 ms.author: kfollis
 ms.date: 04/09/2019
@@ -10,6 +10,8 @@ ms.subservice: ready
 ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
+
+<!-- cSpell:ignore laraaleite profx fsubscriptions fresource -->
 
 # Organize your Azure resources
 
@@ -151,7 +153,7 @@ You can also use tags for many other things. Common uses include:
 
 - **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like "ProjectOwner."
 - **Automation:** You might have regularly running scripts that can take an action based on a tag value like "ShutdownTime" or "DeprovisionDate."
-- **Cost Optimization:** You can allocate resources to the teams and resources who are responsible for the cost. In the Azure cost management, you can apply the cost center tag as a filter to report the charges based on a team or department usage.
+- **Cost Optimization:** In Azure cost management, you can apply cost center tag as a filter to report charges based on a team or department usage.
 
 Each resource or resource group can have a maximum of 50 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
 

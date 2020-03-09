@@ -17,19 +17,19 @@ There are four distinct processes that are completed iteratively during the "Mig
 
 ## Prerequisites skilling resources
 
-Implementation of "Migrate" processes will build on the skills acquired during "[Plan](../../strategy/suggested-skills.md)" and "[Ready](../../organize/suggested-skills.md)" phases of the migration journey.
+Implementation of "Migrate" processes will build on the skills acquired during "[Plan](../strategy/suggested-skills.md)" and "[Ready](../organize/suggested-skills.md)" phases of the migration journey.
 
 ## Assess skilling resources
 
 The following tools can aid the team in execution of assess activities:
 
-- [Balance the portfolio](../../strategy/balance-the-portfolio.md): Ensure balance and proper investment allocations across an application portfolio.
-- [Build a business justification](../../strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
-- [Rationalize the digital estate](../../digital-estate/rationalize.md): Rationalize assets in the digital estate.
+- [Balance the portfolio](../strategy/balance-the-portfolio.md): Ensure balance and proper investment allocations across an application portfolio.
+- [Build a business justification](../strategy/cloud-migration-business-case.md): Create and understand the business justification driving the cloud migration effort.
+- [Rationalize the digital estate](../digital-estate/rationalize.md): Rationalize assets in the digital estate.
 - [Application portfolio assessment](https://docs.microsoft.com/learn/modules/app-and-infra-migration-and-modernization): Criteria for making decisions regarding migration or innovation options within the application portfolio.
-- [Assessing and Planning Microsoft Azure Migration](https://www.pluralsight.com/courses/microsoft-azure-migration-assessing-planning): PluralSight course to aid in assessing on-premises workloads
+- [Assessing and Planning Microsoft Azure Migration](https://www.pluralsight.com/courses/microsoft-azure-migration-assessing-planning): PluralSight course to aid in assessing on-premises workloads.
 
-During Assess processes, architects will be called upon to architect solutions for each workload. The following skilling resources can prepare architects for these tasks:
+During Assess processes, architects will design solutions for each workload. The following skilling resources help prepare architects for these tasks:
 
 - [Foundations for Cloud Architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): PluralSight course to help architect the right foundational solutions
 - [Microsoft Azure Architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): PluralSight course to ground architects in Azure Architecture
@@ -48,14 +48,14 @@ The following tutorial can prepare the team for migration activities:
 
 The following tools can help the team optimize resources and promote to production:
 
-- [Cost and sizing](../azure-best-practices/migrate-best-practices-costs.md): Adjust sizing to align costs and budgets.
-- [Promote a workload](../azure-best-practices/migrate-best-practices-networking.md): Change network configuration to reroute production users to migrated workloads.
+- [Cost and sizing](azure-best-practices/migrate-best-practices-costs.md): Adjust sizing to align costs and budgets.
+- [Promote a workload](azure-best-practices/migrate-best-practices-networking.md): Change network configuration to reroute production users to migrated workloads.
 
 ## Secure and manage process changes
 
 The following tools can help the team find ways to secure and manage migrated assets:
 
-- [Secure and manage workloads in Azure](../azure-best-practices/migrate-best-practices-security-management.md): Best practices for securing and managing workloads in Azure.
+- [Secure and manage workloads in Azure](azure-best-practices/migrate-best-practices-security-management.md): Best practices for securing and managing workloads in Azure.
 
 ## Next steps
 
