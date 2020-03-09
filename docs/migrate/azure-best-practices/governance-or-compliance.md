@@ -48,8 +48,8 @@ For a deeper understanding of governance, review the [Five Disciplines of Cloud 
 
 - [Cost Management](../../govern/cost-management/template.md)
 - [Security Baseline](../../govern/security-baseline/template.md)
-- [Resource Consistency]../../govern/resource-consistency/template.md)
-- [Identity Baseline]../../govern/identity-baseline/template.md)
+- [Resource Consistency](../../govern/resource-consistency/template.md)
+- [Identity Baseline](../../govern/identity-baseline/template.md)
 - [Deployment Acceleration](../../govern/deployment-acceleration/template.md)
 
 For guidance on developing governance guidance based on the Cloud Adoption Framework governance model, see [Implementing a cloud governance strategy](../../govern/corporate-policy.md).

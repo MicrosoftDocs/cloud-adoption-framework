@@ -11,7 +11,7 @@ ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore tvuylsteke kfollis >
+<!-- cSpell:ignore tvuylsteke >
 
 <!-- markdownlint-disable MD024 MD025 -->
 
