@@ -1,16 +1,54 @@
 items:
   - name: Cloud Adoption Framework
-    href: index.md
-    pdf_name: Microsoft Cloud Adoption Framework for Azure
-
+    href: index.yml
+  - name: Overview
+    href: overview.md
   - name: Getting started
     items:
-    - name: Begin a migration journey
-      href: getting-started/migrate.md
-    - name: Understand the innovation journey
-      href: getting-started/innovate.md
-    - name: Enable successful cloud adoption
-      href: getting-started/enable.md
+    - name: Overview
+      href: getting-started/index.yml
+    - name: Accelerate adoption
+      items:
+      - name: Overview
+        href: getting-started/blockers-overview.md
+      - name: Migrate existing workloads
+        href: getting-started/migrate.md
+      - name: Build new products and services
+        href: getting-started/innovate.md
+      - name: Align your organization
+        href: getting-started/org-alignment.md
+      - name: Controls, compliance and governance
+        href: getting-started/governance-roadmap.md
+      - name: Address security early and often
+        href: getting-started/security-roadmap.md  
+      - name: Unblock environment design and configuration
+        href: getting-started/design-config-roadmap.md
+      - name: Adopt a hybrid cloud
+        href: getting-started/hybrid-adoption.md
+      - name: Manage costs
+        href: getting-started/manage-costs.md      
+    - name: Improve team processes
+      items:
+      - name: Overview
+        href: getting-started/team-roadmap-overview.md
+      - name: Strategy team
+        href: getting-started/strategy-team-quickstart.md
+      - name: Migration team
+        href: getting-started/migration-team-quickstart.md
+      - name: Innovation team
+        href: getting-started/innovation-team-quickstart.md
+      - name: Data team
+        href: getting-started/data-team-quickstart.md
+      - name: Governance team
+        href: getting-started/governance-team-quickstart.md
+      - name: Platform team
+        href: getting-started/platform-team-quickstart.md
+      - name: Automation team
+        href: getting-started/automation-team-quickstart.md
+      - name: Operations team
+        href: getting-started/operations-team-quickstart.md
+      - name: Security team
+        href: getting-started/security-team-quickstart.md
 
   - name: Strategy
     items:
