@@ -1,17 +1,19 @@
 ### YamlMime:Landing
 
 title: Roadmaps through the Cloud Adoption Framework # < 60 chars
-summary: The CAF is not designed to be read from beginning to end. It is designed for modular consumption, to help you overcome project blockers, improve team processes, and manage compliance and change across your IT portfolio. To guide you through the journey, we’ve outlined a number of common scenarios and the journey through the Cloud Adoption Framework that maps most closely to that scenario.
+summary: The Cloud Adoption Framework is designed for modular consumption. The following articles help create balance between speed, innovation, and control. In each of these articles, we use an agile approach to a minimally viable solution that can get you started so that you can iterate and improve over time.
+
+### cspell:ignore ACOM 
 
 metadata:
   title: Roadmaps through the Cloud Adoption Framework # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Explore common scenarios and the journey through the Cloud Adoption Framework that maps most closely to these scenarios. # Required; article description that is displayed in search results. < 160 chars.
   services: cloud-adoption-framework
-  ms.service: cloud-adoption-framework #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: cloud-adoption-framework # Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: JanetCThomas #Required; your GitHub user alias, with correct capitalization.
-  ms.author: janet #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/18/2020 #Required; mm/dd/yyyy format.
+  author: JanetCThomas # Required; your GitHub user alias, with correct capitalization.
+  ms.author: janet # Required; microsoft alias of author; optional team alias.
+  ms.date: 02/18/2020 # Required; mm/dd/yyyy format.
 
 
 landingContent:
@@ -21,51 +23,66 @@ landingContent:
 # Start card title with a verb
 
   # Card
-  - title: Overcome blockers
+  - title: Accelerate adoption
     linkLists:
-      - linkListType: quickstart
+      - linkListType: overview
         links:
+          - text: Overview
+            url: blockers-overview.md
+      - linkListType: quickstart
+        links:      
           - text: Migrate existing workloads
             url: migrate.md
           - text: Build new products and services in the cloud
             url: innovate.md
           - text: Align your organization
-            url: enable.md
-          - text: Controls, compliance and governance needs
-            url: enable.md
+            url: org-alignment.md
+          - text: Controls, compliance, and governance
+            url: governance-roadmap.md
+          - text: Address security early and often
+            url: security-roadmap.md
           - text: Environment design and configuration
-            url: enable.md
+            url: design-config-roadmap.md
+          - text: Hybrid cloud adoption
+            url: hybrid-adoption.md
+          - text: Manage costs
+            url: manage-costs.md
 
   # Card
-  - title: Team roadmaps
-
+  - title: Improve team process
     linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview
+            url: team-roadmap-overview.md
       - linkListType: quickstart
         links:
           - text: Strategy team
-            url: enable.md
-          - text: Technical decision makers
-            url: enable.md
-          - text: Business decision makers
-            url: enable.md
+            url: strategy-team-quickstart.md
           - text: Migration team
-            url: enable.md
+            url: migration-team-quickstart.md
           - text: Innovation team
-            url: enable.md
+            url: innovation-team-quickstart.md
           - text: Data team
-            url: enable.md
-          - text: Cloud center of excellence
-            url: enable.md
+            url: data-team-quickstart.md
           - text: Governance team
-            url: enable.md
+            url: governance-team-quickstart.md
           - text: Platform team
-            url: enable.md
+            url: platform-team-quickstart.md
           - text: Automation team
-            url: enable.md
+            url: automation-team-quickstart.md
+          - text: Operations
+            url: operations-team-quickstart.md
+          - text: Security team
+            url: security-team-quickstart.md
 
   # Card
-  - title: Industry specific roadmaps
+  - title: Industry compliance
     linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview
+            url: enable.md
       - linkListType: quickstart
         links:
           - text: Financial

@@ -33,7 +33,7 @@ highlightedContent:
     # Card
     - title: "Cloud adoption journey roadmaps"
       itemType: get-started
-      url: ./overview.md
+      url: ./getting-started/index.yml
 
     # Card
     - title: "Cloud adoption tools and templates"
@@ -50,13 +50,13 @@ productDirectory:
       # imageSrc should be square in ratio with no whitespace
       imageSrc: https://docs.microsoft.com/media/common/i_road-map.svg
       links:
-        - url: ./overview.md
+        - url: ./getting-started/index.yml
           text: Overview
-        - url: ./overview.md
+        - url: ./getting-started/migrate.md
           text: Migrate existing workloads
         - url: ./overview.md
           text: Organizational readiness
-        - url: ./overview.md
+        - url: ./getting-started/security-roadmap.md
           text: Security concerns
 
     # Card
