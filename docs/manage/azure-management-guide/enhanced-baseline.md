@@ -1,6 +1,6 @@
 ---
 title: Enhanced management baseline in Azure
-description: Common improvements to the management baseline
+description: Use the Cloud Adoption Framework for Azure to understand common improvements to the management baseline. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
