@@ -237,9 +237,9 @@ In Cost Management, you can:
 **Learn more:**
 
 - [Get an overview](https://docs.microsoft.com/azure/cost-management/overview) of Azure Cost Management.
-- [Learn how to](https://docs.microsoft.com/azure/cost-management/cost-mgt-best-practices) optimize your cloud investment with Azure Cost Management.
+- [Learn how to](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices) optimize your cloud investment with Azure Cost Management.
 - [Learn how to](https://docs.microsoft.com/azure/cost-management/use-reports) use Azure Cost Management reports.
-- [Get a tutorial](https://docs.microsoft.com/azure/cost-management/tutorial-acm-opt-recommendations?toc=/azure/billing/TOC.json) on optimizing costs from recommendations.
+- [Get a tutorial](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/TOC.json) on optimizing costs from recommendations.
 - [Review](https://docs.microsoft.com/rest/api/consumption/budgets) the Azure Consumption API.
 
 ## Best practice: Monitor resource utilization
@@ -256,7 +256,7 @@ In Azure you pay for what you use, when resources are consumed, and you don't pa
 
 - Get an overview of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) and [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview).
 - [Get](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations) Advisor cost recommendations.
-- [Learn how to [optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management/tutorial-acm-opt-recommendations?toc=/azure/billing/TOC.json), and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
+- [Learn how to [optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/TOC.json), and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
 - Learn about the [Azure Resource Optimization (ARO) Toolkit](https://github.com/Azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ## Best practice: Implement resource group budgets
@@ -269,7 +269,7 @@ Often, resource groups are used to represent cost boundaries. Together with this
 **Learn more:**
 
 - [Learn how to](https://docs.microsoft.com/azure/billing/billing-cost-management-budget-scenario) manage costs with Azure Budgets.
-- [Follow a tutorial](https://docs.microsoft.com/azure/cost-management/tutorial-acm-create-budgets?toc=/azure/billing/TOC.json) to create and manage an Azure budget.
+- [Follow a tutorial](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/billing/TOC.json) to create and manage an Azure budget.
 
 ## Best practice: Optimize Azure Monitor retention
 

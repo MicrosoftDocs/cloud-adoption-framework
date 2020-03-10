@@ -21,15 +21,15 @@ The following checklist outlines the common areas of complexity that could requi
 
 ### Business driven scope expansion
 
-- **[Support global markets](../../decision-guides/regions/index.md):** The business operates in multiple geographic regions with disparate data sovereignty requirements. To meet those requirements, additional considerations should be factored into the prerequisite review and distribution of assets during migration.
+- **[Support global markets](../azure-best-practices/multiple-regions.md):** The business operates in multiple geographic regions with disparate data sovereignty requirements. To meet those requirements, additional considerations should be factored into the prerequisite review and distribution of assets during migration.
 
 ### Technology driven scope expansion
 
-- **[VMware migration](./vmware-host.md):** Migrating VMware hosts can accelerate the overall migration process. Each migrated VMware host can move multiple workloads to the cloud using a lift and shift approach. After migration, those VMs and workloads can stay in VMware or be migrated to modern cloud capabilities.
-- **[SQL Server migration](./sql-migration.md):** Migrating SQL Servers can accelerate the overall migration process. Each SQL Server migrated can move multiple databases and services, potentially accelerating multiple workloads.
-- **[Multiple datacenters](./multiple-datacenters.md):** Migrating multiple datacenters adds significant complexity. During the Assess, Migrate, Optimization, and Manage processes, additional considerations are discussed to prepare for more complex environments.
-- **[Data requirements exceed network capacity](./network-capacity-exceeded.md):** Companies frequently choose to migrate to the cloud because the capacity, speed, or stability of an existing datacenter is no longer satisfactory. Unfortunately, those same constraints add complexity to the migration process, requiring additional planning during the assessment and migration processes.
-- **[Governance or compliance strategy](./governance-or-compliance.md):** When governance and compliance are vital to the success of a migration, additional alignment between IT governance teams and the cloud adoption team is required.
+- **[VMware migration](../azure-best-practices/vmware-host.md):** Migrating VMware hosts can accelerate the overall migration process. Each migrated VMware host can move multiple workloads to the cloud using a lift and shift approach. After migration, those VMs and workloads can stay in VMware or be migrated to modern cloud capabilities.
+- **[SQL Server migration](../azure-best-practices/sql-migration.md):** Migrating SQL Servers can accelerate the overall migration process. Each SQL Server migrated can move multiple databases and services, potentially accelerating multiple workloads.
+- **[Multiple datacenters](../azure-best-practices/multiple-datacenters.md):** Migrating multiple datacenters adds significant complexity. During the Assess, Migrate, Optimization, and Manage processes, additional considerations are discussed to prepare for more complex environments.
+- **[Data requirements exceed network capacity](../azure-best-practices/network-capacity-exceeded.md):** Companies frequently choose to migrate to the cloud because the capacity, speed, or stability of an existing datacenter is no longer satisfactory. Unfortunately, those same constraints add complexity to the migration process, requiring additional planning during the assessment and migration processes.
+- **[Governance or compliance strategy](../azure-best-practices/governance-or-compliance.md):** When governance and compliance are vital to the success of a migration, additional alignment between IT governance teams and the cloud adoption team is required.
 
 If any of these complexities are present in your scenario, then this section of the Cloud Adoption Framework will likely provide the type of guidance needed to properly align scope in the migration processes.
 
@@ -37,7 +37,7 @@ Each of these scenarios is addressed by the various articles in this section of 
 
 ## Next steps
 
-Browse the table of contents on the left to address specific needs or scope changes. Alternatively, the first scope enhancement on the list, [Support global markets](../../decision-guides/regions/index.md), is a good starting point when reviewing these scenarios.
+Browse the table of contents on the left to address specific needs or scope changes. Alternatively, the first scope enhancement on the list, [Support global markets](../azure-best-practices/multiple-regions.md), is a good starting point when reviewing these scenarios.
 
 > [!div class="nextstepaction"]
-> [Support global markets](../../decision-guides/regions/index.md)
+> [Support global markets](../azure-best-practices/multiple-regions.md)

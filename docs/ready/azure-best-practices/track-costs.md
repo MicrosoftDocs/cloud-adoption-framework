@@ -1,6 +1,6 @@
 ---
-title: "Track costs across business units, environments, or projects"
-description: Tracking costs across business units, environments, or projects
+title: "Track costs across business units and environments"
+description: Use the Cloud Adoption Framework for Azure to understand the decisions and implementation approaches to creating tracking mechanisms.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
@@ -95,6 +95,8 @@ The following scope and role settings will create the required visibility into c
 
   - In a well-managed environment, the cloud governance team likely has a higher degree of access already, making additional scope assignment for [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor) unnecessary.
 
+<!-- cSpell:ignore automations -->
+
 - [Cloud center of excellence](../../organize/cloud-center-of-excellence.md). Responsibility for managing costs related to shared services requires Cost Management Contributor access at the subscription level. Additionally, this team might require Cost Management Contributor access to resource groups or subscriptions that contain assets deployed by CCoE automations to understand how those automations affect costs.
 
   - **Shared services**. When a cloud center of excellence is engaged, best practice suggests that assets managed by the CCoE are supported from a centralized shared service subscription within a hub and spoke model. In this scenario, the CCoE likely has contributor or owner access to that subscription, making additional scope assignment for [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor) unnecessary.
@@ -110,14 +112,14 @@ Azure Cost Management is a well-documented tool for setting budgets and gaining 
 
 ### Get started with Azure Cost Management
 
-For more information on getting started with Azure Cost Management, see [How to optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management/cost-mgt-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
+For more information on getting started with Azure Cost Management, see [How to optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Use Azure Cost Management
 
-- [Create and manage budgets](https://docs.microsoft.com/azure/cost-management/tutorial-acm-create-budgets)
-- [Export cost data](https://docs.microsoft.com/azure/cost-management/tutorial-export-acm-data)
-- [Optimize costs based on recommendations](https://docs.microsoft.com/azure/cost-management/tutorial-acm-opt-recommendations)
-- [Use cost alerts to monitor usage and spending](https://docs.microsoft.com/azure/cost-management/cost-mgt-alerts-monitor-usage-spending)
+- [Create and manage budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets)
+- [Export cost data](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-export-acm-data)
+- [Optimize costs based on recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
+- [Use cost alerts to monitor usage and spending](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending)
 
 ### Use Azure Cost Management to govern AWS costs
 
