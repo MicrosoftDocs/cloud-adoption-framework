@@ -13,7 +13,7 @@ ms.subservice: migrate
 
 Migration of an entire SQL Server to Azure may accelerate the standard migration methodology outlined in the Cloud Adoption Framework and pictured below.
 
-![Cloud Adoption Framework migration model](../../_images/operational-transformation-migrate.png)
+![Cloud Adoption Framework migration model](../../_images/migrate/methodology.png)
 
 ## Migration best practices
 

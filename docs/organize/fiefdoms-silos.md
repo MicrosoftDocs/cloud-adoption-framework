@@ -1,6 +1,6 @@
 ---
 title: "Silos and fiefdoms"
-description: Understand the antipatterns of silos and fiefdoms.
+description: Learn about antipatterns that can block a growth mindset in organizations. Specifically, learn about silo and fiefdom antipatterns.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019

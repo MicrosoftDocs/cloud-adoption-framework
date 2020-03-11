@@ -28,7 +28,8 @@ C. Some cloud adoption plans are governed by external compliance requirements. T
 
 D. When a partner provides ongoing managed services or is contracted to deliver on the adoption plan, they will typically provide their own landing zone. Using a partner landing zone could accelerate adoption efforts and ensure consistent operational management requirements. However, give additional consideration to internal governance and security requirements to ensure alignment.
 
-E. Adoption teams who have a midterm objective (within 24 months) to **host more than 1,000 assets (apps, infrastructure, or data assets) in the cloud**, should look to the Cloud Adoption Framework's NorthStar as a guide to platform architecture and landing zones. Northstar is a more advanced roadmap, including target-state platform architecture and reference implementations. This roadmap incorporates aspects of parallel methodologies including governance and operations to better prepare for mission-critical, secure, complex, and compliance governed adoption.
+> [!NOTE]
+> Before proceeding with a code-first and refactoring-focused approach, readers should be familiar with the [competing priorities behind this decision](../../strategy/balance-competing-priorities.md#balance-during-ready). When choosing a landing zone approach, it is important to understand the necessary balance between "Time to adoption" and "Long-term operations".
 
 ## Choosing a first landing zone
 
@@ -44,7 +45,7 @@ The following table shows the same landing zones from a slightly different persp
 | Landing Zone                                 | Hub                          | Spoke    | Cloud model | Technology      |
 |----------------------------------------------|------------------------------|----------|-------------|-----------------|--|--|--|
 | [CAF Migrate](./migrate-landing-zone.md)     | Refactor required            | Included | Azure only  | Azure Blueprint |
-| [CAF Terraform](./terraform-landing-zone.md) | Included in NorthStar module | Included | Multicloud  | Terraform       |
+| [CAF Terraform](./terraform-landing-zone.md) | Included in VDC module       | Included | Multicloud  | Terraform       |
 
 ## Next steps
 

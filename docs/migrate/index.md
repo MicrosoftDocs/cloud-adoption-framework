@@ -1,6 +1,6 @@
 ---
 title: "Cloud migration"
-description: Cloud migration in the Cloud Adoption Framework
+description: Learn how to establish the iterative processes to assess, migrate, optimize, secure, and manage the workloads you want to migrate to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
@@ -16,12 +16,12 @@ Any enterprise-scale [cloud adoption plan](../plan/index.md), will include workl
 
 ## Getting started
 
-To prepare you for this phase of the cloud adoption lifecycle, the framework suggests the following five exercises:
+To prepare you for this phase of the cloud adoption lifecycle, the framework recommends the following exercises:
 
 <!-- markdownlint-disable MD033 -->
 <ul class="panelContent cardsF">
     <li style="display: flex; flex-direction: column;">
-        <a href="./azure-migration-guide/prerequisites.md?tabs=Checklist">
+        <a href="./azure-migration-guide/index.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">
@@ -31,27 +31,8 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                             </div>
                         </div>
                         <div class="cardText" style="padding-left:0px;">
-                            <h3>Migration prerequisite</h3>
-                            Validate that a landing zone has been deployed and is ready to host the first few workloads that will be migrated to Azure. If a cloud adoption strategy and cloud adoption plan have not been created, validate that both efforts are in progress.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./azure-migration-guide/index.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/2.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
                             <h3>Migrate your first workload</h3>
-                            Leverage the Azure migration guide to guide the migration of your first workload. This will help you become familiar with the tools and approaches needed to scale adoption efforts.
+                            Leverage the Azure migration guide to become familiar with the Azure native tools and approach to migration.
                         </div>
                     </div>
                 </div>
@@ -65,12 +46,12 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                     <div class="card" style="padding-bottom:10px;">
                         <div class="cardImageOuter">
                             <div class="cardImage">
-                                <img alt="" src="../_images/icons/3.png" data-linktype="external">
+                                <img alt="" src="../_images/icons/2.png" data-linktype="external">
                             </div>
                         </div>
                         <div class="cardText" style="padding-left:0px;">
-                            <h3>Expanded migration scenarios</h3>
-                            Leverage the expanded scope checklist to identify scenarios which would require modifications to your future state architecture, migration processes, landing zone configurations, or migration tooling decisions.
+                            <h3>Migration scenarios</h3>
+                            Leverage additional migration tools and approaches to act on additional migration scenarios.
                         </div>
                     </div>
                 </div>
@@ -84,12 +65,12 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                     <div class="card" style="padding-bottom:10px;">
                         <div class="cardImageOuter">
                             <div class="cardImage">
-                                <img alt="" src="../_images/icons/4.png" data-linktype="external">
+                                <img alt="" src="../_images/icons/3.png" data-linktype="external">
                             </div>
                         </div>
                         <div class="cardText" style="padding-left:0px;">
-                            <h3>Best Practices</h3>
-                            Validate any modifications against the best practices section to ensure proper implementation of expanded scope or workload/architecture specific migration approaches.
+                            <h3>Best practices</h3>
+                            Address common migration needs through the application of consistent best practices.
                         </div>
                     </div>
                 </div>
@@ -103,12 +84,12 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                     <div class="card" style="padding-bottom:10px;">
                         <div class="cardImageOuter">
                             <div class="cardImage">
-                                <img alt="" src="../_images/icons/5.png" data-linktype="external">
+                                <img alt="" src="../_images/icons/4.png" data-linktype="external">
                             </div>
                         </div>
                         <div class="cardText" style="padding-left:0px;">
-                            <h3>Process Improvements</h3>
-                            Migration is a process heavy activity. As migration efforts scale, use the migration considerations section to evaluate and mature various aspects of your processes.
+                            <h3>Process improvements</h3>
+                            Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration.
                         </div>
                     </div>
                 </div>
@@ -118,11 +99,16 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
 </ul>
 <!-- markdownlint-enable MD033 -->
 
+This methodology and the steps above build on the following assumptions:
+
+- Before migrating workloads, at least one [landing zone](../ready/index.md) has been identified, configured, and deployed to meet the needs of the near-term cloud adoption plan.
+- Migration is commonly associated with the terms _lift and shift_ or _rehost_. This methodology and the above steps are built on the belief that no data center (and very few workloads) should be migrated using a pure rehost approach. While many workloads can be rehosted, customers more often choose to modernize specific assets within each workload. During this iterative process, the balance between speed and modernization is a common discussion point.
+
 ## Iterative migration process
 
 At its core, migration to the cloud consists of four simple phases: Assess, Migrate, Optimize, and Secure & Manage. This section of the Cloud Adoption Framework teaches readers to maximize the return from each phase of the process and align those phases with your cloud adoption plan. The following graphic illustrates those phases in an iterative approach:
 
-![Cloud Adoption Framework migration model](../_images/operational-transformation-migrate.png)
+![Cloud Adoption Framework migration model](../_images/migrate/methodology.png)
 
 ## Create a balanced cloud portfolio
 
@@ -138,7 +124,7 @@ An effective journey needs a target destination. Establish a rough vision of the
 
 These articles outlines two journeys, each with a similar goal&mdash;to migrate a large percentage of existing assets to Azure. However, the business outcomes and current state will significantly influence the processes required to get there. Those subtle deviations result in two radically different approaches to reaching a similar end state.
 
-![Cloud Adoption Framework migration model](../_images/operational-transformation-migrate.png)
+![Cloud Adoption Framework migration model](../_images/migrate/methodology.png)
 
 To guide incremental execution during the transition to the end state, this model separates migration into two areas of focus.
 
@@ -168,48 +154,9 @@ However, an incremental migration approach is still required. In most environmen
 
 The incremental migration approach of the Cloud Adoption Framework helps build an incremental plan that reflects and documents technical and cultural limitations. The goal of this model is to maximize migration velocity while minimizing overhead from both IT and the business. Provided below are two examples of an incremental migration execution based on the migration backlog.
 
-<!-- markdownlint-disable MD033 -->
-
-<ul class="panelContent cardsZ">
-<li style="display: flex; flex-direction: column;">
-    <a href="./azure-migration-guide/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Azure migration guide</h3>
-                        <p><b>Narrative summary:</b> This customer is migrating fewer than 1,000 VMs. Fewer than ten applications supported are owned by an application owner not in the IT organization. The remaining applications, VMs, and associated data are owned and supported by members of the cloud adoption team. Members of the cloud adoption team have administrative access to the production environments in the existing datacenter.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./expanded-scope/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Complex scenario guide</h3>
-                        <p><b>Narrative summary:</b> This customer's migration has complexity across the business, culture, and technology. This guide includes multiple specific complexity challenges and ways to overcome those challenges.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-</ul>
-
-<!-- markdownlint-enable MD033 -->
-
-These two journeys represent two extremes of experience for customers who invest in cloud migration. Most companies reflect a combination of the two scenarios above. After reviewing the journeys, use the Cloud Adoption Framework migration model to start the migration conversation and modify the baseline journeys to more closely meet your needs.
-
 ## Next steps
 
-Choose one of these journeys:
+Get started by familiarizing yourself with the [Azure migration guide](./azure-migration-guide/index.md)
 
 > [!div class="nextstepaction"]
 > [Azure migration guide](./azure-migration-guide/index.md)
->
-> [Expanded scope guide](./expanded-scope/index.md)

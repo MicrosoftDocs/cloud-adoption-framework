@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
+<!-- cSpell:ignore HDFS databox VHDX -->
+
 # Data requirements exceed network capacity during a migration effort
 
 In a cloud migration, assets are replicated and synchronized over the network between the existing datacenter and the cloud. It is not uncommon for the existing data size requirements of various workloads to exceed network capacity. In such a scenario, the process of migration can be radically slowed, or in some cases, stopped entirely. The following guidance will expand the scope of the [Azure migration guide](../azure-migration-guide/index.md) to provide a solution that works around network limitations.
@@ -23,7 +25,7 @@ Most of this effort required in this scope expansion will occur during the prere
 
 **Offline transfer of independent data stores:** Pictured in the diagram below are examples of both online and offline data transfers with Azure Data Box. These approaches could be used to ship large volumes of data to the cloud prior to workload migration. In an offline data transfer, source data is copied to Azure Data Box, which is then physically shipped to Microsoft for transfer into an Azure storage account as a file or a blob. This process can be used to ship data that isn't directly tied to a specific workload, prior to other migration efforts. Doing so reduces the amount of data that needs to be shipped over the network, in an effort to complete a migration within network constraints.
 
-This approach could be used to transfer data HDFS, backups, archives, File Servers, applications, etc… Existing technical guidance explains how to use this approach to transfer data from [an HDFS store](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster) or from disks using [SMB](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data), [NFS](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-nfs), [REST](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
+This approach could be used to transfer data from HDFS, backups, archives, file servers, and applications. Existing technical guidance explains how to use this approach to transfer data from [an HDFS store](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster) or from disks using [SMB](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data), [NFS](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-nfs), [REST](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
 
 There are also [third-party partner solutions](https://azuremarketplace.microsoft.com/campaigns/databox/azure-data-box) that use Azure Data Box for a "Seed and Feed" migration, where a large volume of data is moved via an offline transfer but is later synchronized at a lower scale over the network.
 

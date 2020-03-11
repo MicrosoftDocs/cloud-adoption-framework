@@ -1,6 +1,6 @@
 ---
 title: "Cloud automation capabilities"
-description: Describe the formation of cloud automation capabilities
+description: Use the Cloud Adoption Framework for Azure to understand the formation of cloud automation capabilities to accelerate adoption and innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019

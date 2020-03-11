@@ -1,6 +1,6 @@
 ---
 title: "Iteration and Release Backlog"
-description: Building an iteration and release backlog
+description: Use the Cloud Adoption Framework for Azure to learn how to build an interation and release backlog to organize your tasks.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

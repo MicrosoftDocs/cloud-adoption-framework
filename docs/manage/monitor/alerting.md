@@ -1,6 +1,6 @@
 ---
 title: "Cloud monitoring guide: Alerting"
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
+description: Use the Cloud Adoption Framework for Azure to learn how to determine when to use Azure Monitor or System Center Operations Manager in Microsoft Azure.
 author: MGoedtel
 ms.author: magoedte
 ms.date: 06/26/2019

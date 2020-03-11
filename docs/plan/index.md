@@ -1,6 +1,6 @@
 ---
 title: "Define a cloud adoption plan"
-description: Guide technical efforts with a defined cloud adoption plan
+description: Use the Cloud Adoption Framework for Azure to learn how to guide technical efforts with a defined cloud adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019

@@ -1,6 +1,6 @@
 ---
 title: "Aligning responsibilities across teams"
-description: Learn to align responsibilities across teams.
+description: Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019

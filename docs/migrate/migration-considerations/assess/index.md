@@ -1,6 +1,6 @@
 ---
 title: "Validate assessment assumptions before migration"
-description: Validate assessment assumptions before migration
+description: Use the Cloud Adoption Framework for Azure to learn how to validate assessment assumptions before beginning migration to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
@@ -57,7 +57,7 @@ In addition to the high-level accountability, there are actions that an individu
 
 ## Next steps
 
-With a general understanding of the assessment process, you are ready to begin the process by [aligning business priorities](./business-priorities.md).
+With a general understanding of the assessment process, you are ready to begin the process by [classifying workloads](./classify.md).
 
 > [!div class="nextstepaction"]
-> [Align business priorities](./business-priorities.md)
+> [Classify workloads](./classify.md)
