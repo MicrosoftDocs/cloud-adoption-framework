@@ -1,6 +1,6 @@
 ---
 title: "Central IT capabilities"
-description: Use the Cloud Adoption Framework for Azure to learn how to establish a centralized IT team your cloud adoption work.
+description: Use the Cloud Adoption Framework for Azure to learn how to establish a centralized IT team for your cloud adoption work.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019
