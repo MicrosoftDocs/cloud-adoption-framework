@@ -1,6 +1,6 @@
 ---
 title: "Cloud migration"
-description: Cloud migration in the Cloud Adoption Framework
+description: Learn how to establish the iterative processes to assess, migrate, optimize, secure, and manage the workloads you want to migrate to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

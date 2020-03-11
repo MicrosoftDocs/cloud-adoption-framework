@@ -1,6 +1,6 @@
 ---
 title: "Replication options"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+description: Use the Cloud Adoption Framework for Azure to understand the replication process and why you need replication for cloud migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

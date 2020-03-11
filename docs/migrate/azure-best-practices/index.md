@@ -1,6 +1,6 @@
 ---
 title: "Azure migration best practices"
-description: Introduction to Azure Migration Best Practices
+description: Use the Cloud Adoption Framework for Azure to learn how to implement the tools necessary to align with best practices for cloud migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
