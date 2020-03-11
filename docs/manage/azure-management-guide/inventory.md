@@ -1,6 +1,6 @@
 ---
 title: Inventory and visibility in Azure
-description: Learn how to set up inventory, monitoring, reporting, and alerts for your Azure management environment.
+description: Learn the tools that provide both an inventory and visibility into the inventory's run state to collect operational data.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

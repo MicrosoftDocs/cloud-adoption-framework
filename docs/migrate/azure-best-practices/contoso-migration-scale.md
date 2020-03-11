@@ -1,6 +1,6 @@
 ---
 title: "Scale a migration to Azure"
-description: Learn how Contoso handles a scaled migration to Azure.
+description: Use the Cloud Adoption Framework for Azure to learn how to plan for and perform a migration at scale to Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/08/2018

@@ -1,6 +1,6 @@
 ---
 title: "Cloud operation capabilities"
-description: Describes the formation of cloud operation capabilities
+description: Use the Cloud Adoption Framework for Azure to learn cloud operation capabilities and allow IT operations to improve and provide additional value.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019

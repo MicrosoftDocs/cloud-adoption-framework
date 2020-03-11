@@ -1,6 +1,6 @@
 ---
 title: "Prerequisites for migrating to Azure"
-description: Prerequisites for migrating to Azure
+description: Use the Cloud Adoption Framework for Azure to understand how to prepare for Azure migration and what prerequisites you need for a successful migration project.
 author: matticusau
 ms.author: mlavery
 ms.date: 04/04/2019

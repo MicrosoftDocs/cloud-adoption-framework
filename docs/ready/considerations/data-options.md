@@ -1,6 +1,6 @@
 ---
 title: Review your data options
-description: Review your data options for Azure workloads.
+description: Use the Cloud Adoption Framework for Azure to learn how to determine the data requirements for hosting your workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2019

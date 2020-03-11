@@ -1,6 +1,6 @@
 ---
 title: "Introduction to the operating model"
-description: Understand the operating model of the Cloud Adoption Framework.
+description: Use the Cloud Adoption Framework for Azure to learn how to establish an operating model for the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

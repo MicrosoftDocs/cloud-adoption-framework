@@ -1,6 +1,6 @@
 ---
 title: "Best practices for Azure readiness"
-description: An introduction to best practices for Azure readiness.
+description: Learn how to provide best practices and additional guidance to help your team establish and prepare your Azure environment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019

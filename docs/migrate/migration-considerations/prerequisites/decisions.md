@@ -1,6 +1,6 @@
 ---
 title: "Decisions that affect migration"
-description: Important decisions to be made about the migration process.
+description: Use the Cloud Adoption Framework for Azure to make appropriate decisions and choose execution activities that will support a successful migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020
