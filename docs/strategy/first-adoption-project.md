@@ -1,6 +1,6 @@
 ---
 title: "First cloud adoption project"
-description: Learn about implementing your first cloud adoption project.
+description: Use the Cloud Adoption Framework for Azure to learn the processes for cloud adoption and the operation of workloads hosted in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 5/19/2019
