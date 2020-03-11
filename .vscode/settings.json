@@ -165,6 +165,7 @@
         "routable",
         "runbook",
         "runbooks",
+        "schemaless",
         "sdks",
         "sharepoint",
         "showback",
@@ -207,5 +208,8 @@
         "wireframe",
         "xbox",
         "zerto"
+    ],
+    "cSpell.flagWords": [
+        "pre-defined"
     ]
 }

@@ -45,7 +45,7 @@ Cloud migrations tools like [Azure Site Recovery](https://docs.microsoft.com/azu
 
 The principles behind this incremental model are based on the execution of processes and prerequisites referenced in the following infographic.
 
-![Cloud Adoption Framework migration model](../../_images/operational-transformation-migrate.png)
+![Cloud Adoption Framework migration model](../../_images/migrate/methodology.png)
 
 The consistent application of these principles represents an end goal for your cloud migration processes and should not be viewed as a required starting point. As your migration efforts mature, refer to the guidance in this section to help define the best process to support your organizational needs.
 

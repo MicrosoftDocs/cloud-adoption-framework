@@ -43,7 +43,7 @@ The following exercises help guide you through the process of creating a landing
         </a>
     </li>
     <li style="display: flex; flex-direction: column;">
-        <a href="./landing-zone/migrate-landing-zone.md">
+        <a href="./landing-zone/first-landing-zone.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">
@@ -54,7 +54,7 @@ The following exercises help guide you through the process of creating a landing
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>First landing zone</h3>
-                            Evaluate the Cloud Adoption Framework migrate landing zone blueprint. Use this blueprint to create your first migration-ready landing zone for quick experimentation and learning.
+                            Choose the most appropriate landing zone option, to establish a code-based starting point for your environment.
                         </div>
                     </div>
                 </div>
@@ -72,8 +72,8 @@ The following exercises help guide you through the process of creating a landing
                             </div>
                         </div>
                         <div class="cardText" style="padding-left:0px;">
-                            <h3>Expand the blueprint</h3>
-                            Use the landing zone considerations to identify and make any necessary modifications to the blueprint template.
+                            <h3>Expand the landing zone</h3>
+                            Meet the platform requirements of your cloud adoption plan by expanding the first landing zone.
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ The following exercises help guide you through the process of creating a landing
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Best practices</h3>
-                            Validate landing zone modifications against the best practices sections to ensure the proper configuration of your current and future landing zones.
+                            Validate landing zone modifications against best practices to ensure the proper configuration of your current and future landing zones.
                         </div>
                     </div>
                 </div>

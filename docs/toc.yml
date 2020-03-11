@@ -44,12 +44,14 @@ items:
         href: strategy/financial-models.md
       - name: Understand cloud accounting
         href: strategy/cloud-accounting.md
-      - name: Balance the portfolio
-        href: strategy/balance-the-portfolio.md
     - name: First cloud adoption project
       href: strategy/first-adoption-project.md
     - name: Additional considerations
       items:
+      - name: Balance competing priorities
+        href: strategy/balance-competing-priorities.md
+      - name: Balance the portfolio
+        href: strategy/balance-the-portfolio.md
       - name: Global markets
         href: strategy/global-markets.md
     - name: Skills relevant to Strategy
@@ -263,7 +265,7 @@ items:
             href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md
         - name: VMware hosts
           items:
-          - name: Overview
+          - name: Considerations when rehosting VMWare
             href: migrate/azure-best-practices/vmware-host.md
           - name: Prerequisites
             items:
@@ -508,6 +510,8 @@ items:
           items:
           - name: Validate assessment assumptions before migration - Add R refinement
             href: migrate/migration-considerations/assess/index.md
+          - name: Classify workloads
+            href: migrate/migration-considerations/assess/classify.md
           - name: Keep priorities aligned
             href: migrate/migration-considerations/assess/business-priorities.md
           - name: Evaluate workload readiness
@@ -536,7 +540,7 @@ items:
             href: migrate/migration-considerations/migrate/replicate-options.md
           - name: Stage workloads
             href: migrate/migration-considerations/migrate/stage.md
-        - name: Testing, optimization and promotion processes
+        - name: Promotion processes
           items:
           - name: Overview
             href: migrate/migration-considerations/optimize/index.md
@@ -1218,6 +1222,8 @@ items:
     items:
     - name: Cloud Adoption Framework roadmap
       href: reference/index.md
+    - name: What's new
+      href: reference/whats-new.md
     - name: Operating model
       items:
       - name: Overview

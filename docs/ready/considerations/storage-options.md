@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- cSpell:ignore HDFS databox Avere HANA ACLs Isilon DFSR Cloudera -->
+
 # Review your storage options
 
 Storage capabilities are critical for supporting workloads and services that are hosted in the cloud. As part of your cloud adoption readiness preparations, review this article to help you plan for and address your storage needs.

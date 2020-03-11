@@ -52,7 +52,7 @@ This approach consists of two methodologies or areas of focus: Cloud Strategy & 
 
 Cloud implementation is an iterative process for migrating and modernizing the digital estate, aligned with targeted business outcomes and change management controls. During each iteration, workloads are migrated or modernized in alignment with the strategy and plan. Decisions regarding IaaS, PaaS, or hybrid are made during the assess phase of the [Migrate methodology](../migrate/index.md) to optimize control and execution. Those decisions will drive the tools used during each iteration of the migration phase within the same methodology. This model can be used with minimal strategy and planning. However, to ensure the greatest business returns, both IT and the business should align on a clear strategy and plan to guide implementation activities.
 
-![Cloud Adoption Framework's Cloud implementation methodology](../_images/operational-transformation-migrate.png)
+![The Cloud Adoption Framework's cloud implementation methodology](../_images/migrate/methodology.png)
 
 The focus of this effort is the migration or modernization of workloads. A workload is a collection of infrastructure, applications, and data that collectively supports a common business goal, or the execution of a common business process. Examples of workloads could include things like a line-of-business application, an HR payroll solution, a CRM solution, a financial document approval workflow, or a business intelligence solution. Workloads may also include shared technical resources like a data warehouse that supports several other solutions. In some cases, a workload could be represented by a single asset like a self-contained server, application, or data platform.
 
