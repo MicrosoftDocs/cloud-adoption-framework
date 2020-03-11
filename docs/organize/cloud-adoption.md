@@ -1,6 +1,6 @@
 ---
 title: "Cloud adoption capabilities" 
-description: Describes the formation of cloud adoption capabilities
+description: Use the Cloud Adoption Framework for Azure to understand the formation of cloud adoption capabilities and staff your teams appropriately.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019

@@ -1,6 +1,6 @@
 ---
 title: "Cloud strategy capabilities" 
-description: Describes the formation of cloud strategy capabilities
+description: Use the Cloud Adoption Framework for Azure to learn how to align technical activities to business outcomes.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019

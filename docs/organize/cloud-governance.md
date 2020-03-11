@@ -1,6 +1,6 @@
 ---
 title: "Cloud governance capabilities" 
-description: Describes the formation of cloud governance capabilities
+description: Use the Cloud Adoption Framework for Azure to learn how cloud governance capabilities ensure that risks and risk tolerance are properly evaluated and managed.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019
