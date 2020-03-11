@@ -9,9 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
+<!-- cSpell:ignore jenhayes -->
+
 # Centralize management operations
 
-For most organizations, using a single Azure Active Directory (Azure AD) tenant for all users simplifies management operations and reduces maintenance costs. This is because all management tasks can be by designated users, user groups, or service principals within that tenant. 
+For most organizations, using a single Azure Active Directory (Azure AD) tenant for all users simplifies management operations and reduces maintenance costs. This is because all management tasks can be by designated users, user groups, or service principals within that tenant.
 
 We recommend that you use only one Azure AD tenant for your organization, if possible. However, some situations might require an organization to maintain multiple Azure AD tenants for the following reasons:
 

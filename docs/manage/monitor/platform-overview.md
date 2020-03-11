@@ -10,7 +10,7 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
-<!-- cspell:ignore opsman ITSM -->
+<!-- cSpell:ignore opsman ITSM -->
 
 # Cloud monitoring guide: Monitoring platforms overview
 
