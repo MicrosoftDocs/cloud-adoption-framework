@@ -1,6 +1,6 @@
 ---
 title: "Create hybrid cloud consistency"
-description: Defining the approach to create hybrid cloud consistency.
+description: Use the Cloud Adoption Framework for Azure to learn how to define the approach to create hybrid cloud consistency.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/27/2018

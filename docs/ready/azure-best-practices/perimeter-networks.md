@@ -1,6 +1,6 @@
 ---
 title: "Perimeter networks"
-description: Learn how perimeter networks (also called DMZs) use Azure features and services.
+description: Use the Cloud Adoption Framework for Azure to learn how to set up Azure effectively for your organization.
 author: tracsman
 ms.author: jonor
 ms.date: 05/10/2019

@@ -1,6 +1,6 @@
 ---
 title: "Skills readiness path"
-description: Overview of skills readiness path
+description: Use the Cloud Adoption Framework for Azure to learn how to build the skills necessary to complete your migration journey.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2019
