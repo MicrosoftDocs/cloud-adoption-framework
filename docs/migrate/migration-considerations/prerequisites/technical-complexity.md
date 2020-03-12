@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
+<!-- cSpell:ignore ITSM TOGAF -->
+
 # Prepare for technical complexity: agile change management
 
 When an entire datacenter can be deprovisioned and re-created with a single line of code, traditional processes struggle to keep up. The guidance throughout the Cloud Adoption Framework is built on practices like IT service management (ITSM), The Open Group Architecture Framework (TOGAF), and others. However, to ensure agility and responsiveness to business change, this framework molds those practices to fit agile methodologies and DevOps approaches.
@@ -71,7 +73,7 @@ A partnership between the cloud strategy team and the cloud adoption team collab
 
 - **Refined inventory.** Validation of required assets to be migrated. Often validated through log or monitoring data at the host, network, or OS level to ensure an accurate understanding of network and hardware dependencies of each asset under standard load.
 - **Usage patterns.** An understanding of the patterns of usage from end users. These patterns often include an analysis of end-user geographical distribution, network routes, seasonal usage spikes, daily/hourly usage spikes, and end-user composition (interval versus external).
-- **Performance expectations.** Analysis of available log data capturing throughput, pageviews, network routes, and other performance data required to replicate the end-user experience.
+- **Performance expectations.** Analysis of available log data capturing throughput, page views, network routes, and other performance data required to replicate the end-user experience.
 - **Dependencies.** Analysis of network traffic and application usage patterns to identify any additional workload dependencies, which should be factored into sequencing and environmental readiness. Don't include a workload in a release until one of the following criteria can be met:
   - All dependent workloads have been migrated.
   - Network and security configurations have been implemented to allow the workload to access all dependencies in alignment with existing performance expectations.

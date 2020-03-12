@@ -32,7 +32,7 @@ Each of the following categories represents a foundational technology of all clo
 
 [Resource Tagging](./resource-tagging/index.md): Organize your cloud-based resources to support billing models, cloud accounting approaches, management, and to optimize resource utilization and cost. Resource tagging requires a consistent and well-organized naming and metadata scheme.
 
-[Software Defined Networking](./software-defined-network/index.md): Deploy secure workloads to the cloud using rapid deployment and modification of virtualized networking capabilities. Software-defined networks (SDNs) can support agile workflows, isolate resources, and integrate cloud-based systems with your existing IT infrastructure.
+[Software Defined Networking](./software-defined-network/index.md): Deploy secure workloads to the cloud using rapid deployment and modification of virtualized networking capabilities. Software-defined networks can support agile workflows, isolate resources, and integrate cloud-based systems with your existing IT infrastructure.
 
 [Encryption](./encryption/index.md): Secure your sensitive data using encryption to align with your organization's compliance and security policy requirements.
 

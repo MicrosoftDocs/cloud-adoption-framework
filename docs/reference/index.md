@@ -40,7 +40,7 @@ Removing key obstacles and enabling change requires more than implementation gui
 
 The Cloud Adoption Framework is an overarching framework that covers Plan, Ready, and Adopt phases across the Migration and Innovation motivations for cloud adoption, supported by Governance and Operations guidance.
 
-The framework has reached general availability (GA). However, we are still actively building this framework in collaboration with customers, partners, and internal teams. To encourage partnership, content is released as it becomes available. These public releases enable testing, validating, and incrementally refining the guidance. 
+The framework has reached general availability (GA). However, we are still actively building this framework in collaboration with customers, partners, and internal teams. To encourage partnership, content is released as it becomes available. These public releases enable testing, validating, and incrementally refining the guidance.
 
 To successfully adopting the cloud, a customer must prepare its people, technologies, and processes for this digital transformation. The Cloud Adoption Framework includes a section outlining the overall adoption journeys, both Migration and Innovation, as an overview for the customers. This section is composed of the following adoption journey phases:
 

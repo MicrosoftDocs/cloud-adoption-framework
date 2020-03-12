@@ -9,9 +9,12 @@ ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
+<!-- cSpell:ignore VMUUID kusto -->
+
 # Configure Azure server management services at scale
 
 You must complete these two tasks to onboard Azure server management services to your servers:
+
 - Deploy service agents to your servers
 - Enable the management solutions
 
@@ -173,7 +176,7 @@ After creation is complete, the workspace resource instance displays **AntiMalwa
 
 ### Azure Monitor for VMs
 
-You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace. 
+You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
 
 ### Azure Security Center
 

@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Cloud adoption plan and Azure DevOps
 
-Azure DevOps is the set of cloud-based tools for Azure customers who manage iterative projects. It also includes tools for managing deployment pipelines and other important aspects of DevOps. 
+Azure DevOps is the set of cloud-based tools for Azure customers who manage iterative projects. It also includes tools for managing deployment pipelines and other important aspects of DevOps.
 
 In this article, you'll learn how to quickly deploy a backlog to Azure DevOps by using a cloud adoption plan template. This template aligns cloud adoption efforts to a standardized process based on the guidance in the Cloud Adoption Framework.
 
