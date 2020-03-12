@@ -50,7 +50,7 @@ When you're ready to deploy a workload to a production environment, you should a
 
 As an organization adds new workloads to the cloud, different ownership of subscriptions or basic separation of responsibility may result in multiple subscriptions in both the production and nonproduction management groups. While this approach does provide basic workload separation, it doesn't take significant advantage of the inheritance model to automatically apply policies across a subset of your subscriptions.
 
-![Workload separation pattern](../../_images/ready/management-group-hierarchy.png)
+![Workload separation pattern](../../_images/ready/management-group-hierarchy-v2.png)
 
 ### Application category pattern
 

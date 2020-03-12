@@ -57,7 +57,7 @@ You can move many types of resources from one subscription to another or use aut
 
 ## Manage multiple subscriptions
 
-If you have only a few subscriptions, managing them independently is relatively simple. But if you have many subscriptions, you should consider creating a management-group hierarchy to simplify managing your subscriptions and resources.
+If you have only a few subscriptions, managing them independently is relatively simple. But if you have many subscriptions, create a management group hierarchy to simplify managing your subscriptions and resources.
 
 Management groups allow efficient management of access, policies, and compliance for an organization's subscriptions. Each management group is a container for one or more subscriptions.
 
@@ -66,7 +66,7 @@ Management groups are arranged in a single hierarchy. You define this hierarchy 
 Azure provides four levels of management scope: management groups, subscriptions, resource groups, and resources. Any access or policy applied at one level in the hierarchy is inherited by the levels below it. A resource owner or subscription owner can't alter an inherited policy. This limitation helps improve governance.
 
 > [!NOTE]
-> Note that tag inheritance is not currently available but will become available soon.
+> Note that tag inheritance is not currently supported, but will be available soon.
 
 By relying on this inheritance model, you can arrange the subscriptions in your hierarchy so that each subscription follows appropriate policies and security controls.
 
@@ -74,11 +74,11 @@ By relying on this inheritance model, you can arrange the subscriptions in your 
 
 Any access or policy assignment on the root management group applies to all resources in the directory. Carefully consider which items you define at this scope. Include only the assignments you must have.
 
-When you initially define your management-group hierarchy, you first create the root management group. You then move all existing subscriptions in the directory into the root management group. New subscriptions are always created in the root management group. You can later move them to another management group.
+When you define your management group hierarchy, you first create the root management group. You then move all existing subscriptions in the directory into the root management group. New subscriptions are always created in the root management group. You can later move them to another management group.
 
-When you move a subscription to an existing management group, it inherits the policies and role assignments from the management-group hierarchy above it. Once you have established multiple subscriptions for your Azure workloads, you should create additional subscriptions to contain Azure services that other subscriptions share.
+When you move a subscription to an existing management group, it inherits the policies and role assignments from the management group hierarchy above it. Once you have established multiple subscriptions for your Azure workloads, you should create additional subscriptions to contain Azure services that other subscriptions share.
 
-![Example of a management-group hierarchy](../../_images/ready/management-group-hierarchy.png)
+![Example of a management group hierarchy](../../_images/ready/management-group-hierarchy-v2.png)
 
 For more information, see [Organizing your resources with Azure management groups](https://docs.microsoft.com/azure/governance/management-groups).
 
