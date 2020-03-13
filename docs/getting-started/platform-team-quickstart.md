@@ -149,7 +149,6 @@ Use bullet or ordered list, as appropriate to aid readability.
 ## Baseline capability
 
 Include a sentence or two to explain the baseline capabilities here.
-
 Use bullet or numbered list, as appropriate to aid readability.
 
 - Item 1

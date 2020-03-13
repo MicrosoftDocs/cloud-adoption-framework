@@ -65,7 +65,6 @@ if there's only a single link. -->
 ## Prerequisites
 
 <!-- Make Prerequisites the first H2 after the H1. Omit any preliminary text to the list.-->
-
 - (Optional) Completion of any required training. Use the language "Completion of (title)" where (title) is the link to the training.
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 - First prerequisite - other methodologies that the reader should be knowledgeable about

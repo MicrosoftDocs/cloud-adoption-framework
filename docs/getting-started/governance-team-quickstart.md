@@ -60,8 +60,6 @@ and other diagrams count as conceptual material that is best in a linked overvie
 of applicable links for companion content at the end of the introduction. Don't use the line
 if there's only a single link. -->
 
-<!-- NOTE: the Azure subscription line is moved to Prerequisites. -->
-
 ## Prerequisites
 
 <!-- Make Prerequisites the first H2 after the H1. Omit any preliminary text to the list.-->
@@ -166,6 +164,7 @@ Briefly explain what is out of scope and provide links to more information.
 ## Next steps
 
 Advance to the methodology or next logical topic
+
 > [!div class="nextstepaction"]
 > [Next steps button](index.yml)
 

@@ -59,7 +59,6 @@ and other diagrams count as conceptual material that is best in a linked overvie
 <!-- Optional standard links: if there are suitable links, you can include a single line
 of applicable links for companion content at the end of the introduction. Don't use the line
 if there's only a single link. -->
-
 <!-- NOTE: the Azure subscription line is moved to Prerequisites. -->
 
 ## Prerequisites
