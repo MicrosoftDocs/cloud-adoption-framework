@@ -1,6 +1,6 @@
 ---
-title: "Rehost an app on Azure VMs with Azure Site Recovery"
-description: Learn how Contoso rehosts an on-premises app with a lift and shift migration of on-premises machines to Azure, using the Azure Site Recovery service.
+title: "Rehost an on-premises app on Azure VMs with Azure Site Recovery"
+description: Use the Cloud Adoption Framework for Azure to learn how to rehost an on-premises app with a migration of on-premises machines to Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/11/2018

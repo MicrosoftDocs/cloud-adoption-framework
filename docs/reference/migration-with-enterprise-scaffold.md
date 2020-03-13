@@ -1,6 +1,6 @@
 ---
 title: Azure enterprise scaffold
-description: Describes an enterprise scaffold that can help ensure a secure and manageable environment.
+description: Azure enterprise scaffold is now the Microsoft Cloud Adoption Framework for Azure. Learn to address the need for governance and balance it with the need for agility.
 author: rdendtler
 ms.author: rodend
 ms.date: 09/22/2018

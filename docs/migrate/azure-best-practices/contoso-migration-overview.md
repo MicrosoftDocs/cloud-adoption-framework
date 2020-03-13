@@ -1,6 +1,6 @@
 ---
-title: "Overview of application migration examples for Azure"
-description: Provides an overview of the application migration examples included as part of the Cloud Adoption Framework Migrate section.
+title: "Application migration examples for Azure"
+description: Use the Cloud Adoption Framework for Azure to learn how you can migrate on-premises infrastructure to the Microsoft Azure cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020

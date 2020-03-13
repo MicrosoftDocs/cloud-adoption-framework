@@ -1,6 +1,6 @@
 ---
 title: "Introduction to the Azure migration guide"
-description: Learn how to effectively migrate your organization's services to Azure with step-by-step guidance.
+description: Use the Cloud Adoption Framework for Azure to learn how to effectively migrate your organization's services to Azure.
 author: matticusau
 ms.author: mlavery
 ms.date: 02/25/2020
