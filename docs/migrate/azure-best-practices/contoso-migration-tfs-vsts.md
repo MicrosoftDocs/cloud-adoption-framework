@@ -1,6 +1,6 @@
 ---
-title: "Refactor a Team Foundation Server deployment to Azure DevOps Services in Azure"
-description: Learn how Contoso refactors its on-premises TFS deployment by migrating it to Azure DevOps Services in Azure.
+title: "Refactor Team Foundation Server deployment to Azure DevOps Services"
+description: Use the Cloud Adoption Framework for Azure to learn how to refactor your on-premises TFS deployment by migrating it to Azure DevOps Services in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/11/2018

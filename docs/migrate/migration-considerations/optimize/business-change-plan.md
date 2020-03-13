@@ -1,6 +1,6 @@
 ---
-title: "Guidance to developing a business change plan"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+title: "Develop a business change plan"
+description: Use the Cloud Adoption Framework for Azure to learn about how a business change plan can help you implement a broader user adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
