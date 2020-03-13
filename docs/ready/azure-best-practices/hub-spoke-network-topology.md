@@ -1,6 +1,6 @@
 ---
 title: "Hub and spoke network topology"
-description: Learn about hub and spoke network topologies.
+description: Learn about hub and spoke network topologies for more efficient management of common communication or security requirements.
 author: tracsman
 ms.author: jonor
 ms.date: 05/10/2019

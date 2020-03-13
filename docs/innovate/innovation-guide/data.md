@@ -11,7 +11,7 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cspell:ignore Fcatalogs Faccounts FEnvironments -->
+<!-- cSpell:ignore Fcatalogs Faccounts FEnvironments -->
 
 ::: zone target="docs"
 

@@ -1,6 +1,6 @@
 ---
 title: Azure landing zone considerations
-description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
+description: Use the Cloud Adoption Framework for Azure to learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/20/2019

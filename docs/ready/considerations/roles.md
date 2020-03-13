@@ -1,6 +1,6 @@
 ---
 title: "Recommended role-based access control"
-description: Recommended role-based access control
+description: Learn how to separate duties within your team and grant role-based access control so users and groups can perform their jobs.
 author: rotycenh
 ms.author: brblanch
 ms.date: 11/28/2018

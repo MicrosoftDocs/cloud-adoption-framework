@@ -1,6 +1,6 @@
 ---
 title: Migration-focused cost control mechanisms
-description: Learn how to set up budgets, payments, and understand invoices for your Azure resources.
+description: Use the Cloud Adoption Framework for Azure to learn how to set up budgets, payments, and understand invoices for your Azure resources.
 author: bandersmsft
 ms.author: banders
 ms.date: 08/08/2019
@@ -10,6 +10,8 @@ ms.subservice: migrate
 ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
+
+<!-- cSpell:ignore bandersmsft -->
 
 # Migration-focused cost control mechanisms
 
@@ -40,7 +42,7 @@ For manual cost calculations, there are two handy calculators which can provide 
 - The Azure [pricing calculator](https://azure.microsoft.com/pricing/calculator) provides cost estimates based on manually entered Azure products.
 - Sometimes decisions require a comparison of the future cloud costs and the current on-premises costs. The [Total Cost of Ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator) can provide such a comparison.
 
-These manual cost calculators can be used on their own to forecast potential spend and savings. They can also be used in conjunction with Azure Migrate's cost forecasting tools to adjust the cost expectations to fit alternative architectures or performance constraints.
+These manual cost calculators can be used on their own to forecast potential spend and savings. They can also be used in conjunction with the cost forecasting tools of Azure Migrate to adjust the cost expectations to fit alternative architectures or performance constraints.
 
 ## Azure Migrate calculations
 

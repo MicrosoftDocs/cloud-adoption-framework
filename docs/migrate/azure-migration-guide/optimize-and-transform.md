@@ -1,6 +1,6 @@
 ---
 title: "Optimize and promote"
-description: This part of the Azure migration guide covers areas of optimization, including reviewing the design of the solution, right sizing the services, and analyzing costs.
+description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
 author: matticusau
 ms.author: mlavery
 ms.date: 02/25/2020

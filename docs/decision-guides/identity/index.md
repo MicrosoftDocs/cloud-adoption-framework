@@ -10,6 +10,8 @@ ms.subservice: decision-guide
 ms.custom: governance
 ---
 
+<!-- cSpell:ignore Kerberos NTLM SAML -->
+
 # Identity decision guide
 
 In any environment, whether on-premises, hybrid, or cloud-only, IT needs to control which administrators, users, and groups have access to resources. Identity and access management (IAM) services enable you to manage access control in the cloud.

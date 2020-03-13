@@ -17,7 +17,7 @@ In on-premises environments, IT assets (applications, virtual machines, VM hosts
 
 The first step in creating business alignment is to ensure term alignment. IT management, like most engineering professions, has amassed a collection of jargon, or highly technical terms. Such terms can lead to confusion for business stakeholders and make it difficult to map management services to business value.
 
-Fortunately, the process of developing a cloud adoption strategy and cloud adoption plan creates an ideal opportunity to remap these terms. The process also creates opportunities to rethink commitments to operational management, in partnership with the business. The following article series walks you through this new approach across three specific terms that can help improve conversations among business stakeholders: 
+Fortunately, the process of developing a cloud adoption strategy and cloud adoption plan creates an ideal opportunity to remap these terms. The process also creates opportunities to rethink commitments to operational management, in partnership with the business. The following article series walks you through this new approach across three specific terms that can help improve conversations among business stakeholders:
 
 - **[Criticality](./criticality.md):** Mapping workloads to business processes. Ranking criticality to focus investments.
 - **[Impact](./impact.md):** Understanding the impact of potential outages to aid in evaluating return on investment for cloud management.

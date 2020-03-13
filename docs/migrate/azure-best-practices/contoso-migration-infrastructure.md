@@ -1,6 +1,6 @@
 ---
 title: "Deploy a migration infrastructure"
-description: Learn how Contoso sets up an Azure infrastructure for migration to Azure.
+description: Use the Cloud Adoption Framework for Azure to learn through illustrative example how to set up an Azure infrastructure for migration to Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/1/2018
@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cspell:ignore CSPs domainname IPAM CIDR Untrust RRAS CONTOSODC sysvol ITIL NSGs ASGs -->
+<!-- cSpell:ignore CSPs domainname IPAM CIDR Untrust RRAS CONTOSODC sysvol ITIL NSGs ASGs -->
 
 # Deploy a migration infrastructure
 

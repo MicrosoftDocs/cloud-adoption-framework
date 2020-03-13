@@ -10,6 +10,8 @@ ms.subservice: decision-guide
 ms.custom: governance
 ---
 
+<!-- cSpell:ignore catalogsearch northamerica jsmith contactalias catsearchowners businessprocess businessimpact revenueimpact -->
+
 # Resource naming and tagging decision guide
 
 Organizing cloud-based resources is one of the most important tasks for IT, unless you only have simple deployments. Organizing your resources serves three primary purposes:

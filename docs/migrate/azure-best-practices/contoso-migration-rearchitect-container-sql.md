@@ -1,6 +1,6 @@
 ---
 title: "Rearchitect an app in an Azure container and Azure SQL Database"
-description: Learn how Contoso rearchitects an app in Azure Windows containers and Azure SQL Database.
+description: Use the Cloud Adoption Framework for Azure to learn how to rearchitect an on-premises application to an Azure container and Azure SQL database.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/11/2018

@@ -1,6 +1,6 @@
 ---
-title: "Maintain business priorities during a long-term transformation process"
-description: Maintain business priorities during a long-term transformation process.
+title: "Business priorities during a transformation process"
+description: Use the Cloud Adoption Framework for Azure to learn to maintain business alignment during long-term transformation process.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019

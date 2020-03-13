@@ -1,6 +1,6 @@
 ---
 title: "Building technical skills"
-description: Overview of skills readiness path during the Ready phase of migration. 
+description: Use the Cloud Adoption Framework for Azure to learn how to help your organization develop the necessary skills to structure teams to meet the desired outcomes. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019

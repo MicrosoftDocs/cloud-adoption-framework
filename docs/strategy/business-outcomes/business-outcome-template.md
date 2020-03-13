@@ -19,7 +19,7 @@ Download the [business outcome template spreadsheet](https://archcenter.blob.cor
 
 ## Use the business outcome template
 
-Introduced by Kate Johnson at the Microsoft Digital Transformation Academy, business outcomes focus on three topics:
+In this template, business outcomes focus on three topics:
 
 - Aligning to stakeholders or business decision makers
 - Understanding business drivers and objectives

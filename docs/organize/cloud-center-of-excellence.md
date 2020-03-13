@@ -1,6 +1,6 @@
 ---
 title: "Cloud center of excellence"
-description: Describes the formation of a cloud center of excellence (CCoE).
+description: Use the Cloud Adoption Framework for Azure to learn how to establish a cloud center of excellence (CCoE).
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019

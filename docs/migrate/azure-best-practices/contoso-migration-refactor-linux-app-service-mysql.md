@@ -1,6 +1,6 @@
 ---
-title: "Refactor a Linux service desk app to Azure App Service and Azure Database for MySQL"
-description: Learn how Contoso refactors on-premises Linux app by migrating it to Azure App Service using GitHub for Web Tier and Azure SQL Database.
+title: "Refactor a Linux app to Azure App Service and Database for MySQL"
+description: "Use the Cloud Adoption Framework for Azure to learn how to refactor a Linux service desk app to Azure App Service and Azure Database for MySQL."
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/11/2018

@@ -1,17 +1,22 @@
 {
    "redirections": [
       {
-         "source_path": "ready/expanded-scope/terraform-landing-zone.md",
+         "source_path": "docs/migrate/expanded-scope/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/expanded-scope/terraform-landing-zone.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/terraform-landing-zone",
          "redirect_document_id": true
       },
       {
-         "source_path": "migrate/azure-best-practices/contoso-migration-assessment.md",
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-assessment.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/contoso-migration-assessment",
          "redirect_document_id": true
       },
       {
-         "source_path": "migrate/expanded-scope/balance-the-portfolio.md",
+         "source_path": "docs/migrate/expanded-scope/balance-the-portfolio.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/balance-the-portfolio",
          "redirect_document_id": true
       },
@@ -117,7 +122,7 @@
       },
       {
          "source_path": "docs/migrate/migration-considerations/secure-and-manage/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/migrate/index",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/about",
          "redirect_document_id": true
       },
       {
