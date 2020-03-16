@@ -342,6 +342,10 @@ items:
             href: https://docs.microsoft.com/azure/java/migrate-tomcat-to-containers-on-azure-kubernetes-service?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
           - name: Refactor WebLogic to Azure Virtual Machines
             href: https://docs.microsoft.com/azure/java/migrate-weblogic-to-virtual-machines?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+          - name: Refactor WebLogic to WildFly on AKS
+            href: https://docs.microsoft.com/azure/java/migrate-weblogic-to-wildfly-on-azure-kubernetes-service?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+          - name: Refactor WebSphere to WildFly on AKS
+            href: https://docs.microsoft.com/azure/java/migrate-websphere-to-wildfly-on-azure-kubernetes-service?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
 
         - name: SQL Server
           items:
