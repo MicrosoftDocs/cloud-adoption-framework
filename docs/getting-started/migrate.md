@@ -1,15 +1,78 @@
 ---
-title: "Begin a cloud migration journey in Azure"
-description: Get comprehensive guidance for transitioning legacy application workloads to the cloud using innovative cloud-based technologies.
+title: "Getting started: An accelerated migration journey in Azure"
+description: Getting started on a migration journey in Azure
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/25/2020
+ms.date: 04/04/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Begin a cloud migration journey in Azure
+# Getting started: An accelerated migration journey in Azure
+
+> [!NOTE] REMOVE BEFORE PUBLISHING
+> **Purpose of the getting started articles**
+> Each is oriented to a specific goal or outcome. Should be clearly outlined in first 100 words.
+> Short, concise guidance under 10 minutes to read (5 or less is better)
+> Preferably fits into a 1-2 page PDF
+> **Characteristics**
+> Potential crosses multiple methodologies
+> Potential crosses multiple teams in the org (could include things a partner or MSFT needs to do)
+> Each has a graphic showing how it guides them through the cloud journey to accomplish the goal
+
+The Microsoft Cloud Adoption Framework for Azure provides detailed guidance on the business and technical decisions required to migrate to the cloud. Like all guidance in this framework, an agile or iterative approach to each methodology is highly recommended. Start small to accelerate business results in early iterations, but move towards a consistent end-state with each iteration.
+
+This getting started guide represents the smallest unit of migration processes to help accelerate your migration. Use this guide as a checklist to evaluate where you are at in your first migration & to find some steps you may have missed. At the end of this article are a few suggested process improvements you may want to consider after you've master your first migration to Azure.
+
+## Executive Summary
+
+Migration to the cloud is a change management effort, cleverly disguised as a simple technology process. When getting started with any migration, it is important to align business strategy, portfolio planning, change management, cloud governance, and of course the actual migration effort. Each of those important alignment efforts is covered by a different methodology & is generally executed by various different teams throughout a customer's migration journey.
+
+Accelerating alignment between various stakeholders and various aspects of migration can be overwhelming and complex. This getting started article simplifies the minimal activities required to drive business success.
+
+## Accelerating migration
+
+The cloud adoption framework is an iterative guide providing holistic support throughout your cloud adoption journey. Within the overall framework are a series of actionable steps that can help accelerate migration efforts, see the highlighted image below or the next section on actionable steps to get started.
+
+![Getting Started with Migration in Azure](../_images/getting-started/migration-getting-started-map.png)
+
+## Actionable steps
+
+The following steps reduce the amount of materials and the processes required during initial efforts to align an overall migration effort.
+
+1. Business strategy
+2. Business case
+3. Partner support
+4. Discovery & assessment
+5. Technical skilling
+6. Migration plan
+7. Landing zone
+8. Migration execution
+9. Governance
+10. Management
+
+## Introduction to each step
+
+Each of these steps pulls from the broader cloud adoption framework, allowing readers to start fast and scale efforts overtime.
+
+### 1. Business strategy
+### 2. Business case
+### 3. Partner support
+### 4. Discovery & assessment
+### 5. Technical skilling
+### 6. Migration plan
+### 7. Landing zone
+### 8. Migration execution
+### 9. Governance
+### 10. Management
+
+## Recap
+
+## Next Steps
+
+
+## Old article for reference content
 
 Use the Microsoft Cloud Adoption Framework for Azure to begin a cloud migration journey. This framework provides comprehensive guidance for transitioning legacy application workloads to the cloud using innovative cloud-based technologies.
 
