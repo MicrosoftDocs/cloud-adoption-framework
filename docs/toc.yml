@@ -1,10 +1,12 @@
 items:
   - name: Cloud Adoption Framework
-    href: index.md
+    href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
     
   - name: What's new
     href: getting-started/whats-new.md
+  - name: Overview
+    href: overview.md
   - name: Getting started
     items:
     - name: Overview

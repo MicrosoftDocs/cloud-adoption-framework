@@ -129,7 +129,7 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 
 The following links outline three approaches to governance:
 
-1. Ready: [Add governance to landing zones](../ready/considerations/governance.md): This section outlines way in which you can add basic governance to your first landing zone. This is not a governance solution, but will prepare for future governance by adding relevant tools to your environment.
+1. Ready: [TODO - Add governance to landing zones](../ready/considerations/governance.md): This section outlines way in which you can add basic governance to your first landing zone. This is not a governance solution, but will prepare for future governance by adding relevant tools to your environment.
 2. Govern: [Approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then building the disciplines required to deliver on governance across the cloud enterprise adoption efforts.
 3. Govern: [Initial foundation](../govern/guides/complex/prescriptive-guidance.md): Similar to the landing zone article, this article will guide readers through the addition of governance to existing adoption efforts. The story-based article series follows a common set of customer stories & shows how to add governance controls in parallel to adoption needs.
 
