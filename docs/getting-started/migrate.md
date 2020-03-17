@@ -27,16 +27,16 @@ The following steps reduce the amount of materials and the processes required du
 
 For a deeper assessment of migration readiness, use the Strategic Migration and Readiness Tool or [SMART Assessment](/assessments/?id=Strategic-Migration-Assessment-and-Readiness-Tool).
 
-1. Business strategy: Are all stakeholders aligned on the motivations and business outcomes expected?
-2. Business case: Are all stakeholders aligned on the overall business justification?
-3. Partner support: Are partners and other support models properly aligned for success of the migration effort?
-4. Discovery & assessment: Has the team completed a discovery of existing inventory? Has an initial rationalization/assessment been completed?
-5. Technical skilling: Does the team have a skills plan in place?
-6. Migration plan: Is there a defined plan for the migration of the next 10 workloads & related assets, including clarity on people allocations?
-7. Landing zone: Does the deployed landing zone align with the needs of the adoption plan?
-8. Migration execution: Is the adoption team prepared to execute the technical migration effort?
-9. Governance: Is the governance team aligned with the approach to governing the cloud environment?
-10. Management: Is there a post-migration plan for on-going operations of any production workloads?
+1. **Business strategy:** Are all stakeholders aligned on the motivations and business outcomes expected?
+2. **Business case:** Are all stakeholders aligned on the overall business justification?
+3. **Partner support:** Are partners and other support models properly aligned for success of the migration effort?
+4. **Discovery & assessment:** Has the team completed a discovery of existing inventory? Has an initial rationalization/assessment been completed?
+5. **Technical skilling:** Does the team have a skills plan in place?
+6. **Migration plan:** Is there a defined plan for the migration of the next 10 workloads & related assets, including clarity on people allocations?
+7. **Landing zone:** Does the deployed landing zone align with the needs of the adoption plan?
+8. **Migration execution:** Is the adoption team prepared to execute the technical migration effort?
+9. **Governance:** Is the governance team aligned with the approach to governing the cloud environment?
+10. **Management:** Is there a post-migration plan for on-going operations of any production workloads?
 
 ## Implementation details for each actionable steps
 
