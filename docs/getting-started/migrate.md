@@ -21,20 +21,22 @@ The cloud adoption framework is an iterative guide providing holistic support th
 
 ![Getting Started with Migration in Azure](../_images/getting-started/migration-getting-started-map.png)
 
-## Actionable steps
+## Actionable steps checklist
 
-The following steps reduce the amount of materials and the processes required during initial efforts to align an overall migration effort.
+The following steps reduce the amount of materials and the processes required during initial efforts to align an overall migration effort. This list serves as a checklist, asking a minimum set of questions required to ensure you are ready for migration.
 
-1. Business strategy
-2. Business case
-3. Partner support
-4. Discovery & assessment
-5. Technical skilling
-6. Migration plan
-7. Landing zone
-8. Migration execution
-9. Governance
-10. Management
+For a deeper assessment of migration readiness, use the Strategic Migration and Readiness Tool or [SMART Assessment](/assessments/?id=Strategic-Migration-Assessment-and-Readiness-Tool).
+
+1. Business strategy: Are all stakeholders aligned on the motivations and business outcomes expected?
+2. Business case: Are all stakeholders aligned on the overall business justification?
+3. Partner support: Are partners and other support models properly aligned for success of the migration effort?
+4. Discovery & assessment: Has the team completed a discovery of existing inventory? Has an initial rationalization/assessment been completed?
+5. Technical skilling: Does the team have a skills plan in place?
+6. Migration plan: Is there a defined plan for the migration of the next 10 workloads & related assets, including clarity on people allocations?
+7. Landing zone: Does the deployed landing zone align with the needs of the adoption plan?
+8. Migration execution: Is the adoption team prepared to execute the technical migration effort?
+9. Governance: Is the governance team aligned with the approach to governing the cloud environment?
+10. Management: Is there a post-migration plan for on-going operations of any production workloads?
 
 ## Implementation details for each actionable steps
 
@@ -67,22 +69,9 @@ Recording a snapshot of the initial analysis in the [Strategy and Planning Templ
 
 ### 3. Partner support
 
-Support from partners, support, Microsoft services, and various Microsoft programs may be available throughout the migration process. The following table outlines a number of available resources to aid in finding the right level of support:
+Support from partners, support, Microsoft services, and various Microsoft programs may be available throughout the migration process.
 
-|Methodology  |Partner offers|Service offers|Microsoft programs|
-|---------|---------|---------|---------|
-|Strategy (Steps 1 & 2)|         |         |         |
-|Plan (Steps 4-6)|         |         |         |
-|Ready (Step 7)|         |         |         |
-|Migrate (Step 8)|         |         |         |
-|Govern (Step 9)|         |         |         |
-|Manage (Step 10)|         |         |         |
-
-Throughout each of these methodologies, support engineers can assistance with deep technical guidance.
-The following steps will aid in leveraging support from within the the [Azure portal](https://portal.azure.com).
-
-1. Select **Help + support**.
-2. Select **Support Plans** to review the plans available to you.
+- Migrate: [Understand Partnership options](../migrate/migration-considerations/assess/partnership-options.md) provides a number of ways to find the right level of partnership and support.
 
 ### 4. Discovery & assessment
 
@@ -145,44 +134,6 @@ Operations Management is another requirement to reach migration success. Migrati
 ## Common outcomes
 
 The steps outlined in this getting started guide will help teams accelerate migration efforts, through better change management and stakeholder alignment. Following these steps may slow the process. But these steps will remove common blockers accelerating realization of business value. As you move through this guide, you may also see some of the common outcomes.
-
-### Common cultural changes resulting from adherence to this methodology
-
-The effort to realize the desired business outcomes may trigger slight changes to the culture of IT, to security, and to some degree the culture of the business. The following are a few common cultural changes seen in this process:
-
-- The IT and security teams are likely to adopt new skills to support workloads in the cloud.
-- Execution of a cloud migration encourages iterative or agile approaches.
-- Inclusion of cloud governance also tends to inspire DevOps approaches.
-- Creation of a cloud strategy team can lead to tighter integration between business and IT leaders.
-- Collectively, these changes tend to lead to greater business and IT agility.
-
-Cultural change is not a goal of cloud migration or the Cloud Adoption Framework, but it is a commonly experienced outcome.
-Cultural changes are not directly guided, instead subtle changes to the culture are embedded in the suggested process improvements and approaches throughout the guidance.
-
-### Common technical efforts associated with this methodology
-
-During implementation of the cloud strategy and plan the IT team will focus a large percentage of their time on the migration of existing digital assets to the cloud. During this effort, minimal code changes are expected, but can often be limited to configuration changes. In many cases, a strong business justification can be made for modernization as part of the cloud migration.
-
-### Common workload examples
-
-Cloud strategy and planning often target a broad collection of workloads and applications. Within the portfolio, common application or workload types are typically migrated. The following are a few examples:
-
-- Line-of-business applications
-- Customer-facing applications
-- Third-party applications
-- Data analytics platforms
-- Globally distributed solutions
-- Highly scalable solutions
-
-### Common technologies migrated
-
-The technologies migrated to the cloud constantly expand as cloud providers add new capabilities. The following are a few examples of the technologies commonly seen in a migration effort:
-
-- Windows and SQL Server
-- Linux and Open Source (OSS) databases
-- Unstructured and NoSQL databases
-- SAP on Azure
-- Analytics (Data Warehouse, Data Lake)
 
 ## Next Steps
 
