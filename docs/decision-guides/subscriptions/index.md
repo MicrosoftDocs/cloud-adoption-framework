@@ -44,7 +44,7 @@ A single subscription per account may suffice for organizations that need to dep
 
 When you're ready to deploy a workload to a production environment, you should add an additional subscription. This helps you keep your production data and other assets out of your dev/test environments. You can also easily apply two different sets of policies across the resources in the two subscriptions.
 
-![Production-and-nonproduction subscription pattern](../../_images/ready/basic-subscription-model.png)
+![Production-and-nonproduction subscription pattern](../../_images/ready/initial-subscription-model.png)
 
 ### Workload separation pattern
 
