@@ -54,7 +54,7 @@ The following triggers and enforcement actions provide examples you can referenc
 - **Underprovisioned resource detected.** Resources detected using more than 80% of CPU or memory capacity should automatically scale up or provisioning additional resources to provide additional capacity.
 - **Untagged resource creation.** Any request to create a resource without required meta tags will be rejected automatically.
 - **Critical resource outage detected.** IT staff are notified on all detected outages of mission-critical outages. If outage is not immediately resolvable, staff will escalate the issue and notify workload owners and the cloud governance team. The cloud governance team will track the issue until resolution and update guidance if policy revision is necessary to prevent future incidents.
-- **Configuration drift.** Resources detected that do not conform to established baselines should trigger alerts and be automatically remediated using configuration management tools like Azure Automation, Chef, Puppet, Ansible, etc.
+- **Configuration drift.** Resources detected that do not conform to established baselines should trigger alerts and be automatically remediated using configuration management tools like Azure Automation, Chef, Puppet, or Ansible.
 
 ## Next steps
 
