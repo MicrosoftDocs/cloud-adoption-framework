@@ -11,11 +11,11 @@ ms.subservice: overview
 
 # Getting started: An accelerated migration journey in Azure
 
-When getting started with any migration, it is important to align business strategy, portfolio planning, change management, cloud governance, and of course the actual migration effort. Proper alignment may require several teams partnering to implement common methodologies throughout a cloud migration journey.
+For some customers, migration is a purely technical process. If technology alone is enough, the [Migrate methodology](../migrate/index.md) could be sufficient to start migrating existing vms.
 
 ## Accelerating migration
 
-Accelerating migration efforts can lead to a number of roadblocks, which can only be overcome through proper alignment between various stakeholders. This getting started guide represents the smallest unit of effort required to align business and IT to accelerate migration success. Use this guide as a checklist to evaluate where you are at in your migration maturity & to find actionable steps that you may have missed. At the end of this article are a few suggested process improvements you may want to consider after you've mastered your first migration to Azure.
+Addressing migration as an IT-only process can lead to a number of roadblocks, which can only be overcome through proper alignment between various stakeholders. This getting started guide represents the smallest unit of effort required to **align business and IT** to **accelerate migration success**. Use this guide as a checklist to evaluate where you are at in your migration maturity & to find actionable steps that you may have missed. At the end of this article are a few suggested process improvements you may want to consider after you've mastered your first migration to Azure.
 
 ## Actionable steps checklist
 
@@ -51,24 +51,31 @@ Creation of a clear and concise business strategy for migration can remove many 
 - Strategy: [Business Outcomes](../strategy/business-outcomes/index.md): Once motivations are aligned, its possible to capture the desired business outcomes. This provides clear metrics by which the overall transformation can be measured.
 
 **Effort Details**
+
 - **Accountable team:** [Cloud Strategy Team](../organize/cloud-strategy.md)
-- **Responsible/Supporting teams:** [Cloud center of excellence](../organize/cloud-center-of-excellence.md) (or [Central IT](../organize/central-it.md)) and [Cloud Adoption Team](../organize/cloud-adoption.md)
+- **Responsible/Supporting teams:** [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
 - **Minimum Output:** Record motivations and outcomes in the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx)
-- **Minimum time to complete:** 3 hours (Motivation discussion - 1 hour, Outcomes discussion - 1 hour, Document & review, 1 hour)
+- **Minimum time to complete:** 3 hours
+    - Motivation discussion: 1 hour
+    - Outcomes discussion: 1 hour
+    - Document & review: 1 hour
+    - Timeline risks: Stakeholder alignment may require multiple iterations
 
 ### 2. Business case
 
-Making the business case for migration will likely be an iterative conversation amongst stakeholders. In this first pass at building the business case, less is more. The objective is to provide enough initial information to evaluate the general return from a potential cloud migration.
+Making the business case for migration will likely be an iterative conversation amongst stakeholders. In this first pass at building the business case, evaluate the initial, high-level return from a potential cloud migration.
 
 - Strategy: [Building a cloud migration business case](../strategy/cloud-migration-business-case.md) is a good starting point for developing a migration business case, with clarity on formulas and tools that can aid in business justification.
 
 **Effort Details**
+
 - **Accountable team:** [Cloud Strategy Team](../organize/cloud-strategy.md)
 - **Responsible/Supporting teams:** [Cloud Adoption Team](../organize/cloud-adoption.md)
 - **Minimum Output:** Record business justification in the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx)
-- **Minimum time to complete:** 2 hours (Document migration business case - 1 hour, Document & review, 1 hour) 
-> [!CAUTION]
-> Customers commonly require an inventory discovery and initial assessment to complete a business justification, which can take significantly longer to execute.
+- **Minimum time to complete:** 2 hours
+    - Calculate business justification: 1 hour
+    - Document & review: 1 hour
+    - Timeline risks: If required, inventory discovery and initial assessment can slow justification.
 
 ### 3. Partner support
 
@@ -76,20 +83,56 @@ Support from partners, support, Microsoft services, and various Microsoft progra
 
 - Migrate: [Understand Partnership options](../migrate/migration-considerations/assess/partnership-options.md) provides a number of ways to find the right level of partnership and support.
 
+**Effort Details**
+
+- **Accountable team:** [Cloud Strategy Team](../organize/cloud-strategy.md)
+- **Responsible/Supporting teams:** [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- **Minimum Output:** Execute Terms and Conditions (or other contractual agreements required before engaging a supporting partners)
+- **Minimum time to complete:** 4 hours
+    - Evaluate partnership options: 1 hour
+    - Evaluate partner capabilities & ability to support: 2 hours
+    - Review & execute contractual agreements: 1 hours
+    - Timeline risks: Legal reviews and evaluation of multiple partners/options
+
 ### 4. Discovery & assessment
 
-Discovery and assessment provides a deeper level of technical alignment to create an actionable plan to deliver on the strategy. During this step, the business case is expanded using data about the current state environment, quantitative analysis of that data, and a deep qualitative assessment of the highest priority workloads. The following steps may have been covered to deliver the business justification, use these steps to build on what has already been completed:
+Discovery and assessment provides a deeper level of technical alignment to create an actionable plan to deliver on the strategy. During this step, the business case is validated using data about the current state environment, quantitative analysis of that data, and a deep qualitative assessment of the highest priority workloads.
 
 - Plan: [Inventory existing systems](../digital-estate/inventory.md): Understanding the current state from a programatic, data-driven approach is the first step. Discover and gather data to enable all assessment activities.
 - Plan: [Incremental rationalization](../digital-estate/rationalize.md#incremental-rationalization): Streamline assessment efforts to focus on a qualitative analysis of all assets (possibly even to support the business case). Then add a deep qualitative analysis for the first 10 workloads to be migrated.
-- Plan: [Select the first workload](../digital-estate/rationalize.md#select-the-first-workload): Go deeper with the first workload to validate the assessment and test the plan.
-- Plan/Migrate: [Challenge assumptions](../digital-estate/rationalize.md#challenge-assumptions): Following a core principle of Agile called "late-bound technical decisions", the adoption team will continue to refine the plan and challenge assumptions during each iteration of migration execution.
+
+**Effort Details**
+
+- **Accountable team:** [Cloud Adoption Team](../organize/cloud-adoption.md)
+- **Responsible/Supporting teams:** [Cloud Strategy Team](../organize/cloud-strategy.md)
+- **Minimum Output:** 
+    - Raw data on existing inventory
+    - Quantitative analysis on existing inventory to refine the business justification
+    - Qualitative analysis of the first 10 workloads
+    - Update business justification in the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx)
+- **Minimum time to complete:** 2-4 weeks
+    - Inventory discovery: 1-2 weeks
+    - Quantitative analysis: 2-4 hours
+    - Qualitative analysis: 1-2 days per workload
+    - Document & review: 1 hour
+    - Timeline risks: Complexity of the existing environment (including access complexity) can significantly slow discovery. Type/depth of analysis can also slow the process.
 
 ### 5. Technical skilling
 
-Once the high-level rationalization is completed & added to the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx), the required skills becomes much clearer to the entire team. Once skills are understood the template can be used to track skilling opportunities.
+Existing employees can play a hands-on role in the migration effort. But, additional skills will likely be required.
 
-- Plan: [Build a skills readiness plan](/plan/adapt-roles-skills-processes.md): A quick evaluation of the required skills and existing skills amongst the team will aid in understanding what skilling requirements need to be addressed. This is the first step of iterative skilling. At each release of the migration effort, the team can obtain a subset of the necessary skills through hands-on experienced and structured learning paths.
+- Plan: [Build a skills readiness plan](/plan/adapt-roles-skills-processes.md): A quick evaluation of the required skills and existing skills amongst the team will aid in understanding what skilling requirements need to be addressed. 
+
+**Effort Details**
+
+- **Accountable team:** [Cloud Adoption Team](../organize/cloud-adoption.md)
+- **Responsible/Supporting teams:** [Cloud Strategy Team](../organize/cloud-strategy.md)
+- **Minimum Output:** 
+    - Add skills readiness plan to the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx)
+- **Minimum time to complete:** 2 hours + 1-2 hours per team member
+    - Self-assess skills: 1 hour per team member
+    - Team review & validation: 1 hour per team member
+    - Establish skilling plans & investments: 2 hours
 
 ### 6. Migration plan
 
@@ -100,12 +143,37 @@ The cloud adoption plan template provides an accelerated approach to develop a p
 - Plan: [Effort alignment](../plan/assets.md): Align assets and workloads in the backlog to clearly define effort for prioritized workloads
 - Plan: [People & time alignment](../plan/iteration-paths.md): Establish iteration, velocity (people's time), and releases of migrated workloads
 
+**Effort Details**
+
+- **Accountable team:** [Cloud Adoption Team](../organize/cloud-adoption.md)
+- **Responsible/Supporting teams:** [Cloud Strategy Team](../organize/cloud-strategy.md)
+- **Minimum Output:** 
+    - Deploy a backlog template
+    - Update the template to reflect first 10 workloads to be migrated
+    - Update people/velocity to estimate release timing
+- **Minimum time to complete:** 2 hours + 1-2 hours per workload
+    - Deploy template & setup editing spreadsheets: 1 hour
+    - Update workloads and assets: 1 hours per workload
+    - Timeline risk: Familiarity with Azure DevOps can slow the deployment process. Complexity & data available for each workload can impact timelines
+
 ### 7. Landing zone
 
 All migrated assets are deployed within a landing zone. Initially, the landing zone will be simplistic to support smaller workloads. Over time, it will scale to address more complex workloads.
 
 - Ready: [Choose a landing zone](../ready/landing-zone/first-landing-zone.md): Use this article to find the right approach to deploying a landing zone based on your adoption pattern. Then deploy that standardized code base.
 - Ready: [Expand your landing zone](../ready/considerations/index.md): Regardless of the starting point, identify gaps in the deployed landing zone to add required components for resource organization, security, governance, compliance, operations, etc...
+
+**Effort Details**
+
+- **Accountable team:** [Cloud Adoption Team](../organize/cloud-adoption.md)
+- **Responsible/Supporting teams:** [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- **Minimum Output:** 
+    - Deploy a first landing zone for initial, low-risk migrations
+    - Develop a plan to refactor with the CCoE and/or Central IT
+- **Minimum time to complete:** 2 hours
+    - Deploy landing zone: 1 hour
+    - Develop refactoring plan: 1 hour
+    - Timeline risk: Governance, operations, and security requirements of the first 10 workloads can significantly slow this process. Actual refactoring of the first landing zone & subsequent landing zones will take considerably longer, but should happen in parallel to migration efforts.
 
 ### 8. Migration execution
 
@@ -115,15 +183,38 @@ Migration execution is an iterative process of its own. Many people also refer t
 
 For more information on this step, see the [overview page for the Migration methodology](../migrate/index.md).
 
+**Effort Details**
+
+- **Accountable team:** [Cloud Adoption Team](../organize/cloud-adoption.md)
+- **Responsible/Supporting teams:** [Cloud Strategy Team](../organize/cloud-strategy.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- **Minimum Output:** 
+    - Migrate first workload
+    - Establish iterative processes (or migration factory) to continue a stream of workload releases
+- **Minimum time to complete:** Variable - Estimates required
+    - First workload: Generally 1 - 2 weeks to allow for learning opportunities
+    - Additional workloads: 1 or more per 2 week sprint
+    - Timeline risk: Compliance requirements, architectural complexity, migration scenario, change control processes & many other dependencies can impact the team's velocity.
+
 ### 9. Governance
 
 Governance is a key factor to the long-term success of any migration effort. Speed to migration and business impact is important. But, speed without governance can be dangerous. Each organization will need to make decisions about governance, which align to their adoption patterns and governance/compliance needs.
 
-The following links outline three approaches to governance:
+- Govern: [Approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then building the disciplines required to deliver on governance across the cloud enterprise adoption efforts.
+- Govern: [Initial foundation](../govern/guides/complex/prescriptive-guidance.md): Similar to the landing zone article, this article will guide readers through the addition of governance to existing adoption efforts. The story-based article series follows a common set of customer stories & shows how to add governance controls in parallel to adoption needs.
 
-1. Ready: [TODO - Add governance to landing zones](../ready/considerations/governance.md): This section outlines way in which you can add basic governance to your first landing zone. This is not a governance solution, but will prepare for future governance by adding relevant tools to your environment.
-2. Govern: [Approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then building the disciplines required to deliver on governance across the cloud enterprise adoption efforts.
-3. Govern: [Initial foundation](../govern/guides/complex/prescriptive-guidance.md): Similar to the landing zone article, this article will guide readers through the addition of governance to existing adoption efforts. The story-based article series follows a common set of customer stories & shows how to add governance controls in parallel to adoption needs.
+**Effort Details**
+
+- **Accountable team:** [Cloud Governance Team](../organize/cloud-governance.md)
+- **Responsible/Supporting teams:** [Cloud Strategy Team](../organize/cloud-strategy.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- **Minimum Output:**
+    - Deploy an initial governance foundation
+    - Complete a governance benchmark to plan for future improvements
+- **Minimum time to complete:** 4 hours
+    - Understand the approach & methodology: 1 hour
+    - Review the initial set of policies against adoption plans: 1 hour
+    - Deploy a governance foundation: 1 hour
+    - Complete the governance benchmark assessment: 1 hour
+    - Timeline risks: Improve policies and governance implementation can add 1-4 weeks per discipline
 
 ### 10. Management
 
@@ -133,6 +224,21 @@ Operations Management is another requirement to reach migration success. Migrati
 - Manage: [Define business commitments](../manage/considerations/business-alignment.md):
 - Manage: [Expand the management baseline](../manage/best-practices.md):
 - Manage: [Get specific with advanced operations](../manage/design-principles.md):
+
+**Effort Details**
+
+- **Accountable team:** [Cloud Operations Team](../organize/cloud-operations.md)
+- **Responsible/Supporting teams:** [Cloud Strategy Team](../organize/cloud-strategy.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- **Minimum Output:**
+    - Deploy a management baseline
+    - Complete the Ops Management Workbook
+    - Identify any workloads which will require an Azure Architecture Review assessment
+- **Minimum time to complete:** 2-4 days
+    - Deploy the Azure Server Management guide: 1-2 days
+    - Complete the workbook: 1-2 days
+    - Timeline risks:
+        - Review the workbook: 1 hour per application owner
+        - Complete the Azure Architecture Review assessment: 1 hour per application
 
 ## Common outcomes
 
