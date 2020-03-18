@@ -27,7 +27,7 @@ Before you use the migration landing zone blueprint in the Cloud Adoption Framew
 
 This initial landing zone includes the following assumptions or constraints. If these assumptions align with your constraints, you can use the blueprint to create your first landing zone. The blueprint also can be extended to create a landing zone blueprint that meets your unique constraints.
 
-- **Subscription limits:** This adoption effort isn't expected to exceed [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
+- **Subscription limits:** This adoption effort isn't expected to exceed [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits).
 - **Compliance:** No third-party compliance requirements are needed in this landing zone.
 - **Architectural complexity:** Architectural complexity doesn't require additional production subscriptions.
 - **Shared services:** There are no existing shared services in Azure that require this subscription to be treated like a spoke in a hub and spoke architecture.
