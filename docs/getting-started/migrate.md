@@ -105,7 +105,7 @@ Discovery and assessment provides a deeper level of technical alignment to creat
 
 - **Accountable team:** [Cloud Adoption Team](../organize/cloud-adoption.md)
 - **Responsible/Supporting teams:** [Cloud Strategy Team](../organize/cloud-strategy.md)
-- **Minimum Output:** 
+- **Minimum Output:**
     - Raw data on existing inventory
     - Quantitative analysis on existing inventory to refine the business justification
     - Qualitative analysis of the first 10 workloads
@@ -252,8 +252,8 @@ The Cloud Adoption Framework is a lifecycle solution. It is designed to help rea
 
 |Team  |Next Iteration|
 |---------|---------|
-|Cloud Migration Team|[Process improvements](../migrate/migration-considerations/index.md) provide insights to mature towards a migration factory with efficient on-going migration capabilities.|
-|Cloud Strategy Team|[Strategy](../strategy/index.md) and [Plan](../plan/index.md) are iterative processes, which will evolve with the adoption plan. Return to those overview pages to continue to iterate on the business and technical strategies.|
-|Cloud Platform Team|Revisit the [Ready](../ready/index.md) methodology to continue to advance the overall cloud platform that supports migration or other adoption efforts.|
-|Cloud Governance Team|Leverage the [Govern](../govern/index.md) methodology to continue to improve governance processes, policies, and disciplines|
-|Cloud Operations Team|Build on the [Manage](../manage/index.md) methodology to provide richer operations in Azure|
+|Cloud&nbsp;Migration&nbsp;Team|[Process improvements](../migrate/migration-considerations/index.md) provide insights to mature towards a migration factory with efficient on-going migration capabilities.|
+|Cloud&nbsp;Strategy&nbsp;Team|[Strategy](../strategy/index.md) and [Plan](../plan/index.md) are iterative processes, which will evolve with the adoption plan. Return to those overview pages to continue to iterate on the business and technical strategies.|
+|Cloud&nbsp;Platform&nbsp;Team|Revisit the [Ready](../ready/index.md) methodology to continue to advance the overall cloud platform that supports migration or other adoption efforts.|
+|Cloud&nbsp;Governance&nbsp;Team|Leverage the [Govern](../govern/index.md) methodology to continue to improve governance processes, policies, and disciplines|
+|Cloud&nbsp;Operations&nbsp;Team|Build on the [Manage](../manage/index.md) methodology to provide richer operations in Azure|
