@@ -1257,15 +1257,13 @@ items:
       href: organize/suggested-skills.md
     - name: Creating a cost-conscious organization
       href: organize/cost-conscious-organization.md
-    - name: Antipatterns - IT fiefdoms and IT silos
+    - name: Anti-patterns - IT fiefdoms and IT silos
       href: organize/fiefdoms-silos.md
 
   - name: Resources
     items:
     - name: Cloud Adoption Framework roadmap
       href: reference/index.md
-    - name: What's new
-      href: reference/whats-new.md
     - name: Operating model
       items:
       - name: Overview

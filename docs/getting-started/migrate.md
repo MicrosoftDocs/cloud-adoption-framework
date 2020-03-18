@@ -11,21 +11,20 @@ ms.subservice: overview
 
 # Getting started: An accelerated migration journey in Azure
 
-Migration to the cloud is a change management effort, which is cleverly disguised as a simple technology process. When getting started with any migration, it is important to align business strategy, portfolio planning, change management, cloud governance, and of course the actual migration effort. Each of those important alignment efforts is covered by a different methodology & is generally executed by various different teams throughout a customer's migration journey.
-
-Accelerating alignment between various stakeholders and various aspects of migration can be overwhelming and complex. This getting started guide represents the smallest unit of effort required to accelerate migration success. Use this guide as a checklist to evaluate where you are at in your first migration & to find some steps that you may have missed. At the end of this article are a few suggested process improvements you may want to consider after you've mastered your first migration to Azure.
+When getting started with any migration, it is important to align business strategy, portfolio planning, change management, cloud governance, and of course the actual migration effort. Proper alignment may require several teams partnering to implement common methodologies throughout a cloud migration journey.
 
 ## Accelerating migration
 
-The cloud adoption framework is an iterative guide providing holistic support throughout your cloud adoption journey. Within the overall framework are a series of actionable steps that can help accelerate migration efforts, outlined in the remainder of this article.
-
-![Getting Started with Migration in Azure](../_images/getting-started/migration-getting-started-map.png)
+Accelerating migration efforts can lead to a number of roadblocks, which can only be overcome through proper alignment between various stakeholders. This getting started guide represents the smallest unit of effort required to align business and IT to accelerate migration success. Use this guide as a checklist to evaluate where you are at in your migration maturity & to find actionable steps that you may have missed. At the end of this article are a few suggested process improvements you may want to consider after you've mastered your first migration to Azure.
 
 ## Actionable steps checklist
 
-The following steps reduce the amount of materials and the processes required during initial efforts to align an overall migration effort. This list serves as a checklist, asking a minimum set of questions required to ensure you are ready for migration.
+The following steps reduce the amount of materials and the processes required during initial efforts to align an overall migration effort.
 
-For a deeper assessment of migration readiness, use the Strategic Migration and Readiness Tool or [SMART Assessment](/assessments/?id=Strategic-Migration-Assessment-and-Readiness-Tool).
+![Getting Started with Migration in Azure](../_images/getting-started/migration-getting-started-map.png)
+
+> [!NOTE]
+> The following checklist helps find opportunities to take action to ensure you are ready for migration. For a deeper, personalized assessment of migration readiness, use the Strategic Migration and Readiness Tool or [SMART Assessment](/assessments/?id=Strategic-Migration-Assessment) to identify the specific steps that best align to your current state needs.
 
 1. **Business strategy:** Are all stakeholders aligned on the motivations and business outcomes expected?
 2. **Business case:** Are all stakeholders aligned on the overall business justification?
@@ -38,26 +37,24 @@ For a deeper assessment of migration readiness, use the Strategic Migration and 
 9. **Governance:** Is the governance team aligned with the approach to governing the cloud environment?
 10. **Management:** Is there a post-migration plan for on-going operations of any production workloads?
 
+While working through the first 6 steps, the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) can help capture critical decisions.
+
 ## Implementation details for each actionable steps
 
 Each of these steps pulls from the broader cloud adoption framework, allowing readers to start fast and scale efforts overtime.
 
-### Tools for acceleration
-
-The following steps can easily be accelerated using the following tools, which each align to execution of these steps:
-
-- [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx): The strategy and planning template is word doc template to help capture critical decisions made during the first 6 steps below. It also provides other deeper topics which may require further investigation.
-- [SMART Assessment](/assessments/?id=Strategic-Migration-Assessment-and-Readiness-Tool): The SMART Assessment is a question and answer format assessment which will help identify areas of improvement related to the following steps.
-
 ### 1. Business strategy
 
-The first challenge organizations face when attempting to migrate existing assets to the cloud, is the creation of a clear and concise business strategy for migration. The framework provides an entire methodology on the development and definition of a cloud adoption strategy. From that methodology, there are a few important links or activities that can help complete this step for a migration specific strategy:
+Creation of a clear and concise business strategy for migration can remove many common migration blockers.
 
 - Strategy: [Understand motivations](../strategy/motivations.md): The first step to strategic alignment is to gain a consensus on the motivations driving the migration effort. This article outlines common motivations and themes to help capture the overall desires of the various stakeholders across business and IT.
 - Strategy: [Business Outcomes](../strategy/business-outcomes/index.md): Once motivations are aligned, its possible to capture the desired business outcomes. This provides clear metrics by which the overall transformation can be measured.
 
-Together, these data points will help maintain business alignment and prioritization throughout the migration effort.
-Recording the results of these activities in the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) will help ensure consistent communication and alignment.
+**Effort Details**
+- **Accountable team:** [Cloud Strategy Team](../organize/cloud-strategy.md)
+- **Responsible/Supporting teams:** [Cloud center of excellence](../organize/cloud-center-of-excellence.md) (or [Central IT](../organize/central-it.md)) and [Cloud Adoption Team](../organize/cloud-adoption.md)
+- **Minimum Output:** Record motivations and outcomes in the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx)
+- **Minimum time to complete:** 3 hours (Motivation discussion - 1 hour, Outcomes discussion - 1 hour, Document & review, 1 hour)
 
 ### 2. Business case
 
@@ -65,7 +62,13 @@ Making the business case for migration will likely be an iterative conversation 
 
 - Strategy: [Building a cloud migration business case](../strategy/cloud-migration-business-case.md) is a good starting point for developing a migration business case, with clarity on formulas and tools that can aid in business justification.
 
-Recording a snapshot of the initial analysis in the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) will help provide a quick means of reminding stakeholders of the agreed upon initial direction.
+**Effort Details**
+- **Accountable team:** [Cloud Strategy Team](../organize/cloud-strategy.md)
+- **Responsible/Supporting teams:** [Cloud Adoption Team](../organize/cloud-adoption.md)
+- **Minimum Output:** Record business justification in the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx)
+- **Minimum time to complete:** 2 hours (Document migration business case - 1 hour, Document & review, 1 hour) 
+> [!CAUTION]
+> Customers commonly require an inventory discovery and initial assessment to complete a business justification, which can take significantly longer to execute.
 
 ### 3. Partner support
 
