@@ -350,7 +350,7 @@ Workload components are where your actual applications and services reside. It's
 
 The workload possibilities are endless. The following are just a few of the possible workload types:
 
-**Internal Applications:** Line-of-business applications are critical to enterprise operations. These applications have some common characteristics:
+**Internal applications:** Line-of-business applications are critical to enterprise operations. These applications have some common characteristics:
 
 - **Interactive:** Data is entered, and results or reports are returned.
 - **Data-driven:** Data intensive with frequent access to databases or other storage.
@@ -358,7 +358,7 @@ The workload possibilities are endless. The following are just a few of the poss
 
 **Customer-facing web sites (internet-facing or internally facing):** Most internet applications are web sites. Azure can run a web site via either an IaaS virtual machine or an [Azure Web Apps][WebApps] site (PaaS). Azure Web Apps integrates with virtual networks to deploy web apps in a spoke network zone. Internally facing web sites don't need to expose a public internet endpoint because the resources are accessible via private non-internet routable addresses from the private virtual network.
 
-**Big Data/Analytics:** When data needs to scale up to larger volumes, relational databases may not perform well under the extreme load or unstructured nature of the data. [Azure HDInsight][HDInsight] is a managed, full-spectrum, open-source analytics service in the cloud for enterprises. You can use open-source frameworks such as Hadoop, Apache Spark, Apache Hive, LLAP, Apache Kafka, Apache Storm, and R. HDInsight supports deploying into a location-based virtual network, can be deployed to a cluster in a spoke of the virtual datacenter.
+**Big data analytics:** When data needs to scale up to larger volumes, relational databases may not perform well under the extreme load or unstructured nature of the data. [Azure HDInsight][HDInsight] is a managed, full-spectrum, open-source analytics service in the cloud for enterprises. You can use open-source frameworks such as Hadoop, Apache Spark, Apache Hive, LLAP, Apache Kafka, Apache Storm, and R. HDInsight supports deploying into a location-based virtual network, can be deployed to a cluster in a spoke of the virtual datacenter.
 
 **Events and Messaging:** [Azure Event Hubs][EventHubs] is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. It provides low latency and configurable time retention, enabling you to ingest massive amounts of data into Azure and read it from multiple applications. A single stream can support both real-time and batch-based pipelines.
 

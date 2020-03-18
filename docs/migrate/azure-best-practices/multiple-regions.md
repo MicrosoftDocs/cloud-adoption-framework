@@ -169,7 +169,7 @@ Addressing global complexity during optimization and promotion could require dup
 
 **Pretest optimization:** Initial automation testing can identify potential optimization opportunities, as with any migration effort. In the case of global workloads, it is important to test the workload in each region independently, as minor configuration changes in the network or the target Azure datacenter could affect performance.
 
-**Business Change Plans:** For any complex migration scenario, a business change plan should be created to ensure clear communication regarding any changes to business processes, user experiences, and timing of the efforts required to integration the changes. In the case of global migration efforts, the plan should include considerations for end users in each affected geography.
+**Business change plans:** For any complex migration scenario, a business change plan should be created to ensure clear communication regarding any changes to business processes, user experiences, and timing of the efforts required to integration the changes. In the case of global migration efforts, the plan should include considerations for end users in each affected geography.
 
 **Business testing:** In conjunction with the business change plan, business testing may be required in each region to ensure adequate performance and adherence to the modified networking routing patterns.
 
