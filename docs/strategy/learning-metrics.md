@@ -49,7 +49,7 @@ An even more valuable metric is the number of dashboards created from combined d
 
 ## Next steps
 
-After learning metrics are aligned, you're ready to start [assessing the digital estate](../digital-estate/index.md) against those metrics. The result will be a [transformation backlog or migration backlog](../migrate/migration-considerations/prerequisites/technical-complexity.md).
+After learning metrics are aligned, you're ready to begin [building the business case](cloud-migration-business-case.md) to deliver against those metrics. 
 
 > [!div class="nextstepaction"]
-> [Assess the digital estate](../digital-estate/index.md)
+> [Build the cloud business case](cloud-migration-business-case.md)
