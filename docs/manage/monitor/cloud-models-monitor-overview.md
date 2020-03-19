@@ -26,7 +26,7 @@ Our strategy includes support for monitoring infrastructure (compute, storage, a
 Azure Monitor is the Azure native platform service that provides a single source for monitoring Azure resources. It's designed for cloud solutions that:
 
 - Are built on Azure.
-- Support a business capability that’s based on virtual machine (VM) workloads or complex architectures that use microservices and other platform resources.
+- Support a business capability that's based on virtual machine (VM) workloads or complex architectures that use microservices and other platform resources.
 
 It monitors all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, and subscription-level events and Azure service health.
 
