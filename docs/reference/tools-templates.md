@@ -26,7 +26,7 @@ To effectively adopt the Cloud Adoption Framework and implement technical change
 |----------|-------------|
 | [Cloud Journey Tracker](https://docs.microsoft.com/assessments/?mode=pre-assessment&id=cloud-journey-tracker) | Identify your cloud adoption path based on the needs of your business. |
 | [Strategy and Plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) | Use this template to build out your cloud adoption strategy and plan. |
-| [Cloud Adoption Plan Generator](./plan/template.md) | Standardize process by deploying a backlog to Azure DevOps using the cloud adoption plan template. |
+| [Cloud Adoption Plan Generator](../plan/template.md) | Standardize process by deploying a backlog to Azure DevOps using the cloud adoption plan template. |
 
 ## Ready
 
