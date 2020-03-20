@@ -1,5 +1,5 @@
 ---
-title: What is a landing zone
+title: What is a landing zone?
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: BrianBlanchard
@@ -20,7 +20,7 @@ Infrastructure as code is a natural transition during most cloud adoption effort
 
 A landing zone is the basic building block of any cloud adoption environment. The term _landing zone_ refers to a logical construct capturing everything that must be true to enable the desired cloud adoption.
 
-**Scope:** A fully functional landing zone considers all platform resources that are required to support the customer’s adoption needs.
+**Scope:** A fully functional landing zone considers all platform resources that are required to support the customer's adoption needs.
 
 **Refactoring:** A fully functional landing zone is the final deliverable of any iteration of the Cloud Adoption Framework's Ready methodology. During each iteration, the codebase that defines the landing zone will be refactored or expanded. After refactoring, the landing zone may be modified or redeployed to allow for new cloud adoption needs.
 

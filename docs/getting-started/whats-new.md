@@ -15,7 +15,19 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built in collaboration with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework for Azure.
 
-## March 2020
+## March 20, 2020
+
+We've added prescriptive guidance that includes the tools, programs, and content categorized by persona to drive successful deployment of applications on Kubernetes, from proof of concept to production, followed by scaling and optimization.
+
+### Kubernetes
+
+| Article                                                                                     | Description                                                                                                                                                                           |
+|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Application development and deployment](../innovate/kubernetes/application-development.md) | **New article** Provides checklists, resources, and best practices for planning application development, configuring DevOps pipelines, and implementing site reliability engineering for Kubernetes. |
+| [Cluster design and operations](../innovate/kubernetes/cluster-design-operations.md) | **New article** Provides checklists, resources, and best practices for cluster configuration, network design, future-proof scalability, business continuity, and disaster recovery for Kubernetes. |
+| [Cluster and application security](../innovate/kubernetes/cluster-application-security.md) | **New article** Provides checklists, resources, and best practices for Kubernetes security planning, production, and scaling. |
+
+## March 2, 2020
 
 In response to feedback about continuity in the migration approach through multiple sections of the Cloud Adoption Framework, including Strategy, Plan, Ready, and Migrate, we've made the following updates. These updates are designed to make it easier for you to understand planning and adoption refinements as you continue a migration journey.
 

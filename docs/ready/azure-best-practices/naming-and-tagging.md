@@ -130,6 +130,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | MySQL database                 | mysql-      |
 | PostgreSQL database            | psql-       |
 | Azure SQL Data Warehouse       | sqldw-      |
+| Azure Synapse Analytics        | syn-        |
 | SQL Server Stretch Database    | sqlstrdb-   |
 
 ### Storage

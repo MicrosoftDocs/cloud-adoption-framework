@@ -17,7 +17,7 @@ Organizations typically need multiple Azure subscriptions as a result of resourc
 
 When deploying your first production workload in Azure, you should start with two subscriptions: one for your production environment and one for your nonproduction (dev/test) environment.
 
-![A basic subscription model showing keys next to boxes labeled "Production" and "Nonproduction"](../../_images/ready/basic-subscription-model.png)
+![A basic subscription model showing keys next to boxes labeled "Production" and "Nonproduction"](../../_images/ready/initial-subscription-model.png)
 
 We recommend this approach for several reasons:
 

@@ -187,7 +187,7 @@ Using Azure Reserved VM instances, you prepay for a one or three-year term VM in
 
 It's inevitable that eventually you'll have more than one Azure subscription. For example, you might need an additional subscription to separate development and production boundaries, or you might have a platform that requires a separate subscription for each client. Having the ability to aggregate data reporting across all the subscriptions into a single platform is a valuable feature.
 
-To do this, you can use Azure Cost Management APIs. Then, after aggregating data into a single source such as Azure SQL, you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group etc. You don't need to provide them with full access to Azure billing data.
+To do this, you can use Azure Cost Management APIs. Then, after aggregating data into a single source such as Azure SQL, you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group, or other information. You don't need to provide them with full access to Azure billing data.
 
 **Learn more:**
 

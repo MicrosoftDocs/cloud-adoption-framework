@@ -114,7 +114,7 @@ Once the transformation is complete, governance and operations must live on for 
 **Potential activities:**
 
 - Conduct periodic audits of identity policies and adherence practices.
-- Ensure sensitive user accounts (CEO, CFO, VP, etc) are always enabled for multi-factor authentication and anomalous login detection.
+- Ensure sensitive user accounts (such as accounts of corporate executives) are always enabled for multi-factor authentication and anomalous login detection.
 - Scan for malicious actors and data breaches regularly, particularly those related to identity fraud, such as potential admin account takeovers.
 - Configure a monitoring and reporting tool.
 - Consider integrating more closely with security and fraud-prevention systems.
