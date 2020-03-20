@@ -89,7 +89,7 @@ Contoso will migrate the app front-end and database VMs to Azure VMs with the Az
 
 **Service** | **Description** | **Cost**
 --- | --- | ---
-[Azure Migrate Server Migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm) | The service orchestrates and manages migration of your on-premises apps and workloads, and AWS/GCP VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when failover occurs. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing.
+[Azure Migrate Server Migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm) | The service orchestrates and manages migration of your on-premises apps and workloads, and AWS/GCP VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing.
 
 ## Prerequisites
 
@@ -120,7 +120,7 @@ Here's how Contoso admins will run the migration:
 
 Here are the Azure components Contoso needs to migrate the VMs to Azure:
 
-- A VNet in which Azure VMs will be located when they're created during failover.
+- A VNet in which Azure VMs will be located when they're created during migration.
 - The Azure Migrate Server Migration tool provisioned.
 
 They set these up as follows:
@@ -140,13 +140,13 @@ They set these up as follows:
 
 [Learn about](https://docs.microsoft.com/azure/migrate) setting up Azure Migrate Server Migration tool.
 
-### Prepare to connect to Azure VMs after failover
+### Prepare to connect to Azure VMs after migration
 
-After failover, Contoso wants to connect to the Azure VMs. To do this, Contoso admins do the following before migration:
+After migration, Contoso wants to connect to the Azure VMs. To do this, Contoso admins do the following before migration:
 
 1. For access over the internet, they:
 
-    - Enable RDP on the on-premises VM before failover.
+    - Enable RDP on the on-premises VM before migration.
     - Ensure that TCP and UDP rules are added for the **Public** profile.
     - Check that RDP is allowed in **Windows Firewall** > **Allowed Apps** for all profiles.
 
@@ -156,10 +156,10 @@ After failover, Contoso wants to connect to the Azure VMs. To do this, Contoso a
     - Allow RDP in the **Windows Firewall** -> **Allowed apps and features**, for **Domain and Private** networks.
     - Set the operating system's SAN policy on the on-premises VM to **OnlineAll**.
 
-In addition, when they run a failover they need to check the following:
+In addition, when they run a migration they need to check the following:
 
-- There should be no Windows updates pending on the VM when triggering a failover. If there are, they won't be able to log into the VM until the update completes.
-- After failover, they can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+- There should be no Windows updates pending on the VM when triggering a migration. If there are, they won't be able to log into the VM until the update completes.
+- After migration, they can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 
@@ -214,9 +214,9 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 
 ## Step 4: Migrate the VMs
 
-Contoso admins run a quick test failover, and then a full failover to migrate the VMs.
+Contoso admins run a quick test migration, and then a full migration to migrate the VMs.
 
-### Run a test failover
+### Run a test migration
 
 1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, click **Test migrated servers**.
 
@@ -235,7 +235,7 @@ Contoso admins run a quick test failover, and then a full failover to migrate th
 
 ### Migrate the VMs
 
-Now Contoso admins run a full failover to complete the migration.
+Now Contoso admins run a full migration.
 
 1. In the Azure Migrate project > **Servers** > **Azure Migrate: Server Migration**, click **Replicating servers**.
 
@@ -250,7 +250,7 @@ Now Contoso admins run a full failover to complete the migration.
 
 **Need more help?**
 
-- [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#run-a-test-migration) running a test failover.
+- [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#run-a-test-migration) running a test migration.
 - [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#migrate-vms) migrating VMs to Azure.
 
 ## Clean up after migration

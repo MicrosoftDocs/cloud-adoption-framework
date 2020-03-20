@@ -358,4 +358,4 @@ The Contoso security team reviewed the app to determine any security issues. The
 ### Licensing and cost optimization
 
 - There are no licensing issues for the PaaS deployment.
-- Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multicloud cost management solution that helps you use and manage Azure and other cloud resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.
+- Contoso will leverage [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/) to ensure they stay within budgets established by their IT leadership.
