@@ -1,7 +1,7 @@
 ### YamlMime:Hub
 
 title: Microsoft Cloud Adoption Framework for Azure
-summary: The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that accelerate your cloud adoption journey.
+summary: The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption journey.
 brand: azure
 
 metadata: 
@@ -22,23 +22,21 @@ highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   items:
     # Card
-    - title: "Overview"
+    - title: "Start your cloud journey"
+      itemType: get-started
+      url: ./getting-started/index.yml
+    # Card
+    - title: "Find cloud adoption tools and templates"
+      itemType: download
+      url: ./reference/tools-templates.md
+    # Card
+    - title: "What is the Cloud Adoption Framework"
       itemType: overview
       url: ./overview.md
     # Card
-    - title: "What's new"
+    - title: "What's new in the Cloud Adoption Framework"
       itemType: whats-new
-      url: ./overview.md
-
-    # Card
-    - title: "Cloud adoption journey roadmaps"
-      itemType: get-started
-      url: ./getting-started/index.yml
-
-    # Card
-    - title: "Cloud adoption tools and templates"
-      itemType: download
-      url: ./overview.md
+      url: ./getting-started/whats-new.md
 
 # productDirectory section (optional)
 productDirectory:
@@ -51,10 +49,10 @@ productDirectory:
       imageSrc: https://docs.microsoft.com/media/common/i_road-map.svg
       links:
         - url: ./getting-started/index.yml
-          text: Overview
+          text: Get started overview
         - url: ./getting-started/migrate.md
           text: Migrate existing workloads
-        - url: ./overview.md
+        - url: ./getting-started/org-alignment.md
           text: Organizational readiness
         - url: ./getting-started/security-roadmap.md
           text: Security concerns

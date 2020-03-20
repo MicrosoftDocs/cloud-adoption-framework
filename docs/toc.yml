@@ -7,6 +7,8 @@ items:
     href: getting-started/whats-new.md
   - name: Overview
     href: overview.md
+  - name: What's new 
+    href: getting-started/whats-new.md
   - name: Getting started
     items:
     - name: Overview
@@ -1281,6 +1283,8 @@ items:
     items:
     - name: Cloud Adoption Framework roadmap
       href: reference/index.md
+    - name: Tools and templates
+      href: reference/tools-templates.md
     - name: Operating model
       items:
       - name: Overview
