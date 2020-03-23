@@ -589,6 +589,19 @@ items:
         - name: Predict and influence
           href: innovate/innovation-guide/predict.md
 
+      - name: Innovation scenarios
+        items:
+        - name: Kubernetes
+          items:
+          - name: Innovation scenarios overview 
+            href: innovate/kubernetes/index.md
+          - name: Application development and deployment
+            href: innovate/kubernetes/application-development.md
+          - name: Cluster design and operations
+            href: innovate/kubernetes/cluster-design-operations.md
+          - name: Cluster and application security
+            href: innovate/kubernetes/cluster-application-security.md
+
       - name: Best practices
         items:
         - name: Overview and Azure toolchain

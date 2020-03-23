@@ -2,7 +2,7 @@
 title: "Logging and reporting decision guide"
 description: Develop a core logging, reporting, and monitoring strategy to ensure your organization meets uptime, security, and policy compliance goals.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework

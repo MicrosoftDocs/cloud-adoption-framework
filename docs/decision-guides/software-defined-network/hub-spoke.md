@@ -2,7 +2,7 @@
 title: "Software Defined Networking: Hub and spoke"
 description: Use the Cloud Adoption Framework for Azure to learn how hub and spoke networking organizes your network infrastructure into multiple connected virtual networks.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
