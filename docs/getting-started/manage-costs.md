@@ -11,19 +11,35 @@ ms.subservice: overview
 
 # How to optimize cloud costs across an enterprise environment
 
-Cost management is the process of effectively planning and controlling costs associated with cloud adoption. Cost management is generally managed on a day to day basis by the cloud governance team. However, proper cost control across an enterprise is a much broader team effort. For specifics on cost management within a governance function, [jump ahead to the last step below](#core-cost-optimization-process).
+One of the core disciplines of cloud governance is cost management. The discipline of cost management focuses on establishing budgets, monitoring cost allocation patterns, and implementing controls to improve cloud spending behaviors across the IT portfolio. However, enterprise cost optimization involves many other roles and functions to minimize cost and balance the demands of scale, performance, security, and reliability. This article maps those various supporting functions into one getting started guide to help create alignment between each of the involved teams.
 
-## Effective cost Optimization
+## Get started
 
-One of the core disciplines of cloud governance is cost management. That discipline helps establish budgets, monitor for sound cost allocation patterns, and identify opportunities to improve cloud spending behaviors. However, enterprise cost management involves many other roles and functions to minimize cost and balance the demands of scale, performance, security, and reliability. This article maps those various supporting functions into one getting started guide to help create alignment between each of the involved teams.
-
-## Actionable steps checklist
-
-The following steps reduce the amount of materials and the processes required during initial efforts to achieve enterprise cost management.
+The following checklist starts with establishing how cost optimization is anchored in the core disciplines of governance. The subsequent steps in the checklist help each team get started on their role in cost optimization. Together, these steps will help get the entire enterprise started on a cost optimization journey together.
 
 ![Getting Started with enterprise cost management](../_images/getting-started/cost-getting-started-map.png)
 
-*** Cost optimization:** Do you have a central governance team responsible for monitoring costs, budgets, and optimization opportunities across all Azure subscriptions and environments?
+## * Cost optimization within governance
+
+Governance is the cornerstone of cost optimization within any large enterprise. The first discipline of cloud governance is cost management, which is a set of corporate policies, processes, and automated controls to monitor cost allocations, identify deviation from budget, and remediate issues which have led to unplanned costs.
+
+Involved teams
+
+- Accountable team: [Cloud Governance Team](../organize/cloud-governance.md)
+- Responsible/Supporting teams: [Cloud Strategy Team](../organize/cloud-strategy.md), [Cloud Adoption Team](../organize/cloud-adoption.md), and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+
+Deliverable
+
+- Establish corporate policies, governance processes, and technical implementations to govern cost across the enterprise.
+
+Guidance to support deliverable completion
+
+- **Build governance capabilities:** If you are new to cloud governance, complete the [Get started with cloud governance guide](../govern/index.md). That guide will help establish a set of baseline governance processes and will demonstrate the cost management discipline within governance.
+- **Improve cost management disciplines:** Step four of the guide above focuses on implementing cost management practices that will drive optimization of cost across the enterprise. For additional guidance on integrating cost management into governance, see the [full article](../govern/guides/complex/cost-management-improvement.md) or jump to the [implementation guidance](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section for a list of technical suggestions.
+- **Go deep on cost management:** For deeper guidance, the [cost management discipline](../govern/cost-management/index.md) articles will drive clarity regarding cost optimization topics around [business risks](../govern/cost-management/business-risks.md), [indicators & metrics](../govern/cost-management/metrics-tolerance.md), [policy adherence processes](../govern/cost-management/compliance-processes.md), [iterative improvements](../govern/cost-management/discipline-improvement.md), an [Azure toolchain](../govern/cost-management/toolchain.md), and a [template for recording decisions](../govern/cost-management/template.md).
+
+
+
 
 1. **Define strategy:** Do all stakeholder understand how their strategic objectives and desired business outcomes map to cost in the cloud? Has a business justification been completed to create an initial cost basis?
 2. **Digital estate:** Has the team inventoried existing assets to forecast potential cloud costs?
@@ -37,7 +53,7 @@ The following steps reduce the amount of materials and the processes required du
 
 Each of these steps pulls from the broader cloud adoption framework, allowing readers to start fast and scale efforts over time.
 
-### Cost optimization discipline of governance
+### Cost optimization discipline
 
 The foundation of 
 
