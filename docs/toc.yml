@@ -3,8 +3,6 @@ items:
     href: index.yml
     pdf_name: Microsoft Cloud Adoption Framework for Azure
     
-  - name: What's new
-    href: getting-started/whats-new.md
   - name: Overview
     href: overview.md
   - name: What's new 
@@ -17,7 +15,7 @@ items:
       items:
       - name: Overview
         href: getting-started/blockers-overview.md
-      - name: Migrate existing workloads
+      - name: Accelerate migration
         href: getting-started/migrate.md
       - name: Build new products and services
         href: getting-started/innovate.md
@@ -33,7 +31,7 @@ items:
         href: getting-started/hybrid-adoption.md
       - name: Manage costs
         href: getting-started/manage-costs.md      
-    - name: Improve team processes
+    - name: Align your teams
       items:
       - name: Overview
         href: getting-started/team-roadmap-overview.md

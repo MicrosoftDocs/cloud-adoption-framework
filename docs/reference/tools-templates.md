@@ -28,6 +28,7 @@ To take action quickly, the Cloud Adoption Framework includes acceleration tools
 | [Strategy and Plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) | Use this template to document decisions, as you work through your cloud adoption strategy and plan. |
 | [Cloud Adoption Plan Generator](../plan/template.md) | Standardize process by deploying a backlog to Azure DevOps using the cloud adoption plan template. |
 
+
 ## Ready
 
 | Resource | Description |
