@@ -1163,6 +1163,8 @@ items:
           href: manage/monitor/alerting.md
         - name: Monitoring platforms overview
           href: manage/monitor/platform-overview.md
+        - name: Skills relevant to monitoring
+          href: manage/monitor/suggested-skills.md
       - name: Centralize management operations
         href: manage/centralize-operations.md
       - name: Establish an operational fitness review
