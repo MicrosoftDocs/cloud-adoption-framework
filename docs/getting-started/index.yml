@@ -31,7 +31,7 @@ landingContent:
             url: blockers-overview.md
       - linkListType: quickstart
         links:      
-          - text: Migrate existing workloads
+          - text: Accelerate migration
             url: migrate.md
           - text: Build new products and services in the cloud
             url: innovate.md
@@ -49,7 +49,7 @@ landingContent:
             url: manage-costs.md
 
   # Card
-  - title: Improve team process
+  - title: Align your teams
     linkLists:
       - linkListType: overview
         links:
@@ -77,17 +77,14 @@ landingContent:
             url: security-team-quickstart.md
 
   # Card
-  - title: Industry compliance
+  - title: Consult an expert
     linkLists:
-      - linkListType: overview
+      - linkListType: get-started
         links:
-          - text: Overview
-            url: enable.md
-      - linkListType: quickstart
-        links:
-          - text: Financial
-            url: enable.md
-          - text: Retail 
-            url: enable.md
-          - text: Healthcare
-            url: enable.md
+          - text: FastTrack for Azure
+            url: https://azure.microsoft.com/programs/azure-fasttrack/
+          - text: Azure Migration Program
+            url: https://azure.microsoft.com/migration/migration-program/
+          - text: Find a Partner 
+            url: https://aka.ms/adopt/findapartner
+
