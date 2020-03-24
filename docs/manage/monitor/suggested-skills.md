@@ -15,13 +15,13 @@ During the Plan phase of your migration journey, the objective is to develop the
 
 Developing the necessary skills can be accelerated with the following learning paths:
 
-- Introduction to [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview): discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, role-based access control (RBAC), using. Azure Resource Manager templates, and management of resources using Azure CLI and Azure PowerShell.
+- Introduction to [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, role-based access control (RBAC), using. Azure Resource Manager templates, and management of resources using Azure CLI and Azure PowerShell.
 
 - Learn how to secure resources using policy, role-based access control, and other Azure services by viewing [Implement resource management security in Azure](https://docs.microsoft.com//learn/paths/implement-resource-mgmt-security/). 
 
-- Introduction to [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview): learn how you can use Azure Policy to create, assign, and manage policies to deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy Diagnostic Settings, audit guest configuration settings, and more. 
+- Introduction to [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy Diagnostic Settings, audit guest configuration settings, and more.
 
-- Introduction to [Azure command-line interface](https://docs.microsoft.com/cli/azure/get-started-with-azure-cli?view=azure-cli-latest) (CLI), which is our cross-platform command-line experience for managing Azure resources. Also review, introduction to [Azure PowerShell](https://docs.microsoft.com/powershell/azure/?view=azps-3.6.1). LinkedIn offers as part of their beginner-level course [Learning Azure Management Tools], are sessions covering Azure CLI and PowerShell programming languages:
+- Introduction to [Azure command-line interface](https://docs.microsoft.com/cli/azure/get-started-with-azure-cli?view=azure-cli-latest) (CLI), which is our cross-platform command-line experience for managing Azure resources. Also review, introduction to [Azure PowerShell](https://docs.microsoft.com/powershell/azure/?view=azps-3.6.1). LinkedIn offers as part of their beginner-level course [Learning Azure Management Tools](https://www.linkedin.com/learning/learning-azure-management-tools), are sessions covering Azure CLI and PowerShell programming languages:
 
    - [Use the Azure CLI](https://www.linkedin.com/learning/learning-azure-management-tools/use-the-azure-cli).
    
