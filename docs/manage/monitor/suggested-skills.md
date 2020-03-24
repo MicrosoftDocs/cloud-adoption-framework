@@ -45,7 +45,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 Beyond these initial options for developing skills, there are a variety of learning options available.
 
-Typical mappings of cloud IT roles
+### Typical mappings of cloud IT roles
 
 Microsoft and partners offer a variety of options for all audiences to develop their skills with Azure services:
 
