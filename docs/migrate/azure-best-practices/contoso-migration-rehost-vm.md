@@ -135,11 +135,25 @@ They set these up as follows:
 2. Provision the Azure Migrate Server Migration tool.
 
     - From Azure Migrate, download the OVA image and import it into VMWare
+
+        ![Download the OVA file](./media/contoso-migration-rehost-vm/migration-download-ova.png)
+
     - Start the imported image and configure the tool, this includes
-      - Download and install the VMWare SDK
+      - Setup the prerequisites
+
+        ![Configure the tool](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
+
       - Point the tool to the Azure subscription
+
+        ![Configure the tool](./media/contoso-migration-rehost-vm/migration-register-azure.png)
+
       - Set the VMWare vCenter credentials
+
+        ![Configure the tool](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
+
       - Add any linux and windows based credentials for discovery
+
+        ![Configure the tool](./media/contoso-migration-rehost-vm/migration-credentials.png)
 
 3. Once configured, it will take some time for the tool to enumerate all the virtual machines.  Once complete, you will see them populate in the Azure Migrate tool in Azure.
 

@@ -88,7 +88,7 @@ Here's what Contoso needs for this scenario.
 --- | ---
 **Azure subscription** | Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial).<br/><br/> If you create a free account, you're the administrator of your subscription and can perform all actions.<br/><br/> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.<br/><br/> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control).
 **Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md).
-**On-premises servers** | The on-premises vCenter server should be running version 5.5, 6.0, or 6.5<br/><br/> An ESXi host running version 5.5, 6.0 or 6.5<br/><br/> One or more VMware VMs running on the ESXi host.
+**On-premises servers** | The on-premises vCenter server should be running version 5.5, 6.0, 6.5 or 6.7<br/><br/> An ESXi host running version 5.5, 6.0, 6.5 or 6.7<br/><br/> One or more VMware VMs running on the ESXi host.
 **On-premises VMs** | [Review Linux machines](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure.
 
 <!-- markdownlint-enable MD033 -->
@@ -110,15 +110,36 @@ Here's how Contoso admins will complete the migration:
 Here are the Azure components Contoso needs to migrate the VMs to Azure:
 
 - A VNet in which Azure VMs will be located when they're created during migration.
-- The Azure Migrate Server Migration tool provisioned.
+- The Azure Migrate Server Migration tool (OVA) provisioned and configured.
 
 They set these up as follows:
 
-1. **Set up a network:** Contoso already set up a network that can be for Azure Migrate Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
+1. Set up a network-Contoso already set up a network that can be for Azure Migrate Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
-2. **Provision the Azure Migrate Server Migration tool:** With the network and storage account in place, Contoso now creates a Recovery Services vault (ContosoMigrationVault), and places it in the ContosoFailoverRG resource group in the primary East US 2 region.
+2. Provision the Azure Migrate Server Migration tool.
 
-    ![Azure Migrate Server Migration tool](./media/contoso-migration-rehost-linux-vm/server-migration-tool.png)
+    - From Azure Migrate, download the OVA image and import it into VMWare
+
+        ![Download the OVA file](./media/contoso-migration-rehost-vm/migration-download-ova.png)
+
+    - Start the imported image and configure the tool, this includes
+      - Setup the prerequisites
+
+        ![Configure the tool](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
+
+      - Point the tool to the Azure subscription
+
+        ![Configure the tool](./media/contoso-migration-rehost-vm/migration-register-azure.png)
+
+      - Set the VMWare vCenter credentials
+
+        ![Configure the tool](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
+
+      - Add any linux and windows based credentials for discovery
+
+        ![Configure the tool](./media/contoso-migration-rehost-vm/migration-credentials.png)
+
+3. Once configured, it will take some time for the tool to enumerate all the virtual machines.  Once complete, you will see them populate in the Azure Migrate tool in Azure.
 
 **Need more help?**
 
@@ -128,13 +149,17 @@ They set these up as follows:
 
 After migrating to Azure, Contoso wants to be able to connect to the replicated VMs in Azure. To do this, there's a couple of things that the Contoso admins need to do:
 
-- To access Azure VMs over the internet, they enable SSH on the on-premises Linux VM before migration. For Ubuntu this can be completed using the following command: **Sudo apt-get ssh install -y**.
-- After they run the migration they can check **Boot diagnostics** to view a screenshot of the VM.
-- If this doesn't work, they'll need to check that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+   - To access Azure VMs over the internet, they enable SSH on the on-premises Linux VM before migration. For Ubuntu this can be completed using the following command: **Sudo apt-get ssh install -y**.
+
+   - After they run the migration they can check **Boot diagnostics** to view a screenshot of the VM.
+
+   - If this doesn't work, they'll need to check that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+
+   - Install the Azure Linux agent - [https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-linux](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-linux)
 
 **Need more help?**
 
-- [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prepare-vms-for-migration) preparing VMs for migration
+   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prepare-vms-for-migration) preparing VMs for migration
 
 ## Step 3: Replicate VMs
 

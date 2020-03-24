@@ -118,7 +118,7 @@ Here's how Contoso will run the migration:
 > [!div class="checklist"]
 >
 > - **Step 1: Provision a SQL Database instance in Azure.** Contoso provisions a SQL instance in Azure. After the app website is migrate to Azure, the WCF service web app will point to this instance.
-> - **Step 2: Migrate the database with DMS.** Contoso migrates the app database with the Azure Data Migration Service.
+> - **Step 2: Assess the database with Azure Database Migration Assistant (DMA) and migrate the Database Migration Service (DMS).** Contoso assesses the database for migration then migrates the application database with the Azure Data Migration Service.
 > - **Step 3: Provision web apps.** Contoso provisions the two web apps.
 > - **Step 4: Set up Azure DevOps.** Contoso creates a new Azure DevOps project, and imports the Git repo.
 > - **Step 5: Configure connection strings.** Contoso configures connection strings so that the web tier web app, the WCF service web app, and the SQL instance can communicate.
@@ -162,8 +162,7 @@ Contoso admins assess the database using Database Migration Assistant (DMA) and 
 
 As a summary, you must perform the following:
 
-- Utilize the Database Migration Assistant (DMA) to discover and resolve any migration issues
-- Migrate the sample schema by using the Data Migration Assistant.
+- Utilize the Database Migration Assistant (DMA) to discover and resolve any database migration issues
 - Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet
 - Ensure that the Azure Database Migration Service (DMS) can access the remote SQL Server via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the Virtual Network level, the network VPN and the machine hosting SQL Server.
 - Configure the Azure Database Migration Service
