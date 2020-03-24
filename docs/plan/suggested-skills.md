@@ -29,7 +29,7 @@ The Cloud Adoption Framework guides readers through the full adoption lifecycle.
 - **Operate:** Skills related to the operating model for cloud adoption are aligned to various opportunities to gain skills:
   - **Govern:** Gain the skills needed to govern the cloud environment.
   - **Manage:** Gain the skills needed to manage a cloud environment.
-  - **[Monitor](../manage/monitor/suggested-skllls.md):** Gain the skills needed to monitor a cloud environment.
+  - **[Monitor](../manage/monitor/suggested-skills.md):** Gain the skills needed to monitor a cloud environment.
 
 Each of the previous learning paths shares opportunities across multiple media types to maximize knowledge acquisition.
 
