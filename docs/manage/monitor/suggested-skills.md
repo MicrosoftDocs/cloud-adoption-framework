@@ -74,3 +74,7 @@ To learn more, review the following:
 Customers often struggle to manage, maintain, and deliver the expected business (and to the IT organization) outcomes for the services that IT is charged with delivering. Monitoring is considered core to managing infrastructure and the business, with a focus on measuring quality of service and customer experience.  In order to achieve those goals, lay the groundwork using ITSM in conjunction with DevOps, which will help the monitoring team mature how they manage, deliver, and support the monitoring service. Adopting an ITSM framework allows the monitoring team to function as a provider and gain recognition as a trusted business enabler by aligning to the strategic goals and needs of the organization.
 
 Review the following to understand the updates made to the most popular ITSM framework [ITIL v4 and Cloud Computing whitepaper](https://www.axelos.com/case-studies-and-white-papers/itil-4-and-the-cloud), which focuses on joining existing ITIL guidance with best practices from DevOps, Agile, and Lean. Also consider the [IT4IT reference architecture](https://www.opengroup.org/it4it) that delivers an alternative blueprint on how to transform IT using a process agnostic framework.
+
+## Learn more
+
+To discover additional learning paths, browse the [Microsoft Learn catalog](https://docs.microsoft.com/learn/browse). Use the Roles filter to align learning paths with your role.
