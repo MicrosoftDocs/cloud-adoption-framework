@@ -136,7 +136,7 @@ After migrating to Azure, Contoso wants to be able to connect to the replicated 
 
 - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prepare-vms-for-migration) preparing VMs for migration
 
-##  Step 3: Replicate VMs
+## Step 3: Replicate VMs
 
 Before Contoso admins can run a migration to Azure, they need to set up and enable replication.
 

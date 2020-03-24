@@ -81,7 +81,7 @@ Contoso will migrate the app front-end and database VMs to Azure VMs with the Az
 - As a first step, Contoso prepares and sets up Azure components for Azure Migrate Server Migration, and prepares the on-premises VMware infrastructure.
 - They already have the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, so Contoso just needs to add configure the replication of the VMs through the Azure Migrate Server Migration tool.
 - With everything prepared, Contoso can start replicating the VMs.
-- After replication is enabled and working, Contoso will migrate the VM by failing it over to Azure.
+- After replication is enabled and working, Contoso will migrate the VM by testing the migration and if successful, failing it over to Azure.
 
 ![Migration process](./media/contoso-migration-rehost-vm/migration-process-az-migrate.png)
 
@@ -101,7 +101,7 @@ Here's what Contoso needs to run this scenario.
 --- | ---
 **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial).<br/><br/> If you create a free account, you're the administrator of your subscription and can perform all actions.<br/><br/> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.<br/><br/> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control).
 **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure.<br/><br/> Learn more about specific [prerequisites](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prerequisites) requirements for Azure Migrate Server Migration.
-**On-premises servers** | On-premises vCenter Servers should be running version 5.5, 6.0, or 6.5<br/><br/> ESXi hosts should run version 5.5, 6.0 or 6.5<br/><br/> One or more VMware VMs should be running on the ESXi host.
+**On-premises servers** | On-premises vCenter Servers should be running version 5.5, 6.0, 6.5 or 6.7<br/><br/> ESXi hosts should run version 5.5, 6.0, 6.5 or 6.7<br/><br/> One or more VMware VMs should be running on the ESXi host.
 
 <!-- markdownlint-enable MD033 -->
 
@@ -121,7 +121,7 @@ Here's how Contoso admins will run the migration:
 Here are the Azure components Contoso needs to migrate the VMs to Azure:
 
 - A VNet in which Azure VMs will be located when they're created during migration.
-- The Azure Migrate Server Migration tool provisioned.
+- The Azure Migrate Server Migration tool (OVA) provisioned and configured.
 
 They set these up as follows:
 
@@ -132,38 +132,50 @@ They set these up as follows:
     - The app front-end VM (WEBVM) will migrate to the front-end subnet (PROD-FE-EUS2), in the production network.
     - The app database VM (SQLVM) will migrate to the database subnet (PROD-DB-EUS2), in the production network.
 
-2. Provision the Azure Migrate Server Migration tool-With the network and storage account in place, Contoso now creates a Recovery Services vault (ContosoMigrationVault), and places it in the ContosoFailoverRG resource group in the primary East US 2 region.
+2. Provision the Azure Migrate Server Migration tool.
 
-    ![Azure Migrate Server Migration tool](./media/contoso-migration-rehost-vm/server-migration-tool.png)
+    - From Azure Migrate, download the OVA image and import it into VMWare
+    - Start the imported image and configure the tool, this includes
+      - Download and install the VMWare SDK
+      - Point the tool to the Azure subscription
+      - Set the VMWare vCenter credentials
+      - Add any linux and windows based credentials for discovery
+
+3. Once configured, it will take some time for the tool to enumerate all the virtual machines.  Once complete, you will see them populate in the Azure Migrate tool in Azure.
 
 **Need more help?**
 
 [Learn about](https://docs.microsoft.com/azure/migrate) setting up Azure Migrate Server Migration tool.
 
-### Prepare to connect to Azure VMs after migration
+### Prepare on-premises VMs
 
-After migration, Contoso wants to connect to the Azure VMs. To do this, Contoso admins do the following before migration:
+After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. To do this, Contoso admins do the following before migration:
 
 1. For access over the internet, they:
 
-    - Enable RDP on the on-premises VM before migration.
+    - Enable RDP or SSH on the on-premises VM before migration.
     - Ensure that TCP and UDP rules are added for the **Public** profile.
-    - Check that RDP is allowed in **Windows Firewall** > **Allowed Apps** for all profiles.
+    - Check that RDP or SSH is allowed in the operating system firewall.
 
 2. For access over site-to-site VPN, they:
 
-    - Enable RDP on the on-premises machine.
-    - Allow RDP in the **Windows Firewall** -> **Allowed apps and features**, for **Domain and Private** networks.
-    - Set the operating system's SAN policy on the on-premises VM to **OnlineAll**.
+    - Enable RDP or SSH on the on-premises VM before migration.
+    - Check that RDP or SSH is allowed in the operating system firewall.
+    - For windows, Set the operating system's SAN policy on the on-premises VM to **OnlineAll**.
 
-In addition, when they run a migration they need to check the following:
+3. Install the Azure agent
 
-- There should be no Windows updates pending on the VM when triggering a migration. If there are, they won't be able to log into the VM until the update completes.
-- After migration, they can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+    - Linux agent - [https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-linux](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-linux)
+    - Windows agent - [https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows)
 
-**Need more help?**
+4. Miscellaneous
 
-- [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration
+   - For windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, they won't be able to log into the VM until the update completes.
+   - After migration, they can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+
+5. Need more help?
+
+   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration
 
 ## Step 3: Replicate the on-premises VMs
 
@@ -288,8 +300,8 @@ For business continuity and disaster recovery (BCDR), Contoso takes the followin
 
 ### Licensing and cost optimization
 
-1. Contoso has existing licensing for their VMs, and will take advantage of the Azure Hybrid Benefit. Contoso will convert the existing Azure VMs, to take advantage of this pricing.
-2. Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multi-cloud cost management solution that helps to use and manage Azure and other cloud resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.
+- Contoso has existing licensing for their VMs, and will take advantage of the Azure Hybrid Benefit. Contoso will convert the existing Azure VMs, to take advantage of this pricing.
+- Contoso will enable Azure Cost Management to help monitor and manage the Azure resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.
 
 ## Conclusion
 
