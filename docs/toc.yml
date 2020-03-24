@@ -23,16 +23,22 @@ items:
         href: getting-started/innovate.md
       - name: Align your organization
         href: getting-started/org-alignment.md
-      - name: Controls, compliance and governance
-        href: getting-started/governance-roadmap.md
-      - name: Address security early and often
-        href: getting-started/security-roadmap.md  
       - name: Unblock environment design and configuration
         href: getting-started/design-config-roadmap.md
       - name: Adopt a hybrid cloud
         href: getting-started/hybrid-adoption.md
-      - name: Manage costs
-        href: getting-started/manage-costs.md      
+    - name: Build a well-managed operating model
+      items:
+      - name: Manage cloud costs
+        href: getting-started/manage-costs.md  
+      - name: Achieve operational excellence (Gov+Manage+Controls)
+        href: getting-started/governance-roadmap.md
+      - name: Address security early and often
+        href: getting-started/security-roadmap.md  
+      - name: Right-size availability and resiliency (manage+AAR)
+        href: getting-started/operations-roadmap.md  
+      - name: Manage operational performance (manage+AAR)
+        href: getting-started/operations-roadmap.md  
     - name: Improve team processes
       items:
       - name: Overview
