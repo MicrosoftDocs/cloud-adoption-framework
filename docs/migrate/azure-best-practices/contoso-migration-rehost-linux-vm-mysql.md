@@ -280,25 +280,60 @@ There are several ways to move the MySQL database.  Each require you to create a
 
 Contoso admins migrate the database using Azure Database Migration Services using the step-by-step guidance [here](https://docs.microsoft.com/en-us/azure/dms/tutorial-mysql-azure-mysql-online). They can perform both online, offline and hybrid (preview) migrations using MySQL 5.6 or 5.7.
 
+> **NOTE** MySQL 8.0 is supported in Azure Database for MySQL, but the DMS tool does not yet support it
+
 As a summary, you must perform the following:
 
 - Ensure all migration prerequisites are met
   - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine and migration across source and target with same versions.
   - Enable binary logging in my.ini (Windows) or my.cnf (Unix). Failure to do this will cause a `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more details see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
   - User must have `ReplicationAdmin` role.
-  - Migrate the database schemas
+  - Migrate the database schemas without foreign keys and triggers
 - Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
 - Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet
 - Ensure that the Azure Database Migration Service can access the MySQL database via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the Virtual Network level, the network VPN and the machine hosting MySQL.
-- Run the Azure Database Migration
+- Run the Azure Database Migration Service Tool
   - Create a migration project
+
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-newproject.png)
+    
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-newproject-02.png)
+
   - Add a source (on-premises database)
+
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-source.png)
+
   - Select a target
+
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-target.png)
+
   - Select the database(s) to migrate
+
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-databases.png)
+
   - Configure advanced settings
-  - Start the replication
-  - Resolve any errors
+
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-settings.png)
+
+  - Start the replication, resolve any errors
+
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-monitor.png)
+  
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-monitor.png)
+
   - Perform final cut-over
+  
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover.png)
+
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-complete.png)
+
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-complete-02.png)
+  
+  - Reinstate any foreign keys and triggers
+
+  - Modify applications to use the new database
+
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-apps.png)
 
 ### Step 6b: Migrate the database (MySQL Workbench)
 
