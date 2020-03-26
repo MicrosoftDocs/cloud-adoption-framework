@@ -45,7 +45,7 @@ The cloud governance team is responsible for the following decisions and impleme
 
 ### Subscription design
 
-The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has chosen the [production-and-nonproduction](../../../decision-guides/subscriptions/index.md#production-and-nonproduction-pattern) subscription design pattern.
+The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has established subscriptions for production and nonproduction workloads [production-and-nonproduction](../../../ready/azure-best-practices/initial-subscriptions.md) subscription design pattern.
 
 - Departments are not likely to be required given the current focus. Deployments are expected to be constrained within a single billing unit. At the stage of adoption, there may not even be an enterprise agreement to centralize billing. It's likely that this level of adoption is being managed by a single pay-as-you-go Azure subscription.
 - Regardless of the use of the EA portal or the existence of an enterprise agreement, a subscription model should still be defined and agreed on to minimize administrative overheard beyond just billing.
