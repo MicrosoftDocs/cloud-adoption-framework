@@ -129,7 +129,7 @@ In addition to the Cloud Adoption Framework, Microsoft covers additional topics 
     </a>
 </li>
 <li style="display: flex; flex-direction: column;">
-    <a href="https://azure.microsoft.com/pricing/calculator/" style="display: flex; flex-direction: column; flex: 1 0 auto;">
+    <a href="https://azure.microsoft.com/pricing/calculator" style="display: flex; flex-direction: column; flex: 1 0 auto;">
         <div class="cardSize" style="flex: 1 0 auto; display: flex;">
             <div class="cardPadding" style="display: flex;">
                 <div class="card">
@@ -159,3 +159,5 @@ Armed with an understanding of the top enabling aspects of the Cloud Adoption Fr
 > [Migrate](./migrate.md)
 >
 > [Innovate](./innovate.md)
+
+<!-- test:ignoreNextStep -->

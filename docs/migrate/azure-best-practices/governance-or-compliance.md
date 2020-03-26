@@ -56,7 +56,7 @@ For guidance on developing governance guidance based on the Cloud Adoption Frame
 
 ## Optimize and promote process changes
 
-During the optimization and promotion processes, the cloud governance team shluld invest time to test and validate adherence to governance and compliance standards. Additionally, this step is a good time to inject processes for the cloud governance team to curate templates that could provide additional [deployment acceleration](../../govern/deployment-acceleration/index.md) for future projects.
+During the optimization and promotion processes, the cloud governance team should invest time to test and validate adherence to governance and compliance standards. Additionally, this step is a good time to inject processes for the cloud governance team to curate templates that could provide additional [deployment acceleration](../../govern/deployment-acceleration/index.md) for future projects.
 
 ### Suggested action during the optimize and promote process
 

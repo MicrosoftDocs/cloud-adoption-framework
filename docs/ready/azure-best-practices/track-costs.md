@@ -19,7 +19,7 @@ ms.subservice: ready
 
 Cost control, much like governance and other management constructs, depends on a well-managed environment. Establishing such an environment (especially a complex one) requires consistent processes in the classification and organization of all assets.
 
-Assets (also known as resources) include all virtual machines, data sources, and applications deployed to the cloud. Azure provides several mechanisms for classifying and organizing assets. [Scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md) details options for organizing resources based on multiple criteria to establish a well-managed environment. This article focuses on the application of Azure fundamental concepts to provide cloud cost visibility.
+Assets (also known as resources) include all virtual machines, data sources, and applications deployed to the cloud. Azure provides several mechanisms for classifying and organizing assets. [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md) details options for organizing resources based on multiple criteria to establish a well-managed environment. This article focuses on the application of Azure fundamental concepts to provide cloud cost visibility.
 
 ### Classification
 
@@ -53,15 +53,16 @@ The diagram shows best practices but doesn't include these options:
 
 The rest of this article assumes the use of the best-practice approach in the preceding diagram. However, the following articles can help you apply the approach to a resource organization that best fits your company:
 
-- [Scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md)
-- [Deploying a Governance MVP to govern well-managed environment standards](../../govern/guides/complex/index.md)
+- [Scale your Azure environment with multiple subscriptions](../azure-best-practices/scale-subscriptions.md)
+- [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md))
+- [Deploy a Governance MVP to govern well-managed environment standards](../../govern/guides/complex/index.md)
 
 ## Provide the right level of cost access
 
 Managing cost is a team activity. The organization readiness section of the Cloud Adoption Framework defines a small number of core teams and outlines how those teams support cloud adoption efforts. This article expands on the team definitions to define the scope and roles to assign to members of each team for the proper level of visibility into cost management data.
 
-- *Roles* define what a user can do to various assets.
-- *Scope* defines which assets (user, group, service principal, or managed identity) a user can do those things to.
+- **Roles** define what a user can do to various assets.
+- **Scope** defines which assets (user, group, service principal, or managed identity) a user can do those things to.
 
 As a general best practice, we suggest a least-privilege model in assigning people to various roles and scopes.
 

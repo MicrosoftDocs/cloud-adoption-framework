@@ -64,3 +64,5 @@ In response to feedback about continuity in the migration approach through multi
 | [Test,&nbsp;optimize,&nbsp;and&nbsp;promote](../migrate/azure-migration-guide/optimize-and-transform.md)        | Aligned the title of this article with other process improvement suggestions.                                                                                           |
 | [Assess overview](../migrate/migration-considerations/assess/index.md)                           | Updated to illustrate that the assessment in this phase focuses on assessing the technical fit of a specific workload and related assets.                               |
 | [Planning checklist](../migrate/migration-considerations/prerequisites/planning-checklist.md)    | Updated to clarify the importance of operations alignment during planning for migration efforts to ensure a well-managed workload following migration.                  |
+
+<!-- test:ignoreNextStep -->

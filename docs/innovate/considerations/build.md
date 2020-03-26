@@ -98,6 +98,8 @@ There are many legal, compliance, and industry requirements that might require a
 
 ## References
 
+<!-- cSpell:ignore Ries -->
+
 Some of the concepts in this article build on topics discussed in [*The Lean Startup*](http://theleanstartup.com/book) (Eric Ries, Crown Business, 2011).
 
 ## Next steps

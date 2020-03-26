@@ -85,7 +85,7 @@ While the difference is subtle, it is an important distinction when building a g
 
 Cloud guardians begin using more advanced governance approaches to accelerate platform deployment and help teams self-service their environmental needs, so they can move faster. Examples of these more advanced functions are seen in the incremental improvements to the governance MVP, such as [improvement of the security baseline](../govern/guides/complex/security-baseline-improvement.md).
 
-**Cloud accelerators:** Cloud guardians and cloud custodians naturally harvest scripts and automations that accelerate the deployment of environments, platforms, or even components of various applications. Curating and sharing these scripts in addition to centralized governance responsibilities develops a high degree of respect for these architects throughout IT.
+**Cloud accelerators:** Cloud guardians and cloud custodians naturally harvest scripts and automated processes that accelerate the deployment of environments, platforms, or even components of various applications. Curating and sharing these scripts in addition to centralized governance responsibilities develops a high degree of respect for these architects throughout IT.
 
 Those governance practitioners who openly share their curated scripts help deliver technology projects faster and embed governance into the architecture of the workloads. This workload influence and support of good design patterns elevate cloud accelerators to a higher rank of governance specialist.
 

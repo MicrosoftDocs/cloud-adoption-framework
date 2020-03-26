@@ -10,6 +10,8 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
+<!-- cSpell:ignore prepurchases -->
+
 # Cost Management motivations and business risks
 
 This article discusses the reasons that customers typically adopt a Cost Management discipline within a cloud governance strategy. It also provides a few examples of business risks that drive policy statements.

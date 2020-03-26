@@ -63,7 +63,7 @@ For large, complex adoption plans with multiple distinct projects, consider upda
 
 ## Next steps
 
-[Define iterations and releases](./iteration-paths.md) to begin planning work.
+[Establish iterations and release plans](./iteration-paths.md) to begin planning work.
 
 > [!div class="nextstepaction"]
-> [Define iterations and releases](./iteration-paths.md) to begin planning work.
+> [Establish iterations and release plans](./iteration-paths.md) to begin planning work.

@@ -10,6 +10,8 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
+<!-- cSpell:ignore offboarding preintegration -->
+
 # Identity Baseline discipline improvement
 
 The Identity Baseline discipline focuses on ways of establishing policies that ensure consistency and continuity of user identities regardless of the cloud provider that hosts the application or workload. Within the Five Disciplines of Cloud Governance, Identity Baseline includes decisions regarding the [Hybrid Identity Strategy](../../decision-guides/identity/index.md), evaluation and extension of identity repositories, implementation of single sign-on (same sign-on), auditing and monitoring for unauthorized use or malicious actors. In some cases, it may also involve decisions to modernize, consolidate, or integrate multiple identity providers.

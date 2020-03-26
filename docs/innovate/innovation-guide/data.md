@@ -11,8 +11,6 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore Fcatalogs Faccounts FEnvironments -->
-
 ::: zone target="docs"
 
 # Azure innovation guide: Democratize data
