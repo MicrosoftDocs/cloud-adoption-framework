@@ -30,9 +30,9 @@ Modify the baseline graphic to show the parts of the cloud adoption framework th
 <!--- remove this section if it doesn't apply to this scenario. --->
 Use the following checklist to evaluate... Use the steps to...
 
-- **question one:** Are all stakeholders aligned on the motivations and expected business outcomes?
-- **question two:** Are all stakeholders aligned on the overall business justification?
-- **etc:** blah?
+- **Question one:** Are all stakeholders aligned on the motivations and expected business outcomes?
+- **Question two:** Are all stakeholders aligned on the overall business justification?
+- **Question n** blah?
 
 ### Step 1: start with a verb – e.g. do blah
 
@@ -54,9 +54,10 @@ Involved teams
 <!--- remove this section if it doesn't apply to this scenario. --->
 Use the following checklist to evaluate... Use the steps to...
 
-- **question one:** Does the team have a skills plan in place?
-- **question two:** blah?
-- **etc:** blah?
+- **Question one:** Does the team have a skills plan in place?
+- **Question two:** blah?
+- **Question three:** blah?
+- ...
 
 ### Step 2: start with a verb – e.g. do blah
 
@@ -78,9 +79,10 @@ Involved teams
 <!--- remove this section if it doesn't apply to this scenario. --->
 Use the following checklist to evaluate... Use the steps to...
 
-- **question one:** blah?
-- **question two:** blah?
-- **etc:** blah?
+- **Question one:** blah?
+- **Question two:** blah?
+- **Question three:** blah?
+- ...
 
 ### Step 3: start with a verb – e.g. do blah
 
@@ -118,9 +120,10 @@ Involved teams
 <!--- remove this section if it doesn't apply to this scenario. --->
 Use the following checklist to evaluate... Use the steps to...
 
-- **Example**: Is the adoption team prepared to execute the technical migration effort?
-- **question two:** blah?
-- **etc:** blah?
+- **Question one**: Is the adoption team prepared to execute the technical migration effort?
+- **Question two:** blah?
+- **Question three:** blah?
+- ...
 
 ### Step 5: start with a verb – e.g. do blah
 
@@ -142,9 +145,9 @@ Involved teams
 <!--- remove this section if it doesn't apply to this scenario. --->
 Use the following checklist to evaluate... Use the steps to...
 
-- **question one:** blah?
-- **etc:** blah?
+- **Example one:** blah?
 - **Example - Governance**: Is the governance team aligned with the approach to governing the cloud environment?
+- ...
 
 ### Step 6: start with a verb – e.g. do blah
 
@@ -194,7 +197,7 @@ Involved teams
 
 ## Value statement
 
-The steps outlined in this getting started guide can help you and your teams… what is unblocked now that your done…  …realize business value.
+The steps outlined in this getting started guide can help you and your teams… what is unblocked now that you're done…  …realize business value.
 
 ## Next steps
 
