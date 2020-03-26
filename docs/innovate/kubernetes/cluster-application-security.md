@@ -10,6 +10,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
+<!-- cSpell:ignore asabbour sabbour kured -->
+
 # Cluster and application security
 
 Familiarize yourself with Kubernetes security essentials and review the secure setup for clusters and application security guidance.

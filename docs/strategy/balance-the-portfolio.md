@@ -100,3 +100,10 @@ These diverse efforts should be segmented across two or more cloud adoption team
 **Minor refactoring:** Some applications can be modernized with minor refactoring at the data or application level. This work requires team members to deploy data to cloud-based data platforms or to make minor configuration changes to the application. This may require limited support for data or application development subject matter experts. However, this work is similar to the work conducted by IT implementors when deploying third-party apps. This work could easily align with the cloud migration team or the cloud strategy team. While this effort is not nearly as fast as a rehost migration, it takes less time to execute than refactor efforts.
 
 During migration, efforts should be segmented in the three ways listed above and executed by the appropriate team in the appropriate iteration. While you should diversify the portfolio, also ensure that efforts stay very focused and segregated.
+
+## Next steps
+
+Understand how [global market decisions](./global-markets.md) can affect your transformation journey.
+
+> [!div class="nextstepaction"]
+> [Understand global markets](./global-markets.md)

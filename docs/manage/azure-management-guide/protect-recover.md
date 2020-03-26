@@ -11,6 +11,8 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore siterecovery -->
+
 # Protect and recover in Azure
 
 _Protect and recover_ is the third and final discipline in any cloud-management baseline.
@@ -33,7 +35,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 ::: zone-end
 ::: zone target="chromeless"
 
-## [Azure Backup](#tab/UpdbackupateManagement)
+## [Azure Backup](#tab/AzureBackup)
 
 ::: zone-end
 

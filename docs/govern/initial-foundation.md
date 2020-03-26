@@ -35,7 +35,7 @@ The following are two different examples of initial governance foundations (also
                 <div class="card">
                     <div class="cardText">
                         <h3>Standard governance guide</h3>
-                        <p>A guide for most organizations based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.</p>
+                        <p>A guide for most organizations based on the recommended initial two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.</p>
                     </div>
                 </div>
             </div>

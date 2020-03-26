@@ -1,0 +1,1 @@
+markdownlint ..\docs\**\*.md -c ..\docs\.markdownlint.json

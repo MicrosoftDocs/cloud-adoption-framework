@@ -285,7 +285,7 @@ With the app now running, Contoso needs to fully operationalize and secure their
 
 ### Security
 
-The Contoso security team review the OSTICKETWEB and OSTICKETMYSQLVMs to determine any security issues.
+The Contoso security team review the OSTICKETWEB and OSTICKETMYSQL VMs to determine any security issues.
 
 - The team reviews the network security groups (NSGs) for the VMs to control access. NSGs are used to ensure that only traffic allowed to the application can pass.
 - The team also considers securing the data on the VM disks using Disk encryption and Azure Key Vault.

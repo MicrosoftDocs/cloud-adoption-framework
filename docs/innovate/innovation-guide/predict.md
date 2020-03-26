@@ -43,7 +43,7 @@ For a list of available services and the amount of training that might be requir
 
 To use a Cognitive Services API:
 
-1. In the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2Faccounts), go to **Cognitive Services**.
+1. In the [Azure portal](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.CognitiveServices%2FAccounts), go to **Cognitive Services**.
 2. Select **Add** to find a Cognitive Services API in Azure Marketplace.
 3. Do either of the following:
    - If you know the name of the service you want to use, enter the name in the **Search the Marketplace** box.

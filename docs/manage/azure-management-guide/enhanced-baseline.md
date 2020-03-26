@@ -11,6 +11,8 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore ITSMC -->
+
 # Enhanced management baseline in Azure
 
 The first three cloud management disciplines describe a management baseline. The preceding articles in this guide outline a minimum viable product (MVP) for cloud management services, which is referred to as a management baseline. This article outlines a few common improvements to the baseline.
@@ -69,7 +71,7 @@ The basic unit of code for delivering automated remediation is a runbook. Runboo
 
 To create or manage runbooks:
 
-1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts).
+1. Go to [Azure Automation](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts).
 1. Select **Automation accounts** and choose one of the listed accounts.
 1. Go to **Process automation**.
 1. With the options presented, you can create or manage runbooks, schedules, and other automated remediation functionality.
@@ -78,7 +80,7 @@ To create or manage runbooks:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Assign Policy" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Assign Policy" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

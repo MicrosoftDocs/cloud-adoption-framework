@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
+<!-- cSpell:ignore NSGs WEBVM SQLVM contosoadmin contosohost contosodc contosovmsacc cswiz vcenter iisreset inetpub SQLAOG shaog sourcedb SQLAOGAVSET contosocloudwitness BEPOOL MSSQLSERVER alwayson -->
+
 # Rehost an on-premises app with Azure Virtual Machines and SQL Server Always On availability groups
 
 This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET app running on VMware virtual machines (VMs) as part of a migration to Azure. Contoso migrates the app front-end VM to an Azure VM, and the app database to an Azure SQL Server VM, running in a Windows Server failover cluster with SQL Server Always On availability groups.

@@ -11,6 +11,8 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore billyclaymyersmsft wimyers -->
+
 ::: zone target="docs"
 
 # Azure innovation guide: Engage customers through apps

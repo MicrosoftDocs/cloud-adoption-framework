@@ -38,7 +38,6 @@ In response to feedback about continuity in the migration approach through multi
 | [Balance the portfolio](../strategy/balance-the-portfolio.md)                           | Moved this article to appear earlier in the Strategy methodology. This gives you visibility into the thought process earlier in the lifecycle. |
 | [Balancing&nbsp;competing&nbsp;priorities](../strategy/balance-competing-priorities.md) | **New article**: Outlines the balance of priorities across methodologies to help inform your strategy.                                         |
 
-
 ### Plan updates
 
 | Article                                                                       | Description                                                                                                                                                                           |

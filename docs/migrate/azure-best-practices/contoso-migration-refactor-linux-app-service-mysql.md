@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
+<!-- cSpell:ignore contosohost contosodc vcenter DBHOST DBUSER WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL osticket contosoosticket trafficmanager CNAME -->
+
 # Refactor a Linux app to multiple regions using Azure App Service, Traffic Manager, and Azure Database for MySQL
 
 This article shows how the fictional company Contoso refactors a two-tier Linux-based Apache MySQL PHP (LAMP) app, migrating it from on-premises to Azure using Azure App Service with GitHub integration and Azure Database for MySQL.
@@ -67,7 +69,7 @@ Here's the proposed architecture:
 
 Contoso will complete the migration process as follows:
 
-1. As a first step, Contoso admins set up the Azure infrastructure, including provisioning Azure App Service, setting up Traffic Manager, and provisioning an Azure Datbase for MySQL instance.
+1. As a first step, Contoso admins set up the Azure infrastructure, including provisioning Azure App Service, setting up Traffic Manager, and provisioning an Azure Database for MySQL instance.
 2. After preparing the Azure, they migrate the database using MySQL Workbench.
 3. After the database is running in Azure, they up a GitHub private repository for Azure App Service with continuous delivery, and load it with the osTicket app.
 4. In the Azure portal, they load the app from GitHub to the Docker container running Azure App Service.
@@ -286,7 +288,7 @@ As the final step in the migration process, Contoso admins configure the web app
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app6.png)
 
-8. They configure both the **osticket-eus2** and **osticket-cus** web apps to allow the custom hostnames.
+8. They configure both the **osticket-eus2** and **osticket-cus** web apps to allow the custom host names.
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app7.png)
 
