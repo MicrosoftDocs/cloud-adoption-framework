@@ -32,7 +32,7 @@ The Contoso cloud team has pinned down goals for the migration to Azure DevOps S
 - Work item data and history for the last year must be migrated.
 - They don't want to set up new user names and passwords. All current system assignments must be maintained.
 - They want to move away from Team Foundation Version Control (TFVC) to Git for source control.
-- The transition to Git will be a "tip migration" that imports only the latest version of the source code. It will happen during a downtime when all work will be halted as the codebase shifts. They understand that only the current master branch history will be available after the move.
+- The transition to Git will be a "tip migration" that imports only the latest version of the source code. It will happen during a downtime when all work will be halted as the code base shifts. They understand that only the current master branch history will be available after the move.
 - They're concerned about the change and want to test it before doing a full move. They want to retain access to TFS even after the move to Azure DevOps Services.
 - They have multiple collections, and want to start with one that has only a few projects to better understand the process.
 - They understand that TFS collections are a one-to-one relationship with Azure DevOps Services organizations, so they'll have multiple URLs. However, this matches their current model of separation for code bases and projects.

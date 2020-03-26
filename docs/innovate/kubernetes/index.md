@@ -11,6 +11,8 @@ ms.subservice: innovate
 layout: LandingPage
 ---
 
+<!-- cSpell:ignore asabbour sabbour -->
+
 # Kubernetes in the Cloud Adoption Framework
 
 Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of Kubernetes and cloud-native practices at scale.

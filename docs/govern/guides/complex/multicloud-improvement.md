@@ -10,6 +10,8 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
+<!-- cSpell:ignore MPLS -->
+
 # Governance guide for complex enterprises: Multicloud improvement
 
 ## Advancing the narrative

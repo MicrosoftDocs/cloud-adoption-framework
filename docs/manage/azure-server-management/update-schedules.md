@@ -61,7 +61,7 @@ Before you run the example script, you'll need to sign in by using the [Connect-
         [string]$AutomationAccountName,
 
         [Parameter(Mandatory=$false)]
-        [string]$scheduleName = "SaturdayCritialSecurity"
+        [string]$scheduleName = "SaturdayCriticalSecurity"
     )
 
     Import-Module Az.Automation

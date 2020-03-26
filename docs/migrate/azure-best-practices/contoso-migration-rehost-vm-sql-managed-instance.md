@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
+<!-- cSpell:ignore IISRESET WEBVM SQLVM SQLMI contosodc contosohost contosovmsacc cswiz vcenter WEBMV sourcedb -->
+
 # Rehost an on-premises app on an Azure VM and SQL Database Managed Instance
 
 This article shows how the fictional company Contoso migrates a two-tier Windows .NET front-end app running on VMware VMs to an Azure VM using the Azure Site Recovery service. It also shows how Contoso migrates the app database to Azure SQL Database Managed Instance.
@@ -387,7 +389,7 @@ To set up the source environment Contoso admins do the following:
 
     ![Select Recovery Services vault](./media/contoso-migration-rehost-vm-sql-managed-instance/cswiz1.png)
 
-10. They download and install MySQL Server and VMmare PowerCLI. Then, they validates the server settings.
+10. They download and install MySQL Server and VMware PowerCLI. Then, they validates the server settings.
 11. After validation, they enter the FQDN or IP address of the vCenter Server instance or vSphere host. They leave the default port, and enter a display name for the vCenter Server instance in Azure.
 12. They specify the account created earlier so that Site Recovery can automatically discover VMware VMs that are available for replication.
 13. They enter credentials, so the Mobility Service is automatically installed when replication is enabled. For Windows machines, the account needs local administrator permissions on the VMs.

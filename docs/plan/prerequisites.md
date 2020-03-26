@@ -35,7 +35,7 @@ These questions are essential to the accuracy of the cloud adoption plan. At a m
 
 ## Next steps
 
-After the team is comfortable with the strategic inputs and the inputs for digital estate rationalization, the next step of [workload prioritization](./workloads.md) can begin.
+[Deploy the cloud adoption plan template](./template.md) to Azure DevOps.
 
 > [!div class="nextstepaction"]
-> [Prioritize and define workloads](./workloads.md)
+> [Deploy the template to Azure DevOps](./template.md)

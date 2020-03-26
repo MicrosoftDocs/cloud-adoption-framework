@@ -10,6 +10,8 @@ ms.subservice: organize
 ms.custom: organize
 ---
 
+<!-- cSpell:ignore ccoe deprioritize -->
+
 # Cloud center of excellence
 
 Business and technical agility are core objectives of most IT organizations. A cloud center of excellence (CCoE) is a function that creates a balance between speed and stability.
@@ -54,7 +56,7 @@ The CCoE is a function staffed by four high demand teams. It is important to all
 
 ## Solutions and controls
 
-Each member of the CCoE is tasked with understanding the necessary constraints, risks, and protections that led to the current set of IT controls. The collective efforts of the CCoE should turn that understanding into cloud-native (or hybrid) solutions or controls, which enable the desired self-service business outcomes. As solutions are created, they are shared with various teams in the form of controls or automations that serve as guardrails for various efforts. Those guardrails help to route the free-flowing activities of various teams, while delegating responsibilities to the participants in various migration or innovation efforts.
+Each member of the CCoE is tasked with understanding the necessary constraints, risks, and protections that led to the current set of IT controls. The collective efforts of the CCoE should turn that understanding into cloud-native (or hybrid) solutions or controls, which enable the desired self-service business outcomes. As solutions are created, they are shared with various teams in the form of controls or automated processes that serve as guardrails for various efforts. Those guardrails help to route the free-flowing activities of various teams, while delegating responsibilities to the participants in various migration or innovation efforts.
 
 Examples of this transition:
 

@@ -51,7 +51,7 @@ In Azure, you can apply configuration settings and resource creation rules at th
 
 As your cloud estate grows to span many subscriptions that require enforcement, you will need to focus on a cloud-estate-wide enforcement strategy to ensure policy consistency.
 
-Your [subscription design](../subscriptions/index.md) must account for policy in relation to your organizational structure. In addition to helping support complex organization within your subscription design, [Azure management groups](../../ready/azure-best-practices/scaling-subscriptions.md#manage-multiple-subscriptions) can be used to assign Azure Policy rules across multiple subscriptions.
+Your [subscription design](../subscriptions/index.md) must account for policy in relation to your organizational structure. In addition to helping support complex organization within your subscription design, [Azure management groups](../../ready/azure-best-practices/organize-subscriptions.md) can be used to assign Azure Policy rules across multiple subscriptions.
 
 ## Automated enforcement
 

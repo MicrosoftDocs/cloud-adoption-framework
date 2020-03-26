@@ -11,8 +11,6 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore Fservers Fdatabases -->
-
 <!-- markdownlint-disable MD025 DOCSMD001 -->
 
 # Test, optimize, and promote

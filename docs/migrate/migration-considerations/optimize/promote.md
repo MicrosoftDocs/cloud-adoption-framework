@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
+<!-- cSpell:ignore CISO prepromotion -->
+
 <!-- markdownlint-disable MD026 -->
 
 # What is required to promote a migrated resource to production?
@@ -22,7 +24,7 @@ The process of promotion varies according to the workload's architecture. Howeve
 Each of the following processes should be executed, documented, and validated prior to production deployment:
 
 - **[Assess](../assess/index.md):** The workload has been assessed for cloud compatibility.
-- **[Architect](../assess/architect.md):** The structure of the workload has been properly architected to align with the chosen cloud provider.
+- **[Architect](../assess/architect.md):** The structure of the workload has been properly designed to align with the chosen cloud provider.
 - **[Replicate](../migrate/replicate.md):** The assets have been replicated to the cloud environment.
 - **[Stage](../migrate/stage.md):** The replicated assets have been restored in a staged instance of the cloud environment.
 - **[Business testing](./business-test.md):** The workload has been fully tested and validated by business users.

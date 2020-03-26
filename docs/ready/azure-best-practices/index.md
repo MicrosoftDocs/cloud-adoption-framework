@@ -1,6 +1,6 @@
 ---
 title: "Best practices for Azure readiness"
-description: Learn how to provide best practices and additional guidance to help your team establish and prepare your Azure environment.
+description: Learn about best practices and additional guidance to help your team establish and prepare your Azure environment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
@@ -11,16 +11,17 @@ ms.subservice: ready
 
 # Best practices for Azure readiness
 
-A large part of cloud readiness is equipping staff with the technical skills needed to begin a cloud adoption effort and prepare your migration target environment for the assets and workloads you'll move to the cloud. Read these best practices and additional guidance to help your team prepare your Azure environment.
+Cloud readiness requires equipping staff with the technical skills needed to start a cloud adoption effort and prepare your migration target environment for the assets and workloads you'll move to the cloud. Read these best practices and additional guidance to help your team prepare your Azure environment.
 
 ## Azure fundamentals
 
 Organize and deploy your assets in the Azure environment.
 
 - [Azure fundamental concepts](../considerations/fundamental-concepts.md). Learn key Azure concepts and terms, and how these concepts relate to one another.
-- [Recommended naming and tagging conventions](../azure-best-practices/naming-and-tagging.md). Review detailed recommendations for naming and tagging your resources. These recommendations support enterprise cloud adoption efforts.
-- [Scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md). Understand strategies for scaling with multiple Azure subscriptions.
-- [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/governance/management-groups/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn how Azure management groups can manage resources, roles, policies, and deployment across multiple subscriptions.
+- [Create your initial subscriptions](./initial-subscriptions.md). Establish an initial set of Azure subscriptions to begin your cloud adoption.
+- [Scale your Azure environment using multiple subscriptions](../azure-best-practices/scale-subscriptions.md). Understand reasons and strategies for creating additional subscriptions to scale your Azure environment.
+- [Organize your resources with Azure management groups](../azure-best-practices/organize-subscriptions.md). Learn how Azure management groups can manage resources, roles, policies, and deployment across multiple subscriptions.
+- [Follow recommended naming and tagging conventions](../azure-best-practices/naming-and-tagging.md). Review detailed recommendations for naming and tagging your resources. These recommendations support enterprise cloud adoption efforts.
 - [Create hybrid cloud consistency](../considerations/hybrid-consistency.md). Create hybrid cloud solutions that provide the benefits of cloud innovation while maintaining many of the conveniences of on-premises management.
 
 ## Networking

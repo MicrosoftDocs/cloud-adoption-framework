@@ -133,7 +133,7 @@ items:
         href: plan/prerequisites.md
       - name: Deploy the template to Azure DevOps
         href: plan/template.md
-      - name: Prioritize and define workloads
+      - name: Define and prioritize workloads
         href: plan/workloads.md
       - name: Align assets to workloads
         href: plan/assets.md
@@ -221,8 +221,12 @@ items:
         href: ready/azure-best-practices/index.md
       - name: Resource organization
         items:
-        - name: Scaling with multiple subscriptions
-          href: ready/azure-best-practices/scaling-subscriptions.md
+        - name: Create your initial subscriptions
+          href: ready/azure-best-practices/initial-subscriptions.md
+        - name: Scale with multiple subscriptions
+          href: ready/azure-best-practices/scale-subscriptions.md
+        - name: Organize your subscriptions
+          href: ready/azure-best-practices/organize-subscriptions.md
         - name: Naming and tagging
           href: ready/azure-best-practices/naming-and-tagging.md
       - name: Networking

@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
+<!-- cSpell:ignore Satya Nadella Ries -->
+
 # Learn with customers
 
 Our current customers represent our best resource for learning. By partnering with us, they help us [build with customer empathy](./build.md) to find the best solution to their needs. They also help create a minimum viable product (MVP) solution by generating metrics from which we [measure customer impact](./measure.md). In this article, we'll describe how to learn with and from our customer-partners.

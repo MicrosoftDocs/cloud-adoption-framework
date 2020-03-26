@@ -10,6 +10,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
+<!-- cSpell:ignore asabbour sabbour autoscaler Istio Linkerd -->
+
 # Application development and deployment
 
 Examine patterns and practices of application development, configure DevOps pipelines, and implement site reliability engineering (SRE) best practices.

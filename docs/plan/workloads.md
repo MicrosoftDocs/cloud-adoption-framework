@@ -1,6 +1,6 @@
 ---
-title: "Prioritize and define workloads for cloud adoption"
-description: Use the Cloud Adoption Framework for Azure to learn how to prioritize and define workloads for a cloud adoption plan.
+title: "Define and prioritize workloads for cloud adoption"
+description: Use the Cloud Adoption Framework for Azure to learn how to define and prioritize workloads for a cloud adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# Prioritize and define workloads for a cloud adoption plan
+# Define and prioritize workloads for a cloud adoption plan
 
 Establishing clear, actionable priorities is one of the secrets to successful cloud adoption. The natural temptation is to invest time in defining all workloads that could potentially be affected during cloud adoption. But that's counterproductive, especially early in the adoption process.
 
