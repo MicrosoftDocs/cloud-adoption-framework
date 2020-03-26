@@ -14,7 +14,7 @@ ms.subservice: overview
 Quick steps:
 
 1. [Governance overview](../govern/methodology.md)
-2. [Assess your governance status](https://www.cafbaseline.com/)
+2. [Assess your governance status](https://www.cafbaseline.com)
 3. [Establish a governance foundation](../govern/initial-foundation.md)
 
 ## Governance guides

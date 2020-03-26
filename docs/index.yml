@@ -219,7 +219,7 @@ additionalContent:
           summary: Find a partner to help you get started
           url: https://aka.ms/adopt/findapartner
   # footer (optional)
-  footer: "See why the Cloud Adoption Framework is right for your business. [https://aka.ms/adopt](https://azure.microsoft.com/cloud-adoption-framework/)"
+  footer: "See why the Cloud Adoption Framework is right for your business. [https://aka.ms/adopt](https://azure.microsoft.com/cloud-adoption-framework)"
 
 
 
