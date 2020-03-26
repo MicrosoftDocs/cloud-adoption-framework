@@ -58,7 +58,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server. The following considerations helped them to decide to go with SQL Server running on an Azure IaaS VM:
 
-- Using an Azure VM running SQL Server seems to be an optimal solution if Contoso needs to customize the operating system or the database server, or if it might want to colocate and run third-party apps on the same VM.
+- Using an Azure VM running SQL Server seems to be an optimal solution if Contoso needs to customize the operating system and the database, or if it might want to colocate and run third-party apps on the same VM.
 - With Software Assurance, in future Contoso can exchange existing licenses for discounted rates on a SQL Database Managed Instance using the Azure Hybrid Benefit for SQL Server. This can save up to 30% on Managed Instance.
 
 ### Solution review
@@ -70,13 +70,13 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 **Consideration** | **Details**
 --- | ---
 **Pros** | Both the app VMs will be moved to Azure without changes, making the migration simple.<br/><br/> Since Contoso is using a lift and shift approach for both app VMs, no special configuration or migration tools are needed for the app database.<br/><br/> Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit.<br/><br/> Contoso will retain full control of the app VMs in Azure.
-**Cons** | WEBVM and SQLVM are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles (July 2018). [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).<br/><br/> The web and data tiers of the app will remain a single point of failover.<br/><br/> SQLVM is running on SQL Server 2008 R2 which isn't in mainstream support. However it is supported for Azure VMs (July 2018). [Learn more](https://support.microsoft.com/help/956893).<br/><br/> Contoso will need to continue supporting the app as Azure VMs rather than moving to a managed service such as Azure App Service and Azure SQL Database.
+**Cons** | WEBVM and SQLVM are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles. [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).<br/><br/> The web and data tiers of the app will remain a single point of failure.<br/><br/> SQLVM is running on SQL Server 2008 R2 which isn't in mainstream support. However it is supported for Azure VMs. [Learn more](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).<br/><br/> Contoso will need to continue supporting the app as Azure VMs rather than moving to a managed service such as Azure App Service and Azure SQL Database.
 
 <!-- markdownlint-enable MD033 -->
 
 ### Migration process
 
-Contoso will migrate the app front-end and database VMs to Azure VMs with the Azure Migrate Server Migration tool agentless method.
+Contoso will migrate the app front-end and database VMs to Azure VMs using the Azure Migrate Server Migration tool agentless method.
 
 - As a first step, Contoso prepares and sets up Azure components for Azure Migrate Server Migration, and prepares the on-premises VMware infrastructure.
 - They already have the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, so Contoso just needs to add configure the replication of the VMs through the Azure Migrate Server Migration tool.
@@ -112,9 +112,9 @@ Here's how Contoso admins will run the migration:
 > [!div class="checklist"]
 >
 > - **Step 1: Prepare Azure for Azure Migrate Server Migration.** They add the Server Migration tool to their Azure Migrate project.
-> - **Step 2: Prepare on-premises VMware for Azure Migrate Server Migration.** They prepare accounts for VM discovery, and prepare to connect to Azure VMs after fail-over.
+> - **Step 2: Prepare on-premises VMware for Azure Migrate Server Migration.** They prepare accounts for VM discovery, and prepare to connect to Azure VMs after migration.
 > - **Step 3: Replicate VMs.** They set up replication, and start replicating VMs to Azure storage.
-> - **Step 4: Migrate the VMs with Azure Migrate Server Migration.** They run a test fail-over to make sure everything's working, and then run a full fail-over to migrate the VMs to Azure.
+> - **Step 4: Migrate the VMs with Azure Migrate Server Migration.** They run a test migration to make sure everything's working, and then run a full migration to move the VMs to Azure.
 
 ## Step 1: Prepare Azure for the Azure Migrate Server Migration tool
 
@@ -151,7 +151,7 @@ They set these up as follows:
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
 
-      - Add any linux and windows based credentials for discovery
+      - Add any windows based credentials for discovery
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-credentials.png)
 
@@ -179,7 +179,6 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 3. Install the Azure agent
 
-    - Linux agent - [https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-linux](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-linux)
     - Windows agent - [https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows)
 
 4. Miscellaneous

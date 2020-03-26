@@ -100,9 +100,9 @@ Here's how Contoso admins will complete the migration:
 > [!div class="checklist"]
 >
 > - **Step 1: Prepare Azure for Azure Migrate Server Migration.** They add the Server Migration tool to their Azure Migrate project.
-> - **Step 2: Prepare on-premises VMware for Azure Migrate Server Migration.** They prepare accounts for VM discovery, and prepare to connect to Azure VMs after migrated.
+> - **Step 2: Prepare on-premises VMware for Azure Migrate Server Migration.** They prepare accounts for VM discovery, and prepare to connect to Azure VM after migrated.
 > - **Step 3: Replicate VMs.** They set up replication, and start replicating VMs to Azure storage.
-> - **Step 4: Migrate the VMs with Azure Migrate Server Migration.** They run a test migration to make sure everything's working, and then run a full migration to move the VMs to Azure.
+> - **Step 4: Migrate the app VM with Azure Migrate Server Migration.** They run a test migration to make sure everything's working, and then run a full migration to move the VM to Azure.
 > - **Step 5: Migrate the database.** They set up migration using Azure Database Migration Service (DMS).
 
 ## Step 1: Prepare Azure for the Azure Migrate Server Migration tool
@@ -135,7 +135,7 @@ They set these up as follows:
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
 
-      - Add any linux and windows based credentials for discovery
+      - Add any linux based credentials for discovery
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-credentials.png)
 
@@ -149,7 +149,7 @@ They set these up as follows:
 
 After migrating to Azure, Contoso wants to be able to connect to the replicated VMs in Azure. To do this, there's a couple of things that the Contoso admins need to do:
 
-   - To access Azure VMs over the internet, they enable SSH on the on-premises Linux VM before migration. For Ubuntu this can be completed using the following command: **Sudo apt-get ssh install -y**.
+   - To access Azure VM, they enable SSH on the on-premises Linux VM before migration. For Ubuntu this can be completed using the following command: **Sudo apt-get ssh install -y**.
 
    - After they run the migration they can check **Boot diagnostics** to view a screenshot of the VM.
 
@@ -161,11 +161,11 @@ After migrating to Azure, Contoso wants to be able to connect to the replicated 
 
    - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prepare-vms-for-migration) preparing VMs for migration
 
-## Step 3: Replicate VMs
+## Step 3: Replicate VM
 
 Before Contoso admins can run a migration to Azure, they need to set up and enable replication.
 
-With discovery completed, you can begin replication of VMware VMs to Azure.
+With discovery completed, they can begin replication of the app VM to Azure.
 
 1. In the Azure Migrate project > **Servers**, **Azure Migrate: Server Migration**, click **Replicate**.
 
@@ -191,7 +191,6 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 7. In **Azure Hybrid Benefit**, select the following:
 
     - Select **No** if you don't want to apply Azure Hybrid Benefit. Then click **Next**.
-    - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and you want to apply the benefit to the machines you're migrating. Then click **Next**.
 
 8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
@@ -208,7 +207,7 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 > [!NOTE]
 > You can update replication settings any time before replication starts, in **Manage** > **Replicating machines**. Settings can't be changed after replication starts.
 
-## Step 4: Migrate the VMs with Azure Migrate Server Migration
+## Step 4: Migrate the VM with Azure Migrate Server Migration
 
 Contoso admins run a quick test migration, and then a full migration to move the web VM.
 
@@ -229,7 +228,7 @@ Contoso admins run a quick test migration, and then a full migration to move the
 
     ![Clean up migration](./media/contoso-migration-rehost-linux-vm/clean-up.png)
 
-### Migrate the VMs
+### Migrate the VM
 
 Now Contoso admins run a full migration to complete the move.
 
@@ -265,7 +264,7 @@ Contoso admins provision a MySQL database instance in the primary East US 2 regi
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/mysql-3.png)
 
-6. After adding the subnet, they create a virtual network rule that allows access from the database subnet in the production network.
+6. After adding the subnet, they create a virtual network rule that allows access from the database subnet in  the production network.
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/mysql-4.png)
 
@@ -392,7 +391,7 @@ As the final step in the migration process, Contoso admins update the connection
 
 **Need more help?**
 
-- [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#run-a-test-migration) running a test failover.
+- [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#run-a-test-migration) running a test migration.
 - [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#migrate-vms) migrating VMs to Azure.
 
 ## Review the deployment
