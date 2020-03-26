@@ -704,7 +704,7 @@ items:
               - name: Bing web search
                 href: https://docs.microsoft.com/azure/cognitive-services/bing-web-search/tutorial-bing-web-search-single-page-app?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Visual search from an image
-                href: https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/index?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/tutorial-visual-search-image-upload?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: ChatBots
               items:
               - name: Create and deploy a basic bot
