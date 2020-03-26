@@ -131,10 +131,10 @@ Here's how Contoso plans to set up the deployment:
 > - **Step 1: Set up a SQL Database Managed Instance.** Contoso needs an existing managed instance to which the on-premises SQL Server database will migrate.
 > - **Step 2: Prepare the Azure Database Migration Service.** Contoso must register the database migration provider, create an instance, and then create an Azure Database Migration Service project. Contoso also must set up a shared access signature (SAS) uniform resource identifier (URI) for the Azure Database Migration Service. An SAS URI provides delegated access to resources in Contoso's storage account, so Contoso can grant limited permissions to storage objects. Contoso sets up an SAS URI, so the Azure Database Migration Service can access the storage account container to which the service uploads the SQL Server backup files.
 > - **Step 3: Prepare Azure for Azure Migrate Server Migration.** They add the Server Migration tool to their Azure Migrate project.
-> - **Step 4: Prepare on-premises VMware for Azure Migrate Server Migration.** They prepare accounts for VM discovery, and prepare to connect to Azure VMs after fail-over.
+> - **Step 4: Prepare on-premises VMware for Azure Migrate Server Migration.** They prepare accounts for VM discovery, and prepare to connect to Azure VMs after migration.
 > - **Step 5: Replicate VMs.** They set up replication, and start replicating VMs to Azure storage.
 > - **Step 6: Migrate the database using the Azure Database Migration Service.** Contoso migrates the database.
-> - **Step 7: Migrate the VMs with Azure Migrate Server Migration.** They run a test fail-over to make sure everything's working, and then run a full fail-over to migrate the VMs to Azure.
+> - **Step 7: Migrate the VM with Azure Migrate Server Migration.** They run a test migration to make sure everything's working, and then run a full migrate to move the VMs to Azure.
 
 ## Step 1: Prepare a SQL Database Managed Instance
 
@@ -269,7 +269,7 @@ Then, they complete the following steps:
 
 Here are the Azure components Contoso needs to migrate the VMs to Azure:
 
-- A VNet in which Azure VMs will be located when they're created during failover.
+- A VNet in which Azure VMs will be located when they're created during migration.
 - The Azure Migrate Server Migration tool provisioned.
 
 They set these up as follows:
