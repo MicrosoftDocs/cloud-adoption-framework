@@ -1,6 +1,6 @@
 ---
 title: "Getting started: Accelerate migration"
-description: Recommended steps for stakeholder alignment, migration planning, deploying a landing zone and migrating your first 10 workloads.
+description: Recommended steps for stakeholder alignment, migration planning, deploying a landing zone, and migrating your first 10 workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2020
@@ -11,19 +11,19 @@ ms.subservice: overview
 
 # Getting started: Accelerate migration
 
-Proper alignment of business and IT stakeholders can help your organization overcome migration roadblocks and accelerate migration efforts. This article provides a checklist and recommended steps for stakeholder alignment, migration planning, deploying a landing zone and migrating the first 10 workloads. It can also help you with long term success provided by proper governance and management.
+Proper alignment of business and IT stakeholders can help your organization overcome migration roadblocks and accelerate migration efforts. This article provides a checklist and recommended steps for stakeholder alignment, migration planning, deploying a landing zone, and migrating the first 10 workloads. It can also help you with long-term success provided by proper governance and management.
 
 ## Get started
 
-Use the migration checklists to discover opportunities to accelerate your migration efforts, remove roadblocks, and ensure success. Follow the steps to reduce the amount of materials and the processes required to align an overall migration effort. This process utilizes the sections of the Cloud Adoption Framework that are highlighted in the following illustration.
+Use the migration checklists to discover opportunities to accelerate your migration efforts, remove roadblocks, and ensure success. Follow the steps to reduce the amount of material and the processes required to align an overall migration effort. This process uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration.
 
-![Getting Started with Migration in Azure](../_images/getting-started/migration-getting-started-map.png)
+![Getting started with Azure migration](../_images/getting-started/migration-getting-started-map.png)
 
-If your migration scenario is atypical, you can get a personalized assessment of your organizations migration readiness, by using the Strategic Migration and Readiness Tool or [SMART Assessment](/assessments/?id=Strategic-Migration-Assessment) to identify the guidance that best aligns to your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness, by using the [Strategic Migration and Readiness Tool (SMART) Assessment](https://docs.microsoft.com/assessments/?id=Strategic-Migration-Assessment) to identify the guidance that best aligns with your current needs.
 
 ## Define strategy
 
-Use the following check list to evaluate your existing migration strategy. Use the steps to define your migration strategy.
+Use the following checklist to evaluate your existing migration strategy. Use the steps to define your migration strategy.
 
 - **Business strategy:** Are all stakeholders aligned on the motivations and expected business outcomes?
 - **Business case:** Are all stakeholders aligned on the overall business justification?
@@ -33,7 +33,7 @@ Use the following check list to evaluate your existing migration strategy. Use t
 
 To avoid common migration blockers, create a clear and concise business strategy for migration.
 
-- [Motivations](../strategy/motivations.md): The first step to strategic alignment is to gain a consensus on the motivations driving the migration effort. Start by understanding and categorizing motivations and common themes from various stakeholders across business and IT.
+- [Motivations](../strategy/motivations.md): The first step to strategic alignment is to gain consensus on the motivations driving the migration effort. Start by understanding and categorizing motivations and common themes from various stakeholders across business and IT.
 - [Business Outcomes](../strategy/business-outcomes/index.md): Once motivations are aligned, it's possible to capture the desired business outcomes. This provides clear metrics by which the overall transformation can be measured.
 
 Deliverable
@@ -77,7 +77,7 @@ Involved teams
 
 ## Plan
 
-Use the following check list to evaluate your existing plan. Use the steps to create a plan for migration based on the business motivations and outcomes that you have defined.
+Use the following checklist to evaluate your existing plan. Use the steps to create a plan for migration based on the business motivations and outcomes that you have defined.
 
 - **Discovery and assessment**: Has the team completed a discovery of existing inventory? Has an initial rationalization and assessment been completed?
 - **Technical skilling**: Does the team have a skills plan in place?
@@ -108,7 +108,7 @@ Involved teams
 
 Existing employees can play a hands-on role in the migration effort. However, additional skills might be required.
 
-- Plan: [Build a skills readiness plan](/plan/adapt-roles-skills-processes.md): Do a quick evaluation of the required skills and the existing skills to better understand what skilling requirements need to be addressed.
+- Plan: [Build a skills readiness plan](../plan/adapt-roles-skills-processes.md): Do a quick evaluation of the required skills and the existing skills to better understand what skilling requirements need to be addressed.
 
 Deliverable
 
@@ -142,7 +142,7 @@ Involved teams
 
 ## Ready
 
-Evaluate your migration readiness and then create a landing zone, and verify it with governance, security and operations.
+Evaluate your migration readiness and then create a landing zone, and verify it with governance, security, and operations.
 
 - **Landing zone**: Does the deployed landing zone align with the needs outlined in the adoption plan?
 
@@ -166,7 +166,7 @@ Involved teams
 
 ## Adopt
 
-Make sure your technically prepared for migration. Use the steps to prepare your organization and platform for completing migration work.
+Make sure you're technically prepared for migration. Use the steps to prepare your organization and platform for completing migration work.
 
 - **Migrating workloads**: Is the adoption team prepared to execute the technical migration effort?
 
@@ -191,7 +191,7 @@ Involved teams
 
 ## Govern
 
-Make sure your prepared for governance. Use the steps to make decisions about governance, which align to your adoption patterns, and your governance and compliance needs.
+Make sure you're prepared for governance. Use the steps to make decisions about governance, which align to your adoption patterns, and your governance and compliance needs.
 
 - **Governance**: Is the governance team aligned with the approach to governing the cloud environment?
 
@@ -215,13 +215,13 @@ Involved teams
 
 ## Manage
 
-Make sure there's a plan for post-migration and on-going operations. Use the steps to make sure your prepared for long term operations.
+Make sure there's a plan for post-migration and ongoing operations. Use the steps to make sure you're prepared for long-term operations.
 
-- **Management**: Is there a post-migration plan for on-going operations of any production workloads?
+- **Management**: Is there a post-migration plan for ongoing operations of any production workloads?
 
 ### Step 10: Establish an operational baseline
 
-Operations Management is another requirement to reach migration success. Migrating to the cloud without an understanding of on-going operations is a risky decision. In parallel to migration, it is suggested that you start planning for longer-term operations.
+Operations Management is another requirement to reach migration success. Migrating to the cloud without an understanding of ongoing operations is a risky decision. In parallel to migration, it is suggested that you start planning for longer-term operations.
 
 - [Management Baseline](../manage/index.md):
 - [Define business commitments](../manage/considerations/business-alignment.md):
@@ -230,12 +230,12 @@ Operations Management is another requirement to reach migration success. Migrati
 
 Deliverable
 
-- Deploy a management baseline
-- Complete the Ops Management Workbook
-- Identify any workloads which will require an Azure Architecture Review assessment
+- Deploy a management baseline.
+- Complete the Ops Management Workbook.
+- Identify any workloads that will require an Azure Architecture Review assessment.
 - Timeline risks:
-  - Review the workbook: 1 hour per application owner
-  - Complete the Azure Architecture Review assessment: 1 hour per application
+  - Review the workbook: One hour per application owner
+  - Complete the Azure Architecture Review assessment: One hour per application
 
 Involved teams
 
@@ -244,18 +244,18 @@ Involved teams
 
 ## Value statement
 
-The steps outlined in this getting started guide can help you and your teams accelerate migration efforts, through better change management and stakeholder alignment. Following these steps might slow the process, but these steps will remove common blockers, accelerating the realization of business value.
+The steps outlined in this guide can help your teams accelerate their migration efforts through better change management and stakeholder alignment. Following these steps might slow the process, but these steps will remove common blockers and accelerate the realization of business value.
 
-## Next Steps
+## Next steps
 
-The Cloud Adoption Framework is a lifecycle solution. It can help you begin a migration journey, but can also help you advance the maturity of the teams that support the migration efforts. The following teams can use these next steps to continue to advance the maturity of their efforts. These parallel processes are not linear and shouldn't be viewed as blockers. Instead, each is a parallel value stream to aid in maturing your company's overall cloud readiness.
+The Cloud Adoption Framework is a lifecycle solution. It can help you begin a migration journey, but can also help you advance the maturity of the teams that support the migration efforts. The following teams can use these next steps to continue to advance the maturity of their efforts. These parallel processes are not linear and shouldn't be viewed as blockers. Instead, each is a parallel value stream to help mature your company's overall cloud readiness.
 
 |Team  |Next Iteration|
 |---------|---------|
-|Cloud&nbsp;Migration&nbsp;Team|[Process improvements](../migrate/migration-considerations/index.md) provides insight about moving towards a migration factory with efficient on-going migration capabilities.|
-|Cloud&nbsp;Strategy&nbsp;Team|[Strategy](../strategy/index.md) and [Plan](../plan/index.md) are iterative processes, which evolve with the adoption plan. Return to these overview pages and continue to iterate on your business and technical strategies.|
+|Cloud&nbsp;Migration&nbsp;Team|[Process improvements](../migrate/migration-considerations/index.md) provides insight about moving towards a migration factory with efficient ongoing migration capabilities.|
+|Cloud&nbsp;Strategy&nbsp;Team|[Strategy](../strategy/index.md) and [Plan](../plan/index.md) are iterative processes that evolve with the adoption plan. Return to these overview pages and continue to iterate on your business and technical strategies.|
 |Cloud&nbsp;Platform&nbsp;Team|Revisit the [Ready](../ready/index.md) methodology to continue to advance the overall cloud platform that supports migration or other adoption efforts.|
 |Cloud&nbsp;Governance&nbsp;Team|Leverage the [Govern](../govern/index.md) methodology to continue to improve governance processes, policies, and disciplines.|
 |Cloud&nbsp;Operations&nbsp;Team|Build on the [Manage](../manage/index.md) methodology to provide richer operations in Azure|
 
-If your migration scenario is atypical, you can get a personalized assessment of your organizations migration readiness, by using the Strategic Migration and Readiness Tool or [SMART Assessment](/assessments/?id=Strategic-Migration-Assessment). Based on the answers you provide while taking the assessment, we can help you identify the guidance that best aligns to your current needs.
+If your migration scenario is atypical, you can get a personalized assessment of your organization's migration readiness, by using the [Strategic Migration and Readiness Tool (SMART) Assessment](https://docs.microsoft.com/assessments/?id=Strategic-Migration-Assessment). Based on the answers you provide while taking the assessment, we can help you identify the guidance that best aligns to your current needs.

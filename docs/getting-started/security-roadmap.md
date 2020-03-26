@@ -28,7 +28,7 @@ Modify the baseline graphic to show the parts of the cloud adoption framework th
 
 ## Define strategy
 <!--- remove this section if it doesn't apply to this scenario. --->
-Use the following check list to evaluate... Use the steps to...
+Use the following checklist to evaluate... Use the steps to...
 
 - **question one:** Are all stakeholders aligned on the motivations and expected business outcomes?
 - **question two:** Are all stakeholders aligned on the overall business justification?
@@ -52,7 +52,7 @@ Involved teams
 
 ## Plan
 <!--- remove this section if it doesn't apply to this scenario. --->
-Use the following check list to evaluate... Use the steps to...
+Use the following checklist to evaluate... Use the steps to...
 
 - **question one:** Does the team have a skills plan in place?
 - **question two:** blah?
@@ -62,7 +62,7 @@ Use the following check list to evaluate... Use the steps to...
 
 Brief explanation of what this step accomplishes. e.g. set up a security team.
 
-- Example - [Build a skills readiness plan](/plan/adapt-roles-skills-processes.md): Do a quick evaluation of the required skills and the existing skills to better understand what skilling requirements need to be addressed.
+- Example - [Build a skills readiness plan](../plan/adapt-roles-skills-processes.md): Do a quick evaluation of the required skills and the existing skills to better understand what skilling requirements need to be addressed.
 
 Deliverable
 
@@ -76,7 +76,7 @@ Involved teams
 
 ## Ready
 <!--- remove this section if it doesn't apply to this scenario. --->
-Use the following check list to evaluate... Use the steps to...
+Use the following checklist to evaluate... Use the steps to...
 
 - **question one:** blah?
 - **question two:** blah?
@@ -116,7 +116,7 @@ Involved teams
 
 ## Adopt
 <!--- remove this section if it doesn't apply to this scenario. --->
-Use the following check list to evaluate... Use the steps to...
+Use the following checklist to evaluate... Use the steps to...
 
 - **Example**: Is the adoption team prepared to execute the technical migration effort?
 - **question two:** blah?
@@ -140,7 +140,7 @@ Involved teams
 
 ## Govern
 <!--- remove this section if it doesn't apply to this scenario. --->
-Use the following check list to evaluate... Use the steps to...
+Use the following checklist to evaluate... Use the steps to...
 
 - **question one:** blah?
 - **etc:** blah?
@@ -170,9 +170,9 @@ Note: Take the governance benchmark assessment to understand the security gaps t
 
 ## Manage
 <!--- remove this section if it doesn't apply to this scenario. --->
-Use the following check list to evaluate... Use the steps to...
+Use the following checklist to evaluate... Use the steps to...
 
-- **Management**: Is there a plan for on-going operations?
+- **Management**: Is there a plan for ongoing operations?
 
 ### Step 7: start with a verb – e.g. do blah
 
@@ -196,7 +196,7 @@ Involved teams
 
 The steps outlined in this getting started guide can help you and your teams… what is unblocked now that your done…  …realize business value.
 
-## Next Steps
+## Next steps
 
 Things you might want to do in a future iteration to build on this getting started
 

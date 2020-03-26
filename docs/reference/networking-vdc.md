@@ -430,7 +430,7 @@ Security |Other Azure Services | |
 
 <!-- markdownlint-enable MD033 -->
 
-## Next Steps
+## Next steps
 
 - Learn more about [virtual network peering][virtual-network-peering], the core technology of hub and spoke topologies.
 - Implement [Azure Active Directory][azure-ad] to use [role-based access control][RBAC].

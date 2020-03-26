@@ -28,7 +28,6 @@ To take action quickly, the Cloud Adoption Framework includes acceleration tools
 | [Strategy and Plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) | Use this template to document decisions, as you work through your cloud adoption strategy and plan. |
 | [Cloud Adoption Plan Generator](../plan/template.md) | Standardize process by deploying a backlog to Azure DevOps using the cloud adoption plan template. |
 
-
 ## Ready
 
 | Resource | Description |
@@ -37,8 +36,8 @@ To take action quickly, the Cloud Adoption Framework includes acceleration tools
 | [Naming and tagging tracking template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/CAF%20Readiness%20Naming%20and%20Tagging%20tracking%20template.xlsx) | Capture decisions regarding naming and tagging standards to ensure consistency & reduce on-boarding time. |
 | [CAF foundation blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone-governance) | Lightweight implementation of an initial governance foundation to provide hands-on experience regarding governance tools in Azure |
 | [CAF migration landing zone blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone) | Provision and prepared to host workloads being migrated from an on-premises environment into Azure. To learn more about this blueprint, see [Deploy a migration landing zone](https://docs.microsoft.com/azure/architecture/cloud-adoption/ready/azure-readiness-guide/migration-landing-zone) |
-| [Terraform landing zone](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/terraform-landing-zones/landingzone_caf_foundations) | Open source code base for the terraform version of the CAF blueprints |
-| [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | Terraform's registry website, filtered to list all of the CAF modules required to create a terraform landing zone |
+| [Terraform landing zone](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/terraform-landing-zones/landingzone_caf_foundations) | Open source code base for the Terraform version of the CAF blueprints |
+| [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | Terraform's registry website, filtered to list all of the CAF modules required to create a Terraform landing zone |
 
 ## Govern
 
@@ -58,7 +57,7 @@ To take action quickly, the Cloud Adoption Framework includes acceleration tools
 | Resource | Description |
 |----------|-------------|
 | [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) | This online assessment will aid in defining workload specific architectures and operations options |
-| [Best practice source code](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/Automation-Best-Practices/) | This deployable source code compliments and accelerates adoption of hte guidance found in the Azure Server Management best practice. Use this source code to more quickly enable operations management & establish an operations baseline |
+| [Best practices source code](https://github.com/microsoft/CloudAdoptionFramework/tree/master/manage/Automation-Best-Practices) | This deployable source code compliments and accelerates adoption of hte guidance found in the Azure Server Management best practice. Use this source code to more quickly enable operations management & establish an operations baseline |
 | [Operations Management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) | This template captures decisions made regarding operations management in the cloud. It also helps facilitate conversations with the business to ensure alignment regarding SLAs, investment in resiliency, and budget allocation related to operations. |
 
 ## Organize
