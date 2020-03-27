@@ -2,8 +2,8 @@
 title: "Deploy a migration infrastructure"
 description: Learn how Contoso sets up an Azure infrastructure for migration to Azure.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 10/1/2018
+ms.author: deltadan
+ms.date: 3/27/2018
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -377,7 +377,7 @@ Within each region, Contoso will deploy VNets for different purposes, as spoke n
 
 Within the hub and spoke model that Contoso has chosen, it needs to think about how traffic from the on-premises datacenter, and from the internet, will be routed. Here's how Contoso has decided to handle routing for both the East US 2 and Central US hubs:
 
-- Contoso is designing a network known as "reverse c", as this is the path that the packets follow from the inbound to outbound network.
+- Contoso is designing a network known which allows for traffic from the internet and from their corporate network using a VPN to Azure.
 - The network architecture has two boundaries, an untrusted front-end perimeter zone and a back-end trusted zone.
 - A firewall will have a network adapter in each zone, controlling access to trusted zones.
 - From the internet:
@@ -395,16 +395,15 @@ Within the hub and spoke model that Contoso has chosen, it needs to think about 
 
 With a network and routing topology in place, Contoso is ready to set up Azure networks and subnets.
 
-- Contoso will implement a Class A private network in Azure (0.0.0.0 to 127.255.255.255). This works, since on-premises it currently has a Class B private address space 172.160.0/16 so Contoso can be sure there won't be any overlap between address ranges.
-- It's going to deploy VNets in the primary and secondary regions.
+- Contoso will implement a Class A private network in Azure 10.0.0.0/8. This works, since on-premises it currently has a Class B private address space 172.160.0.0/16, so Contoso can be sure there won't be any overlap between address ranges.
+- Contoso will deploy VNets in both the primary and secondary regions.
 - Contoso will use a naming convention that includes the prefix **VNET** and the region abbreviation **EUS2** or **CUS**. Using this standard, the hub networks will be named **VNET-HUB-EUS2** (East US 2), and **VNET-HUB-CUS** (Central US).
-- Contoso doesn't have an [IPAM solution](https://docs.microsoft.com/windows-server/networking/technologies/ipam/ipam-top), so it needs to plan for network routing without NAT.
 
 #### Virtual networks in East US 2
 
 East US 2 is the primary region that Contoso will use to deploy resources and services. Here's how Contoso will architect networks within it:
 
-- **Hub:** The hub VNet in East US 2 is the central point of primary connectivity to the on-premises datacenter.
+- **Hub:** The hub VNet in East US 2 is the considered their primary connectivity to the on-premises datacenter.
 - **VNets:** Spoke VNets in East US 2 can be used to isolate workloads if required. In addition to the Hub VNet, Contoso will have two spoke VNets in East US 2:
   - **VNET-DEV-EUS2**. This VNet will provide the development and test team with a fully functional network for dev projects. It will act as a production pilot area, and will rely on the production infrastructure to function.
     - **VNET-PROD-EUS2**. Azure IaaS production components will be located in this network.
@@ -461,12 +460,12 @@ Azure IaaS components are located in the Production network. Each app tier has i
 
 Central US is Contoso's secondary region. Here's how Contoso will architect networks within it:
 
-- **Hub:** The hub VNet in East US 2 is the central point of connectivity to the on-premises datacenter, and the spoke VNets in East US 2 can be used to isolate workloads if required, managed separately from other spokes.
+- **Hub:** The hub VNet in Central US is considered their secondary point of connectivity to the on-premises datacenter, and the spoke VNets in Central US can be used to isolate workloads if required, managed separately from other spokes.
 - **VNets:** Contoso will have two VNets in Central US:
-  - VNET-PROD-CUS. This VNet is a production network, similar to VNET-PROD_EUS2.
+  - VNET-PROD-CUS. This VNet is a production network and can be thought of as a secondary hub.
   - VNET-ASR-CUS. This VNet will act as a location in which VMs are created after failover from on-premises, or as a location for Azure VMs that are failed over from the primary to the secondary region. This network is similar to the production networks, but without any domain controllers on it.
   - Each VNet in the region will have its own address space, with no overlap. Contoso will configure routing without NAT.
-- **Subnets:** The subnets will be architected in a similar way to those in East US 2. The exception is that Contoso doesn't need a subnet for domain controllers.
+- **Subnets:** The subnets will be architected in a similar way to those in East US 2.
 
 The VNets in Central US are summarized in the following table.
 
