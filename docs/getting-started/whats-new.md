@@ -3,17 +3,31 @@ title: What's new
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure. 
 author: JanetCThomas 
 ms.author: janet 
-ms.date: 03/09/2020 
+ms.date: 03/27/2020 
 ms.topic: overview 
 ms.service: cloud-adoption-framework 
 ms.subservice: overview
 ---
+
+<!-- markdownlint-disable MD024 -->
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure
 
 Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built in collaboration with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework for Azure.
+
+## March 27, 2020
+
+We've added guidance about the initial subscriptions you should create when you adopt Azure.
+
+### Ready updates
+
+| Article                                                                                                                 | Description                                                                                                                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Create your initial Azure subscriptions](../ready/azure-best-practices/initial-subscriptions.md)                       | **New article:** Create your initial production and nonproduction subscriptions, and decide whether to create sandbox subscriptions, as well as a subscription to contain shared services. |
+| [Create additional subscriptions to scale your Azure environment](../ready/azure-best-practices/scale-subscriptions.md) | Learn about reasons to create additional subscriptions, moving resources between subscriptions, and tips for creating new subscriptions.                                                   |
+| [Organize and manage multiple Azure subscriptions](../ready/azure-best-practices/organize-subscriptions.md)             | Create a management group hierarchy to help organize, manage, and govern your Azure subscriptions.                                                                                         |
 
 ## March 20, 2020
 
@@ -23,9 +37,9 @@ We've added prescriptive guidance that includes the tools, programs, and content
 
 | Article                                                                                     | Description                                                                                                                                                                           |
 |---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Application development and deployment](../innovate/kubernetes/application-development.md) | **New article** Provides checklists, resources, and best practices for planning application development, configuring DevOps pipelines, and implementing site reliability engineering for Kubernetes. |
-| [Cluster design and operations](../innovate/kubernetes/cluster-design-operations.md) | **New article** Provides checklists, resources, and best practices for cluster configuration, network design, future-proof scalability, business continuity, and disaster recovery for Kubernetes. |
-| [Cluster and application security](../innovate/kubernetes/cluster-application-security.md) | **New article** Provides checklists, resources, and best practices for Kubernetes security planning, production, and scaling. |
+| [Application development and deployment](../innovate/kubernetes/application-development.md) | **New article:** Provides checklists, resources, and best practices for planning application development, configuring DevOps pipelines, and implementing site reliability engineering for Kubernetes. |
+| [Cluster design and operations](../innovate/kubernetes/cluster-design-operations.md) | **New article:** Provides checklists, resources, and best practices for cluster configuration, network design, future-proof scalability, business continuity, and disaster recovery for Kubernetes. |
+| [Cluster and application security](../innovate/kubernetes/cluster-application-security.md) | **New article:** Provides checklists, resources, and best practices for Kubernetes security planning, production, and scaling. |
 
 ## March 2, 2020
 
@@ -36,7 +50,7 @@ In response to feedback about continuity in the migration approach through multi
 | Article                                                                       | Description                                                                                                                                    |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Balance the portfolio](../strategy/balance-the-portfolio.md)                 | Moved this article to appear earlier in the Strategy methodology. This gives you visibility into the thought process earlier in the lifecycle. |
-| [Balancing&nbsp;competing&nbsp;priorities](../strategy/balance-competing-priorities.md) | **New article**: Outlines the balance of priorities across methodologies to help inform your strategy.                                         |
+| [Balancing&nbsp;competing&nbsp;priorities](../strategy/balance-competing-priorities.md) | **New article:** Outlines the balance of priorities across methodologies to help inform your strategy.                                         |
 
 ### Plan updates
 
@@ -48,8 +62,8 @@ In response to feedback about continuity in the migration approach through multi
 
 | Article                                                                   | Description                                                                                                              |
 |---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| [What&nbsp;is&nbsp;a&nbsp;landing&nbsp;zone?](../ready/landing-zone/index.md)                 | **New article**: Defines the term landing zone.                                                                          |
-| [First landing zone](../ready/landing-zone/first-landing-zone.md)         | **New article**: Expands on the comparison of various landing zones.                                                     |
+| [What&nbsp;is&nbsp;a&nbsp;landing&nbsp;zone?](../ready/landing-zone/index.md)                 | **New article:** Defines the term landing zone.                                                                          |
+| [First landing zone](../ready/landing-zone/first-landing-zone.md)         | **New article:** Expands on the comparison of various landing zones.                                                     |
 | [Migrate landing zone](../ready/landing-zone/migrate-landing-zone.md)     | Separated the definition of the Cloud Adoption Framework blueprint from the selection of the first landing zone.         |
 | [Terraform landing zone](../ready/landing-zone/terraform-landing-zone.md) | Moved to the new "Landing Zone" section of the Ready methodology, to elevate Terraform in the landing zone conversation. |
 
@@ -59,7 +73,7 @@ In response to feedback about continuity in the migration approach through multi
 |--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Overview](../migrate/azure-migration-guide/index.md)                                            | Updated with a clearer description of the guide and fewer steps.                                                                                                        |
 | [Assess](../migrate/azure-migration-guide/assess.md)                                             | Added a "Challenging Assumptions" section to demonstrate how this level of assessment works with the incremental assessment approach mentioned in the Plan methodology. |
-| [Classification during assess processes](../migrate/migration-considerations/assess/classify.md) | **New article**: Outlines the importance of classifying every asset and workload prior to migration.                                                                    |
+| [Classification during assess processes](../migrate/migration-considerations/assess/classify.md) | **New article:** Outlines the importance of classifying every asset and workload prior to migration.                                                                    |
 | [Migrate](../migrate/azure-migration-guide/migrate.md)                                           | Added a reference to UnifyCloud in the third-party tool options, in response to feedback at tier 1 conferences.                                                         |
 | [Test,&nbsp;optimize,&nbsp;and&nbsp;promote](../migrate/azure-migration-guide/optimize-and-transform.md)        | Aligned the title of this article with other process improvement suggestions.                                                                                           |
 | [Assess overview](../migrate/migration-considerations/assess/index.md)                           | Updated to illustrate that the assessment in this phase focuses on assessing the technical fit of a specific workload and related assets.                               |
