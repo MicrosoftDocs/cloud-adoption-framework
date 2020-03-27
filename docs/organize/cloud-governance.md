@@ -41,13 +41,13 @@ These tasks are usually executed by the cloud governance capability on a monthly
 **Early planning tasks:**
 
 - Understand [business risks](../govern/policy-compliance/risk-tolerance.md) introduced by the plan
-- Represent the [business' tolerance for risk](../govern/policy-compliance/risk-tolerance.md)
+- Represent the [business's tolerance for risk](../govern/policy-compliance/risk-tolerance.md)
 - Aid in the creation of a [Governance MVP](../govern/guides/index.md)
 
 **Ongoing monthly tasks:**
 
 - Understand [business risks](../govern/policy-compliance/risk-tolerance.md) introduced during each release
-- Represent the [business' tolerance for risk](../govern/policy-compliance/risk-tolerance.md)
+- Represent the [business's tolerance for risk](../govern/policy-compliance/risk-tolerance.md)
 - Aid in the incremental improvement of [Policy and Compliance requirements](../govern/policy-compliance/index.md)
 
 ## Meeting cadence

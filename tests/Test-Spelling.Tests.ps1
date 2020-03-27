@@ -2,7 +2,7 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 . "$here\Test-Spelling.ps1"
 
-Describe -Tags "Spelling" "Test-Spelling" {
+Describe "Test-Spelling" -Tags "Spelling" {
 
     # It "decision-guides shouldn't have spelling errors" {
     #     Test-Spelling $here 'decision-guides' | Should -Be 0
@@ -65,7 +65,7 @@ Describe -Tags "Spelling" "Test-Spelling" {
     }
 }
 
-Describe -Tags "Markdown" "Test-Markdown" {
+Describe "Test-Markdown" -Tags "Markdown" {
 
     It "shouldn't have markdownlint errors" {
         Test-Markdown $here "md" | Should -Be 0
