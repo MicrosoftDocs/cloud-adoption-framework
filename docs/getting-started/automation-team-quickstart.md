@@ -4,67 +4,18 @@ description: This quickstart helps the automation team understand scope, deliver
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
-ms.topic: quickstart 
-ms.date: 03/03/2020
+ms.topic: conceptual 
+ms.date: 04/04/2020
 ---
 
-<!---Recommended: Remove all the comments in this template before you sign-off or merge to master.--->
-<!---quickstarts are fundamental day-1 instructions for helping new customers use a subscription to quickly try out a specific product/service.
-The entire activity is a short set of steps that provides an initial experience.
-You only use quickstarts when you can get the service, technology, or functionality into the hands of new customers in less than 10 minutes.
---->
-
-# Cloud adoption automation team quickstart guide
-
-<!---Required:
-Starts with "Quickstart: " and is ideally two lines or less when rendered on a 1920x1080 screen.
-Make the first word following "Quickstart:" a verb, which is to say, an action.
-The "X" part should identify both the technology or service involved (e.g. App Service,
-Cosmos DB, etc.) and the language or framework, if applicable (.NET Core, Python, JavaScript,
-Java, etc.); the language or framework shouldn't appear in parentheses.
---->
+# Quickstart: Cloud automation team
 
 This quickstart helps you understand the goals and objectives of an automation team working on cloud adoption.
 
-<!-- In the opening sentence, focus on the job or task to be completed, emphasizing.
-general industry terms (such as "serverless," which are better for SEO) more than
-Microsoft-branded terms or acronyms (such as "Azure Functions" or "ACR"). That is, try
-to include terms people typically search for and avoid using *only* Microsoft terms. -->
-
-<!--After the opening sentence, provide a light introduction that describes,
-again in customer-friendly language, what the customer will learn in the process of
-accomplishing the stated goal. Answer the fundamental "why would I want to do this?" question.
-
-Avoid the following elements whenever possible:
-- Avoid callouts (note, important, tip, etc.) because readers tend to skip over them.
-Important callouts like preview status or version caveats can be included under prerequisites.
-
-- Avoid links, which are generally invitations for the reader to leave the article and
-not complete the experience of the quickstart. The exception are links to alternate versions
-of the same content (e.g. when you have a VS Code-oriented article and a CLI-oriented article). Those
-links help get the reader to the right article, rather than being a distraction. If you feel that there are
-other important concepts needing links, make reviewing a particular article a prerequisite. Otherwise, rely
-on the line of standard links (see below).
-
-- Avoid any indication of the time it takes to complete the quickstart, because there's already
-the "x minutes to read" at the top and making a second suggestion can be contradictory.
-
-- Avoid a bullet list of steps or other details in the quickstart: the H2's shown on the right
-of the docs page already fulfill this purpose.
-
-- Avoid screenshots or diagrams: the opening sentence should be sufficient to explain the result,
-and other diagrams count as conceptual material that is best in a linked overview.
---->
-
-<!-- Optional standard links: if there are suitable links, you can include a single line
-of applicable links for companion content at the end of the introduction. Don't use the line
-if there's only a single link. -->
-
-<!-- NOTE: the Azure subscription line is moved to Prerequisites. -->
+During cloud adoption efforts, cloud automation capabilities will unlock the potential of DevOps and a cloud-native approach. Expertise in each of these areas can accelerate adoption and innovation.
 
 ## Prerequisites
-
-<!-- Make Prerequisites the first H2 after the H1. Omit any preliminary text to the list.-->
+<!-- TODO -->
 
 - (Optional) Completion of any required training. Use the language "Completion of (title)" where (title) is the link to the training.
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
@@ -72,107 +23,72 @@ if there's only a single link. -->
 - Second prerequisite - tools needed
 - Third prerequisite
 
-<!-- Include this heading even if there aren't any prerequisites, in which case just use the text: "None" (not bulleted). The reason for this is to maintain consistency across services, which trains
-readers to always look in the same place.-->
-
-<!-- When there are prerequisites, list each as *items*, not instructions to minimize the verbiage.
-For example, use "Python 3.6" instead of "Install Python 3.6". If the prerequisite is something
-to install, link to the applicable installer or download. Selecting the item/link is then the
-action to fulfill the prerequisite. Use an action word only if necessary to make the meaning clear.
-Don't use links to conceptual information about a prerequisite; only use links for installers.
-
-List prerequisites in the following order:
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- Language runtimes (Python, Node, .NET, etc.)
-- Packages (from pip, npm, nuget, etc.)
-- Tools (like VS Code IF REQUIRED. Don't include tools like pip if they're
-  automatically installed with another tool or language runtime, like Python. Don't include
-  optional tools like text editors--include them only if the quickstart demonstrates them.)
-- Sample code
-- Specialized hardware
-- Other preparatory work, such as creating a VM (OK to link to another article)
-- Azure keys
-- Service-specific keys
-
-The reason for placing runtimes and tools first is that it might take time to install
-them, and it's best to get a user started sooner than later.
-
-If you feel like your quickstart has a lot of prerequisites, the quickstart may be the
-wrong content type - a tutorial or how-to guide may be the better option. Remember that
-quickstarts should be something a reader can complete in 10 minutes or less.
-
---->
-
 ## Minimum scope
 
-<!---Required:
-Quickstarts are prescriptive and guide the customer through an end-to-end procedure.
-Make sure to use specific naming for setting up accounts and configuring technology.
+The primary duty of cloud automation is to own and advance the solution catalog. The solution catalog is a collection of prebuilt solutions or automation templates. These solutions can rapidly deploy various platforms as required to support needed workloads. These solutions are building blocks that accelerate cloud adoption and reduce the time to market during migration or innovation efforts.
 
-Avoid linking off to other content - include whatever the customer needs to complete the
-scenario in the article. For example, if the customer needs to set permissions, include the
-permissions they need to set, and the specific settings in the quickstart procedure. Don't
-send the customer to another article to read about it.
+Examples of solutions in the catalog include:
 
-In a break from tradition, do not link to reference topics in the procedural part of the
-quickstart when using cmdlets or code. Provide customers what they need to know in the quickstart
-to successfully complete the quickstart.
+- A script to deploy a containerized application.
+- A Resource Manager template to deploy a SQL HA AO cluster.
+- Sample code to build a deployment pipeline using Azure DevOps.
+- An Azure DevTest Labs instance of the corporate ERP for development purposes.
+- Automated deployment of a self-service environment commonly requested by business users.
 
-For portal-based procedures, minimize bullets and numbering.
+The solutions in the solution catalog aren't deployment pipelines for a workload. Instead, you might use automation scripts in the catalog to quickly create a deployment pipeline. You might also use a solution in the catalog to quickly provision platform components to support workload tasks like automated deployment, manual deployment, or migration.
 
-For the CLI or PowerShell based procedures, don't use bullets or numbering.
+These following tasks are typically executed by cloud automation on a regular basis:
 
-Be mindful of the number of H2/procedures in the Quickstart. 3-5 procedural steps are about right.
-Once you've staged the article, look at the right-hand "In this article" section on the docs page;
-if there are more than 8 total, consider restructuring the article.
---->
+### Strategic tasks
 
-Include a sentence or two to explain only the minimum scope for the team.
+Review:
 
-Use bullet or numbered list of tasks that may be required within this scope.
+- Business outcomes
+- Financial models
+- Motivations for cloud adoption
+- Business risks
+- Rationalization of the digital estate:
+  - Monitor adoption plans and progress against the prioritized migration backlog.
+  - Identify opportunities to accelerate cloud adoption, reduce effort through automation, and improve security, stability, and consistency.
+  - Prioritize a backlog of solutions for the solution catalog that delivers the most value given other strategic inputs.
 
-1. Step 1
-1. Step 2
-1. Step 3
-1. Step 4
+### Meeting cadence
 
-## Deliverable
+Cloud automation is a working team. Expect participants to commit a large portion of their daily schedules to cloud automation work. Contributions aren't limited to meetings and feedback cycles.
 
-Include a sentence or two to explain deliverable that will be a result of staying within the minimum scope.
+The cloud automation team should align activities with other areas of capability. This alignment might result in meeting fatigue. To ensure cloud automation has sufficient time to manage the solution catalog, you should review meeting cadences to maximize collaboration and minimize disruptions to development activities.
 
-Use bullet or ordered list, as appropriate to aid readability.
+## Deliverables
 
-1. First deliverable
-1. Second deliverable
-1. Third deliverable
+- Curate or develop solutions based on the prioritized backlog.
+- Ensure solutions align to platform requirements.
+- Ensure solutions are consistently applied and meet existing governance and compliance requirements.
+- Create and validate solutions in the catalog.
+- Review release plans for sources of new automation opportunities.
 
 ## Baseline capability
 
-Include a sentence or two to explain the baseline capabilities here.
+The skills needed to provide cloud automation capabilities could be provided by:
 
-Use bullet or numbered list, as appropriate to aid readability.
+- DevOps engineers
+- Developers with DevOps and infrastructure expertise
+- IT engineers with DevOps and automation expertise
 
-- Item 1
-- Item 2
-- Item 3
+These subject matter experts might be providing capabilities in other areas such as cloud adoption, cloud governance, or cloud platform. After they demonstrate proficiency at automating complex workloads, you can recruit these experts to deliver automation value.
+
+Before you admit a team member to this group, they should demonstrate three key characteristics:
+
+- Expertise in any cloud platform with a special emphasis on DevOps and automation.
+- A growth mindset or openness to changing the way IT operates today.
+- A desire to accelerate business change and remove traditional IT roadblocks.
 
 ## Out of scope
-
+<!-- TODO -->
 Briefly explain what is out of scope and provide links to more information.
 
 - Additional info item and link
 - Additional info item and link
 
-## Next steps
+## What's next
 
-Advance to the methodology or next logical topic
-> [!div class="nextstepaction"]
-> [Next steps button](index.yml)
-
-<!--- Required:
-Quickstarts should always have a Next steps H2 that points to the next logical
-quickstart in a series, or, if there are no other quickstarts, to some other
-cool thing the customer can do. A single link in the blue box format should
-direct the customer to the next article - and you can shorten the title in the
-boxes if the original one doesn't fit.
-Do not use a "More info section" or a "Resources section" or a "See also section". --->
+As the essential cloud capabilities align, the collective teams can help develop necessary [technical skills](../organize/suggested-skills.md).
