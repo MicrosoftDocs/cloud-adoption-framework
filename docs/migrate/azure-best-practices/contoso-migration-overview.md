@@ -78,14 +78,15 @@ The articles in the series are summarized below.
 
 **Article** | **Details**
 --- | ---
-[Rehost an app on an Azure VM and SQL Database Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift and shift migration to Azure for an on-premises app. This involves migrating the app front-end VM using Azure Migrate, and the app database to an Azure SQL Database Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
-[Rehost an app on Azure VMs and in a SQL Server Always On availability group](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure hosted SQL Server VMs. It uses Azure Migrate to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group.
+[Rehost an app on an Azure IaaS and SQL Database Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift and shift migration to Azure for an on-premises app. This involves migrating the app front-end VM using Azure Migrate, and the app database to an Azure SQL Database Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
+[Rehost an app on Azure IaaS using SQL Server Always On availability groups](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure hosted SQL Server VMs. It uses Azure Migrate to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group.
 
 ### ASP.NET, PHP, and Java apps
 
 **Article** | **Details**
 --- | ---
-[Refactor an app in an Azure web app and Azure SQL Database](./contoso-migration-refactor-web-app-sql.md) | This example shows how to migrate an on-premises Windows-based app to an Azure web app and migrates the app database to an Azure SQL Server instance with the Data Migration Assistant.
+[Refactor a Windows app using Azure App Services and Azure SQL Database](./contoso-migration-refactor-web-app-sql.md) | This example shows how to migrate an on-premises Windows-based app to an Azure web app and migrates the app database to an Azure SQL Server instance with the Data Migration Service.
+[Refactor a Windows app using Azure App Services and SQL Managed Instance](./contoso-migration-refactor-web-app-sql-managed-instance.md) | This example shows how to migrate an on-premises Windows-based app to an Azure web app and migrates the app database to an Azure SQL Managed Instances using with the Data Migration Service.
 [Refactor a Linux app to multiple regions using Azure App Service, Azure Traffic Manager, and Azure Database for MySQL](./contoso-migration-refactor-linux-app-service-mysql.md) | This example shows how to migrate an on-premises Linux-based app to an Azure web app on multiple Azure regions using Azure Traffic Manager, integrated with GitHub for continuous delivery. The app database is migrated to an Azure Database for MySQL instance.
 [Rebuild an app in Azure](./contoso-migration-rebuild.md) | This article provides an example of rebuilding an on-premises app using a range of Azure capabilities and managed services, including Azure App Service, Azure Kubernetes Service (AKS), Azure Functions, Azure Cognitive Services, and Azure Cosmos DB.
 [Refactor Team Foundation Server on Azure DevOps Services](./contoso-migration-tfs-vsts.md) | This article shows an example migration of an on-premises Team Foundation Server deployment to Azure DevOps Services in Azure.
