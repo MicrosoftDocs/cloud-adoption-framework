@@ -206,43 +206,43 @@ As a summary, you must perform the following:
 - Run the Azure Database Migration Service Tool
   - Create a migration project based on the **Premium SKU**
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-newproject.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-newproject.png)
     
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-newproject-02.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-newproject-02.png)
 
   - Add a source (on-premises database)
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-source.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-source.png)
 
   - Select a target
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-target.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-target.png)
 
   - Select the database(s) to migrate
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-databases.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-databases.png)
 
   - Configure advanced settings
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-settings.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-settings.png)
 
   - Start the replication, resolve any errors
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-monitor.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-monitor.png)
   
   - Perform final cut-over
   
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover.png)
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-complete.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-complete.png)
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-complete-02.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-complete-02.png)
   
   - Reinstate any foreign keys and triggers
 
   - Modify applications to use the new database
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-apps.png)
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-apps.png)
 
 ### Step 4b: Migrate the database (MySQL Workbench)
 
