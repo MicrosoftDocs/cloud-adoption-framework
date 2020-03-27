@@ -10,6 +10,8 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
+<!-- cSpell:ignore DPIAs DSRs -->
+
 <!-- markdownlint-disable MD026 -->
 
 # Microsoft Security Guidance

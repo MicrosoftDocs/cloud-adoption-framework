@@ -11,6 +11,8 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore umarmohamedusman umarm Moovit -->
+
 ::: zone target="docs"
 
 # Azure innovation guide: Interact through devices
@@ -54,7 +56,7 @@ Here are a few features you'll find:
 
 ::: zone target="docs"
 
-**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-dps)**
+**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-hub)**
 
 **Go to [Device Provisioning Services](https://docs.microsoft.com/azure/iot-dps)**
 

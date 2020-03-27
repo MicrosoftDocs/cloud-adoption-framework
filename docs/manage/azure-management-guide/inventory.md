@@ -98,7 +98,7 @@ A [Log Analytics workspace](https://docs.microsoft.com/azure/azure-monitor/learn
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.OperationalInsights%2Fworkspaces]" submitText="Explore Azure Monitor" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.OperationalInsights%2FWorkspaces]" submitText="Explore Azure Monitor" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -169,8 +169,8 @@ To enable solutions, you need to configure the Log Analytics workspace. Onboarde
 
 There are two approaches to onboarding:
 
-- [Single VM](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-server-management/onboard-single-vm)
-- [Entire subscription](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-server-management/onboard-at-scale)
+- [Single VM](../../manage/azure-server-management/onboard-single-vm.md)
+- [Entire subscription](../../manage/azure-server-management/onboard-at-scale.md)
 
 Each article guides you through a series of steps to onboard these solutions:
 

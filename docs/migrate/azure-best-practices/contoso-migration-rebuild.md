@@ -288,7 +288,7 @@ Now, Contoso admins do the following:
 - Deploy the microservices to the AKS cluster.
 - As a first step they update the connection strings to the microservices using Azure DevOps. They then configure a new Azure DevOps Release pipeline to deploy the microservices.
 - The instructions in this section use the [SmartHotel360-Azure-Backend](https://github.com/Microsoft/SmartHotel360-Azure-backend) repo.
-- Some of the configuration settings (for example Active Directory B2C) aren’t covered in this article. For more information about these settings, review the repo above.
+- Some of the configuration settings (for example Active Directory B2C) aren't covered in this article. For more information about these settings, review the repo above.
 
 They create the pipeline:
 
@@ -629,6 +629,6 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills and 
 
 Here are a couple of examples of tailored learning paths on Microsoft Learn that align with the Contoso SmartHotel360 app in Azure.
 
-[Deploy a website to Azure with Azure App Service](https://docs.microsoft.com/learn/paths/deploy-a-website-with-azure-app-service/): Web apps in Azure allow you to publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to provide secure access to your site.
+[Deploy a website to Azure with Azure App Service](https://docs.microsoft.com/learn/paths/deploy-a-website-with-azure-app-service): Web apps in Azure allow you to publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to provide secure access to your site.
 
-[Process and classify images with the Azure Cognitive Vision Services](https://docs.microsoft.com/learn/paths/classify-images-with-vision-services/): Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Cognitive Vision Services to detect faces, tag and classify images, and identify objects.
+[Process and classify images with the Azure Cognitive Vision Services](https://docs.microsoft.com/learn/paths/classify-images-with-vision-services): Azure Cognitive Services offers prebuilt functionality to enable computer vision functionality in your applications. Learn how to use the Cognitive Vision Services to detect faces, tag and classify images, and identify objects.

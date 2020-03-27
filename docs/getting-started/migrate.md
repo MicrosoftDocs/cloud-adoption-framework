@@ -20,7 +20,7 @@ The Cloud Adoption Framework helps customers undertake a simplified cloud adopti
 This framework is designed primarily for cloud architects and the cloud strategy teams leading cloud adoption efforts. However, many subjects in this framework are relevant to other roles across the business and IT. Cloud architects frequently serve as facilitators to engage each of the relevant roles. This executive summary is designed to prepare the various roles before facilitating conversations.
 
 > [!NOTE]
-> This guidance is currently a public preview. Terminology, approaches, and guidance are being thoroughly tested with customers, partners, and Microsoft teams during this preview. As such, the TOC and guidance may change slightly over time.
+> This guidance is currently a public preview. Terminology, approaches, and guidance are being thoroughly tested with customers, partners, and Microsoft teams during this preview. As such, the table of contents and the guidance may change slightly over time.
 
 ## Motivations
 
@@ -143,3 +143,5 @@ The Cloud Adoption Framework is a lifecycle solution. It is designed to help rea
 > [Manage](../manage/index.md)
 >
 > [Organize](../organize/index.md)
+
+<!-- test:ignoreNextStep -->

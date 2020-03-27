@@ -32,7 +32,7 @@
       },
       {
          "source_path": "docs/ready/considerations/scaling-subscriptions.md",
-         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/scaling-subscriptions",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/scale-subscriptions",
          "redirect_document_id": true
       },
       {

@@ -14,7 +14,7 @@ services: site-recovery
 
 # Rearchitect an on-premises app to an Azure container and Azure SQL Database
 
-This article demonstrates how the fictional company Contoso rearchitects a two-tier Windows .NET app running on VMware VMs as part of a migration to Azure. Contoso migrates the app front-end VM to an Azure Windows container, and the app database to an Azure SQL database.
+This article demonstrates how the fictional company Contoso redesigns a two-tier Windows .NET app running on VMware VMs as part of a migration to Azure. Contoso migrates the app front-end VM to an Azure Windows container, and the app database to an Azure SQL database.
 
 The SmartHotel360 app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 

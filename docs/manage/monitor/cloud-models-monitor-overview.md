@@ -10,6 +10,8 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
+<!-- cSpell:ignore savision -->
+
 # Cloud monitoring guide: Monitoring strategy for cloud deployment models
 
 This article includes our recommended monitoring strategy for each of the cloud deployment models, based on the following criteria:

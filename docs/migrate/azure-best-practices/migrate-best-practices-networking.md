@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
+<!-- cSpell:ignore NSGs CIDR FQDNs BGP's ACLs WAFs -->
+
 # Best practices to set up networking for workloads migrated to Azure
 
 As you plan and design for migration, in addition to the migration itself, one of the most critical steps is the design and implementation of Azure networking. This article describes best practices for networking when migrating to IaaS and PaaS implementations in Azure.
@@ -35,7 +37,7 @@ When planning your VNet topology, you should consider how to arrange IP address 
 
 When you create VNets as part of your migration, it's important to plan out your VNet IP address space.
 
-- You should assign an address space that isn't larger than a CIDR range of /16 for each VNet. VNets allow for the use of 65,536 IP addresses, and assigning a smaller prefix than /16, such as a /15 which has 131,072 addresses, would result in the the excess IP addresses becoming unusuable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
+- You should assign an address space that isn't larger than a CIDR range of /16 for each VNet. VNets allow for the use of 65,536 IP addresses, and assigning a smaller prefix than /16, such as a /15 which has 131,072 addresses, would result in the the excess IP addresses becoming unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
 - The VNet address space shouldn't overlap with on-premises network ranges.
 - Network Address Translation (NAT) shouldn't be used.
 - Overlapping addresses can cause networks that can't be connected and routing that doesn't work properly. If networks overlap, you'll need to redesign the network or use network address translation (NAT).
@@ -175,7 +177,7 @@ When setting up a site-to-site VPN, you do the following:
 - You create a VPN gateway, specify the gateway type (VPN) and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
 - You create a local network gateway on-premises, and configure your on-premises VPN device.
 - You create a failover site-to-site VPN connection between the VNet gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. Route-based also supports both site-to-site (from any computer) and point-to-site (from a single computer) connections concurrently.
-- You specify the gateway SKU that you want to use. This will depend on your workload requirements, throughputs, features, and SLAs.
+- You specify the gateway SKU that you want to use. This will depend on your workload requirements, throughput, features, and SLAs.
 - Border gateway protocol (BGP) is an optional feature you can use with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your VNets.
 
 ![VPN](./media/migrate-best-practices-networking/vpn.png)

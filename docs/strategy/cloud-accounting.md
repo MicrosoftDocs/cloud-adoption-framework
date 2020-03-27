@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
+<!-- cSpell:ignore CIOs -->
+
 <!-- markdownlint-disable MD026 -->
 
 # What is cloud accounting?
@@ -53,7 +55,7 @@ This model provides a balance between a true chargeback model and more tradition
 
 The choice of accounting models is crucial in system design. The choice of accounting model can affect subscription strategies, naming standards, tagging standards, and policy and blueprint designs.
 
-After you've worked with the business to make decisions about a cloud accounting model and [global markets](./global-markets.md), you have enough information to [develop an Azure foundation](../ready/index.md).
+After you've worked with the business to make decisions about a cloud accounting model and [global markets](./global-markets.md), you have enough information to [choose your first cloud adoption project](./first-adoption-project.md).
 
 > [!div class="nextstepaction"]
-> [Develop an Azure foundation](../ready/index.md)
+> [Choose your first cloud adoption project](./first-adoption-project.md)

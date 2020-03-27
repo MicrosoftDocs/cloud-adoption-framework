@@ -41,3 +41,5 @@ Begin your innovation journey using the [innovate methodology](../innovate/index
 
 > [!div class="nextstepaction"]
 > [Begin your innovation journey](../innovate/index.md)
+
+<!-- test:ignoreNextStep -->

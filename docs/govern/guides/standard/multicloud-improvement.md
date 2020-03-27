@@ -10,6 +10,8 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
+<!-- cSpell:ignore MPLS -->
+
 # Standard enterprise governance guide: Multicloud improvement
 
 This article advances the narrative by adding controls for multicloud adoption.
@@ -27,7 +29,7 @@ In the previous phase of this narrative, the company had begun actively pushing 
 Since then, some things have changed that will affect governance:
 
 - Identity is controlled by an on-premises instance of Active Directory. Hybrid identity is facilitated through replication to Azure Active Directory.
-- IT Operations or Cloud Operations are largely managed by Azure Monitor and related automations.
+- IT Operations or Cloud Operations are largely managed by Azure Monitor and related automated processes.
 - Disaster recovery and business continuity is controlled by Azure Vault instances.
 - Azure Security Center is used to monitor security violations and attacks.
 - Azure Security Center and Azure Monitor are both used to monitor governance of the cloud.

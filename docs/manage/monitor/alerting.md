@@ -10,6 +10,8 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
+<!-- cSpell:ignore kusto multiresource multisignal -->
+
 # Cloud monitoring guide: Alerting
 
 For years, IT organizations have struggled to combat the alert fatigue that's created by the monitoring tools deployed in the enterprise. Many systems generate a high volume of alerts often considered meaningless, while other alerts are relevant but are either overlooked or ignored. As a result, IT and developer operations have struggled to meet the service-level quality promised to internal or external customers. To ensure reliability, it's essential to understand the state of your infrastructure and applications. To minimize service degradation and disruption, or to decrease the effect of or reduce the number of incidents, you need to identify causes quickly.
@@ -55,7 +57,7 @@ Depending on the feature and configuration you're using, you can store monitorin
 
 Azure Monitor has four types of alerts, each somewhat tied to the repository that the data is stored in:
 
-- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric): Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to “normal” state.
+- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric): Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to "normal" state.
 
 - [Log query alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-log-query): Available to alerts on content in the Application Insights or Azure logs stores. It can also alert based on cross-workspace queries.
 
