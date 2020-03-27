@@ -63,7 +63,7 @@ To grant a user access to a subscription:
 
 To grant a user access to a resource group:
 
-1. Go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2Fsubscriptions%2FresourceGroups).
+1. Go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups).
 1. Select a resource group.
 1. Select **Access control (IAM)**.
 1. Select **+Add** > **Add role assignment**.

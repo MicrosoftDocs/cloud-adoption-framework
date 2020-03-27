@@ -35,8 +35,8 @@ The core objective of the Strategy methodology is to develop alignment amongst s
 
 **Competing priorities:**
 
-- **Depth of justification**: Stakeholders often want a deep financial analysis and full business justification to be comfortable aligning to a strategic direction. Unfortunately, that level of analysis may require an extended time period to allow for data collection and analysis.
-- **Time to business impact**: Conversely, stakeholders are often held accountable for delivering business outcomes within defined time frames. Time consuming analysis and assessment can put those outcomes at risk before the technical work even begins.
+- **Depth of justification:** Stakeholders often want a deep financial analysis and full business justification to be comfortable aligning to a strategic direction. Unfortunately, that level of analysis may require an extended time period to allow for data collection and analysis.
+- **Time to business impact:** Conversely, stakeholders are often held accountable for delivering business outcomes within defined time frames. Time consuming analysis and assessment can put those outcomes at risk before the technical work even begins.
 
 **Minimum scope:** Finding this balance requires discussions amongst stakeholders early in the process. The Strategy methodology suggests limiting the scope of alignment during this early effort. In the suggested approach, stakeholders focus on aligning around a set of core motivations, measurable outcomes, and a high-level business justification. It is suggested that stakeholders then quickly committing to a small number of initial projects or pilots to drive required learning opportunities.
 
