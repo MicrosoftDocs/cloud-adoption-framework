@@ -204,7 +204,7 @@ As a summary, you must perform the following:
 - Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet
 - Ensure that the Azure Database Migration Service can access the MySQL database via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the Virtual Network level, the network VPN and the machine hosting MySQL.
 - Run the Azure Database Migration Service Tool
-  - Create a migration project
+  - Create a migration project based on the **Premium SKU**
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-newproject.png)
     
@@ -230,8 +230,6 @@ As a summary, you must perform the following:
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-monitor.png)
   
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-monitor.png)
-
   - Perform final cut-over
   
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover.png)

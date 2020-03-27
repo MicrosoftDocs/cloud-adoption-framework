@@ -296,7 +296,7 @@ As a summary, you must perform the following:
   - Create a migration project
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-newproject.png)
-    
+
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-newproject-02.png)
 
   - Add a source (on-premises database)
@@ -317,9 +317,7 @@ As a summary, you must perform the following:
 
   - Start the replication, resolve any errors
 
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-monitor.png)
-  
-    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-monitor.png)
+    ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-monitor.png)    
 
   - Perform final cut-over
   
@@ -337,8 +335,7 @@ As a summary, you must perform the following:
 
 ### Step 6b: Migrate the database (MySQL Workbench)
 
-Contoso admins migrate the database using backup and restore, with MySQL tools. They install MySQL Workbench, back up the database from OSTICKETMYSQL, 
-and then restore it to Azure Database for MySQL Server.
+Contoso admins migrate the database using backup and restore, with MySQL tools. They install MySQL Workbench, back up the database from OSTICKETMYSQL, and then restore it to Azure Database for MySQL Server.
 
 ### Install MySQL Workbench
 
