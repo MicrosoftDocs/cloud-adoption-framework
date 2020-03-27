@@ -30,7 +30,7 @@ The following are a few business outcomes that tend to trigger conversations wit
 
 ## Sample outcomes by category
 
-Speaking in business outcomes can feel like a foreign language to many technically minded individuals. To help ease translation, we curates a set of business outcome examples. You can use the following examples to inspire and demonstrate business outcomes that are based on actual transformation journeys.
+Speaking in business outcomes can feel like a foreign language to many technically minded individuals. To help ease translation, we curate a set of business outcome examples. You can use the following examples to inspire and demonstrate business outcomes that are based on actual transformation journeys.
 
 To help you find business outcomes more easily, we've separated them into the following categories. This approach tends to drive consensus-building conversations across business units.
 
