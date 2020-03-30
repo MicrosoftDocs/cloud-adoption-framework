@@ -4,7 +4,7 @@ description: Prepare your environment for cloud innovation with Azure features t
 author: matticusau
 ms.author: mlavery
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-edit, AQC

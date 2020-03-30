@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to determin
 author: MGoedtel
 ms.author: magoedte
 ms.date: 06/26/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor

@@ -4,7 +4,7 @@ description: Learn about naming and tagging approaches and options when organizi
 author: alexbuckgit
 ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance

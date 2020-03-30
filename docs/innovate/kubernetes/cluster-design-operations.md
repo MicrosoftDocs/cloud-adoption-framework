@@ -3,8 +3,8 @@ title: "Cluster design and operations"
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design and operations.
 author: sabbour
 ms.author: asabbour
-ms.topic: guide
 ms.date: 12/16/2019
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---

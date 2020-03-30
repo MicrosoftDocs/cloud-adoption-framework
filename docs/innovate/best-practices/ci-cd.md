@@ -4,7 +4,7 @@ description: Learn about Azure tools that use the innovate methodology to remove
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---

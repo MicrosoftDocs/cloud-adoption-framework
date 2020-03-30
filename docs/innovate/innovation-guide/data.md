@@ -4,7 +4,7 @@ description: Learn about Azure Data Catalog, Azure Data Share, and other tools t
 author: absheik
 ms.author: absheik
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-new, AQC

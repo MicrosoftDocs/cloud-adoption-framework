@@ -4,7 +4,7 @@ description: Learn how to narrow cloud management options to a consistent set of
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---

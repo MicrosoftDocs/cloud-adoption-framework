@@ -4,7 +4,7 @@ description: Use this decision tree as high-level guidance for selecting the bes
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ---

@@ -4,7 +4,7 @@ description: Learn how to benchmark and optimize your cloud assets so you can fi
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 5/19/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

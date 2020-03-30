@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn best practices 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ---
