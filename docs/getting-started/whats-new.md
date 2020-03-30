@@ -4,7 +4,7 @@ description: Learn about recent updates to the Microsoft Cloud Adoption Framewor
 author: JanetCThomas 
 ms.author: janet 
 ms.date: 03/27/2020 
-ms.topic: overview 
+ms.topic: conceptual 
 ms.service: cloud-adoption-framework 
 ms.subservice: overview
 ---

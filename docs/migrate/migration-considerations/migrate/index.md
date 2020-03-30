@@ -4,7 +4,7 @@ description: Get an overview of the articles that explain the various activities
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
