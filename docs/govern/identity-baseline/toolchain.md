@@ -41,7 +41,7 @@ When you choose this method, Azure AD handles users' sign-in process. Coupled wi
 
 When you choose this method, Azure AD passes the authentication process to a separate trusted authentication system, such as on-premises Active Directory Federation Services (AD FS) or a trusted third-party federation provider, to validate the user's password.
 
-The article [choosing the right authentication method for Azure Active Directory](https://docs.microsoft.com/azure/security/azure-ad-choose-authn) contains a decision tree to help you choose the best solution for your organization.
+The article [choosing the right authentication method for Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/choose-ad-authn) contains a decision tree to help you choose the best solution for your organization.
 
 The following table lists the native tools that can help mature the policies and processes that support this governance discipline.
 
