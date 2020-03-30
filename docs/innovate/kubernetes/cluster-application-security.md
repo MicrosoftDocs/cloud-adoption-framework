@@ -1,6 +1,5 @@
 ---
 title: "Cluster and application security"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster and application security.
 author: sabbour
 ms.author: asabbour

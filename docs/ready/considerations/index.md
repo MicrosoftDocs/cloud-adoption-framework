@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how a landing z
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/20/2019
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---

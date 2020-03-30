@@ -1,6 +1,5 @@
 ---
 title: "Cluster design and operations"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about Kubernetes in the Cloud Adoption Framework for cluster design and operations.
 author: sabbour
 ms.author: asabbour

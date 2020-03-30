@@ -19,11 +19,7 @@ As your discussions progress, use this template's structure as a model for captu
 > [!IMPORTANT]
 > This template is a limited sample. Before updating this template to reflect your requirements, you should review the subsequent steps for defining an effective Resource Consistency discipline within your cloud governance strategy.
 
-<!-- markdownlint-disable MD033 -->
-
- <a href="https://archcenter.blob.core.windows.net/cdn/fusion/governance/Resource%20Consistency%20Discipline%20Template.docx">Download governance discipline template</a>
-
-<!-- markdownlint-enable MD033 -->
+[Download the governance discipline template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Resource%20Consistency%20Discipline%20Template.docx)
 
 ## Next steps
 
