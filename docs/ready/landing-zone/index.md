@@ -1,6 +1,5 @@
 ---
 title: What is a landing zone?
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: BrianBlanchard
 ms.author: brblanch

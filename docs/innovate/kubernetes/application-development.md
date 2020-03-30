@@ -1,6 +1,5 @@
 ---
 title: "Application development and deployment"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about using Kubernetes in the Cloud Adoption Framework for application development and architecture.
 author: sabbour
 ms.author: asabbour
