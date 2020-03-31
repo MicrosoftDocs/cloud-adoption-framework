@@ -4,7 +4,7 @@ description: Learn how to set up Azure effectively for your organization with st
 author: timleyden
 ms.author: kfollis
 ms.date: 04/09/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC, setup

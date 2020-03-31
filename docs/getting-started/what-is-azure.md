@@ -4,7 +4,7 @@ description: Learn the basics about the internal structure and functioning of th
 author: alexbuckgit
 ms.author: abuck
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.custom: governance

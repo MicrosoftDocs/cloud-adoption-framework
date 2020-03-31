@@ -4,7 +4,7 @@ description: Use the cloud Adoption Framework for Azure to understand the motiva
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 5/19/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---

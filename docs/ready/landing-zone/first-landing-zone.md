@@ -1,11 +1,10 @@
 ---
 title: Azure landing zone considerations
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
@@ -33,7 +32,7 @@ D. When a partner provides ongoing managed services or is contracted to deliver 
 
 ## Choosing a first landing zone
 
-Selection of the first landing zone depends on a number of variables. The following grid captures some of the options for first landing zones, along with variables which may drive the decision.
+Selection of the first landing zone depends on multiple variables. The following grid captures some of the options for first landing zones, along with variables which may drive the decision.
 
 | Landing Zone                                 | Cloud experience  | Scale             | Discovery time | Production ready | Hybrid             | Sensitive data     | Mission critical   | Compliance         |
 |----------------------------------------------|-------------------|-------------------|----------------|------------------|--------------------|--------------------|--------------------|--------------------|

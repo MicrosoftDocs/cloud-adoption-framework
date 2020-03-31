@@ -4,7 +4,7 @@ description: Establish an operational fitness review process to fully understand
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---

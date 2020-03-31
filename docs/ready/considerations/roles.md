@@ -4,7 +4,7 @@ description: Learn how to separate duties within your team and grant role-based 
 author: rotycenh
 ms.author: brblanch
 ms.date: 11/28/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 manager: BrianBlanchard

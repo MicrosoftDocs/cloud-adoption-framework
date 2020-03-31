@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to establis
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: organize
@@ -54,7 +54,7 @@ The following tasks are typically executed regularly:
 - Monitor adoption plans and progress against the [prioritized migration backlog](../migrate/migration-considerations/assess/release-iteration-backlog.md).
 - Identify and prioritize platform changes that are required to support the migration backlog.
 - Act as an intermediary or translation layer between cloud adoption needs and existing IT teams.
-- Leverage existing IT teams to accelerate platform capabilities and enable adoption.
+- Take advantage of existing IT teams to accelerate platform capabilities and enable adoption.
 
 ### Technical tasks
 

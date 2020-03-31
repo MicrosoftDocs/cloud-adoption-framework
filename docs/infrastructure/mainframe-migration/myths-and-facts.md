@@ -4,7 +4,7 @@ description: Learn to distinguish the myths from the reality about mainframes, a
 author: njray
 ms.author: v-nanra
 ms.date: 12/27/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

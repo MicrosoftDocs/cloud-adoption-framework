@@ -4,7 +4,7 @@ description: Get technical guidance for making the switch from a mainframe platf
 author: njray
 ms.author: v-nanra
 ms.date: 12/26/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

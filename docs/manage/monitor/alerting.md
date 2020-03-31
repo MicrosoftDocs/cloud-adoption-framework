@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to determin
 author: MGoedtel
 ms.author: magoedte
 ms.date: 06/26/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor
@@ -88,7 +88,7 @@ Latency is one of the most critical decisions driving alerting and a quick resol
 
 That said, there are some important footnotes to this rule.
 
-**Guest OS telemetry** has a number of paths to get into the system.
+**Guest OS telemetry** has multiple paths to get into the system.
 
 - The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure Diagnostics extension and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor).
 

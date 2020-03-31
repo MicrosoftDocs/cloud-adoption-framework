@@ -4,7 +4,7 @@ description: Learn detailed resource naming and tagging recommendations aimed sp
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/05/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: readiness, fasttrack-edit

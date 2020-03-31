@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to establis
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.custom: operating-model
@@ -18,7 +18,7 @@ These adoption efforts are relatively easy to track and measure, even when they 
 
 **If adoption describes what you are doing, the operating model defines the underlying who and how that enable adoption.**
 
-"Culture eats strategy for breakfast." The operating model is the embodiment of the IT culture, captured in a number of measurable processes. When the cloud is powered by a strong operating model, the culture will drive to the strategy, accelerating adoption and business values realization. Conversely, when adoption is successful but there is no operating model, the returns can be impressive but very short lived. For long-term success, it is vital that adoption and operating models advance in parallel.
+"Culture eats strategy for breakfast." The operating model is the embodiment of the IT culture, captured in a set of measurable processes. When the cloud is powered by a strong operating model, the culture will drive to the strategy, accelerating adoption and business values realization. Conversely, when adoption is successful but there is no operating model, the returns can be impressive but very short lived. For long-term success, it is vital that adoption and operating models advance in parallel.
 
 ## Establish your operating model
 

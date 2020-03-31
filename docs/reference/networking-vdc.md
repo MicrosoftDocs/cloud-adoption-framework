@@ -64,7 +64,7 @@ When designing a virtual datacenter, consider these pivotal issues:
 
 ### Identity and directory service
 
-Identity and directory services are key capabilities of both on-premises and cloud datacenters. Identity covers all aspects of access and authorization to services within a VDC implementation. To ensure that only authorized users and processes access your Azure resources, Azure uses several types of credentials for authentication, including account passwords, cryptographic keys, digital signatures, and certificates. [Azure Multi-Factor Authentication][MFA] provides an additional layer of security for accessing Azure services using strong authentication with a range of easy verification options (phone call, text message, or mobile app notification) that allow customers to choose the method they prefer.
+Identity and directory services are key capabilities of both on-premises and cloud datacenters. Identity covers all aspects of access and authorization to services within a VDC implementation. To ensure that only authorized users and processes access your Azure resources, Azure uses several types of credentials for authentication, including account passwords, cryptographic keys, digital signatures, and certificates. [Azure Multi-Factor Authentication][multi-factor-authentication] provides an additional layer of security for accessing Azure services using strong authentication with a range of easy verification options (phone call, text message, or mobile app notification) that allow customers to choose the method they prefer.
 
 Any large enterprise needs to define an identity management process that describes the management of individual identities, their authentication, authorization, roles, and privileges within or across their VDC. The goals of this process should be to increase security and productivity while reducing cost, downtime, and repetitive manual tasks.
 
@@ -200,7 +200,7 @@ The preceding diagram shows the relationship between an organization's projects,
 
 Typically in IT, an environment (or tier) is a system in which multiple applications are deployed and executed. Large enterprises use a development environment (where changes are made and tested) and a production environment (what end-users use). Those environments are separated, often with several staging environments in between them to allow phased deployment (rollout), testing, and rollback if problems arise. Deployment architectures vary significantly, but usually the basic process of starting at development (DEV) and ending at production (PROD) is still followed.
 
-A common architecture for these types of multitier environments consists of DevOps for development and testing, UAT for staging, and production environments. Organizations can leverage single or multiple Azure AD tenants to define access and rights to these environments. The previous diagram shows a case where two different Azure AD tenants are used: one for DevOps and UAT, and the other exclusively for production.
+A common architecture for these types of multitier environments consists of DevOps for development and testing, UAT for staging, and production environments. Organizations can use single or multiple Azure AD tenants to define access and rights to these environments. The previous diagram shows a case where two different Azure AD tenants are used: one for DevOps and UAT, and the other exclusively for production.
 
 The presence of different Azure AD tenants enforces the separation between environments. The same group of users, such as the central IT, need to authenticate by using a different URI to access a different Azure AD tenant to modify the roles or permissions of either the DevOps or production environments of a project. The presence of different user authentications to access different environments reduces possible outages and other issues caused by human errors.
 
@@ -422,7 +422,7 @@ Learn more about the Azure capabilities discussed in this document.
 
 |Identity | Monitoring | Best Practices |
 | --- | --- | --- |
-|[Azure Active Directory][azure-ad]</br>[Multi-Factor Authentication][MFA]</br>[Role-Based Access Control][RBAC]</br>[Default Azure AD Roles][Roles]</br></br></br> |[Network Watcher][NetWatch]</br>[Azure Monitor][MonitorOverview]</br>[Log Analytics][LogAnalytics]</br> |[Management Group][MgmtGrp]</br>[Subscription Management][subscription-management]</br>[Resource Group Management][RGMgmt]</br>[Azure Subscription Limits][limits] </br></br></br>|
+|[Azure Active Directory][azure-ad]</br>[Multi-Factor Authentication][multi-factor-authentication]</br>[Role-Based Access Control][RBAC]</br>[Default Azure AD Roles][Roles]</br></br></br> |[Network Watcher][NetWatch]</br>[Azure Monitor][MonitorOverview]</br>[Log Analytics][LogAnalytics]</br> |[Management Group][MgmtGrp]</br>[Subscription Management][subscription-management]</br>[Resource Group Management][RGMgmt]</br>[Azure Subscription Limits][limits] </br></br></br>|
 
 Security |Other Azure Services | |
 |-|-|-|
@@ -468,7 +468,7 @@ Security |Other Azure Services | |
 [virtual-network-peering]: https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview
 [UDR]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview
 [RBAC]: https://docs.microsoft.com/azure/role-based-access-control/overview
-[MFA]: https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks
+[multi-factor-authentication]: https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks
 [azure-ad]: https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis
 [VPN]: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways
 [ExR]: https://docs.microsoft.com/azure/expressroute/expressroute-introduction

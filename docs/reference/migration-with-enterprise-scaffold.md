@@ -4,7 +4,7 @@ description: Azure enterprise scaffold is now the Microsoft Cloud Adoption Frame
 author: rdendtler
 ms.author: rodend
 ms.date: 09/22/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
 ROBOTS: NOINDEX

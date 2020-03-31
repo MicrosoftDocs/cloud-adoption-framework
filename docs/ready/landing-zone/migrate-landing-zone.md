@@ -1,11 +1,10 @@
 ---
 title: Deploy a migration landing zone in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to deploy a migration landing zone in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---

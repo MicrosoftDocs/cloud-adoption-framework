@@ -4,7 +4,7 @@ description: Learn to centralize management operations by using a single Azure A
 author: JnHs
 ms.author: jenhayes
 ms.date: 09/27/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---

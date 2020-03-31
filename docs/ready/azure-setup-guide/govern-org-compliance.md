@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to set up g
 author: tvuylsteke
 ms.author: kfollis
 ms.date: 09/27/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC, setup

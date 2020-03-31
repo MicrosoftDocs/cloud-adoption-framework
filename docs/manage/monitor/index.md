@@ -4,7 +4,7 @@ description: Learn about Azure Monitor, System Center Operations Manager, and th
 author: MGoedtel
 ms.author: magoedte
 ms.date: 07/31/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor

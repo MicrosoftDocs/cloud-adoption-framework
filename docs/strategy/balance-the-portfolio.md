@@ -4,7 +4,7 @@ description: Discover strategies for balancing migration, innovation, and experi
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/04/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---

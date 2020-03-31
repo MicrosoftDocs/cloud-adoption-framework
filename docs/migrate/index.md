@@ -32,7 +32,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework rec
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Migrate your first workload</h3>
-                            Leverage the Azure migration guide to become familiar with the Azure native tools and approach to migration.
+                        Use the Azure migration guide to become familiar with the Azure native tools and approach to migration.
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework rec
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Migration scenarios</h3>
-                            Leverage additional migration tools and approaches to act on additional migration scenarios.
+                            Use additional migration tools and approaches to act on other migration scenarios.
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to make appropriate deci
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

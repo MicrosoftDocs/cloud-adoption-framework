@@ -4,7 +4,7 @@ description: Learn about core cloud infrastructure components and basic workload
 author: alexbuckgit
 ms.author: abuck
 ms.date: 12/31/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

@@ -29,7 +29,7 @@ function Get-ProcessStream
     $output
 }
 
-function Test-Spelling([String] $testPath, [string] $folder)
+function Test-Spelling([string] $testPath, [string] $folder)
 {
     Copy-SpellingDictionary "$testPath\.."
 

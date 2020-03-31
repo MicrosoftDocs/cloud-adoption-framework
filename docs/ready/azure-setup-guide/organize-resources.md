@@ -4,7 +4,7 @@ description: Understand the best practices you need to effectively organize your
 author: laraaleite
 ms.author: kfollis
 ms.date: 04/09/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC, setup
@@ -19,8 +19,7 @@ Organizing your cloud-based resources is critical to securing, managing, and tra
 
 <!-- markdownlint-disable MD024 MD025 -->
 
-<!-- cSpell:disable-next-line -->
-# [Azure management groups and hierarchy](#tab/AzureManagmentGroupsAndHierarchy)
+# [Azure management groups and hierarchy](#tab/AzureManagementGroupsAndHierarchy)
 
 Azure provides four levels of management scope: management groups, subscriptions, resource groups, and resources. The following image shows the relationship of these levels.
 

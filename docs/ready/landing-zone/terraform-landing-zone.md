@@ -4,7 +4,7 @@ description: Learn to use Terraform to build your landing zones.
 author: arnaudlh
 ms.author: arnaul
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---

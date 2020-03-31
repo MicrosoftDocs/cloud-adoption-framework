@@ -4,7 +4,7 @@ description: Learn what a digital estate is, how it can be measured, and how to 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---

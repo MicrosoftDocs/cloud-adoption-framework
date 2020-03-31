@@ -4,7 +4,7 @@ description: Learn about what to manage (inventory) and how those managed worklo
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---

@@ -4,7 +4,7 @@ description: Understand subscription design strategies and management group hier
 author: alexbuckgit
 ms.author: abuck
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance

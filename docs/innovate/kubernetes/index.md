@@ -1,6 +1,5 @@
 ---
 title: "Kubernetes in the Cloud Adoption Framework"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn about Kubernetes in the Cloud Adoption Framework.
 author: sabbour
 ms.author: asabbour
