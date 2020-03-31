@@ -40,7 +40,7 @@ Guidance to support deliverable completion
 - **Improve cost management disciplines:** Step four of the guide above focuses on implementing cost management practices that will drive optimization of cost across the enterprise. For additional guidance on integrating cost management into governance, see the [full article](../govern/guides/complex/cost-management-improvement.md) or jump to the [implementation guidance](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section for a list of technical suggestions.
 - **Go deep on cost management in governance:** For deeper guidance, the [cost management discipline](../govern/cost-management/index.md) articles will drive clarity regarding cost optimization topics around [business risks](../govern/cost-management/business-risks.md), [indicators & metrics](../govern/cost-management/metrics-tolerance.md), [policy adherence processes](../govern/cost-management/compliance-processes.md), [iterative improvements](../govern/cost-management/discipline-improvement.md), [Azure tools](../govern/cost-management/toolchain.md), and a [template for recording decisions](../govern/cost-management/template.md).
 
-## Steps to scale cost optimization
+## Steps to Scale cost optimization
 
 The governance team align can detect and drive significant cost optimization across most enterprises. Basic, data-driven resource sizing can have an immediate and measurable impact on costs.
 
