@@ -21,10 +21,10 @@ The technical effort required to migrate workloads is relatively straight forwar
 
 With each iteration, the cloud adoption team will get better at migrating workloads. The following steps will start the technical team on this  maturity curve:
 
-1. Migrate your **first workload** in a pure IaaS approach using the tools outlined in the Azure Migration guide.
-2. Expand tooling and approach options beyond IaaS using the Migration Scenarios.
-3. Develop your technical strategy using broader approaches outlined in the Best Practices.
-4. Improve consistency, reliability, and performance through an efficient migration factory approach as outlined in the Process Improvements.
+1. Migrate your **first workload** in a pure IaaS approach using the tools outlined in the [Azure Migration guide](../migrate/azure-migration-guide/index.md).
+2. Expand tooling options to **leverage migration and modernization** using the [Migration Scenarios](../migrate/azure-best-practices/contoso-migration-overview.md).
+3. Develop your **technical strategy** using broader approaches outlined in the [Best Practices](../migrate/azure-best-practices/index.md).
+4. Improve consistency, reliability, and performance through an efficient **migration factory** approach as outlined in the [Process Improvements](../migrate/migration-considerations/index.md).
 
 Deliverable
 
