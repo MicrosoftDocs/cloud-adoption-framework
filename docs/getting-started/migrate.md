@@ -37,7 +37,7 @@ Involved teams
 
 ## Accelerate adoption across the enterprise
 
-Efficient completion of the migration process outlined above is important. But, strategic migration readiness will have an even bigger impact on the timelines and successful completion of the overall migration.
+Efficient completion of the migration process outlined above is important. But, strategic migration readiness will have an even bigger impact on the timelines and successful completion of the overall migration. As illustrated in the graphic below, remainder of this article will address the steps required to start supporting the cloud adoption team during migration.
 
 Use this migration checklists to discover opportunities to accelerate your migration efforts, remove roadblocks, and ensure success. Follow the steps to reduce the amount of materials and the processes required to align an overall migration effort. This process utilizes the sections of the Cloud Adoption Framework that are highlighted in the following illustration.
 
