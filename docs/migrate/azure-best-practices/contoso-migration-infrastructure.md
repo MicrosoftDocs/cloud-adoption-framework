@@ -403,7 +403,7 @@ With a network and routing topology in place, Contoso is ready to set up Azure n
 
 East US 2 is the primary region that Contoso will use to deploy resources and services. Here's how Contoso will architect networks within it:
 
-- **Hub:** The hub VNet in East US 2 is the considered their primary connectivity to the on-premises datacenter.
+- **Hub:** The hub VNet in East US 2 is considered their primary connectivity to the on-premises datacenter.
 - **VNets:** Spoke VNets in East US 2 can be used to isolate workloads if required. In addition to the Hub VNet, Contoso will have two spoke VNets in East US 2:
   - **VNET-DEV-EUS2**. This VNet will provide the development and test team with a fully functional network for dev projects. It will act as a production pilot area, and will rely on the production infrastructure to function.
     - **VNET-PROD-EUS2**. Azure IaaS production components will be located in this network.
