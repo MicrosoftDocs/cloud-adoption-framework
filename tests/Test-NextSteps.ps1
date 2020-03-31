@@ -26,7 +26,7 @@ function Test-NextSteps([String] $testPath)
         
         $name = $item[0]
         $href = $item[1]
-        ## write-output "NAME: $name :: $href"
+        write-host "NAME: $name :: $href"
 
         if ($href.StartsWith("http"))
         {
@@ -39,7 +39,7 @@ function Test-NextSteps([String] $testPath)
 
             if ($ignore -eq $false -and $relativeUrl.Length -gt 0 -and (-not $testTocUrl -eq $testContentUrl))
             {
-                Write-Output "***THROW: Next Step doesn't match the TOC: $filePath"
+                Write-Host "***THROW: Next Step doesn't match the TOC: $filePath"
             }
 
             $filePath = (resolve-path (join-path $docsPath $href)).Path
@@ -71,28 +71,28 @@ function Test-NextSteps([String] $testPath)
                 $thisFolder = $filePath.Substring(0, $filePath.LastIndexOf('\') + 1)
                 if ($relativeUrl.StartsWith('http'))
                 {
-                    write-output "***THROW: Unexpected HTTP path [$relativeUrl] for next step in: $filePath"
+                    Write-Host "***THROW: Unexpected HTTP path [$relativeUrl] for next step in: $filePath"
                 }
                 else
                 {
                     $url = (resolve-path (join-path $thisFolder $relativeUrl)).Path
                     if ((test-path $url) -eq $false)
                     {
-                         Write-Output "***THROW: File [$url] not found as specified in: $filePath"
+                         Write-Host "***THROW: File [$url] not found as specified in: $filePath"
                     }
                 }
             }
             elseif ($matches.Count -ne 1) 
             {
-                Write-Output "***THROW: Next step not included in file: $filePath"
+                Write-Host "***THROW: Next step not included in file: $filePath"
             }
             elseif ($divLine -ne '> [!div class="nextstepaction"]')
             {
-                Write-Output "***THROW: Invalid format for nextstepaction div: $filePath"
+                Write-Host "***THROW: Invalid format for nextstepaction div: $filePath"
             }
             elseif ($blankLine2.Length -gt 0)
             {
-                Write-Output "***THROW: Preceding line not blank: $filePath"
+                Write-Host "***THROW: Preceding line not blank: $filePath"
             }
 
             $ignore = ($lastParagraphLine -eq $ignoreDirective)
@@ -166,7 +166,7 @@ if ($hits.Count -gt 0)
 
             if ($request.StatusCode -ne 200)
             {
-                write-output "$($request.StatusCode): $value"
+                Write-Host "$($request.StatusCode): $value"
             }
             else
             {
@@ -174,7 +174,7 @@ if ($hits.Count -gt 0)
         }
         catch
         {
-            write-output "EXCEPTION: $value"
+            Write-Host "EXCEPTION: $value"
         }
     }
 }

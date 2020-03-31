@@ -4,7 +4,7 @@ description: Gain a high-level overview of two monitoring platforms to help you 
 author: mgoedtel
 ms.author: magoedte
 ms.date: 07/31/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor

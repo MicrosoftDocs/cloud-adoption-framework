@@ -4,7 +4,7 @@ description: Learn about hub and spoke network topologies for more efficient man
 author: tracsman
 ms.author: jonor
 ms.date: 05/10/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 manager: rossort

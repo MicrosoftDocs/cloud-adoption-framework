@@ -4,7 +4,7 @@ description: Enable tracking and alerting for critical changes in your hybrid en
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---

@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn to start develo
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: governance

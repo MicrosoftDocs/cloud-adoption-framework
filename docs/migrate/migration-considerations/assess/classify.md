@@ -4,7 +4,7 @@ description: Classify your workloads during a premigration assessment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/03/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

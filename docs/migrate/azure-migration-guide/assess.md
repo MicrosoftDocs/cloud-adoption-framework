@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to assess your environme
 author: matticusau
 ms.author: mlavery
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC

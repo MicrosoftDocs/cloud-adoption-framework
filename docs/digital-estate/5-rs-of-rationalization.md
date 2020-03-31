@@ -4,7 +4,7 @@ description: Learn about cloud rationalization, the process of evaluating assets
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/16/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ms.custom: governance

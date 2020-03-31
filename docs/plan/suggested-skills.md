@@ -4,7 +4,7 @@ description: Lead the adoption of cloud services by helping the organization und
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/23/2020
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---

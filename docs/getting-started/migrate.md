@@ -4,7 +4,7 @@ description: Get comprehensive guidance for transitioning legacy application wor
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---

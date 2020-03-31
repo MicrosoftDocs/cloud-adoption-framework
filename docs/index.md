@@ -1,13 +1,14 @@
 ---
 title: The Microsoft Cloud Adoption Framework for Azure
 description: Get tools, guidance, and narratives to help shape strategies and drive desired business outcomes in all phases of the cloud adoption lifecycle.
+author: BrianBlanchard
+ms.author: brblanch
+ms.date: 02/28/2020
+ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.custom: homepage
 layout: LandingPage
-ms.topic: landing-page
-author: BrianBlanchard
-ms.date: 02/28/2020
 ---
 
 # Microsoft Cloud Adoption Framework for Azure

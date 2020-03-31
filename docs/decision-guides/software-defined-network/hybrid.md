@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how hybrid netw
 author: rotycenh
 ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance

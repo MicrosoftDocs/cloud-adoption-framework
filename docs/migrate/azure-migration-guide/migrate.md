@@ -4,7 +4,7 @@ description: Initiate the migration to Azure by identifying the appropriate tool
 author: matticusau
 ms.author: mlavery
 ms.date: 08/08/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC

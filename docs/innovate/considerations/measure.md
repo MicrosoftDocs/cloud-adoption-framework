@@ -4,7 +4,7 @@ description: Define the desired customer flow and establish learning metrics to 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---

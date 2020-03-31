@@ -4,7 +4,7 @@ description: Learn the terminology associated with operating models. The termino
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.custom: operating-model

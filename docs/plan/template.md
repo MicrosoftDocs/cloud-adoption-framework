@@ -4,7 +4,7 @@ description: Learn how to quickly deploy a backlog to Azure DevOps by using a cl
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---

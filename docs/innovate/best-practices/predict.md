@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to find analytics tools 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---

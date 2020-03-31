@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn which monitorin
 author: MGoedtel
 ms.author: magoedte
 ms.date: 10/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor

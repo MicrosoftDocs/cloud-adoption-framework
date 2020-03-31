@@ -4,7 +4,7 @@ description: Learn about the tools and prepare for the resources needed to manag
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---

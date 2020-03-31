@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to set up A
 author: tracsman
 ms.author: jonor
 ms.date: 05/10/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 manager: rossort

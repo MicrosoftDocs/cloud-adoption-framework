@@ -4,7 +4,7 @@ description: Learn how Azure provides a framework for building immersive and eff
 author: umarmohamedusman
 ms.author: umarm
 ms.date: 10/10/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-new, AQC

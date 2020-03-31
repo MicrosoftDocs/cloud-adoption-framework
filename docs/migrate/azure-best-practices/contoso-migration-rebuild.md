@@ -157,7 +157,7 @@ The Contoso admins provision as follows:
 
    ![AKS](./media/contoso-migration-rebuild/aks4.png)
 
-6. They authenticate Azure CLI by running the **az login** command, and following the instructions to authenticate using their web browser. [Learn more](/cli/azure/authenticate-azure-cli?view=azure-cli-latest) about logging in with Azure CLI.
+6. They authenticate Azure CLI by running the **az login** command, and following the instructions to authenticate using their web browser. [Learn more](https://docs.microsoft.com/cli/azure/authenticate-azure-cli?view=azure-cli-latest) about logging in with Azure CLI.
 
    ![AKS](./media/contoso-migration-rebuild/aks5.png)
 

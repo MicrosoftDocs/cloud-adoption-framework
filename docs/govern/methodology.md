@@ -4,7 +4,7 @@ description: Use an incremental governance approach based on a minimum viable 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/04/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: organize

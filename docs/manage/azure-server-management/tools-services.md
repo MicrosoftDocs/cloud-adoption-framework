@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn about areas wit
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -68,7 +68,7 @@ Several services fit into this category. They can help you to:
 
 These services are essential to supporting ongoing operations:
 
-- [Update Management](/azure/automation/automation-update-management) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
+- [Update Management](https://docs.microsoft.com/azure/automation/automation-update-management) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
 - [Change Tracking and Inventory](https://docs.microsoft.com/azure/automation/change-tracking) provides insight into the software that's running in your environment, and highlights any changes that have occurred.
 - [Azure Automation](https://docs.microsoft.com/azure/automation/automation-intro) lets you run Python and PowerShell scripts or runbooks to automate tasks across your environment. When you use Automation with the [Hybrid Runbook Worker](https://docs.microsoft.com/azure/automation/automation-hybrid-runbook-worker), you can extend your runbooks to your on-premises resources as well.
 - [Azure Automation State Configuration](https://docs.microsoft.com/azure/automation/automation-dsc-overview) enables you to push PowerShell Desired State Configuration (DSC) configurations directly from Azure. DSC also lets you monitor and preserve configurations for guest operating systems and workloads.
