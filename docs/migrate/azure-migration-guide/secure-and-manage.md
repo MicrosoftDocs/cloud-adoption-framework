@@ -41,7 +41,7 @@ Azure Monitor maximizes the availability and performance of your applications by
 
 ::: zone-end
 
-# [Azure Service Health](#tab/servicehealth)
+# [Azure Service Health](#tab/serviceHealth)
 
 Azure Service Health provides personalized guidance and support when issues in Azure services affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue resolves. It can also help you prepare for planned maintenance and changes that could affect the availability of your resources.
 
@@ -144,7 +144,7 @@ Azure Backup is the Azure-based service you can use to backup (or protect) and r
 
 ::: zone-end
 
-# [Azure Site Recovery](#tab/siterecovery)
+# [Azure Site Recovery](#tab/siteRecovery)
 
 Earlier in this guide, we discussed how Azure Site Recovery can be used as part of the migration execution. But it also forms a critical component in your disaster recovery strategy after migration is complete.
 
