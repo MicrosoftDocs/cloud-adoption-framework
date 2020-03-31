@@ -30,7 +30,7 @@ Cloud adoption is "what we do" to realize the business value. The operating mode
 
 ## Next steps
 
-[Leverage the operating model](./index.md) provided by the Cloud Adoption Framework to develop operational maturity.
+[Use the operating model](./index.md) provided by the Cloud Adoption Framework to develop operational maturity.
 
 > [!div class="nextstepaction"]
-> [Leverage the operating model](./index.md)
+> [Use the operating model](./index.md)

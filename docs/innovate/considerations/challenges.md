@@ -35,7 +35,7 @@ The following list elaborates on some of the most common adoption challenges rel
 
 Before the widespread adoption of the cloud, invention cycles that depended on information technology were laborious and time-consuming. Procurement and provisioning cycles frequently delayed the crucial first steps toward any new solutions. The cost of DevOps solutions and feedback loops delayed teams' abilities to collaborate on early stage ideation and invention. Costs related to developer environments and data platforms prevented anyone but highly trained professional developers from participating in the creation of new solutions.
 
-The cloud has overcome many of these invention challenges by providing self-service automated provisioning, light-weight development and deployment tools, and opportunities for professional developers and citizen developers to cooperate in creating rapid solutions. Leveraging the cloud for innovation dramatically reduces customer challenges and blockers to the invention side of the innovation equation.
+The cloud has overcome many of these invention challenges by providing self-service automated provisioning, light-weight development and deployment tools, and opportunities for professional developers and citizen developers to cooperate in creating rapid solutions. Using the cloud for innovation dramatically reduces customer challenges and blockers to the invention side of the innovation equation.
 
 ### Invention challenges in a digital economy
 

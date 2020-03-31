@@ -32,7 +32,7 @@ First landing zone has been pulled out of the readiness guide to serve as it's o
 
 - [What is a landing zone?](../ready/landing-zone/index.md): Defines the term landing zone
 - [First landing zone](../ready/landing-zone/first-landing-zone.md): Expands on the comparison of various landing zones
-- [Migrate landing zone](../ready/landing-zone/migrate-landing-zone.md): Moved the prior landing zone blueprint article, to separate the definition of the CAF blueprint from the selection of the first landing zone, to allow for more landing zone options.
+- [Migrate landing zone](../ready/landing-zone/migrate-landing-zone.md): Moved the prior landing zone blueprint article, to separate the definition of the blueprint from the selection of the first landing zone, to allow for more landing zone options.
 - [Terraform landing zone](../ready/landing-zone/terraform-landing-zone.md) article: Moved from the "Expanded scope" section of the Ready methodology to the new "Landing zone" section of Ready methodology, to treat terraform a first class citizen in the landing zone conversation.
 - Group basic landing zone considerations together in the table of contents under "Basic landing zone considerations".
 - Moved security best practices from the Migrate methodology into a new landing zone section call "Improve landing zone security (Sensitive data)" to expose readers to this guidance earlier in the lifecycle.
