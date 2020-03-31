@@ -15,9 +15,11 @@ Proper alignment of business and IT stakeholders can help your organization over
 
 ## Start with iterative migration efforts
 
-The technical effort required to migrate workloads is relatively straight forward. In this approach, each iteration delivers on the three phases of migration: Assess workloads, Deploy workloads, and Release to production.
+The technical effort required to migrate workloads is relatively straight forward. In this approach, each iteration delivers on the three phases of migration: Assess workloads, Deploy workloads, and Release to production. Cloud migration tools make it possible to migrate all VMs in a data center in one pass (or iteration) through these 3 phases of effort. However, customers more commonly choose to migrate a smaller number of workloads during each iteration. Breaking up the migration into smaller waves or releases requires more planning, but reduces technical risks and organizational change management impacts on the business. Within each change management release, the technical migration effort may require multiple iterations to complete all three phases for all workloads in that release.
 
 ![Phases of iterative migration efforts - Assess, Deploy, Release](../_images/migrate/methodology-effort-only.png)
+
+### Start maturing technical migration capabilities
 
 With each iteration, the cloud adoption team will get better at migrating workloads. The following steps will start the technical team on this  maturity curve:
 
