@@ -3,7 +3,7 @@ title: "Get started on a skills readiness path"
 description: Lead the adoption of cloud services by helping the organization understand and embrace the associated changes by getting started on a skills readiness path.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 07/01/2019
+ms.date: 03/23/2020
 ms.topic: article
 ms.service: cloud-adoption-framework
 ms.subservice: plan
@@ -29,6 +29,7 @@ The Cloud Adoption Framework guides readers through the full adoption lifecycle.
 - **Operate:** Skills related to the operating model for cloud adoption are aligned to various opportunities to gain skills:
   - **Govern:** Gain the skills needed to govern the cloud environment.
   - **Manage:** Gain the skills needed to manage a cloud environment.
+  - **[Monitor](../manage/monitor/suggested-skills.md):** Gain the skills needed to monitor a cloud environment.
 
 Each of the previous learning paths shares opportunities across multiple media types to maximize knowledge acquisition.
 

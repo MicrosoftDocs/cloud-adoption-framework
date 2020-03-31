@@ -63,7 +63,7 @@ We can unpack this equation to get a migration-specific view of the formulas for
 
 ## Migration-specific initial investment
 
-- Cloud providers like Azure offer calculators to estimate cloud investments. The [Azure pricing calculator](https://azure.microsoft.com/pricing) is one example.
+- Cloud providers like Azure offer calculators to estimate cloud investments. The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) is one example.
 - Some cloud providers also provide cost-delta calculators. The [Azure Total Cost of Ownership (TCO) Calculator](https://azure.com/tco) is one example.
 - For more refined cost structures, consider a [digital estate planning](../digital-estate/index.md) exercise.
 - Estimate the cost of migration.

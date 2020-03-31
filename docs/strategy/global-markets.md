@@ -37,8 +37,7 @@ It is equally important to understand the usage patterns of external users, like
 
 ## Next steps
 
-Once global market decisions have been made and communicated, the team is ready to begin [establishing technical standards](../digital-estate/index.md) against those metrics.
-The result will be a [transformation backlog or migration backlog](..//migrate/migration-considerations/prerequisites/technical-complexity.md).
+Learn about the [skills needed during the Strategy phase](./suggested-skills.md) of your cloud adoption journey.
 
 > [!div class="nextstepaction"]
-> [Assess the digital estate](../digital-estate/index.md)
+> [Skills relevant to Strategy](./suggested-skills.md)

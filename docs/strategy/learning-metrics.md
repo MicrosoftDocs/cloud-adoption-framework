@@ -49,7 +49,7 @@ An even more valuable metric is the number of dashboards created from combined d
 
 ## Next steps
 
-After learning metrics are aligned, you're ready to begin [building the business case](cloud-migration-business-case.md) to deliver against those metrics. 
+After learning metrics are aligned, you're ready to begin [building the business case](.\cloud-migration-business-case.md) to deliver against those metrics.
 
 > [!div class="nextstepaction"]
-> [Build the cloud business case](cloud-migration-business-case.md)
+> [Build the cloud business case](.\cloud-migration-business-case.md)

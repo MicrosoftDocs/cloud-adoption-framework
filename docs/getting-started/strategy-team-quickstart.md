@@ -1,178 +1,100 @@
 ---
 title: Strategy team quickstart guide
-description: This quickstart helps the strategy team understand scope, deliverables and the capabilities they are responsible for.
+description: Set up a strategy team's scope, deliverables and the capabilities to prepare for successful cloud adoption.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
-ms.topic: quickstart 
-ms.date: 03/03/2020
+ms.topic: conceptual 
+ms.date: 04/04/2020
 ---
 
-<!---Recommended: Remove all the comments in this template before you sign-off or merge to master.--->
-<!---quickstarts are fundamental day-1 instructions for helping new customers use a subscription to quickly try out a specific product/service.
-The entire activity is a short set of steps that provides an initial experience.
-You only use quickstarts when you can get the service, technology, or functionality into the hands of new customers in less than 10 minutes.
---->
+# Quickstart: Cloud strategy team
 
-# Cloud adoption strategy team quickstart guide
-
-<!---Required:
-Starts with "Quickstart: " and is ideally two lines or less when rendered on a 1920x1080 screen.
-Make the first word following "Quickstart:" a verb, which is to say, an action.
-The "X" part should identify both the technology or service involved (e.g. App Service,
-Cosmos DB, etc.) and the language or framework, if applicable (.NET Core, Python, JavaScript,
-Java, etc.); the language or framework shouldn't appear in parentheses.
---->
-
-This quickstart helps you understand the goals and objectives of a strategy team working on cloud adoption.
-
-<!-- In the opening sentence, focus on the job or task to be completed, emphasizing.
-general industry terms (such as "serverless," which are better for SEO) more than
-Microsoft-branded terms or acronyms (such as "Azure Functions" or "ACR"). That is, try
-to include terms people typically search for and avoid using *only* Microsoft terms. -->
-
-<!--After the opening sentence, provide a light introduction that describes,
-again in customer-friendly language, what the customer will learn in the process of
-accomplishing the stated goal. Answer the fundamental "why would I want to do this?" question.
-
-Avoid the following elements whenever possible:
-- Avoid callouts (note, important, tip, etc.) because readers tend to skip over them.
-Important callouts like preview status or version caveats can be included under prerequisites.
-
-- Avoid links, which are generally invitations for the reader to leave the article and
-not complete the experience of the quickstart. The exception are links to alternate versions
-of the same content (e.g. when you have a VS Code-oriented article and a CLI-oriented article). Those
-links help get the reader to the right article, rather than being a distraction. If you feel that there are
-other important concepts needing links, make reviewing a particular article a prerequisite. Otherwise, rely
-on the line of standard links (see below).
-
-- Avoid any indication of the time it takes to complete the quickstart, because there's already
-the "x minutes to read" at the top and making a second suggestion can be contradictory.
-
-- Avoid a bullet list of steps or other details in the quickstart: the H2's shown on the right
-of the docs page already fulfill this purpose.
-
-- Avoid screenshots or diagrams: the opening sentence should be sufficient to explain the result,
-and other diagrams count as conceptual material that is best in a linked overview.
---->
-
-<!-- Optional standard links: if there are suitable links, you can include a single line
-of applicable links for companion content at the end of the introduction. Don't use the line
-if there's only a single link. -->
-
-<!-- NOTE: the Azure subscription line is moved to Prerequisites. -->
+Create a cloud strategy team to defined motivations and business outcomes, and to validate and maintain alignment between business priorities and cloud adoption efforts. When the business outcomes impact business functions, the strategy team should include business leaders from across the organization. The goal of the cloud strategy team is to produce tangible business results that are enabled by cloud technologies. Overall, this team ensures that cloud adoption efforts progress in alignment with business outcomes.
 
 ## Prerequisites
 
-<!-- Make Prerequisites the first H2 after the H1. Omit any preliminary text to the list.-->
-
-- (Optional) Completion of any required training. Use the language "Completion of (title)" where (title) is the link to the training.
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- First prerequisite - other methodologies that the reader should be knowledgeable about
-- Second prerequisite - tools needed
-- Third prerequisite
-
-<!-- Include this heading even if there aren't any prerequisites, in which case just use the text: "None" (not bulleted). The reason for this is to maintain consistency across services, which trains
-readers to always look in the same place.-->
-
-<!-- When there are prerequisites, list each as *items*, not instructions to minimize the verbiage.
-For example, use "Python 3.6" instead of "Install Python 3.6". If the prerequisite is something
-to install, link to the applicable installer or download. Selecting the item/link is then the
-action to fulfill the prerequisite. Use an action word only if necessary to make the meaning clear.
-Don't use links to conceptual information about a prerequisite; only use links for installers.
-
-List prerequisites in the following order:
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- Language runtimes (Python, Node, .NET, etc.)
-- Packages (from pip, npm, nuget, etc.)
-- Tools (like VS Code IF REQUIRED. Don't include tools like pip if they're
-  automatically installed with another tool or language runtime, like Python. Don't include
-  optional tools like text editors--include them only if the quickstart demonstrates them.)
-- Sample code
-- Specialized hardware
-- Other preparatory work, such as creating a VM (OK to link to another article)
-- Azure keys
-- Service-specific keys
-
-The reason for placing runtimes and tools first is that it might take time to install
-them, and it's best to get a user started sooner than later.
-
-If you feel like your quickstart has a lot of prerequisites, the quickstart may be the
-wrong content type - a tutorial or how-to guide may be the better option. Remember that
-quickstarts should be something a reader can complete in 10 minutes or less.
-
---->
+- [Learn the business value of Microsoft Azure](https://docs.microsoft.com/learn/paths/learn-business-value-of-azure).
+- [Learn how the Cloud Adoption Framework](https://docs.microsoft.com/learn/modules/microsoft-cloud-adoption-framework-for-azure/): to can help you align the strategy for business, people, and technology.
+- Review the [cloud adoption strategy](../strategy/index.md) process.
+- Download the [strategy plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
 
 ## Minimum scope
 
-<!---Required:
-Quickstarts are prescriptive and guide the customer through an end-to-end procedure.
-Make sure to use specific naming for setting up accounts and configuring technology.
+A cloud strategy team aligns business stakeholders to maximize the business value of cloud adoption investments.
 
-Avoid linking off to other content - include whatever the customer needs to complete the
-scenario in the article. For example, if the customer needs to set permissions, include the
-permissions they need to set, and the specific settings in the quickstart procedure. Don't
-send the customer to another article to read about it.
+Whenever possible, business outcomes and the cloud strategy team should both be defined early in the process. As investments in cloud adoption grows and business values are realized, business stakeholders often become more engaged. When cloud adoption efforts are led by the business, the focus might be on an operating model and the organization.
 
-In a break from tradition, do not link to reference topics in the procedural part of the
-quickstart when using cmdlets or code. Provide customers what they need to know in the quickstart
-to successfully complete the quickstart.
+### Establish the vision
 
-For portal-based procedures, minimize bullets and numbering.
+- [Adoption motivations](../strategy/motivations.md): Document and articulate the reasons behind the technical effort.
+- [Business outcomes](../strategy/business-outcomes/index.md): Clearly articulate what's expected of the technical team in terms of business changes.
+- [Learning metrics](../strategy/learning-metrics.md): Establish short-term metrics that can show progress toward longer-term business outcomes.
 
-For the CLI or PowerShell based procedures, don't use bullets or numbering.
+### Build business justification
 
-Be mindful of the number of H2/procedures in the Quickstart. 3-5 procedural steps are about right.
-Once you've staged the article, look at the right-hand "In this article" section on the docs page;
-if there are more than 8 total, consider restructuring the article.
---->
+- [Cloud migration business case](../strategy/cloud-migration-business-case.md). Establish a business case for cloud migration.
 
-Include a sentence or two to explain only the minimum scope for the team.
+### Rationalize the digital estate
 
-Use bullet or numbered list of tasks that may be required within this scope.
-
-1. Step 1
-1. Step 2
-1. Step 3
-1. Step 4
+- [Incremental rationalization](../digital-estate/rationalize.md). An agile approach to rationalization that properly aligns late-bound technical decisions.
+- [Rs of rationalization](../digital-estate/5-rs-of-rationalization.md). Understand the various rationalization options.
 
 ## Deliverable
 
-Include a sentence or two to explain deliverable that will be a result of staying within the minimum scope.
+The cloud strategy team drives critical prioritization and discovery efforts during cloud adoption. They may also change business processes, the execution of operations, customer interactions, or even product development. The primary focus of the cloud strategy team is to validate and maintain alignment between business priorities and cloud adoption efforts. Secondarily, this team should focus on change management across the adoption efforts. The following tasks assist in achieving this.
 
-Use bullet or ordered list, as appropriate to aid readability.
+### Early planning tasks
 
-1. First deliverable
-1. Second deliverable
-1. Third deliverable
+- Review and provide feedback on business outcomes and financial models.
+- Aid in establishing clear motivations for cloud adoption that align with corporate objectives.
+- Define relevant learning metrics that clearly communicate progress toward business outcomes.
+- Understand business risks introduced by the plan, represent the business's tolerance for risk.
+- Review and approve the rationalization of the digital estate.
+
+### Ongoing monthly tasks
+
+- Support the cloud governance team during risk/tolerance conversations.
+- Review release plans to understand timelines and business impact of technical change.
+- Define business change plans associated with planned releases.
+- Ensure business teams are ready to execute business testing and the business change plan.
+
+### Meeting cadence
+
+Recommendations for allocating of time for cloud strategy team members:
+
+- During early planning efforts, allocate an hour each week to meet with the team. After the adoption plan is solidified (usually within 4–6 weeks), the time requirements can be reduced.
+- Throughout the adoption efforts, allocate 1–2 hours each month to review progress and validate continued priorities.
+- Additional time is likely required from delegated members of the executive's team on an as-needed basis. Each member of the cloud strategy team should appoint a delegate who can allocate 5–10 hours per week to support ongoing prioritization questions and report on any urgent needs.
 
 ## Baseline capability
 
-Include a sentence or two to explain the baseline capabilities here.
+The cloud strategy team should include the following:
 
-Use bullet or numbered list, as appropriate to aid readability.
+- Finance
+- Line of business
+- Human resources
+- Operations
+- Enterprise architecture
+- IT infrastructure
+- Application groups
+- Project managers (often with Agile project management experience)
 
-- Item 1
-- Item 2
-- Item 3
+The CEO and CIO often assign this team to drive change across various different organizations within the enterprise. In the absence of a cloud strategy team, someone must still provide these capabilities to align technical activities to business outcomes. That same person or group should also manage change across the project. Business outcomes and the cloud strategy team should both be defined early in the process.
 
 ## Out of scope
+
+<!-- TODO -->
 
 Briefly explain what is out of scope and provide links to more information.
 
 - Additional info item and link
 - Additional info item and link
 
-## Next steps
+## What's next
 
-Advance to the methodology or next logical topic
-> [!div class="nextstepaction"]
-> [Next steps button](index.yml)
+Strategy and planning are important. However, nothing is actionable without cloud adoption capabilities. Understand the role of this important capability before beginning adoption efforts.
 
-<!--- Required:
-Quickstarts should always have a Next steps H2 that points to the next logical
-quickstart in a series, or, if there are no other quickstarts, to some other
-cool thing the customer can do. A single link in the blue box format should
-direct the customer to the next article - and you can shorten the title in the
-boxes if the original one doesn't fit.
-Do not use a "More info section" or a "Resources section" or a "See also section". --->
+Align your strategy with the cloud adoption capabilities by working with the migration team.
+
+To learn more about the migration team see the [Cloud migration team](migration-team-quickstart.md).

@@ -2,62 +2,70 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 . "$here\Test-Spelling.ps1"
 
-Describe -Tags "Spelling" "Test-Spelling" {
+Describe "Test-Spelling" -Tags "Spelling" {
 
-    It "shouldn't have spelling errors" {
-        Test-Spelling $here 'decision-guides' | Should -Be 0
-    }
+    # It "decision-guides shouldn't have spelling errors" {
+    #     Test-Spelling $here 'decision-guides' | Should -Be 0
+    # }
     
-    It "shouldn't have spelling errors" {
-        Test-Spelling $here 'digital-estate' | Should -Be 0
-    }
+    # It "digital-estate shouldn't have spelling errors" {
+    #     Test-Spelling $here 'digital-estate' | Should -Be 0
+    # }
     
-    It "shouldn't have spelling errors" {
-        Test-Spelling $here 'getting-started' | Should -Be 0
-    }
+    # It "getting-started shouldn't have spelling errors" {
+    #     Test-Spelling $here 'getting-started' | Should -Be 0
+    # }
     
-    # It "shouldn't have spelling errors" {
+    # It "govern shouldn't have spelling errors" {
     #     Test-Spelling $here 'govern' | Should -Be 0
     # }
     
-    # It "shouldn't have spelling errors" {
+    # It "infrastructure shouldn't have spelling errors" {
     #     Test-Spelling $here 'infrastructure' | Should -Be 0
     # }
     
-    # It "shouldn't have spelling errors" {
+    # It "innovate shouldn't have spelling errors" {
     #     Test-Spelling $here 'innovate' | Should -Be 0
     # }
     
-    # It "shouldn't have spelling errors" {
-    #     Test-Spelling $here 'manage' | Should -Be 0
+    # It "manage shouldn't have spelling errors" {
+    #    Test-Spelling $here 'manage' | Should -Be 0
     # }
-    
-    # It "shouldn't have spelling errors" {
+
+    # It "manage shouldn't have spelling errors" {
+    #    Test-Spelling $here 'migrate' | Should -Be 0
+    # }
+
+    # It "operating-model shouldn't have spelling errors" {
     #     Test-Spelling $here 'operating-model' | Should -Be 0
     # }
     
-    # It "shouldn't have spelling errors" {
+    # It "organize shouldn't have spelling errors" {
     #     Test-Spelling $here 'organize' | Should -Be 0
     # }
     
-    # It "shouldn't have spelling errors" {
+    # It "plan shouldn't have spelling errors" {
     #     Test-Spelling $here 'plan' | Should -Be 0
     # }
     
-    # It "shouldn't have spelling errors" {
+    # It "ready shouldn't have spelling errors" {
     #     Test-Spelling $here 'ready' | Should -Be 0
     # }
     
-    # It "shouldn't have spelling errors" {
+    # It "reference shouldn't have spelling errors" {
     #     Test-Spelling $here 'reference' | Should -Be 0
     # }
     
-    # It "shouldn't have spelling errors" {
+    # It "strategy shouldn't have spelling errors" {
     #     Test-Spelling $here 'strategy' | Should -Be 0
     # }
+
+    It "All spelling should be correct" {
+        Test-Spelling $here '.' | Should -Be 0
+    }
 }
 
-Describe -Tags "Markdown" "Test-Markdown" {
+Describe "Test-Markdown" -Tags "Markdown" {
 
     It "shouldn't have markdownlint errors" {
         Test-Markdown $here "md" | Should -Be 0

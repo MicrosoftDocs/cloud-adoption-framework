@@ -1,178 +1,83 @@
 ---
 title: Migration team quickstart guide
-description: This quickstart helps the migration team understand scope, deliverables and the capabilities they are responsible for.
+description: Set up a migration team's scope, deliverables and the capabilities to prepare for successful cloud migration.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
-ms.topic: quickstart 
+ms.topic: conceptual 
 ms.date: 03/03/2020
 ---
 
-<!---Recommended: Remove all the comments in this template before you sign-off or merge to master.--->
-<!---quickstarts are fundamental day-1 instructions for helping new customers use a subscription to quickly try out a specific product/service.
-The entire activity is a short set of steps that provides an initial experience.
-You only use quickstarts when you can get the service, technology, or functionality into the hands of new customers in less than 10 minutes.
---->
+# Quickstart: Cloud migration team
 
-# Cloud adoption migration team quickstart guide
+Cloud migration teams are the modern-day equivalent of technical implementation teams or project teams. However, the nature of the cloud may require a more fluid team structure. Some migration teams focus exclusively on cloud migration, while others focus on innovations that take advantage of cloud technologies. Some include the broad technical expertise required to complete large adoption efforts, like a full datacenter migration, while others have a tighter technical focus and may move between projects to accomplish specific goals, for example, a team of data platform specialists who help convert SQL VMs to SQL PaaS instances.
 
-<!---Required:
-Starts with "Quickstart: " and is ideally two lines or less when rendered on a 1920x1080 screen.
-Make the first word following "Quickstart:" a verb, which is to say, an action.
-The "X" part should identify both the technology or service involved (e.g. App Service,
-Cosmos DB, etc.) and the language or framework, if applicable (.NET Core, Python, JavaScript,
-Java, etc.); the language or framework shouldn't appear in parentheses.
---->
-
-This quickstart helps you understand the goals and objectives of a migration team working on cloud adoption.
-
-<!-- In the opening sentence, focus on the job or task to be completed, emphasizing.
-general industry terms (such as "serverless," which are better for SEO) more than
-Microsoft-branded terms or acronyms (such as "Azure Functions" or "ACR"). That is, try
-to include terms people typically search for and avoid using *only* Microsoft terms. -->
-
-<!--After the opening sentence, provide a light introduction that describes,
-again in customer-friendly language, what the customer will learn in the process of
-accomplishing the stated goal. Answer the fundamental "why would I want to do this?" question.
-
-Avoid the following elements whenever possible:
-- Avoid callouts (note, important, tip, etc.) because readers tend to skip over them.
-Important callouts like preview status or version caveats can be included under prerequisites.
-
-- Avoid links, which are generally invitations for the reader to leave the article and
-not complete the experience of the quickstart. The exception are links to alternate versions
-of the same content (e.g. when you have a VS Code-oriented article and a CLI-oriented article). Those
-links help get the reader to the right article, rather than being a distraction. If you feel that there are
-other important concepts needing links, make reviewing a particular article a prerequisite. Otherwise, rely
-on the line of standard links (see below).
-
-- Avoid any indication of the time it takes to complete the quickstart, because there's already
-the "x minutes to read" at the top and making a second suggestion can be contradictory.
-
-- Avoid a bullet list of steps or other details in the quickstart: the H2's shown on the right
-of the docs page already fulfill this purpose.
-
-- Avoid screenshots or diagrams: the opening sentence should be sufficient to explain the result,
-and other diagrams count as conceptual material that is best in a linked overview.
---->
-
-<!-- Optional standard links: if there are suitable links, you can include a single line
-of applicable links for companion content at the end of the introduction. Don't use the line
-if there's only a single link. -->
-
-<!-- NOTE: the Azure subscription line is moved to Prerequisites. -->
+Regardless of the type or number of cloud migration teams, these team(s) generally provides subject matter expertise for IT, business analysis, or implementation partners.
 
 ## Prerequisites
-
-<!-- Make Prerequisites the first H2 after the H1. Omit any preliminary text to the list.-->
-
+<!-- TODO -->
 - (Optional) Completion of any required training. Use the language "Completion of (title)" where (title) is the link to the training.
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 - First prerequisite - other methodologies that the reader should be knowledgeable about
 - Second prerequisite - tools needed
 - Third prerequisite
 
-<!-- Include this heading even if there aren't any prerequisites, in which case just use the text: "None" (not bulleted). The reason for this is to maintain consistency across services, which trains
-readers to always look in the same place.-->
-
-<!-- When there are prerequisites, list each as *items*, not instructions to minimize the verbiage.
-For example, use "Python 3.6" instead of "Install Python 3.6". If the prerequisite is something
-to install, link to the applicable installer or download. Selecting the item/link is then the
-action to fulfill the prerequisite. Use an action word only if necessary to make the meaning clear.
-Don't use links to conceptual information about a prerequisite; only use links for installers.
-
-List prerequisites in the following order:
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- Language runtimes (Python, Node, .NET, etc.)
-- Packages (from pip, npm, nuget, etc.)
-- Tools (like VS Code IF REQUIRED. Don't include tools like pip if they're
-  automatically installed with another tool or language runtime, like Python. Don't include
-  optional tools like text editors--include them only if the quickstart demonstrates them.)
-- Sample code
-- Specialized hardware
-- Other preparatory work, such as creating a VM (OK to link to another article)
-- Azure keys
-- Service-specific keys
-
-The reason for placing runtimes and tools first is that it might take time to install
-them, and it's best to get a user started sooner than later.
-
-If you feel like your quickstart has a lot of prerequisites, the quickstart may be the
-wrong content type - a tutorial or how-to guide may be the better option. Remember that
-quickstarts should be something a reader can complete in 10 minutes or less.
-
---->
-
 ## Minimum scope
 
-<!---Required:
-Quickstarts are prescriptive and guide the customer through an end-to-end procedure.
-Make sure to use specific naming for setting up accounts and configuring technology.
+The nucleus of all cloud adoption efforts is the cloud migration team. This team drives the technical changes that enable adoption. Depending on the objectives of the adoption effort, this team may include a diverse range of team members who handle a broad set of technical and business tasks.
 
-Avoid linking off to other content - include whatever the customer needs to complete the
-scenario in the article. For example, if the customer needs to set permissions, include the
-permissions they need to set, and the specific settings in the quickstart procedure. Don't
-send the customer to another article to read about it.
+At a minimum, the team scope includes:
 
-In a break from tradition, do not link to reference topics in the procedural part of the
-quickstart when using cmdlets or code. Provide customers what they need to know in the quickstart
-to successfully complete the quickstart.
-
-For portal-based procedures, minimize bullets and numbering.
-
-For the CLI or PowerShell based procedures, don't use bullets or numbering.
-
-Be mindful of the number of H2/procedures in the Quickstart. 3-5 procedural steps are about right.
-Once you've staged the article, look at the right-hand "In this article" section on the docs page;
-if there are more than 8 total, consider restructuring the article.
---->
-
-Include a sentence or two to explain only the minimum scope for the team.
-
-Use bullet or numbered list of tasks that may be required within this scope.
-
-1. Step 1
-1. Step 2
-1. Step 3
-1. Step 4
+- [Rationalization of the digital estate](../digital-estate/index.md)
+- Review, validation, and advancement of the [prioritized migration backlog](../migrate/migration-considerations/assess/release-iteration-backlog.md)
+- The execution of the [first workload](../digital-estate/rationalize.md#select-the-first-workload) as a learning opportunity
 
 ## Deliverable
 
-Include a sentence or two to explain deliverable that will be a result of staying within the minimum scope.
+The primary deliverable from any cloud migration team is the timely, high-quality implementation of the technical solutions outlined in the adoption plan, in alignment with governance requirements and business outcomes, using the technology, tools, and automation solutions that are available.
 
-Use bullet or ordered list, as appropriate to aid readability.
+### Ongoing monthly tasks
 
-1. First deliverable
-1. Second deliverable
-1. Third deliverable
+- Oversee [change management processes](../migrate/migration-considerations/prerequisites/technical-complexity.md)
+- Manage the [release and sprint backlogs](../migrate/migration-considerations/assess/release-iteration-backlog.md)
+- Build and maintain the adoption landing zone in conjunction with governance requirements
+- Complete the technical tasks outlined in the [sprint backlogs](../migrate/migration-considerations/assess/release-iteration-backlog.md)
+
+### Team cadence
+
+We recommend that teams providing cloud adoption capability be dedicated to the effort full-time.
+
+It's best if these teams meet daily in a self-organizing way. The goal of daily meetings is to quickly update the backlog, and to communicate what has been completed, what is to be done today, and what things are blocked, requiring additional external support.
+
+Release schedules and iteration durations are unique to each company. However, a range of one to four weeks per iteration seems to be the average duration. Regardless of iteration or release cadence, we recommend that the team meets all supporting teams at the end of each release to communicate the outcome of the release, and to reprioritize upcoming efforts. It's also valuable to meet as a team at the end of each sprint, with the [cloud center of excellence](../organize/cloud-center-of-excellence.md) or [cloud governance team](governance-team-quickstart.md) to stay aligned on common efforts and any needs for support.
+
+Some of the technical tasks associated with cloud adoption can become repetitive. Team members should rotate every 3&ndash;6 months to avoid employee satisfaction issues and maintain relevant skills. A rotating seat on [cloud center of excellence](../organize/cloud-center-of-excellence.md) or [cloud governance team](governance-team-quickstart.md) can provide an excellent opportunity to keep employees fresh and harness new innovations.
 
 ## Baseline capability
 
-Include a sentence or two to explain the baseline capabilities here.
+Depending on the desired business outcomes, the skills needed to provide full cloud adoption capabilities could include:
 
-Use bullet or numbered list, as appropriate to aid readability.
+- Infrastructure implementers
+- DevOps engineers
+- Application developers
+- Data scientists
+- Data or application platform specialists
 
-- Item 1
-- Item 2
-- Item 3
+For optimal collaboration and efficiency, we recommend that cloud adoption teams have an average team size of six people. These teams should be self-organizing from a technical execution perspective. We highly recommend that these teams also include project management expertise, with deep experience in agile, scrum, or other iterative models. This team is most effective when managed using a flat structure.
 
 ## Out of scope
-
+<!-- TODO -->
 Briefly explain what is out of scope and provide links to more information.
 
 - Additional info item and link
 - Additional info item and link
 
-## Next steps
+## What's next
 
-Advance to the methodology or next logical topic
-> [!div class="nextstepaction"]
-> [Next steps button](index.yml)
+Adoption is great, but ungoverned adoption can produce unexpected results. Align with the cloud governance team to accelerates adoption and best practices, while reducing business and technical risks.
 
-<!--- Required:
-Quickstarts should always have a Next steps H2 that points to the next logical
-quickstart in a series, or, if there are no other quickstarts, to some other
-cool thing the customer can do. A single link in the blue box format should
-direct the customer to the next article - and you can shorten the title in the
-boxes if the original one doesn't fit.
-Do not use a "More info section" or a "Resources section" or a "See also section". --->
+To learn more about the governance team see, [Cloud governance team](governance-team-quickstart.md).
+
+These two teams create balance across cloud adoption efforts, but is considered an MVP because it may not be sustainable. Each team is wearing many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](../organize/raci-alignment.md).
+
+Operating with only a cloud adoption team (or multiple cloud adoption teams) is considered an antipattern and should be avoided. At a minimum, consider the [MVP best practice](../organize/organization-structures.md).

@@ -36,7 +36,7 @@ So fundamentally, Azure is a huge collection of servers and networking hardware 
 
 ## Next steps
 
-Learn more about cloud adoption with the [Microsoft Cloud Adoption Framework for Azure](https://docs.microsoft.com/azure/cloud-adoption-framework).
+Learn more about cloud adoption with the [Microsoft Cloud Adoption Framework for Azure](../index.md).
 
 > [!div class="nextstepaction"]
-> [Learn about the Microsoft Cloud Adoption Framework for Azure](https://docs.microsoft.com/azure/cloud-adoption-framework)
+> [Learn about the Microsoft Cloud Adoption Framework for Azure](../index.md)

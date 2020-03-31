@@ -11,6 +11,8 @@ ms.custom: fasttrack-new, AQC, setup
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore jelledruyts andym endjin -->
+
 # Stay current with Microsoft Azure
 
 Cloud platforms like Microsoft Azure change faster than many organizations are accustomed to. This pace of change means that organizations have to adapt people and processes to a new cadence. If you're responsible for helping your organization keep up with change, you might feel overwhelmed at times. The resources listed in this section can help you stay up to date.
@@ -46,11 +48,15 @@ The following resources can help you stay current with Azure:
 
 For deeper content that helps you stay current with Azure, take a look at the resources listed here:
 
-- [Azure Charts](https://azurecharts.com/)
-  - This unofficial visualization show all the Azure updates made in the last six months. It contains other useful charts and utilities to help you track Azure changes.
 - [Azure Friday](https://channel9.msdn.com/Shows/Azure-Friday)
   - Weekly videos with the engineers who build Azure. They do demos, answer questions, and share insights.
   - Subscribe via [RSS](https://channel9.msdn.com/Shows/Azure-Friday/feed).
-- [Azure Weekly](https://azureweekly.info)
-  - This newsletter is an unofficial resource provided by [endjin](https://endjin.com). It includes a summary of the week's top news about Microsoft Azure. It also includes interesting historical content.
+- [Azure Charts](https://azurecharts.com/)*
+  - This visualization shows all the Azure updates made in the last six months. It contains other useful charts and utilities to help you track Azure changes.
+- [AzAdvertizer](https://www.azadvertizer.net/)*
+  - Release and Change tracking on Azure Governance capabilities (for example, Azure Policy, Policy Initiatives, Policy Aliases and RBAC).
+- [Azure Weekly](https://azureweekly.info)*
+  - This newsletter provided by [endjin](https://endjin.com) includes a summary of the week's top news about Microsoft Azure. It also includes interesting historical content.
   - Subscribe via [email](https://azureweekly.info).
+
+\* *These resources are provided by the community and are not officially maintained by Microsoft.*

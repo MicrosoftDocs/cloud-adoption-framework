@@ -119,8 +119,8 @@ In parallel with continued rationalization, the cloud adoption team can begin mi
 - Strengthen skills with the cloud provider's platform.
 - Define the core services (and Azure standards) needed to fit the long-term vision.
 - Better understand how operations might need to change later in the transformation.
-- Understand any inherent business risks and the business' tolerance for those risks.
-- Establish a baseline or minimum viable product (MVP) for governance based on the business' risk tolerance.
+- Understand any inherent business risks and the business's tolerance for those risks.
+- Establish a baseline or minimum viable product (MVP) for governance based on the business's risk tolerance.
 
 ## Release planning
 

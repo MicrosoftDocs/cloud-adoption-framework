@@ -61,7 +61,7 @@ Additional examples of first adoption projects include:
 
 ## Next steps
 
-After the first cloud adoption project has begun, the cloud strategy team can turn their attention to the longer-term [cloud adoption plan](../plan/index.md).
+Learn about strategies for [balancing competing priorities](./balance-competing-priorities.md).
 
 > [!div class="nextstepaction"]
-> [Build your cloud adoption plan](../plan/index.md)
+> [Balance competing priorities](./balance-competing-priorities.md)

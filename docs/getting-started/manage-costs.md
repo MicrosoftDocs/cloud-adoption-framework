@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
+<!-- cSpell:ignore architected -->
+
 # Getting started: Enterprise cost optimization
 
 One of the core disciplines of cloud governance is cost management. The discipline of cost management focuses on establishing budgets, monitoring cost allocation patterns, and implementing controls to improve cloud spending behaviors across the IT portfolio. However, enterprise cost optimization involves many other roles and functions to minimize cost and balance the demands of scale, performance, security, and reliability. This article maps those various supporting functions into one getting started guide to help create alignment between each of the involved teams.
@@ -84,7 +86,7 @@ Guidance to support deliverable completion
 - Plan: [Gather Inventory](../digital-estate/inventory.md): Establish a source of data for analysis of the digital estate prior to adoption.
 - Plan: [Best Practice - Azure Migrate](../plan/contoso-migration-assessment.md): Leverage Azure Migrate to gather inventory
 - Plan: [Incremental Rationalization](../digital-estate/rationalize.md#incremental-rationalization): During incremental rationalization a quantitative analysis will identify cloud candidates for budgeting purposes.
-- Plan: [Align cost models and forecast models](../digital-estate/calculate.md): Leverage Azure Cost Management to align cost and forecast models by [creating budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
+- Plan: [Align cost models and forecast models](../digital-estate/calculate.md): Leverage Azure Cost Management to align cost and forecast models by [creating budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
 
 ## Step 3. Adoption plan
 
@@ -120,7 +122,7 @@ Deliverables
 
 Guidance to support deliverable completion
 
-- Ready: [Track costs](../ready/azure-best-practices/track-costs.md#provide-the-right-level-of-cost-access): Establish a well-managed evironment hierarchy, provide the right level of cost access, leverage additional cost management resources in each landing zone.
+- Ready: [Track costs](../ready/azure-best-practices/track-costs.md#provide-the-right-level-of-cost-access): Establish a well-managed environment hierarchy, provide the right level of cost access, leverage additional cost management resources in each landing zone.
 - Ready: [Optimize your cloud investment](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json): Best practices to optimize investments
 - Ready: [Create and manage budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json) Best practices for creating and managing budgets
 - Ready: [Optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json): Best practices for leveraging recommendations to optimize costs
@@ -167,7 +169,7 @@ Deliverables
 Guidance to support deliverable completion
 
 - Leverage the [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) to understand the balance in architecture decisions.
-- Review the [Well-Architected Framework](/azure/architecture/framework/) for deeper guidance for cost-optimization during innovation.
+- Review the [Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) for deeper guidance for cost-optimization during innovation.
 
 ## Step 7. Manage
 
@@ -180,7 +182,7 @@ Involved teams
 
 Deliverables
 
-- Monitor the enterprise environment for on-going recommendations to optimize costs, aligned to the criticality and resiliency classifications of each workload.
+- Monitor the enterprise environment for ongoing recommendations to optimize costs, aligned to the criticality and resiliency classifications of each workload.
 
 Guidance to support deliverable completion
 

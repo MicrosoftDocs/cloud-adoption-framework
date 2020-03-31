@@ -210,7 +210,7 @@ Several third-party migration tools and ISV services can assist you with the mig
 
 UnifyCloud is an ISV service that provides assessment, migration and modernization automation tools.
 
-[Learn more](https://www.unifycloud.com/)
+[Learn more](https://www.unifycloud.com)
 
 ## Cloudamize
 
@@ -273,7 +273,7 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills resp
 
 Here is an example of a tailored learning path on Microsoft Learn that complements the setup for DevOps guidance in the Cloud Adoption Framework.
 
-[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
+[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
 
 # [Cost management](#tab/ManageCost)
 

@@ -1,68 +1,21 @@
 ---
 title: Governance team quickstart guide
-description: This quickstart helps the governance team understand scope, deliverables and the capabilities they are responsible for.
+description: Set up a governance team's scope, deliverables, and the capabilities to prepare for successful cloud governance.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
-ms.topic: quickstart 
-ms.date: 03/03/2020
+ms.topic: conceptual 
+ms.date: 04/04/2020
 ---
 
-<!---Recommended: Remove all the comments in this template before you sign-off or merge to master.--->
-<!---quickstarts are fundamental day-1 instructions for helping new customers use a subscription to quickly try out a specific product/service.
-The entire activity is a short set of steps that provides an initial experience.
-You only use quickstarts when you can get the service, technology, or functionality into the hands of new customers in less than 10 minutes.
---->
+# Quickstart: Cloud governance team
 
-# Cloud adoption governance team quickstart guide
-
-<!---Required:
-Starts with "Quickstart: " and is ideally two lines or less when rendered on a 1920x1080 screen.
-Make the first word following "Quickstart:" a verb, which is to say, an action.
-The "X" part should identify both the technology or service involved (e.g. App Service,
-Cosmos DB, etc.) and the language or framework, if applicable (.NET Core, Python, JavaScript,
-Java, etc.); the language or framework shouldn't appear in parentheses.
---->
-
-This quickstart helps you understand the goals and objectives of a governance team working on cloud adoption.
-
-<!-- In the opening sentence, focus on the job or task to be completed, emphasizing.
-general industry terms (such as "serverless," which are better for SEO) more than
-Microsoft-branded terms or acronyms (such as "Azure Functions" or "ACR"). That is, try
-to include terms people typically search for and avoid using *only* Microsoft terms. -->
-
-<!--After the opening sentence, provide a light introduction that describes,
-again in customer-friendly language, what the customer will learn in the process of
-accomplishing the stated goal. Answer the fundamental "why would I want to do this?" question.
-
-Avoid the following elements whenever possible:
-- Avoid callouts (note, important, tip, etc.) because readers tend to skip over them.
-Important callouts like preview status or version caveats can be included under prerequisites.
-
-- Avoid links, which are generally invitations for the reader to leave the article and
-not complete the experience of the quickstart. The exception are links to alternate versions
-of the same content (e.g. when you have a VS Code-oriented article and a CLI-oriented article). Those
-links help get the reader to the right article, rather than being a distraction. If you feel that there are
-other important concepts needing links, make reviewing a particular article a prerequisite. Otherwise, rely
-on the line of standard links (see below).
-
-- Avoid any indication of the time it takes to complete the quickstart, because there's already
-the "x minutes to read" at the top and making a second suggestion can be contradictory.
-
-- Avoid a bullet list of steps or other details in the quickstart: the H2's shown on the right
-of the docs page already fulfill this purpose.
-
-- Avoid screenshots or diagrams: the opening sentence should be sufficient to explain the result,
-and other diagrams count as conceptual material that is best in a linked overview.
---->
-
-<!-- Optional standard links: if there are suitable links, you can include a single line
-of applicable links for companion content at the end of the introduction. Don't use the line
-if there's only a single link. -->
+A cloud governance team ensure that risks and risk tolerance are properly evaluated and managed. This team ensures the proper identification of risks that can't be tolerated by the business. The people on this team convert risks into governing corporate policies.
 
 ## Prerequisites
 
 <!-- Make Prerequisites the first H2 after the H1. Omit any preliminary text to the list.-->
+<!-- TODO -->
 
 - (Optional) Completion of any required training. Use the language "Completion of (title)" where (title) is the link to the training.
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
@@ -70,108 +23,62 @@ if there's only a single link. -->
 - Second prerequisite - tools needed
 - Third prerequisite
 
-<!-- Include this heading even if there aren't any prerequisites, in which case just use the text: "None" (not bulleted). The reason for this is to maintain consistency across services, which trains
-readers to always look in the same place.-->
-
-<!-- When there are prerequisites, list each as *items*, not instructions to minimize the verbiage.
-For example, use "Python 3.6" instead of "Install Python 3.6". If the prerequisite is something
-to install, link to the applicable installer or download. Selecting the item/link is then the
-action to fulfill the prerequisite. Use an action word only if necessary to make the meaning clear.
-Don't use links to conceptual information about a prerequisite; only use links for installers.
-
-List prerequisites in the following order:
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- Language runtimes (Python, Node, .NET, etc.)
-- Packages (from pip, npm, nuget, etc.)
-- Tools (like VS Code IF REQUIRED. Don't include tools like pip if they're
-  automatically installed with another tool or language runtime, like Python. Don't include
-  optional tools like text editors--include them only if the quickstart demonstrates them.)
-- Sample code
-- Specialized hardware
-- Other preparatory work, such as creating a VM (OK to link to another article)
-- Azure keys
-- Service-specific keys
-
-The reason for placing runtimes and tools first is that it might take time to install
-them, and it's best to get a user started sooner than later.
-
-If you feel like your quickstart has a lot of prerequisites, the quickstart may be the
-wrong content type - a tutorial or how-to guide may be the better option. Remember that
-quickstarts should be something a reader can complete in 10 minutes or less.
-
---->
-
 ## Minimum scope
 
-<!---Required:
-Quickstarts are prescriptive and guide the customer through an end-to-end procedure.
-Make sure to use specific naming for setting up accounts and configuring technology.
+- Understand [business risks](../govern/policy-compliance/risk-tolerance.md) introduced by the plan
+- Represent the [business's tolerance for risk](../govern/policy-compliance/risk-tolerance.md)
+- Aid in the creation of a [Governance MVP](../govern/guides/index.md)
 
-Avoid linking off to other content - include whatever the customer needs to complete the
-scenario in the article. For example, if the customer needs to set permissions, include the
-permissions they need to set, and the specific settings in the quickstart procedure. Don't
-send the customer to another article to read about it.
+Involve the following participants in cloud governance activities:
 
-In a break from tradition, do not link to reference topics in the procedural part of the
-quickstart when using cmdlets or code. Provide customers what they need to know in the quickstart
-to successfully complete the quickstart.
-
-For portal-based procedures, minimize bullets and numbering.
-
-For the CLI or PowerShell based procedures, don't use bullets or numbering.
-
-Be mindful of the number of H2/procedures in the Quickstart. 3-5 procedural steps are about right.
-Once you've staged the article, look at the right-hand "In this article" section on the docs page;
-if there are more than 8 total, consider restructuring the article.
---->
-
-Include a sentence or two to explain only the minimum scope for the team.
-
-Use bullet or numbered list of tasks that may be required within this scope.
-
-1. Step 1
-1. Step 2
-1. Step 3
-1. Step 4
+- Leaders from middle management and direct contributors in key roles should represent the business and help evaluate risk tolerances.
+- The cloud governance capabilities are delivered by an extension of the [cloud strategy team](strategy-team-quickstart.md). Just as the CIO and business leaders are expected to participate in cloud strategy capabilities, their direct reports are expected to participate in cloud governance activities.
+- Business employees that are members of the business unit who work closely with the leadership of the line-of-business should be empowered to make decisions regarding corporate and technical risk.
+- Information technology (IT) and information security (IS) employees who understand the technical aspects of the cloud transformation may serve in a rotating capacity instead of being a consistent provider of cloud governance capabilities.
 
 ## Deliverable
 
-Include a sentence or two to explain deliverable that will be a result of staying within the minimum scope.
+The primary duty of any cloud governance team is to balance competing forces of transformation and risk mitigation. Additionally, cloud governance ensures that the [cloud migration team](.\migration-team-quickstart.md) is aware of data and asset classification, as well as architecture guidelines that govern adoption. This team also works with the [cloud center of excellence](../organize/cloud-center-of-excellence.md) to apply automated approaches to governing cloud environments.
 
-Use bullet or ordered list, as appropriate to aid readability.
+### Ongoing monthly tasks
 
-1. First deliverable
-1. Second deliverable
-1. Third deliverable
+- Understand [business risks](../govern/policy-compliance/risk-tolerance.md) introduced during each release.
+- Represent the [business's tolerance for risk](../govern/policy-compliance/risk-tolerance.md).
+- Aid in the incremental improvement of [policy and compliance requirements](../govern/policy-compliance/index.md).
+
+### Meeting cadence
+
+The time commitment from each team member of the cloud governance team will represent a large percentage of their daily schedules. Contributions will not be limited to meetings and feedback cycles.
 
 ## Baseline capability
 
-Include a sentence or two to explain the baseline capabilities here.
+Depending on the desired business outcomes, the skills needed to provide full cloud governance capabilities include:
 
-Use bullet or numbered list, as appropriate to aid readability.
+- IT governance
+- Enterprise architecture
+- Security
+- IT operations
+- IT infrastructure
+- Networking
+- Identity
+- Virtualization
+- Business continuity and disaster recovery
+- Application owners within IT
+- Finance owners
 
-- Item 1
-- Item 2
-- Item 3
+These baseline capabilities help you identify risks related to current and future releases. These efforts help you evaluate risk, understand the potential impacts, and make decisions regarding risk tolerance. When doing so, quickly update plans to reflect the changing needs of the [cloud migration team](migration-team-quickstart.md).
 
 ## Out of scope
+
+<!-- TODO -->
 
 Briefly explain what is out of scope and provide links to more information.
 
 - Additional info item and link
 - Additional info item and link
 
-## Next steps
+## What's next
 
-Advance to the methodology or next logical topic
+As cloud governance matures, teams are empowered to adopt the cloud at faster paces. Continued cloud adoption efforts tend to trigger maturity in IT operations. Either develop a cloud operations team, or sync with your cloud operations team to ensure governance is a part of operations development.
 
-> [!div class="nextstepaction"]
-> [Next steps button](index.yml)
-
-<!--- Required:
-Quickstarts should always have a Next steps H2 that points to the next logical
-quickstart in a series, or, if there are no other quickstarts, to some other
-cool thing the customer can do. A single link in the blue box format should
-direct the customer to the next article - and you can shorten the title in the
-boxes if the original one doesn't fit.
-Do not use a "More info section" or a "Resources section" or a "See also section". --->
+To learn more about the operations team see, [Cloud operations team](operations-team-quickstart.md).

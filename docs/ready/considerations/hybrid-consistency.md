@@ -8,6 +8,9 @@ ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore ISVs Bitnami Yourhosting Revera Avanade Pulsant PricewaterhouseCoopers Pointnext -->
+
 # Create hybrid cloud consistency
 
 This article guides you through the high-level approaches for creating hybrid cloud consistency.
@@ -45,7 +48,7 @@ Azure and Azure Stack open up new hybrid use cases for both customer-facing and 
 
 - **Edge and disconnected solutions.** To address latency and connectivity requirements, customers can process data locally in Azure Stack and then aggregate it in Azure for further analytics. They can use common application logic across both. Many customers are interested in this edge scenario across different contexts, like factory floors, cruise ships, and mine shafts.
 - **Cloud applications that meet various regulations.** Customers can develop and deploy applications in Azure, with full flexibility to deploy on-premises on Azure Stack to meet regulatory or policy requirements. No code changes are needed. Application examples include global audit, financial reporting, foreign exchange trading, online gaming, and expense reporting. Customers sometimes look to deploy different instances of the same application to Azure or Azure Stack, based on business and technical requirements. While Azure meets most requirements, Azure Stack complements the deployment approach where needed.
-- **Cloud application model on-premises.** Customers can use Azure web services, containers, serverless, and microservice architectures to update and extend existing applications or build new ones. You can use consistent DevOps processes across Azure in the cloud and Azure Stack on-premises. There's a growing interest in application modernization, even for core mission-critical applications.
+- **Cloud application model on-premises.** Customers can use Azure web services, containers, microservices, and serverless architectures to update and extend existing applications or build new ones. You can use consistent DevOps processes across Azure in the cloud and Azure Stack on-premises. There's a growing interest in application modernization, even for core mission-critical applications.
 
 Azure Stack is offered via two deployment options:
 
@@ -55,6 +58,8 @@ Azure Stack is offered via two deployment options:
 ## Azure Stack one-cloud ecosystem
 
 You can speed up Azure Stack initiatives by using the complete Azure ecosystem:
+
+<!-- cSpell:ignore ISVs Bitnami Yourhosting Revera Avanade Pulsant PricewaterhouseCoopers -->
 
 - Azure ensures that most applications and services that are certified for Azure will work on Azure Stack. Several ISVs are extending their solutions to Azure Stack. These ISVs include Bitnami, Docker, Kemp Technologies, Pivotal Cloud Foundry, Red Hat Enterprise Linux, and SUSE Linux.
 - You can opt to have Azure Stack delivered and operated as a fully managed service. Several partners will have managed service offerings across Azure and Azure Stack shortly. These partners include Tieto, Yourhosting, Revera, Pulsant, and NTT. These partners deliver managed services for Azure via the Cloud Solution Provider (CSP) program. They're extending their offerings to include hybrid solutions.

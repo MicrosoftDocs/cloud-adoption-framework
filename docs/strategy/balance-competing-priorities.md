@@ -1,6 +1,6 @@
 ---
 title: "Balance competing priorities"
-description: Discover strategies for balancing competing priorities
+description: Discover strategies for balancing competing priorities.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 03/04/2020
@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Balance competing priorities
 
-Embarking on any digital transformation journey acts like a forcing function for stakeholders, across the business and technology teams. The path to success is firmly routed in the organizations ability to balance competing priorities.
+Embarking on any digital transformation journey acts like a forcing function for stakeholders, across the business and technology teams. The path to success is firmly rooted in the organization's ability to balance competing priorities.
 
 Similar to other digital transformations, cloud adoption will expose competing priorities throughout the adoption lifecycle. Like other forms of transformation, the ability to find balance in those priorities will have a significant impact on the realization of business value. Balancing these competing priorities will require open (and sometimes difficult) conversations between stakeholders (and at times with individual contributors).
 
@@ -35,8 +35,8 @@ The core objective of the Strategy methodology is to develop alignment amongst s
 
 **Competing priorities:**
 
-- **Depth of justification**: Stakeholders often want a deep financial analysis and full business justification to be comfortable aligning to a strategic direction. Unfortunately, that level of analysis may require an extended time period to allow for data collection and analysis.
-- **Time to business impact**: Conversely, stakeholders are often held accountable for delivering business outcomes within defined time frames. Time consuming analysis and assessment can put those outcomes at risk before the technical work even begins.
+- **Depth of justification:** Stakeholders often want a deep financial analysis and full business justification to be comfortable aligning to a strategic direction. Unfortunately, that level of analysis may require an extended time period to allow for data collection and analysis.
+- **Time to business impact:** Conversely, stakeholders are often held accountable for delivering business outcomes within defined time frames. Time consuming analysis and assessment can put those outcomes at risk before the technical work even begins.
 
 **Minimum scope:** Finding this balance requires discussions amongst stakeholders early in the process. The Strategy methodology suggests limiting the scope of alignment during this early effort. In the suggested approach, stakeholders focus on aligning around a set of core motivations, measurable outcomes, and a high-level business justification. It is suggested that stakeholders then quickly committing to a small number of initial projects or pilots to drive required learning opportunities.
 
@@ -132,3 +132,10 @@ The competing priorities throughout this article are reflective of IT's drive to
 **Minimum scope:** Most organizations will go through a natural set of evolutions over time. The Organize methodology outlines the most common series of evolutions. The suggested guidance is for teams to strive to move towards a Cloud Center of Excellence structure to deliver delegated control approaches.
 
 **Expanded scope example:** There are many situations that would trigger a need for centralized control. Third-party compliance requirements and temporary security exposure are two examples of triggers for centralized control. In these situations, there is commonly a need to establish limiting policies and rigid, fixed controls. However, to enable innovation and adoption to continue, it is encouraged that central IT teams deliver those controls based on criticality and sensitivity of each workload. Providing environments with less control but a reduced scope or risk profile, allows for flexibility even when control is required.
+
+## Next steps
+
+Learn to [balance migration, innovation, and experimentation](./balance-the-portfolio.md) to maximize the value your cloud migration efforts.
+
+> [!div class="nextstepaction"]
+> [Balance the portfolio](./balance-the-portfolio.md)

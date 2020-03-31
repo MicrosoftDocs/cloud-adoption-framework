@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Align assets to prioritized workloads
 
-Workload is a conceptual description of a collection of assets: VMs, applications, and data sources. The previous article, [Prioritize and define workloads](./workloads.md), gave guidance for collecting the data that will define the workload. Before migration, a few of the technical inputs in that list require additional validation. This article helps with validation of the following inputs:
+Workload is a conceptual description of a collection of assets: VMs, applications, and data sources. The previous article, [Define and prioritize](./workloads.md), provided guidance for collecting the data that will define the workload. Before migration, a few of the technical inputs in that list require additional validation. This article helps with validation of the following inputs:
 
 - **Applications:** List any applications included in this workload.
 - **VMs and servers:** List any VMs or servers included in the workload.
