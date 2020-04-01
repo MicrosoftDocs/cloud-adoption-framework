@@ -13,15 +13,20 @@ ms.subservice: overview
 
 Proper alignment of business and IT stakeholders can help your organization overcome migration roadblocks and accelerate migration efforts. This article provides recommended steps for stakeholder alignment, migration planning, deploying a landing zone, and migrating the first 10 workloads. It can also help you with long-term success provided by proper governance and management.
 
-The technical effort required to migrate workloads is relatively straight forward. It is also iterative: assess your workloads, deploy your workloads, and then release to production. Cloud migration tools make it possible to migrate all VMs in a data center at once, however, this article focuses on migrating your first 10 workloads, and implementing an iterative process that reduces risk and the impact of change.
-
-Efficient completion of the migration process is important. But, strategic migration readiness will have an even bigger impact on the timelines and successful completion of the overall migration. Accelerating adoption means addressing the steps required to support the cloud adoption team during migration.
-
 Use this guide to reduce the amount of materials and the processes required to align an overall migration effort. This process utilizes the sections of the Cloud Adoption Framework that are highlighted in the following illustration.
 
 ![Getting Started with Migration in Azure](../_images/getting-started/migration-getting-started-map.png)
 
 If your migration scenario is atypical, you can get a personalized assessment of your organizations migration readiness, by using the Strategic Migration and Readiness Tool or [SMART Assessment](/assessments/?id=Strategic-Migration-Assessment) to identify the guidance that best aligns to your current needs.
+
+## Iterative migration efforts
+
+The technical effort and process required to migrate workloads is relatively straight forward. Efficient completion of the migration process is important. But, strategic migration readiness will have an even bigger impact on the timelines and successful completion of the overall migration.
+
+Accelerating adoption means addressing the steps required to support the cloud adoption team during migration. To illustrate that importance, migration is listed as step 10 in this article. In reality, the cloud adoption team will likely begin migrations in parallel to many of the steps in this article.
+
+> [!WARNING]
+> Steps 1-9 below are meant to support migration efforts & accelerate adoption. They should not be viewed as blockers.
 
 ## Step 1: Create a business strategy
 
@@ -190,7 +195,7 @@ The technical effort required to migrate your first 10 workloads is relatively s
 
 ![Phases of iterative migration efforts - Assess, Deploy, Release](../_images/migrate/methodology-effort-only.png)
 
-Cloud migration tools make it possible to migrate all VMs in a data center in one pass (or iteration). However, it’s more common to migrate a smaller number of workloads during each iteration. Breaking up the migration into smaller waves or releases requires more planning but reduces technical risks and the impact of organizational change management.
+Cloud migration tools make it possible to migrate all VMs in a data center in one pass (or iteration). However, it's more common to migrate a smaller number of workloads during each iteration. Breaking up the migration into smaller waves or releases requires more planning but reduces technical risks and the impact of organizational change management.
 
 With each iteration, the cloud adoption team will get better at migrating workloads. The following steps will start the technical team on this maturity curve:
 

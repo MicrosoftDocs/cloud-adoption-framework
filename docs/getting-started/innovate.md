@@ -15,11 +15,11 @@ Creating new products and services in the cloud requires a different approach th
 
 ## Get started
 
-Innovation isn't the right adoption path for every workload. An innovation path typically requires a larger investment in custom code and data management than other paths. Innovation also takes longer than migration or other forms of modernization. This process utilizes the sections of the Cloud Adoption Framework that are highlighted in the following illustration.
+Innovation isn't the right adoption path for every workload. An innovation path typically requires a larger investment in custom code and data management than other paths. Innovation also takes longer than migration or other forms of modernization. This process utilizes the sections of the Cloud Adoption Framework that are highlighted in the following illustration. While innovation is less predictable than a standard migration, it still fits within the context of the broader cloud adoption plan.
 
 Modify the baseline journey, highlighting the parts that are used in this scenario.  
 
-![Getting Started with title](../_images/getting-started/ caf-baseline-journey.png)
+![Getting Started with title](../_images/getting-started/caf-baseline-journey.png)
 
 ## Define strategy
 
