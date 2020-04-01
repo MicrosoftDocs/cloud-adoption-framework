@@ -66,7 +66,7 @@ function Test-ExternalLinks([string] $tocFile = '')
 
             if ($result -ne 200)
             {
-                Write-Host "FAILED: $result - $uri"
+                Write-Host "RESULT: $result - $uri"
                 $count++
             }       
         }
@@ -94,7 +94,7 @@ function Test-PageLinks([string] $filePath)
 
             if ($result -ne 200)
             {
-                Write-Host "FAILED: $result - $uri"
+                Write-Host "RESULT: $result - $uri"
                 $count++
             }       
         }
