@@ -40,13 +40,13 @@ In addition to the high-level accountability, there are actions that an individu
   - A member of the cloud strategy team should carry final responsibility for this activity, under the direction of the cloud adoption team.
 - **Stakeholder alignment.** The team aligns expectations and priorities with internal stakeholders, identifying success criteria for the migration. What does success look like post-migration?
 - **Refined rationalization.** Evaluate the initial assumptions regarding rationalization. Should a different [rationalization approach](../../../digital-estate/rationalize.md) be used to migrate this specific workload?
-- **Modernization decisions.** Regardless of the rationalization decision, should various assets in the workload be modernized to leverage PaaS-based solutions?
+- **Modernization decisions.** Regardless of the rationalization decision, should various assets in the workload be modernized to use PaaS-based solutions?
 - **Cost.** The cost of the target architecture has been estimated, and the overall budget has been adjusted.
 - **Migration support.** The team has decided how the technical work of the migration will be completed, including decisions regarding partner or Microsoft support.
 - **Evaluation.** The workload is evaluated for compatibility and dependencies.
   - This activity should be assigned to a subject matter expert who is familiar with the architecture and operations of the candidate workload.
 - **Architect.** The team has agreed on the final state architecture for the migrated workload.
-- **Migration tooling.** Depending on modernization and architecture approaches, a variety of migration tools could be used to automate the migration. Based on the proposed architecture, will this migration leverage the best [migration tools](../../../decision-guides/migrate-decision-guide/index.md)?
+- **Migration tooling.** Depending on modernization and architecture approaches, a variety of migration tools could be used to automate the migration. Based on the proposed architecture, will this migration use the best [migration tools](../../../decision-guides/migrate-decision-guide/index.md)?
 - **Backlog alignment.** The cloud adoption team reviews requirements and commits to the migration of the candidate workload. After commitment, the release backlog and iteration backlog are to be updated accordingly.
 - **Work breakdown structure or work-back schedule.** The team establishes a schedule of major milestones identifying goals for when planning, implementation, and review processes are completed.
 - **Final approval.** Any necessary approvers have reviewed the plan and have signed off on the approach to migrate the asset.

@@ -54,7 +54,7 @@ The following tasks are typically executed regularly:
 - Monitor adoption plans and progress against the [prioritized migration backlog](../migrate/migration-considerations/assess/release-iteration-backlog.md).
 - Identify and prioritize platform changes that are required to support the migration backlog.
 - Act as an intermediary or translation layer between cloud adoption needs and existing IT teams.
-- Leverage existing IT teams to accelerate platform capabilities and enable adoption.
+- Take advantage of existing IT teams to accelerate platform capabilities and enable adoption.
 
 ### Technical tasks
 

@@ -82,7 +82,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Trends and potential exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tooling used in the cloud.
 
-**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tooling, and update policy to remediate any new risks. Leverage [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) and [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) to gain actionable insights on emerging threats specific to your deployments.
+**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tooling, and update policy to remediate any new risks. Use [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) and [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) to gain actionable insights on emerging threats specific to your deployments.
 
 ## Next steps
 
