@@ -125,7 +125,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Review onboarding, offboarding, and credential update processes.
 - Investigate increasing levels of automation and communication between identity access management (IAM) modules.
 - Consider implementing a development security operations (DevSecOps) approach.
-- Carry out an impact analysis to gauge results on costs, security, and user adoption.
+- Conduct an impact analysis to gauge results on costs, security, and user adoption.
 - Periodically produce an impact report that shows the changes in metrics created by the system and estimate the business impacts of the [Hybrid Identity Strategy](../../decision-guides/identity/index.md).
 - Establish integrated monitoring recommended by the [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro).
 

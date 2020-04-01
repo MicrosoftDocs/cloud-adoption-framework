@@ -72,7 +72,7 @@ The following exercises will help guide the process of creating a landing zone t
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Establish teams</h3>
-                            Define the teams that will be providing various cloud capabilities. A number of best practice options are listed for reference.
+                            Define the teams that will be providing various cloud capabilities. Multiple best practice options are listed for reference.
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@ The following exercises will help guide the process of creating a landing zone t
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>RACI matrix</h3>
-                            Clearly defined roles are an important aspect of any operating model. Leverage the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model.
+                            Clearly defined roles are an important aspect of any operating model. Use the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model.
                         </div>
                     </div>
                 </div>

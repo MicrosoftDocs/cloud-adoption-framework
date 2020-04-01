@@ -14,6 +14,21 @@ function Test-AllCasings(
     return $count
 }
 
+function Test-AllMatches(
+    [System.IO.FileInfo[]] $files,
+    [string[]] $expressions
+)
+{
+    $count = 0
+    
+    foreach ($file in $files)
+    {
+        $result = Test-Match $file $expressions
+        $count += $result
+    }
+
+    return $count
+}
 function Test-Casing(
     [System.IO.FileInfo] $file, 
     [string[]] $expressions)
@@ -23,18 +38,41 @@ function Test-Casing(
 
     foreach ($expression in $expressions) {
         
-        $regex = "(?i)$expression"
+        if ($expression.Trim().Length -gt 0) {
 
-        if ($regex.Trim().Length -gt 0) {
+            $regex = "(?i)$expression"
 
             foreach ($match in ([regex]$regex).Matches($text)) {   
             
-                $regexHash[$regex] += 1
-                Write-Host $markdownFile.FullName
-            
-                $count++
+                if (-not ($match.Value -clike $expression))
+                {
+                    write-host "Case mismatch '$($match.Value)' in $($file.FullName)"
+                    $count++
+                }
+            }
+        }
+    }
 
-                # $outStream.WriteLine("{0},{1}",$match.Value, $markdownFile.FullName )  
+    return $count
+}
+
+function Test-Match(
+    [System.IO.FileInfo] $file, 
+    [string[]] $expressions)
+{
+    $count = 0
+    $text = Get-Content -Path $file.FullName -Raw
+
+    foreach ($expression in $expressions) {
+        
+        if ($expression.Trim().Length -gt 0) {
+
+            $regex = $expression
+
+            foreach ($match in ([regex]$regex).Matches($text)) {   
+            
+                write-host "Match '$($match.Value)' found in $($file.FullName)"
+                $count++
             }
         }
     }

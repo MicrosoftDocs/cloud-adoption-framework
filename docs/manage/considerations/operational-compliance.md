@@ -49,7 +49,7 @@ Any cloud management baseline should include a means of scheduling, controlling,
 
 As an enhanced baseline for cloud management, some workloads may benefit from automated remediation. When a workload commonly encounters issues that can't be resolved through code or architectural changes, automating remediation can help reduce the burden of cloud management and increase user satisfaction.
 
-Many would argue that any issue that's common enough to automate should be resolved through resolution of technical debt. When a long-term resolution is prudent, it should be the default option. However, a number of business scenarios make it difficult to justify large investments in the resolution of technical debt. When such a resolution can't be justified, but remediation is a common and costly burden, automated remediation is the next best solution.
+Many would argue that any issue that's common enough to automate should be resolved through resolution of technical debt. When a long-term resolution is prudent, it should be the default option. However, some business scenarios make it difficult to justify large investments in the resolution of technical debt. When such a resolution can't be justified, but remediation is a common and costly burden, automated remediation is the next best solution.
 
 ## Next steps
 

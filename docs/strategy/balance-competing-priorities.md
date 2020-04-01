@@ -31,16 +31,16 @@ At times, ambiguity can be scarier (or more dangerous) than false assumptions. W
 
 ## Balance during Strategy
 
-The core objective of the Strategy methodology is to develop alignment amongst stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment amongst stakeholders creates a common set competing priorities: **Depth of justification** versus **Time to business impact**.
+The core objective of the Strategy methodology is to develop alignment between stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment between stakeholders creates a common set competing priorities: **Depth of justification** versus **Time to business impact**.
 
 **Competing priorities:**
 
 - **Depth of justification:** Stakeholders often want a deep financial analysis and full business justification to be comfortable aligning to a strategic direction. Unfortunately, that level of analysis may require an extended time period to allow for data collection and analysis.
 - **Time to business impact:** Conversely, stakeholders are often held accountable for delivering business outcomes within defined time frames. Time consuming analysis and assessment can put those outcomes at risk before the technical work even begins.
 
-**Minimum scope:** Finding this balance requires discussions amongst stakeholders early in the process. The Strategy methodology suggests limiting the scope of alignment during this early effort. In the suggested approach, stakeholders focus on aligning around a set of core motivations, measurable outcomes, and a high-level business justification. It is suggested that stakeholders then quickly committing to a small number of initial projects or pilots to drive required learning opportunities.
+**Minimum scope:** Finding this balance requires discussions between stakeholders early in the process. The Strategy methodology suggests limiting the scope of alignment during this early effort. In the suggested approach, stakeholders focus on aligning around a set of core motivations, measurable outcomes, and a high-level business justification. It is suggested that stakeholders then quickly committing to a small number of initial projects or pilots to drive required learning opportunities.
 
-**Expanded scope example:** If the initial business analysis indicates a high risk of negatively impacting the business, then stakeholders may need to slow down and more cautiously evaluate a deeper analysis during business justification.
+**Expanded scope example:** If the initial business analysis indicates a high risk of negatively affecting the business, then stakeholders may need to slow down and more cautiously evaluate a deeper analysis during business justification.
 
 ## Balance during Plan
 
@@ -51,13 +51,13 @@ Similar to the Strategy priorities, during planning there is a need to balance: 
 - **Depth of initial planning** regarding technical implementation in the cloud often contains a high number of assumptions. Especially when the team has skill gaps, the environment suffers from discovery gaps, or the workloads don't have clearly defined architectural end-states. All of these assumptions are common in detailed cloud adoption plans. Experimentation, pilots, and qualitative analysis are required to remove these assumptions.
 - **Delayed technical decisions** assume that the later a technical decision can be made, the more accurate that decision will be. Following principles of agile product planning will help delay technical decisions, allowing them to happen at the right time with sufficient information. However, this approach results in a much higher degree of ambiguity in the initial plan.
 
-**Minimum scope:** Agile product development approaches are suggested to drive prompt action within manageable plans. The Plan methodology recommends the following steps to achieve this balance. Inventory the full digital estate using automated discovery tools, but use incremental rationalization to plan as far as the next 1-3 months of work. Ensure proper org alignment to move quickly. Create a skills readiness plan for the assigned team. Leverage the Cloud adoption plan template to quickly deploy an initial backlog.
+**Minimum scope:** Agile product development approaches are suggested to drive prompt action within manageable plans. The Plan methodology recommends the following steps to achieve this balance. Inventory the full digital estate using automated discovery tools, but use incremental rationalization to plan as far as the next 1-3 months of work. Ensure proper org alignment to move quickly. Create a skills readiness plan for the assigned team. Use the cloud adoption plan template to quickly deploy an initial backlog.
 
 **Expanded scope example:** At times, delivery of a cloud adoption plan may be responding to a time-sensitive or high-impact business event. When success requires the movement of a high-number of assets in a fixed period of time, the steps above are often followed with a deeper planning effort. The key to success in these scenarios, is to plan enough to get going and then plan for the full engagement. This approach reduces the likelihood of planning blocking business outcomes.
 
 ## Balance during Ready
 
-When adoption teams are preparing for their first steps into the cloud, there are often competing priorities between Time to adoption and Long-term operations. The team may struggle with being well suited to deliver on the task at hand vs being well managed. This struggle is necessary in traditional IT environments, where the act of developing a platform requires physical assets and acquisition cycles. However, when the entire IT platform is defined in code, traditional development tactics (like refactoring) reduce the need to be well managed from the beginning.
+When adoption teams are preparing for their first steps into the cloud, there are often competing priorities between Time to adoption and Long-term operations. The team may struggle with being well suited to deliver on the task at hand versus being well managed. This struggle is necessary in traditional IT environments, where the act of developing a platform requires physical assets and acquisition cycles. However, when the entire IT platform is defined in code, traditional development tactics (like refactoring) reduce the need to be well managed from the beginning.
 
 **Competing priorities:**
 
@@ -70,7 +70,7 @@ When adoption teams are preparing for their first steps into the cloud, there ar
 
 ## Balance during Migrate
 
-During Migration efforts, it is common for adoption teams to assume that workloads will be rehosted in the cloud in their current "as-is" configuration. This directly competes with a forward looking view to rearchitect every workload to better leverage cloud capabilities. Sadly, the two are not mutually exclusive and can be complimentary when managed through a common process.
+During Migration efforts, it is common for adoption teams to assume that workloads will be rehosted in the cloud in their current "as-is" configuration. This directly competes with a forward-looking view to rearchitect every workload to better take advantage of cloud capabilities. Sadly, the two are not mutually exclusive and can be complimentary when managed through a common process.
 
 **Competing priorities:**
 
@@ -79,7 +79,7 @@ During Migration efforts, it is common for adoption teams to assume that workloa
 
 **Minimum scope:** During early-stage planning, use the rehost option for planning, with a clear understanding that this option is an initial business assumption and not a technical decision. In the Migrate methodology, the adoption team would then challenge this assumption for each migrated workload. This methodology follows the steps of Assess, Migrate, Promote for each workload or group or workloads creating a migration factory. During the assess phase, the adoption team evaluates technical fit and architecture of each workload. That assessment effort seldom results in a pure lift and shift approach, because many of the components in the architecture tend to be selected for refactoring and modernization.
 
-**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the Assess phase. In these rearchitecture situations, it is suggested that customers leverage the Azure Architecture Review and Azure Architecture Framework to refine workload requirements during the assessment.
+**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the Assess phase. In these rearchitecture situations, customers should use the Azure Architecture Review and Azure Architecture Framework to refine workload requirements during the assessment.
 
 ## Balance during Innovate
 
@@ -92,7 +92,7 @@ True customer-facing innovation creates common conflicting priorities between th
 
 **Minimum scope:** The innovate methodology illustrates how to integrate strategy and plans through business value consensus. The guide then introduces cloud-native tools that can accelerate each discipline of innovation, accompanying best practices for implementation. Finally the process improvements section demonstrates approaches to building customer empathy while respecting plans and strategies across the cloud adoption journey. This approach focuses on delivering innovation with the use of as little technology as is possible.
 
-**Expanded scope example:** At times, an innovation may be dependent on mission-critical of high-sensitivity workloads. When the "customer" is an internal user, the development effort may be both mission-critical and high-sensitivity during the earliest of iterations. For these scenarios, it is advised that adoption teams leverage Azure Architecture Review and Azure Architecture Framework to evaluate advanced architectural design early in the process.
+**Expanded scope example:** At times, an innovation may be dependent on mission-critical of high-sensitivity workloads. When the "customer" is an internal user, the development effort may be both mission-critical and high-sensitivity during the earliest of iterations. For these scenarios, adoption teams should use Azure Architecture Review and Azure Architecture Framework to evaluate advanced architectural design early in the process.
 
 ## Balance during Govern
 
@@ -113,12 +113,12 @@ The IT business model regarding operations management has been continuously evol
 
 **Competing priorities:**
 
-- Broad investments: Investing equally in outage avoidance, rapid recovery, and monitoring across the environment is the traditional view of operations management. This approach can be costly and at times duplication of the supporting products made available by the cloud vendor.
-- No Ops/Low Ops: Leverage cloud-native operations tools, to minimize repetitive and recurring tasks previously delivered by full-time employees. Reducing these operational dependencies in the operations management model frees those employees to drive more value. Alone, this approach can lead to subpar operations support.
+- **Broad investments:** Investing equally in outage avoidance, rapid recovery, and monitoring across the environment is the traditional view of operations management. This approach can be costly and at times duplication of the supporting products made available by the cloud vendor.
+- **No Ops and Low Ops:** Use cloud-native operations tools to minimize repetitive and recurring tasks previously delivered by full-time employees. Reducing these operational dependencies in the operations management model frees those employees to drive more value. Alone, this approach can lead to subpar operations support.
 
 **Minimum scope:** The Manage methodology suggests establishing a cloud-native, no-ops management baseline. Acknowledging that the no ops baseline will not meet all business needs, work with the business to define commitments and better align investments. Expand the baseline to meet common needs for all workloads. Then enable platform teams or specific workload teams to maintain well-managed solutions within a well-managed environment.
 
-**Expanded scope example:** In most environments, a small percentage of workloads whose business value justifies deep investments in operations from IT. In those scenarios, the IT team may want to leverage Azure Architecture Review and Azure Architecture Framework to guide deeper operations.
+**Expanded scope example:** In most environments, a small percentage of workloads whose business value justifies deep investments in operations from IT. In those scenarios, the IT team might want to use Azure Architecture Review and Azure Architecture Framework to guide deeper operations.
 
 ## Balance during Organize
 

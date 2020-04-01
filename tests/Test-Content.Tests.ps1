@@ -13,22 +13,71 @@ Describe "Test-Content" -Tags "Content" {
     }
 }
 
-# Describe "Test-Casing" -Tag "Content" {
+Describe "Test-Casing" -Tag "Content" {
 
-#     # It "Has no invalid compound words" {
+    # It "Has no invalid compound words" {
 
-#     # }
+    # }
 
-#     It "Known phrases are cased properly" {
+    It "Known phrases are cased properly" {
         
-#         $expressions = @(
-#             "Next steps"
-#             #"management groups",
-#             #"role-based"
-#         )
+        $expressions = @(
+            "ext steps"
+            "anagement groups",
+            "ole-based",
+            "GitHub"
+        )
 
-#         # Test-AllCasings $files $expressions
-#         $file = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\reference\networking-vdc.md"
-#         Test-Casing $file $expressions
-#     }
-# }
+        # $file = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\reference\networking-vdc.md"
+        # Test-Casing $file $expressions | Should -Be 0
+        Test-AllCasings $files $expressions | Should -Be 0
+    }
+}
+
+Describe "Test-CompoundWords" -Tag "Content" {
+
+    # It "Has no invalid compound words" {
+
+    # }
+
+    It "No invalid compound words exist" {
+        
+        $expressions = @(
+            "a number of",
+            "ad-hoc",
+            "business'\b",
+            "carry out",
+            "check list",
+            "life cycle",
+            "multi-(?!factor|model|shard)",
+            "off-site",
+            "on going",
+            "on-going",
+            "on-premise\b",
+            "skillset"
+        )
+
+        Test-AllMatches $files $expressions | Should -Be 0
+    }
+
+    It "No invalid acronyms exist" {
+        
+        $expressions = @(
+            "CAF",
+            "MFA"
+        )
+
+        Test-AllMatches $files $expressions | Should -Be 0
+    }
+
+    It "All links are well-formed" {
+        
+        $expressions = @(
+            "\(\/",
+            "\/\)",
+            "``` ?[A-Z]"
+        )
+
+        Test-AllMatches $files $expressions | Should -Be 0
+    }
+}

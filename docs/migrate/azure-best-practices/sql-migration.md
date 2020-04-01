@@ -17,4 +17,4 @@ Migration of an entire SQL Server to Azure may accelerate the standard migration
 
 ## Migration best practices
 
-The table of contents to the left outlines a number of best practices around Microsoft which can guide the execution of SQL Server Migration using Azure Database Migration Guide, Azure Database Migration Service (DMS), or other tools. Bookmark this page for quick reference to the full list of best practices.
+The table of contents on the left outlines best practices that can guide the execution of SQL Server Migration using Azure Database Migration Guide, Azure Database Migration Service (DMS), or other tools. Bookmark this page for quick reference to the full list of best practices.
