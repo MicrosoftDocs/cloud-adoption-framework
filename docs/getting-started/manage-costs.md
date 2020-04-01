@@ -33,14 +33,16 @@ Involved teams
 Deliverables
 
 - Establish corporate policies and technical implementations to govern cost across the enterprise.
-- Establish recurring processes to monitor underutilized/overprovisioned resources and any unplanned expenses
-- Establish reactive processes to work with workload owners to optimize spend
+- Establish forecasts and budgets based on the cloud adoption plan.
+- Establish recurring processes to monitor underutilized/overprovisioned resources and any unplanned expenses.
+- Guide an architectural review with workload owners for any workloads which can be cost optimized or ones which have exceeded established budgets.
 
 Guidance to support deliverable completion
 
 - **Build governance capabilities:** If you are new to cloud governance, complete the [Get started with cloud governance guide](../govern/index.md). That guide will help establish a set of baseline governance processes and will demonstrate the cost management discipline within governance.
 - **Improve cost management disciplines:** Step four of the guide above focuses on implementing cost management practices that will drive optimization of cost across the enterprise. For additional guidance on integrating cost management into governance, see the [full article](../govern/guides/complex/cost-management-improvement.md) or jump to the [implementation guidance](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section for a list of technical suggestions.
 - **Go deep on cost management in governance:** For deeper guidance, the [cost management discipline](../govern/cost-management/index.md) articles will drive clarity regarding cost optimization topics around [business risks](../govern/cost-management/business-risks.md), [indicators & metrics](../govern/cost-management/metrics-tolerance.md), [policy adherence processes](../govern/cost-management/compliance-processes.md), [iterative improvements](../govern/cost-management/discipline-improvement.md), [Azure tools](../govern/cost-management/toolchain.md), and a [template for recording decisions](../govern/cost-management/template.md).
+- **Guide architecture review:** Trade-offs at the workload level may be needed to implement some cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the owner of a specific workload.
 
 ## Steps to Scale cost optimization
 
