@@ -17,7 +17,7 @@ Creating new products and services in the cloud requires a different approach th
 
 This guide utilizes the sections of the Cloud Adoption Framework that are highlighted in the following illustration. While innovation is less predictable than a standard migration, it still fits within the context of the broader cloud adoption plan.  This guide will help enterprises provide the support needed to innovate and structure required to create a balanced portfolio throughout cloud adoption.
 
-![Getting Started with accelerating innovation in the cloud](../_images/getting-started/innovation-getting-started.png)
+![Getting Started with accelerating innovation in the cloud](../_images/getting-started/innovation-getting-started-map.png)
 
 ## Step 1: Document the business strategy
 
@@ -53,7 +53,7 @@ Deliverable
 
 Guidance to support deliverable completion
 
-- [Business justification](../strategy/cloud-migration-business-case): Before evaluating each opportunity to innovate in the cloud, a high level business justification should be completed to establish stakeholder alignment regarding the overall adoption plan.
+- [Business justification](../strategy/cloud-migration-business-case.md): Before evaluating each opportunity to innovate in the cloud, a high level business justification should be completed to establish stakeholder alignment regarding the overall adoption plan.
 - [Business value consensus](../innovate/business-value.md): Quantifying the value of an innovation can be difficult early in the process. The exercise in this article can aid in evaluating alignment on the business value of a specific innovation effort.
 
 ## Step 3: Gather data and analyze assets and workloads

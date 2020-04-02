@@ -34,9 +34,9 @@ items:
       - name: Address security early and often
         href: getting-started/security-roadmap.md  
       - name: Right-size availability and resiliency (manage+AAR)
-        href: getting-started/operations-roadmap.md  
+        href: getting-started/governance-roadmap.md  
       - name: Manage operational performance (manage+AAR)
-        href: getting-started/operations-roadmap.md  
+        href: getting-started/governance-roadmap.md  
     - name: Improve team processes
       items:
       - name: Overview
