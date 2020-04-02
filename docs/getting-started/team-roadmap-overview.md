@@ -1,5 +1,5 @@
 ---
-title: "Quickstarts for cloud adoption teams"
+title: "Quickstart guides for cloud adoption teams"
 description: Use these quickstart guides to understand scope and deliverables for the teams responsible for your cloud adoption. These quickstart guides provide a roadmap through the Cloud Adoption Framework. 
 author: JanetCThomas
 ms.author: janet

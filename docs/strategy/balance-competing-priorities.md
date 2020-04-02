@@ -31,14 +31,14 @@ At times, ambiguity can be scarier (or more dangerous) than false assumptions. W
 
 ## Balance during Strategy
 
-The core objective of the Strategy methodology is to develop alignment amongst stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment amongst stakeholders creates a common set competing priorities: **Depth of justification** versus **Time to business impact**.
+The core objective of the Strategy methodology is to develop alignment between stakeholders. Once defined, that aligned strategic position will drive behaviors throughout each of the methodologies to ensure that technical decisions align desired business outcomes. Fostering alignment between stakeholders creates a common set competing priorities: **Depth of justification** versus **Time to business impact**.
 
 **Competing priorities:**
 
 - **Depth of justification**: Stakeholders often want a deep financial analysis and full business justification to be comfortable aligning to a strategic direction. Unfortunately, that level of analysis may require an extended time period to allow for data collection and analysis.
 - **Time to business impact**: Conversely, stakeholders are often held accountable for delivering business outcomes within defined time frames. Time consuming analysis and assessment can put those outcomes at risk before the technical work even begins.
 
-**Minimum scope:** Finding this balance requires discussions amongst stakeholders early in the process. The Strategy methodology suggests limiting the scope of alignment during this early effort. In the suggested approach, stakeholders focus on aligning around a set of core motivations, measurable outcomes, and a high-level business justification. It is suggested that stakeholders then quickly committing to a small number of initial projects or pilots to drive required learning opportunities.
+**Minimum scope:** Finding this balance requires stakeholder discussions early in the process. The Strategy methodology suggests limiting the scope of alignment during this early effort. In the suggested approach, stakeholders focus on aligning around a set of core motivations, measurable outcomes, and a high-level business justification. It is suggested that stakeholders then quickly committing to a small number of initial projects or pilots to drive required learning opportunities.
 
 **Expanded scope example:** If the initial business analysis indicates a high risk of negatively impacting the business, then stakeholders may need to slow down and more cautiously evaluate a deeper analysis during business justification.
 
