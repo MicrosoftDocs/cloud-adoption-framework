@@ -32,9 +32,10 @@ Involved teams
 
 Deliverables
 
+- Properly tag workloads and resources.
 - Establish corporate policies and technical implementations to govern cost across the enterprise.
 - Establish forecasts and budgets based on the cloud adoption plan.
-- Establish recurring processes to monitor underutilized/overprovisioned resources and any unplanned expenses.
+- Establish recurring processes to monitor, shut down, or resize underutilized resources.
 - Guide an architectural review with workload owners for any workloads which can be cost optimized or ones which have exceeded established budgets.
 
 Guidance to support deliverable completion
