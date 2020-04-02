@@ -37,23 +37,24 @@ Deliverables
 
 Guidance to support deliverable completion
 
-- Ensure all workloads and resources follow [proper naming and tagging conventions](/ready/azure-best-practices/naming-and-tagging.md) and [enforce tagging conventions using Azure policy](/azure/governance/policy/tutorials/govern-tags.md).
-- Apply the [cost management best practices](../cost-management/best-practices.md) to guide analysis and improvements across the enterprise. The following are a few of the most impactful governance practices from that article:
-
-- Establish corporate policies and technical implementations to govern cost across the enterprise.
-- Establish monitoring, forecasts, and budgets to ensure costs align to the cloud adoption plan and performance requirements.
-- Establish monthly processes to monitor, shut down, or resize underutilized resources.
-- Establish quarterly schedule to review/align licensing-based cost savings.
+- Ensure all workloads and resources follow **[proper naming and tagging conventions](/ready/azure-best-practices/naming-and-tagging.md)** and [enforce tagging conventions using Azure policy](/azure/governance/policy/tutorials/govern-tags.md).
+- On a regular basis, review and apply the **[cost management best practices](../cost-management/best-practices.md)** to guide analysis and improvements across the enterprise. The following are a few of the most impactful governance practices from that article:
+    - Apply [hybrid use benefits](../govern/cost-management/best-practices.md#best-practice-take-advantage-of-azure-hybrid-benefits) to reduce licensing cost.
+    - Align [reserved instances](../govern/cost-management/best-practices.md#best-practice-use-reserved-vm-instances) to reduce resource costs.
+    - [Monitor resource utlization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to resize or pause/stop resources.
+    - Act on [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
+- **Guide an architecture review:** Trade-offs at the workload level may be needed to implement some cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the owner of a specific workload.
 
 The first discipline of cloud governance is cost management, which is a set of corporate policies, processes, and automated controls to monitor cost allocations, identify deviation from budget, and remediate issues which have led to unplanned costs. The following articles will help establish the policies and processes to support your long-term cost management objectives.
 
 - If you are new to cloud governance, establish [governance capabilities](../govern/index.md) using the governance methodology.
 - If you are new to the cost management discipline, consider following the [cost management improvements article](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
-
-
-
-- **Go deep on cost management in governance:** For deeper guidance, the [cost management discipline](../govern/cost-management/index.md) articles will drive clarity regarding cost optimization topics around [business risks](../govern/cost-management/business-risks.md), [indicators & metrics](../govern/cost-management/metrics-tolerance.md), [policy adherence processes](../govern/cost-management/compliance-processes.md), [iterative improvements](../govern/cost-management/discipline-improvement.md), [Azure tools](../govern/cost-management/toolchain.md), and a [template for recording decisions](../govern/cost-management/template.md).
-- **Guide an architecture review:** Trade-offs at the workload level may be needed to implement some cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the owner of a specific workload.
+- To build sound cost management practices, follow the guidance in the [cost management discipline](../govern/cost-management/index.md) to accomplish the following:
+    - Establish corporate policies and technical implementations to govern cost across the enterprise.
+    - Establish monitoring, forecasts, and budgets to ensure costs align to the cloud adoption plan and performance requirements.
+    - Establish monthly processes to monitor, shut down, or resize underutilized resources.
+    - Establish quarterly schedule to review/align licensing-based cost savings.
+    - Understand available Azure tools to act on these processes.
 
 ## Steps to Scale cost optimization
 

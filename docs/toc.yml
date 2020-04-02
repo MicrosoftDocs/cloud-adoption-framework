@@ -1060,7 +1060,7 @@ items:
           href: govern/cost-management/compliance-processes.md
         - name: Improve cost management 
           href: govern/cost-management/discipline-improvement.md
-        - name: Cost management best practices
+        - name: Best practices
           href: govern/cost-management/best-practices.md
         - name: Azure tools for cost management
           href: govern/cost-management/toolchain.md
