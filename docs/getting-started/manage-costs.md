@@ -23,7 +23,7 @@ Governance is the cornerstone of cost optimization within any large enterprise. 
 
 ## Enterprise cost optimization begins with governance
 
-The first discipline of cloud governance is cost management, which is a set of corporate policies, processes, and automated controls to monitor cost allocations, identify deviation from budget, and remediate issues which have led to unplanned costs.
+The cloud governance team is well positioned and equipped to evaluate and act on overspending or unplanned spending through a combination of monitoring spend/performance, reducing resource sizing/spend, and safe termination of unused resources. Enterprise cost optimization starts with this team understanding the tools, processes, and dependencies required to wisely act on cost concerns at an environment level.
 
 Involved teams
 
@@ -32,18 +32,28 @@ Involved teams
 
 Deliverables
 
-- Properly tag workloads and resources.
-- Establish corporate policies and technical implementations to govern cost across the enterprise.
-- Establish monitoring, forecasts, and budgets to ensure costs align to the cloud adoption plan and performance requirements.
-- Establish recurring processes to monitor, shut down, or resize underutilized resources.
-- Guide an architectural review with workload owners for any workloads which can be cost optimized or ones which have exceeded established budgets.
+- On a regular basis, optimize resources across the environment to ensure proper resource sizing and minimize waste.
+- Guide an architectural review with workload owners for any workloads which require architectural change to drive cost optimization.
 
 Guidance to support deliverable completion
 
-- **Build governance capabilities:** If you are new to cloud governance, complete the [Get started with cloud governance guide](../govern/index.md). That guide will help establish a set of baseline governance processes and will demonstrate the cost management discipline within governance.
-- **Improve cost management disciplines:** Step four of the guide above focuses on implementing cost management practices that will drive optimization of cost across the enterprise. For additional guidance on integrating cost management into governance, see the [full article](../govern/guides/complex/cost-management-improvement.md) or jump to the [implementation guidance](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section for a list of technical suggestions.
+- Ensure all workloads and resources follow [proper naming and tagging conventions](/ready/azure-best-practices/naming-and-tagging.md) and [enforce tagging conventions using Azure policy](/azure/governance/policy/tutorials/govern-tags.md).
+- Apply the [cost management best practices](../cost-management/best-practices.md) to guide analysis and improvements across the enterprise. The following are a few of the most impactful governance practices from that article:
+
+- Establish corporate policies and technical implementations to govern cost across the enterprise.
+- Establish monitoring, forecasts, and budgets to ensure costs align to the cloud adoption plan and performance requirements.
+- Establish monthly processes to monitor, shut down, or resize underutilized resources.
+- Establish quarterly schedule to review/align licensing-based cost savings.
+
+The first discipline of cloud governance is cost management, which is a set of corporate policies, processes, and automated controls to monitor cost allocations, identify deviation from budget, and remediate issues which have led to unplanned costs. The following articles will help establish the policies and processes to support your long-term cost management objectives.
+
+- If you are new to cloud governance, establish [governance capabilities](../govern/index.md) using the governance methodology.
+- If you are new to the cost management discipline, consider following the [cost management improvements article](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
+
+
+
 - **Go deep on cost management in governance:** For deeper guidance, the [cost management discipline](../govern/cost-management/index.md) articles will drive clarity regarding cost optimization topics around [business risks](../govern/cost-management/business-risks.md), [indicators & metrics](../govern/cost-management/metrics-tolerance.md), [policy adherence processes](../govern/cost-management/compliance-processes.md), [iterative improvements](../govern/cost-management/discipline-improvement.md), [Azure tools](../govern/cost-management/toolchain.md), and a [template for recording decisions](../govern/cost-management/template.md).
-- **Guide architecture review:** Trade-offs at the workload level may be needed to implement some cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the owner of a specific workload.
+- **Guide an architecture review:** Trade-offs at the workload level may be needed to implement some cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the owner of a specific workload.
 
 ## Steps to Scale cost optimization
 
