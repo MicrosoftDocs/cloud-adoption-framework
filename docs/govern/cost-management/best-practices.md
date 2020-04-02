@@ -35,7 +35,7 @@ To forecast your monthly bill for Azure resources, there are several tools you c
 
 - **Azure pricing calculator:** You select the products you want to estimate, for example VMs and storage. You input costs into the pricing calculator, to build an estimate.
 
- ![Azure pricing calculator](./media/migrate-best-practices-costs/pricing.png)
+ ![Azure pricing calculator](../../migrate/azure-best-practices/media/migrate-best-practices-costs/pricing.png)
     *Azure pricing calculator*
 
 - **Azure Migrate:** To estimate costs, you need to review and account for all the resources required to run your workloads in Azure. To acquire this data, you create inventory of your assets, including servers, VMs, databases, and storage. You can use Azure Migrate to collect this information.
@@ -46,7 +46,7 @@ To forecast your monthly bill for Azure resources, there are several tools you c
   - Compute costs: Using the Azure VM size recommended when you create an assessment, Azure Migrate uses the Billing API to calculate estimated monthly VM costs. The estimation considers the operating system, software assurance, reserved instances, VM uptime, location, and currency settings. It aggregates the cost across all VMs in the assessment, and calculates a total monthly compute cost.
   - Storage cost: Azure Migrate calculates total monthly storage costs by aggregating the storage costs of all VMs in an assessment. You can calculate the monthly storage cost for a specific machine by aggregating the monthly cost of all disks attached to it.
 
-    ![Azure Migrate](./media/migrate-best-practices-costs/assess.png)
+    ![Azure Migrate](../../migrate/azure-best-practices/media/migrate-best-practices-costs/assess.png)
     *Azure Migrate assessment*
 
 **Learn more:**
@@ -162,7 +162,7 @@ Once resources are in production, data can be aggregated and trends analyzed at 
 - Analyze data to generate a budget baseline for Azure resource groups and resources.
 - Identify patterns of use that would allow you to reduce size and/or stop/pause resources to further reduce your costs.
 
-Best practices in this section include using Azure Hybrid benefits and reserved VMs, reduce cloud spending across subscriptions, leveraging Azure Cost Management for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
+Best practices in this section include using Azure Hybrid benefits and reserved VMs, reduce cloud spending across subscriptions, using Azure Cost Management for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
 
 ## Best practice: Take advantage of Azure Hybrid benefits
 
@@ -187,7 +187,7 @@ Using Azure Reserved VM instances, you prepay for a one or three-year term VM in
 - Reservations provide a billing discount, and don't affect the runtime state of your resources.
 - You can cancel reserved instances.
 
-![Reserved instances](./media/migrate-best-practices-costs/reserve.png)
+![Reserved instances](../../migrate/azure-best-practices/media/migrate-best-practices-costs/reserve.png)
 *Azure reserved VMs*
 
 **Learn more:**
@@ -226,7 +226,7 @@ In Cost Management, you can:
   - Email notifications can be sent when budget thresholds are reached.
   - You can export costs management data to Azure storage, for analysis.
 
-    ![Cost Management budget](./media/migrate-best-practices-costs/budget.png)
+    ![Cost Management budget](../../migrate/azure-best-practices/media/migrate-best-practices-costs/budget.png)
     *Azure Cost Management budget*
 
 - **Do a cost analysis:** Get a cost analysis to explore and analyze your organizational costs, to help you understand how costs are accrued, and identify spending trends.
@@ -234,7 +234,7 @@ In Cost Management, you can:
   - You can view cost analysis data for various scopes, including by department, account, subscription or resource group.
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
 
-    ![Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
+    ![Cost Management analysis](../../migrate/azure-best-practices/media/migrate-best-practices-costs/analysis.png)
     *Azure Cost Management analysis*
 - **Get recommendations:** Get Advisor recommendations that show you how you can optimize and improve efficiency.
 
@@ -277,12 +277,11 @@ Often, resource groups are used to represent cost boundaries. Together with this
 
 ## Best practice: Review Azure Advisor recommendations
 
-Azure Advisor cost recommendations identify a number of opportunities to reduce costs. When budgets appear high or utilization appears low, leverage this report to find immediate opportunities to quickly align costs.
+Azure Advisor cost recommendations identify a number of opportunities to reduce costs. When budgets appear high or utilization appears low, use this report to find immediate opportunities to quickly align costs.
 
 **Learn more:**
 
 - [Review Azure Advisor cost recommendations](/azure/advisor/advisor-cost-recommendations) to take immediate actions.
-
 
 ## Best practice: Optimize Azure Monitor retention
 
@@ -355,10 +354,8 @@ After adoption, after a thorough review of these types of tasks you might consid
 
 Review other best practices:
 
-- [Best practices](./migrate-best-practices-security-management.md) for security and management after adoption.
-- [Best practices](./migrate-best-practices-networking.md) for networking after adoption.
-
-## Next steps
+- [Best practices](../../migrate/azure-best-practices/migrate-best-practices-security-management.md) for security and management after adoption.
+- [Best practices](../../migrate/azure-best-practices/migrate-best-practices-networking.md) for networking after adoption.
 
 With an understanding of the best practices, examine the [Cost Management toolchain](./toolchain.md) to identify Azure tools and features to help you execute these best practices.
 
