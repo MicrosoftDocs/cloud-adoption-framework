@@ -41,9 +41,10 @@ The cloud governance team is well positioned and equipped to evaluate and act on
 - On a regular basis, review and apply the **[cost management best practices](../govern/cost-management/best-practices.md)** to guide analysis and improvements across the enterprise. The following are a few of the most impactful governance practices from that article:
     - Apply [hybrid use benefits](../govern/cost-management/best-practices.md#best-practice-take-advantage-of-azure-hybrid-benefits) to reduce licensing cost.
     - Align [reserved instances](../govern/cost-management/best-practices.md#best-practice-use-reserved-vm-instances) to reduce resource costs.
-    - [Monitor resource utlization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to resize or pause/stop resources.
+    - [Monitor resource utilization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to resize or pause/stop resources.
+    - [Reduce non-production costs](../govern/cost-management/best-practices.md#best-practice-reduce-non-production-costs) to resize or pause/stop resources.
     - Act on [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
-- **Guide an architecture review:** Trade-offs at the workload level may be needed to implement some cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the owner of a specific workload.
+- **Guide an architecture review:** Trade-offs at the workload level may be needed to implement effective cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the owner of a specific workload.
 
 The first discipline of cloud governance is cost management, which is a set of corporate policies, processes, and automated controls to monitor cost allocations, identify deviation from budget, and remediate issues which have led to unplanned costs. The following articles will help establish the policies and processes to support your long-term cost management objectives.
 

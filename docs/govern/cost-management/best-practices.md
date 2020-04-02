@@ -13,15 +13,33 @@ ms.subservice: migrate
 
 While delivering the disciplines of governance, cost management is a recurring theme at the enterprise-level. Optimizing and managing costs ensures the long-term success of your Azure environment. It's critical that all teams (such as finance, management, and application development teams) understand associated costs and review them on a recurring basis.
 
-- Before adoption, estimate your cloud spend, with a baseline for monthly, quarterly, and yearly budget targets is critical to success.
-- On a recurring schedule, optimize costs by continually monitor resources across your environment, and adjust planing for future usage patterns.
-
-During both of the exercises above, the goal of the governance team is to identify patterns, resize underutilized resources, and pause/stop unused resources.
-
-This article describes best practices for costing and sizing before and after adoption.
-
 > [!IMPORTANT]
 > The best practices and opinions described in this article are based on Azure platform and service features available at the time of writing. Features and capabilities change over time. Not all recommendations might be applicable for your deployment, so select what works for you.
+
+## General best practices
+
+The following are a few general best practices covered in more depth in the following sections.
+
+- Tagging is critical to all governance: Ensure all workloads and resources follow **[proper naming and tagging conventions](../../ready/azure-best-practices/naming-and-tagging.md)** and [enforce tagging conventions using Azure policy](/azure/governance/policy/tutorials/govern-tags.md).
+- Identify right size opportunities: Review your current resource utilization and performance requirements across the environment.
+- Resize: Modify each resource to use the smallest instance or sku that is able to support the performance requirements of each  resource. ​
+- Horizontal over vertical scale: Using multiple small instances can allow for an easier scaling path that a single larger instance. This allows for scale automation, which creates cost optimization.​
+
+IaaS specific:
+
+- Automate VM shutdown: When a VM isn't in use, automate shutdown. The VM won't be deleted or decommissioned, it will just stop consuming compute & memory costs until it's turned back on.
+- Shutdown & decommission unused resources: Yes, we said it twice. If a resource hasn't been used in more than 90 days & doesn't have a clear uptime requirement, just turn it off. 
+
+PaaS specific:
+
+- Azure app services: Verify production requirements for any Premium app service plans
+- Auto-scale: Enable auto-scale on all app services to allow for a burstable number of smaller VMs.
+
+Storage specific:
+
+- Clean Up Orphan Disk​: Delete unused storage, especially VM storage that is no longer attached to any VMs.
+- Right-size redundancy: If the resource doesn't require a high degree of redundancy, remove geo-redundant storage. Also ensure storage is using 
+
 
 ## Before adoption
 
@@ -208,6 +226,38 @@ To do this, you can use Azure Cost Management APIs. Then, after aggregating data
 - [Learn about](https://docs.microsoft.com/power-bi/desktop-connect-azure-consumption-insights) connecting to Azure Consumption Insights in Power BI Desktop.
 - [Learn how to](https://docs.microsoft.com/azure/billing/billing-manage-access) manage access to billing information for Azure using role-based access control (RBAC).
 
+## Best practice: Monitor resource utilization
+
+In Azure you pay for what you use, when resources are consumed, and you don't pay when they aren't. For VMs, billing occurs when a VM is allocated, and you aren't charged after a VM is deallocated. With this in mind you should monitor VMs in use, and verify VM sizing.
+
+- Continually evaluate your VM workloads to determine baselines.
+- For example, if your workload is used heavily Monday through Friday, 8am to 6pm, but hardly used outside those hours, you could downgrade VMs outside peak times. This might mean changing VM sizes, or using virtual machine scale sets to autoscale VMs up or down.
+- Some companies "snooze", VMs by putting them on a calendar that specifies when they should be available, and when they're not needed.
+- In addition to VM monitoring, you should monitor other networking resources such as ExpressRoute and virtual network gateways for under and over use.
+- You can monitor VM usage using Microsoft tools such as Azure Cost Management, Azure Monitor, and Azure Advisor. Third-party tools are also available.
+
+**Learn more:**
+
+- Get an overview of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) and [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview).
+- [Get](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations) Advisor cost recommendations.
+- Learn how to [optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/toc.json), and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
+- Learn about the [Azure Resource Optimization (ARO) Toolkit](https://github.com/Azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+
+## Best practice: Reduce non-production costs
+
+Development, testing, and quality assurance (QA) environments are needed during development cycles. Unfortunately, it is common for those environments to stay provisioned long after they cease to be useful. A regular review of unused non-production environments can have an immediate impact on costs.
+
+Additionally, consider general cost reductions for any non-production environments:
+
+- Reduce non-production resources to leverage lower cost B series VMs and standard storage.
+- Apply Azure policies to require resource level cost-reductions for any non-production resources.
+
+**Learn more:**
+
+- [Leverage tags](/azure/azure-resource-manager/management/tag-resources) to view identify dev, test, or QA to identify targets for resizing and/or termination.
+- [Auto shutdown VMs](/azure/cost-management-billing/manage/getting-started#consider-cost-cutting-features-like-auto-shutdown-for-vms) sets a nightly termination time for VMs. Using this feature will stop non-production VMs each night, requiring developers to restart those VMs when they are ready to resume development.
+- Encourage development teams to use [Azure DevTest Labs](/azure/lab-services/devtest-lab-overview) to establish their own cost control approaches & avoid impact of the standard auto shutdown timing in the prior step.
+
 ## Best practice: Use Azure Cost Management
 
 Microsoft provides Azure Cost Management to help you track spending:
@@ -245,23 +295,6 @@ In Cost Management, you can:
 - [Learn how to](https://docs.microsoft.com/azure/cost-management/use-reports) use Azure Cost Management reports.
 - [Get a tutorial](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/toc.json) on optimizing costs from recommendations.
 - [Review](https://docs.microsoft.com/rest/api/consumption/budgets) the Azure Consumption API.
-
-## Best practice: Monitor resource utilization
-
-In Azure you pay for what you use, when resources are consumed, and you don't pay when they aren't. For VMs, billing occurs when a VM is allocated, and you aren't charged after a VM is deallocated. With this in mind you should monitor VMs in use, and verify VM sizing.
-
-- Continually evaluate your VM workloads to determine baselines.
-- For example, if your workload is used heavily Monday through Friday, 8am to 6pm, but hardly used outside those hours, you could downgrade VMs outside peak times. This might mean changing VM sizes, or using virtual machine scale sets to autoscale VMs up or down.
-- Some companies "snooze", VMs by putting them on a calendar that specifies when they should be available, and when they're not needed.
-- In addition to VM monitoring, you should monitor other networking resources such as ExpressRoute and virtual network gateways for under and over use.
-- You can monitor VM usage using Microsoft tools such as Azure Cost Management, Azure Monitor, and Azure Advisor. Third-party tools are also available.
-
-**Learn more:**
-
-- Get an overview of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) and [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview).
-- [Get](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations) Advisor cost recommendations.
-- Learn how to [optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/toc.json), and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
-- Learn about the [Azure Resource Optimization (ARO) Toolkit](https://github.com/Azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ## Best practice: Implement resource group budgets
 
