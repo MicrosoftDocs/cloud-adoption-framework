@@ -39,10 +39,11 @@ The cloud governance team is well positioned and equipped to evaluate and act on
 
 - Ensure all workloads and resources follow **[proper naming and tagging conventions](/ready/azure-best-practices/naming-and-tagging.md)** and [enforce tagging conventions using Azure policy](/azure/governance/policy/tutorials/govern-tags.md).
 - On a regular basis, review and apply the **[cost management best practices](../govern/cost-management/best-practices.md)** to guide analysis and improvements across the enterprise. The following are a few of the most impactful governance practices from that article:
+    - Act on [general cost best practices](../govern/cost-management/best-practices.md#general-best-practices) to reduce sizing/cost and stop unused machines.
     - Apply [hybrid use benefits](../govern/cost-management/best-practices.md#best-practice-take-advantage-of-azure-hybrid-benefits) to reduce licensing cost.
     - Align [reserved instances](../govern/cost-management/best-practices.md#best-practice-use-reserved-vm-instances) to reduce resource costs.
-    - [Monitor resource utilization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to resize or pause/stop resources.
-    - [Reduce non-production costs](../govern/cost-management/best-practices.md#best-practice-reduce-non-production-costs) to resize or pause/stop resources.
+    - [Monitor resource utilization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to minimize impact on resource performance.
+    - [Reduce non-production costs](../govern/cost-management/best-practices.md#best-practice-reduce-non-production-costs) through policies to govern non-production environments.
     - Act on [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
 - **Guide an architecture review:** Trade-offs at the workload level may be needed to implement effective cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the owner of a specific workload.
 
