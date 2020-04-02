@@ -14,14 +14,10 @@ A cloud governance team ensure that risks and risk tolerance are properly evalua
 
 ## Prerequisites
 
-<!-- Make Prerequisites the first H2 after the H1. Omit any preliminary text to the list.-->
-<!-- TODO -->
-
-- (Optional) Completion of any required training. Use the language "Completion of (title)" where (title) is the link to the training.
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- First prerequisite - other methodologies that the reader should be knowledgeable about
-- Second prerequisite - tools needed
-- Third prerequisite
+- Review the [Governance](../govern/index.md) methodology
+- Take the [Governance benchmark](../govern/benchmark.md) assessment
+- [Introduction to security in Azure](https://docs.microsoft.com/learn/modules/intro-to-security-in-azure): Learn the basic concepts to protect your infrastructure and data in the cloud. Understand what responsibilities are yours and what Azure handles.
+- Understand how to work across groups to [Manage cost](../organize/cost-conscious-organization.md).
 
 ## Minimum scope
 
@@ -70,15 +66,14 @@ These baseline capabilities help you identify risks related to current and futur
 
 ## Out of scope
 
-<!-- TODO -->
-
-Briefly explain what is out of scope and provide links to more information.
-
-- Additional info item and link
-- Additional info item and link
+As adoption scales, the cloud governance team may struggle to keep pace with innovations. This is especially true if your environment has heavy compliance, operations, or security requirements. If this happens you can shift some responsibilities to an existing IT team to reduce scope for the governance team.
 
 ## What's next
 
 As cloud governance matures, teams are empowered to adopt the cloud at faster paces. Continued cloud adoption efforts tend to trigger maturity in IT operations. Either develop a cloud operations team, or sync with your cloud operations team to ensure governance is a part of operations development.
 
 To learn more about the operations team see, [Cloud operations team](operations-team-quickstart.md).
+
+After you've established an [initial cloud governance foundation](../govern/initial-foundation.md), use these best practices in [Governance foundation improvements](../govern/foundation-improvements.md) to get ahead of your adoption plan and prevent risks.
+
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).

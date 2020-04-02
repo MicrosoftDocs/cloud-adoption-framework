@@ -10,7 +10,7 @@ ms.date: 04/04/2020
 
 # Quickstart: Cloud strategy team
 
-Create a cloud strategy team to defined motivations and business outcomes, and to validate and maintain alignment between business priorities and cloud adoption efforts. When the business outcomes impact business functions, the strategy team should include business leaders from across the organization. The goal of the cloud strategy team is to produce tangible business results that are enabled by cloud technologies. Overall, this team ensures that cloud adoption efforts progress in alignment with business outcomes.
+Create a cloud strategy team to defined motivations and business outcomes, and to validate and maintain alignment between business priorities and cloud adoption efforts. When the business outcomes impact business functions, the strategy team should include business leaders from across the organization. The goal of the cloud strategy team is to produce tangible business results that are enabled by cloud technologies. Overall, this team ensures that cloud adoption efforts progress in alignment with business outcomes. Whenever possible, business outcomes and the cloud strategy team should both be defined early in the process.
 
 ## Prerequisites
 
@@ -85,7 +85,6 @@ The CEO and CIO often assign this team to drive change across various different 
 ## Out of scope
 
 <!-- TODO -->
-
 Briefly explain what is out of scope and provide links to more information.
 
 - Additional info item and link
@@ -95,6 +94,6 @@ Briefly explain what is out of scope and provide links to more information.
 
 Strategy and planning are important. However, nothing is actionable without cloud adoption capabilities. Understand the role of this important capability before beginning adoption efforts.
 
-Align your strategy with the cloud adoption capabilities by working with the migration team.
+Align your strategy with the cloud adoption capabilities by working with the migration team. To learn more about the migration team see the [Cloud migration team](migration-team-quickstart.md).
 
-To learn more about the migration team see the [Cloud migration team](migration-team-quickstart.md).
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
