@@ -70,7 +70,7 @@ Each workload can consist of many individual resources and services. Incorporati
 
 The following list provides recommended Azure resource type prefixes to use when you define your naming conventions.
 
-<!-- cSpell:disable -->
+<!-- cSpell:ignore apim snet traf vmss stvm arcm ntfns sqldb psql sqldw sqlstrdb ssimp srch hbase appi migr -->
 
 ### General
 

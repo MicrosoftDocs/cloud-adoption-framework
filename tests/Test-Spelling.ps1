@@ -29,13 +29,13 @@ function Get-ProcessStream
     $output
 }
 
-function Test-Spelling([string] $testPath, [string] $folder)
+function Test-Spelling([string] $docsPath, [string] $folder)
 {
-    Copy-SpellingDictionary "$testPath\.."
+        Copy-SpellingDictionary "$docsPath\.."
 
     $commandPath = "$env:APPDATA\npm\cspell.cmd"
-    $pathToCheck = "$testPath\..\docs\$folder\**\*.md"
-    $configFile = "$testPath\..\.cspell.json"
+    $pathToCheck = "$docsPath\$folder\**\*.md"
+    $configFile = "$docsPath\..\.cspell.json"
     $arguments = "/c $commandPath $pathToCheck -c $configFile"
 
     $output = Get-ProcessStream "StandardError" -FileName $env:ComSpec -Args $arguments
@@ -54,11 +54,11 @@ function Test-Spelling([string] $testPath, [string] $folder)
     return $issues
 } 
 
-function Test-Markdown([String] $testPath, [String] $fileType)
+function Test-Markdown([String] $docsPath, [String] $fileType)
 {
     $commandPath = "$env:APPDATA\npm\markdownlint.cmd"
-    $pathToCheck = "$testPath\..\docs\**\*.$fileType"
-    $configFile = "$testPath\..\docs\.markdownlint.json"
+    $pathToCheck = "$docsPath\**\*.$fileType"
+    $configFile = "$docsPath\.markdownlint.json"
     $arguments = "/c $commandPath $pathToCheck -c $configFile"
 
     $output = Get-ProcessStream "StandardError" -FileName $env:ComSpec -Args $arguments

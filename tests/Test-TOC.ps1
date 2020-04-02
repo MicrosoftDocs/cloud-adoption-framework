@@ -77,7 +77,7 @@ function Test-ExternalLinks([string] $tocFile = '')
 
 function Test-PageLinks([string] $filePath)
 {
-    $expression = '(?i)https:\/\/[a-zA-Z0-9-\.]*\/[a-zA-Z0-9\/\-:\.&=_]*'
+    $expression = '(?i)https:\/\/[a-zA-Z0-9-\.]*\/[a-zA-Z0-9\/\-:\.&=_%\+]*'
 
     $text = Get-Content $filePath
 
@@ -107,7 +107,8 @@ function Test-Uri([string] $uri)
 {
     $uri = $uri.Replace('https://docs.microsoft.com/', 'https://docs.microsoft.com/en-us/')
     $uri = $uri.Replace('https://azure.microsoft.com/', 'https://azure.microsoft.com/en-us/')
-        
+    $uri = $uri.Replace('https://developer.amazon.com/', 'https://developer.amazon.com/en-US/')
+    
     $uriObject = New-Object System.Uri $uri
 
     try {
@@ -124,7 +125,7 @@ function Test-Uri([string] $uri)
     }
     else
     {
-        if ($request.StatusCode -eq 301)
+        if ($request.StatusCode -eq 301 -or $request.StatusCode -eq 302)
         {
             $absolutePath = $uriObject.AbsolutePath
             $prefix = "$($uriObject.Scheme)://$($uriObject.Host)"

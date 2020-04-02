@@ -1,6 +1,11 @@
-function Test-LinkPaths([string] $folder)
+function Test-LinkPaths([string] $folder, [string] $subfolder = '')
 {
     $count = 0
+    if ($subfolder.Length -ne 0)
+    {
+        $folder = join-path $folder $subfolder
+    }
+
     $files = Get-ChildItem $folder -Include @('*.md','*.yml') -Recurse
 
     foreach ($file in $files) {
