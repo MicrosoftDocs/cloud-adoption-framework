@@ -1,6 +1,6 @@
 ---
 title: Automation team quickstart guide
-description: This quickstart helps the automation team understand scope, deliverables and the capabilities they are responsible for.
+description: This quickstart helps the cloud automation team understand scope, deliverables and the capabilities they are responsible for.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
@@ -15,13 +15,12 @@ This quickstart helps you understand the goals and objectives of an automation t
 During cloud adoption efforts, cloud automation capabilities will unlock the potential of DevOps and a cloud-native approach. Expertise in each of these areas can accelerate adoption and innovation.
 
 ## Prerequisites
-<!-- TODO -->
 
-- (Optional) Completion of any required training. Use the language "Completion of (title)" where (title) is the link to the training.
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- First prerequisite - other methodologies that the reader should be knowledgeable about
-- Second prerequisite - tools needed
-- Third prerequisite
+Before you admit a team member to this group, they should demonstrate three key characteristics:
+
+- Expertise in any cloud platform with a special emphasis on DevOps and automation
+- A growth mindset or openness to changing the way IT operates today
+- A desire to accelerate business change and remove traditional IT roadblocks
 
 ## Minimum scope
 
@@ -37,20 +36,13 @@ Examples of solutions in the catalog include:
 
 The solutions in the solution catalog aren't deployment pipelines for a workload. Instead, you might use automation scripts in the catalog to quickly create a deployment pipeline. You might also use a solution in the catalog to quickly provision platform components to support workload tasks like automated deployment, manual deployment, or migration.
 
-These following tasks are typically executed by cloud automation on a regular basis:
-
 ### Strategic tasks
 
-Review:
-
-- Business outcomes
-- Financial models
-- Motivations for cloud adoption
-- Business risks
 - Rationalization of the digital estate:
   - Monitor adoption plans and progress against the prioritized migration backlog.
   - Identify opportunities to accelerate cloud adoption, reduce effort through automation, and improve security, stability, and consistency.
   - Prioritize a backlog of solutions for the solution catalog that delivers the most value given other strategic inputs.
+- Review release plans for sources of new automation opportunities
 
 ### Meeting cadence
 
@@ -60,27 +52,20 @@ The cloud automation team should align activities with other areas of capability
 
 ## Deliverables
 
-- Curate or develop solutions based on the prioritized backlog.
-- Ensure solutions align to platform requirements.
-- Ensure solutions are consistently applied and meet existing governance and compliance requirements.
-- Create and validate solutions in the catalog.
-- Review release plans for sources of new automation opportunities.
+- Curate or develop solutions based on the prioritized backlog
+- Ensure solutions align to platform requirements
+- Ensure solutions are consistently applied and meet existing governance and compliance requirements
+- Create and validate solutions in the catalog
 
 ## Baseline capability
 
-The skills needed to provide cloud automation capabilities could be provided by:
+The skills needed to provide cloud automation capabilities can be provided by:
 
 - DevOps engineers
 - Developers with DevOps and infrastructure expertise
 - IT engineers with DevOps and automation expertise
 
 These subject matter experts might be providing capabilities in other areas such as cloud adoption, cloud governance, or cloud platform. After they demonstrate proficiency at automating complex workloads, you can recruit these experts to deliver automation value.
-
-Before you admit a team member to this group, they should demonstrate three key characteristics:
-
-- Expertise in any cloud platform with a special emphasis on DevOps and automation.
-- A growth mindset or openness to changing the way IT operates today.
-- A desire to accelerate business change and remove traditional IT roadblocks.
 
 ## Out of scope
 <!-- TODO -->
