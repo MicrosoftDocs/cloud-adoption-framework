@@ -64,7 +64,7 @@ During this process, the project plan should include time allocations for the cl
 
 ## Next steps
 
-As the final item on the [expanded scope checklist](./index.md), return to the checklist and reevaluate any additional scope requirements for the migration effort.
+As the final item on the [migration best practices checklist](./index.md), return to the checklist and reevaluate any additional scope requirements for the migration effort.
 
 > [!div class="nextstepaction"]
-> [Expanded scope checklist](./index.md)
+> [Migration best practices checklist](./index.md)

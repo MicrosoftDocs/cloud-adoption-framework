@@ -55,11 +55,11 @@ The following tools can help the team optimize resources and promote to producti
 
 The following tools can help the team find ways to secure and manage migrated assets:
 
-- [Secure and manage workloads in Azure](azure-best-practices/migrate-best-practices-security-management.md): Best practices for securing and managing workloads in Azure.
+- [Secure and manage workloads in Azure](./azure-best-practices/migrate-best-practices-security-management.md): Best practices for securing and managing workloads in Azure.
 
 ## Next steps
 
-Return to the [expanded scope checklist](./index.md) to ensure your migration method is fully aligned.
+Return to the [migration best practices checklist](./azure-best-practices/index.md) to ensure your migration method is fully aligned.
 
 > [!div class="nextstepaction"]
-> [Expanded scope checklist](./index.md)
+> [Migration best practices checklist](./index.md)

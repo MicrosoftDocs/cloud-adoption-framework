@@ -25,8 +25,8 @@ Describe "Test-Casing" -Tag "Content" {
             "ext steps"
             "anagement groups",
             "ole-based",
-            "GitHub",
-            "PolyBase"
+            "[^\/\.-]GitHub[^-]",
+            "[^\/-]PolyBase[^-]"
         )
 
         # $file = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\reference\networking-vdc.md"

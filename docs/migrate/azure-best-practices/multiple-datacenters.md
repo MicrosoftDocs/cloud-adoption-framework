@@ -61,7 +61,7 @@ Secure and manage processes should be unchanged by this scope expansion.
 
 ## Next steps
 
-Return to the [Expanded Scope Checklist](./index.md) to ensure your migration method is fully aligned.
+Return to the [Migration best practices checklist](./index.md) to ensure your migration method is fully aligned.
 
 > [!div class="nextstepaction"]
-> [Expanded scope checklist](./index.md)
+> [Migration best practices checklist](./index.md)
