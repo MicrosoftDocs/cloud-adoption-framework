@@ -260,7 +260,7 @@ In Azure you pay for what you use, when resources are consumed, and you don't pa
 
 - Get an overview of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) and [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview).
 - [Get](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations) Advisor cost recommendations.
-- [Learn how to](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/toc.json) optimize cost from recommendations, and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
+- Learn how to [optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/toc.json), and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
 - Learn about the [Azure Resource Optimization (ARO) Toolkit](https://github.com/Azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ## Best practice: Implement resource group budgets
