@@ -40,7 +40,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework rec
         </a>
     </li>
     <li style="display: flex; flex-direction: column;">
-        <a href="./expanded-scope/index.md">
+        <a href="./azure-best-practices/index.md">
             <div class="cardSize">
                 <div class="cardPadding" style="padding-bottom:10px;">
                     <div class="card" style="padding-bottom:10px;">
