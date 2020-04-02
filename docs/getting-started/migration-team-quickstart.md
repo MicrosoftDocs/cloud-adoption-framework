@@ -1,11 +1,11 @@
 ---
 title: Migration team quickstart guide
-description: Set up a migration team's scope, deliverables and the capabilities to prepare for successful cloud migration.
+description: This quickstart helps a cloud migration team understand scope, deliverables and the capabilities required for a successful cloud migration.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
 ms.topic: conceptual 
-ms.date: 03/03/2020
+ms.date: 04/04/2020
 ---
 
 # Quickstart: Cloud migration team
@@ -15,12 +15,12 @@ Cloud migration teams are the modern-day equivalent of technical implementation 
 Regardless of the type or number of cloud migration teams, these team(s) generally provides subject matter expertise for IT, business analysis, or implementation partners.
 
 ## Prerequisites
-<!-- TODO -->
-- (Optional) Completion of any required training. Use the language "Completion of (title)" where (title) is the link to the training.
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- First prerequisite - other methodologies that the reader should be knowledgeable about
-- Second prerequisite - tools needed
-- Third prerequisite
+
+- [Create an Azure account](https://docs.microsoft.com/learn/modules/create-an-azure-account): The first step to using Azure is to create an account.
+- [Azure portal](https://docs.microsoft.com/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
+- [Introduction to Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure): Get started with Azure. Create and configure your first virtual machine in the cloud.
+- [Azure fundamentals](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn cloud concepts, understand the benefits, compare and contrast basic strategies, and explore the breadth of services available in Azure.
+- Review the [Migration methodology](..\migrate\index.md)
 
 ## Minimum scope
 
@@ -66,18 +66,15 @@ Depending on the desired business outcomes, the skills needed to provide full cl
 For optimal collaboration and efficiency, we recommend that cloud adoption teams have an average team size of six people. These teams should be self-organizing from a technical execution perspective. We highly recommend that these teams also include project management expertise, with deep experience in agile, scrum, or other iterative models. This team is most effective when managed using a flat structure.
 
 ## Out of scope
-<!-- TODO -->
-Briefly explain what is out of scope and provide links to more information.
 
-- Additional info item and link
-- Additional info item and link
+Additional support from existing IT staff may be needed. IT can be a valuable contributor to cloud adoption by becoming a cloud broker and a partner for innovation and business agility.
+
+- [Central IT responsibilities](../organize/central-it.md)
 
 ## What's next
 
-Adoption is great, but ungoverned adoption can produce unexpected results. Align with the cloud governance team to accelerates adoption and best practices, while reducing business and technical risks.
-
-To learn more about the governance team see, [Cloud governance team](governance-team-quickstart.md).
+Adoption is great, but ungoverned adoption can produce unexpected results. Align with the [Cloud governance team](governance-team-quickstart.md) to accelerates adoption and best practices, while reducing business and technical risks.
 
 These two teams create balance across cloud adoption efforts, but is considered an MVP because it may not be sustainable. Each team is wearing many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](../organize/raci-alignment.md).
 
-Operating with only a cloud adoption team (or multiple cloud adoption teams) is considered an antipattern and should be avoided. At a minimum, consider the [MVP best practice](../organize/organization-structures.md).
+Learn more about [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md).
