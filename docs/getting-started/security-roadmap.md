@@ -41,14 +41,14 @@ Brief explanation of what this step accomplishes.
 - Example - [Motivations](../strategy/motivations.md): Explanation of how this article will help them accomplish what is a necessary part of this step.
 - Example - [Business Outcomes](../strategy/business-outcomes/index.md): Explanation of how this article will help them accomplish what is a necessary part of this step.
 
-Deliverable
+**Deliverable:**
 
 - what is produced during this step and links to tools, templates that can be utilized.
 
-Involved teams
+**Involved teams:**
 
 - Example - Accountable team: [Cloud Strategy Team](../organize/cloud-strategy.md)
-- Example - Responsible/Supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- Example - Responsible or supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
 
 ## Plan
 <!--- remove this section if it doesn't apply to this scenario. --->
@@ -65,15 +65,15 @@ Brief explanation of what this step accomplishes. e.g. set up a security team.
 
 - Example - [Build a skills readiness plan](../plan/adapt-roles-skills-processes.md): Do a quick evaluation of the required skills and the existing skills to better understand what skilling requirements need to be addressed.
 
-Deliverable
+**Deliverable:**
 
 - what is produced during this step and links to tools, templates that can be utilized.
 - Example - Add skills readiness plan to the [Strategy and Planning Template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx)
 
-Involved teams
+**Involved teams:**
 
 - Example - Accountable team: [Cloud Adoption Team](../organize/cloud-adoption.md)
-- Example - Responsible/Supporting teams: [Cloud Strategy Team](../organize/cloud-strategy.md)
+- Example - Responsible or supporting teams: [Cloud Strategy Team](../organize/cloud-strategy.md)
 
 ## Ready
 <!--- remove this section if it doesn't apply to this scenario. --->
@@ -91,14 +91,14 @@ Brief explanation of what this step accomplishes.
 - Example - link: Explanation of how this article will help them accomplish what is a necessary part of this step.
 - Example - link: Explanation of how this article will help them accomplish what is a necessary part of this step.
 
-Deliverable
+**Deliverable:**
 
 - what is produced during this step and links to tools, templates that can be utilized.
 
-Involved teams
+**Involved teams:**
 
 - Example - Accountable team: [Cloud Strategy Team](../organize/cloud-strategy.md)
-- Example - Responsible/Supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- Example - Responsible or supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
 
 ### Step 4: start with a verb – e.g. do blah
 
@@ -107,14 +107,14 @@ Brief explanation of what this step accomplishes.
 - Example - link: Explanation of how this article will help them accomplish what is a necessary part of this step.
 - Example - link: Explanation of how this article will help them accomplish what is a necessary part of this step.
 
-Deliverable
+**Deliverable:**
 
 - what is produced during this step and links to tools, templates that can be utilized.
 
-Involved teams
+**Involved teams:**
 
 - Example - Accountable team: [Cloud Adoption Team](../organize/cloud-adoption.md)
-- Example - Responsible/Supporting teams: [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- Example - Responsible or supporting teams: [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
 
 ## Adopt
 <!--- remove this section if it doesn't apply to this scenario. --->
@@ -132,14 +132,14 @@ Brief explanation of what this step accomplishes.
 - Example - link: Explanation of how this article will help them accomplish what is a necessary part of this step.
 - Example - link: Explanation of how this article will help them accomplish what is a necessary part of this step.
 
-Deliverable
+**Deliverable:**
 
 - what is produced during this step and links to tools, templates that can be utilized.
 
-Involved teams
+**Involved teams:**
 
 - Example - Accountable team: [Cloud Strategy Team](../organize/cloud-strategy.md)
-- Example - Responsible/Supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- Example - Responsible or supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
 
 ## Govern
 <!--- remove this section if it doesn't apply to this scenario. --->
@@ -157,17 +157,17 @@ Brief explanation of what this step accomplishes.
 - Example - [Governance approach](../govern/index.md): This methodology outlines a process for thinking about corporate policy and processes. Then building the disciplines required to deliver on governance across your cloud enterprise adoption efforts.
 - Example - [Initial governance foundation](../govern/guides/complex/prescriptive-guidance.md): Understand the Identity Baseline, Security Baseline, and Deployment Acceleration that are required to create a governance MVP, which will serve as the foundation for all adoption.
 
-Deliverable
+**Deliverable:**
 
 - what is produced during this step and links to tools, templates that can be utilized.
 - Example: Deploy an initial governance foundation
 - Example: Complete a governance benchmark to plan for future improvements
 - Example: Timeline risks: Improve policies and governance implementation can add 1-4 weeks per discipline
 
-Involved teams
+**Involved teams:**
 
 - Example - Accountable team: [Cloud Strategy Team](../organize/cloud-strategy.md)
-- Example - Responsible/Supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- Example - Responsible or supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
 
 Note: Take the governance benchmark assessment to understand the security gaps that need to be addressed.
 
@@ -185,15 +185,15 @@ Brief explanation of what this step accomplishes.
 - Example -[Management Baseline](../manage/index.md):
 - Example -[Define business commitments](../manage/considerations/business-alignment.md):
 
-Deliverable
+**Deliverable:**
 
 - what is produced during this step and links to tools, templates that can be utilized.
 - Example: Complete the Ops Management Workbook
 
-Involved teams
+**Involved teams:**
 
 - Example - Accountable team: [Cloud Strategy Team](../organize/cloud-strategy.md)
-- Example - Responsible/Supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
+- Example - Responsible or supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
 
 ## Value statement
 

@@ -19,16 +19,13 @@ Use this guide to reduce the amount of materials and the processes required to a
 
 If your migration scenario is atypical, you can get a personalized assessment of your organizations migration readiness, by using the Strategic Migration and Readiness Tool or [SMART Assessment](/assessments/?id=Strategic-Migration-Assessment) to identify the guidance that best aligns to your current needs.
 
-## Iterative migration efforts
+## Get started
 
 The technical effort and process required to migrate workloads is relatively straight forward. Efficient completion of the migration process is important. But, strategic migration readiness will have an even bigger impact on the timelines and successful completion of the overall migration.
 
-Accelerating adoption means addressing the steps required to support the cloud adoption team during migration. To illustrate that importance, migration is listed as step 10 in this article. In reality, the cloud adoption team will likely begin migrations in parallel to many of the steps in this article.
+Accelerating adoption means addressing the steps required to support the cloud adoption team during migration. This guide outlines these iterative tasks in a linear checklist format to help customers start on the right path towards any cloud migration. To illustrate the importance of the supporting steps, migration is listed as step 10 in this article. In reality, the cloud adoption team will likely begin their first pilot migration in parallel to steps 4 or 5.
 
-> [!WARNING]
-> Steps 1-9 below are meant to support migration efforts & accelerate adoption. They should not be viewed as blockers.
-
-## Step 1: Create a business strategy
+## Step 1: Document the business strategy
 
 To avoid common migration blockers, create a clear and concise business strategy for migration. Stakeholder alignment on motivations and expected business outcomes will shape decisions made by the cloud adoption team.
 
@@ -46,7 +43,7 @@ Involved teams
 
 ## Step 2: Make a business case
 
-Making the business case for migration will likely be an iterative conversation amongst stakeholders. In this first pass at building the business case, evaluate the initial, high-level return from a potential cloud migration. The goal of this step is to ensure that all stakeholders align around one simple question, "Based on the available date, is the overall migration to the cloud a wise business decision?".
+Making the business case for migration will likely be an iterative conversation amongst stakeholders. In this first pass at building the business case, evaluate the initial, high-level return from a potential cloud migration. The goal of this step is to ensure that all stakeholders align around one simple question, "Based on the available date, is the overall adoption of the cloud a wise business decision?".
 
 - [Building a cloud migration business case](../strategy/cloud-migration-business-case.md) is a good starting point for developing a migration business case, with clarity on formulas and tools that can aid in business justification.
 
@@ -148,7 +145,7 @@ Involved teams
 - Accountable team: [Cloud Platform Team](../organize/cloud-platform.md)
 - Responsible/Supporting teams: [Cloud Adoption Team](../organize/cloud-adoption.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
 
-## Step 8: Deploy a governance foundation
+## Step 8: Deploy an initial governance foundation
 
 Governance is a key factor to the long-term success of any migration effort. Speed to migration and business impact is important. But speed without governance can be dangerous. Your organization will need to make decisions about governance, which align to your adoption patterns, and governance and compliance needs.
 
@@ -166,7 +163,7 @@ Involved teams
 - Accountable team: [Cloud Governance Team](../organize/cloud-governance.md)
 - Responsible/Supporting teams: [Cloud Strategy Team](../organize/cloud-strategy.md) and [Cloud center of excellence](../organize/cloud-center-of-excellence.md)/[Central IT](../organize/central-it.md)
 
-## Step 9: Establish an operational baseline
+## Step 9: Implement an operations baseline
 
 Operations Management is another requirement to reach migration success. Migrating to the cloud without an understanding of ongoing operations is a risky decision. In parallel to migration, it is suggested that you start planning for longer-term operations.
 
@@ -223,7 +220,7 @@ The Cloud Adoption Framework is a lifecycle solution. It can help you begin a mi
 
 |Team  |Next Iteration|
 |---------|---------|
-|Cloud&nbsp;Migration&nbsp;Team|[Process improvements](../migrate/migration-considerations/index.md) provides insight about moving towards a migration factory with efficient ongoing migration capabilities.|
+|Cloud&nbsp;Adoption&nbsp;Team|[Process improvements](../migrate/migration-considerations/index.md) provides insight about moving towards a migration factory with efficient ongoing migration capabilities.|
 |Cloud&nbsp;Strategy&nbsp;Team|[Strategy](../strategy/index.md) and [Plan](../plan/index.md) are iterative processes that evolve with the adoption plan. Return to these overview pages and continue to iterate on your business and technical strategies.|
 |Cloud&nbsp;Platform&nbsp;Team|Revisit the [Ready](../ready/index.md) methodology to continue to advance the overall cloud platform that supports migration or other adoption efforts.|
 |Cloud&nbsp;Governance&nbsp;Team|Leverage the [Govern](../govern/index.md) methodology to continue to improve governance processes, policies, and disciplines.|
