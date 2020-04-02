@@ -180,7 +180,7 @@ Once resources are in production, data can be aggregated and trends analyzed at 
 - Analyze data to generate a budget baseline for Azure resource groups and resources.
 - Identify patterns of use that would allow you to reduce size and/or stop/pause resources to further reduce your costs.
 
-Best practices in this section include using Azure Hybrid benefits and reserved VMs, reduce cloud spending across subscriptions, leveraging Azure Cost Management for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
+Best practices in this section include using Azure Hybrid benefits and reserved VMs, reduce cloud spending across subscriptions, using Azure Cost Management for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
 
 ## Best practice: Take advantage of Azure Hybrid benefits
 
@@ -310,12 +310,11 @@ Often, resource groups are used to represent cost boundaries. Together with this
 
 ## Best practice: Review Azure Advisor recommendations
 
-Azure Advisor cost recommendations identify a number of opportunities to reduce costs. When budgets appear high or utilization appears low, leverage this report to find immediate opportunities to quickly align costs.
+Azure Advisor cost recommendations identify a number of opportunities to reduce costs. When budgets appear high or utilization appears low, use this report to find immediate opportunities to quickly align costs.
 
 **Learn more:**
 
 - [Review Azure Advisor cost recommendations](/azure/advisor/advisor-cost-recommendations) to take immediate actions.
-
 
 ## Best practice: Optimize Azure Monitor retention
 
@@ -388,10 +387,8 @@ After adoption, after a thorough review of these types of tasks you might consid
 
 Review other best practices:
 
-- [Best practices](./migrate-best-practices-security-management.md) for security and management after adoption.
-- [Best practices](./migrate-best-practices-networking.md) for networking after adoption.
-
-## Next steps
+- [Best practices](../../migrate/azure-best-practices/migrate-best-practices-security-management.md) for security and management after adoption.
+- [Best practices](../../migrate/azure-best-practices/migrate-best-practices-networking.md) for networking after adoption.
 
 With an understanding of the best practices, examine the [Cost Management toolchain](./toolchain.md) to identify Azure tools and features to help you execute these best practices.
 
