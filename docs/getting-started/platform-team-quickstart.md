@@ -1,6 +1,6 @@
 ---
 title: Platform team quickstart guide
-description: This quickstart helps the platform team understand scope, deliverables and the capabilities they are responsible for.
+description: This quickstart helps the cloud platform team understand scope, deliverables and the capabilities they are responsible for.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
@@ -17,13 +17,17 @@ Cloud platform capabilities are usually provided by a select group of architects
 
 ## Prerequisites
 
-<!--- TODO --->
+- [Foundations for cloud architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to help architect the right foundational solutions.
+- [Microsoft Azure architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to ground architects in Azure architecture.
+- [Azure network services](https://docs.microsoft.com/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
 
-- (Optional) Completion of any required training. Use the language "Completion of (title)" where (title) is the link to the training.
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- First prerequisite - other methodologies that the reader should be knowledgeable about
-- Second prerequisite - tools needed
-- Third prerequisite
+Review the following:
+
+- [Business outcomes](../strategy/business-outcomes/index.md)
+- [Financial models](../strategy/financial-models.md)
+- [Motivations for cloud adoption](../strategy/motivations.md)
+- [Business risks](../govern/policy-compliance/risk-tolerance.md)
+- [Rationalization of the digital estate](../digital-estate/index.md)
 
 ## Minimum scope
 
@@ -31,12 +35,6 @@ Cloud platform duties center around the creation and support of your cloud platf
 
 The following tasks are typically executed on a regular basis:
 
-- Review:
-  - [business outcomes](../strategy/business-outcomes/index.md)
-  - [financial models](../strategy/financial-models.md)
-  - [motivations for cloud adoption](../strategy/motivations.md)
-  - [business risks](../govern/policy-compliance/risk-tolerance.md)
-  - [rationalization of the digital estate](../digital-estate/index.md)
 - Monitor adoption plans and progress against the [prioritized migration backlog](../migrate/migration-considerations/assess/release-iteration-backlog.md).
 - Identify and prioritize platform changes that are required to support the migration backlog.
 
@@ -74,7 +72,6 @@ The skills needed to provide full platform capabilities can be provided by:
 ## Out of scope
 
 <!--- TODO --->
-
 Briefly explain what is out of scope and provide links to more information.
 
 - Additional info item and link
@@ -83,3 +80,5 @@ Briefly explain what is out of scope and provide links to more information.
 ## What's next
 
 As your cloud platform becomes better defined, aligning [cloud automation](./automation-team-quickstart.md) capabilities can accelerate adoption. It can also help establish best practices while reducing business and technical risks.
+
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).

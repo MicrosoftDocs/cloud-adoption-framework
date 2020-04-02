@@ -1,6 +1,6 @@
 ---
 title: Operations team quickstart guide
-description: This quickstart helps the operations team understand scope, deliverables, and the capabilities they are responsible for.
+description: This quickstart helps a cloud operations team understand scope, deliverables, and the capabilities they are responsible for.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
@@ -14,40 +14,26 @@ An operations team focuses on monitoring, repairing, and the remediation of issu
 
 ## Prerequisites
 
-- [Create an Azure account](https://docs.microsoft.com/learn/modules/create-an-azure-account): The first step to using Azure is to create an account. Your account holds the Azure services that you provision and handles your personal settings, like identity, billing, and preferences.
-- [Azure portal](https://docs.microsoft.com/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
-- [Azure fundamentals](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn cloud concepts, understand the benefits, compare and contrast basic strategies, and explore the breadth of services available in Azure.
+- [Manage resources in Azure](https://docs.microsoft.com/learn/paths/manage-resources-in-azure): Learn how to work through the Azure CLI and web portal to create, manage, and control cloud-based resources.
+- [Azure network services](https://docs.microsoft.com/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
+
+Review the following:
+
+- [Business outcomes](../strategy/business-outcomes/index.md)
+- [Financial models](../strategy/financial-models.md)
+- [Motivations for cloud adoption](../strategy/motivations.md)
+- [Business risks](../govern/policy-compliance/risk-tolerance.md)
+- [Rationalization of the digital estate](../digital-estate/index.md)
 
 ## Minimum scope
 
-<!-- TODO -->
-
-Include a sentence or two to explain only the minimum scope for the team.
-
-Use bullet or numbered list of tasks that may be required within this scope.
-
-1. Step 1
-1. Step 2
-1. Step 3
-1. Step 4
-
-## Deliverable
-
 The duties of the people on the cloud operations team involve delivering maximum workload performance and minimum business interruptions within an agreed-upon operations budget.
 
-### Strategic tasks
-
-- Review:
-  - [Business outcomes](../strategy/business-outcomes/index.md)
-  - [Financial models](../strategy/financial-models.md)
-  - [Motivations for cloud adoption](../strategy/motivations.md)
-  - [Business risks](../govern/policy-compliance/risk-tolerance.md)
-  - [Rationalization of the digital estate](../digital-estate/index.md)
 - Determine workload criticality, impact of disruptions, or performance degradation.
 - Establish business-approved cost and performance commitments.
 - Monitor and operate cloud workloads.
 
-### Technical tasks
+## Deliverables
 
 - Maintain asset and workload inventory.
 - Monitor performance of workloads.
@@ -76,13 +62,12 @@ The skills needed to provide cloud operations capabilities can be provided by:
 
 ## Out of scope
 
-<!-- TODO -->
-
-Briefly explain what is out of scope and provide links to more information.
-
-- Additional info item and link
-- Additional info item and link
+Traditional IT operations that focus on maintaining current-state operations for low-level technical assets is out of scope for the cloud operations team. Things like storage, cpu, memory, network equipment, servers, and virtual machine hosts require continuous maintenance, monitoring, repair, and remediation of issues to maintain peek operations. In the cloud, many of these capital costs and operations activities are transferred to the cloud provider.
 
 ## What's next
 
 As adoption and operations scale, it's important to define and automate governance best practices that extend existing IT requirements. Forming a [cloud center of excellence](../organize/cloud-center-of-excellence.md) is an important step to scaling cloud adoption, cloud operations, and cloud governance efforts.
+
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+
+Learn more about [Organizational antipatterns: Silos and fiefdoms](../organize/fiefdoms-silos.md).
