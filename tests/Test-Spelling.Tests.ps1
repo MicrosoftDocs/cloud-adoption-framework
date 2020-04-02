@@ -2,6 +2,8 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 . "$here\Test-Spelling.ps1"
 
+$docsPath = Resolve-Path "$here\..\docs"
+
 Describe "Test-Spelling" -Tags "Spelling" {
 
     # It "decision-guides shouldn't have spelling errors" {
@@ -67,9 +69,9 @@ Describe "Test-Spelling" -Tags "Spelling" {
 
 Describe "Test-Markdown" -Tags "Markdown" {
 
-    It "shouldn't have markdownlint errors" {
-        Test-Markdown $here "md" | Should -Be 0
-    }
+     It "shouldn't have markdownlint errors" {
+         Test-Markdown $docsPath "md" | Should -Be 0
+     }
 }
 
 ## TESTS TO ADD:
