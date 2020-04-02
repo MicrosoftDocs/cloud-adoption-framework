@@ -34,7 +34,7 @@ Deliverables
 
 - Properly tag workloads and resources.
 - Establish corporate policies and technical implementations to govern cost across the enterprise.
-- Establish forecasts and budgets based on the cloud adoption plan.
+- Establish monitoring, forecasts, and budgets to ensure costs align to the cloud adoption plan and performance requirements.
 - Establish recurring processes to monitor, shut down, or resize underutilized resources.
 - Guide an architectural review with workload owners for any workloads which can be cost optimized or ones which have exceeded established budgets.
 
