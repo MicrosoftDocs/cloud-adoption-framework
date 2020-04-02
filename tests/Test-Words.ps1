@@ -68,11 +68,14 @@ function Test-Match(
         if ($expression.Trim().Length -gt 0) {
 
             $regex = $expression
+            $options = [Text.RegularExpressions.RegexOptions]::Multiline
+            $obj = [regex]::new($regex, $options)
 
-            foreach ($match in ([regex]$regex).Matches($text)) {   
+            foreach ($match in $obj.Matches($text)) {
             
                 write-host "Match '$($match.Value)' found in $($file.FullName)"
                 $count++
+
             }
         }
     }

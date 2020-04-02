@@ -25,7 +25,8 @@ Describe "Test-Casing" -Tag "Content" {
             "ext steps"
             "anagement groups",
             "ole-based",
-            "GitHub"
+            "GitHub",
+            "PolyBase"
         )
 
         # $file = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\reference\networking-vdc.md"
@@ -36,19 +37,18 @@ Describe "Test-Casing" -Tag "Content" {
 
 Describe "Test-CompoundWords" -Tag "Content" {
 
-    # It "Has no invalid compound words" {
-
-    # }
-
     It "No invalid compound words exist" {
         
         $expressions = @(
             "a number of",
             "ad-hoc",
-            "business'\b",
+            "business'[^s]",
             "carry out",
             "check list",
-            "life cycle",
+            "cSpell:disable",
+            "express route",
+            "git hub",
+			"life cycle",
             "multi-(?!factor|model|shard)",
             "off-site",
             "on going",
@@ -69,15 +69,33 @@ Describe "Test-CompoundWords" -Tag "Content" {
 
         Test-AllMatches $files $expressions | Should -Be 0
     }
+}
 
+Describe "Test-WellFormedLinks" -Tag "Links" {
+    
     It "All links are well-formed" {
         
         $expressions = @(
+            ": \/azure\/architecture",
+            "\(\/azure\/architecture",
             "\(\/",
             "\/\)",
-            "``` ?[A-Z]"
+           # "``` ?[A-Z]"
+			"<endoflist>"
         )
 
         Test-AllMatches $files $expressions | Should -Be 0
     }
+}
+
+Describe Test-Punctuation -Tags "Style" {
+    
+    It "Punctuation style is correct" {
+        $expressions = @(
+            "^ *\*\s"           ## Use hyphens for bullet lists
+        )
+
+        Test-AllMatches $files $expressions | Should -Be 0
+    }
+
 }
