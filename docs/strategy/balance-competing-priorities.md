@@ -92,7 +92,7 @@ True customer-facing innovation creates common conflicting priorities between th
 
 **Minimum scope:** The innovate methodology illustrates how to integrate strategy and plans through business value consensus. The guide then introduces cloud-native tools that can accelerate each discipline of innovation, accompanying best practices for implementation. Finally the process improvements section demonstrates approaches to building customer empathy while respecting plans and strategies across the cloud adoption journey. This approach focuses on delivering innovation with the use of as little technology as is possible.
 
-**Expanded scope example:** At times, an innovation may be dependent on mission-critical of high-sensitivity workloads. When the "customer" is an internal user, the development effort may be both mission-critical and high-sensitivity during the earliest of iterations. For these scenarios, adoption teams should use Azure Architecture Review and Azure Architecture Framework to evaluate advanced architectural design early in the process.
+**Expanded scope example:** At times, an innovation may be dependent on mission-critical or high-sensitivity workloads. When the "customer" is an internal user, the development effort may be both mission-critical and high-sensitivity during the earliest of iterations. For these scenarios, adoption teams should use Azure Architecture Review and Azure Architecture Framework to evaluate advanced architectural design early in the process.
 
 ## Balance during Govern
 
