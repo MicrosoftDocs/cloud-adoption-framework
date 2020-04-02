@@ -1,5 +1,5 @@
 ---
-title: "Tools and Templates"
+title: "Tools and templates"
 description: Find the tools and templates that are available in the Cloud Adoption Framework to help you accelerate your cloud adoption. 
 ms.service: cloud-adoption-framework
 ms.subservice: reference
@@ -9,9 +9,11 @@ ms.author: janet
 ms.date: 03/17/2020
 ---
 
-# Tools and Templates
+<!-- cSpell:ignore Terraform's -->
 
-To take action quickly, the Cloud Adoption Framework includes acceleration tools to implement technical change. Leverage these tools, templates and assessments to accelerate cloud adoption. The following list of resources can help you in each phase of adoption. Some of the tools and templates can be used in multiple phases.
+# Tools and templates
+
+To enable quick action, the Cloud Adoption Framework includes acceleration tools to implement technical change. Use these tools, templates, and assessments to accelerate cloud adoption. The following list of resources can help you in each phase of adoption. Some of the tools and templates can be used in multiple phases.
 
 ## Strategy
 
@@ -32,7 +34,7 @@ To take action quickly, the Cloud Adoption Framework includes acceleration tools
 
 | Resource | Description |
 |----------|-------------|
-| [Readiness checklist](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/readiness-checklist.docx) | Use this checklist to prepare your environment for adoption, including preparing your first migration landing zone, personalizing and expanding the blueprint.  |
+| [Readiness checklist](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/readiness-checklist.docx) | Use this checklist to prepare your environment for adoption, including preparing your first migration landing zone, personalizing and expanding the blueprint. |
 | [Naming and tagging tracking template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/CAF%20Readiness%20Naming%20and%20Tagging%20tracking%20template.xlsx) | Capture decisions regarding naming and tagging standards to ensure consistency & reduce on-boarding time. |
 | [CAF foundation blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone-governance) | Lightweight implementation of an initial governance foundation to provide hands-on experience regarding governance tools in Azure |
 | [CAF migration landing zone blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone) | Provision and prepared to host workloads being migrated from an on-premises environment into Azure. To learn more about this blueprint, see [Deploy a migration landing zone](https://docs.microsoft.com/azure/architecture/cloud-adoption/ready/azure-readiness-guide/migration-landing-zone) |

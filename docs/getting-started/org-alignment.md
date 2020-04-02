@@ -11,13 +11,13 @@ ms.subservice: overview
 
 # Align your organization
 
-Cloud adoption can't happen without well-organized people. Successful cloud adoption is the result of properly skilled people doing the appropriate types of work, in alignment with clearly defined business goals, and in a well-managed environment. To deliver an effective cloud operating model, it's important to establish appropriately staffed organizational structures. This article outlines an approach to establishing the proper organizational structures in five steps.
+Cloud adoption can't happen without well-organized people. Successful cloud adoption is the result of properly skilled people doing the appropriate types of work, in alignment with clearly defined business goals, and in a well-managed environment. To deliver an effective cloud operating model, it's important to establish appropriately staffed organizational structures. This article outlines an approach to establishing the proper organizational structures in five steps:
 
-1. Understand required cloud capabilities
-2. Map people to capabilities
-3. Determine team structure types
-4. Establish team structures
-5. Align RACI charts
+1. Understand required cloud capabilities.
+1. Map people to capabilities.
+1. Determine team structure types.
+1. Establish team structures.
+1. Align RACI charts.
 
 ## Understand required cloud capabilities
 
@@ -27,7 +27,7 @@ The following is a list of cloud capabilities that are required to succeed at cl
 - [Cloud strategy](../organize/cloud-strategy.md): Align technical change to business needs.
 - [Cloud operations](../organize/cloud-operations.md): Support and operate adopted solutions.
 - [Cloud center of excellence](../organize/cloud-center-of-excellence.md): Improve quality, speed, and resiliency of adoption.
-- [Cloud governance](../organize/cloud-governance.md): Manage risk
+- [Cloud governance](../organize/cloud-governance.md): Manage risk.
 - [Cloud platform](../organize/cloud-platform.md): Operate and mature the platform.
 - [Cloud automation](../organize/cloud-automation.md): Accelerate adoption and innovation.
 
@@ -35,9 +35,9 @@ The following is a list of cloud capabilities that are required to succeed at cl
 
 Assuming that the suggested structure aligns to your cloud adoption plan, the next step is to map specific people to the necessary capabilities. To do so, answer the following questions:
 
-- What person (or group of people) will be responsible for completing technical tasks in the cloud adoption plan?
+- What person or group will be responsible for completing technical tasks in the cloud adoption plan?
 - What person will be accountable for the team's ability to deliver technical changes?
-- What person (or group of people) will be responsible for implementing protective governance mechanisms?
+- What person or group will be responsible for implementing protective governance mechanisms?
 - What person will be accountable for the defining those governance controls?
 - Are there other capabilities or people that will have accountability or responsibility within the cloud adoption plan?
 
@@ -45,7 +45,7 @@ After you've documented the answers to these questions, you can establish [plans
 
 ## Determine team structure type
 
-The following organizational structures do not necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile, matrix organization, these structures may be best represented as virtual teams (or v-teams). There is no limitation suggesting that these organizational structures couldn't be represented in an org chart, but it is not necessary in order to produce an effective operating model.
+The following organizational structures do not necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile matrix organization, these structures may be best represented as virtual teams (or v-teams). There is no limitation suggesting that these organizational structures couldn't be represented in an org chart, but it is not necessary in order to produce an effective operating model.
 
 The first step of managing organizational alignment is to determine how the following organizational structures will be fulfilled:
 
@@ -72,7 +72,7 @@ As adoption needs grow, so does the need to create balance and structure. To mee
 
 The article on [determining organizational structure maturity](../organize/organization-structures.md) provides additional detail regarding each level of maturity.
 
-For more information about setting up additional team structures, see the [quickstart guides for cloud adoption teams](team-roadmap-overview.md)
+For more information about setting up additional team structures, see the [Quickstart guides for cloud adoption teams](team-roadmap-overview.md)
 
 ## Align RACI charts
 
