@@ -1,37 +1,10 @@
-. .\Copy-SpellingDictionary.ps1
+$here = $global:herePath
 
-function Get-ProcessStream
-{
-    Param (
-                [Parameter(Mandatory=$true)]$Stream,
-                [Parameter(Mandatory=$true)]$FileName,
-                $Args
-    )
-    
-    $process = New-Object System.Diagnostics.Process
-    $process.StartInfo.UseShellExecute = $false
-    $process.StartInfo.RedirectStandardOutput = ($Stream -eq 'StandardOutput')
-    $process.StartInfo.RedirectStandardError = ($Stream -eq 'StandardError')
-    $process.StartInfo.FileName = $FileName
-    if($Args) { $process.StartInfo.Arguments = $Args }
-    
-    $process.Start()
-    
-    if ($Stream -eq "StandardOutput")
-    {
-        $output = $process.StandardOutput.ReadToEnd()
-    }
-    elseif ($Stream -eq "StandardError")
-    {
-        $output = $process.StandardError.ReadToEnd()
-    }
-
-    $output
-}
+. "$here\Test-Helpers.ps1"
 
 function Test-Spelling([string] $docsPath, [string] $folder)
 {
-        Copy-SpellingDictionary "$docsPath\.."
+    Copy-SpellingDictionary "$docsPath\.."
 
     $commandPath = "$env:APPDATA\npm\cspell.cmd"
     $pathToCheck = "$docsPath\$folder\**\*.md"
@@ -54,16 +27,17 @@ function Test-Spelling([string] $docsPath, [string] $folder)
     return $issues
 } 
 
-function Test-Markdown([String] $docsPath, [String] $fileType)
+function Copy-SpellingDictionary(
+    [String] $repoPath)
 {
-    $commandPath = "$env:APPDATA\npm\markdownlint.cmd"
-    $pathToCheck = "$docsPath\**\*.$fileType"
-    $configFile = "$docsPath\.markdownlint.json"
-    $arguments = "/c $commandPath $pathToCheck -c $configFile"
+    $stream = New-Object System.IO.StreamReader "$repoPath\.vscode\settings.json"
 
-    $output = Get-ProcessStream "StandardError" -FileName $env:ComSpec -Args $arguments
+    $text = $stream.ReadToEnd()
 
-    $expression = " MD[0-9][0-9][0-9]"
-    $hits = ([regex]$expression).Matches($output)
-    return $hits.Count
+    $stream.Close()
+
+    $text = $text.Replace('"cSpell.enabled": true,', '')
+    $text = $text.Replace('cSpell.', '')
+
+    Set-Content -Path "$repoPath\.cspell.json" -Value $text.ToString()
 }

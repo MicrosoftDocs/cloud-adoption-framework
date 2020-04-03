@@ -1,23 +1,17 @@
-$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+$here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+. "$here\Test-Helpers.ps1"
 . "$here\Test-Content.ps1"
 . "$here\Test-Words.ps1"
 
-$docsPath = Resolve-Path "$here\..\docs"
-$files = Get-ChildItem -Path $docsPath -Include "*.md" -Recurse
-
-Describe "Test-Content" -Tags "Content" {
+Describe "Test-LocalLinkPaths" -Tags "Content" {
 
     It "All local links exist" {
-        Test-LinkPaths $docsPath | Should -Be 0
+        Test-LocalLinkPaths $(Get-ContentFiles) | Should -Be 0
     }
 }
 
 Describe "Test-Casing" -Tag "Content" {
-
-    # It "Has no invalid compound words" {
-
-    # }
 
     It "Known phrases are cased properly" {
         
@@ -31,7 +25,7 @@ Describe "Test-Casing" -Tag "Content" {
 
         # $file = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\reference\networking-vdc.md"
         # Test-Casing $file $expressions | Should -Be 0
-        Test-AllCasings $files $expressions | Should -Be 0
+        Test-AllCasings $(Get-ContentFiles) $expressions | Should -Be 0
     }
 }
 
@@ -51,14 +45,19 @@ Describe "Test-CompoundWords" -Tag "Content" {
 			"life cycle",
             "multi-(?!factor|model|shard)",
             "off-site",
+            "on-board",
             "on going",
             "on-going",
             "on-premise\b",
             "skillset"
         )
 
-        Test-AllMatches $files $expressions | Should -Be 0
+#        Test-AllMatches @(Get-Item 'C:\Repos_Fork\cloud-adoption-framework-pr\docs\reference\vdc.md') $expressions $true | Should -Be 0
+        Test-AllMatches $(Get-ContentFiles) $expressions -IgnoreUrlContents $true | Should -Be 0
     }
+}
+
+Describe Test-Acronyms -Tag "Content" {
 
     It "No invalid acronyms exist" {
         
@@ -67,7 +66,7 @@ Describe "Test-CompoundWords" -Tag "Content" {
             "MFA"
         )
 
-        Test-AllMatches $files $expressions | Should -Be 0
+        Test-AllMatches $(Get-ContentFiles) $expressions $true | Should -Be 0
     }
 }
 
@@ -84,7 +83,7 @@ Describe "Test-WellFormedLinks" -Tag "Links" {
 			"<endoflist>"
         )
 
-        Test-AllMatches $files $expressions | Should -Be 0
+        Test-AllMatches $(Get-ContentFiles) $expressions | Should -Be 0
     }
 }
 
@@ -95,7 +94,6 @@ Describe Test-Punctuation -Tags "Style" {
             "^ *\*\s"           ## Use hyphens for bullet lists
         )
 
-        Test-AllMatches $files $expressions | Should -Be 0
+        Test-AllMatches $(Get-ContentFiles) $expressions | Should -Be 0
     }
-
 }
