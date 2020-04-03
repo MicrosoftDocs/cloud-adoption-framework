@@ -1,12 +1,12 @@
-function Test-LinkPaths([string] $folder, [string] $subfolder = '')
+$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+
+. "$here/Test-Constants.ps1"
+
+function Test-LocalLinkPaths(
+    [System.IO.FileInfo[]] $files
+    )
 {
     $count = 0
-    if ($subfolder.Length -ne 0)
-    {
-        $folder = join-path $folder $subfolder
-    }
-
-    $files = Get-ChildItem $folder -Include @('*.md','*.yml') -Recurse
 
     foreach ($file in $files) {
         try {
@@ -33,37 +33,22 @@ function Test-ContentLinks([System.IO.FileSystemInfo] $file)
         "href: [a-zA-Z0-9-\/\._]*\.md"
     )
 
-    $fileName = $file.FullName
-    $text = Get-Content $fileName -Raw
+    $text = Get-FileContents $file
     $count = 0
 
     foreach ($expression in $expressions) {
         
-        $regex = $expression
+        if ($expression.Trim().Length -gt 0) {
 
-        if ($regex.Trim().Length -gt 0) {
+            $regex = [regex]::new($expression)
 
-            $matches = ([regex]$regex).Matches($text)
-            if ($matches.Count -gt 0)
-            {
-                ## write-host "Found matches in $fileName."
-            }
-
-            foreach ($match in ([regex]$regex).Matches($text)) {   
+            foreach ($match in ($regex.Matches($text))) {   
                 
-                ## write-host $match.Value
-
                 $relativePath = $match.Value
+                $relativePath = Get-StringChopStart $relativePath "<a href="""
+                $relativePath = Get-StringChopStart $relativePath "<img src="""
                 
-                if ($relativePath.StartsWith("<a href="""))
-                {
-                    $relativePath = $relativePath.Substring(9, $relativePath.Length - 9)
-                }
-                elseif ($relativePath.StartsWith("<img src="""))
-                {
-                    $relativePath = $relativePath.Substring(9, $relativePath.Length - 9)
-                }
-                elseif ($relativePath.StartsWith("["))
+                if ($relativePath.StartsWith("["))
                 {
                     if ((-not $relativePath.Contains("/")))
                     {
@@ -74,7 +59,7 @@ function Test-ContentLinks([System.IO.FileSystemInfo] $file)
                     $selection = ($text | select-string -Pattern $linkName.Replace('[', '\[').Replace(']', '\]') -AllMatches)
                     if ($selection.Matches.Count -lt 2)
                     {
-                        write-host "ORPHANED LINK IN $($fileName):  $linkName"
+                        write-host "ORPHANED LINK IN $($file.FullName):  $linkName"
                         $count++
                     }
 
@@ -93,21 +78,15 @@ function Test-ContentLinks([System.IO.FileSystemInfo] $file)
                 {
                     $relativePath = $($relativePath.Substring(74, $relativePath.Length - 75)) + ".md"
                 }
-                elseif ($relativePath.StartsWith('href: '))
-                {
-                    $relativePath = $($relativePath.Substring(6, $relativePath.Length - 6))
-                }
-
-                if ($relativePath.StartsWith('"'))
-                {
-                    $relativePath = $($relativePath.Substring(1, $relativePath.Length - 1))
-                }
+                
+                $relativePath = Get-StringChopStart $relativePath 'href: '
+                $relativePath = Get-StringChopStart $relativePath '"'
 
                 $absolutePath = join-path $($file.DirectoryName) $relativePath
 
                 if ((test-path $absolutePath) -eq $false)
                 {
-                    write-host "COULDN'T FIND IN $($fileName):  $absolutePath" 
+                    write-host "COULDN'T FIND IN $($file.FullName):  $absolutePath" 
                     $count++
                 }
             }

@@ -1,21 +1,19 @@
-$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+$here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+. "$here\Test-Helpers.ps1"
 . "$here\Test-TOC.ps1"
-
-$docsPath = "$here\..\docs"
-$tocFile = "$here\..\docs\toc.yml"
 
 Describe "Test-TOC" -Tags "TOC" {
 
     It "No TOC items are orphaned or duplicated" {
-        Test-OrphanedFiles $tocFile @("") | Should -Be 0
+        Test-MatchTocToFiles $(Get-TocFilePath) @("") | Should -Be 0
     }
 }
 
-Describe "Test-Links" -Tags @("Links", "LongRunning") {
+Describe "Test-ExternalLinks" -Tags @("Links", "LongRunning") {
 
     It "All TOC links are valid" {
-        Test-ExternalLinks $tocFile | Should -Be 0
+        Test-ExternalLinks $(Get-TocFilePath) | Should -Be 0
     }
 }
 
