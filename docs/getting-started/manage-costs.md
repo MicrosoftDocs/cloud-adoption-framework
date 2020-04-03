@@ -32,7 +32,7 @@ The cloud governance team is well positioned and equipped to evaluate and act on
 
 ### Deliverables
 
-- On a regular basis, **optimize resources across the environment** to stop unused resources, ensure proper resource sizing, and align actual spend to budget expectations.
+- On a regular basis, **optimize cost across the environment** to stop unused resources, ensure proper resource sizing, and align actual spend to budget expectations.
 - Guide an architectural review with workload owners for any **workloads which require architectural change** to drive cost optimization.
 
 ### Guidance to support deliverable completion

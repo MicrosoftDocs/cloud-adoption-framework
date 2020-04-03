@@ -36,7 +36,7 @@ items:
       - name: Right-size availability and resiliency (manage+AAR)
         href: getting-started/governance-roadmap.md  
       - name: Manage operational performance (manage+AAR)
-        href: getting-started/governance-roadmap.md  
+        href: getting-started/operations-roadmap.md  
     - name: Improve team processes
       items:
       - name: Overview
