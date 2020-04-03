@@ -1,16 +1,18 @@
 param (
-    [string]$testPath = ''
+    [string]$docsPath = ''
 )
 
+$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+. "$here\Test-Constants.ps1"
 
-function Test-NextSteps([String] $testPath)
+function Test-NextSteps([String] $docsPath)
 {
-    if ($testPath.Trim().Length -eq 0)
+    # if ($docsPath.Trim().Length -eq 0)
+    if (-not (Test-Path $docsPath))
     {
-        throw "Invalid path '$testPath'."
+        throw "Invalid path '$docsPath'."
     }
     
-    $docsPath = "$testPath\..\docs"
     $tocFile = "$docsPath\toc.yml"
 
     [System.Collections.Queue]$toc = Read-FlatTocAsQueue $tocFile
@@ -143,38 +145,38 @@ function Read-FlatTocAsQueue
     return $tocQ
 }
 
-Test-NextSteps $testPath
+Test-NextSteps $docsPath
 return
 
 
-$expression = '(?i)href: https:\/\/docs.microsoft.com\/[a-zA-Z0-9\/\-:\.&=_]*'
+# $regexForUrl = Get-RegexForUrl
 
-$text = Get-Content $tocFile
+# $text = Get-Content $tocFile
 
-$hits = ([regex]$expression).Matches($text)
+# $hits = ([regex]$regexForUrl).Matches($text)
 
-if ($hits.Count -gt 0)
-{
-    for ($i = 0; $i -lt $hits.Groups.Count; $i++)
-    {
-        $value = $hits.Groups[$i].Value.Replace('href: ', '')
-        $uri = $value.Replace('https://docs.microsoft.com/', 'https://docs.microsoft.com/en-us/')
+# if ($hits.Count -gt 0)
+# {
+#     for ($i = 0; $i -lt $hits.Groups.Count; $i++)
+#     {
+#         $value = $hits.Groups[$i].Value.Replace('href: ', '')
+#         $uri = $value.Replace('https://docs.microsoft.com/', 'https://docs.microsoft.com/en-us/')
         
-        try
-        {
-            $request = Invoke-WebRequest $uri -MaximumRedirection 0 -ErrorAction Ignore
+#         try
+#         {
+#             $request = Invoke-WebRequest $uri -MaximumRedirection 0 -ErrorAction Ignore
 
-            if ($request.StatusCode -ne 200)
-            {
-                Write-Host "$($request.StatusCode): $value"
-            }
-            else
-            {
-            }
-        }
-        catch
-        {
-            Write-Host "EXCEPTION: $value"
-        }
-    }
-}
+#             if ($request.StatusCode -ne 200)
+#             {
+#                 Write-Host "$($request.StatusCode): $value"
+#             }
+#             else
+#             {
+#             }
+#         }
+#         catch
+#         {
+#             Write-Host "EXCEPTION: $value"
+#         }
+#     }
+# }

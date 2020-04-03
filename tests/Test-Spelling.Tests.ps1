@@ -1,8 +1,7 @@
-$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+$here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+. "$here\Test-Helpers.ps1"
 . "$here\Test-Spelling.ps1"
-
-$docsPath = Resolve-Path "$here\..\docs"
 
 Describe "Test-Spelling" -Tags "Spelling" {
 
@@ -63,18 +62,12 @@ Describe "Test-Spelling" -Tags "Spelling" {
     # }
 
     It "All spelling should be correct" {
-        Test-Spelling $here '.' | Should -Be 0
+        Test-Spelling $(Get-DocsPath) '.' | Should -Be 0
     }
 }
 
-Describe "Test-Markdown" -Tags "Markdown" {
 
-     It "shouldn't have markdownlint errors" {
-         Test-Markdown $docsPath "md" | Should -Be 0
-     }
-}
-
-## TESTS TO ADD:
+## TODO: TESTS TO ADD
 
 ## Describe -Tag Navigation "BreadCrumbs" "Test-Breadcrumbs" {}
 

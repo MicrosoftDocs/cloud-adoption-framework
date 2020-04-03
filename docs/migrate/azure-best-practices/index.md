@@ -13,7 +13,7 @@ ms.subservice: migrate
 
 The [Azure migration guide](../azure-migration-guide/index.md) in the Cloud Adoption Framework is the suggested starting point if you're interested in migrating to Azure. That guide walks you through a set of tools and basic approaches to migrating virtual machines to the cloud. This section of the Cloud Adoption Framework addresses many best practices that go beyond the basic cloud-native tools.
 
-## Cloud migration best practice checklist
+## Cloud migration best practices checklist
 
 The following checklist outlines the common areas of complexity that could require the scope of the migration to expand beyond the [Azure migration guide](../azure-migration-guide/index.md).
 
