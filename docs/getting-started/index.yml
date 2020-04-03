@@ -35,18 +35,30 @@ landingContent:
             url: migrate.md
           - text: Build new products and services in the cloud
             url: innovate.md
-          - text: Align your organization
-            url: org-alignment.md
-          - text: Controls, compliance, and governance
-            url: governance-roadmap.md
-          - text: Address security early and often
-            url: security-roadmap.md
           - text: Environment design and configuration
             url: design-config-roadmap.md
           - text: Hybrid cloud adoption
             url: hybrid-adoption.md
-          - text: Manage costs
-            url: manage-costs.md
+
+  # Card
+  - title: Build a well-managed operating model
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview
+            url: operating-model-overview.md
+      - linkListType: quickstart
+        links:
+        - text: Manage cloud costs
+          url: getting-started/manage-costs.md  
+        - text: Controls to improve reliability
+          url: getting-started/reliability.md  
+        - text: Build operational excellence
+          url: getting-started/operational-excellence.md
+        - text: Address security early and often
+          url: getting-started/security-roadmap.md  
+        - text: Align your organization
+          url: getting-started/org-alignment.md
 
   # Card
   - title: Align your teams

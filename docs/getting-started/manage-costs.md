@@ -21,7 +21,7 @@ Governance is the cornerstone of cost optimization within any large enterprise. 
 
 ![Getting Started with enterprise cost management](../_images/getting-started/cost-getting-started-map.png)
 
-## Enterprise cost optimization begins with governance
+## Step 1. Enterprise cost optimization
 
 The cloud governance team is well positioned and equipped to evaluate and act on overspending or unplanned spending through a combination of monitoring spend/performance, reducing resource sizing/spend, and safe termination of unused resources. Enterprise cost optimization starts with this team understanding the tools, processes, and dependencies required to wisely act on cost concerns at an environment level.
 
@@ -32,12 +32,23 @@ The cloud governance team is well positioned and equipped to evaluate and act on
 
 ### Deliverables
 
-- On a regular basis, **optimize cost across the environment** to stop unused resources, ensure proper resource sizing, and align actual spend to budget expectations.
-- Guide an architectural review with workload owners for any **workloads which require architectural change** to drive cost optimization.
+- Implement wise cost management changes across the enterprise
+- Document cost management policies, processes, and design guidance in the [Cost management governance template](../govern/cost-management/template.md).
+
+This deliverable of this step is the result of a few recurring tasks:
+
+- Optimize cost across the environment
+    - Stop (or auto-stop) unused VMs
+    - Ensure proper resource sizing
+    - Align actual spend to budget expectations.
+- Validate changes before committing
+    - Ensure strategic alignment & change processes with the cloud strategy team (include workload stakeholders)
+    - Validate alignment with technical lead using the Azure Architecture Review and Azure Architecture framework to guide a review.
+    - If there is no technical lead for a workload, use the Azure Architecture Review and Azure Architecture framework to validate cost optimization changes that may impact workload architecture.
 
 ### Guidance to support deliverable completion
 
-- Ensure all workloads and resources follow **[proper naming and tagging conventions](/ready/azure-best-practices/naming-and-tagging.md)** and [enforce tagging conventions using Azure policy](/azure/governance/policy/tutorials/govern-tags.md).
+- Ensure all workloads and resources follow **[proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md)** and [enforce tagging conventions using Azure policy](/azure/governance/policy/tutorials/govern-tags.md) with a specific emphasis on tags for "Cost center" and "Technical owner".
 - On a regular basis, review and apply the **[cost management best practices](../govern/cost-management/best-practices.md)** to guide analysis and improvements across the enterprise. The following are a few of the most impactful governance practices from that article:
     - Act on [general cost best practices](../govern/cost-management/best-practices.md#general-best-practices) to reduce sizing/cost and stop unused machines.
     - Apply [hybrid use benefits](../govern/cost-management/best-practices.md#best-practice-take-advantage-of-azure-hybrid-benefits) to reduce licensing cost.
@@ -45,18 +56,9 @@ The cloud governance team is well positioned and equipped to evaluate and act on
     - [Monitor resource utilization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to minimize impact on resource performance.
     - [Reduce non-production costs](../govern/cost-management/best-practices.md#best-practice-reduce-non-production-costs) through policies to govern non-production environments.
     - Act on [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
-- **Guide an architecture review:** Trade-offs at the workload level may be needed to implement effective cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the owner of a specific workload.
-
-The first discipline of cloud governance is cost management, which is a set of corporate policies, processes, and automated controls to monitor cost allocations, identify deviation from budget, and remediate issues which have led to unplanned costs. The following articles will help establish the policies and processes to support your long-term cost management objectives.
-
-- If you are new to cloud governance, establish [governance capabilities](../govern/index.md) using the governance methodology.
+- Trade-offs at the workload level may be needed to implement effective cost optimization changes. The [Azure Architecture framework](/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
+- If you are new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) using the Govern methodology.
 - If you are new to the cost management discipline, consider following the [cost management improvements article](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
-- To build sound cost management practices, follow the guidance in the [cost management discipline](../govern/cost-management/index.md) to accomplish the following:
-    - Establish corporate policies and technical implementations to govern cost across the enterprise.
-    - Establish monitoring, forecasts, and budgets to ensure costs align to the cloud adoption plan and performance requirements.
-    - Establish monthly processes to monitor, shut down, or resize underutilized resources.
-    - Establish quarterly schedule to review/align licensing-based cost savings.
-    - Understand available Azure tools to act on these processes.
 
 ## Steps to Scale cost optimization
 
@@ -64,7 +66,7 @@ The governance team align can detect and drive significant cost optimization acr
 
 But, as outlined on the article [Build a cost-conscious organization](../organize/cost-conscious-organization.md), an enterprise-wide focus on cost management and cost optimization can deliver much more value. The following steps each demonstrate ways the various teams can participate in a cost-conscious organization.
 
-## Step 1. Define strategy
+## Step 2. Define strategy
 
 Strategic decisions have direct impact on cost controls, which ripple throughout the adoption life-cycle and beyond into long-term operations. Strategic clarity will improve cost optimization efforts driven by the governance team.
 
@@ -83,7 +85,7 @@ Strategic decisions have direct impact on cost controls, which ripple throughout
 - Strategy: [Business Outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, it can be wise to invest in the cost management discipline of governance very early.
 - Strategy: [Business Justification](../strategy/cloud-migration-business-case.md): The business justification serves as a high-level view of the overall financial plan for cloud adoption. This can be a good source for initial budgeting efforts.
 
-## Step 2. Digital estate
+## Step 3. Digital estate
 
 The digital estate (or analysis of the existing IT portfolio) can aid in validating the business justification and provide a refined view of budgetary expectations.
 
@@ -104,7 +106,7 @@ The digital estate (or analysis of the existing IT portfolio) can aid in validat
 - Plan: [Incremental Rationalization](../digital-estate/rationalize.md#incremental-rationalization): During incremental rationalization a quantitative analysis will identify cloud candidates for budgeting purposes.
 - Plan: [Align cost models and forecast models](../digital-estate/calculate.md): Leverage Azure Cost Management to align cost and forecast models by [creating budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
 
-## Step 3. Adoption plan
+## Step 4. Adoption plan
 
 The adoption plan provides clarity on the timeline of activities during adoption. Aligning that plan and digital estate analysis provides a means of forecasting growth of spending from month to month. It will also help the governance team align processes and identify spending patterns.
 
@@ -122,7 +124,7 @@ The adoption plan provides clarity on the timeline of activities during adoption
 
 - Plan: [Build your cloud adoption plan](../plan/plan-intro.md#build-your-cloud-adoption-plan): Steps to build a plan with actionable workload, assets, and timeline details. This will provide the basis for spend over time (or cost forecasting). Spend over time is the initial baseline for all actionable optimization analysis within the Cost Management discipline of governance.
 
-## Step 4. Landing zone best practices
+## Step 5. Landing zone best practices
 
 The Ready methodology of the cloud adoption framework focuses heavily on the development of landing zones to host workloads in the cloud. During landing zone implementation, there are a number of cost optimization decisions to be considered.
 
@@ -144,7 +146,7 @@ The Ready methodology of the cloud adoption framework focuses heavily on the dev
 - Ready: [Optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json): Best practices for leveraging recommendations to optimize costs
 - Ready: [Monitor usage and spending](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json): Best practices for monitoring usage and spending within a landing zone
 
-## Step 5. Migration
+## Step 6. Migration
 
 Migration is a repeatable process executed by the cloud adoption team. Throughout that process, there are many opportunities to optimize costs across the portfolio. Many of these in-process decisions are applied to a small group of workloads during each migration wave or iteration.
 
@@ -169,7 +171,7 @@ Long-term operational costs is a common thread across each area of migration pro
 - Migrate: [Migrate](../migrate/migration-considerations/migrate/index.md) contains one process suggestion regarding remediating assets, which provide an opportunity to optimize the as-configured state, in favor of an optimized solution.
 - Migrate: [Promote](../migrate/migration-considerations/optimize/index.md) from testing to decommissioning retired assets, promotion focuses heavily on testing, resizing, validating, and releasing migrated assets. This is the first clear point at which forecasts and budgets can be tested against actual performance and configuration.
 
-## Step 6. Innovation
+## Step 7. Innovation
 
 Innovation and development of new products requires a much deeper degree of architectural review. The cloud adoption framework provides details on the innovation process and product management thinking. But, cost optimization decisions regarding new innovations are largely out of scope in this guidance.
 
@@ -187,7 +189,7 @@ Innovation and development of new products requires a much deeper degree of arch
 - Leverage the [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) to understand the balance in architecture decisions.
 - Review the [Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) for deeper guidance for cost-optimization during innovation.
 
-## Step 7. Manage
+## Step 8. Manage
 
 Establishing a solid management baseline will collect data and create operational alerts, which can aid in detecting opportunities to optimize costs. The focus of this effort will create balance between resiliency and cost optimization.
 
