@@ -25,4 +25,4 @@ These common scenarios provide a roadmap through the Microsoft Cloud Adoption Fr
 
 The core principles of a well-managed operating model applies the shared principles of [Azure Advisor](/azure/advisor/advisor-overview), [Azure Architecture Framework](/azure/architecture/framework/), and solutions in the [Azure Architecture Center](/azure/architecture/). The above "getting started" articles will help supporting teams begin to scale these principles across your cloud platform and throughout your portfolio of workloads.
 
-![Shared architecture principles](../../_images/ready/shared-principles.png)
+![Shared architecture principles](../_images/ready/shared-principles.png)
