@@ -3,7 +3,7 @@ title: "Implementing the right controls to improve reliability"
 description: Learn the basics of improving reliability through governance controls and a management baseline.
 author: JanetCThomas
 ms.author: janet
-ms.date: 03/05/2020
+ms.date: 04/04/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -147,7 +147,7 @@ The Ready methodology of the cloud adoption framework focuses heavily on the dev
 
 ### Guidance to support deliverable completion
 
-- Ready: [Improve landing zone operations](../ready/considerations/landing-zone-operations): Best practices for improving operations within a given landing zone.
+- Ready: [Improve landing zone operations](../ready/considerations/landing-zone-operations.md): Best practices for improving operations within a given landing zone.
 
 ## Step 7. Adoption
 

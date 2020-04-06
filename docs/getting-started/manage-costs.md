@@ -3,7 +3,7 @@ title: "Cost optimization across an enterprise"
 description: Learn the basics of managing costs associated with cloud adoption.
 author: JanetCThomas
 ms.author: janet
-ms.date: 03/05/2020
+ms.date: 04/04/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -37,14 +37,13 @@ The cloud governance team is well positioned and equipped to evaluate and act on
 
 This deliverable of this step is the result of a few recurring tasks:
 
+- Ensure strategic alignment with the cloud strategy team (which includes workload stakeholders across the portfolio)
 - Optimize cost across the environment
     - Stop (or auto-stop) unused VMs
+    - Delete / De-allocate stopped VMs
     - Ensure proper resource sizing
-    - Align actual spend to budget expectations.
-- Validate changes before committing
-    - Ensure strategic alignment & change processes with the cloud strategy team (include workload stakeholders)
-    - Validate alignment with technical lead using the Azure Architecture Review and Azure Architecture framework to guide a review.
-    - If there is no technical lead for a workload, use the Azure Architecture Review and Azure Architecture framework to validate cost optimization changes that may impact workload architecture.
+    - Align actual spend to budget expectations
+- Validate any architectural change using the Azure Architecture Review to facilitate a conversation technical owners of the workload(s).
 
 ### Guidance to support deliverable completion
 
