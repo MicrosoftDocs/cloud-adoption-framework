@@ -53,7 +53,7 @@ Microsoft and its partners offer options to help all audiences develop their ski
 - [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/microsoft-azure): Offers training from the people who helped build Azure. From a basic overview to deep technical training, IT staff learn how to apply Azure to their business.
 - [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): A free online resource to help map your cloud career path. Learn from industry experts about your cloud role and the skills you need. Follow a learning curriculum at your own pace to build the skills that you need to stay relevant.
 
-We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/azure-certification.aspx).
+We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
 
 ### Microsoft Learn
 

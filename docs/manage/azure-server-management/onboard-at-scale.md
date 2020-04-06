@@ -33,7 +33,7 @@ All the management solutions that are discussed in [Azure management tools and s
 
 Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
-<!-- TODO: Add these when available.
+<!-- TODOBACKLOG: Add these when available.
 - [Preview]: Enable Azure Monitor for virtual machine scale sets.
 - [Preview]: Enable Azure Monitor for VMs.
  -->

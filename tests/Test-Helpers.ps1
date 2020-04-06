@@ -13,7 +13,7 @@ function Get-DocsPath {
 }
 
 function Get-TocFilePath {
-    $path = Resolve-Path (Join-Path (Get-DocsPath) "toc.yml")
+    $path = Resolve-Path (Join-Path $(Get-DocsPath) "toc.yml")
     return $path
 }
 

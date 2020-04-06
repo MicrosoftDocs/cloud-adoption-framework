@@ -2,7 +2,7 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 . "$here/Test-Constants.ps1"
 
-function Test-LocalLinkPaths(
+function Test-AllLocalPaths(
     [System.IO.FileInfo[]] $files
     )
 {
@@ -10,7 +10,7 @@ function Test-LocalLinkPaths(
 
     foreach ($file in $files) {
         try {
-            $result = Test-ContentLinks $file
+            $result = Test-LocalPath $file
             $count += $result
         }
         catch {
@@ -21,7 +21,7 @@ function Test-LocalLinkPaths(
     return $count
 }
 
-function Test-ContentLinks([System.IO.FileSystemInfo] $file)
+function Test-LocalPath([System.IO.FileSystemInfo] $file)
 {
     $expressions = @(
         "\([a-zA-Z0-9-\/\._]*\.(md|png)[\)#]",

@@ -2,66 +2,23 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 . "$here/Test-Constants.ps1"
 
-function Test-AllCasings(
-    [System.IO.FileInfo[]] $files,
-    [string[]] $expressions
-)
-{
-    $count = 0
-    
-    foreach ($file in $files)
-    {
-        $result = Test-Casing $file $expressions
-        $count += $result
-    }
-
-    return $count
-}
-
 function Test-AllMatches {
     [CmdletBinding()]    
     param(
         [Parameter(Mandatory)]
         [System.IO.FileInfo[]] $files,
-        [Parameter(Mandatory)]
         [string[]] $expressions,
-        [bool] $ignoreUrlContents = $false
+        [bool] $ignoreUrlContents = $false,
+        [bool] $requireCasingMatch = $false,
+        [bool] $testLinks = $false
     )
 
     $count = 0
     
     foreach ($file in $files)
     {
-        $result = Test-Match $file $expressions $ignoreUrlContents
+        $result = Test-Match $file $expressions $ignoreUrlContents $requireCasingMatch $testLinks
         $count += $result
-    }
-
-    return $count
-}
-
-function Test-Casing(
-    [System.IO.FileInfo] $file, 
-    [string[]] $expressions)
-{
-    $count = 0
-    $text = Get-Content -Path $file.FullName -Raw
-    $text = Remove-Urls $text
-
-    foreach ($expression in $expressions) {
-        
-        if ($expression.Trim().Length -gt 0) {
-
-            $regex = "(?i)$expression"
-
-            foreach ($match in ([regex]$regex).Matches($text)) {   
-            
-                if (-not ($match.Value -clike $expression))
-                {
-                    write-host "Case mismatch '$($match.Value)' in $($file.FullName)"
-                    $count++
-                }
-            }
-        }
     }
 
     return $count
@@ -70,27 +27,62 @@ function Test-Casing(
 function Test-Match(
     [System.IO.FileInfo] $file, 
     [string[]] $expressions, 
-    [bool] $ignoreUrlContents = $false)
+    [bool] $ignoreUrlContents = $false,
+    [bool] $requireCasingMatch = $false,
+    [bool] $testLinks = $false
+    )
 {
     $count = 0
     $text = Get-FileContents $file
-    if ($ignoreUrlContents -eq $true)
+    
+    if ($testLinks)
+    {
+        $expressions = @($(Get-RegexForUrl))
+    }
+    elseif ($ignoreUrlContents)
     {
         $text = Remove-Urls $text 
     }
 
-    foreach ($expression in $expressions) {
-        
-        if ($expression.Trim().Length -gt 0) {
+    foreach ($originalExpression in $expressions) {
+    
+        if ($originalExpression.Trim().Length -gt 0) {
+
+            if ($requireCasingMatch)             {
+                $expression = "(?i)$originalExpression"
+            }
+            else {
+                $expression = $originalExpression
+            }
 
             $options = [Text.RegularExpressions.RegexOptions]::Multiline
             $regex = [regex]::new($expression, $options)
 
             foreach ($match in $regex.Matches($text)) {
             
-                write-host "Match '$($match.Value)' found in $($file.FullName)"
-                $count++
+                if ($testLinks)
+                {
+                    $uri = $match.Value
+                    $result = Test-Uri $uri
 
+                    if ($result -ne 200)
+                    {
+                        Write-Host "RESULT: $result - $uri"
+                        $count++
+                    }
+                }
+                elseif ($requireCasingMatch)
+                {
+                    if (-not ($match.Value -clike $originalExpression))
+                    {
+                        write-host "Case mismatch '$($match.Value)' in $($file.FullName)"
+                    }
+                }
+                else
+                {
+                    write-host "Match '$($match.Value)' found in $($file.FullName)"
+                    $count++
+                }
             }
         }
     }

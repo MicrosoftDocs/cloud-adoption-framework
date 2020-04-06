@@ -54,9 +54,9 @@ For deeper content that helps you stay current with Azure, take a look at the re
 - [Azure Charts](https://azurecharts.com)*
   - This visualization shows all the Azure updates made in the last six months. It contains other useful charts and utilities to help you track Azure changes.
 - [AzAdvertizer](https://www.azadvertizer.net)*
-  - Release and Change tracking on Azure Governance capabilities (e.g. Azure Policy, Policy Initiatives, Policy Aliases and RBAC).
+  - Release and change tracking on Azure Governance capabilities such as Azure Policy, Policy Initiatives, Policy Aliases and role-based access control (RBAC).
 - [Azure Weekly](https://azureweekly.info)*
   - This newsletter provided by [endjin](https://endjin.com) includes a summary of the week's top news about Microsoft Azure. It also includes interesting historical content.
   - Subscribe via [email](https://azureweekly.info).
 
-\* *These resources are provided by the community and are not officially maintained by Microsoft.*
+\* _These resources are provided by the community and are not officially maintained by Microsoft._

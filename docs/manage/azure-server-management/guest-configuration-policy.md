@@ -22,7 +22,7 @@ Get-AzPolicySetDefinition | where-object {$_.Properties.metadata.category -eq "G
 > [!NOTE]
 > Guest Configuration functionality is regularly updated to support additional policy sets. Check for new supported policies periodically and evaluate whether they'll be useful.
 
-<!-- TODO: Update these links when available. 
+<!-- TODOBACKLOG: Update these links when available. 
 
 By default, we recommend that you enable the following policies:
 

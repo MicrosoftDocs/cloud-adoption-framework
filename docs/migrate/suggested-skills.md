@@ -31,16 +31,16 @@ The following tools can aid the team in execution of assess activities:
 
 During Assess processes, architects will design solutions for each workload. The following skilling resources help prepare architects for these tasks:
 
-- [Foundations for Cloud Architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): PluralSight course to help architect the right foundational solutions
-- [Microsoft Azure Architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): PluralSight course to ground architects in Azure Architecture
-- [Designing Migrations for Microsoft Azure](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): PluralSight course to help architects design a migration solution
+- [Foundations for Cloud Architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations/table-of-contents): PluralSight course to help architect the right foundational solutions.
+- [Microsoft Azure Architecture - Getting Started](https://app.pluralsight.com/library/courses/azure-architecture-getting-started/table-of-contents): PluralSight course to ground architects in Azure architecture.
+- [Designing Migrations for Microsoft Azure](https://app.pluralsight.com/library/courses/microsoft-azure-migrations-designing/table-of-contents): PluralSight course to help architects design a migration solution
 
 ## Migrate skilling resources
 
 The following tutorial can prepare the team for migration activities:
 
 - [Migrate to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure): Using Azure Site Recovery to migrate VMs to Azure.
-- [Rehost workloads to Azure](https://aka.ms/rehostcourse): PluralSight course that teaches viewers how to rehost workloads to Azure
+- [Rehosting Workloads to Azure](https://app.pluralsight.com/library/courses/microsoft-azure-workloads-rehosting/table-of-contents): PluralSight course that teaches viewers how to rehost workloads to Azure
 - [Migrating Physical and Virtual Servers to Azure](https://app.pluralsight.com/library/courses/microsoft-azure-migrating-physical-virtual-servers/table-of-contents): PluralSight course for migrating servers to Azure
 - [Import and Export Data to Azure](https://app.pluralsight.com/library/courses/microsoft-azure-import-export-data/table-of-contents): PluralSight course on the movement of data to and from Azure
 
@@ -48,8 +48,8 @@ The following tutorial can prepare the team for migration activities:
 
 The following tools can help the team optimize resources and promote to production:
 
-- [Cost and sizing](azure-best-practices/migrate-best-practices-costs.md): Adjust sizing to align costs and budgets.
-- [Promote a workload](azure-best-practices/migrate-best-practices-networking.md): Change network configuration to reroute production users to migrated workloads.
+- [Cost and sizing](./azure-best-practices/migrate-best-practices-costs.md): Adjust sizing to align costs and budgets.
+- [Promote a workload](./azure-best-practices/migrate-best-practices-networking.md): Change network configuration to reroute production users to migrated workloads.
 
 ## Secure and manage process changes
 

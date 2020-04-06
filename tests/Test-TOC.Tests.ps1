@@ -2,6 +2,7 @@ $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 . "$here\Test-Helpers.ps1"
 . "$here\Test-TOC.ps1"
+. "$here\Test-Words.ps1"
 
 Describe "Test-TOC" -Tags "TOC" {
 
@@ -10,14 +11,18 @@ Describe "Test-TOC" -Tags "TOC" {
     }
 }
 
-Describe "Test-ExternalLinks" -Tags @("Links", "LongRunning") {
+Describe "Test-TocExternalLinks" -Tags @("Links", "LongRunning") {
 
-    It "All TOC links are valid" {
-        Test-ExternalLinks $(Get-TocFilePath) | Should -Be 0
+    It "All TOC external links are valid" {
+        # Test-ExternalLinks $(Get-TocFilePath) | Should -Be 0
+
+        $files = $(Get-Item $(Get-TocFilePath))
+        Test-AllMatches @($files) -TestLinks $true `
+            | Should -Be 0
     }
 }
 
-Describe "Test-Links" -Tag "Links" {
+Describe "Test-SpecificLinks" -Tag "Links" {
     
     It "Broken link is invalid" {
         $uri = "https://docs.microsoft.com/azure/BROKEN/guide/technology-choices/compute-decision-tree"
