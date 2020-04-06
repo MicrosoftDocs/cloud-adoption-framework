@@ -54,8 +54,8 @@ In response to feedback about continuity in the migration approach through multi
 
 ### Plan updates
 
-| Article                                                             | Description                                                                                                                                                                           |
-|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Article                                                                       | Description                                                                                                                                                                           |
+|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Assessment&nbsp;best&nbsp;practice](../plan/contoso-migration-assessment.md) | Moved this article to the new "Best Practices" section of the Plan methodology. This gives you visibility into the practice of assessing local environments earlier in the lifecycle. |
 
 ### Ready updates
