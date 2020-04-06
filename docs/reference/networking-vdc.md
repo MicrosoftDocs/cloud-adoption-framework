@@ -439,7 +439,7 @@ Security |Other Azure Services | |
 <!-- images -->
 
 [0]: ../_images/vdc/networking-vdc-redundant.png "Examples of component overlap"
-[1]: ../_images/vdc/networking-vdc-high-level.png "Example of hub and spoke VDC"
+<!-- _1_ >: ../_images/vdc/networking-vdc-high-level.png "Example of hub and spoke VDC" -->
 [2]: ../_images/vdc/networking-vdc-cluster.png "Cluster of hubs and spokes"
 [3]: ../_images/vdc/networking-vdc-spoke-to-spoke.png "Spoke-to-spoke"
 [4]: ../_images/vdc/networking-vdc-block-level-diagram.png "Block level diagram of the VDC"

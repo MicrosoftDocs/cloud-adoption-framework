@@ -50,7 +50,7 @@ While the tools discussed in this guide support a wide variety of migration scen
 - The dependency mapping of the components to be migrated is simple to define.
 - Your industry has minimal regulatory requirements relevant to this migration.
 
-If any of these conditions don't apply to your situation, you should instead consider the [expanded scope guide](../expanded-scope/index.md). We also recommend you request assistance from one of our Microsoft teams or partners to perform migrations requiring the expanded scope guide. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
+If any of these conditions don't apply to your situation, you should instead consider other [best practices for cloud migration](../azure-best-practices/index.md). We also recommend you request assistance from one of our Microsoft teams or partners to perform more complex migrations. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
 
 <!-- markdownlint-enable MD033 -->
 
@@ -58,6 +58,6 @@ If any of these conditions don't apply to your situation, you should instead con
 
 For more information, see:
 
-- [Expanded scope guide](../expanded-scope/index.md)
+- [Best practices for cloud migration](../azure-best-practices/index.md)
 
 ::: zone-end

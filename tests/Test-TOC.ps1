@@ -1,4 +1,8 @@
-function Test-OrphanedFiles([string] $tocFile, [string[]] $ignoreFiles)
+$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+
+. "$here/Test-Constants.ps1"
+
+function Test-MatchTocToFiles([string] $tocFile, [string[]] $ignoreFiles)
 {
     if (-not ($tocFile.Trim().EndsWith("toc.yml"))) {
         "TOC file not specified."
@@ -49,19 +53,19 @@ function Test-ExternalLinks([string] $tocFile = '')
         exit
     }
 
-    $expression = '(?i)href: https:\/\/[a-zA-Z0-9-\.]*\/[a-zA-Z0-9\/\-:\.&=_]*'
-
     $text = Get-Content $tocFile
 
-    $hits = ([regex]$expression).Matches($text)
+    $expression = Get-RegexForUrl
+    $regex = [regex]::new($expression)
+    $matches = $regex.Matches($text)
 
     $count = 0
 
-    if ($hits.Count -gt 0)
+    if ($matches.Count -gt 0)
     {
-        for ($i = 0; $i -lt $hits.Groups.Count; $i++)
+        for ($i = 0; $i -lt $matches.Groups.Count; $i++)
         {
-            $uri = $hits.Groups[$i].Value.Replace('href: ', '')
+            $uri = $matches.Groups[$i].Value
             $result = Test-Uri $uri
 
             if ($result -ne 200)
@@ -77,11 +81,13 @@ function Test-ExternalLinks([string] $tocFile = '')
 
 function Test-PageLinks([string] $filePath)
 {
-    $expression = '(?i)https:\/\/[a-zA-Z0-9-\.]*\/[a-zA-Z0-9\/\-:\.&=_%\+]*'
 
     $text = Get-Content $filePath
 
-    $hits = ([regex]$expression).Matches($text)
+    $regex = [regex]::new($expression)
+    $expression = Get-RegexForUrl
+
+    $hits = $regex.Matches($text)
 
     $count = 0
 
