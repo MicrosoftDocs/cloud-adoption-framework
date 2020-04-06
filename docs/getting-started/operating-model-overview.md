@@ -15,10 +15,11 @@ These common scenarios provide a roadmap through the Microsoft Cloud Adoption Fr
 
 |                                                                                     |                                                                                                                                |
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| [How do we deliver operational excellence during cloud transformation?](operational-excellence.md)                   | The steps in this guide will help the strategy team lead the organizational change management required to consistently ensure operational excellence. |
 | [How do we manage costs?](manage-costs.md)                                          | Start optimizing enterprise costs and manage cost across the environment.                                                                           |
-| [How do we consistently secure our cloud environment?](security-roadmap.md)             | This quickstart guide can help ensure the proper security requirements have been applied across the enterprise to minimize risk of breach and accelerate recover when breach occurs.                                       |
+| [How do we consistently secure our cloud environment?](security.md)             | This quickstart guide can help ensure the proper security requirements have been applied across the enterprise to minimize risk of breach and accelerate recover when breach occurs.                                       |
 | [How do we apply the right controls to improve reliability?](reliability.md)                   | This quickstart guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
-| [How do we build operational excellence?](operational-excellence.md)                   | This quickstart guide starts the process of building monitoring, resource automation, and resource management across the enterprise. |
+| [How do we deliver performance across the enterprise?](performance.md)                               | This quickstart guide can help you establish processes for maintaining performance across the enterprise.                               |
 | [How do we align our organization?](org-alignment.md)                               | This quickstart guide can help you establish an appropriately staffed organizational structure.                               |
 
 ## Shared architecture principles

@@ -56,7 +56,7 @@ landingContent:
         - text: Build operational excellence
           url: getting-started/operational-excellence.md
         - text: Address security early and often
-          url: getting-started/security-roadmap.md  
+          url: getting-started/security.md  
         - text: Align your organization
           url: getting-started/org-alignment.md
 

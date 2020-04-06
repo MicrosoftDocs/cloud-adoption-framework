@@ -34,7 +34,7 @@ items:
       - name: Build operational excellence
         href: getting-started/operational-excellence.md
       - name: Address security early and often
-        href: getting-started/security-roadmap.md  
+        href: getting-started/security.md  
       - name: Align your organization
         href: getting-started/org-alignment.md
     - name: Improve team processes

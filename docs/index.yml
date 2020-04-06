@@ -54,7 +54,7 @@ productDirectory:
           text: Migrate existing workloads
         - url: ./getting-started/org-alignment.md
           text: Organizational readiness
-        - url: ./getting-started/security-roadmap.md
+        - url: ./getting-started/security.md
           text: Security concerns
 
     # Card
