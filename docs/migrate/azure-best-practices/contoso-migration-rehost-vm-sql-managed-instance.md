@@ -157,7 +157,7 @@ Contoso admins set up the virtual network as follows:
 1. They create a new virtual network (**VNET-SQLMI-EU2**) in the primary East US 2 region. It adds the virtual network to the **ContosoNetworkingRG** resource group.
 2. They assign an address space of 10.235.0.0/24. They ensure that the range doesn't overlap with any other networks in its enterprise.
 3. They add two subnets to the network:
-    - **SQLMI-DS-EUS2** (10.235.0.0.25)
+    - **SQLMI-DS-EUS2** (10.235.0.0.25).
     - **SQLMI-SAW-EUS2** (10.235.0.128/29). This subnet is used to attach a directory to the Managed Instance.
 
       ![Managed Instance - Create virtual network](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
@@ -171,10 +171,10 @@ Contoso admins set up the virtual network as follows:
 
 5. They set custom DNS settings. DNS points first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
 
-    - Located in the **PROD-DC-EUS2** subnet, in the East US 2 production network (**VNET-PROD-EUS2**)
-    - **CONTOSODC3** address: 10.245.42.4
-    - **CONTOSODC4** address: 10.245.42.5
-    - Azure DNS resolver: 168.63.129.16
+    - Located in the **PROD-DC-EUS2** subnet, in the East US 2 production network (**VNET-PROD-EUS2**).
+    - **CONTOSODC3** address: 10.245.42.4.
+    - **CONTOSODC4** address: 10.245.42.5.
+    - Azure DNS resolver: 168.63.129.16.
 
       ![Network DNS servers](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
 
@@ -300,24 +300,25 @@ They set these up as follows:
 
 2. Provision the Azure Migrate Server Migration tool.
 
-    - From Azure Migrate, download the OVA image and import it into VMWare
+    - From Azure Migrate, download the OVA image and import it into VMWare.
 
         ![Download the OVA file](./media/contoso-migration-rehost-vm/migration-download-ova.png)
 
-    - Start the imported image and configure the tool, this includes
-      - Setup the prerequisites
+    - Start the imported image and configure the tool, including the following steps:
+
+      - Setup the prerequisites.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
 
-      - Point the tool to the Azure subscription
+      - Point the tool to the Azure subscription.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-register-azure.png)
 
-      - Set the VMWare vCenter credentials
+      - Set the VMWare vCenter credentials.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
 
-      - Add any linux and windows based credentials for discovery
+      - Add any linux and windows based credentials for discovery.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-credentials.png)
 
@@ -355,7 +356,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 5. Need more help?
 
-   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration
+   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration.
 
 ## Step 5: Replicate the on-premises VMs
 
@@ -481,7 +482,7 @@ Now Contoso admins run a full migration to complete the move.
 2. In **Replicating machines**, right-click the VM > **Migrate**.
 3. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
     - By default Azure Migrate shuts down the on-premises VM, and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This ensures no data loss.
-    - If you don't want to shut down the VM, select **No**
+    - If you don't want to shut down the VM, select **No**.
 4. A migration job starts for the VM. Track the job in Azure notifications.
 5. After the job finishes, you can view and manage the VM from the **Virtual Machines** page.
 6. Finally, they update the DNS records for **WEBVM** on one of the Contoso domain controllers.

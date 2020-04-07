@@ -135,24 +135,25 @@ They set these up as follows:
 
 2. Provision the Azure Migrate Server Migration tool.
 
-    - From Azure Migrate, download the OVA image and import it into VMWare
+    - From Azure Migrate, download the OVA image and import it into VMWare.
 
         ![Download the OVA file](./media/contoso-migration-rehost-vm/migration-download-ova.png)
 
-    - Start the imported image and configure the tool, this includes
-      - Setup the prerequisites
+    - Start the imported image and configure the tool, including the following steps:
+
+      - Setup the prerequisites.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
 
-      - Point the tool to the Azure subscription
+      - Point the tool to the Azure subscription.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-register-azure.png)
 
-      - Set the VMWare vCenter credentials
+      - Set the VMWare vCenter credentials.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
 
-      - Add any windows based credentials for discovery
+      - Add any windows based credentials for discovery.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-credentials.png)
 
@@ -189,7 +190,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 5. Need more help?
 
-   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration
+   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration.
 
 ## Step 3: Replicate the on-premises VMs
 
@@ -270,7 +271,7 @@ Now Contoso admins run a full migration.
 2. In **Replicating machines**, right-click the VM > **Migrate**.
 3. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
     - By default Azure Migrate shuts down the on-premises VM, and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This ensures no data loss.
-    - If you don't want to shut down the VM, select **No**
+    - If you don't want to shut down the VM, select **No**.
 4. A migration job starts for the VM. Track the job in Azure notifications.
 5. After the job finishes, you can view and manage the VM from the **Virtual Machines** page.
 

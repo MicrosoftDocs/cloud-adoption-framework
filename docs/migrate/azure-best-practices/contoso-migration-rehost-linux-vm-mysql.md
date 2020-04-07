@@ -119,28 +119,29 @@ They set these up as follows:
 
 2. Provision the Azure Migrate Server Migration tool.
 
-    - From Azure Migrate, download the OVA image and import it into VMWare
+    - From Azure Migrate, download the OVA image and import it into VMWare.
 
         ![Download the OVA file](./media/contoso-migration-rehost-vm/migration-download-ova.png)
 
-    - Start the imported image and configure the tool, this includes
-      - Setup the prerequisites
+    - Start the imported image and configure the tool, including the following steps:
+
+      - Set up the prerequisites.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
 
-      - Point the tool to the Azure subscription
+      - Point the tool to the Azure subscription.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-register-azure.png)
 
-      - Set the VMWare vCenter credentials
+      - Set the VMWare vCenter credentials.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
 
-      - Add any linux based credentials for discovery
+      - Add any Linux-based credentials for discovery.
 
         ![Configure the tool](./media/contoso-migration-rehost-vm/migration-credentials.png)
 
-3. Once configured, it will take some time for the tool to enumerate all the virtual machines.  Once complete, you will see them populate in the Azure Migrate tool in Azure.
+3. Once configured, it will take some time for the tool to enumerate all the virtual machines. Once complete, you will see them populate in the Azure Migrate tool in Azure.
 
 **Need more help?**
 
@@ -240,7 +241,7 @@ Now Contoso admins run a full migration to complete the move.
 2. In **Replicating machines**, right-click the VM > **Migrate**.
 3. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
     - By default Azure Migrate shuts down the on-premises VM, and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This ensures no data loss.
-    - If you don't want to shut down the VM, select **No**
+    - If you don't want to shut down the VM, select **No**.
 4. A migration job starts for the VM. Track the job in Azure notifications.
 5. After the job finishes, you can view and manage the VM from the **Virtual Machines** page.
 
@@ -284,13 +285,13 @@ Contoso admins migrate the database using Azure Database Migration Services usin
 
 As a summary, you must perform the following:
 
-- Ensure all migration prerequisites are met
+- Ensure all migration prerequisites are met:
   - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine and migration across source and target with same versions.
   - Enable binary logging in my.ini (Windows) or my.cnf (Unix). Failure to do this will cause a `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more details see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
   - User must have `ReplicationAdmin` role.
-  - Migrate the database schemas without foreign keys and triggers
+  - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
-- Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet
+- Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet.
 - Ensure that the Azure Database Migration Service can access the MySQL database via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the Virtual Network level, the network VPN and the machine hosting MySQL.
 - Run the Azure Database Migration Service Tool:
 
@@ -320,7 +321,7 @@ As a summary, you must perform the following:
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-monitor.png)
 
-  - Perform final cutover.
+  - Perform the final cutover.
   
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover.png)
 

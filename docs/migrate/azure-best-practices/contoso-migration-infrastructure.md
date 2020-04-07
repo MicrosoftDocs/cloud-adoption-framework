@@ -410,7 +410,7 @@ East US 2 is the primary region that Contoso will use to deploy resources and se
     - **VNET-PROD-EUS2**. Azure IaaS production components will be located in this network.
   - Each VNet will have its own unique address space, with no overlap. Contoso intend to configure routing without requiring NAT.
 - **Subnets:**
-  - There will be a subnet in each network for each app tier
+  - There will be a subnet in each network for each app tier.
   - Each subnet in the Production network will have a matching subnet in the Development VNet.
   - In addition, the Production network has a subnet for domain controllers.
 
@@ -553,7 +553,7 @@ When you deploy resources in virtual networks, you have a couple of choices for 
 Contoso admins have decided that the Azure DNS service isn't a good choice in the hybrid environment. Instead, they will use the on-premises DNS servers.
 
 - Since this is a hybrid network all the VMs on-premises and in Azure need to be able to resolve names to function properly. This means that custom DNS settings must be applied to all the VNets.
-- Contoso currently has DCs deployed in the Contoso datacenter and at the branch offices. The primary DNS servers are CONTOSODC1(172.16.0.10) and CONTOSODC2(172.16.0.1)
+- Contoso currently has DCs deployed in the Contoso datacenter and at the branch offices. The primary DNS servers are CONTOSODC1(172.16.0.10) and CONTOSODC2(172.16.0.1).
 - When the VNets are deployed, the on-premises domain controllers will be set to be used as DNS servers in the networks.
 - To configure this, when using custom DNS on the VNet, Azure's recursive resolvers IP address (such as 168.63.129.16) must be added to the DNS list. To do this, Contoso configures DNS server settings on each VNet. For example, the custom DNS settings for the VNET-HUB-EUS2 network would be as follows:
 

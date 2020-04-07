@@ -152,7 +152,7 @@ The Azure Migrate service helps you to discover and assess on-premises VMware VM
 Contoso needs to use Azure Migrate correctly given the scale of this migration.
 
 - Contoso will do an app-by-app assessment with Azure Migrate. This ensures that Azure Migrate returns timely data to the Azure portal.
-- Contoso admins read about [deploying Azure Migrate at scale](https://docs.microsoft.com/azure/migrate/how-to-scale-assessment)
+- Contoso admins read about [deploying Azure Migrate at scale](https://docs.microsoft.com/azure/migrate/how-to-scale-assessment).
 - Contoso notes the Azure Migrate limits summarized in the following table.
 
 **Action** | **Limit**

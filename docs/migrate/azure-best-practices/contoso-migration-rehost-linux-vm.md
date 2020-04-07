@@ -44,7 +44,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 - The OSTicket app is tiered across two VMs (**OSTICKETWEB** and **OSTICKETMYSQL**).
 - The VMs are located on VMware ESXi host **contosohost1.contoso.com** (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (**vcenter.contoso.com**), running on a VM.
-- Contoso has an on-premises datacenter (**contoso-datacenter**), with an on-premises domain controller (**contosodc1**)
+- Contoso has an on-premises datacenter (**contoso-datacenter**) with an on-premises domain controller (**contosodc1**).
 
 ### Proposed architecture
 
@@ -146,7 +146,7 @@ After migration to Azure, Contoso wants to be able to connect to the replicated 
 
 **Need more help?**
 
-- [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prepare-vms-for-migration) preparing VMs for migration
+- [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prepare-vms-for-migration) preparing VMs for migration.
 
 ## Step 3: Replicate the on-premises VMs
 
@@ -227,7 +227,7 @@ Now Contoso admins run a full migration to complete the move.
 2. In **Replicating machines**, right-click the VM > **Migrate**.
 3. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
     - By default Azure Migrate shuts down the on-premises VM, and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This ensures no data loss.
-    - If you don't want to shut down the VM, select **No**
+    - If you don't want to shut down the VM, select **No**.
 4. A migration job starts for the VM. Track the job in Azure notifications.
 5. After the job finishes, you can view and manage the VM from the **Virtual Machines** page.
 

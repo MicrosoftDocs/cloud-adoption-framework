@@ -50,7 +50,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 ### Current app
 
 - The SmartHotel360 on-premises app is tiered across two VMs (WEBVM and SQLVM).
-- The VMs are located on VMware ESXi host **contosohost1.contoso.com** (version 6.5)
+- The VMs are located on VMware ESXi host **contosohost1.contoso.com** (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (**vcenter.contoso.com**), running on a VM.
 - Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (**contosodc1**).
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
@@ -164,18 +164,18 @@ Contoso admins assess the database using Database Migration Assistant (DMA) and 
 
 As a summary, you must perform the following:
 
-- Utilize the Database Migration Assistant (DMA) to discover and resolve any database migration issues
-- Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet
+- Utilize the Database Migration Assistant (DMA) to discover and resolve any database migration issues.
+- Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet.
 - Ensure that the Azure Database Migration Service (DMS) can access the remote SQL Server via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the Virtual Network level, the network VPN and the machine hosting SQL Server.
-- Configure the Azure Database Migration Service
-  - Create a migration project
-  - Add a source (on-premises database)
-  - Select a target
-  - Select the database(s) to migrate
-  - Configure advanced settings
-  - Start the replication
-  - Resolve any errors
-  - Perform final cut-over
+- Configure the Azure Database Migration Service:
+  - Create a migration project.
+  - Add a source (on-premises database).
+  - Select a target.
+  - Select the database(s) to migrate.
+  - Configure advanced settings.
+  - Start the replication.
+  - Resolve any errors.
+  - Perform the final cutover.
 
 ## Step 3: Provision web apps
 

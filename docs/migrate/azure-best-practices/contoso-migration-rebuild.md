@@ -47,7 +47,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 ### Current app
 
 - The SmartHotel360 on-premises app is tiered across two VMs (WEBVM and SQLVM).
-- The VMs are located on VMware ESXi host **contosohost1.contoso.com** (version 6.5)
+- The VMs are located on VMware ESXi host **contosohost1.contoso.com** (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (**vcenter.contoso.com**), running on a VM.
 - Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (**contosodc1**).
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
@@ -128,7 +128,7 @@ Here's how Contoso will run the migration:
 Contoso admins run a deployment script to create the managed Kubernetes cluster using AKS and the Azure Container Registry (ACR).
 
 - The instructions for this section use the **SmartHotel360-Azure-backend** repository.
-- The **SmartHotel360-Azure-backend** GitHub repository contains all of the software for this part of the deployment.  
+- The **SmartHotel360-Azure-backend** GitHub repository contains all of the software for this part of the deployment.
 
 ### Ensure prerequisites
 

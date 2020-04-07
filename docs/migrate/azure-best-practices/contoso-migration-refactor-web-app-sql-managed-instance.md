@@ -49,7 +49,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 ### Current app
 
 - The SmartHotel360 on-premises app is tiered across two VMs (WEBVM and SQLVM).
-- The VMs are located on VMware ESXi host **contosohost1.contoso.com** (version 6.5)
+- The VMs are located on VMware ESXi host **contosohost1.contoso.com** (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (**vcenter.contoso.com**), running on a VM.
 - Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (**contosodc1**).
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
@@ -150,7 +150,7 @@ Contoso admins set up the virtual network as follows:
 1. They create a new virtual network (**VNET-SQLMI-EU2**) in the primary East US 2 region. It adds the virtual network to the **ContosoNetworkingRG** resource group.
 2. They assign an address space of 10.235.0.0/24. They ensure that the range doesn't overlap with any other networks in its enterprise.
 3. They add two subnets to the network:
-    - **SQLMI-DS-EUS2** (10.235.0.0.25)
+    - **SQLMI-DS-EUS2** (10.235.0.0.25).
     - **SQLMI-SAW-EUS2** (10.235.0.128/29). This subnet is used to attach a directory to the Managed Instance.
 
       ![Managed Instance - Create virtual network](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
@@ -164,10 +164,10 @@ Contoso admins set up the virtual network as follows:
 
 5. They set custom DNS settings. DNS points first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
 
-    - Located in the **PROD-DC-EUS2** subnet, in the East US 2 production network (**VNET-PROD-EUS2**)
-    - **CONTOSODC3** address: 10.245.42.4
-    - **CONTOSODC4** address: 10.245.42.5
-    - Azure DNS resolver: 168.63.129.16
+    - Located in the **PROD-DC-EUS2** subnet, in the East US 2 production network (**VNET-PROD-EUS2**).
+    - **CONTOSODC3** address: 10.245.42.4.
+    - **CONTOSODC4** address: 10.245.42.5.
+    - Azure DNS resolver: 168.63.129.16.
 
       ![Network DNS servers](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
 
@@ -233,17 +233,17 @@ Contoso admins migrate it using Azure Database Migration Services (DMS) with the
 
 As a summary, you must perform the following:
 
-- Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet
+- Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet.
 - Ensure that the Azure Database Migration Service (DMS) can access the remote SQL Server via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the Virtual Network level, the network VPN and the machine hosting SQL Server.
-- Configure the Azure Database Migration Service
-  - Create a migration project
-  - Add a source (on-premises database)
-  - Select a target
-  - Select the database(s) to migrate
-  - Configure advanced settings
-  - Start the replication
-  - Resolve any errors
-  - Perform final cut-over
+- Configure the Azure Database Migration Service:
+  - Create a migration project.
+  - Add a source (on-premises database).
+  - Select a target.
+  - Select the database(s) to migrate.
+  - Configure advanced settings.
+  - Start the replication.
+  - Resolve any errors.
+  - Perform the final cutover.
 
 ## Step 3: Provision web apps
 

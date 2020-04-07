@@ -50,7 +50,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 ### Current architecture
 
 - The app is tiered across two VMs (WEBVM and SQLVM).
-- The VMs are located on VMware ESXi host **contosohost1.contoso.com** (version 6.5)
+- The VMs are located on VMware ESXi host **contosohost1.contoso.com** (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (**vcenter.contoso.com**), running on a VM.
 - Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (**contosodc1**).
 
@@ -110,7 +110,7 @@ Contoso admins will migrate the app VMs to Azure.
   - After replication is enabled and working, they migrate the VM by failing it over to Azure.
 - Once they have verified the database, they will migrate the database to a SQL Server cluster in Azure, using the Data Migration Service (DMS).
   - As a first step they'll need to provision SQL Server VMs in Azure, set up the cluster and an internal load balancer, and configure Always On availability groups.
-  - With this in place, they can migrate the database
+  - With this in place, they can migrate the database.
 - After the migration, they'll enable Always On protection for the database.
 
     ![Migration process](./media/contoso-migration-rehost-vm-sql-ag/migration-process.png)
@@ -375,7 +375,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 5. Need more help?
 
-   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration
+   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration.
 
 ## Step 6: Replicate the on-premises VMs to Azure
 
@@ -430,17 +430,17 @@ Contoso admins migrate it using Azure Database Migration Services (DMS) with the
 
 As a summary, you must perform the following:
 
-- Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet
+- Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet.
 - Ensure that the Azure Database Migration Service (DMS) can access the remote SQL Server via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the Virtual Network level, the network VPN and the machine hosting SQL Server.
-- Configure the Azure Database Migration Service
-  - Create a migration project
-  - Add a source (on-premises database)
-  - Select a target
-  - Select the database(s) to migrate
-  - Configure advanced settings
-  - Start the replication
-  - Resolve any errors
-  - Perform final cut-over
+- Configure the Azure Database Migration Service:
+  - Create a migration project.
+  - Add a source (on-premises database).
+  - Select a target.
+  - Select the database(s) to migrate.
+  - Configure advanced settings.
+  - Start the replication.
+  - Resolve any errors.
+  - Perform the final cutover.
 
 ## Step 8: Protect the database with Always On
 

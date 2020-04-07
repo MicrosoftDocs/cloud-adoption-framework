@@ -204,7 +204,7 @@ As a summary, you must perform the following:
   - The user must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
-- Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet
+- Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet.
 - Ensure that the Azure Database Migration Service can access the MySQL database via the Virtual Network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the Virtual Network level, the network VPN and the machine hosting MySQL.
 - Run the Azure Database Migration Service Tool:
   - Create a migration project based on the **Premium SKU**.
@@ -233,7 +233,7 @@ As a summary, you must perform the following:
 
     ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-monitor.png)
   
-  - Perform the final cut-over.
+  - Perform the final cutover.
   
     ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover.png)
 
