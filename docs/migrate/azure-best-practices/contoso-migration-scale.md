@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore Hanu Scalr VHDs autosnooze unsnooze -->
+<!-- cSpell:ignore VHDs autosnooze unsnooze HANU SCALR -->
 
 # Scale a migration to Azure
 
@@ -152,7 +152,7 @@ The Azure Migrate service helps you to discover and assess on-premises VMware VM
 Contoso needs to use Azure Migrate correctly given the scale of this migration.
 
 - Contoso will do an app-by-app assessment with Azure Migrate. This ensures that Azure Migrate returns timely data to the Azure portal.
-- Contoso admins read about [deploying Azure Migrate at scale](https://docs.microsoft.com/azure/migrate/how-to-scale-assessment)
+- Contoso admins read about [deploying Azure Migrate at scale](https://docs.microsoft.com/azure/migrate/how-to-scale-assessment).
 - Contoso notes the Azure Migrate limits summarized in the following table.
 
 **Action** | **Limit**
@@ -205,7 +205,7 @@ Data must also be considered, especially with the volume of databases that Conto
 
 Contoso is primarily using a couple of Azure services and tools for the migration:
 
-- [Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-services-overview): Service for migrating on-premises Virtual Machines and other resources to Azure.
+- [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview): Service for migrating on-premises Virtual Machines and other resources to Azure.
 - [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview): Orchestrates disaster recovery, and migrates on-premises VMs to Azure.
 - [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview): Migrates on-premises databases such as SQL Server, MySQL, and Oracle to Azure.
 
