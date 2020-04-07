@@ -13,15 +13,15 @@ ms.subservice: ready
 
 # Use Terraform to build your landing zones
 
-Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is HashiCorp's Terraform. This section shows how to use a prototype landing zone to deploy foundational logging, accounting, and security capabilities for an Azure subscription.
+Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is HashiCorp's Terraform. This section shows how to use a sample landing zone to deploy foundational governance, accounting, and security capabilities for an Azure subscription.
 
 ## Purpose of the landing zone
 
-The Cloud Adoption Framework foundational landing zone for Terraform has a limited set of responsibilities and features to enforce logging, accounting, and security. This landing zone uses standard components known as Terraform modules to enforce consistency across resources deployed in the environment.
+The Cloud Adoption Framework foundations landing zone for Terraform provides features to enforce logging, accounting, and security. This landing zone uses standard components known as Terraform modules to enforce consistency across resources deployed in the environment.
 
 ## Use standard modules
 
-Reuse of components is a fundamental principle of infrastructure as code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. The modules used to deploy this first landing zone are available in the official [Terraform registry](https://registry.terraform.io/search?q=aztfmod).
+Reuse of components is a fundamental principle of infrastructure as code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. The modules used to deploy this first landing zone are available in the official [Terraform registry](https://registry.terraform.io/modules/aztfmod).
 
 ## Architecture diagram
 
@@ -92,7 +92,7 @@ The minimum set of tags shown below must be present on all resources and resourc
 
 ## Customize and deploy your first landing zone
 
-You can [clone your Terraform foundation landing zone](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready). Get started easily with the landing zone by modifying the Terraform variables. In our example, we use **blueprint_foundations.sandbox.auto.tfvars**, so Terraform automatically sets the values in this file for you.
+You can [clone your Terraform foundation landing zone](https://github.com/azure/caf-terraform-landingzones). Get started easily with the landing zone by modifying the Terraform variables. In our example, we use **blueprint_foundations.sandbox.auto.tfvars**, so Terraform automatically sets the values in this file for you.
 
 Let's look at the different variable sections.
 
@@ -187,7 +187,7 @@ security_center = {
 
 ## Get started
 
-After you've reviewed the configuration, you can deploy the configuration as you would deploy a Terraform environment. We recommend that you use the rover, which is a Docker container that allows deployment from Windows, Linux, or MacOS. You can get started with the [rover GitHub repository](https://github.com/aztfmod/rover).
+After you've reviewed the configuration, you can deploy the configuration as you would deploy a Terraform environment. We recommend that you use the rover, which is a Docker container that allows deployment from Windows, Linux, or macOS. You can get started with the [landing zones](https://github.com/azure/caf-terraform-landingzones).
 
 ## Next steps
 
@@ -201,4 +201,4 @@ Layering landing zones is a good practice for decoupling systems, versioning eac
 Future reference architectures will demonstrate this concept for a hub and spoke topology.
 
 > [!div class="nextstepaction"]
-> [Review the foundation Terraform landing zone sample](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready)
+> [Review the foundation Terraform landing zone sample](https://github.com/azure/caf-terraform-landingzones)
