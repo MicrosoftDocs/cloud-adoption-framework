@@ -1,64 +1,18 @@
 items:
   - name: Cloud Adoption Framework
-    href: index.yml
+    href: index.md
     pdf_name: Microsoft Cloud Adoption Framework for Azure
     
-  - name: Overview
-    href: overview.md
-  - name: What's new 
+  - name: What's new
     href: getting-started/whats-new.md
   - name: Getting started
     items:
-    - name: Overview
-      href: getting-started/index.yml
-    - name: Accelerate adoption
-      items:
-      - name: Overview
-        href: getting-started/blockers-overview.md
-      - name: Accelerate migration
-        href: getting-started/migrate.md
-      - name: Build new products and services
-        href: getting-started/innovate.md
-      - name: Unblock environment design and configuration
-        href: getting-started/design-config-roadmap.md
-      - name: Adopt a hybrid cloud
-        href: getting-started/hybrid-adoption.md
-    - name: Build a well-managed operating model
-      items: 
-      - name: Overview
-        href: getting-started/operating-model-overview.md
-      - name: Manage cloud costs
-        href: getting-started/manage-costs.md  
-      - name: Controls to improve reliability
-        href: getting-started/reliability.md  
-      - name: Build operational excellence
-        href: getting-started/operational-excellence.md
-      - name: Address security early and often
-        href: getting-started/security.md  
-      - name: Align your organization
-        href: getting-started/org-alignment.md
-    - name: Improve team processes
-      items:
-      - name: Overview
-        href: getting-started/team-roadmap-overview.md
-      - name: Strategy team
-        href: getting-started/strategy-team-quickstart.md
-      - name: Migration team
-        href: getting-started/migration-team-quickstart.md
-      - name: Innovation team
-        href: getting-started/innovation-team-quickstart.md
-      - name: Data team
-        href: getting-started/data-team-quickstart.md
-      - name: Governance team
-        href: getting-started/governance-team-quickstart.md
-      - name: Platform team
-        href: getting-started/platform-team-quickstart.md
-      - name: Automation team
-        href: getting-started/automation-team-quickstart.md
-      - name: Operations team
-        href: getting-started/operations-team-quickstart.md
-      - name: Security team
-        href: getting-started/security-team-quickstart.md
+    - name: Begin a migration journey
+      href: getting-started/migrate.md
+    - name: Understand the innovation journey
+      href: getting-started/innovate.md
+    - name: Enable successful cloud adoption
+      href: getting-started/enable.md
 
   - name: Strategy
     items:
@@ -1064,8 +1018,6 @@ items:
           href: govern/cost-management/compliance-processes.md
         - name: Improve cost management 
           href: govern/cost-management/discipline-improvement.md
-        - name: Best practices
-          href: govern/cost-management/best-practices.md
         - name: Azure tools for cost management
           href: govern/cost-management/toolchain.md
       - name: Security baseline
@@ -1292,15 +1244,13 @@ items:
       href: organize/suggested-skills.md
     - name: Creating a cost-conscious organization
       href: organize/cost-conscious-organization.md
-    - name: Anti-patterns - IT fiefdoms and IT silos
+    - name: Antipatterns - IT fiefdoms and IT silos
       href: organize/fiefdoms-silos.md
 
   - name: Resources
     items:
     - name: Cloud Adoption Framework roadmap
       href: reference/index.md
-    - name: Tools and templates
-      href: reference/tools-templates.md
     - name: Operating model
       items:
       - name: Overview

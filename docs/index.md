@@ -30,7 +30,7 @@ The Cloud Adoption Framework is the One Microsoft approach to cloud adoption in 
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Strategy</h3>
-                            Define business justification and expected outcomes. 
+                            Define business justification and expected outcomes.
                         </div>
                     </div>
                 </div>

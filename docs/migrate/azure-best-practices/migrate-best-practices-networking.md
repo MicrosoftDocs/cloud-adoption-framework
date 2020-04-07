@@ -227,7 +227,7 @@ The Azure ExpressRoute service extends your on-premises infrastructure into the 
 - With ExpressRoute Direct you can connect directly to Microsoft routers at 100Gbps, for larger bandwidth needs.
 - ExpressRoute uses BGP to exchange routes between on-premises networks, Azure instances, and Microsoft public addresses.
 
-Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a rapid start, it's common to initially use a site-to-site VPN to establish connectivity between the virtual datacenter and on-premises resources, and then migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
+Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a quick start, it's common to initially use a site-to-site VPN to establish connectivity between the virtual datacenter and on-premises resources, and then migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
 
 **Learn more:**
 
