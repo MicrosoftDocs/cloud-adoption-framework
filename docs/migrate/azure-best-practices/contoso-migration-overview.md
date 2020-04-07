@@ -2,8 +2,8 @@
 title: "Application migration examples for Azure"
 description: Use the Cloud Adoption Framework for Azure to learn how you can migrate on-premises infrastructure to the Microsoft Azure cloud.
 author: BrianBlanchard
-ms.author: brblanch
-ms.date: 02/25/2020
+ms.author: givenscj
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -65,28 +65,28 @@ The articles in the series are summarized below.
 
 **Article** | **Details**
 --- | ---
-[Rehost an app on Azure VMs](./contoso-migration-rehost-vm.md) | This article provides an example of migrating on-premises app VMs to Azure VMs using the Site Recovery service.
-[Rearchitect an app in Azure containers and Azure SQL Database](./contoso-migration-rearchitect-container-sql.md) | This article provides an example of migrating an app while rearchitecting the app web tier as a Windows container running in Azure Service Fabric, and the database with Azure SQL Database.
+[Rehost an app on Azure VMs](./contoso-migration-rehost-vm.md) | This article provides an example of migrating on-premises app VMs to Azure VMs using the Azure Migrate service.
 
 ### Linux workloads
 
 **Article** | **Details**
 --- | ---
-[Rehost a Linux app on Azure VMs and Azure Database for MySQL](./contoso-migration-rehost-linux-vm-mysql.md) | This article provides an example of migrating a Linux-hosted app to Azure VMs by using Site Recovery. It migrates the app database to Azure Database for MySQL by using MySQL Workbench.
-[Rehost a Linux app on Azure VMs](./contoso-migration-rehost-linux-vm.md) | This example shows how to complete a lift and shift migration of a Linux-based app to Azure VMs, using the Site Recovery service.
+[Rehost a Linux app on Azure VMs and Azure Database for MySQL](./contoso-migration-rehost-linux-vm-mysql.md) | This article provides an example of migrating a Linux-hosted app to Azure VMs by using Azure Migrate. It migrates the app database to Azure Database for MySQL by using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
+[Rehost a Linux app on Azure VMs](./contoso-migration-rehost-linux-vm.md) | This example shows how to complete a lift and shift migration of a Linux-based app to Azure VMs, using the Azure Migrate service.
 
 ### SQL Server workloads
 
 **Article** | **Details**
 --- | ---
-[Rehost an app on an Azure VM and SQL Database Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift and shift migration to Azure for an on-premises app. This effort involves migrating the app front-end VM using [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview), and the app database to an Azure SQL Database Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
-[Rehost an app on Azure VMs and in a SQL Server Always On availability group](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure hosted SQL Server VMs. It uses Site Recovery to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group.
+[Rehost an app on an Azure VM and SQL Database Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift and shift migration to Azure for an on-premises app. This involves migrating the app front-end VM using Azure Migrate, and the app database to an Azure SQL Database Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
+[Rehost an app on Azure VMs using SQL Server Always On availability groups](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure-hosted SQL Server VMs. It uses Azure Migrate to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group.
 
 ### ASP.NET, PHP, and Java apps
 
 **Article** | **Details**
 --- | ---
-[Refactor an app in an Azure web app and Azure SQL Database](./contoso-migration-refactor-web-app-sql.md) | This example shows how to migrate an on-premises Windows-based app to an Azure web app and migrates the app database to an Azure SQL Server instance with the Data Migration Assistant.
+[Refactor a Windows app using Azure App Services and Azure SQL Database](./contoso-migration-refactor-web-app-sql.md) | This example shows how to migrate an on-premises Windows-based app to an Azure web app and migrates the app database to an Azure SQL Server instance with the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
+[Refactor a Windows app using Azure App Services and SQL Managed Instance](./contoso-migration-refactor-web-app-sql-managed-instance.md) | This example shows how to migrate an on-premises Windows-based app to an Azure web app and migrates the app database to an Azure SQL Managed Instances using with the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
 [Refactor a Linux app to multiple regions using Azure App Service, Azure Traffic Manager, and Azure Database for MySQL](./contoso-migration-refactor-linux-app-service-mysql.md) | This example shows how to migrate an on-premises Linux-based app to an Azure web app on multiple Azure regions using Azure Traffic Manager, integrated with GitHub for continuous delivery. The app database is migrated to an Azure Database for MySQL instance.
 [Rebuild an app in Azure](./contoso-migration-rebuild.md) | This article provides an example of rebuilding an on-premises app using a range of Azure capabilities and managed services, including Azure App Service, Azure Kubernetes Service (AKS), Azure Functions, Azure Cognitive Services, and Azure Cosmos DB.
 [Refactor Team Foundation Server on Azure DevOps Services](./contoso-migration-tfs-vsts.md) | This article shows an example migration of an on-premises Team Foundation Server deployment to Azure DevOps Services in Azure.
