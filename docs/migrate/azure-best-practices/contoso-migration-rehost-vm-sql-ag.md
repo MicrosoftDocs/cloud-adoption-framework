@@ -25,15 +25,10 @@ The IT leadership team has worked closely with business partners to understand w
 - **Address business growth.** Contoso is growing, and as a result there is pressure on on-premises systems and infrastructure.
 
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-<<<<<<< HEAD
-- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must react faster than the changes in the marketplace to enable success in a global economy. IT must not get in the way or become a business blocker.
-- **Scale.** As the business grows successfully, Contoso IT must provide systems that can grow at the same pace.
-=======
 
 - **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable the success in a global economy. IT mustn't get in the way, or become a business blocker.
 
 - **Scale.** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
->>>>>>> d7aeb2aab59589ff0baa5fee499c488f9fae4665
 
 ## Migration goals
 
@@ -44,15 +39,10 @@ The Contoso cloud team has pinned down goals for this migration. These goals wer
 - Contoso doesn't want to invest in this app. It is important to the business, but in its current form Contoso simply want to move it safely to the cloud.
 
 - The on-premises database for the app has had availability issues. Contoso would like to deploy it in Azure as a high-availability cluster, with failover capabilities.
-<<<<<<< HEAD
-- Contoso wants to upgrade from their current SQL Server 2008 R2 platform to SQL Server 2017.
-- Contoso is looking for alternatives to Azure SQL Database for this app.
-=======
 
 - Contoso wants to upgrade from their current SQL Server 2008 R2 platform, to SQL Server 2017.
 
 - Contoso doesn't want to use an Azure SQL Database for this app, and is looking for alternatives.
->>>>>>> d7aeb2aab59589ff0baa5fee499c488f9fae4665
 
 ## Solution design
 
@@ -360,11 +350,7 @@ Contoso admins set up the account as follows:
 
 ### Prepare to connect to Azure VMs after failover
 
-<<<<<<< HEAD
-After failover, Contoso wants to connect to Azure VMs. To do this, Contoso admins must perform the following steps before migration:
-=======
 After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. To do this, Contoso admins do the following before migration:
->>>>>>> d7aeb2aab59589ff0baa5fee499c488f9fae4665
 
 1. For access over the internet, they:
 
@@ -374,45 +360,14 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 2. For access over site-to-site VPN, they:
 
-<<<<<<< HEAD
-   - Enable RDP on the on-premises machine.
-   - Allow RDP in the **Windows Firewall** -> **Allowed apps and features**, for **Domain and Private** networks.
-   - Set the operating system's SAN policy on the on-premises VM to **OnlineAll**.
-
-In addition, when they run a failover they need to check the following:
-
-- There should be no Windows updates pending on the VM when triggering a failover. If there are, users will be unable to log into the VM until the update completes.
-- After failover, they can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
-
-**Need more help?**
-
-- [Learn about](https://docs.microsoft.com/azure/site-recovery/vmware-azure-tutorial-prepare-on-premises#prepare-an-account-for-automatic-discovery) creating and assigning a role for automatic discovery.
-- [Learn about](https://docs.microsoft.com/azure/site-recovery/vmware-azure-tutorial-prepare-on-premises#prepare-an-account-for-mobility-service-installation) creating an account for push installation of the Mobility service.
-
-## Step 6: Replicate the on-premises VMs to Azure with Site Recovery
-
-Before they can run a migration to Azure, Contoso admins need to set up and enable replication.
-
-### Set a replication goal
-
-1. In the vault, under the vault name (ContosoVMVault) they select a replication goal (**Getting Started** > **Site Recovery** > **Prepare infrastructure**.
-2. They specify that their machines are located on-premises, running on VMware, and replicating to Azure.
-
-    ![Replication goal](./media/contoso-migration-rehost-vm-sql-ag/replication-goal.png)
-=======
     - Enable RDP or SSH on the on-premises VM before migration.
     - Check that RDP or SSH is allowed in the operating system firewall.
     - For windows, Set the operating system's SAN policy on the on-premises VM to **OnlineAll**.
->>>>>>> d7aeb2aab59589ff0baa5fee499c488f9fae4665
 
 3. Install the Azure agent
 
-<<<<<<< HEAD
-To continue, they need to confirm that they have completed deployment planning, by selecting **Yes, I have done it**. In this scenario, Contoso is only migrating a VM and doesn't need deployment planning.
-=======
     - Linux agent - [https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-linux](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-linux)
     - Windows agent - [https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows)
->>>>>>> d7aeb2aab59589ff0baa5fee499c488f9fae4665
 
 4. Miscellaneous
 
