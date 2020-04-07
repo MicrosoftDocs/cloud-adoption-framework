@@ -1,5 +1,5 @@
 ---
-title: "Using Terraform to build your landing zones"
+title: "Use Terraform to build your landing zones"
 description: Learn to use Terraform to build your landing zones.
 author: arnaudlh
 ms.author: arnaul
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 <!-- cSpell:ignore arnaudlh arnaul Arnaud vCPUs eastasia southeastasia lalogs tfvars -->
 
-# Using Terraform to build your landing zones
+# Use Terraform to build your landing zones
 
 Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is HashiCorp's Terraform. This section shows how to use a sample landing zone to deploy foundational governance, accounting, and security capabilities for an Azure subscription.
 
