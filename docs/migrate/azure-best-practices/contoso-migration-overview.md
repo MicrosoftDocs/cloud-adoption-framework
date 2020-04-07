@@ -1,13 +1,14 @@
 ---
-title: "Application migration examples for Azure"
-description: Use the Cloud Adoption Framework for Azure to learn how you can migrate on-premises infrastructure to the Microsoft Azure cloud.
-author: BrianBlanchard
-ms.author: givenscj
-ms.date: 02/24/2020
+title: "Overview of application migration examples for Azure"
+description: Provides an overview of the application migration examples included as part of the Cloud Adoption Framework Migrate section.
+author: givenscj
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore givenscj -->
 
 # Application migration patterns and examples
 
@@ -102,4 +103,4 @@ The articles in the series are summarized below.
 The example articles provided in this section use two demo apps: SmartHotel360 and osTicket.
 
 - **SmartHotel360:** This app was developed by Microsoft as a test app that you can use when working with Azure. It's provided as open source and you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360). It's an ASP.NET app connected to a SQL Server database. In the scenarios discussed in these articles, the current version of this app is deployed to two VMware VMs running Windows Server 2008 R2, and SQL Server 2008 R2. These app VMs are hosted on-premises and managed by vCenter Server.
-- **osTicket:** An open-source service desk ticketing app that runs on Linux. You can download it from [GitHub](https://github.com/osTicket/osTicket). In the scenarios discussed in these articles, the current version of this app is deployed on-premises to two VMware VMs running Ubuntu 16.04 LTS, using Apache 2, PHP 7.0, and MySQL 5.7
+- **osTicket:** An open-source service desk ticketing app that runs on Linux. You can download it from [GitHub](https://github.com/osTicket/osTicket). In the scenarios discussed in these articles, the current version of this app is deployed on-premises to two VMware VMs running Ubuntu 16.04 LTS, using Apache 2, PHP 7.0, and MySQL 5.7.

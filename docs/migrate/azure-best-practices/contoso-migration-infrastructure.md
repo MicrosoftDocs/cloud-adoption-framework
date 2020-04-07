@@ -1,16 +1,15 @@
 ---
 title: "Deploy a migration infrastructure"
-description: Use the Cloud Adoption Framework for Azure to learn through illustrative example how to set up an Azure infrastructure for migration to Azure.
-author: BrianBlanchard
-ms.author: deltadan
-ms.date: 3/27/2018
+description: Learn how Contoso sets up an Azure infrastructure for migration to Azure.
+author: deltadan
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore CSPs domainname IPAM CIDR untrust RRAS contosodc sysvol ITIL NSGs ASGs -->
+<!-- cSpell:ignore deltadan CSPs untrust CIDR RRAS CONTOSODC sysvol ITIL NSGs ASGs -->
 
 # Deploy a migration infrastructure
 
@@ -124,7 +123,7 @@ Contoso is using the Azure AD Free edition that's included with an Azure subscri
     ![Create Azure AD](./media/contoso-migration-infrastructure/azure-ad-create.png)
 
     > [!NOTE]
-    > The directory that's created has an initial domain name in the form **domainname.onmicrosoft.com**. The name can't be changed or deleted. Instead, they need to add its registered domain name to Azure AD.
+    > The directory that's created has an initial domain name in the form **domain-name.onmicrosoft.com**. The name can't be changed or deleted. Instead, they need to add its registered domain name to Azure AD.
 
 ### Add the domain name
 
@@ -379,7 +378,7 @@ Within each region, Contoso will deploy VNets for different purposes, as spoke n
 
 Within the hub and spoke model that Contoso has chosen, it needs to think about how traffic from the on-premises datacenter, and from the internet, will be routed. Here's how Contoso has decided to handle routing for both the East US 2 and Central US hubs:
 
-- Contoso is designing a network known which allows for traffic from the internet and from their corporate network using a VPN to Azure.
+- Contoso is designing a network that allows traffic from the internet as well as from their corporate network using a VPN to Azure.
 - The network architecture has two boundaries, an untrusted front-end perimeter zone and a back-end trusted zone.
 - A firewall will have a network adapter in each zone, controlling access to trusted zones.
 - From the internet:
@@ -411,7 +410,7 @@ East US 2 is the primary region that Contoso will use to deploy resources and se
     - **VNET-PROD-EUS2**. Azure IaaS production components will be located in this network.
   - Each VNet will have its own unique address space, with no overlap. Contoso intend to configure routing without requiring NAT.
 - **Subnets:**
-  - There will be a subnet in each network for each app tier
+  - There will be a subnet in each network for each app tier.
   - Each subnet in the Production network will have a matching subnet in the Development VNet.
   - In addition, the Production network has a subnet for domain controllers.
 
@@ -553,8 +552,8 @@ When you deploy resources in virtual networks, you have a couple of choices for 
 
 Contoso admins have decided that the Azure DNS service isn't a good choice in the hybrid environment. Instead, they will use the on-premises DNS servers.
 
-- Since this is a hybrid network, all the VMs on premises and in Azure must be able to resolve names to function properly. This means that custom DNS settings must be applied to all the VNets.
-- Contoso currently has DCs deployed in the Contoso datacenter and at the branch offices. The primary DNS servers are CONTOSODC1(172.16.0.10) and CONTOSODC2(172.16.0.1)
+- Since this is a hybrid network, all the VMs on premises and in Azure need to be able to resolve names to function properly. This means that custom DNS settings must be applied to all the VNets.
+- Contoso currently has DCs deployed in the Contoso datacenter and at the branch offices. The primary DNS servers are CONTOSODC1 (172.16.0.10) and CONTOSODC2 (172.16.0.1).
 - When the VNets are deployed, the on-premises domain controllers will be set to be used as DNS servers in the networks.
 - To configure this, when using custom DNS on the VNet, Azure's recursive resolvers IP address (such as 168.63.129.16) must be added to the DNS list. To do this, Contoso configures DNS server settings on each VNet. For example, the custom DNS settings for the VNET-HUB-EUS2 network would be as follows:
 
