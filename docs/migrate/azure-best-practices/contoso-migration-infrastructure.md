@@ -1,14 +1,15 @@
 ---
 title: "Deploy a migration infrastructure"
 description: Learn how Contoso sets up an Azure infrastructure for migration to Azure.
-author: BrianBlanchard
-ms.author: deltadan
-ms.date: 3/27/2018
+author: deltadan
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 services: azure-migrate
 ---
+
+<!-- cSpell:ignore deltadan CSPs untrust CIDR RRAS CONTOSODC sysvol ITIL NSGs ASGs -->
 
 # Deploy a migration infrastructure
 
@@ -122,7 +123,7 @@ Contoso is using the Azure AD Free edition that's included with an Azure subscri
     ![Create Azure AD](./media/contoso-migration-infrastructure/azure-ad-create.png)
 
     > [!NOTE]
-    > The directory that's created has an initial domain name in the form **domainname.onmicrosoft.com**. The name can't be changed or deleted. Instead, they need to add its registered domain name to Azure AD.
+    > The directory that's created has an initial domain name in the form **domain-name.onmicrosoft.com**. The name can't be changed or deleted. Instead, they need to add its registered domain name to Azure AD.
 
 ### Add the domain name
 
@@ -377,7 +378,7 @@ Within each region, Contoso will deploy VNets for different purposes, as spoke n
 
 Within the hub and spoke model that Contoso has chosen, it needs to think about how traffic from the on-premises datacenter, and from the internet, will be routed. Here's how Contoso has decided to handle routing for both the East US 2 and Central US hubs:
 
-- Contoso is designing a network known which allows for traffic from the internet and from their corporate network using a VPN to Azure.
+- Contoso is designing a network that allows traffic from the internet as well as from their corporate network using a VPN to Azure.
 - The network architecture has two boundaries, an untrusted front-end perimeter zone and a back-end trusted zone.
 - A firewall will have a network adapter in each zone, controlling access to trusted zones.
 - From the internet:

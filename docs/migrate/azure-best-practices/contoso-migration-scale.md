@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- cSpell:ignore VHDs autosnooze unsnooze HANU SCALR -->
+
 # Scale a migration to Azure
 
 This article demonstrates how the fictional company Contoso performs a migration at scale to Azure. They consider how to plan and perform a migration of more than 3000 workloads, 8000 databases, and over 10,000 VMs.
@@ -203,7 +205,7 @@ Data must also be considered, especially with the volume of databases that Conto
 
 Contoso are primarily using a couple of Azure services and tools for the migration:
 
-- [Azure Migrate](https://docs.microsoft.com/en-us/azure/migrate/migrate-services-overview): Service for migrating on-premises Virtual Machines and other resources to Azure.
+- [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview): Service for migrating on-premises Virtual Machines and other resources to Azure.
 - [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview): Orchestrates disaster recovery, and migrates on-premises VMs to Azure.
 - [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview): Migrates on-premises databases such as SQL Server, MySQL, and Oracle to Azure.
 

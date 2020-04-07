@@ -1,13 +1,14 @@
 ---
 title: "Overview of application migration examples for Azure"
 description: Provides an overview of the application migration examples included as part of the Cloud Adoption Framework Migrate section.
-author: BrianBlanchard
-ms.author: givenscj
-ms.date: 02/24/2020
+author: givenscj
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore givenscj -->
 
 # Application migration patterns and examples
 

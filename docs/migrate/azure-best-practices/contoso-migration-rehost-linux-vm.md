@@ -1,14 +1,15 @@
 ---
 title: "Rehost an on-premises Linux app to Azure VMs"
 description: Learn how Contoso rehosts an on-premises Linux app by migrating to Azure VMs.
-author: BrianBlanchard
-ms.author: givenscj
-ms.date: 02/24/2020
+author: givenscj
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 services: azure-migrate
 ---
+
+<!-- cSpell:ignore givenscj WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc contosoosticket osticket InnoDB binlog systemctl NSGs distros -->
 
 # Rehost an on-premises Linux app to Azure VMs
 
@@ -283,7 +284,7 @@ With the app now running, Contoso needs to fully operationalize and secure their
 
 ### Security
 
-The Contoso security team reviews the OSTICKETWEB and OSTICKETMYSQLVMs to determine any security issues.
+The Contoso security team reviews the OSTICKETWEB and OSTICKETMYSQL VMs to determine any security issues.
 
 - The team reviews the network security groups (NSGs) for the VMs to control access. NSGs are used to ensure that only traffic allowed to the application can pass.
 - The team also considers securing the data on the VM disks using Disk encryption and Azure Key Vault.
@@ -301,4 +302,4 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 - After deploying resources, Contoso assigns Azure tags as defined during the [Azure infrastructure deployment](./contoso-migration-infrastructure.md#set-up-tagging).
 - Contoso has no licensing issues with the Ubuntu servers.
-- Contoso will leverage [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/) to ensure they stay within budgets established by their IT leadership.
+- Contoso will use [Azure Cost Management](https://azure.microsoft.com/services/cost-management) to ensure they stay within budgets established by their IT leadership.

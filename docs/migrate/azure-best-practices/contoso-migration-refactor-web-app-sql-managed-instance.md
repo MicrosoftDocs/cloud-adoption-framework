@@ -1,14 +1,15 @@
 ---
 title: "Refactor an app by migrating it to Azure App Service and Azure SQL Database Managed Instance"
 description: Learn how Contoso rehosts an on-premises app by migrating it to an Azure App Service web app and Azure SQL Database Managed Instance.
-author: BrianBlanchard
-ms.author: givenscj
-ms.date: 02/24/2020
+author: givenscj
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 services: azure-migrate
 ---
+
+<!-- cSpell:ignore givenscj WEBVM SQLVM contosohost vcenter contosodc smarthotel SQLMI SHWCF SHWEB -->
 
 # Refactor an on-premises app to an Azure App Service web app and Azure SQL Managed Instance
 
@@ -85,14 +86,14 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 ## Proposed architecture
 
-![Scenario architecture](media/contoso-migration-refactor-web-app-sql-managed-instance/architecture.png)
+![Scenario architecture](./media/contoso-migration-refactor-web-app-sql-managed-instance/architecture.png)
 
 ### Migration process
 
 1. Contoso provisions an Azure SQL Database Managed Instance, and migrates the SmartHotel360 database to it using Azure Database Migration Service (DMS).
 2. Contoso provisions and configures web apps, and deploys the SmartHotel360 app to them.
 
-    ![Migration process](media/contoso-migration-refactor-web-app-sql-managed-instance/migration-process.png)
+    ![Migration process](./media/contoso-migration-refactor-web-app-sql-managed-instance/migration-process.png)
 
 ### Azure services
 
@@ -152,14 +153,14 @@ Contoso admins set up the virtual network as follows:
     - **SQLMI-DS-EUS2** (10.235.0.0.25)
     - **SQLMI-SAW-EUS2** (10.235.0.128/29). This subnet is used to attach a directory to the Managed Instance.
 
-      ![Managed Instance - Create virtual network](media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
+      ![Managed Instance - Create virtual network](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
 
 4. After the virtual network and subnets are deployed, they peer networks as follows:
 
     - Peers **VNET-SQLMI-EUS2** with **VNET-HUB-EUS2** (the hub virtual network for the East US 2).
     - Peers **VNET-SQLMI-EUS2** with **VNET-PROD-EUS2** (the production network).
 
-      ![Network peering](media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
+      ![Network peering](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
 
 5. They set custom DNS settings. DNS points first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
 
@@ -168,7 +169,7 @@ Contoso admins set up the virtual network as follows:
     - **CONTOSODC4** address: 10.245.42.5
     - Azure DNS resolver: 168.63.129.16
 
-      ![Network DNS servers](media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
+      ![Network DNS servers](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
 
 **Need more help?**
 
@@ -192,15 +193,15 @@ Contoso considers these factors:
 
 1. They create a user-defined route table in the **ContosoNetworkingRG** resource group.
 
-    ![Route table](media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table.png)
+    ![Route table](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table.png)
 
 2. To comply with Managed Instance requirements, after the route table (**MIRouteTable**) is deployed, they add a route that has an address prefix of 0.0.0.0/0. The **Next hop type** option is set to **Internet**.
 
-    ![Route table prefix](media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-prefix.png)
+    ![Route table prefix](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-prefix.png)
 
 3. They associate the route table with the **SQLMI-DB-EUS2** subnet (in the **VNET-SQLMI-EUS2** network).
 
-    ![Route table subnet](media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-subnet.png)
+    ![Route table subnet](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-subnet.png)
 
 **Need more help?**
 
@@ -213,14 +214,14 @@ Now, Contoso admins can provision a SQL Database Managed Instance:
 1. Because the Managed Instance serves a business app, they deploy the Managed Instance in the company's primary East US 2 region. They add the Managed Instance to the **ContosoRG** resource group.
 2. They select a pricing tier, size compute, and storage for the instance. Learn more about [Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed).
 
-    ![Managed Instance](media/contoso-migration-rehost-vm-sql-managed-instance/mi-create.png)
+    ![Managed Instance](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-create.png)
 
 3. After the Managed Instance is deployed, two new resources appear in the **ContosoRG** resource group:
 
     - A virtual cluster in case Contoso has multiple Managed Instances.
     - The SQL Server Database Managed Instance.
 
-      ![Managed Instance](media/contoso-migration-rehost-vm-sql-managed-instance/mi-resources.png)
+      ![Managed Instance](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-resources.png)
 
 **Need more help?**
 
@@ -228,7 +229,7 @@ Learn how to [provision a Managed Instance](https://docs.microsoft.com/azure/sql
 
 ## Step 2: Migrate with Azure Database Migration Service (DMS)
 
-Contoso admins migrate it using Azure Database Migration Services (DMS) with the step-by-step guidance [here](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-azure-sql-online). They can perform both online, offline and hybrid (preview) migrations.
+Contoso admins migrate it using Azure Database Migration Services (DMS) with the step-by-step guidance [here](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform both online, offline and hybrid (preview) migrations.
 
 As a summary, you must perform the following:
 
@@ -250,15 +251,15 @@ With the database migrated, Contoso admins can now provision the two web apps.
 
 1. They select **Web App** in the portal.
 
-    ![Web app](media/contoso-migration-refactor-web-app-sql-managed-instance/web-app1.png)
+    ![Web app](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app1.png)
 
 2. They provide an app name (**SHWEB-EUS2**), run it on Windows, and place it un the production resources group **ContosoRG**. They create a new web app and Azure App Service plan.
 
-    ![Web app](media/contoso-migration-refactor-web-app-sql-managed-instance/web-app2.png)
+    ![Web app](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app2.png)
 
 3. After the web app is provisioned, they repeat the process to create a web app for the WCF service (**SHWCF-EUS2**)
 
-    ![Web app](media/contoso-migration-refactor-web-app-sql-managed-instance/web-app3.png)
+    ![Web app](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app3.png)
 
 4. After they're done, they browse to the address of the apps to check they've been created successfully.
 
@@ -289,15 +290,15 @@ Contoso admins need to make sure the web apps and database can all communicate. 
 1. In the web app for the WCF service (**SHWCF-EUS2**) > **Settings** > **Application settings**, they add a new connection string named **DefaultConnection**.
 2. The connection string is pulled from the **SmartHotel-Registration** database, and should be updated with the correct credentials.
 
-    ![Connection string](media/contoso-migration-refactor-web-app-sql-managed-instance/string1.png)
+    ![Connection string](./media/contoso-migration-refactor-web-app-sql-managed-instance/string1.png)
 
 3. Using Visual Studio, they open the **SmartHotel.Registration.wcf** project from the solution file. The **connectionStrings** section of the web.config file for the WCF service SmartHotel.Registration.Wcf should be updated with the connection string.
 
-     ![Connection string](media/contoso-migration-refactor-web-app-sql-managed-instance/string2.png)
+     ![Connection string](./media/contoso-migration-refactor-web-app-sql-managed-instance/string2.png)
 
 4. The **client** section of the web.config file for the SmartHotel.Registration.Web should be changed to point to the new location of the WCF service. This is the URL of the WCF web app hosting the service endpoint.
 
-    ![Connection string](media/contoso-migration-refactor-web-app-sql-managed-instance/strings3.png)
+    ![Connection string](./media/contoso-migration-refactor-web-app-sql-managed-instance/strings3.png)
 
 5. After the changes are in the code, admins need to commit the changes. Using Team Explorer in Visual Studio, they commit and sync.
 
@@ -431,7 +432,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 - After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
 - All licensing is built into the cost of the PaaS services that Contoso is consuming. This will be deducted from the EA.
-- Contoso will leverage [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/) to ensure they stay within budgets established by their IT leadership.
+- Contoso will use [Azure Cost Management](https://azure.microsoft.com/services/cost-management) to ensure they stay within budgets established by their IT leadership.
 
 ## Conclusion
 

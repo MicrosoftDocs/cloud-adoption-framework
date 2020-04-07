@@ -3,12 +3,14 @@ title: "Refactor an app by migrating it to Azure App Service and Azure SQL Datab
 description: Learn how Contoso rehosts an on-premises app by migrating it to an Azure App Service web app and Azure SQL Server database.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/11/2018
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 services: azure-migrate
 ---
+
+<!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc smarthotel SHWEB SHWCF -->
 
 # Refactor an on-premises app to an Azure App Service web app and Azure SQL database
 
@@ -72,21 +74,21 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 **Consideration** | **Details**
 --- | ---
-**Pros** | The SmartHotel360 app code won't need to be altered for migration to Azure.<br/><br/> Contoso can take advantage of their investment in Software Assurance using the Azure Hybrid Benefit for both SQL Server and Windows Server.<br/><br/> After the migration Windows Server 2008 R2 won't need to be supported. [Learn more](https://support.microsoft.com/lifecycle).<br/><br/> Contoso can configure the web tier of the app with multiple instances, so that it's no longer a single point of failure.<br/><br/> The database will no longer depend on the aging SQL Server 2008 R2.<br/><br/> SQL Database supports the technical requirements. Contoso assessed the on-premises database using the Data Migration Assistant and found that it's compatible.<br/><br/> Azure SQL Database has built-in fault tolerance that Contoso don't need to set up. This ensures that the data tier is no longer a single point of failover.<br/><br/> If Contoso uses the Azure Database Migration Service to migrate their database, it will have the infrastructure ready for migrating databases at scale. 
+**Pros** | The SmartHotel360 app code won't need to be altered for migration to Azure.<br/><br/> Contoso can take advantage of their investment in Software Assurance using the Azure Hybrid Benefit for both SQL Server and Windows Server.<br/><br/> After the migration Windows Server 2008 R2 won't need to be supported. [Learn more](https://support.microsoft.com/lifecycle).<br/><br/> Contoso can configure the web tier of the app with multiple instances, so that it's no longer a single point of failure.<br/><br/> The database will no longer depend on the aging SQL Server 2008 R2.<br/><br/> SQL Database supports the technical requirements. Contoso assessed the on-premises database using the Data Migration Assistant and found that it's compatible.<br/><br/> Azure SQL Database has built-in fault tolerance that Contoso don't need to set up. This ensures that the data tier is no longer a single point of failover.<br/><br/> If Contoso uses the Azure Database Migration Service to migrate their database, it will have the infrastructure ready for migrating databases at scale.
 **Cons** | Azure App Service only supports one app deployment for each web app. This means that two web apps must be provisioned (one for the website and one for the WCF service).<br/><br/>
 
 <!-- markdownlint-enable MD033 -->
 
 ## Proposed architecture
 
-![Scenario architecture](media/contoso-migration-refactor-web-app-sql/architecture.png)
+![Scenario architecture](./media/contoso-migration-refactor-web-app-sql/architecture.png)
 
 ### Migration process
 
 1. Contoso provisions an Azure SQL instance, and migrates the SmartHotel360 database to it using Azure Database Migration Service (DMS).
 2. Contoso provisions and configures web apps, and deploys the SmartHotel360 app to them.
 
-    ![Migration process](media/contoso-migration-refactor-web-app-sql/migration-process.png)
+    ![Migration process](./media/contoso-migration-refactor-web-app-sql/migration-process.png)
 
 ### Azure services
 
@@ -128,28 +130,28 @@ Here's how Contoso will run the migration:
 
 1. Contoso admins select to create a SQL Database in Azure.
 
-    ![Provision SQL](media/contoso-migration-refactor-web-app-sql/provision-sql1.png)
+    ![Provision SQL](./media/contoso-migration-refactor-web-app-sql/provision-sql1.png)
 
 2. They specify a database name to match the database running on the on-premises VM (**SmartHotel.Registration**). They place the database in the ContosoRG resource group. This is the resource group they use for production resources in Azure.
 
-    ![Provision SQL](media/contoso-migration-refactor-web-app-sql/provision-sql2.png)
+    ![Provision SQL](./media/contoso-migration-refactor-web-app-sql/provision-sql2.png)
 
 3. They set up a new SQL Server instance (**sql-smarthotel-eus2**) in the primary region.
 
-    ![Provision SQL](media/contoso-migration-refactor-web-app-sql/provision-sql3.png)
+    ![Provision SQL](./media/contoso-migration-refactor-web-app-sql/provision-sql3.png)
 
 4. They set the pricing tier to match their server and database needs. And they select to save money with Azure Hybrid Benefit because they already have a SQL Server license.
 5. For sizing they use v-Core-based purchasing, and set the limits for their expected requirements.
 
-    ![Provision SQL](media/contoso-migration-refactor-web-app-sql/provision-sql4.png)
+    ![Provision SQL](./media/contoso-migration-refactor-web-app-sql/provision-sql4.png)
 
 6. Then they create the database instance.
 
-    ![Provision SQL](media/contoso-migration-refactor-web-app-sql/provision-sql5.png)
+    ![Provision SQL](./media/contoso-migration-refactor-web-app-sql/provision-sql5.png)
 
 7. After the instance is created, they open the database, and note details they need when they use the Data Migration Assistant for migration.
 
-    ![Provision SQL](media/contoso-migration-refactor-web-app-sql/provision-sql6.png)
+    ![Provision SQL](./media/contoso-migration-refactor-web-app-sql/provision-sql6.png)
 
 **Need more help?**
 
@@ -158,7 +160,7 @@ Here's how Contoso will run the migration:
 
 ## Step 2: Assess the database with Database Migration Assistant (DMA) and migrate with Azure Database Migration Service (DMS)
 
-Contoso admins assess the database using Database Migration Assistant (DMA) and then migrate it using Azure Database Migration Services (DMS) with the step-by-step guidance [here](https://docs.microsoft.com/en-us/azure/dms/tutorial-sql-server-azure-sql-online). They can perform both online, offline and hybrid (preview) migrations.
+Contoso admins assess the database using Database Migration Assistant (DMA) and then migrate it using Azure Database Migration Services (DMS) with the step-by-step guidance [here](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform both online, offline and hybrid (preview) migrations.
 
 As a summary, you must perform the following:
 
@@ -181,15 +183,15 @@ With the database migrated, Contoso admins can now provision the two web apps.
 
 1. They select **Web App** in the portal.
 
-    ![Web app](media/contoso-migration-refactor-web-app-sql/web-app1.png)
+    ![Web app](./media/contoso-migration-refactor-web-app-sql/web-app1.png)
 
 2. They provide an app name (**SHWEB-EUS2**), run it on Windows, and place it un the production resources group **ContosoRG**. They create a new web app and Azure App Service plan.
 
-    ![Web app](media/contoso-migration-refactor-web-app-sql/web-app2.png)
+    ![Web app](./media/contoso-migration-refactor-web-app-sql/web-app2.png)
 
 3. After the web app is provisioned, they repeat the process to create a web app for the WCF service (**SHWCF-EUS2**)
 
-    ![Web app](media/contoso-migration-refactor-web-app-sql/web-app3.png)
+    ![Web app](./media/contoso-migration-refactor-web-app-sql/web-app3.png)
 
 4. After they're done, they browse to the address of the apps to check they've been created successfully.
 
@@ -220,15 +222,15 @@ Contoso admins need to make sure the web apps and database can all communicate. 
 1. In the web app for the WCF service (**SHWCF-EUS2**) > **Settings** > **Application settings**, they add a new connection string named **DefaultConnection**.
 2. The connection string is pulled from the **SmartHotel-Registration** database, and should be updated with the correct credentials.
 
-    ![Connection string](media/contoso-migration-refactor-web-app-sql/string1.png)
+    ![Connection string](./media/contoso-migration-refactor-web-app-sql/string1.png)
 
 3. Using Visual Studio, they open the **SmartHotel.Registration.wcf** project from the solution file. The **connectionStrings** section of the web.config file for the WCF service SmartHotel.Registration.Wcf should be updated with the connection string.
 
-     ![Connection string](media/contoso-migration-refactor-web-app-sql/string2.png)
+     ![Connection string](./media/contoso-migration-refactor-web-app-sql/string2.png)
 
 4. The **client** section of the web.config file for the SmartHotel.Registration.Web should be changed to point to the new location of the WCF service. This is the URL of the WCF web app hosting the service endpoint.
 
-    ![Connection string](media/contoso-migration-refactor-web-app-sql/strings3.png)
+    ![Connection string](./media/contoso-migration-refactor-web-app-sql/strings3.png)
 
 5. After the changes are in the code, admins need to commit the changes. Using Team Explorer in Visual Studio, they commit and sync.
 
@@ -362,7 +364,8 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 - After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
 - All licensing is built into the cost of the PaaS services that Contoso is consuming. This will be deducted from the EA.
-- Contoso will leverage [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/) to ensure they stay within budgets established by their IT leadership.
+- Contoso will use [Azure Cost Management](https://azure.microsoft.com/services/cost-management) to ensure they stay within budgets established by their IT leadership.
+
 ## Conclusion
 
 In this article, Contoso refactored the SmartHotel360 app in Azure by migrating the app front-end VM to two Azure App Service web apps. The app database was migrated to an Azure SQL database.
