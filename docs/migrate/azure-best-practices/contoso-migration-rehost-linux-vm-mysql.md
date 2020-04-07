@@ -272,7 +272,7 @@ Contoso admins provision a MySQL database instance in the primary East US 2 regi
 
 ## Step 6: Migrate the database
 
-There are several ways to move the MySQL database.  Each require you to create a Azure DB for MySQL instance for the target. Once created, you can perform the migration using two paths:
+There are several ways to move the MySQL database.  Each require you to create an Azure DB for MySQL instance for the target. Once created, you can perform the migration using two paths:
 
 - 6a: Azure Database Migration Service
 - 6b: MySQL Workbench backup and restore
