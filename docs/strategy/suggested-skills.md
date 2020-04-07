@@ -77,7 +77,7 @@ Microsoft and partners offer various options to help all audiences develop their
 
 - [Microsoft IT Pro Center](https://www.microsoft.com/itpro). Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
 
-We recommend turning knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/azure-certification.aspx).
+We recommend turning knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
 
 ## Microsoft Learn
 

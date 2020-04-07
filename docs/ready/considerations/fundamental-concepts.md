@@ -55,7 +55,7 @@ Azure defines three types of roles for administering subscriptions, identities, 
 - Azure role-based access control (RBAC) roles
 - Azure Active Directory (Azure AD) administrator roles
 
-The account administrator role for an Azure subscription is assigned to the email account that's used to create the Azure subscription. The account administrator is the billing owner of the subscription. The account administrator can manage the subscription details in the [Azure Account Center](https://account.azure.com/Subscriptions).
+The account administrator role for an Azure subscription is assigned to the email account that's used to create the Azure subscription. The account administrator is the billing owner of the subscription. The account administrator can manage the subscription details in the [Azure Account Center](https://account.azure.com/subscriptions).
 
 By default, the service administrator role for a subscription also is assigned to the email account that's used to create the Azure subscription. The service administrator has permissions to the subscription equivalent to the RBAC-based Owner role. The service administrator also has full access to the Azure portal. The account administrator can change the service administrator to a different email account.
 

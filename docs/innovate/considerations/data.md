@@ -38,7 +38,7 @@ The primary tools for sharing data directly with data consumers include self-ser
 
 Sharing data can quickly produce an MVP that you can use in customer conversations. However, to turn that shared data into useful and actionable knowledge, a bit more is generally required. After a hypothesis has been validated through data sharing, the next phase of development is typically data governance.
 
-Data governance is a broad topic that could require it's own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.md). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
+Data governance is a broad topic that could require its own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.md). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
 
 - **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) before being shared publicly to protect the interests of customers and the company.
 - **If the data is sensitive, has it been secured?** Protection of sensitive data should be a requirement for any democratized data. The example workload focused on [securing data solutions](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/securing-data-solutions) provides a few references for securing data.

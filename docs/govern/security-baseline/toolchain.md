@@ -30,8 +30,8 @@ The following list of Azure tools can help mature the policies and processes tha
 | Preemptively detect vulnerabilities                        | No                              | No              | No       | No           | Yes                   | No            |
 | Configure backup and disaster recovery                     | Yes                             | No              | No       | No           | No                    | No            |
 
-For a complete list of Azure security tools and services, see [Security services and technologies available on Azure](https://docs.microsoft.com/azure/security/azure-security-services-technologies).
+For a complete list of Azure security tools and services, see [Security services and technologies available on Azure](https://docs.microsoft.com/azure/security/fundamentals/services-technologies).
 
 It is also common for customers to use third-party tools for facilitating Security Baseline activities. For more information, see the article [Integrate security solutions in Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-partner-integration).
 
-In addition to security tools, the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment) contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your migration planning process.
+In addition to security tools, the [Microsoft Trust Center](https://www.microsoft.com/microsoft-365/business/compliance-solutions#office-KeyMessages-k3j63yo) contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your migration planning process.
