@@ -330,7 +330,7 @@ Now, Contoso runs the collector to discover VMs. Currently, the collector curren
 
 8. The collector will now start to discovery and collect information about the Contoso environment.
 
-    ![View collection progress](./media/contoso-migration-assessment/migrate-discovery.png)
+    ![View collection progress](../migrate/azure-best-practices/media/contoso-migration-assessment/migrate-discovery.png)
 
 ### Verify VMs in the portal
 
