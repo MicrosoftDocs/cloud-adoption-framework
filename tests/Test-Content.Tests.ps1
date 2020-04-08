@@ -1,5 +1,7 @@
 $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+. "$here\Test-MyRepo.ps1"
+
 . "$here\Test-Expressions.ps1"
 . "$here\Test-Helpers.ps1"
 . "$here\Test-LocalPaths.ps1"
@@ -9,8 +11,8 @@ $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 Describe "Test-LocalPaths" -Tags "Content" {
 
     It "All local links exist" {
-        Test-AllLocalPaths $(Get-ContentFiles) | `
-            Should -Be 0
+        Test-AllLocalPaths $(Get-ContentFiles) `
+            | Should -Be 0
     }
 }
 
@@ -25,7 +27,8 @@ Describe "Test-WellFormedLinks" -Tag "Links" {
 Describe "Test-PageLinks" -Tag @("Links", "LongRunning") {
 
     It "All external page links are valid" {
-        Test-PageLinks $(Get-ContentFiles) # $(Get-ContentFiles "digital-estate")
+        Test-PageLinks $(Get-ContentFiles) `
+            | Should -Be 0
     }
 }
 
@@ -54,7 +57,7 @@ Describe "Test-CompoundWords" -Tag "Content" {
     }
 }
 
-Describe Test-Abbreviations -Tag "Content" {
+Describe "Test-Abbreviations" -Tag "Content" {
 
     It "No invalid abbreviations exist" {
         
@@ -63,7 +66,7 @@ Describe Test-Abbreviations -Tag "Content" {
     }
 }
 
-Describe Test-Punctuation -Tags "Style" {
+Describe "Test-Punctuation" -Tags "Style" {
     
     It "Punctuation style is correct" {
 

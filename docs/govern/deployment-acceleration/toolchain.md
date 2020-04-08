@@ -18,7 +18,7 @@ Cloud custodians, cloud guardians, and cloud architects with an interest in gove
 
 The following is a list of Azure tools that can help mature the policies and processes that support this governance discipline.
 
-|  | [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) | [Azure Management Groups](https://docs.microsoft.com/azure/governance/management-groups) | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) | [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) | [Azure Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview) | [Azure Cost Management](https://docs.microsoft.com/azure/cost-management) |
+|  | [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) | [Azure Management Groups](https://docs.microsoft.com/azure/governance/management-groups) | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview) | [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) | [Azure Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview) | [Azure Cost Management](https://docs.microsoft.com/azure/cost-management) |
 |---------|---------|---------|---------|---------|---------|---------|
 |Implement corporate policies     |Yes |No  |No  |No | No |No |
 |Apply policies across subscriptions     |Required |Yes  |No  |No | No |No |
@@ -30,7 +30,7 @@ The following is a list of Azure tools that can help mature the policies and pro
 
 The following are additional tools that may be required to accomplish specific Deployment Acceleration objectives. Often these tools are used outside of the governance team, but are still considered an aspect of Deployment Acceleration as a discipline.
 
-|  | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)  | [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) | [Azure DevOps](https://docs.microsoft.com/azure/devops/index) | [Azure Backup](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup) | [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) |
+|  | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview)  | [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) | [Azure DevOps](https://docs.microsoft.com/azure/devops) | [Azure Backup](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup) | [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) |
 |---------|---------|---------|---------|---------|---------|---------|
 |Manual deployment (single asset)     | Yes | Yes  | No  | Not efficiently | No | Yes |
 |Manual deployment (full environment)     | Not efficiently | Yes | No  | Not efficiently | No | Yes |

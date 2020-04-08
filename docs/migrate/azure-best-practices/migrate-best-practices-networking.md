@@ -44,9 +44,9 @@ When you create VNets as part of your migration, it's important to plan out your
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) of Azure VNets.
-- [Read](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq) the networking FAQ.
-- [Learn about](https://docs.microsoft.com/azure/azure-subscription-service-limits?toc=%2fazure%2fvirtual-network%2ftoc.json#networking-limits) networking limitations.
+- Get an [overview of Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
+- Read the [Azure Virtual Network frequently asked questions (FAQ)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq).
+- Learn about [Azure networking limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits?toc=/azure/virtual-network/toc.json#networking-limits).
 
 ## Best practice: Implement a hub and spoke network topology
 

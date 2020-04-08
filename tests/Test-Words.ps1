@@ -42,6 +42,7 @@ function Test-Match(
     elseif ($ignoreUrlContents)
     {
         $text = Remove-Urls $text 
+        $text = Remove-ImagePaths $text
     }
 
     foreach ($originalExpression in $expressions) {
@@ -67,7 +68,7 @@ function Test-Match(
 
                     if ($result -ne 200)
                     {
-                        Write-Host "RESULT: $result - $uri"
+                        Write-Host "RESULT in $($file.Name): $result - $uri"
                         $count++
                     }
                 }
@@ -76,6 +77,7 @@ function Test-Match(
                     if (-not ($match.Value -clike $originalExpression))
                     {
                         write-host "Case mismatch '$($match.Value)' in $($file.FullName)"
+                        $count++
                     }
                 }
                 else
@@ -93,14 +95,27 @@ function Test-Match(
 function Remove-Urls(
     [string]$text) 
 {
+    return Remove-Matches $(Get-RegexForUrl) $text
+}
 
-    $expression = Get-RegexForUrl
+function Remove-ImagePaths(
+    [string]$text) 
+{
+    return Remove-Matches $(Get-RegexForImagePath) $text
+}
+
+function Remove-Matches(
+    [string] $expression,
+    [string] $text
+)
+{
+    $result = $text
     $regex = [regex]::new($expression)
 
     foreach ($match in $regex.Matches($text))
     {
-        $text = $text.Replace($match.Value, "")
+        $result = $result.Replace($match.Value, "")
     }
 
-    return $text
+    return $result
 }

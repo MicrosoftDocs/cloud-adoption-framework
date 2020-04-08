@@ -2,6 +2,7 @@
 title: "Rehost an on-premises Linux app to Azure VMs"
 description: Learn how Contoso rehosts an on-premises Linux app by migrating to Azure VMs.
 author: givenscj
+ms.author: abuck
 ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -64,8 +65,8 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 **Consideration** | **Details**
 --- | ---
-**Pros** | Both the app VMs will be moved to Azure without changes, making the migration simple.<br/><br/> Since Contoso is using a lift and shift approach for both app VMs, no special configuration or migration tools are needed for the app database.<br/><br/> Contoso will retain full control of the app VMs in Azure. <br/><br/> The app VMs are running Ubuntu 16.04-TLS, which is an endorsed Linux distribution. [Learn more](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
-**Cons** | The web and data tier of the app will remain a single point of failover. <br/><br/> Contoso will need to continue supporting the app as Azure VMs rather than moving to a managed service such as Azure App Service and Azure Database for MySQL.<br/><br/> Contoso is aware that by keeping things simple with a lift and shift VM migration, they're not taking full advantage of the features provided by [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview) (built-in high availability, predictable performance, simple scaling, automatic backups and built-in security).
+**Pros** | Both the app VMs will be moved to Azure without changes, making the migration simple.<br/><br/> Since Contoso is using a lift and shift approach for both app VMs, no special configuration or migration tools are needed for the app database.<br/><br/> Contoso will retain full control of the app VMs in Azure. <br/><br/> The app VMs are running Ubuntu 16.04-TLS, an endorsed Linux distribution. [Learn more](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
+**Cons** | The web and data tier of the app will remain a single point of failover. <br/><br/> Contoso will need to continue supporting the app as Azure VMs rather than moving to a managed service such as Azure App Service and Azure Database for MySQL.<br/><br/> Contoso realizes that, by keeping things simple with a lift and shift VM migration, they're not taking full advantage of the features provided by [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview) (built-in high availability, predictable performance, simple scaling, automatic backups, and built-in security).
 
 <!-- markdownlint-enable MD033 -->
 
@@ -74,7 +75,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 Contoso will migrate as follows:
 
 - As a first step, Contoso prepares and sets up Azure components for Azure Migrate Server Migration, and prepares the on-premises VMware infrastructure.
-- They already have the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, so Contoso just needs to add configure the replication of the VMs through the Azure Migrate Server Migration tool.
+- They already have the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, so Contoso just needs to configure the replication of the VMs through the Azure Migrate Server Migration tool.
 - With everything prepared, Contoso can start replicating the VMs.
 - After replication is enabled and working, Contoso will migrate the VM by failing it over to Azure.
 
@@ -119,7 +120,7 @@ Here are the Azure components Contoso needs to migrate the VMs to Azure:
 - A VNet in which Azure VMs will be located when they're created during migration.
 - The Azure Migrate Server Migration tool provisioned.
 
-They set these up as follows:
+They set these components up as follows:
 
 1. **Set up a network:** Contoso already set up a network that can be for Azure Migrate Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
@@ -295,7 +296,7 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 For business continuity and disaster recovery, Contoso takes the following actions:
 
-- **Keep data safe.** Contoso backs up the data on the VMs using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+- **Keep data safe.** Contoso backs up the data on the VMs using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup?toc=/azure/virtual-machines/linux/toc.json).
 - **Keep apps up and running.** Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization

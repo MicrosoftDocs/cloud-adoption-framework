@@ -32,7 +32,7 @@ D. When a partner provides ongoing managed services or is contracted to deliver 
 
 ## Choosing a first landing zone
 
-Selection of the first landing zone depends on multiple variables. The following grid captures some of the options for first landing zones, along with variables which may drive the decision.
+Selection of the first landing zone depends on multiple variables. The following grid captures some of the options for first landing zones, along with variables that may drive the decision.
 
 | Landing Zone                                 | Cloud experience  | Scale             | Discovery time | Production ready | Hybrid             | Sensitive data     | Mission critical   | Compliance         |
 |----------------------------------------------|-------------------|-------------------|----------------|------------------|--------------------|--------------------|--------------------|--------------------|

@@ -73,7 +73,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 **Consideration** | **Details**
 --- | ---
 **Pros** | Using PaaS and serverless solutions for the end-to-end deployment significantly reduces management time that Contoso must provide.<br/><br/> Moving to a microservices-based architecture allows Contoso to easily extend the solution over time.<br/><br/> New functionality can be brought online without disrupting any of the existing solutions code bases.<br/><br/> The web app will be configured with multiple instances with no single point of failure.<br/><br/> Autoscaling will be enabled so that the app can handle differing traffic volumes.<br/><br/> With the move to PaaS services, Contoso can retire out-of-date solutions running on Windows Server 2008 R2 operating system.<br/><br/> Cosmos DB has built-in fault tolerance, which requires no configuration by Contoso. This means that the data tier is no longer a single point of failover.
-**Cons** | Containers are more complex than other migration options. The learning curve could be an issue for Contoso. They introduce a new level of complexity that provides a lot of value in spite of the curve.<br/><br/> The operations team at Contoso needs to ramp up to understand and support Azure, containers and microservices for the app.<br/><br/> Contoso hasn't fully implemented DevOps for the entire solution. Contoso needs to consider that for the deployment of services to AKS, Azure Functions, and Azure App Service.
+**Cons** | Containers are more complex than other migration options. The learning curve could be an issue for Contoso. They introduce a new level of complexity that provides value in spite of the curve.<br/><br/> The operations team at Contoso needs to ramp up to understand and support Azure, containers and microservices for the app.<br/><br/> Contoso hasn't fully implemented DevOps for the entire solution. Contoso needs to consider that for the deployment of services to AKS, Azure Functions, and Azure App Service.
 
 <!-- markdownlint-enable MD033 -->
 
@@ -127,19 +127,21 @@ Here's how Contoso will run the migration:
 
 Contoso admins run a deployment script to create the managed Kubernetes cluster using AKS and the Azure Container Registry (ACR).
 
-- The instructions for this section use the **SmartHotel360-Azure-backend** repository.
-- The **SmartHotel360-Azure-backend** GitHub repository contains all of the software for this part of the deployment.
+- The instructions for this section use the **SmartHotel360-Backend** repository.
+- The **SmartHotel360-Backend** GitHub repository contains all of the software for this part of the deployment.
 
 ### Ensure prerequisites
 
 1. Before they start, Contoso admins ensure that all prerequisite software in installed on the dev machine they're using for the deployment.
-2. They clone the repository local to the dev machine using Git: `git clone https://github.com/Microsoft/SmartHotel360-Azure-backend.git`
+2. They clone the repository local to the dev machine using Git:
+
+    `git clone https://github.com/Microsoft/SmartHotel360-Backend.git`
 
 ### Provision AKS and ACR
 
 The Contoso admins provision as follows:
 
-1. They open the folder using Visual Studio Code, and moves to the **/deploy/k8s** directory, which contains the script **gen-aks-env.ps1**.
+1. They open the folder using Visual Studio Code, and move to the **/deploy/k8s** directory, which contains the script **gen-aks-env.ps1**.
 
 2. They run the script to create the managed Kubernetes cluster, using AKS and ACR.
 
@@ -157,7 +159,7 @@ The Contoso admins provision as follows:
 
    ![AKS](./media/contoso-migration-rebuild/aks4.png)
 
-6. They authenticate Azure CLI by running the **az login** command, and following the instructions to authenticate using their web browser. [Learn more](https://docs.microsoft.com/cli/azure/authenticate-azure-cli?view=azure-cli-latest) about logging in with Azure CLI.
+6. They authenticate Azure CLI by running the `az login` command, and following the instructions to authenticate using their web browser. [Learn more](https://docs.microsoft.com/cli/azure/authenticate-azure-cli?view=azure-cli-latest) about logging in with Azure CLI.
 
    ![AKS](./media/contoso-migration-rebuild/aks5.png)
 
@@ -173,13 +175,13 @@ The Contoso admins provision as follows:
 
    ![AKS](./media/contoso-migration-rebuild/aks7.png)
 
-9. After the deployment is finished, they install the **kubectl** command-line tool. The tool is already installed on the Azure CloudShell.
+9. After the deployment is finished, they install the `kubectl` command-line tool. The tool is already installed on the Azure Cloud Shell.
 
    ```azurecli
    az aks install-cli
    ```
 
-10. They verify the connection to the cluster by running the **kubectl get nodes** command. The node is the same name as the VM in the automatically created resource group.
+10. They verify the connection to the cluster by running the `kubectl get nodes` command. The node is the same name as the VM in the automatically created resource group.
 
     ![AKS](./media/contoso-migration-rebuild/aks8.png)
 
@@ -197,7 +199,7 @@ The Contoso admins provision as follows:
 
 ### Create an Azure DevOps project and build
 
-Contoso creates an Azure DevOps project, and configures a CI Build to create the container and then pushes it to the ACR. The instructions in this section use the [SmartHotel360-Azure-Backend](https://github.com/Microsoft/SmartHotel360-Azure-backend) repository.
+Contoso creates an Azure DevOps project, and configures a CI Build to create the container and then pushes it to the ACR. The instructions in this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repository.
 
 1. From visualstudio.com, they create a new organization (**contosodevops360.visualstudio.com**), and configure it to use Git.
 
@@ -261,7 +263,7 @@ Contoso creates an Azure DevOps project, and configures a CI Build to create the
 
 With the AKS cluster created and the Docker images built, Contoso admins now deploy the rest of the infrastructure that will be used by back-end microservices.
 
-- Instructions in the section use the [SmartHotel360-Azure-Backend](https://github.com/Microsoft/SmartHotel360-Azure-backend) repo.
+- Instructions in the section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repo.
 - In the **/deploy/k8s/arm** folder, there's a single script to create all items.
 
 They deploy as follows:
@@ -287,7 +289,7 @@ Now, Contoso admins do the following:
 - Deploy the NGINX ingress controller to allow inbound traffic to the services.
 - Deploy the microservices to the AKS cluster.
 - As a first step they update the connection strings to the microservices using Azure DevOps. They then configure a new Azure DevOps Release pipeline to deploy the microservices.
-- The instructions in this section use the [SmartHotel360-Azure-Backend](https://github.com/Microsoft/SmartHotel360-Azure-backend) repo.
+- The instructions in this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repo.
 - Some of the configuration settings (for example Active Directory B2C) aren't covered in this article. For more information about these settings, review the repo above.
 
 They create the pipeline:
@@ -341,13 +343,13 @@ They create the pipeline:
 
       ![Deploy release](./media/contoso-migration-rebuild/back-pipe13.png)
 
-14. When the deployment is complete, they run the following command to check the status of services, using the Azure Cloud Shell: **kubectl get services**.
+14. When the deployment is complete, they run the following command to check the status of services, using the Azure Cloud Shell: `kubectl get services`.
 
 ## Step 3: Provision front-end services
 
 Contoso admins need to deploy the infrastructure that will be used by the front-end apps. They create a blob storage container for storing the pet images; the Cosmos database to store documents with the pet information; and the Vision API for the website.
 
-Instructions for this section use the [SmartHotel360-public-web](https://github.com/Microsoft/SmartHotel360-public-web) repo.
+Instructions for this section use the [SmartHotel360-Website](https://github.com/Microsoft/SmartHotel360-Website) repo.
 
 ### Create blob storage containers
 
@@ -426,7 +428,7 @@ In the Azure portal, Contoso admins provision the Function App.
 
    ![Create function app](./media/contoso-migration-rebuild/function-app1.png)
 
-2. They provide an app name (**smarthotelpetchecker**). They place the app in the production resource group **ContosoRG**.They set the hosting place to **Consumption Plan**, and place the app in the East US 2 region. A new storage account is created, along with an Application Insights instance for monitoring.
+2. They provide an app name (**smarthotelpetchecker**). They place the app in the production resource group **ContosoRG**. They set the hosting place to **Consumption Plan**, and place the app in the East US 2 region. A new storage account is created, along with an Application Insights instance for monitoring.
 
    ![Function app settings](./media/contoso-migration-rebuild/function-app2.png)
 
@@ -440,9 +442,9 @@ Contoso admins create two different projects for the front-end site.
 
    ![Front-end project](./media/contoso-migration-rebuild/function-app1.png)
 
-2. They import the [SmartHotel360 front end](https://github.com/Microsoft/SmartHotel360-public-web.git) Git repository into the new project.
+2. They import the [SmartHotel360 front end](https://github.com/Microsoft/SmartHotel360-Website) Git repository into the new project.
 
-3. For the function app, they create another Azure DevOps project (SmartHotelPetChecker), and import the [PetChecker](https://github.com/sonahander/SmartHotel360-PetCheckerFunction) Git repository into this project.
+3. For the function app, they create another Azure DevOps project (**SmartHotelPetChecker**), and import the [PetChecker](https://github.com/sonahander/SmartHotel360-PetCheckerFunction) Git repository into this project.
 
 ### Configure the web app
 
@@ -501,7 +503,7 @@ Contoso admins can now publish the website.
 
     ![Environment name](./media/contoso-migration-rebuild/vsts-publish-front4.png)
 
-9. They add an artifact and select the build they just configured.
+9. They add an artifact and select the build that they configured.
 
      ![Add artifact](./media/contoso-migration-rebuild/vsts-publish-front5.png)
 
@@ -542,7 +544,7 @@ Contoso admins can now publish the website.
 
     ![Approval mail](./media/contoso-migration-rebuild/vsts-publish-front14.png)
 
-22. The lead makes a comment and approves. This starts the swap of the **staging** and **prod** slots, and moves the build into production.
+22. The lead makes a comment and approves. This starts swapping the **staging** and **prod** slots, and moves the build into production.
 
     ![Approve and swap](./media/contoso-migration-rebuild/vsts-publish-front15.png)
 
@@ -603,21 +605,21 @@ With the migrated resources in Azure, Contoso now needs to fully operationalize 
 ### Security
 
 - Contoso needs to ensure that the new databases are secure. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview).
-- The app needs to be updated to use SSL with certificates. The container instance should be redeployed to answer on 443.
+- The app must be updated to use SSL with certificates. The container instance should be redeployed to answer on 443.
 - Contoso should consider using Key Vault to protect secrets for their Service Fabric apps. [Learn more](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-secret-management).
 
 ### Backups and disaster recovery
 
-- Contoso needs to review backup requirements for the Azure SQL Database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
-- Contoso should consider implementing SQL failover groups to provide regional failover for the database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview).
-- Contoso can use geo-replication for the ACR premium SKU. [Learn more](https://docs.microsoft.com/azure/container-registry/container-registry-geo-replication).
-- Cosmos DB backs up automatically. Contoso can [learn more](https://docs.microsoft.com/azure/cosmos-db/online-backup-and-restore) about this process.
+- Contoso needs to review [backup requirements for the Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+- Contoso should consider implementing [SQL failover groups to provide regional failover for the database](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group).
+- Contoso can use [geo-replication for the ACR premium SKU](https://docs.microsoft.com/azure/container-registry/container-registry-geo-replication).
+- Cosmos DB is backed up automatically. Contoso can [learn more](https://docs.microsoft.com/azure/cosmos-db/online-backup-and-restore) about this process.
 
 ### Licensing and cost optimization
 
 - After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
 - All licensing is built into the cost of the PaaS services that Contoso is consuming. This will be deducted from the EA.
-- Contoso will enable Azure Cost Management to help monitor and manage the Azure resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.
+- Contoso will enable [Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
 
 ## Conclusion
 
@@ -627,7 +629,7 @@ In this article, Contoso rebuilds the SmartHotel360 app in Azure. The on-premise
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 
-Here are a couple of examples of tailored learning paths on Microsoft Learn that align with the Contoso SmartHotel360 app in Azure.
+Here are several examples of tailored learning paths on Microsoft Learn that align with the Contoso SmartHotel360 app in Azure.
 
 [Deploy a website to Azure with Azure App Service](https://docs.microsoft.com/learn/paths/deploy-a-website-with-azure-app-service): Web apps in Azure allow you to publish and manage your website easily without having to work with the underlying servers, storage, or network assets. Instead, you can focus on your website features and rely on the robust Azure platform to provide secure access to your site.
 

@@ -2,6 +2,7 @@
 title: "Rehost a Linux service desk app to Azure and Azure Database for MySQL"
 description: Learn how Contoso rehosts an on-premises Linux app by migrating it to Azure VMs and Azure Database for MySQL.
 author: givenscj
+ms.author: abuck
 ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -272,14 +273,14 @@ Contoso admins provision a MySQL database instance in the primary East US 2 regi
 
 ## Step 6: Migrate the database
 
-There are several ways to move the MySQL database.  Each require you to create an Azure DB for MySQL instance for the target. Once created, you can perform the migration using two paths:
+There are several ways to move the MySQL database. Each require you to create an Azure DB for MySQL instance for the target. Once created, you can perform the migration using two paths:
 
 - 6a: Azure Database Migration Service
 - 6b: MySQL Workbench backup and restore
 
 ### Step 6a: Migrate the database (Azure Database Migration Service)
 
-Contoso admins migrate the database using Azure Database Migration Services using the step-by-step guidance [here](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform both online, offline and hybrid (preview) migrations using MySQL 5.6 or 5.7.
+Contoso admins migrate the database using Azure Database Migration Services using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform both online, offline and hybrid (preview) migrations using MySQL 5.6 or 5.7.
 
 > [!NOTE]
 > MySQL 8.0 is supported in Azure Database for MySQL, but the DMS tool does not yet support that version.
@@ -288,7 +289,7 @@ As a summary, you must perform the following:
 
 - Ensure all migration prerequisites are met:
 
-  - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine and migration across source and target with same versions.
+  - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine, and migration across source and target with same versions.
   - Enable binary logging in my.ini (Windows) or my.cnf (Unix). Failure to do this will cause a `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more details see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
   - User must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
@@ -297,7 +298,7 @@ As a summary, you must perform the following:
 
 - Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet.
 
-- Ensure that the Azure Database Migration Service can access the MySQL database via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the Virtual Network level, the network VPN and the machine hosting MySQL.
+- Ensure that the Azure Database Migration Service can access the MySQL database via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
 
 - Run the Azure Database Migration Service Tool:
 

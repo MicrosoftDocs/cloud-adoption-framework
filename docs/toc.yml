@@ -717,7 +717,7 @@ items:
               - name: Learning path - Create bots with Azure Bot services
                 href: https://docs.microsoft.com/learn/paths/create-bots-with-the-azure-bot-service
               - name: Repo - Azure Bots samples on GitHub
-                href: https://github.com/microsoft/botframework-sdk
+                href: https://github.com/Microsoft/botframework-sdk
           - name: Cloud-native applications
             items:
             - name: Microservices architecture
@@ -815,7 +815,7 @@ items:
             - name: Secure mobile experiences
               items:
               - name: Protect mobile reports with face, touch, or passcodes
-                href: https://docs.microsoft.com/power-bi/consumer/mobile/mobile-ios-native-secure-access?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://docs.microsoft.com/power-bi/consumer/mobile/mobile-native-secure-access?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Secure mobile task flows with Intune
                 href: https://docs.microsoft.com/power-automate/intune-support?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Secure data in common data services

@@ -33,7 +33,7 @@ The following sample policy statements address common business risks related to 
   - Environment
 - Governance tooling must validate tagging related to cost, criticality, SLA, application, and environment. All values must align to predefined values managed by the governance team.
 
-**Potential design options:** In Azure, [standard name-value metadata tags](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags) are supported on most resource types. [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) is used to enforce specific tags as part of resource creation.
+**Potential design options:** In Azure, [standard name-value metadata tags](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources) are supported on most resource types. [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) is used to enforce specific tags as part of resource creation.
 
 ## Ungoverned subscriptions
 

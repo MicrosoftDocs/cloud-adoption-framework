@@ -14,7 +14,7 @@ ms.custom: organize
 
 Adopting the cloud is a journey, not a destination. Along the way, there are clear milestones and tangible business benefits. However, the final state of cloud adoption is unknown when a company begins the journey. Cloud governance creates guardrails that keep the company on a safe path throughout the journey.
 
-The Cloud Adoption Framework provides governance guides that describe the experiences of fictional companies, which are based on the experiences of real customers. Each guide follows the customer through the governance aspects of their cloud adoption.
+The Cloud Adoption Framework provides governance guides that describe the experiences of fictional companies that are based on the experiences of real customers. Each guide follows the customer through the governance aspects of their cloud adoption.
 
 ## Envision an end state
 

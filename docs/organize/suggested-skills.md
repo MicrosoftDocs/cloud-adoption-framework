@@ -34,13 +34,13 @@ During the ready phase, technical staff have to create a migration landing zone 
 - [Azure network services](https://docs.microsoft.com/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
 - [Azure compute options](https://docs.microsoft.com/learn/modules/intro-to-azure-compute): Review the Azure compute services.
 - [Secure resources with RBAC](https://docs.microsoft.com/learn/modules/secure-azure-resources-with-rbac): Use role-based access control (RBAC) to secure resources.
-- [Azure Storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure/index): Learn about the benefits of Azure data storage.
+- [Azure Storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure): Learn about the benefits of Azure data storage.
 
 During the ready phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
 
-- [Foundations for cloud architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to help architect the right foundational solutions.
-- [Microsoft Azure architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to ground architects in Azure architecture.
-- [Designing migrations for Microsoft Azure](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to help architects design a migration solution.
+- [Foundations for cloud architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
+- [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
 
 ## Deeper skills exploration
 

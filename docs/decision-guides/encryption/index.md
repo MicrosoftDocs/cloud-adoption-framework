@@ -28,7 +28,7 @@ Encryption of data in the cloud depends on the secure storage, management, and o
 
 Modern key management systems such as Azure Key Vault support storage and management of software protected keys for dev and test usage and hardware security module (HSM) protected keys for maximum protection of production workloads or sensitive data.
 
-When planning a cloud migration, the following table can help you decide how to store and manage encryption keys, certificates, and secrets, which are critical for creating secure and manageable cloud deployments:
+When planning a cloud migration, the following table can help you decide how to store and manage encryption keys, certificates, and secrets that are critical for creating secure and manageable cloud deployments:
 
 | Question | Cloud-native | Bring your own key | Hold your own key |
 |---------------------------------------------------------------------------------------------------------------------------------------|--------------|--------|-------------|
@@ -116,9 +116,9 @@ Encryption for data in use involves securing data in nonpersistent storage, such
 
 For more information about encryption and key management in Azure, see:
 
-- [Azure encryption overview](https://docs.microsoft.com/azure/security/security-azure-encryption-overview). A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
+- [Azure encryption overview](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview). A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
 - [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
-- [Azure Data Security and Encryption Best Practices](https://docs.microsoft.com/azure/security/azure-security-data-encryption-best-practices). A discussion of Azure data security and encryption best practices.
+- [Azure Data Security and Encryption Best Practices](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices). A discussion of Azure data security and encryption best practices.
 - [Confidential computing in Azure](https://azure.microsoft.com/solutions/confidential-compute). Azure's confidential computing initiative provides tools and technology to create trusted execution environments or other encryption mechanisms to secure data in use.
 
 ## Next steps

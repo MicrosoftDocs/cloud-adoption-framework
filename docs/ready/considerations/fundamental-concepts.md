@@ -80,7 +80,7 @@ The following resources provide detailed information about the concepts discusse
 
 - [How does Azure work?](../../getting-started/what-is-azure.md)
 - [Resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
-- [Azure Resource Manager overview](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)
+- [Azure Resource Manager overview](https://docs.microsoft.com/azure/azure-resource-manager/management/overview)
 - [Role-based access control (RBAC) for Azure resources](https://docs.microsoft.com/azure/role-based-access-control/overview)
 - [What is Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
 - [Associate or add an Azure subscription to your Azure Active Directory tenant](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)

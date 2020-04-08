@@ -183,7 +183,7 @@ Azure provides other security features that provide advanced security options. S
 
 - **Implement Azure AD administrative units (AU).** Delegating administrative duties to support staff can be tricky with just basic Azure access control. Giving support staff access to administer all the groups in Azure AD might not be the ideal approach for organizational security. Using AU allows you to segregate Azure resources into containers in a similar way to on-premises organizational units (OU). To use AU the AU admin must have a premium Azure AD license. [Learn more](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-administrative-units).
 - **Use multi-factor authentication.** If you have a premium Azure AD license, you can enable and enforce multi-factor authentication on your admin accounts. Phishing is the most common way that accounts credentials are compromised. Once a bad actor has admin account credentials, there's no stopping them from far-reaching actions, such as deleting all your resource groups. You can establish multi-factor authentication in several ways, including with email, an authenticator app, and phone text messages. As an administrator, you can select the least intrusive option. Multi-factor authentication integrates with threat analytics and conditional access policies to randomly require a multi-factor authentication challenge respond. Learn more about [security guidance](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication-security-best-practices), and [how to set up multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication-security-best-practices).
-- **Implement conditional access.** In most small and medium size organizations, Azure admins and the support team are probably located in a single geography. In this case, most logins will come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator logins from outside these areas. Even if a remote bad actor compromises an administrator's credentials, you can implement security features like conditional access combined with multi-factor authentication to prevent login from remote locations, or from spoofed locations from random IP addresses. [Learn more](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) about conditional access, and [review best practices](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) for conditional access in Azure AD.
+- **Implement conditional access.** In most small and medium size organizations, Azure admins and the support team are probably located in a single geography. In this case, most logins will come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator logins from outside these areas. Even if a remote bad actor compromises an administrator's credentials, you can implement security features like conditional access combined with multi-factor authentication to prevent signing in from remote locations, or from spoofed locations from random IP addresses. [Learn more](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) about conditional access, and [review best practices](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) for conditional access in Azure AD.
 - **Review Enterprise Application permissions.** Over time, admins select Microsoft and third-party links without knowing their impact on the organization. Links can present consent screens that assign permissions to Azure apps, and might allow access to read Azure AD data, or even full access to manage your entire Azure subscription. You should regularly review the apps to which your admins and users have allowed access to Azure resources. Ensure that these apps have only the permissions that are necessary. Additionally, quarterly or semi-annually you can email users with a link to app pages so that they're aware of the apps to which they've allowed access to their organizational data. [Learn more](https://docs.microsoft.com/azure/active-directory/manage-apps/application-types) about application types, and [how to control](https://docs.microsoft.com/azure/active-directory/manage-apps/remove-user-or-group-access-portal) app assignments in Azure AD.
 
 ## Managed migrated workloads
@@ -212,7 +212,7 @@ Ensuring that your resource groups have meaningful names that admins and support
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) naming conventions.
+- Learn about [recommended naming conventions](../../ready/azure-best-practices/naming-and-tagging.md).
 
 ## Best practice: Implement delete locks for resource groups
 
@@ -252,8 +252,8 @@ Often, using only a resource group name related to resources won't provide enoug
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags) tagging and tag limitations.
-- [Review](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags#powershell) PowerShell and CLI examples to set up tagging, and to apply tags from a resource group to its resources.
+- [Learn about](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources) tagging and tag limitations.
+- [Review](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources#powershell) PowerShell and CLI examples to set up tagging, and to apply tags from a resource group to its resources.
 - [Read](https://www.azurefieldnotes.com/2016/07/18/azure-resource-tagging-best-practices) Azure tagging best practices.
 
 ## Best practice: Implement blueprints
@@ -297,7 +297,7 @@ The following diagram shows an example of creating a hierarchy for governance us
 
 **Learn more:**
 
-- [Learn more](https://docs.microsoft.com/azure/governance/management-groups/index) about organizing resources into management groups.
+- [Learn more](https://docs.microsoft.com/azure/governance/management-groups) about organizing resources into management groups.
 
 ## Best practice: Deploy Azure Policy
 
@@ -454,8 +454,8 @@ Azure resources generate a fair number of logging metrics and telemetry data.
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs) collecting and consuming log data.
-- [Learn what's supported](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-diagnostic-logs-schema) for diagnostic logging.
+- [Learn about](https://docs.microsoft.com/azure/azure-monitor/platform/platform-logs-overview) collecting and consuming log data.
+- [Learn what's supported](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-logs-schema) for diagnostic logging.
 
 ## Best practice: Set up alerts and playbooks
 
@@ -471,7 +471,7 @@ With diagnostic logging enabled for Azure resources, you can start to use loggin
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-alerts) alerts.
+- [Learn about](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview) alerts.
 - [Learn about](https://docs.microsoft.com/azure/security-center/security-center-playbooks) security playbooks that respond to Security Center alerts.
 
 ## Best practice: Use the Azure dashboard

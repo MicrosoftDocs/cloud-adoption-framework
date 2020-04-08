@@ -2,6 +2,7 @@
 title: "Rehost an app by migrating it to Azure VMs and SQL Server Always On availability groups"
 description: Learn how Contoso rehosts an on-premises app by migrating it to Azure VMs and SQL Server Always On availability groups.
 author: givenscj
+ms.author: abuck
 ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -10,8 +11,6 @@ services: azure-migrate
 ---
 
 <!-- cSpell:ignore givenscj WEBVM SQLVM contosohost vcenter contosodc AOAG SQLAOG SQLAOGAVSET contosoadmin contosocloudwitness MSSQLSERVER BEPOOL contosovmsacc SHAOG NSGs inetpub iisreset -->
-
-# Rehost an on-premises app on Azure VMs and SQL Server Always On availability groups
 
 # Rehost an on-premises app with Azure Virtual Machines and SQL Server Always On availability groups
 
@@ -66,11 +65,11 @@ In this scenario:
 - The app database will be migrated to an Azure SQL Server VM.
   - It will be located in Contoso's Azure database network (PROD-DB-EUS2) in the primary East US2 region.
   - It will be placed in a Windows Server failover cluster with two nodes, that uses SQL Server Always On availability groups.
-  - In Azure the two SQL Server VM nodes in the cluster will be deployed in the ContosoRG resource group.
+  - In Azure, the two SQL Server VM nodes in the cluster will be deployed in the ContosoRG resource group.
   - The VM nodes will be located in the Azure production network (VNET-PROD-EUS2) in the primary East US2 region.
   - VMs will run Windows Server 2016 with SQL Server 2017 Enterprise Edition. Contoso doesn't have licenses for this operating system, so it will use an image in the Azure Marketplace that provides the license as a charge to their Azure EA commitment.
   - Apart from unique names, both VMs use the same settings.
-- Contoso will deploy an internal load balancer which listens for traffic on the cluster, and directs it to the appropriate cluster node.
+- Contoso will deploy an internal load balancer that listens for traffic on the cluster, and directs it to the appropriate cluster node.
   - The internal load balancer will be deployed in the ContosoNetworkingRG (used for networking resources).
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
 
@@ -172,7 +171,7 @@ Contoso admins set up the cluster as follows:
 
       ![SQL VM](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
 
-5. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private), on default port 1433. For authentication they use the same credentials as they use onsite (**contosoadmin**).
+5. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private), on default port 1433. For authentication, they use the same credentials as they use onsite (**contosoadmin**).
 
     ![SQL VM](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-db.png)
 
@@ -199,7 +198,7 @@ Contoso admins create a storage account as follows:
 
 1. They specify a recognizable name for the account (**contosocloudwitness**).
 2. They deploy a general all-purpose account, with LRS.
-3. They place the account in a third region - South Central US. They place it outside the primary and secondary region so that it remains available in case of regional failure.
+3. They place the account in a third region - South Central US. They place it outside the primary and secondary region so that it remains available during regional failure.
 4. They place it in their resource group that holds infrastructure resources, **ContosoInfraRG**.
 
     ![Cloud witness](./media/contoso-migration-rehost-vm-sql-ag/witness-storage.png)
@@ -230,7 +229,7 @@ Before setting up the cluster, Contoso admins take a snapshot of the OS disk on 
 ### Configure the cloud witness
 
 1. Contoso admins configure the cloud witness using the **Quorum Configuration Wizard** in Failover Cluster Manager.
-2. In the wizard they select to create a cloud witness with the storage account.
+2. In the wizard, they select to create a cloud witness with the storage account.
 3. After the cloud witness is configured, in appears in the Failover Cluster Manager snap-in.
 
     ![Cloud witness](./media/contoso-migration-rehost-vm-sql-ag/cloud-witness.png)
@@ -267,13 +266,13 @@ They create the load balancer as follows:
 
     ![Load balancing](./media/contoso-migration-rehost-vm-sql-ag/lb-create.png)
 
-After the internal load balancer is deployed, they need to set it up. They create a back-end address pool, set up a health probe, and configure a load balancing rule.
+After the internal load balancer is deployed, they need to set it up. They create a back-end address pool, set up a health probe, and configure a load-balancing rule.
 
 ### Add a back-end pool
 
 To distribute traffic to the VMs in the cluster, Contoso admins set up a back-end address pool that contains the IP addresses of the NICs for VMs that will receive network traffic from the load balancer.
 
-1. In the load balancer settings in the portal, Contoso add a back-end pool: **ILB-PROD-DB-EUS-SQLAOG-BEPOOL**.
+1. In the load balancer settings in the portal, Contoso adds a back-end pool: **ILB-PROD-DB-EUS-SQLAOG-BEPOOL**.
 2. They associate the pool with availability set SQLAOGAVSET. The VMs in the set (**SQLAOG1** and **SQLAOG2**) are added to the pool.
 
     ![Back-end pool](./media/contoso-migration-rehost-vm-sql-ag/backend-pool.png)
@@ -299,7 +298,7 @@ Now, Contoso admins set up a load balancer rule to define how traffic is distrib
 
 They create the rule as follows:
 
-1. In the load balancer settings in the portal, they add a new load balancing rule: **SQLAlwaysOnEndPointListener**.
+1. In the load balancer settings in the portal, they add a new rule: **SQLAlwaysOnEndPointListener**.
 2. They set a front-end listener to receive incoming SQL client traffic on TCP 1433.
 3. They specify the back-end pool to which traffic will be routed, and the port on which VMs listen for traffic.
 4. They enable floating IP (direct server return). This is always required for SQL Always On.
@@ -428,12 +427,12 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 
 ## Step 7: Migrate the database with Azure Database Migration Service (DMS)
 
-Contoso admins migrate it using Azure Database Migration Services (DMS) with the step-by-step guidance [here](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
+Contoso admins migrate it using Azure Database Migration Services (DMS) using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
 
 As a summary, you must perform the following:
 
 - Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet.
-- Ensure that the Azure Database Migration Service (DMS) can access the remote SQL Server via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the Virtual Network level, the network VPN and the machine hosting SQL Server.
+- Ensure that the Azure Database Migration Service (DMS) can access the remote SQL Server via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the virtual network level, the network VPN, and the machine that hosts SQL Server.
 - Configure the Azure Database Migration Service:
   - Create a migration project.
   - Add a source (on-premises database).
@@ -504,7 +503,7 @@ Running a test failover helps ensure that everything's working as expected befor
 3. Test failover runs:
 
     - A prerequisites check runs to make sure all of the conditions required for migration are in place.
-    - Failover processes the data, so that an Azure VM can be created. If select the latest recovery point, a recovery point is created from the data.
+    - Failover processes the data, so that an Azure VM can be created. If they select the latest recovery point, a recovery point is created from the data.
     - An Azure VM is created using the data processed in the previous step.
 
 4. After the failover finishes, the replica Azure VM appears in the Azure portal. They check that the VM is the appropriate size, that it's connected to the right network, and that it's running.
@@ -571,11 +570,11 @@ The Contoso security team reviews the Azure VMs WEBVM, SQLAOG1 and SQLAOG2 to de
 
 For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
-## BCDR
+## Business continuity and disaster recovery
 
 For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
 
-- To keep data safe, Contoso backs up the data on the WEBVM, SQLAOG1 and SQLAOG2 VMs using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+- To keep data safe, Contoso backs up the data on the WEBVM, SQLAOG1 and SQLAOG2 VMs using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup?toc=/azure/virtual-machines/linux/toc.json).
 - Contoso will also learn about how to use Azure Storage to back up SQL Server directly to blob storage. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore).
 - To keep apps up and running, Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 

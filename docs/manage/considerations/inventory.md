@@ -67,7 +67,7 @@ Change is the one constant in a technology environment. Awareness and understand
 
 ### Performance telemetry
 
-Business commitments about cloud management are driven by data. To properly maintain commitments, the cloud operations team must first understand the telemetry about the stability, performance, and operations of the workload, and the assets which support the workload.
+Business commitments about cloud management are driven by data. To properly maintain commitments, the cloud operations team must first understand the telemetry about the stability, performance, and operations of the workload, and the assets that support the workload.
 
 The ongoing health and operations of the network, DNS, operating systems, and other foundational aspects of the environment are critical data points that factor into the overall health of any workload.
 

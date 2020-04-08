@@ -2,6 +2,7 @@
 title: "Refactor an app by migrating it to Azure App Service and Azure SQL Database Managed Instance"
 description: Learn how Contoso rehosts an on-premises app by migrating it to an Azure App Service web app and Azure SQL Database Managed Instance.
 author: givenscj
+ms.author: abuck
 ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -79,7 +80,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 **Consideration** | **Details**
 --- | ---
-**Pros** | The SmartHotel360 app code won't need to be altered for migration to Azure.<br/><br/> Contoso can take advantage of their investment in Software Assurance using the Azure Hybrid Benefit for both SQL Server and Windows Server.<br/><br/> After the migration Windows Server 2008 R2 won't need to be supported. [Learn more](https://support.microsoft.com/lifecycle).<br/><br/> Contoso can configure the web tier of the app with multiple instances, so that it's no longer a single point of failure.<br/><br/> The database will no longer depend on the aging SQL Server 2008 R2.<br/><br/> SQL Managed Instance supports Contoso's technical requirements and goals.<br/><br/> Managed Instance will provide 100% compatibility with their current deployment, while moving them away from SQL Server 2008 R2.<br/><br/> They can take advantage of their investment in Software Assurance and using the Azure Hybrid Benefit for SQL Server and Windows Server.<br/><br/> They can reuse the Azure Database Migration Service for additional future migrations.<br/><br/> SQL Managed Instance has built-in fault tolerance that Contoso doesn't need to configures. This ensures that the data tier is no longer a single point of failover.
+**Pros** | The SmartHotel360 app code won't need to be altered for migration to Azure.<br/><br/> Contoso can take advantage of their investment in Software Assurance using the Azure Hybrid Benefit for both SQL Server and Windows Server.<br/><br/> After the migration Windows Server 2008 R2 won't need to be supported. For more information, see the [Microsoft Lifecycle Policy](https://aka.ms/lifecycle).<br/><br/> Contoso can configure the web tier of the app with multiple instances, so that it's no longer a single point of failure.<br/><br/> The database will no longer depend on the aging SQL Server 2008 R2.<br/><br/> SQL Managed Instance supports Contoso's technical requirements and goals.<br/><br/> Managed Instance will provide 100% compatibility with their current deployment, while moving them away from SQL Server 2008 R2.<br/><br/> They can take advantage of their investment in Software Assurance and using the Azure Hybrid Benefit for SQL Server and Windows Server.<br/><br/> They can reuse the Azure Database Migration Service for additional future migrations.<br/><br/> SQL Managed Instance has built-in fault tolerance that Contoso doesn't need to configures. This ensures that the data tier is no longer a single point of failover.
 **Cons** | Azure App Service only supports one app deployment for each web app. This means that two web apps must be provisioned (one for the website and one for the WCF service).<br/><br/>For the data tier, Managed Instance might not be the best solution if Contoso wants to customize the operating system or the database server, or if they want to run third-party apps along with SQL Server. Running SQL Server on an IaaS VM could provide this flexibility.
 
 <!-- markdownlint-enable MD033 -->
@@ -140,7 +141,7 @@ To set up an Azure SQL Database Managed Instance, Contoso needs a subnet that me
 - The subnet must have a user-defined route table. The only route assigned should be 0.0.0.0/0 next-hop internet.
 - Optional custom DNS: If custom DNS is specified on the Azure virtual network, Azure's recursive resolvers IP address (such as 168.63.129.16) must be added to the list. Learn how to [configure custom DNS for a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-custom-dns).
 - The subnet must not have a service endpoint (storage or SQL) associated with it. Service endpoints should be disabled on the virtual network.
-- The subnet must have a minimum of 16 IP addresses. Learn how to [size the Managed Instance subnet](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-vnet-configuration).
+- The subnet must have a minimum of 16 IP addresses. Learn how to [size the Managed Instance subnet](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-configure-vnet-subnet).
 - In Contoso's hybrid environment, custom DNS settings are required. Contoso configures DNS settings to use one or more of the company's Azure DNS servers. Learn more about [DNS customization](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-custom-dns).
 
 ### Set up a virtual network for the Managed Instance
@@ -174,9 +175,9 @@ Contoso admins set up the virtual network as follows:
 **Need more help?**
 
 - Get an overview of [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
-- Learn how to [create a virtual network for a SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-vnet-configuration).
+- Learn how to [create a virtual network for a SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-configure-vnet-subnet).
 - Learn how to [set up peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-peering).
-- Learn how to [update Azure Active Directory DNS settings](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started-dns).
+- Learn how to [update Azure Active Directory DNS settings](https://docs.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance).
 
 ### Set up routing
 
@@ -205,7 +206,7 @@ Contoso considers these factors:
 
 **Need more help?**
 
-Learn how to [set up routes for a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-create-tutorial-portal).
+Learn how to [set up routes for a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started).
 
 ### Create a Managed Instance
 
@@ -225,16 +226,16 @@ Now, Contoso admins can provision a SQL Database Managed Instance:
 
 **Need more help?**
 
-Learn how to [provision a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-create-tutorial-portal).
+Learn how to [provision a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started).
 
 ## Step 2: Migrate with Azure Database Migration Service (DMS)
 
-Contoso admins migrate it using Azure Database Migration Services (DMS) with the step-by-step guidance [here](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform both online, offline and hybrid (preview) migrations.
+Contoso admins migrate it using Azure Database Migration Services (DMS) using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform both online, offline and hybrid (preview) migrations.
 
 As a summary, you must perform the following:
 
 - Create an Azure Database Migration Service (DMS) with a `Premium` SKU that is connected to the VNet.
-- Ensure that the Azure Database Migration Service (DMS) can access the remote SQL Server via the Virtual Network.  This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the Virtual Network level, the network VPN and the machine hosting SQL Server.
+- Ensure that the Azure Database Migration Service (DMS) can access the remote SQL Server via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the virtual network level, the network VPN, and the machine that hosts SQL Server.
 - Configure the Azure Database Migration Service:
   - Create a migration project.
   - Add a source (on-premises database).
@@ -271,7 +272,7 @@ Contoso needs to build the DevOps infrastructure and pipelines for the applicati
 
     ![New project](./media/contoso-migration-refactor-web-app-sql-managed-instance/vsts1.png)
 
-2. They import the Git Repo that currently holds their app code. It's in a [public repo](https://github.com/Microsoft/SmartHotel360-internal-booking-apps) and you can download it.
+2. They import the Git Repo that currently holds their app code. It's in a [public GitHub repository](https://github.com/Microsoft/SmartHotel360-Registration) and you can download it.
 
     ![Download app code](./media/contoso-migration-refactor-web-app-sql-managed-instance/vsts2.png)
 

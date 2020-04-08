@@ -80,7 +80,7 @@ To learn more, see:
 - [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md)
 - [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/azure-resource-manager/management-groups-overview)
 - [Understand resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
-- [Subscription service limits](https://docs.microsoft.com/azure/azure-subscription-service-limits)
+- [Subscription service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits)
 
 ::: zone-end
 
@@ -167,14 +167,14 @@ For more tagging recommendations and examples, see the Cloud Adoption Framework'
 
 To apply a tag to a resource group:
 
-1. Go to [Resource groups](https://ms.portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2fSubscriptions%2fResourceGroups).
+1. Go to [Resource groups](https://ms.portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups).
 1. Select a resource group.
 1. Select **Assign tags**.
 1. Enter a new name and value, or use the drop-down list to select an existing name and value.
 
 ## Learn more
 
-To learn more, see [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags).
+To learn more, see [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources).
 
 ::: zone-end
 

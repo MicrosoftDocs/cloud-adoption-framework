@@ -59,6 +59,7 @@ function Test-Uri([string] $uri)
 
     $uri = $uri.Replace('https://docs.microsoft.com/', 'https://docs.microsoft.com/en-us/')
     $uri = $uri.Replace('https://azure.microsoft.com/', 'https://azure.microsoft.com/en-us/')
+    $uri = $uri.Replace('https://www.microsoft.com/', 'https://www.microsoft.com/en-us/')
     $uri = $uri.Replace('https://developer.amazon.com/', 'https://developer.amazon.com/en-US/')
     
     $uriObject = New-Object System.Uri $uri

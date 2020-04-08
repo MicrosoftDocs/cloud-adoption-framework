@@ -60,7 +60,7 @@ Review the following resources to learn more about organizing and managing your 
 
 - [Organize your resources with Azure management groups](https://docs.microsoft.com/azure/governance/management-groups)
 - [Elevate access to manage all Azure subscriptions and management groups](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin)
-- [Move Azure resources to another resource group or subscription](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-move-resources)
+- [Move Azure resources to another resource group or subscription](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 
 ## Next steps
 

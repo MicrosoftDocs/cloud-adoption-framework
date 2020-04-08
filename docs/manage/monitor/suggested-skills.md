@@ -19,7 +19,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Introduction to [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, role-based access control (RBAC), using. Azure Resource Manager templates, and management of resources using Azure CLI and Azure PowerShell.
 
-- Learn how to secure resources using policy, role-based access control, and other Azure services by viewing [Implement resource management security in Azure](https://docs.microsoft.com//learn/paths/implement-resource-mgmt-security).
+- Learn how to secure resources using policy, role-based access control, and other Azure services by viewing [Implement resource management security in Azure](https://docs.microsoft.com/learn/paths/implement-resource-mgmt-security).
 
 - Introduction to [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) helps you learn how you can use Azure Policy to create, assign, and manage policies. Azure Policy can deploy and configure the Azure Monitor agents, enable monitoring with Azure Monitor for VMs and Azure Security Center, deploy Diagnostic Settings, audit guest configuration settings, and more.
 
@@ -72,7 +72,7 @@ To learn more, review the following:
 
 ## Other Considerations
 
-Customers often struggle to manage, maintain, and deliver the expected business (and to the IT organization) outcomes for the services that IT is charged with delivering. Monitoring is considered core to managing infrastructure and the business, with a focus on measuring quality of service and customer experience.  In order to achieve those goals, lay the groundwork using ITSM in conjunction with DevOps, which will help the monitoring team mature how they manage, deliver, and support the monitoring service. Adopting an ITSM framework allows the monitoring team to function as a provider and gain recognition as a trusted business enabler by aligning to the strategic goals and needs of the organization.
+Customers often struggle to manage, maintain, and deliver the expected business (and to the IT organization) outcomes for the services that IT is charged with delivering. Monitoring is considered core to managing infrastructure and the business, with a focus on measuring quality of service and customer experience. In order to achieve those goals, lay the groundwork using ITSM in conjunction with DevOps, which will help the monitoring team mature how they manage, deliver, and support the monitoring service. Adopting an ITSM framework allows the monitoring team to function as a provider and gain recognition as a trusted business enabler by aligning to the strategic goals and needs of the organization.
 
 Review the following to understand the updates made to the most popular ITSM framework [ITIL v4 and Cloud Computing whitepaper](https://www.axelos.com/case-studies-and-white-papers/itil-4-and-the-cloud), which focuses on joining existing ITIL guidance with best practices from DevOps, Agile, and Lean. Also consider the [IT4IT reference architecture](https://www.opengroup.org/it4it) that delivers an alternative blueprint on how to transform IT using a process agnostic framework.
 

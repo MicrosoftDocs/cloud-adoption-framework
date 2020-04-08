@@ -1,5 +1,7 @@
 $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+. "$here\Test-MyRepo.ps1"
+
 . "$here\Test-Helpers.ps1"
 
 Describe "Test-Helpers" -Tags "Helpers" {

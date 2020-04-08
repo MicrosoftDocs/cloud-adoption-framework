@@ -31,11 +31,11 @@ A landing zone is the basic building block of any cloud adoption environment. Th
 
 Landing zones do not necessarily differentiate between IaaS or PaaS adoption. However, landing zones are purpose built to support the adoption plan by fulfilling the subscription strategy. Supporting the adoption plan may require multiple landing zones with a mixture of required components.
 
-The purpose and scope of the overall cloud adoption plan will define what "plumbing" is required. Additional governance, compliance, security, and operational management requirements will likely add to the initial landing zone scope. During early stages of adoption, landing zones may include less "plumbing" as a result of defined requirements and acceptable risks.  When multiple landing zones exist, it is very common for each landing zone to be dependent on hubs that provide the required controls through a shared service model.
+The purpose and scope of the overall cloud adoption plan will define what "plumbing" is required. Additional governance, compliance, security, and operational management requirements will likely add to the initial landing zone scope. During early stages of adoption, landing zones may include less "plumbing" as a result of defined requirements and acceptable risks. When multiple landing zones exist, it is very common for each landing zone to be dependent on hubs that provide the required controls through a shared service model.
 
 ## Related terms
 
-- **Shared services:** Workloads often have shared dependencies which are used by many different workloads. The shared services approach moves many of those common dependencies into one logical construct.
+- **Shared services:** Workloads often have shared dependencies that are used by many different workloads. The shared services approach moves many of those common dependencies into one logical construct.
 
 - **Hub and spoke model:** One implementation of the shared services approach is a hub and spoke model. In this model, the hub is a single logical construct for hosting all shared services. Landing zones then act as spokes radiating out of the hub, based on common dependencies.
 

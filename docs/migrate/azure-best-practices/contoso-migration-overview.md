@@ -2,6 +2,7 @@
 title: "Overview of application migration examples for Azure"
 description: Provides an overview of the application migration examples included as part of the Cloud Adoption Framework Migrate section.
 author: givenscj
+ms.author: abuck
 ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -39,7 +40,7 @@ Strategies for migration to the cloud fall into four broad patterns: rehost, ref
 
 ## Migration example articles
 
-This section provide examples of several common migration scenarios. Each example include background information and detailed deployment scenarios that illustrate how to set up a migration infrastructure and assess the suitability of on-premises resources for migration. More articles will be added to this section over time.
+This section provides examples of several common migration scenarios. Each example includes background information and detailed deployment scenarios that illustrate how to set up a migration infrastructure and assess the suitability of on-premises resources for migration. More articles will be added to this section over time.
 
 ![Common migration/modernization projects​](./media/migration-patterns.png)
 

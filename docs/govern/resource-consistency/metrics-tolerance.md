@@ -27,7 +27,7 @@ Every organization has different operational scenarios, but the following items 
 - **Underused assets.** Number of resources where memory, CPU, or network capabilities are all consistently underutilized.
 - **Resource depletion.** Number of resources where memory, CPU, or network capabilities are exhausted by load.
 - **Resource age.** Time since resource was last deployed or modified.
-- **VMs in critical condition.** Number of deployed VMs where one or more critical issues are detected which need to be addressed in order to restore normal functionality.
+- **VMs in critical condition.** Number of deployed VMs where one or more critical issues are detected that must addressed in order to restore normal functionality.
 - **Alerts by severity.** Total number of alerts on a deployed asset, broken down by severity.
 - **Unhealthy network links.** Number of resources with network connectivity issues.
 - **Unhealthy service endpoints.** Number of issues with external network endpoints.

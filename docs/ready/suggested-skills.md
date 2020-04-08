@@ -33,13 +33,13 @@ During the Ready phase, technical staff are called upon to create a migration la
 - [Azure networking](https://docs.microsoft.com/learn/modules/intro-to-azure-networking): Learn some of the Azure networking basics and how Azure networking helps improve resiliency and reduce latency.
 - [Azure compute options](https://docs.microsoft.com/learn/modules/intro-to-azure-compute): Review the Azure compute services.
 - [Secure resources with role-based access control (RBAC)](https://docs.microsoft.com/learn/modules/secure-azure-resources-with-rbac): Use RBAC to secure resources.
-- [Data storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure/index): Benefits of Azure data storage.
+- [Data storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure): Benefits of Azure data storage.
 
 During the Ready phase, architects are called upon to architect solutions that span all Azure environments. The following skill-building resources can prepare architects for these tasks:
 
-- [Foundations for cloud architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): PluralSight course to help architect the right foundational solutions.
-- [Microsoft Azure architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): PluralSight course to ground architects in Azure architecture.
-- [Designing migrations for Microsoft Azure](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): PluralSight course to help architects design a migration solution.
+- [Foundations for cloud architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
+- [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
 
 ## Deeper skills exploration
 
@@ -59,7 +59,7 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills and 
 
 The following examples are a few tailored learning paths on Microsoft Learn which align to the Ready portion of the Cloud Adoption Framework:
 
-[Azure fundamentals](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn cloud concepts such as High Availability, Scalability, Elasticity, Agility, Fault Tolerance, and Disaster Recovery.  Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage and security.
+[Azure fundamentals](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn cloud concepts such as High Availability, Scalability, Elasticity, Agility, Fault Tolerance, and Disaster Recovery. Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage and security.
 
 [Manage resources in Azure](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn how to work with the Azure command line and web portal to create, manage, and control cloud-based resources.
 
