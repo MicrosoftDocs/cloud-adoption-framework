@@ -88,12 +88,12 @@ Unlike IaaS where you manage your own VMs and infrastructure, in a PaaS model pl
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/security/azure-security-disk-encryption-overview) Azure Disk Encryption for IaaS VMs.
-- [Enable](https://docs.microsoft.com/azure/security/azure-security-disk-encryption-windows) encryption for IaaS Windows VMs.
-- [Learn about](https://docs.microsoft.com/azure/storage/common/storage-service-encryption) Azure Storage Service Encryption for data at rest.
-- [Read](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault) an overview of Always Encrypted.
-- [Read about](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?view=sql-server-2017) TDE for Azure SQL Database.
-- [Learn about](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) TDE with Bring Your Own Key.
+- Learn about[Azure Disk Encryption for virtual machines and virtual machine scale sets](https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss).
+- Enable [Azure Disk Encryption for Windows VMs](https://docs.microsoft.com/azure/virtual-machines/windows/disk-encryption-overview).
+- Learn about [Azure Storage Service Encryption for data at rest](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
+- Read the [overview of Always Encrypted](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault).
+- Read about [Transparent data encryption for SQL Database and Azure Synapse](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql).
+- Learn about [Azure SQL Transparent Data Encryption with customer-managed key](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql).
 
 ## Best practice: Protect VMs with antimalware
 
@@ -108,7 +108,7 @@ In particular, older Azure-migrated VMs may not have the appropriate level of an
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/security/azure-security-antimalware) Microsoft Antimalware.
+- Learn about [Microsoft Antimalware for Azure Cloud Services and Virtual Machines](https://docs.microsoft.com/azure/security/fundamentals/antimalware).
 
 ## Best practice: Secure web apps
 
