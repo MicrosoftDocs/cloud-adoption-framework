@@ -32,6 +32,14 @@ Describe "Test-PageLinks" -Tag @("Links", "LongRunning") {
     }
 }
 
+Describe "Test-SpecificPageLinks" -Tag "Links" {
+
+    It "All Page1 links are valid" {
+        $item = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\innovate\kubernetes\cluster-design-operations.md"
+        Test-PageLinks @($item) | Should -Be 0
+    }
+}
+
 Describe "Test-Casing" -Tag "Content" {
 
     It "Known phrases are cased properly" {

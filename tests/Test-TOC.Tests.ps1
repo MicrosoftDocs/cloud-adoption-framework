@@ -41,7 +41,7 @@ Describe "Test-SpecificLinks" -Tag "Links" {
         Test-Uri $uri | Should -Be 200
     }
 
-    It "Trailing slash link is valid" {
+    It "Expected trailing slash link is valid" {
         $uri = "https://docs.microsoft.com/powerapps/maker"
         Test-Uri $uri | Should -Be 200
     }

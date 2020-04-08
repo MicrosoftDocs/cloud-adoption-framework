@@ -14,10 +14,11 @@ function Test-Spelling([string] $docsPath, [string] $folder)
     $output = Get-ProcessStream "StandardError" -FileName $env:ComSpec -Args $arguments
 
     $expression = "Issues found: (?<issues>[0-9]*) in "
-    $hits = ([regex]$expression).Matches($output)
-    if ($hits.Count -gt 0)
+    
+    $matches = ([regex]$expression).Matches($output)
+    if ($matches.Count -gt 0)
     {
-        $issues = $hits.Groups[1].Value
+        $issues = $matches.Groups[1].Value
     }
     else
     {

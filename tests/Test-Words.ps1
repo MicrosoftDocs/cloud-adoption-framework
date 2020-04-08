@@ -57,9 +57,9 @@ function Test-Match(
             }
 
             $options = [Text.RegularExpressions.RegexOptions]::Multiline
-            $regex = [regex]::new($expression, $options)
+            $matches = [regex]::new($expression, $options).Matches($text)
 
-            foreach ($match in $regex.Matches($text)) {
+            foreach ($match in $matches) {
             
                 if ($testLinks)
                 {
