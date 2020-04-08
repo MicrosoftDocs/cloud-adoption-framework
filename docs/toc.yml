@@ -250,7 +250,6 @@ items:
           href: migrate/azure-migration-guide/manage-costs.md
         - name: Obtain assistance
           href: migrate/azure-migration-guide/assistance.md
-
       - name: Migration scenarios
         items:
         - name: Overview
@@ -259,8 +258,6 @@ items:
           items:
           - name: Rehost a Windows app on Azure VMs
             href: migrate/azure-best-practices/contoso-migration-rehost-vm.md
-          - name: Rearchitect a Windows app with containers and Azure SQL
-            href: migrate/azure-best-practices/contoso-migration-rearchitect-container-sql.md
         - name: Linux workloads
           items:
           - name: Rehost a Linux app on Azure VMs
