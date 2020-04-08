@@ -3,19 +3,19 @@ title: "Refactor a Linux app to Azure App Service and Database for MySQL"
 description: "Use the Cloud Adoption Framework for Azure to learn how to refactor a Linux service desk app to Azure App Service and Azure Database for MySQL."
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/11/2018
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore contosohost contosodc vcenter DBHOST DBUSER WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL osticket contosoosticket trafficmanager CNAME -->
+<!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc OSTICKETWEB OSTICKETMYSQL osticket contosoosticket trafficmanager InnoDB binlog DBHOST DBUSER CNAME -->
 
 # Refactor a Linux app to multiple regions using Azure App Service, Traffic Manager, and Azure Database for MySQL
 
 This article shows how the fictional company Contoso refactors a two-tier Linux-based Apache MySQL PHP (LAMP) app, migrating it from on-premises to Azure using Azure App Service with GitHub integration and Azure Database for MySQL.
 
-osTicket, the service desk app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [GitHub](https://github.com/osTicket/osTicket).
+osTicket, the service desk app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [the osTicket repo in GitHub](https://github.com/osTicket/osTicket).
 
 ## Business drivers
 
@@ -23,7 +23,7 @@ The IT Leadership team has worked closely with business partners to understand w
 
 - **Address business growth.** Contoso is growing and moving into new markets. It needs additional customer service agents.
 - **Scale.** The solution should be built so that Contoso can add more customer service agents as the business scales.
-- **Improve resiliency.**  In the past issues with the system affected internal users only. With the new business model, external users will be affected, and Contoso need the app up and running at all times.
+- **Improve resiliency.** In the past, issues with the system affected internal users only. With the new business model, external users will be affected, and Contoso need the app up and running at all times.
 
 ## Migration goals
 
@@ -57,7 +57,7 @@ Here's the proposed architecture:
 - Traffic Manager will be set up in front of the two web apps in both regions.
 - Traffic Manager will be configured in priority mode to force the traffic through East US 2.
 - If the Azure App Server in East US 2 goes offline, users can access the failed over app in Central US.
-- The app database will be migrated to the Azure Database for MySQL service using MySQL Workbench tools. The on-premises database will be backed up locally, and restored directly to Azure Database for MySQL.
+- The app database will be migrated to the Azure Database for MySQL service using Azure Database Migration Service (DMS). The on-premises database will be backed up locally, and restored directly to Azure Database for MySQL.
 - The database will reside in the primary East US 2 region, in the database subnet (PROD-DB-EUS2) in the production network (VNET-PROD-EUS2):
 - Since they're migrating a production workload, Azure resources for the app will reside in the production resource group **ContosoRG**.
 - The Traffic Manager resource will be deployed in Contoso's infrastructure resource group **ContosoInfraRG**.
@@ -70,10 +70,10 @@ Here's the proposed architecture:
 Contoso will complete the migration process as follows:
 
 1. As a first step, Contoso admins set up the Azure infrastructure, including provisioning Azure App Service, setting up Traffic Manager, and provisioning an Azure Database for MySQL instance.
-2. After preparing the Azure, they migrate the database using MySQL Workbench.
+2. After preparing the Azure infrastructure, they migrate the database using Azure Database Migration Service (DMS).
 3. After the database is running in Azure, they up a GitHub private repository for Azure App Service with continuous delivery, and load it with the osTicket app.
 4. In the Azure portal, they load the app from GitHub to the Docker container running Azure App Service.
-5. They tweak DNS settings, and configure autoscaling for the app.
+5. They tweak DNS settings, and configure auto-scaling for the app.
 
 ![Migration process](./media/contoso-migration-refactor-linux-app-service-mysql/migration-process.png)
 
@@ -83,6 +83,7 @@ Contoso will complete the migration process as follows:
 --- | --- | ---
 [Azure App Service](https://azure.microsoft.com/services/app-service) | The service runs and scales applications using the Azure PaaS service for websites. | Pricing is based on the size of the instances, and the features required. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows).
 [Traffic Manager](https://azure.microsoft.com/services/traffic-manager) | A load balancer that uses DNS to direct users to Azure, or external websites and services. | Pricing is based on the number of DNS queries received, and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager).
+[Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | The Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration).
 [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL Server engine. It provides a fully managed, enterprise-ready community MySQL database, as a service for app development and deployment. | Pricing based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql).
 
 ## Prerequisites
@@ -107,7 +108,7 @@ Here's how Contoso will complete the migration:
 > - **Step 1: Provision Azure App Service.** Contoso admins will provision web apps in the primary and secondary regions.
 > - **Step 2: Set up Traffic Manager.** They set up Traffic Manager in front of the web apps, for routing and load balancing traffic.
 > - **Step 3: Provision MySQL.** In Azure, they provision an instance of Azure Database for MySQL.
-> - **Step 4: Migrate the database.** They migrate the database using MySQL Workbench.
+> - **Step 4: Migrate the database.** They migrate the database using Azure Database Migration Service (DMS).
 > - **Step 5: Set up GitHub.** They set up a local GitHub repository for the app web sites/code.
 > - **Step 6: Deploy the web apps.** They deploy the web apps from GitHub.
 
@@ -183,9 +184,70 @@ Contoso admins provision a MySQL database instance in the primary East US 2 regi
 
 ## Step 4: Migrate the database
 
-Contoso admins migrate the database using backup and restore, with MySQL tools. They install MySQL Workbench, back up the database from OSTICKETMYSQL, and then restore it to Azure Database for MySQL Server.
+There are several ways to move the MySQL database. Each option requires you to create an Azure DB for MySQL instance for the target. Once created, you can perform the migration using two paths:
 
-### Install MySQL Workbench
+- 4a: Azure Database Migration Service
+- 4b: MySQL Workbench backup and restore
+
+### Step 4a: Migrate the database (Azure Database Migration Service)
+
+Contoso admins migrate the database using Azure Database Migration Services using the step-by-step guidance [here](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform online, offline, and hybrid (preview) migrations using MySQL 5.6 or 5.7.
+
+> [!NOTE]
+> MySQL 8.0 is supported in Azure Database for MySQL, but the DMS tool does not yet support this version.
+
+As a summary, you must perform the following:
+
+- Ensure all migration prerequisites are met:
+  - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine and migration across source and target with same versions.
+  - Enable binary logging in my.ini (Windows) or my.cnf (Unix). Failure to do this will cause a `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more details see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
+  - The user must have `ReplicationAdmin` role.
+  - Migrate the database schemas without foreign keys and triggers.
+- Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
+- Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet.
+- Ensure that the Azure Database Migration Service can access the MySQL database via the Virtual Network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the Virtual Network level, the network VPN and the machine hosting MySQL.
+- Run the Azure Database Migration Service Tool:
+  - Create a migration project based on the **Premium SKU**.
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-new-project.png)
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-new-project-02.png)
+
+  - Add a source (on-premises database).
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-source.png)
+
+  - Select a target.
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-target.png)
+
+  - Select the database(s) to migrate.
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-databases.png)
+
+  - Configure advanced settings.
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-settings.png)
+
+  - Start the replication and resolve any errors.
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-monitor.png)
+  
+  - Perform the final cutover.
+  
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover.png)
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-complete.png)
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-complete-02.png)
+  
+  - Reinstate any foreign keys and triggers.
+
+  - Modify applications to use the new database.
+
+    ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-apps.png)
+
+### Step 4b: Migrate the database (MySQL Workbench)
 
 1. They check the [prerequisites and downloads MySQL Workbench](https://dev.mysql.com/downloads/workbench/?utm_source=tuicool).
 2. They install MySQL Workbench for Windows in accordance with the [installation instructions](https://dev.mysql.com/doc/workbench/en/wb-installing.html). The machine on which they install must be accessible to the OSTICKETMYSQL VM, and Azure via the internet.
@@ -333,4 +395,4 @@ The Contoso security team reviewed the app to determine any security issues. The
 ### Licensing and cost optimization
 
 - There are no licensing issues for the PaaS deployment.
-- Contoso will enable Azure Cost Management licensed by Cloudyn, a Microsoft subsidiary. It's a multicloud cost management solution that helps you use and manage Azure and other cloud resources. [Learn more](https://docs.microsoft.com/azure/cost-management/overview) about Azure Cost Management.
+- Contoso will use [Azure Cost Management](https://azure.microsoft.com/services/cost-management) to ensure they stay within budgets established by their IT leadership.
