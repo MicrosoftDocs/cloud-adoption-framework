@@ -31,7 +31,7 @@ To better align with the methodologies of the Cloud Adoption Framework, the prin
 - Security expansions: Add **security** configurations to improve protection of sensitive data and critical systems.
 
 > [!WARNING]
-> Adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud** should consider each of these expansions early in their cloud adoption journey. For all other adoption patterns, landing zone expansions could be a parallel iteration, allowing for early business success.
+> Adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infrastructure, or data assets) in the cloud** should consider each of these expansions early in their cloud adoption journey. For all other adoption patterns, landing zone expansions could be a parallel iteration, allowing for early business success.
 
 ## Next steps
 

@@ -9,7 +9,7 @@ ms.author: janet
 ms.date: 03/17/2020
 ---
 
-<!-- cSpell:ignore Terraform's -->
+<!-- cSpell:ignore CAF Terraform's -->
 
 # Tools and templates
 
@@ -59,7 +59,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | Resource | Description |
 |----------|-------------|
 | [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) | This online assessment will aid in defining workload specific architectures and operations options. |
-| [Best&nbsp;practices&nbsp;source&nbsp;code](https://github.com/microsoft/CloudAdoptionFramework/tree/master/manage/Automation-Best-Practices) | This deployable source code complements and accelerates adoption of hte guidance found in the Azure Server Management best practice. Use this source code to quickly enable operations management and establish an operations baseline. |
+| [Best&nbsp;practices&nbsp;source&nbsp;code](https://github.com/microsoft/CloudAdoptionFramework/tree/master/manage/Automation-Best-Practices) | This deployable source code complements and accelerates adoption of the guidance found in the Azure Server Management best practice. Use this source code to quickly enable operations management and establish an operations baseline. |
 | [Operations Management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) | Document decisions about operations management in the cloud, and facilitate conversations with the business to ensure alignment regarding SLAs, investment in resiliency, and budget allocation related to operations. |
 
 ## Organize

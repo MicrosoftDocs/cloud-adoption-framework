@@ -34,7 +34,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
   - [Microsoft Azure IaaS Monitoring and Management](https://www.pluralsight.com/courses/azure-iaas-monitoring-management-getting-started) helps you learn how to use Azure Monitor to perform basic monitoring of workloads running on IaaS.
 
-  - [Monitoring Microsoft Azure Resources and Workloads](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring) helps you learn how to use Microsoft Azure monitoring tools to monitor Azure network (as well as on-prem) resources.
+  - [Monitoring Microsoft Azure Resources and Workloads](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring) helps you learn how to use Microsoft Azure monitoring tools to monitor Azure network resources as well as resources on-premises.
 
   - [Microsoft Azure DevOps Engineer: Optimize Feedback Mechanisms](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights and Log Analytics to monitor and optimize your web applications.
 

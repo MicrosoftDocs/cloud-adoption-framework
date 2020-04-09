@@ -204,6 +204,8 @@ Contoso is primarily using a couple of Azure services and tools for the migratio
 - [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview): Orchestrates disaster recovery, and migrates on-premises VMs to Azure.
 - [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview): Migrates on-premises databases such as SQL Server, MySQL, and Oracle to Azure.
 
+<!-- markdownlint-disable MD024 -->
+
 #### Azure Migrate
 
 Azure Migrate is the primary Azure service for orchestrating migration from within Azure, and from on-premises sites to Azure.

@@ -9,7 +9,7 @@ $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 Describe "Test-TOC" -Tags "TOC" {
 
     It "No TOC items are orphaned or duplicated" {
-        Test-MatchTocToFiles $(Get-TocFilePath) @("") | Should -Be 0
+        Test-MatchTocToFiles $(Get-TocFilePath) $(Get-TocFilesToIgnore) | Should -Be 0
     }
 }
 

@@ -97,7 +97,7 @@ A mature Central IT team maintains necessary protections but negotiates practice
 
 This example narrative illustrates the approach taken by a mature Central IT team to empower adoption.
 
-Contoso, LLC has adopted a Central IT model for the support of the business's cloud resources. To deliver this model, they have implemented tight controls for various shared services such as ingress network connections. This wise move reduced the exposure of their cloud environment and provided a single "break-glass" device to block all traffic in case of a breach. Their security baseline policies state that all ingress traffic must come through a shared device managed by the Central IT team.
+Contoso, LLC has adopted a Central IT model for the support of the business's cloud resources. To deliver this model, they have implemented tight controls for various shared services such as ingress network connections. This wise move reduced the exposure of their cloud environment and provided a single "break-glass" device to block all traffic if a breach occurs. Their security baseline policies state that all ingress traffic must come through a shared device managed by the Central IT team.
 
 However, one of their cloud adoption teams now requires an environment with a dedicated and specially configured ingress network connection to use a specific cloud technology. An immature Central IT team would simply refuse the request and prioritize its existing processes over adoption needs. Contoso's Central IT team is different. They quickly identified a simple four-part solution to this dilemma: Classification, Negotiation, Isolation, and Automation.
 
