@@ -148,8 +148,8 @@ Storage accounts can use different types of redundancy for resilience and high a
 - [Compare](https://docs.microsoft.com/azure/storage/common/storage-decide-blobs-files-disks?toc=/azure/storage/blobs/toc.json) blobs, files, and disk storage data types.
 - [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers) about access tiers.
 - [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview?toc=/azure/storage/blobs/toc.json) different types of storage accounts.
-- Learn about [storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), [LRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy?toc=/azure/storage/queues/toc.json), [ZRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-zrs?toc=/azure/storage/queues/toc.json), [GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=/azure/storage/queues/toc.json), and [Read-access GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=/azure/storage/queues/toc.json#read-access-to-data-in-the-secondary-region).
-- [Learn more](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) about Azure Files.
+- Learn about [Azure storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), including LRS, ZRS, GRS, and read-access GRS.
+- Learn more about [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction).
 
 ## Best practice: Take advantage of Azure Hybrid benefits
 
