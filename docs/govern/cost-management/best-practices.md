@@ -170,7 +170,7 @@ Storage accounts can use different types of redundancy for resilience and high a
 - [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers) about access tiers.
 - [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview?toc=/azure/storage/blobs/toc.json) different types of storage accounts.
 - Learn about [Azure storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), including LRS, ZRS, GRS, and read-access GRS.
-- [Learn more] about [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction).
+- Learn more about [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction).
 
 ## After adoption
 
