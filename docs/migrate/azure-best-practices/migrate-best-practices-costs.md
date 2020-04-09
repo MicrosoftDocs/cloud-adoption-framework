@@ -148,7 +148,7 @@ Storage accounts can use different types of redundancy for resilience and high a
 - [Compare](https://docs.microsoft.com/azure/storage/common/storage-decide-blobs-files-disks?toc=/azure/storage/blobs/toc.json) blobs, files, and disk storage data types.
 - [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers) about access tiers.
 - [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview?toc=/azure/storage/blobs/toc.json) different types of storage accounts.
-- Learn about [storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), [LRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs?toc=/azure/storage/queues/toc.json), [ZRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-zrs?toc=/azure/storage/queues/toc.json), [GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=/azure/storage/queues/toc.json), and [Read-access GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=/azure/storage/queues/toc.json#read-access-to-data-in-the-secondary-region).
+- Learn about [storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), [LRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy?toc=/azure/storage/queues/toc.json), [ZRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-zrs?toc=/azure/storage/queues/toc.json), [GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=/azure/storage/queues/toc.json), and [Read-access GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=/azure/storage/queues/toc.json#read-access-to-data-in-the-secondary-region).
 - [Learn more](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) about Azure Files.
 
 ## Best practice: Take advantage of Azure Hybrid benefits
@@ -303,7 +303,7 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 The ultimate goal of running a VM in the cloud is to maximize the CPU, memory, and disk that it uses. If you discover VMs that aren't optimized, or have frequent periods when VMs aren't used, it makes sense to either shut them down, or downscale them using virtual machine scale sets.
 
-You can optimize a VM with Azure Automation, virtual machine scale sets, auto-shutdown, and scripted or third-party solutions.
+You can optimize a VM with Azure Automation, virtual machine scale sets, autoshutdown, and scripted or third-party solutions.
 
 **Learn more:**
 

@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Start with enterprise-scale landing zones
 
-At times, it is unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-prem environment to reach the current state of maturity across security, operations, and governance. It will take time to replicate the desired processes, tools, and architectures based on the new constraints of any cloud environment. To accelerate that learning process, a slightly different starting point is required. Comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, which is now more complex, more to follow later in this article.
+At times, it is unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to replicate the desired processes, tools, and architectures based on the new constraints of any cloud environment. To accelerate that learning process, a slightly different starting point is required. Comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, which is now more complex, more to follow later in this article.
 
 ![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor-enterprise-scale.png)
 
@@ -23,15 +23,15 @@ For most adoption patterns, a "start small and expand" approach is preferable, a
 
 ### Scale and speed
 
-When the adoption team has a midterm objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud, there won't be enough time to learn through hands-on approaches. A number of criteria will need to be pre-set to deliver on that type of speed and scale for a large enterprise.
+When the adoption team has a midterm objective (within 24 months) to host more than 1,000 assets (apps, infrastructure, or data assets) in the cloud, there isn't enough time to learn through hands-on approaches only. Multiple criteria will need to be preset to deliver the necessary speed and scale for a large enterprise.
 
 ### Security, compliance, and culture
 
-There are multiple business motivations that might require an enterprise-scale landing zone and shared-services architecture before any adoption can begin. The need for an enterprise-scale landing zone solution can be obvious for companies whose businesses are built around sensitive data and complex interdependent architectures. It may also be obvious when companies require cloud environments that meet strict third-party requirements before using the cloud. Cultures with deeply rooted Central IT control models might also need an architecture that starts with centralized control to pass change-control requirements.
+Multiple business motivations might require an enterprise-scale landing zone and shared-services architecture before any adoption can begin. The need for an enterprise-scale landing zone solution can be obvious for companies whose businesses are built around sensitive data and complex interdependent architectures. It may also be obvious when companies require cloud environments that meet strict third-party requirements before using the cloud. Cultures with deeply rooted Central IT control models might also need an architecture that starts with centralized control to pass change-control requirements.
 
 ### All-in on the cloud
 
-The most common driver for an enterprise-scale landing zone comes from companies who decide to go "all-in" on the cloud. This can be a result of a data center termination or a mass movement to be more agile as a business. Regardless of the driver, this business decision typically demands both scale of adoption and speed of adoption. This combination of demands makes it difficult to take the time required to learn and prepare for sensitive data and mission critical hosting in the cloud.
+The most common driver for an enterprise-scale landing zone comes from companies who decide to go "all-in" on the cloud. This can be a result of a datacenter termination or a mass movement to be more agile as a business. Regardless of the driver, this business decision typically demands both scale of adoption and speed of adoption. This combination of demands makes it difficult to take the time required to learn and prepare for sensitive data and mission critical hosting in the cloud.
 
 ### Skill requirements
 
@@ -39,8 +39,8 @@ Starting with enterprise scale assumes that the cloud platform team has enterpri
 
 Suggested skills:
 
-- Deep knowledge on architecture in the chosen cloud provider
-- Extensive hands-on experience with cloud-based, infra-as-code approaches
+- Deep knowledge on architecture in the chosen cloud provider.
+- Extensive hands-on experience with cloud-based, infrastructure as code approaches.
 - Moderate familiarity with GitHub or other source code repositories, including branching and pull request strategies.
 - Actionable experience with automated deployments from source code to the cloud provider.
 

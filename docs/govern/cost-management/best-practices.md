@@ -96,7 +96,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 - Learn more about [VM types and sizing](https://docs.microsoft.com/azure/virtual-machines/windows/sizes), and map sizes to types.
 - Plan [VM sizing](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs).
-- Review a [sample assessment for the fictional Contoso company](https://docs.microsoft.com/azure/migrate/contoso-adoption-assessment).
+- Review a [sample assessment for the fictional Contoso company](../../plan/contoso-migration-assessment.md).
 
 ## Best practice: Select the right storage
 
@@ -166,11 +166,11 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 - [Review](https://azure.microsoft.com/pricing/details/storage) Azure Storage pricing.
 - [Learn about](https://docs.microsoft.com/azure/storage/common/storage-import-export-service) Azure Import/Export for adoption large amounts of data to the Azure blobs and files.
-- [Compare](https://docs.microsoft.com/azure/storage/common/storage-decide-blobs-files-disks?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) blobs, files, and disk storage data types.
+- [Compare](https://docs.microsoft.com/azure/storage/common/storage-introduction?toc=/azure/storage/blobs/toc.json) blobs, files, and disk storage data types.
 - [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers) about access tiers.
-- [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) different types of storage accounts.
-- Learn about [storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), [LRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), [ZRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-zrs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), [GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), and [Read-access GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json#read-access-to-data-in-the-secondary-region).
-- [Learn more](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) about Azure Files.
+- [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview?toc=/azure/storage/blobs/toc.json) different types of storage accounts.
+- Learn about [Azure storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), including LRS, ZRS, GRS, and read-access GRS.
+- [Learn more] about [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction).
 
 ## After adoption
 

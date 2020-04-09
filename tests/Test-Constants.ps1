@@ -1,7 +1,6 @@
 function Get-RegexForUrl
 {
-    return '(?i)https?:\/\/[a-zA-Z0-9-\.]*\/?[a-zA-Z0-9\/\-:\.&=_%\+]*'
-    
+    return '(?i)https?:\/\/[a-zA-Z0-9-\.]*\/?[a-zA-Z0-9\/\-:\.&=_%\+\?#,]*'
 }
 
 function Get-RegexForDocsUrl
@@ -21,6 +20,11 @@ function Get-RegexForWordBoundaryPrefix
 function Get-RegexForWordBoundarySuffix
 {
     return '[^-0-9\.]'
+}
+
+function Get-RegexForIgnoredTerms
+{
+    return "<!-- cSpell:ignore [A-Za-z' ]* -->"
 }
 
 function Get-FileContents(

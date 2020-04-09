@@ -32,13 +32,13 @@ Describe "Test-PageLinks" -Tag @("Links", "LongRunning") {
     }
 }
 
-Describe "Test-SpecificPageLinks" -Tag "Links" {
+# Describe "Test-SpecificPageLinks" -Tag "Links" {
 
-    It "All Page1 links are valid" {
-        $item = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\innovate\kubernetes\cluster-design-operations.md"
-        Test-PageLinks @($item) | Should -Be 0
-    }
-}
+#     It "All Page1 links are valid" {
+#         $item = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\innovate\kubernetes\cluster-design-operations.md"
+#         Test-PageLinks @($item) | Should -Be 0
+#     }
+# }
 
 Describe "Test-Casing" -Tag "Content" {
 
@@ -53,30 +53,21 @@ Describe "Test-Casing" -Tag "Content" {
     }
 }
 
-Describe "Test-CompoundWords" -Tag "Content" {
+Describe "Test-InvalidTerms" -Tag "Content" {
 
-    It "No invalid compound words exist" {
+    It "All terms are valid" {
         
-        # Test-AllMatches @(Get-Item 'C:\Repos_Fork\cloud-adoption-framework-pr\docs\reference\vdc.md') $expressions $true `
-        #    | Should -Be 0
-
-        Test-AllMatches $(Get-ContentFiles) $(Get-CompoundWordExpressions) -IgnoreUrlContents $true `
+        Test-AllMatches @(Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\innovate\best-practices\data-dms.md") $(Get-InvalidTermExpressions) -IgnoreUrlContents $true `
             | Should -Be 0
-    }
-}
 
-Describe "Test-Abbreviations" -Tag "Content" {
-
-    It "No invalid abbreviations exist" {
-        
-        Test-AllMatches $(Get-ContentFiles) $(Get-AbbreviationExpressions) $true `
+        Test-AllMatches $(Get-ContentFiles) $(Get-InvalidTermExpressions) -IgnoreUrlContents $true `
             | Should -Be 0
     }
 }
 
 Describe "Test-Punctuation" -Tags "Style" {
     
-    It "Punctuation style is correct" {
+    It "All punctuation style is correct" {
 
         Test-AllMatches $(Get-ContentFiles) $(Get-PunctuationExpressions) `
             | Should -Be 0

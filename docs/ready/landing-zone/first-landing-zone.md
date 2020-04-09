@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- cSpell:ignore CAF -->
+
 # First landing zone
 
 Infrastructure as code is a natural transition during most cloud adoption efforts. Deployment of your first landing zones in the cloud is a common starting point in moving to a code-driven environment. This article will help you understand the term _landing zone_ and decide which landing zone is most appropriate for your current adoption needs.

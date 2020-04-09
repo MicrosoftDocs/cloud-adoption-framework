@@ -27,3 +27,13 @@ function Get-UrlPrefixesToIgnore {
         "https://youtube.com"
     )
 }
+
+function Get-TocFilesToIgnore {
+    return @(
+        ## TODOBACKLOG: Split data classification into two files using INCLUDEs.
+        "govern/policy-compliance/data-classification.md",
+        "migrate/azure-migration-guide/prerequisites.md",
+        "migrate/azure-migration-guide/secure-and-manage.md",
+        "reference/migration-with-enterprise-scaffold.md"
+    )
+}

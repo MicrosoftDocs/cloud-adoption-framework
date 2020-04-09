@@ -10,6 +10,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- cSpell:ignore CAF -->
+
 # Refactor landing zones
 
 A landing zone is an environment for hosting your workloads, **preprovisioned through code**. Since landing zone infrastructure is defined in code, it can be refactored similar to any other codebase. Refactoring is the process of modifying or restructuring source code to optimize the output of that code without changing its purpose or core function.
@@ -22,11 +24,11 @@ The Ready methodology uses the concept of refactoring to accelerate migration an
 
 When customers adopt the cloud, landing zone considerations are the single most common blocker to adoption and cloud-related business results. Customers tend to lean towards one of the following two blockers. Often times various teams will each lean towards one of these two blockers, resulting in cultural deadlocks that make adoption difficult.
 
-Both of the primary blockers are rooted in one belief, the cloud environment and the existing data centers should be at/near feature parity regarding operations, governance, and security. This is a wise long-term goal. But, the pain comes from the delicate balance between the timing to achieve that goal and the speed required to deliver business results.
+Both of the primary blockers are rooted in one belief, the cloud environment and the existing datacenters should be at/near feature parity regarding operations, governance, and security. This is a wise long-term goal. But, the pain comes from the delicate balance between the timing to achieve that goal and the speed required to deliver business results.
 
 ### Blocker: Acting too soon
 
-It took years and significant effort to reach the current state of security, governance, and operations in the current data center. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching 100% feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspend in the cloud environment. It is highly advised that customers not attempt to apply current state requirements to a future state environment as an early stage gate. Such a model seldom proves profitable.
+It took years and significant effort to reach the current state of security, governance, and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching 100% feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspend in the cloud environment. It is highly advised that customers not attempt to apply current state requirements to a future state environment as an early stage gate. Such a model seldom proves profitable.
 
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
 
@@ -45,7 +47,7 @@ Similar to acting too soon, in this image, the customer waits too long to reach 
 To avoid these common blockers, we suggest an iterative approach based on well-structured cloud adoption plan, which maximizes learning opportunities and minimizes time to business success. Refactoring and parallel efforts are critical to this approach.
 
 > [!WARNING]
-> Adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud** are highly unlikely to be successful using a refactoring approach. The learning curve is too high and the timeline too tight to allow for organic approaches to skills attainment. A more complete starting point requiring less customization will be a better path to achieve your objectives. Your implementation partners will likely be able to guide you through a better approach.
+> Adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infrastructure, or data assets) in the cloud** are highly unlikely to be successful using a refactoring approach. The learning curve is too high and the timeline too tight to allow for organic approaches to skills attainment. A more complete starting point requiring less customization will be a better path to achieve your objectives. Your implementation partners will likely be able to guide you through a better approach.
 
 The remainder of this article will focus on some key constraints that can empower a refactoring approach, while minimizing risk.
 
