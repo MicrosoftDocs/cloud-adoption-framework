@@ -70,11 +70,11 @@ As a general best practice, we suggest a least-privilege model in assigning peop
 
 Azure Cost Management supports the following built-in roles for each scope:
 
-- [Owner](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner). Can view costs and manage everything, including cost configuration.
-- [Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor). Can view costs and manage everything, including cost configuration, but excluding access control.
-- [Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#reader). Can view everything, including cost data and configuration, but can't make any changes.
-- [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor). Can view costs and manage cost configuration.
-- [Cost Management Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-reader) Can view cost data and configuration.
+- [Owner](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) - Can view costs and manage everything, including cost configuration.
+- [Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) - Can view costs and manage everything, including cost configuration, but excluding access control.
+- [Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#reader) - Can view everything, including cost data and configuration, but can't make any changes.
+- [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor) - Can view costs and manage cost configuration.
+- [Cost Management Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-reader) - Can view cost data and configuration.
 
 As a general best practice, members of all teams should be assigned the role of Cost Management Contributor. This role grants access to create and manage budgets and exports to more effectively monitor and report on costs. However, members of the
 [cloud strategy team](../../organize/cloud-strategy.md) should be set to Cost Management Reader only. That's because they're not involved in setting budgets within the Azure Cost Management tool.
