@@ -145,10 +145,10 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 - [Review](https://azure.microsoft.com/pricing/details/storage) Azure Storage pricing.
 - [Learn about](https://docs.microsoft.com/azure/storage/common/storage-import-export-service) Azure Import/Export for migration large amounts of data to the Azure blobs and files.
-- [Compare](https://docs.microsoft.com/azure/storage/common/storage-decide-blobs-files-disks?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) blobs, files, and disk storage data types.
+- [Compare](https://docs.microsoft.com/azure/storage/common/storage-decide-blobs-files-disks?toc=/azure/storage/blobs/toc.json) blobs, files, and disk storage data types.
 - [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers) about access tiers.
-- [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) different types of storage accounts.
-- Learn about [storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), [LRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), [ZRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-zrs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), [GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), and [Read-access GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json#read-access-to-data-in-the-secondary-region).
+- [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview?toc=/azure/storage/blobs/toc.json) different types of storage accounts.
+- Learn about [storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), [LRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs?toc=/azure/storage/queues/toc.json), [ZRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-zrs?toc=/azure/storage/queues/toc.json), [GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=/azure/storage/queues/toc.json), and [Read-access GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=/azure/storage/queues/toc.json#read-access-to-data-in-the-secondary-region).
 - [Learn more](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) about Azure Files.
 
 ## Best practice: Take advantage of Azure Hybrid benefits
@@ -236,11 +236,11 @@ In Cost Management, you can:
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/cost-management/overview) of Azure Cost Management.
-- [Learn how to](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices) optimize your cloud investment with Azure Cost Management.
-- [Learn how to](https://docs.microsoft.com/azure/cost-management/use-reports) use Azure Cost Management reports.
-- [Get a tutorial](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/toc.json) on optimizing costs from recommendations.
-- [Review](https://docs.microsoft.com/rest/api/consumption/budgets) the Azure Consumption API.
+- Get an overview of [Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview).
+- Learn how to [optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices).
+- Learn how to [use Azure Cost Management reports](https://docs.microsoft.com/azure/cost-management/use-reports).
+- Get a [tutorial on optimizing costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/toc.json).
+- Review the [Azure Consumption API](https://docs.microsoft.com/rest/api/consumption/budgets).
 
 ## Best practice: Monitor resource utilization
 
@@ -283,7 +283,7 @@ As you move resources into Azure and enable diagnostic logging for them, you gen
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-usage-and-estimated-costs) monitoring usage and estimated costs.
+- [Learn about](https://docs.microsoft.com/azure/azure-monitor/platform/usage-estimated-costs) monitoring usage and estimated costs.
 
 ## Best practice: Optimize storage
 

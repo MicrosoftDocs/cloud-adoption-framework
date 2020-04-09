@@ -30,7 +30,7 @@ Prepare your cloud networking infrastructure to support your workloads.
 
 - [Networking decisions](../considerations/networking-options.md). Choose the networking services, tools, and architectures that will support your organization's workload, governance, and connectivity requirements.
 - [Virtual network planning](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Plan virtual networks based on your isolation, connectivity, and location requirements.
-- [Best practices for network security](https://docs.microsoft.com/azure/security/azure-security-network-security-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for addressing common network security issues using built-in Azure capabilities.
+- [Best practices for network security](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for addressing common network security issues using built-in Azure capabilities.
 - [Perimeter networks](./perimeter-networks.md). Enable secure connectivity between your cloud networks and your on-premises or physical datacenter networks, along with any connectivity to and from the internet.
 - [Hub and spoke network topology](./hub-spoke-network-topology.md). Efficiently manage common communication or security requirements for complicated workloads and address potential Azure subscription limitations.
 
@@ -38,7 +38,7 @@ Prepare your cloud networking infrastructure to support your workloads.
 
 Design your identity and access control infrastructure to improve the security and management efficiency of your workloads.
 
-- [Azure identity management and access control security best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for identity management and access control using built-in Azure capabilities.
+- [Azure identity management and access control security best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for identity management and access control using built-in Azure capabilities.
 - [Best practices for role-based access control](../considerations/roles.md). Enable fine-grained group-based access management for resources organized around user roles.
 - [Securing privileged access for hybrid and cloud deployments in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Ensure that your organization's administrative access and privileged accounts are secure across your cloud and on-premises environment.
 

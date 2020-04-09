@@ -1,6 +1,6 @@
 ---
 title: "Refactor Team Foundation Server deployment to Azure DevOps Services"
-description: Use the Cloud Adoption Framework for Azure to learn how to refactor your on-premises TFS deployment by migrating it to Azure DevOps Services in Azure.
+description: Use the Cloud Adoption Framework for Azure to learn how to refactor your on-premises Team Foundation Server (TFS) deployment by migrating it to Azure DevOps Services in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/11/2018
@@ -42,7 +42,7 @@ The Contoso cloud team has pinned down goals for the migration to Azure DevOps S
 - Contoso will move their TFS projects to the cloud, and no longer host their projects or source control on-premises.
 - TFS will be migrated to Azure DevOps Services.
 - Currently Contoso has one TFS collection named `ContosoDev`, which will be migrated to an Azure DevOps Services organization called `contosodevmigration.visualstudio.com`.
-- The projects, work items, bugs and iterations from the last year will be migrated to Azure DevOps Services.
+- The projects, work items, bugs, and iterations from the last year will be migrated to Azure DevOps Services.
 - Contoso will use their Azure Active Directory, which they set up when they [deployed their Azure infrastructure](./contoso-migration-infrastructure.md) at the beginning of their migration planning.
 
 ![Scenario architecture](./media/contoso-migration-tfs-vsts/architecture.png)
@@ -51,7 +51,7 @@ The Contoso cloud team has pinned down goals for the migration to Azure DevOps S
 
 Contoso will complete the migration process as follows:
 
-1. There's a lot of preparation involved. As a first step, Contoso needs to upgrade their TFS implementation to a supported level. Contoso is currently running TFS 2017 Update 3, but to use database migration it needs to run a supported 2018 version with the latest updates.
+1. Significant preparation is required. First, Contoso must upgrade their TFS implementation to a supported level. Contoso is currently running TFS 2017 Update 3, but to use database migration it needs to run a supported 2018 version with the latest updates.
 2. After upgrading, Contoso will run the TFS migration tool, and validate their collection.
 3. Contoso will build a set of preparation files, and perform a migration dry run for testing.
 4. Contoso will then run another migration, this time a full migration that includes work items, bugs, sprints, and code.
@@ -180,7 +180,7 @@ With the validation complete, Contoso admins can use the TFS Migration Tool to b
 
      ![Prepare](./media/contoso-migration-tfs-vsts/prep1.png)
 
-    Prepare does the following:
+    The prepare step does the following:
     - Scans the collection to find a list of all users and populates the identify map log (**IdentityMapLog.csv**).
     - Prepares the connection to Azure Active Directory to find a match for each identity.
     - Contoso has already deployed Azure AD and synchronized it using Azure AD Connect, so Prepare should be able to find the matching identities and mark them as Active.
@@ -218,12 +218,12 @@ With preparation in place, Contoso admins can now focus on the migration. After 
 
 Before they start, the admins schedule downtime with the dev team, to take the collection offline for migration. These are the steps for the migration process:
 
-1. **Detach the collection.** Identity data for the collection resides in the TFS server configuration database while the collection is attached and online. When a collection is detached from the TFS server, it takes a copy of that identity data, and packages it with the collection for transport. Without this data, the identity portion of the import cannot be executed. It's recommended that the collection stay detached until the import has been completed, as there's no way to import the changes which occurred during the import.
+1. **Detach the collection.** Identity data for the collection resides in the TFS server configuration database while the collection is attached and online. When a collection is detached from the TFS server, it takes a copy of that identity data, and packages it with the collection for transport. Without this data, the identity portion of the import cannot be executed. It's recommended that the collection stay detached until the import has been completed, as there's no way to import the changes that occurred during the import.
 2. **Generate a backup.** The next step of the migration process is to generate a backup that can be imported into Azure DevOps Services. Data-tier Application Component Packages (DACPAC), is a SQL Server feature that allows database changes to be packaged into a single file, and deployed to other instances of SQL. It can also be restored directly to Azure DevOps Services, and it is used as the packaging method for getting collection data into the cloud. Contoso will use the SqlPackage.exe tool to generate the DACPAC. This tool is included in SQL Server Data Tools.
 3. **Upload to storage.** After the DACPAC is created, they upload it to Azure Storage. After it's uploaded, they get a shared access signature (SAS), to allow the TFS Migration Tool access to the storage.
-4. **Fill out the import.** Contoso can then fill out missing fields in the import file, including the DACPAC setting. To start with they'll specify that they want to do a **dry run** import, to check that everything's working properly before the full migration.
-5. **Do a dry run.** Dry run imports help test collection migration. Dry runs have limited life, so they're deleted before a production migration runs. They're deleted automatically after a set duration. A note about when the dry run will be deleted is included in the success email received after the import finishes. Take note and plan accordingly.
-6. **Complete the production migration.** With the dry run migration completed, Contoso admins do the final migration by updating the **import.json** file, and running import again.
+4. **Fill out the import.** Contoso can then fill out missing fields in the import file, including the DACPAC setting. To start with they'll specify that they want to perform a **dry-run** import, to check that everything's working properly before the full migration.
+5. **Perform a dry-run import.** Dry-run imports help test collection migration. Dry runs have limited life, so they're deleted before a production migration runs. They're deleted automatically after a set duration. A note about when the dry run will be deleted is included in the success email received after the import finishes. Take note and plan accordingly.
+6. **Complete the production migration.** With the dry-run migration completed, Contoso admins do the final migration by updating the **import.json** file, and running import again.
 
 ### Detach the collection
 
@@ -326,9 +326,9 @@ They open the import.json file, and fill out the following fields:
 
 ![Import settings](./media/contoso-migration-tfs-vsts/import1.png)
 
-### Do a dry run migration
+### Perform a dry-run migration
 
-Contoso admins start with a dry run migration, to make sure everything's working as expected.
+Contoso admins start by performing a dry-run migration to make sure everything's working as expected.
 
 1. They open a command prompt, and navigate to the TfsMigration location (`C:\TFSMigrator`).
 2. As a first step they validate the import file. They want to be sure the file is formatted properly, and that the SAS key is working.
@@ -389,7 +389,7 @@ Contoso admins start with a dry run migration, to make sure everything's working
 
 With the dry run complete, Contoso admins move on to the production migration. They delete the dry run, update the import settings, and run import again.
 
-1. In the Azure DevOps Services portal, they delete the dry run organization.
+1. In the Azure DevOps Services portal, they delete the dry-run organization.
 2. They update the import.json file to set the **ImportType** to **ProductionRun**.
 
     ![Production](./media/contoso-migration-tfs-vsts/full1.png)
@@ -411,7 +411,7 @@ With the dry run complete, Contoso admins move on to the production migration. T
 
     ![Production](./media/contoso-migration-tfs-vsts/full5.png)
 
-8. After the migration finishes, a Contoso Dev Lead logs onto Azure DevOps Services to check that the migration worked properly. After login, he can see that projects have been migrated.
+8. After the migration finishes, a Contoso Dev Lead signs into Azure DevOps Services to check that the migration worked properly. After signing in, the Dev Lead can see that projects have been migrated.
 
     ![Production](./media/contoso-migration-tfs-vsts/full6.png)
 
@@ -439,7 +439,7 @@ With migration complete, Contoso wants to move from TFVC to Git for source code 
 
     ![Git](./media/contoso-migration-tfs-vsts/git2.png)
 
-3. In **Source type** they select **TFVC**, and specify the path to the repo. They've decided not to migrate the history.
+3. For **Source type**, they select **TFVC**, and specify the path to the repo. They've decided not to migrate the history.
 
     ![Git](./media/contoso-migration-tfs-vsts/git3.png)
 
@@ -467,7 +467,7 @@ With migration complete, Contoso wants to move from TFVC to Git for source code 
 With migration complete, Contoso needs to do the following:
 
 - Review the [post-import](https://docs.microsoft.com/azure/devops/articles/migration-post-import?view=vsts) article for information about additional import activities.
-- Either delete the TFVC repos, or place them in read-only mode. The code bases mustn't used, but can be referenced for their history.
+- Either delete the TFVC repos, or place them in read-only mode. The code bases must not be used, but can be referenced for their history.
 
 ## Post-migration training
 

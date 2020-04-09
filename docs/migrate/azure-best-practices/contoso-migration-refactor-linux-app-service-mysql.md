@@ -191,7 +191,7 @@ There are several ways to move the MySQL database. Each option requires you to c
 
 ### Step 4a: Migrate the database (Azure Database Migration Service)
 
-Contoso admins migrate the database using Azure Database Migration Services using the step-by-step guidance [here](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform online, offline, and hybrid (preview) migrations using MySQL 5.6 or 5.7.
+Contoso admins migrate the database using Azure Database Migration Services using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform online, offline, and hybrid (preview) migrations using MySQL 5.6 or 5.7.
 
 > [!NOTE]
 > MySQL 8.0 is supported in Azure Database for MySQL, but the DMS tool does not yet support this version.
@@ -205,7 +205,7 @@ As a summary, you must perform the following:
   - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
 - Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet.
-- Ensure that the Azure Database Migration Service can access the MySQL database via the Virtual Network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the Virtual Network level, the network VPN and the machine hosting MySQL.
+- Ensure that the Azure Database Migration Service can access the MySQL database via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
 - Run the Azure Database Migration Service Tool:
   - Create a migration project based on the **Premium SKU**.
 
@@ -291,7 +291,7 @@ As a summary, you must perform the following:
 
 ## Step 5: Set up GitHub
 
-Contoso admins create a new private GitHub repo, and sets up a connection to the osTicket database in Azure Database for MySQL. Then, they load the web app into Azure App Service.
+Contoso admins create a new private GitHub repo and set up a connection to the osTicket database in Azure Database for MySQL. Then, they load the web app into Azure App Service.
 
 1. They browse to the OsTicket software public GitHub repo, and fork it to the Contoso GitHub account.
 
@@ -305,7 +305,7 @@ Contoso admins create a new private GitHub repo, and sets up a connection to the
 
     ![GitHub](./media/contoso-migration-refactor-linux-app-service-mysql/github3.png)
 
-4. In the editor, they update the database details, specifically **DBHOST** and **DBUSER**.
+4. In the editor, they update the database details, specifically for **DBHOST** and **DBUSER**.
 
     ![GitHub](./media/contoso-migration-refactor-linux-app-service-mysql/github4.png)
 
@@ -325,7 +325,7 @@ Contoso admins create a new private GitHub repo, and sets up a connection to the
 
 As the final step in the migration process, Contoso admins configure the web apps with the osTicket web sites.
 
-1. In the primary web app (**osticket-eus2**) they open **Deployment option** and set the source to **GitHub**.
+1. In the primary web app (**osticket-eus2**), they open **Deployment option** and set the source to **GitHub**.
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app1.png)
 
@@ -346,7 +346,7 @@ As the final step in the migration process, Contoso admins configure the web app
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app5.png)
 
-7. Contoso wants a DNS name that's easy to remember. They create an alias record (CNAME) **osticket.contoso.com** which points to the Traffic Manager name, in the DNS on their domain controllers.
+7. Contoso wants a DNS name that's easy to remember. They create an alias record (CNAME) **osticket.contoso.com** that points to the Traffic Manager name, in the DNS on their domain controllers.
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app6.png)
 
@@ -371,7 +371,7 @@ Finally, they set up automatic scaling for the app. This ensures that as agents 
 
 With migration complete, the osTicket app is refactored to running in an Azure App Service web app with continuous delivery using a private GitHub repo. The app's running in two regions for increased resilience. The osTicket database is running in Azure database for MySQL after migration to the PaaS platform.
 
-For clean up, Contoso needs to do the following:
+For cleanup, Contoso needs to do the following:
 
 - Remove the VMware VMs from the vCenter inventory.
 - Remove the on-premises VMs from local backup jobs.
@@ -389,7 +389,7 @@ The Contoso security team reviewed the app to determine any security issues. The
 
 ### Backups
 
-- The osTicket web apps don't contain state data and thus don't need to be backed up.
+- The osTicket web apps don't contain state data and thus don't require backup.
 - They don't need to configure backup for the database. Azure Database for MySQL automatically creates server backups and stores. They selected to use geo-redundancy for the database, so it's resilient and production-ready. Backups can be used to restore your server to a point-in-time. [Learn more](https://docs.microsoft.com/azure/mysql/concepts-backup).
 
 ### Licensing and cost optimization

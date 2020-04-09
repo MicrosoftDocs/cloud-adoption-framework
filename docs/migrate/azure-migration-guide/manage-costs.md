@@ -37,7 +37,7 @@ Prior to migration of any asset (infrastructure, app, or data), there is an oppo
 
 ## Cost calculators
 
-For manual cost calculations, there are two handy calculators which can provide a quick cost estimate based on the architecture of the workload to be migrated.
+For manual cost calculations, there are two handy calculators that can provide a quick cost estimate based on the architecture of the workload to be migrated.
 
 - The Azure [pricing calculator](https://azure.microsoft.com/pricing/calculator) provides cost estimates based on manually entered Azure products.
 - Sometimes decisions require a comparison of the future cloud costs and the current on-premises costs. The [Total Cost of Ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator) can provide such a comparison.
@@ -106,7 +106,7 @@ This analysis will allow you to review total costs, budget (if available), and a
 
 # [Tips and tricks to optimize costs](#tab/TipsTricks)
 
-In addition to the tools mentioned in this article, there are some tips and tricks which can help quickly reduce overall cloud costs. The following are a few high-level tips to be aware of:
+In addition to the tools mentioned in this article, there are some tips and tricks that can help quickly reduce overall cloud costs. The following are a few high-level tips to be aware of:
 
 ## Avoid unnecessary spending
 

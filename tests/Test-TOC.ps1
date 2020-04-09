@@ -28,13 +28,13 @@ function Test-MatchTocToFiles([string] $tocFile, [string[]] $ignoreFiles)
 
         $fileName = " $fileName"
 
-        $hits = ([regex]$fileName).Matches($tocText)
-        if ($hits.Count -lt 1)
+        $matches = ([regex]$fileName).Matches($tocText)
+        if ($matches.Count -lt 1)
         {
             Write-Host "ORPHANED: $fileName"
             $count++
         }
-        elseif ($hits.Count -gt 1)
+        elseif ($matches.Count -gt 1)
         {
             Write-Host "DUPLICATED: $fileName"
             $count++
@@ -52,14 +52,17 @@ function Test-PageLinks([System.IO.FileInfo[]] $files)
 
 function Test-Uri([string] $uri)
 {
-    if ($uri.StartsWith("https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json"))
+    if ($uri.StartsWith($(Get-UrlForToc)))
     {
         return 200
     }
 
     $uri = $uri.Replace('https://docs.microsoft.com/', 'https://docs.microsoft.com/en-us/')
     $uri = $uri.Replace('https://azure.microsoft.com/', 'https://azure.microsoft.com/en-us/')
+    $uri = $uri.Replace('https://www.microsoft.com/', 'https://www.microsoft.com/en-us/')
     $uri = $uri.Replace('https://developer.amazon.com/', 'https://developer.amazon.com/en-US/')
+    $uri = $uri.Replace('https://wikipedia.org', 'https://en.wikipedia.org')
+    $uri = $uri.Replace('https://cloudamize.com', 'https://cloudamize.com/en')
     
     $uriObject = New-Object System.Uri $uri
 

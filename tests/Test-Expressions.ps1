@@ -5,7 +5,8 @@ function Get-CasingExpressions
         "anagement groups",
         "ole-based",
         "GitHub",
-        "PolyBase"
+        "PolyBase",
+        "Pluralsight"
     )
 }
 
@@ -50,7 +51,9 @@ function Get-LinkExpressions
             "\(\/azure\/architecture",
             "\(\/",
             "\/\)",
-           # "``` ?[A-Z]"
+            "app.pluralsight.com",      # Use www.pluralsight.com/courses/...
+            "www.pluralsight.com\/library",
+            # "``` ?[A-Z]"
 			"<endoflist>"
     )
 }
@@ -58,6 +61,7 @@ function Get-LinkExpressions
 function Get-PunctuationExpressions
 {
     return @(
-        "^ *\*\s"           ## Use hyphens for bullet lists
+        "[a-z]\.  [A-Z]",   # Use only one space after a sentence
+        "^ *\*\s"           # Use hyphens for bullet lists
     )
 }

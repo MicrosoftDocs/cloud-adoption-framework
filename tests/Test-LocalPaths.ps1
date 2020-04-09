@@ -40,9 +40,9 @@ function Test-LocalPath([System.IO.FileSystemInfo] $file)
         
         if ($expression.Trim().Length -gt 0) {
 
-            $regex = [regex]::new($expression)
+            $matches = [regex]::new($expression).Matches($text)
 
-            foreach ($match in ($regex.Matches($text))) {   
+            foreach ($match in $matches) {   
                 
                 $relativePath = $match.Value
                 $relativePath = Get-StringChopStart $relativePath "<a href="""

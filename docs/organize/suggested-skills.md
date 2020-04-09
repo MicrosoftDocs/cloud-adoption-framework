@@ -34,13 +34,13 @@ During the ready phase, technical staff have to create a migration landing zone 
 - [Azure network services](https://docs.microsoft.com/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
 - [Azure compute options](https://docs.microsoft.com/learn/modules/intro-to-azure-compute): Review the Azure compute services.
 - [Secure resources with RBAC](https://docs.microsoft.com/learn/modules/secure-azure-resources-with-rbac): Use role-based access control (RBAC) to secure resources.
-- [Azure Storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure/index): Learn about the benefits of Azure data storage.
+- [Azure Storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure): Learn about the benefits of Azure data storage.
 
 During the ready phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
 
-- [Foundations for cloud architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to help architect the right foundational solutions.
-- [Microsoft Azure architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to ground architects in Azure architecture.
-- [Designing migrations for Microsoft Azure](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to help architects design a migration solution.
+- [Foundations for cloud architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
+- [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
 
 ## Deeper skills exploration
 
@@ -50,7 +50,6 @@ The following information describes resources for additional learning.
 
 Microsoft and its partners offer options to help all audiences develop their skills for using Microsoft Azure services.
 
-- [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/microsoft-azure): Offers training from the people who helped build Azure. From a basic overview to deep technical training, IT staff learn how to apply Azure to their business.
 - [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): A free online resource to help map your cloud career path. Learn from industry experts about your cloud role and the skills you need. Follow a learning curriculum at your own pace to build the skills that you need to stay relevant.
 
 We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).

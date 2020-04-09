@@ -12,6 +12,7 @@ function Test-Markdown([String] $docsPath, [String] $fileType)
     $output = Get-ProcessStream "StandardError" -FileName $env:ComSpec -Args $arguments
 
     $expression = " MD[0-9][0-9][0-9]"
-    $hits = ([regex]$expression).Matches($output)
-    return $hits.Count
+    
+    $matches = ([regex]$expression).Matches($output)
+    return $matches.Count
 }

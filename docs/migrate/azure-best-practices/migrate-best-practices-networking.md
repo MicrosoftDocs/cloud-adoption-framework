@@ -44,9 +44,9 @@ When you create VNets as part of your migration, it's important to plan out your
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) of Azure VNets.
-- [Read](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq) the networking FAQ.
-- [Learn about](https://docs.microsoft.com/azure/azure-subscription-service-limits?toc=%2fazure%2fvirtual-network%2ftoc.json#networking-limits) networking limitations.
+- Get an [overview of Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
+- Read the [Azure Virtual Network frequently asked questions (FAQ)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq).
+- Learn about [Azure networking limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits?toc=/azure/virtual-network/toc.json#networking-limits).
 
 ## Best practice: Implement a hub and spoke network topology
 
@@ -283,7 +283,7 @@ The responsibility for securing VNets is shared between Microsoft and you. Micro
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/security/azure-security-network-security-best-practices) of best practices for network security.
+- [Get an overview](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices) of best practices for network security.
 - [Learn how to](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#security) design for secure networks.
 
 ## Best practice: Implement an Azure perimeter network
@@ -305,7 +305,7 @@ The following figure shows an example of a single subnet perimeter network in a 
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) deploying a perimeter network between Azure and your on-premises datacenter.
+- Learn how to [deploy a perimeter network between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
 
 ## Best practice: Filter VNet traffic with NSGs
 
@@ -509,7 +509,7 @@ We recommend using one set of Azure Firewalls (or NVAs) for traffic originating 
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) using NVAs in an Azure VNet.
+- [Learn about](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz) using NVAs in an Azure VNet.
 
 ## Next steps
 

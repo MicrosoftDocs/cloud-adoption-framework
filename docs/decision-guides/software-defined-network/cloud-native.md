@@ -36,4 +36,4 @@ Additional issues your cloud adoption teams should consider when discussing a cl
 For more information about cloud-native virtual networking in Azure, see:
 
 - [Azure Virtual Network: How-to guides](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm). Newly created Azure Virtual Networks are cloud-native by default. Use these guides to help plan the design and deployment of your virtual networks.
-- [Subscription limits: Networking](https://docs.microsoft.com/azure/azure-subscription-service-limits?toc=/azure/virtual-network/toc.json#networking-limits). Each virtual network and connected resources exists in a single subscription. These resources bound by subscription limits.
+- [Subscription limits: Networking](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits?toc=/azure/virtual-network/toc.json#networking-limits). Each virtual network and connected resources exists in a single subscription. These resources bound by subscription limits.

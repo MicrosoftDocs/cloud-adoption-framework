@@ -16,7 +16,7 @@ ms.custom: virtual-network
 
 Group-based access rights and privileges are a good practice. Dealing with groups rather than individual users simplifies maintenance of access policies, provides consistent access management across teams, and reduces configuration errors. Assigning users to and removing users from appropriate groups helps keep current the privileges of a specific user. Azure [role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview) offers fine-grained access management for resources organized around user roles.
 
-For an overview of recommended RBAC practices as part of an identity and security strategy, see [Azure identity management and access control security best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices#use-role-based-access-control).
+For an overview of recommended RBAC practices as part of an identity and security strategy, see [Azure identity management and access control security best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices#use-role-based-access-control).
 
 ## Overview of role-based access control
 
@@ -33,7 +33,7 @@ When planning your access control strategy, use a least-privilege access model t
 ![Suggested pattern for using RBAC](../../_images/azure-best-practices/rbac-least-privilege.png)
 
 > [!NOTE]
-> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, [use management groups](https://docs.microsoft.com/azure/governance/management-groups) for enterprise-wide access control and [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups).
+> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, [use management groups](https://docs.microsoft.com/azure/governance/management-groups) for enterprise-wide access control and [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups).
 
 ## Use built-in RBAC roles
 

@@ -38,4 +38,4 @@ Your cloud adoption teams should consider the following issues when looking at i
 
 For more information about implementing a Cloud DMZ in Azure, see:
 
-- [Implement a DMZ between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid). This article discusses how to implement a secure hybrid network architecture in Azure.
+- [Implement a DMZ between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). This article discusses how to implement a secure hybrid network architecture in Azure.

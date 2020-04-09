@@ -66,6 +66,7 @@ function Test-NextSteps([String] $docsPath)
             }
 
             $expression = "\> \[.*\]\((.*)\)"
+            
             $matches = ([regex]$expression).Matches($urlLine)
             if ($matches.Count -eq 1)
             {

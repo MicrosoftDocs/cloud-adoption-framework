@@ -24,7 +24,7 @@ Throughout this framework, enablement is a core theme. The following checklist i
   - **Manage:** Ongoing [operational management](../manage/index.md) of the IT portfolio to minimize interruptions to business processes and ensure stability of the IT portfolio.
   - **Support:** Align proper [partnership and support options](../migrate/migration-considerations/assess/partnership-options.md).
 
-Another core theme is security, which is a critical quality attribute for a successful cloud adoption. Security is integrated throughout this framework to provide integrated guidance on maintaining confidentiality, integrity, and availability assurances for your cloud workloads.
+Another core theme is security, a critical quality attribute for a successful cloud adoption. Security is integrated throughout this framework to provide integrated guidance on maintaining confidentiality, integrity, and availability assurances for your cloud workloads.
 
 ## Additional tools
 

@@ -50,7 +50,7 @@ As an organization's cloud footprint grows, additional subscriptions are typical
 Each organization will categorize their applications differently, often separating subscriptions based on specific applications or services or along the lines of application archetypes. This categorization is often designed to support workloads that are likely to consume most of the resource limits of a subscription, or separate mission-critical workloads to ensure they aren't competing with other workloads under these limits. Some workloads that might justify a separate subscription include:
 
 - Mission-critical workloads.
-- Applications which are part of "Cost of Goods Sold" (COGS) within your company. Example: every instance of Company X's widget contains an Azure IoT module that sends telemetry. This may necessitate a dedicated subscription for accounting/governance purposes as part of COGS.
+- Applications that are part of "Cost of Goods Sold" (COGS) within your company. Example: every instance of Company X's widget contains an Azure IoT module that sends telemetry. This may necessitate a dedicated subscription for accounting/governance purposes as part of COGS.
 - Applications subject to regulatory requirements such as HIPAA or FedRAMP.
 
 ### Functional strategy

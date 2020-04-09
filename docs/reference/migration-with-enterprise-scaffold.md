@@ -112,7 +112,7 @@ The first pillar of the scaffold is a consistent naming standard. Well-designed 
 > [!TIP]
 > For naming conventions:
 >
-> - Review and adopt where possible the [Patterns and Practices guidance](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming). This guidance helps you decide on a meaningful naming standard and provides extensive examples.
+> - Review and adopt the [Cloud Adoption Framework naming and tagging guidance](../ready/azure-best-practices/naming-and-tagging.md) wherever possible. This guidance helps you decide on a meaningful naming standard and provides extensive examples.
 > - Using Resource Manager Policies to help enforce naming standards.
 >
 > Remember that it's difficult to change names later, so a few minutes now will save you trouble later.
@@ -121,7 +121,7 @@ Concentrate your naming standards on those resources that are more commonly used
 
 ### Resource Tags
 
-Resource tags are tightly aligned with naming standards. As resources are added to subscriptions, it becomes increasingly important to logically categorize them for billing, management, and operational purposes. For more information, see [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags).
+Resource tags are tightly aligned with naming standards. As resources are added to subscriptions, it becomes increasingly important to logically categorize them for billing, management, and operational purposes. For more information, see [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources).
 
 > [!IMPORTANT]
 > Tags can contain personal information and may fall under the regulations of GDPR. Plan for management of your tags carefully. If you're looking for general information about GDPR, see the GDPR section of the [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
@@ -177,9 +177,9 @@ When implementing role-based access, the following are highly recommended:
 - Follow the principle of granting the **least privilege** required to do the expected work.
 
 > [!IMPORTANT]
->Consider using [Azure AD Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure), Azure [Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-getstarted) and [Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) capabilities to provide better security and more visibility to administrative actions across your Azure subscriptions. These capabilities come from a valid Azure AD Premium license (depending on the feature) to further secure and manage your identity. Azure AD PIM enables "Just-in-Time" administrative access with approval workflow, as well as a full audit of administrator activations and activities. Azure Multi-Factor Authentication is another critical capability and enables two-step verification for login to the Azure portal. When combined with Conditional Access Controls you can effectively manage your risk of compromise.
+>Consider using [Azure AD Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure), Azure [Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-getstarted) and [Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) capabilities to provide better security and more visibility to administrative actions across your Azure subscriptions. These capabilities come from a valid Azure AD Premium license (depending on the feature) to further secure and manage your identity. Azure AD PIM enables "Just-in-Time" administrative access with approval workflow, as well as a full audit of administrator activations and activities. Azure Multi-Factor Authentication is another critical capability and enables two-step verification for signing into the Azure portal. When combined with Conditional Access Controls you can effectively manage your risk of compromise.
 
-Planning and preparing for your identity and access controls and following Azure Identity Management best practice ([link](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices)) is one of the best risk mitigation strategies that you can employ and should be considered mandatory for every deployment.
+Planning and preparing for your identity and access controls and following [Azure Identity Management best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices) is one of the best risk mitigation strategies that you can employ and should be considered mandatory for every deployment.
 
 ## Security
 
@@ -272,10 +272,10 @@ Microsoft provides several tools that help you visualize, track, and manage your
 
 These are tools to provide you instant information on cost as well as the ability to take actions.
 
-- **Subscription resource cost:** Located in the portal, the [Azure Cost Analysis](https://docs.microsoft.com/azure/cost-management/overview) view provides a quick look at your costs and information on daily spend by resource or resource group.
-- **Azure Cost Management:** This allows you to manage and analyze your Azure spending as well as what you spend on other public cloud providers. There are both free and paid tiers, with a great wealth of capabilities as seen in the [overview](https://docs.microsoft.com/azure/cost-management/overview).
-- **Azure budgets and action groups:** Knowing what something costs and doing something about it until recently has been more of a manual exercise. With the introduction of Azure Budgets and its APIs, it's now possible to create actions (as seen in [this example](https://channel9.msdn.com/Shows/Azure-Friday/Managing-costs-with-the-Azure-Budgets-API-and-Action-Groups)) when costs hit a threshold. For example, shutting down a "test" resource group when it hits 100% of its budget, or [another example].
-- **Azure Advisor** Knowing what something costs is only half the battle; the other half is knowing what to do with that information. [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) provides you recommendations on actions to take to save money, improve reliability or even increase security.
+- **Subscription resource cost:** Located in the portal, [Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) view provides a quick look at your costs and information on daily spend by resource or resource group.
+- **Azure Cost Management:** This allows you to manage and analyze your Azure spending as well as what you spend on other public cloud providers. There are both free and paid tiers, with a great wealth of capabilities.
+- **Azure budgets and action groups:** Knowing what something costs and doing something about it until recently has been more of a manual exercise. With the introduction of Azure Budgets and its APIs, it's now possible to create actions, such as in [this example](https://channel9.msdn.com/Shows/Azure-Friday/Managing-costs-with-the-Azure-Budgets-API-and-Action-Groups) when costs hit a threshold. For example, you could shut down a "test" resource group when it hits 100% of its budget.
+- **Azure Advisor:** Knowing what something costs is only half the battle; the other half is knowing what to do with that information. [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) provides you recommendations on actions to take to save money, improve reliability or even increase security.
 
 ### External cost management tools
 

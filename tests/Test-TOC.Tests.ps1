@@ -1,5 +1,7 @@
 $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+. "$here\Test-MyRepo.ps1"
+
 . "$here\Test-Helpers.ps1"
 . "$here\Test-TOC.ps1"
 . "$here\Test-Words.ps1"
@@ -39,7 +41,7 @@ Describe "Test-SpecificLinks" -Tag "Links" {
         Test-Uri $uri | Should -Be 200
     }
 
-    It "Trailing slash link is valid" {
+    It "Expected trailing slash link is valid" {
         $uri = "https://docs.microsoft.com/powerapps/maker"
         Test-Uri $uri | Should -Be 200
     }

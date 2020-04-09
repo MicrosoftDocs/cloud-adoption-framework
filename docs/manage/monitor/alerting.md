@@ -115,9 +115,9 @@ If you aren't using Azure Monitor for VMs, make the job of creating alerts and m
 
 Used together, these features can save time by minimizing alert notifications and the management of the underlying alerts.
 
-### Alerts limitations
+### Limits on alerts
 
-Be sure to note the [limitations](https://docs.microsoft.com/azure/azure-subscription-service-limits#azure-monitor-limits) on the number of alerts you can create. Some limits (but not all of them) can be increased by calling support.
+Be sure to note the [limits on the number of alerts you can create](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-monitor-limits). Some limits (but not all of them) can be increased by calling support.
 
 ### Best query experience
 
