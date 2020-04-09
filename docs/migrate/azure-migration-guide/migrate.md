@@ -13,7 +13,7 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore Cloudamize agentless uncontained SSMA Carbonite Movere -->
 
-# Migrate assets (infrastructure, apps, and data)
+# Deploy workloads and assets (infrastructure, apps, and data)
 
 In this phase of the journey, you use the output of the assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
 

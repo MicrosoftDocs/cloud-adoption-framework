@@ -110,7 +110,7 @@ Real-time telemetry is available through Azure Monitor views both during an atta
 [network-security-groups]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-nsg
 [user-defined-routes]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview
 [network-virtual-appliances]: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha
-[AzFW]: https://docs.microsoft.com/azure/firewall/overview
+[azure-firewall]: https://docs.microsoft.com/azure/firewall/overview
 [perimeter-network]: https://docs.microsoft.com/azure/best-practices-network-security
 [ALB]: https://docs.microsoft.com/azure/load-balancer/load-balancer-overview
 [DDoS]: https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview

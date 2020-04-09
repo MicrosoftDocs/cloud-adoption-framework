@@ -118,7 +118,7 @@ The new best practices fall into two categories: corporate IT (hub) and cloud ad
 6. Integrate group policy objects (GPO) through Desired State Configuration (DSC):
     1. Convert GPO to DSC – The [Microsoft Baseline Management project](https://github.com/Microsoft/BaselineManagement) in GitHub can accelerate this effort. Be sure to store DSC in the repository in parallel with Resource Manager templates.
     2. Deploy Azure Automation State Configuration to any instances of the Corporate IT subscription. Azure Automation can be used to apply DSC to VMs deployed in supported subscriptions within the management group.
-    3. The current roadmap plans to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
+    3. The current roadmap aims to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
 
 **Applying additional governance to a Cloud Adoption Subscription (Spoke):** Building on the `Corporate IT Subscription`, minor changes to the governance MVP applied to each subscription dedicated to the support of application archetypes can produce rapid improvement.
 
@@ -145,7 +145,7 @@ In prior iterative changes to the best practice, we defined network security gro
     2. Audit and enforce use of approved OS images only.
     3. Audit and enforce guest configurations based on security requirements for each node.
 5. Update Azure Policy for all subscriptions that contains protected data classifications.
-    1. Audit and enforce use of standard roles only
+    1. Audit and enforce use of standard roles only.
     2. Audit and enforce application of encryption for all storage accounts and files at rest on individual nodes.
     3. Audit and enforce the application of the new version of the DMZ network security group.
     4. Audit and enforce use of approved network subnet and VNet per network interface.

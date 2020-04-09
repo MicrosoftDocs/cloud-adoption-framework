@@ -76,6 +76,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/reference/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/getting-started/whats-new",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/ready/azure-readiness-guide/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/index",
          "redirect_document_id": true

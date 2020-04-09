@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Optimize migrated workloads
+# Release workloads
 
-After a workload and its supporting assets have been migrated to the cloud, it must be prepared before it can be promoted to production. In this process, activities ready the workload, size the dependent assets, and prepare the business for when the migrated cloud-based workload enters production usage.
+After a collection of workloads and their supporting assets have been deployed to the cloud, it must be prepared before it can be released. In this phase of the migration effort, the collection of workloads are load tested and tested with the business. They are then optimized and documented. Once the business and IT teams have reviewed and signed off on workload deployments, those workloads can be released or handed off to governance, security, and operations teams for ongoing operations.
 
-The objective of optimization is to prepare a migrated workload for promotion to production usage.
+The objective of "release workloads" is to prepare migrated workloads for promotion to production usage.
 
 ## Definition of *done*
 

@@ -34,7 +34,7 @@ The primary objective of the [Innovate methodology](./index.md) is to build cust
 - [Solution deployment](#solution-deployment): Deploy solutions so that the team can quickly share changes with customers.
 - [Integrated measurement](#integrated-measurements): Add learning metrics to the feedback loop for clear analysis by the full team.
 
-To minimize technical spikes, assume that maturity will initially be low across each of these principles. But definitely plan ahead by aligning to tools and processes that can scale as hypotheses become more fine-grained. In Azure, the [GitHub](https://guides.github.com) and [Azure DevOps](https://docs.microsoft.com/azure/devops) allow small teams to get started with little friction. These teams might grow to include thousands of developers who collaborate on scale solutions and test hundreds of customer hypotheses. The remainder of this article illustrates the plan big/start small approach to empowering adoption across each of these principles.
+To minimize technical spikes, assume that maturity will initially be low across each of these principles. But definitely plan ahead by aligning to tools and processes that can scale as hypotheses become more fine-grained. In Azure, the [GitHub](https://guides.github.com) and [Azure DevOps](https://docs.microsoft.com/azure/devops) allow small teams to get started with little friction. These teams might grow to include thousands of developers who collaborate on scale solutions and test hundreds of customer hypotheses. The remainder of this article illustrates the "plan big, start small" approach to empowering adoption across each of these principles.
 
 ## Shared solution
 

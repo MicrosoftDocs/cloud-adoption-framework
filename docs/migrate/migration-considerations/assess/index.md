@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Validate assessment assumptions before migration
+# Assess workloads and validate assumptions before migration
 
 Many of your existing workloads are ideal candidates for cloud migration, but not every asset is compatible with cloud platforms and not all workloads can benefit from hosting in the cloud. [Digital estate planning](../../../digital-estate/index.md) allows you to generate an overall [migration backlog](../prerequisites/technical-complexity.md#migration-backlog-aligning-business-priorities-and-timing) of potential workloads to migrate. However, this planning effort is high-level. It relies on assumptions made by the cloud strategy team and does not dig deeply into technical considerations.
 

@@ -13,7 +13,7 @@ ms.localizationpriority: high
 
 <!-- markdownlint-disable MD025 DOCSMD001 -->
 
-# Test, optimize, and promote
+# Release workloads (test, optimize, and handoff)
 
 Now that you have migrated your services to Azure, the next phase includes reviewing the solution for possible areas of optimization. This effort could include reviewing the design of the solution, right-sizing the services, and analyzing costs.
 

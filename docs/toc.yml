@@ -132,6 +132,8 @@ items:
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
+      - name: Refactor landing zones
+        href: ready/landing-zone/refactor.md
       - name: Choose your first landing zone
         href: ready/landing-zone/first-landing-zone.md
       - name: Migration landing zone blueprint
@@ -142,32 +144,54 @@ items:
       items:
       - name: Overview
         href: ready/considerations/index.md
-      - name: Basic landing zone considerations
+      - name: Test-driven development (TDD) for landing zones
+        href: ready/considerations/test-driven-development.md
+      - name: Landing zone TDD in Azure
+        href: ready/considerations/azure-test-driven-development.md
+      - name: Start small and expand
         items:
-        - name: Azure fundamental concepts
-          href: ready/considerations/fundamental-concepts.md
-        - name: Review compute options
-          href: ready/considerations/compute-options.md
-        - name: Review networking options
-          href: ready/considerations/networking-options.md
-        - name: Review storage options
-          href: ready/considerations/storage-options.md
-        - name: Review data options
-          href: ready/considerations/data-options.md
-        - name: Role-based access controls
-          href: ready/considerations/roles.md
-        - name: Create hybrid cloud consistency
-          href: ready/considerations/hybrid-consistency.md
-      - name: Improve landing zone security (Sensitive data)
+        - name: Basic landing zone considerations
+          items:
+          - name: Overview
+            href: ready/considerations/basic-considerations.md
+          - name: Azure fundamental concepts
+            href: ready/considerations/fundamental-concepts.md
+          - name: Review compute options
+            href: ready/considerations/compute-options.md
+          - name: Review networking options
+            href: ready/considerations/networking-options.md
+          - name: Review storage options
+            href: ready/considerations/storage-options.md
+          - name: Review data options
+            href: ready/considerations/data-options.md
+          - name: Role-based access controls
+            href: ready/considerations/roles.md
+          - name: Create hybrid cloud consistency
+            href: ready/considerations/hybrid-consistency.md
+        - name: Improve landing zone operations
+          href: ready/considerations/landing-zone-operations.md
+        - name: Improve landing zone governance
+          href: ready/considerations/landing-zone-governance.md
+        - name: Improve landing zone security
+          items:
+            - name: Overview
+              href: ready/considerations/landing-zone-security.md
+            - name: Onboard a subscription to Azure Security Center
+              href: https://docs.microsoft.com/azure/security-center/security-center-get-started?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Onboard Azure Sentinel
+              href: https://docs.microsoft.com/azure/sentinel/quickstart-onboard?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Implementing a secure hybrid network architecture in Azure
+              href: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Azure identity management and access control security best practices
+              href: https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Azure network security best practices
+              href: https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Azure operational security best practices
+              href: https://docs.microsoft.com/azure/security/fundamentals/operational-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+      - name: Start with enterprise scale
         items:
-          - name: Implementing a secure hybrid network architecture in Azure
-            href: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Azure identity management and access control security best practices
-            href: https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Azure network security best practices
-            href: https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Azure operational security best practices
-            href: https://docs.microsoft.com/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+        - name: Overview
+          href: ready/considerations/enterprise-scale.md
 
     - name: Best practices
       items:
@@ -240,11 +264,11 @@ items:
         items:
         - name: Before you start
           href: migrate/azure-migration-guide/index.md
-        - name: Assess each workload and refine plans
+        - name: Assess workloads
           href: migrate/azure-migration-guide/assess.md
-        - name: Migrate workload assets
+        - name: Deploy workloads
           href: migrate/azure-migration-guide/migrate.md
-        - name: Test, optimize, and promote
+        - name: Release workloads
           href: migrate/azure-migration-guide/optimize-and-transform.md
         - name: Migration-focused cost-control mechanisms
           href: migrate/azure-migration-guide/manage-costs.md
@@ -517,7 +541,7 @@ items:
             href: migrate/migration-considerations/prerequisites/technical-complexity.md
           - name: Migration backlog review
             href: migrate/migration-considerations/prerequisites/migration-backlog-review.md
-        - name: Assessment processes
+        - name: Assess workloads
           items:
           - name: Validate assessment assumptions before migration - Add R refinement
             href: migrate/migration-considerations/assess/index.md
@@ -537,7 +561,7 @@ items:
             href: migrate/migration-considerations/assess/release-iteration-backlog.md
           - name: Approve architecture changes
             href: migrate/migration-considerations/assess/approve.md
-        - name: Migration processes
+        - name: Deploy workloads
           items:
           - name: Overview
             href: migrate/migration-considerations/migrate/index.md
@@ -551,7 +575,7 @@ items:
             href: migrate/migration-considerations/migrate/replicate-options.md
           - name: Stage workloads
             href: migrate/migration-considerations/migrate/stage.md
-        - name: Promotion processes
+        - name: Release workloads
           items:
           - name: Overview
             href: migrate/migration-considerations/optimize/index.md
@@ -1015,6 +1039,8 @@ items:
           href: govern/cost-management/compliance-processes.md
         - name: Improve cost management 
           href: govern/cost-management/discipline-improvement.md
+        - name: Best practices
+          href: govern/cost-management/best-practices.md
         - name: Azure tools for cost management
           href: govern/cost-management/toolchain.md
       - name: Security baseline
@@ -1246,8 +1272,8 @@ items:
 
   - name: Resources
     items:
-    - name: Cloud Adoption Framework roadmap
-      href: reference/index.md
+    - name: Tools and templates
+      href: reference/tools-templates.md
     - name: Operating model
       items:
       - name: Overview

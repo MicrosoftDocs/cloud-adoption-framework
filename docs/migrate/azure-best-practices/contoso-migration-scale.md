@@ -56,18 +56,11 @@ After planning and setting up an [Azure infrastructure](./contoso-migration-infr
 
 ## Migration process
 
-Now that Contoso has pinned down business drivers and migration goals, it determines a four-pronged approach for the migration process:
+Now that Contoso has pinned down business drivers and migration goals, it can align to the [Migration methodology](../index.md), building on the application of Migration Waves and Migration Sprints to iteratively plan and execute migration efforts.
 
-- **Phase 1: Assess.** Discover the current assets, and figure out whether they're suitable for migration to Azure.
-- **Phase 2: Migrate.** Move the assets to Azure. How they move apps and objects to Azure will depend on the app and what they want to achieve.
-- **Phase 3: Optimize.** After moving resources to Azure, Contoso needs to improve and streamline them for maximum performance and efficiency.
-- **Phase 4: Secure and manage.** With everything in place, Contoso now uses Azure security and management resources and services to govern, secure, and monitor its cloud apps in Azure.
+## Plan
 
-These phases aren't serial across the organization. Each piece of Contoso's migration project will be at a different stage of the assessment and migration process. Optimization, security, and management will be ongoing over time.
-
-## Phase 1: Assess
-
-Contoso kicks off the process by discovering and assessing on-premises apps, data, and infrastructure. Here's what Contoso will do:
+Contoso kicks off the planning process by discovering and assessing on-premises apps, data, and infrastructure. Here's what Contoso will do:
 
 - Contoso needs to discover apps, maps dependencies across apps, and decide on migration order and priority.
 - As Contoso assesses, it will build out a comprehensive inventory of apps and resources. Along with the new inventory, Contoso will use and update the existing Configuration Management Database (CMDB) and Service Catalog.
@@ -137,17 +130,19 @@ Contoso decides which tool to use for discovery, assessment, and building the in
 
 The Azure Migrate service helps you to discover and assess on-premises VMware VMs, in preparation for migration to Azure. Here's what Azure Migrate does:
 
-1. Discover: Discover on-premises VMware VMs.
+1. **Discover:** Discover on-premises VMware VMs.
     - Azure Migrate supports discovery from multiple vCenter Servers (serially), and can run discoveries in separate Azure Migrate projects.
     - Azure Migrate performs discovery by means on a VMware VM running the Migrate Collector. The same collector can discover VMs on different vCenter servers, and send data to different projects.
-2. Assess readiness: Assess whether on-premises machines are suitable for running in Azure. Assessment includes:
-    - Size recommendations: Get size recommendations for Azure VMs, based on the performance history of on-premises VMs.
-    - Estimated monthly costs: Get estimated costs for running on-premises machines in Azure.
-3. Identify dependencies: Visualize dependencies of on-premises machines, to create optimal machines groups for assessment and migration.
+
+2. **Assess readiness:** Assess whether on-premises machines are suitable for running in Azure. Assessment includes:
+    - **Size recommendations:** Get size recommendations for Azure VMs, based on the performance history of on-premises VMs.
+    - **Estimated monthly costs:** Get estimated costs for running on-premises machines in Azure.
+
+3. **Identify dependencies:** Visualize dependencies of on-premises machines, to create optimal machines groups for assessment and migration.
 
 ![Azure Migrate](./media/contoso-migration-scale/azure-migrate.png)
 
-##### Migrate at scale
+**Migrate at scale:**
 
 Contoso needs to use Azure Migrate correctly given the scale of this migration.
 
@@ -195,7 +190,7 @@ There are four broad migration strategies that Contoso can consider.
 **Rehost** | Often referred to as a _lift and shift_ migration, this is a no-code option for migrating existing apps to Azure quickly.<br/><br/> An app is migrated as-is, with the benefits of the cloud, without the risks or costs associated with code changes. | Contoso can rehost less-strategic apps, requiring no code changes.
 **Refactor** | Also referred to as "repackaging", this strategy requires minimal app code or configuration changes need to connect the app to Azure PaaS, and take better advantage of cloud capabilities. | Contoso can refactor strategic apps to retain the same basic functionality, but move them to run on an Azure platform such as Azure App Service.<br/><br/> This requires minimum code changes.<br/><br/> On the other hand, Contoso will have to maintain a VM platform since this won't be managed by Microsoft.
 **Rearchitect** | This strategy modifies or extends an app code base to optimize the app architecture for cloud capabilities and scale.<br/><br/> It modernizes an app into a resilient, highly scalable, independently deployable architecture.<br/><br/> Azure services can accelerate the process, scale applications with confidence, and manage apps with ease.
-**Rebuild** | This strategy rebuilds an app from scratch using cloud-native technologies.<br/><br/> Azure platform as a service (PaaS) provides a complete development and deployment environment in the cloud. It eliminates some expense and complexity of software licenses, and removes the need for an underlying app infrastructure, middleware, and other resources. | Contoso can rewrite critical apps from the ground up, to take advantage of cloud technologies such as serverless computer, or microservices.<br/><br/> Contoso will manage the app and services it develops, and Azure manages everything else.
+**Rebuild** | This approach rebuilds an app from scratch using cloud-native technologies.<br/><br/> Azure platform as a service (PaaS) provides a complete development and deployment environment in the cloud. It eliminates some expense and complexity of software licenses, and removes the need for an underlying app infrastructure, middleware, and other resources. | Contoso can rewrite critical apps from the ground up, to take advantage of cloud technologies such as serverless computer, or microservices.<br/><br/> Contoso will manage the app and services it develops, and Azure manages everything else.
 
 <!--markdownlint-enable MD033 -->
 
@@ -209,28 +204,28 @@ Contoso is primarily using a couple of Azure services and tools for the migratio
 - [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview): Orchestrates disaster recovery, and migrates on-premises VMs to Azure.
 - [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview): Migrates on-premises databases such as SQL Server, MySQL, and Oracle to Azure.
 
-#### Azure Site Recovery
+#### Azure Migrate
 
-Azure Site Recovery is the primary Azure service for orchestrating disaster recovery and migration from within Azure, and from on-premises sites to Azure.
+Azure Migrate is the primary Azure service for orchestrating migration from within Azure, and from on-premises sites to Azure.
 
-1. Site Recovery enables, orchestrates replication from your on-premises sites to Azure.
+1. Azure Migrate orchestrates replication from your on-premises locations to Azure.
 2. When replication is set up and running, on-premises machines can be failed over to Azure, completing the migration.
 
-Contoso already [completed a POC](./contoso-migration-rehost-vm.md) to see how Site Recovery can help them to migrate to the cloud.
+Contoso already [completed a POC](./contoso-migration-rehost-vm.md) to see how Azure Migrate can help them to migrate to the cloud.
 
-##### Use Site Recovery at scale
+##### Use Azure Migrate at scale
 
-Contoso plans to perform multiple lift and shift migrations. To ensure this works, Site Recovery will be replicating batches of around 100 VMs at a time. To figure out how this will work, Contoso needs to perform capacity planning for the proposed Site Recovery migration.
+Contoso plans to perform multiple lift and shift migrations. To ensure this works, Migrate will be replicating batches of around 100 VMs at a time. To figure out how this will work, Contoso needs to perform capacity planning for the proposed migration.
 
 - Contoso needs to gather information about their traffic volumes. In particular:
   - Contoso needs to determine the rate of change for VMs it wants to replicate.
   - Contoso also needs to take network connectivity from the on-premises site to Azure into account.
 - In response to capacity and volume requirements, Contoso will need to allocate sufficient bandwidth based on the daily data change rate for the required VMs, to meet its recovery point objective (RPO).
-- Lastly, they need to figure out how many servers are needed to run the Site Recovery components that are needed for the deployment.
+- Lastly, they need to figure out how many servers are needed to run the Migrate components that are needed for the deployment.
 
 ###### Gather on-premises information
 
-Contoso can use the [Site Recovery Deployment Planner](https://docs.microsoft.com/azure/site-recovery/site-recovery-deployment-planner) tool to complete these steps:
+Contoso can use Azure Migrate:
 
 - Contoso can use the tool to remotely profile VMs without an impact on the production environment. This helps pinpoint bandwidth and storage requirements for replication and failover.
 - Contoso can run the tool without installing any Site Recovery components on-premises.
@@ -295,7 +290,7 @@ In addition to DMS, Contoso can use other tools and services to identify VM info
 - They have scripts to help with manual migrations. These are available in the GitHub repo.
 - Various [partner tools](https://azure.microsoft.com/migration/partners) can also be used for migration.
 
-## Phase 3: Optimize
+## Ready for production
 
 After Contoso moves resources to Azure, they need to streamline them to improve performance, and maximize ROI with cost management tools. Given that Azure is a pay-for-use service, it's critical for Contoso to understand how systems are performing, and to ensure they're sized properly.
 
