@@ -127,7 +127,7 @@ Availability zones increase high-availability to protect your apps and data from
 - Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking.
 - To ensure resiliency, there's a minimum of three separate zones in all enabled regions.
 - The physical separation of availability zones within a region protects applications and data from datacenter failures.
-- Zone-redundant services replicate your applications and data across availability zones to protect from single points of failure. - - With availability zones, Azure offers an SLA of 99.99% VM uptime.
+- Zone-redundant services replicate your applications and data across availability zones to protect from single points of failure. - - With availability zones, Azure offers an SLA of 99.99 percent VM uptime.
 
     ![Availability zone](./media/migrate-best-practices-networking/availability-zone.png)
     *Availability zone*

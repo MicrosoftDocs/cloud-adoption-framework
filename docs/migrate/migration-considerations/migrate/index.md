@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Execute a migration
+# Deploy workloads
 
-After a workload has been assessed, it can be migrated to the cloud. This series of articles explains the various activities that may be involved in the execution of a migration.
+After workloads have been assessed, they can be deployed to the cloud or staged for release. This series of articles explains the various activities that may be involved in this phase of migration effort.
 
 ## Objective
 

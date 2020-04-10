@@ -13,7 +13,7 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore Cloudamize agentless uncontained SSMA Carbonite Movere -->
 
-# Migrate assets (infrastructure, apps, and data)
+# Deploy workloads and assets (infrastructure, apps, and data)
 
 In this phase of the journey, you use the output of the assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
 
@@ -257,7 +257,7 @@ Microsoft also offers the following project management tools, which can work tog
 - [Microsoft Planner](https://tasks.office.com): A simple, visual way to organize teamwork.
 - [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and Portfolio Management, Resource Capacity Management, Financial Management, Timesheet and Schedule Management.
 - [Microsoft Teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates Planner and other tools to improve collaboration.
-- [Azure DevOps](https://dev.azure.com): The Cloud Adoption Framework planing template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
+- [Azure DevOps Services](https://azure.microsoft.com/services/devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
 These are not the only tools available. Many other third-party tools are widely used in the project management community.
 

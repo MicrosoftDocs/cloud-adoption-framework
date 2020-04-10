@@ -384,7 +384,7 @@ In addition, you can use third-party solutions to back up Azure VMs and storage 
 
 ### Set up disaster recovery for IaaS apps
 
-In addition to protecting data, BCDR planning must consider how to keep apps and workloads available in case of disaster. For workloads running on Azure IaaS VMs and Azure storage consider these solutions:
+In addition to protecting data, BCDR planning must consider how to keep apps and workloads available if a disaster occurs. For workloads running on Azure IaaS VMs and Azure storage consider these solutions:
 
 #### Azure Site Recovery
 

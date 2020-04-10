@@ -72,7 +72,7 @@ In some cases, the fastest path to innovation means temporarily avoiding these d
 
 Typically, an MVP solution consists of a simple web app or data solution with minimal features and limited polish. For organizations that have professional development expertise, this path is often the fastest one to learning and iteration. The following list includes several other approaches a team might take to build an MVP:
 
-- A predictive algorithm that's wrong 99% of the time but that demonstrates specific desired outcomes.
+- A predictive algorithm that's wrong 99 percent of the time but that demonstrates specific desired outcomes.
 - An IoT device that doesn't communicate securely at production scale but that demonstrates the value of nearly real-time data within a process.
 - An application built by a citizen developer to test a hypothesis or meet smaller-scale needs.
 - A manual process that re-creates the benefits of the application to follow.

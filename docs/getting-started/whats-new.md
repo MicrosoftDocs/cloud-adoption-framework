@@ -17,6 +17,31 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built in collaboration with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework for Azure.
 
+## April 4, 2020
+
+Continued iteration of refinement to the Migrate and Ready guidance to more tightly align with feedback from Customers, Microsoft partners, and Internal Microsoft Programs.
+
+### Migrate updates
+
+| Article                                                                                                                 | Description                                                                                                                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Migrate Methodology](../migrate/index.md)                       | These changes streamline the phases of the migration effort (Assess workloads, Deploy workloads, and Release workloads). The changes also remove the details regarding the migration backlog. Removing those details and referencing Plan, Ready, and Adopt methodologies instead creates flexibility for various different cloud adoption programs to better align with the methodology.  |
+| Table of contents update                       | The Table of contents for the Azure Migration Guide and Process Improvements have been updated to reflect the changes to the methodology.  |
+
+### Ready updates
+
+| Article                                                                                                                 | Description                                                                                                                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Refactor landing zones](../ready/landing-zone/refactor.md)                       | **New article:** Drawing from Ready workshops, this article demonstrates the theory of starting with an initial template, using decision trees and refactoring to expand the landing zone, and moving toward a future state of enterprise readiness. |
+| [Expand your landing zone](../ready/considerations/index.md)                       | **New article:** Builds on the parallel iterations section of the refactoring article to show how various types of landing zone expansions would embed shared principles into the supporting platform. (Original content for this overview has been moved to the [Basic Landing Considerations](../ready/considerations/basic-considerations.md) node in the table of contents.) |
+| [Test-driven development (TDD) for landing zones](../ready/considerations/test-driven-development.md)                       | **New article:** The refactoring approach is much improved through the adoption of a test-driven development cycle to guide landing zone development and refactoring. |
+| [Landing zone TDD in Azure](../ready/considerations/azure-test-driven-development.md)                       | **New article:** Azure governance tools provide a rich platform for TDD cycles or Red/Green tests. |
+| [Improve landing zone security](../ready/considerations/landing-zone-security.md)                       | **New article:** Overview to the best practices in this section, with a tie back to the TDD cycle. |
+| [Improve landing zone operations](../ready/considerations/landing-zone-operations.md)                       | **New article:** List of best practices in the Manage methodology, with a transition to that modular approach to improving operations, reliability, and performance. |
+| [Improve landing zone governance](../ready/considerations/landing-zone-governance.md)                       | **New article:** List of best practices related to Govern methodology, with a transition to that modular approach to improving governance, cost management, and scale. |
+| [Start with enterprise scale](../ready/considerations/enterprise-scale.md)                       | **New article:** Demonstrate an approach that shows the differences in the process, when a customer starts with enterprise-scale landing zone templates. This article helps customers understand qualifiers that would support this decision. |
+| Table of contents update                       | The Table of contents was updated to reflect the new articles.  |
+
 ## March 27, 2020
 
 We've added guidance about the initial subscriptions you should create when you adopt Azure.
@@ -37,7 +62,7 @@ We've added prescriptive guidance that includes the tools, programs, and content
 
 | Article                                                                                     | Description                                                                                                                                                                           |
 |---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Application development and deployment](../innovate/kubernetes/application-development.md) | **New article:** Provides checklists, resources, and best practices for planning application development, configuring DevOps pipelines, and implementing site reliability engineering for Kubernetes. |
+| [Application development and deployment](../innovate/kubernetes/application-development.md) | **New article:** Provides checklists, resources, and best practices for planning application development, configuring CI/CD pipelines, and implementing site reliability engineering for Kubernetes. |
 | [Cluster design and operations](../innovate/kubernetes/cluster-design-operations.md) | **New article:** Provides checklists, resources, and best practices for cluster configuration, network design, future-proof scalability, business continuity, and disaster recovery for Kubernetes. |
 | [Cluster and application security](../innovate/kubernetes/cluster-application-security.md) | **New article:** Provides checklists, resources, and best practices for Kubernetes security planning, production, and scaling. |
 

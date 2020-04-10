@@ -39,7 +39,7 @@ Before we start looking at the infrastructure, you might want to read some backg
 - Several options are available for purchasing Azure access, including Pay-As-You-Go, Enterprise Agreements (EA), Open Licensing from Microsoft resellers, or from Microsoft Partners known as Cloud Solution Providers (CSPs). Learn about [purchase options](https://azure.microsoft.com/pricing/purchase-options), and read about how [Azure subscriptions are organized](https://azure.microsoft.com/blog/organizing-subscriptions-and-resource-groups-within-the-enterprise).
 - Get an overview of Azure [identity and access management](https://www.microsoft.com/security/business/identity). In particular, learn about [Azure AD and extending on-premises Active Directory to the cloud](https://docs.microsoft.com/azure/active-directory/identity-fundamentals). There's a useful downloadable e-book about [identity and access management (IAM) in a hybrid environment](https://azure.microsoft.com/resources/hybrid-cloud-identity).
 - Azure provides a robust networking infrastructure with options for hybrid connectivity. Get an overview of [networking and network access control](https://docs.microsoft.com/azure/security/security-network-overview).
-- Get an introduction to [Azure Security](https://docs.microsoft.com/azure/security/fundamentals/overview), and read about creating a plan for [governance](https://docs.microsoft.com/azure/governance/).
+- Get an introduction to [Azure Security](https://docs.microsoft.com/azure/security/fundamentals/overview), and read about creating a plan for [governance](https://docs.microsoft.com/azure/governance).
 
 ## On-premises architecture
 

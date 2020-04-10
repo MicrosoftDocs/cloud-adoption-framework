@@ -14,7 +14,7 @@ ms.custom: governance
 
 The Cost Management discipline attempts to address core business risks related to expenses incurred when hosting cloud-based workloads. Within the Five Disciplines of Cloud Governance, Cost Management is involved in controlling cost and usage of cloud resources with the goal of creating and maintaining a planned cost cycle.
 
-This article outlines potential tasks your company perform to develop and mature your Cost Management discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution, which are then iterated on allowing the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
+This article outlines potential tasks your company perform to develop and mature your Cost Management discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution. The tasks are then iterated on to allow the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
 ![Four phases of adoption](../../_images/govern/adoption-phases.png)
 
@@ -102,7 +102,7 @@ After the transformation is complete, governance and operations must live on for
 
 ## Next steps
 
-Now that you understand the concept of cloud cost governance, examine the [Cost Management toolchain](./toolchain.md) to identify Azure tools and features that you'll need when developing the Cost Management governance discipline on the Azure platform.
+Now that you understand the concept of cloud cost governance, review the [cost management best practices](./best-practices.md) to find ways to reduce your overall spend.
 
 > [!div class="nextstepaction"]
-> [Cost Management toolchain for Azure](./toolchain.md)
+> [Cost management best practices](./best-practices.md)

@@ -45,15 +45,23 @@ function Test-Match(
         $text = Remove-ImagePaths $text
     }
 
+    $text = Remove-NonbreakingSpaces $text
+
     foreach ($originalExpression in $expressions) {
     
         if ($originalExpression.Trim().Length -gt 0) {
 
-            if ($requireCasingMatch)             {
+            if ($requireCasingMatch) 
+            {
                 $expression = "(?i)$originalExpression"
             }
-            else {
+            elseif ($testLinks)
+            {
                 $expression = $originalExpression
+            }
+            else 
+            {
+                $expression = "(?i)\b$originalExpression\b"
             }
 
             $options = [Text.RegularExpressions.RegexOptions]::Multiline
@@ -82,8 +90,19 @@ function Test-Match(
                 }
                 else
                 {
-                    write-host "Match '$($match.Value)' found in $($file.FullName)"
-                    $count++
+                    $options = [Text.RegularExpressions.RegexOptions]::Multiline
+                    $ignoredTermsMatches = [regex]::new($(Get-RegexForIgnoredTerms), $options).Matches($text)
+                    $ignoredTerms = if ($ignoredTermsMatches.Count -gt 0) { $ignoredTermsMatches.Groups[0].Value } else { "" }
+
+                    if ($ignoredTerms -notlike "* $($match.Value) *")
+                    {
+                        write-host "Match '$($match.Value)' found in $($file.FullName)"
+                        $count++
+                    }
+                    else 
+                    {
+                        write-host "Ignored match '$($match.Value)' found in $($file.FullName)"
+                    }
                 }
             }
         }
@@ -95,7 +114,15 @@ function Test-Match(
 function Remove-Urls(
     [string]$text) 
 {
-    return Remove-Matches $(Get-RegexForUrl) $text
+    $result = $text
+    $matches = [regex]::new($(Get-RegexForUrl)).Matches($text)
+
+    foreach ($match in $matches)
+    {
+        $result = $result.Replace("$($match.Value))", ")")
+    }
+
+    return $result
 }
 
 function Remove-ImagePaths(
@@ -104,15 +131,21 @@ function Remove-ImagePaths(
     return Remove-Matches $(Get-RegexForImagePath) $text
 }
 
+function Remove-NonbreakingSpaces(
+    [string]$text
+)
+{
+    return Remove-Matches "&nbsp;" $text
+}
 function Remove-Matches(
     [string] $expression,
     [string] $text
 )
 {
     $result = $text
-    $regex = [regex]::new($expression)
+    $matches = [regex]::new($expression).Matches($text)
 
-    foreach ($match in $regex.Matches($text))
+    foreach ($match in $matches)
     {
         $result = $result.Replace($match.Value, "")
     }

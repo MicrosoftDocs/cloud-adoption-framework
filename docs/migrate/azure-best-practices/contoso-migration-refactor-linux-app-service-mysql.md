@@ -73,7 +73,7 @@ Contoso will complete the migration process as follows:
 2. After preparing the Azure infrastructure, they migrate the database using Azure Database Migration Service (DMS).
 3. After the database is running in Azure, they up a GitHub private repository for Azure App Service with continuous delivery, and load it with the osTicket app.
 4. In the Azure portal, they load the app from GitHub to the Docker container running Azure App Service.
-5. They tweak DNS settings, and configure auto-scaling for the app.
+5. They tweak DNS settings, and configure autoscaling for the app.
 
 ![Migration process](./media/contoso-migration-refactor-linux-app-service-mysql/migration-process.png)
 

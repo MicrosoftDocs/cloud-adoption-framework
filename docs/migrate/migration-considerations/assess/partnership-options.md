@@ -37,7 +37,7 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 
 ## FastTrack for Azure
 
-[FastTrack for Azure](https://azure.microsoft.com/roadmap/fasttrack-for-azure) provides direct assistance from Azure engineers, working hand in hand with partners, to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions, including:
+[FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack) provides direct assistance from Azure engineers, working hand in hand with partners, to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions, including:
 
 - Datacenter migration
 - Windows Server on Azure

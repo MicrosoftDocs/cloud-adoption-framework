@@ -1,45 +1,58 @@
 function Get-CasingExpressions
 {
     return @(
+        "cSpell",
         "ext steps"
         "anagement groups",
         "ole-based",
         "GitHub",
         "PolyBase",
-        "Pluralsight"
+        "Pluralsight",
+        "SKU"
     )
 }
 
-function Get-CompoundWordExpressions {
+function Get-InvalidTermExpressions {
 
     return @(
         "a number of",
         "ad-hoc",
+        "adhoc",
+        "auto-(?!enroll)"       # 'auto-enroll' is allowed.
         "business'[^s]",
+        "CAF",
         "carry out",
         "check list",
+        "Cosmos-DB",
+        "CosmosDB",
         "cSpell:disable",
+        "data center",
+        "data centers",
+        "e\.g\.",
         "express route",
         "git hub",
+        "hte",
+        "i\.e\.",
+        "in case of",
+        "infra",
         "life cycle",
+        "Maria.DB",
+        "MFA",
         "multi-(?!factor|model|shard)",
         "off-site",
-        "on-board",
+        "on-board",,
+        "on-boarded",
+        "on-boarding"
         "on going",
         "on-going",
-        "on-premise\b",
-        "skillset"
-    )
-}
-
-function Get-AbbreviationExpressions
-{        
-    return @(
-        "CAF",
-        "MFA",
-        "e\.g\.",
-        "i\.e\.",
-        "w\/\b"
+        "on-prem",
+        "on-premise",
+        "planing",
+        "pre-(?!CCoE)",
+        "skillset",
+        "skillsets",
+        "teh",
+        "w\/"
     )
 }
 
