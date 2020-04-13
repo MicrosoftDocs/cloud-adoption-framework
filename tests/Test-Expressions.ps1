@@ -70,7 +70,8 @@ function Get-LinkExpressions
             "app.pluralsight.com",                              # Use www.pluralsight.com/courses/...
             "www.pluralsight.com\/library",
             # "``` ?[A-Z]"
-			"<endoflist>"
+            # "\]\([^h][^/# ]*\/[^# \)\?]*[^dg][#\)]"    # TODO: Local links require MD extension.
+            "<endoflist>"
     )
 }
 

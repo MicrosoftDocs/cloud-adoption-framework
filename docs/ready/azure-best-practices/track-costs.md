@@ -54,7 +54,7 @@ The diagram shows best practices but doesn't include these options:
 The rest of this article assumes the use of the best-practice approach in the preceding diagram. However, the following articles can help you apply the approach to a resource organization that best fits your company:
 
 - [Scale your Azure environment with multiple subscriptions](../azure-best-practices/scale-subscriptions.md)
-- [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md))
+- [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md)
 - [Deploy a Governance MVP to govern well-managed environment standards](../../govern/guides/complex/index.md)
 
 ## Provide the right level of cost access
