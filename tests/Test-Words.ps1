@@ -41,7 +41,8 @@ function Test-Match(
     }
     elseif ($ignoreUrlContents)
     {
-        $text = Remove-Urls $text 
+        $text = Remove-MarkdownUrls $text 
+        $text = Remove-OtherUrls $text
         $text = Remove-ImagePaths $text
     }
 
@@ -111,7 +112,7 @@ function Test-Match(
     return $count
 }
 
-function Remove-Urls(
+function Remove-MarkdownUrls(
     [string]$text) 
 {
     $result = $text
@@ -123,6 +124,13 @@ function Remove-Urls(
     }
 
     return $result
+}
+
+function Remove-OtherUrls(
+    [string]$text
+)
+{
+    return Remove-Matches $(Get-RegexForUrl) $text
 }
 
 function Remove-ImagePaths(

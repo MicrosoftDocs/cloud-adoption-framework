@@ -2,9 +2,9 @@ function Get-CasingExpressions
 {
     return @(
         "cSpell",
-        "ext steps"
-        "anagement groups",
-        "ole-based",
+        # "ext steps",
+        # "anagement groups",       # TODO: Handle before and after conditions.
+        # "ole-based",
         "GitHub",
         "PolyBase",
         "Pluralsight",
@@ -64,7 +64,10 @@ function Get-LinkExpressions
             "\(\/azure\/architecture",
             "\(\/",
             "\/\)",
-            "app.pluralsight.com",      # Use www.pluralsight.com/courses/...
+            "href: https:\/\/docs\.microsoft\.com\/(?!cloud-adoption-framework\/|learn\/).*[^n]$",   # Use TOC redirects for other Docs content
+            "href: https:\/\/(?!docs\.microsoft\.com\/).*toc=",       # Don't use TOC redirects for non-Docs content
+            "href: https:\/\/docs\.microsoft\.com\/learn\/.*toc=",   # Don't use TOC redirects for Learn content
+            "app.pluralsight.com",                              # Use www.pluralsight.com/courses/...
             "www.pluralsight.com\/library",
             # "``` ?[A-Z]"
 			"<endoflist>"

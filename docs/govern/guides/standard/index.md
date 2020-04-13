@@ -45,7 +45,7 @@ Here is an example of this pattern in use:
 
 These patterns provide room for growth without complicating the hierarchy unnecessarily.
 
-[!INCLUDE [governance-of-resources](../../../../includes/caf-governance-of-resources.md)]
+[!INCLUDE [governance-of-resources](../../../../includes/governance-of-resources.md)]
 
 ## Iterative governance improvements
 
@@ -70,7 +70,7 @@ Over time, this governance MVP will be used to improve governance practices. As 
 
 - Cost Management, as adoption scales.
 - Security Baseline, as protected data is deployed.
-- Resource Consistency, as IT Operations begins supporting mission-critical workloads.
+            esource Consistency, as IT Operations begins supporting mission-critical workloads.
 
 ![Example of an incremental governance MVP](../../../_images/govern/governance-improvement.png)
 

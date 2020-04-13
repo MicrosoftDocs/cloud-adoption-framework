@@ -88,7 +88,7 @@ Unlike IaaS where you manage your own VMs and infrastructure, in a PaaS model pl
 
 **Learn more:**
 
-- Learn about[Azure Disk Encryption for virtual machines and virtual machine scale sets](https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss).
+- Learn about [Azure Disk Encryption for virtual machines and virtual machine scale sets](https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss).
 - Enable [Azure Disk Encryption for Windows VMs](https://docs.microsoft.com/azure/virtual-machines/windows/disk-encryption-overview).
 - Learn about [Azure Storage Service Encryption for data at rest](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
 - Read the [overview of Always Encrypted](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault).
