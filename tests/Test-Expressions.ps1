@@ -76,5 +76,6 @@ function Get-PunctuationExpressions
     return @(
         "[a-z]\.  [A-Z]",   # Use only one space after a sentence
         "^ *\*\s"           # Use hyphens for bullet lists
+        # ^ *[^a-z#:$`].*[a-z]$         # TODO: Sentences should end with periods.
     )
 }
