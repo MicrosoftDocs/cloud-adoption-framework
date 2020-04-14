@@ -47,7 +47,7 @@ Every application should be deployed in the proper area of the management group,
 
 These patterns provide room for growth without making the hierarchy needlessly complicated.
 
-[!INCLUDE [governance-of-resources](../../../../includes/caf-governance-of-resources.md)]
+[!INCLUDE [governance-of-resources](../../../../includes/governance-of-resources.md)]
 
 <!-- See comments for suggestion to possibly add here -->
 

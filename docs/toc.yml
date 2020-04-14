@@ -303,7 +303,7 @@ items:
               - name: Escalate CloudSimple privileges
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/escalate-privileges?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Set up DNS and DHCP workloads
-                href: https://docs.microsoft.com/azure/vmware-cloudsimple/dns-dhcp-setup?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json  
+                href: https://docs.microsoft.com/azure/vmware-cloudsimple/dns-dhcp-setup?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Migrate workloads using Layer 2 stretched networks
                 href: https://docs.microsoft.com/azure/vmware-cloudsimple/migration-layer-2-vpn?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Private cloud networking
@@ -391,59 +391,59 @@ items:
           - name: Azure Database Migration Guide
             items:
             - name: Refactor SQL Server to Azure SQL Database
-              href: https://datamigration.microsoft.com/scenario/sql-to-azuresqldb?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+              href: https://datamigration.microsoft.com/scenario/sql-to-azuresqldb
             - name: Refactor SQL Server to an Azure SQL Database managed instance
-              href: https://datamigration.microsoft.com/scenario/sql-to-azuresqldbmi?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+              href: https://datamigration.microsoft.com/scenario/sql-to-azuresqldbmi
             - name: Refactor SQL Server to SQL Server on Azure VMs
-              href: https://datamigration.microsoft.com/scenario/sql-to-sqlvm?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+              href: https://datamigration.microsoft.com/scenario/sql-to-sqlvm
             - name: Refactor SQL Server to Azure SQL DW 
-              href: https://datamigration.microsoft.com/scenario/sql-to-sqldw?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+              href: https://datamigration.microsoft.com/scenario/sql-to-sqldw
             - name: MySQL
               items:
               - name: Refactor MySQL to Azure SQL Database 
-                href: https://datamigration.microsoft.com/scenario/mysql-to-azuresqldb?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/mysql-to-azuresqldb
               - name: Refactor MySQL to Azure Database for MySQL
-                href: https://datamigration.microsoft.com/scenario/mysql-to-azuremysql?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/mysql-to-azuremysql
             - name: PostgreSQL
               items:
               - name: Refactor PostgreSQL to Azure Database for PostgreSQL
-                href: https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql
             - name: MariaDB
               items:
               - name: Refactor MariaDB to Azure Database for MariaDB
-                href: https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb
             - name: MongoDB
               items:
               - name: Refactor MongoDB to Azure Cosmos DB
-                href: https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb
             - name: Cassandra
               items:
               - name: Refactor Cassandra to Azure Cosmos DB
-                href: https://datamigration.microsoft.com/scenario/cassandra-to-cosmos?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/cassandra-to-cosmos
             - name: Oracle
               items:
               - name: Refactor Oracle to Azure SQL Database
-                href: https://datamigration.microsoft.com/scenario/oracle-to-azuresqldb?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/oracle-to-azuresqldb
               - name: Refactor Oracle to Azure Database for PostgreSQL
-                href: https://datamigration.microsoft.com/scenario/oracle-to-azurepostgresql?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/oracle-to-azurepostgresql
               - name: Rearchitect Oracle to Azure SQL DW
-                href: https://datamigration.microsoft.com/scenario/oracle-to-sqldw?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/oracle-to-sqldw
             - name: DB2
               items:
               - name: Refactor DB2 to Azure SQL Database
-                href: https://datamigration.microsoft.com/scenario/db2-to-azuresqldb?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/db2-to-azuresqldb
             - name: SAP ASE
               items:
               - name: Refactor SAP ASE to Azure SQL Database
-                href: https://datamigration.microsoft.com/scenario/sybase-to-azuresqldb?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/sybase-to-azuresqldb
             - name: Access
               items:
               - name: Refactor Access to Azure SQL Database
-                href: https://datamigration.microsoft.com/scenario/access-to-azuresqldb?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://datamigration.microsoft.com/scenario/access-to-azuresqldb
           - name: Azure Database Migration Service (DMS) tutorials
             items:
             - name: Azure Database Migration Service
-              href: https://docs.microsoft.com/azure/dms/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+              href: https://docs.microsoft.com/azure/dms?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Migrate SQL Server to Azure SQL Database offline
               href: https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
             - name: Migrate SQL Server to Azure SQL Database online
@@ -713,7 +713,7 @@ items:
             - name: Modern web apps
               items:
               - name: Reference solutions for web apps
-                href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/scalable-ecommerce-web-app
+                href: https://docs.microsoft.com/azure/architecture/solution-ideas/articles/scalable-ecommerce-web-app?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Create a .NET Core app with Azure SQL Database
                 href: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Create a .NET app with Azure SQL Database
@@ -777,9 +777,9 @@ items:
               - name: Azure Functions developer guide
                 href: https://docs.microsoft.com/azure/azure-functions/functions-reference?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
               - name: Azure Serverless computing Cookbook
-                href: https://azure.microsoft.com/resources/azure-serverless-computing-cookbook/?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
+                href: https://azure.microsoft.com/resources/azure-serverless-computing-cookbook
               - name: Azure Functions documentation
-                href: https://docs.microsoft.com/azure/azure-functions/
+                href: https://docs.microsoft.com/azure/azure-functions?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json
 
         - name: Empower adoption
           items:

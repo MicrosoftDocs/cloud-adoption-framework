@@ -45,7 +45,7 @@ Here is an example of this pattern in use:
 
 These patterns provide room for growth without complicating the hierarchy unnecessarily.
 
-[!INCLUDE [governance-of-resources](../../../../includes/caf-governance-of-resources.md)]
+[!INCLUDE [governance-of-resources](../../../../includes/governance-of-resources.md)]
 
 ## Iterative governance improvements
 
