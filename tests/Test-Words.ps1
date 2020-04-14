@@ -2,6 +2,8 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 . "$here/Test-Constants.ps1"
 
+# TODO: Use [ValidateSet("Words", "WordsWithCasing", "LinkFormat", "LinkValidation")]
+
 function Test-AllMatches {
     [CmdletBinding()]    
     param(
