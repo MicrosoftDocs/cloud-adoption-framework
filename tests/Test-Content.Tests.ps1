@@ -46,6 +46,8 @@ Describe "Test-Casing" -Tag "Content" {
         
         $files = Get-ContentFiles
 
+        ## TODO: Use word boundaries.
+
         # $files = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\govern\cost-management\best-practices.md"
         # $files = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\reference\networking-vdc.md"
         Test-AllMatches @($files) $(Get-CasingExpressions) -IgnoreUrlContents $true -RequireCasingMatch $true `

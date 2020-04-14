@@ -54,7 +54,7 @@ function Test-Match(
 
             if ($requireCasingMatch) 
             {
-                $expression = "(?i)$originalExpression"
+                $expression = "(?i)\b$originalExpression\b"
             }
             elseif ($testLinks)
             {
@@ -62,7 +62,14 @@ function Test-Match(
             }
             else 
             {
-                $expression = "(?i)\b$originalExpression\b"
+                if ($originalExpression -match '\\')
+                {
+                    $expression = $originalExpression
+                }
+                else
+                {
+                    $expression = "(?i)\b$originalExpression\b"
+                }
             }
 
             $options = [Text.RegularExpressions.RegexOptions]::Multiline

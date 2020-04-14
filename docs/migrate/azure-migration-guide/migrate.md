@@ -125,7 +125,7 @@ After you register the resource provider, you can create an instance of Azure Da
 1. Select **+Create a resource** and search the marketplace for **Azure Database Migration Service**.
 1. Complete the **Create Migration Service** wizard, then select **Create**.
 
-The service is now ready to migrate the supported source databases (for example, SQL Server, MySQL, PostgreSQL, or MongoDb).
+The service is now ready to migrate the supported source databases (for example, SQL Server, MySQL, PostgreSQL, or MongoDB).
 
 ::: zone target="chromeless"
 

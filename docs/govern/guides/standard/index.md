@@ -70,7 +70,7 @@ Over time, this governance MVP will be used to improve governance practices. As 
 
 - Cost Management, as adoption scales.
 - Security Baseline, as protected data is deployed.
-            esource Consistency, as IT Operations begins supporting mission-critical workloads.
+- Resource Consistency, as IT Operations begins supporting mission-critical workloads.
 
 ![Example of an incremental governance MVP](../../../_images/govern/governance-improvement.png)
 
