@@ -19,23 +19,23 @@ Organizing cloud-based resources is a crucial task for IT, unless you only have 
 - **Resource management:** Your IT teams will need to quickly locate resources associated with specific workloads, environments, ownership groups, or other important information. Organizing resources is critical to assigning organizational roles and access permissions for resource management.
 - **Cost management and optimization:** Making business groups aware of cloud resource consumption requires IT to understand the resources and workloads each team is using. The following topics are supported by cost-related tags:
 
-  - [Cloud Accounting Models](../../strategy/cloud-accounting.md)
-  - [ROI Calculations](../../strategy/financial-models.md#return-on-investment)
-  - [Cost Tracking](../../ready/azure-best-practices/track-costs.md)
+  - [Cloud accounting models](../../strategy/cloud-accounting.md)
+  - [ROI calculations](../../strategy/financial-models.md#return-on-investment)
+  - [Cost tracking](../../ready/azure-best-practices/track-costs.md)
   - [Budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
   - [Alerts](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
-  - [Recurring Spend Tracking & Reporting](../../govern/cost-management/compliance-processes.md)
-  - [Post Implementation Optimizations](../../govern/cost-management/discipline-improvement.md#operate-and-post-implementation)
-  - [Cost Optimization Tactics](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices)
-- **Operations management:** Visibility for the operations management team regarding business commitments and SLAs is an important aspect of ongoing operations. To be well-managed, [mission criticality](../../manage/considerations/criticality.md) tagging is a requirement.
-- **Security:** Classification of data and security impact is a vital data point for the team, when breaches or other security issues arise. To operate securely, [data classification](../../govern/policy-compliance/data-classification.md) tagging is required.
+  - [Recurring spend tracking and reporting](../../govern/cost-management/compliance-processes.md)
+  - [Post-implementation optimizations](../../govern/cost-management/discipline-improvement.md#operate-and-post-implementation)
+  - [Cost-optimization tactics](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices)
+- **Operations management:** Visibility for the operations management team regarding business commitments and SLAs is an important aspect of ongoing operations. To be well-managed, tagging for [mission criticality](../../manage/considerations/criticality.md) tagging is a requirement.
+- **Security:** Classification of data and security impact is a vital data point for the team, when breaches or other security issues arise. To operate securely, tagging for [data classification](../../govern/policy-compliance/data-classification.md) is required.
 - **Governance and regulatory compliance:** Maintaining consistency across resources helps identify deviation from agreed-upon policies. [This governance foundation article](../../govern/guides/complex/prescriptive-guidance.md#resource-tagging) demonstrates how one of the patterns below can help when deploying governance practices. Similar patterns are available to evaluate regulatory compliance using tags.
 - **Automation:** In addition to making resources easier for IT to manage, a proper organizational scheme allows you to take advantage of automation as part of resource creation, operational monitoring, and the creation of DevOps processes.
 - **Workload optimization:** Tagging can help identify patterns and resolve broad issues. Tag can also help identify the assets required to support a single workload. Tagging all assets associated with each workload enables deeper analysis of your mission-critical workloads to make sound architectural decisions.
 
 ## Tagging decision guide
 
-![Plotting tagging options from least to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-resource-tagging.png)
+![Plotting tagging options from least complex to most complex, aligned with jump links below](../../_images/decision-guides/decision-guide-resource-tagging.png)
 
 Jump to: [Baseline naming conventions](#baseline-naming-conventions) | [Resource tagging patterns](#resource-tagging-patterns) | [Learn more](#learn-more)
 
