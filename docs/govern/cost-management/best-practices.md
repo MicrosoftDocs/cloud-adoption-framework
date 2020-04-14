@@ -43,6 +43,7 @@ Before making architectural changes, consult the technical lead for the workload
 - **Azure App Services.** Verify production requirements for any Premium app service plans. Without an understanding of the business requirements for a workload and the underlying assets configuration, its difficult to determine if a Premium app service plan is required.
 - **Horizontal over vertical scale.** Using multiple small instances can allow for an easier scaling path that a single larger instance. This allows for scale automation, which creates cost optimization. But, before a workload can scale horizontally, the technical team must verify that the application is idempotent. Achieving horizontal scale may first require changes to the code and configuration of various layers of the of the application.
 - **Autoscale.** Enable autoscale on all app services to allow for a burstable number of smaller VMs. Enabling autoscale has the same idempotent requirement, which requires an understanding of the workload architecture. The workload and supporting assets must be approved for horizontal scaling and auto-scaling by the adoption team, prior to any operational changes.
+- **Implement serverless technologies:** VM workloads are often migrated "as is" to avoid downtime. Often VMs may host tasks that are intermittent, taking a short period to run, or alternatively many hours. For example, VMs that run scheduled tasks such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs. After migration, consider re-architecting layers of the workload to serverless technologies such as Azure Functions or Azure Batch jobs.
 
 ## Actionable best practices
 
@@ -50,9 +51,7 @@ The remainder of this article provides tactical examples of operational best pra
 
 ## Before adoption
 
-Before you move your workloads to the cloud, estimate the monthly cost of running them in Azure. Proactively managing cloud costs helps you adhere to your operating expense budget. If budget is limited, take this into account before adoption. Consider converting workloads to Azure serverless technologies, where appropriate, to reduce costs.
-
-The best practices in this section help you to estimate costs, and perform right-sizing for VMs and storage.
+Before you move your workloads to the cloud, estimate the monthly cost of running them in Azure. Proactively managing cloud costs helps you adhere to your operating expense budget. The best practices in this section help you to estimate costs, and perform right-sizing for VMs and storage before a workload is deployed to the cloud.
 
 ## Best practice: Estimate monthly workload costs
 
@@ -380,23 +379,8 @@ Azure provides a REST API that can access your tenant billing information.
 - [Learn more](https://docs.microsoft.com/rest/api/consumption/budgets) about the Budgets API.
 - [Get insights](https://docs.microsoft.com/azure/billing/billing-usage-rate-card-overview) into Azure usage with the Billing API.
 
-## Best practice: Implement serverless technologies
-
-VM workloads are often migrated "as is" to avoid downtime. Often VMs may host tasks that are intermittent, taking a short period to run, or alternatively many hours. For example, VMs that run scheduled tasks such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs.
-
-After adoption, after a thorough review of these types of tasks you might consider migrating them to serverless technologies such as Azure Functions or Azure Batch jobs. With this solution, you no longer need to manage and maintain the VMs, bringing additional cost savings.
-
-**Learn more:**
-
-- Learn about [Azure Functions](https://azure.microsoft.com/services/functions).
-- Learn about [Azure Batch](https://azure.microsoft.com/services/batch).
 
 ## Next steps
-
-Review other best practices:
-
-- [Best practices](../../migrate/azure-best-practices/migrate-best-practices-security-management.md) for security and management after adoption.
-- [Best practices](../../migrate/azure-best-practices/migrate-best-practices-networking.md) for networking after adoption.
 
 With an understanding of the best practices, examine the [Cost Management toolchain](./toolchain.md) to identify Azure tools and features to help you execute these best practices.
 
