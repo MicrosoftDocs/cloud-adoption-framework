@@ -2,11 +2,16 @@ function Get-CasingExpressions
 {
     return @(
         "cSpell",
-        "ext steps"
-        "anagement groups",
-        "ole-based",
+        # "ext steps",
+        # "anagement groups",       # TODO: Handle before and after conditions.
+        # "ole-based",
+        "Cosmos DB"
         "GitHub",
+        "MariaDB",
+        "MongoDB",
+        # "MySQL",          # TODO: Ignore local link paths
         "PolyBase",
+        "PostgreSQL",
         "Pluralsight",
         "SKU"
     )
@@ -64,10 +69,14 @@ function Get-LinkExpressions
             "\(\/azure\/architecture",
             "\(\/",
             "\/\)",
-            "app.pluralsight.com",      # Use www.pluralsight.com/courses/...
+            # "href: https:\/\/docs\.microsoft\.com\/(?!cloud-adoption-framework\/|learn\/).*[^n]$",   # TODO: Use TOC redirects for other Docs content
+            "href: https:\/\/(?!docs\.microsoft\.com\/).*toc=",       # Don't use TOC redirects for non-Docs content
+            "href: https:\/\/docs\.microsoft\.com\/learn\/.*toc=",   # Don't use TOC redirects for Learn content
+            "app.pluralsight.com",                              # Use www.pluralsight.com/courses/...
             "www.pluralsight.com\/library",
             # "``` ?[A-Z]"
-			"<endoflist>"
+            "\]\(\.[^ \)#]*[\)#](?<!\.md[\)#]|\.(png|jpg|svg)[\)#])",    # Local links require a known extension.
+            "<endoflist>"
     )
 }
 
@@ -76,5 +85,6 @@ function Get-PunctuationExpressions
     return @(
         "[a-z]\.  [A-Z]",   # Use only one space after a sentence
         "^ *\*\s"           # Use hyphens for bullet lists
+        # ^ *[^a-z#:$`].*[a-z]$         # TODO: Sentences should end with periods.
     )
 }

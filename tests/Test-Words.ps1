@@ -2,6 +2,8 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 . "$here/Test-Constants.ps1"
 
+# TODO: Use [ValidateSet("Words", "WordsWithCasing", "LinkFormat", "LinkValidation")]
+
 function Test-AllMatches {
     [CmdletBinding()]    
     param(
@@ -41,7 +43,8 @@ function Test-Match(
     }
     elseif ($ignoreUrlContents)
     {
-        $text = Remove-Urls $text 
+        $text = Remove-MarkdownUrls $text 
+        $text = Remove-OtherUrls $text
         $text = Remove-ImagePaths $text
     }
 
@@ -53,7 +56,7 @@ function Test-Match(
 
             if ($requireCasingMatch) 
             {
-                $expression = "(?i)$originalExpression"
+                $expression = "(?i)\b$originalExpression\b"
             }
             elseif ($testLinks)
             {
@@ -61,7 +64,14 @@ function Test-Match(
             }
             else 
             {
-                $expression = "(?i)\b$originalExpression\b"
+                if ($originalExpression -match '\\')
+                {
+                    $expression = $originalExpression
+                }
+                else
+                {
+                    $expression = "(?i)\b$originalExpression\b"
+                }
             }
 
             $options = [Text.RegularExpressions.RegexOptions]::Multiline
@@ -111,7 +121,7 @@ function Test-Match(
     return $count
 }
 
-function Remove-Urls(
+function Remove-MarkdownUrls(
     [string]$text) 
 {
     $result = $text
@@ -123,6 +133,13 @@ function Remove-Urls(
     }
 
     return $result
+}
+
+function Remove-OtherUrls(
+    [string]$text
+)
+{
+    return Remove-Matches $(Get-RegexForUrl) $text
 }
 
 function Remove-ImagePaths(

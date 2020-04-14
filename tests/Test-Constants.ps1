@@ -7,6 +7,7 @@ function Get-RegexForDocsUrl
 {
     return '(?i)https?:\/\/docs.microsoft.com\/[a-zA-Z0-9\/\-:\.&=_%\]*'
 }
+
 function Get-RegexForImagePath
 {
     return '(?i)[a-zA-Z0-9\/\-:\.&=_%\+]*\.(png|jpg)'
