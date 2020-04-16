@@ -34,7 +34,7 @@ The CAF enterprise-scale landing zone architecture should focus on application c
 
 **Azure Native Design and Roadmap Aligned**
 
-The CAF enterprise-scale landing zone architecture strongly advocates the use of native platform services and capabilities wherever possible, which should be fully aligned with Azure platform roadmaps from the offset to ensure new capabilities are swiftly made available within customer environments. More specifically, Azure platform roadmaps should help to inform the migration strategy and ”NorthStar” trajectory.
+The CAF enterprise-scale landing zone architecture strongly advocates the use of native platform services and capabilities wherever possible, which should be fully aligned with Azure platform roadmaps from the offset to ensure new capabilities are swiftly made available within customer environments. More specifically, Azure platform roadmaps should help to inform the migration strategy and "CAF enterprise-scale landing zone" trajectory.
 
 - Be prepared to trade off functionality as not everything will likely be required on day one.
 - Leverage preview services and take dependencies on service roadmaps in order to remove technical blockers.

@@ -1,30 +1,4 @@
-# Navigation Menu
-
-* [Overview](../../README.md)
-* [North Star Architecture](../NorthStar-Architecture.md)
-  * [Design Principles](../Design-Principles.md)
-  * [Design Guidelines](../Design-Guidelines.md)
-    * [A - Enterprise Enrollment and Azure AD Tenants](../A-Enterprise-Enrollment-and-Azure-AD-Tenants.md)
-    * [B - Identity and Access Management](../B-Identity-and-Access-Management.md)
-    * [C - Management Group and Subscription Organization](../C-Management-Group-and-Subscription-Organization.md)
-    * [D - Network Topology and Connectivity](../D-Network-Topology-and-Connectivity.md)
-    * [E - Management and Monitoring](../E-Management-and-Monitoring.md)
-    * [F - Business Continuity and Disaster Recovery](../F-Business-Continuity-and-Disaster-Recovery.md)
-    * [G - Security, Governance and Compliance](../G-Security-Governance-and-Compliance.md)
-    * [H - Platform Automation and DevOps](../H-Platform-Automation-and-DevOps.md)
-  * [Implementation Guide](../Implementation-Guide.md)
-* [Contoso Reference](./Readme.md)
-  * [Scope and Design](./Scope.md)
-  * [Implementation](./Design.md)
-  * [Getting Started](./Getting-Started.md)  
-  * [Known Issues](./Known-Issues.md)
-* [How Do I Contribute?](../Northstar-Contribution.md)
-* [FAQ](../Northstar-FAQ.md)
-* [Roadmap](../Northstar-roadmap.md)
-
----
-
-## Scope
+# Scope
 
 The Contoso Corporation is a multi-national business with headquarters in London, UK. Contoso Senior leadership have mandated a "Cloud-First" approach, with an overarching strategy to reduce and gradually divest the on-premises datacentre footprint. Contoso has chosen Azure as their preferred public cloud provider. They have a large overall IT estate and are concerned about the velocity of workload transformation/migration and how they can establish landing zones for application teams to migrate their applications.
 
@@ -142,7 +116,7 @@ Contoso has decided to adopt North Star recommendations for building their netwo
 
 4. Allow full subscription democratization by giving Landing Zone Owners' rights to create subnets within their landing zones to suit their application needs, while ensuring the platform maintains compliance and security as defined by the SecOps team.
 
-Contoso's network design based on NorthStar design principles is depicted in the picture shown below:
+Contoso's network design based on CAF enterprise-scale landing zone design principles is depicted in the picture shown below:
 
 ![Network topology](./media/image5.png)
 
@@ -413,7 +387,7 @@ Since Contoso have selected West Europe as their primary Azure region, they will
 * Centralized alerting from a platform perspective.
 * Centralized, interactive Azure dashboards through the lenses of networking, security, and overall platform health.
 
-Contoso have documented the resources and parameters that it requires so that the platform can be managed and monitored via Policy as per NorthStar guidance. All these resources will be deployed in the "Management" subscription.
+Contoso have documented the resources and parameters that it requires so that the platform can be managed and monitored via Policy as per CAF enterprise-scale landing zone guidance. All these resources will be deployed in the "Management" subscription.
 
 
 <table>

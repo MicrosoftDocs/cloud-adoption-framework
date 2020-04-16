@@ -1,7 +1,7 @@
 ---
-title: "NorthStar Architecture"
+title: "CAF enterprise-scale landing zone architecture"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: CAF enterprise-scale landing zone Architecture
+description: CAF enterprise-scale landing zone architecture
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -11,11 +11,11 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# CAF enterprise-scale landing zone Architecture
+# CAF enterprise-scale landing zone architecture
 
 The principal challenges facing enterprise customers adopting Azure are 1) how to allow applications (legacy or modern) to seamlessly move at their own pace, and 2) how to provide secure and streamlined operations, management, and governance across the entire platform and all encompassed applications. To address these challenges, customers require a forward looking and Azure-native design approach, which in the context of the CAF enterprise-scale landing zone architecture.
 
-## What is the CAF enterprise-scale landing zone Architecture?
+## What is the CAF enterprise-scale landing zone architecture?
 
 The CAF enterprise-scale landing zone architecture represents the strategic design path and target technical state for the customer’s Azure environment. It will continue to evolve in lockstep with the Azure platform and is ultimately defined by the various design decisions the customer organization must make to define their Azure journey.
 
@@ -66,7 +66,7 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 
 ## High Level Architecture
 
-![NorthStar Architecture](./media/ns-arch.png "NorthStar Architecture")
+![CAF enterprise-scale landing zone Architecture](./media/ns-arch.png "CAF enterprise-scale landing zone Architecture")
 Figure 2 – CAF enterprise-scale landing zone Architecture
 
 ## Next steps

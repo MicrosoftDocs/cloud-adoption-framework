@@ -13,40 +13,6 @@ items:
       href: getting-started/innovate.md
     - name: Enable successful cloud adoption
       href: getting-started/enable.md
-    - name: CAF NorthStar
-      items:
-      - name: Overview
-        href: ready/enterprise-scale/index.md
-      - name: Implementations
-        href: ready/enterprise-scale/implementation.md
-      - name: Architecture
-        href: ready/enterprise-scale/architecture.md
-      - name: Design guidelines
-        href: ready/enterprise-scale/design-guidelines.md
-      - name: Critical design areas
-        items:
-        - name: A - Enterprise Enrolment and Azure AD Tenants
-          href: ready/enterprise-scale/a-enterprise-enrolment-and-azure-ad-tenants.md
-        - name: B - Identity and Access Management
-          href: ready/enterprise-scale/b-identity-and-access-management.md
-        - name: C - Management Group and Subscription Organization
-          href: ready/enterprise-scale/c-management-group-and-subscription-organization.md
-        - name: D - Network Topology and Connectivity
-          href: ready/enterprise-scale/d-network-topology-and-connectivity.md
-        - name: E - Management and Monitoring
-          href: ready/enterprise-scale/e-management-and-monitoring.md
-        - name: F - Business Continuity and Disaster Recovery
-          href: ready/enterprise-scale/f-business-continuity-and-disaster-recovery.md
-        - name: G - Security, Governance, and Compliance
-          href: ready/enterprise-scale/g-security-governance-and-compliance.md
-        - name: H - Platform Automation and DevOps
-          href: ready/enterprise-scale/h-platform-automation-and-devops.md
-        - name: Design principles
-          href: ready/enterprise-scale/design-principles.md
-      - name: Implementation Guide
-        href: ready/enterprise-scale/implementation-guide.md
-      - name: Decision Template
-        href: ready/enterprise-scale/template.md
 
   - name: Strategy
     items:
@@ -228,6 +194,46 @@ items:
         items:
         - name: Overview
           href: ready/enterprise-scale/index.md
+        - name: Implementations
+          href: ready/enterprise-scale/implementation.md
+        - name: Architecture
+          href: ready/enterprise-scale/architecture.md
+        - name: Design guidelines
+          href: ready/enterprise-scale/design-guidelines.md
+        - name: Critical design areas
+          items:
+          - name: A - Enterprise Enrolment and Azure AD Tenants
+            href: ready/enterprise-scale/a-enterprise-enrolment-and-azure-ad-tenants.md
+          - name: B - Identity and Access Management
+            href: ready/enterprise-scale/b-identity-and-access-management.md
+          - name: C - Management Group and Subscription Organization
+            href: ready/enterprise-scale/c-management-group-and-subscription-organization.md
+          - name: D - Network Topology and Connectivity
+            href: ready/enterprise-scale/d-network-topology-and-connectivity.md
+          - name: E - Management and Monitoring
+            href: ready/enterprise-scale/e-management-and-monitoring.md
+          - name: F - Business Continuity and Disaster Recovery
+            href: ready/enterprise-scale/f-business-continuity-and-disaster-recovery.md
+          - name: G - Security, Governance, and Compliance
+            href: ready/enterprise-scale/g-security-governance-and-compliance.md
+          - name: H - Platform Automation and DevOps
+            href: ready/enterprise-scale/h-platform-automation-and-devops.md
+          - name: Design principles
+            href: ready/enterprise-scale/design-principles.md
+        - name: Implementation Guide
+          href: ready/enterprise-scale/implementation-guide.md
+        - name: Decision Template
+          href: ready/enterprise-scale/template.md
+        - name: Reference implementation
+          items:
+          - name: Getting started
+            href: ready/enterprise-scale/contoso/index.md
+          - name: Scope and Design
+            href: ready/enterprise-scale/contoso/scope.md
+          - name: Implementation
+            href: ready/enterprise-scale/contoso/design.md
+          - name: Known Issues
+            href: ready/enterprise-scale/contoso/known-issues.md
 
     - name: Best practices
       items:
