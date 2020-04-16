@@ -16,7 +16,7 @@ layout: LandingPage
 # Azure Virtual Datacenter
 
 > [!WARNING]
-> A more robust platform architecture and implementation has been created to build on the prior Azure Virtual DataCenter (VDC) approach. Going forward, the [CAF Northstar](../ready/enterprise-scale/index.md) is the defacto choice for larger cloud adoption efforts. Adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud, should start with the [CAF Northstar](../ready/enterprise-scale/index.md).
+> A more robust platform architecture and implementation has been created to build on the prior Azure Virtual DataCenter (VDC) approach. Going forward, the [CAF enterprise-scale landing zone](../ready/enterprise-scale/index.md) is the defacto choice for larger cloud adoption efforts. Adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud, should start with the [CAF enterprise-scale landing zone](../ready/enterprise-scale/index.md).
 
 ## Deprecated resources (For support references only)
 

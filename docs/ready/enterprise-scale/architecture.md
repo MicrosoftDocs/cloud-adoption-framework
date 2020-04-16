@@ -1,7 +1,7 @@
 ---
 title: "NorthStar Architecture"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: CAF NorthStar Architecture
+description: CAF enterprise-scale landing zone Architecture
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -11,27 +11,27 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# CAF NorthStar Architecture
+# CAF enterprise-scale landing zone Architecture
 
-The principal challenges facing enterprise customers adopting Azure are 1) how to allow applications (legacy or modern) to seamlessly move at their own pace, and 2) how to provide secure and streamlined operations, management, and governance across the entire platform and all encompassed applications. To address these challenges, customers require a forward looking and Azure-native design approach, which in the context of the CAF NorthStar architecture.
+The principal challenges facing enterprise customers adopting Azure are 1) how to allow applications (legacy or modern) to seamlessly move at their own pace, and 2) how to provide secure and streamlined operations, management, and governance across the entire platform and all encompassed applications. To address these challenges, customers require a forward looking and Azure-native design approach, which in the context of the CAF enterprise-scale landing zone architecture.
 
-## What is the CAF NorthStar Architecture?
+## What is the CAF enterprise-scale landing zone Architecture?
 
-The CAF NorthStar architecture represents the strategic design path and target technical state for the customer’s Azure environment. It will continue to evolve in lockstep with the Azure platform and is ultimately defined by the various design decisions the customer organization must make to define their Azure journey.
+The CAF enterprise-scale landing zone architecture represents the strategic design path and target technical state for the customer’s Azure environment. It will continue to evolve in lockstep with the Azure platform and is ultimately defined by the various design decisions the customer organization must make to define their Azure journey.
 
-It is important to highlight that not all enterprises adopt Azure in the same way, and as a result the CAF NorthStar architecture may vary between customers. Ultimately, the technical considerations and design recommendations presented within this guide may yield different trade-offs based on the customer scenario. Some variation is therefore expected, but provided core recommendations are followed, the resultant target architecture will position the customer on a path to sustainable scale.
+It is important to highlight that not all enterprises adopt Azure in the same way, and as a result the CAF enterprise-scale landing zone architecture may vary between customers. Ultimately, the technical considerations and design recommendations presented within this guide may yield different trade-offs based on the customer scenario. Some variation is therefore expected, but provided core recommendations are followed, the resultant target architecture will position the customer on a path to sustainable scale.
 
 ## Landing zone - expanded definition
 
-In the [landing zone considerations article](../../ready/considerations/index.md), the term landing zone is defined in detail. However, the specific needs of the CAF Northstar's audience requires an expansion of that definition.
+In the [landing zone considerations article](../../ready/considerations/index.md), the term landing zone is defined in detail. However, the specific needs of the CAF enterprise-scale landing zone's audience requires an expansion of that definition.
 
-**Scope:** Within the CAF Northstar, the scope of a landing zone grows considerably to to enable application migrations and greenfield development at an enterprise scale in Azure. This expansion allows for a design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
+**Scope:** Within the CAF enterprise-scale landing zone, the scope of a landing zone grows considerably to to enable application migrations and greenfield development at an enterprise scale in Azure. This expansion allows for a design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
 
 **Refactoring:** The number of subscriptions required to support a full enterprise scale IT portfolio can be quite large. The cloud adoption framework encourages an initially high-frequency of refactoring, but that should be stablized before the 10th production workload is deployed to the cloud. When working across an enterprise portfolio, 10 applications could be deployed rather quickly, making refactoring impractical. Instead it is suggested that Central IT or the Cloud Center of Excellence deliver a more complete landing zone during the first release.
 
 **Goal:** Provide consistent landing zones based on **application archetype** subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise, see image below.
 
-**Principle purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to more quickly mature the customer's landing zones. CAF Northstar expands the principle purpose of the landing zones to pull forward aspects of governance, compliance, security and operational management. Each of these is addressed in the first release of the landing zone(s) and supporting shared services.
+**Principle purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to more quickly mature the customer's landing zones. CAF enterprise-scale landing zone expands the principle purpose of the landing zones to pull forward aspects of governance, compliance, security and operational management. Each of these is addressed in the first release of the landing zone(s) and supporting shared services.
 
 
 ---
@@ -67,7 +67,7 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 ## High Level Architecture
 
 ![NorthStar Architecture](./media/ns-arch.png "NorthStar Architecture")
-Figure 2 – CAF NorthStar Architecture
+Figure 2 – CAF enterprise-scale landing zone Architecture
 
 ## Next steps
 

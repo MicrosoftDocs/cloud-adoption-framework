@@ -1,7 +1,7 @@
 ---
 title: "Business Continuity and Disaster Recovery"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: CAF NorthStar landing zone - Business Continuity and Disaster Recovery
+description: CAF enterprise-scale landing zone - Business Continuity and Disaster Recovery
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020

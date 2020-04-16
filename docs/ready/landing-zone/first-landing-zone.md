@@ -29,10 +29,10 @@ The image below shows a variety of landing zone options. The following options h
 
 - When a partner provides ongoing managed services or is contracted to deliver on the adoption plan, they commonly provide their own landing zone. Using a partner landing zone can accelerate adoption efforts and ensure consistent operational management requirements. However, additional considerations should be given to internal governance and security requirements to ensure alignment.
 
-- Start with an enterprise-ready landing zone generated using the CAF Northstar approach when the adoption teams have a midterm objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**, should look to the CAF NorthStar as a guide platform architecture and landing zones. CAF Northstar is a more advanced approach, which includes both target-state platform architecture **and** reference implementations.
+- Start with an enterprise-ready landing zone generated using the CAF enterprise-scale landing zone approach when the adoption teams have a midterm objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**, should look to the CAF enterprise-scale landing zone as a guide platform architecture and landing zones. CAF enterprise-scale landing zone is a more advanced approach, which includes both target-state platform architecture **and** reference implementations.
     - This approach pulls forward aspects of parallel methodologies including governance and operations to better prepare for mission-critical, secure, complex, and compliance-governed adoption.
     - This approach also creates the ability to generate multiple landing zones from a common architecture.
-    - If options A through D are the best starting point, platform teams are still encouraged to leverage the CAF NorthStar implementation and architecture as an end-state reference during refactoring efforts.
+    - If options A through D are the best starting point, platform teams are still encouraged to leverage the CAF enterprise-scale landing zone implementation and architecture as an end-state reference during refactoring efforts.
 
 ## Other data points to influence the choice of a first landing zone
 
@@ -42,7 +42,7 @@ Selection of the first landing zone depends on multiple variables. The following
 |---------|---------|---------|---------|---------|---------|---------|---------|
 |[CAF Migrate](./migrate-landing-zone.md)|New to cloud|< 1,000 assets|1 - 5 days|Limited scope ->|Expansion required|Expansion required|Expansion required|Expansion required|
 |[CAF Foundation](./foundation-blueprint.md)|Moderate experience|< 1,000 assets|1 - 5 days|Additive to CAF Migrate|Expansion required|Expansion required|Expansion required|Compliance tools deployed - configuration required|
-|[CAF NorthStar](./enterprise-scale.md)|Deep expertise|> 1,000 assets|10 - 20 weeks|Yes|Configured|Configured|Configured|Compliance tools deployed - configuration required|
+|[CAF enterprise-scale landing zone](./enterprise-scale.md)|Deep expertise|> 1,000 assets|10 - 20 weeks|Yes|Configured|Configured|Configured|Compliance tools deployed - configuration required|
 |[CAF Terraform](./terraform-landing-zone.md)|Various templates|Various templates|10 - 20 weeks|Limited scope ->|Modules available|Modules available|Modules available|Modules available|
 
 The following table looks at the same landing zones from a slightly different perspective to guide more technical decision processes.

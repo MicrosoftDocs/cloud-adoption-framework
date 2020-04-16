@@ -1,7 +1,7 @@
 ---
 title: "Identity and Access Management"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: CAF NorthStar landing zone - Identity and Access Management
+description: CAF enterprise-scale landing zone - Identity and Access Management
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020

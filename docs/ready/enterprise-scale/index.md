@@ -52,7 +52,7 @@ The enterprise-scale approach to landing zone development includes four sets of 
 
 - [Implementations](./implementation.md): Scripted implementations of the architecture to accelerate adoption.*
 - [Architecture](./architecture.md): Conceptual reference architecture to demonstrate design areas and best practices.
-- [Design Guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive CAF NorthStar.
+- [Design Guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive CAF enterprise-scale landing zone.
 - [Template](./template.md): Documentation template to quickly capture decisions and any deviation from the suggested architecture and/or implementation.
 
 ## Community
@@ -63,7 +63,7 @@ While this guide shares the same design principles as the standard Ready methodo
 
 ## Next steps
 
-[Implement CAF NorthStar](./implementation.md)
+[Implement CAF enterprise-scale landing zone](./implementation.md)
 
 > [!div class="nextstepaction"]
-> [Implement CAF NorthStar](./implementation.md)
+> [Implement CAF enterprise-scale landing zone](./implementation.md)

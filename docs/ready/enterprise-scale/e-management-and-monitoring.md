@@ -1,7 +1,7 @@
 ---
 title: "Management and Monitoring"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: CAF NorthStar landing zone - Management and Monitoring
+description: CAF enterprise-scale landing zone - Management and Monitoring
 author: uday31in
 ms.author: brblanch
 ms.date: 02/01/2020
