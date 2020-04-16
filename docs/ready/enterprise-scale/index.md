@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-TODO: Add a redirect from this page to enterprise-scale/index.md
-
 # Start with enterprise-scale landing zones
 
 At times, it is unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to replicate the desired processes, tools, and architectures based on the new constraints of any cloud environment. To accelerate that learning process, a slightly different starting point is required. Comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, which is now more complex, more to follow later in this article.
@@ -48,24 +46,24 @@ Suggested skills:
 
 If these skills aren't available within the cloud platform team (through staff, partners, or other support mechanisms), a "start small and expand" approach is likely to reach enterprise readiness faster with a higher-quality output. Such an approach would allow for less costly, skills acquisition within the existing team.
 
-## Start with an enterprise-scale landing zone(s)
+## Start with an enterprise-scale landing zone
 
-Microsoft has a long history of investing in tools and approaches to make it easier for customers to develop and manage enterprise-scale landing zones. In recent years, this invest has resulted in guidance and tools across Azure. This investment approach continues and may result in regular updates to this section of this specific article.
+The enterprise-scale approach to landing zone development includes four sets of assets to support cloud teams: [Implementations](./implementation.md) | [Architecture](./architecture.md) | [Design Guidelines](./design-guidelines.md) | [Template](./template.md)
 
-![Landing zone refactoring illustration](../../_images/ready/refactor-enterprise-scale.png)
+- [Implementations](./implementation.md): Scripted implementations of the architecture to accelerate adoption.*
+- [Architecture](./architecture.md): Conceptual reference architecture to demonstrate design areas and best practices.
+- [Design Guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive CAF NorthStar.
+- [Template](./template.md): Documentation template to quickly capture decisions and any deviation from the suggested architecture and/or implementation.
 
-Each of the following templates provides customers with an enterprise-scale initial landing zone including infrastructure patterns:
+## Community
 
-- [ISO 27001 Shared Services](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-shared)
-- [ISO 27001 App Service Environment/SQL Database workload](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-ase-sql-workload)
-- [UK Official and UK NHS Governance](https://docs.microsoft.com/azure/governance/blueprints/samples/ukofficial)
+This guide is developed largely by **Microsoft Cloud Solutions Architects and the broader Cloud Solutions Unit technical community**. This community actively advances this guide to share lessons learned during enterprise-scale adoption efforts.
 
-The additional samples in the [Azure blueprint samples article](https://docs.microsoft.com/azure/governance/blueprints/samples) can be used as a "red/green" test for enterprise-scale landing zones. Applying these blueprints would ensure an environment meets compliance standards prior to adoption. This later approach especially useful as a way to validate third-party or partner landing zones before adopting the cloud:
+While this guide shares the same design principles as the standard Ready methodology, it expands upon those principles to integrate topics like governance and security, earlier in the planning process. This expansion of the standard process is necessary because of a few natural assumptions that can be made when an adoption effort requires large-scale enterprise change.
 
 ## Next steps
 
-Choose one of the enterprise-scale landing zone blueprints.
-From there, the same guidance in [start small and expand](./index.md) can be used to expand your enterprise-scale landing zone(s) to fit your distinct requirements.
+[Implement CAF NorthStar](./implementation.md)
 
 > [!div class="nextstepaction"]
-> [Resume the "start small and expand" guidance using your enterprise-scale landing zone as the initial source](./index.md)
+> [Implement CAF NorthStar](./implementation.md)

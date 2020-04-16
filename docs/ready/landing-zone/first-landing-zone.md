@@ -42,7 +42,7 @@ Selection of the first landing zone depends on multiple variables. The following
 |---------|---------|---------|---------|---------|---------|---------|---------|
 |[CAF Migrate](./migrate-landing-zone.md)|New to cloud|< 1,000 assets|1 - 5 days|Limited scope ->|Expansion required|Expansion required|Expansion required|Expansion required|
 |[CAF Foundation](./foundation-blueprint.md)|Moderate experience|< 1,000 assets|1 - 5 days|Additive to CAF Migrate|Expansion required|Expansion required|Expansion required|Compliance tools deployed - configuration required|
-|[CAF NorthStar](./northstar-landing-zone.md)|Deep expertise|> 1,000 assets|10 - 20 weeks|Yes|Configured|Configured|Configured|Compliance tools deployed - configuration required|
+|[CAF NorthStar](./enterprise-scale.md)|Deep expertise|> 1,000 assets|10 - 20 weeks|Yes|Configured|Configured|Configured|Compliance tools deployed - configuration required|
 |[CAF Terraform](./terraform-landing-zone.md)|Various templates|Various templates|10 - 20 weeks|Limited scope ->|Modules available|Modules available|Modules available|Modules available|
 
 The following table looks at the same landing zones from a slightly different perspective to guide more technical decision processes.

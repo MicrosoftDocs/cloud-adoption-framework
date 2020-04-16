@@ -16,37 +16,37 @@ items:
     - name: CAF NorthStar
       items:
       - name: Overview
-        href: getting-started/northstar/index.md
+        href: ready/enterprise-scale/index.md
       - name: Implementations
-        href: getting-started/northstar/implementation.md
+        href: ready/enterprise-scale/implementation.md
       - name: Architecture
-        href: getting-started/northstar/architecture.md
+        href: ready/enterprise-scale/architecture.md
       - name: Design guidelines
-        href: getting-started/northstar/design-guidelines.md
+        href: ready/enterprise-scale/design-guidelines.md
       - name: Critical design areas
         items:
         - name: A - Enterprise Enrolment and Azure AD Tenants
-          href: getting-started/northstar/a-enterprise-enrolment-and-azure-ad-tenants.md
+          href: ready/enterprise-scale/a-enterprise-enrolment-and-azure-ad-tenants.md
         - name: B - Identity and Access Management
-          href: getting-started/northstar/b-identity-and-access-management.md
+          href: ready/enterprise-scale/b-identity-and-access-management.md
         - name: C - Management Group and Subscription Organization
-          href: getting-started/northstar/c-management-group-and-subscription-organization.md
+          href: ready/enterprise-scale/c-management-group-and-subscription-organization.md
         - name: D - Network Topology and Connectivity
-          href: getting-started/northstar/d-network-topology-and-connectivity.md
+          href: ready/enterprise-scale/d-network-topology-and-connectivity.md
         - name: E - Management and Monitoring
-          href: getting-started/northstar/e-management-and-monitoring.md
+          href: ready/enterprise-scale/e-management-and-monitoring.md
         - name: F - Business Continuity and Disaster Recovery
-          href: getting-started/northstar/f-business-continuity-and-disaster-recovery.md
+          href: ready/enterprise-scale/f-business-continuity-and-disaster-recovery.md
         - name: G - Security, Governance, and Compliance
-          href: getting-started/northstar/g-security-governance-and-compliance.md
+          href: ready/enterprise-scale/g-security-governance-and-compliance.md
         - name: H - Platform Automation and DevOps
-          href: getting-started/northstar/h-platform-automation-and-devops.md
+          href: ready/enterprise-scale/h-platform-automation-and-devops.md
         - name: Design principles
-          href: getting-started/northstar/design-principles.md
+          href: ready/enterprise-scale/design-principles.md
       - name: Implementation Guide
-        href: getting-started/northstar/implementation-guide.md
+        href: ready/enterprise-scale/implementation-guide.md
       - name: Decision Template
-        href: getting-started/northstar/template.md
+        href: ready/enterprise-scale/template.md
 
   - name: Strategy
     items:
@@ -172,8 +172,8 @@ items:
         href: ready/landing-zone/first-landing-zone.md
       - name: Migration landing zone blueprint
         href: ready/landing-zone/migrate-landing-zone.md
-      - name: CAF NorthStar landing zone - TODO Create article
-        href: ready/landing-zone/northstar-landing-zone.md
+      - name: Enterprise-scale landing zones
+        href: ready/landing-zone/enterprise-scale.md
       - name: Terraform landing zones
         href: ready/landing-zone/terraform-landing-zone.md
     - name: Expand the landing zone
@@ -227,7 +227,7 @@ items:
       - name: Start with enterprise scale
         items:
         - name: Overview
-          href: ready/considerations/enterprise-scale.md
+          href: ready/enterprise-scale/index.md
 
     - name: Best practices
       items:

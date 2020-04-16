@@ -25,7 +25,7 @@ Configuration of the base Azure environment could change significantly when inte
 
 **ISO 27001 Compliance blueprints:** For customer who are required to adhere to ISO compliance standards, the [ISO 27001 Shared Services blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-shared) can serve as a more effective MVP to produce richer governance constraints earlier in the iterative process. The [ISO 27001 App Service Environment/SQL Database Sample](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-ase-sql-workload) expands on the blueprint to map controls and deploy a common architecture for an application environment. As additional compliance blueprints are released, they will be referenced here as well.
 
-**Codename: CAF NorthStar:** A more robust governance starting point may be required. In such cases, consider the [CAF Northstar](../../getting-started/northstar/index.md). The CAF NorthStar approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud. CAF NorthStar is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
+**Codename: CAF NorthStar:** A more robust governance starting point may be required. In such cases, consider the [CAF Northstar](../../ready/enterprise-scale/index.md). The CAF NorthStar approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud. CAF NorthStar is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
 
 ### Partnership option to complete prerequisites
 

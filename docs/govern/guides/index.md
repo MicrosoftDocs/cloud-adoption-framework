@@ -63,7 +63,7 @@ The guides demonstrate how to implement a governance MVP. From there, each guide
 To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the complexity of the enterprise for ease of navigation. However, the reader's decision may be more complex. The following tables outline the differences between the two options.
 
 > [!WARNING]
-> A more robust governance starting point may be required. In such cases, consider the [CAF Northstar](../../getting-started/northstar/index.md). The CAF NorthStar approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud. CAF NorthStar is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
+> A more robust governance starting point may be required. In such cases, consider the [CAF Northstar](../../ready/enterprise-scale/index.md). The CAF NorthStar approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud. CAF NorthStar is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
 
 <!-- markdownlint-disable MD028 -->
 
@@ -96,7 +96,7 @@ To begin a governance journey, choose one of the two options below. The options 
 
 ## Codename: CAF NorthStar
 
-[CAF Northstar](../../getting-started/northstar/index.md) is an approach to making the most of the Azure cloud platform's capabilities while respecting an enterprise's security and governance requirements.
+[CAF Northstar](../../ready/enterprise-scale/index.md) is an approach to making the most of the Azure cloud platform's capabilities while respecting an enterprise's security and governance requirements.
 
 Compared to traditional on-premises environments, Azure allows workload development teams and their business sponsors to take advantage of the increased deployment agility that cloud platforms offer. However, as your cloud adoption efforts expand to include mission-critical data and workloads, this agility may conflict with corporate security and policy compliance requirements established by your IT teams. This is especially true for large enterprises that have existing sophisticated governance and regulatory requirements.
 
@@ -108,9 +108,9 @@ CAF NorthStar deploys your own "isolated cloud" within the Azure platform, integ
 
 Although smaller teams may benefit from the architecture and recommendations the CAF NorthStar provides. Our objective is to continue to streamline the CAF NorthStar implementations to make them more friendly for smaller teams. Currently, this approach is designed to guide Central IT teams managing large cloud environments.
 
-The [CAF Northstar](../../getting-started/northstar/index.md) approach focuses on adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**.
+The [CAF Northstar](../../ready/enterprise-scale/index.md) approach focuses on adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**.
 
-For organizations that meet the following criteria, you may also want to start with the [CAF Northstar](../../getting-started/northstar/index.md):
+For organizations that meet the following criteria, you may also want to start with the [CAF Northstar](../../ready/enterprise-scale/index.md):
 
 - Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
 - You need to maintain common policy and governance compliance and central IT control over core services.
