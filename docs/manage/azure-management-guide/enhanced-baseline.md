@@ -1,15 +1,17 @@
 ---
 title: Enhanced management baseline in Azure
-description: Common improvements to the management baseline
+description: Use the Cloud Adoption Framework for Azure to understand common improvements to the management baseline. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
+
+<!-- cSpell:ignore ITSMC -->
 
 # Enhanced management baseline in Azure
 
@@ -69,7 +71,7 @@ The basic unit of code for delivering automated remediation is a runbook. Runboo
 
 To create or manage runbooks:
 
-1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts).
+1. Go to [Azure Automation](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts).
 1. Select **Automation accounts** and choose one of the listed accounts.
 1. Go to **Process automation**.
 1. With the options presented, you can create or manage runbooks, schedules, and other automated remediation functionality.
@@ -78,7 +80,7 @@ To create or manage runbooks:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Assign Policy" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Assign Policy" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

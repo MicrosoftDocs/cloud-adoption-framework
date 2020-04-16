@@ -1,13 +1,15 @@
 ---
 title: "Understand partnership and support options"
-description: Describes options and approaches to support migration efforts
+description: Use the Cloud Adoption Framework for Azure to understand partnership options and approaches to supporting migration costs.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore CSPs MSPs -->
 
 # Understand partnership options
 
@@ -35,7 +37,7 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 
 ## FastTrack for Azure
 
-[FastTrack for Azure](https://azure.microsoft.com/roadmap/fasttrack-for-azure) provides direct assistance from Azure engineers, working hand in hand with partners, to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions, including:
+[FastTrack for Azure](https://azure.microsoft.com/programs/azure-fasttrack) provides direct assistance from Azure engineers, working hand in hand with partners, to help customers build Azure solutions quickly and confidently. FastTrack brings best practices and tools from real customer experiences to guide customers from setup, configuration, and development to production of Azure solutions, including:
 
 - Datacenter migration
 - Windows Server on Azure
@@ -91,7 +93,7 @@ Microsoft Certified Solution Providers specialize in providing up-to-date, Micro
 Get help from partners with ready-made or custom Azure solutions and partners who can help deploy and manage those solutions:
 
 - **[Find a Cloud Solutions Partner](https://www.microsoft.com/solution-providers/home).** A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
-- **[Find a Managed Service Partner](https://www.microsoft.com/solution-providers/search?cacheId=16a3b49b-fef2-449d-bdf0-628008114cca).** An Azure managed service partner (MSP) helps a business transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go (PAYG) business model.
+- **[Find a Managed Service Partner](https://www.microsoft.com/solution-providers/search?cacheId=16a3b49b-fef2-449d-bdf0-628008114cca).** An Azure managed service partner (MSP) helps a business transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning, and the billing experience, all with a flexible pay-as-you-go business model.
 
 ## Next steps
 

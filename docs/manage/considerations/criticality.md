@@ -1,10 +1,10 @@
 ---
-title: "Business criticality: Cloud management and operations"
-description: "Business criticality: Cloud management and operations"
+title: "Business criticality in cloud management"
+description: "Use the Cloud Adoption Framework for Azure to understand workload criticality and prevent adverse impact on revenue and profitability."
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---

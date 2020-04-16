@@ -1,10 +1,10 @@
 ---
 title: Inventory and visibility in Azure
-description: Learn how to set up inventory, monitoring, reporting, and alerts for your Azure management environment.
+description: Learn the tools that provide both an inventory and visibility into the inventory's run state to collect operational data.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.custom: fasttrack-edit, AQC
@@ -98,7 +98,7 @@ A [Log Analytics workspace](https://docs.microsoft.com/azure/azure-monitor/learn
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.OperationalInsights%2Fworkspaces]" submitText="Explore Azure Monitor" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.OperationalInsights%2FWorkspaces]" submitText="Explore Azure Monitor" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -169,8 +169,8 @@ To enable solutions, you need to configure the Log Analytics workspace. Onboarde
 
 There are two approaches to onboarding:
 
-- [Single VM](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-server-management/onboard-single-vm)
-- [Entire subscription](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-server-management/onboard-at-scale)
+- [Single VM](../../manage/azure-server-management/onboard-single-vm.md)
+- [Entire subscription](../../manage/azure-server-management/onboard-at-scale.md)
 
 Each article guides you through a series of steps to onboard these solutions:
 

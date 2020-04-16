@@ -16,9 +16,7 @@
       "template_folder": "_themes"
     }
   ],
-  "notification_subscribers": [
-    "mikki@microsoft.com"
-  ],
+  "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/cloud-adoption-framework",

@@ -1,10 +1,10 @@
 ---
 title: "Guest Configuration policy"
-description: Learn how to use the Azure Policy Guest Configuration extension to audit the configuration settings in an Azure virtual machine (VM). 
+description: Use the Cloud Adoption Framework for Azure to learn how to use the Azure Policy Guest Configuration extension to audit the configuration settings in an Azure VM.  
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -22,7 +22,7 @@ Get-AzPolicySetDefinition | where-object {$_.Properties.metadata.category -eq "G
 > [!NOTE]
 > Guest Configuration functionality is regularly updated to support additional policy sets. Check for new supported policies periodically and evaluate whether they'll be useful.
 
-<!-- TODO: Update these links when available. 
+<!-- TODOBACKLOG: Update these links when available. 
 
 By default, we recommend that you enable the following policies:
 

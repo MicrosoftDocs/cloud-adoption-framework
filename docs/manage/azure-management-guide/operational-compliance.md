@@ -1,10 +1,10 @@
 ---
 title: Operational compliance in Azure
-description: Ensure business stability by increasing operational compliance
+description: Learn how to ensure business stability through operational compliance by reducing the likelihood of outages or vulnerabilities.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.custom: fasttrack-edit, AQC
@@ -55,8 +55,8 @@ For more information, see [Update Management solution](https://docs.microsoft.co
 >
 > There are two approaches to onboarding:
 >
-> - [Single VM](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-server-management/onboard-single-vm)
-> - [Entire subscription](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/azure-server-management/onboard-at-scale)
+> - [Single VM](../../manage/azure-server-management/onboard-single-vm.md)
+> - [Entire subscription](../../manage/azure-server-management/onboard-at-scale.md)
 >
 > You should follow one before proceeding with Update Management.
 
@@ -64,7 +64,7 @@ For more information, see [Update Management solution](https://docs.microsoft.co
 
 To apply a policy to a resource group:
 
-1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts).
+1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts).
 1. Select **Automation accounts**, and choose one of the listed accounts.
 1. Go to **Configuration Management**.
 1. **Inventory**, **Change Management**, and **State Configuration** can be used to control the state and operational compliance of the managed VMs.
@@ -73,7 +73,7 @@ To apply a policy to a resource group:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Assign Policy" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Assign Policy" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

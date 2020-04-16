@@ -4,7 +4,7 @@ description: Use an incremental governance approach based on a minimum viable 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/04/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: organize
@@ -14,7 +14,7 @@ ms.custom: organize
 
 Adopting the cloud is a journey, not a destination. Along the way, there are clear milestones and tangible business benefits. However, the final state of cloud adoption is unknown when a company begins the journey. Cloud governance creates guardrails that keep the company on a safe path throughout the journey.
 
-The Cloud Adoption Framework provides governance guides that describe the experiences of fictional companies, which are based on the experiences of real customers. Each guide follows the customer through the governance aspects of their cloud adoption.
+The Cloud Adoption Framework provides governance guides that describe the experiences of fictional companies that are based on the experiences of real customers. Each guide follows the customer through the governance aspects of their cloud adoption.
 
 ## Envision an end state
 

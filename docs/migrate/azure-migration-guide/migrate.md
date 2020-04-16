@@ -1,17 +1,19 @@
 ---
 title: "Migrate assets"
-description: This guide helps you initiate the migration of your environment by identifying the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
+description: Initiate the migration to Azure by identifying the appropriate tools to use, including native tools, third-party tools, and project management tools.
 author: matticusau
 ms.author: mlavery
 ms.date: 08/08/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-# Migrate assets (infrastructure, apps, and data)
+<!-- cSpell:ignore Cloudamize agentless uncontained SSMA Carbonite Movere -->
+
+# Deploy workloads and assets (infrastructure, apps, and data)
 
 In this phase of the journey, you use the output of the assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
 
@@ -123,7 +125,7 @@ After you register the resource provider, you can create an instance of Azure Da
 1. Select **+Create a resource** and search the marketplace for **Azure Database Migration Service**.
 1. Complete the **Create Migration Service** wizard, then select **Create**.
 
-The service is now ready to migrate the supported source databases (for example, SQL Server, MySQL, PostgreSQL, or MongoDb).
+The service is now ready to migrate the supported source databases (for example, SQL Server, MySQL, PostgreSQL, or MongoDB).
 
 ::: zone target="chromeless"
 
@@ -150,9 +152,9 @@ The Data Migration Assistant (DMA) helps you upgrade to a modern data platform b
 > For large migrations (in terms of number and size of databases), we recommend that you use the Azure Database Migration Service, which can migrate databases at scale.
 >
 
-To get started with the Data Migration Assistant follow these steps.
+Start using the Data Migration Assistant with these steps:
 
-1. Download and Install the Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
+1. Download and install the Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
 1. Create an assessment by selecting the **New (+)** icon, then select the **Assessment** project type.
 1. Set the source and target server type, then select **Create**.
 1. Configure the assessment options as required (recommend all defaults).
@@ -208,7 +210,7 @@ Several third-party migration tools and ISV services can assist you with the mig
 
 UnifyCloud is an ISV service that provides assessment, migration and modernization automation tools.
 
-[Learn more](https://www.unifycloud.com/)
+[Learn more](https://www.unifycloud.com)
 
 ## Cloudamize
 
@@ -255,7 +257,7 @@ Microsoft also offers the following project management tools, which can work tog
 - [Microsoft Planner](https://tasks.office.com): A simple, visual way to organize teamwork.
 - [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and Portfolio Management, Resource Capacity Management, Financial Management, Timesheet and Schedule Management.
 - [Microsoft Teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates Planner and other tools to improve collaboration.
-- [Azure DevOps](https://dev.azure.com): The Cloud Adoption Framework planing template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
+- [Azure DevOps Services](https://azure.microsoft.com/services/devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
 These are not the only tools available. Many other third-party tools are widely used in the project management community.
 
@@ -271,8 +273,8 @@ Microsoft Learn is a new approach to learning. Readiness for the new skills resp
 
 Here is an example of a tailored learning path on Microsoft Learn that complements the setup for DevOps guidance in the Cloud Adoption Framework.
 
-[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops/): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
+[Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops): Collaborate with others to build your applications using Azure Pipelines and GitHub. Run automated tests in your pipeline to validate code quality. Scan your source code and third-party components for potential vulnerabilities. Define multiple pipelines that work together to build your application. Build applications using both Microsoft-hosted agents and your own build agents.
 
 # [Cost management](#tab/ManageCost)
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload (discussed in more detail in the **[Optimize and Transform](./optimize-and-transform.md)** section).
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload (discussed in more detail in the **[Optimize and transform](./optimize-and-transform.md)** section).

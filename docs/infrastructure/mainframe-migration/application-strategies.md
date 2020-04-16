@@ -4,10 +4,12 @@ description: Learn strategies like rehosting, retiring, rebuilding, or replacing
 author: njray
 ms.author: v-nanra
 ms.date: 12/26/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore njray nanra Attunity Codit DRDA ISAM ISQL LPARS VSAM ODBC JDBC GDGs REXX dbextents Raincode Tmax -->
 
 # Mainframe application migration
 
@@ -25,7 +27,7 @@ Application migration typically involves one or more of the following strategies
 
 - **Replace:** This approach replaces mainframe functionality with equivalent features in the cloud. Software as a service (SaaS) is one option, which is using a solution created specifically for an enterprise concern, such as finance, human resources, manufacturing, or enterprise resource planning. In addition, many industry-specific apps are now available to solve problems that custom mainframe solutions used to previously solve.
 
-You should consider starting by planning those workloads that you want to initially migrate, and then determine those requirements for moving associated applications, legacy codebases, and databases.
+You should consider starting by planning those workloads that you want to initially migrate, and then determine those requirements for moving associated applications, legacy code bases, and databases.
 
 ## Mainframe emulation in Azure
 

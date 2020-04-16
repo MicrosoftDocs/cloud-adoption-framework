@@ -2,9 +2,9 @@
 title: "Policy enforcement decision guide"
 description: Use the Cloud Adoption Framework for Azure to learn about policy enforcement subscriptions as a core design priority in Azure migrations.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
@@ -51,7 +51,7 @@ In Azure, you can apply configuration settings and resource creation rules at th
 
 As your cloud estate grows to span many subscriptions that require enforcement, you will need to focus on a cloud-estate-wide enforcement strategy to ensure policy consistency.
 
-Your [subscription design](../subscriptions/index.md) must account for policy in relation to your organizational structure. In addition to helping support complex organization within your subscription design, [Azure management groups](../../ready/azure-best-practices/scaling-subscriptions.md#manage-multiple-subscriptions) can be used to assign Azure Policy rules across multiple subscriptions.
+Your [subscription design](../subscriptions/index.md) must account for policy in relation to your organizational structure. In addition to helping support complex organization within your subscription design, [Azure management groups](../../ready/azure-best-practices/organize-subscriptions.md) can be used to assign Azure Policy rules across multiple subscriptions.
 
 ## Automated enforcement
 

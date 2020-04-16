@@ -4,7 +4,7 @@ description: Understand the business risks associated with various forms of clou
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
@@ -13,7 +13,7 @@ ms.subservice: govern
 
 Every business decision creates new risks. Making an investment in anything creates risk of losses. New products or services create risks of market failure. Changes to current products or services could reduce market share. Cloud transformation does not provide a magical solution to everyday business risk. To the contrary, connected solutions (cloud or on-premises) introduce new risks. Deploying assets to any network connected facility also expands the potential threat profile by exposing security weaknesses to a much broader, global community. Fortunately, cloud providers are aware of the changes, increases, and addition of risks. They invest heavily to reduce and manage those risks on the behalf of their customers.
 
-This article is not focused on cloud risks. Instead it discusses the business risks associated with various forms of cloud transformation. Later in the article, the discussion shifts focus to discuss ways of understanding the business' tolerance for risk.
+This article is not focused on cloud risks. Instead it discusses the business risks associated with various forms of cloud transformation. Later in the article, the discussion shifts focus to discuss ways of understanding the business's tolerance for risk.
 
 <!-- markdownlint-disable MD026 -->
 

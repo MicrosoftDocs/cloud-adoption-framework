@@ -1,13 +1,15 @@
 ---
 title: "Approve architecture changes before migration"
-description: Understanding the importance of approval before migration
+description: Learn to classify the architectural changes when they are required and also establish proper approval activities.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore architected ITIL -->
 
 # Approve architecture changes before migration
 

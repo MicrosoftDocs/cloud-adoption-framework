@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to get sample Deployment
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -26,7 +26,7 @@ The following sample policy statements address common configuration-related busi
 
 **Policy statement:** All assets deployed to the cloud should be deployed using templates or automation scripts whenever possible.
 
-**Potential design options:** [Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/template-deployment-overview) provides an infrastructure as code approach to deploying your resources to Azure. You could also use [Terraform](https://docs.microsoft.com/azure/terraform/terraform-overview) as a consistent on-premises and cloud-based deployment tool.
+**Potential design options:** [Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/overview) enable using infrastructure as code to deploy your resources to Azure. You could also use [Terraform](https://docs.microsoft.com/azure/terraform/terraform-overview) as a consistent on-premises and cloud-based deployment tool.
 
 ## Lack of visibility into system issues
 
@@ -37,7 +37,7 @@ The following sample policy statements address common configuration-related busi
 - Key metrics and diagnostics measures will be identified for all production systems and components, and monitoring and diagnostic tools will be applied to these systems and monitored regularly by operations personnel.
 - Operations will consider using monitoring and diagnostic tools in nonproduction environments such as Staging and QA to identify system issues before they occur in the production environment.
 
-**Potential design options:** [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor), which includes Log Analytics and Application Insights, provides tools for collecting and analyzing telemetry to help you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. Additionally, [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) reports all changes that are being made at the platform level and should be monitored and audited for noncompliant changes.
+**Potential design options:** [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor), including Log Analytics and Application Insights, provides tools for collecting and analyzing telemetry to help you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. Additionally, [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) reports all changes that are being made at the platform level and should be monitored and audited for noncompliant changes.
 
 ## Configuration security reviews
 

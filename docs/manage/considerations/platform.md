@@ -1,10 +1,10 @@
 ---
-title: "Platform operations - Cloud Management and Operations"
-description: Platform operations - Cloud Management and Operations
+title: "Platform operations in cloud management"
+description: Build an understanding of the dependency within your organization for common platform operations in cloud management.  
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -13,7 +13,7 @@ ms.subservice: operate
 
 A cloud management baseline that spans [inventory and visibility](./inventory.md), [operational compliance](./operational-compliance.md), and [protection and recovery](./protect.md) might provide a sufficient level of cloud management for most workloads in the IT portfolio. However, that baseline is seldom enough to support the full portfolio. This article builds on the most common next step in cloud management, portfolio operations.
 
-A quick study of the assets in the IT portfolio highlights patterns across the workloads that are being supported. Within those workloads, there will be a number of common platforms. Depending on the past technical decisions within the company, those platforms could vary widely.
+A quick study of the assets in the IT portfolio highlights patterns across the workloads that are being supported. Within those workloads, there will be common platforms. Depending on the past technical decisions within the company, those platforms could vary widely.
 
 For some organizations, there will be a heavy dependence on SQL Server, Oracle, or other open-source data platforms. In other organizations, the commonalities might be rooted in the hosting platforms for virtual machines (VMs) or containers. Still others might have a common dependency on applications or Enterprise Resource Planning (ERP) systems, such as SAP, Oracle, or others.
 

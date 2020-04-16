@@ -1,10 +1,10 @@
 ---
-title: Workload specialization for cloud management in Azure
-description: Improve workload-specific cloud management operations
+title: Specialized workloads for cloud management
+description: Use the Cloud Adoption Framework for Azure to learn about specialized workload cloud management operations. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.custom: fasttrack-edit, AQC
@@ -74,7 +74,7 @@ Application Insights contains different kinds of options for monitoring performa
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/microsoft.insights%2Fcomponents]" submitText="Monitor applications" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Insights%2FComponents]" submitText="Monitor applications" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

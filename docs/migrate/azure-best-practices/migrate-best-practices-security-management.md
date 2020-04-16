@@ -1,6 +1,6 @@
 ---
-title: "Best practices for securing and managing workloads migrated to Azure"
-description: After migrating to Azure, get best practices for operating, managing, and securing your migrated workloads.
+title: "Securing and managing workloads migrated to Azure"
+description: Use the Cloud Adoption Framework for Azure to learn the best practices for operating, managing, and securing your migrated workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/08/2018
@@ -8,6 +8,8 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore FIPS SIEM majeure NSGs -->
 
 # Best practices for securing and managing workloads migrated to Azure
 
@@ -86,12 +88,12 @@ Unlike IaaS where you manage your own VMs and infrastructure, in a PaaS model pl
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/security/azure-security-disk-encryption-overview) Azure Disk Encryption for IaaS VMs.
-- [Enable](https://docs.microsoft.com/azure/security/azure-security-disk-encryption-windows) encryption for IaaS Windows VMs.
-- [Learn about](https://docs.microsoft.com/azure/storage/common/storage-service-encryption) Azure Storage Service Encryption for data at rest.
-- [Read](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault) an overview of Always Encrypted.
-- [Read about](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?view=sql-server-2017) TDE for Azure SQL Database.
-- [Learn about](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) TDE with Bring Your Own Key.
+- Learn about [Azure Disk Encryption for virtual machines and virtual machine scale sets](https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss).
+- Enable [Azure Disk Encryption for Windows VMs](https://docs.microsoft.com/azure/virtual-machines/windows/disk-encryption-overview).
+- Learn about [Azure Storage Service Encryption for data at rest](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
+- Read the [overview of Always Encrypted](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault).
+- Read about [Transparent data encryption for SQL Database and Azure Synapse](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql).
+- Learn about [Azure SQL Transparent Data Encryption with customer-managed key](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql).
 
 ## Best practice: Protect VMs with antimalware
 
@@ -106,7 +108,7 @@ In particular, older Azure-migrated VMs may not have the appropriate level of an
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/security/azure-security-antimalware) Microsoft Antimalware.
+- Learn about [Microsoft Antimalware for Azure Cloud Services and Virtual Machines](https://docs.microsoft.com/azure/security/fundamentals/antimalware).
 
 ## Best practice: Secure web apps
 
@@ -181,7 +183,7 @@ Azure provides other security features that provide advanced security options. S
 
 - **Implement Azure AD administrative units (AU).** Delegating administrative duties to support staff can be tricky with just basic Azure access control. Giving support staff access to administer all the groups in Azure AD might not be the ideal approach for organizational security. Using AU allows you to segregate Azure resources into containers in a similar way to on-premises organizational units (OU). To use AU the AU admin must have a premium Azure AD license. [Learn more](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-administrative-units).
 - **Use multi-factor authentication.** If you have a premium Azure AD license, you can enable and enforce multi-factor authentication on your admin accounts. Phishing is the most common way that accounts credentials are compromised. Once a bad actor has admin account credentials, there's no stopping them from far-reaching actions, such as deleting all your resource groups. You can establish multi-factor authentication in several ways, including with email, an authenticator app, and phone text messages. As an administrator, you can select the least intrusive option. Multi-factor authentication integrates with threat analytics and conditional access policies to randomly require a multi-factor authentication challenge respond. Learn more about [security guidance](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication-security-best-practices), and [how to set up multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication-security-best-practices).
-- **Implement conditional access.** In most small and medium size organizations, Azure admins and the support team are probably located in a single geography. In this case, most logins will come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator logins from outside these areas. Even in an event in which a remote bad actor compromises an admin's credentials, you can implement security features like conditional access combined with multi-factor authentication to prevent login from remote locations, or from spoofed locations from random IP addresses. [Learn more](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) about conditional access, and [review best practices](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) for conditional access in Azure AD.
+- **Implement conditional access.** In most small and medium size organizations, Azure admins and the support team are probably located in a single geography. In this case, most logins will come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator logins from outside these areas. Even if a remote bad actor compromises an administrator's credentials, you can implement security features like conditional access combined with multi-factor authentication to prevent signing in from remote locations, or from spoofed locations from random IP addresses. [Learn more](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) about conditional access, and [review best practices](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) for conditional access in Azure AD.
 - **Review Enterprise Application permissions.** Over time, admins select Microsoft and third-party links without knowing their impact on the organization. Links can present consent screens that assign permissions to Azure apps, and might allow access to read Azure AD data, or even full access to manage your entire Azure subscription. You should regularly review the apps to which your admins and users have allowed access to Azure resources. Ensure that these apps have only the permissions that are necessary. Additionally, quarterly or semi-annually you can email users with a link to app pages so that they're aware of the apps to which they've allowed access to their organizational data. [Learn more](https://docs.microsoft.com/azure/active-directory/manage-apps/application-types) about application types, and [how to control](https://docs.microsoft.com/azure/active-directory/manage-apps/remove-user-or-group-access-portal) app assignments in Azure AD.
 
 ## Managed migrated workloads
@@ -210,7 +212,7 @@ Ensuring that your resource groups have meaningful names that admins and support
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming) naming conventions.
+- Learn about [recommended naming conventions](../../ready/azure-best-practices/naming-and-tagging.md).
 
 ## Best practice: Implement delete locks for resource groups
 
@@ -250,8 +252,8 @@ Often, using only a resource group name related to resources won't provide enoug
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags) tagging and tag limitations.
-- [Review](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags#powershell) PowerShell and CLI examples to set up tagging, and to apply tags from a resource group to its resources.
+- [Learn about](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources) tagging and tag limitations.
+- [Review](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources#powershell) PowerShell and CLI examples to set up tagging, and to apply tags from a resource group to its resources.
 - [Read](https://www.azurefieldnotes.com/2016/07/18/azure-resource-tagging-best-practices) Azure tagging best practices.
 
 ## Best practice: Implement blueprints
@@ -295,7 +297,7 @@ The following diagram shows an example of creating a hierarchy for governance us
 
 **Learn more:**
 
-- [Learn more](https://docs.microsoft.com/azure/governance/management-groups/index) about organizing resources into management groups.
+- [Learn more](https://docs.microsoft.com/azure/governance/management-groups) about organizing resources into management groups.
 
 ## Best practice: Deploy Azure Policy
 
@@ -374,7 +376,7 @@ Azure VMs are stored as page blobs in Azure Storage.
 - [Learn how to](https://docs.microsoft.com/azure/storage/blobs/storage-blob-snapshots) create a blob snapshot.
 - [Review a sample scenario](https://azure.microsoft.com/blog/microsoft-azure-block-blob-storage-backup) for blob storage backup.
 - [Read about](https://docs.microsoft.com/azure/storage/blobs/storage-blob-soft-delete) soft delete.
-- [Disaster recovery and forced failover (preview) in Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-disaster-recovery-guidance?toc=%2fazure%2fstorage%2fblobs%2ftoc.json)
+- [Disaster recovery and forced failover (preview) in Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-disaster-recovery-guidance?toc=/azure/storage/blobs/toc.json)
 
 #### Third-party backup
 
@@ -382,7 +384,7 @@ In addition, you can use third-party solutions to back up Azure VMs and storage 
 
 ### Set up disaster recovery for IaaS apps
 
-In addition to protecting data, BCDR planning must consider how to keep apps and workloads available in case of disaster. For workloads running on Azure IaaS VMs and Azure storage consider these solutions:
+In addition to protecting data, BCDR planning must consider how to keep apps and workloads available if a disaster occurs. For workloads running on Azure IaaS VMs and Azure storage consider these solutions:
 
 #### Azure Site Recovery
 
@@ -452,8 +454,8 @@ Azure resources generate a fair number of logging metrics and telemetry data.
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs) collecting and consuming log data.
-- [Learn what's supported](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-diagnostic-logs-schema) for diagnostic logging.
+- [Learn about](https://docs.microsoft.com/azure/azure-monitor/platform/platform-logs-overview) collecting and consuming log data.
+- [Learn what's supported](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-logs-schema) for diagnostic logging.
 
 ## Best practice: Set up alerts and playbooks
 
@@ -469,7 +471,7 @@ With diagnostic logging enabled for Azure resources, you can start to use loggin
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-alerts) alerts.
+- [Learn about](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview) alerts.
 - [Learn about](https://docs.microsoft.com/azure/security-center/security-center-playbooks) security playbooks that respond to Security Center alerts.
 
 ## Best practice: Use the Azure dashboard

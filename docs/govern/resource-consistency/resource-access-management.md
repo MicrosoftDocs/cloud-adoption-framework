@@ -4,7 +4,7 @@ description: Understand Azure resource access management concepts like Azure Res
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -27,7 +27,7 @@ In Azure, the term _resource_ refers to an entity managed by Azure. For example,
 
 ## What is an Azure resource group?
 
-Each resource in Azure must belong to a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). A resource group is simply a logical construct that groups multiple resources together so they can be managed as a single entity _based on lifecycle and security_. For example, resources that share a similar lifecycle, such as the resources for an [n-tier application](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) may be created or deleted as a group. Put another way: everything that is born together, gets managed together, and deprecates together, goes together in a resource group.
+Each resource in Azure must belong to a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#resource-groups). A resource group is simply a logical construct that groups multiple resources together so they can be managed as a single entity _based on lifecycle and security_. For example, resources that share a similar lifecycle, such as the resources for an [n-tier application](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) may be created or deleted as a group. Put another way: everything that is born together, gets managed together, and deprecates together, goes together in a resource group.
 
 ![Diagram of a resource group containing a resource](../../_images/govern/design/governance-1-10.png)
 *Figure 2 - A resource group contains a resource.*
@@ -53,7 +53,7 @@ The following figure shows three clients: [PowerShell](https://docs.microsoft.co
 ![Diagram of Azure clients connecting to the Azure Resource Manager API](../../_images/govern/design/governance-1-13.png)
 *Figure 5 - Azure clients connect to the Azure Resource Manager RESTful API.*
 
-While these clients connect to Azure Resource Manager using the RESTful API, Azure Resource Manager does not include functionality to manage resources directly. Rather, most resource types in Azure have their own [resource provider](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#terminology).
+While these clients connect to Azure Resource Manager using the RESTful API, Azure Resource Manager does not include functionality to manage resources directly. Rather, most resource types in Azure have their own [resource provider](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#terminology).
 
 ![Azure resource providers](../../_images/govern/design/governance-1-14.png)
 *Figure 6 - Azure resource providers.*
@@ -91,7 +91,7 @@ The next control is a check that the request is allowed under the settings speci
 ![Azure resource policy](../../_images/govern/design/governance-1-19.png)
 *Figure 11. Azure resource policy.*
 
-The next control is a check that the request does not exceed an [Azure subscription limit](https://docs.microsoft.com/azure/azure-subscription-service-limits). For example, each subscription has a limit of 980 resource groups per subscription. If a request is received to deploy an additional resource group when the limit has been reached, it is denied.
+The next control is a check that the request does not exceed an [Azure subscription limit](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits). For example, each subscription has a limit of 980 resource groups per subscription. If a request is received to deploy an additional resource group when the limit has been reached, it is denied.
 
 ![Azure resource limits](../../_images/govern/design/governance-1-20.png)
 *Figure 12. Azure resource limits.*

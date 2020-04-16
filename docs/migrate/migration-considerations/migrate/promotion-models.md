@@ -1,10 +1,10 @@
 ---
-title: "Promotion models: single-step, staged, or flight"
-description: Understand the impact of promotion on migration activities
+title: "Promotion model types"
+description: Learn about three common promotion models used in cloud migrations and how your choice of model affects activities seen within the migrate and optimize processes.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

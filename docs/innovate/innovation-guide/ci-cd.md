@@ -4,7 +4,7 @@ description: Help developer teams build productively, foster secure global colla
 author: absheik
 ms.author: absheik
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-new, AQC
@@ -82,7 +82,7 @@ To create a DevOps project:
 2. Select **Create DevOps project**.
 3. Select **Runtime, Framework and Service**.
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/microsoft.visualstudio%2Faccount%2Fproject]" submitText="Go to Azure DevOps Project" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Project" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -140,4 +140,4 @@ Game development is one example of an industry that's embracing LiveOps today. M
 
 PlayFab offers differentiated, higher-margin LiveOps tools and services to boost profitability and extend game lifespans. PlayFab is fully device and platform agnostic and can be easily integrated with social identity providers like Facebook or Steam, store platforms to orchestrate commerce, and device platforms like iOS, Android, Xbox, and PlayStation. The Azure data estate enables PlayFab to provide intelligent services to help our customers make better games and smarter decisions, acquire and keep players, and learn faster by running more experiments and iterating more quickly.
 
-**Go to the [Azure PlayFab documentation](https://docs.microsoft.com/gaming/playfab/personas/liveops/liveops)**
+**Go to the [Azure PlayFab documentation](https://docs.microsoft.com/gaming/playfab)**

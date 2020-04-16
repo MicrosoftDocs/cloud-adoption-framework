@@ -4,7 +4,7 @@ description: Help enable an expanded governance model with key activities like i
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -41,7 +41,7 @@ In the image above, the governance strategy (risk, policy and compliance, monito
 
 ## An incremental approach to cloud governance
 
-An incremental approach to cloud governance assumes that it is unacceptable to exceed the [business' tolerance for risk](./risk-tolerance.md). Instead, it assumes that the role of governance is to accelerate business change, help engineers understand architecture guidelines, and ensure that [business risks](./business-risk.md) are regularly communicated and remediated. Alternatively, the traditional role of governance can become a barrier to adoption by engineers or by the business as a whole.
+An incremental approach to cloud governance assumes that it is unacceptable to exceed the [business's tolerance for risk](./risk-tolerance.md). Instead, it assumes that the role of governance is to accelerate business change, help engineers understand architecture guidelines, and ensure that [business risks](./business-risk.md) are regularly communicated and remediated. Alternatively, the traditional role of governance can become a barrier to adoption by engineers or by the business as a whole.
 
 With an incremental approach to cloud governance, there is sometimes a natural friction between teams building new business solutions and teams protecting the business from risks. However, in this model those two teams can become peers working in increments or sprints. As peers, the cloud governance team and the cloud adoption teams begin to work together to expose, evaluate, and remediate business risks. This effort can create a natural means of reducing friction and building collaboration between teams.
 

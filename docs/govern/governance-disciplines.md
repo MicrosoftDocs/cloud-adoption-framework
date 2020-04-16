@@ -84,7 +84,7 @@ With any cloud platform, there are common governance disciplines that help infor
                     </div>
                     <div class="cardText">
                         <h3>Security Baseline</h3>
-                        <p>Security is a complex topic, unique to each company. Once security requirements are established, cloud governance policies and enforcement apply those requirements across network, data, and asset configurations.</p>
+                        <p>Security is a complex subject, unique to each company. Once security requirements are established, cloud governance policies and enforcement apply those requirements across network, data, and asset configurations.</p>
                     </div>
                 </div>
             </div>

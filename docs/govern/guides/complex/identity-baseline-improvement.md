@@ -4,11 +4,13 @@ description: Use the Cloud Adoption Framework for Azure to learn about adding Id
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/06/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
+
+<!-- cSpell:ignore CFO's MPLS -->
 
 # Governance guide for complex enterprises: Improve the Identity Baseline discipline
 

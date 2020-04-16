@@ -1,10 +1,10 @@
 ---
-title: "Apply design principles and advanced operations"
-description: Apply design principles and advanced operations
+title: "Design principles and advanced operations"
+description: Learn to apply design principles and advanced options to create an offering that provides a minimum level of business commitment for all supported workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---

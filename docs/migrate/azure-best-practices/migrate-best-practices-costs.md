@@ -1,6 +1,6 @@
 ---
-title: "Best practices for costing and sizing workloads migrated to Azure"
-description: Get best practices for costing and sizing workloads migrated to Azure.
+title: "Costing and sizing workloads migrated to azure"
+description: Use the Cloud Adoption Framework for Azure to learn best practices for costing and sizing workloads migrated to Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/08/2018
@@ -136,20 +136,20 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 **Type** | **Details** | **Usage**
 --- | --- | ---
-**Locally redundant storage (LRS)** | Protects against a local outage by replicating within a single storage unit to a separate fault domain and update domain. Keeps multiple copies of your data in one datacenter. Provides at least 99.999999999 % (11 9\'s) durability of objects over a given year. | Consider if your app stores data that can be easily reconstructed.
-**Zone-redundant storage (ZRS)** | Protects again a datacenter outage by replicating across three storage clusters in a single region. Each storage cluster is physically separated and located in its own availability zone. Provides at least 99.9999999999 % (12 9\'s) durability of objects over a given year by keeping multiple copies of your data across multiple datacenters or regions. | Consider if you need consistency, durability, and high availability. Might not protect against a regional disaster when multiple zones are permanently affected.
-**Geographically redundant storage (GRS)** | Protects against an entire region outage by replicating data to a secondary region hundreds of miles away from the primary. Provides at least 99.99999999999999 % (16 9\'s) durability of objects over a given year. | Replica data isn't available unless Microsoft initiates a failover to the secondary region. If failover occurs, read and write access is available.
-**Read-access geographically redundant storage (RA-GRS)** | Similar to GRS. Provides at least 99.99999999999999 % (16 9\'s) durability of objects over a given year | Provides and 99.99 % read availability by allowing read access from the second region used for GRS.
+**Locally redundant storage (LRS)** | Protects against a local outage by replicating within a single storage unit to a separate fault domain and update domain. Keeps multiple copies of your data in one datacenter. Provides at least 99.999999999 percent (eleven 9's) durability of objects over a given year. | Consider if your app stores data that can be easily reconstructed.
+**Zone-redundant storage (ZRS)** | Protects again a datacenter outage by replicating across three storage clusters in a single region. Each storage cluster is physically separated and located in its own availability zone. Provides at least 99.9999999999 percent (twelve 9's) durability of objects over a given year by keeping multiple copies of your data across multiple datacenters or regions. | Consider if you need consistency, durability, and high availability. Might not protect against a regional disaster when multiple zones are permanently affected.
+**Geographically redundant storage (GRS)** | Protects against an entire region outage by replicating data to a secondary region hundreds of miles away from the primary. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a given year. | Replica data isn't available unless Microsoft initiates a failover to the secondary region. If failover occurs, read and write access is available.
+**Read-access geographically redundant storage (RA-GRS)** | Similar to GRS. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a given year | Provides and 99.99 percent read availability by allowing read access from the second region used for GRS.
 
 **Learn more:**
 
 - [Review](https://azure.microsoft.com/pricing/details/storage) Azure Storage pricing.
 - [Learn about](https://docs.microsoft.com/azure/storage/common/storage-import-export-service) Azure Import/Export for migration large amounts of data to the Azure blobs and files.
-- [Compare](https://docs.microsoft.com/azure/storage/common/storage-decide-blobs-files-disks?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) blobs, files, and disk storage data types.
+- [Compare](https://docs.microsoft.com/azure/storage/common/storage-decide-blobs-files-disks?toc=/azure/storage/blobs/toc.json) blobs, files, and disk storage data types.
 - [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers) about access tiers.
-- [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) different types of storage accounts.
-- Learn about [storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), [LRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), [ZRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-zrs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), [GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json), and [Read-access GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs?toc=%2fazure%2fstorage%2fqueues%2ftoc.json#read-access-to-data-in-the-secondary-region).
-- [Learn more](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) about Azure Files.
+- [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview?toc=/azure/storage/blobs/toc.json) different types of storage accounts.
+- Learn about [Azure storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), including LRS, ZRS, GRS, and read-access GRS.
+- Learn more about [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction).
 
 ## Best practice: Take advantage of Azure Hybrid benefits
 
@@ -187,7 +187,7 @@ Using Azure Reserved VM instances, you prepay for a one or three-year term VM in
 
 It's inevitable that eventually you'll have more than one Azure subscription. For example, you might need an additional subscription to separate development and production boundaries, or you might have a platform that requires a separate subscription for each client. Having the ability to aggregate data reporting across all the subscriptions into a single platform is a valuable feature.
 
-To do this, you can use Azure Cost Management APIs. Then, after aggregating data into a single source such as Azure SQL, you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group etc. You don't need to provide them with full access to Azure billing data.
+To do this, you can use Azure Cost Management APIs. Then, after aggregating data into a single source such as Azure SQL, you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group, or other information. You don't need to provide them with full access to Azure billing data.
 
 **Learn more:**
 
@@ -236,11 +236,11 @@ In Cost Management, you can:
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/cost-management/overview) of Azure Cost Management.
-- [Learn how to](https://docs.microsoft.com/azure/cost-management/cost-mgt-best-practices) optimize your cloud investment with Azure Cost Management.
-- [Learn how to](https://docs.microsoft.com/azure/cost-management/use-reports) use Azure Cost Management reports.
-- [Get a tutorial](https://docs.microsoft.com/azure/cost-management/tutorial-acm-opt-recommendations?toc=/azure/billing/TOC.json) on optimizing costs from recommendations.
-- [Review](https://docs.microsoft.com/rest/api/consumption/budgets) the Azure Consumption API.
+- Get an overview of [Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview).
+- Learn how to [optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices).
+- Learn how to [use Azure Cost Management reports](https://docs.microsoft.com/azure/cost-management/use-reports).
+- Get a [tutorial on optimizing costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/toc.json).
+- Review the [Azure Consumption API](https://docs.microsoft.com/rest/api/consumption/budgets).
 
 ## Best practice: Monitor resource utilization
 
@@ -256,7 +256,7 @@ In Azure you pay for what you use, when resources are consumed, and you don't pa
 
 - Get an overview of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) and [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview).
 - [Get](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations) Advisor cost recommendations.
-- [Learn how to [optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management/tutorial-acm-opt-recommendations?toc=/azure/billing/TOC.json), and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
+- [Learn how to [optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/billing/toc.json), and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
 - Learn about the [Azure Resource Optimization (ARO) Toolkit](https://github.com/Azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ## Best practice: Implement resource group budgets
@@ -269,7 +269,7 @@ Often, resource groups are used to represent cost boundaries. Together with this
 **Learn more:**
 
 - [Learn how to](https://docs.microsoft.com/azure/billing/billing-cost-management-budget-scenario) manage costs with Azure Budgets.
-- [Follow a tutorial](https://docs.microsoft.com/azure/cost-management/tutorial-acm-create-budgets?toc=/azure/billing/TOC.json) to create and manage an Azure budget.
+- [Follow a tutorial](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/billing/toc.json) to create and manage an Azure budget.
 
 ## Best practice: Optimize Azure Monitor retention
 
@@ -283,7 +283,7 @@ As you move resources into Azure and enable diagnostic logging for them, you gen
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-usage-and-estimated-costs) monitoring usage and estimated costs.
+- [Learn about](https://docs.microsoft.com/azure/azure-monitor/platform/usage-estimated-costs) monitoring usage and estimated costs.
 
 ## Best practice: Optimize storage
 
@@ -303,7 +303,7 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 The ultimate goal of running a VM in the cloud is to maximize the CPU, memory, and disk that it uses. If you discover VMs that aren't optimized, or have frequent periods when VMs aren't used, it makes sense to either shut them down, or downscale them using virtual machine scale sets.
 
-You can optimize a VM with Azure Automation, virtual machine scale sets, auto-shutdown, and scripted or third-party solutions.
+You can optimize a VM with Azure Automation, virtual machine scale sets, autoshutdown, and scripted or third-party solutions.
 
 **Learn more:**
 

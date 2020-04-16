@@ -4,7 +4,7 @@ description: Learn the basics about the internal structure and functioning of th
 author: alexbuckgit
 ms.author: abuck
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.custom: governance
@@ -36,7 +36,7 @@ So fundamentally, Azure is a huge collection of servers and networking hardware 
 
 ## Next steps
 
-Now that you understand Azure internals, learn about cloud resource governance.
+Learn more about cloud adoption with the [Microsoft Cloud Adoption Framework for Azure](../index.md).
 
 > [!div class="nextstepaction"]
-> [Learn about resource governance](../govern/resource-consistency/what-is-governance.md)
+> [Learn about the Microsoft Cloud Adoption Framework for Azure](../index.md)

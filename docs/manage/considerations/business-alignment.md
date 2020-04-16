@@ -1,10 +1,10 @@
 ---
-title: "Business alignment: Cloud management and operations"
-description: Business Alignment - Cloud Management and Operations
+title: "Business alignment in cloud management"
+description: Use the Cloud Adoption Framework for Azure to learn how to better manage your cloud operations and develop tighter business alignment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -17,7 +17,7 @@ In on-premises environments, IT assets (applications, virtual machines, VM hosts
 
 The first step in creating business alignment is to ensure term alignment. IT management, like most engineering professions, has amassed a collection of jargon, or highly technical terms. Such terms can lead to confusion for business stakeholders and make it difficult to map management services to business value.
 
-Fortunately, the process of developing a cloud adoption strategy and cloud adoption plan creates an ideal opportunity to remap these terms. The process also creates opportunities to rethink commitments to operational management, in partnership with the business. The following article series walks you through this new approach across three specific terms that can help improve conversations among business stakeholders: 
+Fortunately, the process of developing a cloud adoption strategy and cloud adoption plan creates an ideal opportunity to remap these terms. The process also creates opportunities to rethink commitments to operational management, in partnership with the business. The following article series walks you through this new approach across three specific terms that can help improve conversations among business stakeholders:
 
 - **[Criticality](./criticality.md):** Mapping workloads to business processes. Ranking criticality to focus investments.
 - **[Impact](./impact.md):** Understanding the impact of potential outages to aid in evaluating return on investment for cloud management.

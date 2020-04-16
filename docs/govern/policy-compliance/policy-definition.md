@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn to establish po
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
@@ -50,7 +50,7 @@ Individual cloud policy statements are guidelines for addressing specific risks 
 - **Policy statement:** A concise explanation of the policy requirements and goals.
 - **Design or technical guidance:** Actionable recommendations, specifications, or other guidance to support and enforce this policy that IT teams and developers can use when designing and building their cloud deployments.
 
-If you need help getting started with defining policies, consult the [governance disciplines](../governance-disciplines.md) introduced in the governance section overview. The articles for each of these disciplines includes examples of common business risks encountered when moving to the cloud and sample policies used to remediate those risks (for example, see the Cost Management discipline's [sample policy definitions](../cost-management/policy-statements.md)).
+If you need help getting started with defining policies, consult the [governance disciplines](../governance-disciplines.md) introduced in the governance section overview. The articles for each of these disciplines includes examples of common business risks encountered when moving to the cloud and sample policies used to remediate those risks. For example, see the Cost Management discipline's [sample policy definitions](../cost-management/policy-statements.md).
 
 ## Incremental governance and integrating with existing policy
 

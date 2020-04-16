@@ -1,10 +1,10 @@
 ---
-title: "Guidance to developing a business change plan"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+title: "Develop a business change plan"
+description: Use the Cloud Adoption Framework for Azure to learn about how a business change plan can help you implement a broader user adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
@@ -60,5 +60,7 @@ After business change is documented and planned, [business testing](./business-t
 > [Guidance for business testing (UAT) during migration](./business-test.md)
 
 ## References
+
+<!-- cSpell:ignore Eason -->
 
 - Eason, K. (1988) _Information technology and organizational change_, New York: Taylor and Francis.

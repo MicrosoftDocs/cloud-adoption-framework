@@ -1,10 +1,10 @@
 ---
 title: "Resource consistency decision guide"
-description: Understand the importance of your cloud estate’s resource consistency and the factors that drive requirements for resource consistency.
+description: Understand the importance of your cloud estate's resource consistency and the factors that drive requirements for resource consistency.
 author: doodlemania2
 ms.author: dermar
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
@@ -24,7 +24,7 @@ As these factors increase in importance, the benefits of ensuring consistent dep
 
 ## Basic grouping
 
-In Azure, [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) are a core resource organization mechanism to logically group resources within a subscription.
+In Azure, [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#resource-groups) are a core resource organization mechanism to logically group resources within a subscription.
 
 Resource groups act as containers for resources with a common lifecycle as well as shared management constraints such as policy or role-based access control (RBAC) requirements. Resource groups can't be nested, and resources can only belong to one resource group. All control plane actions act on all resources in a resource group. For example, deleting a resource group also deletes all resources within that group. The preferred pattern for resource group management is to consider:
 
@@ -35,13 +35,13 @@ Resource groups act as containers for resources with a common lifecycle as well 
 If you answered _NO_ to any of the above points, the resource in question should be placed elsewhere, in another resource group.
 
 > [!IMPORTANT]
-> Resource groups are also region specific; however, it is common for resources to be in different regions within the same resource group because they are managed together as described above. For more information on region selection, see the [Regions decision guide](../regions/index.md).
+> Resource groups are also region specific; however, it is common for resources to be in different regions within the same resource group because they are managed together as described above. For more information on region selection, see [Multiple regions](../../migrate/azure-best-practices/multiple-regions.md).
 
 ## Deployment consistency
 
 Building on top of the base resource grouping mechanism, the Azure platform provides a system for using templates to deploy your resources to the cloud environment. You can use templates to create consistent organization and naming conventions when deploying workloads, enforcing those aspects of your resource deployment and management design.
 
-[Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/template-deployment-overview) allow you to repeatedly deploy your resources in a consistent state using a predetermined configuration and resource group structure. Resource Manager templates help you define a set of standards as a basis for your deployments.
+[Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/overview) allow you to repeatedly deploy your resources in a consistent state using a predetermined configuration and resource group structure. Resource Manager templates help you define a set of standards as a basis for your deployments.
 
 For example, you can have a standard template for deploying a web server workload that contains two virtual machines as web servers combined with a load balancer to distribute traffic between the servers. You can then reuse this template to create structurally identical set of virtual machines and load balancer whenever this type of workload is needed, only changing the deployment name and IP addresses involved.
 

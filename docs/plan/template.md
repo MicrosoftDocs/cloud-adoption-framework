@@ -1,17 +1,17 @@
 ---
-title: "Deploy the cloud adoption plan to Azure DevOps"
-description: Deploy the template for the cloud adoption plan
+title: "Cloud adoption plan deployment to Azure DevOps"
+description: Learn how to quickly deploy a backlog to Azure DevOps by using a cloud adoption plan template that aligns cloud adoption efforts to a standardized process.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
 # Cloud adoption plan and Azure DevOps
 
-Azure DevOps is the set of cloud-based tools for Azure customers who manage iterative projects. It also includes tools for managing deployment pipelines and other important aspects of DevOps. 
+Azure DevOps is the set of cloud-based tools for Azure customers who manage iterative projects. It also includes tools for managing deployment pipelines and other important aspects of DevOps.
 
 In this article, you'll learn how to quickly deploy a backlog to Azure DevOps by using a cloud adoption plan template. This template aligns cloud adoption efforts to a standardized process based on the guidance in the Cloud Adoption Framework.
 
@@ -25,7 +25,7 @@ To deploy the cloud adoption plan, open the [Azure DevOps Demo Generator](https:
 4. Select **Create Project** to create a new project in your tenant, based on the plan template. A progress bar show your progress toward deploying the project.
 5. When deployment is finished, select **Navigate to project** to see your new project.
 
-After your project has been created, continue through this article series to see how you can modify the template to align to your cloud adoption plan.
+After your project has been created, continue through this article series to learn how to modify the template to align to your cloud adoption plan.
 
 For additional support and guidance on this tool, see [Azure DevOps Services Demo Generator](https://docs.microsoft.com/azure/devops/demo-gen/?toc=/azure/devops/demo-gen/toc.json&bc=/azure/devops/demo-gen/breadcrumb/toc.json&view=azure-devops).
 

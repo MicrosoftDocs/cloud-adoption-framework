@@ -1,6 +1,6 @@
 ---
 title: "Develop a cloud adoption strategy"
-description: Use the cloud to advance your business strategy.
+description: Use the Cloud Adoption Framework for Azure to understand how the cloud can help advance your business strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019

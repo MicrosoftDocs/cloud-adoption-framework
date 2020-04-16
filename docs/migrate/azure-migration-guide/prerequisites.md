@@ -1,25 +1,25 @@
 ---
 title: "Prerequisites for migrating to Azure"
-description: Prerequisites for migrating to Azure
+description: Use the Cloud Adoption Framework for Azure to understand how to prepare for Azure migration and what prerequisites you need for a successful migration project.
 author: matticusau
 ms.author: mlavery
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="chromeless"
-
-# Prerequisites
-
-::: zone-end
-
 ::: zone target="docs"
 
 # Prerequisites for migrating to Azure
+
+::: zone-end
+
+::: zone target="chromeless"
+
+# Prerequisites
 
 ::: zone-end
 
@@ -39,7 +39,7 @@ Each of the above scenarios may be entry points for extending your cloud footpri
 
 ## Migration characteristics
 
-The guide assumes that prior to this migration, your digital estate consists mostly of on-premises hosted infrastructure and may include hosted business-critical applications. After a successful migration, your data estate may look very much how it did on-premises but with the infrastructure hosted in cloud resources. Alternatively, the ideal data estate is a variation of your current data estate, since it has aspects of your on-premises infrastructure with components which have been refactored to optimize and take advantage of the cloud platform.
+The guide assumes that prior to this migration, your digital estate consists mostly of on-premises hosted infrastructure and may include hosted business-critical applications. After a successful migration, your data estate may look very much how it did on-premises but with the infrastructure hosted in cloud resources. Alternatively, the ideal data estate is a variation of your current data estate, since it has aspects of your on-premises infrastructure with components that have been refactored to optimize and take advantage of the cloud platform.
 
 The focus of this migration journey is to achieve:
 

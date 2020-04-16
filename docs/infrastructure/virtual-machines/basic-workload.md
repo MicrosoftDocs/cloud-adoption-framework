@@ -4,7 +4,7 @@ description: Learn about core cloud infrastructure components and basic workload
 author: alexbuckgit
 ms.author: abuck
 ms.date: 12/31/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
@@ -39,7 +39,7 @@ Once you deploy a simple workload, you can learn more about the best practices f
 
 ## Single Windows or Linux VM (IaaS)
 
-For a simple workload that runs on a VM, the first step is to deploy a virtual network. All infrastructure as a service (IaaS) resources in Azure such as virtual machines, load balancers, and gateways, require a virtual network. Learn about [Azure virtual networks](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview), and then follow the steps to [deploy a Virtual Network to Azure using the portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal). When you specify the settings for the virtual network in the Azure portal, be sure to specify the name of the resource group created above.
+For a simple workload that runs on a VM, the first step is to deploy a virtual network. All infrastructure as a service (IaaS) resources in Azure such as virtual machines, load balancers, and gateways, require a virtual network. Learn about [Azure virtual networks](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview), and then follow the steps to [deploy a virtual network to Azure using the portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal). When you specify the settings for the virtual network in the Azure portal, be sure to specify the name of the resource group created above.
 
 The next step is to decide whether to deploy a single Windows or Linux VM. For Windows VM, follow the steps to [deploy a Windows VM to Azure with the portal](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal). Again, when you specify the settings for the virtual machine in the Azure portal, specify the name of the resource group created above.
 

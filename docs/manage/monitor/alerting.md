@@ -1,14 +1,16 @@
 ---
 title: "Cloud monitoring guide: Alerting"
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
+description: Use the Cloud Adoption Framework for Azure to learn how to determine when to use Azure Monitor or System Center Operations Manager in Microsoft Azure.
 author: MGoedtel
 ms.author: magoedte
 ms.date: 06/26/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor
 ---
+
+<!-- cSpell:ignore kusto multiresource multisignal -->
 
 # Cloud monitoring guide: Alerting
 
@@ -55,7 +57,7 @@ Depending on the feature and configuration you're using, you can store monitorin
 
 Azure Monitor has four types of alerts, each somewhat tied to the repository that the data is stored in:
 
-- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric): Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to “normal” state.
+- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric): Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to "normal" state.
 
 - [Log query alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-log-query): Available to alerts on content in the Application Insights or Azure logs stores. It can also alert based on cross-workspace queries.
 
@@ -86,7 +88,7 @@ Latency is one of the most critical decisions driving alerting and a quick resol
 
 That said, there are some important footnotes to this rule.
 
-**Guest OS telemetry** has a number of paths to get into the system.
+**Guest OS telemetry** has multiple paths to get into the system.
 
 - The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure Diagnostics extension and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor).
 
@@ -113,9 +115,9 @@ If you aren't using Azure Monitor for VMs, make the job of creating alerts and m
 
 Used together, these features can save time by minimizing alert notifications and the management of the underlying alerts.
 
-### Alerts limitations
+### Limits on alerts
 
-Be sure to note the [limitations](https://docs.microsoft.com/azure/azure-subscription-service-limits#azure-monitor-limits) on the number of alerts you can create. Some limits (but not all of them) can be increased by calling support.
+Be sure to note the [limits on the number of alerts you can create](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-monitor-limits). Some limits (but not all of them) can be increased by calling support.
 
 ### Best query experience
 

@@ -1,17 +1,17 @@
 ---
 title: "Assess each workload and refine plans"
-description: This section of the Azure migration guide helps you assess of your environment to determine what to migrate and which migration methods to consider.
+description: Use the Cloud Adoption Framework for Azure to assess your environment's suitability for migration and which methods to consider.
 author: matticusau
 ms.author: mlavery
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-# Assess each workload and refine plans
+# Assess workloads and refine plans
 
 The resources in this guide help you assess each workload, challenge assumptions about each workload's suitability for migration, and finalize architectural decisions about migration options.
 

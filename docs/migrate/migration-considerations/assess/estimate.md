@@ -1,10 +1,10 @@
 ---
 title: "Estimate cloud costs prior to migration"
-description: Explanation of the process of estimating cloud costs prior to migration.
+description: Understand the factors that can affect decisions and execution activities, as well as various options for estimating cloud costs.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

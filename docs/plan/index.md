@@ -1,6 +1,6 @@
 ---
 title: "Define a cloud adoption plan"
-description: Guide technical efforts with a defined cloud adoption plan
+description: Use the Cloud Adoption Framework for Azure to learn how to guide technical efforts with a defined cloud adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019
@@ -105,7 +105,7 @@ Download the [Cloud Adoption Framework strategy and planning template](https://a
 
 ## Next steps
 
-Start building the cloud adoption plan with a focus on the [digital estate](../digital-estate/index.md).
+Start building the cloud adoption plan by learning about the [Five Rs of Cloud Rationalization](../digital-estate/5-rs-of-rationalization.md).
 
 > [!div class="nextstepaction"]
-> [Digital estate](../digital-estate/index.md)
+> [Five Rs of Cloud Rationalization](../digital-estate/5-rs-of-rationalization.md)

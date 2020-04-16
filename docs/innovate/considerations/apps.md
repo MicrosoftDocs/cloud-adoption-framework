@@ -4,7 +4,7 @@ description: Understand how to create app solutions to shape data and create exp
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
@@ -30,7 +30,7 @@ To be ready for innovation, all application development should start with a shar
 
 Professional developers are a vital component of innovation. When a hypothesis proves accurate at scale, professional developers are required to stabilize and prepare the solution for scale. Most of the principles referenced in this article require support from professional developers. Unfortunately, current trends suggest there's a greater demand for professional developers than there are developers. Moreover, the cost and pace of innovation can be less favorable when professional development is deemed necessary. In response to these challenges, citizen developers provide a way to scale development efforts and accelerate early hypothesis testing.
 
-The use of citizen developers can be viable and effective when early hypotheses can be validated through tools like [PowerApps](https://docs.microsoft.com/powerapps/powerapps-overview) for app interfaces, [AI Builder](https://docs.microsoft.com/powerapps/use-ai-builder) for processes and predictions, [Microsoft Flow](https://docs.microsoft.com/flow) for workflows, and [Power BI](https://docs.microsoft.com/power-bi) for data consumption.
+The use of citizen developers can be viable and effective when early hypotheses can be validated through tools like [PowerApps](https://docs.microsoft.com/powerapps/powerapps-overview) for app interfaces, [AI Builder](https://docs.microsoft.com/powerapps/use-ai-builder) for processes and predictions, [Microsoft Power Automate](https://docs.microsoft.com/power-automate) for workflows, and [Power BI](https://docs.microsoft.com/power-bi) for data consumption.
 
 > [!NOTE]
 > When you rely on citizen developers to test hypotheses, it's advisable to have some professional developers on hand to provide support, review, and guidance. After a hypothesis is validated at scale, a process for transitioning the application into a more robust programming model will accelerate returns on the innovation. By involving professional developers in process definitions early on, you can realize cleaner transitions later.
@@ -98,9 +98,9 @@ If you're trying to scale or meet global demand for an existing solution, this a
 
 The more there is to maintain within a solution, the slower that solution will iterate. This means you can accelerate innovation by reducing the impact of operations on available bandwidth.
 
-To prepare for the many iterations required to deliver an innovative solution, it's important to think ahead. For example, minimize operational burdens early in the process by favoring serverless options. In Azure, serverless application options could include [Azure App Service](https://docs.microsoft.com/azure/app-service/overview) or [containers](https://docs.microsoft.com/azure/architecture/cloud-adoption/migrate/azure-best-practices/contoso-migration-rearchitect-container-sql).
+To prepare for the many iterations required to deliver an innovative solution, it's important to think ahead. For example, minimize operational burdens early in the process by favoring serverless options. In Azure, serverless application options could include [Azure App Service](https://docs.microsoft.com/azure/app-service/overview) or [containers](https://docs.microsoft.com/azure/containers).
 
-In parallel, Azure provides serverless transaction data options that also reduce overhead. The [database products list](https://docs.microsoft.com/azure/#pivot=products&panel=databases) provides options for hosting data without the need for a full data platform.
+In parallel, Azure provides serverless transaction data options that also reduce overhead. The [Azure product catalog](https://docs.microsoft.com/azure) provides database options that host data without the need for a full data platform.
 
 ## Next steps
 

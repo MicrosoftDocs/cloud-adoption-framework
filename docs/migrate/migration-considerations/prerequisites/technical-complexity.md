@@ -1,13 +1,15 @@
 ---
-title: "Prepare for technical complexity: agile change management"
-description: Preparing for technical complexity - agile change management
+title: "Prepare for agile change management complexity"
+description: Use the Cloud Adoption Framework for Azure to prepare cloud architects for a conversation with project management to explain the concept of change management.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore ITSM TOGAF -->
 
 # Prepare for technical complexity: agile change management
 
@@ -36,7 +38,7 @@ This acronym is not intended as a basis for rigid adherence but should help guid
 
 ## Migration backlog: Aligning business priorities and timing
 
-The migration backlog allows you to track your top-level portfolio of migratable workloads. Prior to migration, the cloud strategy team and the cloud adoption team are encouraged to perform a review of the current [digital estate](../../../digital-estate/index.md), and agree to a prioritized list of workloads to be migrated. This list forms the basis of the initial migration backlog.
+The migration backlog allows you to track your top-level portfolio of workloads that can be migrated. Prior to migration, the cloud strategy team and the cloud adoption team are encouraged to perform a review of the current [digital estate](../../../digital-estate/index.md), and agree to a prioritized list of workloads to be migrated. This list forms the basis of the initial migration backlog.
 
 Initially, workloads on the migration backlog are unlikely to meet the INVEST criteria outlined in the previous section. Instead, they serve as a logical grouping of assets from an initial inventory as a placeholder for future work. Those placeholders may not be technically accurate, but they serve as the basis for coordination with the business.
 
@@ -71,7 +73,7 @@ A partnership between the cloud strategy team and the cloud adoption team collab
 
 - **Refined inventory.** Validation of required assets to be migrated. Often validated through log or monitoring data at the host, network, or OS level to ensure an accurate understanding of network and hardware dependencies of each asset under standard load.
 - **Usage patterns.** An understanding of the patterns of usage from end users. These patterns often include an analysis of end-user geographical distribution, network routes, seasonal usage spikes, daily/hourly usage spikes, and end-user composition (interval versus external).
-- **Performance expectations.** Analysis of available log data capturing throughput, pageviews, network routes, and other performance data required to replicate the end-user experience.
+- **Performance expectations.** Analysis of available log data capturing throughput, page views, network routes, and other performance data required to replicate the end-user experience.
 - **Dependencies.** Analysis of network traffic and application usage patterns to identify any additional workload dependencies, which should be factored into sequencing and environmental readiness. Don't include a workload in a release until one of the following criteria can be met:
   - All dependent workloads have been migrated.
   - Network and security configurations have been implemented to allow the workload to access all dependencies in alignment with existing performance expectations.

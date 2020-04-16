@@ -4,7 +4,7 @@ description: Use cloud rationalization to evaluate your digital assets and deter
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ms.custom: governance
@@ -119,8 +119,8 @@ In parallel with continued rationalization, the cloud adoption team can begin mi
 - Strengthen skills with the cloud provider's platform.
 - Define the core services (and Azure standards) needed to fit the long-term vision.
 - Better understand how operations might need to change later in the transformation.
-- Understand any inherent business risks and the business' tolerance for those risks.
-- Establish a baseline or minimum viable product (MVP) for governance based on the business' risk tolerance.
+- Understand any inherent business risks and the business's tolerance for those risks.
+- Establish a baseline or minimum viable product (MVP) for governance based on the business's risk tolerance.
 
 ## Release planning
 
@@ -138,7 +138,7 @@ The cloud adoption teams and the cloud strategy team can work together on the qu
 
 After the two teams agree on the qualitative analysis criteria, assessment can become a task within each iteration. Reaching consensus on assessment criteria usually requires two to three releases.
 
-After the assessment has moved into the incremental execution process of migration, the cloud adoption team can iterate faster on assessment and architecture. At this stage, the cloud strategy team is also abstracted, which reduces the drain on their time. This also enables the cloud strategy team to focus on prioritizing the applications that are not yet in a specific release, which ensures tight alignment with changing market conditions.
+After the assessment has moved into the incremental execution process of migration, the cloud adoption team can iterate faster on assessment and architecture. At this stage, the cloud strategy team is also abstracted, reducing the drain on their time. This also enables the cloud strategy team to focus on prioritizing the applications that are not yet in a specific release, ensuring tight alignment with changing market conditions.
 
 Not all of the prioritized applications will be ready for migration. Sequencing is likely to change as the team does deeper qualitative analysis and discovers business events and dependencies that might prompt reprioritization of the backlog. Some releases might group together a small number of workloads. Others might just contain a single workload.
 

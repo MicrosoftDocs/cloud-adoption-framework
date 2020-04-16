@@ -1,15 +1,18 @@
 ---
-title: Manage costs and billing for your Azure resources
-description: Understand invoices and learn how to set up budgets and payments for your Azure resources.
+title: Manage costs and billing for Azure resources
+description: Use the Cloud Adoption Framework for Azure to understand invoices and learn how to set up budgets and payments for your Azure resources.
 author: dchimes
 ms.author: kfollis
 ms.date: 04/09/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
+
+<!-- cSpell:ignore dchimes -->
+
 # Manage costs and billing for your Azure resources
 
 Cost management is the process of effectively planning and controlling costs involved in your business. Cost management tasks are typically performed by finance, management, and app teams. Azure Cost Management can help you plan with cost in mind. It can also help you to analyze costs effectively and take action to optimize cloud spending.

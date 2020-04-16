@@ -1,10 +1,10 @@
 ---
-title: "Understand the impact of global market decisions"
-description: Explanation of the concept of global markets
+title: "Impact of global market decisions"
+description: Use the Cloud Adoption Framework for Azure to understand how global market decisions can affect the transformation journey to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
@@ -17,7 +17,7 @@ The cloud opens new opportunities to perform on a global scale. Barriers to glob
 
 ## Data sovereignty
 
-Many geopolitical regions have established data sovereignty regulations. Those regulations restrict where data can be stored, what data can leave the country of origin, and what data can be collected about citizens of that region. Before operating any cloud-based solution in a foreign geography, you should understand how that cloud provider handles data sovereignty. More information on Azure's approach for each geography is available [here](https://azure.microsoft.com/global-infrastructure/geographies). For more information about compliance in Azure, see [Privacy at Microsoft](https://www.microsoft.com/trustcenter/privacy) in the Microsoft Trust Center.
+Many geopolitical regions have established data sovereignty regulations. Those regulations restrict where data can be stored, what data can leave the country of origin, and what data can be collected about citizens of that region. Before operating any cloud-based solution in a foreign geography, you should understand how that cloud provider handles data sovereignty. For more information on Azure's approach for each geography, see [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies). For more information about compliance in Azure, see [Privacy at Microsoft](https://www.microsoft.com/trust-center/privacy) in the Microsoft Trust Center.
 
 The remainder of this article assumes legal counsel has reviewed and approved operations in a foreign country.
 
@@ -37,8 +37,7 @@ It is equally important to understand the usage patterns of external users, like
 
 ## Next steps
 
-Once global market decisions have been made and communicated, the team is ready to begin [establishing technical standards](../digital-estate/index.md) against those metrics.
-The result will be a [transformation backlog or migration backlog](..//migrate/migration-considerations/prerequisites/technical-complexity.md).
+Learn about the [skills needed during the Strategy phase](./suggested-skills.md) of your cloud adoption journey.
 
 > [!div class="nextstepaction"]
-> [Assess the digital estate](../digital-estate/index.md)
+> [Skills relevant to Strategy](./suggested-skills.md)

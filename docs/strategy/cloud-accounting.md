@@ -1,13 +1,15 @@
 ---
 title: "What is cloud accounting?"
-description: Explanation of the concept of cloud accounting
+description: Use the Cloud Adoption Framework for Azure to understand common cloud accounting models for IT as you begin your cloud migration journey.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
+
+<!-- cSpell:ignore CIOs -->
 
 <!-- markdownlint-disable MD026 -->
 
@@ -19,7 +21,7 @@ The cloud changes how IT accounts for costs, as is described in [Creating a fina
 
 It's often accurate to consider IT a cost center. In the traditional IT accounting model, IT consolidates purchasing power for all IT assets. As we pointed out in the [financial models](./financial-models.md) article, that purchasing power consolidation can include software licenses, recurring charges for CRM licensing, purchase of employee desktops, and other large costs.
 
-When IT serves as a cost center, the perceived value of IT is largely viewed through a procurement management lens. This perception makes it difficult for the board or other executives to understand the true value that IT provides. Procurement costs tend to skew the view of IT by outweighing any other value added by the organization. This view explains why IT is often lumped into the CFO's or COO's responsibilities. This perception of IT is limited and can be short sighted.
+When IT serves as a cost center, the perceived value of IT is largely viewed through a procurement management lens. This perception makes it difficult for the board or other executives to understand the true value that IT provides. Procurement costs tend to skew the view of IT by outweighing any other value added by the organization. This view explains why IT is often lumped into the responsibilities of either the chief financial officer or the chief operating officer. This perception of IT is limited and can be short sighted.
 
 ## Central IT accounting (profit center model)
 
@@ -53,7 +55,7 @@ This model provides a balance between a true chargeback model and more tradition
 
 The choice of accounting models is crucial in system design. The choice of accounting model can affect subscription strategies, naming standards, tagging standards, and policy and blueprint designs.
 
-After you've worked with the business to make decisions about a cloud accounting model and [global markets](./global-markets.md), you have enough information to [develop an Azure foundation](../ready/index.md).
+After you've worked with the business to make decisions about a cloud accounting model and [global markets](./global-markets.md), you have enough information to [choose your first cloud adoption project](./first-adoption-project.md).
 
 > [!div class="nextstepaction"]
-> [Develop an Azure foundation](../ready/index.md)
+> [Choose your first cloud adoption project](./first-adoption-project.md)

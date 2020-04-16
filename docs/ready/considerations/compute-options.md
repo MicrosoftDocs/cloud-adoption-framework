@@ -1,10 +1,10 @@
 ---
 title: Review your compute options
-description: Review your compute options for Azure workloads.
+description: Use the Cloud Adoption Framework for Azure to learn how to determine the compute requirements for hosting your workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
@@ -22,7 +22,7 @@ For each application or service you'll deploy to your landing zone environment, 
 ![Azure compute services decision tree](../../_images/ready/compute-decision-tree.png)
 
 > [!NOTE]
-> Learn more about how to assess compute options for each of your applications or services in the [Azure application architecture guide](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-overview).
+> Learn more about how to assess compute options for each of your applications or services in the [Azure application architecture guide](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree).
 
 ### Key questions
 

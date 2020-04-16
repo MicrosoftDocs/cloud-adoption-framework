@@ -1,17 +1,20 @@
 ---
-title: "Configure Azure server management services for a subscription"
-description: Configure Azure server management services for a subscription
+title: "Configure the service for a subscription"
+description: Learn to configure Azure server management services for a subscription by deploying service agents to your servers and enabling management solutions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
+<!-- cSpell:ignore VMUUID kusto -->
+
 # Configure Azure server management services at scale
 
 You must complete these two tasks to onboard Azure server management services to your servers:
+
 - Deploy service agents to your servers
 - Enable the management solutions
 
@@ -30,7 +33,7 @@ All the management solutions that are discussed in [Azure management tools and s
 
 Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
-<!-- TODO: Add these when available.
+<!-- TODOBACKLOG: Add these when available.
 - [Preview]: Enable Azure Monitor for virtual machine scale sets.
 - [Preview]: Enable Azure Monitor for VMs.
  -->
@@ -173,7 +176,7 @@ After creation is complete, the workspace resource instance displays **AntiMalwa
 
 ### Azure Monitor for VMs
 
-You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace. 
+You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
 
 ### Azure Security Center
 

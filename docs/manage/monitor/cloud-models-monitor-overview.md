@@ -1,14 +1,16 @@
 ---
-title: "Cloud monitoring guide: Monitoring strategy for cloud deployment models"
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
+title: "Monitoring strategy for cloud deployment models"
+description: Use the Cloud Adoption Framework for Azure to learn which monitoring strategy for cloud management to employ.
 author: MGoedtel
 ms.author: magoedte
 ms.date: 10/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor
 ---
+
+<!-- cSpell:ignore savision -->
 
 # Cloud monitoring guide: Monitoring strategy for cloud deployment models
 
@@ -26,7 +28,7 @@ Our strategy includes support for monitoring infrastructure (compute, storage, a
 Azure Monitor is the Azure native platform service that provides a single source for monitoring Azure resources. It's designed for cloud solutions that:
 
 - Are built on Azure.
-- Support a business capability that’s based on virtual machine (VM) workloads or complex architectures that use microservices and other platform resources.
+- Support a business capability that's based on virtual machine (VM) workloads or complex architectures that use microservices and other platform resources.
 
 It monitors all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, and subscription-level events and Azure service health.
 
@@ -153,7 +155,7 @@ This strategy delivers visibility of the network layer, without the need for SNM
 
 ### Monitor with Azure Monitor
 
-Although a migration to the cloud presents numerous challenges, it also includes a number of opportunities. It enables your organization to migrate from one or more on-premises enterprise monitoring tools to not only potentially reduce capital expenditures and operating costs, but also to benefit from the advantages that a cloud monitoring platform such as Azure Monitor can deliver at cloud scale. Examine your monitoring and alerting requirements, configuration of existing monitoring tools, and workloads transitioning to the cloud. After your plan is finalized, configure Azure Monitor.
+Although a migration to the cloud presents numerous challenges, it also provides opportunities. It enables your organization to migrate from one or more on-premises enterprise monitoring tools to not only potentially reduce capital expenditures and operating costs, but also to benefit from the advantages that a cloud monitoring platform such as Azure Monitor can deliver at cloud scale. Examine your monitoring and alerting requirements, configuration of existing monitoring tools, and workloads transitioning to the cloud. After your plan is finalized, configure Azure Monitor.
 
 - Monitor the hybrid infrastructure and applications, from a simple or multitier architecture where components are hosted between Azure, other cloud providers, and your corporate network. The components might include one or more VMs, multiple VMs placed in an availability set or virtual machine scale set, or a containerized application that's deployed to Azure Kubernetes Service (AKS) running on Windows Server or Linux containers.
 

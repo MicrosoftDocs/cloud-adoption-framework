@@ -1,10 +1,10 @@
 ---
-title: "Track costs across business units, environments, or projects"
-description: Tracking costs across business units, environments, or projects
+title: "Track costs across business units and environments"
+description: Use the Cloud Adoption Framework for Azure to understand the decisions and implementation approaches to creating tracking mechanisms.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
@@ -19,7 +19,7 @@ ms.subservice: ready
 
 Cost control, much like governance and other management constructs, depends on a well-managed environment. Establishing such an environment (especially a complex one) requires consistent processes in the classification and organization of all assets.
 
-Assets (also known as resources) include all virtual machines, data sources, and applications deployed to the cloud. Azure provides several mechanisms for classifying and organizing assets. [Scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md) details options for organizing resources based on multiple criteria to establish a well-managed environment. This article focuses on the application of Azure fundamental concepts to provide cloud cost visibility.
+Assets (also known as resources) include all virtual machines, data sources, and applications deployed to the cloud. Azure provides several mechanisms for classifying and organizing assets. [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md) details options for organizing resources based on multiple criteria to establish a well-managed environment. This article focuses on the application of Azure fundamental concepts to provide cloud cost visibility.
 
 ### Classification
 
@@ -53,15 +53,16 @@ The diagram shows best practices but doesn't include these options:
 
 The rest of this article assumes the use of the best-practice approach in the preceding diagram. However, the following articles can help you apply the approach to a resource organization that best fits your company:
 
-- [Scaling with multiple Azure subscriptions](../azure-best-practices/scaling-subscriptions.md)
-- [Deploying a Governance MVP to govern well-managed environment standards](../../govern/guides/complex/index.md)
+- [Scale your Azure environment with multiple subscriptions](../azure-best-practices/scale-subscriptions.md)
+- [Organize and manage your Azure subscriptions](../azure-best-practices/organize-subscriptions.md)
+- [Deploy a Governance MVP to govern well-managed environment standards](../../govern/guides/complex/index.md)
 
 ## Provide the right level of cost access
 
 Managing cost is a team activity. The organization readiness section of the Cloud Adoption Framework defines a small number of core teams and outlines how those teams support cloud adoption efforts. This article expands on the team definitions to define the scope and roles to assign to members of each team for the proper level of visibility into cost management data.
 
-- *Roles* define what a user can do to various assets.
-- *Scope* defines which assets (user, group, service principal, or managed identity) a user can do those things to.
+- **Roles** define what a user can do to various assets.
+- **Scope** defines which assets (user, group, service principal, or managed identity) a user can do those things to.
 
 As a general best practice, we suggest a least-privilege model in assigning people to various roles and scopes.
 
@@ -69,11 +70,11 @@ As a general best practice, we suggest a least-privilege model in assigning peop
 
 Azure Cost Management supports the following built-in roles for each scope:
 
-- [Owner](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner). Can view costs and manage everything, including cost configuration.
-- [Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor). Can view costs and manage everything, including cost configuration, but excluding access control.
-- [Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#reader). Can view everything, including cost data and configuration, but can't make any changes.
-- [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor). Can view costs and manage cost configuration.
-- [Cost Management Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-reader) Can view cost data and configuration.
+- [Owner](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) - Can view costs and manage everything, including cost configuration.
+- [Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) - Can view costs and manage everything, including cost configuration, but excluding access control.
+- [Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#reader) - Can view everything, including cost data and configuration, but can't make any changes.
+- [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor) - Can view costs and manage cost configuration.
+- [Cost Management Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-reader) - Can view cost data and configuration.
 
 As a general best practice, members of all teams should be assigned the role of Cost Management Contributor. This role grants access to create and manage budgets and exports to more effectively monitor and report on costs. However, members of the
 [cloud strategy team](../../organize/cloud-strategy.md) should be set to Cost Management Reader only. That's because they're not involved in setting budgets within the Azure Cost Management tool.
@@ -95,6 +96,8 @@ The following scope and role settings will create the required visibility into c
 
   - In a well-managed environment, the cloud governance team likely has a higher degree of access already, making additional scope assignment for [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor) unnecessary.
 
+<!-- cSpell:ignore automations -->
+
 - [Cloud center of excellence](../../organize/cloud-center-of-excellence.md). Responsibility for managing costs related to shared services requires Cost Management Contributor access at the subscription level. Additionally, this team might require Cost Management Contributor access to resource groups or subscriptions that contain assets deployed by CCoE automations to understand how those automations affect costs.
 
   - **Shared services**. When a cloud center of excellence is engaged, best practice suggests that assets managed by the CCoE are supported from a centralized shared service subscription within a hub and spoke model. In this scenario, the CCoE likely has contributor or owner access to that subscription, making additional scope assignment for [Cost Management Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#cost-management-contributor) unnecessary.
@@ -110,14 +113,14 @@ Azure Cost Management is a well-documented tool for setting budgets and gaining 
 
 ### Get started with Azure Cost Management
 
-For more information on getting started with Azure Cost Management, see [How to optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management/cost-mgt-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
+For more information on getting started with Azure Cost Management, see [How to optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Use Azure Cost Management
 
-- [Create and manage budgets](https://docs.microsoft.com/azure/cost-management/tutorial-acm-create-budgets)
-- [Export cost data](https://docs.microsoft.com/azure/cost-management/tutorial-export-acm-data)
-- [Optimize costs based on recommendations](https://docs.microsoft.com/azure/cost-management/tutorial-acm-opt-recommendations)
-- [Use cost alerts to monitor usage and spending](https://docs.microsoft.com/azure/cost-management/cost-mgt-alerts-monitor-usage-spending)
+- [Create and manage budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets)
+- [Export cost data](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-export-acm-data)
+- [Optimize costs based on recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
+- [Use cost alerts to monitor usage and spending](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending)
 
 ### Use Azure Cost Management to govern AWS costs
 

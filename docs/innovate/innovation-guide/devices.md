@@ -4,12 +4,14 @@ description: Learn how Azure provides a framework for building immersive and eff
 author: umarmohamedusman
 ms.author: umarm
 ms.date: 10/10/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
+
+<!-- cSpell:ignore umarmohamedusman umarm Moovit -->
 
 ::: zone target="docs"
 
@@ -54,7 +56,7 @@ Here are a few features you'll find:
 
 ::: zone target="docs"
 
-**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-dps)**
+**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-hub)**
 
 **Go to [Device Provisioning Services](https://docs.microsoft.com/azure/iot-dps)**
 
@@ -158,7 +160,7 @@ To use Location Intelligence:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Maps%2Faccounts]" submitText="Go to Azure Maps Account" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Maps%2FAccounts]" submitText="Go to Azure Maps Account" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -193,7 +195,7 @@ To use Spatial experiences:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.MixedReality%2FspatialAnchorsAccounts]" submitText="Go to Spatial Anchors Accounts" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.MixedReality%2FSpatialAnchorsAccounts]" submitText="Go to Spatial Anchors Accounts" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -224,7 +226,7 @@ To use Remote Rendering:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Batch%2FbatchAccounts]" submitText="Go to Azure Batch" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Batch%2FBatchAccounts]" submitText="Go to Azure Batch" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

@@ -1,15 +1,17 @@
 ---
 title: Protect and recover in Azure
-description: Ensure business stability by reducing recovery time
+description: Learn how to ensure business stability by reducing recovery time and the likelihood of business interruption.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
+
+<!-- cSpell:ignore siterecovery -->
 
 # Protect and recover in Azure
 
@@ -33,7 +35,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 ::: zone-end
 ::: zone target="chromeless"
 
-## [Azure Backup](#tab/UpdbackupateManagement)
+## [Azure Backup](#tab/AzureBackup)
 
 ::: zone-end
 

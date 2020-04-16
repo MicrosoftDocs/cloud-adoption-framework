@@ -4,11 +4,13 @@ description: Use the Cloud Adoption Framework for Azure to learn about multiple 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
+
+<!-- cSpell:ignore MPLS -->
 
 # Standard enterprise governance guide: Multicloud improvement
 
@@ -27,7 +29,7 @@ In the previous phase of this narrative, the company had begun actively pushing 
 Since then, some things have changed that will affect governance:
 
 - Identity is controlled by an on-premises instance of Active Directory. Hybrid identity is facilitated through replication to Azure Active Directory.
-- IT Operations or Cloud Operations are largely managed by Azure Monitor and related automations.
+- IT Operations or Cloud Operations are largely managed by Azure Monitor and related automated processes.
 - Disaster recovery and business continuity is controlled by Azure Vault instances.
 - Azure Security Center is used to monitor security violations and attacks.
 - Azure Security Center and Azure Monitor are both used to monitor governance of the cloud.

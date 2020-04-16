@@ -4,7 +4,7 @@ description: Understand the potential tasks a company performs to develop and ma
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -41,13 +41,13 @@ This phase of governance maturity bridges the divide between business outcomes a
 - Define a data classification schema.
 - Conduct a digital estate planning process to inventory the current IT assets powering your business processes and supporting operations.
 - Conduct a [policy review](../../govern/policy-compliance/cloud-policy-review.md) to begin the process of modernizing existing corporate IT security policies, and define MVP policies addressing known risks.
-- Review your cloud platform's security guidelines. For Azure these can be found in the [Microsoft Service Trust Platform](https://www.microsoft.com/trustcenter/stp/default.aspx).
-- Determine whether your Security Baseline policy includes a [Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl).
+- Review your cloud platform's security guidelines. For Azure these can be found in the [Microsoft Service Trust Platform](https://servicetrust.microsoft.com).
+- Determine whether your Security Baseline policy includes a [Security Development Lifecycle](https://www.microsoft.com/en-us/securityengineering/sdl).
 - Evaluate network, data, and asset-related business risks based on the next one to three releases, and gauge your organization's tolerance for those risks.
 - Review Microsoft's [top trends in cybersecurity](https://www.microsoft.com/security/operations/security-intelligence-report) report to get an overview of the current security landscape.
 - Consider developing a [Security DevOps](https://www.microsoft.com/en-us/securityengineering/devsecops) role in your organization.
 
-<!-- "en-us" location is required for the URL above. -->
+<!-- "en-us" location is required for the URLs above. -->
 
 ## Build and predeployment
 
@@ -114,5 +114,5 @@ Now that you understand the concept of cloud security governance, move on to lea
 
 > [!div class="nextstepaction"]
 > [Learn about security guidance for Azure](./azure-security-guidance.md)
-> [Introduction to Azure security](https://docs.microsoft.com/azure/security/azure-security)
+> [Introduction to Azure security](https://docs.microsoft.com/azure/security/fundamentals/overview)
 > [Learn about logging, reporting, and monitoring](../../decision-guides/logging-and-reporting/index.md)

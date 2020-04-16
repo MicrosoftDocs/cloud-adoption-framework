@@ -4,10 +4,12 @@ description: Learn how to prepare the chief information security office (CISO) f
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
+
+<!-- cSpell:ignore CISO -->
 
 # CISO cloud readiness guide
 
@@ -33,36 +35,35 @@ As solutions move further "up stack" to incorporate platform as a service (PaaS)
 
 Knowledge about the cloud is fundamental to approaching a [policy review](./cloud-policy-review.md) with a growth mindset. The following resources can help the CISO better understand the security posture of Microsoft's Azure platform.
 
-Security platform resources:
+**Security platform resources:**
 
 - [Security Development Lifecycle, internal audits](https://www.microsoft.com/sdl)
 - [Mandatory security training, background checks](https://downloads.cloudsecurityalliance.org/star/self-assessment/StandardResponsetoRequestforInformationWindowsAzureSecurityPrivacy.docx)
-- [Penetration testing, intrusion detection, DDoS, audits, and logging](https://www.microsoft.com/trustcenter/Security/AuditingAndLogging)
+- [Penetration testing, intrusion detection, DDoS, audits, and logging](https://www.microsoft.com/security/business/operations)
 - [State-of-the-art datacenter](https://www.microsoft.com/cloud-platform/global-datacenters), physical security, [secure network](https://docs.microsoft.com/azure/security/security-network-overview)
-- [Microsoft Azure Security Response in the Cloud (PDF)](https://aka.ms/SecurityResponsePaper)
+- [Microsoft Azure Security Response in the Cloud (PDF)](https://aka.ms/securityresponsepaper)
 
-Privacy and controls:
+**Privacy and controls:**
 
-- [Manage your data all the time](https://www.microsoft.com/trustcenter/Privacy/You-own-your-data)
-- [Control on data location](https://www.microsoft.com/trustcenter/Privacy/Where-your-data-is-located)
-- [Provide data access on your terms](https://www.microsoft.com/trustcenter/Privacy/Who-can-access-your-data-and-on-what-terms)
-- [Responding to law enforcement](https://www.microsoft.com/trustcenter/Privacy/Responding-to-govt-agency-requests-for-customer-data)
-- [Stringent privacy standards](https://www.microsoft.com/TrustCenter/Privacy/We-set-and-adhere-to-stringent-standards)
+- [Manage your data all the time](https://www.microsoft.com/trust-center/privacy/data-management)
+- [Control on data location](https://www.microsoft.com/trust-center/privacy/data-location)
+- [Provide data access on your terms](https://www.microsoft.com/trust-center/privacy/data-access)
+- [Responding to law enforcement](https://www.microsoft.com/trust-center/privacy)
+- [Stringent privacy standards](https://www.microsoft.com/trust-center/privacy)
 
-Compliance:
+**Compliance:**
 
-- [Microsoft Trust Center](https://www.microsoft.com/trustcenter/default.aspx)
-- [Common controls hub](https://www.microsoft.com/trustcenter/Common-Controls-Hub)
-- [Cloud Services Due Diligence Checklist](https://www.microsoft.com/trustcenter/Compliance/Due-Diligence-Checklist)
-- [Compliance by service, location, and industry](https://www.microsoft.com/trustcenter/Compliance/default.aspx)
+- [Microsoft Trust Center](https://www.microsoft.com/trust-center)
+- [Common controls hub](https://www.microsoft.com/trust-center/compliance/compliance-overview)
+- [Cloud Services Due Diligence Checklist](https://www.microsoft.com/trust-center/compliance/due-diligence-checklist)
+- [Regional and country compliance](https://www.microsoft.com/trust-center/compliance/regional-country-compliance)
 
-Transparency:
+**Transparency:**
 
-- [How Microsoft secures customer data in Azure services](https://www.microsoft.com/trustcenter/Transparency/default.aspx)
+- [How Microsoft secures customer data in Azure services](https://www.microsoft.com/trust-center)
 - [How Microsoft manages data location in Azure services](https://azuredatacentermap.azurewebsites.net)
-- [Who in Microsoft can access your data on what terms](https://www.microsoft.com/trustcenter/Privacy/Who-can-access-your-data-and-on-what-terms)
-- [How Microsoft secures customer data in Azure services](https://www.microsoft.com/trustcenter/Transparency/default.aspx)
-- [Review certification for Azure services, transparency hub](https://www.microsoft.com/trustcenter/Compliance/default.aspx)
+- [Who in Microsoft can access your data on what terms](https://www.microsoft.com/trust-center/privacy-data-access)
+- [Review certification for Azure services, transparency hub](https://www.microsoft.com/trust-center/compliance/compliance-overview)
 
 ## Next steps
 

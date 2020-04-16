@@ -1,17 +1,17 @@
 ---
-title: Governance, security, and compliance in Azure
-description: Learn how to set up governance, security, and compliance for your Azure environment.
+title: Azure governance, security, and compliance
+description: Use the Cloud Adoption Framework for Azure to learn how to set up governance, security, and compliance for your Azure environment.
 author: tvuylsteke
 ms.author: kfollis
 ms.date: 09/27/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: fasttrack-edit, AQC, setup
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore tvuylsteke kfollis >
+<!-- cSpell:ignore tvuylsteke >
 
 <!-- markdownlint-disable MD024 MD025 -->
 
@@ -128,7 +128,7 @@ To apply a policy to a resource group:
 
 To learn more, see:
 
-- [Azure Policy](https://docs.microsoft.com/azure/azure-policy)
+- [Azure Policy](https://docs.microsoft.com/azure/governance/policy)
 - [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ::: zone-end

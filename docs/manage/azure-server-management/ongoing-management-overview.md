@@ -1,10 +1,10 @@
 ---
 title: "Ongoing management and security"
-description: Ongoing management and security
+description: Use the Cloud Adoption Framework for Azure to learn to focus on the operations and security configurations that will support your ongoing operations.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---

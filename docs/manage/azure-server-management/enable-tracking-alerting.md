@@ -1,13 +1,15 @@
 ---
-title: "Enable tracking and alerting for critical changes"
-description: Enable tracking and alerting for critical changes
+title: "Tracking and alerts for critical changes"
+description: Enable tracking and alerting for critical changes in your hybrid environment with Azure Change Tracking and Inventory.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
+
+<!-- cSpell:ignore HKEY kusto -->
 
 # Enable tracking and alerting for critical changes
 
@@ -31,7 +33,7 @@ ConfigurationChange | where FieldsChanged contains "FileContentChecksum" and Fil
 
 ![Screenshot of the Log Analytics query editor in the Azure portal](./media/change-tracking2.png)
 
-This query searches for changes to the contents of files that have a path that contains the word “hosts.” You can also search for a specific file by changing the path parameter. (For example, `FileSystemPath ==  "c:\\windows\\system32\\drivers\\etc\\hosts"`.)
+This query searches for changes to the contents of files that have a path that contains the word "hosts." You can also search for a specific file by changing the path parameter. (For example, `FileSystemPath ==  "c:\\windows\\system32\\drivers\\etc\\hosts"`.)
   
 After the query returns the results, select **New alert rule** to open the alert-rule editor. You can also get to this editor via Azure Monitor in the Azure portal.
 

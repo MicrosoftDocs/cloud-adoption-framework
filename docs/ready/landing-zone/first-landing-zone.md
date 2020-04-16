@@ -1,16 +1,17 @@
 ---
 title: Azure landing zone considerations
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Choose your first landing zone
+<!-- cSpell:ignore CAF -->
+
+# First landing zone
 
 Infrastructure as code is a natural transition during most cloud adoption efforts. Deploying the first landing zone(s) in the cloud are a common starting point to transition into a code-driven environment. This article will aid in defining the term landing zone and helping decide which landing zone is most appropriate for your current adoption needs.
 
@@ -28,14 +29,12 @@ The following image shows a variety of landing zone options. The following optio
 
 - D. When a partner is providing on-going managed services or is contracted to deliver on the adoption plan, they will commonly provide their own landing zone. Leveraging a partner landing zone could accelerate adoption efforts and ensure consistent operational management requirements. However, additional considerations should be given to internal governance and security requirements to ensure alignment.
 
-- E. Adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**, should look to the CAF NorthStar as a guide platform architecture and landing zones. CAF Northstar is a more advanced approach, which includes both target-state platform architecture **and** reference implementations.
-    - This approach pulls forward aspects of parallel methodologies including governance and operations to better prepare for mission-critical, secure, complex, and compliance governed adoption.
-    - This approach also creates the ability to generate multiple landing zones from a common architecture.
-    - If options A through D are the best starting point, platform teams are still encouraged to leverage the CAF NorthStar implementation and architecture as an end-state reference during refactoring efforts.
+> [!NOTE]
+> Before proceeding with a code-first and refactoring-focused approach, readers should be familiar with the [competing priorities behind this decision](../../strategy/balance-competing-priorities.md#balance-during-ready). When choosing a landing zone approach, it is important to understand the necessary balance between "Time to adoption" and "Long-term operations".
 
 ## Other data points to influence the choice of a first landing zone
 
-Selection of the first landing depends on a number of variables. The following grid captures a few of the options for first landing zones, along with some of the variables which may drive the decision.
+Selection of the first landing zone depends on multiple variables. The following grid captures some of the options for first landing zones, along with variables that may drive the decision.
 
 |Landing Zone  |Cloud experience  |Scale  |Discovery time|Production ready|Hybrid|Sensitive data|Mission critical|Compliance|
 |---------|---------|---------|---------|---------|---------|---------|---------|
@@ -46,12 +45,10 @@ Selection of the first landing depends on a number of variables. The following g
 
 The following table looks at the same landing zones from a slightly different perspective to guide more technical decision processes.
 
-|Landing Zone  |Hub|Spoke|Cloud model|Technology|
-|---------|---------|---------|---------|---------|---------|---------|---------|
-|[CAF Migrate](./migrate-landing-zone.md)|Refactor required|Included|Azure only|Azure Blueprint|
-|[CAF Foundation](./foundation-blueprint.md)|Refactor required|Included|Azure only|Azure Blueprint|
-|[CAF NorthStar](./northstar-landing-zone.md)|Included|Included|Azure only|Azure Resource Manager|
-|[CAF Terraform](./terraform-landing-zone.md)|Included in NorthStar (rename pending) module|Included|Multi-cloud|Terraform|
+| Landing Zone                                 | Hub                          | Spoke    | Cloud model | Technology      |
+|----------------------------------------------|------------------------------|----------|-------------|-----------------|--|--|--|
+| [CAF Migrate](./migrate-landing-zone.md)     | Refactor required            | Included | Azure only  | Azure Blueprint |
+| [CAF Terraform](./terraform-landing-zone.md) | Included in VDC module       | Included | Multicloud  | Terraform       |
 
 ## Next steps
 

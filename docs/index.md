@@ -1,13 +1,14 @@
 ---
 title: The Microsoft Cloud Adoption Framework for Azure
 description: Get tools, guidance, and narratives to help shape strategies and drive desired business outcomes in all phases of the cloud adoption lifecycle.
+author: BrianBlanchard
+ms.author: brblanch
+ms.date: 02/28/2020
+ms.topic: landing-page
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.custom: homepage
 layout: LandingPage
-ms.topic: landing-page
-author: BrianBlanchard
-ms.date: 02/28/2020
 ---
 
 # Microsoft Cloud Adoption Framework for Azure
@@ -164,7 +165,7 @@ The cloud fundamentally changes how enterprises procure, use, and secure technol
 
 However, cloud adoption is only a means to an end. Successful cloud adoption starts well before a cloud platform vendor is selected. It begins when business and IT decision makers realize that the cloud can accelerate a specific business transformation objective. The Cloud Adoption Framework can help them align strategies for business, culture, and technical change to achieve their desired business outcomes.
 
-The Cloud Adoption Framework provides technical guidance for Microsoft Azure. Because enterprise customers might still be in the process of choosing a cloud vendor or may have an intentional multi-cloud strategy, the framework provides cloud-agnostic guidance for strategic decisions whenever possible.
+The Cloud Adoption Framework provides technical guidance for Microsoft Azure. Because enterprise customers might still be in the process of choosing a cloud vendor or may have an intentional multicloud strategy, the framework provides cloud-agnostic guidance for strategic decisions whenever possible.
 
 ## Intended audience
 
@@ -177,6 +178,8 @@ Each section of the Cloud Adoption Framework represents a different specializati
 ## How to use the Microsoft Cloud Adoption Framework for Azure
 
 If your enterprise is new to Azure, begin by reading [Get started with the Cloud Adoption Framework](./getting-started/migrate.md). This overview provides best practices for your enterprise's digital transformation as it walks you through each step of the process.
+
+<!-- test:ignoreNextStep -->
 
 > [!div class="nextstepaction"]
 > [Get started](./getting-started/migrate.md)

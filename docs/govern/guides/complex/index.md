@@ -4,7 +4,7 @@ description: Follow a fictional complex enterprise through various stages of gov
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -41,13 +41,13 @@ Every application should be deployed in the proper area of the management group,
 
 1. Resource groups should be deployed in a manner that considers its contents lifecycle. Resources that are developed together, managed together, and retired together belong in the same resource group. For more information on best practices for using resource groups, [see here](../../../decision-guides/resource-consistency/index.md).
 
-1. [Region selection](../../../decision-guides/regions/index.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
+1. [Region selection](../../../migrate/azure-best-practices/multiple-regions.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
 
 ![Diagram of large enterprise resource organization](../../../_images/govern/large-enterprise-resource-organization.png)
 
 These patterns provide room for growth without making the hierarchy needlessly complicated.
 
-[!INCLUDE [governance-of-resources](../../../../includes/caf-governance-of-resources.md)]
+[!INCLUDE [governance-of-resources](../../../../includes/governance-of-resources.md)]
 
 <!-- See comments for suggestion to possibly add here -->
 

@@ -4,7 +4,7 @@ description: Focus on understanding customer needs and rapidly building cloud in
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---

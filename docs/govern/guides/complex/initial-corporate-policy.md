@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to define initial govern
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Governance guide for complex enterprises: Initial corporate policy behind the governance strategy
 
-The following corporate policy defines the initial governance position, which is the starting point for this guide. This article defines early-stage risks, initial policy statements, and early processes to enforce policy statements.
+The following corporate policy defines the initial governance position that's the starting point for this guide. This article defines early-stage risks, initial policy statements, and early processes to enforce policy statements.
 
 > [!NOTE]
 >The corporate policy is not a technical document, but it drives many technical decisions. The governance MVP described in the [overview](./index.md) ultimately derives from this policy. Before implementing a governance MVP, your organization should develop a corporate policy based on your own objectives and business risks.
@@ -38,7 +38,7 @@ The current risk tolerance is high and the appetite for investing in cloud gover
 
 ## Next steps
 
-This corporate policy prepares the cloud governance team to implement the governance MVP, which will be the foundation for adoption. The next step is to implement this MVP.
+This corporate policy prepares the cloud governance team to implement the governance MVP as the foundation for adoption. The next step is to implement this MVP.
 
 > [!div class="nextstepaction"]
 > [Best practices explained](./prescriptive-guidance.md)

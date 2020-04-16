@@ -4,11 +4,13 @@ description: Understand the potential tasks a company performs to develop and ma
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
+
+<!-- cSpell:ignore offboarding preintegration -->
 
 # Identity Baseline discipline improvement
 
@@ -65,7 +67,7 @@ Several technical and nontechnical prerequisites are required to successfully mi
 - Consider using the following access models:
   - [Least-privilege access](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models) model.
   - [Privileged Identity Baseline](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) access model.
-- Finalize all preintegration details and review [Identity Best Practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices).
+- Finalize all preintegration details and review [Identity Best Practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices).
   - Enable single identity, single sign-on (SSO), or seamless SSO.
   - Configure multi-factor authentication for administrators.
   - Consolidate or integrate identity providers, where necessary.
@@ -114,7 +116,7 @@ Once the transformation is complete, governance and operations must live on for 
 **Potential activities:**
 
 - Conduct periodic audits of identity policies and adherence practices.
-- Ensure sensitive user accounts (CEO, CFO, VP, etc) are always enabled for multi-factor authentication and anomalous login detection.
+- Ensure sensitive user accounts (such as accounts of corporate executives) are always enabled for multi-factor authentication and anomalous login detection.
 - Scan for malicious actors and data breaches regularly, particularly those related to identity fraud, such as potential admin account takeovers.
 - Configure a monitoring and reporting tool.
 - Consider integrating more closely with security and fraud-prevention systems.
@@ -123,7 +125,7 @@ Once the transformation is complete, governance and operations must live on for 
 - Review onboarding, offboarding, and credential update processes.
 - Investigate increasing levels of automation and communication between identity access management (IAM) modules.
 - Consider implementing a development security operations (DevSecOps) approach.
-- Carry out an impact analysis to gauge results on costs, security, and user adoption.
+- Conduct an impact analysis to gauge results on costs, security, and user adoption.
 - Periodically produce an impact report that shows the changes in metrics created by the system and estimate the business impacts of the [Hybrid Identity Strategy](../../decision-guides/identity/index.md).
 - Establish integrated monitoring recommended by the [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro).
 

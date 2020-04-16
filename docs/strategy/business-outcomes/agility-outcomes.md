@@ -1,10 +1,10 @@
 ---
 title: "Examples of agility outcomes"
-description: Examples of agility outcomes
+description: Use the Cloud Adoption Framework for Azure to understand your company's market position and competitive landscape.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
@@ -13,7 +13,7 @@ ms.subservice: strategy
 
 As discussed in the [business outcomes overview](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on the timeliest business measure: business agility. Understanding your company's market position and competitive landscape can help you articulate the business outcomes that are the target of the business's transformation journey.
 
-Traditionally, chief investment officers (CIOs) and IT teams were considered a source of stability in core mission-critical processes. This is still true. Few businesses can function well when their IT platform is unstable. However, in today's business world, much more is expected. IT can expand beyond a simple cost center by partnering with the business to provide market advantages. Many CIOs and executives assume that stability is simply a baseline for IT. For these leaders, business agility is the measure of IT's contribution to the business.
+Traditionally, chief investment officers and IT teams were considered a source of stability in core mission-critical processes. This is still true. Few businesses can function well when their IT platform is unstable. However, in today's business world, much more is expected. IT can expand beyond a simple cost center by partnering with the business to provide market advantages. Many chief investment officers and executives assume that stability is simply a baseline for IT. For these leaders, business agility is the measure of IT's contribution to the business.
 
 <!-- markdownlint-disable MD026 -->
 
@@ -34,6 +34,8 @@ During cloud-enabled innovation efforts, time to market is a key measure of IT's
 ### Aurora Health Care
 
 Healthcare system transforms online services into a friendly digital experience. To transform its digital services, Aurora Health Care migrated its websites to the Microsoft Azure platform and adopted a strategy of continuous innovation.
+
+<!-- cSpell:ignore Jamey Shiels -->
 
 > "As a team, we're focused on high-quality solutions and speed. Choosing Azure was a very transformative decision for us."  
 > Jamey Shiels  

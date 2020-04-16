@@ -1,10 +1,10 @@
 ---
-title: "Inventory and visibility - Cloud Management and Operations"
-description: Inventory and visibility - Cloud Management and Operations
+title: "Inventory and visibility in Azure"
+description: Learn about what to manage (inventory) and how those managed workloads and assets change over time (visibility). 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -67,7 +67,7 @@ Change is the one constant in a technology environment. Awareness and understand
 
 ### Performance telemetry
 
-Business commitments about cloud management are driven by data. To properly maintain commitments, the cloud operations team must first understand the telemetry about the stability, performance, and operations of the workload, and the assets which support the workload.
+Business commitments about cloud management are driven by data. To properly maintain commitments, the cloud operations team must first understand the telemetry about the stability, performance, and operations of the workload, and the assets that support the workload.
 
 The ongoing health and operations of the network, DNS, operating systems, and other foundational aspects of the environment are critical data points that factor into the overall health of any workload.
 
