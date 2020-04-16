@@ -78,3 +78,57 @@ Later in this guide, discover some common monitoring scenarios or use cases that
 As a manageability expert, you may be working closely with a steering committee, the architect and strategic planners. You might be working to formulate monitoring strategy by assessing the current state of your systems management: the people, partnering, outsourcing, tooling, complexity, gaps and risks. An assessment will help you prioritize the set of found problems and select the key opportunities that improve the current situation. Determine, too, the services, systems, and data that are likely to remain on-premises as one important outcome. Ideally, management wants a roadmap of initiatives, but in direct proportion to the known planning horizon. Discussing unknowns, are just as important.
 
 ### Formulate a monitoring architecture
+
+Define your current and future architecture of systems management that includes monitoring, to:
+
+* Apply limited resources in consolidating your monitoring investment
+
+* Decide on how monitoring will help exploit the future services your business needs: cloud monitoring of highly scaleable, resilient and globally aware cloud services.
+
+* Align monitoring to the future services and resources that you will be monitoring in the cloud.
+
+* Identify monitoring gaps in three dimensions* - depth, breadth and across the health model.
+
+* Model the financial aspects, costs and support factors that support a cost-benefit analysis.
+
+* Guide the hybrid decisions that you need to make.
+
+*One principle of monitoring is called full visibility:  for a service, asset or component to be fully visible, 1) in-depth or north-south, 2) end-to-end, in breadth or east-west, and for its health aspects (availability, performance, security and continuity).
+
+Some key questions include:
+
+* How will you shape security logs and secure their access back to security and new privacy controls?
+
+* Which services will be globally available and as such, can be globally monitored at the service edge?
+
+* What about Express Route and monitoring solutions that tells us when it’s us or the cloud provider?
+
+* What are the boundaries of security operations vs. health and performance:  how can we provide summaries of health and status to security operations as well as the converse of this back to service owners?
+
+To assemble this architecture, here are several considerations:
+
+* Consider a data flow approach starting from service assets: Log and agent based data emitted by infrastructure, IOT devices, mobile devices—all of the items that are under management—to monitoring tools (mid-tier) moving upward and outward: (ITSM tools, global monitoring, SIEMs, custom alert enrichment and the like.
+
+* Consider Whether to Continue with Systems Center:  (to be added when this moves to markdown)
+
+* Consider economic cost: (To be added when this is moved to markdown).
+
+* Consider how the business will leverage logs and metrics:  Azure monitoring brings a significant volume of log and time-series data to the performance and health side of monitoring, just like security operations roles get.  After all, logs and metrics are the two major data components of Azure Monitor’s architecture.  The reason why this is important is 1) since you can build large scale complex cloud services, your problem management costs are reduced to analyze, correlate and determine causes of problems in one place reducing the need to access resources directly, thereby improving security.  Second, just like a SIEM, Azure Monitor is consolidating machine data directly from on-premises assets as well as Azure resources (including activity logs, tenant, and subscription data, and any log data from a REST client), and provides a simple query language to provide data analysis far beyond what was possible before.  What makes Azure Monitor unique is that although (as a SIEM) it handles machine level data very well, Azure Monitor gives you pre-defined queries, context-sensitive metrics based on resource type*
+
+Consider your data flows and tools:
+
+-	Sources and types (telemetric, traces, stateful, time series)
+-	Tools and suites (rows): (Columns: availability, capacity, security, continuity and compliance).
+-	The role of global monitoring or the top-tier
+-	The role of IT service management integration to trigger on significant events 
+Consider Alerting and Notifications:  Consider the following table to standardize events, significance and alerts used for notifications:
+Tip:  Use the following table as a standard data model element for alerts that will work universally
+	Impact, Urgency, severity, priority
+What’s emitted by Azure Resources:  
+Agent-based:  Hybrid solutions can use a combination of monitoring agents that emit logs, events, and performance data
+Agentless
+Service Monitoring:  Here is how you can visualize Azure monitoring data to help you clarify monitoring consumers:
+-	Availability:  Stateful monitoring data occurs through metrics.
+-	Performance
+-	Security
+-	Configuration/Compliance
