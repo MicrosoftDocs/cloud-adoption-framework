@@ -1,3 +1,16 @@
+---
+title: "CAF enterprise-scale landing zone - Contoso's Getting Started"
+titleSuffix: Cloud Adoption Framework
+description: CAF enterprise-scale landing zone - Contoso's Getting Started
+author: rkuehfus
+ms.author: brblanch
+ms.date: 02/01/2020
+ms.topic: guide
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+ms.custom: csu
+---
+
 # Getting Started
 
 This section covers how to deploy platform-native Contoso reference implementation of CAF enterprise-scale landing zone, [current design](./Implementation-design-guide.md), [FAQ](./Implementation-FAQ.md) and [known issues](./Implementation-known-issues.md).

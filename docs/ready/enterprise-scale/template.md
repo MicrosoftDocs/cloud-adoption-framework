@@ -2,7 +2,7 @@
 title: "CAF enterprise-scale landing zone Template"
 titleSuffix: Cloud Adoption Framework
 description: CAF enterprise-scale landing zone Template
-author: uday31in
+author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide

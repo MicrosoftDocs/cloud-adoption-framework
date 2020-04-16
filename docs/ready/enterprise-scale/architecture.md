@@ -2,7 +2,7 @@
 title: "CAF enterprise-scale landing zone architecture"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: CAF enterprise-scale landing zone architecture
-author: uday31in
+author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide

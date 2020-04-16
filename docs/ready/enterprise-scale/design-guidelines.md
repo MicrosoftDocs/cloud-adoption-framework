@@ -2,7 +2,7 @@
 title: "Design Guidelines"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: CAF enterprise-scale landing zone - Design Guidelines
-author: uday31in
+author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide

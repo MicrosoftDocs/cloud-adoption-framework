@@ -2,7 +2,7 @@
 title: "Enterprise Enrolment and Azure AD Tenants"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: CAF enterprise-scale landing zone - Enterprise Enrolment and Azure AD Tenants
-author: uday31in
+author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
 ms.topic: guide

@@ -1,3 +1,16 @@
+---
+title: "CAF enterprise-scale landing zone - Contoso Reference Implementation - Known Issues"
+titleSuffix: Cloud Adoption Framework
+description: CAF enterprise-scale landing zone - Contoso Reference Implementation - Known Issues
+author: rkuehfus
+ms.author: brblanch
+ms.date: 02/01/2020
+ms.topic: guide
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+ms.custom: csu
+---
+
 # Contoso Reference Implementation - Known Issues
 
 ### Subscription Creation

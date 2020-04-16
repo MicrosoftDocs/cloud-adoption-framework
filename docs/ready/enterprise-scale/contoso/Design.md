@@ -1,3 +1,16 @@
+---
+title: "CAF enterprise-scale landing zone - Contoso's Reference Implementation"
+titleSuffix: Cloud Adoption Framework
+description: CAF enterprise-scale landing zone - Contoso's Reference Implementation
+author: rkuehfus
+ms.author: brblanch
+ms.date: 02/01/2020
+ms.topic: guide
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+ms.custom: csu
+---
+
 # Contoso's Reference Implementation
 
 Contoso's CAF enterprise-scale landing zone reference implementation is rooted in the principle that **Everything in Azure is a resource** Contoso is leveraging native **Azure Resource Manager (ARM)** to describe and manage their resources as part of their target state architecture at scale.

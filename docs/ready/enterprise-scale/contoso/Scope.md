@@ -1,3 +1,16 @@
+---
+title: "CAF enterprise-scale landing zone - Contoso Reference Implementation - Scope"
+titleSuffix: Cloud Adoption Framework
+description: CAF enterprise-scale landing zone - Contoso Reference Implementation - Scope
+author: rkuehfus
+ms.author: brblanch
+ms.date: 02/01/2020
+ms.topic: guide
+ms.service: cloud-adoption-framework
+ms.subservice: ready
+ms.custom: csu
+---
+
 # Scope
 
 The Contoso Corporation is a multi-national business with headquarters in London, UK. Contoso Senior leadership have mandated a "Cloud-First" approach, with an overarching strategy to reduce and gradually divest the on-premises datacentre footprint. Contoso has chosen Azure as their preferred public cloud provider. They have a large overall IT estate and are concerned about the velocity of workload transformation/migration and how they can establish landing zones for application teams to migrate their applications.
