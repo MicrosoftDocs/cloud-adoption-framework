@@ -2,7 +2,7 @@
 
 The Contoso Corporation is a multi-national business with headquarters in London, UK. Contoso Senior leadership have mandated a "Cloud-First" approach, with an overarching strategy to reduce and gradually divest the on-premises datacentre footprint. Contoso has chosen Azure as their preferred public cloud provider. They have a large overall IT estate and are concerned about the velocity of workload transformation/migration and how they can establish landing zones for application teams to migrate their applications.
 
-Contoso have come across the North Star architecture which provides a forward looking Azure-native design approach. The Contoso IT leadership team has committed to this as they believe it will allow applications (legacy or modern) to seamlessly move at their own pace while also providing secure and streamlined operations, management, and governance across the entire Contoso platform on Azure.
+Contoso have come across the CAF enterprise-scale landing zone architecture which provides a forward looking Azure-native design approach. The Contoso IT leadership team has committed to this as they believe it will allow applications (legacy or modern) to seamlessly move at their own pace while also providing secure and streamlined operations, management, and governance across the entire Contoso platform on Azure.
 
 ## Contoso Architecture
 
@@ -15,7 +15,7 @@ Additional controls will be in place for Networking (isolation) and Identity (se
 
 ### Identity and Access Management
 
-Contoso wants to ensure zero standing access for production environments across all Azure control plane access and will use Azure AD Privileged Identity Management (PIM) to ensure just-in-time control plane access to Azure resources. Contoso will create custom role definitions (Platform Owner, NetOps, SecOps, Landing Zone Owner, AppOps/DevOps) in accordance with North Star roles which will be supported by the operating model for the Azure platform.
+Contoso wants to ensure zero standing access for production environments across all Azure control plane access and will use Azure AD Privileged Identity Management (PIM) to ensure just-in-time control plane access to Azure resources. Contoso will create custom role definitions (Platform Owner, NetOps, SecOps, Landing Zone Owner, AppOps/DevOps) in accordance with CAF enterprise-scale landing zone roles which will be supported by the operating model for the Azure platform.
 
 The identity team will create an Azure AD only group for each of the roles above and make Landing Zone Owner/Requestor an owner of the group before creating entitlements for those groups in Azure AD PIM. Those who require to access to Azure resources will be able to search for the Azure AD group by name and leverage the Azure AD Self-service group management capability to join a group. Group Owners can determine whether to approve or deny a user request based on an eligibility criteria.
 
@@ -106,7 +106,7 @@ The following policies related to Management Group hierarchy and Subscription or
 
 Contoso has a presence across Europe and North America. Contoso's headquarters are located in London, UK. Contoso also has regional HQ offices in Amsterdam and Chicago. Contoso has a large number of branch offices (around 500), which are located across the US and Europe, with each branch office containing a CPE that is connected to the local regional HQ via S2S VPN.
 
-Contoso has decided to adopt North Star recommendations for building their network architecture in Azure. Key decisions they have adopted include:
+Contoso has decided to adopt CAF enterprise-scale landing zone recommendations for building their network architecture in Azure. Key decisions they have adopted include:
 
 1. The deployment of a Microsoft-managed network in Azure using Azure Virtual WAN to interconnect all Azure and on-premises locations around the world.
 
@@ -140,7 +140,7 @@ In order to simplify the routing configuration across the entire Azure networkin
 * West Europe: 10.2.0.0/16
 * North Central US: 10.3.0.0/16
 
-Since Contoso must support those three Azure regions (North Europe,West Europe and North Central US), Contoso has documented the resources and parameters that are required so that the platform can be deployed via Azure Policy in alignment with North Star guidance. More specifically, all these resources will be deployed within the "Connectivity" subscription and enforced by Deploy-If-Not-Exist Policies.
+Since Contoso must support those three Azure regions (North Europe,West Europe and North Central US), Contoso has documented the resources and parameters that are required so that the platform can be deployed via Azure Policy in alignment with CAF enterprise-scale landing zone guidance. More specifically, all these resources will be deployed within the "Connectivity" subscription and enforced by Deploy-If-Not-Exist Policies.
 
 North Europe:
 
@@ -520,7 +520,7 @@ The following policies related to management and monitoring will be assigned in 
 
 ## Business Continuity and Disaster Recovery
 
-Core Contoso North Star platform components across all regions consider an active-active design i.e. Identity, Management and Networking are considered as highly available in all regions and can function independent of each other.
+Core Contoso CAF enterprise-scale landing zone platform components across all regions consider an active-active design i.e. Identity, Management and Networking are considered as highly available in all regions and can function independent of each other.
 
 Contoso has defined the following BCDR guidelines when applications are moved to Azure, to allow application owners to ensure their applications (either cloud native apps or traditional IaaS workloads) are architected and deployed to meet HA an DR requirements:
 
@@ -685,7 +685,7 @@ From an identity and access perspective, Contoso will develop their own custom R
 
 ### Contoso - Roles & Responsibility
 
-Contoso have acknowledged that their existing on-premises operating model requires change to ensure they maximise the benefits of the cloud. Contoso have decided to create a Platform Operations team who will oversee execution of the North Star architecture and will be accountable for the Contoso Azure Platform. This Platform team will have representations from the following IT functions:
+Contoso have acknowledged that their existing on-premises operating model requires change to ensure they maximise the benefits of the cloud. Contoso have decided to create a Platform Operations team who will oversee execution of the CAF enterprise-scale landing zone architecture and will be accountable for the Contoso Azure Platform. This Platform team will have representations from the following IT functions:
 
 <table>
 <thead>
@@ -759,11 +759,11 @@ Contoso have acknowledged that their existing on-premises operating model requir
 
 ### Contoso Platform DevOps
 
-Contoso will use the North Star Git repo for Infrastructure-as-code (IaC) and instantiate their Management Group and Subscription hierarchy using the tenant level Azure Resource Manager template deployment examples provided within the North Star repo. This repository is used for bootstrapping and managing their entire platform and hence will require access permissions for service principle at a tenant root scope. To simplify RBAC and management of client secrets for service principles, Contoso will use a single service principle scoped at the tenant root scope which will have access to all resources inside a tenant. This account is the highest privilege account and no user will have direct access to the secrets of this service account.
+Contoso will use the CAF enterprise-scale landing zone Git repo for Infrastructure-as-code (IaC) and instantiate their Management Group and Subscription hierarchy using the tenant level Azure Resource Manager template deployment examples provided within the CAF enterprise-scale landing zone repo. This repository is used for bootstrapping and managing their entire platform and hence will require access permissions for service principle at a tenant root scope. To simplify RBAC and management of client secrets for service principles, Contoso will use a single service principle scoped at the tenant root scope which will have access to all resources inside a tenant. This account is the highest privilege account and no user will have direct access to the secrets of this service account.
 
 **Initialization**
 
-Before starting the North Star journey, Contoso will discover existing configuration in Azure that can serve as a platform baseline. The consequence of not discovering the existing environment will be no reference point to rollback or roll-forward after a deployment. Initialization is also important since it can provide a crucial on-ramp path to infrastructure as code and allow transitioning without starting all-over. For the purpose of initialization, the following resources are considered within the scope of the overall Azure platform.
+Before starting the CAF enterprise-scale landing zone journey, Contoso will discover existing configuration in Azure that can serve as a platform baseline. The consequence of not discovering the existing environment will be no reference point to rollback or roll-forward after a deployment. Initialization is also important since it can provide a crucial on-ramp path to infrastructure as code and allow transitioning without starting all-over. For the purpose of initialization, the following resources are considered within the scope of the overall Azure platform.
 This will initialize an empty Git repo with the current configuration establish a baseline configuration encompassing following:
 
 * Management Group hierarchy and Subscription organization
@@ -792,7 +792,7 @@ an on-going basis via Pull Requests. Since Git represents the source of truth an
 In production environment, operational changes are bound to happen. Ideally Contoso will ensure changes are made in a structured way, using the principles of Infrastructure-as-code (IaC): A change would be made by adding or updating template within the Git repository, relying on an automated test and release process to deploy required operational changes.
 
 However, manual changes (made for example using the Azure portal) may be unavoidable due to urgent operational demands. This leads to 'Configuration Drift', where the environment as described in source
-control no longer reflects the actual state of the Azure resources. To deal with this situation, North Star envisions not only a control mechanism to push changes within the IaC source to the Azure environment, but also to pull changes made outside IaC back into source control.  
+control no longer reflects the actual state of the Azure resources. To deal with this situation, CAF enterprise-scale landing zone envisions not only a control mechanism to push changes within the IaC source to the Azure environment, but also to pull changes made outside IaC back into source control.  
 
 By establishing a feedback loop we can ensure that:
 

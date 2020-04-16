@@ -1,8 +1,8 @@
 # Contoso's Reference Implementation
 
-Contoso's North Star reference implementation is rooted in the principle that **Everything in Azure is a resource** Contoso is leveraging native **Azure Resource Manager (ARM)** to describe and manage their resources as part of their target state architecture at scale.
+Contoso's CAF enterprise-scale landing zone reference implementation is rooted in the principle that **Everything in Azure is a resource** Contoso is leveraging native **Azure Resource Manager (ARM)** to describe and manage their resources as part of their target state architecture at scale.
 
-Contoso will enable security, logging, networking, and any other plumbing needed for landing zones (i.e. Subscriptions) autonomously through policy enforcement. Contoso will bootstrap the Azure environment with ARM templates to create the necessary structure for management and networking to declare a desired goal state. Contoso will apply the principal of "Policy Driven Governance" to deploy all necessary resources for a Landing Zone using policy. For example, deploying a Key Vault to store platform level secrets in the management subscription; instead of scripting the template deployment to deploy Key Vault, the North Star based reference implementation will have a policy definition that deploys the Key Vault in a prescriptive manner, using a policy assignment at the management subscription scope. The core benefits of a policy driven approach are manyfold but the most significant include:
+Contoso will enable security, logging, networking, and any other plumbing needed for landing zones (i.e. Subscriptions) autonomously through policy enforcement. Contoso will bootstrap the Azure environment with ARM templates to create the necessary structure for management and networking to declare a desired goal state. Contoso will apply the principal of "Policy Driven Governance" to deploy all necessary resources for a Landing Zone using policy. For example, deploying a Key Vault to store platform level secrets in the management subscription; instead of scripting the template deployment to deploy Key Vault, the CAF enterprise-scale landing zone based reference implementation will have a policy definition that deploys the Key Vault in a prescriptive manner, using a policy assignment at the management subscription scope. The core benefits of a policy driven approach are manyfold but the most significant include:
 
 * Platform can provide an orchestration capability to bring target resources (in this case a subscription) to a desired goal state.
 * Continuous conformance to ensure all platform level resources are compliant. Because the platform is aware of the goal state, the platform can assist by monitoring and remediating the resources throughout the life cycle of the resource.
@@ -10,7 +10,7 @@ Contoso will enable security, logging, networking, and any other plumbing needed
 
 ### File -> New -> Region
 
-Contoso want to leverage all Azure region and deploy the workload closer to the user and will be adding new Azure regions as business demand arises. As a part of North Star design principle of policy driven governance, Contoso will be assign policy in their environment with number of regions they would like to use and Policies will ensure their Azure Environment is setup correctly:
+Contoso want to leverage all Azure region and deploy the workload closer to the user and will be adding new Azure regions as business demand arises. As a part of CAF enterprise-scale landing zone design principle of policy driven governance, Contoso will be assign policy in their environment with number of regions they would like to use and Policies will ensure their Azure Environment is setup correctly:
 
 #### Management
 
@@ -54,7 +54,7 @@ Susbcription will be moved to decommissioned management group. Decommissioned ma
 
 ## Implementation
 
-Contoso will use "AzOps" acronym (inspired by GitOps, KOps etc.) for Azure Operations in context of North Star design principles. Contoso have decided to use platform-native capability to orchestrate, configure and deploy Landing Zones using Azure Resource Manager (ARM) to declare goal state. Contoso have abide by "Policy Driven Governance" design principle and wants landing zones (a.k.a Subscription) to be provisioned and configured autonomously.
+Contoso will use "AzOps" acronym (inspired by GitOps, KOps etc.) for Azure Operations in context of CAF enterprise-scale landing zone design principles. Contoso have decided to use platform-native capability to orchestrate, configure and deploy Landing Zones using Azure Resource Manager (ARM) to declare goal state. Contoso have abide by "Policy Driven Governance" design principle and wants landing zones (a.k.a Subscription) to be provisioned and configured autonomously.
 
 Contoso have deliberated over whether to use single Template vs modular Templates and Pros and Cons of   both and decided in favour of Single Template for platform orchestration. Primary reason behind this is, Template will mainly consist of Policy Definition and Policy Assignments. Since, Policy Assignments have direct dependency on Policy Definitions, it will be operationally easier to manage and control life cycle changes/versioning if artefact are represented in same template.
 

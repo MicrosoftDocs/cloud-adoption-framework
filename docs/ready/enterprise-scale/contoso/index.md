@@ -1,15 +1,15 @@
 # Getting Started
 
-This section covers how to deploy platform-native Contoso reference implementation of North Star, [current design](./Implementation-design-guide.md), [FAQ](./Implementation-FAQ.md) and [known issues](./Implementation-known-issues.md).
+This section covers how to deploy platform-native Contoso reference implementation of CAF enterprise-scale landing zone, [current design](./Implementation-design-guide.md), [FAQ](./Implementation-FAQ.md) and [known issues](./Implementation-known-issues.md).
 > Note:  Before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.
 
 ## Target audience
 The target audience for this guide is people with a typical DevOps / SRE background and assumes knowledge in Azure Resource Manager (ARM)/Infrastructure as Code (IaC), Git, and PowerShell.
 ## Tutorials
 
- - [**Deploying Template via Command Line**](#Deploy-ARM-templates-at-the-tenant-root-scope) - Without Git integration, experiment with ARM template deployments at the tenant ("/") root scope to better understand how to instantiate the end-2-end North Star Landing Zone architecture.
+ - [**Deploying Template via Command Line**](#Deploy-ARM-templates-at-the-tenant-root-scope) - Without Git integration, experiment with ARM template deployments at the tenant ("/") root scope to better understand how to instantiate the end-2-end CAF enterprise-scale landing zone Landing Zone architecture.
 
- - [**Configuring Git to deploy North Star**](#Configure-GitHub-and-run-initialization) - Get started with the full reference implementation including Git repository for the platform configuration, ARM templates triggered by GitHub actions for landing zones and operation detection and reconciliation with Log Analytics.
+ - [**Configuring Git to deploy CAF enterprise-scale landing zone**](#Configure-GitHub-and-run-initialization) - Get started with the full reference implementation including Git repository for the platform configuration, ARM templates triggered by GitHub actions for landing zones and operation detection and reconciliation with Log Analytics.
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
     * [40-create-policyassignment-at-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json)  
       Assigns the policy defintion at company root managment group scope (Tailspin)
     <br><br>
-     > Read up to better understand how the North Star reference ARM templates are constructed (with **one** master template and parameter files only) [here](../Northstar-Contribution.md#writing-arm-templates-for-contoso-implementation). 
+     > Read up to better understand how the CAF enterprise-scale landing zone reference ARM templates are constructed (with **one** master template and parameter files only) [here](../Northstar-Contribution.md#writing-arm-templates-for-contoso-implementation). 
 4. In all parameter files, change the TenantID and name of the management groups to reflect the tenant where they will be deployed. TenantID can be found by running `Get-AzTenant`.
     ```json
     {
@@ -134,7 +134,7 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
 
 1. [Fork the repository](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) to your GitHub Organization and [clone the forked GitHub repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) to your local machine.<br>Follow the instructions [here](#sync-your-fork-with-upstream-repo) to keep your fork synchronized with the upstream. 
 
-2. "User Access Administrator" role is required to manage the deployment of your north star architecture. This may requires [elevated account permitions](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin) It is strongly recommended to assign the permission at the highest scope possible (i.e. tenant root "/") to ensure you can use the service principal to perform subscriptions management operation. "App registration" needs to be enabled on the Azure AD tenant to self-register an Application (Option 1).
+2. "User Access Administrator" role is required to manage the deployment of your CAF enterprise-scale landing zone architecture. This may requires [elevated account permitions](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin) It is strongly recommended to assign the permission at the highest scope possible (i.e. tenant root "/") to ensure you can use the service principal to perform subscriptions management operation. "App registration" needs to be enabled on the Azure AD tenant to self-register an Application (Option 1).
     > Note: Read access on the root level is enough to perform the initialization, but not for deployment. To be able to create management group and subscriptions, platform requires Tenant level PUT permission.
 
     Option 1 (App registration enabeled)
