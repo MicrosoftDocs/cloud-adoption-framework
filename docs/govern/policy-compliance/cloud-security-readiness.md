@@ -60,7 +60,7 @@ Transparency:
 
 - [How Microsoft secures customer data in Azure services](https://www.microsoft.com/trustcenter/Transparency/default.aspx)
 - [How Microsoft manages data location in Azure services](https://azuredatacentermap.azurewebsites.net)
-- [Who in Microsoft can access your data on what terms](https://www.microsoft.com/trustcenter/Privacy/Who-can-access-your-data-and-on-what-terms)
+- [Who in Microsoft can access your data on what terms](https://www.microsoft.com/trust-center/privacy/data-access)
 - [How Microsoft secures customer data in Azure services](https://www.microsoft.com/trustcenter/Transparency/default.aspx)
 - [Review certification for Azure services, transparency hub](https://www.microsoft.com/trustcenter/Compliance/default.aspx)
 
