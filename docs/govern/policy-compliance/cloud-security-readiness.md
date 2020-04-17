@@ -62,7 +62,7 @@ Knowledge about the cloud is fundamental to approaching a [policy review](./clou
 
 - [How Microsoft secures customer data in Azure services](https://www.microsoft.com/trust-center)
 - [How Microsoft manages data location in Azure services](https://azuredatacentermap.azurewebsites.net)
-- [Who in Microsoft can access your data on what terms](https://www.microsoft.com/trust-center/privacy-data-access)
+- [Who in Microsoft can access your data on what terms](https://www.microsoft.com/trust-center/privacy/data-access)
 - [Review certification for Azure services, transparency hub](https://www.microsoft.com/trust-center/compliance/compliance-overview)
 
 ## Next steps
