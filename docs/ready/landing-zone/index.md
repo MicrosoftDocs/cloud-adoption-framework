@@ -21,6 +21,10 @@ A landing zone is an environment for hosting your workloads, preprovisioned thro
 
 More specifically, a landing zone is the basic building block of any cloud adoption environment. The term _landing zone_ refers to a logical construct capturing everything that must be true to enable the desired cloud adoption.
 
+You can think of a landing zone as the necessary infrastructure that must be in place prior to workloads being deployed to your cloud environment. A well archtiected and governed environment, with pre-defined guardrails that cannot be broken by teams that develop and deploy workloads to the land zone environment itself.
+
+The content of a landing zone depends on how your organization handles cloud adoption, and how much work is done by your central IT orgazination, and individual business units. A landing zone can be implemented as a resource group given to a developer with several resources already deployed and only allowing the developer to upload code, all the way to a blank subscription containing only policies and allowing developers to create any resources they need within a predefined set of allowed resources. 
+
 **Scope:** A fully functional landing zone considers all platform resources that are required to support the customer's adoption needs.
 
 **Refactoring:** A fully functional landing zone is the final deliverable of any iteration of the Cloud Adoption Framework's Ready methodology. During each iteration, the code base that defines the landing zone will be refactored or expanded. After refactoring, the landing zone may be modified or redeployed to allow for new cloud adoption needs.
