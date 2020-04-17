@@ -1,6 +1,6 @@
 ---
-title: "Best practices to set up networking for workloads migrated to Azure"
-description: After migrating to Azure, get best practices for setting up networking for your migrated workloads.
+title: "Set up networking for workloads migrated to Azure"
+description: Use the Cloud Adoption Framework for Azure to learn the best practices for setting up networking for your migrated workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/04/2018
@@ -8,6 +8,8 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore NSGs CIDR FQDNs BGP's ACLs WAFs -->
 
 # Best practices to set up networking for workloads migrated to Azure
 
@@ -35,16 +37,16 @@ When planning your VNet topology, you should consider how to arrange IP address 
 
 When you create VNets as part of your migration, it's important to plan out your VNet IP address space.
 
-- You should assign an address space that isn't larger than a CIDR range of /16 for each VNet. VNets allow for the use of 65536 IP addresses, and assigning a smaller prefix than /16 would result in the loss of IP addresses. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
+- You should assign an address space that isn't larger than a CIDR range of /16 for each VNet. VNets allow for the use of 65,536 IP addresses, and assigning a smaller prefix than /16, such as a /15 which has 131,072 addresses, would result in the the excess IP addresses becoming unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
 - The VNet address space shouldn't overlap with on-premises network ranges.
 - Network Address Translation (NAT) shouldn't be used.
 - Overlapping addresses can cause networks that can't be connected and routing that doesn't work properly. If networks overlap, you'll need to redesign the network or use network address translation (NAT).
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) of Azure VNets.
-- [Read](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq) the networking FAQ.
-- [Learn about](https://docs.microsoft.com/azure/azure-subscription-service-limits?toc=%2fazure%2fvirtual-network%2ftoc.json#networking-limits) networking limitations.
+- Get an [overview of Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
+- Read the [Azure Virtual Network frequently asked questions (FAQ)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq).
+- Learn about [Azure networking limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits?toc=/azure/virtual-network/toc.json#networking-limits).
 
 ## Best practice: Implement a hub and spoke network topology
 
@@ -125,7 +127,7 @@ Availability zones increase high-availability to protect your apps and data from
 - Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking.
 - To ensure resiliency, there's a minimum of three separate zones in all enabled regions.
 - The physical separation of availability zones within a region protects applications and data from datacenter failures.
-- Zone-redundant services replicate your applications and data across availability zones to protect from single points of failure. - - With availability zones, Azure offers an SLA of 99.99% VM uptime.
+- Zone-redundant services replicate your applications and data across availability zones to protect from single points of failure. - - With availability zones, Azure offers an SLA of 99.99 percent VM uptime.
 
     ![Availability zone](./media/migrate-best-practices-networking/availability-zone.png)
     *Availability zone*
@@ -175,7 +177,7 @@ When setting up a site-to-site VPN, you do the following:
 - You create a VPN gateway, specify the gateway type (VPN) and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
 - You create a local network gateway on-premises, and configure your on-premises VPN device.
 - You create a failover site-to-site VPN connection between the VNet gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. Route-based also supports both site-to-site (from any computer) and point-to-site (from a single computer) connections concurrently.
-- You specify the gateway SKU that you want to use. This will depend on your workload requirements, throughputs, features, and SLAs.
+- You specify the gateway SKU that you want to use. This will depend on your workload requirements, throughput, features, and SLAs.
 - Border gateway protocol (BGP) is an optional feature you can use with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your VNets.
 
 ![VPN](./media/migrate-best-practices-networking/vpn.png)
@@ -281,7 +283,7 @@ The responsibility for securing VNets is shared between Microsoft and you. Micro
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/security/azure-security-network-security-best-practices) of best practices for network security.
+- [Get an overview](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices) of best practices for network security.
 - [Learn how to](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#security) design for secure networks.
 
 ## Best practice: Implement an Azure perimeter network
@@ -303,7 +305,7 @@ The following figure shows an example of a single subnet perimeter network in a 
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) deploying a perimeter network between Azure and your on-premises datacenter.
+- Learn how to [deploy a perimeter network between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
 
 ## Best practice: Filter VNet traffic with NSGs
 
@@ -507,7 +509,7 @@ We recommend using one set of Azure Firewalls (or NVAs) for traffic originating 
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) using NVAs in an Azure VNet.
+- [Learn about](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz) using NVAs in an Azure VNet.
 
 ## Next steps
 

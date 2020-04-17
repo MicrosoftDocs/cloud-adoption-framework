@@ -4,7 +4,7 @@ description: See a sample cloud-native policy for the Security Baseline discipli
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Cloud-native Security Baseline policy
 
-[Security Baseline](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on general security topics including protection of the network, digital assets, data, etc. As outlined in the [policy review guide](../policy-compliance/cloud-policy-review.md), the Cloud Adoption Framework includes three levels of sample policy: cloud-native, enterprise, and cloud-design-principle-compliant for each of the disciplines. This article discusses the cloud-native sample policy for the Security Baseline discipline.
+[Security Baseline](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on general security topics including protection of the network, digital assets, and data. As outlined in the [policy review guide](../policy-compliance/cloud-policy-review.md), the Cloud Adoption Framework includes three levels of sample policy: cloud-native, enterprise, and cloud-design-principle-compliant for each of the disciplines. This article discusses the cloud-native sample policy for the Security Baseline discipline.
 
 > [!NOTE]
 > Microsoft is in no position to dictate corporate or IT policy. This article will help you prepare for an internal policy review. It is assumed that this sample policy will be extended, validated, and tested against your corporate policy before attempting to use it. Any use of this sample policy as-is is discouraged.

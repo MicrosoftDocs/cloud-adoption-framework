@@ -4,14 +4,14 @@ description: Get an overview of the articles that explain the various activities
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Execute a migration
+# Deploy workloads
 
-After a workload has been assessed, it can be migrated to the cloud. This series of articles explains the various activities that may be involved in the execution of a migration.
+After workloads have been assessed, they can be deployed to the cloud or staged for release. This series of articles explains the various activities that may be involved in this phase of migration effort.
 
 ## Objective
 

@@ -54,7 +54,7 @@ To prepare you for this phase of the cloud adoption lifecycle, the framework sug
                         </div>
                         <div class="cardText" style="padding-left:0px;">
                             <h3>Azure innovation guide</h3>
-                            Azure includes a number of cloud tools that can accelerate the deployment of innovative solutions. Depending on your hypothesis, you might consider various combinations of tools. The creation of a minimum viable product (MVP) with basic tools is suggested.
+                            Azure includes cloud tools to accelerate the deployment of innovative solutions. Depending on your hypothesis, you might consider various combinations of tools. The creation of a minimum viable product (MVP) with basic tools is suggested.
                         </div>
                     </div>
                 </div>
@@ -119,9 +119,9 @@ Here are a couple of examples of role-specific learning paths on Microsoft Learn
 
 [Administer containers in Azure](https://docs.microsoft.com/learn/paths/administer-containers-in-azure): Azure Container Instances (ACI) are the quickest and easiest way to run containers in Azure. This learning path will teach you how to create and manage your containers, and how you can use ACI to provide elastic scale for Kubernetes.
 
-[Create serverless applications](https://docs.microsoft.com/learn/paths/create-serverless-applications): Azure Functions enable the creation of event-driven, compute-on-demand systems that can be triggered by various external events. Learn how to leverage functions to execute server-side logic and build serverless architectures.
+[Create serverless applications](https://docs.microsoft.com/learn/paths/create-serverless-applications): Azure Functions enable the creation of event-driven, compute-on-demand systems that can be triggered by various external events. Learn how to use functions to execute server-side logic and build serverless architectures.
 
-To discover additional learning paths, browse the [Learn catalog](/learn/browse). Use the **Roles** filter to align learning paths with your role.
+To discover additional learning paths, browse the [Learn catalog](https://docs.microsoft.com/learn/browse). Use the **Roles** filter to align learning paths with your role.
 
 ## Next steps
 

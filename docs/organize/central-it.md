@@ -1,10 +1,10 @@
 ---
 title: "Central IT capabilities"
-description: Learn about the formation of central IT capabilities.
+description: Use the Cloud Adoption Framework for Azure to learn how to establish a centralized IT team for your cloud adoption work.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: organize
@@ -54,7 +54,7 @@ The following tasks are typically executed regularly:
 - Monitor adoption plans and progress against the [prioritized migration backlog](../migrate/migration-considerations/assess/release-iteration-backlog.md).
 - Identify and prioritize platform changes that are required to support the migration backlog.
 - Act as an intermediary or translation layer between cloud adoption needs and existing IT teams.
-- Leverage existing IT teams to accelerate platform capabilities and enable adoption.
+- Take advantage of existing IT teams to accelerate platform capabilities and enable adoption.
 
 ### Technical tasks
 
@@ -97,7 +97,7 @@ A mature Central IT team maintains necessary protections but negotiates practice
 
 This example narrative illustrates the approach taken by a mature Central IT team to empower adoption.
 
-Contoso, LLC has adopted a Central IT model for the support of the business's cloud resources. To deliver this model, they have implemented tight controls for various shared services such as ingress network connections. This wise move reduced the exposure of their cloud environment and provided a single "break-glass" device to block all traffic in case of a breach. Their security baseline policies state that all ingress traffic must come through a shared device managed by the Central IT team.
+Contoso, LLC has adopted a Central IT model for the support of the business's cloud resources. To deliver this model, they have implemented tight controls for various shared services such as ingress network connections. This wise move reduced the exposure of their cloud environment and provided a single "break-glass" device to block all traffic if a breach occurs. Their security baseline policies state that all ingress traffic must come through a shared device managed by the Central IT team.
 
 However, one of their cloud adoption teams now requires an environment with a dedicated and specially configured ingress network connection to use a specific cloud technology. An immature Central IT team would simply refuse the request and prioritize its existing processes over adoption needs. Contoso's Central IT team is different. They quickly identified a simple four-part solution to this dilemma: Classification, Negotiation, Isolation, and Automation.
 

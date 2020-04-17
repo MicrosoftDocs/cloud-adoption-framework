@@ -4,7 +4,7 @@ description: Learn what you need to create a financial model that accurately rep
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: governance

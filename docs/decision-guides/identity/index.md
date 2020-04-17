@@ -2,13 +2,15 @@
 title: "Identity decision guide"
 description: Learn how Identity and access management (IAM) services enable you to manage access control in the cloud.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
 ---
+
+<!-- cSpell:ignore Kerberos NTLM SAML -->
 
 # Identity decision guide
 

@@ -1,10 +1,10 @@
 ---
 title: "First cloud adoption project"
-description: Learn about implementing your first cloud adoption project.
+description: Use the Cloud Adoption Framework for Azure to learn the processes for cloud adoption and the operation of workloads hosted in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 5/19/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
@@ -41,7 +41,7 @@ Your team's first adoption project is likely to result in a production deploymen
 
 To support the preceding criteria, this list provides an example of a first project for each motivation category:
 
-- **Critical business events:** When a critical business event is the primary motivation, implementation of a tool like [Azure Site Recovery](../migrate/azure-migration-guide/migrate.md?tabs=Tools#azure-site-recovery) might be a good first project. During migration, you can use this tool to quickly migrate datacenter assets. But during the first project, you could use it purely as a disaster recovery tool, reducing dependencies on disaster recovery assets within the datacenter.
+- **Critical business events:** When a critical business event is the primary motivation, implementation of a tool like [Azure Site Recovery](../migrate/azure-migration-guide/migrate.md#azure-site-recovery) might be a good first project. During migration, you can use this tool to quickly migrate datacenter assets. But during the first project, you could use it purely as a disaster recovery tool, reducing dependencies on disaster recovery assets within the datacenter.
 
 - **Migration motivations:** When migration is the primary motivation, it's wise to start with the migration of a noncritical workload. The [Azure setup guide](../ready/azure-setup-guide/index.md) and the [Azure migration guide](../migrate/azure-migration-guide/index.md) can provide guidance for the migration of your first workload.
 
@@ -61,7 +61,7 @@ Additional examples of first adoption projects include:
 
 ## Next steps
 
-After the first cloud adoption project has begun, the cloud strategy team can turn their attention to the longer-term [cloud adoption plan](../plan/index.md).
+Learn about strategies for [balancing competing priorities](./balance-competing-priorities.md).
 
 > [!div class="nextstepaction"]
-> [Build your cloud adoption plan](../plan/index.md)
+> [Balance competing priorities](./balance-competing-priorities.md)

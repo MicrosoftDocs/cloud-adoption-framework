@@ -4,7 +4,7 @@ description: Follow a fictional standard enterprise through various stages of go
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -37,7 +37,7 @@ Every application should be deployed in the proper area of the management group,
 2. Two subscriptions, one for production workloads and another for nonproduction workloads.
 3. [Consistent nomenclature](../../../ready/azure-best-practices/naming-and-tagging.md) should be applied at each level of this grouping hierarchy.
 4. Resource groups should be deployed in a manner that considers its contents lifecycle: everything that is developed together, is managed together, and retires together goes together. For more information on resource group best practices, [see here](../../../decision-guides/resource-consistency/index.md).
-5. [Region selection](../../../decision-guides/regions/index.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
+5. [Region selection](../../../migrate/azure-best-practices/multiple-regions.md) is incredibly important and must be considered so that networking, monitoring, auditing can be in place for failover/failback as well as confirmation that [needed SKUs are available in the preferred regions](https://azure.microsoft.com/global-infrastructure/services).
 
 Here is an example of this pattern in use:
 
@@ -45,7 +45,7 @@ Here is an example of this pattern in use:
 
 These patterns provide room for growth without complicating the hierarchy unnecessarily.
 
-[!INCLUDE [governance-of-resources](../../../../includes/caf-governance-of-resources.md)]
+[!INCLUDE [governance-of-resources](../../../../includes/governance-of-resources.md)]
 
 ## Iterative governance improvements
 

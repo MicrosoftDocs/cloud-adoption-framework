@@ -3,17 +3,17 @@ title: "Balance the portfolio"
 description: Discover strategies for balancing migration, innovation, and experimentation to get the most out of your cloud migration efforts.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/25/2020
-ms.topic: guide
+ms.date: 03/04/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: migrate
+ms.subservice: strategy
 ---
 
 <!-- cSpell:ignore CSAT -->
 
 # Balance the portfolio
 
-Cloud adoption is a portfolio management effort, cleverly disguised as technical implementation. Like any portfolio management exercise, balancing the portfolio is critical. At a strategic level, this means balancing migration, innovation, and experimentation to get the most out of the cloud. When the cloud adoption effort leans too far in one direction or another, complexity finds its way into the migration effort. This article will guide the reader through approaches to achieve balance in the portfolio.
+Cloud adoption is a portfolio-management effort, cleverly disguised as technical implementation. Like any portfolio management exercise, balancing the portfolio is critical. At a strategic level, this means balancing migration, innovation, and experimentation to get the most out of the cloud. When the cloud adoption effort leans too far in one direction, complexity finds its way into the adoption efforts. This article will guide the reader through approaches to achieve balance in the portfolio.
 
 ## General scope expansion
 
@@ -21,9 +21,7 @@ Balancing the portfolio is strategic in nature. As such, the approach taken in t
 
 ### Document business outcomes
 
-Before balancing the portfolio, it is important to document and share the business outcomes driving the cloud migration effort. For a few examples of general business outcomes related to cloud migrations, see the [Cloud migration executive summary](../getting-started/migrate.md).
-
-The following table can help document and share desired business outcomes. It's important to note that most businesses are pursuing several outcomes at a time. The importance of this exercise is to clarify the outcomes that are most directly related to the cloud migration effort:
+Before balancing the portfolio, it is important to document and share the business outcomes driving the cloud-migration effort. The following table can help document and share desired business outcomes. It's important to note that most businesses are pursuing several outcomes at a time. The importance of this exercise is to clarify the outcomes that are most directly related to the cloud migration effort:
 
 |Outcome  |Measured by  |Goal  |Time frame  |Priority for this effort  |
 |---------|---------|---------|---------|---------|
@@ -33,9 +31,9 @@ The following table can help document and share desired business outcomes. It's 
 |Improve Customer Experience     |Customer Satisfaction (CSAT)         |10% improvement         |12 months         |#4         |
 
 > [!IMPORTANT]
-> The above table is a fictional example and should not used to set priorities. In many cases, this table could considered an antipattern by placing cost savings above customer experiences.
+> The above table is a fictional example and should not used to set priorities. In many cases, this table could be considered an antipattern by placing cost savings above customer experiences.
 
-The above table could accurately represent the priorities of the cloud strategy team and the cloud adoption team overseeing a cloud migration. Due to short-term constraints, this team is placing a higher emphasis on IT cost reduction and prioritizing a datacenter exit as a means to achieve the desired IT cost reductions. However, by documenting the competing priorities in this table, the cloud adoption team is empowered to help the cloud strategy team identify opportunities to better align implementation of the overarching portfolio strategy.
+The above table could accurately represent the priorities of the cloud strategy team and the cloud adoption team. Due to short-term constraints, this team is placing a higher emphasis on IT cost reduction and prioritizing a datacenter exit as a means to achieve the desired IT cost reductions. However, by documenting the competing priorities in this table, the cloud adoption team is empowered to help the cloud strategy team identify opportunities to better align implementation of the overarching portfolio strategy.
 
 ### Move fast while maintaining balance
 
@@ -60,15 +58,9 @@ If the answer to both of these questions is "Yes", then it would be wise to cons
 
 If the answer to either question is "No", it may be wise to establish a plan for hosting the workload until it can be retired. This plan could include moving the assets to a lower-cost datacenter or alternative datacenter, which would also accomplish the objectives of reducing costs and exiting one datacenter.
 
-## Suggested prerequisites
+## Adopt process changes
 
-The prerequisites specified in the baseline guide should still be sufficient for addressing this complexity topic. However, the asset inventory and digital estate should be highlighted and bolded among those prerequisites, as that data will drive the following activities.
-
-## Assess process changes
-
-Balancing the portfolio requires additional qualitative analysis during the assess process, which will help drive simple portfolio rationalization.
-
-### Suggested action during the assess process
+Balancing the portfolio requires additional qualitative analysis during Adopt execution, which will help drive simple portfolio rationalization.
 
 Based on the data from the table in the [documenting business outcomes](#document-business-outcomes) section above, there is a likely risk of the portfolio leaning too far into a migration-focused execution model. If customer experience was top priority, an innovation heavy portfolio would be more likely. Neither is right or wrong, but leaning too far in one direction commonly results in diminishing returns, adds unnecessary complexity, and increases execution time related to cloud adoption efforts.
 
@@ -97,8 +89,6 @@ These questions shouldn't be the extent of the qualitative analysis completed fo
 
 During migration, portfolio balancing activities can have a negative impact on migration velocity (Speed at which assets are migrated). The following guidance will expand on why and how to align work to avoid interruptions to the migration effort.
 
-### Suggested action during the migrate process
-
 Portfolio rationalization requires diversity of technical effort. It is tempting for cloud adoption teams to match that portfolio diversity within migration efforts. Business stakeholders of ask for a single cloud adoption team to address the entire migration backlog. This is seldom an advisable approach, in many cases this can be counter productive.
 
 These diverse efforts should be segmented across two or more cloud adoption teams. Using a two team model as an example mode of execution, Team 1 is the Migration Team and Team 2 is the Innovation Team. For larger efforts, these teams could be further segmented to address other approaches like Replace/PaaS efforts or Minor Refactoring. The following outlines the skills and roles needed to Rehost, Refactor, or Minor Refactoring:
@@ -107,21 +97,13 @@ These diverse efforts should be segmented across two or more cloud adoption team
 
 **Refactor:** Refactor requires team members to modify source code, change the architecture of an application, or adopt new cloud services. Generally this effort would use development tools like Visual Studio and deployment pipeline tools like Azure DevOps to redeploy modernized applications to Azure. This work aligns well to application development roles or DevOps pipeline development roles. Cloud Innovation Team is best structured to deliver this work. It can take longer to replace existing assets with cloud assets in this approach, but the apps can take advantage of cloud-native features.
 
-**Minor Refactoring:** Some applications can be modernized with minor refactoring at the data or application level. This work requires team members to deploy data to cloud-based data platforms or to make minor configuration changes to the application. This may require limited support for data or application development subject matter experts. However, this work is similar to the work conducted by IT implementors when deploying third-party apps. This work could easily align with the cloud migration team or the cloud strategy team. While this effort is not nearly as fast as a rehost migration, it takes less time to execute than refactor efforts.
+**Minor refactoring:** Some applications can be modernized with minor refactoring at the data or application level. This work requires team members to deploy data to cloud-based data platforms or to make minor configuration changes to the application. This may require limited support for data or application development subject matter experts. However, this work is similar to the work conducted by IT implementors when deploying third-party apps. This work could easily align with the cloud migration team or the cloud strategy team. While this effort is not nearly as fast as a rehost migration, it takes less time to execute than refactor efforts.
 
 During migration, efforts should be segmented in the three ways listed above and executed by the appropriate team in the appropriate iteration. While you should diversify the portfolio, also ensure that efforts stay very focused and segregated.
 
-## Optimize and promote process changes
-
-No additional changes are required during Optimize and promote processes within the Migration effort.
-
-## Secure and manage process changes
-
-No additional changes are required during Secure and manage processes within the Migration effort.
-
 ## Next steps
 
-Return to the [expanded scope checklist](./index.md) to ensure your migration method is fully aligned.
+Understand how [global market decisions](./global-markets.md) can affect your transformation journey.
 
 > [!div class="nextstepaction"]
-> [Expanded scope checklist](./index.md)
+> [Understand global markets](./global-markets.md)

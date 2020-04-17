@@ -1,10 +1,10 @@
 ---
 title: "Cloud platform capabilities"
-description: Describes the formation of cloud platform capabilities
+description: Use the Cloud Adoption Framework for Azure to understand the formation of cloud platform capabilities.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: organize

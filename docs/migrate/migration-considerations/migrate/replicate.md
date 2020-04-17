@@ -1,10 +1,10 @@
 ---
-title: "What role does replication and synchronization play in the migration process?"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+title: "Replication and the migration process"
+description: Understand the role that replication plays in the migration process, as well as how to plan for the prerequisites and risks of replication activities.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

@@ -4,24 +4,24 @@ description: Learn to use Terraform to build your landing zones.
 author: arnaudlh
 ms.author: arnaul
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore arnaudlh arnaul Arnaud Hashicorp's vCPUs eastasia southeastasia lalogs tfvars -->
+<!-- cSpell:ignore arnaudlh arnaul Arnaud vCPUs eastasia southeastasia lalogs tfvars -->
 
 # Use Terraform to build your landing zones
 
-Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Hashicorp's Terraform. This section shows how to use a prototype landing zone to deploy foundational logging, accounting, and security capabilities for an Azure subscription.
+Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is HashiCorp's Terraform. This section shows how to use a sample landing zone to deploy foundational governance, accounting, and security capabilities for an Azure subscription.
 
 ## Purpose of the landing zone
 
-The Cloud Adoption Framework foundational landing zone for Terraform has a limited set of responsibilities and features to enforce logging, accounting, and security. This landing zone uses standard components known as Terraform modules to enforce consistency across resources deployed in the environment.
+The Cloud Adoption Framework foundations landing zone for Terraform provides features to enforce logging, accounting, and security. This landing zone uses standard components known as Terraform modules to enforce consistency across resources deployed in the environment.
 
 ## Use standard modules
 
-Reuse of components is a fundamental principle of infrastructure as code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. The modules used to deploy this first landing zone are available in the official [Terraform registry](https://registry.terraform.io/search?q=aztfmod).
+Reuse of components is a fundamental principle of infrastructure as code. Modules are instrumental in defining standards and consistency across resource deployment within and across environments. The modules used to deploy this first landing zone are available in the official [Terraform registry](https://registry.terraform.io/modules/aztfmod).
 
 ## Architecture diagram
 
@@ -49,7 +49,7 @@ Before you use the Cloud Adoption Framework foundation landing zone, review the 
 
 The following assumptions or constraints were considered when this initial landing zone was defined. If these assumptions align with your constraints, you can use the blueprint to create your first landing zone. The blueprint also can be extended to create a landing zone blueprint that meets your unique constraints.
 
-- **Subscription limits:** This adoption effort is unlikely to exceed [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
+- **Subscription limits:** This adoption effort is unlikely to exceed [subscription limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
 - **Compliance:** No third-party compliance requirements are needed for this landing zone.
 - **Architectural complexity:** Architectural complexity doesn't require additional production subscriptions.
 - **Shared services:** There are no existing shared services in Azure that require this subscription to be treated like a spoke in a hub and spoke architecture.
@@ -64,11 +64,11 @@ The following decisions are represented in the Terraform landing zone:
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Logging and monitoring | Azure Monitor Log Analytics workspace is used. A diagnostics storage account as well as Event Hub is provisioned.                                                                                                                                                        |                                                                                                                                                                                                                                                                 |
 | Network                | N/A - Network is implemented in another landing zone.                                                                                                                                                                                                                    | [Networking decisions](../considerations/networking-options.md)                                                                                                                                                                                                 |
-| Identity               | It's assumed that the subscription is already associated with an Azure Active Directory instance.                                                                                                                                                                        | [Identity management best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices)                                                                                                                               |
+| Identity               | It's assumed that the subscription is already associated with an Azure Active Directory instance.                                                                                                                                                                        | [Identity management best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices)                                                                                                                               |
 | Policy                 | This landing zone currently assumes that no Azure policies are to be applied.                                                                                                                                                                                            |                                                                                                                                                                                                                                                                 |
-| Subscription design    | N/A - Designed for a single production subscription.                                                                                                                                                                                                                     | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)                                                                                                                                                                                       |
-| Management groups      | N/A - Designed for a single production subscription.                                                                                                                                                                                                                     | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)                                                                                                                                                                                       |
-| Resource groups        | N/A - Designed for a single production subscription.                                                                                                                                                                                                                     | [Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)                                                                                                                                                                                       |
+| Subscription design    | N/A - Designed for a single production subscription.                                                                                                                                                                                                                     | [Create initial subscriptions](../azure-best-practices/initial-subscriptions.md)                                                                                                                                                                                  |
+| Resource groups        | N/A - Designed for a single production subscription.                                                                                                                                                                                                                     | [Scale subscriptions](../azure-best-practices/scale-subscriptions.md)                                                                                                                                                                                           |
+| Management groups      | N/A - Designed for a single production subscription.                                                                                                                                                                                                                     | [Organize subscriptions](../azure-best-practices/organize-subscriptions.md)                                                                                                                                                                                     |
 | Data                   | N/A                                                                                                                                                                                                                                                                      | [Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and [Azure Data Store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
 | Storage                | N/A                                                                                                                                                                                                                                                                      | [Azure Storage guidance](../considerations/storage-options.md)                                                                                                                                                                                                  |
 | Naming standards       | When the environment is created, a unique prefix is also created. Resources that require a globally unique name (such as storage accounts) use this prefix. The custom name is appended with a random suffix. Tag usage is mandated as described in the following table. | [Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md)                                                                                                                                                                              |
@@ -92,7 +92,7 @@ The minimum set of tags shown below must be present on all resources and resourc
 
 ## Customize and deploy your first landing zone
 
-You can [clone your Terraform foundation landing zone](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready). Get started easily with the landing zone by modifying the Terraform variables. In our example, we use **blueprint_foundations.sandbox.auto.tfvars**, so Terraform automatically sets the values in this file for you.
+You can [clone your Terraform foundation landing zone](https://github.com/azure/caf-terraform-landingzones). Get started easily with the landing zone by modifying the Terraform variables. In our example, we use **blueprint_foundations.sandbox.auto.tfvars**, so Terraform automatically sets the values in this file for you.
 
 Let's look at the different variable sections.
 
@@ -187,7 +187,7 @@ security_center = {
 
 ## Get started
 
-After you've reviewed the configuration, you can deploy the configuration as you would deploy a Terraform environment. We recommend that you use the rover, which is a Docker container that allows deployment from Windows, Linux, or MacOS. You can get started with the [rover GitHub repository](https://github.com/aztfmod/rover).
+After you've reviewed the configuration, you can deploy the configuration as you would deploy a Terraform environment. We recommend that you use the rover, which is a Docker container that allows deployment from Windows, Linux, or macOS. You can get started with the [landing zones](https://github.com/azure/caf-terraform-landingzones).
 
 ## Next steps
 
@@ -201,4 +201,4 @@ Layering landing zones is a good practice for decoupling systems, versioning eac
 Future reference architectures will demonstrate this concept for a hub and spoke topology.
 
 > [!div class="nextstepaction"]
-> [Review the foundation Terraform landing zone sample](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready)
+> [Review the foundation Terraform landing zone sample](https://github.com/azure/caf-terraform-landingzones)

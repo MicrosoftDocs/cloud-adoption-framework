@@ -1,15 +1,17 @@
 ---
 title: "How to obtain assistance"
-description: How to obtain assistance during your journey to Azure
+description: Learn how to obtain assistance during your Azure migration process. The right assistance can help accelerate your migration efforts.
 author: matticusau
 ms.author: mlavery
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
+
+<!-- cSpell:ignore MSPs -->
 
 ::: zone target="chromeless"
 
@@ -105,4 +107,4 @@ Microsoft Certified Solution Providers specialize in providing up-to-date, Micro
 Get help from partners with ready-made or custom Azure solutions and partners who can help deploy and manage those solutions:
 
 - [Find a Cloud Solutions Partner](https://www.microsoft.com/solution-providers/home). A certified CSP can help take full advantage of the cloud by assessing business goals for cloud adoption, identifying the right cloud solution that meets business needs and helps the business become more agile and efficient.
-- [Find a Managed Service Partner](https://www.microsoft.com/solution-providers/search?cacheId=16a3b49b-fef2-449d-bdf0-628008114cca). An Azure Managed Service Partner (MSP) helps a business transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning and the billing experience&mdash;all with a flexible pay-as-you-go (PAYG) business model.
+- [Find a Managed Service Partner](https://www.microsoft.com/solution-providers/search?cacheId=16a3b49b-fef2-449d-bdf0-628008114cca). An Azure Managed Service Partner (MSP) helps a business transition to Azure by guiding all aspects of the cloud journey. From consulting to migrations and operations management, cloud MSPs show customers all the benefits that come with cloud adoption. They also act as a one-stop shop for common support, provisioning and the billing experience&mdash;all with a flexible pay-as-you-go business model.

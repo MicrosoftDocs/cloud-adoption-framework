@@ -2,9 +2,9 @@
 title: "Software Defined Networking: Hub and spoke"
 description: Use the Cloud Adoption Framework for Azure to learn how hub and spoke networking organizes your network infrastructure into multiple connected virtual networks.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
@@ -21,7 +21,7 @@ All traffic passing in or out of the workload spoke networks is routed through t
 This model aims to address each of the following concerns:
 
 - **Cost savings and management efficiency.** Centralizing services that can be shared by multiple workloads, such as network virtual appliances (NVAs) and DNS servers, in a single location allows IT to minimize redundant resources and management effort across multiple workloads.
-- **Overcoming subscriptions limits.** Large cloud-based workloads may require the use of more resources than are allowed within a single Azure subscription (see [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits)). Peering workload virtual networks from different subscriptions to a central hub can overcome these limits.
+- **Overcoming subscription limits.** Large cloud-based workloads may require the use of more resources than are allowed within a single Azure subscription. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [Azure networking limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits).
 - **Separation of concerns.** The ability to deploy individual workloads between central IT teams and workloads teams.
 
 The following diagram shows an example hub and spoke architecture including centrally managed hybrid connectivity.

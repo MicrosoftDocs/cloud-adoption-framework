@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to establish a minimum v
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -45,7 +45,7 @@ The cloud governance team will be responsible for the following decisions and im
 
 ### Subscription design
 
-The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has chosen the **[Mixed](../../../decision-guides/subscriptions/index.md#mixed-patterns)** subscription design pattern.
+The decision on what subscription design to use determines how Azure subscriptions get structured and how Azure management groups will be used to efficiently manage access, policies, and compliance of these subscription. In this narrative, the governance team has chosen a **[Mixed subscription strategy](../../../decision-guides/subscriptions/index.md#mixing-subscription-strategies)**.
 
 - As new requests for Azure resources arise, a "Department" should be established for each major business unit in each operating geography. Within each of the Departments, "Subscriptions" should be created for each application archetype.
 - An application archetype is a means of grouping applications with similar needs. Common examples include: Applications with protected data, governed applications (such as HIPAA or FedRAMP), low-risk applications, applications with on-premises dependencies, SAP or other mainframe applications in Azure, or applications that extend on-premises SAP or mainframe applications. Each organization has unique needs based on data classifications and the types of applications that support the business. Dependency mapping of the digital estate can help define the application archetypes in an organization.
@@ -55,7 +55,7 @@ The decision on what subscription design to use determines how Azure subscriptio
 
 Resource consistency decisions determine the tools, processes, and effort required to ensure Azure resources are deployed, configured, and managed consistently within a subscription. In this narrative, **[Deployment Consistency](../../../decision-guides/resource-consistency/index.md#deployment-consistency)** has been chosen as the primary resource consistency pattern.
 
-- Resource groups are created for applications using the lifecycle approach. Everything that is created, maintained, and retired together should reside a single resource group. For more on resource groups, see [here](../../../decision-guides/resource-consistency/index.md#basic-grouping).
+- Resource groups are created for applications using the lifecycle approach. Everything that is created, maintained, and retired together should reside a single resource group. For more information, see the [Resource consistency decision guide](../../../decision-guides/resource-consistency/index.md#basic-grouping).
 - Azure Policy should be applied to all subscriptions from the associated management group.
 - As part of the deployment process, Azure Resource Consistency templates for the resource group should be stored in source control.
 - Each resource group is associated with a specific workload or application based on the lifecycle approach described above.

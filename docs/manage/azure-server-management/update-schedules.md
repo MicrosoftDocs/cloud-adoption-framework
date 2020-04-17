@@ -1,10 +1,10 @@
 ---
 title: "Create update schedules"
-description: Use the Azure portal or the new PowerShell cmdlet modules to manage update schedules. 
+description: Use the Cloud Adoption Framework for Azure to learn how to manage update schedules with the Azure portal or the new PowerShell cmdlet modules. 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -61,7 +61,7 @@ Before you run the example script, you'll need to sign in by using the [Connect-
         [string]$AutomationAccountName,
 
         [Parameter(Mandatory=$false)]
-        [string]$scheduleName = "SaturdayCritialSecurity"
+        [string]$scheduleName = "SaturdayCriticalSecurity"
     )
 
     Import-Module Az.Automation

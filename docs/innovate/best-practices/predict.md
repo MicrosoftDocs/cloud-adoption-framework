@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to find analytics tools 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
@@ -29,10 +29,10 @@ In the preceding image, data and insights align with the best practices outlined
 
 In Azure, the following tools are commonly used to accelerate digital invention across each of the preceding phases:
 
-- Azure Machine Learning
-- Azure HDInsight
-- Hadoop R ScaleR
-- Azure SQL Data Warehouse
+- [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning)
+- [Azure HDInsight](https://docs.microsoft.com/azure/hdinsight)
+- [Hadoop R ScaleR](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-r-scaler-sparkr)
+- [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics)
 
 How each tool helps with each phase of predict and influence is reflected in the guidance in the table of contents on the left side of this page.
 

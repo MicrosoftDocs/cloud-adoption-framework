@@ -1,10 +1,10 @@
 ---
 title: "Hub and spoke network topology"
-description: Learn about hub and spoke network topologies.
+description: Learn about hub and spoke network topologies for more efficient management of common communication or security requirements.
 author: tracsman
 ms.author: jonor
 ms.date: 05/10/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 manager: rossort
@@ -12,12 +12,14 @@ tags: azure-resource-manager
 ms.custom: virtual-network
 ---
 
+<!-- cSpell:ignore tracsman jonor rossort NVAs -->
+
 # Hub and spoke network topology
 
 *Hub and spoke* is a networking model for more efficient management of common communication or security requirements. It also helps avoid Azure subscription limitations. This model addresses the following concerns:
 
 - **Cost savings and management efficiency**. Centralizing services that can be shared by multiple workloads, such as network virtual appliances (NVAs) and DNS servers, in a single location allows IT to minimize redundant resources and management effort.
-- **Overcoming subscriptions limits**. Large cloud-based workloads might require the use of more resources than are allowed in a single Azure subscription. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits).
+- **Overcoming subscriptions limits**. Large cloud-based workloads might require the use of more resources than are allowed in a single Azure subscription. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [Azure subscription limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
 - **Separation of concerns**. You can deploy individual workloads between central IT teams and workload teams.
 
 Smaller cloud estates might not benefit from the added structure and capabilities that this model offers. But larger cloud adoption efforts should consider implementing a hub and spoke networking architecture if they have any of the concerns listed previously.
@@ -55,7 +57,7 @@ The spokes can also segregate and enable different groups within your organizati
 
 In Azure, every component, whatever the type, is deployed in an Azure subscription. The isolation of Azure components in different Azure subscriptions can satisfy the requirements of different lines of business, such as setting up differentiated levels of access and authorization.
 
-A single hub and spoke implementation can scale up to a large number of spokes. But as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits. One example is a maximum number of virtual network peerings. For more information, see [Azure subscription and service limits, quotas, and constraints](https://docs.microsoft.com/azure/azure-subscription-service-limits).
+A single hub and spoke implementation can scale up to a large number of spokes. But as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits. One example is a maximum number of virtual network peerings. For more information, see [Azure subscription and service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
 In cases where limits might be an issue, you can scale up the architecture further by extending the model from a single hub and spoke to a cluster of hubs and spokes. You can interconnect multiple hubs in one or more Azure regions by using virtual network peering, Azure ExpressRoute, a virtual WAN, or a site-to-site VPN.
 
@@ -77,48 +79,6 @@ Spokes can also be interconnected to a spoke that acts as a hub. This approach c
 
 <!-- images -->
 
-[0]: ../../_images/azure-best-practices/network-redundant-equipment.png "Examples of component overlap"
 [1]: ../../_images/azure-best-practices/network-hub-spoke-high-level.png "High-level example of hub and spoke"
 [2]: ../../_images/azure-best-practices/network-hub-spokes-cluster.png "Cluster of hubs and spokes"
 [3]: ../../_images/azure-best-practices/network-spoke-to-spoke.png "Spoke-to-spoke"
-[4]: ../../_images/azure-best-practices/network-hub-spoke-block-level-diagram.png "Block-level diagram of the hub and spoke"
-[5]: ../../_images/azure-best-practices/network-users-groups-subscriptions.png "Users, groups, subscriptions, and projects"
-[6]: ../../_images/azure-best-practices/network-infrastructure-high-level.png "High-level infrastructure diagram"
-[7]: ../../_images/azure-best-practices/network-high-level-perimeter-networks.png "High-level infrastructure diagram"
-[8]: ../../_images/azure-best-practices/network-vnet-peering-perimeter-networks.png "Virtual network peering and perimeter networks"
-[9]: ../../_images/azure-best-practices/network-high-level-diagram-monitoring.png "High-level diagram for monitoring"
-[10]: ../../_images/azure-best-practices/network-high-level-workloads.png "High-level diagram for workload"
-
-<!-- links -->
-
-[PrivateDNS]: https://docs.microsoft.com/azure/dns/private-dns-overview
-[VNetPeering]: https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview
-[user-defined-routes]: https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview
-[RBAC]: https://docs.microsoft.com/azure/role-based-access-control/overview
-[azure-ad]: https://docs.microsoft.com/azure/active-directory/active-directory-whatis
-[VPN]: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways
-[ExR]: https://docs.microsoft.com/azure/expressroute/expressroute-introduction
-[ExRD]: https://docs.microsoft.com/azure/expressroute/expressroute-erdirect-about
-[vWAN]: https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about
-[NVA]: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/nva-ha
-[AzFW]: https://docs.microsoft.com/azure/firewall/overview
-[SubMgmt]: ../../reference/azure-scaffold.md
-[RGMgmt]: https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview
-[DMZ]: https://docs.microsoft.com/azure/best-practices-network-security
-[ALB]: https://docs.microsoft.com/azure/load-balancer/load-balancer-overview
-[PIP]: https://docs.microsoft.com/azure/virtual-network/resource-groups-networking#public-ip-address
-[AFD]: https://docs.microsoft.com/azure/frontdoor/front-door-overview
-[AppGW]: https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction
-[WAF]: https://docs.microsoft.com/azure/application-gateway/application-gateway-web-application-firewall-overview
-[Monitor]: https://docs.microsoft.com/azure/monitoring-and-diagnostics/
-[ActLog]: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs
-[DiagLog]: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs
-[nsg-log]: https://docs.microsoft.com/azure/virtual-network/virtual-network-nsg-manage-log
-[OMS]: https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview
-[NPM]: https://docs.microsoft.com/azure/log-analytics/log-analytics-network-performance-monitor
-[NetWatch]: https://docs.microsoft.com/azure/network-watcher/network-watcher-monitoring-overview
-[WebApps]: https://docs.microsoft.com/azure/app-service/
-[HDI]: https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-introduction
-[EventHubs]: https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs
-[ServiceBus]: https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview
-[traffic-manager]: https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview

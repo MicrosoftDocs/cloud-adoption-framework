@@ -1,10 +1,10 @@
 ---
 title: "Plan for cloud adoption"
-description: Planning for cloud adoption
+description: Use the Cloud Adoption Framework for Azure to learn how a cloud adoption plan helps companies balance their IT portfolio and manage transitions over time.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
@@ -31,9 +31,9 @@ This article series walks through each step of translating strategy and effort i
 
 1. **Prerequisites:** Confirm that all prerequisite steps have been completed before you create your plan.
 2. **Define and prioritize workloads:** Prioritize your first 10 workloads to establish an initial adoption backlog.
-3. **Align assets:** Identify which assets (proposed or existing) are required to support the prioritized workloads.
-4. **Review rationalization:** Review rationalization decisions to refine adoption-path decisions: Migrate or Innovate.
-5. **Define iterations and releases:** *Iterations* are the time blocks allocated to do work. *Releases* are the definition of the work to be done before triggering a change to production processes.
+3. **Align assets to workloads:** Identify which assets (proposed or existing) are required to support the prioritized workloads.
+4. **Review rationalization decisions:** Review rationalization decisions to refine adoption-path decisions: Migrate or Innovate.
+5. **Establish iterations and release plans:** *Iterations* are the time blocks allocated to do work. *Releases* are the definition of the work to be done before triggering a change to production processes.
 6. **Estimate timelines:** Establish rough timelines for release planning purposes, based on initial estimates.
 
 ## Next steps

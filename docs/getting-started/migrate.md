@@ -4,7 +4,7 @@ description: Get comprehensive guidance for transitioning legacy application wor
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
@@ -20,7 +20,7 @@ The Cloud Adoption Framework helps customers undertake a simplified cloud adopti
 This framework is designed primarily for cloud architects and the cloud strategy teams leading cloud adoption efforts. However, many subjects in this framework are relevant to other roles across the business and IT. Cloud architects frequently serve as facilitators to engage each of the relevant roles. This executive summary is designed to prepare the various roles before facilitating conversations.
 
 > [!NOTE]
-> This guidance is currently a public preview. Terminology, approaches, and guidance are being thoroughly tested with customers, partners, and Microsoft teams during this preview. As such, the TOC and guidance may change slightly over time.
+> This guidance is currently a public preview. Terminology, approaches, and guidance are being thoroughly tested with customers, partners, and Microsoft teams during this preview. As such, the table of contents and the guidance may change slightly over time.
 
 ## Motivations
 
@@ -52,13 +52,13 @@ This approach consists of two methodologies or areas of focus: Cloud Strategy & 
 
 Cloud implementation is an iterative process for migrating and modernizing the digital estate, aligned with targeted business outcomes and change management controls. During each iteration, workloads are migrated or modernized in alignment with the strategy and plan. Decisions regarding IaaS, PaaS, or hybrid are made during the assess phase of the [Migrate methodology](../migrate/index.md) to optimize control and execution. Those decisions will drive the tools used during each iteration of the migration phase within the same methodology. This model can be used with minimal strategy and planning. However, to ensure the greatest business returns, both IT and the business should align on a clear strategy and plan to guide implementation activities.
 
-![Cloud Adoption Framework's Cloud implementation methodology](../_images/operational-transformation-migrate.png)
+![The Cloud Adoption Framework's cloud implementation methodology](../_images/migrate/methodology.png)
 
 The focus of this effort is the migration or modernization of workloads. A workload is a collection of infrastructure, applications, and data that collectively supports a common business goal, or the execution of a common business process. Examples of workloads could include things like a line-of-business application, an HR payroll solution, a CRM solution, a financial document approval workflow, or a business intelligence solution. Workloads may also include shared technical resources like a data warehouse that supports several other solutions. In some cases, a workload could be represented by a single asset like a self-contained server, application, or data platform.
 
 Cloud migrations are often considered a single project within a broader program to streamline IT operations, costs, or complexity. The cloud implementation methodology helps align the technical efforts within a series of workload migrations to higher-level business values outlined in the cloud strategy and plan.
 
-**Getting started:** To get started with a cloud implementation, the [Azure migration guide](../migrate/azure-migration-guide/index.md) and [Azure setup guide](../ready/azure-setup-guide/index.md) outline the tools and high-level processes needed to be successful in the execution of a cloud implementation. Migrating your first workload using those guides will help the team overcome initial learning curves early in the planning process. Afterwards, additional considerations should be given to the [expanded scope checklist](../migrate/expanded-scope/index.md), [migration best practices](../migrate/azure-best-practices/index.md) and [migration consideration](../migrate/migration-considerations/index.md), to align the baseline guidance with your effort's unique constraints, processes, team structures, and objectives.
+**Getting started:** Begin a cloud implementation using the [Azure migration guide](../migrate/azure-migration-guide/index.md) and [Azure setup guide](../ready/azure-setup-guide/index.md), which outline the tools and high-level processes needed for successful execution of a cloud implementation. Migrating your first workload using those guides will help the team overcome initial learning curves early in the planning process. Afterwards, additional considerations should be given to the [migration best practices](../migrate/azure-best-practices/index.md) and [migration considerations](../migrate/migration-considerations/index.md) to align the baseline guidance with your effort's unique constraints, processes, team structures, and objectives.
 
 ## Cloud strategy and planning
 
@@ -72,7 +72,7 @@ Cloud strategy and planning is a methodology that focuses on aligning business o
 
 The Cloud Adoption Framework's cloud strategy and planning methodology is based on an incremental approach to cloud implementation that aligns to agile technology strategies, cultural maturity based on growth mindset approaches, and strategies driven by business outcomes. This methodology consists of the following high-level components that guide the implementation of each strategy.
 
-As depicted in the image above, this framework aligns strategic decisions to a small number of contained processes, which operate within an iterative model. While described in a linear document, each of the following processes is expected to mature in parallel with iterations of the cloud implementation. The links for each process will aid in defining the end state and the means of maturing toward the desired end state:
+As depicted in the image above, this framework aligns strategic decisions to a small number of contained processes that operate within an iterative model. While described in a linear document, each of the following processes is expected to mature in parallel with iterations of the cloud implementation. The links for each process will aid in defining the end state and the means of maturing toward the desired end state:
 
 - **[Plan](../strategy/index.md):** When technical implementation is aligned with clear business objectives, it's much easier to measure and align success across multiple cloud implementation efforts, regardless of technical decisions.
 - **[Ready](../ready/index.md):** Preparing the business, culture, people, and environment for coming changes leads to success in each effort and accelerates implementation and change projects.
@@ -143,3 +143,5 @@ The Cloud Adoption Framework is a lifecycle solution. It is designed to help rea
 > [Manage](../manage/index.md)
 >
 > [Organize](../organize/index.md)
+
+<!-- test:ignoreNextStep -->

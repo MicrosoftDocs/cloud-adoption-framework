@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn about adding se
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -35,7 +35,7 @@ Since then, some things have changed that will affect governance:
 - Thousands of IT and business assets have been deployed to the cloud.
 - The application development team has implemented a continuous integration and continuous deployment (CI/CD) pipeline to deploy a cloud-native application with an improved user experience. That application doesn't interact with protected data yet, so it isn't production ready.
 - The Business Intelligence team within IT actively curates data in the cloud from logistics, inventory, and third-party data. This data is being used to drive new predictions, which could shape business processes. However, those predictions and insights are not actionable until customer and financial data can be integrated into the data platform.
-- The IT team is progressing on the CIO and CFO's plans to retire two datacenters. Almost 3,500 of the assets in the two datacenters have been retired or migrated.
+- The IT team is making progress on the CIO and CFO plans to retire two datacenters. Almost 3,500 of the assets in the two datacenters have been retired or migrated.
 - The policies regarding sensitive personal and financial data have been modernized. However, the new corporate policies are contingent on the implementation of related security and governance policies. Teams are still stalled.
 
 ### Incrementally improve the future state
@@ -118,7 +118,7 @@ The new best practices fall into two categories: corporate IT (hub) and cloud ad
 6. Integrate group policy objects (GPO) through Desired State Configuration (DSC):
     1. Convert GPO to DSC – The [Microsoft Baseline Management project](https://github.com/Microsoft/BaselineManagement) in GitHub can accelerate this effort. Be sure to store DSC in the repository in parallel with Resource Manager templates.
     2. Deploy Azure Automation State Configuration to any instances of the Corporate IT subscription. Azure Automation can be used to apply DSC to VMs deployed in supported subscriptions within the management group.
-    3. The current roadmap plans to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
+    3. The current roadmap aims to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
 
 **Applying additional governance to a Cloud Adoption Subscription (Spoke):** Building on the `Corporate IT Subscription`, minor changes to the governance MVP applied to each subscription dedicated to the support of application archetypes can produce rapid improvement.
 
@@ -128,7 +128,7 @@ In prior iterative changes to the best practice, we defined network security gro
     1. The reference architecture from the prior section, [hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services), generated a Resource Manager template for enabling VNet peering.
     2. That template can be used as a guide to modify the DMZ template from the prior governance iteration.
     3. We are now adding VNet peering to the DMZ VNet that was previously connected to the local edge device over VPN.
-    4. *** The VPN should also be removed from this template as well to ensure no traffic is routed directly to the on-premises datacenter, without passing through the corporate IT subscription and Firewall solution. You could also set this VPN as a failover circuit in the event of an ExpressRoute circuit outge.
+    4. *** The VPN should also be removed from this template as well to ensure no traffic is routed directly to the on-premises datacenter, without passing through the corporate IT subscription and Firewall solution. You could also set this VPN as a failover circuit in the event of an ExpressRoute circuit outage.
     5. Additional [network configuration](https://docs.microsoft.com/azure/automation/automation-dsc-overview#network-planning) will be required by Azure Automation to apply DSC to hosted VMs.
 2. Modify the network security group. Block all public **and** direct on-premises traffic in the network security group. The only inbound traffic should be coming through the VNet peer in the corporate IT subscription.
     1. In the prior iteration, a network security group was created blocking all public traffic and whitelisting all internal traffic. Now we want to shift this network security group a bit.
@@ -145,7 +145,7 @@ In prior iterative changes to the best practice, we defined network security gro
     2. Audit and enforce use of approved OS images only.
     3. Audit and enforce guest configurations based on security requirements for each node.
 5. Update Azure Policy for all subscriptions that contains protected data classifications.
-    1. Audit and enforce use of standard roles only
+    1. Audit and enforce use of standard roles only.
     2. Audit and enforce application of encryption for all storage accounts and files at rest on individual nodes.
     3. Audit and enforce the application of the new version of the DMZ network security group.
     4. Audit and enforce use of approved network subnet and VNet per network interface.

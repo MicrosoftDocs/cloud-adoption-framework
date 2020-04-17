@@ -4,7 +4,7 @@ description: Learn to use the business outcome template to capture business outc
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
@@ -19,7 +19,7 @@ Download the [business outcome template spreadsheet](https://archcenter.blob.cor
 
 ## Use the business outcome template
 
-Introduced by Kate Johnson at the Microsoft Digital Transformation Academy, business outcomes focus on three topics:
+In this template, business outcomes focus on three topics:
 
 - Aligning to stakeholders or business decision makers
 - Understanding business drivers and objectives

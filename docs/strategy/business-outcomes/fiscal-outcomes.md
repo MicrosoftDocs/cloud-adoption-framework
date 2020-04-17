@@ -1,10 +1,10 @@
 ---
 title: "Examples of fiscal outcomes"
-description: Examples of fiscal outcomes
+description: Use the Cloud Adoption Framework for Azure to understand fiscal outcomes in the context of a cloud transformation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: governance
@@ -50,6 +50,8 @@ Cloud computing can reduce capital expenses for hardware and software, setting u
 - **Example #1:** A company's datacenter consumes a large percentage of the annual IT budget. IT chooses to conduct a cloud migration and transitions the assets in that datacenter to infrastructure as a service (IaaS) solutions, creating a three-year cost reduction.
 - **Example #2:** A holding company recently acquired a new company. In the acquisition, the terms dictate that the new entity should be removed from the current datacenters within six months. Failure to do so will result in a fine of 1 million USD per month to the holding company. Moving the digital assets to the cloud in a cloud migration could allow for a quick decommission of the old assets.
 - **Example #3:** An income tax company that caters to consumers experiences 70 percent of its annual revenue during the first three months of the year. The remainder of the year, its large IT investment sits relatively dormant. A cloud migration could allow IT to deploy the compute/hosting capacity required for those three months. During the remaining nine months, the IaaS costs could be significantly reduced by shrinking the compute footprint.
+
+<!-- cSpell:ignore Coverdell Coverdell's Sorensen -->
 
 ### Example: Coverdell
 

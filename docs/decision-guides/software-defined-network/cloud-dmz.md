@@ -2,9 +2,9 @@
 title: "Software Defined Networking: Cloud DMZ"
 description: Learn about the Cloud DMZ network architecture, which allows limited access between your on-premises and cloud-based networks by using a VPN.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
@@ -38,4 +38,4 @@ Your cloud adoption teams should consider the following issues when looking at i
 
 For more information about implementing a Cloud DMZ in Azure, see:
 
-- [Implement a DMZ between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid). This article discusses how to implement a secure hybrid network architecture in Azure.
+- [Implement a DMZ between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). This article discusses how to implement a secure hybrid network architecture in Azure.

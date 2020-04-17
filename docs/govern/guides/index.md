@@ -63,7 +63,7 @@ The guides demonstrate how to implement a governance MVP. From there, each guide
 To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the complexity of the enterprise for ease of navigation. However, the reader's decision may be more complex. The following tables outline the differences between the two options.
 
 > [!WARNING]
-> A more robust governance starting point may be required. In such cases, consider the [Azure Virtual Datacenter](#azure-virtual-datacenter) approach briefly described [below](#azure-virtual-datacenter). This approach is commonly suggested during enterprise-scale adoption efforts, and especially for efforts which exceed 10,000 assets. It is also the de facto choice for complex governance scenarios when any of the following are required: extensive third-party compliance requirements, deep domain expertise, or parity with mature IT governance policies and compliance requirements.
+> A more robust governance starting point may be required. In such cases, consider the [Azure Virtual Datacenter](#azure-virtual-datacenter) approach briefly described [below](#azure-virtual-datacenter). This approach is commonly suggested during enterprise-scale adoption efforts, and especially for efforts that exceed 10,000 assets. It is also the de facto choice for complex governance scenarios when any of the following are required: extensive third-party compliance requirements, deep domain expertise, or parity with mature IT governance policies and compliance requirements.
 
 <!-- markdownlint-disable MD028 -->
 
@@ -110,7 +110,7 @@ Although smaller teams may benefit from the models and recommendations the Azure
 
 - Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
 - You need to maintain common policy and governance compliance and central IT control over core services.
-- Your industry depends on a complex platform which requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, oil and gas, or manufacturing.
+- Your industry depends on a complex platform that requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, oil and gas, or manufacturing.
 - Your existing IT governance policies require tighter parity with existing features, even during early stage adoption.
 
 For more information, visit the [Azure Virtual Datacenter](../../reference/vdc.md) section of the Cloud Adoption Framework.

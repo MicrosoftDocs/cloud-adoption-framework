@@ -4,7 +4,7 @@ description: Establish an operational fitness review process to fully understand
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -39,7 +39,7 @@ During this process, the focus is often on the features of the service: the set 
 
 The _nonfunctional_ requirements, in contrast, relate to properties such as the service's [availability](https://docs.microsoft.com/azure/architecture/checklist/availability), [resiliency](https://docs.microsoft.com/azure/architecture/resiliency), and [scalability](https://docs.microsoft.com/azure/architecture/checklist/scalability). These properties differ from the functional requirements because they don't directly affect the final function of any particular feature in the service. However, nonfunctional requirements do relate to the performance and continuity of the service.
 
-You can specify some nonfunctional requirements in terms of a service-level agreement (SLA). For example, you can express service continuity as a percentage of availability: "Available 99.99% of the time". Other nonfunctional requirements might be more difficult to define and might change as production needs change. For example, a consumer-oriented service might face unanticipated throughput requirements after a surge of popularity.
+You can specify some nonfunctional requirements in terms of a service-level agreement (SLA). For example, you can express service continuity as a percentage of availability: "Available 99.99 percent of the time". Other nonfunctional requirements might be more difficult to define and might change as production needs change. For example, a consumer-oriented service might face unanticipated throughput requirements after a surge of popularity.
 
 > [!NOTE]
 > For more details about resiliency requirements, see [Designing reliable Azure applications](https://docs.microsoft.com/azure/architecture/reliability#define-requirements). That article includes explanations of concepts like recovery-point objective (RPO), recovery-time objective (RTO), and SLA.
@@ -76,7 +76,7 @@ It's important to emphasize that these metrics should directly reflect business 
 
 The service-review phase is the core of the operational fitness review. It involves these steps:
 
-1. **Measure service metrics**. Use the scorecard metrics to monitor the services, to ensure that the services meet the business expectations. Service monitoring is essential. If you can't monitor a set of services with respect to the nonfunctional requirements, consider the corresponding scorecard metrics to be red. In this case, the first step for remediation is to implement the appropriate service monitoring. For example, if the business expects a service to operate with 99.99% availability, but there is no production telemetry in place to measure availability, assume that you're not meeting the requirement.
+1. **Measure service metrics**. Use the scorecard metrics to monitor the services, to ensure that the services meet the business expectations. Service monitoring is essential. If you can't monitor a set of services with respect to the nonfunctional requirements, consider the corresponding scorecard metrics to be red. In this case, the first step for remediation is to implement the appropriate service monitoring. For example, if the business expects a service to operate with 99.99 percent availability, but there is no production telemetry in place to measure availability, assume that you're not meeting the requirement.
 
 2. **Plan remediation**. For each service operation for which metrics fall below an acceptable threshold, determine the cost of remediating the service to bring operation to an acceptable level. If the cost of remediating the service is greater than the expected revenue generation of the service, move on to consider the intangible costs, such as customer experience. For example, if customers have difficulty placing a successful order by using the service, they might choose a competitor instead.
 

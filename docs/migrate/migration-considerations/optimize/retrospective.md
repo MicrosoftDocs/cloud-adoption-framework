@@ -1,10 +1,10 @@
 ---
-title: "How do retrospectives help build a growth mindset?"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+title: "Build a growth mindset with retrospectives"
+description: Learn how retrospectives help build a growth mindset and empower teams to create sustainable growth.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
@@ -42,10 +42,3 @@ Highly effective teams don't just run retrospective meetings. They live retrospe
 That new growth is most tangibly represented in changes to the release or iteration backlog.
 
 The retrospective marks the end of a release or iteration, as teams gain experience and learn lessons, and they adjust the [adjust the release and iteration backlog](../assess/release-iteration-backlog.md) to reflect new processes and experiments to be tested. This starts the next iteration through the migration processes.
-
-## Next steps
-
-The [Secure and Manage](../secure-and-manage/index.md) section of this content can help prepare the reader for the transition from migration to operations.
-
-> [!div class="nextstepaction"]
-> [Secure monitoring and management tools](../secure-and-manage/index.md)

@@ -4,7 +4,7 @@ description: Learn to observe the health and availability of your cloud solution
 author: MGoedtel
 ms.author: magoedte
 ms.date: 06/26/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor

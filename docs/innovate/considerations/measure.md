@@ -4,7 +4,7 @@ description: Define the desired customer flow and establish learning metrics to 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
@@ -42,7 +42,7 @@ In most cases, a customer flow will have an easily defined starting point and no
 3. **Solution steps:** This term refers to the steps that are required to move the customer from the initial trigger to a successful outcome. Each step produces a learning metric based on a customer decision to move on to the next step.
 4. **Individual adoption achieved:** The next time the trigger is encountered, if the customer returns to the solution to get their need met, individual adoption has been achieved.
 5. **Business outcome indicator:** When a customer behaves in a way that contributes to the defined business outcome, a business outcome indicator is observed.
-6. **True Innovation:** When *business outcome indicators* and *individual adoption* both occur at the desired scale, you've realized true innovation.
+6. **True innovation:** When *business outcome indicators* and *individual adoption* both occur at the desired scale, you've realized true innovation.
 
 Each step of the customer flow generates learning metrics. After each iteration (or release), a new version of the hypothesis is tested. At the same time, tweaks to the solution are tested to reflect adjustments in the hypothesis. When customers follow the prescribed path in any given step, a positive metric is recorded. When customers deviate from the prescribed path, a negative metric is recorded.
 
@@ -65,5 +65,7 @@ As learning metrics accumulate, the team can begin to [learn with customers](./l
 
 > [!div class="nextstepaction"]
 > [Learn with customers](./learn.md)
+
+<!-- cSpell:ignore Ries -->
 
 Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.

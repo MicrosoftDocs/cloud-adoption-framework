@@ -4,7 +4,7 @@ description: Learn about democratization, the process of getting data into the r
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
@@ -38,7 +38,7 @@ The primary tools for sharing data directly with data consumers include self-ser
 
 Sharing data can quickly produce an MVP that you can use in customer conversations. However, to turn that shared data into useful and actionable knowledge, a bit more is generally required. After a hypothesis has been validated through data sharing, the next phase of development is typically data governance.
 
-Data governance is a broad topic that could require it's own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.md). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
+Data governance is a broad topic that could require its own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.md). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
 
 - **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) before being shared publicly to protect the interests of customers and the company.
 - **If the data is sensitive, has it been secured?** Protection of sensitive data should be a requirement for any democratized data. The example workload focused on [securing data solutions](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/securing-data-solutions) provides a few references for securing data.
@@ -74,7 +74,7 @@ You can integrate these various forms of data into a central data store on an OL
 
 **Virtualize:** Integration and ingestion of data can sometimes slow innovation. When a solution for data virtualization is already available, it might represent a more reasonable approach. Ingestion and integration can both duplicate storage and development requirements, add data latency, increase attack surface area, trigger quality issues, and increase governance efforts. Data virtualization is a more contemporary alternative that leaves the original data in a single location and creates pass-through or cached queries of the source data.
 
-SQL Server 2017 and Azure SQL Data Warehouse both support [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) which is the approach to data virtualization most commonly used in Azure.
+SQL Server 2017 and Azure SQL Data Warehouse both support [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide), which is the approach to data virtualization most commonly used in Azure.
 
 ## Next steps
 

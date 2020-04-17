@@ -1,21 +1,19 @@
 ---
 title: "Optimize and promote"
-description: This part of the Azure migration guide covers areas of optimization, including reviewing the design of the solution, right sizing the services, and analyzing costs.
+description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
 author: matticusau
 ms.author: mlavery
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore Fservers Fdatabases -->
-
 <!-- markdownlint-disable MD025 DOCSMD001 -->
 
-# Test, optimize, and promote
+# Release workloads (test, optimize, and handoff)
 
 Now that you have migrated your services to Azure, the next phase includes reviewing the solution for possible areas of optimization. This effort could include reviewing the design of the solution, right-sizing the services, and analyzing costs.
 
@@ -91,7 +89,7 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Sql%2Fservers%2Fdatabases]" submitText="Go to SQL Databases" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Sql%2FServers%2FDatabases]" submitText="Go to SQL Databases" :::
 
 ::: zone-end
 
@@ -125,7 +123,7 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 
 ::: zone target="docs"
 
-- [Tutorial: Optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management/tutorial-acm-opt-recommendations)
+- [Tutorial: Optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Prevent unexpected charges with Azure billing and cost management](https://docs.microsoft.com/azure/billing/billing-getting-started)
 - [Explore and analyze costs with Cost analysis](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis)
 

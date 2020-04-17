@@ -4,7 +4,7 @@ description: Learn the process for designing a resource governance model in Azur
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -24,7 +24,7 @@ In the foundational adoption stage, our goal is to deploy a simple workload to A
 Before you begin designing our governance model, it's important to understand how Azure is licensed. This is because the administrative accounts associated with your Azure license have the highest level of access to your Azure resources. These administrative accounts form the basis of your governance model.
 
 > [!NOTE]
-> If your organization has an existing [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx) that does not include Azure, Azure can be added by making an upfront monetary commitment. For more information, see [licensing Azure for the enterprise](https://azure.microsoft.com/pricing/enterprise-agreement).
+> If your organization has an existing [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise) that does not include Azure, Azure can be added by making an upfront monetary commitment. For more information, see [licensing Azure for the enterprise](https://azure.microsoft.com/pricing/enterprise-agreement).
 
 When Azure was added to your organization's Enterprise Agreement, your organization was prompted to create an **Azure account**. During the account creation process, an **Azure account owner** was created, as well as an Azure Active Directory (Azure AD) tenant with a **global administrator** account. An Azure AD tenant is a logical construct that represents a secure, dedicated instance of Azure AD.
 
@@ -97,7 +97,7 @@ The **workload owner** inherits the owner role at the resource scope, which mean
 
 Let's move on to learn how to implement the governance model designed earlier.
 
-To begin, your organization requires an Azure account. If your organization has an existing [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx) that does not include Azure, Azure can be added by making an upfront monetary commitment. For more information, see [Licensing Azure for the enterprise](https://azure.microsoft.com/pricing/enterprise-agreement).
+To begin, your organization requires an Azure account. If your organization has an existing [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise) that does not include Azure, Azure can be added by making an upfront monetary commitment. For more information, see [Licensing Azure for the enterprise](https://azure.microsoft.com/pricing/enterprise-agreement).
 
 When your Azure account is created, you specify a person in your organization to be the Azure **account owner**. An Azure Active Directory (Azure AD) tenant is then created by default. Your Azure **account owner** must [create the user account](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory) for the person in your organization who is the **workload owner**.
 

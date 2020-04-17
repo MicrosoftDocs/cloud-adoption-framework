@@ -4,7 +4,7 @@ description: Learn about examples of customer engagement to understanding the ne
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---

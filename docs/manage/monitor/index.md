@@ -1,10 +1,10 @@
 ---
 title: Cloud monitoring guide
-description: Overview of Azure Monitor and System Center Operations Manager
+description: Learn about Azure Monitor, System Center Operations Manager, and the recommended strategy for monitoring each of the cloud deployment models.
 author: MGoedtel
 ms.author: magoedte
 ms.date: 07/31/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor
@@ -26,9 +26,9 @@ However, IT often prefers to use the tools they've already made a significant in
 
 The goal of this guide is to provide a detailed reference to help enterprise IT managers, business decision makers, application architects, and application developers understand:
 
-* Azure monitoring platforms, with an overview and comparison of their capabilities.
-* The best-fit solution for monitoring hybrid, private, and Azure native workloads.
-* The recommended end-to-end monitoring approach for both infrastructure and applications. This approach includes deployable solutions for migrating these common workloads to Azure.
+- Azure monitoring platforms, with an overview and comparison of their capabilities.
+- The best-fit solution for monitoring hybrid, private, and Azure native workloads.
+- The recommended end-to-end monitoring approach for both infrastructure and applications. This approach includes deployable solutions for migrating these common workloads to Azure.
 
 This guide isn't a how-to article for using or configuring individual Azure services and solutions, but it does reference those sources when they're applicable or available. After you've read it, you'll understand how to successfully operate a workload by following best practices and patterns.
 
@@ -42,21 +42,21 @@ This guide is useful primarily for enterprise administrators, IT operations, IT 
 
 This article is part of a series. The following articles are meant to be read together, in order:
 
-* Introduction (this article)
-* [Monitoring strategy for cloud deployment models](./cloud-models-monitor-overview.md)
-* [Collect the right data](./data-collection.md)
-* [Alerting](./alerting.md)
+- Introduction (this article)
+- [Monitoring strategy for cloud deployment models](./cloud-models-monitor-overview.md)
+- [Collect the right data](./data-collection.md)
+- [Alerting](./alerting.md)
 
 ## Products and services
 
 A few software and services are available to help you monitor and manage a variety of resources that are hosted in Azure, your corporate network, or other cloud providers. They are:
 
-* System Center Operations Manager
-* Azure Monitor, which now includes Log Analytics and Application Insights
-* Azure Policy and Azure Blueprints
-* Azure Automation
-* Azure Logic Apps
-* Azure Event Hubs
+- System Center Operations Manager
+- Azure Monitor, which now includes Log Analytics and Application Insights
+- Azure Policy and Azure Blueprints
+- Azure Automation
+- Azure Logic Apps
+- Azure Event Hubs
 
 This first version of the guide covers our current monitoring platforms: Azure Monitor and System Center Operations Manager. It also outlines our recommended strategy for monitoring each of the cloud deployment models. Also included is the first set of monitoring recommendations, starting with data collection and alerting.
 

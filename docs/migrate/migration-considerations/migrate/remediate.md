@@ -1,10 +1,10 @@
 ---
 title: "Remediating assets prior to migration"
-description: Remediating incompatible assets prior to migration
+description: Learn how to remediate any assets that you determine to be incompatible with your chosen cloud provider before migration begins.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
@@ -31,7 +31,7 @@ In any corporate environment, technical debt exists. Some of this is healthy and
 
 When a datacenter is properly maintained, patched, and updated, there is likely to be little need for remediation. Remediation-rich environments tend to be common among large enterprises, organizations that have been through large IT downsizing, some legacy managed service environments, and acquisition-rich environments. In each of these types of environments, remediation may consume a large portion of the migration effort. When the following remediation tasks frequently appear and are negatively affecting migration speed or consistency, it may be wise to break out remediation into a parallel effort and team (similar to how cloud adoption and cloud governance run in parallel).
 
-- **Frequent host upgrades.** When large numbers of hosts must be upgraded to complete the migration of a workload, the migration team is likely to suffer from delays. It may be wise to break out affected applications and address the remediations prior to including affected applications in any planned releases.
+- **Frequent host upgrades.** When large numbers of hosts must be upgraded to complete the migration of a workload, the migration team is likely to suffer from delays. It may be wise to break out affected applications and address the remediation steps prior to including affected applications in any planned releases.
 - **Frequent guest OS upgrade.** Large enterprises commonly have servers running on outdated versions of Linux or Windows. Aside from the apparent security risks of operating an outdated OS, there are also incompatibility issues that prevent affected workloads from being migrated. When a large number of VMs require OS remediation, it may be wise to break out these efforts into a parallel iteration.
 - **Major code changes.** Older custom applications may require significantly more modifications to prepare them for PaaS deployment. When this is the case, it may be wise to remove them from the migration backlog entirely, managing them in a wholly separate program.
 

@@ -1,10 +1,10 @@
 ---
 title: "Examples of performance outcomes"
-description: Examples of Performance Outcomes
+description: Use the Cloud Adoption Framework for Azure to understand performance outcomes in the context of a cloud transformation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---

@@ -1,10 +1,10 @@
 ---
 title: "Decisions that affect migration"
-description: Important decisions to be made about the migration process.
+description: Use the Cloud Adoption Framework for Azure to make appropriate decisions and choose execution activities that will support a successful migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 02/25/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
@@ -49,7 +49,7 @@ Before making any decisions that could have a long-term impact on the current mi
 
 In any migration of significant scale (more than 250 VMs), assets are migrated using a variety of transition options, discussed in the five Rs of rationalization: *Rehost*, *Refactor*, *Rearchitect*, *Rebuild*, and *Replace*.
 
-Some workloads are modernized through a *rebuild* or *rearchitect* process, creating more modern applications with new features and technical capabilities. Other assets go through a *refactor* process, for instance a move to containers or other more modern hosting and operational approaches that don't necessarily affect the solutions codebase. Commonly, virtual machines and other assets that are more well established go through a *rehost* process, transitioning those assets from the datacenter to the cloud. Some workloads could potentially be migrated to the cloud, but instead should be *replaced* using service–based (SaaS-based) cloud services that meet the same business need&mdash;for example, by using Office 365 as an alternative to migrating Exchange Server instances.
+Some workloads are modernized through a *rebuild* or *rearchitect* process, creating more modern applications with new features and technical capabilities. Other assets go through a *refactor* process, for instance a move to containers or other more modern hosting and operational approaches that don't necessarily affect the solutions code base. Commonly, virtual machines and other assets that are more well established go through a *rehost* process, transitioning those assets from the datacenter to the cloud. Some workloads could potentially be migrated to the cloud, but instead should be *replaced* using service–based (SaaS-based) cloud services that meet the same business need&mdash;for example, by using Office 365 as an alternative to migrating Exchange Server instances.
 
 In the majority of scenarios, some business event creates a forcing function that causes a high percentage of assets to temporarily migrate using the *rehost* process, followed by a more significant secondary transition using one of the other migration strategies after they are in the cloud. This process is commonly known as a *cloud transition*.
 

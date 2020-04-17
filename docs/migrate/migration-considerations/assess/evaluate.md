@@ -1,10 +1,10 @@
 ---
 title: "Evaluate workload readiness"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+description: Understand what it takes to evaluate the readiness of a workload to migrate to the cloud. You'll learn how to validate all assets and associated dependencies.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

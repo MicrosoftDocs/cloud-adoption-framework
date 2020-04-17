@@ -4,7 +4,7 @@ description: Learn about the Azure Database Migration Service and other tools th
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
@@ -52,5 +52,3 @@ We suggest that you decide your acceptable business downtime and test an offline
 |PostgreSQL|Azure Database for PostgreSQL|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)|
 |MongoDB|Azure Cosmos DB Mongo API|Database Migration Service|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db)|
 |MongoDB|Azure Cosmos DB Mongo API|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db-online)|
-|Oracle|Different platform as a service (PaaS) and IaaS options|A partner's tool or Azure Migrate|Offline or online|[Decision tree](../../migrate/expanded-scope/data-oracle-migration.md)|
-|Different NoSQL DB options|Cosmo DB or IaaS options|Procedural migrations or Azure Migrate|Offline or online|[Decision tree](../../migrate/expanded-scope/data-no-sql-migration.md)|

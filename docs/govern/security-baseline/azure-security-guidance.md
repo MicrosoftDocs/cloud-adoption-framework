@@ -4,11 +4,13 @@ description: Use the Microsoft Service Trust Platform and Compliance Manager to 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
 ---
+
+<!-- cSpell:ignore DPIAs DSRs -->
 
 <!-- markdownlint-disable MD026 -->
 

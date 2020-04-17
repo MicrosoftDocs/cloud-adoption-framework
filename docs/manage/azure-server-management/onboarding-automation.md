@@ -1,10 +1,10 @@
 ---
 title: "Automate onboarding"
-description: Automate onboarding
+description: Use the onboarding sample files to help you consider automating your Azure server management services deployment to improve efficiency.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -38,7 +38,7 @@ The files described in the following table are used in this sample. You can cust
 | WorkspaceSolutions.json | A Resource Manager template that enables the solutions you want in the Log Analytics workspace. |
 | ScopeConfig.json | A Resource Manager template that uses the opt-in model for on-premises servers with the Change Tracking solution. Using the opt-in model is optional. |
 | Enable-VMInsightsPerfCounters.ps1 | A PowerShell script that enables VM Insights for servers and configures performance counters. |
-| ChangeTracking-Filelist.json | A Resource Manager template that defines the list of files that will be monitored by Change Tracking. |
+| ChangeTracking-FileList.json | A Resource Manager template that defines the list of files that will be monitored by Change Tracking. |
 
 Use the following command to run New-AMSDeployment.ps1:
 
