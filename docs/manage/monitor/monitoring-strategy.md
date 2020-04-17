@@ -3,7 +3,7 @@ title: "Cloud monitoring strategy"
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 07/31/2019
+ms.date: 04/17/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -107,28 +107,36 @@ Some key questions include:
 
 To assemble this architecture, here are several considerations:
 
-* Consider a data flow approach starting from service assets: Log and agent based data emitted by infrastructure, IOT devices, mobile devices—all of the items that are under management—to monitoring tools (mid-tier) moving upward and outward: (ITSM tools, global monitoring, SIEMs, custom alert enrichment and the like.
+* Consider a data flow approach starting from service assets and going up the stack - metrics and log data emitted by infrastructure, IOT devices, mobile devices, etc. are all of the items under management—to-monitoring tools (mid-tier) moving upward and outward (ITSM tools, global monitoring, Security Information and Event Management (SIEM), custom alert enrichment, etc.).
 
-* Consider Whether to Continue with Systems Center:  (to be added when this moves to markdown)
+* Consider whether to continue with Systems Center.
 
-* Consider economic cost: (To be added when this is moved to markdown).
+* Consider economic cost.
 
-* Consider how the business will leverage logs and metrics:  Azure monitoring brings a significant volume of log and time-series data to the performance and health side of monitoring, just like security operations roles get.  After all, logs and metrics are the two major data components of Azure Monitor’s architecture.  The reason why this is important is 1) since you can build large scale complex cloud services, your problem management costs are reduced to analyze, correlate and determine causes of problems in one place reducing the need to access resources directly, thereby improving security.  Second, just like a SIEM, Azure Monitor is consolidating machine data directly from on-premises assets as well as Azure resources (including activity logs, tenant, and subscription data, and any log data from a REST client), and provides a simple query language to provide data analysis far beyond what was possible before.  What makes Azure Monitor unique is that although (as a SIEM) it handles machine level data very well, Azure Monitor gives you pre-defined queries, context-sensitive metrics based on resource type*
+* Consider how the business will leverage logs and metrics. Azure monitoring brings a significant volume of log and time-series data to the performance and health side of monitoring, similar to what security operations experiences. After all, logs and metrics are the two major data components of Azure Monitor’s architecture. The reason why this is important is:
+
+   1. Since you can build large scale complex cloud services, your problem management costs are reduced to analyze, correlate and determine causes of problems in one place reducing the need to access resources directly, thereby improving security. 
+   
+   2. Like a SIEM, Azure Monitor is consolidating machine data directly from on-premises assets as well as Azure resources (including activity logs, tenant, and subscription data, and any log data from a REST client), and provides a simple query language to provide data analysis far beyond what was possible before. What makes Azure Monitor unique is that although it handles machine level data very well, Azure Monitor gives you pre-defined queries, context-sensitive metrics based on resource type<sup>1</sup>.
 
 Consider your data flows and tools:
 
--	Sources and types (telemetric, traces, stateful, time series)
--	Tools and suites (rows): (Columns: availability, capacity, security, continuity and compliance).
--	The role of global monitoring or the top-tier
--	The role of IT service management integration to trigger on significant events 
-Consider Alerting and Notifications:  Consider the following table to standardize events, significance and alerts used for notifications:
-Tip:  Use the following table as a standard data model element for alerts that will work universally
-	Impact, Urgency, severity, priority
-What’s emitted by Azure Resources:  
-Agent-based:  Hybrid solutions can use a combination of monitoring agents that emit logs, events, and performance data
-Agentless
-Service Monitoring:  Here is how you can visualize Azure monitoring data to help you clarify monitoring consumers:
--	Availability:  Stateful monitoring data occurs through metrics.
--	Performance
--	Security
--	Configuration/Compliance
+* Sources and types (telemetric, traces, stateful, time series).
+
+* Tools and suites (rows): (Columns: availability, capacity, security, continuity and compliance).
+
+* The role of global monitoring or the top-tier.
+
+* The role of IT service management integration to trigger on significant events.
+
+Consider Alerting and Notifications. The following table is an example of incident management priority model to standardize events, significance, and alerting used for notifications.
+
+### Formulate initiatives
+
+As a monitoring expert or systems administrator, you’ve discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won’t know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability - that which is needed to begin the journey. Here are two example initiatives that help declare forward motion:
+
+* Initiative 1: “To reduce the diversity and complexity of our current monitoring investment, we will invest in establishing a core capability leveraging Azure Monitor first, given the same skills and readiness applies to other areas of cloud monitoring.” 
+
+* Initiative 2: “To decide on how we leverage our license plans for identity, access, and overall Information protection, we will help the Security and Privacy offices establish early activity monitoring of users and content as they migrate to the cloud, to clarify questions on classification labels, data loss prevention, encryption and retention policies.”
+
+
