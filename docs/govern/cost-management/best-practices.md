@@ -16,37 +16,42 @@ While delivering the disciplines of governance, cost management is a recurring t
 > [!IMPORTANT]
 > The best practices and opinions described in this article are based on platform and service features in Azure that were available at the time of writing. Features and capabilities change over time. Not all recommendations will apply to your deployment, so choose what works best for your situation.
 
-## General best practices
+## Best practices by team and accountability
 
-The general best practices listed are covered in more depth in the following sections.
+Cost management across the enterprise is a cloud governance and cloud operation function. However, all cost management decisions result in a change to the assets which support a workload. When those changes impact the architecture of a workload, additional considerations are required to minimize the impact on end users and business functions. The cloud adoption team who configured or developed that workload are likely to hold accountability for completing those types of changes.
 
-- **Tagging is critical to all governance.** Ensure all workloads and resources follow **[proper naming and tagging conventions](../../ready/azure-best-practices/naming-and-tagging.md)** and [enforce tagging conventions using Azure policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags).
-- **Identify right size opportunities.** Review your current resource utilization and performance requirements across the environment.
-- **Resize**: Modify each resource to use the smallest instance or SKU that is able to support the performance requirements of each  resource. ​
-- **Horizontal over vertical scale.** Using multiple small instances can allow for an easier scaling path that a single larger instance. This allows for scale automation, which creates cost optimization.​
+This article seperates best practices into two categories: Operational best practices and Workload best practices. While governance, operations, and adoption teams should be aligned on all cost optimization changes, the seperation into these two sections helps illustrate when the separation of duty is clear.
 
-**IaaS-specific practices:**
+## Operational cost management best practices
 
-- **Autoshutdown for VMs.** When a VM isn't in use, automate shutdown. The VM won't be deleted or decommissioned, but it will stop consuming compute and memory costs until it's turned back on.
-- **Shut down and decommission unused resources.** Yes, we said it twice. If a resource hasn't been used in more than 90 days and doesn't have a clear uptime requirement, just turn it off. More importantly, if a machine has been stopped or shut down, then deprovision and delete that resource.
+The following best practices are typically completed by a member of the cloud governance or cloud operations team, in accordance with patching and other scheduled maintenance processes. Each of these best practices maps to actionable guidance later in the article.
 
-- **Automate resource deprovisioning.** Use Azure Policy, Azure Resource Manager, or other automation tools to establish forced shutdown of VMs. For VMs that have been shut down for a while, force deprovisioning and deletion of those resources.
+- **Tagging is critical to all governance:** Ensure all workloads and resources follow **[proper naming and tagging conventions](../../ready/azure-best-practices/naming-and-tagging.md)** and [enforce tagging conventions using Azure policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags).
+- **Identify right size opportunities:** Review your current resource utilization and performance requirements across the environment to identify resources which have remained under utilized for a period of time (Generally more than 90 days).
+- **Right size provisioned skus:**: Modify underutilized resource to use the smallest instance or SKU that is able to support the performance requirements of each  resource.
+- **Autoshutdown for VMs:** When a VM isn't in constant use, consider automated shutdown. The VM won't be deleted or decommissioned, but it will stop consuming compute and memory costs until it's turned back on.
+- **Auto-shutdown all non-production assets:**: If a VM is part of a non-production environment, specifically development environments, establish an auto-shutdown policy to reduce unused costs. When possible leverage dev/test labs for a self-service options to help developers hold themselves accountable for cost.
+- **Shut down and decommission unused resources:** Yes, we said it twice. If a resource hasn't been used in more than 90 days and doesn't have a clear uptime requirement, turn it off. More importantly, if a machine has been stopped or shut down for more than 90 days, then deprovision and delete that resource. * Validate any data retention policies are met through backup or other mechanisms.
+- **Clean up orphaned disks:** Delete unused storage, especially VM storage that is no longer attached to any VMs.
+- **Right-size redundancy:** If the resource doesn't require a high degree of redundancy, remove geo-redundant storage.
+- **Adjust auto-scale parameters:** Operational montioring is likely to uncover usage patterns for various assets. When those usage patterns map to the parameters used to drive auto-scale behaviors, its common for the operations team to adjust auto-scale parameters to meet seasonal demand &/or changes to budget allocations. * See workload cost management best practices for important pre-cautions.
 
-**PaaS-specific practices:**
+## Workload cost management best practices
 
-- **Azure App Services.** Verify production requirements for any Premium app service plans.
-- **Autoscale.** Enable autoscale on all app services to allow for a burstable number of smaller VMs.
+Before making architectural changes, consult the technical lead for the workload. Facilitating a review of the workload using [Azure Architecture Review](/assessments/?id=azure-architecture-review) and the [Azure Architecture Framework](/azure/architecture/framework/) to guide decisions regarding the following types of architectural changes.
 
-**Storage-specific practices:**
+- **Azure App Services.** Verify production requirements for any Premium app service plans. Without an understanding of the business requirements for a workload and the underlying assets configuration, its difficult to determine if a Premium app service plan is required.
+- **Horizontal over vertical scale.** Using multiple small instances can allow for an easier scaling path that a single larger instance. This allows for scale automation, which creates cost optimization. But, before a workload can scale horizontally, the technical team must verify that the application is idempotent. Achieving horizontal scale may first require changes to the code and configuration of various layers of the of the application.
+- **Autoscale.** Enable autoscale on all app services to allow for a burstable number of smaller VMs. Enabling autoscale has the same idempotent requirement, which requires an understanding of the workload architecture. The workload and supporting assets must be approved for horizontal scaling and auto-scaling by the adoption team, prior to any operational changes.
+- **Implement serverless technologies:** VM workloads are often migrated "as is" to avoid downtime. Often VMs may host tasks that are intermittent, taking a short period to run, or alternatively many hours. For example, VMs that run scheduled tasks such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs. After migration, consider re-architecting layers of the workload to serverless technologies such as Azure Functions or Azure Batch jobs.
 
-- **Clean up orphaned disks​.** Delete unused storage, especially VM storage that is no longer attached to any VMs.
-- **Right-size redundancy.** If the resource doesn't require a high degree of redundancy, remove geo-redundant storage.
+## Actionable best practices
+
+The remainder of this article provides tactical examples of operational best practices that a cloud governance or cloud operations team can follow to optimize cost across the enterprise.
 
 ## Before adoption
 
-Before you move your workloads to the cloud, estimate the monthly cost of running them in Azure. Proactively managing cloud costs helps you adhere to your operating expense budget. If budget is limited, take this into account before adoption. Consider converting workloads to Azure serverless technologies, where appropriate, to reduce costs.
-
-The best practices in this section help you to estimate costs, and perform right-sizing for VMs and storage.
+Before you move your workloads to the cloud, estimate the monthly cost of running them in Azure. Proactively managing cloud costs helps you adhere to your operating expense budget. The best practices in this section help you to estimate costs, and perform right-sizing for VMs and storage before a workload is deployed to the cloud.
 
 ## Best practice: Estimate monthly workload costs
 
@@ -374,23 +379,8 @@ Azure provides a REST API that can access your tenant billing information.
 - [Learn more](https://docs.microsoft.com/rest/api/consumption/budgets) about the Budgets API.
 - [Get insights](https://docs.microsoft.com/azure/billing/billing-usage-rate-card-overview) into Azure usage with the Billing API.
 
-## Best practice: Implement serverless technologies
-
-VM workloads are often migrated "as is" to avoid downtime. Often VMs may host tasks that are intermittent, taking a short period to run, or alternatively many hours. For example, VMs that run scheduled tasks such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs.
-
-After adoption, after a thorough review of these types of tasks you might consider migrating them to serverless technologies such as Azure Functions or Azure Batch jobs. With this solution, you no longer need to manage and maintain the VMs, bringing additional cost savings.
-
-**Learn more:**
-
-- Learn about [Azure Functions](https://azure.microsoft.com/services/functions).
-- Learn about [Azure Batch](https://azure.microsoft.com/services/batch).
 
 ## Next steps
-
-Review other best practices:
-
-- [Best practices](../../migrate/azure-best-practices/migrate-best-practices-security-management.md) for security and management after adoption.
-- [Best practices](../../migrate/azure-best-practices/migrate-best-practices-networking.md) for networking after adoption.
 
 With an understanding of the best practices, examine the [Cost Management toolchain](./toolchain.md) to identify Azure tools and features to help you execute these best practices.
 

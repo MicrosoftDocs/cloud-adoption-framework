@@ -32,7 +32,7 @@ Cloud solutions were initially designed to host single, relatively isolated appl
 
 In the example cloud deployment diagram below, the red box highlights a security gap. The yellow box shows an opportunity to optimize network virtual appliances across workloads.
 
-[![0]][0]
+![0][0]
 
 Virtual datacenters help achieve the scale required for enterprise workloads. This scale must address the challenges introduced when running large-scale applications in the public cloud.
 
@@ -112,19 +112,19 @@ A virtual datacenter can be built using one of these high-level topologies, base
 
 In a *Flat* topology, all resources are deployed in a single virtual network. Subnets allow for flow control and segregation.
 
-[![11]][11]
+![11][11]
 
 In a *Mesh* topology, virtual network peering connects all virtual networks directly to each other.
 
-[![12]][12]
+![12][12]
 
 A *Peering hub and spoke* topology is well suited for distributed applications and teams with delegated responsibilities.
 
-[![13]][13]
+![13][13]
 
 An *Azure Virtual WAN* topology can support large-scale branch office scenarios and global WAN services.
 
-[![14]][14]
+![14][14]
 
 The peering hub and spoke topology and the Azure Virtual WAN topology both use a hub and spoke design, which is optimal for communication, shared resources, and centralized security policy. Hubs are built using either a virtual network peering hub (labeled as `Hub Virtual Network` in the diagram) or a Virtual WAN hub (labeled as `Azure Virtual WAN` in the diagram). Azure Virtual WAN is designed for large-scale branch-to-branch and branch-to-Azure communications, or for avoiding the complexities of building all the components individually in a virtual networking peering hub. In some cases, your requirements might mandate a virtual network peering hub design, such as the need for network virtual appliances in the hub.
 
@@ -154,7 +154,7 @@ In Azure, every component, whatever the type, is deployed in an Azure subscripti
 
 A single VDC implementation can scale up to large number of spokes, although, as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits (for example, a maximum number of virtual network peerings. See [Azure subscription and service limits, quotas, and constraints][limits] for details). In cases where limits may be an issue, the architecture can scale up further by extending the model from a single hub-spokes to a cluster of hub and spokes. Multiple hubs in one or more Azure regions can be connected using virtual network peering, ExpressRoute, Virtual WAN, or site-to-site VPN.
 
-[![2]][2]
+![2][2]
 
 The introduction of multiple hubs increases the cost and management effort of the system. It is only justified due to scalability, system limits, redundancy, regional replication for end-user performance, or disaster recovery. In scenarios requiring multiple hubs, all the hubs should strive to offer the same set of services for operational ease.
 
@@ -164,7 +164,7 @@ Inside a single spoke, or a flat network design, it's possible to implement comp
 
 An architect might want to deploy a multitier workload across multiple virtual networks. With virtual network peering, spokes can connect to other spokes in the same hub or different hubs. A typical example of this scenario is the case where application processing servers are in one spoke, or virtual network. The database deploys in a different spoke, or virtual network. In this case, it's easy to interconnect the spokes with virtual network peering and, by doing that, avoid transiting through the hub. A careful architecture and security review should be done to ensure that bypassing the hub doesn't bypass important security or auditing points that might exist only in the hub.
 
-[![3]][3]
+![3][3]
 
 Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level (level 0) becomes the hub of lower spokes (level 1) of the hierarchy. The spokes of a VDC implementation are required to forward the traffic to the central hub so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub-spoke relationship.
 
@@ -176,7 +176,7 @@ The virtual datacenter is made up of four basic component types: **Infrastructur
 
 Each component type consists of various Azure features and resources. Your VDC implementation is made up of instances of multiple components types and multiple variations of the same component type. For instance, you may have many different, logically separated workload instances that represent different applications. You use these different component types and instances to ultimately build the VDC.
 
-[![4]][4]
+![4][4]
 
 The preceding high-level conceptual architecture of the VDC shows different component types used in different zones of the hub-spokes topology. The diagram shows infrastructure components in various parts of the architecture.
 
@@ -194,7 +194,7 @@ The VDC is designed so that groups created for the central IT group, managing th
 
 The virtual datacenter is partitioned to securely host multiple projects across different lines of business (LOBs). All projects require different isolated environments (Dev, UAT, and production). Separate Azure subscriptions for each of these environments can provide natural isolation.
 
-[![5]][5]
+![5][5]
 
 The preceding diagram shows the relationship between an organization's projects, users, and groups and the environments where the Azure components are deployed.
 
@@ -208,7 +208,7 @@ The presence of different Azure AD tenants enforces the separation between envir
 
 This component type is where most of the supporting infrastructure resides. It's also where your centralized IT, security, and compliance teams spend most of their time.
 
-[![6]][6]
+![6][6]
 
 Infrastructure components provide an interconnection for the different components of a VDC implementation, and are present in both the hub and the spokes. The responsibility for managing and maintaining the infrastructure components is typically assigned to the central IT and/or security team.
 
@@ -248,7 +248,7 @@ Perimeter network components include:
 
 Usually, the central IT and security teams have responsibility for requirement definition and operation of the perimeter networks.
 
-[![7]][7]
+![7][7]
 
 The preceding diagram shows the enforcement of two perimeters with access to the internet and an on-premises network, both resident in the DMZ hub. In the DMZ hub, the perimeter network to internet can scale up to support many lines of business, using multiple farms of Web Application Firewalls (WAFs) or Azure Firewalls. The hub also allows for on-premises connectivity via VPN or ExpressRoute as needed.
 
@@ -290,7 +290,7 @@ Azure Front Door also provides a web application firewall (WAF), which protects 
 
 The hub and spoke topology uses virtual network peering and user-defined routes to route traffic properly.
 
-[![8]][8]
+![8][8]
 
 In the diagram, the user-defined route ensures that traffic flows from the spoke to the firewall before passing to on-premises through the ExpressRoute gateway (if the firewall policy allows that flow).
 
@@ -308,7 +308,7 @@ There are two fundamental types of logs in Azure Monitor:
 
 - [Logs][Logs] contain different kinds of data organized into records with different sets of properties for each type. Events and traces are stored as logs along with performance data, which can all be combined for analysis. Log data collected by Azure Monitor can be analyzed with queries to quickly retrieve, consolidate, and analyze collected data. Logs are stored and queried from [Log Analytics][LogAnalytics]. You can create and test queries using Log Analytics in the Azure portal and then either directly analyze the data using these tools or save queries for use with visualizations or alert rules.
 
-[![9]][9]
+![9][9]
 
 Azure Monitor can collect data from a variety of sources. You can think of monitoring data for your applications in tiers ranging from your application, any operating system, and the services it relies on, down to the Azure platform itself. Azure Monitor collects data from each of the following tiers:
 
@@ -364,7 +364,7 @@ The workload possibilities are endless. The following are just a few of the poss
 
 You can implement a highly reliable cloud messaging service between applications and services through [Azure Service Bus][ServiceBus]. It offers asynchronous brokered messaging between client and server, structured first-in-first-out (FIFO) messaging, and publishes and subscribe capabilities.
 
-[![10]][10]
+![10][10]
 
 These examples barely scratch the surface of the types of workloads you can create in Azure; everything from a basic Web and SQL app to the latest in IoT, Big Data, Machine Learning, AI, and so much more.
 

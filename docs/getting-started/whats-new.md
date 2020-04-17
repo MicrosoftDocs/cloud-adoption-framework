@@ -17,6 +17,14 @@ Here's a list of recent changes made to the Cloud Adoption Framework.
 
 This framework is built in collaboration with customers, partners, and internal Microsoft teams. New and updated content is released when it becomes available. These releases allow you to test, validate, and refine the guidance along with us. We encourage you to partner with us to build the Cloud Adoption Framework for Azure.
 
+## April 14, 2020
+
+We've brought all the Cloud Adoption tools and templates together in one place to make them easier to find. 
+
+| Article | Description |
+|----------|-------------|
+| [Tools and templates](../reference/tools-templates.md) | Find the tools, templates and assessments that can help you accelerate your cloud adoption journey. | 
+
 ## April 4, 2020
 
 Continued iteration of refinement to the Migrate and Ready guidance to more tightly align with feedback from Customers, Microsoft partners, and Internal Microsoft Programs.
