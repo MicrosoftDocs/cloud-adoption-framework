@@ -184,4 +184,18 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that will occur in more detail and it works with the five Rs of rationalization introduced earlier in the Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
 |Type |Monitoring objective |Example objective |
-|
+| 1 | Only on-premises | System Center Operations Manager. Continue to monitor services, infrastructure, networking up the application layer in owned data centers with no cloud considerations. |
+| 2 | On-premises to the cloud | Continue using System Center Operations Manager, and apply the O365 and Azure management packs. |
+| 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents with multi-homing where System Center Operations Manager and Azure Monitor monitor cooperatively.|
+| 4 | Hybrid migration | Monitor the migration, for example, Exchange to O365 Exchange Online. Exchange Online Service Health and Service Usage, Security and Compliance – all from O365. Gradually decommission monitoring Exchange on-prem with System Center Operations Manager until migration complete. |
+| 5 | Hybrid forever | SCOM & Cloud:  SCOM, Azure AD, Azure Monitor, Azure Security Center, Identity, MEM, Intune, SCCM, AIP Scanner – a range of tools for a mixture of digital assets e.g., workstations.|
+| 6 | Cloud native |Azure Monitor, Azure Security Center, O365, service workspaces, Azure Service Health, Azure Resource Health – etc. |
+| 7 | Multi-cloud owned tenants (consolidate) | Centralize the monitoring of many tenants.  Deploy Azure Monitor, SIEM, Cloud Access Security Brokers (CAS-B, SIEM). |
+|Multi-cloud ecosystem |Centralize the monitoring of different cloud providers:  Microsoft, Amazon, Google, Salesforce, Palo Alto, etc. |
+| 8 | Provider > Consumer | Monitoring solutions and services as a cloud provider. |
+
+### Formulate monitoring requirements
+
+Above, your strategy reveals there may be much to do in the long run.  Ultimately your mindset extends outside the datacenter into the workplace, to devices and end points, out to the identity-as-security boundary, independent of where.  The new edge defined with cloud monitoring is a strong motivator in contrast with a datacenter and workplace mindset.
+
+You can leverage Azure now to include gradual monitoring of all or some aspects of your on-premises resources, as they may gradually move to the cloud.  And you also want strategy to define your monitoring boundaries of responsibility in alignment with the business’ cloud adoption strategy, based on the cloud service model your business adopts.  Even for services based on IaaS, you’ll get metrics, logs, views and alerting capabilities through Azure Service Health and here, you’ll configure alerts from availability monitoring of your Azure resources with Resource Health.  With SaaS services, such as 
