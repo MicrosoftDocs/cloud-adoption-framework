@@ -131,6 +131,12 @@ Consider your data flows and tools:
 
 Consider Alerting and Notifications. The following table is an example of incident management priority model to standardize events, significance, and alerting used for notifications.
 
+|Alert severity |Incident priority high|Incident priority medium |Incident priority low|
+|---------------|----------------------|-------------------------|---------------------|
+|High |0|1|2|
+|Medium |1|2|3|
+|Low |2|3|4|
+
 ### Formulate initiatives
 
 As a monitoring expert or systems administrator, you’ve discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won’t know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability - that which is needed to begin the journey. Here are two example initiatives that help declare forward motion:
@@ -139,4 +145,43 @@ As a monitoring expert or systems administrator, you’ve discovered that cloud 
 
 * Initiative 2: “To decide on how we leverage our license plans for identity, access, and overall Information protection, we will help the Security and Privacy offices establish early activity monitoring of users and content as they migrate to the cloud, to clarify questions on classification labels, data loss prevention, encryption and retention policies.”
 
+### Consider scale
 
+Consider scale in your strategy and who will be defining and standardizing “monitoring as code.” Your organization should plan to build standardized solutions using a combination of tools such as Azure Resource Manager templates, Azure Policy, establish a source control for the scripts, code, and documentation in support of the agile solution methods and tooling you’ll want.
+
+### Consider privacy and security
+
+In Azure you’ll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs.  Additionally, specialized logs that record user activity such as the Azure Active Directory sign in log, and if integrated, the Microsoft 365 Unified Audit Log, contain sensitive data that must be protected under privacy law.
+
+Your monitoring strategy should include these components:
+
+* Separate non-monitoring data from monitoring data
+
+* Restrict access to resources
+
+### Consider business continuity
+
+* Disaster Recovery
+
+* Resilience e.g. Geo-Redundancy
+
+### Consider maturity
+
+Maturity is an important consideration in your strategy. You can start minimally, too. The first monitoring solutions you’ll want are those that ensure observability, to include responsive processes, such as Incident and Problem Management. Here, you will be creating one or more Log Analytics workspaces, enabling agents, and setting up initial alerts. Over time, you gain confidence in Azure Monitor capabilities with the need to measure health indicators, so this involves deepening the focus on the collection of logs, using Insights, metrics, and defining the log search queries that drive the measurement and calculation of what is healthy/unhealthy. Learning includes getting monitoring data and Insights into the hands of managers, ensuring the right consumers have monitoring data they need. Learning cycles include continual tuning and optimizing monitoring solutions to adapt, to improve service and inform adoption plans.
+
+<Graphic Image>
+
+Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable product and gain confidence in steps.  Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
+
+* Observe: First, you should focus on establishing monitoring to observe the health and status of Azure services and resources. Configure basic monitoring and then automate with Azure Policy and ARM templates, to establish initial visibility of services and their warranty:  availability, performance or capacity, security and configuration compliance. Based on minimum viable setup of Azure Monitor for example, configure resources for monitoring and diagnostics, set up alerts, logs and insights. Include knowledge and readiness of monitoring consumers, defining and triggering from events, for service work such as incidents and problems. One indicator of maturity is how much can be automated to reduce unnecessary human costs to manually observe health and status. Knowing which services are healthy is just as important as being alerted on services that are unhealthy.
+
+* Measure: Configure collection of metrics and logs from all resources to monitor for symptoms/conditions that are issues which indicate potential or actual impact to the availability of the service or impact of the consumers of the service/application (i.e. when using a feature in the app, is it showing response time latency, returning an error when I selected something, or unresponsive). Ensure services are meeting service agreements and measuring the utility of the service or application—the features, data and time saving that brings business results.
+
+* Respond: Whether we remediate, auto-correct, or manually respond to events and process incidents, problems, changes, etc. (event management).  (monitor/control loop).
+
+* Learn and Improve: Providers and consumers participating in Learning cycles  Implies consuming actual monitoring data, insights, reports and workbooks to continually improve the target service and to enact tuning and optimization of the monitoring configuration.  Change is important too, that the monitoring configuration is changing in tandem with service change (New, modified, retired…) and continues to match the actual service warranty.
+
+To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that will occur in more detail and it works with the five Rs of rationalization introduced earlier in the Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
+
+|Type |Monitoring objective |Example objective |
+|
