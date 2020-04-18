@@ -221,18 +221,31 @@ You can leverage Azure now to include gradual monitoring of all or some aspects 
 ## Establish minimum governance
 
 As early as possible, define a strategy to clearly establish who will have what level of access in Azure to support their role and responsibility, such as:
-•	Access to different features in the Azure portal
-•	Ability to configure and manage policies
-•	Enable, deploy, configure Azure resources such as Log Analytics workspace(s), Azure Monitor agents, Azure Security Center, etc. 
-•	Access to view monitoring data submitted from resources scoped to a subset of resources in a resource group, across a resource group, across a subscription, etc.   
-•	Govern the development and release of monitoring configurations
+
+* Access to different features in the Azure portal
+
+* Ability to configure and manage policies
+
+* Enable, deploy, configure Azure resources such as Log Analytics workspace(s), Azure Monitor agents, Azure Security Center, etc. 
+
+* Access to view monitoring data submitted from resources scoped to a subset of resources in a resource group, across a resource group, across a subscription, etc.
+
+* Govern the development and release of monitoring configurations
+
 It is important to understand what each role will perform in order to build, maintain, and improve monitoring solutions in order plan an access control strategy and grant only the necessary rights they require to successfully perform their role.  A higher-level administrator, such as Global Admins, may establish policies for privileged delegation, both in Azure AD directory roles and in Azure with Azure role-based access control (RBAC).  You may want your System Administrators to be able to modify settings, add alerts, and set up report workspaces.  
+
 First, identify the roles who will own and manage resource groups in Azure as part of your governance framework:
-•	Whether a Monitoring Team or one or more Administrators of Resources and Groups will have privileged access to the Monitoring Contributor role.
-•	The consumers who should be given the Monitoring Reader role, which enables access to features in Azure Monitor, as well as investigate issues within the Monitoring section that is included with each Azure resource.
-•	What managers require access to other Azure Reader roles such as Reports Reader.
-Include security:  Be sure to work with the Identity Management team to decide on recommendations for privileged identities and privileged access:
-•	Obtaining separate privileged user accounts in Azure Active Directory.
-•	Applying privileged accounts in groups, in Azure AD and in Azure ARM privileged directory roles.
-•	Security monitoring of privileged access in Azure Monitor and activity logs;
-Establish Readiness
+
+* Whether a Monitoring Team or one or more Administrators of Resources and Groups will have privileged access to the Monitoring Contributor role.
+
+* The consumers who should be given the Monitoring Reader role, which enables access to features in Azure Monitor, as well as investigate issues within the Monitoring section that is included with each Azure resource.
+
+* What managers require access to other Azure Reader roles such as Reports Reader.
+
+Include security: Be sure to work with the Identity Management team to decide on recommendations for privileged identities and privileged access:
+
+* Obtaining separate privileged user accounts in Azure Active Directory.
+
+* Applying privileged accounts in groups, in Azure AD and in Azure ARM privileged directory roles.
+
+* Security monitoring of privileged access in Azure Monitor and activity logs; establish readiness.
