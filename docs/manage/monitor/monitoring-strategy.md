@@ -182,6 +182,7 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that will occur in more detail and it works with the five Rs of rationalization introduced earlier in the Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
 |Type |Monitoring objective |Example objective |
+|-----|---------------------|------------------|
 | 1 | Only on-premises | System Center Operations Manager. Continue to monitor services, infrastructure, networking up the application layer in owned data centers with no cloud considerations. |
 | 2 | On-premises to the cloud | Continue using System Center Operations Manager, and apply the O365 and Azure management packs. |
 | 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents with multi-homing where System Center Operations Manager and Azure Monitor monitor cooperatively.|
