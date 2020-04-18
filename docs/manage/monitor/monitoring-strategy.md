@@ -249,3 +249,13 @@ Include security: Be sure to work with the Identity Management team to decide on
 * Applying privileged accounts in groups, in Azure AD and in Azure ARM privileged directory roles.
 
 * Security monitoring of privileged access in Azure Monitor and activity logs; establish readiness.
+
+## Establish readiness
+
+Early on, formulate a readiness plan to help your IT staff adopt new skills, practices, and techniques for cloud monitoring in Azure.  Consider, in this strategy that should include foundational needs as well as those specific to monitoring:
+
+* The level of confidence needed with Azure’s services, architecture, and the control plane
+
+* New kinds of automation technology, for example Azure Resource Manager templates, Automation runbook, Azure Logic Apps, Azure PowerShell, etc.
+
+* Agile and DevOps practices to better manage monitoring code, such as ARM templates, PowerShell scripts used to install agents and Azure Policy code fragments used for monitoring.
