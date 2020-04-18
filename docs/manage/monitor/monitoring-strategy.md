@@ -190,8 +190,8 @@ To help you align monitoring plans to strategy, use the following table to categ
 | 5 | Hybrid forever | System Center Operations Manager, Azure AD, Azure Monitor, Azure Security Center, Intune, – a range of tools for a mixture of digital assets e.g., workstations.|
 | 6 | Cloud native |Azure Monitor, Azure Security Center, O365, service workspaces, Azure Service Health, Azure Resource Health – etc. |
 | 7 | Multi-cloud owned tenants (consolidate) | Centralize the monitoring of many tenants.  Deploy Azure Monitor, SIEM, Cloud Access Security Brokers (CAS-B, SIEM). |
-|Multi-cloud ecosystem |Centralize the monitoring of different cloud providers:  Microsoft, Amazon, Google, Salesforce, Palo Alto, etc. |
-| 8 | Provider > Consumer | Monitoring solutions and services as a cloud provider. |
+| 8 | Multi-cloud ecosystem |Centralize the monitoring of different cloud providers:  Microsoft, Amazon, Google, Salesforce, Palo Alto, etc. |
+| 9 | Provider > Consumer | Monitoring solutions and services as a cloud provider. |
 
 ## Formulate monitoring requirements
 
