@@ -3,7 +3,7 @@ title: "Cloud monitoring strategy"
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 04/17/2020
+ms.date: 04/27/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -12,17 +12,15 @@ services: azure-monitor
 
 # Cloud monitoring guide: Formulate a monitoring strategy
 
-## Early Considerations
-
-Use the Strategy and Plan phases of the Cloud Adoption Framework to ease your journey to the cloud. Consider how monitoring influences and justifies the motivations, business outcomes and initiatives. Consider how the first adoption project establishes early operations management, in Azure. Investigate what the cloud operating model needs to look like, including the role monitoring will play. Monitoring is still best served with a service-based approach, perhaps as an operations function, where monitoring is an advisory service and is a provider of expertise to business and IT consumers.
+To ease your journey to the cloud, use the Strategy and Plan phases of the Cloud Adoption Framework. Consider how monitoring influences and justifies the motivations, business outcomes, and initiatives. Examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role monitoring will play. Monitoring is still best served with a service-based approach, perhaps as an operations function, where monitoring is an advisory service and is a provider of expertise to business and IT consumers.
 
 Reducing complexity, lowering cost, while auto-scaling at cloud speed, are strong motivators for the following business case:
 
-* Azure Monitor helps you achieve early operations because the service is fully integrated into the Azure Resource Manager control plane as Software-as-a-Service. Set up logs, metrics, and alerts; then standardize monitoring configurations that match the pace of production resources established in Azure.  Monitoring will be there from the Azure resource level up to the Azure management group.
+* Azure Monitor helps you achieve early operations because the service is fully integrated into the Azure Resource Manager control plane as Software-as-a-Service (SaaS). Set up logs, metrics, and alerts; then standardize monitoring configurations that match the pace of production resources established in Azure. 
 
 * You can scale and standardize your monitoring solutions with Azure Policy for all resource types, such as cloud applications, virtual machines, and Kubernetes clusters. You want monitoring in the hands of Applications development teams to support their move to a continuous style DevOps model.
 
-* Cost management is also built in, so that you pay only for what you need and optimize only on the logs and alerts you need.
+* Built-in cost management to help plan and control the costs involved with logs, metrics, and alerts so you only pay for what you need.
 
 What about on-premises services? You can consider Azure Monitor as single pane of glass. Use APIs, Insights, or other Azure services to collect monitoring data from each resource, increasing visibility into the operation of your computing enterprise. Consolidate tools, standardize automation expertise, and reduce support contracts.
 
