@@ -12,6 +12,9 @@ services: azure-monitor
 
 # Cloud monitoring guide: Formulate a monitoring strategy
 
+As you undergo your digital transformation to the cloud, its critical you plan and develop a monitoring strategy that results in meeting the businesses expectations of a truly performant and reliable application.
+
+
 To ease your journey to the cloud, use the Strategy and Plan phases of the Cloud Adoption Framework. Consider how monitoring influences and justifies the motivations, business outcomes, and initiatives. Examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role monitoring will play. Monitoring is still best served with a service-based approach, perhaps as an operations function, where monitoring is an advisory service and is a provider of expertise to business and IT consumers.
 
 Reducing complexity, lowering cost, while auto-scaling at cloud speed, are strong motivators for the following business case:
@@ -22,11 +25,11 @@ Reducing complexity, lowering cost, while auto-scaling at cloud speed, are stron
 
 * Built-in cost management to help plan and control the costs involved with logs, metrics, and alerts so you only pay for what you need.
 
-What about on-premises services? You can consider Azure Monitor as single pane of glass. Use APIs, Insights, or other Azure services to collect monitoring data from each resource, increasing visibility into the operation of your computing enterprise. Consolidate tools, standardize automation expertise, and reduce support contracts.
+What about on-premises services? You can consider Azure Monitor as a single pane of glass. Use APIs, Insights, or other Azure services to collect monitoring data from each resource, increasing visibility into the operation of your computing enterprise. Consolidate tools, standardize automation expertise, and reduce support contracts.
 
 At the heart of operations management, your IT enterprise demands centralized governance and strict delegation over approaches to build, operate, and manage IT services. In Azure, service assets are called resources. With Azure Active Directory and Azure Resource Manager, you get granular control over monitoring configurations, security baselines, and servicing policies. Azure Active Directory provides directory roles to establish your provider/consumer relationships; Azure role-based access control (RBAC) provides access management to resources in Azure, Azure Policy applies controls to enforce different rules and effects over your resources, and Azure Security Center ensures secure, compliant baselines.  
 
-### High level requirements
+## High level requirements
 
 As an architect or strategic planner, you may need to formulate an early strategy for operations management, in which monitoring plays a major role. Consider these four outcomes:
 
