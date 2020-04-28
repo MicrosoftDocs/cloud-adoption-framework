@@ -14,7 +14,7 @@ services: azure-monitor
 
 As you undergo your digital transformation to the cloud, its important that you plan and develop an effective cloud monitoring strategy with participation of developers, operations staff, and infrastructure engineers. The strategy should be growth-oriented, defined minimally, then refined iteratively; always aligned with business needs. Its outcome delivers an agile operations modality centered around the ability of the organization to proactively monitor complex distributed applications the business depends on.
 
-## Considerations
+## Where to start?
 
 To ease your journey to the cloud, use the Strategy and Plan phases of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. It needs to be included in the Strategy and Plan phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.  
 
@@ -27,7 +27,7 @@ The following are important areas which strongly influence a sound monitoring st
 * Alert
 * Visualize and report
 
-What is the business case? Why 
+What is the business case? Rather what are the benefits to the business and also, the IT organization.
 
 Reducing complexity, lowering cost, while auto-scaling at cloud speed, are strong motivators for the following business case:
 
