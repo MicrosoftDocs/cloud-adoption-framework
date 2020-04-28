@@ -18,10 +18,11 @@ As you undergo your digital transformation to the cloud, its important that you 
 
 To ease your journey to the cloud, use the Strategy and Plan phases of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. It needs to be included in the Strategy and Plan phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.  
 
-The following are important areas to formulate monitoring strategy:
+The following are important areas which strongly influence a sound monitoring strategy:
 
 * Identify the logs and metrics to collect from on-premises or cloud resources
-* Identify logs and metrics to collect at the network layer
+* Identify logs and metrics to collect from the network layer
+* Identify security and access controls to secure workloads and privileged access to them
 * Identify the synthetic monitoring and end-user monitoring from the application
 * Alert
 * Visualize and report
