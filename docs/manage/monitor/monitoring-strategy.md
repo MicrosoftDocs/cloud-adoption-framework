@@ -20,13 +20,13 @@ To ease your journey to the cloud, use the Strategy and Plan phases of the Cloud
 
 The following are important areas which strongly influence a sound monitoring strategy:
 
-* Identify the logs and metrics to collect from on-premises or cloud resources
-* Identify logs and metrics to collect from the network layer
-* Identify security and access controls to secure workloads and privileged access to them
-* Identify the synthetic monitoring and end-user monitoring from the application
-* Alert
-* Visualize and report
+* Monitor all components, based on their dependency and relationship, which support the application. Start with the cloud service platform, resources, and lastly the application by collecting metrics and logs where applicable. For the hybrid cloud model, include on-premises infrastructure and other systems the application relies on.
 
+* Measure end user experience, mimicking how your customers use the application, to identify performance or other issues impacting their experience.
+
+* Align alerts with what is considered a relevant/practical incident (i.e. warnings and exceptions) and align severity with its significance. 
+
+* 
 What is the business case? Rather what are the benefits to the business and also, the IT organization.
 
 Reducing complexity, lowering cost, while auto-scaling at cloud speed, are strong motivators for the following business case:
