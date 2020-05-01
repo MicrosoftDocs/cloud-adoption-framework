@@ -1,7 +1,7 @@
 ---
-title: "Enterprise Enrolment and Azure AD Tenants"
+title: "Enterprise enrollment and Azure AD tenants"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: CAF enterprise-scale landing zone - Enterprise Enrolment and Azure AD Tenants
+description: CAF enterprise-scale landing zone - Enterprise enrollment and Azure AD tenants
 author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -11,43 +11,43 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# A. Enterprise Enrolment and Azure AD Tenants
+# A. Enterprise enrollment and Azure AD tenants
 
 [![EA Enrolment](./media/ea.png "EA Enrolment")](./media/ea.png)
 
-Figure 3 – EA Enrolment Hierarchy
+Figure 3 – EA Enrollment Hierarchy
 
-## 1. Planning for Enterprise Enrolment
+## 1. Planning for enterprise enrollment
 
-An Enterprise Enrolment, often referred to as the Enterprise Agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
+An eterprise enrollment, often referred to as the enterprise agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
 
-***Design Considerations***
+***Design considerations***
 
-- The Enrolment provides a hierarchical organizational structure to govern the management of customer subscriptions.
+- The enrollment provides a hierarchical organizational structure to govern the management of customer subscriptions.
 
 - Different customer environments can be separated at an EA account level to support holistic isolation.
 
-- There can be multiple administrators appointed to a single Enrolment.
+- There can be multiple administrators appointed to a single enrollment.
 
-- Each Subscription must have an associated Account owner.
+- Each subscription must have an associated account owner.
 
-- Each Account owner will be made a subscription owner for any subscriptions provisioned under that account.
+- Each account owner will be made a subscription owner for any subscriptions provisioned under that account.
 
-- A Subscription can only belong to one Account at any given time.
+- A subscription can only belong to one account at any given time.
 
-- A Subscription can be suspended based on a specified set of criteria.
+- A subscription can be suspended based on a specified set of criteria.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Setup the notification account email address to ensure notifications are sent to an appropriate group mailbox.
 
 - Assign a budget for each account and establish an alert associated with the budget.
 
-- Leverage the Department organisational element to map customer business divisions.
+- Leverage the department organizational element to map customer business divisions.
 
-- Create a new Department if business domains have independent IT capabilities.
+- Create a new department if business domains have independent IT capabilities.
 
-- Restrict and minimise the number of Account owners within the Enrolment to avoid the proliferation of admin access to Subscriptions and associated Azure resources.
+- Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 
 - If multiple AAD tenants are used, ensure the Account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
@@ -63,23 +63,23 @@ An Enterprise Enrolment, often referred to as the Enterprise Agreement, represen
 
 An Azure AD tenant is an instance of Azure Active Directory which contains accounts and groups, and acts as an authentication source for subscriptions, which must be rooted to a single AAD tenant.
 
-***Design Considerations***
+***Design considerations***
 
-- Multiple tenants can be leveraged under the same Enterprise Enrolment.
+- Multiple tenants can be leveraged under the same enterprise enrollment.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Leverage AAD SSO based on the selected [planning topology](/azure/active-directory/hybrid/plan-connect-topologies).
 
 - Enforce MFA and conditional access policies for all privileged accounts.
 
-- Use AAD PIM for Identity and Access management.
+- Use AAD PIM for identity and access management.
 
-- If Dev/Test/Prod are going to be completely isolated environments from an identity perspective, separate them at a tenant level (i.e. use multiple tenants).
+- If Dev/Test/Prod are going to be completely isolated environments from an identity perspective, separate them at a tenant level (e.g., use multiple tenants).
 
 <!-- -->
 
-- Avoid creating a new AAD tenant unless there is a strong IAM justification and processes are already in-place.
+- Avoid creating a new AAD tenant unless there is a strong IAM justification and processes are already in place.
 
 ## Next steps
 
