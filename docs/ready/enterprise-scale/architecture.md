@@ -52,17 +52,17 @@ The following list expands on the “landing zone” illustration by iterating t
 
 - ***Management and Monitoring***: Platform level holistic (horizontal) resource monitoring and alerting must be designed, deployed, and integrated. Operational tasks such as patching and backup must also be defined and streamlined. Security operations, monitoring, and logging must be designed and integrated with both resources on Azure as well as existing on-premises systems. All Subscription activity logs , which capture control plane operations across resources, should be streamed into Log Analytics to make them available for query and analysis, subject to RBAC permissions.
 
-- ***Network Topology and Connectivity***: The end-to-end network topology must be built and deployed across Azure regions and on-premises customer environments to ensure North-South and East-West connectivity between platform deployments. Network security must also be designed with the required services and resources identified, deployed and configured, such as Firewalls and NVAs to ensure security requirements are fully met.
+- ***Network Topology and Connectivity***: The end-to-end network topology must be built and deployed across Azure regions and on-premises customer environments to ensure North-South and East-West connectivity between platform deployments. Network security must also be designed with the required services and resources identified, deployed, and configured such as Firewalls and NVAs to ensure security requirements are fully met.
 
-- ***Shared Services Infrastructure***: Centrally controlled but de-centrally deployed services, such as Domain Controllers, must be designed, configured, and built to make requisite common services and resources available for application teams to consume and integrate with. It is important to note that not all “traditional” on premise shared services should be provided in the cloud. For example, file shares and HSMs should be considered as application level resources using native-Azure services.
+- ***Shared Services Infrastructure***: Centrally controlled but de-centrally deployed services such as Domain Controllers must be designed, configured, and built to make requisite common services and resources available for application teams to consume and integrate with. It is important to note that not all “traditional” on premise shared services should be provided in the cloud. For example, file shares and HSMs should be considered as application level resources using native-Azure services.
 
 - ***DevOps***: An end-to-end DevOps experience with robust SDLC practices must be designed, built and deployed to ensure the safe, repeatable and consistent delivery of Infrastructure as Code artifacts. Such artifacts are to be developed, tested and deployed using dedicated integration, release and deployment pipelines with strong source control and traceability.
 
 In addition to the key aspects denoted above, the design, configuration, deployment, and integration of each “landing zone” should meet critical customer requirements relating to:
 
 - Business continuity and disaster recovery, both at the platform and application level.
-- Service management, such as incident response and support.
-- Service catalog, such as CMDB.
+- Service management such as incident response and support.
+- Service catalog such as CMDB.
 
 ## High-level architecture
 
