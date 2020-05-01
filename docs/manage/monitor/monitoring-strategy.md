@@ -99,11 +99,11 @@ Define your current and future architecture of systems management that includes 
 
 * Guide the hybrid decisions that you need to make.
 
-One principle of monitoring is called full visibility. For a service, asset or component to be fully visible, you need to balance the three sides of this principle which are:
+One principle of monitoring is called full visibility. For a service, asset or component to be fully visible, you need to balance the three sides of this principle:
 
-1. In-depth or north-south
-2. End-to-end or in-breadth
-3. Or east-west, and for its health aspects (availability, performance, security and continuity).
+1. In-depth
+2. End-to-end or level of breadth
+3. Or east-west, with a focus on its health aspects (availability, performance, security and continuity).
 
 ![three-sided cube example](./media/monitoring-strategy/three-sided-cube.png)
 
