@@ -20,34 +20,25 @@ To ease your journey to the cloud, use the Strategy and Plan phases of the Cloud
 
 The following are important areas which strongly influence a sound monitoring strategy:
 
-* Monitor all components, based on their dependency and relationship, which support the application. Start with the cloud service platform, resources, and lastly the application by collecting metrics and logs where applicable. For the hybrid cloud model, include on-premises infrastructure and other systems the application relies on.
+* Monitor the health of your applications, based on its components and their relationship with other dependencies. Start with the cloud service platform, resources, the network, and lastly the application by collecting metrics and logs where applicable. For the hybrid cloud model, include on-premises infrastructure and other systems the application relies on.
 
-* Measure end user's experience by performing application performance monitoring by mimicking your customer's typical interactions with the application.
+* Include measuring the end user's experience in your applications performance monitoring plan by mimicking your customer's typical interactions with the application.
 
-* Align alerts with what is considered a relevant/practical incident (i.e. warnings and exceptions) and align severity with its significance.
+* Align alerts with what is considered a relevant/practical incident (i.e. warnings and exceptions) and align severity with its significance following your incident priority/urgency escalation matrix. 
 
 * Collect only the metrics and logs that are useful, measureable, and identifiable to the business and IT organization.
 
+* Define an integration plan with existing ITSM solutions (i.e. Remedy, ServiceNow, etc.) for incident generation or upstream monitoring. Identify which alerts should be forwarded, if alert enrichment required to support specific filtering requirements, and how to configure.
 
-What is the business case? Rather what are the benefits to the business and also, the IT organization.
+* Understand who needs visibility, what they need to see, and how it should be visualized based on their roles and responsibilities.  
 
-Reducing complexity, lowering cost, while auto-scaling at cloud speed, are strong motivators for the following business case:
-
-* Azure Monitor helps you achieve early operations because the service is fully integrated into the Azure Resource Manager control plane as Software-as-a-Service (SaaS). Set up an initial minimally viable logs, metrics, and alerts configuration; then standardize monitoring configurations that match the pace of production resources in Azure. 
-
-* You can scale and standardize your monitoring solutions with Azure Policy for all resource types, such as cloud applications, virtual machines, and Kubernetes clusters. You want monitoring in the hands of Applications development teams to support their move to a continuous style DevOps model.
-
-* Built-in cost management to help plan and control the costs involved with logs, metrics, and alerts so you only pay for what you need.
-
-What about on-premises services? You can consider Azure Monitor as a single pane of glass. Use APIs, Insights, or other Azure services to collect monitoring data from each resource, increasing visibility into the operation of your computing enterprise. Consolidate tools, standardize automation expertise, and reduce support contracts.
-
-At the heart of operations management, your IT enterprise demands centralized governance and strict delegation over approaches to build, operate, and manage IT services. In Azure, service assets are called resources. With Azure Active Directory and Azure Resource Manager, you get granular control over monitoring configurations, security baselines, and servicing policies. Azure Active Directory provides directory roles to establish your provider/consumer relationships; Azure role-based access control (RBAC) provides access management to resources in Azure, Azure Policy applies controls to enforce different rules and effects over your resources, and Azure Security Center ensures secure, compliant baselines.  
+At the heart of operations management, your IT enterprise needs to establish centralized governance and strict delegation over approaches to build, operate, and manage IT services.   
 
 ## High level requirements
 
 As an architect or strategic planner, you may need to formulate an early strategy for operations management, in which monitoring plays a major role. Consider these four outcomes:
 
-1. You need to be managing cloud production services when they go live into production, such as networking, applications, security and virtual infrastructure.
+1. You need to manage cloud production services when they go live into production, such as networking, applications, security and virtual infrastructure.
 
 2. You need to apply limited resources to rationalize your existing monitoring tools, skills and expertise, and leverage cloud monitoring to reduce complexity.
 
