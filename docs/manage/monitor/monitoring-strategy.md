@@ -143,11 +143,7 @@ Consider your data flows and tools:
 
 Consider Alerting and Notifications. The following table is an example of incident management priority model to standardize events, significance, and alerting used for notifications.
 
-|Alert severity |Incident priority high|Incident priority medium |Incident priority low|
-|---------------|----------------------|-------------------------|---------------------|
-|High |0|1|2|
-|Medium |1|2|3|
-|Low |2|3|4|
+![Impact severity and priority matrix example](./media/monitoring-strategy/incident-priority-severity-matrix.png)
 
 ## Formulate initiatives
 
