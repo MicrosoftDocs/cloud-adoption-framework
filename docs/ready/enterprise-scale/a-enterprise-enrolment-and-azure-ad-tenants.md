@@ -13,13 +13,13 @@ ms.custom: csu
 
 # A. Enterprise enrollment and Azure AD tenants
 
-[![EA Enrolment](./media/ea.png "EA Enrolment")](./media/ea.png)
+[![EA Enrollment](./media/ea.png "EA Enrollment")](./media/ea.png)
 
 Figure 3 – EA Enrollment Hierarchy
 
 ## 1. Planning for enterprise enrollment
 
-An eterprise enrollment, often referred to as the enterprise agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
+An enterprise enrollment, often referred to as the enterprise agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
 
 ***Design considerations***
 
@@ -39,7 +39,7 @@ An eterprise enrollment, often referred to as the enterprise agreement, represen
 
 ***Design recommendations***
 
-- Setup the notification account email address to ensure notifications are sent to an appropriate group mailbox.
+- Set up the notification account email address to ensure notifications are sent to an appropriate group mailbox.
 
 - Assign a budget for each account and establish an alert associated with the budget.
 
@@ -55,13 +55,13 @@ An eterprise enrollment, often referred to as the enterprise agreement, represen
 
 <!-- -->
 
-- Do not ignore notification emails sent to the notification account email address. Microsoft sends important EA wide communications to this account.
+- Do not ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
 
 - Do not move or rename an EA Account in Azure AD.
 
 ## 2. Define Azure AD Tenants
 
-An Azure AD tenant is an instance of Azure Active Directory which contains accounts and groups, and acts as an authentication source for subscriptions, which must be rooted to a single AAD tenant.
+An Azure AD tenant is an instance of Azure Active Directory, which contains accounts and groups, and acts as an authentication source for subscriptions, which must be rooted to a single AAD tenant.
 
 ***Design considerations***
 
