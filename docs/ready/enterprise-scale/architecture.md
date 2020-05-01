@@ -27,7 +27,7 @@ In the [landing zone considerations article](../../ready/considerations/index.md
 
 **Scope:** Within the CAF enterprise-scale landing zone, the scope of a landing zone grows considerably to to enable application migrations and greenfield development at an enterprise scale in Azure. This expansion allows for a design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
 
-**Refactoring:** The number of subscriptions required to support a full enterprise scale IT portfolio can be quite large. The cloud adoption framework encourages an initially high-frequency of refactoring, but that should be stablized before the 10th production workload is deployed to the cloud. When working across an enterprise portfolio, 10 applications could be deployed rather quickly, making refactoring impractical. Instead it is suggested that Central IT or the Cloud Center of Excellence deliver a more complete landing zone during the first release.
+**Refactoring:** The number of subscriptions required to support a full enterprise scale IT portfolio can be quite large. The cloud adoption framework encourages an initially high-frequency of refactoring, but that should be stabilized before the 10th production workload is deployed to the cloud. When working across an enterprise portfolio, 10 applications could be deployed rather quickly, making refactoring impractical. Instead it is suggested that Central IT or the Cloud Center of Excellence deliver a more complete landing zone during the first release.
 
 **Goal:** Provide consistent landing zones based on **application archetype** subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise, see image below.
 
@@ -46,7 +46,7 @@ Figure 1 – “landing zone” Design
 
 The following list expands on the “landing zone” illustration by iterating through the core technical constructs which must be designed and developed within the context of customer requirements to create compliant technical “landing zone” environments and the conditions for successful Azure adoption.
 
-- ***Identity and Access Management***: Azure AD design and integration must be built to ensure both server and user authentication. RBAC must be modelled and deployed to enforce separation of duties and the required entitlements for platform operation and management. Key management must be designed and deployed to ensure secure access to resources and support operations such as rotation and recovery. Ultimately, access roles are assigned to application owners at the control and data planes to create and manage resources autonomously.
+- ***Identity and Access Management***: Azure AD design and integration must be built to ensure both server and user authentication. RBAC must be modeled and deployed to enforce separation of duties and the required entitlements for platform operation and management. Key management must be designed and deployed to ensure secure access to resources and support operations such as rotation and recovery. Ultimately, access roles are assigned to application owners at the control and data planes to create and manage resources autonomously.
 
 - ***Policy Management*** Holistic and “landing zone” specific policies must be identified, described, built and deployed onto the target Azure platform to ensure corporate, regulatory and line of business controls are in place. Ultimately, policies should be used to guarantee the compliance of applications and underlying resources without any abstraction provisioning/administration capability.
 
@@ -56,15 +56,15 @@ The following list expands on the “landing zone” illustration by iterating t
 
 - ***Shared Services Infrastructure***: Centrally controlled but de-centrally deployed services, such as Domain Controllers, must be designed, configured, and built to make requisite common services and resources available for application teams to consume and integrate with. It is important to note that not all “traditional” on premise shared services should be provided in the cloud. For example, file shares and HSMs should be considered as application level resources using native-Azure services.
 
-- ***DevOps***: An end-to-end DevOps experience with robust SDLC practices must be designed, built and deployed to ensure the safe, repeatable and consistent delivery of Infrastructure as Code artefacts. Such artefacts are to be developed, tested and deployed using dedicated integration, release and deployment pipelines with strong source control and traceability.
+- ***DevOps***: An end-to-end DevOps experience with robust SDLC practices must be designed, built and deployed to ensure the safe, repeatable and consistent delivery of Infrastructure as Code artifacts. Such artifacts are to be developed, tested and deployed using dedicated integration, release and deployment pipelines with strong source control and traceability.
 
 In addition to the key aspects denoted above, the design, configuration, deployment, and integration of each “landing zone” should meet critical customer requirements relating to:
 
-- Business Continuity and Disaster Recovery, both at the platform and application level.
-- Service Management, such as incident response and support.
-- Service Catalogue, such as CMDB.
+- Business continuity and disaster recovery, both at the platform and application level.
+- Service mnagement, such as incident response and support.
+- Service catalogue, such as CMDB.
 
-## High Level Architecture
+## High-level architecture
 
 ![CAF enterprise-scale landing zone Architecture](./media/ns-arch.png "CAF enterprise-scale landing zone Architecture")
 Figure 2 – CAF enterprise-scale landing zone Architecture
