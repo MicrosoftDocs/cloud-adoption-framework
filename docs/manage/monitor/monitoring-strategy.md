@@ -59,7 +59,7 @@ And you need to look beyond the cloud model below. You’ll want to include Micr
 
 Ultimately, you’ll deliver monitoring configurations or solutions into production. As an IT Operations Manager or Monitoring Team Lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile, DevOps style of approach ensures monitoring is embedded within the teams who will be building and operating cloud services. While traditional project management works, it is not fast enough nor embedded deep enough in your operations teams.
 
-Include in your strategy and operating model how you communicate monitoring plans, objectives, and configurations (the solutions). For example, how you might leverage Azure DevOps Boards:
+Include in your strategy and operating model how you communicate monitoring plans, objectives, and configurations (the solutions). For example, how you might leverage Azure DevOps boards:
 
 |Agile term|What to include|Examples|
 |----------|---------------|--------|
@@ -67,7 +67,7 @@ Include in your strategy and operating model how you communicate monitoring plan
 |Features|Individual monitoring<br> Plans and projects|Monitoring requirements<br> Monitoring consumers and providers<br> Objectives<br> Tools<br> Schedule|
 |User stories and tasks |The end result is a<br> Monitoring configuration and/or solution|Network monitoring (e.g. Express Route)<br> Standardized IaaS VM monitoring (e.g. Azure Monitor for VMs, Application Insight, Azure Policy, settings, policies, reports, workspaces.)|
 
-## Monitoring informs strategy 
+## Monitoring informs strategy
 
 Consider where early monitoring capability *informs strategy*. Many decisions depend on early monitoring data in order to build a capability roadmap that guides limited resources and adds confidence. Strategies also need real-world input from monitoring of service enablement.
 
@@ -81,13 +81,13 @@ Later in this guide, discover some common monitoring scenarios or use cases that
 
 ## Determine what you have
 
-As a manageability expert, you may be working closely with a steering committee, the architect and strategic planners. You might be working to formulate monitoring strategy by assessing the current state of your systems management: the people, partnering, outsourcing, tooling, complexity, gaps and risks. An assessment will help you prioritize the set of found problems and select the key opportunities that improve the current situation. Determine, too, the services, systems, and data that are likely to remain on-premises as one important outcome. Ideally, management wants a roadmap of initiatives, but in direct proportion to the known planning horizon. Discussing unknowns, are just as important.
+As a manageability expert, you may be working closely with a steering committee, an architect and strategic planners. You might be working to formulate your monitoring strategy by assessing the current state of your systems management: the people, partnering, outsourcing, tooling, complexity, gaps and risks. An assessment will help you prioritize the set of found problems and select the key opportunities that improve the current situation. Determine, too, the services, systems, and data that are likely to remain on-premises as one important outcome. Ideally, management wants a roadmap of initiatives, but in direct proportion to the known planning horizon. Discussing unknowns, are just as important.
 
 ## Formulate a monitoring architecture
 
 Define your current and future architecture of systems management that includes monitoring, to:
 
-* Apply limited resources in consolidating your monitoring investment
+* Apply limited resources in consolidating your monitoring investment.
 
 * Decide on how monitoring will help exploit the future services your business needs: cloud monitoring of highly scaleable, resilient and globally aware cloud services.
 
@@ -99,7 +99,13 @@ Define your current and future architecture of systems management that includes 
 
 * Guide the hybrid decisions that you need to make.
 
-*One principle of monitoring is called full visibility:  for a service, asset or component to be fully visible, 1) in-depth or north-south, 2) end-to-end, in breadth or east-west, and for its health aspects (availability, performance, security and continuity).
+One principle of monitoring is called full visibility. For a service, asset or component to be fully visible, you need to balance the three sides of this principle which are:
+
+1. In-depth or north-south
+2. End-to-end or in-breadth
+3. Or east-west, and for its health aspects (availability, performance, security and continuity).
+
+![three-sided cube example](./media/monitoring-strategy/three-sided-cube.png)
 
 Some key questions include:
 
