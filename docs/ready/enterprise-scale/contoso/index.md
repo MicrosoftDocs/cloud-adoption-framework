@@ -14,15 +14,16 @@ ms.custom: csu
 # Getting Started
 
 This section covers how to deploy platform-native Contoso reference implementation of CAF enterprise-scale landing zone, [current design](./Implementation-design-guide.md), [FAQ](./Implementation-FAQ.md) and [known issues](./Implementation-known-issues.md).
-> Note:  Before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.
+> [!Note]
+Before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.
 
 ## Target audience
 The target audience for this guide is people with a typical DevOps / SRE background and assumes knowledge in Azure Resource Manager (ARM)/Infrastructure as Code (IaC), Git, and PowerShell.
 ## Tutorials
 
- - [**Deploying Template via Command Line**](#Deploy-ARM-templates-at-the-tenant-root-scope) - Without Git integration, experiment with ARM template deployments at the tenant ("/") root scope to better understand how to instantiate the end-2-end CAF enterprise-scale landing zone Landing Zone architecture.
+ - [**Deploying Template via Command Line**](#deploy-arm-templates-at-the-tenant-root-scope) - Without Git integration, experiment with ARM template deployments at the tenant ("/") root scope to better understand how to instantiate the end-2-end CAF enterprise-scale landing zone Landing Zone architecture.
 
- - [**Configuring Git to deploy CAF enterprise-scale landing zone**](#Configure-GitHub-and-run-initialization) - Get started with the full reference implementation including Git repository for the platform configuration, ARM templates triggered by GitHub actions for landing zones and operation detection and reconciliation with Log Analytics.
+ - [**Configuring Git to deploy CAF enterprise-scale landing zone**](#configure-github-and-run-initialization) - Get started with the full reference implementation including Git repository for the platform configuration, ARM templates triggered by GitHub actions for landing zones and operation detection and reconciliation with Log Analytics.
 
 ## Prerequisites
 
@@ -31,17 +32,17 @@ This table lists the technical prerequisites needed to use the CAF enterprise-sc
 |Requirement|Additional info | |
 |---------------|--------------------|--------------------| 
 |Git >= 2.1| Latest version of git can be found [here](https://git-scm.com/) | [Git handbook](https://guides.github.com/introduction/git-handbook/)|
-Minimum version of PowerShell: 7.0|  The latest version of PowerShell including install instructions can be found [here](https://github.com/PowerShell/PowerShell). <br> Confirm the version of PowerShell that you are running by typing `$PSVersionTable` in a PowerShell session.| 
-|Az.Accounts >= 1.7 <br>Az.Resources >= 1.10 |  `Install-Module -Name Az.<ModuleName> -MinimumVersion <Version> -Scope AllUsers`<br>Confirm the version of the module you have by running <br>`Get-Module Az.<ModuleName> -ListAvailable`. | [Docs](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)| 
-| Pester >= 4.10.1 |  ***Only required if you want to run pester-tests as a developer*** <br>`Install-Module -Name Pester -MinimumVersion 4.10.1 -Scope AllUsers`<br> You can confirm the version of the module you have by running <br>`Get-Module Pester -ListAvailable`. | [Docs](https://github.com/pester/Pester) | 
+Minimum version of PowerShell: 7.0|  The latest version of PowerShell including install instructions can be found [here](https://github.com/powershell/powershell). <br> Confirm the version of PowerShell that you are running by typing `$PSVersionTable` in a PowerShell session.| 
+|Az.Accounts >= 1.7 <br>Az.Resources >= 1.10 |  `Install-Module -Name Az.<ModuleName> -MinimumVersion <Version> -Scope AllUsers`<br>Confirm the version of the module you have by running <br>`Get-Module Az.<ModuleName> -ListAvailable`. | [Docs](https://docs.microsoft.com/powershell/azure/install-az-ps)| 
+| Pester >= 4.10.1 |  ***Only required if you want to run pester-tests as a developer*** <br>`Install-Module -Name Pester -MinimumVersion 4.10.1 -Scope AllUsers`<br> You can confirm the version of the module you have by running <br>`Get-Module Pester -ListAvailable`. | [Docs](https://github.com/pester/pester) | 
 
 >  :iphone: If you have Multi-factor authentication (MFA) enabled on any of your accounts, make sure that you have your token app/phone easily accessible before you start.
 
 ## Deploy ARM templates at the tenant root scope
 
 1. Connect to Azure using `Connect-AzAccount` with an account that have at least "User Access Administrator" permissions at the tenant root level.
-2. Assign required permissions at tenant root level for the account that you want to use. Owner **or** Contributor + User Access Administrator permissions is required to be able to deploy the example templates. If you don't have permissions to assign permissions at the root level, you may have to [elevate your access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin) as a global administrator before assigning the permissions. <br>
-*If you want to use a service principal, follow the instructions to assign permissions under the [**Full end-to-end deployment**](#Configure-GitHub-and-run-initialization)*
+2. Assign required permissions at tenant root level for the account that you want to use. Owner **or** Contributor + User Access Administrator permissions is required to be able to deploy the example templates. If you don't have permissions to assign permissions at the root level, you may have to [elevate your access](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin) as a global administrator before assigning the permissions. <br>
+*If you want to use a service principal, follow the instructions to assign permissions under the [**Full end-to-end deployment**](#configure-github-and-run-initialization)*
     ```powershell
     New-AzRoleAssignment -SignInName john.doe@contoso.com -RoleDefinitionName "Owner" -Scope "/"  
     
@@ -58,16 +59,16 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
 
 3. [Clone the GitHub repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or download the necessary templates/template parameter files so you have the the templates from the examples folder that you want to deploy on your local machine. <br>For a basic deployment test, you'll at least need access to the following templates:
 
-    * [10-create-child-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/10-create-managementgroup.parameters.json)  
+    * [10-create-child-managementgroup.parameters](https://github.com/azure/cet-northStar/blob/master/examples/10-create-managementgroup.parameters.json)  
       Parameter file to deploy the company root management group (Tailspin) as a child of the Tenant Root Group
-    * [20-create-child-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json)  
-      Parameter file to create nested child management groups under the company root managment group
-    * [30-create-policydefinition-at-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json)  
-      Deploys a deny if not exist (DINE) policy defintion at the company root managment group (Tailspin)
+    * [20-create-child-managementgroup.parameters](https://github.com/azure/cet-northstar/blob/master/examples/20-create-child-managementgroup.parameters.json)  
+      Parameter file to create nested child management groups under the company root management group
+    * [30-create-policydefinition-at-managementgroup.parameters](https://github.com/azure/cet-northstar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json)  
+      Deploys a deny if not exist (DINE) policy definition at the company root management group (Tailspin)
     * [40-create-policyassignment-at-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json)  
-      Assigns the policy defintion at company root managment group scope (Tailspin)
+      Assigns the policy definition at company root management group scope (Tailspin)
     <br><br>
-     > Read up to better understand how the CAF enterprise-scale landing zone reference ARM templates are constructed (with **one** master template and parameter files only) [here](../Northstar-Contribution.md#writing-arm-templates-for-contoso-implementation). 
+     > Read up to better understand how the CAF enterprise-scale landing zone reference ARM templates are constructed (with **one** master template and parameter files only) [here](../northstar-contribution.md#writing-arm-templates-for-contoso-implementation). 
 4. In all parameter files, change the TenantID and name of the management groups to reflect the tenant where they will be deployed. TenantID can be found by running `Get-AzTenant`.
     ```json
     {
@@ -147,7 +148,7 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
 
 1. [Fork the repository](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) to your GitHub Organization and [clone the forked GitHub repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) to your local machine.<br>Follow the instructions [here](#sync-your-fork-with-upstream-repo) to keep your fork synchronized with the upstream. 
 
-2. "User Access Administrator" role is required to manage the deployment of your CAF enterprise-scale landing zone architecture. This may requires [elevated account permitions](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin) It is strongly recommended to assign the permission at the highest scope possible (i.e. tenant root "/") to ensure you can use the service principal to perform subscriptions management operation. "App registration" needs to be enabled on the Azure AD tenant to self-register an Application (Option 1).
+2. "User Access Administrator" role is required to manage the deployment of your CAF enterprise-scale landing zone architecture. This may requires [elevated account permitions](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin) It is strongly recommended to assign the permission at the highest scope possible (e.g., tenant root "/") to ensure you can use the service principal to perform subscriptions management operation. "App registration" needs to be enabled on the Azure AD tenant to self-register an Application (Option 1).
     > Note: Read access on the root level is enough to perform the initialization, but not for deployment. To be able to create management group and subscriptions, platform requires Tenant level PUT permission.
 
     Option 1 (App registration enabeled)
@@ -212,7 +213,7 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
     github-email@your-domain.com #Github ID primary email
     ```
 
-4. Run `Clear-AzContext` and then [`Connect-AzAccount` with your service principal](https://docs.microsoft.com/en-us/powershell/azure/create-azure-service-principal-azureps?view=azps-3.6.1#sign-in-using-a-service-principal) that was created earlier ensure that you have the appropriate permissions during the initialization. 
+4. Run `Clear-AzContext` and then [`Connect-AzAccount` with your service principal](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps?view=azps-3.6.1#sign-in-using-a-service-principal) that was created earlier ensure that you have the appropriate permissions during the initialization. 
 
 5. To run a initialization operation in Azure, and initialize your repository with your Azure AD tenant locally, run the code below. 
     Note: Depending on the size of the environment, it may take a while initialization to complete.
