@@ -153,11 +153,11 @@ As a monitoring expert or systems administrator, you’ve discovered that cloud 
 
 * Initiative 2: “To decide on how we leverage our license plans for identity, access, and overall Information protection, we will help the Security and Privacy offices establish early activity monitoring of users and content as they migrate to the cloud, to clarify questions on classification labels, data loss prevention, encryption and retention policies.”
 
-## Consider scale
+### Consider scale
 
 Consider scale in your strategy and who will be defining and standardizing “monitoring as code.” Your organization should plan to build standardized solutions using a combination of tools such as Azure Resource Manager templates, Azure Policy, establish a source control for the scripts, code, and documentation in support of the agile solution methods and tooling you’ll want.
 
-## Consider privacy and security
+### Consider privacy and security
 
 In Azure you’ll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs.  Additionally, specialized logs that record user activity such as the Azure Active Directory sign in log, and if integrated, the Microsoft 365 Unified Audit Log, contain sensitive data that must be protected under privacy law.
 
@@ -167,13 +167,13 @@ Your monitoring strategy should include these components:
 
 * Restrict access to resources
 
-## Consider business continuity
+### Consider business continuity
 
 * Disaster Recovery
 
 * Resilience e.g. Geo-Redundancy
 
-## Consider maturity
+### Consider maturity
 
 Maturity is an important consideration in your strategy. You can start minimally, too. The first monitoring solutions you’ll want are those that ensure observability, to include responsive processes, such as Incident and Problem Management. Here, you will be creating one or more Log Analytics workspaces, enabling agents, and setting up initial alerts. Over time, you gain confidence in Azure Monitor capabilities with the need to measure health indicators, so this involves deepening the focus on the collection of logs, using Insights, metrics, and defining the log search queries that drive the measurement and calculation of what is healthy/unhealthy. Learning includes getting monitoring data and Insights into the hands of managers, ensuring the right consumers have monitoring data they need. Learning cycles include continual tuning and optimizing monitoring solutions to adapt, to improve service and inform adoption plans.
 
