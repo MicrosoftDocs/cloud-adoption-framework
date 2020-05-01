@@ -22,11 +22,13 @@ The following are important areas which strongly influence a sound monitoring st
 
 * Monitor all components, based on their dependency and relationship, which support the application. Start with the cloud service platform, resources, and lastly the application by collecting metrics and logs where applicable. For the hybrid cloud model, include on-premises infrastructure and other systems the application relies on.
 
-* Measure end user experience, mimicking how your customers use the application, to identify performance or other issues impacting their experience.
+* Measure end user's experience by performing application performance monitoring by mimicking your customer's typical interactions with the application.
 
-* Align alerts with what is considered a relevant/practical incident (i.e. warnings and exceptions) and align severity with its significance. 
+* Align alerts with what is considered a relevant/practical incident (i.e. warnings and exceptions) and align severity with its significance.
 
-* 
+* Collect only the metrics and logs that are useful, measureable, and identifiable to the business and IT organization.
+
+
 What is the business case? Rather what are the benefits to the business and also, the IT organization.
 
 Reducing complexity, lowering cost, while auto-scaling at cloud speed, are strong motivators for the following business case:
