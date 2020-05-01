@@ -24,15 +24,17 @@ The following are important areas which strongly influence a sound monitoring st
 
 * Include measuring the end user's experience in your applications performance monitoring plan by mimicking your customer's typical interactions with the application.
 
+* Security - 
+
 * Align alerts with what is considered a relevant/practical incident (i.e. warnings and exceptions) and align severity with its significance following your incident priority/urgency escalation matrix. 
 
 * Collect only the metrics and logs that are useful, measureable, and identifiable to the business and IT organization.
 
 * Define an integration plan with existing ITSM solutions (i.e. Remedy, ServiceNow, etc.) for incident generation or upstream monitoring. Identify which alerts should be forwarded, if alert enrichment required to support specific filtering requirements, and how to configure.
 
-* Understand who needs visibility, what they need to see, and how it should be visualized based on their roles and responsibilities.  
+* Understand who needs visibility, what they need to see, and how it should be visualized based on their roles and responsibilities.
 
-At the heart of operations management, your IT enterprise needs to establish centralized governance and strict delegation over approaches to build, operate, and manage IT services.   
+At the heart of operations management, your IT enterprise needs to establish centralized governance and strict delegation over approaches to build, operate, and manage IT services.
 
 ## High level requirements
 
@@ -44,18 +46,18 @@ As an architect or strategic planner, you may need to formulate an early strateg
 
 3. You need make your monitoring solution processes more efficient, work faster and smoother, at scale and be able to change quickly too.
 
-4. You need to account for how your organization will plan for and host monitoring based on cloud models, and reduce your requirements as the organization moves up stream from  IaaS to PaaS, and then to SaaS.  
+4. You need to account for how your organization will plan for and host monitoring based on cloud models. Work towards the goal of reducing your requirements as the organization transitions from IaaS to PaaS, and then to SaaS.  
 
 ## High level modeling
 
-As the business determines what services will move, you will need to invest your resources carefully.  On-premises, you own all responsibilities for monitoring and are heavily invested.  The moves made toward SaaS services for example does not eliminate your responsibilities for monitoring.  You’ll be deciding who needs access, who gets alerts, and who needs access to analytics.  Azure Monitor and Azure Arc are SaaS services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure.  
-And you need to look beyond the cloud model below.  You’ll want to include Microsoft 365 in the equation, since you get significant monitoring for security and compliance on top of Azure Security Center including identities, endpoint management, and device monitoring outside the datacenter.
+As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services for example, does not eliminate your responsibilities for monitoring. You’ll be deciding who needs access, who gets alerts, and who needs access to analytics. Azure Monitor and Azure Arc are SaaS services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure.  
+And you need to look beyond the cloud model below. You’ll want to include Microsoft 365 in the equation, since you get significant monitoring for security and compliance on top of Azure Security Center including identities, endpoint management, and device monitoring outside the data center.
 
 ![Cloud models diagram](./media/monitoring-strategy/cloud-models.png)
 
 ## Agile solution releases
 
-Ultimately, you’ll deliver monitoring configurations or solutions into production. As an IT Operations Manager or Monitoring Team Lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile, DevOps style of approach ensures monitoring is embedded with the teams who will be building and operating cloud services. While traditional project management will work, it may not be fast enough nor embed itself in your operations teams.
+Ultimately, you’ll deliver monitoring configurations or solutions into production. As an IT Operations Manager or Monitoring Team Lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile, DevOps style of approach ensures monitoring is embedded within the teams who will be building and operating cloud services. While traditional project management works, it is not fast enough nor embedded deep enough in your operations teams.
 
 Include in your strategy and operating model how you communicate monitoring plans, objectives, and configurations (the solutions). For example, how you might leverage Azure DevOps Boards:
 
