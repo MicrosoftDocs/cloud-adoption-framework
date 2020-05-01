@@ -672,7 +672,7 @@ The following policies related to security and governance will be assigned in th
 <td>All Key Vault objects are recoverable in Contoso tenant</td>
 </tr>
 <tr class="even">
-<td><p>Enforce Private Link for <a href="https://docs.microsoft.com/en-us/azure/private-link/private-link-overview#availability"> Azure Services </a> </p>
+<td><p>Enforce Private Link for <a href="https://docs.microsoft.com/azure/private-link/private-link-overview#availability"> Azure Services </a> </p>
 <ul>
 <li><p>Storage</p></li>
 <li><p>ADLS Gen2</p></li>
@@ -687,7 +687,7 @@ The following policies related to security and governance will be assigned in th
 <p>AKS (API)</p></td>
 <td>Ensure Private Link is used for all supported Azure services</td>
 <td>Landing Zone management group</td>
-<td> <a href='https://docs.microsoft.com/en-us/azure/private-link/private-link-overview#availability'> Supported Azure services </a> always use Private Link to communicate to PaaS service over the vNet</td>
+<td> <a href='https://docs.microsoft.com/azure/private-link/private-link-overview#availability'> Supported Azure services </a> always use Private Link to communicate to PaaS service over the vNet</td>
 </tr>
 </tbody>
 </table>
