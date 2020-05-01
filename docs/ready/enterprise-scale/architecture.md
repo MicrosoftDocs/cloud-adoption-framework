@@ -61,8 +61,8 @@ The following list expands on the “landing zone” illustration by iterating t
 In addition to the key aspects denoted above, the design, configuration, deployment, and integration of each “landing zone” should meet critical customer requirements relating to:
 
 - Business continuity and disaster recovery, both at the platform and application level.
-- Service mnagement, such as incident response and support.
-- Service catalogue, such as CMDB.
+- Service management, such as incident response and support.
+- Service catalog, such as CMDB.
 
 ## High-level architecture
 
