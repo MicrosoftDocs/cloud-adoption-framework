@@ -51,7 +51,7 @@ As an architect or strategic planner, you may need to formulate an early strateg
 ## High level modeling
 
 As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services for example, does not eliminate your responsibilities for monitoring. You’ll be deciding who needs access, who gets alerts, and who needs access to analytics. Azure Monitor and Azure Arc are SaaS services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure.  
-And you need to look beyond the cloud model below. You’ll want to include Microsoft 365 in the equation, since you get significant monitoring for security and compliance on top of Azure Security Center including identities, endpoint management, and device monitoring outside the data center.
+And you need to look beyond the cloud model below. You’ll want to include Microsoft 365 in the equation, since you get significant monitoring for security and compliance on top of Azure Security Center. Including identities, endpoint management, and device monitoring outside the datacenter.
 
 ![Cloud models diagram](./media/monitoring-strategy/cloud-models.png)
 
@@ -193,7 +193,7 @@ To help you align monitoring plans to strategy, use the following table to categ
 
 |Type |Monitoring objective |Example objective |
 |-----|---------------------|------------------|
-| 1 | Only on-premises | System Center Operations Manager. Continue to monitor services, infrastructure, networking up the application layer in owned data centers with no cloud considerations. |
+| 1 | Only on-premises | System Center Operations Manager. Continue to monitor services, infrastructure, networking up the application layer in owned datacenters with no cloud considerations. |
 | 2 | On-premises to the cloud | Continue using System Center Operations Manager, and apply the O365 and Azure management packs. |
 | 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents with multi-homing where System Center Operations Manager and Azure Monitor monitor cooperatively.|
 | 4 | Hybrid migration | Monitor the migration, for example, Exchange to O365 Exchange Online. Exchange Online Service Health and Service Usage, Security and Compliance – all from O365. Gradually decommission monitoring Exchange on-prem with System Center Operations Manager until migration complete. |
