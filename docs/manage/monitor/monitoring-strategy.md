@@ -24,7 +24,7 @@ The following are important areas which strongly influence a sound monitoring st
 
 * Include measuring the end user's experience in your applications performance monitoring plan by mimicking your customer's typical interactions with the application.
 
-* Security - 
+* Ensure security requirements correspond with your organizations security compliance policy.
 
 * Align alerts with what is considered a relevant/practical incident (i.e. warnings and exceptions) and align severity with its significance following your incident priority/urgency escalation matrix. 
 
@@ -93,17 +93,17 @@ Define your current and future architecture of systems management that includes 
 
 * Align monitoring to the future services and resources that you will be monitoring in the cloud.
 
-* Identify monitoring gaps in three dimensions* - depth, breadth and across the health model.
+* Identify monitoring gaps across the three dimensions - depth, breadth and across the health model.
 
 * Model the financial aspects, costs and support factors that support a cost-benefit analysis.
 
 * Guide the hybrid decisions that you need to make.
 
-One principle of monitoring is called full visibility. For a service, asset or component to be fully visible, you need to balance the three sides of this principle:
+One principle of monitoring is called Full Visibility. <Need to define the principle here>. For a service, asset or component to be fully visible, you need to balance the three sides of this principle:
 
-1. Depth
-2. End-to-end or breadth
-3. Or east-west, with a focus on its aspects of health (availability, performance, security and continuity).
+1. Monitoring in-depth by collecting meaningful and relevant signals 
+2. Monitor end-to-end or breadth from the lowest layer of the stack up to the application
+3. East to West with a focus on its aspects of health (availability, performance, security and continuity).
 
 ![three-sided cube example](./media/monitoring-strategy/three-sided-cube.png)
 
