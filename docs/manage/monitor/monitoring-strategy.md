@@ -89,7 +89,7 @@ Define your current and future architecture of systems management that includes 
 
 * Apply limited resources in consolidating your monitoring investment.
 
-* Decide on how monitoring will help exploit the future services your business needs: cloud monitoring of highly scaleable, resilient and globally aware cloud services.
+* Decide on how monitoring will help exploit the future services your business needs: cloud monitoring of highly scalable, resilient and globally aware cloud services.
 
 * Align monitoring to the future services and resources that you will be monitoring in the cloud.
 
@@ -101,8 +101,8 @@ Define your current and future architecture of systems management that includes 
 
 One principle of monitoring is called Full Visibility. <Need to define the principle here>. For a service, asset or component to be fully visible, you need to balance the three sides of this principle:
 
-1. Monitoring in-depth by collecting meaningful and relevant signals 
-2. Monitor end-to-end or breadth from the lowest layer of the stack up to the application
+1. Monitoring in-depth by collecting meaningful and relevant signals.
+2. Monitor end-to-end or breadth from the lowest layer of the stack up to the application.
 3. East to West with a focus on its aspects of health (availability, performance, security and continuity).
 
 ![three-sided cube example](./media/monitoring-strategy/three-sided-cube.png)
@@ -119,17 +119,17 @@ Some key questions include:
 
 To assemble this architecture, here are several considerations:
 
-* Consider a data flow approach starting from service assets and going up the stack - metrics and log data emitted by infrastructure, IOT devices, mobile devices, etc. are all of the items under management—to-monitoring tools (mid-tier) moving upward and outward (ITSM tools, global monitoring, Security Information and Event Management (SIEM), custom alert enrichment, etc.).
+* A data flow approach starting from service assets and going up the stack - metrics and log data emitted by infrastructure, IOT devices, mobile devices, etc. are all of the items under management—to-monitoring tools (mid-tier) moving upward and outward (ITSM tools, global monitoring, Security Information and Event Management (SIEM), custom alert enrichment, etc.).
 
-* Consider whether to continue with Systems Center.
+* Whether to continue with Systems Center Operations Manager or other monitoring tool(s).
 
-* Consider economic cost.
+* The economic cost.
 
-* Consider how the business will leverage logs and metrics. Azure monitoring brings a significant volume of log and time-series data to the performance and health side of monitoring, similar to what security operations experiences. After all, logs and metrics are the two major data components of Azure Monitor’s architecture. The reason why this is important is:
+* How the business will leverage logs and metrics. Azure Monitor brings a significant volume of log and time-series data to the performance and health side of monitoring, similar to what security operations experiences. After all, logs and metrics are the two major data components of Azure Monitor’s architecture. The reason why this is important is:
 
-   1. Since you can build large scale complex cloud services, your problem management costs are reduced to analyze, correlate and determine causes of problems in one place reducing the need to access resources directly, thereby improving security. 
+   1. Since you can build large scale complex cloud services, your problem management costs are reduced to analyze, correlate and determine causes of problems in one place reducing the need to access resources directly, thereby improving security.
    
-   2. Like a SIEM, Azure Monitor is consolidating machine data directly from on-premises assets as well as Azure resources (including activity logs, tenant, and subscription data, and any log data from a REST client), and provides a simple query language to provide data analysis far beyond what was possible before. What makes Azure Monitor unique is that although it handles machine level data very well, Azure Monitor gives you pre-defined queries, context-sensitive metrics based on resource type<sup>1</sup>.
+   2. Similar to a SIEM, Azure Monitor is consolidating machine data directly from on-premises assets as well as Azure resources (including activity logs, tenant, and subscription data, and any log data from a REST client), and provides a simple query language to provide data analysis far beyond what was possible before. What makes Azure Monitor unique is that although it handles machine level data very well, Azure Monitor gives you pre-defined queries, context-sensitive metrics based on resource type<sup>1</sup>.
 
 Consider your data flows and tools:
 
@@ -141,7 +141,7 @@ Consider your data flows and tools:
 
 * The role of IT service management integration to trigger on significant events.
 
-Consider Alerting and Notifications. The following table is an example of incident management priority model to standardize events, significance, and alerting used for notifications.
+Consider alerting and notifications. The following table is an example of incident management priority model to standardize events, significance, and alerting used for notifications.
 
 ![Impact severity and priority matrix example](./media/monitoring-strategy/incident-priority-severity-matrix.png)
 
