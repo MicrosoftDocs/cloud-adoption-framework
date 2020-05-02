@@ -34,7 +34,7 @@ The following are important areas which strongly influence a sound monitoring st
 
 * Understand who needs visibility, what they need to see, and how it should be visualized based on their roles and responsibilities.
 
-At the heart of operations management, your IT enterprise needs to establish centralized governance and strict delegation over approaches to build, operate, and manage IT services.
+At the heart of operations management, your IT organization needs to establish centralized governance and strict delegation over approaches to build, operate, and manage IT services.
 
 ## High level requirements
 
