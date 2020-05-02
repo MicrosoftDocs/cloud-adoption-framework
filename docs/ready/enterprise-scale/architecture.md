@@ -25,13 +25,13 @@ It is important to highlight that not all enterprises adopt Azure in the same wa
 
 In the [landing zone considerations article](../../ready/considerations/index.md), the term landing zone is defined in detail. However, the specific needs of the CAF enterprise-scale landing zone's audience requires an expansion of that definition.
 
-**Scope:** Within the CAF enterprise-scale landing zone, the scope of a landing zone grows considerably to to enable application migrations and greenfield development at an enterprise scale in Azure. This expansion allows for a design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
+**Scope:** Within the CAF enterprise-scale landing zone, the scope of a landing zone grows considerably to enable application migrations and green field development at an enterprise scale in Azure. This expansion allows for a design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
 
 **Refactoring:** The number of subscriptions required to support a full enterprise scale IT portfolio can be quite large. The cloud adoption framework encourages an initially high-frequency of refactoring, but that should be stabilized before the 10th production workload is deployed to the cloud. When working across an enterprise portfolio, 10 applications could be deployed rather quickly, making refactoring impractical. Instead it is suggested that Central IT or the Cloud Center of Excellence deliver a more complete landing zone during the first release.
 
 **Goal:** Provide consistent landing zones based on **application archetype** subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise, see image below.
 
-**Principle purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to more quickly mature the customer's landing zones. CAF enterprise-scale landing zone expands the principle purpose of the landing zones to pull forward aspects of governance, compliance, security and operational management. Each of these is addressed in the first release of the landing zone(s) and supporting shared services.
+**Principle purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to more quickly mature the customer's landing zones. CAF enterprise-scale landing zone expands the principle purpose of the landing zones to pull forward aspects of governance, compliance, security, and operational management. Each of these is addressed in the first release of the landing zone(s) and supporting shared services.
 
 
 ---
@@ -44,24 +44,24 @@ Figure 1 – “landing zone” Design
 
 ## Expanded list of requisite components
 
-The following list expands on the “landing zone” illustration by iterating through the core technical constructs which must be designed and developed within the context of customer requirements to create compliant technical “landing zone” environments and the conditions for successful Azure adoption.
+The following list expands on the “landing zone” illustration by iterating through the core technical constructs that must be designed and developed within the context of customer requirements to create compliant technical “landing zone” environments and the conditions for successful Azure adoption.
 
 - ***Identity and Access Management***: Azure AD design and integration must be built to ensure both server and user authentication. RBAC must be modeled and deployed to enforce separation of duties and the required entitlements for platform operation and management. Key management must be designed and deployed to ensure secure access to resources and support operations such as rotation and recovery. Ultimately, access roles are assigned to application owners at the control and data planes to create and manage resources autonomously.
 
-- ***Policy Management*** Holistic and “landing zone” specific policies must be identified, described, built and deployed onto the target Azure platform to ensure corporate, regulatory and line of business controls are in place. Ultimately, policies should be used to guarantee the compliance of applications and underlying resources without any abstraction provisioning/administration capability.
+- ***Policy Management*** Holistic and “landing zone” specific policies must be identified, described, built and deployed onto the target Azure platform to ensure corporate, regulatory and line-of-business controls are in place. Ultimately, policies should be used to guarantee the compliance of applications and underlying resources without any abstraction provisioning/administration capability.
 
-- ***Management and Monitoring***: Platform level holistic (horizontal) resource monitoring and alerting must be designed, deployed, and integrated. Operational tasks such as patching and backup must also be defined and streamlined. Security operations, monitoring, and logging must be designed and integrated with both resources on Azure as well as existing on-premises systems. All Subscription activity logs , which capture control plane operations across resources, should be streamed into Log Analytics to make them available for query and analysis, subject to RBAC permissions.
+- ***Management and Monitoring***: Platform level holistic (horizontal) resource monitoring and alerting must be designed, deployed, and integrated. Operational tasks such as patching and backup must also be defined and streamlined. Security operations, monitoring, and logging must be designed and integrated with both resources on Azure as well as existing on-premises systems. All Subscription activity logs that capture control plane operations across resources should be streamed into Log Analytics to make them available for query and analysis, subject to RBAC permissions.
 
 - ***Network Topology and Connectivity***: The end-to-end network topology must be built and deployed across Azure regions and on-premises customer environments to ensure North-South and East-West connectivity between platform deployments. Network security must also be designed with the required services and resources identified, deployed, and configured such as Firewalls and NVAs to ensure security requirements are fully met.
 
-- ***Shared Services Infrastructure***: Centrally controlled but de-centrally deployed services such as Domain Controllers must be designed, configured, and built to make requisite common services and resources available for application teams to consume and integrate with. It is important to note that not all “traditional” on premise shared services should be provided in the cloud. For example, file shares and HSMs should be considered as application level resources using native-Azure services.
+- ***Shared Services Infrastructure***: Centrally controlled but de-centrally deployed services such as Domain Controllers must be designed, configured, and built to make requisite common services and resources available for application teams to consume and integrate with. It is important to note that not all “traditional” on-premises shared services should be provided in the cloud. For example, file shares and HSMs should be considered as application level resources using native-Azure services.
 
 - ***DevOps***: An end-to-end DevOps experience with robust SDLC practices must be designed, built and deployed to ensure the safe, repeatable and consistent delivery of Infrastructure as Code artifacts. Such artifacts are to be developed, tested and deployed using dedicated integration, release and deployment pipelines with strong source control and traceability.
 
 In addition to the key aspects denoted above, the design, configuration, deployment, and integration of each “landing zone” should meet critical customer requirements relating to:
 
 - Business continuity and disaster recovery, both at the platform and application level.
-- Service management such as incident response and support.
+- Service Management such as incident response and support.
 - Service catalog such as CMDB.
 
 ## High-level architecture
