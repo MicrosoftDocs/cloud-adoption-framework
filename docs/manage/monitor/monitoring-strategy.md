@@ -155,7 +155,11 @@ As a monitoring expert or systems administrator, you’ve discovered that cloud 
 
 ### Consider scale
 
-Consider scale in your strategy and who will be defining and standardizing “monitoring as code.” Your organization should plan to build standardized solutions using a combination of tools such as Azure Resource Manager templates, Azure Policy, establish a source control for the scripts, code, and documentation in support of the agile solution methods and tooling you’ll want.
+Consider scale in your strategy and who will be defining and standardizing *monitoring as code*. Your organization should plan to build standardized solutions using a combination of tools such as:
+
+* Azure Resource Manager templates
+* Azure Policy
+* GitHub to establish a source control for the scripts, code, and documentation
 
 ### Consider privacy and security
 
