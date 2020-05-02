@@ -95,7 +95,7 @@ Define your current and future architecture of systems management that includes 
 
 * Identify monitoring gaps across the three dimensions - depth, breadth and across the health model.
 
-* Model the financial aspects, costs and support factors that support a cost-benefit analysis.
+* Model the financial aspects, costs, and support factors that support a cost-benefit analysis.
 
 * Guide the hybrid decisions that you need to make.
 
@@ -113,9 +113,9 @@ Some key questions include:
 
 * Which services will be globally available and as such, can be globally monitored at the service edge?
 
-* What about Express Route and monitoring solutions that tells us when it’s us or the cloud provider?
+* What about the network points between your network infrastructure, and network connectivity to service and application endpoints that tells us when it’s us or the cloud provider.
 
-* What are the boundaries of security operations vs. health and performance:  how can we provide summaries of health and status to security operations as well as the converse of this back to service owners?
+* What are the boundaries of security operations vs. health and performance: how can we provide summaries of health and status to security operations as well as the converse of this back to service owners?
 
 To assemble this architecture, here are several considerations:
 
