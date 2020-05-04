@@ -13,17 +13,17 @@ ms.custom: csu
 
 # Contoso's reference implementation
 
-Contoso's CAF enterprise-scale landing zone reference implementation is rooted in the principle that **Everything in Azure is a resource** Contoso is leveraging native **Azure Resource Manager (ARM)** to describe and manage their resources as part of their target state architecture at scale.
+Contoso's CAF enterprise-scale landing zone reference implementation is rooted in the principle that **everything in Azure is a resource.** Contoso is optimizing native **Azure Resource Manager (ARM)** to describe and manage their resources with their target state architecture at scale.
 
 Contoso will enable security, logging, networking, and any other plumbing needed for landing zones (e.g., subscriptions) autonomously through policy enforcement. Contoso will bootstrap the Azure environment with ARM templates to create the necessary structure for management and networking to declare a desired goal state. Contoso will apply the principal of "Policy Driven Governance" to deploy all necessary resources for a Landing Zone using policy. For example, deploying a Key Vault to store platform level secrets in the management subscription; instead of scripting the template deployment to deploy Key Vault, the CAF enterprise-scale landing zone-based reference implementation will have a policy definition that deploys the Key Vault in a prescriptive manner, using a policy assignment at the management subscription scope. The core benefits of a policy driven approach are manyfold but the most significant include:
 
 * Platform can provide an orchestration capability to bring target resources (in this case a subscription) to a desired goal state.
-* Continuous conformance to ensure all platform level resources are compliant. Because the platform is aware of the goal state, the platform can assist by monitoring and remediating the resources throughout the life cycle of the resource.
+* Continuous conformance to ensure all platform level resources are compliant. Because the platform is aware of the goal state, it can assist by monitoring and remediating the resources throughout the life cycle.
 * Platform enables autonomy regardless of the customer's scale point.
 
 ### File -> New -> Region
 
-Contoso want to leverage all Azure region and deploy the workload closer to the user and will be adding new Azure regions as business demand arises. As a part of CAF enterprise-scale landing zone design principle of policy-driven governance, Contoso will assign policies in their environment with the number of regions they would like to use, and Policies will ensure their Azure Environment is set up correctly.
+Contoso want to optimize all Azure regions and deploy the workload closer to the user; it will add new Azure regions as business demand arises. As a part of policy-driven governance from the CAF enterprise-scale landing zone design principle, Contoso will assign policies in their environment to the number of regions they would like to use. These policies will ensure that their Azure Environment is set up correctly.
 
 #### Management
 
