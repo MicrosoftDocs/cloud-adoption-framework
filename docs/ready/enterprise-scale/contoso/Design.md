@@ -166,7 +166,7 @@ Tenant Root
             ├───Resources
 ```
 
-Contoso has found it advantageous to organize these resources in same hierarchical layout inside Git Repo. Over time, management groups and subscriptions move and/or are renamed; organizing resources in a hierarchical manner allows tracking lineage over time. It will allow mapping the path of the resources based on the resourceID in predictable manner inside Git and reduce missconfiguration.
+Contoso has found it advantageous to organize these resources in same hierarchical layout inside Git Repo. Over time, management groups and subscriptions move and/or are renamed; organizing resources in a hierarchical manner allows tracking lineage over time. It will allow mapping the path of the resources based on the resourceID in predictable manner inside Git and reduce misconfiguration.
 
 
 
@@ -223,9 +223,9 @@ This will build the relationship association between management group and subscr
 
 **Invoke-AzOpsGitPush**
 
-Contoso wants to ensure that all platform changes are peer reviewed and approved before deploying in to production environment. Contoso has decided to implement workflow (a.k.a. deployment pipeline) and use GitHub Action for that. Contoso has named this workflow as "azops-push" referring the direction of the chang; e.g., Git to Azure.  All platform changes will come in the form of pull request and peer reviewed. Once Pull Request review is completed satisfactorily, Platform Team will attempt the merge of the pull request in to master branch and trigger deployment action by calling Invoke-AzOpsGitPush function.
+Contoso wants to ensure that all platform changes are peer reviewed and approved before deploying in to production environment. Contoso has decided to implement workflow (also known as "deployment" pipeline) and use GitHub Action for that. Contoso has named this workflow as "azops-push" referring the direction of the change; e.g., Git to Azure.  All platform changes will come in the form of pull request and peer reviewed. Once Pull Request review is completed satisfactorily, Platform Team will attempt the merge of the pull request in to master branch and trigger deployment action by calling Invoke-AzOpsGitPush function.
 
-This function will be entry point of GitHub Actions when pull request is approved but before it is merged in master branch. Master branch represents the truth from IaC perspective. This quality gate will ensure master branch remains healthy and only contain artifact that are successfully deployed in Azure. It will determine the files changed in pull request by comparing feature branch with current master branch. Following actions should be executed inside Invoke-AzOpsGitPush:
+This function will be entry point of GitHub Actions when pull request is approved but before it is merged in master branch. Master branch represents the truth from IaC perspective. This quality gate will ensure that the master branch remains healthy and only contains artifacts successfully deployed in Azure. It will determine the files changed in pull requests by comparing feature branch with the current master branch. The following actions should be executed inside Invoke-AzOpsGitPush:
 
 * Validate current Azure configuration is the same as what is stored in Git by running Initialize-AzOpsRepository.
 * Git will determine if working directory is dirty and exit the deployment task to alert user and run Initialize-AzOpsRepository interactively. All deployments should be halted at this stage as platform is in non-deterministic state from IaC point of view.
