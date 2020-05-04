@@ -13,24 +13,24 @@ ms.custom: csu
 
 # Scope
 
-The Contoso Corporation is a multi-national business with headquarters in London, UK. Contoso Senior leadership have mandated a "Cloud-First" approach, with an overarching strategy to reduce and gradually divest the on-premises datacentre footprint. Contoso has chosen Azure as their preferred public cloud provider. They have a large overall IT estate and are concerned about the velocity of workload transformation/migration and how they can establish landing zones for application teams to migrate their applications.
+Contoso Corporation is a multi-national business with headquarters in London, U.K. Contoso senior leadership has mandated a "cloud-first" approach, with an overarching strategy to reduce and gradually divest the on-premises data center footprint. Contoso has chosen Azure as their preferred public cloud provider. They have a large overall IT estate and are concerned about the velocity of workload transformation/migration and how they can establish landing zones for application teams to migrate their applications.
 
-Contoso have come across the CAF enterprise-scale landing zone architecture which provides a forward looking Azure-native design approach. The Contoso IT leadership team has committed to this as they believe it will allow applications (legacy or modern) to seamlessly move at their own pace while also providing secure and streamlined operations, management, and governance across the entire Contoso platform on Azure.
+Contoso has come across the CAF enterprise-scale landing zone architecture, which provides a forward-looking and Azure-native design approach. The Contoso IT leadership team has committed to this, as they believe it will allow applications (legacy or modern) to seamlessly move at their own pace while also providing secure and streamlined operations, management, and governance across the entire Contoso platform on Azure.
 
-## Contoso Architecture
+## Contoso architecture
 
-### Enterprise Enrollment and Azure AD Tenants
+### Enterprise enrollment and Azure AD tenants
 
-Contoso have opted for simpler EA design with a single Department and multiple EA Accounts. Each EA account will have an associated service principal account by configuring IAM permission as part of the (automated) subscription provisioning process.
+Contoso has opted for simpler EA design with a single Department and multiple EA Accounts. Each EA account will have an associated service principal account by configuring IAM permission as part of the (automated) subscription provisioning process.
 
-Contoso has three separate Azure AD tenants for Dev, Test, and Prod and Azure AD Connect is already in place for the Production Azure AD tenant. The dev and test tenants are used for Office 365 validation, and there is no requirement to separate Identities at the Azure AD tenant level across Dev, Test and Production environments in Azure, so Contoso will only leverage the Production Azure AD tenant for Azure access.  
-Additional controls will be in place for Networking (isolation) and Identity (segregation of duties) to guarantee separation between Dev, Test and Production workloads. From Networking and Identity perspective, all subscriptions are considered as production including all sandbox subscriptions.
+Contoso has three separate Azure AD tenants for Dev, Test, and Prod and Azure AD Connect is already in place for the Production Azure AD tenant. The dev and test tenants are used for Office 365 validation, and there is no requirement to separate Identities at the Azure AD tenant level across dev, test, and production environments in Azure, so Contoso will only leverage the Production Azure AD tenant for Azure access.  
+Additional controls will be in place for networking (isolation) and identity (segregation of duties) to guarantee separation between dev, test, and production workloads. From a networking and identity perspective, all subscriptions include sandbox subscriptions and are considered as production.
 
-### Identity and Access Management
+### Identity and access management
 
-Contoso wants to ensure zero standing access for production environments across all Azure control plane access and will use Azure AD Privileged Identity Management (PIM) to ensure just-in-time control plane access to Azure resources. Contoso will create custom role definitions (Platform Owner, NetOps, SecOps, Landing Zone Owner, AppOps/DevOps) in accordance with CAF enterprise-scale landing zone roles which will be supported by the operating model for the Azure platform.
+Contoso wants to ensure zero standing access for production environments across all Azure control plane access and will use Azure AD Privileged Identity Management (PIM) to ensure just-in-time control plane access to Azure resources. Contoso will create custom role definitions (Platform Owner, NetOps, SecOps, Landing Zone Owner, AppOps/DevOps) in accordance with CAF enterprise-scale landing zone roles to be supported by the operating model for the Azure platform.
 
-The identity team will create an Azure AD only group for each of the roles above and make Landing Zone Owner/Requestor an owner of the group before creating entitlements for those groups in Azure AD PIM. Those who require to access to Azure resources will be able to search for the Azure AD group by name and leverage the Azure AD Self-service group management capability to join a group. Group Owners can determine whether to approve or deny a user request based on an eligibility criteria.
+The identity team will create an Azure-AD-only group for each of the roles above and make landing zone Owner/Requestor an owner of the group before creating entitlements for those groups in Azure AD PIM. Those who require to access to Azure resources will be able to search for the Azure AD group by name and optimize the Azure AD self-service group management capability to join a group. Group owners can determine whether to approve or deny a user request based on eligibility criteria.
 
 | Azure AD Group Name                    | Scope                    | PIM Role           |
 |-----------------------------------|--------------------------|--------------------|
@@ -44,19 +44,19 @@ The identity team will create an Azure AD only group for each of the roles above
 
 Azure AD will be the primary IDP where applications support modern federation protocols such as OIDC, SAML, or WS-Fed. Regional domain controllers will be deployed in the identity subscription to support scenarios where legacy authentication (LDAP/Kerberos) is required.
 
-### Management Group and Subscription Organization
+### Management group and subscription organization
 
 Contoso is designing their management group hierarchy and subscription organization to optimize for scale, enabling autonomy for the platform and application teams to evolve alongside business requirements. The subscription naming convention will be "TLA-of-the-business-Unit" followed by "Workload-Type", "Region", "Workload-Name" and "Unique-Number", for example FIN-Prod-NEU-Payroll-01, FIN-Prod-WEU-Payroll-01.
 
-Contoso has decided to use Geo-affinitized subscriptions which will greatly simplify networking and connectivity. Workloads that do require multiple regions, will have at least one subscription for each region including for business continuity and disaster recovery purposes.
+Contoso has decided to use geo-affinitized subscriptions to simplify networking and connectivity. Workloads that do require multiple regions will have at least one subscription for each region, including ones for business continuity and disaster recovery purposes.
 
-Contoso has decided to use Azure Resource Tags for billing and chargeback purposes instead of blending a cost management structure within the Management Group and Subscription hierarchy. This will provide horizontal capabilities to query cost across multiple subscriptions. Tags required for billing (Department and Cost Center) will be enforced by policy at landing zone management group scope.
+Contoso has decided to use Azure resource tags for billing and chargeback purposes instead of blending a cost-management structure within the management group and subscription hierarchy. This will provide horizontal capabilities to query cost across multiple subscriptions. Tags required for billing (department and cost center) will be enforced by the policy within the landing zone management group scope.
 
 ![Contoso MG structure](./media/contoso&#32;mg&#32;structure.png)
 
 #### Management groups
 
-**Tenant Root Group**
+**Tenant root group**
 
 The default root management group will not be used directly, allowing for greater flexibility in the future to incorporate an equivalent test environment for their end to end Azure architecture.
 
@@ -64,17 +64,17 @@ The default root management group will not be used directly, allowing for greate
 
 This is the top-level management group implemented within Contoso's Azure tenant and will serve as the container for all custom role definitions, custom policy definitions, and Contoso global policy assignments, but will have minimal direct role assignments. For policy assignments at this scope, the target state is to ensure security and autonomy for the platform as additional sub scopes are created, such as child management groups and subscriptions.
 
-**Landing Zones**
+**Landing zones**
 
 All business units will create their subscriptions within child management groups of the Landing Zones management groups. This allows for a generic yet more granular approach to policy assignments, to more easily separate active landing zones from sandbox subscriptions and decommissioned subscriptions.
 
-**Corp, Online, SAP**
+**Corporation, online, and SAP**
 
-Contoso have identified 3 common archetypes they will migrate/deploy to Azure, and have developed the requisite policies to ensure appropriate guard-rails are in place for each landing zone that is created as these management groups.
+Contoso has identified three common archetypes they will migrate/deploy to Azure and have developed the requisite policies to ensure appropriate guardrails are in place for each landing zone that is created as these management groups.
 
-Azure policy will require tags for each subscription that will be created, to identify ownership, billing and chargeback.
+Azure policy will require creating tags to identify ownership, billing, and chargeback within each subscription.
 
-* Corp landing zones will include all VNets that do not expose public endpoints and that require connectivity to on-premises, as well as connectivity to other landing zones. 
+* Corp landing zones will include all VNets that do not expose public endpoints and that require connectivity to on-premises as well as connectivity to other landing zones. 
 * Online landing zones include all VNets that have internet-facing applications via an Azure Application Gateway (v2). 
 * SAP represents a workload that merits separation given the implied specialization.
 
@@ -84,7 +84,7 @@ Application teams and individual users within Contoso wanting to test and explor
 
 **Decommission**
 
-All cancelled subscriptions will be moved under this management group by Azure Policy, and will be deleted after 60 days.
+All canceled subscriptions will be moved under this management group by Azure Policy, and will be deleted after 60 days.
 
 #### Platform subscriptions
 
@@ -108,14 +108,14 @@ The following policies related to Management Group hierarchy and Subscription or
 
 | Policy                                            | Intent                                                        | Assignment scope              | Result                                                                                          |
 |---------------------------------------------------|---------------------------------------------------------------|-------------------------------|-------------------------------------------------------------------------------------------------|
-| Enforce subscription naming convention            | Ensure all subscriptions conforms to the naming convention    | Contoso management group      | All subscriptions have valid naming convention                                                  |
+| Enforce subscription naming convention            | Ensure all subscriptions conform to the naming convention    | Contoso management group      | All subscriptions have valid naming convention                                                  |
 | Enforce subscription budget                       | Ensure all subscriptions have a budget associated             | Contoso management group      | No subscription will allow unlimited spending                                                   |
-| Enforce subscription tags                         | Ensure all subscriptions have the required tags               | Contoso management group      | All subscriptions are tagged properly to identify business unit owner, intent, and cost centre. |
-| Move cancelled subscriptions                      | Ensure cancelled subscriptions are moved from Landing Zone    | Landing Zone management group | Any subscription that get cancelled, will be moved to the Decommission management group         |
+| Enforce subscription tags                         | Ensure all subscriptions have the required tags               | Contoso management group      | All subscriptions are tagged properly to identify business unit owner, intent, and cost center. |
+| Move canceled subscriptions                      | Ensure canceled subscriptions are moved from Landing Zone    | Landing Zone management group | Any subscription that gets canceled will be moved to the Decommission Management group         |
 | Allowed regions for resource groups and resources | Ensure all resources are created in the designated regions    | Contoso management group      | All resources are compliant per their location                                                  |
 | Assign region policy per subscription             | Ensure subscriptions get policy with correct regions assigned | Contoso management group      | Subscriptions will support regions per their naming convention                                  |
 
-## Network Topology and Connectivity
+## Network topology and connectivity
 
 Contoso has a presence across Europe and North America. Contoso's headquarters are located in London, UK. Contoso also has regional HQ offices in Amsterdam and Chicago. Contoso has a large number of branch offices (around 500), which are located across the US and Europe, with each branch office containing a CPE that is connected to the local regional HQ via S2S VPN.
 
@@ -129,7 +129,7 @@ Contoso has decided to adopt CAF enterprise-scale landing zone recommendations f
 
 4. Allow full subscription democratization by giving Landing Zone Owners' rights to create subnets within their landing zones to suit their application needs, while ensuring the platform maintains compliance and security as defined by the SecOps team.
 
-Contoso's network design based on CAF enterprise-scale landing zone design principles is depicted in the picture shown below:
+Contoso's network design is based on CAF enterprise-scale landing zone design principles and is pictured below:
 
 ![Network topology](./media/image5.png)
 
@@ -143,9 +143,9 @@ With this network design, Contoso enables the following scenarios:
 * Regional HQs and branch offices connectivity to Azure VNets via Azure Virtual WAN.
 * Internet-outbound connectivity from Azure VNets is secured using Azure Firewall within the Virtual WAN VHub.
 
-Contoso decided to deploy a Azure Virtual WAN (Microsoft managed) based network topology in order to enable global inter-connectivity between on-premises and Azure as well as support a large number of branches that need to be connected to Azure. The following diagram depicts the required Azure resources which must be deployed inside the "Connectivity" subscription to support Contoso's global Azure network:
+Contoso decided to deploy a Microsoft-managed, Azure Virtual WAN-based network topology to enable global interconnectivity between on-premises and Azure and to support a large number of branches that need to connect to Azure. The following diagram depicts the required Azure resources which must be deployed inside the "Connectivity" subscription to support Contoso's global Azure network:
 
-![Connectivity Subscriptio](./media/image7.png)
+![Connectivity subscription](./media/image7.png)
 
 In order to simplify the routing configuration across the entire Azure networking platform, Contoso has assigned the following IP address spaces for Azure Virtual WAN VHubs and Virtual Networks:
 
@@ -153,7 +153,7 @@ In order to simplify the routing configuration across the entire Azure networkin
 * West Europe: 10.2.0.0/16
 * North Central US: 10.3.0.0/16
 
-Since Contoso must support those three Azure regions (North Europe,West Europe and North Central US), Contoso has documented the resources and parameters that are required so that the platform can be deployed via Azure Policy in alignment with CAF enterprise-scale landing zone guidance. More specifically, all these resources will be deployed within the "Connectivity" subscription and enforced by Deploy-If-Not-Exist Policies.
+Since Contoso must support these three Azure regions--North Europe, West Europe, and North Central US--it has documented the resources and parameters required for the platform to be deployed in alignment with the Azure policy and CAF enterprise-scale landing zone guidance. All these resources will be deployed within the "Connectivity" subscription and enforced by Deploy-If-Not-Exist Policies.
 
 North Europe:
 
@@ -383,13 +383,13 @@ The following policies related to networking will be assigned in the Contoso pro
 </tbody>
 </table>
 
-## Management and Monitoring
+## Management and monitoring
 
 Contoso will employ a monitoring strategy where the central team will be responsible for the all-up platform logging, security and networking, and will use Azure native services such as Log Analytics, Monitor, Security Center, Sentinel, and Network Watcher. All core management infrastructure will exist inside the dedicated Management subscription and will be deployed and governed by Azure Policy; the requisite configuration for workloads and subscriptions will be driven through Azure policy as new subscriptions and resources are being created. The following diagram depicts the required Azure resources that must be deployed within the "Management" subscription to support Contoso's platform management and monitoring:
 
-![Monitoring Subsciption](.//media/image9.png)
+![Monitoring subsciption](.//media/image9.png)
 
-Since Contoso have selected West Europe as their primary Azure region, they will use a single Log Analytics workspace within West Europe for centralized platform management, which will also act as the hub for all security and networking data across their Azure platform. With this design and implementation, they will achieve:
+Since Contoso has selected West Europe as their primary Azure region, they will use a single Log Analytics workspace within West Europe for centralized platform management, which will also be the hub for all security and networking data across their Azure platform. With this design and implementation, they will achieve:
 
 * A single, central, and horizontal view of the platform across security, auditing, and networking, all enforced by Azure Policy and "deployIfNotExists".
   * Consume security data centrally from all subscriptions.
@@ -400,7 +400,7 @@ Since Contoso have selected West Europe as their primary Azure region, they will
 * Centralized alerting from a platform perspective.
 * Centralized, interactive Azure dashboards through the lenses of networking, security, and overall platform health.
 
-Contoso have documented the resources and parameters that it requires so that the platform can be managed and monitored via Policy as per CAF enterprise-scale landing zone guidance. All these resources will be deployed in the "Management" subscription.
+Contoso has documented the resources and parameters that it requires so that the platform can be managed and monitored via Policy as per CAF enterprise-scale landing zone guidance. All these resources will be deployed in the "Management" subscription.
 
 
 <table>
@@ -485,7 +485,7 @@ The following policies related to management and monitoring will be assigned in 
 <td>Enforce Activity Logs</td>
 <td>Enable and configure activity logs on every subscription</td>
 <td>Contoso management group</td>
-<td>Ensures Activity Log from all subscriptions are collected centrally</td>
+<td>Ensures activity logs from all subscriptions are collected centrally</td>
 </tr>
 <tr class="even">
 <td>Enforce VM logging</td>
@@ -507,7 +507,7 @@ The following policies related to management and monitoring will be assigned in 
 </tr>
 <tr class="odd">
 <td>Deny Automation account child resources</td>
-<td>Ensure automation account can only be used for central &amp; app centric VM patching</td>
+<td>Ensure automation account can only be used for central and app-centric VM patching</td>
 <td>Management subscription</td>
 <td>No one can use the automation account for any other purpose than VM patching</td>
 </tr>
@@ -526,16 +526,16 @@ The following policies related to management and monitoring will be assigned in 
 </ul></td>
 <td>Ensure supported resources will ingest telemetry to Log Analytics</td>
 <td>Landing Zone management group</td>
-<td>All platform related telemetry is routed to central Log Analytics workspace</td>
+<td>All platform-related telemetry is routed to central Log Analytics workspace</td>
 </tr>
 </tbody>
 </table>
 
-## Business Continuity and Disaster Recovery
+## Business continuity and disaster recovery
 
 Core Contoso CAF enterprise-scale landing zone platform components across all regions consider an active-active design i.e. Identity, Management and Networking are considered as highly available in all regions and can function independent of each other.
 
-Contoso has defined the following BCDR guidelines when applications are moved to Azure, to allow application owners to ensure their applications (either cloud native apps or traditional IaaS workloads) are architected and deployed to meet HA an DR requirements:
+Contoso has defined the following BCDR guidelines when applications are moved to Azure, to allow application owners to ensure their applications (either cloud native apps or traditional IaaS workloads) are architected and deployed to meet HA and DR requirements:
 
 ### High availability
 
@@ -549,7 +549,7 @@ Contoso has defined the following BCDR guidelines when applications are moved to
 
 * Application architectures should use native application replication technologies such as SQL AlwaysOn, for stateful virtual machines in order to replicate data from one Azure region (North Europe) region to the paired Azure region (West Europe).
 * Applications should use Azure Site Recovery to replicate stateful virtual machines that do not support application-level replication.
-* Stateless virtual machine workloads can be quickly re-created (or pre-provisioned) in the paired Azure region (West Europe). Alternatively, Azure Site Recovery could also be used.
+* Stateless virtual machine workloads can be quickly recreated (or pre-provisioned) in the paired Azure region (West Europe). Alternatively, Azure Site Recovery could also be used.
 * For externally facing applications that must always be available, an active/active or active/passive deployment pattern across the North Europe and West Europe regions should be used, utilizing either Azure Front Door or Azure Traffic Manager to ensure applications are accessible at all times even if one of the Azure regions is not available.
 * Applications should be transformed and modernized where possible to use Azure PaaS services that provide native replication techniques across regions, such as Cosmos DB, Azure SQL DB, and Azure Key Vault.
 
@@ -557,21 +557,21 @@ Contoso has defined the following BCDR guidelines when applications are moved to
 
 Azure Backup is the native backup solution built into the platform and is recommended to use for all supported services. In cases where it is not supported, other options need to be considered by the application team in charge of the respective landing zone to ensure data consistency and business continuity.  
 
-The platform team will provide a HA/DR baseline for VM backup policies across Azure, which will be deployed to each landing zone through policy. This will ensure that each resource group within a landing zone containing virtual machines has a Backup Vault and that the backup setting is enabled. Additionally, the platform team will collect backup diagnostic data in the central Log Analytics instance, providing a horizontal view over the entire backup estate.
+The platform team will provide a HA/DR baseline for VM backup policies across Azure, which will be deployed to each landing zone through policy. This will ensure that each resource group within a landing zone containing virtual machines has a backup vault and that the backup setting is enabled. Additionally, the platform team will collect backup diagnostic data in the central Log Analytics instance, providing a horizontal view over the entire backup estate.
 
 | Policy                                                                   | Intent                                                          | Assignment scope                 | Result                                                                                                          |
 | ------------------------------------------------------------------------ | --------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Deploy Backup Vault and enforce backup setting for Windows and Linux VMs | Deploy backup vault and enable backup                           | 'Landing Zones' management group | Every Resource Group with VMs in a landing zone subscription has a backup vault to which all VMs are backed up. |
-| Add diagnostic setting to backup vault                                   | Link Backup Vault diagnostics to central Log Analytics instance | 'Landing Zones' management group | Platform team has horizontal view over all VM backup                                                            |
+| Deploy the backup vault and enforce backup setting for Windows and Linux VMs | Deploy the ackup vault and enable backup                           | 'Landing Zones' management group | Every Resource Group with VMs in a landing zone subscription has a backup vault to which all VMs are backed up. |
+| Add diagnostic setting to the backup vault                                   | Link backup vault diagnostics to central Log Analytics instance | 'Landing Zones' management group | Platform team has horizontal view over all VM backup                                                            |
 
 
 Contoso also recognizes the need to add backup capabilities to other resource types other than Virtual Machines. However, given the highly specific nature of these backups and the different approaches an application team can take to backup, Contoso does not enforce these settings centrally.
 
-## Security, Governance and Compliance
+## Security, governance, and compliance
 
 For Contoso to understand what controls must be implemented, and where these controls must be layered in their Azure architecture, they have developed and established a control framework to map their requirements to Azure platform capabilities. The framework principals are data protection, network protection, key management, vulnerability, and least privilege to ensure any whitelisted Azure service can conform to Contoso's enterprise security requirements, which are implemented using Azure Policy, Azure AD PIM, Azure RBAC, Azure Security Center, Azure Sentinel, and Azure Monitor.
 
-Through policy driven management, Contoso's policy implementation will ensure new subscriptions and resources will immediately be brought to their target compliant state. The primary policy effects used by Contoso to achieve this is "deployIfNotExists", "deny", "append", and "modify".
+Through policy driven management, Contoso's policy implementation will ensure new subscriptions and resources will immediately be brought to their target compliance state. The primary policy effects used by Contoso to achieve this is "deployIfNotExists", "deny", "append", and "modify".
 
 * For "deployIfNotExist" policies, Contoso ensures IaaS and PaaS resources, as well as new subscriptions are compliant during creation regardless of *how* it is being created.
 
@@ -586,17 +586,16 @@ Contoso's existing Azure subscriptions will initially start with "audit" and "au
 From a platform architecture perspective, the principals of Contoso policy implementation will ensure that:
 
 * Platform is autonomous  
-When a new subscription is created, Azure Policy will automate and ensure requisite plumbing is in place, such as security, networking, logging and workload specific policies mapped to Contoso's
-controls.
+When a new subscription is created, Azure Policy will automate and ensure requisite plumbing is in place, such as security, networking, logging and workload-specific policies mapped to Contoso's controls.
 
 * Security is non-negotiable  
-Any workload that is deployed into Contoso's Azure environment is monitored from a security perspective, and enforcement is in place to ensure data protection, network protection, encryption at-rest, encryption in-transit, key management. This will reduce any vulnerability scenarios regardless of whether resources are subject to testing in a sandbox subscription, connected to the corporate network or the internet, or any other landing zone.
+Any workload deployed onto Contoso's Azure environment is monitored from a security perspective, and enforcement is in place to ensure data protection, network protection, encryption at-rest, encryption in-transit, and key management. This will reduce any vulnerability scenarios regardless of whether resources are subject to testing in a sandbox subscription, connected to the corporate network or the internet, or any other landing zone.
 Contoso will use Compliance view in Azure Policy together with Azure Sentinel workbooks to review and monitor overall compliance and security posture for the tenant.
 
 * Application teams are autonomous  
-Contoso's Azure platform doesn't dictate how application teams should use Azure, leaving them free to use any client to interact with, deploy, and manage their applications in their subscriptions, where Azure Policy will guarantee that their applications are deployed in a compliant way, by enforcing security, logging, backup, connectivity, and appropriate access.
+Contoso's Azure platform doesn't dictate how application teams should use Azure, leaving them free to use any client to interact with, deploy, and manage their applications in their subscriptions, where Azure Policy will guarantee that their applications are deployed in a compliant way by enforcing security, logging, backup, connectivity, and appropriate access.
 
-All of Contoso's policyDefinitions and policyAssignments are treated as source code, and will be developed, reviewed, and deployed from their Git repository.
+All of Contoso's policy definitions and policy assignments are treated as source code and will be developed, reviewed, and deployed from their Git repository.
 
 The following policies related to security and governance will be assigned in the Contoso production tenant:
 
@@ -663,7 +662,7 @@ The following policies related to security and governance will be assigned in th
 <td>Deny resources</td>
 <td>Explicitly deny resources from being created</td>
 <td>Landing Zone management group</td>
-<td>Azure services that are not whitelisted can not be deployed into a landing zone</td>
+<td>Azure services that are not whitelisted can't be deployed into a landing zone</td>
 </tr>
 <tr class="odd">
 <td>Enforce Key Vault recovery</td>
@@ -694,11 +693,11 @@ The following policies related to security and governance will be assigned in th
 
 From an identity and access perspective, Contoso will develop their own custom RBAC roles to ensure the appropriate permissions (actions/notActions) for control plane and data plane access are available for the right persona at the right scope in the Azure hierarchy. This will of course be subject to just-in-time access with multi-factor authentication to all high-privileged roles. Contoso will use Azure AD reporting capabilities to generate access control audit reports.
 
-## Platform Automation and DevOps
+## Platform automation and DevOps
 
-### Contoso - Roles & Responsibility
+### Contoso - roles and responsibilities
 
-Contoso have acknowledged that their existing on-premises operating model requires change to ensure they maximise the benefits of the cloud. Contoso have decided to create a Platform Operations team who will oversee execution of the CAF enterprise-scale landing zone architecture and will be accountable for the Contoso Azure Platform. This Platform team will have representations from the following IT functions:
+Contoso has acknowledged that their existing on-premises operating model requires change to ensure they maximize the benefits of the cloud. They've decided to create a Platform Operations team to oversee execution of CAF enterprise-scale landing zone architecture and be accountable for the company's Azure Platform. This Platform team will have representations from the following IT functions:
 
 <table>
 <thead>
@@ -712,25 +711,25 @@ Contoso have acknowledged that their existing on-premises operating model requir
 
 <tr class="even">
 <td>Systems Ops</td>
-<td><p>Make AppOps and DevOps teams effective through a federated delegation model that is centrally governed e.g. monitoring, patching and backups and take corrective action centrally when necessary</p>
-<p>Manage platform wide monitoring and alerts, alignment with Azure scheduled maintenance events</p>
+<td><p>Make AppOps and DevOps teams effectively through a federated delegation model that is governed centrally; e.g., monitoring, patching, and backups and taking corrective, centralized action when necessary</p>
+<p>Manage platform-wide monitoring and alerts, align with Azure, and schedule maintenance events</p>
 <p>Author and assign Azure Policy to setup and manage VM/OS standards</p></td>
 </tr>
 
 <tr class="odd">
 <td>Security Ops</td>
 <td><p>Define an Azure Platform baseline to ensure compliance of security requirements and controls are met</p>
-<p>Create Policy Compliance and Security Dashboards for organizational and resource centric views</p>
-<p>Define break glass/emergency process to grant and revoke access</p>
-<p>Management of platform keys and secrets</p>
-<p>Security Policy remediation and compliance initiatives</p></td>
+<p>Create policy compliance and security dashboards for organizational and resource-centric views</p>
+<p>Define a break glass/emergency process to grant and revoke access</p>
+<p>Manage platform keys and secrets</p>
+<p>Security policy remediation and compliance initiatives</p></td>
 </tr>
 <tr class="even">
 <td>Automation</td>
 <td><p>Develop and maintain DevOps pipeline and standards</p>
 <p>Develop and maintain business processes and integration points (such as CMDB etc.)</p>
 <p>Support the team's use of the DevOps pipeline and standards</p>
-<p>Support the team to develop SME specific artefacts</p></td>
+<p>Support the team to develop SME specific artifacts</p></td>
 </tr>
 <tr class="odd">
 <td>Network Ops</td>
@@ -747,7 +746,7 @@ Contoso have acknowledged that their existing on-premises operating model requir
 <p>Access</p>
 <p>Management</p></td>
 <td><p>Establish organizational relationship between Azure AD and Azure Subscriptions in the Enterprise Portal</p>
-<p>Mange IAM entitlements and Role definitions for Management Groups and Subscriptions</p>
+<p>Manage IAM entitlements and Role definitions for Management Groups and Subscriptions</p>
 <p>Manage Azure AD Applications, Service Principles, and Azure AD Application Proxies; registration of Service Principles and Applications with configured delegation</p>
 <p>Windows Server Active Directory administration</p>
 <p>Define and manage JML for AD and Azure AD users and groups for Azure IAM</p>
@@ -755,41 +754,41 @@ Contoso have acknowledged that their existing on-premises operating model requir
 </tr>
 <tr class="odd">
 <td>Management</td>
-<td><p>Manage Management Groups and Subscription lifecycles</p>
+<td><p>Manage management groups and subscription lifecycles</p>
 <p>Resource provider registration</p>
-<p>Manage Azure Policy Definitions and Assignments at Management group level and Subscription levels</p>
+<p>Manage Azure policy definitions and assignments at management-group level and subscription levels</p>
 <p>Create Dashboard and Management views for Application centric and Platform Centric management, monitoring, and policy compliance</p>
 <p>Enable auxiliary functions on the Azure platform, such as Cost Management and Azure Advisor</p></td>
 </tr>
 <tr class="even">
 <td>Enablement</td>
 <td><p>Support the onboarding of application teams to the platform</p>
-<p>Develop reusable artefacts to accelerate application team onboarding such as templates</p>
+<p>Develop reusable artifacts to accelerate application team onboarding such as templates</p>
 <p>Collect, compile, and manage feedback to improve the platform</p></td>
 </tr>
 </tbody>
 </table>
 
-### Contoso Platform DevOps
+### Contoso platform DevOps
 
 Contoso will use the CAF enterprise-scale landing zone Git repo for Infrastructure-as-code (IaC) and instantiate their Management Group and Subscription hierarchy using the tenant level Azure Resource Manager template deployment examples provided within the CAF enterprise-scale landing zone repo. This repository is used for bootstrapping and managing their entire platform and hence will require access permissions for service principle at a tenant root scope. To simplify RBAC and management of client secrets for service principles, Contoso will use a single service principle scoped at the tenant root scope which will have access to all resources inside a tenant. This account is the highest privilege account and no user will have direct access to the secrets of this service account.
 
 **Initialization**
 
-Before starting the CAF enterprise-scale landing zone journey, Contoso will discover existing configuration in Azure that can serve as a platform baseline. The consequence of not discovering the existing environment will be no reference point to rollback or roll-forward after a deployment. Initialization is also important since it can provide a crucial on-ramp path to infrastructure as code and allow transitioning without starting all-over. For the purpose of initialization, the following resources are considered within the scope of the overall Azure platform.
+Before starting the CAF enterprise-scale landing zone journey, Contoso will discover existing configuration in Azure that can serve as a platform baseline. The consequence of not discovering the existing environment will be no reference point to roll back or forward after  deployment. Initialization is also important since it can provide a crucial on-ramp path to infrastructure-as-code and allow transitioning without starting over. For the purpose of initialization, the following resources are considered within the scope of the overall Azure platform.
 This will initialize an empty Git repo with the current configuration establish a baseline configuration encompassing following:
 
-* Management Group hierarchy and Subscription organization
-  * ResourceTypes:
+* Management group hierarchy and subscription organization
+  * Resource types:
     * Microsoft.Management/managementGroups
     * Microsoft.Management/managementGroups/subscriptions
     * Microsoft.Subscription/subscriptions
-* Policy Definition and Policy Assignment for Governance
-  * ResourceTypes:
+* Policy definition and policy assignment for governance
+  * Resource types:
     * Microsoft.Authorization/policyDefinitions
     * Microsoft.Authorization/policyAssignments
-* Role Definition and Role Assignment
-  * ResourceTypes:
+* Role definition and assignment
+  * Resource types:
     * Microsoft.Authorization/roleDefinitions
     * Microsoft.Authorization/roleAssignments
 
@@ -797,8 +796,7 @@ Contoso will default to a platform schema that represents these configurations i
 
 **Deployment**
 
-Contoso's infrastructure as code Git repo will have 100s if not 1000s of configuration artefact tracked and version controlled. Platform developers will be modifying a very small subset of these artefact on
-an on-going basis via Pull Requests. Since Git represents the source of truth and change history, Contoso will leverage Git to determine differential changes in each pull request and trigger subsequent Azure deployment actions for only those artefact which have been changed instead of triggering a full deployment of all artefacts.
+Contoso's infrastructure as code Git repo will have hundreds if not thousands of artifact-tracked and version-controlled configurations. Platform developers will be modifying a very small subset of these artifact on an ongoing basis via Pull Requests. Since Git represents the source of truth and change history, Contoso will leverage Git to determine differential changes in each pull request and trigger subsequent Azure deployment actions for only those artifact which have been changed instead of triggering a full deployment of all artifacts.
 
 **Operationalize**
 
@@ -813,4 +811,4 @@ By establishing a feedback loop we can ensure that:
 * Changes made manually are not inadvertently rolled back by the next automated deployment of a resource.
 
 Through Azure Policy, changes to the Azure resources within the Contoso management group scope are captured within the Log Analytics instance in the management subscription. A Log Search Alert will notify
-Git by activating a webhook if a resource configuration is updated or modified so that resource state will be exported and made available as a pull\_request (PR) for review. This will allow repo owners to control whether to roll-forward the change by merging the PR or rollback by making new configuration changes that will override the out of band configuration change.
+Git by activating a webhook if a resource configuration is updated or modified so that resource state will be exported and made available as a pull\_request (PR) for review. This will allow repo owners to control whether to roll the change forward by merging the PR or roll it back by making new configuration changes to override the out-ofband configuration change.
