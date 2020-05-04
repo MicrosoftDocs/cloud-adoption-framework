@@ -15,7 +15,7 @@ ms.custom: csu
 
 Contoso's CAF enterprise-scale landing zone reference implementation is rooted in the principle that **Everything in Azure is a resource** Contoso is leveraging native **Azure Resource Manager (ARM)** to describe and manage their resources as part of their target state architecture at scale.
 
-Contoso will enable security, logging, networking, and any other plumbing needed for landing zones (i.e. Subscriptions) autonomously through policy enforcement. Contoso will bootstrap the Azure environment with ARM templates to create the necessary structure for management and networking to declare a desired goal state. Contoso will apply the principal of "Policy Driven Governance" to deploy all necessary resources for a Landing Zone using policy. For example, deploying a Key Vault to store platform level secrets in the management subscription; instead of scripting the template deployment to deploy Key Vault, the CAF enterprise-scale landing zone-based reference implementation will have a policy definition that deploys the Key Vault in a prescriptive manner, using a policy assignment at the management subscription scope. The core benefits of a policy driven approach are manyfold but the most significant include:
+Contoso will enable security, logging, networking, and any other plumbing needed for landing zones (e.g., subscriptions) autonomously through policy enforcement. Contoso will bootstrap the Azure environment with ARM templates to create the necessary structure for management and networking to declare a desired goal state. Contoso will apply the principal of "Policy Driven Governance" to deploy all necessary resources for a Landing Zone using policy. For example, deploying a Key Vault to store platform level secrets in the management subscription; instead of scripting the template deployment to deploy Key Vault, the CAF enterprise-scale landing zone-based reference implementation will have a policy definition that deploys the Key Vault in a prescriptive manner, using a policy assignment at the management subscription scope. The core benefits of a policy driven approach are manyfold but the most significant include:
 
 * Platform can provide an orchestration capability to bring target resources (in this case a subscription) to a desired goal state.
 * Continuous conformance to ensure all platform level resources are compliant. Because the platform is aware of the goal state, the platform can assist by monitoring and remediating the resources throughout the life cycle of the resource.
@@ -67,7 +67,7 @@ Subscription will be moved to decommissioned management group. Decommissioned ma
 
 ## Implementation
 
-Contoso will use "AzOps" acronym (inspired by GitOps, KOps etc.) for Azure Operations in context of CAF enterprise-scale landing zone design principles. Contoso has decided to use platform-native capability to orchestrate, configure and deploy Landing Zones using Azure Resource Manager (ARM) to declare goal state. Contoso has abided by "Policy-driven Governance" design principle and wants landing zones (also known as "subscriptions") to be provisioned and configured autonomously.
+Contoso will use "AzOps" acronym (inspired by GitOps, KOps etc.) for Azure Operations in context of CAF enterprise-scale landing zone design principles. Contoso has decided to use platform-native capability to orchestrate, configure, and deploy Landing Zones using Azure Resource Manager (ARM) to declare goal state. Contoso has abided by "Policy-driven Governance" design principle and wants landing zones (also known as "subscriptions") to be provisioned and configured autonomously.
 
 Contoso has deliberated whether to use a single template or modular templates and the pros and cons of both, deciding in favor of a single template for platform orchestration. The primary reason for this is that the Template will mainly consist of Policy Definition and Policy Assignments. Since Policy Assignments have direct dependency on Policy Definitions, it will be operationally easier to manage and control lifecycle changes/versioning if artifacts are represented in the same template.
 
@@ -148,7 +148,7 @@ The Tenant level ARM deployment above should create the following deployment at 
 - Tailspin-bu1
 - Tailspin-bu1-corp
 
-This ARM template can be expanded to include [Subscriptions](../examples/60-move-subscription-under-managementgroup.parameters.json) (moving subscription),  [Policy Definition](../examples/30-create-policydefinition-at-managementgroup.parameters.json), [Policy Assignment](../examples/40-create-policyassignment-at-managementgroup.parameters.json), Role Definition and Role Assignment.
+This ARM template can be expanded to include [Subscriptions](../examples/60-move-subscription-under-managementgroup.parameters.json) (moving subscription),  [Policy Definition](../examples/30-create-policydefinition-at-managementgroup.parameters.json), [Policy Assignment](../examples/40-create-policyassignment-at-managementgroup.parameters.json), Role Definition, and Role Assignment.
 
 Contoso has decided following for their reference implementation:
 
@@ -170,9 +170,9 @@ Contoso has found it advantageous to organize these resources in same hierarchic
 
 
 
-**AzOpsScope** class will abstract the mapping between resource identifier in Azure and the path to resources stored in the Git repo. This will facilitate quick conversion between Git and Azure and vice versa. Examining the examples below, important properties to note are scope, type (e.g. tenant, ManagementGroup, Subscription, Resource Group) and state path (representing file location inside Git).
+**AzOpsScope** class will abstract the mapping between resource identifier in Azure and the path to resources stored in the Git repo. This will facilitate quick conversion between Git and Azure and vice versa. Examining the examples below, important properties to note are scope, type (e.g., tenant, ManagementGroup, Subscription, Resource Group), and state path (representing the file location inside Git).
 
-Another advantage of the class is recognized when deployment templates are updated in pull request, pipeline can determine at what scope to trigger deployments and appropriate parameters to pass like name, scope etc. In this way, pipeline can be triggered in predictable manner and deployment artifact can be organized at appropriate scope without  including deployment scripts in each pull request throughout the scope of the Azure platform using same Azure AD tenant. Please check the [deploy-templates](https://github.com/Azure/CET-NorthStar/blob/master/docs/Implementation-Getting-Started.md#deploy-templates) section for further details.
+Another advantage of the class is recognized when deployment templates are updated in pull requests; the pipeline can determine at what scope to trigger deployments and the appropriate parameters to pass like name, scope, etc. This way, the pipeline can be triggered in a predictable manner, and deployment artifacts can be organized at an appropriate scope without including deployment scripts in each pull request throughout the scope of the Azure platform using same Azure AD tenant. Please check the [deploy-templates](https://github.com/Azure/CET-NorthStar/blob/master/docs/Implementation-Getting-Started.md#deploy-templates) section for further details.
 
 * New-AzTenantDeployment
 * New-AzManagementGroupDeployment
