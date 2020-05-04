@@ -20,19 +20,19 @@ Figure 5 – Management Group Hierarchy
 
 ## 1. Define management group hierarchy
 
-Within an AAD tenant, Management Group structures help to support organizational mapping and must therefore be appropriately considered when planning Azure adoption at-scale.
+Within an AAD tenant, Management Group structures help to support organizational mapping and must therefore be appropriately considered when planning Azure adoption at scale.
 
-***Design Considerations***
+***Design considerations***
 
 - Management groups can be used to aggregate Policy and Initiative assignments.
 
-- There is a limit of 7 levels in any nested Management Group structure.
+- There is a limit of seven levels in any nested Management Group structure.
 
 ***Design recommendations***
 
-- Keep the Management Group hierarchy reasonably flat with ideally no more than 3-4 levels.
+- Keep the Management Group hierarchy reasonably flat with ideally no more than three to four levels.
 
-- Use Resource Tags, which can be enforced or appended through Azure Policy, to query and horizontally navigate across the Management Group tree, which is more flexible when compared to using a rigid vertical Management Group and Subscription hierarchy.
+- Use Resource Tags, which can be enforced or appended through Azure Policy to query and horizontally navigate across the Management Group tree; this is more flexible when compared to using a rigid vertical Management Group and Subscription hierarchy.
 
 - Create a top-level “Sandboxes” Management Group to allow users to immediately experiment with Azure. Place user-based test subscriptions within this “Sandbox” Management Group and apply requisite security policies to keep these sandbox subscriptions isolated and disconnected from dev/test/prod environments.
 
@@ -50,7 +50,7 @@ Within an AAD tenant, Management Group structures help to support organizational
 
 ## 2. Subscription organization and governance
 
-Subscriptions are a unit of management and scale within Azure, and therefore play a critical role when designing for large-scale Azure adoption. This section strives to help readers capture customer subscription requirements and design target subscriptions based on critical factors, such as environment type, ownership and governance model, organizational structure and application portfolios.
+Subscriptions are a unit of management and scale within Azure and play a critical role when designing for large-scale Azure adoption. This section strives to help readers capture customer subscription requirements and design target subscriptions based on critical factors, such as environment type, ownership and governance model, organizational structure, and application portfolios.
 
 ***Design considerations***
 
@@ -78,7 +78,7 @@ Subscriptions are a unit of management and scale within Azure, and therefore pla
 
 - Use the following principals when identifying requirements for new subscriptions
 
-    - **Scale limits** – Subscriptions serve as a scale unit so that component workloads are able to scale within platform subscription limits. For example, large specialized workloads such as HPC, IoT or SAP are better suited to separate subscriptions to avoid limits (e.g. there is a limit of 50 ADF integrations).
+    - **Scale limits** – Subscriptions serve as a scale unit so that component workloads are able to scale within platform subscription limits. For example, large specialized workloads such as HPC, IoT or SAP are better suited to separate subscriptions to avoid limits (e.g., there is a limit of 50 ADF integrations).
 
     - **Management boundary** – Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns. For example, different environments such as development, test and production are often isolated from a management perspective.
 
@@ -114,9 +114,9 @@ Azure is ultimately comprised of a finite set of resources, so when considering 
 
 - Use reserved instances to prioritize reserved capacity in required regions.
 
-- Establish a dashboard with custom views to monitor utilized capacity levels. Setup alerts if capacity utilization is reaching critical levels (e.g. 90% CPU utilization).
+- Establish a dashboard with custom views to monitor utilized capacity levels. Setup alerts if capacity utilization is reaching critical levels (e.g., 90% CPU utilization).
 
-- Raise support requests for quota increase as a part of subscription provisioning (e.g. total available VM cores within a subscription).
+- Raise support requests for quota increase as a part of subscription provisioning (e.g., total available VM cores within a subscription).
 
 - Ensure required services and features are available within the chosen deployment regions.
 
@@ -126,9 +126,9 @@ Cost transparency across a technical estate is a critical management challenge f
 
 ***Design considerations***
 
-- Potential need for chargeback models where shared PaaS services are concerned, such as ASE and AKS which may need to be shared to achieve higher density.
+- Potential need for chargeback models where shared PaaS services are concerned, such as ASE and AKS, which may need to be shared to achieve higher density.
 
-- Shutdown schedule for non-prod workloads to optimize costs.
+- Shut down schedule for non-production workloads to optimize costs.
 
 - Azure Advisor provides cost optimization recommendations.
 
