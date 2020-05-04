@@ -18,7 +18,7 @@ The CAF enterprise-scale landing zone architecture prescribed within this guide 
 
 **Subscription democratization**
 
-Subscriptions should be used as a unit of management, and their scale should align with business needs and priorities to support business areas and portfolio owners accelerating application migrations and developing net-new applications. Subscriptions should be provided to business lines to support the design and development/testing of both migrating and net-new workloads.
+Subscriptions should be used as a unit of management, and their scale should align with business needs and priorities in order to support business areas and portfolio owners accelerating application migrations and developing net-new applications. Subscriptions should be provided to business lines to support the design and development/testing of both migrating and net-new workloads.
 
 **Policy-driven governance**
 
@@ -30,7 +30,7 @@ The CAF enterprise-scale landing zone architecture should not consider any abstr
 
 **Application-centric and archetype-neutral**
 
-The CAF enterprise-scale landing zone architecture should focus on application-centric migrations and development rather than a pure infrastructure “lift and shift” migration (e.g., moving virtual machines) and should not differentiate between old/new applications or IaaS/PaaS applications. Ultimately, it should provide the foundation for all application types to be deployed onto the customer Azure platform securely and safely.
+The CAF enterprise-scale landing zone architecture should focus on application-centric migrations and development rather than a pure infrastructure “lift-and-shift” migration (for example, moving virtual machines) and should not differentiate between old/new applications or IaaS/PaaS applications. Ultimately, it should provide the foundation for all application types to be deployed onto the customer Azure platform securely and safely.
 
 **Azure-native design and roadmap aligned**
 
