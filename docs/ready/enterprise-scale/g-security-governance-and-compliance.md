@@ -12,13 +12,13 @@ ms.custom: csu
 ---
 
 
-# G. Security, Governance and Compliance
+# G. Security, governance, and compliance
 
-## 1. Define Encryption and Key Management
+## 1. Define encryption and key management
 
 Encryption is a vital step towards ensuring data privacy, compliance, and sovereignty in Azure, and is ultimately one of the most important security concerns of many enterprise customers.
 
-***Design Considerations***
+***Design considerations***
 
 - Subscription and scale limits as they apply to Key Vault.
 
@@ -26,7 +26,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and sovere
 
 - Key Vault serves a security boundary since access permissions for keys, secrets and certificates are at the vault level.
 
-    - Key Vault Access Policy assignments grant permissions separately to keys, secrets or certificates, but do not support granular, object-level permissions like a specific key, secret, or certificate.
+    - Key Vault Access Policy assignments grant permissions separately to keys, secrets, or certificates but do not support granular, object-level permissions like a specific key, secret, or certificate.
 
     - Consideration should be given to isolate application/workload specific secrets and shared secrets as appropriate.
 
@@ -54,19 +54,19 @@ Encryption is a vital step towards ensuring data privacy, compliance, and sovere
 
 - Requirements surrounding the use customer managed keys for native encryption mechanisms such as Storage Service Encryption (SSE).
 
-***Design Recommendations***
+***Design recommendations***
 
 - Use a federated Key Vault model to avoid transaction scale limits.
 
 - Provision KV with the Soft Delete and Purge Policies enabled.
 
-- Limit authorization to permanently delete keys, secrets and certificates to specialized custom AAD roles.
+- Limit authorization to permanently delete keys, secrets, and certificates to specialized custom AAD roles.
 
-- Automate the certificate management and renewal process with public Certificate Authorities.
+- Automate the certificate management and renewal process with public certificate authorities.
 
 - Establish an automated process for key and certificate rotation.
 
-- Use Log Analytics to audit key, certificate, and secret usage within each Key Vault.
+- Use log analytics to audit key, certificate, and secret usage within each Key Vault.
 
 - Delegate Key Vault instantiation and privileged access, using Azure Policy to enforce a consistent compliant configuration.
 
@@ -78,11 +78,11 @@ Encryption is a vital step towards ensuring data privacy, compliance, and sovere
 
 - Do not share Key Vault instances between applications unless associated threat models encompass all applications considered; Key Vault should be treated as a security boundary.
 
-## 2. Planning for Governance
+## 2. Planning for governance
 
 Azure Policy is essential to ensuring security and compliance within enterprise technical estates, enforcing vital management and security conventions across Azure platform services, as well as supplementing RBAC concerning what actions authorized users can perform.
 
-***Design Considerations***
+***Design considerations***
 
 - Compliance and assurance on Azure is achieved through Azure Policy; enforcing management and security conventions, such as encryption and the use of private endpoints.
 
@@ -96,7 +96,7 @@ Azure Policy is essential to ensuring security and compliance within enterprise 
 
 - Azure Policy limits, such as the restriction of 500 Definitions at any given scope.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Identify required Azure Tags and use the append policy mode to enforce their usage.
 
@@ -114,11 +114,11 @@ Azure Policy is essential to ensuring security and compliance within enterprise 
 
 - Limit the number of Azure Policy assignments made at the root Management Group scope to avoid managing through exclusions at inherited scopes.
 
-## 3. Define Security Monitoring and Audit policy
+## 3. Define security monitoring and audit policy
 
 One of the primary concerns of enterprise customers when migrating to Azure is losing visibility into what is happening within their technical estate. Security monitoring and audit logging of Azure platform services is therefore a crucial security practice required to appropriately safeguard sensitive data.
 
-***Design Considerations***
+***Design considerations***
 
 - Data retention periods for regulatory audit data; AAD reports (premium) has a 30-day retention period.
 
@@ -134,7 +134,7 @@ One of the primary concerns of enterprise customers when migrating to Azure is l
 
 - SIEM integration with Azure Security Center and Azure Sentinel.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Use AAD reporting capabilities to generate access control audit reports.
 
@@ -152,9 +152,9 @@ One of the primary concerns of enterprise customers when migrating to Azure is l
 
 - Use an Event Grid based solution for log orientated real-time alerting.
 
-## 4. Planning for Platform Security
+## 4. Planning for platform security
 
-***Design Considerations***
+***Design considerations***
 
 - Many customers, particularly those in security conscious industries such as FSI, demand a detailed understanding across the following two topic areas.
 
@@ -162,7 +162,7 @@ One of the primary concerns of enterprise customers when migrating to Azure is l
 
     - “Multi-tenancy under the hood” for key platform components, from Hyper-V and the HSMs underpinning Key Vault to database engines.
 
-***Design Recommendations***
+***Design recommendations***
 
 - It is recommended that a joint examination of each required service be conducted, within the context of underlying customer requirements.
 
@@ -174,76 +174,76 @@ One of the primary concerns of enterprise customers when migrating to Azure is l
 
 - Align customer security requirements with Azure platform roadmaps.
 
-## 5. Service Whitelisting Framework
+## 5. Service whitelisting framework
 
 The following table provides a framework to assess enterprise security readiness of Azure services. 
 
-| Assesment                    | Category                                                              | Crtieria                                                                                                                                     |
+| Assessment                    | Category                                                              | Criteria                                                                                                                                     |
 |------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Security                     | Network endpoint                                                      | Does the service have a public endpoint that is accessible outside of a vNet?                                                                |
 |                              |                                                                       | Does it support VNet Service Endpoints?                                                                                                      |
 |                              |                                                                       | Can Azure services interact directly with the service endpoint?                                                                              |
 |                              |                                                                       | Does it support Private Endpoints?                                                                                                           |
 |                              |                                                                       | Can it be deployed within a VNet?                                                                                                            |
-|                              | Data Exfiltration Prevention                                          | Does the PaaS service have a separate BGP community in ExpressRoute Microsoft Peering? (i.e. does ER expose a Route Filter for the service?) |
+|                              | Data exfiltration prevention                                          | Does the PaaS service have a separate BGP community in ExpressRoute Microsoft Peering? (i.e., does ER expose a route filter for the service?) |
 |                              |                                                                       | Does the service support Private Link?                                                                                                       |
-|                              | Enforce Network Traffic Flow for management and data plane operations | Is it possible to inspect traffic entering/exiting the service? Can traffic be force tunnelled with UDRs?                                    |
+|                              | Enforce Network Traffic Flow for management and data plane operations | Is it possible to inspect traffic entering/exiting the service? Can traffic be force tunneled with UDRs?                                    |
 |                              |                                                                       | Do management operations use Azure shared public imp ranges?                                                                                 |
 |                              |                                                                       | Is management traffic directed via a link-local endpoint exposed on the host?                                                                |
-|                              | Data Encryption at-rest                                               | Is encryption applied by default?                                                                                                            |
+|                              | Data encryption at rest                                               | Is encryption applied by default?                                                                                                            |
 |                              |                                                                       | Can encryption be disabled?                                                                                                                  |
 |                              |                                                                       | Is encryption performed using Microsoft Managed Keys (MMK) or Customer Managed Keys (CMK)?                                                   |
-|                              | Data Encryption in-transit                                            | Is traffic to the service encrypted at a protocol level (SSL/TLS)?                                                                           |
+|                              | Data encryption in transit                                            | Is traffic to the service encrypted at a protocol level (SSL/TLS)?                                                                           |
 |                              |                                                                       | Are there any HTTP endpoints and can the be disabled?                                                                                        |
 |                              |                                                                       | Is underlying service communication also encrypted?                                                                                          |
-|                              |                                                                       | Is encryption performed using MMK or CMK? (is BYoK supported?)                                                                               |
-|                              | Software Deployment                                                   | Can application software or third party products be deployed to the service?                                                                 |
+|                              |                                                                       | Is encryption performed using MMK or CMK? (Is BYoK supported?)                                                                               |
+|                              | Software deployment                                                   | Can application software or third party products be deployed to the service?                                                                 |
 |                              |                                                                       | How is software deployment performed and managed?                                                                                            |
 |                              |                                                                       | Can policies enforced to control source or code integrity?                                                                                   |
-|                              |                                                                       | If software is deployable, can antimalware, vulnerability management and security monitoring tools be used?                                  |
-|                              |                                                                       | Does the service provide such capabilities natively? (e.g. AKS)                                                                              |
-| Identity & Access Management | Authentication & Access Control                                       | Are all Control plane operations governed by AAD? (i.e. is there a nested control plane, such as for Kubernetes)                             |
-|                              |                                                                       | What methods exist to provide access to the Data plane?                                                                                      |
-|                              |                                                                       | Does the Data plane integrate with AAD?                                                                                                      |
-|                              |                                                                       | Does Azure to Azure (service to service) authentication use a MSI/Service Principal?                                                         |
-|                              |                                                                       | Is Azure to IaaS (Service to VNet) authentication via AAD?                                                                                   |
+|                              |                                                                       | If software is deployable, can anti-malware, vulnerability management, and security monitoring tools be used?                                  |
+|                              |                                                                       | Does the service provide such capabilities natively? (e.g., AKS)                                                                              |
+| Identity & Access Management | Authentication and access controls                                       | Are all control plane operations governed by AAD? (e.g., is there a nested control plane like for Kubernetes?)                             |
+|                              |                                                                       | What methods exist to provide access to the data plane?                                                                                      |
+|                              |                                                                       | Does the data plane integrate with AAD?                                                                                                      |
+|                              |                                                                       | Does Azure to Azure (service to service) authentication use a MSI/Service principal?                                                         |
+|                              |                                                                       | Is Azure to IaaS (service to VNet) authentication via AAD?                                                                                   |
 |                              |                                                                       | How are any applicable keys/SAS managed?                                                                                                     |
 |                              |                                                                       | How can access be revoked?                                                                                                                   |
-|                              | Segregation of Duties                                                 | Does the service separate Control plane and Data plane operations within AAD?                                                                |
+|                              | Segregation of duties                                                 | Does the service separate Control plane and Data plane operations within AAD?                                                                |
 |                              | MFA and conditional access                                            | Is MFA enforced for user to service interactions?                                                                                            |
-| Governance                   | Data Export & Import                                                  | Does service allow you to import and export data securely and encrypted?                                                                     |
-|                              | Data Privacy & Usage                                                  | Can Microsoft engineers access the data?                                                                                                     |
+| Governance                   | Data export and import                                                  | Does service allow you to import and export data securely and encrypted?                                                                     |
+|                              | Data privacy and usage                                                  | Can Microsoft engineers access the data?                                                                                                     |
 |                              |                                                                       | Is any Microsoft support interaction with the service audited?                                                                               |
-|                              | Data Residency                                                        | Is data contained to the service deployment region?                                                                                          |
+|                              | Data residency                                                        | Is data contained to the service deployment region?                                                                                          |
 | Operations                   | Monitoring                                                            | Does the service integrate with Azure Monitor?                                                                                               |
-|                              | Backup Management                                                     | Which workload data need to be backed?                                                                                                       |
+|                              | Backup management                                                     | Which workload data need to be backed?                                                                                                       |
 |                              |                                                                       | How are backups captured?                                                                                                                    |
 |                              |                                                                       | How frequently can backups be taken?                                                                                                         |
 |                              |                                                                       | How long can backups be retained for?                                                                                                        |
 |                              |                                                                       | Are backups encrypted?                                                                                                                       |
 |                              |                                                                       | Is backup encryption performed using MMK or CMK?                                                                                             |
-|                              | Disaster Recovery                                                     | How can the service be used in a regional redundant fashion?                                                                                 |
+|                              | Disaster recovery                                                     | How can the service be used in a regional redundant fashion?                                                                                 |
 |                              |                                                                       | What is the attainable RTO and RPO?                                                                                                          |
 |                              | SKU                                                                   | What SKUs are available? and how do they differ?                                                                                             |
 |                              |                                                                       | Are there any features related to security for premium SKU?                                                                                  |
-|                              | Capacity Management                                                   | How is capacity monitored?                                                                                                                   |
+|                              | Capacity management                                                   | How is capacity monitored?                                                                                                                   |
 |                              |                                                                       | What is the unit of horizontal scale?                                                                                                        |
-|                              | Patch & Update Management                                             | Does the service require patching or is it abstracted by the service?                                                                        |
+|                              | Patch and update management                                             | Does the service require patching or is it abstracted by the service?                                                                        |
 |                              |                                                                       | How frequently are patches applied and can they be automated?                                                                                |
-|                              | Audit                                                                 | Are nested Control plane operations captured? (e.g. AKS or Databricks)                                                                       |
+|                              | Audit                                                                 | Are nested control plane operations captured? (e.g., AKS or Databricks)                                                                       |
 |                              |                                                                       | Are key Data plane activities recorded?                                                                                                      |
-|                              | Configuration Management                                              | Does it support Tags and provide a PUT schema for all resources?                                                                             |
-| Azure Service Compliance     | Service Attestation, Certification                                    | Is the service PCI/ISO/SOC compliant?                                                                                                        |
-|                              | and External Audits                                                   |                                                                                                                                              |
-|                              | Service Availability                                                  | Is the service Private Preview/Public Preview/GA?                                                                                            |
+|                              | Configuration management                                              | Does it support Tags and provide a PUT schema for all resources?                                                                             |
+| Azure Service Compliance     | Service attestation, certification,                                    | Is the service PCI/ISO/SOC compliant?                                                                                                        |
+|                              | and external audits                                                   |                                                                                                                                              |
+|                              | Service availability                                                  | Is the service Private Preview/Public Preview/GA?                                                                                            |
 |                              |                                                                       | In what regions is the service available?                                                                                                    |
-|                              |                                                                       | What is the deployment scope of the service? (i.e. is it a regional or global service?)                                                      |
-|                              | Service Level Agreements                                              | What is the SLA for service availability?                                                                                                    |
+|                              |                                                                       | What is the deployment scope of the service? (e.g., is it a regional or global service?)                                                      |
+|                              | Service-level agreements                                              | What is the SLA for service availability?                                                                                                    |
 |                              |                                                                       | If applicable, what is the SLA for performance?                                                                                              |
 
 ## Next steps
 
-Suggested design for [Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
+Suggested design for [platform automation and DevOps](./H-Platform-Automation-and-DevOps.md)
 
 > [!div class="nextstepaction"]
 > [Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
