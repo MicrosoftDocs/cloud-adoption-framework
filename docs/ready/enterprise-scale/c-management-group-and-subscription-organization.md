@@ -114,7 +114,7 @@ Azure is ultimately comprised of a finite set of resources, so when considering 
 
 - Use reserved instances to prioritize reserved capacity in required regions.
 
-- Establish a dashboard with custom views to monitor utilized capacity levels. Setup alerts if capacity utilization is reaching critical levels (e.g., 90 percent CPU utilization).
+- Establish a dashboard with custom views to monitor utilized capacity levels. Set up alerts if capacity utilization is reaching critical levels (e.g., 90 percent CPU utilization).
 
 - Raise support requests for quota increase as a part of subscription provisioning (e.g., total available VM cores within a subscription).
 
