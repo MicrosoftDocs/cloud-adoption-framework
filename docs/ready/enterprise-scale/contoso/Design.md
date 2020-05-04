@@ -71,12 +71,12 @@ Contoso will use "AzOps" acronym (inspired by GitOps, KOps etc.) for Azure Opera
 
 Contoso has deliberated whether to use a single template or modular templates and the pros and cons of both, deciding in favor of a single template for platform orchestration. The primary reason for this is that the Template will mainly consist of Policy Definition and Policy Assignments. Since Policy Assignments have direct dependency on Policy Definitions, it will be operationally easier to manage and control lifecycle changes/versioning if artifacts are represented in the same template.
 
-Contoso will use platform provided schema as input to parameter file. End to End Template will use nested deployment to trigger deployment for nested children at appropriate scope; e.g., Management Group or Subscription scope.
+Contoso will use platform provided schema as input to parameter file. End to End Template will use nested deployment to trigger deployment for nested children at the appropriate scope; e.g., the Management Group or Subscription scope.
 
 ```powershell
 Get-AzManagementGroup -GroupName Tailspin -Expand -Recurse | ConvertTo-Json -Depth 100
 ```
-The reasoning behind this is that it can be machine-generated on demand, and it can be **consistently** exported to be able to help with configuration drift.
+The reasoning behind this is that it can be machine-generated on demand, and it can be **consistently** exported to help with the configuration drift.
 
 ```json
 {
@@ -217,7 +217,7 @@ This will provide Discovery function to traverse the whole management group and 
 Get-AzManagementGroup -Recurse -expand -GroupName {{root management group name or ID}} | ConvertTo-Json -depth 100
 ```
 
-This will build the relationship association between management group and subscription. Further upon when Initialize-AzOpsRepository function is called with -Recurse parameter, it should enlist all resources available at the scope as well as children e.g. when calling of subscription, it will also get list of resource groups.
+This will build the relational association between the management group and subscription. When the Initialize-AzOpsRepository function is called with -Recurse parameter, it should enlist all resources available at the scope as well as its children; when calling upon the subscription, it will also get a list of resource groups.
 
 ### Deployment
 
