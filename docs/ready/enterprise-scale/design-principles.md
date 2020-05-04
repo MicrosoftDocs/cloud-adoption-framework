@@ -14,15 +14,15 @@ ms.custom: csu
 
 # Design principles
 
-The CAF enterprise-scale landing zone architecture prescribed within this guide is underpinned by following fundamental design principals, which serve as a compass for subsequent design decisions across critical technical domains. Readers are strongly advised to familiarize themselves with these principals to better understand their impact and the trade-offs associated with non-adherence.
+The CAF enterprise-scale landing zone architecture prescribed within this guide is underpinned by following fundamental design principals that serve as a compass for subsequent design decisions across critical technical domains. Readers are advised to familiarize themselves with these principals to better understand their impact and the trade-offs associated with non-adherence.
 
 **Subscription democratization**
 
-Subscriptions should be used as a unit of management and scale aligned with business needs and priorities, to support business areas and portfolio owners to accelerate application migrations and net-new application development. Subscriptions should be provided to business lines to support the design and development/testing of both migrating and net-new workloads.
+Subscriptions should be used as a unit of management, and their scale should align with business needs and priorities to support business areas and portfolio owners accelerating application migrations and developing net-new applications. Subscriptions should be provided to business lines to support the design and development/testing of both migrating and net-new workloads.
 
 **Policy-driven governance**
 
-Azure Policy should be used to provide the “guard-rails” and ensure the continued compliance of the customer platform and applications deployed onto it, whilst also providing application owners sufficient freedom and a secure unhindered path to cloud.
+Azure Policy should be used to provide the “guard-rails” and ensure the continued compliance of the customer platform and applications deployed onto it while also providing application owners sufficient freedom and a secure, unhindered path to the cloud.
 
 **Single-control and management plane**
 
