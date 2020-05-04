@@ -12,19 +12,19 @@ ms.custom: csu
 ---
 
 
-# D. Network Topology and Connectivity
+# D. Network topology and connectivity
 
 [![Network Topology and Connectivity](./media/net-con.png "Network Topology and Connectivity")](./media/net-con.png)
 
-Figure 6 – Networking and Connectivity
+Figure 6 – Networking and connectivity
 
 This section will examine key design considerations and recommendations surrounding networking and connectivity to/from Azure, as well as within Azure.
 
-## 1. Planning for IP Addressing
+## 1. Planning for IP addressing
 
 It is vital that enterprise customers plan for IP addressing in Azure to ensure there is no overlapping IP address space across considered on-premises locations and Azure regions.
 
-***Design Considerations***
+***Design considerations***
 
 - Overlapping IP address spaces across on-premises and Azure regions will create major contention challenges.
 
@@ -36,11 +36,11 @@ It is vital that enterprise customers plan for IP addressing in Azure to ensure 
 
 - Subnets can be delegated to certain services to create instances of that service within the subnet.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Plan for non-overlapping IP address spaces across Azure regions and on-premises locations well in advance.
 
-- Use IP addresses from the address allocation for private internets (RFC 1918).
+- Use IP addresses from the address allocation for private internet connections (RFC 1918).
 
 - For environments with limited private IP addresses (RFC 1918) availability, consider using IPv6.
 
@@ -56,29 +56,29 @@ It is vital that enterprise customers plan for IP addressing in Azure to ensure 
 
 DNS is a critical design topic in the overall CAF enterprise-scale landing zone architecture, and while some customers may want to use their existing investments in DNS, others may see cloud adoption as an opportunity to modernize their internal DNS infrastructure and leverage native Azure capabilities.
 
-***Design Considerations***
+***Design considerations***
 
 - A DNS resolver can be used in conjunction with Azure Private DNS for cross-premises connectivity.
 
 - Customers may require the use of existing DNS solutions across on-premises and Azure.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Use Azure Private DNS for name resolution within Azure Virtual Networks.
 
 - Auto-registration should be enabled for Azure DNS to automatically manage the life cycle of the DNS records for the Virtual Machines deployed within a Virtual Network.
 
-- Use a Virtual Machine as a resolver for cross-premises DNS resolution with Azure DNS.
+- Use a virtual machine as a resolver for cross-premises DNS resolution with Azure DNS.
 
     - This is a short-term solution since an Azure native resolver is on the Azure Private DNS roadmap.
 
 - Create the Azure Private DNS zone within a global “Connectivity” subscription.
 
-## 3. Define an Azure Networking Topology
+## 3. Define an Azure networking topology
 
-Network topology is a critical foundational element of the CAF enterprise-scale landing zone architecture as it ultimately defines how applications can communicate with one another. This section will therefore explore relevant technologies and topology approaches for enterprise Azure deployments.
+Network topology is a critical foundational element of the CAF enterprise-scale landing zone architecture as it ultimately defines how applications can communicate with one another. This section will explore relevant technologies and topology approaches for enterprise Azure deployments.
 
-***Design Considerations***
+***Design considerations***
 
 - Azure Virtual WAN greatly simplifies end-to-end network connectivity in Azure and cross-premises with capabilities such as VHub to VHub communication, but also, it introduces new capabilities, such as large-scale/high-throughput VPN Gateways and Firewall Manager for centrally managing multiple Azure Firewalls distributed across VWAN VHubs.
 
@@ -86,23 +86,23 @@ Network topology is a critical foundational element of the CAF enterprise-scale 
 
 - ExpressRoute with Private Peering supports advertising up to 200 prefixes from Azure to on-premises.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Azure Virtual WAN is highly recommended for new large/global network deployment in Azure.
 
-    - The following illustration depicts a sample global customer deployment with datacentres spread across Europe and the United States, as well as a large number of branch offices within both regions. The environment is globally connected via Azure Virtual WAN and ExpressRoute Global Reach.
+    - The following illustration depicts a sample global customer deployment with datacenters spread across Europe and the United States, as well as a large number of branch offices within both regions. The environment is globally connected via Azure Virtual WAN and ExpressRoute Global Reach.
 
 [![Example Network Topology](./media/eg-net-top.png "Example Network Topology")](./media/eg-net-top.png)
 
-Figure 7 – Example Network Topology
+Figure 7 – Example network topology
 
 - Leverage Azure Virtual WAN as a global connectivity resource, with a VHub per Azure region to connect multiple “landing zones” together across Azure regions via their local VHub.
 
-- Connect VHubs to on-premises data centres using ExpressRoute.
+- Connect VHubs to on-premises datacenters using ExpressRoute.
 
 - Connect branches/remote locations to the nearest VHub via VPN.
 
-- If third party network virtual appliances are required, deploy them to a separate Virtual Network (i.e. NVA VNet) and connect it to the regional VHub.
+- If third-party network virtual appliances are required, deploy them to a separate Virtual Network (e.g., NVA VNet) and connect it to the regional VHub.
 
 - Use [Azure Monitor Network Insights](/azure/azure-monitor/insights/network-insights-overview) (currently in preview) to monitor the end-to-end state of customer networks on Azure.
 
@@ -124,7 +124,7 @@ Figure 7 – Example Network Topology
 
 This section will expand on the network topology to consider recommended models for connecting on-premises locations to Azure.
 
-***Design Considerations***
+***Design considerations***
 
 - Azure ExpressRoute provides dedicated private connectivity to Microsoft Azure services (IaaS and PaaS) from on-premises locations.
 
@@ -136,7 +136,7 @@ This section will expand on the network topology to consider recommended models 
 
 - ExpressRoute Global Reach is not available in all ExpressRoute peering locations.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Use ExpressRoute as the primary connectivity channel for connecting on-premises network to Microsoft Azure.
 
@@ -162,21 +162,21 @@ This section will expand on the network topology to consider recommended models 
 
 - Use ExpressRoute Global Reach to connect large offices /regional headquarters that are connected to Azure via ExpressRoute.
 
-- When traffic isolation or dedicated bandwidth is required, such as for separating production and non-production environments, different ExpressRoute circuits should be used to ensure isolated routing domains and to alleviate noisy neighbour risks.
+- When traffic isolation or dedicated bandwidth is required, such as for separating production and non-production environments, different ExpressRoute circuits should be used to ensure isolated routing domains and to alleviate noisy neighbor risks.
 
 - Proactively monitor ExpressRoute circuits using Network Performance Monitor.
 
 <!-- -->
 
-- Do not explicitly use ExpressRoute circuits from a single peering location as it creates a single point of failure, making the customer highly susceptible to peering location outages.
+- Do not explicitly use ExpressRoute circuits from a single peering location; this creates a single point of failure, making the customer highly susceptible to peering location outages.
 
-- Do not use the same ExpressRoute circuit to connect multiple environments that require isolation or dedicated bandwidth, so as to avoid “noisy neighbour” risks.
+- Do not use the same ExpressRoute circuit to connect multiple environments that require isolation or dedicated bandwidth to avoid “noisy neighbor” risks.
 
 ## 5. Connectivity within Azure
 
 This section will explore recommended models for connecting resources within Azure together.
 
-***Design Considerations***
+***Design considerations***
 
 - Azure Virtual WAN provides inter-region connectivity between VHubs (currently in preview).
 
@@ -194,7 +194,7 @@ This section will explore recommended models for connecting resources within Azu
 
     - Customers must still deploy and manage UDRs should they require inspection/logging for cross-VNet traffic.
 
-***Design Recommendations***
+***Design recommendations***
 
 - It is strongly recommended that the principal of “**traffic in Azure stays in Azure**” is followed, so that communication across resources in Azure, even if they are in different regions, occurs via the Microsoft backbone network.
 
@@ -212,17 +212,17 @@ This section will explore recommended models for connecting resources within Azu
 
 <!-- -->
 
-- Do not use existing on-premises network (i.e. MPLS) to connect Azure resources across Azure regions.
+- Do not use existing on-premises network (e.g., MPLS) to connect Azure resources across Azure regions.
 
-- Do not implement forced tunnelling to enable communication from Azure to Azure resources.
+- Do not implement forced tunneling to enable communication from Azure to Azure resources.
 
 - Do not develop an overly complex Azure networking architecture to connect Azure regions across the world.
 
-## 6. Connectivity to Azure PaaS Services
+## 6. Connectivity to Azure PaaS services
 
 Building on the previous connectivity sections, this section will explore recommended connectivity approaches when leveraging Azure PaaS services.
 
-***Design Considerations***
+***Design considerations***
 
 - Azure PaaS services are typically accessed over public endpoints, however, the Azure platform provides capabilities to secure such endpoints or even make them entirely private.
 
@@ -238,7 +238,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
     - Alternatively, outbound filtering via NVAs can be used to provide data exfiltration risk mitigations.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Use VNet injection for supported Azure services to make them available from within a customer Virtual Network.
 
@@ -262,17 +262,17 @@ Building on the previous connectivity sections, this section will explore recomm
 
 - Do not use VNet Service Endpoints when there are data exfiltration concerns, unless NVA filtering is used.
 
-## 7. Planning for Inbound and Outbound Internet Connectivity
+## 7. Planning for inbound and outbound internet connectivity
 
 This section describes recommended connectivity models for inbound and outbound connectivity to and from the public Internet.
 
-***Design Considerations***
+***Design considerations***
 
 - Azure native network security services such as Azure Firewall, Application Gateway WAF, and Azure Front Door WAF are fully managed services, meaning that customers do not incur the operational and management costs associated with infrastructure deployments, which can become complex at scale.
 
-- The CAF enterprise-scale landing zone architecture is fully compatible with third party network virtual appliances, should the customer prefer to use NVAs or for situations where native services do not satisfy specific customer requirements.
+- The CAF enterprise-scale landing zone architecture is fully compatible with third-party network virtual appliances, should the customer prefer to use NVAs or for situations where native services do not satisfy specific customer requirements.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Use Azure Firewall to govern outbound traffic to the internet and non-HTTP/S inbound connections.
 
@@ -286,19 +286,19 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Use Azure Front Door WAF policies to provide global protection across Azure regions for inbound HTTP/S connections to a “landing zone”.
 
-- If third party NVAs are used, they should be deployed into a separate Virtual Network (i.e. NVA VNet) and connected to a regional VHub via peering.
+- If third-party NVAs are used, they should be deployed into a separate Virtual Network (e.g., NVA VNet) and connected to a regional VHub via peering.
 
-- If third-party NVAs are used, deployments should follow vendor best practise recommendations, with particular attention to high-availability and Azure certified architectures.
+- If third-party NVAs are used, deployments should follow vendor best practice recommendations, with particular attention to highly availabile and Azure-certified architectures.
 
 <!-- -->
 
 - Do not replicate on-premises DMZ concepts and architectures into Azure.
 
-## 8. Define Network Encryption Requirements
+## 8. Define network encryption requirements
 
 This section explores key recommendations to achieve network encryption between on-premises and Azure as well as across Azure regions.
 
-***Design Considerations***
+***Design considerations***
 
 - Cost and available bandwidth are inversely proportional to length of encryption tunnel between endpoints.
 
@@ -312,18 +312,18 @@ This section explores key recommendations to achieve network encryption between 
 
     - If encryption between Azure regions is required today, it is possible to connect VNets using VPN Gateways rather than Global VNet Peering.
 
-***Design Recommendations***
+***Design recommendations***
 [![Encryption Flows](./media/enc-flows.png "Encryption Flows")](./media/enc-flows.png)
 
-Figure 8 – Encryption Flows
+Figure 8 – Encryption flows
 
 - When establishing VPN connections from on-premises to Azure using VPN Gateways, traffic is encrypted at a protocol level using IPSec tunnels, as depicted in flow A in the diagram above.
 
-- When utilising ExpressRoute Direct, configure [MACSec](/azure/expressroute/expressroute-howto-macsec) in order to encrypt traffic at L2 level between the customer’s routers and MSEE, as depicted in flow B in the diagram above.
+- When using ExpressRoute Direct, configure [MACSec](/azure/expressroute/expressroute-howto-macsec) to encrypt traffic at L2 level between the customer’s routers and MSEE, as depicted in flow B in the diagram above.
 
-- When utilising regular ExpressRoute circuits, use Azure VWAN VPN Gateway to establish [IPSec tunnels over ExpressRoute](/azure/virtual-wan/vpn-over-expressroute) Private Peering. This is depicted by flow *C* in the diagram above.
+- When using regular ExpressRoute circuits, use Azure VWAN VPN Gateway to establish [IPSec tunnels over ExpressRoute](/azure/virtual-wan/vpn-over-expressroute) Private Peering. This is depicted by flow *C* in the diagram above.
 
-    - If additional scale or capabilities are required use 3^rd^ party NVAs connected to Azure VWAN.
+    - If additional scale or capabilities are required use third-party NVAs connected to Azure VWAN.
 
 - If traffic between Azure regions must be encrypted, use VPN Gateways to connect VNets across regions. MACSec encryption across regions is being rolled out, but the capability is not available yet.
 
@@ -331,29 +331,29 @@ Figure 8 – Encryption Flows
 
 - Do not use third-party NVAs in Azure to encrypt traffic over ExpressRoute Private Peering without first validating native Azure capabilities as depicted in flows *B* and *C* above.
 
-## 9. Planning for Traffic Inspection
+## 9. Planning for traffic inspection
 
-In many industries customers require that traffic in Azure, particularly inbound and outbound internet traffic, is mirrored to a network packet collector for deep inspection and analysis. This section therefor explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Networks.
+In many industries, customers require that traffic in Azure--particularly, inbound and outbound internet traffic--mirrors a network packet collector for deep inspection and analysis. This section explores key considerations and recommended approaches for mirroring or tapping traffic within Azure Virtual Networks.
 
-***Design Considerations***
+***Design considerations***
 
 - The Azure Virtual Network TAP (VTAP) preview is not currently available, and there is no ETA to resume its availability.
 
-- Network Watcher packet captures are limited to a maximum period of 5 hours.
+- Network Watcher packet captures are limited to a maximum period of five hours.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Use Network Watcher packet capture despite the limited capture window.
 
 - Evaluate if NSG Flow Logs v2 provide the level of detail required.
 
-- Use 3^rd^ party solutions, such as Gigamon, for scenarios where sustained deep packet inspection is required.
+- Use third-party solutions such as Gigamon for scenarios where sustained deep-packet inspection is required.
 
 <!-- -->
 
 - Do not block Azure deployments just because VTAP is unavailable.
 
-- Do not develop a custom solution to mirror traffic. While this might be acceptable for small scale scenarios, this approach is not encouraged at scale due to complexity and supportability issues which may arise.
+- Do not develop a custom solution to mirror traffic. While this might be acceptable for small scale scenarios, this approach is not encouraged at scale due to complexity and supportability issues that may arise.
 
 ## Next steps
 
