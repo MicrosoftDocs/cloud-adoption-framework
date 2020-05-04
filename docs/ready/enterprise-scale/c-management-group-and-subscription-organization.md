@@ -98,7 +98,7 @@ Subscriptions are a unit of management and scale within Azure and play a critica
 
 ## 3. Configure subscription quota and capacity
 
-Azure is ultimately comprised of a finite set of resources, so when considering enterprise scale Azure adoption involving large resource quantities, it is essential that attention be given to ensure sufficient capacity and SKUs are available, and that attained capacity can be understood and monitored.
+Azure is ultimately comprised of a finite set of resources, so when considering enterprise scale Azure adoption involving large resource quantities, it is essential that attention be given to ensuring sufficient capacity and SKUs, and for attained capacity to be understood and monitored.
 
 ***Design considerations***
 
@@ -114,7 +114,7 @@ Azure is ultimately comprised of a finite set of resources, so when considering 
 
 - Use reserved instances to prioritize reserved capacity in required regions.
 
-- Establish a dashboard with custom views to monitor utilized capacity levels. Setup alerts if capacity utilization is reaching critical levels (e.g., 90% CPU utilization).
+- Establish a dashboard with custom views to monitor utilized capacity levels. Setup alerts if capacity utilization is reaching critical levels (e.g., 90 percent CPU utilization).
 
 - Raise support requests for quota increase as a part of subscription provisioning (e.g., total available VM cores within a subscription).
 
