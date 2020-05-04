@@ -74,7 +74,7 @@ Enterprise organizations will typically follow a least-privileged approach to op
 
 ## 2. Planning for authentication inside the landing zone
 
-A critical design decision enterprise organisation must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or create a brand new one. Requirements for authentication inside the “landing zone” should be thoroughly assessed and incorporated into plans to deploy AD, AAD-DS, or both.
+A critical design decision enterprise organization must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or create a brand new one. Requirements for authentication inside the “landing zone” should be thoroughly assessed and incorporated into plans to deploy AD, AAD-DS, or both.
 
 ***Design considerations***
 
