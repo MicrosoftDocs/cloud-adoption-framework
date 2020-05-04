@@ -1,5 +1,5 @@
 ---
-title: "CAF enterprise-scale landing zone Template"
+title: "CAF enterprise-scale landing zone template"
 titleSuffix: Cloud Adoption Framework
 description: CAF enterprise-scale landing zone Template
 author: rkuehfus
@@ -11,9 +11,9 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# CAF enterprise-scale landing zone Template
+# Cloud Adoption Framework enterprise-scale landing zone template
 
-When various teams (internal, MSFT specific, or even partners) engage to support your cloud adoption efforts, CAF enterprise-scale landing zone can be used as a set of reference documentation assets to communicate details regarding your environment. Rather than downloading and modifying a personal copy of the CAF enterprise-scale landing zone architecture, we suggest using the following document to record decisions, inputs, and deviations. These three data points will create a condensed companion guide, to describe your unique implementation of this reference platform.
+When various teams (internal, Microsoft-specific, or partners) engage to support your cloud adoption efforts, Cloud Adoption Framework (CAF) enterprise-scale landing zones can be used as a set of reference documentation assets to communicate details about your environment. Rather than downloading and modifying a personal copy of the CAF enterprise-scale landing zone architecture, we suggest using the following document to record decisions, inputs, and deviations. These three data points will create a condensed companion guide to describe your unique implementation of this reference platform.
 
 > [!WARNING]
 > Placeholder, document in development...
