@@ -12,17 +12,17 @@ ms.custom: csu
 ---
 
 
-# E. Management and Monitoring
+# E. Management and monitoring
 
 [![Management and Monitoring](./media/mgmt-mon.png "Management and Monitoring")](./media/mgmt-mon.png)
 
 Figure 9 – Platform Management and Monitoring
 
-## 1. Planning for Platform Management and Monitoring
+## 1. Planning for platform management and monitoring
 
 This section will focus on centralized management and monitoring at a platform level, exploring how an entire enterprise Azure estate can be operationally maintained. More specifically, it will consider the key recommendations to support central teams ability to maintain operational visibility of a large-scale Azure platform.
 
-***Design Considerations***
+***Design considerations***
 
 - A Log Analytics workspace is an administrative boundary.
 
@@ -32,7 +32,7 @@ This section will focus on centralized management and monitoring at a platform l
 
     - OS logs (e.g. IIS, ETW, Syslogs)
 
-    - Resource Health envents
+    - Resource health events
 
 - Security audit logging and achieving a horizontal security lens across the entire customer Azure estate.
 
@@ -56,19 +56,19 @@ This section will focus on centralized management and monitoring at a platform l
 
 - Operational requirements
 
-    - Operational dashboarding using native tools, such as Log Analytics, or 3^rd^ party tooling.
+    - Operational dashboarding using native tools, such as Log Analytics, or third-party tooling.
 
     - Controlling privileged activities with centralized roles.
 
-    - MSI for access to Azure services; support for Azure Automation is a Scandium deliverable
+    - MSI for access to Azure services; support for Azure Automation is a scalable deliverable
 
     - Resource Locks to protect both the deletion and edit of resources.
 
-***Design Recommendations***
+***Design recommendations***
 
-- Use a single Log Analytics workspace for centralised platform management except where RBAC and data sovereignty requirements mandate the consideration of separate workspaces.
+- Use a single Log Analytics workspace for centralized platform management except where RBAC and data sovereignty requirements mandate considering separate workspaces.
 
-- Export logs to Azure Storage if log retention requirements exceed 2 years.
+- Export logs to Azure Storage if log retention requirements exceed two years.
 
     - Leverage immutable storage with WORM policy (Write Once, Read Many) to make data non-erasable and non-modifiable for a user-specified interval.
 
@@ -88,15 +88,15 @@ This section will focus on centralized management and monitoring at a platform l
 
 <!-- -->
 
-- Do not send raw logs entries back to on premise monitoring systems, but instead adopt the principal of “data born in Azure, stays in Azure”.
+- Do not send raw logs entries back to on premise monitoring systems; instead, adopt the principal of, “data born in Azure, stays in Azure.”
 
-    - If on-premise SIEM integration is required send critical alerts instead or logs.
+    - If on-premises SIEM integration is required, send critical alerts instead of logs.
 
-## 2. Planning for Application Management and Monitoring
+## 2. Planning for application management and monitoring
 
 Expanding on the previous section, this next section will now consider the federated management and monitoring of customer application workloads, touching on how application teams can operationally maintain their application workloads.
 
-***Design Considerations***
+***Design considerations***
 
 - Application monitoring can utilize the centralized Log Analytics workspace or use dedicated workspaces.
 
@@ -104,15 +104,15 @@ Expanding on the previous section, this next section will now consider the feder
 
 - Data aggregation across all application components.
 
-- Health modelling and operationalization of
+- Health modeling and operationalization of:
 
     - How to measure the health of the workload and its subsystems; “traffic light” model for health representation.
 
     - How to respond to failures across application components.
 
-***Design Recommendations***
+***Design recommendations***
 
-- Use an application specific Log Analytics workspace to collect logs and metrics from IaaS and PaaS application resources.
+- Use an application-specific Log Analytics workspace to collect logs and metrics from IaaS and PaaS application resources.
 
 - Establish separate hot and cold paths for metrics and logs.
 
@@ -122,7 +122,7 @@ Expanding on the previous section, this next section will now consider the feder
 
 ## Next steps
 
-Suggested design for [Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
+Suggested design for [business continuity and disaster recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
 
 > [!div class="nextstepaction"]
 > [Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
