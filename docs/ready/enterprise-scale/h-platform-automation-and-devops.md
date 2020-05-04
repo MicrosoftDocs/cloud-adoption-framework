@@ -20,17 +20,17 @@ Figure 10 – Platform Automation and DevOps
 
 ## 1. Planning for a DevOps approach
 
-Many traditional IT operating models are unfortunately not compatible with the cloud, and ultimately customers must undergo a degree of operational and organizational transformation to deliver against enterprise migration targets. Ultimately, it is highly recommended for a DevOps approach to be employed for both application and central teams.
+Many traditional IT operating models are unfortunately not compatible with the cloud, and ultimately customers must undergo a degree of operational and organizational transformation to deliver against enterprise migration targets. Ultimately, it is highly recommended to take a DevOps approach with both application and central teams.
 
 ***Design considerations***
 
-- Where central teams are concerned, CI/CD pipelines should be used to manage policy definitions, role-definitions, policy assignments, and template galleries. Such pipelines will help ensure multiple subscriptions can be operationally managed whilst still conforming to a desired state.
+- Where central teams are concerned, CI/CD pipelines should be used to manage policy definitions, role-definitions, policy assignments, and template galleries. Such pipelines will help ensure multiple subscriptions can be operationally managed while still conforming to a desired state.
 
-- The blanket application of a DevOps model will not miraculously establish capable DevOps teams.
+- The blanket application of a DevOps model will not instantly establish capable DevOps teams.
 
     - Investment in engineering capabilities and resources is critical.
 
-- The customer can resource DevOps roles and functions from a variety of sources aligned to their organization strategy, both internal and external.
+- The customer can source DevOps roles and functions from a variety of internal and external resources aligned with their organization's strategy.
 
 - For some legacy applications, the associated application team may not have engineering resources required to align with a DevOps strategy.
 
@@ -40,13 +40,13 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 - The list below presents a recommended set of DevOps roles for the central “Platform Team”.
 
-- **Platform operations** (PlatformOps) to
+- **Platform operations** (PlatformOps) 
 
     - Subscription provisioning and delegation of required network, IAM, and policies.
 
-    - Platform management and monitoring (holistic).
+    - Platform management and monitoring (holistic)
 
-    - Cost Management (holistic).
+    - Cost management (holistic)
 
     - “Platform as Code” (management of templates, scripts and other assets).
 
@@ -54,7 +54,7 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 - **Security operations** (SecOps)
 
-    - Role-based access control (holistic).
+    - Role-based access control (holistic)
 
     - Key management (for example, SMTP and Domain Controller for central services)
 
@@ -114,19 +114,19 @@ The distribution of roles, responsibilities, and trust between central IT teams 
 
 - **Application functions**
 
-    - Application migration and/or transformation.
+    - Application migration and/or transformation
 
-    - Application management and monitoring (app resources).
+    - Application management and monitoring (app resources)
 
-    - Key management (app keys).
+    - Key management (app keys)
 
-    - Role based access control (app resources).
+    - Role-based access control (app resources)
 
-    - Security monitoring and audit (app resources).
+    - Security monitoring and audit (app resources)
 
-    - Cost Management (app resources).
+    - Cost Management (app resources)
 
-    - Network Management (app resources).
+    - Network management (app resources)
 
 - **Central functions**
 
@@ -134,7 +134,7 @@ The distribution of roles, responsibilities, and trust between central IT teams 
 
     - Subscription management
 
-    - “Platform as Code” (management of templates, scripts and other assets)
+    - “Platform as code” (management of templates, scripts, and other assets)
 
     - Policy management and enforcement (holistic)
 
