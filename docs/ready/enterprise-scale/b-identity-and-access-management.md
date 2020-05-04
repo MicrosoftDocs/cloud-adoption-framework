@@ -12,7 +12,7 @@ ms.custom: csu
 ---
 
 
-# B. Identity and Access Management
+# B. Identity and access management
 
 [![Identity and Access Management](./media/iam.png "Identity and Access Management")](./media/iam.png)
 
@@ -20,11 +20,11 @@ Figure 4 – Identity and Access Management
 
 This section will examine design considerations and recommendations surrounding identity and access management in an enterprise context.
 
-## 1. Planning for Access Management
+## 1. Planning for access management
 
-Enterprise organisations will typically follow a least-privileged approach to operational access and this model should be expanded to consider Azure through AAD RBAC and custom role definitions. It is therefore critical to appropriately plan how to govern control plane and data plane access to resources in Azure, while also fully aligning with Joiner/Mover/Leaver (JML) processes.
+Enterprise organizations will typically follow a least-privileged approach to operational access and this model should be expanded to consider Azure through AAD RBAC and custom role definitions. It is therefore critical to appropriately plan how to govern control plane and data plane access to resources in Azure, while also fully aligning with Joiner/Mover/Leaver (JML) processes.
 
-***Design Considerations***
+***Design considerations***
 
 - There is a limit of 2000 custom RBAC role assignments per subscription.
 
@@ -38,7 +38,7 @@ Enterprise organisations will typically follow a least-privileged approach to op
 
 - Custom role definitions can be used to map responsibility boundaries between central and application teams.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Use AAD RBAC to manage data plane access to resources where possible (e.g. Key Vault, Storage Account, Azure SQL DB).
 
@@ -57,14 +57,14 @@ Enterprise organisations will typically follow a least-privileged approach to op
 | Role                             | Usage                                                                                                     | Actions:                                                                                                                                                                                                           | No Actions:                                                                                                                                                                   |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Azure Platform Owner             | Management Group and Subscription lifecycle management                                                    | *                                                                                                                                                                                                                  |                                                                                                                                                                               |
-| Network Management (NetOps)      | Platform wide Global Connectivity management; VNets, UDRs, NSGs, NVAs, VPN, ER etc.                       | */read, Microsoft.Authorization/*/write, Microsoft.Network/vpnGateways/*, Microsoft.Network/expressRouteCircuits/*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/*                              |                                                                                                                                                                               |
+| Network Management (NetOps)      | Platform-wide Global Connectivity management: VNets, UDRs, NSGs, NVAs, VPN, ER, etc.                       | */read, Microsoft.Authorization/*/write, Microsoft.Network/vpnGateways/*, Microsoft.Network/expressRouteCircuits/*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/*                              |                                                                                                                                                                               |
 | Security Operations (SecOps)     | Security Administrator role with a horizontal view across the entire Azure estate and the KV Purge Policy | */read, */register/action, Resource Policy Contributor, Microsoft.KeyVault/locations/deletedVaults/purge/action Microsoft.Insights/alertRules/*, Microsoft.Authorization/policyDefinitions/*, Microsoft.Security/* |                                                                                                                                                                               |
 | Subscription Owner               | Delegated Role for Subscription Owner derived from subscription Owner role                                | *                                                                                                                                                                                                                  | Microsoft.Authorization/*/write, Microsoft.Network/vpnGateways/*, Microsoft.Network/expressRouteCircuits/*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/* |
 | Application Owners DevOps/AppOps | Contributor role granted for application/operations team at resource group level                          |                                                                                                                                                                                                                    | Microsoft.Network/publicIPAddresses/write, Microsoft.Network/virtualNetworks/write, Microsoft.KeyVault/locations/deletedVaults/purge/action                                   |
 
 - Use JIT for all IaaS Resources to enable network level protection.
 
-- Use AAD Managed Service Identities (MSI) for Azure resources, avoiding username and password-based authentication.
+- Use AAD-managed Service Identities (MSI) for Azure resources, avoiding username and password-based authentication.
 
 - Use privileged identities for automation runbooks that require elevated access permissions.
 
@@ -72,11 +72,11 @@ Enterprise organisations will typically follow a least-privileged approach to op
 
 - Do not add users directly to Azure resource scopes.
 
-## 2. Planning for Authentication Inside the landing zone
+## 2. Planning for authentication inside the landing zone
 
-A critical design decision enterprise organisation must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or create a brand new one. Requirements for authentication inside the “landing zone” should therefore be thoroughly assessed and incorporated into plans to deploy AD, AAD-DS or both.
+A critical design decision enterprise organisation must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or create a brand new one. Requirements for authentication inside the “landing zone” should be thoroughly assessed and incorporated into plans to deploy AD, AAD-DS, or both.
 
-***Design Considerations***
+***Design considerations***
 
 - Centralized and delegated responsibilities to manage resources deployed inside the “landing zone”.
 
@@ -88,7 +88,7 @@ A critical design decision enterprise organisation must make when adopting Azure
 
 - AAD Proxy frontend authentication for applications relying on Integrated Windows Authentication (IWA), Forms/Header based authentication as well as rich client apps integrated with ADAL.
 
-***Design Recommendations***
+***Design recommendations***
 
 - Evaluate the compatibility of workloads for AD and AAD-DS.
 
