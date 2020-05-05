@@ -1,7 +1,7 @@
 ---
 title: "Identity and access management"
 titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: CAF enterprise-scale landing zone - Identity and Access Management
+description: CAF enterprise-scale landing zone - identity and access management
 author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -25,7 +25,7 @@ This section will examine design considerations and recommendations surrounding 
 
 <!-- docsTest:ignore JML -->
 
-Enterprise organizations will typically follow a least-privileged approach to operational access and this model should be expanded to consider Azure through Azure AD RBAC and custom role definitions. It is therefore critical to appropriately plan how to govern control plane and data plane access to resources in Azure, while also fully aligning with joiner/mover/leaver (JML) processes.
+Enterprise organizations will typically follow a least-privileged approach to operational access and this model should be expanded to consider Microsoft Azure through Azure Active Directory (AD) role-based access control (RBAC) and custom role definitions. It is critical to appropriately plan how to govern control plane and data plane access to resources in Azure while also fully aligning with joiner/mover/leaver processes.
 
 **Design considerations:**
 
@@ -34,9 +34,9 @@ Enterprise organizations will typically follow a least-privileged approach to op
 - There is a limit of 500 custom RBAC role assignments per management group.
 
 - Centralized versus federated resource ownership.
-  - Shared resources such as the network will need managed centrally.
+  - Shared resources such as the network will need to be managed centrally.
 
-  - The management of application resources can be delegated to application teams.
+  - Managing application resources can be delegated to application teams.
 
 - Custom role definitions can be used to map responsibility boundaries between central and application teams.
 
@@ -44,7 +44,7 @@ Enterprise organizations will typically follow a least-privileged approach to op
 
 - Use Azure AD RBAC to manage data plane access to resources where possible (such as Key Vault, storage accounts, and Azure SQL Database).
 
-- Use Azure AD PIM to establish zero standing access.
+- Use Azure AD Privileged Identity Management (PIM) to establish zero standing access.
 
 - Use "Azure AD only" groups for Azure control plane resources in PIM when creating entitlements.
 
@@ -54,20 +54,20 @@ Enterprise organizations will typically follow a least-privileged approach to op
 
 - Integrate Azure AD logs with Azure Log Analytics.
 
-- Use custom RBAC role definitions within the Azure AD tenant, considering the following key roles:
+- Use custom RBAC role definitions within the Azure AD tenant while considering the following key roles:
 
 <!-- cSpell:ignore NetOps SecOps DevOps/AppOps -->
 
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Azure Platform Owner             | Management Group and Subscription lifecycle management                                                    | *                                                                                                                                                                                                                  |                                                                                                                                                                               |
-| Network Management (NetOps)      | Platform-wide Global Connectivity management: VNets, UDRs, NSGs, NVAs, VPN, ER, etc.                       | */read, Microsoft.Authorization/*/write, Microsoft.Network/vpnGateways/*, Microsoft.Network/expressRouteCircuits/*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/*                              |                                                                                                                                                                               |
+| Azure Platform Owner             | Management group and subscription lifecycle management                                                    | *                                                                                                                                                                                                                  |                                                                                                                                                                               |
+| Network Management (NetOps)      | Platform-wide global connectivity management: VNets, UDRs, NSGs, NVAs, VPN, ER, etc.                       | */read, Microsoft.Authorization/*/write, Microsoft.Network/vpnGateways/*, Microsoft.Network/expressRouteCircuits/*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/*                              |                                                                                                                                                                               |
 | Security Operations (SecOps)     | Security Administrator role with a horizontal view across the entire Azure estate and the KV Purge Policy | */read, */register/action, Resource Policy Contributor, Microsoft.KeyVault/locations/deletedVaults/purge/action Microsoft.Insights/alertRules/*, Microsoft.Authorization/policyDefinitions/*, Microsoft.Security/* |                                                                                                                                                                               |
-| Subscription Owner               | Delegated Role for Subscription Owner derived from subscription Owner role                                | *                                                                                                                                                                                                                  | Microsoft.Authorization/*/write, Microsoft.Network/vpnGateways/*, Microsoft.Network/expressRouteCircuits/*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/* |
-| Application Owners DevOps/AppOps | Contributor role granted for application/operations team at resource group level                          |                                                                                                                                                                                                                    | Microsoft.Network/publicIPAddresses/write, Microsoft.Network/virtualNetworks/write, Microsoft.KeyVault/locations/deletedVaults/purge/action                                   |
+| Subscription Owner               | Delegated role for Subscription Owner derived from Subscription Owner role                                | *                                                                                                                                                                                                                  | Microsoft.Authorization/*/write, Microsoft.Network/vpnGateways/*, Microsoft.Network/expressRouteCircuits/*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/* |
+| Application Owners DevOps/AppOps | Contributor role granted for application/operations team at the resource group level                          |                                                                                                                                                                                                                    | Microsoft.Network/publicIPAddresses/write, Microsoft.Network/virtualNetworks/write, Microsoft.KeyVault/locations/deletedVaults/purge/action                                   |
 
-- Use JIT for all IaaS resources to enable network level protection.
+- Use just-in-time for all IaaS resources to enable network level protection.
 
-- Use Azure AD managed service identities (MSI) for Azure resources, avoiding username and password-based authentication.
+- Use Azure AD Managed Service Identities for Azure resources while avoiding username and password-based authentication.
 
 - Use privileged identities for automation runbooks that require elevated access permissions.
 
@@ -77,31 +77,31 @@ Enterprise organizations will typically follow a least-privileged approach to op
 
 ## 2. Planning for authentication inside the landing zone
 
-A critical design decision enterprise organization must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or create a brand new one. Requirements for authentication inside the "landing zone" should be thoroughly assessed and incorporated into plans to deploy Active Directory, Azure AD DS, or both.
+A critical design decision enterprise organization must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or create a brand new one. Requirements for authentication inside the "landing zone" should be thoroughly assessed and incorporated into plans to deploy Azure AD, Azure AD Domain Services (DS), or both.
 
 **Design considerations:**
 
 - Centralized and delegated responsibilities to manage resources deployed inside the "landing zone”.
 
-- Capability and performance differences between Active Directory, Azure AD, and Azure AD Domain Services.
+- Capability and performance differences between Active AD and Azure AD Domain Services.
 
-- There are some Azure services that rely on Azure AD DS, such as HDInsight, Azure Files, and WVD.
+- Some Azure services such as HDInsight, Azure Files, and Windows Virtual Desktop rely on Azure AD DS.
 
 - Handling of privileged operations, such as creating a service principal within the Azure AD tenant, registering graph applications inside Azure AD, and procuring a wildcard certificate.
 
-- Azure AD proxy front-end authentication for applications relying on integrated Windows authentication (iwa), forms/header based authentication as well as rich client apps integrated with ADAL.
+- Azure AD proxy front-end authentication for applications relying on integrated Windows authentication, forms/header-based authentication, and rich client apps integrating with Azure AD Authentication Library.
 
 **Design recommendations:**
 
-- Evaluate the compatibility of workloads for ad and Azure AD DS.
+- Evaluate the compatibility of workloads for Azure AD and Azure AD DS.
 
-- Deploy Azure AD DS within the primary region as this service can be projected into only one subscription.
+- Deploy Azure AD DS within the primary region, as this service can be projected into only one subscription.
 
   - Use virtual network peering to support its usage as an authentication service.
 
 - Use managed identities instead of service principles for authentication to Azure services.
 
-- Use just-in-time access for both VM access and Azure control plane administration.
+- Use just-in-time access for both virtual machine access and Azure control plane administration.
 
 <!-- -->
 
