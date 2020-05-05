@@ -11,15 +11,15 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# A. enterprise enrollment and Azure AD tenants
+# A. Enterprise enrollment and Microsoft Azure Active Directory tenants
 
 ![EA enrollment](./media/ea.png)
 
-Figure 3 – EA enrollment hierarchy
+Figure 3 – Enterprise agreement enrollment hierarchy
 
 ## 1. Planning for enterprise enrollment
 
-An enterprise enrollment, often referred to as the enterprise agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
+An enterprise enrollment, often referred to as the enterprise agreement (EA), represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
 
 **Design considerations:**
 
@@ -49,7 +49,7 @@ An enterprise enrollment, often referred to as the enterprise agreement, represe
 
 - Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 
-- If multiple Azure AD tenants are used, ensure the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
+- If multiple Azure Active Directory (AD) tenants are used, ensure the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
 - Separate dev/test/prod environments at an EA account level to support holistic isolation.
 
@@ -61,7 +61,7 @@ An enterprise enrollment, often referred to as the enterprise agreement, represe
 
 ## 2. Define Azure AD tenants
 
-An Azure AD tenant is an instance of Azure Active Directory, which contains accounts and groups, and acts as an authentication source for subscriptions, which must be rooted to a single Azure AD tenant.
+An Azure AD tenant is an instance of Azure AD, which contains accounts and groups and acts as an authentication source for subscriptions that must be rooted to a single Azure AD tenant.
 
 **Design considerations:**
 
@@ -73,11 +73,11 @@ An Azure AD tenant is an instance of Azure Active Directory, which contains acco
 
 - Enforce multi-factor authentication and conditional access policies for all privileged accounts.
 
-- Use Azure AD PIM for identity and access management.
+- Use Azure AD Privileged Identity Management for identity and access management.
 
 <!-- docsTest:ignore Dev/Test/Prod -->
 
-- If Dev/Test/Prod are going to be completely isolated environments from an identity perspective, separate them at a tenant level (for example, use multiple tenants).
+- If development/testing/production are going to be completely isolated environments from an identity perspective, separate them at a tenant level (for example, use multiple tenants).
 
 <!-- -->
 
