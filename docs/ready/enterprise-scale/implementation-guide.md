@@ -12,7 +12,7 @@ ms.custom: csu
 ---
 
 
-# Implementation Guideline
+# Implementation guideline
 
 There are two categories of activities that must take place in order to implement the CAF enterprise-scale landing zone architecture.
 
@@ -27,7 +27,7 @@ There are two categories of activities that must take place in order to implemen
 
 | No         | Area                               | Activities                                                                                                                                                     |
 |------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1          | EA Enrolment & AAD Tenants         | 1.       Setup the EA Administrator and Notification Account.                                                                                                  |
+| 1          | EA Enrollment and AAD Tenants         | 1.       Setup the EA Administrator and Notification Account.                                                                                                  |
 |            |                                    | 2.       Create Departments – Business Domains/Geo Based/Org Hierarchy.                                                                                        |
 |            |                                    | 3.       Create an EA Account and assign budget.                                                                                                               |
 |            |                                    | 4.       Setup AAD Connect for each AAD Tenant if identity is to be synchronized from on-premises.                                                             |
@@ -180,7 +180,7 @@ The table below provides a list of example Azure Policies to enforce typical Net
 
 6.  If it is the first/primary region, provision an AAD DS instance in primary location (optional)
 
-## File -&gt; New -&gt; “landing zone” for Applications and Workloads
+## File -&gt; New -&gt; “landing zone” for applications and workloads
 
 1.  Create a Subscription and assign the requestor as the “Subscription Owner”.
 
