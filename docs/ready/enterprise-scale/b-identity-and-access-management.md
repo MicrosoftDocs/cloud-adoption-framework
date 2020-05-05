@@ -67,7 +67,7 @@ Enterprise organizations will typically follow a least-privileged approach to op
 
 - Use JIT for all IaaS resources to enable network level protection.
 
-- Use Azure AD-managed service identities (MSI) for Azure resources, avoiding username and password-based authentication.
+- Use Azure AD managed service identities (MSI) for Azure resources, avoiding username and password-based authentication.
 
 - Use privileged identities for automation runbooks that require elevated access permissions.
 
@@ -85,17 +85,17 @@ A critical design decision enterprise organization must make when adopting Azure
 
 - Capability and performance differences between Active Directory, Azure AD, and Azure AD Domain Services.
 
-- There are some Azure services that rely on Azure AD DS, such as HDInsight, Azure file service, WVD.
+- There are some Azure services that rely on Azure AD DS, such as HDInsight, Azure Files, and WVD.
 
 - Handling of privileged operations, such as creating a service principal within the Azure AD tenant, registering graph applications inside Azure AD, and procuring a wildcard certificate.
 
-- Azure AD proxy front-end authentication for applications relying on integrated Windows authentication (IWA), forms/header based authentication as well as rich client apps integrated with ADAL.
+- Azure AD proxy front-end authentication for applications relying on integrated Windows authentication (iwa), forms/header based authentication as well as rich client apps integrated with ADAL.
 
 **Design recommendations:**
 
 - Evaluate the compatibility of workloads for ad and Azure AD DS.
 
-- Deploy Azure AD-DS within the primary region as this service can be projected into only one subscription.
+- Deploy Azure AD DS within the primary region as this service can be projected into only one subscription.
 
   - Use virtual network peering to support its usage as an authentication service.
 
@@ -109,7 +109,7 @@ A critical design decision enterprise organization must make when adopting Azure
 
 ## Next steps
 
-Suggested design for [Management group and subscription organization](./c-management-group-and-subscription-organization.md)
+Suggested design for [management group and subscription organization](./c-management-group-and-subscription-organization.md).
 
 > [!div class="nextstepaction"]
 > [Management group and subscription organization](./c-management-group-and-subscription-organization.md)

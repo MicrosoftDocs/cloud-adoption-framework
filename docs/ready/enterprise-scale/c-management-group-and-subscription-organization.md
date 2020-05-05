@@ -11,8 +11,6 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-<!-- cSpell:ignore rkuehfus CAF -->
-
 # C. Management group and subscription organization
 
 [![Management group hierarchy](./media/sub-org.png "management group hierarchy")](./media/sub-org.png)
@@ -83,7 +81,7 @@ Subscriptions are a unit of management and scale within Azure and play a critica
 
   - **Management boundary:** Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns. For example, different environments such as development, test, and production are often isolated from a management perspective.
 
-    - **Policy boundary** – subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads such as pci typically require additional policies to achieve compliance, and this additional overhead does not need considered holistically if a separate subscription is used. Similarly, development environments may have more relaxed policy requirements relative to production environments.
+    - **Policy boundary:** Subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads such as PCI typically require additional policies to achieve compliance, and this additional overhead does not need considered holistically if a separate subscription is used. Similarly, development environments may have more relaxed policy requirements relative to production environments.
 
     - **Target network topology** – virtual networks cannot be shared across subscriptions, but they can be connected using different technologies, such as virtual network peering or ExpressRoute. Hence, it is important to consider network composition and which workloads must communicate with one another when deciding if a new subscription is required.
 
@@ -141,7 +139,7 @@ Cost transparency across a technical estate is a critical management challenge f
 
 ## Next steps
 
-Suggested design for [Network topology and connectivity](./d-network-topology-and-connectivity.md)
+Suggested design for [network topology and connectivity](./d-network-topology-and-connectivity.md).
 
 > [!div class="nextstepaction"]
 > [Network topology and connectivity](./d-network-topology-and-connectivity.md)

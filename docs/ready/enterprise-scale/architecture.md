@@ -17,6 +17,8 @@ ms.custom: csu
 
 The principal challenges facing enterprise customers adopting Azure are 1) how to allow applications (legacy or modern) to seamlessly move at their own pace, and 2) how to provide secure and streamlined operations, management, and governance across the entire platform and all encompassed applications. To address these challenges, customers require a forward-looking and Azure-native design approach in the context of the CAF enterprise-scale landing zone architecture.
 
+<!-- markdownlint-disable MD026 -->
+
 ## What is the CAF enterprise-scale landing zone architecture?
 
 The CAF enterprise-scale landing zone architecture represents the strategic design path and target technical state for the customer's Azure environment. It will continue to evolve in lockstep with the Azure platform and is ultimately defined by the various design decisions the customer organization must make to define their Azure journey.
@@ -35,9 +37,7 @@ In the [landing zone considerations article](../../ready/considerations/index.md
 
 **Principle purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to more quickly mature the customer's landing zones. CAF enterprise-scale landing zone expands the principle purpose of the landing zones to pull forward aspects of governance, compliance, security, and operational management. Each of these is addressed in the first release of the landing zone(s) and supporting shared services.
 
----
-_Using an analogy, this is similar to how city utilities such as water, gas, and electricity are accessible before new houses are constructed. In this context, the network, IAM, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process._
-***
+Using an analogy, this is similar to how city utilities such as water, gas, and electricity are accessible before new houses are constructed. In this context, the network, IAM, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process.
 
 ![Landing zone](./media/lz-design.png "landing zone")
 _Figure 1 – “landing zone" design_
@@ -54,9 +54,9 @@ The following list expands on the landing zone illustration by iterating through
 
 - **Network topology and connectivity:** The end-to-end network topology must be built and deployed across Azure regions and on-premises customer environments to ensure north-south and east-west connectivity between platform deployments. Network security must also be designed with the required services and resources identified, deployed, and configured such as firewalls and NVAs to ensure security requirements are fully met.
 
-- **Shared services infrastructure**: Centrally controlled but de-centrally deployed services such as domain controllers must be designed, configured, and built to make requisite common services and resources available for application teams to consume and integrate with. It is important to note that not all "traditional" on-premises shared services should be provided in the cloud. For example, file shares and hsms should be considered as application level resources using native Azure services.
+- **Shared services infrastructure:** Centrally controlled but de-centrally deployed services such as domain controllers must be designed, configured, and built to make requisite common services and resources available for application teams to consume and integrate with. It is important to note that not all "traditional" on-premises shared services should be provided in the cloud. For example, file shares and HSMs should be considered as application-level resources using native Azure services.
 
-- **DevOps:** An end-to-end DevOps experience with robust sdlc practices must be designed, built, and deployed to ensure the safe, repeatable, and consistent delivery of infrastructure as code artifacts. Such artifacts are to be developed, tested, and deployed using dedicated integration, release and, deployment pipelines with strong source control and traceability.
+- **DevOps:** An end-to-end DevOps experience with robust SDLC practices must be designed, built, and deployed to ensure the safe, repeatable, and consistent delivery of infrastructure as code artifacts. Such artifacts are to be developed, tested, and deployed using dedicated integration, release and, deployment pipelines with strong source control and traceability.
 
 In addition to the key aspects denoted above, the design, configuration, deployment, and integration of each "landing zone" should meet critical customer requirements relating to:
 
@@ -66,12 +66,12 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 
 ## High-level architecture
 
-![CAF enterprise-scale landing zone architecture](./media/ns-arch.png "CAF enterprise-scale landing zone architecture")
-_Figure 2 – CAF enterprise-scale landing zone architecture_
+![CAF enterprise-scale landing zone architecture](./media/ns-arch.png "caf enterprise-scale landing zone architecture")
+_Figure 2: CAF enterprise-scale landing zone architecture_
 
 ## Next steps
 
-Customize implementation of this architecture using the [Design guidelines](./design-guidelines.md).
+Customize implementation of this architecture using the [design guidelines](./design-guidelines.md).
 
 > [!div class="nextstepaction"]
 > [Design guidelines](./design-guidelines.md)

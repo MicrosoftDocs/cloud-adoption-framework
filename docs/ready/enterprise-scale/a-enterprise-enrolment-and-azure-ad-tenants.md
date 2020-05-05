@@ -13,7 +13,7 @@ ms.custom: csu
 
 # A. enterprise enrollment and Azure AD tenants
 
-[![EA enrollment](./media/EA.png "EA enrollment")](./media/ea.png)
+![EA enrollment](./media/ea.png)
 
 Figure 3 – EA enrollment hierarchy
 
@@ -71,7 +71,7 @@ An Azure AD tenant is an instance of Azure Active Directory, which contains acco
 
 - Use Azure AD SSO based on the selected [planning topology](/azure/active-directory/hybrid/plan-connect-topologies).
 
-- Enforce mfa and conditional access policies for all privileged accounts.
+- Enforce multi-factor authentication and conditional access policies for all privileged accounts.
 
 - Use Azure AD PIM for identity and access management.
 
@@ -85,7 +85,7 @@ An Azure AD tenant is an instance of Azure Active Directory, which contains acco
 
 ## Next steps
 
-Suggested design for [Identity and access management](./b-identity-and-access-management.md).
+Suggested design for [identity and access management](./b-identity-and-access-management.md).
 
 > [!div class="nextstepaction"]
 > [Identity and access management](./b-identity-and-access-management.md)
