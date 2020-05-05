@@ -38,7 +38,7 @@ This section strives to help readers capture customer disaster recovery requirem
 
     - Support for specific VM SKUs with availability zones.
 
-    - If ultra disks are used, using vailability Zones is mandatory.
+    - If ultra disks are used, using availability Zones is mandatory.
 
 - Consistent backups for application state and data.
 
@@ -66,7 +66,7 @@ This section strives to help readers capture customer disaster recovery requirem
 
 ***Design recommendations***
 
-- Use Azure Site Recovery for Azure to Azure virtual machine disaister recovery scenarios to replicate workloads across regions.
+- Use Azure Site Recovery for Azure to Azure virtual machine disaster recovery scenarios to replicate workloads across regions.
 
 - Utilize native PaaS service DR capabilities, such as geo-replication for Azure Storage.
 
