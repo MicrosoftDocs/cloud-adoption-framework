@@ -11,17 +11,17 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# A. Enterprise enrollment and Azure AD tenants
+# A. enterprise enrollment and Azure AD tenants
 
-[![EA Enrollment](./media/ea.png "EA Enrollment")](./media/ea.png)
+[![EA enrollment](./media/EA.png "EA enrollment")](./media/ea.png)
 
-Figure 3 – EA Enrollment Hierarchy
+Figure 3 – EA enrollment hierarchy
 
 ## 1. Planning for enterprise enrollment
 
 An enterprise enrollment, often referred to as the enterprise agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
 
-***Design considerations***
+**Design considerations:**
 
 - The enrollment provides a hierarchical organizational structure to govern the management of customer subscriptions.
 
@@ -37,53 +37,55 @@ An enterprise enrollment, often referred to as the enterprise agreement, represe
 
 - A subscription can be suspended based on a specified set of criteria.
 
-***Design recommendations***
+**Design recommendations:**
 
 - Set up the notification account email address to ensure notifications are sent to an appropriate group mailbox.
 
 - Assign a budget for each account and establish an alert associated with the budget.
 
-- Leverage the department organizational element to map customer business divisions.
+- Use the department organizational element to map customer business divisions.
 
 - Create a new department if business domains have independent IT capabilities.
 
 - Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 
-- If multiple AAD tenants are used, ensure the Account owner is associated with the same tenant as where subscriptions for the account are provisioned.
+- If multiple Azure AD tenants are used, ensure the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
-- Separate Dev/Test/Prod environments at an EA account level to support holistic isolation.
+- Separate dev/test/prod environments at an EA account level to support holistic isolation.
 
 <!-- -->
 
 - Do not ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
 
-- Do not move or rename an EA Account in Azure AD.
+- Do not move or rename an EA account in Azure AD.
 
-## 2. Define Azure AD Tenants
+## 2. Define Azure AD tenants
 
-An Azure AD tenant is an instance of Azure Active Directory, which contains accounts and groups, and acts as an authentication source for subscriptions, which must be rooted to a single AAD tenant.
+An Azure AD tenant is an instance of Azure Active Directory, which contains accounts and groups, and acts as an authentication source for subscriptions, which must be rooted to a single Azure AD tenant.
 
-***Design considerations***
+**Design considerations:**
 
-- Multiple tenants can be leveraged under the same enterprise enrollment.
+- Multiple tenants can be used under the same enterprise enrollment.
 
-***Design recommendations***
+**Design recommendations:**
 
-- Leverage AAD SSO based on the selected [planning topology](/azure/active-directory/hybrid/plan-connect-topologies).
+- Use Azure AD SSO based on the selected [planning topology](/azure/active-directory/hybrid/plan-connect-topologies).
 
-- Enforce MFA and conditional access policies for all privileged accounts.
+- Enforce mfa and conditional access policies for all privileged accounts.
 
-- Use AAD PIM for identity and access management.
+- Use Azure AD PIM for identity and access management.
 
-- If Dev/Test/Prod are going to be completely isolated environments from an identity perspective, separate them at a tenant level (e.g., use multiple tenants).
+<!-- docsTest:ignore Dev/Test/Prod -->
+
+- If Dev/Test/Prod are going to be completely isolated environments from an identity perspective, separate them at a tenant level (for example, use multiple tenants).
 
 <!-- -->
 
-- Avoid creating a new AAD tenant unless there is a strong IAM justification and processes are already in place.
+- Avoid creating a new Azure AD tenant unless there is a strong IAM justification and processes are already in place.
 
 ## Next steps
 
-Suggested design for [Identity and Access Management](./B-Identity-and-Access-Management.md)
+Suggested design for [Identity and access management](./b-identity-and-access-management.md).
 
 > [!div class="nextstepaction"]
-> [Identity and Access Management](./B-Identity-and-Access-Management.md)
+> [Identity and access management](./b-identity-and-access-management.md)
