@@ -3,7 +3,7 @@ title: "Skills readiness for cloud monitoring"
 description: Skills readiness for cloud monitoring
 author: BrianBlanchard
 ms.author: magoedte
-ms.date: 03/23/2020
+ms.date: 05/05/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -32,13 +32,13 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Understand how [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) helps you view availability and performance of your applications and services together from one place. Pluralsight offers the following courses to help:
 
-  - [Microsoft Azure IaaS Monitoring and Management](https://www.pluralsight.com/courses/azure-iaas-monitoring-management-getting-started) helps you learn how to use Azure Monitor to perform basic monitoring of workloads running on IaaS.
-
-  - [Monitoring Microsoft Azure Resources and Workloads](https://www.pluralsight.com/courses/microsoft-azure-resources-workloads-monitoring) helps you learn how to use Microsoft Azure monitoring tools to monitor Azure network resources as well as resources on-premises.
+  - [Monitoring Microsoft Azure Resources and Workloads](https://app.pluralsight.com/library/courses/microsoft-azure-resources-workloads-monitoring-update/table-of-contents) helps you learn how to use Microsoft Azure monitoring tools to monitor Azure network resources as well as resources on-premises.
 
   - [Microsoft Azure DevOps Engineer: Optimize Feedback Mechanisms](https://www.pluralsight.com/courses/microsoft-azure-optimize-feedback-mechanisms) helps you prepare you to use Azure Monitor, including Application Insights and Log Analytics to monitor and optimize your web applications.
 
   - [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
+
+  - [Instrument Applications with Azure Monitor Application Insights](https://app.pluralsight.com/library/courses/microsoft-azure-application-insights-web-application-instrument) is a deep-dive course on using the Application Insights SDK to collect telemetry and events from an app with Angular and Node.js components.
 
 - With [Azure Arc for servers](https://docs.microsoft.com/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage native Azure virtual machines.
 
