@@ -103,7 +103,7 @@ The following list provides recommended Azure resource type prefixes to use when
 
 | Asset type                  | Name prefix |
 |-----------------------------|-------------|
-| Virtual machine             | vm          |
+| Virtual machine             | vm-         |
 | Virtual machine scale set   | vmss-       |
 | Availability set            | avail-      |
 | VM storage account          | stvm        |
@@ -137,8 +137,8 @@ The following list provides recommended Azure resource type prefixes to use when
 
 | Asset type       | Name prefix |
 |------------------|-------------|
-| Storage account  | st          |
-| Azure StorSimple | ssimp       |
+| Storage account  | st-         |
+| Azure StorSimple | ssimp-      |
 
 ### AI + Machine Learning
 
@@ -156,8 +156,8 @@ The following list provides recommended Azure resource type prefixes to use when
 | Azure Databricks workspace      | dbw-        |
 | Azure Stream Analytics          | asa-        |
 | Azure Data Factory              | adf-        |
-| Data Lake Store account         | dls         |
-| Data Lake Analytics account     | dla         |
+| Data Lake Store account         | dls-        |
+| Data Lake Analytics account     | dla-        |
 | Event hub                       | evh-        |
 | HDInsight - Hadoop cluster      | hadoop-     |
 | HDInsight - HBase cluster       | hbase-      |
