@@ -238,4 +238,4 @@ This function will be entry point of GitHub Actions when pull request is approve
 
 "Operationalize" Azure environment at-scale for day-to-day activities.
 
-Contoso has decided to leverage PowerShell 7 and mandated all CI tasks must complete successfully on both Windows and Linux hosts simultaneously to ensure complete coverage. No local execution should be necessary after initialization and discovery activity is completed and they will publish these CI tasks as GitHub Actions.
+Contoso has decided to use PowerShell 7 and mandated all CI tasks must complete successfully on both Windows and Linux hosts simultaneously to ensure complete coverage. No local execution should be necessary after initialization and discovery activity is completed and they will publish these CI tasks as GitHub Actions.

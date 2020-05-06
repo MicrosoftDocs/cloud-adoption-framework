@@ -22,7 +22,7 @@ Figure 9 – Platform Management and Monitoring
 
 This section will focus on centralized management and monitoring at a platform level, exploring how an entire enterprise Azure estate can be operationally maintained. More specifically, it will consider the key recommendations to support central teams ability to maintain operational visibility of a large-scale Azure platform.
 
-***Design considerations***
+**Design considerations:**
 
 - A Log Analytics workspace is an administrative boundary.
 
@@ -64,7 +64,7 @@ This section will focus on centralized management and monitoring at a platform l
 
     - Resource Locks to protect both the deletion and edit of resources.
 
-***Design recommendations***
+**Design recommendations:**
 
 - Use a single Log Analytics workspace for centralized platform management except where RBAC and data sovereignty requirements mandate considering separate workspaces.
 
@@ -96,7 +96,7 @@ This section will focus on centralized management and monitoring at a platform l
 
 Expanding on the previous section, this next section will now consider the federated management and monitoring of customer application workloads, touching on how application teams can operationally maintain their application workloads.
 
-***Design considerations***
+**Design considerations:**
 
 - Application monitoring can utilize the centralized Log Analytics workspace or use dedicated workspaces.
 
@@ -110,7 +110,7 @@ Expanding on the previous section, this next section will now consider the feder
 
     - How to respond to failures across application components.
 
-***Design recommendations***
+**Design recommendations:**
 
 - Use an application-specific Log Analytics workspace to collect logs and metrics from IaaS and PaaS application resources.
 

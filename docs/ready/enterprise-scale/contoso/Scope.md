@@ -23,7 +23,7 @@ Contoso has come across the CAF enterprise-scale landing zone architecture, whic
 
 Contoso has opted for simpler EA design with a single Department and multiple EA Accounts. Each EA account will have an associated service principal account by configuring IAM permission as part of the (automated) subscription provisioning process.
 
-Contoso has three separate Azure AD tenants for Dev, Test, and Prod and Azure AD Connect is already in place for the Production Azure AD tenant. The dev and test tenants are used for Office 365 validation, and there is no requirement to separate Identities at the Azure AD tenant level across dev, test, and production environments in Azure, so Contoso will only leverage the Production Azure AD tenant for Azure access.  
+Contoso has three separate Azure AD tenants for Dev, Test, and Prod and Azure AD Connect is already in place for the Production Azure AD tenant. The dev and test tenants are used for Office 365 validation, and there is no requirement to separate Identities at the Azure AD tenant level across dev, test, and production environments in Azure, so Contoso will only use the Production Azure AD tenant for Azure access.  
 
 Additional controls will be in place for networking (isolation) and identity (segregation of duties) to guarantee separation between dev, test, and production workloads. From a networking and identity perspective, all subscriptions include sandbox subscriptions and are considered as production.
 
@@ -543,7 +543,7 @@ Contoso has defined the following BCDR guidelines when applications are moved to
 * Application architectures should be built using a combination of Availability Zones across the North Europe and West Europe paired Azure regions. More specifically, applications and their data should be synchronously replicated across Availability Zones within an Azure region (North Europe) for high-availability purposes, and asynchronously replicated across Azure regions (West Europe) for disaster recovery protection.
 * Azure services that provide native replication across Availability Zones should be used as a preference, such as Zone-Redundant Storage and Azure SQL DB.
 * Stateless virtual machine workloads should be deployed across multiple instances in Availability Zones behind a Load Balancer standard or Application Gateway (v2).
-* Stateful virtual machine workloads should leverage application-level replication across Availability Zones, such as SQL AlwaysOn.
+* Stateful virtual machine workloads should use application-level replication across Availability Zones, such as SQL AlwaysOn.
 * Stateful virtual machine workloads that do not support application level replication should use Azure Site Recovery Zonal-Replication (preview).
 
 ### Disaster Recovery

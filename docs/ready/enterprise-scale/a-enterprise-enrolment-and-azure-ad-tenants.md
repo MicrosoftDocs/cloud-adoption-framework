@@ -14,8 +14,7 @@ ms.custom: csu
 # A. Enterprise enrollment and Microsoft Azure Active Directory tenants
 
 ![EA enrollment](./media/ea.png)
-
-Figure 3 – Enterprise agreement enrollment hierarchy
+_Figure 3: Enterprise agreement enrollment hierarchy_
 
 ## 1. Planning for enterprise enrollment
 

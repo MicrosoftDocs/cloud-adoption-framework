@@ -22,7 +22,7 @@ Figure 10 – Platform Automation and DevOps
 
 Many traditional IT operating models are unfortunately not compatible with the cloud, and ultimately customers must undergo a degree of operational and organizational transformation to deliver against enterprise migration targets. Ultimately, it is highly recommended to take a DevOps approach with both application and central teams.
 
-***Design considerations***
+**Design considerations:**
 
 - Where central teams are concerned, CI/CD pipelines should be used to manage policy definitions, role-definitions, policy assignments, and template galleries. Such pipelines will help ensure multiple subscriptions can be operationally managed while still conforming to a desired state.
 
@@ -34,7 +34,7 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 - For some legacy applications, the associated application team may not have engineering resources required to align with a DevOps strategy.
 
-***Design recommendations***
+**Design recommendations:**
 
 - Establish a cross-cutting central DevOps “Platform Team” to build, manage, and maintain the CAF enterprise-scale landing zone architecture.
 
@@ -90,7 +90,7 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 - Leverage a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams.
 
-- In the spirit of accelerating Azure adoption, the central “Platform Team” should be leveraged to establish a common set of templates and libraries for application teams to draw upon.
+- In the spirit of accelerating Azure adoption, the central “Platform Team” should be used to establish a common set of templates and libraries for application teams to draw upon.
 
     - For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and more importantly, ensure alignment with the overall target CAF enterprise-scale landing zone architecture.
 
@@ -104,11 +104,11 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 The distribution of roles, responsibilities, and trust between central IT teams and applications teams is paramount to the operational transformation customers must undergo when adopting the cloud at scale.
 
-***Design considerations***
+**Design considerations:**
 
 - Central teams strive to maintain full control whilst application owners seek to maximize agility. The balance between these goals can greatly influence the success of the migration
 
-***Design recommendations***
+**Design recommendations:**
 
 - The list below presents a recommended distribution of responsibilities between central IT and application teams, striving to empower migration/transformation activities with minimal central dependencies while still supporting the centralized governance of security and operability across the entire estate.
 

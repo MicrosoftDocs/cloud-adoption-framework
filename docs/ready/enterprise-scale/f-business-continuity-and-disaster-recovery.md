@@ -18,7 +18,7 @@ ms.custom: csu
 
 This section strives to help readers capture customer disaster recovery requirements, to design suitable platform level capabilities that application workloads can subsequently consume to meet their specific RTO and RPO requirements.
 
-***Design considerations***
+**Design considerations:**
 
 - Application and data availability requirements and the relative use of active-active and active-passive availability patterns (e.g., workload RPO and RTO requirements).
 
@@ -64,7 +64,7 @@ This section strives to help readers capture customer disaster recovery requirem
 
 - Key Vault DR for application keys, certificates, and secrets.
 
-***Design recommendations***
+**Design recommendations:**
 
 - Use Azure Site Recovery for Azure to Azure virtual machine disaster recovery scenarios to replicate workloads across regions.
 

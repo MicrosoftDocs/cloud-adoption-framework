@@ -40,7 +40,7 @@ In the [landing zone considerations article](../../ready/considerations/index.md
 This is similar to how city utilities such as water, gas, and electricity are accessible before new houses are constructed. In this context, the network, identity and access management, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process.
 
 ![Landing zone](./media/lz-design.png "landing zone")
-_Figure 1 – “landing zone" design_
+_Figure 1: Landing zone design_
 
 ## Expanded list of requisite components
 
@@ -66,7 +66,7 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 
 ## High-level architecture
 
-![CAF enterprise-scale landing zone architecture](./media/ns-arch.png "caf enterprise-scale landing zone architecture")
+![CAF enterprise-scale landing zone architecture](./media/ns-arch.png)
 _Figure 2: CAF enterprise-scale landing zone architecture_
 
 ## Next steps

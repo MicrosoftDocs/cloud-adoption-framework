@@ -89,7 +89,7 @@ A critical design decision enterprise organization must make when adopting Azure
 
 - Handling of privileged operations, such as creating a service principal within the Azure AD tenant, registering graph applications inside Azure AD, and procuring a wildcard certificate.
 
-- Azure AD proxy front-end authentication for applications relying on integrated Windows authentication, forms/header-based authentication, and rich client apps integrating with Azure AD Authentication Library.
+- Azure AD proxy front-end authentication for applications relying on integrated Windows authentication (IWA), forms/header based authentication as well as rich client apps integrated with ADAL.
 
 **Design recommendations:**
 

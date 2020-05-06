@@ -13,9 +13,8 @@ ms.custom: csu
 
 # C. Management group and subscription organization
 
-[![Management group hierarchy](./media/sub-org.png "management group hierarchy")](./media/sub-org.png)
-
-Figure 5 – Management group hierarchy
+![Management group hierarchy](./media/sub-org.png)
+_Figure 5: Management group hierarchy_
 
 ## 1. Define management group hierarchy
 
@@ -53,7 +52,7 @@ Subscriptions are a unit of management and scale within Azure and play a critica
 
 **Design considerations:**
 
-- Subscriptions serve as a policy boundary for the assignment of Azure policies. For example, secure workloads such as pci typically require additional policies to achieve compliance, and this additional overhead does not need considered holistically if a separate subscription is used.
+- Subscriptions serve as a policy boundary for the assignment of Azure policies. For example, secure workloads such as PCI typically require additional policies to achieve compliance, and this additional overhead does not need considered holistically if a separate subscription is used.
 
 - Subscriptions serve as a scale unit so that component workloads can scale within platform [subscription limits](/azure/azure-subscription-service-limits).
 

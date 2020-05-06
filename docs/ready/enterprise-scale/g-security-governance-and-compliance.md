@@ -18,7 +18,7 @@ ms.custom: csu
 
 Encryption is a vital step towards ensuring data privacy, compliance, and sovereignty in Azure, and is ultimately one of the most important security concerns of many enterprise customers.
 
-***Design considerations***
+**Design considerations:**
 
 - Subscription and scale limits as they apply to Key Vault.
 
@@ -30,7 +30,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and sovere
 
     - Consideration should be given to isolate application/workload specific secrets and shared secrets as appropriate.
 
-- Premium SKU can be leveraged where HSM protected keys are required.
+- Premium SKU can be used where HSM protected keys are required.
 
     - Underlying HSMs are FIPS 140-2 Level 2.
 
@@ -54,7 +54,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and sovere
 
 - Requirements surrounding the use customer managed keys for native encryption mechanisms such as Storage Service Encryption (SSE).
 
-***Design recommendations***
+**Design recommendations:**
 
 - Use a federated Key Vault model to avoid transaction scale limits.
 
@@ -82,7 +82,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and sovere
 
 Azure Policy is essential to ensuring security and compliance within enterprise technical estates, enforcing vital management and security conventions across Azure platform services, as well as supplementing RBAC concerning what actions authorized users can perform.
 
-***Design considerations***
+**Design considerations:**
 
 - Compliance and assurance on Azure is achieved through Azure Policy; enforcing management and security conventions, such as encryption and the use of private endpoints.
 
@@ -96,7 +96,7 @@ Azure Policy is essential to ensuring security and compliance within enterprise 
 
 - Azure Policy limits, such as the restriction of 500 Definitions at any given scope.
 
-***Design recommendations***
+**Design recommendations:**
 
 - Identify required Azure Tags and use the append policy mode to enforce their usage.
 
@@ -118,7 +118,7 @@ Azure Policy is essential to ensuring security and compliance within enterprise 
 
 One of the primary concerns of enterprise customers when migrating to Azure is losing visibility into what is happening within their technical estate. Security monitoring and audit logging of Azure platform services is therefore a crucial security practice required to appropriately safeguard sensitive data.
 
-***Design considerations***
+**Design considerations:**
 
 - Data retention periods for regulatory audit data; AAD reports (premium) has a 30-day retention period.
 
@@ -134,7 +134,7 @@ One of the primary concerns of enterprise customers when migrating to Azure is l
 
 - SIEM integration with Azure Security Center and Azure Sentinel.
 
-***Design recommendations***
+**Design recommendations:**
 
 - Use AAD reporting capabilities to generate access control audit reports.
 
@@ -154,7 +154,7 @@ One of the primary concerns of enterprise customers when migrating to Azure is l
 
 ## 4. Planning for platform security
 
-***Design considerations***
+**Design considerations:**
 
 - Many customers, particularly those in security conscious industries such as FSI, demand a detailed understanding across the following two topic areas.
 
@@ -162,7 +162,7 @@ One of the primary concerns of enterprise customers when migrating to Azure is l
 
     - “Multi-tenancy under the hood” for key platform components, from Hyper-V and the HSMs underpinning Key Vault to database engines.
 
-***Design recommendations***
+**Design recommendations:**
 
 - It is recommended that a joint examination of each required service be conducted, within the context of underlying customer requirements.
 

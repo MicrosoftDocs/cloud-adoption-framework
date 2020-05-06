@@ -202,7 +202,7 @@ items:
           href: ready/enterprise-scale/design-guidelines.md
         - name: Critical design areas
           items:
-          - name: A - Enterprise Enrolment and Azure AD Tenants
+          - name: A - Enterprise Enrollment and Azure AD Tenants
             href: ready/enterprise-scale/a-enterprise-enrolment-and-azure-ad-tenants.md
           - name: B - Identity and Access Management
             href: ready/enterprise-scale/b-identity-and-access-management.md
