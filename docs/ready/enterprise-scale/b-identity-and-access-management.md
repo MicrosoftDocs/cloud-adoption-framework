@@ -11,7 +11,7 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-<!-- cSpell:ignore rkuehfus CAF -->
+<!-- cSpell:ignore rkuehfus ADAL CAF -->
 
 # B. Identity and access management
 
@@ -25,7 +25,7 @@ This section will examine design considerations and recommendations surrounding 
 
 <!-- docsTest:ignore JML -->
 
-Enterprise organizations will typically follow a least-privileged approach to operational access and this model should be expanded to consider Microsoft Azure through Azure Active Directory (AD) role-based access control (RBAC) and custom role definitions. It is critical to appropriately plan how to govern control plane and data plane access to resources in Azure while also fully aligning with joiner/mover/leaver processes.
+Enterprise organizations will typically follow a least-privilege approach to operational access and this model should be expanded to consider Microsoft Azure through Azure Active Directory (Azure AD) role-based access control (RBAC) and custom role definitions. It is critical to appropriately plan how to govern control plane and data plane access to resources in Azure while also fully aligning with joiner/mover/leaver processes.
 
 **Design considerations:**
 
@@ -67,7 +67,7 @@ Enterprise organizations will typically follow a least-privileged approach to op
 
 - Use just-in-time for all IaaS resources to enable network level protection.
 
-- Use Azure AD Managed Service Identities for Azure resources while avoiding username and password-based authentication.
+- Use Azure AD managed service identities for Azure resources while avoiding username and password-based authentication.
 
 - Use privileged identities for automation runbooks that require elevated access permissions.
 
@@ -77,19 +77,19 @@ Enterprise organizations will typically follow a least-privileged approach to op
 
 ## 2. Planning for authentication inside the landing zone
 
-A critical design decision enterprise organization must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or create a brand new one. Requirements for authentication inside the "landing zone" should be thoroughly assessed and incorporated into plans to deploy Azure AD, Azure AD Domain Services (DS), or both.
+A critical design decision enterprise organization must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or create a brand new one. Requirements for authentication inside the "landing zone" should be thoroughly assessed and incorporated into plans to deploy Azure AD, Azure AD Domain Services (AD DS), or both.
 
 **Design considerations:**
 
 - Centralized and delegated responsibilities to manage resources deployed inside the "landing zone”.
 
-- Capability and performance differences between Active AD and Azure AD Domain Services.
+- Capability and performance differences between active Active Directory and Azure AD Domain Services.
 
 - Some Azure services such as HDInsight, Azure Files, and Windows Virtual Desktop rely on Azure AD DS.
 
 - Handling of privileged operations, such as creating a service principal within the Azure AD tenant, registering graph applications inside Azure AD, and procuring a wildcard certificate.
 
-- Azure AD proxy front-end authentication for applications relying on integrated Windows authentication (IWA), forms/header based authentication as well as rich client apps integrated with ADAL.
+- Azure AD proxy front-end authentication for applications relying on integrated Windows authentication, forms-based or header-based authentication, as well as rich client apps integrated with ADAL.
 
 **Design recommendations:**
 

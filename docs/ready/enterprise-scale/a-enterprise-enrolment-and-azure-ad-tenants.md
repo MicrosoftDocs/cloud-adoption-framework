@@ -14,11 +14,11 @@ ms.custom: csu
 # A. Enterprise enrollment and Microsoft Azure Active Directory tenants
 
 ![EA enrollment](./media/ea.png)
-_Figure 3: Enterprise agreement enrollment hierarchy_
+_Figure 3: Enterprise Agreement enrollment hierarchy_
 
 ## 1. Planning for enterprise enrollment
 
-An enterprise enrollment, often referred to as the enterprise agreement (EA), represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
+An enterprise enrollment, often referred to as the Enterprise Agreement (EA), represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate.
 
 **Design considerations:**
 
@@ -48,7 +48,7 @@ An enterprise enrollment, often referred to as the enterprise agreement (EA), re
 
 - Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 
-- If multiple Azure Active Directory (AD) tenants are used, ensure the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
+- If multiple Azure Active Directory (Azure AD) tenants are used, ensure the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
 - Separate dev/test/prod environments at an EA account level to support holistic isolation.
 

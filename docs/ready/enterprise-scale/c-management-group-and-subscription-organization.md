@@ -18,7 +18,7 @@ _Figure 5: Management group hierarchy_
 
 ## 1. Define management group hierarchy
 
-Within a Microsoft Azure Active Directory (AD) tenant, management group structures help to support organizational mapping and must be considered when planning Azure adoption at scale.
+Within a Microsoft Azure Active Directory (Azure AD) tenant, management group structures help to support organizational mapping and must be considered when planning Azure adoption at scale.
 
 **Design considerations:**
 
@@ -80,7 +80,7 @@ Subscriptions are a unit of management and scale within Azure and play a critica
 
     - **Policy boundary:** Subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads such as PCI typically require additional policies to achieve compliance, and this additional overhead does not need considered holistically if a separate subscription is used. Similarly, development environments may have more relaxed policy requirements relative to production environments.
 
-    - **Target network topology** Virtual networks can't be shared across subscriptions, but they can be connected using different technologies such as virtual network peering or ExpressRoute. It is important to consider network composition and which workloads must communicate with one another when deciding if a new subscription is required.
+    - **Target network topology:** Virtual networks can't be shared across subscriptions, but they can be connected using different technologies such as virtual network peering or ExpressRoute. It is important to consider network composition and which workloads must communicate with one another when deciding if a new subscription is required.
 
 - Group subscriptions under management groups aligned within the management group structure and policy requirements at scale.
 
@@ -88,13 +88,13 @@ Subscriptions are a unit of management and scale within Azure and play a critica
 
 <!-- -->
 
-- To keep subscriptions from becoming limiting while new workloads and business units are evaluated, avoid prescriptive and rigid subscription models and opt for a set of criteria to flexibly structure subscriptions across the organization. 
+- To keep subscriptions from becoming limiting while new workloads and business units are evaluated, avoid prescriptive and rigid subscription models and opt for a set of criteria to flexibly structure subscriptions across the organization.
 
   - One size does not fit all for subscriptions; what works for one business unit may not work for another. Some applications may coexist within the same "landing zone" subscription while others may require their own subscriptions.
 
 ## 3. Configure subscription quota and capacity
 
-Since Azure is comprised of a finite set of resources, it's critical to ensure sufficient capacity and SKUs and to understand and monitor attained capacity when considering enterprise-scale Azure adoption with large resource quantities. 
+Since Azure is comprised of a finite set of resources, it's critical to ensure sufficient capacity and SKUs and to understand and monitor attained capacity when considering enterprise-scale Azure adoption with large resource quantities.
 
 **Design considerations:**
 
@@ -106,7 +106,7 @@ Since Azure is comprised of a finite set of resources, it's critical to ensure s
 
 **Design recommendations:**
 
-- Leverage subscriptions as scale units, scaling out resources and subscriptions as required.
+- Use subscriptions as scale units, scaling out resources and subscriptions as required.
 
 - Use reserved instances to prioritize reserved capacity in required regions.
 
@@ -122,7 +122,7 @@ Cost transparency across a technical estate is a critical management challenge f
 
 **Design considerations:**
 
-- They may be a potential need for chargeback models such as Azure App Service Environment and Azure Kubernetes Service where shared PaaS services are concerned; they may need to be shared to achieve higher density.
+- They may be a potential need for chargeback models such as Azure App Service Environment and Azure Kubernetes Service where shared PaaS services are concerned&mdash;they may need to be shared to achieve higher density.
 
 - Shut down the schedule for nonproduction workloads to optimize costs.
 

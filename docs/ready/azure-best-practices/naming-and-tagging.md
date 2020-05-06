@@ -10,6 +10,7 @@ ms.subservice: ready
 ms.custom: readiness, fasttrack-edit
 ---
 
+<!-- docsTest:disable -->
 <!-- cSpell:ignore westeurope usgovia accountlookup messagequery -->
 
 # Recommended naming and tagging conventions
