@@ -11,7 +11,7 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-<!-- cSpell:ignore rkuehfus CAF -->
+<!-- cSpell:ignore rkuehfus CAF HSMs -->
 
 # Cloud Adoption Framework enterprise-scale landing zone architecture
 
@@ -31,7 +31,7 @@ In the [landing zone considerations article](../../ready/considerations/index.md
 
 **Scope:** Within the CAF enterprise-scale landing zone, the scope of a landing zone grows considerably to support application migrations and green field development at an enterprise scale in Azure. This expansion allows for design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
 
-**Refactoring:** The number of subscriptions required to support a full enterprise scale IT portfolio can be large. At first, the CAF encourages a high-frequency of refactoring, but this should stabilize before the tenth production workload is deployed to the cloud. When working across an enterprise portfolio, ten applications can be deployed quickly and make refactoring impractical. Instead, it's recommended for central IT or a cloud center of excellence to deliver a more complete landing zone during the first release.
+**Refactoring:** The number of subscriptions required to support a full enterprise-scale IT portfolio can be large. At first, the Cloud Adoption Framework encourages a high-frequency of refactoring, but this should stabilize before the tenth production workload is deployed to the cloud. When working across an enterprise portfolio, ten applications can be deployed quickly and make refactoring impractical. Instead, it's recommended for Central IT or a cloud center of excellence to deliver a more complete landing zone during the first release.
 
 **Goal:** Provide consistent landing zones based on an **application archetype** subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise. See the image below.
 

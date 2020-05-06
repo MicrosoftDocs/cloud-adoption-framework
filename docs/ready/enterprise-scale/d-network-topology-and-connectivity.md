@@ -11,6 +11,7 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
+<!-- cSpell:disable VPNs -->
 
 # D. Network topology and connectivity
 
@@ -224,7 +225,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
   - Virtual network injection provides dedicated private deployments for supported services.
 
-  - [Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access using private IP addresses to Azure PaaS instances, or custom services behind an Azure load balancer standard.
+  - [Private Link](/azure/private-link/private-endpoint-overview#private-link-resource) provides dedicated access using private IP addresses to Azure PaaS instances, or custom services behind an Azure Standard Load Balancer instance.
 
   - Virtual network service endpoints provide service level access from selected subnets to selected PaaS services.
 
@@ -240,6 +241,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
 - Azure PaaS services that have been injected into a virtual network still perform management plane operations using public IP addresses. Ensure that this communication is locked down within the virtual network using UDRs and NSGs.
 
+<!-- TODO: Correct this sentence. -->
 - Use Azure Private Link, where available, for Azure PaaS services that cannot be injected into a .NET.
 
   - Azure Private Link is in public preview for numerous [services](/azure/private-link/private-endpoint-overview#private-link-resource), and customer requirements should be carefully aligned with the product [roadmap](https://aka.ms/privatepaas).
@@ -262,13 +264,13 @@ This section describes recommended connectivity models for inbound and outbound 
 
 **Design considerations:**
 
-- Azure native network security services such as Azure Firewall, Application Gateway WAF, and Azure Front Door WAF are fully managed services, meaning that customers do not incur the operational and management costs associated with infrastructure deployments, which can become complex at scale.
+- Azure native network security services such as Azure Firewall, Application Gateway WAF, and Azure Front Door Service WAF are fully managed services, meaning that customers do not incur the operational and management costs associated with infrastructure deployments, which can become complex at scale.
 
 - The CAF enterprise-scale landing zone architecture is fully compatible with third-party network virtual appliances, should the customer prefer to use NVAs or for situations where native services do not satisfy specific customer requirements.
 
 **Design recommendations:**
 
-- Use Azure Firewall to govern outbound traffic to the internet and nonHTTP/S inbound connections.
+- Use Azure Firewall to govern outbound traffic to the internet and non-HTTP/S inbound connections.
 
 - Use Firewall Manager with Azure Virtual WAN to deploy and manage Azure firewalls across virtual hubs.
 
@@ -278,7 +280,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Use Application Gateway WAF within a "landing zone" virtual network for protecting inbound HTTP/S traffic from the internet.
 
-- Use Azure Front Door WAF policies to provide global protection across Azure regions for inbound HTTP/S connections to a "landing zone”.
+- Use Azure Front Door Service WAF policies to provide global protection across Azure regions for inbound HTTP/S connections to a "landing zone”.
 
 - If third-party NVAs are used, they should be deployed into a separate virtual network (e.g., NVA virtual network) and connected to a regional virtual hub via peering.
 
@@ -314,7 +316,7 @@ _Figure 8: Encryption flows_
 
 - When establishing VPN connections from on-premises to Azure using VPN gateways, traffic is encrypted at a protocol level using IPsec tunnels, as depicted in Flow A in the diagram above.
 
-- When using ExpressRoute Direct, configure [MACsec](/azure/expressroute/expressroute-howto-macsec) to encrypt traffic at l2 level between the customer's routers and msee, as depicted in Flow B in the diagram above.
+- When using ExpressRoute Direct, configure [MACsec](/azure/expressroute/expressroute-howto-macsec) to encrypt traffic at L2 level between the customer's routers and MSEE, as depicted in Flow B in the diagram above.
 
 - When using regular ExpressRoute circuits, use Azure Virtual WAN VPN gateway to establish [IPsec tunnels over ExpressRoute](/azure/virtual-wan/vpn-over-expressroute) private peering. This is depicted by flow c in the diagram above.
 
