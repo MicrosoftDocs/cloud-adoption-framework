@@ -1,7 +1,7 @@
 ---
-title: "CAF enterprise-scale landing zone - Contoso Reference Implementation - Scope"
+title: "CAF enterprise-scale landing zone - Contoso reference implementation - scope"
 titleSuffix: Cloud Adoption Framework
-description: CAF enterprise-scale landing zone - Contoso Reference Implementation - Scope
+description: CAF enterprise-scale landing zone - Contoso reference implementation - scope
 author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
