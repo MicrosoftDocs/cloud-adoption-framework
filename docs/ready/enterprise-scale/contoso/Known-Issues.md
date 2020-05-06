@@ -1,7 +1,7 @@
 ---
-title: "CAF enterprise-scale landing zone - Contoso Reference Implementation - Known Issues"
+title: "CAF enterprise-scale landing zone - Contoso reference implementation - Known issues"
 titleSuffix: Cloud Adoption Framework
-description: CAF enterprise-scale landing zone - Contoso Reference Implementation - Known Issues
+description: CAF enterprise-scale landing zone - Contoso reference implementation - Known issues
 author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
@@ -11,9 +11,9 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# Contoso Reference Implementation - Known Issues
+# Contoso reference implementation - known issues
 
-### Subscription Creation
+### Subscription creation
 
 At present, it is not possible to provision new Subscription via ARM templates. Subscription creation requires an Enterprise Enrollment account to be migrated to a new system in the backend. We are working closely with engineering teams to enable this functionality for the Contoso Tenant.
 
