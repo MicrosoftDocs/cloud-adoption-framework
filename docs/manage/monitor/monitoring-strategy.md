@@ -173,17 +173,17 @@ Maturity is an important consideration in your strategy. You can start minimally
 
 Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable product, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
-* **Observe** First, you should focus on establishing monitoring to observe the health and status of Azure services and resources. Configure basic monitoring and then automate with Azure Policy and ARM templates, to establish initial visibility of services and their warranty:  availability, performance or capacity, security and configuration compliance. For example, based on minimum viable setup of Azure Monitor, configure resources for monitoring and diagnostics, set up alerts, and insights. Include knowledge and readiness of monitoring consumers, defining and triggering from events, for service work such as incidents and problems. One indicator of maturity is how much can be automated to reduce unnecessary human costs to manually observe health and status. Knowing which services are healthy is just as important as being alerted on services that are unhealthy.
+* **Observe**: First, you should focus on establishing monitoring to observe the health and status of Azure services and resources. Configure basic monitoring and then automate with Azure Policy and ARM templates, to establish initial visibility of services and their warranty:  availability, performance or capacity, security and configuration compliance. For example, based on minimum viable setup of Azure Monitor, configure resources for monitoring and diagnostics, set up alerts, and insights. Include knowledge and readiness of monitoring consumers, defining and triggering from events, for service work such as incidents and problems. One indicator of maturity is how much can be automated to reduce unnecessary human costs to manually observe health and status. Knowing which services are healthy is just as important as being alerted on services that are unhealthy.
 
-* **Measure** Configure collection of metrics and logs from all resources to monitor for symptoms/conditions that are issues which indicate potential or actual impact to the availability of the service, or impact of the consumers of the service/application. For example:
+* **Measure**: Configure collection of metrics and logs from all resources to monitor for symptoms/conditions that are issues which indicate potential or actual impact to the availability of the service, or impact of the consumers of the service/application. For example:
 
     * When using a feature in the app, is it showing response time latency, returning an error when I selected something, or unresponsive?
     
     * Ensure services are meeting service agreements by measuring the utility of the service or application.
 
-* **Respond** Based on the known issues to observe and measure, evaluate what qualifies as a bug, auto-remediation, or requires manual response based on what is classified as an incident, problem, or change.
+* **Respond**: Based on the context of known issues to observe and measure, evaluate what qualifies as a bug, auto-remediation, or requires manual response based on what is classified as an incident, problem, or change.
 
-* **Learn and Improve** Providers and consumers participating in Learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (e.g. New, modified, retired, etc.) and continues to match the actual service warranty.
+* **Learn and Improve**: Providers and consumers participating in Learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (e.g. New, modified, retired, etc.) and continues to match the actual service warranty.
 
 To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that will occur in more detail and works with the five Rs of rationalization introduced earlier in the Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
@@ -201,7 +201,7 @@ To help you align monitoring plans to strategy, use the following table to categ
 
 ## Formulate monitoring requirements
 
-As you progress through this process, your strategy reveals there may be much to do in the long run. Ultimately your mindset extends outside the corporate newtork into the workplace, to devices and end points, and extends outwards further to the identity-as-security boundary, independent of where. The new edge defined with cloud monitoring is a strong motivator in contrast with a datacenter and workplace mindset.
+As you progress through this process, your strategy reveals there may be much to do in the long run. Ultimately your mindset extends outside the corporate network into the workplace, to devices and end points, and further outward to the identity-as-security boundary, independent of where. The new edge defined with cloud monitoring is a strong motivator in contrast with a datacenter and workplace mindset.
 
 You can leverage Azure now to include gradual monitoring of all or some aspects of your on-premises resources, as they may gradually move to the cloud.  And you also want strategy to define your monitoring boundaries of responsibility in alignment with the business’ cloud adoption strategy, based on the cloud service model your business adopts. Even for services based on IaaS, you’ll get metrics, logs, views and alerting capabilities through Azure Service Health and here, you’ll configure alerts from availability monitoring of your Azure resources with Resource Health. With SaaS services, such as Microsoft 365, much is already provided, and you need to configure appropriate access to portals, dashboards, analytics, and alerts. From a service perspective, a large service with distributed components such as Microsoft 365 Exchange Online have a number of objectives, not just the need to observe its health and status.
 
@@ -276,4 +276,4 @@ Early on, formulate a readiness plan to help your IT staff adopt new skills, pra
 
 * Automation using Azure Resource Manager templates, Automation runbooks, Azure Logic Apps, Azure CLI and PowerShell, etc.
 
-* Agile and DevOps practices to evolve how you deliver monitoring as a service. This is fundamental to your monitoring program in order to monitor at scale, and ability to change and adapt quickly.  that includes monitoring code comprised of resource manager templates, scripts, etc. 
+* Agile and DevOps practices to evolve how you deliver monitoring as a service. This is fundamental to your monitoring program in order to monitor at scale, and ability to change and adapt quickly. It should include monitoring code  
