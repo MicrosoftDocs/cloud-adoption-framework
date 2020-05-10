@@ -48,6 +48,10 @@ As an architect or strategic planner, you may need to formulate an early strateg
 
 4. You need to account for how your organization will plan for and host monitoring based on cloud models. Work towards the goal of reducing your requirements as the organization transitions from IaaS to PaaS, and then to SaaS.  
 
+## Determine what you have
+
+As a manageability expert, you may be working closely with a steering committee, an architect and strategic planners. You might be working to formulate your monitoring strategy by assessing the current state of your systems management: the people, partners, outsourcing, tooling, complexity, gaps and risks. An assessment will help you prioritize the set of found problems and select the key opportunities that improve the current situation. Determine also, the services, systems, and data that are likely to remain on-premises as one important outcome. Ideally, management wants a roadmap of initiatives, but in direct proportion to the known planning horizon. Discussing unknowns, are just as important.
+
 ## High level modeling
 
 As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services for example, does not eliminate your monitoring responsibility. You’ll be deciding who needs access, who gets alerts, and who needs access to analytics at a minimum. Azure Monitor and Azure Arc are Azure services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure.  
@@ -66,10 +70,6 @@ Consider the role monitoring plays in strategies to incrementally protect and se
 * Policies and baselines will inform the rationalization objective (migrate, lift and shift, re-architect) and improve confidence that data and information can be migrated from on-premises to cloud services.
 
 Later in this guide, discover some common monitoring scenarios or use cases that will help accelerate adoption.
-
-## Determine what you have
-
-As a manageability expert, you may be working closely with a steering committee, an architect and strategic planners. You might be working to formulate your monitoring strategy by assessing the current state of your systems management: the people, partnering, outsourcing, tooling, complexity, gaps and risks. An assessment will help you prioritize the set of found problems and select the key opportunities that improve the current situation. Determine, too, the services, systems, and data that are likely to remain on-premises as one important outcome. Ideally, management wants a roadmap of initiatives, but in direct proportion to the known planning horizon. Discussing unknowns, are just as important.
 
 ## Formulate a monitoring architecture
 
@@ -173,17 +173,17 @@ Maturity is an important consideration in your strategy. You can start minimally
 
 Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable product, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
-* Observe: First, you should focus on establishing monitoring to observe the health and status of Azure services and resources. Configure basic monitoring and then automate with Azure Policy and ARM templates, to establish initial visibility of services and their warranty:  availability, performance or capacity, security and configuration compliance. For example, based on minimum viable setup of Azure Monitor, configure resources for monitoring and diagnostics, set up alerts, and insights. Include knowledge and readiness of monitoring consumers, defining and triggering from events, for service work such as incidents and problems. One indicator of maturity is how much can be automated to reduce unnecessary human costs to manually observe health and status. Knowing which services are healthy is just as important as being alerted on services that are unhealthy.
+* **Observe** First, you should focus on establishing monitoring to observe the health and status of Azure services and resources. Configure basic monitoring and then automate with Azure Policy and ARM templates, to establish initial visibility of services and their warranty:  availability, performance or capacity, security and configuration compliance. For example, based on minimum viable setup of Azure Monitor, configure resources for monitoring and diagnostics, set up alerts, and insights. Include knowledge and readiness of monitoring consumers, defining and triggering from events, for service work such as incidents and problems. One indicator of maturity is how much can be automated to reduce unnecessary human costs to manually observe health and status. Knowing which services are healthy is just as important as being alerted on services that are unhealthy.
 
-* Measure: Configure collection of metrics and logs from all resources to monitor for symptoms/conditions that are issues which indicate potential or actual impact to the availability of the service, or impact of the consumers of the service/application. For example:
+* **Measure** Configure collection of metrics and logs from all resources to monitor for symptoms/conditions that are issues which indicate potential or actual impact to the availability of the service, or impact of the consumers of the service/application. For example:
 
-    When using a feature in the app, is it showing response time latency, returning an error when I selected something, or unresponsive?
+    * When using a feature in the app, is it showing response time latency, returning an error when I selected something, or unresponsive?
     
-    Ensure services are meeting service agreements by measuring the utility of the service or application.
+    * Ensure services are meeting service agreements by measuring the utility of the service or application.
 
-* Respond: Whether we remediate, auto-correct, or manually respond to events and process incidents, problems, changes, etc. (event management).  (monitor/control loop).
+* **Respond** Based on the known issues to observe and measure, evaluate what qualifies as a bug, auto-remediation, or requires manual response based on what is classified as an incident, problem, or change.
 
-* Learn and Improve: Providers and consumers participating in Learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (e.g. New, modified, retired, etc.) and continues to match the actual service warranty.
+* **Learn and Improve** Providers and consumers participating in Learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (e.g. New, modified, retired, etc.) and continues to match the actual service warranty.
 
 To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that will occur in more detail and works with the five Rs of rationalization introduced earlier in the Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
