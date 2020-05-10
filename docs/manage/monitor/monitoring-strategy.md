@@ -36,7 +36,7 @@ The following are important areas which strongly influence a sound monitoring st
 
 At the heart of operations management, your IT organization needs to establish centralized governance and strict delegation over approaches to build, operate, and manage IT services.
 
-## High level requirements
+### Initial strategy goals
 
 As an architect or strategic planner, you may need to formulate an early strategy for operations management, in which monitoring plays a major role. Consider these four outcomes:
 
@@ -50,22 +50,10 @@ As an architect or strategic planner, you may need to formulate an early strateg
 
 ## High level modeling
 
-As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services for example, does not eliminate your responsibilities for monitoring. You’ll be deciding who needs access, who gets alerts, and who needs access to analytics. Azure Monitor and Azure Arc are SaaS services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure.  
-And you need to look beyond the cloud model below. You’ll want to include Microsoft 365 in the equation, since you get significant monitoring for security and compliance on top of Azure Security Center. Including identities, endpoint management, and device monitoring outside the datacenter.
+As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services for example, does not eliminate your monitoring responsibility. You’ll be deciding who needs access, who gets alerts, and who needs access to analytics at a minimum. Azure Monitor and Azure Arc are Azure services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure.  
+And you need to look beyond the common cloud models as shown below. If you're using Office apps delivered by Microsoft 365 services in your organization, you'll need to include security and compliance monitoring with Microsoft 365 in addition to Azure Security Center. This includes identities, endpoint management, and device monitoring outside of your corporate network.
 
 ![Cloud models diagram](./media/monitoring-strategy/cloud-models.png)
-
-## Agile solution releases
-
-Ultimately, you’ll deliver monitoring configurations or solutions into production. As an IT Operations Manager or Monitoring Team Lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile, DevOps style of approach ensures monitoring is embedded within the teams who will be building and operating cloud services. While traditional project management works, it is not fast enough nor typically accepted as a standard practice by operations teams.
-
-Include in your strategy and operating model how you communicate monitoring plans, objectives, and configurations (the solutions). For example, how you might leverage Azure DevOps boards:
-
-|Agile term|What to include|Examples|
-|----------|---------------|--------|
-|Epics|Broad monitoring<br>Initiatives of the monitoring strategy|Consolidate Azure cloud monitoring<br> Hybrid cloud monitoring<br> Private cloud monitoring<br> Establish core monitoring service |
-|Features|Individual monitoring<br> Plans and projects|Monitoring requirements<br> Monitoring consumers and providers<br> Objectives<br> Tools<br> Schedule|
-|User stories and tasks |The end result is a monitoring configuration and/or solution|Network monitoring (e.g. Express Route)<br> Standardized IaaS VM monitoring (e.g. Azure Monitor for VMs, Application Insight, Azure Policy, settings, policies, reports, workspaces.)|
 
 ## Monitoring informs strategy
 
@@ -213,9 +201,9 @@ To help you align monitoring plans to strategy, use the following table to categ
 
 ## Formulate monitoring requirements
 
-Above, your strategy reveals there may be much to do in the long run.  Ultimately your mindset extends outside the datacenter into the workplace, to devices and end points, out to the identity-as-security boundary, independent of where.  The new edge defined with cloud monitoring is a strong motivator in contrast with a datacenter and workplace mindset.
+As you progress through this process, your strategy reveals there may be much to do in the long run. Ultimately your mindset extends outside the corporate newtork into the workplace, to devices and end points, and extends outwards further to the identity-as-security boundary, independent of where. The new edge defined with cloud monitoring is a strong motivator in contrast with a datacenter and workplace mindset.
 
-You can leverage Azure now to include gradual monitoring of all or some aspects of your on-premises resources, as they may gradually move to the cloud.  And you also want strategy to define your monitoring boundaries of responsibility in alignment with the business’ cloud adoption strategy, based on the cloud service model your business adopts.  Even for services based on IaaS, you’ll get metrics, logs, views and alerting capabilities through Azure Service Health and here, you’ll configure alerts from availability monitoring of your Azure resources with Resource Health.  With SaaS services, such as Microsoft 365, much is already provided, and you need to configure appropriate access to portals, dashboards, analytics, and alerts.  From a service perspective, a large service with distributed components such as Microsoft 365 Exchange Online have a number of objectives, not just the need to observe its health and status.
+You can leverage Azure now to include gradual monitoring of all or some aspects of your on-premises resources, as they may gradually move to the cloud.  And you also want strategy to define your monitoring boundaries of responsibility in alignment with the business’ cloud adoption strategy, based on the cloud service model your business adopts. Even for services based on IaaS, you’ll get metrics, logs, views and alerting capabilities through Azure Service Health and here, you’ll configure alerts from availability monitoring of your Azure resources with Resource Health. With SaaS services, such as Microsoft 365, much is already provided, and you need to configure appropriate access to portals, dashboards, analytics, and alerts. From a service perspective, a large service with distributed components such as Microsoft 365 Exchange Online have a number of objectives, not just the need to observe its health and status.
 
 | Primary objective | Goal and outcome |
 |-------------------|------------------|
@@ -236,6 +224,18 @@ You can leverage Azure now to include gradual monitoring of all or some aspects 
 | Privacy monitoring | Organizations face expanding privacy needs to include information protection of the digital estate, data classification, and data loss prevention to mitigate risks to privacy breaches and infractions.  Microsoft 365 Information Protection includes monitoring capabilities that can also be integrated with Azure Monitor. |
 | Threat management and integrated threat protection | The cloud brings together the separate, traditional roles of security monitoring with health monitoring. Integrated Threat Protection for example involves monitoring to accelerate an optimal state of Zero Trust. Integrating Azure Advanced Threat Protection allows a migration from SCOM Active Directory to integrate your AD signals and detect advanced attacks in hybrid environments. |
 
+## Agile solution releases
+
+Ultimately, you’ll deliver monitoring configurations or solutions into production. As an IT Operations Manager or Monitoring Team Lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile, DevOps style of approach ensures monitoring is embedded within the teams who will be building and operating cloud services. While traditional project management works, it is not fast enough nor typically accepted as a standard practice by operations teams.
+
+Include in your strategy and operating model how you communicate monitoring plans, objectives, and configurations (the solutions). For example, how you might leverage Azure DevOps boards:
+
+|Agile term|What to include|Examples|
+|----------|---------------|--------|
+|Epics|Broad monitoring<br>Initiatives of the monitoring strategy|Consolidate Azure cloud monitoring<br> Hybrid cloud monitoring<br> Private cloud monitoring<br> Establish core monitoring service |
+|Features|Individual monitoring<br> Plans and projects|Monitoring requirements<br> Monitoring consumers and providers<br> Objectives<br> Tools<br> Schedule|
+|User stories and tasks |The end result is a monitoring configuration and/or solution|Network monitoring (e.g. Express Route)<br> Standardized IaaS VM monitoring (e.g. Azure Monitor for VMs, Application Insight, Azure Policy, settings, policies, reports, workspaces.)|
+
 ## Establish minimum governance
 
 As early as possible, define a strategy to clearly establish who will have what level of access in Azure to support their role and responsibility, such as:
@@ -250,7 +250,7 @@ As early as possible, define a strategy to clearly establish who will have what 
 
 * Govern the development and release of monitoring configurations
 
-It is important to understand what each role will perform in order to build, maintain, and improve monitoring solutions in order plan an access control strategy and grant only the necessary rights they require to successfully perform their role.  A higher-level administrator, such as Global Admins, may establish policies for privileged delegation, both in Azure AD directory roles and in Azure with Azure role-based access control (RBAC).  You may want your System Administrators to be able to modify settings, add alerts, and set up report workspaces.  
+It is important to understand what each role will perform in order to build, maintain, and improve monitoring solutions in order plan an access control strategy and grant only the necessary rights they require to successfully perform their role. A higher-level administrator, such as Global Admins, may establish policies for privileged delegation, both in Azure AD directory roles and in Azure with Azure role-based access control (RBAC). You may want your System Administrators to be able to modify settings, add alerts, and set up report workspaces.  
 
 First, identify the roles who will own and manage resource groups in Azure as part of your governance framework:
 
@@ -260,20 +260,20 @@ First, identify the roles who will own and manage resource groups in Azure as pa
 
 * What managers require access to other Azure Reader roles such as Reports Reader.
 
-Include security: Be sure to work with the Identity Management team to decide on recommendations for privileged identities and privileged access:
+Second, include security. Be sure to work with the Identity Management team to decide on recommendations for privileged identities and privileged access:
 
 * Obtaining separate privileged user accounts in Azure Active Directory.
 
-* Applying privileged accounts in groups, in Azure AD and in Azure ARM privileged directory roles.
+* Applying privileged accounts in groups, in Azure AD and in Azure Resource Manager templates privileged directory roles.
 
 * Security monitoring of privileged access in Azure Monitor and activity logs; establish readiness.
 
 ## Establish readiness
 
-Early on, formulate a readiness plan to help your IT staff adopt new skills, practices, and techniques for cloud monitoring in Azure.  Consider, in this strategy that should include foundational needs as well as those specific to monitoring:
+Early on, formulate a readiness plan to help your IT staff adopt new skills, practices, and techniques for cloud monitoring in Azure.  Consider the following as part of your strategy that should include foundational needs, as well as those specific to monitoring:
 
-* The level of confidence needed with Azure’s services, architecture, and the control plane
+* The level of confidence needed with Azure’s services, architecture, and the control plane.
 
-* New kinds of automation technology, for example Azure Resource Manager templates, Automation runbook, Azure Logic Apps, Azure PowerShell, etc.
+* Automation using Azure Resource Manager templates, Automation runbooks, Azure Logic Apps, Azure CLI and PowerShell, etc.
 
-* Agile and DevOps practices to better manage monitoring code, such as ARM templates, PowerShell scripts used to install agents and Azure Policy code fragments used for monitoring.
+* Agile and DevOps practices to evolve how you deliver monitoring as a service. This is fundamental to your monitoring program in order to monitor at scale, and ability to change and adapt quickly.  that includes monitoring code comprised of resource manager templates, scripts, etc. 
