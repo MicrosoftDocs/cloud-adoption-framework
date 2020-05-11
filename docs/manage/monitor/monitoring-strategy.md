@@ -50,7 +50,7 @@ As an architect or strategic planner, you may need to formulate an early strateg
 
 ## Determine what you have
 
-As a manageability expert, you may be working closely with a steering committee, an architect and strategic planners. You might be working to formulate your monitoring strategy by assessing the current state of your systems management: the people, partners, outsourcing, tooling, complexity, gaps and risks. An assessment will help you prioritize the set of found problems and select the key opportunities that improve the current situation. Determine also, the services, systems, and data that are likely to remain on-premises as one important outcome. Ideally, management wants a roadmap of initiatives, but in direct proportion to the known planning horizon. Discussing unknowns, are just as important.
+As a manageability expert, you may be working closely with a steering committee, an architect and strategic planners. You might be working to formulate your monitoring strategy by assessing the current state of your systems management, including: the people, partners, outsourcing, tooling, complexity, gaps and risks. An assessment will help you prioritize the set of found problems and select the key opportunities that improve the current situation. Determine also, the services, systems, and data that are likely to remain on-premises as one important outcome. Ideally, management wants a roadmap of initiatives, but in direct proportion to the known planning horizon. Discussing unknowns, are just as important.
 
 ## High level modeling
 
@@ -151,7 +151,7 @@ Consider scale in your strategy and who will be defining and standardizing *moni
 
 ### Consider privacy and security
 
-In Azure you’ll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs.  Additionally, specialized logs that record user activity such as the Azure Active Directory sign in log, and if integrated, the Microsoft 365 Unified Audit Log, contain sensitive data that must be protected under privacy law.
+In Azure you’ll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs. Additionally, specialized logs that record user activity such as the Azure Active Directory authentication, and if integrated, the Microsoft 365 Unified Audit log, as they contain sensitive data that must be protected under privacy laws.
 
 Your monitoring strategy should include these components:
 
@@ -163,7 +163,7 @@ Your monitoring strategy should include these components:
 
 * Disaster Recovery
 
-* Resilience e.g. Geo-Redundancy
+* Resilience through high availability where a
 
 ### Consider maturity
 
