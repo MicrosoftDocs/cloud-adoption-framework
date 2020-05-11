@@ -117,7 +117,7 @@ To assemble this architecture, here are several considerations:
 
    1. Since you can build large scale complex cloud services, your problem management costs are reduced to analyze, correlate and determine causes of problems in one place reducing the need to access resources directly, thereby improving security.
 
-   2. Similar to a SIEM, Azure Monitor is consolidating machine data directly from on-premises assets as well as Azure resources (including activity logs, tenant, and subscription data, and any log data from a REST client), and provides a simple query language to provide data analysis far beyond what was possible before. What makes Azure Monitor unique is that although it handles machine level data very well, Azure Monitor gives you pre-defined queries, context-sensitive metrics based on resource type<sup>1</sup>.
+   2. Similar to a SIEM, Azure Monitor is consolidating machine data directly from on-premises assets as well as Azure resources (including activity logs, tenant and subscription data, and any log data from a REST client), and provides a simple query language to provide data analysis far beyond what was possible before.
 
 Consider your data flows and tools:
 
