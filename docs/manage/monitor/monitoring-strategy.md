@@ -215,7 +215,7 @@ You can leverage Azure now to include gradual monitoring of all or some aspects 
 | Tertiary objectives | Goal and outcome |
 |---------------------|------------------|
 | Activity monitoring | Observe, measure, learn and improve usage, security and compliance from sources such as Azure activity logs, audit logs, and the Microsoft 365 unified audit log for subscription level events, actions on resources, user and administrator activity, content, data, and for your security and compliance needs in Azure and Microsoft 365. |
-| Service usage | Service Owners want analytics and insights to measure, learn, and improve the usage of Azure and Microsoft 365 services (IaaS, PaaS, SaaS) with service usage reports, analytics and insights.  Ensure plans include who will need access to the admin portals, dashboards, insights and reports. | 
+| Service usage | Service Owners want analytics and insights to measure, learn, and improve the usage of Azure and Microsoft 365 services (IaaS, PaaS, SaaS) with service usage reports, analytics and insights.  Ensure plans include who will need access to the admin portals, dashboards, insights and reports. |
 | Service and resource health | Observe the health of your cloud resources, as well as service outages and advisories from Microsoft, to stay informed about incidents and maintenance.  Include Resource Health in monitoring of the availability of your resources and alert on changes in availability. |
 | Capacity and performance monitoring | In support of Health monitoring, your needs may require more depth and specialization. |
 | Change and compliance monitoring | Observe, measure, learn and improve configuration management of resources which should now include security in the formulation, influenced by good use of Azure policy to standardize monitoring configurations, Azure Automation to enforce security hardening and logs to filter on key changes being made on resources. |
@@ -270,10 +270,4 @@ Second, include security. Be sure to work with the Identity Management team to d
 
 ## Establish readiness
 
-Early on, formulate a readiness plan to help your IT staff adopt new skills, practices, and techniques for cloud monitoring in Azure.  Consider the following as part of your strategy that should include foundational needs, as well as those specific to monitoring:
-
-* The level of confidence needed with Azure’s services, architecture, and the control plane.
-
-* Automation using Azure Resource Manager templates, Automation runbooks, Azure Logic Apps, Azure CLI and PowerShell, etc.
-
-* Agile and DevOps practices to evolve how you deliver monitoring as a service. This is fundamental to your monitoring program in order to monitor at scale, and ability to change and adapt quickly. It should include monitoring code  
+Early on, formulate a readiness plan to help your IT staff adopt new skills, practices, and techniques for cloud monitoring in Azure.  Consider the [skills readiness guidance](suggested-skills.md) for monitoring that includes foundational needs, as well as those specific to monitoring.
