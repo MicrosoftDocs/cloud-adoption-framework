@@ -161,9 +161,9 @@ Your monitoring strategy should include these components:
 
 ### Consider business continuity
 
-* Disaster Recovery
+Azure Monitor collects, indexes, and analyzes real-time machine and resource-generated data to support your operations and help drive business decisions. While Azure Monitor delivers high availability of your   
 
-* Resilience through high availability where a
+
 
 ### Consider maturity
 
