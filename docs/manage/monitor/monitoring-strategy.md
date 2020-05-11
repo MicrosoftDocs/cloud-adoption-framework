@@ -3,7 +3,7 @@ title: "Cloud monitoring strategy"
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 04/27/2020
+ms.date: 05/10/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -137,9 +137,9 @@ Consider a single policy in your governance plan for event significance, through
 
 As a monitoring expert or systems administrator, you’ve discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won’t know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability - that which is needed to begin the journey. Here are two example initiatives that help declare forward motion:
 
-* Initiative 1: “To reduce the diversity and complexity of our current monitoring investment, we will invest in establishing a core capability leveraging Azure Monitor first, given the same skills and readiness applies to other areas of cloud monitoring.” 
+* Initiative 1: *To reduce the diversity and complexity of our current monitoring investment, we will invest in establishing a core capability leveraging Azure Monitor first, given the same skills and readiness applies to other areas of cloud monitoring.* 
 
-* Initiative 2: “To decide on how we leverage our license plans for identity, access, and overall Information protection, we will help the Security and Privacy offices establish early activity monitoring of users and content as they migrate to the cloud, to clarify questions on classification labels, data loss prevention, encryption and retention policies.”
+* Initiative 2: *To decide on how we leverage our license plans for identity, access, and overall Information protection, we will help the Security and Privacy offices establish early activity monitoring of users and content as they migrate to the cloud, to clarify questions on classification labels, data loss prevention, encryption and retention policies.*
 
 ### Consider scale
 
