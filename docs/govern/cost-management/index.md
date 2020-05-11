@@ -1,6 +1,6 @@
 ---
 title: "Cost Management discipline overview"
-description: Understand the approach to developing a Cost Management discipline as part of a cloud governance strategy.
+description: Understand the approach to developing a Cost Management discipline as part of a cloud governance strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -13,16 +13,16 @@ layout: LandingPage
 
 # Cost Management discipline overview
 
-Cost Management is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md) within the [Cloud Adoption Framework governance model](../index.md). For many customers, governing cost is a major concern when adopting cloud technologies. Balancing performance demands, adoption pacing, and cloud services costs can be challenging. This is especially relevant during major business transformations that implement cloud technologies. This section outlines the approach to developing a Cost Management discipline as part of a cloud governance strategy.
+The Cost Management discipline is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md) within the [Cloud Adoption Framework governance model](../index.md). For many customers, governing their costs is a major concern when adopting cloud technologies. Balancing performance demands, adoption pacing, and cloud services costs can be challenging. This is especially relevant during major business transformations that implement cloud technologies. This section outlines the approach to developing a Cost Management discipline as part of a cloud governance strategy.
 
 > [!NOTE]
-> Cost Management governance does not replace the existing business teams, accounting practices, and procedures that are involved in your organization's financial management of IT-related costs. The primary purpose of this discipline is to identify potential cloud-related risks related to IT spending, and provide risk-mitigation guidance to the business and IT teams responsible for deploying and managing cloud resources.
+> Cost Management discipline does not replace the existing business teams, accounting practices, and procedures that are involved in your organization's financial management of IT-related costs. The primary purpose of this discipline is to identify potential cloud-related risks related to IT spending, and provide risk-mitigation guidance to the business and IT teams responsible for deploying and managing cloud resources.
 
 The primary audience for this guidance is your organization's cloud architects and other members of your cloud governance team. However, the decisions, policies, and processes that emerge from this discipline should involve engagement and discussions with relevant members of your business and IT teams, especially those leaders responsible for owning, managing, and paying for cloud-based workloads.
 
 ## Policy statements
 
-Actionable policy statements and the resulting architecture requirements serve as the foundation of a Cost Management discipline. To see policy statement samples, see the article on [Cost Management Policy Statements](./policy-statements.md). These samples can serve as a starting point for your organization's governance policies.
+Actionable policy statements and the resulting architecture requirements serve as the foundation of a Cost Management discipline. To see policy statement samples, see the article on [Cost Management policy statements](./policy-statements.md). These samples can serve as a starting point for your organization's governance policies.
 
 > [!CAUTION]
 > The sample policies come from common customer experiences. To better align these policies to specific cloud governance needs, execute the following steps to create policy statements that meet your unique business needs.
@@ -45,14 +45,15 @@ The following six steps will help you define governance policies to control cost
                         </div>
                     </div>
                     <div class="cardText" style="padding-left:0px;">
-                        <h3>Cost Management Template</h3>
-                        <p class="x-hidden-focus">Download the template for documenting a Cost Management discipline</p>
+                        <h3>Cost Management discipline template</h3>
+                        <p class="x-hidden-focus">Download the template for documenting a Cost Management discipline.</p>
                     </div>
                 </div>
             </div>
         </div>
     </a>
-</li><li style="display: flex; flex-direction: column;">
+</li>
+<li style="display: flex; flex-direction: column;">
     <a href="./business-risks.md">
         <div class="cardSize">
             <div class="cardPadding" >
@@ -63,7 +64,7 @@ The following six steps will help you define governance policies to control cost
                         </div>
                     </div>
                     <div class="cardText" style="padding-left:0px;">
-                        <h3>Business Risks</h3>
+                        <h3>Business risks</h3>
                         <p class="x-hidden-focus">Understand the motives and risks commonly associated with the Cost Management discipline.</p>
                     </div>
                 </div>
@@ -82,7 +83,7 @@ The following six steps will help you define governance policies to control cost
                         </div>
                     </div>
                     <div class="cardText" style="padding-left:0px;">
-                        <h3>Indicators and Metrics</h3>
+                        <h3>Indicators and metrics</h3>
                         <p class="x-hidden-focus">Indicators to understand if it is the right time to invest in the Cost Management discipline.</p>
                     </div>
                 </div>
@@ -121,7 +122,7 @@ The following six steps will help you define governance policies to control cost
                     </div>
                     <div class="cardText" style="padding-left:0px;">
                         <h3>Maturity</h3>
-                        <p class="x-hidden-focus">Aligning Cloud Management maturity with phases of cloud adoption.</p>
+                        <p class="x-hidden-focus">Align cloud management maturity with phases of cloud adoption.</p>
                     </div>
                 </div>
             </div>

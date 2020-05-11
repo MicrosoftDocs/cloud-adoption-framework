@@ -24,7 +24,7 @@ Transformation happens when business users or customers take advantage of a tech
 
 ## Final technical readiness tests
 
-*Ready* is the last step prior to production release. That means it is also the last chance to test the workload. The following are a few tests that are suggested during this phase:
+_Ready_ is the last step prior to production release. That means it is also the last chance to test the workload. The following are a few tests that are suggested during this phase:
 
 - **Network isolation testing.** Test and monitor network traffic to ensure proper isolation and no unexpected network vulnerabilities. Also validate that any network routing to be severed during cutover is not experiencing unexpected traffic.
 - **Dependency testing.** Ensure that all workload application dependencies have been migrated and are accessible from the migrated assets.

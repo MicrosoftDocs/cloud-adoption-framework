@@ -31,7 +31,7 @@ Modern key management systems such as Azure Key Vault support storage and manage
 When planning a cloud migration, the following table can help you decide how to store and manage encryption keys, certificates, and secrets that are critical for creating secure and manageable cloud deployments:
 
 | Question | Cloud-native | Bring your own key | Hold your own key |
-|---------------------------------------------------------------------------------------------------------------------------------------|--------------|--------|-------------|
+|--- |--------------|--------|-------------|
 | Does your organization lack centralized key and secret management?                                                                    | Yes          | No     | No          |
 | Will you need to limit the creation of keys and secrets to devices to your on-premises hardware, while using these keys in the cloud? | No           | Yes    | No          |
 | Does your organization have rules or policies in place that would prevent keys from being stored offsite?                | No           | No     | Yes         |
@@ -40,7 +40,7 @@ When planning a cloud migration, the following table can help you decide how to 
 
 With cloud-native key management, all keys and secrets are generated, managed, and stored in a cloud-based vault such as Azure Key Vault. This approach simplifies many IT tasks related to key management, such as key backup, storage, and renewal.
 
-Using a cloud-native key management system includes these assumptions:
+**Cloud-native assumptions:** Using a cloud-native key management system includes these assumptions:
 
 - You trust the cloud key management solution with creating, managing, and hosting your organization's secrets and keys.
 - You enable all on-premises applications and services that rely on accessing encryption services or secrets to access the cloud key management system.
@@ -116,14 +116,14 @@ Encryption for data in use involves securing data in nonpersistent storage, such
 
 For more information about encryption and key management in Azure, see:
 
-- [Azure encryption overview](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview). A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
-- [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
-- [Azure Data Security and Encryption Best Practices](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices). A discussion of Azure data security and encryption best practices.
-- [Confidential computing in Azure](https://azure.microsoft.com/solutions/confidential-compute). Azure's confidential computing initiative provides tools and technology to create trusted execution environments or other encryption mechanisms to secure data in use.
+- **[Azure encryption overview](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview):** A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
+- **[Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/key-vault-overview):** Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
+- **[Azure data security and encryption best practices](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices).** A discussion of Azure data security and encryption best practices.
+- **[Confidential computing in Azure](https://azure.microsoft.com/solutions/confidential-compute):** Azure's confidential computing initiative provides tools and technology to create trusted execution environments or other encryption mechanisms to secure data in use.
 
 ## Next steps
 
-Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the [Decision guides overview](../index.md).
+Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the [decision guides overview](../index.md).
 
 > [!div class="nextstepaction"]
 > [Architectural decision guides](../index.md)

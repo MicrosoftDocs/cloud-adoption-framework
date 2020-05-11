@@ -32,7 +32,7 @@ It's helpful to know the following definitions as you begin your Azure cloud ado
 
 An Azure subscription serves several purposes. An Azure subscription is:
 
-- **A legal agreement.** Each subscription is associated with an [Azure offer](https://azure.microsoft.com/support/legal/offer-details) (such as a Free Trial or Pay-As-You-Go). Each offer has a specific rate plan, benefits, and associated terms and conditions. You choose an Azure offer when you create a subscription.
+- **A legal agreement.** Each subscription is associated with an [Azure offer](https://azure.microsoft.com/support/legal/offer-details), such as a Free Trial or Pay-As-You-Go. Each offer has a specific rate plan, benefits, and associated terms and conditions. You choose an Azure offer when you create a subscription.
 - **A payment agreement.** When you create a subscription, you provide payment information for that subscription, such as a credit card number. Each month, the costs incurred by the resources deployed to that subscription are calculated and billed via that payment method.
 - **A boundary of scale.** Scale limits are defined for a subscription. The subscription's resources can't exceed the set scale limits. For example, there's a limit on the number of virtual machines that you can create in a single subscription.
 - **An administrative boundary.** A subscription can act as a boundary for administration, security, and policy. Azure also provides other mechanisms to meet these needs, such as management groups, resource groups, and role-based access control.
@@ -45,15 +45,15 @@ When you create an Azure subscription, you make several key choices about the su
 - **Which Azure offer am I interested in?** Each subscription is associated with a specific [Azure offer](https://azure.microsoft.com/support/legal/offer-details). You can choose the Azure offer that best meets your needs. For example, if you intend to use a subscription to run nonproduction workloads, you might choose the Pay-As-You-Go Dev/Test offer or the Enterprise Dev/Test offer.
 
 > [!NOTE]
-> When you sign up for Azure, you might see the phrase *create an Azure account*. You create an Azure account when you create an Azure subscription and associate the subscription with an email account.
+> When you sign up for Azure, you might see the phrase _create an Azure account_. You create an Azure account when you create an Azure subscription and associate the subscription with an email account.
 
 ## Azure administrative roles
 
 Azure defines three types of roles for administering subscriptions, identities, and resources:
 
-- Classic subscription administrator roles
-- Azure role-based access control (RBAC) roles
-- Azure Active Directory (Azure AD) administrator roles
+- Classic subscription administrator roles.
+- Azure role-based access control (RBAC) roles.
+- Azure Active Directory (Azure AD) administrator roles.
 
 The account administrator role for an Azure subscription is assigned to the email account that's used to create the Azure subscription. The account administrator is the billing owner of the subscription. The account administrator can manage the subscription details in the [Azure Account Center](https://account.azure.com/subscriptions).
 
@@ -78,7 +78,7 @@ A subscription isn't tied to a specific Azure region. However, each Azure resour
 
 The following resources provide detailed information about the concepts discussed in this article:
 
-- [How does Azure work?](../../getting-started/what-is-azure.md)
+- [How does Azure work?](../../get-started/what-is-azure.md)
 - [Resource access management in Azure](../../govern/resource-consistency/resource-access-management.md)
 - [Azure Resource Manager overview](https://docs.microsoft.com/azure/azure-resource-manager/management/overview)
 - [Role-based access control (RBAC) for Azure resources](https://docs.microsoft.com/azure/role-based-access-control/overview)

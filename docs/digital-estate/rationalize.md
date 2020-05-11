@@ -16,11 +16,15 @@ Cloud rationalization is the process of evaluating assets to determine the best 
 
 ## Traditional view of rationalization
 
-It's easy to understand rationalization when you visualize the traditional process of rationalization as a complex decision tree. Each asset in the digital estate is fed through a process that results in one of five answers (the five Rs). For small estates, this process works well. For larger estates, it's inefficient and can lead to significant delays. Let's examine the process to see why. Then we'll present a more efficient model.
+It's easy to understand rationalization when you visualize the traditional process of rationalization as a complex decision tree. Each asset in the digital estate is fed through a process that results in one of five answers (the five Rs of rationalization). For small estates, this process works well. For larger estates, it's inefficient and can lead to significant delays. Let's examine the process to see why. Then we'll present a more efficient model.
 
 **Inventory:** A thorough inventory of assets, including applications, software, hardware, operating systems, and system performance metrics, is required for completing a full rationalization by using traditional models.
 
-**Quantitative analysis:** In the decision tree, quantitative questions drive the first layer of decisions. Common questions include the following: Is the asset in use today? If so, is it optimized and sized properly? What dependencies exist between assets? These questions are vital to the classification of the inventory.
+**Quantitative analysis:** In the decision tree, quantitative questions drive the first layer of decisions. Common questions include the following:
+
+    - Is the asset in use today?
+    - If so, is it optimized and sized properly?
+    - What dependencies exist between assets? These questions are vital to the classification of the inventory.
 
 **Qualitative analysis:** The next set of decisions requires human intelligence in the form of qualitative analysis. Often, the questions that come up here are unique to the solution and can be answered only by business stakeholders and power users. These decisions typically delay the process, slowing things down considerably. This analysis generally consumes 40 to 80 FTE hours per application.
 
@@ -66,7 +70,7 @@ For example, if the options are limited to rehosting or retiring, the business n
 
 "Analysis suggests that no users are actively using this asset. Is that accurate, or have we overlooked something?" Such a binary question is typically much easier to run through qualitative analysis.
 
-This streamlined approach produces baselines, financial plans, strategy, and direction. In later activities, each asset goes through further rationalization and qualitative analysis to evaluate other options. All assumptions that you make in this initial rationalization are tested before
+This streamlined approach produces baselines, financial plans, strategy, and direction. In later activities, each asset goes through further rationalization and qualitative analysis to evaluate other options. All assumptions that you make in this initial rationalization are tested before migrating individual workloads.
 
 ## Challenge assumptions
 
@@ -88,7 +92,7 @@ In the IaaS migration example given in this article:
 
 - Ask the DevOps team to identify assets that are already part of a deployment automation and remove those assets from the core migration plan.
 
-- Ask the Data and R&D teams to identify assets that are powering new revenue streams and remove them from the core migration plan.
+- Ask the data and R&D teams to identify assets that are powering new revenue streams and remove them from the core migration plan.
 
 This program-focused qualitative analysis can be executed quickly and creates alignment across multiple migration backlogs.
 
@@ -110,14 +114,14 @@ The first workload is often deployed in an experimental environment with no oper
 
 ### Qualitative analysis
 
-The cloud adoption teams and the cloud strategy team can work together to analyze this small workload. This collaboration creates a controlled opportunity to create and test qualitative analysis criteria. The smaller population creates an opportunity to survey the affected users, and to complete a detailed qualitative analysis in a week or less. For common qualitative analysis factors, see the specific rationalization target in the [5 Rs of rationalization](./5-rs-of-rationalization.md).
+The cloud adoption teams and the cloud strategy team can work together to analyze this small workload. This collaboration creates a controlled opportunity to create and test qualitative analysis criteria. The smaller population creates an opportunity to survey the affected users, and to complete a detailed qualitative analysis in a week or less. For common qualitative analysis factors, see the specific rationalization target in the [five Rs of rationalization](./5-rs-of-rationalization.md).
 
 ### Migration
 
 In parallel with continued rationalization, the cloud adoption team can begin migrating the small workload to expand learning in the following key areas:
 
 - Strengthen skills with the cloud provider's platform.
-- Define the core services (and Azure standards) needed to fit the long-term vision.
+- Define the core services and Azure standards needed to fit the long-term vision.
 - Better understand how operations might need to change later in the transformation.
 - Understand any inherent business risks and the business's tolerance for those risks.
 - Establish a baseline or minimum viable product (MVP) for governance based on the business's risk tolerance.
@@ -128,7 +132,7 @@ While the cloud adoption team is executing the migration or implementation of th
 
 ### Power of 10
 
-The traditional approach to rationalization attempts to meet all foreseeable needs. Fortunately, a plan for every application is often not required to start a transformation journey. In an incremental model, the Power of 10 provides a good starting point. In this model, the cloud strategy team selects the first 10 applications to be migrated. Those ten workloads should contain a mixture of simple and complex workloads.
+The traditional approach to rationalization attempts to meet all foreseeable needs. Fortunately, a plan for every application is often not required to start a transformation journey. In an incremental model, the Power of 10 approach provides a good starting point. In this model, the cloud strategy team selects the first 10 applications to be migrated. Those ten workloads should contain a mixture of simple and complex workloads.
 
 ### Build the first backlogs
 

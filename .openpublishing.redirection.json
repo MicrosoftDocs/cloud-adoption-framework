@@ -179,6 +179,36 @@
          "source_path": "docs/migrate/about.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/index",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/enable.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/enable",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/innovate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/innovate",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/migrate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/whats-new.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/whats-new",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/what-is-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/what-is-azure",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/index.yml",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/",
+         "redirect_document_id": true
       }
    ]
 }

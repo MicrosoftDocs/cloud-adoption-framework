@@ -1,5 +1,5 @@
 ---
-title: "Azure innovation: Engage via apps" 
+title: "Azure innovation: Engage via apps"
 description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native apps.
 author: billyclaymyersmsft
 ms.author: wimyers
@@ -156,9 +156,9 @@ Use a fully managed Kubernetes service to handle provisioning, upgrading, and sc
 
 #### Action
 
-To configure or monitor an Azure Kubernetes service:
+To configure or monitor an AKS service:
 
-1. Go to **Azure Kubernetes services**.
+1. Go to **Azure Kubernetes Services**.
 2. Configure a new service: Select **Add** and follow the prompts.
 3. Manage existing services: Select the desired Kubernetes service from the list.
 
@@ -166,7 +166,7 @@ To configure or monitor an Azure Kubernetes service:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerService%2FManagedClusters]" submitText="Go to Azure Kubernetes services" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerService%2FManagedClusters]" submitText="Go to Azure Kubernetes Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -180,7 +180,7 @@ Azure Functions provides a platform for running small units of code or functions
 
 The Azure Functions runtime supports many languages, including C#, Java, JavaScript, and Python. For a complete list, see [Supported languages in Azure Functions](https://docs.microsoft.com/azure/azure-functions/supported-languages).
 
-Another benefit of functions is that they can be triggered by different actions and events, like HTTPTriggers, TimerTriggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information on triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
+Another benefit of functions is that they can be triggered by different actions and events, like HTTPTriggers, TimerTriggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information about triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
 
 #### Action
 

@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore CAF -->
-
 # First landing zone
 
 Infrastructure as code is a natural transition during most cloud adoption efforts. Deployment of your first landing zones in the cloud is a common starting point in moving to a code-driven environment. This article will help you understand the term _landing zone_ and decide which landing zone is most appropriate for your current adoption needs.
@@ -30,7 +28,7 @@ C. Some cloud adoption plans are governed by external compliance requirements. T
 D. When a partner provides ongoing managed services or is contracted to deliver on the adoption plan, they will typically provide their own landing zone. Using a partner landing zone could accelerate adoption efforts and ensure consistent operational management requirements. However, give additional consideration to internal governance and security requirements to ensure alignment.
 
 > [!NOTE]
-> Before proceeding with a code-first and refactoring-focused approach, readers should be familiar with the [competing priorities behind this decision](../../strategy/balance-competing-priorities.md#balance-during-ready). When choosing a landing zone approach, it is important to understand the necessary balance between "Time to adoption" and "Long-term operations".
+> Before proceeding with a code-first and refactoring-focused approach, readers should be familiar with the [competing priorities behind this decision](../../strategy/balance-competing-priorities.md#balance-during-the-ready-phase). When choosing a landing zone approach, it is important to understand the necessary balance between _time to adoption_ and _long-term operations_.
 
 ## Choosing a first landing zone
 
@@ -38,15 +36,15 @@ Selection of the first landing zone depends on multiple variables. The following
 
 | Landing Zone                                 | Cloud experience  | Scale             | Discovery time | Production ready | Hybrid             | Sensitive data     | Mission critical   | Compliance         |
 |----------------------------------------------|-------------------|-------------------|----------------|------------------|--------------------|--------------------|--------------------|--------------------|
-| [CAF Migrate](./migrate-landing-zone.md)     | New to cloud      | < 1,000 assets    | 1 to 5 days    | Limited scope -> | Expansion required | Expansion required | Expansion required | Expansion required |
-| [CAF Terraform](./terraform-landing-zone.md) | Various templates | Various templates | 10 to 20 weeks | Limited scope -> | Modules available  | Modules available  | Modules available  | Modules available  |
+| [CAF Migrate landing zone](./migrate-landing-zone.md)     | New to cloud      | < 1,000 assets    | 1 to 5 days    | Limited scope -> | Expansion required | Expansion required | Expansion required | Expansion required |
+| [CAF Terraform landing zone](./terraform-landing-zone.md) | Various templates | Various templates | 10 to 20 weeks | Limited scope -> | Modules available  | Modules available  | Modules available  | Modules available  |
 
 The following table shows the same landing zones from a slightly different perspective, to guide more technical decision processes.
 
 | Landing Zone                                 | Hub                          | Spoke    | Cloud model | Technology      |
 |----------------------------------------------|------------------------------|----------|-------------|-----------------|--|--|--|
-| [CAF Migrate](./migrate-landing-zone.md)     | Refactor required            | Included | Azure only  | Azure Blueprint |
-| [CAF Terraform](./terraform-landing-zone.md) | Included in VDC module       | Included | Multicloud  | Terraform       |
+| [CAF Migrate landing zone](./migrate-landing-zone.md)     | Refactor required            | Included | Azure only  | Azure Blueprint |
+| [CAF Terraform landing zone](./terraform-landing-zone.md) | Included in VDC module       | Included | Multicloud  | Terraform       |
 
 ## Next steps
 

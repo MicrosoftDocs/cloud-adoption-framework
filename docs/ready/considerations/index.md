@@ -1,6 +1,6 @@
 ---
 title: Expand your landing zone
-description: Use the Cloud Adoption Framework for Azure to learn how to expand a landing zone
+description: Use the Cloud Adoption Framework for Azure to learn how to expand a landing zone.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2020

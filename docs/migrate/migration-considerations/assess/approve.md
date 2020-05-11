@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore architected ITIL -->
+<!-- cSpell:ignore ITIL -->
 
 # Approve architecture changes before migration
 

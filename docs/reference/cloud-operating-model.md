@@ -13,23 +13,25 @@ layout: LandingPage
 
 # Cloud Operating Model is now part of the Microsoft Cloud Adoption Framework for Azure
 
-In early 2018, Microsoft released the Cloud Operating Model (COM). The COM was a guide that helped customers understand the **what** and the **why** of digital transformation. This helped customers get a sense of all the areas that needed to be addressed: business strategy, culture strategy, and technology strategy. What was not included in the COM were the specific _how-to_ steps, which left customers wondering, "Where do we go from here?"
+In early 2018, Microsoft released the Cloud Operating Model (COM). The COM was a guide that helped customers understand the **what** and the **why** of digital transformation. This helped customers get a sense of all the areas that needed to be addressed: business strategy, culture strategy, and technology strategy. What was not included in the COM were the specific _how-to_ steps, which left customers wondering, "where do we go from here?"
 
-In October 2018, we began a review of all the models that had proliferated across the Microsoft community, we found roughly 60 different cloud adoption models. A cross-Microsoft team was established to bring everything together as a dedicated engineering "product" with defined implementations across services, sales, and marketing. This effort culminated in the creation of a single model, the Microsoft Cloud Adoption Framework for Azure, designed to help customers understand the **what** and **why** and provide unified guidance on the **how** to help them accelerate their cloud adoption. The goal of this project is to create a One Microsoft approach to cloud adoption.
+In october 2018, we began a review of all the models that had proliferated across the Microsoft community, we found roughly 60 different cloud adoption models. A cross-Microsoft team was established to bring everything together as a dedicated engineering "product" with defined implementations across services, sales, and marketing. This effort culminated in the creation of a single model, the Microsoft Cloud Adoption Framework for Azure, designed to help customers understand the **what** and **why** and provide unified guidance on the **how** to help them accelerate their cloud adoption. The goal of this project is to create a one Microsoft approach to cloud adoption.
 
 ## Using Cloud Operating Model practices within the Cloud Adoption Framework
 
 For a similar approach to COM, readers should begin with one of the following:
 
-- [Begin a cloud migration journey](../getting-started/migrate.md)
-- [Innovate through cloud adoption](../getting-started/innovate.md)
-- [Enable successful cloud adoption](../getting-started/enable.md)
+- [Begin a cloud migration journey](../get-started/migrate.md)
+- [Innovate through cloud adoption](../get-started/innovate.md)
+- [Enable successful cloud adoption](../get-started/enable.md)
 
 The guidance previously provided in COM is still relevant to the Cloud Adoption Framework. The experience is different, but the structure of the Cloud Adoption Framework is simply an expansion of that guidance. To transition from COM to the Cloud Adoption Framework, an understanding of scope and structure is important. The following two sections describe that transition.
 
 ## Scope
 
 COM established a scope comprised of the following components:
+
+<!-- cSpell:ignore caf -->
 
 ![Scope of the Cloud Adoption Framework](../_images/caf-scope.png)
 
@@ -40,7 +42,7 @@ COM established a scope comprised of the following components:
 The high-level scopes of the Cloud Operating Model and the Cloud Adoption Framework are similar. Business, culture, and technology are reflected throughout the guidance and each methodology within the Cloud Adoption Framework.
 
 > [!NOTE]
-> The Cloud Adoption Framework's scope has two significant points of clarity. In the Cloud Adoption Framework, business strategy goes beyond the documentation of cloud costs&mdash;it is about understanding motivations, desired outcomes, returns, and cloud costs to create actionable plans and clear business justifications. In the Cloud Adoption Framework, people strategy goes beyond training to include approaches that create demonstrable cultural maturity. A few areas on the roadmap include demonstrations of the impact of Agile management, DevOps integration, customer empathy and obsession, and lean product development approaches.
+> The scope of the Cloud Adoption Framework has two significant points of clarity. In the framework, business strategy goes beyond the documentation of cloud costs&mdash;it's about understanding motivations, desired outcomes, returns, and cloud costs to create actionable plans and clear business justifications. In the Cloud Adoption Framework, people strategy goes beyond training to include approaches that create demonstrable cultural maturity. A few areas on the roadmap include demonstrations of the impact of agile management, DevOps integration, customer empathy and obsession, and lean product development approaches.
 
 ## Structure
 
@@ -60,15 +62,15 @@ The three phases of adoption are:
 
 The three phases of cloud adoption have been mapped to two specific journeys:
 
-- [Migrate](../getting-started/migrate.md): Move existing workloads to the cloud.
-- [Innovate](../getting-started/innovate.md): Modernize existing workloads and create new products and services.
+- [Migrate](../get-started/migrate.md): Move existing workloads to the cloud.
+- [Innovate](../get-started/innovate.md): Modernize existing workloads and create new products and services.
 
-Additional resources required for successful cloud adoption can be found in [Enabling adoption success](../getting-started/enable.md).
+Additional resources required for successful cloud adoption can be found in [Enable adoption success](../get-started/enable.md).
 
 ## Next steps
 
-To resume your journey where COM left off, choose one of the following cloud adoption journeys:
+To resume your journey where COM left off, choose one of the following getting started guides:
 
-- [Getting started with cloud migration](../getting-started/migrate.md)
-- [Getting started with cloud-enabled innovation](../getting-started/innovate.md)
-- [Enabling adoption success](../getting-started/enable.md)
+- [Get started with cloud migration](../get-started/migrate.md)
+- [Get started with cloud-enabled innovation](../get-started/innovate.md)
+- [Enable adoption success](../get-started/enable.md)

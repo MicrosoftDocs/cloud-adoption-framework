@@ -1,6 +1,6 @@
 ---
 title: "Secure and Manage"
-description: Learn more about security and management methods that you can use to manage your environment after you migrate to Azure. 
+description: Learn more about security and management methods that you can use to manage your environment after you migrate to Azure.
 author: matticusau
 ms.author: mlavery
 ms.date: 04/04/2019
@@ -140,7 +140,7 @@ Azure Backup is the Azure-based service you can use to backup (or protect) and r
 
 ::: zone target="docs"
 
-[Overview](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup)
+[Overview](https://docs.microsoft.com/azure/backup/backup-overview)
 
 ::: zone-end
 

@@ -28,7 +28,7 @@ In traditional governance and incremental governance, corporate policy creates t
 
 ![Corporate governance and governance disciplines](../../_images/operational-transformation-govern-highres.png)
 
-*Figure 1 - Corporate governance and governance disciplines.*
+_Figure 1: Corporate governance and governance disciplines._
 
 The image above demonstrates the interactions between business risk, policy and compliance, and monitor and enforce to create a governance strategy. Followed by the Five Disciplines of Cloud Governance to realize your strategy.
 
@@ -48,6 +48,8 @@ With an incremental approach to cloud governance, there is sometimes a natural f
 ## Minimum viable product (MVP) for policy
 
 The first step in an emerging partnership between your cloud governance and adoption teams is an agreement regarding the policy MVP. Your MVP for cloud governance should acknowledge that business risks are small in the beginning, but will likely grow as your organization adopts more cloud services over time.
+
+<!-- cSpell:ignore HBI -->
 
 For example, the business risk is small for a business deploying five VMs that don't contain any high business impact (HBI) data. Later in the cloud adoption process, when the number reaches 1,000 VMs and the business is starting to move HBI data, the business risk grows.
 

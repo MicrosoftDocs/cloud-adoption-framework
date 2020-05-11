@@ -17,7 +17,7 @@ The cloud opens new opportunities to perform on a global scale. Barriers to glob
 
 ## Data sovereignty
 
-Many geopolitical regions have established data sovereignty regulations. Those regulations restrict where data can be stored, what data can leave the country of origin, and what data can be collected about citizens of that region. Before operating any cloud-based solution in a foreign geography, you should understand how that cloud provider handles data sovereignty. For more information on Azure's approach for each geography, see [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies). For more information about compliance in Azure, see [Privacy at Microsoft](https://www.microsoft.com/trust-center/privacy) in the Microsoft Trust Center.
+Many geopolitical regions have established data sovereignty regulations. Those regulations restrict where data can be stored, what data can leave the country of origin, and what data can be collected about citizens of that region. Before operating any cloud-based solution in a foreign geography, you should understand how that cloud provider handles data sovereignty. For more information about Azure's approach for each geography, see [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies). For more information about compliance in Azure, see [Privacy at Microsoft](https://www.microsoft.com/trust-center/privacy) in the Microsoft Trust Center.
 
 The remainder of this article assumes legal counsel has reviewed and approved operations in a foreign country.
 
@@ -33,11 +33,11 @@ In a cloud model, commodity internet opens up many new options as well. Communic
 
 ## External user usage patterns
 
-It is equally important to understand the usage patterns of external users, like customers or partners. Much like employee usage patterns, External User Usage Patterns can negatively affect performance of cloud deployments. When a large or mission-critical user base resides in a foreign country, it could be wise to include a global deployment strategy into the overall solution design.
+It is equally important to understand the usage patterns of external users, like customers or partners. Much like employee usage patterns, external user usage patterns can negatively affect performance of cloud deployments. When a large or mission-critical user base resides in a foreign country, it could be wise to include a global deployment strategy into the overall solution design.
 
 ## Next steps
 
 Learn about the [skills needed during the Strategy phase](./suggested-skills.md) of your cloud adoption journey.
 
 > [!div class="nextstepaction"]
-> [Skills relevant to Strategy](./suggested-skills.md)
+> [Skills needed during the Strategy phase](./suggested-skills.md)

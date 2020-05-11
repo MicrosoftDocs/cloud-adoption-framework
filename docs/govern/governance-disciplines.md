@@ -13,6 +13,7 @@ layout: LandingPage
 
 # The Five Disciplines of Cloud Governance
 
+<!-- docsTest:disable TODO -->
 <!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsI">
@@ -21,7 +22,10 @@ layout: LandingPage
             <div class="cardPadding" style="padding-bottom:10px;">
                 <div class="card" style="padding-bottom:10px;">
                     <div class="cardText" style="padding-left:0px;">
-    Any change to business processes or technology platforms introduces risk. Cloud governance teams, whose members are sometimes known as cloud custodians, are tasked with mitigating these risks and ensuring minimal interruption to adoption or innovation efforts.<br/><br/>The Cloud Adoption Framework governance model guides these decisions (regardless of the chosen cloud platform) by focusing on <a href="./corporate-policy.md">development of corporate policy</a> and the <a href="#disciplines-of-cloud-governance">Five Disciplines of Cloud Governance</a>. <a href="./guides/index.md">Actionable design guides</a> demonstrate this model using Azure services. Learn about the disciplines of the Cloud Adoption Framework governance model below.
+    Any change to business processes or technology platforms introduces risk. Cloud governance teams, whose members are sometimes known as cloud custodians, are tasked with mitigating these risks and ensuring minimal interruption to adoption or innovation efforts.
+    <br>
+    <br>
+    The Cloud Adoption Framework governance model guides these decisions (regardless of the chosen cloud platform) by focusing on <a href="./corporate-policy.md">development of corporate policy</a> and the <a href="#disciplines-of-cloud-governance">Five Disciplines of Cloud Governance</a>. <a href="./guides/index.md">Actionable design guides</a> demonstrate this model using Azure services. Learn about the disciplines of the Cloud Adoption Framework governance model below.
                     </div>
                 </div>
             </div>
@@ -35,7 +39,7 @@ layout: LandingPage
                         <div class="cardText" style="padding-left:0px;">
     <img src="../_images/operational-transformation-govern-highres.png" alt="Diagram of the Cloud Adoption Framework governance model: Corporate policy and governance disciplines">
     <br>
-    <i>Figure 1 - Diagram of corporate policy and the Five Disciplines of Cloud Governance.</i>
+    <i> Figure 1: Diagram of corporate policy and the Five Disciplines of Cloud Governance.</i>
                         </div>
                     </div>
                 </div>

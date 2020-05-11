@@ -13,7 +13,7 @@ ms.subservice: migrate
 
 As an initial step in the migration process, you need to create the right environment in the cloud to receive, host, and support migrating assets. This article provides a list of things to validate in the current environment prior to migration.
 
-The following checklist aligns with the guidance found in the [Ready section](../../../ready/index.md) of the Cloud Adoption Framework. Review that section for guidance regarding execution of any of the following.
+The following checklist aligns with the guidance in the [Ready methodology](../../../ready/index.md) of the Cloud Adoption Framework. Review that section for guidance regarding execution of any of the following.
 
 ## Effort type assumption
 

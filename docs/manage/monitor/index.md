@@ -52,7 +52,7 @@ This article is part of a series. The following articles are meant to be read to
 A few software and services are available to help you monitor and manage a variety of resources that are hosted in Azure, your corporate network, or other cloud providers. They are:
 
 - System Center Operations Manager
-- Azure Monitor, which now includes Log Analytics and Application Insights
+- Azure Monitor (includes Log Analytics and Application Insights)
 - Azure Policy and Azure Blueprints
 - Azure Automation
 - Azure Logic Apps

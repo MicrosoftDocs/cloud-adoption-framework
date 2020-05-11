@@ -3,104 +3,27 @@ title: "Manage organization alignment"
 description: Use the Cloud Adoption Framework for Azure to learn how to establish and maintain your organization's alignment.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/10/2019
-ms.topic: landing-page
+ms.date: 05/04/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: organize
-layout: LandingPage
 ---
 
 # Manage organizational alignment
 
-Cloud adoption can't happen without well-organized people. Successful cloud adoption is the result of properly skilled people doing the appropriate types of work, in alignment with clearly defined business goals, and in a well-managed environment. To deliver an effective cloud operating model, it's important to establish appropriately staffed organizational structures. This article outlines an approach to establishing and maintaining the proper organizational structures in four steps.
-
-## Organization alignment exercises
+Cloud adoption can't happen without well-organized people. Successful cloud adoption is the result of properly skilled people doing the appropriate types of work, in alignment with clearly defined business goals, and in a well-managed environment. To deliver an effective operating model for the cloud, it's important to establish appropriately staffed organizational structures. This article outlines an approach to establishing and maintaining the proper organizational structures in four steps.
 
 The following exercises will help guide the process of creating a landing zone to support cloud adoption.
 
 <!-- markdownlint-disable MD033 -->
 
-<ul class="panelContent cardsF">
-    <li style="display: flex; flex-direction: column;">
-        <a href="#structure-type">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/1.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Structure type</h3>
-                            Define the type of organizational structure that best fits your operating model.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="#understand-required-cloud-capabilities">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/2.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Cloud capabilities</h3>
-                            Understand the cloud capabilities required to adopt and operate the cloud.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./organization-structures.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/3.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Establish teams</h3>
-                            Define the teams that will be providing various cloud capabilities. Multiple best practice options are listed for reference.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./raci-alignment.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/4.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>RACI matrix</h3>
-                            Clearly defined roles are an important aspect of any operating model. Use the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-</ul>
-
-<!-- markdownlint-enable MD033 -->
+| | |
+|---|---|
+| ![1](../_Images/icons/1.png)     | <br>[Structure type](#structure-type): Define the type of organizational structure that best fits your operating model.                                |
+| ![2](../_Images/icons/2.png)     | <br>[Cloud functions](#understand-required-cloud-functions): Understand the cloud functionality required to adopt and operate the cloud.                                |
+| ![3](../_Images/icons/3.png)     | <br>[Mature team structures](./organization-structures.md): Define the teams that can provide various cloud functions.                                |
+| ![4](../_Images/icons/4.png)      | [RACI matrix](./raci-alignment.md): Clearly defined roles are an important aspect of any operating model. Use the provided RACI matrix to map responsibility, accountability, consulted, and informed roles to each of the teams for various functions of the cloud operating model.                        |
 
 ## Structure type
 
@@ -109,37 +32,29 @@ The following organizational structures do not necessarily have to map to an org
 The first step of managing organizational alignment is to determine how the following organizational structures will be fulfilled:
 
 - **Org chart alignment:** Management hierarchies, manager responsibilities, and staff alignment will align to organizational structures.
-- **Virtual teams (v-teams):** Management structures and org charts remain unchanged. Instead, virtual teams will be created and tasked with the required capabilities.
+- **Virtual teams (v-teams):** Management structures and org charts remain unchanged. Instead, virtual teams will be created and tasked with the required functions.
 - **Mixed model:** More commonly, a mixture of org chart and v-team alignment will be required to deliver on transformation goals.
 
-## Understand required cloud capabilities
+## Understand required cloud functions
 
-The following is a list of cloud capabilities that are required to succeed at cloud adoption and longer-term operating models. After you become familiar with the various cloud capabilities, these can be aligned to organizational structures based on staffing and maturity:
+The following is a list of functions that are required to succeed at cloud adoption and longer-term operating models. After you become familiar with these, they can be aligned to organizational structures based on staffing and maturity:
 
-- [Cloud adoption](./cloud-adoption.md): Deliver technical solutions.
 - [Cloud strategy](./cloud-strategy.md): Align technical change to business needs.
+- [Cloud adoption](./cloud-adoption.md): Deliver technical solutions.
+- [Cloud governance](./cloud-governance.md): Manage risk.
+- [Central IT](./central-it.md): Support from existing IT staff.
 - [Cloud operations](./cloud-operations.md): Support and operate adopted solutions.
 - [Cloud center of excellence](./cloud-center-of-excellence.md): Improve quality, speed, and resiliency of adoption.
-- [Cloud governance](./cloud-governance.md): Manage risk
 - [Cloud platform](./cloud-platform.md): Operate and mature the platform.
 - [Cloud automation](./cloud-automation.md): Accelerate adoption and innovation.
+- [Cloud security](./cloud-security.md): Manage information security risk.
 
-## Mature organizational structures
+To some degree, each of these functions are delivered in every cloud adoption effort, either explicitly or in accordance with a defined team structure.
 
-To some degree, each of the above capabilities is delivered in every cloud adoption effort, either explicitly or in accordance with a defined team structure.
 As adoption needs grow, so does the need to create balance and structure. To meet those needs, companies often follow a process of maturing organizational structures.
 
 ![Organizational maturity cycle](../_images/ready/org-ready-maturity.png)
 
 The article on [determining organizational structure maturity](./organization-structures.md) provides additional detail regarding each level of maturity.
 
-## Align RACI charts
-
-At each level of maturity, accountability for various cloud capabilities shifts to new teams. This shifting of accountability enables faster migration and innovation cycles by removing and automating barriers to change. To align assignments properly, the article on [RACI alignment](./raci-alignment.md) shares a RACI chart for each of the referenced organizational structures.
-
-## Next steps
-
 To track organization structure decisions over time, download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
-
-> [!div class="nextstepaction"]
-> [Download the RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx)

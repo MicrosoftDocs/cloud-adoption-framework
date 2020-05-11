@@ -19,7 +19,7 @@ Azure is comprised of many regions around the world. Each [Azure region](https:/
 1. **Constraints:** Certain constraints are placed on the deployment of services in certain regions. For example, some regions are only available as a backup or failover target. Other constraints that are important to note are [data sovereignty requirements](https://azure.microsoft.com/global-infrastructure/geographies).
 1. **Sovereignty:** Certain regions are dedicated to specific sovereign entities. While all regions are Azure regions, these sovereign regions are completely isolated from the rest of Azure, are not necessarily managed by Microsoft, and may be restricted to certain types of customers. These sovereign regions are:
     1. [Azure China](https://azure.microsoft.com/global-infrastructure/china)
-    1. [Azure Germany](https://azure.microsoft.com/global-infrastructure/germany) (being deprecated in favor of standard nonsovereign Azure regions in Germany)
+    1. [Azure Germany](https://azure.microsoft.com/global-infrastructure/germany): being deprecated in favor of standard nonsovereign Azure regions in Germany
     1. [Azure US Government](https://azure.microsoft.com/global-infrastructure/government)
     1. Note: two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia) are managed by Microsoft, but are provided for the Australian government and its customers and contractors, and therefore carry client constraints similar to the other sovereign clouds.
 
@@ -38,7 +38,7 @@ As we consider the above complexities further, you will begin to understand how 
 
 Any robust cloud deployment requires a well-considered network that takes into account Azure regions. After considering the above characteristics for which regions to deploy to, the network must be deployed. While an exhaustive discussion on networking is beyond the scope of this article, some considerations must be accounted for:
 
-- Azure regions are deployed in pairs. In the event of a catastrophic failure of a region, another region within the same geopolitical boundary* is designated as its paired region. Thought should be given to deployment into paired regions as a primary and secondary resiliency strategy. *Azure Brazil is a notable exception whose paired region happens to be US South Central. For more, see [Azure paired regions](https://docs.microsoft.com/azure/best-practices-availability-paired-regions).
+- Azure regions are deployed in pairs. In the event of a catastrophic failure of a region, another region within the same geopolitical boundary is designated as its paired region. Thought should be given to deployment into paired regions as a primary and secondary resiliency strategy. Azure Brazil is a notable exception whose paired region happens to be US South Central. For more information, see [Azure paired regions](https://docs.microsoft.com/azure/best-practices-availability-paired-regions).
 
   - Azure Storage supports [Geographically Redundant Storage (GRS)](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs) which means three copies of your data are stored within your primary region and three additional copies are stored in the paired region. You cannot change the storage pairing for GRS.
   - Services that rely on Azure Storage GRS can take advantage of this paired region capability. To do so, your applications and the network must be oriented to support that.
@@ -83,7 +83,7 @@ The following table can aid in documenting the findings from the steps above:
 
 <!-- markdownlint-disable MD026 -->
 
-## Data sovereignty relevancy
+## Relevance of data sovereignty
 
 Around the world, government organizations have begun establishing data sovereignty requirements, like General Data Protection Regulation (GDPR). Compliance requirements of this nature often require localization within a specific region or even within a specific country to protect their citizens. In some cases, data pertaining to customers, employees, or partners must be stored on a cloud platform within the same region as the end user.
 

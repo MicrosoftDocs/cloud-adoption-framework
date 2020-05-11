@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Understand staging activities during a migration
 
-As described in the article on promotion models, *staging* is the point at which assets have been migrated to the cloud. However, they are not yet ready to be promoted to production. This is often the last step in the migrate process of a migration. After staging, the workload is managed by an IT operations or cloud operations team to prepare it for production usage.
+As described in the article on promotion models, _staging_ is the point at which assets have been migrated to the cloud. However, they are not yet ready to be promoted to production. This is often the last step in the migrate process of a migration. After staging, the workload is managed by an IT operations or cloud operations team to prepare it for production usage.
 
 ## Deliverables
 

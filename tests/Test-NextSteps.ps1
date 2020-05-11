@@ -20,7 +20,7 @@ function Test-NextSteps([String] $docsPath)
     $ignore = $false
     $url = ''
     $relativeUrl = ''
-    $ignoreDirective = '<!-- test:ignoreNextStep -->'
+    $ignoreDirective = '<!-- docsTest:ignoreNextStep -->'
 
     while ($toc.Count -gt 0)
     {
@@ -28,7 +28,7 @@ function Test-NextSteps([String] $docsPath)
         
         $name = $item[0]
         $href = $item[1]
-        write-host "NAME: $name :: $href"
+        Write-Host "NAME: $name :: $href"
 
         if ($href.StartsWith("http"))
         {
@@ -37,7 +37,7 @@ function Test-NextSteps([String] $docsPath)
         else
         {
             $testTocUrl = (resolve-path (join-path $docsPath $href)).Path
-            $testContentUrl = if ($url.Length -gt 0) { (resolve-path $url).Path } else { '' }
+            $testContentUrl = ($url.Length -gt 0) ? (resolve-path $url).Path : ''
 
             if ($ignore -eq $false -and $relativeUrl.Length -gt 0 -and (-not $testTocUrl -eq $testContentUrl))
             {
@@ -67,7 +67,7 @@ function Test-NextSteps([String] $docsPath)
 
             $expression = "\> \[.*\]\((.*)\)"
             
-            $matches = ([regex]$expression).Matches($urlLine)
+            $matches = ([Regex]$expression).Matches($urlLine)
             if ($matches.Count -eq 1)
             {
                 $relativeUrl = $($matches[0].Captures[0].Groups[1].Value)
@@ -154,7 +154,7 @@ return
 
 # $text = Get-Content $tocFile
 
-# $hits = ([regex]$regexForUrl).Matches($text)
+# $hits = ([Regex]$regexForUrl).Matches($text)
 
 # if ($hits.Count -gt 0)
 # {

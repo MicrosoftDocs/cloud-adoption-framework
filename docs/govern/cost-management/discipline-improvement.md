@@ -12,15 +12,15 @@ ms.custom: governance
 
 # Cost Management discipline improvement
 
-The Cost Management discipline attempts to address core business risks related to expenses incurred when hosting cloud-based workloads. Within the Five Disciplines of Cloud Governance, Cost Management is involved in controlling cost and usage of cloud resources with the goal of creating and maintaining a planned cost cycle.
+The Cost Management discipline attempts to address core business risks related to expenses incurred when hosting cloud-based workloads. Within the Five Disciplines of Cloud Governance, the Cost Management discipline is involved in controlling cost and usage of cloud resources with the goal of creating and maintaining a planned cost cycle.
 
 This article outlines potential tasks your company perform to develop and mature your Cost Management discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution. The tasks are then iterated on to allow the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
 ![Four phases of adoption](../../_images/govern/adoption-phases.png)
 
-*Figure 1 - Adoption phases of the incremental approach to cloud governance.*
+_Figure 1: Adoption phases of the incremental approach to cloud governance._
 
-No single document can account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [Policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Cost Management governance capabilities.
+No single document can account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Cost Management discipline capabilities.
 
 > [!CAUTION]
 > Neither the minimum or potential activities outlined in this article are aligned to specific corporate policies or third-party compliance requirements. This guidance is designed to help facilitate the conversations that will lead to alignment of both requirements with a cloud governance model.
@@ -32,8 +32,8 @@ This phase of governance maturity bridges the divide between business outcomes a
 **Minimum suggested activities:**
 
 - Evaluate your [Cost Management toolchain](./toolchain.md) options.
-- Develop a draft Architecture Guidelines document and distribute to key stakeholders.
-- Educate and involve the people and teams affected by the development of Architecture Guidelines.
+- Develop a draft document for architecture guidelines and distribute to key stakeholders.
+- Educate and involve the people and teams affected by the development of architecture guidelines.
 
 **Potential activities:**
 
@@ -52,14 +52,14 @@ Several technical and nontechnical prerequisites are required to successfully mi
 **Minimum suggested activities:**
 
 - Implement your [Cost Management toolchain](./toolchain.md) by rolling out in a predeployment phase.
-- Update the Architecture Guidelines document and distribute to key stakeholders.
+- Update the architecture guidelines document and distribute to key stakeholders.
 - Develop educational materials and documentation, awareness communications, incentives, and other programs to help drive user adoption.
 - Determine if your purchase requirements align with your budgets and goals.
 
 **Potential activities:**
 
-- Align your budgetary plans with the [Subscription Strategy](../../decision-guides/subscriptions/index.md) that defines your core ownership model.
-- Use the [Resource Consistency Strategy](../../decision-guides/resource-consistency/index.md) to enforce architecture and cost guidelines over time.
+- Align your budgetary plans with the [subscription strategy](../../decision-guides/subscriptions/index.md) that defines your core ownership model.
+- Use the [Resource Consistency discipline strategy](../../decision-guides/resource-consistency/index.md) to enforce architecture and cost guidelines over time.
 - Determine if any cost anomalies affect your adoption and migration plans.
 
 ## Adopt and migrate
@@ -69,7 +69,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 **Minimum suggested activities:**
 
 - Migrate your [Cost Management toolchain](./toolchain.md) from predeployment to production.
-- Update the Architecture Guidelines document and distribute to key stakeholders.
+- Update the architecture guidelines document and distribute to key stakeholders.
 - Develop educational materials and documentation, awareness communications, incentives, and other programs to help drive user adoption.
 
 **Potential activities:**
@@ -77,7 +77,7 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Implement your cloud accounting model.
 - Ensure that your budgets reflect your actual spending during each release and adjust as necessary.
 - Monitor changes in budgetary plans and validate with stakeholders if additional sign-offs are needed.
-- Update changes to the Architecture Guidelines document to reflect actual costs.
+- Update changes to the architecture guidelines document to reflect actual costs.
 
 ## Operate and post-implementation
 
@@ -85,10 +85,10 @@ After the transformation is complete, governance and operations must live on for
 
 **Minimum suggested activities:**
 
-- Customize your [Cost Management toolchain](./toolchain.md) based on changes in your organization's cost management needs.
+- Customize your [Cost Management toolchain](./toolchain.md) based on your organization's changing needs.
 - Consider automating any notifications and reports to reflect actual spending.
-- Refine Architecture Guidelines to guide future adoption processes.
-- Educate affected teams on a periodic basis to ensure ongoing adherence to the Architecture Guidelines.
+- Refine architecture guidelines to guide future adoption processes.
+- Educate affected teams on a periodic basis to ensure ongoing adherence to the architecture guidelines.
 
 **Potential activities:**
 

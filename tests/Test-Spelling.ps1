@@ -2,30 +2,31 @@ $here = $global:herePath
 
 . "$here\Test-Helpers.ps1"
 
-function Test-Spelling([string] $docsPath, [string] $folder)
+function Test-Spelling(
+    [string] $docsPath,
+    [string[]] $subfolders)
 {
     Copy-SpellingDictionary "$docsPath\.."
 
-    $commandPath = "$env:APPDATA\npm\cspell.cmd"
-    $pathToCheck = "$docsPath\$folder\**\*.md"
-    $configFile = "$docsPath\..\.cspell.json"
-    $arguments = "/c $commandPath $pathToCheck -c $configFile"
-
-    $output = Get-ProcessStream "StandardError" -FileName $env:ComSpec -Args $arguments
-
-    $expression = "Issues found: (?<issues>[0-9]*) in "
-    
-    $matches = ([regex]$expression).Matches($output)
-    if ($matches.Count -gt 0)
+    $count = 0
+    foreach ($item in $subfolders)
     {
-        $issues = $matches.Groups[1].Value
-    }
-    else
-    {
-        throw "Unexpected process output: '$output'"
+        Write-Host "Checking: $item"
+        $output = Invoke-ExternalChecker 'cspell' $item '*' '--exclude *.svg'
+        
+        $expression = "Issues found: (?<issues>[0-9]*) in "
+        $matches = ([Regex]$expression).Matches($output)
+        if ($matches.Count -gt 0)
+        {
+            $count += $matches.Groups[1].Value
+        }
+        else
+        {
+            throw "Unexpected process output: '$output'"
+        }
     }
 
-    return $issues
+    return $count
 } 
 
 function Copy-SpellingDictionary(
@@ -40,5 +41,5 @@ function Copy-SpellingDictionary(
     $text = $text.Replace('"cSpell.enabled": true,', '')
     $text = $text.Replace('cSpell.', '')
 
-    Set-Content -Path "$repoPath\.cspell.json" -Value $text.ToString()
+    Set-Content -Path "$repoPath\docs\.cspell.json" -Value $text.ToString()
 }

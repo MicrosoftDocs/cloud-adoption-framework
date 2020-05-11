@@ -13,21 +13,39 @@ ms.subservice: ready
 
 # What is a landing zone?
 
-Infrastructure as code is a natural transition during most cloud adoption efforts. Deployment of your first landing zones in the cloud is a common starting point to transition into code-first environment creation. This article will aid in understanding the term _landing zone_ and other related terms.
+Infrastructure as code is a common requirement for most cloud adoption efforts. The shift to code-first environment creation can add a learning curve for team members and require changes to aspects of operations, security, governance, and compliance. Deployment of descrete purpose built landing zones help flatten those curves to help the team stay safely on track with adoption plans. This article will define the term _landing zone_ and other related terms. Other articles in this series will guide the creation of landing zones.
+
+## Pre-requisite to landing zone deployment
+
+Before defining landing zones, it's important to understand a related term: _platform foundation_. In any environment (Cloud, on-prem, or hybrid), you will find a collection of _foundation utilities_ that support all of the various workloads. The business needs the workloads to operate. IT needs those foundational utilities to manage, govern, and secure the full _portfolio_ of workloads. For more information on these related terms & how they fit together, see the article on [portfolio hierarchy](../../reference/fundamental-concepts/hosting-hierarchy.md).
+
+**Platform Foundation:** Before deploing landing zones, it is assumed that centralized controls for identity, security, operations, compliance, and governance are provided to the landing zone from a shared _Platform Foundation_ that supports all workloads in that specific cloud platform. All workloads within each landing zone, will be governed by these central controls to establish a consistent baseline across the _shared-architectural pillars_ of security, reliability, performance, cost, and cloud operations. 
+
+**Seperation of duties:** There should be a clear separation of duties between the workload focused work happening within a landing zone and the operation of the utilities that are managed outside of the landing zone. This seperation of duty ensures proper governance and compliance. It also ensures that each team discusses and considers any exceptions to corporate policy to avoid quickly creating work-arounds that could compromise your environment.
+
+> [!CAUTION]
+> Seperation of duty should not discourage teams from using this best practice solely based on current staffing allocation or team structures. During early stage adoption of the cloud, a single adoption team may temporarily hold all of the responsibilities of adopting cloud technology and providing governance, security, and operations for a small number of workloads. If the future looking plan includes seperation of duties, or even isolations of tasks, then this approach is still the suggested best practice.
+
+**Shared responsibilities:** _Platform Foundation_ provide centralized controls to govern the cloud platform. However, there is still a shared responsibility across all members of the team to consider identity, security, operations, compliance, and governance requirements. Before adopting any technology in a landing zone, understand what utilities are provided by the _Platform Foundation_ and what you will need to implement within the landing zone to fulfill your shared responsibilities.
+
+> [!IMPORTANT]
+> Developers and architects who are deploying solutions within a landing zone can reference [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework/) to incorporate and build on these shared-architectural pillars when designing, building, or supporting workloads that run within a landing zone.
 
 ## Landing zone definition
 
-A landing zone is an environment for hosting your workloads, preprovisioned through code. It includes foundational capabilities using defined set of cloud services and best practices so you are set up for success.
+A _landing zone_ is a segment of a cloud environment, that has been preprovisioned through code, and is dedicated to the support of **one or more workloads**. Landing zones provide access to foundational tools and controls to establish a compliant place to innovate & build new workloads in the cloud, or to migrate existing workloads to the cloud. Landing zones use defined sets of cloud services and best practices to set you up for success.
 
-More specifically, a landing zone is the basic building block of any cloud adoption environment. The term _landing zone_ refers to a logical construct capturing everything that must be true to enable the desired cloud adoption.
+More specifically, a landing zone is the basic building block of any cloud adoption environment. The term _landing zone_ refers to a logical construct that enables workloads to co-exist on top of a _platform foundation_. Together, landing zones and the platform foundation capture everything that must be in place and ready to enable cloud adoption across the IT portfolio.
 
-**Scope:** A fully functional landing zone considers all platform resources that are required to support the customer's adoption needs.
+**Scope:** A fully functional landing zone considers all platform utilities that are required to support the customer's adoption needs.
 
 **Refactoring:** A fully functional landing zone is the final deliverable of any iteration of the Cloud Adoption Framework's Ready methodology. During each iteration, the code base that defines the landing zone will be refactored or expanded. After refactoring, the landing zone may be modified or redeployed to allow for new cloud adoption needs.
 
-**Goal:** The goal of the landing zone approach is to create a common set of consistent platform implementations. Those consistent implementations must be in place to ensure that your applications have access to requisite components when deployed. Each landing zone iteration must consequently be designed and deployed in accordance with the requirements of the cloud adoption plan and the subscription design strategy.
+**Goal:** The goal of the landing zone approach is to create a common set of consistent platform implementations that allow adoption teams to build on a centrally-managed _platform foundation_. Those consistent implementations must be in place to ensure that your applications have access to requisite components when deployed. Each landing zone iteration must consequently be designed and deployed in accordance with the requirements of the cloud adoption plan and the subscription design strategy.
 
-**Principle purpose:** The principle purpose of the landing zone is to ensure that when an application lands on Azure, the required "plumbing" is already in place.
+**Principle purpose:** The principle purpose of the landing zone is to ensure that when an application lands in the cloud, that the required "plumbing" or other utilities are already in place.
+
+**Benefits:** Together, landing zones and a common platform foundation create consistency in the _shared-architectural pillars_ of security, reliability, performance, cost, and cloud operations. This combination also reduces the overhead required to maintain operations, governance, and compliance across the IT portfolio. As adoption requirements grow, landing zones minimize the refactoring and deployment required to scale you adoption needs.
 
 ## Landing zone usage
 
@@ -35,17 +53,20 @@ Landing zones do not necessarily differentiate between IaaS or PaaS adoption. Ho
 
 The purpose and scope of the overall cloud adoption plan will define what "plumbing" is required. Additional governance, compliance, security, and operational management requirements will likely add to the initial landing zone scope. During early stages of adoption, landing zones may include less "plumbing" as a result of defined requirements and acceptable risks. When multiple landing zones exist, it is very common for each landing zone to be dependent on hubs that provide the required controls through a shared service model.
 
-## Related terms
+## Decentralized operations
 
-- **Shared services:** Workloads often have shared dependencies that are used by many different workloads. The shared services approach moves many of those common dependencies into one logical construct.
+In some decentralized organizations, adoption designs call for workload teams which are **solely responsible** for their own implementation and operation of each isolated workload, including security, governance, operations management, and other functions. For those teams, a workload may have it's own segregated environment, with no dependencies on a platform foundation. Those workload specific environments would have inconsistent implementations of security, reliability, performance, cost, and cloud operations. As such they should not be referred to as landing zones. These teams should look to guidance from [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework/) to design, build, and optimize each workload independently.
 
-- **Hub and spoke model:** One implementation of the shared services approach is a hub and spoke model. In this model, the hub is a single logical construct for hosting all shared services. Landing zones then act as spokes radiating out of the hub, based on common dependencies.
+> [!IMPORTANT]
+> Similar but distinct: Early in the cloud adoption lifecycle, smaller teams may perform like decentralized organizations due to necessity. If those teams are decentralized by circumstance (as opposed to decentralized by design), then the best practice of landing zone should still be followed.
 
-- **Independent landing zone:** Some approaches to landing zones do not specifically call for a dedicated hub. This is most commonly seen when all production assets (apps, data, and VMs) in the cloud adoption plan can be safely hosted, managed, and governed in a single environment.
+## Portfolio hierarchy
+
+Landing zones are one layer of the overall portfolio hierarchy as described in the pre-requisites. The existence of landing zones are an indicator that the company is supporting a broader portfolio, with the help of various supporting teams, processes, and a centralized _Platform Foundation_. For more context on how landing zones fit into the bigger portfolio design, see the article on [portfolio hierarchy](../../reference/fundamental-concepts/hosting-hierarchy.md). To better understand the products in Azure that can be used to manage the various layers of the portfolio hierarchy see the article on [Azure hierarchy support](../../reference/fundamental-concepts/hierarchy-azure-tools.md).
 
 ## Next steps
 
-Before getting started with your first landing zone it is important to understand the [refactoring principles](./refactor.md) that guide this approach.
+Before establishing your first landing zone, it is important to understand the [refactoring principles](./refactor.md) that guide this approach.
 
 > [!div class="nextstepaction"]
 > [Refactor landing zones](./refactor.md)

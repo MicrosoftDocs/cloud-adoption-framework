@@ -1,6 +1,6 @@
 ---
 title: Specialized workloads for cloud management
-description: Use the Cloud Adoption Framework for Azure to learn about specialized workload cloud management operations. 
+description: Use the Cloud Adoption Framework for Azure to learn about specialized workload cloud management operations.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -36,7 +36,7 @@ Workload specialization often triggers a cultural change in traditional IT build
 
 When workload specialization is required, operational management commonly evolves beyond a central IT perspective. The approach suggested in Cloud Adoption Framework is a distribution of cloud management functionality.
 
-In this model, operational tasks like monitoring, deployment, DevOps, and other innovation-focused functions shift to an application-development or business-unit organization. The Cloud Platform and core Cloud Monitoring team still delivers on the management baseline across the environment.
+In this model, operational tasks like monitoring, deployment, DevOps, and other innovation-focused functions shift to an application-development or business-unit organization. The cloud platform team and the core cloud monitoring team still delivers on the management baseline across the environment.
 
 Those centralized teams also guide and instruct workload-specialized teams on operations of their workloads. But the day-to-day operational responsibility falls on a cloud management team that is managed outside of IT. This type of distributed control is one of the primary indicators of maturity in a cloud center of excellence.
 
@@ -44,10 +44,10 @@ Those centralized teams also guide and instruct workload-specialized teams on op
 
 Greater detail on the specific workload is required to provide clear workload operations. During the continuous improvement phase, Application Insights will be a necessary addition to the cloud management toolchain.
 
-|Requirement|Tool|Purpose|
-|---|---|---|
-|Application monitoring|Application Insights|Monitoring and diagnostics for apps|
-|Performance, availability, and usage|Application Insights|Advanced application monitoring with app dashboard, composite maps, usage, and tracing|
+| Requirement                          | Tool                 | Purpose                                                                                |
+| ------------------------------------ | -------------------- | -------------------------------------------------------------------------------------- |
+| Application monitoring               | Application Insights | Monitoring and diagnostics for apps                                                    |
+| Performance, availability, and usage | Application Insights | Advanced application monitoring with app dashboard, composite maps, usage, and tracing |
 
 ### Deploy Application Insights
 

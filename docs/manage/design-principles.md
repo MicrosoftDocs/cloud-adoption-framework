@@ -94,7 +94,7 @@ For guidance on automated remediation, see [Azure Automation and alerts](https:/
 
 ### Scale the solution with a service catalog
 
-The cornerstone of platform specialization and platform operations is a well-managed service catalog. This is how improvements to systems design and remediation are scaled across an environment. The cloud platform team and cloud automation team align to create repeatable solutions to the most common platforms in any environment. But, if those solutions aren't consistently applied, cloud management can provide little more than a baseline offering.
+The cornerstone of platform specialization and platform operations is a well-managed service catalog. This is how improvements to systems design and remediation are scaled across an environment. The cloud platform team and cloud automation team align to create repeatable solutions to the most common platforms in any environment. However, if those solutions aren't consistently applied, cloud management can provide little more than a baseline offering.
 
 To maximize adoption and minimize maintenance overhead of any optimized platform, the platform should be added to a service catalog. Each application in the catalog can be deployed for internal consumption via the service catalog, or as a marketplace offering for external consumers.
 
@@ -102,7 +102,7 @@ For information about publishing to a service catalog, see the series on [publis
 
 ### Continuous improvement
 
-Platform specialization and platform operations both depend on strong feedback loops between adoption, platform, automation, and management teams. Grounding those feedback loops in data empowers each team to make wise decisions. For platform operations to achieve long-term business commitments, it's important to take advantage of insights that are specific to the centralized platform. Because containers and SQL Server are the two most common centrally managed platforms, consider getting started with continuous improvement data collection by reviewing the following articles:
+Platform specialization and platform operations both depend on strong feedback loops between adoption, platform, automation, and management teams. Grounding those feedback loops in data empowers each team to make wise decisions. For platform operations to achieve long-term business commitments, it's important to take advantage of insights that are specific to the centralized platform. Because containers and SQL Server are the two most common centrally managed platforms, consider beginning with continuous improvement data collection by reviewing the following articles:
 
 - [Container performance](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)
 - [PaaS database performance](https://docs.microsoft.com/azure/azure-monitor/insights/azure-sql)

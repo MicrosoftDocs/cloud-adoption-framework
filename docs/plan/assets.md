@@ -20,7 +20,7 @@ Workload is a conceptual description of a collection of assets: VMs, application
 
 There are several options for assembling this data. The following are a few of the most common approaches.
 
-## Alternative inputs: Migrate, Modernize, Innovate
+## Alternative inputs: Migrate, modernize, innovate
 
 The objective of the preceding data points is to capture relative technical effort and dependencies as an aid to prioritization. Depending on the transition you want, you may need to gather alternative data points to support proper prioritization.
 
@@ -28,7 +28,7 @@ The objective of the preceding data points is to capture relative technical effo
 
 **Modernize:** When the goal for a workload is to modernize applications or other assets, these data points are still solid measures of complexity. However, it might be wise to add an input for modernization opportunities to the workload documentation.
 
-**Innovate:** When data or business logic is undergoing material change during a cloud adoption effort, it's considered an *innovate* type of transformation. The same is true when you're creating new data or new business logic. For any innovate scenarios, the migration of assets will likely represent the smallest amount of effort required. For these scenarios, the team should devise a set of technical data inputs to measure relative complexity.
+**Innovate:** When data or business logic is undergoing material change during a cloud adoption effort, it's considered an _innovate_ type of transformation. The same is true when you're creating new data or new business logic. For any innovate scenarios, the migration of assets will likely represent the smallest amount of effort required. For these scenarios, the team should devise a set of technical data inputs to measure relative complexity.
 
 ## Azure Migrate
 

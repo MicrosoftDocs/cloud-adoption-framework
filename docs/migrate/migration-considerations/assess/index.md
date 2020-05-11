@@ -15,13 +15,13 @@ Many of your existing workloads are ideal candidates for cloud migration, but no
 
 As a result, before migrating a workload to the cloud it's critical to assess the individual assets associated with that workload for their migration suitability. During this assessment, your cloud adoption team should evaluate technical compatibility, required architecture, performance/sizing expectations, and dependencies to ensure that the migrated workload can be deployed to the cloud effectively.
 
-The *Assess* process is the first of four incremental activities that occur within an iteration. As discussed in the prerequisite article regarding [technical complexity and change management](../prerequisites/technical-complexity.md), a decision should be made in advance to determine how this phase is executed. In particular, will assessments be completed by the cloud adoption team during the same sprint as the actual migration effort? Alternatively, will a wave or factory model be used to complete assessments in a separate iteration? If the answer to this basic process question can't be answered by every member of the team, it may be wise to revisit the [Prerequisites](../prerequisites/index.md)" section.
+The _Assess_ process is the first of four incremental activities that occur within an iteration. As discussed in the prerequisite article regarding [technical complexity and change management](../prerequisites/technical-complexity.md), a decision should be made in advance to determine how this phase is executed. In particular, will assessments be completed by the cloud adoption team during the same sprint as the actual migration effort? Alternatively, will a wave or factory model be used to complete assessments in a separate iteration? If the answer to this basic process question can't be answered by every member of the team, it may be wise to revisit the [Prerequisites](../prerequisites/index.md) section.
 
 ## Objective
 
 Assess a migration candidate, evaluating the workload, associated assets, and dependencies prior to migration.
 
-## Definition of *done*
+## Definition of _done_
 
 This process is complete when the following are known about a single migration candidate:
 

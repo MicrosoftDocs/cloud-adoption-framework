@@ -13,7 +13,7 @@ ms.subservice: ready
 
 # Use Terraform to build your landing zones
 
-Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is HashiCorp's Terraform. This section shows how to use a sample landing zone to deploy foundational governance, accounting, and security capabilities for an Azure subscription.
+Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is HashiCorp Terraform. This section shows how to use a sample landing zone to deploy foundational governance, accounting, and security capabilities for an Azure subscription.
 
 ## Purpose of the landing zone
 
@@ -33,13 +33,17 @@ The first landing zone deploys the following components in your subscription:
 
 The components deployed and their purpose include the following:
 
-| Component             | Responsibility                                                                                                                                                                                                                                            |
-|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Resource groups       | Core resource groups needed for the foundation                                                                                                                                                                                                            |
-| Activity logging      | Auditing all subscription activities and archiving: </br> - Storage account </br> - Azure Event Hubs                                                                                                                                                      |
-| Diagnostics logging   | All operation logs kept for a specific number of days: </br> - Storage account </br> - Event Hubs                                                                                                                                                         |
-| Log Analytics         | Stores all the operation logs </br> Deploy common solutions for deep application best practices review: </br> - NetworkMonitoring </br> - ADAssessment </br> - ADReplication </br> - AgentHealthAssessment </br> - DnsAnalytics </br> - KeyVaultAnalytics |
+<!-- markdownlint-disable MD033 -->
+
+| Component | Responsibility |
+|---|---|
+| Resource groups | Core resource groups needed for the foundation |
+| Activity logging      | Auditing all subscription activities and archiving: <li> Storage account <li> Azure Event Hubs |
+| Diagnostics logging | All operation logs kept for a specific number of days: <li> Storage account <li> Event Hubs |
+| Log Analytics | Stores all the operation logs. Deploy common solutions for deep application best practices review: <li> NetworkMonitoring <li> ADAssessment <li> ADReplication <li> AgentHealthAssessment <li> DnsAnalytics <li> KeyVaultAnalytics |
 | Azure Security Center | Security hygiene metrics and alerts sent to email and phone number                                                                                                                                                                                        |
+
+<!-- markdownlint-enable MD033 -->
 
 ## Use this blueprint
 
@@ -89,6 +93,8 @@ The minimum set of tags shown below must be present on all resources and resourc
 | Deployment Type   | Defines how the resources are being maintained.                                                    | deploymentType  | Manual, Terraform                                |
 | Version           | Version of the blueprint deployed.                                                                 | version         | v0.1                                             |
 | Application Name  | Name of the associated application, service, or workload associated with the resource.             | ApplicationName | "app name"                                       |
+
+<!-- cSpell:ignore caf -->
 
 ## Customize and deploy your first landing zone
 
@@ -140,7 +146,7 @@ tags_hub = {
 }
 ```
 
-Then, we specify the log analytics name and a set of solutions that analyze the deployment. Here, we retained Network Monitoring, Active Directory (AD) Assessment and Replication, DNS Analytics, and Key Vault Analytics.
+Then, we specify the log analytics name and a set of solutions that analyze the deployment. Here, we retained Network Monitoring, Active Directory Assessment and Replication, DNS Analytics, and Key Vault Analytics.
 
 ```hcl
 
