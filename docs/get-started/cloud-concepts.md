@@ -36,7 +36,7 @@ Everyone involved in Azure implementation of the technology strategy should unde
 
 ## Step 3: Review the portfolio
 
-Regardless of the chosen cloud provider, all cloud hosting and environmental decisions start with an understanding of the portfolio of workloads. The Cloud Adoption Framework includes a few tools for understanding and evaluating the portfolio.
+Whatever cloud provider you choose, all cloud hosting and environmental decisions start with an understanding of the portfolio of workloads. The Cloud Adoption Framework includes a few tools for understanding and evaluating the portfolio.
 
 **Deliverables:**
 
