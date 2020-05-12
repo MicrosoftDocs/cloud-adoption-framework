@@ -1,6 +1,6 @@
 ---
-title: Security Baseline risk tolerance metrics and indicators
-description: Use the Cloud Adoption Framework for Azure to learn how to quantify business risk tolerance related to Security Baseline.
+title: Risk tolerance metrics and indicators in the Security Baseline discipline.
+description: Use the Cloud Adoption Framework for Azure to learn how to quantify business risk tolerance related to the Security Baseline discipline.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -10,13 +10,13 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Security Baseline metrics, indicators, and risk tolerance
+# Risk tolerance metrics and indicators in the Security Baseline discipline
 
-This article will help you quantify business risk tolerance as it relates to Security Baseline. Defining metrics and indicators helps you create a business case for making an investment in maturing the Security Baseline discipline.
+Learn to quantify business risk tolerance associated with the Security Baseline discipline. Defining metrics and indicators helps to create a business case for investing in the maturity of this discipline.
 
 ## Metrics
 
-Security Baseline generally focuses on identifying potential vulnerabilities in your cloud deployments. As part of your risk analysis you'll want to gather data related to your security environment to determine how much risk you face, and how important investment in Security Baseline governance is to your planned cloud deployments.
+The Security Baseline discipline generally focuses on identifying potential vulnerabilities in your cloud deployments. As part of your risk analysis you'll want to gather data related to your security environment to determine how much risk you face, and how important investment in your Security Baseline discipline is for your planned cloud deployments.
 
 Every organization has different security environments and requirements and different potential sources of security data. The following are examples of useful metrics that you should gather to help evaluate risk tolerance within the Security Baseline discipline:
 
@@ -27,7 +27,7 @@ Every organization has different security environments and requirements and diff
 - **Covered standards:** Number of security standards defined by the security team.
 - **Covered resources:** Deployed assets that are covered by security standards.
 - **Overall standards compliance:** Ratio of compliance adherence to security standards.
-- **Attacks by severity:** How many coordinated attempts to disrupt your cloud-hosted services, such as through Distributed Denial of Service (DDoS) attacks, does your infrastructure experience? What is the size and severity of these attacks?
+- **Attacks by severity:** How many coordinated attempts to disrupt your cloud-hosted services, such as through distributed denial of service (DDoS) attacks, does your infrastructure experience? What is the size and severity of these attacks?
 - **Malware protection:** Percentage of deployed virtual machines (VMs) that have all required anti-malware, firewall, or other security software installed.
 - **Patch latency:** How long has it been since VMs have had OS and software patches applied.
 - **Security health recommendations:** Number of security software recommendations for resolving health standards for deployed resources, organized by severity.
@@ -53,9 +53,9 @@ The exact metrics and triggers you use to gauge risk tolerance and the level of 
 
 ## Next steps
 
-Using the [Cloud Management template](./template.md), document metrics and tolerance indicators that align to the current cloud adoption plan.
+Use the [Security Baseline discipline template](./template.md) to document metrics and tolerance indicators that align to the current cloud adoption plan.
 
-Review sample Security Baseline policies as a starting point to develop policies that address specific business risks that align with your cloud adoption plans.
+Review sample Security Baseline policies as a starting point to develop your own policies to address specific business risks aligned with your cloud adoption plans.
 
 > [!div class="nextstepaction"]
 > [Review sample policies](./policy-statements.md)

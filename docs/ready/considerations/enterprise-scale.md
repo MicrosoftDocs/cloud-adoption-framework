@@ -63,7 +63,7 @@ The additional samples in the [Azure blueprint samples article](https://docs.mic
 ## Next steps
 
 Choose one of the enterprise-scale landing zone blueprints.
-From there, the same guidance in [start small and expand](./index.md) can be used to expand your enterprise-scale landing zone(s) to fit your distinct requirements.
+From there, the same guidance in [Start small and expand](./index.md) can be used to expand your enterprise-scale landing zone(s) to fit your distinct requirements.
 
 > [!div class="nextstepaction"]
 > [Resume the "start small and expand" guidance using your enterprise-scale landing zone as the initial source](./index.md)

@@ -1,5 +1,5 @@
 ---
-title: Mainframe migration myths and facts 
+title: Mainframe migration myths and facts
 description: Learn to distinguish the myths from the reality about mainframes, and evaluate the mainframe workloads that are most suitable for Azure.
 author: njray
 ms.author: v-nanra
@@ -19,7 +19,7 @@ The reliability, availability, and processing power of mainframes have taken on 
 
 ## Myth: Mainframes never go down and have a minimum of five 9s of availability
 
-Mainframe hardware and operating systems are viewed as reliable and stable. But the reality is that downtime must be scheduled for maintenance and reboots (referred to as initial program loads or IPLs). When these tasks are considered, a mainframe solution often has closer to two or three 9s of availability, which is equivalent to that of high-end, Intel-based servers.
+Mainframe hardware and operating systems are viewed as reliable and stable. But the reality is that downtime must be scheduled for maintenance and reboots, referred to as initial program loads (IPLs). When these tasks are considered, a mainframe solution often has closer to two or three 9s of availability, which is equivalent to that of high-end, Intel-based servers.
 
 Mainframes also remain as vulnerable to disasters as any other servers do, and require uninterruptible power supply (UPS) systems to handle these types of failures.
 

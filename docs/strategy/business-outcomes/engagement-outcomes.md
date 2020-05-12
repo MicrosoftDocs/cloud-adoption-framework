@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- cSpell:ignore Exak -->
+<!-- cSpell:ignore ExakTime -->
 
 # Examples of customer engagement outcomes
 
@@ -23,17 +23,22 @@ The following are examples and outcomes related to customer engagement:
 
 ## Cycle time
 
-During customer-obsessed transformations, like a cloud-enabled application innovation effort, customers respond from direct engagement and the ability to see their needs met quickly by the development team. Cycle time is a Six Sigma term that refers to the duration from the start to finish of a function. For business leaders who are customer-obsessed and investing heavily in improving customer engagement, cycle time can be a strong business outcome.
+During customer-obsessed transformations such as a cloud-enabled application innovation effort, customers respond from direct engagement and the ability to see their needs met quickly by the development team. Cycle time is a Six Sigma term that refers to the duration from the start to finish of a function. For business leaders who are customer-obsessed and investing heavily in improving customer engagement, cycle time can be a strong business outcome.
 
 - **Example:** A services company that provides business-to-business (B2B) services is trying to retain market share in a competitive market. Customers who've left for a competing service provider found that their overly complex technical solution interferes with their business processes and is the primary reason for leaving. In this case, cycle time is imperative. Today, it takes 12 months for a feature to progress from request to release. If it's prioritized by the executive team, that cycle can be reduced to six to nine months. Through a cloud-enabled application innovation effort, cloud-native application models, and Azure DevOps integration, the team cut cycle time down to one month, allowing the business and application development teams to interact more directly with customers.
+
+<!--docsTest:ignore "Wayne Wise" "Vice President of Software Development" -->
 
 > **ExakTime**
 >
 > Labor management breaks free of on-premises constraints with cloud technology. With Microsoft Azure, ExakTime is moving toward streamlined agile product development, while the company's clients enjoy a more robust and easier-to-use product, full of new features.
 >
-> "Now, a developer can sit down at his machine, have an idea, spin up a web service or an Azure instance, test out his idea, point it at test data, and get the concept going. In the time that it would have taken to provision just the stuff to do a test, we can actually write the functionality."  
-> Wayne Wise  
-> Vice President of Software Development  
+> "Now, a developer can sit down at his machine, have an idea, spin up a web service or an Azure instance, test out his idea, point it at test data, and get the concept going. In the time that it would have taken to provision just the stuff to do a test, we can actually write the functionality."
+>
+> Wayne Wise
+>
+> Vice President of Software Development
+>
 > ExakTime
 
 ## Next steps

@@ -25,12 +25,15 @@ Configuration of the base Azure environment could change significantly when inte
 
 **ISO 27001 Compliance blueprints:** For customer who are required to adhere to ISO compliance standards, the [ISO 27001 Shared Services blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-shared) can serve as a more effective MVP to produce richer governance constraints earlier in the iterative process. The [ISO 27001 App Service Environment/SQL Database Sample](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-ase-sql-workload) expands on the blueprint to map controls and deploy a common architecture for an application environment. As additional compliance blueprints are released, they will be referenced here as well.
 
-**Virtual Datacenter:** A more robust governance starting point may be required. In such cases, consider the [Azure Virtual Datacenter (VDC)](../../reference/vdc.md). This approach is commonly suggested during enterprise-scale adoption efforts, and especially for efforts that exceed 10,000 assets. It is also the de facto choice for complex governance scenarios when any of the following are required: extensive third-party compliance requirements, deep domain expertise, or parity with mature IT governance policies and compliance requirements.
+<!-- TODO: Refactor VDC content below. -->
+<!-- docsTest:ignore "Azure Virtual Datacenter" -->
+
+**Azure Virtual Datacenter:** A more robust governance starting point may be required. In such cases, consider the [Azure Virtual Datacenter (VDC)](../../reference/vdc.md). This approach is commonly suggested during enterprise-scale adoption efforts, and especially for efforts that exceed 10,000 assets. It is also the default choice for complex governance scenarios when any of the following are required: extensive third-party compliance requirements, deep domain expertise, or parity with mature IT governance policies and compliance requirements.
 
 ### Partnership option to complete prerequisites
 
 **Microsoft Services:**
-Microsoft Services provides solution offerings that can align to the Cloud Adoption Framework governance model, compliance blueprints, or Virtual Datacenter options to ensure the most appropriate governance or compliance model. Use the [Secure Cloud Insights (SCI)](https://download.microsoft.com/download/C/7/C/C7CEA89D-7BDB-4E08-B998-737C13107361/Secure_Cloud_Insights_Datasheet_EN_US.pdf) solution offering to establish a data-driven picture of a customer deployment in Azure and validate the customer´s Azure implementation maturity while identifying optimization of existing deployment architectures, remove governance security and availability risks. Based on customer insights, you should lead with the following approaches:
+Microsoft Services provides solution offerings that can align to the Cloud Adoption Framework governance model, compliance blueprints, or Virtual Datacenter options to ensure the most appropriate governance or compliance model. Use the [Secure Cloud Insights (SCI)](https://download.microsoft.com/download/C/7/C/C7CEA89D-7BDB-4E08-B998-737C13107361/Secure_Cloud_Insights_Datasheet_EN_US.pdf) solution offering to establish a data-driven picture of a customer deployment in Azure and validate the customer's Azure implementation maturity while identifying optimization of existing deployment architectures, remove governance security and availability risks. Based on customer insights, you should lead with the following approaches:
 
 - **Cloud Foundation:** Establish the customer's core Azure designs, patterns, and governance architecture with the [Hybrid Cloud Foundation (HCF)](https://download.microsoft.com/download/D/8/7/D872DFD0-1C46-4145-95E4-B5EAB2958B96/Hybrid_Cloud_Foundation_Datasheet_EN_US.pdf) solution offering. Map the customer's requirements to the most appropriate reference architecture. Implement a minimum viable product consisting of Shared Services and IaaS workloads.
 - **Cloud Modernization:** Use the [Cloud Modernization](https://download.microsoft.com/download/3/7/3/373F90E3-8568-44F3-B096-CD9C1CD28AB7/Cloud_Modernization_Datasheet_EN_US.pdf) solution offering as a comprehensive approach to move applications, data, and infrastructure to an enterprise-ready cloud, as well as to optimize and modernize after cloud deployment.
@@ -44,19 +47,19 @@ During assessment, additional decisions are required to align to the required go
 
 Governance and compliance assessment requirements are too customer-specific to provide general guidance on the actual steps taken during assessment. However, the process should include tasks and time allocations for "alignment to compliance/governance requirements". For additional understanding of these requirements, see the following links:
 
-For a deeper understanding of governance, review the [Five Disciplines of Cloud Governance overview](../../govern/governance-disciplines.md). This section of the Cloud Adoption Framework also includes templates to document the policies, guidance, and requirements for each of the five sections:
+For a deeper understanding of governance, read the overview of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md). This section of the Cloud Adoption Framework includes templates to document the policies, guidance, and requirements for each of the five sections:
 
-- [Cost Management](../../govern/cost-management/template.md)
-- [Security Baseline](../../govern/security-baseline/template.md)
-- [Resource Consistency](../../govern/resource-consistency/template.md)
-- [Identity Baseline](../../govern/identity-baseline/template.md)
-- [Deployment Acceleration](../../govern/deployment-acceleration/template.md)
+- [Cost Management discipline](../../govern/cost-management/template.md)
+- [Security Baseline discipline](../../govern/security-baseline/template.md)
+- [Resource Consistency discipline](../../govern/resource-consistency/template.md)
+- [Identity Baseline discipline](../../govern/identity-baseline/template.md)
+- [Deployment Acceleration discipline](../../govern/deployment-acceleration/template.md)
 
-For guidance on developing governance guidance based on the Cloud Adoption Framework governance model, see [Implementing a cloud governance strategy](../../govern/corporate-policy.md).
+For information about developing governance guidance based on the Cloud Adoption Framework governance model, see [Implement a cloud governance strategy](../../govern/corporate-policy.md).
 
 ## Optimize and promote process changes
 
-During the optimization and promotion processes, the cloud governance team should invest time to test and validate adherence to governance and compliance standards. Additionally, this step is a good time to inject processes for the cloud governance team to curate templates that could provide additional [deployment acceleration](../../govern/deployment-acceleration/index.md) for future projects.
+During the optimization and promotion processes, the cloud governance team should invest time to test and validate adherence to governance and compliance standards. Additionally, this step is a good time to inject processes for the cloud governance team to curate templates that could provide additional [Deployment Acceleration discipline](../../govern/deployment-acceleration/index.md) for future projects.
 
 ### Suggested action during the optimize and promote process
 

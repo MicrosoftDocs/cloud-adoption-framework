@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 manager: BrianBlanchard
-tags: azure-resource-manager
 ms.custom: virtual-network
 ---
 
@@ -49,7 +48,7 @@ Beginning from these core access levels, additional built-in roles provide more 
 - The [Virtual Machine Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role can manage virtual machines, but it can't access them or the virtual network or storage account they're connected to.
 - The [Virtual Machine User Login](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#virtual-machine-user-login) role can view virtual machines in the portal and sign in as a regular user.
 
-For another example of using built-in roles to manage access to particular features, see the discussion on controlling access to cost-tracking features in [Tracking costs across business units, environments, or projects](../azure-best-practices/track-costs.md#provide-the-right-level-of-cost-access).
+For another example of using built-in roles to manage access to particular features, see the discussion on controlling access to cost-tracking features in [Track costs across business units, environments, or projects](../azure-best-practices/track-costs.md#provide-the-right-level-of-cost-access).
 
 For a complete list of available built-in roles, see [Built-in roles for Azure resources](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles).
 
@@ -71,10 +70,10 @@ The following table illustrates a common pattern for dividing IT responsibilitie
 
 | Group | Common role name | Responsibilities |
 | --- | --- | --- |
-| Security Operations | SecOps | Provides general security oversight.<br/><br/> Establishes and enforces security policy such as encryption at rest.<br/><br/> Manages encryption keys.<br/><br/> Manages firewall rules. |
+| Security Operations | SecOps | Provides general security oversight.  <br><br> Establishes and enforces security policy such as encryption at rest. <br><br> Manages encryption keys. <br><br> Manages firewall rules. |
 | Network Operations | NetOps | Manages network configuration and operations within virtual networks, such as routes and peerings. |
 | Systems Operations | SysOps | Specifies compute and storage infrastructure options, and maintains resources that have been deployed. |
-| Development, Test, and Operations | DevOps | Builds and deploys workload features and applications.<br/><br/> Operates features and applications to meet service-level agreements (SLAs) and other quality standards. |
+| Development, Test, and Operations | DevOps | Builds and deploys workload features and applications. <br><br> Operates features and applications to meet service-level agreements (SLAs) and other quality standards. |
 
 <!-- markdownlint-enable MD033 -->
 

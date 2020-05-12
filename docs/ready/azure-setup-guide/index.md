@@ -1,5 +1,5 @@
 ---
-title: "Azure setup guide: Before you start" 
+title: "Azure setup guide: Before you start"
 description: Learn how to set up Azure effectively for your organization with step-by-step guidance.
 author: timleyden
 ms.author: kfollis

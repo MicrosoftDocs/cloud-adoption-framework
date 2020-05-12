@@ -18,7 +18,7 @@ This article advances the narrative by adding cost controls to the minimum viabl
 
 Adoption has grown beyond the tolerance indicator defined in the governance MVP. The increases in spending now justifies an investment of time from the cloud governance team to monitor and control spending patterns.
 
-As a clear driver of innovation, IT is no longer seen primarily as a cost center. As the IT organization delivers more value, the CIO and CFO agree that the time is right to shift the role IT plays in the company. Among other changes, the CFO wants to test a direct pay approach to cloud accounting for the Canadian branch of one of the business units. One of the two retired datacenters was exclusively hosted assets for that business unit's Canadian operations. In this model, the business unit's Canadian subsidiary will be billed directly for the operating expenses related to the hosted assets. This model allows IT to focus less on managing someone else's spending and more on creating value. However, before this transition can begin Cost Management tooling needs to be in place.
+As a clear driver of innovation, IT is no longer seen primarily as a cost center. As the IT organization delivers more value, the CIO and CFO agree that the time is right to shift the role IT plays in the company. Among other changes, the CFO wants to test a direct pay approach to cloud accounting for the Canadian branch of one of the business units. One of the two retired datacenters was exclusively hosted assets for that business unit's Canadian operations. In this model, the business unit's Canadian subsidiary will be billed directly for the operating expenses related to the hosted assets. This model allows IT to focus less on managing someone else's spending and more on creating value. However, before this transition can begin cost management tooling needs to be in place.
 
 ### Changes in the current state
 
@@ -26,7 +26,7 @@ In the previous phase of this narrative, the IT team was actively moving product
 
 Since then, some things have changed that will affect governance:
 
-- 5,000 assets have been removed from the two datacenters flagged for retirement. Procurement and IT security are now deprovisioning the remaining physical assets.
+- 5,000 Assets have been removed from the two datacenters flagged for retirement. Procurement and IT security are now deprovisioning the remaining physical assets.
 - The application development teams have implemented CI/CD pipelines to deploy some cloud-native applications, significantly affecting customer experiences.
 - The BI team has created aggregation, curation, insight, and prediction processes driving tangible benefits for business operations. Those predictions are now empowering creative new products and services.
 
@@ -52,19 +52,19 @@ The following changes to policy will help remediate the new risks and guide impl
 - All costs must be allocated to a business function for accountability purposes.
 - Cloud assets should be continually monitored for optimization opportunities.
 - Cloud governance tooling must limit asset sizing options to an approved list of configurations. The tooling must ensure that all assets are discoverable and tracked by the cost monitoring solution.
-- During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation tools to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as Reserved Instances or License cost reductions.
+- During deployment planning, any required cloud resources associated with the hosting of production workloads should be documented. This documentation will help refine budgets and prepare additional automation tools to prevent the use of more expensive options. During this process consideration should be given to different discounting tools offered by the cloud provider, such as reserved instances or license cost reductions.
 - All application owners are required to attend trained on practices for optimizing workloads to better control cloud costs.
 
 ## Incremental improvement of the best practices
 
 This section of the article will improve the governance MVP design to include new Azure policies and an implementation of Azure Cost Management. Together, these two design changes will fulfill the new corporate policy statements.
 
-1. Make changes in the Azure Enterprise Portal to bill the Department administrator for the Canadian deployment.
+1. Make changes in the Azure enterprise portal to bill the department administrator for the Canadian deployment.
 2. Implement Azure Cost Management.
     1. Establish the right level of access scope to align with the subscription pattern and resource grouping pattern. Assuming alignment with the governance MVP defined in prior articles, this would require **Enrollment Account Scope** access for the cloud governance team executing on high-level reporting. Additional teams outside of governance, like the Canadian procurement team, will require **Resource Group Scope** access.
     2. Establish a budget in Azure Cost Management.
     3. Review and act on initial recommendations. It's recommended to have a recurring process to support the reporting process.
-    4. Configure and execute Azure Cost Management Reporting, both initial and recurring.
+    4. Configure and execute Azure Cost Management reporting, both initial and recurring.
 3. Update Azure Policy.
     1. Audit tagging, management group, subscription, and resource group values to identify any deviation.
     2. Establish SKU size options to limit deployments to SKUs listed in deployment planning documentation.

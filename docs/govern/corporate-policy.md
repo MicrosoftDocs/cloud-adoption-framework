@@ -21,7 +21,12 @@ layout: LandingPage
         <div class="cardPadding" style="padding-bottom:10px;">
             <div class="card" style="padding-bottom:10px;">
                 <div class="cardText" style="padding-left:0px;">
-Any change to business processes or technology platforms introduces risk to the business. Cloud governance teams, whose members are sometimes known as cloud custodians, are tasked with mitigating these risks with minimal interruption to adoption or innovation efforts.<br/><br/>However, cloud governance requires more than technical implementation. Subtle changes in the corporate narrative or corporate policies can affect adoption efforts significantly. Before implementation, it's important to look beyond IT while defining corporate policy.<br/><br/>
+Any change to business processes or technology platforms introduces risk to the business. Cloud governance teams, whose members are sometimes known as cloud custodians, are tasked with mitigating these risks with minimal interruption to adoption or innovation efforts.
+<br>
+<br>
+However, cloud governance requires more than technical implementation. Subtle changes in the corporate narrative or corporate policies can affect adoption efforts significantly. Before implementation, it's important to look beyond IT while defining corporate policy.
+<br>
+<br>
                 </div>
             </div>
         </div>
@@ -34,8 +39,8 @@ Any change to business processes or technology platforms introduces risk to the 
                 <div class="card" style="padding-bottom:10px;">
                     <div class="cardText" style="padding-left:0px;">
 <img src="../_images/operational-transformation-govern-highres.png" alt="Diagram of the Cloud Adoption Framework governance model: Corporate policy and governance disciplines">
-<br/>
-<i>Figure 1 - Visual of corporate policy and the Five Disciplines of Cloud Governance.</i>
+<br>
+<i> Figure 1: Visual of corporate policy and the Five Disciplines of Cloud Governance. </i>
                     </div>
                 </div>
             </div>

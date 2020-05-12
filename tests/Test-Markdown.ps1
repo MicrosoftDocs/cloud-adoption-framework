@@ -2,17 +2,20 @@ $here = $global:herePath
 
 . "$here\Test-Helpers.ps1"
 
-function Test-Markdown([String] $docsPath, [String] $fileType)
+function Test-Markdown(
+    [string] $docsPath,
+    [string[]] $subfolders)
 {
-    $commandPath = "$env:APPDATA\npm\markdownlint.cmd"
-    $pathToCheck = Join-Path $docsPath "\**\*.$fileType"
-    $configFile = Join-Path $docsPath ".markdownlint.json"
-    $arguments = "/c $commandPath $pathToCheck -c $configFile"
+    $count = 0
+    foreach ($item in $subfolders)
+    {
+        Write-Host "Checking: $item"
+        $output = Invoke-ExternalChecker 'markdownlint' $item 'md'
 
-    $output = Get-ProcessStream "StandardError" -FileName $env:ComSpec -Args $arguments
+        $expression = " MD[0-9][0-9][0-9]"
+        $matches = ([Regex]$expression).Matches($output)
+        $count += $matches.Count
+    }
 
-    $expression = " MD[0-9][0-9][0-9]"
-    
-    $matches = ([regex]$expression).Matches($output)
-    return $matches.Count
+    return $count
 }

@@ -1,5 +1,5 @@
 ---
-title: "Azure innovation: Empower adoption" 
+title: "Azure innovation: Empower adoption"
 description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation in Azure.
 author: absheik
 ms.author: absheik
@@ -23,7 +23,7 @@ ms.localizationpriority: high
 
 ::: zone-end
 
-You know that innovation is critical to business success. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. *Developers* are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
+You know that innovation is critical to business success. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. _Developers_ are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
 
 ## Generate value
 
@@ -72,6 +72,7 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 ::: zone target="chromeless"
 
+<!-- docsTest:ignore "Azure DevOps Projects" -->
 <!-- markdownlint-disable DOCSMD001 -->
 
 ### Action
@@ -80,9 +81,9 @@ To create a DevOps project:
 
 1. Go to **Azure DevOps Projects**.
 2. Select **Create DevOps project**.
-3. Select **Runtime, Framework and Service**.
+3. Select **Runtime, Framework, and Service**.
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Project" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

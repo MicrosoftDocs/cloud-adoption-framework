@@ -1,6 +1,6 @@
 ---
-title: Test-driven development (TDD) for landing zones in Azure
-description: Test-driven development (TDD) for landing zones in Azure
+title: Test-driven development (TDD) for landing zones in Azure.
+description: Test-driven development (TDD) for landing zones in Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2020
@@ -32,7 +32,7 @@ Each of the samples above can be used as tools for accelerating TDD cycles. Thos
 
 ## Azure governance tools that can accelerate TDD cycles
 
-[Azure Policy](https://docs.microsoft.com/azure/governance/policy): When deployments or attempted deployments deviate from governance policies, Azure Policy can provide automated detection, protection &/or resolution. But, Azure Policy also provides the primary mechanism for testing acceptance criteria in your "definition of done". In a TDD cycle, a policy definition can be created to test a single acceptance criteria. Likewise, all acceptance criteria can be added to a policy initiative assigned to the entire subscription. This approach provides a mechanism for "Red tests" before modifying the landing zone. Once the landing zone meets the definition of done, it can be used to enforce the test criteria to avoid code changes that would cause the test fail in future releases.
+[Azure Policy](https://docs.microsoft.com/azure/governance/policy): When deployments or attempted deployments deviate from governance policies, Azure Policy can provide automated detection, protection, and resolution. But Azure Policy also provides the primary mechanism for testing acceptance criteria in your "definition of done". In a TDD cycle, a policy definition can be created to test a single acceptance criteria. Likewise, all acceptance criteria can be added to a policy initiative assigned to the entire subscription. This approach provides a mechanism for "Red tests" before modifying the landing zone. Once the landing zone meets the definition of done, it can be used to enforce the test criteria to avoid code changes that would cause the test fail in future releases.
 
 [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints): Azure Blueprint groups policies and other deployment tools into a repeatable package that can be assigned to multiple landing zones. Blueprints prove useful when multiple adoption efforts share common definitions of done, which you may want to update over time. It can also help with deployment during subsequent efforts to expand and refactor landing zones.
 

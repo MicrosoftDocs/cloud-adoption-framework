@@ -28,7 +28,7 @@ Be sure to document any discrepancies in host configuration, replicated VM confi
 
 ## Common database evaluation activities
 
-- Document the Recovery Point Objectives and Recovery Time Objectives of the current database deployment. These are used in [architecture activities](./architect.md) to aid in decision-making.
+- Document the recovery point objectives (RPOs) and recovery time objectives (RTOs) of the current database deployment. These are used during [architecture activities](./architect.md) to aid in decision-making.
 - Document any requirements for high-availability configuration. For assistance understanding SQL Server requirements, see the [SQL Server High Availability Solutions Guide](https://docs.microsoft.com/sql/sql-server/failover-clusters/high-availability-solutions-sql-server).
 - Evaluate PaaS compatibility. The [Azure Data Migration Guide](https://datamigration.microsoft.com) maps on-premises databases to compatible Azure PaaS solutions, like [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) or [Azure DB](https://docs.microsoft.com/azure/sql-database) for [MySQL](https://docs.microsoft.com/azure/mysql), [PostgreSQL](https://docs.microsoft.com/azure/postgresql), or [MariaDB](https://docs.microsoft.com/azure/mariadb).
 - When PaaS compatibility is an option without the need for any remediation, consult the team responsible for [architecture activities](./architect.md). PaaS migrations can produce significant time savings and reductions in the total cost of ownership (TCO) of most cloud solutions.
@@ -37,7 +37,7 @@ Be sure to document any discrepancies in host configuration, replicated VM confi
 - When possible, document any applications or other assets that make calls to each database.
 
 > [!NOTE]
-> Synchronization of any asset consumes bandwidth during the replication processes. A very common pitfall is to overlook the bandwidth consumption required to keep assets synchronized between the point of replication and release. Databases are common consumers of bandwidth during release cycles, and databases with large storage footprints or a high rate of change are especially concerning. Consider an approach of replicating the data structure, with controlled updates before user acceptance testing (UAT) and release. In such scenarios, alternatives to Azure Site Recovery may be more appropriate. For more detail, see guidance from the [Azure Data Migration Guide](https://datamigration.microsoft.com).
+> Synchronization of any asset consumes bandwidth during the replication processes. A very common pitfall is to overlook the bandwidth consumption required to keep assets synchronized between the point of replication and release. Databases are common consumers of bandwidth during release cycles, and databases with large storage footprints or a high rate of change are especially concerning. Consider an approach of replicating the data structure, with controlled updates before user acceptance testing (UAT) and release. In such scenarios, alternatives to Azure Site Recovery may be more appropriate. For more information, see guidance from the [Azure Database Migration Guide](https://datamigration.microsoft.com).
 
 ## Common network evaluation activities
 

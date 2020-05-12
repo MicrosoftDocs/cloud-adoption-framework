@@ -49,14 +49,14 @@ Because there's a clear and direct cost to operations management in the cloud, i
 
 An initial review of every workload in the portfolio can be time consuming. To ensure that this effort doesn't block your broader cloud strategy, we recommend that your teams agree on a default criticality to apply to all workloads.
 
-Based on the preceding criticality-scale table, we recommend that you adopt *Medium* criticality as the default. Doing so will allow your cloud strategy team to quickly identify workloads that require a higher level of criticality.
+Based on the preceding criticality-scale table, we recommend that you adopt _Medium_ criticality as the default. Doing so will allow your cloud strategy team to quickly identify workloads that require a higher level of criticality.
 
 ## Use the template
 
-The following steps apply if you're using the [Ops Management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management.
+The following steps apply if you're using the [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management.
 
 1. Record the criticality scale on the **scale** tab of the workbook.
-2. Update each workload in the *Example* or *Clean Template* to reflect the default criticality in the *Criticality* column.
+2. Update each workload in the _Example_ or _Clean Template_ to reflect the default criticality in the _Criticality_ column.
 3. The business should enter the correct values to reflect any deviations from the default criticality.
 
 ## Next steps

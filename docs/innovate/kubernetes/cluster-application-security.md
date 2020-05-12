@@ -50,7 +50,7 @@ As you prepare the application for production, you should implement a minimum se
 >
 > | Checklist  | Resources |
 > |------------------------------------------------------------------|-----------------------------------------------------------------|
-> | **Control access to clusters using group membership.** Configure Kubernetes role-based access control (RBAC) to limit access to cluster resources based user identity or group membership. | [Control access to clusters using RBAC and Azure AD groups](https://docs.microsoft.com/azure/aks/azure-ad-rbac)    |
+> | **Control access to clusters using group membership.** Configure Kubernetes role-based access control (RBAC) to limit access to cluster resources based user identity or group membership. | [Control access to clusters using RBAC and Azure AD groups](https://docs.microsoft.com/azure/aks/azure-ad-rbac)    |
 > | **Create a secrets management policy.** Securely deploy and manage sensitive information, such as passwords and certificates, using secrets management in Kubernetes. | [Understand secrets management in Kubernetes (video)](https://www.youtube.com/watch?v=KmhM33j5WYk&list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT&index=10) |
 > | **Secure intra-pod network traffic with network policies.** Apply the principle of least privilege to control network traffic flow between pods in the cluster. | [Secure intra-pod traffic with network policies](https://docs.microsoft.com/azure/aks/use-network-policies) |
 > | **Restrict access to the API server using authorized IPs.** Improve cluster security and minimize attack surface by limiting access to the API server to a limited set of IP address ranges. | [Secure access to the API server](https://docs.microsoft.com/azure/aks/api-server-authorized-ip-ranges) |

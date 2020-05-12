@@ -104,13 +104,13 @@ Team members in an IT fiefdom are likely to define themselves through their alig
 
 Fiefdoms are especially common in organizations that have experienced IT downsizing, frequent turbulence in IT staff, or poor IT leadership. When the business sees IT purely as a cost center, fiefdoms are much more likely to arise.
 
-Generally, fiefdoms are the result of a line manager who fears loss of the team and the associated power base. These leaders often have a sense of duty to their team and feel a need to protect their subordinates from negative consequences. Phrases like "shelter the team from change" and "protect the team from process disruption" can be indicators of an overly guarded manager who might need more support from leadership.
+Generally, fiefdoms are the result of a line manager who fears loss of the team and the associated power base. These leaders often have a sense of duties to their team and feel a need to protect their subordinates from negative consequences. Phrases like "shelter the team from change" and "protect the team from process disruption" can be indicators of an overly guarded manager who might need more support from leadership.
 
 ### Address resistance from IT fiefdoms
 
 IT fiefdoms can demonstrate some growth by following the approaches to [addressing IT silo resistance](#address-resistance-from-it-silos). Before you try to address resistance from an IT fiefdom, we recommend that you treat the team like an IT silo first. If those types of approaches fail to yield any significant change, the resistant team might be suffering from an IT fiefdom antipattern. The root cause of IT fiefdoms is a little more complex to address, because that resistance tends to come from the direct line manager (or a leader higher up the organizational chart). Challenges that are IT silo-driven are typically simpler to overcome.
 
-When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders should carefully consider insights from the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and [cloud governance team](./cloud-governance.md) before making decisions.
+When continued resistance from IT fiefdoms blocks cloud adoption efforts, it might be wise for a combined effort to evaluate the situation with existing IT leaders. IT leaders should carefully consider insights from the [cloud strategy team](./cloud-strategy.md) , [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) before making decisions.
 
 > [!NOTE]
 > IT leaders should never take changes to the organizational chart lightly. They should also validate and analyze feedback from each of the supporting teams. However, transformational efforts like cloud adoption tend to magnify underlying issues that have gone unnoticed or unaddressed long before this effort. When fiefdoms are preventing the company's success, leadership changes are a likely necessity.
@@ -126,7 +126,7 @@ When continued resistance from IT fiefdoms blocks cloud adoption efforts, it mig
 
 IT fiefdoms can be a sign of systemic leadership issues. To overcome an IT fiefdom, IT leaders need the ability to make changes to operations, responsibilities, and occasionally even the people who provide line management of specific teams. When those changes are required, it's wise to approach those changes with clear and defensible data points.
 
-Alignment with business stakeholders, business motivations, and business outcomes might be required to drive the necessary change. Partnership with the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and [cloud governance team](./cloud-governance.md) can provide the data points needed for a defensible position. When necessary, these teams should be involved in a group escalation to address challenges that can't be addressed with IT leadership alone.
+Alignment with business stakeholders, business motivations, and business outcomes might be required to drive the necessary change. Partnership with the [cloud strategy team](./cloud-strategy.md), [cloud center of excellence](./cloud-center-of-excellence.md), and the [cloud governance team](./cloud-governance.md) can provide the data points needed for a defensible position. When necessary, these teams should be involved in a group escalation to address challenges that can't be addressed with IT leadership alone.
 
 ## Next steps
 

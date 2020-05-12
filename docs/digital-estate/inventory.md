@@ -11,7 +11,7 @@ ms.subservice: plan
 
 # Gather inventory data for a digital estate
 
-Developing an inventory is the first step in [digital estate planning](./index.md). In this process, a list of IT assets that support specific business functions are collected for later analysis and rationalization. This article assumes that a bottom-up approach to analysis is most appropriate for planning. For more information, see [Approaches to digital estate planning](./approach.md).
+Developing an inventory is the first step for [digital estate planning](./index.md). In this process, a list of IT assets that support specific business functions are collected for later analysis and rationalization. This article assumes that a bottom-up approach to analysis is most appropriate for planning. For more information, see [Approaches to digital estate planning](./approach.md).
 
 ## Take inventory of a digital estate
 

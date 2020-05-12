@@ -11,7 +11,7 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore WSUS -->
+<!-- cSpell:ignore WSUS getting started -->
 
 # Operational compliance in Azure
 
@@ -23,12 +23,12 @@ Improving operational compliance reduces the likelihood of an outage related to 
 
 For any enterprise-grade environment, this table outlines the suggested minimum for a management baseline.
 
-|Process  |Tool  |Purpose  |
-|---------|---------|---------|
-|Patch management|Update Management|Management and scheduling of updates|
-|Policy enforcement|Azure Policy|Policy enforcement to ensure environment and guest compliance|
-|Environment configuration|Azure Blueprints|Automated compliance for core services|
-|Resource Configuration|Desired State Configuration|Automated configuration on Guest OS and some aspects of the environment|
+| Process | Tool | Purpose |
+|---|---|---|
+| Patch management | Update Management | Management and scheduling of updates |
+| Policy enforcement | Azure Policy | Policy enforcement to ensure environment and guest compliance |
+| Environment configuration | Azure Blueprints | Automated compliance for core services |
+| Resource Configuration | Desired State Configuration | Automated configuration on Guest OS and some aspects of the environment |
 
 ::: zone target="docs"
 
@@ -43,10 +43,10 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 
 Computers that are managed by Update Management use the following configurations to do assessment and update deployments:
 
-- Microsoft Monitoring Agent (MMA) for Windows or Linux
-- PowerShell Desired State Configuration (DSC) for Linux
-- Azure Automation Hybrid Runbook Worker
-- Microsoft Update or Windows Server Update Services (WSUS) for Windows computers
+- Microsoft Monitoring Agent (MMA) for Windows or Linux.
+- PowerShell Desired State Configuration (DSC) for Linux.
+- Azure Automation Hybrid Runbook Worker.
+- Microsoft Update or Windows Server Update Services (WSUS) for Windows computers.
 
 For more information, see [Update Management solution](https://docs.microsoft.com/azure/automation/automation-update-management).
 

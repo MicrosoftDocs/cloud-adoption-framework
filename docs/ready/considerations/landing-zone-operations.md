@@ -22,16 +22,18 @@ The following links provide best practices for improving landing zone operations
 - [Centralize management operations](../../manage/centralize-operations.md): Use Azure Lighthouse to centralize operations management across multiple azure tenants.
 - [Establish an operational fitness review](../../manage/operational-fitness-review.md): Review an environment for operational fitness.
 - Workload specific operations best practices:
-  - [Resiliency checklist](https://docs.microsoft.com/azure/architecture/checklist/resiliency-per-service?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
-  - [Failure mode analysis](https://docs.microsoft.com/azure/architecture/resiliency/failure-mode-analysis?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
-  - [Recover from a region wide service disruption](https://docs.microsoft.com/azure/architecture/resiliency/recovery-loss-azure-region?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
-  - [Recover from data corruption or accidental deletion](https://docs.microsoft.com/azure/architecture/framework/resiliency/data-management?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Resiliency checklist](https://docs.microsoft.com/azure/architecture/checklist/resiliency-per-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Failure mode analysis](https://docs.microsoft.com/azure/architecture/resiliency/failure-mode-analysis?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Recover from a region wide service disruption](https://docs.microsoft.com/azure/architecture/resiliency/recovery-loss-azure-region?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Recover from data corruption or accidental deletion](https://docs.microsoft.com/azure/architecture/framework/resiliency/data-management?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
 
 ## Four steps to improve operations beyond a single landing zone
 
 The [Manage methodology](../../manage/index.md) provides overall guidance for building out operations management capacity, see the [Manage methodology](../../manage/index.md). We will use the basic structure of that methodology and the following steps from that methodology to improve landing zone operations and operations across all landing zones.
 
-![Manage Methodology](../../_images/manage/caf-manage.png)
+<!-- cSpell:ignore caf -->
+
+![Manage methodology](../../_images/manage/caf-manage.png)
 
 1. [Establish a management baseline](../../manage/azure-server-management/index.md): A management baseline establishes the foundation for operations management. The guidance under this first step can be applied to any landing zone to improve initial operations.
 2. [Define business commitments](../../manage/considerations/business-alignment.md): Understanding the criticality and impact of each workload within a landing zone will establish a "definition of done" for any ongoing management improvements for any landing zone. This process will also identify the reliability, performance, and operations requirements of each workload.

@@ -28,7 +28,7 @@ During plan, build, or migrate, a company generally has four execution partnersh
 
 If an organization is planning an Azure migration on its own, Microsoft is always there to assist throughout the journey. To help fast-track migration to Azure, Microsoft and its partners have developed an extensive set of architectures, guides, tools, and services to reduce risk and to speed migration of virtual machines, applications, and databases. These tools and services support a broad selection of operating systems, programming languages, frameworks, and databases.
 
-- **Assessment and migration tools.** Azure provides a wide range of tools to be used in different phases for your cloud transformation, including assessing your existing infrastructure. For more , refer to the "Assess" section in the "Migration" chapter that follows.
+- **Assessment and migration tools.** Azure provides a wide range of tools to be used in different phases for your cloud transformation, including assessing your existing infrastructure. For more information, refer to the "Assess" section in the "Migration" chapter that follows.
 - **[Microsoft Cloud Adoption Framework](../../index.md).** This framework presents a structured approach to cloud adoption and migration. It is based on best practices across many Microsoft-supported customer engagements and is organized as a series of steps, from architecture and design to implementation. For each step, supporting guidance helps you with the design of your application architecture.
 - **[Cloud design patterns](https://docs.microsoft.com/azure/architecture/patterns).** Azure provides some useful cloud design patterns for building reliable, scalable, secure workloads in the cloud. Each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Azure. Most of the patterns include code samples or snippets that show how to implement the pattern on Azure. However, they are relevant to any distributed system, whether hosted on Azure or on other cloud platforms.
 - **[Cloud fundamentals](https://docs.microsoft.com/azure/architecture/guide).** Fundamentals help teach the basic approaches to implementation of core concepts. This guide helps technicians think about solutions that go beyond a single Azure service.
@@ -56,9 +56,9 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 - Globally distributed data
 - IoT***
 
-*Limited preview in United States, Canada, United Kingdom, and Western Europe
+*Limited preview in United States, Canada, United Kingdom, and Western Europe.
 
-**Limited preview in United Kingdom and Western Europe
+**Limited preview in United Kingdom and Western Europe.
 
 ***Available in H2 2019
 
@@ -88,7 +88,7 @@ If you have questions or need help, [create a support request](https://portal.az
 
 ## Azure Solutions Partner
 
-Microsoft Certified Solution Providers specialize in providing up-to-date, Microsoft technology–based customer solutions all over the world. Optimize your business in the cloud with help from an experienced partner.
+Microsoft Certified Solution Providers specialize in providing modern customer solutions based on Microsoft technologies across the world. Optimize your business in the cloud with help from an experienced partner.
 
 Get help from partners with ready-made or custom Azure solutions and partners who can help deploy and manage those solutions:
 

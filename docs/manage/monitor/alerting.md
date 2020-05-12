@@ -75,12 +75,14 @@ Azure Monitor includes support for integrating with other monitoring platforms, 
 
 [Management solutions](https://docs.microsoft.com/azure/azure-monitor/insights/solutions-inventory) generally store their data in the Azure logs store. The two exceptions are Azure Monitor for VMs and Azure Monitor for containers. The following table describes the alerting experience based on the particular data type and where it is stored.
 
-Solution| Data type | Alert behavior
-:---|:---|:---
-Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics store. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over time.
-|| Calculated performance data that uses percentiles from nodes, controllers, containers, and pods are written to the logs store. Container logs and inventory information are also written to the logs store. | Create log query alerts if you want to be alerted based on variation of measured utilization from clusters and containers. Log query alerts can also be configured based on pod-phase counts and status node counts.
-Azure Monitor for VMs | Health criteria are metrics written to the metrics store. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only Action Groups that are configured to send SMS or email notifications.
-|| Map and guest operating system performance log data is written to the logs store. | Create log query alerts.
+| Solution | Data type | Alert behavior |
+|---| ---| --- |
+| Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics store. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over time. |
+| | Calculated performance data that uses percentiles from nodes, controllers, containers, and pods are written to the logs store. Container logs and inventory information are also written to the logs store. | Create log query alerts if you want to be alerted based on variation of measured utilization from clusters and containers. Log query alerts can also be configured based on pod-phase counts and status node counts. |
+Azure Monitor for VMs | Health criteria are metrics written to the metrics store. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only Action Groups that are configured to send SMS or email notifications. |
+| | Map and guest operating system performance log data is written to the logs store. | Create log query alerts. |
+
+<!-- docsTest:ignore "speed driven" -->
 
 ### Fastest speed driven by cost
 

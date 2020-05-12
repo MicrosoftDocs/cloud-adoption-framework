@@ -22,7 +22,7 @@ The DMZ deploys network virtual appliances (NVAs) to implement security function
 
 ## Cloud DMZ assumptions
 
-Deploying a cloud DMZ includes the following assumptions:
+Deploying a Cloud DMZ includes the following assumptions:
 
 - Your security teams have not fully aligned on-premises and cloud-based security requirements and policies.
 - Your cloud-based workloads require access to limited subset of services hosted on your on-premises or third-party networks, or users or applications in your on-premises environment need limited access to cloud-hosted resources.
@@ -31,7 +31,7 @@ Deploying a cloud DMZ includes the following assumptions:
 
 Your cloud adoption teams should consider the following issues when looking at implementing a Cloud DMZ virtual networking architecture:
 
-- Connecting on-premises networks with cloud networks increases the complexity of your security requirements. Even though connections between cloud networks and the on-premises environment are secured, you still need to ensure cloud resources are secured. Any public IPs created to access cloud-based workloads need to be properly secured using a [public facing DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json) or [Azure Firewall](https://docs.microsoft.com/azure/firewall).
+- Connecting on-premises networks with cloud networks increases the complexity of your security requirements. Even though connections between cloud networks and the on-premises environment are secured, you still need to ensure cloud resources are secured. Any public IPs created to access cloud-based workloads need to be properly secured using a [public-facing DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) or [Azure Firewall](https://docs.microsoft.com/azure/firewall/overview).
 - The Cloud DMZ architecture is commonly used as a stepping stone while connectivity is further secured and security policy aligned between on-premises and cloud networks, allowing a broader adoption of a full-scale hybrid networking architecture. However, it may also apply to isolated deployments with specific security, identity, and connectivity needs that the Cloud DMZ approach satisfies.
 
 ## Learn more

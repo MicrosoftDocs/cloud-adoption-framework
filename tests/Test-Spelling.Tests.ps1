@@ -9,19 +9,9 @@ Describe "Test-Spelling" -Tags "Spelling" {
 
     It "Shouldn't have spelling errors" {
         
-        $subfolders = Get-Subfolders
-        if ($subfolders.Count -eq 0)
-        {
-            write-host "Checking all subfolders"
-            Test-Spelling $(Get-DocsPath) | Should -Be 0
-        }
-        else {
-            foreach ($item in $subfolders)
-            {
-                write-host "Checking '$item'"
-                Test-Spelling $(Get-DocsPath) $item | Should -Be 0
-            }
-        }
+        $subfolders = Get-Subfolders $(Get-ExcludedSubfolders) $true
+        Test-Spelling $(Get-DocsPath) $subfolders `
+            | Should -Be 0
     }
 }
 
@@ -31,3 +21,13 @@ Describe "Test-Spelling" -Tags "Spelling" {
 ## Describe "Test-Breadcrumbs" {}
 
 ## Describe "Test-NextSteps" {}
+
+## Inconsistent link descriptions for the same URL
+
+## External link description doesn't match external URL's H1
+
+## Enable MyRepo-Expressions to add to existing rules.
+
+## Identify unused images
+
+## No malformed tables

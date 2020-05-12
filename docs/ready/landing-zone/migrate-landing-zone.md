@@ -13,7 +13,7 @@ ms.subservice: ready
 
 # Deploy a migration landing zone
 
-*Migration landing zone* is a term used to describe an environment that has been provisioned and prepared to host workloads being migrated from an on-premises environment into Azure.
+A _migration landing zone_ is an environment that has been provisioned and prepared to host workloads that are being migrated from an on-premises environment into Azure.
 
 ## Deploy the first landing zone
 
@@ -43,7 +43,7 @@ The following decisions are represented in the landing zone blueprint.
 | Migration tools              | Azure Site Recovery will be deployed and an Azure Migrate project will be created.                | [Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)                                                                                                                                                                                               |
 | Logging and monitoring       | Operational Insights workspace and diagnostic storage account will be provisioned.                |                                                                                                                                                                                                                                                                                       |
 | Network                      | A virtual network will be created with subnets for gateway, firewall, jumpbox, and landing zone.  | [Networking decisions](../considerations/networking-options.md)                                                                                                                                                                                                                       |
-| Identity                     | It's assumed that the subscription is already associated with an Azure Active Directory instance. | [Identity management best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json) |
+| Identity                     | It's assumed that the subscription is already associated with an Azure Active Directory instance. | [Identity management best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) |
 | Policy                       | This blueprint currently assumes that no Azure policies are to be applied.                        |                                                                                                                                                                                                                                                                                       |
 | Subscription design          | N/A - Designed for a single production subscription.                                              | [Create initial subscriptions](../azure-best-practices/initial-subscriptions.md)                                                                                                                                                                                                      |
 | Resource groups              | N/A - Designed for a single production subscription.                                              | [Scale subscriptions](../azure-best-practices/scale-subscriptions.md)                                                                                                                                                                                                                 |
@@ -56,7 +56,7 @@ The following decisions are represented in the landing zone blueprint.
 
 ## Customize or deploy a landing zone
 
-Learn more and download a reference sample of the Migrate landing zone blueprint for deployment or customization from [Azure Blueprint samples][deploy-sample].
+Learn more and download a reference sample of the CAF Migrate landing zone blueprint for deployment or customization from [Azure Blueprint samples][deploy-sample].
 
 > [!div class="nextstepaction"]
 > [Deploy the blueprint sample][deploy-sample]

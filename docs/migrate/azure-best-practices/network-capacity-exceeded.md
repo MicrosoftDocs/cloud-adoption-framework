@@ -29,7 +29,7 @@ This approach could be used to transfer data from HDFS, backups, archives, file 
 
 There are also third-party partner solutions that use Azure Data Box for a "Seed and Feed" migration, where a large volume of data is moved via an offline transfer but is later synchronized at a lower scale over the network.
 
-![Offline and online data transfer with Azure Data Box](../../_images/migrate/databox.png)
+![Offline and online data transfer with Azure Data Box](../../_images/migrate/data-box.png)
 
 ## Assess process changes
 
