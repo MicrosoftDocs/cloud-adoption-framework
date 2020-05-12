@@ -39,7 +39,7 @@ Why the terms may vary, all IT solutions include assets and workloads:
 When companies support workloads through matrixed approaches or centralized approaches, a broader hierarchy likely exists to support those workloads:
 
 - **Landing zone:** Landing zones provide workloads with access to all of the _foundational utilities_ (or shared plumbing) that is provided from a _platform foundation_ required to support one or more workloads.
-- **Foundational utilities:** Foundational solutions (such as identity, network, security, governance, and operations) required for workloads to operate within the technology and business portfolio.
+- **Foundational utilities:** Shared IT services required for workloads to operate within the technology and business portfolio.
 - **Platform foundation:** The organizational construct to centralize foundational solutions and ensure those controls are enforced for all landing zones.
 - **Cloud platforms:** Depending on the overall strategy for supporting the full _portfolio_, customers may required multiple cloud platforms with distinct deployments of the platform foundation, to govern multiple regions, hybrid solutions, or even multicloud solutions.
 - **Portfolio:** Through a technology lense, the portfolio is the collection of the workloads, assets, and supporting resources that spans all cloud platforms. Through a business lense, the portfolio is the collection of projects, people, processes, and investments that support and manage the technology portfolio to drive business outcomes. Together these two lenses capture the _portfolio_.
