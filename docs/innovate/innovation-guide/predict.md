@@ -1,5 +1,5 @@
 ---
-title: "Azure innovation: Predict and influence" 
+title: "Azure innovation: Predict and influence"
 description: Learn about Azure solutions for predicting customers' needs and integrating predictions back into your solution to influence customer behavior.
 author: BrianBlanchard
 ms.author: brblanch
@@ -27,11 +27,11 @@ As an innovator, your company has insights into the data, behavior, and needs of
 
 The following table can help you find the best solution, based on your implementation needs.
 
-|Service  |Prebuilt models  |Build and experiment  |Train and build with Python|Required skills|
-|---------|---------|---------|---------|---------|
-|Azure Cognitive Services|Yes|No|No|API and developer skills|
-|Azure Machine Learning Studio|Yes|Yes|No|General understanding of predictive algorithms|
-|Azure Machine Learning service|Yes|Yes|Yes|Data scientist|
+| Service | Prebuilt models | Build and experiment | Train and build with Python | Required skills |
+|---|---|---|---|---|
+| Azure Cognitive Services | Yes | No | No | API and developer skills |
+| Azure Machine Learning Studio | Yes | Yes | No | General understanding of predictive algorithms |
+| Azure Machine Learning service | Yes | Yes | Yes | Data scientist |
 
 ## [Azure Cognitive Services](#tab/CognitiveServices)
 
@@ -43,7 +43,7 @@ For a list of available services and the amount of training that might be requir
 
 To use a Cognitive Services API:
 
-1. In the [Azure portal](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.CognitiveServices%2FAccounts), go to **Cognitive Services**.
+1. In the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.CognitiveServices%2FAccounts), go to **Cognitive Services**.
 2. Select **Add** to find a Cognitive Services API in Azure Marketplace.
 3. Do either of the following:
    - If you know the name of the service you want to use, enter the name in the **Search the Marketplace** box.
@@ -51,11 +51,7 @@ To use a Cognitive Services API:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2FAccounts]" submitText="Go to Cognitive Services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 

@@ -1,6 +1,6 @@
 ---
 title: "Prerequisites to migration"
-description: Understand the prerequisites that help you prepare for migration to the cloud, and help you avoid common reasons for migration failures. 
+description: Understand the prerequisites that help you prepare for migration to the cloud, and help you avoid common reasons for migration failures.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
@@ -21,10 +21,10 @@ Ensure business, culture, and technical readiness prior to beginning an iterativ
 
 Before beginning any cloud migration, review the [Plan](../../../strategy/index.md) and [Ready](../../../ready/index.md) guidance in the Cloud Adoption Framework to ensure your organization is prepared for cloud adoption and migration processes. In particular, review the business requirements and expected outcomes driving the migration:
 
-- [Getting started: Migrate](../../../getting-started/migrate.md)
+- [Get started: Accelerate migration](../../../get-started/migrate.md)
 - [Why are we moving to the cloud?](../../../strategy/motivations.md)
 
-## Definition of *done*
+## Definition of _done_
 
 Prerequisites are completed when the following are true:
 
@@ -33,7 +33,7 @@ Prerequisites are completed when the following are true:
 - **Technical readiness.** The landing zone (or allocated hosting space in the cloud) that will receive the migrated assets meets minimum requirements to host the first migrated workload.
 
 > [!CAUTION]
-> Preparation is key to the success of a migration. However, too much preparation can lead to *analysis paralysis*, where too much time spent on planning can seriously delay a migration effort. The processes and prerequisites defined in this section are meant to help you make decisions, but don't let them block you from making meaningful progress.
+> Preparation is key to the success of a migration. However, too much preparation can lead to _analysis paralysis_, where too much time spent on planning can seriously delay a migration effort. The processes and prerequisites defined in this section are meant to help you make decisions, but don't let them block you from making meaningful progress.
 >
 > Choose a relatively simple workload for your initial migration. Use the processes discussed in this section as you plan and implement this first migration. This first migration effort will quickly demonstrate cloud principles to your team and force them to learn about how the cloud works. As your team gains experience, integrate these learnings as you take on larger and more complex migrations.
 

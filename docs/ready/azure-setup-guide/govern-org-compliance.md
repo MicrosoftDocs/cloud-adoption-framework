@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 # Governance, security, and compliance in Azure
 
-As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [Governance Benchmark tool](https://cafbaseline.com) to identify potential gaps in your organization's cloud governance approach. For more information on how to develop governance processes, see the [Cloud Adoption Framework for Azure's governance guidance](../../govern/index.md).
+As you establish corporate policy and plan your governance strategies, you can use tools and services like Azure Policy, Azure Blueprints, and Azure Security Center to enforce and automate your organization's governance decisions. Before you start your governance planning, use the [Governance Benchmark tool](https://cafbaseline.com) to identify potential gaps in your organization's cloud governance approach. For more information about developing governance processes, see the [Cloud Adoption Framework for Azure's governance guidance](../../govern/index.md).
 
 # [Azure Blueprints](#tab/AzureBlueprints)
 
@@ -49,7 +49,7 @@ To create a blueprint:
 
 ::: zone target="docs"
 
-1. Go to [Blueprints - Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
+1. Go to [Blueprints: Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
 1. In the **Create a Blueprint** section, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. Enter the **Blueprint name**, then select the appropriate **Definition location**.
@@ -157,8 +157,8 @@ To learn more, see:
 
 - [Azure Security Center](https://docs.microsoft.com/azure/security-center)
 - [Just-in-time VM access](https://docs.microsoft.com/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
-- [Standard vs. free pricing tier](https://azure.microsoft.com/pricing/details/security-center)
-- [Cloud Adoption Framework: Security Baseline governance discipline](../../govern/security-baseline/index.md)
+- [Security Center pricing tiers](https://azure.microsoft.com/pricing/details/security-center)
+- [Cloud Adoption Framework: Security Baseline discipline](../../govern/security-baseline/index.md)
 
 ::: zone-end
 

@@ -35,9 +35,9 @@ The following sample policy statements address common configuration-related busi
 **Policy statement:** The following policies will be implemented:
 
 - Key metrics and diagnostics measures will be identified for all production systems and components, and monitoring and diagnostic tools will be applied to these systems and monitored regularly by operations personnel.
-- Operations will consider using monitoring and diagnostic tools in nonproduction environments such as Staging and QA to identify system issues before they occur in the production environment.
+- Operations will consider using monitoring and diagnostic tools in nonproduction environments such as staging and QA to identify system issues before they occur in the production environment.
 
-**Potential design options:** [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor), including Log Analytics and Application Insights, provides tools for collecting and analyzing telemetry to help you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. Additionally, [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) reports all changes that are being made at the platform level and should be monitored and audited for noncompliant changes.
+**Potential design options:** [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor), including Log Analytics and Application Insights, provides tools for collecting and analyzing telemetry to help you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. Additionally, [Azure activity log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) reports all changes that are being made at the platform level and should be monitored and audited for noncompliant changes.
 
 ## Configuration security reviews
 
@@ -51,7 +51,7 @@ The following sample policy statements address common configuration-related busi
 
 Use the samples mentioned in this article as a starting point to develop policies that address specific business risks that align with your cloud adoption plans.
 
-To begin developing your own custom policy statements related to identity management, download the [Identity Baseline template](../identity-baseline/template.md).
+To begin developing your own custom Identity Baseline policy statements, download the [Identity Baseline discipline template](../identity-baseline/template.md).
 
 To accelerate adoption of this discipline, choose the [actionable governance guide](../guides/index.md) that most closely aligns with your environment. Then modify the design to incorporate your specific corporate policy decisions.
 

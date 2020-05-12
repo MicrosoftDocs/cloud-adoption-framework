@@ -1,6 +1,6 @@
 ---
 title: Organize Azure resources effectively
-description: Understand the best practices you need to effectively organize your Azure resources for ease of management.
+description: Understand best practices for effectively organizing your Azure resources to simplify resource management.
 author: laraaleite
 ms.author: kfollis
 ms.date: 04/09/2019
@@ -32,7 +32,7 @@ Azure provides four levels of management scope: management groups, subscriptions
 
 ## Scope of management settings
 
-You can apply management settings, like policies and role-based access controls, at any of the management levels. The level you select determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy is also applied to all resource groups and resources in that subscription.
+You can apply management settings, like policies and role-based access control, at any of the management levels. The level you select determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy is also applied to all resource groups and resources in that subscription.
 
 Usually, it makes sense to apply critical settings at higher levels and project-specific requirements at lower levels. For example, you might want to make sure all resources for your organization are deployed to certain regions. To do that, apply a policy to the subscription that specifies the allowed locations. As other users in your organization add new resource groups and resources, the allowed locations are automatically enforced. Learn more about policies in the governance, security, and compliance section of this guide.
 
@@ -141,9 +141,9 @@ The following table includes naming patterns for a few sample types of Azure res
 
 | Entity | Scope | Length | Casing | Valid characters | Suggested pattern | Example |
 | --- | --- | --- | --- | --- | --- | --- |
-|Resource group |Subscription |1-90 |Case insensitive |Alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters |`<service short name>-<environment>-rg` |`profx-prod-rg` |
-|Availability set |Resource group |1-80 |Case insensitive |Alphanumeric, underscore, and hyphen |`<service-short-name>-<context>-as` |`profx-sql-as` |
-|Tag |Associated entity |512 (name), 256 (value) |Case insensitive |Alphanumeric |`"key" : "value"` |`"department" : "Central IT"` |
+| Resource group | Subscription | 1-90 | Case insensitive | Alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters | `<service short name>-<environment>-rg` | `profx-prod-rg` |
+| Availability set | Resource group | 1-80 | Case insensitive | Alphanumeric, underscore, and hyphen | `<service-short-name>-<context>-as` | `profx-sql-as` |
+| Tag | Associated entity | 512 (name), 256 (value) | Case insensitive | Alphanumeric | `"key" : "value"` | `"department" : "Central IT"` |
 
 # [Resource tags](#tab/ResourceTags)
 
@@ -159,7 +159,7 @@ You can also use tags for many other things. Common uses include:
 
 Each resource or resource group can have a maximum of 50 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
 
-For more tagging recommendations and examples, see the Cloud Adoption Framework's [guidance on tagging](../azure-best-practices/naming-and-tagging.md).
+For more tagging recommendations and examples, see [Recommended naming and tagging conventions](../azure-best-practices/naming-and-tagging.md) in the Cloud Adoption Framework.
 
 ::: zone target="docs"
 
@@ -167,7 +167,7 @@ For more tagging recommendations and examples, see the Cloud Adoption Framework'
 
 To apply a tag to a resource group:
 
-1. Go to [Resource groups](https://ms.portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups).
+1. Go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups).
 1. Select a resource group.
 1. Select **Assign tags**.
 1. Enter a new name and value, or use the drop-down list to select an existing name and value.

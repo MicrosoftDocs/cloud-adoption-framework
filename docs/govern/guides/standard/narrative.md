@@ -25,14 +25,14 @@ In the past, the company's CIO has been excluded from these strategic conversati
 The company has the following business profile:
 
 - All sales and operations reside in a single country, with a low percentage of global customers.
-- The business operates as a single business unit, with budget aligned to functions, including Sales, Marketing, Operations, and IT.
+- The business operates as a single business unit, with budget aligned to functions, including sales, marketing, operations, and IT.
 - The business views most of IT as a capital drain or a cost center.
 
 ## Current state
 
 Here is the current state of the company's IT and cloud operations:
 
-- IT operates two hosted infrastructure environments. One environment contains production assets. The second environment contains disaster recovery and some dev/test assets. These environments are hosted by two different providers. IT refers to these two datacenters as Prod and DR respectively.
+- IT operates two hosted infrastructure environments. One environment contains production assets. The second environment contains disaster recovery and some dev/test assets. These environments are hosted by two different providers. IT refers to these two datacenters as prod and DR respectively.
 - IT entered the cloud by migrating all end-user email accounts to Office 365. This migration was completed six months ago. Few other IT assets have been deployed to the cloud.
 - The application development teams are working in a dev/test capacity to learn about cloud-native capabilities.
 - The business intelligence (BI) team is experimenting with big data in the cloud and curation of data on new platforms.
@@ -45,8 +45,8 @@ The following changes are anticipated over the next several years:
 
 - The CIO is reviewing the policy on personal data and financial data to allow for the future state goals.
 - The application development and BI teams want to release cloud-based solutions to production over the next 24 months based on the vision for customer engagement and new products.
-- This year, the IT team will finish retiring the disaster recovery workloads of the DR datacenter by migrating 2,000 VMs to the cloud. This is expected to produce an estimated $25M USD cost savings over the next five years.
-    ![On-premises costs versus Azure costs demonstrating a return of $25M USD over the next five years](../../../_images/govern/calculator-small-to-medium-enterprise.png)
+- This year, the IT team will finish retiring the disaster recovery workloads of the DR datacenter by migrating 2,000 VMs to the cloud. This is expected to produce an estimated $25m USD cost savings over the next five years.
+    ![On-premises costs versus Azure costs demonstrating a return of $25m USD over the next five years](../../../_images/govern/calculator-small-to-medium-enterprise.png)
 - The company plans to change how it makes IT investments by repositioning the committed capital expense as an operating expense within IT. This change will provide greater cost control and enable IT to accelerate other planned efforts.
 
 ## Next steps

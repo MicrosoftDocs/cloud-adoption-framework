@@ -12,9 +12,9 @@ ms.custom: operating-model
 
 # Establish an operating model for the cloud
 
-Cloud adoption is an iterative effort focusing on what you do in the cloud. The cloud strategy outlines the digital transformation to guide business programs, as various teams execution adoption projects. Planning and Readiness help ensure the success of each of those important elements. All steps of cloud adoption equate to tangible projects with manageable objectives, timelines, and budgets.
+Cloud adoption is an iterative effort focusing on what you do in the cloud. The cloud strategy outlines the digital transformation to guide business programs, as various teams execution adoption projects. Planning and readiness help ensure the success of each of those important elements. All steps of cloud adoption equate to tangible projects with manageable objectives, timelines, and budgets.
 
-These adoption efforts are relatively easy to track and measure, even when they involve multiple projected iterations and releases. Each phase of the adoption lifecycle is important. Each phase is prone to potential roadblocks across business, culture, and technology constraints. But, each phase depends heavily on the underlying operating model.
+These adoption efforts are relatively easy to track and measure, even when they involve multiple projected iterations and releases. Each phase of the adoption lifecycle is important. Each phase is prone to potential roadblocks across business, culture, and technology constraints. However, each phase depends heavily on the underlying operating model.
 
 **If adoption describes what you are doing, the operating model defines the underlying who and how that enable adoption.**
 

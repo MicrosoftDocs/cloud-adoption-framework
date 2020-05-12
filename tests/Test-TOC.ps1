@@ -28,7 +28,7 @@ function Test-MatchTocToFiles([string] $tocFile, [string[]] $ignoreFiles)
 
         $fileName = " $fileName"
 
-        $matches = ([regex]$fileName).Matches($tocText)
+        $matches = ([Regex]$fileName).Matches($tocText)
         if ($matches.Count -lt 1)
         {
             Write-Host "ORPHANED: $fileName"
@@ -44,15 +44,9 @@ function Test-MatchTocToFiles([string] $tocFile, [string[]] $ignoreFiles)
     return $count
 }
 
-function Test-PageLinks([System.IO.FileInfo[]] $files)
-{
-    $result = Test-AllMatches $files -TestLinks $true
-    return $result
-}
-
 function Test-Uri([string] $uri)
 {
-    if ($uri.StartsWith($(Get-UrlForToc)))
+    if ($uri.StartsWith($(Get-MyTocUrl)))
     {
         return 200
     }
@@ -64,8 +58,16 @@ function Test-Uri([string] $uri)
     $uri = $uri.Replace('https://wikipedia.org', 'https://en.wikipedia.org')
     $uri = $uri.Replace('https://cloudamize.com', 'https://cloudamize.com/en')
     
-    $uriObject = New-Object System.Uri $uri
-
+    try {
+        $uriObject = New-Object System.Uri $uri
+    }
+    catch {
+        Write-Host "URI FAILED: $uri"
+        Write-Host $_
+        $result = -1
+        return $result
+    }
+    
     try {
         $request = Invoke-WebRequest $uri -MaximumRedirection 0 -ErrorAction Ignore
     }
@@ -73,7 +75,7 @@ function Test-Uri([string] $uri)
         $result = -1
         return $result
     }
-    
+
     if ($request.StatusCode -eq 200)
     {
         $result = 200
@@ -86,8 +88,9 @@ function Test-Uri([string] $uri)
             $prefix = "$($uriObject.Scheme)://$($uriObject.Host)"
             $location = $request.Headers.Location.Replace($prefix, "")
             
-            if (($location -eq "$absolutePath/") -or ($location.StartsWith("$($absolutePath)?")))
+            if (($location -eq "$absolutePath/") -or ($location -match "^$($absolutePath)/?\?"))
             {
+                Write-Host "URI '$uri' evaluated as 200."
                 $result = 200
             }
             else 

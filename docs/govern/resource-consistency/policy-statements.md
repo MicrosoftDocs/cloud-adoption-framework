@@ -22,7 +22,7 @@ The following sample policy statements address common business risks related to 
 
 ## Tagging
 
-**Technical risk:** Without proper metadata tagging associated with deployed resources, IT Operations cannot prioritize support or optimization of resources based on required SLA, importance to business operations, or operational cost. This can result in mis-allocation of IT resources and potential delays in incident resolution.
+**Technical risk:** Without proper metadata tagging associated with deployed resources, IT operations cannot prioritize support or optimization of resources based on required SLA, importance to business operations, or operational cost. This can result in mis-allocation of IT resources and potential delays in incident resolution.
 
 **Policy statement:** The following policies will be implemented:
 
@@ -47,9 +47,9 @@ The following sample policy statements address common business risks related to 
 
 **Technical risk:** Virtual machines (VMs) that are not up-to-date with the latest updates and software patches are vulnerable to security or performance issues, which can result in service disruptions.
 
-**Policy statement:** Governance tooling must enforce that automatic updates are enabled on all deployed VMs. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT Operations.
+**Policy statement:** Governance tooling must enforce that automatic updates are enabled on all deployed VMs. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
 
-**Potential design options:** For Azure hosted VMs, you can provide consistent update management using the [Update Management solution in Azure Automation](https://docs.microsoft.com/azure/automation/automation-update-management).
+**Potential design options:** For Azure hosted VMs, you can provide consistent update management using the [update management solution in Azure Automation](https://docs.microsoft.com/azure/automation/automation-update-management).
 
 ## Deployment compliance
 
@@ -85,7 +85,7 @@ The following sample policy statements address common business risks related to 
 
 Use the samples mentioned in this article as a starting point to develop policies that address specific business risks that align with your cloud adoption plans.
 
-To begin developing your own custom policy statements related to Resource Consistency, download the [Resource Consistency template](./template.md).
+To begin developing your own custom Resource Consistency policy statements, download the [Resource Consistency discipline template](./template.md).
 
 To accelerate adoption of this discipline, choose the [actionable governance guide](../guides/index.md) that most closely aligns with your environment. Then modify the design to incorporate your specific corporate policy decisions.
 

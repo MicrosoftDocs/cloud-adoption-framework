@@ -15,14 +15,14 @@ ms.subservice: operate
 
 You must complete these two tasks to onboard Azure server management services to your servers:
 
-- Deploy service agents to your servers
-- Enable the management solutions
+- Deploy service agents to your servers.
+- Enable the management solutions.
 
 This article covers the three processes that are necessary to complete these tasks:
 
-1. Deploy the required agents to Azure VMs by using Azure Policy
-1. Deploy the required agents to on-premises servers
-1. Enable and configuring the solutions
+1. Deploy the required agents to Azure VMs by using Azure Policy.
+1. Deploy the required agents to on-premises servers.
+1. Enable and configuring the solutions.
 
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard virtual machines to Azure server management services.
@@ -31,11 +31,11 @@ This article covers the three processes that are necessary to complete these tas
 
 All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
 
-Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
+Azure Policy has a [built-in policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
 <!-- TODOBACKLOG: Add these when available.
-- [Preview]: Enable Azure Monitor for virtual machine scale sets.
-- [Preview]: Enable Azure Monitor for VMs.
+**Preview:** Enable Azure Monitor for virtual machine scale sets.
+**Preview:** Enable Azure Monitor for VMs.
  -->
 
 > [!NOTE]

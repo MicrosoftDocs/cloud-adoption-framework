@@ -30,7 +30,7 @@ During a transformation, the same relative risks exist.
 - During early experimentation, a few assets are deployed with little to no relevant data. The risk is small.
 - When the first workload is deployed, risk goes up a little. This risk is easily remediated by choosing an inherently low risk application with a small user base.
 - As more workloads come online, risks change at each release. New apps go live and risks change.
-- When a company brings the first 10-20 applications online, the risk profile is much different that it is when the 1000th applications go into production in the cloud.
+- When a company brings the first 10 or 20 applications online, the risk profile is much different than when the 1000th application goes into production in the cloud.
 
 The assets that accumulated in the traditional, on-premises estate likely accumulated over time. The maturity of the business and IT teams was likely growing in a similar fashion. That parallel growth can tend to create some unnecessary policy baggage.
 
@@ -54,7 +54,7 @@ The following are a few basic examples of business risks that can be included as
 - Any asset with open ports exposed to the internet are at risk of compromise.
 
 The above examples are meant to establish MVP business risks as a theory. The actual list will be unique to every environment.
-Once the Business Risk MVP is established, they can be converted to [policies](./index.md) to remediate each risk.
+Once the business risk MVP is established, they can be converted to [policies](./index.md) to remediate each risk.
 
 <!-- markdownlint-enable MD026 -->
 

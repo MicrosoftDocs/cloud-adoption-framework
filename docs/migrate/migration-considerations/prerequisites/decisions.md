@@ -25,7 +25,7 @@ The objective or goal of any adoption effort can have a significant impact on th
 
 No business would pursue just one of these outcomes. Without operations, there are no customers, and vice versa. Cloud adoption is no different. Companies commonly work to achieve each of these outcomes, but trying to focus on all of them simultaneously can spread your efforts too thin and slow progress on work that could most benefit your business needs.
 
-This prerequisite isn't a demand for you to pick one of these three goals, but instead to help your cloud strategy team and your cloud adoption team establish a set of operational priorities that will guide execution for the next three to six months. These priorities are set by ranking each of the three itemized options from *most significant* to *least significant*, as they relate to the efforts this team can contribute to in the next one or two quarters.
+This prerequisite isn't a demand for you to pick one of these three goals, but instead to help your cloud strategy team and your cloud adoption team establish a set of operational priorities that will guide execution for the next three to six months. These priorities are set by ranking each of the three itemized options from _most significant_ to _least significant_, as they relate to the efforts this team can contribute to in the next one or two quarters.
 
 ### Act on migration outcomes
 
@@ -41,17 +41,17 @@ If data, experimentation, research and development (R&D), or new products are yo
 
 ## Effort
 
-Migration effort can vary widely depending on the size and complexities of the workloads involved. A smaller workload migration involving a few hundred virtual machines (VMs) is a tactical process, potentially being implemented using automated tools such as [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-overview). Conversely, a large enterprise migration of tens of thousands of workloads requires a highly strategic process and can involve extensive refactoring, rebuilding, and replacing of existing applications integrating platform as a service (PaaS) and software as a service (SaaS) capabilities. [Identifying and balancing the scope](../../../strategy/balance-the-portfolio.md) of your planned migrations is critical.
+Migration effort can vary widely depending on the size and complexities of the workloads involved. A smaller workload migration involving a few hundred virtual machines (VMs) is a tactical process, potentially being implemented using automated tools such as [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview). Conversely, a large enterprise migration of tens of thousands of workloads requires a highly strategic process and can involve extensive refactoring, rebuilding, and replacing of existing applications integrating platform as a service (PaaS) and software as a service (SaaS) capabilities. [Identifying and balancing the scope](../../../strategy/balance-the-portfolio.md) of your planned migrations is critical.
 
 Before making any decisions that could have a long-term impact on the current migration program, it is vital that you create consensus on the following decisions.
 
 ### Effort type
 
-In any migration of significant scale (more than 250 VMs), assets are migrated using a variety of transition options, discussed in the five Rs of rationalization: *Rehost*, *Refactor*, *Rearchitect*, *Rebuild*, and *Replace*.
+In any migration of significant scale (more than 250 VMs), assets are migrated using a variety of transition options, discussed in the five Rs of rationalization: _Rehost_, _Refactor_, _Rearchitect_, _Rebuild_, and _Replace_.
 
-Some workloads are modernized through a *rebuild* or *rearchitect* process, creating more modern applications with new features and technical capabilities. Other assets go through a *refactor* process, for instance a move to containers or other more modern hosting and operational approaches that don't necessarily affect the solutions code base. Commonly, virtual machines and other assets that are more well established go through a *rehost* process, transitioning those assets from the datacenter to the cloud. Some workloads could potentially be migrated to the cloud, but instead should be *replaced* using service–based (SaaS-based) cloud services that meet the same business need&mdash;for example, by using Office 365 as an alternative to migrating Exchange Server instances.
+Some workloads are modernized through a _rebuild_ or _rearchitect_ process, creating more modern applications with new features and technical capabilities. Other assets go through a _refactor_ process, for instance a move to containers or other more modern hosting and operational approaches that don't necessarily affect the solutions code base. Commonly, virtual machines and other assets that are more well established go through a _rehost_ process, transitioning those assets from the datacenter to the cloud. Some workloads could potentially be migrated to the cloud, but instead should be _replaced_ using service–based (SaaS-based) cloud services that meet the same business need&mdash;for example, by using Office 365 as an alternative to migrating Exchange Server instances.
 
-In the majority of scenarios, some business event creates a forcing function that causes a high percentage of assets to temporarily migrate using the *rehost* process, followed by a more significant secondary transition using one of the other migration strategies after they are in the cloud. This process is commonly known as a *cloud transition*.
+In the majority of scenarios, some business event creates a forcing function that causes a high percentage of assets to temporarily migrate using the _rehost_ process, followed by a more significant secondary transition using one of the other migration strategies after they are in the cloud. This process is commonly known as a _cloud transition_.
 
 During the process of [rationalizing the digital estate](../../../digital-estate/calculate.md), these types of decisions are applied to each asset to migrate. However, the prerequisite needed at this time is to make a baseline assumption. Of the five migration strategies, which best aligns with the business objectives or business outcomes driving this migration effort? This decision serves as a guiding assumption throughout the migration effort.
 
@@ -72,8 +72,8 @@ Often, migrations are driven by a compelling business event that is time sensiti
 Before proceeding, document the following assumptions and share them with the cloud strategy team and the cloud adoption teams:
 
 - Business outcomes.
-- Roles, documented and refined for the *Assess*, *Migrate*, *Optimize*, and *Secure and Manage* migration processes.
-- Definition of done, documented and refined separately for the *Assess*, *Migrate*, *Optimize*, and *Secure and Manage* migration processes.
+- Roles, documented and refined for the _Assess_, _Migrate_, _Optimize_, and _Secure and Manage_ migration processes.
+- Definition of done, documented and refined separately for the _Assess_, _Migrate_, _Optimize_, and _Secure and Manage_ migration processes.
 - Effort type.
 - Effort scale.
 - Effort timing.
@@ -82,7 +82,7 @@ Before proceeding, document the following assumptions and share them with the cl
 
 After the process is understood among the team, it's time to review technical prerequisites. The [migration environment planning checklist](./planning-checklist.md) helps to ensure that the technical foundation is ready for migration.
 
-Once the process is understood among the team, its time to review technical prerequisites the [Migration Planning Checklist] will help ensure the technical foundation is ready for migration.
+Once the process is understood among the team, its time to review technical prerequisites the [migration planning checklist](./planning-checklist.md) will help ensure the technical foundation is ready for migration.
 
 > [!div class="nextstepaction"]
 > [Review the migration planning checklist](./planning-checklist.md)

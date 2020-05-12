@@ -33,7 +33,7 @@ The cycle that makes test-driven development effective is often referred to as a
 
 ![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 
-- **Create a test:** Define a test to validate that acceptance criteria for a specific value-add feature has been met. When possible automate the test.
+- **Create a test:** Define a test to validate that acceptance criteria for a specific value-add feature has been met. Automate the test whenever possible.
 - **Test the landing zone:** Run the new test and any existing tests. If the required feature hasn't already been met by prior development efforts and isn't inclusive to the cloud provider's offering, the test should fail. Running existing tests will help validate that your new test doesn't reduce reliability of landing zone features delivered by existing code.
 - **Expand and refactor the landing zone:** Add or modify the source code to fulfill the requested value-add feature and improve the general quality of the code base. To meet the fullest spirit of test-driven development, the cloud platform team would only add code to meet the requested feature and nothing more. At the same time, code quality and maintenance is a shared effort. When fulfilling new feature requests, the cloud platform team should seek to improve the code by removing duplication and clarifying the code. Running tests between new code creation and refactoring of source code is highly suggested.
 - **Deploy the landing zone:** Once the source code is capable of fulfilling the feature request, deploy the modified landing zone to the cloud provider in a controlled testing or sandbox environment.
@@ -48,9 +48,9 @@ For an initial migration effort, definition of done may be overly simple. The fo
 - The initial landing zone will be used to host 10 workloads for initial learning purposes. These workloads are not critical to the business and have no access to sensitive data. In the future, it's likely these workloads will be released to production but criticality and sensitive is not expected to change. To support these workloads, the cloud adoption team will need the following criteria met:
 
 - Network segmentation to align with proposed network design.
-- Access to compute, storage, and networking resources to host the workloads aligned to the digital estate discovery
+- Access to compute, storage, and networking resources to host the workloads aligned to the digital estate discovery.
 - Naming and tagging schema for ease of use.
-- This environment should be treated as a "demilitarized zone (DMZ)" with access to the public internet
+- This environment should be treated as a _demilitarized zone (DMZ)_ with access to the public internet.
 - During adoption efforts, the cloud adoption team would like temporary access to the environment to change service configurations.
 - For awareness only: Prior to production release, these workloads will require integration with the corporate identity provider to govern ongoing identity and access for operations management purposes. At which time the cloud adoption team's access should be revoked.
 

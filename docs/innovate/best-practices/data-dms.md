@@ -41,14 +41,14 @@ With an offline migration, application downtime starts when the migration starts
 
 We suggest that you decide your acceptable business downtime and test an offline migration. You do so to check if the restoration time meets the acceptable downtime. If the restoration time is unacceptable, do an online migration.
 
-|Source  |Target  |Tool  |Migration type  |Guidance  |
-|---------|---------|---------|---------|---------|
-|SQL Server|Azure SQL Database|Database Migration Service|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql)|
-|SQL Server|Azure SQL Database|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online)|
-|SQL Server|Azure SQL Database managed instance|Database Migration Service|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)|
-|SQL Server|Azure SQL Database managed instance|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)|
-|RDS SQL Server|Azure SQL Database or Azure SQL Database managed instance|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online)|
-|MySQL|Azure Database for MySQL|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online)|
-|PostgreSQL|Azure Database for PostgreSQL|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)|
-|MongoDB|Azure Cosmos DB Mongo API|Database Migration Service|Offline|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db)|
-|MongoDB|Azure Cosmos DB Mongo API|Database Migration Service|Online|[Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db-online)|
+| Source  | Target  | Tool  | Migration type | Guidance |
+|---|---|---|---|---|
+| SQL Server | Azure SQL Database | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql) |
+| SQL Server | Azure SQL Database | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online) |
+| SQL Server | Azure SQL Database managed instance | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) |
+| SQL Server | Azure SQL Database managed instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) |
+| RDS SQL Server | Azure SQL Database or Azure SQL Database managed instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online) |
+| MySQL | Azure Database for MySQL | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online) |
+| PostgreSQL | Azure Database for PostgreSQL | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online) |
+| MongoDB | Azure Cosmos DB Mongo API | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db) |
+| MongoDB | Azure Cosmos DB Mongo API | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db-online) |

@@ -39,7 +39,7 @@ Prior to migration of any asset (infrastructure, app, or data), there is an oppo
 
 For manual cost calculations, there are two handy calculators that can provide a quick cost estimate based on the architecture of the workload to be migrated.
 
-- The Azure [pricing calculator](https://azure.microsoft.com/pricing/calculator) provides cost estimates based on manually entered Azure products.
+- The [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator) provides cost estimates for the Azure products you select.
 - Sometimes decisions require a comparison of the future cloud costs and the current on-premises costs. The [Total Cost of Ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator) can provide such a comparison.
 
 These manual cost calculators can be used on their own to forecast potential spend and savings. They can also be used in conjunction with the cost forecasting tools of Azure Migrate to adjust the cost expectations to fit alternative architectures or performance constraints.
@@ -62,7 +62,8 @@ Azure Migrate calculates **monthly cost estimates** based on data captured by th
 The resulting estimate, pictured below, identifies the monthly costs of compute and storage, which often represent the largest portion of cloud costs.
 
 ![Cost details view](./media/manage-costs/compute-storage-monthly-cost-estimate.png)
-*Figure 1 - Image of the Cost Details view of an assessment in Azure Migrate.*
+
+_Figure 1: Image of the Cost Details view of an assessment in Azure Migrate._
 
 ## Additional resources
 
@@ -87,14 +88,14 @@ The following steps provide cost recommendations for assets (infrastructure, app
 
 Azure Cost Management can provide a more holistic view of spending habits, including detailed view of costs and spending trends over time. For large or complex migrations, this view may provide the insights needed to make broad sweeping cost management decisions.
 
-Prerequisites: The remainder of this tab assumes the reader has completed setup of Azure Cost Management during completion of the Azure setup guide. For more details on configuring Azure Cost Management see this [article in the Azure setup guide](../../ready/azure-setup-guide/manage-costs.md). Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
+Prerequisites: The remainder of this tab assumes the reader has completed setup of Azure Cost Management during completion of the Azure setup guide. For more information on configuring Azure Cost Management, see [Manage costs and billing for Azure resources](../../ready/azure-setup-guide/manage-costs.md) in the Azure setup guide. Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
 
 The following steps will load Azure Cost Management cost analysis data for your subscriptions:
 
 1. Navigate to **Cost Management + Billing** in the portal. If you do not see Cost Management + Billing in the left pane, select **All services**. In the service menu pane, under **Monitoring and Management**, select **Cost Management + Billing**.
 2. In Cost Management + Billing, select **Cost Management** in the left navigation pane to begin analyzing and optimizing cloud costs.
 3. In Cost Management, select **Cost analysis**.
-    a. Use the **Scope** pill to switch to a different scope in cost analysis.
+    1. Use the **Scope** pill to switch to a different scope in cost analysis.
 
 This analysis will allow you to review total costs, budget (if available), and accumulated costs. Each calculation can be viewed by service, by resource, and over time. Most importantly, costs can be analyzed by tags. Properly naming and tagging assets (infrastructure, apps, and data) is the fundamental starting point of all sound governance and cost management processes. Proper tags allow for better management of costs and clearer impacts of performance and cost optimizations.
 
@@ -126,7 +127,7 @@ Speak with your Microsoft account representative to understand how you can take 
 
 ## Azure Reservations
 
-[Azure Reservations](https://docs.microsoft.com/azure/billing/billing-save-compute-costs-reservations) allow you to prepay for one year or three years of virtual machine or SQL Database compute capacity. Prepaying will allow you to get a discount on the resources you use. Azure reservations can significantly reduce your virtual machine or SQL database compute costs, up to 72 percent on pay-as-you-go prices with either a one-year or three-year upfront commitment. Reservations provide a billing discount and don't affect the runtime state of your virtual machines or SQL databases.
+[Azure Reservations](https://docs.microsoft.com/azure/cost-management-billing/reservations/save-compute-costs-reservations) allow you to prepay for one year or three years of virtual machine or SQL Database compute capacity. Prepaying will allow you to get a discount on the resources you use. Reservations can significantly reduce your virtual machine or SQL database compute costs, up to 72 percent on pay-as-you-go prices with either a one-year or three-year upfront commitment. Reservations provide a billing discount and don't affect the runtime state of your virtual machines or SQL databases.
 
 ## Use Azure Hybrid Benefit
 

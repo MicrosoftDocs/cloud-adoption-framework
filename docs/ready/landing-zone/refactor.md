@@ -10,8 +10,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore CAF -->
-
 # Refactor landing zones
 
 A landing zone is an environment for hosting your workloads, **preprovisioned through code**. Since landing zone infrastructure is defined in code, it can be refactored similar to any other codebase. Refactoring is the process of modifying or restructuring source code to optimize the output of that code without changing its purpose or core function.
@@ -24,11 +22,11 @@ The Ready methodology uses the concept of refactoring to accelerate migration an
 
 When customers adopt the cloud, landing zone considerations are the single most common blocker to adoption and cloud-related business results. Customers tend to lean towards one of the following two blockers. Often times various teams will each lean towards one of these two blockers, resulting in cultural deadlocks that make adoption difficult.
 
-Both of the primary blockers are rooted in one belief, the cloud environment and the existing datacenters should be at/near feature parity regarding operations, governance, and security. This is a wise long-term goal. But, the pain comes from the delicate balance between the timing to achieve that goal and the speed required to deliver business results.
+Both of the primary blockers are rooted in one belief, the cloud environment and the existing datacenters should be at or near feature parity regarding operations, governance, and security. This is a wise long-term goal. However, the pain comes from the delicate balance between the timing to achieve that goal and the speed required to deliver business results.
 
 ### Blocker: Acting too soon
 
-It took years and significant effort to reach the current state of security, governance, and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching 100% feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspend in the cloud environment. It is highly advised that customers not attempt to apply current state requirements to a future state environment as an early stage gate. Such a model seldom proves profitable.
+It took years and significant effort to reach the current state of security, governance, and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching 100% feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspend in the cloud environment. Don't try to apply current-state requirements to a future-state environment as an early stage gate. Such an approach rarely proves profitable.
 
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
 
@@ -57,7 +55,7 @@ The concept of refactoring a landing zone is simple in theory, but requires prop
 
 ## Development approach
 
-The advantage of a refactoring based approach, is the ability to create parallel iteration paths for development. The image below provides an example of two parallel iteration paths: Cloud Adoption and Cloud Platform. Both progress at their own pace, with minimal risk of becoming a blocker to either team's daily efforts. Alignment on the adoption plan and refactoring guardrails create a set of agreement upon milestones, which provide clear future state dependencies.
+The advantage of a refactoring based approach, is the ability to create parallel iteration paths for development. The image below provides an example of two parallel iteration paths: cloud adoption and cloud platform. Both progress at their own pace, with minimal risk of becoming a blocker to either team's daily efforts. Alignment on the adoption plan and refactoring guardrails create a set of agreement upon milestones, which provide clear future state dependencies.
 
 ![Landing zone parallel iteration](../../_images/ready/iterations.png)
 
@@ -77,9 +75,9 @@ Configuring an enterprise-ready environment will take time. This approach will n
 
 All initial landing zone templates have limitations. Guardrails or policies during refactoring should reflect those limitations. Before beginning a landing zone refactoring process, it is important to understand the long-term requirements of the cloud adoption plan and classification of the candidate workloads, compared to the initial template limitations.
 
-As an example of establishing refactoring guardrails, lets compare the development approach in the prior example and the CAF migration landing zone blueprint.
+As an example of establishing refactoring guardrails, lets compare the development approach in the prior example and the CAF Migrate landing zone blueprint.
 
-- Per the [assumptions details of the CAF migration landing zone blueprint](./migrate-landing-zone.md#assumptions), this initial landing zone is not designed for sensitive data or mission-critical workloads. Those features will have to be added through refactoring.
+- Per the [assumptions details of the CAF Migrate landing zone blueprint](./migrate-landing-zone.md#assumptions), this initial landing zone is not designed for sensitive data or mission-critical workloads. Those features will have to be added through refactoring.
 - In this example, lets assume that the portfolio of 100 workloads will require both mission critical and sensitive data hosting capabilities.
 
 To balance these two competing requirements, the adoption team and platform team will operate under the following agreed upon conditions:

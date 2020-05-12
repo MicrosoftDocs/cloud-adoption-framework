@@ -17,7 +17,7 @@ If you have only a few subscriptions, managing them independently is relatively 
 
 Azure management groups allow efficient management of access, policies, and compliance for an organization's subscriptions. Each management group is a container for one or more subscriptions.
 
-Management groups are arranged in a single hierarchy. You define this hierarchy in your Azure Active Directory (Azure AD) tenant to align with your organization's structure and needs. The top level is called the *root management group*. You can define up to six levels of management groups in your hierarchy. Each subscription is contained by only one management group.
+Management groups are arranged in a single hierarchy. You define this hierarchy in your Azure Active Directory (Azure AD) tenant to align with your organization's structure and needs. The top level is called the _root management group_. You can define up to six levels of management groups in your hierarchy. Each subscription is contained by only one management group.
 
 Azure provides four levels of management scope:
 
@@ -51,8 +51,8 @@ If you expect your Azure environment to grow, you should create management group
 
 Some basic examples of using management groups to separate different workloads include:
 
-- **Production vs. nonproduction workloads:** Use management groups to more easily manage different roles and policies between production and nonproduction subscriptions. For example, nonproduction subscriptions may grant developers contributor access, while in production developers have only reader access.
-- **Internal services vs. external services:** Enterprises often have different requirements, policies, and roles for internal services versus external customer-facing services.
+- **Production versus nonproduction workloads:** Use management groups to more easily manage different roles and policies between production and nonproduction subscriptions. For example, nonproduction subscriptions may grant developers contributor access, while in production developers have only reader access.
+- **Internal services versus external services:** Enterprises often have different requirements, policies, and roles for internal services versus external customer-facing services.
 
 ## Related resources
 

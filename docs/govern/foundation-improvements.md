@@ -22,18 +22,18 @@ At any time, the following best practices can be applied to the initial governan
 > [!IMPORTANT]
 > Resource organization can affect how these best practices are applied. It is important to start with the recommendations that best align with the initial cloud governance foundation you implemented in the previous step.
 
-|Risk/Need | Standard Enterprise | Complex Enterprise |
+| Risk/need | Standard enterprise | Complex enterprise |
 |---|---|---|
-|Sensitive data in the cloud|[Discipline improvement](./guides/standard/security-baseline-improvement.md)|[Discipline improvement](./guides/complex/security-baseline-improvement.md)|
-|Mission-critical apps in the cloud|[Discipline improvement](./guides/standard/resource-consistency-improvement.md)|[Discipline improvement](./guides/complex/resource-consistency-improvement.md)|
-|Cloud cost management|[Discipline improvement](./guides/standard/cost-management-improvement.md)|[Discipline improvement](./guides/complex/cost-management-improvement.md)|
-|Multicloud|[Discipline improvement](./guides/standard/multicloud-improvement.md)|[Discipline improvement](./guides/complex/multicloud-improvement.md)|
-|Complex/legacy identity management|N/A|[Discipline improvement](./guides/complex/identity-baseline-improvement.md)|
-|Multiple layers of governance|N/A|[Discipline improvement](./guides/complex/multiple-layers-of-governance.md)|
+| Sensitive data in the cloud | [Discipline improvement](./guides/standard/security-baseline-improvement.md) | [Discipline improvement](./guides/complex/security-baseline-improvement.md) |
+| Mission-critical apps in the cloud | [Discipline improvement](./guides/standard/resource-consistency-improvement.md) | [Discipline improvement](./guides/complex/resource-consistency-improvement.md) |
+| Cloud cost management | [Discipline improvement](./guides/standard/cost-management-improvement.md) | [Discipline improvement](./guides/complex/cost-management-improvement.md) |
+| Multicloud | [Discipline improvement](./guides/standard/multicloud-improvement.md) | [Discipline improvement](./guides/complex/multicloud-improvement.md) |
+| Complex/legacy identity management | N/A | [Discipline improvement](./guides/complex/identity-baseline-improvement.md) |
+| Multiple layers of governance | N/A | [Discipline improvement](./guides/complex/multiple-layers-of-governance.md) |
 
 ## Next steps
 
-In addition to the application of best practices, the governance methodology in the Cloud Adoption Framework can be customized to fit unique business constraints. After following the applicable recommendations, [evaluate corporate policy to understand additional customization requirements](./corporate-policy.md).
+In addition to the application of best practices, the Govern methodology in the Cloud Adoption Framework can be customized to fit unique business constraints. After following the applicable recommendations, [evaluate corporate policy to understand additional customization requirements](./corporate-policy.md).
 
 > [!div class="nextstepaction"]
 > [Evaluate corporate policy](./corporate-policy.md)

@@ -11,9 +11,9 @@ ms.subservice: migrate
 
 # Deploy a basic workload in Azure
 
-The term *workload* is typically defined as an arbitrary unit of functionality, such as an application or service. It helps to think about a workload in terms of the code artifacts that are deployed to a server, and also other services specific to an application. This may be a useful definition for an on-premises application or service, but for cloud applications it needs to be expanded.
+The term _workload_ is typically defined as an arbitrary unit of functionality, such as an application or service. It helps to think about a workload in terms of the code artifacts that are deployed to a server, and also other services specific to an application. This may be a useful definition for an on-premises application or service, but for cloud applications it needs to be expanded.
 
-In the cloud a workload not only encompasses all the artifacts, but it also includes the cloud resources as well. Included is cloud resources as part of the definition because of the concept known as "infrastructure as code". As you learned in [how does Azure work?](../../getting-started/what-is-azure.md), resources in Azure are deployed by an orchestrator service. This orchestrator service exposes functionality through a web API, and you can call the web API using several tools such as PowerShell, the Azure CLI, and the Azure portal. This means that you can specify Azure resources in a machine-readable file that can be stored along with the code artifacts associated with the application.
+In the cloud a workload not only encompasses all the artifacts, but it also includes the cloud resources as well. Included is cloud resources as part of the definition because of the concept known as "infrastructure as code". As you learned in [how does Azure work?](../../get-started/what-is-azure.md), resources in Azure are deployed by an orchestrator service. This orchestrator service exposes functionality through a web API, and you can call the web API using several tools such as PowerShell, the Azure CLI, and the Azure portal. This means that you can specify Azure resources in a machine-readable file that can be stored along with the code artifacts associated with the application.
 
 This enables you to define a workload in terms of code artifacts and the necessary cloud resources, thus further enabling you to isolate workloads. You can isolate workloads by the way resources are organized, by network topology, or by other attributes. The goal of workload isolation is to associate a workload's specific resources to a team, so that the team can independently manage all aspects of those resources. This enables multiple teams to share resource management services in Azure while preventing the unintentional deletion or modification of each other's resources.
 
@@ -21,12 +21,12 @@ This isolation also enables another concept, known as DevOps. DevOps includes th
 
 ## Basic workload
 
-A *basic workload* is typically defined as a single web application or a virtual network (VNet) with virtual machine (VM).
+A _basic workload_ is typically defined as a single web application or a virtual network (VNet) with virtual machine (VM).
 
 > [!NOTE]
 > This guide does not cover application development. For more information about developing applications on Azure, see the [Azure Application Architecture Guide](https://docs.microsoft.com/azure/architecture/guide).
 
-Regardless of whether the workload is a web application or a VM, each of these deployments requires a *resource group*. A user with permission to create a resource group must do this before following the steps below.
+Regardless of whether the workload is a web application or a VM, each of these deployments requires a _resource group_. A user with permission to create a resource group must do this before following the steps below.
 
 ## Basic web application (PaaS)
 
@@ -35,11 +35,11 @@ For a basic web application, select one of the 5-minute quickstarts from the [we
 > [!NOTE]
 > Some of the Quickstart guides will deploy a resource group by default. In this case, it's not necessary to create a resource group explicitly. Otherwise, deploy the web application to the resource group created above.
 
-Once you deploy a simple workload, you can learn more about the best practices for deploying a [basic web application](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app) to Azure.
+Once you deploy a simple workload, you can learn more about best practices for deploying a [basic web application](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app) to Azure.
 
 ## Single Windows or Linux VM (IaaS)
 
-For a simple workload that runs on a VM, the first step is to deploy a virtual network. All infrastructure as a service (IaaS) resources in Azure such as virtual machines, load balancers, and gateways, require a virtual network. Learn about [Azure virtual networks](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview), and then follow the steps to [deploy a virtual network to Azure using the portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal). When you specify the settings for the virtual network in the Azure portal, be sure to specify the name of the resource group created above.
+For a simple workload that runs on a VM, the first step is to deploy a virtual network. All infrastructure as a service (IaaS) resources in Azure such as virtual machines, load balancers, and gateways, require a virtual network. Learn about [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview), and then follow the steps to [deploy a virtual network to Azure using the portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal). When you specify the settings for the virtual network in the Azure portal, be sure to specify the name of the resource group created above.
 
 The next step is to decide whether to deploy a single Windows or Linux VM. For Windows VM, follow the steps to [deploy a Windows VM to Azure with the portal](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal). Again, when you specify the settings for the virtual machine in the Azure portal, specify the name of the resource group created above.
 

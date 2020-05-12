@@ -1,6 +1,6 @@
 ---
-title: "Skills readiness path during planning"
-description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the planning phase of migration.
+title: "Skills readiness path during the Plan phase of a migration journey"
+description: Use the Cloud Adoption Framework for Azure to learn about the skills readiness path during the Plan phase of migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2019
@@ -38,8 +38,8 @@ Justifying the investment to adopt the cloud can require deeper analysis and an 
 
 You can refine your business case by aligning the desired business case with current and future digital estate inventory. These articles can guide the development of a digital estate rationalization:
 
-- [Incremental rationalization](../digital-estate/rationalize.md). An agile approach to rationalization that properly aligns late-bound technical decisions.
-- [Rs of rationalization](../digital-estate/5-rs-of-rationalization.md). Understand the various rationalization options.
+- [Incremental rationalization](../digital-estate/rationalize.md): An agile approach to rationalization that properly aligns late-bound technical decisions.
+- [The five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
 
 ## Create a migration backlog (technical plan)
 
@@ -81,9 +81,9 @@ We recommend turning knowledge of Azure into official recognition with [Microsof
 
 ## Microsoft Learn
 
-Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points, levels and achieve more!
+Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels, and achieve more!
 
-Here is an example of a tailored learning path that aligns to the Strategy portion of the Cloud Adoption Framework.
+Here is an example of a tailored learning path that aligns to the Strategy methodology in the Cloud Adoption Framework.
 
 [Learn the business value of Microsoft Azure](https://docs.microsoft.com/learn/paths/learn-business-value-of-azure): This learning experience will take you on a journey that will begin by showing you how digital transformation and the power of the cloud can transform your business. We will cover how Microsoft Azure cloud services can power your organization on a trusted cloud platform. Finally, we will wrap up by illustrating how to make this journey real for your organization.
 

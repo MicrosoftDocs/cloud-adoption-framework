@@ -1,6 +1,6 @@
 ---
 title: "Guest Configuration policy"
-description: Use the Cloud Adoption Framework for Azure to learn how to use the Azure Policy Guest Configuration extension to audit the configuration settings in an Azure VM.  
+description: Use the Cloud Adoption Framework for Azure to learn how to use the Azure Policy Guest Configuration extension to audit the configuration settings in an Azure VM.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
@@ -26,7 +26,7 @@ Get-AzPolicySetDefinition | where-object {$_.Properties.metadata.category -eq "G
 
 By default, we recommend that you enable the following policies:
 
-- [Preview]: Audit to verify that password-security settings are correct on Linux and Windows machines.
+- **Preview:** Audit to verify that password-security settings are correct on Linux and Windows machines.
 - Audit to verify that certificates are not nearing expiration on Windows VMs.
 
 -->
@@ -43,9 +43,10 @@ Use the following example PowerShell script to deploy these policies to:
 ```powershell
 
     #Assign Guest Configuration policy.
+
     param (
         [Parameter(Mandatory=$true)]
-        [string]$SubscriptionName
+        [string] $SubscriptionName
     )
 
     $Subscription = Get-AzSubscription -SubscriptionName $SubscriptionName

@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 manager: rossort
-tags: azure-resource-manager
 ms.custom: virtual-network
 ---
 
@@ -16,16 +15,16 @@ ms.custom: virtual-network
 
 # Hub and spoke network topology
 
-*Hub and spoke* is a networking model for more efficient management of common communication or security requirements. It also helps avoid Azure subscription limitations. This model addresses the following concerns:
+_Hub and spoke_ is a networking model for more efficient management of common communication or security requirements. It also helps avoid Azure subscription limitations. This model addresses the following concerns:
 
 - **Cost savings and management efficiency**. Centralizing services that can be shared by multiple workloads, such as network virtual appliances (NVAs) and DNS servers, in a single location allows IT to minimize redundant resources and management effort.
 - **Overcoming subscriptions limits**. Large cloud-based workloads might require the use of more resources than are allowed in a single Azure subscription. Peering workload virtual networks from different subscriptions to a central hub can overcome these limits. For more information, see [Azure subscription limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
-- **Separation of concerns**. You can deploy individual workloads between central IT teams and workload teams.
+- **Separation of concerns**. You can deploy individual workloads between Central IT teams and workload teams.
 
 Smaller cloud estates might not benefit from the added structure and capabilities that this model offers. But larger cloud adoption efforts should consider implementing a hub and spoke networking architecture if they have any of the concerns listed previously.
 
 > [!NOTE]
-> The Azure Reference Architectures site contains example templates that you can use as the basis for implementing your own hub and-spoke networks:
+> The Azure reference architectures site contains example templates that you can use as the basis for implementing your own hub and-spoke networks:
 >
 > - [Implement a hub and spoke network topology in Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
 > - [Implement a hub and spoke network topology with shared services in Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services)
@@ -34,7 +33,7 @@ Smaller cloud estates might not benefit from the added structure and capabilitie
 
 ![Examples of a hub and spoke network topology][1]
 
-As shown in the diagram, Azure supports two types of hub and spoke design. It supports communication, shared resources, and centralized security policy ("VNet Hub" in the diagram), or a virtual WAN type ("Virtual WAN" in the diagram) for large-scale branch-to-branch and branch-to-Azure communications.
+As shown in the diagram, Azure supports two types of hub and spoke design. It supports communication, shared resources, and centralized security policy ("virtual network hub" in the diagram), or a virtual WAN type ("virtual WAN" in the diagram) for large-scale branch-to-branch and branch-to-Azure communications.
 
 A hub is a central network zone that controls and inspects ingress or egress traffic between zones: internet, on-premises, and spokes. The hub and spoke topology gives your IT department an effective way to enforce security policies in a central location. It also reduces the potential for misconfiguration and exposure.
 
@@ -43,7 +42,7 @@ The hub often contains the common service components that the spokes consume. Th
 - The Windows Server Active Directory infrastructure, required for user authentication of third parties that gain access from untrusted networks before they get access to the workloads in the spoke. It includes the related Active Directory Federation Services (AD FS).
 - A DNS service to resolve naming for the workload in the spokes, to access resources on-premises and on the internet if [Azure DNS](https://docs.microsoft.com/azure/dns/dns-overview) isn't used.
 - A public key infrastructure (PKI), to implement single sign-on on workloads.
-- Flow control of TCP and UDP traffic between the spoke network zones and the internet.
+- Flow control of tcp and UDP traffic between the spoke network zones and the internet.
 - Flow control between the spokes and on-premises.
 - If needed, flow control between one spoke and another.
 
@@ -79,6 +78,6 @@ Spokes can also be interconnected to a spoke that acts as a hub. This approach c
 
 <!-- images -->
 
-[1]: ../../_images/azure-best-practices/network-hub-spoke-high-level.png "High-level example of hub and spoke"
-[2]: ../../_images/azure-best-practices/network-hub-spokes-cluster.png "Cluster of hubs and spokes"
-[3]: ../../_images/azure-best-practices/network-spoke-to-spoke.png "Spoke-to-spoke"
+[1]: ../../_Images/azure-best-practices/network-hub-spoke-high-level.png "high-level example of hub and spoke"
+[2]: ../../_Images/azure-best-practices/network-hub-spokes-cluster.png "cluster of hubs and spokes"
+[3]: ../../_Images/azure-best-practices/network-spoke-to-spoke.png "spoke-to-spoke"

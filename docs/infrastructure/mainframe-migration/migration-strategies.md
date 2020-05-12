@@ -1,6 +1,6 @@
 ---
 title: Migrate apps from mainframes to Azure
-description: Get technical guidance for making the switch from a mainframe platform to Azure hyperscale compute and storage in a high availability environment. 
+description: Get technical guidance for making the switch from a mainframe platform to Azure hyperscale compute and storage in a high availability environment.
 author: njray
 ms.author: v-nanra
 ms.date: 12/26/2018
@@ -18,6 +18,8 @@ As an alternative platform for running traditional mainframe applications, Azure
 This section provides technical guidance for making the switch from a mainframe platform to Azure.
 
 ![Mainframe and Azure](../../_images/mainframe-migration/make-the-switch.png)
+
+<!-- docsTest:ignore "vs. vCPUs" -->
 
 ## MIPS vs. vCPUs
 
@@ -56,7 +58,7 @@ A CF also offers tightly coupled compute, whereas the scale-out features of Azur
 
 Mainframe customers typically maintain disaster recovery sites or make use or an independent mainframe provider for disaster contingencies. Synchronization with a disaster recovery site is usually done through offline copies of data. Both options incur high costs.
 
-Automated geo-redundancy is also available through the mainframe coupling facility. This approach is expensive and is typically reserved for mission-critical systems. In contrast, Azure has easy-to-implement and cost-effective options for [backup](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup), [recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview), and [redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy) at local or regional levels, or via geo-redundancy.
+Automated geo-redundancy is also available through the mainframe coupling facility. This approach is expensive and is typically reserved for mission-critical systems. In contrast, Azure has easy-to-implement and cost-effective options for [backup](https://docs.microsoft.com/azure/backup/backup-overview), [recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview), and [redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy) at local or regional levels, or via geo-redundancy.
 
 ## Storage
 

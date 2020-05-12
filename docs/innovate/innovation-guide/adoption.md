@@ -59,7 +59,7 @@ To view quantitative data on your applications:
 
 ::: zone target="docs"
 
-To view the data about your apps, go to the [Azure portal](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Insights%2FComponents).
+To view the data about your apps, go to the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Insights%2FComponents).
 
 ::: zone-end
 
@@ -103,7 +103,7 @@ To view quantitative data on your APIs:
 
 ::: zone target="docs"
 
-To open API Management services, go to the [Azure portal](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2FService).
+To open API Management services, go to the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2FService).
 
 ::: zone-end
 
@@ -133,7 +133,7 @@ To create a DevOps project:
 
 1. Go to **Azure DevOps Projects**.
 2. Select **Create DevOps project**.
-3. Select **Runtime, Framework and Service**.
+3. Select **Runtime, Framework, and Service**.
 
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
 
@@ -172,7 +172,7 @@ To view current deployments in your pipeline:
 
 ::: zone target="docs"
 
-To view your applications in App Service, go to the [Azure portal](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2FSites).
+To view your applications in App Service, go to the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2FSites).
 
 ::: zone-end
 

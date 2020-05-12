@@ -1,6 +1,6 @@
 ---
 title: "Security Baseline discipline overview"
-description: Understand the approach to developing a Security Baseline discipline as part of a cloud governance strategy.
+description: Understand the approach to developing a Security Baseline discipline as part of a cloud governance strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -13,10 +13,10 @@ layout: LandingPage
 
 # Security Baseline discipline overview
 
-Security Baseline is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md) within the [Cloud Adoption Framework governance model](../index.md). Security is a component of any IT deployment, and the cloud introduces unique security concerns. Many businesses are subject to regulatory requirements that make protecting sensitive data a major organizational priority when considering a cloud transformation. Identifying potential security threats to your cloud environment and establishing processes and procedures for addressing these threats should be a priority for any IT security or cybersecurity team. The Security Baseline discipline ensures technical requirements and security constraints are consistently applied to cloud environments, as those requirements mature.
+Security baseline is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md) within the [Cloud Adoption Framework governance model](../index.md). Security is a component of any IT deployment, and the cloud introduces unique security concerns. Many businesses are subject to regulatory requirements that make protecting sensitive data a major organizational priority when considering a cloud transformation. Identifying potential security threats to your cloud environment and establishing processes and procedures for addressing these threats should be a priority for any IT security or cybersecurity team. The Security Baseline discipline ensures technical requirements and security constraints are consistently applied to cloud environments, as those requirements mature.
 
 > [!NOTE]
-> Security Baseline governance does not replace the existing IT teams, processes, and procedures that your organization uses to secure cloud-deployed resources. The primary purpose of this discipline is to identify security-related business risks and provide risk-mitigation guidance to the IT staff responsible for security infrastructure. As you develop governance policies and processes make sure to involve relevant IT teams in your planning and review processes.
+> Security Baseline discipline does not replace the existing IT teams, processes, and procedures that your organization uses to secure cloud-deployed resources. The primary purpose of this discipline is to identify security-related business risks and provide risk-mitigation guidance to the IT staff responsible for security infrastructure. As you develop governance policies and processes make sure to involve relevant IT teams in your planning and review processes.
 
 This article outlines the approach to developing a Security Baseline discipline as part of your cloud governance strategy. The primary audience for this guidance is your organization's cloud architects and other members of your cloud governance team. However, the decisions, policies, and processes that emerge from this discipline should involve engagement and discussions with relevant members of your IT and security teams, especially those technical leaders responsible for implementing networking, encryption, and identity services.
 
@@ -24,14 +24,14 @@ Making the correct security decisions is critical to the success of your cloud d
 
 ## Policy statements
 
-Actionable policy statements and the resulting architecture requirements serve as the foundation of a Security Baseline discipline. To see policy statement samples, see the article on [Security Baseline Policy Statements](./policy-statements.md). These samples can serve as a starting point for your organization's governance policies.
+Actionable policy statements and the resulting architecture requirements serve as the foundation of a Security Baseline discipline. To see policy statement samples, see the article on [Security Baseline policy statements](./policy-statements.md). These samples can serve as a starting point for your organization's governance policies.
 
 > [!CAUTION]
 > The sample policies come from common customer experiences. To better align these policies to specific cloud governance needs, execute the following steps to create policy statements that meet your unique business needs.
 
 ## Develop governance policy statements
 
-The following six steps offer examples and potential options to consider when developing Security Baseline governance. Use each step as a starting point for discussions within your cloud governance team and with affected business, IT, and security teams across your organization to establish the policies and processes needed to manage security-related risks.
+The following six steps offer examples and potential options to consider when developing your Security Baseline discipline. Use each step as a starting point for discussions within your cloud governance team and with affected business, IT, and security teams across your organization to establish the policies and processes needed to manage security-related risks.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -47,14 +47,15 @@ The following six steps offer examples and potential options to consider when de
                         </div>
                     </div>
                     <div class="cardText" style="padding-left:0px;">
-                        <h3>Security Baseline Template</h3>
-                        <p class="x-hidden-focus">Download the template for documenting a Security Baseline discipline</p>
+                        <h3>Security Baseline discipline template</h3>
+                        <p class="x-hidden-focus">Download the template for documenting a Security Baseline discipline.</p>
                     </div>
                 </div>
             </div>
         </div>
     </a>
-</li><li style="display: flex; flex-direction: column;">
+</li>
+<li style="display: flex; flex-direction: column;">
     <a href="./business-risks.md">
         <div class="cardSize">
             <div class="cardPadding" >
@@ -65,7 +66,7 @@ The following six steps offer examples and potential options to consider when de
                         </div>
                     </div>
                     <div class="cardText" style="padding-left:0px;">
-                        <h3>Business Risks</h3>
+                        <h3>Business risks</h3>
                         <p class="x-hidden-focus">Understand the motives and risks commonly associated with the Security Baseline discipline.</p>
                     </div>
                 </div>
@@ -84,7 +85,7 @@ The following six steps offer examples and potential options to consider when de
                         </div>
                     </div>
                     <div class="cardText" style="padding-left:0px;">
-                        <h3>Indicators and Metrics</h3>
+                        <h3>Indicators and metrics</h3>
                         <p class="x-hidden-focus">Indicators to understand if it is the right time to invest in the Security Baseline discipline.</p>
                     </div>
                 </div>
@@ -123,7 +124,7 @@ The following six steps offer examples and potential options to consider when de
                     </div>
                     <div class="cardText" style="padding-left:0px;">
                         <h3>Maturity</h3>
-                        <p class="x-hidden-focus">Aligning Cloud Management maturity with phases of cloud adoption.</p>
+                        <p class="x-hidden-focus">Align cloud management maturity with phases of cloud adoption.</p>
                     </div>
                 </div>
             </div>

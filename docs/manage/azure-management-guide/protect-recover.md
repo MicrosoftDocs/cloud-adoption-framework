@@ -23,10 +23,10 @@ In [Operational compliance in Azure](./operational-compliance.md) the objective 
 
 For any enterprise-grade environment, this table outlines the suggested minimum for any management baseline:
 
-|Process  |Tool  |Purpose  |
-|---------|---------|---------|
-|Protect data|Azure Backup|Back up data and virtual machines in the cloud.|
-|Protect the environment|Azure Security Center|Strengthen security and provide advanced threat protection across your hybrid workloads.|
+| Process                 | Tool                  | Purpose                                                                                  |
+| ----------------------- | --------------------- | ---------------------------------------------------------------------------------------- |
+| Protect data            | Azure Backup          | Back up data and virtual machines in the cloud.                                          |
+| Protect the environment | Azure Security Center | Strengthen security and provide advanced threat protection across your hybrid workloads. |
 
 ::: zone target="docs"
 
@@ -59,7 +59,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 
 ::: zone target="docs"
 
-[Overview](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup)
+[Overview](https://docs.microsoft.com/azure/backup/backup-overview)
 
 ## Azure Site Recovery
 

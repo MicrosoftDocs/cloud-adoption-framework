@@ -13,7 +13,7 @@ ms.subservice: innovate
 
 As discussed in [Democratize data](./data.md), data is the new oil. It fuels most innovations across the digital economy. Building on that analogy, applications are the fueling stations and infrastructure required to get that fuel into the right hands.
 
-In some cases, data alone is enough to drive change and meet customer needs. More commonly, though, solutions to customer needs require applications to shape the data and create an experience. Applications are the way we engage the user. They are the home for the processes required to respond to customer triggers. They are customers' means of providing data and receiving guidance. This article summarizes several principles that can help align you with the right application solution, based on the hypotheses to be validated.
+In some cases, data alone is enough to drive change and meet customer needs. More commonly though, solutions to customer needs require applications to shape the data and create an experience. Applications are the way we engage the user. They are the home for the processes required to respond to customer triggers. They are customers' means of providing data and receiving guidance. This article summarizes several principles that can help align you with the right application solution, based on the hypotheses to be validated.
 
 ![Engage via apps](../../_images/innovate/engage-via-apps.png)
 
@@ -23,8 +23,8 @@ Teams that more quickly and accurately respond to customer feedback, market chan
 
 To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. Alternatively, [Azure Repos](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops) is a set of version control tools in Azure DevOps Services that you can use to manage your code. Azure Repos provides two types of version control:
 
-- [Git](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git): distributed version control
-- [Team Foundation Version Control (TFVC)](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc): centralized version control
+- [Git](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git): distributed version control.
+- [Team Foundation Version Control (TFVC)](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc): centralized version control.
 
 ## Citizen developers
 
@@ -45,7 +45,7 @@ When an application or experience is required to meet a customer need, modern we
 
 ### Infusing intelligence
 
-Machine learning and artificial intelligence are increasingly available to developers. The wide-spread availability of common APIs with predictive capabilities allows developers to better meet the needs of the customer through expanded access to data and predictions.
+Machine learning and AI are increasingly available to developers. The wide-spread availability of common APIs with predictive capabilities allows developers to better meet the needs of the customer through expanded access to data and predictions.
 
 Adding intelligence to a solution can enable speech to text, text translation, computer vision, and even visual search. With these expanded capabilities, it's easier for developers to build solutions that take advantage of intelligence to create an interactive and modern experience.
 
@@ -77,18 +77,18 @@ Extending a solution is one common form of modernization. This is approach can b
 
 - Existing business logic should meet (or comes close to meeting) the existing customer need.
 - An improved experience would better meet the needs of a specific customer cohort.
-- The business logic required by the minimum viable product (MVP) solution has been centralized, usually via an [N-tier](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier), web services, API, or [microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices) design. This approach consists of wrapping the existing solution within a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Services.
+- The business logic required by the minimum viable product (MVP) solution has been centralized, usually via an [N-tier](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier), web services, API, or [microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices) design. This approach consists of wrapping the existing solution within a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
 
 ### Rebuild an existing solution
 
-If an application can't be easily extended, it may be necessary to refactor the solution. In this approach, the workload is migrated to the cloud. After the application is migrated, parts of it are modified or duplicated, as web services or [microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices), which are deployed in parallel with the existing solution. The parallel service-based solution could be treated like an extended solution. This solution would simply wrap the existing solution with a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Services.
+If an application can't be easily extended, it may be necessary to refactor the solution. In this approach, the workload is migrated to the cloud. After the application is migrated, parts of it are modified or duplicated, as web services or [microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices), which are deployed in parallel with the existing solution. The parallel service-based solution could be treated like an extended solution. This solution would simply wrap the existing solution with a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
 
 > [!CAUTION]
-> Refactoring or rearchitecting solutions or centralizing business logic can quickly trigger a time-consuming [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes)instead of a source of customer value. This is a risk to innovation, especially early in hypothesis validation. With a bit of creativity in the design of a solution, there should be a path to MVP that doesn't require refactoring of existing solutions. It's wise to delay refactoring until the initial hypothesis can be validated at scale.
+> Refactoring or rearchitecting solutions or centralizing business logic can quickly trigger a time-consuming [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) instead of a source of customer value. This is a risk to innovation, especially early in hypothesis validation. With a bit of creativity in the design of a solution, there should be a path to MVP that doesn't require refactoring of existing solutions. It's wise to delay refactoring until the initial hypothesis can be validated at scale.
 
 ## Operating model innovations
 
-In addition to modern, innovative approaches to app creation, there have been notable innovations in app *operations*. These approaches have spawned many organizational movements. One of the most prominent is the [cloud center of excellence](../../organize/cloud-center-of-excellence.md) operating model. When fully staffed and mature, business teams have the option to provide their own operational support for a solution.
+In addition to modern, innovative approaches to app creation, there have been notable innovations in app _operations_. These approaches have spawned many organizational movements. One of the most prominent is the [cloud center of excellence](../../organize/cloud-center-of-excellence.md) operating model. When fully staffed and mature, business teams have the option to provide their own operational support for a solution.
 
 The type of self-service operational management model found in a cloud center of excellence allows for tighter controls and faster iterations within the solution environment. These goals are accomplished by transferring operational control and accountability to the business team.
 

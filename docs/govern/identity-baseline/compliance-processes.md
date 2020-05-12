@@ -1,6 +1,6 @@
 ---
 title: "Identity Baseline policy compliance processes"
-description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support an Identity Baseline governance discipline.
+description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support an Identity Baseline discipline.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Identity Baseline policy compliance processes
 
-This article discusses an approach to policy adherence processes that govern [Identity Baseline](./index.md). Effective governance of identity starts with recurring manual processes that guide identity policy adoption and revisions. This requires regular involvement of the cloud governance team and interested business and IT stakeholders to review and update policy and ensure policy compliance. In addition, many ongoing monitoring and enforcement processes can be automated or supplemented with tooling to reduce the overhead of governance and allow for faster response to policy deviation.
+This article discusses an approach to policy adherence processes that govern the [Identity Baseline discipline](./index.md). Effective governance of identity starts with recurring manual processes that guide identity policy adoption and revisions. This requires regular involvement of the cloud governance team and interested business and IT stakeholders to review and update policy and ensure policy compliance. In addition, many ongoing monitoring and enforcement processes can be automated or supplemented with tooling to reduce the overhead of governance and allow for faster response to policy deviation.
 
 ## Planning, review, and reporting processes
 
@@ -36,7 +36,7 @@ This planning process is also a good time to evaluate the current membership of 
 
 ## Processes for ongoing monitoring
 
-Determining if your identity governance strategy is successful depends on visibility into the current and past state of your identity systems. Without the ability to analyze your cloud deployment's relevant metrics and related data, you cannot identify changes in your risks or detect violations of your risk tolerances. The ongoing governance processes discussed above require quality data to ensure policy can be modified to support the changing needs of your business.
+A successful Identity Baseline strategy depends on visibility into the current and past state of your identity systems. Without the ability to analyze your cloud deployment's relevant metrics and related data, you cannot identify changes in your risks or detect violations of your risk tolerances. The ongoing governance processes discussed above require quality data to ensure policy can be modified to support the changing needs of your business.
 
 Ensure that your IT teams have implemented automated monitoring systems for your identity services that capture the logs and audit information you need to evaluate risk. Be proactive in monitoring these systems to ensure prompt detection and mitigation of potential policy violation, and ensure any changes to your identity infrastructure are reflected in your monitoring strategy.
 
@@ -52,7 +52,7 @@ The following triggers and enforcement actions provide examples you can referenc
 
 ## Next steps
 
-Using the [Cloud Management template](./template.md), document the processes and triggers that align to the current cloud adoption plan.
+Use the [Identity Baseline discipline template](./template.md) to document the processes and triggers that align to the current cloud adoption plan.
 
 For guidance on executing cloud management policies in alignment with adoption plans, see the article on discipline improvement.
 
