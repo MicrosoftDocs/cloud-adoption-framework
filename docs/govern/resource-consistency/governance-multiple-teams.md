@@ -82,7 +82,7 @@ In both examples, there is a subscription service administrator that is assigned
 ![Subscription service administrator with owner role](../../_images/govern/design/governance-2-1.png)
 _Figure 3: A subscription with a service administrator assigned the built-in owner role._
 
-<!-- docsTest:ignore "resource group A" "resource group B" "resource groups A and B" "workload owner A" "workload owner B" -->
+<!-- docsTest:ignore "resource group A" "resource groups A and B" "workload owner A" -->
 
 1. In the first example, there is **workload owner A** with no permissions at the subscription scope&mdash;they have no resource access management rights by default. This user wants to deploy and manage the resources for their workload. They must contact the **service administrator** to request creation of a resource group.
     ![Workload owner requests creation of resource group A](../../_images/govern/design/governance-2-2.png)
@@ -165,7 +165,8 @@ First let's look at an example resource management model using a single subscrip
 
 Let's begin by evaluating the first option. You'll be using the permissions model that was discussed in the previous section, with a single subscription service administrator who creates resource groups and adds users to them with either the built-in **contributor** or **reader** role.
 
-<!-- docsTest:ignore managedBy hub-vnet prod-vnet app1-dev-vnet app2-dev-vnet app1-prod-vnet app2-prod-vnet -->
+<!-- docsTest:ignore managedBy -->
+<!-- hub-vnet prod-vnet app1-dev-vnet app2-dev-vnet app1-prod-vnet app2-prod-vnet -->
 
 1. The first resource group deployed represents the **shared infrastructure** environment. The **subscription owner** account creates a resource group for the shared infrastructure resources named `netops-shared-rg`.
     ![Creating a resource group](../../_images/govern/design/governance-3-0d.png)

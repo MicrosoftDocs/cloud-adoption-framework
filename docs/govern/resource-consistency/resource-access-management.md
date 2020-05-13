@@ -43,7 +43,7 @@ _Figure 3: An Azure subscription._
 
 ## What is Azure Resource Manager?
 
-In [how does Azure work?](../../get-started/what-is-azure.md) you learned that Azure includes a front end with many services that orchestrate all the functions of Azure. One of these services is [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager), and this service hosts the RESTful API used by clients to manage resources.
+In [How does Azure work?](../../get-started/what-is-azure.md) you learned that Azure includes a front end with many services that orchestrate all the functions of Azure. One of these services is [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager), and this service hosts the RESTful API used by clients to manage resources.
 
 ![Diagram of Azure Resource Manager](../../_images/govern/design/governance-1-12.png)
 _Figure 4: Azure Resource Manager._

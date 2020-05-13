@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- docsTest:ignore Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template -->
-
 # Get started: Improve reliability with the right controls
 
 How do we apply the right controls to improve reliability? This guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection. The steps in this guide will help the operations team balance reliability and cost across the IT portfolio and aid the governance team in ensuring that balance is applied consistently. Reliability also depends on other roles and functions. This article maps those various supporting functions to help you create alignment between each of the involved teams.

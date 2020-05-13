@@ -82,7 +82,7 @@ Azure Monitor includes support for integrating with other monitoring platforms, 
 Azure Monitor for VMs | Health criteria are metrics written to the metrics store. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only Action Groups that are configured to send SMS or email notifications. |
 | | Map and guest operating system performance log data is written to the logs store. | Create log query alerts. |
 
-<!-- docsTest:ignore "speed driven" -->
+<!-- docsTest:ignore "speed driven by cost" -->
 
 ### Fastest speed driven by cost
 

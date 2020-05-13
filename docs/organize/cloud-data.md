@@ -17,7 +17,7 @@ ms.date: 04/04/2020
 <!---Required:
 Starts with "Get started: " and is ideally two lines or less when rendered on a 1920x1080 screen.
 Make the first word following "Get started:" a verb, which is to say, an action.
-The "X" part should identify both the technology or service involved (such as App Service, Cosmos DB, etc.) and the language or framework, if applicable (.NET Core, Python, JavaScript, Java, etc.). The language or framework shouldn't appear in parentheses.
+The "X" part should identify both the technology or service involved (such as App Service, Azure Cosmos DB, etc.) and the language or framework, if applicable (.NET Core, Python, JavaScript, Java, etc.). The language or framework shouldn't appear in parentheses.
 --->
 
 This quickstart helps you understand the goals and objectives of a data team working on cloud adoption.

@@ -4,11 +4,10 @@ description: Review cloud governance guides that illustrate best practices for a
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
-ms.topic: landing-page
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
-layout: LandingPage
 ---
 
 # Cloud governance guides
@@ -21,36 +20,15 @@ To begin your cloud adoption journey, choose one of the following governance gui
 
 <!-- markdownlint-disable MD033 -->
 
-<ul class="panelContent cardsZ">
-<li style="display: flex; flex-direction: column;">
-    <a href="./standard/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Standard governance guide</h3>
-                        <p>A guide for most organizations based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./complex/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Governance guide for complex enterprises</h3>
-                        <p>A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-</ul>
+- [Standard governance guide](./standard/index.md): A guide for most organizations based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.
+
+> [!div class="nextstepaction"]
+> [Standard governance guide](./standard/index.md)
+
+- [Governance guide for complex enterprises](./complex/index.md): A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.
+
+> [!div class="nextstepaction"]
+> [Governance guide for complex enterprises](./complex/index.md)
 
 <!-- markdownlint-enable MD033 -->
 
