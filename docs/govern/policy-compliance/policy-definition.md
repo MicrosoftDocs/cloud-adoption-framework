@@ -19,7 +19,7 @@ Once you've analyzed the known risks and related risk tolerances for your organi
 
 In traditional governance and incremental governance, corporate policy creates the working definition of governance. Most IT governance actions seek to implement technology to monitor, enforce, operate, and automate those corporate policies. Cloud governance is built on similar concepts.
 
-![Corporate governance and governance disciplines](../../_images/operational-transformation-govern-highres.png)
+![Corporate governance and governance disciplines](../../_images/operational-transformation-govern-large.png)
 
 _Figure 1: Corporate governance and governance disciplines._
 

@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- docsTest:ignore Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template -->
-
 # Get started: Design and configuration
 
 Environmental design and configuration are the most common blockers to migration or innovation focused adoption efforts. Quickly implementing a design that supports your long-term adoption plan can be difficult. This article establishes an approach and series of steps to help overcome common blockers and accelerate your adoption efforts.

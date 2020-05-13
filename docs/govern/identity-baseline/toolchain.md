@@ -34,7 +34,7 @@ When you choose this method, Azure AD handles users' sign-in process. Coupled wi
 
 **Azure AD Pass-through Authentication:** Provides a persistent password validation for Azure AD authentication services by using a software agent that runs on one or more on-premises servers.
 
-<!-- docsTest:ignore "pass-through authentication method" -->
+<!-- docsTest:ignore "the pass-through authentication method" -->
 
 > [!NOTE]
 > Companies with a security requirement to immediately enforce on-premises user account states, password policies, and sign-in hours should consider the pass-through authentication method.

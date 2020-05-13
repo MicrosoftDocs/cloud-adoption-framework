@@ -1291,24 +1291,51 @@ items:
       href: organize/index.md
     - name: Required cloud functions
       items:
-      - name: Cloud strategy
+      - name: Cloud strategy functions
         href: organize/cloud-strategy.md
-      - name: Cloud adoption
+      - name: Cloud adoption functions
         href: organize/cloud-adoption.md
-      - name: Cloud governance
+      - name: Cloud governance functions
         href: organize/cloud-governance.md
-      - name: Central IT
+      - name: Central IT functions
         href: organize/central-it.md
-      - name: Cloud operations
+      - name: Cloud operations functions
         href: organize/cloud-operations.md
-      - name: Cloud center of excellence
+      - name: Cloud center of excellence functions
         href: organize/cloud-center-of-excellence.md
-      - name: Cloud platform
+      - name: Cloud platform functions
         href: organize/cloud-platform.md
-      - name: Cloud automation
+      - name: Cloud automation functions
         href: organize/cloud-automation.md
-      - name: Cloud security
-        href: organize/cloud-security.md
+      - name: Cloud security functions
+        items:
+        - name: Cloud security team functions
+          href: organize/cloud-security.md
+        - name: Policy and standards
+          href: organize/cloud-security-policy-standards.md
+        - name: Security operations center (SOC)
+          href: organize/cloud-security-operations-center.md
+        - name: Security architecture
+          href: organize/cloud-security-architecture.md
+        - name: Security compliance management
+          href: organize/cloud-security-compliance-management.md
+        - name: People security
+          href: organize/cloud-security-people.md
+        - name: Application security and DevSecOps
+          href: organize/cloud-security-apsec-devsecops.md
+        - name: Data security
+          href: organize/cloud-security-data-security.md
+        - name: Infrastructure and endpoint security
+          href: organize/cloud-security-infrastructure-endpoint.md
+        - name: Identity and keys
+          href: organize/cloud-security-identity-keys.md
+        - name: Threat intelligence
+          href: organize/cloud-security-threat-intelligence.md
+        - name: Posture management
+          href: organize/cloud-security-posture-management.md
+        - name: Incident preparation
+          href: organize/cloud-security-incident-preparation.md
+
     - name: Mature teams structure
       href: organize/organization-structures.md
     - name: Align the RACI matrix

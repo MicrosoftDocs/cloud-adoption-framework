@@ -4,11 +4,10 @@ description: Use the Cloud Adoption Framework for Azure to learn how to incremen
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/13/2019
-ms.topic: landing-page
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
-layout: LandingPage
 ---
 
 # Improve your initial cloud governance foundation

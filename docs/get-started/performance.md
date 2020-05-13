@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- docsTest:ignore Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template -->
-
 # Get started: Ensure consistent performance across a portfolio
 
 How do we ensure adequate performance across a portfolio of workloads? This guide can help you establish processes for maintaining performance across the enterprise. The steps outlined here can help the operations team ensure consistent performance expectations across all workloads. Performance also depends on other roles and functions. This article maps those supporting functions to help you create alignment between each of the involved teams.

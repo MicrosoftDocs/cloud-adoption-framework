@@ -3,16 +3,26 @@ using namespace System.Text.RegularExpressions
 
 class PageHitCollection
 {
-    PageHitCollection(
+    PageHitCollection( 
         [List[string]] $expressions,
-        [string] $text,
-        [string] $fileExtension
+        [string] $fileExtension,
+        [string] $text)
+    {
+        $this.RuleExpressions = $expressions
+        $this.FileExtension = $fileExtension
+        $this.Initialize($text)
+    }
+
+    [void] Initialize(
+        [string] $text
     )
     {
         $this.Hits = [List[PageHit]]::new()
         $this.LinkRange = [HashSet[int]]::new()
         $this.MetadataRange = [HashSet[int]]::new()
 
+        $this.PageCodeBlocks = [List[PageCodeBlock]]::new()
+        
         $metadataStart = $text.IndexOf("landingContent:")
         $metadataEnd = 0
 
@@ -35,18 +45,28 @@ class PageHitCollection
         $metadataStart..$metadataEnd `
             | ForEach-Object { $this.MetadataRange.Add($_) }
 
-        foreach ($exp in $expressions)
+        $m = [Regex]::Match($text, '(?s)(?:description: .+?\r?\n)(.*?---)')
+        $this.MetadataBlock = [PageCodeBlock]::new($m)
+            
+        $codeMatches = [Regex]::Matches($text, '((?s)```.*?```)')
+        foreach ($m in $codeMatches)
+        {
+            $this.PageCodeBlocks.Add([PageCodeBlock]::new($m))
+        }
+
+        foreach ($exp in $this.RuleExpressions)
         {
             $regex = [Regex]::new($exp)
             $matchHits = $regex.Matches($text)
             foreach ($m in $matchHits)
             {
-                if ($this.MetadataRange.Contains($m.Index))
+#                if ($this.MetadataRange.Contains($m.Index))
+                if ($this.IsIndexInMetadata($m.Index))
                 {
                     continue
                 }
 
-                $pageHit = [PageHit]::new($regex, $m, $fileExtension)
+                $pageHit = [PageHit]::new($this, $regex, $m, $this.FileExtension)
                 $this.Hits.Add($pageHit)
                 $pageHit.LinkRange `
                     | ForEach-Object { $this.LinkRange.Add($_) }
@@ -54,9 +74,13 @@ class PageHitCollection
         }
     }
 
+    hidden [List[string]] $RuleExpressions
+    hidden [string] $FileExtension
     hidden [List[PageHit]] $Hits
     hidden [Hashset[int]] $LinkRange
     hidden [Hashset[int]] $MetadataRange
+    hidden [PageCodeBlock] $MetadataBlock
+    hidden [List[PageCodeBlock]] $PageCodeBlocks
 
     [List[PageHit]] GetHits()
     {
@@ -68,6 +92,25 @@ class PageHitCollection
         return ($this.LinkRange.Contains($index))
     }
 
+    [bool] IsIndexInMetadata([int] $index)
+    {
+        return ($index -ge $this.MetadataBlock.Index `
+            -and $index -le ($this.MetadataBlock.Index + $this.MetadataBlock.Length))
+    }
+
+    [bool] IsIndexInCodeBlock([int] $index)
+    {
+        foreach ($block in $this.PageCodeBlocks)
+        {
+            if ($index -ge $block.Index -and $index -le ($block.Index + $block.Length))
+            {
+                return $true
+            }
+        }
+
+        return $false
+    }
+
     # [int[]] GetLinkRange()
     # {
     #     return $this.LinkRange
@@ -76,14 +119,19 @@ class PageHitCollection
 
 class PageHit
 {
-    PageHit([Regex] $regex, [Match] $m, [string] $extension)
+    PageHit(
+        [PageHitCollection] $collection,
+        [Regex] $regex,
+        [Match] $m,
+        [string] $extension)
     {
         $this.FileExtension = $extension
 
         #TODO: Can the header be trimmed here?
         $h = $m.Groups[1].Value
         $c = $m.Groups[2].Value.Trim()
-        $this.Index = $m.Index
+        $this.Index = $m.Groups[2].Index
+        $this.Length = $c
 
         if ($regex.GetGroupNames() -contains 'sentence') {
             
@@ -93,7 +141,11 @@ class PageHit
             #     $c = (Get-StringAfter $c '>')
             # }
 
-            if ($c -match '\bTODO\b')
+            if ($collection.IsIndexInCodeBlock($m.Index))
+            {
+                $this.HitType = 'CodeBlock'
+            }
+            elseif ($c -match '\bTODO\b')
             {
                 $this.HitType = 'TODO'
             }
@@ -141,7 +193,7 @@ class PageHit
                     $this.HitType = 'Title'
                     if ($c -notmatch '^[a-z]')
                     {
-                        [TestLog]::WriteError("UNEXPECTED CHARACTER AT START OF CONTENT: $c")
+                        Write-Host "UNEXPECTED CHARACTER AT START OF CONTENT: $c" -ForegroundColor Red
                     }
                 }
                 elseif ($h.Trim() -cmatch '^[a-z][A-Za-z\._]+\: ?')
@@ -205,7 +257,27 @@ class PageHit
     hidden [string] $Content
     hidden [HitType] $HitType
     hidden [int] $Index
+    hidden [int] $Length
     hidden [int[]] $LinkRange
+}
+
+class PageCodeBlock
+{
+    PageCodeBlock([Match] $m)
+    {
+        $this.Initialize($m)
+    }
+
+    [void] Initialize([Match] $m)
+    {
+        $this.Index = $m.Groups[1].Index
+        $this.Length = $m.Groups[1].Length
+        $this.Text = $m.Groups[1].Value
+    }
+
+    [int] $Index
+    [int] $Length
+    [string] $Text
 }
 
 Enum HitType
@@ -215,6 +287,7 @@ Enum HitType
     Sentence
     Title
     Metadata
+    CodeBlock
     Directive
     Html
     TODO

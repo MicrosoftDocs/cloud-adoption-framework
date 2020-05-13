@@ -11,7 +11,7 @@ manager: rossort
 ms.custom: virtual-network
 ---
 
-<!-- docsTest:disable -->
+<!-- docsTest:disable TODO -->
 <!-- cSpell:ignore tracsman jonor rossort NVAs iptables WAFs DDOS ITSM LLAP anycast vwan -->
 
 # The virtual datacenter: A network perspective
@@ -426,7 +426,7 @@ Learn more about the Azure capabilities discussed in this document.
 
 Security | Other Azure Services | |
 |-|-|-|
-| [Azure Firewall][AzFW] <br> [Firewall Manager][AzFWMgr] <br> [Application Gateway WAF][AppGWWAF] <br> [Front Door WAF][AFDWAF] <br> [Azure DDoS][DDoS] <br> | [Azure Storage][Storage] <br> [Azure SQL][SQL] <br> [Azure Web Apps][WebApps] <br> [Cosmos DB][cosmos-db] <br> [HDInsight][HDInsight] | [Event Hubs][EventHubs] <br> [Service Bus][ServiceBus] <br> [Azure IoT][IoT] <br> [Azure Machine Learning][machine-learning] |
+| [Azure Firewall][AzFW] <br> [Firewall Manager][AzFWMgr] <br> [Application Gateway WAF][AppGWWAF] <br> [Front Door WAF][AFDWAF] <br> [Azure DDoS][DDoS] <br> | [Azure Storage][Storage] <br> [Azure SQL][SQL] <br> [Azure Web Apps][WebApps] <br> [Azure Cosmos DB][cosmos-db] <br> [HDInsight][HDInsight] | [Event Hubs][EventHubs] <br> [Service Bus][ServiceBus] <br> [Azure IoT][IoT] <br> [Azure Machine Learning][machine-learning] |
 
 <!-- markdownlint-enable MD033 -->
 

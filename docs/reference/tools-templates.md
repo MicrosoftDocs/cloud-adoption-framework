@@ -9,8 +9,6 @@ ms.subservice: reference
 ms.topic: article
 ---
 
-<!-- docsTest:ignore Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template -->
-
 <!-- cSpell:ignore Terraform's -->
 
 # Tools and templates
@@ -41,7 +39,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [CAF&nbsp;foundation&nbsp;blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone-governance) | Use a lightweight implementation of an initial governance foundation to provide hands-on experience with governance tools in Azure. |
 | [CAF migration landing zone blueprint](https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone) | Provision and prepare to host workloads being migrated from an on-premises environment into Azure. For more information about this blueprint, see [Deploy a migration landing zone](../ready/landing-zone/migrate-landing-zone.md). |
 | [Terraform landing zone blueprint](../ready/landing-zone/terraform-landing-zone.md) | Open-source code base for the Terraform version of the CAF landing zone blueprints. |
-| [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | Terraform's registry website, filtered to list all of the Cloud Adoption Framework modules required to create a Terraform landing zone. |
+| [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | The Terraform registry website, filtered to list all of the Cloud Adoption Framework modules needed to create a Terraform landing zone. |
 
 ## Govern
 

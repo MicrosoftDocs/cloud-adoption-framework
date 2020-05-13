@@ -39,7 +39,7 @@ Why the terms may vary, all IT solutions include assets and workloads:
 When companies support workloads through matrixed approaches or centralized approaches, a broader hierarchy likely exists to support those workloads:
 
 - **Landing zone:** Landing zones provide workloads with access to all of the _foundational utilities_ (or shared plumbing) that is provided from a _platform foundation_ required to support one or more workloads.
-- **Foundational utilities:** Foundational solutions (such as identity, network, security, governance, and operations) required for workloads to operate within the technology and business portfolio.
+- **Foundational utilities:** Shared IT services required for workloads to operate within the technology and business portfolio.
 - **Platform foundation:** The organizational construct to centralize foundational solutions and ensure those controls are enforced for all landing zones.
 - **Cloud platforms:** Depending on the overall strategy for supporting the full _portfolio_, customers may required multiple cloud platforms with distinct deployments of the platform foundation, to govern multiple regions, hybrid solutions, or even multicloud solutions.
 - **Portfolio:** Through a technology lense, the portfolio is the collection of the workloads, assets, and supporting resources that spans all cloud platforms. Through a business lense, the portfolio is the collection of projects, people, processes, and investments that support and manage the technology portfolio to drive business outcomes. Together these two lenses capture the _portfolio_.
@@ -52,6 +52,8 @@ Each layer of the portfolio hierarchy is managed by an accountable party. The fo
 > The teams mentioned in the following section might be virtual teams (v-teams) or single individuals. For some variants of this hierarchy, some of the accountable teams can be collapsed as described in the accountability variants below.
 
 ![Accountability aligned to the hierarchy](../../_images/ready/hierarchy-with-roles.png)
+
+<!-- docsTest:ignore "Strategy and Plan methodologies" "Migrate and Plan methodologies" "Migrate and Innovate methodologies" -->
 
 - **Portfolio:** The cloud strategy team and the cloud center of excellence (CCoE) use the Strategy and Plan methodologies to guide decisions that affect the overall portfolio. The cloud strategy team is accountable for the enterprise level of the overall cloud portfolio hierarchy. They should also be informed of decisions regarding the environment, landing zones, and high-priority workloads.
 - **Cloud platform:** The cloud governance team is accountable for the disciplines that ensure consistency across each environment in alignment with the Govern methodology. The cloud governance team is accountable for governance of all resources in all environments. The cloud governance team should be consulted on changes that may require an exception or change to governing policies. The cloud governance team should also be informed of progress regarding workload and asset adoption.

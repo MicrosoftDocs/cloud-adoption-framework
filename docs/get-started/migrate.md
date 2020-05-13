@@ -21,7 +21,7 @@ If your migration scenario is atypical, you can get a personalized assessment of
 
 ## Get started
 
-The technical effort and process required to migrate workloads is relatively straight forward. Efficient completion of the migration process is important. However, strategic migration readiness will have an even bigger impact on the timelines and successful completion of the overall migration.
+The technical effort and process required to migrate workloads is relatively straightforward. Efficient completion of the migration process is important. However, strategic migration readiness will have an even bigger impact on the timelines and successful completion of the overall migration.
 
 Accelerating adoption means addressing the steps required to support the cloud adoption team during migration. This guide outlines these iterative tasks in a linear checklist format to help customers start on the right path towards any cloud migration. To illustrate the importance of the supporting steps, migration is listed as step 10 in this article. In reality, the cloud adoption team will likely begin their first pilot migration in parallel to steps 4 or 5.
 
@@ -165,7 +165,7 @@ All migrated assets are deployed within a landing zone. Initially, the landing z
 
 ## Step 8: Migrate your first 10 workloads
 
-The technical effort required to migrate your first 10 workloads is relatively straight forward. It is also an iterative process that you will repeat as you migrate more assets. The process involves assessing your workloads (see **Step 4**), deploying your workloads, and then releasing them to your production environment.
+The technical effort required to migrate your first 10 workloads is relatively straightforward. It is also an iterative process that you will repeat as you migrate more assets. The process involves assessing your workloads (see **Step 4**), deploying your workloads, and then releasing them to your production environment.
 
 ![Phases of iterative migration efforts: assess, deploy, release](../_images/migrate/methodology-effort-only.png)
 

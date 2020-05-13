@@ -21,7 +21,7 @@ You only use quickstarts when you can get the service, technology, or functional
 # Get started: Build a cloud security team
 
 <!---Required:
-Starts with "get started: " and is ideally two lines or less when rendered on a 1920x1080 screen. Make the first word following "get started:" a verb, which is to say, an action. The "x" part should identify both the technology or service involved (such as App Service, Cosmos DB, etc.) and the language or framework, if applicable (.net core, Python, JavaScript, Java, etc.). The language or framework shouldn't appear in parentheses.
+Starts with "get started: " and is ideally two lines or less when rendered on a 1920x1080 screen. Make the first word following "get started:" a verb, which is to say, an action. The "x" part should identify both the technology or service involved (such as App Service, Azure Cosmos DB, etc.) and the language or framework, if applicable (.net core, Python, JavaScript, Java, etc.). The language or framework shouldn't appear in parentheses.
 
 This quickstart helps you understand the goals and objectives of a security team working on cloud adoption.
 

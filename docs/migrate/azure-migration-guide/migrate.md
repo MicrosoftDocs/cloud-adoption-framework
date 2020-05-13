@@ -192,13 +192,13 @@ For more information, see:
 
 - [Overview of Database Experimentation Assistant](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-overview)
 
-## Cosmos DB Data Migration Tool
+## Azure Cosmos DB Data Migration Tool
 
 Azure Cosmos DB Data Migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The Data Migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
 
 For more information, see:
 
-- [Cosmos DB Data Migration Tool](https://docs.microsoft.com/azure/cosmos-db/import-data)
+- [Azure Cosmos DB Data Migration Tool](https://docs.microsoft.com/azure/cosmos-db/import-data)
 
 <!-- markdownlint-disable MD025 -->
 
@@ -236,7 +236,7 @@ Movere is a discovery solution that provides the data and insights needed to pla
 
 [Learn more](https://www.movere.io)
 
-## Cosmos DB Partners
+## Azure Cosmos DB Partners
 
 You can choose from a variety of experienced systems integrator partners and tools to support your Azure Cosmos DB migrations for your NoSQL database requirements.
 

@@ -4,11 +4,10 @@ description: Understand the approach to developing a Cost Management discipline 
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: landing-page
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
-layout: LandingPage
 ---
 
 # Cost Management discipline overview
@@ -33,122 +32,14 @@ The following six steps will help you define governance policies to control cost
 
 <!-- markdownlint-disable MD033 -->
 
-<ul class="panelContent cardsE">
-<li style="display: flex; flex-direction: column;">
-    <a href="./template.md">
-        <div class="cardSize">
-            <div class="cardPadding" >
-                <div class="card" >
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../../_images/govern/process-template.png" class="x-hidden-focus"/>
-                        </div>
-                    </div>
-                    <div class="cardText" style="padding-left:0px;">
-                        <h3>Cost Management discipline template</h3>
-                        <p class="x-hidden-focus">Download the template for documenting a Cost Management discipline.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./business-risks.md">
-        <div class="cardSize">
-            <div class="cardPadding" >
-                <div class="card" >
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../../_images/govern/process-risks.png" class="x-hidden-focus"/>
-                        </div>
-                    </div>
-                    <div class="cardText" style="padding-left:0px;">
-                        <h3>Business risks</h3>
-                        <p class="x-hidden-focus">Understand the motives and risks commonly associated with the Cost Management discipline.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./metrics-tolerance.md">
-        <div class="cardSize">
-            <div class="cardPadding" >
-                <div class="card" >
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../../_images/govern/process-metrics.png" class="x-hidden-focus"/>
-                        </div>
-                    </div>
-                    <div class="cardText" style="padding-left:0px;">
-                        <h3>Indicators and metrics</h3>
-                        <p class="x-hidden-focus">Indicators to understand if it is the right time to invest in the Cost Management discipline.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./compliance-processes.md">
-        <div class="cardSize">
-            <div class="cardPadding" >
-                <div class="card" >
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../../_images/govern/process-enforce.png" class="x-hidden-focus"/>
-                        </div>
-                    </div>
-                    <div class="cardText" style="padding-left:0px;">
-                        <h3>Policy adherence processes</h3>
-                        <p class="x-hidden-focus">Suggested processes for supporting policy compliance in the Cost Management discipline.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./discipline-improvement.md">
-        <div class="cardSize">
-            <div class="cardPadding" >
-                <div class="card" >
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../../_images/govern/process-maturity.png" class="x-hidden-focus"/>
-                        </div>
-                    </div>
-                    <div class="cardText" style="padding-left:0px;">
-                        <h3>Maturity</h3>
-                        <p class="x-hidden-focus">Align cloud management maturity with phases of cloud adoption.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./toolchain.md">
-        <div class="cardSize">
-            <div class="cardPadding" >
-                <div class="card" >
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../../_images/govern/process-toolchain.png" class="x-hidden-focus"/>
-                        </div>
-                    </div>
-                    <div class="cardText" style="padding-left:0px;">
-                        <h3>Toolchain</h3>
-                        <p class="x-hidden-focus">Azure services that can be implemented to support the Cost Management discipline.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-</ul>
+| | |
+|---|---|
+| <br> ![Template icon](../../_images/govern/process-template.png) | [Cost Management discipline template](./template.md): Download the template for documenting a Cost Management discipline. |
+| <br> ![Risks icon](../../_images/govern/process-risks.png) | [Business risks](./business-risks.md): Understand the motives and risks commonly associated with the Cost Management discipline. |
+| <br> ![Metrics icon](../../_images/govern/process-metrics.png) | [Indicators and metrics](./metrics-tolerance.md): Indicators to understand if it is the right time to invest in the Cost Management discipline. |
+| <br> ![Adherence icon](../../_images/govern/process-enforce.png) | [Policy adherence processes](./compliance-processes.md): Suggested processes for supporting policy compliance in the Cost Management discipline. |
+| <br> ![Maturity icon](../../_images/govern/process-maturity.png) | [Maturity](./discipline-improvement.md): Align cloud management maturity with phases of cloud adoption. |
+| <br> ![Toolchain icon](../../_images/govern/process-toolchain.png) | [Toolchain](./toolchain.md): Azure services that can be implemented to support the Cost Management discipline. |
 
 ## Next steps
 

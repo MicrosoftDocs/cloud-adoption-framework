@@ -126,7 +126,7 @@ The following list provides recommended Azure resource type prefixes to use when
 |--------------------------------|-------------|
 | Azure SQL Database server      | sql-        |
 | Azure SQL database             | sqldb-      |
-| Cosmos DB database             | cosmos-     |
+| Azure Cosmos DB database       | cosmos-     |
 | Azure Cache for Redis instance | redis-      |
 | MySQL database                 | mysql-      |
 | PostgreSQL database            | psql-       |
@@ -270,7 +270,7 @@ The following section provides some example names for common Azure resource type
 |--------------------------------|--------------------|----------------------------------------|---------------------------------------------------------------------------|
 | Azure SQL Database server      | Global             | sql-\<App Name\>-\<Environment\>       | <li> sql-navigator-prod <li> sql-emissions-dev |
 | Azure SQL database             | Azure SQL Database | sqldb-\<Database Name>-\<Environment\> | <li> sqldb-users-prod <li> sqldb-users-dev |
-| Cosmos DB database             | Global             | cosmos-\<App Name\>-\<Environment\>    | <li> cosmos-navigator-prod <li> cosmos-emissions-dev |
+| Azure Cosmos DB database       | Global             | cosmos-\<App Name\>-\<Environment\>    | <li> cosmos-navigator-prod <li> cosmos-emissions-dev |
 | Azure Cache for Redis instance | Global             | redis-\<App Name\>-\<Environment\>     | <li> redis-navigator-prod <li> redis-emissions-dev |
 | MySQL database                 | Global             | mysql-\<App Name\>-\<Environment\>     | <li> mysql-navigator-prod <li> mysql-emissions-dev |
 | PostgreSQL database            | Global             | psql-\<App Name\>-\<Environment\>      | <li> psql-navigator-prod <li> psql-emissions-dev |
