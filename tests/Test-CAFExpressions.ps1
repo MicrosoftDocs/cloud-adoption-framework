@@ -1,8 +1,9 @@
 function Get-MyIgnoredCasingExpressions
 {
     return @(
-        'CloudAdoptionFramework'
-        'Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template'
+        # 'CloudAdoptionFramework'
+        # 'Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template'
+        # 'CAF%20Readiness%20Naming%20and%20Tagging%20tracking%20template'
         'SMART'
     )
 }
@@ -11,7 +12,7 @@ function Get-MyCasingPrefixExpressions
 {
     return @(
         '\bGet started: '
-        '\bin \['
+        '\b[Ii]n \['
         '\bJump to: \['
         '\bStep \d\d?: '
     )

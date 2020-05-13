@@ -9,8 +9,6 @@ ms.topic: conceptual
 ms.date: 04/04/2020
 ---
 
-<!-- docsTest:ignore Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template -->
-
 # Get started: Build a cloud strategy team
 
 Every cloud adoption journey will need some level of strategy to be successful. This getting started guide will help you establish a dedicate team or virtual team (v-team) to deliver a solid cloud strategy. The first step is to decide if you need a strategy team, or if the existing team members can deliver on cloud strategy as a distributed responsibilities.

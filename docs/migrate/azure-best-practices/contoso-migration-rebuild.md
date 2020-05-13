@@ -1,6 +1,6 @@
 ---
 title: "Rebuild an on-premises app to Azure"
-description: Learn how Contoso rebuilds an app to Azure using Azure App Service, Azure Kubernetes Service, Cosmos DB, Azure Functions, and Azure Cognitive Services.
+description: Learn how Contoso rebuilds an app to Azure using Azure App Service, Azure Kubernetes Service, Azure Cosmos DB, Azure Functions, and Azure Cognitive Services.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/11/2018
@@ -58,7 +58,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 - The front end of the app is deployed as an Azure App Service web app in the primary Azure region.
 - An Azure function provides uploads of pet photos, and the site interacts with this functionality.
-- The pet photo function uses the Computer Vision API of Azure Cognitive Services along with Cosmos DB.
+- The pet photo function uses the Computer Vision API of Azure Cognitive Services along with Azure Cosmos DB.
 - The back end of the site is built using microservices. These will be deployed to containers managed in AKS.
 - Containers will be built using Azure DevOps, and pushed to Azure Container Registry.
 - For now, Contoso will manually deploy the web app and function code using Visual Studio.
@@ -74,14 +74,14 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 **Consideration** | **Details**
 --- | ---
-**Pros** | Using PaaS and serverless solutions for the end-to-end deployment significantly reduces management time that Contoso must provide. <br><br> Moving to a microservices-based architecture allows Contoso to easily extend the solution over time. <br><br> New functionality can be brought online without disrupting any of the existing solutions code bases. <br><br> The web app will be configured with multiple instances with no single point of failure. <br><br> Autoscaling will be enabled so that the app can handle differing traffic volumes. <br><br> With the move to PaaS services, Contoso can retire out-of-date solutions running on Windows Server 2008 R2 operating system. <br><br> Cosmos DB has built-in fault tolerance, which requires no configuration by Contoso. This means that the data tier is no longer a single point of failover.
+**Pros** | Using PaaS and serverless solutions for the end-to-end deployment significantly reduces management time that Contoso must provide. <br><br> Moving to a microservices-based architecture allows Contoso to easily extend the solution over time. <br><br> New functionality can be brought online without disrupting any of the existing solutions code bases. <br><br> The web app will be configured with multiple instances with no single point of failure. <br><br> Autoscaling will be enabled so that the app can handle differing traffic volumes. <br><br> With the move to PaaS services, Contoso can retire out-of-date solutions running on Windows Server 2008 R2 operating system. <br><br> Azure Cosmos DB has built-in fault tolerance, which requires no configuration by Contoso. This means that the data tier is no longer a single point of failover.
 **Cons** | Containers are more complex than other migration options. The learning curve could be an issue for Contoso. They introduce a new level of complexity that provides value in spite of the curve. <br><br> The operations team at Contoso needs to ramp up to understand and support Azure, containers and microservices for the app. <br><br> Contoso hasn't fully implemented DevOps for the entire solution. Contoso needs to consider that for the deployment of services to AKS, Azure Functions, and Azure App Service.
 
 <!-- markdownlint-enable MD033 -->
 
 ### Migration process
 
-1. Contoso provisions Azure Container Registry, AKS, and Cosmos DB.
+1. Contoso provisions Azure Container Registry, AKS, and Azure Cosmos DB.
 2. Contoso provisions the infrastructure for the deployment, including Azure App Service web app, storage account, function, and API.
 3. After the infrastructure is in place, they'll build their microservices container images using Azure DevOps, which pushes them to the container registry.
 4. Contoso will deploy these microservices to AKS using a PowerShell script.
@@ -121,7 +121,7 @@ Here's how Contoso will run the migration:
 > - **Step 1: Provision AKS and Azure Container Registry.** Contoso provisions the managed AKS cluster and the container registry using PowerShell.
 > - **Step 2: Build Docker containers.** They set up continuous integration (CI) for Docker containers using Azure DevOps, and push them to the container registry.
 > - **Step 3: Deploy back-end microservices.** They deploy the rest of the infrastructure that will be used by back-end microservices.
-> - **Step 4: Deploy front-end infrastructure.** They deploy the front-end infrastructure, including blob storage for the pet phones, the Cosmos DB, and Computer Vision API.
+> - **Step 4: Deploy front-end infrastructure.** They deploy the front-end infrastructure, including blob storage for the pet phones, the Azure Cosmos DB, and Computer Vision API.
 > - **Step 5: Migrate the back end.** They deploy microservices and run on AKS, to migrate the back end.
 > - **Step 6: Publish the front end.** They publish the SmartHotel360 app to the App Service, and the function app that will be called by the pet service.
 
@@ -179,9 +179,7 @@ The Contoso admins provision as follows:
 
 9. After the deployment is finished, they install the `kubectl` command-line tool. The tool is already installed on the Azure Cloud Shell.
 
-   ```azurecli
-   az aks install-cli
-   ```
+   `az aks install-cli`
 
 10. They verify the connection to the cluster by running the `kubectl get nodes` command. The node is the same name as the VM in the automatically created resource group.
 
@@ -189,9 +187,7 @@ The Contoso admins provision as follows:
 
 11. They run the following command to start the Kubernetes Dashboard:
 
-    ```azurecli
-    az aks browse --resource-group ContosoRG --name smarthotelakseus2
-    ```
+    `az aks browse --resource-group ContosoRG --name smarthotelakseus2`
 
 12. A browser tab opens to the Dashboard. This is a tunneled connection using the Azure CLI.
 
@@ -298,7 +294,7 @@ They create the pipeline:
 
 1. Using Visual Studio they update the **/deploy/k8s/config_local.yml** file with the database connection information they noted earlier.
 
-    ![DB connections](./media/contoso-migration-rebuild/back-pipe1.png)
+    ![Database connections](./media/contoso-migration-rebuild/back-pipe1.png)
 
 2. They open Azure DevOps, and in the SmartHotel360 project, in **Releases**, they select **+New Pipeline**.
 
@@ -352,7 +348,7 @@ They create the pipeline:
 Contoso admins need to deploy the infrastructure that will be used by the front-end apps. They create:
 
 - A blob storage container to store the pet images
-- A Cosmos DB database to store documents containing pet information
+- A Azure Cosmos DB database to store documents containing pet information
 - The Computer Vision API for the website.
 
 Instructions for this section use the [SmartHotel360-Website](https://github.com/microsoft/smartHotel360-website) repo.
@@ -372,25 +368,25 @@ Instructions for this section use the [SmartHotel360-Website](https://github.com
 
     ![Storage blob](./media/contoso-migration-rebuild/blob2.png)
 
-### Provision a Cosmos DB atabase
+### Provision an Azure Cosmos DB database
 
-Contoso admins provision a Cosmos DB database to be used for pet information.
+Contoso admins provision an Azure Cosmos DB database to be used for pet information.
 
 1. They create an **Azure Cosmos DB** in the Azure Marketplace.
 
-    ![Cosmos DB](./media/contoso-migration-rebuild/cosmos1.png)
+    ![Azure Cosmos DB](./media/contoso-migration-rebuild/cosmos1.png)
 
 2. They specify a name (**contososmarthotel**), select the SQL API, and place it in the production resource group **ContosoRG**, in the main East US 2 region.
 
-    ![Cosmos DB](./media/contoso-migration-rebuild/cosmos2.png)
+    ![Azure Cosmos DB](./media/contoso-migration-rebuild/cosmos2.png)
 
 3. They add a new collection to the database, with default capacity and throughput.
 
-    ![Cosmos DB](./media/contoso-migration-rebuild/cosmos3.png)
+    ![Azure Cosmos DB](./media/contoso-migration-rebuild/cosmos3.png)
 
 4. They note the connection information for the database, for future reference.
 
-    ![Cosmos DB](./media/contoso-migration-rebuild/cosmos4.png)
+    ![Azure Cosmos DB](./media/contoso-migration-rebuild/cosmos4.png)
 
 ### Provision Computer Vision
 
@@ -470,7 +466,7 @@ Now Contoso admins configure the web app to use Contoso resources.
 4. They update the /config-sample.json/sample.json file.
 
     - This is the configuration file for the web when using the public endpoint.
-    - They edit the **urls** and **pets_config** sections with the values for the AKS API endpoints, storage accounts, and Cosmos DB database.
+    - They edit the **urls** and **pets_config** sections with the values for the AKS API endpoints, storage accounts, and Azure Cosmos DB database.
     - The URLs should match the DNS name of the new web app that Contoso will create.
     - For Contoso, this is **smarthotelcontoso.eastus2.cloudapp.azure.com**.
 
@@ -566,7 +562,7 @@ Contoso admins deploy the app as follows.
 
 1. They clone the repository locally to the development machine by connecting to the Azure DevOps project.
 2. In Visual Studio, they open the folder to show all the files in the repo.
-3. They open the **src/PetCheckerFunction/local.settings.json** file, and add the app settings for storage, the Cosmos DB database, and the Computer Vision API.
+3. They open the **src/PetCheckerFunction/local.settings.json** file, and add the app settings for storage, the Azure Cosmos DB database, and the Computer Vision API.
 
     ![Deploy the function](./media/contoso-migration-rebuild/function5.png)
 
@@ -619,7 +615,7 @@ With the migrated resources in Azure, Contoso now needs to fully operationalize 
 - Contoso needs to review [backup requirements for the Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 - Contoso should consider implementing [SQL failover groups to provide regional failover for the database](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group).
 - Contoso can use [geo-replication for the Azure Container Registry premium SKU](https://docs.microsoft.com/azure/container-registry/container-registry-geo-replication).
-- Cosmos DB is backed up automatically. Contoso can [learn more](https://docs.microsoft.com/azure/cosmos-db/online-backup-and-restore) about this process.
+- Azure Cosmos DB is backed up automatically. Contoso can [learn more](https://docs.microsoft.com/azure/cosmos-db/online-backup-and-restore) about this process.
 
 ### Licensing and cost optimization
 

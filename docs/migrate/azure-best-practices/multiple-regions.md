@@ -52,7 +52,7 @@ Any robust cloud deployment requires a well-considered network that takes into a
 
 - Many PaaS services within Azure support [Service Endpoints](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview) or [Private Link](https://docs.microsoft.com/azure/private-link/private-link-overview). Both of these solutions impact your network considerations substantially when considering regional resiliency, migration and governance.
 
-- Many PaaS services rely on their own regional resiliency solutions. For example, both Azure SQL Database and Cosmos DB allow you to easily replicate to _x_ additional regions. Some services carry no region dependency, like Azure DNS. As you consider which services you will use in your adoption process, make sure to clearly understand the failover capabilities and recovery steps that may be required for each Azure service.
+- Many PaaS services rely on their own regional resiliency solutions. For example, both Azure SQL Database and Azure Cosmos DB allow you to easily replicate to _x_ additional regions. Some services carry no region dependency, like Azure DNS. As you consider which services you will use in your adoption process, make sure to clearly understand the failover capabilities and recovery steps that may be required for each Azure service.
 
 - In addition to deploying into multiple regions to support disaster recovery, many organizations choose to deploy in an Active-Active pattern so that no failover is necessary. This has the added benefit of providing global load balancing and additional fault tolerance and network performance boosts. To take advantage of this pattern, your applications must support running Active-Active in multiple regions.
 

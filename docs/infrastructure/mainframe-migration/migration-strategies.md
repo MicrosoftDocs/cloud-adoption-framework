@@ -21,7 +21,7 @@ This section provides technical guidance for making the switch from a mainframe 
 
 <!-- docsTest:ignore "vs. vCPUs" -->
 
-## MIPS vs. vCPUs
+## MIPS and vCPUs
 
 There is no universal mapping formula that exists for determining the number of virtual central processing units (vCPUs) needed to run mainframe workloads. However, the metric of a million instructions per second (MIPS) is often mapped to vCPUs on Azure. MIPS measures the overall compute power of a mainframe by providing a constant value of the number of cycles per second for a given machine.
 

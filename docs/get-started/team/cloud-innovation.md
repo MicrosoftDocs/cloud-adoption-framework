@@ -21,7 +21,7 @@ You only use quickstarts when you can get the service, technology, or functional
 # Get started: Build a cloud innovation team
 
 <!---Required:
-Starts with "Get started: " and is ideally two lines or less when rendered on a 1920x1080 screen. Make the first word following "Get started:" a verb, which is to say, an action. The "X" part should identify both the technology or service involved (such as App Service, Cosmos DB, etc.) and the language or framework, if applicable (.NET Core, Python, JavaScript, Java, etc.). The language or framework shouldn't appear in parentheses.
+Starts with "Get started: " and is ideally two lines or less when rendered on a 1920x1080 screen. Make the first word following "Get started:" a verb, which is to say, an action. The "X" part should identify both the technology or service involved (such as App Service, Azure Cosmos DB, etc.) and the language or framework, if applicable (.NET Core, Python, JavaScript, Java, etc.). The language or framework shouldn't appear in parentheses.
 
 This quickstart helps you understand the goals and objectives of an innovation team working on cloud adoption.
 
@@ -66,7 +66,7 @@ List prerequisites in the following order:
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 - Language runtimes (Python, Node, .NET, etc.)
 - Packages (from pip, npm, nuget, etc.)
-- Tools (like VSCode IF REQUIRED. Don't include tools like pip if they're automatically installed with another tool or language runtime, like Python. Don't include optional tools like text editors--include them only if the quickstart demonstrates them.)
+- Tools (like VSCode, if required. Don't include tools like pip if they're automatically installed with another tool or language runtime, like Python. Don't include optional tools like text editors--include them only if the quickstart demonstrates them.)
 - Sample code
 - Specialized hardware
 - Other preparatory work, such as creating a VM (OK to link to another article).

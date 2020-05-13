@@ -4,10 +4,9 @@ description: Learn about Kubernetes in the Cloud Adoption Framework.
 author: sabbour
 ms.author: asabbour
 ms.date: 12/16/2019
-ms.topic: landing-page
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
-layout: LandingPage
 ---
 
 <!-- cSpell:ignore asabbour sabbour -->
@@ -24,63 +23,10 @@ To prepare for this phase of the cloud adoption lifecycle, use the following exe
 
 <!-- markdownlint-disable MD033 -->
 
-<ul class="panelContent cardsF">
-    <li style="display: flex; flex-direction: column;">
-        <a href="./application-development.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../../_images/icons/1.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Application development and deployment</h3>
-                            Examine patterns and practices of application development, configure DevOps pipelines, and implement site reliability engineering (SRE) best practices.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./cluster-design-operations.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../../_images/icons/2.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Cluster design and operations</h3>
-                            Identify for cluster configuration and network design. Future proof scalability by automating infrastructure provisioning. Maintain high availability by planning for business continuity and disaster recovery.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./cluster-application-security.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../../_images/icons/3.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Cluster and application security</h3>
-                            Familiarize yourself with Kubernetes security essentials. Review the secure setup for clusters and application security guidance.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-</ul>
+| | |
+|---|---|
+| <br> ![Item 1 icon](../../_images/icons/1.png) | [Application development and deployment](./application-development.md): Examine patterns and practices of application development, configure DevOps pipelines, and implement site reliability engineering (SRE) best practices. |
+| <br> ![Item 2 icon](../../_images/icons/2.png) | [Cluster design and operations](./cluster-design-operations.md): Identify for cluster configuration and network design. Future proof scalability by automating infrastructure provisioning. Maintain high availability by planning for business continuity and disaster recovery. |
+| <br> ![Item 3 icon](../../_images/icons/3.png) | [Cluster and application security](./cluster-application-security.md): Familiarize yourself with Kubernetes security essentials. Review the secure setup for clusters and application security guidance. |
+
 <!-- markdownlint-enable MD033 -->

@@ -24,6 +24,12 @@ function Get-IgnoredCasingExpressions
     $list = [List[string]] @(
         # '(?<=[A-Za-z,:]) (\*\*\w)'
         # 'br'
+        'B'
+        'C'
+        'D'
+        'E'
+        'F'
+        'G'
         'HTTP'
         'HTTPS'
         'IT'
@@ -116,6 +122,7 @@ function Get-InvalidFormattingExpressions
         '\u201c!!"'                         # Fix unicode quotes
         '\u201d!!"'                         # Fix unicode quotes
         '\u2026!!...'                       # Fix unicode elipses
+        '\u200B!! '                         # Fix unicode zero-width space
         '(?<=\d)\u2013(?=\d)!!&ndash;'      # Fix unicode dashes
         ' \u2013 !!&mdash;'                 # Fix unicode dashes
         '(?<=[a-z])\u2013(?=[a-z])!!-'      # Fix unicode dashes
@@ -123,7 +130,8 @@ function Get-InvalidFormattingExpressions
         '[\u0100-\uFFFF]!!~~Remove unicode characters'
 
         '\.\.\.!!~~Don''t use ellipses'
-        
+
+        '\*\*([A-Z0-9-]{3,}|[a-z]+-[a-z]+)(?<!\*\*(?:CIDR|TFVC))\*\*!!`$1`'     # Use tickmarks for resource names.
         '(?m) +(?=\r?$)!!'                      # No spaces at the end of a line.
         # '(?<=- \*\*.+)\*\*\. !!.**'
         # '(?<=- \*\*.+)\*\*\: !!.**'
