@@ -11,37 +11,37 @@ ms.subservice: overview
 
 # Get started: Manage cloud costs
 
-One of the core disciplines of cloud governance is cost management. The discipline of cost management focuses on establishing budgets, monitoring cost allocation patterns, and implementing controls to improve cloud spending behaviors across the IT portfolio. However, enterprise cost optimization involves many other roles and functions to minimize cost and balance the demands of scale, performance, security, and reliability. This article maps those various supporting functions into a getting started guide to help create alignment between each of the involved teams.
+One of the core disciplines of cloud governance is cost management. Cost management focuses on establishing budgets, monitoring cost allocation patterns, and implementing controls to improve cloud-spending behaviors across the IT portfolio.
 
-## Get started
+However, enterprise cost optimization involves many other roles and functions to minimize cost and balance the demands of scale, performance, security, and reliability. This article maps those various supporting functions to help create alignment between each of the involved teams.
 
-Governance is the cornerstone of cost optimization within any large enterprise. The following section outlines cost optimization guidance within the context of governance. The subsequent steps help each team get started with actions that target their role in cost optimization. Together, these steps will help your entire organization get started on a cohesive cost optimization journey.
+Governance is the cornerstone of cost optimization within any large enterprise. The following section outlines cost optimization guidance within the context of governance. The subsequent steps help each team take actions that target their role in cost optimization. Together, these steps will help your organization get started on a journey toward cost optimization.
 
 ![Get started with enterprise cost management](../_images/get-started/cost-map.png)
 
-## Step 1: Enterprise cost optimization
+## Step 1: Optimize enterprise costs
 
-The cloud governance team is well prepared to evaluate and act on overspending or unplanned spending through a combination of monitoring spend/performance, reducing resource sizing/spend, and safe termination of unused resources. Enterprise cost optimization starts with a shared team understanding of the tools, processes, and dependencies required to wisely act on cost concerns at an environment level.
+The cloud governance team is well prepared to evaluate and act on overspending or unplanned spending through a combination of monitoring performance, reducing resource sizing, and safely terminating unused resources. Enterprise cost optimization starts with a shared team understanding of the tools, processes, and dependencies required to wisely act on cost concerns at an environment level.
 
 **Deliverables:**
 
 - Implement wise cost management changes across the enterprise.
-- Document your Cost Management policies, processes, and design guidance in the [Cost Management policy template](../govern/cost-management/template.md).
+- Document your cost management policies, processes, and design guidance in the [Cost Management Discipline template](../govern/cost-management/template.md).
 
-This deliverable of this step is the result of a few recurring tasks:
+This deliverable is the result of a few recurring tasks:
 
 - Ensure strategic alignment with the cloud strategy team (which includes workload stakeholders across the portfolio).
 - Optimize cost across the environment.
-  - Shutdown or autoshutdown unused VMs.
+  - Manually or automatically shut down unused VMs.
   - Delete or deallocate stopped VMs.
   - Ensure proper resource sizing.
-  - Align actual spend to budget expectations.
-- Validate any architectural change using the Azure Architecture Review to facilitate a conversation with technical owners of the workload(s).
+  - Align spending to budget expectations.
+- Validate any architectural change by using the Azure Architecture Review to facilitate a conversation with technical owners of the workloads.
 
 **Guidance to support deliverable completion:**
 
-- Ensure all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md) and [enforce tagging conventions using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags) with a specific emphasis on tags for "cost center" and "technical owner".
-- On a regular basis, review and apply [cost management best practices](../govern/cost-management/best-practices.md) to guide analysis and improvements across the enterprise. The following are a few of the most impactful governance practices from that article:
+- Ensure all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags) with a specific emphasis on tags for "cost center" and "technical owner."
+- On a regular basis, review and apply [cost management best practices](../govern/cost-management/best-practices.md) to guide analysis and improvements across the enterprise. Here are a few of the most impactful governance practices:
 
   - Act on [general cost best practices](../govern/cost-management/best-practices.md) to reduce sizing and cost and to stop unused machines.
   - Apply [hybrid use benefits](../govern/cost-management/best-practices.md#best-practice-take-advantage-of-azure-hybrid-benefit) to reduce licensing cost.
@@ -49,9 +49,9 @@ This deliverable of this step is the result of a few recurring tasks:
   - [Monitor resource utilization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to minimize impact on resource performance.
   - [Reduce nonproduction costs](../govern/cost-management/best-practices.md#best-practice-reduce-nonproduction-costs) through policies to govern nonproduction environments.
   - Act on [cost optimization recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
-- Trade-offs at the workload level might be needed to implement effective cost optimization changes. The [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
-- If you are new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) using the Govern methodology.
-- If you are new to the Cost Management discipline, consider following the [cost management improvements article](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
+- You might need to make trade-offs at the workload level to implement effective cost optimization changes. The [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
+- If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
+- If you're new to the discipline of cost management, consider following the [cost management improvements article](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -59,8 +59,6 @@ This deliverable of this step is the result of a few recurring tasks:
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
 | <li> Cloud governance team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
-
-## Steps to scale cost optimization
 
 The governance team can detect and drive significant cost optimization across most enterprises. Basic, data-driven resource sizing can have an immediate and measurable impact on costs.
 
