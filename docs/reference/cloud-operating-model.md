@@ -10,11 +10,13 @@ ms.subservice: reference
 ms.custom: governance
 ---
 
+<!-- docsTest:ignore "Cloud Operating Model" -->
+
 # Cloud Operating Model is now part of the Microsoft Cloud Adoption Framework for Azure
 
 In early 2018, Microsoft released the Cloud Operating Model (COM). The COM was a guide that helped customers understand the **what** and the **why** of digital transformation. This helped customers get a sense of all the areas that needed to be addressed: business strategy, culture strategy, and technology strategy. What was not included in the COM were the specific _how-to_ steps, which left customers wondering, "where do we go from here?"
 
-In october 2018, we began a review of all the models that had proliferated across the Microsoft community, we found roughly 60 different cloud adoption models. A cross-Microsoft team was established to bring everything together as a dedicated engineering "product" with defined implementations across services, sales, and marketing. This effort culminated in the creation of a single model, the Microsoft Cloud Adoption Framework for Azure, designed to help customers understand the **what** and **why** and provide unified guidance on the **how** to help them accelerate their cloud adoption. The goal of this project is to create a one Microsoft approach to cloud adoption.
+In October 2018, we began a review of all the models that had proliferated across the Microsoft community, we found roughly 60 different cloud adoption models. A cross-Microsoft team was established to bring everything together as a dedicated engineering "product" with defined implementations across services, sales, and marketing. This effort culminated in the creation of a single model, the Microsoft Cloud Adoption Framework for Azure, designed to help customers understand the **what** and **why** and provide unified guidance on the **how** to help them accelerate their cloud adoption. The goal of this project is to create a one Microsoft approach to cloud adoption.
 
 ## Using Cloud Operating Model practices within the Cloud Adoption Framework
 

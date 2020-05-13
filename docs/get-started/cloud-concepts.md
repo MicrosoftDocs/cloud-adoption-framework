@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- docsTest:ignore CAF%20Readiness%20Naming%20and%20Tagging%20tracking%20template -->
-
 # Get started: Understand and document foundational alignment decisions
 
 The cloud adoption journey can unlock many business, technical, and organizational benefits through various journeys. Regardless of what you want to accomplish, if your journey involves the cloud there are a few initial decisions that should be understood by every team involved. As you work through this guide, record those decisions using the [initial decision template](https://raw.githubusercontent.com/microsoft/cloudadoptionframework/master/references/initial-decisions-checklist.docx) to quickly onboard team members who participate in the overall cloud adoption lifecycle.
@@ -133,7 +131,7 @@ Complexity of the portfolio hierarchy will help inform organizational structures
 
 - Complete the getting started guides for organizational alignment based on these foundational concepts.
 
-<!-- docsTest:ignore Get Align -->
+<!-- docsTest:ignore "Get started: Align your organization" -->
 
 **Guidance to support deliverable completion:**
 

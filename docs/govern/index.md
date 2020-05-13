@@ -17,14 +17,13 @@ The cloud creates new paradigms for the technologies that support the business. 
 Cloud governance is an iterative process. For organizations with existing policies that govern on-premises IT environments, cloud governance should complement those policies. However, the level of corporate policy integration between on-premises and the cloud varies depending on cloud governance maturity and a digital estate in the cloud. As the cloud estate changes over time, so do cloud governance processes and policies. The following exercises help you start building your initial governance foundation.
 
 <!-- markdownlint-disable MD033 -->
-<!-- docsTest:disable TODO -->
 
 | | |
 |---|---|
-| ![1](../_images/icons/1.png)     | <br>[Methodology](./methodology.md): Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework to begin thinking through the end state solution.                                |
-| ![2](../_images/icons/2.png)     | <br>[Benchmark](./benchmark.md): Assess your current state and future state to establish a vision for applying the framework.                                |
-| ![3](../_images/icons/3.png)     | <br>[Initial governance foundation](./initial-foundation.md): Begin your governance journey with a small, easily implemented set of governance tools. This initial governance foundation is called a minimum viable product (MVP).                                |
-| ![4](../_images/icons/4.png)      | <br>[Improve the initial governance foundation](./foundation-improvements.md): Throughout implementation of the cloud adoption plan, iteratively add governance controls to address tangible risks as you progress toward the end state.  |
+| <br> ![1](../_images/icons/1.png) | [Methodology](./methodology.md): Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework to begin thinking through the end state solution. |
+| <br> ![2](../_images/icons/2.png) | <br> [Benchmark](./benchmark.md): Assess your current state and future state to establish a vision for applying the framework. |
+| <br> ![3](../_images/icons/3.png) | <br> [Initial governance foundation](./initial-foundation.md): Begin your governance journey with a small, easily implemented set of governance tools. This initial governance foundation is called a minimum viable product (MVP).                                |
+| <br> ![4](../_images/icons/4.png) | <br> [Improve the initial governance foundation](./foundation-improvements.md): Throughout implementation of the cloud adoption plan, iteratively add governance controls to address tangible risks as you progress toward the end state. |
 
 ## Objective of this content
 

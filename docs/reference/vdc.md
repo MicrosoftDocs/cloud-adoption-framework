@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: reference
 ---
 
-<!-- docsTest:ignore "Azure Virtual Datacenter" -->
+<!-- docsTest:ignore "Azure Virtual Datacenter" "Ready and Govern methodologies" "Azure Virtual Datacenter: Concepts" "Lift and Shift Guide" -->
 <!-- cSpell:ignore tracsman jonor -->
 
 # Azure Virtual Datacenter

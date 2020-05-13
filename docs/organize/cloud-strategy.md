@@ -9,8 +9,6 @@ ms.topic: conceptual
 ms.date: 05/05/2020
 ---
 
-<!-- docsTest:ignore Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template -->
-
 # Cloud strategy functions
 
 A cloud strategy team defines motivations and business outcomes, and validates and maintains alignment between business priorities and cloud adoption efforts. In the absence of a defined cloud strategy team, someone must still provide the functionality that aligns technical activities to business outcomes. That same person or group should also manage change across the project.

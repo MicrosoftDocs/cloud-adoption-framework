@@ -90,10 +90,10 @@ function Test-Paths(
 
     $ignoredExpressions = [TestContext]::IgnoredCasingExpressions
     $ignoredExpressions.AddRange($page.GetIgnoredTerms())
-    $ignoredExpressionJoined = "\b(" + ($ignoredExpressions -join '|') + ")\b"
-
+    $ignoredExpressionJoined = "\b(" + ($ignoredExpressions -join '|') + ")\b|(?<=[A-z,:]) (\*\*[^\*]+\*\*)"
+    
     $invalidTermExpressions = [TestContext]::InvalidTermExpressions
-    $invalidTermExpressionJoined = "\b(" + ($invalidTermExpressions -join '|') + ")\b"
+    $invalidTermExpressionJoined = "(?<![-'])\b(" + ($invalidTermExpressions -join '|') + ")\b(?!['-])"
     $invalidTermLookup = [TestContext]::InvalidTermLookup
 
     $prefixExpression = $([TestContext]::CasingPrefixExpressions) -join '|' 
@@ -112,7 +112,7 @@ function Test-Paths(
     $localLinks = [ordered]@{}
     $externalLinks = [ordered]@{}
 
-    $hitCollection = [PageHitCollection]::new($ruleExpressions, $text, $file.Extension)
+    $hitCollection = [PageHitCollection]::new($ruleExpressions, $file.Extension, $text)
 
     $pageHits = $hitCollection.GetHits()
 
@@ -134,7 +134,7 @@ function Test-Paths(
               "HEADER:   '$header'", `
               "HIT TYPE: '$hitType'"))
 
-        if (@('Directive', 'Html', 'Callout', 'LocalBookmark', 'Metadata', 'Comment') -contains $hitType)
+        if (@('Directive', 'Html', 'Callout', 'LocalBookmark', 'Metadata', 'CodeBlock') -contains $hitType)
         {
             [TestLog]::WriteSuperVerbose("($hitType.ToUpper()): $header$content")
             continue
@@ -184,24 +184,6 @@ function Test-Paths(
             $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Groups[2].Index, $item.Groups[2].Value)
         }
 
-        ### FOR IGNORED TERMS, REVERT TO THE ORIGINAL VALUE FROM THE DOCUMENT. 
-
-        $exp = "(?i)$ignoredExpressionJoined|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)"
-        $m = [Regex]::Matches($correctedSentence, $exp)
-        foreach ($item in $m)
-        {
-            $originalValue = $sentence.Substring($item.Index, $item.Length)
-            try {
-                $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Index, $originalValue)
-            }
-            catch
-            {
-                WriteError("ReplaceAtPosition failed for '$correctedSentence'.")
-            }
-
-            [TestLog]::WriteSuperVerbose("IGNORED MATCH '$item' IN: '$correctedSentence'")
-        }
-
         ### FIX CASING ISSUES
 
         $s = $correctedSentence
@@ -213,28 +195,8 @@ function Test-Paths(
             [TestLog]::WriteSuperVerbose("CASING HANDLED in '$correctedSentence'")
         }
 
-        $s = $correctedSentence
-        $correctedSentence = $correctedSentence -creplace $prefixExpression, `
-            { $_.Groups[1].Value + $_.Groups[2].Value.ToUpper() + $_.Groups[3].Value }
-        if ($s -cne $correctedSentence)
-        {
-            [TestLog]::WriteSuperVerbose("CASING PREFIX HANDLED in '$correctedSentence'")
-        }
-    
-        ### CORRECT OR REPORT INVALID TERMS.
-
-        $s = $correctedSentence
-        $correctedSentence = Get-FixIssuesInSentence `
-            $hitCollection $pageHit $correctedSentence `
-            $invalidTermExpressions $invalidTermExpressionJoined $invalidTermLookup
-
-        if ($s -cne $correctedSentence)
-        {
-            [TestLog]::WriteSuperVerbose("CASING PREFIX HANDLED in '$correctedSentence'")
-        }
-
         ### FIX ADDITIONAL TITLE CASING ISSUES
-    
+
         $s = $correctedSentence
         if ($hitType -eq 'Title')
         {
@@ -246,6 +208,64 @@ function Test-Paths(
             }
         }
 
+        ### FIX PREFIX ISSUES.
+
+        $s = $correctedSentence
+
+            #TODO: ReplaceAtPosition instead?
+        $correctedSentence = $correctedSentence -creplace $prefixExpression, `
+            { $_.Groups[1].Value + $_.Groups[2].Value.ToUpper() + $_.Groups[3].Value }
+        if ($s -cne $correctedSentence)
+        {
+            [TestLog]::WriteSuperVerbose("CASING PREFIX HANDLED in '$correctedSentence'")
+        }
+    
+        ### FOR IGNORED TERMS, REVERT TO THE ORIGINAL VALUE FROM THE DOCUMENT. 
+
+        $exp = "(?i)$ignoredExpressionJoined|(?<=[A-z,:]) (\*\*[^\*]+\*\*)"
+
+        if ($correctedSentence -imatch $ignoredExpressionJoined)
+        {
+            $list = $ignoredExpressions
+            $list.Add('(?<=[A-z,:]) (\*\*[^\*]+\*\*)') | Out-Null
+
+            foreach ($exp in $ignoredExpressions)
+            {
+                if ($exp -match '^[A-z]')
+                {
+                    $exp = "(?i)\b$exp\b"
+                }
+
+                $m = [Regex]::Matches($sentence, $exp)
+                foreach ($item in $m)
+                {
+                    $originalValue = $sentence.Substring($item.Index, $item.Length)
+                    try {
+                        $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Index, $originalValue)
+                    }
+                    catch
+                    {
+                        WriteError("ReplaceAtPosition failed for '$correctedSentence'.")
+                    }
+
+                    [TestLog]::WriteSuperVerbose("IGNORED MATCH '$item' IN: '$correctedSentence'")
+                }
+            }
+        }
+
+        ### CORRECT OR REPORT INVALID TERMS.
+
+        $s = $correctedSentence
+        $correctedSentence = Get-FixIssuesInSentence `
+            $hitCollection $pageHit $correctedSentence `
+            $invalidTermExpressions $invalidTermExpressionJoined $invalidTermLookup
+
+        if ($s -cne $correctedSentence)
+        {
+            [TestLog]::WriteSuperVerbose("INVALID TERMS HANDLED in '$correctedSentence'")
+        }
+
+        
         ### DISPLAY THE CORRECTIONS.
 
         if ($correctedSentence -cne $sentence)
@@ -278,8 +298,10 @@ function Test-Paths(
 
             $updatedText = $updatedText.Replace($sentence, $correctedSentence)
         }
-       
     }
+
+    # REINITIALIZE THE HIT COLLECTION, BECAUSE THE TEXT HAS CHANGED.
+    $hitCollection.Initialize($updatedText)
 
     ### CORRECT OR REPORT INVALID FORMATTING
 
@@ -390,20 +412,16 @@ function Get-FixIssuesInSentence(
                 }
 
                 if ($correction -ne '$null') {
-                    # $sentence = $sentence -replace $item.Value, $correction
                     
                     # TODO: Handle casing variations here?
-                    #$sentence = $sentence.Replace($item.Value, $correction)
                     $sentence = [TestString]::ReplaceAtPosition($sentence, $item.Index, $item.Value.Length, $correction)
                     [TestLog]::WriteSuperVerbose("INVALID TERM HANDLED in '$correctedSentence'")
                     continue
                 }
 
                 if ($suggestion -ne '$null') {
-                    # $sentence = $sentence -replace $item.Value, $correction
                     
                     # TODO: Handle casing variations here?
-                    #$sentence = $sentence.Replace($item.Value, $correction)
                     $sentence = [TestString]::ReplaceAtPosition($sentence, $item.Index, $item.Value.Length, `
                         " <-- TODO (I): $suggestion --> $($item.Value)")
                     [TestLog]::WriteSuperVerbose("INVALID TERM HANDLED in '$correctedSentence'")
