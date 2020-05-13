@@ -27,7 +27,7 @@ The slide bars in the following diagram demonstrate common variants in alignment
 
 - **Portfolio:** The enterprise or business unit probably won't contain any technical assets but might affect cost decisions. The enterprise and business units are represented in the root nodes of the management group hierarchy.
 - **Cloud platforms:** Each environment has its own node in the management group hierarchy.
-- **Landing zones and platform foundations:** Each landing zone is represented as a subscription. Likewise, platform foundations are contained in their own subscriptions. Some subscription designs might call for a subscription per cloud or per workload, which would change the organizing tool for each.
+- **Landing zones and cloud foundation:** Each landing zone is represented as a subscription. Likewise, platform foundations are contained in their own subscriptions. Some subscription designs might call for a subscription per cloud or per workload, which would change the organizing tool for each.
 - **Workloads:** Each workload is represented as a resource group. Resource groups are often used to represent solutions, deployments, or other technical groupings of assets.
 - **Assets:** Each asset is inherently represented as a resource in Azure.
 
