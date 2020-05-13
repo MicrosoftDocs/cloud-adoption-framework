@@ -1,11 +1,8 @@
 <svg id="Shapes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 58.5 58.5">
   <defs>
     <linearGradient id="linear-gradient" x1="29.25" y1="9.28" x2="29.25" y2="49.22" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f9a11f"/>
-      <stop offset="0.02" stop-color="#f89f1f"/>
-      <stop offset="0.39" stop-color="#f28721"/>
-      <stop offset="0.72" stop-color="#ed7823"/>
-      <stop offset="1" stop-color="#ec7323"/>
+      <stop offset="0.18" stop-color="#5ea0ef"/>
+      <stop offset="1" stop-color="#0078d4"/>
     </linearGradient>
   </defs>
   <circle cx="29.25" cy="29.25" r="29" fill="#fff" stroke="#ccc" stroke-width="0.5"/>

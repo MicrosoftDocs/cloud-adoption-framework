@@ -3,12 +3,11 @@ title: "Cloud Operating Model is now the Cloud Adoption Framework for Azure"
 description: Use the Cloud Adoption Framework for Azure to learn the what, why, and how of accelerating your cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
-ms.topic: landing-page
+ms.date: 05/12/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
 ms.custom: governance
-layout: LandingPage
 ---
 
 # Cloud Operating Model is now part of the Microsoft Cloud Adoption Framework for Azure
@@ -21,9 +20,9 @@ In october 2018, we began a review of all the models that had proliferated acros
 
 For a similar approach to COM, readers should begin with one of the following:
 
-- [Begin a cloud migration journey](../get-started/migrate.md)
-- [Innovate through cloud adoption](../get-started/innovate.md)
-- [Enable successful cloud adoption](../get-started/enable.md)
+- [Get started: Accelerate migration](../get-started/migrate.md)
+- [Get started: Build and innovate in the cloud](../get-started/innovate.md)
+- [Enable success with a sound operating model](../get-started/enable.md)
 
 The guidance previously provided in COM is still relevant to the Cloud Adoption Framework. The experience is different, but the structure of the Cloud Adoption Framework is simply an expansion of that guidance. To transition from COM to the Cloud Adoption Framework, an understanding of scope and structure is important. The following two sections describe that transition.
 
