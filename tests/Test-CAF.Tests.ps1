@@ -20,7 +20,7 @@ function Get-PotentialIssuesForReviewExpressions
         "[A-Za-z]\(s\)"
         #TODO: What does this expression do?
         "(^#+ )(?!\[)[\w \(\)'\.,:/\?-]*.(?<=[^\w \(\)'\.,:/\?-])"
-        "([A-Z][A-z]*)[^,\.\|:\?'-]{200,},"     # Review long sentences.
+        "([A-Z][A-Za-z]*)[^,\.\|:\?'-]{200,},"     # Review long sentences.
         "<endoflist>"
     )
 }

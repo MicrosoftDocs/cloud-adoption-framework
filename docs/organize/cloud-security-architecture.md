@@ -1,6 +1,6 @@
 ---
-title: Functions of a cloud security architecture
-description: Understand the function of cloud security architecture
+title: Cloud security architecture functions
+description: Understand cloud security architecture functions.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework

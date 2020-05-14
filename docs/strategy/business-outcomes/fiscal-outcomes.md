@@ -72,9 +72,7 @@ Terminating a datacenter can also provide cost avoidance, by preventing future r
 
 - **Example:** A company's datacenter is up for a lease renewal in six months. The datacenter has been in service for eight years. Four years ago, all servers were refreshed and virtualized, costing the company millions of dollars. Next year, the company plans to refresh the hardware and software again. Migrating the assets in that datacenter as part of a cloud migration would allow cost avoidance by removing the planned refresh from next year's forecasted budget. It could also produce cost reduction by decreasing or eliminating the real estate lease costs.
 
-<!-- docsTest:ignore "vs. Operating" -->
-
-### Capital expenses vs. Operating expenses
+### Capital expenses and operating expenses
 
 Before you discuss cost outcomes, it's important to understand the two primary cost options: capital expenses and operating expenses.
 

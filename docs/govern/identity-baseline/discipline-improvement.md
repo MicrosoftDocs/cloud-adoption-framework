@@ -90,8 +90,6 @@ Migration is an incremental process that focuses on the movement, testing, and a
 - Update the architecture guidelines document and distribute to key stakeholders.
 - Develop educational materials and documentation, awareness communications, incentives, and other programs to help drive user adoption.
 
-<!-- docsTest:ignore "Seamless SSO" -->
-
 **Potential activities:**
 
 - Validate that the best practices defined during the build predeployment phases are properly executed.

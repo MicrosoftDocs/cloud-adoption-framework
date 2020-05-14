@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- docsTest:ignore Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template -->
-
 # Get started: Accelerate new product and service innovation in the cloud
 
 Creating new products and services in the cloud requires a different approach than migration. The Innovate methodology in the Cloud Adoption Framework establishes an approach that guides the development of new products and services.
@@ -26,6 +24,8 @@ To avoid common blockers, create a clear and concise business strategy for innov
 **Deliverables:**
 
 - Use the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to record motivations and desired business outcomes.
+
+<!-- docsTest:ignore "Get started: Accelerate migration" -->
 
 **Guidance to support deliverable completion:**
 
@@ -144,7 +144,7 @@ Define the plan for long-term operational responsibilities regarding the planned
 **Deliverables:**
 
 - Complete the [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
-- Adjust the [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to reflect any required advanced operations.
+- Adjust the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to reflect any required advanced operations.
 
 **Guidance to support deliverable completion:**
 

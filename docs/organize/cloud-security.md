@@ -9,7 +9,9 @@ ms.topic: conceptual
 ms.date: 04/30/2020
 ---
 
-# Functions of a cloud security team
+<!-- cSpell:ignore MarkSimos -->
+
+# Cloud security functions
 
 This article provides a summary of the organizational functions required to manage information security risk in an enterprise. These organizational functions collectively form the human portion of an overall cybersecurity system. Each function may be performed by one or more people, and each person may perform one or more functions, depending on various factors such as culture, budget, and available resources.
 
@@ -18,6 +20,8 @@ The following diagram and documentation represent an ideal view of the functions
 ![View of the functions of an enterprise security team](../_images/security/enterprise-security-team.png)
 
 **Security is a team sport:** Its critical that individuals on the security team see each other as part of a whole security team, part of the whole organization, and part of a larger security community defending against the same adversaries. This holistic view enables the team to work well in general. It's especially important as the teams work through any unplanned gaps and overlaps discovered during the evolution of roles and responsibilities.
+
+<!-- cSpell:ignore apsec -->
 
 ## Security functions
 

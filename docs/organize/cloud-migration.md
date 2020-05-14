@@ -1,5 +1,5 @@
 ---
-title: Understand cloud migration functions.
+title: Understand cloud migration functions
 description: Understand cloud migration functions.
 author: JanetCThomas
 ms.author: janet

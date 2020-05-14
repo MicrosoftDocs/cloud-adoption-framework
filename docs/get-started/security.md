@@ -9,11 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- docsTest:ignore Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template -->
-
 <!-- cSpell:ignore CISO passwordless -->
 
-# Get started: Implementing security across the enterprise environment
+# Get started: Implement security across the enterprise environment
 
 Security enables business through creating assurances of confidentiality, integrity, and availability with a critical focus on protecting against the potential impact to operations caused by both internal and external malicious and unintentional acts. This roadmap outlines the key steps that will mitigate or avoid the business risk from cybersecurity attacks by rapidly establishing essential security practices in the cloud and integrating security into your cloud adoption process.
 

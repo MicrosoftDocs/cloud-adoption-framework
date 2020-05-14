@@ -38,10 +38,10 @@ The components deployed and their purpose include the following:
 | Component | Responsibility |
 |---|---|
 | Resource groups | Core resource groups needed for the foundation |
-| Activity logging      | Auditing all subscription activities and archiving: <li> Storage account <li> Azure Event Hubs |
+| Activity logging | Auditing all subscription activities and archiving: <li> Storage account <li> Azure Event Hubs |
 | Diagnostics logging | All operation logs kept for a specific number of days: <li> Storage account <li> Event Hubs |
 | Log Analytics | Stores all the operation logs. Deploy common solutions for deep application best practices review: <li> NetworkMonitoring <li> ADAssessment <li> ADReplication <li> AgentHealthAssessment <li> DnsAnalytics <li> KeyVaultAnalytics |
-| Azure Security Center | Security hygiene metrics and alerts sent to email and phone number                                                                                                                                                                                        |
+| Azure Security Center | Security hygiene metrics and alerts sent to email and phone number |
 
 <!-- markdownlint-enable MD033 -->
 

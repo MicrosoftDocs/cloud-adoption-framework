@@ -76,7 +76,7 @@ The following changes to policy will help remediate the new risks and guide impl
 6. No subnet containing protected data can be directly accessed over the public internet or across datacenters. Access to these subnets must be routed through intermediate subnets. All access into these subnets must come through a firewall solution that can perform packet scanning and blocking functions.
 7. Governance tooling must audit and enforce network configuration requirements defined by the security management team.
 8. Governance tooling must limit VM deployment to approved images only.
-9. Whenever possible, node configuration management should apply policy requirements to the configuration of any guest operating system. Node configuration management should respect the existing investment in group policy object (gpo) for resource configuration.
+9. Whenever possible, node configuration management should apply policy requirements to the configuration of any guest operating system. Node configuration management should respect the existing investment in group policy objects (GPO) for resource configuration.
 10. Governance tooling will audit that automatic updates are enabled on all deployed assets. When possible, automatic updates will be enforced. When not enforced by tooling, node-level violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
 11. Creation of new subscriptions or management groups for any mission-critical applications or protected data requires a review from the cloud governance team to ensure proper blueprint assignment.
 12. A least-privilege access model will be applied to any subscription that contains mission-critical applications or protected data.
@@ -115,9 +115,9 @@ The new best practices fall into two categories: corporate IT (hub) and cloud ad
     3. For each region in the management group hierarchy, create a subscription named `corporate IT subscription`.
     4. Apply the `corporate-it-subscription-blueprint` blueprint to each regional instance.
     5. This will establish a hub for each business unit in each region. Note: further cost savings could be achieved, but sharing hubs across business units in each region.
-6. Integrate group policy objects (gpo) through desired state configuration (dsc):
-    1. Convert gpo to dsc&mdash;the [Microsoft baseline management project](https://github.com/microsoft/baselinemanagement) in GitHub can accelerate this effort. Be sure to store dsc in the repository in parallel with Resource Manager templates.
-    2. Deploy Azure Automation state configuration to any instances of the corporate IT subscription. Azure Automation can be used to apply dsc to VMs deployed in supported subscriptions within the management group.
+6. Integrate group policy objects (GPO) through Desired State Configuration (DSC):
+    1. Convert GPO to DSC&mdash;the [Microsoft baseline management project](https://github.com/microsoft/baselinemanagement) in GitHub can accelerate this effort. Be sure to store DSC in the repository in parallel with Resource Manager templates.
+    2. Deploy Azure Automation state configuration to any instances of the corporate IT subscription. Azure Automation can be used to apply DSC to VMs deployed in supported subscriptions within the management group.
     3. The current roadmap aims to enable custom guest configuration policies. When that feature is released, the use of Azure Automation in this best practice will no longer be required.
 
 **Applying additional governance to a cloud adoption subscription (spoke):** Building on the `corporate IT subscription`, minor changes to the governance MVP applied to each subscription dedicated to the support of application archetypes can produce rapid improvement.
@@ -128,8 +128,8 @@ In prior iterative changes to the best practice, we defined network security gro
     1. The reference architecture from the prior section, [hub and spoke topology with shared services](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/shared-services), generated a Resource Manager template for enabling virtual network peering.
     2. That template can be used as a guide to modify the DMZ template from the prior governance iteration.
     3. We are now adding virtual network peering to the DMZ virtual network that was previously connected to the local edge device over VPN.
-    4. *** The VPN should also be removed from this template as well to ensure no traffic is routed directly to the on-premises datacenter, without passing through the corporate IT subscription and firewall solution. You could also set this VPN as a failover circuit in the event of an ExpressRoute circuit outage.
-    5. Additional [network configuration](https://docs.microsoft.com/azure/automation/automation-dsc-overview#network-planning) will be required by Azure Automation to apply dsc to hosted VMs.
+    4. The VPN should also be removed from this template as well to ensure no traffic is routed directly to the on-premises datacenter, without passing through the corporate IT subscription and firewall solution. You could also set this VPN as a failover circuit in the event of an ExpressRoute circuit outage.
+    5. Additional [network configuration](https://docs.microsoft.com/azure/automation/automation-dsc-overview#network-planning) is required by Azure Automation to apply DSC to hosted VMs.
 2. Modify the network security group. Block all public **and** direct on-premises traffic in the network security group. The only inbound traffic should be coming through the virtual network peer in the corporate IT subscription.
     1. In the prior iteration, a network security group was created blocking all public traffic and whitelisting all internal traffic. Now we want to shift this network security group a bit.
     2. The new network security group configuration should block all public traffic, along with all traffic from the local datacenter.

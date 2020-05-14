@@ -3,27 +3,28 @@ title: "Cloud Operating Model is now the Cloud Adoption Framework for Azure"
 description: Use the Cloud Adoption Framework for Azure to learn the what, why, and how of accelerating your cloud adoption.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
-ms.topic: landing-page
+ms.date: 05/12/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
 ms.custom: governance
-layout: LandingPage
 ---
+
+<!-- docsTest:ignore "Cloud Operating Model" -->
 
 # Cloud Operating Model is now part of the Microsoft Cloud Adoption Framework for Azure
 
 In early 2018, Microsoft released the Cloud Operating Model (COM). The COM was a guide that helped customers understand the **what** and the **why** of digital transformation. This helped customers get a sense of all the areas that needed to be addressed: business strategy, culture strategy, and technology strategy. What was not included in the COM were the specific _how-to_ steps, which left customers wondering, "where do we go from here?"
 
-In october 2018, we began a review of all the models that had proliferated across the Microsoft community, we found roughly 60 different cloud adoption models. A cross-Microsoft team was established to bring everything together as a dedicated engineering "product" with defined implementations across services, sales, and marketing. This effort culminated in the creation of a single model, the Microsoft Cloud Adoption Framework for Azure, designed to help customers understand the **what** and **why** and provide unified guidance on the **how** to help them accelerate their cloud adoption. The goal of this project is to create a one Microsoft approach to cloud adoption.
+In October 2018, we began a review of all the models that had proliferated across the Microsoft community, we found roughly 60 different cloud adoption models. A cross-Microsoft team was established to bring everything together as a dedicated engineering "product" with defined implementations across services, sales, and marketing. This effort culminated in the creation of a single model, the Microsoft Cloud Adoption Framework for Azure, designed to help customers understand the **what** and **why** and provide unified guidance on the **how** to help them accelerate their cloud adoption. The goal of this project is to create a one Microsoft approach to cloud adoption.
 
 ## Using Cloud Operating Model practices within the Cloud Adoption Framework
 
 For a similar approach to COM, readers should begin with one of the following:
 
-- [Begin a cloud migration journey](../get-started/migrate.md)
-- [Innovate through cloud adoption](../get-started/innovate.md)
-- [Enable successful cloud adoption](../get-started/enable.md)
+- [Get started: Accelerate migration](../get-started/migrate.md)
+- [Get started: Build and innovate in the cloud](../get-started/innovate.md)
+- [Enable success with a sound operating model](../get-started/enable.md)
 
 The guidance previously provided in COM is still relevant to the Cloud Adoption Framework. The experience is different, but the structure of the Cloud Adoption Framework is simply an expansion of that guidance. To transition from COM to the Cloud Adoption Framework, an understanding of scope and structure is important. The following two sections describe that transition.
 

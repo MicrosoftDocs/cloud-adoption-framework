@@ -28,12 +28,12 @@ The Cloud Adoption Framework brings together cloud adoption best practices from 
 
 <!-- markdownlint-disable MD033 -->
 
-|                                                    |                                                                                                                          |                                                |                                                                                                              |  |  |  |  |
-|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------|--|--|--|--|
-| ![Strategy icon](./_images/icons/strategy.png) | [Strategy](./strategy/index.md): Define business justification and expected outcomes adoption.  | <br>![Plan icon](./_images/icons/plan.png)  | [Plan](./plan/index.md): Align actionable adoption plans to business outcomes. |  |  |  |  |
-| ![Ready icon](./_images/icons/ready.png)        | <br>[Ready](./ready/index.md): Prepare the cloud environment for the planned changes. | ![Migrate icon](./_images/icons/adopt.png)     | <br>[Migrate](./migrate/index.md): Migrate and modernize existing workloads.             |  |  |  |  |
-| ![Innovate icon](./_images/icons/innovate.png)        | <br>[Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | ![Govern icon](./_images/icons/govern.png)     | <br>[Govern](./govern/index.md): Govern the environment and workloads.             |  |  |  |  |
-| ![Manage icon](./_images/icons/manage.png) | <br>[Manage](./manage/index.md): Operations management for cloud and hybrid solutions. | ![Organize icon](./_images/icons/organize.png)     | <br>[Organize](./organize/index.md): Govern the environment and workloads.             |  |  |  |  |
+| | | | | | | | |
+|--|--|--|--|--|--|--|--|
+| <br> ![Strategy icon](./_images/icons/strategy.png) | [Strategy](./strategy/index.md): Define business justification and expected outcomes adoption. | <br> ![Plan icon](./_images/icons/plan.png) | [Plan](./plan/index.md): Align actionable adoption plans to business outcomes. |  |  |  |  |
+| <br> ![Ready icon](./_images/icons/ready.png) | [Ready](./ready/index.md): Prepare the cloud environment for the planned changes. | <br> ![Migrate icon](./_images/icons/adopt.png) | [Migrate](./migrate/index.md): Migrate and modernize existing workloads. |  |  |  |  |
+| <br> ![Innovate icon](./_images/icons/innovate.png) | [Innovate](./innovate/index.md): Develop new cloud-native or hybrid solutions. | <br> ![Govern icon](./_images/icons/govern.png) | [Govern](./govern/index.md): Govern the environment and workloads. |  |  |  |  |
+| <br> ![Manage icon](./_images/icons/manage.png) | [Manage](./manage/index.md): Operations management for cloud and hybrid solutions. | <br> ![Organize icon](./_images/icons/organize.png) | [Organize](./organize/index.md): Govern the environment and workloads. |  |  |  |  |
 
 ## Understand the lifecycle
 
