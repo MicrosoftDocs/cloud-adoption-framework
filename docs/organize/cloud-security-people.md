@@ -1,6 +1,6 @@
 ---
-title: Functions of a people security in the cloud
-description: Understand the function of cloud security people.
+title: People security functions in the cloud
+description: Understand people security functions in the cloud.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 04/30/2020
 ---
 
-# Functions of a people security in the cloud
+# People security functions in the cloud
 
 People security protects the organization from risk of inadvertent human mistakes and malicious insider actions.
 

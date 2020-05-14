@@ -44,7 +44,7 @@ The [Azure Management Guide](../azure-management-guide/index.md) outlines the ma
 <!-- -->
 
 > [!TIP]
-> If you're using the [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, the operations management fields should be updated to reflect these prerequisites. Those fields include _Commitment level_, _Composite SLA_, and _Monthly cost_. Monthly cost should represent the cost of the added operational management tools on a monthly basis.
+> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, the operations management fields should be updated to reflect these prerequisites. Those fields include _Commitment level_, _Composite SLA_, and _Monthly cost_. Monthly cost should represent the cost of the added operational management tools on a monthly basis.
 
 The operations management baseline serves as an initial starting point to be validated in each of the following sections.
 
@@ -105,7 +105,7 @@ For managed solutions, several design principles and template solutions can be a
 The following calculations will walk through formulas to help you better understand the differences between losses and increased management investments. For guidance on calculating the cost of increased management, see [Workload automation](./workload.md) and [Platform automation](./platform.md).
 
 > [!TIP]
-> If you're using the [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, update the operations management fields to reflect to reflect each conversation. Those fields include _Commitment level_, _Composite SLA_, and _Monthly cost_. Monthly cost should represent the monthly cost of the added operational management tools. After they're updated, the fields will update the ROI formulas and each of the following fields.
+> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, update the operations management fields to reflect to reflect each conversation. Those fields include _Commitment level_, _Composite SLA_, and _Monthly cost_. Monthly cost should represent the monthly cost of the added operational management tools. After they're updated, the fields will update the ROI formulas and each of the following fields.
 
 ### Estimate outage (hours per year)
 

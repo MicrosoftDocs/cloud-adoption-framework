@@ -28,7 +28,7 @@ Fortunately, the process of developing a cloud adoption strategy and cloud adopt
 
 ## Operations management workbook
 
-To help capture decisions that result from this conversation about term alignment, an [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) is available on our GitHub site. This workbook does not perform SLA or cost calculations. It serves only to help capture such measures and forecast return on loss-avoidance efforts.
+To help capture decisions that result from this conversation about term alignment, an [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) is available on our GitHub site. This workbook does not perform SLA or cost calculations. It serves only to help capture such measures and forecast return on loss-avoidance efforts.
 
 Alternatively, these same workloads and associated assets could be tagged directly in Azure, if the solutions are already deployed to the cloud.
 

@@ -53,7 +53,7 @@ Based on the preceding criticality-scale table, we recommend that you adopt _Med
 
 ## Use the template
 
-The following steps apply if you're using the [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management.
+The following steps apply if you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management.
 
 1. Record the criticality scale on the **scale** tab of the workbook.
 2. Update each workload in the _Example_ or _Clean Template_ to reflect the default criticality in the _Criticality_ column.

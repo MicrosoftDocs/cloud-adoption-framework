@@ -21,13 +21,12 @@ Successful cloud adoption programs typically involve at least one level of suppo
 
 During the early strategy phases of adoption, it's important to start aligning your partnership strategy. The following steps can help remove roadblocks in later phases of the adoption lifecycle.
 
-1) Start to understand support needs
-2) Consider partnership options that fit your culture and needs
-3) Evaluate a shortlist of partner options
-4) Begin contract and paperwork reviews with selected partners
+1. Start to understand support needs.
+1. Consider partnership options that fit your culture and needs.
+1. Evaluate a shortlist of partner options.
+1. Begin contract and paperwork reviews with selected partners.
 
-Completing these steps early, will ensure success of the team when the technical efforts begin.
-The following sections of this article provide guidance for each of these steps.
+Completing these steps early, will ensure success of the team when the technical efforts begin. The following sections of this article provide guidance for each of these steps.
 
 ## Understanding support needs
 
@@ -82,7 +81,7 @@ If you have questions or need help, [create a support request](https://portal.az
 During strategy development, its hard to define specific partnership needs. During development of the cloud adoption plan and skilling plan, those needs will come into focus.
 But, based on the culture and maturity of your team, it may be possible to decide on a partnership option that is more aligned with your expected needs.
 
-Choose one or more of the partnerhips options above to narrow down the options to investigate first.
+Choose one or more of the partnership options above to narrow down the options to investigate first.
 
 ## Begin contract and paperwork reviews
 

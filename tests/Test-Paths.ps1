@@ -80,17 +80,12 @@ function Test-Paths(
 
     $updatedText = $text = $page.GetText()
 
-    if ($text -match 'docsTest:disable')
-    {
-        return 0
-    }
-
     $casingExpressions = [TestContext]::CasingExpressions
     $casingExpressionJoined = "\b(" + ($casingExpressions -join '|') + ")\b"
 
     $ignoredExpressions = [TestContext]::IgnoredCasingExpressions
     $ignoredExpressions.AddRange($page.GetIgnoredTerms())
-    $ignoredExpressionJoined = "\b(" + ($ignoredExpressions -join '|') + ")\b|(?<=[A-z,:]) (\*\*[^\*]+\*\*)"
+    $ignoredExpressionJoined = "\b(" + ($ignoredExpressions -join '|') + ")\b|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)"
     
     $invalidTermExpressions = [TestContext]::InvalidTermExpressions
     $invalidTermExpressionJoined = "(?<![-'])\b(" + ($invalidTermExpressions -join '|') + ")\b(?!['-])"
@@ -129,14 +124,25 @@ function Test-Paths(
         $header = $pageHit.GetHeader()
         $hitType = $pageHit.GetHitType()
 
-        [TestLog]::WriteSuperVerbose( `
-            @("CONTENT:  '$content'", `
-              "HEADER:   '$header'", `
-              "HIT TYPE: '$hitType'"))
+        [TestLog]::WriteSuperVerbose("CONTENT:  '$content'")
+        [TestLog]::WriteSuperVerbose("HEADER:   '$header'")
+        [TestLog]::WriteSuperVerbose("HIT TYPE: '$hitType'")
 
-        if (@('Directive', 'Html', 'Callout', 'LocalBookmark', 'Metadata', 'CodeBlock') -contains $hitType)
+        $skipTypes = @(
+            'LocalBookmark',
+            'ImageLink'
+            'Directive',
+            'Html', 
+            'Callout', 
+            'Metadata',
+            'CodeBlock',
+            'Comment',
+            'Disabled'
+        )
+
+        if ($skipTypes -contains $hitType)
         {
-            [TestLog]::WriteSuperVerbose("($hitType.ToUpper()): $header$content")
+            [TestLog]::WriteSuperVerbose("$($hitType.ToUpper()): $header$content")
             continue
         }
 
@@ -155,7 +161,7 @@ function Test-Paths(
             continue
         }
 
-        if ($hitType -eq "LocalLink")
+        if ($hitType -eq 'LocalLink')
         {
             $localLinks[$pageHit.Content] = $pageHit.Header.Trim()
             continue
@@ -222,16 +228,16 @@ function Test-Paths(
     
         ### FOR IGNORED TERMS, REVERT TO THE ORIGINAL VALUE FROM THE DOCUMENT. 
 
-        $exp = "(?i)$ignoredExpressionJoined|(?<=[A-z,:]) (\*\*[^\*]+\*\*)"
+        $exp = "(?i)$ignoredExpressionJoined|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)"
 
         if ($correctedSentence -imatch $ignoredExpressionJoined)
         {
             $list = $ignoredExpressions
-            $list.Add('(?<=[A-z,:]) (\*\*[^\*]+\*\*)') | Out-Null
+            $list.Add('(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)') | Out-Null
 
             foreach ($exp in $ignoredExpressions)
             {
-                if ($exp -match '^[A-z]')
+                if ($exp -match '^[A-Za-z]')
                 {
                     $exp = "(?i)\b$exp\b"
                 }
@@ -265,7 +271,6 @@ function Test-Paths(
             [TestLog]::WriteSuperVerbose("INVALID TERMS HANDLED in '$correctedSentence'")
         }
 
-        
         ### DISPLAY THE CORRECTIONS.
 
         if ($correctedSentence -cne $sentence)
@@ -296,7 +301,7 @@ function Test-Paths(
             
             $count++
 
-            $updatedText = $updatedText.Replace($sentence, $correctedSentence)
+            $updatedText = [TestString]::ReplaceAtPosition($updatedText, $pageHit.Index, $sentence.Length, $correctedSentence)
         }
     }
 
@@ -384,7 +389,7 @@ function Get-FixIssuesInSentence(
                 else {
                     $index = $hit.Index + $item.Index
                 }
-                
+
                 if ($collection.IsIndexInLink($index))
                 {
                     [TestLog]::WriteLink($sentence, $item)

@@ -167,15 +167,6 @@ function Get-CasingExpressions
             "ZRS"
             "RA-GRS"
             "RA-GZRS"
-            "Asia Southeast"
-            "Europe North"
-            "Europe West"
-            "Japan East"
-            "UK South"
-            "US Central"
-            "US East"
-            "US West"
-        
         'Azure Stream Analytics'
         'Azure Synapse Analytics'
         'Azure Table storage'
@@ -252,7 +243,6 @@ function Get-CasingExpressions
         'DVD'
         'Dynamics 365'
         'EAs?'
-        'East US'
         'Exchange Server'
         'EMS'
         'Endpoint Manager'
@@ -260,10 +250,8 @@ function Get-CasingExpressions
         'EOS'
         'ERP'
         'ESXi'
-        'Europe'
-        'European( Union)?'
+        'Europe(an|an Union)?'
         'Event Hubs'
-        'Event hub'
         'ExpressRoute'
         'ExpressRoute Direct'
         'ExpressRoute Global Reach'
@@ -549,13 +537,11 @@ function Get-CasingExpressions
         'Unity'
         'UPSs?'
         'URLs?'
-        'US South Central'
         'US-based'
         'USD_?'
-        'vCenter'
-        'vCenter Server 6.5'
-        'vCores'
-        'vCPUs'
+        'vCenter( Server 6.5)?'
+        'vCores?'
+        'vCPUs?'
         'VDI'
         'VHDs?'
         'Virtual Machine Manager'
@@ -588,7 +574,42 @@ function Get-CasingExpressions
         'WVD'
         'Zerto'
 
-        '(Brazil|Canada|Czech Republic|France|Japan|Poland|Romania)'
+        #Azure regions
+
+        'Central US'
+        'East US( 2)?'
+        '(North |South |West )?Central US'
+        'West US( 2)?'
+        'Canada( Central| East)?'
+        'Brazil( South)?'
+        'Mexico( Central)?'
+
+        '(East |Southeast )?Asia'
+        'Australia( Central| Central 2| East| Southeast)?'
+        'China( East| East 2)?'
+        'China( North| North 2)?'
+        '(Central |South |West )?India'
+        'Japan( East| West)?'
+        'Korea( Central| South)?'
+
+        'South Africa( North| West)?'
+        'UAE( Central| North)?'
+        'Israel( Central)?'
+        'Qatar( Central)?'
+
+        '(North |West )?Europe'
+        'France( Central| South)?'
+        'UK( South| West)?'
+        'Germany( Central| North| Northeast| West Central)?'
+        'Switzerland( North| West)?'
+        'Norway( East| West)?'
+        'Spain( Central)?'
+
+        'US DoD( Central| East)'
+        'US Sec( East| West)'
+        'US Gov( Arizona| Texas| Virginia)'
+
+        '(Czech Republic|Poland|Romania)'
         '(Canadian|Japanese)'
 
         # TODO: Handle resource provider names.
@@ -658,8 +679,8 @@ function Get-InvalidTermExpressions {
         '\]\(/!!](https://docs.microsoft.com/'
         '(?<!Save|POLICY) & !! and '
         ', & !!, and '
-        '\.  (?=[A-z])!!. '
-        '(?<=[A-z])  (?=[A-z])!! '
+        '\.  (?=[A-Za-z])!!. '
+        '(?<=[A-Za-z])  (?=[A-Za-z])!! '
         '\b1st!!first'
         '\b2nd!!second'
         '\b3rd!!third'
