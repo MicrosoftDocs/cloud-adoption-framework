@@ -1,160 +1,175 @@
+## Navigation Menu
+
+* [Overview](../README.md)
+* [North Star Architecture](./NorthStar-Architecture.md)
+  * [Design Principles](./Design-Principles.md)
+  * [Design Guidelines](./Design-Guidelines.md)
+    * [A - Enterprise Enrollment and Azure AD Tenants](./A-Enterprise-Enrollment-and-Azure-AD-Tenants.md)
+    * [B - Identity and Access Management](./B-Identity-and-Access-Management.md)
+    * [C - Management Group and Subscription Organization](./C-Management-Group-and-Subscription-Organization.md)
+    * [D - Network Topology and Connectivity](./D-Network-Topology-and-Connectivity.md)
+    * [E - Management and Monitoring](./E-Management-and-Monitoring.md)
+    * [F - Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
+    * [G - Security, Governance and Compliance](./G-Security-Governance-and-Compliance.md)
+    * [H - Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
+  * [Implementation Guide](./Implementation-Guide.md)
+* [Contoso Reference](./Contoso/Readme.md)
+  * [Scope and Design](./Contoso/Scope.md)
+  * [Implementation](./Contoso/Design.md)
+* [Using reference implementation in your own environment](./Deploy/Readme.md)
+  * [Getting started](./Deploy/Getting-Started.md)
+    * [Prerequisites](./Deploy/Prerequisites.md)
+    * [Validate prerequisites](./Deploy/Validate-prereqs.md)
+  * [Configure your own environment](./Deploy/Using-Reference-Implementation.md)
+    * [Configure GitHub](./Deploy/Configure-run-initialization.md)
+    * [Provision Platform](./Deploy/Deploy-platform-infra.md)
+    * [Create Landing Zones](./Deploy/Deploy-lz.md)
+    * [Trigger deployments locally](./Deploy/Trigger-local-deployment.md)
+  * [North Star template schema](./Deploy/NorthStar-schema.md)
+    * [Generic North Star ARM template](./Deploy/NorthStar-template-schema.md)
+    * [North Star ARM parameters file](./Deploy/NorthStar-parameters-schema.md)
+  * [Known Issues](./Deploy/Known-Issues.md)    
+* [How Do I Contribute?](./Northstar-Contribution.md)
+* [FAQ](./Northstar-FAQ.md)
+* [Roadmap](./Northstar-roadmap.md)
+
 ---
-title: "Platform Automation and DevOps"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
-description: CAF enterprise-scale landing zone - Platform Automation and DevOps
-author: rkuehfus
-ms.author: brblanch
-ms.date: 02/01/2020
-ms.topic: guide
-ms.service: cloud-adoption-framework
-ms.subservice: ready
-ms.custom: csu
----
 
-
-# H. Platform automation and devOps
-
-[![Platform Automation and DevOps](./media/devops.png "Platform Automation and DevOps")](./media/devops.png)
+# H. Platform Automation and DevOps
+[![Platform Automation and DevOps](./media/devops.png "Platform Automation and DevOps")](#)
 
 Figure 10 – Platform Automation and DevOps
 
-## 1. Planning for a DevOps approach
+## 1. Planning for a DevOps Approach
 
-Many traditional IT operating models are unfortunately not compatible with the cloud, and ultimately customers must undergo a degree of operational and organizational transformation to deliver against enterprise migration targets. Ultimately, it is highly recommended to take a DevOps approach with both application and central teams.
+Many traditional IT operating models are unfortunately not compatible with the cloud, and ultimately customers must undergo a degree of operational and organizational transformation to deliver against enterprise migration targets. Ultimately, it is highly recommended that a DevOps approach be employed for both application and central teams.
 
-**Design considerations:**
+***Design Considerations***
 
-- Where central teams are concerned, CI/CD pipelines should be used to manage policy definitions, role-definitions, policy assignments, and template galleries. Such pipelines will help ensure multiple subscriptions can be operationally managed while still conforming to a desired state.
+-   Where central teams are concerned, CI/CD pipelines should be used to manage policy definitions, role-definitions, policy assignments, and template galleries. Such pipelines will help ensure multiple subscriptions can be operationally managed whilst still conforming to a desired state.
 
-- The blanket application of a DevOps model will not instantly establish capable DevOps teams.
+-   The blanket application of a DevOps model will not miraculously establish capable DevOps teams.
 
-    - Investment in engineering capabilities and resources is critical.
+    -   Investment in engineering capabilities and resources is critical.
 
-- The customer can source DevOps roles and functions from a variety of internal and external resources aligned with their organization's strategy.
+-   The customer can resource DevOps roles and functions from a variety of sources aligned to their organization strategy, both internal and external.
 
-- For some legacy applications, the associated application team may not have engineering resources required to align with a DevOps strategy.
+-   For some legacy applications, the associated application team may not have engineering resources required to align with a DevOps strategy.
 
-**Design recommendations:**
+***Design Recommendations***
 
-- Establish a cross-cutting central DevOps “Platform Team” to build, manage, and maintain the CAF enterprise-scale landing zone architecture.
+-   Establish a cross-cutting central DevOps "Platform Team" to build, manage and maintain the "North Star" architecture.
 
-- The list below presents a recommended set of DevOps roles for the central “Platform Team”.
+-   The list below presents a recommended set of DevOps roles for the central "Platform Team".
 
-- **Platform operations** (PlatformOps) 
+-   **PlatformOps** (Platform Operations) to
 
-    - Subscription provisioning and delegation of required network, IAM, and policies.
+    -   Subscription provisioning and delegation of required network, IAM, and policies.
 
-    - Platform management and monitoring (holistic)
+    -   Platform management and monitoring (holistic).
 
-    - Cost management (holistic)
+    -   Cost Management (holistic).
 
-    - “Platform as Code” (management of templates, scripts and other assets).
+    -   "Platform as Code" (management of templates, scripts and other assets).
 
-    - Responsible for overall operations on Azure within the AAD tenant, such as managing service principles, Graph API registration, and role definitions.
+    -   Responsible for overall operations on Azure within the Azure AD tenant, such as managing service principles, Graph API registration, and role definitions.
 
-- **Security operations** (SecOps)
+-   **SecOps** (Security Operations)
 
-    - Role-based access control (holistic)
+    -   Role based access control (holistic).
 
-    - Key management (for example, SMTP and Domain Controller for central services)
+    -   Key management (for central services, for example SMTP, Domain Controller).
 
-    - Policy management and enforcement (holistic)
+    -   Policy management and enforcement (holistic).
 
-    - Security monitoring and audit (holistic)
+    -   Security monitoring and audit (holistic).
 
-- **Network operations** (NetOps)
+-   **NetOps** (Network Operations)
 
-    - Network management (holistic)
+    -   Network Management (holistic).
 
-- Allow application owners to create and manage application resources through a DevOps model.
+-   Allow application owners to create and manage application resources through a DevOps model.
 
-- The list below presents a recommended DevOps role for application teams.
+-   The list below presents a recommended DevOps role for application teams.
 
-- **AppDevOps**
+-   **AppDevOps**
 
-    - Application migration and/or transformation
+    -   Application migration and/or transformation.
 
-    - Application management and monitoring
+    -   Application management and monitoring.
 
-    - Role-based access control (app resources)
+    -   Role based access control (app resources).
 
-    - Security monitoring and audit (app resources)
+    -   Security monitoring and audit (app resources).
 
-    - Cost Management (app resources)
+    -   Cost Management (app resources).
 
-    - Network Management (app resources)
+    -   Network Management (app resources).
 
-    - In some instances, customers may wish to break AppDevOps into more granular roles such as AppDataOps for database management like traditional DBA roles, or AppSecOps where more security sensitive applications are concerned; this is to be expected.
+    -   In some instances, customers may wish to break AppDevOps into more granular roles such as AppDataOps for database management like traditional DBA roles, or AppSecOps where more security sensitive applications are concerned; this is to be expected.
 
-- Provide a central application DevOps function to support applications that do not have existing DevOps capabilities or a business case to establish one; e.g., legacy applications with minimal development capabilities.
+-   Provide a central application DevOps function to support applications which do not have existing DevOps capabilities or a business case to establish one, i.e. legacy applications with minimal development capabilities.
 
-- Leverage a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams.
+-   Leverage a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams.
 
-- In the spirit of accelerating Azure adoption, the central “Platform Team” should be used to establish a common set of templates and libraries for application teams to draw upon.
+-   In the spirit of accelerating Azure adoption, the central "Platform Team" should be leveraged to establish a common set of templates and libraries for application teams to draw upon.
 
-    - For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and more importantly, ensure alignment with the overall target CAF enterprise-scale landing zone architecture.
+    -   For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and more importantly, ensure alignment with the overall target "North Star" architecture.
 
 <!-- -->
 
-- Do not restrict application teams to use central artifacts or approaches as it hinders agility. Consistent baseline configurations are already enforced through the policy driven approach and RBAC.
+-   Do not restrict application teams to use central artefacts or approaches as it hinders agility. Consistent baseline configurations are already enforced through the policy driven approach and RBAC.
 
-- Do not force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources.
+-   Do not force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources.
 
-## 2. Define central and federated responsibilities
+## 2. Define Central and Federated Responsibilities
 
 The distribution of roles, responsibilities, and trust between central IT teams and applications teams is paramount to the operational transformation customers must undergo when adopting the cloud at scale.
 
-**Design considerations:**
+***Design Considerations***
 
-- Central teams strive to maintain full control whilst application owners seek to maximize agility. The balance between these goals can greatly influence the success of the migration
+-   Central teams strive to maintain full control whilst application owners seek to maximise agility. The balance between these goals can greatly influence the success of the migration
 
-**Design recommendations:**
+***Design Recommendations***
 
-- The list below presents a recommended distribution of responsibilities between central IT and application teams, striving to empower migration/transformation activities with minimal central dependencies while still supporting the centralized governance of security and operability across the entire estate.
+-   The list below presents a recommended distribution of responsibilities between central IT and application teams, striving to empower migration/transformation activities with minimal central dependencies, while still supporting the centralised governance of security and operability across the entire estate.
 
-- **Application functions**
+-   **Application Functions**
 
-    - Application migration and/or transformation
+    -   Application migration and/or transformation.
 
-    - Application management and monitoring (app resources)
+    -   Application management and monitoring (app resources).
 
-    - Key management (app keys)
+    -   Key management (app keys).
 
-    - Role-based access control (app resources)
+    -   Role based access control (app resources).
 
-    - Security monitoring and audit (app resources)
+    -   Security monitoring and audit (app resources).
 
-    - Cost Management (app resources)
+    -   Cost Management (app resources).
 
-    - Network management (app resources)
+    -   Network Management (app resources).
 
-- **Central functions**
+-   **Central Functions**
 
-    - Architecture governance
+    -   Architecture governance.
 
-    - Subscription management
+    -   Subscription management.
 
-    - “Platform as code” (management of templates, scripts, and other assets)
+    -   "Platform as Code" (management of templates, scripts and other assets).
 
-    - Policy management and enforcement (holistic)
+    -   Policy management and enforcement (holistic).
 
-    - Platform management and monitoring (holistic)
+    -   Platform management and monitoring (holistic).
 
-    - Role-based access control (holistic)
+    -   Role based access control (holistic).
 
-    - Key management (central services)
+    -   Key Management (central services).
 
-    - Network management (networks, NVAs, etc.)
+    -   Network management (networks, NVAs, etc.).
 
-    - Security monitoring and audit (holistic)
+    -   Security monitoring and audit (holistic).
 
-    - Cost management (holistic)
+    -   Cost Management (holistic).
 
-> Ultimately, if the design recommendations discussed within this guide are followed, a **DevOps model on Azure could provide both the desired control for central teams as well as the migration agility required by application teams, without compromise.**
-
-## Next steps
-
-Review the [implementation guide](./implementation-guide.md)
-
-> [!div class="nextstepaction"]
-> [Implementation Guide](./implementation-guide.md)
+> Ultimately, if the design recommendations discussed within this playbook are followed, a **DevOps model on Azure could provide both the desired control for central teams as well as the migration agility required by application teams, without compromise.**
