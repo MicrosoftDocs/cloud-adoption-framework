@@ -88,16 +88,6 @@ class TestLog
     }
 
     [void] static WriteSuperVerbose(
-        [string[]] $outputItems
-    )
-    {
-        foreach ($item in $outputItems)
-        {
-            [TestLog]::WriteSuperVerbose($item)
-        }
-    }
-
-    [void] static WriteSuperVerbose(
         [string] $output
     )
     {
@@ -134,6 +124,14 @@ class TestLog
     )
     {
         [TestLog]::WriteLine($output, 'Gray', $false)
+    }
+
+    [void] static WriteLine(
+        [string] $output,
+        [System.ConsoleColor] $color
+    )
+    {
+        [TestLog]::WriteLine($output, $color, $false)
     }
 
     [void] static WriteLine(

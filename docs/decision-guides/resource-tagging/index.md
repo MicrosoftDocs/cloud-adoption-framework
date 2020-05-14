@@ -10,8 +10,6 @@ ms.subservice: decision-guide
 ms.custom: governance
 ---
 
-<!--docsTest:disable - TODO -->
-
 <!-- cSpell:ignore catalogsearch northamerica jsmith contactalias catsearchowners businessprocess businessimpact revenueimpact -->
 
 # Resource naming and tagging decision guide
@@ -70,15 +68,17 @@ As part of your planning process, use the following questions to help determine 
 The common tagging patterns listed below provide examples of how tagging can be used to organize cloud assets. These patterns are not meant to be exclusive and can be used in parallel, providing multiple ways of organizing assets based on your company's needs.
 
 <!-- markdownlint-disable MD033 -->
+<!-- docsTest:disable -->
 
 | Tag type | Examples | Description |
 |-----|-----|-----|
-| Functional | app&nbsp;=&nbsp;catalogsearch1 <br> tier&nbsp;=&nbsp;web <br> webserver&nbsp;=&nbsp;apache <br> env&nbsp;=&nbsp;prod <br> env&nbsp;=&nbsp;staging <br> env&nbsp;=&nbsp;dev | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details |
-| Classification | confidentiality&nbsp;=&nbsp;private <br> SLA&nbsp;=&nbsp;24hours | Classifies a resource by how it is used and what policies apply to it |
-| Accounting | department&nbsp;=&nbsp;finance <br> program&nbsp;=&nbsp;business-initiative <br> region&nbsp;=&nbsp;northamerica | Allows a resource to be associated with specific groups within an organization for billing purposes |
-| Partnership | owner&nbsp;=&nbsp;jsmith <br> contactalias&nbsp;=&nbsp;catsearchowners <br> stakeholders&nbsp;=&nbsp;user1;user2;user3 | Provides information about what people (outside of IT) are related or otherwise affected by the resource |
-| Purpose | businessprocess&nbsp;=&nbsp;support <br> businessimpact&nbsp;=&nbsp;moderate <br> revenueimpact&nbsp;=&nbsp;high | Aligns resources to business functions to better support investment decisions |
+| Functional | app&nbsp;=&nbsp;catalogsearch1 <br> tier&nbsp;=&nbsp;web <br> webserver&nbsp;=&nbsp;apache <br> env&nbsp;=&nbsp;prod <br> env&nbsp;=&nbsp;staging <br> env&nbsp;=&nbsp;dev | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |
+| Classification | confidentiality&nbsp;=&nbsp;private <br> SLA&nbsp;=&nbsp;24hours | Classifies a resource by how it is used and what policies apply to it. |
+| Accounting | department&nbsp;=&nbsp;finance <br> program&nbsp;=&nbsp;business-initiative <br> region&nbsp;=&nbsp;northamerica | Allows a resource to be associated with specific groups within an organization for billing purposes. |
+| Partnership | owner&nbsp;=&nbsp;jsmith <br> contactalias&nbsp;=&nbsp;catsearchowners <br> stakeholders&nbsp;=&nbsp;user1;user2;user3 | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
+| Purpose | businessprocess&nbsp;=&nbsp;support <br> businessimpact&nbsp;=&nbsp;moderate <br> revenueimpact&nbsp;=&nbsp;high | Aligns resources to business functions to better support investment decisions. |
 
+<!-- docsTest:enable -->
 <!-- markdownlint-enable MD033 -->
 
 ## Learn more

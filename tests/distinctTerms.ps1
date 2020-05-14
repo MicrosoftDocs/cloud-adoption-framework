@@ -5,8 +5,8 @@ $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 . "$here\Test-Helpers.ps1"
 . "$here\Test-Paths.ps1"
 
-# $exp = '(?:\b[a-z]+ )((?:[A-Z][A-z]+\b ?){2})(?![A-Z])'
-$exp = '((?:\b[A-Z][A-z]+\b.){2,}|(?:\b[A-Z]{2,}\b))'
+# $exp = '(?:\b[a-z]+ )((?:[A-Z][A-Za-z]+\b ?){2})(?![A-Z])'
+$exp = '((?:\b[A-Z][A-Za-z]+\b.){2,}|(?:\b[A-Z]{2,}\b))'
 $distinct = [System.Collections.Generic.HashSet[string]]::new()
 
 $files = Get-ContentFiles @()
