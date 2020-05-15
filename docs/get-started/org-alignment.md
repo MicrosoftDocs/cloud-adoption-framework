@@ -40,7 +40,9 @@ After you've documented the answers to these questions, see [plans for skills re
 
 ## Step 3: Determine how teams align within your organization
 
-The following organizational structures don't necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile matrix organization, these structures might be best represented as virtual teams (v-teams). There's nothing to suggest that v-teams couldn't be represented in an org chart, but a formal org chart isn't necessary to produce an effective operating model.
+The following organizational structures don't necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. 
+
+In an agile matrix organization, these structures might be best represented as virtual teams (v-teams). There's nothing to suggest that v-teams couldn't be represented in an org chart, but a formal org chart isn't necessary to produce an effective operating model.
 
 Determine how the following models fit your organizational structures:
 
@@ -59,7 +61,7 @@ To help create balance across cloud adoption efforts, we recommend that you star
 
 ![Diagram of cloud adoption with cloud governance counterbalance](../_images/ready/org-ready-best-practice.png)
 
-This proven approach is considered an MVP because it might not be sustainable. Each team wears many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](../organize/raci-alignment.md).
+This proven approach is considered an MVP because it might not be sustainable. Each team wears many hats, as outlined in the [*responsible, accountable, consulted, and informed* (RACI) charts](../organize/raci-alignment.md).
 
 As adoption needs grow, so does the need to create balance and structure. To meet those needs, companies often follow a process of maturing their organizational structures.
 
