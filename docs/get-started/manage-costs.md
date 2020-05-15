@@ -40,7 +40,7 @@ These deliverables are the result of a few recurring tasks:
 
 **Guidance to support deliverable completion:**
 
-- Ensure all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags) with a specific emphasis on tags for "cost center" and "technical owner."
+- Ensure that all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags) with a specific emphasis on tags for "cost center" and "technical owner."
 - On a regular basis, review and apply [cost management best practices](../govern/cost-management/best-practices.md) to guide analysis and improvements across the enterprise. Here are a few of the most impactful governance practices:
 
   - Act on [general cost best practices](../govern/cost-management/best-practices.md) to reduce sizing and costs and to stop unused machines.
@@ -117,7 +117,7 @@ The Ready methodology of the Microsoft Cloud Adoption Framework for Azure focuse
 **Deliverables:**
 
 - Deploy one or more landing zones that can host workloads in the short-term adoption plan.
-- Ensure all landing zones meet cost optimization decisions and cost management requirements.
+- Ensure that all landing zones meet cost optimization decisions and cost management requirements.
 
 **Guidance to support deliverable completion:**
 
@@ -147,7 +147,7 @@ Migration is a repeatable process executed by the cloud adoption team. Throughou
 - [Migration-focused cost-control mechanisms](../migrate/azure-migration-guide/manage-costs.md) provides insights about the cloud-native cost optimization controls that help during migration.
 - [Best practices for optimizing cost of migrated workloads](../migrate/azure-best-practices/migrate-best-practices-costs.md) contains a checklist of 14 best practices to follow before and after migration to maximize cost optimization of each workload release.
 
-Long-term operational costs are a common theme in each area of migration process improvements. This list of process improvements is organized by the phase of the migration process.
+Long-term operational costs are a common theme in each area of migration process improvements. This list of process improvements is organized by the phase of the migration process:
 
 - [Prerequisites](../migrate/migration-considerations/prerequisites/index.md) provides information on managing change and the backlog, which influences both budgeted and actual cloud costs.
 - [Assess](../migrate/migration-considerations/assess/index.md) provides six specific processes, from validating assumptions to understanding partner options. Each process influences cloud optimization opportunities.

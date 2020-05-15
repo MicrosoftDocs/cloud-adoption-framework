@@ -102,7 +102,7 @@ Successful programs incorporate these elements into their security strategy proc
 
 - **Modernize security strategy:** The security strategy should include considerations for all aspects of modern technology environment, current threat landscape, and security community resources.
   - **Adapt to the shared responsibility model** of the cloud.
-  - **Include all cloud types and multicloud deployments.**
+  - **Include all cloud types and multicloud deployments**.
   - **Prefer native cloud controls** to avoid unnecessary and harmful friction.
   - **Integrate the security community** to keep up with the pace of attacker evolution.
 
