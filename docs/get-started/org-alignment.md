@@ -22,7 +22,7 @@ The following list outlines the minimum functionality that's required for your o
 - [Cloud operations functions](../organize/cloud-operations.md) support and operate adopted solutions.
 - [Cloud center of excellence (CCoE) functions](../organize/cloud-center-of-excellence.md) improve quality, speed, and resiliency of adoption.
 - [Cloud governance functions](../organize/cloud-governance.md) manage risk.
-- [Cloud platform functions](../organize/cloud-platform.md) operate and further the maturity the platform.
+- [Cloud platform functions](../organize/cloud-platform.md) operate and mature the platform.
 - [Cloud automation functions](../organize/cloud-automation.md) accelerate adoption and innovation.
 - [Cloud security functions](../organize/cloud-security.md) manage security risks.
 
@@ -40,7 +40,7 @@ After you've documented the answers to these questions, see [plans for skills re
 
 ## Step 3: Determine how teams align within your organization
 
-The following organizational structures don't necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile matrix organization, these structures might be best represented as virtual teams (or v-teams). There's nothing to suggest that v-teams couldn't be represented in an org chart, but a formal org chart isn't necessary to produce an effective operating model.
+The following organizational structures don't necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile matrix organization, these structures might be best represented as virtual teams (v-teams). There's nothing to suggest that v-teams couldn't be represented in an org chart, but a formal org chart isn't necessary to produce an effective operating model.
 
 Determine how the following models fit your organizational structures:
 
@@ -52,22 +52,22 @@ Determine how the following models fit your organizational structures:
 
 During every cloud adoption effort, certain functions must be provided by at least one person. These assignments and team structures can develop organically, or they can be intentionally designed to match a defined team structure.
 
-We recommend that you start with a minimum of two teams to create balance across cloud adoption efforts. These two teams are responsible for various functions throughout the adoption effort.
+To help create balance across cloud adoption efforts, we recommend that you start with a minimum of two teams. The following two teams are responsible for various functions throughout the adoption effort:
 
 - **Cloud adoption team:** This team is accountable for technical solutions, business alignment, project management, and operations for the solutions that are adopted.
 - **Cloud governance team:** To balance the cloud adoption team, a cloud governance team is dedicated to ensuring excellence in the solutions that are adopted. The cloud governance team is accountable for platform maturity, platform operations, governance, and automation.
 
 ![Diagram of cloud adoption with cloud governance counterbalance](../_images/ready/org-ready-best-practice.png)
 
-This proven approach is considered an MVP because it might not be sustainable. Each team is wearing many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](../organize/raci-alignment.md).
+This proven approach is considered an MVP because it might not be sustainable. Each team wears many hats, as outlined in the [*responsible, accountable, consulted, informed* (RACI) charts](../organize/raci-alignment.md).
 
-As adoption needs grow, so does the need to create balance and structure. To meet those needs, companies often follow a process of maturing organizational structures.
+As adoption needs grow, so does the need to create balance and structure. To meet those needs, companies often follow a process of maturing their organizational structures.
 
 ![Diagram of an organizational maturity cycle](../_images/ready/org-ready-maturity.png)
 
 ## Step 5: Align RACI charts
 
-At each level of maturity, accountability for various cloud functions shifts to new teams. This shifting of accountability enables faster migration and innovation cycles by removing and automating barriers to change. To align assignments properly, the [RACI alignment](../organize/raci-alignment.md) article shares a RACI chart for each of the referenced organizational structures.
+At each level of maturity, accountability for various cloud functions shifts to new teams. This shifting of accountability enables faster migration and innovation cycles by removing and automating barriers to change. To align assignments properly, the [RACI alignment](../organize/raci-alignment.md) article displays a RACI chart for each of the referenced organizational structures.
 
 ## Additional information
 
