@@ -17,9 +17,9 @@ Security helps create assurances of confidentiality, integrity, and availability
 
 This getting-started guide outlines the key steps that will mitigate or avoid the business risk from cybersecurity attacks. It can help you rapidly establish essential security practices in the cloud and integrate security into your cloud adoption process.
 
-The steps in this guide are intended for all roles that support security assurances of cloud environments and landing zones. Tasks include immediate risk mitigation priorities, guidance on building a modern security strategy, operationalizing the approach, and executing on that strategy.
+The steps in this guide are intended for all roles that support security assurances for cloud environments and landing zones. Tasks include immediate risk mitigation priorities, guidance on building a modern security strategy, operationalizing the approach, and executing on that strategy.
 
-Various elements from across the Microsoft Cloud Adoption Framework for Azure are included in this guide:
+This guide includes elements from across the Microsoft Cloud Adoption Framework for Azure:
 
 ![Get started with enterprise security](../_images/get-started/security-map.png)
 
@@ -69,7 +69,7 @@ In addition to meeting any explicit regulatory compliance requirements, we recom
 During this initial step, governance teams should also start coordinating the creation of security baselines that can be monitored, managed, and enforced across environments. Additional guidance on building this is discussed later in step 4.
 
 > [!NOTE]
-> Each organization should define its own minimum standards. Risk posture and subsequent tolerance to that risk can vary widely based on industry, culture, and other factors. For example, a bank might not tolerate any potential damage to their reputation from even a minor attack on a test system. Some organizations would gladly accept that same risk if it accelerated their digital transformation by three to six months.
+> Each organization should define its own minimum standards. Risk posture and subsequent tolerance to that risk can vary widely based on industry, culture, and other factors. For example, a bank might not tolerate any potential damage to its reputation from even a minor attack on a test system. Some organizations would gladly accept that same risk if it accelerated their digital transformation by three to six months.
 
 ## Step 2: Modernize the security strategy
 
@@ -83,8 +83,8 @@ The strategy step should result in a document that can easily be communicated to
 
 We recommended capturing the strategy in a presentation to facilitate easy discussion and updating. This presentation can be supported with a document, depending on the culture and preferences.
 
-- **Strategy presentation:** You might have a single strategy presentation, or you might choose to also create a summary version for leadership audiences.
-  - **Full presentation:** This should include the full set of elements for the security strategy in either the main presentation or in optional reference slides.
+- **Strategy presentation:** You might have a single strategy presentation, or you might choose to also create summary versions for leadership audiences.
+  - **Full presentation:** This should include the full set of elements for the security strategy in the main presentation or in optional reference slides.
   - **Executive summaries:** Versions to use with senior executives and board members might contain only critical elements relevant to their role, such as risk appetite, top priorities, or accepted risks.
 - You can also record motivations, outcomes, and business justifications in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
 
@@ -95,7 +95,7 @@ Successful programs incorporate these elements into their security strategy proc
 - **Align closely to business strategy:** Security's charter is to protect business value. It's critical to align all security efforts to that purpose and minimize internal conflict.
   - **Build a shared understanding** of business, IT, and security requirements.
   - **Integrate security early into cloud adoption** to avoid last-minute crises from avoidable risks.
-  - **Use an Agile approach** to immediately establish minimum security requirements and continuously improve security assurances over time.
+  - **Use an agile approach** to immediately establish minimum security requirements and continuously improve security assurances over time.
   - **Encourage security culture change** through intentional proactive leadership actions.
 
   For more information, see [Transformations, mindsets, and expectations](../strategy/define-security-strategy.md#transformations-mindsets-and-expectations).
@@ -104,7 +104,7 @@ Successful programs incorporate these elements into their security strategy proc
   - **Adapt to the shared responsibility model** of the cloud.
   - **Include all cloud types and multicloud deployments.**
   - **Prefer native cloud controls** to avoid unnecessary and harmful friction.
-  - **Security community integration** to keep up with the pace of attacker evolution.
+  - **Integrate the security community** to keep up with the pace of attacker evolution.
 
 **Related resources for additional context:**
 
@@ -160,8 +160,8 @@ Security planning and cloud adoption planning should not be done in isolation. I
 Your security plan is likely to be more successful if your planning takes the approach of:
 
 - **Assume a hybrid environment:** That includes software as a service (SaaS) applications and on-premises environments. It also includes multiple cloud infrastructure as a service (IaaS) and platform as a service (PaaS) providers, if applicable.
-- **Adopt Agile security:** Establish minimum security requirements first and move all noncritical items to a prioritized list of next steps.
-This should not be a traditional, detailed 3-5 year plan. The cloud and threat environment change too fast to make that type of plan useful. Your plan should focus on developing the beginning steps and end state:
+- **Adopt agile security:** Establish minimum security requirements first and move all noncritical items to a prioritized list of next steps.
+This should not be a traditional, detailed plan of 3-5 years. The cloud and threat environment change too fast to make that type of plan useful. Your plan should focus on developing the beginning steps and end state:
   - **Quick wins** for the immediate future that will deliver a high impact before longer-term initiatives begin. The time frame can be 3-12 months, depending on organizational culture, standard practices, and other factors.
   - **Clear vision** of the desired end state to guide each team's planning process (which might take multiple years to achieve).
 - **Share the plan broadly:** Increase awareness of, feedback from, and buy-in by stakeholders.
@@ -170,7 +170,7 @@ This should not be a traditional, detailed 3-5 year plan. The cloud and threat e
 - **Connect with the human side of security:** Engage people during this period of transformation and new expectations by:
   - **Actively supporting team member transformation** with clear communication and coaching on:
     - What skills they need to learn.
-    - Why they need to learn them (and the benefits of doing so).
+    - Why they need to learn the skills (and the benefits of doing so).
     - How to get this knowledge (and provide resources to help them learn).
   
     You can document the plan by using the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx). And you can use [online Microsoft security training](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction) to help with education of your team members.
@@ -191,13 +191,13 @@ The security leadership team (CISO or equivalent) should approve the plan.
 
 ## Step 4: Secure new workloads
 
-It's a lot easier to start in a secure state than to retrofit security later into your environment. We strongly recommend starting with a secure configuration to ensure that workloads are migrated, to and developed and tested in, a secure environment.
+It's a lot easier to start in a secure state than to retrofit security later into your environment. We strongly recommend starting with a secure configuration to ensure that workloads are migrated to, and developed and tested in, a secure environment.
 
 During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone) implementation, many decisions can affect security and risk profiles. The cloud security team should review the landing zone configuration to ensure that it meets the security standards and requirements in your organization's security baselines.
 
 **Deliverables:**
 
-- Ensure new landing zones meet the organization's compliance and security requirements.
+- Ensure that new landing zones meet the organization's compliance and security requirements.
 
 **Guidance to support deliverable completion:**
 
@@ -212,7 +212,7 @@ During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/
   Microsoft provides several native capabilities in Azure to enable this:
   - [Secure score](https://docs.microsoft.com/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.
   - [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview): Cloud architects and central IT groups can define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements.
-  - [Azure Policy](https://docs.microsoft.com/azure/governance/policy/): This is the foundation of the visibility and control capabilities used by the other services. Azure Policy is integrated into [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
+  - [Azure Policy](https://docs.microsoft.com/azure/governance/policy/): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
 - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 
 <!-- markdownlint-disable MD033 -->
@@ -224,7 +224,7 @@ During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/
 
 ## Step 5: Secure existing cloud workloads
 
-Many organizations have already deployed assets to enterprise cloud environments that did not apply the security best practices, creating increased business risk.
+Many organizations have already deployed assets to enterprise cloud environments without applying the security best practices, creating increased business risk.
 
 After you ensure that new applications and landing zones follow security best practices, you should focus on bringing existing environments up to the same standards.
 
@@ -236,9 +236,9 @@ After you ensure that new applications and landing zones follow security best pr
 
 **Guidance to support deliverable completion:**
 
-- Use the same security baselines that you built in [Step 4](#step-4-secure-new-workloads) as your ideal state. You might have to adjust some policy settings to only audit instead of enforcing them.
+- Use the same security baselines that you built in [step 4](#step-4-secure-new-workloads) as your ideal state. You might have to adjust some policy settings to only audit instead of enforcing them.
 - Balance operational and security risk. Because these environments might host production systems that enable critical business processes, you might need to implement security improvements incrementally to avoid risking operational downtime.
-- Prioritize the discovery and remediation of security risk by business criticality. Start with workloads that have a high business impact if compromised and workloads with a high exposure to risk.
+- Prioritize the discovery and remediation of security risk by business criticality. Start with workloads that have a high business impact if compromised and workloads that have a high exposure to risk.
 
 For more information, see [Identify and classify business-critical applications](https://docs.microsoft.com/azure/architecture/framework/security/applications-services?toc=/security/compass/toc.json&bc=/security/compass/breadcrumb/toc.json#identify-and-classify-business-critical-applications).
 
@@ -258,7 +258,7 @@ Consistent application of security requirements comes from sound governance disc
 **Deliverables:**
 
 - Ensure that the organization's security baselines are applied to all relevant systems. Audit anomalies by using a [secure score](https://docs.microsoft.com/azure/security-center/secure-score-security-controls) or a similar mechanism.
-- Document Security Baseline policies, processes, and design guidance in the [Security Baseline Discipline template](../govern/security-baseline/template.md).
+- Document security baseline policies, processes, and design guidance in the [Security Baseline Discipline template](../govern/security-baseline/template.md).
 
 **Guidance to support deliverable completion:**
 
@@ -278,8 +278,8 @@ Consistent application of security requirements comes from sound governance disc
 The steps in this guide have helped you implement the strategy, controls, processes, skills, and culture needed to consistently manage security risks across the enterprise.
 As you continue into the operations mode of cloud security, consider these next steps:
 
-- Review [Microsoft security documentation](https://docs.microsoft.com/security) that provides technical guidance to help security professionals build and improve cybersecurity strategy, architecture, and prioritized roadmaps.
-- Review security information for [Azure services built-in security controls](https://docs.microsoft.com/azure/security/fundamentals/security-controls).
+- Review [Microsoft security documentation](https://docs.microsoft.com/security). It provides technical guidance to help security professionals build and improve cybersecurity strategy, architecture, and prioritized roadmaps.
+- Review security information in [Built-in security controls for Azure services](https://docs.microsoft.com/azure/security/fundamentals/security-controls).
 - Review Azure security tools and services in [Security services and technologies available on Azure](https://docs.microsoft.com/azure/security/azure-security-services-technologies).
-- Review the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment) as it contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your regulatory compliance processes.
-- Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-partner-integration).
+- Review the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment). It contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your regulatory compliance processes.
+- Review third-party tools available to facilitate meeting your security requirements. See [Integrate security solutions in Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-partner-integration).
