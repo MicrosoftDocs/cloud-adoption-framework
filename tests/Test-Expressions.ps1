@@ -91,7 +91,7 @@ function Get-PunctuationExpressions
         "(?<!vs)[\.\?!] [\[\(]?[a-z]"       # Capitalize sentences
         "(?i)[a-z] {2,}[a-z]"               # One space between words
         "(?<=[a-z])\.  (?=[A-Z])"           # Use only one space after a sentence
-        "[\.\?!\)]  [A-z]"                  # Use only one space after a sentence
+        "[\.\?!\)] {2,}[A-Za-z]"            # Use only one space after a sentence
         "^ *\*\s"                           # Use hyphens for bullet lists
         "^[^#-].*vs\."                      # Use "versus" in non-headings
         "\)(?![\.\?,:_\*\]\\ \r\n])"        # Include space after parentheses.

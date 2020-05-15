@@ -47,7 +47,7 @@ highlightedContent:
 # productDirectory section (optional)
 productDirectory:
   title: Cloud Adoption Framework guidance # < 60 chars (optional)
-  summary: This guidance aligns to the phases of the cloud adoption lifecycle, ensuring easy access to the right guidance at the right time. # < 160 Chars (optional)
+  summary: This guidance aligns to the phases of the cloud adoption lifecycle, ensuring easy access to the right guidance at the right time. # < 160 chars (optional)
   items:
     # Card
     - title: "Get started"
@@ -161,7 +161,7 @@ productDirectory:
 # tools section (optional)
 tools:
   title: Build your skills with Microsoft Learn
- # < 60 Chars (optional)
+ # < 60 chars (optional)
   summary: Learn more about Azure and the Cloud Adoption Framework by completing the following Microsoft Learn modules.
   items:
     # Card
@@ -182,7 +182,7 @@ tools:
 conceptualContent:
 # itemType: architecture, concept, deploy, download, get-started, how-to-guide, learn, overview, quickstart, reference, sample, tutorial, video, whats-new
   title: Assessments # < 60 chars (optional)
-  summary: Assessments help you plan your cloud journey. Use them to identify differences between your current and desired states. We'll provide personalized, curated recommendations to help you reach your desired state. # < 160 Chars (optional)
+  summary: Assessments help you plan your cloud journey. Use them to identify differences between your current state and your desired state. We'll provide personalized, curated recommendations to help you reach your desired state. # < 160 chars (optional)
   items:
     # Card
     - title: Cloud journey tracker
@@ -215,8 +215,7 @@ additionalContent:
   # Supports up to 3 sections
   sections:
     - title: Find support  # < 60 chars (optional)
-      summary: If you're blocked in your cloud adoption journey, Microsoft has dedicated resources to help you get unblocked.
- # < 160 Chars (optional)
+      summary: If you're blocked in your cloud adoption journey, Microsoft has dedicated resources to help you get unblocked.  # < 160 chars (optional)
       items:
         # Card
         - title: FastTrack for Azure

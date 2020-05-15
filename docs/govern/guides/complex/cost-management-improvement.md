@@ -26,7 +26,7 @@ In the previous phase of this narrative, the IT team was actively moving product
 
 Since then, some things have changed that will affect governance:
 
-- 5,000 Assets have been removed from the two datacenters flagged for retirement. Procurement and IT security are now deprovisioning the remaining physical assets.
+- 5,000 assets have been removed from the two datacenters flagged for retirement. Procurement and IT security are now deprovisioning the remaining physical assets.
 - The application development teams have implemented CI/CD pipelines to deploy some cloud-native applications, significantly affecting customer experiences.
 - The BI team has created aggregation, curation, insight, and prediction processes driving tangible benefits for business operations. Those predictions are now empowering creative new products and services.
 

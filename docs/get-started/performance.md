@@ -25,7 +25,7 @@ The operations management baseline, outlined in the Cloud Adoption Framework, pr
 
 - Enhance the management baseline to include automated remediation tasks related to deviations from performance expectations.
 - When workload specific data patterns or architecture changes are needed to meet performance requirements, workload specific operations can provide greater performance controls.
-- Document operational decisions across the IT portfolio in the [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) with a focus on including performance automation decisions in the "operational compliance" section of the "baseline" tab.
+- Document operational decisions across the IT portfolio in the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) with a focus on including performance automation decisions in the "operational compliance" section of the "baseline" tab.
 
 **Guidance to support deliverable completion:**
 
@@ -140,7 +140,7 @@ Long-term operations might be affected by the decisions made during migration an
 
 - Test operational readiness of production deployments using Resource Consistency policies.
 - Validate adherence to resource consistency design guidance and operations requirements.
-- Document any advanced operations requirements in the [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx).
+- Document any advanced operations requirements in the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx).
 
 **Guidance to support deliverable completion:**
 

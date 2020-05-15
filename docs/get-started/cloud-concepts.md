@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Get started: Understand and document foundational alignment decisions
 
-The cloud adoption journey can unlock many business, technical, and organizational benefits. Whatever you want to accomplish, if your journey involves the cloud, there are a few initial decisions that every team involved should understand. As you work through this guide, record those decisions by using the [initial decision template](https://raw.githubusercontent.com/microsoft/cloudadoptionframework/master/references/initial-decisions-checklist.docx). The template can help you quickly onboard team members who participate in the cloud adoption lifecycle.
+The cloud adoption journey can unlock many business, technical, and organizational benefits. Whatever you want to accomplish, if your journey involves the cloud, there are a few initial decisions that every team involved should understand. As you work through this guide, record those decisions by using the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx). The template can help you quickly onboard team members who participate in the cloud adoption lifecycle.
 
 > [!NOTE]
 > Selecting any of the following links might lead you to bounce around the table of contents for the Microsoft Cloud Adoption Framework for Azure, looking for fundamental concepts that you'll use later to help the team implement the associated guidance. Bookmark this page to come back to this checklist often.
@@ -38,12 +38,12 @@ Whatever cloud provider you choose, all cloud hosting and environmental decision
 
 **Deliverables:**
 
-- Record the location, status, and accountable person for the portfolio documentation in the [initial decision template](https://raw.githubusercontent.com/microsoft/cloudadoptionframework/master/references/initial-decisions-checklist.docx).
+- Record the location, status, and accountable person for the portfolio documentation in the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx).
 
 **Guidance to support deliverable completion:**
 
 - [Fundamental concepts](../ready/considerations/fundamental-concepts.md) help you understand key Azure topics before you begin your cloud adoption.
-- The [operations management workbook](https://raw.githubusercontent.com/microsoft/cloudadoptionframework/master/manage/opsmanagementworkbook.xlsx) and business alignment approach help you understand the workloads and assets that have been transitioned to a cloud operations team.
+- The [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) and business alignment approach help you understand the workloads and assets that have been transitioned to a cloud operations team.
 - The [cloud adoption plan](../plan/plan-intro.md) provides a backlog of the workloads and assets that are slated for adoption in the cloud.
 - [Digital estate analysis](../digital-estate/approach.md) is an approach to documenting existing workloads and assets that are slated for adoption in the cloud. In Azure, the digital estate is best represented in a tool called [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-support-matrix).
 
@@ -60,7 +60,7 @@ Hosting assets and workloads in the cloud can be simple, consisting of a single 
 
 **Deliverables:**
 
-- Record the relevant hierarchy needs in the [initial decision template](https://raw.githubusercontent.com/microsoft/cloudadoptionframework/master/references/initial-decisions-checklist.docx).
+- Record the relevant hierarchy needs in the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx).
 
 **Guidance to support deliverable completion:**
 
@@ -79,7 +79,7 @@ All existing workloads and assets should be properly named and tagged in accorda
 
 **Deliverables:**
 
-- Record the location, status, and accountable party for the naming and tagging conventions workbook in the [initial decision template](https://raw.githubusercontent.com/microsoft/cloudadoptionframework/master/references/initial-decisions-checklist.docx).
+- Record the location, status, and accountable party for the naming and tagging conventions workbook in the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx).
 
 **Guidance to support deliverable completion:**
 
@@ -101,7 +101,7 @@ To ensure consistent alignment with the portfolio hierarchy decisions, it's impo
 
 **Deliverables:**
 
-- Map Azure products to the aligned level of the portfolio hierarchy in the [initial decision template](https://raw.githubusercontent.com/microsoft/cloudadoptionframework/master/references/initial-decisions-checklist.docx).
+- Map Azure products to the aligned level of the portfolio hierarchy in the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx).
 
 **Guidance to support deliverable completion:**
 

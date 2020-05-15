@@ -9,7 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-<!-- cSpell:ignore CAF -->
 <!-- markdownlint-disable MD024 -->
 
 # What's new in the Microsoft Cloud Adoption Framework for Azure

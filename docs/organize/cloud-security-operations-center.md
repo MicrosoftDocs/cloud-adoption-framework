@@ -1,6 +1,6 @@
 ---
-title: Functions of a cloud security operations center
-description: Understand the capabilities needed for cloud security
+title: Cloud SOC functions
+description: Understand cloud security operations center (SOC) functions.
 author: JanetCThomas
 ms.author: janet
 ms.service: cloud-adoption-framework
@@ -11,7 +11,7 @@ ms.date: 04/30/2020
 
 <!-- cSpell:ignore CISO MTTA MTTR SIEM NIST SOCs CDOC -->
 
-# Functions of a cloud security operations center (SOC)
+# Cloud SOC functions
 
 The main objective of a cloud security operations center (SOC) is to detect, respond to, and recover from active attacks on enterprise assets.
 

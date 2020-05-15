@@ -27,7 +27,7 @@ All workloads are not created equal. In any environment, there are workloads tha
 - Negotiate business commitments with the cloud strategy team to develop a plan for advanced operations and resiliency requirements.
 - Expand your management baseline, if additional operations are required for the majority of workloads.
 - Apply advanced operations requirements to landing zones and resources that support higher criticality workloads.
-- Document operations decisions across the IT portfolio in the [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx).
+- Document operations decisions across the IT portfolio in the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx).
 
 **Guidance to support deliverable completion:**
 
@@ -151,7 +151,7 @@ Long-term operations can be affected by the decisions made during migration and 
 
 - Test operational readiness of production deployments using Resource Consistency policies.
 - Validate adherence to resource consistency design guidance and operations requirements.
-- Document any advanced operations requirements in the [operations management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx).
+- Document any advanced operations requirements in the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx).
 
 **Guidance to support deliverable completion:**
 

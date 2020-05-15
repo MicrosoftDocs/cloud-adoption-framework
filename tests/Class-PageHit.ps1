@@ -19,10 +19,10 @@ class PageHitCollection
     {
         $this.Hits = [List[PageHit]]::new()
         $this.LinkRange = [HashSet[int]]::new()
-        $this.MetadataRange = [HashSet[int]]::new()
 
-        $this.PageCodeBlocks = [List[PageCodeBlock]]::new()
-        
+        $this.CodeBlocks = [List[PageBlock]]::new()
+        $this.DisabledBlocks = [List[PageBlock]]::new()
+
         $metadataStart = $text.IndexOf("landingContent:")
         $metadataEnd = 0
 
@@ -42,16 +42,45 @@ class PageHitCollection
             }
         }
 
-        $metadataStart..$metadataEnd `
-            | ForEach-Object { $this.MetadataRange.Add($_) }
+        $m = [Regex]::Match($text, '(?s)(?:description: .+?\r?\n)(.*?(?:---|highlightedContent:))')
+        $this.MetadataBlock = [PageBlock]::new($m)
 
-        $m = [Regex]::Match($text, '(?s)(?:description: .+?\r?\n)(.*?---)')
-        $this.MetadataBlock = [PageCodeBlock]::new($m)
-            
-        $codeMatches = [Regex]::Matches($text, '((?s)```.*?```)')
-        foreach ($m in $codeMatches)
+        $m = [Regex]::Matches($text, '((?s)```.*?```)')
+        foreach ($match in $m)
         {
-            $this.PageCodeBlocks.Add([PageCodeBlock]::new($m))
+            $this.CodeBlocks.Add([PageBlock]::new($match))
+        }
+
+        $startIndex = -1
+        $m = [Regex]::Matches($text, '(?s)<!-- *docsTest:(disable|enable) .*?-->')
+        foreach ($match in $m)
+        {
+            $setting = $match.Groups[1].Value
+            $endIndex = $match.Index + $match.Length
+
+            if ($setting -eq 'enable') {
+                if ($startIndex -ge 0) {
+                    $this.DisabledBlocks.Add([PageBlock]::new($startIndex, $endIndex))
+                    $startIndex = -1
+                }
+                else {
+                    # Already enabled.
+                }
+            }
+            else
+            {
+                if ($startIndex -lt 0) {
+                    $startIndex = $match.Index
+                }
+                else {
+                    # Already disabled.
+                }
+            }
+        }
+
+        if ($startIndex -ge 0)
+        {
+            $this.DisabledBlocks.Add([PageBlock]::new($startIndex, $text.Length - 1))
         }
 
         foreach ($exp in $this.RuleExpressions)
@@ -60,7 +89,6 @@ class PageHitCollection
             $matchHits = $regex.Matches($text)
             foreach ($m in $matchHits)
             {
-#                if ($this.MetadataRange.Contains($m.Index))
                 if ($this.IsIndexInMetadata($m.Index))
                 {
                     continue
@@ -78,9 +106,9 @@ class PageHitCollection
     hidden [string] $FileExtension
     hidden [List[PageHit]] $Hits
     hidden [Hashset[int]] $LinkRange
-    hidden [Hashset[int]] $MetadataRange
-    hidden [PageCodeBlock] $MetadataBlock
-    hidden [List[PageCodeBlock]] $PageCodeBlocks
+    hidden [PageBlock] $MetadataBlock
+    hidden [List[PageBlock]] $CodeBlocks
+    hidden [List[PageBlock]] $DisabledBlocks
 
     [List[PageHit]] GetHits()
     {
@@ -98,9 +126,9 @@ class PageHitCollection
             -and $index -le ($this.MetadataBlock.Index + $this.MetadataBlock.Length))
     }
 
-    [bool] IsIndexInCodeBlock([int] $index)
+    [bool] IsIndexInDisabledBlock([int] $index)
     {
-        foreach ($block in $this.PageCodeBlocks)
+        foreach ($block in $this.DisabledBlocks)
         {
             if ($index -ge $block.Index -and $index -le ($block.Index + $block.Length))
             {
@@ -111,10 +139,18 @@ class PageHitCollection
         return $false
     }
 
-    # [int[]] GetLinkRange()
-    # {
-    #     return $this.LinkRange
-    # }
+    [bool] IsIndexInCodeBlock([int] $index)
+    {
+        foreach ($block in $this.CodeBlocks)
+        {
+            if ($index -ge $block.Index -and $index -le ($block.Index + $block.Length))
+            {
+                return $true
+            }
+        }
+
+        return $false
+    }
 }
 
 class PageHit
@@ -131,17 +167,15 @@ class PageHit
         $h = $m.Groups[1].Value
         $c = $m.Groups[2].Value.Trim()
         $this.Index = $m.Groups[2].Index
-        $this.Length = $c
+        $this.Length = $c.Length
 
         if ($regex.GetGroupNames() -contains 'sentence') {
             
-            # if ($h -match '^</?$')
-            # {
-            #     $h = $h + (Get-StringBefore $c '>') + '>'
-            #     $c = (Get-StringAfter $c '>')
-            # }
-
-            if ($collection.IsIndexInCodeBlock($m.Index))
+            if ($collection.IsIndexInDisabledBlock($m.Index))
+            {
+                $this.HitType = 'Disabled'
+            }
+            elseif ($collection.IsIndexInCodeBlock($m.Index))
             {
                 $this.HitType = 'CodeBlock'
             }
@@ -172,6 +206,10 @@ class PageHit
             {
                 $this.HitType = 'Callout'  
             }
+            elseif ($h.Trim() -eq '![')
+            {
+                $this.HitType = 'ImageLink'
+            }
             else {
                 $this.HitType = 'Sentence'
                 if ($h -match '^[A-Za-z]$')
@@ -180,7 +218,14 @@ class PageHit
                     $h = ""
                 }
 
-                $m = [Regex]::Match($c.Trim(), '^([a-z][A-z\._]+[:>] ?"?)(.*)')
+                $m = [Regex]::Match($c.Trim(), '(^>? *\d+\. ?[^A-Za-z]*)(.*)')
+                if ($m.Success)
+                {
+                    $h = $m.Groups[1].Value.Trim('"')
+                    $c = $m.Groups[2].Value
+                }
+
+                $m = [Regex]::Match($c.Trim(), '^([a-z][A-Za-z\._]+[:>] ?"?)(.*)')
                 if ($m.Success)
                 {
                     $h = $m.Groups[1].Value.Trim('"')
@@ -261,11 +306,17 @@ class PageHit
     hidden [int[]] $LinkRange
 }
 
-class PageCodeBlock
+class PageBlock
 {
-    PageCodeBlock([Match] $m)
+    PageBlock([Match] $m)
     {
         $this.Initialize($m)
+    }
+
+    PageBlock([int] $startIndex, [int] $endIndex)
+    {
+        $this.Index = $startIndex
+        $this.Length = $endIndex - $startIndex
     }
 
     [void] Initialize([Match] $m)
@@ -284,15 +335,17 @@ Enum HitType
 {
     Link = 1
     LocalLink
+    ImageLink
+    LocalBookmark
     Sentence
     Title
-    Metadata
-    CodeBlock
-    Directive
-    Html
-    TODO
     Callout
+    CodeBlock
+    Html
+    Metadata
+    Directive
     Comment
-    LocalBookmark
+    TODO
+    Disabled
     Unknown = 100
 }

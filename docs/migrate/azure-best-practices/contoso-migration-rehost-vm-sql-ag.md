@@ -198,7 +198,7 @@ Contoso admins create a storage account as follows:
 
 1. They specify a recognizable name for the account (**contosocloudwitness**).
 2. They deploy a general all-purpose account, with LRS.
-3. They place the account in a third region - South Central US. They place it outside the primary and secondary region so that it remains available during regional failure.
+3. They place the account in a third region: South Central US. They place it outside the primary and secondary region so that it remains available during regional failure.
 4. They place it in their resource group that holds infrastructure resources, **ContosoInfraRG**.
 
     ![Cloud witness](./media/contoso-migration-rehost-vm-sql-ag/witness-storage.png)
