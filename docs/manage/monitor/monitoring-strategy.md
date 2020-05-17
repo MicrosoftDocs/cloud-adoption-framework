@@ -169,7 +169,7 @@ Azure Monitor collects, indexes, and analyzes real-time machine and resource-gen
 
 Maturity is an important consideration in your strategy. We recommend you start minimally, gather data and with this information, determine the strategy. The first monitoring solutions you’ll want are those that ensure observability, to include responsive processes, such as Incident and Problem Management. Here, you will be creating one or more Log Analytics workspaces, enabling agents, and setting up initial alerts. Over time, you gain confidence in Azure Monitor capabilities with the need to measure health indicators, so this involves deepening the focus on the collection of logs, using Insights, metrics, and defining the log search queries that drive the measurement and calculation of what is healthy/unhealthy. Learning includes getting monitoring data and Insights into the hands of managers, ensuring the right consumers have monitoring data they need. Learning cycles include continual tuning and optimizing monitoring solutions to adapt, to improve service and inform adoption plans.
 
-<Graphic Image>
+![Monitoring and control strategy](./media/monitoring-strategy/monitoring-and-control-strategy.png)
 
 Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
