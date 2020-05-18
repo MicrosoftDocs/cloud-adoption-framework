@@ -161,7 +161,13 @@ Your monitoring strategy should include these components:
 
 ### Consider business continuity
 
-Azure Monitor collects, indexes, and analyzes real-time machine and resource-generated data to support your operations and help drive business decisions. While Azure Monitor delivers high availability of your 
+Azure Monitor collects, indexes, and analyzes real-time machine and resource-generated data to support your operations and help drive business decisions. Under rare circumstances, it is possible that facilities in an entire region can become inaccessible, for example due to network failures. Or facilities can be lost entirely, for example due to a natural disaster. By relying on these services in the cloud, your planning isn't focused around infrastructure resiliency and high availability, rather its planning for:
+
+* Availability for data ingestion from all your dependent services and resources in Azure, resources in other clouds, and from on-premises.
+
+* Data availability for insights, solutions, workbooks and other visualizations, alerting, integration with ITSM, and other control plane services in Azure supporting your operational requirements.
+
+Create a recovery plan, and make sure that it covers data restoration, network outages, dependent service failures, and region-wide service disruptions.
 
 ### Consider maturity
 
