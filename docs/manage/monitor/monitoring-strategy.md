@@ -171,6 +171,8 @@ Learning includes getting monitoring data and insights into the hands of manager
 
 ![Monitoring and control strategy](./media/monitoring-strategy/monitoring-and-control-strategy.png)
 
+<Sup>1</Sup> The **DIKW** model is an often used method, with roots in knowledge management, to explain the ways we move from data **D** to information **I**, knowledge **K** and wisdom **W** with a component of actions and decisions.
+
 Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
 * **Observe**: First, you should focus on establishing monitoring to observe the health and status of Azure services and resources. Configure basic monitoring and then automate with Azure Policy and ARM templates, to establish initial visibility of services and their warranty:  availability, performance or capacity, security and configuration compliance. For example, based on minimum viable setup of Azure Monitor, configure resources for monitoring and diagnostics, set up alerts, and insights. Include knowledge and readiness of monitoring consumers, defining and triggering from events, for service work such as incidents and problems. One indicator of maturity is how much can be automated to reduce unnecessary human costs to manually observe health and status. Knowing which services are healthy is just as important as being alerted on services that are unhealthy.
