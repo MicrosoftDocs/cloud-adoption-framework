@@ -61,7 +61,7 @@ To help create balance across cloud adoption efforts, we recommend that you star
 
 ![Diagram of cloud adoption with cloud governance counterbalance](../_images/ready/org-ready-best-practice.png)
 
-This proven approach is considered an MVP because it might not be sustainable. Each team wears many hats, as outlined in the [RACI (responsible, accountable, consulted, and informed) charts](../organize/raci-alignment.md).
+This proven approach is considered a minimum viable product (MVP), because it might not be sustainable. Each team wears many hats, as outlined in the [RACI (responsible, accountable, consulted, and informed) charts](../organize/raci-alignment.md).
 
 As adoption needs grow, so does the need to create balance and structure. To meet those needs, companies often follow a process of maturing their organizational structures.
 
