@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
----
 
 ## Contribution guide
 
