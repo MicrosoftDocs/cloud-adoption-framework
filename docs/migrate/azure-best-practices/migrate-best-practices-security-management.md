@@ -103,7 +103,7 @@ In particular, older Azure-migrated VMs may not have the appropriate level of an
 - It's a single agent solution that runs in the background without human intervention.
 - In Azure Security Center, you can easily identify VMs that don't have endpoint protection running, and install Microsoft Antimalware as needed.
 
-![Antimalware for VMs](./media/migrate-best-practices-security-management/antimalware.png)
+![Antimalware for VMs](./media/migrate-best-practices-security-management/antimalware.png) <br/>
 _Antimalware for VMs_
 
 **Learn more:**
@@ -131,7 +131,7 @@ Azure provides a couple of solutions:
   - It protects multiple web apps at the same time behind an application gateway.
   - A web application firewall can be monitored using Azure Monitor and is integrated into Azure Security Center.
 
-![Secure web apps](./media/migrate-best-practices-security-management/web-apps.png)
+![Secure web apps](./media/migrate-best-practices-security-management/web-apps.png) <br/>
 _Azure Key Vault_
 
 **Learn more:**
@@ -151,7 +151,7 @@ As you migrate your workloads and run them in Azure, staff with workload access 
 - RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
 - Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
 
-![Access control](./media/migrate-best-practices-security-management/subscription.png)
+![Access control](./media/migrate-best-practices-security-management/subscription.png) <br/>
 _Access control - IAM_
 
 **Learn more:**
@@ -169,7 +169,7 @@ Azure Active Directory (Azure AD) provides activity logs that appear in Azure Mo
 - You can route activity logs to various endpoints for long-term retention and data insights.
 - Make it a common practice to review the logs or integrate your security information and event management (SIEM) tools to automatically review abnormalities. If you're not using Premium 1 or 2, you'll need to do a lot of analysis yourself or using your SIEM system. Analysis includes looking for risky sign-ins and events, and other user attack patterns.
 
-![Users and Groups](./media/migrate-best-practices-security-management/azure-ad.png)
+![Users and Groups](./media/migrate-best-practices-security-management/azure-ad.png) <br/>
 _Azure AD Users and Groups_
 
 **Learn more:**
@@ -207,7 +207,7 @@ Ensuring that your resource groups have meaningful names that admins and support
 - We recommend following Azure naming conventions.
 - If you're synchronizing your on-premises Active Directory to Azure AD using Azure AD Connect, consider matching the names of security groups on-premises to the names of resource groups in Azure.
 
-![Naming](./media/migrate-best-practices-security-management/naming.png)
+![Naming](./media/migrate-best-practices-security-management/naming.png) <br/>
 _Resource group naming_
 
 **Learn more:**
@@ -247,7 +247,7 @@ Often, using only a resource group name related to resources won't provide enoug
 - Tags can be applied on a resource group or on individual resources. Resource group tags aren't inherited by the resources in the group.
 - You can automate tagging using PowerShell or Azure Automation, or tag individual groups and resources. -tagging approach or a self-service one. If you have a request and change management system in place, then you can easily use the information in the request to populate your company-specific resource tags.
 
-![Tagging](./media/migrate-best-practices-security-management/tagging.png)
+![Tagging](./media/migrate-best-practices-security-management/tagging.png) <br/>
 _Tagging_
 
 **Learn more:**
@@ -292,7 +292,7 @@ If your organization has multiple subscriptions, you need to manage access, poli
 
 The following diagram shows an example of creating a hierarchy for governance using management groups.
 
-![Management groups](./media/migrate-best-practices-security-management/management-groups.png)
+![Management groups](./media/migrate-best-practices-security-management/management-groups.png) <br/>
 _Management groups_
 
 **Learn more:**
@@ -308,7 +308,7 @@ Azure Policy is a service in Azure that you use to create, assign and, manage po
 - For example, you could create a policy that allows only a specific SKU size for VMs in your environment. Azure Policy will evaluate this setting when creating and updating resources, and when scanning existing resources.
 - Azure provides some built-in policies that you can assign, or you can create your own.
 
-![Azure Policy](./media/migrate-best-practices-security-management/policy.png)
+![Azure Policy](./media/migrate-best-practices-security-management/policy.png) <br/>
 _Azure Policy_
 
 **Learn more:**
@@ -353,7 +353,7 @@ You can use Azure Backup to back up VMs in a couple of ways.
 
 For security, Azure Backup encrypts data in-flight using AES 256 and sends it over HTTPS to Azure. Backed-up data at-rest in Azure is encrypted using [Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption), and data for transmission and storage.
 
-![Azure Backup](./media/migrate-best-practices-security-management/iaas-backup.png)
+![Azure Backup](./media/migrate-best-practices-security-management/iaas-backup.png) <br/>
 _Azure Backup_
 
 **Learn more:**
@@ -380,7 +380,7 @@ Azure VMs are stored as page blobs in Azure Storage.
 
 #### Third-party backup
 
-In addition, you can use third-party solutions to back up Azure VMs and storage containers to local storage or other cloud providers. [Learn more](https://azuremarketplace.microsoft.com/marketplace/apps?search=backup&page=1) about backup solutions in the Azure marketplace.
+In addition, you can use third-party solutions to back up Azure VMs and storage containers to local storage or other cloud providers. [Learn more](https://azuremarketplace.microsoft.com/marketplace/apps?search=backup&page=1) about backup solutions in the Azure Marketplace.
 
 ### Set up disaster recovery for IaaS apps
 
@@ -392,7 +392,7 @@ Azure Site Recovery is the primary Azure service for ensuring that Azure VMs can
 
 Site Recovery replicates VMs from a primary to secondary Azure region. When disaster strikes, you fail VMs over from the primary region, and continue accessing them as normal in the secondary region. When operations return to normal, you can fail back VMs to the primary region.
 
-![Azure Site Recovery](./media/migrate-best-practices-security-management/site-recovery.png)
+![Azure Site Recovery](./media/migrate-best-practices-security-management/site-recovery.png) <br/>
 _Site Recovery_
 
 **Learn more:**
@@ -410,7 +410,7 @@ Azure managed disks simplify disk management for Azure virtual machines by manag
 - You can convert existing disks to managed disks.
 - You should create VMs in availability sets for high resilience and availability. When planned or unplanned outages occur, availability sets ensure that at least one VM in the set remains available.
 
-![Managed disks](./media/migrate-best-practices-security-management/managed-disks.png)
+![Managed disks](./media/migrate-best-practices-security-management/managed-disks.png) <br/>
 _Managed disks_
 
 **Learn more:**
@@ -431,7 +431,7 @@ These two cases have different resolutions, but for both you need an insight int
 - Azure Monitor can help surface these metrics, and provide response with alerts, autoscaling, event hubs, logic apps and more.
 - In addition to Azure monitoring, you can integrate your third-party SIEM application to monitor the Azure logs for auditing and performance events.
 
-![Azure Monitor](./media/migrate-best-practices-security-management/monitor.png)
+![Azure Monitor](./media/migrate-best-practices-security-management/monitor.png) <br/>
 _Azure Monitor_
 
 **Learn more:**
@@ -449,7 +449,7 @@ Azure resources generate a fair number of logging metrics and telemetry data.
 - By enabling diagnostic logging across your resources, you can query logging data, and build alerts and playbooks based on it.
 - When you enable diagnostic logging, each resource will have a specific set of categories. You select one or more logging categories, and a location for the log data. Logs can be sent to a storage account, event hub, or to Azure Monitor logs.
 
-![Diagnostic logging](./media/migrate-best-practices-security-management/diagnostics.png)
+![Diagnostic logging](./media/migrate-best-practices-security-management/diagnostics.png) <br/>
 _Diagnostic logging_
 
 **Learn more:**
@@ -466,7 +466,7 @@ With diagnostic logging enabled for Azure resources, you can start to use loggin
 - As a simple example, you can create an alert that triggers when a port scan happens against a network security group. You can set up a playbook that runs and locks down the IP address of the scan origin.
 - Another example might be an app with a memory leak. When the memory usage gets to a certain point, a playbook can recycle the process.
 
-![Alerts](./media/migrate-best-practices-security-management/alerts.png)
+![Alerts](./media/migrate-best-practices-security-management/alerts.png) <br/>
 _Alerts_
 
 **Learn more:**
@@ -481,7 +481,7 @@ The Azure portal is a web-based unified console that allows you to build, manage
 - You can create multiple dashboards and share them with others who have access to your Azure subscriptions.
 - With this shared model, your team has visibility into the Azure environment, allowing them to be proactive when managing systems in the cloud.
 
-![Azure dashboard](./media/migrate-best-practices-security-management/dashboard.png)
+![Azure dashboard](./media/migrate-best-practices-security-management/dashboard.png) <br/>
 _Azure dashboard_
 
 **Learn more:**
@@ -496,7 +496,7 @@ At some point, you will need to collaborate with your support staff or Microsoft
 - In the unlikely event that an Azure service issue affects your workload, admins should know how to submit a support ticket to Microsoft in the most appropriate and efficient way.
 - Familiarize yourself with the various support plans offered for Azure. They range from response times dedicated to Developer instances, to Premier support with a response time of less than 15 minutes.
 
-![Support plans](./media/migrate-best-practices-security-management/support.png)
+![Support plans](./media/migrate-best-practices-security-management/support.png) <br/>
 _Support plans_
 
 **Learn more:**
@@ -513,7 +513,7 @@ Keeping Azure VMs updated with the latest operating system and software updates 
 - You can enable Update Management for VMs directly from an Azure Automation account. You can also update a single VM from the VM page in the Azure portal.
 - In addition, Azure VMs can be registered with System Center Configuration Manager. You could then migrate the Configuration Manager workload to Azure, and do reporting and software updates from a single web interface.
 
-![VM updates](./media/migrate-best-practices-security-management/updates.png)
+![VM updates](./media/migrate-best-practices-security-management/updates.png) <br/>
 _Updates_
 
 **Learn more:**
@@ -537,7 +537,7 @@ Azure has a change tracking solution in Azure Automation:
 - Logic is applied to the received data and the cloud service records the data.
 - On the Change Tracking dashboard, you can easily see the changes that were made in your server infrastructure.
 
-![Change management](./media/migrate-best-practices-security-management/change.png)
+![Change management](./media/migrate-best-practices-security-management/change.png) <br/>
 _Change management_
 
 **Learn more:**
