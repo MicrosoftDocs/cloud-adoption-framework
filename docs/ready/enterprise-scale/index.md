@@ -4,14 +4,14 @@ description: Start with enterprise-scale landing zones
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2020
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
 # Start with enterprise-scale landing zones
 
-At times, it is unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to replicate the desired processes, tools, and architectures based on the new constraints of any cloud environment. To accelerate that learning process, a slightly different starting point is required. Comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, which is now more complex, more to follow later in this article. 
+At times, it is unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to replicate the desired processes, tools, and architectures based on the new constraints of any cloud environment. To accelerate that learning process, a slightly different starting point is required. Comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, which is now more complex, more to follow later in this article.
 
 ![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor-enterprise-scale.png)
 
@@ -48,11 +48,11 @@ If these skills aren't available within the cloud platform team (through staff, 
 
 ## Start with an enterprise-scale landing zone
 
-The enterprise-scale approach to landing zone development includes four sets of assets to support cloud teams: [Implementations](./implementation.md) | [Architecture](./architecture.md) | [Design Guidelines](./design-guidelines.md) | [Template](./template.md)
+The enterprise-scale approach to landing zone development includes four sets of assets to support cloud teams: [implementations](./implementation.md) | [Architecture](./architecture.md) | [Design guidelines](./design-guidelines.md) | [Template](./template.md)
 
 - [Implementations](./implementation.md): Scripted implementations of the architecture to accelerate adoption.*
 - [Architecture](./architecture.md): Conceptual reference architecture to demonstrate design areas and best practices.
-- [Design Guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive CAF enterprise-scale landing zone.
+- [Design guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive CAF enterprise-scale landing zone.
 - [Template](./template.md): Documentation template to quickly capture decisions and any deviation from the suggested architecture and/or implementation.
 
 ## Community

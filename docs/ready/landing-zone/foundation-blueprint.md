@@ -1,6 +1,5 @@
 ---
 title: Deploy a CAF foundation blueprint in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to deploy a CAF foundation blueprint in Azure.
 author: BrianBlanchard
 ms.author: brblanch

@@ -1,6 +1,6 @@
 ---
-title: Schema
-description: Schema
+title: XX
+description: XX
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## CAF enterprise-scale template schema
+## Enterprise-scale template schema
 
-This article will help you to familiarize with CAF enterprise-scale template deployments, which consist on one and only one ARM template (one template to rule them all), and then, just providing the details of the resource(s) you want to deploy by using parameters files.
+This article will help you to familiarize with enterprise-scale template deployments, which consist on one and only one ARM template (one template to rule them all), and then, just providing the details of the resource(s) you want to deploy by using parameters files.
 
 ## Target audience
 

@@ -1,11 +1,10 @@
 ---
 title: "CAF enterprise-scale landing zone architecture"
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: CAF enterprise-scale landing zone architecture
 author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: csu
@@ -27,7 +26,7 @@ It is important to highlight that not all enterprises adopt Azure in the same wa
 
 ## Landing zone - expanded definition
 
-In the [landing zone considerations article](../../ready/considerations/index.md), the term "landing zone" is defined in detail. However, the audience of the CAF enterprise-scale landing zone needs a specific expansion of that definition.
+In the [landing zone considerations article](../../ready/considerations/index.md), the term "landing zone" is defined in detail. But the audience of the CAF enterprise-scale landing zone needs a specific expansion of that definition.
 
 **Scope:** Within the CAF enterprise-scale landing zone, the scope of a landing zone grows considerably to support application migrations and green field development at an enterprise scale in Azure. This expansion allows for design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
 
@@ -40,7 +39,7 @@ In the [landing zone considerations article](../../ready/considerations/index.md
 This is similar to how city utilities such as water, gas, and electricity are accessible before new houses are constructed. In this context, the network, identity and access management, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process.
 
 ![Landing zone](./media/lz-design.png "landing zone")
-_Figure 1: Landing zone design_
+_Figure 1: Landing zone design._
 
 ## Expanded list of requisite components
 
@@ -50,7 +49,7 @@ The following list expands on the landing zone illustration by outlining the cor
 
 - **Policy management:** Holistic and landing-zone-specific policies must be identified, described, built, and deployed onto the target Azure platform to ensure corporate, regulatory, and line-of-business controls are in place. Ultimately, policies should be used to guarantee the compliance of applications and underlying resources without any abstraction provisioning/administration capability.
 
-- **Management and monitoring**: Platform-level holistic (horizontal) resource monitoring and alerting must be designed, deployed, and integrated. Operational tasks such as patching and backup must also be defined and streamlined. Security operations, monitoring, and logging must be designed and integrated with both resources on Azure as well as existing on-premises systems. All subscription activity logs that capture control plane operations across resources should be streamed into Log Analytics to make them available for query and analysis, subject to RBAC permissions.
+- **Management and monitoring:** Platform-level holistic (horizontal) resource monitoring and alerting must be designed, deployed, and integrated. Operational tasks such as patching and backup must also be defined and streamlined. Security operations, monitoring, and logging must be designed and integrated with both resources on Azure as well as existing on-premises systems. All subscription activity logs that capture control plane operations across resources should be streamed into Log Analytics to make them available for query and analysis, subject to RBAC permissions.
 
 - **Network topology and connectivity:** The end-to-end network topology must be built and deployed across Azure regions and on-premises customer environments to ensure north-south and east-west connectivity between platform deployments. Network security must also be designed with the required services and resources identified, deployed, and configured such as firewalls and NVAs to ensure security requirements are fully met.
 
@@ -67,7 +66,7 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 ## High-level architecture
 
 ![CAF enterprise-scale landing zone architecture](./media/ns-arch.png)
-_Figure 2: CAF enterprise-scale landing zone architecture_
+_Figure 2: CAF enterprise-scale landing zone architecture._
 
 ## Next steps
 
