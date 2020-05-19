@@ -21,11 +21,11 @@ The following eight critical design areas are intended to support the translatio
 
 The impact of decisions made within these critical areas will reverberate across the "enterprise-scale" architecture and influence other decisions. Readers are strongly advised to familiarize themselves with these eight areas, to better understand the consequences of encompassed decisions, which may later produce trade-offs within related areas.
 
-- [A - enterprise enrollment and Azure AD tenants](./A-Enterprise-Enrollment-and-Azure-AD-Tenants.md)
-- [B - identity and access management](./B-Identity-and-Access-Management.md)
-- [C - management group and subscription organization](./C-Management-Group-and-Subscription-Organization.md)
-- [D - network topology and connectivity](./D-Network-Topology-and-Connectivity.md)
-- [E - management and monitoring](./E-Management-and-Monitoring.md)
-- [F - business continuity and disaster recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
-- [G - security, governance and compliance](./G-Security-Governance-and-Compliance.md)
-- [H - platform automation and DevOps](./H-Platform-Automation-and-DevOps.md)
+- [A - enterprise enrollment and Azure AD tenants](./Enterprise-Enrollment-and-Azure-AD-Tenants.md)
+- [B - identity and access management](./Identity-and-Access-Management.md)
+- [C - management group and subscription organization](./Management-Group-and-Subscription-Organization.md)
+- [D - network topology and connectivity](./Network-Topology-and-Connectivity.md)
+- [E - management and monitoring](./Management-and-Monitoring.md)
+- [F - business continuity and disaster recovery](./Business-Continuity-and-Disaster-Recovery.md)
+- [G - security, governance and compliance](./Security-Governance-and-Compliance.md)
+- [H - platform automation and DevOps](./Platform-Automation-and-DevOps.md)
