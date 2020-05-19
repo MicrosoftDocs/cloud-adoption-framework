@@ -17,7 +17,6 @@ During the Plan phase of your migration journey, the objective is to develop the
 
 Developing the necessary skills can be accelerated with the following learning paths. They are organized starting with learning the fundamentals and then divided across three primary subject domains - infrastructure, application, and data analysis.  
 
-
 ## Fundamentals
 
 - Introduction to [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview) discusses the basic concepts of management and deployment of Azure resources. The IT staff managing the monitoring experience across the enterprise should understand management scopes, role-based access control (RBAC), using. Azure Resource Manager templates, and management of resources using Azure CLI and Azure PowerShell.
