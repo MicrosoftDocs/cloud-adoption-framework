@@ -9,17 +9,17 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# F. Business Continuity and Disaster Recovery
+# Business continuity and disaster recovery
 
 ## 1. Planning for BCDR
 
 This section will help readers capture customer disaster recovery requirements to design suitable platform level capabilities that application workloads can subsequently consume to meet their specific RTO and RPO requirements.
 
-**Design Considerations:**
+**Design considerations:**
 
-- Application and data availability requirements and the use of active-active and active-passive availability patterns i.e. workload RTO and RPO requirements.
+- Application and data availability requirements and the use of active-active and active-passive availability patterns I.e. Workload RTO and RPO requirements.
 
-- BCDR for PaaS services and the availability of native DR and HA features.
+- BCDR for PaaS services and the availability of native dr and ha features.
 
 - Support for multiregion deployments for failover purposes.
 
@@ -27,21 +27,21 @@ This section will help readers capture customer disaster recovery requirements t
 
 - Application operations with reduced functionality or degraded performance in the presence of an outage.
 
-- Workload suitability for Availability Zones or Availability Sets.
+- Workload suitability for availability zones or availability sets.
 
   - Data sharing and dependencies between zones.
 
-  - Impact of Availability Zones on update domains compared to Availability Sets; percentage of workload that can be simultaneously under maintenance.
+  - Impact of availability zones on update domains compared to availability sets; percentage of workload that can be simultaneously under maintenance.
 
-  - Support for specific VM SKUs with Availability Zones.
+  - Support for specific VM SKUs with availability zones.
 
-  - If Ultra-Disks are used, usage of Availability Zones is mandatory.
+  - If ultra-disks are used, usage of availability zones is mandatory.
 
 - Consistent backups for applications and its data.
 
-  - VM snapshots and the use of Azure Backup and Recovery Service Vaults.
+  - VM snapshots and the use of Azure Backup and recovery service vaults.
 
-  - Subscription limits restricting the number of Recovery Service Vaults and the size of each vault.
+  - Subscription limits restricting the number of recovery service vaults and the size of each vault.
 
   - Geo-replication and disaster recovery capabilities for PaaS services.
 
@@ -59,19 +59,19 @@ This section will help readers capture customer disaster recovery requirements t
 
   - Maintained engineering DevOps capabilities.
 
-- Key Vault DR for application keys, certificates, and secrets.
+- Key Vault dr for application keys, certificates, and secrets.
 
-**Design Recommendations:**
+**Design recommendations:**
 
-- Employ Azure Site Recovery for Azure to Azure Virtual Machine DR scenarios to replicate workloads across regions.
+- Employ Azure Site Recovery for Azure to Azure virtual machine dr scenarios to replicate workloads across regions.
 
-  - ASR provides built-in platform capabilities for VM workloads to meet low RPO/RTO requirements through real-time replication and recovery automation. Additionally, the service provides the ability to run recovery drills without affecting the workloads in production.
+  - Asr provides built-in platform capabilities for VM workloads to meet low RPO/RTO requirements through real-time replication and recovery automation. Additionally, the service provides the ability to run recovery drills without affecting the workloads in production.
 
-- Utilize native PaaS service DR capabilities.
+- Utilize native PaaS service dr capabilities.
 
   - The built-in features provide an easy solution to the complex task of building replication and failover into a workload architecture, simplifying both design and deployment automation. An organization that has defined a standard for the services they use can also audit and enforce the service configuration through Azure Policy.
 
-- use Azure native backup capabilities.
+- Use Azure native backup capabilities.
 
   - Azure Backup, and PaaS native backup features, remove the need for managing third-party backup software and infrastructure. As with other native features, backup configurations can be set, audited, and enforced with Azure Policy, ensuring services remain compliant with organizational requirements.
 
@@ -79,7 +79,7 @@ This section will help readers capture customer disaster recovery requirements t
 
   - A redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity in the event of an outage affecting an Azure region or peering provider location.
 
-- Refer to [Azure Region Pairs](https://docs.microsoft.com/azure/best-practices-availability-paired-regions) documentation when selecting locations for your organizations DR layouts.
+- Refer to [Azure region pairs](https://docs.microsoft.com/azure/best-practices-availability-paired-regions) documentation when selecting locations for your organizations dr layouts.
 
 - Use Azure paired regions when planning for BCDR.
 
@@ -89,6 +89,6 @@ This section will help readers capture customer disaster recovery requirements t
 
 <!-- -->
 
-- Avoid using overlapping IP address ranges for Production and DR sites.
+- Avoid using overlapping IP address ranges for production and dr sites.
 
-  - Whenever possible, plan for a BCDR network architect that provides for concurrent connectivity to all sites. DR networks that utilize the same CIDR blocks as production networks will require a network failover process that can complicate and delay application failover in the event of an outage.
+  - Whenever possible, plan for a BCDR network architect that provides for concurrent connectivity to all sites. Dr networks that utilize the same cidr blocks as production networks will require a network failover process that can complicate and delay application failover in the event of an outage.

@@ -9,14 +9,14 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## Getting Started
+## Getting started
 
 This article describes how to get started with enterprise-scale reference implementation by walking you through all the prerequistes to deploy a platform-native reference implementation of enterprise-scale.
-> Note:  Before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.
+> Note: Before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.
 
 ## Target audience
 
-The target audience for this guide is people with a typical DevOps / SRE background and assumes knowledge in Azure Resource Manager (ARM) /Infrastructure as Code (IaC), Git, and PowerShell.
+The target audience for this guide is people with a typical DevOps / sre background and assumes knowledge in Azure Resource Manager (ARM) /infrastructure as code (iac), Git, and PowerShell.
 
 ## Contents
 

@@ -1,5 +1,5 @@
 ---
-title: faq
+title: FAQ
 description: FAQ
 author: tbd
 ms.author: tbd
@@ -11,19 +11,19 @@ ms.subservice: ready
 
 ## FAQ
 
-This page will list frequently asked question for enterprise-scale design as well as Contoso Implementation.
+This page will list frequently asked question for enterprise-scale design as well as Contoso implementation.
 
-## enterprise-scale Design
+## Enterprise-scale design
 
-### What does "Landing Zone" map to in Azure in the context of enterprise-scale
+### What does "landing zone" map to in Azure in the context of enterprise-scale
 
-From enterprise-scale point of view, Subscription is the "Landing Zone" in Azure.
+From enterprise-scale point of view, subscription is the "landing zone" in Azure.
 
-## Contoso Implementation
+## Contoso implementation
 
 ### Why do enterprise-scale ARM templates require permission at tenant root '/' scope
 
-Management Group creation is tenant level PUT API and hence it is prerequisite to grant permission at root scope to use example templates.
+Management group creation is tenant level put API and hence it is prerequisite to grant permission at root scope to use example templates.
 
 ### Why do we need to sync fork with upstream repo
 

@@ -17,7 +17,9 @@ This article describes how to deploy the platform infrastructure for the enterpr
 
 ## Deployment artifact overview
 
-It is important, that you are familiar with the AzOps folder structure that has been created during the environment discovery and repository initialization. To describe the desired state of Platform Subcriptions and Landing Zone we apply changes only in the _managementgroupscope_.parameters.json in the .AzState folder. This is how the folder structure should look like for your environment:
+It is important, that you are familiar with the azops folder structure that has been created during the environment discovery and repository initialization. To describe the desired state of platform subcriptions and landing zone we apply changes only in the _managementgroupscope_.parameters.json in the .AzState folder. This is how the folder structure should look like for your environment:
+
+<!-- TODO: Replace with diagram -->
 
 ```bash
     AzOps
@@ -53,21 +55,21 @@ Each _managementgroupscope_.parameters.json file has the following section, and 
     }
 ```
 
-There are two groups of properties in this section _\*Definitions\*_ and _\*Assignments\*_.
+There are two groups of properties in this section _\*definitions\*_ and _\*assignments\*_.
 
-__Definitions:__ All the definitions (`policy`, `role` and `policySet`) have to be deployed on the 'YourCompanyName' Management Group scope and with this in the 'YourCompanyName'.parameters.json file.
->Note: In the Azure portal `policySetDefinitions` is also known as an initiative. It represents a set of Azure Policy definition.
+__Definitions:__ all the definitions (`policy`, `role` and `policyset`) have to be deployed on the 'yourcompanyname' management group scope and with this in the 'yourcompanyname'.parameters.json file.
+>Note: in the Azure portal `policysetdefinitions` is also known as an initiative. It represents a set of Azure Policy definition.
 
-__Assignments :__ The assignments (`role`, `policy`) can be deployed at any Management Group scope as long as the definition exisits on the same scope or above. To simplify the management, it is highly recommended to reduce the number of scopes where you assign Azure Policy and RBAC roles. In the enterprise-scale
-reference implementation we recommend to do assignment at the following three scopes only:
+__Assignments :__ the assignments (`role`, `policy`) can be deployed at any management group scope as long as the definition exisits on the same scope or above. To simplify the management, it is highly recommended to reduce the number of scopes where you assign Azure Policy and RBAC roles. In the enterprise-scale
+Reference implementation we recommend to do assignment at the following three scopes only:
 
-- 'YourCompanyName' __Management Group__ scope for all companywide policies
-- Platform Subscription scope for Azure Policy deploying Platform resourses
-- Landing Zones __Management Group__ scope for all Landing Zone specific Azure Policy
+- 'Yourcompanyname' __management group__ scope for all companywide policies
+- Platform subscription scope for Azure Policy deploying platform resourses
+- Landing zones __management group__ scope for all landing zone specific Azure Policy
 
 ## Deployment flow
 
-In this reference implementation we are using GitHub and GitHub Actions to push and pull changes to and from your Azure environment. All the changes need to be committed to a feature branch and merged to the master using Pull Request (PR). The PR triggers a GitHub Action doing the validation of the changes followed by a deployment to Azure.
+In this reference implementation we are using GitHub and GitHub Actions to push and pull changes to and from your Azure environment. All the changes need to be committed to a feature branch and merged to the master using pull request (PR). The PR triggers a GitHub action doing the validation of the changes followed by a deployment to Azure.
 
 The following diagram illustrates the flow to deploy the definitions:
 
@@ -79,7 +81,7 @@ In a second step the assignment need to be deployed following a similar process:
 
 ## Deployment of definitions
 
-1. Select the 'YourCompanyName' Management Group scope for the definitions first and modify the _'YourCompanyName'.parameters.json_ in the _.AzState_ folder. Definitions need to be added in the respective section of _*.parameters.json_ file:
+1. Select the 'yourcompanyname' management group scope for the definitions first and modify the _'yourcompanyname'.parameters.json_ in the _.azstate_ folder. Definitions need to be added in the respective section of _*.parameters.json_ file:
 
     ``` bash
     # empty part of a parameter json file after initialization
@@ -92,7 +94,7 @@ In a second step the assignment need to be deployed following a similar process:
     }
     ```
 
-    As a reference for Azure Policy definition you can select the sample definition in the [AzOpsReference](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) folder. Filter files with _policyDefinitions_ in the name.
+    As a reference for Azure Policy definition you can select the sample definition in the [azopsreference](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) folder. Filter files with _policydefinitions_ in the name.
 
 2. Update the `policyDefinitions`, `roleDefinitions` or `policySetDefinitions` in one of two ways:
    1. In the 'YourCompanyName'.parameters.json file. Make sure that you always add it as an array object `[]`.
@@ -111,9 +113,9 @@ In a second step the assignment need to be deployed following a similar process:
     ...
     ```
 
-   2. Copying the files from [AzOpsReference folder](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) to the ```.AzState``` directory for your management group.
+   2. Copying the files from [azopsreference folder](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) to the ```.azstate``` directory for your management group.
 
-    > It is important that you add __all__ custom Azure Policies in the [AzOpsReference folder](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) to your _'YourCompanyName.parameters.json_ file or ```.AzState``` directory.
+    > It is important that you add __all__ custom Azure policies in the [azopsreference folder](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) to your _'yourcompanyname.parameters.json_ file or ```.azstate``` directory.
 
 3. Git stage and commit locally, and then push changes to your remote feature branch. __Do not push changes directly in the *master* branch in this step__
 
@@ -121,84 +123,86 @@ In a second step the assignment need to be deployed following a similar process:
     git push <remote-name>
     ```
 
-4. Create a Pull Request to the master branch. GitHub Actions runs a PR check and pushes the changes to the target Azure environment. You can monitor the status in the Actions log. Once all the checks are successful you can squash and merge your changes to the master branch.
+4. Create a pull request to the master branch. GitHub Actions runs a PR check and pushes the changes to the target Azure environment. You can monitor the status in the actions log. Once all the checks are successful you can squash and merge your changes to the master branch.
 
-(Optional step) re-initialize/update repository on your master branch. This will complement all the definition with the resource Id's that are required for the assignments in the next section.
+(Optional step) re-initialize/update repository on your master branch. This will complement all the definition with the resource ID's that are required for the assignments in the next section.
 
 ``` powershell
     Initialize-AzOpsRepository -Verbose
 ```
 
-> Note: This step will be automated once pull GitHub Action is fully operational.
+> Note: this step will be automated once pull GitHub action is fully operational.
 
 ## Create platform subscription
 
-The platform infrastructure is deployed across __three__ Azure Subscriptions on Platform Management Group scope:
+The platform infrastructure is deployed across __three__ Azure subscriptions on platform management group scope:
 
 ![Platform subscriptions](./media/platform-subscriptions.png)
 
-- __Management Subscription__ - where all cross-platform management resources are deployed (such as centralized Log Analytics workspace)
-- __Connectivity Subscription__ - where all the networking resources are deployed (such as Azure Virtual WAN or Azure Firewall)
-- __Identity Subscription__ - for Virtual WAN-based enterprise-scale implementations, this is where domain controllers are deployed.
+- __Management subscription__ - where all cross-platform management resources are deployed (such as centralized Log Analytics workspace)
+- __Connectivity subscription__ - where all the networking resources are deployed (such as Azure Virtual WAN or Azure Firewall)
+- __Identity subscription__ - for virtual WAN-based enterprise-scale implementations, this is where domain controllers are deployed.
 
-In a enterprise-scale implementation, all platform resources in the __Connectivity__ and __Management__ Subscriptions are deployed via Azure Policy. enterprise-scale includes both, policy definitions and assignments required to deploy the neccesary resources. While it is possible to deploy both, Azure Policy definition and assignments using enterprise-scale deployment process via GitHub Actions as described in this article, enterprise-scale provides flexiblity for how the assignments can be done in the platform subscriptions.
+In a enterprise-scale implementation, all platform resources in the __connectivity__ and __management__ subscriptions are deployed via Azure Policy. Enterprise-scale includes both, policy definitions and assignments required to deploy the neccesary resources. While it is possible to deploy both, Azure Policy definition and assignments using enterprise-scale deployment process via GitHub Actions as described in this article, enterprise-scale provides flexiblity for how the assignments can be done in the platform subscriptions.
 
-But not all resources in the __Identity__ Subscriptions are deployed via Azure Policy, as each organization have different methods to deploy Active Directory domain controllers.
+But not all resources in the __identity__ subscriptions are deployed via Azure Policy, as each organization have different methods to deploy Active Directory domain controllers.
 
-The following sections describe how to deploy the platform infrastructure resources across the three platform Subscriptions. Before continue with the steps below ensure that the __Management__, __Connectivity__ and __Identity__ Subscriptions have been created and assigned at the __Platform__ Management Group scope.
+The following sections describe how to deploy the platform infrastructure resources across the three platform subscriptions. Before continue with the steps below ensure that the __management__, __connectivity__ and __identity__ subscriptions have been created and assigned at the __platform__ management group scope.
 
-### Management Subscription
+### Management subscription
 
-In the enterprise-scale reference implementation, Azure resources in the __Management__ Subscription are deployed via Azure Policy. enterprise-scale includes both, policy definitions and assignments required to deploy the neccesary resources in the __Management__ Subscription. We will walk you though the process how to assign the Azure Policy later in the article. We need two Azure Policy assigments which create a Log Analytics workspace and Azure Automation Account that are required in the **Management** Subscription:
+In the enterprise-scale reference implementation, Azure resources in the __management__ subscription are deployed via Azure Policy. Enterprise-scale includes both, policy definitions and assignments required to deploy the neccesary resources in the __management__ subscription. We will walk you though the process how to assign the Azure Policy later in the article. We need two Azure Policy assigments which create a Log Analytics workspace and Azure Automation account that are required in the **Management** subscription:
 
 Required custom Azure Policy definition:
 
 | Policy name                | Scope                   | Description                                                                     |
 |----------------------------|-------------------------|---------------------------------------------------------------------------------|
-| Deploy-LogAnalytics        | management Subscription | Deploys a Log Analytics workspace into your subscription                        |
-| Deploy-LogAnalytics-Config | management Subscription | Configures the Log Analytics workspace with the required counters and solutions |
+| Deploy-loganalytics        | Management subscription | Deploys a Log Analytics workspace into your subscription                        |
+| Deploy-loganalytics-config | Management subscription | Configures the Log Analytics workspace with the required counters and solutions |
 
-Azure Policy assignments required on _management_ Subscription:
+Azure Policy assignments required on _management_ subscription:
 
 | Policy name          | Type | Scope | Parameter description |
 |----------------------|------|-------|-----------------------|
-| Deploy-LogAnalytics-_\<region\>_  | custom policy | management Subscription | _workspaceName:_ LA workspace name<br>_workspaceRegion:_ Azure DC region for LA<br>_automationAccountName:_ Linked Azure Automation Account, will be created with this Policy<br>_automationRegion:_ Azure DC region for the Azure Automation Account<br>_rgName_: Resource Group in which the resource reside |
-| Deploy-LogAnalytics-Config-_\<region\>_ | custom policy | management Subscription | _workspaceName:_ LA workspace name this configration will be applied<br>_workspaceRegion:_ Azure DC region of the LA workspace |
+| Deploy-loganalytics-_\<region\>_  | Custom policy | Management subscription | _workspaceName:_ LA workspace name<br>_workspaceRegion:_ Azure DC region for LA<br>_automationAccountName:_ Linked Azure Automation Account, will be created with this Policy<br>_automationRegion:_ Azure DC region for the Azure Automation Account<br>_rgName_: Resource Group in which the resource reside |
+| Deploy-loganalytics-config-_\<region\>_ | Custom policy | Management subscription | _workspaceName:_ LA workspace name this configration will be applied<br>_workspaceRegion:_ Azure DC region of the LA workspace |
 
-> Note: How-to [assign Azure Policy](#deployment-of-assignments) at the _Management_ Subscription scope describs the process in detail.
+> Note: how-to [assign Azure Policy](#deployment-of-assignments) at the _management_ subscription scope describs the process in detail.
 
-### Connectivity Subscription
+### Connectivity subscription
 
-The resource in the __Connectivity__ Subscription will be deployed via Azure Policy following the enterprise-scale reference implementation. We need four Azure Policy assigments to create the Virtual WAN, virtual hub, FirewallPolicy and DDoSProtection resources required in the __Connectivity__ Subscription:
-The resources in the regional __Connectivity__ Subscription will be deployed using DeployIfNotExist-Policy.
+The resource in the __connectivity__ subscription will be deployed via Azure Policy following the enterprise-scale reference implementation. We need four Azure Policy assigments to create the virtual WAN, virtual hub, firewallpolicy and ddosprotection resources required in the __connectivity__ subscription:
+The resources in the regional __connectivity__ subscription will be deployed using DeployIfNotExist-policy.
 
 Required custom Azure Policy definition:
 
+<!-- markdownlint:disable MD033 -->
+
 | Policy name          | Scope | Description |
 | ---------------------|-------|-------------|
-| Deploy-VWAN          |'YourCompanyName' MG|Deploys the Virtual WAN service into the Connectivity Subscription
-| Deploy-FirewallPolicy|'YourCompanyName' MG|Configures the FW policies and rules for Azure Firewall
-| Deploy-VHUB          |'YourCompanyName' MG|Deploys a regional virtual hub resource along with required gateways (ER/VPN) and Azure Firewall
-| Deploy-DDoSProtection|'YourCompanyName' MG|Deploys a DDoS Standard plan service
+| Deploy-vwan          |'Yourcompanyname' mg|Deploys the virtual WAN service into the connectivity subscription
+| Deploy-firewallpolicy|'Yourcompanyname' mg|Configures the fw policies and rules for Azure Firewall
+| Deploy-vhub          |'Yourcompanyname' mg|Deploys a regional virtual hub resource along with required gateways (er/VPN) and Azure Firewall
+| Deploy-ddosprotection|'Yourcompanyname' mg|Deploys a DDoS standard plan service
 
-Azure Policy assignments required on _connectifity_ Subscription:
+Azure Policy assignments required on _connectifity_ subscription:
 
 | Policy name          | Type | Scope | Parameter description |
 |----------------------|------|-------|-----------------------|
-| Deploy-VWAN          | Custom Policy | connectivity Subscription|_vwanname:_ VWAN resource name<br>_vwanRegion:_ Azure Region the service will be deployed to<br>_rgName:_ RG name where the resource will be deploy to. Policy will create RG if not exists|_vwanname:_ yourcompanyname-vwan<br>_vwanRegion:_ North Europe<br>_rgName:_ yourcompanyname-global-vwan
-| Deploy-Firewall Policy| Custom Policy |connectivity Subscription|_fwpolicy:_ Firewall policy configruation JSON object<br>_fwPolicyRegion:_ Azure Region the service will be deployed to (identical with VHUB) <br>_rgName:_ RG name where the resource will be deploy to. Policy will create RG if not exists
-| Deploy-VHUB-_\<region\>_     | Custom Policy |connectivity Subscription|_vwanname:_ VWAN resource name<br>_vhubname:_ VHUB resource name<br>_vhub:_ VHUB configuration JSON object (location, addressPrefix, ...) <br>_vpngw:_ VPN Gateway configuration JSON object (name, BGP, scale unit) <br>_ergw:_ Express Route Gateway configuration JSON object<br>_azfw:_ Azure Firewall configuration JSON object (name, policy Id) <br>_rgName:_ RG name where the resource will be deploy to. Policy will create RG if not exists|
-| Deploy-DDoSProtection| Custom Policy |connectivity Subscription|_ddosName:_ Resource name for the DDoS service<br>_ddosRegion:_ Azure Region the service will be deployed to (identical with VHUB) <br>_rgName:_ RG name where the resource will be deploy to. Policy will create RG if not exists|_ddosName:_ yourcompanyname-ddos-std-plan<br>_ddosRegion:_ North Europe<br>_rgName:_ yourcompanyname-global-ddos
-| Enable Data Protection Suite | Initiative | connectivity Subscription| n/a
-| Enable Monitoring in Azure Security Center | Initiative | connectivity Subscription| using default parameter
+| Deploy-vwan          | Custom policy | Connectivity subscription|_vwanname:_ VWAN resource name<br>_vwanRegion:_ Azure Region the service will be deployed to<br>_rgName:_ RG name where the resource will be deploy to. Policy will create rg if not exists|_vwanname:_ yourcompanyname-vwan<br>_vwanRegion:_ North Europe<br>_rgName:_ yourcompanyname-global-vwan
+| Deploy-firewall policy| Custom policy |Connectivity subscription|_fwpolicy:_ Firewall policy configruation JSON object<br>_fwPolicyRegion:_ Azure Region the service will be deployed to (identical with VHUB) <br>_rgName:_ RG name where the resource will be deploy to. Policy will create rg if not exists
+| Deploy-vhub-_\<region\>_     | Custom policy |Connectivity subscription|_vwanname:_ VWAN resource name<br>_vhubname:_ VHUB resource name<br>_vhub:_ VHUB configuration JSON object (location, addressPrefix, ...) <br>_vpngw:_ VPN Gateway configuration JSON object (name, BGP, scale unit) <br>_ergw:_ Express Route Gateway configuration JSON object<br>_azfw:_ Azure Firewall configuration JSON object (name, policy Id) <br>_rgName:_ RG name where the resource will be deploy to. Policy will create rg if not exists|
+| Deploy-ddosprotection| Custom policy |Connectivity subscription|_ddosName:_ Resource name for the DDoS service<br>_ddosRegion:_ Azure Region the service will be deployed to (identical with VHUB) <br>_rgName:_ RG name where the resource will be deploy to. Policy will create rg if not exists|_ddosName:_ yourcompanyname-ddos-std-plan<br>_ddosRegion:_ North Europe<br>_rgName:_ yourcompanyname-global-ddos
+| Enable data protection suite | Initiative | Connectivity subscription| N/A
+| Enable monitoring in Azure Security Center | Initiative | Connectivity subscription| Using default parameter
 
-> Note: How-to [assign Azure Policy](#deployment-of-assignments) at the _connectivity_ Subscription scope describs the process in detail.
+> Note: how-to [assign Azure Policy](#deployment-of-assignments) at the _connectivity_ subscription scope describs the process in detail.
 
-### Identity Subscription
+### Identity subscription
 
-In the enterprise-scale reference implementation, the **Identity** Subscription is only required when deploying a Virtual WAN-based enterprise-scale implementation (as domain controllers cannot be deployed in a managed Virtual Hub). For nonVWAN enterprise-scale reference implementations (traditional hub and spoke network architecture), the **Identity** subscription is not required as Domain Controllers should be deployed in the central Hub virtual network.
+In the enterprise-scale reference implementation, the **Identity** subscription is only required when deploying a virtual WAN-based enterprise-scale implementation (as domain controllers cannot be deployed in a managed virtual hub). For non-virtual-WAN enterprise-scale reference implementations (traditional hub and spoke network architecture), the **Identity** subscription is not required as domain controllers should be deployed in the central hub virtual network.
 
-The following instructions provide guidance for deploying the required resources for the **Identity** subscription for both, Virtual WAN-based and nonVWAN-based enterprise-scale implementations:
+The following instructions provide guidance for deploying the required resources for the **Identity** subscription for both, virtual WAN-based and non-virtual-WAN enterprise-scale implementations:
 
 __Virtual WAN-based enterprise-scale implementation__
 
@@ -206,24 +210,24 @@ __Virtual WAN-based enterprise-scale implementation__
 
 | Policy name          | Scope              | Description                                                        |
 | ---------------------|--------------------|--------------------------------------------------------------------|
-| Deploy-vNET          |'YourCompanyName' MG| Deploys a virtual network and and conect it to the local Virtual WAN virtual hub.|
+| Deploy-VNet          |'Yourcompanyname' mg| Deploys a virtual network and and conect it to the local virtual WAN virtual hub.|
 
-Azure Policy assignments required on _identity_ Subscription (per region a policy is required):
+Azure Policy assignments required on _identity_ subscription (per region a policy is required):
 
 | Policy name          | Type | Scope                |
 |----------------------|------|----------------------|
-| Deploy-vNET | Custom Policy | 'YourCompanyName' MG |
+| Deploy-VNet | Custom policy | 'Yourcompanyname' mg |
 
-Once the virtual network is created the two Active Directory Domain Controllers can be created in the virtual network following your company's procedures.
+Once the virtual network is created the two Active Directory domain controllers can be created in the virtual network following your company's procedures.
 
-__nonVWAN-based enterprise-scale implementation__
+__Nonvwan-based enterprise-scale implementation__
 
-1. In a regional hub virtual network, deploy two Active Directory Domain Controllers following your company's procedures
+1. In a regional hub virtual network, deploy two Active Directory domain controllers following your company's procedures
 2. Repeat process for each regional hub virtual network
 
 ## Deployment of assignments
 
-1. In one of the [previous section](#deployment-of-definitions) all the defintions have been updated with an resource ID. ID's are updated in the _'YourCompanyName'.parameters.json_ files in the _.AzState_ folder on 'YourCompanyName' scope. In addition to the updated _.parameters.json_ each definition is represented in an separate file in the same _.AzState_ folder. The pull or a respository discovery operation keeps all files and the related properties in the _.AzState_ folder in sync.
+1. In one of the [previous section](#deployment-of-definitions) all the defintions have been updated with an resource ID. ID's are updated in the _'yourcompanyname'.parameters.json_ files in the _.azstate_ folder on 'yourcompanyname' scope. In addition to the updated _.parameters.json_ each definition is represented in an separate file in the same _.azstate_ folder. The pull or a respository discovery operation keeps all files and the related properties in the _.azstate_ folder in sync.
 
 ```bash
     # Simplified folder structure after initialization
@@ -243,17 +247,17 @@ __nonVWAN-based enterprise-scale implementation__
             │   │   └─── *_policyDefinitions-<policy-name-2>.parameters.json # Policy defintion
 ```
 
-To do the assignments for `policyAssignments` and `roleAssignments` the _managementGroupName_.parameters.json need to be updated a second time as done it for the defintions.
+To do the assignments for `policyassignments` and `roleassignments` the _managementgroupname_.parameters.json need to be updated a second time as done it for the defintions.
 Three scopes for the assignment need to be considered to follow the enterprise-scale reference implementation:
 
-- 'YourCompanyName' Management Group scope
-- Landing Zones Management Group scope
-- _connectivity_ / _management_ / _identity Subscription scope
+- 'Yourcompanyname' management group scope
+- Landing zones management group scope
+- _Connectivity_ / _management_ / _identity subscription scope
 
-As a reference for Azure Policy assignment you can select a reference Azure Policy assignment in the [AzOpsReference](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) folder. Filter files with _policyAssignments_ in the name. After you copied the object replace all the values with the value  \<replace-me\>, these needs to be done mainly for the attributes `policyDefinitionId` and `scope`.
+As a reference for Azure Policy assignment you can select a reference Azure Policy assignment in the [azopsreference](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) folder. Filter files with _policyassignments_ in the name. After you copied the object replace all the values with the value  \<replace-me\>, These needs to be done mainly for the attributes `policydefinitionid` and `scope`.
 
-- `policyDefinitionId`: Full resource ID (including scope path) of the definition
-- `scope`: Assignment scope for the definition
+- `Policydefinitionid`: full resource ID (including scope path) of the definition
+- `Scope`: assignment scope for the definition
 
 ``` bash
     ....
@@ -275,12 +279,12 @@ As a reference for Azure Policy assignment you can select a reference Azure Poli
     git push <remote-name>
     ```
 
-3. Create a Pull Request to the master branch. GitHub Actions runs a PR check and pushes the changes to the target Azure enviroment. You can monitor the status in the Actions log. Once all the checks are successful you have to squash and merge your changes to the master branch.
+3. Create a pull request to the master branch. GitHub Actions runs a PR check and pushes the changes to the target Azure enviroment. You can monitor the status in the actions log. Once all the checks are successful you have to squash and merge your changes to the master branch.
 
->Note: If the Azure Policy assignmetn fails please re-run the checks a second time. There is currently a known problem with the Azure Policy assigment on Azure which the product team is currently fixing.
+>Note: if the Azure Policy assignmetn fails please re-run the checks a second time. There is currently a known problem with the Azure Policy assigment on Azure which the product team is currently fixing.
 
 ---
 
 ## Finalize platform deployment
 
-You can now follow the progress and see how the resources are getting deployed into the platform Subscriptions. When the resources are deployed the platform can start updating configurations if needed. One thing that you or your NetOps team may start doing is adjusting the Firewall Policies/Rules in the Azure Portal or through the AzOps pipeline.
+You can now follow the progress and see how the resources are getting deployed into the platform subscriptions. When the resources are deployed the platform can start updating configurations if needed. One thing that you or your netops team may start doing is adjusting the firewall policies/rules in the Azure portal or through the azops pipeline.

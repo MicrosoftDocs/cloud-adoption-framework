@@ -15,8 +15,8 @@ ms.subservice: ready
 
  ![Tenant root scope deployment](./media/tenant-level-deployment.png "Tenant root scope deployment")
 
-1. From a PowerShell terminal, connect to Azure using `Connect-AzAccount -TenantId <your-tenant-id>` with an account that has at least "User Access Administrator" permissions at the tenant root level.
-2. Assign required permissions at tenant root level for the account that you want to use. Owner **or** Contributor + User Access Administrator permissions is required to be able to deploy the example templates. If you don't have permissions to assign permissions at the root level, you may have to [elevate your access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin) as a global administrator before assigning the permissions. <br>
+1. From a PowerShell terminal, connect to Azure using `connect-azaccount -tenantid <your-tenant-ID>` With an account that has at least "user access administrator" permissions at the tenant root level.
+2. Assign required permissions at tenant root level for the account that you want to use. Owner **or** contributor + user access administrator permissions is required to be able to deploy the example templates. If you don't have permissions to assign permissions at the root level, you may have to [elevate your access](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin) as a global administrator before assigning the permissions. <br>
 
     ```powershell
     New-AzRoleAssignment -SignInName john.doe@contoso.com -RoleDefinitionName "Owner" -Scope "/"  
@@ -32,15 +32,15 @@ ms.subservice: ready
     CanDelegate        : False
     ```
 
-*If you want to use a service principal, follow the instructions to assign permissions under the [**Full end-to-end deployment**](./Using-Reference-Implementation.md)*
+*If you want to use a service principal, follow the instructions to assign permissions under the [**full end-to-end deployment**](./Using-Reference-Implementation.md)*
 
-3. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your fork of the [North GitHub repository](https://github.com/Azure/CET-NorthStar) or download the necessary templates/template parameter files from the examples folder to your local computer. <br>For a basic deployment test, you'll need access to the following template:
+3. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your fork of the [north GitHub repository](https://github.com/Azure/CET-NorthStar) or download the necessary templates/template parameter files from the examples folder to your local computer. <br>For a basic deployment test, you'll need access to the following template:
 
-    - [10-create-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/10-create-managementgroup.parameters.json)
-      Parameter file to deploy the company root management group (for example, Contoso) as a child of the Tenant Root Group
+    - [10-Create-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/10-create-managementgroup.parameters.json)
+      Parameter file to deploy the company root management group (for example, Contoso) as a child of the tenant root group
 
      > Please refer to [this](../Northstar-Contribution.md#writing-arm-templates-for-contoso-implementation) article to better understand how the enterprise-scale reference ARM templates are constructed (with only **one** master template and multiple parameter files).
-4. In the sample parameter files (for this case, 10-create-managementgroup.parameters.json), change the TenantID and name of the management groups to reflect the tenant where they will be deployed. TenantID can be found by running `(Get-AzContext).Tenant`
+4. In the sample parameter files (for this case, 10-create-managementgroup.parameters.json), change the tenantid and name of the management groups to reflect the tenant where they will be deployed. Tenantid can be found by running `(get-azcontext).tenant`
 
     ```json
     {

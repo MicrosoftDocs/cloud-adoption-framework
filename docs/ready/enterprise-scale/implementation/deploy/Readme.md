@@ -13,4 +13,4 @@ ms.subservice: ready
 
 This chapter describes how you can use the enterprise-scale platform-native reference implementation in your own environment.
 
-> Note:  Before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.
+> Note: Before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.

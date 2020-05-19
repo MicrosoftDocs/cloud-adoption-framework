@@ -48,11 +48,11 @@ If these skills aren't available within the cloud platform team (through staff, 
 
 ## Start with an enterprise-scale landing zone
 
-The enterprise-scale approach to landing zone development includes four sets of assets to support cloud teams: [Implementations](./implementation.md) | [Architecture](./architecture.md) | [Design Guidelines](./design-guidelines.md) | [Template](./template.md)
+The enterprise-scale approach to landing zone development includes four sets of assets to support cloud teams: [implementations](./implementation.md) | [Architecture](./architecture.md) | [Design guidelines](./design-guidelines.md) | [Template](./template.md)
 
 - [Implementations](./implementation.md): Scripted implementations of the architecture to accelerate adoption.*
 - [Architecture](./architecture.md): Conceptual reference architecture to demonstrate design areas and best practices.
-- [Design Guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive CAF enterprise-scale landing zone.
+- [Design guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive CAF enterprise-scale landing zone.
 - [Template](./template.md): Documentation template to quickly capture decisions and any deviation from the suggested architecture and/or implementation.
 
 ## Community

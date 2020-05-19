@@ -9,31 +9,31 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## Contribution Guide
+## Contribution guide
 
-### enterprise-scale Committee
+### Enterprise-scale committee
 
-The enterprise-scale Committee and its members (aka Committee Members) are the primary caretakers of the enterprise-scale repo including language, design, and contoso implementation.
+The enterprise-scale committee and its members (aka committee members) are the primary caretakers of the enterprise-scale repo including language, design, and Contoso implementation.
 
-### Current Committee Members
+### Current committee members
 
-- Uday Pandya
-- Callum Coffin
-- Kristian Nese
-- Victor Arzate
-- Johan Dahlbom
-- Lyon Till
-- Niels Buit
+- Uday pandya
+- Callum coffin
+- Kristian nese
+- Victor arzate
+- Johan dahlbom
+- Lyon till
+- Niels buit
 
-### Committee Member Responsibilities
+### Committee member responsibilities
 
-Committee Members are responsible for reviewing and approving RFCs proposing new features or design changes.
+Committee members are responsible for reviewing and approving RFCs proposing new features or design changes.
 
-The initial enterprise-scale Committee consists of Microsoft employees. It is expected that over time, community will grow and new community members will join Committee Members. Membership is heavily dependent on the level of contribution and expertise: individuals who contribute in meaningful ways to the project will be recognized accordingly.
+The initial enterprise-scale committee consists of Microsoft employees. It is expected that over time, community will grow and new community members will join committee members. Membership is heavily dependent on the level of contribution and expertise: individuals who contribute in meaningful ways to the project will be recognized accordingly.
 
-At any point in time, a Committee Member can nominate a strong community member to join the Committee. Nominations should be submitted in the form of RFCs detailing why that individual is qualified and how they will contribute. After the RFC has been discussed, a unanimous vote will be required for the new Committee Member to be confirmed.
+At any point in time, a committee member can nominate a strong community member to join the committee. Nominations should be submitted in the form of RFCs detailing why that individual is qualified and how they will contribute. After the RFC has been discussed, a unanimous vote will be required for the new committee member to be confirmed.
 
-### Contribution scope for "enterprise-scale Architecture Guidelines"
+### Contribution scope for "enterprise-scale architecture guidelines"
 
 The following is the scope of contributions to this repository:
 
@@ -41,12 +41,12 @@ As platform evolves and we have new service and feature is validated in producti
 
 Submit a pull request for documentation updates using the following template 'placeholder'.
 
-### Contribution scope for "Contoso Reference Implementation"
+### Contribution scope for "Contoso reference implementation"
 
 With new services, resources, resource properties and API versions, the implementation guide and reference implementation must be updated as appropriate.
-Primarily, the code contribution would be centered on Azure Policy definitions and Azure Policy assignments for for Contoso Implementation.
+Primarily, the code contribution would be centered on Azure Policy definitions and Azure Policy assignments for for Contoso implementation.
 
-#### How to submit Pull Request to upstream repo
+#### How to submit pull request to upstream repo
 
 1. Create a new branch based on upstream/master by executing following command
 
@@ -69,15 +69,15 @@ Primarily, the code contribution would be centered on Azure Policy definitions a
 
 4. Create a pull request from upstream to your remote master
 
-#### Writing ARM Templates for Contoso Implementation
+#### Writing ARM templates for Contoso implementation
 
 First, let's assert that there is no right or wrong way writing ARM templates and parameters files.
 
-ARM is a language and everyone has different "style of writing". Very seldom composition of the template and parameters file are the same amongst group of developers. There is no clear style definition to govern and separate code from the config. In other words, what goes in template Vs. what is in the parameter files. Available guidance on when to use parameters and object as parameters (without any schema) are subject to interpretation and there is no one authoring "style" fits all.
+ARM is a language and everyone has different "style of writing". Very seldom composition of the template and parameters file are the same amongst group of developers. There is no clear style definition to govern and separate code from the config. In other words, what goes in template vs. What is in the parameter files. Available guidance on when to use parameters and object as parameters (without any schema) are subject to interpretation and there is no one authoring "style" fits all.
 
 To simplify development and unit testing at-scale with multiple developers contributing, we have adopted to specific style of writing templates by decoupling template from its parameter file completely.
 
-We have opted for minimalist "one template to rule them all" approach. This will externalize all resource properties as a complex object in parameter file and we can enforce strict schema validation on parameter file based on resource schema that platform already publishes. This drives clear separation between template and parameters. Parameter file is essentially RESTful representation of the resource when calling "Get-AzResource" or "az resource show".
+We have opted for minimalist "one template to rule them all" approach. This will externalize all resource properties as a complex object in parameter file and we can enforce strict schema validation on parameter file based on resource schema that platform already publishes. This drives clear separation between template and parameters. Parameter file is essentially RESTful representation of the resource when calling "get-azresource" or "az resource show".
 
 - Template.json
 
@@ -92,7 +92,7 @@ We have opted for minimalist "one template to rule them all" approach. This will
     }],
 ```
 
-There is generic multiresource template available [here](https://raw.githubusercontent.com/uday31in/AzOps/master/src/template.json) to ensure bug fixes are incorporated with latest API Version.
+There is generic multiresource template available [here](https://raw.githubusercontent.com/uday31in/AzOps/master/src/template.json) to ensure bug fixes are incorporated with latest API version.
 
 - Template.parameters.json
 
@@ -110,43 +110,43 @@ There is generic multiresource template available [here](https://raw.githubuserc
 }
 ```
 
-Retrieve resource definition by calling Get-AzResource function and giving resourceID to existing resource.
+Retrieve resource definition by calling get-azresource function and giving resourceid to existing resource.
 
 ```powershell
 #Replace resourceId in below command before executing it
 Get-AzResource -ResourceId '/providers/Microsoft.Management/managementGroups/contoso/providers/Microsoft.Authorization/policyDefinitions/DINE-Diagnostics-ActivityLog' | ConvertTo-Json -depth 100
 ```
 
-Following Pros and Cons are considered when making design decision.
+Following pros and cons are considered when making design decision.
 
 - Pros
 
   - No more writing of ARM templates! Last ARM template is written 😊.
-  - Consistent resource export throughout the lifecycle of the resource regardless of how resource is created and updated - Portal, CLI, PowerShell or third-party tools
+  - Consistent resource export throughout the lifecycle of the resource regardless of how resource is created and updated - portal, CLI, PowerShell or third-party tools
   - Easier to detect drift between configuration stored in Git versus what is current configuration&mdash;we are essentially comparing two JSON documents.
-  - Managing implicit dependencies between simple resources at client side or server side. Azure doesn't have many circular dependency between resources and it is possible to workout implicit dependencies based on resource schema already published. For example, VM might have dependency on KV but KVs do not depend on VMs. e.g. PolicyDefinition -> Policy Assignment -> Role Assignment -> Remediation or virtual network -> ExpressRoute or kv-> Azure SQL
+  - Managing implicit dependencies between simple resources at client side or server side. Azure doesn't have many circular dependency between resources and it is possible to workout implicit dependencies based on resource schema already published. For example, VM might have dependency on kv but kvs do not depend on VMs. e.g. Policydefinition -> Policy assignment -> Role assignment -> Remediation or virtual network -> ExpressRoute or kv-> Azure SQL
 
 - Cons
 
   - Losing intellisense when authoring parameter file complex object. This is one-off activity and can be mitigated by retrieving base definition of existing resource or creating resource via portal first.
-  - Unable to track template deployments using azure-partner-customer-usage-attribution. This is Not in the scope of enterprise-scale.
+  - Unable to track template deployments using Azure-partner-customer-usage-attribution. This is not in the scope of enterprise-scale.
 
 Again to re-iterate, there is nothing wrong with existing ARM templates used for resource deployments and there is no expectation to re-write those. Pipeline will continue to honour deployment of those ARM templates and detect configuration drift. But we will not be able to reconcile those templates as platform do not allow exporting deployment template in a way that can facilitate reconciliation. For that reason, any templates submit for PR must conform to ***"what-you-export"*** is ***"what-you-deploy"***.
 
 - Dos
   - Read the next section before submitting PR
 - Don'ts
-- Submit PR with template and parameters file to deploy resources e.g. Key Vault, Log Analytics, Network without wrapping them inside Policy.
+- Submit PR with template and parameters file to deploy resources e.g. Key Vault, Log Analytics, network without wrapping them inside policy.
 
-#### Contributing Policy Definitions, Policy Assignment, Role Definition and Role Assignment for for Contoso Implementation
+#### Contributing policy definitions, policy assignment, role definition and role assignment for for Contoso implementation
 
-Once you have parameter file ready for your resource that conforms to the standards mentioned in above section, please consider the scope at which this resource should be deployed - Management Group or Subscription (either Connectivity or Management Subscription). Although pipeline has an ability to deploy template at any of the given 4 scopes - we will not use resource group level deployment as a part of landing zone template. Minimum bar is subscription level deployment template wrapped inside policyDefinition.
+Once you have parameter file ready for your resource that conforms to the standards mentioned in above section, please consider the scope at which this resource should be deployed - management group or subscription (either connectivity or management subscription). Although pipeline has an ability to deploy template at any of the given 4 scopes - we will not use resource group level deployment as a part of landing zone template. Minimum bar is subscription level deployment template wrapped inside policydefinition.
 
 - Dos
 
-  - If you have resource to deploy inside Landing zone, wrap them inside Deploy-If-Not-Exist (DINE) policies and assignment for this should be at Management Group scope.
+  - If you have resource to deploy inside landing zone, wrap them inside deploy-if-not-exist (dine) policies and assignment for this should be at management group scope.
 
-  - Policy should ideally have existenceScope targeted at subscription scope if deployment count of resources inside Landing zone is exactly one e.g. virtual network inside Landing Zone or virtual hub for new Azure region
+  - Policy should ideally have existencescope targeted at subscription scope if deployment count of resources inside landing zone is exactly one e.g. Virtual network inside landing zone or virtual hub for new Azure region
   - All policy definition should ideally be created at the root defined in e2e template.
 
 - Don'ts
@@ -195,17 +195,17 @@ Example:
 }
 ```
 
-#### Contributing New Azure Policy definitions for for Contoso Implementation
+#### Contributing new Azure Policy definitions for for Contoso implementation
 
 To contribute with policy definitions that adheres to the enterprise-scale architecture, use the following tools and recommendations:
 
-[Azure Policy extension for Visual Studio](https://docs.microsoft.com/en-us/azure/governance/policy/how-to/extension-for-vscode)
+[Azure Policy extension for Visual Studio](https://docs.microsoft.com/azure/governance/policy/how-to/extension-for-vscode)
 
 Use this extension to look up policy aliases ad review resources and policies
 
 #### Explore available resource properties with associated policy aliases
 
-##### Azure Powershell
+##### Azure PowerShell
 
 ```powershell
 # List all available providers
@@ -225,7 +225,7 @@ az provider list --query [*].namespace
 az provider show --namespace Microsoft.Network --expand "resourceTypes/aliases" --query "resourceTypes[].aliases[].name"
 ```
 
-#### Contributing New Azure Policy Assignment
+#### Contributing new Azure Policy assignment
 
 For all policy assignment, the following must be considered:
 
@@ -235,8 +235,8 @@ For all policy assignment, the following must be considered:
 - What resource types are allowed that might/might not affect where the policy is being assigned?
 - For multiple policies serving same/similar purpose, can they be bundled into a policy initiative?
 - What is the rationale of the policy effect? Should an audit policy be translated to an enforcement instead?
-- For deployIfNotExists policies, are you following the principle of least privileges of access for the RBAC definition being used?
+- For deployifnotexists policies, are you following the principle of least privileges of access for the RBAC definition being used?
 
-### Code of Conduct
+### Code of conduct
 
-We are working hard to build strong and productive collaboration with our passionate community. We heard you loud and clear. We are working on set of principles and guidelines with Do's and Don'ts.
+We are working hard to build strong and productive collaboration with our passionate community. We heard you loud and clear. We are working on set of principles and guidelines with do's and don'ts.

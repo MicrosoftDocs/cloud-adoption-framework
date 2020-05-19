@@ -9,17 +9,17 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# H. Platform Automation and DevOps
+# H. Platform automation and DevOps
 
 ![Platform Automation and DevOps](./media/devops.png)
 
-_Figure 10: Platform Automation and DevOps._
+_Figure 10: Platform automation and DevOps._
 
-## 1. Planning for a DevOps Approach
+## 1. Planning for a DevOps approach
 
 Many traditional IT operating models are unfortunately not compatible with the cloud, and ultimately customers must undergo a degree of operational and organizational transformation to deliver against enterprise migration targets. Ultimately, it is highly recommended that a DevOps approach be employed for both application and central teams.
 
-**Design Considerations:**
+**Design considerations:**
 
 - Where central teams are concerned, CI/CD pipelines should be used to manage policy definitions, role-definitions, policy assignments, and template galleries. Such pipelines will help ensure multiple subscriptions can be operationally managed whilst still conforming to a desired state.
 
@@ -31,45 +31,45 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 - For some legacy applications, the associated application team may not have engineering resources required to align with a DevOps strategy.
 
-**Design Recommendations:**
+**Design recommendations:**
 
 - Establish a cross functional DevOps **Platform Team** to build, manage and maintain your **Enterprise Scale** architecture.
 
-  This team should include members from your central IT, security, compliance, and business units teams to ensure a wide spectrum of your enterprise is represented.
+  This team should include members from your Central IT, security, compliance, and business units teams to ensure a wide spectrum of your enterprise is represented.
 
   The list below presents a recommended set of DevOps roles for the central **Platform Team**.
 
-- **PlatformOps** (Platform Operations) to
+- **Platformops** (platform operations) to
 
   - Subscription provisioning and delegation of required network, IAM, and policies.
 
   - Platform management and monitoring (holistic).
 
-  - Cost Management (holistic).
+  - Cost management (holistic).
 
-  - "Platform as Code" (management of templates, scripts and other assets).
+  - "Platform as code" (management of templates, scripts and other assets).
 
-  - Responsible for overall operations on Azure within the Azure AD tenant, such as managing service principles, Graph API registration, and role definitions.
+  - Responsible for overall operations on Azure within the Azure AD tenant, such as managing service principles, graph API registration, and role definitions.
 
-- **SecOps** (Security Operations)
+- **Secops** (security operations)
 
   - Role-based access control (holistic).
 
-  - Key management (for central services, for example SMTP, Domain Controller).
+  - Key management (for central services, for example smtp, domain controller).
 
   - Policy management and enforcement (holistic).
 
   - Security monitoring and audit (holistic).
 
-- **NetOps** (Network Operations)
+- **Netops** (network operations)
 
-  - Network Management (holistic).
+  - Network management (holistic).
 
 - Allow application owners to create and manage application resources through a DevOps model.
 
 - The list below presents a recommended DevOps role for application teams.
 
-- **AppDevOps**
+- **Appdevops**
 
   - Application migration and/or transformation.
 
@@ -79,15 +79,15 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
   - Security monitoring and audit (app resources).
 
-  - Cost Management (app resources).
+  - Cost management (app resources).
 
-  - Network Management (app resources).
+  - Network management (app resources).
 
-  - In some instances, customers may wish to break AppDevOps into more granular roles such as AppDataOps for database management like traditional DBA roles, or AppSecOps where more security sensitive applications are concerned; this is to be expected.
+  - In some instances, customers may wish to break appdevops into more granular roles such as appdataops for database management like traditional dba roles, or appsecops where more security sensitive applications are concerned; this is to be expected.
 
-- Provide a central application DevOps function to support applications which do not have existing DevOps capabilities or a business case to establish one, i.e. legacy applications with minimal development capabilities.
+- Provide a central application DevOps function to support applications which do not have existing DevOps capabilities or a business case to establish one, I.e. Legacy applications with minimal development capabilities.
 
-- use a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams.
+- Use a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams.
 
   This ensures a least privilege approach is taken by using a combination of RBAC assignments and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
 
@@ -103,19 +103,19 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
   This ensures existing teams that already rely on a DevOps pipeline for application delivery can still use the same tools they have been using. Remember that you can still use Azure Policy to maintain guardrails, independent of **`HOW`** resources are deployed in Azure.
 
-## 2. Define Central and Federated Responsibilities
+## 2. Define central and federated responsibilities
 
-The distribution of roles, responsibilities, and trust between central IT teams and applications teams is paramount to the operational transformation customers must undergo when adopting the cloud at scale.
+The distribution of roles, responsibilities, and trust between Central IT teams and applications teams is paramount to the operational transformation customers must undergo when adopting the cloud at scale.
 
-**Design Considerations:**
+**Design considerations:**
 
 - Central teams strive to maintain full control whilst application owners seek to maximize agility. The balance between these goals can greatly influence the success of the migration
 
-**Design Recommendations:**
+**Design recommendations:**
 
-- The list below presents a recommended distribution of responsibilities between central IT and application teams, striving to empower migration/transformation activities with minimal central dependencies, while still supporting the centralized governance of security and operability across the entire estate.
+- The list below presents a recommended distribution of responsibilities between Central IT and application teams, striving to empower migration/transformation activities with minimal central dependencies, while still supporting the centralized governance of security and operability across the entire estate.
 
-- **Application Functions**
+- **Application functions**
 
   - Application migration and/or transformation.
 
@@ -127,17 +127,17 @@ The distribution of roles, responsibilities, and trust between central IT teams 
 
   - Security monitoring and audit (app resources).
 
-  - Cost Management (app resources).
+  - Cost management (app resources).
 
-  - Network Management (app resources).
+  - Network management (app resources).
 
-- **Central Functions**
+- **Central functions**
 
   - Architecture governance.
 
   - Subscription management.
 
-  - **Platform as Code** (management of templates, scripts and other assets).
+  - **Platform as code** (management of templates, scripts and other assets).
 
   - Policy management and enforcement (holistic).
 
@@ -145,12 +145,12 @@ The distribution of roles, responsibilities, and trust between central IT teams 
 
   - Role-based access control (holistic).
 
-  - Key Management (central services).
+  - Key management (central services).
 
   - Network management (networks, NVAs, etc.).
 
   - Security monitoring and audit (holistic).
 
-  - Cost Management (holistic).
+  - Cost management (holistic).
 
 **A DevOps model on Azure based on these recommendations provides the desired control for central teams as well as the migration agility required by application teams, without compromise.**
