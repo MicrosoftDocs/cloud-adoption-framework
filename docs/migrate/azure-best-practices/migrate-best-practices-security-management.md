@@ -136,7 +136,7 @@ _Azure Key Vault_
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/key-vault/general/key-vault-overview) of Azure Key Vault.
+- [Get an overview](https://docs.microsoft.com/azure/key-vault/general/overview) of Azure Key Vault.
 - [Learn about](https://docs.microsoft.com/azure/application-gateway/waf-overview) web application firewall.
 - [Get an introduction](https://docs.microsoft.com/azure/app-service/environment/intro) to App Service Environments.
 - [Learn how to](https://docs.microsoft.com/azure/key-vault/tutorial-web-application-keyvault) configure a web app to read secrets from Key Vault.
@@ -438,7 +438,7 @@ _Azure Monitor_
 
 - [Learn about](https://docs.microsoft.com/azure/azure-monitor/overview) Azure Monitor.
 - [Get best practices](https://docs.microsoft.com/azure/architecture/best-practices/monitoring) for monitoring and diagnostics.
-- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/scaling) autoscaling.
+- [Learn about](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling) autoscaling.
 - [Learn how to](https://docs.microsoft.com/azure/security-center/security-center-export-data-to-siem) route Azure data to a SIEM tool.
 
 ## Best practice: Enable diagnostic logging
