@@ -37,15 +37,15 @@
 
 # Design Principles
 
-The "North Star" architecture prescribed within this playbook is underpinned by following fundamental design principals, which serve as a compass for subsequent design decisions across critical technical domains. Readers are strongly advised to familiarize themselves with these principals to better understand their impact and the trade-offs associated with non-adherence.
+The **North Star** architecture prescribed in this playbook is based on the design principles described in this section. These principles serve as a compass for subsequent design decisions across critical technical domains. Readers are strongly advised to familiarize themselves with these principles to better understand their impact and the trade-offs associated with non-adherence.
 
 ## Subscription Democratization
 
-Subscriptions should be used as a unit of management and scale aligned with business needs and priorities, to support business areas and portfolio owners to accelerate application migrations and net-new application development. Subscriptions should be provided to business lines to support the design and development/testing of both migrating and net-new workloads.
+Subscriptions should be used as a unit of management and scale aligned with business needs and priorities, to support business areas and portfolio owners to accelerate application migrations and new application development. Subscriptions should be provided to business units to support the design and development/testing of new workloads and migration of workloads.
 
 ## Policy Driven Governance
 
-Azure Policy should be used to provide the "guard-rails" and ensure the continued compliance of the customer platform and applications deployed onto it, whilst also providing application owners sufficient freedom and a secure unhindered path to cloud.
+Azure Policy should be used to provide the **guard-rails** and ensure the continued compliance of the customer platform and applications deployed onto it, whilst also providing application owners sufficient freedom and a secure unhindered path to cloud.
 
 ## Single Control and Management Plane
 
@@ -57,7 +57,9 @@ The "North Star" architecture should focus on application centric migrations and
 
 ## Azure Native Design and Roadmap Aligned
 
-The North Star architecture strongly advocates the use of native platform services and capabilities wherever possible, which should be fully aligned with Azure platform roadmaps from the offset to ensure new capabilities are swiftly made available within customer environments. More specifically, Azure platform roadmaps should help to inform the migration strategy and "North Star" trajectory.
+The **Enterprise Scale architecture** approach advocates the use of native platform services and capabilities whenever possible, which should be aligned with Azure platform roadmaps to ensure new capabilities are made available within customer environments. Azure platform roadmaps should help inform the migration strategy and **North Star** trajectory.
+
+## Recommendations
 
 -   Be prepared to trade off functionality as not everything will likely be required on day one.
 -   Leverage preview services and take dependencies on service roadmaps in order to remove technical blockers.

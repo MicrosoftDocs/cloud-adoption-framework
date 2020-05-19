@@ -35,20 +35,8 @@
 
 ---
 
-# Contents
+# Using reference implementation in your environment
 
-This article describes how to trigger local definitions/assignments deployments from your computer whenenver you need to validate deployments without using GitHub actions.
+This chapter describes how you can use the North Star platform-native reference implementation in your own environment.
 
-For local debugging purposes, you can trigger a deployment from your computer by running the following commands from a PowerShell terminal.
-
- Before running the commands below:
- - Ensure you are located in the root folder of your local clone. 
- - Ensure you have made either definitions or assignments changes in your local clone as described on the [Deploy platform infrastructure](./Deploy-platform-infra.md) and [Deploy landing zones](./Deploy-lz.md) articles.
-
-    ```powershell
-    Import-Module .\src\AzOps.psd1 -force
-    Get-ChildItem -Path .\src -Include *.ps1 -Recurse | ForEach-Object {.$_.FullName}
-    Invoke-AzOpsGitPush -Verbose
-    ```
-
-Those commands will trigger a definition or assignment deployment (depending which one you configured in your local folder structure) without involving the GitHub actions deployment process described on the previous sections.
+> Note:  Before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.

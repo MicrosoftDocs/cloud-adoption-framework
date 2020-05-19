@@ -90,25 +90,39 @@ This section will focus on centralized management and monitoring at a platform l
 
 -   Use a single [Log Analytics workspace](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment) for centralized platform management except where RBAC and data sovereignty requirements mandate the consideration of separate workspaces.
 
+    Centralized logging is critical to the visibility that's required by the operations management teams. The centralization of logging drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and reduces the chances for gaps in observability.
+
+    Within the context of the Enterprise Scale architecture, centralized logging is primarily concerned with platform operations. However, this does not preclude the use of the same workspace for application logging. With a workspace configured in resource centric access control mode, granular RBAC is enforced to ensure app teams will only have access to the logs from their resources. In this model app teams benefit from the use of existing platform infrastructure by reducing their management overhead.
+
 -   Export logs to Azure Storage if log retention requirements exceed 2 years.
 
     -   Leverage immutable storage with WORM policy (Write Once, Read Many) to make data non-erasable and non-modifiable for a user-specified interval.
 
 -   Use Azure Policy for access control and compliance reporting.
 
+    This provides the ability to enforce the settings across an organization to ensure consistent policy adherence and fast violation detection, as described in this [article](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects).
+
 -   Monitor in-guest VM configuration drift using Azure Policy.
 
--   Use the Update Management Solution as a long-term patching mechanism, for both Windows and Linux VMs.
+    Enabling [guest configuration](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration) audit capabilities through policy provides application teams with the ability to immediately consume the feature capabilities for their workloads with very little effort.
+
+-   Use [Update Management in Azure Automation](https://docs.microsoft.com/en-us/azure/automation/automation-update-management) as a long-term patching mechanism, for both Windows and Linux VMs.
+
+    Enforcing configuration of update management through policy ensures all VMs are included in the patch management regimen, provides application teams with the ability to manage patch deployment for their VMs, and provides central IT with visibility and enforcement capabilities across all VMs.
 
 -   Use Azure Network Watcher to proactively monitor traffic flows via [NSG Flow Logs v2](https://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-nsg-flow-logging-overview).
 
+    The Network Watcher [Traffic Analytics](https://docs.microsoft.com/en-us/azure/network-watcher/traffic-analytics) feature leverages NSG Flow Logs to provide deep insights into IP traffic within a virtual network, providing information critical for effective management and monitoring. Traffic Analytics provides information such as most communicating hosts, most communicating application protocols, most conversing host pairs, allowed/blocked traffic, inbound/outbound traffic, open internet ports, most blocking rules, traffic distribution per Azure datacenter, virtual network, subnets, or, rogue networks.
+
 -   Use resource locks to prevent accidental deletion of critical shared services.
 
--   Use deny policies to supplement Azure AD RBAC assignments.
+-   Use [deny policies](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects#deny) to supplement Azure AD RBAC assignments.
 
--   Include Service/Resource Health events as part of the overall platform monitoring solution.
+    Deny policies are used to prevent deployment and configuration of resources that do not match defined standards by preventing the request from being sent to the Resource Provider. The combination of deny policies and RBAC assignments ensures the appropriate guard rails are in place to enforce **who** can deploy resources and **what** resources they can deploy.
 
-<!-- -->
+-   Include [Service](https://docs.microsoft.com/en-us/azure/service-health/service-health-overview) and [Resource](https://docs.microsoft.com/en-us/azure/service-health/resource-health-overview) Health events as part of the overall platform monitoring solution.
+
+    Tracking service and resource health from the platform perspective is an important component of resource management in Azure.
 
 -   Do not send raw logs entries back to on premise monitoring systems, but instead adopt the principal of "data born in Azure, stays in Azure".
 
@@ -136,8 +150,16 @@ Expanding on the previous section, this next section will now consider the feder
 
 -   Use a centralized Log Analytics workspace to collect logs and metrics from IaaS and PaaS application resources, and [control log access with RBAC](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
 
--   Establish separate hot and cold paths for metrics and logs.
+-   Use [Azure Monitor Metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-platform-metrics) for time sensitive analysis. 
+
+    Metrics in Azure Monitor are stored in a time-series database which is optimized for analyzing time-stamped data. This makes metrics particularly suited for alerting and fast detection of issues. They can tell you how your system is performing but typically need to be combined with logs to identify the root cause of issues.
+
+-   Use [Azure Monitor Logs](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-platform-logs) for insights and reporting. 
+
+    Logs contain different kinds of data organized into records with different sets of properties and are especially useful for performing complex analysis across data from a variety of sources, such as performance data, events, and traces.
 
 -   Use shared storage accounts within the "Landing Zone" for Azure Diagnostic Extension log storage when required.
 
--   Leverage Azure Monitor with Event Grid, or Azure Alerts, for the generation of operational alerts.
+-   Leverage [Azure Monitor Alerts](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-overview) for the generation of operational alerts.
+
+    Azure Monitor Alerts provides a unified experience for alerting on metrics and logs, and leverages features such as action groups and smart groups for advanced management and remediation capabilities.

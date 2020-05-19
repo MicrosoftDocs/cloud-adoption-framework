@@ -43,7 +43,7 @@ This section will help readers capture customer disaster recovery requirements t
 
 ***Design Considerations***
 
--   Application and data availability requirements and the use of active-active and active-passive availability patterns i.e. workload RPO and RTO requirements.
+-   Application and data availability requirements and the use of active-active and active-passive availability patterns i.e. workload RTO and RPO requirements.
 
 -   BCDR for PaaS services and the availability of native DR and HA features.
 
@@ -91,12 +91,31 @@ This section will help readers capture customer disaster recovery requirements t
 
 -   Employ Azure Site Recovery for Azure to Azure Virtual Machine DR scenarios to replicate workloads across regions.
 
--   Utilize native PaaS service DR capabilities, such as geo-replication/geo-restore for Azure Storage.
+    -   ASR provides built-in platform capabilities for VM workloads to meet low RPO/RTO requirements through real-time replication and recovery automation. Additionally, the service provides the ability to run recovery drills without affecting the workloads in production.
 
--   Leverage Azure native backup capabilities, such as Azure Backup to transfer data to Azure Storage.
+-   Utilize native PaaS service DR capabilities.
 
--   Use multiple regions and on-premises peering locations, connect using ExpressRoute.
+    -   The built-in features provide an easy solution to the complex task of building replication and failover into a workload architecture, simplifying both design and deployment automation. An organization that has defined a standard for the services they use can also audit and enforce the service configuration through Azure Policy.
+
+-   Leverage Azure native backup capabilities.
+
+    -   Azure Backup, and PaaS native backup features, remove the need for managing third party backup software and infrastructure. As with other native features, backup configurations can be set, audited, and enforced with Azure Policy, ensuring services remain compliant with organizational requirements.
+
+-   Use multiple regions and peering locations for ExpressRoute connectivity.
+
+    -   A redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity in the event of an outage affecting an Azure region or peering provider location.
+
+-   Refer to [Azure Region Pairs](https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions) documentation when selecting locations for your organizations DR layouts.
+
+-   Use Azure paired regions when planning for BCDR.
+
+  -   Planned Azure system updates are rolled out to paired regions sequentially (not at the same time) to minimize downtime, the effect of bugs, and logical failures in the rare event of a bad update.
+
+  -   In the event of a broad outage, recovery of one region is prioritized out of every pair. Applications that are deployed across paired regions are guaranteed to have one of the regions recovered with priority. If an application is deployed across regions that are not paired, recovery might delayed in the worst case the chosen region may be the last two to be recovered.
+
 
 <!-- -->
 
 -   Avoid using overlapping IP address ranges for Production and DR sites.
+  
+    -   Whenever possible, plan for a BCDR network architect that provides for concurrent connectivity to all sites. DR networks that utilize the same CIDR blocks as production networks will require a network failover process that can complicate and delay application failover in the event of an outage.

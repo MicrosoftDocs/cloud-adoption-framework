@@ -49,6 +49,7 @@ There are two categories of activities that must take place in order to implemen
     -   To operationalize at scale, it is paramount that these activities follow the principal of "Infrastructure-as-Code" and automated using deployment pipelines.
 
 ## 1. *What-must-be-true for the CAF enterprise-scale landing zone*
+### 1.1 EA Enrollment & Azure AD Tenants
 
 | Activities                                                                                       | Parameters required | NorthStar Example configuration   |
 |--------------------------------------------------------------------------------------------------|---------------------|----------------------------------|

@@ -39,169 +39,191 @@
 
 ## 1. Define Encryption and Key Management
 
-Encryption is a vital step towards ensuring data privacy, compliance, and sovereignty in Azure, and is ultimately one of the most important security concerns of many enterprise customers.
+Encryption is a vital step towards ensuring data privacy, compliance, and data residency in Azure. It is also one of the most important security concerns of many enterprise customers. This section will go over the design considerations and recommendations as it pertains to encryption and key management.
 
 ***Design Considerations***
 
--   Subscription and scale limits as they apply to Key Vault.
+- Subscription and scale limits as they apply to Key Vault
 
-    -   Key Vault transaction limits for keys and secrets; throttling occurs over 2000 transactions per vault in a 10 second period.
+  - Key Vault has transaction limits for keys and secrets; For throttling transactions per vault in a certain period see ([Azure Limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits))
 
--   Key Vault serves a security boundary since access permissions for keys, secrets and certificates are at the vault level.
+- Key Vault serves a security boundary since access permissions for keys, secrets and certificates are at the vault level
 
-    -   Key Vault Access Policy assignments grant permissions separately to keys, secrets or certificates, but do not support granular, object-level permissions like a specific key, secret, or certificate.
+  - Key Vault Access Policy assignments grant permissions separately to keys, secrets or certificates, but does not support granular, object-level permissions like a specific key, secret, or certificate ([Key Management](https://docs.microsoft.com/en-us/azure/security/fundamentals/data-encryption-best-practices))
 
-    -   Consideration should be given to isolate application/workload specific secrets and shared secrets as appropriate.
+  - Isolate application/workload specific secrets and shared secrets as appropriate ([Control Access](https://docs.microsoft.com/en-us/azure/key-vault/general/best-practices))
 
--   Premium SKU can be leveraged where HSM protected keys are required.
+- Premium SKU can be leveraged where HSM protected keys are required
 
-    -   Underlying HSMs are FIPS 140-2 Level 2.
+  - Underlying HSMs are FIPS 140-2 Level 2
 
-    -   Managed Azure Dedicated HSM for FIPS 140-2 Level 3 compliance, considering the supported scenarios. 
+  - Managed Azure Dedicated HSM for FIPS 140-2 Level 3 compliance, considering the supported scenarios
 
--   Key rotation and secret expiry.
+- Key rotation and secret expiration
 
-    -   Certificate procurement and signing using Key Vault.
+  - Certificate procurement and signing using Key Vault. ([About Certs](https://docs.microsoft.com/en-us/azure/key-vault/certificates/about-certificates))
 
-    -   Alerting/notifications and automated certificate renewals.
+  - Alerting/notifications and automated certificate renewals
 
--   DR requirements for keys, certificates, and secrets.
+- DR requirements for keys, certificates, and secrets
 
-    -   Key Vault service replication and failover capabilities.
+  - Key Vault service replication and failover capabilities. ([Availability &amp; Redundancy](https://docs.microsoft.com/en-us/azure/key-vault/general/disaster-recovery-guidance))
 
--   Monitoring key, certificate, and secret usage.
+- Monitoring key, certificate, and secret usage
 
-    -   Detection of unauthorized access using Key Vault - log analytics workspace.
+  - Detection of unauthorized access using Key Vault - log analytics workspace. ([Monitoring &amp; Alerting](https://docs.microsoft.com/en-us/azure/key-vault/general/alert))
 
--   Delegated Key Vault instantiation and privileged access.
+- Delegated Key Vault instantiation and privileged access. ([Secure Access](https://docs.microsoft.com/en-us/azure/key-vault/general/secure-your-key-vault))
 
--   Requirements surrounding the use customer managed keys for native encryption mechanisms such as Storage Service Encryption (SSE).
+- Requirements surrounding the use customer managed keys for native encryption mechanisms such as Storage Service Encryption (SSE). ([CMK](https://docs.microsoft.com/en-us/azure/storage/common/storage-encryption-keys-portal))
+
+- Whole disk encryption for Virtual Machines
+
+- Data in transit encryption
+
+- Data at rest encryption
 
 ***Design Recommendations***
 
--   Use a federated Key Vault model to avoid transaction scale limits.
+- Use a federated Key Vault model to avoid transaction scale limits
 
--   Provision Key Vault with the Soft Delete and Purge Policies enabled.
+- Provision Key Vault with the Soft Delete and Purge Policies enabled to allow retention protection for deleted objects
 
--   Limit authorization to permanently delete keys, secrets and certificates to specialized custom Azure AD roles.
+- Follow a least privilege model by limiting authorization to permanently delete keys, secrets, and certificates to specialized custom Azure AD roles 
 
--   Automate the certificate management and renewal process with public Certificate Authorities.
+- Automate the certificate management and renewal process with public Certificate Authorities to ease administration
 
--   Establish an automated process for key and certificate rotation.
+- Establish an automated process for key and certificate rotation
 
--   Enable firewall and VNET service endpoint on the vault.
+- Enable firewall and VNET service endpoint on the vault to control access to the Key Vault
 
--   Use the platform-central Log Analytics workspace to audit key, certificate, and secret usage within each Key Vault.
+- Use the platform-central Log Analytics workspace to audit key, certificate, and secret usage within each Key Vault
 
--   Delegate Key Vault instantiation and privileged access, using Azure Policy to enforce a consistent compliant configuration.
+- Delegate Key Vault instantiation and privileged access, using Azure Policy to enforce a consistent compliant configuration
 
--   Default to Microsoft managed keys (MMK) for principal encryption functionality and when required use customer manged keys (CMK).
+- Default to Microsoft managed keys (MMK) for principal encryption functionality and when required to use customer managed keys (CMK)
 
-<!-- -->
+- Do not use centralized Key Vault instances for application keys or secrets
 
--   Do not use centralized Key Vault instances for application keys or secrets.
-
--   Do not share Key Vault instances between applications unless associated threat models encompass all applications considered; Key Vault should be treated as a security boundary.
+- Do not share Key Vault instances between applications to avoid secret sharing across environments
 
 ## 2. Planning for Governance
 
-Azure Policy is essential to ensuring security and compliance within enterprise technical estates, enforcing vital management and security conventions across Azure platform services, as well as supplementing RBAC concerning what actions authorized users can perform.
+Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services, as well as supplement Role Based Access Controls that control what actions authorized users can perform.
 
 ***Design Considerations***
 
--   Compliance and assurance on Azure is achieved through Azure Policy; enforcing management and security conventions, such as encryption and the use of private endpoints.
+- Determine what Azure Policies are needed
 
--   Centralized and federated models for the management and creation of policy assignments.
+- Enforcing management and security conventions, such the use of private endpoints
 
-    -   Policy definitions can be reused at multiple inherited assignment scopes.
+- Management and creation of policy assignments
 
-    -   Centralized baseline policy assignments at management group, subscription and resource group scopes.
+  - Policy definitions can be reused at multiple inherited assignment scopes.
 
--   Compliance reporting and auditing to ensure continuous compliance.
+  - Centralized baseline policy assignments at management group, subscription, and resource group scopes
 
--   Azure Policy limits, such as the restriction of 500 Definitions at any given scope.
+- Compliance reporting and auditing to ensure continuous compliance
+
+- Azure Policy has limits, such as the restriction of definitions at any given scope. ([Policy Limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits))
+
+- Regulatory compliance policies such as HIPPA, PCI DSS, SOC TSP
 
 ***Design Recommendations***
 
--   Identify required Azure Tags and use the append policy mode to enforce their usage.
+- Identify required Azure Tags and use the append policy mode to enforce usage
 
--   Map regulatory and compliance requirements to Azure Policy definitions and Azure AD RBAC assignments.
+- Map regulatory and compliance requirements to Azure Policy definitions and Azure AD RBAC assignments
 
--   Establish Azure Policy definitions at the top-level root Management Group so that they can be assigned at inherited scopes.
+- Establish Azure Policy definitions at the top-level root Management Group so that they can be assigned at inherited scopes
 
--   Manage policy assignments at the highest appropriate level with exclusions at bottom levels if required.
+- Manage policy assignments at the highest appropriate level with exclusions at bottom levels if required
 
--   Use Azure Policy to control resource provider registrations at the Subscription and/or Management Group levels.
+- Use Azure Policy to control resource provider registrations at the Subscription and/or Management Group levels
 
--   Use built-in policies as a preference where possible.
+- Use built-in policies where possible to minimize operational overhead
 
--   Delegate the built-in policy contributor role at a given scope to allow application level governance.
+- Assign the built-in policy contributor role at a given scope to enable application level governance
 
--   Limit the number of Azure Policy assignments made at the root Management Group scope to avoid managing through exclusions at inherited scopes.
+- Limit the number of Azure Policy assignments made at the root Management Group scope to avoid managing through exclusions at inherited scopes
+
 
 ## 3. Define Security Monitoring and Audit policy
 
-One of the primary concerns of enterprise customers when migrating to Azure is losing visibility into what is happening within their technical estate. Security monitoring and audit logging of Azure platform services is therefore a crucial security practice required to appropriately safeguard sensitive data.
+It is crucial for enterprise customers to have visibility into what is happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is therefore a key component of a scalable framework.
 
 ***Design Considerations***
 
--   Data retention periods for regulatory audit data; Azure AD reports (premium) has a 30-day retention period.
+- Data retention periods for audit data; Azure AD reports (premium) has a 30-day retention period
 
--   Long term archiving of logs, such as Azure Activity Logs, VM logs, and PaaS service logs.
+- Long term archiving of logs, such as Azure Activity Logs, VM logs, and PaaS service logs
 
--   Baseline security configuration via Azure In-guest VM Policy.
+- Baseline security configuration via Azure In-guest VM Policy
 
--   Emergency patching for critical vulnerabilities.
+- Emergency patching for critical vulnerabilities
 
--   Patching for VMs that are offline for extended periods of time.
+- Patching for VMs that are offline for extended periods of time
 
--   Requirements for real-time monitoring and alerting.
+- Requirements for real-time monitoring and alerting
 
--   SIEM integration with Azure Security Center and Azure Sentinel.
+- SIEM integration with Azure Security Center and Azure Sentinel
+
+- Vulnerability Assessment of Virtual Machines
 
 ***Design Recommendations***
 
--   Use Azure AD reporting capabilities to generate access control audit reports.
+- Use Azure AD reporting capabilities to generate access control audit reports
 
--   Export Azure Activity logs to Log Analytics for long term data retention and if necessary, export to Azure Storage for long term storage beyond two years.
+- Export Azure Activity logs to Log Analytics for long term data retention and if necessary, export to Azure Storage for long term storage beyond two years
 
--   Enable Azure Security Center (Standard SKU) for all subscriptions, using Azure Policy to ensure compliance.
+- Enable Azure Security Center (Standard SKU) for all subscriptions, using Azure Policy to ensure compliance
 
--   Monitor base OS patching drift via Log analytics and Azure Security Center.
+- Monitor base OS patching drift via Log analytics and Azure Security Center
 
--   Use Azure Policies to automatically deploy software configurations through VM extensions and enforce a compliant baseline VM configuration.
+- Use Azure Policies to automatically deploy software configurations through VM extensions and enforce a compliant baseline VM configuration
 
--   Monitor VM security configuration drift via Azure Policy.
+- Monitor VM security configuration drift via Azure Policy
 
--   Connect default resource configurations to a centralized Log Analytics workspace.
+- Connect default resource configurations to a centralized Log Analytics workspace
 
--   Use an Event Grid based solution for log orientated real-time alerting.
+- Use an Event Grid based solution for log orientated real-time alerting
 
 ## 4. Planning for Platform Security
 
+It is essential to maintain a healthy security posture as enterprise customers adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure Services evolve. Therefore, planning for platform security is extremely important.
+
 ***Design Considerations***
 
--   Many customers, particularly those in security conscious industries such as FSI, demand a detailed understanding across the following two topic areas.
+- Shared responsibility
 
-    -   Consistent security across Azure services in terms of data management and control plane operations
+- High availability and Disaster recovery
 
-    -   "Multi-tenancy under the hood" for key platform components, from Hyper-V and the HSMs underpinning Key Vault to database engines.
+- Consistent security across Azure services in terms of data management and control plane operations
+
+- &quot;Multi-tenancy under the hood&quot; for key platform components, from Hyper-V and the HSMs underpinning Key Vault to database engines
+
 
 ***Design Recommendations***
 
--   It is recommended that a joint examination of each required service be conducted, within the context of underlying customer requirements.
+- It is recommended that a joint examination of each required service be conducted, within the context of underlying customer requirements
 
-    -   For instance, if the customer wishes to bring their own keys, this may or may not be supported across all considered services. Relevant mitigations will therefore need to be put forward, so that inconsistencies do not hinder desired outcomes.
+  - If the customer wishes to bring their own keys, this may or may not be supported across all considered services. Relevant mitigations will therefore need to be put forward, so that inconsistencies do not hinder desired outcomes
+  
+  - Choose appropriate region pairs and disaster recovery regions that minimize latency
 
--   Develop security framework to assess services with common security criteria for. 
+- Develop security whitelisting plan to assess services security configuration, monitoring, alerts, and how to integrate those with existing systems
 
--   Use Azure AD reporting capabilities to generate access control audit reports.
+- Determine incident response plan for Azure services before whitelisting
 
--   Align customer security requirements with Azure platform roadmaps.
+- Use Azure AD reporting capabilities to generate access control audit reports
+
+- Align customer security requirements with Azure platform roadmaps to stay up-to-date with newley relased security controls
+
+- Implement a Zero Trust approach for access to the Azure platform where appropriate
 
 ## 5. Service Whitelisting Framework
 
-The following table provides a framework to assess enterprise security readiness of Azure services. 
+As business units request to put workloads into Azure, it requires additional visibility into a workload to determine how to achieve appropriate levels of Governance, Security, and Compliance. When a new service is required that has not been onboarded, whitelisting the service needs to occur. The following table provides a framework to assess enterprise security readiness of Azure services.
 
 | Assesment                    | Category                                                              | Crtieria                                                                                                                                     |
 |------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|

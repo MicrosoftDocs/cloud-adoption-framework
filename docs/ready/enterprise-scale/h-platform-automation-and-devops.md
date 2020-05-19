@@ -58,9 +58,11 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 ***Design Recommendations***
 
--   Establish a cross-cutting central DevOps "Platform Team" to build, manage and maintain the "North Star" architecture.
+- Establish a cross functional DevOps **Platform Team** to build, manage and maintain your **Enterprise Scale** architecture.
 
--   The list below presents a recommended set of DevOps roles for the central "Platform Team".
+  This team should include members from your central IT, security, compliance, and business units teams to ensure a wide spectrum of your enterprise is represented.
+
+  The list below presents a recommended set of DevOps roles for the central **Platform Team**.
 
 -   **PlatformOps** (Platform Operations) to
 
@@ -112,15 +114,19 @@ Many traditional IT operating models are unfortunately not compatible with the c
 
 -   Leverage a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams.
 
--   In the spirit of accelerating Azure adoption, the central "Platform Team" should be leveraged to establish a common set of templates and libraries for application teams to draw upon.
+  This ensures a least privilege approach is taken by using a combination of RBAC assignments and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
 
-    -   For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and more importantly, ensure alignment with the overall target "North Star" architecture.
+-   To accelerate Azure adoption, the central **Platform Team** should be leveraged to establish a common set of templates and libraries for application teams to draw upon.
 
-<!-- -->
+  For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target "North Star" architecture.
 
--   Do not restrict application teams to use central artefacts or approaches as it hinders agility. Consistent baseline configurations are already enforced through the policy driven approach and RBAC.
+-   Do **NOT** restrict application teams to use central artifacts or approaches as it hinders agility. Consistent baseline configurations can be enforced through a policy driven infrastructure approach and RBAC assignments.
 
--   Do not force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources.
+  This ensures application (business unit) teams are flexible enough to innovate while still able to draw from a pre defined set of templates.
+
+-   Do **NOT** force application teams to use a central process or provisioning pipeline for the instantiation or management of application resources.
+
+  This ensures existing teams that already rely on a DevOps pipeline for application delivery can still use the same tools they have been using. Remember that you can still use Azure Policy to maintain guardrails, independent of **HOW** resources are deployed in Azure.
 
 ## 2. Define Central and Federated Responsibilities
 
@@ -132,7 +138,7 @@ The distribution of roles, responsibilities, and trust between central IT teams 
 
 ***Design Recommendations***
 
--   The list below presents a recommended distribution of responsibilities between central IT and application teams, striving to empower migration/transformation activities with minimal central dependencies, while still supporting the centralised governance of security and operability across the entire estate.
+-   The list below presents a recommended distribution of responsibilities between central IT and application teams, striving to empower migration/transformation activities with minimal central dependencies, while still supporting the centralized governance of security and operability across the entire estate.
 
 -   **Application Functions**
 
@@ -156,7 +162,7 @@ The distribution of roles, responsibilities, and trust between central IT teams 
 
     -   Subscription management.
 
-    -   "Platform as Code" (management of templates, scripts and other assets).
+    -   **Platform as Code** (management of templates, scripts and other assets).
 
     -   Policy management and enforcement (holistic).
 
@@ -172,4 +178,4 @@ The distribution of roles, responsibilities, and trust between central IT teams 
 
     -   Cost Management (holistic).
 
-> Ultimately, if the design recommendations discussed within this playbook are followed, a **DevOps model on Azure could provide both the desired control for central teams as well as the migration agility required by application teams, without compromise.**
+**A DevOps model on Azure based on these recommendations provides the desired control for central teams as well as the migration agility required by application teams, without compromise.**
