@@ -218,7 +218,7 @@ _Resource group naming_
 
 The last thing you need is for a resource group to disappear because it was deleted accidentally. We recommend that you implement delete locks so that this doesn't happen.
 
-![Delete locks](./media/migrate-best-practices-security-management/locks.png)
+![Delete locks](./media/migrate-best-practices-security-management/locks.png) <br/>
 _Delete locks_
 
 **Learn more:**
