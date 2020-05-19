@@ -41,7 +41,7 @@ Status: For Contoso to deterministically target the platform subscriptions with 
 
 Area: Microsoft.Management Resource Provider
 
-Issue: When doing put on Microsoft.Management/managementGroups/subscriptions, the PUT and GET response is 204 (no content), so the overall template deployment fails.	Fix was deployed to resolve PUT request. Waiting for the fix to resolve GET request.
+Issue: When doing put on Microsoft.Management/managementGroups/subscriptions, the PUT and GET response is 204 (no content), so the overall template deployment fails. Fix was deployed to resolve PUT request. Waiting for the fix to resolve GET request.
 
 Status: No fix as of yet.
 
@@ -57,7 +57,7 @@ Status: No fix as of yet, and for workaround the particular policyAssignments mu
 
 Area: Azure Resource Manager template deployments
 
-Issue: When doing nested deployment from management group scope without having the “scope” property specified on "Microsoft.Resources/deployments", ARM defaults to tenant root and does a tenant scope deployment.
+Issue: When doing nested deployment from management group scope without having the "scope" property specified on "Microsoft.Resources/deployments", ARM defaults to tenant root and does a tenant scope deployment.
 
 Status: No fix as of yet.
 
@@ -73,9 +73,9 @@ Status: No fix as of yet.
 
 Area: Azure Resource Manager template deployments
 
-Issue: When using “conditions” on resources, and it evaluates to false, the reference() function within the resource properties is still executed which causes the deployment to fail.
+Issue: When using "conditions" on resources, and it evaluates to false, the reference() function within the resource properties is still executed which causes the deployment to fail.
 
-Status: No fix as of yet. Workaround is to do N number of additional if() functions to logically navigate (e.g., if reference resource doesn’t exist, throw json(‘null’).)
+Status: No fix as of yet. Workaround is to do N number of additional if() functions to logically navigate (e.g., if reference resource doesn't exist, throw json('null').)
 
 ### Unsupported number of tenants in context: x TenantID(s)
 
@@ -85,6 +85,6 @@ Status: No fix as of yet.
 
 ### Subscriptions or Management Group with duplicated names
 
-Issue: The discovery process discussed on [this](./Configure-run-initialization.md) article will fail if there are subscriptions or Management Groups with duplicated names. 
+Issue: The discovery process discussed on [this](./Configure-run-initialization.md) article will fail if there are subscriptions or Management Groups with duplicated names.
 
 Status: Workaround is to ensure subscription names and management groups are unique in your tenant regradless of the hierarchy prior to running the discovery process.

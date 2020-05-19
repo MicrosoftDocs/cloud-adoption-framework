@@ -30,9 +30,9 @@ The image below shows a variety of landing zone options. The following options h
 - When a partner provides ongoing managed services or is contracted to deliver on the adoption plan, they commonly provide their own landing zone. Using a partner landing zone can accelerate adoption efforts and ensure consistent operational management requirements. However, additional considerations should be given to internal governance and security requirements to ensure alignment.
 
 - Start with the CAF enterprise-scale landing zone approach to generate an enterprise-ready landing zone. When adoption teams have a mid-term objective (within 24 months) to **host more than 1,000 assets (applications, infrastructure, or data assets) in the cloud**, they should interpret a CAF enterprise-scale landing zone as guidance for platform architecture and landing zones. The CAF enterprise-scale landing zone is a more advanced approach that includes both target-state platform architecture **and** reference implementations.
-    - This approach pulls forward aspects of parallel methodologies, including governance and operations to better prepare for mission-critical, secure, complex, and compliance-governed adoption.
-    - This approach also creates the ability to generate multiple landing zones from a common architecture.
-    - If options A through D are the best starting point, platform teams are still encouraged to optimize CAF enterprise-scale landing zone implementation and architecture as an end-state reference during refactoring efforts.
+  - This approach pulls forward aspects of parallel methodologies, including governance and operations to better prepare for mission-critical, secure, complex, and compliance-governed adoption.
+  - This approach also creates the ability to generate multiple landing zones from a common architecture.
+  - If options A through D are the best starting point, platform teams are still encouraged to optimize CAF enterprise-scale landing zone implementation and architecture as an end-state reference during refactoring efforts.
 
 ## Other data points to influence the choice of a first landing zone
 

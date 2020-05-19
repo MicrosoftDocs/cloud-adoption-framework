@@ -11,21 +11,20 @@ ms.subservice: ready
 
 ## FAQ
 
-This page will list frequently asked question for North Star design as well as Contoso Implementation.
+This page will list frequently asked question for enterprise-scale design as well as Contoso Implementation.
 
-## North Star Design
+## enterprise-scale Design
 
-### What does "Landing Zone" map to in Azure in the context of North Star?
+### What does "Landing Zone" map to in Azure in the context of enterprise-scale
 
-From North Star point of view, Subscription is the "Landing Zone" in Azure.
-
+From enterprise-scale point of view, Subscription is the "Landing Zone" in Azure.
 
 ## Contoso Implementation
 
-### Why do North Star ARM templates require permission at tenant root '/' scope?
+### Why do enterprise-scale ARM templates require permission at tenant root '/' scope
 
-Management Group creation is tenant level PUT API and hence it is pre-requisite to grant permission at root scope to use example templates.
+Management Group creation is tenant level PUT API and hence it is prerequisite to grant permission at root scope to use example templates.
 
-### Why do we need to sync fork with upstream repo?
+### Why do we need to sync fork with upstream repo
 
 This allows you to control how frequently you want to take bug/patches. This is interim solution while we package pipeline codebase as GitHub action so this step will not be required in future.

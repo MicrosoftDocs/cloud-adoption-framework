@@ -10,26 +10,27 @@ ms.subservice: ready
 ---
 
 # C. Management Group and Subscription Organization
+
 ![Management Group Hierarchy](./media/sub-org.png)
 
-Figure 5 – Management Group Hierarchy
+_Figure 5: Management Group Hierarchy._
 
 ## 1. Define Management Group Hierarchy
 
 Within an Azure AD tenant, Management Group structures help to support organizational mapping and must therefore be appropriately considered when planning Azure adoption at-scale.
 
-***Design Considerations***
+**Design Considerations:**
 
-* Management groups can be used to aggregate Policy and Initiative assignments.
-* A management group tree can support up to [six levels of depth](https://docs.microsoft.com/en-us/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the Root level or the subscription level. 
+- Management groups can be used to aggregate Policy and Initiative assignments.
+- A management group tree can support up to [six levels of depth](https://docs.microsoft.com/en-us/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the Root level or the subscription level.
 
-***Design Recommendations***
+**Design Recommendations:**
 
-- Keep the Management Group hierarchy reasonably flat with ideally no more than 3-4 levels. 
+- Keep the Management Group hierarchy reasonably flat with ideally no more than 3-4 levels.
 
-  This reduces management overhead and complexity. 
+  This reduces management overhead and complexity.
 
-- Avoid duplicating your organizational structure into a deeply nested management group hierarchy. Management groups should be used for policy assignment purposes, **NOT** for billing purposes.
+- Avoid duplicating your organizational structure into a deeply nested management group hierarchy. Management groups should be used for policy assignment purposes, **`NOT`** for billing purposes.
 
   This facilitates the use of management groups for its intended purpose in an Enterprise Scale architecture, which is to provide Azure Policies for workloads that requrie the same type of security and compliance under the same management group.
 
@@ -37,7 +38,7 @@ Within an Azure AD tenant, Management Group structures help to support organizat
 
   This allows you to have a set of Azure Policies applied at the management group level for all workloads that require the same security, compliance, connectivity, and feature settings.
 
-- Use resource tags, which can be enforced or appended through Azure Policy, to query and horizontally navigate across the Management Group hierarchy. 
+- Use resource tags, which can be enforced or appended through Azure Policy, to query and horizontally navigate across the Management Group hierarchy.
 
   This faciliates grouping resources for search needs without having to use a complex management group hierarchy.
 
@@ -49,11 +50,11 @@ Within an Azure AD tenant, Management Group structures help to support organizat
 
   This reduces the number of users who have elevated rights, following least privilege guidelines.
 
-- Assign the User Access Administrator Azure AD role at the root Management Group scope (/) to grant the SPN mentioned above access at the root level. After the SPN is granted permissions, the User Administrator Access role can be safely removed. 
+- Assign the User Access Administrator Azure AD role at the root Management Group scope () to grant the SPN mentioned above access at the root level. After the SPN is granted permissions, the User Administrator Access role can be safely removed.
 
   This ensures only the SPN is part of the User Administrator Access role.
 
-- Assign the SPN mentioned above **Contributor** permission at the root Management Group scope (/) to allow tenant level operations.
+- Assign the SPN mentioned above **Contributor** permission at the root Management Group scope () to allow tenant level operations.
 
   This ensures the SPN can be used to deploy and manage resources to any subscription within your organization.
 
@@ -67,13 +68,13 @@ Within an Azure AD tenant, Management Group structures help to support organizat
 
 - Do not create any subscriptions under the "root" Management Group.
 
-  This ensures that subscriptions do **NOT** inherited just the small set of Azure Policies assigned at the root level management group, which are not representative of a full set necessary for any given workload.
+  This ensures that subscriptions do **`NOT`** inherited just the small set of Azure Policies assigned at the root level management group, which are not representative of a full set necessary for any given workload.
 
 ## 2. Subscription Organization and Governance
 
 Subscriptions are a unit of management, billing, and scale within Azure, and therefore play a critical role when designing for large-scale Azure adoption. This section helps capture customer subscription requirements and design target subscriptions based on critical factors such as environment type, ownership and governance model, organizational structure, and application portfolios.
 
-***Design Considerations***
+**Design Considerations:**
 
 - Subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads, such as PCI workloads, typically require additional policies to achieve compliance. Instead of using a management group to group workloads that require PCI compliance, you can achieve the same isolation by using a subscription.
 
@@ -92,7 +93,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
   We need to follow up with Uday on what this process is, and where it is documented.
   -->
 
-***Design Recommendations***
+**Design Recommendations:**
 
 - Treat subscriptions as a democratized unit of management aligned with business needs and priorities.
 
@@ -100,21 +101,21 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Make subscription owners aware of their roles and responsibility, which are as follows:
 
-    - Perform an access review in Azure AD PIM, either quarterly or twice a year, to ensure there is no proliferation of privileges as users move within the customer organization.
+  - Perform an access review in Azure AD PIM, either quarterly or twice a year, to ensure there is no proliferation of privileges as users move within the customer organization.
 
-    - Take full ownership of budget spending and resource utilization.
+  - Take full ownership of budget spending and resource utilization.
 
-    - Ensure policy compliance and perform remediation when required.
+  - Ensure policy compliance and perform remediation when required.
 
 - Use the following principals when identifying requirements for new subscriptions
 
-    - **Scale limits** – Subscriptions serve as a scale unit so that component workloads are able to scale within platform subscription limits. For example, large specialized workloads such as HPC, IoT or SAP are better suited to use a separate subscription each to avoid limits (e.g. there is a limit of 50 ADF integrations).
+  - **Scale limits**&mdash;Subscriptions serve as a scale unit so that component workloads are able to scale within platform subscription limits. For example, large specialized workloads such as HPC, IoT or SAP are better suited to use a separate subscription each to avoid limits (e.g. there is a limit of 50 ADF integrations).
 
-    - **Management boundary** – Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns. For example, different environments such as development, test and production are often isolated from a management perspective.
+  - **Management boundary**&mdash;Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns. For example, different environments such as development, test and production are often isolated from a management perspective.
 
-    - **Policy boundary** – Subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads such as PCI typically require additional policies to achieve compliance, and this additional overhead does not need to be considered holistically if a separate subscription is used. Similarly, development environments may have more relaxed policy requirements relative to production environments.
+  - **Policy boundary**&mdash;Subscriptions serve as a boundary for the assignment of Azure policies. For example, secure workloads such as PCI typically require additional policies to achieve compliance, and this additional overhead does not need to be considered holistically if a separate subscription is used. Similarly, development environments may have more relaxed policy requirements relative to production environments.
 
-    - **Target network topology** – Virtual Networks cannot be shared across subscriptions, but they can be connected using different technologies, such as Virtual Network peering or ExpressRoute. Therefore, it is important to consider which workloads must communicate with one another when deciding if a new subscription is required.
+  - **Target network topology**&mdash;Virtual Networks cannot be shared across subscriptions, but they can be connected using different technologies, such as Virtual Network peering or ExpressRoute. Therefore, it is important to consider which workloads must communicate with one another when deciding if a new subscription is required.
 
 - Group subscriptions under Management Groups aligned within the Management Group structure and policy requirements at scale.
 
@@ -132,13 +133,13 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
   This ensures that as your organization structure and workload composition changes, you are able to create new groups of subscriptions instead of using a fixed set of existing subscriptions.
 
-    - One size does not fit all for subscriptions; what works for one business unit may not work for another. Some applications may coexist within the same **Landing Zone** subscription while others may require their own subscription.
+  - One size does not fit all for subscriptions; what works for one business unit may not work for another. Some applications may coexist within the same **Landing Zone** subscription while others may require their own subscription.
 
 ## 3. Configure Subscription Quota and Capacity
 
 Every Azure region contains a finite set of resources at any given time. So when considering an enterprise scale Azure adoption involving large resource quantities, it is essential to ensure that sufficient capacity and SKUs are available, and that attained capacity can be understood and monitored.
 
-***Design Considerations***
+**Design Considerations:**
 
 - Limits and quotas within the Azure platform for each service your workloads require.
 
@@ -148,9 +149,9 @@ Every Azure region contains a finite set of resources at any given time. So when
 
 - Subscription quotas are not capacity guarantees and are applied on a per region basis.
 
-***Design Recommendations***
+**Design Recommendations:**
 
-- Leverage subscriptions as scale units, scaling out resources and subscriptions as required.
+- use subscriptions as scale units, scaling out resources and subscriptions as required.
 
   This ensures that your workload can use the required resources for scaling out, when needed, without hitting subscription limits in the Azure platform.
 
@@ -174,19 +175,19 @@ Every Azure region contains a finite set of resources at any given time. So when
 
 Cost transparency across a technical estate is a critical management challenge faced by every large enterprise organization. This section will there explore key aspects associated with how cost transparency can be achieved across large Azure environments.
 
-***Design Considerations***
+**Design Considerations:**
 
 - Potential need for chargeback models where shared PaaS services are concerned, such as ASE and AKS which may need to be shared to achieve higher density.
 
-- Using a shutdown schedule for non-production workloads to optimise costs.
+- Using a shutdown schedule for nonproduction workloads to optimise costs.
 
 - Using Azure Advisor to check cost optimization recommendations.
 
-***Design Recommendations***
+**Design Recommendations:**
 
 - Use Azure Cost Management for the first level of aggregation and make it available to application owners.
 
-<!-- Need to ask Uday or anyone else what this actually means 
+<!-- Need to ask Uday or anyone else what this actually means
 -->
 
 - Use Azure Resource Tags for cost categorization and resource grouping.

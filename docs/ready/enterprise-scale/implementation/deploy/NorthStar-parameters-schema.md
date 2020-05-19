@@ -9,6 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## North Star ARM parameters file
+## enterprise-scale ARM parameters file
 
 Coming soon :)

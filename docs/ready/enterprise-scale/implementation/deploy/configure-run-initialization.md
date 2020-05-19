@@ -17,9 +17,9 @@ This is the first step on who to deploy your own environment. You can learn more
 
 This article describes how to:
 
-* Configure GitHub actions to deploy templates
-* Create the default management group hierarchy
-* Run a discovery of your existing Azure environment
+- Configure GitHub actions to deploy templates
+- Create the default management group hierarchy
+- Run a discovery of your existing Azure environment
 
 > Important note: Once you have discoverd your existing Azure environment you can make changes in the environment by using your prefered client (such as Azure PowerShell, Azure CLI, Azure Portal, ARM API or 3th party clients). The discoverd environment represents always the state of your Azure tenant.
 
@@ -29,10 +29,10 @@ This section desribes how to get started with the full reference implementation 
 
 ![Initialize AzOps process](./media/initialize-azops.png "Initialize AzOps process")
 
-1. [Fork the repository](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) to your GitHub Organization and [clone the forked GitHub repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) to your local machine.  
+1. [Fork the repository](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) to your GitHub Organization and [clone the forked GitHub repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) to your local machine.
 Follow the instructions [here](./Prerequisites.md/#sync-your-fork-with-upstream-repo) to keep your fork synchronized with the upstream.
 
-2. "User Access Administrator" role is required to manage the deployment of your North Star architecture. This may requires [elevated account permitions](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin) It is strongly recommended to assign the permission at the highest scope possible (i.e. tenant root "/") to ensure you can use the service principal to perform subscriptions management operation. "App registration" needs to be enabled on the Azure AD tenant to self-register an Application (Option 1).
+2. "User Access Administrator" role is required to manage the deployment of your enterprise-scale architecture. This may requires [elevated account permitions](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin) It is strongly recommended to assign the permission at the highest scope possible (i.e. tenant root "/") to ensure you can use the service principal to perform subscriptions management operation. "App registration" needs to be enabled on the Azure AD tenant to self-register an Application (Option 1).
     > Note: Read access on the root level is enough to perform the initialization, but not for deployment. To be able to create management group and subscriptions, platform requires Tenant level PUT permission.
 
     Option 1 (App registration enabled)
@@ -65,9 +65,9 @@ Follow the instructions [here](./Prerequisites.md/#sync-your-fork-with-upstream-
     } | ConvertTo-Json
     ```
 
-3. To create the following secrets on GitHub, navigate to the main page of the repository and under your repository name, click  Settings, click Secrets, and then click Add a new secret.
+3. To create the following secrets on GitHub, navigate to the main page of the repository and under your repository name, click Settings, click Secrets, and then click Add a new secret.
 
-* Name: AZURE_CREDENTIALS
+- Name: AZURE_CREDENTIALS
 
     ```json
     {
@@ -80,21 +80,21 @@ Follow the instructions [here](./Prerequisites.md/#sync-your-fork-with-upstream-
     }
     ```
 
-* Name: AZURE_ENROLLMENT_ACCOUNT_NAME [Optional] 
-  
+- Name: AZURE_ENROLLMENT_ACCOUNT_NAME [Optional]
+
     This parameter is required if you are planning to create new subscription though this wofklow. This secret must contain the **ObjectId** for the Azure Enrollment Account. You can obtain the id by running ```Get-AzEnrollmentAccount```
 
     ```bash
     ObjectId
     ```
 
-* Name: GIT_USER_NAME
+- Name: GIT_USER_NAME
 
     ```bash
     MyAwesomeGitID
     ```
 
-* Name: GIT_USER_EMAIL
+- Name: GIT_USER_EMAIL
 
     ```bash
     github-email@your-domain.com #Github ID primary email
@@ -114,7 +114,7 @@ Follow the instructions [here](./Prerequisites.md/#sync-your-fork-with-upstream-
 
     > Note: TenantID can be found by running `(Get-AzContext).Tenant`
 
-5. Create the following management group structure. For North Star implementation, it is recommended to create the following hierarchy as a parallel structure if there is an existing management group structure in place. You can create the management structure with any supported client. __> We recommend using the Azure Portal for this step so you can enjoy an enlightening moment after step 6.__
+5. Create the following management group structure. For enterprise-scale implementation, it is recommended to create the following hierarchy as a parallel structure if there is an existing management group structure in place. You can create the management structure with any supported client. __> We recommend using the Azure Portal for this step so you can enjoy an enlightening moment after step 6.__
 
   ```bash
       /

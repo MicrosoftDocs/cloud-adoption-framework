@@ -9,6 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## Generic North Star ARM template
+## Generic enterprise-scale ARM template
 
 Coming soon :)
