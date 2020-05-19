@@ -1,4 +1,5 @@
 using namespace System.Collections.Generic
+using namespace System.Collections.Specialized
 using namespace System.IO
 using namespace System.Text.RegularExpressions
 
@@ -7,6 +8,7 @@ using namespace System.Text.RegularExpressions
 function Test-AllLocalPaths(
     [FileInfo[]] $files,
     [bool] $fixIssues = $false,
+    [bool] $fixFormattingOnly = $false,
     [int] $maxDocumentsFailed = 10000
     )
 {
@@ -23,7 +25,7 @@ function Test-AllLocalPaths(
         Write-Host "TEST: $file" -ForegroundColor Cyan
         [TestLog]::WriteFilename($file, 'Testing local paths in ', $fileCount)
         
-        $success = Test-Paths $file $fixIssues
+        $success = Test-Paths $file $fixIssues $fixFormattingOnly
         # $count += $result
         if (!($success))
         {
@@ -67,7 +69,8 @@ function Test-AllLocalPaths(
 
 function Test-Paths(
     [FileSystemInfo] $file, 
-    [string] $fixIssues = $false,
+    [bool] $fixIssues = $false,
+    [bool] $fixFormattingOnly = $false,
     [string] $textOverride = '')
 {
     if ($null -eq $global:termsNotFound)
@@ -109,6 +112,23 @@ function Test-Paths(
 
     $hitCollection = [PageHitCollection]::new($ruleExpressions, $file.Extension, $text)
 
+    ### CORRECT OR REPORT INVALID FORMATTING
+
+    $t = $updatedText
+    $updatedText = Get-FixIssuesInSentence `
+        $hitCollection $null $updatedText `
+        $invalidFormattingExpressions $invalidFormattingExpressionJoined $invalidFormattingLookup
+
+    if ($t -cne $updatedText)
+    {
+        [TestLog]::WriteSuperVerbose("INVALID FORMATTING HANDLED.")
+        $count++
+    }
+
+    # REINITIALIZE THE HIT COLLECTION, BECAUSE THE TEXT HAS CHANGED.
+    $hitCollection.Initialize($updatedText)
+
+#    $pageHits = ($fixFormattingOnly) ? [List[PageHit]]::new() : $hitCollection.GetHits()
     $pageHits = $hitCollection.GetHits()
 
     for ($pageHitIndex = $pageHits.Count - 1; $pageHitIndex -ge 0; $pageHitIndex--)
@@ -180,81 +200,84 @@ function Test-Paths(
 
         $correctedSentence = $sentence = $content
     
-        $correctedSentence = $correctedSentence.Substring(0,1).ToUpper() + $correctedSentence.Substring(1).ToLower()
-
-        ### REVERT LINKS
-
-        $m = [Regex]::Matches($sentence, "(\[?[^\[]*\])\(([^\)\n]+)\)")
-        foreach ($item in $m)
+        if (! $fixFormattingOnly)
         {
-            $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Groups[2].Index, $item.Groups[2].Value)
-        }
+            $correctedSentence = $correctedSentence.Substring(0,1).ToUpper() + $correctedSentence.Substring(1).ToLower()
 
-        ### FIX CASING ISSUES
+            ### REVERT LINKS
 
-        $s = $correctedSentence
-        $correctedSentence = Get-FixIssuesInSentence `
-            $hitCollection $pageHit $correctedSentence $casingExpressions $casingExpressionJoined
-
-        if ($s -cne $correctedSentence)
-        {
-            [TestLog]::WriteSuperVerbose("CASING HANDLED in '$correctedSentence'")
-        }
-
-        ### FIX ADDITIONAL TITLE CASING ISSUES
-
-        $s = $correctedSentence
-        if ($hitType -eq 'Title')
-        {
-            $index = $correctedSentence.IndexOf(': ')
-            if ($index -gt 0)
+            $m = [Regex]::Matches($sentence, "(\[?[^\[]*\])\(([^\)\n]+)\)")
+            foreach ($item in $m)
             {
-                $value = $correctedSentence.Substring($index, 3).ToUpper()
-                $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $index, $value)
+                $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Groups[2].Index, $item.Groups[2].Value)
             }
-        }
 
-        ### FIX PREFIX ISSUES.
+            ### FIX CASING ISSUES
 
-        $s = $correctedSentence
+            $s = $correctedSentence
+            $correctedSentence = Get-FixIssuesInSentence `
+                $hitCollection $pageHit $correctedSentence $casingExpressions $casingExpressionJoined
 
-            #TODO: ReplaceAtPosition instead?
-        $correctedSentence = $correctedSentence -creplace $prefixExpression, `
-            { $_.Groups[1].Value + $_.Groups[2].Value.ToUpper() + $_.Groups[3].Value }
-        if ($s -cne $correctedSentence)
-        {
-            [TestLog]::WriteSuperVerbose("CASING PREFIX HANDLED in '$correctedSentence'")
-        }
-    
-        ### FOR IGNORED TERMS, REVERT TO THE ORIGINAL VALUE FROM THE DOCUMENT. 
-
-        $exp = "(?i)$ignoredExpressionJoined|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)"
-
-        if ($correctedSentence -imatch $ignoredExpressionJoined)
-        {
-            $list = $ignoredExpressions
-            $list.Add('(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)') | Out-Null
-
-            foreach ($exp in $ignoredExpressions)
+            if ($s -cne $correctedSentence)
             {
-                if ($exp -match '^[A-Za-z]')
+                [TestLog]::WriteSuperVerbose("CASING HANDLED in '$correctedSentence'")
+            }
+
+            ### FIX ADDITIONAL TITLE CASING ISSUES
+
+            $s = $correctedSentence
+            if ($hitType -eq 'Title')
+            {
+                $index = $correctedSentence.IndexOf(': ')
+                if ($index -gt 0)
                 {
-                    $exp = "(?i)\b$exp\b"
+                    $value = $correctedSentence.Substring($index, 3).ToUpper()
+                    $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $index, $value)
                 }
+            }
 
-                $m = [Regex]::Matches($sentence, $exp)
-                foreach ($item in $m)
+            ### FIX PREFIX ISSUES.
+
+            $s = $correctedSentence
+
+                #TODO: ReplaceAtPosition instead?
+            $correctedSentence = $correctedSentence -creplace $prefixExpression, `
+                { $_.Groups[1].Value + $_.Groups[2].Value.ToUpper() + $_.Groups[3].Value }
+            if ($s -cne $correctedSentence)
+            {
+                [TestLog]::WriteSuperVerbose("CASING PREFIX HANDLED in '$correctedSentence'")
+            }
+        
+            ### FOR IGNORED TERMS, REVERT TO THE ORIGINAL VALUE FROM THE DOCUMENT. 
+
+            $exp = "(?i)$ignoredExpressionJoined|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)"
+
+            if ($correctedSentence -imatch $ignoredExpressionJoined)
+            {
+                $list = $ignoredExpressions
+                $list.Add('(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)') | Out-Null
+
+                foreach ($exp in $ignoredExpressions)
                 {
-                    $originalValue = $sentence.Substring($item.Index, $item.Length)
-                    try {
-                        $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Index, $originalValue)
-                    }
-                    catch
+                    if ($exp -match '^[A-Za-z]')
                     {
-                        WriteError("ReplaceAtPosition failed for '$correctedSentence'.")
+                        $exp = "(?i)\b$exp\b"
                     }
 
-                    [TestLog]::WriteSuperVerbose("IGNORED MATCH '$item' IN: '$correctedSentence'")
+                    $m = [Regex]::Matches($sentence, $exp)
+                    foreach ($item in $m)
+                    {
+                        $originalValue = $sentence.Substring($item.Index, $item.Length)
+                        try {
+                            $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Index, $originalValue)
+                        }
+                        catch
+                        {
+                            WriteError("ReplaceAtPosition failed for '$correctedSentence'.")
+                        }
+
+                        [TestLog]::WriteSuperVerbose("IGNORED MATCH '$item' IN: '$correctedSentence'")
+                    }
                 }
             }
         }
@@ -303,22 +326,6 @@ function Test-Paths(
 
             $updatedText = [TestString]::ReplaceAtPosition($updatedText, $pageHit.Index, $sentence.Length, $correctedSentence)
         }
-    }
-
-    # REINITIALIZE THE HIT COLLECTION, BECAUSE THE TEXT HAS CHANGED.
-    $hitCollection.Initialize($updatedText)
-
-    ### CORRECT OR REPORT INVALID FORMATTING
-
-    $t = $updatedText
-    $updatedText = Get-FixIssuesInSentence `
-        $hitCollection $null $updatedText `
-        $invalidFormattingExpressions $invalidFormattingExpressionJoined $invalidFormattingLookup
-
-    if ($t -cne $updatedText)
-    {
-        [TestLog]::WriteSuperVerbose("INVALID FORMATTING HANDLED.")
-        $count++
     }
 
     ### SAVE THE FILE
@@ -370,7 +377,7 @@ function Get-FixIssuesInSentence(
     [string] $sentence,
     [List[string]] $expressions,
     [string] $expressionJoined,
-    [HashTable] $correctionLookup = $null
+    [OrderedDictionary] $correctionLookup = $null
 )
 {
     if ($sentence -imatch $expressionJoined)
@@ -380,61 +387,81 @@ function Get-FixIssuesInSentence(
             $checkExpression = ($null -eq $hit) ? $exp : "(?i)\b$exp\b"
 
             $m = [Regex]::Matches($sentence, $checkExpression)
-            for ($i = $m.Count - 1; $i -ge 0; $i--)
+            if ($m.Count -eq 0)
             {   
-                $item = $m[$i]
-                if ($null -eq $hit) {
-                    $index = $item.Index
-                }
-                else {
-                    $index = $hit.Index + $item.Index
+                continue
                 }
 
-                if ($collection.IsIndexInLink($index))
+            $sorted = [TestMatch]::BuildCollection($m, $exp, $hit, $correctionLookup)
+
+            # foreach ($match in $m)
+            # {   
+            #     $matchCollection.Add([TestMatch]::New($match, $exp, $correctionLookup))
+            # }
+            # $sorted = ($matchCollection | Sort-Object -Descending -Property Index)
+        
+            #for ($i = $m.Count - 1; $i -ge 0; $i--)
+            foreach ($item in $sorted)
+            {   
+        #        $item = $m[$i]
+                # if ($null -eq $hit) {
+                #     $index = $item.Index
+                # }
+                # else {
+                #     $index = $hit.Index + $item.Index
+
+                if ($collection.IsIndexInLink($item.PageIndex))
                 {
-                    [TestLog]::WriteLink($sentence, $item)
+                    WriteLink $sentence $item
                     continue
                 }
+                # }
                 
-                if ($null -eq $correctionLookup)
+                if ($collection.IsIndexInCodeBlock($item.PageIndex))
                 {
-                    $sentence = [TestString]::ReplaceAtPosition($sentence, $item.Index, $exp)
+                    # Write-Host "IGNORED CODE BLOCK"
                     continue
                 }
 
-                $correction = $correctionLookup[$exp] ?? '$null'
-                $suggestion = ''
+                # if ($item.Correction -eq 'NULL' -and $item.Suggestion -eq 'NULL')
+                # {
+                #     $sentence = [TestString]::ReplaceAtPosition($sentence, $item.Index, $item.Expression)
+                #     continue
+                # }
 
-                for ($g = 1; $g -lt $item.Groups.Count; $g++)
-                {   
-                    $value = $item.Groups[$g].Value
-                    $correction = $correction.Replace("`$$g", $value)
-                }
+                # $correction = $correctionLookup[$item.Expression] ?? 'NULL'
+                # $suggestion = ''
 
-                if ($correction -match '^~~(.*)') {
-                    $suggestion = $matches[1]
-                    $correction = ''
-                }
+                # for ($g = 1; $g -lt $item.Groups.Count; $g++)
+                # {   
+                #     $value = $item.Groups[$g].Value
+                #     $correction = $correction.Replace("`$$g", $value)
+                # }
 
-                if ($correction -ne '$null') {
+                # if ($correction -match '^~~(.*)') {
+                #     $suggestion = $matches[1]
+                #     $correction = ''
+                # }
+
+                if ($item.Correction -ne 'NULL') {
                     
                     # TODO: Handle casing variations here?
-                    $sentence = [TestString]::ReplaceAtPosition($sentence, $item.Index, $item.Value.Length, $correction)
+                    $sentence = [TestString]::ReplaceAtPosition($sentence, $item.Index, $item.Value.Length, $item.Correction)
+                    [TestLog]::WriteSuperVerbose("MATCH HANDLED in '$correctedSentence'")
+                    continue
+                }
+
+                if ($suggestion -ne 'NULL') {
+                    
+                    # TODO: Handle casing variations here?
+    #                     $sentence = [TestString]::ReplaceAtPosition($sentence, $item.Index, $item.Value.Length, `
+                    #    " <-- TODO (I): $suggestion --> $($item.Value)")
                     [TestLog]::WriteSuperVerbose("INVALID TERM HANDLED in '$correctedSentence'")
                     continue
                 }
-
-                if ($suggestion -ne '$null') {
-                    
-                    # TODO: Handle casing variations here?
-                    $sentence = [TestString]::ReplaceAtPosition($sentence, $item.Index, $item.Value.Length, `
-                        " <-- TODO (I): $suggestion --> $($item.Value)")
-                    [TestLog]::WriteSuperVerbose("INVALID TERM HANDLED in '$correctedSentence'")
-                    continue
-                }
                 
                 if ($null -eq $hit) {
-                    [TestLog]::WriteLine("(I-PAGE) '$exp'")
+                    [TestLog]::WriteLine("(I-PAGE) '$($item.Expression)'")
                 }
                 else {
                     [TestLog]::Write("(I) '")
@@ -448,11 +475,30 @@ function Get-FixIssuesInSentence(
                     [TestLog]::WriteLine("    SUGGESTION: $suggestion") 
                 }
             }
+
+            if ($null -eq $hit)
+            {
+                $collection.Initialize($sentence)
+            }
         }
     }
 
     return $sentence
 }
+
+function WriteLink([string] $link, [TestMatch] $matchItem)
+{
+    if ([TestLog]::SuperVerbose)
+    {
+        $start = $link.Substring(0, $matchItem.Index)
+        [TestLog]::Write("POSSIBLE LINK: '$start", 'DarkGray')
+        [TestLog]::Write($matchItem.Value, 'Red')
+        
+        $end = $link.Substring($matchItem.Index + $matchItem.Length)
+        [TestLog]::WriteLine("$end'", 'DarkGray')
+    }
+}
+
 
 # $file = Get-Item "$here\..\docs\ready\considerations\compute-options.md"
 # [TestLog]::WriteException($_, $file, "func")

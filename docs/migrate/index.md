@@ -19,10 +19,10 @@ To prepare you for this phase of the cloud adoption lifecycle, we recommend the 
 
 | | |
 |---|---|
-| <br> ![1](../_images/icons/1.png)     | [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration.                                |
-| <br> ![2](../_images/icons/2.png)     | [Migration scenarios](./azure-best-practices/index.md): Use additional migration tools and approaches to act on other migration scenarios.                                |
-| <br> ![3](../_images/icons/3.png)     | [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices.                                |
-| <br> ![4](../_images/icons/4.png)      | [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration.                        |
+| <br> ![1](../_images/icons/1.png) | <br> [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration.                                |
+| <br> ![2](../_images/icons/2.png) | <br> [Migration scenarios](./azure-best-practices/index.md): Use additional migration tools and approaches to act on other migration scenarios.                                |
+| <br> ![3](../_images/icons/3.png) | <br> [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices.                                |
+| <br> ![4](../_images/icons/4.png) | <br> [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration.                        |
 
 <!-- markdownlint-enable MD033 -->
 

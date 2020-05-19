@@ -8,6 +8,7 @@ function Get-CasingPrefixExpressions
         '^[a-z]+(?:\.[a-z]+)?: "?'
         '^[A-Z]\. '                     # TODO: Supports A-H headings for Enterprise-scale landing zone content
         '\bsee \['
+        '\Go to \['
         '\barticle, \['
         '\] and \['
         '\bFigure \d\d?: '
@@ -88,22 +89,27 @@ function Get-PunctuationExpressions
         
         # "^ *[a-z][\w]*[^:] (?<!osTicket, )"   # TODO: Reinstate after using code blocks
         
-        "(?<!vs)[\.\?!] [\[\(]?[a-z]"       # Capitalize sentences
-        "(?i)[a-z] {2,}[a-z]"               # One space between words
-        "(?<=[a-z])\.  (?=[A-Z])"           # Use only one space after a sentence
-        "[\.\?!\)] {2,}[A-Za-z]"            # Use only one space after a sentence
-        "^ *\*\s"                           # Use hyphens for bullet lists
-        "^[^#-].*vs\."                      # Use "versus" in non-headings
-        "\)(?![\.\?,:_\*\]\\ \r\n])"        # Include space after parentheses.
-        "([a-z ]{2,}, )([a-z ]{1,6}, )+(?!and|or)([a-z ]+)\."   # Missing 'and' or 'or' in series.
-        " & (?![A-Z])"
-        "[^:]//"
-        " &/"
-        " \* "
-        "[A-Za-z\d '-]{2,}, [\w]+, (?!and |or)[A-Za-z\d '-]+\.[ \r\n]"      # Either a missing Oxford comma, or a weird use of commas.
+        # "(?<!vs)[\.\?!] [\[\(]?[a-z]"       # Capitalize sentences
+        
+        # "(?i)[a-z]( {2,})[a-z]!! "                      # One space between words
+        # "(?<=[a-z])(\. {2,})(?=[A-Z])!!. "              # Use only one space after a sentence
+        # "(?<=[\.\?!\)])( {2,})[A-Za-z\d]!! "            # Use only one space after a sentence
+        # "^ *\*\s"                                       # Use hyphens for bullet lists
+        # "(?m)^ *?(?:>)? *?(- {2,})!!- "                 # Fix spacing for bullet lists       
+        # "^[^#-].*(vs\.) !!versus"                       # Use "versus" in non-headings
+        # "(\))(?![\.\?,:_\*\]\\ \r\n])!!) "              # Include space after parentheses.
+        # "( & )(?![A-Z])!! and "                         # Don't use ampersands.
+        # " &/or!!and/or"                                 # Don't use ampersands.
+        # "(?<!:)//!!/"                                   # Don't use double-slashes.
+        
+        # " \* "
+        # "([a-z ]{2,}, )([a-z ]{1,6}, )+(?!and|or)([a-z ]+)\."   # Missing 'and' or 'or' in series.
+        # "[A-Za-z\d '-]{2,}, [\w]+, (?!and |or)[A-Za-z\d '-]+\.[ \r\n]"      # Either a missing Oxford comma, or a weird use of commas.
+
+        "But, !!But" 
+        "However,? !!But " 
+
         "At times "
-        "But, " 
-        "However " 
         # "^ *[^a-z#:$`].*[a-z]$"           # TODO: Sentences should end with periods.
         "<endoflist>"
     )
@@ -122,22 +128,61 @@ function Get-InvalidFormattingExpressions
         '\u201c!!"'                         # Fix unicode quotes
         '\u201d!!"'                         # Fix unicode quotes
         '\u2026!!...'                       # Fix unicode elipses
-        '\u200B!! '                         # Fix unicode zero-width space
+        '[\u2002-\u200B]!! '                # Fix weird unicode spaces
         '(?<=\d)\u2013(?=\d)!!&ndash;'      # Fix unicode dashes
         ' \u2013 !!&mdash;'                 # Fix unicode dashes
         '(?<=[a-z])\u2013(?=[a-z])!!-'      # Fix unicode dashes
 
+        "( +)\r?\n!!"                                   # Trim blank lines
+        "(?m)^ *\d+(\.?\)\.? )!!. "                     # Fixed numbered lists
+        "(?m)^ *?(?:>)? *?(- {2,})!!- "                 # Fix spacing for bullet lists       
+        "(?m)^[^#-].*(vs\.) !!versus"                   # Use "versus" in non-headings
+        "(?s)(?<![\r\n])(\r?\n)#!!`r`n`r`n"             # Blank line before headings.
+        "(?s)\n#+[^\n]*?(\r?\n)(?!\r?\n)!!`r`n`r`n"     # Blank line after heading.
+        "(?s)((?:\r?\n){3,})!!`r`n`r`n"             # Remove extraneous blank lines
+
+
+
+        "(?i)[a-z]( {2,})[a-z]!! "                  # One space between words
+        "(?<=[a-z])(\. {2,})(?=[A-Z])!!. "          # Use only one space after a sentence
+        "(?<=[\.\?!\)])( {2,})[A-Za-z\d]!! "        # Use only one space after a sentence
+        "(?m)^ *(\*)\s!!-"                          # Use hyphens for bullet lists
+        "(\))(?![\.\?,:_\*\]\\ \r\n])!!) "          # Include space after parentheses
+        "( & )(?![A-Z])!! and "                     # Don't use ampersands
+        " &/or!!and/or"                             # Don't use ampersands
+        "(?<!:)//!!/"                               # Don't use double-slashes
+
+        '(?m)(?<=^ *- \*\*.+)\*\*:!!:**'            # Include colon in boldface for bullet list headings
+        '(?m)(?<=^ *- \*\*.+)\*\*\.!!.**'           # Include period in boldface for bullet list headings
+        '(?m)^ *>? *(\* )!!- '                      # Use hyphens for bullets instead of asterisks
+
         '[\u0100-\uFFFF]!!~~Remove unicode characters'
 
+
+
+        #        "(?s)(?<![\r\n])(\r?\n)``````[a-z]+!!`r`n`r`n"  # Blank line before code block.
+#        "(?s)``````(\r?\n)(?![\r\n])!!`r`n`r`n`r`n`r`n" # Blank line after code block.
+        
+        " \* "
+        "(?:[a-z ]{2,}, )(?:[a-z ]{1,6}, )+(?!and|or)(?:[a-z ]+)\."   # Missing 'and' or 'or' in series.
+        "[A-Za-z\d '-]{2,}, [\w]+, (?!and |or)[A-Za-z\d '-]+\.[ \r\n]"      # Either a missing Oxford comma, or a weird use of commas.
+        '(?m)^( *\*{3,})[A-Za-z]!!**'
+        '(?m)[A-Za-z](\*{3,} *)\r?\n!!:**'
+        '\(https://docs.microsoft.com(?=/)[^\(]*?(/en-us/)[^\(]*?\)!!/'
+        "(?m)^ *_?Figure \d+( *(?:-|&mdash;) *)!!: "         # Format diagram labels.
+        "(?m)^( *_?)Figure \d+: *!!_"                        # Format diagram labels.
+        '(?m)^_Figure \d+[^\r\n]*?(\.?_?)\r?\n!!._'         # Format diagram labels.
+        '( *\[!\[(.*?)\]\((.*?)(?: ".*?")\)\](?:\(#\))?)!!![$2]($3)'
+        
+        "But, !!But " 
+        "However,? !!But " 
+        "do'?s and don'?t'?s!!do's and don'ts"
         '\.\.\.!!~~Don''t use ellipses'
 
         '\*\*([A-Z0-9-]{3,}|[a-z]+-[a-z]+)(?<!\*\*(?:CIDR|TFVC))\*\*!!`$1`'     # Use tickmarks for resource names.
-        '(?m) +(?=\r?$)!!'                      # No spaces at the end of a line.
+        # '(?m) +(?=\r?$)!!'                      # No spaces at the end of a line.
         # '(?<=- \*\*.+)\*\*\. !!.**'
         # '(?<=- \*\*.+)\*\*\: !!.**'
-        '(?m)(?<=^ *- \*\*.+)\*\*:!!:**'       # Include colon in boldface for bullet list headings.
-        '(?m)(?<=^ *- \*\*.+)\*\*\.!!.**'      # Include period in boldface for bullet list headings.
-        '(?m)^ *>? *(\* )!!- '                  # Use hyphens for bullets instead of asterisks.
         # "[\u0100-\uFFFF]"           # Remove Unicode characters
         # "\[[a-z][^\]]*$"            # Fix link descriptions split across lines.
         # "[a-z]\) - "                # TODO: Use colons after parentheses?

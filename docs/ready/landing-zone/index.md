@@ -26,7 +26,7 @@ Before defining landing zones, it's important to understand a related term: _pla
 > [!CAUTION]
 > Separation of duties should not discourage teams from using this best practice solely based on current staffing allocation or team structures. During early stage adoption of the cloud, a single adoption team may temporarily hold all of the responsibilities of adopting cloud technology and providing governance, security, and operations for a small number of workloads. If the forward-looking plan includes separation of duties, or even isolation of tasks, then this approach is still the suggested best practice.
 
-**Shared responsibilities:** _Platform foundation_ provides centralized controls to govern the cloud platform. However, there is still a shared responsibility across all members of the team to consider identity, security, operations, compliance, and governance requirements. Before adopting any technology in a landing zone, understand what utilities are provided by the _platform foundation_ and what you will need to implement within the landing zone to fulfill your shared responsibilities.
+**Shared responsibilities:** _Platform foundation_ provides centralized controls to govern the cloud platform. There is still a shared responsibility across all members of the team to consider identity, security, operations, compliance, and governance requirements. Before adopting any technology in a landing zone, understand what utilities are provided by the _platform foundation_ and what you will need to implement within the landing zone to fulfill your shared responsibilities.
 
 > [!IMPORTANT]
 > Developers and architects who are deploying solutions within a landing zone can reference [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework/) to incorporate and build on these shared-architectural pillars when designing, building, or supporting workloads that run within a landing zone.
@@ -49,7 +49,7 @@ More specifically, a landing zone is the basic building block of any cloud adopt
 
 ## Landing zone usage
 
-Landing zones do not necessarily differentiate between IaaS or PaaS adoption. However, landing zones are purpose built to support the adoption plan by fulfilling the subscription strategy. Supporting the adoption plan may require multiple landing zones with a mixture of required components.
+Landing zones do not necessarily differentiate between IaaS or PaaS adoption. But landing zones are purpose built to support the adoption plan by fulfilling the subscription strategy. Supporting the adoption plan may require multiple landing zones with a mixture of required components.
 
 The purpose and scope of the overall cloud adoption plan will define what "plumbing" is required. Additional governance, compliance, security, and operational management requirements will likely add to the initial landing zone scope. During early stages of adoption, landing zones may include less "plumbing" as a result of defined requirements and acceptable risks. When multiple landing zones exist, it is common for each landing zone to be dependent on hubs that provide the required controls through a shared service model.
 

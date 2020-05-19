@@ -122,7 +122,7 @@ To apply a policy to a resource group:
 To learn more, see:
 
 - [Azure Policy](https://docs.microsoft.com/azure/azure-policy)
-- [Azure Policy - Guest configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration)
+- [Azure Policy: Guest configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration)
 - [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ## Azure Blueprints
@@ -153,7 +153,7 @@ To create a blueprint:
 
 ::: zone target="chromeless"
 
-1. Go to **Blueprints - Getting started**.
+1. Go to **Blueprints: Getting started**.
 1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
@@ -167,7 +167,7 @@ To create a blueprint:
 
 ::: zone target="docs"
 
-1. Go to [Blueprints - Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
+1. Go to [Blueprints: Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
 1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
@@ -196,7 +196,7 @@ To publish blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-1. Go to [Blueprints - Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
+1. Go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition, then select **Publish blueprint**.
 1. In the **Version** box, enter a version like "1.0".

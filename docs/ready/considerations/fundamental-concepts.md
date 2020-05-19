@@ -69,10 +69,10 @@ For a detailed description of the roles defined in Azure, see [Classic subscript
 
 Every Azure resource is logically associated with only one subscription. When you create a resource, you choose which Azure subscription to deploy that resource to. You can move a resource to another subscription later.
 
-A subscription isn't tied to a specific Azure region. However, each Azure resource is deployed to only one region. You can have resources in multiple regions that are associated with the same subscription.
+While a subscription isn't tied to a specific Azure region, each Azure resource is deployed to only one region. You can have resources in multiple regions that are associated with the same subscription.
 
 > [!NOTE]
-> Most Azure resources are deployed to a specific region. However, certain resource types are considered global resources, such as policies that you set by using the Azure Policy services.
+> Most Azure resources are deployed to a specific region. But certain resource types are considered global resources, such as policies that you set by using the Azure Policy services.
 
 ## Related resources
 

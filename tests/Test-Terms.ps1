@@ -43,6 +43,8 @@ function Get-CasingExpressions
             'a .NET app'
             'NET Framework'
         'AWS'
+        'AWS Cost and Usage report'
+        'AWS Cost and Usage reports'
         'az'
         'Azure'
         'Azure AD'
@@ -114,6 +116,7 @@ function Get-CasingExpressions
         'Azure Front Door Service'
         'Azure function'
         'Azure Functions'
+        'Azure Graph'
         'Azure Hybrid Benefit'
         'Azure Import/Export'
         'Azure Information Protection'
@@ -140,6 +143,7 @@ function Get-CasingExpressions
         'Azure Policy'
         'Azure Private DNS'
         'Azure Private Link'
+        'Azure Quickstart Center'
         'Azure Repos'
         'Azure Reservations'
         'Azure Reserved VM Instances'
@@ -150,6 +154,7 @@ function Get-CasingExpressions
         '(Azure )?Security Center'
         'Azure Sentinel'
         'Azure Serverless Computing Cookbook'
+        'Azure Service Health'
         'Azure Service Map'
         'Azure Site Recovery'
         'Azure Spatial Anchors'
@@ -455,6 +460,7 @@ function Get-CasingExpressions
         'RFC'
         'ROI'
         'RPOs?'
+        'RSS'
         'RTOs?'
         'RUs'
         'Ruby'
@@ -532,6 +538,7 @@ function Get-CasingExpressions
         'UK NHS'
         'UK OFFICIAL'
         'ultra SSDs?'
+        'Unicode'
         'UnifyCloud'
         'United States( of America)?'
         'Unity'
@@ -749,13 +756,14 @@ function Get-InvalidTermExpressions {
         'hand[- ]offs!!handoffs'
         'i\.e\.,?!!in other words,'
         "impacted!!affected"
-            "(?:could |may |might |not )(impact)!!affect"
+            "(?:also |could |may |might |not )(impact)!!affect"
         "in case of"
         "infra!!infrastructure"
-        "infrastructure[^ ]as[^ ]a[^ ]service"
+        "infrastructure[^ ]as[^ ]a[^ ]service!!infrastructure as a service"
         'IO!!I/O'
         'life[ -]cycle!!lifecycle'
         'low ops!!low-ops'
+        '(?<!ear)ly-!!ly '
         "Maria.DB!!MariaDB"
         "MFA!!multi-factor authentication"
         "ML(?! services)!!machine learning"
