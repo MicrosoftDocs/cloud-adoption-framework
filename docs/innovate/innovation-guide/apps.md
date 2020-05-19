@@ -111,7 +111,7 @@ During your innovation journey, you'll eventually find yourself on the path to D
 
 ## Visual Studio App Center
 
-As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center doesn't just provide a place where you can test your applications across iOS, Android, Windows, and macOS. It also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center overview](https://docs.microsoft.com/appcenter).
+As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](https://docs.microsoft.com/appcenter).
 
 Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your app across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](https://docs.microsoft.com/appcenter/push).
 
@@ -282,7 +282,9 @@ To configure or monitor container instances:
 
 Azure Red Hat OpenShift provides flexible self-service deployment of fully managed OpenShift clusters. Maintain regulatory compliance and focus on your application development while your master, infrastructure, and application nodes are patched, updated, and monitored by both Microsoft and Red Hat. Choose your own registry, networking, storage, or CI/CD solutions. Or start quickly by using built-in solutions with automated source code management, container and application builds, deployments, scaling, health management, and more.
 
-**Go to [Azure Red Hat OpenShift](https://docs.microsoft.com/azure/openshift/intro-openshift)**
+### Learn more
+
+- [Azure Red Hat OpenShift](https://docs.microsoft.com/azure/openshift/intro-openshift)
 
 # [Isolate points of failure](#tab/IsolatePointsOfFailure)
 

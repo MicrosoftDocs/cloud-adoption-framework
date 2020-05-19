@@ -7,3 +7,4 @@ $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 . $here\Class-Page.ps1
 . $here\Class-PageHit.ps1
 . $here\Class-DisplayList.ps1
+. $here\Class-TestMatch.ps1

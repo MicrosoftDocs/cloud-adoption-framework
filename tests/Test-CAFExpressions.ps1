@@ -37,7 +37,7 @@ function Get-MyInvalidFormattingExpressions
 {
     return @(
         '/\)!!)'
-        '- \[Learn more\]\((.*)\) about (the )?(.*?)(?=[\.,])!!- Learn more about $2[$3]($1)'
+        '(- \[Learn more\]\((.*)\) about (the )?(.*?)(?=[\.,]))!!- Learn more about $3[$4]($2)'
         'See \[(.*?)\]\((.*)\) for more (?:details?|information)\.!!For more information, see [$1]($2).'
 
         # '[a-z](?<!Microsoft|Az|Registration)\.[A-Z][a-z]* '

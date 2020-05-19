@@ -56,9 +56,11 @@ Here are a few features you'll find:
 
 ::: zone target="docs"
 
-**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-hub)**
+### Learn more
 
-**Go to [Device Provisioning Services](https://docs.microsoft.com/azure/iot-dps)**
+- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+
+- [Azure IoT Hub Device Provisioning Service (DPS)](https://docs.microsoft.com/azure/iot-dps)
 
 ::: zone-end
 
@@ -77,16 +79,16 @@ To create an IoT hub:
 
 <!-- markdownlint-enable DOCSMD001 -->
 
-The IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning.
+The Azure IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning.
 
 <!-- markdownlint-disable MD024 -->
 
 ### Action
 
-To create IoT Hub Device Provisioning Services:
+To create an Azure IoT Hub Device Provisioning Service:
 
-1. Go to **IoT Hub Device Provisioning Services**.
-2. Select **Create Device Provisioning Services**.
+1. Go to **Device Provisioning Services**.
+2. Select **Add**.
 
 <!-- markdownlint-disable DOCSMD001 -->
 
@@ -108,7 +110,9 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 ::: zone target="docs"
 
-**Go to [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins)**
+### Learn more
+
+- [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins)
 
 ::: zone-end
 
@@ -145,7 +149,9 @@ In addition to traditional location capabilities such as nearby, traffic, and ro
 
 ::: zone target="docs"
 
-**Go to [Azure Maps](https://docs.microsoft.com/azure/azure-maps)**
+### Learn more
+
+- [Azure Maps](https://docs.microsoft.com/azure/azure-maps)
 
 ::: zone-end
 
@@ -180,7 +186,7 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ::: zone target="docs"
 
-**Go to [Azure Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors)**
+- [Azure Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors)
 
 ::: zone-end
 
@@ -209,9 +215,11 @@ The process of rendering is computationally intensive. There can be many frames 
 
 ::: zone target="docs"
 
-**Go to [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering)**
+### Learn more
 
-**Go to [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)**
+- [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering)
+
+- [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)
 
 ::: zone-end
 

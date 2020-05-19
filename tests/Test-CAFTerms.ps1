@@ -78,5 +78,8 @@ function Get-MyInvalidTermExpressions {
         'For more information (?!about|and)'
         'For more,'
         'For more (?=details|about|on)'
+
+        'sumary!!summary'
+        'recomendations!!recommendations'
     )
 }
