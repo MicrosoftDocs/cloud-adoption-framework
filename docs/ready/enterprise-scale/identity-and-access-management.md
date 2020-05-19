@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# B. Identity and access management
+# Identity and access management
 
 Identity provides the basis of large percentage of security assurance. Identity enable access based on identity authentication and authorization controls in cloud services to protect data and resources and to decide which requests should be permitted.
 
