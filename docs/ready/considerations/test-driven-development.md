@@ -54,11 +54,11 @@ For an initial migration effort, definition of done may be overly simple. The fo
 - During adoption efforts, the cloud adoption team would like temporary access to the environment to change service configurations.
 - For awareness only: Prior to production release, these workloads will require integration with the corporate identity provider to govern ongoing identity and access for operations management purposes. At which time the cloud adoption team's access should be revoked.
 
-The last point above is not a feature or an acceptance criteria. However, it is an indicator that additional expansions will be required and should be explored with other teams early.
+The last point above is not a feature or acceptance criteria. But it is an indicator that additional expansions will be required and should be explored with other teams early.
 
 ## Additional examples of a definition of done
 
-The governance methodology within the Cloud Adoption Framework provides a narrative journey through the natural maturity of a governance team. Embedded in that journey are several examples of "definition of done" and "acceptance criteria", in the form of policy statements.
+The Govern methodology within the Cloud Adoption Framework provides a narrative journey through the natural maturity of a governance team. Embedded in that journey are several examples of "definition of done" and "acceptance criteria", in the form of policy statements.
 
 - [Initial policy statements](../../govern/guides/complex/initial-corporate-policy.md#policy-statements): Example of corporate policies governing and initial definition of done based on early stage adoption requirements.
 - [Identity expansion](../../govern/guides/complex/identity-baseline-improvement.md#incremental-improvement-of-the-policy-statements): Example of corporate policies governing ("definition of done") to meet requirements to expand identity management for a landing zone.

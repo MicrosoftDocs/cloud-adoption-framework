@@ -22,7 +22,7 @@ The Ready methodology uses the concept of refactoring to accelerate migration an
 
 When customers adopt the cloud, landing zone considerations are the single most common blocker to adoption and cloud-related business results. Customers tend to lean towards one of the following two blockers. Often times various teams will each lean towards one of these two blockers, resulting in cultural deadlocks that make adoption difficult.
 
-Both of the primary blockers are rooted in one belief, the cloud environment and the existing datacenters should be at or near feature parity regarding operations, governance, and security. This is a wise long-term goal. However, the pain comes from the delicate balance between the timing to achieve that goal and the speed required to deliver business results.
+Both of the primary blockers are rooted in one belief, the cloud environment and the existing datacenters should be at or near feature parity regarding operations, governance, and security. This is a wise long-term goal. But the pain comes from the delicate balance between the timing to achieve that goal and the speed required to deliver business results.
 
 ### Blocker: Acting too soon
 
@@ -30,7 +30,7 @@ It took years and significant effort to reach the current state of security, gov
 
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
 
-In the image above, the customer has an objective of 100 workloads living in the cloud. To get there, the customer will likely deploy their first workload. Then their first 10 or so workloads, before they are ready to release one of those workloads to production. Eventually, they will reach the objective of the adoption plan and have a robust portfolio in the cloud. However, the red X in the image shows where customers commonly get stuck. Waiting for 100% alignment can delay the first workload by weeks, months, or even years.
+In the image above, the customer has an objective of 100 workloads living in the cloud. To get there, the customer will likely deploy their first workload. Then their first 10 or so workloads, before they are ready to release one of those workloads to production. Eventually, they will reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red X in the image shows where customers commonly get stuck. Waiting for 100% alignment can delay the first workload by weeks, months, or even years.
 
 ### Blocker: Acting too late
 
@@ -55,7 +55,7 @@ The concept of refactoring a landing zone is simple in theory, but requires prop
 
 ## Development approach
 
-The advantage of a refactoring based approach, is the ability to create parallel iteration paths for development. The image below provides an example of two parallel iteration paths: cloud adoption and cloud platform. Both progress at their own pace, with minimal risk of becoming a blocker to either team's daily efforts. Alignment on the adoption plan and refactoring guardrails create a set of agreement upon milestones, which provide clear future state dependencies.
+The advantage of a refactoring-based approach, is the ability to create parallel iteration paths for development. The image below provides an example of two parallel iteration paths: cloud adoption and cloud platform. Both progress at their own pace, with minimal risk of becoming a blocker to either team's daily efforts. Alignment on the adoption plan and refactoring guardrails create a set of agreement upon milestones, which provide clear future state dependencies.
 
 ![Landing zone parallel iteration](../../_images/ready/iterations.png)
 

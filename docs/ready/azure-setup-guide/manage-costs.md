@@ -65,7 +65,7 @@ To learn more, see:
 
 - [Azure billing and cost management documentation](https://docs.microsoft.com/azure/billing)
 - [Cloud Adoption Framework: Track costs across business units, environments, or projects](../azure-best-practices/track-costs.md)
-- [Cloud Adoption Framework: Cost management discipline](../../govern/cost-management/index.md)
+- [Cloud Adoption Framework: Cost Management discipline](../../govern/cost-management/index.md)
 
 ::: zone-end
 

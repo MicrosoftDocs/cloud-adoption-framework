@@ -19,7 +19,7 @@ The Cloud Adoption Framework provides a [governance benchmark tool](https://cafb
 Receive a personalized report that outlines the difference between your current state and business priorities, along with tailored resources to help you get started. Assess your current state and future state to establish a vision for applying the framework.
 
 > [!div class="nextstepaction"]
-> [Use the governance benchmark tool](https::/cafbaseline.com)
+> [Use the governance benchmark tool](https://cafbaseline.com)
 
 ## Next steps
 
