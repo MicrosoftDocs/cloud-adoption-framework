@@ -1,8 +1,8 @@
 ---
 title: Read me
 description: Read me
-author: tbd
-ms.author: tbd
+author: rkuehfus
+ms.author: brblanch
 ms.date: 06/01/20
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

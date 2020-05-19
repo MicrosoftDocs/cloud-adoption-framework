@@ -1,8 +1,8 @@
 ---
 title: FAQ
 description: FAQ
-author: tbd
-ms.author: tbd
+author: rkuehfus
+ms.author: brblanch
 ms.date: 06/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
