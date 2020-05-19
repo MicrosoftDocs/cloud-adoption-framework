@@ -1,12 +1,12 @@
 ---
-title: Read me
-description: Read me
-author: tbd
-ms.author: tbd
-ms.date: 06/01/20
+title: Read me
+description: Read me
+author: tbd
+ms.author: tbd
+ms.date: 06/01/20
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: ready
 ---
 
 # Using reference implementation in your environment

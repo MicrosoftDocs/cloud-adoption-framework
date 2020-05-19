@@ -1,12 +1,12 @@
 ---
-title: Template schema
-description: Template schema
-author: tbd
-ms.author: tbd
-ms.date: 06/01/20
+title: Template schema
+description: Template schema
+author: tbd
+ms.author: tbd
+ms.date: 06/01/20
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: ready
 ---
 
 ## Generic CAF enterprise-scale Microsoft Azure Resource Manager template

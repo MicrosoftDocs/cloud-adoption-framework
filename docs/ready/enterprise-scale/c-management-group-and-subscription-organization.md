@@ -129,7 +129,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
   This ensures all foundation network resources are billed together, and isolated from any other workloads.
 
-- Avoid a rigid subscription model, opting instead for a set of flexible criteria to group subscriptions across the organization
+- Avoid a rigid subscription model, opting instead for a set of flexible criteria to group subscriptions across the organization
 
   This ensures that as your organization structure and workload composition changes, you are able to create new groups of subscriptions instead of using a fixed set of existing subscriptions.
 

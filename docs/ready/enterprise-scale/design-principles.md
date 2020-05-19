@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Design Principles
 
-The **enterprise-scale** architecture prescribed in this playbook is based on the design principles described in this section. These principles serve as a compass for subsequent design decisions across critical technical domains. Readers are strongly advised to familiarize themselves with these principles to better understand their impact and the trade-offs associated with nonadherence.
+The _enterprise-scale_ architecture prescribed in this playbook is based on the design principles described in this section. These principles serve as a compass for subsequent design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with nonadherence.
 
 ## Subscription Democratization
 
@@ -31,7 +31,7 @@ The "enterprise-scale" architecture should focus on application centric migratio
 
 ## Azure Native Design and Roadmap Aligned
 
-The **Enterprise Scale architecture** approach advocates the use of native platform services and capabilities whenever possible, which should be aligned with Azure platform roadmaps to ensure new capabilities are made available within customer environments. Azure platform roadmaps should help inform the migration strategy and **enterprise-scale** trajectory.
+The **Enterprise Scale architecture** approach advocates the use of native platform services and capabilities whenever possible, which should be aligned with Azure platform roadmaps to ensure new capabilities are made available within customer environments. Azure platform roadmaps should help inform the migration strategy and enterprise-scale trajectory.
 
 ## Recommendations
 

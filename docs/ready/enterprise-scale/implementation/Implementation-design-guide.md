@@ -66,9 +66,9 @@ File -> New -> Landing Zones (i.e. Subscription) process is ARM orchestrating fo
 
 - Subscription creation
 - Subscription move and
-- Configuring subscription to desired state by policy enfrorcement - autonomously.
+- Configuring subscription to desired state by policy enforcement - autonomously.
 
-For quick start, an [**ARM template**](../examples/e2e-landing-zone.parameters.json) that can be deployed at the tenant ("/") root scope will be provided to instantiate the **enterprise-scale architecture**. This template should provide everything that is necessary in [Implementation Guide](./Implementation-Guide.md), and will have the following sequence:
+For a quick start, an [**ARM template**](../examples/e2e-landing-zone.parameters.json) that can be deployed at the tenant ("/") root scope will be provided to instantiate the **enterprise-scale architecture**. This template should provide everything that is necessary in [Implementation Guide](./Implementation-Guide.md), and will have the following sequence:
 
 - Create (1) management group hierarchy and (2) subscription organization structure in (2+N) fashion where N represents number of landing zones.
 - Create Policies (deployIfNotExists) assigned to (2) Management Groups and (3) subscription scope to govern and deploy necessary resources, enabling platform autonomy as new landing zones (subscriptions) are being created by application teams
