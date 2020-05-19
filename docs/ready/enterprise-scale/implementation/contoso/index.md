@@ -1,11 +1,10 @@
 ---
 title: "CAF enterprise-scale landing zone - Contoso - getting started"
-titleSuffix: Cloud Adoption Framework
 description: CAF enterprise-scale landing zone - Contoso - getting started
 author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ms.custom: csu

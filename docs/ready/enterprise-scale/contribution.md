@@ -4,7 +4,7 @@ description: Contribution
 author: tbd
 ms.author: tbd
 ms.date: 06/01/2020
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---

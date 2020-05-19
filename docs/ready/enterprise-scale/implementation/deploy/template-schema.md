@@ -4,8 +4,8 @@ description: Template schema
 author: tbd
 ms.author: tbd
 ms.date: 06/01/20
-ms.topic: deploy
-ms.service: cloud-adoption-framework
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 

@@ -4,7 +4,7 @@ description: Start with enterprise-scale landing zones
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2020
-ms.topic: overview
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---

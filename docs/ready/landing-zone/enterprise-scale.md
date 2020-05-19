@@ -1,6 +1,5 @@
 ---
 title: Deploy a CAF enterprise-scale landing zone in Azure
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: Learn how to deploy a migration landing zone in Azure.
 author: BrianBlanchard
 ms.author: brblanch
