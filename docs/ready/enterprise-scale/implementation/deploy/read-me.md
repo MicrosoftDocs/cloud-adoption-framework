@@ -3,7 +3,7 @@ title: Read me
 description: Read me
 author: rkuehfus
 ms.author: brblanch
-ms.date: 06/01/20
+ms.date: 06/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
