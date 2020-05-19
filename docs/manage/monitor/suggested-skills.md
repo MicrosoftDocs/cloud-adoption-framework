@@ -40,7 +40,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Learn with Azure Monitor how to monitor data from [Azure Storage and HDInsight](https://www.pluralsight.com/courses/microsoft-azure-data-storage-monitoring).
 
-- [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) explores the key monitoring capabilities that can be used to gain insight and actionable steps for Azure SQL Database, Azure SQL Datawarehouse, and Azure Cosmos DB.
+- [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) explores the key monitoring capabilities that can be used to gain insight and actionable steps for Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
 - [Monitoring Microsoft Azure Hybrid Cloud Networks](https://www.pluralsight.com/courses/microsoft-azure-hybrid-cloud-networks-monitoring) is an advanced-level course that helps you learn how to use Azure monitoring tools to visualize, maintain, and optimize Azure virtual networks and virtual private network connections for your hybrid cloud implementation.
 
