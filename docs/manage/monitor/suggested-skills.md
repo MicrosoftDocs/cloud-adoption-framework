@@ -39,14 +39,13 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - [How to monitor your Kubernetes clusters](https://www.youtube.com/watch?time_continue=3&v=RjsNmapggPU&feature=emb_logo) provides an intermediate level deep dive to help you learn about monitoring your Kubernetes cluster with Azure Monitor for containers.
 
-- Learn with Azure Monitor how to monitor data from Azure [Storage and HDInsight](https://www.pluralsight.com/courses/microsoft-azure-data-storage-monitoring).
+- Learn with Azure Monitor how to monitor data from [Azure Storage and HDInsight](https://www.pluralsight.com/courses/microsoft-azure-data-storage-monitoring).
 
 - [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) explores the key monitoring capabilities that can be used to gain insight and actionable steps for Azure SQL Database, Azure SQL Datawarehouse, and Azure Cosmos DB.
 
 - [Monitoring Microsoft Azure Hybrid Cloud Networks](https://www.pluralsight.com/courses/microsoft-azure-hybrid-cloud-networks-monitoring) helps you learn how to use Azure monitoring tools to visualize, maintain, and optimize Azure virtual networks and virtual private network connections for your hybrid cloud implementation.
 
 - With [Azure Arc for servers](https://docs.microsoft.com/azure/azure-arc/servers/overview), learn how you can manage your Windows and Linux machines hosted outside of Azure similarly to how you manage native Azure virtual machines.
-
 
 ## Application monitoring
 
@@ -59,6 +58,8 @@ Developing the necessary skills can be accelerated with the following learning p
   - [Microsoft Azure Database Monitoring Playbook](https://www.pluralsight.com/courses/microsoft-azure-database-playbook-monitoring) helps you learn how to implement and use monitoring of Azure SQL Database, Azure SQL Data Warehouse, and Azure Cosmos DB.
 
   - [Instrument Applications with Azure Monitor Application Insights](https://app.pluralsight.com/library/courses/microsoft-azure-application-insights-web-application-instrument) is a deep-dive course on using the Application Insights SDK to collect telemetry and events from an app with Angular and Node.js components.
+
+  - [Application Debugging and Profiling](https://www.pluralsight.com/courses/devintersection-azureai-session-31) is a recording from a Microsoft conference session on using and interpreting data provided by the Azure Monitor Application Insights Snapshot Debugger and Profiler.
 
 ## Data analysis
 
