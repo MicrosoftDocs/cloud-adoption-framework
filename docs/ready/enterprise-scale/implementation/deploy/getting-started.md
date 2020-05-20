@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -12,7 +12,7 @@ ms.subservice: ready
 ## Getting started
 
 This article describes how to get started with enterprise-scale reference implementation by walking you through all the prerequistes to deploy a platform-native reference implementation of enterprise-scale.
-> Note: Before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.
+> Note: before you start, make sure that you have read and understood the overall design objective and scope of the reference implementation.
 
 ## Target audience
 

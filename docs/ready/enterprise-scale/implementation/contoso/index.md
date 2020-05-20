@@ -59,13 +59,13 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
     CanDelegate        : False
     ```
 
-3. [Clone the GitHub repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or download the necessary templates/template parameter files so you have the templates from the examples folder that you want to deploy on your local machine. <br>For a basic deployment test, you'll at least need access to the following templates:
+3. [Clone the GitHub repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or download the necessary templates/template parameter files so you have the templates from the examples folder that you want to deploy on your local machine. <br> For a basic deployment test, you'll at least need access to the following templates:
 
-    - [10-Create-child-managementgroup.parameters](https://github.com/azure/cet-northStar/blob/master/examples/10-create-managementgroup.parameters.json)
+    - [10-Create-child-managementgroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/10-create-managementgroup.parameters.json)
       Parameter file to deploy the company root management group (tailspin) as a child of the tenant root group
-    - [20-Create-child-managementgroup.parameters](https://github.com/azure/cet-northstar/blob/master/examples/20-create-child-managementgroup.parameters.json)
+    - [20-Create-child-managementgroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json)
       Parameter file to create nested child management groups under the company root management group
-    - [30-Create-policydefinition-at-managementgroup.parameters](https://github.com/azure/cet-northstar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json)
+    - [30-Create-policydefinition-at-managementgroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json)
       Deploys a deny if not exist (dine) policy definition at the company root management group (tailspin)
     - [40-Create-policyassignment-at-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json)
       Assigns the policy definition at company root management group scope (tailspin)

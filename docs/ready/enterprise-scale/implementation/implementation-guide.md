@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -51,7 +51,7 @@ There are two categories of activities that must take place in order to implemen
 
 | Activities                                                                                                                                                      | Parameters required                 | Enterprise-scale example configuration             |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|--------------------------------------------|
-| 1\. Allocate an appropriate virtual network cidr range for each Azure region where virtual WAN virtual hubs and virtual networks will be deployed\.                                                | 1X cidr range per region            |  North Europe: 10.0.0.0/16<br>West Europe: 10.1.0.0/16<br>East US: 10.2.0.0/16 |
+| 1\. Allocate an appropriate virtual network CIDR range for each Azure region where virtual WAN virtual hubs and virtual networks will be deployed\.                                                | 1X CIDR range per region            |  North Europe: 10.0.0.0/16<br>West Europe: 10.1.0.0/16<br>East US: 10.2.0.0/16 |
 | 2\. Create Azure Virtual WAN standard within the "connectivity" subscription\.                                                                                 | Virtual WAN name<br>Azure region | Virtual WAN name: Contoso-vwan<br>Azure region: North Europe |
 | 3\. Create a virtual WAN virtual hub for each region\. Ensure at least one gateway \(ExpressRoute and/or VPN\) per virtual WAN virtual hub are deployed\.                                  | Virtual WAN name<br>Virtual hub name<br>Virtual hub region<br>Virtual hub address space<br>ExpressRoute gateway<br>VPN gateway | Virtual WAN: Contoso-vwan<br>Virtual hub region: North Europe<br>Virtual hub name: virtual hub-neu<br>Virtual hub address space: 10.0.0.0/16<br>ExpressRoute gateway: yes (1 scale unit) <br>VPN gateway: no |
 | 4\. Using Azure Firewall Manager, secure virtual WAN virtual hubs by deploying Azure Firewall within each virtual WAN virtual hub\.                                                        | Virtual hub name                           | Virtual hub name: virtual hub\-neu                       |
@@ -59,11 +59,11 @@ There are two categories of activities that must take place in order to implemen
 | 6\. Using Azure Firewall Manager, ensure all connected virtual networks to a secure virtual hub are protected by Azure Firewall\.                                                | Virtual hub name<br>internet traffic - traffic from virtual networks | Virtual hub name: virtual hub-neu<br>internet traffic - traffic from virtual networks - send via Azure Firewall |
 | 7\. Deploy and configure an Azure Private DNS zone within the global "connectivity" subscription\.                                                             | Private DNS zone name               | Private DNS zone name: Azure\.Contoso\.COM |
 | 8\. Provision ExpressRoute circuit\(s\) with private peering\.                                                                                                 | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) |
-| 9\. Connect on\-premises hqs/DCs to Azure Virtual WAN virtual hub via ExpressRoute circuits\.                                                                                | Authorization key<br>Virtual hub name | Authoriztion key: xxxxxxxx<br>Virtual hub: virtual hub-neu |
+| 9\. Connect on\-premises HQs/DCs to Azure Virtual WAN virtual hub via ExpressRoute circuits\.                                                                                | Authorization key<br>Virtual hub name | Authoriztion key: xxxxxxxx<br>Virtual hub: virtual hub-neu |
 | 10\.  \(Optional\) setup encryption over ExpressRoute private peering\.                                                                                         | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) | [Follow instrunctions as per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) |
 | 11\.  \(Optional\) connect branches to Azure Virtual WAN virtual hub via VPN\.                                                                                                | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) |
 | 12\. Protect virtual network traffic across virtual hubs with NSGs\.                                                                                                             | Inbound rules<br>Outbound rules | Inbound rules<br>Outbound rules |
-| 13\. Configure ExpressRoute Global Reach for connecting on\-premises hqs/DCs when more than one on\-premises location is connected to Azure via ExpressRoute\. | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) |
+| 13\. Configure ExpressRoute Global Reach for connecting on\-premises HQs/DCs when more than one on\-premises location is connected to Azure via ExpressRoute\. | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) |
 
 <!-- markdownlint-enable MD033 -->
 
@@ -222,7 +222,7 @@ The table below provides a list of example Azure policies to enforce typical net
 
 6. Create Azure AD PIM entitlements for established Azure AD groups.
 
-7. Provision the virtual network cidr range if it requires virtual network connectivity\*.
+7. Provision the virtual network CIDR range if it requires virtual network connectivity\*.
 
 8. Peer the virtual network with the regional virtual hub \*.
 

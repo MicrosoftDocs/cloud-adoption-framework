@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -17,7 +17,7 @@ This article describes how to deploy landing zones under the respective manageme
 
 # Create landing zones
 
-In a enterprise-scale implementation, all platform resources in the __connectivity__ and __management__ subscriptions are deployed via Azure Policy. Enterprise-scale includes both, policy definitions and assignments required to deploy the neccesary resources. While it is possible to deploy both, Azure Policy definition and assignments using enterprise-scale deployment process via GitHub Actions as described in this article, enterprise-scale provides flexiblity for how the assignments can be done in the platform subscriptions.
+In a enterprise-scale implementation, all platform resources in the `connectivity` and `management` subscriptions are deployed via Azure Policy. Enterprise-scale includes both, policy definitions and assignments required to deploy the necessary resources. While it is possible to deploy both, Azure Policy definition and assignments using enterprise-scale deployment process via GitHub Actions as described in this article, enterprise-scale provides flexibility for how the assignments can be done in the platform subscriptions.
 
 All platform Azure resources in a landing zones following the enterprise-scale guidance are fully controlled and provisioned through Azure Policy on the landing zone management group scope. More information on the [policy-driven approach](./../Design-Principles.md) can be found in the enterprise-scale design principals section of this document.
 

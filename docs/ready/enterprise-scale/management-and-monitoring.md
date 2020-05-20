@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -33,7 +33,7 @@ This section will focus on centralized management and monitoring at a platform l
 
 - Security audit logging and achieving a horizontal security lens across the entire customer Azure estate.
 
-  - Potential integration with on-premises siem systems such as service now or arcsight.
+  - Potential integration with on-premises SIEM systems such as service now or arcsight.
 
   - Azure activity logs
 
@@ -101,7 +101,7 @@ This section will focus on centralized management and monitoring at a platform l
 
 - Do not send raw logs entries back to on premise monitoring systems, but instead adopt the principal of "data born in Azure, stays in Azure".
 
-  - If on-premises siem integration is required [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
+  - If on-premises SIEM integration is required [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
 
 ## 2. Planning for application management and monitoring
 

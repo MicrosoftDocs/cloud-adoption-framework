@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -139,7 +139,7 @@ It is crucial for enterprise customers to have visibility into what is happening
 
 - Requirements for real-time monitoring and alerting
 
-- Siem integration with Azure Security Center and Azure Sentinel
+- SIEM integration with Azure Security Center and Azure Sentinel
 
 - Vulnerability assessment of virtual machines
 

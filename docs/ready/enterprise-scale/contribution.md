@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -79,11 +79,11 @@ Primarily, the code contribution would be centered on Azure Policy definitions a
 
 First, let's assert that there is no right or wrong way writing ARM templates and parameters files.
 
-ARM is a language and everyone has different "style of writing". Very seldom composition of the template and parameters file are the same among group of developers. There is no clear style definition to govern and separate code from the config. In other words, what goes in template vs. What is in the parameter files. Available guidance on when to use parameters and object as parameters (without any schema) are subject to interpretation and there is no one authoring "style" fits all.
+ARM is a language and everyone has different "style of writing". Very seldom composition of the template and parameters file are the same among group of developers. There is no clear style definition to govern and separate code from the config. In other words, what goes in template versus what is in the parameter files. Available guidance on when to use parameters and object as parameters (without any schema) are subject to interpretation and there is no one authoring "style" fits all.
 
 To simplify development and unit testing at-scale with multiple developers contributing, we have adopted to specific style of writing templates by decoupling template from its parameter file completely.
 
-We have opted for minimalist "one template to rule them all" approach. This will externalize all resource properties as a complex object in parameter file and we can enforce strict schema validation on parameter file based on resource schema that platform already publishes. This drives clear separation between template and parameters. Parameter file is essentially RESTful representation of the resource when calling `Get-AzResource` or `az resource show`.
+We have opted for minimalist "one template to rule them all" approach. This will externalize all resource properties as a complex object in parameter file and we can enforce strict schema validation on parameter file based on resource schema that platform already publishes. This drives clear separation between template and parameters. Parameter file is essentially RESTful representation of the resource when calling `get-azresource` or `az resource show`.
 
 - Template.json
 
@@ -116,7 +116,7 @@ There is generic multiresource template available [here](https://raw.githubuserc
 }
 ```
 
-Retrieve resource definition by calling `Get-AzResource` function and giving `resourceId` to existing resource.
+Retrieve resource definition by calling `get-azresource` function and giving `resourceid` to existing resource.
 
 ```powershell
 #Replace resourceId in below command before executing it
@@ -241,7 +241,7 @@ For all policy assignment, the following must be considered:
 - What resource types are allowed that might/might not affect where the policy is being assigned?
 - For multiple policies serving same/similar purpose, can they be bundled into a policy initiative?
 - What is the rationale of the policy effect? Should an audit policy be translated to an enforcement instead?
-- For deployifnotexists policies, are you following the principle of least privileges of access for the RBAC definition being used?
+- For DeployIfNotExists policies, are you following the principle of least privileges of access for the RBAC definition being used?
 
 ### Code of conduct
 

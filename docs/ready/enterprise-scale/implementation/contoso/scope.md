@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -114,13 +114,13 @@ The following policies related to management group hierarchy and subscription or
 
 ## Network topology and connectivity
 
-Contoso has a presence across Europe and north America. Contoso's headquarters are located in london, UK. Contoso also has regional hq offices in amsterdam and chicago. Contoso has a large number of branch offices (around 500), which are located across the US and Europe, with each branch office containing a cpe that is connected to the local regional hq via s2s VPN.
+Contoso has a presence across Europe and north America. Contoso's headquarters are located in london, UK. Contoso also has regional HQ offices in amsterdam and chicago. Contoso has a large number of branch offices (around 500), which are located across the US and Europe, with each branch office containing a cpe that is connected to the local regional HQ via s2s VPN.
 
 Contoso has decided to adopt enterprise-scale recommendations for building their network architecture in Azure. Key decisions they have adopted include:
 
 1. The deployment of a Microsoft-managed network in Azure using Azure Virtual WAN to interconnect all Azure and on-premises locations around the world.
 
-2. Use of ExpressRoute Global Reach to interconnect corporate hqs with regional hubs.
+2. Use of ExpressRoute Global Reach to interconnect corporate HQs with regional hubs.
 
 3. Move away from their traditional DMZ-model and adopt a zero-trust network model.
 
@@ -132,12 +132,12 @@ Contoso's network design based on enterprise-scale design principles is depicted
 
 With this network design, Contoso enables the following scenarios:
 
-- Regional hq offices connectivity to Azure via ExpressRoute.
+- Regional HQ offices connectivity to Azure via ExpressRoute.
 - Branch offices connectivity to Azure via VPN (s2s IPsec tunnels).
 - Landing zone virtual networks are connected to the regional Azure Virtual WAN virtual hub.
-- Regional hqs to regional hqs connectivity via ExpressRoute with global reach.
-- Regional hqs to branch offices connectivity via Azure Virtual WAN.
-- Regional hqs and branch offices connectivity to Azure Virtual Network via Azure Virtual WAN.
+- Regional HQs to regional HQs connectivity via ExpressRoute with global reach.
+- Regional HQs to branch offices connectivity via Azure Virtual WAN.
+- Regional HQs and branch offices connectivity to Azure Virtual Network via Azure Virtual WAN.
 - internet-outbound connectivity from Azure Virtual Network is secured using Azure Firewall within the virtual WAN virtual hub.
 
 Contoso decided to deploy a Azure Virtual WAN (Microsoft managed) based network topology in order to enable global inter-connectivity between on-premises and Azure as well as support a large number of branches that need to be connected to Azure. The following diagram depicts the required Azure resources which must be deployed inside the "connectivity" subscription to support Contoso's global Azure network:
@@ -391,7 +391,7 @@ Contoso will employ a monitoring strategy where the central team will be respons
 
 Since Contoso have selected West Europe as their primary Azure region, they will use a single Log Analytics workspace within West Europe for centralized platform management, which will also act as the hub for all security and networking data across their Azure platform. With this design and implementation, they will achieve:
 
-- A single, central, and horizontal view of the platform across security, auditing, and networking, all enforced by Azure Policy and "deployifnotexists".
+- A single, central, and horizontal view of the platform across security, auditing, and networking, all enforced by Azure Policy and "DeployIfNotExists".
   - Consume security data centrally from all subscriptions.
   - Consume networking data centrally from all regions and subscriptions where networks are deployed.
 - Granular data retention per data table in Log Analytics.
@@ -569,9 +569,9 @@ Contoso also recognizes the need to add backup capabilities to other resource ty
 
 For Contoso to understand what controls must be implemented, and where these controls must be layered in their Azure architecture, they have developed and established a control framework to map their requirements to Azure platform capabilities. The framework principals are data protection, network protection, key management, vulnerability, and least privilege to ensure any whitelisted Azure service can conform to Contoso's enterprise security requirements, which are implemented using Azure Policy, Azure AD PIM, Azure RBAC, Azure Security Center, Azure Sentinel, and Azure Monitor.
 
-Through policy-driven management, Contoso's policy implementation will ensure new subscriptions and resources will immediately be brought to their target compliant state. The primary policy effects used by Contoso to achieve this is "deployifnotexists", "deny", "append", and "modify".
+Through policy-driven management, Contoso's policy implementation will ensure new subscriptions and resources will immediately be brought to their target compliant state. The primary policy effects used by Contoso to achieve this is "DeployIfNotExists", "deny", "append", and "modify".
 
-- For "DeployIfNotExist" policies, Contoso ensures IaaS and PaaS resources, as well as new subscriptions are compliant during creation regardless of *how* it is being created.
+- For "deployifnotexist" policies, Contoso ensures IaaS and PaaS resources, as well as new subscriptions are compliant during creation regardless of *how* it is being created.
 
 - For "deny" policies, Contoso ensures the appropriate guardrails are in place to avoid misconfigurations, such as accidentally deploying a workload that is not whitelisted and/ot deploying to a region that is not explicitly allowed.
 

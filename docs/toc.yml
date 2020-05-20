@@ -195,45 +195,45 @@ items:
         - name: Overview
           href: ready/enterprise-scale/index.md
         - name: Implementations
-          href: ready/enterprise-scale/implementation.md
+          href: ready/enterprise-scale/implementation/implementation.md
         - name: Architecture
           href: ready/enterprise-scale/architecture.md
         - name: Design guidelines
           href: ready/enterprise-scale/design-guidelines.md
         - name: Critical design areas
           items:
-          - name: A - Enterprise Enrollment and Azure AD Tenants
-            href: ready/enterprise-scale/a-enterprise-enrolment-and-azure-ad-tenants.md
-          - name: B - Identity and Access Management
-            href: ready/enterprise-scale/b-identity-and-access-management.md
-          - name: C - Management Group and Subscription Organization
-            href: ready/enterprise-scale/c-management-group-and-subscription-organization.md
-          - name: D - Network Topology and Connectivity
-            href: ready/enterprise-scale/d-network-topology-and-connectivity.md
-          - name: E - Management and Monitoring
-            href: ready/enterprise-scale/e-management-and-monitoring.md
-          - name: F - Business Continuity and Disaster Recovery
-            href: ready/enterprise-scale/f-business-continuity-and-disaster-recovery.md
-          - name: G - Security, Governance, and Compliance
-            href: ready/enterprise-scale/g-security-governance-and-compliance.md
-          - name: H - Platform Automation and DevOps
-            href: ready/enterprise-scale/h-platform-automation-and-devops.md
+          - name: Enterprise enrollment and Azure AD tenants
+            href: ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md
+          - name: Identity and access management
+            href: ready/enterprise-scale/identity-and-access-management.md
+          - name: Management group and subscription organization
+            href: ready/enterprise-scale/management-group-and-subscription-organization.md
+          - name: Network topology and connectivity
+            href: ready/enterprise-scale/network-topology-and-connectivity.md
+          - name: Management and monitoring
+            href: ready/enterprise-scale/management-and-monitoring.md
+          - name: Business continuity and disaster recovery
+            href: ready/enterprise-scale/business-continuity-and-disaster-recovery.md
+          - name: Security, governance, and compliance
+            href: ready/enterprise-scale/security-governance-and-compliance.md
+          - name: Platform automation and DevOps
+            href: ready/enterprise-scale/platform-automation-and-devops.md
           - name: Design principles
             href: ready/enterprise-scale/design-principles.md
-        - name: Implementation Guide
-          href: ready/enterprise-scale/implementation-guide.md
-        - name: Decision Template
+        - name: Implementation guide
+          href: ready/enterprise-scale/implementation/implementation-guide.md
+        - name: Decision template
           href: ready/enterprise-scale/template.md
         - name: Reference implementation
           items:
           - name: Getting started
-            href: ready/enterprise-scale/contoso/index.md
+            href: ready/enterprise-scale/implementation/contoso/index.md
           - name: Scope and Design
-            href: ready/enterprise-scale/contoso/scope.md
+            href: ready/enterprise-scale/implementation/contoso/scope.md
           - name: Implementation
-            href: ready/enterprise-scale/contoso/design.md
-          - name: Known Issues
-            href: ready/enterprise-scale/contoso/known-issues.md
+            href: ready/enterprise-scale/implementation/contoso/design.md
+          - name: Known issues
+            href: ready/enterprise-scale/implementation/contoso/known-issues.md
 
     - name: Best practices
       items:

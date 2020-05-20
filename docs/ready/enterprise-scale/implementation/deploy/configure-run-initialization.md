@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -114,7 +114,7 @@ Follow the instructions [here](./Prerequisites.md/#sync-your-fork-with-upstream-
 
     > Note: tenantid can be found by running `(get-azcontext).tenant`
 
-5. Create the following management group structure. For enterprise-scale implementation, it is recommended to create the following hierarchy as a parallel structure if there is an existing management group structure in place. You can create the management structure with any supported client. __> We recommend using the Azure portal for this step so you can enjoy an enlightening moment after step 6.__
+5. Create the following management group structure. For enterprise-scale implementation, it is recommended to create the following hierarchy as a parallel structure if there is an existing management group structure in place. You can create the management structure with any supported client. We recommend using the Azure portal for this step so you can enjoy an enlightening moment after step 6.
 
   ```bash
       /

@@ -17,7 +17,7 @@ This article describes how to deploy landing zones under the management group sc
 
 # Create landing zones
 
-In a CAF enterprise-scale implementation, all platform resources in the __connectivity__ and __management__ subscriptions are deployed via Microsoft Azure Policy. CAF enterprise includes policy definitions and assignments required to deploy the necessary resources. While it's possible to follow the GitHub steps described in this to deploy Azure Policy definitions and assignments within the CAF enterprise deployment process, CAF enterprise provides flexibility for how the assignments can be done within platform subscriptions.
+In a CAF enterprise-scale implementation, all platform resources in the `connectivity` and `management` subscriptions are deployed via Microsoft Azure Policy. CAF enterprise includes policy definitions and assignments required to deploy the necessary resources. While it's possible to follow the GitHub steps described in this to deploy Azure Policy definitions and assignments within the CAF enterprise deployment process, CAF enterprise provides flexibility for how the assignments can be done within platform subscriptions.
 
 All Azure platform resources in a landing zone follow CAF enterprise guidance and are fully controlled and provisioned through Azure Policy on the landing zone management group scope. More information on the [policy-driven approach](./../Design-Principles.md) can be found in the CAF enterprise design principals section of this document.
 

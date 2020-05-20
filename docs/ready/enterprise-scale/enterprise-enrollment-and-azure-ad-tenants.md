@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -13,7 +13,7 @@ ms.subservice: ready
 
 ## 1. Planning for enterprise enrollment
 
-An enterprise enrollment, often referred to as the Enterprise Agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate. Enterprise enrollment is managed via Azure enterprise (also referred to as EA) portal. Azure enterprise enrollment often represent organisational hierarchy such as departments, accounts and subscription. These hierarchy represent cost enrollment groups within an organisation.
+An enterprise enrollment, often referred to as the Enterprise Agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate. Enterprise enrollment is managed via Azure enterprise (also referred to as EA) portal. Azure enterprise enrollment often represent organizational hierarchy such as departments, accounts and subscription. These hierarchy represent cost enrollment groups within an organization.
 
 ![Azure EA hierarchies.](./media/ea.png)
 _Figure 1: EA enrollment hierarchy._
@@ -22,7 +22,7 @@ Departments help you segment costs into logical groupings. Departments enable yo
 
 Accounts are organizational units in the Azure enterprise portal. You can use accounts to manage subscriptions and access reports.
 
-Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. Subscription is where organisation deploy Azure services.
+Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. Subscription is where organization deploy Azure services.
 
 Enterprise enrollment roles links users with their functional role and consists of:
 
@@ -34,7 +34,7 @@ Enterprise enrollment roles links users with their functional role and consists 
 
 ### Why enterprise enrollment
 
-Enterprise enrollment provides organizational representations and make it easier for enterprise to roll up cost to their respective department. Enterprise enrollment enables to set an administrator for department or for entire organization. Enterprise portal of Azure which enable enterprise enrollment also enable organisation to set key contacts to receive critical communication from Microsoft.
+Enterprise enrollment provides organizational representations and make it easier for enterprise to roll up cost to their respective department. Enterprise enrollment enables to set an administrator for department or for entire organization. Enterprise portal of Azure which enable enterprise enrollment also enable organization to set key contacts to receive critical communication from Microsoft.
 
 ### Scenarios where enterprise enrollment is not possible
 
@@ -66,7 +66,7 @@ Management group can be used to organize hierarchy for unified policy and access
 
 - Assign a budget for each account and establish an alert associated with the budget.
 
-- Organisation can have a variety of structures such as functional, divisional, geographic, matrix or team structure. Use organizational structure to map organization structure to enterprise enrollment.
+- organization can have a variety of structures such as functional, divisional, geographic, matrix or team structure. Use organizational structure to map organization structure to enterprise enrollment.
 
 - Create a new department for IT if business domains have independent IT capabilities.
 
@@ -96,7 +96,7 @@ It is very important that we asked basic security question in design phase of Az
 
 - Use Azure AD SSO based on the selected [planning topology](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies).
 
-- In case organisation does not have existing identity infrastructure, then it is recommended to start by implementing Azure AD only identity deployment. Such deployment with [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/) and [enterprise mobility suite](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) provide end to end protection for SaaS and enterprise application as well as devices.
+- In case organization does not have existing identity infrastructure, then it is recommended to start by implementing Azure AD only identity deployment. Such deployment with [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/) and [enterprise mobility suite](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) provide end to end protection for SaaS and enterprise application as well as devices.
 
 - Multi-factor authentication provides a second barrier of authentication adding another layer of security. It is recommended to enforce [multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and  [conditional access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) for all privileged accounts to make it more secure. Multi-factor authentication does provide another barrier of authentication but does not stop phishing or social engineering such as hacker taking physical possession of your phone or sim swapping or cloning. It is recommended that multi-factor authentication should be implemented with device management policy(such as strong pin locking and encryption and erasing device remotely when its lost). Out of band multi-factor authentication (such as biometric) is also considered a secure form of multi-factor authentication.
 

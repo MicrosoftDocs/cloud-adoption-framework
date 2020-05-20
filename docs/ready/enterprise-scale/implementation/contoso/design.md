@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -111,7 +111,7 @@ Reasoning behind this is it can be machine generated on-demand and it can be **c
 
 ```
 
-User should be able to copy/paste (a.k.a. "Export") output into input template parameter file. It is important to note that not all properties required but also having extra metadata will do no-harm and platform and template will ignore these properties. Please take a look at example [20-create-child-managementgroup.parameters.json](../examples/20-create-child-managementgroup.parameters.json) for what is required.
+User should be able to copy/paste (a.k.a. "Export") output into input template parameter file. It is important to note that not all properties required but also having extra metadata will do no-harm and platform and template will ignore these properties. Please take a look at example [20-create-child-managementgroup.parameters.json](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json) for what is required.
 
 ```json
 {
@@ -149,7 +149,7 @@ The tenant level ARM deployment above should create the following deployment at 
 - Tailspin-bu1
 - Tailspin-bu1-corp
 
-This ARM template can be expanded to include [subscriptions](../examples/60-move-subscription-under-managementgroup.parameters.json) (moving subscription),  [policy definition](../examples/30-create-policydefinition-at-managementgroup.parameters.json), [policy assignment](../examples/40-create-policyassignment-at-managementgroup.parameters.json), role definition and role assignment.
+This ARM template can be expanded to include [subscriptions](https://github.com/azure/CET-NorthStar/blob/master/examples/60-move-subscription-under-managementgroup.parameters.json) (moving subscription),  [policy definition](https://github.com/azure/CET-NorthStar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json), [policy assignment](https://github.com/azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json), role definition and role assignment.
 
 Contoso has decided following for their reference implementation:
 
@@ -169,7 +169,7 @@ Tenant Root
 
 Contoso have found it advantageous to organize these resources in same hierarchical layout inside Git repo. As over time, management groups and subscriptions move and/or are renamed, organizing resources in a hierarchical manner allows to track the lineage over time. It will allows to map the path of the resources based on resourceid in predictable manner inside Git and reduce miss-configuration.
 
-**AzOpsScope** class will abstract the mapping between resource identifier in Azure and the path to resources stored in the Git repo. This will facilitate quick conversion between Git and Azure and vice versa. Examining the examples below, important properties to note are scope, type (e.g. Tenant, managementgroup, subscription, resource group) and statepath (representing file location inside Git).
+**Azopsscope** class will abstract the mapping between resource identifier in Azure and the path to resources stored in the Git repo. This will facilitate quick conversion between Git and Azure and vice versa. Examining the examples below, important properties to note are scope, type (e.g. Tenant, managementgroup, subscription, resource group) and statepath (representing file location inside Git).
 
 Another advantage of the class is recognized when deployment templates are updated in pull request, pipeline can determine at what scope to trigger deployments and appropriate parameters to pass like name, scope etc. In this way, pipeline can be triggered in predictable manner and deployment artifact can be organized at appropriate scope without including deployment scripts in each pull request throughout the scope of the Azure platform using same Azure AD tenant. Please check [deploy-templates](https://github.com/Azure/CET-NorthStar/blob/master/docs/Implementation-Getting-Started.md#deploy-templates) section for further details.
 
@@ -210,7 +210,7 @@ resource         :
 
 ### Initalization
 
-**Initialize-AzOpsRepository**
+**Initialize-azopsrepository**
 
 This will provide discovery function to traverse the whole management group and subscription hierarchy by calling:
 
@@ -222,7 +222,7 @@ This will build the relationship association between management group and subscr
 
 ### Deployment
 
-**Invoke-AzOpsGitPush**
+**Invoke-azopsgitpush**
 
 Contoso wants to ensure that all platform changes are peer reviewed and approved before deploying in to production environment. Contoso have decided to implement workflow (a.k.a. Deployment pipeline) and use GitHub action for that. Contoso have named this workflow as "azops-push" referring the the direction of the change I.e. Git to Azure. All platform changes will come in the form of pull request and peer reviewed. Once pull request review is completed satisfactorily, platform team will attempt the merge of the pull request in to master branch and trigger deployment action by calling invoke-azopsgitpush function.
 
@@ -234,7 +234,7 @@ This function will be entry point of GitHub Actions when pull request is approve
 
 ### Operationalize - configuration drift and reconciliation
 
-**Invoke-AzOpsGitPull**
+**Invoke-azopsgitpull**
 
 "Operationalize" Azure environment at-scale for day-to-day activities.
 

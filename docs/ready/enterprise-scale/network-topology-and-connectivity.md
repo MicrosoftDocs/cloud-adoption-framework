@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -79,7 +79,7 @@ DNS is a critical design topic in the overall "enterprise-scale" architecture, a
 
 - Create the Azure Private DNS zone within a global "connectivity" subscription.
 
-  - Additional Azure Private DNS zones might be created (for example `privatelink.database.windows.net` or `privatelink.blob.core.windows.net` for Private Link).
+  - Additional Azure Private DNS zones might be created (for example `privatelink.database.Windows.net` or `privatelink.blob.core.Windows.net` for Private Link).
 
 ## 3. Define an Azure networking topology
 
@@ -392,7 +392,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
   - Azure outbound traffic to the internet
 
-  - Non-HTTP/S inbound connections
+  - nonHTTP/S inbound connections
 
   - East-west traffic filtering (if required by customer)
 
@@ -480,13 +480,13 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Application team should use application security groups at the subnet level NSGs to protect multitier VMs within their "landing zone".
 
-- Use NSGs and asgs to microsegment traffic within the "landing zone" and avoid using a central NVA to filter these traffic flows.
+- Use NSGs and ASGs to microsegment traffic within the "landing zone" and avoid using a central NVA to filter these traffic flows.
 
 - Is recommended to enable NSG flow logs and feed them into traffic analytics to gain insights into internal and external traffic flows.
 
 - Use NSGs to selectively whitelist inter "landing zone" connectivity.
 
-- For virtual-wan-based network topologies, route traffic across "landing zones" via Azure Firewall only if the customer requires packet inspection and logging capabilities for traffic flowing across "landing zones".
+- For virtual-WAN-based network topologies, route traffic across "landing zones" via Azure Firewall only if the customer requires packet inspection and logging capabilities for traffic flowing across "landing zones".
 
 ## 9. Define network encryption requirements
 
@@ -517,7 +517,7 @@ _Figure 8: Encryption flows._
 
 - For Azure Virtual WAN scenarios, and where MACsec is not an option (for example, not using ExpressRoute Direct), use virtual WAN VPN gateway to establish IPsec tunnels over ExpressRoute private peering. This is depicted by flow C in the diagram above.
 
-- For non-virtual-wan scenarios, and where MACsec is not an option (for example, not using ExpressRoute Direct), today the only options is to use third-party NVAs to establish IPsec tunnels over ExpressRoute private peering or establish a VPN tunnel over ExpressRoute with Microsoft peering.
+- For non-virtual-WAN scenarios, and where MACsec is not an option (for example, not using ExpressRoute Direct), today the only options is to use third-party NVAs to establish IPsec tunnels over ExpressRoute private peering or establish a VPN tunnel over ExpressRoute with Microsoft peering.
 
   - It's in the roadmap to support IPsec encryption for ExpressRoute private peering.
 

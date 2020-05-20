@@ -1,5 +1,5 @@
 ---
-title: XX
+title: Xx
 description: XX
 author: rkuehfus
 ms.author: brblanch
@@ -91,4 +91,4 @@ This section will help readers capture customer disaster recovery requirements t
 
 - Avoid using overlapping IP address ranges for production and dr sites.
 
-  - Whenever possible, plan for a BCDR network architect that provides for concurrent connectivity to all sites. Dr networks that utilize the same cidr blocks as production networks will require a network failover process that can complicate and delay application failover in the event of an outage.
+  - Whenever possible, plan for a BCDR network architect that provides for concurrent connectivity to all sites. Dr networks that utilize the same CIDR blocks as production networks will require a network failover process that can complicate and delay application failover in the event of an outage.
