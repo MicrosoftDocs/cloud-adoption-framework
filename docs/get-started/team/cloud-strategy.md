@@ -11,7 +11,7 @@ ms.date: 05/15/2020
 
 # Get started: Build a cloud strategy team
 
-To be successful, every cloud adoption journey needs to involve some level of strategic planning. This get-started guide is designed to help you establish a dedicated team or virtual team (v-team) that can build and deliver on a solid cloud strategy. 
+To be successful, every cloud adoption journey needs to involve some level of strategic planning. This get-started guide is designed to help you establish a dedicated team or virtual team (v-team) that can build and deliver on a solid cloud strategy.
 
 The first step in the journey is to decide whether you need a strategy team, or whether your existing team members can deliver on cloud strategy as a distributed responsibility.
 
@@ -20,7 +20,7 @@ Whichever approach you choose, you'll want to create a cloud strategy team that 
 ![Get started building a cloud strategy team](../../_images/get-started/strategy-team-map.png)
 
 > [!NOTE]
-> This article discusses a *strategy facilitator*, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey. 
+> This article discusses a *strategy facilitator*, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
 
 ## Step 1: Determine whether a cloud strategy team is needed
 
@@ -42,7 +42,7 @@ Creating a cloud strategy team is often necessary for the following reasons:
 | **Cloud adoption requires ongoing executive support** | <li> The cloud adoption effort will affect how you manage organizational change. <li> The effort will require additional training from multiple business users and could interrupt certain business functions. <li> The existing IT operations team or vendor is motivated to remain in an existing datacenter. <li> The existing IT team hasn't fully bought into the effort. |
 | **Cloud adoption presents risk to the business** | <li> Failure to complete the migration within the specified time window will result in negative market impact or increased hosting costs. <li> Workloads slated for adoption need to be protected from data leakage that could affect business success or customer security. <li> Metrics that are being used to measure the cloud effort are business aligned, creating a dependency and risk on the technical success. |
 
-If any or all of the preceding reasons represent your existing business considerations, the information in the rest of the article will help you establish your cloud strategy team.
+If any or all of the preceding reasons represent your existing business considerations, the information in the rest of this article will help you establish your cloud strategy team.
 
 <!-- markdownlint-disable MD026 -->
 
@@ -98,7 +98,7 @@ Cloud adoption journeys include approaches to both migration and innovation. Whe
 
 The first objective of the cloud strategy team is to define a high-level strategy that's based on business motivations. This can usually be completed in a one-hour workshop with all of the cloud strategy team members. It also requires a minimum of one additional hour to review the business motivations with various technical teams and affected stakeholders.
 
-During the first workshop, each member of the team should prioritize its motivations in the [understand motivations](../../strategy/motivations.md) article and share its top priorities. The strategy facilitator helps guide one or more rounds of conversation until a theme emerges in the direction of migration or innovation. There will likely be motivations in the top 3 list from both categories, which might require the team to go deeper on its list before a clear pattern leans one way or another. 
+During the first workshop, each member of the team should prioritize its motivations in the [understand motivations](../../strategy/motivations.md) article and share its top priorities. The strategy facilitator helps guide one or more rounds of conversation until a theme emerges in the direction of migration or innovation. There will likely be motivations in the top 3 list from both categories, which might require the team to go deeper on its list before a clear pattern leans one way or another.
 
 This exercise will surface conversations that can help build alignment among the team members. The deliverable will help guide the rest of the strategy and the resulting plan.
 
@@ -134,7 +134,7 @@ Impacts on business outcomes can take time. These types of changes typically mov
 **Guidance to support deliverable completion:**
 
 - Record business outcomes in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
-- [Business outcomes](../../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, it can be wise to invest very early in the Cost Management discipline of governance.
+- [Business outcomes](../../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, it can be wise to invest very early in the Cost Management governance discipline.
 - [Learning metrics](../../strategy/learning-metrics.md) help bridge the gap between business outcomes and technical adoption efforts.
 
 **Accountable team:**
@@ -145,7 +145,7 @@ The cloud strategy team is accountable for defining business outcomes. The team 
 
 Your business justification can help with planning, long-term return expectations, and expectations about total cost of ownership (TCO). In this step, the cloud strategy team should agree on the minimum amount of analysis required to help the strategy team align on a go-forward decision. Strategic alignment might require deep planning and TCO analysis. Most cloud strategy teams will find a simple cost analysis sufficient to align on direction.
 
-Each member of the strategy team should review common myths and approaches to business justification. This can help the team communicate the specific analysis that's expected from the supporting teams. After the team communicates its expectations, it can reduce its time investment and meeting frequency. However, the team will maintain accountability for completing the strategy until the business justification and digital estate analysis have been agreed upon.
+Each member of the strategy team should review common myths and approaches to business justification. This can help the team communicate the specific analysis that's expected from the supporting teams. After the team communicates its expectations, it can reduce its time investment and meeting frequency. The team will maintain accountability for completing the strategy until the business justification and digital estate analysis have been agreed upon.
 
 **Deliverables:**
 
@@ -188,7 +188,7 @@ After a go-forward decision has been agreed upon with the cloud strategy team, t
 
 ## What's next
 
-Strategy and planning are important. However, nothing is actionable until you identify the cloud adoption functions that are needed on your team. It's important to understand these key capabilities before you begin your adoption efforts.
+Strategy and planning are important. Nothing is actionable until you identify the cloud adoption functions that are needed on your team. It's important to understand these key capabilities before you begin your adoption efforts.
 
 Align your strategy with the [cloud adoption functions](../../organize/cloud-adoption.md) by working with the adoption team or individuals who are responsible for these functions.
 

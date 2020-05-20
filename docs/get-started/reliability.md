@@ -28,7 +28,7 @@ The first two steps in this article help both teams get started. They're listed 
 
 ## Step 1: Establish operations management requirements
 
-All workloads aren't created equal. In any environment, there are workloads that have a direct and constant impact on the business. There are also supporting business processes and workloads that have a smaller impact on the overall business. In this step, the cloud operations team identifies and implements initial requirements to support the overall IT portfolio.
+Not all workloads are created equal. In any environment, there are workloads that have a direct and constant impact on the business. There are also supporting business processes and workloads that have a smaller impact on the overall business. In this step, the cloud operations team identifies and implements initial requirements to support the overall IT portfolio.
 
 **Deliverables:**
 
@@ -68,7 +68,7 @@ Enterprise reliability requires consistent application of the management baselin
 
 - Ensure all workloads and resources follow [proper naming and tagging conventions](../ready/azure-best-practices/naming-and-tagging.md). [Enforce tagging conventions by using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags), with a specific emphasis on tags for criticality.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
-- If you're new to the Cost Management discipline, follow the guidance in the [Cost management improvements](../govern/guides/complex/cost-management-improvement.md) article. Focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
+- If you're new to the Cost Management discipline, follow the guidance in the [cost management improvements](../govern/guides/complex/cost-management-improvement.md) article. Focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
 
 > [!NOTE]
 > **Steps to start reliability partnerships with other teams:** Various decisions throughout the cloud adoption lifecycle can have a direct impact on reliability. The following steps outline the partnerships and supporting efforts required to deliver consistent reliability across the IT portfolio.
@@ -78,7 +78,7 @@ Enterprise reliability requires consistent application of the management baselin
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud center of excellence or central IT |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
 
 ## Step 3: Define your strategy
 
@@ -92,7 +92,7 @@ Strategic decisions directly affect reliability. They ripple through the adoptio
 **Guidance to support deliverable completion:**
 
 - [Understand motivations](../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive. These areas can increase the importance of cost control for all later efforts. Other forward-looking motivations related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations helps you prioritize cost management.
-- [Business outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, you should invest early in the Cost Management discipline of governance.
+- [Business outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, you should invest early in the Cost Management governance discipline.
 - [Business justification](../strategy/cloud-migration-business-case.md): The business justification serves as a high-level view of the overall financial plan for cloud adoption. It can be a good source for initial budgeting efforts.
 
 <!-- markdownlint-disable MD033 -->
@@ -100,7 +100,7 @@ Strategic decisions directly affect reliability. They ripple through the adoptio
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT |
+| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
 
 ## Step 4: Develop a cloud adoption plan
 
@@ -131,11 +131,11 @@ When you align the adoption plan with the digital estate analysis, you can plan 
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
 
 ## Step 5: Implement landing zone best practices
 
-The Ready methodology of the Cloud Adoption Framework for Azure focuses heavily on the development of landing zones to host workloads in the cloud. During landing zone implementation, multiple decisions could affect operations. Consult the cloud operations team to help review the landing zone for operations improvements. Also consult the cloud governance team to understand resource consistency policies and design guidance that might affect the landing zone design.
+The Ready methodology of the Cloud Adoption Framework for Azure focuses heavily on the development of landing zones to host workloads in the cloud. During landing zone implementation, multiple decisions could affect operations. Consult the cloud operations team to help review the landing zone for operations improvements. Also consult the cloud governance team to understand Resource Consistency policies and design guidance that might affect the landing zone design.
 
 **Deliverables:**
 
@@ -151,7 +151,7 @@ The Ready methodology of the Cloud Adoption Framework for Azure focuses heavily 
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud operations team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT |
+| <li> Cloud adoption team | <li> Cloud operations team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
 
 ## Step 6: Complete waves of adoption effort and change
 
@@ -174,7 +174,7 @@ Long-term operations can be affected by the decisions made during migration and 
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud governance team <li> Cloud center of excellence or central IT |
+| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
 
 ## Value statement
 

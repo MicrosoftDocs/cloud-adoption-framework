@@ -38,11 +38,11 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
 
 ## Step 2: Evaluate the business justification
 
-In this first pass at building the business case, evaluate the initial high-level return from a potential cloud adoption effort. The goal of this step is to ensure that all stakeholders align around one simple question: Based on the available data, is the overall adoption of the cloud a wise business decision? Building on that question, the team can better align on how this innovation project helps meet the end users' projected needs within the goal of adopting the cloud.
+In this first pass at building the business case, evaluate the initial high-level return from a potential cloud adoption effort. The goal of this step is to ensure that all stakeholders align around one simple question: based on the available data, is the overall adoption of the cloud a wise business decision? Building on that question, the team can better align on how this innovation project helps meet the end users' projected needs within the goal of adopting the cloud.
 
 **Deliverables:**
 
@@ -135,7 +135,7 @@ These links help the adoption team understand the approach taken by the cloud go
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or central IT |
+| <li> Cloud governance team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
 
 ## Step 6: Define operational needs and business commitments
 
@@ -157,7 +157,7 @@ Define the plan for long-term operational responsibilities for the planned innov
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud operations team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or central IT |
+| <li> Cloud operations team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
 
 ## Step 7: Deploy an aligned landing zone
 
@@ -166,7 +166,7 @@ All assets hosted in the cloud live within a landing zone. That landing zone mig
 **Deliverables:**
 
 - Deploy a first landing zone for initial, low-risk experimentation during early innovation.
-- Develop a plan to refactor with the cloud center of excellence or central IT to ensure governance, security, and operational alignment.
+- Develop a plan to refactor with the cloud center of excellence or Central IT to ensure governance, security, and operational alignment.
 - Timeline risks:
   - Governance, operations, and security requirements for the first 10 workloads can slow this process. Actual refactoring of the first landing zone and subsequent landing zones takes longer, but it should happen in parallel with migration efforts.
 
@@ -194,8 +194,8 @@ The Innovate methodology provides guidance on the tools and product management a
   - Custom-built applications.
   - Technology-based experiences.
   - Integration of physical products and technology by using IoT.
-  - Ambient intelligence: Integration of nonintrusive technology into an environment.
-  - Azure Cognitive Services: Big data, AI, machine learning, and predictive solutions.
+  - Ambient intelligence: integration of nonintrusive technology into an environment.
+  - Azure Cognitive Services: big data, AI, machine learning, and predictive solutions.
 
 **Guidance to support deliverable completion:**
 
@@ -209,7 +209,7 @@ The Innovate methodology provides guidance on the tools and product management a
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud center of excellence <li> Cloud center of excellence or central IT |
+| <li> Cloud adoption team | <li> Cloud center of excellence <li> Cloud center of excellence or Central IT |
 
 ## Value statement
 

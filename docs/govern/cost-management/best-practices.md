@@ -20,7 +20,7 @@ While delivering the disciplines of governance, cost management is a recurring t
 
 ## Best practices by team and accountability
 
-Cost management across the enterprise is a cloud governance and cloud operation function. However, all cost management decisions result in a change to the assets which support a workload. When those changes impact the architecture of a workload, additional considerations are required to minimize the impact on end users and business functions. The cloud adoption team who configured or developed that workload are likely to hold accountability for completing those types of changes.
+Cost management across the enterprise is a cloud governance and cloud operation function. All cost management decisions result in a change to the assets which support a workload. When those changes impact the architecture of a workload, additional considerations are required to minimize the impact on end users and business functions. The cloud adoption team who configured or developed that workload are likely to hold accountability for completing those types of changes.
 
 - **Tagging is critical to all governance.** Ensure all workloads and resources follow [proper naming and tagging conventions](../../ready/azure-best-practices/naming-and-tagging.md) and [enforce tagging conventions using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags).
 - **Identify right size opportunities.** Review your current resource utilization and performance requirements across the environment.
@@ -29,7 +29,7 @@ Cost management across the enterprise is a cloud governance and cloud operation 
 
 ## Operational cost management best practices
 
-The following best practices are typically completed by a member of the cloud governance or cloud operations team, in accordance with patching and other scheduled maintenance processes. Each of these best practices maps to actionable guidance later in the article.
+The following best practices are typically completed by a member of the cloud governance or cloud operations team, in accordance with patching and other scheduled maintenance processes. Each of these best practices maps to actionable guidance later in this article.
 
 - **Tagging is critical to all governance:** Ensure all workloads and resources follow [proper naming and tagging conventions](../../ready/azure-best-practices/naming-and-tagging.md) and [enforce tagging conventions using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags).
 - **Identify right size opportunities:** Review your current resource utilization and performance requirements across the environment to identify resources which have remained underutilized for a period of time (generally more than 90 days).
@@ -46,7 +46,7 @@ The following best practices are typically completed by a member of the cloud go
 Before making architectural changes, consult the technical lead for the workload. Facilitating a review of the workload using [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) and the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) to guide decisions regarding the following types of architectural changes.
 
 - **Azure App Service.** Verify production requirements for any Premium tier App Service plans. Without an understanding of the business requirements for a workload and the underlying assets configuration, its difficult to determine if a Premium tier plan is required.
-- **Horizontal over vertical scale.** Using multiple small instances can allow for an easier scaling path that a single larger instance. This allows for scale automation, which creates cost optimization. But, before a workload can scale horizontally, the technical team must verify that the application is idempotent. Achieving horizontal scale may first require changes to the code and configuration of various layers of the of the application.
+- **Horizontal over vertical scale.** Using multiple small instances can allow for an easier scaling path that a single larger instance. This allows for scale automation, which creates cost optimization. Before a workload can scale horizontally, the technical team must verify that the application is idempotent. Achieving horizontal scale may first require changes to the code and configuration of various layers of the of the application.
 - **Autoscale.** Enable autoscale on all app services to allow for a burstable number of smaller VMs. Enabling autoscale has the same idempotent requirement, which requires an understanding of the workload architecture. The workload and supporting assets must be approved for horizontal scaling and autoscaling by the adoption team, prior to any operational changes.
 - **Implement serverless technologies:** VM workloads are often migrated "as is" to avoid downtime. Often VMs may host tasks that are intermittent, taking a short period to run, or alternatively many hours. For example, VMs that run scheduled tasks such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs. After migration, consider rearchitecting layers of the workload to serverless technologies such as Azure Functions or Azure Batch jobs.
 
@@ -266,7 +266,7 @@ Additionally, consider general cost reductions for any nonproduction environment
 **Learn more:**
 
 - [Use tags](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources) to identify dev, test, or QA targets for resizing or termination.
-- [Autoshutdown VMs](https://docs.microsoft.com/azure/cost-management-billing/manage/getting-started#consider-cost-cutting-features-like-auto-shutdown-for-vms) sets a nightly termination time for VMs. Using this feature will stop nonproduction VMs each night, requiring developers to restart those VMs when they are ready to resume development.
+- [Autoshutdown VMs](https://docs.microsoft.com/azure/cost-management-billing/manage/getting-started#consider-cost-cutting-features-like-auto-shutdown-for-vms) sets a nightly termination time for VMs. Using this feature will stop nonproduction VMs each night, requiring developers to restart those VMs when they're ready to resume development.
 - Encourage development teams to use [Azure DevTest Labs](https://docs.microsoft.com/azure/lab-services/devtest-lab-overview) to establish their own cost-control approaches and avoid impact of the standard auto shutdown timing in the prior step.
 
 ## Best practice: Use Azure Cost Management
@@ -344,7 +344,7 @@ As you move resources into Azure and enable diagnostic logging for them, you gen
 
 ## Best practice: Optimize storage
 
-If you followed best practices for selecting storage before adoption, you are probably reaping some benefits. However, there are probably additional storage costs that you can still optimize. Over time blobs and files become stale. Data might not be used anymore, but regulatory requirements might mean that you need to keep it for a certain period. As such, you might not need to store it on the high-performance storage that you used for the original adoption.
+If you followed best practices for selecting storage before adoption, you're probably reaping some benefits. You can probably optimize some additional storage costs. Over time, blobs and files become stale. Data might not be used anymore, but regulatory requirements might mean that you need to keep it for a certain period. As such, you might not need to store it on the high-performance storage that you used for the original adoption.
 
 Identifying and moving stale data to cheaper storage areas can have a huge impact on your monthly storage budget and cost savings. Azure provides many ways to help you identify and then store this stale data.
 

@@ -19,7 +19,7 @@ Security architecture is affected by different factors:
 
 - **Continuous engagement model:** Continuous release of software updates and cloud features make fixed engagement models obsolete. Architects should be engaged with all teams working in technical topic areas to guide decision making along those teams capability lifecycle(s).
 - **Security from the cloud:** Incorporate security capabilities from the cloud to reduce enablement time and ongoing maintenance costs (hardware, software, time and effort).
-- **Security of the cloud:** Ensure coverage of all cloud assets including software as a service (SaaS) applications, infrastructure as a service (IaaS) VMs, and platform as a service (PaaS) applications and services.  This should include discovery and security of both sanctioned and unsanctioned services.
+- **Security of the cloud:** Ensure coverage of all cloud assets including software as a service (SaaS) applications, infrastructure as a service (IaaS) VMs, and platform as a service (PaaS) applications and services. This should include discovery and security of both sanctioned and unsanctioned services.
 - **Identity integration:** Security architects should ensure tight alignment with identity teams to help organizations meet the dual goals of enabling productivity and providing security assurances.
 - **Integration of internal context** in security designs to such as context from posture management and incidents investigated by security operations [center] (SOC). This should include elements like relative risk scores of user accounts and devices, sensitivity of data, and key security isolation boundaries to actively defend.
 

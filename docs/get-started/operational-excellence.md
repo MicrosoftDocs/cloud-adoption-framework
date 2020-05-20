@@ -29,7 +29,7 @@ Operational excellence across the enterprise and portfolio starts with peer proc
 
 ## Step 1: Define a strategy to guide digital transformation and operational excellence expectations
 
-A clear business strategy is the foundation for any digital transformation and operational excellence effort. IT can reduce costs and streamline IT processes. But without a clear strategy, it's difficult to understand how those changes might affect the business outcomes identified in the broader transformation effort.
+A clear business strategy is the foundation for any digital transformation and operational excellence effort. IT can reduce costs and streamline IT processes. Without a clear strategy, it's difficult to understand how those changes might affect the business outcomes identified in the broader transformation effort.
 
 **Deliverables:**
 
@@ -39,7 +39,7 @@ A clear business strategy is the foundation for any digital transformation and o
 **Guidance to support deliverable completion:**
 
 - [Understand motivations](../strategy/motivations.md): Critical business events and some migration motivations tend to be cost sensitive. These areas can increase the importance of cost control for all later efforts. Other forward-looking motivations related to innovation or growth through migration might be focused more on top-line revenue. Understanding motivations helps you prioritize cost management.
-- [Business outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, you should invest early in the Cost Management discipline of governance.
+- [Business outcomes](../strategy/business-outcomes/index.md): Some fiscal outcomes tend to be extremely cost sensitive. When the desired outcomes map to fiscal metrics, you should invest early in the Cost Management governance discipline.
 - [Business justification](../strategy/cloud-migration-business-case.md): The business justification serves as a high-level view of the overall financial plan for cloud adoption. It can be a good source for initial budgeting efforts.
 - [Learning metrics](../strategy/learning-metrics.md): To maintain alignment between the overarching business strategy and the more tactical change-management plans, establish learning metrics. These metrics should be designed to show iterative and incremental progress toward the plan.
 
@@ -48,7 +48,7 @@ A clear business strategy is the foundation for any digital transformation and o
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
 
 ## Step 2: Develop an organizational change management plan to span cloud adoption
 
@@ -76,7 +76,7 @@ Organizational change management is an iterative approach to subtly realign peop
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
 
 ## Step 3: Manage change across cloud adoption efforts
 
@@ -112,9 +112,9 @@ The previous steps outline a business-led approach to establish operational exce
 
 ## Next steps to delivering operational excellence across the portfolio
 
-Operational excellence requires a disciplined approach to reliability, performance, security, and cost optimization. Use the remaining get-started guidance in this article series to help ensure each of those principles is implemented through consistent automation approaches.
+Operational excellence requires a disciplined approach to reliability, performance, security, and cost optimization. Use the remaining guidance in this series to help ensure each of those principles is implemented through consistent automation approaches.
 
-- **Cost optimization**: Continuously optimize operating costs by using the get-started guide on [managing enterprise costs](./manage-costs.md)
-- **Security**: Reduce risk by integrating enterprise security across the portfolio by using the get-started guide on [implementing security across the portfolio](./security.md).
-- **Performance management**: Ensure IT asset performance supports business processes by using the get-started guide on [performance management across the enterprise](./performance.md).
-- **Reliability**: Improve reliability and reduce business disruptions by using the get-started guide on [implementing controls to create reliability](./reliability.md).
+- **Cost optimization:** Continuously optimize operating costs by using the get-started guide on [managing enterprise costs](./manage-costs.md)
+- **Security:** Reduce risk by integrating enterprise security across the portfolio by using the get-started guide on [implementing security across the portfolio](./security.md).
+- **Performance management:** Ensure IT asset performance supports business processes by using the get-started guide on [performance management across the enterprise](./performance.md).
+- **Reliability:** Improve reliability and reduce business disruptions by using the get-started guide on [implementing controls to create reliability](./reliability.md).

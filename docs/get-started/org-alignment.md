@@ -36,7 +36,7 @@ The next step is to map specific people to the necessary functions. To do so, an
 - What person will be accountable for defining those governance controls?
 - Are there other functions or people that will have accountability or responsibility within the cloud adoption plan?
 
-After you've documented the answers to these questions, see [plans for skills readiness](../plan/adapt-roles-skills-processes.md) to help define your plans to prepare these people for forthcoming work.
+After you've documented the answers to these questions, see [Plans for skills readiness](../plan/adapt-roles-skills-processes.md) to help define your plans to prepare these people for forthcoming work.
 
 ## Step 3: Determine how teams align within your organization
 

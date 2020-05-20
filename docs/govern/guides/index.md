@@ -38,7 +38,7 @@ To begin your cloud adoption journey, choose one of the following governance gui
 
 The guides demonstrate how to implement a governance MVP. From there, each guide shows how the cloud governance team can work ahead of the cloud adoption teams as a partner to accelerate adoption efforts. The Cloud Adoption Framework governance model guides the application of governance from foundation through subsequent improvements and evolutions.
 
-To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the complexity of the enterprise for ease of navigation. However, the reader's decision may be more complex. The following tables outline the differences between the two options.
+To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the complexity of the enterprise for ease of navigation. Your decision may be more complex. The following tables outline the differences between the two options.
 
 <!-- TODO: Refactor VDC content below. -->
 <!-- docsTest:ignore "Azure Virtual Datacenter" -->
@@ -79,7 +79,7 @@ To begin a governance journey, choose one of the two options below. The options 
 
 Azure Virtual Datacenter is an approach to making the most of the Azure cloud platform's capabilities while respecting an enterprise's security and governance requirements.
 
-Compared to traditional on-premises environments, Azure allows workload development teams and their business sponsors to take advantage of the increased deployment agility that cloud platforms offer. However, as your cloud adoption efforts expand to include mission-critical data and workloads, this agility may conflict with corporate security and policy compliance requirements established by your IT teams. This is especially true for large enterprises that have existing sophisticated governance and regulatory requirements.
+Compared to traditional on-premises environments, Azure allows workload development teams and their business sponsors to take advantage of the increased deployment agility that cloud platforms offer. As your cloud adoption efforts expand to include mission-critical data and workloads, this agility may conflict with corporate security and policy compliance requirements established by your IT teams. This is especially true for large enterprises that have existing sophisticated governance and regulatory requirements.
 
 The Azure Virtual Datacenter approach aims to address these concerns earlier in the adoption lifecycle by providing models, reference architectures, sample automation artifacts, and guidance to help achieve a balance between developer and IT governance requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a virtual datacenter itself: the implementation of isolation boundaries around your cloud infrastructure through the application of access and security controls, network policies, and compliance monitoring.
 

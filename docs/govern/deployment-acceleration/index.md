@@ -19,11 +19,11 @@ This article outlines the deployment acceleration process that a company experie
 > [!NOTE]
 > The Deployment Acceleration discipline does not replace the existing IT teams, processes, and procedures that allow your organization to effectively deploy and configure cloud-based resources. The primary purpose of this discipline is to identify potential business risks and provide risk-mitigation guidance to the IT staff that are responsible for managing your resources in the cloud. As you develop governance policies and processes make sure to involve relevant IT teams in your planning and review processes.
 
-The primary audience for this guidance is your organization's cloud architects and other members of your cloud governance team. However, the decisions, policies, and processes that emerge from this discipline should involve engagement and discussions with relevant members of your business and IT teams, especially those leaders responsible for deploying and configuring cloud-based workloads.
+The primary audience for this guidance is your organization's cloud architects and other members of your cloud governance team. The decisions, policies, and processes that emerge from this discipline should involve engagement and discussions with relevant members of your business and IT teams, especially those leaders responsible for deploying and configuring cloud-based workloads.
 
 ## Policy statements
 
-Actionable policy statements and the resulting architecture requirements serve as the foundation of a Deployment Acceleration discipline. To see policy statement samples, see the article on [Deployment Acceleration policy statements](./policy-statements.md). These samples can serve as a starting point for your organization's governance policies.
+Actionable policy statements and the resulting architecture requirements serve as the foundation of a Deployment Acceleration discipline. Use [sample policy statements](./policy-statements.md) as a starting point for defining your Deployment Acceleration policies.
 
 > [!CAUTION]
 > The sample policies come from common customer experiences. To better align these policies to specific cloud governance needs, execute the following steps to create policy statements that meet your unique business needs.

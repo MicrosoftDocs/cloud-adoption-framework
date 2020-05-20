@@ -28,7 +28,7 @@ Essentially, the cloud is a set of physical servers in one or more datacenters t
 
 To understand this, let's look at the architecture of the hardware in the datacenter. Inside each datacenter is a collection of servers sitting in server racks. Each server rack contains many server **blades** as well as a network switch providing network connectivity and a power distribution unit (PDU) providing power. Racks are sometimes grouped together in larger units known as _clusters_.
 
-Within each rack or cluster, most of the servers are designated to run these virtualized hardware instances on behalf of the user. However, some of the servers run cloud management software known as a fabric controller. The _fabric controller_ is a distributed application with many responsibilities. It allocates services, monitors the health of the server and the services running on it, and heals servers when they fail.
+Within each rack or cluster, most of the servers are designated to run these virtualized hardware instances on behalf of the user. But some of the servers run cloud management software known as a fabric controller. The _fabric controller_ is a distributed application with many responsibilities. It allocates services, monitors the health of the server and the services running on it, and heals servers when they fail.
 
 Each instance of the fabric controller is connected to another set of servers running cloud orchestration software, typically known as a _front end_. The front end hosts the web services, RESTful APIs, and internal Azure databases used for all functions the cloud performs.
 
