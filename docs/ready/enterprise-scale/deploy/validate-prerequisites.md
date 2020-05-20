@@ -34,12 +34,13 @@ ms.subservice: ready
 
 *If you want to use a service principal, follow the instructions to assign permissions under the [**full end-to-end deployment**](./Using-Reference-Implementation.md)*
 
-3. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your fork of the [north GitHub repository](https://github.com/Azure/CET-NorthStar) or download the necessary templates/template parameter files from the examples folder to your local computer. <br>For a basic deployment test, you'll need access to the following template:
+3. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your fork of the [north GitHub repository](https://github.com/Azure/CET-NorthStar) or download the necessary templates/template parameter files from the examples folder to your local computer. <br> For a basic deployment test, you'll need access to the following template:
 
     - [10-Create-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/10-create-managementgroup.parameters.json)
       Parameter file to deploy the company root management group (for example, Contoso) as a child of the tenant root group
 
-     > Please refer to [this](../Northstar-Contribution.md#writing-arm-templates-for-contoso-implementation) article to better understand how the enterprise-scale reference ARM templates are constructed (with only **one** master template and multiple parameter files).
+     > Please refer to [this](../contribution.md#writing-arm-templates-for-contoso-implementation) article to better understand how the enterprise-scale reference ARM templates are constructed (with only **one** master template and multiple parameter files).
+
 4. In the sample parameter files (for this case, 10-create-managementgroup.parameters.json), change the tenantid and name of the management groups to reflect the tenant where they will be deployed. Tenantid can be found by running `(get-azcontext).tenant`
 
     ```json

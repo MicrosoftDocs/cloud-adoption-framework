@@ -195,7 +195,7 @@ items:
         - name: Overview
           href: ready/enterprise-scale/index.md
         - name: Implementations
-          href: ready/enterprise-scale/implementation/implementation.md
+          href: ready/enterprise-scale/implementation.md
         - name: Architecture
           href: ready/enterprise-scale/architecture.md
         - name: Design guidelines
@@ -221,19 +221,19 @@ items:
           - name: Design principles
             href: ready/enterprise-scale/design-principles.md
         - name: Implementation guide
-          href: ready/enterprise-scale/implementation/implementation-guide.md
+          href: ready/enterprise-scale/implementation-guide.md
         - name: Decision template
           href: ready/enterprise-scale/template.md
         - name: Reference implementation
           items:
           - name: Getting started
-            href: ready/enterprise-scale/implementation/contoso/index.md
+            href: ready/enterprise-scale/contoso/index.md
           - name: Scope and Design
-            href: ready/enterprise-scale/implementation/contoso/scope.md
+            href: ready/enterprise-scale/contoso/scope.md
           - name: Implementation
-            href: ready/enterprise-scale/implementation/contoso/design.md
+            href: ready/enterprise-scale/contoso/design.md
           - name: Known issues
-            href: ready/enterprise-scale/implementation/contoso/known-issues.md
+            href: ready/enterprise-scale/contoso/known-issues.md
 
     - name: Best practices
       items:

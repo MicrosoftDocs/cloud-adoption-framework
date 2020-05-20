@@ -70,7 +70,7 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
     - [40-Create-policyassignment-at-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json)
       Assigns the policy definition at company root management group scope (tailspin)
     <br><br>
-     > Read up to better understand how the CAF enterprise-scale landing zone reference ARM templates are constructed (with **one** master template and parameter files only) [here](../northstar-contribution.md#writing-arm-templates-for-contoso-implementation).
+     > Read up to better understand how the CAF enterprise-scale landing zone reference ARM templates are constructed (with **one** master template and parameter files only) [here](../contribution.md#writing-arm-templates-for-contoso-implementation).
 4. In all parameter files, change the tenantid and name of the management groups to reflect the tenant where they will be deployed. Tenantid can be found by running `get-aztenant`.
 
     ```json

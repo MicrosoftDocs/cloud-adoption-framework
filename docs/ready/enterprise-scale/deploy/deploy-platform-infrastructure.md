@@ -11,9 +11,9 @@ ms.subservice: ready
 
 # Provision platform
 
-This article describes how to deploy the platform infrastructure for the enterprise-scale reference implementation into your own environment. If you haven't completed the first step please start [here](./Configure-run-initialization.md).
+This article describes how to deploy the platform infrastructure for the enterprise-scale reference implementation into your own environment. If you haven't completed the first step please start [here](./configure-run-initialization.md).
 
-![Deploy your own environment process - step 2](./media/deploy-environment-step-2.png)
+![Deploy your own environment process - step 2](../media/deploy-environment-step-2.png)
 
 ## Deployment artifact overview
 
@@ -42,7 +42,7 @@ It is important, that you are familiar with the azops folder structure that has 
         ├───.....
 ```
 
-Each _managementgroupscope_.parameters.json file has the following section, and it is the most important part of the parameter files and the section you have to primarily apply changes to using this guide. You can learn more about the *.parameters.json schema [here](./NorthStar-parameters-schema.md).
+Each _managementgroupscope_.parameters.json file has the following section, and it is the most important part of the parameter files and the section you have to primarily apply changes to using this guide. You can learn more about the *.parameters.json schema [here](./parameters-schema.md).
 
 ``` bash
     # empty part of a parameter json file after initialization
@@ -73,11 +73,11 @@ In this reference implementation we are using GitHub and GitHub Actions to push 
 
 The following diagram illustrates the flow to deploy the definitions:
 
-![Landing Zone definitions deployment process](./media/lz-definition-deployment.png)
+![Landing Zone definitions deployment process](../media/lz-definition-deployment.png)
 
 In a second step the assignment need to be deployed following a similar process:
 
-![Landing Zone assignment deployment process](./media/lz-assignments-deployment.png)
+![Landing Zone assignment deployment process](../media/lz-assignments-deployment.png)
 
 ## Deployment of definitions
 
@@ -137,7 +137,7 @@ In a second step the assignment need to be deployed following a similar process:
 
 The platform infrastructure is deployed across three Azure subscriptions on platform management group scope:
 
-![Platform subscriptions](./media/platform-subscriptions.png)
+![Platform subscriptions](../media/platform-subscriptions.png)
 
 - The `management` subscription, where all cross-platform management resources are deployed (such as centralized Log Analytics workspace)
 - The `connectivity` subscription, where all the networking resources are deployed (such as Azure Virtual WAN or Azure Firewall)

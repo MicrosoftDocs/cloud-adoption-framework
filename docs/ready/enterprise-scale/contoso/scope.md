@@ -142,7 +142,7 @@ With this network design, Contoso enables the following scenarios:
 
 Contoso decided to deploy a Azure Virtual WAN (Microsoft managed) based network topology in order to enable global inter-connectivity between on-premises and Azure as well as support a large number of branches that need to be connected to Azure. The following diagram depicts the required Azure resources which must be deployed inside the "connectivity" subscription to support Contoso's global Azure network:
 
-![Connectivity Subscriptio](./media/image7.png)
+![Connectivity Subscription](./media/image7.png)
 
 In order to simplify the routing configuration across the entire Azure networking platform, Contoso has assigned the following IP address spaces for Azure Virtual WAN virtual hubs and virtual networks:
 
@@ -571,7 +571,7 @@ For Contoso to understand what controls must be implemented, and where these con
 
 Through policy-driven management, Contoso's policy implementation will ensure new subscriptions and resources will immediately be brought to their target compliant state. The primary policy effects used by Contoso to achieve this is "DeployIfNotExists", "deny", "append", and "modify".
 
-- For "deployifnotexist" policies, Contoso ensures IaaS and PaaS resources, as well as new subscriptions are compliant during creation regardless of *how* it is being created.
+- For `DeployIfNotExists` policies, Contoso ensures IaaS and PaaS resources, as well as new subscriptions are compliant during creation regardless of _how_ it is being created.
 
 - For "deny" policies, Contoso ensures the appropriate guardrails are in place to avoid misconfigurations, such as accidentally deploying a workload that is not whitelisted and/ot deploying to a region that is not explicitly allowed.
 

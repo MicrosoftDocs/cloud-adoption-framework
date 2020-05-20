@@ -9,6 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## Enterprise-scale ARM parameters file
+# Generic enterprise-scale ARM template
 
 Coming soon :)
