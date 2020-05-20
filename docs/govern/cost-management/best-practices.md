@@ -43,7 +43,7 @@ The following best practices are typically completed by a member of the cloud go
 
 ## Workload cost management best practices
 
-Before making architectural changes, consult the technical lead for the workload. Facilitating a review of the workload using [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) and the [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework) to guide decisions regarding the following types of architectural changes.
+Before making architectural changes, consult the technical lead for the workload. Facilitating a review of the workload using [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) and the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) to guide decisions regarding the following types of architectural changes.
 
 - **Azure App Service.** Verify production requirements for any Premium tier App Service plans. Without an understanding of the business requirements for a workload and the underlying assets configuration, its difficult to determine if a Premium tier plan is required.
 - **Horizontal over vertical scale.** Using multiple small instances can allow for an easier scaling path that a single larger instance. This allows for scale automation, which creates cost optimization. But, before a workload can scale horizontally, the technical team must verify that the application is idempotent. Achieving horizontal scale may first require changes to the code and configuration of various layers of the of the application.

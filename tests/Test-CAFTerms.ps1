@@ -34,8 +34,8 @@ function Get-MyCasingExpressions
         'Strategy methodolog(y|ies)'
         'Strategy phase'
         
-        'Azure Architecture Framework'
-        'Azure Architecture Review'
+        'Microsoft Azure Well-Architected Framework'
+        'Microsoft Azure Well-Architected Review'
         'C-level'
         'C-suite'
         'CCoE'

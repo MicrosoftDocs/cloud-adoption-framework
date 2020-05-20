@@ -29,7 +29,7 @@ Before defining landing zones, it's important to understand a related term: _pla
 **Shared responsibilities:** _Platform foundation_ provides centralized controls to govern the cloud platform. There is still a shared responsibility across all members of the team to consider identity, security, operations, compliance, and governance requirements. Before adopting any technology in a landing zone, understand what utilities are provided by the _platform foundation_ and what you will need to implement within the landing zone to fulfill your shared responsibilities.
 
 > [!IMPORTANT]
-> Developers and architects who are deploying solutions within a landing zone can reference [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework/) to incorporate and build on these shared-architectural pillars when designing, building, or supporting workloads that run within a landing zone.
+> Developers and architects who are deploying solutions within a landing zone can reference [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) to incorporate and build on these shared-architectural pillars when designing, building, or supporting workloads that run within a landing zone.
 
 ## Landing zone definition
 
@@ -55,7 +55,7 @@ The purpose and scope of the overall cloud adoption plan will define what "plumb
 
 ## Decentralized operations
 
-In some decentralized organizations, adoption designs call for workload teams that are **solely responsible** for their own implementation and operation of each isolated workload, including security, governance, operations management, and other functions. For those teams, a workload may have its own segregated environment, with no dependencies on a platform foundation. Those workload-specific environments would have inconsistent implementations of security, reliability, performance, cost, and cloud operations. As such they should not be referred to as landing zones. These teams should look to guidance from [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework/) to design, build, and optimize each workload independently.
+In some decentralized organizations, adoption designs call for workload teams that are **solely responsible** for their own implementation and operation of each isolated workload, including security, governance, operations management, and other functions. For those teams, a workload may have its own segregated environment, with no dependencies on a platform foundation. Those workload-specific environments would have inconsistent implementations of security, reliability, performance, cost, and cloud operations. As such they should not be referred to as landing zones. These teams should look to guidance from [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/) to design, build, and optimize each workload independently.
 
 > [!IMPORTANT]
 > Similar but distinct: early in the cloud adoption lifecycle, smaller teams may perform like decentralized organizations due to necessity. If those teams are decentralized by circumstance (as opposed to decentralized by design), then the best practice of landing zone should still be followed.

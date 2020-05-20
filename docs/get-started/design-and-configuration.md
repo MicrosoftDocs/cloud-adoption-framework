@@ -153,10 +153,10 @@ As those plans are made, they feed back into the parallel efforts of the cloud p
 
 - Deploy a management baseline.
 - Complete the operations management workbook.
-- Identify any workloads that require an Azure Architecture Review assessment.
+- Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
   - Review the workbook: one hour per application owner.
-  - Complete the Azure Architecture Review assessment: one hour per application.
+  - Complete the Microsoft Azure Well-Architected Review assessment: one hour per application.
 
 **Guidance to support deliverable completion:**
 

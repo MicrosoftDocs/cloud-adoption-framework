@@ -209,7 +209,7 @@ conceptualContent:
           itemType: quickstart
           text: Identify gaps between your current state and business priorities, and get the right resources to help you address those gaps.
     # Card
-    - title: Azure Architecture Review
+    - title: Microsoft Azure Well-Architected Review
       links:
         - url: https://docs.microsoft.com/assessments/?mode=pre-assessment&id=azure-architecture-review
           itemType: architecture
