@@ -1,125 +1,109 @@
-## Navigation Menu
-
-* [Overview](../README.md)
-* [North Star Architecture](./NorthStar-Architecture.md)
-  * [Design Principles](./Design-Principles.md)
-  * [Design Guidelines](./Design-Guidelines.md)
-    * [A - Enterprise Enrollment and Azure AD Tenants](./A-Enterprise-Enrollment-and-Azure-AD-Tenants.md)
-    * [B - Identity and Access Management](./B-Identity-and-Access-Management.md)
-    * [C - Management Group and Subscription Organization](./C-Management-Group-and-Subscription-Organization.md)
-    * [D - Network Topology and Connectivity](./D-Network-Topology-and-Connectivity.md)
-    * [E - Management and Monitoring](./E-Management-and-Monitoring.md)
-    * [F - Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
-    * [G - Security, Governance and Compliance](./G-Security-Governance-and-Compliance.md)
-    * [H - Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
-  * [Implementation Guide](./Implementation-Guide.md)
-* [Contoso Reference](./Contoso/Readme.md)
-  * [Scope and Design](./Contoso/Scope.md)
-  * [Implementation](./Contoso/Design.md)
-* [Using reference implementation in your own environment](./Deploy/Readme.md)
-  * [Getting started](./Deploy/Getting-Started.md)
-    * [Prerequisites](./Deploy/Prerequisites.md)
-    * [Validate prerequisites](./Deploy/Validate-prereqs.md)
-  * [Configure your own environment](./Deploy/Using-Reference-Implementation.md)
-    * [Configure GitHub](./Deploy/Configure-run-initialization.md)
-    * [Provision Platform](./Deploy/Deploy-platform-infra.md)
-    * [Create Landing Zones](./Deploy/Deploy-lz.md)
-    * [Trigger deployments locally](./Deploy/Trigger-local-deployment.md)
-  * [North Star template schema](./Deploy/NorthStar-schema.md)
-    * [Generic North Star ARM template](./Deploy/NorthStar-template-schema.md)
-    * [North Star ARM parameters file](./Deploy/NorthStar-parameters-schema.md)
-  * [Known Issues](./Deploy/Known-Issues.md)    
-* [How Do I Contribute?](./Northstar-Contribution.md)
-* [FAQ](./Northstar-FAQ.md)
-* [Roadmap](./Northstar-roadmap.md)
-
+---
+title: XX
+description: XX
+author: rkuehfus
+ms.author: brblanch
+ms.date: 06/01/2020
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
-# A. Enterprise Enrollment and Azure AD Tenants
-## 1. Planning for Enterprise Enrollment 
+# Enterprise enrollment and Azure AD tenants
 
-An Enterprise Enrollment, often referred to as the Enterprise Agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate. Enterprise enrollment is managed via Azure enterprise (also referred to as EA) portal. Azure enterprise enrollment often represent organisational hierarchy such as Departments, Accounts and subscription. These hierarchy represent cost enrollment groups within an organisation.
+## 1. Planning for enterprise enrollment
 
- [![Azure EA hierarchies.](./media/ea-hierarchies.png "Azure EA hierarchies.")](#)
- Figure 1   – EA Enrollment Hierarchy
+An enterprise enrollment, often referred to as the Enterprise Agreement, represents the commercial relationship between Microsoft and the customer regarding their use of Azure. It provides the basis for billing across all customer subscriptions and therefore has an impact on administration of the customer estate. Enterprise enrollment is managed via Azure enterprise (also referred to as EA) portal. Azure enterprise enrollment often represent organisational hierarchy such as departments, accounts and subscription. These hierarchy represent cost enrollment groups within an organisation.
 
-Departments help you segment costs into logical groupings. Departments enable you to set a budget or quota at the department level(Note: quota is not hard enforcement but rather used for reporting purpose)
+![Azure EA hierarchies.](./media/ea.png)
+_Figure 1: EA enrollment hierarchy._
 
-Accounts are organizational units in the Azure Enterprise portal. You can use accounts to manage subscriptions and access reports.
+Departments help you segment costs into logical groupings. Departments enable you to set a budget or quota at the department level (note: quota is not hard enforcement but rather used for reporting purpose)
 
-Subscriptions are the smallest unit in the Azure Enterprise portal. They're containers for Azure services managed by the service administrator. Subscription is where organisation deploy Azure servies.
+Accounts are organizational units in the Azure enterprise portal. You can use accounts to manage subscriptions and access reports.
 
-Enterprise enrollment roles links users with their functional role and consists of 
+Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. Subscription is where organisation deploy Azure services.
+
+Enterprise enrollment roles links users with their functional role and consists of:
+
 - Enterprise administrator
 - Department administrator
 - Account owner
 - Service administrator
 - Notification contact
- 
 
-***Design Considerations***
+### Why enterprise enrollment
 
-- The Enrollment provides a hierarchical organizational structure to govern the management of customers subscriptions.
+Enterprise enrollment provides organizational representations and make it easier for enterprise to roll up cost to their respective department. Enterprise enrollment enables to set an administrator for department or for entire organization. Enterprise portal of Azure which enable enterprise enrollment also enable organisation to set key contacts to receive critical communication from Microsoft.
 
--   Multiple customers environments can be separated at an EA account level to support holistic isolation.
+### Scenarios where enterprise enrollment is not possible
 
--   There can be multiple administrators appointed to a single Enrollment.
+Enterprise enrollment is part of Enterprise Agreement. Customers who are not enterprise customer of Azure will not have access to enterprise portal and thus will not be able to manage subscriptions via enterprise portal.
 
--   Each Subscription must have an associated Account owner.
+In the absence of enterprise portal it is possible to manage resources via [Azure management group](https://docs.microsoft.com/azure/governance/management-groups/overview), however features and implementation of hierarchy in management group will differ from enterprise enrollment.
 
--   Each Account owner will be made a subscription owner for any subscriptions provisioned under that account.
+Management group can be used to organize hierarchy for unified policy and access management while enterprise enrollment organize subscription into departments and accounts for purpose of account, expenses, administer and unified communication management.
 
--   A subscription can only belong to one Account at any given time.
+**Design considerations:**
 
--   A subscription can be suspended based on a specified set of criteria.
+- The enrollment provides a hierarchical organizational structure to govern the management of customers subscriptions.
 
-***Design Recommendations***
+- Multiple customers environments can be separated at an EA account level to support holistic isolation.
 
--   Setup the notification contact email address to ensure notifications are sent to an appropriate group mailbox.
+- There can be multiple administrators appointed to a single enrollment.
 
--   Assign a budget for each account and establish an alert associated with the budget.
+- Each subscription must have an associated account owner.
 
--   Organisation can have a variety of structures such as functional, divisional, geographic, matrix or team structure. Leverage organizational structure to map organization structure to enterprise enrollment. 
+- Each account owner will be made a subscription owner for any subscriptions provisioned under that account.
 
--   Create a new department for IT if business domains have independent IT capabilities.
+- A subscription can only belong to one account at any given time.
 
--   Restrict and minimize the number of Account owners within the Enrollment to avoid the proliferation of admin access to Subscriptions and associated Azure resources.
+- A subscription can be suspended based on a specified set of criteria.
 
--   If multiple Azure AD tenants are used, ensure the Account owner is associated with the same tenant as where subscriptions for the account are provisioned.
+**Design recommendations:**
 
--   Setup enterprise Dev/Test/Prod environments at an EA account level to support holistic isolation.
+- Setup the notification contact email address to ensure notifications are sent to an appropriate group mailbox.
 
--   Do not ignore notification emails sent to the notification account email address. Microsoft sends important EA wide communications to this account.
+- Assign a budget for each account and establish an alert associated with the budget.
 
--   Do not move or rename an EA Account in Azure AD.
+- Organisation can have a variety of structures such as functional, divisional, geographic, matrix or team structure. Use organizational structure to map organization structure to enterprise enrollment.
 
--   Periodically audit EA portal to review who has access and avoid using MSA account where possible.
+- Create a new department for IT if business domains have independent IT capabilities.
 
-## 2. Define Azure AD Tenants
+- Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 
-Azure AD Tenant provide identity and access management which is an important part of security posture ensuring that only authenticated and authorized user have access to resources to which they have permission to access.  Azure AD not only provide these services to applications and services deployed in Azure but to services and applications also deployed outside Azure(such as on-premesis or third party cloud providers). Azure AD service is also utlized by SaaS application such as office 365 and azure marketplace applications. Organization already using on-premesis active directory can leverage their existing infrastructure and can extend authentication to the cloud by integrating AD with Azure AD.  Each Azure AD has one or more domains. A directory can have many subscriptions associated with it, but only one tenant. 
+- If multiple Azure AD tenants are used, ensure the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
-It is very important that we asked basic security question in design phase of Azure AD such how organization is managing credential, control of human and application access and how to control programatic access. 
+- Setup Enterprise Dev/Test/prod environments at an EA account level to support holistic isolation.
 
- 
+- Do not ignore notification emails sent to the notification account email address. Microsoft sends important EA wide communications to this account.
 
-***Design Considerations***
+- Do not move or rename an EA account in Azure AD.
 
--   Multiple tenants can be leveraged under the same enterprise enrollment.
+- Periodically audit EA portal to review who has access and avoid using msa account where possible.
 
-***Design Recommendations***
+## 2. Define Azure AD tenants
 
--   Leverage Azure AD SSO based on the selected [planning topology](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-topologies).
+Azure AD tenant provide identity and access management which is an important part of security posture ensuring that only authenticated and authorized user have access to resources to which they have permission to access. Azure AD not only provide these services to applications and services deployed in Azure but to services and applications also deployed outside Azure (such as on-premises or third-party cloud providers). Azure AD service is also utilized by SaaS application such as Microsoft 365 and Azure Marketplace applications. Organization already using on-premises Active Directory can use their existing infrastructure and can extend authentication to the cloud by integrating ad with Azure AD. Each Azure AD has one or more domains. A directory can have many subscriptions associated with it, but only one Azure AD tenant.
 
--   Enforce [MFA](https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks) and  [conditional access policies](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview)  for all privileged accounts.
+It is very important that we asked basic security question in design phase of Azure AD such how organization is managing credential, control of human and application access and how to control programatic access.
 
--   Plan for [emergency access](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
+**Design considerations:**
 
--   Use Azure AD [priviledged identity management](https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure) for Identity and access management.
+- Multiple tenants can be leveraged under the same enterprise enrollment.
 
--   If Dev/Test/Prod are going to be completely isolated environments from an identity perspective, separate them at a tenant level (i.e. use multiple tenants).
+**Design recommendations:**
 
-<!-- -->
+- Use Azure AD SSO based on the selected [planning topology](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies).
 
--   Avoid creating a new Azure AD tenant unless there is a strong IAM justification and processes are already in-place.
+- In case organisation does not have existing identity infrastructure, then it is recommended to start by implementing Azure AD only identity deployment. Such deployment with [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/) and [enterprise mobility suite](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) provide end to end protection for SaaS and enterprise application as well as devices.
 
+- Multi-factor authentication provides a second barrier of authentication adding another layer of security. It is recommended to enforce [multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and  [conditional access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) for all privileged accounts to make it more secure. Multi-factor authentication does provide another barrier of authentication but does not stop phishing or social engineering such as hacker taking physical possession of your phone or sim swapping or cloning. It is recommended that multi-factor authentication should be implemented with device management policy(such as strong pin locking and encryption and erasing device remotely when its lost). Out of band multi-factor authentication (such as biometric) is also considered a secure form of multi-factor authentication.
+
+- Plan and implement for [emergency access](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
+
+- Use Azure AD [priviledged identity management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) for identity and access management.
+
+- If dev/test/prod are going to be completely isolated environments from an identity perspective, separate them at a tenant level (I.e. Use multiple tenants).
+
+- Avoid creating a new Azure AD tenant unless there is a strong IAM justification and processes are already in-place.
