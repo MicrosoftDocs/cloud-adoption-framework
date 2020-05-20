@@ -11,28 +11,27 @@ ms.date: 05/15/2020
 
 # Get started: Build a cloud operations team
 
-An operations team focuses on monitoring, repairing, and the remediation of issues related to traditional IT operations and assets. In the cloud, many of the capital costs and operations activities are transferred to the cloud provider, giving IT operations the opportunity to improve and provide significant additional value.
+An operations team focuses on monitoring, repairing, and remediating issues related to traditional IT operations and assets. In the cloud, many of the capital costs and operations activities are transferred to the cloud provider, giving IT operations the opportunity to improve and provide significant additional value.
 
 ![Get started building a cloud operations team](../../_images/get-started/operations-team-map.png)
 
-## Step 1: Determine if a cloud operations team is needed
+## Step 1: Determine whether a cloud operations team is needed
 
-Prior to releasing any workloads into production, an agreement must be reached on the accountability for delivery of [cloud operations functions](../../organize/cloud-governance.md). For some portfolios, operational responsibilities might remain in the DevOps and cloud adoption team. In other cases, a managed service provider with cloud operations experience might assume ongoing operational duties.
+Before you can release any workloads into production, an agreement must be reached on the accountability for delivery of [cloud operations functions](../../organize/cloud-governance.md). For some portfolios, operational responsibilities might rest with the DevOps and cloud adoption teams. In other cases, a managed service provider with cloud operations experience might assume ongoing operational duties.
 
-If there are no DevOps or service-provider operations agreements in place, it's safe to assume that someone within IT will need to commit to ongoing operational duties regarding the management of any production workloads.
+If no DevOps or service-provider operations agreements are in place, it's safe to assume that someone within IT will need to commit to ongoing operational duties regarding the management of production workloads.
 
 **Deliverables:**
 
-- Determine if you need a cloud operations team.
-- Document the decision and responsible individuals in the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) under the Org Alignment tab.
+- Determine whether you need a cloud operations team.
+- Document the decision and responsible individuals in the [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) by selecting the **Org Alignment** tab.
 
 **Guidance to support deliverable completion:**
 
-- The [cloud operations functions](../../organize/cloud-operations.md) might be spread across multiple individuals or teams already. You will have to decide if a cloud operations team is required. But some level of operations is always needed for production workloads.
-- If the company's long term cloud adoption strategy can be delivered from one landing zone in one cloud environment, then the amount of governance and operations efforts might be small enough to be delivered by one person or one team. That team is unlikely to be called cloud operations, as they will be serving many functions. Even for that team or person, the following guidance will help ensure the team is prepared to deliver on this important function of operations.
+- The [cloud operations functions](../../organize/cloud-operations.md) might be spread across multiple individuals or teams already. You need to decide whether a cloud operations team is required. But some level of operations is always needed for production workloads.
+- If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the governance and operations efforts might be small enough to be delivered by one person or one team. That team is unlikely to be called cloud operations, because it will serve many functions. For that individual or team, the following guidance can help ensure that it's prepared to deliver on this important function of operations.
 
 <!-- markdownlint-disable MD033 -->
-<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -40,37 +39,39 @@ If there are no DevOps or service-provider operations agreements in place, it's 
 
 ## Step 2: Align with other teams
 
-The operations team inherits operational responsibilities for all workloads in the production portfolio. Those responsibilities can vary between workloads, based on expectations and commitments made to the business. The architectural decisions made by migration and innovation focused cloud adoption teams also influence operational commitments that can be made. Before implementing any ongoing operations practices, it is important to align with other teams. The cloud operations team should meet with other teams identified in the RACI template to ensure alignment on critical topics such as security, cost, performance, governance, adoption, and deployment. Steps 4 and 5 can help facilitate the alignment.
+The cloud operations team inherits operational responsibilities for all workloads in the production portfolio. Those responsibilities can vary between workloads, based on expectations and the commitments the team has made to business stakeholders. The architectural decisions made by migration-focused and innovation-focused cloud adoption teams also influence the team's operational commitments. 
+
+Before the cloud operations team implements any ongoing operations practices, it's important for it to align with other teams. The team should meet with other teams that are identified in the RACI template to ensure alignment on critical topics, such as security, cost, performance, governance, adoption, and deployment. Steps 4 and 5 can help facilitate this alignment.
 
 **Deliverables:**
 
-- Discuss current state implementation and ongoing adoption plans with each team.
+- Discuss current-state implementation and ongoing adoption plans with each team.
 
 **Guidance to support deliverable completion:**
 
-- Review your company's [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) with members of the cloud strategy team to understand motivations, metrics, and strategy.
-- Review your company's [cloud adoption plan template](../../plan/template.md) with members of the cloud adoption team to understand timelines and prioritization.
-- Begin development of the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to understand the operational requirements and commitments that have been established with the business.
+- To understand team motivations, metrics, and strategy, review your company's [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) with members of the cloud strategy team.
+- To understand timelines and prioritization, review your company's [cloud adoption plan template](../../plan/template.md) with members of the cloud adoption team.
+- To understand the operational requirements and commitments that the team has established with the business, begin developing the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx).
 
 <!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
+| <li>  Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
 
-## Step 3: Establish cadence with other teams
+## Step 3: Establish a cadence with other teams
 
-Cloud adoption generally comes in waves or releases. A regular cadence aligned to those releases will allow the cloud operations team to prepare for handoffs to be made at the end of the next wave. Staying engaged with the strategy, adoption, and governance teams during planning and review helps the operations team stay ahead of the coming operational demands.
+Cloud adoption generally comes in waves, or releases. A regular cadence that's aligned with those releases lets the cloud operations team prepare for the handoffs at the end of the next wave. Staying engaged with the strategy, adoption, and governance teams during planning and review helps the operations team stay ahead of the coming operational demands.
 
 **Deliverables:**
 
-- Establish a cadence with each of the supporting teams. If possible, align that cadence to release and planning cycles.
-- Establish a separate cadence directly with the cloud strategy team (or various team members) to review operational requirements associated with the next wave of adoption.
+- Establish a cadence with each of the supporting teams. If possible, align that cadence with release and planning cycles.
+- Establish a separate cadence directly with the cloud strategy team or its various team members to review any operational requirements that are associated with the next wave of adoption.
 
 **Guidance to support deliverable completion:**
 
-- See the [cloud operations functions](../../organize/cloud-operations.md#deliverables) for additional guidance on meeting cadences.
+- For additional guidance on cadences for meetings, see the "Deliverables" section of [Cloud operations functions](../../organize/cloud-operations.md#deliverables).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -81,7 +82,7 @@ Cloud adoption generally comes in waves or releases. A regular cadence aligned t
 
 ## Step 4: Review the methodology
 
-Review the Cloud Adoption Framework's Manage methodology to aid in establishing a future vision for operations management and a working approach to get to that vision.
+To help establish a future vision for operations management and a working approach to achieve that vision, review the Manage methodology in the Cloud Adoption Framework.
 
 **Deliverables:**
 
@@ -89,7 +90,7 @@ Review the Cloud Adoption Framework's Manage methodology to aid in establishing 
 
 **Guidance to support deliverable completion:**
 
-- Review the [Manage methodology](../../manage/index.md).
+- Review the [Manage methodology in the Cloud Adoption Framework](../../manage/index.md).
 
 **Accountable team:**
 
@@ -97,11 +98,11 @@ Review the Cloud Adoption Framework's Manage methodology to aid in establishing 
 
 ## Step 5: Implement the operations baseline
 
-If there are no operations practices deployed to your cloud environments, start with the operations baseline. That baseline will implement cloud-native, no-ops/low-ops practices to provide a base level of operational protection.
+If operations practices aren't already deployed to your cloud environments, start with the operations baseline. That baseline will implement cloud-native, no-ops/low-ops practices to provide a base level of operational protection.
 
 **Deliverables:**
 
-- Deploy the basic Azure server management configurations required to operate the environment during the next few waves of adoption efforts.
+- Deploy the basic Azure server-management configurations that are required for operating the environment during the next few waves of adoption efforts.
 
 **Guidance to support deliverable completion:**
 
@@ -109,16 +110,16 @@ If there are no operations practices deployed to your cloud environments, start 
 
 **Accountable team:**
 
-- The cloud operations team is accountable for the operations baseline.
+- The cloud operations team is accountable for implementing the operations baseline.
 
 ## Step 6: Align business commitments
 
-Review the operations baseline commitments with the business. This baseline helps you evaluate the general requirements for the majority of workloads. The process also helps identify business stakeholders for various workloads and enables you to document their ongoing operational expectations.
+Review the team's operations baseline commitments with the business stakeholders. This baseline helps you evaluate the general requirements for the majority of workloads. The process also helps you identify the stakeholders for various workloads and enables you to document their ongoing operational expectations.
 
 **Deliverables:**
 
-- Document business expectations.
-- Determine if advanced operations are required for specific workloads or platforms.
+- Document the expectations of business stakeholders.
+- Determine whether advanced operations are required for specific workloads or platforms.
 
 **Guidance to support deliverable completion:**
 
@@ -127,25 +128,25 @@ Review the operations baseline commitments with the business. This baseline help
 
 **Accountable team:**
 
-- The cloud operations team should understand the business expectations and is accountable for ongoing operational alignment with those expectations.
+- The cloud operations team should understand the business expectations, and it's accountable for ongoing alignment with those expectations.
 
 ## Step 7: Operations maturity
 
-Operational improvements can result in a few options:
+By continually making operational improvements, the team can:
 
 - Enhance the operations baseline.
 - Improve platform operations.
-- Implement workload specific operations.
+- Implement workload-specific operations.
 
 As additional workloads are transitioned to cloud operations, the need for operations improvements become clearer.
 
 **Deliverables:**
 
-- Improve operations maturity to support business commitments.
+- Improve operations maturity to support commitments to business stakeholders.
 
 **Guidance to support deliverable completion:**
 
-- Evaluate the best option for [advanced operations management](../../manage/design-principles.md).
+- Evaluate the best options for [advanced operations management](../../manage/design-principles.md).
 
 **Accountable team:**
 
@@ -153,18 +154,17 @@ As additional workloads are transitioned to cloud operations, the need for opera
 
 ## Step 8: Scale operations consistency through governance
 
-As operations mature, coordinate with the cloud governance team regularly to apply operations requirements across the portfolio.
+As operations planning continues to mature, the team should coordinate with the cloud governance team regularly to apply operations requirements across the portfolio.
 
 **Deliverables:**
 
-- Help the cloud governance team implement new resource consistency requirements.
+- Help the cloud governance team implement new requirements for resource consistency.
 
 **Guidance to support deliverable completion:**
 
-- Example of a [resource consistency improvement with governance enforcement](../../govern/guides/complex/resource-consistency-improvement.md).
+- Review the [Governance guide for improving resource consistency](../../govern/guides/complex/resource-consistency-improvement.md).
 
 <!-- markdownlint-disable MD033 -->
-<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -172,7 +172,7 @@ As operations mature, coordinate with the cloud governance team regularly to app
 
 ## Step 9: Adoption handoffs
 
-As new adoption efforts are completed, the cloud adoption team will hand off operational responsibilities to the cloud operations team and cloud governance teams. Stay aligned with adoption releases to ensure proper documentation and policy alignment to assume responsibility for the workloads.
+As new adoption efforts are completed, the cloud adoption team hands off operational responsibilities to the cloud operations and cloud governance teams. To ensure proper documentation and policy alignment, and to assume responsibility for the workloads, the team should stay aligned with adoption releases.
 
 **Deliverables:**
 
@@ -183,7 +183,6 @@ As new adoption efforts are completed, the cloud adoption team will hand off ope
 - Establish a process for [onboarding new workloads and resources](https://docs.microsoft.com/azure/azure-resource-manager/custom-providers/concepts-resource-onboarding).
 
 <!-- markdownlint-disable MD033 -->
-<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -191,11 +190,11 @@ As new adoption efforts are completed, the cloud adoption team will hand off ope
 
 ## What's next
 
-As adoption and operations scale, it's important to define and automate governance best practices that extend existing IT requirements. Forming a cloud center of excellence (CCoE) team is an important step to scaling cloud adoption, cloud operations, and cloud governance efforts.
+As adoption and operations scale, it's important to define and automate governance best practices that extend existing IT requirements. Forming a cloud center of excellence (CCoE) team is an important step toward scaling cloud adoption, cloud operations, and cloud governance efforts.
 
 Learn more about:
 
 - [Cloud center of excellence functions](../../organize/cloud-center-of-excellence.md)
 - [Organizational antipatterns: Silos and fiefdoms](../../organize/fiefdoms-silos.md)
 
-Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+Learn how to align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
