@@ -15,12 +15,6 @@ ms.subservice: ready
 
 Infrastructure as code is a common requirement for most cloud adoption efforts. The shift to code-first environment creation can add a learning curve for team members and require changes to aspects of operations, security, governance, and compliance. Deployment of discrete purpose-built landing zones helps to flatten those curves and let the team stay on track with adoption plans. This article will define the term _landing zone_ and other related terms. Other articles in this series will guide the creation of landing zones.
 
-<!-- markdownlint-disable MD034 -->
-
-> [!VIDEO https://vimeo.com/418630640/2f3d55548b]
-
-<!-- markdownlint-enable MD034 -->
-
 ## Prerequisite to landing zone deployment
 
 Before defining landing zones, it's important to understand a related term: _platform foundation_. In any environment (cloud, on-premises, or hybrid), you will find a collection of _foundation utilities_ that supports all of the various workloads. The business needs the workloads to operate. IT needs those foundational utilities to manage, govern, and secure the full _portfolio_ of workloads. For more information on these related terms and how they fit together, see [Portfolio hierarchy](../../reference/fundamental-concepts/hosting-hierarchy.md).
