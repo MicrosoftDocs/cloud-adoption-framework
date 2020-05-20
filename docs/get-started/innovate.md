@@ -3,7 +3,7 @@ title: "Get started: Build new products and services in the cloud"
 description: Learn about the Innovate methodology as an approach to guide the development of new cloud products and services.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview

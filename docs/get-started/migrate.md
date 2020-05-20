@@ -3,7 +3,7 @@ title: "Get started: Accelerate migration"
 description: Recommended steps for stakeholder alignment, migration planning, deploying a landing zone, and migrating your first 10 workloads.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -207,8 +207,7 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 
 - Deploy an initial governance foundation.
 - Complete a governance benchmark to plan for future improvements.
-- Timeline risk:
-    - Improvement policies and governance implementation can add one to four weeks per discipline.
+- Timeline risk: improvement policies and governance implementation can add one to four weeks per discipline.
 
 <!-- markdownlint-disable MD033 -->
 <br>

@@ -79,7 +79,25 @@ function Get-MyInvalidTermExpressions {
         'For more,'
         'For more (?=details|about|on)'
 
+        'NorthStar!!enterprise-scale'
+        'North Star!!enterprise-scale'
+        'enterprise scale architecture!!enterprise-scale architecture'
+
+        'leverage!!use'
+        'leverages!!uses'
+        'leveraging!!using'
+        'artefact!!artifact'
+        'artefacts!!artefacts'
+        'maximise!!maximize'
+        'minimize!!minimize'
+        'neighbour!!neighbor'
+        'organisation!!organization'
+        'organisations!!organizations'
+        'organisational!!organizational'
         'sumary!!summary'
+        'prereqs!!prerequisites'
         'recomendations!!recommendations'
+        'subsciption!!subscription'
+        'subsciptions!!subscriptions'
     )
 }

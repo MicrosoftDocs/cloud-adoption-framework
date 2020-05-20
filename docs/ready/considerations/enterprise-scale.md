@@ -3,7 +3,7 @@ title: Start with enterprise-scale landing zones
 description: Start with enterprise-scale landing zones
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -54,9 +54,9 @@ Microsoft has a long history of investing in tools and approaches to make it eas
 
 Each of the following templates provides customers with an enterprise-scale initial landing zone including infrastructure patterns:
 
-- [ISO 27001 Shared Services](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-shared)
+- [ISO 27001 shared services](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-shared)
 - [ISO 27001 App Service Environment/SQL Database workload](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-ase-sql-workload)
-- [UK Official and UK NHS Governance](https://docs.microsoft.com/azure/governance/blueprints/samples/ukofficial)
+- [UK OFFICIAL and UK NHS governance](https://docs.microsoft.com/azure/governance/blueprints/samples/ukofficial)
 
 The additional samples in the [Azure blueprint samples article](https://docs.microsoft.com/azure/governance/blueprints/samples) can be used as a "red/green" test for enterprise-scale landing zones. Applying these blueprints would ensure an environment meets compliance standards prior to adoption. This later approach especially useful as a way to validate third-party or partner landing zones before adopting the cloud:
 

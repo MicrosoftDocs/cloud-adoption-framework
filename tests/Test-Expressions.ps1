@@ -34,7 +34,9 @@ function Get-IgnoredCasingExpressions
         'HTTP'
         'HTTPS'
         'IT'
+        'JSON'
         'machine learning'
+        'PR'
         'US'
         '<endoflist>'
     )
@@ -60,11 +62,11 @@ function Get-MalformedLinkExpressions
             "ms\.portal"                                       # Don't use internal "ms." prefix
             "toc=[^/]"                                         # Use a relative reference for a contextual TOC.
             "toc=/azure/(?!cloud-adoption-framework)"           # Currently, no expected contextual TOCs other than AAC and CAF.
-            # "href: https://docs\.microsoft\.com/(?!cloud-adoption-framework/|learn/|/assessments).*[^n]$"   # TODO: Use TOC redirects for other Docs content
+            # "href: https://docs.microsoft.com/(?!cloud-adoption-framework/|learn/|/assessments).*[^n]$"   # TODO: Use TOC redirects for other Docs content
             "(?i)http://[a-z]*\.microsoft\.com"                      # Use HTTPS for all Microsoft URLs.
             "href: /"
             "href: https://(?!docs\.microsoft\.com/).*toc="       # Don't use a contextual TOC for non-Docs content
-            "href: https://docs\.microsoft\.com/learn/.*toc="   # Don't use a contextual TOC for Learn content
+            "href: https://docs.microsoft.com/learn/.*toc="   # Don't use a contextual TOC for Learn content
             "app.pluralsight.com"                              # Use www.pluralsight.com/courses/...
             "www.pluralsight.com/library"                     # Ibid
             # "``` ?[A-Z]"
@@ -123,6 +125,8 @@ function Get-InvalidFormattingExpressions
     try { $myList = Get-MyInvalidFormattingExpressions } catch { }
 
     $list = [List[string]] @(
+        
+        '\u00A0!! '                         # Fix unicode spaces
         '\u202F!! '                         # Fix unicode spaces
         '[\u2018\u2019]!!'''                # Fix unicode quotes
         '\u201c!!"'                         # Fix unicode quotes

@@ -11,11 +11,11 @@ metadata:
   title: "Microsoft Cloud Adoption Framework for Azure"
   description: "The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that accelerate your cloud adoption journey."
   ms.service: cloud-adoption-framework
-  ms.topic: landing-page
+  ms.topic: hub-page
   services: cloud-adoption-framework
   author: JanetCThomas
   ms.author: janet
-  ms.date: 04/20/2020
+  ms.date: 05/15/2020
 
 # cSpell:ignore caf
 

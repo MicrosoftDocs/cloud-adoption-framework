@@ -3,7 +3,7 @@ title: "Get started: Unblock environment design and configuration"
 description: Get started designing and configuring your cloud environment.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview

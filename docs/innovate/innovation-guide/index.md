@@ -44,7 +44,9 @@ In this guide, you'll learn how to:
 > [!TIP]
 > For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Azure innovation guide**, and then follow the step-by-step instructions.
 
-Next steps: [Prepare for innovation with a shared repository and ideation management tools](./adoption.md)
+**Next steps:**
+
+- [Prepare for innovation with a shared repository and ideation management tools](./adoption.md)
 
 ::: zone-end
 

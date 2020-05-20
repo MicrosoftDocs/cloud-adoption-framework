@@ -3,7 +3,7 @@ title: "Costing and sizing Azure resources"
 description: Use the Cloud Adoption Framework for Azure to learn best practices for costing and sizing resources in Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

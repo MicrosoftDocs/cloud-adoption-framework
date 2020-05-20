@@ -242,7 +242,7 @@ This information can be viewed and acted on at multiple levels and are continual
 
 - **Azure Advisor:** Azure Advisor constantly monitors telemetry across your subscriptions and environments. It also recommends best practices for cost-optimizing your Azure resources and improving the performance, security, and availability of your application resources.
 
-- **Service Health:** Azure Service Health identifies any issues with Azure Services that may affect your applications as well as assists you in planning for scheduled maintenance windows.
+- **Azure Service Health:** Azure Service Health identifies any issues with Azure Services that may affect your applications as well as assists you in planning for scheduled maintenance windows.
 
 - **Activity log:** The activity log describes all operations on resources in your subscriptions. It provides an audit trail to determine the _what_, _who_, and _when_ of any create, update, delete operation on resources. Activity log events are stored in the platform and are available to query for 90 days. You can ingest activity logs into Log Analytics for longer retention periods and deeper querying and analysis across multiple resources.
 

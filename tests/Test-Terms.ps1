@@ -34,7 +34,7 @@ function Get-CasingExpressions
         'Application Insights'
         'ARM'
         'ASE'
-        'ASG'
+        'ASGs?'
         'Asia'
         'Asia Pacific'
         'Asian'
@@ -126,6 +126,7 @@ function Get-CasingExpressions
             'Key Vault'
             'a key vault'
             'the key vault'
+        'Azure Kinect DK'
         'Azure Kubernetes Service'
         'Azure Lighthouse'
         'Azure Load Balancer'
@@ -155,6 +156,7 @@ function Get-CasingExpressions
         'Azure Sentinel'
         'Azure Serverless Computing Cookbook'
         'Azure Service Health'
+            'Service Health alerts'
         'Azure Service Map'
         'Azure Site Recovery'
         'Azure Spatial Anchors'
@@ -162,6 +164,7 @@ function Get-CasingExpressions
         'Azure Spring Cloud'
         'Azure SQL Data Warehouse'
         '(Azure )?SQL Database'
+        'Azure SQL Edge'
         'Azure Stack( Development Kit)?'
         'Azure Storage'
             'Blob storage'
@@ -195,6 +198,7 @@ function Get-CasingExpressions
         'CI/CD'
             'CD'
             'CI'
+        'CIDR'
         'CIOs?'
         'CISOs?'
         'CLI'
@@ -230,7 +234,7 @@ function Get-CasingExpressions
         'DCs?'
         'DDoS'
         'Dell'
-        'DeployIfNotExist'
+        'DeployIfNotExists'                 # TODO: Add https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects
         'Desired State Configuration'
         'DevOps'
         'DevSecOps'
@@ -290,6 +294,7 @@ function Get-CasingExpressions
         'Hewlett-Packard'
         'HIPAA'
         'HP'
+        'HQs?'
         'HSMs?'
         'HTTP/S'
         'HoloLens'
@@ -337,7 +342,6 @@ function Get-CasingExpressions
         'Kafka'
         'KB'
         'Kbps'
-        'Kinect DK'
         'Korea'
         'KPIs?'
         'Kubernetes'
@@ -457,7 +461,7 @@ function Get-CasingExpressions
         'REST client'
         'RESTful'
         'RESTful APIs?'
-        'RFC'
+        'RFCs?'
         'ROI'
         'RPOs?'
         'RSS'
@@ -483,6 +487,7 @@ function Get-CasingExpressions
         'Service Provider Foundation'
         'SGX'
         'SharePoint'
+        'SIEM'
         'Site Recovery( Mobility)?'
             'the Mobility service'
         'Six Sigma'
@@ -770,7 +775,7 @@ function Get-InvalidTermExpressions {
         "multi-(?!factor|model|shard)!!multi"
         'multi-cloud!!multicloud'
         "no ops!!no-ops"
-        "non-(?!business|cloud|DR|EA|mission|IaaS|internet|PaaS|production-ready)!!non"
+# TODO: Revisit.        "non-(?!business|cloud|DR|EA|mission|IaaS|internet|PaaS)!!non"
         "northstar!!~~DO NOT USE"
         "off-site!!offsite"
         "on-board(?:ed|ing)?!!onboard"
@@ -791,6 +796,7 @@ function Get-InvalidTermExpressions {
         're-(?!create|created|creating)!!~~Don''t hyphenate'
         'role-based access controls!!role-based access control'
         'SecDevOps!!DevSecOps'
+        'SEIM!!SIEM'
         'seperate!!separate'
         'seperation!!separation'
         "separation of duty!!separation of duties"
