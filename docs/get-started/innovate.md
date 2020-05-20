@@ -3,7 +3,7 @@ title: "Get started: Build new products and services in the cloud"
 description: Learn about the Innovate methodology as an approach to guide the development of new cloud products and services.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -143,14 +143,14 @@ Define the plan for long-term operational responsibilities regarding the planned
 
 **Deliverables:**
 
-- Complete the [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
+- Complete the [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) to assess various architecture and operation decisions.
 - Adjust the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to reflect any required advanced operations.
 
 **Guidance to support deliverable completion:**
 
 - [Expand the management baseline](../manage/best-practices.md): This section of the Cloud Adoption Framework guides you through various transitions into operational management in the cloud.
 - [Get specific with advanced operations](../manage/design-principles.md): Discover ways to go beyond your management baseline.
-- If advanced operations are required to support your operations needs, evaluate the [business commitments](https://docs.microsoft.com/manage/considerations/business-alignment) to determine operational responsibilities for both teams.
+- If advanced operations are required to support your operations needs, evaluate the [business commitments](../manage/considerations/business-alignment.md) to determine operational responsibilities for both teams.
 
 <!-- markdownlint-disable MD033 -->
 <br>

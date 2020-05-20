@@ -7,10 +7,13 @@ $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 # $exp = '(?:\b[a-z]+ )((?:[A-Z][A-Za-z]+\b ?){2})(?![A-Z])'
 # $exp = '((?:\b[A-Z][A-Za-z]+\b.){2,}|(?:\b[A-Z]{2,}\b))'
-$exp = '(?<!-)\b([A-Z][A-Z0-9]{2,}(?:[_-][A-Z][A-Z0-9]{2,})+)\b(?!-)'
+#$exp = '(?<!-)\b([A-Z][A-Z0-9]{2,}(?:[_-][A-Z][A-Z0-9]{2,})+)\b(?!-)'
+$exp = '(?<=Unknown word \()(.*?)(?=\))'
 $distinct = [System.Collections.Generic.HashSet[string]]::new()
 
 $files = Get-ContentFiles @()
+#$files = @( (Get-Item ".\WORDS.txt") )
+
 foreach ($file in $files)
 {
     Write-Host $file.FullName

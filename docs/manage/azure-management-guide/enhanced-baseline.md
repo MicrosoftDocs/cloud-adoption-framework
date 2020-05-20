@@ -73,7 +73,7 @@ The basic unit of code for delivering automated remediation is a runbook. Runboo
 
 To create or manage runbooks:
 
-1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts).
+1. Go to **Azure Automation**.
 1. Select **Automation accounts** and choose one of the listed accounts.
 1. Go to **Process automation**.
 1. With the options presented, you can create or manage runbooks, schedules, and other automated remediation functionality.
@@ -82,7 +82,7 @@ To create or manage runbooks:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Assign Policy" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Go to Azure Automation" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

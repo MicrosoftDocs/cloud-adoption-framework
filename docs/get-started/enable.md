@@ -3,7 +3,7 @@ title: Enable customer success with a sound operating model
 description: Use the free, self-service Cloud Adoption Framework and other tools to help you make cloud adoption decisions that enable customer success.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -40,9 +40,9 @@ The core principles of a well-managed operating model are based on a set of comm
 
 ![Shared architecture principles](../_images/shared-principles.png)
 
-The above principles are shared across [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview), [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework), and solutions in the [Azure Architecture Center](https://docs.microsoft.com/azure/architecture).
+The above principles are shared across [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview), [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework), and solutions in the [Azure Architecture Center](https://docs.microsoft.com/azure/architecture).
 
 - [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) evaluates the principles for individual assets across solutions, workloads, and the full portfolio.
 - [Azure Architecture Center](https://docs.microsoft.com/azure/architecture) applies these principles to develop and manage specific technical solutions.
-- [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework) helps balance these principles across a workload, to guide architecture decisions.
+- [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) helps balance these principles across a workload, to guide architecture decisions.
 - [Cloud Adoption Framework](../index.yml) ensures the principles scale across the portfolio to enable adoption teams through a well-managed environment.

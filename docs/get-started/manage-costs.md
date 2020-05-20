@@ -3,7 +3,7 @@ title: "Get started: Manage cloud costs"
 description: Learn the basics of managing costs associated with cloud adoption.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -36,7 +36,7 @@ These deliverables are the result of a few recurring tasks:
   - Delete or deallocate stopped VMs.
   - Ensure proper resource sizing.
   - Align spending to budget expectations.
-- Validate any architectural change by using the Azure Architecture Review to facilitate a conversation with technical owners of the workloads.
+- Validate any architectural change by using the Microsoft Azure Well-Architected Review to facilitate a conversation with technical owners of the workloads.
 
 **Guidance to support deliverable completion:**
 
@@ -49,9 +49,9 @@ These deliverables are the result of a few recurring tasks:
   - [Monitor resource utilization](../govern/cost-management/best-practices.md#best-practice-monitor-resource-utilization) to minimize impacts on resource performance.
   - [Reduce nonproduction costs](../govern/cost-management/best-practices.md#best-practice-reduce-nonproduction-costs) through policies to govern nonproduction environments.
   - Act on [cost optimization recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
-- You might need to make trade-offs at the workload level to implement effective cost optimization changes. The [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
+- You might need to make trade-offs at the workload level to implement effective cost optimization changes. The [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) by using the Govern methodology.
-- If you're new to the discipline of cost management, consider following the [article about cost management improvements](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
+- If you're new to the Cost Management discipline, consider following the [article about cost management improvements](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -171,8 +171,8 @@ Innovation and development of new products require a much deeper degree of archi
 
 **Guidance to support deliverable completion:**
 
-- Use the [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) to understand the balance in architecture decisions.
-- Review the [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework) for deeper guidance on cost optimization during innovation.
+- Use the [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) to understand the balance in architecture decisions.
+- Review the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) for deeper guidance on cost optimization during innovation.
 
 <!-- markdownlint-disable MD033 -->
 <br>

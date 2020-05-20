@@ -6,7 +6,7 @@ ms.author: mas
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.topic: conceptual
-ms.date: 04/30/2020
+ms.date: 05/15/2020
 ---
 
 <!-- cSpell:ignore MarkSimos -->

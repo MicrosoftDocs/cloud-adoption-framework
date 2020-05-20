@@ -3,7 +3,7 @@ title: "Get started: Ensure consistent performance across a portfolio"
 description: Learn the basics of managing performance across a portfolio, including establishing processes for maintaining performance, setting performance expectations, and creating alignment across your organization.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -30,7 +30,7 @@ The operations management baseline, outlined in the Cloud Adoption Framework, pr
 **Guidance to support deliverable completion:**
 
 - The [enhanced management baseline](../manage/azure-management-guide/enhanced-baseline.md) article outlines examples of using tools like Azure Automation to add performance related enhancements. This approach can aid in maintaining consistent performance through basic modifications to size and scale of supporting assets.
-- [Workload-specific operations](../manage/azure-management-guide/platform-specialization.md) uses the Azure Architecture Review to provide guidance on automation for a specific workload. This approach to performance management is particularly useful when operational actions should be driven by workload specific data.
+- [Workload-specific operations](../manage/azure-management-guide/platform-specialization.md) uses the Microsoft Azure Well-Architected Review to provide guidance on automation for a specific workload. This approach to performance management is particularly useful when operational actions should be driven by workload specific data.
 - The above guidance assumes there is an existing implementation of a [management baseline](../manage/considerations/discipline.md) to support the full portfolio of workloads.
 
 > [!NOTE]

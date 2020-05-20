@@ -3,7 +3,7 @@ title: "Get started: Unblock environment design and configuration"
 description: Get started designing and configuring your cloud environment.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -153,10 +153,10 @@ As those plans are made, they feed back into the parallel efforts of the cloud p
 
 - Deploy a management baseline.
 - Complete the operations management workbook.
-- Identify any workloads that require an Azure Architecture Review assessment.
+- Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
   - Review the workbook: one hour per application owner.
-  - Complete the Azure Architecture Review assessment: one hour per application.
+  - Complete the Microsoft Azure Well-Architected Review assessment: one hour per application.
 
 **Guidance to support deliverable completion:**
 

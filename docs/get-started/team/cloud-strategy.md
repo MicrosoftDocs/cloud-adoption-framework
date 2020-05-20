@@ -6,7 +6,7 @@ ms.author: janet
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud strategy team
@@ -178,7 +178,6 @@ Once a go forward strategy decision has been agreed upon with the cloud strategy
 
 - [Incremental rationalization](../../digital-estate/rationalize.md): An agile approach to rationalization that properly aligns late-bound technical decisions.
 - [The five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
-
 
 <!-- markdownlint-disable MD033 -->
 <br>

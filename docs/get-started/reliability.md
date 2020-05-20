@@ -3,7 +3,7 @@ title: "Get started: Improve reliability with the right controls"
 description: Learn the basics of improving reliability through governance controls and a management baseline.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -39,7 +39,7 @@ All workloads are not created equal. In any environment, there are workloads tha
 
 - **[Advanced operations](../manage/design-principles.md):** Use the management baseline as the foundation for [business alignment](../manage/considerations/business-alignment.md) conversations to create clarity regarding [criticality](../manage/considerations/criticality.md), [business impact](../manage/considerations/impact.md), and [operations commitments](../manage/considerations/commitment.md). Business alignment helps quantify and validate requests for an [enhanced baseline](../manage/azure-management-guide/enhanced-baseline.md), management of specific [technology platforms](../manage/azure-management-guide/workload-specialization.md), or [workload-specific operations](../manage/azure-management-guide/platform-specialization.md).
 
-- **Guide an architecture review:** Architecture changes at the workload level might be required to meet operations requirements. The [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework/cost/tradeoffs) and [Azure Architecture Review](https://docs.microsoft.com/assessments?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
+- **Guide an architecture review:** Architecture changes at the workload level might be required to meet operations requirements. The [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/cost/tradeoffs) and [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
 
 <!-- markdownlint-disable MD033 -->
 <br>

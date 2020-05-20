@@ -34,7 +34,7 @@ function Get-CasingExpressions
         'Application Insights'
         'ARM'
         'ASE'
-        'ASG'
+        'ASGs?'
         'Asia'
         'Asia Pacific'
         'Asian'
@@ -43,6 +43,8 @@ function Get-CasingExpressions
             'a .NET app'
             'NET Framework'
         'AWS'
+        'AWS Cost and Usage report'
+        'AWS Cost and Usage reports'
         'az'
         'Azure'
         'Azure AD'
@@ -114,6 +116,7 @@ function Get-CasingExpressions
         'Azure Front Door Service'
         'Azure function'
         'Azure Functions'
+        'Azure Graph'
         'Azure Hybrid Benefit'
         'Azure Import/Export'
         'Azure Information Protection'
@@ -123,6 +126,7 @@ function Get-CasingExpressions
             'Key Vault'
             'a key vault'
             'the key vault'
+        'Azure Kinect DK'
         'Azure Kubernetes Service'
         'Azure Lighthouse'
         'Azure Load Balancer'
@@ -140,6 +144,7 @@ function Get-CasingExpressions
         'Azure Policy'
         'Azure Private DNS'
         'Azure Private Link'
+        'Azure Quickstart Center'
         'Azure Repos'
         'Azure Reservations'
         'Azure Reserved VM Instances'
@@ -150,6 +155,8 @@ function Get-CasingExpressions
         '(Azure )?Security Center'
         'Azure Sentinel'
         'Azure Serverless Computing Cookbook'
+        'Azure Service Health'
+            'Service Health alerts'
         'Azure Service Map'
         'Azure Site Recovery'
         'Azure Spatial Anchors'
@@ -157,6 +164,7 @@ function Get-CasingExpressions
         'Azure Spring Cloud'
         'Azure SQL Data Warehouse'
         '(Azure )?SQL Database'
+        'Azure SQL Edge'
         'Azure Stack( Development Kit)?'
         'Azure Storage'
             'Blob storage'
@@ -190,6 +198,7 @@ function Get-CasingExpressions
         'CI/CD'
             'CD'
             'CI'
+        'CIDR'
         'CIOs?'
         'CISOs?'
         'CLI'
@@ -225,7 +234,7 @@ function Get-CasingExpressions
         'DCs?'
         'DDoS'
         'Dell'
-        'DeployIfNotExist'
+        'DeployIfNotExists'                 # TODO: Add https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects
         'Desired State Configuration'
         'DevOps'
         'DevSecOps'
@@ -285,6 +294,7 @@ function Get-CasingExpressions
         'Hewlett-Packard'
         'HIPAA'
         'HP'
+        'HQs?'
         'HSMs?'
         'HTTP/S'
         'HoloLens'
@@ -332,7 +342,6 @@ function Get-CasingExpressions
         'Kafka'
         'KB'
         'Kbps'
-        'Kinect DK'
         'Korea'
         'KPIs?'
         'Kubernetes'
@@ -452,9 +461,10 @@ function Get-CasingExpressions
         'REST client'
         'RESTful'
         'RESTful APIs?'
-        'RFC'
+        'RFCs?'
         'ROI'
         'RPOs?'
+        'RSS'
         'RTOs?'
         'RUs'
         'Ruby'
@@ -477,6 +487,7 @@ function Get-CasingExpressions
         'Service Provider Foundation'
         'SGX'
         'SharePoint'
+        'SIEM'
         'Site Recovery( Mobility)?'
             'the Mobility service'
         'Six Sigma'
@@ -532,6 +543,7 @@ function Get-CasingExpressions
         'UK NHS'
         'UK OFFICIAL'
         'ultra SSDs?'
+        'Unicode'
         'UnifyCloud'
         'United States( of America)?'
         'Unity'
@@ -749,20 +761,21 @@ function Get-InvalidTermExpressions {
         'hand[- ]offs!!handoffs'
         'i\.e\.,?!!in other words,'
         "impacted!!affected"
-            "(?:could |may |might |not )(impact)!!affect"
+            "(?:also |could |may |might |not )(impact)!!affect"
         "in case of"
         "infra!!infrastructure"
-        "infrastructure[^ ]as[^ ]a[^ ]service"
+        "infrastructure[^ ]as[^ ]a[^ ]service!!infrastructure as a service"
         'IO!!I/O'
         'life[ -]cycle!!lifecycle'
         'low ops!!low-ops'
+        '(?<!ear)ly-!!ly '
         "Maria.DB!!MariaDB"
         "MFA!!multi-factor authentication"
         "ML(?! services)!!machine learning"
         "multi-(?!factor|model|shard)!!multi"
         'multi-cloud!!multicloud'
         "no ops!!no-ops"
-        "non-(?!business|cloud|DR|EA|mission|IaaS|internet|PaaS|production-ready)!!non"
+# TODO: Revisit.        "non-(?!business|cloud|DR|EA|mission|IaaS|internet|PaaS)!!non"
         "northstar!!~~DO NOT USE"
         "off-site!!offsite"
         "on-board(?:ed|ing)?!!onboard"
@@ -783,6 +796,7 @@ function Get-InvalidTermExpressions {
         're-(?!create|created|creating)!!~~Don''t hyphenate'
         'role-based access controls!!role-based access control'
         'SecDevOps!!DevSecOps'
+        'SEIM!!SIEM'
         'seperate!!separate'
         'seperation!!separation'
         "separation of duty!!separation of duties"

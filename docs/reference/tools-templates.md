@@ -50,7 +50,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Governance process template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Governance%20Discipline%20Template.docx) | Define the basic set of governance processes used to enforce each governance discipline. |
 | [Cost management process template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Cost%20Management%20Discipline%20Template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on cost management. |
 | [Deployment acceleration process template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Deployment%20Acceleration%20Discipline%20Template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on deployment acceleration. |
-| [Identity process template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/identity%20baseline%20discipline%20template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on identity requirements. |
+| [Identity process template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Identity%20Baseline%20Discipline%20Template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on identity requirements. |
 | [Resource consistency process template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Resource%20Consistency%20Discipline%20Template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on resource consistency. |
 | [Security baseline process template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Security%20Baseline%20Discipline%20Template.docx) | Define the policy statements and design guidance that allow you to mature the cloud governance within your organization with a focus on security baseline. |
 
@@ -58,7 +58,7 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 
 | Resource | Description |
 |----------|-------------|
-| [Azure Architecture Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) | This online assessment will aid in defining workload specific architectures and operations options. |
+| [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) | This online assessment will aid in defining workload specific architectures and operations options. |
 | [Best&nbsp;practices&nbsp;source&nbsp;code](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/manage/Automation-Best-Practices) | This deployable source code complements and accelerates adoption of best practices for Azure server management services. Use this source code to quickly enable operations management and establish an operations baseline. |
 | [Operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) | Document decisions about operations management in the cloud, and facilitate conversations with the business to ensure alignment regarding SLAs, investment in resiliency, and budget allocation related to operations. |
 

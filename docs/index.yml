@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 
-# docsTest:ignore "https://aka.ms/adopt"
+# docsTest:ignore "YamlMime:Hub" "https://aka.ms/adopt"
 
 title: Microsoft Cloud Adoption Framework for Azure
 summary: The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption journey.
@@ -11,15 +11,16 @@ metadata:
   title: "Microsoft Cloud Adoption Framework for Azure"
   description: "The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that accelerate your cloud adoption journey."
   ms.service: cloud-adoption-framework
-  ms.topic: landing-page
+  ms.topic: hub-page
   services: cloud-adoption-framework
   author: JanetCThomas
   ms.author: janet
-  ms.date: 04/20/2020
+  ms.date: 05/15/2020
 
 # cSpell:ignore caf
 
 # highlightedContent section (optional)
+
 # Maximum of 8 items
 
 highlightedContent:
@@ -45,6 +46,7 @@ highlightedContent:
       url: ./get-started/whats-new.md
 
 # productDirectory section (optional)
+
 productDirectory:
   title: Cloud Adoption Framework guidance # < 60 chars (optional)
   summary: This guidance aligns to the phases of the cloud adoption lifecycle, ensuring easy access to the right guidance at the right time. # < 160 chars (optional)
@@ -159,6 +161,7 @@ productDirectory:
           text: Align responsibilities
 
 # tools section (optional)
+
 tools:
   title: Build your skills with Microsoft Learn
  # < 60 chars (optional)
@@ -179,8 +182,11 @@ tools:
       url: https://docs.microsoft.com/learn/paths/learn-business-value-of-azure
 
 # conceptualContent section (optional)
+
 conceptualContent:
+
 # itemType: architecture, concept, deploy, download, get-started, how-to-guide, learn, overview, quickstart, reference, sample, tutorial, video, whats-new
+
   title: Assessments # < 60 chars (optional)
   summary: Assessments help you plan your cloud journey. Use them to identify differences between your current state and your desired state. We'll provide personalized, curated recommendations to help you reach your desired state. # < 160 chars (optional)
   items:
@@ -191,7 +197,7 @@ conceptualContent:
           itemType: get-started
           text: Identify your cloud adoption path based on the needs of your business.
     # Card
-    - title: Strategic Migration Assessment and Readiness Tool (SMART)
+    - title: Strategic migration assessment and readiness tool (SMART)
       links:
         - url: https://docs.microsoft.com/assessments/?mode=pre-assessment&id=Strategic-Migration-Assessment
           itemType: get-started
@@ -203,14 +209,16 @@ conceptualContent:
           itemType: quickstart
           text: Identify gaps between your current state and business priorities, and get the right resources to help you address those gaps.
     # Card
-    - title: Azure Architecture Review
+    - title: Microsoft Azure Well-Architected Review
       links:
         - url: https://docs.microsoft.com/assessments/?mode=pre-assessment&id=azure-architecture-review
           itemType: architecture
           text: Examine how to go beyond your basic operations for priority workloads.
 
 # additionalContent section (optional)
+
 # Card with summary style
+
 additionalContent:
   # Supports up to 3 sections
   sections:
