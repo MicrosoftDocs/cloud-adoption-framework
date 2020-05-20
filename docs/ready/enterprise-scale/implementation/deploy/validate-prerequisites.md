@@ -1,6 +1,6 @@
 ---
-title: Validate prerequisites
-description: Validate prerequisites
+title: Xx
+description: XX
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
