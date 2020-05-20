@@ -199,6 +199,7 @@ function Get-CasingExpressions
         'CI/CD'
             'CD'
             'CI'
+        'CICS'
         'CIDR'
         'CIOs?'
         'CISOs?'
@@ -295,6 +296,7 @@ function Get-CasingExpressions
         'Hewlett-Packard'
         'HIPAA'
         'HP'
+        'HPE zRef'
         'HQs?'
         'HSMs?'
         'HTTP/S'
@@ -376,6 +378,7 @@ function Get-CasingExpressions
         'Microsoft Service Trust Portal'
         'Microsoft Trust Center'
         'Microsoft Word'
+        'MIPS'
         'ML Services'
         'MOF'
         'Monday'
@@ -815,6 +818,7 @@ function Get-InvalidTermExpressions {
         'such as, !!such as '
         '(teh|hte)!!the'
         "the best practices (?!defined|outlined|in|and|are)"
+        "they are!!they're"
         '(?<!by a )third party!!third-party'
         'time-?frame!!time frame'
         '(?<=under|over)[ -]utilization!!utilization'
@@ -829,6 +833,7 @@ function Get-InvalidTermExpressions {
         "w/!!with"
         "with title"
         "ye!!yes"
+        "you are!!you're"
 
         # TODO: Find a better option for flagging spelling variants.
         # "(?<!\benterpr|_\benterpr|\br|\badv|\blikew|\botherw|\bcompr|\bconc|\bunw|\bw|\bexerc|\bexpert|\bprem|\bon-prem|\bsurpr|\bno|\badvert|\brev|\bprom|\bcomprom|\bar|\bprec|\brev|\blikew\badv|\bra|\bdev|\brev|\bcru)ises?\b"

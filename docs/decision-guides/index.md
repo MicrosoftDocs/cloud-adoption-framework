@@ -14,7 +14,7 @@ ms.custom: governance
 
 The architectural decision guides in the Cloud Adoption Framework describe patterns and models that help when creating cloud governance design guidance. Each decision guide focuses on one core infrastructure component of cloud deployments and lists patterns and models that can support specific cloud deployment scenarios.
 
-When you begin to establish cloud governance for your organization, actionable governance journeys provide a baseline roadmap. However, these journeys make assumptions about requirements and priorities that might not reflect those of your organization.
+When you begin to establish cloud governance for your organization, actionable governance journeys provide a baseline roadmap. These journeys make assumptions about requirements and priorities that might not reflect those of your organization.
 
 These decision guides supplement the sample governance journeys by providing alternative patterns and models that help you align the architectural design choices made in the example design guidance with your own requirements.
 

@@ -29,11 +29,11 @@ Since then, some things have changed that will affect governance:
 - The migration team has begun migrating VMs out of the production datacenter.
 - The application development teams is actively pushing production applications to the cloud through CI/CD pipelines. Those applications can reactively scale with user demands.
 - The business intelligence team within IT has delivered several predictive analytics tools in the cloud. The volumes of data aggregated in the cloud continues to grow.
-- All of this growth supports committed business outcomes. However, costs have begun to mushroom. Projected budgets are growing faster than expected. The CFO needs improved approaches to managing costs.
+- All of this growth supports committed business outcomes. Costs have begun to balloon. Projected budgets are growing faster than expected. The CFO needs improved approaches to managing costs.
 
 ### Incrementally improve the future state
 
-Cost monitoring and reporting is to be added to the cloud solution. IT is still serving as a cost clearing house. This means that payment for cloud services continues to come from IT procurement. However, reporting should tie direct operating expenses to the functions that are consuming the cloud costs. This model is referred to as a _showback_ cloud accounting model.
+Cost monitoring and reporting is to be added to the cloud solution. IT is still serving as a cost clearing house. This means that payment for cloud services continues to come from IT procurement. Reporting should tie direct operating expenses to the functions that are consuming the cloud costs. This model is referred to as a _showback_ cloud accounting model.
 
 The changes to current and future state expose new risks that will require new policy statements.
 

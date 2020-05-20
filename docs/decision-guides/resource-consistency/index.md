@@ -35,7 +35,7 @@ Resource groups act as containers for resources with a common lifecycle as well 
 If you answered _no_ to any of the above points, the resource in question should be placed elsewhere, in another resource group.
 
 > [!IMPORTANT]
-> Resource groups are also region specific; however, it is common for resources to be in different regions within the same resource group because they are managed together as described above. For more information about region selection, see [Multiple regions](../../migrate/azure-best-practices/multiple-regions.md).
+> Resource groups are also region specific; however, it is common for resources to be in different regions within the same resource group because they're managed together as described above. For more information about region selection, see [Multiple regions](../../migrate/azure-best-practices/multiple-regions.md).
 
 ## Deployment consistency
 
@@ -59,7 +59,7 @@ For a more in-depth discussion of enforcing your policy decisions within a cloud
 
 ## Hierarchical consistency
 
-Resource groups allow you to support additional levels of hierarchy within your organization within the subscription, applying Azure Policy rules and access controls at a resource group level. However, as the size of your cloud estate grows, you may need to support more complicated cross-subscription governance requirements than can be supported using the Azure Enterprise Agreement's enterprise/department/account/subscription hierarchy.
+Resource groups allow you to support additional levels of hierarchy within your organization within the subscription, applying Azure Policy rules and access controls at a resource group level. As the size of your cloud estate grows, you may need to support more complicated cross-subscription governance requirements than can be supported using the Azure Enterprise Agreement's enterprise/department/account/subscription hierarchy.
 
 [Azure management groups](https://docs.microsoft.com/azure/governance/management-groups) allow you to organize subscriptions into more sophisticated organizational structures by grouping subscriptions in a hierarchy distinct from your Enterprise Agreement's hierarchy. This alternate hierarchy allows you to apply access control and policy enforcement mechanisms across multiple subscriptions and the resources they contain. Management group hierarchies can be used to match your cloud estate's subscriptions with operations or business governance requirements. For more information, see the [subscription decision guide](../subscriptions/index.md).
 
@@ -69,7 +69,7 @@ For large cloud deployments, global governance becomes both more important and m
 
 [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) enable organizations to support global governance of large cloud estates in Azure. Blueprints move beyond the capabilities provided by standard Azure Resource Manager templates to create complete deployment orchestrations capable of deploying resources and applying policy rules. Blueprints support versioning, the ability to update all subscriptions where the blueprint was used, and the ability to lock down deployed subscriptions to avoid the unauthorized creation and modification of resources.
 
-These deployment packages allow IT and development teams to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Blueprints can also be integrated into CI/CD pipelines to apply revised governance standards to deployments as they are updated.
+These deployment packages allow IT and development teams to rapidly deploy new workloads and networking assets that comply with changing organizational policy requirements. Blueprints can also be integrated into CI/CD pipelines to apply revised governance standards to deployments as they're updated.
 
 ## Next steps
 

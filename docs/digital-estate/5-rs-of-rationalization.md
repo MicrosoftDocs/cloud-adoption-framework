@@ -16,7 +16,7 @@ Cloud rationalization is the process of evaluating assets to determine the best 
 
 ## Rationalization context
 
-The "five Rs of rationalization" listed in this article are a great way to label a potential future state for any workload that's being considered as a cloud candidate. However, this labeling process should be put into the correct context before you attempt to rationalize an environment. Review the following myths to provide that context:
+The _five Rs of rationalization_ listed in this article are a great way to label a potential future state for any workload that's being considered as a cloud candidate. This labeling process should be put into the correct context before you attempt to rationalize an environment. Review the following myths to provide that context:
 
 ### Myth: It's easy to make rationalization decisions early in the process
 

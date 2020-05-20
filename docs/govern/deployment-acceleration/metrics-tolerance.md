@@ -16,7 +16,7 @@ Learn to quantify business risk tolerance associated with the Deployment Acceler
 
 ## Metrics
 
-Deployment acceleration focuses on risks related to how cloud resources are configured, deployed, updated, and maintained. The following information is useful when adopting this discipline of cloud governance:
+Deployment acceleration focuses on risks related to how cloud resources are configured, deployed, updated, and maintained. The following information is useful when adopting the Deployment Acceleration discipline:
 
 - **Deployment failures:** Percentage of deployments that fail or result in misconfigured resources.
 - **Time to deployment:** The amount of time needed to deploy updates to an existing system.

@@ -15,7 +15,7 @@ Environmental design and configuration are the most common blockers to adoption 
 
 ![Get started with design and configuration](../_images/get-started/environment-map.png)
 
-The technical effort required to create an effective environmental design and configuration can be complex. But you can manage the scope to improve the odds of success for the cloud platform team. The greatest challenge is alignment among multiple stakeholders. Some of these stakeholders have the authority to stop or slow the adoption efforts. These steps outline ways to quickly meet short-term objectives and establish long-term success.
+The technical effort required to create an effective environmental design and configuration can be complex. You can manage the scope to improve the odds of success for the cloud platform team. The greatest challenge is alignment among multiple stakeholders. Some of these stakeholders have the authority to stop or slow the adoption efforts. These steps outline ways to quickly meet short-term objectives and establish long-term success.
 
 ## Step 1: Document the business strategy
 
@@ -38,7 +38,7 @@ A clear and concise business strategy helps the cloud platform team understand w
 
 | Accountable team | Responsible and supporting teams | Informed teams |
 | --- | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or central IT | <li> Cloud platform team |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT | <li> Cloud platform team |
 
 ## Step 2: Assess the digital estate
 
@@ -101,7 +101,7 @@ Initially, the cloud adoption team needs a landing zone that can support the req
 **Deliverables:**
 
 - Deploy a first landing zone for initial low-risk migrations.
-- Develop a plan to refactor with the cloud center of excellence team or central IT.
+- Develop a plan to refactor with the cloud center of excellence team or Central IT.
 - Timeline risks:
   - Governance, operations, and security requirements for the first 10 workloads can slow this process. Actual refactoring of the first landing zone and subsequent landing zones takes longer, but it should happen in parallel with migration efforts.
 
@@ -115,7 +115,7 @@ Initially, the cloud adoption team needs a landing zone that can support the req
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
 
 ## Step 5: Deploy an initial governance foundation
 
@@ -141,7 +141,7 @@ As those decisions are made, they feed back into the parallel efforts of the clo
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
 | --- | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or central IT | <li> Cloud platform team |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT | <li> Cloud platform team |
 
 ## Step 6: Implement an operations baseline
 
@@ -155,8 +155,8 @@ As those plans are made, they feed back into the parallel efforts of the cloud p
 - Complete the operations management workbook.
 - Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
-  - Review the workbook: Estimate one hour per application owner.
-  - Complete the Microsoft Azure Well-Architected Review assessment: Estimate one hour per application.
+  - Review the workbook: estimate one hour per application owner.
+  - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
 
 **Guidance to support deliverable completion:**
 
@@ -170,7 +170,7 @@ As those plans are made, they feed back into the parallel efforts of the cloud p
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
 | --- | --- | --- |
-| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud center of excellence or central IT | <li> Cloud platform team |
+| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT | <li> Cloud platform team |
 
 ## Step 7: Expand the landing zone
 
@@ -196,7 +196,7 @@ As the cloud adoption team begins their first few migrations, the cloud platform
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
 
 ## Value statement
 

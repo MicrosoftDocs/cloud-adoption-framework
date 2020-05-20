@@ -11,11 +11,11 @@ ms.date: 05/15/2020
 
 # Get started: Build a cloud adoption team
 
-Cloud adoption teams are the modern-day equivalent of technical implementation teams or project teams. However, the nature of the cloud might require more fluid team structures.
+Cloud adoption teams are the modern-day equivalent of technical implementation teams or project teams. The nature of the cloud might require more fluid team structures.
 
 Some cloud adoption teams focus exclusively on cloud migration, and others focus on innovations that take advantage of cloud technologies. Some teams include the broad technical expertise that's required to complete large adoption efforts, such as a full datacenter migration, and others have a tighter technical focus.
 
-A smaller team might move between projects to accomplish specific goals. For example, a team of data platform specialists might focus on helping convert SQL database virtual machines (VMs) to SQL PaaS instances.
+A smaller team might move between projects to accomplish specific goals. For example, a team of data platform specialists might focus on helping convert SQL Database virtual machines (VMs) to SQL PaaS instances.
 
 ![Get started building a cloud adoption team](../../_images/get-started/adoption-team-map.png)
 
@@ -83,8 +83,8 @@ In the end, the cloud adoption team is accountable for delivery across their ass
 
 **Guidance to support deliverable completion:**
 
-- In the get-started guide for migration, the adoption team is accountable for delivery of [Step 10: Migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
-- In the get-started guide for new products, the adoption team is accountable for delivery of [Step 8: Innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
+- In the get-started guide for migration, the adoption team is accountable for delivery of [step 10: migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
+- In the get-started guide for new products, the adoption team is accountable for delivery of [step 8: innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
 
 All other steps on those checklists are designed to make the effort more manageable.
 

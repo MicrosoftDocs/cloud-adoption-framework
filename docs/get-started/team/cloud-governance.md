@@ -17,7 +17,7 @@ A cloud governance team ensures that cloud-adoption risks and risk tolerance are
 
 ## Step 1: Determine whether a cloud governance team is needed
 
-The official guidance in the Cloud Adoption Framework for Azure is to always create a cloud governance team. At first, the team might be exceptionally small. However, regardless of its size, its role will prove important. If a team isn't needed, a group or individual on an existing adoption team should agree to fulfill the responsibilities associated with the [cloud governance functions](../../organize/cloud-governance.md).
+The official guidance in the Cloud Adoption Framework for Azure is to always create a cloud governance team. At first, the team might be exceptionally small. Regardless of its size, its role will prove important. If a team isn't needed, a group or individual on an existing adoption team should agree to fulfill the responsibilities associated with the [cloud governance functions](../../organize/cloud-governance.md).
 
 **Deliverables:**
 
@@ -26,8 +26,8 @@ The official guidance in the Cloud Adoption Framework for Azure is to always cre
 
 **Guidance to support deliverable completion:**
 
-- The [cloud governance functions](../../organize/cloud-governance.md) might be spread across multiple individuals or teams already. Having a team that goes by the title "cloud governance team" is of little importance. However, the required capabilities should sit with an accountable party or team.
-- If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the amount of governance and operations efforts might be small enough for delivery by one person or one team. That team is unlikely to be called cloud governance, because it serves many functions beyond cloud governance. Even for that team, this get-started guide can help ensure that it's prepared to deliver on this important function of governance.
+- The [cloud governance functions](../../organize/cloud-governance.md) might already be spread across multiple individuals or teams. Having a team that goes by the title "cloud governance team" isn't important, but the required capabilities should reside with an accountable party or team.
+- If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the amount of governance and operations efforts might be small enough for delivery by one person or one team. That team is unlikely to be called cloud governance, because it serves many functions beyond cloud governance. Even for that team, this get-started guide can help ensure that it can deliver on this important function of governance.
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -38,7 +38,7 @@ The official guidance in the Cloud Adoption Framework for Azure is to always cre
 
 ## Step 2: Align with other teams
 
-The governance team ensures consistency and adherence to a set of common policies. Those policies come from an ongoing alignment with other teams. 
+The governance team ensures consistency and adherence to a set of common policies. Those policies come from an ongoing alignment with other teams.
 
 Before it establishes policies or automated cloud governance, the cloud governance team should meet with other teams that are identified in the RACI template. This will help ensure alignment on critical topics, such as security, cost, performance, operations, and deployment. Steps 4 and 5 can help facilitate the alignment.
 
@@ -70,7 +70,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 **Guidance to support deliverable completion:**
 
-- For additional guidance on cadences for meetings, review the "Deliverable" section of [Cloud governance functions](../../organize/cloud-governance.md#deliverable).
+- For additional guidance on cadences for meetings, review the "deliverable" section of [cloud governance functions](../../organize/cloud-governance.md#deliverable).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -121,7 +121,7 @@ The Govern methodology includes two approaches to an initial governance foundati
 
 **Guidance to support deliverable completion:**
 
-- For guidance on configuration and implementation, review [Establish an initial cloud governance foundation](../../govern/initial-foundation.md).
+- For guidance on configuration and implementation, review [establish an initial cloud governance foundation](../../govern/initial-foundation.md).
 
 **Accountable team:**
 

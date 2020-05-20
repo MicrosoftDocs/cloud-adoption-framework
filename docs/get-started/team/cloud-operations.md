@@ -17,7 +17,7 @@ An operations team focuses on monitoring, repairing, and remediating issues rela
 
 ## Step 1: Determine whether a cloud operations team is needed
 
-Before you can release any workloads into production, an agreement must be reached on the accountability for delivery of [cloud operations functions](../../organize/cloud-governance.md). For some portfolios, operational responsibilities might rest with the DevOps and cloud adoption teams. In other cases, a managed service provider with cloud operations experience might assume ongoing operational duties.
+Before you can release any workloads into production, an agreement must be reached on the accountability for delivery of [cloud operations functions](../../organize/cloud-operations.md). For some portfolios, operational responsibilities might rest with the DevOps and cloud adoption teams. In other cases, a managed service provider with cloud operations experience might assume ongoing operational duties.
 
 If no DevOps or service-provider operations agreements are in place, it's safe to assume that someone within IT will need to commit to ongoing operational duties regarding the management of production workloads.
 
@@ -28,8 +28,8 @@ If no DevOps or service-provider operations agreements are in place, it's safe t
 
 **Guidance to support deliverable completion:**
 
-- The [cloud operations functions](../../organize/cloud-operations.md) might be spread across multiple individuals or teams already. You need to decide whether a cloud operations team is required. But some level of operations is always needed for production workloads.
-- If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the governance and operations efforts might be small enough to be delivered by one person or one team. That team is unlikely to be called cloud operations, because it will serve many functions. For that individual or team, the following guidance can help ensure that it's prepared to deliver on this important function of operations.
+- [Cloud operations functions](../../organize/cloud-operations.md) might be spread across multiple individuals or teams already. Decide whether a cloud operations team is required. Some level of operations is always needed for production workloads.
+- If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the governance and operations efforts might be small enough to be delivered by one person or one team. That team is unlikely to be called cloud operations, because it will serve many functions. For that individual or team, the following guidance can help ensure that it can deliver on this important function of operations.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -39,7 +39,7 @@ If no DevOps or service-provider operations agreements are in place, it's safe t
 
 ## Step 2: Align with other teams
 
-The cloud operations team inherits operational responsibilities for all workloads in the production portfolio. Those responsibilities can vary between workloads, based on expectations and the commitments the team has made to business stakeholders. The architectural decisions made by migration-focused and innovation-focused cloud adoption teams also influence the team's operational commitments. 
+The cloud operations team inherits operational responsibilities for all workloads in the production portfolio. Those responsibilities can vary between workloads, based on expectations and the commitments the team has made to business stakeholders. The architectural decisions made by migration-focused and innovation-focused cloud adoption teams also influence the team's operational commitments.
 
 Before the cloud operations team implements any ongoing operations practices, it's important for it to align with other teams. The team should meet with other teams that are identified in the RACI template to ensure alignment on critical topics, such as security, cost, performance, governance, adoption, and deployment. Steps 4 and 5 can help facilitate this alignment.
 
@@ -71,7 +71,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 **Guidance to support deliverable completion:**
 
-- For additional guidance on cadences for meetings, see the "Deliverables" section of [Cloud operations functions](../../organize/cloud-operations.md#deliverables).
+- For additional guidance on cadences for meetings, see the "deliverables" section of [cloud operations functions](../../organize/cloud-operations.md#deliverables).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -162,7 +162,7 @@ As operations planning continues to mature, the team should coordinate with the 
 
 **Guidance to support deliverable completion:**
 
-- Review the [Governance guide for improving resource consistency](../../govern/guides/complex/resource-consistency-improvement.md).
+- Review the [governance guide for improving resource consistency](../../govern/guides/complex/resource-consistency-improvement.md).
 
 <!-- markdownlint-disable MD033 -->
 

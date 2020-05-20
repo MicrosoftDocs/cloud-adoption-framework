@@ -39,8 +39,8 @@ Once you have identified [business risks](./business-risks.md), you will work wi
 - **Percentage trigger:** A company with cloud spending that is stable for their production systems. If that changes by more than _x%_, then a Cost Management discipline is a wise investment.
 - **Overprovisioned trigger:** A company who believes their deployed solutions are overprovisioned. Cost management is a priority investment until they demonstrate proper alignment of provisioning and asset utilization.
 - **Monthly spending trigger:** A company that spends over _$x,000_ per month is considered a sizable cost. If spending exceeds that amount in a given month, they will need to invest in cost management.
-- **Annual spending trigger:** A company with an IT R&D budget that allows for spending _$x,000_ per year on cloud experimentation. They may run production workloads in the cloud, but they are still considered experimental solutions if the budget doesn't exceed that amount. If the budget is exceeded, they will need to treat the budget like a production investment and manage spending closely.
-- **Operating expense-adverse (uncommon):** As a company, they are averse to operating expenses and will need cost management controls in place before deploying a dev/test workload.
+- **Annual spending trigger:** A company with an IT R&D budget that allows for spending _$x,000_ per year on cloud experimentation. They may run production workloads in the cloud, but they're still considered experimental solutions if the budget doesn't exceed that amount. If the budget is exceeded, they will need to treat the budget like a production investment and manage spending closely.
+- **Operating expense-adverse (uncommon):** As a company, they're averse to operating expenses and will need cost management controls in place before deploying a dev/test workload.
 
 ## Next steps
 

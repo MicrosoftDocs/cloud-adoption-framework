@@ -7,11 +7,11 @@ function Get-MyCasingExpressions
         'Five Disciplines of Cloud Governance'
         'five Rs of rationalization'
         'five Rs of cloud rationalization'
-        'Cost Management (discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
-        'Deployment Acceleration (discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
-        'Identity Baseline (discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
-        'Resource Consistency (discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
-        'Security Baseline (discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
+        'Cost Management (discipline|governance discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
+        'Deployment Acceleration (discipline|governance discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
+        'Identity Baseline (discipline|governance discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
+        'Resource Consistency (discipline|governance discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
+        'Security Baseline (discipline|governance discipline|phase|policy|policies|sample policy|strategy|toolchain|tools)'
 
         'Adopt methodolog(y|ies)'
         'Adopt phase'
@@ -33,6 +33,11 @@ function Get-MyCasingExpressions
         'Ready phase'
         'Strategy methodolog(y|ies)'
         'Strategy phase'
+        
+        'get-started guide!!getting started guide'
+        'get-started guides!!getting started guides'
+        'getting-started guide!!getting started guide'
+        'getting-started guides!!getting started guides'
         
         'Microsoft Azure Well-Architected Framework'
         'Microsoft Azure Well-Architected Review'
