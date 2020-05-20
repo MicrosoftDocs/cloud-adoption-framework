@@ -1,6 +1,6 @@
 ---
-title: Template schema
-description: Template schema
+title: XX
+description: XX
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -9,6 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## Generic CAF enterprise-scale Microsoft Azure Resource Manager template
+## Enterprise-scale ARM parameters file
 
 Coming soon :)

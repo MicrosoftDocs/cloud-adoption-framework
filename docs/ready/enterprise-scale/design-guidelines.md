@@ -1,55 +1,31 @@
-## Navigation Menu
-
-* [Overview](../README.md)
-* [North Star Architecture](./NorthStar-Architecture.md)
-  * [Design Principles](./Design-Principles.md)
-  * [Design Guidelines](./Design-Guidelines.md)
-    * [A - Enterprise Enrollment and Azure AD Tenants](./A-Enterprise-Enrollment-and-Azure-AD-Tenants.md)
-    * [B - Identity and Access Management](./B-Identity-and-Access-Management.md)
-    * [C - Management Group and Subscription Organization](./C-Management-Group-and-Subscription-Organization.md)
-    * [D - Network Topology and Connectivity](./D-Network-Topology-and-Connectivity.md)
-    * [E - Management and Monitoring](./E-Management-and-Monitoring.md)
-    * [F - Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
-    * [G - Security, Governance and Compliance](./G-Security-Governance-and-Compliance.md)
-    * [H - Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
-  * [Implementation Guide](./Implementation-Guide.md)
-* [Contoso Reference](./Contoso/Readme.md)
-  * [Scope and Design](./Contoso/Scope.md)
-  * [Implementation](./Contoso/Design.md)
-* [Using reference implementation in your own environment](./Deploy/Readme.md)
-  * [Getting started](./Deploy/Getting-Started.md)
-    * [Prerequisites](./Deploy/Prerequisites.md)
-    * [Validate prerequisites](./Deploy/Validate-prereqs.md)
-  * [Configure your own environment](./Deploy/Using-Reference-Implementation.md)
-    * [Configure GitHub](./Deploy/Configure-run-initialization.md)
-    * [Provision Platform](./Deploy/Deploy-platform-infra.md)
-    * [Create Landing Zones](./Deploy/Deploy-lz.md)
-    * [Trigger deployments locally](./Deploy/Trigger-local-deployment.md)
-  * [North Star template schema](./Deploy/NorthStar-schema.md)
-    * [Generic North Star ARM template](./Deploy/NorthStar-template-schema.md)
-    * [North Star ARM parameters file](./Deploy/NorthStar-parameters-schema.md)
-  * [Known Issues](./Deploy/Known-Issues.md)    
-* [How Do I Contribute?](./Northstar-Contribution.md)
-* [FAQ](./Northstar-FAQ.md)
-* [Roadmap](./Northstar-roadmap.md)
-
+---
+title: XX
+description: XX
+author: rkuehfus
+ms.author: brblanch
+ms.date: 06/01/2020
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: ready
 ---
 
-# Design Guidelines
-At the centre of the "North Star" architecture lies a critical design path, comprised of fundamental design topics with heavily interrelated and dependent design decisions. This repository provides design guidance across these architecturally significant technical domains to support the critical design decisions which must occur to define the "North Star" architecture. For each of the considered domains, readers should review provided considerations and recommendations, using them to structure and drive designs within each area.
+# Design guidelines
 
-For example, a customer is likely to question how many subscriptions they require for their estate. In this instance, the reader should review the *C - Management Group and Subscription Organization -&gt; 2. Subscription Organization and Governance* section, using the outlined recommendations to help drive subscription decisions.
+At the centre of the "enterprise-scale" architecture lies a critical design path, comprised of fundamental design topics with heavily interrelated and dependent design decisions. This repository provides design guidance across these architecturally significant technical domains to support the critical design decisions which must occur to define the "enterprise-scale" architecture. For each of the considered domains, readers should review provided considerations and recommendations, using them to structure and drive designs within each area.
 
-## Critical Design Areas
-The following eight critical design areas are intended to support the translation of customer requirements to Azure constructs and capabilities, to address the mismatch between on-premises infrastructure and cloud-design which typically creates dissonance and friction with respect to the "North Star" definition and Azure adoption. 
+For example, a customer is likely to question how many subscriptions they require for their estate. In this instance, the reader should review the *C - management group and subscription organization -&gt; 2. Subscription organization and governance* section, using the outlined recommendations to help drive subscription decisions.
 
-The impact of decisions made within these critical areas will reverberate across the "North Star" architecture and influence other decisions. Readers are strongly advised to familiarize themselves with these eight areas, to better understand the consequences of encompassed decisions, which may later produce trade-offs within related areas.
+## Critical design areas
 
-* [A - Enterprise Enrollment and Azure AD Tenants](./A-Enterprise-Enrollment-and-Azure-AD-Tenants.md)
-* [B - Identity and Access Management](./B-Identity-and-Access-Management.md)
-* [C - Management Group and Subscription Organization](./C-Management-Group-and-Subscription-Organization.md)
-* [D - Network Topology and Connectivity](./D-Network-Topology-and-Connectivity.md)
-* [E - Management and Monitoring](./E-Management-and-Monitoring.md)
-* [F - Business Continuity and Disaster Recovery](./F-Business-Continuity-and-Disaster-Recovery.md)
-* [G - Security, Governance and Compliance](./G-Security-Governance-and-Compliance.md)
-* [H - Platform Automation and DevOps](./H-Platform-Automation-and-DevOps.md)
+The following eight critical design areas are intended to support the translation of customer requirements to Azure constructs and capabilities, to address the mismatch between on-premises infrastructure and cloud-design which typically creates dissonance and friction with respect to the "enterprise-scale" definition and Azure adoption.
+
+The impact of decisions made within these critical areas will reverberate across the "enterprise-scale" architecture and influence other decisions. Readers are strongly advised to familiarize themselves with these eight areas, to better understand the consequences of encompassed decisions, which may later produce trade-offs within related areas.
+
+- [A - enterprise enrollment and Azure AD tenants](./Enterprise-Enrollment-and-Azure-AD-Tenants.md)
+- [B - identity and access management](./Identity-and-Access-Management.md)
+- [C - management group and subscription organization](./Management-Group-and-Subscription-Organization.md)
+- [D - network topology and connectivity](./Network-Topology-and-Connectivity.md)
+- [E - management and monitoring](./Management-and-Monitoring.md)
+- [F - business continuity and disaster recovery](./Business-Continuity-and-Disaster-Recovery.md)
+- [G - security, governance and compliance](./Security-Governance-and-Compliance.md)
+- [H - platform automation and DevOps](./Platform-Automation-and-DevOps.md)
