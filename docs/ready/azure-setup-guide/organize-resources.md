@@ -50,21 +50,21 @@ You can create a management group, additional subscriptions, or resource groups.
 
 Create a management group to help you manage access, policy, and compliance for multiple subscriptions.
 
-1. Go to [Management groups](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade).
+1. Go to [management groups](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade).
 2. Select **Add management group**.
 
 ### Create a subscription
 
 Use subscriptions to manage costs and resources that are created by users, teams, or projects.
 
-1. Go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
+1. Go to [subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
 1. Select **Add**.
 
 ### Create a resource group
 
 Create a resource group to hold resources like web apps, databases, and storage accounts that share the same lifecycle, permissions, and policies.
 
-1. Go to [Resource groups](https://portal.azure.com/#create/Microsoft.ResourceGroup).
+1. Go to [resource groups](https://portal.azure.com/#create/Microsoft.ResourceGroup).
 1. Select **Add**.
 1. Select the **Subscription** that you want your resource group created under.
 1. Enter a name for the **Resource group**.
@@ -141,21 +141,21 @@ The following table includes naming patterns for a few sample types of Azure res
 
 | Entity | Scope | Length | Casing | Valid characters | Suggested pattern | Example |
 | --- | --- | --- | --- | --- | --- | --- |
-| Resource group | Subscription | 1-90 | Case insensitive | Alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters | `<service short name>-<environment>-rg` | `profx-prod-rg` |
-| Availability set | Resource group | 1-80 | Case insensitive | Alphanumeric, underscore, and hyphen | `<service-short-name>-<context>-as` | `profx-sql-as` |
-| Tag | Associated entity | 512 (name), 256 (value) | Case insensitive | Alphanumeric | `"key" : "value"` | `"department" : "Central IT"` |
+| Resource group | Subscription | 1-90 | Case insensitive | Alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters | `<service short name>-<environment>-Rg` | `profx-prod-rg` |
+| Availability set | Resource group | 1-80 | Case insensitive | Alphanumeric, underscore, and hyphen | `<service-short-name>-<context>-As` | `profx-SQL-as` |
+| Tag | Associated entity | 512 (Name), 256 (value) | Case insensitive | Alphanumeric | `"Key" : "value"` | `"Department" : "Central IT"` |
 
 # [Resource tags](#tab/ResourceTags)
 
-Tags are useful to quickly identify your resources and resource groups. You apply tags to your Azure resources to logically organize them by categories. Each tag consists of a name and a value. For example, you can apply the name "Environment" and the value "Production" to all the resources in production. Tags should include context about the resource's associated workload or application, operational requirements, and ownership information.
+Tags are useful to quickly identify your resources and resource groups. You apply tags to your Azure resources to logically organize them by categories. Each tag consists of a name and a value. For example, you can apply the name "environment" and the value "production" to all the resources in production. Tags should include context about the resource's associated workload or application, operational requirements, and ownership information.
 
 After you apply tags, you can retrieve all the resources in your subscription with that tag name and value. When you organize resources for billing or management, tags can help you retrieve related resources from different resource groups.
 
 You can also use tags for many other things. Common uses include:
 
-- **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like "ProjectOwner."
-- **Automation:** You might have regularly running scripts that can take an action based on a tag value like "ShutdownTime" or "DeprovisionDate."
-- **Cost Optimization:** You can allocate resources to the teams and resources who are responsible for the cost. In the Azure cost management, you can apply the cost center tag as a filter to report the charges based on a team or department usage.
+- **Metadata and documentation:** Administrators can easily see detail about the resources they're working on by applying a tag like "projectowner."
+- **Automation:** You might have regularly running scripts that can take an action based on a tag value like "shutdowntime" or "deprovisiondate."
+- **Cost optimization:** You can allocate resources to the teams and resources who are responsible for the cost. In the Azure Cost Management, you can apply the cost center tag as a filter to report the charges based on a team or department usage.
 
 Each resource or resource group can have a maximum of 50 tag name and value pairs. This limitation only applies to tags directly applied to the resource group or resource.
 
@@ -167,7 +167,7 @@ For more tagging recommendations and examples, see [Recommended naming and taggi
 
 To apply a tag to a resource group:
 
-1. Go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups).
+1. Go to [resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups).
 1. Select a resource group.
 1. Select **Assign tags**.
 1. Enter a new name and value, or use the drop-down list to select an existing name and value.

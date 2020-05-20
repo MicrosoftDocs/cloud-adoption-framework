@@ -3,7 +3,7 @@ title: "Get started: Deliver operational excellence"
 description: Learn the basics of operational excellence during digital transformation.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview

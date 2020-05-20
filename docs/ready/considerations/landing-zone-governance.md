@@ -3,7 +3,7 @@ title: Improve landing zone governance
 description: Improve landing zone governance
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -11,11 +11,11 @@ ms.subservice: ready
 
 # Improve landing zone governance
 
-Landing zone governance is the smallest unit of overall governance. Establishing a sound governance foundation within your first few landing zones will reduce the amount of refactoring required later in the adoption lifecycle. Improving landing zone governance will integrate cost controls, establish basic tooling to allow for scale, and will make it easier for the cloud governance team to deliver on the five disciplines of cloud governance.
+Landing zone governance is the smallest unit of overall governance. Establishing a sound governance foundation within your first few landing zones will reduce the amount of refactoring required later in the adoption lifecycle. Improving landing zone governance will integrate cost controls, establish basic tooling to allow for scale, and will make it easier for the cloud governance team to deliver on the Five Disciplines of Cloud Governance.
 
 ## Landing zone governance best practices
 
-- **Initial landing governance:** The article on establishing an [Initial governance foundation](../../govern/guides/complex/index.md) will aid in adding initial governance tooling to the first few landing zones. These practices will aid in scaling adoption and governance, along with implementing sound cost management. This approach starts with: Resource organization, Policy definitions, RBAC roles, and Blueprint definitions.
+- **Initial landing governance:** The article on establishing an [initial governance foundation](../../govern/guides/complex/index.md) will aid in adding initial governance tooling to the first few landing zones. These practices will aid in scaling adoption and governance, along with implementing sound cost management. This approach starts with: resource organization, policy definitions, RBAC roles, and blueprint definitions.
 - **[Naming and tagging standards](../azure-best-practices/naming-and-tagging.md):** Ensure consistency in naming and tagging, which is the foundational data for establishing sound governance practices.
 - **[Track costs across workloads](../azure-best-practices/track-costs.md):** Begin tracking costs in your first landing zone. Evaluate how you will apply consistency across multiple workloads and roles.
 - **[Scale with multiple subscriptions](../azure-best-practices/scale-subscriptions.md):** Evaluate how this landing zone and other landing zones will scale, as multiple subscriptions become a requirement.

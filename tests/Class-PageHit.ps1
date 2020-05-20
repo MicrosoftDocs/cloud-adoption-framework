@@ -198,9 +198,18 @@ class PageHit
                 $this.HitType = 'Comment'
             }
             elseif ($h -match '^</?$' -or $c -match "div class=|div>|a>|li>|ul class=|li style=|img alt=|img src=") {
+                # Write-Error 'HTML - INDEX IS NOW MISALIGNED!'
                 $this.HitType = 'Html'
+                $newIndex = $c.IndexOf('>') + 1
                 $h = $h + (Get-StringBefore $c '>') + '>'
+                if ($newIndex -eq 0) {
+                    $c = ''
+                }
+                else {
                 $c = (Get-StringAfter $c '>')
+            }
+
+                $this.Index = $this.Index + $newIndex
             }
             elseif ($h.Trim() -eq '[!') 
             {
@@ -214,6 +223,7 @@ class PageHit
                 $this.HitType = 'Sentence'
                 if ($h -match '^[A-Za-z]$')
                 {
+                    Write-Error 'LETTER AT HEADER START - INDEX IS NOW MISALIGNED!'
                     $c = "$h$c"
                     $h = ""
                 }
@@ -221,15 +231,19 @@ class PageHit
                 $m = [Regex]::Match($c.Trim(), '(^>? *\d+\. ?[^A-Za-z]*)(.*)')
                 if ($m.Success)
                 {
+                    # Write-Error 'NUMBERED LIST - INDEX IS NOW MISALIGNED!'
                     $h = $m.Groups[1].Value.Trim('"')
                     $c = $m.Groups[2].Value
+                    $this.Index = $this.Index + $m.Groups[2].Index
                 }
 
                 $m = [Regex]::Match($c.Trim(), '^([a-z][A-Za-z\._]+[:>] ?"?)(.*)')
                 if ($m.Success)
                 {
+                    # Write-Error 'LOWERCASE LETTER - INDEX IS NOW MISALIGNED!'
                     $h = $m.Groups[1].Value.Trim('"')
                     $c = $m.Groups[2].Value
+                    $this.Index = $this.Index + $m.Groups[2].Index
                 }
 
                 $exp = '^(?:title:|name:|#+ |\[|\*\*|\*\*\[|- |- \*\*\[|\[|: ")'
@@ -238,7 +252,7 @@ class PageHit
                     $this.HitType = 'Title'
                     if ($c -notmatch '^[a-z]')
                     {
-                        Write-Host "UNEXPECTED CHARACTER AT START OF CONTENT: $c" -ForegroundColor Red
+                        Write-Host ("UNEXPECTED CHARACTER AT START OF CONTENT: HEX '{0:x}'" -f [int][char]($c.Substring(0,1)) ) -ForegroundColor Red
                     }
                 }
                 elseif ($h.Trim() -cmatch '^[a-z][A-Za-z\._]+\: ?')

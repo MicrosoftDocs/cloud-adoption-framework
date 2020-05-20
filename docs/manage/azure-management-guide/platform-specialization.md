@@ -27,7 +27,7 @@ This table outlines a few common processes, tools, and potential effects common 
 
 | Process | Tool | Purpose  | Suggested management level |
 |---|---|---|---|
-| Improve system design | Azure Architecture Framework | Improving the architectural design of the platform to improve operations | N/A |
+| Improve system design | Microsoft Azure Well-Architected Framework | Improving the architectural design of the platform to improve operations | N/A |
 | Automate remediation | Azure Automation | Responding to advanced platform data with platform-specific automation | Platform operations |
 | Service catalog | Managed applications center | Providing a self-service catalog of approved solutions that meet organizational standards | Platform operations |
 | Container performance | Azure Monitor for containers | Monitoring and diagnostics of containers | Platform operations |
@@ -56,9 +56,9 @@ Platform specialization consists of a disciplined execution of the following fou
 
 Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is out of scope for the environment view that is taken throughout Cloud Adoption Framework for Azure.
 
-As a complement to Cloud Adoption Framework, Azure Architecture Framework provides best practices for improving the resiliency and design of a specific system. Those design improvements can be applied to the systems design of either a platform or a specific workload.
+As a complement to Cloud Adoption Framework, Microsoft Azure Well-Architected Framework provides best practices for improving the resiliency and design of a specific system. Those design improvements can be applied to the systems design of either a platform or a specific workload.
 
-Azure Architecture Framework focuses on improvement across five pillars of system design:
+Microsoft Azure Well-Architected Framework focuses on improvement across five pillars of system design:
 
 - **Scalability:** Scaling the common platform assets to handle increased load.
 - **Availability:** Reducing business interruptions by improving potential uptime.
@@ -70,7 +70,7 @@ Technical debt and architectural flaws cause most business interruptions. For ex
 
 The following **Automated remediation** tab shows ways to remediate technical debt that can't or shouldn't be addressed.
 
-Learn more about [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) to improve system design.
+Learn more about [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) to improve system design.
 
 As system design improves, return to this article to find new opportunities to improve and scale those improvements across your environment.
 

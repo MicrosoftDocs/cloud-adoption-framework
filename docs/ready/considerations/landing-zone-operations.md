@@ -3,7 +3,7 @@ title: Improve landing zone operations
 description: Improve landing zone operations
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -19,7 +19,7 @@ The following links provide best practices for improving landing zone operations
 
 - [Azure server management](../../manage/azure-server-management/index.md): An onboarding guide to incorporating the cloud-native tools and services needed to manage operations.
 - [Hybrid monitoring](../../manage/monitor/index.md): Many customers have already made a substantial investment in System Center Operations Manager. For those customers, this guide to hybrid monitoring can help them compare and contrast the cloud-native reporting tools with Operations Manager tooling. This comparison makes it easier to decide which tools to use for operational management.
-- [Centralize management operations](../../manage/centralize-operations.md): Use Azure Lighthouse to centralize operations management across multiple azure tenants.
+- [Centralize management operations](../../manage/centralize-operations.md): Use Azure Lighthouse to centralize operations management across multiple Azure tenants.
 - [Establish an operational fitness review](../../manage/operational-fitness-review.md): Review an environment for operational fitness.
 - Workload specific operations best practices:
   - [Resiliency checklist](https://docs.microsoft.com/azure/architecture/checklist/resiliency-per-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
@@ -42,7 +42,7 @@ The [Manage methodology](../../manage/index.md) provides overall guidance for bu
 
 ## Test-driven development cycle
 
-Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in azure](./azure-test-driven-development.md).
+Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in Azure](./azure-test-driven-development.md).
 
 ![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 

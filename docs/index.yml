@@ -11,11 +11,11 @@ metadata:
   title: "Microsoft Cloud Adoption Framework for Azure"
   description: "The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that accelerate your cloud adoption journey."
   ms.service: cloud-adoption-framework
-  ms.topic: landing-page
+  ms.topic: hub-page
   services: cloud-adoption-framework
   author: JanetCThomas
   ms.author: janet
-  ms.date: 04/20/2020
+  ms.date: 05/15/2020
 
 # cSpell:ignore caf
 
@@ -209,7 +209,7 @@ conceptualContent:
           itemType: quickstart
           text: Identify gaps between your current state and business priorities, and get the right resources to help you address those gaps.
     # Card
-    - title: Azure Architecture Review
+    - title: Microsoft Azure Well-Architected Review
       links:
         - url: https://docs.microsoft.com/assessments/?mode=pre-assessment&id=azure-architecture-review
           itemType: architecture
