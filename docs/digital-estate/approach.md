@@ -18,7 +18,7 @@ Digital estate planning can take several forms depending on the desired outcomes
 
 The top-down assessment approach evaluates security aspects. Security includes the categorization of data (high, medium, or low business impact), compliance, sovereignty, and security risk requirements. This approach assesses high-level architectural complexity. It evaluates aspects such as authentication, data structure, latency requirements, dependencies, and application life expectancy.
 
-The top-down approach also measures the operational requirements of the application, such as service levels, integration, maintenance windows, monitoring, and insight. When these aspects have been analyzed and considered, the resulting score reflects the relative difficulty of migrating this application to each of the cloud platforms: IaaS, PaaS, and SaaS.
+The top-down approach also measures the operational requirements of the application, such as service levels, integration, maintenance windows, monitoring, and insight. When these aspects have been analyzed and considered, the resulting score reflects the relative difficulty of migrating this application to each cloud platform: IaaS, PaaS, and SaaS.
 
 In addition, the top-down assessment evaluates the financial benefits of the application, such as operational efficiencies, TCO, return on investment, and other appropriate financial metrics. The assessment also examines the seasonality of the application (for example, are there times of the year when demand spikes?) and overall compute load.
 

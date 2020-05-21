@@ -20,7 +20,7 @@ These decision guides supplement the sample governance journeys by providing alt
 
 ## Decision guidance categories
 
-Each of the following categories represents a foundational technology of all cloud deployments. The sample governance journeys make design decisions related to these technologies based on the needs of example businesses, and some of these decisions might not match your own organization's needs. The sections below discuss alternative options for each of these categories, allowing you to choose a pattern or model better suited to your requirements.
+The following categories represent foundational technologies for all cloud deployments. The sample governance journeys make design decisions related to these technologies based on the needs of example businesses, and some of these decisions might not match your own organization's needs. The sections below discuss alternative options for each category, allowing you to choose a pattern or model better suited to your requirements.
 
 [Subscriptions](./subscriptions/index.md): Plan your cloud deployment's subscription design and account structure to match your organization's ownership, billing, and management capabilities.
 

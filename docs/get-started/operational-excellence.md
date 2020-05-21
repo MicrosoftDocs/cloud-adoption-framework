@@ -112,7 +112,7 @@ The previous steps outline a business-led approach to establish operational exce
 
 ## Next steps to delivering operational excellence across the portfolio
 
-Operational excellence requires a disciplined approach to reliability, performance, security, and cost optimization. Use the remaining guidance in this series to help ensure each of those principles is implemented through consistent automation approaches.
+Operational excellence requires a disciplined approach to reliability, performance, security, and cost optimization. Use the remaining guidance in this series to implement these principles through consistent approaches to automation.
 
 - **Cost optimization:** Continuously optimize operating costs by using the get-started guide on [managing enterprise costs](./manage-costs.md)
 - **Security:** Reduce risk by integrating enterprise security across the portfolio by using the get-started guide on [implementing security across the portfolio](./security.md).

@@ -91,7 +91,7 @@ However, before you associate any transformation journey with this type of capit
 
 If an operating expense model is desirable, the following example could be a viable business outcome:
 
-- **Example:** The company's datacenter is currently depreciating at _x USD_ per year for the next three years. It is expected to require an additional _y USD_ to refresh the hardware next year. We can convert the capital expenses to an operating expense model at an even rate of _z USD_ per month, allowing for better management of and accountability for the operating costs of technology.
+- **Example:** The company's datacenter is currently depreciating at _$x USD_ per year for the next three years. It is expected to require an additional _$y USD_ to refresh the hardware next year. We can convert the capital expenses to an operating expense model at an even rate of _$z USD_ per month, allowing for better management of and accountability for the operating costs of technology.
 
 ## Next steps
 

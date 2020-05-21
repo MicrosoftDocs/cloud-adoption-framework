@@ -18,7 +18,7 @@ This article discusses the reasons that customers typically adopt a Cost Managem
 
 ## Relevance
 
-In terms of cost governance, cloud adoption creates a paradigm shift. Management of cost in a traditional on-premises world is based on refresh cycles, datacenter acquisitions, host renewals, and recurring maintenance issues. You can forecast, plan, and refine each of these costs to align with annual capital expenditure budgets.
+In terms of cost governance, cloud adoption creates a paradigm shift. Managing costs in a traditional on-premises world is based on refresh cycles, datacenter acquisitions, host renewals, and recurring maintenance issues. You can forecast, plan, and refine these costs to align with annual capital expenditure budgets.
 
 For cloud solutions, many businesses tend to take a more reactive approach to cost management. In many cases, businesses will prepurchase, or commit to use, a set amount of cloud services. This model assumes that maximizing discounts, based on how much the business plans on spending with a specific cloud vendor, creates the perception of a proactive, planned cost cycle. That perception will only become reality if the business also implements mature cost management disciplines.
 

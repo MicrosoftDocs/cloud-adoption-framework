@@ -180,9 +180,9 @@ You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-mo
 
 ### Azure Security Center
 
-We recommend that you onboard all your servers at least to the Azure Security Center *Free* tier. This option provides a basic level of security assessments and actionable security recommendations for your environment. If you upgrade to the *Standard* tier, you get additional benefits, which are discussed in detail on the [Security Center pricing page](https://docs.microsoft.com/azure/security-center/security-center-pricing).
+We recommend that you onboard all your servers at least to the Free tier of Azure Security Center. This option provides basic security assessments and actionable security recommendations for your environment. The Standard tier provides additional benefits. For more information, see [Azure Security Center pricing](https://docs.microsoft.com/azure/security-center/security-center-pricing).
 
-To enable the Azure Security Center Free tier, follow these steps:
+To enable the Free tier of Azure Security Center, follow these steps:
 
 1. Go to the **Security Center** portal page.
 2. Under **POLICY & COMPLIANCE**, select **Security policy**.
