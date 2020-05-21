@@ -3,7 +3,7 @@ title: "Get started: Accelerate migration"
 description: Recommended steps for stakeholder alignment, migration planning, deploying a landing zone, and migrating your first 10 workloads.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -28,7 +28,7 @@ If your migration scenario is atypical, you can get a personalized assessment of
 
 ## Get started
 
-The technical effort and process required to migrate workloads is relatively straightforward. It's important to complete the migration process efficiently. But strategic migration readiness has an even bigger impact on the timelines and successful completion of the overall migration.
+The technical effort and process required to migrate workloads is relatively straightforward. It's important to complete the migration process efficiently. Strategic migration readiness has an even bigger impact on the timelines and successful completion of the overall migration.
 
 To accelerate adoption, you must take steps to support the cloud adoption team during migration. This guide outlines these iterative tasks to help customers start on the right path toward any cloud migration. To show the importance of the supporting steps, migration is listed as step 10 in this article. In reality, the cloud adoption team is likely to begin their first pilot migration in parallel with steps 4 or 5.
 
@@ -48,7 +48,7 @@ To avoid common migration blockers, create a clear and concise business strategy
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
 
 ## Step 2: Align partner support
 
@@ -66,7 +66,7 @@ Partners, Microsoft services, or various Microsoft programs are available to sup
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
 
 ## Step 3: Gather data and analyze assets and workloads
 
@@ -91,7 +91,7 @@ Discovery and assessment provide a deeper level of technical alignment, which he
 
 ## Step 4: Make a business case
 
-Making the business case for migration is likely to be an iterative conversation among stakeholders. In this first pass at building the business case, evaluate the initial high-level return from a potential cloud migration. The goal of this step is to ensure that all stakeholders align around one simple question: Based on the available data, is the overall adoption of the cloud a wise business decision?
+Making the business case for migration is likely to be an iterative conversation among stakeholders. In this first pass at building the business case, evaluate the initial high-level return from a potential cloud migration. The goal of this step is to ensure that all stakeholders align around one simple question: based on the available data, is the overall adoption of the cloud a wise business decision?
 
 - [Building a cloud migration business case](../strategy/cloud-migration-business-case.md) is a good starting point for developing a migration business case. Clarity on formulas and tools can aid in business justification.
 
@@ -158,7 +158,7 @@ All migrated assets are deployed within a landing zone. Initially, the landing z
 **Deliverables:**
 
 - Deploy a first landing zone for initial, low-risk migrations.
-- Develop a plan to refactor with the cloud center of excellence or central IT.
+- Develop a plan to refactor with the cloud center of excellence or Central IT.
 - Timeline risks:
   - Governance, operations, and security requirements for the first 10 workloads can slow this process.
   - Actual refactoring of the first landing zone and subsequent landing zones takes longer, but it should happen in parallel with migration efforts.
@@ -168,7 +168,7 @@ All migrated assets are deployed within a landing zone. Initially, the landing z
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
 
 ## Step 8: Migrate your first 10 workloads
 
@@ -176,14 +176,14 @@ The technical effort required to migrate your first 10 workloads is relatively s
 
 ![Phases of iterative migration efforts: assess, deploy, release](../_images/migrate/methodology-effort-only.png)
 
-Cloud migration tools make it possible to migrate all VMs in a datacenter in one pass or iteration. It's more common to migrate a smaller number of workloads during each iteration. Breaking up the migration into smaller waves or releases requires more planning. But a smaller number reduces technical risks and the impact of organizational change management.
+Cloud migration tools make it possible to migrate all VMs in a datacenter in one pass or iteration. It's more common to migrate a smaller number of workloads during each iteration. Breaking up the migration into smaller waves or releases requires more planning, but a smaller number reduces technical risks and the impact of organizational change management.
 
 With each iteration, the cloud adoption team gets better at migrating workloads. These steps start the technical team on this maturity curve:
 
 1. Migrate your first workload in a pure information as a service (IaaS) approach by using the tools outlined in the [Azure migration guide](../migrate/azure-migration-guide/index.md).
 2. Expand tooling options to use migration and modernization by using the [migration scenarios](../migrate/azure-best-practices/contoso-migration-overview.md).
 3. Develop your technical strategy by using broader approaches outlined in the [migration best practices](../migrate/azure-best-practices/index.md).
-4. Improve consistency, reliability, and performance through an efficient migration-factory approach as outlined in [migration process improvements](../migrate/migration-considerations/index.md).
+4. Improve consistency, reliability, and performance through an efficient migration-factory approach as outlined in [Migration process improvements](../migrate/migration-considerations/index.md).
 
 **Deliverables:**
 
@@ -194,7 +194,7 @@ Continuous improvement of the adoption team's ability to migrate workloads.
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or central IT |
+| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
 
 ## Step 9: Hand off production workloads to cloud governance
 
@@ -207,15 +207,14 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 
 - Deploy an initial governance foundation.
 - Complete a governance benchmark to plan for future improvements.
-- Timeline risk:
-    - Improvement policies and governance implementation can add one to four weeks per discipline.
+- Timeline risk: improvement policies and governance implementation can add one to four weeks per discipline.
 
 <!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or central IT |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
 
 ## Step 10: Hand off production workloads to cloud operations
 
@@ -230,17 +229,17 @@ Operations management is another requirement to reach migration success. Migrati
 
 - Deploy a management baseline.
 - Complete the operations management workbook.
-- Identify any workloads that require an Azure Architecture Review assessment.
+- Identify any workloads that require an Microsoft Azure Well-Architected Review assessment.
 - Timeline risks:
-  - Review the workbook: Estimate one hour per application owner.
-  - Complete the Azure Architecture Review assessment: Estimate one hour per application.
+  - Review the workbook: estimate one hour per application owner.
+  - Complete the Microsoft Azure Well-Architected Review assessment: estimate one hour per application.
 
 <!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud center of excellence or central IT |
+| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
 
 ## Value statement
 

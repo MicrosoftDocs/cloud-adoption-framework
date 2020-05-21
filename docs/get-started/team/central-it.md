@@ -6,12 +6,12 @@ ms.author: janet
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ---
 
 # Get started: Central IT team
 
-When cloud adoption expands from one team to multiple teams relatively quickly, additional support from existing IT staff is needed. However, those staff members might lack the training and experience required to support the cloud using cloud-native IT tools. This often drives the formation of a Central IT team governing the cloud.
+When cloud adoption expands from one team to multiple teams relatively quickly, additional support from existing IT staff is needed. Those staff members might lack the training and experience required to support the cloud using cloud-native IT tools. This often drives the formation of a Central IT team governing the cloud.
 
 > [!WARNING]
 > Central IT should only be applied in the cloud when existing delivery on-premises is based on a Central IT model. If the current on-premises model is based on delegated control, consider a cloud center of excellence (CCoE) approach for a more compatible alternative.
@@ -27,7 +27,7 @@ When cloud adoption expands from one team to multiple teams relatively quickly, 
 
 In the modern view of IT, assets are globally distributed. Responsibilities are delegated. Operations management is delivered by a mixture of internal staff, managed service providers, and cloud providers. In the digital economy, IT management practices are transitioning to a model of self-service and delegated control with clear guardrails to enforce governance. Central IT can be a valuable contributor to cloud adoption by becoming a cloud broker and a partner for innovation and business agility.
 
-Central IT as a function is well positioned to take valuable knowledge and practices from existing on-premises models and apply those practices to cloud delivery. However, this process will require change. New processes, new skills, and new tools are required to support cloud adoption at scale. When Central IT adapts, it becomes an important partner in cloud adoption efforts.
+Central IT as a function is well positioned to draw valuable knowledge and practices from existing on-premises models and apply those practices to cloud delivery. This process requires change. New processes, new skills, and new tools are required to support cloud adoption at scale. When Central IT adapts, it becomes an important partner in cloud adoption efforts.
 
 ## Deliverables
 

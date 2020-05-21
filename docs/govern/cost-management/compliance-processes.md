@@ -30,7 +30,7 @@ This is the time to make a precommitment or prepurchase to maximize discounting.
 
 This quarterly planning process is also a good time to evaluate the current membership of your cloud governance team for knowledge gaps related to current or future business plans. Invite relevant staff and workload owners to participate in reviews and planning as either temporary advisors or permanent members of your team.
 
-**Education and training:** On a bimonthly basis, offer training sessions to make sure business and IT staff are up-to-date on the latest Cost Management policy requirements. As part of this process review and update any documentation, guidance, or other training assets to ensure they are in sync with the latest corporate policy statements.
+**Education and training:** On a bimonthly basis, offer training sessions to make sure business and IT staff are up-to-date on the latest Cost Management policy requirements. As part of this process review and update any documentation, guidance, or other training assets to ensure they're in sync with the latest corporate policy statements.
 
 **Monthly reporting:** On a monthly basis, report actual spending against forecast. Notify billing leaders of any unexpected deviations.
 
@@ -55,7 +55,7 @@ The following are examples of triggers:
 
 Use the [Cost Management discipline template](./template.md) to document the processes and triggers that align to the current cloud adoption plan.
 
-For guidance on executing Cost Management policies in alignment with adoption plans, see the article on Cost Management discipline improvement.
+For guidance on executing Cost Management policies in alignment with adoption plans, see [Cost Management discipline improvement](./discipline-improvement.md).
 
 > [!div class="nextstepaction"]
 > [Cost Management discipline improvement](./discipline-improvement.md)

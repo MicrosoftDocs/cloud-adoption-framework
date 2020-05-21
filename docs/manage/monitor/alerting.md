@@ -61,9 +61,9 @@ Azure Monitor has four types of alerts, each somewhat tied to the repository tha
 
 - [Log query alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-log-query): Available to alerts on content in the Application Insights or Azure logs stores. It can also alert based on cross-workspace queries.
 
-- [Activity log alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log): Alerts on items in the activity log store, with the exception of Service Health data.
+- [Activity log alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log): Alerts on items in the activity log store, with the exception of Azure Service Health data.
 
-- [Service Health alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log-service-notifications): A special type of alert that's used only for Service Health issues that come from the activity log store, such as outages and upcoming planned maintenance. Note that this type of alert is configured through [Azure Service Health](https://docs.microsoft.com/azure/service-health/service-health-overview), a companion service to Azure Monitor.
+- [Azure Service Health alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log-service-notifications): A special type of alert that's used only for Azure Service Health issues that come from the activity log store, such as outages and upcoming planned maintenance. Note that this type of alert is configured through [Azure Service Health](https://docs.microsoft.com/azure/service-health/service-health-overview), a companion service to Azure Monitor.
 
 ### Enable alerting through partner tools
 
@@ -123,4 +123,4 @@ Be sure to note the [limits on the number of alerts you can create](https://docs
 
 ### Best query experience
 
-If you're looking for trends across all your data, it makes sense to import all your data into Azure Logs, unless it's already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import activity log and Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This approach also gives you the ability to create complex query conditions and alert on them.
+If you're looking for trends across all your data, it makes sense to import all your data into Azure Logs, unless it's already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import activity log and Azure Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This approach also gives you the ability to create complex query conditions and alert on them.

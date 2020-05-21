@@ -6,7 +6,7 @@ ms.author: janet
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.topic: conceptual
-ms.date: 04/30/2020
+ms.date: 05/15/2020
 ---
 
 # Function of cloud infrastructure and endpoint security
@@ -17,7 +17,7 @@ A cloud security team working on infrastructure and endpoint security provides s
 
 Software defined datacenters and other cloud technologies are helping solve longstanding challenges with infrastructure and endpoint security including:
 
-- **Inventory and configuration error discovery** are much more reliable for cloud hosted assets as they are all immediately visible (vs. A physical datacenter).
+- **Inventory and configuration error discovery** are much more reliable for cloud hosted assets as they're all immediately visible (vs. A physical datacenter).
 - **Vulnerability management** evolving into a critical part of overall security posture management.
 - **Addition of container technologies** to be managed and secured by infrastructure and network team(s) as the organization adopts this technology broadly. See [container security in Security Center](https://docs.microsoft.com/azure/security-center/container-security) for an example.
 - **Security agent consolidation** and tool simplification to reduce the maintenance and performance overhead of security agents and tools.

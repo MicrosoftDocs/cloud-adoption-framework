@@ -21,8 +21,8 @@ This article advances the narrative by adding identity baseline controls to the 
 The business justification for the cloud migration of the two datacenters was approved by the CFO. During the technical feasibility study, several roadblocks were discovered:
 
 - Protected data and mission-critical applications represent 25% of the workloads in the two datacenters. Neither can be eliminated until the current governance policies regarding sensitive personal data and mission-critical applications have been modernized.
-- 7% of the assets in those datacenters are not cloud-compatible. They will be moved to an alternate datacenter before termination of the datacenter contract.
-- 15% of the assets in the datacenter (750 virtual machines) have a dependency on legacy authentication or third-party multi-factor authentication.
+- 7% Of the assets in those datacenters are not cloud-compatible. They will be moved to an alternate datacenter before termination of the datacenter contract.
+- 15% Of the assets in the datacenter (750 virtual machines) have a dependency on legacy authentication or third-party multi-factor authentication.
 - The VPN connection that connects existing datacenters and Azure does not offer sufficient data transmission speeds or latency to migrate the volume of assets within the two-year timeline to retire the datacenter.
 
 The first two roadblocks are being managed in parallel. This article will address the resolution of the third and fourth roadblocks.
@@ -33,7 +33,7 @@ The cloud governance team is expanding. Given the need for additional support re
 
 ### Changes in the current state
 
-The IT team has approval to move forward with the CIO and CFO's plans to retire two datacenters. However, IT is concerned that 750 (15%) of the assets in those datacenters will have to be moved somewhere other than the cloud.
+The IT team has approval to move forward with the CIO and CFO's plans to retire two datacenters. The team is concerned that 750 (15%) of the assets in those datacenters will have to be moved somewhere other than the cloud.
 
 ### Incrementally improve the future state
 

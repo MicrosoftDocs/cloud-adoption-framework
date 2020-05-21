@@ -3,7 +3,7 @@ title: "Get started: Align your organization"
 description: Recommended steps for aligning your organization so that you're ready for successful cloud adoption.
 author: JanetCThomas
 ms.author: janet
-ms.date: 05/05/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -36,11 +36,11 @@ The next step is to map specific people to the necessary functions. To do so, an
 - What person will be accountable for defining those governance controls?
 - Are there other functions or people that will have accountability or responsibility within the cloud adoption plan?
 
-After you've documented the answers to these questions, see [plans for skills readiness](../plan/adapt-roles-skills-processes.md) to help define your plans to prepare these people for forthcoming work.
+After you've documented the answers to these questions, see [Plans for skills readiness](../plan/adapt-roles-skills-processes.md) to help define your plans to prepare these people for forthcoming work.
 
 ## Step 3: Determine how teams align within your organization
 
-The following organizational structures don't necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. 
+The following organizational structures don't necessarily have to map to an organizational chart (org chart). Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities.
 
 In an agile matrix organization, these structures might be best represented as virtual teams (v-teams). There's nothing to suggest that v-teams couldn't be represented in an org chart, but a formal org chart isn't necessary to produce an effective operating model.
 

@@ -68,7 +68,7 @@ Combined, these experiences give you a comprehensive view of Azure health, at a 
 
 ## Learn more
 
-To learn more, see the [Azure Service Health documentation](https://docs.microsoft.com/azure/service-health).
+For more information, see [Azure Service Health](https://docs.microsoft.com/azure/service-health).
 
 ::: zone-end
 

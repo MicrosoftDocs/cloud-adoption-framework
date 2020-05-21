@@ -3,7 +3,7 @@ title: What's new
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: JanetCThomas
 ms.author: janet
-ms.date: 03/27/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview

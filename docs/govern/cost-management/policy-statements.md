@@ -22,7 +22,7 @@ The following sample policy statements address common cost-related business risk
 
 ## Future-proofing
 
-**Business risk:** Current criteria that don't warrant an investment in a Cost Management discipline from the governance team. However, you anticipate such an investment in the future.
+**Business risk:** Current criteria that don't warrant an investment in a Cost Management discipline from the governance team, but you anticipate such an investment in the future.
 
 **Policy statement:** You should associate all assets deployed to the cloud with a billing unit and application or workload. This policy will ensure that your Cost Management discipline is effective.
 

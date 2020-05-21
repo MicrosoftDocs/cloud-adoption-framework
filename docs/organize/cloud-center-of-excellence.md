@@ -3,7 +3,7 @@ title: "Understand cloud center of excellence (CCoE) functions"
 description: Understand the functions of a cloud center of excellence (CCoE), including the source, the scope and the deliverable.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/20/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -56,7 +56,7 @@ The CCoE is a function staffed by four high demand teams. It is important to all
 
 ## Solutions and controls
 
-Each member of the CCoE is tasked with understanding the necessary constraints, risks, and protections that led to the current set of IT controls. The collective efforts of the CCoE should turn that understanding into cloud-native (or hybrid) solutions or controls, which enable the desired self-service business outcomes. As solutions are created, they are shared with various teams in the form of controls or automated processes that serve as guardrails for various efforts. Those guardrails help to route the free-flowing activities of various teams, while delegating responsibilities to the participants in various migration or innovation efforts.
+Each member of the CCoE is tasked with understanding the necessary constraints, risks, and protections that led to the current set of IT controls. The collective efforts of the CCoE should turn that understanding into cloud-native (or hybrid) solutions or controls, which enable the desired self-service business outcomes. As solutions are created, they're shared with various teams in the form of controls or automated processes that serve as guardrails for various efforts. Those guardrails help to route the free-flowing activities of various teams, while delegating responsibilities to the participants in various migration or innovation efforts.
 
 Examples of this transition:
 
@@ -92,11 +92,11 @@ In healthy cloud-forward companies, this negotiation process is a dynamic conver
 
 Before proceeding with this model, it is important to validate the company's tolerance for a growth mindset and IT's comfort with releasing central responsibilities. As mentioned above, the purpose of a CCoE is to exchange control for agility and speed.
 
-This type of change takes time, experimentation, and negotiation. There will be bumps and set backs during this maturation process. However, if the team stays diligent and isn't discouraged from experimentation, there is a high probability of success in improving agility, speed, and reliability. One of the biggest factors in success or failure of a CCoE is support from leadership and key stakeholders.
+This type of change takes time, experimentation, and negotiation. There will be bumps and set backs during this maturation process. But if the team stays diligent and isn't discouraged from experimentation, there is a high probability of success in improving agility, speed, and reliability. One of the biggest factors in success or failure of a CCoE is support from leadership and key stakeholders.
 
 ### Key stakeholders
 
-IT leadership is the first and most obvious stakeholder. IT managers will play an important part. However, the support of the CIO and other executive-level IT leaders is needed during this process.
+IT leadership is the first and most obvious stakeholder. IT managers will play an important part. But the support of the CIO and other executive-level IT leaders is needed during this process.
 
 Less obvious is the need for business stakeholders. Business agility and time-to-market are key motivations for CCoE formation. As such, the key stakeholders should have a vested interest in these areas. Examples of business stakeholders include line-of-business leaders, finance executives, operations executives, and business product owners.
 
@@ -113,11 +113,11 @@ CCoE efforts can be accelerated with support from the business stakeholders. Muc
 These data points are not an attack on IT. Instead, they help CCoE learn from the past and establish a realistic backlog and plan for improvement.
 
 **Ongoing support and engagement:**
-CCoE teams can demonstrate quick returns in some areas. However, the higher-level goals, like business agility and time-to-market, can take much longer. During maturation, there is a high risk of the CCoE becoming discouraged or being pulled off to focus on other IT efforts.
+CCoE teams can demonstrate quick returns in some areas. But the higher-level goals, like business agility and time-to-market, can take much longer. During maturation, there is a high risk of the CCoE becoming discouraged or being pulled off to focus on other IT efforts.
 
 During the first six to nine months of CCoE efforts, we recommend that business stakeholders allocate time to meet monthly with the IT leadership and the CCoE. There is little need for formal ceremony to these meetings. Simply reminding the CCoE members and their leadership of the importance of this program can go along way to driving CCoE success.
 
-Additionally, we recommend that the business stakeholders stay informed of the progress and blockers experienced by the CCoE team. Many of their efforts will seem like technical minutiae. However, it is important for business stakeholders to understand the progress of the plan, so they can engage when the team looses steam or becomes distracted by other priorities.
+Additionally, we recommend that the business stakeholders stay informed of the progress and blockers experienced by the CCoE team. Many of their efforts will seem like technical minutiae. But it is important for business stakeholders to understand the progress of the plan, so they can engage when the team looses steam or becomes distracted by other priorities.
 
 ### IT stakeholder support
 
@@ -125,7 +125,7 @@ Additionally, we recommend that the business stakeholders stay informed of the p
 
 **Maintain focus:** A CCoE can be a significant commitment for any resource-constrained IT team. Removing strong architects from short-term projects to focus on long-term gains can create difficulty for team members who aren't part of the CCoE. It is important that IT leadership and IT stakeholders stay focused on the goal of the CCoE. The support of IT leaders and IT stakeholders is required to deprioritize the disruptions of day-to-day operations in favor of CCoE duties.
 
-**Create a buffer:** The CCoE team will experiment with new approaches. Some of those approaches won't align well with existing operations or technical constraints. There is a real risk of the CCoE experiencing pressure or recourse from other teams when experiments fail. Encouragement and buffering the team from the consequences of "fast fail" learning opportunities is important. It's equally important to hold the team accountable to a growth mindset, ensuring that they are learning from those experiments and finding better solutions.
+**Create a buffer:** The CCoE team will experiment with new approaches. Some of those approaches won't align well with existing operations or technical constraints. There is a real risk of the CCoE experiencing pressure or recourse from other teams when experiments fail. Encouragement and buffering the team from the consequences of "fast fail" learning opportunities is important. It's equally important to hold the team accountable to a growth mindset, ensuring that they're learning from those experiments and finding better solutions.
 
 ## Next steps
 

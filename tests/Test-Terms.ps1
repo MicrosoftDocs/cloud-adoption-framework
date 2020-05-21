@@ -34,7 +34,7 @@ function Get-CasingExpressions
         'Application Insights'
         'ARM'
         'ASE'
-        'ASG'
+        'ASGs?'
         'Asia'
         'Asia Pacific'
         'Asian'
@@ -126,6 +126,7 @@ function Get-CasingExpressions
             'Key Vault'
             'a key vault'
             'the key vault'
+        'Azure Kinect DK'
         'Azure Kubernetes Service'
         'Azure Lighthouse'
         'Azure Load Balancer'
@@ -155,6 +156,7 @@ function Get-CasingExpressions
         'Azure Sentinel'
         'Azure Serverless Computing Cookbook'
         'Azure Service Health'
+            'Service Health alerts'
         'Azure Service Map'
         'Azure Site Recovery'
         'Azure Spatial Anchors'
@@ -162,6 +164,7 @@ function Get-CasingExpressions
         'Azure Spring Cloud'
         'Azure SQL Data Warehouse'
         '(Azure )?SQL Database'
+        'Azure SQL Edge'
         'Azure Stack( Development Kit)?'
         'Azure Storage'
             'Blob storage'
@@ -180,6 +183,7 @@ function Get-CasingExpressions
         'Azure Virtual Hub'
         'Azure Virtual Network'
         'Azure Virtual WAN'
+        'Azure Well-Architected Framework'
         'B2B'
         'B2C'
         'BCDR'
@@ -195,6 +199,8 @@ function Get-CasingExpressions
         'CI/CD'
             'CD'
             'CI'
+        'CICS'
+        'CIDR'
         'CIOs?'
         'CISOs?'
         'CLI'
@@ -230,7 +236,7 @@ function Get-CasingExpressions
         'DCs?'
         'DDoS'
         'Dell'
-        'DeployIfNotExist'
+        'DeployIfNotExists'                 # TODO: Add https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects
         'Desired State Configuration'
         'DevOps'
         'DevSecOps'
@@ -290,6 +296,8 @@ function Get-CasingExpressions
         'Hewlett-Packard'
         'HIPAA'
         'HP'
+        'HPE zRef'
+        'HQs?'
         'HSMs?'
         'HTTP/S'
         'HoloLens'
@@ -337,7 +345,6 @@ function Get-CasingExpressions
         'Kafka'
         'KB'
         'Kbps'
-        'Kinect DK'
         'Korea'
         'KPIs?'
         'Kubernetes'
@@ -358,6 +365,7 @@ function Get-CasingExpressions
         'MB'
         'Mbps'
         'Microsoft(''s)?'
+        'Microsoft Azure Well-Architected Review'
         'Microsoft Consulting Services'
         'Microsoft Excel'
         'Microsoft IT Pro Career Center'
@@ -370,6 +378,7 @@ function Get-CasingExpressions
         'Microsoft Service Trust Portal'
         'Microsoft Trust Center'
         'Microsoft Word'
+        'MIPS'
         'ML Services'
         'MOF'
         'Monday'
@@ -457,7 +466,7 @@ function Get-CasingExpressions
         'REST client'
         'RESTful'
         'RESTful APIs?'
-        'RFC'
+        'RFCs?'
         'ROI'
         'RPOs?'
         'RSS'
@@ -483,6 +492,7 @@ function Get-CasingExpressions
         'Service Provider Foundation'
         'SGX'
         'SharePoint'
+        'SIEM'
         'Site Recovery( Mobility)?'
             'the Mobility service'
         'Six Sigma'
@@ -770,7 +780,7 @@ function Get-InvalidTermExpressions {
         "multi-(?!factor|model|shard)!!multi"
         'multi-cloud!!multicloud'
         "no ops!!no-ops"
-        "non-(?!business|cloud|DR|EA|mission|IaaS|internet|PaaS|production-ready)!!non"
+# TODO: Revisit.        "non-(?!business|cloud|DR|EA|mission|IaaS|internet|PaaS)!!non"
         "northstar!!~~DO NOT USE"
         "off-site!!offsite"
         "on-board(?:ed|ing)?!!onboard"
@@ -791,6 +801,7 @@ function Get-InvalidTermExpressions {
         're-(?!create|created|creating)!!~~Don''t hyphenate'
         'role-based access controls!!role-based access control'
         'SecDevOps!!DevSecOps'
+        'SEIM!!SIEM'
         'seperate!!separate'
         'seperation!!separation'
         "separation of duty!!separation of duties"
@@ -807,6 +818,7 @@ function Get-InvalidTermExpressions {
         'such as, !!such as '
         '(teh|hte)!!the'
         "the best practices (?!defined|outlined|in|and|are)"
+        "they are!!they're"
         '(?<!by a )third party!!third-party'
         'time-?frame!!time frame'
         '(?<=under|over)[ -]utilization!!utilization'
@@ -821,6 +833,7 @@ function Get-InvalidTermExpressions {
         "w/!!with"
         "with title"
         "ye!!yes"
+        "you are!!you're"
 
         # TODO: Find a better option for flagging spelling variants.
         # "(?<!\benterpr|_\benterpr|\br|\badv|\blikew|\botherw|\bcompr|\bconc|\bunw|\bw|\bexerc|\bexpert|\bprem|\bon-prem|\bsurpr|\bno|\badvert|\brev|\bprom|\bcomprom|\bar|\bprec|\brev|\blikew\badv|\bra|\bdev|\brev|\bcru)ises?\b"

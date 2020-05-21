@@ -32,7 +32,7 @@ The following is a set of example processes commonly involved in the Resource Co
 
 This planning process is also a good time to evaluate the current membership of your cloud governance team for knowledge gaps related to new or changing policy and risks associated with the Resource Consistency discipline. Invite relevant IT staff to participate in reviews and planning as either temporary technical advisors or permanent members of your team.
 
-**Education and training:** On a bimonthly basis, offer training sessions to make sure IT staff and developers are up-to-date on the latest Resource Consistency policy requirements and guidance. As part of this process review and update any documentation or other training assets to ensure they are in sync with the latest corporate policy statements.
+**Education and training:** On a bimonthly basis, offer training sessions to make sure IT staff and developers are up-to-date on the latest Resource Consistency policy requirements and guidance. As part of this process review and update any documentation or other training assets to ensure they're in sync with the latest corporate policy statements.
 
 **Monthly audit and reporting reviews:** On a monthly basis, perform an audit on all cloud deployments to assure their continued alignment with Resource Consistency policy. Review related activities with IT staff and identify any compliance issues not already handled as part of the ongoing monitoring and enforcement process. The result of this review is a report for the cloud strategy team and each cloud adoption team to communicate overall performance and adherence to policy. The report is also stored for auditing and legal purposes.
 

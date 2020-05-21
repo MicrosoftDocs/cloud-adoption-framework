@@ -43,7 +43,7 @@ Your tagging approach can be simple or complex, with the emphasis ranging from s
 
 An IT-aligned tagging focus, such as tagging based on workload, application, function, or environment, reduces the complexity of monitoring assets and simplifies making management decisions based on operational requirements.
 
-Tagging schemes that include a business aligned focus, such as accounting, business ownership, or business criticality may require a larger time investment to create tagging standards that reflect business interests and maintain those standards over time. However, the result of this process is a tagging system providing an improved ability to account for costs and value of IT assets to the overall business. This association of an asset's business value to its operational cost is one of the first steps in changing the cost center perception of IT within your wider organization.
+Tagging schemes that include a business-aligned focus, such as accounting, business ownership, or business criticality may require a larger time investment to create tagging standards that reflect business interests and maintain those standards over time. This investment yields a tagging system that provides improved accounting for costs and value of IT assets to the overall business. This association of an asset's business value to its operational cost is one of the first steps in changing the cost center perception of IT within your wider organization.
 
 ## Baseline naming conventions
 

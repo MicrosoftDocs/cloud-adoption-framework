@@ -6,12 +6,16 @@ ms.author: janet
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud adoption team
 
-Cloud adoption teams are the modern-day equivalent of technical implementation teams or project teams. However, the nature of the cloud might require a more fluid team structure. Some cloud adoption teams focus exclusively on cloud migration, while others focus on innovations that take advantage of cloud technologies. Some include the broad technical expertise required to complete large adoption efforts, like a full datacenter migration, while others have a tighter technical focus and might move between projects to accomplish specific goals, for example, a team of data platform specialists who help convert SQL VMs to SQL PaaS instances.
+Cloud adoption teams are the modern-day equivalent of technical implementation teams or project teams. The nature of the cloud might require more fluid team structures.
+
+Some cloud adoption teams focus exclusively on cloud migration, and others focus on innovations that take advantage of cloud technologies. Some teams include the broad technical expertise that's required to complete large adoption efforts, such as a full datacenter migration, and others have a tighter technical focus.
+
+A smaller team might move between projects to accomplish specific goals. For example, a team of data platform specialists might focus on helping convert SQL Database virtual machines (VMs) to SQL PaaS instances.
 
 ![Get started building a cloud adoption team](../../_images/get-started/adoption-team-map.png)
 
@@ -19,44 +23,43 @@ Cloud adoption teams are the modern-day equivalent of technical implementation t
 
 Cloud adoption teams tend to perform one or more of the following types of adoption:
 
-    - Migration of existing workloads.
-    - Modernization or existing workloads and assets.
-    - Architectural change to existing workloads and assets
-    - Development of new workloads.
+- Migration of existing workloads
+- Modernization of existing workloads and assets
+- Architectural change to existing workloads and assets
+- Development of new workloads
 
-Adoption of any IT portfolio will likely require a mixture of these skills. Unfortunately, those different efforts require different skills and mindsets. There more specialized an adoption team is across these efforts, the more effective and efficient that team will be when delivering that type of work. Conversely, mastery of all of the implementation options across cloud adoption can be an overwhelming effort.
+The adoption of any IT portfolio will likely require a mixture of these types of efforts. Unfortunately, each type requires different skills and mindsets. The more specialized an adoption team, the more effective and efficient the team will be when it delivers that type of work. Conversely, mastery of all the implementation options across cloud adoption can be overwhelming for these more specialized teams.
 
-When first building a cloud adoption team, aligning to one of the Adopt methodologies will help accelerate development of the team's collective skills.
+When you're first building a cloud adoption team, aligning with one of the Adopt methodologies will help accelerate the development of the team's collective skills.
 
 **Deliverables:**
 
 - Determine which methodology the team best aligns with: the Migrate methodology or the Innovate methodology.
-- Each methodology has a four-step onboarding experience to help understand the tools and processes required to get really good at that effort. Invest time as a team going through the first few steps to understand which tools and scenarios you are most likely to need in early iterations.
-- Update your companies [RACI template](../../organize/raci-alignment.md) to help others understand who is on the team and which methodology the team will focus on delivering.
+- Each methodology has a four-step onboarding experience to help the team understand the tools and processes required to get really good at that effort. Invest time as a team going through the first few steps to understand which tools and scenarios you're most likely to need in early iterations.
+- Update your company's [RACI (responsible, accountable, consulted, and informed) template](../../organize/raci-alignment.md) to help others understand who's on the team and which methodology the team will focus on delivering.
 
 **Guidance to support deliverable completion:**
 
 - [Migrate methodology overview](../../migrate/index.md) describes the process, tools, and approaches for migrating and modernizing a portfolio of workloads.
 - [Innovate methodology overview](../../innovate/index.md) describes the process, tools, and approaches for adding cloud-native workloads to the portfolio.
-- [Understanding motivations](../../strategy/motivations.md) behind this effort to see if they are better aligned to migration or innovation efforts.
+- [Understand motivations](../../strategy/motivations.md) behind this effort to see whether they're better aligned with migration or innovation efforts.
 
-## Step 2: Align your team to other supporting teams
+## Step 2: Align your team with other supporting teams
 
 If your company's cloud adoption effort is mature enough to have supporting teams, you might be able to find a list of the teams and subject matter experts in your company's version of the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx), including cloud governance, cloud operations, a cloud center of excellence, or other similar teams.
 
 **Deliverables:**
 
-- Review design guidance, operational baselines, policies, and processes from the various supporting teams to understand the guardrails that have been established to guide cloud adoption.
-- Review guidance with other cloud adoption teams to understand any limitations you might encounter as a result of those guardrails.
+- Review design guidance, operational baselines, policies, and processes from the various supporting teams to understand the guardrails that have been established for guiding cloud adoption.
+- Review the guidance with other cloud adoption teams to understand any limitations you might encounter as a result of those guardrails.
 
 **Guidance to support deliverable completion:**
 
-- [Evaluate corporate policy](../../govern/corporate-policy.md) outlines the steps to define corporate policy, which might limit decisions which can safely be made in the company's cloud environment.
-- [Governance disciplines](../../govern/corporate-policy.md) outlines the types of controls or disciplined processes which the governance team is likely to have implemented to allow for safe, compliant adoption of the cloud.
-- The [Manage methodology](../../manage/index.md) outlines the considerations that goes into a cloud operations baseline to provide basic operations management.
+- [Evaluate corporate policy](../../govern/corporate-policy.md) outlines the steps to define corporate policy, which might limit decisions that the team can safely make in the company's cloud environment.
+- [Governance disciplines](../../govern/corporate-policy.md) outlines the types of controls or disciplined processes that the governance team has likely implemented to allow for safe, compliant adoption of the cloud.
+- The [Manage methodology](../../manage/index.md) outlines the considerations that go into a cloud operations baseline for providing basic operations management.
 
 <!-- markdownlint-disable MD033 -->
-<br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
@@ -64,24 +67,24 @@ If your company's cloud adoption effort is mature enough to have supporting team
 
 ## Step 3: Begin your adoption journey
 
-Depending on the type of adoption team you are a member of, you will get started with one of two journeys:
+Depending on the type of adoption team you're a member of, you'll get started with one of these journeys:
 
-- Get started: Migrating workloads to the cloud.
-- Get started: Building new products or services.
+- Get started: Migrate workloads to the cloud
+- Get started: Build new products or services
 
-In each of those getting started guides, you will see guidance for different teams listed along with varying degrees of accountability and responsibility. Use those as reference to understand how your team fits into the rest of the journey. Also use those references to understand the levels of support you will be able to get from around the company.
+In each of these get-started guides, you'll find guidance for various teams listed alongside their varying degrees of accountability and responsibility. Use the guides to understand how your team fits into the rest of the journey. Also use them to understand the levels of support you can expect to get from around the company.
 
-In the end, the cloud adoption team will be accountable for delivery over assigned migration efforts or new product development. While supporting teams are accountable for ensuring steps get completed, it is the responsibility of each cloud adoption team to ensure they are getting the support they need to be successful. The adoption team is encouraged to partner with other teams to complete those steps, if the accountable team doesn't exist or needs more support to deliver on their accountable steps.
+In the end, the cloud adoption team is accountable for delivery across their assigned migration efforts or new product development. Although supporting teams are accountable for ensuring that each step is completed, it's the responsibility of each cloud adoption team to ensure that the supporting team is getting the support it needs to be successful. If the accountable team doesn't yet exist or needs more support to deliver on its accountable steps, the adoption team is encouraged to partner with other teams to complete its deliverables.
 
 **Deliverables:**
 
 - Become increasingly better at delivering on the methodology associated with your adoption approach.
-- Support other teams in completion of accountable steps, when those steps are blockers to your adoption.
+- Support other teams in the completion of their accountable steps, even if those steps are blockers to your adoption efforts.
 
 **Guidance to support deliverable completion:**
 
-- In the getting started guide for migration, the adoption team is accountable for delivery of [step 10: migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
-- In the getting started guide for new products, the adoption team is accountable for delivery of [step 8: innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
+- In the get-started guide for migration, the adoption team is accountable for delivery of [step 10: migrate your first workload](../migrate.md#step-8-migrate-your-first-10-workloads).
+- In the get-started guide for new products, the adoption team is accountable for delivery of [step 8: innovate in the cloud](../innovate.md#step-8-innovate-in-the-cloud).
 
 All other steps on those checklists are designed to make the effort more manageable.
 
@@ -90,11 +93,11 @@ All other steps on those checklists are designed to make the effort more managea
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Ultimately, the cloud adoption team is accountable for success. | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT <li> Cloud strategy team |
+| <li> Cloud adoption team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT <li> Cloud strategy team |
 
 ## Step 4: Expand your skills with scenarios and best practices
 
-After one or two iterations of adoption, the team will understand the basics of their primary adoption methodology. From there, the team will likely be ready to take on additional scenarios and start implementing some additional best practices. Each of the following links provide landing pages exposing a section of the table of contents containing lists of both types of guidance for the team to review and expand their skills.
+After one or two iterations, the cloud adoption team will understand the basics of their primary methodology. From there, the team will likely be ready to take on additional scenarios and start implementing some additional best practices.
 
 **Deliverables:**
 
@@ -102,16 +105,20 @@ After one or two iterations of adoption, the team will understand the basics of 
 
 **Guidance to support deliverable completion:**
 
+The team can review and expand their skills by reviewing the following guidance:
+
 - Migrate new types of workloads or solve more complex migration challenges through [scenarios](../../migrate/azure-best-practices/contoso-migration-overview.md) and [best practices](../../migrate/azure-best-practices/index.md).
-- Innovate using new cloud-native solutions or solve more complex innovation challenges through [scenarios](../../innovate/kubernetes/index.md) and [best practices](../../innovate/best-practices/index.md).
+- Innovate by using new cloud-native solutions, or solve more complex innovation challenges through [scenarios](../../innovate/kubernetes/index.md) and [best practices](../../innovate/best-practices/index.md).
 
 **Accountable team:**
 
-The cloud adoption team is accountable for expanding their skills.
+- The cloud adoption team is accountable for expanding its skills.
 
 ## Step 5: Build a cloud adoption factory
 
-As the team becomes more familiar with various adoption scenarios, you will be able to do more faster. This section of guidance will take your ability for adoption to the next level. The cloud adoption factory approach looks at the processes behind adoption efforts. Most of the time burden related to migration and innovation comes from the high volume of meetings, due to lack of understanding and transparency. Clearly defining processes and interactions at various phases of the cloud adoption journey will remove cultural and political blockers.
+As the team becomes more familiar with various adoption scenarios, it will be able to do more and do it faster. This section of guidance will take the team's adoption abilities to the next level.
+
+The cloud adoption factory approach looks at the processes behind adoption efforts. Because of a lack of understanding and clear communication, most of the time burden that's related to migration and innovation comes from a high volume of meetings. Clearly defining processes and interactions at various phases of the cloud adoption journey will remove cultural and political blockers.
 
 **Deliverables:**
 
@@ -119,17 +126,17 @@ As the team becomes more familiar with various adoption scenarios, you will be a
 
 **Guidance to support deliverable completion:**
 
-- Process guidance to support [migration efforts](../../migrate/migration-considerations/index.md) can be found in the process improvements section of the Migrate methodology.
-- In the Innovate methodology, the guidance focuses on [innovation processes](../../innovate/considerations/index.md) that result in less technology and more impactful product development.
+- Process guidance that supports [migration efforts](../../migrate/migration-considerations/index.md) can be found in the process improvements section of the Migrate methodology.
+- In the Innovate methodology, the guidance focuses on [innovation processes](../../innovate/considerations/index.md) that result in less technology and more effective product development.
 
 **Accountable team:**
 
-The cloud adoption team is accountable for building the processes that take adoption to the next level.
+- The cloud adoption team is accountable for building the processes that take adoption to the next level.
 
 ## What's next
 
-Adoption is great, but ungoverned adoption can produce unexpected results. Align cloud adoption with [cloud governance functions](../../organize/cloud-governance.md) to accelerates adoption and best practices, while reducing business and technical risks.
+Cloud adoption is a great goal, but ungoverned adoption can produce unexpected results. To accelerate adoption and best practices, as you're reducing business and technical risks, align cloud adoption with [cloud governance functions](../../organize/cloud-governance.md).
 
-These two teams create balance across cloud adoption efforts, but this is considered an MVP because it might not be sustainable. Each team is wearing many hats, as outlined in the [_responsible, accountable, consulted, informed_ (RACI) charts](../../organize/raci-alignment.md).
+Aligning with the cloud governance team creates balance across cloud adoption efforts, but this is considered a minimum viable product (MVP), because it might not be sustainable. Each team is wearing many hats, as outlined in the [RACI charts](../../organize/raci-alignment.md).
 
-Learn more about [organizational antipatterns: silos and fiefdoms](../../organize/fiefdoms-silos.md).
+Learn more about overcoming [organizational antipatterns: silos and fiefdoms](../../organize/fiefdoms-silos.md).

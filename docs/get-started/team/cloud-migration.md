@@ -6,12 +6,12 @@ ms.author: janet
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud migration team
 
-Cloud migration teams are the modern-day equivalent of technical implementation teams or project teams. However, the nature of the cloud might require a more fluid team structure. Some migration teams focus exclusively on cloud migration, while others focus on innovations that take advantage of cloud technologies. Some include the broad technical expertise required to complete large adoption efforts, like a full datacenter migration, while others have a tighter technical focus and might move between projects to accomplish specific goals, for example, a team of data platform specialists who help convert SQL VMs to SQL PaaS instances.
+Cloud migration teams are the modern-day equivalent of technical implementation teams or project teams. The nature of the cloud might require a more fluid team structure. Some migration teams focus exclusively on cloud migration, while others focus on innovations that take advantage of cloud technologies. Some include the broad technical expertise required to complete large adoption efforts, like a full datacenter migration, while others have a tighter technical focus and might move between projects to accomplish specific goals, for example, a team of data platform specialists who help convert SQL VMs to SQL PaaS instances.
 
 Regardless of the type or number of cloud migration teams, these team(s) generally provides subject matter expertise for IT, business analysis, or implementation partners.
 
@@ -50,7 +50,7 @@ We recommend that teams providing cloud adoption capability be dedicated to the 
 
 It's best if these teams meet daily in a self-organizing way. The goal of daily meetings is to quickly update the backlog, and to communicate what has been completed, what is to be done today, and what things are blocked, requiring additional external support.
 
-Release schedules and iteration durations are unique to each company. However, a range of one to four weeks per iteration seems to be the average duration. Regardless of iteration or release cadence, we recommend that the team meets all supporting teams at the end of each release to communicate the outcome of the release, and to reprioritize upcoming efforts. It's also valuable to meet as a team at the end of each sprint, with the [cloud center of excellence](./cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) to stay aligned on common efforts and any needs for support.
+Release schedules and iteration durations are unique to each company. A range of one to four weeks per iteration seems to be the average duration. Regardless of iteration or release cadence, we recommend that the team meets all supporting teams at the end of each release to communicate the outcome of the release, and to reprioritize upcoming efforts. It's also valuable to meet as a team at the end of each sprint, with the [cloud center of excellence](./cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) to stay aligned on common efforts and any needs for support.
 
 Some of the technical tasks associated with cloud adoption can become repetitive. Team members should rotate every 3&ndash;6 months to avoid employee satisfaction issues and maintain relevant skills. A rotating seat on [cloud center of excellence](./cloud-center-of-excellence.md) or [cloud governance team](./cloud-governance.md) can provide an excellent opportunity to keep employees fresh and harness new innovations.
 

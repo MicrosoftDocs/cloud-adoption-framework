@@ -3,7 +3,7 @@ title: "Improve operations"
 description: Use the Cloud Adoption Framework to improve operations. These scenarios can help you with cost management, security, reliability, performance, and more.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -28,6 +28,6 @@ The core principles of a well-managed operating model are based on a set of comm
 
 ![Shared architecture principles](../_images/shared-principles.png)
 
-The above principles are shared across [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview), [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework), and solutions in the [Azure Architecture Center](https://docs.microsoft.com/azure/architecture). Azure Advisor evaluates the principles for individual resources. Azure Architecture Center applies these principles to provide well-architected solutions. Azure Architecture Framework helps balance these principles across a workload, when making architecture decisions.
+The above principles are shared across [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview), [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework), and solutions in the [Azure Architecture Center](https://docs.microsoft.com/azure/architecture). Azure Advisor evaluates the principles for individual resources. Azure Architecture Center applies these principles to provide well-architected solutions. Microsoft Azure Well-Architected Framework helps balance these principles across a workload, when making architecture decisions.
 
 The Cloud Adoption Framework ensures a well-managed environment by applying these principles across the portfolio of workloads and the supporting environments.

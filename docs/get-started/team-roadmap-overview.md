@@ -3,7 +3,7 @@ title: "Getting started guides for cloud adoption teams"
 description: Use these getting started guides to understand the goals and responsibilities of the teams responsible for your cloud adoption efforts. These guides provide a roadmap through the Cloud Adoption Framework.
 author: JanetCThomas
 ms.author: janet
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview

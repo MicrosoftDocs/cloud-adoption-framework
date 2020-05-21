@@ -32,12 +32,12 @@ Azure customers employ a continually expanding set of connected systems and devi
 > [!div class="checklist"]
 >
 > - Industrial assets
-> - HoloLens 2
-> - Azure Sphere
-> - Kinect DK
+> - [Microsoft HoloLens 2](https://docs.microsoft.com/hololens2)
+> - [Azure Sphere](https://docs.microsoft.com/azure-sphere/product-overview/what-is-azure-sphere)
+> - [Azure Kinect DK](https://docs.microsoft.com/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
-> - Azure SQL Database Edge
-> - IoT Plug and Play
+> - [Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview)
+> - [IoT Plug and Play](https://docs.microsoft.com/azure/iot-pnp/overview-iot-plug-and-play)
 
 <!-- markdownlint-disable MD025 -->
 

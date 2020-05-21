@@ -83,7 +83,7 @@ During migration efforts, it is common for adoption teams to assume that workloa
 
 **Minimum scope:** During early-stage planning, use the rehost option for planning, with a clear understanding that this option is an initial business assumption and not a technical decision. In the Migrate methodology, the cloud adoption team would then challenge this assumption for each migrated workload. This methodology follows the assess/migrate/promote approach for each workload or group or workloads creating a migration factory. During the Assess phase, the adoption team evaluates technical fit and architecture of each workload. That assessment effort seldom results in a pure lift and shift approach, because many of the components in the architecture tend to be selected for refactoring and modernization.
 
-**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the Assess phase. In these rearchitecture situations, customers should use the Azure Architecture Review and Azure Architecture Framework to refine workload requirements during the assessment.
+**Expanded scope example:** For mission-critical or high-sensitivity workloads, like a mainframe or multitier microservices application, a deeper assessment of the workload may be required during the Assess phase. In these rearchitecture situations, customers should use the Microsoft Azure Well-Architected Review and Microsoft Azure Well-Architected Framework to refine workload requirements during the assessment.
 
 ## Balance during the Innovate phase
 
@@ -96,7 +96,7 @@ True customer-facing innovation creates common conflicting priorities between th
 
 **Minimum scope:** The Innovate methodology illustrates how to integrate strategy and plans through business value consensus. The guide then introduces cloud-native tools that can accelerate each discipline of innovation, accompanying best practices for implementation. Finally the process improvements section demonstrates approaches to building customer empathy while respecting plans and strategies across the cloud adoption journey. This approach focuses on delivering innovation with the use of as little technology as is possible.
 
-**Expanded scope example:** At times, an innovation may be dependent on mission-critical or high-sensitivity workloads. When the "customer" is an internal user, the development effort may be both mission-critical and high-sensitivity during the earliest of iterations. For these scenarios, adoption teams should use Azure Architecture Review and Azure Architecture Framework to evaluate advanced architectural design early in the process.
+**Expanded scope example:** At times, an innovation may be dependent on mission-critical or high-sensitivity workloads. When the "customer" is an internal user, the development effort may be both mission-critical and high-sensitivity during the earliest of iterations. For these scenarios, adoption teams should use Microsoft Azure Well-Architected Review and Microsoft Azure Well-Architected Framework to evaluate advanced architectural design early in the process.
 
 ## Balance during the Govern phase
 
@@ -122,7 +122,7 @@ The IT business model regarding operations management has been continuously evol
 
 **Minimum scope:** The Manage methodology suggests establishing a cloud-native, no-ops baseline. Acknowledging that the no-ops baseline will not meet all business needs, work with the business to define commitments and better align investments. Expand the baseline to meet common needs for all workloads. Then enable platform teams or specific workload teams to maintain well-managed solutions within a well-managed environment.
 
-**Expanded scope example:** In most environments, a small percentage of workloads whose business value justifies deep investments in operations from IT. In those scenarios, the IT team might want to use Azure Architecture Review and Azure Architecture Framework to guide deeper operations.
+**Expanded scope example:** In most environments, a small percentage of workloads whose business value justifies deep investments in operations from IT. In those scenarios, the IT team might want to use Microsoft Azure Well-Architected Review and Microsoft Azure Well-Architected Framework to guide deeper operations.
 
 ## Balance during the Organize phase
 
