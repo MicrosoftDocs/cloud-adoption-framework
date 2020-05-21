@@ -16,7 +16,7 @@ This article discusses an approach to policy adherence processes that govern [re
 
 ## Planning, review, and reporting processes
 
-Cloud platforms provide an array of management tools and features that you can use to organize, provision, scale, and minimize downtime. Using these tools to effectively structure and operate your cloud deployments in ways that remediate potential risks requires well thought out processes and policies in addition to close cooperation with IT operations teams and business stakeholders.
+Cloud platforms provide an array of management tools and features that you can use to organize, provision, scale, and minimize downtime. Using these tools to effectively structure and operate your cloud deployments in ways that remediate potential risks requires well-considered processes and policies in addition to close cooperation with IT operations teams and business stakeholders.
 
 The following is a set of example processes commonly involved in the Resource Consistency discipline. Use these examples as a starting point when planning the processes that will allow you to continue to update Resource Consistency policy based on business change and feedback from the development and IT teams tasked with turning guidance into action.
 

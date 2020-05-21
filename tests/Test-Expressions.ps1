@@ -166,7 +166,10 @@ function Get-InvalidFormattingExpressions
 
         #        "(?s)(?<![\r\n])(\r?\n)``````[a-z]+!!`r`n`r`n"  # Blank line before code block.
 #        "(?s)``````(\r?\n)(?![\r\n])!!`r`n`r`n`r`n`r`n" # Blank line after code block.
-        
+
+        "\b_?x%_?\b!!_x percent_"
+        "(?<=[a-z-] )([\d\.]+)%!!$1 percent"
+
         " \* "
         "(?:[a-z ]{2,}, )(?:[a-z ]{1,6}, )+(?!and|or)(?:[a-z ]+)\."   # Missing 'and' or 'or' in series.
         "[A-Za-z\d '-]{2,}, [\w]+, (?!and |or)[A-Za-z\d '-]+\.[ \r\n]"      # Either a missing Oxford comma, or a weird use of commas.

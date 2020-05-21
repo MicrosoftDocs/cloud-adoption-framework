@@ -44,7 +44,7 @@ In Azure, the following tools are commonly used to accelerate digital invention 
 - [Azure Database for PostgreSQL Hyperscale](https://docs.microsoft.com/azure/postgresql/concepts-hyperscale-nodes)
 - [Azure Data Lake](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
 - [Azure Database Migration Service](https://docs.microsoft.com/azure/dms)
-- [Azure SQL Database, with or without managed instances](https://docs.microsoft.com/azure/sql-database)
+- [Azure SQL Database, with or without Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database)
 - [Azure Data Factory](https://docs.microsoft.com/azure/data-factory)
 - [Azure Stream Analytics](https://docs.microsoft.com/azure/stream-analytics)
 - [SQL Server Integration Services](https://docs.microsoft.com/sql/integration-services)

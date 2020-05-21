@@ -154,7 +154,7 @@ Contoso admins set up the virtual network as follows:
     - **SQLMI-DS-EUS2** (10.235.0.0.25).
     - **SQLMI-SAW-EUS2** (10.235.0.128/29). This subnet is used to attach a directory to the Managed Instance.
 
-      ![Managed Instance - Create virtual network](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
+      ![Managed Instance: Create a virtual network](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
 
 4. After the virtual network and subnets are deployed, they peer networks as follows:
 
@@ -181,12 +181,12 @@ Contoso admins set up the virtual network as follows:
 
 ### Set up routing
 
-The Managed Instance is placed in a private virtual network. Contoso needs a route table for the virtual network to communicate with the Azure Management Service. If the virtual network can't communicate with the service that manages it, the virtual network becomes inaccessible.
+The managed instance is placed in a private virtual network. Contoso needs a route table for the virtual network to communicate with the Azure Management Service. If the virtual network can't communicate with the service that manages it, the virtual network becomes inaccessible.
 
 Contoso considers these factors:
 
 - The route table contains a set of rules (routes) that specify how packets sent from the Managed Instance should be routed in the virtual network.
-- The route table is associated with subnets in which Managed Instances are deployed. Each packet that leaves a subnet is handled based on the associated route table.
+- The route table is associated with subnets where managed instances are deployed. Each packet that leaves a subnet is handled based on the associated route table.
 - A subnet can be associated with only one route table.
 - There are no additional charges for creating route tables in Microsoft Azure.
 
@@ -410,7 +410,7 @@ After migration, Contoso needs to complete these cleanup steps:
 
 - Remove the on-premises VMs from the vCenter inventory.
 - Remove the VMs from local backup jobs.
-- Update internal documentation to show the new locations for the SmartHotel360 app. Show the database as running in Azure SQL Managed Instance database, and the front end as running in two web apps.
+- Update internal documentation to show the new locations for the SmartHotel360 app. Show the database as running in Azure SQL Managed Instance, and the front end as running in two web apps.
 - Review any resources that interact with the decommissioned VMs, and update any relevant settings or documentation to reflect the new configuration.
 
 ## Review the deployment

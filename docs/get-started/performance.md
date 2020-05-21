@@ -13,7 +13,7 @@ ms.subservice: overview
 
 How do you ensure adequate performance across a portfolio of workloads? The steps in this guide can help you establish processes for maintaining that level of performance.
 
-Performance also depends on other roles and functions. This article maps those supporting functions to help you create alignment between each of the involved teams.
+Performance also depends on other roles and functions. This article maps those supporting functions to help you create alignment among the involved teams.
 
 Centralized operations management is the most common approach to consistent performance across the portfolio. Decisions about operational practices define the operations baseline and any holistic enhancements.
 

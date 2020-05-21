@@ -105,7 +105,7 @@ Additionally, we recommend that the business stakeholders stay informed of the p
 
 ## Baseline capability
 
-A CCoE model requires collaboration between each of the following capabilities:
+A CCoE model requires collaboration among the following capabilities:
 
 - Cloud adoption (specifically solution architects).
 - Cloud strategy (specifically the program and project managers).

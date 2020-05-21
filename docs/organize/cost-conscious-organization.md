@@ -30,7 +30,7 @@ _Figure 1: Outline of the cost-conscious organization._
 
 - **Optimization:** Optimization is the action that creates cost reductions. During optimization, resource allocations are modified to reduce the cost of supporting various workloads. This process requires iteration and experimentation. Each reduction in cost reduces performance. Finding the right balance between cost control and end-user performance expectations demands input from multiple parties.
 
-The following sections describe the roles that the _cloud strategy team_, _cloud adoption team_, _cloud governance team_, and _cloud center of excellence (CCoE)_ play in developing a cost-conscious organization.
+The following sections describe the roles that various teams play in developing a cost-conscious organization.
 
 ## Cloud strategy team
 
