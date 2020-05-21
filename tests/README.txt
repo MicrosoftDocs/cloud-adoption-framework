@@ -1,6 +1,6 @@
 **NOTE:**
 
-The authoritative source of these Pester tests is:
+The authoritative source of these tests is:
 https://github.com/MicrosoftDocs/cloud-adoption-framework-pr
 
 You can customize some aspects of these tests:
