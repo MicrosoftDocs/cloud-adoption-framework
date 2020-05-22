@@ -256,29 +256,17 @@ Include in your strategy and operating model how you communicate monitoring plan
 
 ## Establish minimum governance
 
-As early as possible, establish how you intend to govern your cloud monitoring investment.  Remember that Azure Monitor is a *tenant* service with visibility across management groups and subscriptions, but can be scoped  on the user’s access control. 
+As early as possible, establish how you intend to govern your cloud monitoring investment. Remember that Azure Monitor is a *tenant* service with visibility across management groups and subscriptions, and users can be scoped to limit their actions with Azure role-based access control.
 
-As early as possible, define a strategy to clearly establish who will have what level of access in Azure to support their role and responsibility, such as:
-
-* Access to different features in the Azure portal
-
-* Ability to configure and manage policies
-
-* Enable, deploy, configure Azure resources such as Log Analytics workspace(s), Azure Monitor agents, Azure Security Center, etc. 
-
-* Access to view monitoring data submitted from resources scoped to a subset of resources in a resource group, across a resource group, across a subscription, etc.
-
-* Govern the development and release of monitoring configurations
-
-It is important to understand what each role will perform in order to build, maintain, and improve monitoring solutions in order plan an access control strategy and grant only the necessary rights they require to successfully perform their role. A higher-level administrator, such as Global Admins, may establish policies for privileged delegation, both in Azure AD directory roles and in Azure with Azure role-based access control (RBAC). You may want your System Administrators to be able to modify settings, add alerts, and set up report workspaces.  
+Define who will have what level of access in Azure to support their role and responsibility. We recommend you to set **Reader** role access for monitoring consumers as early as possible and then start controlling who are granted the **Contributor** role. 
 
 First, identify the roles who will own and manage resource groups in Azure as part of your governance framework:
 
-* Whether a Monitoring Team or one or more Administrators of Resources and Groups will have privileged access to the Monitoring Contributor role.
+* Whether a Monitoring team or one or more administrators of resources and resource groups will have privileged access to the **Monitoring Contributor** role.
 
-* The consumers who should be given the Monitoring Reader role, which enables access to features in Azure Monitor, as well as investigate issues within the Monitoring section that is included with each Azure resource.
+* The consumers who should be granted the **Monitoring Reader** role, which enables access to features in Azure Monitor, as well as investigate issues within the Monitoring section that is included with each Azure resource.
 
-* What managers require access to other Azure Reader roles such as Reports Reader.
+* What managers require access to other Azure reader roles such as **Reports Reader**.
 
 Second, include security. Be sure to work with the Identity Management team to decide on recommendations for privileged identities and privileged access:
 
@@ -288,6 +276,7 @@ Second, include security. Be sure to work with the Identity Management team to d
 
 * Security monitoring of privileged access in Azure Monitor and activity logs; establish readiness.
 
+In summary your monitoring consumer roles probably need very broad access, versus your developers and system administrators who only need role based access to certain Azure resources. As an additional restriction, ensure you exempt readers from access to sensitive monitoring data such as security, sign-in and user activity logs.
 ## Establish readiness
 
 Early on, formulate a readiness plan to help your IT staff adopt new skills, practices, and techniques for cloud monitoring in Azure.  Consider the [skills readiness guidance](suggested-skills.md) for monitoring that includes foundational needs, as well as those specific to monitoring.
