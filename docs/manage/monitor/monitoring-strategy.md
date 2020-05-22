@@ -268,14 +268,6 @@ First, identify the roles who will own and manage resource groups in Azure as pa
 
 * What managers require access to other Azure reader roles such as **Reports Reader**.
 
-Second, include security. Be sure to work with the Identity Management team to decide on recommendations for privileged identities and privileged access:
-
-* Obtaining separate privileged user accounts in Azure Active Directory.
-
-* Applying privileged accounts in groups, in Azure AD and in Azure Resource Manager templates privileged directory roles.
-
-* Security monitoring of privileged access in Azure Monitor and activity logs; establish readiness.
-
 In summary your monitoring consumer roles probably need very broad access, versus your developers and system administrators who only need role based access to certain Azure resources. As an additional restriction, ensure you exempt readers from access to sensitive monitoring data such as security, sign-in and user activity logs.
 
 ## Establish readiness
