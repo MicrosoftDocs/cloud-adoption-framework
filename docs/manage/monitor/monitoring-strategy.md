@@ -101,9 +101,9 @@ Some key questions include:
 
 * Which services will be globally available and as such, can be globally monitored at the service edge?
 
-* What about the network points between your network infrastructure, and network connectivity to service and application endpoints that tells us when it’s us or the cloud provider.
+* What about the network points between your network infrastructure, and network connectivity to service and application endpoints that tells us when it’s us or the cloud provider?
 
-* What are the boundaries of security operations vs. health and performance: how can we provide summaries of health and status to security operations as well as the converse of this back to service owners?
+* What are the boundaries of security operations vs. health and performance. How can we provide summaries of health and status to security operations, as well as the converse of this back to service owners?
 
 To assemble this architecture, here are several considerations:
 
