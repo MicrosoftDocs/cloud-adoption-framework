@@ -15,9 +15,11 @@ Some workloads are critical to the success of the business. For those workloads,
 
 In return, the investment in workload operations can lead to improved performance, decreased risk of business interruption, and faster recovery when system failures occur. This article discusses an approach to investing in the continued operations of these high priority workloads to drive improved business commitments.
 
+<!-- docsTest:disable Pareto -->
+
 ## When to invest in workload operations
 
-The _Pareto Principle_ (also known as the _80/20 Rule_) states that 80 percent of effects come from 20 percent of the causes. When IT portfolios are allowed to grow organically over time, this rule is often illustrated in a review of the IT portfolio. Depending on the effect that requires investment, the cause can vary but the general principle holds true:
+The _Pareto principle_ (also known as the _80/20 rule_) states that 80 percent of effects come from 20 percent of the causes. When IT portfolios are allowed to grow organically over time, this rule is often illustrated in a review of the IT portfolio. Depending on the effect that requires investment, the cause can vary but the general principle holds true:
 
 - 80 percent of system failures tend to be the result of 20 percent of the common errors or bugs.
 - 80 percent of business value tends to come from 20 percent of the workloads in a portfolio.
@@ -75,7 +77,7 @@ The best workload operations plans still require remediation. As your cloud mana
 
 ### Automated remediation
 
-By applying the Pareto Principle, we can say that 80 percent of negative business impact likely comes from 20 percent of the service incidents. When those incidents can't be addressed in normal development cycles, investments in remediation automation can significantly reduce business interruptions.
+By applying the Pareto principle, we can say that 80 percent of negative business impact likely comes from 20 percent of the service incidents. When those incidents can't be addressed in normal development cycles, investments in remediation automation can significantly reduce business interruptions.
 
 ### Improved system design
 

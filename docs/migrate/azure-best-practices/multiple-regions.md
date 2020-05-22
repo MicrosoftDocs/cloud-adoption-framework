@@ -42,7 +42,7 @@ Any robust cloud deployment requires a well-considered network that takes into a
 
   - Azure Storage supports [geo-redundant storage (GRS)](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs) which means three copies of your data are stored within your primary region and three additional copies are stored in the paired region. You cannot change the storage pairing for GRS.
   - Services that rely on Azure Storage GRS can take advantage of this paired region capability. To do so, your applications and the network must be oriented to support that.
-  - If you don't plan to use GRS to support your regional resiliency needs, it is suggested that you do _NOT_ use the paired region as your secondary. In the event of a regional failure, there will be intense pressure on resources in the paired region as resources migrate. Avoiding that pressure can provide you with additional speed during your recovery by recovering to an alternate site.
+  - If you don't plan to use GRS to support your regional resiliency needs, you shouldn't use the paired region as your secondary. In the event of a regional failure, there will be intense pressure on resources in the paired region as resources migrate. Avoiding that pressure can provide you with additional speed during your recovery by recovering to an alternate site.
   > [!WARNING]
   > Do not attempt to use Azure GRS for VM backups or recovery. Instead, use [Azure Backup](https://azure.microsoft.com/services/backup) and [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery) along with [Azure managed disks](https://docs.microsoft.com/azure/virtual-machines/windows/managed-disks-overview) to support your IaaS workload resiliency.
 

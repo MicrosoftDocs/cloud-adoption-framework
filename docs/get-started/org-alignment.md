@@ -69,7 +69,7 @@ As adoption needs grow, so does the need to create balance and structure. To mee
 
 ## Step 5: Align RACI charts
 
-At each level of maturity, accountability for various cloud functions shifts to new teams. This shifting of accountability enables faster migration and innovation cycles by removing and automating barriers to change. To align assignments properly, the [RACI alignment](../organize/raci-alignment.md) article displays a RACI chart for each of the referenced organizational structures.
+At each level of maturity, accountability for various cloud functions shifts to new teams. This shifting of accountability enables faster migration and innovation cycles by removing and automating barriers to change. To align assignments properly, the [RACI alignment](../organize/raci-alignment.md) article shows a RACI chart for each organizational structure.
 
 ## Additional information
 

@@ -21,7 +21,7 @@ Depending on the motivations and business outcomes that are associated with a cl
 - [Align your organization](../get-started/org-alignment.md): Discover approaches to establishing the proper organizational structures.
 - [Organization alignment exercises](./index.md): Get an overview of alignment and team structures to help meet specific goals.
 - [Establish teams](../get-started/help.md#establish-teams): Learn how to establish teams within your organization that are responsible for delivering cloud functionality.
-- [Break down silos and fiefdoms](./fiefdoms-silos.md): Learn about two common organizational *antipatterns* and ways to guide the teams to productive collaboration.
+- [Break down silos and fiefdoms](./fiefdoms-silos.md): Learn about two common organizational _antipatterns_ and ways to guide the teams to productive collaboration.
 
 ## Environmental (technical) readiness learning paths
 

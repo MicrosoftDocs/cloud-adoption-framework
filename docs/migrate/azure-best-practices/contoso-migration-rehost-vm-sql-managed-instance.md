@@ -67,7 +67,7 @@ In this scenario, Contoso wants to migrate its two-tier on-premises travel app a
 
 ### Database considerations
 
-As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server Managed Instance. The following considerations helped them to decide to go with Managed Instance.
+As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server Managed Instance. The following considerations helped them to decide to use Managed Instance.
 
 - Managed Instance aims to deliver almost 100% compatibility with the latest on-premises SQL Server version. Microsoft recommends Managed Instance for customers who are running SQL Server on-premises or on IaaS VMs and want to migrate their apps to a fully managed service with minimal design changes.
 - Contoso is planning to migrate a large number of apps from on-premises to IaaS. Many of these are ISV provided. Contoso realizes that using Managed Instance will help ensure database compatibility for these apps, rather than using SQL Database, which might not be supported.
@@ -193,7 +193,7 @@ The Managed Instance is placed in a private virtual network. Contoso needs a rou
 Contoso considers these factors:
 
 - The route table contains a set of rules (routes) that specify how packets sent from the Managed Instance should be routed in the virtual network.
-- The route table is associated with subnets in which Managed Instances are deployed. Each packet that leaves a subnet is handled based on the associated route table.
+- The route table is associated with subnets where Managed Instances are deployed. Each packet that leaves a subnet is handled based on the associated route table.
 - A subnet can be associated with only one route table.
 - There are no additional charges for creating route tables in Microsoft Azure.
 

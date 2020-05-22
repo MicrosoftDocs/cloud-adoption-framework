@@ -24,7 +24,7 @@ If no DevOps or service-provider operations agreements are in place, it's safe t
 **Deliverables:**
 
 - Determine whether you need a cloud operations team.
-- Document the decision and responsible individuals in the [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) by selecting the **Org Alignment** tab.
+- Document the decision and responsible individuals in the [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 
@@ -66,7 +66,7 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 **Deliverables:**
 
-- Establish a cadence with each of the supporting teams. If possible, align that cadence with release and planning cycles.
+- Establish a cadence with the supporting teams. If possible, align that cadence with release and planning cycles.
 - Establish a separate cadence directly with the cloud strategy team or its various team members to review any operational requirements that are associated with the next wave of adoption.
 
 **Guidance to support deliverable completion:**

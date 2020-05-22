@@ -56,7 +56,7 @@ Organizations might also choose to [outsource some of their ongoing management f
 
 - **Delegated responsibility:** Because there's no need to centralize and assume operational management overhead, IT operations for many organizations are considering new approaches. One common approach is referred to as _delegated responsibility_. In a cloud center of excellence model, platform operations and platform automation provide self-service management tools that can be used by business-led operations teams, independent of a central IT operations team. This approach gives business stakeholders complete control over management-related budgets. It also allows the cloud center of excellence (CCoE) team to ensure that a minimum set of guardrails has been properly implemented. In this model, IT acts as a broker and a guide to help the business make wise decisions. Business operations oversee day to day operations of dependent workloads.
 
-- **Centralized responsibility:** Compliance requirements, technical complexity, and some shared service models might require a _central IT_ model. In this model, IT continues to exercise its operations management responsibilities. Environmental design, management controls, and governance tooling might be centrally managed and controlled, which restricts the role of business stakeholders in making management commitments. But the visibility into the cost and architecture of cloud approaches makes it much easier for centralized IT to communicate the cost and level of management for each workload.
+- **Centralized responsibility:** Compliance requirements, technical complexity, and some shared service models might require a _Central IT_ model. In this model, IT continues to exercise its operations management responsibilities. Environmental design, management controls, and governance tooling might be centrally managed and controlled, which restricts the role of business stakeholders in making management commitments. But the visibility into the cost and architecture of cloud approaches makes it much easier for centralized IT to communicate the cost and level of management for each workload.
 
 - **Mixed model:** Classification is at the heart of a _mixed model_ of management responsibilities. Companies that are in the midst of a transformation from on-premises to cloud might require an on-premises-first operating model for a while. Companies with strict compliance requirements, or that depend on long-term contracts with IT outsourcing vendors, might require a centralized operating model.
 
@@ -109,7 +109,7 @@ The following calculations will walk through formulas to help you better underst
 
 ### Estimate outage (hours per year)
 
-Composite SLA is the service-level agreement that's based on the deployment of each asset in the workload. That field drives _Estimated Outage_ (labeled _Est. Outage_ in the workbook). To calculate estimated outage in hours per year without using the workbook, apply the following formula:
+Composite SLA is the service-level agreement that's based on the deployment of each asset in the workload. That field drives _estimated outage_ (labeled `Est. Outage` in the workbook). To calculate estimated outage in hours per year without using the workbook, apply the following formula:
 
 > _Estimated outage = (1 - Composite SLA percentage) &#215; Number of hours in a year_
 
@@ -117,17 +117,17 @@ The workbook uses the default value of _8,760 hours per year_.
 
 ### Standard loss impact
 
-_Standard loss impact_ (labeled _Standard impact_ in the workbook) forecasts the financial impact of any outage, assuming that the _Estimated outage_ prediction proves accurate. To calculate this forecast without using the workbook, apply the following formula:
+_Standard loss impact_ (labeled `Standard Impact` in the workbook) forecasts the financial impact of any outage, assuming that the _estimated outage_ prediction proves accurate. To calculate this forecast without using the workbook, apply the following formula:
 
-> _Standard Impact = Estimated outage @ three 9s of uptime &#215; Time-value impact_
+> _Standard impact = Estimated outage @ three 9s of uptime &#215; Time-value impact_
 
 This serves as a baseline for cost, should the business stakeholders choose to invest in a higher level of management.
 
-### Composite SLA impact
+### Composite-SLA impact
 
-_Composite SLA impact_ (labeled _Commitment level impact_ in the workbook) provides updated fiscal impact, based on the changes to the uptime SLA. This calculation allows you to compare the projected financial impact of both options. To calculate this forecast impact without the spreadsheet, apply the following formula:
+_Composite-SLA impact_ (labeled `Commitment level impact` in the workbook) provides updated fiscal impact, based on the changes to the uptime SLA. This calculation allows you to compare the projected financial impact of both options. To calculate this forecast impact without the spreadsheet, apply the following formula:
 
-> _Composite SLA impact = Estimated outage &#215; Time-value impact_
+> _Composite-SLA impact = Estimated outage &#215; Time-value impact_
 
 The value represents the potential losses to be avoided by the changed commitment level and new composite SLA.
 

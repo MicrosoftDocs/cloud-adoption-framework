@@ -20,7 +20,7 @@ Whichever approach you choose, you'll want to create a cloud strategy team that 
 ![Get started building a cloud strategy team](../../_images/get-started/strategy-team-map.png)
 
 > [!NOTE]
-> This article discusses a *strategy facilitator*, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
+> This article discusses a _strategy facilitator_, a key player in the cloud-adoption process. The role is commonly held by a program manager, architect, or consultant. As the cloud strategy team forms and gets started, the strategy facilitator is temporarily accountable for creating alignment and keeping the team aligned with business goals. The strategy facilitator is often the person most accountable for the success of the cloud adoption journey.
 
 ## Step 1: Determine whether a cloud strategy team is needed
 
@@ -68,7 +68,7 @@ The cloud strategy team serves as a recurring alignment point between business l
 - For ideas about who might be a good fit, see [Cloud strategy functions](../../organize/cloud-strategy.md).
 - To validate the alignment and bandwidth from each potential participant, review the [minimum scope](../../organize/cloud-strategy.md#minimum-scope) and [deliverable](../../organize/cloud-strategy.md#deliverable) for this capability.
 - To establish the right RACI chart based on you current team structures, review the various [RACI configuration examples](../../organize/raci-alignment.md#strategic-alignment), or select one of the example tabs at the bottom of the RACI template.
-- Document the results in the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) by selecting the **Org Alignment** tab.
+- Document the results in the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Accountable person or team:**
 
@@ -78,7 +78,7 @@ The cloud strategy team serves as a recurring alignment point between business l
 
 Early in the cloud adoption journey, your team will require frequent interaction and iterative strategy reviews. As adoption starts, that frequency will lessen, transitioning to a focus on status and validation or adjustment of the backlog priorities.
 
-Steps 4, 5, and 6 should be completed within four to six weeks. The remaining steps will be completed in subsequent meetings. Greater-frequency meetings should be maintained until step 7 is kicked off by the team.
+Steps 4, 5, and 6 should be completed within four to six weeks. The remaining steps will be completed in subsequent meetings. More frequent meetings should be maintained until the team begins step 7.
 
 **Deliverables:**
 

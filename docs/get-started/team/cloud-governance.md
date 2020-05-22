@@ -17,16 +17,16 @@ A cloud governance team ensures that cloud-adoption risks and risk tolerance are
 
 ## Step 1: Determine whether a cloud governance team is needed
 
-The official guidance in the Cloud Adoption Framework for Azure is to always create a cloud governance team. At first, the team might be exceptionally small. Regardless of its size, its role will prove important. If a team isn't needed, a group or individual on an existing adoption team should agree to fulfill the responsibilities associated with the [cloud governance functions](../../organize/cloud-governance.md).
+The official guidance in the Cloud Adoption Framework for Azure is to always create a cloud governance team. At first, the team might be exceptionally small. Regardless of its size, its role will prove important. If a team isn't needed, a group or individual on an existing adoption team should agree to fulfill the responsibilities associated with [cloud governance functions](../../organize/cloud-governance.md).
 
 **Deliverables:**
 
 - Determine whether you need a cloud governance team.
-- Document the decision and the responsible individuals in the [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) by selecting the **Org Alignment** tab.
+- Document the decision and the responsible individuals in the [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 
-- The [cloud governance functions](../../organize/cloud-governance.md) might already be spread across multiple individuals or teams. Having a team that goes by the title "cloud governance team" isn't important, but the required capabilities should reside with an accountable party or team.
+- [Cloud governance functions](../../organize/cloud-governance.md) might already be spread across multiple individuals or teams. Having a team that goes by the title "cloud governance team" isn't important, but the required capabilities should reside with an accountable party or team.
 - If the company's long-term cloud adoption strategy can be delivered from one landing zone in one cloud environment, the amount of governance and operations efforts might be small enough for delivery by one person or one team. That team is unlikely to be called cloud governance, because it serves many functions beyond cloud governance. Even for that team, this get-started guide can help ensure that it can deliver on this important function of governance.
 
 <!-- markdownlint-disable MD033 -->
@@ -65,12 +65,12 @@ Cloud adoption generally comes in waves, or releases. A regular cadence that's a
 
 **Deliverables:**
 
-- Establish a cadence with each of the supporting teams. If possible, align that cadence with release and planning cycles.
+- Establish a cadence with the supporting teams. If possible, align that cadence with release and planning cycles.
 - Establish a separate cadence directly with the cloud strategy team (or various team members) to review risks that are associated with the next wave of adoption and gauge the team's level of tolerance for those risks.
 
 **Guidance to support deliverable completion:**
 
-- For additional guidance on cadences for meetings, review the "deliverable" section of [cloud governance functions](../../organize/cloud-governance.md#deliverable).
+- For more guidance on cadences for meetings, see [Cloud governance functions](../../organize/cloud-governance.md#deliverable).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -101,11 +101,11 @@ Governance is a broad topic. A short assessment can help the team understand whe
 
 **Deliverables:**
 
-- Complete the governance benchmark assessment, which is based on conversations with various stakeholders. Or ask other teams to complete the assessment on their own.
+- Complete the governance benchmark assessment, based on conversations with various stakeholders. Or ask other teams to complete the assessment on their own.
 
 **Guidance to support deliverable completion:**
 
-- Assess your governance needs and priorities by using the [governance benchmark](../../govern/benchmark.md).
+- Use the [governance benchmark](../../govern/benchmark.md) to assess your governance needs and priorities.
 
 **Accountable team:**
 

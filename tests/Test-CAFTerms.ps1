@@ -44,10 +44,9 @@ function Get-MyCasingExpressions
         'C-level'
         'C-suite'
         'CCoE'
-        'Org Alignment tab'
         'Power of 10'
         'RACI'
-
+        
         # TODO: Temporary or verify
         'CAF'
         'Assess phase'
@@ -87,6 +86,8 @@ function Get-MyInvalidTermExpressions {
         'NorthStar!!enterprise-scale'
         'North Star!!enterprise-scale'
         'enterprise scale architecture!!enterprise-scale architecture'
+        'thought out!!considered'
+        'go with!!use'
 
         'leverage!!use'
         'leverages!!uses'
