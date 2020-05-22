@@ -36,7 +36,7 @@ To maximize these benefits, it is necessary to migrate existing (or new) data an
 
 <!-- markdownlint-disable MD033 -->
 
-| ![1](.\_images\icons\1.png) **Preparation** | ![2](../_images/icons/2.png) **Migration** | ![3](../_images/icons/3.png) **Post migration** |
+| ![1](./_images/icons/1.png) **Preparation** | ![2](./_images/icons/2.png) **Migration** | ![3](./_images/icons/3.png) **Post migration** |
 |---|---|---|
 |<li>Define scope - what is to be migrated<li>Build inventory of data and processes for mitration<li>Define data model changes (if any)<li>Identify appropriate Azure (and third party) tools and features to be used<li>Train staff early on new platform<li>Set up Azure target platform | <li>Start small and simple<li>Automate where possible<li>Leverage Azure built in tools and features to reduce migration effort<li>Migrate metadata for tables and views<li>Migrate historical data to be maintained<li>Migrate or refactor stored procedures and business processes<li>Migrate or refactor ETL/ELT incremental load processes | <li>Monitor and document all stages of the process<li>Use experience gained to build a template for future migrations<li>Re-engineer the data model if required (using new platform performance and scalability)<li>Test applications and query tools<li>Benchmark and optimize query performance |
 
@@ -129,7 +129,7 @@ There are third-party vendors who offer tools and services to automate migration
 There are a few differences in SQL Data Manipulation Language (DML) syntax between Netezza SQL and Azure Synapse to be aware of when migrating:
 
 <!-- TODO this should probably be a code snippet that the user can copy and use -->
-![SQL query](..\_images\analytics\sql-query-netezza.png)
+![SQL query](../_images/analytics/sql-query-netezza.png)
 
 ### Functions, stored procedures and sequences
 
