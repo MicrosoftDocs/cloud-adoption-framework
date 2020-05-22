@@ -40,6 +40,7 @@ function Get-MyInvalidFormattingExpressions
         '(- \[Learn more\]\((.*)\) about (the )?(.*?)(?=[\.,]))!!- Learn more about $3[$4]($2)'
         'See \[(.*?)\]\((.*)\) for more (?:details?|information)\.!!For more information, see [$1]($2).'
 
+        '(?:`|\*\*|)([A-Z]{2,}-[A-Z]{2,}-[A-Z\d]{2,})(?:`|\*\*|)!!`$1`'
         # '[a-z](?<!Microsoft|Az|Registration)\.[A-Z][a-z]* '
         # '[^ \n-]\|'       # TODO: Include spacing around table pipes.
         # '\|[^ \r\n-]'       # TODO: Include spacing around table pipes.

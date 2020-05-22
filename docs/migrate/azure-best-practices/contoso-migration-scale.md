@@ -347,7 +347,7 @@ Contoso needs visibility into the health and performance of the newly migrated a
 
 - Using these tools, Contoso can easily collect data from sources and gain rich insights. For example, Contoso can gauge CPU disk and memory utilization for VMs, view applications and network dependencies across multiple VMs, and track application performance.
 - Contoso will use these cloud monitoring tools to take action and integrate with service solutions.
-- [Learn more](https://docs.microsoft.com/azure/azure-monitor/overview) about Azure monitoring.
+- Learn more about [Azure monitoring](https://docs.microsoft.com/azure/azure-monitor/overview).
 
 ### Business continuity and disaster recovery
 

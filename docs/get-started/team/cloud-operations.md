@@ -197,4 +197,4 @@ Learn more about:
 - [Cloud center of excellence functions](../../organize/cloud-center-of-excellence.md)
 - [Organizational antipatterns: Silos and fiefdoms](../../organize/fiefdoms-silos.md)
 
-Learn how to align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+Align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).

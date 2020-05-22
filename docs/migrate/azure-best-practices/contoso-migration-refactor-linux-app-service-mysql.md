@@ -15,7 +15,7 @@ ms.subservice: migrate
 
 This article shows how the fictional company Contoso refactors a two-tier Linux-based Apache MySQL PHP (LAMP) app, migrating it from on-premises to Azure using Azure App Service with GitHub integration and Azure Database for MySQL.
 
-osTicket, the service desk app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [the osTicket repo in GitHub](https://github.com/osTicket/osTicket).
+osTicket, the service desk app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from the [osTicket repo in GitHub](https://github.com/osTicket/osTicket).
 
 ## Business drivers
 

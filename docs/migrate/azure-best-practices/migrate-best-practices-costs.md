@@ -34,7 +34,8 @@ The best practices in this section help you to estimate costs, perform right-siz
 To forecast your monthly bill for migrated workloads, there are several tools you can use.
 
 <!-- TODO: Change "input costs" -->
-- **Azure pricing calculator:** Select the products you want to estimate, for example VMs and storage, then input costs into the calculator to build an estimate.
+
+- **Azure pricing calculator:** Select the products you want to estimate, such as VMs and storage, then input costs into the calculator to build an estimate.
 
  ![Azure pricing calculator](./media/migrate-best-practices-costs/pricing.png)
     _Azure pricing calculator_
@@ -53,9 +54,9 @@ To forecast your monthly bill for migrated workloads, there are several tools yo
 **Learn more:**
 
 - [Use](https://azure.microsoft.com/pricing/calculator) the Azure pricing calculator.
-- [Get an overview](https://docs.microsoft.com/azure/migrate/migrate-services-overview) of Azure Migrate.
+- Read the [Azure Migrate overview](https://docs.microsoft.com/azure/migrate/migrate-services-overview).
 - [Read about](https://docs.microsoft.com/azure/migrate/concepts-assessment-calculation) Azure Migrate assessments.
-- [Learn more](https://docs.microsoft.com/azure/dms/dms-overview) about the Azure Database Migration Service.
+- Learn more about the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
 
 ## Best practice: Right-size VMs
 
@@ -76,9 +77,9 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 **Learn more:**
 
-- [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) about VM types and sizing, and map sizes to types.
-- [Plan](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs) VM sizing.
-- [Review](https://docs.microsoft.com/azure/migrate/contoso-migration-assessment) a sample assessment for the fictional Contoso company.
+- Learn more about [VM types and sizing](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) and map sizes to types.
+- Plan [sizes for VM instances](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs).
+- Review a [sample assessment for the fictional Contoso company](https://docs.microsoft.com/azure/migrate/contoso-migration-assessment).
 
 ## Best practice: Select the right storage
 
@@ -96,8 +97,8 @@ Azure provides different types of storage data.
 
 | **Data type** | **Details** | **Usage** |
 | --- | --- |  --- |
-| **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. <br><br> | Access data from everywhere over HTTP/HTTPS. | Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
-| **Files** | Managed file shares accessed over SMB 3.0 | Use when migrating on-premises file shares, and to provide multiple access/connections to file data. |
+| **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. <br><br> | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
+| **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares, and to provide multiple access/connections to file data. |
 | **Disks** | Based on page blobs. <br><br> Disk type (speed): Standard (HDD or SSD) or Premium (SSD). <br><br> Disk management: Unmanaged (you manage disk settings and storage) or Managed (you select the disk type and Azure manages the disk for you). | Use Premium disks for VMs. Use managed disks for simple management and scaling. |
 | **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS) | Connect app components with asynchronous message queueing. |
 | **Tables** | Store tables. | Now part of Azure Cosmos DB Table API. |
@@ -146,11 +147,11 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 **Learn more:**
 
-- [Review](https://azure.microsoft.com/pricing/details/storage) Azure Storage pricing.
-- [Learn about](https://docs.microsoft.com/azure/storage/common/storage-import-export-service) Azure Import/Export for migration large amounts of data to the Azure blobs and files.
-- [Compare](https://docs.microsoft.com/azure/storage/common/storage-decide-blobs-files-disks) blobs, files, and disk storage data types.
-- [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers) about access tiers.
-- [Review](https://docs.microsoft.com/azure/storage/common/storage-account-overview) different types of storage accounts.
+- Review [Azure Storage pricing](https://azure.microsoft.com/pricing/details/storage).
+- Learn about [Azure Import/Export for migration large amounts of data to the Azure blobs and files](https://docs.microsoft.com/azure/storage/common/storage-import-export-service).
+- Compare [blobs, files, and disk storage data types](https://docs.microsoft.com/azure/storage/common/storage-decide-blobs-files-disks).
+- Learn more about [access tiers](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers).
+- Review [different types of storage accounts](https://docs.microsoft.com/azure/storage/common/storage-account-overview).
 - Learn about [Azure storage redundancy](https://docs.microsoft.com/azure/storage/common/storage-redundancy), including LRS, ZRS, GRS, and read-access GRS.
 - Learn more about [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction).
 
@@ -163,8 +164,8 @@ An integrated Microsoft on-premises/Azure product portfolio generates competitiv
 **Learn more:**
 
 - [Take a look at](https://azure.microsoft.com/pricing/hybrid-benefit) the Hybrid Benefit Savings Calculator.
-- [Learn more](https://azure.microsoft.com/pricing/hybrid-benefit) about Hybrid Benefit for Windows Server.
-- [Review](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-pricing-guidance) pricing guidance for SQL Server Azure VMs.
+- Learn more about [Hybrid Benefit for Windows Server](https://azure.microsoft.com/pricing/hybrid-benefit).
+- Review [pricing guidance for SQL Server Azure VMs](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-pricing-guidance).
 
 ## Best practice: Use reserved VM instances
 
@@ -194,9 +195,9 @@ To do this, you can use Azure Cost Management APIs. Then, after aggregating data
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/billing/billing-consumption-api-overview) of the Azure Consumption API.
-- [Learn about](https://docs.microsoft.com/power-bi/desktop-connect-azure-consumption-insights) connecting to Azure Consumption Insights in Power BI Desktop.
-- [Learn how to](https://docs.microsoft.com/azure/billing/billing-manage-access) manage access to billing information for Azure using role-based access control (RBAC).
+- Read the [Azure Consumption APIs overview](https://docs.microsoft.com/azure/billing/billing-consumption-api-overview).
+- Learn about [connecting to Azure Consumption Insights in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-connect-azure-consumption-insights).
+- Learn how to [manage access to billing information for Azure using role-based access control (RBAC)](https://docs.microsoft.com/azure/billing/billing-manage-access).
 
 ## After migration
 
@@ -239,11 +240,11 @@ In Cost Management, you can:
 
 **Learn more:**
 
-- Get an overview of [Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview).
-- Learn how to [optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices).
-- Learn how to [use Azure Cost Management reports](https://docs.microsoft.com/azure/cost-management/use-reports).
+- Read the [Azure Cost Management overview](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview).
+- Learn to [optimize your cloud investment with Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-best-practices).
+- Learn about [Azure Cost Management reports](https://docs.microsoft.com/azure/cost-management/use-reports).
 - Get a [tutorial on optimizing costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations).
-- Review the [Azure Consumption API](https://docs.microsoft.com/rest/api/consumption/budgets).
+- Review the [Azure Consumption APIs](https://docs.microsoft.com/rest/api/consumption/budgets).
 
 ## Best practice: Monitor resource utilization
 
@@ -257,9 +258,9 @@ In Azure you pay for what you use, when resources are consumed, and you don't pa
 
 **Learn more:**
 
-- Get an overview of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) and [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview).
-- [Get](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations) Advisor cost recommendations.
-- [Learn how to [optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations), and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
+- Read overviews of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) and [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview).
+- [Get Azure Advisor cost recommendations](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations).
+- Learn how to [optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations), and [prevent unexpected charges](https://docs.microsoft.com/azure/billing/billing-getting-started).
 - Learn about the [Azure Resource Optimization (ARO) Toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ## Best practice: Implement resource group budgets
@@ -271,8 +272,8 @@ Often, resource groups are used to represent cost boundaries. Together with this
 
 **Learn more:**
 
-- [Learn how to](https://docs.microsoft.com/azure/billing/billing-cost-management-budget-scenario) manage costs with Azure Budgets.
-- [Follow a tutorial](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets) to create and manage an Azure budget.
+- Learn how to [manage costs with Azure Budgets](https://docs.microsoft.com/azure/billing/billing-cost-management-budget-scenario).
+- Review a tutorial on [creating and managing an Azure budget](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets).
 
 ## Best practice: Optimize Azure Monitor retention
 
@@ -286,7 +287,7 @@ As you move resources into Azure and enable diagnostic logging for them, you gen
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/azure-monitor/platform/usage-estimated-costs) monitoring usage and estimated costs.
+- Learn about [monitoring usage and estimated costs](https://docs.microsoft.com/azure/azure-monitor/platform/usage-estimated-costs).
 
 ## Best practice: Optimize storage
 
@@ -299,8 +300,9 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 **Learn more:**
 
-- [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers) about access tiers.
-- [Get an overview](https://docs.microsoft.com/azure/azure-monitor/overview) of StorSimple, and [StorSimple pricing](https://azure.microsoft.com/pricing/details/storsimple).
+- Learn more about [access tiers](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers).
+- Read the [StorSimple overview](https://docs.microsoft.com/azure/azure-monitor/overview).
+- Review [StorSimple pricing](https://azure.microsoft.com/pricing/details/storsimple).
 
 ## Best practice: Automate VM optimization
 
@@ -310,9 +312,9 @@ You can optimize a VM with Azure Automation, virtual machine scale sets, autoshu
 
 **Learn more:**
 
-- [Learn how to](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-vertical-scale-reprovision) use vertical autoscaling.
+- Learn about [vertical autoscaling](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-vertical-scale-reprovision).
 - [Schedule](https://azure.microsoft.com/updates/azure-devtest-labs-schedule-vm-auto-start) a VM autostart.
-- [Learn how to](https://docs.microsoft.com/azure/automation/automation-solution-vm-management) start or stop VMs off hours in Azure Automation.
+- Learn how to [start or stop VMs off hours in Azure Automation](https://docs.microsoft.com/azure/automation/automation-solution-vm-management).
 - Get more information about [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview), and the [Azure Resource Optimization (ARO) Toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ## Best practices: Use Logic Apps and runbooks with Budgets API
@@ -327,8 +329,8 @@ Azure provides a REST API that has access to your tenant billing information.
 
 **Learn more:**
 
-- [Learn more](https://docs.microsoft.com/rest/api/consumption/budgets) about the Budgets API.
-- [Get insights](https://docs.microsoft.com/azure/billing/billing-usage-rate-card-overview) into Azure usage with the Billing API.
+- Review the [Azure Budgets API](https://docs.microsoft.com/rest/api/consumption/budgets).
+- Get insights into usage with the [Azure Billing APIs](https://docs.microsoft.com/azure/billing/billing-usage-rate-card-overview).
 
 ## Best practice: Implement serverless technologies
 

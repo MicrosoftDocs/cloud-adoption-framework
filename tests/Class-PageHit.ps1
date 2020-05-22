@@ -163,7 +163,7 @@ class PageHit
     {
         $this.FileExtension = $extension
 
-        #TODO: Can the header be trimmed here?
+        # TODO: Can the header be trimmed here?
         $h = $m.Groups[1].Value
         $c = $m.Groups[2].Value.Trim()
         $this.Index = $m.Groups[2].Index

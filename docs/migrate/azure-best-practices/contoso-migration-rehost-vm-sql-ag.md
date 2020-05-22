@@ -178,7 +178,7 @@ Contoso admins set up the cluster as follows:
 **Need more help?**
 
 - [Get help](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#1-configure-basic-settings) provisioning a SQL Server VM.
-- [Learn about](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-prereq#create-sql-server-vms) configuring VMs for different SQL Server SKUs.
+- Learn about [configuring VMs for different SQL Server SKUs](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-prereq#create-sql-server-vms).
 
 ## Step 2: Deploy and set up the cluster
 
@@ -307,8 +307,8 @@ They create the rule as follows:
 
 **Need more help?**
 
-- [Get an overview](https://docs.microsoft.com/azure/load-balancer/load-balancer-overview) of Azure Load Balancer.
-- [Learn about](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal) creating a load balancer.
+- Read the [Azure Load Balancer overview](https://docs.microsoft.com/azure/load-balancer/load-balancer-overview).
+- Learn about [creating a load balancer](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## Step 4: Prepare Azure for Azure Migrate
 
@@ -376,7 +376,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 5. Need more help?
 
-   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration.
+   - Learn about [preparing VMs for migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration).
 
 ## Step 6: Replicate the on-premises VMs to Azure
 
@@ -488,7 +488,7 @@ With everything set up, Contoso now has a functional availability group in Azure
 
 - Learn about creating an [availability group](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial#create-the-availability-group) and [listener](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial#configure-listener).
 - Manually [set up the cluster to use the load balancer IP address](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#configure-the-cluster-to-use-the-load-balancer-ip-address).
-- [Learn more](https://docs.microsoft.com/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2) about creating and using SAS.
+- Learn more about [creating and using SAS](https://docs.microsoft.com/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2).
 
 ## Step 9: Migrate the VM with Azure Migrate
 
@@ -540,9 +540,9 @@ As the final step in the migration process, Contoso admins update the connection
 
 **Need more help?**
 
-- [Learn about](https://docs.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure) running a test failover.
+- Learn about [running a test failover](https://docs.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure).
 - [Learn](https://docs.microsoft.com/azure/site-recovery/site-recovery-create-recovery-plans) how to create a recovery plan.
-- [Learn about](https://docs.microsoft.com/azure/site-recovery/site-recovery-failover) failing over to Azure.
+- Learn about [failing over to Azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-failover).
 
 ### Clean up after migration
 

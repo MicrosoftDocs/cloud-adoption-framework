@@ -137,7 +137,12 @@ function Get-InvalidFormattingExpressions
         ' \u2013 !!&mdash;'                 # Fix unicode dashes
         '(?<=[a-z])\u2013(?=[a-z])!!-'      # Fix unicode dashes
 
-        "( +)\r?\n!!"                                   # Trim blank lines
+#        "( +)\r?\n!!"                                   # Trim blank lines
+
+
+        '(?<=\n\r?\n *\| *|[^\n]\| *)(?:\*\*(.*?)\*\*)!!$1'     # Don't bold table column headings
+
+
         "(?m)^ *\d+(\.?\)\.? )!!. "                     # Fixed numbered lists
         "(?m)^ *?(?:>)? *?(- {2,})!!- "                 # Fix spacing for bullet lists       
         "(?m)^[^#-].*(vs\.) !!versus"                   # Use "versus" in non-headings
@@ -169,7 +174,8 @@ function Get-InvalidFormattingExpressions
 
         "\b_?x%_?\b!!_x percent_"
         "(?<=[a-z-] )([\d\.]+)%!!$1 percent"
-
+        "9's|9s"
+        
         " \* "
         "(?:[a-z ]{2,}, )(?:[a-z ]{1,6}, )+(?!and|or)(?:[a-z ]+)\."   # Missing 'and' or 'or' in series.
         "[A-Za-z\d '-]{2,}, [\w]+, (?!and |or)[A-Za-z\d '-]+\.[ \r\n]"      # Either a missing Oxford comma, or a weird use of commas.
@@ -225,12 +231,12 @@ function Get-InvalidFormattingExpressions
         # '[^ ]<li>|<li>[^ ]'
         # '\][^\(\["]}'                   # Limit use of square brackets. 
         # '(?!\[!div )\[![^A-Z]+\]'       # Callouts should be capitalized.
-        #TODO REINSTATE:        "^--- *\|"          # Use pipes at start of tables.
+        # TODO REINSTATE:        "^--- *\|"          # Use pipes at start of tables.
 
-        #TODO: Test formatting without code blocks.
-        #TODO REVISE:        '^ *\|(?! where| distinct).*$(?<!\|)'           # Use pipes at end of tables.
+        # TODO: Test formatting without code blocks.
+        # TODO REVISE:        '^ *\|(?! where| distinct).*$(?<!\|)'           # Use pipes at end of tables.
 
-        #TODO REINSTATE:        "^ ?\|-"          # Respace tables.
+        # TODO REINSTATE:        "^ ?\|-"          # Respace tables.
 #        '<endoflist>'
 
         # TODO REINSTATE        "description: [A-Za-z-]*ing"

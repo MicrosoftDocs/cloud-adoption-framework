@@ -42,7 +42,7 @@ Use the following example PowerShell script to deploy these policies to:
 
 ```powershell
 
-    #Assign Guest Configuration policy.
+    # Assign Guest Configuration policy.
 
     param (
         [Parameter(Mandatory=$true)]
