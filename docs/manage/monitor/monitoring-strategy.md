@@ -277,6 +277,7 @@ Second, include security. Be sure to work with the Identity Management team to d
 * Security monitoring of privileged access in Azure Monitor and activity logs; establish readiness.
 
 In summary your monitoring consumer roles probably need very broad access, versus your developers and system administrators who only need role based access to certain Azure resources. As an additional restriction, ensure you exempt readers from access to sensitive monitoring data such as security, sign-in and user activity logs.
+
 ## Establish readiness
 
 Early on, formulate a readiness plan to help your IT staff adopt new skills, practices, and techniques for cloud monitoring in Azure.  Consider the [skills readiness guidance](suggested-skills.md) for monitoring that includes foundational needs, as well as those specific to monitoring.
