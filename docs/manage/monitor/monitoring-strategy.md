@@ -3,7 +3,7 @@ title: "Cloud monitoring strategy"
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 05/10/2020
+ms.date: 05/22/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -146,12 +146,12 @@ As a monitoring expert or systems administrator, you’ve discovered that cloud 
 Consider scale in your strategy and who will be defining and standardizing *monitoring as code*. Your organization should plan to build standardized solutions using a combination of tools such as:
 
 * Azure Resource Manager templates
-* Azure Policy
+* Azure Policy monitoring initiative definitions and policies
 * GitHub to establish a source control for the scripts, code, and documentation
 
 ### Consider privacy and security
 
-In Azure you’ll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs. Additionally, specialized logs that record user activity such as the Azure Active Directory authentication, and if integrated, the Microsoft 365 Unified Audit log, as they contain sensitive data that must be protected under privacy laws.
+In Azure, you’ll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs. Additionally, specialized logs that record user activity such as the Azure Active Directory Sign-in and Audit logs, and if integrated, the Microsoft 365 Unified Audit log, as they contain sensitive data that may need to be protected under privacy laws.
 
 Your monitoring strategy should include these components:
 
@@ -171,9 +171,19 @@ Create a recovery plan, and make sure that it covers data restoration, network o
 
 ### Consider maturity
 
-Maturity is an important consideration in your strategy. We recommend you start minimally, gather data and with this information, determine the strategy. The first monitoring solutions you’ll want are those that ensure observability, to include responsive processes, such as Incident and Problem Management. Here, you will be creating one or more Log Analytics workspaces, enabling agents, and setting up initial alerts. Over time, you gain confidence in Azure Monitor capabilities with the need to measure health indicators, so this involves deepening the focus on the collection of logs, using insights, metrics, and defining the log search queries that drive the measurement and calculation of what is healthy/unhealthy. 
+Maturity is an important consideration in your monitoring strategy. We recommend you start minimally, gather data and with this information, determine the strategy. The first monitoring solutions you’ll want are those that ensure observability, to include responsive processes, such as Incident and Problem Management. Here, you will be::
 
-Learning includes getting monitoring data and insights into the hands of managers, ensuring the right consumers have monitoring data they need. Learning cycles include continual tuning and optimizing monitoring solutions to adapt, to improve service, and inform adoption plans.
+- Create one or more Log Analytics workspaces
+
+- Enable agents
+
+- Enable resource diagnostic settings
+
+- Enable initial alert rules
+
+Over time, you gain confidence in Azure Monitor capabilities with the need to measure health indicators, so this involves expanding the focus on the collection of logs, enable and leverage insights, metrics, and define log search queries that drive the measurement and calculation of what is healthy/unhealthy.
+
+Learning cycles includes getting monitoring data and insights into the hands of managers, and ensuring the right consumers have monitoring data they need. Learning cycles include continual tuning and optimizing of your initial monitoring plans to adapt, to improve service, and inform adoption plans.
 
 ![Monitoring and control strategy](./media/monitoring-strategy/monitoring-and-control-strategy.png)
 
@@ -193,7 +203,7 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 
 * **Learn and Improve**: Providers and consumers participating in Learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (e.g. New, modified, retired, etc.) and continues to match the actual service warranty.
 
-To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that will occur in more detail and works with the five Rs of rationalization introduced earlier in the Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
+To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five Rs of rationalization introduced earlier in the CAF Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
 |Type |Monitoring objective |Example objective |
 |-----|---------------------|------------------|
@@ -211,7 +221,7 @@ To help you align monitoring plans to strategy, use the following table to categ
 
 As you progress through this process, your strategy reveals there may be much to do in the long run. Ultimately your mindset extends outside the corporate network into the workplace, to devices and end points, and further outward to the identity-as-security boundary, independent of where. The new edge defined with cloud monitoring is a strong motivator in contrast with a datacenter and workplace mindset.
 
-You can leverage Azure now to include gradual monitoring of all or some aspects of your on-premises resources, as they may gradually move to the cloud.  And you also want strategy to define your monitoring boundaries of responsibility in alignment with the business’ cloud adoption strategy, based on the cloud service model your business adopts. Even for services based on IaaS, you’ll get metrics, logs, views and alerting capabilities through Azure Service Health and here, you’ll configure alerts from availability monitoring of your Azure resources with Resource Health. With SaaS services, such as Microsoft 365, much is already provided, and you need to configure appropriate access to portals, dashboards, analytics, and alerts. From a service perspective, a large service with distributed components such as Microsoft 365 Exchange Online have a number of objectives, not just the need to observe its health and status.
+You can leverage Azure now to gradually begin managing all or some aspects of your on-premises resources, even for services you’ll keep on premises. You also want strategy to define your monitoring boundaries of responsibility in alignment with the business’ cloud adoption strategy, based on the cloud service model your business adopts. Even for services based on IaaS, you’ll get metrics, logs, views and alerting capabilities through Azure Service Health and here, you’ll configure alerts from availability monitoring of your Azure resources with Resource Health. With SaaS services, such as Microsoft 365, much is already provided, and you need to configure appropriate access to portals, dashboards, analytics, and alerts. From a service perspective, a large service with distributed components such as Microsoft 365 Exchange Online have a number of objectives, not just the need to observe its health and status.
 
 | Primary objective | Goal and outcome |
 |-------------------|------------------|
@@ -245,6 +255,8 @@ Include in your strategy and operating model how you communicate monitoring plan
 |User stories and tasks |The end result is a monitoring configuration and/or solution|Network monitoring (e.g. Express Route)<br> Standardized IaaS VM monitoring (e.g. Azure Monitor for VMs, Application Insight, Azure Policy, settings, policies, reports, workspaces.)|
 
 ## Establish minimum governance
+
+As early as possible, establish how you intend to govern your cloud monitoring investment.  Remember that Azure Monitor is a *tenant* service with visibility across management groups and subscriptions, but can be scoped  on the user’s access control. 
 
 As early as possible, define a strategy to clearly establish who will have what level of access in Azure to support their role and responsibility, such as:
 
