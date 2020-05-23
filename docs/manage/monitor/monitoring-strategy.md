@@ -195,13 +195,13 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 
 * **Measure**: Configure collection of metrics and logs from all resources to monitor for symptoms/conditions that are issues which indicate potential or actual impact to the availability of the service, or impact of the consumers of the service/application. For example:
 
-    * When using a feature in the app, is it showing response time latency, returning an error when I selected something, or unresponsive?
+    * When using a feature in the application, is it showing response time latency, returning an error when I selected something, or unresponsive?
     
     * Ensure services are meeting service agreements by measuring the utility of the service or application.
 
 * **Respond**: Based on the context of known issues to observe and measure, evaluate what qualifies as a bug, auto-remediation, or requires manual response based on what is classified as an incident, problem, or change.
 
-* **Learn and Improve**: Providers and consumers participating in Learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (e.g. New, modified, retired, etc.) and continues to match the actual service warranty.
+* **Learn and Improve**: Providers and consumers participating in Learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (Example: New, modified, retired, etc.) and continues to match the actual service warranty.
 
 To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five Rs of rationalization introduced earlier in the CAF Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
@@ -211,7 +211,7 @@ To help you align monitoring plans to strategy, use the following table to categ
 | 2 | On-premises to the cloud | Continue using System Center Operations Manager, and apply the O365 and Azure management packs. |
 | 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents with multi-homing where System Center Operations Manager and Azure Monitor monitor cooperatively.|
 | 4 | Hybrid migration | Monitor the migration, for example, Exchange to O365 Exchange Online. Exchange Online Service Health and Service Usage, Security and Compliance – all from O365. Gradually decommission monitoring Exchange on-prem with System Center Operations Manager until migration complete. |
-| 5 | Hybrid forever | System Center Operations Manager, Azure AD, Azure Monitor, Azure Security Center, Intune, – a range of tools for a mixture of digital assets e.g., workstations.|
+| 5 | Hybrid forever | System Center Operations Manager, Azure AD, Azure Monitor, Azure Security Center, Intune, – a range of tools for a mixture of digital assets. For example, workstations.|
 | 6 | Cloud native |Azure Monitor, Azure Security Center, O365, service workspaces, Azure Service Health, Azure Resource Health – etc. |
 | 7 | Multi-cloud owned tenants (consolidate) | Centralize the monitoring of many tenants.  Deploy Azure Monitor, SIEM, Cloud Access Security Brokers (CAS-B, SIEM). |
 | 8 | Multi-cloud ecosystem |Centralize the monitoring of different cloud providers:  Microsoft, Amazon, Google, Salesforce, Palo Alto, etc. |
@@ -252,7 +252,7 @@ Include in your strategy and operating model how you communicate monitoring plan
 |----------|---------------|--------|
 |Epics|Broad monitoring<br>Initiatives of the monitoring strategy|Consolidate Azure cloud monitoring<br> Hybrid cloud monitoring<br> Private cloud monitoring<br> Establish core monitoring service |
 |Features|Individual monitoring<br> Plans and projects|Monitoring requirements<br> Monitoring consumers and providers<br> Objectives<br> Tools<br> Schedule|
-|User stories and tasks |The end result is a monitoring configuration and/or solution|Network monitoring (e.g. Express Route)<br> Standardized IaaS VM monitoring (e.g. Azure Monitor for VMs, Application Insight, Azure Policy, settings, policies, reports, workspaces.)|
+|User stories and tasks |The end result is a monitoring configuration and/or solution|Network monitoring (For example, Express Route)<br> Standardized IaaS VM monitoring (For example Azure Monitor for VMs, Application Insight, Azure Policy, settings, policies, reports, workspaces.)|
 
 ## Establish minimum governance
 
