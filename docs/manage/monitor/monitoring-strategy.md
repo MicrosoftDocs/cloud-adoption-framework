@@ -171,7 +171,7 @@ Create a recovery plan, and make sure that it covers data restoration, network o
 
 ### Consider maturity
 
-Maturity is an important consideration in your monitoring strategy. We recommend you start minimally, gather data and with this information, determine the strategy. The first monitoring solutions you’ll want are those that ensure observability, to include responsive processes, such as Incident and Problem Management. Here, you will be::
+Maturity is an important consideration in your monitoring strategy. We recommend you start minimally, gather data and with this information, determine the strategy. The first monitoring solutions you’ll want are those that ensure observability, to include responsive processes, such as Incident and Problem Management. Here, you will:
 
 - Create one or more Log Analytics workspaces
 
