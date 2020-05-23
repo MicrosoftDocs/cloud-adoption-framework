@@ -107,7 +107,7 @@ Some key questions include:
 
 To assemble this architecture, here are several considerations:
 
-* A data flow approach starting from service assets and going up the stack - metrics and log data emitted by infrastructure, IoT devices, mobile devices, etc. are all of the items under management—to-monitoring tools (mid-tier) moving upward and outward (ITSM tools, global monitoring, Security Information and Event Management (SIEM), custom alert enrichment, etc.).
+* A data flow approach starting from service assets and going up the stack - metrics and log data emitted by infrastructure, IoT devices, mobile devices, etc. are all of the items under management—to-monitoring tools (mid-tier). Move upward and outward (ITSM tools, global monitoring, Security Information and Event Management (SIEM), custom alert enrichment, etc.).
 
 * Whether to continue with Systems Center Operations Manager or other monitoring tool(s).
 
