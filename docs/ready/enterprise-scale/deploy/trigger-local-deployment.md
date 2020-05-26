@@ -18,7 +18,7 @@ For local debugging purposes, you can trigger a deployment from your computer by
  Before running the commands below:
  
 * Make sure that you're in the root folder of your local clone.
-* Make sure that you've made either definition or assignment changes in your local clone, as described on the [deploy platform infrastructure](./Deploy-platform-infra.md) and [deploy landing zones](./Deploy-lz.md) articles.
+* Make sure that you've made either definition or assignment changes in your local clone, as described on the [deploy platform infrastructure](./deploy-platform-infrastructure.md) and [deploy landing zones](./deploy-landing-zone.md) articles.
 
     ```powershell
     Import-Module .\src\AzOps.psd1 -force

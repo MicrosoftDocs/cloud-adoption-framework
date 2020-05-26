@@ -12,8 +12,10 @@ ms.custom: csu
 
 # Getting started
 
-This section covers how to deploy platform-native Contoso reference implementation of a CAF enterprise-scale landing zone, [current design](./Implementation-design-guide.md), [FAQ](./Implementation-FAQ.md), and [known issues](./Implementation-known-issues.md).
->Note: before you start, make sure that you've read and understood the overall design objective and scope of the reference implementation.
+This section covers how to deploy platform-native Contoso reference implementation of a CAF enterprise-scale landing zone, [current design](../implementation-design-guide.md), [FAQ](../faq.md), and [known issues](./known-issues.md).
+
+> [!NOTE]
+> Before you start, make sure that you've read and understood the overall design objective and scope of the reference implementation.
 
 ## Target audience
 
@@ -28,6 +30,8 @@ The target audience for this guide is people with a typical DevOps/site reliabil
 ## Prerequisites
 
 This table lists the technical prerequisites needed for using the CAF enterprise-scale landing zone reference implementation. We have chosen to base the reference implementation on PowerShell, but it's possible to use other tools such as Azure CLI for deployment operations.
+
+<!-- markdownlint-disable MD033 -->
 
 |Requirement|Additional info | |
 |---------------|--------------------|--------------------|

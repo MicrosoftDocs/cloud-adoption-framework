@@ -13,7 +13,7 @@ ms.subservice: ready
 
  This section provides guidance for you to experiment with Microsoft Azure Resource Manager template deployments at the tenant ("/") root scope. This will help you to validate that you've properly configured the prerequisites. Note that this section is optional.
 
- ![Tenant root scope deployment](./media/tenant-level-deployment.png "Tenant root scope deployment")
+ ![Tenant root scope deployment](../media/tenant-level-deployment.png "Tenant root scope deployment")
 
 1. From a PowerShell terminal, connect to Azure using `connect-azaccount -tenantid <your-tenant-ID>` with an account that has at least "user access administrator" permissions at the tenant root level.
 2. Assign required permissions at tenant root level for the account that you want to use. Owner **or** contributor and user access administrator permissions are required to deploy the example templates. If you don't have permission to assign permissions at the root level, you may need to [elevate your access](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin) as a global administrator in order to assign them. <br>

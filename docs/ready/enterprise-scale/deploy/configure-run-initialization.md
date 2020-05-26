@@ -13,7 +13,7 @@ ms.subservice: ready
 
 This is the first step of who should deploy your environment. You can learn more about the overall process [here](./Using-Reference-Implementation.md).
 
-![Step 1: the process to deploy your own environment](./media/deploy-environment-step-1.png)
+![Step 1: the process to deploy your own environment](../media/deploy-environment-step-1.png)
 
 This article describes how to:
 
@@ -27,10 +27,10 @@ This article describes how to:
 
 This section describes the steps for how to get started with the full reference implementation by configuring GitHub Actions to deploy Resource Manager templates and how to run the initialization to discover the current Azure environment and create a representation in the local Git repository (repo).
 
-![Initialize AzOps process](./media/initialize-azops.png "Initialize AzOps process")
+![Initialize AzOps process](../media/initialize-azops.png "Initialize AzOps process")
 
 1. [Fork the repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) to your GitHub organization and [clone the forked GitHub repo](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) to your local machine.
-Follow the instructions [here](./Prerequisites.md/#sync-your-fork-with-upstream-repo) to synchronize your for with the upstream.
+Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-repo) to synchronize your for with the upstream.
 
 2. A User Access Administrator role is required to manage and deploy your enterprise-scale architecture. This may require [elevated account permissions](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin). It is strongly recommended to assign the permission at the highest scope possible (for example, the tenant root "/") to ensure you can use the service principal to manage subscriptions. App registration needs to be enabled on the Azure Active Directory (AD) tenant to self-register an application (app) (option 1).
     > Note: read access on the root level is enough to perform the initialization but not deployment. To create management groups and subscriptions, the platform requires tenant-level PUT permission.

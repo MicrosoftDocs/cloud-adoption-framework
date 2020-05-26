@@ -48,7 +48,7 @@ Contoso has decided to use geo-affinitized subscriptions to simplify networking 
 
 Contoso has decided to use Azure resource tags for billing and chargeback instead of blending a cost-management structure within the management group and subscription hierarchy. This will provide horizontal capabilities to query costs across multiple subscriptions. Tags such as department and cost center required for billing will be enforced by the policy at the landing zone management group scope.
 
-![Contoso management group structure](./media/contoso-mg-structure.png)
+![Contoso management group structure](../media/contoso-mg-structure.png)
 
 #### Management groups
 
@@ -127,7 +127,7 @@ Contoso has decided to adopt enterprise-scale recommendations for building their
 
 Contoso's network design based on enterprise-scale design principles is depicted in the picture shown below:
 
-![Network topology](./media/image5.png)
+![Network topology](../media/image5.png)
 
 With this network design, the following scenarios are possible for Contoso:
 
@@ -141,7 +141,7 @@ With this network design, the following scenarios are possible for Contoso:
 
 Contoso decided to deploy a Microsoft-managed, Virtual WAN-based network topology in order to support global interconnectivity between on-premises and Azure, plus a large number of branches that need to connect to Azure. The following diagram depicts the required Azure resources that must be deployed inside the "connectivity" subscription to support Contoso's global Azure network:
 
-![Connectivity subscription](./media/image7.png)
+![Connectivity subscription](../media/image7.png)
 
 In order to simplify the routing configuration across the entire Azure networking platform, Contoso has assigned the following IP address spaces for Virtual WAN VHubs and VNets:
 
@@ -386,7 +386,7 @@ The following networking policies will be assigned in the Contoso production ten
 
 Contoso will employ a monitoring strategy where the central team will be responsible for all-up platform logging, security, and networking, and they'll use Azure-native services such as Azure Monitor Logs, Monitor, Security Center, Sentinel, and Network Watcher. All core management infrastructure will exist inside the dedicated management subscription and will be deployed and governed by Azure Policy; the requisite configuration for workloads and subscriptions will be driven through Azure Policy as new subscriptions and resources are being created. The following diagram depicts the required Azure resources that must be deployed within the "management" subscription to support Contoso's platform management and monitoring:
 
-![Monitoring subscription](.//media/image9.png)
+![Monitoring subscription](../media/image9.png)
 
 Since Contoso has selected West Europe as their primary Azure region, they'll use a single Azure Monitor Logs workspace within West Europe for centralized platform management, which will also act as the hub for all security and networking data across their Azure platform. With this design and implementation, they'll achieve:
 
