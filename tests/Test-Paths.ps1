@@ -91,7 +91,6 @@ function Test-Paths(
     $ignoredExpressionJoined = "\b(" + ($ignoredExpressions -join '|') + ")\b|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)"
 
     $ignoredExpressions.Add('(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)') | Out-Null
-    $ignoredExpressions.Add("``\b[^``]+\b``") | Out-Null
 
     $invalidTermExpressions = [TestContext]::InvalidTermExpressions
     $invalidTermExpressionJoined = "(?<![-'])\b(" + ($invalidTermExpressions -join '|') + ")\b(?!['-])"
@@ -253,7 +252,7 @@ function Test-Paths(
         
             ### FOR IGNORED TERMS, REVERT TO THE ORIGINAL VALUE FROM THE DOCUMENT. 
 
-            $exp = "(?i)$ignoredExpressionJoined|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)|``\b[^``]+\b``"
+            $exp = "(?i)$ignoredExpressionJoined|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)"
 
             if ($correctedSentence -imatch $ignoredExpressionJoined)
             {

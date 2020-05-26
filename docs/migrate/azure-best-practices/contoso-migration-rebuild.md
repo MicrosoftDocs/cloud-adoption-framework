@@ -157,7 +157,7 @@ The Contoso admins provision as follows:
 
     ![AKS](./media/contoso-migration-rebuild/aks3.png)
 
-5. In the PowerShell integrated terminal, they sign into Azure using the Connect-AzureRmAccount command. [Learn more](https://docs.microsoft.com/powershell/azure/get-started-azureps) to get started with PowerShell.
+5. In the PowerShell integrated terminal, they sign into Azure using the `Connect-AzureRmAccount` command. For more information, see [Get started with PowerShell](https://docs.microsoft.com/powershell/azure/get-started-azureps).
 
     ![AKS](./media/contoso-migration-rebuild/aks4.png)
 

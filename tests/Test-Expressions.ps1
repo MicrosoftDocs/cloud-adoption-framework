@@ -192,7 +192,7 @@ function Get-InvalidFormattingExpressions
         "do'?s and don'?t'?s!!do's and don'ts"
         '\.\.\.!!~~Don''t use ellipses'
 
-        '\*\*([A-Z0-9-]{3,}|[a-z]+-[a-z]+)(?<!\*\*(?:CIDR|TFVC))\*\*!!`$1`'     # Use tickmarks for resource names.
+#        '\*\*([A-Z0-9-]{3,}|[a-z]+-[a-z]+)(?<!\*\*(?:CIDR|TFVC))\*\*!!`$1`'     # Use tickmarks for resource names.
         # '(?m) +(?=\r?$)!!'                      # No spaces at the end of a line.
         # '(?<=- \*\*.+)\*\*\. !!.**'
         # '(?<=- \*\*.+)\*\*\: !!.**'
