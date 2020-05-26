@@ -283,7 +283,7 @@ Before deploying the VM, Contoso checks that the OVA file is secure:
 
     **Example:**
 
-    ```C:\>CertUtil -HashFile C:\AzureMigrate\AzureMigrate.ova SHA256```
+    `C:\>CertUtil -HashFile C:\AzureMigrate\AzureMigrate.ova SHA256`
 
 3. The generated hash should match the hash values listed in the [Verify security](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware#verify-security) section of the [Assess VMware VMs for migration](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware) tutorial.
 
@@ -486,13 +486,13 @@ An assessment has a confidence rating of from 1 star to 5 stars (1 star is the l
 - The confidence rating is useful when you are doing _performance-based sizing_. Azure Migrate might not have enough data points for utilization-based sizing. For _as on-premises_ sizing, the confidence rating is always 5 stars because Azure Migrate has all the data points it needs to size the VM.
 - Depending on the percentage of data points available, the confidence rating for the assessment is provided:
 
-   | Availability of data points | Confidence rating |
-   | --- | --- |
-   | 0%-20% | 1 star |
-   | 21%-40% | 2 stars |
-   | 41%-60% | 3 stars |
-   | 61%-80% | 4 stars |
-   | 81%-100% | 5 stars |
+    | Availability of data points | Confidence rating |
+    | --- | --- |
+    | 0%-20% | 1 star |
+    | 21%-40% | 2 stars |
+    | 41%-60% | 3 stars |
+    | 61%-80% | 4 stars |
+    | 81%-100% | 5 stars |
 
 #### Verify Azure readiness
 

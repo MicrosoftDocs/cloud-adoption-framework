@@ -158,7 +158,7 @@ Here's how Contoso will run the migration:
 **Need more help?**
 
 - [Get help](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal) provisioning a SQL Database.
-- [Learn about](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools) vCore resource limits.
+- Learn about [vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools).
 
 ## Step 2: Assess the database using Database Migration Assistant (DMA) and migrate it using Azure Database Migration Service (DMS)
 

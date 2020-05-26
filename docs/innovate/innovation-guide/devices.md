@@ -32,7 +32,7 @@ Azure customers employ a continually expanding set of connected systems and devi
 > [!div class="checklist"]
 >
 > - Industrial assets
-> - [Microsoft HoloLens 2](https://docs.microsoft.com/hololens2)
+> - [Microsoft HoloLens 2](https://docs.microsoft.com/hololens)
 > - [Azure Sphere](https://docs.microsoft.com/azure-sphere/product-overview/what-is-azure-sphere)
 > - [Azure Kinect DK](https://docs.microsoft.com/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones

@@ -146,7 +146,7 @@ They set these up as follows:
 
 **Need more help?**
 
-[Learn about](https://docs.microsoft.com/azure/migrate) setting up Azure Migrate: Server Migration tool.
+Learn about setting up the [Azure Migrate: Server Migration tool](https://docs.microsoft.com/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
 
 ## Step 2: Prepare on-premises VMware for Azure Migrate: Server Migration
 
@@ -162,7 +162,7 @@ After migrating to Azure, Contoso wants to be able to connect to the replicated 
 
 **Need more help?**
 
-- [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prepare-vms-for-migration) preparing VMs for migration.
+- Learn about [preparing VMs for migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prepare-vms-for-migration).
 
 ## Step 3: Replicate VM
 
@@ -400,8 +400,8 @@ As the final step in the migration process, Contoso admins update the connection
 
 **Need more help?**
 
-- [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#run-a-test-migration) running a test migration.
-- [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#migrate-vms) migrating VMs to Azure.
+- Learn about [running a test migration](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#run-a-test-migration).
+- Learn about [migrating VMs to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#migrate-vms).
 
 ## Review the deployment
 
@@ -433,9 +433,9 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 For business continuity and disaster recovery, Contoso takes the following actions:
 
-- **Keep data safe.** Contoso backs up the data on the app VM using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-overview). They don't need to configure backup for the database. Azure Database for MySQL automatically creates and stores server backups. They selected to use geo-redundancy for the database, so it's resilient and production-ready.
+- **Keep data safe.** Contoso backs up the data on the app VM using the [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) service. They don't need to configure backup for the database. Azure Database for MySQL automatically creates and stores server backups. They selected to use geo-redundancy for the database, so it's resilient and production-ready.
 
-- **Keep apps up and running.** Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- **Keep apps up and running.** Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. For more information, see [Quickstart: Set up disaster recovery to a secondary Azure region for an Azure VM](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 

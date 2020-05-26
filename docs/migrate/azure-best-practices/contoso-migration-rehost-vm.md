@@ -162,8 +162,7 @@ They set these up as follows:
 
 **Need more help?**
 
-[Learn about](https://docs.microsoft.com/azure/migrate) setting up Azure Migrate: Server Migration tool.
-
+Learn about setting up the [Azure Migrate: Server Migration tool](https://docs.microsoft.com/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
 ### Prepare on-premises VMs
 
 After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. To do this, Contoso admins do the following before migration:
@@ -191,7 +190,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 5. Need more help?
 
-   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration.
+   - Learn about [preparing VMs for migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration).
 
 ## Step 2: Replicate the on-premises VMs
 
@@ -278,8 +277,8 @@ Now Contoso admins run a full migration.
 
 **Need more help?**
 
-- [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#run-a-test-migration) running a test migration.
-- [Learn about](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#migrate-vms) migrating VMs to Azure.
+- Learn about [running a test migration](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#run-a-test-migration).
+- Learn about [migrating VMs to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware#migrate-vms).
 
 ## Clean up after migration
 

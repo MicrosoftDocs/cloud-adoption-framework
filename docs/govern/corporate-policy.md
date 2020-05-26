@@ -36,7 +36,7 @@ Defining corporate policy focuses on identifying and mitigating business risks r
 
 ## Next steps
 
-Learn how to make your corporate policy ready for the cloud.
+Learn how to prepare your corporate policy for the cloud.
 
 > [!div class="nextstepaction"]
-> [Prepare corporate policy for the cloud](./policy-compliance/index.md)
+> [Prepare your corporate policy for the cloud](./policy-compliance/index.md)

@@ -72,7 +72,7 @@ This approach minimizes risks, while empowering the team to move quickly. It als
 
 ## Next steps
 
-Learn how to evaluate risk tolerance during cloud adoption.
+Learn to evaluate risk tolerance during cloud adoption.
 
 > [!div class="nextstepaction"]
 > [Evaluate risk tolerance](./risk-tolerance.md)

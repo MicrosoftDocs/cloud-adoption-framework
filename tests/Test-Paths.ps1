@@ -89,7 +89,10 @@ function Test-Paths(
     $ignoredExpressions = [TestContext]::IgnoredCasingExpressions
     $ignoredExpressions.AddRange($page.GetIgnoredTerms())
     $ignoredExpressionJoined = "\b(" + ($ignoredExpressions -join '|') + ")\b|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)"
-    
+
+    $ignoredExpressions.Add('(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)') | Out-Null
+    $ignoredExpressions.Add("``\b[^``]+\b``") | Out-Null
+
     $invalidTermExpressions = [TestContext]::InvalidTermExpressions
     $invalidTermExpressionJoined = "(?<![-'])\b(" + ($invalidTermExpressions -join '|') + ")\b(?!['-])"
     $invalidTermLookup = [TestContext]::InvalidTermLookup
@@ -240,7 +243,7 @@ function Test-Paths(
 
             $s = $correctedSentence
 
-                #TODO: ReplaceAtPosition instead?
+            # TODO: ReplaceAtPosition instead?
             $correctedSentence = $correctedSentence -creplace $prefixExpression, `
                 { $_.Groups[1].Value + $_.Groups[2].Value.ToUpper() + $_.Groups[3].Value }
             if ($s -cne $correctedSentence)
@@ -250,13 +253,10 @@ function Test-Paths(
         
             ### FOR IGNORED TERMS, REVERT TO THE ORIGINAL VALUE FROM THE DOCUMENT. 
 
-            $exp = "(?i)$ignoredExpressionJoined|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)"
+            $exp = "(?i)$ignoredExpressionJoined|(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)|``\b[^``]+\b``"
 
             if ($correctedSentence -imatch $ignoredExpressionJoined)
             {
-                $list = $ignoredExpressions
-                $list.Add('(?<=[A-Za-z,:]) (\*\*[^\*]+\*\*)') | Out-Null
-
                 foreach ($exp in $ignoredExpressions)
                 {
                     if ($exp -match '^[A-Za-z]')
@@ -400,7 +400,7 @@ function Get-FixIssuesInSentence(
             # }
             # $sorted = ($matchCollection | Sort-Object -Descending -Property Index)
         
-            #for ($i = $m.Count - 1; $i -ge 0; $i--)
+            # for ($i = $m.Count - 1; $i -ge 0; $i--)
             foreach ($item in $sorted)
             {   
         #        $item = $m[$i]

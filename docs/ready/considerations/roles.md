@@ -32,7 +32,7 @@ When planning your access control strategy, use a least-privilege access model t
 ![Suggested pattern for using RBAC](../../_images/azure-best-practices/rbac-least-privilege.png)
 
 > [!NOTE]
-> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, [use management groups](https://docs.microsoft.com/azure/governance/management-groups) for enterprise-wide access control and [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups).
+> The more specific or detailed permissions are that you define, the more likely it is that your access controls will become complex and difficult to manage. This is especially true as your cloud estate grows in size. Avoid resource-specific permissions. Instead, use [management groups](https://docs.microsoft.com/azure/governance/management-groups) for enterprise-wide access control and [resource groups](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#resource-groups) for access control within subscriptions. Also avoid user-specific permissions. Instead, assign access to [groups in Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups).
 
 ## Use built-in RBAC roles
 
@@ -70,7 +70,7 @@ The following table illustrates a common pattern for dividing IT responsibilitie
 
 | Group | Common role name | Responsibilities |
 | --- | --- | --- |
-| Security operations | Secops | Provides general security oversight.  <br><br> Establishes and enforces security policy such as encryption at rest. <br><br> Manages encryption keys. <br><br> Manages firewall rules. |
+| Security operations | Secops | Provides general security oversight. <br> Establishes and enforces security policy such as encryption at rest. <br><br> Manages encryption keys. <br><br> Manages firewall rules. |
 | Network operations | Netops | Manages network configuration and operations within virtual networks, such as routes and peerings. |
 | Systems operations | Sysops | Specifies compute and storage infrastructure options, and maintains resources that have been deployed. |
 | Development, test, and operations | DevOps | Builds and deploys workload features and applications. <br><br> Operates features and applications to meet service-level agreements (SLAs) and other quality standards. |

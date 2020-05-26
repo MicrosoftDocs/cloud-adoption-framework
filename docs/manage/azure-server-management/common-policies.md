@@ -27,20 +27,21 @@ Regulatory and policy compliance often depends on control of the physical locati
 To find this policy in the portal, search for "location" on the policy definition page. Or run this cmdlet to find the policy:
 
 ```powershell
-Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq 'BuiltIn') -and ($_.Properties.displayName -like '*location*') }
+Get-AzPolicyDefinition | Where-Object { ($_.Properties.policyType -eq 'BuiltIn') `
+  -and ($_.Properties.displayName -like '*location*') }
 ```
 
 The following script shows how to assign the policy. Change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
 
 ```powershell
-#Specify the value for $SubscriptionID.
+# Specify the value for $SubscriptionID.
 $SubscriptionID = <subscription ID>
 $scope = "/subscriptions/$SubscriptionID"
 
-#Replace the -Name GUID with the policy GUID you want to assign.
+# Replace the -Name GUID with the policy GUID you want to assign.
 $AllowedLocationPolicy = Get-AzPolicyDefinition -Name "e56962a6-4747-49cd-b67b-bf8b01975c4c"
 
-#Replace the locations with the ones you want to specify.
+# Replace the locations with the ones you want to specify.
 $policyParam = '{ "listOfAllowedLocations":{"value":["eastus","westus"]}}'
 New-AzPolicyAssignment -Name "Allowed Location" -DisplayName "Allowed locations for resource creation" -Scope $scope -PolicyDefinition $AllowedLocationPolicy -Location eastus -PolicyParameter $policyParam
 ```
@@ -72,14 +73,14 @@ The policy GUID is `2835b622-407b-4114-9198-6f7064cbe0dc`.
 The following script shows how to assign the policy. To use the script, change the `$SubscriptionID` value to point to the subscription that you want to assign the policy to. Before you run the script, use the [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/connect-azaccount?view=azps-2.1.0) cmdlet to sign in.
 
 ```powershell
-#Specify the value for $SubscriptionID.
-$SubscriptionID = <subscription ID>
-$scope = "/subscriptions/$SubscriptionID"
+# Specify the value for $SubscriptionID.
+$subscriptionID = <subscription ID>
+$scope = "/subscriptions/$subscriptionID"
 
-$AntimalwarePolicy = Get-AzPolicyDefinition -Name "2835b622-407b-4114-9198-6f7064cbe0dc"
+$antimalwarePolicy = Get-AzPolicyDefinition -Name "2835b622-407b-4114-9198-6f7064cbe0dc"
 
-#Replace location "eastus" with the value that you want to use.
-New-AzPolicyAssignment -Name "Deploy Antimalware" -DisplayName "Deploy default Microsoft IaaSAntimalware extension for Windows Server" -Scope $scope -PolicyDefinition $AntimalwarePolicy -Location eastus –AssignIdentity
+# Replace location "eastus" with the value that you want to use.
+New-AzPolicyAssignment -Name "Deploy Antimalware" -DisplayName "Deploy default Microsoft IaaSAntimalware extension for Windows Server" -Scope $scope -PolicyDefinition $antimalwarePolicy -Location eastus –AssignIdentity
 
 ```
 

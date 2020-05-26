@@ -120,14 +120,14 @@ To create or modify the saved search, follow these steps:
 
 1. Enter the computer name or the VMUUID to include the computers that you want to opt in for Change Tracking.
 
-    ```kusto
-    Heartbeat
-    | where AzureEnvironment=~"Azure" or Computer in~ ("list of the on-premises server names", "server1")
-    | distinct Computer
-    ```
+  ```kusto
+  Heartbeat
+  | where AzureEnvironment=~"Azure" or Computer in~ ("list of the on-premises server names", "server1")
+  | distinct Computer
+  ```
 
-    > [!NOTE]
-    > The server name must exactly match the value in the expression, and it shouldn't contain a domain name suffix.
+  > [!NOTE]
+  > The server name must exactly match the value in the expression, and it shouldn't contain a domain name suffix.
 
 1. Select **Save**. By default, the scope configuration is linked to the **MicrosoftDefaultComputerGroup** saved search. It will be automatically updated.
 

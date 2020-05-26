@@ -174,7 +174,7 @@ Contoso admins set up the virtual network as follows:
 
 **Need more help?**
 
-- Get an overview of [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+- Read the [SQL Database Managed Instance overview](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 - Learn how to [create a virtual network for a SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-configure-vnet-subnet).
 - Learn how to [set up peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-peering).
 - Learn how to [update Azure Active Directory DNS settings](https://docs.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance).

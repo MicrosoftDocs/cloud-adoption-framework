@@ -1,5 +1,5 @@
 # TODO: Investigate extension methods with parameters.
-#Update-TypeData -TypeName System.String -MemberType ScriptMethod `
+# Update-TypeData -TypeName System.String -MemberType ScriptMethod `
 #    -MemberName ChopStart  -Value { return "Text"" }
 
 using namespace System.Collections.Generic
@@ -100,7 +100,7 @@ function Get-FileContents(
     [System.IO.FileInfo] $file
 )
 {
-    #TODO: Convert to StreamReader for improved performance.
+    # TODO: Convert to StreamReader for improved performance.
     # https://docs.microsoft.com/windows-server/administration/performance-tuning/powershell/script-authoring-considerations
     # https://docs.microsoft.com/archive/blogs/ashleymcglone/slow-code-top-5-ways-to-make-your-powershell-scripts-run-faster
 

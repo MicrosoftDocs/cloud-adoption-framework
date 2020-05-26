@@ -201,7 +201,7 @@ The Innovate methodology provides guidance on the tools and product management a
 
 - [Business value consensus](../innovate/business-value.md): If more than three months have passed since the last business value consensus, or if one was never completed, start here.
 - [Azure innovation guide](../innovate/innovation-guide/index.md): Use the Azure innovation guide to speed up the deployment of innovative solutions by understanding the tools and processes that can help you create a minimum viable product (MVP).
-- [Innovation best practices](../innovate/best-practices/index.md): Learn how to combine Azure services to create a toolchain for digital invention.
+- [Innovation best practices](../innovate/best-practices/index.md): Combine Azure services to create a toolchain for digital invention.
 - [Feedback loops](../innovate/considerations/adoption.md): Develop improved feedback loops to quickly deliver impactful innovations to your customers.
 
 <!-- markdownlint-disable MD033 -->
@@ -222,7 +222,7 @@ The Cloud Adoption Framework is a lifecycle solution. It can help you begin an i
 | Team | Next iteration |
 |---|---|
 | Cloud&nbsp;adoption&nbsp;team | [Process improvements](../innovate/considerations/index.md) provide insight about approaches to deliver on innovations that affect customers and drive recurring adoption. |
-| Cloud&nbsp;strategy&nbsp;team | The [Strategy methodology](../strategy/index.md) and [the Plan methodology](../plan/index.md) are iterative processes that evolve with the adoption plan. Return to these overview pages and continue to iterate on your business and technical strategies. |
+| Cloud&nbsp;strategy&nbsp;team | The [Strategy methodology](../strategy/index.md) and the [Plan methodology](../plan/index.md) are iterative processes that evolve with the adoption plan. Return to these overview pages and continue to iterate on your business and technical strategies. |
 | Cloud&nbsp;platform&nbsp;team | Revisit the [Ready methodology](../ready/index.md) to continue to advance the overall cloud platform that supports migration or other adoption efforts. |
 | Cloud&nbsp;governance&nbsp;team | Use the [Govern methodology](../govern/index.md) to continue to improve governance processes, policies, and disciplines. |
 | Cloud&nbsp;operations&nbsp;team | Build on the [Manage methodology](../manage/index.md) to provide richer operations in Azure. |

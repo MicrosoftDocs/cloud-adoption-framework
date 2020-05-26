@@ -2,7 +2,7 @@
 . .\Test-Paths.ps1
 . .\Test-Spelling.ps1
 
-$filename = "../docs/govern/cost-management/policy-statements.md"
+$filename = "../docs/migrate/azure-best-practices/contoso-migration-infrastructure.md"
 cmd /c "markdownlint $filename -c ..\docs\.markdownlint.json --fix"
 
 $file = $(Get-Item $filename) 

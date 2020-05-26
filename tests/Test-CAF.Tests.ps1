@@ -18,7 +18,7 @@ function Get-PotentialIssuesForReviewExpressions
         "^( >)*(?!title|description|author|ms.|New-|-<!--)[^\|#:\[][ -]*.{25,}[a-fh-z][a-z,]$"     # Sentences should end with periods.
         " [A-Za-z]/[A-Za-z] "               # Use 'and' or 'or'
         "[A-Za-z]\(s\)"
-        #TODO: What does this expression do?
+        # TODO: What does this expression do?
         "(^#+ )(?!\[)[\w \(\)'\.,:/\?-]*.(?<=[^\w \(\)'\.,:/\?-])"
         "([A-Z][A-Za-z]*)[^,\.\|:\?'-]{200,},"     # Review long sentences.
         "<endoflist>"

@@ -177,7 +177,7 @@ After a go-forward decision has been agreed upon with the cloud strategy team, t
 **Guidance to support deliverable completion:**
 
 - [Incremental rationalization](../../digital-estate/rationalize.md): Consider an agile approach to rationalization that properly aligns late-bound technical decisions.
-- [The five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
+- The [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md): Understand the various rationalization options.
 
 <!-- markdownlint-disable MD033 -->
 <br>
