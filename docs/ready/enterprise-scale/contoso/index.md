@@ -25,7 +25,7 @@ The target audience for this guide is people with a typical DevOps/site reliabil
 
 - [Deploying a template with command line](#deploy-arm-templates-at-the-tenant-root-scope). Without Git integration, experiment with Resource Manager template deployments at the tenant-root ("/") scope to better understand how to instantiate the end-to-end CAF enterprise-scale landing zone architecture.
 
-- [Configuring Git to deploy CAF enterprise-scale landing zone](#configure-github-and-run-initialization). Get started with the full reference implementation, including the Git repository (repo) to configure the platform, Resource Manager templates triggered by GitHub Actions for landing zones, and operation detection and reconciliation with Microsoft Azure Monitor Logs.
+- [Configuring Git to deploy CAF enterprise-scale landing zone](#configure-github-and-run-initialization). Get started with the full reference implementation, including the Git repository (repo) to configure the platform, Resource Manager templates triggered by GitHub Actions for landing zones, and operation detection and reconciliation with Microsoft Azure Monitor logs.
 
 ## Prerequisites
 
@@ -33,19 +33,20 @@ This table lists the technical prerequisites needed for using the CAF enterprise
 
 <!-- markdownlint-disable MD033 -->
 
-|Requirement|Additional info | |
+| Requirement | Additional info | |
 |---------------|--------------------|--------------------|
-|Git >= 2.1| Latest version of Git can be found [here](https://git-scm.com/) | [Git handbook](https://guides.github.com/introduction/git-handbook/)|
-Minimum version of PowerShell: 7.0|  The latest version of PowerShell including install instructions can be found [here](https://github.com/powershell/powershell). <br> Confirm the version of PowerShell that you are running by typing `$psversiontable` in a PowerShell session.|
-|az.accounts >= 1.7 <br>az.resources >= 1.10 |  `Install-module -name az.<modulename> -Minimumversion <version> -Scope allusers`<br>Confirm the version of the module you have by running <br>`Get-module az.<modulename> -Listavailable`. | [Docs](https://docs.microsoft.com/powershell/azure/install-az-ps)|
-| Pester >= 4.10.1 |  ***Only required if you want to run pester-tests as a developer*** <br>`Install-module -name pester -minimumversion 4.10.1 -scope allusers`<br> You can confirm the version of the module you have by running <br>`Get-module pester -listavailable`. | [Docs](https://github.com/pester/pester) |
+| Git >= 2.1 | Latest version of Git can be found [here](https://git-scm.com/) | [Git handbook](https://guides.github.com/introduction/git-handbook/) |
+| Minimum version of PowerShell: 7.0 | The latest version of PowerShell including install instructions can be found [here](https://github.com/powershell/powershell). <br> Confirm the version of PowerShell that you're running by typing `$PSVersionTable` in a PowerShell session. |
+| Az.Accounts >= 1.7 <br> Az.Resources >= 1.10 | `Install-Module -Name Az.<modulename> -MinimumVersion <version> -Scope AllUsers` <br> Confirm the version of the module you have by running <br> `Get-Module az.<moduleName> -ListAvailable`. | [Docs](https://docs.microsoft.com/powershell/azure/install-az-ps) |
+| Pester >= 4.10.1 | _Only required if you want to run pester tests as a developer._ <br> `Install-Module -Name Pester -MinimumVersion 4.10.1 -scope AllUsers` <br> You can confirm the version of the module you have by running <br> `Get-Module Pester -ListAvailable`. | [Docs](https://github.com/pester/pester) |
 
-> Note: for iPhones, if you have multi-factor authentication enabled on any of your accounts, make sure that your phone and application (app) are easily accessible before you start.
+> [!NOTE]
+> For iPhones, if you have multi-factor authentication enabled on any of your accounts, make sure that your phone and application are easily accessible before you start.
 
 ## Deploy Resource Manager templates at the tenant root scope
 
-1. Connect to Azure using `connect-azaccount` with an account that has at least "user access administrator" permissions at the tenant root level.
-2. Assign required permissions at tenant root level for the account that you want to use. Owner or contributor and user access administrator permissions are required to deploy the example templates. If you don't have permissions to assign permissions at the root level, you may have to [elevate your access](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin) as a global administrator before assigning them. If you need to use a Service Principal, follow the instructions under [full end-to-end deployment](#configure-github-and-run-initialization) to assign permissions.
+1. Connect to Azure using `Connect-AzAccount` with an account that has at least _user access administrator_ permissions at the tenant root level.
+2. Assign required permissions at the tenant root level for the account that you want to use. Owner or contributor and user access administrator permissions are required to deploy the example templates. If you don't have permissions to assign permissions at the root level, you might have to [elevate your access](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin) as a global administrator before assigning them. If you need to use a service principal, follow the instructions under [full end-to-end deployment](#configure-github-and-run-initialization) to assign permissions.
 
     ```powershell
     New-AzRoleAssignment -SignInName john.doe@contoso.com -RoleDefinitionName "Owner" -Scope "/"  
@@ -74,7 +75,7 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
     <br><br>
      > Read up to better understand how the CAF enterprise-scale landing zone reference Resource Manager templates are constructed (with one master template and parameter files only) [here](../contribution.md#writing-arm-templates-for-contoso-implementation).
 
-4. In all parameter files, change the tenant id and name of the management groups to reflect the tenant where they'll be deployed. The tenant id can be found by running `get-aztenant`:
+4. In all parameter files, change the tenant ID and name of the management groups to reflect the tenant where they'll be deployed. The tenant ID can be found by running `Get-AzTenant`:
 
     ```json
     {
@@ -155,29 +156,34 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
 
 1. [Fork the repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) to your GitHub organization and [clone the forked GitHub repo](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) to your local machine. Follow the instructions [here](#sync-your-fork-with-upstream-repo) to keep your fork synchronized with the upstream.
 
-2. A user access administrator role is required to manage the deployment of your CAF enterprise-scale landing zone architecture. This may require [elevated account permissions](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin). It is recommended to assign the permission at the highest scope possible (for example, the tenant root "/") to ensure that you can use Service Principal to perform subscriptions management operation. App Registration needs to be enabled on the Azure AD tenant to self-register an app (option 1).
-    > Note: read access on the root level is enough to perform the initialization but not deployment. To create management groups and subscriptions, the platform requires tenant-level put permission.
+2. A user access administrator role is required to manage the deployment of your CAF enterprise-scale landing zone architecture. This may require [elevated account permissions](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin). Assign the permission at the highest scope possible (for example, the tenant root `/`) to ensure that you can use a service principal to perform subscriptions management operations. App registration needs to be enabled on the Azure AD tenant to self-register an app (option 1).
+    > [!NOTE]
+    > Read access on the root level is enough to perform initialization but not deployment. To create management groups and subscriptions, the platform requires tenant-level put permission.
 
     Option 1 (app registration enabled)
 
     ```powershell
-    #Create Service Principal and assign Owner role to tenant root scope ("/")
+    #Create the service principal and assign the Owner role to tenant root scope ("/")
     $servicePrincipal = New-AzADServicePrincipal -Role Owner -Scope / -DisplayName AzOps
     ```
 
     Option 2 (app registration disabled)
 
     ```powershell
-    #Create Service Principal as the Azure AD adminstrator
+    # Create the service principal as the Azure AD administrator
+
     $servicePrincipal = New-AzADServicePrincipal -Role Owner -Scope / -DisplayName AzOps -SkipAssignment
-    #Assign Owner role to tenant root scope ("/") as a User Access Adminstrator
+    # Assign the Owner role to the tenant root scope ("/") as a user access adminstrator
+
     New-AzRoleAssignment -ApplicationId $servicePrincipal.ApplicationId -RoleDefinitionName Owner -Scope /
     ```
 
     Export the service principal name information. Perform this step in the same shell instance the service principal name was created.
 
     ```powershell
-    #Prettify output to print in the format for AZURE_CREDENTIALS to be able to copy in next step.
+
+    # Format output for AZURE_CREDENTIALS to enable copying in the next step.
+
     [ordered]@{
         clientId = $servicePrincipal.ApplicationId
         displayName = $servicePrincipal.DisplayName
@@ -188,7 +194,7 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
     } | ConvertTo-Json
     ```
 
-3. To create the following secrets on GitHub, navigate to the main page of the repo and select Settings, Secrets, and Add a New Secret under your repo's name.
+3. To create the following secrets on GitHub, navigate to the main page of the repo and select **Settings** > **Secrets**, then select **New Secret**.
 
 - Name: Azure_credentials
 
@@ -199,12 +205,12 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
       "name": "<<redacted>>",
       "clientSecret": "<<redacted>>",
       "tenantId": "<<redacted>>",
-      "subscriptionId": "<<default-subscriptionid>>"
+      "subscriptionId": "<<default-subscriptionId>>"
     }
     ```
 
 - Name: Azure_enrollment_account_name
-    This secret must contain the objectid for the Azure enrollment account. You can obtain the objectid by running ```get-azenrollmentaccount```
+    This secret must contain the `ObjectId` for the Azure enrollment account. You can obtain the `ObjectId` by running `Get-AzEnrollmentAccount`.
 
     ```bash
     ObjectId
@@ -223,17 +229,18 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
     github-email@your-domain.com #Github ID primary email
     ```
 
-4. Run `clear-azcontext` and then [`connect-azaccount` with your service principal](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps?view=azps-3.6.1#sign-in-using-a-service-principal) created earlier ensure that you have the appropriate permissions during the initialization.
+4. Run `Clear-AzContext` and then [`Connect-AzAccount` with your service principal](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps?view=azps-3.6.1#sign-in-using-a-service-principal) created earlier ensure that you have the appropriate permissions during the initialization.
 
 5. To run an initialization operation in Azure and initialize your repository with your Azure AD tenant locally, run the code below.
-    Note: depending on the size of the environment, it may take a while initialization to complete.
+    > [!NOTE]
+    > Depending on the size of the environment, it may take a while initialization to complete.
 
     ```powershell
     Import-Module .\src\AzOps.psd1 -Force
     Initialize-AzOpsRepository -Recurse -Verbose
     ```
 
-    When the initialization is complete, the azops folder will have a folder structure representing the entire Azure environment from root mg down to resources. Each .azstate folder will contain a snapshot of the resources/policies in that scope.
+    When the initialization is complete, the `azops` folder will have a folder structure representing the entire Azure environment from root management group down to resources. Each `.azstate` folder will contain a snapshot of the resources and policies in that scope.
 
     ```bash
     AzOps
@@ -259,7 +266,7 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell including 
                 └───.AzState
     ```
 
-6. Commit and push changes to your repository (repo). Ensure your changes are in master branch by either committing to your "master" branch or create a feature branch and merge it in the master before proceeding to next step.
+6. Commit and push changes to your repository (repo). Ensure your changes are in master branch by either committing to your master branch or create a feature branch and merge it into master before proceeding to the next step.
 
 ## Deploy templates
 
@@ -317,7 +324,7 @@ AzOps
 5. Commit your changes and push your branch to your GitHub fork.
 6. Create a PR from feature branch to master branch. Pay attention to the upstream branch; the default branch might be an upstream fork rather your own master branch.
 7. Approve your PR.
-8. The "azops-push" GitHub action should trigger automatically at this point and you can monitor the status in the Actions log.
+8. The "azops-push" GitHub action should trigger automatically at this point and you can monitor the status in the actions log.
 9. After all status checks are passed on your PR (including but not limited to "azops-push" action), squash merge your changes to your own master branch.
 10. Sync your local master branch on your machine from your origin/master
 

@@ -15,17 +15,17 @@ Within the center of enterprise-scale architecture is a critical design path com
 
 For example, a customer is likely to question how many subscriptions they require for their estate. In this instance, the reader should review the *C - management group and subscription organization -&gt; 2. Subscription organization and governance* section, using the outlined recommendations to help drive subscription decisions.
 
-# Critical design areas
+## Critical design areas
 
 The following eight critical design areas are intended to support translating customer requirements to Microsoft Azure constructs and capabilities and to address the mismatch between on-premises infrastructure and cloud-design, which typically creates dissonance and friction between the enterprise-scale definition and Azure adoption.
 
 The impact of decisions made within these critical areas will reverberate across enterprise-scale architecture and influence other decisions. Readers are advised to familiarize themselves with the eight areas below to better understand the consequences of encompassed decisions, which may later produce trade-offs within related areas.
 
-- [A - enterprise enrollment and Azure AD tenants](./Enterprise-Enrollment-and-Azure-AD-Tenants.md)
-- [B - identity and access management](./Identity-and-Access-Management.md)
-- [C - management group and subscription organization](./Management-Group-and-Subscription-Organization.md)
-- [D - network topology and connectivity](./Network-Topology-and-Connectivity.md)
-- [E - management and monitoring](./Management-and-Monitoring.md)
-- [F - business continuity and disaster recovery](./Business-Continuity-and-Disaster-Recovery.md)
-- [G - security, governance, and compliance](./Security-Governance-and-Compliance.md)
-- [H - platform automation and DevOps](./Platform-Automation-and-DevOps.md)
+1. [Enterprise enrollment and Azure AD tenants](./enterprise-enrollment-and-azure-ad-tenants.md)
+2. [Identity and access management](./identity-and-access-management.md)
+3. [Management group and subscription organization](./management-group-and-subscription-organization.md)
+4. [Network topology and connectivity](./network-topology-and-connectivity.md)
+5. [Management and monitoring](./management-and-monitoring.md)
+6. [Business continuity and disaster recovery](./business-continuity-and-disaster-recovery.md)
+7. [Security, governance, and compliance](./security-governance-and-compliance.md)
+8. [Platform automation and DevOps](./platform-automation-and-devops.md)

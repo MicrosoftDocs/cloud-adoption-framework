@@ -15,7 +15,7 @@ ms.subservice: ready
 
 ## Approach
 
-The "Start-small" approach outlined in the Ready methodology starts with a single landing zone and integrates richer enterprise features as the cloud adoption plan moves towards enterprise-scale. That approach creates a structured hands-on learning path that aligns with the needs of each release or (migration wave). In that approach, the landing zones may support production workloads, but are not truly enterprise ready for several releases.
+The _start small_ approach outlined in the Ready methodology starts with a single landing zone and integrates richer enterprise features as the cloud adoption plan moves towards enterprise-scale. That approach creates a structured hands-on learning path that aligns with the needs of each release or (migration wave). In that approach, the landing zones may support production workloads, but are not truly enterprise ready for several releases.
 
 When customers need to get to enterprise readiness faster, a more complex architecture is required. A single landing zone can not deliver enterprise-scale in isolation. Enterprise-scale requires an enterprise-ready environment, which hosts enterprise-ready landing zones. Both approaches follow the same principles and best practices. But the enterprise-scale approach applies multiple best practices via a single JSON file that uses a GitHub action and deployment pipeline to deploy all aspects of the environment including multiple landing zones. This highly opinionated implementation uses the same ARM template, Azure Policy, and RBAC tools used in the smaller blueprint approaches.
 

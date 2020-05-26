@@ -13,7 +13,7 @@ ms.subservice: ready
 
 Contoso's enterprise-scale reference implementation is rooted in the principle that everything in Microsoft Azure is a resource. Contoso uses Azure Resource Manager to describe and manage their resources as part of their target state architecture at scale.
 
-Contoso will enforce policies to support security, logging, networking, and any other plumbing needed for landing zones/subscriptions. Contoso will bootstrap the Azure environment with Resource Manager templates to create the necessary structure for management and networking and to declare a desired goal state. Contoso will apply the principle of policy-driven governance and use policies to deploy all necessary platform resources for a landing zone. While deploying Azure Key Vault to store platform-level secrets in the management subscription versus scripting the template deployment to deploy Key Vault, Cloud Adoption Framework (CAF) enterprise-scale-based reference implementation will have a policy definition that deploys Key Vault prescriptively, using a policy assignment at the management subscription scope. The core benefits of a policy-driven approach are many, but the most significant include:
+Contoso will enforce policies to support security, logging, networking, and any other plumbing needed for landing zones and subscriptions. Contoso will bootstrap the Azure environment with Resource Manager templates to create the necessary structure for management and networking and to declare a desired goal state. Contoso will apply the principle of policy-driven governance and use policies to deploy all necessary platform resources for a landing zone. While deploying Azure Key Vault to store platform-level secrets in the management subscription versus scripting the template deployment to deploy Key Vault, Cloud Adoption Framework (CAF) enterprise-scale-based reference implementation will have a policy definition that deploys Key Vault prescriptively, using a policy assignment at the management subscription scope. The core benefits of a policy-driven approach are many, but the most significant include:
 
 - The platform is capable of bringing target resources (in this instance, a subscription) to a desired goal state.
 - The platform monitors continuous conformance to ensure that all platform-level resources are compliant. It can monitor and remediate resources throughout their lifecycle because it's aware of the goal state.
@@ -29,7 +29,7 @@ Contoso has decided to use one Azure Monitor Logs workspace. When the first regi
 
 ## Networking
 
-Azure Policy will continuously check if an Azure Virtual WAN virtual hub (VHub) already exists in a "connectivity" subscription for all enabled regions, and it'll create one if it doesn't exist. Configure a Virtual WAN VHub to secure internet traffic from secured connections (virtual networks [VNets] inside landing zones) to the internet via Azure Firewall.
+Azure Policy will continuously check if an Azure Virtual WAN virtual hub already exists in a "connectivity" subscription for all enabled regions, and it'll create one if it doesn't exist. Configure a Virtual WAN VHub to secure internet traffic from secured connections (virtual networks [VNets] inside landing zones) to the internet via Azure Firewall.
 
 For all Virtual WAN VHubs, policy will ensure that Azure Firewall is deployed and linked to existing global Azure Firewall policy, as well as the creation of a regional firewall policy if needed.
 
@@ -63,7 +63,7 @@ Sandbox subscriptions are for experiment and validation only. Sandbox subscripti
 
 Subscription will be moved to a decommissioned management group. Decommissioned management group policies will deny creation of new services and subscription cancellation request will be sent.
 
-# Implementation components
+## Implementation components
 
 Contoso will use the AzOps acronym (inspired by GitOps, Kubernetes Operations, and more) to designate Azure operations within enterprise-scale design principles. Contoso has decided to use platform-native capabilities and Resource Manager to orchestrate, configure, and deploy landing zones and to declare a goal state. Contoso has abided by the policy-driven governance design principle and wants landing zones (subscriptions) to be provisioned and configured autonomously.
 
@@ -110,7 +110,7 @@ The reasoning behind this is that it can be machine-generated on-demand, and it 
 
 ```
 
-The person should copy/paste (export) the output into the input template parameter file. It is important to note that not all properties are required, but extra metadata won't disrupt processes, and the platform and template will ignore these properties. To view requirements, see this example [20-create-child-managementgroup.parameters.json](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json).
+The person should copy/paste (export) the output into the input template parameter file. It is important to note that not all properties are required, but extra metadata won't disrupt processes, and the platform and template will ignore these properties. To view requirements, see this example: [20-create-child-managementgroup.parameters.json](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json).
 
 ```json
 {
@@ -166,9 +166,9 @@ Tenant Root
             ├───Resources
 ```
 
-Contoso has found it advantageous to organize these resources in same hierarchical layout inside their Git repo. Since management groups and subscriptions move and/or are renamed, organizing resources in a hierarchical manner allows Contoso to track their lineage over time. This approach reduces misconfiguration and allows them to predictably base mapping resource paths on resource IDs.
+Contoso has found it advantageous to organize these resources in same hierarchical layout inside their Git repo. Since management groups and subscriptions get moved and renamed, organizing resources in a hierarchical manner allows Contoso to track their lineage over time. This approach reduces misconfiguration and allows them to predictably base mapping resource paths on resource IDs.
 
-The Azopsscope class will abstract the mapping between the resource identifier in Azure and the path to resources stored in the Git repo. This will facilitate quick conversion between Git and Azure and vice-versa. Examining the examples below, the important properties to note are the scope; type (tenant, management group, subscription, and resource group); and state path representing the file location inside Git.
+The `AzOpsScope` class will abstract the mapping between the resource identifier in Azure and the path to resources stored in the Git repo. This will facilitate quick conversion between Git and Azure and vice-versa. Examining the examples below, the important properties to note are the scope; type (tenant, management group, subscription, and resource group); and state path representing the file location inside Git.
 
 Another advantage of the class is clear when deployment templates are updated in pull requests (PRs). The pipeline can determine at what scope to trigger deployments and the appropriate parameters to pass such as name, scope, and more. By using the same Azure AD tenant, the pipeline can be triggered predictably and deployment artifacts can be organized without deployment scripts in each PR throughout the scope of the Azure platform. Check the [deploy-templates](https://github.com/Azure/CET-NorthStar/blob/master/docs/Implementation-Getting-Started.md#deploy-templates) section for further details.
 
@@ -209,7 +209,7 @@ resource         :
 
 ## Initialization
 
-**Initialize-azopsrepository**
+**Initialize-AzOpsRepository:**
 
 This is a discovery function to traverse the whole management group and subscription hierarchy:
 
@@ -217,23 +217,23 @@ This is a discovery function to traverse the whole management group and subscrip
 Get-AzManagementGroup -Recurse -expand -GroupName {{root management group name or ID}} | ConvertTo-Json -depth 100
 ```
 
-This will build the relationship association between management group and subscription. Further, when the initialize-azopsrepository function is called with -recurse parameter, it should enlist all resources available at the scope and children. When calling out a subscription, it'll also summon a list of resource groups.
+This will build the relationship association between management group and subscription. Further, when the `Initialize-AzOpsRepository` function is called with the `-Recurse` parameter, it should enlist all resources available at the scope and children. When calling out a subscription, it'll also summon a list of resource groups.
 
 ## Deployment
 
-**Invoke-azopsgitpush**
+**Invoke-AzOpsGitPush:**
 
-Contoso wants to ensure that all platform changes are peer-reviewed and approved before deploying to a production environment. Contoso has decided to implement workflows (also known as deployment pipelines) and to use GitHub Action for this process. Contoso has named this workflow azops-push, referring to the direction of the change (for example, Git to Azure). All platform changes will be peer-reviewed and in the form of PRs. Once PRs are reviewed thoroughly, a platform team will attempt the merge them to the master branch and trigger the deployment action by calling the invoke-azopsgitpush function.
+Contoso wants to ensure that all platform changes are peer-reviewed and approved before deploying to a production environment. Contoso has decided to implement workflows (also known as deployment pipelines) and to use GitHub Action for this process. Contoso has named this workflow azops-push, referring to the direction of the change (for example, Git to Azure). All platform changes will be peer-reviewed and in the form of PRs. Once PRs are reviewed thoroughly, a platform team will attempt the merge them to the master branch and trigger the deployment action by calling the Invoke-AzOpsGitPush function.
 
-When a PR is approved but before it's merged with the master branch, this function will be the starting point for GitHub Actions. The master branch represents the truth from an infrastructure-as-code (IAC) perspective. This quality gate will ensure that master branch remains healthy and only contain artifacts successfully deployed in Azure. It will specify the files changed in PRs by comparing each feature branch with the current master branch. The following actions should be executed inside invoke-azopsgitpush:
+When a PR is approved but before it's merged with the master branch, this function will be the starting point for GitHub Actions. The master branch represents the truth from an infrastructure-as-code (IAC) perspective. This quality gate will ensure that master branch remains healthy and only contain artifacts successfully deployed in Azure. It will specify the files changed in PRs by comparing each feature branch with the current master branch. The following actions should be executed inside `Invoke-AzOpsGitPush`:
 
-- Validate that the current Azure configuration is the same as what's stored in Git by running initialize-azopsrepository.
-- Git will determine if the working directory is dirty and exit the deployment task to alert the user and run initialize-azopsrepository interactively. All deployments should be halted at this stage, as the platform is in a nondeterministic state from an IAC point of view.
+- Validate that the current Azure configuration is the same as what's stored in Git by running `Initialize-AzOpsRepository`.
+- Git will determine if the working directory is dirty and exit the deployment task to alert the user and run `Initialize-AzOpsRepository` interactively. All deployments should be halted at this stage, as the platform is in a nondeterministic state from an IAC point of view.
 - Invoke built-in new-az-*deployment commandlets at the appropriate scope.
 
 ## Operationalizing configuration drift and reconciliation
 
-**Invoke-azopsgitpull**
+**Invoke-AzOpsGitPull:**
 
 Operationalize the Azure environment at scale for day-to-day activities.
 

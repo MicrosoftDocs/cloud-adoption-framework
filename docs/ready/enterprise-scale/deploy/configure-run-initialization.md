@@ -135,9 +135,10 @@ Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-r
     Initialize-AzOpsRepository -Verbose
     ```
 
-    >Note: the Initialize-AzOpsRepository process will fail in there are multiple subscriptions with the same name. Before running this process, verify that all subscriptions have unique names.
+    > [!NOTE]
+    `Initialize-AzOpsRepository` will fail in there are multiple subscriptions with the same name. Before running this process, verify that all subscriptions have unique names.
 
-    When the initialization is complete, the azops folder will have a folder structure that represents your entire Azure environment and list everything from the root management group to resources. You will see that the management group structure you created with the Azure portal in step 5 is reflected here. Please note that each .azstate folder will contain a snapshot of the resources/policies in that scope.
+    When the initialization is complete, the `azops` folder will have a folder structure that represents your entire Azure environment and list everything from the root management group to resources. You will see that the management group structure you created with the Azure portal in step 5 is reflected here. Please note that each `.azstate` folder will contain a snapshot of the resources/policies in that scope.
 
     ```bash
     AzOps
@@ -160,6 +161,6 @@ Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-r
         ├───.....                                          # Existing management group or subscription structure
     ```
 
-7. Commit and push changes to your repo. Ensure your changes are in master branch by either committing to your master branch or create feature branch and merge it in master before proceeding to next step.
+7. Commit and push changes to your repo. Ensure your changes are in the master branch by either committing to master, or creating a feature branch and merging it to master before proceeding to the next step.
 
-8. Once changes are in the master branch, create a new feature branch to enable azops-push workflow by renaming .GitHub\workflows\azops-push.yml.disabled to .GitHub\workflows\azops-push.yml and merge into master. For all future pull requests, GitHub Actions will deploy to Azure.
+8. Once changes are in the master branch, create a new feature branch to enable the `AzOps-Push` workflow by renaming `.GitHub\workflows\azops-push.yml.disabled` to `.GitHub\workflows\azops-push.yml` and merging to master. For all future pull requests, GitHub Actions will deploy to Azure.

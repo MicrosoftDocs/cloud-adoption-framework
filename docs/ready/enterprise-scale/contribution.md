@@ -112,7 +112,8 @@ There is a generic multiresource template available [here](https://raw.githubuse
 Retrieve resource definitions by calling the `get-azresource` function and giving `resourceid` to the existing resource.
 
 ```powershell
-#Replace resourceId in below command before executing it
+# Replace the resourceId in the command below before executing it
+
 Get-AzResource -ResourceId '/providers/Microsoft.Management/managementGroups/contoso/providers/Microsoft.Authorization/policyDefinitions/DINE-Diagnostics-ActivityLog' | ConvertTo-Json -depth 100
 ```
 
