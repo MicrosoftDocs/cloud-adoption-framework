@@ -9,6 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## CAF enterprise-scale Microsoft Azure Resource Manager parameters file
+# CAF enterprise-scale Microsoft Azure Resource Manager parameters file
 
 Coming soon :)

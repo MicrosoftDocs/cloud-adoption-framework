@@ -1,6 +1,6 @@
 ---
-title: Xx
-description: XX
+title: Template-schema
+description: Template-schema
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -9,6 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Generic enterprise-scale ARM template
+# Generic enterprise-scale Microsoft Azure Resource Manager template
 
 Coming soon :)

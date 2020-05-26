@@ -1,6 +1,6 @@
 ---
-title: XX
-description: XX
+title: Implementation design guide
+description: Implementation design guide
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -11,24 +11,21 @@ ms.subservice: ready
 
 # Design objectives
 
-Enterprise-scale reference implementation is rooted in the principle that **Everything in Azure is a resource** and to operate at-scale, it should be managed declaratively to **determine target goal state** of the overall platform.
+Enterprise-scale reference implementation is rooted in the principle that everything in Azure is a resource. To operate at scale, it should be managed declaratively to determine the target goal state of the overall platform.
 
-In that spirit, this reference implementation has following three tenets:
+With this principle, this reference implementation has following three tenets:
 
-![EA Enrollment](./media/implementation-scope.png)
+![Enterprise agreement enrollment](./media/implementation-scope.png)
+_Figure 1: Enterprise agreement enrollment_
 
-## 1. Git -> Clone -> Azure/enterprise-scale
-
-Provide Git repository for Azure platform configuration.
-
-Git -> Clone or Git -> Fork (preferred) metaphor references to the fact that this repo will provide everything that must be true for enterprise-scale - that customers can use as-is in their own environment.
+Git -> Clone -> Azure/enterprise-scale: provide the Git repository (repo) for Azure platform configuration. The Git -> Clone or Git -> Fork (preferred) metaphor references that this repo will provide everything that must be true for enterprise-scale—that customers can use as-is in their own environment.
 
 ### Discovery
 
-Before starting enterprise-scale journey, it is important for customers to discover existing configuration in Azure that can serve as platform baseline. Consequence of not discovering existing environment will be no reference point to rollback or roll-forward after deployment.
-Discovery is also important for organizations, who are starting their DevOps and infrastructure-as-code journey, as this can provide crucial on-ramp path to allow transitioning without starting all-over.
+Before starting enterprise-scale journey, it is important for customers to discover existing configuration in Azure that can serve as platform baseline. Consequence of not discovering existing environment will be no reference point to roll back or forward after deployment.
+Discovery is also important for organizations, who are starting their DevOps and infrastructure-as-code (IAC) journey, as this can provide crucial on-ramp path to allow transitioning without starting all-over.
 
-For the purpose of discovery, following resources are considered within the scope of overall Azure platform. This will initialize empty Git repo with current configuration to baseline configuration encompassing following:
+For the purpose of discovery, following resources are considered within the overall scope of the Azure platform. This will initialize an empty Git repo with the current configuration to baseline configuration, encompassing the following:
 
 <!-- docsTest:disable TODO -->
 
@@ -48,61 +45,58 @@ For the purpose of discovery, following resources are considered within the scop
 
 <!-- docsTest:enable TODO -->
 
-We will default to platform schema to represent these configuration in Git. This means calling Azure APIs using PowerShell.
+We will default to platform schema to represent these configurations in Git. This means calling Azure APIs using PowerShell.
 
 ### Deployment
 
-Iac repo will have 100s if not 1000s of configuration artifact tracked and version controlled. Platform developers will be modifying very small subset of these artifact on ongoing basis via pull request. As Git represents source of the truth and change, we will use Git to determine differential changes in each pull request and trigger subsequent deployment action in Azure only for artifact those are changed instead of triggering full deployment of all.
+An IAC repo will have hundreds if not thousands of configuration artifacts that are tracked and version-controlled. Platform developers will be modifying small subsets of these artifacts on an ongoing basis via pull requests (PRs). As Git represents source of the truth and change, we'll use Git to determine differential changes in each PR and trigger subsequent deployment action in Azure only for the artifacts that are changed instead of triggering full deployment for all.
 
-### Definition of done (dod)
+### Definition of done
 
-- Discover current Azure environment "as-is" and have entire Azure platform baseline stored inside Git repo.
+- Discover the current Azure environment as-is and have entire Azure platform baseline stored inside the Git repo.
 - Deploy templates to Azure environment using pipeline by committing templates at appropriate scope without providing deployment scripts.
-- Perform platform operations required for enterprise-scale but not yet supported inside ARM e.g. Resource provider registration, Azure AD graph operations etc. These operations should be handled via pipeline in the interim.
+- Perform platform operations that are required for enterprise-scale but not yet supported inside Resource Manager (resource provider registration, Azure AD graph operations, and more). In the interim, these operations should be handled via pipeline.
 
-## 2. ARM as Orchestrator to declare goal state
+## Azure Resource Manager as the orchestrator to declare the goal state
 
-Provide tenant level ARM template to build landing zone using enterprise-scale guidelines.
+Provide tenant-level Resource Manager template to build landing zone using enterprise-scale guidelines.
 
-We will enable security, logging, networking, and any other plumbing needed for landing zones (I.e. Subscription) **autonomously** by the way of policy enforcement. We will bootstrap Azure environment with ARM template to create necessary structure for management and networking to declare desired goal state.
+We will enable security, logging, networking, and any other plumbing needed for landing zones (subscriptions) autonomously via policy enforcement. We will bootstrap Azure environment with Resource Manager templates to create necessary structure for management and networking and to declare desired goal state.
 
-File -> New -> Landing zones (I.e. Subscription) process is ARM orchestrating following:
+The File -> New -> Landing Zone (subscription) process is Resource Manager orchestrates the following:
 
 - Subscription creation
-- Subscription move and
-- Configuring subscription to desired state by policy enforcement - autonomously.
+- Subscriptions move
+- Configuring the subscription to desired state by policy enforcement (autonomously)
 
-For a quick start, an [**ARM template**](https://github.com/azure/CET-NorthStar/blob/master/examples/e2e-landing-zone.parameters.json) that can be deployed at the tenant ("/") root scope will be provided to instantiate the **enterprise-scale architecture**. This template should provide everything that is necessary in [Implementation guide](./implementation-guide.md), and will have the following sequence:
+To start quickly, a [**Resource Manager template**](https://github.com/azure/CET-NorthStar/blob/master/examples/e2e-landing-zone.parameters.json) that can be deployed at the tenant ("/") root scope will be provided to instantiate the enterprise-scale architecture. This template should provide everything that's necessary in [Implementation guide](./implementation-guide.md), and it'll have the following sequence:
 
-- Create (1) management group hierarchy and (2) subscription organization structure in (2+n) fashion where n represents number of landing zones.
-- Create policies (DeployIfNotExists) assigned to (2) management groups and (3) subscription scope to govern and deploy necessary resources, enabling platform autonomy as new landing zones (subscriptions) are being created by application teams
-- Create (3) policy and role assignment to govern and delegate access to resources.
+- Create a management group hierarchy and subscription organization structure in a 2+n fashion where n represents number of landing zones.
+- Create policies (DeployIfNotExists) assigned to management groups and a subscription scope to govern and deploy necessary resources, enabling platform autonomy as new landing zones (subscriptions) are being created by application teams
+- Create policy and role assignment to govern and delegate access to resources
 
-![E2E ARM template deployment](./media/e2e-armtemplate.png)
+![End-to-end Resource Manager template deployment](./media/e2e-armtemplate.png)
+_Figure 2: End-to-end Resource Manager deployment_
 
-It is important to note that one of the design principle of the enterprise-scale is "policy-driven governance" and all the necessary resources leading to the creation of landing zone are deployed using policy. For example, deploying Key Vault to store platform level secret in management subscription. Instead of scripting the template deployment to deploy Key Vault, north star-based reference implementation will have a policy definition that deploy the key vault in prescribed manner and policy assignment at management subscription scope. Benefit of the policy-driven approach are manyfold but the most significant are:
+It is important to note that one of the design principles of enterprise-scale is policy-driven governance, and all necessary resources leading to the creation of landing zones are deployed using policies. For example, deploying Azure Key Vault to store platform-level secret in management subscription. Instead of scripting the template deployment to deploy Key Vault, CAF enterprise-scale-based reference implementation will have a policy definition that deploys the key vault in prescribed manner and policy assignment at management subscription scope. The benefits of a policy-driven approach are many, but the most significant are:
 
-- Platform can provide orchestration capability to bring target resources (in this case subscription) to desired goal state.
-- Continuous conformance to ensure all platform level resources are compliant. As platform is aware of the goal state, platform can assist by monitoring and remediating the resources throughout the lifecycle of the resource.
-- Platform enables autonomy regardless of the customer's scale point.
+- The platform can provide orchestration to bring target resources (in this case, a subscription) to a desired goal state.
+- Continuous conformance ensures that all platform-level resources are compliant. As the platform is aware of the goal state, it can assist by monitoring and remediating resources throughout their lifecycles.
+- The platform enables autonomy regardless of the customer's scale point.
 
-### Definition of done (dod)
+## Definition of done
 
-- Invoke ARM template using PowerShell/CLI for tenant level deployment to create landing zone in Azure environment.
-- End to end ARM template must allow flexibility to create requisite management group and subscription hierarchy to organize landing zones.
-- Template must allow declaring goal state at tenant, management group and subscriptions scope using policies.
-- "Export" Azure configuration in a manner that can be consumed and "imported" back into platform.
+- Invoke a Resource Manager template using PowerShell/Azure CLI for tenant-level deployment to create a landing zone in the Azure environment.
+- An end-to-end Resource Manager template must allow flexibility to create requisite management group and subscription hierarchy to organize landing zones.
+- The template must allow declaring the goal state at tenant, management group, and subscriptions scopes using policies.
+- Export Azure configuration in a manner that can be consumed and imported back into the platform.
 
-## 3. "Operationalize" Azure environment at scale for day-to-day activities
+## 3. Operationalize the Azure environment at scale for day-to-day activities
 
-In production environment, changes are bound to happen. Ideally these changes are made in a structured way, using the principles of infrastructure-as-code (iac): A change would be made by adding or updating a resource definition in an Azure DevOps or GitHub repository and relying on an automated test and release process to effectuate the change. This gives the IT department a fully transparent change history and full roll-back and roll-forward capabilities.
+In a production environment, changes are bound to happen. Ideally, these changes are made in a structured way and by using the principles of IAC: a change would be made by adding or updating a resource definition in an Azure DevOps or GitHub repo and rely on an automated test and release process to effectuate the change. This gives the IT department a fully transparent change history and full roll-back and roll-forward capabilities.
 
-But manual changes (made for example using the Azure portal) may be unavoidable due to urgent operational demands. This leads to 'configuration drift', where the environment as described in source control no longer reflects the actual state of the Azure resources. To deal with this situation, enterprise-scale envisions not only a control mechanism to push changes in the iac source to the Azure environment, but also to pull changes made outside iac back into source control. By having that feedback loop in place, we can ensure that:
+Manual changes (made, for example, using the Azure portal) may be unavoidable due to urgent operational demands. This leads to configuration drift where the environment described in source control no longer reflects the actual state of the Azure resources. To deal with this situation, enterprise-scale envisions not only a control mechanism to push changes in the IAC source to the Azure environment but also to pull changes made outside IAC back into source control. By having that feedback loop in place, we can ensure that the environment described in source control always reflects the actual state of the Azure subscriptions and that changes made manually are not inadvertently rolled back by the next automated deployment of a resource.
 
-- The environment described in source control always reflects the actual state of the Azure subscriptions.
-- Changes made manually are not inadvertently rolled back by the next automated deployment of a resource
+## Definition of done 
 
-### Definition of done (dod)
-
-- Changes made oob (only for platform resources) enlisted in section #1 are tracked in Git.
-- Configuration drifts should surface just like any other pull request for repo owners to determine based on repo level policy whether to roll-back or roll-forward changes - interactively (with human intervention) or automatically.
+Changes made oob (only for platform resources) listed in Section 1 are tracked in Git. Configuration drifts should surface like any other PR for repo owners to interactively (with human intervention) or automatically determine whether to roll changes back or forward based on the repo level policy.

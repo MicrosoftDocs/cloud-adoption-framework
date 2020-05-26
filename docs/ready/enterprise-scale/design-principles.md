@@ -1,6 +1,6 @@
 ---
-title: Xx
-description: XX
+title: Design principles
+description: Design principles
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Design principles
 
-The _enterprise-scale_ architecture prescribed in this playbook is based on the design principles described in this section. These principles serve as a compass for subsequent design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with nonadherence.
+The enterprise-scale architecture prescribed in this playbook is based on the design principles described in this section. These principles serve as a compass for subsequent design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with nonadherence.
 
 ## Subscription democratization
 
@@ -19,21 +19,20 @@ Subscriptions should be used as a unit of management and scale aligned with busi
 
 ## Policy-driven governance
 
-Azure Policy should be used to provide the **`guard-rails`** and ensure the continued compliance of the customer platform and applications deployed onto it, whilst also providing application owners sufficient freedom and a secure unhindered path to cloud.
+Azure Policy should be used to provide guard rails and ensure continued compliance of the customer platform and the applications deployed onto it while also providing application owners sufficient freedom and a secure, unhindered path to the cloud.
 
 ## Single control and management plane
 
-The "enterprise-scale" architecture should not consider any abstraction layers such as customer developed portals or tooling and should provide a consistent experience for both appops (centrally managed operation teams) and DevOps (dedicated application operation teams). Azure provides a unified and consistent control plane across all Azure resources and provisioning channels which should be used to establish a consistent set of policies and controls for governing the entire customer estate, subject to RBAC and policy-driven controls.
+Enterprise-scale architecture shouldn't consider any abstraction layers (such as customer-developed portals or tooling) and should provide a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams). Azure provides a unified and consistent control plane across all Azure resources and provisioning channels that are subject to role-based access and policy-driven controls and should be used to establish a standardized set of policies and controls for governing the entire customer estate.
 
-## Application centric and archetype-neutral
+## Application-centric and archetype-neutral
 
-The "enterprise-scale" architecture should focus on application centric migrations and development rather than a pure infrastructure "lift and shift" migration (I.e. Movement of virtual machines) and should not differentiate between old/new applications or IaaS/PaaS applications. Ultimately, it should provide the foundation for all application types to be deployed onto the customer Azure platform securely and safely.
+Enterprise-scale architecture should focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations (moving virtual machines), and it shouldn't differentiate between old/new applications or infrastructure-as-a-service/platform-as-a-service applications. Ultimately, it should provide a safe and secure foundation for all application types to be deployed onto the customer Azure platform.
 
-## Azure native design and roadmap aligned
+## Azure-native design and road map aligned
 
-The **enterprise-scale architecture** approach advocates the use of native platform services and capabilities whenever possible, which should be aligned with Azure platform roadmaps to ensure new capabilities are made available within customer environments. Azure platform roadmaps should help inform the migration strategy and enterprise-scale trajectory.
+The enterprise-scale architecture approach advocates using Azure-native platform services and capabilities whenever possible, which should be aligned with Azure platform road maps to that ensure new capabilities are available within customer environments. Azure platform road maps should help to inform the migration strategy and enterprise-scale trajectory.
 
 ## Recommendations
 
-- Be prepared to trade off functionality as not everything will likely be required on day one.
-- Use preview services and take dependencies on service roadmaps in order to remove technical blockers.
+Be prepared to trade off functionality, as it's unlikely that everything will be required on day one. Use preview services and take dependencies on service road maps in order to remove technical blockers.

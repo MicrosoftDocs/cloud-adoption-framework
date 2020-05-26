@@ -1,6 +1,6 @@
 ---
-title: "CAF enterprise-scale landing zone template"
-description: CAF enterprise-scale landing zone Template
+title: Template
+description: Template
 author: rkuehfus
 ms.author: brblanch
 ms.date: 02/01/2020

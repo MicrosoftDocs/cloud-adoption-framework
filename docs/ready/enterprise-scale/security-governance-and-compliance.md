@@ -1,6 +1,6 @@
 ---
-title: Xx
-description: XX
+title: Security governance and compliance
+description: Security governance and compliance
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Security, governance and compliance
+# Security, governance, and compliance
 
-## 1. Define encryption and key management
+## Define encryption and key management
 
 Encryption is a vital step towards ensuring data privacy, compliance, and data residency in Azure. It is also one of the most important security concerns of many enterprise customers. This section will go over the design considerations and recommendations as it pertains to encryption and key management.
 
@@ -81,7 +81,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Do not share Key Vault instances between applications to avoid secret sharing across environments
 
-## 2. Planning for governance
+## Planning for governance
 
 Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. Azure Policy is essential to ensuring security and compliance within enterprise technical estates. It can enforce vital management and security conventions across Azure platform services, as well as supplement role-based access control that control what actions authorized users can perform.
 
@@ -121,7 +121,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Limit the number of Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes
 
-## 3. Define security monitoring and audit policy
+## Define security monitoring and audit policy
 
 It is crucial for enterprise customers to have visibility into what is happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is therefore a key component of a scalable framework.
 
@@ -161,7 +161,7 @@ It is crucial for enterprise customers to have visibility into what is happening
 
 - Use an Event Grid-based solution for log orientated real-time alerting
 
-## 4. Planning for platform security
+## Plan for platform security
 
 It is essential to maintain a healthy security posture as enterprise customers adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is extremely important.
 
@@ -193,7 +193,7 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 - Implement a zero trust approach for access to the Azure platform where appropriate
 
-## 5. Service whitelisting framework
+## Whitelist the service framework
 
 As business units request to put workloads into Azure, it requires additional visibility into a workload to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required that has not been onboarded, whitelisting the service needs to occur. The following table provides a framework to assess enterprise security readiness of Azure services.
 

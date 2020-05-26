@@ -1,6 +1,6 @@
 ---
-title: Xx
-description: XX
+title: Management and monitoring
+description: Management and monitoring
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -13,49 +13,49 @@ ms.subservice: ready
 
 ![Management and Monitoring](./media/mgmt-mon.png)
 
-_Figure 9: Platform management and monitoring._
+_Figure 1: Platform management and monitoring._
 
-## 1. Planning for platform management and monitoring
+## Planning platform management and monitoring
 
 This section will focus on centralized management and monitoring at a platform level, exploring how an entire enterprise Azure estate can be operationally maintained. More specifically, it will consider the key recommendations to support central teams ability to maintain operational visibility of a large-scale Azure platform.
 
 **Design considerations:**
 
-- A Log Analytics workspace is an administrative boundary.
+- An Azure Monitor Logs workspace is an administrative boundary
 
-- App centric platform monitoring, encompassing both hot and cold telemetry paths for metrics and logs respectively
+- App-centric platform monitoring, encompassing both hot and cold telemetry paths for metrics and logs, respectively
 
-  - OS metrics (e.g. Perf counters, custom metrics)
+  - OS metrics (Perf counters, custom metrics)
 
-  - OS logs (e.g. Iis, etw, syslogs)
+  - OS logs (Iis, etw, syslogs)
 
   - Resource health events
 
-- Security audit logging and achieving a horizontal security lens across the entire customer Azure estate.
+- Security audit logging and achieving a horizontal security lens across the entire customer Azure estate
 
-  - Potential integration with on-premises SIEM systems such as service now or arcsight.
+  - Potential integration with on-premises SIEM systems such as service now or arcsight
 
   - Azure activity logs
 
   - Azure AD audit reports
 
-  - Azure diagnostic service; diagnostic logs and metrics, kv audit events, NSG flow and event logs
+  - Azure diagnostic service; diagnostic logs and metrics, kv audit events, NSG flow, and event logs
 
   - Azure Monitor, Network Watcher, Security Center, and Azure Sentinel
 
 - Azure data retention thresholds and requirements for archiving.
 
-  - The default retention period for Log Analytics is 30 days, with a maximum of 2 years.
+  - The default retention period for Monitor Logs is 30 days, with a maximum of two years
 
-  - The default retention period for Azure AD reports (premium) is 30 days.
+  - The default retention period for Azure AD reports (premium) is 30 days
 
-  - The default retention period for the Azure diagnostic service is 90 days.
+  - The default retention period for the Azure diagnostic service is 90 days
 
 - Operational requirements
 
-  - Operational dashboarding using native tools, such as Log Analytics, or third-party tooling.
+  - Operational dashboarding using native tools such as Azure Monitor Logs or third-party tooling
 
-  - Controlling privileged activities with centralized roles.
+  - Controlling privileged activities with centralized roles
 
   - [Managed identities for Azure resources](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) for access to Azure services.
 
@@ -63,7 +63,7 @@ This section will focus on centralized management and monitoring at a platform l
 
 **Design recommendations:**
 
-- Use a single [Log Analytics workspace](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment) for centralized platform management except where RBAC and data sovereignty requirements mandate the consideration of separate workspaces.
+- Use a single [Monitor Logs workspace](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment) for centralized platform management except where RBAC and data sovereignty requirements mandate the consideration of separate workspaces.
 
     Centralized logging is critical to the visibility that's required by the operations management teams. The centralization of logging drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and reduces the chances for gaps in observability.
 
@@ -71,7 +71,7 @@ This section will focus on centralized management and monitoring at a platform l
 
 - Export logs to Azure Storage if log retention requirements exceed 2 years.
 
-  - Use immutable storage with worm policy (write once, read many) to make data nonerasable and nonmodifiable for a user-specified interval.
+    Use immutable storage with worm policy (write once, read many) to make data non-erasable and non-modifiable for a user-specified interval.
 
 - Use Azure Policy for access control and compliance reporting.
 
@@ -93,7 +93,7 @@ This section will focus on centralized management and monitoring at a platform l
 
 - Use [deny policies](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deny) to supplement Azure AD RBAC assignments.
 
-    Deny policies are used to prevent deployment and configuration of resources that do not match defined standards by preventing the request from being sent to the resource provider. The combination of deny policies and RBAC assignments ensures the appropriate guard rails are in place to enforce **who** can deploy resources and **what** resources they can deploy.
+    Deny policies are used to prevent deployment and configuration of resources that do not match defined standards by preventing the request from being sent to the resource provider. The combination of deny policies and RBAC assignments ensures the appropriate guard rails are in place to enforce who can deploy resources and what resources they can deploy.
 
 - Include [service](https://docs.microsoft.com/azure/service-health/service-health-overview) and [resource](https://docs.microsoft.com/azure/service-health/resource-health-overview) health events as part of the overall platform monitoring solution.
 
@@ -103,33 +103,33 @@ This section will focus on centralized management and monitoring at a platform l
 
   - If on-premises SIEM integration is required [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
 
-## 2. Planning for application management and monitoring
+## Planning for application management and monitoring
 
 Expanding on the previous section, this next section will now consider the federated management and monitoring of customer application workloads, touching on how application teams can operationally maintain their application workloads.
 
 **Design considerations:**
 
-- Application monitoring can utilize the centralized Log Analytics workspace or use dedicated workspaces.
+- Application monitoring can utilize the centralized Monitor Logs workspace or use dedicated workspaces
 
-- Application performance and health monitoring for both IaaS and PaaS resources.
+- Application performance and health monitoring for both IaaS and PaaS resources
 
-- Data aggregation across all application components.
+- Data aggregation across all application components
 
 - [Health modelling and operationalization](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/monitor/cloud-models-monitor-overview)
 
-  - How to measure the health of the workload and its subsystems; "traffic light" model for health representation.
+  - How to measure the health of the workload and its subsystems; "traffic light" model for health representation
 
-  - How to respond to failures across application components.
+  - How to respond to failures across application components
 
 **Design recommendations:**
 
-- Use a centralized Log Analytics workspace to collect logs and metrics from IaaS and PaaS application resources, and [control log access with RBAC](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
+- Use a centralized Monitor Logs workspace to collect logs and metrics from IaaS and PaaS application resources, and [control log access with RBAC](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
 
 - Use [Azure Monitor metrics](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics) for time sensitive analysis.
 
     Metrics in Azure Monitor are stored in a time-series database which is optimized for analyzing time-stamped data. This makes metrics particularly suited for alerting and fast detection of issues. They can tell you how your system is performing but typically need to be combined with logs to identify the root cause of issues.
 
-- Use [Azure Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs) for insights and reporting.
+- Use [Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs) for insights and reporting.
 
     Logs contain different kinds of data organized into records with different sets of properties and are especially useful for performing complex analysis across data from a variety of sources, such as performance data, events, and traces.
 

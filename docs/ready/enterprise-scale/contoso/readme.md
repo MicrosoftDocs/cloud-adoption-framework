@@ -1,6 +1,6 @@
 ---
-title: Xx
-description: XX
+title: Read me
+description: Read me
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -9,6 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## What is the Contoso implementation
+# Defining Contoso implementation
 
-The Contoso implementation documented within this repository provides a prescriptive first-party reference implementation for the enterprise-scale architecture guidelines. More specifically, Contoso have applied the enterprise-scale design principles to make contextualized decisions across all 8 design areas and define their target state.
+The Contoso implementation documented within this repository provides a prescriptive first-party reference implementation for the enterprise-scale architecture guidelines. More specifically, Contoso has  applied the enterprise-scale design principles to make contextualized decisions across all eight design areas and define their target state.

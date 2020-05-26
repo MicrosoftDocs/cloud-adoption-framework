@@ -1,6 +1,6 @@
 ---
-title: Xx
-description: XX
+title: Network topology and connectivity
+description: Network topology and connectivity
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020

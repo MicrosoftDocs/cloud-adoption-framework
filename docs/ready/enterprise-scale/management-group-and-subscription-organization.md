@@ -1,6 +1,6 @@
 ---
-title: Xx
-description: XX
+title: Management group and subscription organization
+description: Management group and subscription organization
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020

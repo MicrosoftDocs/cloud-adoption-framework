@@ -1,6 +1,6 @@
 ---
-title: Xx
-description: XX
+title: Design
+description: Design
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -9,74 +9,73 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## Contoso's reference implementation
+# Contoso reference implementation overview
 
-Contoso's enterprise-scale reference implementation is rooted in the principle that **Everything in Azure is a resource** Contoso is using native **Azure Resource Manager (ARM)** to describe and manage their resources as part of their target state architecture at scale.
+Contoso's enterprise-scale reference implementation is rooted in the principle that everything in Microsoft Azure is a resource. Contoso uses Azure Resource Manager to describe and manage their resources as part of their target state architecture at scale.
 
-Contoso will enable security, logging, networking, and any other plumbing needed for landing zones (I.e. Subscriptions) autonomously through policy enforcement. Contoso will bootstrap the Azure environment with ARM templates to create the necessary structure for management and networking to declare a desired goal state. Contoso will apply the principal of "policy-driven governance" to deploy all necessary platform resources for a landing zone using policy. For example, deploying a key vault to store platform level secrets in the management subscription; instead of scripting the template deployment to deploy Key Vault, the north star-based reference implementation will have a policy definition that deploys the key vault in a prescriptive manner, using a policy assignment at the management subscription scope. The core benefits of a policy-driven approach are manyfold but the most significant include:
+Contoso will enforce policies to support security, logging, networking, and any other plumbing needed for landing zones/subscriptions. Contoso will bootstrap the Azure environment with Resource Manager templates to create the necessary structure for management and networking and to declare a desired goal state. Contoso will apply the principle of policy-driven governance and use policies to deploy all necessary platform resources for a landing zone. While deploying Azure Key Vault to store platform-level secrets in the management subscription versus scripting the template deployment to deploy Key Vault, Cloud Adoption Framework (CAF) enterprise-scale-based reference implementation will have a policy definition that deploys Key Vault prescriptively, using a policy assignment at the management subscription scope. The core benefits of a policy-driven approach are many, but the most significant include:
 
-- Platform can provide an orchestration capability to bring target resources (in this case a subscription) to a desired goal state.
-- Continuous conformance to ensure all platform level resources are compliant. Because the platform is aware of the goal state, the platform can assist by monitoring and remediating the resources throughout the lifecycle of the resource.
-- Platform enables autonomy regardless of the customer's scale point.
+- The platform is capable of bringing target resources (in this instance, a subscription) to a desired goal state.
+- The platform monitors continuous conformance to ensure that all platform-level resources are compliant. It can monitor and remediate resources throughout their lifecycle because it's aware of the goal state.
+- The platform supports autonomy regardless of the customer's scale point.
 
-### File -> New -> Region
+## File -> New -> Region
 
-Contoso want to use all Azure region and deploy the workload closer to the user and will be adding new Azure regions as business demand arises. As a part of enterprise-scale design principle of policy-driven governance, Contoso will be assign policy in their environment with number of regions they would like to use and policies will ensure their Azure environment is setup correctly:
+Contoso wants to use all Azure regions, deploy the workload closer to the user, and will be adding new Azure regions as business demand arises. As a part of the enterprise-scale design principle of policy-driven governance, Contoso will assign policies in their environment to the number of regions they'd like to use. Policies will ensure that their Azure environment is set up correctly.
 
-#### Management
+## Management
 
-Contoso have decided to use single Log Analytics workspace. When the first region is enabled, Contoso will deploy Log Analytics workspace in their management subscription. No action will be required when enabling subsequent Azure regions, as Azure Policy will ensure all platform logging is routed to the workspace.
+Contoso has decided to use one Azure Monitor Logs workspace. When the first region is enabled, Contoso will deploy an Azure Monitor Logs workspace in their management subscription. No action will be required when enabling subsequent Azure regions, as Azure Policy will ensure that all platform logging is routed to the workspace.
 
-#### Networking
+## Networking
 
-Policy will continuously check if virtual WAN virtual hub already exist in "connectivity" subscription for all enabled regions and create one if it doesn't exist. Configure virtual WAN virtual hub to secure internet traffic from secured connections (spoke virtual networks inside landing zone) to the internet via Azure Firewall.
+Azure Policy will continuously check if an Azure Virtual WAN virtual hub (VHub) already exists in a "connectivity" subscription for all enabled regions, and it'll create one if it doesn't exist. Configure a Virtual WAN VHub to secure internet traffic from secured connections (virtual networks [VNets] inside landing zones) to the internet via Azure Firewall.
 
-For all Azure Virtual WAN virtual hubs, policy will ensure that Azure Firewall is deployed and linked to existing global Azure Firewall policy, as well as the creation of a regional firewall policy if needed.
+For all Virtual WAN VHubs, policy will ensure that Azure Firewall is deployed and linked to existing global Azure Firewall policy, as well as the creation of a regional firewall policy if needed.
 
-Azure Policy will also deploy default NSGs and UDRs in landing zones, and while NSG will be linked to all subnets, UDR will only be linked to virtual network injected PaaS services subnets. Azure Policy will ensure that the right NSG and UDR rules are configured to allow control plane traffic for virtual network injected services to continue to work but only for those Azure PaaS services that have been approved as per the whitelisting framework described in this document. This is required, as when landing zone virtual networks get connected to virtual WAN virtual hub, they will get the default route (0.0.0.0/0) configured to point to their regional Azure Firewall, hence UDR and NSG rules are required to protect and manage control plane traffic for virtual network injected PaaS services (such as SQL mi).
+Azure Policy will deploy default network security groups (NSGs) and user-defined routes (UDRs) in landing zones. While NSGs will be linked to all subnets, UDRs will only be linked to virtual-network-injected PaaS services subnets. For virtual-network-injected services and control plane traffic to continue to work, Azure Policy will ensure that the right NSG and UDR rules are configured, but only for Azure platform-as-a-service (PaaS) services approved by the whitelisting framework described in this document. UDR and NSG rules are required to protect and manage control plane traffic for VNet-injected PaaS services (such as SQL mi). When landing zone VNets connect to a Virtual WAN VHub, the default route configured (0.0.0.0/0) will point to their regional Azure Firewall.
 
-For cross-premises connectivity, policy will ensure that ExpressRoute and/or VPN gateways are deployed (as required by the regional virtual hub), and it will connect the virtual hub to on-premises using ExpressRoute (by taking the ExpressRoute resource ID and authorization key as parameters). In case of VPN, Contoso can decide if they use their existing sd-WAN solution to automate the connectivity from branch offices into Azure via s2s VPN, or alternatively, Contoso can manually configure the cpe devices on the branch officers, and then let Azure Policy to configure the VPN sites in Azure Virtual WAN. As Contoso is rolling out a sd-WAN solution to manage the connectivity of all their branches around the globe, their preference is to use the sd-WAN solution, which is a solution certified with Azure Virtual WAN, to connect all their branches to Azure.
+For cross-premises connectivity, the regional VHub requires the policy to enforce deploying ExpressRoute and/or virtual private network (VPN) gateways. It will use ExpressRoute to connect the VHub to on-premises by using the ExpressRoute resource ID and authorization key as parameters. With a VPN, Contoso can decide if to use their existing software-defined networking in a wide area network (SD-WAN) to automate connectivity from branch offices into Azure via s2s VPN, or Contoso can manually configure their customer-premises equipment on the branch officers and then let Azure Policy configure the VPN sites in Virtual WAN. Contoso is rolling out a solution certified with Virtual WAN, SD-WAN, to manage the connectivity of all global branches and connect them to Azure.
 
-### File ->New -> Landing zone (subscription)
+## File -> New -> Landing zone (subscription)
 
-Contoso wants to minimize the time it takes to create landing zones and do not want Central IT to become bottleneck. Subscription will be unit of management for the landing zones and each business owner will have access to Azure billing profile that will allow them to create new subscription (a.k.a. Landing zones) with and ability to delegate this task to their own IT teams.
-Once new subscription is provisioned, subscription will be automatically placed in desired management group and subject to policy configured.
+Contoso wants to minimize the time required to create landing zones while avoiding bottlenecks for Central IT. A subscription will serve as the unit of management for landing zones, and each business owner will have access to an Azure billing profile that will allow them to create new subscriptions (landing zones) and delegate this task to their own IT teams. Once a new subscription is provisioned, it'll be automatically stored in a specified management group and subject to the configured policy.
 
 Networking:
 
-1. Create virtual network inside landing zone and establish virtual network peering with virtual WAN virtual hub in the same Azure region
-2. Create default NSG inside landing zone with default rules e.g. No RDP/SSH from internet
-3. Ensure new subnets created inside landing zone must have NSGs
-4. Default NSG rules cannot be modified e.g. RDP/SSH from internet
-5. Enable NSG flow logs and connect it to Log Analytics workspace in management subscription.
-6. Protect virtual network traffic across virtual hubs with NSGs.
+1. Create a VNet inside a landing zone and establish VNet peering with a Virtual WAN VHub in the same Azure region.
+2. Create a default NSG inside a landing zone with default rules (for example, no remote desktop protocol and secure shell [RDP]/[SSH] from internet).
+3. Ensure that new subnets created inside a landing zone have NSGs.
+4. Default NSG rules can't be modified (for example, RDP/SSH from internet).
+5. Enable NSG flow logs and connect them to an Azure Monitor Logs workspace in a management subscription.
+6. Protect VNet traffic across VHubs with NSGs.
 
-IAM
+Integrated access management:
 
-1. Create Azure AD group for subscriptions access
-2. Create Azure AD PIM entitlement for the scope
+1. Create an Azure AD group for subscriptions access.
+2. Create an Azure AD Privileged Identity Management entitlement for the scope.
 
-### File -> New -> Sandbox
+## File -> New -> Sandbox
 
 Sandbox subscriptions are for experiment and validation only. Sandbox subscription will not be allowed connectivity to production and policy will prevent the connectivity to on-premises resources.
 
-### File -> Delete -> Sandbox/landing zone
+## File -> Delete -> Sandbox/landing zone
 
-Susbcription will be moved to decommissioned management group. Decommissioned management group policies will deny creation of new services and subscription cancellation request will sent.
+Subscription will be moved to a decommissioned management group. Decommissioned management group policies will deny creation of new services and subscription cancellation request will be sent.
 
-## Implementation
+# Implementation components
 
-Contoso will use "azops" acronym (inspired by gitops, kops etc.) for Azure operations in context of enterprise-scale design principles. Contoso have decided to use platform-native capability to orchestrate, configure and deploy landing zones using Azure Resource Manager (ARM) to declare goal state. Contoso have abide by "policy-driven governance" design principle and wants landing zones (a.k.a subscription) to be provisioned and configured autonomously.
+Contoso will use the AzOps acronym (inspired by GitOps, Kubernetes Operations, and more) to designate Azure operations within enterprise-scale design principles. Contoso has decided to use platform-native capabilities and Resource Manager to orchestrate, configure, and deploy landing zones and to declare a goal state. Contoso has abided by the policy-driven governance design principle and wants landing zones (subscriptions) to be provisioned and configured autonomously.
 
-Contoso have deliberated over whether to use single template versus modular templates and pros and cons of both and decided in favour of single template for platform orchestration. Primary reason behind this is, template will mainly consist of policy definition and policy assignments. Since, policy assignments have direct dependency on policy definitions, it will be operationally easier to manage and control lifecycle changes/versioning if artifact are represented in same template.
+Deliberating whether to use a single template versus modular templates and the pros and cons of both, Contoso has decided in favor of single template to orchestrate the platform. The template will mainly consist of policy definitions and policy assignments. Since policy assignments have direct dependency on policy definitions, it'll be operationally easier to manage and control lifecycle changes/versioning if artifacts are represented in same template.
 
-Contoso will use platform provided schema as input to parameter file. End to end template will use nested deployment to trigger deployment for nested children at appropriate scope I.e. Management group or subscription scope.
+Contoso will use platform-provided schema as input to the parameter file. An end-to-end template will use nested deployment to trigger deployment for nested children at the appropriate scope (for example, the management group or subscription scope).
 
 ```powershell
 Get-AzManagementGroup -GroupName Tailspin -Expand -Recurse | ConvertTo-Json -Depth 100
 ```
 
-Reasoning behind this is it can be machine generated on-demand and it can be **consistently** exported to be able to help with configuration drift.
+The reasoning behind this is that it can be machine-generated on-demand, and it can be consistently exported to help with configuration drift.
 
 ```json
 {
@@ -111,7 +110,7 @@ Reasoning behind this is it can be machine generated on-demand and it can be **c
 
 ```
 
-User should be able to copy/paste (a.k.a. "Export") output into input template parameter file. It is important to note that not all properties required but also having extra metadata will do no-harm and platform and template will ignore these properties. Please take a look at example [20-create-child-managementgroup.parameters.json](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json) for what is required.
+The person should copy/paste (export) the output into the input template parameter file. It is important to note that not all properties are required, but extra metadata won't disrupt processes, and the platform and template will ignore these properties. To view requirements, see this example [20-create-child-managementgroup.parameters.json](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json).
 
 ```json
 {
@@ -143,21 +142,21 @@ User should be able to copy/paste (a.k.a. "Export") output into input template p
 }
 ```
 
-The tenant level ARM deployment above should create the following deployment at root scope and nested deployment at the scope of children.
+The tenant-level Resource Manager deployment above should create the following deployment at the root scope and nested deployment at the scope of children.
 
 - Tailspin
 - Tailspin-bu1
 - Tailspin-bu1-corp
 
-This ARM template can be expanded to include [subscriptions](https://github.com/azure/CET-NorthStar/blob/master/examples/60-move-subscription-under-managementgroup.parameters.json) (moving subscription),  [policy definition](https://github.com/azure/CET-NorthStar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json), [policy assignment](https://github.com/azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json), role definition and role assignment.
+This Resource Manager template can be expanded to include [subscriptions](https://github.com/azure/CET-NorthStar/blob/master/examples/60-move-subscription-under-managementgroup.parameters.json) (moving subscription),  [policy definition](https://github.com/azure/CET-NorthStar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json), [policy assignment](https://github.com/azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json), role definition, and role assignment.
 
 Contoso has decided following for their reference implementation:
 
-### Git repository for Azure platform configuration
+## Git repository (repo) for Azure platform configuration
 
-Contoso is already using Azure and is concerned about their existing management group and subscription already deployed in production. To address the concerns, Contoso has decided to create Git repository to store existing management group and subscription organization.
+Contoso is already using Azure and is concerned about their current management group and subscription deployed in production. To address the concerns, Contoso has decided to create a Git repo to store existing management group and subscription organization.
 
-Azure resources are organized in hierarchical manner:
+Azure resources are organized in a hierarchical manner:
 
 ```shell
 Tenant Root
@@ -167,11 +166,11 @@ Tenant Root
             ├───Resources
 ```
 
-Contoso have found it advantageous to organize these resources in same hierarchical layout inside Git repo. As over time, management groups and subscriptions move and/or are renamed, organizing resources in a hierarchical manner allows to track the lineage over time. It will allows to map the path of the resources based on resourceid in predictable manner inside Git and reduce miss-configuration.
+Contoso has found it advantageous to organize these resources in same hierarchical layout inside their Git repo. Since management groups and subscriptions move and/or are renamed, organizing resources in a hierarchical manner allows Contoso to track their lineage over time. This approach reduces misconfiguration and allows them to predictably base mapping resource paths on resource IDs.
 
-**Azopsscope** class will abstract the mapping between resource identifier in Azure and the path to resources stored in the Git repo. This will facilitate quick conversion between Git and Azure and vice versa. Examining the examples below, important properties to note are scope, type (e.g. Tenant, managementgroup, subscription, resource group) and statepath (representing file location inside Git).
+The Azopsscope class will abstract the mapping between the resource identifier in Azure and the path to resources stored in the Git repo. This will facilitate quick conversion between Git and Azure and vice-versa. Examining the examples below, the important properties to note are the scope; type (tenant, management group, subscription, and resource group); and state path representing the file location inside Git.
 
-Another advantage of the class is recognized when deployment templates are updated in pull request, pipeline can determine at what scope to trigger deployments and appropriate parameters to pass like name, scope etc. In this way, pipeline can be triggered in predictable manner and deployment artifact can be organized at appropriate scope without including deployment scripts in each pull request throughout the scope of the Azure platform using same Azure AD tenant. Please check [deploy-templates](https://github.com/Azure/CET-NorthStar/blob/master/docs/Implementation-Getting-Started.md#deploy-templates) section for further details.
+Another advantage of the class is clear when deployment templates are updated in pull requests (PRs). The pipeline can determine at what scope to trigger deployments and the appropriate parameters to pass such as name, scope, and more. By using the same Azure AD tenant, the pipeline can be triggered predictably and deployment artifacts can be organized without deployment scripts in each PR throughout the scope of the Azure platform. Check the [deploy-templates](https://github.com/Azure/CET-NorthStar/blob/master/docs/Implementation-Getting-Started.md#deploy-templates) section for further details.
 
 ```powershell
     New-AzTenantDeployment
@@ -187,7 +186,7 @@ New-AzOpsScope -scope /providers/Microsoft.Management/managementGroups/contoso
 scope            : /providers/Microsoft.Management/managementGroups/contoso
 type             : managementGroups
 name             : contoso
-statepath        : C:\Git\CET-NorthStar\azops\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\managementgroup.json
+state path        : C:\Git\CET-NorthStar\azops\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\managementgroup.json
 managementgroup  : contoso
 subscription     :
 resourcegroup    :
@@ -200,7 +199,7 @@ New-AzOpsScope -path C:\Git\CET-NorthStar\azops\3fc1081d-6105-4e19-b60c-1ec1252c
 scope            : /subscriptions/99c2838f-a548-4884-a6e2-38c1f8fb4c0b
 type             : subscriptions
 name             : 99c2838f-a548-4884-a6e2-38c1f8fb4c0b
-statepath        : C:\Git\CET-NorthStar\azops\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\connectivity\subscription.json
+state path        : C:\Git\CET-NorthStar\azops\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\connectivity\subscription.json
 managementgroup  : contoso
 subscription     : connectivity
 resourcegroup    :
@@ -208,34 +207,34 @@ resourceprovider :
 resource         :
 ```
 
-### Initalization
+## Initialization
 
 **Initialize-azopsrepository**
 
-This will provide discovery function to traverse the whole management group and subscription hierarchy by calling:
+This is a discovery function to traverse the whole management group and subscription hierarchy:
 
 ```powershell
 Get-AzManagementGroup -Recurse -expand -GroupName {{root management group name or ID}} | ConvertTo-Json -depth 100
 ```
 
-This will build the relationship association between management group and subscription. Further upon when initialize-azopsrepository function is called with -recurse parameter, it should enlist all resources available at the scope as well as children e.g. When calling of subscription, it will also get list of resource groups.
+This will build the relationship association between management group and subscription. Further, when the initialize-azopsrepository function is called with -recurse parameter, it should enlist all resources available at the scope and children. When calling out a subscription, it'll also summon a list of resource groups.
 
-### Deployment
+## Deployment
 
 **Invoke-azopsgitpush**
 
-Contoso wants to ensure that all platform changes are peer reviewed and approved before deploying in to production environment. Contoso have decided to implement workflow (a.k.a. Deployment pipeline) and use GitHub action for that. Contoso have named this workflow as "azops-push" referring the the direction of the change I.e. Git to Azure. All platform changes will come in the form of pull request and peer reviewed. Once pull request review is completed satisfactorily, platform team will attempt the merge of the pull request in to master branch and trigger deployment action by calling invoke-azopsgitpush function.
+Contoso wants to ensure that all platform changes are peer-reviewed and approved before deploying to a production environment. Contoso has decided to implement workflows (also known as deployment pipelines) and to use GitHub Action for this process. Contoso has named this workflow azops-push, referring to the direction of the change (for example, Git to Azure). All platform changes will be peer-reviewed and in the form of PRs. Once PRs are reviewed thoroughly, a platform team will attempt the merge them to the master branch and trigger the deployment action by calling the invoke-azopsgitpush function.
 
-This function will be entry point of GitHub Actions when pull request is approved but before it is merged in master branch. Master branch represents the truth from iac perspective. This quality gate will ensure master branch remains healthy and only contain artifact that are successfully deployed in Azure. It will determine the files changed in pull request by comparing feature branch with current master brach. Following actions should be executed inside invoke-azopsgitpush:
+When a PR is approved but before it's merged with the master branch, this function will be the starting point for GitHub Actions. The master branch represents the truth from an infrastructure-as-code (IAC) perspective. This quality gate will ensure that master branch remains healthy and only contain artifacts successfully deployed in Azure. It will specify the files changed in PRs by comparing each feature branch with the current master branch. The following actions should be executed inside invoke-azopsgitpush:
 
-- Validate current Azure configuration is the same as what is stored in Git by running initialize-azopsrepository.
-- Git will determine if working directory is dirty and exit the deployment task to alert user and run initialize-azopsrepository interactively. All deployments should be halted at this stage as platform is in nondeterministic state from iac point of view.
-- Invoke built-in new-az-*deployment commandlets at appropriate scope.
+- Validate that the current Azure configuration is the same as what's stored in Git by running initialize-azopsrepository.
+- Git will determine if the working directory is dirty and exit the deployment task to alert the user and run initialize-azopsrepository interactively. All deployments should be halted at this stage, as the platform is in a nondeterministic state from an IAC point of view.
+- Invoke built-in new-az-*deployment commandlets at the appropriate scope.
 
-### Operationalize - configuration drift and reconciliation
+## Operationalizing configuration drift and reconciliation
 
 **Invoke-azopsgitpull**
 
-"Operationalize" Azure environment at-scale for day-to-day activities.
+Operationalize the Azure environment at scale for day-to-day activities.
 
-Contoso has decided to use PowerShell 7 and mandated all CI tasks must complete successfully on both Windows and Linux hosts simultaneously to ensure complete coverage. No local execution should be necessary after initialization and discovery activity is completed and they will publish these CI tasks as GitHub Actions.
+Contoso has decided to use PowerShell 7 and has mandated that all continuous integration (CI) tasks must complete successfully and simultaneously on Windows and Linux hosts to ensure complete coverage. No local execution should be necessary after initialization and discovery are completed, and they'll publish these CI tasks as GitHub Actions.
