@@ -5,7 +5,6 @@
 # Test-AllLocalPaths @($file) $true $true
 
 $filename = "../docs/migrate/azure-best-practices/contoso-migration-infrastructure.md"
-$filename = "../docs/ready/considerations/storage-options.md"
 cmd /c "markdownlint $filename -c ..\docs\.markdownlint.json --fix"
 
 $files = @( (Get-Item $fileName) )
