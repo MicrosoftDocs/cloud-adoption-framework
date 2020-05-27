@@ -65,7 +65,9 @@ This proven approach is considered a minimum viable product (MVP), because it mi
 
 As adoption needs grow, so does the need to create balance and structure. To meet those needs, companies often follow a process of maturing their organizational structures.
 
-![Diagram of an organizational maturity cycle](../_images/ready/org-ready-maturity.png)
+Watch this video to get an overview of common team structures at various stages of organizational maturity.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4wvTS]
 
 ## Step 5: Align RACI charts
 
