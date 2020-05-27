@@ -14,9 +14,9 @@ ms.subservice: strategy
 The 4 levers or “benefit types” to increase business value are:
 
 1.Increase revenue (drive sales)
-2.Increase productivity (save time)
-3.Reduce costs (do more with less)
-4.Improve CSAT (customer retention)
+1.Increase productivity (save time)
+1.Reduce costs (do more with less)
+1.Improve CSAT (customer retention)
 
 ## Next steps
 
