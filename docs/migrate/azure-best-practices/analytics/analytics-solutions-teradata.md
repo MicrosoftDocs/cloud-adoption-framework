@@ -233,7 +233,7 @@ Only 1 field per table can be used for partitioning, and this is frequently a da
 Ensure that statistics on data tables are up to date – this can be achieved by building in a COLLECT STATISTICS step to ETL/ELT jobs, or by enabling automatic statistics collection on the table.
 
 **PolyBase for data loading**:
-PolyBase is the most efficient method for loading large amounts of data into the warehouse, as it is able to leverage parallel loading streams
+PolyBase is the most efficient method for loading large amounts of data into the warehouse, as it is able to use parallel loading streams.
 
 **Use Resource Classes for workload management**:
 Azure Synapse uses Resource Classes to manage workloads. In general, large resource classes provide better individual query performance, while smaller resource classes enable higher levels of concurrency. Utilization can be monitored via Dynamic Management Views to ensure that the appropriate resources are being utilized efficiently.
