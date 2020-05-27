@@ -526,9 +526,9 @@ items:
           - name: Overview
             href: migrate/azure-best-practices/analytics/analytics-solutions-overview.md
           - name: Teradata
-            href: /migrate/azure-best-practices/analytics/analytics-solutions-teradata.md
+            href: migrate/azure-best-practices/analytics/analytics-solutions-teradata.md
           - name: Netezza
-            href: /migrate/azure-best-practices/analytics/analytics-solutions-netezza.md
+            href: migrate/azure-best-practices/analytics/analytics-solutions-netezza.md
           - name: Exadata
             href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
 
