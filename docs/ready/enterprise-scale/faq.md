@@ -11,7 +11,7 @@ ms.subservice: ready
 
 ## FAQ
 
-This page will list frequently asked question for enterprise-scale design as well as for Contoso implementation.
+This page will list frequently asked question for enterprise-scale design and Contoso implementation.
 
 ## Enterprise-scale design
 
@@ -27,4 +27,4 @@ Management group creation is tenant-level put API. In order to use example templ
 
 ### Why sync a fork with the upstream repo
 
-This allows you to control how frequently you want to take bug/patches. This is interim solution while we package pipeline codebase as GitHub action so this step will not be required in future.
+This allows you to control how frequently you want to take bug/patches. This is interim solution while we package pipeline codebase as GitHub action so this step won't be required in future.

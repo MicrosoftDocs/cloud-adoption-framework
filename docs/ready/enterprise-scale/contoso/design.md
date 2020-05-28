@@ -52,8 +52,7 @@ Networking:
 
 Integrated access management:
 
-1. Create an Azure AD group for subscriptions access.
-2. Create an Azure AD Privileged Identity Management entitlement for the scope.
+Create an Azure AD group for subscriptions access and an Azure AD Privileged Identity Management entitlement for the scope.
 
 ## File -> New -> Sandbox
 
@@ -110,7 +109,7 @@ The reasoning behind this is that it can be machine-generated on-demand, and it 
 
 ```
 
-The person should copy/paste (export) the output into the input template parameter file. It is important to note that not all properties are required, but extra metadata won't disrupt processes, and the platform and template will ignore these properties. To view requirements, see this example: [20-create-child-managementgroup.parameters.json](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json).
+The person should copy/paste (export) the output into the input template parameter file. It is important to note that not all properties are required, but extra metadata won't disrupt the processes; the platform and template will ignore these properties. To view requirements, see this example: [20-create-child-managementgroup.parameters.json](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json).
 
 ```json
 {

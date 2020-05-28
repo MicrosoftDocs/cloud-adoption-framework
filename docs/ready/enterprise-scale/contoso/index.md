@@ -41,7 +41,7 @@ This table lists the technical prerequisites needed for using the CAF enterprise
 | Pester >= 4.10.1 | _Only required if you want to run pester tests as a developer._ <br> `Install-Module -Name Pester -MinimumVersion 4.10.1 -scope AllUsers` <br> You can confirm the version of the module you have by running <br> `Get-Module Pester -ListAvailable`. | [Docs](https://github.com/pester/pester) |
 
 > [!NOTE]
-> For iPhones, if you have multi-factor authentication enabled on any of your accounts, make sure that your phone and application are easily accessible before you start.
+> For iPhones, if you have multi-factor authentication enabled on any of your accounts, make sure that your phone and application (app) are easily accessible before you start.
 
 ## Deploy Resource Manager templates at the tenant root scope
 
@@ -62,7 +62,7 @@ This table lists the technical prerequisites needed for using the CAF enterprise
     CanDelegate        : False
     ```
 
-3. [Clone the GitHub repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or download the necessary templates/template parameter files to have the templates from the examples folder to deploy on your local machine. <br> For a basic deployment test, you'll need access to the following templates:
+3. [Clone the GitHub repo](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or download the necessary templates/template parameter files to have the templates from the examples folder to deploy on your local machine. <br> For a basic deployment test, you'll need access to the following templates:
 
     - [10-Create-child-managementgroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/10-create-managementgroup.parameters.json)
       Parameter file to deploy the company root management group (tailspin) as a child of the tenant root group
@@ -93,7 +93,7 @@ This table lists the technical prerequisites needed for using the CAF enterprise
     }
     ```
 
-5. Deploy templates in sequential order at the tenant scope with the following commands. Execute the commands from the folder containing the *.parameters.json files or reference the files correctly:
+5. Deploy templates in sequential order at the tenant scope with the following commands. Execute the commands from the folder containing the *.parameters.json files, or reference the files correctly:
 
     ```powershell
     #Define base deployment settings
@@ -194,7 +194,7 @@ This table lists the technical prerequisites needed for using the CAF enterprise
     } | ConvertTo-Json
     ```
 
-3. To create the following secrets on GitHub, navigate to the main page of the repo and select **Settings** > **Secrets**, then select **New Secret**.
+3. To create the following secrets on GitHub, navigate to the main page of the repo and select Settings, Secrets, and New Secret.
 
 - Name: Azure_credentials
 
@@ -231,7 +231,7 @@ This table lists the technical prerequisites needed for using the CAF enterprise
 
 4. Run `Clear-AzContext` and then [`Connect-AzAccount` with your service principal](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps?view=azps-3.6.1#sign-in-using-a-service-principal) created earlier ensure that you have the appropriate permissions during the initialization.
 
-5. To run an initialization operation in Azure and initialize your repository with your Azure AD tenant locally, run the code below.
+5. To run an initialization operation in Azure and initialize your repo with your Azure AD tenant locally, run the code below.
     > [!NOTE]
     > Depending on the size of the environment, it may take a while initialization to complete.
 
@@ -266,7 +266,7 @@ This table lists the technical prerequisites needed for using the CAF enterprise
                 └───.AzState
     ```
 
-6. Commit and push changes to your repository (repo). Ensure your changes are in master branch by either committing to your master branch or create a feature branch and merge it into master before proceeding to the next step.
+6. Commit and push changes to your repo. Ensure your changes are in master branch by either committing to your master branch, or create a feature branch and merge it into master before proceeding to the next step.
 
 ## Deploy templates
 
@@ -336,9 +336,9 @@ AzOps
 
 ## Sync your fork with upstream repo
 
-Follow these steps in order to synchronize the latest changes from the upstream repo into your local fork
+Follow these steps in order to synchronize the latest changes from the upstream repo into your local fork.
 
-1. Run the following Git commands only once in your local fork to add a reference to the upstream repo
+Run the following Git commands only once in your local fork to add a reference to the upstream repo:
 
     ```shell
     git remote -v
@@ -346,7 +346,7 @@ Follow these steps in order to synchronize the latest changes from the upstream 
     git remote -v
     ```
 
-2. Execute the following Git commands only when you need to synchronize changes from upstream repo into your local fork:
+Execute the following Git commands only when you need to synchronize changes from upstream repo into your local fork:
 
     ```shell
     git fetch upstream

@@ -17,7 +17,7 @@ This table lists the technical prerequisites for enterprise-scale reference impl
 |---------------|--------------------|--------------------|
 |Git >= 2.1| The latest version of Git can be found [here](https://git-scm.com/). <br> <br> Run the following command from command prompt to ensure your Git is correctly configured. You may be prompted to sign in with multi-factor authentication (MFA). <br> <br>```git clone https://github.com/Azure/CET-NorthStar.git``` | [Git handbook](https://guides.github.com/introduction/git-handbook/)|
 | Visual Studio Code (VS Code) | The latest version of VS Code. <br><br> Open the directory ```CET-NorthStar``` cloned from the previous step inside VS Code and run the `git pull` command to verify that Git credentials are set up correctly in VS Code. <br> <br> Exit VS Code and delete the `CET-NorthStar` directory, as no longer required. | [Install](https://code.visualstudio.com/download#) |
-Minimum version of PowerShell: 7.0|  The latest version of PowerShell with install instructions can be found [here](https://github.com/PowerShell/PowerShell). <br> Confirm the version of PowerShell that you're running by typing `$PSVersionTable` in a PowerShell session.| [Instructions](https://github.com/PowerShell/PowerShell)
+Minimum version of PowerShell: 7.0|  The latest version of PowerShell with install instructions can be found [here](https://github.com/PowerShell/PowerShell). <br> Confirm your PowerShell version by typing `$PSVersionTable` in a PowerShell session.| [Instructions](https://github.com/PowerShell/PowerShell)
 |az.accounts >= 1.7 <br>az.resources >= 1.13 |  `Install-Module -Name Az.<moduleName> -MinimumVersion <version> -Scope AllUsers`<br>Confirm the version of the module you have by running <br>`Get-Module Az.<moduleName> -ListAvailable`. | [Docs](https://docs.microsoft.com/powershell/azure/install-az-ps)|
 | Pester >= 4.10.1 |  _Only required if you want to run pester-tests as a developer._ <br>`Install-Module -Name Pester -MinimumVersion 4.10.1 -Scope AllUsers`<br> You can confirm the version of the module you have by running <br>`Get-Module Pester -ListAvailable`. | [Docs](https://github.com/pester/Pester) |
 
@@ -40,7 +40,7 @@ git clone https://github.com/<yourAccount>/CET-NorthStar.git
 
 Follow these steps to synchronize the latest changes from the upstream repo to your local fork.
 
-1. Run the following Git commands only after changing your directory to your local fork and adding a reference to the upstream repo:
+Run the following Git commands only after changing your directory to your local fork and adding a reference to the upstream repo:
 
     ```shell
     git remote -v
@@ -48,7 +48,7 @@ Follow these steps to synchronize the latest changes from the upstream repo to y
     git remote -v
     ```
 
-2. Execute the following Git commands only when you need to synchronize changes from upstream repo into your local fork:
+Execute the following Git commands only when you need to synchronize changes from upstream repo into your local fork:
 
     ```shell
     git fetch upstream

@@ -55,25 +55,23 @@ An IAC repo will have hundreds if not thousands of configuration artifacts that 
 
 - Discover the current Azure environment as-is and have entire Azure platform baseline stored inside the Git repo.
 - Deploy templates to Azure environment using pipeline by committing templates at appropriate scope without providing deployment scripts.
-- Perform platform operations that are required for enterprise-scale but not yet supported inside Resource Manager (resource provider registration, Azure AD graph operations, and more). In the interim, these operations should be handled via pipeline.
+- Perform platform operations that are required for enterprise-scale but not yet supported inside Azure Resource Manager (resource provider registration, Azure AD graph operations, and more). In the interim, these operations should be handled via pipeline.
 
-## Azure Resource Manager as the orchestrator to declare the goal state
+## Resource Manager as the orchestrator to declare the goal state
 
-Provide tenant-level Resource Manager template to build landing zone using enterprise-scale guidelines.
+Provide tenant-level Resource Manager templates to build landing zones with enterprise-scale guidelines. We will enable security, logging, networking, and any other plumbing needed for landing zones (subscriptions) autonomously via policy enforcement. We will bootstrap Azure environment with Resource Manager templates to create necessary structure for management and networking and to declare desired goal state.
 
-We will enable security, logging, networking, and any other plumbing needed for landing zones (subscriptions) autonomously via policy enforcement. We will bootstrap Azure environment with Resource Manager templates to create necessary structure for management and networking and to declare desired goal state.
-
-The File -> New -> Landing Zone (subscription) process is Resource Manager orchestrates the following:
+The File -> New -> Landing Zone (subscription) process is Resource Manager orchestrating the following:
 
 - Subscription creation
 - Subscriptions move
-- Configuring the subscription to desired state by policy enforcement (autonomously)
+- Configuring the subscription to the desired state with policy enforcement (autonomously)
 
-To start quickly, a [**Resource Manager template**](https://github.com/azure/CET-NorthStar/blob/master/examples/e2e-landing-zone.parameters.json) that can be deployed at the tenant ("/") root scope will be provided to instantiate the enterprise-scale architecture. This template should provide everything that's necessary in [Implementation guide](./implementation-guide.md), and it'll have the following sequence:
+To start quickly, a [Resource Manager template](https://github.com/azure/CET-NorthStar/blob/master/examples/e2e-landing-zone.parameters.json) that can be deployed at the tenant ("/") root scope will be provided to instantiate the enterprise-scale architecture. This template should provide everything that's necessary in the [implementation guide](./implementation-guide.md), and it'll have the following sequence:
 
 - Create a management group hierarchy and subscription organization structure in a 2+n fashion where n represents number of landing zones.
-- Create policies (DeployIfNotExists) assigned to management groups and a subscription scope to govern and deploy necessary resources, enabling platform autonomy as new landing zones (subscriptions) are being created by application teams
-- Create policy and role assignment to govern and delegate access to resources
+- Create policies (DeployIfNotExists) assigned to management groups and a subscription scope to govern and deploy necessary resources, enabling platform autonomy as new landing zones (subscriptions) are being created by application teams.
+- Create policy and role assignment to govern and delegate access to resources.
 
 ![End-to-end Resource Manager template deployment](./media/e2e-armtemplate.png)
 _Figure 2: End-to-end Resource Manager deployment_

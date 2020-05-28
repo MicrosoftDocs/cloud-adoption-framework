@@ -17,11 +17,11 @@ For example, a customer is likely to question how many subscriptions they requir
 
 ## Critical design areas
 
-The following eight critical design areas are intended to support translating customer requirements to Microsoft Azure constructs and capabilities and to address the mismatch between on-premises infrastructure and cloud-design, which typically creates dissonance and friction between the enterprise-scale definition and Azure adoption.
+The following eight critical design areas help to translate customer requirements to Microsoft Azure constructs and capabilities and to address the mismatch between on-premises and cloud-design infrastructure, which typically creates dissonance and friction between the enterprise-scale definition and Azure adoption.
 
 The impact of decisions made within these critical areas will reverberate across enterprise-scale architecture and influence other decisions. Readers are advised to familiarize themselves with the eight areas below to better understand the consequences of encompassed decisions, which may later produce trade-offs within related areas.
 
-1. [Enterprise enrollment and Azure AD tenants](./enterprise-enrollment-and-azure-ad-tenants.md)
+1. [Enterprise enrollment and Azure Active Directory tenants](./enterprise-enrollment-and-azure-ad-tenants.md)
 2. [Identity and access management](./identity-and-access-management.md)
 3. [Management group and subscription organization](./management-group-and-subscription-organization.md)
 4. [Network topology and connectivity](./network-topology-and-connectivity.md)

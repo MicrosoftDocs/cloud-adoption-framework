@@ -11,10 +11,10 @@ ms.subservice: ready
 
 # Start with enterprise-scale landing zones
 
-It is sometimes unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to assess the new constraints of any cloud environment and replicate its desired processes, tools, and architectures. To accelerate this learning process, a slightly different starting point is required. When comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, and it's now more complex. **More to follow later in this article.**
+It is sometimes unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to assess the new constraints of any cloud environment and replicate its desired processes, tools, and architectures. To accelerate this learning process, a slightly different starting point is required. When comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, and it's now more complex. More information about his is to follow later in this article.
 
 ![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor-enterprise-scale.png)
-
+_Figure 1: Landing zone refactoring_
 <!-- markdownlint-disable MD026 -->
 
 ## Qualifiers: should I start with enterprise scale?
@@ -31,7 +31,7 @@ Multiple business motivations might require an enterprise-scale landing zone and
 
 ### All-in on the cloud
 
-The most common driver for an enterprise-scale landing zone comes from companies who decide to go all in on the cloud. This can be a result of a data center termination or a mass movement to be more agile as a business. Regardless of the driver, this business decision typically demands both scale and speed of adoption. This combination of demands makes it difficult to take the time required to learn and prepare for sensitive data and mission-critical hosting in the cloud.
+The most common driver for an enterprise-scale landing zone comes from companies who decide to go all in on the cloud. This can be a result of a data center termination or a mass movement to be more agile as a business. Regardless of the driver, this business decision typically demands both scale and speed during adoption. This combination of demands makes it difficult to take the time required to learn and prepare for sensitive data and mission-critical hosting in the cloud.
 
 ### Skill requirements
 
@@ -39,7 +39,7 @@ Starting with enterprise scale assumes that the cloud platform team has enterpri
 
 Suggested skills:
 - Deep knowledge of architecture in the chosen cloud provider
-- Extensive hands-on experience with cloud-based infrastructure as code approaches
+- Extensive hands-on experience with cloud-based infrastructure-as-code approaches
 - Moderate familiarity with GitHub or other source code repositories, including branching and pull request strategies
 - Actionable experience with automated deployments from source code to the cloud provider
 
@@ -47,7 +47,7 @@ If these skills aren't available within the cloud platform team through staff, p
 
 ## Start with an enterprise-scale landing zone
 
-The enterprise-scale approach to landing zone development includes four sets of assets to support cloud teams: [implementations](./implementation.md) | [Architecture](./architecture.md) | [Design guidelines](./design-guidelines.md) | [Template](./template.md)
+The enterprise-scale approach to landing zone development includes four sets of assets to support cloud teams: [Implementations](./implementation.md) | [Architecture](./architecture.md) | [Design guidelines](./design-guidelines.md) | [Template](./template.md)
 
 - [Implementations](./implementation.md): scripted implementations of the architecture to accelerate adoption
 - [Architecture](./architecture.md): conceptual reference architecture to demonstrate design areas and best practices

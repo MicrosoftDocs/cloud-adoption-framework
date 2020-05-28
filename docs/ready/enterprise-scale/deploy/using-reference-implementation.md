@@ -18,5 +18,4 @@ This article is divided into four sections:
 * The third part describes how to [provision landing zones](./deploy-landing-zone.md).
 * The fourth part describes how to [trigger deployments locally](./trigger-local-deployment.md), such as when you need to debug deployments locally without involving GitHub Actions).
 
-The following process is recommended:
-![Deploy your own environment process](../media/deploy-environment.png)
+The following process is recommended: [deploy your own environment](../media/deploy-environment.png).

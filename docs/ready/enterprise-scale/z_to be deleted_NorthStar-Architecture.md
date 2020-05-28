@@ -1,6 +1,6 @@
 ---
-title: Xx
-description: XX
+title: To be deleted
+description: To be deleted
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020

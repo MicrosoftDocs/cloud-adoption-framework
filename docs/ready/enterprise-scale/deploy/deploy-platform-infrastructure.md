@@ -13,7 +13,8 @@ ms.subservice: ready
 
 This article describes how to deploy the platform infrastructure for the enterprise-scale reference implementation into your own environment. If you haven't completed the first step, start [here](./configure-run-initialization.md).
 
-![Step 2: the process to deploy your own environment process](../media/deploy-environment-step-2.png)
+![Step 2: the process to deploy your own environment](../media/deploy-environment-step-2.png)
+_Figure 1: The process to deploy your own environment
 
 ## Deployment artifact overview
 
@@ -60,12 +61,11 @@ There are two groups of properties in this section _\*definitions\*_ and _\*assi
 * Definitions: all definitions (`policy`, `role`, and `policyset`) need to be deployed on the 'yourcompanyname' management group scope and in the 'yourcompanyname'.parameters.json file.
 >Note: in the Azure portal, `policysetdefinitions` is also known as an initiative. It represents a set of Microsoft Azure Policy definitions.
 
-* Assignments: the assignments (`role` and `policy`) can be deployed at any management group scope as long as the definition exists on the same scope or above. To simplify the management, it's recommended to reduce the number of scopes where you assign Azure Policy and role-based access control roles. In the enterprise-scale
-reference implementation section, we recommend assigning only at the following three scopes:
+* Assignments: the assignments (`role` and `policy`) can be deployed at any management group scope as long as the definition exists on the same scope or above. To simplify the management, it's recommended to reduce the number of scopes where you assign Azure Policy and role-based access control roles. In the enterprise-scale reference implementation section, we recommend assigning only at the following three scopes:
 
 - 'Yourcompanyname' `management group` scope for all company policies
 - Platform subscription scope for Azure-Policy-deploying platform resources
-- Landing zones `management group` scope for all landing-zone-specific Azure Policy
+- Landing zone `management group` scope for all landing-zone-specific Azure policies
 
 ## Deployment flow
 
@@ -74,10 +74,12 @@ In this reference implementation, we're using GitHub Actions to push and pull ch
 The following diagram illustrates the flow to deploy the definitions:
 
 ![Landing zone definitions deployment process](../media/lz-definition-deployment.png)
+_Figure 2: The flow to deploy definitions_
 
 The next step is to deploy the process while following a similar process:
 
 ![Landing zone assignment deployment process](../media/lz-assignments-deployment.png)
+_Figure 3: The process to deploy definitions_
 
 ## Deploying definitions
 
@@ -123,7 +125,7 @@ The next step is to deploy the process while following a similar process:
     git push <remote-name>
     ```
 
-4. Create a PR to the master branch. GitHub Actions runs a PR check and pushes the changes to the target Azure environment. You can monitor the status in the actions
+4. Create a PR to the master branch. GitHub Actions run a PR check and push the changes to the target Azure environment. You can monitor the status in the actions
 log. Once all the checks are successful, you can squash and merge your changes to the master branch.
 
 Optional step: reinitialize/update the repository on your master branch. This will match all definitions with the resource IDs that are required for the assignments in the next section.
@@ -136,9 +138,10 @@ Optional step: reinitialize/update the repository on your master branch. This wi
 
 ## Create a platform subscription
 
-The platform infrastructure is deployed across three Azure subscriptions on platform management group scope:
+The platform infrastructure is deployed across three Azure subscriptions on the platform management group scope:
 
 ![Platform subscriptions](../media/platform-subscriptions.png)
+_Figure 4: Platform subscriptions_
 
 - The `management` subscription: where all cross-platform management resources are deployed (such as a centralized Azure Monitor Logs workspace)
 - The `connectivity` subscription: where all the networking resources are deployed (such as Azure Virtual WAN or Firewall)
@@ -146,7 +149,7 @@ The platform infrastructure is deployed across three Azure subscriptions on plat
 
 In an enterprise-scale implementation, all platform resources in the `connectivity` and `management` subscriptions are deployed via Azure Policy. Enterprise-scale includes both, policy definitions and assignments required to deploy the necessary resources. While it is possible to deploy both, Azure Policy definition and assignments using enterprise-scale deployment process via GitHub Actions as described in this article, enterprise-scale provides flexibility for how the assignments can be done in the platform subscriptions.
 
-But not all resources in the `identity` subscriptions are deployed via Azure Policy, as each organization has different methods to deploy Active Directory domain controllers.
+But not all resources in the `identity` subscriptions are deployed via Azure Policy, as each organization has different methods to deploy Azure Active Directory domain controllers.
 
 The following sections describe how to deploy the platform infrastructure resources across the three platform subscriptions. Before continue with the steps below ensure that the `management`, `connectivity` and `identity` subscriptions have been created and assigned at the `platform` management group scope.
 
@@ -168,7 +171,7 @@ Azure Policy assignments required on a _management_ subscription:
 | Deploy-loganalytics-_\<region\>_  | Custom policy | Management subscription | _workspaceName:_ LA workspace name<br>_workspaceRegion:_ Azure DC region for LA<br>_automationAccountName:_ Linked Azure Automation Account, will be created with this Policy<br>_automationRegion:_ Azure DC region for the Azure Automation Account<br>_rgName_: Resource Group in which the resource resides |
 | Deploy-loganalytics-config-_\<region\>_ | Custom policy | Management subscription | _workspaceName:_ LA workspace name this configuration will be applied<br>_workspaceRegion:_ Azure DC region of the LA workspace |
 
-> Note: how-to [assign Azure Policy](#deployment-of-assignments) at the _management_ subscription scope describes the process in detail.
+> Note: how to [assign Azure Policy](#deployment-of-assignments) at the _management_ subscription scope describes the process in detail.
 
 ### Connectivity subscription
 
@@ -210,7 +213,7 @@ The following instructions provide guidance for deploying the required resources
 
 | Policy name          | Scope              | Description                                                        |
 | ---------------------|--------------------|--------------------------------------------------------------------|
-| Deploy-VNet          |'Yourcompanyname' mg| Deploys a virtual network and connects it to the local virtual WAN virtual hub.|
+| Deploy-VNet          |'Yourcompanyname' mg| Deploys a virtual network and connects it to the local Virtual WAN VHub.|
 
 Azure Policy assignments required on _identity_ subscription (per region a policy is required):
 
@@ -218,12 +221,11 @@ Azure Policy assignments required on _identity_ subscription (per region a polic
 |----------------------|------|----------------------|
 | Deploy-VNet | Custom policy | 'Yourcompanyname' mg |
 
-Once the virtual network is created the two Active Directory domain controllers can be created in the virtual network following your company's procedures.
+Once the virtual network is created the two Azure AD domain controllers can be created in the virtual network following your company's procedures.
 
 **Non-Virtual-WAN-based enterprise-scale implementation:**
 
-1. In a regional VHub network, deploy two Active Directory domain controllers following your company's procedures
-2. Repeat the process for each regional VHub network
+In a regional VHub network, deploy two Azure AD domain controllers following your company's procedures. Repeat the process for each regional VHub network.
 
 ## Deploying assignments
 
@@ -275,15 +277,15 @@ To assign a policy with Azure Policy, you can select a reference Azure Policy as
 2. Git stage and commit locally, and then push changes to your remote feature branch.
 
     > [!NOTE]
-    > Do not push changes directly in the *master* branch in this step.
+    > Do not push changes directly to the master branch in this step.
 
     ``` bash
     git push <remote-name>
     ```
 
-3. Create a PR to the master branch. GitHub Actions runs a PR check and pushes the changes to the target Azure environment. You can monitor the status in the actions log. Once all the checks are successful, squash and merge your changes to the master branch.
+3. Create a PR to the master branch. GitHub Actions run a PR check and push the changes to the target Azure environment. You can monitor the status in the actions log. Once all the checks are successful, squash and merge your changes to the master branch. 
 
->Note: if the Azure Policy assignment fails, rerun the checks a second time. The product team is currently fixing a known issue with Azure Policy assignment.
+Rerun the checks if the Azure Policy assignment fails. The product team is currently fixing a known issue with Azure Policy assignment.
 
 ---
 

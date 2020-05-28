@@ -1,6 +1,6 @@
 ---
-title: Business continuity and disaster recovery
-description: Business continuity and disaster recovery
+title: Business continuity and DR
+description: Business continuity and DR
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -11,15 +11,15 @@ ms.subservice: ready
 
 # Business continuity and disaster recovery
 
-## 1. Planning for business continuity and disaster recovery
+## Planning for business continuity and disaster recovery
 
-This section will help readers capture customer disaster recovery requirements to design suitable platform level capabilities that application workloads can consume to meet their specific recovery time (RTO) and recovery point (RPO) requirements.
+This section will help readers capture customer disaster recovery (DR) requirements to design suitable platform level capabilities that application workloads can consume to meet their specific recovery time (RTO) and recovery point (RPO) requirements.
 
 **Design considerations:**
 
 - Application and data availability requirements and the use of active-active and active-passive availability patterns (for example, workload RTO and RPO requirements)
 
-- Business continuity and disaster recovery for platform-as-a-service (PaaS) services and the availability of native disaster recovery (DR) and high-availability features
+- Business continuity and DR for platform-as-a-service (PaaS) services and the availability of native DR and high-availability features
 
 - Support for multiregional deployments for failover purposes; component proximity for performance reasons
 
@@ -33,15 +33,15 @@ This section will help readers capture customer disaster recovery requirements t
 
   - Support for specific virtual machine (VM) stock-keeping units with availability zones
 
-  - Using availability zones is mandatory if Microsoft Azure Ultra Disk storage is used 
+  - Using availability zones is required if Microsoft Azure Ultra Disk storage is used 
 
 - Consistent backups for applications and data
 
-  - VM snapshots and using Azure Backup and Recovery Services vaults
+  - VM snapshots and using Microsoft Azure Backup and Recovery Services vaults
 
   - Subscription limits restricting the number of Recovery Services vaults and the size of each vault
 
-  - Geo-replication and disaster recovery capabilities for PaaS services
+  - Geo-replication and DR capabilities for PaaS services
 
 - Network connectivity in case of a failover
 
@@ -49,7 +49,7 @@ This section will help readers capture customer disaster recovery requirements t
 
   - Paired failover regions
 
-  - Traffic routing in case of a region/zone/network outage
+  - Traffic routing in case of a regional, zonal, or network outage
 
 - Planned and unplanned failovers
 
@@ -57,7 +57,7 @@ This section will help readers capture customer disaster recovery requirements t
 
   - Maintained engineering DevOps capabilities
 
-- Key Vault DR for application keys, certificates, and secrets
+- Azure Key Vault DR for application keys, certificates, and secrets
 
 **Design recommendations:**
 
@@ -65,7 +65,7 @@ This section will help readers capture customer disaster recovery requirements t
 
   Site Recovery provides built-in platform capabilities for VM workloads to meet low RPO/RTO requirements through real-time replication and recovery automation. Additionally, the service provides the ability to run recovery drills without affecting the workloads in production.
 
-- Utilize native PaaS service DR capabilities.
+- Use native PaaS service DR capabilities.
 
   The built-in features provide an easy solution to the complex task of building replication and failover into a workload architecture, simplifying both design and deployment automation. An organization that has defined a standard for the services they use can also audit and enforce the service configuration through Azure Policy.
 
@@ -79,14 +79,12 @@ This section will help readers capture customer disaster recovery requirements t
 
 - Refer to [Azure region pairs](https://docs.microsoft.com/azure/best-practices-availability-paired-regions) documentation when selecting locations for your organizations DR layouts.
 
-- Use Azure paired regions when planning for business continuity and disaster recovery.
+- Use Azure paired regions when planning for business continuity and DR.
 
 - Planned Azure system updates are rolled out to paired regions sequentially but not at the same time to minimize downtime, the effect of bugs, and logical failures in the rare event of a bad update.
 
-- In the event of a broad outage, recovery of one region is prioritized out of every pair. Applications that are deployed across paired regions are guaranteed to have one of the regions recovered with priority. If an application is deployed across regions that aren't paired, the worst case is that recovery might delay and the chosen region may be the last to be recovered.
-
-<!-- -->
+- In the event of a broad outage, recovering one region is prioritized within of every pair. Applications deployed across paired regions are guaranteed to have one of the regions recovered with priority. If an application is deployed across regions that aren't paired, the worst case scenario is that recovery might delay, and the preferred region may be the last to be recovered.
 
 - Avoid using overlapping IP address ranges for production and DR sites.
 
-  Whenever possible, plan for a business continuity and disaster recovery network architect that provides concurrent connectivity to all sites. DR networks using the same classless inter-domain routing blocks such as production networks will require a network failover process that can complicate and delay application failover in the event of an outage.
+  When possible, plan for a business continuity and DR network architect that provides concurrent connectivity to all sites. DR networks using the same classless inter-domain routing blocks such as production networks will require a network failover process that can complicate and delay application failover in the event of an outage.

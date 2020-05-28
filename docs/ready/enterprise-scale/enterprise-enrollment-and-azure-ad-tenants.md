@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise enrollment and Azure Active Directory tenants
+# Enterprise enrollment and Microsoft Azure Active Directory tenants
 
 ## Planning for enterprise enrollment
 
@@ -24,7 +24,7 @@ _Figure 1: An EA enrollment hierarchy_
 
 * Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. They are where an organization deploys Azure services.
 
-* Enterprise enrollment roles link users with their functional role and are:
+* Enterprise enrollment roles link users with their functional role. They are:
  * Enterprise administrator
  * Department administrator
  * Account owner
@@ -85,7 +85,7 @@ _Figure 1: An EA enrollment hierarchy_
 
 ## Define Azure AD tenants
 
-An Azure AD tenant provides identity and access management, which is an important part of security posture, ensuring that only authenticated and authorized users have access to the resources to which they have permission to access. Azure AD not only provides these services to applications and services deployed in Azure but to services and applications deployed outside of Azure (such as on-premises or third-party cloud providers). Azure AD service is also utilized by software-as-a-service (SaaS) applications such as Microsoft 365 and theAzure Marketplace. Organization already using on-premises Active Directory can use their existing infrastructure and extend authentication to the cloud by integrating with Azure AD. Each Azure AD has one or more domains. A directory can have many subscriptions associated with it but only one Azure AD tenant.
+An Azure AD tenant provides identity and access management, which is an important part of security posture, ensuring that only authenticated and authorized users have access to the resources to which they have permission to access. Azure AD not only provides these services to applications and services deployed in Azure but to services and applications deployed outside of Azure (such as on-premises or third-party cloud providers). Azure AD service is also utilized by software-as-a-service (SaaS) applications such as Microsoft 365 and theAzure Marketplace. Organization already using on-premises Azure AD can use their existing infrastructure and extend authentication to the cloud by integrating with Azure AD. Each Azure AD has one or more domains. A directory can have many subscriptions associated with it but only one Azure AD tenant.
 
 It is important to ask basic security questions during the Azure AD design phase—how an organization is managing credentials, control of human and application access, and how to control programmatic access.
 

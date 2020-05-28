@@ -27,9 +27,9 @@ Enterprise organizations will typically follow a least-privileged approach to op
 
 Identity and access management is multi-step process involving careful planning for identity integration and other security consideration such as blocking legacy authentication and planning for modern passwords. Staging planning also involves selection of business-to-business or business-to-consumer identity and access management. While these requirements vary, there are common design considerations and recommendation that can be taken into account for an enterprise landing zone.
 
-![Identity and cccess management](./media/iam.png)
+![Identity and access management](./media/iam.png)
 
-_Figure: Identity and access management_
+_Figure 1: Identity and access management_
 
 **Design considerations:**
 
@@ -46,7 +46,7 @@ _Figure: Identity and access management_
 
 **Design recommendations:**
 
-- Use Azure AD [RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to manage data-plane access to resources where possible (for example, Azure Key Vault, a storage account, or SQL database).
+- Use Azure AD [RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to manage data-plane access to resources where possible (for example, Azure Key Vault, a storage account, or an SQL database).
 
 - Deploy conditional access rules for any user with rights to Azure environment(s). Doing so will provide another mechanism to help protect a controlled Azure environment from unauthorized access.
 
@@ -71,7 +71,7 @@ _Figure: Identity and access management_
 | Role                             | Usage                                                                                                     | Actions:                                                                                                                                                                                                           | No actions:                                                                                                                                                                   |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Azure Platform Owner             | Management group and subscription lifecycle management                                                    | *                                                                                                                                                                                                                  |                                                                                                                                                                               |
-| Network Management (NetOps)      | Platform-wide Global Connectivity management; virtual networks, UDRs, NSGs, NVAs, VPN, ER etc.                       | \*/read, Microsoft.Authorization/\*/write, Microsoft.Network/vpnGateways/\*, Microsoft.Network/expressRouteCircuits/\*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/\*                              |                                                                                                                                                                               |
+| Network Management (NetOps)      | Platform-wide global connectivity management: virtual networks, UDRs, NSGs, NVAs, VPN, ER, etc.                       | \*/read, Microsoft.Authorization/\*/write, Microsoft.Network/vpnGateways/\*, Microsoft.Network/expressRouteCircuits/\*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/\*                              |                                                                                                                                                                               |
 | Security Operations (SecOps)     | Security Administrator role with a horizontal view across the entire Azure estate and the KV Purge Policy | \*/read, \*/register/action, Microsoft.KeyVault/locations/deletedVaults/purge/action, <br> Microsoft.Insights/alertRules/\*, Microsoft.Authorization/policyDefinitions/\*, Microsoft.Authorization/policyassignments/\*, Microsoft.Authorization/policysetdefinitions/\*, Microsoft.PolicyInsights/\*,Microsoft.Security/\* |                                                                                                                                                                               |
 | Subscription Owner               | Delegated Role for Subscription Owner derived from subscription Owner role                                | *                                                                                                                                                                                                                  | Microsoft.Authorization/\*/write, Microsoft.Network/vpnGateways/\*, Microsoft.Network/expressRouteCircuits/\*, Microsoft.Network/routeTables/write, Microsoft.Network/vpnsites/\* |
 | Application Owners DevOps/AppOps | Contributor role granted for application/operations team at resource group level                          |                                                                                                                                                                                                                    | Microsoft.Network/publicIPAddresses/write, Microsoft.Network/virtualNetworks/write, Microsoft.KeyVault/locations/deletedVaults/purge/action                                   |
@@ -100,7 +100,7 @@ A critical design decision that an enterprise organization must make when adopti
 
 - If organizations have scenarios where the application using integrated Windows authentication needs to be accessed remotely through Azure AD, then consider design for [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)
 
-- There is a difference between Azure AD and Azure AD Domain Services. Evaluate your application needs and understand and document the authentication provider each one will be using. Plan accordingly for all applications.
+- There is a difference between Azure AD and Azure AD Domain Services. Evaluate your application needs and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
 
 **Design recommendations:**
 

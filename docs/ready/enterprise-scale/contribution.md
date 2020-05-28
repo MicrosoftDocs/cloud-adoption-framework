@@ -1,6 +1,6 @@
 ---
-title: Contribution
-description: Contribution
+title: Contribution guide
+description: Contribution guide
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -9,15 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Contribution
+# Contribution guide
 
-## Contribution guide
-
-### Enterprise-scale committee
+## Enterprise-scale committee
 
 The enterprise-scale committee and its members (committee members) are the primary caretakers of the enterprise-scale repository and its language, design, and Contoso implementation.
 
-### Current committee members
+Current committee members:
 
 <!-- docsTest:disable -->
 
@@ -31,7 +29,7 @@ The enterprise-scale committee and its members (committee members) are the prima
 
 <!-- docsTest:enable --->
 
-### Committee member responsibilities
+## Committee member responsibilities
 
 Committee members are responsible for reviewing and approving requests for comments (RFCs) proposing new features or design changes.
 
@@ -39,15 +37,15 @@ The initial enterprise-scale committee consists of Microsoft employees. It is ex
 
 A committee member can nominate a strong community member to join the committee at any time. Nominations should be submitted in the form of RFCs detailing why that individual is qualified and how they'll contribute. After the RFC has been discussed, a unanimous vote will be required for the new committee member to be confirmed.
 
-### Contribution scope for enterprise-scale architecture guidelines
+## Contribution scope for enterprise-scale architecture guidelines
 
-The following is the scope of contributions to this repository: as a platform evolves and new services and feature are validated in production with customers, the design guidelines are subject to updates in the overall context of the architecture. Use the 'placeholder' template to submit pull requests (PRs) for documentation updates.
+This is the scope of contributions to this repository—as a platform evolves and new services and feature are validated in production with customers, the design guidelines are subject to updates in the overall context of the architecture. Use the 'placeholder' template to submit pull requests (PRs) for documentation updates.
 
-### Contribution scope for Contoso reference implementation
+## Contribution scope for Contoso reference implementation
 
 The implementation guide and reference implementation must be updated accordingly as new services, resources, resource properties, and API versions emerge. Code contributions would primarily focus on Microsoft Azure Policy definitions and assignments for Contoso implementation.
 
-#### How to submit a PR to the upstream repo
+## How to submit a PR to the upstream repo
 
 1. Create a new branch based on upstream/master by executing the following command:
 
@@ -55,26 +53,24 @@ The implementation guide and reference implementation must be updated accordingl
     git checkout -b feature upstream/master
     ```
 
-2. Check out file(s) from your working branch that you may want to include in a PR
+2. Check out the file(s) from your working branch that you want to include in a PR:
 
     ```shell
     #substitute file name as appropriate. below example
     git checkout feature: .\.github\workflows\azops-push.yml
     ```
 
-3. Push your Git branch to your origin
+3. Push your Git branch to your origin:
 
     ```shell
     git push origin -u
     ```
 
-4. Create a PR from upstream to your remote master
+4. Create a PR from upstream to your remote master.
 
-#### Writing Azure Resource Manager templates for Contoso implementation
+## Writing Azure Resource Manager templates for Contoso implementation
 
-There isn't a right or wrong way to write Resource Manager templates and parameters files.
-
-Resource Manager is a language, and everyone has a different style of writing. Few template and parameters files are written similarly among a group of developers. There aren't clear style definitions to govern and separate code from configurations, subjecting what goes into templates versus parameter files to interpretation. Guidance on when to use parameters and object as parameters (without any schema) is also subject to interpretation, and there isn't one authoring style that fits all.
+There isn't a right or wrong way to write Resource Manager templates and parameters files. Resource Manager is a language, and everyone has a different style of writing. Few template and parameters files are written similarly among a group of developers. There aren't clear style definitions to govern and separate code from configurations, subjecting what goes into templates versus parameter files to interpretation. Guidance on when to use parameters and object as parameters (without any schema) is also subject to interpretation, and there isn't one authoring style that fits all.
 
 To simplify development and unit testing at scale with multiple developers contributing, we've adopted a specific style of writing templates by completely decoupling a template from its parameter file. This minimalist one-template-to-rule-them-all approach externalizes all resource properties as a complex object in a parameter file, and we can enforce strict schema validation in the file based on resource schema that the platform already publishes. This approach clearly separates template and parameters. The parameter file is essentially a RESTful representation of the resource when calling `get-azresource` or `az resource show`.
 
@@ -91,7 +87,7 @@ To simplify development and unit testing at scale with multiple developers contr
     }],
 ```
 
-There is a generic multiresource template available [here](https://raw.githubusercontent.com/uday31in/AzOps/master/src/template.json) to ensure that bug fixes are incorporated with the latest API version.
+There is a generic multi-resource template available [here](https://raw.githubusercontent.com/uday31in/AzOps/master/src/template.json) to ensure that bug fixes are incorporated with the latest API version.
 
 - Template.parameters.json
 
@@ -117,25 +113,24 @@ Retrieve resource definitions by calling the `get-azresource` function and givin
 Get-AzResource -ResourceId '/providers/Microsoft.Management/managementGroups/contoso/providers/Microsoft.Authorization/policyDefinitions/DINE-Diagnostics-ActivityLog' | ConvertTo-Json -depth 100
 ```
 
-The following pros and cons are considered when making design decisions:
+The following pros and cons should be considered when making design decisions:
 
-- Pros
+- Pros:
 
   - No more writing Resource Manager templates! The last Resource Manager template has been written.
   - Resources export consistently throughout lifecycles regardless of how they're created and updated⁠—the Azure portal, Azure CLI, PowerShell, or third-party tools.
   - It's easier to detect drift between a configuration stored in Git versus the current configuration; we're essentially comparing two JSON documents.
-  - It's possible to manage implicit dependencies between simple resources on the client side and the server side. Azure doesn't have many circular dependencies between resources, and it's possible to work out implicit dependencies based on resource schema already published. For example, VMs might depend on kernel-level virtual switches but not vice-versa (for example: policy definition -> policy assignment -> role assignment -> remediation or virtual network -> ExpressRoute or kv -> Azure SQL).
+  - It's possible to manage implicit dependencies between simple resources on the client side and the server side. Azure doesn't have many circular dependencies between resources, and it's possible to work out implicit dependencies based on resource schema already published. For example, virtual machine might depend on kernel-level virtual switches but not vice-versa (for example: policy definition -> policy assignment -> role assignment -> remediation or virtual network -> ExpressRoute or kv -> Azure SQL).
 
-- Cons
+- Cons:
 
-  - It's possible to lose intelligence when authoring a parameter file's complex object. This one-off activity can be mitigated by retrieving the base definition of the current resource or creating the resource via the portal first.
-  - It's not possible to track template deployments using Azure-partner-customer-usage-attribution. This is not in the scope of enterprise scale.
+  It's possible to lose intelligence when authoring a parameter file's complex object. This one-off activity can be mitigated by retrieving the base definition of the current resource or creating the resource via the portal first. It's not possible to track template deployments using Azure-partner-customer-usage-attribution. This is not in the scope of enterprise scale.
 
-There is nothing wrong with the current Resource Manager templates used for resource deployments, and there isn't an expectation to rewrite them. The pipeline will continue to deploy them and detect configuration drift. We won't be able to reconcile them, as the platform doesn't allow exporting deployment templates to complete this action. Because of this, all templates submitted within PRs must conform to ***"what-you-export"*** is ***"what-you-deploy"***.
+There is nothing wrong with the current Resource Manager templates used for resource deployments, and there isn't an expectation to rewrite them. The pipeline will continue to deploy them and detect configuration drift. We won't be able to reconcile them, as the platform doesn't allow exporting deployment templates to complete this action. Because of these parameters, all templates submitted within PRs must conform to the principle that what you export is what you deploy.
 
 Do read the next section before submitting a PR, but don't submit a PR with templates and parameters files to deploy resources such as Azure Key Vault or Monitor Logs without wrapping them inside a policy.
 
-#### Contributing to policy definitions, policy assignments, and role definitions and assignments for Contoso implementation
+## Contributing to policy definitions, policy assignments, and role definitions and assignments for Contoso implementation
 
 Once your parameter conforms to the standards mentioned in section above and is ready for your resource, consider the scope at which this resource should be deployed—management group or subscription (either a connectivity or management subscription). Although the pipeline has an ability to deploy templates at any of the four given scopes, won't use resource-group-level deployment as a part of a landing zone template. The minimum bar is a subscription-level deployment template wrapped inside a policy definition.
 
@@ -144,9 +139,7 @@ Once your parameter conforms to the standards mentioned in section above and is 
   - The policy should ideally have an existence scope targeted at the subscription scope if the deployment count of resources inside landing zone is exactly one (for example, a virtual network inside a landing zone or virtual hub for a new Azure region).
   - Ideally, all policy definitions should be created at the root defined in the end-to-end template.
 
-- Don'ts:
-  - Submit a PR with a template and parameter file to deploy resources (for example, Key Vault).
-  - Create your own management group hierarchy outside of what's described in an end-to-end landing zone.
+- Don't submit a PR with a template and parameter file to deploy resources (for example, Key Vault) or reate your own management group hierarchy outside of what's described in an end-to-end landing zone.
 
 Example:
 
@@ -190,7 +183,7 @@ Example:
 }
 ```
 
-#### Contributing new Azure Policy definitions for Contoso implementation
+## Contributing new Azure Policy definitions for Contoso implementation
 
 To contribute to policy definitions that adhere to the enterprise-scale architecture, use the following tools and recommendations:
 
@@ -198,9 +191,9 @@ To contribute to policy definitions that adhere to the enterprise-scale architec
 
 Use this extension to look up policy aliases ad review resources and policies
 
-#### Explore available resource properties with corresponding policy aliases
+## Explore available resource properties with corresponding policy aliases
 
-##### Azure PowerShell
+For Azure PowerShell:
 
 ```powershell
 # List all available providers
@@ -210,7 +203,7 @@ Get-AzPolicyAlias -ListAvailable
 (Get-AzPolicyAlias -NamespaceMatch 'Microsoft.Network').aliases.name
 ```
 
-##### Azure CLI
+For Azure CLI:
 
 ```cli
 # List all available providers
@@ -220,18 +213,18 @@ az provider list --query [*].namespace
 az provider show --namespace Microsoft.Network --expand "resourceTypes/aliases" --query "resourceTypes[].aliases[].name"
 ```
 
-#### Contributing new Azure Policy assignments
+## Contributing new Azure Policy assignments
 
 The following must be considered when assigning all policies:
 
-- Be specific with the intent of the assignment; does it belong to the two subscriptions (connectivity and management) or to the management groups?
+- Be specific about the intent of the assignment. Does it belong to the two subscriptions (connectivity and management) or to the management groups?
 - What is the resource distribution within the subscriptions?
 - What are the regions being used, and are multiple regions allowed/used per subscription?
 - What resource types are allowed that may or may not affect where the policy is being assigned?
 - For multiple policies serving the same or a similar purpose, can they be bundled into a policy initiative?
 - What is the rationale of the policy in effect? Should an audit policy be translated to an enforcement instead?
-- For DeployIfNotExists policies, are you following the principle of least privileges of access for the role-based access control definition used?
+- For DeployIfNotExists policies, are you following the principle of least-privileged-access for the role-based access-control definition used?
 
-### Code of conduct
+## Code of conduct
 
 We are working hard to build strong and productive collaboration with our passionate community. We heard you loud and clear. We are working on set of principles and guidelines with dos and don'ts.

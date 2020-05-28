@@ -19,19 +19,19 @@ Subscriptions should be used as a unit of management and scale aligned with busi
 
 ## Policy-driven governance
 
-Azure Policy should be used to provide guard rails and ensure continued compliance of the customer platform and the applications deployed onto it while also providing application owners sufficient freedom and a secure, unhindered path to the cloud.
+Microsoft Azure Policy should be used to provide guard rails and ensure continued compliance of the customer platform plus the applications deployed onto it while also providing application owners sufficient freedom and a secure, unhindered path to the cloud.
 
 ## Single control and management plane
 
-Enterprise-scale architecture shouldn't consider any abstraction layers (such as customer-developed portals or tooling) and should provide a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams). Azure provides a unified and consistent control plane across all Azure resources and provisioning channels that are subject to role-based access and policy-driven controls and should be used to establish a standardized set of policies and controls for governing the entire customer estate.
+Enterprise-scale architecture shouldn't consider any abstraction layers (such as customer-developed portals or tooling) and should provide a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams). Azure provides a unified and consistent control plane across all Azure resources and provisioning channels subject to role-based access and policy-driven controls and used to establish a standardized set of policies and controls for governing the entire customer estate.
 
 ## Application-centric and archetype-neutral
 
 Enterprise-scale architecture should focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations (moving virtual machines), and it shouldn't differentiate between old/new applications or infrastructure-as-a-service/platform-as-a-service applications. Ultimately, it should provide a safe and secure foundation for all application types to be deployed onto the customer Azure platform.
 
-## Azure-native design and road map aligned
+## Aligning Azure-native design and road maps
 
-The enterprise-scale architecture approach advocates using Azure-native platform services and capabilities whenever possible, which should be aligned with Azure platform road maps to that ensure new capabilities are available within customer environments. Azure platform road maps should help to inform the migration strategy and enterprise-scale trajectory.
+The enterprise-scale architecture approach advocates using Azure-native platform services and capabilities whenever possible, which should align with with Azure platform road maps to ensure that new capabilities are available within customer environments. Azure platform road maps should help to inform the migration strategy and enterprise-scale trajectory.
 
 ## Recommendations
 
