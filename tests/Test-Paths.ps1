@@ -206,14 +206,6 @@ function Test-Paths(
         {
             $correctedSentence = $correctedSentence.Substring(0,1).ToUpper() + $correctedSentence.Substring(1).ToLower()
 
-            ### REVERT LINKS
-
-            $m = [Regex]::Matches($sentence, "(\[?[^\[]*\])\(([^\)\n]+)\)")
-            foreach ($item in $m)
-            {
-                $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Groups[2].Index, $item.Groups[2].Value)
-            }
-
             ### FIX CASING ISSUES
 
             $s = $correctedSentence
@@ -223,6 +215,22 @@ function Test-Paths(
             if ($s -cne $correctedSentence)
             {
                 [TestLog]::WriteSuperVerbose("CASING HANDLED in '$correctedSentence'")
+            }
+
+            ### REVERT LINKS
+
+            $m = [Regex]::Matches($sentence, "(\[?[^\[]*\])\(([^\)\n]+)\)")
+            foreach ($item in $m)
+            {
+                $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Groups[2].Index, $item.Groups[2].Value)
+            }
+
+            ### REVERT INLINE CODE
+
+            $m = [Regex]::Matches($sentence, '(?<!`)`([^`]+)`')
+            foreach ($item in $m)
+            {
+                $correctedSentence = [TestString]::ReplaceAtPosition($correctedSentence, $item.Groups[1].Index, $item.Groups[1].Value)
             }
 
             ### FIX ADDITIONAL TITLE CASING ISSUES
