@@ -23,29 +23,33 @@ class PageHitCollection
         $this.CodeBlocks = [List[PageBlock]]::new()
         $this.DisabledBlocks = [List[PageBlock]]::new()
 
-        $metadataStart = $text.IndexOf("landingContent:")
-        $metadataEnd = 0
+#        $metadataExpression = '(?s)(?:description: .+?\r?\n)(.*?(?:---|highlightedContent:))'
+        $metadataExpression = '(?s)metadata:.*?(?=highlightedContent:)|(?<=\ndescription:.+\r?\n).*---'
+        $m = [Regex]::Match($text, $metadataExpression)
 
-        if ($metadataStart -ge 0) {
-            $metadataEnd = $text.IndexOf("metadata:", $metadataStart)
-        }
-        else
-        {
-            $metadataStart = $text.IndexOf("author:")
-            if ($metadataStart -ge 0)
-            {    
-                $metadataEnd = $text.IndexOf("---", $metadataStart)
-            }
-            else {
-                $metadataStart = 0
-                $metadataEnd = 0
-            }
-        }
+        # $metadataStart = $text.IndexOf("landingContent:")
+        # $metadataEnd = 0
 
-        $m = [Regex]::Match($text, '(?s)(?:description: .+?\r?\n)(.*?(?:---|highlightedContent:))')
+        # if ($metadataStart -ge 0) {
+        #     $metadataEnd = $text.IndexOf("metadata:", $metadataStart)
+        # }
+        # else
+        # {
+        #     $metadataStart = $text.IndexOf("author:")
+        #     if ($metadataStart -ge 0)
+        #     {    
+        #         $metadataEnd = $text.IndexOf("---", $metadataStart)
+        #     }
+        #     else {
+        #         $metadataStart = 0
+        #         $metadataEnd = 0
+        #     }
+        # }
+
+        # $m = [Regex]::Match($text, '(?s)(?:description: .+?\r?\n)(.*?(?:---|highlightedContent:))')
         $this.MetadataBlock = [PageBlock]::new($m)
 
-        $m = [Regex]::Matches($text, '((?s)```.*?```)')
+        $m = [Regex]::Matches($text, '((?s)```.*?```|(?<!`)`[^`]+`)')
         foreach ($match in $m)
         {
             $this.CodeBlocks.Add([PageBlock]::new($match))
