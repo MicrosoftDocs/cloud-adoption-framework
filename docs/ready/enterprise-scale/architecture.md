@@ -26,7 +26,7 @@ It is important to highlight that not all enterprises adopt Azure the same way, 
 
 ## Landing zone: expanded definition
 
-In the [landing zone considerations article](../../ready/considerations/index.md), the term "landing zone" is defined in detail. But the audience of the CAF enterprise-scale landing zone needs a specific expansion of that definition.
+[Landing zone considerations](../../ready/considerations/index.md), provides a detailed definition for the term _landing zone_. The audience of the CAF enterprise-scale landing zone needs an even more specific definition.
 
 - **Scope:** Within the CAF enterprise-scale landing zone, the scope of a landing zone grows considerably to support application migrations and green field development at an enterprise scale in Azure. This expansion allows for design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
 
@@ -38,10 +38,8 @@ In the [landing zone considerations article](../../ready/considerations/index.md
 
 This is similar to how city utilities such as water, gas, and electricity are accessible before new homes are constructed. In this context, the network, identity and access management, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process before it begins.
 
-![Landing zone](./media/lz-design.png "landing zone")
-<br>
-
-_Figure 1: Landing zone design_ 
+![Landing zone](./media/lz-design.png)
+_Figure 1: Landing zone design._
 
 ## Expanded list of requisite components
 
@@ -61,9 +59,9 @@ The following list expands on the landing zone illustration by outlining the cor
 
 In addition to the key aspects denoted above, the design, configuration, deployment, and integration of each landing zone should meet critical customer requirements relating to:
 
-- Business continuity and disaster recovery at platform and application levels
-- Service management such as incident response and support
-- A service catalog (for example, a configuration management database)
+- Business continuity and disaster recovery at platform and application levels.
+- Service management such as incident response and support.
+- A service catalog (for example, a configuration management database).
 
 ## High-level architecture
 

@@ -12,12 +12,11 @@ ms.subservice: ready
 # Platform automation and DevOps
 
 ![Platform automation and DevOps](./media/DevOps.png)
-
-_Figure 1: Platform automation and DevOps_
+_Figure 1: Platform automation and DevOps._
 
 ## Planning for a DevOps approach
 
-Many traditional IT operating models aren't compatible with the cloud, and customers must undergo operational and organizational transformation to deliver against enterprise migration targets. It's highly recommended to use a DevOps approach for both application (app) and central teams.
+Many traditional IT operating models aren't compatible with the cloud, and customers must undergo operational and organizational transformation to deliver against enterprise migration targets. It's highly recommended to use a DevOps approach for both application and central teams.
 
 **Design considerations:**
 
@@ -61,34 +60,34 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 - Network management (holistic)
 
-- Allow app owners to create and manage app resources through a DevOps model. The list below presents a recommended DevOps role for app teams:
+- Allow app owners to create and manage app resources through a DevOps model. The list below presents a recommended DevOps role for application teams:
 
 - **AppDevOps**
 
-  - App migration and/or transformation
+  - App migration or transformation.
 
-  - App management and monitoring
+  - App management and monitoring.
 
-  - RBAC (app resources)
+  - RBAC (app resources).
 
-  - Security monitoring and audit (app resources)
+  - Security monitoring and audit (app resources).
 
-  - Cost management (app resources)
+  - Cost management (app resources).
 
-  - Network management (app resources)
+  - Network management (app resources).
 
   - In some instances, customers may wish to break AppDevOps into more granular roles such as AppDataOps for database management like traditional database administrator roles or AppSecOps, where more security sensitive apps are concerned; this is to be expected.
 
 - Provide a central app DevOps function to support apps that don't have existing DevOps capabilities or a business case to establish one (for example, legacy apps with minimal development capabilities)
 
-- Use a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across app teams. This ensures a least privilege approach is taken by using a combination of RBAC assignments and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
+- Use a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams. This ensures a least privilege approach is taken by using a combination of RBAC assignments and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
 
-- To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for app teams to draw upon.
+- To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for application teams to draw upon.
 For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target enterprise-scale architecture.
 
-- Do not restrict app teams to use central artifacts or approaches as it hinders agility. Consistent baseline configurations can be enforced through a policy-driven infrastructure approach and RBAC assignments. This ensures app (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
+- Do not restrict application teams to use central artifacts or approaches as it hinders agility. Consistent baseline configurations can be enforced through a policy-driven infrastructure approach and RBAC assignments. This ensures app (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
 
-- Do not force app teams to use a central process or provisioning pipeline for the instantiation or management of app resources. This ensures existing teams that already rely on a DevOps pipeline for app delivery can still use the same tools they have been using. Remember that you can still use Azure Policy to maintain guard rails, independent of how resources are deployed in Azure.
+- Do not force application teams to use a central process or provisioning pipeline for the instantiation or management of app resources. This ensures existing teams that already rely on a DevOps pipeline for app delivery can still use the same tools they have been using. Remember that you can still use Azure Policy to maintain guard rails, independent of how resources are deployed in Azure.
 
 ## Define central and federated responsibilities
 
@@ -100,7 +99,7 @@ Central teams strive to maintain full control while app owners seek to maximize 
 
 **Design recommendations:**
 
-The list below presents a recommended distribution of responsibilities between Central IT and app teams striving to empower migration/transformation activities with minimal central dependencies while still supporting the centralized governance of security and operability across the entire estate.
+The list below presents a recommended distribution of responsibilities between Central IT and application teams striving to empower migration/transformation activities with minimal central dependencies while still supporting the centralized governance of security and operability across the entire estate.
 
 - **App functions**
 
@@ -140,4 +139,4 @@ The list below presents a recommended distribution of responsibilities between C
 
   - Cost management (holistic)
 
-An Azure DevOps model that's based on these recommendations provides the desired control for central teams and the migration agility required by app teams.
+An Azure DevOps model that's based on these recommendations provides the desired control for central teams and the migration agility required by application teams.

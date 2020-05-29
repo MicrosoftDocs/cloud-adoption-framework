@@ -15,76 +15,76 @@ The list below summarizes the known issues with Contoso reference implementation
 
 ## Creating subscriptions
 
-Area: Microsoft.subscription resource provider
+**Area:** Microsoft.subscription resource provider
 
-Issue: it's not currently possible to provision new subscriptions with Resource Manager templates. Creating a subscription requires an enterprise enrollment account to migrate to the back-end API under a new billing account.
+**Issue:** It's not currently possible to provision new subscriptions with Resource Manager templates. Creating a subscription requires an enterprise enrollment account to migrate to the back-end API under a new billing account.
 
-Status: we're working closely with engineering teams to enable this functionality for the Contoso tenant. As a workaround, subscriptions are created using GitHub Actions and with a service principal to call the post API.
+**Status:** we're working closely with engineering teams to enable this functionality for the Contoso tenant. As a workaround, subscriptions are created using GitHub Actions and with a service principal to call the post API.
 
 ## Unable to tag subscriptions using Azure Policy
 
-Area: Azure Policy
+**Area:** Azure Policy
 
-Issue: a subscription can't currently be tagged by Azure Policy, which makes it hard to navigate subscriptions during policy evaluations and to target the correct one(s).
+**Issue:** A subscription can't currently be tagged by Azure Policy, which makes it hard to navigate subscriptions during policy evaluations and to target the correct one(s).
 
-Status: for Contoso to determine and target platform subscriptions with their specific policies, their workaround is to have a dedicated management group for each subscription, which is child to the platform management group.
+**Status:** For Contoso to determine and target platform subscriptions with their specific policies, their workaround is to have a dedicated management group for each subscription, which is child to the platform management group.
 
 ## Unable to use policy aliases on Microsoft.resources/subscriptions
 
-Area: Microsoft.subscription resource provider
+**Area:** Microsoft.subscription resource provider
 
-Issue: a subscription's display name can't be currently used in the policy rule, which makes it hard to navigate subscriptions during policy evaluations and to target the correct one(s).
+**Issue:** A subscription's display name can't be currently used in the policy rule, which makes it hard to navigate subscriptions during policy evaluations and to target the correct one(s).
 
 Status: for Contoso to determine and target platform subscriptions with their specific policies, their workaround is to have a dedicated management group for each subscription, which is child to the platform management group.
 
 ## Move subscription to management group
 
-Area: Microsoft.management resource provider
+**Area:** Microsoft.management resource provider
 
-Issue: when doing put on Microsoft.management/managementgroups/subscriptions, the put and get response is 204 (no content), causing the overall template deployment to fail. A fix was deployed to resolve the put request. Contoso is waiting for the fix to resolve the get request.
+**Issue:** When doing a `put` on `Microsoft.management/managementgroups/subscriptions`, the `put` and `get` response is `204 (no content)`, causing the overall template deployment to fail. A fix was deployed to resolve the `put` request. Contoso is waiting for the fix to resolve the `get` request.
 
-Status: there isn't a fix at this time.
+**Status:** No fix at this time.
 
 ## Reference() resources at management group scope when deploying Resource Manager templates to subscription scope
 
 Area: Resource Manager template deployments
 
-Issue: when deploying a subscription template and using the template reference() function to reference a resource (policy definitions/policy assignments) from the management group, the function appends the subscription ID to the referenced resource, causing the deployment to fail.
+**Issue:** When deploying a subscription template and using the template reference() function to reference a resource (policy definitions/policy assignments) from the management group, the function appends the subscription ID to the referenced resource, causing the deployment to fail.
 
-Status: there isn't a fix at this time. A workaround for template deployment to succeed is for specific policy assignments to sit directly on the subscription.
+**Status:** No fix at this time. A workaround for template deployment to succeed is for specific policy assignments to sit directly on the subscription.
 
 ## Management group scoped deployments can deploy to tenant root scope
 
 Area: Resource Manager template deployments
 
-Issue: when performing nested deployment from the management group scope without having the scope properly specified on "Microsoft.resources/deployments", Resource Manager defaults to the tenant root and does a tenant scope deployment.
+Issue: when performing nested deployment from the management group scope without having the scope properly specified on `Microsoft.resources/deployments`, Resource Manager defaults to the tenant root and does a tenant scope deployment.
 
-Status: there isn't a fix at this time.
+**Status:** No fix at this time.
 
 ## Reference() function not respecting dependency graph [depends on]
 
-Area: Resource Manager template deployments
+**Area:** Resource Manager template deployments
 
-Issue: when doing nested deployments from tenant scope (policy assignment and subsequent role assignment for the managed identity), the reference() function fails, saying the policy assignment can't be found even though it exists. Redeploying works fine.
+Issue: When doing nested deployments from tenant scope (policy assignment and subsequent role assignment for the managed identity), the `reference()` function fails, saying the policy assignment can't be found even though it exists. Redeploying works fine.
 
-Status: there isn't a fix at this time.
+**Status:** there isn't a fix at this time.
 
-## Reference() function runs even though the resource condition is false
+## The `reference()` function runs even though the resource condition is false
 
-Area: Resource Manager template deployments
+**Area:** Resource Manager template deployments
 
-Issue: when using "conditions" on resources, they evaluate as false. The reference() function within resource properties is still executed, causing the deployment to fail.
+**Issue:** When using conditions on resources, they evaluate as false. The `reference()` function within resource properties is still executed, causing the deployment to fail.
 
-Status: there isn't a fix at this time. A workaround is to perform a number of additional if() functions to navigate logically (for example, if a reference resource doesn't exist, throw json('null').)
+**Status:** No fix at this time. A workaround is to perform a number of additional `if()` functions to navigate logically (for example, if a reference resource doesn't exist, `throw json('null')`.)
 
-## Unsupported number of tenants in context: X tenantid(s)
+## Unsupported number of tenants in context: X tenantId(s)
 
-Issue: we currently don't support initialization across multiple tenants. Clear azcontext and run `connect-azaccount` with the service principal created earlier.
+**Issue:** We currently don't support initialization across multiple tenants. Clear `azcontext` and run `Connect-AzAccount` with the service principal created earlier.
 
-Status: there isn't a fix at this time.
+**Status:** No fix at this time.
 
 ## Subscriptions or management group with duplicated names
 
-Issue: the discovery process discussed in [this](./Configure-run-initialization.md) article will fail if there are subscriptions or management groups with duplicate names.
+**Issue:** the discovery process discussed in [Configure GitHub and run initialization](./configure-run-initialization.md) fails if there are subscriptions or management groups with duplicate names.
 
-Status: a workaround is to verify that the subscription names and management groups in your tenant are unique regardless of the hierarchy prior to running the discovery process.
+**Status:** No fix at this time. A workaround is to verify that the subscription names and management groups in your tenant are unique regardless of the hierarchy prior to running the discovery process.

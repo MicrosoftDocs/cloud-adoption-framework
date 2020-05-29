@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-## FAQ
+# FAQ
 
-This page will list frequently asked question for enterprise-scale design and Contoso implementation.
+This page shows frequently asked questions for enterprise-scale design and Contoso implementation.
 
 ## Enterprise-scale design
 

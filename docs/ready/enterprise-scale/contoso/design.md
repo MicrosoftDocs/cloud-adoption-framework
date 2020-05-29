@@ -1,6 +1,6 @@
 ---
-title: Design
-description: Design
+title: Contoso reference implementation overview
+description: Contoso reference implementation overview
 author: rkuehfus
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -29,13 +29,13 @@ Contoso has decided to use one Azure Monitor Logs workspace. When the first regi
 
 ## Networking
 
-Azure Policy will continuously check if an Azure Virtual WAN virtual hub already exists in a "connectivity" subscription for all enabled regions, and it'll create one if it doesn't exist. Configure a Virtual WAN VHub to secure internet traffic from secured connections (virtual networks [VNets] inside landing zones) to the internet via Azure Firewall.
+Azure Policy will continuously check if an Azure Virtual WAN virtual hub already exists in a `connectivity` subscription for all enabled regions, and it'll create one if it doesn't exist. Configure a Virtual WAN virtual hub to secure internet traffic from secured connections (virtual networks inside landing zones) to the internet via Azure Firewall.
 
-For all Virtual WAN VHubs, policy will ensure that Azure Firewall is deployed and linked to existing global Azure Firewall policy, as well as the creation of a regional firewall policy if needed.
+For all Virtual WAN virtual hubs, policy will ensure that Azure Firewall is deployed and linked to existing global Azure Firewall policy, as well as the creation of a regional firewall policy if needed.
 
-Azure Policy will deploy default network security groups (NSGs) and user-defined routes (UDRs) in landing zones. While NSGs will be linked to all subnets, UDRs will only be linked to virtual-network-injected PaaS services subnets. For virtual-network-injected services and control plane traffic to continue to work, Azure Policy will ensure that the right NSG and UDR rules are configured, but only for Azure platform-as-a-service (PaaS) services approved by the whitelisting framework described in this document. UDR and NSG rules are required to protect and manage control plane traffic for VNet-injected PaaS services (such as SQL mi). When landing zone VNets connect to a Virtual WAN VHub, the default route configured (0.0.0.0/0) will point to their regional Azure Firewall.
+Azure Policy will deploy default network security groups (NSGs) and user-defined routes (UDRs) in landing zones. While NSGs will be linked to all subnets, UDRs will only be linked to virtual-network-injected PaaS services subnets. For virtual-network-injected services and control plane traffic to continue to work, Azure Policy will ensure that the right NSG and UDR rules are configured, but only for Azure platform-as-a-service (PaaS) services approved by the whitelisting framework described in this document. UDR and NSG rules are required to protect and manage control plane traffic for virtual-network-injected PaaS services (such as SQL MI). When landing zone VNets connect to a Virtual WAN VHub, the default route configured (`0.0.0.0/0`) will point to their regional Azure Firewall.
 
-For cross-premises connectivity, the regional VHub requires the policy to enforce deploying ExpressRoute and/or virtual private network (VPN) gateways. It will use ExpressRoute to connect the VHub to on-premises by using the ExpressRoute resource ID and authorization key as parameters. With a VPN, Contoso can decide if to use their existing software-defined networking in a wide area network (SD-WAN) to automate connectivity from branch offices into Azure via s2s VPN, or Contoso can manually configure their customer-premises equipment on the branch officers and then let Azure Policy configure the VPN sites in Virtual WAN. Contoso is rolling out a solution certified with Virtual WAN, SD-WAN, to manage the connectivity of all global branches and connect them to Azure.
+For cross-premises connectivity, the regional VHub requires the policy to enforce deploying ExpressRoute or virtual private network (VPN) gateways. It will use ExpressRoute to connect the VHub to on-premises by using the ExpressRoute resource ID and authorization key as parameters. With a VPN, Contoso can decide if to use their existing software-defined networking in a wide area network (SD-WAN) to automate connectivity from branch offices into Azure via s2s VPN, or Contoso can manually configure their customer-premises equipment on the branch officers and then let Azure Policy configure the VPN sites in Virtual WAN. Contoso is rolling out a solution certified with Virtual WAN, SD-WAN, to manage the connectivity of all global branches and connect them to Azure.
 
 ## File -> New -> Landing zone (subscription)
 
@@ -147,11 +147,11 @@ The tenant-level Resource Manager deployment above should create the following d
 - Tailspin-bu1
 - Tailspin-bu1-corp
 
-This Resource Manager template can be expanded to include [subscriptions](https://github.com/azure/CET-NorthStar/blob/master/examples/60-move-subscription-under-managementgroup.parameters.json) (moving subscription),  [policy definition](https://github.com/azure/CET-NorthStar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json), [policy assignment](https://github.com/azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json), role definition, and role assignment.
+This Resource Manager template can be expanded to include [subscriptions](https://github.com/azure/CET-NorthStar/blob/master/examples/60-move-subscription-under-managementgroup.parameters.json) (moving subscription), [policy definition](https://github.com/azure/CET-NorthStar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json), [policy assignment](https://github.com/azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json), role definition, and role assignment.
 
 Contoso has decided following for their reference implementation:
 
-## Git repository (repo) for Azure platform configuration
+## Git repo for Azure platform configuration
 
 Contoso is already using Azure and is concerned about their current management group and subscription deployed in production. To address the concerns, Contoso has decided to create a Git repo to store existing management group and subscription organization.
 
@@ -185,7 +185,7 @@ New-AzOpsScope -scope /providers/Microsoft.Management/managementGroups/contoso
 scope            : /providers/Microsoft.Management/managementGroups/contoso
 type             : managementGroups
 name             : contoso
-state path        : C:\Git\CET-NorthStar\azops\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\managementgroup.json
+state path        : C:\Git\CET-NorthStar\AzOps\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\managementgroup.json
 managementgroup  : contoso
 subscription     :
 resourcegroup    :
@@ -193,12 +193,12 @@ resourceprovider :
 resource         :
 
 #Example-2
-New-AzOpsScope -path C:\Git\CET-NorthStar\azops\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\connectivity
+New-AzOpsScope -path C:\Git\CET-NorthStar\AzOps\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\connectivity
 
 scope            : /subscriptions/99c2838f-a548-4884-a6e2-38c1f8fb4c0b
 type             : subscriptions
 name             : 99c2838f-a548-4884-a6e2-38c1f8fb4c0b
-state path        : C:\Git\CET-NorthStar\azops\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\connectivity\subscription.json
+state path        : C:\Git\CET-NorthStar\AzOps\3fc1081d-6105-4e19-b60c-1ec1252cf560\contoso\connectivity\subscription.json
 managementgroup  : contoso
 subscription     : connectivity
 resourcegroup    :
@@ -222,13 +222,13 @@ This will build the relationship association between management group and subscr
 
 **Invoke-AzOpsGitPush:**
 
-Contoso wants to ensure that all platform changes are peer-reviewed and approved before deploying to a production environment. Contoso has decided to implement workflows (also known as deployment pipelines) and to use GitHub Action for this process. Contoso has named this workflow azops-push, referring to the direction of the change (for example, Git to Azure). All platform changes will be peer-reviewed and in the form of PRs. Once PRs are reviewed thoroughly, a platform team will attempt the merge them to the master branch and trigger the deployment action by calling the Invoke-AzOpsGitPush function.
+Contoso wants to ensure that all platform changes are peer-reviewed and approved before deploying to a production environment. Contoso has decided to implement workflows (also known as deployment pipelines) and to use GitHub Action for this process. Contoso has named this workflow `azops-push`, referring to the direction of the change (for example, Git to Azure). All platform changes will be peer-reviewed and in the form of PRs. Once PRs are reviewed thoroughly, a platform team will attempt the merge them to the master branch and trigger the deployment action by calling the Invoke-AzOpsGitPush function.
 
-When a PR is approved but before it's merged with the master branch, this function will be the starting point for GitHub Actions. The master branch represents the truth from an infrastructure-as-code (IAC) perspective. This quality gate will ensure that master branch remains healthy and only contain artifacts successfully deployed in Azure. It will specify the files changed in PRs by comparing each feature branch with the current master branch. The following actions should be executed inside `Invoke-AzOpsGitPush`:
+When a PR is approved but before it's merged with the master branch, this function will be the starting point for GitHub Actions. The master branch represents the truth from an infrastructure-as-code (IaC) perspective. This quality gate will ensure that master branch remains healthy and only contain artifacts successfully deployed in Azure. It will specify the files changed in PRs by comparing each feature branch with the current master branch. The following actions should be executed inside `Invoke-AzOpsGitPush`:
 
 - Validate that the current Azure configuration is the same as what's stored in Git by running `Initialize-AzOpsRepository`.
-- Git will determine if the working directory is dirty and exit the deployment task to alert the user and run `Initialize-AzOpsRepository` interactively. All deployments should be halted at this stage, as the platform is in a nondeterministic state from an IAC point of view.
-- Invoke built-in new-az-*deployment commandlets at the appropriate scope.
+- Git will determine if the working directory is dirty and exit the deployment task to alert the user and run `Initialize-AzOpsRepository` interactively. All deployments should be halted at this stage, as the platform is in a nondeterministic state from an IaC point of view.
+- Invoke built-in new-az-*deployment cmdlets at the appropriate scope.
 
 ## Operationalizing configuration drift and reconciliation
 

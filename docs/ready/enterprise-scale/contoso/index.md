@@ -41,7 +41,7 @@ This table lists the technical prerequisites needed for using the CAF enterprise
 | Pester >= 4.10.1 | _Only required if you want to run pester tests as a developer._ <br> `Install-Module -Name Pester -MinimumVersion 4.10.1 -scope AllUsers` <br> You can confirm the version of the module you have by running <br> `Get-Module Pester -ListAvailable`. | [Docs](https://github.com/pester/pester) |
 
 > [!NOTE]
-> For iPhones, if you have multi-factor authentication enabled on any of your accounts, make sure that your phone and application (app) are easily accessible before you start.
+> For iPhones, if you have multi-factor authentication enabled on any of your accounts, make sure that your phone and app are easily accessible before you start.
 
 ## Deploy Resource Manager templates at the tenant root scope
 
@@ -173,7 +173,7 @@ This table lists the technical prerequisites needed for using the CAF enterprise
     # Create the service principal as the Azure AD administrator
 
     $servicePrincipal = New-AzADServicePrincipal -Role Owner -Scope / -DisplayName AzOps -SkipAssignment
-    # Assign the Owner role to the tenant root scope ("/") as a user access adminstrator
+    # Assign the Owner role to the tenant root scope ("/") as a user access administrator
 
     New-AzRoleAssignment -ApplicationId $servicePrincipal.ApplicationId -RoleDefinitionName Owner -Scope /
     ```
@@ -240,9 +240,9 @@ This table lists the technical prerequisites needed for using the CAF enterprise
     Initialize-AzOpsRepository -Recurse -Verbose
     ```
 
-    When the initialization is complete, the `azops` folder will have a folder structure representing the entire Azure environment from root management group down to resources. Each `.azstate` folder will contain a snapshot of the resources and policies in that scope.
+    When the initialization is complete, the `AzOps` folder will have a folder structure representing the entire Azure environment from root management group down to resources. Each `.AzState` folder will contain a snapshot of the resources and policies in that scope.
 
-    ```bash
+    ```shell
     AzOps
     └───Tenant Root Group
         └───Contoso
@@ -274,11 +274,11 @@ Look at [examples](https://github.com/Azure/CET-NorthStar/tree/master/examples) 
 
 For any other templates that you might want to deploy, follow the instructions below:
 
-1. Ensure that you've initialized azopsrepository and that pushed changes are in your master branch.
-2. Create a feature branch from your master.
-3. Place **{{template-name}}.json** and **{{template-name}}.parameters.json** at the scope you want to trigger the deployment. {{Template-name}} could be any valid filename, but it must have corresponding parameters.json. Look at examples **create-storage-account.json** and **create-storage-account.parameters.json** in the structure below.
+1. Ensure that you've initialized `AzOpsRepository` and that your pushed changes are in the `master` branch.
+2. Create a feature branch from `master`.
+3. Place `<template-name>.json` and `<template-name>.parameters.json` at the scope you want to trigger the deployment. The `template-name` could be any valid filename, but it must have corresponding `parameters.json`. Look at the examples `create-storage-account.json` and `create-storage-account.parameters.json` in the structure below.
 
-There is an exception to this when tenant-level deployment is placed at the root. In that case, the pipeline will use generic [default template](https://github.com/uday31in/AzOps/blob/master/src/tenant.json), and you don't need to place  **{{template-name}}.json**. Only **{{template-name}}.parameters.json** is required. You can still override this by placing **{{template}}.json** along **{{template}}.parameters.json**. For the example below, it would be 10-create-managementgroup.json. Any other json file not named ***.parameters.json** will be ignored and not used by the pipeline.
+There is an exception to this when tenant-level deployment is placed at the root. In that case, the pipeline will use generic [default template](https://github.com/uday31in/AzOps/blob/master/src/tenant.json), and you don't need to place  `<template-name>.json`. Only `<template-name>.parameters.json` is required. You can still override this by placing `<template-name>.json` along `<template-name>.parameters.json`. For the example below, the file is `10-create-managementgroup.json`. Any other json file not named `*.parameters.json` will be ignored and not used by the pipeline.
 
 ```
 AzOps
@@ -324,8 +324,8 @@ AzOps
 5. Commit your changes and push your branch to your GitHub fork.
 6. Create a PR from feature branch to master branch. Pay attention to the upstream branch; the default branch might be an upstream fork rather your own master branch.
 7. Approve your PR.
-8. The "azops-push" GitHub action should trigger automatically at this point and you can monitor the status in the actions log.
-9. After all status checks are passed on your PR (including but not limited to "azops-push" action), squash merge your changes to your own master branch.
+8. The `azops-push` GitHub action should trigger automatically at this point and you can monitor the status in the actions log.
+9. After all status checks are passed on your PR (including but not limited to `azops-push` action), squash merge your changes to your own master branch.
 10. Sync your local master branch on your machine from your origin/master
 
     ```shell

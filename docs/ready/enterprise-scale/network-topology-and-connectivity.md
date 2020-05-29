@@ -70,17 +70,17 @@ DNS is a critical design topic in the overall enterprise-scale architecture, and
 
 - Use a virtual machine as a resolver for cross-premises DNS resolution with private DNS. This is a short-term solution since an Azure-native resolver is on the Azure Private DNS road map.
 
-- Create the Azure Private DNS zone within a global "connectivity" subscription. Additional Azure Private DNS zones might be created (for example `privatelink.database.Windows.net` or `privatelink.blob.core.Windows.net` for Azure Private Link).
+- Create the Azure Private DNS zone within a global `connectivity` subscription. Additional Azure Private DNS zones might be created (for example, `privatelink.database.windows.net` or `privatelink.blob.core.windows.net` for Azure Private Link).
 
 ## Define an Azure networking topology
 
-Network topology is a critical foundational element of the enterprise-scale architecture, as it ultimately defines how applications (apps) can communicate with each other. This section explores relevant technologies and topology approaches for enterprise Azure deployments and focuses on two core approaches⁠—virtual and traditional WAN-based networking topology.
+Network topology is a critical foundational element of the enterprise-scale architecture, as it ultimately defines how applications can communicate with each other. This section explores relevant technologies and topology approaches for enterprise Azure deployments and focuses on two core approaches⁠&mdash;virtual and traditional WAN-based networking topology.
 
 An Azure networking topology based on Virtual WAN is the preferred enterprise-scale approach for large-scale, multi-region deployments where the customer needs to connect their global locations to both Azure and on-premises. A Virtual WAN-based network topology should also be used when the customer needs to use software-defined networking in a wide-area network (SD-WAN) deployments to fully integrate with Azure. Virtual WAN is used to meet large-scale interconnectivity requirements. Since it's a Microsoft-managed service, it'll also simultaneously reduce overall network complexity and help to modernize the customer's network.
 
-A traditional Azure networking topology should be used for customers who only intend to deploy resources in a few Azure regions, don't need a global, interconnected network, have a low number of remote/branch locations per region (less than 30), and/or require full control and granularity for manually configuring their Azure network. This traditional topology will support these customers to build a secure network foundation in Azure.
+A traditional Azure networking topology should be used for customers who only intend to deploy resources in a few Azure regions, don't need a global interconnected network, have a low number of remote or branch locations per region (less than 30), or require full control and granularity for manually configuring their Azure network. This traditional topology will support these customers to build a secure network foundation in Azure.
 
-## Virtual WAN (Microsoft-managed) based network topology
+## Virtual WAN (Microsoft-managed) network topology
 
 ![Network topology and connectivity](./media/net-con2.png)
 
@@ -93,17 +93,16 @@ _Figure 1: Virtual-WAN-based network topology_
 - Virtual WAN greatly simplifies end-to-end network connectivity in Azure and cross-premises by creating [hub-and-spoke network architecture](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-global-transit-network-architecture) that spans multiple Azure regions and on-premises locations (any-to-any connectivity) out-of-the-box, as depicted in the figure below:
 
 ![Network topology and connectivity](./media/global-transit.png)
-
-_Figure 2: Global transit network with Virtual WAN_
+_Figure 2: Global transit network with Virtual WAN._
 
 - Virtual WAN any-to-any transitive connectivity supports the following paths (within the same region and across regions):
 
-  - VNet to VNet
-  - VNet to branch
-  - Branch to VNet
+  - Virtual network to virtual network
+  - Virtual network to branch
+  - Branch to virtual network
   - Branch to branch
 
-- Virtual WAN hubs are locked down, and the only resources that customer can deploy within them are VNet gateways (point-to-site and site-to-site virtual private networks [VPNs] and ExpressRoute), Azure Firewall via Firewall Manager, and route tables.
+- Virtual WAN hubs are locked down, and the only resources that customer can deploy within them are VNet gateways (point-to-site and site-to-site virtual private networks (VPNs) and ExpressRoute), Azure Firewall via Firewall Manager, and route tables.
 
 - Virtual WAN increases the limit of up to 200 prefixes advertised from Azure to on-premises via ExpressRoute private peering to 10,000 prefixes per single Virtual WAN hub. The limit of 10,000 prefixes also includes VPNs (site-to-site and point-to-site VPNs).
 
@@ -155,7 +154,7 @@ _Figure 3: Sample network topology_
 
 - For brownfield scenarios where you are migrating from non-Virtual WAN-based hub-and-spoke network topology, refer to this migration [article](https://docs.microsoft.com/azure/virtual-wan/migrate-from-hub-spoke-topology).
 
-- Virtual WAN and Azure Firewall resources should be created within the "connectivity" subscription.
+- Virtual WAN and Azure Firewall resources should be created within the `connectivity` subscription.
 
 - Do not create more than 500 VNet connections per the Virtual WAN virtual hub.
 
@@ -223,7 +222,7 @@ _Figure 4: A customer-managed Azure network topology_
 
 ![Network topology and connectivity](./media/HS.png "Network Topology and Connectivity")
 
-_Figure 5: Hub-and-spoke network topology_
+_Figure 5: Hub-and-spoke network topology._
 
 - When a high level of isolation is achieved, a dedicated ExpressRoute bandwidth is required for specific business units. When the maximum number of connections per ExpressRoute gateway (up to four) is reached, use the multiple VNets connected with multiple ExpressRoute circuits topology, as depicted in the picture below:
 

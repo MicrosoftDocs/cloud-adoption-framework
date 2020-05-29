@@ -11,17 +11,17 @@ ms.subservice: ready
 
 ## Validate prerequisites
 
- This section provides guidance for you to experiment with Microsoft Azure Resource Manager template deployments at the tenant ("/") root scope. This will help you to validate that you've properly configured the prerequisites. Note that this section is optional.
+ This section provides guidance for you to experiment with Microsoft Azure Resource Manager template deployments at the tenant (`/`) root scope. This will help you to validate that you've properly configured the prerequisites. Note that this section is optional.
 
- ![Tenant root scope deployment](../media/tenant-level-deployment.png "Tenant root scope deployment")
- _Figure 1: Tenant root scope deployment_
+ ![Tenant root scope deployment](../media/tenant-level-deployment.png)
+ _Figure 1: Tenant root scope deployment._
 
-From a PowerShell terminal, connect to Azure using `connect-azaccount -tenantid <your-tenant-ID>` with an account that has at least user-access administrator permissions at the tenant root level.
+From a PowerShell terminal, connect to Azure using `Connect-AzAccount -TenantId <yourTenantId>` with an account that has at least `user access administrator` permissions at the tenant root level.
 
-Assign required permissions at tenant root level for the account that you want to use. Owner or contributor and user-access administrator permissions are required to deploy the example templates. If you don't have permission to assign permissions at the root level, you may need to [elevate your access](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin) as a global administrator in order to assign them. <br>
+Assign required permissions at tenant root level for the account that you want to use. Either `owner` or `contributor` and `user access administrator` permissions are required to deploy the example templates. If you don't have permission to assign permissions at the root level, you may need to [elevate your access](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin) as a global administrator in order to assign them.
 
     ```powershell
-    New-AzRoleAssignment -SignInName john.doe@contoso.com -RoleDefinitionName "Owner" -Scope "/"  
+    New-AzRoleAssignment -SignInName 'john.doe@contoso.com' -RoleDefinitionName 'Owner' -Scope '/'  
 
     RoleAssignmentId   : /providers/Microsoft.Authorization/roleAssignments/3b012473-78b1-4511-8e7f-f6f786bfbb02
     Scope              : /

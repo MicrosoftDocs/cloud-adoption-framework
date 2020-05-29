@@ -39,7 +39,7 @@ A committee member can nominate a strong community member to join the committee 
 
 ## Contribution scope for enterprise-scale architecture guidelines
 
-This is the scope of contributions to this repository—as a platform evolves and new services and feature are validated in production with customers, the design guidelines are subject to updates in the overall context of the architecture. Use the 'placeholder' template to submit pull requests (PRs) for documentation updates.
+This is the scope of contributions to this repository&mdash;as a platform evolves and new services and feature are validated in production with customers, the design guidelines are subject to updates in the overall context of the architecture. Use the `placeholder` template to submit pull requests (PRs) for documentation updates.
 
 ## Contribution scope for Contoso reference implementation
 
@@ -53,7 +53,7 @@ The implementation guide and reference implementation must be updated accordingl
     git checkout -b feature upstream/master
     ```
 
-2. Check out the file(s) from your working branch that you want to include in a PR:
+2. Check out the files from your working branch that you want to include in a PR:
 
     ```shell
     #substitute file name as appropriate. below example
@@ -72,7 +72,7 @@ The implementation guide and reference implementation must be updated accordingl
 
 There isn't a right or wrong way to write Resource Manager templates and parameters files. Resource Manager is a language, and everyone has a different style of writing. Few template and parameters files are written similarly among a group of developers. There aren't clear style definitions to govern and separate code from configurations, subjecting what goes into templates versus parameter files to interpretation. Guidance on when to use parameters and object as parameters (without any schema) is also subject to interpretation, and there isn't one authoring style that fits all.
 
-To simplify development and unit testing at scale with multiple developers contributing, we've adopted a specific style of writing templates by completely decoupling a template from its parameter file. This minimalist one-template-to-rule-them-all approach externalizes all resource properties as a complex object in a parameter file, and we can enforce strict schema validation in the file based on resource schema that the platform already publishes. This approach clearly separates template and parameters. The parameter file is essentially a RESTful representation of the resource when calling `get-azresource` or `az resource show`.
+To simplify development and unit testing at scale with multiple developers contributing, we've adopted a specific style of writing templates by completely decoupling a template from its parameter file. This minimalist one-template-to-rule-them-all approach externalizes all resource properties as a complex object in a parameter file, and we can enforce strict schema validation in the file based on resource schema that the platform already publishes. This approach clearly separates template and parameters. The parameter file is essentially a RESTful representation of the resource when calling `Get-AzResource` or `az resource show`.
 
 - Template.json
 
@@ -105,7 +105,7 @@ There is a generic multi-resource template available [here](https://raw.githubus
 }
 ```
 
-Retrieve resource definitions by calling the `get-azresource` function and giving `resourceid` to the existing resource.
+Retrieve resource definitions by calling the `Get-AzResource` function and giving `resourceId` to the existing resource.
 
 ```powershell
 # Replace the resourceId in the command below before executing it
@@ -118,7 +118,7 @@ The following pros and cons should be considered when making design decisions:
 - Pros:
 
   - No more writing Resource Manager templates! The last Resource Manager template has been written.
-  - Resources export consistently throughout lifecycles regardless of how they're created and updated⁠—the Azure portal, Azure CLI, PowerShell, or third-party tools.
+  - Resources export consistently throughout lifecycles regardless of how they're created and updated⁠&mdash;the Azure portal, Azure CLI, PowerShell, or third-party tools.
   - It's easier to detect drift between a configuration stored in Git versus the current configuration; we're essentially comparing two JSON documents.
   - It's possible to manage implicit dependencies between simple resources on the client side and the server side. Azure doesn't have many circular dependencies between resources, and it's possible to work out implicit dependencies based on resource schema already published. For example, virtual machine might depend on kernel-level virtual switches but not vice-versa (for example: policy definition -> policy assignment -> role assignment -> remediation or virtual network -> ExpressRoute or kv -> Azure SQL).
 
@@ -132,14 +132,14 @@ Do read the next section before submitting a PR, but don't submit a PR with temp
 
 ## Contributing to policy definitions, policy assignments, and role definitions and assignments for Contoso implementation
 
-Once your parameter conforms to the standards mentioned in section above and is ready for your resource, consider the scope at which this resource should be deployed—management group or subscription (either a connectivity or management subscription). Although the pipeline has an ability to deploy templates at any of the four given scopes, won't use resource-group-level deployment as a part of a landing zone template. The minimum bar is a subscription-level deployment template wrapped inside a policy definition.
+Once your parameter conforms to the standards mentioned in section above and is ready for your resource, consider the scope at which this resource should be deployed&mdash;management group or subscription (either a connectivity or management subscription). Although the pipeline has an ability to deploy templates at any of the four given scopes, won't use resource-group-level deployment as a part of a landing zone template. The minimum bar is a subscription-level deployment template wrapped inside a policy definition.
 
 - Dos:
   - If you have resources to deploy inside a landing zone, wrap them inside deploy-if-not-exist (dine) policies; the assignment for this should be at the management group scope.
   - The policy should ideally have an existence scope targeted at the subscription scope if the deployment count of resources inside landing zone is exactly one (for example, a virtual network inside a landing zone or virtual hub for a new Azure region).
   - Ideally, all policy definitions should be created at the root defined in the end-to-end template.
 
-- Don't submit a PR with a template and parameter file to deploy resources (for example, Key Vault) or reate your own management group hierarchy outside of what's described in an end-to-end landing zone.
+- Don't submit a PR with a template and parameter file to deploy resources (for example, Key Vault) or create your own management group hierarchy outside of what's described in an end-to-end landing zone.
 
 Example:
 
@@ -168,7 +168,7 @@ Example:
         ],
         "properties": {
           "policyDefinitions": [
-                <<copy-paste of Json representation of the resource>>
+                <copy-paste of Json representation of the resource>
           ],
           "policyAssignments" :[
           ],
@@ -189,7 +189,7 @@ To contribute to policy definitions that adhere to the enterprise-scale architec
 
 [Azure Policy extension for Visual Studio](https://docs.microsoft.com/azure/governance/policy/how-to/extension-for-vscode)
 
-Use this extension to look up policy aliases ad review resources and policies
+Use this extension to look up policy aliases and review resources and policies.
 
 ## Explore available resource properties with corresponding policy aliases
 
@@ -200,16 +200,18 @@ For Azure PowerShell:
 Get-AzPolicyAlias -ListAvailable
 
 # Get aliases for a specific resource provider
-(Get-AzPolicyAlias -NamespaceMatch 'Microsoft.Network').aliases.name
+(Get-AzPolicyAlias -NamespaceMatch 'Microsoft.Network').Aliases.Name
 ```
 
 For Azure CLI:
 
 ```cli
 # List all available providers
+
 az provider list --query [*].namespace
 
 # Get aliases for a specific resource provider
+
 az provider show --namespace Microsoft.Network --expand "resourceTypes/aliases" --query "resourceTypes[].aliases[].name"
 ```
 

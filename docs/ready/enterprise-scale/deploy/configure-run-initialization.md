@@ -28,24 +28,23 @@ This article describes how to:
 
 This section describes the steps for how to get started with the full reference implementation by configuring GitHub Actions to deploy Resource Manager templates and how to run the initialization to discover the current Azure environment and create a representation in the local Git repository (repo).
 
-![Initialize AzOps process](../media/initialize-azops.png "Initialize AzOps process")
-_Figure 2: The Initialize AzOps process_
+![Initialize AzOps process](../media/initialize-azops.png")
+_Figure 2: The Initialize AzOps process._
 
 1. [Fork the repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) to your GitHub organization and [clone the forked GitHub repo](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) to your local machine.
 Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-repo) to synchronize your for with the upstream.
 
-2. A User Access Administrator role is required to manage and deploy your enterprise-scale architecture. This may require [elevated account permissions](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin). It is strongly recommended to assign the permission at the highest scope possible (for example, the tenant root "/") to ensure you can use the service principal to manage subscriptions. Application (app) registration needs to be enabled on the Azure Active Directory (AD) tenant to self-register an app (option 1
-.
+2. A User Access Administrator role is required to manage and deploy your enterprise-scale architecture. This may require [elevated account permissions](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin). It is strongly recommended to assign the permission at the highest scope possible (for example, the tenant root `/`) to ensure you can use the service principal to manage subscriptions. App registration needs to be enabled on the Azure Active Directory (Azure AD) tenant to self-register an app (option 1).
     > Note: read access on the root level is enough to perform the initialization but not deployment. To create management groups and subscriptions, the platform requires tenant-level PUT permission.
 
-    Option 1: app registration enabled
+    Option 1: App registration enabled
 
     ```powershell
     #Create Service Principal and assign Owner role to tenant root scope ("/")
     $servicePrincipal = New-AzADServicePrincipal -Role Owner -Scope / -DisplayName AzOps
     ```
 
-    Option 2: app registration disabled
+    Option 2: App registration disabled
 
     ```powershell
     #Create Service Principal as the Azure AD Administrator
@@ -115,11 +114,12 @@ Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-r
     Connect-AzAccount -TenantId $tenantid  -ServicePrincipal -Credential $cred
     ```
 
-    > Note: the tenantid can be found by running `(get-azcontext).tenant`
+    > [!NOTE]
+    > The `tenantId` can be found by running `(Get-AzContext).Tenant`.
 
 5. You can create a management structure with any supported client. Create the management group structure below. If there's a management group structure in place for enterprise-scale implementation, we recommended the Azure portal for this step and the following hierarchy:
 
-  ```bash
+  ```shell
       /
       └───Tenant Root Group
           ├───<YourCompanyName>     # NEW company root management group
@@ -141,9 +141,9 @@ Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-r
     > [!NOTE]
     `Initialize-AzOpsRepository` will fail in there are multiple subscriptions with the same name. Before running this process, verify that all subscriptions have unique names.
 
-    When the initialization is complete, the `azops` folder will have a folder structure that represents your entire Azure environment and list everything from the root management group to resources. You will see that the management group structure you created with the Azure portal in step 5 is reflected here. Please note that each `.azstate` folder will contain a snapshot of the resources/policies in that scope.
+    When the initialization is complete, the `AzOps` folder will have a folder structure that represents your entire Azure environment and list everything from the root management group to resources. You will see that the management group structure you created with the Azure portal in step 5 is reflected here. Please note that each `.AzState` folder will contain a snapshot of the resources/policies in that scope.
 
-    ```bash
+    ```shell
     AzOps
     └───Tenant Root Group
         ├───<YourCompanyName>                              # NEW company root management group

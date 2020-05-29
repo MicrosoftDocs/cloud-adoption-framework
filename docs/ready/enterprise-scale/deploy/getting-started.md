@@ -14,11 +14,11 @@ ms.subservice: ready
 This article describes how to get started with enterprise-scale reference implementation by walking you through all the prerequisites to deploy a platform-native reference implementation of enterprise-scale.
 > Note: before you start, make sure that you've read and understood the overall design objective and scope of the reference implementation.
 
-# Target audience
+## Target audience
 
 The target audience for this guide is people with a typical DevOps/site reliability engineering background and knowledge of Microsoft Azure Resource Manager, infrastructure as code, Git, and PowerShell.
 
-# Contents
+## Contents
 
 This article is divided into two sections:
 

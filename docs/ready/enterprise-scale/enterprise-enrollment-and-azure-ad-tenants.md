@@ -18,76 +18,76 @@ An enterprise enrollment, often referred to as an Enterprise Agreement, represen
 ![Azure EA hierarchies](./media/ea.png)
 _Figure 1: An EA enrollment hierarchy_
 
-* Departments help to segment costs into logical groupings and to set a budget or quota at the department level (note: the quota isn't enforced firmly and is used for reporting purposes).
+- Departments help to segment costs into logical groupings and to set a budget or quota at the department level (note: the quota isn't enforced firmly and is used for reporting purposes).
 
-* Accounts are organizational units in the Azure enterprise portal; they can be used to manage subscriptions and access reports.
+- Accounts are organizational units in the Azure enterprise portal; they can be used to manage subscriptions and access reports.
 
-* Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. They are where an organization deploys Azure services.
+- Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. They are where an organization deploys Azure services.
 
-* Enterprise enrollment roles link users with their functional role. They are:
- * Enterprise administrator
- * Department administrator
- * Account owner
- * Service administrator
- * Notification contact
+- Enterprise enrollment roles link users with their functional role. These roles are:
+  - Enterprise administrator
+  - Department administrator
+  - Account owner
+  - Service administrator
+  - Notification contact
 
 ### Why enterprise enrollment
 
-* Enterprise enrollment provides organizational representations and makes it easier for enterprises to roll costs to their respective departments.
-* Enterprise enrollment supports setting an administrator for departments or for entire organizations.
-* The Azure Enterprise Portal enables enterprise enrollment and also helps organizations to set key contacts who receive critical communication from Microsoft.
+- Enterprise enrollment provides organizational representations and makes it easier for enterprises to roll costs to their respective departments.
+- Enterprise enrollment supports setting an administrator for departments or for entire organizations.
+- The Azure Enterprise Portal enables enterprise enrollment and also helps organizations to set key contacts who receive critical communication from Microsoft.
 
 ### Scenarios where enterprise enrollment isn't possible
 
-* Enterprise enrollment is part of an Enterprise Agreement. Customers who aren't Azure enterprise customers won't have access to the Enterprise Portal and won't be able to manage subscriptions here.
+- Enterprise enrollment is part of an Enterprise Agreement. Customers who aren't Azure enterprise customers won't have access to the Enterprise Portal and won't be able to manage subscriptions here.
 
-* It is possible to manage resources without the Enterprise Portal via [Azure Management Group](https://docs.microsoft.com/azure/governance/management-groups/overview). Features and implementation of hierarchy in management groups will differ from enterprise enrollment.
+- It is possible to manage resources without the Enterprise Portal via [Azure Management Group](https://docs.microsoft.com/azure/governance/management-groups/overview). Features and implementation of hierarchy in management groups will differ from enterprise enrollment.
 
-* Management groups can be used to organize hierarchies for unified policies and access management, while enterprise enrollment organizes subscriptions into departments and accounts for unified account, expense, administration, and communication management.
+- Management groups can be used to organize hierarchies for unified policies and access management, while enterprise enrollment organizes subscriptions into departments and accounts for unified account, expense, administration, and communication management.
 
 **Design considerations:**
 
-* The enrollment provides a hierarchical organizational structure to govern the management of customers subscriptions.
+- The enrollment provides a hierarchical organizational structure to govern the management of customers subscriptions.
 
-* Multiple customers environments can be separated at an EA-account level to support holistic isolation.
+- Multiple customers environments can be separated at an EA-account level to support holistic isolation.
 
-* There can be multiple administrators appointed to a single enrollment.
+- There can be multiple administrators appointed to a single enrollment.
 
-* Each subscription must have an associated account owner.
+- Each subscription must have an associated account owner.
 
-* Each account owner will be made a subscription owner for any subscriptions provisioned under that account.
+- Each account owner will be made a subscription owner for any subscriptions provisioned under that account.
 
-* A subscription can only belong to one account at any given time.
+- A subscription can only belong to one account at any given time.
 
-* A subscription can be suspended based on a specified set of criteria.
+- A subscription can be suspended based on a specified set of criteria.
 
 **Design recommendations:**
 
-* Set up the notification contact email address to ensure notifications are sent to an appropriate group mailbox.
+- Set up the notification contact email address to ensure notifications are sent to an appropriate group mailbox.
 
-* Assign a budget for each account and establish an alert associated with the budget.
+- Assign a budget for each account and establish an alert associated with the budget.
 
-* An organization can have a variety of structures such as functional, divisional, geographic, matrix, or team structure. Use organizational structure to map organization structure to enterprise enrollment.
+- An organization can have a variety of structures such as functional, divisional, geographic, matrix, or team structure. Use organizational structure to map organization structure to enterprise enrollment.
 
-* Create a new department for IT if business domains have independent IT capabilities.
+- Create a new department for IT if business domains have independent IT capabilities.
 
-* Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
+- Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 
-* If multiple Azure AD tenants are used, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
+- If multiple Azure AD tenants are used, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
-* Set up enterprise development (dev)/testing (test)/production environments at an EA account level to support holistic isolation.
+- Set up enterprise development (dev)/testing (test)/production environments at an EA account level to support holistic isolation.
 
-* Do not ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
+- Do not ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
 
-* Do not move or rename an EA account in Azure AD.
+- Do not move or rename an EA account in Azure AD.
 
-* Periodically audit the EA portal to review who has access and avoid using a Microsoft account where possible.
+- Periodically audit the EA portal to review who has access and avoid using a Microsoft account where possible.
 
 ## Define Azure AD tenants
 
 An Azure AD tenant provides identity and access management, which is an important part of security posture, ensuring that only authenticated and authorized users have access to the resources to which they have permission to access. Azure AD not only provides these services to applications and services deployed in Azure but to services and applications deployed outside of Azure (such as on-premises or third-party cloud providers). Azure AD service is also utilized by software-as-a-service (SaaS) applications such as Microsoft 365 and theAzure Marketplace. Organization already using on-premises Azure AD can use their existing infrastructure and extend authentication to the cloud by integrating with Azure AD. Each Azure AD has one or more domains. A directory can have many subscriptions associated with it but only one Azure AD tenant.
 
-It is important to ask basic security questions during the Azure AD design phase—how an organization is managing credentials, control of human and application access, and how to control programmatic access.
+It is important to ask basic security questions during the Azure AD design phase&mdash;how an organization is managing credentials, control of human and application access, and how to control programmatic access.
 
 **Design considerations:**
 

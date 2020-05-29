@@ -160,7 +160,7 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 - Consistent security across Azure services in terms of data management and control plane operations
 
-- "Multi-tenancy under the hood" for key platform components, from Hyper-V and the HSMs underpinning Key Vault to database engines
+- _Multitenancy under the hood_ for key platform components, from Hyper-V and the HSMs underpinning Key Vault to database engines
 
 **Design recommendations:**
 
