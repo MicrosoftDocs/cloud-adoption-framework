@@ -26,11 +26,11 @@ The following are important areas which strongly influence a sound monitoring st
 
 * Ensure security requirements correspond with your organizations security compliance policy.
 
-* Align alerts with what is considered a relevant/practical incident (that is, warnings and exceptions) and align severity with its significance following your incident priority/urgency escalation matrix. 
+* Align alerts with what is considered a relevant/practical incident (that is, warnings and exceptions) and align severity with its significance following your incident priority/urgency escalation matrix.
 
 * Collect only the metrics and logs that are useful, measureable, and identifiable to the business and IT organization.
 
-* Define an integration plan with existing ITSM solutions (that is, Remedy, ServiceNow, etc.) for incident generation or upstream monitoring. Identify which alerts should be forwarded, if alert enrichment required to support specific filtering requirements, and how to configure.
+* Define an integration plan with existing ITSM solutions (that is, Remedy, ServiceNow, etc.) for incident generation or upstream monitoring. Identify which alerts should be forwarded, if alert enrichment is required to support specific filtering requirements, and how to configure.
 
 * Understand who needs visibility, what they need to see, and how it should be visualized based on their roles and responsibilities.
 
