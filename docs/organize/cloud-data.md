@@ -11,8 +11,7 @@ ms.date: 05/22/2020
 
 # Cloud data functions
 
-<!-- TODO put this into the template format like other topics in this section -->
-Intro paragraph needed...
+There are multiple audiences involved in an Analytics conversation, including the typical seller, database architect, and infrastructure team. In addition, Analytics solutions involve influencers, recommenders and decision makers from enterprise architecture, data science, business analysts, and executive leadership roles. Azure Synapse Analytics enables the entire business, from the IT stakeholder to the business analyst, to achieve more.
 
 **DBAs/Database Architects**: Database administrators and architects are responsible for the integration and ingestion of data sources into a centralized repository, the administration and performance required for the system, and the accessibility and efficiency of query and analytic modeling against that data.
 
