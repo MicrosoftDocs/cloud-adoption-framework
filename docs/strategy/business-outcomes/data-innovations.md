@@ -29,7 +29,7 @@ There are several business and technology reasons why you should consider migrat
 
 The business cases and technology advances include:
 
-## Use cases
+**Use cases**
 
 - Build end-to-end analytics solutions with a single analytics service
 - Use the Azure Synapse studio, which provides a unified workspace for data prep, data management, data warehousing, big data, and AI tasks
@@ -43,7 +43,7 @@ The business cases and technology advances include:
 - Automatically protect sensitive data in real-time with dynamic data masking
 - Industry-leading security with built-in security features like automated threat detection and always-on data encryption.
 
-## Buying Drivers
+**Buying Drivers**
 
 - No hardware to buy or maintenance  costs – pay only for what you use
 - No infrastructure to manage so you can focus on competitive insights
@@ -55,21 +55,6 @@ The business cases and technology advances include:
 - There is a need to analyze real-time machine generated data like clickstream and streaming IoT data in your data warehouse but the cost of analyzing and storing this high-velocity, high volume data on-premises hardware is too high and would force expensive upgrades that can require significant capital
 - Although elasticity is about scaling up/out and scaling down, as your Data Warehouse grows you can’t scale down storage and so you are paying a premium for storage on expensive data warehouse hardware in the data center when Azure Synapse can store your data in cloud storage at lower cost
   
-## Technology Advances
-
-- Azure Synapse is a globally available, highly secure, scalable cloud data warehouse database management system
-- Massively parallel loading of data from Azure Data Lake Storage (ADLS) into Azure Synapse using PolyBase
-- Result-set caching, automatic statistics, materialized views and ordered clustered column store indexes enable better price / performance
-- Ability to define workload priorities and allocate resources to high priority workloads via intelligent workload management
-- Integration with secure ADLS where data can be ingested, staged, cleaned, transformed, integrated, analyzed and published back into ADLS using a common data model for loading into Azure Synapse and analytical sandboxes
-- A multi-role, scalable Azure Data Factory data integration platform with over 80 connectors to cloud and on-premises data sources where IT and business users can collaboratively develop data integration jobs on the same platform to produce commonly understood data
-- Ability to run existing SQL Server Integration services jobs on Azure
-- Ability to share data and insights using a common data model across Azure Synapse, Azure Databricks, Azure HDInsight, Power BI, SAP, Adobe Customer Experience Platform, Microsoft Dynamics 365, Azure IoT and Microsoft ISV Partners without needing complex transformation
-- Integration with Azure ML Studio, Azure Machine Learning Service, Azure Databricks, Jupyter Notebooks and RStudio for analytical model development and deployment in Azure Synapse
-- Massively parallel model execution in Azure Synapse
-- Low cost development and test environments with a small compute configuration that can be paused / stopped when you are not using it
-- Support for logical data warehouse via external tables in PolyBase that can access streaming data in ADLS, join warehouse data to data in Hadoop, or other relational DBMSs and so simplify access
-
 ## Next steps
 
 [Data democratization](./data-democratization.md)
