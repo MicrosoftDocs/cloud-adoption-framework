@@ -31,9 +31,18 @@ There are several business and technology reasons why you should consider migrat
 
 The business cases and technology advances include:
 
-<!-- TODO Add use cases and then delete this comment -->
-- use case one
-- use case two
+- Build end-to-end analytics solutions with a single analytics service
+- Use the Azure Synapse studio, which provides a unified workspace for data prep, data management, data warehousing, big data, and AI tasks
+- Build and manage pipeline with a no-code visual environment, automate query optimization, build proofs of concept, and use Power BI all from the same analytics service
+- Deliver insights from all your data, across data warehouses and big data analytics systems
+- For mission-critical workloads, easily optimize the performance of all queries with intelligent workload management, workload isolation, and limitless concurrency
+- Edit and build Power BI dashboards directly from Azure Synapse
+- Reduce project development time for BI and machine learning projects
+- Easily share data with just a few clicks using Azure Data Share integration within Azure Synapse Analytics
+- Implement fine-grained access control with column-level security and native row-level security
+- Automatically protect sensitive data in real-time with dynamic data masking
+- Industry-leading security with built-in security features like automated threat detection and always-on data encryption.
+
 
 ## Business Cases
 
