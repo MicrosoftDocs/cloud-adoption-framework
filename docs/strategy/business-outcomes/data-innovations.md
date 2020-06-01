@@ -29,8 +29,6 @@ There are several business and technology reasons why you should consider migrat
 
 The business cases and technology advances include:
 
-**Use cases**
-
 - Build end-to-end analytics solutions with a single analytics service
 - Use the Azure Synapse studio, which provides a unified workspace for data prep, data management, data warehousing, big data, and AI tasks
 - Build and manage pipeline with a no-code visual environment, automate query optimization, build proofs of concept, and use Power BI all from the same analytics service
