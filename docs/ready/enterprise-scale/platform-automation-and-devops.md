@@ -1,7 +1,7 @@
 ---
 title: Platform automation and DevOps
 description: Platform automation and DevOps
-author: rkuehfus
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/01/2020
 ms.topic: conceptual

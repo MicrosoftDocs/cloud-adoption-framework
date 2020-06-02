@@ -1,7 +1,7 @@
 ---
 title: Implementation design guide
 description: Implementation design guide
-author: rkuehfus
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/01/2020
 ms.topic: conceptual

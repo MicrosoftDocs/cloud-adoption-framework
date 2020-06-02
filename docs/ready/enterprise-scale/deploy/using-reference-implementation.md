@@ -1,7 +1,7 @@
 ---
 title: Using reference implementation
 description: Using reference implementation
-author: rkuehfus
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/01/2020
 ms.topic: conceptual
