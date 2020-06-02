@@ -32,6 +32,8 @@ The following design principles can be addressed during landing zone design for 
 
 ## Next steps
 
+As you will see in the next article, these design principles can be implemented over time allowing you to grow into your cloud operating model. Alternatively, there are rich, opinionated deployment options that can implement all three modules in one deployment.
+
 With an understanding of the core modular design principles, the next step is to choose the [landing zone deployment option](./deployment-option.md) that best aligns with your cloud adoption plan and requirements.
 
 > [!div class="nextstepaction"]
