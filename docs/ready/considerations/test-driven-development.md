@@ -3,7 +3,7 @@ title: Test-driven development for landing zones
 description: Test-driven development for landing zones
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -15,13 +15,13 @@ Test-driven development is a common software development and DevOps process that
 
 ![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 
-In the cloud, infrastructure is the output of code. Well-structured, tested, and verified code produces a viable landing zone. Per the [definition of landing zones](../landing-zone/index.md), "A landing zone is an environment for hosting your workloads, preprovisioned through code. It includes foundational capabilities using defined set of cloud services and best practices so you are **set up for success**." This article outlines one approach to use test-driven development to fulfill the last part of that definition, while meeting quality, security, operations, and governance requirements.
+In the cloud, infrastructure is the output of code. Well-structured, tested, and verified code produces a viable landing zone. Per the [definition of landing zones](../landing-zone/index.md), "a landing zone is an environment for hosting your workloads, preprovisioned through code. It includes foundational capabilities using defined set of cloud services and best practices so you are **set up for success**." This article outlines one approach to use test-driven development to fulfill the last part of that definition, while meeting quality, security, operations, and governance requirements.
 
 This approach can be used to meet simple feature requests during early development. Later in the cloud adoption lifecycle, this process can be used to meet security, operations, governance, or compliance requirements.
 
 ## Definition of done
 
-"Set up for success" is a subjective statement. This statement provides the cloud platform team with little actionable information during landing zone development or refactoring efforts. This lack of clarity can lead to missed expectations and vulnerabilities in a cloud environment. Before refactoring or expanding any landing zone, the cloud platform team should seek clarity regarding the "Definition of done" for each landing zone.
+"Set up for success" is a subjective statement. This statement provides the cloud platform team with little actionable information during landing zone development or refactoring efforts. This lack of clarity can lead to missed expectations and vulnerabilities in a cloud environment. Before refactoring or expanding any landing zone, the cloud platform team should seek clarity regarding the "definition of done" for each landing zone.
 
 Definition of done is a simple agreement between the cloud platform team and other affected teams. This agreement outlines the expected value added features, which should be included in any landing zone development effort. Often times the definition of done is a checklist, which aligns with the short-term cloud adoption plan. In mature processes, those expected features in the checklist will each have their own acceptance criteria to create even more clarity. When the value-added features each meet the acceptance criteria, the landing zone is sufficiently configured to enable the success of the current wave or release of adoption effort.
 
@@ -29,7 +29,7 @@ As teams adopt additional workloads and cloud features, the definition of done a
 
 ## Test-driven development cycle
 
-The cycle that makes test-driven development effective is often referred to as a red/green test. In this approach, the cloud platform team starts with a failed test (Red test) based on the definition of done and defined acceptance criteria. For each feature or acceptance criteria, the cloud platform team would complete development tasks until the test passes (Green test). A test-driven development cycle (or Red/Green test) would repeat the basic steps in the following image and list below until the full definition of done can be met.
+The cycle that makes test-driven development effective is often referred to as a red/green test. In this approach, the cloud platform team starts with a failed test (red test) based on the definition of done and defined acceptance criteria. For each feature or acceptance criteria, the cloud platform team would complete development tasks until the test passes (green test). A test-driven development cycle (or red/green test) would repeat the basic steps in the following image and list below until the full definition of done can be met.
 
 ![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 
@@ -52,13 +52,13 @@ For an initial migration effort, definition of done may be overly simple. The fo
 - Naming and tagging schema for ease of use.
 - This environment should be treated as a _demilitarized zone (DMZ)_ with access to the public internet.
 - During adoption efforts, the cloud adoption team would like temporary access to the environment to change service configurations.
-- For awareness only: Prior to production release, these workloads will require integration with the corporate identity provider to govern ongoing identity and access for operations management purposes. At which time the cloud adoption team's access should be revoked.
+- For awareness only: prior to production release, these workloads will require integration with the corporate identity provider to govern ongoing identity and access for operations management purposes. At which time the cloud adoption team's access should be revoked.
 
-The last point above is not a feature or an acceptance criteria. However, it is an indicator that additional expansions will be required and should be explored with other teams early.
+The last point above is not a feature or acceptance criteria. But it is an indicator that additional expansions will be required and should be explored with other teams early.
 
 ## Additional examples of a definition of done
 
-The governance methodology within the Cloud Adoption Framework provides a narrative journey through the natural maturity of a governance team. Embedded in that journey are several examples of "definition of done" and "acceptance criteria", in the form of policy statements.
+The Govern methodology within the Cloud Adoption Framework provides a narrative journey through the natural maturity of a governance team. Embedded in that journey are several examples of "definition of done" and "acceptance criteria", in the form of policy statements.
 
 - [Initial policy statements](../../govern/guides/complex/initial-corporate-policy.md#policy-statements): Example of corporate policies governing and initial definition of done based on early stage adoption requirements.
 - [Identity expansion](../../govern/guides/complex/identity-baseline-improvement.md#incremental-improvement-of-the-policy-statements): Example of corporate policies governing ("definition of done") to meet requirements to expand identity management for a landing zone.
@@ -70,7 +70,7 @@ The above examples are basic samples to help develop a "definition of done" for 
 
 ## Next steps
 
-To accelerate test-driven development in Azure, review [test-driven development features of azure](./azure-test-driven-development.md).
+To accelerate test-driven development in Azure, review [test-driven development features of Azure](./azure-test-driven-development.md).
 
 > [!div class="nextstepaction"]
-> [Test-driven development in azure](./azure-test-driven-development.md)
+> [Test-driven development in Azure](./azure-test-driven-development.md)

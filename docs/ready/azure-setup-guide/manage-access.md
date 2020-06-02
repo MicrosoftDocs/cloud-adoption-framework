@@ -25,7 +25,7 @@ When you plan your access control strategy, grant users the least privilege requ
 
 When you plan your access control methodology, we recommend that you work with people in your organizations with the following roles: security and compliance, IT administration, and enterprise architect.
 
-The Cloud Adoption Framework offers additional guidance on how to [use role-based access control](../considerations/roles.md) as part of your cloud adoption efforts.
+The Cloud Adoption Framework offers additional guidance on using [role-based access control](../considerations/roles.md) in your cloud adoption efforts.
 
 ::: zone target="chromeless"
 
@@ -63,7 +63,7 @@ To grant a user access to a subscription:
 
 To grant a user access to a resource group:
 
-1. Go to [Resource groups](https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Resources%2FSubscriptions%2FResourceGroups).
+1. Go to [resource groups](https://portal.azure.com/#blade/HubsExtension/BrowseResourceGroups).
 1. Select a resource group.
 1. Select **Access control (IAM)**.
 1. Select **+Add** > **Add role assignment**.
@@ -73,7 +73,7 @@ To grant a user access to a resource group:
 
 To grant a user access to a subscription:
 
-1. Go to [Subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
+1. Go to [subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
 1. Select a subscription.
 1. Select **Access control (IAM)**.
 1. Select **+Add** > **Add role assignment**.

@@ -121,8 +121,8 @@ Here's how Contoso will run the migration:
 
 > [!div class="checklist"]
 >
-> - **Step 1: Provision a SQL Database instance in Azure.** Contoso provisions a SQL instance in Azure. After the app website is migrate to Azure, the WCF service web app will point to this instance.
-> - **Step 2: Assess the database with Azure Database Migration Assistant (DMA) and migrate the Database Migration Service (DMS).** Contoso assesses the database for migration then migrates the application database with the Azure Data Migration Service.
+> - **Step 1: Provision a SQL Database instance in Azure.** Contoso provisions a SQL instance in Azure. After the app website is migrated to Azure, the WCF service web app will point to this instance.
+> - **Step 2: Assess the database using Azure Database Migration Assistant (DMA) and migrate it using the Database Migration Service (DMS).** Contoso assesses the database for migration then migrates the application database using the Azure Data Migration Service.
 > - **Step 3: Provision web apps.** Contoso provisions the two web apps.
 > - **Step 4: Set up Azure DevOps.** Contoso creates a new Azure DevOps project, and imports the Git repo.
 > - **Step 5: Configure connection strings.** Contoso configures connection strings so that the web tier web app, the WCF service web app, and the SQL instance can communicate.
@@ -158,9 +158,9 @@ Here's how Contoso will run the migration:
 **Need more help?**
 
 - [Get help](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal) provisioning a SQL Database.
-- [Learn about](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools) vCore resource limits.
+- Learn about [vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools).
 
-## Step 2: Assess the database with Database Migration Assistant (DMA) and migrate with Azure Database Migration Service (DMS)
+## Step 2: Assess the database using Database Migration Assistant (DMA) and migrate it using Azure Database Migration Service (DMS)
 
 Contoso admins assess the database using Database Migration Assistant (DMA) and then migrate it using Azure Database Migration Services (DMS) using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
 

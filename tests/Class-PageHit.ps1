@@ -23,29 +23,33 @@ class PageHitCollection
         $this.CodeBlocks = [List[PageBlock]]::new()
         $this.DisabledBlocks = [List[PageBlock]]::new()
 
-        $metadataStart = $text.IndexOf("landingContent:")
-        $metadataEnd = 0
+#        $metadataExpression = '(?s)(?:description: .+?\r?\n)(.*?(?:---|highlightedContent:))'
+        $metadataExpression = '(?s)metadata:.*?(?=highlightedContent:)|(?<=\ndescription:.+\r?\n).*---'
+        $m = [Regex]::Match($text, $metadataExpression)
 
-        if ($metadataStart -ge 0) {
-            $metadataEnd = $text.IndexOf("metadata:", $metadataStart)
-        }
-        else
-        {
-            $metadataStart = $text.IndexOf("author:")
-            if ($metadataStart -ge 0)
-            {    
-                $metadataEnd = $text.IndexOf("---", $metadataStart)
-            }
-            else {
-                $metadataStart = 0
-                $metadataEnd = 0
-            }
-        }
+        # $metadataStart = $text.IndexOf("landingContent:")
+        # $metadataEnd = 0
 
-        $m = [Regex]::Match($text, '(?s)(?:description: .+?\r?\n)(.*?(?:---|highlightedContent:))')
+        # if ($metadataStart -ge 0) {
+        #     $metadataEnd = $text.IndexOf("metadata:", $metadataStart)
+        # }
+        # else
+        # {
+        #     $metadataStart = $text.IndexOf("author:")
+        #     if ($metadataStart -ge 0)
+        #     {    
+        #         $metadataEnd = $text.IndexOf("---", $metadataStart)
+        #     }
+        #     else {
+        #         $metadataStart = 0
+        #         $metadataEnd = 0
+        #     }
+        # }
+
+        # $m = [Regex]::Match($text, '(?s)(?:description: .+?\r?\n)(.*?(?:---|highlightedContent:))')
         $this.MetadataBlock = [PageBlock]::new($m)
 
-        $m = [Regex]::Matches($text, '((?s)```.*?```)')
+        $m = [Regex]::Matches($text, '((?s)```.*?```|(?<!`)`[^`]+`)')
         foreach ($match in $m)
         {
             $this.CodeBlocks.Add([PageBlock]::new($match))
@@ -163,7 +167,7 @@ class PageHit
     {
         $this.FileExtension = $extension
 
-        #TODO: Can the header be trimmed here?
+        # TODO: Can the header be trimmed here?
         $h = $m.Groups[1].Value
         $c = $m.Groups[2].Value.Trim()
         $this.Index = $m.Groups[2].Index
@@ -198,9 +202,18 @@ class PageHit
                 $this.HitType = 'Comment'
             }
             elseif ($h -match '^</?$' -or $c -match "div class=|div>|a>|li>|ul class=|li style=|img alt=|img src=") {
+                # Write-Error 'HTML - INDEX IS NOW MISALIGNED!'
                 $this.HitType = 'Html'
+                $newIndex = $c.IndexOf('>') + 1
                 $h = $h + (Get-StringBefore $c '>') + '>'
+                if ($newIndex -eq 0) {
+                    $c = ''
+                }
+                else {
                 $c = (Get-StringAfter $c '>')
+            }
+
+                $this.Index = $this.Index + $newIndex
             }
             elseif ($h.Trim() -eq '[!') 
             {
@@ -214,6 +227,7 @@ class PageHit
                 $this.HitType = 'Sentence'
                 if ($h -match '^[A-Za-z]$')
                 {
+                    Write-Error 'LETTER AT HEADER START - INDEX IS NOW MISALIGNED!'
                     $c = "$h$c"
                     $h = ""
                 }
@@ -221,15 +235,19 @@ class PageHit
                 $m = [Regex]::Match($c.Trim(), '(^>? *\d+\. ?[^A-Za-z]*)(.*)')
                 if ($m.Success)
                 {
+                    # Write-Error 'NUMBERED LIST - INDEX IS NOW MISALIGNED!'
                     $h = $m.Groups[1].Value.Trim('"')
                     $c = $m.Groups[2].Value
+                    $this.Index = $this.Index + $m.Groups[2].Index
                 }
 
                 $m = [Regex]::Match($c.Trim(), '^([a-z][A-Za-z\._]+[:>] ?"?)(.*)')
                 if ($m.Success)
                 {
+                    # Write-Error 'LOWERCASE LETTER - INDEX IS NOW MISALIGNED!'
                     $h = $m.Groups[1].Value.Trim('"')
                     $c = $m.Groups[2].Value
+                    $this.Index = $this.Index + $m.Groups[2].Index
                 }
 
                 $exp = '^(?:title:|name:|#+ |\[|\*\*|\*\*\[|- |- \*\*\[|\[|: ")'
@@ -238,7 +256,7 @@ class PageHit
                     $this.HitType = 'Title'
                     if ($c -notmatch '^[a-z]')
                     {
-                        Write-Host "UNEXPECTED CHARACTER AT START OF CONTENT: $c" -ForegroundColor Red
+                        Write-Host ("UNEXPECTED CHARACTER AT START OF CONTENT: HEX '{0:x}'" -f [int][char]($c.Substring(0,1)) ) -ForegroundColor Red
                     }
                 }
                 elseif ($h.Trim() -cmatch '^[a-z][A-Za-z\._]+\: ?')

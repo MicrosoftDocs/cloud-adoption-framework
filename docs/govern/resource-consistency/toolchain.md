@@ -58,4 +58,4 @@ When planning your deployment, you will need to consider where logging data is s
 
 ## Next steps
 
-Learn how to create, assign, and manage [policy definitions](https://docs.microsoft.com/azure/governance/policy) in Azure.
+Learn to create, assign, and manage [policy definitions](https://docs.microsoft.com/azure/governance/policy) in Azure.

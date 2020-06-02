@@ -67,7 +67,7 @@ In this scenario, Contoso wants to migrate its two-tier on-premises travel app a
 
 ### Database considerations
 
-As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server Managed Instance. The following considerations helped them to decide to go with Managed Instance.
+As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server Managed Instance. The following considerations helped them to decide to use Managed Instance.
 
 - Managed Instance aims to deliver almost 100% compatibility with the latest on-premises SQL Server version. Microsoft recommends Managed Instance for customers who are running SQL Server on-premises or on IaaS VMs and want to migrate their apps to a fully managed service with minimal design changes.
 - Contoso is planning to migrate a large number of apps from on-premises to IaaS. Many of these are ISV provided. Contoso realizes that using Managed Instance will help ensure database compatibility for these apps, rather than using SQL Database, which might not be supported.
@@ -181,7 +181,7 @@ Contoso admins set up the virtual network as follows:
 
 **Need more help?**
 
-- Get an overview of [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+- Read the [SQL Database Managed Instance overview](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 - Learn how to [create a virtual network for a SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-vnet-configuration).
 - Learn how to [set up peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-peering).
 - Learn how to [update Azure Active Directory DNS settings](https://docs.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance).
@@ -193,7 +193,7 @@ The Managed Instance is placed in a private virtual network. Contoso needs a rou
 Contoso considers these factors:
 
 - The route table contains a set of rules (routes) that specify how packets sent from the Managed Instance should be routed in the virtual network.
-- The route table is associated with subnets in which Managed Instances are deployed. Each packet that leaves a subnet is handled based on the associated route table.
+- The route table is associated with subnets where Managed Instances are deployed. Each packet that leaves a subnet is handled based on the associated route table.
 - A subnet can be associated with only one route table.
 - There are no additional charges for creating route tables in Microsoft Azure.
 
@@ -327,7 +327,7 @@ They set these up as follows:
 
 **Need more help?**
 
-[Learn about](https://docs.microsoft.com/azure/migrate) setting up Azure Migrate: Server Migration tool.
+Learn about setting up the [Azure Migrate: Server Migration tool](https://docs.microsoft.com/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
 
 ### Prepare on-premises VMs
 
@@ -357,7 +357,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 5. Need more help?
 
-   - [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration) preparing VMs for migration.
+   - Learn about [preparing VMs for migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration).
 
 ## Step 5: Replicate the on-premises VMs
 

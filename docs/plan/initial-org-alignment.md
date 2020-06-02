@@ -13,7 +13,7 @@ ms.subservice: plan
 
 The most important aspect of any cloud adoption plan is the alignment of people who will make the plan a reality. No plan is complete until you understand its people-related aspects.
 
-True organizational alignment takes time. It will become important to establish long-term organizational alignment, especially as cloud adoption scales across the business and IT culture. Alignment is so important that [an entire section](../organize/index.md) has been dedicated to it in the Organize methodology of the Cloud Adoption Framework.
+True organizational alignment takes time. It will become important to establish long-term organizational alignment, especially as cloud adoption scales across the business and IT culture. Alignment is so important that an entire section has been dedicated to it in the [Organize methodology](../organize/index.md) of the Cloud Adoption Framework.
 
 Full organization alignment is not a required component of the cloud adoption plan. However, some initial organization alignment is needed. This article outlines a best-practice starting point for organizational alignment. The guidance here can help complete your plan and get your teams ready for cloud adoption. When you're ready, you can use the [organization alignment](../organize/index.md) section to customize this guidance to fit your organization.
 

@@ -16,7 +16,7 @@ ms.custom: governance
 
 | | |
 |---|---|
-| Any change to business processes or technology platforms introduces risk to the business. Cloud governance teams, whose members are sometimes known as cloud custodians, are tasked with mitigating these risks with minimal interruption to adoption or innovation efforts. <br><br> However, cloud governance requires more than technical implementation. Subtle changes in the corporate narrative or corporate policies can affect adoption efforts significantly. Before implementation, it's important to look beyond IT while defining corporate policy. | [![Diagram of the Cloud Adoption Framework governance model: corporate policy and governance disciplines](../_images/operational-transformation-govern-thumbnail.png)](../_images/operational-transformation-govern-large.png#lightbox) <br> _Figure 1: Visual of corporate policy and the Five Disciplines of Cloud Governance._ |
+| Any change to business processes or technology platforms introduces risk to the business. Cloud governance teams, whose members are sometimes known as cloud custodians, are tasked with mitigating these risks with minimal interruption to adoption or innovation efforts. <br><br> But cloud governance requires more than technical implementation. Subtle changes in the corporate narrative or corporate policies can affect adoption efforts significantly. Before implementation, it's important to look beyond IT while defining corporate policy. | [![Diagram of the Cloud Adoption Framework governance model: corporate policy and governance disciplines](../_images/operational-transformation-govern-thumbnail.png)](../_images/operational-transformation-govern-large.png#lightbox) <br> _Figure 1: Visual of corporate policy and the Five Disciplines of Cloud Governance._ |
 
 <!-- markdownlint-enable MD033 -->
 
@@ -36,7 +36,7 @@ Defining corporate policy focuses on identifying and mitigating business risks r
 
 ## Next steps
 
-Learn how to make your corporate policy ready for the cloud.
+Learn how to prepare your corporate policy for the cloud.
 
 > [!div class="nextstepaction"]
-> [Prepare corporate policy for the cloud](./policy-compliance/index.md)
+> [Prepare your corporate policy for the cloud](./policy-compliance/index.md)

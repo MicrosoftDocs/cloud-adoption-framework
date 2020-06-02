@@ -6,14 +6,14 @@ ms.author: janet
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ---
 
 # Get started: Build a cloud automation team
 
 This guide helps you understand the goals and objectives of an automation team working on cloud adoption.
 
-During cloud adoption efforts, cloud automation capabilities will unlock the potential of DevOps and a cloud-native approach. Expertise in each of these areas can accelerate adoption and innovation.
+During cloud adoption efforts, cloud automation capabilities will unlock the potential of DevOps and a cloud-native approach. Expertise in these areas can accelerate adoption and innovation.
 
 ## Prerequisites
 

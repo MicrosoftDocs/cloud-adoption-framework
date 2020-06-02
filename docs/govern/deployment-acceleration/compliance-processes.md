@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Deployment Acceleration policy compliance processes
 
-This article discusses an approach to policy-adherence processes that govern the [Deployment Acceleration discipline](./index.md). Effective governance of cloud configuration starts with recurring manual processes designed to detect issues and impose policies to remediate those risks. However, you can automate these processes and supplement with tooling to reduce the overhead of governance and allow for faster response to deviation.
+This article discusses an approach to policy-adherence processes that govern the [Deployment Acceleration discipline](./index.md). Effective governance of cloud configuration starts with recurring manual processes designed to detect issues and impose policies to remediate those risks. You can automate these processes and supplement to reduce the overhead of governance and allow for faster response to deviation.
 
 ## Planning, review, and reporting processes
 
@@ -30,7 +30,7 @@ The best Deployment Acceleration tools in the cloud are only as good as the proc
 
 This planning process is also a good time to evaluate the current membership of your cloud governance team for knowledge gaps related to new or changing policy and risks related to DevOps and deployment acceleration. Invite relevant IT staff to participate in reviews and planning as either temporary technical advisors or permanent members of your team.
 
-**Education and training:** On a bimonthly basis, offer training sessions to make sure IT staff and developers are up-to-date on the latest Deployment Acceleration strategy and requirements. As part of this process review and update any documentation, guidance, or other training assets to ensure they are in sync with the latest corporate policy statements.
+**Education and training:** On a bimonthly basis, offer training sessions to make sure IT staff and developers are up-to-date on the latest Deployment Acceleration strategy and requirements. As part of this process review and update any documentation, guidance, or other training assets to ensure they're in sync with the latest corporate policy statements.
 
 **Monthly audit and reporting reviews:** Perform a monthly audit on all cloud deployments to assure their continued alignment with configuration policy. Review deployment-related activities with IT staff and identify any compliance issues not already handled as part of the ongoing monitoring and enforcement process. The result of this review is a report for the cloud strategy team and each cloud adoption team to communicate overall adherence to policy. The report is also stored for auditing and legal purposes.
 
@@ -56,7 +56,7 @@ The following triggers and enforcement actions provide examples you can use when
 
 Use the [Deployment Acceleration discipline template](./template.md) to document the processes and triggers that align to the current cloud adoption plan.
 
-For guidance on executing cloud management policies in alignment with adoption plans, see the article on discipline improvement.
+For guidance on executing cloud management policies in alignment with adoption plans, see [Deployment Acceleration discipline improvement](./discipline-improvement.md).
 
 > [!div class="nextstepaction"]
 > [Deployment Acceleration discipline improvement](./discipline-improvement.md)

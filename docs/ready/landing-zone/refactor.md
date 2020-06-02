@@ -4,7 +4,7 @@ titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: The process for refactoring landing zones
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -14,7 +14,7 @@ ms.subservice: ready
 
 A landing zone is an environment for hosting your workloads, **preprovisioned through code**. Since landing zone infrastructure is defined in code, it can be refactored similar to any other codebase. Refactoring is the process of modifying or restructuring source code to optimize the output of that code without changing its purpose or core function.
 
-The Ready methodology uses the concept of refactoring to accelerate migration and remove common blockers. The steps in the Ready overview discuss a process that starts with predefined landing zone template that aligns best with your hosting function. Then refactor or add to the source code to expand the landing zones ability to deliver that function through improved security, operations, or governance. The following image illustrates the concept of refactoring.
+The Ready methodology uses the concept of refactoring to accelerate migration and remove common blockers. The steps in the ready overview discuss a process that starts with predefined landing zone template that aligns best with your hosting function. Then refactor or add to the source code to expand the landing zones ability to deliver that function through improved security, operations, or governance. The following image illustrates the concept of refactoring.
 
 ![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor.png)
 
@@ -22,7 +22,7 @@ The Ready methodology uses the concept of refactoring to accelerate migration an
 
 When customers adopt the cloud, landing zone considerations are the single most common blocker to adoption and cloud-related business results. Customers tend to lean towards one of the following two blockers. Often times various teams will each lean towards one of these two blockers, resulting in cultural deadlocks that make adoption difficult.
 
-Both of the primary blockers are rooted in one belief, the cloud environment and the existing datacenters should be at or near feature parity regarding operations, governance, and security. This is a wise long-term goal. However, the pain comes from the delicate balance between the timing to achieve that goal and the speed required to deliver business results.
+Both of the primary blockers are rooted in one belief, the cloud environment and the existing datacenters should be at or near feature parity regarding operations, governance, and security. This is a wise long-term goal. But the pain comes from the delicate balance between the timing to achieve that goal and the speed required to deliver business results.
 
 ### Blocker: Acting too soon
 
@@ -30,7 +30,7 @@ It took years and significant effort to reach the current state of security, gov
 
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
 
-In the image above, the customer has an objective of 100 workloads living in the cloud. To get there, the customer will likely deploy their first workload. Then their first 10 or so workloads, before they are ready to release one of those workloads to production. Eventually, they will reach the objective of the adoption plan and have a robust portfolio in the cloud. However, the red X in the image shows where customers commonly get stuck. Waiting for 100% alignment can delay the first workload by weeks, months, or even years.
+In the image above, the customer has an objective of 100 workloads living in the cloud. To get there, the customer will likely deploy their first workload. Then their first 10 or so workloads, before they are ready to release one of those workloads to production. Eventually, they will reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red x in the image shows where customers commonly get stuck. Waiting for 100% alignment can delay the first workload by weeks, months, or even years.
 
 ### Blocker: Acting too late
 
@@ -51,11 +51,11 @@ The remainder of this article will focus on some key constraints that can empowe
 
 ## Theory
 
-The concept of refactoring a landing zone is simple in theory, but requires proper guardrails. The concept pictured above outlines the basic flow as follows. When you are ready to build your first landing zone, start with an initial landing zone defined via a template. Once that landing zone is deployed, use the decisions trees in the subsequent articles under the "Expand your landing zone" section of this article series (see table of contents) to refactor and add to your initial landing zone. Repeat decisions trees and refactoring until you have an enterprise ready environment that meets the enhanced requirements of your security, operations, and governance teams.
+The concept of refactoring a landing zone is simple in theory, but requires proper guardrails. The concept pictured above outlines the basic flow as follows. When you are ready to build your first landing zone, start with an initial landing zone defined via a template. Once that landing zone is deployed, use the decisions trees in the subsequent articles under the "expand your landing zone" section of this article series (see table of contents) to refactor and add to your initial landing zone. Repeat decisions trees and refactoring until you have an enterprise ready environment that meets the enhanced requirements of your security, operations, and governance teams.
 
 ## Development approach
 
-The advantage of a refactoring based approach, is the ability to create parallel iteration paths for development. The image below provides an example of two parallel iteration paths: cloud adoption and cloud platform. Both progress at their own pace, with minimal risk of becoming a blocker to either team's daily efforts. Alignment on the adoption plan and refactoring guardrails create a set of agreement upon milestones, which provide clear future state dependencies.
+The advantage of a refactoring-based approach, is the ability to create parallel iteration paths for development. The image below provides an example of two parallel iteration paths: cloud adoption and cloud platform. Both progress at their own pace, with minimal risk of becoming a blocker to either team's daily efforts. Alignment on the adoption plan and refactoring guardrails create a set of agreement upon milestones, which provide clear future state dependencies.
 
 ![Landing zone parallel iteration](../../_images/ready/iterations.png)
 
@@ -95,7 +95,7 @@ The section of the Ready methodology on expanding your landing zone will aid in 
 
 ![Landing zone parallel iteration](../../_images/ready/refactor-methodologies.png)
 
-Each subsection of "expanding your landing zone" maps to one of the additions outlined in the image above. Beyond those basic expansions, the deeper methodologies (such as Govern or Manage) of this framework will aid in going beyond basic landing zone modifications to implement long-term disciplines.
+Each subsection of "expanding your landing zone" maps to one of the additions outlined in the image above. Beyond those basic expansions, the deeper methodologies (such as govern or manage) of this framework will aid in going beyond basic landing zone modifications to implement long-term disciplines.
 
 ## Next steps
 

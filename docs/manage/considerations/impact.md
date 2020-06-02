@@ -49,7 +49,7 @@ When you're calculating losses by applying historical data, you might have enoug
 
 If you're using the [Operations Management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, consider doing the following:
 
-- Each business should update each workload in the _Example_ or _Clean Template_ with the *Time/Value Impact* of each workload. By default, *Time/Value Impact* represents the projected losses per hour associated with an outage of the workload.
+- Each business should update each workload in either the `Example` worksheet or the `Clean Template` worksheet, along with the `Time/Value Impact` of each workload. By default, `Time/Value Impact` represents the projected losses per hour associated with an outage of the workload.
 
 ## Next steps
 

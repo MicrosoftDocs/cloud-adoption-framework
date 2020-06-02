@@ -32,19 +32,6 @@ class TestLog
         }
     }
 
-    [void] static WriteLink([string] $link, [Match] $matchItem)
-    {
-        if ([TestLog]::SuperVerbose)
-        {
-            $start = $link.Substring(0, $matchItem.Index)
-            [TestLog]::Write("POSSIBLE LINK: '$start", 'DarkGray')
-            [TestLog]::Write($matchItem.Value, 'Red')
-            
-            $end = $link.Substring($matchItem.Index + $matchItem.Length)
-            [TestLog]::WriteLine("$end'", 'DarkGray')
-        }
-    }
-
     [void] static WriteContents ([string] $output)
     {
         if ([TestLog]::LogContents)

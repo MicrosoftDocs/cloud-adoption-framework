@@ -3,7 +3,7 @@ title: "Overcome cloud adoption blockers"
 description: Use the Cloud Adoption Framework to overcome blockers. These scenarios provide a roadmap through the Cloud Adoption Framework.
 author: JanetCThomas
 ms.author: janet
-ms.date: 03/03/2020
+ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: overview

@@ -3,7 +3,7 @@ title: Improve landing zone security
 description: Improve landing zone security
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -30,7 +30,7 @@ The following list of reference architectures and best practices provides exampl
 
 ## Test-driven development cycle
 
-Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in azure](./azure-test-driven-development.md).
+Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in Azure](./azure-test-driven-development.md).
 
 ![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 

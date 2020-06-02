@@ -16,11 +16,11 @@ Encrypting data protects it against unauthorized access. Properly implemented en
 
 Jump to: [Key management](#key-management) | [Data encryption](#data-encryption) | [Learn more](#learn-more)
 
-Cloud encryption strategy focuses on corporate policy and compliance mandates. Encrypting resources is desirable, and many Azure services such as Azure Storage and Azure SQL Database enable encryption by default. However, encryption has costs that can increase latency and overall resource usage.
+Cloud encryption strategy focuses on corporate policy and compliance mandates. Encrypting resources is desirable, and many Azure services such as Azure Storage and Azure SQL Database enable encryption by default. But encryption has costs that can increase latency and overall resource usage.
 
 For demanding workloads, striking the correct balance between encryption and performance, and determining how data and traffic is encrypted can be essential. Encryption mechanisms can vary in cost and complexity, and both technical and policy requirements can influence your decisions on how encryption is applied and how you store and manage critical secrets and keys.
 
-Corporate policy and third-party compliance are the biggest drivers when planning an encryption strategy. Azure provides multiple standard mechanisms that can meet common requirements for encrypting data, whether at rest or in transit. However, for policies and compliance requirements that demand tighter controls, such as standardized secrets and key management, encryption in-use, or data-specific encryption, you will need to develop a more sophisticated encryption strategy to support these requirements.
+Corporate policy and third-party compliance are the biggest drivers when planning an encryption strategy. Azure provides multiple standard mechanisms that can meet common requirements for encrypting data, whether at rest or in transit. For policies and compliance requirements that demand tighter controls, such as standardized secrets and key management, encryption in-use, or data-specific encryption, you'll need to develop a more sophisticated encryption strategy to support these requirements.
 
 ## Key management
 
@@ -53,7 +53,7 @@ With a bring-your-own-key approach, you generate keys on dedicated HSM hardware 
 
 - You trust the underlying security and access control infrastructure of the cloud platform for hosting and using your keys and secrets.
 - Your cloud-hosted applications or services can access and use keys and secrets in a robust and secure way.
-- You are required by regulatory or organizational policy to keep the creation and management of your organization's secrets and keys on-premises.
+- You're required by regulatory or organizational policy to keep the creation and management of your organization's secrets and keys on-premises.
 
 ### On-premises (hold your own key)
 
@@ -61,7 +61,7 @@ Certain scenarios might have regulatory, policy, or technical reasons prohibitin
 
 **On-premises key management assumptions:** Using an on-premises key management system includes these assumptions:
 
-- You are required by regulatory or organizational policy to keep the creation, management, and hosting of your organization's secrets and keys on-premises.
+- You're required by regulatory or organizational policy to keep the creation, management, and hosting of your organization's secrets and keys on-premises.
 - Any cloud-based applications or services that rely on accessing encryption services or secrets can access the on-premises key management system.
 
 ## Data encryption
@@ -101,7 +101,7 @@ Your overall policy and compliance requirements, the sensitivity of the data bei
 
 Encrypting data at rest assumes the following:
 
-- You are storing data that is not meant for public consumption.
+- You're storing data that is not meant for public consumption.
 - Your workloads can accept the added latency cost of disk encryption.
 
 ### Data in use
@@ -110,14 +110,14 @@ Encryption for data in use involves securing data in nonpersistent storage, such
 
 **Assumptions about encrypting data in use:** Encrypting data in use assumes the following:
 
-- You are required to maintain data ownership separate from the underlying cloud platform at all times, even at the RAM and CPU level.
+- You're required to maintain data ownership separate from the underlying cloud platform at all times, even at the RAM and CPU level.
 
 ## Learn more
 
 For more information about encryption and key management in Azure, see:
 
 - **[Azure encryption overview](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview):** A detailed description of how Azure uses encryption to secure both data at rest and data in transit.
-- **[Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/key-vault-overview):** Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
+- **[Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview):** Key Vault is the primary key management system for storing and managing cryptographic keys, secrets, and certificates within Azure.
 - **[Azure data security and encryption best practices](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices).** A discussion of Azure data security and encryption best practices.
 - **[Confidential computing in Azure](https://azure.microsoft.com/solutions/confidential-compute):** Azure's confidential computing initiative provides tools and technology to create trusted execution environments or other encryption mechanisms to secure data in use.
 

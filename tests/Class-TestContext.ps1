@@ -1,4 +1,5 @@
 using namespace System.Collections.Generic
+using namespace System.Collections.Specialized
 
 $here = $global:herePath
 
@@ -43,10 +44,10 @@ class TestContext
 
     [List[string]] static $RuleExpressions
 
-    [System.Collections.Hashtable] static $invalidTermLookup 
-    [System.Collections.Hashtable] static $invalidFormattingLookup 
+    [OrderedDictionary] static $invalidTermLookup 
+    [OrderedDictionary] static $invalidFormattingLookup 
 
-    [HashTable] hidden static GetLookup(
+    [OrderedDictionary] hidden static GetLookup(
             [List[string]] $expressions
     )
     {
@@ -55,7 +56,7 @@ class TestContext
         foreach ($item in $expressions)
         {
             $split = $item -split '!!'
-            $correction = ($split.Length -eq 2) ? $split[1] : '$null'
+            $correction = ($split.Length -eq 2) ? $split[1] : 'NULL'
             $lookup[$split[0]] = $correction
         }
 
@@ -63,7 +64,7 @@ class TestContext
     }
 
     [List[string]] hidden static GetListFromLookup(
-        [HashTable] $lookup
+        [OrderedDictionary] $lookup
     )
     {
         $list = [List[string]]::new()

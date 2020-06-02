@@ -3,7 +3,7 @@ title: "Understand the functions of Central IT"
 description: Understand the function of the Central IT team, including the source, the scope, the deliverable, and the risks.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/20/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
@@ -14,7 +14,7 @@ ms.custom: organize
 
 As cloud adoption scales, cloud governance functions alone may not be sufficient to govern adoption efforts. When adoption is gradual, teams tend to organically develop the skills and processes needed to be ready for the cloud over time.
 
-However, when one cloud adoption team uses the cloud to achieve a high-profile business outcome, gradual adoption is seldom the case. Success follows success. This is also true for cloud adoption, but it happens at cloud scale. When cloud adoption expands from one team to multiple teams relatively quickly, additional support from existing IT staff is needed. However, those staff members may lack the training and experience required to support the cloud using cloud-native IT tools. This often drives the formation of a Central IT team governing the cloud.
+But when one cloud adoption team uses the cloud to achieve a high-profile business outcome, gradual adoption is seldom the case. Success follows success. This is also true for cloud adoption, but it happens at cloud scale. When cloud adoption expands from one team to multiple teams relatively quickly, additional support from existing IT staff is needed. But those staff members may lack the training and experience required to support the cloud using cloud-native IT tools. This often drives the formation of a Central IT team governing the cloud.
 
 > [!CAUTION]
 > While this is a common maturity step, it can present a high risk to adoption, potentially blocking innovation and migration efforts if not managed effectively. See the risk section below to learn how to mitigate the risk of centralization becoming a cultural antipattern.
@@ -77,7 +77,7 @@ Each of the cloud functions and phases of organizational maturity are prefixed w
 
 In the modern view of IT, assets are globally distributed. Responsibilities are delegated. Operations management is delivered by a mixture of internal staff, managed service providers, and cloud providers. In the digital economy, IT management practices are transitioning to a model of self-service and delegated control with clear guardrails to enforce governance. Central IT can be a valuable contributor to cloud adoption by becoming a cloud broker and a partner for innovation and business agility.
 
-Central IT as a function is well positioned to take valuable knowledge and practices from existing on-premises models and apply those practices to cloud delivery. However, this process will require change. New processes, new skills, and new tools are required to support cloud adoption at scale. When Central IT adapts, it becomes an important partner in cloud adoption efforts. However, if Central IT doesn't adapt to the cloud, or attempts to use the cloud as a catalyst for tight-grain controls, Central IT quickly becomes a blocker to adoption, innovation, and migration.
+Central IT as a function is well positioned to take valuable knowledge and practices from existing on-premises models and apply those practices to cloud delivery. But this process will require change. New processes, new skills, and new tools are required to support cloud adoption at scale. When Central IT adapts, it becomes an important partner in cloud adoption efforts. But if Central IT doesn't adapt to the cloud, or attempts to use the cloud as a catalyst for tight-grain controls, Central IT quickly becomes a blocker to adoption, innovation, and migration.
 
 The measures of this risk are speed and flexibility. The cloud simplifies adopting new technologies quickly. When new cloud functionality can be deployed within minutes, but Central IT reviews add weeks or months to the deployment process, then these centralized processes become a major impediment to business success. When this indicator is encountered, consider alternative strategies to IT delivery.
 
@@ -97,7 +97,7 @@ This example narrative illustrates the approach taken by a mature Central IT tea
 
 Contoso, LLC has adopted a Central IT model for the support of the business's cloud resources. To deliver this model, they have implemented tight controls for various shared services such as ingress network connections. This wise move reduced the exposure of their cloud environment and provided a single "break-glass" device to block all traffic if a breach occurs. Their Security Baseline policies state that all ingress traffic must come through a shared device managed by the Central IT team.
 
-However, one of their cloud adoption teams now requires an environment with a dedicated and specially configured ingress network connection to use a specific cloud technology. An immature Central IT team would simply refuse the request and prioritize its existing processes over adoption needs. Contoso's Central IT team is different. They quickly identified a simple four-part solution to this dilemma:
+But one of their cloud adoption teams now requires an environment with a dedicated and specially configured ingress network connection to use a specific cloud technology. An immature Central IT team would simply refuse the request and prioritize its existing processes over adoption needs. Contoso's Central IT team is different. They quickly identified a simple four-part solution to this dilemma:
 
   1. **Classification:** Since the cloud adoption team was in the early stages of building a new solution and didn't have any sensitive data or mission-critical support needs, the assets in the environment were classified as low risk and noncritical. Effective classification is a sign of maturity in Central IT. Classifying all assets and environments allows for clearer policies.
   1. **Negotiation:** Classification alone isn't sufficient. Shared services were implemented to consistently operate sensitive and mission-critical assets. Changing the rules would compromise governance and compliance policies designed for the assets that need more protection. Empowering adoption can't happen at the cost of stability, security, or governance. This led to a negotiation with the adoption team to answer specific questions. Could a business-led DevOps team provide operations management for this environment? Would this solution require direct access to other internal resources? If the cloud adoption team is comfortable with those tradeoffs, then the ingress traffic might be possible.

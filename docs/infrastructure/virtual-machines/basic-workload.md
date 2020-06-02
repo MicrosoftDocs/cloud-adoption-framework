@@ -21,7 +21,7 @@ This isolation also enables another concept, known as DevOps. DevOps includes th
 
 ## Basic workload
 
-A _basic workload_ is typically defined as a single web application or a virtual network (VNet) with virtual machine (VM).
+A _basic workload_ is typically defined as a single web application or a virtual network with a virtual machine (VM).
 
 > [!NOTE]
 > This guide does not cover application development. For more information about developing applications on Azure, see the [Azure Application Architecture Guide](https://docs.microsoft.com/azure/architecture/guide).

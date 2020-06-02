@@ -50,7 +50,7 @@ Although management tools and processes can help improve platform operations, th
 - **Management:** The operations processes that keep a system running in production.
 - **Security:** Protecting applications and data from threats.
 
-The [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
+The [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
 
 ## Get started with specific platforms
 

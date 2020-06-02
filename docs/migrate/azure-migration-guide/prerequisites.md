@@ -66,7 +66,7 @@ When assessing workloads for migration, identify applications that would not req
 ## Learn more
 
 - [Cloud Adoption Framework migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)
-- [The five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
+- The [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
 
 # [Planning checklist](#tab/Checklist)
 
@@ -97,7 +97,7 @@ Assuming you choose a rehost approach to migration, the following activities wil
 
 ## Learn more
 
-- [The five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
+- The [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
 - [Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)
 - [Cloud Adoption Framework planning checklist](../migration-considerations/prerequisites/planning-checklist.md)
 

@@ -21,7 +21,7 @@ The biggest cloud computing services run on a worldwide network of secure datace
 
 Transform your business and reduce costs with an energy-efficient infrastructure that spans more than 100 highly secure facilities worldwide, linked by one of the largest networks on earth. Azure has more global regions than any other cloud provider. This translates into the scale that's required to bring applications closer to users around the world, preserve data residency, and provide comprehensive compliance and resiliency options for customers.
 
-- **Example 1:** A services company was working with a hosting provider that hosted multiple operational infrastructure assets. Those systems suffered from frequent outages and poor performance. The company migrated its assets to Azure to take advantage of the SLA and performance controls of the cloud. The downtime that it suffered cost it approximately $15,000 USD per minute of outage. With between four and eight hours of outage per month, it was easy to justify this organizational transformation.
+- **Example 1:** A services company worked a hosting provider that hosted multiple operational infrastructure assets. Those systems suffered from frequent outages and poor performance. The company migrated its assets to Azure to take advantage of the SLA and performance controls of the cloud. Any downtime would cost the company approximately $15,000 USD per minute of outage. With between four and eight hours of outage per month, it was easy to justify this organizational transformation.
 
 - **Example 2:** A consumer investment company was in the early stages of a cloud-enabled application innovation effort. Agile processes and DevOps were maturing well, but application performance was spiky. As a more mature transformation, the company started a program to monitor and automate sizing based on usage demands. The company eliminated sizing issues by using Azure performance management tools, resulting in a surprising five-percent increase in transactions.
 
@@ -39,7 +39,7 @@ Azure Site Recovery makes it simple to test disaster recovery by replicating app
 
 ## Next steps
 
-Learn how to [use the business outcome template](./business-outcome-template.md).
+Learn how to use the [business outcome template](./business-outcome-template.md).
 
 > [!div class="nextstepaction"]
 > [Use the business outcome template](./business-outcome-template.md)

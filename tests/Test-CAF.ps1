@@ -14,10 +14,10 @@ function Get-ExcludedSubfolders
         '_bread'
         '_images'
         'context'
-#         'decision-guides'
-#        'digital-estate'
+         'decision-guides'
+        'digital-estate'
 #        'get-started'
-#         'govern'
+         'govern'
          'infrastructure'
          'innovate'
          'manage'
@@ -26,8 +26,8 @@ function Get-ExcludedSubfolders
 #         'organize'
              'plan'
          'ready'
-#         'reference'
-#         'strategy'
+         'reference'
+         'strategy'
 
         #,
         # 'get-started',

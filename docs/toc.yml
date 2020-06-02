@@ -35,6 +35,8 @@ items:
       href: get-started/innovate.md
     - name: Unblock environment design and configuration
       href: get-started/design-and-configuration.md
+    - name: Enable customer success
+      href: get-started/enable.md
     - name: Deliver operational excellence
       href: get-started/operational-excellence.md
     - name: Manage cloud costs
@@ -45,8 +47,6 @@ items:
       href: get-started/reliability.md
     - name: Ensure consistent performance
       href: get-started/performance.md
-    - name: Enable customer success
-      href: get-started/enable.md
     - name: Align your organization
       href: get-started/org-alignment.md
     - name: Build a cloud strategy team
@@ -397,7 +397,7 @@ items:
           items:
           - name: Refactor an app onto Azure App Service and Azure SQL Database
             href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md
-          - name: Refactor an app onto Azure App Service and an Azure SQL Database managed instance
+          - name: Refactor an app onto Azure App Service and Azure SQL Managed Instance
             href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
           - name: Rebuild an app in Azure App Service
             href: migrate/azure-best-practices/contoso-migration-rebuild.md
@@ -426,7 +426,7 @@ items:
 
         - name: SQL Server
           items:
-          - name: Rehost an app on Azure VMs and an Azure SQL Database managed instance
+          - name: Rehost an app on Azure VMs and Azure SQL Managed Instance
             href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md
           - name: Rehost an app on Azure VMs and SQL Server Always On availability groups
             href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md
@@ -438,7 +438,7 @@ items:
             items:
             - name: Refactor SQL Server to Azure SQL Database
               href: https://datamigration.microsoft.com/scenario/sql-to-azuresqldb
-            - name: Refactor SQL Server to an Azure SQL Database managed instance
+            - name: Refactor SQL Server to Azure SQL Managed Instance
               href: https://datamigration.microsoft.com/scenario/sql-to-azuresqldbmi
             - name: Refactor SQL Server to SQL Server on Azure VMs
               href: https://datamigration.microsoft.com/scenario/sql-to-sqlvm
@@ -494,11 +494,11 @@ items:
               href: https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Migrate SQL Server to Azure SQL Database online
               href: https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate SQL Server to an Azure SQL Database managed instance offline
+            - name: Migrate SQL Server to Azure SQL Managed Instance offline
               href: https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate SQL Server to an Azure SQL Database managed instance online
+            - name: Migrate SQL Server to Azure SQL Managed Instance online
               href: https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Migrate Amazon RDS SQL Server to Azure SQL Database or an Azure SQL Database managed instance online
+            - name: Migrate Amazon RDS SQL Server to Azure SQL Database or Azure SQL Managed Instance online
               href: https://docs.microsoft.com/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Migrate MySQL to Azure Database for MySQL online
               href: https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
@@ -1250,9 +1250,9 @@ items:
         href: manage/centralize-operations.md
       - name: Establish an operational fitness review
         href: manage/operational-fitness-review.md
-      - name: Improving platform or workload resiliency
+      - name: Improving platform or workload reliability
         items:
-        - name: Resiliency checklist for Azure services
+        - name: Reliability checklist for Azure services
           href: https://docs.microsoft.com/azure/architecture/checklist/resiliency-per-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
         - name: Failure mode analysis
           href: https://docs.microsoft.com/azure/architecture/resiliency/failure-mode-analysis?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
@@ -1393,7 +1393,7 @@ items:
       items:
       - name: Azure Architecture Center for solution architecture
         href: https://docs.microsoft.com/azure/architecture
-      - name: Azure Architecture Framework for workload architecture
+      - name: Microsoft Azure Well-Architected Framework for workload architecture
         href: https://docs.microsoft.com/azure/architecture/framework
       - name: Docs for product implementation
         href: https://docs.microsoft.com
