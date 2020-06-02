@@ -1,7 +1,7 @@
 ---
 title: Scope
 description: Scope
-author: rkuehfus
+author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/20/2020
 ms.topic: conceptual
