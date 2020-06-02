@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore CISO prepromotion -->
+<!-- cSpell:ignore CISO -->
 
 <!-- markdownlint-disable MD026 -->
 
@@ -17,7 +17,7 @@ ms.subservice: migrate
 
 Promotion to production marks the completion of a workload's migration to the cloud. After the asset and all of its dependencies are promoted, production traffic is rerouted. The rerouting of traffic makes the on-premises assets obsolete, allowing them to be decommissioned.
 
-The process of promotion varies according to the workload's architecture. However, there are several consistent prerequisites and a few common tasks. This article describes each and serves as a kind of prepromotion checklist.
+The process of promotion varies according to the workload's architecture. However, there are several consistent prerequisites and a few common tasks. This article describes each and serves as a kind of pre-promotion checklist.
 
 ## Prerequisite processes
 

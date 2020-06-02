@@ -7,7 +7,10 @@ $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 Describe "Test-Markdown" -Tags "Markdown" {
 
-    It "shouldn't have markdownlint errors" {
-        Test-Markdown $(Get-DocsPath) "md" | Should -Be 0
+    It "Shouldn't have markdownlint errors" {
+
+        $subfolders = Get-Subfolders $(Get-ExcludedSubfolders) $true
+        Test-Markdown $(Get-DocsPath) $subfolders `
+            | Should -Be 0
     }
 }

@@ -22,9 +22,9 @@ The following sample policy statements address common cost-related business risk
 
 ## Future-proofing
 
-**Business risk:** Current criteria that don't warrant an investment in a Cost Management discipline from the governance team. However, you anticipate such an investment in the future.
+**Business risk:** Current criteria that don't warrant an investment in a Cost Management discipline from the governance team, but you anticipate such an investment in the future.
 
-**Policy statement:** You should associate all assets deployed to the cloud with a billing unit and application/workload. This policy will ensure that future Cost Management efforts will be effective.
+**Policy statement:** You should associate all assets deployed to the cloud with a billing unit and application or workload. This policy will ensure that your Cost Management discipline is effective.
 
 **Design options:** For information on establishing a future-proof foundation, see the discussions related to creating a governance MVP in the [actionable design guides](../guides/index.md) included as part of the Cloud Adoption Framework guidance.
 
@@ -34,7 +34,7 @@ The following sample policy statements address common cost-related business risk
 
 **Policy statement:** Any cloud deployment must be allocated to a billing unit with approved budget and a mechanism for budgetary limits.
 
-**Design options:** In Azure, budget can be controlled with [Azure Cost Management](https://docs.microsoft.com/azure/cost-management/manage-budgets)
+**Design options:** In Azure, budget can be controlled with [Azure Cost Management](https://docs.microsoft.com/azure/cost-management/manage-budgets).
 
 ## Underutilization
 
@@ -44,7 +44,7 @@ The following sample policy statements address common cost-related business risk
 
 **Design options:**
 
-- In Azure, planned versus actual spending can be managed via [Azure Cost Management](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis)
+- In Azure, planned versus actual spending can be managed via [Azure Cost Management](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis).
 - There are several options for grouping resources by billing unit. In Azure, a [resource consistency model](../../decision-guides/resource-consistency/index.md) should be chosen in conjunction with the governance team and applied to all assets.
 
 ## Overprovisioned assets
@@ -62,7 +62,7 @@ The following sample policy statements address common cost-related business risk
 
 **Business risk:** Effective cost management creates new risks. Optimization of spending is inverse to system performance. When reducing costs, there is a risk of overtightening spending and producing poor user experiences.
 
-**Policy statement:** Any asset that directly affects customer experiences must be identified through grouping or tagging. Before optimizing any asset that affects customer experience, the cloud governance team must adjust optimization based on at least 90 days of utilization trends. Document any seasonal or event driven bursts considered when optimizing assets.
+**Policy statement:** Any asset that directly affects customer experiences must be identified through grouping or tagging. Before optimizing any asset that affects customer experience, the cloud governance team must adjust optimization based on at least 90 days of utilization trends. Document any seasonal or event-driven bursts considered when optimizing assets.
 
 **Design options:**
 
@@ -73,7 +73,7 @@ The following sample policy statements address common cost-related business risk
 
 Use the samples mentioned in this article as a starting point to develop policies that address specific business risks that align with your cloud adoption plans.
 
-To begin developing your own custom policy statements related to Cost Management, download the [Cost Management template](./template.md).
+To begin developing your own custom Cost Management policy statements, download the [Cost Management policy template](./template.md).
 
 To accelerate adoption of this discipline, choose the [actionable governance guide](../guides/index.md) that most closely aligns with your environment. Then modify the design to incorporate your specific corporate policy decisions.
 

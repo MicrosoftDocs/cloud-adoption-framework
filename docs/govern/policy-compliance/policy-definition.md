@@ -17,13 +17,13 @@ Once you've analyzed the known risks and related risk tolerances for your organi
 
 ## How can corporate IT policy become cloud-ready?
 
-In traditional governance and incremental governance, corporate policy creates the working definition of governance. Most IT governance actions seek to implement technology to monitor, enforce, operate, and automate those corporate policies. Cloud Governance is built on similar concepts.
+In traditional governance and incremental governance, corporate policy creates the working definition of governance. Most IT governance actions seek to implement technology to monitor, enforce, operate, and automate those corporate policies. Cloud governance is built on similar concepts.
 
-![Corporate Governance and Governance Disciplines](../../_images/operational-transformation-govern-highres.png)
+![Corporate governance and governance disciplines](../../_images/operational-transformation-govern-large.png)
 
-*Figure 1 - Corporate governance and governance disciplines.*
+_Figure 1: Corporate governance and governance disciplines._
 
-The image above illustrates the relationship between business risk, policy and compliance, and monitoring and enforcement mechanisms that will need to interact as part of your governance strategy. The Five Disciplines of Cloud Governance allow you to manage these interactions and realize your strategy.
+The image above illustrates the relationship between business risk, policy and compliance, and monitoring and enforcement mechanisms that need to interact as part of your governance strategy. The Five Disciplines of Cloud Governance allow you to manage these interactions and realize your strategy.
 
 Cloud governance is the product of an ongoing adoption effort over time, as a true lasting transformation doesn't happen overnight. Attempting to deliver complete cloud governance before addressing key corporate policy changes using a fast aggressive method seldom produces the desired results. Instead we recommend an incremental approach.
 
@@ -50,7 +50,7 @@ Individual cloud policy statements are guidelines for addressing specific risks 
 - **Policy statement:** A concise explanation of the policy requirements and goals.
 - **Design or technical guidance:** Actionable recommendations, specifications, or other guidance to support and enforce this policy that IT teams and developers can use when designing and building their cloud deployments.
 
-If you need help getting started with defining policies, consult the [governance disciplines](../governance-disciplines.md) introduced in the governance section overview. The articles for each of these disciplines includes examples of common business risks encountered when moving to the cloud and sample policies used to remediate those risks. For example, see the Cost Management discipline's [sample policy definitions](../cost-management/policy-statements.md).
+If you need help starting to define your policies, consult the [governance disciplines](../governance-disciplines.md) introduced in the governance section overview. The articles for each of these disciplines includes examples of common business risks encountered when moving to the cloud and sample policies used to remediate those risks. For example, see the Cost Management discipline's [sample policy definitions](../cost-management/policy-statements.md).
 
 ## Incremental governance and integrating with existing policy
 

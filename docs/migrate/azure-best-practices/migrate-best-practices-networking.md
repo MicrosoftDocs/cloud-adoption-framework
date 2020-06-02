@@ -1,6 +1,6 @@
 ---
 title: "Set up networking for workloads migrated to Azure"
-description: Use the Cloud Adoption Framework for Azure to learn the best practices for setting up networking for your migrated workloads.
+description: Use the Cloud Adoption Framework for Azure to learn best practices for setting up networking for your migrated workloads.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/04/2018
@@ -20,7 +20,7 @@ As you plan and design for migration, in addition to the migration itself, one o
 
 ## Design virtual networks
 
-Azure provides virtual networks (VNets):
+Azure provides virtual networks with these capabilities:
 
 - Azure resources communicate privately, directly, and securely with each other over VNets.
 - You can configure endpoint connections on VNets for VMs and services that require internet communication.
@@ -44,9 +44,9 @@ When you create VNets as part of your migration, it's important to plan out your
 
 **Learn more:**
 
-- Get an [overview of Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
-- Read the [Azure Virtual Network frequently asked questions (FAQ)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq).
-- Learn about [Azure networking limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits?toc=/azure/virtual-network/toc.json#networking-limits).
+- Read the [Azure Virtual Network overview](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
+- Review the [Azure Virtual Network FAQ](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq).
+- Learn about [Azure networking limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
 ## Best practice: Implement a hub and spoke network topology
 
@@ -64,13 +64,13 @@ Consider the following:
 - Hub and spoke VNets can be implemented in different resource groups, and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same, or different, Azure Active Directory (Azure AD) tenants. This allows for decentralized management of each workload, while sharing services maintained in the hub network.
 
 ![Change management](./media/migrate-best-practices-networking/hub-spoke.png)
-*Hub and spoke topology*
+_Hub and spoke topology_
 
 **Learn more:**
 
 - [Read about](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) a hub and spoke topology.
 - Get network recommendations for running Azure [Windows](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/windows-vm) and [Linux](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/linux-vm) VMs.
-- [Learn about](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview) VNet peering.
+- Learn about [VNet peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview).
 
 ## Best practice: Design subnets
 
@@ -87,23 +87,23 @@ To provide isolation within a VNet, you segment it into one or more subnets, and
 
 The table shows an example of a VNet with an address space of 10.245.16.0/20 segmented into subnets, for a planned migration.
 
-**Subnet** | **CIDR** | **Addresses** | **Use**
---- | --- | --- | ---
-DEV-FE-EUS2 | 10.245.16.0/22 | 1019 | Front-end/web tier VMs
-DEV-APP-EUS2 | 10.245.20.0/22 | 1019 | App-tier VMs
-DEV-DB-EUS2 | 10.245.24.0/23 | 507 | Database VMs
+| **Subnet** | **CIDR** | **Addresses** | **Use** |
+| --- | --- | --- | --- |
+| DEV-FE-EUS2 | 10.245.16.0/22 | 1019 | Front-end/web tier VMs |
+| DEV-APP-EUS2 | 10.245.20.0/22 | 1019 | App-tier VMs |
+| DEV-DB-EUS2 | 10.245.24.0/23 | 507 | Database VMs |
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation) designing subnets.
+- Learn about [designing subnets](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#segmentation).
 - [Learn how](https://docs.microsoft.com/azure/migrate/contoso-migration-infrastructure) a fictional company (Contoso) prepared their networking infrastructure for migration.
 
 ## Best practice: Set up a DNS server
 
 Azure adds a DNS server by default when you deploy a VNet. This allows you to rapidly build VNets and deploy resources. However, this DNS server only provides services to the resources on that VNet. If you want to connect multiple VNets together, or connect to an on-premises server from VNets, you need additional name resolution capabilities. For example, you might need Active Directory to resolve DNS names between virtual networks. To do this, you deploy your own custom DNS server in Azure.
 
-- DNS servers in a VNet can forward DNS queries to the recursive resolvers in Azure. This enables you to resolve host names within that VNet. For example, a domain controller running in Azure can respond to DNS queries for its own domains, and forward all other queries to Azure.
-- DNS forwarding allows VMs to see both your on-premises resources (via the domain controller) and Azure-provided host names (using the forwarder). Access to the recursive resolvers in Azure is provided using the virtual IP address 168.63.129.16.
+- DNS servers in a virtual network can forward DNS queries to the recursive resolvers in Azure. This enables you to resolve host names within that virtual network. For example, a domain controller running in Azure can respond to DNS queries for its own domains, and forward all other queries to Azure.
+- DNS forwarding allows VMs to see both your on-premises resources (via the domain controller) and Azure-provided host names (using the forwarder). Access to the recursive resolvers in Azure is provided using the virtual IP address `168.63.129.16`.
 - DNS forwarding also enables DNS resolution between VNets, and allows on-premises machines to resolve host names provided by Azure.
   - To resolve a VM host name, the DNS server VM must reside in the same VNet, and be configured to forward host name queries to Azure.
   - Because the DNS suffix is different in each VNet, you can use conditional forwarding rules to send DNS queries to the correct VNet for resolution.
@@ -112,12 +112,12 @@ Azure adds a DNS server by default when you deploy a VNet. This allows you to ra
 - In the Azure Resource Manager deployment model, you can specify DNS servers for a VNet and a network interface, but the best practice is to use the setting only on VNets.
 
     ![DNS servers](./media/migrate-best-practices-networking/dns2.png)
-    *DNS servers for VNet*
+    _DNS servers for VNet_
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/migrate/contoso-migration-infrastructure) name resolution when you use your own DNS server.
-- [Learn about](../../ready/azure-best-practices/naming-and-tagging.md) DNS naming rules and restrictions.
+- Learn about [name resolution when you use your own DNS server](https://docs.microsoft.com/azure/migrate/contoso-migration-infrastructure).
+- Learn about [DNS naming rules and restrictions](../../ready/azure-best-practices/naming-and-tagging.md).
 
 ## Best practice: Set up availability zones
 
@@ -130,19 +130,19 @@ Availability zones increase high-availability to protect your apps and data from
 - Zone-redundant services replicate your applications and data across availability zones to protect from single points of failure. - - With availability zones, Azure offers an SLA of 99.99 percent VM uptime.
 
     ![Availability zone](./media/migrate-best-practices-networking/availability-zone.png)
-    *Availability zone*
+    _Availability zone_
 
 - You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone, and replicating them in other zones. Azure services that support availability zones fall into two categories:
-  - Zonal services: You associate a resource with a specific zone. For example VMs, managed disks, IP addresses).
-  - Zone-redundant services: The resource replicates automatically across zones. For example, zone-redundant storage, Azure SQL Database.
+  - **Zonal services:** You associate a resource with a specific zone, such as VMs, managed disks, or IP addresses.
+  - **Zone-redundant services:** The resource replicates automatically across zones, such as zone-redundant storage or Azure SQL Database.
 - You can deploy a standard Azure load balanced with internet-facing workloads or app tiers, to provide zonal fault tolerance.
 
     ![Load balancer](./media/migrate-best-practices-networking/load-balancer.png)
-    *Load balancer*
+    _Load balancer_
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/availability-zones/az-overview) of availability zones.
+- Read the [Availability Zones overview](https://docs.microsoft.com/azure/availability-zones/az-overview).
 
 ## Design hybrid cloud networking
 
@@ -153,7 +153,7 @@ For a successful migration, it's critical to connect on-premises corporate netwo
 
 **Learn more:**
 
-- [Learn more](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn) about hybrid-cloud networking.
+- Learn more about [hybrid-cloud networking](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn).
 
 ## Best practice: Implement a highly available site-to-site VPN
 
@@ -181,16 +181,16 @@ When setting up a site-to-site VPN, you do the following:
 - Border gateway protocol (BGP) is an optional feature you can use with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your VNets.
 
 ![VPN](./media/migrate-best-practices-networking/vpn.png)
-*Site-to-site VPN*
+_Site-to-site VPN_
 
 **Learn more:**
 
-- [Review](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices) compatible on-premises VPN devices.
-- [Get an overview](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) of VPN gateways.
-- [Learn about](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable) highly available VPN connections.
-- [Learn about](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-plan-design) planning and designing a VPN gateway.
-- [Review](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings#gwsku) VPN gateway settings.
-- [Review](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways#gwsku) gateway SKUs.
+- Review [compatible on-premises VPN devices](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
+- Read the [Azure VPN Gateways overview](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways).
+- Learn about [highly available VPN connections](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable).
+- Learn about [planning and designing a VPN gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-plan-design).
+- Review [VPN gateway settings](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings#gwsku).
+- Review [gateway SKUs](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways#gwsku).
 - [Read about](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-bgp-overview) setting up BGP with Azure VPN gateways.
 
 ### Best practice: Configure a gateway for VPN Gateways
@@ -215,7 +215,7 @@ For multiple VPN connections, Azure Virtual WAN is a networking service that pro
 - The Azure WAN built-in dashboard provides instant troubleshooting insights that save time, and provide an easy way to track large-scale site-to-site connectivity.
 
 **Learn more:**
-[Learn about](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about) Azure Virtual WAN.
+Learn about [Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about).
 
 ### Best practice: Implement ExpressRoute for mission-critical connections
 
@@ -224,15 +224,15 @@ The Azure ExpressRoute service extends your on-premises infrastructure into the 
 - ExpressRoute connections can be over an any-to-any (IP VPN) network, a point-to-point Ethernet network, or through a connectivity provider. They don't go over the public internet.
 - ExpressRoute connections offer higher security, reliability, and higher speeds (up to 10 Gbps), along with consistent latency.
 - ExpressRoute is useful for virtual datacenters, as customers can get the benefits of compliance rules associated with private connections.
-- With ExpressRoute Direct you can connect directly to Microsoft routers at 100Gbps, for larger bandwidth needs.
+- With ExpressRoute Direct, you can connect directly to Microsoft routers at 100Gbps, for larger bandwidth needs.
 - ExpressRoute uses BGP to exchange routes between on-premises networks, Azure instances, and Microsoft public addresses.
 
-Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a quick start, it's common to initially use a site-to-site VPN to establish connectivity between the virtual datacenter and on-premises resources, and then migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
+Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a rapid start, it's common to initially use a site-to-site VPN to establish connectivity between the virtual datacenter and on-premises resources, and then migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
 
 **Learn more:**
 
 - [Read an overview](https://docs.microsoft.com/azure/expressroute/expressroute-introduction) of ExpressRoute.
-- [Learn about](https://docs.microsoft.com/azure/expressroute/expressroute-erdirect-about) ExpressRoute Direct.
+- Learn about [ExpressRoute Direct](https://docs.microsoft.com/azure/expressroute/expressroute-erdirect-about).
 
 ### Best practice: Optimize ExpressRoute routing with BGP communities
 
@@ -258,7 +258,7 @@ Now imagine you have an Azure deployment (for example, Azure App Service) in bot
   - Your WAN network can assume that both prefixes are closer to US East than US West, and thus route users from both offices to the ExpressRoute circuit in US East, providing a suboptimal experience for users in the Los Angeles office.
 
 ![VPN](./media/migrate-best-practices-networking/bgp1.png)
-*BGP communities unoptimized connection*
+_BGP communities unoptimized connection_
 
 **Solution:**
 
@@ -271,11 +271,11 @@ To optimize routing for both office users, you need to know which prefix is from
 - This configuration ensures that when both paths to Microsoft are available, users in Los Angeles will connect to Azure US West using the west circuit, and users New York connect to Azure US East using the east circuit. Routing is optimized on both sides.
 
 ![VPN](./media/migrate-best-practices-networking/bgp2.png)
-*BGP communities optimized connection*
+_BGP communities optimized connection_
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/expressroute/expressroute-optimize-routing) optimizing routing.
+- Learn about [optimizing routing](https://docs.microsoft.com/azure/expressroute/expressroute-optimize-routing).
 
 ## Secure VNets
 
@@ -283,8 +283,8 @@ The responsibility for securing VNets is shared between Microsoft and you. Micro
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices) of best practices for network security.
-- [Learn how to](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#security) design for secure networks.
+- Read an [overview of best practices for network security](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices).
+- Learn how to [design for secure networks](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#security).
 
 ## Best practice: Implement an Azure perimeter network
 
@@ -301,7 +301,7 @@ Although Microsoft invests heavily in protecting the cloud infrastructure, you m
 The following figure shows an example of a single subnet perimeter network in a corporate network, with two security boundaries.
 
 ![VPN](./media/migrate-best-practices-networking/perimeter.png)
-*Perimeter network deployment*
+_Perimeter network deployment_
 
 **Learn more:**
 
@@ -339,14 +339,14 @@ Service tags take the manual work out of assigning a rule to groups of Azure ser
 
 - This **Sql** tag denotes the address prefixes of the Azure SQL Database and Azure SQL Data Warehouse services.
 - If you specify **Sql** as the value, traffic is allowed or denied to Sql.
-- If you only want to allow access to **Sql** in a specific region, you can specify that region. For example, if you want to allow access only to Azure SQL Database in the East US region, you can specify **Sql.EastUS** as a service tag.
+- If you only want to allow access to **Sql** in a specific region, you can specify that region. For example, if you want to allow access only to Azure SQL Database in the East US region, you can specify **Sql.EastUS** for the service tag.
 - The tag represents the service, but not specific instances of the service. For example, the tag represents the Azure SQL Database service, but doesn't represent a particular SQL database or server.
 - All address prefixes represented by this tag are also represented by the **Internet** tag.
 
 **Learn more:**
 
-- [Read about](https://docs.microsoft.com/azure/virtual-network/security-overview) NSGs.
-- [Review](https://docs.microsoft.com/azure/virtual-network/security-overview#service-tags) the service tags available for NSGs.
+- Read about[network security groups (NSGs)](https://docs.microsoft.com/azure/virtual-network/security-overview).
+- Review the [service tags available for NSGs](https://docs.microsoft.com/azure/virtual-network/security-overview#service-tags).
 
 ## Best practice: Use application security groups
 
@@ -359,25 +359,25 @@ Application security groups enable you to configure network security as a natura
 **Example:**
 
 ![Application security group](./media/migrate-best-practices-networking/asg.png)
-*Application security group example*
+_Application security group example_
 
-**Network interface** | **Application security group**
---- | ---
-NIC1 | AsgWeb
-NIC2 | AsgWeb
-NIC3 | AsgLogic
-NIC4 | AsgDb
+| **Network interface** | **Application security group** |
+| --- | --- |
+| NIC1 | AsgWeb |
+| NIC2 | AsgWeb |
+| NIC3 | AsgLogic |
+| NIC4 | AsgDb |
 
 - In our example, each network interface belongs to only one application security group, but in fact an interface can belong to multiple groups, in accordance with Azure limits.
 - None of the network interfaces have an associated NSG. NSG1 is associated to both subnets and contains the following rules.
 
-<!--markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 -->
 
-**Rule name** | **Purpose** | **Details**
---- | --- | ---
-Allow-HTTP-Inbound-Internet | Allow traffic from the internet to the web servers. Inbound traffic from the internet is denied by the DenyAllInbound default security rule, so no additional rule is needed for the AsgLogic or AsgDb application security groups. | Priority: 100<br/><br/> Source: internet<br/><br/> Source port: *<br/><br/> Destination: AsgWeb<br/><br/> Destination port: 80<br/><br/> Protocol: TCP<br/><br/> Access: Allow.
-Deny-Database-All | AllowVNetInBound default security rule allows all communication between resources in the same VNet, this rule is needed to deny traffic from all resources. | Priority: 120<br/><br/> Source: *<br/><br/> Source port: *<br/><br/> Destination: AsgDb<br/><br/> Destination port: 1433<br/><br/> Protocol: All<br/><br/> Access: Deny.
-Allow-Database-BusinessLogic | Allow traffic from the AsgLogic application security group to the AsgDb application security group. The priority for this rule is higher than the Deny-Database-All rule, so this rule is processed first. Therefore, traffic from the AsgLogic application security group is allowed, and all other traffic is blocked. | Priority: 110<br/><br/> Source: AsgLogic<br/><br/> Source port: *<br/><br/> Destination: AsgDb<br/><br/> Destination port: 1433<br/><br/> Protocol: TCP<br/><br/> Access: Allow.
+| **Rule name** | **Purpose** | **Details** |
+| --- | --- | --- |
+| `Allow-HTTP-Inbound-Internet` | Allow traffic from the internet to the web servers. Inbound traffic from the internet is denied by the `DenyAllInbound` default security rule, so no additional rule is needed for the `AsgLogic` or `AsgDb` application security groups. | Priority: `100`<br><br> Source: `internet`<br/><br/> Source port: `*`<br/><br/> Destination: `AsgWeb`<br/><br/> Destination port: `80`<br/><br/> Protocol: `TCP`<br/><br/> Access: `Allow` |
+| `Deny-Database-All` | `AllowVNetInBound` default security rule allows all communication between resources in the same VNet, this rule is needed to deny traffic from all resources. | Priority: `120`<br/><br/> Source: `*`<br/><br/> Source port: `*`<br/><br/> Destination: `AsgDb`<br/><br/> Destination port: `1433`<br/><br/> Protocol: `All`<br/><br/> Access: `Deny`. |
+| `Allow-Database-BusinessLogic` | Allow traffic from the `AsgLogic` application security group to the `AsgDb` application security group. The priority for this rule is higher than the `Deny-Database-All` rule, so this rule is processed first. Therefore, traffic from the `AsgLogic` application security group is allowed, and all other traffic is blocked. | Priority: `110`<br/><br/> Source: `AsgLogic`<br/><br/> Source port: `*`<br/><br/> Destination: `AsgDb`<br/><br/> Destination port: `1433`<br/><br/> Protocol: `TCP`<br/><br/> Access: `Allow` |
 
 <!--markdownlint-enable MD033 -->
 
@@ -385,7 +385,7 @@ Allow-Database-BusinessLogic | Allow traffic from the AsgLogic application secur
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/virtual-network/security-overview#application-security-groups) application security groups.
+- Learn about [application security groups](https://docs.microsoft.com/azure/virtual-network/security-overview#application-security-groups).
 
 ### Best practice: Secure access to PaaS using VNet service endpoints
 
@@ -396,11 +396,11 @@ VNet service endpoints extend your VNet private address space and identity to Az
 - After service endpoints are enabled in your VNet, you can secure Azure service resources by adding a VNet rule to the service resources. This provides improved security by fully removing public internet access to resources, and allowing traffic only from your VNet.
 
 ![Service endpoints](./media/migrate-best-practices-networking/endpoint.png)
-*Service endpoints*
+_Service endpoints_
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview) VNet service endpoints.
+- Learn about [VNet service endpoints](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview).
 
 ## Best practice: Control public IP addresses
 
@@ -428,7 +428,7 @@ Azure has platform security features that are easy to use, and provide rich coun
 Azure Firewall is a managed cloud-based network security service that protects your VNet resources. It is a fully stateful managed firewall with built-in high availability and unrestricted cloud scalability.
 
 ![Service endpoints](./media/migrate-best-practices-networking/firewall.png)
-*Azure Firewall*
+_Azure Firewall_
 
 - Azure Firewall can centrally create, enforce, and log application and network connectivity policies across subscriptions and VNets.
 - Azure Firewall uses a static public IP address for your VNet resources, allowing outside firewalls to identify traffic originating from your VNet.
@@ -440,8 +440,8 @@ Azure Firewall is a managed cloud-based network security service that protects y
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/firewall/overview) of Azure Firewall.
-- [Learn about](https://docs.microsoft.com/azure/firewall/fqdn-tags) FQDN tags.
+- Read the [Azure Firewall overview](https://docs.microsoft.com/azure/firewall/overview).
+- Learn about [FQDN tags in Azure Firewall](https://docs.microsoft.com/azure/firewall/fqdn-tags).
 
 ## Best practice: Deploy a web application firewall (WAF)
 
@@ -458,15 +458,15 @@ The web application firewall (WAF) is a feature of Azure Application Gateway.
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/application-gateway/waf-overview) WAF.
-- [Review](https://docs.microsoft.com/azure/application-gateway/application-gateway-waf-configuration) WAF limitations and exclusions.
+- Learn about [WAF](https://docs.microsoft.com/azure/application-gateway/waf-overview).
+- Review [WAF limitations and exclusions](https://docs.microsoft.com/azure/application-gateway/application-gateway-waf-configuration).
 
 ## Best practice: Implement Azure Network Watcher
 
 Azure Network Watcher provides tools to monitor resources and communications in an Azure VNet. For example, you can monitor communications between a VM and an endpoint such as another VM or FQDN, view resources and resource relationships in a VNet, or diagnose network traffic issues.
 
 ![Network Watcher](./media/migrate-best-practices-networking/network-watcher.png)
-*Network Watcher*
+_Network Watcher_
 
 - With Network Watcher you can monitor and diagnose networking issues without logging into VMs.
 - You can trigger packet capture by setting alerts, and gain access to real-time performance information at the packet level. When you see an issue, you can investigate it in detail.
@@ -477,8 +477,8 @@ Azure Network Watcher provides tools to monitor resources and communications in 
 
 **Learn more:**
 
-- [Get an overview](https://docs.microsoft.com/azure/network-watcher) of Network Watcher.
-- [Learn more](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview) about NSG flow Logs.
+- Read the [Network Watcher overview](https://docs.microsoft.com/azure/network-watcher).
+- Learn more about [NSG flow Logs](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview).
 
 ## Use partner tools in the Azure Marketplace
 
@@ -486,19 +486,19 @@ For more complex network topologies, you might use security products from Micros
 
 - An NVA is a VM that performs a network function, such as a firewall, WAN optimization, or other network function.
 - NVAs bolster VNet security and network functions. They can be deployed for highly available firewalls, intrusion prevention, intrusion detection, web application firewalls (WAFs), WAN optimization, routing, load balancing, VPN, certificate management, Active Directory, and multi-factor authentication.
-- NVA is available from numerous vendors in the [Azure Marketplace](https://azuremarketplace.microsoft.com).
+- NVA is available from numerous vendors in the [Azure Marketplace](https://azuremarketplace.microsoft.com).
 
 ## Best practice: Implement firewalls and NVAs in hub networks
 
 In the hub, the perimeter network (with access to the internet) is normally managed through an Azure firewall, a firewall farm, or a web application firewall (WAF). Consider the following comparisons.
 
-<!--markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 -->
 
-**Firewall type** | **Details**
---- | ---
-WAFs | Web applications are common, and tend to suffer from vulnerabilities and potential exploits.<br/><br/> WAFs are designed to detect attacks against web applications (HTTP/HTTPS), more specifically than a generic firewall.<br/><br/> Compared with traditional firewall technology, WAFs have a set of specific features that protect internal web servers from threats.
-Azure Firewall | Like NVA firewall farms, Azure Firewall uses a common administration mechanism, and a set of security rules to protect workloads hosted in spoke networks, and to control access to on-premises networks.<br/><br/> The Azure Firewall has built-in scalability.
-NVA firewalls | Like Azure Firewall NVA firewall farms have common administration mechanism, and a set of security rules to protect workloads hosted in spoke networks, and to control access to on-premises networks.<br/><br/> NVA firewalls can be manually scaled behind a load balancer.<br/><br/> Though an NVA firewall has less specialized software than a WAF, it has broader application scope to filter and inspect any type of traffic in egress and ingress.<br/><br/> If you want to use NVA you can find them in the Azure Marketplace.
+| **Firewall type** | **Details** |
+| --- | --- |
+| WAFs | Web applications are common, and tend to suffer from vulnerabilities and potential exploits. <br><br> WAFs are designed to detect attacks against web applications (HTTP/HTTPS), more specifically than a generic firewall. <br><br> Compared with traditional firewall technology, WAFs have a set of specific features that protect internal web servers from threats. |
+| Azure Firewall | Like NVA firewall farms, Azure Firewall uses a common administration mechanism, and a set of security rules to protect workloads hosted in spoke networks, and to control access to on-premises networks. <br><br> The Azure Firewall has built-in scalability. |
+| NVA firewalls | Like Azure Firewall NVA firewall farms have common administration mechanism, and a set of security rules to protect workloads hosted in spoke networks, and to control access to on-premises networks. <br><br> NVA firewalls can be manually scaled behind a load balancer. <br><br> Though an NVA firewall has less specialized software than a WAF, it has broader application scope to filter and inspect any type of traffic in egress and ingress. <br><br> If you want to use NVA you can find them in the Azure Marketplace. |
 
 <!--markdownlint-enable MD033 -->
 
@@ -509,7 +509,7 @@ We recommend using one set of Azure Firewalls (or NVAs) for traffic originating 
 
 **Learn more:**
 
-- [Learn about](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz) using NVAs in an Azure VNet.
+- Learn about [using NVAs in an Azure VNet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz).
 
 ## Next steps
 

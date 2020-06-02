@@ -18,8 +18,8 @@ Describe "Test-TocExternalLinks" -Tags @("Links", "LongRunning") {
     It "All TOC external links are valid" {
         # Test-ExternalLinks $(Get-TocFilePath) | Should -Be 0
 
-        $files = $(Get-Item $(Get-TocFilePath))
-        Test-AllMatches @($files) -TestLinks $true `
+        $files = Get-ContentFiles $(Get-ExcludedSubfolders)
+        Test-AllMatches $files '' LinkValidation `
             | Should -Be 0
     }
 }

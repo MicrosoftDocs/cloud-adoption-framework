@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore CAF -->
-
 # First landing zone
 
 Infrastructure as code is a natural transition during most cloud adoption efforts. Deploying the first landing zone(s) in the cloud is a common starting point to transition to a code-driven environment. This article will define the term _landing zone_ and help you decide which landing zone is most appropriate for your current adoption needs.
@@ -42,15 +40,16 @@ Selecting the first landing zone depends on multiple variables. The following gr
 |---------|---------|---------|---------|---------|---------|---------|---------|
 |[CAF Migrate](./migrate-landing-zone.md)|New to cloud|< 1,000 assets|one to five days|Limited scope ->|Expansion required|Expansion required|Expansion required|Expansion required|
 |[CAF Foundation](./foundation-blueprint.md)|Moderate experience|< 1,000 assets|one to five days|Additive to CAF Migrate|Expansion required|Expansion required|Expansion required|Compliance tools deployed - configuration required|
-|[CAF enterprise-scale landing zone](./enterprise-scale.md)|Deep expertise|> 1,000 assets|10 to 20 weeks|Yes|Configured|Configured|Configured|Compliance tools deployed - configuration required|
+|[CAF Enterprise-scale](./enterprise-scale.md)|Deep expertise|> 1,000 assets|10 to 20 weeks|Yes|Configured|Configured|Configured|Compliance tools deployed - configuration required|
 |[CAF Terraform](./terraform-landing-zone.md)|Various templates|Various templates|10 to 20 weeks|Limited scope ->|Modules available|Modules available|Modules available|Modules available|
 
 The following table looks at the same landing zones from a slightly different perspective to guide more technical decision processes.
 
-| Landing Zone                                 | Hub                          | Spoke    | Cloud model | Technology      |
+| Landing zone                                 | Hub                          | Spoke    | Cloud model | Deployment Technology      |
 |----------------------------------------------|------------------------------|----------|-------------|-----------------|--|--|--|
 | [CAF Migrate](./migrate-landing-zone.md)     | Refactor required            | Included | Azure only  | Azure Blueprint |
 | [CAF Terraform](./terraform-landing-zone.md) | Included in Virtual Datacenter module       | Included | Multicloud  | Terraform       |
+| [CAF Enterprise-scale](./enterprise-scale.md) | Included       | Included | Multicloud  | Azure Policy       |
 
 ## Next steps
 

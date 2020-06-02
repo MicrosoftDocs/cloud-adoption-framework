@@ -11,13 +11,13 @@ ms.subservice: operate
 
 # Establish an operational fitness review
 
-As your enterprise begins to operate workloads in Azure, the next step is to establish a process for *operational fitness review*. This process enumerates, implements, and iteratively reviews the *nonfunctional requirements* for these workloads. Nonfunctional requirements are related to the expected operational behavior of the service.
+As your enterprise begins to operate workloads in Azure, the next step is to establish a process for _operational fitness review_. This process enumerates, implements, and iteratively reviews the _nonfunctional requirements_ for these workloads. Nonfunctional requirements are related to the expected operational behavior of the service.
 
 There are five essential categories of nonfunctional requirements, which are called the [pillars of software quality](https://docs.microsoft.com/azure/architecture/guide/pillars):
 
 - Scalability
 - Availability
-- Resiliency, including business continuity and disaster recovery
+- Resiliency (including business continuity and disaster recovery)
 - Management
 - Security
 
@@ -33,7 +33,7 @@ The processes that Microsoft follows form the basis for the processes outlined i
 
 ## Understand the problem
 
-As you learned in [Getting started](../getting-started/migrate.md), the first step in an enterprise's digital transformation is to identify the business problems to be solved by adopting Azure. The next step is to determine a high-level solution to the problem, such as migrating a workload to the cloud or adapting an existing, on-premises service to include cloud functionality. Finally, you design and implement the solution.
+As discussed in [Get started: Accelerate migration](../get-started/migrate.md), the first step in an enterprise's digital transformation is to identify the business problems to be solved by adopting Azure. The next step is to determine a high-level solution to the problem, such as migrating a workload to the cloud or adapting an existing, on-premises service to include cloud functionality. Finally, you design and implement the solution.
 
 During this process, the focus is often on the features of the service: the set of _functional_ requirements that you want the service to perform. For example, a product-delivery service requires features for determining the source and destination locations of the product, tracking the product during delivery, and sending notifications to the customer.
 
@@ -42,7 +42,7 @@ The _nonfunctional_ requirements, in contrast, relate to properties such as the 
 You can specify some nonfunctional requirements in terms of a service-level agreement (SLA). For example, you can express service continuity as a percentage of availability: "Available 99.99 percent of the time". Other nonfunctional requirements might be more difficult to define and might change as production needs change. For example, a consumer-oriented service might face unanticipated throughput requirements after a surge of popularity.
 
 > [!NOTE]
-> For more details about resiliency requirements, see [Designing reliable Azure applications](https://docs.microsoft.com/azure/architecture/reliability#define-requirements). That article includes explanations of concepts like recovery-point objective (RPO), recovery-time objective (RTO), and SLA.
+> For more information about resiliency requirements, see [Designing reliable Azure applications](https://docs.microsoft.com/azure/architecture/reliability#define-requirements). That article includes explanations of concepts like recovery-point objective (RPO), recovery-time objective (RTO), and SLA.
 
 ## Process for operational fitness review
 
@@ -50,7 +50,7 @@ The key to maintaining the performance and continuity of an enterprise's service
 
 ![An overview of the process for operational fitness review](../_images/manage/ofr-flow.png)
 
-At a high level, the process has two phases. In the *prerequisites phase*, the requirements are established and mapped to supporting services. This phase occurs infrequently: perhaps annually or when new operations are introduced. The output of the prerequisites phase is used in the *flow phase*. The flow phase occurs more frequently, such as monthly.
+At a high level, the process has two phases. In the _prerequisites phase_, the requirements are established and mapped to supporting services. This phase occurs infrequently: perhaps annually or when new operations are introduced. The output of the prerequisites phase is used in the _flow phase_. The flow phase occurs more frequently, such as monthly.
 
 ### Prerequisites phase
 
@@ -58,7 +58,7 @@ The steps in this phase capture the requirements for conducting a regular review
 
 1. **Identify critical business operations**. Identify the enterprise's mission-critical business operations. Business operations are independent from any supporting service functionality. In other words, business operations represent the actual activities that the business needs to perform and that are supported by a set of IT services.
 
-    The term *mission-critical* (or *business critical*) reflects a severe impact on the business if the operation is impeded. For example, an online retailer might have a business operation, such as "enable a customer to add an item to a shopping cart" or "process a credit card payment." If either of these operations fails, a customer can't complete the transaction and the enterprise fails to realize sales.
+    The term _mission-critical_ (or _business critical_) reflects a severe impact on the business if the operation is impeded. For example, an online retailer might have a business operation, such as "enable a customer to add an item to a shopping cart" or "process a credit card payment." If either of these operations fails, a customer can't complete the transaction and the enterprise fails to realize sales.
 
 1. **Map operations to services**. Map the critical business operations to the services that support them. In the shopping-cart example, several services might be involved, including an inventory stock-management service and a shopping-cart service. To process a credit-card payment, an on-premises payment service might interact with a third-party, payment-processing service.
 
@@ -66,7 +66,7 @@ The steps in this phase capture the requirements for conducting a regular review
 
     Also consider the dependencies between on-premises services and Azure services. In the shopping-cart example, the inventory stock-management service might be hosted on-premises and ingest data entered by employees from a physical warehouse. However, it might store data off-premises in an Azure service, such as [Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-introduction), or a database, such as [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction).
 
-An output from these activities is a set of *scorecard metrics* for service operations. The scorecard measures criteria such as availability, scalability, and disaster recovery. Scorecard metrics express the operational criteria that you expect the service to meet. These metrics can be expressed at any level of granularity that's appropriate for the service operation.
+An output from these activities is a set of _scorecard metrics_ for service operations. The scorecard measures criteria such as availability, scalability, and disaster recovery. Scorecard metrics express the operational criteria that you expect the service to meet. These metrics can be expressed at any level of granularity that's appropriate for the service operation.
 
 The scorecard should be expressed in simple terms to facilitate meaningful discussion between the business owners and engineering. For example, a scorecard metric for scalability might be color-coded in a simple way. Green means meeting the defined criteria, yellow means failing to meet the defined criteria but actively implementing a planned remediation, and red means failing to meet the defined criteria with no plan or action.
 

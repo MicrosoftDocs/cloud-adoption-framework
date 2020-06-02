@@ -39,17 +39,17 @@ Changing an industry, disrupting markets, or transforming products and services 
 
 On the other hand, some positive indicators are often associated with data-driven learning: centralization of heterogeneous data sets, data ingress, and democratization of data. While the team is learning about the customer of tomorrow, real results can be produced today. Supporting learning metrics could include:
 
-- Number of models available
-- Number of partner data sources consumed
-- Devices producing ingress data
-- Volume of ingress data
-- Types of data
+- Number of models available.
+- Number of partner data sources consumed.
+- Devices producing ingress data.
+- Volume of ingress data.
+- Types of data.
 
 An even more valuable metric is the number of dashboards created from combined data sources. This number reflects the current-state business processes that are affected by new data sources. By sharing new data sources openly, your business can take advantage of the data by using reporting tools like Power BI to produce incremental insights and drive business change.
 
 ## Next steps
 
-After learning metrics are aligned, you're ready to begin [building the business case](.\cloud-migration-business-case.md) to deliver against those metrics.
+After learning metrics are aligned, you're ready to begin [building the business case](./cloud-migration-business-case.md) to deliver against those metrics.
 
 > [!div class="nextstepaction"]
-> [Build the cloud business case](.\cloud-migration-business-case.md)
+> [Build the cloud business case](./cloud-migration-business-case.md)

@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Remediate assets prior to migration
 
-During the assessment process of migration, the team seeks to identify any configurations that would make an asset incompatible with the chosen cloud provider. *Remediate* is a checkpoint in the migration process to ensure that those incompatibilities have been resolved. This article discusses a few common remediation tasks for reference. It also establishes a skeleton process for deciding whether remediation is a wise investment.
+During the assessment process of migration, the team seeks to identify any configurations that would make an asset incompatible with the chosen cloud provider. _Remediate_ is a checkpoint in the migration process to ensure that those incompatibilities have been resolved. This article discusses a few common remediation tasks for reference. It also establishes a skeleton process for deciding whether remediation is a wise investment.
 
 ## Common remediation tasks
 

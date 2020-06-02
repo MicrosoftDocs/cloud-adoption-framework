@@ -52,6 +52,7 @@
       "ms.service": "cloud-adoption-framework",
       "titleSuffix": "Cloud Adoption Framework",
       "brand": "azure",
+      "uhfHeaderId": "azure",
       "_op_documentIdPathDepotMapping": {
         "./": {
           "depot_name": "architecture-center",

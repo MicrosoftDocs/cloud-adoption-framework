@@ -1,6 +1,6 @@
 ---
 title: "Establish policy adherence processes"
-description: Create a strategy and processes for ensuring your cloud deployment stays in compliance with your policy requirements. 
+description: Create a strategy and processes for ensuring your cloud deployment stays in compliance with your policy requirements.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -63,7 +63,7 @@ After defining your cloud governance team and its processes, you need to explici
 For each of your policy statements, review requirements to determine what constitutes a policy violation. Generate your triggers using the information you've already established as part of the policy definition process.
 
 - **Risk tolerance:** Create violation triggers based on the metrics and risk indicators you established as part of your [risk tolerance analysis](./risk-tolerance.md).
-- **Defined policy requirements:** Policy statements may provide service level agreement (SLA), business continuity and disaster recovery (BCDR), or performance requirements that should be used as the basis for compliance triggers.
+- **Defined policy requirements:** Policy statements may provide service-level agreement (SLA), business continuity and disaster recovery (BCDR), or performance requirements that should be used as the basis for compliance triggers.
 
 ### Define actions
 
@@ -71,11 +71,13 @@ Each violation trigger should have a corresponding action. Triggered actions sho
 
 Some examples of violation triggers and actions:
 
+<!-- docsTest:ignore "Cost Management" "Deployment Acceleration" "Identity Baseline" "Resource Consistency" "Security Baseline" -->
+
 | Cloud governance discipline | Sample trigger | Sample action |
 |-----------------------------|----------------|---------------|
 | Cost Management | Monthly cloud spending is more than 20% higher than expected. | Notify the billing unit leader who will begin a review of resource usage. |
 | Security Baseline | Detect suspicious user activity. | Notify the IT security team and disable the suspect user account. |
-| Resource Consistency | CPU utilization for a workload is greater than 90%. | Notify the IT Operations team and scale out additional resources to handle the load. |
+| Resource Consistency | CPU utilization for a workload is greater than 90%. | Notify the IT operations team and scale out additional resources to handle the load. |
 
 ## Automation of monitoring and compliance
 

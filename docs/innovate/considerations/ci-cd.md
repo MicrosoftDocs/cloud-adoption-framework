@@ -21,7 +21,7 @@ There are a few key friction points to adoption that can be minimized through a 
 
 As described in [Measure for customer impact](./measure.md), positive validation of any hypothesis requires iteration and determination. You'll experience far more failures than wins during any innovation cycle. This is expected. However, when a customer need, hypothesis, and solution align at scale, the world changes quickly. This article aims to minimize [technical spikes](./build.md#reduce-complexity-and-delay-technical-spikes) that slow innovation but still make sure you keep a few solid best practices in place. Doing so will help the team design for future success while delivering on current customer needs.
 
-## Empowering adoption: the maturity model
+## Empower adoption: the maturity model
 
 The primary objective of the [Innovate methodology](./index.md) is to build customer partnerships and accelerate feedback loops, which will lead to market innovations. The following image and sections describe initial implementations that support this methodology.
 
@@ -87,7 +87,7 @@ At any stage of hypothesis validation, Azure DevOps and [Azure Pipelines](https:
 
 ## Integrated measurements
 
-When you [measure for customer impact](./measure.md), it's important to understand how customers react to changes in the solution. This data, known as *telemetry*, provides insights into the actions a user (or cohort of users) took when working with the solution. From this data, it's easy to get a quantitative validation of the hypothesis. Those metrics can then be used to adjust the solution and generate more fine-grained hypotheses. Those subtler changes help mature the initial solution in subsequent iterations, ultimately driving to repeat adoption at scale.
+When you [measure for customer impact](./measure.md), it's important to understand how customers react to changes in the solution. This data, known as _telemetry_, provides insights into the actions a user (or cohort of users) took when working with the solution. From this data, it's easy to get a quantitative validation of the hypothesis. Those metrics can then be used to adjust the solution and generate more fine-grained hypotheses. Those subtler changes help mature the initial solution in subsequent iterations, ultimately driving to repeat adoption at scale.
 
 In Azure, [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) provides the tools and interface to collect and review data from customer experiences. You can apply those observations and insights to refine the backlog by using [Azure Boards](https://docs.microsoft.com/azure/devops/boards).
 
