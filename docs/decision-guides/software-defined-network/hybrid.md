@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Software Defined Networking: Hybrid network
 
-The hybrid cloud network architecture allows virtual networks to access your on-premises resources and services and vice versa, using a Dedicated WAN connection such as ExpressRoute or other connection method to directly connect the networks.
+The hybrid cloud network architecture allows virtual networks to access your on-premises resources and services and vice versa, using a dedicated WAN connection such as ExpressRoute or other connection method to directly connect the networks.
 
 ![Hybrid network](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/images/expressroute.png)
 

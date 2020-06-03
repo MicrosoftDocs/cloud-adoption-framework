@@ -27,9 +27,9 @@ In this narrative, the cloud governance team is comprised of two systems adminis
 
 The current tolerance for risk is high and the appetite for investing in cloud governance is low. As such, the tolerance indicators act as an early warning system to trigger more investment of time and energy. If and when the following indicators are observed, you should iteratively improve the governance strategy.
 
-- **Cost Management:** The scale of deployment exceeds predetermined limits on number of resources or monthly cost.
-- **Security Baseline:** Inclusion of protected data in defined cloud adoption plans.
-- **Resource Consistency:** Inclusion of any mission-critical applications in defined cloud adoption plans.
+- **Cost management:** The scale of deployment exceeds predetermined limits on number of resources or monthly cost.
+- **Security baseline:** Inclusion of protected data in defined cloud adoption plans.
+- **Resource consistency:** Inclusion of any mission-critical applications in defined cloud adoption plans.
 
 [!INCLUDE [policy-statements](../../../../includes/policy-statements.md)]
 

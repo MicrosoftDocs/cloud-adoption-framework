@@ -2,25 +2,76 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 . "$here/Test-Constants.ps1"
 
-# TODO: Use [ValidateSet("Words", "WordsWithCasing", "LinkFormat", "LinkValidation")]
-
 function Test-AllMatches {
     [CmdletBinding()]    
     param(
         [Parameter(Mandatory)]
         [System.IO.FileInfo[]] $files,
         [string[]] $expressions,
-        [bool] $ignoreUrlContents = $false,
-        [bool] $requireCasingMatch = $false,
-        [bool] $testLinks = $false
+        [ValidateSet('Words', 'WordsWithCasing', 'Verbatim', 'LinkValidation', 'PotentialIssues')]
+        [string] $validationType,
+        [bool] $forceSuccess = $false,
+        [bool] $disablePrefixes = $false
     )
 
+    $useWordBoundaries = $false
+    $ignoreUrlContents = $false
+    $requireCasingMatch = $false
+    $testLinks = $false
+
+    switch -Exact ($validationType)
+    {
+        'Words' 
+        { 
+            $useWordBoundaries = $true
+            $ignoreUrlContents = $true
+            break 
+        }
+        'WordsWithCasing' 
+        { 
+            $useWordBoundaries = $true
+            $ignoreUrlContents = $true
+            $requireCasingMatch = $true
+            break 
+        }
+        'Verbatim'
+        { 
+            break 
+        }
+        'LinkValidation' 
+        { 
+            $testLinks = $true
+            break 
+        }
+        Default { throw "validationType is invalid"}
+    }
+
     $count = 0
-    
+    $fileCount = 0
+
     foreach ($file in $files)
     {
-        $result = Test-Match $file $expressions $ignoreUrlContents $requireCasingMatch $testLinks
-        $count += $result
+        $fileCount++
+          [TestLog]::WriteFilename($file, "Testing matches for", $fileCount)
+
+        $result = Test-Match $file $expressions `
+            -UseWordBoundaries $useWordBoundaries `
+            -IgnoreUrlContents $ignoreUrlContents `
+            -RequireCasingMatch $requireCasingMatch `
+            -TestLinks $testLinks `
+            -DisablePrefixes $disablePrefixes
+
+        try {
+            $count += $result
+        }
+        catch {
+            [TestLog]::WriteException($_, $file, $($MyInvocation).MyCommand)
+        }
+    }
+
+    if ($forceSuccess)
+    {
+        return 0
     }
 
     return $count
@@ -28,92 +79,176 @@ function Test-AllMatches {
 
 function Test-Match(
     [System.IO.FileInfo] $file, 
-    [string[]] $expressions, 
-    [bool] $ignoreUrlContents = $false,
-    [bool] $requireCasingMatch = $false,
-    [bool] $testLinks = $false
+    [string[]] $expressions,
+    [bool] $useWordBoundaries, 
+    [bool] $ignoreUrlContents,
+    [bool] $requireCasingMatch,
+    [bool] $testLinks,
+    [bool] $disablePrefixes
     )
 {
     $count = 0
-    $text = Get-FileContents $file
+
+    $page = [Page]::new($file)
+    $text = $page.GetText()
     
     if ($testLinks)
     {
         $expressions = @($(Get-RegexForUrl))
     }
-    elseif ($ignoreUrlContents)
+    else
     {
-        $text = Remove-MarkdownUrls $text 
-        $text = Remove-OtherUrls $text
-        $text = Remove-ImagePaths $text
+        if ($file.Name -like '*.md')
+        {
+            # TODO: Handle this differently.
+            [TestLog]::WriteSuperVerbose("REMOVING METADATA...")
+            $text = $page.GetTextWithoutMetadata()
+        }
+        
+        if ($ignoreUrlContents)
+        {
+            $text = Remove-Urls $text 
+        }
+
+        if ($requireCasingMatch)
+        {
+            $text = Remove-LocalPaths $text
+            $text = Remove-LocalBookmarks $text
+            $text = Remove-HtmlEntities $text
+        }
+        elseif ($useWordBoundaries)
+        {
+            $text = Remove-HtmlEntities $text
+        }
+
+          [TestLog]::WriteContents($text)
     }
 
-    $text = Remove-NonbreakingSpaces $text
+    foreach ($originalExpression in $expressions)
+    {
+        if ($originalExpression.Trim().Length -eq 0) {
+            continue
+        }
 
-    foreach ($originalExpression in $expressions) {
-    
-        if ($originalExpression.Trim().Length -gt 0) {
+        $expression = $originalExpression
+        if ($expression.EndsWith('$') -and (-not $expression.EndsWith('\r?$')))
+        {
+            # Handle nonstandard .NET processing of $ (endline) character.
+            $expression = "$($expression.Substring(0, $expression.Length - 1))\r?$"
+              [TestLog]::WriteSuperVerbose("FIXED EXPRESSION: $expression")
+        }
 
-            if ($requireCasingMatch) 
+        if ($requireCasingMatch) 
+        {
+            #$expression = "(?i)(.{0,3})\b($originalExpression\b)"
+            $expression = "(?i)([^\s]* *[\[\(""]?)\b($originalExpression\b)"
+        }
+        elseif ($useWordBoundaries)
+        {
+            $expression = "(?i)\b$originalExpression\b"
+        }
+
+          [TestLog]::WriteSuperVerbose("FINDING MATCHES FOR: $expression")
+        $options = [Text.RegularExpressions.RegexOptions]::Multiline
+        $matches = [Regex]::new($expression, $options).Matches($text)
+
+        foreach ($match in $matches)
+        {
+            if ($testLinks)
             {
-                $expression = "(?i)\b$originalExpression\b"
-            }
-            elseif ($testLinks)
-            {
-                $expression = $originalExpression
-            }
-            else 
-            {
-                if ($originalExpression -match '\\')
+                $uri = $match.Value
+
+                  [TestLog]::WriteSuperVerbose($uri)
+                $result = Test-Uri $uri
+                
+                if ($result -ne 200)
                 {
-                    $expression = $originalExpression
+                    [TestLog]::WriteIssue("RESULT in $($file.Name): $result - $uri")
+                    $count++
                 }
-                else
-                {
-                    $expression = "(?i)\b$originalExpression\b"
-                }
+
+                continue
             }
 
-            $options = [Text.RegularExpressions.RegexOptions]::Multiline
-            $matches = [regex]::new($expression, $options).Matches($text)
+            # TODO: Is this still needed?
+            $ignoredTermsMatches = [Regex]::new($(Get-RegexForIgnoredTerms), $options).Matches($text)
+            $ignoredTerms = if ($ignoredTermsMatches.Count -gt 0) { $ignoredTermsMatches.Groups[0].Value } else { "" }
 
-            foreach ($match in $matches) {
+            if ($requireCasingMatch)
+            {
+                $prefix = $match.Groups[1].Value
+                $value = $match.Groups[2].Value
+                $firstCharacter = $originalExpression.Substring(0,1)
+                $isUpper = ($firstCharacter -clike $firstCharacter.ToUpper())
+                
+                [TestLog]::WriteSuperVerbose("PREFIX: '$prefix'")
+                [TestLog]::WriteSuperVerbose("VALUE: '$value'")
+                
+                if ($ignoredTerms -match "\b$value\b")
+                {
+                    [TestLog]::WriteSuperVerbose("Ignored match '$($match.Value)' found in $($file.FullName)")
+                    continue
+                }
+
+                $midSentenceRegex = $(Get-RegexForSentenceMiddlePrefixes)
+                $startingRegex = $(Get-RegexForSentenceStartPrefixes)
+
+                if ($disablePrefixes)
+                {
+                    $midsentenceRegex = 'disablePrefixes'
+                    $startingRegex = 'disablePrefixes'
+                }
+
+                if ($isUpper -or ($prefix -match $midsentenceRegex))                {
+                    
+                    # Either already uppercase, or appears midsentence, 
+                    # so compare directly.
+                    
+                    $exp = $originalExpression
+               
+                }
+                elseif (($prefix.Length -eq 0) -or ($prefix -match $startingRegex))
+                {
+                    $end = $originalExpression.Substring(1)
+                    $exp = "$($firstCharacter.ToUpper())$end"
+                }
+            else
+            {
+                    [TestLog]::WriteError("UNKNOWN PREFIX '$prefix' IN '$prefix$value' for $($file.FullName)")
+                    $count++
+                }
+
+                [TestLog]::WriteSuperVerbose("$value -cmatch $exp")
+                if (-not ($value -cmatch $exp))
+                {
+                    if ($prefix -eq 'see [')
+                    {
+                        [TestLog]::WriteLine("FOUND: see [", 'Red', $false)
+                    }
+                    
+                    [TestLog]::WriteIssue("Case mismatch '$value' in $($file.FullName)")
+                    [TestLog]::WriteLine("    '$prefix'", 'DarkGray', $false)
+                    $count++
+                }
             
-                if ($testLinks)
-                {
-                    $uri = $match.Value
-                    $result = Test-Uri $uri
+                continue                
+            }
 
-                    if ($result -ne 200)
-                    {
-                        Write-Host "RESULT in $($file.Name): $result - $uri"
-                        $count++
-                    }
-                }
-                elseif ($requireCasingMatch)
+            if ($useWordBoundaries)
+            {
+                if ($ignoredTerms -match "\b$value\b")
                 {
-                    if (-not ($match.Value -clike $originalExpression))
-                    {
-                        write-host "Case mismatch '$($match.Value)' in $($file.FullName)"
-                        $count++
-                    }
+                    [TestLog]::WriteSuperVerbose("Ignored match '$($match.Value)' found in $($file.FullName)")
+                    continue
                 }
-                else
-                {
-                    $options = [Text.RegularExpressions.RegexOptions]::Multiline
-                    $ignoredTermsMatches = [regex]::new($(Get-RegexForIgnoredTerms), $options).Matches($text)
-                    $ignoredTerms = if ($ignoredTermsMatches.Count -gt 0) { $ignoredTermsMatches.Groups[0].Value } else { "" }
 
-                    if ($ignoredTerms -notlike "* $($match.Value) *")
-                    {
-                        write-host "Match '$($match.Value)' found in $($file.FullName)"
-                        $count++
-                    }
-                    else 
-                    {
-                        write-host "Ignored match '$($match.Value)' found in $($file.FullName)"
-                    }
-                }
+                Write-MatchInfo $file.FullName $expression $match.Value
+                $count++      # TODO: Verify this is correct
+            }
+            else
+            {
+                Write-MatchInfo $file.FullName $expression $match.Value
+                $count++
             }
         }
     }
@@ -121,50 +256,97 @@ function Test-Match(
     return $count
 }
 
-function Remove-MarkdownUrls(
-    [string]$text) 
+function Write-MatchInfo(
+    [string] $fileName, 
+    [string] $expression, 
+    [string] $value)
 {
-    $result = $text
-    $matches = [regex]::new($(Get-RegexForUrl)).Matches($text)
-
-    foreach ($match in $matches)
+    if ($value.Length -gt 100)
     {
-        $result = $result.Replace("$($match.Value))", ")")
+        $value = "$($value.Substring(0,100))..."
     }
-
-    return $result
+    
+    [TestLog]::WriteIssue("Match '$value' found for '$expression' in '$fileName'")
+    [TestLog]::WriteSuperVerbose("    EXPRESSION: $expression")
+    [TestLog]::WriteSuperVerbose("    VALUE: $value")
 }
 
-function Remove-OtherUrls(
-    [string]$text
-)
-{
-    return Remove-Matches $(Get-RegexForUrl) $text
-}
-
-function Remove-ImagePaths(
+function Remove-Urls(
     [string]$text) 
 {
-    return Remove-Matches $(Get-RegexForImagePath) $text
+      [TestLog]::WriteSuperVerbose("REMOVING URLs...")
+    return (Remove-MatchesUsingToken $(Get-RegexForUrl) $text)
 }
 
-function Remove-NonbreakingSpaces(
-    [string]$text
-)
+function Remove-LocalPaths(
+    [string] $text) 
 {
-    return Remove-Matches "&nbsp;" $text
+      [TestLog]::WriteSuperVerbose("REMOVING LOCAL PATHS...")
+
+    return (Remove-MatchesUsingToken $(Get-RegexForLocalPath) $text)
 }
-function Remove-Matches(
+
+function Remove-LocalBookmarks(
+    [string] $text)
+{
+      [TestLog]::WriteSuperVerbose("REMOVING LOCAL BOOKMARKS...")
+
+    return (Remove-Matches $(Get-RegexForLocalBookmark) $text)
+}
+
+function Remove-MatchesUsingToken(
     [string] $expression,
     [string] $text
 )
 {
+    $token = "replace-match-token"
     $result = $text
-    $matches = [regex]::new($expression).Matches($text)
+    $matches = [Regex]::new($expression).Matches($text)
 
     foreach ($match in $matches)
     {
-        $result = $result.Replace($match.Value, "")
+        $result = $result.Replace("$($match.Value)", $token)
+    }
+
+    $regex = Get-StringChopStart $(Get-RegexForUrlPath) '(?i)' 
+    $expression = "(?i)$token/$regex"
+
+    do {
+        $text = $result 
+        $matches = [Regex]::new($expression).Matches($text)
+
+        foreach ($match in $matches)
+        {
+            $result = $result.Replace("$($match.Value)", $token)
+        }
+    } while ($matches.Count -gt 0)
+
+    $result = $result.Replace($token, '')
+    return $result
+}
+
+function Remove-HtmlEntities(
+    [string]$text
+)
+{
+      [TestLog]::WriteSuperVerbose("REMOVING HTML ENTITIES...")
+
+    return Remove-Matches "(&nbsp;|&mdash;|&ndash)" $text $true
+}
+
+function Remove-Matches(
+    [string] $expression,
+    [string] $text,
+    [bool] $replaceWithSpace = $false
+)
+{
+    $result = $text
+    $matches = [Regex]::new($expression).Matches($text)
+    $token = if ($replaceWithSpace) { ' ' } else { '' }
+
+    foreach ($match in $matches)
+    {
+        $result = $result.Replace($match.Value, $token)
     }
 
     return $result

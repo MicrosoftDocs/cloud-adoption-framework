@@ -22,8 +22,8 @@ Organizing cloud-based resources is a crucial task for IT, unless you only have 
   - [Cloud accounting models](../../strategy/cloud-accounting.md)
   - [ROI calculations](../../strategy/financial-models.md#return-on-investment)
   - [Cost tracking](../../ready/azure-best-practices/track-costs.md)
-  - [Budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
-  - [Alerts](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Budgets](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+  - [Alerts](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
   - [Recurring spend tracking and reporting](../../govern/cost-management/compliance-processes.md)
   - [Post-implementation optimizations](../../govern/cost-management/discipline-improvement.md#operate-and-post-implementation)
   - [Cost-optimization tactics](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices)
@@ -43,7 +43,7 @@ Your tagging approach can be simple or complex, with the emphasis ranging from s
 
 An IT-aligned tagging focus, such as tagging based on workload, application, function, or environment, reduces the complexity of monitoring assets and simplifies making management decisions based on operational requirements.
 
-Tagging schemes that include a business aligned focus, such as accounting, business ownership, or business criticality may require a larger time investment to create tagging standards that reflect business interests and maintain those standards over time. However, the result of this process is a tagging system providing an improved ability to account for costs and value of IT assets to the overall business. This association of an asset's business value to its operational cost is one of the first steps in changing the cost center perception of IT within your wider organization.
+Tagging schemes that include a business-aligned focus, such as accounting, business ownership, or business criticality may require a larger time investment to create tagging standards that reflect business interests and maintain those standards over time. This investment yields a tagging system that provides improved accounting for costs and value of IT assets to the overall business. This association of an asset's business value to its operational cost is one of the first steps in changing the cost center perception of IT within your wider organization.
 
 ## Baseline naming conventions
 
@@ -63,20 +63,22 @@ As part of your planning process, use the following questions to help determine 
 - Does your naming and tagging policies need to integrate with existing naming and organizational policies within your company?
 - Will you implement a chargeback or showback accounting system? Will you need to associate resources with accounting information for departments, business groups, and teams in more detail than a simple subscription-level breakdown allows?
 - Does tagging need to represent details such regulatory compliance requirements for a resource? What about operational details such as uptime requirements, patching schedules, or security requirements?
-- What tags will be required for all resources based on central IT policy? What tags will be optional? Are individual teams allowed to implement their own custom tagging schemes?
+- What tags will be required for all resources based on Central IT policy? What tags will be optional? Are individual teams allowed to implement their own custom tagging schemes?
 
 The common tagging patterns listed below provide examples of how tagging can be used to organize cloud assets. These patterns are not meant to be exclusive and can be used in parallel, providing multiple ways of organizing assets based on your company's needs.
 
 <!-- markdownlint-disable MD033 -->
+<!-- docsTest:disable -->
 
 | Tag type | Examples | Description |
 |-----|-----|-----|
-| Functional            | app = catalogsearch1 <br/>tier = web <br/>webserver = apache<br/>env = prod <br/>env = staging <br/>env = dev                 | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details.                                 |
-| Classification        | confidentiality=private<br/>sla = 24hours                                 | Classifies a resource by how it is used and what policies apply to it                               |
-| Accounting            | department = finance <br/>program = business-initiative <br/>region = northamerica | Allows a resource to be associated with specific groups within an organization for billing purposes |
-| Partnership           | owner = jsmith <br/>contactalias = catsearchowners<br/>stakeholders = user1;user2;user3<br/>                       | Provides information about what people (outside of IT) are related or otherwise affected by the resource                      |
-| Purpose               | businessprocess=support<br/>businessimpact=moderate<br/>revenueimpact=high   | Aligns resources to business functions to better support investment decisions  |
+| Functional | app&nbsp;=&nbsp;catalogsearch1 <br> tier&nbsp;=&nbsp;web <br> webserver&nbsp;=&nbsp;apache <br> env&nbsp;=&nbsp;prod <br> env&nbsp;=&nbsp;staging <br> env&nbsp;=&nbsp;dev | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |
+| Classification | confidentiality&nbsp;=&nbsp;private <br> SLA&nbsp;=&nbsp;24hours | Classifies a resource by how it is used and what policies apply to it. |
+| Accounting | department&nbsp;=&nbsp;finance <br> program&nbsp;=&nbsp;business-initiative <br> region&nbsp;=&nbsp;northamerica | Allows a resource to be associated with specific groups within an organization for billing purposes. |
+| Partnership | owner&nbsp;=&nbsp;jsmith <br> contactalias&nbsp;=&nbsp;catsearchowners <br> stakeholders&nbsp;=&nbsp;user1;user2;user3 | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
+| Purpose | businessprocess&nbsp;=&nbsp;support <br> businessimpact&nbsp;=&nbsp;moderate <br> revenueimpact&nbsp;=&nbsp;high | Aligns resources to business functions to better support investment decisions. |
 
+<!-- docsTest:enable -->
 <!-- markdownlint-enable MD033 -->
 
 ## Learn more
@@ -84,7 +86,7 @@ The common tagging patterns listed below provide examples of how tagging can be 
 For more information about naming and tagging in Azure, see:
 
 - [Naming conventions for Azure resources](../../ready/azure-best-practices/naming-and-tagging.md). Refer to this guidance for recommended naming conventions for Azure resources.
-- [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags). You can apply tags in Azure at both the resource group and individual resource level, giving you flexibility in the granularity of any accounting reports based on applied tags.
+- [Use tags to organize your Azure resources and management hierarchy](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources). You can apply tags in Azure at both the resource group and individual resource level, giving you flexibility in the granularity of any accounting reports based on applied tags.
 
 ## Next steps
 

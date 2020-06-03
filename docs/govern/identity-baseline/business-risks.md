@@ -1,6 +1,6 @@
 ---
-title: "Identity Baseline business risks"
-description: Understand and see samples of typical customer adoption of an Identity Baseline discipline within a cloud governance strategy. 
+title: Motivations and business risks in the Identity Baseline discipline
+description: Understand and see samples of typical customer adoption of an Identity Baseline discipline within a cloud governance strategy.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
@@ -10,13 +10,13 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-# Identity Baseline motivations and business risks
+# Motivations and business risks in the Identity Baseline discipline
 
 This article discusses the reasons that customers typically adopt an Identity Baseline discipline within a cloud governance strategy. It also provides a few examples of business risks that drive policy statements.
 
 <!-- markdownlint-disable MD026 -->
 
-## Identity Baseline relevancy
+## Relevance
 
 Traditional on-premises directories are designed to allow businesses to strictly control permissions and policies for users, groups, and roles within their internal networks and datacenters. These directories typically support single-tenant implementations, with services applicable only within the on-premises environment.
 
@@ -37,7 +37,7 @@ Risks will differ between organization, but the following serve as common identi
 
 ## Next steps
 
-Using the [Cloud Management template](./template.md), document business risks that are likely to be introduced by the current cloud adoption plan.
+Use the [Identity Baseline discipline template](./template.md) to document business risks that are likely to be introduced by the current cloud adoption plan.
 
 Once an understanding of realistic business risks is established, the next step is to document the business's tolerance for risk and the indicators and key metrics to monitor that tolerance.
 

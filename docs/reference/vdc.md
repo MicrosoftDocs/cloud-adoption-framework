@@ -3,14 +3,13 @@ title: Azure Virtual Datacenter
 description: Azure Virtual Datacenter is now the Microsoft Cloud Adoption Framework for Azure. Learn about the resources available to support this transition.
 author: tracsman
 ms.author: jonor
-ms.date: 06/12/2019
-ms.topic: landing-page
+ms.date: 05/12/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
-keywords: Azure
-layout: LandingPage
 ---
 
+<!-- docsTest:ignore "Azure Virtual Datacenter" "Ready and Govern methodologies" "Azure Virtual Datacenter: Concepts" "Lift and Shift Guide" -->
 <!-- cSpell:ignore tracsman jonor -->
 
 # Azure Virtual Datacenter

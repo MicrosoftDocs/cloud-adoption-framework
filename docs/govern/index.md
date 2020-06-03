@@ -3,104 +3,27 @@ title: "Governance in the Microsoft Cloud Adoption Framework for Azure"
 description: Use the Cloud Adoption Framework for Azure to learn to assess existing policies, build an initial governance foundation, and iteratively add governance tools.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 09/11/2019
-ms.topic: landing-page
+ms.date: 05/04/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
-layout: LandingPage
 ---
 
 # Governance in the Microsoft Cloud Adoption Framework for Azure
 
 The cloud creates new paradigms for the technologies that support the business. These new paradigms also change how those technologies are adopted, managed, and governed. When entire datacenters can be virtually torn down and rebuilt with one line of code executed by an unattended process, we have to rethink traditional approaches. This is especially true for governance.
 
-## Get started with cloud governance
-
-Cloud governance is an iterative process. For organizations with existing policies that govern on-premises IT environments, cloud governance should complement those policies. However, the level of corporate policy integration between on-premises and the cloud varies depending on cloud governance maturity and a digital estate in the cloud. As the cloud estate changes over time, so do cloud governance processes and policies. The following exercises help you start building your initial governance foundation.
+Cloud governance is an iterative process. For organizations with existing policies that govern on-premises IT environments, cloud governance should complement those policies. The level of corporate policy integration between on-premises and the cloud varies depending on cloud governance maturity and a digital estate in the cloud. As the cloud estate changes over time, so do cloud governance processes and policies. The following exercises help you start building your initial governance foundation.
 
 <!-- markdownlint-disable MD033 -->
 
-<ul class="panelContent cardsF">
-    <li style="display: flex; flex-direction: column;">
-        <a href="./methodology.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/1.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Methodology</h3>
-                            Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework to begin thinking through the end state solution.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./benchmark.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/2.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Benchmark</h3>
-                            Assess your current state and future state to establish a vision for applying the framework.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./initial-foundation.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/3.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Initial governance foundation</h3>
-                            Begin your governance journey with a small, easily implemented set of governance tools. This initial governance foundation is called a minimum viable product (MVP).
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./foundation-improvements.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/4.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Improve the initial governance foundation</h3>
-                            Throughout implementation of the cloud adoption plan, iteratively add governance controls to address tangible risks as you progress toward the end state.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-</ul>
-
-<!-- markdownlint-enable MD033 -->
+| | |
+|---|---|
+| <br> ![1](../_Images/icons/1.png) | <br> [Methodology](./methodology.md): Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework to begin thinking through the end state solution. |
+| <br> ![2](../_Images/icons/2.png) | <br> [Benchmark](./benchmark.md): Assess your current state and future state to establish a vision for applying the framework. |
+| <br> ![3](../_Images/icons/3.png) | <br> [Initial governance foundation](./initial-foundation.md): Begin your governance journey with a small, easily implemented set of governance tools. This initial governance foundation is called a minimum viable product (MVP).                                |
+| <br> ![4](../_Images/icons/4.png) | <br> [Improve the initial governance foundation](./foundation-improvements.md): Throughout implementation of the cloud adoption plan, iteratively add governance controls to address tangible risks as you progress toward the end state. |
 
 ## Objective of this content
 
@@ -117,17 +40,10 @@ The content in the Cloud Adoption Framework affects the business, technology, an
 
 The cloud architect serves as the thought leader and facilitator to bring these audiences together. The content in this collection of guides is designed to help the cloud architect facilitate the right conversation, with the right audience, to drive necessary decisions. Business transformation that's empowered by the cloud depends on the cloud architect to help guide decisions throughout the business and IT.
 
-**Cloud architect specialization in this section:** Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. This section of the Cloud Adoption Framework is designed for cloud architects with a passion for mitigating or reducing technical risks. Some cloud providers refer to these specialists as *cloud custodians*, but we prefer *cloud guardians* or, collectively, the *cloud governance team*. In each actionable governance guide, the articles show how the composition and role of the cloud governance team might change over time.
+**Cloud architect specialization in this section:** Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. This section of the Cloud Adoption Framework is designed for cloud architects with a passion for mitigating or reducing technical risks. Some cloud providers refer to these specialists as _cloud custodians_, but we prefer _cloud guardians_ or, collectively, the _cloud governance team_. The actionable governance guides show how the composition and role of the cloud governance team might change over time.
 
 ## Use this guide
 
-If you want to follow this guide from beginning to end, this content aids in developing a robust cloud governance strategy in parallel with cloud implementation. The guidance walks you through the theory and implementation of such a strategy.
+Reading the Govern methodology content end-to-end will help you develop a robust cloud governance strategy in parallel with cloud implementation. The guidance walks you through the theory and implementation of this strategy.
 
 For a crash course on the theory and quick access to Azure implementation, get started with the [governance guides overview](./guides/index.md). Using this guidance, you can start small and iteratively improve your governance needs in parallel with cloud adoption efforts.
-
-## Next steps
-
-Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework.
-
-> [!div class="nextstepaction"]
-> [Understand the methodology](./methodology.md)

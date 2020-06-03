@@ -12,15 +12,15 @@ ms.custom: governance
 
 # Security Baseline discipline improvement
 
-The Security Baseline discipline focuses on ways of establishing policies that protect the network, assets, and most importantly the data that will reside on a cloud provider's solution. Within the Five Disciplines of Cloud Governance, Security Baseline includes classification of the digital estate and data. It also includes documentation of risks, business tolerance, and mitigation strategies associated with the security of the data, assets, and network. From a technical perspective, this also includes involvement in decisions regarding [encryption](../../decision-guides/encryption/index.md), [network requirements](../../decision-guides/software-defined-network/index.md), [hybrid identity strategies](../../decision-guides/identity/index.md), and the [processes](./compliance-processes.md) used to develop cloud Security Baseline policies.
+The Security Baseline discipline focuses on ways of establishing policies that protect the network, assets, and most importantly the data that will reside on a cloud provider's solution. Within the Five Disciplines of Cloud Governance, the Security Baseline discipline includes classification of the digital estate and data. It also includes documentation of risks, business tolerance, and mitigation strategies associated with the security of the data, assets, and network. From a technical perspective, this also includes involvement in decisions regarding [encryption](../../decision-guides/encryption/index.md), [network requirements](../../decision-guides/software-defined-network/index.md), [hybrid identity strategies](../../decision-guides/identity/index.md), and the [processes](./compliance-processes.md) used to develop Security Baseline policies for the cloud.
 
 This article outlines some potential tasks your company can engage in to better develop and mature the Security Baseline discipline. These tasks can be broken down into planning, building, adopting, and operating phases of implementing a cloud solution, which are then iterated on allowing the development of an [incremental approach to cloud governance](../guides/index.md#an-incremental-approach-to-cloud-governance).
 
 ![Four phases of adoption](../../_images/govern/adoption-phases.png)
 
-*Figure 1 - Adoption phases of the incremental approach to cloud governance.*
+_Figure 1: Adoption phases of the incremental approach to cloud governance._
 
-It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [Policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Security Baseline governance capabilities.
+It's impossible for any one document to account for the requirements of all businesses. As such, this article outlines suggested minimum and potential example activities for each phase of the governance maturation process. The initial objective of these activities is to help you build a [policy MVP](../guides/index.md#an-incremental-approach-to-cloud-governance) and establish a framework for incremental policy improvement. Your cloud governance team will need to decide how much to invest in these activities to improve your Security Baseline discipline.
 
 > [!CAUTION]
 > Neither the minimum or potential activities outlined in this article are aligned to specific corporate policies or third-party compliance requirements. This guidance is designed to help facilitate the conversations that will lead to alignment of both requirements with a cloud governance model.
@@ -32,7 +32,7 @@ This phase of governance maturity bridges the divide between business outcomes a
 **Minimum suggested activities:**
 
 - Evaluate your [Security Baseline toolchain](./toolchain.md) options.
-- Develop a draft Architecture Guidelines document and distribute to key stakeholders.
+- Develop a draft architecture guidelines document and distribute to key stakeholders.
 - Educate and involve the people and teams affected by the development of architecture guidelines.
 - Add prioritized security tasks to your migration backlog.
 
@@ -41,13 +41,11 @@ This phase of governance maturity bridges the divide between business outcomes a
 - Define a data classification schema.
 - Conduct a digital estate planning process to inventory the current IT assets powering your business processes and supporting operations.
 - Conduct a [policy review](../../govern/policy-compliance/cloud-policy-review.md) to begin the process of modernizing existing corporate IT security policies, and define MVP policies addressing known risks.
-- Review your cloud platform's security guidelines. For Azure these can be found in the [Microsoft Service Trust Platform](https://servicetrust.microsoft.com).
-- Determine whether your Security Baseline policy includes a [Security Development Lifecycle](https://www.microsoft.com/en-us/securityengineering/sdl).
+- Review your cloud platform's security guidelines. For Azure these can be found in the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com).
+- Determine whether your Security Baseline policy includes a [security development lifecycle](https://www.microsoft.com/sdl).
 - Evaluate network, data, and asset-related business risks based on the next one to three releases, and gauge your organization's tolerance for those risks.
-- Review Microsoft's [top trends in cybersecurity](https://www.microsoft.com/security/operations/security-intelligence-report) report to get an overview of the current security landscape.
-- Consider developing a [Security DevOps](https://www.microsoft.com/en-us/securityengineering/devsecops) role in your organization.
-
-<!-- "en-us" location is required for the URLs above. -->
+- Review Microsoft's [top trends in cybersecurity](https://www.microsoft.com/security/operations/security-intelligence-report) report for an overview of the current security landscape.
+- Consider developing a [DevSecOps](https://www.microsoft.com/devsecops) role in your organization.
 
 ## Build and predeployment
 
@@ -56,7 +54,7 @@ Several technical and nontechnical prerequisites are required to successful migr
 **Minimum suggested activities:**
 
 - Implement your [Security Baseline toolchain](./toolchain.md) by rolling out in a predeployment phase.
-- Update the Architecture Guidelines document and distribute to key stakeholders.
+- Update the architecture guidelines document and distribute to key stakeholders.
 - Implement security tasks on your prioritized migration backlog.
 - Develop educational materials and documentation, awareness communications, incentives, and other programs to help drive user adoption.
 
@@ -68,7 +66,7 @@ Several technical and nontechnical prerequisites are required to successful migr
 - Evaluate your organization's [least-privilege access](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-delegate-by-task) policies, and use task-based roles to provide access to specific resources.
 - Apply security and monitoring mechanisms to all cloud services and virtual machines.
 - Automate [security policies](../../decision-guides/policy-enforcement/index.md) where possible.
-- Review your Security Baseline policy and determine if you need to modify your plans according to best practices guidance such as those outlined in the [Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl).
+- Review your Security Baseline policy and determine if you need to modify your plans according to best practices guidance such as those outlined in the [security development lifecycle](https://www.microsoft.com/sdl).
 
 ## Adopt and migrate
 
@@ -77,12 +75,12 @@ Migration is an incremental process that focuses on the movement, testing, and a
 **Minimum suggested activities:**
 
 - Migrate your [Security Baseline toolchain](./toolchain.md) from predeployment to production.
-- Update the Architecture Guidelines document and distribute to key stakeholders.
+- Update the architecture guidelines document and distribute to key stakeholders.
 - Develop educational materials and documentation, awareness communications, incentives, and other programs to help drive user adoption.
 
 **Potential activities:**
 
-- Review the latest Security Baseline and threat information to identify any new business risks.
+- Review the latest security baseline and threat information to identify any new business risks.
 - Gauge your organization's tolerance to handle new security risks that may arise.
 - Identify deviations from policy, and enforce corrections.
 - Adjust security and access control automation to ensure maximum policy compliance.
@@ -98,7 +96,7 @@ Once the transformation is complete, governance and operations must live on for 
 
 - Validate and refine your [Security Baseline toolchain](./toolchain.md).
 - Customize notifications and reports to alert you of potential security issues.
-- Refine the Architecture Guidelines to guide future adoption processes.
+- Refine the architecture guidelines to guide future adoption processes.
 - Communicate and educate the affected teams periodically to ensure ongoing adherence to architecture guidelines.
 
 **Potential activities:**

@@ -1,5 +1,5 @@
 ---
-title: Innovation tools to empower adoption 
+title: Innovation tools to empower adoption
 description: Learn about Azure tools that use the innovate methodology to remove friction and empower adoption incrementally as hypotheses mature.
 author: BrianBlanchard
 ms.author: brblanch

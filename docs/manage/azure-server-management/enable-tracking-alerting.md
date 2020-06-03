@@ -27,9 +27,9 @@ To enable file-content tracking for the hosts file, follow the steps in [Enable 
 
 You can also add an alert for changes to files that you're tracking. For example, say you want to set an alert for changes to the hosts file. Select **Log Analytics** on the command bar or Log Search for the linked Log Analytics workspace. In Log Analytics, use the following query to search for changes to the hosts file:
 
-```kusto
-ConfigurationChange | where FieldsChanged contains "FileContentChecksum" and FileSystemPath contains "hosts"
-```
+  ```kusto
+  ConfigurationChange | where FieldsChanged contains "FileContentChecksum" and FileSystemPath contains "hosts"
+  ```
 
 ![Screenshot of the Log Analytics query editor in the Azure portal](./media/change-tracking2.png)
 
@@ -93,7 +93,7 @@ Use the following query to detect changes to well-known registry keys.
 
 ## Next steps
 
-Learn how to use Azure Automation to [create update schedules](./update-schedules.md) to manage updates to your servers.
+Learn how Azure Automation can [create update schedules](./update-schedules.md) to manage updates for your servers.
 
 > [!div class="nextstepaction"]
 > [Create update schedules](./update-schedules.md)

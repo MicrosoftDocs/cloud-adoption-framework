@@ -1,6 +1,6 @@
 ---
 title: Deployment Acceleration policy compliance processes
-description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support a Deployment Management governance discipline.
+description: Use the Cloud Adoption Framework for Azure to learn an approach to creating processes that support a Deployment Management discipline.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 09/17/2019
@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Deployment Acceleration policy compliance processes
 
-This article discusses an approach to policy adherence processes that govern [Deployment Acceleration](./index.md). Effective governance of cloud configuration starts with recurring manual processes designed to detect issues and impose policies to remediate those risks. However, you can automate these processes and supplement with tooling to reduce the overhead of governance and allow for faster response to deviation.
+This article discusses an approach to policy-adherence processes that govern the [Deployment Acceleration discipline](./index.md). Effective governance of cloud configuration starts with recurring manual processes designed to detect issues and impose policies to remediate those risks. You can automate these processes and supplement to reduce the overhead of governance and allow for faster response to deviation.
 
 ## Planning, review, and reporting processes
 
@@ -26,17 +26,17 @@ The best Deployment Acceleration tools in the cloud are only as good as the proc
 
 **Annual planning:** Conduct an annual high-level review of Deployment Acceleration strategy. Explore future corporate priorities and updated cloud adoption strategies to identify potential risk increase and other emerging configuration needs and opportunities. Also use this time to review the latest DevOps best practices and integrate these into your policies and review processes.
 
-**Quarterly review and planning:** Conduct a quarterly review of operational audit data and incident reports to identify any changes required in Deployment Acceleration policy. As part of this process, review current DevOps and DevTechOps best practices, and update policy as appropriate. After the review is complete, align application and systems design guidance with updated policy.
+**Quarterly review and planning:** Conduct a quarterly review of operational audit data and incident reports to identify any changes required in Deployment Acceleration policy. As part of this process, review current DevOps and devtechops best practices, and update policy as appropriate. After the review is complete, align application and systems design guidance with updated policy.
 
-This planning process is also a good time to evaluate the current membership of your cloud governance team for knowledge gaps related to new or changing policy and risks related to DevOps and Deployment Acceleration. Invite relevant IT staff to participate in reviews and planning as either temporary technical advisors or permanent members of your team.
+This planning process is also a good time to evaluate the current membership of your cloud governance team for knowledge gaps related to new or changing policy and risks related to DevOps and deployment acceleration. Invite relevant IT staff to participate in reviews and planning as either temporary technical advisors or permanent members of your team.
 
-**Education and training:** On a bimonthly basis, offer training sessions to make sure IT staff and developers are up-to-date on the latest Deployment Acceleration strategy and requirements. As part of this process review and update any documentation, guidance, or other training assets to ensure they are in sync with the latest corporate policy statements.
+**Education and training:** On a bimonthly basis, offer training sessions to make sure IT staff and developers are up-to-date on the latest Deployment Acceleration strategy and requirements. As part of this process review and update any documentation, guidance, or other training assets to ensure they're in sync with the latest corporate policy statements.
 
 **Monthly audit and reporting reviews:** Perform a monthly audit on all cloud deployments to assure their continued alignment with configuration policy. Review deployment-related activities with IT staff and identify any compliance issues not already handled as part of the ongoing monitoring and enforcement process. The result of this review is a report for the cloud strategy team and each cloud adoption team to communicate overall adherence to policy. The report is also stored for auditing and legal purposes.
 
-## Ongoing monitoring processes
+## Processes for ongoing monitoring
 
-Determining if your Deployment Acceleration governance strategy is successful depends on visibility into the current and past state of your cloud infrastructure. Without the ability to analyze the relevant metrics and data of your cloud resources operational health and activity, you cannot identify changes in your risks or detect violations of your risk tolerances. The ongoing governance processes discussed above requires quality data to ensure policy can be modified to protect your infrastructure against changing threats and risks from misconfigured resources.
+A successful Deployment Acceleration strategy depends on visibility into the current and past state of your cloud infrastructure. Without the ability to analyze the relevant metrics and data of your cloud resources operational health and activity, you cannot identify changes in your risks or detect violations of your risk tolerances. The ongoing governance processes discussed above requires quality data to ensure policy can be modified to protect your infrastructure against changing threats and risks from misconfigured resources.
 
 Ensure that your IT operations teams have implemented automated monitoring systems for your cloud infrastructure that capture the relevant logs data you need to evaluate risk. Be proactive in monitoring these systems to ensure prompt detection and mitigation of potential policy violation, and ensure your monitoring strategy is in line with deployment and configuration needs.
 
@@ -54,9 +54,9 @@ The following triggers and enforcement actions provide examples you can use when
 
 ## Next steps
 
-Using the [Cloud Management template](./template.md), document the processes and triggers that align to the current cloud adoption plan.
+Use the [Deployment Acceleration discipline template](./template.md) to document the processes and triggers that align to the current cloud adoption plan.
 
-For guidance on executing cloud management policies in alignment with adoption plans, see the article on discipline improvement.
+For guidance on executing cloud management policies in alignment with adoption plans, see [Deployment Acceleration discipline improvement](./discipline-improvement.md).
 
 > [!div class="nextstepaction"]
 > [Deployment Acceleration discipline improvement](./discipline-improvement.md)

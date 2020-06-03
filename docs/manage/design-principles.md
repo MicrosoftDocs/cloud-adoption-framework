@@ -70,9 +70,9 @@ Within each specialization, the following four-step process is delivered in a di
 
 ### Improve system design
 
-Improving system design is the most effective approach to improving operations of any common platform. System design improvements can help increase stability and decrease business interruptions. Design of individual systems is out of scope for the environment view taken throughout the Cloud Adoption Framework. As a complement to this framework, the Azure Architecture Framework provides best practices for improving the resiliency and design of a specific system. You can apply those design improvements to the systems design of a platform or a specific workload.
+Improving system design is the most effective approach to improving operations of any common platform. System design improvements can help increase stability and decrease business interruptions. Design of individual systems is out of scope for the environment view taken throughout the Cloud Adoption Framework. As a complement to this framework, the Microsoft Azure Well-Architected Framework provides best practices for improving the resiliency and design of a specific system. You can apply those design improvements to the systems design of a platform or a specific workload.
 
-The Azure Architecture Framework focuses on improvement across five pillars of system design:
+The Microsoft Azure Well-Architected Framework focuses on improvement across five pillars of system design:
 
 - **Scalability:** Scaling the common platform assets to handle increased load.
 - **Availability:** Decreasing business interruptions by improving uptime potential.
@@ -82,7 +82,7 @@ The Azure Architecture Framework focuses on improvement across five pillars of s
 
 Most business interruptions equate to some form of technical debt, or deficiency in the architecture. For existing deployments, systems design improvements can be viewed as payments against existing technical debt. For new deployments, systems design improvements can be viewed as avoidance of technical debt. The next section, "Automated remediation," looks at ways to address technical debt that can't or shouldn't be addressed.
 
-To help improve system design, learn more about the [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars). As your system design improves, return to this article to find new opportunities to improve and scale the improvements across your environment.
+To help improve system design, learn more about the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/guide/pillars). As your system design improves, return to this article to find new opportunities to improve and scale the improvements across your environment.
 
 ### Automated remediation
 
@@ -94,7 +94,7 @@ For guidance on automated remediation, see [Azure Automation and alerts](https:/
 
 ### Scale the solution with a service catalog
 
-The cornerstone of platform specialization and platform operations is a well-managed service catalog. This is how improvements to systems design and remediation are scaled across an environment. The cloud platform team and cloud automation team align to create repeatable solutions to the most common platforms in any environment. But, if those solutions aren't consistently applied, cloud management can provide little more than a baseline offering.
+The cornerstone of platform specialization and platform operations is a well-managed service catalog. This is how improvements to systems design and remediation are scaled across an environment. The cloud platform team and cloud automation team align to create repeatable solutions to the most common platforms in any environment. However, if those solutions aren't consistently applied, cloud management can provide little more than a baseline offering.
 
 To maximize adoption and minimize maintenance overhead of any optimized platform, the platform should be added to a service catalog. Each application in the catalog can be deployed for internal consumption via the service catalog, or as a marketplace offering for external consumers.
 
@@ -102,7 +102,7 @@ For information about publishing to a service catalog, see the series on [publis
 
 ### Continuous improvement
 
-Platform specialization and platform operations both depend on strong feedback loops between adoption, platform, automation, and management teams. Grounding those feedback loops in data empowers each team to make wise decisions. For platform operations to achieve long-term business commitments, it's important to take advantage of insights that are specific to the centralized platform. Because containers and SQL Server are the two most common centrally managed platforms, consider getting started with continuous improvement data collection by reviewing the following articles:
+Platform specialization and platform operations both depend on strong feedback loops between adoption, platform, automation, and management teams. Grounding those feedback loops in data empowers each team to make wise decisions. For platform operations to achieve long-term business commitments, it's important to take advantage of insights that are specific to the centralized platform. Because containers and SQL Server are the two most common centrally managed platforms, consider beginning with continuous improvement data collection by reviewing the following articles:
 
 - [Container performance](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)
 - [PaaS database performance](https://docs.microsoft.com/azure/azure-monitor/insights/azure-sql)

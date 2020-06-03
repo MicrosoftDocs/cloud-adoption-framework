@@ -1,2 +1,2 @@
 cls
-invoke-pester -ExcludeTag LongRunning
+invoke-pester -ExcludeTag @('LongRunning', 'Review')

@@ -25,14 +25,14 @@ Both workload and platform operations require changes to design and architecture
 
 This table outlines a few common processes, tools, and potential effects common in customers' enhanced management baselines:
 
-|Process  |Tool  |Purpose  |Suggested management level  |
-|---------|---------|---------|---------|
-|Improve system design|Azure Architecture Framework|Improving the architectural design of the platform to improve operations|N/A|
-|Automate remediation|Azure Automation|Responding to advanced platform data with platform-specific automation|Platform operations|
-|Service catalog|Managed applications center|Providing a self-service catalog of approved solutions that meet organizational standards|Platform operations|
-|Container performance|Azure Monitor for containers|Monitoring and diagnostics of containers|Platform operations|
-|Platform as a service (PaaS) data performance|Azure SQL Analytics|Monitoring and diagnostics for PaaS databases|Platform operations|
-|Infrastructure as a service (IaaS) data performance|SQL Server Health Check|Monitoring and diagnostics for IaaS databases|Platform operations|
+| Process | Tool | Purpose  | Suggested management level |
+|---|---|---|---|
+| Improve system design | Microsoft Azure Well-Architected Framework | Improving the architectural design of the platform to improve operations | N/A |
+| Automate remediation | Azure Automation | Responding to advanced platform data with platform-specific automation | Platform operations |
+| Service catalog | Managed applications center | Providing a self-service catalog of approved solutions that meet organizational standards | Platform operations |
+| Container performance | Azure Monitor for containers | Monitoring and diagnostics of containers | Platform operations |
+| Platform as a service (PaaS) data performance | Azure SQL Analytics | Monitoring and diagnostics for PaaS databases | Platform operations |
+| Infrastructure as a service (IaaS) data performance | SQL Server Health Check | Monitoring and diagnostics for IaaS databases | Platform operations |
 
 ## High-level process
 
@@ -56,21 +56,21 @@ Platform specialization consists of a disciplined execution of the following fou
 
 Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is out of scope for the environment view that is taken throughout Cloud Adoption Framework for Azure.
 
-As a complement to Cloud Adoption Framework, Azure Architecture Framework provides best practices for improving the resiliency and design of a specific system. Those design improvements can be applied to the systems design of either a platform or a specific workload.
+As a complement to Cloud Adoption Framework, Microsoft Azure Well-Architected Framework provides best practices for improving the resiliency and design of a specific system. Those design improvements can be applied to the systems design of either a platform or a specific workload.
 
-Azure Architecture Framework focuses on improvement across five pillars of system design:
+Microsoft Azure Well-Architected Framework focuses on improvement across five pillars of system design:
 
-- **Scalability:** Scaling the common platform assets to handle increased load
-- **Availability:** Reducing business interruptions by improving uptime potential
-- **Resiliency:** Improving recovery times to reduce the duration of interruptions
-- **Security:** Protecting applications and data from external threats
-- **Management:** Operational processes specific to those common platform assets
+- **Scalability:** Scaling the common platform assets to handle increased load.
+- **Availability:** Reducing business interruptions by improving potential uptime.
+- **Resiliency:** Improving recovery times to reduce the duration of interruptions.
+- **Security:** Protecting applications and data from external threats.
+- **Management:** Operational processes specific to those common platform assets.
 
 Technical debt and architectural flaws cause most business interruptions. For existing deployments, you can view system-design improvements as payments against existing technical debt. For new deployments, you can view those improvements as avoidance of technical debt.
 
 The following **Automated remediation** tab shows ways to remediate technical debt that can't or shouldn't be addressed.
 
-Learn more about [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) to improve system design.
+Learn more about [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) to improve system design.
 
 As system design improves, return to this article to find new opportunities to improve and scale those improvements across your environment.
 

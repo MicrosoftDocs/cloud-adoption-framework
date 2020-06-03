@@ -19,11 +19,11 @@ Custom policy definitions are saved to either a management group or a subscripti
 
 Since the policies required to support the governance MVP are meant to apply to all current subscriptions, the following business requirements will be implemented using a combination of built-in definitions and custom definitions created in the root management group:
 
-1. Restrict the list of available role assignments to a set of built-in Azure roles authorized by your cloud governance team. This requires a [custom policy definition](https://github.com/Azure/azure-policy/tree/master/samples/Authorization/allowed-role-definitions).
-2. Require the following tags on all resources: *Department/Billing Unit*, *Geography*, *Data Classification*, *Criticality*, *SLA*, *Environment*, *Application Archetype*, *Application*, and *Application Owner*. This can be handled using the `Require specified tag` built-in definition.
+1. Restrict the list of available role assignments to a set of built-in Azure roles authorized by your cloud governance team. This requires a [custom policy definition](https://github.com/azure/azure-policy/tree/master/samples/Authorization/allowed-role-definitions).
+2. Require the following tags on all resources: *Department/Billing Unit*, _Geography_, _Data Classification_, _Criticality_, _SLA_, _Environment_, _Application Archetype_, _Application_, and _Application Owner_. This can be handled using the `Require specified tag` built-in definition.
 3. Require that the `Application` tag for resources should match the name of the relevant resource group. This can be handled using the "Require tag and its value" built-in definition.
 
-For information on defining custom policies see the [Azure Policy documentation](https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition). For guidance and examples of custom policies, consult the [Azure Policy samples site](https://docs.microsoft.com/azure/governance/policy/samples) and the associated [GitHub repository](https://github.com/Azure/azure-policy).
+For information on defining custom policies see the [Azure Policy documentation](https://docs.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition). For guidance and examples of custom policies, consult the [Azure Policy samples site](https://docs.microsoft.com/azure/governance/policy/samples) and the associated [GitHub repository](https://github.com/azure/azure-policy).
 
 #### Assign Azure Policy and RBAC roles using Azure Blueprints
 

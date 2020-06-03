@@ -1,6 +1,6 @@
 ---
 title: Develop innovative digital inventions
-description: Balance invention and adoption to develop digital inventions while keeping customer adoption and empathy in mind.
+description: Balance invention and adoption to develop digital inventions while keeping customer adoption and empathy in mind.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -11,13 +11,13 @@ ms.subservice: innovate
 
 # Develop digital inventions
 
-As described in [Innovation in the digital economy](./index.md), innovation requires a balance of *invention* and *adoption*. Customer feedback and partnership are required to drive adoption. The disciplines described in the next section define a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind. Each of the disciplines is briefly described, along with deeper links into each process.
+As described in [Innovation in the digital economy](./index.md), innovation requires a balance of _invention_ and _adoption_. Customer feedback and partnership are required to drive adoption. The disciplines described in the next section define a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind. Each of the disciplines is briefly described, along with deeper links into each process.
 
 ![Cloud Adoption Framework Innovate methodology](../../_images/innovate/innovate-methodology.png)
 
 ## Summary of each discipline of digital invention
 
-The following disciplines are not *all* required to drive innovation in any given case. By following the guidance in [Build with customer empathy](./build.md), the objective is to test a hypothesis in every iteration. By defining the output of each iteration as a [minimum viable product (MVP)](../../govern/policy-compliance/index.md), this should enable you to involve the fewest possible number of disciplines.
+The following disciplines are not _all_ required to drive innovation in any given case. By following the guidance in [Build with customer empathy](./build.md), the objective is to test a hypothesis in every iteration. By defining the output of each iteration as a [minimum viable product (MVP)](../../govern/policy-compliance/index.md), this should enable you to involve the fewest possible number of disciplines.
 
 - **[Democratize data](./data.md):** By getting data into the hands of customers, partners, and employees, you encourage innovative observation. Ingest, centralize, govern, and share data.
 - **[Engage through apps](./apps.md):** People connect with knowledge through apps and experiences. Empower professional and citizen developers to create apps quickly.

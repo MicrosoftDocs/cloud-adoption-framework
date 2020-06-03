@@ -38,7 +38,7 @@ The primary tools for sharing data directly with data consumers include self-ser
 
 Sharing data can quickly produce an MVP that you can use in customer conversations. However, to turn that shared data into useful and actionable knowledge, a bit more is generally required. After a hypothesis has been validated through data sharing, the next phase of development is typically data governance.
 
-Data governance is a broad topic that could require its own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.md). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
+Data governance is a broad topic that could require its own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.yml). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
 
 - **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) before being shared publicly to protect the interests of customers and the company.
 - **If the data is sensitive, has it been secured?** Protection of sensitive data should be a requirement for any democratized data. The example workload focused on [securing data solutions](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/securing-data-solutions) provides a few references for securing data.
@@ -51,7 +51,7 @@ When democratization of data is important to a customer-focused hypothesis, make
 When data is disrupted across an IT environment, opportunities to innovate can be extremely constrained, expensive, and time-consuming. The cloud provides new opportunities to centralize data across data silos. When centralization of multiple data sources is required to [build with customer empathy](./build.md), the cloud can accelerate the testing of hypotheses.
 
 > [!CAUTION]
-> Centralization of data represents a risk point in any innovation process. When data centralization is a [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) (as opposed to a source of customer value), we suggest that you delay centralization until the customer hypotheses have been validated.
+> Centralization of data represents a risk point in any innovation process. When data centralization is a [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes), and not a source of customer value, we suggest that you delay centralization until the customer hypotheses have been validated.
 
 If centralization of data is required, you should first define the appropriate data store for the centralized data. It's a good practice to establish a data warehouse in the cloud. This scalable option provides a central location for all your data. This type of solution is available in Online Analytical Processing (OLAP) or Big Data options.
 
@@ -62,7 +62,7 @@ The reference architectures for [OLAP](https://docs.microsoft.com/azure/architec
 
 ### Collect data
 
-When you need data to be centralized to address a customer need, it's very likely that you'll also have to collect the data from various sources and move it into the centralized data store. There are two primary forms of data collection: *integration* and *ingestion*.
+When you need data to be centralized to address a customer need, it's very likely that you'll also have to collect the data from various sources and move it into the centralized data store. There are two primary forms of data collection: _integration_ and _ingestion_.
 
 **Integration:** Data that resides in an existing data store can be integrated into the centralized data store by using traditional data movement techniques. This is especially common for scenarios that involve multicloud data storage. These techniques involve extracting the data from the existing data store and then loading it into the central data store. At some point in this process, the data is typically transformed to be more usable and relevant in the central store.
 

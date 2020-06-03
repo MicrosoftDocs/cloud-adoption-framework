@@ -3,103 +3,30 @@ title: "Cloud migration"
 description: Learn how to establish the iterative processes to assess, migrate, optimize, secure, and manage the workloads you want to migrate to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
-ms.topic: landing-page
+ms.date: 05/04/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-layout: LandingPage
 ---
 
 # Cloud migration in the Cloud Adoption Framework
 
 Any enterprise-scale [cloud adoption plan](../plan/index.md), will include workloads that do not warrant significant investments in the creation of new business logic. Those workloads could be moved to the cloud through any number of approaches: lift and shift; lift and optimize; or modernize. Each of these approaches is considered a migration. The following exercises will help establish the iterative processes to assess, migrate, optimize, secure, and manage those workloads.
 
-## Getting started
-
-To prepare you for this phase of the cloud adoption lifecycle, the framework recommends the following exercises:
+To prepare you for this phase of the cloud adoption lifecycle, we recommend the following:
 
 <!-- markdownlint-disable MD033 -->
-<ul class="panelContent cardsF">
-    <li style="display: flex; flex-direction: column;">
-        <a href="./azure-migration-guide/index.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/1.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Migrate your first workload</h3>
-                        Use the Azure migration guide to become familiar with the Azure native tools and approach to migration.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./azure-best-practices/index.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/2.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Migration scenarios</h3>
-                            Use additional migration tools and approaches to act on other migration scenarios.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./azure-best-practices/index.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/3.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Best practices</h3>
-                            Address common migration needs through the application of consistent best practices.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li style="display: flex; flex-direction: column;">
-        <a href="./migration-considerations/index.md">
-            <div class="cardSize">
-                <div class="cardPadding" style="padding-bottom:10px;">
-                    <div class="card" style="padding-bottom:10px;">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img alt="" src="../_images/icons/4.png" data-linktype="external">
-                            </div>
-                        </div>
-                        <div class="cardText" style="padding-left:0px;">
-                            <h3>Process improvements</h3>
-                            Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-</ul>
+
+| | |
+|---|---|
+| <br> ![1](../_images/icons/1.png) | <br> [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration.                                |
+| <br> ![2](../_images/icons/2.png) | <br> [Migration scenarios](./azure-best-practices/index.md): Use additional migration tools and approaches to act on other migration scenarios.                                |
+| <br> ![3](../_images/icons/3.png) | <br> [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices.                                |
+| <br> ![4](../_images/icons/4.png) | <br> [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration.                        |
+
 <!-- markdownlint-enable MD033 -->
 
-This methodology and the steps above build on the following assumptions:
+The migrate methodology and the steps above build on the following assumptions:
 
 - The methodology governing migration sprints fits within migration waves or releases, which are defined using the Plan, Ready, and Adopt methodologies. Within each migration sprint, a batch of workloads is migrated to the cloud.
 - Before migrating workloads, at least one [landing zone](../ready/index.md) has been identified, configured, and deployed to meet the needs of the near-term cloud adoption plan.
@@ -122,17 +49,17 @@ The following bullets provide an overview of the phases of this process (picture
 > [!NOTE]
 > In some early iterations of migration effort, it is common to limit scope to a single workload. This approach maximizes skills retention and provides the team with more time to experiment and learn.
 > [!NOTE]
-> When building a migration factory, some teams may choose to disperse each of the above phases across multiple teams &/or multiple sprints. This approach can improve repeatability and accelerate migration efforts.
+> When building a migration factory, some teams may choose to disperse each of the above phases across multiple teams and multiple sprints. This approach can improve repeatability and accelerate migration efforts.
 
 ## Migration waves
 
-Migration iterations will deliver technical value by migrating assets and workloads. A migration wave is the smallest collection of workloads, which deliver tangible and measurable business value. Each iteration should end in a report outlining the technical efforts completed. But, business change and strategic planning generally happens at a slightly higher level. As the cloud adoption team delivers on the migration effort, the cloud strategy team focuses on planning the next 1-2 migration waves. The cloud strategy team also tracks technical progress as a learning metric to better understand the timelines for realizing business value. In that regard, migration waves are the iterative change management approach to tracking business outcomes, people, and timelines.
+Migration iterations will deliver technical value by migrating assets and workloads. A migration wave is the smallest collection of workloads, which deliver tangible and measurable business value. Each iteration should end in a report outlining the technical efforts completed. However, business change and strategic planning generally happens at a slightly higher level. As the cloud adoption team delivers on the migration effort, the cloud strategy team focuses on planning the next 1-2 migration waves. The cloud strategy team also tracks technical progress as a learning metric to better understand the timelines for realizing business value. In that regard, migration waves are the iterative change management approach to tracking business outcomes, people, and timelines.
 
 As outlined in the graphic in the prior section, processes within the [Plan](../plan/index.md) methodology, the [Ready](../ready/index.md) methodology, and to some extent the [Strategy](../strategy/index.md) methodology of the Cloud Adoption Framework provide guidance on planning and managing the migration waves. The management of those waves will prioritize and define the migration effort to be delivered by the technical teams.
 
 ## Next steps
 
-The "Getting Started" steps above, and subsequent guidance found in the Migrate methodology, will help develop skills to improve execution of the processes within each migration sprint. The [Azure migration guide](./azure-migration-guide/index.md) is a brief series of articles that outlines the most common tools and approaches needed during your first migration wave.
+The steps outlined above, and subsequent guidance in the Migrate methodology, can help you develop skills to improve execution of the processes within each migration sprint. The [Azure migration guide](./azure-migration-guide/index.md) is a brief series of articles that outlines the most common tools and approaches needed during your first migration wave.
 
 > [!div class="nextstepaction"]
 > [Azure migration guide](./azure-migration-guide/index.md)

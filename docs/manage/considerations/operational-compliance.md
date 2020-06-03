@@ -25,7 +25,7 @@ Maintaining compliance with operational commitments requires analysis, automatio
 
 ### Resource consistency
 
-The most effective step that a cloud management team can take toward operational compliance is to establish consistency in resource organization and tagging. When resources are consistently organized and tagged, all other operational tasks become easier. For deeper guidance on resource consistency, see the [Governance phase](../../govern/index.md) of the cloud adoption lifecycle. Specifically, the [initial governance foundation articles](../../govern/initial-foundation.md) demonstrate how to start developing resource consistency.
+The most effective step that a cloud management team can take toward operational compliance is to establish consistency in resource organization and tagging. When resources are consistently organized and tagged, all other operational tasks become easier. For deeper guidance on resource consistency, see the [Governance methodology](../../govern/index.md). Specifically, review the [initial governance foundation articles](../../govern/initial-foundation.md) to learn how to start developing resource consistency.
 
 ### Environment consistency
 

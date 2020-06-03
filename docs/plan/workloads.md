@@ -29,18 +29,18 @@ The strategic inputs from the prerequisites list make the following tasks much e
 
 ## Initial workload prioritization
 
-During the process of [incremental rationalization](../digital-estate/rationalize.md), your team should agree on a "Power of 10" approach, which consists of 10 priority workloads. These workloads serve as an initial boundary for adoption planning.
+During the process of [incremental rationalization](../digital-estate/rationalize.md), your team should agree on a [Power of 10 approach](../digital-estate/rationalize.md#release-planning), consisting of 10 priority workloads. These workloads serve as an initial boundary for adoption planning.
 
 If you decide that a digital estate rationalization isn't needed, we recommend that the cloud adoption teams and the cloud strategy team agree on a list of 10 applications to serve as the initial focus of the migration. We recommend further that these 10 workloads contain a mixture of simple workloads (fewer than 10 assets in a self-contained deployment) and more complex workloads. Those 10 workloads will start the workload prioritization process.
 
 > [!NOTE]
-> The Power of 10 serves as an initial boundary for planning, to focus the energy and investment in early-stage analysis. However, the act of analyzing and defining workloads is likely to cause changes in the list of priority workloads.
+> The Power of 10 approach serves as an initial boundary for planning, to focus the energy and investment in early-stage analysis. However, the act of analyzing and defining workloads is likely to cause changes in the list of priority workloads.
 
 ## Add workloads to your cloud adoption plan
 
 In the previous article, [Cloud adoption plan and Azure DevOps](./template.md), you created a cloud adoption plan in Azure DevOps.
 
-You can now represent the workloads in the Power of 10 list in your cloud adoption plan. The easiest way to do this is via bulk editing in Microsoft Excel. To prepare your workstation for bulk editing, see [Bulk add or modify work items with Excel](https://docs.microsoft.com/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel?view=azure-devops).
+You can now represent the workloads in the Power of 10 list in your cloud adoption plan. The easiest way to do this is via bulk editing in Microsoft Excel. To prepare your workstation for bulk editing, see [Bulk add or modify work items with Microsoft Excel](https://docs.microsoft.com/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel?view=azure-devops).
 
 Step 5 in that article tells you to select **Input list**. Instead, select **Query list**. Then, from the **Select a Query** drop-down list, select the **Workload Template** query. That query loads all the efforts related to the migration of a single workload into your spreadsheet.
 
@@ -50,7 +50,7 @@ After the work items for the workload template are loaded, follow these steps to
 2. Paste the copied rows below the last line item in the table.
 3. Change the title cell for the new feature from **Workload Template** to the name of your new workload.
 4. Paste the new workload name cell into the tag column for all rows below the new feature. Be careful to not change the tags or name of the rows related to the actual **Workload Template** feature. You will need those work items when you add the next workload to the cloud adoption plan.
-5. Skip to Step 8 in the bulk-editing instructions to publish the worksheet. This step creates all the work items required to migrate your workload.
+5. Skip to step 8 in the bulk-editing instructions to publish the worksheet. This step creates all the work items required to migrate your workload.
 
 Repeat steps 1 through 5 for each of the workloads in the Power of 10 list.
 

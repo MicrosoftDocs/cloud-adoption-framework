@@ -1,6 +1,6 @@
 ---
 title: "Cloud monitoring platforms overview"
-description: Gain a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
+description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: mgoedtel
 ms.author: magoedte
 ms.date: 07/31/2019
@@ -40,7 +40,7 @@ At the 2018 Ignite conference, we announced that the Azure Monitor brand expande
 - **Application Insights**, for application monitoring.
 - **Log Analytics**, the primary location for collecting and analyzing log data.
 - A new **unified alerting service**, which brought together alert mechanisms from each of the other services mentioned earlier.  
-- **Azure Network Watcher**, for monitoring, diagnosing, and viewing metrics for resources in an Azure virtual network.
+- **Azure Network Watcher**, for monitoring, diagnosing, and viewing metrics for resources in a virtual network.
 
 ## The story of Operations Management Suite (OMS)
 

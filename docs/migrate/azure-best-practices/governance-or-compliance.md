@@ -44,19 +44,19 @@ During assessment, additional decisions are required to align to the required go
 
 Governance and compliance assessment requirements are too customer-specific to provide general guidance on the actual steps taken during assessment. However, the process should include tasks and time allocations for "alignment to compliance/governance requirements". For additional understanding of these requirements, see the following links:
 
-For a deeper understanding of governance, review the [Five Disciplines of Cloud Governance overview](../../govern/governance-disciplines.md). This section of the Cloud Adoption Framework also includes templates to document the policies, guidance, and requirements for each of the five sections:
+For a deeper understanding of governance, read the overview of the [Five Disciplines of Cloud Governance](../../govern/governance-disciplines.md). This section of the Cloud Adoption Framework includes templates to document the policies, guidance, and requirements for each of the five sections:
 
-- [Cost Management](../../govern/cost-management/template.md)
-- [Security Baseline](../../govern/security-baseline/template.md)
-- [Resource Consistency](../../govern/resource-consistency/template.md)
-- [Identity Baseline](../../govern/identity-baseline/template.md)
-- [Deployment Acceleration](../../govern/deployment-acceleration/template.md)
+- [Cost Management discipline](../../govern/cost-management/template.md)
+- [Security Baseline discipline](../../govern/security-baseline/template.md)
+- [Resource Consistency discipline](../../govern/resource-consistency/template.md)
+- [Identity Baseline discipline](../../govern/identity-baseline/template.md)
+- [Deployment Acceleration discipline](../../govern/deployment-acceleration/template.md)
 
-For guidance on developing governance guidance based on the Cloud Adoption Framework governance model, see [Implementing a cloud governance strategy](../../govern/corporate-policy.md).
+For information about developing governance guidance based on the Cloud Adoption Framework governance model, see [Implement a cloud governance strategy](../../govern/corporate-policy.md).
 
 ## Optimize and promote process changes
 
-During the optimization and promotion processes, the cloud governance team should invest time to test and validate adherence to governance and compliance standards. Additionally, this step is a good time to inject processes for the cloud governance team to curate templates that could provide additional [deployment acceleration](../../govern/deployment-acceleration/index.md) for future projects.
+During the optimization and promotion processes, the cloud governance team should invest time to test and validate adherence to governance and compliance standards. Additionally, this step is a good time to inject processes for the cloud governance team to curate templates that could provide additional [Deployment Acceleration discipline](../../govern/deployment-acceleration/index.md) for future projects.
 
 ### Suggested action during the optimize and promote process
 
