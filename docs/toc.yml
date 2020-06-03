@@ -176,7 +176,7 @@ items:
         href: ready/azure-setup-guide/monitoring-reporting.md
       - name: Stay current with Azure
         href: ready/azure-setup-guide/staying-current.md
-    - name: First landing zone
+    - name: Azure landing zones
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
@@ -184,66 +184,6 @@ items:
         href: ready/landing-zone/design-principles.md
       - name: Deployment options
         href: ready/landing-zone/deployment-options.md
-      - name: Migration landing zones
-        href: ready/landing-zone/migrate-landing-zone.md
-      - name: Enterprise-scale landing zones
-        href: ready/landing-zone/enterprise-scale.md
-      - name: Terraform landing zones
-        href: ready/landing-zone/terraform-landing-zone.md
-      - name: Infrastructure-as-code approach
-        items:
-        - name: Refactor landing zones
-          href: ready/landing-zone/refactor.md
-        - name: Test-driven development (TDD) for landing zones
-          href: ready/considerations/test-driven-development.md
-        - name: Landing zone TDD in Azure
-          href: ready/considerations/azure-test-driven-development.md
-    - name: Expand the landing zone
-      items:
-      - name: Overview
-        href: ready/considerations/index.md
-      - name: Test-driven development (TDD) for landing zones
-        href: ready/considerations/test-driven-development.md
-      - name: Landing zone TDD in Azure
-        href: ready/considerations/azure-test-driven-development.md
-      - name: Start small and expand
-        items:
-        - name: Basic landing zone considerations
-          items:
-          - name: Overview
-            href: ready/considerations/basic-considerations.md
-          - name: Review compute options
-            href: ready/considerations/compute-options.md
-          - name: Review networking options
-            href: ready/considerations/networking-options.md
-          - name: Review storage options
-            href: ready/considerations/storage-options.md
-          - name: Review data options
-            href: ready/considerations/data-options.md
-          - name: Role-based access control
-            href: ready/considerations/roles.md
-          - name: Create hybrid cloud consistency
-            href: ready/considerations/hybrid-consistency.md
-        - name: Improve landing zone operations
-          href: ready/considerations/landing-zone-operations.md
-        - name: Improve landing zone governance
-          href: ready/considerations/landing-zone-governance.md
-        - name: Improve landing zone security
-          items:
-            - name: Overview
-              href: ready/considerations/landing-zone-security.md
-            - name: Onboard a subscription to Azure Security Center
-              href: https://docs.microsoft.com/azure/security-center/security-center-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Onboard Azure Sentinel
-              href: https://docs.microsoft.com/azure/sentinel/quickstart-onboard?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Implementing a secure hybrid network architecture in Azure
-              href: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Azure identity management and access control security best practices
-              href: https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Azure network security best practices
-              href: https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Azure operational security best practices
-              href: https://docs.microsoft.com/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
       - name: Start with enterprise scale
         items:
         - name: Overview
@@ -288,6 +228,59 @@ items:
             href: ready/enterprise-scale/contoso/design.md
           - name: Known issues
             href: ready/enterprise-scale/contoso/known-issues.md
+
+      - name: Start small and expand
+        items:
+        - name: Migration landing zones
+          href: ready/landing-zone/migrate-landing-zone.md
+        - name: Terraform landing zones
+          href: ready/landing-zone/terraform-landing-zone.md
+
+        - name: Basic landing zone considerations
+          items:
+          - name: Overview
+            href: ready/considerations/basic-considerations.md
+          - name: Review compute options
+            href: ready/considerations/compute-options.md
+          - name: Review networking options
+            href: ready/considerations/networking-options.md
+          - name: Review storage options
+            href: ready/considerations/storage-options.md
+          - name: Review data options
+            href: ready/considerations/data-options.md
+          - name: Role-based access control
+            href: ready/considerations/roles.md
+          - name: Create hybrid cloud consistency
+            href: ready/considerations/hybrid-consistency.md
+        - name: Improve landing zone operations
+          href: ready/considerations/landing-zone-operations.md
+        - name: Improve landing zone governance
+          href: ready/considerations/landing-zone-governance.md
+        - name: Improve landing zone security
+          items:
+            - name: Overview
+              href: ready/considerations/landing-zone-security.md
+            - name: Onboard a subscription to Azure Security Center
+              href: https://docs.microsoft.com/azure/security-center/security-center-get-started?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Onboard Azure Sentinel
+              href: https://docs.microsoft.com/azure/sentinel/quickstart-onboard?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Implementing a secure hybrid network architecture in Azure
+              href: https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Azure identity management and access control security best practices
+              href: https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Azure network security best practices
+              href: https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Azure operational security best practices
+              href: https://docs.microsoft.com/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+
+      - name: Infrastructure-as-code theory
+        items:
+        - name: Refactor landing zones
+          href: ready/landing-zone/refactor.md
+        - name: Test-driven development (TDD) for landing zones
+          href: ready/considerations/test-driven-development.md
+        - name: Landing zone TDD in Azure
+          href: ready/considerations/azure-test-driven-development.md
 
     - name: Best practices
       items:

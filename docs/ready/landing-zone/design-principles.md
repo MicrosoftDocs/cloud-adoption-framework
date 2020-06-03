@@ -11,17 +11,15 @@ ms.subservice: ready
 
 # Design principles
 
-Applying well-architected pillars to a cloud platform and each landing zone, requires a few design principles to be factored into landing zone design and the design of the supporting _platform foundation_.
-
-The following principles define a target future-state architecture for the environment supporting your workload. After this article, the series will outline approaches to deploy and scale your environment to fulfill those principles.
+All Azure landing zones provide a deployment approach and reference architecture that helps you realize the following design principles. Before choosing an Azure landing zone, it's important to understand these design principles to find the Azure landing zone that's right for your cloud adoption plan.
 
 ## Modular design principles
 
-The following design principles can be addressed during landing zone design for "greenfield" adoption. For customers who are further along on their cloud adoption journey, each principle can be addressed in associated Cloud Adoption Framework methodology.
+To have a well-architected environment, each of the following must be considered. Depending on your cloud adoption plan, you may choose to implement all of these principles before any adoption begins. Alternatively, its equally common to start small & integrate each principle as your cloud adoption efforts scale. Either way, all Azure landing zones provide a path to support your needs.
 
-|Methodology module  |Design Principle  |Objective  |
+|Methodology modules  |Design Principle  |Objective  |
 |---------|---------|---------|
-|Ready |Enterprise enrollment|For enterprise customers with a cloud commitment, proper tenant creation and enrollment is an important first step.|
+|Ready |Enterprise enrollment|For enterprise customers with an Azure commitment, proper tenant creation and enrollment is an important early step.|
 |Ready |Identity|Identity and access management (IAM) is a primary security boundary in the public cloud. It is the foundation for any secure and fully compliant architecture.|
 |Ready |Network topology and connectivity|Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture.|
 |Govern |Resource organization|As cloud adoption scales, considerations for subscription design and management group hierarchy will have an impact on governance, operations management, and adoption patterns.|

@@ -27,20 +27,20 @@ In addition to the recommended design principles, platform development velocity 
 
 The following grid captures some of the landing zone deployment options and variables that may drive the decision.
 
-|Landing zone  |Deployment velocity  |Scale  |Discovery time|Governance principles|Management principles|
+|Landing zone  |Deployment velocity  |Scale  |Discovery time|Ready principles|Governance principles|Management principles|
 |---------|---------|---------|---------|---------|---------|---------|---------|
-|[CAF Migrate](./migrate-landing-zone.md)|Start small|< 1,000 assets|one to five days|Added through CAF Govern|Added through CAF Manage|
-|[CAF Foundation](./foundation-blueprint.md)|Start small|< 1,000 assets|one to five days|Added through CAF Govern|Added through CAF Manage|
-|[CAF Enterprise-scale](./enterprise-scale.md)|Enterprise-scale|> 1,000 assets|10 to 20 weeks|Configuration required|Configuration required|
-|[CAF Terraform](./terraform-landing-zone.md)|Either|Various templates|10 to 20 weeks|Added through CAF Govern modules|Added through CAF Manage modules|
+|[CAF Migrate](./migrate-landing-zone.md)|Start small|< 1,000 assets|one to five days|Included|Added through CAF Govern|Added through CAF Manage|
+|[CAF Foundation](./foundation-blueprint.md)|Start small|< 1,000 assets|one to five days|Included|Added through CAF Govern|Added through CAF Manage|
+|[CAF Enterprise-scale](./enterprise-scale.md)|Enterprise-scale|> 1,000 assets|3 to 6 weeks|Included|Configuration required|Configuration required|
+|[CAF Terraform](./terraform-landing-zone.md)|Either|Various templates|3 to 6 weeks|Included|Added through CAF Govern modules|Added through CAF Manage modules|
 
 The following table looks at the same deployment options from a slightly different perspective to guide more technical decision processes.
 
-| Landing zone                                 | Hub                          | Spoke    | Cloud model | Deployment Technology      |
+| Landing zone                                 | Hub                          | Spoke    | Cloud model | Deployment Technology |
 |----------------------------------------------|------------------------------|----------|-------------|-----------------|--|--|--|
+| [CAF Enterprise-scale](./enterprise-scale.md) | Included       | Included | Multicloud  | Azure Policy and GitHub |
 | [CAF Migrate](./migrate-landing-zone.md)     | Refactor required            | Included | Azure only  | Azure Blueprint |
 | [CAF Terraform](./terraform-landing-zone.md) | Included in Virtual Datacenter module       | Included | Multicloud  | Terraform       |
-| [CAF Enterprise-scale](./enterprise-scale.md) | Included       | Included | Multicloud  | Azure Policy       |
 
 ## Next steps
 

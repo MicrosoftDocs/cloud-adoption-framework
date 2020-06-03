@@ -13,7 +13,7 @@ ms.subservice: ready
 
 # What is a landing zone?
 
-A properly configured cloud environment can become a blocker to cloud adoption efforts. Fundamental environment configuration can add a learning curve for team members and require changes to aspects of operations, security, governance, and compliance. Deployment of descrete purpose built landing zones help flatten those curves to help the team stay safely on track with adoption plans. This article will define the term _landing zone_ and create clarity on the importance of landing zones. Other articles in this series will guide the creation and deployment of landing zones.
+Cloud adoption teams launch well-architected workloads into the cloud. When your portfolio includes multiple workloads, its possible to scale and accelerate the deployment of those workloads by giving each team well-architected environments to start them down the right path. Establishing repeatable, scalable, modular environments reduces the effort required to deploy those workloads. This article series will guide the creation of these types of environments to improve cost optimization, performance efficiency, reliability, security, and operational excellence across all workloads in the portfolio.
 
 <!-- markdownlint-disable MD034 -->
 
@@ -21,17 +21,15 @@ A properly configured cloud environment can become a blocker to cloud adoption e
 
 <!-- markdownlint-enable MD034 -->
 
-## Defining Azure landing zones
+## What are Azure landing zones
 
-A _landing zone_ is a segment of a cloud environment that is dedicated to the support of **one or more workloads**. Landing zones provide access to foundational tools and controls to establish a compliant place to innovate & build new workloads in the cloud, or to migrate existing workloads to the cloud. Landing zones use defined sets of cloud services and best practices to set you up for success. 
+A landing zone is *the output* of a well-architected, multi-subscription Azure environment that accounts for scale, security, governance, networking and IAM. Landing zones enables application migrations and greenfield development at an enterprise scale in Azure. When the adoption team uses a landing zone, all platform resources that are required to support the customer’s portfolio have already been considered. As a result, the team can safely deploy IaaS, PaaS, or hybrid solutions with greater confidence.
 
-More specifically, a landing zone is the basic building block for any customer who centrally operates a large or complex portfolio of workloads. For larger customers or more complex adoption plans, the term _landing zone_ refers to a logical construct that enables workloads to co-exist on top of a _platform foundation_. Together, landing zones and the platform foundation capture everything that must be in place and ready to enable cloud adoption across the IT portfolio.
-
-**Goal:** Cloud adoption teams focus on deploying well-architected workloads. Landing zones scale a subset of the same well-architected concepts to ensure they are consistently applied across all workloads in the cloud portfolio. This approach reduces some of the burden on cloud adoption teams by creating guardrails which include centralized solutions for cost optimization, performance efficiency, reliability, security, and operational excellence. Landing zones don't eliminate the effort required to deploy well-architected workloads, but these centralized solutions can automate application of many of the common best practices.
+We recognize that there is no one-size fits all solution to technical environments, so we ensure you have options that meet the deployment and operations needs of your growing cloud portfolio. All Azure landing zones provide a scalable, modular approach to building out your environment. Whether you are looking to deploy your first production application to Azure or are operating a complex portfolio of workloads, the landing zone templates can be tailored to your needs. Since our landing zone templates are all based on a common set of architecture design patterns you can update or reconfigure your environment at any time.
 
 ## Next steps
 
-Before choosing a deployment option for your Azure landing zone, it is important to [understand Microsoft's recommended design principles for landing zones](./design-principles.md).
+Before choosing the right Azure landing zone, it is important to understand the building blocks from Microsoft's [design principles for landing zones](./design-principles.md).
 
 > [!div class="nextstepaction"]
 > [Review design principles](./design-principles.md)
