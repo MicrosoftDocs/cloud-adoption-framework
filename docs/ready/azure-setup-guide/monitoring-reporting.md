@@ -58,9 +58,9 @@ To learn more, see [Azure Monitor documentation](https://docs.microsoft.com/azur
 
 # [Azure Service Health](#tab/AzureServiceHealth)
 
-Azure Service Health provides a personalized view of the health of the Azure services and regions you use. Information about active issues is posted to Service Health to help you understand the impact to your resources. Regular updates keep you informed as the issue is resolved.
+Azure Service Health provides a personalized view of the health of the Azure services and regions you use. Information about active issues is posted to Azure Service Health to help you understand the impact to your resources. Regular updates keep you informed as the issue is resolved.
 
-We also publish planned maintenance events to Service Health so you'll know about changes that could affect the availability of your resources. Set up Service Health alerts to be notified when service issues, planned maintenance, or other changes might affect the Azure services and regions you use.
+We also publish planned maintenance events to Azure Service Health so you'll know about changes that could affect the availability of your resources. Set up Service Health alerts to be notified when service issues, planned maintenance, or other changes might affect the Azure services and regions you use.
 
 Azure Service Health includes:
 
@@ -78,7 +78,7 @@ To set up a Service Health alert:
 
 1. Go to **Service Health**.
 2. Select **Health alerts**.
-3. Create a service health alert.
+3. Create a Service Health alert.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts]" submitText="Go to Service Health" :::
 
@@ -86,11 +86,11 @@ To set up a Service Health alert:
 
 ::: zone target="docs"
 
-To set up a Service Health alert, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts).
+To set up an Azure Service Health alert, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts).
 
 ## Learn more
 
-To learn more, see the [Azure Service Health documentation](https://docs.microsoft.com/azure/service-health).
+For more information, see [Azure Service Health](https://docs.microsoft.com/azure/service-health).
 
 ::: zone-end
 
@@ -101,8 +101,8 @@ Azure Advisor is a free, personalized cloud consultant that helps you follow and
 - **High availability:** To improve the continuity of your business-critical applications. Recommendations might include adding virtual machines to an availability set or adding geo-redundant endpoints.
 - **Security:** To detect threats and vulnerabilities that might lead to security breaches. Recommendations might include applying disk encryption or enabling network security groups.
 - **Performance:** To improve the speed of your applications. Recommendations might include boosting SQL query performance by creating indexes or reconfiguring your traffic manager settings.
-- **Cost:** To optimize and reduce your overall Azure spending. Recommendations might include resizing or shutting down underused virtual machines or switching to Azure reservations to lower total cost of ownership.
-- **Operational excellence:** To improve process and workflow efficiency and manageability. Recommendations might include setting up and enforcing Azure Policy rules, repairing invalid log alert rules, and configuring Azure Service Health alerts.
+- **Cost:** To optimize and reduce your overall Azure spending. Recommendations might include resizing or shutting down underused virtual machines or switching to Azure Reservations to lower total cost of ownership.
+- **Operational excellence:** To improve process and workflow efficiency and manageability. Recommendations might include setting up and enforcing Azure Policy rules, repairing invalid log alert rules, and configuring Service Health alerts.
 
 Recommendations in Advisor are based on the resources you deploy and the actions you take in Azure. You can check Advisor regularly for the latest recommendations.
 
@@ -130,7 +130,7 @@ Azure Security Center also plays an important part in your monitoring strategy. 
 
 When Security Center identifies a threat, it triggers a security alert with steps you need to take to respond to an attack. It also provides a report with information about the threat that was detected.
 
-Azure Security Center is offered in two tiers: free and standard. Features like security recommendations are available for free. The standard tier provides additional protection like advanced threat detection and protection across hybrid cloud workloads.
+Azure Security Center is offered in two tiers: free and standard. Features like security recommendations are available for free. The Standard tier provides additional protection like advanced threat detection and protection across hybrid cloud workloads.
 
 ::: zone target="chromeless"
 

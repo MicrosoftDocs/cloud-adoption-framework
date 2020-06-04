@@ -1,5 +1,5 @@
 ---
-title: "Azure setup guide: Before you start" 
+title: "Azure setup guide: Before you start"
 description: Learn how to set up Azure effectively for your organization with step-by-step guidance.
 author: timleyden
 ms.author: kfollis
@@ -46,7 +46,9 @@ You'll learn how to:
 > [!TIP]
 > For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Azure Setup Guide**, and then follow the step-by-step instructions.
 
-Next steps: [Organize your resources to simplify how you apply settings](./organize-resources.md)
+**Next steps:**
+
+- [Organize your resources to simplify how you apply settings](./organize-resources.md)
 
 ::: zone-end
 

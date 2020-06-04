@@ -9,15 +9,17 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
+<!-- cSpell:ignore Getting Started -->
+
 # Skills readiness for cloud migration
 
 During a cloud migration, it is likely that employees, as well as some incumbent systems integration partners or managed services partners, will need to develop new skills to be effective during migration efforts.
 
-There are four distinct processes that are completed iteratively during the "Migrate" phase of any migration journey. The following sections align the necessary skills for each of those processes with references to two prerequisites for skilling resources.
+There are four distinct processes that are completed iteratively in the Migrate methodology. The following sections align the necessary skills for each of those processes with references to two prerequisites for skilling resources.
 
 ## Prerequisites skilling resources
 
-Implementation of "Migrate" processes will build on the skills acquired during "[Plan](../strategy/suggested-skills.md)" and "[Ready](../organize/suggested-skills.md)" phases of the migration journey.
+Implementation of Migrate processes will build on the skills acquired during the [Plan](../strategy/suggested-skills.md) and [Ready](../organize/suggested-skills.md) phases of the migration journey.
 
 ## Assess skilling resources
 

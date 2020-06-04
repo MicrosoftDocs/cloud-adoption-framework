@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 # Deploy workloads and assets (infrastructure, apps, and data)
 
-In this phase of the journey, you use the output of the assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a "done state", including native tools, third-party tools, and project management tools.
+In this phase of the journey, you use the output of the Assess phase to initiate the migration of the environment. This guide helps identify the appropriate tools to reach a completed state, including native tools, third-party tools, and project management tools.
 
 <!-- markdownlint-disable MD025 -->
 
@@ -192,13 +192,13 @@ For more information, see:
 
 - [Overview of Database Experimentation Assistant](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-overview)
 
-## Cosmos DB Data Migration Tool
+## Azure Cosmos DB Data Migration Tool
 
 Azure Cosmos DB Data Migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The Data Migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
 
 For more information, see:
 
-- [Cosmos DB Data Migration Tool](https://docs.microsoft.com/azure/cosmos-db/import-data)
+- [Azure Cosmos DB Data Migration Tool](https://docs.microsoft.com/azure/cosmos-db/import-data)
 
 <!-- markdownlint-disable MD025 -->
 
@@ -236,7 +236,7 @@ Movere is a discovery solution that provides the data and insights needed to pla
 
 [Learn more](https://www.movere.io)
 
-## Cosmos DB Partners
+## Azure Cosmos DB Partners
 
 You can choose from a variety of experienced systems integrator partners and tools to support your Azure Cosmos DB migrations for your NoSQL database requirements.
 
@@ -250,7 +250,7 @@ Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) 
 
 Projects that aren't tracked and managed are more likely to run into problems. To ensure a successful outcome, we think it's important that you use a project management tool. There are many different tools available and project managers in your organization may already have a favorite.
 
-Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using [these instructions](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/template). You can then modify the template to reflect the [workloads](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/workloads) and [assets](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/assets) to be migrated.
+Azure DevOps is the suggested tool for project management during a cloud migration. To accelerate usage of Azure DevOps, the Cloud Adoption Framework includes a tool for automatically deploying a project template. That template includes the tasks commonly executed during a migration effort. Deploy the template using the instructions in [Cloud adoption plan and Azure DevOps](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/template). You can then modify the template to reflect the [workloads](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/workloads) and [assets](https://docs.microsoft.com/azure/architecture/cloud-adoption/plan/assets) to be migrated.
 
 Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 
@@ -265,7 +265,7 @@ These are not the only tools available. Many other third-party tools are widely 
 
 As you migrate into cloud technologies this presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
 
-Azure DevOps provides all of the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops). For guided training, see [CI and CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
+Azure DevOps provides all of the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops). For guided training, see [CI/CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
 ## Suggested skills
 
@@ -277,4 +277,4 @@ Here is an example of a tailored learning path on Microsoft Learn that complemen
 
 # [Cost management](#tab/ManageCost)
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload (discussed in more detail in the **[Optimize and transform](./optimize-and-transform.md)** section).
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [Optimize and transform](./optimize-and-transform.md)** section.

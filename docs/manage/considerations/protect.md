@@ -63,11 +63,11 @@ Every minute of downtime on those virtual machines could cause lost revenue or r
 
 Each of the preceding models reduces the RTO, resulting in a faster restoration of business process capabilities. However, each model also results in significantly increased cloud management costs.
 
-For more about this thought process, see [workload operations discipline](./workload.md).
+For more information about this thought process, see [workload operations discipline](./workload.md).
 
 ## Next steps
 
-After this management baseline component is met, the team can look ahead to avoid outages in [platform operations](./platform.md) and [workload operations](./workload.md).
+After this management baseline component is met, the team can look ahead to avoid outages in its [platform operations](./platform.md) and [workload operations](./workload.md).
 
 > [!div class="nextstepaction"]
 > [Platform operations](./platform.md)

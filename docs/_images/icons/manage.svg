@@ -1,0 +1,26 @@
+<svg id="Shapes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 58.5 58.5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-6667.97" y1="3048.44" x2="-6667.97" y2="3092.62" gradientTransform="translate(3354.34 -1497.32) scale(0.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ea0ef"/>
+      <stop offset="0.18" stop-color="#589eed"/>
+      <stop offset="0.41" stop-color="#4897e9"/>
+      <stop offset="0.66" stop-color="#2e8ce1"/>
+      <stop offset="0.94" stop-color="#0a7cd7"/>
+      <stop offset="1" stop-color="#0078d4"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="35.15" y1="483.2" x2="35.15" y2="511.28" gradientTransform="matrix(1, 0, 0, -1, 0, 520.53)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#198ab3"/>
+      <stop offset="0.24" stop-color="#22a5cb"/>
+      <stop offset="0.53" stop-color="#2bbfe2"/>
+      <stop offset="0.79" stop-color="#30cff0"/>
+      <stop offset="1" stop-color="#32d4f5"/>
+    </linearGradient>
+  </defs>
+  <circle cx="29.25" cy="29.25" r="29" fill="#fff" stroke="#ccc" stroke-width="0.5"/>
+  <rect x="9.25" y="9.25" width="40" height="40" fill="#fff"/>
+  <g>
+    <path d="M21.2,38.94H31.4v9.13a1.18,1.18,0,0,1-1.18,1.18h-9ZM10.72,49.13H19.5V38.94H9.31v8.78a1.41,1.41,0,0,0,1.41,1.41ZM9.31,37.33H19.5V27h-9a1.18,1.18,0,0,0-1.18,1.18Z" fill="url(#linear-gradient)"/>
+    <path d="M35.15,9.25A13.9,13.9,0,0,1,49.19,23v.4a13.9,13.9,0,0,1-13.76,14H21.11V23.29a13.9,13.9,0,0,1,13.75-14Z" fill-rule="evenodd" fill="url(#linear-gradient-2)"/>
+    <path d="M43.79,15.6a2.36,2.36,0,0,0-1.85,3.82L38,26.48h-.3a2.22,2.22,0,0,0-1.25.38L33.4,23.74a2.23,2.23,0,0,0,.19-.92,2.42,2.42,0,0,0-4.84,0A2.34,2.34,0,0,0,29.06,24L26.3,27.59a2.43,2.43,0,0,0-.66,0A2.36,2.36,0,1,0,28,30h0a2.4,2.4,0,0,0-.31-1.11l2.9-3.66a2.91,2.91,0,0,0,.59,0A2.45,2.45,0,0,0,32,25l3.33,3.49a3.09,3.09,0,0,0,0,.43,2.36,2.36,0,0,0,4.72,0,2.59,2.59,0,0,0-.47-1.42l3.94-7.08h.24a2.41,2.41,0,0,0,.09-4.81Z" fill="#fff"/>
+  </g>
+</svg>

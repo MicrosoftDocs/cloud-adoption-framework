@@ -24,7 +24,7 @@ The content within the Cloud Adoption Framework assumes that Azure Migrate (or A
 - **Migrate from other cloud to Azure.** You can migrate your compute instances provisioned on other cloud providers to Azure VMs. Site Recovery treats those instances as physical servers for migration purposes.
 
 ![Azure Site Recovery](../../../_images/migrate/asr-replication-image.png)
-*Azure Site Recovery moving assets to Azure or other clouds*
+_Figure 1: Azure Site Recovery moving assets to Azure or other clouds._
 
 After you have assessed on-premises and cloud infrastructure for migration, Azure Site Recovery contributes to your migration strategy by replicating on-premises machines. With the following easy steps, you can set up migration of on-premises VMs, physical servers, and cloud VM instances to Azure:
 

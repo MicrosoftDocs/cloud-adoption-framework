@@ -11,7 +11,7 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-<!-- cSpell:ignore WSUS -->
+<!-- cSpell:ignore WSUS getting started -->
 
 # Operational compliance in Azure
 
@@ -23,12 +23,12 @@ Improving operational compliance reduces the likelihood of an outage related to 
 
 For any enterprise-grade environment, this table outlines the suggested minimum for a management baseline.
 
-|Process  |Tool  |Purpose  |
-|---------|---------|---------|
-|Patch management|Update Management|Management and scheduling of updates|
-|Policy enforcement|Azure Policy|Policy enforcement to ensure environment and guest compliance|
-|Environment configuration|Azure Blueprints|Automated compliance for core services|
-|Resource Configuration|Desired State Configuration|Automated configuration on Guest OS and some aspects of the environment|
+| Process | Tool | Purpose |
+|---|---|---|
+| Patch management | Update Management | Management and scheduling of updates |
+| Policy enforcement | Azure Policy | Policy enforcement to ensure environment and guest compliance |
+| Environment configuration | Azure Blueprints | Automated compliance for core services |
+| Resource Configuration | Desired State Configuration | Automated configuration on Guest OS and some aspects of the environment |
 
 ::: zone target="docs"
 
@@ -43,10 +43,10 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 
 Computers that are managed by Update Management use the following configurations to do assessment and update deployments:
 
-- Microsoft Monitoring Agent (MMA) for Windows or Linux
-- PowerShell Desired State Configuration (DSC) for Linux
-- Azure Automation Hybrid Runbook Worker
-- Microsoft Update or Windows Server Update Services (WSUS) for Windows computers
+- Microsoft Monitoring Agent (MMA) for Windows or Linux.
+- PowerShell Desired State Configuration (DSC) for Linux.
+- Azure Automation Hybrid Runbook Worker.
+- Microsoft Update or Windows Server Update Services (WSUS) for Windows computers.
 
 For more information, see [Update Management solution](https://docs.microsoft.com/azure/automation/automation-update-management).
 
@@ -122,7 +122,7 @@ To apply a policy to a resource group:
 To learn more, see:
 
 - [Azure Policy](https://docs.microsoft.com/azure/azure-policy)
-- [Azure Policy - Guest configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration)
+- [Azure Policy: Guest configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration)
 - [Cloud Adoption Framework: Policy enforcement decision guide](../../decision-guides/policy-enforcement/index.md)
 
 ## Azure Blueprints
@@ -153,7 +153,7 @@ To create a blueprint:
 
 ::: zone target="chromeless"
 
-1. Go to **Blueprints - Getting started**.
+1. Go to **Blueprints: Getting started**.
 1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
@@ -167,7 +167,7 @@ To create a blueprint:
 
 ::: zone target="docs"
 
-1. Go to [Blueprints - Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
+1. Go to [Blueprints: Getting started](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted).
 1. On the **Create a Blueprint** pane, select **Create**.
 1. Filter the list of blueprints to select the appropriate blueprint.
 1. In the **Blueprint name** box, enter the blueprint name.
@@ -196,7 +196,7 @@ To publish blueprint artifacts to your subscription:
 
 ::: zone target="docs"
 
-1. Go to [Blueprints - Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
+1. Go to [Blueprints: Blueprint definitions](https://portal.azure.com/#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/Blueprints).
 1. Select the blueprint you created in the previous steps.
 1. Review the blueprint definition, then select **Publish blueprint**.
 1. In the **Version** box, enter a version like "1.0".

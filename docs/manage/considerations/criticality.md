@@ -15,8 +15,7 @@ Across every business, there exist a small number of workloads that are too impo
 
 At the other end of the spectrum, some workloads can go months at a time without being used. Poor performance or outages for those workloads is not desirable, but the impact is isolated and limited.
 
-Understanding the criticality of each workload in the IT portfolio is the first step toward establishing mutual commitments to cloud management.
-The following diagram illustrates a common alignment between the criticality scale to follow and the standard commitments made by the business.
+Understanding the criticality of each workload in the IT portfolio is the first step toward establishing mutual commitments to cloud management. The following diagram illustrates a common alignment between the criticality scale to follow and the standard commitments made by the business.
 
 ![Criticality and management level alignment](../../_images/manage/cloud-criticality-alignment.png)
 
@@ -41,7 +40,7 @@ It's common for businesses to include additional criticality classifications tha
 
 ## Importance of accurate criticality
 
-Later in the cloud-adoption process, the cloud management team will use this classification to determine the amount of effort required to meet aligned levels of criticality. In on-premises environments, operations management is often purchased centrally and treated as a necessary business burden, with little or no additional operating costs. In the cloud, operations management (like all of the cloud) is purchased on a per-asset basis as monthly operating costs.
+Later in the cloud-adoption process, the cloud management team will use this classification to determine the amount of effort required to meet aligned levels of criticality. In on-premises environments, operations management is often purchased centrally and treated as a necessary business burden, with little or no additional operating costs. Like all cloud services, operations management is purchased on a per-asset basis as monthly operating costs.
 
 Because there's a clear and direct cost to operations management in the cloud, it's important to properly align costs and desired criticality scales.
 
@@ -49,14 +48,14 @@ Because there's a clear and direct cost to operations management in the cloud, i
 
 An initial review of every workload in the portfolio can be time consuming. To ensure that this effort doesn't block your broader cloud strategy, we recommend that your teams agree on a default criticality to apply to all workloads.
 
-Based on the preceding criticality-scale table, we recommend that you adopt *Medium* criticality as the default. Doing so will allow your cloud strategy team to quickly identify workloads that require a higher level of criticality.
+Based on the preceding criticality-scale table, we recommend that you adopt _medium_ criticality as the default. Doing so will allow your cloud strategy team to quickly identify workloads that require a higher level of criticality.
 
 ## Use the template
 
-The following steps apply if you're using the [Ops Management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management.
+The following steps apply if you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management.
 
-1. Record the criticality scale on the **scale** tab of the workbook.
-2. Update each workload in the *Example* or *Clean Template* to reflect the default criticality in the *Criticality* column.
+1. Record the criticality scale in the `Scale` worksheet.
+2. Update each workload in either the `Example` worksheet or the `Clean Template` worksheet to reflect the default criticality in the `Criticality` column.
 3. The business should enter the correct values to reflect any deviations from the default criticality.
 
 ## Next steps

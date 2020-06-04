@@ -21,16 +21,16 @@ This discipline comes first because collecting proper operational data is vital 
 
 For any enterprise-grade environment, the following table outlines the suggested minimum for a management baseline.
 
-|Process  |Tool  |Purpose  |
-|---------|---------|---------|
-|Monitor health of Azure services|Azure Service Health|Health, performance, and diagnostics for services running in Azure|
-|Log centralization|Log Analytics|Central logging for all visibility purposes|
-|Monitoring centralization|Azure Monitor|Central monitoring of operational data and trends|
-|Virtual machine inventory and change tracking|Azure Change Tracking and Inventory|Inventory VMs and monitor changes for guest OS level|
-|Subscription Monitoring|Azure Activity Log|Monitoring change at the subscription level|
-|Guest OS monitoring|Azure Monitor for VMs|Monitoring changes and performance of VMs|
-|Network monitoring|Azure Network Watcher|Monitoring network changes and performance|
-|DNS monitoring|DNS Analytics|Security, performance, and operations of DNS|
+| Process | Tool | Purpose |
+|---|---|---|
+| Monitor health of Azure services | Azure Service Health | Health, performance, and diagnostics for services running in Azure |
+| Log centralization | Log Analytics | Central logging for all visibility purposes |
+| Monitoring centralization | Azure Monitor | Central monitoring of operational data and trends |
+| Virtual machine inventory and change tracking | Azure Change Tracking and Inventory | Inventory VMs and monitor changes for guest OS level |
+| Subscription Monitoring | Azure Activity Log | Monitoring change at the subscription level |
+| Guest OS monitoring | Azure Monitor for VMs | Monitoring changes and performance of VMs |
+| Network monitoring | Azure Network Watcher | Monitoring network changes and performance |
+| DNS monitoring | DNS Analytics | Security, performance, and operations of DNS |
 
 ::: zone target="docs"
 
@@ -43,9 +43,9 @@ For any enterprise-grade environment, the following table outlines the suggested
 
 ::: zone-end
 
-Azure Service Health provides a personalized view of the health of your Azure services and regions. Information about active issues is posted to Service Health to help you understand the effect on your resources. Regular updates keep you informed as issues are resolved.
+Azure Service Health provides a personalized view of the health of your Azure services and regions. Information about active issues is posted to Azure Service Health to help you understand the effect on your resources. Regular updates keep you informed as issues are resolved.
 
-We also publish planned maintenance events to Service Health so you'll know about changes that can affect resource availability. Set up Service Health alerts to notify you when service issues, planned maintenance, or other changes might affect your Azure services and regions.
+We also publish planned maintenance events to Azure Service Health so you'll know about changes that can affect resource availability. Set up Service Health alerts to notify you when service issues, planned maintenance, or other changes might affect your Azure services and regions.
 
 Azure Service Health includes:
 
@@ -75,11 +75,11 @@ To set up a Service Health alert:
 
 ::: zone target="docs"
 
-To set up a Service Health alert, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts).
+To set up Service Health alerts, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts).
 
 ### Learn more
 
-To learn more, see the [Azure Service Health documentation](https://docs.microsoft.com/azure/service-health).
+For more information, see [Azure Service Health](https://docs.microsoft.com/azure/service-health).
 
 ## Log Analytics
 

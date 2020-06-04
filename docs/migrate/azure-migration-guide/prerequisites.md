@@ -66,7 +66,7 @@ When assessing workloads for migration, identify applications that would not req
 ## Learn more
 
 - [Cloud Adoption Framework migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)
-- [The Five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
+- The [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
 
 # [Planning checklist](#tab/Checklist)
 
@@ -76,7 +76,7 @@ Before starting a migration, you'll need to complete some prerequisites. The exa
 >
 > - **Identify stakeholders:** Identify the key people who have a role to play or a stake in the outcome of the migration.
 > - **Identify key milestones:** To effectively plan the migration timelines, identify key milestones to meet.
-> - **Identify the migration strategy:** Determine which of the 5 Rs of rationalization you will use.
+> - **Identify the migration strategy:** Determine which of the five Rs of rationalization you will use.
 > - **Assess your technical fit:** Validate the technical readiness and suitability for migration, and determine what level of assistance you may require from external partners or Azure support.
 > - **Migration planning:** Perform the detailed assessment and planning required to prepare your assets (infrastructure, apps, and data) as well as Azure infrastructure for the migration.
 > - **Test your migration:** Validate your migration plan by performing limited-scope test migration.
@@ -97,7 +97,7 @@ Assuming you choose a rehost approach to migration, the following activities wil
 
 ## Learn more
 
-- [The 5 Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
+- The [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
 - [Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)
 - [Cloud Adoption Framework planning checklist](../migration-considerations/prerequisites/planning-checklist.md)
 

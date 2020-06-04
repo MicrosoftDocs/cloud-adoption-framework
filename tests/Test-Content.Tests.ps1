@@ -1,79 +1,102 @@
 $here = $global:herePath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
-. "$here\Test-MyRepo.ps1"
+. $here\Test-MyRepo.ps1
 
-. "$here\Test-Expressions.ps1"
-. "$here\Test-Helpers.ps1"
-. "$here\Test-LocalPaths.ps1"
-. "$here\Test-Words.ps1"
-. "$here\Test-TOC.ps1"
+. $here\Test-Terms.ps1
+. $here\Test-Expressions.ps1
+. $here\Test-Helpers.ps1
+. $here\Test-Paths.ps1
+. $here\Test-Words.ps1
+. $here\Test-TOC.ps1
 
-Describe "Test-LocalPaths" -Tags "Content" {
+Describe Test-PageContent -Tags "Content" {
 
-    It "All local links exist" {
-        Test-AllLocalPaths $(Get-ContentFiles) `
-            | Should -Be 0
+    BeforeAll {
+        $files = Get-ContentFiles $(Get-ExcludedSubfolders)
     }
-}
 
-Describe "Test-WellFormedLinks" -Tag "Links" {
-    
-    It "All links are well-formed" {
-        Test-AllMatches $(Get-ContentFiles) $(Get-LinkExpressions) `
-            | Should -Be 0
-    }
-}
-
-Describe "Test-PageLinks" -Tag @("Links", "LongRunning") {
-
-    It "All external page links are valid" {
-        Test-PageLinks $(Get-ContentFiles) `
-            | Should -Be 0
-    }
-}
-
-# Describe "Test-SpecificPageLinks" -Tag "Links" {
-
-#     It "All Page1 links are valid" {
-#         $item = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\innovate\kubernetes\cluster-design-operations.md"
-#         Test-PageLinks @($item) | Should -Be 0
-#     }
-# }
-
-Describe "Test-Casing" -Tag "Content" {
-
-    It "Known phrases are cased properly" {
+    # It "All known phrases are cased properly" {
+    #     "Test-Casing"
         
-        $files = Get-ContentFiles
+    #     Test-AllMatches $files $(Get-CasingExpressions) WordsWithCasing `
+    #         | Should -Be 0
 
-        ## TODO: Use word boundaries.
-
-        # $files = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\govern\cost-management\best-practices.md"
-        # $files = Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\reference\networking-vdc.md"
-        Test-AllMatches @($files) $(Get-CasingExpressions) -IgnoreUrlContents $true -RequireCasingMatch $true `
-           | Should -Be 0
-
-    }
-}
-
-Describe "Test-InvalidTerms" -Tag "Content" {
+    # }
 
     It "All terms are valid" {
         
-        Test-AllMatches @(Get-Item "C:\Repos_Fork\cloud-adoption-framework-pr\docs\innovate\best-practices\data-dms.md") $(Get-InvalidTermExpressions) -IgnoreUrlContents $true `
-            | Should -Be 0
-
-        Test-AllMatches $(Get-ContentFiles) $(Get-InvalidTermExpressions) -IgnoreUrlContents $true `
+        Test-AllMatches $files $(Get-InvalidTermExpressions) Words `
             | Should -Be 0
     }
-}
-
-Describe "Test-Punctuation" -Tags "Style" {
     
     It "All punctuation style is correct" {
 
-        Test-AllMatches $(Get-ContentFiles) $(Get-PunctuationExpressions) `
+        Test-AllMatches $files $(Get-PunctuationExpressions) Verbatim `
             | Should -Be 0
 
+    }
+
+    It "All markdown formatting is correct" {
+
+        Test-AllMatches $files $(Get-InvalidFormattingExpressions) Verbatim `
+            | Should -Be 0
+
+    }
+
+    AfterAll {
+        $files = $null
+    }
+}
+
+Describe Test-PageLinks -Tag @("Links", "LongRunning") {
+
+    BeforeAll {
+        $files = Get-ContentFiles $(Get-ExcludedSubfolders)
+    }
+
+    It "All local links exist" {
+
+        Test-AllLocalPaths $files | Should -Be 0
+    }
+
+    It "All links are well-formed" {
+
+        Test-AllMatches $files $(Get-MalformedLinkExpressions) Verbatim `
+            | Should -Be 0
+    }
+
+    It "All external page links are valid" {
+        
+        Test-AllMatches $files '' LinkValidation `
+            | Should -Be 0
+    }
+
+    AfterAll {
+        $files = $null
+    }
+}
+
+Describe Test-LinkTitles -Tag @("Review") {
+    
+    It "Link titles should match" {
+        
+        $files = Get-ContentFiles $(Get-ExcludedSubfolders)
+        $expression = "\[(?<name>.*)]\(?<value>$(Get-RegexForUrl))"
+        # TODO Test-AllMatches $files $expression 
+    }
+
+}
+
+Describe Test-OneExpression -Tags @("TestValidation") {
+
+    It "Testing one expression" {
+        $files = @( $(Get-Item "$(Get-DocsPath)\get-started\team\cloud-adoption.md"))
+        #$expression = "(?s)# Step.*Accountable.*Deliverable.*Guidance"
+
+        $files = Get-ContentFiles $(Get-ExcludedSubfolders)
+        $expression = "[\x01-\x08\x10-\x19\x7F-\xE6\xE8-\xFF]"
+
+        Test-AllMatches $files @($expression) Verbatim `
+           | Should -Be 0
     }
 }

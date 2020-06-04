@@ -1,9 +1,9 @@
 ---
 title: Expand your landing zone
-description: Use the Cloud Adoption Framework for Azure to learn how to expand a landing zone
+description: Use the Cloud Adoption Framework for Azure to learn how to expand a landing zone.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2020
+ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -19,16 +19,16 @@ Expanding your landing zone provides a code-first approach to embedding the foll
 
 ![Shared architecture principles](../../_images/ready/shared-principles.png)
 
-These same architecture principles are shared by [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview), [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/framework), and the solutions in the [Azure Architecture Center](https://docs.microsoft.com/azure/architecture).
+These same architecture principles are shared by [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview), [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework), and the solutions in the [Azure Architecture Center](https://docs.microsoft.com/azure/architecture).
 
 ## Applying these principles to your landing zone improvements
 
 To better align with the methodologies of the Cloud Adoption Framework, the principles above are grouped into actionable landing zone improvements:
 
-- Basic considerations: Refactor a landing zone to refine hosting, fundamentals, and other foundational elements.
-- Operations expansions: Add operations management configurations to improve **performance, reliability, and operational excellence**.
-- Governance expansions: Add governance configurations to improve **cost, reliability, security**, and consistency.
-- Security expansions: Add **security** configurations to improve protection of sensitive data and critical systems.
+- Basic considerations: refactor a landing zone to refine hosting, fundamentals, and other foundational elements.
+- Operations expansions: add operations management configurations to improve **performance, reliability, and operational excellence**.
+- Governance expansions: add governance configurations to improve **cost, reliability, security**, and consistency.
+- Security expansions: add **security** configurations to improve protection of sensitive data and critical systems.
 
 > [!WARNING]
 > Adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infrastructure, or data assets) in the cloud** should consider each of these expansions early in their cloud adoption journey. For all other adoption patterns, landing zone expansions could be a parallel iteration, allowing for early business success.

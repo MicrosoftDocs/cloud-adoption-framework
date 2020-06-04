@@ -1,5 +1,5 @@
 ---
-title: "Azure innovation: Empower adoption" 
+title: "Azure innovation: Empower adoption"
 description: Help developer teams build productively, foster secure global collaboration, and remove barriers to scaling innovation in Azure.
 author: absheik
 ms.author: absheik
@@ -23,7 +23,7 @@ ms.localizationpriority: high
 
 ::: zone-end
 
-You know that innovation is critical to business success. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. *Developers* are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
+You know that innovation is critical to business success. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. _Developers_ are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
 
 ## Generate value
 
@@ -72,6 +72,7 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 ::: zone target="chromeless"
 
+<!-- docsTest:ignore "Azure DevOps Projects" -->
 <!-- markdownlint-disable DOCSMD001 -->
 
 ### Action
@@ -80,9 +81,9 @@ To create a DevOps project:
 
 1. Go to **Azure DevOps Projects**.
 2. Select **Create DevOps project**.
-3. Select **Runtime, Framework and Service**.
+3. Select **Runtime, Framework, and Service**.
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Project" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -102,9 +103,11 @@ GitHub, the largest developer community, is at the heart of the open-source comm
 
 To innovate, many developers use open-source code. 80 to 90 percent of new application development begins with open-source code. Open source isn't just about code. It's also about interconnected communities and developers around the globe building together. By using an open development model with GitHub, teams innovate and collaborate, identify security vulnerabilities early, and discover expert talent. Enterprise development teams can integrate GitHub repositories with Microsoft Teams and Azure. Teams is the only solution that brings together chat, voice, and collaboration with the power of Microsoft Office apps, meetings, and business process workflows, all in a single user experience. It's the hub for teamwork and innovation.
 
-**Go to [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource)**
+### Learn more
 
-**Go to the [Microsoft Teams documentation](https://docs.microsoft.com/MicrosoftTeams)**
+- [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource)
+
+- [Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-overview)
 
 # [Innovation characteristics](#tab/Characteristics)
 

@@ -24,6 +24,8 @@ Modern operations management solutions create a multicloud view of operations. A
 
 Both of these best practices build toward a future-state methodology for operations management, as illustrated in the following diagram:
 
+<!-- cSpell:ignore caf -->
+
 ![Manage methodology of the Cloud Adoption Framework](../_images/manage/caf-manage.png)
 
 **Business alignment:** In the Manage methodology, all workloads are classified by criticality and business value. That classification can then be measured through an impact analysis, which calculates the lost value associated with performance degradation or business interruptions. Using that tangible revenue impact, cloud operations teams can work with the business to establish a commitment that balances cost and performance.

@@ -1,5 +1,5 @@
 ---
-title: "Azure innovation: Engage via apps" 
+title: "Azure innovation: Engage via apps"
 description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native apps.
 author: billyclaymyersmsft
 ms.author: wimyers
@@ -111,7 +111,7 @@ During your innovation journey, you'll eventually find yourself on the path to D
 
 ## Visual Studio App Center
 
-As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center doesn't just provide a place where you can test your applications across iOS, Android, Windows, and macOS. It also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center overview](https://docs.microsoft.com/appcenter).
+As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](https://docs.microsoft.com/appcenter).
 
 Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your app across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](https://docs.microsoft.com/appcenter/push).
 
@@ -119,7 +119,7 @@ Visual Studio App Center also provides a notification service that lets you use 
 
 - [App Service overview](https://docs.microsoft.com/azure/app-service/overview)
 - [Web App for Containers: Run a custom container](https://docs.microsoft.com/azure/app-service/containers/quickstart-docker)
-- [An introduction to Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)
+- [Introduction to Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)
 - [Azure for .NET and .NET Core developers](https://docs.microsoft.com/dotnet/azure/?view=azure-dotnet)
 - [Azure SDK for Python documentation](https://docs.microsoft.com/azure/python)
 - [Azure for Java cloud developers](https://docs.microsoft.com/azure/java/?view=azure-java-stable)
@@ -156,9 +156,9 @@ Use a fully managed Kubernetes service to handle provisioning, upgrading, and sc
 
 #### Action
 
-To configure or monitor an Azure Kubernetes service:
+To configure or monitor an AKS service:
 
-1. Go to **Azure Kubernetes services**.
+1. Go to **Azure Kubernetes Services**.
 2. Configure a new service: Select **Add** and follow the prompts.
 3. Manage existing services: Select the desired Kubernetes service from the list.
 
@@ -166,7 +166,7 @@ To configure or monitor an Azure Kubernetes service:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerService%2FManagedClusters]" submitText="Go to Azure Kubernetes services" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerService%2FManagedClusters]" submitText="Go to Azure Kubernetes Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -180,7 +180,7 @@ Azure Functions provides a platform for running small units of code or functions
 
 The Azure Functions runtime supports many languages, including C#, Java, JavaScript, and Python. For a complete list, see [Supported languages in Azure Functions](https://docs.microsoft.com/azure/azure-functions/supported-languages).
 
-Another benefit of functions is that they can be triggered by different actions and events, like HTTPTriggers, TimerTriggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information on triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
+Another benefit of functions is that they can be triggered by different actions and events, like HTTPTriggers, TimerTriggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information about triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
 
 #### Action
 
@@ -282,7 +282,9 @@ To configure or monitor container instances:
 
 Azure Red Hat OpenShift provides flexible self-service deployment of fully managed OpenShift clusters. Maintain regulatory compliance and focus on your application development while your master, infrastructure, and application nodes are patched, updated, and monitored by both Microsoft and Red Hat. Choose your own registry, networking, storage, or CI/CD solutions. Or start quickly by using built-in solutions with automated source code management, container and application builds, deployments, scaling, health management, and more.
 
-**Go to [Azure Red Hat OpenShift](https://docs.microsoft.com/azure/openshift/intro-openshift)**
+### Learn more
+
+- [Azure Red Hat OpenShift](https://docs.microsoft.com/azure/openshift/intro-openshift)
 
 # [Isolate points of failure](#tab/IsolatePointsOfFailure)
 

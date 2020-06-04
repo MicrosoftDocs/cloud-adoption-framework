@@ -93,7 +93,7 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone-end
 
-# [Cost Management](#tab/ManageCost)
+# [Cost management](#tab/ManageCost)
 
 It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 
@@ -125,6 +125,6 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 
 - [Tutorial: Optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Prevent unexpected charges with Azure billing and cost management](https://docs.microsoft.com/azure/billing/billing-getting-started)
-- [Explore and analyze costs with Cost analysis](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis)
+- [Explore and analyze costs with cost analysis](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis)
 
 ::: zone-end

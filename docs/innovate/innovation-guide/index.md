@@ -1,5 +1,5 @@
 ---
-title: "Azure innovation: Before you start" 
+title: "Azure innovation: Before you start"
 description: Prepare your environment for cloud innovation with Azure features that help you engage customers, build solutions, and drive adoption.
 author: matticusau
 ms.author: mlavery
@@ -44,7 +44,9 @@ In this guide, you'll learn how to:
 > [!TIP]
 > For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Azure innovation guide**, and then follow the step-by-step instructions.
 
-Next steps: [Prepare for innovation with a shared repository and ideation management tools](./adoption.md)
+**Next steps:**
+
+- [Prepare for innovation with a shared repository and ideation management tools](./adoption.md)
 
 ::: zone-end
 

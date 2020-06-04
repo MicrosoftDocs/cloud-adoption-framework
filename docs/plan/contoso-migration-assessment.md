@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
+<!-- docsTest:disable TODO -->
+
 <!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc OSTICKETWEB OSTICKETMYSQL smarthotelapp ctypes ctypeslib prereqs -->
 
 # Assess on-premises workloads for migration to Azure
@@ -24,10 +26,10 @@ To get started and to better understand the technologies involved, Contoso asses
 
 <!-- markdownlint-disable MD033 -->
 
-App name | Platform | App tiers | Details
---- | --- | --- | ---
-SmartHotel360<br/><br/> (manages Contoso travel requirements) | Runs on Windows with a SQL Server database | Two-tiered app. The front-end ASP.NET website runs on one VM (**WEBVM**) and the SQL Server runs on another VM (**SQLVM**). | VMs are VMware, running on an ESXi host managed by vCenter Server.<br/><br/> You can download the sample app from [GitHub](https://github.com/Microsoft/SmartHotel360).
-osTicket<br/><br/> (Contoso service desk app) | Runs on Linux/Apache with MySQL PHP (LAMP) | Two-tiered app. A front-end PHP website runs on one VM (**OSTICKETWEB**) and the MySQL database runs on another VM (**OSTICKETMYSQL**). | The app is used by customer service apps to track issues for internal employees and external customers.<br/><br/> You can download the sample from [GitHub](https://github.com/osTicket/osTicket).
+| App name | Platform | App tiers | Details |
+| --- | --- | --- | --- |
+| SmartHotel360 <br><br> (manages Contoso travel requirements) | Runs on Windows with a SQL Server database | Two-tiered app. The front-end ASP.NET website runs on one VM (**WEBVM**) and the SQL Server runs on another VM (**SQLVM**). | VMs are VMware, running on an ESXi host managed by vCenter Server. <br><br> You can download the sample app from [GitHub](https://github.com/Microsoft/SmartHotel360). |
+| osTicket <br><br> (Contoso service desk app) | Runs on Linux/Apache with MySQL PHP (LAMP) | Two-tiered app. A front-end PHP website runs on one VM (**OSTICKETWEB**) and the MySQL database runs on another VM (**OSTICKETMYSQL**). | The app is used by customer service apps to track issues for internal employees and external customers. <br><br> You can download the sample from [GitHub](https://github.com/osTicket/osTicket). |
 
 <!-- markdownlint-enable MD033 -->
 
@@ -67,11 +69,11 @@ The Contoso cloud team has identified goals for its migration assessments:
 
 Contoso uses Microsoft tools for its migration assessment. The tools align with the company's goals and should provide Contoso with all the information it needs.
 
-Technology | Description | Cost
---- | --- | ---
-[Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=ssdt-18vs2017) | Contoso uses Data Migration Assistant to assess and detect compatibility issues that might affect its database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets. It recommends performance and reliability improvements. | Data Migration Assistant is a free, downloadable tool.
-[Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-overview) | Contoso uses the Azure Migrate service to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | As of May 2018, Azure Migrate is a free service.
-[Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map) | Azure Migrate uses Service Map to show dependencies between machines that the company wants to migrate. | Service Map is part of Azure Monitor logs. Currently, Contoso can use Service Map for 180 days without incurring charges.
+| Technology | Description | Cost |
+| --- | --- | --- |
+| [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=ssdt-18vs2017) | Contoso uses Data Migration Assistant to assess and detect compatibility issues that might affect its database functionality in Azure. Data Migration Assistant assesses feature parity between SQL sources and targets. It recommends performance and reliability improvements. | Data Migration Assistant is a free, downloadable tool. |
+| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Contoso uses the Azure Migrate service to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | As of May 2018, Azure Migrate is a free service. |
+| [Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map) | Azure Migrate uses Service Map to show dependencies between machines that the company wants to migrate. | Service Map is part of Azure Monitor logs. Currently, Contoso can use Service Map for 180 days without incurring charges. |
 
 In this scenario, Contoso downloads and runs Data Migration Assistant to assess the on-premises SQL Server database for its travel app. Contoso uses Azure Migrate with dependency mapping to assess the app VMs before migration to Azure.
 
@@ -124,8 +126,10 @@ Here's how Contoso performs its assessment:
 > - **Step 5: Prepare for dependency analysis by using Azure Migrate.** Contoso installs Azure Migrate agents on the VMs, so the company can see dependency mapping between VMs.
 > - **Step 6: Assess the VMs by using Azure Migrate.** Contoso checks dependencies, groups the VMs, and runs the assessment. When the assessment is ready, Contoso analyzes the assessment in preparation for migration.
 
-    > [!NOTE]
-    > Assessments shouldn't just be limited to using tooling to discover information about your environment. You should also schedule time to speak to business owners, end users, and other members of the IT department to fully understand of what is happening in the environment and understand factors that tooling cannot tell you. 
+<!-- -->
+
+> [!NOTE]
+> Assessments shouldn't just be limited to using tooling to discover information about your environment. You should also schedule time to speak to business owners, end users, and other members of the IT department to fully understand of what is happening in the environment and understand factors that tooling cannot tell you.
 
 ## Step 1: Download and install Data Migration Assistant
 
@@ -279,7 +283,7 @@ Before deploying the VM, Contoso checks that the OVA file is secure:
 
     **Example:**
 
-    ```C:\>CertUtil -HashFile C:\AzureMigrate\AzureMigrate.ova SHA256```
+    `C:\>CertUtil -HashFile C:\AzureMigrate\AzureMigrate.ova SHA256`
 
 3. The generated hash should match the hash values listed in the [Verify security](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware#verify-security) section of the [Assess VMware VMs for migration](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware) tutorial.
 
@@ -311,7 +315,7 @@ Now, Contoso runs the collector to discover VMs. Currently, the collector curren
 
     ![vSphere Client console - Collector shortcut](../migrate/azure-best-practices/media/contoso-migration-assessment/collector-shortcut-v2.png)
 
-3. In Azure Migrate Collector, Contoso selects **Set up prerequisites**. Contoso accepts the license terms and reads the third-party information.
+3. In the Azure Migrate Collector, Contoso selects **Set up prerequisites**. Contoso accepts the license terms and reads the third-party information.
 
 4. The collector checks that the VM has internet access, that the time is synced, and that the collector service is running. (The collector service is installed by default on the VM.) Contoso also installs the VMware vSphere Virtual Disk Development Kit.
 
@@ -479,16 +483,16 @@ An assessment has a confidence rating of from 1 star to 5 stars (1 star is the l
 
 - The confidence rating is assigned to an assessment based on the availability of data points that are needed to compute the assessment.
 - The rating helps you estimate the reliability of the size recommendations that are provided by Azure Migrate.
-- The confidence rating is useful when you are doing *performance-based sizing*. Azure Migrate might not have enough data points for utilization-based sizing. For *as on-premises* sizing, the confidence rating is always 5 stars because Azure Migrate has all the data points it needs to size the VM.
+- The confidence rating is useful when you are doing _performance-based sizing_. Azure Migrate might not have enough data points for utilization-based sizing. For _as on-premises_ sizing, the confidence rating is always 5 stars because Azure Migrate has all the data points it needs to size the VM.
 - Depending on the percentage of data points available, the confidence rating for the assessment is provided:
 
-   Availability of data points | Confidence rating
-   --- | ---
-   0%-20% | 1 star
-   21%-40% | 2 stars
-   41%-60% | 3 stars
-   61%-80% | 4 stars
-   81%-100% | 5 stars
+    | Availability of data points | Confidence rating |
+    | --- | --- |
+    | 0%-20% | 1 star |
+    | 21%-40% | 2 stars |
+    | 41%-60% | 3 stars |
+    | 61%-80% | 4 stars |
+    | 81%-100% | 5 stars |
 
 #### Verify Azure readiness
 
@@ -502,12 +506,12 @@ The assessment report shows the information that's summarized in the table. To s
 
 <!-- markdownlint-disable MD033 -->
 
-Setting | Indication | Details
---- | --- | ---
-**Azure VM readiness** | Indicates whether the VM is ready for migration. | Possible states:<br/><br/>- Ready for Azure<br/><br/>- Ready with conditions <br/><br/>- Not ready for Azure<br/><br/>- Readiness unknown<br/><br/> If a VM isn't ready, Azure Migrate shows some remediation steps.
-**Azure VM size** | For ready VMs, Azure Migrate provides an Azure VM size recommendation. | Sizing recommendation depends on assessment properties:<br/><br/>- If you used performance-based sizing, sizing considers the performance history of the VMs.<br/><br/>- If you used *as on-premises*, sizing is based on the on-premises VM size and utilization data isn't used.
-**Suggested tool** | Because Azure machines are running the agents, Azure Migrate looks at the processes that are running inside the machine. It identifies whether the machine is a database machine.
-**VM information** | The report shows settings for the on-premises VM, including operating system, boot type, and disk and storage information.
+| Setting | Indication | Details |
+| --- | --- | --- |
+| **Azure VM readiness** | Indicates whether the VM is ready for migration. | Possible states: <li> Ready for Azure <li> Ready with conditions <li> Not ready for Azure <li> Readiness unknown <br><br> If a VM isn't ready, Azure Migrate shows some remediation steps. |
+| **Azure VM size** | For ready VMs, Azure Migrate provides an Azure VM size recommendation. | Sizing recommendation depends on assessment properties: <li> If you used performance-based sizing, sizing considers the performance history of the VMs. <li> If you used _as on-premises_, sizing is based on the on-premises VM size and utilization. <li> Data isn't used. |
+| **Suggested tool** | Because Azure machines are running the agents, Azure Migrate looks at the processes that are running inside the machine. It identifies whether the machine is a database machine. | |
+| **VM information** | The report shows settings for the on-premises VM, including operating system, boot type, and disk and storage information. | |
 
 <!-- markdownlint-enable MD033 -->
 

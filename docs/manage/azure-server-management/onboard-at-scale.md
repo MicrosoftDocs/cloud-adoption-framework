@@ -15,14 +15,14 @@ ms.subservice: operate
 
 You must complete these two tasks to onboard Azure server management services to your servers:
 
-- Deploy service agents to your servers
-- Enable the management solutions
+- Deploy service agents to your servers.
+- Enable the management solutions.
 
 This article covers the three processes that are necessary to complete these tasks:
 
-1. Deploy the required agents to Azure VMs by using Azure Policy
-1. Deploy the required agents to on-premises servers
-1. Enable and configuring the solutions
+1. Deploy the required agents to Azure VMs by using Azure Policy.
+1. Deploy the required agents to on-premises servers.
+1. Enable and configuring the solutions.
 
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard virtual machines to Azure server management services.
@@ -31,11 +31,11 @@ This article covers the three processes that are necessary to complete these tas
 
 All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
 
-Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
+Azure Policy has a [built-in policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
 <!-- TODOBACKLOG: Add these when available.
-- [Preview]: Enable Azure Monitor for virtual machine scale sets.
-- [Preview]: Enable Azure Monitor for VMs.
+**Preview:** Enable Azure Monitor for virtual machine scale sets.
+**Preview:** Enable Azure Monitor for VMs.
  -->
 
 > [!NOTE]
@@ -120,14 +120,14 @@ To create or modify the saved search, follow these steps:
 
 1. Enter the computer name or the VMUUID to include the computers that you want to opt in for Change Tracking.
 
-    ```kusto
-    Heartbeat
-    | where AzureEnvironment=~"Azure" or Computer in~ ("list of the on-premises server names", "server1")
-    | distinct Computer
-    ```
+  ```kusto
+  Heartbeat
+  | where AzureEnvironment=~"Azure" or Computer in~ ("list of the on-premises server names", "server1")
+  | distinct Computer
+  ```
 
-    > [!NOTE]
-    > The server name must exactly match the value in the expression, and it shouldn't contain a domain name suffix.
+  > [!NOTE]
+  > The server name must exactly match the value in the expression, and it shouldn't contain a domain name suffix.
 
 1. Select **Save**. By default, the scope configuration is linked to the **MicrosoftDefaultComputerGroup** saved search. It will be automatically updated.
 
@@ -180,9 +180,9 @@ You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-mo
 
 ### Azure Security Center
 
-We recommend that you onboard all your servers at least to the Azure Security Center *Free* tier. This option provides a basic level of security assessments and actionable security recommendations for your environment. If you upgrade to the *Standard* tier, you get additional benefits, which are discussed in detail on the [Security Center pricing page](https://docs.microsoft.com/azure/security-center/security-center-pricing).
+We recommend that you onboard all your servers at least to the Free tier of Azure Security Center. This option provides basic security assessments and actionable security recommendations for your environment. The Standard tier provides additional benefits. For more information, see [Azure Security Center pricing](https://docs.microsoft.com/azure/security-center/security-center-pricing).
 
-To enable the Azure Security Center Free tier, follow these steps:
+To enable the Free tier of Azure Security Center, follow these steps:
 
 1. Go to the **Security Center** portal page.
 2. Under **POLICY & COMPLIANCE**, select **Security policy**.

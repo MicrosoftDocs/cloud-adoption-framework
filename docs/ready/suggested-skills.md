@@ -15,7 +15,7 @@ During the Ready phase of a migration journey, the objective is to prepare for t
 
 ## Organizational readiness learning paths
 
-Depending on the motivations and business outcomes associated with a cloud adoption effort, leaders might be required to establish new organizational structures or virtual teams (V-teams) to facilitate various functions. The following articles help to develop the skills that are necessary to structure those teams in accordance with desired outcomes:
+Depending on the motivations and business outcomes associated with a cloud adoption effort, leaders might be required to establish new organizational structures or virtual teams (v-teams) to facilitate various functions. The following articles help to develop the skills that are necessary to structure those teams in accordance with desired outcomes:
 
 - [Initial organization alignment](./index.md): Overview of organizational alignment and various team structures to facilitate specific goals.
 - [Break down silos and fiefdoms](../organize/fiefdoms-silos.md): Understand two common organizational antipatterns and ways to guide the team to productive collaboration.
@@ -57,15 +57,15 @@ Turn your knowledge of Azure into official recognition with [Microsoft Azure cer
 
 Microsoft Learn is a new approach to learning. Readiness for the new skills and responsibilities that come with cloud adoption doesn't come easily. Microsoft Learn provides a more rewarding approach to hands-on learning that helps you achieve your goals faster. Earn points and levels and achieve more.
 
-The following examples are a few tailored learning paths on Microsoft Learn which align to the Ready portion of the Cloud Adoption Framework:
+The following examples are a few tailored learning paths on Microsoft Learn which align to the Ready methodology in the Cloud Adoption Framework:
 
-[Azure fundamentals](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn cloud concepts such as High Availability, Scalability, Elasticity, Agility, Fault Tolerance, and Disaster Recovery. Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage and security.
+[Azure fundamentals](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn cloud concepts such as high availability, scalability, elasticity, agility, fault tolerance, and disaster recovery. Understand the benefits of cloud computing in Azure and how it can save you time and money. Compare and contrast basic strategies for transitioning to the Azure cloud. Explore the breadth of services available in Azure including compute, network, storage and security.
 
 [Manage resources in Azure](https://docs.microsoft.com/learn/paths/azure-for-the-data-engineer): Learn how to work with the Azure command line and web portal to create, manage, and control cloud-based resources.
 
 [Administer infrastructure resources in Azure](https://docs.microsoft.com/learn/paths/administer-infrastructure-resources-in-azure): Learn how to create, manage, secure and scale virtual machine resources.
 
-[Store data in Azure](https://docs.microsoft.com/learn/paths/store-data-in-azure): Azure provides a variety of ways to store data: unstructured, archival, relational, and more. Learn the basics of storage management in Azure, how to create a Storage Account, and how to choose the right model for the data you want to store in the cloud.
+[Store data in Azure](https://docs.microsoft.com/learn/paths/store-data-in-azure): Azure provides a variety of ways to store data: unstructured, archival, relational, and more. Learn the basics of storage management in Azure, how to create a storage account, and how to choose the right model for the data you want to store in the cloud.
 
 [Architect great solutions in Azure](https://docs.microsoft.com/learn/paths/architect-great-solutions-in-azure): Learn how to design and build secure, scalable, high-performing solutions in Azure by examining the core principles found in every good architecture.
 
