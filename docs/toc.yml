@@ -180,7 +180,7 @@ items:
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
-      - name: Design principles
+      - name: Design areas
         href: ready/landing-zone/design-principles.md
       - name: Deployment options
         href: ready/landing-zone/deployment-options.md
@@ -192,7 +192,9 @@ items:
           href: ready/enterprise-scale/implementation.md
         - name: Architecture
           href: ready/enterprise-scale/architecture.md
-        - name: Design guidelines
+        - name: Design principles
+          href: ready/enterprise-scale/design-principles.md
+        - name: Design areas
           href: ready/enterprise-scale/design-guidelines.md
         - name: Critical design areas
           items:
@@ -212,8 +214,6 @@ items:
             href: ready/enterprise-scale/security-governance-and-compliance.md
           - name: Platform automation and DevOps
             href: ready/enterprise-scale/platform-automation-and-devops.md
-          - name: Design principles
-            href: ready/enterprise-scale/design-principles.md
         - name: Implementation guide
           href: ready/enterprise-scale/implementation-guide.md
         - name: Decision template
