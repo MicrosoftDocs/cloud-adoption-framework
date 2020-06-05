@@ -39,14 +39,6 @@ The following grid captures some of the landing zone deployment options and vari
 |[CAF Terraform](./terraform-landing-zone.md)|One sentence description |Either|Link|Link|
 
 
-
-|Landing zone  |Deployment velocity  |Scale  |Discovery time|Design principles|Governance principles|Management principles|
-|---------|---------|---------|---------|---------|---------|---------|---------|
-|[CAF Migrate](./migrate-landing-zone.md)|Start small|< 1,000 assets|one to five days|Included|Added through CAF Govern|Added through CAF Manage|
-|[CAF Foundation](./foundation-blueprint.md)|Start small|< 1,000 assets|one to five days|Included|Added through CAF Govern|Added through CAF Manage|
-|[CAF Enterprise-scale](./enterprise-scale.md)|Enterprise-scale|> 1,000 assets|3 to 6 weeks|Included|Configuration required|Configuration required|
-|[CAF Terraform](./terraform-landing-zone.md)|Either|Various templates|3 to 6 weeks|Included|Added through CAF Govern modules|Added through CAF Manage modules|
-
 The following table looks at the same deployment options from a slightly different perspective to guide more technical decision processes.
 
 | Landing zone                                 | Hub                          | Spoke    | Cloud model | Deployment Technology |
@@ -61,3 +53,15 @@ If you're still unsure which landing zone to choose first, we recommend starting
 
 > [!div class="nextstepaction"]
 > [CAF Migrate landing zone blueprint](./migrate-landing-zone.md)
+
+
+
+
+
+
+|Landing zone  |Deployment velocity  |Scale  |Discovery time|Design principles|Governance principles|Management principles|
+|---------|---------|---------|---------|---------|---------|---------|---------|
+|[CAF Migrate](./migrate-landing-zone.md)|Start small|< 1,000 assets|one to five days|Included|Added through CAF Govern|Added through CAF Manage|
+|[CAF Foundation](./foundation-blueprint.md)|Start small|< 1,000 assets|one to five days|Included|Added through CAF Govern|Added through CAF Manage|
+|[CAF Enterprise-scale](./enterprise-scale.md)|Enterprise-scale|> 1,000 assets|3 to 6 weeks|Included|Configuration required|Configuration required|
+|[CAF Terraform](./terraform-landing-zone.md)|Either|Various templates|3 to 6 weeks|Included|Added through CAF Govern modules|Added through CAF Manage modules|
