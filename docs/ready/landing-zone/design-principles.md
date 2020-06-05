@@ -9,15 +9,17 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Design principles
+# Design areas
 
-All Azure landing zones provide a deployment approach and reference architecture that helps you realize the following design principles. Before choosing an Azure landing zone, it's important to understand these design principles to find the Azure landing zone that's right for your cloud adoption plan.
+All Azure landing zones provide a deployment approach and reference architecture that helps you realize the following design areas. Before choosing an Azure landing zone, it's important to understand these design areas to find the Azure landing zone that's right for your cloud adoption plan.
 
-## Modular design principles
+## Modular design areas
 
 To have a well-architected environment, each of the following must be considered. Depending on your cloud adoption plan, you may choose to implement all of these principles before any adoption begins. Alternatively, its equally common to start small & integrate each principle as your cloud adoption efforts scale. Either way, all Azure landing zones provide a path to support your needs.
 
-|Methodology modules  |Design Principle  |Objective  |
+Regardless of the deployment option, each of the following should be considered & decisions should be made for each design area. Those decisions will impact the platform foundation that each landing zone will depend on.
+
+|Methodology modules  |Design areas  |Objective  |
 |---------|---------|---------|
 |Ready |Enterprise enrollment|For enterprise customers with an Azure commitment, proper tenant creation and enrollment is an important early step.|
 |Ready |Identity|Identity and access management (IAM) is a primary security boundary in the public cloud. It is the foundation for any secure and fully compliant architecture.|
