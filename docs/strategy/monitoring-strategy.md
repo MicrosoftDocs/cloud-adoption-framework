@@ -225,7 +225,7 @@ You can leverage Azure now to gradually begin managing all or some aspects of yo
 
 | Primary objective | Goal and outcome |
 |-------------------|------------------|
-|Health and status monitoring |Holistically observe, measure, learn, and improve the long-term warranty of the service or component, including service levels, in these aspects taken together: availability, capacity, performance, security, and compliance. A healthy system, service or component is online, performing well, secure and compliant. Health Monitoring includes logs and is stateful with real time health states and metrics.  It also includes trending reports, insights and trends focused on "service usage.” |
+|Health and status monitoring |Holistically observe, measure, learn, and improve the long-term warranty of the service or component, including service levels, in these aspects taken together: availability, capacity, performance, security, and compliance. A healthy system, service or component is online, performing well, secure and compliant. Health Monitoring includes logs and is stateful with real- time health states and metrics.  It also includes trending reports, insights and trends focused on "service usage.” |
 | Utility monitoring | Observe, measure, learn, and improve the quality or qualitative aspects of how a system delivers value. User Experience is one type of monitoring use case. |
 | Security monitoring | Observe, measure, learn, and improve protection in support of cybersecurity strategy and functions such as security operations, identity and access, information protection, privacy, threat management and compliance. Monitor using Azure Security Center and Azure Sentinel, as well as Microsoft 365. |
 | Cost monitoring | Monitor usage and estimate costs using Azure Monitor and Azure Cost Management as a new primary objective. The Cost Management APIs provide the ability to explore cost and usage data using multi-dimensional analysis. |
@@ -268,7 +268,7 @@ First, identify the roles who will own and manage resource groups in Azure as pa
 
 * What managers require access to other Azure reader roles such as **Reports Reader**.
 
-In summary your monitoring consumer roles probably need very broad access, versus your developers and system administrators who only need role based access to certain Azure resources. As an additional restriction, ensure you exempt readers from access to sensitive monitoring data such as security, sign-in and user activity logs.
+In summary your monitoring consumer roles probably need very broad access, versus your developers and system administrators who only need role-based access to certain Azure resources. As an additional restriction, ensure you exempt readers from access to sensitive monitoring data such as security, sign-in and user activity logs.
 
 ## Establish readiness
 
