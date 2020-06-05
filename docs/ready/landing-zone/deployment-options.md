@@ -21,13 +21,26 @@ In addition to the recommended design principles, platform development velocity 
 
 **Start with enterprise scale:** When business requirements necessitate a rich initial implementation of landing zones, with fully integrated governance, security, and operations from the start, Microsoft suggests the enterprise scale approach. This approach assumes existing skills in Azure platform automation, experience with GitHub, and deployment of DevOps pipelines with github actions. This approach will also implement opinionated options for platform automation, governance, security, and operations.
 
+This approach will deploy X.
+
 **Start small and scale:** If it is more important to develop these skills and commit to your own decisions as you learn more about the cloud, then a more modular approach may be beneficial. In this approach, the landing zone will only focus on implementing the basic landing zone considerations required to start cloud adoption. As adoption scales, modules in the Govern and Manage methodologies will build on top of your initial landing zone.
+
+This approach will deploy y & iterate over time.
 
 ## Deployment options
 
 The following grid captures some of the landing zone deployment options and variables that may drive the decision.
 
-|Landing zone  |Deployment velocity  |Scale  |Discovery time|Ready principles|Governance principles|Management principles|
+|Landing zone  |Deployment velocity  |Deeper design principles|
+|---------|---------|---------|---------|---------|---------|---------|---------|
+|[CAF Migrate](./migrate-landing-zone.md)|Start small|Link|
+|[CAF Foundation](./foundation-blueprint.md)|Start small|Link|
+|[CAF Enterprise-scale](./enterprise-scale.md)|Enterprise-scale|Link|
+|[CAF Terraform](./terraform-landing-zone.md)|Either|Link|
+
+
+
+|Landing zone  |Deployment velocity  |Scale  |Discovery time|Design principles|Governance principles|Management principles|
 |---------|---------|---------|---------|---------|---------|---------|---------|
 |[CAF Migrate](./migrate-landing-zone.md)|Start small|< 1,000 assets|one to five days|Included|Added through CAF Govern|Added through CAF Manage|
 |[CAF Foundation](./foundation-blueprint.md)|Start small|< 1,000 assets|one to five days|Included|Added through CAF Govern|Added through CAF Manage|

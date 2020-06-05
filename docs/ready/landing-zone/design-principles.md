@@ -19,16 +19,16 @@ To have a well-architected environment, each of the following must be considered
 
 Regardless of the deployment option, each of the following should be considered & decisions should be made for each design area. Those decisions will impact the platform foundation that each landing zone will depend on.
 
-|Methodology modules  |Design areas  |Objective  |
+|Design areas  |Objective  | Relevant methodologies |
 |---------|---------|---------|
-|Ready |Enterprise enrollment|For enterprise customers with an Azure commitment, proper tenant creation and enrollment is an important early step.|
-|Ready |Identity|Identity and access management (IAM) is a primary security boundary in the public cloud. It is the foundation for any secure and fully compliant architecture.|
-|Ready |Network topology and connectivity|Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture.|
-|Govern |Resource organization|As cloud adoption scales, considerations for subscription design and management group hierarchy will have an impact on governance, operations management, and adoption patterns.|
-|Govern |Governance disciplines|Automate auditing and enforcement of security, governance, and compliance policies.|
-|Manage |Operations baseline|For stable, on-going operations in the cloud, an operations baseline is required to provide visibility, operations compliance, and protect/recover capabilities.|
-|Manage |Business continuity and disaster recovery (BCDR)|BCDR provides the foundation for reliability and rapid recovery.|
-|Ready |Deployment options|Align the best tools and templates to deploy your landing zones and supporting resources.|
+|Enterprise enrollment|For enterprise customers with an Azure commitment, proper tenant creation and enrollment is an important early step.| Ready |
+|Identity|Identity and access management (IAM) is a primary security boundary in the public cloud. It is the foundation for any secure and fully compliant architecture.| Ready |
+|Network topology and connectivity|Networking and connectivity decisions are an equally important foundational aspect of any cloud architecture.| Ready |
+|Resource organization|As cloud adoption scales, considerations for subscription design and management group hierarchy will have an impact on governance, operations management, and adoption patterns.| Govern |
+|Governance disciplines|Automate auditing and enforcement of security, governance, and compliance policies.| Govern |
+|Operations baseline|For stable, on-going operations in the cloud, an operations baseline is required to provide visibility, operations compliance, and protect/recover capabilities.| Manage |
+|Business continuity and disaster recovery (BCDR)|BCDR provides the foundation for reliability and rapid recovery.| Manage |
+|Deployment options|Align the best tools and templates to deploy your landing zones and supporting resources.|Ready |
 
 ## Next steps
 
