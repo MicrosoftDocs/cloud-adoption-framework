@@ -1,6 +1,6 @@
 ---
-title: Design principles
-description: Understand the design principles that drive landing zone deployment
+title: Design areas of a well-architected landing zone
+description: Design areas of a well-architected landing zone
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,16 +9,12 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Design areas
+# Modular design areas considered by all Azure landing zones
 
-All Azure landing zones provide a deployment approach and reference architecture that helps you realize the following design areas. Before choosing an Azure landing zone, it's important to understand these design areas to find the Azure landing zone that's right for your cloud adoption plan.
+Each Azure landing zone implementation option provide a deployment approach and defined design principles that helps you implement the following design areas. Before choosing an implementation option, use this article to gain an understanding of those design areas.
 
 > [!NOTE]
 > The following design areas outline the things that should be considered prior to deploying a landing zone. This article is purposefully not deep or actionable, but serves as a simple reference. The next step in the [landing zone implementation options](./implementation-options.md) article will be provide opinionated design principles and actionable steps for deployment.  
-
-## Modular design areas
-
-To have a well-architected environment, each of the following must be considered. Depending on your cloud adoption plan, you may choose to implement all of these principles before any adoption begins. Alternatively, its equally common to start small & integrate each principle as your cloud adoption efforts scale. Either way, all Azure landing zones provide a path to support your needs.
 
 Regardless of the deployment option, each of the following should be considered & decisions should be made for each design area. Those decisions will impact the platform foundation that each landing zone will depend on.
 
@@ -35,9 +31,9 @@ Regardless of the deployment option, each of the following should be considered 
 
 ## Next steps
 
-As you will see in the next article, these design principles can be implemented over time allowing you to grow into your cloud operating model. Alternatively, there are rich, opinionated deployment options that can implement all three modules in one deployment.
+As you will see in the next article, these design areas can be implemented over time allowing you to grow into your cloud operating model. Alternatively, there are rich, opinionated implementation options that start with a defined position on each design area.
 
-With an understanding of the core modular design principles, the next step is to choose the [landing zone implementation option](./implementation-options.md) that best aligns with your cloud adoption plan and requirements.
+With an understanding of the modular design areas, the next step is to choose the [landing zone implementation option](./implementation-options.md) that best aligns with your cloud adoption plan and requirements.
 
 > [!div class="nextstepaction"]
 > [Choose a implementation option](./implementation-options.md)
