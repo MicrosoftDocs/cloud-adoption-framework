@@ -31,7 +31,7 @@ We recognize that there is no one-size fits all solution to technical environmen
 
 ## Next steps
 
-Before choosing the right Azure landing zone, it is important to understand the building blocks from Microsoft's [design principles for landing zones](./design-principles.md).
+Before choosing the right Azure landing zone, it is important to understand the building blocks from Microsoft's [design areas for landing zones](./design-areas.md).
 
 > [!div class="nextstepaction"]
-> [Review design principles](./design-principles.md)
+> [Review design areas](./design-areas.md)

@@ -9,41 +9,91 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Deploy a CAF foundation blueprint
+# Deploy a CAF Foundation blueprint
 
-TODO: Intro... This is not a landing zone but adds governance tooling to the landing zone
+The CAF Foundation blueprint does not deploy a landing zone. Instead it deploys the tools required to establish a governance MVP (minimally viable product) to begin developing your governance disciplines. This blueprint is designed to be additive to an existing landing zone and can be applied to the CAF migration landing zone with a single click.
 
 ## Deploy the blueprint
 
-TODO: Deployment steps
+Before you use the CAF Foundation blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [CAF Foundation blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone) can be deployed using the [deployment steps][deploy-sample].
+
+> [!div class="nextstepaction"]
+> [Deploy the blueprint sample][deploy-sample]
+
+## Design principles
+
+This implementation option provides an opinionated approach to the common design areas shared by all Azure landing zones. See the assumptions and decisions below for addition technical detail.
+
+### Deployment options
+
+This implementation option deploys a **minimally viable product (MVP)** to serve as the foundation for your governance disciplines. The team will follow a modular refactoring-based approach to mature the governance disciplines using the [govern](../../govern/index.md) methodology.
+
+The specific resources deployed by this MVP approach are outlined in the [decisions section below](#decisions).
+
+### Enterprise enrollment
+
+This implementation option does not take an inherent position on enterprise enrollment. This approach is designed to be applicable to customers regardless of contractual agreements with Microsoft or Microsoft partners. Prior to deployment of this implementation option, it is assumed that the customer has already created a target subscription.
+
+### Identity
+
+This implementation option assumes that the target subscription is already associated with an Azure Active Directory instance in accordance with [identity management best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+
+### Network topology and connectivity
+
+This implementation option assumes the landing zone already has a defined network topology in accordance with [network security best practices](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+
+### Resource organization
+
+This implementation option demonstrates how Azure Policy can be used to add some elements of resource organization through the application of tags. Specifically, a CostCenter tag will be appended to resources using Azure policy.
+
+The governance team should compare and contrast the elements of resource organization to be addressed by tagging versus those that should be addressed through subscription design. These fundamental decisions will inform resource organization as cloud adoption plans progress. 
+
+To aid in this comparison early in adoption cycles, the following articles should be considered:
+
+- Ready Best Practice [Initial Azure Subscriptions](../azure-best-practices/initial-subscriptions.md): At this stage of adoption scale, does your operating model require 2, 3, or 4 subscriptions?
+- Ready Best Practice [Scale subscriptions](../azure-best-practices/scale-subscriptions.md): As adoption scales, what criteria will be used to drive subscription scaling?
+- Ready Best Practice [Organize subscriptions](../azure-best-practices/organize-subscriptions.md): How will you organize subscriptions as you scale?
+- Ready Best Practice [Tagging standards](../azure-best-practices/naming-and-tagging.md#metadata-tags): What other criteria need to be consistently captured in tags to augment your subscription design?
+
+To aid in this comparison when teams are further along with cloud adoption, see the governance patters section of the [governance guide - prescriptive guidance](../../govern/guides/complex/prescriptive-guidance.md#application-of-governance-defined-patterns) article. This section of the prescriptive guidance demonstrates a set of patterns based on a specific narrative and operating model. That guidance also includes links to other patterns that should be considered.
+
+### Governance disciplines
+
+This implementation approach demonstrates one approach to maturity in the Cost Management discipline of the Governance methodology. Specifically, it demonstrates how Azure Policy can be used to create an allow list of specific SKUs. Limiting the types and sizes of resources that can be deployed into a landing zone reduces the risk of overspend.
+
+To accelerate parallel development of the other governance disciplines, review the [Govern methodology](../../govern/index.md). To continue maturing the cost management discipline of governance, see the [governance guide - Cost Management discipline guidance](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices)
+
+> [!WARNING]
+> As the governance disciplines mature, refactoring may be required. refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+
+### Operations baseline
+
+This implementation option does not implement any aspects of the operations baseline. In the absence of a defined operations baseline, this landing zone should not be used for any mission critical workloads or sensitive data. It is assumed that this landing zone is being used for limited production deployment to initiate learning, iteration, and development of the overall operating model in parallel to these early stage migration efforts.
+
+To accelerate parallel development of an operations baseline, review the [Manage methodology](../../manage/index.md) and consider deploying the [Azure server management guide](../../manage/azure-server-management/index.md).
+
+> [!WARNING]
+> As the operations baseline is developed, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+
+### Business continuity and disaster recovery (BCDR)
+
+This implementation option does not implement any BCDR solution. It is assumed that the solution for protection and recover will be addressed by the development of the operations baseline.
 
 ## Assumptions
 
-TODO: Key assumptions before choosing this with your first landing zone
+This initial blueprint assumes that the team is committed to maturing governance capabilities in parallel to the initial cloud migration efforts. If these assumptions align with your constraints, you can use the blueprint to begin the process of developing governance maturity. 
 
-## Decisions
+- **Compliance:** No third-party compliance requirements are needed in this landing zone.
+- **Limited production scope:** This landing zone could potentially host production workloads. It is not a suitable environment for sensitive data or mission-critical workloads.
 
-TODO: Update the table below to outline the inherent decisions made by the blueprint
+If these assumptions align with your current adoption needs, then this blueprint might be a starting point for building your landing zone.
 
-| Component | Decisions | Alternative approaches |
-|---------|---------|---------|
-|Migration tools|Azure Site Recovery will be deployed and an Azure Migrate project will be created.|[Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)|
-|Logging and monitoring|Operational Insights workspace and diagnostic storage account will be provisioned.|         |
-|Network|A virtual network will be created with subnets for gateway, firewall, jumpbox, and landing zone.|[Networking decisions](../considerations/networking-options.md)|
-|Identity|It's assumed that the subscription is already associated with an Azure Active Directory instance.|[Identity management best practices](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/bread/toc.json)         |
-|Policy|This blueprint currently assumes that no Azure policies are to be applied.|         |
-|Subscription design|N/A - Designed for a single production subscription.|[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)|
-|Management groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)         |
-|Resource groups|N/A - Designed for a single production subscription.|[Scaling subscriptions](../azure-best-practices/scaling-subscriptions.md)         |
-|Data|N/A|[Choose the correct SQL Server option in Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas) and [Azure Data Store guidance](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview) |
-|Storage|N/A|[Azure Storage guidance](../considerations/storage-options.md)         |
-|Naming and tagging standards|N/A|[Naming and tagging best practices](../azure-best-practices/naming-and-tagging.md)         |
-|Cost management|N/A|[Tracking costs](../azure-best-practices/track-costs.md)|
-|Compute|N/A|[Compute options](../considerations/compute-options.md)|
+## Customize or deploy this blueprint
 
-## Customize or deploy
+Learn more and download a reference sample of the CAF Foundation blueprint for deployment or customization from [Azure blueprint samples][deploy-sample].
 
-TODO: Deployment steps
+> [!div class="nextstepaction"]
+> [Deploy the blueprint sample][deploy-sample]
 
 ## Next steps
 
@@ -51,3 +101,7 @@ After deploying your first landing zone, you are ready to [Expand your landing z
 
 > [!div class="nextstepaction"]
 > [Expand your landing zone](../considerations/index.md)
+
+<!-- links -->
+
+[Deploy-sample]: https://docs.microsoft.com/azure/governance/blueprints/samples/caf-foundation/deploy
