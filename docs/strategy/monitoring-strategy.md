@@ -12,7 +12,7 @@ services: azure-monitor
 
 # Cloud monitoring guide: Formulate a monitoring strategy
 
-As you undergo your digital transformation to the cloud, its important that you plan and develop an effective cloud monitoring strategy with participation of developers, operations staff, and infrastructure engineers. The strategy should be growth-oriented, defined minimally, then refined iteratively; always aligned with business needs. Its outcome delivers an agile operations modality centered around the ability of the organization to proactively monitor complex distributed applications the business depends on.
+As you undergo your digital transformation to the cloud, it's important that you plan and develop an effective cloud monitoring strategy with participation of developers, operations staff, and infrastructure engineers. The strategy should be growth-oriented, defined minimally, then refined iteratively; always aligned with business needs. Its outcome delivers an agile operations modality centered around the ability of the organization to proactively monitor complex distributed applications the business depends on.
 
 ## Where to start?
 
@@ -28,7 +28,7 @@ The following are important areas which strongly influence a sound monitoring st
 
 * Align alerts with what is considered a relevant/practical incident (that is, warnings and exceptions) and align severity with its significance following your incident priority/urgency escalation matrix.
 
-* Collect only the metrics and logs that are useful, measureable, and identifiable to the business and IT organization.
+* Collect only the metrics and logs that are useful, measurable, and identifiable to the business and IT organization.
 
 * Define an integration plan with existing ITSM solutions (that is, Remedy, ServiceNow, etc.) for incident generation or upstream monitoring. Identify which alerts should be forwarded, if alert enrichment is required to support specific filtering requirements, and how to configure.
 
@@ -52,7 +52,7 @@ As an architect or strategic planner, you may need to formulate an early strateg
 
 As a manageability expert, you may be working closely with a steering committee, an architect and strategic planners. You might be working to formulate your monitoring strategy by assessing the current state of your systems management, including: the people, partners, outsourcing, tooling, complexity, gaps and risks. An assessment will help you prioritize the set of found problems and select the key opportunities that improve the current situation. Determine also, the services, systems, and data that are likely to remain on-premises as one important outcome. Ideally, management wants a roadmap of initiatives, but in direct proportion to the known planning horizon. Discussing unknowns, are just as important.
 
-## High level modeling
+## High-level modeling
 
 As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services for example, does not eliminate your monitoring responsibility. You’ll be deciding who needs access, who gets alerts, and who needs access to analytics at a minimum. [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/) and [Azure Arc](https://azure.microsoft.com/services/azure-arc/) are Azure services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure.  
 And you need to look beyond the common cloud models as shown below. If you're using Office apps delivered by [Microsoft 365](https://docs.microsoft.com/microsoft-365/?view=o365-worldwide) services in your organization, you'll need to include security and compliance monitoring with Microsoft 365 in addition to [Azure Security Center](https://docs.microsoft.com/azure/security-center/). This includes identities, endpoint management, and device monitoring outside of your corporate network.
@@ -113,9 +113,9 @@ To assemble this architecture, here are several considerations:
 
 * The economic cost.
 
-* How the business will leverage logs and metrics. Azure Monitor brings a significant volume of log and time-series data to the performance and health side of monitoring, similar to what security operations experiences. After all, logs and metrics are the two major data components of Azure Monitor’s architecture. The reason why this is important is:
+* How the business will leverage logs and metrics. Azure Monitor brings a significant volume of log and time-series data to the performance and health side of monitoring, similar to what security operations experiences. Logs and metrics are two major data components of Azure Monitor’s architecture. The reasons why this is important:
 
-   1. Since you can build large scale complex cloud services, your problem management costs are reduced to analyze, correlate and determine causes of problems in one place reducing the need to access resources directly, thereby improving security.
+   1. Since you can build large-scale complex cloud services, your problem management costs are reduced to analyze, correlate and determine causes of problems in one place reducing the need to access resources directly, thereby improving security.
 
    2. Similar to a SIEM, Azure Monitor is consolidating machine data directly from on-premises assets as well as Azure resources (including activity logs, tenant and subscription data, and any log data from a REST client), and provides a simple query language to provide data analysis far beyond what was possible before.
 
@@ -135,7 +135,7 @@ Consider a single policy in your governance plan for event significance, through
 
 ## Formulate initiatives
 
-As a monitoring expert or systems administrator, you’ve discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won’t know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability - that which is needed to begin the journey. Here are two example initiatives that help declare forward motion:
+As a monitoring expert or systems administrator, you’ve discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won’t know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability - *that which is needed to begin the journey*. Here are two example initiatives that help declare forward motion:
 
 * Initiative 1: *To reduce the diversity and complexity of our current monitoring investment, we will invest in establishing a core capability leveraging Azure Monitor first, given the same skills and readiness applies to other areas of cloud monitoring.* 
 
