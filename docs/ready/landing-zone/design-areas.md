@@ -13,8 +13,8 @@ ms.subservice: ready
 
 All Azure landing zones provide a deployment approach and reference architecture that helps you realize the following design areas. Before choosing an Azure landing zone, it's important to understand these design areas to find the Azure landing zone that's right for your cloud adoption plan.
 
-> [!WARNING]
-> The following design areas outline considerations. They are purposefully not actionable. The next step choose a landing zone option will be provide opinionated design principles to  
+> [!NOTE]
+> The following design areas outline the things that should be considered prior to deploying a landing zone. This article is purposefully not deep or actionable, but serves as a simple reference. The next step in the [landing zone implementation options](./implementation-options.md) article will be provide opinionated design principles and actionable steps for deployment.  
 
 ## Modular design areas
 
