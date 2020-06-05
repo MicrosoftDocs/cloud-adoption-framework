@@ -31,12 +31,12 @@ This approach will deploy y & iterate over time.
 
 The following grid captures some of the landing zone deployment options and variables that may drive the decision.
 
-|Landing zone  |Deployment velocity  |Deeper design principles|
+|Landing zone  |Description  |Deployment velocity  |Deeper design principles|Deployment instructions|
 |---------|---------|---------|---------|---------|---------|---------|---------|
-|[CAF Migrate](./migrate-landing-zone.md)|Start small|Link|
-|[CAF Foundation](./foundation-blueprint.md)|Start small|Link|
-|[CAF Enterprise-scale](./enterprise-scale.md)|Enterprise-scale|Link|
-|[CAF Terraform](./terraform-landing-zone.md)|Either|Link|
+|[CAF Migrate](./migrate-landing-zone.md)|One sentence description |Start small|Link|Link|
+|[CAF Foundation](./foundation-blueprint.md)|One sentence description |Start small|Link|Link|
+|[CAF Enterprise-scale](./enterprise-scale.md)|One sentence description |Enterprise-scale|Link|Link|
+|[CAF Terraform](./terraform-landing-zone.md)|One sentence description |Either|Link|Link|
 
 
 
