@@ -25,11 +25,11 @@ The technological landscape in the enterprise is becoming complex and heterogeno
 
 Enterprise organizations will typically follow a least-privileged approach to operational access, and this model should be expanded to consider Azure through Azure AD role-based access control (RBAC) and custom role definitions. It is critical to plan how to govern control and data plane access to resources in Azure. Any design for IAM and RBAC must meet regulatory, security, and operational requirements before it can be accepted.
 
-Identity and access management is multi-step process involving careful planning for identity integration and other security consideration such as blocking legacy authentication and planning for modern passwords. Staging planning also involves selection of business-to-business or business-to-consumer identity and access management. While these requirements vary, there are common design considerations and recommendation that can be taken into account for an enterprise landing zone.
+Identity and access management is a multistep process involving careful planning for identity integration and other security considerations, such as blocking legacy authentication and planning for modern passwords. Staging planning also involves selection of business-to-business or business-to-consumer identity and access management. While these requirements vary, there are common design considerations and recommendations to consider for an enterprise landing zone.
 
 ![Identity and access management](./media/iam.png)
 
-_Figure 1: Identity and access management_
+_Figure 1: Identity and access management._
 
 **Design considerations:**
 
@@ -44,15 +44,17 @@ _Figure 1: Identity and access management_
 
 - Managing of application resources that don't violate security boundaries or other aspects required to maintain security and compliance can be delegated to application teams. Allowing users to provision resources within a securely managed environment allows organizations to take advantage of the agile nature of cloud while preventing the violation of any critical security or governance boundary.
 
+<!-- docsTest:ignore Azure-AD-only Azure-AD-managed -->
+
 **Design recommendations:**
 
-- Use Azure AD [RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to manage data-plane access to resources where possible (for example, Azure Key Vault, a storage account, or an SQL database).
+- Use Azure AD [role-based access control (RBAC)](https://docs.microsoft.com/azure/role-based-access-control/overview) to manage data-plane access to resources where possible (for example, Azure Key Vault, a storage account, or an SQL Database).
 
 - Deploy conditional access rules for any user with rights to Azure environment(s). Doing so will provide another mechanism to help protect a controlled Azure environment from unauthorized access.
 
 - Enforce multi-factor authentication for any user with rights to the Azure environment(s). This is a requirement of many compliance frameworks and greatly lowers the risk of credential theft and unauthorized access.
 
-- Use Azure AD [Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-standing least-privilege access. We recommend that customers map the organization's roles to the minimum level of access needed. Privileged identity management in Azure can either be an extension of existing tools and processes, utilize Azure native as outlined above, or both as needed.
+- Use [Azure AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-standing least-privilege access. Map your organization's roles to the minimum level of access needed. Privileged Identity Management in Azure can either be an extension of existing tools and processes, use Azure native tools as outlined above, or use both as needed.
 
 - Use Azure-AD-only groups for Azure control plane resources in PIM when granting access to resources.
 
@@ -60,7 +62,7 @@ _Figure 1: Identity and access management_
 
 - Use Azure AD PIM access reviews to periodically validate resource entitlements. Access reviews are part of many compliance frameworks, so many organizations will already have a process in place to address this requirement.
 
-- Integrate Azure AD logs with the platform-central Azure [Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor). Azure Monitor allows for a single source of truth around log and monitoring data in Azure, giving organizations cloud-native options to meet requirements around log collection and retention.
+- Integrate Azure AD logs with the platform-central [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor). Azure Monitor allows for a single source of truth around log and monitoring data in Azure, giving organizations cloud-native options to meet requirements around log collection and retention.
 
 - If any data sovereignty requirements exist, then custom user policies can be deployed to enforce them.
 
@@ -71,14 +73,14 @@ _Figure 1: Identity and access management_
 | Role                             | Usage                                                                                                     | Actions:                                                                                                                                                                                                           | No actions:                                                                                                                                                                   |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Azure Platform Owner             | Management group and subscription lifecycle management                                                    | *                                                                                                                                                                                                                  |                                                                                                                                                                               |
-| Network Management (NetOps)      | Platform-wide global connectivity management: VNets, UDRs, NSGs, NVAs, VPN, ER, etc.                       | `*/read`, `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnsites/*`                              |                                                                                                                                                                               |
-| Security Operations (SecOps)     | Security Administrator role with a horizontal view across the entire Azure estate and the KV Purge Policy | `*/read`, `*/register/action`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`, <br> `Microsoft.Insights/alertRules/*`, `Microsoft.Authorization/policyDefinitions/*`, `Microsoft.Authorization/policyassignments/*`, `Microsoft.Authorization/policysetdefinitions/*`, `Microsoft.PolicyInsights/*`, `Microsoft.Security/*` |                                                                                                                                                                               |
-| Subscription Owner               | Delegated Role for Subscription Owner derived from subscription Owner role                                | *                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnsites/*` |
+| Network Management (NetOps)      | Platform-wide global connectivity management: VNets, UDRs, NSGs, NVAs, VPN, ER, etc.                      | `*/read`, `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*`                              |                                                                                                                                                                               |
+| Security Operations (SecOps)     | Security Administrator role with a horizontal view across the entire Azure estate and the Key Vault purge policy | `*/read`, `*/register/action`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`, <br> `Microsoft.Insights/alertRules/*`, `Microsoft.Authorization/policyDefinitions/*`, `Microsoft.Authorization/policyAssignments/*`, `Microsoft.Authorization/policySetDefinitions/*`, `Microsoft.PolicyInsights/*`, `Microsoft.Security/*` |                                                                                                                                                                               |
+| Subscription Owner               | Delegated Role for Subscription Owner derived from subscription Owner role                                | *                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
 | Application Owners DevOps/AppOps | Contributor role granted for application/operations team at resource group level                          |                                                                                                                                                                                                                    | `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`                                   |
 
 <!-- docsTest:enable TODO -->
 
-- Use Azure Security Center Just-in-Time for all infrastructure-as-a-service (IaaS) resources to enable network-level protection for ephemeral user access to IaaS virtual machines.
+- Use Azure Security Center just-in-time (JIT) access for all infrastructure as a service (IaaS) resources to enable network-level protection for ephemeral user access to IaaS virtual machines.
 
 - Use Azure-AD-managed identities for Azure resources while avoiding username- and password-based authentication. As many security breaches of public cloud resources originated with credential theft embedded in code or other text sources, enforcing managed identities for programmatic access greatly reduces the risk credential theft.
 
@@ -88,7 +90,7 @@ _Figure 1: Identity and access management_
 
 ### Planning for authentication inside a landing zone
 
-A critical design decision that an enterprise organization must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or to create a brand new one. Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Windows Server Active Directory, Azure AD Domain Services, or both. Most Azure environments will use at least Azure AD for Azure fabric authentication and Windows Server AD local host authentication and group policy management.
+A critical design decision that an enterprise organization must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or to create a brand new one. Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Windows Server Active Directory, Azure AD Domain Services, or both. Most Azure environments will use at least Azure AD for Azure fabric authentication and Windows Server Active Directory local host authentication and group policy management.
 
 **Design considerations:**
 
@@ -98,7 +100,7 @@ A critical design decision that an enterprise organization must make when adopti
 
 - There are privileged operation such as creating service principal, registering application in Azure AD, and procuring and handling certificates or wildcard certificates that require special permissions. Plan appropriately for users who will be handling such requests.
 
-- If organizations have scenarios where the application using integrated Windows authentication needs to be accessed remotely through Azure AD, then consider design for [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)
+- If organizations have scenarios where the application using integrated Windows authentication needs to be accessed remotely through Azure AD, then consider a design for [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 - There is a difference between Azure AD and Azure AD Domain Services. Evaluate your application needs and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
 
@@ -108,16 +110,16 @@ A critical design decision that an enterprise organization must make when adopti
 
 - There are privileged operation such as creating service principals, registering applications in Azure AD, and procuring and handling certificates or wildcard certificates that will require special permissions. Consider which users will be handling such requests and how to secure and monitor their accounts with the degree of diligence required.
 
-- If an organization has a scenario where an application using integrated Windows authentication must be accessed remotely through Azure AD, then consider using [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- If an organization has a scenario where an application using integrated Windows authentication must be accessed remotely through Azure AD, then consider using [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
-- There is a difference between Azure AD, Windows Server AD Domain Services, and Azure AD Domain Services. Evaluate your application need and understand and document the authentication provider each one will be using. Plan accordingly for all applications.
+- There is a difference between Azure AD, Windows Server Active Directory Domain Services, and Azure AD Domain Services. Evaluate your application need and understand and document the authentication provider each one will be using. Plan accordingly for all applications.
 
-- Evaluate the compatibility of workloads for Windows Server AD Domain Services and Azure AD Domain Services.
+- Evaluate the compatibility of workloads for Windows Server Active Directory Domain Services and Azure AD Domain Services.
 
-- Ensure your network design allows resources that require Windows Server AD Domain Services for local authentication and management to access the appropriate domain controllers.
+- Ensure your network design allows resources that require Windows Server Active Directory Domain Services for local authentication and management to access the appropriate domain controllers.
 
-- For Windows Server AD Domain Services, consider a shared services environment that offers local authentication, host management, and a larger enterprise-wide network context.
+- For Windows Server Active Directory Domain Services, consider a shared services environment that offers local authentication, host management, and a larger enterprise-wide network context.
 
-- Deploy Azure AD Domain services within the primary region, as this service can only be projected into one subscription.
+- Deploy Azure AD Domain Services within the primary region, as this service can only be projected into one subscription.
 
-- Use managed identities instead of service principles for authentication to Azure services. This reduces exposure to credential theft.
+- Use managed identities instead of service principals for authentication to Azure services. This reduces exposure to credential theft.
