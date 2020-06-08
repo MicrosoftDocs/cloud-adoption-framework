@@ -1,6 +1,6 @@
 ---
 title: Start with enterprise-scale landing zones
-description: Start with enterprise-scale landing zones
+description: Start with enterprise-scale landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2020
@@ -11,10 +11,11 @@ ms.subservice: ready
 
 # Start with enterprise-scale landing zones
 
-It is sometimes unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to assess the new constraints of any cloud environment and replicate its desired processes, tools, and architectures. To accelerate this learning process, a slightly different starting point is required. When comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, and it's now more complex. More information about his is to follow later in this article.
+It is sometimes unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to assess the new constraints of any cloud environment and replicate its desired processes, tools, and architectures. To accelerate this learning process, a slightly different starting point is required. When comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, and it's now more complex. More information follows later in this article.
 
 ![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor-enterprise-scale.png)
 _Figure 1: Landing zone refactoring._
+
 <!-- markdownlint-disable MD026 -->
 
 ## Qualifiers: Should I start with enterprise scale?
@@ -31,18 +32,18 @@ Multiple business motivations might require an enterprise-scale landing zone and
 
 ### All-in on the cloud
 
-The most common driver for an enterprise-scale landing zone comes from companies who decide to go all-in on the cloud. This can be a result of a datacenter termination or a mass shift toward greater business agility. Regardless of the driver, this business decision typically demands both scale and speed during adoption. This combination of demands makes it difficult to take the time required to learn and prepare for sensitive data and mission-critical hosting in the cloud.
+The most common driver for an enterprise-scale landing zone comes from companies who decide to go all-in on the cloud, often due to a datacenter termination or a mass shift toward greater business agility. Regardless of the driver, this business decision typically demands both scale and speed during adoption. This combination of demands makes it difficult to take the time required to learn and prepare for sensitive data and mission-critical hosting in the cloud.
 
 ### Skill requirements
 
 Starting with enterprise scale assumes that the cloud platform team has enterprise-scale budgets. This qualifier assumes that the team has deeper skills in the cloud than other companies. These skills can come from an existing history of smaller-scale cloud adoption within the company, and they can also be added by attracting experienced staff or working with highly experienced partners. For either direction, the following skills will be required to start with enterprise scale.
 
-Suggested skills:
+Suggested skills include:
 
-- Deep knowledge of architecture in the chosen cloud provider
+- Deep knowledge of architecture in the chosen cloud provider.
 - Extensive hands-on experience with cloud-based infrastructure-as-code approaches
-- Moderate familiarity with GitHub or other source code repositories, including branching and pull request strategies
-- Actionable experience with automated deployments from source code to the cloud provider
+- Moderate familiarity with GitHub or other source code repositories, including branching and pull request strategies.
+- Actionable experience with automated deployments from source code to the cloud provider.
 
 If these skills aren't available within the cloud platform team through staff, partners, or other support mechanisms, a "start small and expand" approach is likely to reach enterprise readiness faster with a higher-quality output. This approach would allow the existing team to incur fewer costs for acquiring skills.
 
@@ -50,10 +51,10 @@ If these skills aren't available within the cloud platform team through staff, p
 
 The enterprise-scale approach to landing-zone development includes four sets of assets to support cloud teams:
 
-- [Implementations](./implementation.md): Scripted implementations of the architecture to accelerate adoption
-- [Architecture](./architecture.md): Conceptual reference architecture to demonstrate design areas and best practices
-- [Design guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive CAF enterprise-scale landing zone
-- [Template](./template.md): Documentation template to quickly capture decisions and any deviation from the suggested architecture and/or implementation
+- [Implementations](./implementation.md): Scripted implementations of the architecture to accelerate adoption.
+- [Architecture](./architecture.md): Conceptual reference architecture to demonstrate design areas and best practices.
+- [Design guidelines](./design-guidelines.md): Guide to the critical design areas and decisions that drive the CAF enterprise-scale landing zone.
+- [Template](./template.md): A documentation template to quickly capture decisions and any deviation from the suggested architecture or implementation.
 
 ## Community
 
