@@ -41,7 +41,7 @@ Starting with enterprise scale assumes that the cloud platform team has enterpri
 Suggested skills include:
 
 - Deep knowledge of architecture in the chosen cloud provider.
-- Extensive hands-on experience with cloud-based infrastructure-as-code approaches
+- Extensive hands-on experience with cloud-based infrastructure-as-code approaches.
 - Moderate familiarity with GitHub or other source code repositories, including branching and pull request strategies.
 - Actionable experience with automated deployments from source code to the cloud provider.
 
