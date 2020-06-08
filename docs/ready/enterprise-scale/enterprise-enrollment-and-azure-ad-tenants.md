@@ -75,7 +75,7 @@ _Figure 1: An EA enrollment hierarchy._
 
 - If multiple Azure AD tenants are used, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
-- Set up enterprise dev/test/production environments at an EA account level to support holistic isolation.
+- Set up Enterprise Dev/Test/production environments at an EA account level to support holistic isolation.
 
 - Do not ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
 
@@ -95,9 +95,9 @@ Multiple tenants can function in the same enterprise enrollment.
 
 **Design recommendations:**
 
-- Use Azure AD Seamless Single Sign-On based on the selected [planning topology](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies).
+- Use Azure AD seamless single sign-on based on the selected [planning topology](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies).
 
-- If your organization doesn't have an identity infrastructure, start by implementing an Azure-AD-only identity deployment. Such deployment with [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) and [Microsoft Enterprise Mobility + Security](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS and enterprise applications as well as for devices.
+- If your organization doesn't have an identity infrastructure, start by implementing an Azure-ad-only identity deployment. Such deployment with [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) and [Microsoft enterprise mobility + security](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS and enterprise applications as well as for devices.
 
 - Multi-factor authentication provides another layer of security and a second barrier of authentication. Enforce [multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) for all privileged accounts for greater security. Multi-factor authentication doesn't stop phishing or social engineering, such as a hacker taking physical possession of your phone, SIM swapping, or cloning. Multi-factor authentication should be implemented via a device management policy (such as strong PIN locking, encryption, and erasing a device remotely when it's lost). Out-of-band multi-factor authentication (such as biometric) is also considered a secure form of multi-factor authentication.
 

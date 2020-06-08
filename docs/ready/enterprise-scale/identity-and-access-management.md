@@ -82,7 +82,7 @@ _Figure 1: Identity and access management._
 
 - Use Azure Security Center just-in-time (JIT) access for all infrastructure as a service (IaaS) resources to enable network-level protection for ephemeral user access to IaaS virtual machines.
 
-- Use Azure-AD-managed identities for Azure resources while avoiding username- and password-based authentication. As many security breaches of public cloud resources originated with credential theft embedded in code or other text sources, enforcing managed identities for programmatic access greatly reduces the risk credential theft.
+- Use Azure-AD-managed identities for Azure resources to avoiding authentication based on user names and passwords. As many security breaches of public cloud resources originated with credential theft embedded in code or other text sources, enforcing managed identities for programmatic access greatly reduces the risk credential theft.
 
 - Use privileged identities for automation runbooks that require elevated access permissions. Automated workflows that violate critical security boundaries should be governed by the same tools and policies users of equivalent privilege are.
 
@@ -100,7 +100,7 @@ A critical design decision that an enterprise organization must make when adopti
 
 - There are privileged operation such as creating service principal, registering application in Azure AD, and procuring and handling certificates or wildcard certificates that require special permissions. Plan appropriately for users who will be handling such requests.
 
-- If organizations have scenarios where the application using integrated Windows authentication needs to be accessed remotely through Azure AD, then consider a design for [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- If organizations have scenarios where the application using integrated Windows authentication needs to be accessed remotely through Azure AD, then consider a design for [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 - There is a difference between Azure AD and Azure AD Domain Services. Evaluate your application needs and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
 
@@ -110,7 +110,7 @@ A critical design decision that an enterprise organization must make when adopti
 
 - There are privileged operation such as creating service principals, registering applications in Azure AD, and procuring and handling certificates or wildcard certificates that will require special permissions. Consider which users will be handling such requests and how to secure and monitor their accounts with the degree of diligence required.
 
-- If an organization has a scenario where an application using integrated Windows authentication must be accessed remotely through Azure AD, then consider using [Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- If an organization has a scenario where an application using integrated Windows authentication must be accessed remotely through Azure AD, then consider using [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 - There is a difference between Azure AD, Windows Server Active Directory Domain Services, and Azure AD Domain Services. Evaluate your application need and understand and document the authentication provider each one will be using. Plan accordingly for all applications.
 

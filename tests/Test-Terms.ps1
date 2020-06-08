@@ -314,6 +314,7 @@ function Get-CasingExpressions
         'HoloLens'
         'Hyper-V'
         'I'
+        'IaC'
         'IAM'
         'IaaS'
         'ID'
