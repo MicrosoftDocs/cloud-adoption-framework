@@ -13,7 +13,7 @@ ms.subservice: overview
 
 # Get started: Implement security across the enterprise environment
 
-Security helps create assurances of confidentiality, integrity, and availability for a business. Security efforts have a critical focus on protecting against the potential impact to operations caused by both internal and external malicious and unintentional acts. 
+Security helps create assurances of confidentiality, integrity, and availability for a business. Security efforts have a critical focus on protecting against the potential impact to operations caused by both internal and external malicious and unintentional acts.
 
 This getting-started guide outlines the key steps that will mitigate or avoid the business risk from cybersecurity attacks. It can help you rapidly establish essential security practices in the cloud and integrate security into your cloud adoption process.
 
@@ -122,7 +122,7 @@ Successful programs incorporate these elements into their security strategy proc
 | --- | --- |
 | <li> Security leadership team (chief information security officer (CISO) or equivalent) | <li> Cloud strategy team <li> Cloud security team <li> Cloud adoption team <li> Cloud center of excellence or central IT |
 
-**Strategy approval:** 
+**Strategy approval:**
 
 Executives and business leaders with accountability for outcomes or risks of business lines within the organization should approve this strategy. This group might include the board of directors, depending on the organization.
 
@@ -145,7 +145,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
     - [Azure components and reference model](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
 
       ![Azure administration model](../_images/security/azure-administration-model.png)
-      
+
       ![Azure RBAC model](../_images/security/azure-rbac-model.png)
     - [Microsoft cybersecurity reference architecture](https://aka.ms/mcra) to build a cybersecurity architecture for a hybrid enterprise that spans on-premises and cloud resources.
     - [Security operations center (SOC) reference architecture](https://docs.microsoft.com/security/compass/security-operations-videos-and-decks#part-1-introduction---soc-learnings-strategies-and-technical-integration-2430) to modernize security detection, response, and recovery.
@@ -185,7 +185,7 @@ This should not be a traditional, detailed plan of 3-5 years. The cloud and thre
 | --- | --- |
 | <li> Cloud security team | <li> Cloud strategy team <li> Cloud governance team <li> Any risk teams in your organization <li> Cloud center of excellence or central IT |
 
-**Security plan approval:** 
+**Security plan approval:**
 
 The security leadership team (CISO or equivalent) should approve the plan.
 
@@ -201,7 +201,7 @@ During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/
 
 **Guidance to support deliverable completion:**
 
-- **Blend existing requirements and cloud recommendations:** Start with recommended guidance and then adapt this to your unique security requirements. We have seen challenges with trying to enforce existing on-premises policies and standards, because these often refer to outdated technology or security approaches. 
+- **Blend existing requirements and cloud recommendations:** Start with recommended guidance and then adapt this to your unique security requirements. We have seen challenges with trying to enforce existing on-premises policies and standards, because these often refer to outdated technology or security approaches.
 
   Microsoft has published guidance to help you build your security baselines:
   - [Azure security standards for strategy and architecture](https://docs.microsoft.com/security/compass/compass): Strategy and architectural recommendations to shape your environment's security posture.

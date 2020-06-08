@@ -15,13 +15,15 @@ ms.subservice: ready
 
 This section will explore how to operationally maintain a Microsoft Azure enterprise estate with centralized management and monitoring at a platform level. More specifically, it will present key recommendations for central teams to maintain operational visibility within a large-scale Azure platform.
 
-![Management and monitoring](./media/mgmt-mon.png)
+![Management and monitoring](./media/management-and-monitoring.png)
 
-_Figure 1: Platform management and monitoring_
+_Figure 1: Platform management and monitoring._
+
+<!-- cSpell:ignore syslogs SIEM -->
 
 **Design considerations:**
 
-- Using an Azure Monitor Logs workspace as an administrative boundary.
+- Use an Azure Monitor Log Analytics workspace as an administrative boundary.
 
 - Application-centric platform monitoring, encompassing both hot and cold telemetry paths for metrics and logs, respectively.
 
@@ -41,11 +43,11 @@ _Figure 1: Platform management and monitoring_
 
   - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow; and event logs.
 
-  - Azure Monitor, Network Watcher, Security Center, and Sentinel.
+  - Azure Monitor, Network Watcher, Security Center, and Azure Sentinel.
 
 - Azure data retention thresholds and archiving requirements.
 
-  - The default retention period for Monitor Logs is 30 days, with a maximum of two years.
+  - The default retention period for Azure Monitor logs is 30 days, with a maximum of two years.
 
   - The default retention period for Azure Active Directory reports (premium) is 30 days.
 
@@ -53,7 +55,7 @@ _Figure 1: Platform management and monitoring_
 
 - Operational requirements:
 
-  - Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling.
+  - Operational dashboards with native tools such as Azure Monitor logs or third-party tooling.
 
   - Controlling privileged activities with centralized roles.
 
@@ -63,20 +65,22 @@ _Figure 1: Platform management and monitoring_
 
 **Design recommendations:**
 
-- Use a single [Monitor Logs workspace](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where role-based access control (RBAC) and data sovereignty requirements mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
+- Use a single [monitor logs workspace](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where role-based access control (RBAC) and data sovereignty requirements mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
 Within the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This doesn't preclude using the same workspace for app logging. With a workspace configured in resource-centric access-control mode, granular RBAC is enforced to ensure that application teams only have access to the logs from their resources. In this model, application teams benefit from using existing platform infrastructure to reduce their management overhead.
 
+<!-- docsTest:ignore WORM -->
+
 - Export logs to Azure Storage if log retention requirements exceed two years. Use immutable storage with WORM (write once, read many) policy to make data non-erasable and non-modifiable for a user-specified interval.
 
-- Use Azure Policy for access control and compliance reporting. This provides the ability to enforce organization-wide settings to ensure consistent policy adherence and fast violation detection, as described in this [article](https://docs.microsoft.com/azure/governance/policy/concepts/effects).
+- Use Azure Policy for access control and compliance reporting. This provides the ability to enforce organization-wide settings to ensure consistent policy adherence and fast violation detection. For more information, see [Understand Azure Policy effects](https://docs.microsoft.com/azure/governance/policy/concepts/effects).
 
 - Monitor in-guest virtual machine (VM) configuration drift using Azure Policy. Enabling [guest configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration) audit capabilities through policy helps app team workloads to immediately consume feature capabilities with little effort.
 
 - Use [update management in Azure Automation](https://docs.microsoft.com/azure/automation/automation-update-management) as a long-term patching mechanism for both Windows and Linux VMs.
- Enforcing update management configurations through policy ensures that all VMs are included in the patch management regimen, provides application teams with the ability to manage patch deployment for their VMs, and provides central IT with visibility and enforcement capabilities across all VMs.
+ Enforcing update management configurations through policy ensures that all VMs are included in the patch management regimen, provides application teams with the ability to manage patch deployment for their VMs, and provides Central IT with visibility and enforcement capabilities across all VMs.
 
-- Use Azure Network Watcher to proactively monitor traffic flows via [NSG flow logs, version 2](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview). The Network Watcher [traffic analytics](https://docs.microsoft.com/azure/network-watcher/traffic-analytics) feature uses NSG flow logs to gather deep insights about IP traffic within a virtual network and providing critical information for effective management and monitoring. Traffic analytics provide information such as most communicating hosts and app protocols, most conversing host pairs, allowed/blocked traffic, inbound/outbound traffic, open internet ports, most blocking rules, traffic distribution per an Azure data center, virtual network, subnets, or rogue networks.
+- Use Azure Network Watcher to proactively monitor traffic flows via [NSG flow logs, version 2](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview). The Network Watcher [traffic analytics](https://docs.microsoft.com/azure/network-watcher/traffic-analytics) feature uses NSG flow logs to gather deep insights about IP traffic within a virtual network and providing critical information for effective management and monitoring. Traffic analytics provide information such as most communicating hosts and app protocols, most conversing host pairs, allowed/blocked traffic, inbound/outbound traffic, open internet ports, most blocking rules, traffic distribution per an Azure datacenter, virtual network, subnets, or rogue networks.
 
 - Use resource locks to prevent accidental deletion of critical shared services.
 
@@ -84,7 +88,7 @@ Within the context of the enterprise-scale architecture, centralized logging is 
 
 - Include [service](https://docs.microsoft.com/azure/service-health/service-health-overview) and [resource](https://docs.microsoft.com/azure/service-health/resource-health-overview) health events as part of the overall platform monitoring solution. Tracking service and resource health from the platform perspective is an important component of resource management in Azure.
 
-- Do not send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that _data born in Azure, stays in Azure_. If on-premises SIEM integration is required, [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
+- Do not send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that _data born in Azure stays in Azure_. If on-premises SIEM integration is required, [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
 
 ## Planning for app management and monitoring
 
@@ -92,9 +96,9 @@ To expand on the previous section, this section will consider federated manageme
 
 **Design considerations:**
 
-- App monitoring can use a dedicated workspaces or a centralized Monitor Logs workspace.
+- App monitoring can use a dedicated workspaces or a centralized monitor logs workspace.
 
-- App performance and health monitoring for both infrastructure-as-a-service (IaaS) and platform-as-a-service (PaaS) resources.
+- App performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources.
 
 - Data aggregation across all app components.
 
@@ -106,7 +110,7 @@ To expand on the previous section, this section will consider federated manageme
 
 **Design recommendations:**
 
-- Use a centralized Monitor Logs workspace to collect logs and metrics from IaaS and PaaS app resources and [control log access with RBAC](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
+- Use a centralized Azure Monitor Log Analytics workspace to collect logs and metrics from IaaS and PaaS app resources and [control log access with RBAC](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
 
 - Use [Azure Monitor metrics](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics) for time-sensitive analysis. Metrics in Azure Monitor are stored in a time-series database optimized to analyze time-stamped data. This makes metrics suited for alerts and detecting issues quickly. They can tell you how your system is performing, but they typically need to be combined with logs to identify the root cause of issues.
 

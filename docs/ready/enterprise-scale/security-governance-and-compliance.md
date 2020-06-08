@@ -21,26 +21,28 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Key Vault serves a security boundary since access permissions for keys, secrets, and certificates are at the vault level. Key Vault access policy assignments grant permissions separately to keys, secrets, or certificates, but they don't support granular, object-level permissions like a specific key, secret, or certificate ([key management](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices))
 
-- You can isolate application-/workload-specific secrets and shared secrets, as appropriate ([control access](https://docs.microsoft.com/azure/key-vault/general/best-practices))
+- You can isolate application-specific and workload-specific secrets and shared secrets, as appropriate ([control access](https://docs.microsoft.com/azure/key-vault/general/best-practices))
 
-- Premium stock-keeping units (SKUs) can be optimized where hardware-security-module-protected keys are required. Underlying hardware security modules (HSMs) are Federal Information Processing Standards (FIPS) 140-2 level 2. Managed Azure dedicated HSM for FIPS 140-2 level-3 compliance, considering the supported scenarios
+<!-- cSpell:ignore FIPS -->
+
+- Premium SKUs can be optimized where hardware-security-module-protected keys are required. Underlying hardware security modules (HSMs) are FIPS 140-2 Level 2 compliant. Managed Azure dedicated HSM for FIPS 140-2 Level 3 compliance, considering the supported scenarios
 
 - Key rotation and secret expiration
 
-  Certificate procurement and signing using Key Vault: ([About certs](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates))
-  alerting/notifications and automated certificate renewals
+  Certificate procurement and signing using Key Vault: ([about certs](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates))
+  Alerting/notifications and automated certificate renewals
 
 - Disaster recovery requirements for keys, certificates, and secrets
 
-  Key Vault service replication and failover capabilities: ([Availability &AMP; redundancy](https://docs.microsoft.com/azure/key-vault/general/disaster-recovery-guidance))
+  Key Vault service replication and failover capabilities: ([availability and redundancy](https://docs.microsoft.com/azure/key-vault/general/disaster-recovery-guidance))
 
 - Monitoring key, certificate, and secret usage
 
-  Detecting unauthorized access using a Key Vault/Azure Monitor Logs workspace: ([Monitoring &AMP; alerting](https://docs.microsoft.com/azure/key-vault/general/alert))
+  Detecting unauthorized access using a key vault or Azure Monitor Log Analytics workspace: ([monitoring and alerting](https://docs.microsoft.com/azure/key-vault/general/alert))
 
 - Delegated Key Vault instantiation and privileged access: ([Secure access](https://docs.microsoft.com/azure/key-vault/general/secure-your-key-vault))
 
-- Requirements surrounding using customer-master keys (CMKs) for native encryption mechanisms such as storage service encryption (SSE): ([CMKs](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
+- Requirements surrounding using customer-managed keys for native encryption mechanisms such as storage service encryption (SSE): [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
 
 - Whole-disk encryption for virtual machines (VMs)
 
@@ -60,13 +62,13 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Establish an automated process for key and certificate rotation.
 
-- Enable firewall and virtual network service endpoint on the vault to control access to the Key Vault.
+- Enable firewall and virtual network service endpoint on the vault to control access to the key vault.
 
-- Use the platform-central Azure Monitor Logs workspace to audit key, certificate, and secret usage within each Key Vault.
+- Use the platform-central Azure Monitor Log Analytics workspace to audit key, certificate, and secret usage within each key vault.
 
 - Delegate Key Vault instantiation and privileged access, using Azure Policy to enforce a consistent compliant configuration.
 
-- Default to Microsoft-managed keys (MMKs) for principal encryption functionality and when required to use CMKs.
+- Default to Microsoft-managed keys for principal encryption functionality and use customer-managed keys when required.
 
 - Do not use centralized Key Vault instances for application keys or secrets.
 
@@ -86,9 +88,9 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Compliance reporting and auditing to ensure continuous compliance
 
-- Azure Policy has limits, such as the restriction of definitions at any given scope: ([Policy limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits))
+- Azure Policy has limits, such as the restriction of definitions at any given scope: ([policy limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits))
 
-- Regulatory compliance policies such as the Health Insurance Portability and Accountability Act, payment card industry (PCI), data security standards (DSS), service organization controls (SOC) trust service principles, and criteria.
+- Regulatory compliance policies such as the health insurance portability and accountability act, payment card industry (PCI), data security standards (dss), service organization controls (SOC) trust service principals, and criteria.
 
 **Design recommendations:**
 
@@ -116,7 +118,7 @@ It is crucial for enterprise customers to have visibility into what is happening
 
 - Data retention periods for audit data; Azure AD reports (premium) have a 30-day retention period
 
-- Long-term archiving of logs such as Azure activity logs, VM logs, and platform-as-a-service (PaaS) logs
+- Long-term archiving of logs such as Azure activity logs, VM logs, and platform as a service (PaaS) logs
 
 - Baseline security configuration via Azure in-guest VM policy
 
@@ -126,7 +128,7 @@ It is crucial for enterprise customers to have visibility into what is happening
 
 - Requirements for real-time monitoring and alerting
 
-- Security information and event management integration with Azure Security Center and Sentinel
+- Security information and event management integration with Azure Security Center and sentinel
 
 - Vulnerability assessment of VMs
 
@@ -134,17 +136,17 @@ It is crucial for enterprise customers to have visibility into what is happening
 
 - Use Azure AD reporting capabilities to generate access control audit reports
 
-- Export Azure activity logs to Azure Monitor Logs for long term data retention and export to Azure Storage for long-term storage beyond two years, if necessary
+- Export Azure activity logs to Azure Monitor logs for long term data retention and export to Azure Storage for long-term storage beyond two years, if necessary
 
 - Enable Security Center (Standard SKU) for all subscriptions, using Azure Policy to ensure compliance
 
-- Monitor base OS patching drift via Azure Monitor Logs and Security Center
+- Monitor base OS patching drift via Azure Monitor logs and Azure Security Center
 
 - Use Azure policies to automatically deploy software configurations through VM extensions and enforce a compliant baseline VM configuration
 
 - Monitor VM security configuration drift via Azure Policy
 
-- Connect default resource configurations to a centralized Azure Monitor Logs workspace
+- Connect default resource configurations to a centralized Azure Monitor Log Analytics workspace
 
 - Use an Event Grid-based solution for log orientated real-time alerting
 
@@ -194,11 +196,11 @@ As business units request to put workloads into Azure, it requires additional vi
 |                              |                                                                       | Is management traffic directed via a link-local endpoint exposed on the host?                                                                |
 |                              | Data encryption at-rest                                               | Is encryption applied by default?                                                                                                            |
 |                              |                                                                       | Can encryption be disabled?                                                                                                                  |
-|                              |                                                                       | Is encryption performed with MMKs or CMKs?                                                   |
+|                              |                                                                       | Is encryption performed with Microsoft-managed keys or customer-managed keys?                                                   |
 |                              | Data encryption in-transit                                            | Is traffic to the service encrypted at a protocol level (secure sockets layer/transport layer security)?                                                                           |
 |                              |                                                                       | Are there any HTTP endpoints, and can they be disabled?                                                                                        |
 |                              |                                                                       | Is underlying service communication also encrypted?                                                                                          |
-|                              |                                                                       | Is encryption performed using MMKs or CMKs? (Is bring your own encryption supported?)                                                                               |
+|                              |                                                                       | Is encryption performed using Microsoft-managed keys or customer-managed keys? (Is bring your own encryption supported?)                                                                               |
 |                              | Software deployment                                                   | Can application software or third-party products be deployed to the service?                                                                 |
 |                              |                                                                       | How is software deployment performed and managed?                                                                                            |
 |                              |                                                                       | Can policies enforced to control source or code integrity?                                                                                   |
@@ -223,7 +225,7 @@ As business units request to put workloads into Azure, it requires additional vi
 |                              |                                                                       | How frequently can backups be taken?                                                                                                         |
 |                              |                                                                       | How long can backups be retained for?                                                                                                        |
 |                              |                                                                       | Are backups encrypted?                                                                                                                       |
-|                              |                                                                       | Is backup encryption performed using MMKs or CMKs?                                                                                             |
+|                              |                                                                       | Is backup encryption performed using Microsoft-managed keys or customer-managed keys?                                                                                             |
 |                              | Disaster recovery                                                     | How can the service be used in a regional redundant fashion?                                                                                 |
 |                              |                                                                       | What is the attainable RTO and RPO?                                                                                                          |
 |                              | SKU                                                                   | What SKUs are available? And how do they differ?                                                                                             |

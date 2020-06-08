@@ -1,6 +1,6 @@
 ---
-title: Business continuity and DR
-description: Business continuity and DR
+title: Business continuity and disaster recovery
+description: Business continuity and disaster recovery
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/01/2020
@@ -13,59 +13,59 @@ ms.subservice: ready
 
 ## Planning for business continuity and disaster recovery
 
-This section will help readers capture customer disaster recovery (DR) requirements to design suitable platform level capabilities that application workloads can consume to meet their specific recovery time (RTO) and recovery point (RPO) requirements.
+This section will help readers capture customer disaster recovery (DR) requirements to design suitable platform-level capabilities that application workloads can consume to meet their specific recovery time objective (RTO) and recovery point objective (RPO) requirements.
 
 **Design considerations:**
 
-- Application and data availability requirements and the use of active-active and active-passive availability patterns (for example, workload RTO and RPO requirements)
+- Application and data availability requirements and the use of active-active and active-passive availability patterns (such as workload RTO and RPO requirements).
 
-- Business continuity and DR for platform-as-a-service (PaaS) services and the availability of native DR and high-availability features
+- Business continuity and DR for platform as a service (PaaS) services and the availability of native DR and high-availability features.
 
-- Support for multiregional deployments for failover purposes; component proximity for performance reasons
+- Support for multiregion deployments for failover purposes, with component proximity for performance reasons.
 
-- Application operations with reduced functionality or degraded performance in the presence of an outage
+- Application operations with reduced functionality or degraded performance in the presence of an outage.
 
-- Workload suitability for availability zones or availability sets
+- Workload suitability for availability zones or availability sets.
 
-  - Data sharing and dependencies between zones
+  - Data sharing and dependencies between zones.
 
-  - Impact of availability zones on update domains compared to availability sets and percentage of workloads that can be under maintenance simultaneously
+  - Impact of availability zones on update domains compared to availability sets and percentage of workloads that can be under maintenance simultaneously.
 
-  - Support for specific virtual machine (VM) stock-keeping units with availability zones
+  - Support for specific virtual machine (VM) stock-keeping units with availability zones.
 
-  - Using availability zones is required if Microsoft Azure Ultra Disk storage is used 
+  - Using availability zones is required if Microsoft Azure ultra disk storage is used.
 
-- Consistent backups for applications and data
+- Consistent backups for applications and data.
 
-  - VM snapshots and using Microsoft Azure Backup and Recovery Services vaults
+  - VM snapshots and using Microsoft Azure Backup and Recovery Services vaults.
 
-  - Subscription limits restricting the number of Recovery Services vaults and the size of each vault
+  - Subscription limits restricting the number of Recovery Services vaults and the size of each vault.
 
-  - Geo-replication and DR capabilities for PaaS services
+  - Geo-replication and DR capabilities for PaaS services.
 
-- Network connectivity in case of a failover
+- Network connectivity in case of a failover.
 
-  - Bandwidth capacity planning for Azure ExpressRoute
+  - Bandwidth capacity planning for Azure ExpressRoute.
 
-  - Paired failover regions
+  - Paired failover regions.
 
-  - Traffic routing in case of a regional, zonal, or network outage
+  - Traffic routing in case of a regional, zonal, or network outage.
 
-- Planned and unplanned failovers
+- Planned and unplanned failovers.
 
-  - IP address consistency requirements and the potential need to maintain IP addresses after failover and failback
+  - IP address consistency requirements and the potential need to maintain IP addresses after failover and failback.
 
-  - Maintained engineering DevOps capabilities
+  - Maintained engineering DevOps capabilities.
 
-- Azure Key Vault DR for application keys, certificates, and secrets
+- Azure Key Vault DR for application keys, certificates, and secrets.
 
 **Design recommendations:**
 
-- Employ Azure Site Recovery for Azure to Azure Virtual Machine DR scenarios to replicate workloads across regions.
+- Employ Azure Site Recovery for Azure to Azure Virtual Machines disaster recovery scenarios to replicate workloads across regions.
 
   Site Recovery provides built-in platform capabilities for VM workloads to meet low RPO/RTO requirements through real-time replication and recovery automation. Additionally, the service provides the ability to run recovery drills without affecting the workloads in production.
 
-- Use native PaaS service DR capabilities.
+- Use native PaaS service disaster recovery capabilities.
 
   The built-in features provide an easy solution to the complex task of building replication and failover into a workload architecture, simplifying both design and deployment automation. An organization that has defined a standard for the services they use can also audit and enforce the service configuration through Azure Policy.
 
@@ -77,7 +77,7 @@ This section will help readers capture customer disaster recovery (DR) requireme
 
   A redundant hybrid network architecture can help ensure uninterrupted cross-premises connectivity in the event of an outage affecting an Azure region or peering provider location.
 
-- Refer to [Azure region pairs](https://docs.microsoft.com/azure/best-practices-availability-paired-regions) documentation when selecting locations for your organizations DR layouts.
+- Refer to [Azure region pairs](https://docs.microsoft.com/azure/best-practices-availability-paired-regions) documentation when selecting locations for your organization's disaster recovery layouts.
 
 - Use Azure paired regions when planning for business continuity and DR.
 
