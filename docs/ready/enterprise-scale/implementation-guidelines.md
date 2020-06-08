@@ -9,15 +9,17 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- cSpell:ignore interdomain VMSS -->
+
 # Implementation guidelines
 
-This section covers how to get started with the enterprise-scale platform-native reference implementation and outline design objectives, current design, FAQs, and known issues.
+This section covers how to get started with the enterprise-scale platform-native reference implementation and outline design objectives, current design, FAQ, and known issues.
 
-There are two categories of activities that must take place in order to implement enterprise-scale architecture. One is what must be true for the enterprise-scale. It encompasses activities that must be performed by the Microsoft Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The other is **File -&gt; new -&gt; region** and **File -&gt; New -&gt; landing zone.** These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code_ and automation with deployment pipelines.
+There are two categories of activities that must take place in order to implement enterprise-scale architecture. One is what must be true for the enterprise-scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The other is **File -&gt; new -&gt; region** and **File -&gt; New -&gt; landing zone.** These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IoC)_ and automation with deployment pipelines.
 
 ## What must be true for a CAF enterprise-scale landing zone
 
-### Enterprise agreement (EA) enrollment and Azure AD tenants
+### Enterprise Agreement (EA) enrollment and Azure AD tenants
 
 | Activities | Parameters required | Enterprise-scale example configuration |
 |---|---|---|
@@ -41,15 +43,16 @@ There are two categories of activities that must take place in order to implemen
 ### Global networking and connectivity
 
 <!-- markdownlint-disable MD033 -->
+<!-- cSpell:ignore vwan vhub -->
 
 | Activities | Parameters required | Enterprise-scale example configuration |
 |---|---|---|
 | 1. Allocate an appropriate virtual network classless interdomain routing (CIDR) range for each Azure region where Azure Virtual WAN virtual hubs and virtual networks will be deployed. | One CIDR range per region | North Europe: `10.0.0.0/16` <br> West Europe: `10.1.0.0/16` <br> East US: `10.2.0.0/16` |
-| 2. Create Azure Virtual WAN standard within the `connectivity` subscription. | Virtual WAN name<br>Azure region | Virtual WAN name: `contoso-vwan` <br> Azure region: North Europe |
-| 3. Create a Virtual WAN virtual hub for each region. Ensure at least one gateway (ExpressRoute or VPN) per Virtual WAN virtual hub is deployed.                                  | Virtual WAN name<br>Virtual hub name<br>Virtual hub region<br>Virtual hub address space<br>ExpressRoute gateway<br>VPN gateway | Virtual WAN: `contoso-vwan`<br>Virtual hub region: `North Europe`<br>Virtual hub name: `vhub-neu` <br> Virtual hub address space: `10.0.0.0/16` <br> ExpressRoute gateway: yes (1 scale unit) <br> VPN gateway: no |
-| 4. Using Azure Firewall Manager, secure Virtual WAN virtual hubs by deploying Azure Firewall within each Virtual WAN virtual hub.                                                        | Virtual hub name                           | Virtual hub name: `vhub-neu`                       |
+| 2. Create Azure Virtual WAN standard within the `connectivity` subscription. | Virtual WAN name <br> Azure region | Virtual WAN name: `contoso-vwan` <br> Azure region: `North Europe` |
+| 3. Create a virtual WAN virtual hub for each region. Ensure at least one gateway (ExpressRoute or VPN) per virtual WAN virtual hub is deployed.                                  | Virtual WAN name <br> Virtual hub name <br> Virtual hub region <br> Virtual hub address space <br> ExpressRoute gateway <br> VPN gateway | Virtual WAN: `contoso-vwan` <br> Virtual hub region: `North Europe` <br> Virtual hub name: `vhub-neu` <br> Virtual hub address space: `10.0.0.0/16` <br> ExpressRoute gateway: yes (1 scale unit) <br> VPN gateway: no |
+| 4. Using Azure Firewall Manager, secure virtual WAN virtual hubs by deploying Azure Firewall within each virtual WAN virtual hub.                                                        | Virtual hub name                           | Virtual hub name: `vhub-neu`                       |
 | 5. Create required firewall policies within the `connectivity` subscription and assign them to secure virtual hubs.                                                 | Azure Firewall policy name <br> Firewall policy inbound/outbound rules | Firewall policy name: `contoso-global-fw-policy` <br> Allow outbound rules to `*.microsoft.com`  |
-| 6. Using Azure Firewall Manager, ensure all connected virtual networks to a secure virtual hub are protected by Azure Firewall.                                                | Virtual hub name <br> Internet traffic - traffic from virtual networks | Virtual hub name: `vhub-neu` <br> Internet traffic - traffic from virtual networks - send via Azure Firewall |
+| 6. Using Azure Firewall Manager, ensure all connected virtual networks to a secure virtual hub are protected by Azure Firewall.                                                | Virtual hub name <br> internet traffic - traffic from virtual networks | Virtual hub name: `vhub-neu` <br> Internet traffic - traffic from virtual networks - send via Azure Firewall |
 | 7. Deploy and configure an Azure Private DNS zone within the global `connectivity` subscription.                                                             | Private DNS zone name               | Private DNS zone name: `azure.contoso.com` |
 | 8. Provision ExpressRoute circuits with private peering.                                                                                                 | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) |
 | 9. Connect on-premises HQs/DCs to Azure Virtual WAN virtual hub via ExpressRoute circuits.                                                                                | Authorization key <br> Virtual hub name | Authorization key: `xxxxxxxx` <br> Virtual hub: `vhub-neu` |
@@ -66,7 +69,7 @@ There are two categories of activities that must take place in order to implemen
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------------|
 | 1. Define and apply a service whitelisting framework to ensure Azure services meet enterprise security and governance requirements (see appendix). |                     |                                  |
 | 2. Create custom role-based access control (RBAC) role definitions.                                                                                                              |                     |                                  |
-| 3. Enable PIM and discover Azure resources to facilitate privileged identity management.                                                             |                     |                                  |
+| 3. Enable Privileged Identity Management (PIM) and discover Azure resources to facilitate PIM.                                                             |                     |                                  |
 | 4. Create Azure AD-only groups for the Azure control plane management of resources using PIM.                                                             |                     |                                  |
 | 5. Apply Azure Policy to ensure Azure services are compliant to enterprise requirements.                                                             |                     |                                  |
 | 6. Define a naming convention and enforce it via Azure Policy.                                                                                       |                     |                                  |
@@ -80,7 +83,7 @@ There are two categories of activities that must take place in order to implemen
 | 1. Create policy compliance and security dashboards for organizational and resource-centric views.            |                     |                                  |
 | 2. Create a workflow for platform secrets (service principals and automation account) and key rollover.     |                     |                                  |
 | 3. (Optional): Set up an organization-wide virtual machine gallery image.                                                  |                     |                                  |
-| 4. Set up long-term archiving and retention for logs within Azure Monitor Logs.                                    |                     |                                  |
+| 4. Set up long-term archiving and retention for logs within Azure Monitor logs.                                    |                     |                                  |
 | 5. Set up business continuity and disaster recovery (BCDR) for key vaults used to store platform secrets.                                                  |                     |                                  |
 | 6. Using Azure Firewall Manager, ensure that all connected virtual networks to a secure virtual hub are protected by Azure Firewall. |                     |                                  |
 
@@ -103,15 +106,15 @@ The table below provides a list of example Azure policies to enforce typical net
 |            | 13. Storage accounts should use a virtual network service endpoint.                               |
 |            | 14. Subnets should be associated with a network security group.                                   |
 |            | 15. Monitor unprotected network endpoints in Azure Security Center.                          |
-| Security   | 1. [Preview]: Audit dependency agent deployment&mdash;virtual machine (VM) image (OS) unlisted.                         |
-|            | 2. [Preview]: Audit dependency agent deployment in VMSS&mdash;VM image (OS) unlisted.                 |
-|            | 3. [Preview]: Audit Azure Monitor Logs agent deployment&mdash;VM image (OS) unlisted.                      |
-|            | 4. [Preview]: Audit Azure Monitor Logs agent deployment in VMSS&mdash;VM image (OS) unlisted.              |
-|            | 5. [Preview]: Audit Azure Monitor Logs workspace for VM&mdash;report mismatch.                             |
-|            | 6. [Preview]: Deploy dependency agent for Linux VMs.                                              |
-|            | 7. [Preview]: Deploy dependency agent for Windows VMs.                                            |
-|            | 8. [Preview]: Deploy Azure Monitor Logs agent for Linux VMs.                                           |
-|            | 9. [Preview]: Deploy Azure Monitor Logs agent for Windows VMs.                                         |
+| Security   | 1. [Preview]: Audit the Microsoft Monitoring Agent deployment - virtual machine (VM) image (OS) unlisted.                         |
+|            | 2. [Preview]: Audit the Microsoft Monitoring Agent deployment in VMSS - VM image (OS) unlisted.                 |
+|            | 3. [Preview]: Audit Azure Monitor Log Analytics agent deployment - VM image (OS) unlisted.                      |
+|            | 4. [Preview]: Audit Azure Monitor Log Analytics agent deployment in VMSS - VM image (OS) unlisted.              |
+|            | 5. [Preview]: Audit Azure Monitor Log Analytics workspace for VM - report mismatch.                             |
+|            | 6. [Preview]: Deploy the Microsoft Dependency Agent for Linux VMs.                                              |
+|            | 7. [Preview]: Deploy the Microsoft Dependency Agent for Windows VMs.                                            |
+|            | 8. [Preview]: Deploy Azure Monitor Log Analytics agent for Linux VMs.                                           |
+|            | 9. [Preview]: Deploy Azure Monitor Log Analytics agent for Windows VMs.                                         |
 |            | 10. Activity log should be retained for at least one year.                                        |
 |            | 11. Audit diagnostic setting.                                                                     |
 |            | 12. Azure Monitor log profile should collect logs for categories `write`, `delete`, and `action`. |
@@ -119,34 +122,34 @@ The table below provides a list of example Azure policies to enforce typical net
 |            | 14. Azure Monitor solution 'security and audit' must be deployed.                                 |
 |            | 15. Azure subscriptions should have a log profile for activity log.                               |
 |            | 16. Deploy diagnostic settings for batch account to event hub.                                    |
-|            | 17. Deploy diagnostic settings for batch account to Azure Monitor Logs workspace.                      |
+|            | 17. Deploy diagnostic settings for batch account to Azure Monitor Log Analytics workspace.                      |
 |            | 18. Deploy diagnostic settings for Data Lake Analytics to event hub.                              |
-|            | 19. Deploy diagnostic settings for Data Lake Analytics to Azure Monitor Logs workspace.                |
+|            | 19. Deploy diagnostic settings for Data Lake Analytics to Azure Monitor Log Analytics workspace.                |
 |            | 20. Deploy diagnostic settings for Data Lake Storage gen1 to event hub.                           |
-|            | 21. Deploy diagnostic settings for Data Lake Storage gen1 to Azure Monitor Logs workspace.             |
+|            | 21. Deploy diagnostic settings for Data Lake Storage gen1 to Azure Monitor Log Analytics workspace.             |
 |            | 22. Deploy diagnostic settings for event hub to event hub.                                        |
-|            | 23. Deploy diagnostic settings for event hub to Azure Monitor Logs workspace.                          |
-|            | 24. Deploy diagnostic settings for Key Vault to Azure Monitor Logs workspace.                          |
+|            | 23. Deploy diagnostic settings for event hub to Azure Monitor Log Analytics workspace.                          |
+|            | 24. Deploy diagnostic settings for Key Vault to Azure Monitor Log Analytics workspace.                          |
 |            | 25. Deploy diagnostic settings for Logic Apps to event hub.                                       |
-|            | 26. Deploy diagnostic settings for Logic Apps to Azure Monitor Logs workspace.                         |
+|            | 26. Deploy diagnostic settings for Logic Apps to Azure Monitor Log Analytics workspace.                         |
 |            | 27. Deploy diagnostic settings for network security groups.                                       |
 |            | 28. Deploy diagnostic settings for search services to event hub.                                  |
-|            | 29. Deploy diagnostic settings for search services to Azure Monitor Logs workspace.                    |
+|            | 29. Deploy diagnostic settings for search services to Azure Monitor Log Analytics workspace.                    |
 |            | 30. Deploy diagnostic settings for Service Bus to event hub.                                      |
-|            | 31. Deploy diagnostic settings for Service Bus to Azure Monitor Logs workspace.                        |
+|            | 31. Deploy diagnostic settings for Service Bus to Azure Monitor Log Analytics workspace.                        |
 |            | 32. Deploy diagnostic settings for stream analytics to event hub.                                 |
-|            | 33. Deploy diagnostic settings for stream analytics to Azure Monitor Logs workspace.                   |
-|            | 34. The Azure Monitor Logs agent should be installed on virtual machine scale sets.                    |
-|            | 35. The Azure Monitor Logs agent should be installed on virtual machines.                              |
-| Monitoring | 36. [Preview]: Audit dependency agent deployment&mdash;VM image (OS) unlisted.                        |
-|            | 37. [Preview]: Audit dependency agent deployment in VMSS&mdash;VM image (OS) unlisted.                |
-|            | 38. [Preview]: Audit Azure Monitor Logs agent deployment&mdash;VM image (OS) unlisted.                     |
-|            | 39. [Preview]: Audit Azure Monitor Logs agent deployment in VMSS&mdash;VM image (OS) unlisted.             |
-|            | 40. [Preview]: Audit Azure Monitor Logs workspace for VM&mdash;report mismatch.                            |
-|            | 41. [Preview]: Deploy dependency agent for Linux VMs.                                             |
-|            | 42. [Preview]: Deploy dependency agent for Windows VMs.                                           |
-|            | 43. [Preview]: Deploy Azure Monitor Logs agent for Linux VMs.                                          |
-|            | 44. [Preview]: Deploy Azure Monitor Logs agent for Windows VMs.                                        |
+|            | 33. Deploy diagnostic settings for stream analytics to Azure Monitor Log Analytics workspace.                   |
+|            | 34. The Azure Monitor Log Analytics agent should be installed on virtual machine scale sets.                    |
+|            | 35. The Azure Monitor Log Analytics agent should be installed on virtual machines.                              |
+| Monitoring | 36. [Preview]: Audit the Microsoft Dependency Agent deployment - VM image (OS) unlisted.                        |
+|            | 37. [Preview]: Audit the Microsoft Dependency Agent deployment in VMSS - VM image (OS) unlisted.                |
+|            | 38. [Preview]: Audit Azure Monitor Log Analytics agent deployment - VM image (OS) unlisted.                     |
+|            | 39. [Preview]: Audit Azure Monitor Log Analytics agent deployment in VMSS - VM image (OS) unlisted.             |
+|            | 40. [Preview]: Audit Azure Monitor Log Analytics workspace for VM - report mismatch.                            |
+|            | 41. [Preview]: Deploy the Microsoft Dependency Agent for Linux VMs.                                             |
+|            | 42. [Preview]: Deploy the Microsoft Dependency Agent for Windows VMs.                                           |
+|            | 43. [Preview]: Deploy Azure Monitor Log Analytics agent for Linux VMs.                                          |
+|            | 44. [Preview]: Deploy Azure Monitor Log Analytics agent for Windows VMs.                                        |
 |            | 45. Activity log should be retained for at least one year.                                        |
 |            | 46. Audit diagnostic setting.                                                                     |
 |            | 47. Azure Monitor log profile should collect logs for categories `write`, `delete`, and `action`. |
@@ -154,25 +157,25 @@ The table below provides a list of example Azure policies to enforce typical net
 |            | 49. Azure Monitor solution `security and audit` must be deployed.                                 |
 |            | 50. Azure subscriptions should have a log profile for activity log.                               |
 |            | 51. Deploy diagnostic settings for batch account to event hub.                                    |
-|            | 52. Deploy diagnostic settings for batch account to Azure Monitor Logs workspace.                      |
+|            | 52. Deploy diagnostic settings for batch account to Azure Monitor Log Analytics workspace.                      |
 |            | 53. Deploy diagnostic settings for Data Lake Analytics to event hub.                              |
-|            | 54. Deploy diagnostic settings for Data Lake Analytics to Azure Monitor Logs workspace.                |
+|            | 54. Deploy diagnostic settings for Data Lake Analytics to Azure Monitor Log Analytics workspace.                |
 |            | 55. Deploy diagnostic settings for Data Lake Storage gen1 to event hub.                           |
-|            | 56. Deploy diagnostic settings for Data Lake Storage gen1 to Azure Monitor Logs workspace.             |
+|            | 56. Deploy diagnostic settings for Data Lake Storage gen1 to Azure Monitor Log Analytics workspace.             |
 |            | 57. Deploy diagnostic settings for event hub to event hub.                                        |
-|            | 58. Deploy diagnostic settings for event hub to Azure Monitor Logs workspace.                          |
-|            | 59. Deploy diagnostic settings for Key Vault to Azure Monitor Logs workspace.                          |
+|            | 58. Deploy diagnostic settings for event hub to Azure Monitor Log Analytics workspace.                          |
+|            | 59. Deploy diagnostic settings for Key Vault to Azure Monitor Log Analytics workspace.                          |
 |            | 60. Deploy diagnostic settings for Logic Apps to event hub.                                       |
-|            | 61. Deploy diagnostic settings for Logic Apps to Azure Monitor Logs workspace.                         |
+|            | 61. Deploy diagnostic settings for Logic Apps to Azure Monitor Log Analytics workspace.                         |
 |            | 62. Deploy diagnostic settings for network security groups.                                       |
 |            | 63. Deploy diagnostic settings for search services to event hub.                                  |
-|            | 64. Deploy diagnostic settings for search services to Azure Monitor Logs workspace.                    |
+|            | 64. Deploy diagnostic settings for search services to Azure Monitor Log Analytics workspace.                    |
 |            | 65. Deploy diagnostic settings for Service Bus to event hub.                                      |
-|            | 66. Deploy diagnostic settings for Service Bus to Azure Monitor Logs workspace.                        |
+|            | 66. Deploy diagnostic settings for Service Bus to Azure Monitor Log Analytics workspace.                        |
 |            | 67. Deploy diagnostic settings for stream analytics to event hub.                                 |
-|            | 68. Deploy diagnostic settings for stream analytics to Azure Monitor Logs workspace.                   |
-|            | 69. The Azure Monitor Logs agent should be installed on virtual machine scale sets.                    |
-|            | 70. The Azure Monitor Logs agent should be installed on virtual machines.                              |
+|            | 68. Deploy diagnostic settings for stream analytics to Azure Monitor Log Analytics workspace.                   |
+|            | 69. The Azure Monitor Log Analytics agent should be installed on virtual machine scale sets.                    |
+|            | 70. The Azure Monitor Log Analytics agent should be installed on virtual machines.                              |
 | Key Vault  | 71. [Preview]: Manage allowed certificate key types.                                              |
 |            | 72. [Preview]: Manage allowed curve names for elliptic curve cryptography certificates.           |
 |            | 73. [Preview]: Manage certificate lifetime action triggers.                                       |
@@ -243,10 +246,10 @@ The table below provides a list of example Azure policies to enforce typical ent
 | Compute           | 12. Allowed virtual machine SKUs                                                                       |
 |                   | 13. Audit virtual machines without disaster recovery configured                                        |
 |                   | 14. Audit VMs that do not use managed disks                                                            |
-|                   | 15. Deploy default Microsoft infrastructure-as-a-service (IaaS) Anti-malware extension for Windows Server                              |
+|                   | 15. Deploy default Microsoft infrastructure as a service (IaaS) antimalware extension for Windows Server                              |
 |                   | 16. Diagnostic logs in virtual machine scale sets should be enabled                                    |
-|                   | 17. Microsoft Anti-malware for Azure should be configured to automatically update protection signatures |
-|                   | 18. Microsoft IaaS Anti-malware extension should be deployed on Windows servers                          |
+|                   | 17. Microsoft Antimalware for Azure should be configured to automatically update protection signatures |
+|                   | 18. Microsoft Antimalware Extension for Windows should be deployed on Windows servers                          |
 |                   | 19. Only approved VM extensions should be installed                                                    |
 |                   | 20. Require automatic OS image patching on virtual machine scale sets                                  |
 |                   | 21. Unattached disks should be encrypted                                                               |

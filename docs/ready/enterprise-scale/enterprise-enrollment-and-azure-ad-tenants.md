@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise enrollment and Microsoft Azure Active Directory tenants
+# Enterprise enrollment and Azure Active Directory tenants
 
 ## Planning for enterprise enrollment
 

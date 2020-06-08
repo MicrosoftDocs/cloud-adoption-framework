@@ -362,10 +362,10 @@ To keep a copy of the VMs before modifying them, Contoso takes a snapshot before
 1. In **Machines**, Contoso selects the machine. In the **Dependencies** column, Contoso selects **Requires installation**.
 
 2. In the **Discover machines** pane, Contoso:
-    - Downloads the Microsoft Monitoring Agent (MMA) and the Microsoft Dependency agent for each Windows VM.
-    - Downloads the MMA and Dependency agent for each Linux VM.
+    - Downloads the Microsoft Monitoring Agent and the Microsoft Dependency Agent for each Windows VM.
+    - Downloads the Microsoft Monitoring Agent and Microsoft Dependency Agent for each Linux VM.
 
-3. Contoso copies the workspace ID and key. Contoso needs the workspace ID and key when it installs the MMA.
+3. Contoso copies the workspace ID and key. Contoso needs the workspace ID and key when it installs the Microsoft Monitoring Agent.
 
     ![Agent download](../migrate/azure-best-practices/media/contoso-migration-assessment/download-agents.png)
 
@@ -389,13 +389,13 @@ Contoso runs the installation on each VM.
 
 5. In **Ready to Install**, Contoso installs the MMA.
 
-#### Install the Dependency agent on Windows VMs
+#### Install the Microsoft Dependency Agent on Windows VMs
 
-1. Contoso double-clicks the downloaded Dependency agent.
+1. Contoso double-clicks the downloaded agent.
 
 2. Contoso accepts the license terms and waits for the installation to finish.
 
-    ![Dependency Agent setup - Installing](../migrate/azure-best-practices/media/contoso-migration-assessment/dependency-agent.png)
+    ![Install the Microsoft Dependency Agent](../migrate/azure-best-practices/media/contoso-migration-assessment/dependency-agent.png)
 
 ### Install the agents on Linux VMs
 
@@ -420,13 +420,13 @@ Contoso runs the installation on each VM.
 
         `wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w 6b7fcaff-7efb-4356-ae06-516cacf5e25d -s k7gAMAw5Bk8pFVUTZKmk2lG4eUciswzWfYLDTxGcD8pcyc4oT8c6ZRgsMy3MmsQSHuSOcmBUsCjoRiG2x9A8Mg==`
 
-#### Install the Dependency Agent on Linux VMs
+#### Install the Microsoft Dependency Agent on Linux VMs
 
-After the MMA is installed, Contoso installs the Dependency agent on the Linux VMs:
+After the Microsoft Monitoring Agent is installed, Contoso installs the Microsoft Dependency Agent on the Linux VMs:
 
-1. The Dependency agent is installed on Linux computers by using InstallDependencyAgent-Linux64.bin, a shell script that has a self-extracting binary. Contoso runs the file by using sh, or it adds execute permissions to the file itself.
+1. The Microsoft Dependency Agent is installed on Linux computers by using `InstallDependencyAgent-Linux64.bin`, a shell script that has a self-extracting binary. Contoso runs the file by using `sh`, or it adds execute permissions to the file itself.
 
-2. Contoso installs the Linux Dependency agent as root:
+2. Contoso installs the Linux dependency agent as root:
 
     `wget --content-disposition https://aka.ms/dependencyagentlinux -O InstallDependencyAgent-Linux64.bin && sudo sh InstallDependencyAgent-Linux64.bin -s`
 
@@ -451,7 +451,7 @@ Contoso can now verify machine dependencies and create a group. Then, it runs th
 
     ![Azure Migrate - View group dependencies](../migrate/azure-best-practices/media/contoso-migration-assessment/sqlvm-dependencies.png)
 
-4. Contoso selects the VMs to add to the group (SQLVM and WEBVM). Contoso holds the Ctrl key while clicking to select multiple VMs.
+4. Contoso selects the VMs to add to the group (SQLVM and WEBVM). Contoso holds the `Ctrl` key while selecting multiple VMs.
 5. Contoso selects **Create Group**, and then enters a name (**smarthotelapp**).
 
     > [!NOTE]
@@ -461,7 +461,7 @@ Contoso can now verify machine dependencies and create a group. Then, it runs th
 
 1. In **Groups**, Contoso opens the group (**smarthotelapp**), and then selects **Create assessment**.
 
-    ![Azure Migrate - Create an assessment](../migrate/azure-best-practices/media/contoso-migration-assessment/run-vm-assessment.png)
+    ![Azure Migrate: Create an assessment](../migrate/azure-best-practices/media/contoso-migration-assessment/run-vm-assessment.png)
 
 2. To view the assessment, Contoso selects **Manage** > **Assessments**.
 

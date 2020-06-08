@@ -13,11 +13,12 @@ ms.subservice: ready
 
 ## Enterprise-scale committee
 
-The enterprise-scale committee and its members (committee members) are the primary caretakers of the enterprise-scale repository and its language, design, and Contoso implementation.
+The enterprise-scale committee and its members are the primary caretakers of the enterprise-scale repository and its language, design, and Contoso implementation.
 
 Current committee members:
 
 <!-- docsTest:disable -->
+<!-- cSpell:disable -->
 
 - Uday Pandya
 - Callum Coffin
@@ -28,6 +29,7 @@ Current committee members:
 - Niels Buit
 
 <!-- docsTest:enable --->
+<!-- cSpell:enable -->
 
 ## Committee member responsibilities
 
@@ -66,7 +68,7 @@ The implementation guide and reference implementation must be updated accordingl
     git push origin -u
     ```
 
-4. Create a PR from upstream to your remote master.
+4. Create a PR from upstream to your remote master branch.
 
 ## Writing Azure Resource Manager templates for Contoso implementation
 
@@ -132,14 +134,14 @@ Read the next section before submitting a PR, but don't submit a PR with templat
 
 ## Contributing to policy definitions, policy assignments, and role definitions and assignments for Contoso implementation
 
-Once your parameter conforms to the standards mentioned in section above and is ready for your resource, consider the scope at which this resource should be deployed&mdash;management group or subscription (either a connectivity or management subscription). Although the pipeline has an ability to deploy templates at any of the four given scopes, won't use resource-group-level deployment as a part of a landing zone template. The minimum bar is a subscription-level deployment template wrapped inside a policy definition.
+Once your parameter conforms to the standards mentioned in section above and is ready for your resource, consider whether the resource should be deployed at a management group scope or a subscription scope (either the `connectivity` or `management` subscription). Although the pipeline can deploy templates at any of the four scopes, it won't be deployed at the resource group level as part of a landing zone template. The minimum bar is a subscription-level deployment template wrapped inside a policy definition.
 
-- Dos:
-  - If you have resources to deploy inside a landing zone, wrap them inside deploy-if-not-exist (dine) policies; the assignment for this should be at the management group scope.
+- Do:
+  - If you have resources to deploy inside a landing zone, wrap them inside `DeployIfNotExists` policies; the assignment for this should be at the management group scope.
   - The policy should ideally have an existence scope targeted at the subscription scope if the deployment count of resources inside landing zone is exactly one (for example, a virtual network inside a landing zone or virtual hub for a new Azure region).
   - Ideally, all policy definitions should be created at the root defined in the end-to-end template.
 
-- Don't submit a PR with a template and parameter file to deploy resources (for example, Key Vault) or create your own management group hierarchy outside of what's described in an end-to-end landing zone.
+- Don't submit a PR with a template and parameter file to deploy resources (such as a key vault) or create your own management group hierarchy outside of what's described in an end-to-end landing zone.
 
 Example:
 
@@ -227,6 +229,8 @@ The following must be considered when assigning all policies:
 - What is the rationale of the policy in effect? Should an audit policy be translated to an enforcement instead?
 - For `DeployIfNotExists` policies, are you following the principle of least privilege for the role-based access-control definition used?
 
+<!-- cSpell:ignore don'ts -->
+
 ## Code of conduct
 
-We are working hard to build strong and productive collaboration with our passionate community. We heard you loud and clear. We are working on set of principles and guidelines with do's and don'ts.
+We are working hard to build strong and productive collaboration with our passionate community. We heard you loud and clear. We are working on set of principles and guidelines with dos and don'ts.

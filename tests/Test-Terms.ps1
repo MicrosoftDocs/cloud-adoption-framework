@@ -42,6 +42,7 @@ function Get-CasingExpressions
         'ASP.NET Core'
             'a .NET app'
             'NET Framework'
+        'AuditIfNotExists'
         'Avere vFXT'
         'AWS'
         'AWS Cost and Usage report'
@@ -186,7 +187,7 @@ function Get-CasingExpressions
             '(A|B|DCsv2|Dv2|Dsv2|Dsv3|Dav4|Dasv4|Fsv2)-series VMs'
         'Azure Virtual Hub'
         'Azure Virtual Network'
-        'Azure Virtual WAN'
+        '(Azure )?Virtual WAN'
         'Azure Well-Architected Framework'
         'B2B'
         'B2C'
@@ -260,6 +261,7 @@ function Get-CasingExpressions
         'Dynamics 365'
         'EAs?'
         'ECS'
+        'Event Tracing for Windows'
         'Exchange Server'
         'EMC'
         'EMS'
@@ -383,6 +385,7 @@ function Get-CasingExpressions
         'Microsoft(''s)?'
         'Microsoft Azure Well-Architected Review'
         'Microsoft Consulting Services'
+        'Microsoft Dependency Agent'
         'Microsoft Enterprise Mobility + Security'
         'Microsoft Excel'
         'Microsoft IT Pro Career Center'
@@ -493,6 +496,7 @@ function Get-CasingExpressions
         'ROI'
         'ROX'
         'RPOs?'
+        'RSA'
         'RSS'
         'RTOs?'
         'RUs'
@@ -534,6 +538,7 @@ function Get-CasingExpressions
         'Spark'
         'SparkR'
         'SPF'
+        'SPNs?'
         'Spring Boot'
         'SQL'
         'SQL Analytics'
@@ -613,6 +618,12 @@ function Get-CasingExpressions
         'Windows Virtual Desktop'
         'WordPress'
         'WPF'
+        'WS-Authorization'
+        'WS-Federation'
+        'WS-Policy'
+        'WS-Privacy'
+        'WS-SecureConversation'
+        'WS-Trust'
         'WSUS'
         'WVD'
         'Zerto'
@@ -655,7 +666,7 @@ function Get-CasingExpressions
         '(Czech Republic|Poland|Romania)'
         '(Canadian|Japanese)'
 
-        # TODO: Add geographic names.
+        # US states
 
         'Alabama'
         'Alaska'
@@ -711,6 +722,11 @@ function Get-CasingExpressions
         'Chicago'
         'Seattle'
         'Redmond'
+
+        # Third-party companies and products
+
+        'ArcSight'
+        'ServiceNow'
 
         # TODO: Handle resource provider names.
         'Microsoft.Compute'
