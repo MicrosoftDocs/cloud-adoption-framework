@@ -262,7 +262,7 @@ This section will expand on the network topology to consider recommended models 
 
 **Design considerations:**
 
-- Azure ExpressRoute provides dedicated private connectivity to Microsoft Azure services (infrastructure-as-a-service and platform-as-a-service [PaaS]) from on-premises locations.
+- Azure ExpressRoute provides dedicated private connectivity to Microsoft Azure infrastructure as a service (IaaS) and platform as a service (PaaS) functionality from on-premises locations.
 
 - Private Link can be used to establish connectivity to PaaS services over ExpressRoute with private peering.
 
