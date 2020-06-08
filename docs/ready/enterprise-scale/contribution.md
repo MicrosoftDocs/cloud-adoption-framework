@@ -13,7 +13,7 @@ ms.subservice: ready
 
 ## Enterprise-scale committee
 
-The enterprise-scale committee and its members (committee members) are the primary caretakers of the enterprise-scale repository and its language, design, and Contoso implementation.
+The enterprise-scale committee and its members (committee members) are the primary caretakers of the enterprise-scale repo and its language, design, and Contoso implementation.
 
 Current committee members:
 
@@ -39,7 +39,7 @@ A committee member can nominate a strong community member to join the committee 
 
 ## Contribution scope for enterprise-scale architecture guidelines
 
-This is the scope of contributions to this repository&mdash;as a platform evolves and new services and feature are validated in production with customers, the design guidelines are subject to updates in the overall context of the architecture. Use the `placeholder` template to submit pull requests (PRs) for documentation updates.
+The scope of contributions to this repo is that as a platform evolves and new services and feature are validated in production with customers, the design guidelines are subject to updates in the overall context of the architecture. Use the `placeholder` template to submit pull requests (PRs) for documentation updates.
 
 ## Contribution scope for Contoso reference implementation
 

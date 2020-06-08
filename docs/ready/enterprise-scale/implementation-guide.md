@@ -35,7 +35,7 @@ There are two categories of activities that must take place in order to implemen
 | 2. Create a top-level `sandbox` management group for users to experiment with Azure.                                              |                     |                                  |
 | 3. Publish a subscription provisioning criteria along with the responsibilities of a subscription owner (potentially as a wiki). |                     |                                  |
 | 4. Create `management` and `connectivity` subscriptions for platform management and global networking and connectivity resources.  |                     |                                  |
-| 5. Set up a Git repository and service principal for use with a platform CI/CD pipeline.                                            |                     |                                  |
+| 5. Set up a Git repo and service principal to use with a platform CI/CD pipeline.                                            |                     |                                  |
 | 6. Create custom role definitions and manage entitlements using Azure AD PIM for subscription and management group scopes.              |                     |                                  |
 
 ### Global networking and connectivity

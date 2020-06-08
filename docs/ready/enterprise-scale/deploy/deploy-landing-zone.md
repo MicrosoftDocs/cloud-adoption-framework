@@ -27,7 +27,7 @@ All platform Azure resources in a landing zone following enterprise-scale guidan
 Before continuing, ensure that you've completed all prerequisites in the previous sections, with special attention to the following steps:
 
 1. Ensure the default management structure exists as described in the [configure GitHub and run initialization](./Configure-run-initialization.md) section.
-2. Ensure you have [initialized AzOps repository](./Configure-run-initialization.md) and pushed changes are in your master branch.
+2. Ensure that you have [initialized the AzOps repo](./Configure-run-initialization.md) and that pushed changes are in your master branch.
 3. All the platform infrastructure has been deployed following [these instructions](./deploy-platform-infrastructure.md).
 
 ---

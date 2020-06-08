@@ -36,7 +36,7 @@ Assign required permissions at tenant root level for the account that you want t
 
 >Note: If you want to use a service principal, follow the instructions to assign permissions under the [**full end-to-end deployment**](./Using-Reference-Implementation.md)
 
-3. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your fork of the [north GitHub repository](https://github.com/Azure/CET-NorthStar), or download the necessary templates/template parameter files from the examples folder to your local computer. For a basic deployment test, you'll need access to the following template:
+3. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your fork of the [north GitHub repo](https://github.com/Azure/CET-NorthStar), or download the necessary templates/template parameter files from the examples folder to your local computer. For a basic deployment test, you'll need access to the following template:
 
     - [10-Create-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/10-create-managementgroup.parameters.json)
       Parameter file to deploy the company root management group (for example, Contoso) as a child of the tenant root group

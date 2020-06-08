@@ -18,7 +18,7 @@ With this principle, this reference implementation has following three tenets:
 ![Enterprise agreement enrollment](./media/implementation-scope.png)
 _Figure 1: Enterprise agreement enrollment_
 
-Git -> Clone -> Azure/enterprise-scale: provide the Git repository (repo) for Azure platform configuration. The Git -> Clone or Git -> Fork (preferred) metaphor references that this repo will provide everything that must be true for enterprise-scale&mdash;that customers can use as-is in their own environment.
+Git -> Clone -> Azure/enterprise-scale: provide the Git repo for Azure platform configuration. The Git -> Clone or Git -> Fork (preferred) metaphor references that this repo will provide everything that must be true for enterprise-scale—that customers can use as-is in their own environment.
 
 ## Discovery
 

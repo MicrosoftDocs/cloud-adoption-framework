@@ -24,7 +24,7 @@ Minimum version of PowerShell: 7.0|  The latest version of PowerShell with insta
 > [!NOTE]
 > For iPhones, if you have multi-factor authentication enabled on any of your accounts, make sure that your phone and app are easily accessible before you start.
 
-## Fork the CET-NorthStar repository (repo) to your GitHub account
+## Fork the CET-NorthStar repo to your GitHub account
 
 Open your browser and log into your GitHub account (onboarded to the `Azure` organization), and [fork](https://help.github.com/github/getting-started-with-github/fork-a-repo) the `Azure/CET-NorthStar` repo to your account. This will allow you to contribute to this repo with pull requests and participate in the standard GitHub flow.
 

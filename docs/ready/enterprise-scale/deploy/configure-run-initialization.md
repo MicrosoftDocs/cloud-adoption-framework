@@ -26,7 +26,7 @@ This article describes how to:
 
 # Configure GitHub and run initialization
 
-This section describes the steps for how to get started with the full reference implementation by configuring GitHub Actions to deploy Resource Manager templates and how to run the initialization to discover the current Azure environment and create a representation in the local Git repository (repo).
+This section describes the steps for how to get started with the full reference implementation by configuring GitHub Actions to deploy Resource Manager templates and how to run the initialization to discover the current Azure environment and create a representation in the local Git repo.
 
 ![Initialize AzOps process](../media/initialize-azops.png")
 _Figure 2: The Initialize AzOps process._

@@ -25,7 +25,7 @@ The target audience for this guide is people with a typical DevOps/site reliabil
 
 - [Deploying a template with command line](#deploy-arm-templates-at-the-tenant-root-scope). Without Git integration, experiment with Resource Manager template deployments at the tenant-root ("/") scope to better understand how to instantiate the end-to-end CAF enterprise-scale landing zone architecture.
 
-- [Configuring Git to deploy CAF enterprise-scale landing zone](#configure-github-and-run-initialization). Get started with the full reference implementation, including the Git repository (repo) to configure the platform, Resource Manager templates triggered by GitHub Actions for landing zones, and operation detection and reconciliation with Microsoft Azure Monitor logs.
+- [Configuring Git to deploy CAF enterprise-scale landing zone](#configure-github-and-run-initialization). Get started with the full reference implementation, including the Git repo to configure the platform, Resource Manager templates triggered by GitHub Actions for landing zones, and operation detection and reconciliation with Microsoft Azure Monitor logs.
 
 ## Prerequisites
 
