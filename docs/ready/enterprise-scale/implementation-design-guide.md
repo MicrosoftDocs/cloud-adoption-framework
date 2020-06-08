@@ -69,7 +69,7 @@ To start quickly, a [Resource Manager template](https://github.com/azure/CET-Nor
 - Create policies (`DeployIfNotExists`) assigned to management groups and a subscription scope to govern and deploy necessary resources, enabling platform autonomy as new landing zones (subscriptions) are being created by application teams.
 - Create policy and role assignment to govern and delegate access to resources.
 
-![End-to-end Resource Manager template deployment](./media/e2e-armtemplate.png)
+![End-to-end Resource Manager template deployment](./media/e2e-arm-template.png)
 _Figure 2: End-to-end Resource Manager deployment._
 
 A key design principle of enterprise-scale is policy-driven governance, and all necessary resources leading to the creation of landing zones are deployed using policies. For example, Azure Key Vault is deployed to store platform-level secret in the `management` subscription. Instead of scripting the template deployment to deploy Key Vault, the CAF enterprise-scale-based reference implementation has a policy definition that deploys a key vault in a prescribed manner and policy assignment at the `management` subscription scope. The benefits of a policy-driven approach are many, but the most significant are:

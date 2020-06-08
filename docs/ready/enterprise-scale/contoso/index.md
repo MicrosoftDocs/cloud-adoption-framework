@@ -194,7 +194,7 @@ This table lists the technical prerequisites needed for using the CAF enterprise
     } | ConvertTo-Json
     ```
 
-3. To create the following secrets on GitHub, navigate to the main page of the repo and select Settings, Secrets, and New Secret.
+3. To create the following secrets on GitHub, navigate to the main page of the repo and select settings, secrets, and new secret.
 
 - Name: Azure_credentials
 

@@ -15,7 +15,7 @@ ms.subservice: ready
 
 This section will explore how to operationally maintain a Microsoft Azure enterprise estate with centralized management and monitoring at a platform level. More specifically, it will present key recommendations for central teams to maintain operational visibility within a large-scale Azure platform.
 
-![Management and monitoring](./media/mgmt-mon.png)
+![Management and monitoring](./media/management-and-monitoring.png)
 
 _Figure 1: Platform management and monitoring._
 

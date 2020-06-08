@@ -30,7 +30,7 @@ Many traditional IT operating models aren't compatible with the cloud, and custo
 
 - For some legacy apps, the associated app team may not have engineering resources required to align with a DevOps strategy.
 
-<!-- cSpell:ignore PlatformOps SecOps -->
+<!-- cSpell:ignore PlatformOps SecOps NetOps AppDevOps -->
 
 **Design recommendations:**
 
@@ -78,7 +78,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Network management (app resources).
 
-  - In some instances, customers may wish to break appdevops into more granular roles such as appdataops for database management like traditional database administrator roles or appsecops, where more security sensitive apps are concerned; this is to be expected.
+  - In some instances, customers may wish to break appdevops into more granular roles such as AppDataOps for database management like traditional database administrator roles or AppSecOps, where more security sensitive apps are concerned; this is to be expected.
 
 - Provide a central app DevOps function to support apps that don't have existing DevOps capabilities or a business case to establish one (for example, legacy apps with minimal development capabilities)
 

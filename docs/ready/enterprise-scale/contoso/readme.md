@@ -11,4 +11,4 @@ ms.subservice: ready
 
 # Defining Contoso implementation
 
-The Contoso implementation documented within this repository provides a prescriptive first-party reference implementation for the enterprise-scale architecture guidelines. More specifically, Contoso has  applied the enterprise-scale design principles to make contextualized decisions across all eight design areas and define their target state.
+The Contoso implementation documented within this repository provides a prescriptive first-party reference implementation for the enterprise-scale architecture guidelines. More specifically, Contoso has applied the enterprise-scale design principles to make contextualized decisions across all eight design areas and define their target state.

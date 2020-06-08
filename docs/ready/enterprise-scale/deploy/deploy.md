@@ -23,8 +23,8 @@ All Azure platform resources in a landing zone follow CAF enterprise guidance an
 
 Before continuing, please verify that you've completed all prerequisites in the previous sections with special attention to the following steps:
 
-1. Ensure that the default management structure described in the [Configure GitHub and run initialization](./Configure-run-initialization.md) section exists.
-2. Ensure that you have [initialized the AzOps repository](./Configure-run-initialization.md) and that pushed changes are in your master branch.
+1. Ensure that the default management structure described in the [configure GitHub and run initialization](./Configure-run-initialization.md) section exists.
+2. Ensure that you have [initialized the azops repository](./Configure-run-initialization.md) and that pushed changes are in your master branch.
 3. Ensure that all platform infrastructure has been deployed following [these instructions](./deploy-platform-infrastructure.md).
 
 ---
