@@ -24,7 +24,7 @@ The CAF enterprise-scale landing zone architecture represents the strategic desi
 
 It is important to highlight that not all enterprises adopt Azure the same way, which results in CAF enterprise-scale landing zone architecture varying between customers. Ultimately, the technical considerations and design recommendations presented within this guide may yield different trade-offs based on the customer scenario. Some variation is expected, but the resultant target architecture will set the customer on a path to sustainable scale if the core recommendations are followed.
 
-## Landing zone: expanded definition
+## Landing zone: Expanded definition
 
 [Landing zone considerations](../../ready/considerations/index.md), provides a detailed definition for the term _landing zone_. The audience of the CAF enterprise-scale landing zone needs an even more specific definition.
 
@@ -66,7 +66,7 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 ## High-level architecture
 
 ![CAF enterprise-scale landing zone architecture](./media/ns-arch.png)
-_Figure 2: CAF enterprise-scale landing zone architecture_
+_Figure 2: CAF enterprise-scale landing zone architecture._
 
 ## Next steps
 

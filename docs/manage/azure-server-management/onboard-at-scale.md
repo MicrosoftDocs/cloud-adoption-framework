@@ -61,7 +61,7 @@ To assign the policies that described in the previous section:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale3.png)
 
-6. Select the **Managed Identity location** check box. If this policy is of the type [DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
+6. Select the **Managed Identity location** check box. If this policy is of the type `[DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists)`, a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
 
 7. Select **Assign**.
 

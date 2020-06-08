@@ -39,7 +39,7 @@ A committee member can nominate a strong community member to join the committee 
 
 ## Contribution scope for enterprise-scale architecture guidelines
 
-This is the scope of contributions to this repository&mdash;as a platform evolves and new services and feature are validated in production with customers, the design guidelines are subject to updates in the overall context of the architecture. Use the `placeholder` template to submit pull requests (PRs) for documentation updates.
+This is the scope of contributions to this repository&mdash;as a platform evolves and new services and feature are validated in production with customers, the design guidelines are subject to updates in the overall context of the architecture. Use the `placeholder` template to submit pull requests (prs) for documentation updates.
 
 ## Contribution scope for Contoso reference implementation
 
@@ -87,7 +87,7 @@ To simplify development and unit testing at scale with multiple developers contr
     }],
 ```
 
-There is a generic multi-resource template available [here](https://raw.githubusercontent.com/uday31in/AzOps/master/src/template.json) to ensure that bug fixes are incorporated with the latest API version.
+A [generic multiresource template](https://raw.githubusercontent.com/uday31in/AzOps/master/src/template.json) is available to ensure that bug fixes are incorporated with the latest API version.
 
 - Template.parameters.json
 
@@ -120,15 +120,15 @@ The following pros and cons should be considered when making design decisions:
   - No more writing Resource Manager templates! The last Resource Manager template has been written.
   - Resources export consistently throughout lifecycles regardless of how they're created and updated⁠&mdash;the Azure portal, Azure CLI, PowerShell, or third-party tools.
   - It's easier to detect drift between a configuration stored in Git versus the current configuration; we're essentially comparing two JSON documents.
-  - It's possible to manage implicit dependencies between simple resources on the client side and the server side. Azure doesn't have many circular dependencies between resources, and it's possible to work out implicit dependencies based on resource schema already published. For example, virtual machine might depend on kernel-level virtual switches but not vice-versa (for example: policy definition -> policy assignment -> role assignment -> remediation or virtual network -> ExpressRoute or kv -> Azure SQL).
+  - It's possible to manage implicit dependencies between simple resources on the client side and the server side. Azure doesn't have many circular dependencies between resources, and it's possible to work out implicit dependencies based on resource schema already published. For example, virtual machine might depend on kernel-level virtual switches but not vice-versa (for example: policy definition -> Policy assignment -> Role assignment -> Remediation or virtual network -> ExpressRoute or Key Vault -> Azure SQL).
 
 - Cons:
 
   It's possible to lose intelligence when authoring a parameter file's complex object. This one-off activity can be mitigated by retrieving the base definition of the current resource or creating the resource via the portal first. It's not possible to track template deployments using Azure-partner-customer-usage-attribution. This is not in the scope of enterprise scale.
 
-There is nothing wrong with the current Resource Manager templates used for resource deployments, and there isn't an expectation to rewrite them. The pipeline will continue to deploy them and detect configuration drift. We won't be able to reconcile them, as the platform doesn't allow exporting deployment templates to complete this action. Because of these parameters, all templates submitted within PRs must conform to the principle that what you export is what you deploy.
+There is nothing wrong with the current Resource Manager templates used for resource deployments, and there isn't an expectation to rewrite them. The pipeline will continue to deploy them and detect configuration drift. We won't be able to reconcile them, as the platform doesn't allow exporting deployment templates to complete this action. Because of these parameters, all templates submitted within prs must conform to the principle that what you export is what you deploy.
 
-Do read the next section before submitting a PR, but don't submit a PR with templates and parameters files to deploy resources such as Azure Key Vault or Monitor Logs without wrapping them inside a policy.
+Do read the next section before submitting a PR, but don't submit a PR with templates and parameters files to deploy resources such as Azure Key Vault or monitor logs without wrapping them inside a policy.
 
 ## Contributing to policy definitions, policy assignments, and role definitions and assignments for Contoso implementation
 
@@ -225,8 +225,8 @@ The following must be considered when assigning all policies:
 - What resource types are allowed that may or may not affect where the policy is being assigned?
 - For multiple policies serving the same or a similar purpose, can they be bundled into a policy initiative?
 - What is the rationale of the policy in effect? Should an audit policy be translated to an enforcement instead?
-- For DeployIfNotExists policies, are you following the principle of least-privileged-access for the role-based access-control definition used?
+- For `DeployIfNotExists` policies, are you following the principle of least-privileged-access for the role-based access-control definition used?
 
 ## Code of conduct
 
-We are working hard to build strong and productive collaboration with our passionate community. We heard you loud and clear. We are working on set of principles and guidelines with dos and don'ts.
+We are working hard to build strong and productive collaboration with our passionate community. We heard you loud and clear. We are working on set of principles and guidelines with do's and don'ts.
