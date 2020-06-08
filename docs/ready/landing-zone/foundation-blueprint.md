@@ -46,7 +46,7 @@ This implementation option assumes the landing zone already has a defined networ
 
 This implementation option demonstrates how Azure Policy can be used to add some elements of resource organization through the application of tags. Specifically, a CostCenter tag will be appended to resources using Azure policy.
 
-The governance team should compare and contrast the elements of resource organization to be addressed by tagging versus those that should be addressed through subscription design. These fundamental decisions will inform resource organization as cloud adoption plans progress. 
+The governance team should compare and contrast the elements of resource organization to be addressed by tagging versus those that should be addressed through subscription design. These fundamental decisions will inform resource organization as your cloud adoption plans progress.
 
 To aid in this comparison early in adoption cycles, the following articles should be considered:
 
@@ -81,7 +81,7 @@ This implementation option does not implement any BCDR solution. It is assumed t
 
 ## Assumptions
 
-This initial blueprint assumes that the team is committed to maturing governance capabilities in parallel to the initial cloud migration efforts. If these assumptions align with your constraints, you can use the blueprint to begin the process of developing governance maturity. 
+This initial blueprint assumes that the team is committed to maturing governance capabilities in parallel to the initial cloud migration efforts. If these assumptions align with your constraints, you can use the blueprint to begin the process of developing governance maturity.
 
 - **Compliance:** No third-party compliance requirements are needed in this landing zone.
 - **Limited production scope:** This landing zone could potentially host production workloads. It is not a suitable environment for sensitive data or mission-critical workloads.

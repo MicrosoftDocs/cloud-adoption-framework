@@ -15,10 +15,9 @@ ms.subservice: ready
 
 Cloud adoption teams launch workloads into the cloud which should each align to the [Microsoft Azure Well-Architected principles](/azure/architecture/framework/). When your portfolio includes multiple workloads, its possible to scale and accelerate the deployment of those workloads by giving each team well-architected environments (or landing zones) to start them on the right path.
 
-
 <!-- markdownlint-disable MD034 -->
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4xdvm]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4xdvm>]
 
 <!-- markdownlint-enable MD034 -->
 

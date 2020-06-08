@@ -10,7 +10,7 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-# Contoso reference implementation: known issues
+# Contoso reference implementation: Known issues
 
 ## Subscription creation
 
@@ -18,4 +18,4 @@ It isn't currently possible to provision new subscriptions via Microsoft Azure R
 
 ## Unsupported number of tenants in context: X tenantid(s)
 
-We currently don't support initialization across multiple tenants. Clear your azcontext and run `connect-azaccount` with the Service Principal created earlier.
+We currently don't support initialization across multiple tenants. Clear your azcontext and run `connect-azaccount` with the service principal created earlier.

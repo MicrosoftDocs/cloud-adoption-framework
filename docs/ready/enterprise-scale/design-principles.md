@@ -23,11 +23,13 @@ Microsoft Azure Policy should be used to provide guard rails and ensure continue
 
 ## Single control and management plane
 
+<!-- cSpell:ignore AppOps -->
+
 Enterprise-scale architecture shouldn't consider any abstraction layers (such as customer-developed portals or tooling) and should provide a consistent experience for both AppOps (centrally managed operation teams) and DevOps (dedicated application operation teams). Azure provides a unified and consistent control plane across all Azure resources and provisioning channels subject to role-based access and policy-driven controls and used to establish a standardized set of policies and controls for governing the entire customer estate.
 
 ## Application-centric and archetype-neutral
 
-Enterprise-scale architecture should focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations (moving virtual machines), and it shouldn't differentiate between old/new applications or infrastructure-as-a-service/platform-as-a-service applications. Ultimately, it should provide a safe and secure foundation for all application types to be deployed onto the customer Azure platform.
+Enterprise-scale architecture should focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations (such as moving virtual machines), and it shouldn't differentiate between old and new applications or infrastructure as a service or platform as a service applications. Ultimately, it should provide a safe and secure foundation for all application types to be deployed onto the customer Azure platform.
 
 ## Aligning Azure-native design and road maps
 
