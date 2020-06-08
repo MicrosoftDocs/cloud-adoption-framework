@@ -38,6 +38,7 @@ The most common driver for an enterprise-scale landing zone comes from companies
 Starting with enterprise scale assumes that the cloud platform team has enterprise-scale budgets. This qualifier assumes that the team has deeper skills in the cloud than other companies. These skills can come from an existing history of smaller-scale cloud adoption within the company, and they can also be added by attracting experienced staff or working with highly experienced partners. For either direction, the following skills will be required to start with enterprise scale.
 
 Suggested skills:
+
 - Deep knowledge of architecture in the chosen cloud provider
 - Extensive hands-on experience with cloud-based infrastructure-as-code approaches
 - Moderate familiarity with GitHub or other source code repositories, including branching and pull request strategies

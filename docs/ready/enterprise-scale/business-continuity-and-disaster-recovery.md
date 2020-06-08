@@ -33,7 +33,7 @@ This section will help readers capture customer disaster recovery (DR) requireme
 
   - Support for specific virtual machine (VM) stock-keeping units with availability zones
 
-  - Using availability zones is required if Microsoft Azure Ultra Disk storage is used 
+  - Using availability zones is required if Microsoft Azure Ultra Disk storage is used
 
 - Consistent backups for applications and data
 

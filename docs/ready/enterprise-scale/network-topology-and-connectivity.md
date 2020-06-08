@@ -12,6 +12,7 @@ ms.subservice: ready
 # Network topology and connectivity
 
 This section will examine key design considerations and recommendations surrounding networking and connectivity to, from, and within Microsoft Azure.
+
 ## Planning for IP addressing
 
 It is vital that enterprise customers plan for IP addressing in Azure to ensure there isn't overlapping IP address space across considered on-premises locations and Azure regions.

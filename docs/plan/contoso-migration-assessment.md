@@ -250,7 +250,6 @@ Set up a new Azure Migrate project as follows.
     - The project geography is used only to store the metadata gathered from on-premises VMs.
     - You can select any target region when you run a migration.
 
-
 1. Select **Next**.
 
 1. In **Select assessment tool**, select **Azure Migrate: Server Assessment** > **Next**.
