@@ -888,6 +888,8 @@ function Get-InvalidTermExpressions {
         # TODO: Handle condensed plural expressions.
         'service level agreement!!service-level agreement'
         'service level agreements!!service-level agreements'
+        'service principle!!service principal'
+        'service principles!!service principals'
         "short and long"
         "short and mid"
         'single sign on!!single sign-on'

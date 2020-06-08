@@ -2,8 +2,10 @@
 . .\Test-Paths.ps1
 . .\Test-Spelling.ps1
 
-$filename = "../docs/migrate/azure-best-practices/contoso-migration-infrastructure.md"
-cmd /c "markdownlint $filename -c ..\docs\.markdownlint.json --fix"
+$filename = "c:\repos_fork\cloud-adoption-framework-pr\docs\ready\enterprise-scale\contoso\index.md"
+cmd /c "markdownlint $filename -c c:\repos_fork\cloud-adoption-framework-pr\docs\.markdownlint.json --fix"
 
-$file = $(Get-Item $filename) 
-Test-AllLocalPaths @($file) $true
+$files = @( $(Get-Item $filename) )
+$files = dir -recurse c:\repos_fork\cloud-adoption-framework-pr\docs\ready\enterprise-scale\*.md
+
+Test-AllLocalPaths $files $true
