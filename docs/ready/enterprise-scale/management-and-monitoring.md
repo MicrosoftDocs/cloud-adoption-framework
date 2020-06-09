@@ -29,7 +29,7 @@ _Figure 1: Platform management and monitoring._
 
   - Operating system metrics (performance counters and custom metrics).
 
-  - Operating system logs (Internet Information Services, Event Tracing for Windows, and syslogs).
+  - Operating system logs (Internet Information Services (IIS), Event Tracing for Windows, and syslogs).
 
   - Resource health events.
 

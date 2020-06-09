@@ -18,7 +18,7 @@ Every cloud function is provided by someone during every cloud adoption effort. 
 
 As adoption needs grow, so does the need for balance and structure. Watch this video to get an overview of common team structures at various stages of organizational maturity.
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4wvTS]>
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4wvTS>]
 
 The following graphic and list outline those structures based on typical maturation stages. Use these examples to find the organizational structure that best aligns with your operational needs.
 

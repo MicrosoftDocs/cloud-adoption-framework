@@ -16,7 +16,7 @@ ms.subservice: ready
  ![Tenant root scope deployment](../media/tenant-level-deployment.png)
 _Figure 1: Tenant root scope deployment._
 
-From a PowerShell terminal, connect to Azure using `Connect-AzAccount -TenantId <your-tenant-id>` with an account that has at least `user access administrator` permissions at the tenant root level.
+From a PowerShell terminal, connect to Azure using `connect-azaccount -tenantid <your-tenant-id>` With an account that has at least `user access administrator` permissions at the tenant root level.
 
 Assign required permissions at tenant root level for the account that you want to use. Either `owner` or `contributor` and `user access administrator` permissions are required to deploy the example templates. If you don't have permission to assign permissions at the root level, you may need to [elevate your access](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin) as a global administrator in order to assign them.
 

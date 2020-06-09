@@ -29,15 +29,15 @@ Contoso has decided to use one Azure Monitor Log Analytics workspace. When the f
 
 ## Networking
 
-Azure Policy will continuously check if an Azure Virtual WAN virtual hub already exists in a `connectivity` subscription for all enabled regions, and it'll create one if it doesn't exist. Configure a virtual WAN virtual hub to secure internet traffic from secured connections (virtual networks inside landing zones) to the internet via Azure Firewall.
+Azure Policy will continuously check if an Azure Virtual WAN virtual hub already exists in a `connectivity` subscription for all enabled regions, and it'll create one if it doesn't exist. Configure a Virtual WAN virtual hub to secure internet traffic from secured connections (virtual networks inside landing zones) to the internet via Azure Firewall.
 
 For all Azure Virtual WAN virtual hubs, policy will ensure that Azure Firewall is deployed and linked to existing global Azure Firewall policy, as well as the creation of a regional firewall policy if needed.
 
-Azure Policy will deploy default network security groups (NSGs) and user-defined routes (UDRs) in landing zones. While NSGs will be linked to all subnets, UDRs will only be linked to virtual-network-injected PaaS services subnets. For virtual-network-injected services and control plane traffic to continue to work, Azure Policy will ensure that the right NSG and UDR rules are configured, but only for Azure platform as a service (PaaS) services approved by the whitelisting framework described in this document. UDR and NSG rules are required to protect and manage control plane traffic for virtual-network-injected PaaS services (such as Azure SQL Managed Instance). When landing zone virtual networks connect to a virtual WAN virtual hub, the default route configured (`0.0.0.0/0`) will point to their regional Azure Firewall.
+Azure Policy will deploy default network security groups (NSGs) and user-defined routes (UDRs) in landing zones. While NSGs will be linked to all subnets, UDRs will only be linked to virtual-network-injected PaaS services subnets. For virtual-network-injected services and control plane traffic to continue to work, Azure Policy will ensure that the right NSG and UDR rules are configured, but only for Azure platform as a service (PaaS) services approved by the whitelisting framework described in this document. UDR and NSG rules are required to protect and manage control plane traffic for virtual-network-injected PaaS services (such as Azure SQL Managed Instance). When landing zone virtual networks connect to a Virtual WAN virtual hub, the default route configured (`0.0.0.0/0`) will point to their regional Azure Firewall.
 
 <!-- docsTest:ignore SD-WAN -->
 
-For cross-premises connectivity, the regional virtual hub requires the policy to enforce deploying ExpressRoute or virtual private network (VPN) gateways. It will use ExpressRoute to connect the virtual hub to on-premises by using the ExpressRoute resource ID and authorization key as parameters. With a VPN, Contoso can decide if to use their existing software-defined networking in a wide area network (SD-WAN) to automate connectivity from branch offices into Azure via s2s VPN, or Contoso can manually configure their customer-premises equipment on the branch officers and then let Azure Policy configure the VPN sites in virtual WAN. Contoso is rolling out a solution certified with virtual WAN, SD-WAN, to manage the connectivity of all global branches and connect them to Azure.
+For cross-premises connectivity, the regional virtual hub requires the policy to enforce deploying ExpressRoute or virtual private network (VPN) gateways. It will use ExpressRoute to connect the virtual hub to on-premises by using the ExpressRoute resource ID and authorization key as parameters. With a VPN, Contoso can decide if to use their existing software-defined networking in a wide area network (SD-WAN) to automate connectivity from branch offices into Azure via site-to-site VPN, or Contoso can manually configure their on-premises equipment in the branch offices and then let Azure Policy configure the VPN sites in Virtual WAN. Contoso is rolling out a solution certified with Virtual WAN, SD-WAN, to manage the connectivity of all global branches and connect them to Azure.
 
 ## File -> New -> Landing zone (subscription)
 
@@ -45,7 +45,7 @@ Contoso wants to minimize the time required to create landing zones while avoidi
 
 Networking:
 
-1. Create a virtual network inside a landing zone and establish virtual network peering with a virtual WAN virtual hub in the same Azure region.
+1. Create a virtual network inside a landing zone and establish virtual network peering with a Virtual WAN virtual hub in the same Azure region.
 2. Create a default NSG inside a landing zone with default rules (for example, no remote desktop protocol and secure shell [RDP]/[SSH] from internet).
 3. Ensure that new subnets created inside a landing zone have NSGs.
 4. Default NSG rules can't be modified (for example, RDP/SSH from internet).
@@ -66,7 +66,9 @@ Subscription will be moved to a decommissioned management group. Decommissioned 
 
 ## Implementation components
 
-Contoso will use the azops acronym (inspired by gitops, Kubernetes operations, and more) to designate Azure operations within enterprise-scale design principles. Contoso has decided to use platform-native capabilities and Resource Manager to orchestrate, configure, and deploy landing zones and to declare a goal state. Contoso has abided by the policy-driven governance design principle and wants landing zones (subscriptions) to be provisioned and configured autonomously.
+<!-- cSpell:ignore AzOps GitOps -->
+
+Contoso will use the AzOps acronym (inspired by GitOps, Kubernetes operations, and more) to designate Azure operations within enterprise-scale design principles. Contoso has decided to use platform-native capabilities and Resource Manager to orchestrate, configure, and deploy landing zones and to declare a goal state. Contoso has abided by the policy-driven governance design principle and wants landing zones (subscriptions) to be provisioned and configured autonomously.
 
 Deliberating whether to use a single template versus modular templates and the pros and cons of both, Contoso has decided in favor of single template to orchestrate the platform. The template will mainly consist of policy definitions and policy assignments. Since policy assignments have direct dependency on policy definitions, it'll be operationally easier to manage and control lifecycle changes/versioning if artifacts are represented in same template.
 
@@ -210,7 +212,7 @@ resource         :
 
 ## Initialization
 
-**Initialize-azopsrepository:**
+**`Initialize-AzOpsRepository`:**
 
 This is a discovery function to traverse the whole management group and subscription hierarchy:
 
@@ -222,11 +224,11 @@ This will build the relationship association between management group and subscr
 
 ## Deployment
 
-**Invoke-azopsgitpush:**
+**`Invoke-AzOpsGitPush`:**
 
-Contoso wants to ensure that all platform changes are peer-reviewed and approved before deploying to a production environment. Contoso has decided to implement workflows (also known as deployment pipelines) and to use GitHub action for this process. Contoso has named this workflow `azops-push`, referring to the direction of the change (for example, Git to Azure). All platform changes will be peer-reviewed and in the form of PRs. Once PRs are reviewed thoroughly, a platform team will attempt the merge them to the master branch and trigger the deployment action by calling the invoke-azopsgitpush function.
+Contoso wants to ensure that all platform changes are peer-reviewed and approved before deploying to a production environment. Contoso has decided to implement workflows (also known as deployment pipelines) and to use GitHub action for this process. Contoso has named this workflow `azops-push`, referring to the direction of the change (for example, Git to Azure). All platform changes will be peer-reviewed and in the form of PRs. Once PRs are reviewed thoroughly, a platform team will attempt the merge them to the `master` branch and trigger the deployment action by calling the `Invoke-AzOpsGitPush` function.
 
-When a PR is approved but before it's merged with the master branch, this function will be the starting point for GitHub Actions. The master branch represents the truth from an infrastructure-as-code (IaC) perspective. This quality gate will ensure that master branch remains healthy and only contain artifacts successfully deployed in Azure. It will specify the files changed in PRs by comparing each feature branch with the current master branch. The following actions should be executed inside `Invoke-AzOpsGitPush`:
+When a PR is approved but before it's merged with the `master` branch, this function will be the starting point for GitHub Actions. The `master` branch represents the truth from an infrastructure-as-code (IaC) perspective. This quality gate will ensure the `master` branch remains healthy and only contain artifacts successfully deployed in Azure. It will specify the files changed in PRs by comparing each feature branch with the current `master` branch. The following actions should be executed inside `Invoke-AzOpsGitPush`:
 
 - Validate that the current Azure configuration is the same as what's stored in Git by running `Initialize-AzOpsRepository`.
 - Git will determine if the working directory is dirty and exit the deployment task to alert the user and run `Initialize-AzOpsRepository` interactively. All deployments should be halted at this stage, as the platform is in a nondeterministic state from an IaC point of view.
@@ -234,7 +236,7 @@ When a PR is approved but before it's merged with the master branch, this functi
 
 ## Operationalizing configuration drift and reconciliation
 
-**Invoke-azopsgitpull:**
+**`Invoke-AzOpsGitPull`:**
 
 Operationalize the Azure environment at scale for day-to-day activities.
 

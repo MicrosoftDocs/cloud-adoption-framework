@@ -363,7 +363,7 @@ To connect the two regions, Contoso will implement a hub-to-hub network model:
 
 #### Hub-to-hub across regions
 
-Contoso will deploy a hub in each region. A hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The hub VNets will connect to each other using global VNet peering. Global VNet peering connects VNets across Azure regions.
+Contoso will deploy a hub in each region. A hub is a virtual network in Azure that acts as a central point of connectivity to your on-premises network. The hub VNets will connect to each other via global VNet peering, which connects VNets across Azure regions.
 
 - The hub in each region is peered to its partner hub in the other region.
 - The hub is peered to every network in its region, and can connect to all network resources.

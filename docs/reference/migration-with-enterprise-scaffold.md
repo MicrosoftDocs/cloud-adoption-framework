@@ -96,7 +96,7 @@ The first two patterns are the most commonly used, and both are highly recommend
 
 ### Resource groups
 
-Azure Resource Manager enables you to put resources into meaningful groups for management, billing, or natural affinity. Resource groups are containers of resources that have a common lifecycle or share an attribute such as "all SQL servers" or "Application A".
+Azure Resource Manager enables you to organize resources into meaningful groups for management, billing, or natural affinity. Resource groups are containers of resources that have a common lifecycle or share an attribute such as "all SQL servers" or "Application A".
 
 Resource groups can't be nested, and resources can only belong to one resource group. Some actions can act on all resources in a resource group. For example, deleting a resource group removes all resources within the resource group. Like subscriptions, there are common patterns when creating resource groups and will vary from "Traditional IT" workloads to "Agile IT" workloads:
 

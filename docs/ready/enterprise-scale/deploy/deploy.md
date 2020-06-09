@@ -27,8 +27,6 @@ Before continuing, please verify that you've completed all prerequisites in the 
 2. Ensure that you have [initialized the AzOps repo](./configure-run-initialization.md) and that pushed changes are in your `master` branch.
 3. Ensure that all platform infrastructure has been deployed following [these instructions](./deploy-platform-infrastructure.md).
 
----
-
 ## Create a landing zone
 
 There is only one more step required to move forward with creating a landing zone&mdash;create or move a subscription under the landing zone management group. Once the required definitions (roles, policies, and policy set) and assignment (roles and policies) are deployed, subscriptions can be created or moved to the landing zone's management group or any other scope below.

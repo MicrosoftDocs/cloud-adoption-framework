@@ -67,7 +67,7 @@ There are two groups of properties in this section: _definitions_ and _assignmen
 
 - **Assignments:** The assignments (`role` and `policy`) can be deployed at any management group scope, as long as the definition exists at the same scope or above. To simplify the management, it's recommended to reduce the number of scopes where you assign Azure Policy and role-based access control (RBAC) roles. In the enterprise-scale reference implementation section, we recommend assigning only at the following three scopes:
 
-  - `<YourCompanyName>` management group scope for all company policies.
+  - `<YourCompanyName>` Management group scope for all company policies.
   - Platform subscription scope for platform resources related to Azure Policy.
   - `Landing Zone` management group scope for all landing-zone-specific Azure policies.
 
@@ -129,7 +129,7 @@ _Figure 3: The process to deploy definitions._
     git push <remote-name>
     ```
 
-4. Create a PR to `master`. GitHub Actions run a PR check and push the changes to the target Azure environment. You can monitor the status in the actions log. Once all the checks are successful, you can squash and merge your changes to the master branch.
+4. Create a PR to `master`. GitHub Actions run a PR check and push the changes to the target Azure environment. You can monitor the status in the actions log. Once all the checks are successful, you can squash and merge your changes to the `master` branch.
 
 (Optional): Reinitialize or update the repository in your `master` branch. This will match all definitions with the resource ids that are required for the assignments in the next section.
 
@@ -182,16 +182,16 @@ Azure Policy assignments required on the `management` subscription:
 
 ### The `connectivity` subscription
 
-The resource in the `connectivity` subscription is deployed via Azure Policy following the enterprise-scale reference implementation. We need four Azure Policy assignments to create the virtual WAN, virtual hub, Azure Firewall, and denial-of-service (DDoS) attack protection resources required in the `connectivity` subscription. The resources in the regional `connectivity` subscription will be deployed using a `DeployIfNotExists` policy.
+The resource in the `connectivity` subscription is deployed via Azure Policy following the enterprise-scale reference implementation. We need four Azure Policy assignments to create the Virtual WAN, virtual hub, Azure Firewall, and denial-of-service (DDoS) attack protection resources required in the `connectivity` subscription. The resources in the regional `connectivity` subscription will be deployed using a `DeployIfNotExists` policy.
 
 Required custom Azure Policy definition:
 
 | Policy name          | Scope | Description |
 | ---------------------|-------|-------------|
-| `Deploy-VWAN`          | `<YourCompanyName>` management group | Deploys the virtual WAN service into the connectivity subscription |
-| `Deploy-Firewall` | `<YourCompanyName>` management group | Configures the firewall policies and rules for Azure Firewall |
-| `Deploy-VHub`          | `<YourCompanyName>` management group | Deploys a regional virtual hub resource along with required gateways (er/virtual private network [VPN]) and Azure Firewall |
-| `Deploy-DDoSProtection` | `<YourCompanyName>` management group | Deploys a DDoS standard plan service |
+| `Deploy-VWAN`          | `<YourCompanyName>` Management group | Deploys the Virtual WAN service into the connectivity subscription |
+| `Deploy-Firewall` | `<YourCompanyName>` Management group | Configures the firewall policies and rules for Azure Firewall |
+| `Deploy-VHub`          | `<YourCompanyName>` Management group | Deploys a regional virtual hub resource along with required gateways (er/virtual private network [VPN]) and Azure Firewall |
+| `Deploy-DDoSProtection` | `<YourCompanyName>` Management group | Deploys a DDoS standard plan service |
 
 <!-- cSpell:ignore vwan vhub ddos vpngw regw azfw ergw fwpolicy ddosname -->
 
@@ -221,13 +221,13 @@ Required, customized Azure Policy definition:
 
 | Policy name          | Scope              | Description                                                        |
 | ---------------------|--------------------|--------------------------------------------------------------------|
-| `Deploy-VNet`          | `<YourCompanyName>` management group | Deploys a virtual network and connects it to the local virtual WAN virtual hub. |
+| `Deploy-VNet`        | `<YourCompanyName>` Management group | Deploys a virtual network and connects it to the local Virtual WAN virtual hub. |
 
 Azure Policy assignments required on the `identity` subscription (per region a policy is required):
 
 | Policy name          | Type | Scope                |
 |----------------------|------|----------------------|
-| `Deploy-VNet` | Custom policy | `<YourCompanyName>` management group |
+| `Deploy-VNet` | Custom policy | `<YourCompanyName>` Management group |
 
 Once the virtual network is created the two Azure AD domain controllers can be created in the virtual network following your company's procedures.
 
@@ -237,35 +237,33 @@ In a regional virtual hub network, deploy two Azure AD domain controllers follow
 
 ## Deploy assignments
 
-1. In the [previous section](#deploy-definitions), all the definitions have been updated with a resource ID. IDs are updated in the `<your-company-name>.parameters.json` files in the `.AzState` folder on `your-company-name` scope. In addition to the updated `*.parameters.json` file, each definition is represented in a separate file in the same `.AzState` folder. The pull or a repository discovery operation keeps all files and the related properties in the `.AzState` folder in sync.
+1. In the [previous section](#deploy-definitions), all the definitions have been updated with a resource ID. Ids are updated in the `<your-company-name>.parameters.json` files in the `.AzState` folder on `your-company-name` scope. In addition to the updated `*.parameters.json` file, each definition is represented in a separate file in the same `.AzState` folder. The pull or a repository discovery operation keeps all files and the related properties in the `.AzState` folder in sync.
 
-```shell
-# Simplified folder structure after initialization
+  ```shell
+  # Simplified folder structure after initialization
 
-AzOps
-└─── Tenant root group
-    └─── <YourCompanyName> # Management group
-        ├─── .AzState
-        │   ├─── <YourCompanyName>.parameters.json # File containing the ID's
-        │   ├─── *_policyDefinitions-<policy-name-1>.parameters.json # Policy definition
-        │   .
-        │   └─── *_policyDefinitions-<policy-name-n>.parameters.json # Policy definition
-        ├─── Landing Zones # Management group under Contoso
-        │   ├─── .AzState
-        │   │   ├─── LandingZones.parameters.json # File containing the ID's
-        │   │   ├─── *_policyDefinitions-<policy-name-1>.parameters.json # Policy definition
-        │   │   .
-        │   │   └─── *_policyDefinitions-<policy-name-2>.parameters.json # Policy definition
-```
+  AzOps
+  └─── Tenant root group
+      └─── <YourCompanyName> # Management group
+          ├─── .AzState
+          │   ├─── <YourCompanyName>.parameters.json # File containing the ID's
+          │   ├─── *_policyDefinitions-<policy-name-1>.parameters.json # Policy definition
+          │   .
+          │   └─── *_policyDefinitions-<policy-name-n>.parameters.json # Policy definition
+          ├─── Landing Zones # Management group under Contoso
+          │   ├─── .AzState
+          │   │   ├─── LandingZones.parameters.json # File containing the ID's
+          │   │   ├─── *_policyDefinitions-<policy-name-1>.parameters.json # Policy definition
+          │   │   .
+          │   │   └─── *_policyDefinitions-<policy-name-2>.parameters.json # Policy definition
+  ```
 
   As with definitions, to assign `policyAssignments` and `roleAssignments`, the `<management-group-name>.parameters.json` files need to be updated a second time. When assigning, three scopes need to be considered and followed for an enterprise-scale reference implementation:
-
     - The `YourCompanyName` management group scope
     - The `Landing Zones` management group scope
     - The `connectivity` / `management` / `identity` subscription scope
   
-  To assign a policy with Azure Policy, you can select a reference Azure Policy assignment in the [AzOpsReference](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) folder. Filter files with policy assignments in the name. After copying the object, replace all the values with the value `<replace-me>`. This needs to be done mainly for the `policyDefinitionId` and `scope` attributes.
-  
+  To assign a policy with Azure Policy, you can select a reference Azure Policy assignment in the [azopsreference](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) folder. Filter files with policy assignments in the name. After copying the object, replace all the values with the value `<replace-me>`. This needs to be done mainly for the `policyDefinitionId` and `scope` attributes.
     - `policyDefinitionId`: Full resource ID (including scope path) of the definition.
     - `scope`: Assignment scope for the definition.
   
@@ -286,7 +284,7 @@ AzOps
 2. Git stage and commit locally, and then push changes to your remote feature branch.
 
     > [!NOTE]
-    > Do not push changes directly to the master branch in this step.
+    > Do not push changes directly to the `master` branch in this step.
 
     ``` bash
     git push <remote-name>

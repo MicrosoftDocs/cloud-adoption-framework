@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore MACsec -->
+<!-- cSpell:ignore BGPs MACsec -->
 
 # Network topology and connectivity
 
@@ -23,9 +23,9 @@ It is vital that enterprise customers plan for IP addressing in Azure to ensure 
 
 - Overlapping IP address spaces across on-premises and Azure regions will create major contention challenges.
 
-- While virtual network (VNet) address space can be added after creation, this process will require an outage if the VNet is already connected to another VNet via peering, since the VNet peering will have to be deleted and recreated.
+- While virtual network (VNet) address space can be added after creation, this process will require an outage if the VNet is already connected to another VNet via virtual network peering, because the peering will have to be deleted and recreated.
 
-- Azure reserves five IP addresses within each subnetwork (subnet), which should be factored in when sizing VNets and encompassed subnets.
+- Azure reserves five IP addresses within each subnet, which should be factored in when sizing VNets and encompassed subnets.
 
 - Some Azure services do require [dedicated subnets](https://docs.microsoft.com/azure/virtual-network/virtual-network-for-azure-services#services-that-can-be-deployed-into-a-virtual-network) such as Azure Firewall or VNet gateway.
 
@@ -33,15 +33,15 @@ It is vital that enterprise customers plan for IP addressing in Azure to ensure 
 
 **Design recommendations:**
 
-- Plan for nonoverlapping IP address spaces across Azure regions and on-premises locations well in advance.
+- Plan for non-overlapping IP address spaces across Azure regions and on-premises locations well in advance.
 
 - Use IP addresses from the address allocation for private internets (RFC 1918).
 
 - For environments with limited private IP addresses (RFC 1918) availability, consider using IPv6.
 
-- Do not create large VNets (for example: /16) to ensure that IP address space isn't wasted.
+- Do not create large VNets (for example: `/16`) to ensure that IP address space isn't wasted.
 
-- Do not create VNets without planning the required address space in advance, since adding address space will cause an outage once a VNet is connected via VNet peering.
+- Do not create VNets without planning the required address space in advance, since adding address space will cause an outage once a VNet is connected via virtual network peering.
 
 - Do not use public IP addresses for VNets, especially if the public IP addresses don't belong to the customer.
 
@@ -137,7 +137,7 @@ _Figure 3: Sample network topology._
 
 - Connect Virtual WAN hubs to on-premises datacenters using ExpressRoute.
 
-- Connect branches/remote locations to the nearest Virtual WAN hub via site-to-site VPN, or enable branch connectivity to Virtual WAN via an SD-WAN partner solution.
+- Connect branches and remote locations to the nearest Virtual WAN hub via site-to-site VPN, or enable branch connectivity to Virtual WAN via an SD-WAN partner solution.
 
 - Connect end users to the Virtual WAN hub via a point-to-site VPN.
 
@@ -163,24 +163,24 @@ _Figure 3: Sample network topology._
 
 While Virtual WAN offers a wide range of powerful capabilities, there are some cases where a traditional Azure networking approach may be optimal:
 
-- If a global transitive network across multiple Azure regions and/or cross-premises isn't required (for example, a branch in US requiring to connect to a VNet in Europe)
+- If a global transitive network across multiple Azure regions or cross-premises isn't required (for example, a branch in the United States requiring connectivity to a virtual network in Europe).
 
-- If there isn't a need to connect to a large number of remote locations via VPN or integration with an SD-WAN solution
+- If there isn't a need to connect to a large number of remote locations via VPN or integration with an SD-WAN solution.
 
-- If the customer's preference is to have granular control and configuration when setting up a network topology in Azure
+- If the customer's preference is to have granular control and configuration when setting up a network topology in Azure.
 
 ![Network topology and connectivity](./media/cmanged-nt.png)
 _Figure 4: A customer-managed Azure network topology._
 
 **Design considerations:**
 
-- There are multiple network topologies to connect multiple landing zones VNets: one large flat VNet, multiple VNets connected with multiple ExpressRoute circuits/connections, hub-and-spoke, full mesh, and hybrid.
+- There are multiple network topologies to connect multiple landing zones VNets: one large flat VNet, multiple VNets connected with multiple ExpressRoute circuits or connections, hub-and-spoke, full mesh, and hybrid.
 
-- VNets don't traverse subscription boundaries, but connectivity between VNets in different subscriptions can be achieved using either VNet peering, an ExpressRoute circuit, or using VPN gateways.
+- VNets don't traverse subscription boundaries, but connectivity between VNets in different subscriptions can be achieved using either virtual network peering, an ExpressRoute circuit, or using VPN gateways.
 
-- VNet peering can be used to connect VNets in the same region, across different Azure regions, and across different Azure AD tenants.
+- Virtual network peering can be used to connect VNets in the same region, across different Azure regions, and across different Azure AD tenants.
 
-- VNet peering and global VNet peering aren't transitive. Therefore, UDRs and NVAs are required to enable a transit network, as described in this [article](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
+- Virtual network peering and global VNet peering aren't transitive. Therefore, UDRs and NVAs are required to enable a transit network. For more information, see [Hub-spoke network topology in Azure](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
 
 - ExpressRoute circuits can be used to establish connectivity across VNets within the same geo-political region or by using the premium add-on for connectivity across geo-political regions.
 
@@ -198,7 +198,7 @@ _Figure 4: A customer-managed Azure network topology._
 
 - ExpressRoute circuits with premium add-ons provide global connectivity; however, the maximum number of ExpressRoute connections per ExpressRoute gateway is four.
 
-- While the maximum number of VNet peering connections per VNet is 500, the maximum number of routes that can be advertised from Azure to on-premises via ExpressRoute private peering is 200.
+- While the maximum number of virtual network peering connections per VNet is 500, the maximum number of routes that can be advertised from Azure to on-premises via ExpressRoute private peering is 200.
 
 - A VPN gateway's maximum aggregated throughput is 10 Gbps and support up to 30 site-to-site/VNet-to-VNet tunnels.
 
@@ -220,7 +220,7 @@ _Figure 4: A customer-managed Azure network topology._
 
   - There is a heavy dependency on centralized NVAs and complex/granular routing.
 
-- For regional deployments, primarily use the hub-and-spoke topology, with landing zones VNets connecting with VNet peering to a central hub VNet for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via NVA, as depicted in the figure below.
+- For regional deployments, primarily use the hub-and-spoke topology, with landing zones VNets connecting with virtual network peering to a central hub VNet for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via NVA, as depicted in the figure below.
 
 ![Network topology and connectivity](./media/hs.png)
 
@@ -241,7 +241,7 @@ _Figure 6: Multiple virtual networks connected with multiple ExpressRoute circui
 
 - Use existing customer network (MPLS and SD-WAN) for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 
-- For network architectures with multiple hub-and-spoke topologies across Azure regions, use global VNet peering to connect landing zone VNets when a small number of landing zones need to communicate across regions. That this approach would offer benefits such as high network bandwidth with global VNet peering (as allowed by the VM SKU) but will bypass the central NVA (in case traffic inspection/filtering is required). This would also be subject to global VNet peering [limitations](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
+- For network architectures with multiple hub-and-spoke topologies across Azure regions, use global VNet peering to connect landing zone VNets when a small number of landing zones need to communicate across regions. That this approach would offer benefits such as high network bandwidth with global VNet peering (as allowed by the VM SKU) but will bypass the central NVA (in case traffic inspection/filtering is required). This would also be subject to [global VNet peering limitations](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
 
 - When a customer deploys hub-and-spoke network architecture in two Azure regions and transit connectivity between all landing zones across regions is required, use ExpressRoute with dual circuits to provide transit connectivity for landing zones VNets across Azure regions. In this scenario, landing zones can transit within a region via NVA in local hub VNet and across regions via ExpressRoute circuit, with the traffic hairpinning at the MSEE. This design is depicted in the image below:
 
@@ -254,7 +254,7 @@ _Figure 7: Landing zone connectivity design._
 
 - Do not create more than 200 peering connections per central hub VNet.
 
-- While VNets support up to 500 VNet peering connections, ExpressRoute with private peering only supports advertising up to 200 prefixes from Azure to on-premises.
+- While VNets support up to 500 peering connections, ExpressRoute with private peering only supports advertising up to 200 prefixes from Azure to on-premises.
 
 ## Connectivity to Azure
 

@@ -25,30 +25,30 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 <!-- cSpell:ignore FIPS -->
 
-- Premium SKUs can be optimized where hardware-security-module-protected keys are required. Underlying hardware security modules (HSMs) are FIPS 140-2 Level 2 compliant. Managed Azure dedicated HSM for FIPS 140-2 Level 3 compliance, considering the supported scenarios
+- Premium SKUs can be optimized where hardware-security-module-protected keys are required. Underlying hardware security modules (HSMs) are FIPS 140-2 level 2 compliant. Managed Azure dedicated HSM for FIPS 140-2 Level 3 compliance, considering the supported scenarios.
 
-- Key rotation and secret expiration
+- Key rotation and secret expiration.
 
   Certificate procurement and signing using Key Vault: ([about certs](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates))
-  Alerting/notifications and automated certificate renewals
+  Alerting/notifications and automated certificate renewals.
 
-- Disaster recovery requirements for keys, certificates, and secrets
+- Disaster recovery requirements for keys, certificates, and secrets.
 
-  Key Vault service replication and failover capabilities: ([availability and redundancy](https://docs.microsoft.com/azure/key-vault/general/disaster-recovery-guidance))
+  Key Vault service replication and failover capabilities: ([availability and redundancy](https://docs.microsoft.com/azure/key-vault/general/disaster-recovery-guidance)).
 
-- Monitoring key, certificate, and secret usage
+- Monitoring key, certificate, and secret usage.
 
   Detecting unauthorized access using a key vault or Azure Monitor Log Analytics workspace: ([monitoring and alerting](https://docs.microsoft.com/azure/key-vault/general/alert))
 
-- Delegated Key Vault instantiation and privileged access: ([Secure access](https://docs.microsoft.com/azure/key-vault/general/secure-your-key-vault))
+- Delegated Key Vault instantiation and privileged access: ([secure access](https://docs.microsoft.com/azure/key-vault/general/secure-your-key-vault))
 
 - Requirements surrounding using customer-managed keys for native encryption mechanisms such as storage service encryption (SSE): [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
 
-- Whole-disk encryption for virtual machines (VMs)
+- Whole-disk encryption for virtual machines (VMs).
 
-- Data-in-transit encryption
+- Data-in-transit encryption.
 
-- Data-at-rest encryption
+- Data-at-rest encryption.
 
 **Design recommendations:**
 
@@ -64,7 +64,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Enable firewall and virtual network service endpoint on the vault to control access to the key vault.
 
-- Use the platform-central Azure Monitor Log Analytics workspace to audit key, certificate, and secret usage within each key vault.
+- Use the platform-central Azure Monitor Log Analytics workspace to audit key, certificate, and secret usage within each key vault instance.
 
 - Delegate Key Vault instantiation and privileged access, using Azure Policy to enforce a consistent compliant configuration.
 
@@ -166,7 +166,7 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 **Design recommendations:**
 
-- It is recommended that a joint examination of each required service is conducted within the context of underlying customer requirements. If the customer wishes to bring their own keys, this may or may not be supported across all considered services. Relevant mitigation will need to be put forward so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency
+- A joint examination of each required service should be conducted within the context of underlying customer requirements. If the customer wants to bring their own keys, this might not be supported across all considered services. Relevant mitigation will need to be implemented so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
 - Develop a security whitelisting plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
 
@@ -180,7 +180,7 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 ## Whitelist the service framework
 
-As business units request to put workloads into Azure, it requires additional visibility into a workload to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required that has not been onboarded, whitelisting the service needs to occur. The following table provides a framework to assess enterprise security readiness of Azure services.
+As business units request to deploy workloads to Azure, additional visibility into a workload is needed to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required that has not been onboarded, whitelisting the service needs to occur. The following table provides a framework to assess enterprise security readiness of Azure services.
 
 | Assessment                    | Category                                                              | Criteria                                                                                                                                     |
 |------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -236,7 +236,7 @@ As business units request to put workloads into Azure, it requires additional vi
 |                              |                                                                       | How frequently are patches applied and can they be automated?                                                                                |
 |                              | Audit                                                                 | Are nested control plane operations captured (for example, AKS or Azure Databricks)?                                                                      |
 |                              |                                                                       | Are key data plane activities recorded?                                                                                                      |
-|                              | Configuration management                                              | Does it support tags and provide a put schema for all resources?                                                                             |
+|                              | Configuration management                                              | Does it support tags and provide a `put` schema for all resources?                                                                             |
 | Azure service compliance     | Service attestation, certification, and external audits                | Is the service PCI/ISO/SOC compliant?                                                                                                        |
 |                              | Service availability                                                  | Is the service private preview/public preview/ga?                                                                                            |
 |                              |                                                                       | In what regions is the service available?                                                                                                    |

@@ -68,7 +68,7 @@ The implementation guide and reference implementation must be updated accordingl
     git push origin -u
     ```
 
-4. Create a PR from upstream to your remote master branch.
+4. Create a PR from upstream to your remote `master` branch.
 
 ## Writing Azure Resource Manager templates for Contoso implementation
 

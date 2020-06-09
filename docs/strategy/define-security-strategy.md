@@ -176,7 +176,7 @@ This section describes the key relationships that frequently change on the journ
 
 - **Between application and infrastructure teams (and cloud providers):** This relationship is undergoing significant changes because of multiple trends in the IT and security industry aimed at increasing innovation speed and developer productivity.
 
-  The old norms and organizational functions have been disrupted, but new norms and functions are still emerging, so we recommend accepting the ambiguity, keeping up with current thinking, and experiment with what works for your organizations until it does. We do not recommend adopting a "wait and see" approach in this space as doing so could put your organization at a major competitive disadvantage.
+  The old norms and organizational functions have been disrupted, but new norms and functions are still emerging, so we recommend accepting the ambiguity, keeping up with current thinking, and experiment with what works for your organizations until it does. We don;t recommend adopting a wait-and-see approach in this space because it might put your organization at a major competitive disadvantage.
 
   These trends are challenging the traditional norms for roles and relationships of applications and infrastructure:
 
