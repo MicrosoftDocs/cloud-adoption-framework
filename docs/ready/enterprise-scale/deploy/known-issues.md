@@ -3,11 +3,15 @@ title: Known issues
 description: Known issues
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+
+<!-- docsTest:disable -->
+
+<!-- cSpell:ignore azcontext -->
 
 # Known issues with Contoso reference implementation
 
@@ -77,7 +81,7 @@ Issue: when doing nested deployments from tenant scope (policy assignment and su
 
 **Status:** No fix at this time. A workaround is to perform a number of additional `if()` functions to navigate logically (for example, if a reference resource doesn't exist, `throw json('null')`.)
 
-## Unsupported number of tenants in context: X tenantid(s)
+## Unsupported number of tenants in context: X tenantId(s)
 
 **Issue:** We currently don't support initialization across multiple tenants. Clear `azcontext` and run `Connect-AzAccount` with the service principal created earlier.
 

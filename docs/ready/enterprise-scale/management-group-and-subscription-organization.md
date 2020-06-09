@@ -3,7 +3,7 @@ title: Management group and subscription organization
 description: Management group and subscription organization
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -92,11 +92,11 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Align group subscriptions under management groups to the management group structure and policy requirements at scale. This ensures that subscriptions with the same set of policies and RBAC assignments can inherit those from a management group, avoiding duplication of assignments.
 
-- Establish a dedicated `management` subscription in the `platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
+- Establish a dedicated management subscription in the `Platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
 
-- Establish a dedicated `identity` subscription in the `platform` management group to host Windows Server Active Directory domain controllers, when necessary.
+- Establish a dedicated identity subscription in the `Platform` management group to host Windows Server Active Directory domain controllers, when necessary.
 
-- Establish a dedicated `connectivity` subscription in the `platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. This ensures that all foundation network resources are billed together and isolated from other workloads.
+- Establish a dedicated connectivity subscription in the `Platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. This ensures that all foundation network resources are billed together and isolated from other workloads.
 
 - Avoid a rigid subscription model, opting instead for a set of flexible criteria to group subscriptions across the organization. This ensures that as your organization's structure and workload composition changes, you're able to create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions; what works for one business unit may not work for another. Some apps may coexist within the same landing zone subscription while others may require their own subscription.
 

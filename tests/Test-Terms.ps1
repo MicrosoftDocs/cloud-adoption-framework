@@ -723,7 +723,9 @@ function Get-CasingExpressions
         'Wisconsin'
         'Wyoming'
 
+        'Amsterdam'
         'Chicago'
+        'London'
         'Seattle'
         'Redmond'
 

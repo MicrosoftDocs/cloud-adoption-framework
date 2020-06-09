@@ -3,11 +3,13 @@ title: Read me
 description: Read me
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
+
+<!-- docsTest:disable -->
 
 # Using reference implementation in your environment
 

@@ -3,7 +3,7 @@ title: Implementation guidelines
 description: Implementation guidelines
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -34,9 +34,9 @@ Two categories of activities must take place to implement enterprise-scale archi
 | Activities                                                                                                                            | Parameters required | Enterprise-scale example configuration   |
 |---------------------------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------------|
 | 1. Create a management group hierarchy (ideally using no more than 3 or 4 levels).                      |                                  |
-| 2. Create a top-level `sandbox` management group for users to experiment with Azure.                                              |                     |                                  |
+| 2. Create a top-level sandbox management group for users to experiment with Azure.                                              |                     |                                  |
 | 3. Publish a subscription provisioning criteria along with the responsibilities of a subscription owner (potentially as a wiki). |                     |                                  |
-| 4. Create `management` and `connectivity` subscriptions for platform management and global networking and connectivity resources.  |                     |                                  |
+| 4. Create management and connectivity subscriptions for platform management and global networking and connectivity resources.  |                     |                                  |
 | 5. Set up a Git repo and service principal to use with a platform CI/CD pipeline.                                            |                     |                                  |
 | 6. Create custom role definitions and manage entitlements using Azure AD PIM for subscription and management group scopes.              |                     |                                  |
 
@@ -48,12 +48,12 @@ Two categories of activities must take place to implement enterprise-scale archi
 | Activities | Parameters required | Enterprise-scale example configuration |
 |---|---|---|
 | 1. Allocate an appropriate virtual network classless interdomain routing (CIDR) range for each Azure region where Azure Virtual WAN virtual hubs and virtual networks will be deployed. | One CIDR range per region | North Europe: `10.0.0.0/16` <br> West Europe: `10.1.0.0/16` <br> East US: `10.2.0.0/16` |
-| 2. Create Azure Virtual WAN standard within the `connectivity` subscription. | Virtual WAN name <br> Azure region | Virtual WAN name: `contoso-vwan` <br> Azure region: `North Europe` |
+| 2. Create Azure Virtual WAN Standard within the connectivity subscription. | Virtual WAN name <br> Azure region | Virtual WAN name: `contoso-vwan` <br> Azure region: `North Europe` |
 | 3. Create a Virtual WAN virtual hub for each region. Ensure at least one gateway (ExpressRoute or VPN) per Virtual WAN virtual hub is deployed.                                  | Virtual WAN name <br> Virtual hub name <br> Virtual hub region <br> Virtual hub address space <br> ExpressRoute gateway <br> VPN gateway | Virtual WAN: `contoso-vwan` <br> Virtual hub region: `North Europe` <br> Virtual hub name: `vhub-neu` <br> Virtual hub address space: `10.0.0.0/16` <br> ExpressRoute gateway: yes (1 scale unit) <br> VPN gateway: no |
 | 4. Using Azure Firewall Manager, secure Virtual WAN virtual hubs by deploying Azure Firewall within each Virtual WAN virtual hub.                                                        | Virtual hub name                           | Virtual hub name: `vhub-neu`                       |
-| 5. Create required firewall policies within the `connectivity` subscription and assign them to secure virtual hubs.                                                 | Azure Firewall policy name <br> Firewall policy inbound/outbound rules | Firewall policy name: `contoso-global-fw-policy` <br> Allow outbound rules to `*.microsoft.com`  |
+| 5. Create required firewall policies within the connectivity subscription and assign them to secure virtual hubs.                                                 | Azure Firewall policy name <br> Firewall policy inbound/outbound rules | Firewall policy name: `contoso-global-fw-policy` <br> Allow outbound rules to `*.microsoft.com`  |
 | 6. Using Azure Firewall Manager, ensure all connected virtual networks to a secure virtual hub are protected by Azure Firewall.                                                | Virtual hub name <br> internet traffic - traffic from virtual networks | Virtual hub name: `vhub-neu` <br> internet traffic - traffic from virtual networks - send via Azure Firewall |
-| 7. Deploy and configure an Azure Private DNS zone within the global `connectivity` subscription.                                                             | Private DNS zone name               | Private DNS zone name: `azure.contoso.com` |
+| 7. Deploy and configure an Azure Private DNS zone within the global connectivity subscription.                                                             | Private DNS zone name               | Private DNS zone name: `azure.contoso.com` |
 | 8. Provision ExpressRoute circuits with private peering.                                                                                                 | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) |
 | 9. Connect on-premises HQs/DCs to Azure Virtual WAN virtual hub via ExpressRoute circuits.                                                                                | Authorization key <br> Virtual hub name | Authorization key: `xxxxxxxx` <br> Virtual hub: `vhub-neu` |
 | 10. (Optional): Setup encryption over ExpressRoute private peering.                                                                                         | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) |

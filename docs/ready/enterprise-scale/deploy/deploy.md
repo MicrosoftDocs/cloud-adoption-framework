@@ -3,13 +3,15 @@ title: Deploy
 description: Deploy
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Contents
+<!-- docsTest:disable -->
+
+# Deploy
 
 This article describes how to deploy landing zones under the management group scope. This is the last of the three steps to set up your environment. Please complete [step 1](./configure-run-initialization.md) and [step 2](./deploy-landing-zone.md) before you continue.
 
@@ -17,7 +19,7 @@ This article describes how to deploy landing zones under the management group sc
 
 ## Create landing zones
 
-In a Cloud Adoption Framework (CAF) enterprise-scale implementation, all platform resources in the `connectivity` and `management` subscriptions are deployed via Microsoft Azure Policy. CAF enterprise includes the policy definitions and assignments required for deploying necessary resources. While it's possible to follow the GitHub steps described in this article to deploy Azure Policy definitions and assignments within the the CAF enterprise deployment process, CAF enterprise provides flexibility for how the assignments can be done within platform subscriptions.
+In a Cloud Adoption Framework (CAF) enterprise-scale implementation, all platform resources in the connectivity and management subscriptions are deployed via Microsoft Azure Policy. CAF enterprise includes the policy definitions and assignments required for deploying necessary resources. While it's possible to follow the GitHub steps described in this article to deploy Azure Policy definitions and assignments within the the CAF enterprise deployment process, CAF enterprise provides flexibility for how the assignments can be done within platform subscriptions.
 
 All Azure platform resources in a landing zone follow CAF enterprise guidance and are fully controlled and provisioned through Azure Policy on the landing zone management group scope. More information on the [policy-driven approach](./../Design-Principles.md) can be found in the CAF enterprise design principals section of this article.
 

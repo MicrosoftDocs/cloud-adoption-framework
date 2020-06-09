@@ -3,7 +3,7 @@ title: Contribution guide
 description: Contribution guide
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -134,7 +134,7 @@ Read the next section before submitting a PR, but don't submit a PR with templat
 
 ## Contributing to policy definitions, policy assignments, and role definitions and assignments for Contoso implementation
 
-Once your parameter conforms to the standards mentioned in section above and is ready for your resource, consider whether the resource should be deployed at a management group scope or a subscription scope (either the `connectivity` or `management` subscription). Although the pipeline can deploy templates at any of the four scopes, it won't be deployed at the resource group level as part of a landing zone template. The minimum bar is a subscription-level deployment template wrapped inside a policy definition.
+Once your parameter conforms to the standards mentioned in section above and is ready for your resource, consider whether the resource should be deployed at a management group scope or a subscription scope (either the connectivity or management subscription). Although the pipeline can deploy templates at any of the four scopes, it won't be deployed at the resource group level as part of a landing zone template. The minimum bar is a subscription-level deployment template wrapped inside a policy definition.
 
 - Do:
   - If you have resources to deploy inside a landing zone, wrap them inside `DeployIfNotExists` policies; the assignment for this should be at the management group scope.

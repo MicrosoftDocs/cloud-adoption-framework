@@ -10,12 +10,16 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
+<!-- docsTest:disable -->
+
+<!-- cSpell:ignore azcontext -->
+
 # Contoso reference implementation: Known issues
 
 ## Subscription creation
 
 It isn't currently possible to provision new subscriptions via Microsoft Azure Resource Manager templates. Subscription creation requires an enterprise enrollment account to migrate to a new system in the backend. We are working closely with engineering teams to enable this functionality for the Contoso tenant.
 
-## Unsupported number of tenants in context: X tenantid(s)
+## Unsupported number of tenants in context: X tenantId(s)
 
-We currently don't support initialization across multiple tenants. Clear your azcontext and run `connect-azaccount` with the service principal created earlier.
+We currently don't support initialization across multiple tenants. Clear your `azcontext` and run `Connect-AzAccount` with the service principal created earlier.
