@@ -214,8 +214,8 @@ items:
             href: ready/enterprise-scale/security-governance-and-compliance.md
           - name: Platform automation and DevOps
             href: ready/enterprise-scale/platform-automation-and-devops.md
-        - name: Implementation guide
-          href: ready/enterprise-scale/implementation-guide.md
+        - name: Implementation guidelines
+          href: ready/enterprise-scale/implementation-guidelines.md
         - name: Decision template
           href: ready/enterprise-scale/template.md
         - name: Reference implementation

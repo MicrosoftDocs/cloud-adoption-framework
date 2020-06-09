@@ -9,20 +9,20 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise enrollment and Microsoft Azure Active Directory tenants
+# Enterprise enrollment and Azure Active Directory tenants
 
 ## Planning for enterprise enrollment
 
 An enterprise enrollment, often referred to as an Enterprise Agreement, represents the commercial relationship between Microsoft and how the customer uses Azure. It provides the basis for billing across all customer subscriptions and impacts administration of the customer estate. Enterprise enrollment, also known as EA, is managed via an Azure enterprise portal. Azure enterprise enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost-enrollment groups within an organization.
 
 ![Azure EA hierarchies](./media/ea.png)
-_Figure 1: An EA enrollment hierarchy_
+_Figure 1: An EA enrollment hierarchy._
 
 - Departments help to segment costs into logical groupings and to set a budget or quota at the department level (note: the quota isn't enforced firmly and is used for reporting purposes).
 
 - Accounts are organizational units in the Azure enterprise portal; they can be used to manage subscriptions and access reports.
 
-- Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. They are where an organization deploys Azure services.
+- Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. They're where an organization deploys Azure services.
 
 - Enterprise enrollment roles link users with their functional role. These roles are:
   - Enterprise administrator
@@ -35,13 +35,13 @@ _Figure 1: An EA enrollment hierarchy_
 
 - Enterprise enrollment provides organizational representations and makes it easier for enterprises to roll costs to their respective departments.
 - Enterprise enrollment supports setting an administrator for departments or for entire organizations.
-- The Azure Enterprise Portal enables enterprise enrollment and also helps organizations to set key contacts who receive critical communication from Microsoft.
+- The Azure enterprise portal enables enterprise enrollment and also helps organizations to set key contacts who receive critical communication from Microsoft.
 
 ### Scenarios where enterprise enrollment isn't possible
 
-- Enterprise enrollment is part of an Enterprise Agreement. Customers who aren't Azure enterprise customers won't have access to the Enterprise Portal and won't be able to manage subscriptions here.
+- Enterprise enrollment is part of an Enterprise Agreement. Customers who aren't Azure enterprise customers won't have access to the enterprise portal and won't be able to manage subscriptions here.
 
-- It is possible to manage resources without the Enterprise Portal via [Azure Management Group](https://docs.microsoft.com/azure/governance/management-groups/overview). Features and implementation of hierarchy in management groups will differ from enterprise enrollment.
+- You can manage resources without the enterprise portal via [Azure management groups](https://docs.microsoft.com/azure/governance/management-groups/overview). Features and implementation of hierarchy in management groups will differ from enterprise enrollment.
 
 - Management groups can be used to organize hierarchies for unified policies and access management, while enterprise enrollment organizes subscriptions into departments and accounts for unified account, expense, administration, and communication management.
 
@@ -75,7 +75,7 @@ _Figure 1: An EA enrollment hierarchy_
 
 - If multiple Azure AD tenants are used, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
-- Set up enterprise development (dev)/testing (test)/production environments at an EA account level to support holistic isolation.
+- Set up Enterprise Dev/Test/production environments at an EA account level to support holistic isolation.
 
 - Do not ignore notification emails sent to the notification account email address. Microsoft sends important EA-wide communications to this account.
 
@@ -85,7 +85,7 @@ _Figure 1: An EA enrollment hierarchy_
 
 ## Define Azure AD tenants
 
-An Azure AD tenant provides identity and access management, which is an important part of security posture, ensuring that only authenticated and authorized users have access to the resources to which they have permission to access. Azure AD not only provides these services to applications and services deployed in Azure but to services and applications deployed outside of Azure (such as on-premises or third-party cloud providers). Azure AD service is also utilized by software-as-a-service (SaaS) applications such as Microsoft 365 and theAzure Marketplace. Organization already using on-premises Azure AD can use their existing infrastructure and extend authentication to the cloud by integrating with Azure AD. Each Azure AD has one or more domains. A directory can have many subscriptions associated with it but only one Azure AD tenant.
+An Azure AD tenant provides identity and access management, which is an important part of your security posture, to ensure that authenticated and authorized users have access to only the resources for which they have access permissions. Azure AD not only provides these services to applications and services deployed in Azure, but to services and applications deployed outside of Azure (such as on-premises or third-party cloud providers). Azure AD is also used by software as a service (SaaS) applications such as Microsoft 365 and the Azure Marketplace. Organizations already using on-premises Active Directory can use their existing infrastructure and extend authentication to the cloud by integrating with Azure AD. Each Azure AD directory has one or more domains. A directory can have many subscriptions associated with it, but only one Azure AD tenant.
 
 It is important to ask basic security questions during the Azure AD design phase&mdash;how an organization is managing credentials, control of human and application access, and how to control programmatic access.
 
@@ -95,16 +95,16 @@ Multiple tenants can function in the same enterprise enrollment.
 
 **Design recommendations:**
 
-- Use Azure AD Single Sign-on based on the selected [planning topology](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies).
+- Use Azure AD seamless single sign-on based on the selected [planning topology](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-topologies).
 
-- If an organization doesn't have identity infrastructure, it's recommended to start by implementing Azure-AD-only identity deployment. Such deployment with [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/) and the [Microsoft Enterprise Mobility Suite](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS and enterprise applications as well as for devices.
+- If your organization doesn't have an identity infrastructure, start by implementing an Azure-ad-only identity deployment. Such deployment with [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) and [Microsoft enterprise mobility + security](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS and enterprise applications as well as for devices.
 
-- Multi-factor authentication (MFA) provides another layer of security and a second barrier of authentication. It is recommended to enforce [MFA](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and [Conditional Access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) for all privileged accounts to make them more secure. MFA doesn't stop phishing or social engineering such as a hacker taking physical possession of your phone, SIM swapping, or cloning. It is recommended for MFA to be implemented with a device management policy(such as strong pin locking, encryption, and erasing a device remotely when it's lost). Out-of-band MFA (such as biometric) is also considered a secure form of MFA.
+- Multi-factor authentication provides another layer of security and a second barrier of authentication. Enforce [multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) for all privileged accounts for greater security. Multi-factor authentication doesn't stop phishing or social engineering, such as a hacker taking physical possession of your phone, SIM swapping, or cloning. Multi-factor authentication should be implemented via a device management policy (such as strong PIN locking, encryption, and erasing a device remotely when it's lost). Out-of-band multi-factor authentication (such as biometric) is also considered a secure form of multi-factor authentication.
 
 - Plan and implement for [emergency access](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
 
-- Use Azure AD [Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) for identity and access management.
+- Use [Azure AD Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) for identity and access management.
 
-- If dev/test/prod are going to be isolated environments from an identity perspective, then separate them at a tenant level; use multiple tenants.
+- If dev/test/production are going to be isolated environments from an identity perspective, then separate them at a tenant level via multiple tenants.
 
 - Avoid creating a new Azure AD tenant unless there's a strong IAM justification and processes are already in place.

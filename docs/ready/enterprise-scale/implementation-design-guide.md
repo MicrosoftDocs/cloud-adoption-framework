@@ -16,9 +16,9 @@ Enterprise-scale reference implementation is rooted in the principle that everyt
 With this principle, this reference implementation has following three tenets:
 
 ![Enterprise agreement enrollment](./media/implementation-scope.png)
-_Figure 1: Enterprise agreement enrollment_
+_Figure 1: Enterprise Agreement enrollment._
 
-Git -> Clone -> Azure/enterprise-scale: provide the Git repository (repo) for Azure platform configuration. The Git -> Clone or Git -> Fork (preferred) metaphor references that this repo will provide everything that must be true for enterprise-scale&mdash;that customers can use as-is in their own environment.
+Git -> Clone -> Azure/enterprise-scale: provide the Git repo for Azure platform configuration. The Git -> Clone or Git -> Fork (preferred) metaphor references that this repo will provide everything that must be true for enterprise-scale—that customers can use as-is in their own environment.
 
 ## Discovery
 
@@ -27,23 +27,21 @@ Discovery is also important for organizations, who are starting their DevOps and
 
 For the purpose of discovery, following resources are considered within the overall scope of the Azure platform. This will initialize an empty Git repo with the current configuration to baseline configuration, encompassing the following:
 
-<!-- docsTest:disable TODO -->
+<!-- cSpell:ignore ResourceTypes -->
 
-- Management Group hierarchy and Subscription organization
+- Management group hierarchy and subscription organization:
   - ResourceTypes:
-    - Microsoft.Management/managementGroups
-    - Microsoft.Management/managementGroups/subscriptions
-    - Microsoft.Subscription/subscriptions
-- Policy Definition and Policy Assignment for Governance
+    - `Microsoft.Management/managementGroups`
+    - `Microsoft.Management/managementGroups/subscriptions`
+    - `Microsoft.Subscription/subscriptions`
+- Policy definition and policy assignment for governance:
   - ResourceTypes:
-    - Microsoft.Authorization/policyDefinitions
-    - Microsoft.Authorization/policyAssignments
-- Role Definition and Role Assignment
+    - `Microsoft.Authorization/policyDefinitions`
+    - `Microsoft.Authorization/policyAssignments`
+- Role definition and role assignment:
   - ResourceTypes:
-    - Microsoft.Authorization/roleDefinitions
-    - Microsoft.Authorization/roleAssignments
-
-<!-- docsTest:enable TODO -->
+    - `Microsoft.Authorization/roleDefinitions`
+    - `Microsoft.Authorization/roleAssignments`
 
 We will default to platform schema to represent these configurations in Git. This means calling Azure APIs using PowerShell.
 
@@ -61,25 +59,25 @@ An IaC repo will have hundreds if not thousands of configuration artifacts that 
 
 Provide tenant-level Resource Manager templates to build landing zones with enterprise-scale guidelines. We will enable security, logging, networking, and any other plumbing needed for landing zones (subscriptions) autonomously via policy enforcement. We will bootstrap Azure environment with Resource Manager templates to create necessary structure for management and networking and to declare desired goal state.
 
-The File -> New -> Landing Zone (subscription) process is Resource Manager orchestrating the following:
+The **File** > **New** > **Landing Zone** (subscription) process is Resource Manager orchestrating the following:
 
 - Subscription creation
 - Subscriptions move
 - Configuring the subscription to the desired state with policy enforcement (autonomously)
 
-To start quickly, a [Resource Manager template](https://github.com/azure/CET-NorthStar/blob/master/examples/e2e-landing-zone.parameters.json) that can be deployed at the tenant (`/`) root scope will be provided to instantiate the enterprise-scale architecture. This template should provide everything that's necessary in the [implementation guide](./implementation-guide.md), and it'll have the following sequence:
+To start quickly, a [Resource Manager template](https://github.com/azure/CET-NorthStar/blob/master/examples/e2e-landing-zone.parameters.json) that can be deployed at the tenant (`/`) root scope will be provided to instantiate the enterprise-scale architecture. This template should provide everything that's necessary in the [implementation guidelines](./implementation-guidelines.md), and it'll have the following sequence:
 
 - Create a management group hierarchy and subscription organization structure in a 2+n fashion where n represents number of landing zones.
 - Create policies (`DeployIfNotExists`) assigned to management groups and a subscription scope to govern and deploy necessary resources, enabling platform autonomy as new landing zones (subscriptions) are being created by application teams.
 - Create policy and role assignment to govern and delegate access to resources.
 
-![End-to-end Resource Manager template deployment](./media/e2e-armtemplate.png)
-_Figure 2: End-to-end Resource Manager deployment_
+![End-to-end Resource Manager template deployment](./media/e2e-arm-template.png)
+_Figure 2: End-to-end Resource Manager deployment._
 
-It is important to note that one of the design principles of enterprise-scale is policy-driven governance, and all necessary resources leading to the creation of landing zones are deployed using policies. For example, deploying Azure Key Vault to store platform-level secret in management subscription. Instead of scripting the template deployment to deploy Key Vault, CAF enterprise-scale-based reference implementation will have a policy definition that deploys the key vault in prescribed manner and policy assignment at management subscription scope. The benefits of a policy-driven approach are many, but the most significant are:
+A key design principle of enterprise-scale is policy-driven governance, and all necessary resources leading to the creation of landing zones are deployed using policies. For example, Azure Key Vault is deployed to store platform-level secret in the `management` subscription. Instead of scripting the template deployment to deploy Key Vault, the CAF enterprise-scale-based reference implementation has a policy definition that deploys a key vault in a prescribed manner and policy assignment at the `management` subscription scope. The benefits of a policy-driven approach are many, but the most significant are:
 
 - The platform can provide orchestration to bring target resources (in this case, a subscription) to a desired goal state.
-- Continuous conformance ensures that all platform-level resources are compliant. As the platform is aware of the goal state, it can assist by monitoring and remediating resources throughout their lifecycles.
+- Continuous conformance ensures that all platform-level resources are compliant. As the platform is aware of the goal state, it can assist by monitoring and remediating resources throughout each resource's lifecycle.
 - The platform enables autonomy regardless of the customer's scale point.
 
 **Definition of done:**
@@ -97,4 +95,4 @@ Manual changes (made, for example, using the Azure portal) may be unavoidable du
 
 **Definition of done:**
 
-Changes made oob (only for platform resources) listed in Section 1 are tracked in Git. Configuration drifts should surface like any other PR for repo owners to interactively (with human intervention) or automatically determine whether to roll changes back or forward based on the repo level policy.
+Changes made out-of-the-box (only for platform resources) listed in the first section are tracked in Git. Configuration drifts should surface like any other PR for repo owners to interactively (with human intervention) or automatically determine whether to roll changes back or forward based on the repo-level policy.

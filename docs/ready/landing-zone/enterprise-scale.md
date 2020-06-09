@@ -43,7 +43,7 @@ If these assumptions align with your current adoption needs, then this implement
 
 ## Decisions
 
-For a full set of decisions that shape the enterprise-scale implementation, see the [implementation guide](../enterprise-scale/implementation-guide.md).
+For a full set of decisions that shape the enterprise-scale implementation, see the [implementation guidelines](../enterprise-scale/implementation-guidelines.md).
 
 ## Customize or deploy a landing zone
 

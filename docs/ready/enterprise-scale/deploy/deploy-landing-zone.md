@@ -14,7 +14,7 @@ ms.subservice: ready
 This article describes how to deploy landing zones under the respective management group scope. This is the last of the three steps to set up your environment. Please complete [step 1](./Configure-run-initialization.md) and [step 2](./deploy-landing-zone.md) before you continue.
 
 ![Deploy your own environment process: step 3](../media/deploy-environment-step-3.png)
-_Figure 1: Deploy your own environment_
+_Figure 1: Deploy your own environment._
 
 # An overview of landing zones
 
@@ -27,10 +27,8 @@ All platform Azure resources in a landing zone following enterprise-scale guidan
 Before continuing, ensure that you've completed all prerequisites in the previous sections, with special attention to the following steps:
 
 1. Ensure the default management structure exists as described in the [configure GitHub and run initialization](./Configure-run-initialization.md) section.
-2. Ensure you have [initialized AzOps repository](./Configure-run-initialization.md) and pushed changes are in your master branch.
+2. Ensure that you have [initialized the AzOps repo](./Configure-run-initialization.md) and that pushed changes are in your `master` branch.
 3. All the platform infrastructure has been deployed following [these instructions](./deploy-platform-infrastructure.md).
-
----
 
 ## Create a landing zone
 

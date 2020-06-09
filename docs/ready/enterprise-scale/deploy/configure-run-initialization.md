@@ -14,28 +14,32 @@ ms.subservice: ready
 This is the first step of who should deploy your environment. You can learn more about the overall process [here](./Using-Reference-Implementation.md).
 
 ![Step 1: the process to deploy your own environment](../media/deploy-environment-step-1.png)
-_Figure 1: The process to deploy your own environment_
+_Figure 1: The process to deploy your own environment._
 
 This article describes how to:
 
-* Configure GitHub Actions to deploy templates
-* Create the default management group hierarchy
-* Discover your current Microsoft Azure environment
+- Configure GitHub Actions to deploy templates
+- Create the default management group hierarchy
+- Discover your current Microsoft Azure environment
 
-> Important: once you have discovered your current Azure environment, you can make changes there by using a preferred client such as Azure PowerShell, Azure CLI, the Portal, the Resource Manager API, or third-party clients. The discovered environment always represents the state of your Azure tenant.
+> Important: once you have discovered your current Azure environment, you can make changes there by using a preferred client such as Azure PowerShell, Azure CLI, the portal, the Resource Manager API, or third-party clients. The discovered environment always represents the state of your Azure tenant.
 
-# Configure GitHub and run initialization
+<!-- cSpell:ignore azops -->
 
-This section describes the steps for how to get started with the full reference implementation by configuring GitHub Actions to deploy Resource Manager templates and how to run the initialization to discover the current Azure environment and create a representation in the local Git repository (repo).
+## Configure GitHub and run initialization
+
+This section describes the steps for how to get started with the full reference implementation by configuring GitHub Actions to deploy Resource Manager templates and how to run the initialization to discover the current Azure environment and create a representation in the local Git repo.
 
 ![Initialize AzOps process](../media/initialize-azops.png")
-_Figure 2: The Initialize AzOps process._
+_Figure 2: The initialize azops process._
 
 1. [Fork the repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) to your GitHub organization and [clone the forked GitHub repo](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) to your local machine.
 Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-repo) to synchronize your for with the upstream.
 
-2. A User Access Administrator role is required to manage and deploy your enterprise-scale architecture. This may require [elevated account permissions](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin). It is strongly recommended to assign the permission at the highest scope possible (for example, the tenant root `/`) to ensure you can use the service principal to manage subscriptions. App registration needs to be enabled on the Azure Active Directory (Azure AD) tenant to self-register an app (option 1).
-    > Note: read access on the root level is enough to perform the initialization but not deployment. To create management groups and subscriptions, the platform requires tenant-level PUT permission.
+2. A user access administrator role is required to manage and deploy your enterprise-scale architecture. This may require [elevated account permissions](https://docs.microsoft.com/azure/role-based-access-control/elevate-access-global-admin). It is strongly recommended to assign the permission at the highest scope possible (for example, the tenant root `/`) to ensure you can use the service principal to manage subscriptions. App registration needs to be enabled on the Azure Active Directory (Azure AD) tenant to self-register an app (option 1).
+
+    > [!NOTE]
+    > Read access on the root level is enough to perform initialization but not deployment. To create management groups and subscriptions, the platform requires tenant-level `put` permission.
 
     Option 1: App registration enabled
 
@@ -47,16 +51,20 @@ Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-r
     Option 2: App registration disabled
 
     ```powershell
-    #Create Service Principal as the Azure AD Administrator
+    #Create a service principal as the Azure AD Administrator.
+
     $servicePrincipal = New-AzADServicePrincipal -Role Owner -Scope / -DisplayName AzOps -SkipAssignment
-    #Assign Owner role to tenant root scope ("/") as a User Access Administrator
+
+    #Assign the Owner role to tenant root scope ("/") as a User Access Administrator.
+
     New-AzRoleAssignment -ApplicationId $servicePrincipal.ApplicationId -RoleDefinitionName Owner -Scope /
     ```
 
     Export the service principal name information. Perform this step in the same PowerShell instance when the service principal name was created.
 
     ```powershell
-    #Prettify output to print in the format for AZURE_CREDENTIALS to be able to copy in next step.
+    # Prettify output to print in the format for AZURE_CREDENTIALS to be able to copy in next step.
+
     [ordered]@{
         clientId = $servicePrincipal.ApplicationId
         displayName = $servicePrincipal.DisplayName
@@ -65,9 +73,10 @@ Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-r
         tenantId = (Get-AzContext).Tenant.Id
         subscriptionId = (Get-AzContext).Subscription.Id
     } | ConvertTo-Json
+
     ```
 
-3. To create the following secrets on GitHub, navigate to the main page of the repo and select Settings, Secrets, and Add a New Secret under your repo's name.
+3. To create the following secrets on GitHub, navigate to the main page of the repo and select **Settings** > **Secrets**, and add a new secret under the repo name.
 
 - Name: Azure_credentials
 
@@ -78,13 +87,13 @@ Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-r
       "name": "<<redacted>>",
       "clientSecret": "<<redacted>>",
       "tenantId": "<<redacted>>",
-      "subscriptionId": "<<default-subscriptionid>>"
+      "subscriptionId": "<<default-subscription-id>>"
     }
     ```
 
 - Name: Azure_enrollment_account_name [optional]
 
-    This parameter is required if you are planning to create new subscription though this workflow. This secret must contain the **ObjectId** for the Azure enrollment account. You can obtain the ID by running ```get-azenrollmentaccount```
+    This parameter is required if you're planning to create new subscription though this workflow. This secret must contain the **ObjectId** for the Azure enrollment account. You can obtain the ID by running `Get-AzEnrollmentAccount`.
 
     ```bash
     ObjectId
@@ -102,22 +111,22 @@ Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-r
     github-email@your-domain.com #Github ID primary email
     ```
 
-4. In an Azure PowerShell terminal, run `clear-azcontext` and then [`connect-azaccount` with the service principal](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps?view=azps-3.6.1#sign-in-using-a-service-principal) that you created earlier to validate if you have the appropriate permissions during the initialization. You can run the following code by replacing the placeholders with your actual values:
+4. In an Azure PowerShell terminal, run `Clear-AzContext` and then [`Connect-AzAccount` with the service principal](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps?view=azps-3.6.1#sign-in-using-a-service-principal) that you created earlier to validate if you have the appropriate permissions during the initialization. You can run the following code by replacing the placeholders with your actual values:
 
     ```powershell
     Clear-AzContext -Force
     $user = "<service-principal-id>"
     $password = '<service-principal-password>'
-    $tenantid = "<azure-tenant-id>"
+    $tenantId = "<azure-tenant-id>"
     $secureStringPwd = $password | ConvertTo-SecureString -AsPlainText -Force
     $cred = New-Object System.Management.Automation.PSCredential -ArgumentList $user, $secureStringPwd
-    Connect-AzAccount -TenantId $tenantid  -ServicePrincipal -Credential $cred
+    Connect-AzAccount -TenantId $tenantId  -ServicePrincipal -Credential $cred
     ```
 
     > [!NOTE]
     > The `tenantId` can be found by running `(Get-AzContext).Tenant`.
 
-5. You can create a management structure with any supported client. Create the management group structure below. If there's a management group structure in place for enterprise-scale implementation, we recommended the Azure portal for this step and the following hierarchy:
+5. You can create a management structure with any supported client. Create the management group structure below. If there's a management group structure in place for enterprise-scale implementation, use the Azure portal for this step and the following hierarchy:
 
   ```shell
       /
@@ -164,6 +173,6 @@ Follow the instructions [here](./prerequisites.md#sync-your-fork-with-upstream-r
         ├───.....                                          # Existing management group or subscription structure
     ```
 
-7. Commit and push changes to your repo. Ensure your changes are in the master branch by either committing to master, or creating a feature branch and merging it to master before proceeding to the next step.
+7. Commit and push changes to your repo. Ensure your changes are in the `master` branch by either committing to `master`, or creating a feature branch and merging it to `master` before proceeding to the next step.
 
-8. Once changes are in the master branch, create a new feature branch to enable the `AzOps-Push` workflow by renaming `.GitHub\workflows\azops-push.yml.disabled` to `.GitHub\workflows\azops-push.yml` and merging to master. For all future pull requests, GitHub Actions will deploy to Azure.
+8. Once changes are in the `master` branch, create a new feature branch to enable the `AzOps-Push` workflow by renaming `.GitHub\workflows\azops-push.yml.disabled` to `.GitHub\workflows\azops-push.yml` and merging to `master`. For all future pull requests, GitHub Actions will deploy to Azure.

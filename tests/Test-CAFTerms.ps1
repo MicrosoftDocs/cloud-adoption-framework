@@ -77,7 +77,7 @@ function Get-MyInvalidTermExpressions {
         'operations excellence!!operational excellence'
         'hosting hierarchy!!portfolio hierarchy'
         'SCM!!~~Spell out "source code management"'
-        ' vs !! versus '
+        ' vs (?!Code)!! versus '
         'For more information see!!For more information, see'
         'For more information (?!about|and)'
         'For more,'
