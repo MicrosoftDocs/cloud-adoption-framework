@@ -149,9 +149,9 @@ The platform infrastructure is deployed across three Azure subscriptions on the 
 ![Platform subscriptions](../media/platform-subscriptions.png)
 _Figure 4: Platform subscriptions._
 
-- **The management subscription:** Where all cross-platform management resources are deployed (such as a centralized Azure Monitor Log Analytics workspace).
-- **The connectivity subscription:** Where all the networking resources are deployed (such as Azure Virtual WAN or firewall).
-- **The identity subscription:** For virtual-WAN-based enterprise-scale implementations; this is where domain controllers are deployed.
+- **The management subscription:** Contains all cross-platform management resources, such as a centralized Azure Monitor Log Analytics workspace.
+- **The connectivity subscription:** Contains networking resources such as Azure Virtual WAN or Azure Firewall.
+- **The identity subscription:** For virtual-WAN-based enterprise-scale implementations. This subscription contains the domain controllers.
 
 In an enterprise-scale implementation, all platform resources in the connectivity and management subscriptions are deployed via Azure Policy. Enterprise-scale includes both, policy definitions and assignments required to deploy the necessary resources. While it is possible to deploy both, Azure Policy definition and assignments using enterprise-scale deployment process via GitHub Actions as described in this article, enterprise-scale provides flexibility for how the assignments can be done in the platform subscriptions.
 
@@ -184,7 +184,7 @@ Azure Policy assignments required on the management subscription:
 
 ### The connectivity subscription
 
-The resource in the connectivity subscription is deployed via Azure Policy following the enterprise-scale reference implementation. We need four Azure Policy assignments to create the Virtual WAN, virtual hub, Azure Firewall, and denial-of-service (DDoS) attack protection resources required in the connectivity subscription. The resources in the regional connectivity subscription will be deployed using a `DeployIfNotExists` policy.
+The resource in the connectivity subscription is deployed via Azure Policy following the enterprise-scale reference implementation. We need four Azure Policy assignments to create the virtual WAN, virtual hub, Azure Firewall, and denial-of-service (DDoS) attack protection resources required in the connectivity subscription. The resources in the regional connectivity subscription will be deployed using a `DeployIfNotExists` policy.
 
 Required custom Azure Policy definition:
 
@@ -223,7 +223,7 @@ Required, customized Azure Policy definition:
 
 | Policy name          | Scope              | Description                                                        |
 | ---------------------|--------------------|--------------------------------------------------------------------|
-| `Deploy-VNet`        | `<YourCompanyName>` Management group | Deploys a virtual network and connects it to the local Virtual WAN virtual hub. |
+| `Deploy-VNet`        | `<YourCompanyName>` Management group | Deploys a virtual network and connects it to the local virtual hub. |
 
 Azure Policy assignments required on the identity subscription (per region a policy is required):
 

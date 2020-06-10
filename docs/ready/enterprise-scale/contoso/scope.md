@@ -97,10 +97,10 @@ All canceled subscriptions will be moved under this management group by Azure Po
 
 A dedicated subscription for centrally managed networking infrastructure will control end-to-end connectivity for all landing zones within Contoso's Azure platform. Azure resources that deployed into this subscription include:
 
-- Azure Virtual WAN and its subresources (virtual hubs and gateways)
-- Azure firewalls
-- Firewall policies
-- Azure private DNS zones
+- Azure Virtual WAN and its subresources, such as virtual hubs and gateways.
+- Azure firewalls.
+- Firewall policies.
+- Azure private DNS zones.
 
 The connectivity subscription has the tag `BusinessUnit` with the value `platform`.
 
@@ -145,17 +145,17 @@ With this network design, the following scenarios are possible for Contoso:
 
 - Regional HQ offices connect to Azure via ExpressRoute.
 - Branch offices connect to Azure via VPN (site-to-site IP security tunnels).
-- Landing zone virtual networks connect to the regional Virtual WAN virtual hub.
+- Landing zone virtual networks connect to the regional virtual hub.
 - Regional HQs connect to each other via ExpressRoute with global reach.
 - Regional HQs connect to branch offices via Virtual WAN.
 - Regional HQs and branch offices connect to Azure Virtual Network via Virtual WAN.
-- Using Azure Firewall within the Virtual WAN virtual hub secures internet-outbound connectivity from the virtual network.
+- Using Azure Firewall within the virtual hub secures internet-outbound connectivity from the virtual network.
 
 Contoso decided to deploy a Microsoft-managed, Virtual WAN-based network topology in order to support global interconnectivity between on-premises and Azure, plus a large number of branches that need to connect to Azure. The following diagram depicts the required Azure resources that must be deployed inside the connectivity subscription to support Contoso's global Azure network:
 
 ![Connectivity subscription](../media/image7.png)
 
-In order to simplify the routing configuration across the entire Azure networking platform, Contoso has assigned the following IP address spaces for Virtual WAN virtual hubs and virtual networks:
+In order to simplify the routing configuration across the entire Azure networking platform, Contoso has assigned the following IP address spaces for virtual hubs and virtual networks:
 
 - North Europe: `10.1.0.0/16`
 - West Europe: `10.2.0.0/16`

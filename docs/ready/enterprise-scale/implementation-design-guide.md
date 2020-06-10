@@ -59,7 +59,7 @@ An IaC repo will have hundreds if not thousands of configuration artifacts that 
 
 Provide tenant-level Resource Manager templates to build landing zones with enterprise-scale guidelines. We will enable security, logging, networking, and any other plumbing needed for landing zones (subscriptions) autonomously via policy enforcement. We will bootstrap Azure environment with Resource Manager templates to create necessary structure for management and networking and to declare desired goal state.
 
-The **File** > **New** > **Landing Zone** (subscription) process is Resource Manager orchestrating the following:
+The **File** > **New** > **Landing zone** (subscription) process is Resource Manager orchestrating the following:
 
 - Subscription creation
 - Subscriptions move

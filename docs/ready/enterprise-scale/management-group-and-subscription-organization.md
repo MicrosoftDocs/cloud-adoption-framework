@@ -82,7 +82,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Use the following principles when identifying requirements for new subscriptions:
 
-  - **Scale limits:** Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. For example, large specialized workloads such as high-performance computing, IoT, and SAP are all better suited to use separate subscriptions to avoid limits (for example, there's a limit of 50 ADF integrations).
+  - **Scale limits:** Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. For example, large specialized workloads such as high-performance computing, IoT, and SAP are all better suited to use separate subscriptions to avoid limits (such as a limit of 50 Azure Data Factory integrations).
 
   - **Management boundary:** Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns. For example, different environments such as development, test, and production are often isolated from a management perspective.
 

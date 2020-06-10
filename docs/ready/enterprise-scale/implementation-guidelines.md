@@ -15,7 +15,7 @@ ms.subservice: ready
 
 This section covers how to get started with the enterprise-scale platform-native reference implementation and outline design objectives, current design, FAQ, and known issues.
 
-Two categories of activities must take place to implement enterprise-scale architecture. One is what must be true for the enterprise-scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The other is **File > New > Region** and **File > New > Landing zone**. These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IoC)_ and automation with deployment pipelines.
+Two categories of activities must take place to implement enterprise-scale architecture. One is what must be true for the enterprise-scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The second category includes **File > New > Region** and **File > New > Landing zone**. These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IaC)_ and automation with deployment pipelines.
 
 ## What must be true for a CAF enterprise-scale landing zone
 
@@ -44,20 +44,21 @@ Two categories of activities must take place to implement enterprise-scale archi
 
 <!-- markdownlint-disable MD033 -->
 <!-- cSpell:ignore vwan vhub -->
+<!-- docsTest:ignore "Standard virtual WAN" -->
 
 | Activities | Parameters required | Enterprise-scale example configuration |
 |---|---|---|
 | 1. Allocate an appropriate virtual network classless interdomain routing (CIDR) range for each Azure region where Azure Virtual WAN virtual hubs and virtual networks will be deployed. | One CIDR range per region | North Europe: `10.0.0.0/16` <br> West Europe: `10.1.0.0/16` <br> East US: `10.2.0.0/16` |
-| 2. Create Azure Virtual WAN Standard within the connectivity subscription. | Virtual WAN name <br> Azure region | Virtual WAN name: `contoso-vwan` <br> Azure region: `North Europe` |
-| 3. Create a Virtual WAN virtual hub for each region. Ensure at least one gateway (ExpressRoute or VPN) per Virtual WAN virtual hub is deployed.                                  | Virtual WAN name <br> Virtual hub name <br> Virtual hub region <br> Virtual hub address space <br> ExpressRoute gateway <br> VPN gateway | Virtual WAN: `contoso-vwan` <br> Virtual hub region: `North Europe` <br> Virtual hub name: `vhub-neu` <br> Virtual hub address space: `10.0.0.0/16` <br> ExpressRoute gateway: yes (1 scale unit) <br> VPN gateway: no |
-| 4. Using Azure Firewall Manager, secure Virtual WAN virtual hubs by deploying Azure Firewall within each Virtual WAN virtual hub.                                                        | Virtual hub name                           | Virtual hub name: `vhub-neu`                       |
+| 2. Create a Standard virtual WAN within the connectivity subscription. | Virtual WAN name <br> Azure region | Virtual WAN name: `contoso-vwan` <br> Azure region: `North Europe` |
+| 3. Create a virtual hub for each region. Ensure that at least one gateway (ExpressRoute or VPN) per virtual hub is deployed. | Virtual WAN name <br> Virtual hub name <br> Virtual hub region <br> Virtual hub address space <br> ExpressRoute gateway <br> VPN gateway | Virtual WAN: `contoso-vwan` <br> Virtual hub region: `North Europe` <br> Virtual hub name: `vhub-neu` <br> Virtual hub address space: `10.0.0.0/16` <br> ExpressRoute gateway: yes (1 scale unit) <br> VPN gateway: no |
+| 4. Using Azure Firewall Manager, secure virtual hubs by deploying Azure Firewall within each virtual hub.                                                        | Virtual hub name                           | Virtual hub name: `vhub-neu`                       |
 | 5. Create required firewall policies within the connectivity subscription and assign them to secure virtual hubs.                                                 | Azure Firewall policy name <br> Firewall policy inbound/outbound rules | Firewall policy name: `contoso-global-fw-policy` <br> Allow outbound rules to `*.microsoft.com`  |
 | 6. Using Azure Firewall Manager, ensure all connected virtual networks to a secure virtual hub are protected by Azure Firewall.                                                | Virtual hub name <br> internet traffic - traffic from virtual networks | Virtual hub name: `vhub-neu` <br> internet traffic - traffic from virtual networks - send via Azure Firewall |
 | 7. Deploy and configure an Azure Private DNS zone within the global connectivity subscription.                                                             | Private DNS zone name               | Private DNS zone name: `azure.contoso.com` |
 | 8. Provision ExpressRoute circuits with private peering.                                                                                                 | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) |
-| 9. Connect on-premises HQs/DCs to Azure Virtual WAN virtual hub via ExpressRoute circuits.                                                                                | Authorization key <br> Virtual hub name | Authorization key: `xxxxxxxx` <br> Virtual hub: `vhub-neu` |
+| 9. Connect on-premises HQs/DCs to Azure virtual hub via ExpressRoute circuits.                                                                                | Authorization key <br> Virtual hub name | Authorization key: `xxxxxxxx` <br> Virtual hub: `vhub-neu` |
 | 10. (Optional): Setup encryption over ExpressRoute private peering.                                                                                         | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) |
-| 11. (Optional): Connect branches to Azure Virtual WAN virtual hub via VPN.                                                                                                | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) |
+| 11. (Optional): Connect branches to the virtual hub via VPN.                                                                                                | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) |
 | 12. Protect virtual network traffic across virtual hubs with NSGs.                                                                                                             | Inbound rules <br> Outbound rules | Inbound rules <br> Outbound rules |
 | 13. Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) |
 
@@ -194,7 +195,7 @@ The table below provides a list of example Azure policies to enforce typical net
 
 1. Within the connectivity subscription, create a new virtual hub within the existing Azure Virtual WAN.
 
-2. Secure virtual hub with Azure Firewall Manager by deploying an Azure Firewall within the virtual hub and link existing or new firewall policies to Azure Firewall.
+2. Secure the virtual hub with Azure Firewall Manager by deploying an Azure Firewall within the virtual hub, and link existing or new firewall policies to Azure Firewall.
 
 3. Using Azure Firewall Manager, ensure that all connected virtual networks to a secure virtual hub are protected by Azure Firewall
 

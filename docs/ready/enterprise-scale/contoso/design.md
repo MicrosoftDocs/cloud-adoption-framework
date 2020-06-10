@@ -31,11 +31,11 @@ Contoso has decided to use only one Azure Monitor Log Analytics workspace. When 
 
 ## Networking
 
-Azure Policy will continuously check if an Azure Virtual WAN virtual hub already exists in a connectivity subscription for all enabled regions, and it will create one if it doesn't exist. A Virtual WAN virtual hub will secure internet traffic from secured connections (virtual networks inside landing zones) to the internet via Azure Firewall.
+Azure Policy will continuously check if an Azure Virtual WAN virtual hub already exists in a connectivity subscription for all enabled regions, and it will create one if it doesn't exist. A virtual hub will secure internet traffic from secured connections (virtual networks inside landing zones) to the internet via Azure Firewall.
 
-For all Azure Virtual WAN virtual hubs, policy ensures that Azure Firewall is deployed and linked to existing global Azure Firewall policy, as well as the creation of a regional firewall policy if needed.
+For all virtual hubs, policy ensures that Azure Firewall is deployed and linked to existing global Azure Firewall policy, as well as the creation of a regional firewall policy if needed.
 
-Azure Policy will deploy default network security groups (NSGs) and user-defined routes (UDRs) in landing zones. While NSGs will be linked to all subnets, UDRs will only be linked to virtual-network-injected platform as a service (PaaS) subnets. For virtual-network-injected services and control plane traffic to continue to work, Azure Policy will ensure that the right NSG and UDR rules are configured, but only for Azure PaaS services approved by the whitelisting framework described in this article. UDR and NSG rules are required to protect and manage control plane traffic for virtual-network-injected PaaS services such as Azure SQL Managed Instance. When landing zone virtual networks connect to a Virtual WAN virtual hub, the default route configured (`0.0.0.0/0`) will point to their regional Azure firewall instance .
+Azure Policy will deploy default network security groups (NSGs) and user-defined routes (UDRs) in landing zones. While NSGs will be linked to all subnets, UDRs will only be linked to virtual-network-injected platform as a service (PaaS) subnets. For virtual-network-injected services and control plane traffic to continue to work, Azure Policy will ensure that the right NSG and UDR rules are configured, but only for Azure PaaS services approved by the whitelisting framework described in this article. UDR and NSG rules are required to protect and manage control plane traffic for virtual-network-injected PaaS services such as Azure SQL Managed Instance. When landing zone virtual networks connect to a virtual hub, the default route configured (`0.0.0.0/0`) will point to their regional Azure firewall instance .
 
 <!-- docsTest:ignore SD-WAN -->
 
@@ -47,7 +47,7 @@ Contoso wants to minimize the time required to create landing zones while avoidi
 
 **Networking:**
 
-1. Create a virtual network inside a landing zone and establish virtual network peering with a Virtual WAN virtual hub in the same Azure region.
+1. Create a virtual network inside a landing zone and establish virtual network peering with a virtual hub in the same Azure region.
 2. Create a default NSG inside a landing zone with default rules, such as disallowing remote desktop protocol (RDP) or secure shell (SSH) traffic from the internet.
 3. Ensure that new subnets created inside a landing zone have NSGs.
 4. Default NSG rules can't be modified (for example, RDP/SSH traffic from the internet).
