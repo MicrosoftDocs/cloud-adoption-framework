@@ -11,11 +11,11 @@ ms.subservice: ready
 
 <!-- docsTest:disable -->
 
-## Validate prerequisites
+# Validate prerequisites
 
- This section provides guidance for you to experiment with Microsoft Azure Resource Manager template deployments at the tenant (`/`) root scope. This will help you to validate that you've properly configured the prerequisites. Note that this section is optional.
+This section provides guidance for you to experiment with Microsoft Azure Resource Manager template deployments at the tenant (`/`) root scope. This will help you to validate that you've properly configured the prerequisites. Note that this section is optional.
 
- ![Tenant root scope deployment](../media/tenant-level-deployment.png)
+![Tenant root scope deployment](../media/tenant-level-deployment.png)
 _Figure 1: Tenant root scope deployment._
 
 From a PowerShell terminal, connect to Azure using `Connect-AzAccount -TenantId <your-tenant-id>` With an account that has at least `user access administrator` permissions at the tenant root level.
@@ -36,16 +36,17 @@ Assign required permissions at tenant root level for the account that you want t
     CanDelegate        : False
     ```
 
->Note: if you want to use a service principal, follow the instructions to assign permissions under the [**full end-to-end deployment**](./Using-Reference-Implementation.md)
+> [!NOTE]
+> If you want to use a service principal, follow the instructions to assign permissions under the [**full end-to-end deployment**](./Using-Reference-Implementation.md)
 
 3. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your fork of the [enterprise-scale GitHub repo](https://github.com/Azure/CET-NorthStar), or download the necessary templates/template parameter files from the examples folder to your local computer. For a basic deployment test, you'll need access to the following template:
 
-    - [`10-Create-ManagementGroup.parameters.json`](https://github.com/Azure/CET-NorthStar/blob/master/examples/10-create-managementgroup.parameters.json)
+    - [`10-Create-ManagementGroup.parameters.json`](https://github.com/Azure/CET-NorthStar/blob/master/examples/10-Create-ManagementGroup.parameters.json)
       Parameter file to deploy the company root management group (for example, Contoso) as a child of the tenant root group
 
      > Refer to [this article](../contribution.md#writing-arm-templates-for-contoso-implementation) to better understand how the enterprise-scale reference Resource Manager templates are constructed (with only one master template but multiple parameter files).
 
-4. In the sample parameter files (in this case, `110-create-managementgroup.parameters.json`), change the tenant ID and name of the management groups to reflect the tenant where they will be deployed. The tenant ID can be found by running `(Get-AzContext).Tenant`.
+4. In the sample parameter files (in this case, `10-Create-ManagementGroup.parameters.json`), change the tenant ID and name of the management groups to reflect the tenant where they will be deployed. The tenant ID can be found by running `(Get-AzContext).Tenant`.
 
     ```json
     {
@@ -73,7 +74,7 @@ Assign required permissions at tenant root level for the account that you want t
 
     #Deploy management groups to tenant level
     New-AzTenantDeployment -Name $Name -TemplateUri $TemplateUri -Location $location `
-                           -TemplateParameterFile 10-create-managementgroup.parameters.json
+                           -TemplateParameterFile 10-Create-ManagementGroup.parameters.json
 
     ```
 

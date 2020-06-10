@@ -115,7 +115,7 @@ The rationale is that it can be machine-generated on-demand, and it can be consi
     
     ```
 
-Contoso personnel should copy and paste the output into the input template parameter file. Not all properties are required, but extra metadata won't disrupt the processes, because the platform and template will ignore these properties. To view the requirements, see the [20-create-child-managementgroup.parameters.json](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json) example file.
+Contoso personnel should copy and paste the output into the input template parameter file. Not all properties are required, but extra metadata won't disrupt the processes, because the platform and template will ignore these properties. To view the requirements, see the [20-Create-Child-ManagementGroup.parameters.json](https://github.com/azure/CET-NorthStar/blob/master/examples/20-Create-Child-ManagementGroup.parameters.json) example file.
 
     ```json
     {
@@ -153,7 +153,7 @@ The tenant-level Resource Manager deployment above should create the following d
 - `Tailspin-bu1`
 - `Tailspin-bu1-corp`
 
-This Resource Manager template can be expanded to include [subscriptions](https://github.com/azure/CET-NorthStar/blob/master/examples/60-move-subscription-under-managementgroup.parameters.json) (moving subscription), [policy definition](https://github.com/azure/CET-NorthStar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json), [policy assignment](https://github.com/azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json), role definition, and role assignment.
+This Resource Manager template can be expanded to include [subscriptions](https://github.com/azure/CET-NorthStar/blob/master/examples/60-Move-Subscription-under-ManagementGroup.parameters.json) (moving subscription), [policy definition](https://github.com/azure/CET-NorthStar/blob/master/examples/30-Create-PolicyDefinition-at-ManagementGroup.parameters.json), [policy assignment](https://github.com/azure/CET-NorthStar/blob/master/examples/40-Create-PolicyAssignment-at-ManagementGroup.parameters.json), role definition, and role assignment.
 
 Contoso has chosen the following for their reference implementation:
 

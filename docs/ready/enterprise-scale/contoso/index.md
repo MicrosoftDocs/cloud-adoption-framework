@@ -68,13 +68,13 @@ This table lists the technical prerequisites needed for using the CAF enterprise
 
 3. [Clone the GitHub repo](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) or download the necessary template and template parameter files to have the templates from the `examples` folder to deploy on your local machine. <br> For a basic deployment test, you'll need access to the following templates:
 
-    - [10-create-child-managementgroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/10-create-managementgroup.parameters.json)
+    - [10-Create-Child-ManagementGroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/10-Create-ManagementGroup.parameters.json)
       Parameter file to deploy the company root management group (tailspin) as a child of the tenant root group.
-    - [20-create-child-managementgroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/20-create-child-managementgroup.parameters.json)
+    - [20-Create-Child-ManagementGroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/20-Create-Child-ManagementGroup.parameters.json)
       Parameter file to create nested child management groups under the company root management group.
-    - [30-create-policydefinition-at-managementgroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/30-create-policydefinition-at-managementgroup.parameters.json)
+    - [30-Create-PolicyDefinition-at-ManagementGroup.parameters](https://github.com/azure/CET-NorthStar/blob/master/examples/30-Create-PolicyDefinition-at-ManagementGroup.parameters.json)
       Deploys a `DeployIfNotExists` policy definition at the company root management group (Tailspin).
-    - [40-create-policyassignment-at-managementgroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/40-create-policyassignment-at-managementgroup.parameters.json)
+    - [40-Create-PolicyAssignment-at-ManagementGroup.parameters](https://github.com/Azure/CET-NorthStar/blob/master/examples/40-Create-PolicyAssignment-at-ManagementGroup.parameters.json)
       Assigns the policy definition at company root management group scope (Tailspin).
     <br><br>
      > Read the following to better understand how the CAF enterprise-scale landing zone reference Resource Manager templates are constructed (with one master template and parameter files only) [here](../contribution.md#writing-arm-templates-for-contoso-implementation).
@@ -288,7 +288,7 @@ For any other templates that you might want to deploy, follow the instructions b
 
 3. Place `<template-name>.json` and `<template-name>.parameters.json` at the scope you want to trigger the deployment. The `template-name` could be any valid filename, but it must have a `.parameters.json` suffix. See the example `create-storage-account.json` and `create-storage-account.parameters.json` files in the structure below.
 
-There is an exception to this when tenant-level deployment is placed at the root. In that case, the pipeline will use a generic [default template](https://github.com/uday31in/AzOps/blob/master/src/tenant.json), so you don't need to place the `<template-name>.json` file. Only `<template-name>.parameters.json` is required. You can still override this by placing `<template-name>.json` alongside `<template-name>.parameters.json`. For the example below, the file is `10-create-managementgroup.json`. Any other JSON file not named like `*.parameters.json` will be ignored and not used by the pipeline.
+There is an exception to this when tenant-level deployment is placed at the root. In that case, the pipeline will use a generic [default template](https://github.com/uday31in/AzOps/blob/master/src/tenant.json), so you don't need to place the `<template-name>.json` file. Only `<template-name>.parameters.json` is required. You can still override this by placing `<template-name>.json` alongside `<template-name>.parameters.json`. For the example below, the file is `10-Create-ManagementGroup.json`. Any other JSON file not named like `*.parameters.json` will be ignored and not used by the pipeline.
 
 ```shell
 AzOps
@@ -314,7 +314,7 @@ AzOps
     ││       └───rg3
     │├───Sandbox
     │└───.AzState
-    └────10-create-managementgroup.parameters.json
+    └────10-Create-ManagementGroup.parameters.json
 ```
 
 4. Stage your changes in Git. Don't push changes directly to the `master` branch. You should always create a feature branch and submit a pull request (PR) to your `master` branch. If changes are committed directly to the `master` branch, they won't be picked by GitHub Actions.

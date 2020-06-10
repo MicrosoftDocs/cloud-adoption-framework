@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Deploy a CAF Foundation blueprint
 
-The CAF Foundation blueprint does not deploy a landing zone. Instead it deploys the tools required to establish a governance MVP (minimally viable product) to begin developing your governance disciplines. This blueprint is designed to be additive to an existing landing zone and can be applied to the CAF migration landing zone with a single click.
+The CAF Foundation blueprint does not deploy a landing zone. Instead, it deploys the tools required to establish a governance MVP (minimum viable product) to begin developing your governance disciplines. This blueprint is designed to be additive to an existing landing zone and can be applied to the CAF migration landing zone with a single action.
 
 ## Deploy the blueprint
 
@@ -27,6 +27,8 @@ This implementation option provides an opinionated approach to the common design
 ### Deployment options
 
 This implementation option deploys a **minimally viable product (MVP)** to serve as the foundation for your governance disciplines. The team will follow a modular refactoring-based approach to mature the governance disciplines using the [govern](../../govern/index.md) methodology.
+
+<!-- TODO: Link references a nonexistent section. -->
 
 The specific resources deployed by this MVP approach are outlined in the [decisions section below](#decisions).
 
