@@ -3,7 +3,7 @@ title: Management group and subscription organization
 description: Management group and subscription organization
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -58,15 +58,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 
-- Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns.
-
-- There is a manual process (planned future automation) that can be conducted to limit an Azure AD tenant to only use enterprise enrollment subscriptions.
-
-  Prevents creating Visual Studio subscriptions at the root management group scope.
-
-  <!--
-  TODO: We need to follow up with Uday on what this process is and where it's documented.
-  -->
+- Subscriptions provide a management boundary for governance and isolation, creating a clear separation of concerns.
 
 **Design recommendations:**
 
@@ -82,7 +74,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Use the following principles when identifying requirements for new subscriptions:
 
-  - **Scale limits:** Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. For example, large specialized workloads such as high-performance computing, IoT, and SAP are all better suited to use separate subscriptions to avoid limits (for example, there's a limit of 50 ADF integrations).
+  - **Scale limits:** Subscriptions serve as a scale unit for component workloads to scale within platform subscription limits. For example, large specialized workloads such as high-performance computing, IoT, and SAP are all better suited to use separate subscriptions to avoid limits (such as a limit of 50 Azure Data Factory integrations).
 
   - **Management boundary:** Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns. For example, different environments such as development, test, and production are often isolated from a management perspective.
 
@@ -92,11 +84,11 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Align group subscriptions under management groups to the management group structure and policy requirements at scale. This ensures that subscriptions with the same set of policies and RBAC assignments can inherit those from a management group, avoiding duplication of assignments.
 
-- Establish a dedicated `management` subscription in the `platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
+- Establish a dedicated management subscription in the `Platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
 
-- Establish a dedicated `identity` subscription in the `platform` management group to host Windows Server Active Directory domain controllers, when necessary.
+- Establish a dedicated identity subscription in the `Platform` management group to host Windows Server Active Directory domain controllers, when necessary.
 
-- Establish a dedicated `connectivity` subscription in the `platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. This ensures that all foundation network resources are billed together and isolated from other workloads.
+- Establish a dedicated connectivity subscription in the `Platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. This ensures that all foundation network resources are billed together and isolated from other workloads.
 
 - Avoid a rigid subscription model, opting instead for a set of flexible criteria to group subscriptions across the organization. This ensures that as your organization's structure and workload composition changes, you're able to create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions; what works for one business unit may not work for another. Some apps may coexist within the same landing zone subscription while others may require their own subscription.
 

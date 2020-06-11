@@ -3,7 +3,7 @@ title: Design guidelines
 description: Design guidelines
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -15,9 +15,7 @@ This article and the article series that follows outline how the enterprise-scal
 
 Within the center of enterprise-scale architecture is a critical design path comprised of fundamental design topics with heavily interrelated and dependent design decisions. This repo provides design guidance across these architecturally significant technical domains to support the critical design decisions that must occur to define the enterprise-scale architecture. For each of the considered domains, readers should review the provided considerations and recommendations and use them to structure and drive designs within each area.
 
-<!-- TODO: Fix reference below. -->
-
-For example, a customer is likely to question how many subscriptions they require for their estate. In this instance, the reader should review the *C - management group and subscription organization -&gt; 2. Subscription organization and governance* section, using the outlined recommendations to help drive subscription decisions.
+For example, a customer is likely to ask how many subscriptions they need for their estate. In this case, the reader should review [subscription organization and governance](./management-group-and-subscription-organization.md#subscription-organization-and-governance) and use the outlined recommendations to drive subscription decisions.
 
 ## Critical design areas
 

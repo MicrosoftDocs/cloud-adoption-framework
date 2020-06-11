@@ -3,7 +3,7 @@ title: Implementation design guide
 description: Implementation design guide
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -59,7 +59,7 @@ An IaC repo will have hundreds if not thousands of configuration artifacts that 
 
 Provide tenant-level Resource Manager templates to build landing zones with enterprise-scale guidelines. We will enable security, logging, networking, and any other plumbing needed for landing zones (subscriptions) autonomously via policy enforcement. We will bootstrap Azure environment with Resource Manager templates to create necessary structure for management and networking and to declare desired goal state.
 
-The **File** > **New** > **Landing Zone** (subscription) process is Resource Manager orchestrating the following:
+The **File** > **New** > **Landing zone** (subscription) process is Resource Manager orchestrating the following:
 
 - Subscription creation
 - Subscriptions move
@@ -74,7 +74,7 @@ To start quickly, a [Resource Manager template](https://github.com/azure/CET-Nor
 ![End-to-end Resource Manager template deployment](./media/e2e-arm-template.png)
 _Figure 2: End-to-end Resource Manager deployment._
 
-A key design principle of enterprise-scale is policy-driven governance, and all necessary resources leading to the creation of landing zones are deployed using policies. For example, Azure Key Vault is deployed to store platform-level secret in the `management` subscription. Instead of scripting the template deployment to deploy Key Vault, the CAF enterprise-scale-based reference implementation has a policy definition that deploys a key vault in a prescribed manner and policy assignment at the `management` subscription scope. The benefits of a policy-driven approach are many, but the most significant are:
+A key design principle of enterprise-scale is policy-driven governance, and all necessary resources leading to the creation of landing zones are deployed using policies. For example, Azure Key Vault is deployed to store platform-level secret in the management subscription. Instead of scripting the template deployment to deploy Key Vault, the CAF enterprise-scale-based reference implementation has a policy definition that deploys a key vault in a prescribed manner and policy assignment at the management subscription scope. The benefits of a policy-driven approach are many, but the most significant are:
 
 - The platform can provide orchestration to bring target resources (in this case, a subscription) to a desired goal state.
 - Continuous conformance ensures that all platform-level resources are compliant. As the platform is aware of the goal state, it can assist by monitoring and remediating resources throughout each resource's lifecycle.

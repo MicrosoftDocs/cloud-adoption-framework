@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- docsTest:disable -->
+
 <!-- cSpell:ignore AppOps NetOps SecOps OIDC subscopes subresources -->
 
 # Scope
@@ -44,7 +46,7 @@ The identity team will create an Azure-ad-only group for each of the roles above
 
 <!-- markdownlint-enable MD033 -->
 
-Azure AD will be the primary identity provider where apps support modern federation protocols such as OIDC, SAML, or ws-fed. Regional domain controllers will be deployed in the `identity` subscription to support scenarios where legacy authentication (LDAP/kerberos) is required.
+Azure AD will be the primary identity provider where apps support modern federation protocols such as OIDC, SAML, or ws-fed. Regional domain controllers will be deployed in the identity subscription to support scenarios where legacy authentication (LDAP/Kerberos) is required.
 
 ### Management group and subscription organization
 
@@ -95,22 +97,22 @@ All canceled subscriptions will be moved under this management group by Azure Po
 
 A dedicated subscription for centrally managed networking infrastructure will control end-to-end connectivity for all landing zones within Contoso's Azure platform. Azure resources that deployed into this subscription include:
 
-- Azure Virtual WAN and its subresources (virtual hubs and gateways)
-- Azure firewalls
-- Firewall policies
-- Azure private domain name system (DNS) zones
+- Azure Virtual WAN and its subresources, such as virtual hubs and gateways.
+- Azure firewalls.
+- Firewall policies.
+- Azure private DNS zones.
 
-The `connectivity` subscription has the tag `BusinessUnit` with the value `platform`.
+The connectivity subscription has the tag `BusinessUnit` with the value `platform`.
 
 **Identity:**
 
-The `identity` subscription will be used to host virtual machines (VMs) running Windows Server Active Directory. There will be at least two domain controllers deployed per Azure region for redundancy purposes and to ensure that regions are independent if a regional outage occurs. Active Directory replication will ensure that all domain controllers are in sync.
+The identity subscription will be used to host virtual machines (VMs) running Windows Server Active Directory. There will be at least two domain controllers deployed per Azure region for redundancy purposes and to ensure that regions are independent if a regional outage occurs. Active Directory replication will ensure that all domain controllers are in sync.
 
 **Management:**
 
 A dedicated subscription is for centrally managed platform infrastructure and ensures a holistic, at-scale management capability across all landing zones in Contoso's Azure platform.
 
-The `management` subscription has the tag `BusinessUnit` with the value `platform`.
+The management subscription has the tag `BusinessUnit` with the value `platform`.
 
 The following policies are related to management group hierarchy, and subscription organization will be assigned within the Contoso production tenant:
 
@@ -125,16 +127,16 @@ The following policies are related to management group hierarchy, and subscripti
 
 ## Network topology and connectivity
 
-Contoso has a presence across Europe and north America, and its HQ is in london, UK. Contoso also has regional HQ offices in amsterdam and Chicago. There are approximately 500 Contoso branch offices across the US and Europe, with each branch office containing customer-premises equipment connected to the local, regional HQ via site-to-site virtual private network (VPN).
+Contoso has a presence across Europe and north America, and its headquarters is in London, UK. Contoso also has regional HQ offices in Amsterdam and Chicago. There are approximately 500 Contoso branch offices across the US and Europe, with each branch office containing customer-premises equipment connected to the local regional headquarters via site-to-site virtual private network (VPN).
 
 Contoso has decided to adopt enterprise-scale recommendations for building their network architecture in Azure. Key decisions they have adopted include:
 
 1. Deploying a Microsoft-managed network in Azure using Virtual WAN to connect all Azure and on-premises locations around the world.
 2. Using ExpressRoute Global Reach to interconnect corporate HQs with regional hubs.
-3. Moving away from their traditional demilitarized zone model and adopt a zero-trust network model.
-4. Allowing full subscription democratization by granting landing zone owners rights to create subnets within their landing zones to suit their app needs while ensuring the platform maintains compliance and security, as defined by the SecOps team.
+3. Moving away from their traditional DMZ model and adopt a zero-trust network model.
+4. Allowing full subscription democratization by granting landing zone owners permissions to create subnets within their landing zones to suit their app needs, while ensuring the platform maintains compliance and security as defined by the SecOps team.
 
-Contoso's network design based on enterprise-scale design principles is depicted in the picture shown below:
+Contoso's network design based on enterprise-scale design principles is shown here:
 
 ![Network topology](../media/image5.png)
 _Figure 2: Network topology._
@@ -143,27 +145,27 @@ With this network design, the following scenarios are possible for Contoso:
 
 - Regional HQ offices connect to Azure via ExpressRoute.
 - Branch offices connect to Azure via VPN (site-to-site IP security tunnels).
-- Landing zone virtual networks connect to the regional Virtual WAN virtual hub.
+- Landing zone virtual networks connect to the regional virtual hub.
 - Regional HQs connect to each other via ExpressRoute with global reach.
 - Regional HQs connect to branch offices via Virtual WAN.
 - Regional HQs and branch offices connect to Azure Virtual Network via Virtual WAN.
-- Using Azure Firewall within the Virtual WAN virtual hub secures internet-outbound connectivity from the virtual network.
+- Using Azure Firewall within the virtual hub secures internet-outbound connectivity from the virtual network.
 
-Contoso decided to deploy a Microsoft-managed, Virtual WAN-based network topology in order to support global interconnectivity between on-premises and Azure, plus a large number of branches that need to connect to Azure. The following diagram depicts the required Azure resources that must be deployed inside the `connectivity` subscription to support Contoso's global Azure network:
+Contoso decided to deploy a Microsoft-managed, Virtual WAN-based network topology in order to support global interconnectivity between on-premises and Azure, plus a large number of branches that need to connect to Azure. The following diagram depicts the required Azure resources that must be deployed inside the connectivity subscription to support Contoso's global Azure network:
 
 ![Connectivity subscription](../media/image7.png)
 
-In order to simplify the routing configuration across the entire Azure networking platform, Contoso has assigned the following IP address spaces for Virtual WAN virtual hubs and virtual networks:
+In order to simplify the routing configuration across the entire Azure networking platform, Contoso has assigned the following IP address spaces for virtual hubs and virtual networks:
 
 - North Europe: `10.1.0.0/16`
 - West Europe: `10.2.0.0/16`
 - North Central US: `10.3.0.0/16`
 
-Since Contoso must support three Azure regions⁠ (North Europe, West Europe, and North Central US⁠), they've documented the resources and parameters required for the platform to be deployed via Azure Policy and alignment with enterprise-scale guidance. More specifically, all these resources will be deployed within the `connectivity` subscription and enforced by `DeployIfNotExists` policies.
+Since Contoso must support three Azure regions⁠ (North Europe, West Europe, and North Central US⁠), they've documented the resources and parameters required for the platform to be deployed via Azure Policy and alignment with enterprise-scale guidance. More specifically, all these resources will be deployed within the connectivity subscription and enforced by `DeployIfNotExists` policies.
 
 <!-- markdownlint-disable MD033 -->
 
-North Europe:
+**North Europe:**
 
 <table>
 <thead>
@@ -221,13 +223,13 @@ North Europe:
 </tr>
 <tr class="even">
 <td>Network Watcher</td>
-<td>Networkwatcherrg</td>
+<td>NetworkWatcherRG</td>
 <td>Location: North Europe</td>
 </tr>
 </tbody>
 </table>
 
-West Europe:
+**West Europe:**
 
 <table>
 <thead>
@@ -268,7 +270,7 @@ West Europe:
 </tr>
 <tr class="odd">
 <td>Network Watcher</td>
-<td>Networkwatcherrg</td>
+<td>NetworkWatcherRG</td>
 <td>Location: West Europe</td>
 </tr>
 </tbody>
@@ -315,7 +317,7 @@ North Central US:
 </tr>
 <tr class="odd">
 <td>Network Watcher</td>
-<td>Networkwatcherrg</td>
+<td>NetworkWatcherRG</td>
 <td>Location: North Central US</td>
 </tr>
 </tbody>
@@ -394,7 +396,7 @@ The following networking policies will be assigned in the Contoso production ten
 
 ## Management and monitoring
 
-Contoso will employ a monitoring strategy where the central team will be responsible for all-up platform logging, security, and networking, and they'll use Azure-native services such as Azure Monitor logs, monitor, Security Center, sentinel, and Network Watcher. All core management infrastructure will exist inside the dedicated `management` subscription and will be deployed and governed by Azure Policy; the requisite configuration for workloads and subscriptions will be driven through Azure Policy as new subscriptions and resources are being created. The following diagram depicts the required Azure resources that must be deployed within the `management` subscription to support Contoso's platform management and monitoring:
+Contoso will employ a monitoring strategy where the central team will be responsible for all-up platform logging, security, and networking, and they'll use Azure-native services such as Azure Monitor logs, monitor, Security Center, sentinel, and Network Watcher. All core management infrastructure will exist inside the dedicated management subscription and will be deployed and governed by Azure Policy. The requisite configuration for workloads and subscriptions will be driven through Azure Policy as new subscriptions and resources are being created. The following diagram depicts the required Azure resources that must be deployed within the management subscription to support Contoso's platform management and monitoring:
 
 ![Monitoring subscription](../media/image9.png)
 _Figure 3: Monitoring subscription._
@@ -408,9 +410,9 @@ Since Contoso has selected West Europe as their primary Azure region, they'll us
 - Resource-centric and granular role-based access control (RBAC) for application teams to access their monitoring data.
 - At-scale emergency VM patching as well as granular VM patching for application teams per RBAC.
 - Centralized alerting from a platform perspective.
-- Centralized, interactive Azure dashboards through the lenses of networking, security, and overall platform health.
+- Centralized interactive Azure dashboards through the lenses of networking, security, and overall platform health.
 
-Contoso has documented the resources and parameters that it requires so that the platform can be managed and monitored via policy as per enterprise-scale guidance. All these resources will be deployed in the `management` subscription.
+Contoso has documented the resources and parameters that it requires so that the platform can be managed and monitored via policy as per enterprise-scale guidance. All these resources will be deployed in the management subscription.
 
 <table>
 <thead>
@@ -549,18 +551,18 @@ Contoso has defined the following business continuity and disaster guidelines fo
 ### High availability
 
 - App architectures should be built with a combination of availability zones across north and West Europe paired Azure regions. More specifically, apps and their data should be synchronously replicated across availability zones within an Azure region (North Europe) for high-availability purposes and asynchronously replicated across Azure regions (West Europe) for disaster recovery protection.
-- Azure services that provide native replication across availability zones should be used as a preference, such as zone-redundant storage and Azure SQL db.
+- Azure services that provide native replication across availability zones should be used as a preference, such as zone-redundant storage and Azure SQL Database.
 - Stateless VM workloads should be deployed across multiple instances in availability zones behind a load balancer standard or app gateway (v2).
-- Stateful VM workloads should use app-level replication across availability zones, such as SQL alwayson.
+- Stateful VM workloads should use app-level replication across availability zones, such as SQL Server Always On availability groups .
 - Stateful VM workloads that don't support app-level replication should use Azure Site Recovery zonal-replication (preview).
 
 ### Disaster recovery
 
-- App architectures should use native app replication technologies such as SQL alwayson for stateful VMs in order to replicate data from one Azure region (North Europe) region to the paired Azure region (West Europe).
+- App architectures should use native app replication technologies such as SQL Server Always On availability groups for stateful VMs in order to replicate data from one Azure region (North Europe) region to the paired Azure region (West Europe).
 - Apps should use Azure Site Recovery to replicate stateful VMs that don't support app-level replication.
 - Stateless VM workloads can be quickly re-created (or preprovisioned) in the paired Azure region (West Europe). Alternately, Azure Site Recovery could also be used.
-- For externally facing apps that must always be available, an active/active or active/passive deployment pattern across the North Europe and West Europe regions should be used, utilizing either Azure front door or Azure traffic manager to ensure apps are accessible at all times even if one of the Azure regions isn't available.
-- Apps should be transformed and modernized where possible to use Azure platform-as-as-service (PaaS) services that provide native replication techniques across regions, such as Azure Cosmos DB, SQL Database, and Key Vault.
+- For externally facing apps that must always be available, an active-active or active-passive deployment pattern across the North Europe and West Europe regions should be used, utilizing either Azure Front Door or Azure Traffic Manager to ensure apps are accessible at all times even if one of the Azure regions isn't available.
+- Apps should be transformed and modernized where possible to use Azure platform-as-as-service (PaaS) services that provide native replication techniques across regions, such as Azure Cosmos DB, Azure SQL Database, and Azure Key Vault.
 
 ### Backup
 
@@ -577,7 +579,7 @@ Contoso also recognizes the need to add backup capabilities to other resource ty
 
 ## Security, governance, and compliance
 
-For Contoso to understand what controls must be implemented and where these controls must be layered in their Azure architecture, they've developed and established a control framework to map their requirements to Azure platform capabilities. The framework principles are data protection, network protection, key management, vulnerability, and least privilege to ensure for whitelisted Azure service to conform to Contoso's enterprise security requirements, which are implemented using Azure Policy, ad PIM, RBAC, Security Center, sentinel, and monitor.
+For Contoso to understand what controls must be implemented and where these controls must be layered in their Azure architecture, they've developed and established a control framework to map their requirements to Azure platform capabilities. The framework principles are data protection, network protection, key management, vulnerability, and least privilege to ensure for whitelisted Azure service to conform to Contoso's enterprise security requirements, which are implemented using Azure Policy, PIM, RBAC, Azure Security Center, Azure Sentinel, and Azure Monitor.
 
 Through policy-driven management, Contoso's policy implementation will ensure that new subscriptions and resources quickly achieve their target compliance state. The primary policy effects used by Contoso to achieve this are `DeployIfNotExists`, `Deny`, `Append`, and `Modify`.
 
@@ -807,4 +809,4 @@ Operational changes are bound to happen in a production environment. Ideally, Co
 Due to operational demands, manual changes made via the Azure portal may be unavoidable. This leads to a configuration drift where the environment described in source
 Control no longer reflects the actual state of Azure resources. To deal with this conflict, enterprise-scale envisions not only a control mechanism to push changes within the IaC source to the Azure environment, but also the capacity to pull changes made outside of IaC back into source control. By establishing a feedback loop, we can ensure that the environment described in source control always reflects the actual state of Azure subscriptions and that manual changes don't inadvertently roll back by the next automated resource deployment.
 
-Through Azure Policy, changes to Azure resources within the Contoso management group scope are captured within an Azure Monitor logs instance in the `management` subscription. A log search alert will activate a webhook and notify Git if a resource configuration is updated or modified, prompting the resource state to export it as a PR for review. This will allow repo owners to control whether to roll forward the change by merging the PR or roll it back by making new configuration changes that'll override the out-of-band configuration change.
+Through Azure Policy, changes to Azure resources within the Contoso management group scope are captured within an Azure Monitor logs instance in the management subscription. A log search alert will activate a webhook and notify Git if a resource configuration is updated or modified, prompting the resource state to export it as a PR for review. This will allow repo owners to control whether to roll forward the change by merging the PR or roll it back by making new configuration changes that'll override the out-of-band configuration change.

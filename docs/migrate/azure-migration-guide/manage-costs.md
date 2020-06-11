@@ -48,7 +48,7 @@ These manual cost calculators can be used on their own to forecast potential spe
 
 **Prerequisites:** The remainder of this tab assumes the reader has already populated Azure Migrate with a collection of assets (infrastructure, apps, and data) to be migrated. The prior article on assessments provides instructions on collecting the initial data. Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
 
-Azure Migrate calculates **monthly cost estimates** based on data captured by the collector and service map. The following steps will load the cost estimates:
+Azure Migrate calculates monthly cost estimates based on data captured by the collector and service map. The following steps will load the cost estimates:
 
 1. Navigate to Azure Migrate Assessment in the portal.
 1. In the project **Overview** page, select **+Create assessment**.
@@ -63,7 +63,7 @@ The resulting estimate, pictured below, identifies the monthly costs of compute 
 
 ![Cost details view](./media/manage-costs/compute-storage-monthly-cost-estimate.png)
 
-_Figure 1: Image of the Cost Details view of an assessment in Azure Migrate._
+_Figure 1: Diagram of the Cost Details view of an assessment in Azure Migrate._
 
 ## Additional resources
 

@@ -3,7 +3,7 @@ title: Management and monitoring
 description: Management and monitoring
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -88,7 +88,7 @@ Within the context of the enterprise-scale architecture, centralized logging is 
 
 - Include [service](https://docs.microsoft.com/azure/service-health/service-health-overview) and [resource](https://docs.microsoft.com/azure/service-health/resource-health-overview) health events as part of the overall platform monitoring solution. Tracking service and resource health from the platform perspective is an important component of resource management in Azure.
 
-- Do not send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that _data born in Azure stays in Azure_. If on-premises SIEM integration is required, [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
+- Do not send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that _data born in Azure stays in azure_. If on-premises SIEM integration is required, [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
 
 ## Planning for app management and monitoring
 

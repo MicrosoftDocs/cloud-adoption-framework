@@ -3,13 +3,15 @@ title: Trigger local deployment
 description: Trigger local deployment
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Contents
+<!-- docsTest:disable -->
+
+# Trigger local deployment
 
 This article describes how to trigger local definition/assignment deployments from your computer when you need to validate deployments without GitHub Actions.
 

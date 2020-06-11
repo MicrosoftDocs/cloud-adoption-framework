@@ -3,13 +3,13 @@ title: Network topology and connectivity
 description: Network topology and connectivity
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore BGPs MACsec -->
+<!-- cSpell:ignore BGPs MACsec MPLS privatelink -->
 
 # Network topology and connectivity
 
@@ -73,7 +73,7 @@ DNS is a critical design topic in the overall enterprise-scale architecture, and
 
 - Use a virtual machine as a resolver for cross-premises DNS resolution with private DNS. This is a short-term solution since an Azure-native resolver is on the Azure Private DNS road map.
 
-- Create the Azure Private DNS zone within a global `connectivity` subscription. Additional Azure Private DNS zones might be created (for example, `privatelink.database.windows.net` or `privatelink.blob.core.windows.net` for Azure Private Link).
+- Create the Azure Private DNS zone within a global connectivity subscription. Additional Azure Private DNS zones might be created (for example, `privatelink.database.windows.net` or `privatelink.blob.core.windows.net` for Azure Private Link).
 
 ## Define an Azure networking topology
 
@@ -155,7 +155,7 @@ _Figure 3: Sample network topology._
 
 - For brownfield scenarios where you are migrating from non-Virtual WAN-based hub-and-spoke network topology, refer to this migration [article](https://docs.microsoft.com/azure/virtual-wan/migrate-from-hub-spoke-topology).
 
-- Virtual WAN and Azure Firewall resources should be created within the `connectivity` subscription.
+- Azure Virtual WAN and Azure Firewall resources should be created within the connectivity subscription.
 
 - Do not create more than 500 VNet connections per the Virtual WAN virtual hub.
 

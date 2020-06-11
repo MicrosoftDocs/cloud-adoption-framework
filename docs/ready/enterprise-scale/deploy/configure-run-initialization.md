@@ -3,13 +3,15 @@ title: Configure run initialization
 description: Configure run initialization
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Contents
+<!-- docsTest:disable -->
+
+# Configure run initialization
 
 This is the first step of who should deploy your environment. You can learn more about the overall process [here](./Using-Reference-Implementation.md).
 
