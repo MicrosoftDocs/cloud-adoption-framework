@@ -1,6 +1,6 @@
 ---
-title: Enterprise-scale implementation
-description: Options to implement the enterprise-scale architecture
+title: Implement enterprise-scale landing zones in Azure
+description: Review options to implement the enterprise-scale architecture.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Implement enterprise-scale Azure landing zones
+# Implement enterprise-scale landing zones in Azure
 
 When business requirements necessitate a rich initial implementation of landing zones, with fully integrated governance, security, and operations from the start, Microsoft suggests using the enterprise-scale example options shown here. This approach assumes existing skills in Azure platform automation, experience with GitHub, and deployment of Azure Pipelines via GitHub Actions. This approach will also implement opinionated options for platform automation, governance, security, and operations.
 

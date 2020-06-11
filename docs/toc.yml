@@ -188,7 +188,7 @@ items:
         items:
         - name: Overview
           href: ready/enterprise-scale/index.md
-        - name: Implementations
+        - name: Implement enterprise-scale landing zones
           href: ready/enterprise-scale/implementation.md
         - name: Architecture
           href: ready/enterprise-scale/architecture.md
@@ -218,16 +218,6 @@ items:
           href: ready/enterprise-scale/implementation-guidelines.md
         - name: Decision template
           href: ready/enterprise-scale/template.md
-        - name: Reference implementation
-          items:
-          - name: Getting started
-            href: ready/enterprise-scale/contoso/index.md
-          - name: Scope and Design
-            href: ready/enterprise-scale/contoso/scope.md
-          - name: Implementation
-            href: ready/enterprise-scale/contoso/design.md
-          - name: Known issues
-            href: ready/enterprise-scale/contoso/known-issues.md
 
       - name: Start small and expand
         items:

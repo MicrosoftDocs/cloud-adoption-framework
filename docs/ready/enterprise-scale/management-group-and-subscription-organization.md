@@ -58,7 +58,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Subscriptions serve as a scale unit so that component workloads can scale within the platform [subscription limits](https://docs.microsoft.com/azure/azure-subscription-service-limits). Make sure to consider subscription resource limits during your workload design sessions.
 
-- Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns.
+- Subscriptions provide a management boundary for governance and isolation, creating a clear separation of concerns.
 
 **Design recommendations:**
 

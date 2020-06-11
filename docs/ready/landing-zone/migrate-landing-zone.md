@@ -26,7 +26,7 @@ This implementation option provides an opinionated approach to the common design
 
 ### Deployment options
 
-This implementation option deploys a **minimally viable product (MVP)** to start a migration. As the migration progresses, the customer will follow a modular refactoring-based approach to mature the operating model in parallel guidance, using the [Govern](../../govern/index.md) and [Manage](../../manage/index.md) methodologies to address those complex topics in parallel to the initial migration effort.
+This implementation option deploys a _minimum viable product (MVP)_ to start a migration. As the migration progresses, the customer will follow a modular refactoring-based approach to mature the operating model in parallel guidance, using the [Govern methodology](../../govern/index.md) and the [Manage methodology](../../manage/index.md) to address those complex topics in parallel to the initial migration effort.
 
 The specific resources deployed by this MVP approach are outlined in the [decisions section below](#decisions).
 

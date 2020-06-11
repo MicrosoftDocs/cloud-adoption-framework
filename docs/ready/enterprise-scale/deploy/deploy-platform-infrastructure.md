@@ -24,8 +24,6 @@ _Figure 1: The process to deploy your own environment._
 
 It is important for you to be familiar with the `AzOps` folder structure created during environment discovery and repository initialization. To describe the desired state of platform subscriptions and landing zones, we apply changes only in the `<management-group-scope>.parameters.json` `.AzState` folder. This is how the folder structure should look in your environment:
 
-<!-- TODO: Replace with diagram -->
-
 ```shell
     AzOps
     └───Tenant Root Group
@@ -241,47 +239,47 @@ In a regional virtual hub network, deploy two Azure AD domain controllers follow
 
 1. In the [previous section](#deploy-definitions), all the definitions have been updated with a resource ID. Ids are updated in the `<your-company-name>.parameters.json` files in the `.AzState` folder on `your-company-name` scope. In addition to the updated `*.parameters.json` file, each definition is represented in a separate file in the same `.AzState` folder. The pull or a repository discovery operation keeps all files and the related properties in the `.AzState` folder in sync.
 
-  ```shell
-  # Simplified folder structure after initialization
+    ```shell
+    # Simplified folder structure after initialization
+  
+    AzOps
+    └─── Tenant root group
+        └─── <YourCompanyName> # Management group
+            ├─── .AzState
+            │   ├─── <YourCompanyName>.parameters.json # File containing the ID's
+            │   ├─── *_policyDefinitions-<policy-name-1>.parameters.json # Policy definition
+            │   .
+            │   └─── *_policyDefinitions-<policy-name-n>.parameters.json # Policy definition
+            ├─── Landing Zones # Management group under Contoso
+            │   ├─── .AzState
+            │   │   ├─── LandingZones.parameters.json # File containing the ID's
+            │   │   ├─── *_policyDefinitions-<policy-name-1>.parameters.json # Policy definition
+            │   │   .
+            │   │   └─── *_policyDefinitions-<policy-name-2>.parameters.json # Policy definition
+    ```
 
-  AzOps
-  └─── Tenant root group
-      └─── <YourCompanyName> # Management group
-          ├─── .AzState
-          │   ├─── <YourCompanyName>.parameters.json # File containing the ID's
-          │   ├─── *_policyDefinitions-<policy-name-1>.parameters.json # Policy definition
-          │   .
-          │   └─── *_policyDefinitions-<policy-name-n>.parameters.json # Policy definition
-          ├─── Landing Zones # Management group under Contoso
-          │   ├─── .AzState
-          │   │   ├─── LandingZones.parameters.json # File containing the ID's
-          │   │   ├─── *_policyDefinitions-<policy-name-1>.parameters.json # Policy definition
-          │   │   .
-          │   │   └─── *_policyDefinitions-<policy-name-2>.parameters.json # Policy definition
-  ```
-
-  As with definitions, to assign `policyAssignments` and `roleAssignments`, the `<management-group-name>.parameters.json` files need to be updated a second time. When assigning, three scopes need to be considered and followed for an enterprise-scale reference implementation:
+    As with definitions, to assign `policyAssignments` and `roleAssignments`, the `<management-group-name>.parameters.json` files need to be updated a second time. When assigning, three scopes need to be considered and followed for an enterprise-scale reference implementation:
     - The `YourCompanyName` management group scope
     - The `Landing Zones` management group scope
     - The connectivity / management / identity subscription scope
   
-  To assign a policy with Azure Policy, you can select a reference Azure Policy assignment in the [AzOpsReference](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) folder. Filter files with policy assignments in the name. After copying the object, replace all the values with the value `<replace-me>`. This needs to be done mainly for the `policyDefinitionId` and `scope` attributes.
+    To assign a policy with Azure Policy, you can select a reference Azure Policy assignment in the [AzOpsReference](https://github.com/Azure/CET-NorthStar/tree/master/AzOpsReference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState) folder. Filter files with policy assignments in the name. After copying the object, replace all the values with the value `<replace-me>`. This needs to be done mainly for the `policyDefinitionId` and `scope` attributes.
     - `policyDefinitionId`: Full resource ID (including scope path) of the definition.
     - `scope`: Assignment scope for the definition.
   
-  ``` bash
-      ....
-      # Here an empty example for the policyAssignments.
-      "policyAssignments": [
-          {
-              # Copy value object content of a Azure Policy from the AzOpsReference here.
-          },
-          {
-              # Copy value object content of a Azure Policy from the AzOpsReference here.
-          }
-      ],
-      ...
-  ```
+    ``` bash
+        ....
+        # Here an empty example for the policyAssignments.
+        "policyAssignments": [
+            {
+                # Copy value object content of a Azure Policy from the AzOpsReference here.
+            },
+            {
+                # Copy value object content of a Azure Policy from the AzOpsReference here.
+            }
+        ],
+        ...
+    ```
 
 2. Git stage and commit locally, and then push changes to your remote feature branch.
 
