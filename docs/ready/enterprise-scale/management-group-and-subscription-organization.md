@@ -130,9 +130,6 @@ Cost transparency across a technical estate is a critical management challenge f
 
 **Design recommendations:**
 
-- Use Azure Cost Management for the first level of aggregation, and make it available to app owners.
-
-<!-- TODO: Need to ask Uday or anyone else what this actually means
--->
+- Make Azure Cost Management available to app owners.
 
 - Use Azure resource tags for cost categorization and resource grouping. This allows you to have a chargeback mechanism for workloads that share a subscription or for a given workload that spans across multiple subscriptions.
