@@ -60,14 +60,6 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Subscriptions provide a management boundary for governance and isolation, allowing for a clear separation of concerns.
 
-- There is a manual process (planned future automation) that can be conducted to limit an Azure AD tenant to only use enterprise enrollment subscriptions.
-
-  Prevents creating Visual Studio subscriptions at the root management group scope.
-
-  <!--
-  TODO: We need to follow up with Uday on what this process is and where it's documented.
-  -->
-
 **Design recommendations:**
 
 - Treat subscriptions as a democratized unit of management aligned with business needs and priorities. This minimizes the management overhead created when a subscription is broken down into many resources groups that are then managed by different teams. It also provides a better billing mechanism for workloads that aren't only linked to tagging.
