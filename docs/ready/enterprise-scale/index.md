@@ -32,7 +32,10 @@ The enterprise-scale approach to construct landing zones includes four sets of a
 - [Design guidelines](./design-guidelines.md): Guide to the critical decisions that drive the design of the CAF enterprise-scale landing zone.
 - [Architecture](./architecture.md): Conceptual reference architecture that demonstrates design areas and best practices.
 - [Implementations](./implementation.md): Azure Resource Manager template of the architecture to accelerate adoption.
+
+<!-- TODO: Reinstate once template.md is ready. 
 - [Template](./template.md): A documentation template to quickly capture decisions and any deviation from the suggested architecture or implementation.
+-->
 
 ## Community
 

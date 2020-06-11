@@ -941,8 +941,6 @@ function Get-InvalidTermExpressions {
         '(?<=under|over)[ -]utilization!!utilization'
         '(?<=under|over)[ -]utilize!!utilize'
         '(?<=under|over)[ -]utilized!!utilized'
-        'vnet!!virtual network'
-        'vnets!!virtual networks'
         'vhub!!virtual hub'
         'vhubs!!virtual hubs'
         'vwan!!Virtual WAN'
