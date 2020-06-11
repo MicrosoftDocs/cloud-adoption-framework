@@ -26,7 +26,7 @@ This implementation option provides an opinionated approach to the common design
 
 ### Deployment options
 
-This implementation option deploys a **minimally viable product (MVP)** to serve as the foundation for your governance disciplines. The team will follow a modular refactoring-based approach to mature the governance disciplines using the [govern](../../govern/index.md) methodology.
+This implementation option deploys a **minimally viable product (MVP)** to serve as a starting point for developing your governance disciplines. The team will follow a modular refactoring-based approach to mature the governance disciplines using the [govern](../../govern/index.md) methodology.
 
 The specific resources deployed by this MVP approach are outlined in the [decisions section below](#decisions).
 

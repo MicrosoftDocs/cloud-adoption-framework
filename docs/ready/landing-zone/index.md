@@ -23,13 +23,11 @@ ms.subservice: ready
 
 ## What are Azure landing zones
 
-Azure landing zones are are the output of a multi-subscription Azure environment that consistently accounts for scale, security, governance, networking and identity across all workloads. Consistent design areas and modular implementation options allow Azure landing zones to scale to meet your cloud adoption needs from development of your first cloud-native applications to global, enterprise-scale migrations. As a result, the team can safely deploy IaaS, PaaS, or hybrid solutions with greater confidence.
-
-When each adoption team uses Azure landing zones, all design areas required to support the portfolio have already been considered for them. Azure landing zone implementation options act on those considerations and give you the flexibility to start adoption with a prescriptive set of design principles *or* defer specific technical decisions until your cloud operating model becomes more defined. Since Azure landing zones are all based on a common set of architecture design areas you can update or reconfigure your environment at any time.
+Azure landing zones are the output of a multi-subscription Azure environment that accounts for scale, security, governance, networking and identity. Azure landing zones enables application migrations and greenfield development at an enterprise scale in Azure, and considers all platform resources that are required to support the customer’s application portfolio and does not differentiate between IaaS or PaaS.
 
 ## Next steps
 
-Before choosing the right Azure landing zones, it is important to understand the building blocks from Microsoft's [design areas for Azure landing zones](./design-areas.md).
+Before choosing the right Azure landing zones, it is important to understand the [Azure landing zone design areas](./design-areas.md).
 
 > [!div class="nextstepaction"]
 > [Review design areas](./design-areas.md)
