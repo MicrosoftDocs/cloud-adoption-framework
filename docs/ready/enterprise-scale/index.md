@@ -15,11 +15,9 @@ The enterprise-scale architecture represents the strategic design path and targe
 
 Not all enterprises adopt Azure in the same way, so the enterprise-scale architecture may vary between customers. Ultimately, the technical considerations and design recommendations of the enterprise-scale architecture may lead to different trade-offs based on the customer's scenario. Some variation is expected, but if core recommendations are followed, the resulting target architecture will put the customer on a path to sustainable scale.
 
-<!-- markdownlint-disable MD026 -->
+## Prescriptive guidance
 
-### Prescriptive guidance
-
-The enterprise-scale architecture provides prescriptive guidance coupled with Azure best practices, and it follows design principles across the critical design areas for the customer's Azure environment. 
+The enterprise-scale architecture provides prescriptive guidance coupled with Azure best practices, and it follows design principles across the critical design areas for the customer's Azure environment.
 
 ## Qualifiers: Should I start with enterprise scale?
 

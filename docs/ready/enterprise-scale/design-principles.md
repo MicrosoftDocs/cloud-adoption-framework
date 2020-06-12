@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Design principles
 
-The enterprise-scale architecture prescribed in this playbook is based on the design principles described in this section. These principles serve as a compass for subsequent design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with nonadherence.
+The enterprise-scale architecture prescribed in this guidance is based on the design principles described in this section. These principles serve as a compass for subsequent design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with nonadherence.
 
 ## Subscription democratization
 

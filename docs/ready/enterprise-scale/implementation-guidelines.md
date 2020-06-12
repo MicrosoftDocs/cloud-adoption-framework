@@ -15,7 +15,9 @@ ms.subservice: ready
 
 This section covers how to get started with the enterprise-scale platform-native reference implementation and outline design objectives, current design, FAQ, and known issues.
 
-Two categories of activities must take place to implement enterprise-scale architecture. One is what must be true for enterprise scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The second category includes **file > New > Region** and **file > New > Landing zone**. These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IaC)_ and automation with deployment pipelines.
+Two categories of activities must take place to implement enterprise-scale architecture. One is what must be true for enterprise scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The second category includes **File** > **New** > **Region** and **File** > **New** > **Landing Zone**. These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IaC)_ and automation with deployment pipelines.
+
+Some of the tables below include blank columns. Use these columns to capture values and notes specific to your environment.
 
 ## What must be true for a CAF enterprise-scale landing zone
 

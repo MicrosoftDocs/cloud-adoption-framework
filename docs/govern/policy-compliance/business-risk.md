@@ -9,13 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: govern
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # Understand business risk during cloud migration
 
 An understanding of business risk is one of the most important elements of any cloud transformation. Risk drives policy, and it influences monitoring and enforcement requirements. Risk heavily influences how we manage the digital estate, on-premises or in the cloud.
-
-<!-- markdownlint-enable MD026 -->
 
 ## Relativity of risk
 
@@ -36,8 +32,6 @@ The assets that accumulated in the traditional, on-premises estate likely accumu
 
 During a cloud transformation, both the business and IT teams have an opportunity to reset those policies and build new with a matured mindset.
 
-<!-- markdownlint-disable MD026 -->
-
 ## What is a business risk MVP?
 
 A _minimum viable product (MVP)_ is commonly used to define the smallest unit of something that can produce tangible value. In a business risk MVP, the cloud governance team starts with the assumption that some assets will be deployed to a cloud environment at some point in time. It's unknown what those assets are at the time, and the team may be unsure what types of data will be stored on those assets.
@@ -55,8 +49,6 @@ The following are a few basic examples of business risks that can be included as
 
 The above examples are meant to establish MVP business risks as a theory. The actual list will be unique to every environment.
 Once the business risk MVP is established, they can be converted to [policies](./index.md) to remediate each risk.
-
-<!-- markdownlint-enable MD026 -->
 
 ## Incremental risk mitigation
 

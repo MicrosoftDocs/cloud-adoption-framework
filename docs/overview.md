@@ -10,8 +10,6 @@ ms.subservice: overview
 ms.custom: homepage
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # What is the Microsoft Cloud Adoption Framework for Azure?
 
 The Microsoft Cloud Adoption Framework for Azure is proven guidance that's designed to help you create and implement the business and technology strategies necessary for your organization to succeed in the cloud. It provides best practices, documentation, and tools that cloud architects, IT professionals, and business decision makers need to successfully achieve short-term and long-term objectives.
@@ -53,7 +51,7 @@ The Cloud Adoption Framework provides technical guidance for Microsoft Azure. Be
 
 This guidance affects the business, technology, and culture of enterprises. The affected roles include line-of-business leaders, business decision makers, IT decision makers, finance, enterprise administrators, IT operations, IT security and compliance, IT governance, workload development owners, and workload operations owners. Each role uses its own vocabulary, and each has different objectives and key performance indicators. A single set of content can't address all audiences effectively.
 
-Enter the **cloud architect**. The cloud architect serves as the thought leader and facilitator to bring these audiences together. We've designed this collection of guides to help cloud architects facilitate the right conversations with the right audiences and drive decision-making. Business transformation that's empowered by the cloud depends on the cloud architect role to help guide decisions throughout the business and IT.
+Enter the _cloud architect_. The cloud architect serves as the thought leader and facilitator to bring these audiences together. We've designed this collection of guides to help cloud architects facilitate the right conversations with the right audiences and drive decision-making. Business transformation that's empowered by the cloud depends on the cloud architect role to help guide decisions throughout the business and IT.
 
 Each section of the Cloud Adoption Framework represents a different specialization or variant of the cloud architect role. These sections also create opportunities to share cloud architecture responsibilities across a team of cloud architects. For example, the governance section is designed for cloud architects who have a passion for mitigating technical risks. Some cloud providers refer to these specialists as cloud custodians; we prefer the term _cloud guardian_ or, collectively, the _cloud governance team_.
 

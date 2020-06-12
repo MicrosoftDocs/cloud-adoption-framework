@@ -10,8 +10,6 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # Conduct a cloud policy review
 
 A cloud policy review is the first step toward [governance maturity](../index.md) in the cloud. The objective of this process is to modernize existing corporate IT policies. When completed, the updated policies provide an equivalent level of risk management for cloud-based resources. This article explains the cloud policy review process and its importance.

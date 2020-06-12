@@ -22,8 +22,6 @@ Microsoft Azure delivers hyperscale services and infrastructure with enterprise-
 
 Customers can use Azure to seamlessly extend their infrastructure into the cloud and build multitier architectures.
 
-<!-- markdownlint-disable MD026 -->
-
 ## What is a virtual datacenter?
 
 The cloud began as a platform for hosting public-facing applications. Enterprises recognized the value of the cloud and began migrating internal line-of-business applications. These applications brought additional security, reliability, performance, and cost considerations that required additional flexibility when delivering cloud services. New infrastructure and networking services were designed to provide this flexibility, and new features provided for elastic scale, disaster recovery, and other considerations.

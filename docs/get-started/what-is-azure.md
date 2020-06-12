@@ -12,8 +12,6 @@ ms.custom: governance
 
 <!-- cSpell:ignore PDU -->
 
-<!-- markdownlint-disable MD026 -->
-
 # How does Azure work?
 
 Azure is Microsoft's public cloud platform. Azure offers a large collection of services including platform as a service (PaaS), infrastructure as a service (IaaS), and managed database service capabilities. But what exactly is Azure, and how does it work?
@@ -26,7 +24,7 @@ Azure, like other cloud platforms, relies on a technology known as _virtualizati
 
 Essentially, the cloud is a set of physical servers in one or more datacenters that execute virtualized hardware on behalf of customers. So how does the cloud create, start, stop, and delete millions of instances of virtualized hardware for millions of customers simultaneously?
 
-To understand this, let's look at the architecture of the hardware in the datacenter. Inside each datacenter is a collection of servers sitting in server racks. Each server rack contains many server **blades** as well as a network switch providing network connectivity and a power distribution unit (PDU) providing power. Racks are sometimes grouped together in larger units known as _clusters_.
+To understand this, let's look at the architecture of the hardware in the datacenter. Inside each datacenter is a collection of servers sitting in server racks. Each server rack contains many server _blades_ as well as a network switch providing network connectivity and a power distribution unit (PDU) providing power. Racks are sometimes grouped together in larger units known as _clusters_.
 
 Within each rack or cluster, most of the servers are designated to run these virtualized hardware instances on behalf of the user. But some of the servers run cloud management software known as a fabric controller. The _fabric controller_ is a distributed application with many responsibilities. It allocates services, monitors the health of the server and the services running on it, and heals servers when they fail.
 

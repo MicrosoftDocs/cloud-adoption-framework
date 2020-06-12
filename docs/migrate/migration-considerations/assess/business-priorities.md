@@ -19,8 +19,6 @@ Unfortunately, the market doesn't wait for businesses to transition. Consumer be
 
 The ability to execute processes and technical transitions requires a consistent, stable effort. Quick decisions and nimble actions are needed to respond to market conditions. These two are at odds, making it easy for priorities to fall out of alignment. This article describes approaches to maintaining transitional alignment during migration efforts.
 
-<!-- markdownlint-disable MD026 -->
-
 ## How can business and technical priorities stay aligned during a migration?
 
 The cloud adoption team and the cloud governance team focus on the execution of the current iteration and current release. Iterations provide stable increments of technical work, thus avoiding costly disruptions that would otherwise slow the progress of migration efforts. Releases ensure that the technical effort and energy stay focused on the business objectives of the workload migration. A migration project could require many releases over an extended period. By the time it is completed, market conditions have likely changed significantly.

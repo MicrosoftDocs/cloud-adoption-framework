@@ -81,8 +81,6 @@ The following table can aid in documenting the findings from the steps above:
 | Europe        | Germany     | Yes             | Partners and customers | No - Network only           | Yes                           |
 | Asia Pacific  | South Korea | Yes             | Partners               | Yes                         | No                            |
 
-<!-- markdownlint-disable MD026 -->
-
 ## Relevance of data sovereignty
 
 Around the world, government organizations have begun establishing data sovereignty requirements, like General Data Protection Regulation (GDPR). Compliance requirements of this nature often require localization within a specific region or even within a specific country to protect their citizens. In some cases, data pertaining to customers, employees, or partners must be stored on a cloud platform within the same region as the end user.

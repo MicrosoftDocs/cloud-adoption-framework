@@ -17,8 +17,6 @@ Instead, we recommend that your team focus on thoroughly prioritizing and docume
 
 Limiting the plan to 10 workloads encourages agility and alignment of priorities as business criteria change. This approach also makes room for the cloud adoption team to learn and to refine estimates. Most important, it removes extensive planning as a barrier to effective business change.
 
-<!-- markdownlint-disable MD026 -->
-
 ## What is a workload?
 
 In the context of a cloud adoption, a workload is a collection of IT assets (servers, VMs, applications, data, or appliances) that collectively support a defined process. Workloads can support more than one process. Workloads can also depend on other shared assets or larger platforms. However, a workload should have defined boundaries regarding the dependent assets and the processes that depend upon the workload. Often, workloads can be visualized by monitoring network traffic among IT assets.

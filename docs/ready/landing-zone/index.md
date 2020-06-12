@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # What is a landing zone?
 
  When your portfolio includes multiple workloads, its possible to scale, accelerate, and optimize the collection of workloads by adhering to a common set of design areas found in all Azure landing zones.

@@ -130,8 +130,6 @@ Visual Studio App Center also provides a notification service that lets you use 
 
 # [Create cloud-native apps](#tab/CloudNative)
 
-<!-- markdownlint-disable MD026 -->
-
 ## What are cloud-native applications?
 
 Cloud-native applications are built from the ground up, optimized for cloud scale and performance. They're loosely coupled based on microservices architecture, use managed services, can be observable, and take advantage of continuous delivery to achieve reliability and faster time to market. Typically, they're portable and can run on dynamic environments like public, private, and hybrid clouds. Cloud-native applications are usually built with one or more of the following approaches:

@@ -166,8 +166,6 @@ Contoso admins set up Azure resource groups as shown in the following table.
 | `ContosoNetworkingRG` | This group contains all networking resources. |
 | `ContosoRG` | This group contains resources related to production apps and databases. |
 
-<!-- markdownlint-disable MD026 -->
-
 They create resource groups as follows:
 
 1. In the Azure portal > **Resource groups**, they add a group.
@@ -563,7 +561,7 @@ Contoso admins have decided that the Azure DNS service isn't a good choice in th
 
 In addition to the on-premises domain controllers, Contoso will implement four more domain controllers to support the Azure networks, two for each region. Here's what Contoso will deploy in Azure.
 
-| **Region** | **DC** | **VNet** | **Subnet** | **IP address** |
+| Region | DC | VNet | Subnet | IP address |
 | --- | --- | --- | --- | --- |
 | EUS2 | CONTOSODC3 | VNET-PROD-EUS2 | PROD-DC-EUS2 | 10.245.42.4 |
 | EUS2 | CONTOSODC4 | VNET-PROD-EUS2 | PROD-DC-EUS2 | 10.245.42.5 |

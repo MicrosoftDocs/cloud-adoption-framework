@@ -16,8 +16,6 @@ The [Govern methodology](../index.md) outlines the Five Disciplines of Cloud Gov
 
 Begin by taking a closer look at how resources are deployed in Azure.
 
-<!-- markdownlint-disable MD026 -->
-
 ## What is an Azure resource?
 
 In Azure, the term _resource_ refers to an entity managed by Azure. For example, virtual machines, virtual networks, and storage accounts are all referred to as Azure resources.
@@ -32,11 +30,11 @@ Each resource in Azure must belong to a [resource group](https://docs.microsoft.
 ![Diagram of a resource group containing a resource](../../_images/govern/design/governance-1-10.png)
 _Figure 2: A resource group contains a resource._
 
-Resource groups and the resources they contain are associated with an Azure **subscription**.
+Resource groups and the resources they contain are associated with an Azure subscription.
 
 ## What is an Azure subscription?
 
-An Azure subscription is similar to a resource group in that it's a logical construct that groups together resource groups and their resources. An Azure subscription is also associated with the controls used by Azure Resource Manager. Take a closer look at Azure Resource Manager to learn about the relationship between it and an Azure subscription.
+An Azure _subscription_ is similar to a resource group in that it's a logical construct that groups together resource groups and their resources. An Azure subscription is also associated with the controls used by Azure Resource Manager. Take a closer look at Azure Resource Manager to learn about the relationship between it and an Azure subscription.
 
 ![Diagram of an Azure subscription](../../_images/govern/design/governance-1-11.png)
 _Figure 3: An Azure subscription._
@@ -58,10 +56,10 @@ While these clients connect to Azure Resource Manager using the RESTful API, Azu
 ![Azure resource providers](../../_images/govern/design/governance-1-14.png)
 _Figure 6: Azure resource providers._
 
-When a client makes a request to manage a specific resource, Azure Resource Manager connects to the resource provider for that resource type to complete the request. For example, if a client makes a request to manage a virtual machine resource, Azure Resource Manager connects to the **Microsoft.Compute** resource provider.
+When a client makes a request to manage a specific resource, Azure Resource Manager connects to the resource provider for that resource type to complete the request. For example, if a client makes a request to manage a virtual machine resource, Azure Resource Manager connects to the `Microsoft.Compute` resource provider.
 
 ![Azure Resource Manager connecting to the Microsoft.Compute resource provider](../../_images/govern/design/governance-1-15.png)
-_Figure 7: Azure Resource Manager connects to the **Microsoft.Compute** resource provider to manage the resource specified in the client request._
+_Figure 7: Azure Resource Manager connects to the `Microsoft.Compute` resource provider to manage the resource specified in the client request._
 
 Azure Resource Manager requires the client to specify an identifier for both the subscription and the resource group in order to manage the virtual machine resource.
 
@@ -72,7 +70,7 @@ The first control is that a request must be made by a validated user, and Azure 
 ![Azure Active Directory](../../_images/govern/design/governance-1-16.png)
 _Figure 8: Azure Active Directory._
 
-In Azure AD, users are segmented into **tenants**. A tenant is a logical construct that represents a secure, dedicated instance of Azure AD typically associated with an organization. Each subscription is associated with an Azure AD tenant.
+In Azure AD, users are segmented into tenants. A _tenant_ is a logical construct that represents a secure, dedicated instance of Azure AD typically associated with an organization. Each subscription is associated with an Azure AD tenant.
 
 ![An Azure AD tenant associated with a subscription](../../_images/govern/design/governance-1-17.png)
 _Figure 9: An Azure AD tenant associated with a subscription._
@@ -84,7 +82,7 @@ The next control is a check that the user has sufficient permission to make the 
 ![Users assigned to RBAC roles](../../_images/govern/design/governance-1-18.png)
 _Figure 10: Each user in the tenant is assigned one or more RBAC roles._
 
-An RBAC role specifies a set of permissions a user may take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in **owner** role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) allows a user to perform any action on a resource.
+An RBAC role specifies a set of permissions a user may take on a specific resource. When the role is assigned to the user, those permissions are applied. For example, the [built-in `owner` role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) allows a user to perform any action on a resource.
 
 The next control is a check that the request is allowed under the settings specified for [Azure resource policy](https://docs.microsoft.com/azure/governance/policy). Azure resource policies specify the operations allowed for a specific resource. For example, an Azure resource policy can specify that users are only allowed to deploy a specific type of virtual machine.
 

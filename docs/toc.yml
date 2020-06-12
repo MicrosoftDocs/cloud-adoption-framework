@@ -216,8 +216,6 @@ items:
             href: ready/enterprise-scale/platform-automation-and-devops.md
         - name: Implementation guidelines
           href: ready/enterprise-scale/implementation-guidelines.md
-        - name: Decision template
-          href: ready/enterprise-scale/template.md
 
       - name: Start small and expand
         items:

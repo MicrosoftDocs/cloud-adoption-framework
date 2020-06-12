@@ -17,7 +17,7 @@ When various teams (internal, Microsoft-specific, or partners) engage to support
 <!-- TODO: Need content here. -->
 
 > [!WARNING]
-> Placeholder, document in development...
+> Placeholder: document in development.
 
 ## Next steps
 

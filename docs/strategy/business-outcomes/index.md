@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # What business outcomes are associated with transformation journeys?
 
 The most successful transformation journeys start with a business outcome in mind. Cloud adoption can be a costly and time-consuming effort. Fostering the right level of support from IT and other areas of the business is crucial to success. This article series is designed to help customers identify business outcomes that are concise, defined, and drive observable results or change in business performance, supported by a specific measure.
