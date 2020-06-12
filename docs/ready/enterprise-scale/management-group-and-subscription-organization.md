@@ -17,18 +17,18 @@ _Figure 1: Management group hierarchy._
 
 ## Define a management group hierarchy
 
-Management group structures within an Azure Active Directory tenant help to support organizational mapping and must be considered thoroughly when an organization plans Azure adoption at scale.
+Management group structures within an Azure Active Directory (Azure AD) tenant support organizational mapping and must be considered thoroughly when an organization plans Azure adoption at scale.
 
 **Design considerations:**
 
-- Management groups can be used to aggregate policy and initiative assignments.
+- Management groups can be used to aggregate policy and initiative assignments via Azure Policy.
 - A management group tree can support up to [six levels of depth](https://docs.microsoft.com/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the root or subscription level.
 
 **Design recommendations:**
 
 - Keep the management group hierarchy reasonably flat with no more than three to four levels, ideally. This reduces management overhead and complexity.
 
-- Avoid duplicating your organizational structure into a deeply nested management group hierarchy. Management groups should be used for policy assignment versus billing purposes. This necessitates using management groups for their intended purpose in enterprise-scale architecture, which is providing Azure policies for workloads that require the same type of security and compliance under the same management group.
+- Avoid duplicating your organizational structure into a deeply nested management group hierarchy. Management groups should be used for policy assignment versus billing purposes. This necessitates using management groups for their intended purpose in enterprise-scale architecture, which is providing Azure policies for workloads that require the same type of security and compliance under the same management group level.
 
 - Create management groups under your root-level management group to represent the types of workloads (archetype) that you'll host and ones based on their security, compliance, connectivity, and feature needs. This allows you to have a set of Azure policies applied at the management group level for all workloads that require the same security, compliance, connectivity, and feature settings.
 
@@ -38,13 +38,13 @@ Management group structures within an Azure Active Directory tenant help to supp
 
 - Use a dedicated service principal name (SPN) to execute management group management operations, subscription management operations, and role assignment. This reduces the number of users who have elevated rights, following least-privilege guidelines.
 
-- Assign the `user access administrator` Azure AD role at the root management group scope (`\`) to grant the SPN mentioned above access at the root level. After the SPN is granted permissions, the `user administrator access` role can be safely removed. This ensures only the SPN is part of the `user administrator access` role.
+- Assign the `User Access Administrator` Azure RBAC role at the root management group scope (`/`) to grant the SPN mentioned above access at the root level. After the SPN is granted permissions, the `User Access Administrator` role can be safely removed. This ensures only the SPN is part of the `User Access Administrator` role.
 
-- Assign `contributor` permission to the SPN mentioned above at the root management group scope (`\`), which allows tenant-level operations. This ensures that the SPN can be used to deploy and manage resources to any subscription within your organization.
+- Assign `Contributor` permission to the SPN mentioned above at the root management group scope (`/`), which allows tenant-level operations. This ensures that the SPN can be used to deploy and manage resources to any subscription within your organization.
 
-- Create a platform management group under the root management group to support common platform policy and role-based access control (RBAC) assignment. This ensures that different policies can be applied to the subscriptions used for your Azure foundation, and that the billing for common resources is centralized in one set of foundational subscriptions.
+- Create a `platform` management group under the root management group to support common platform policy and role-based access control (RBAC) assignment. This ensures that different policies can be applied to the subscriptions used for your Azure foundation, and that the billing for common resources is centralized in one set of foundational subscriptions.
 
-- Limit the number of Azure Policy assignments made at the root management group scope. This minimizes debugging inherited policies in lower-level management groups.
+- Limit the number of Azure Policy assignments made at the root management group scope (`/`). This minimizes debugging inherited policies in lower-level management groups.
 
 - Do not create any subscriptions under the root management group. This ensures that subscriptions don't only inherit the small set of Azure policies assigned at the root-level management group, which don't represent a full set necessary for a workload.
 
@@ -60,9 +60,11 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Subscriptions provide a management boundary for governance and isolation, creating a clear separation of concerns.
 
+- There is a manual process (planned future automation) which can be conducted to limit an Azure AD tenant to only use Enterprise Enrollment subscriptions. This prevents creation of MSDN subscriptions at the root management group scope.
+  
 **Design recommendations:**
 
-- Treat subscriptions as a democratized unit of management aligned with business needs and priorities. This minimizes the management overhead created when a subscription is broken down into many resources groups that are then managed by different teams. It also provides a better billing mechanism for workloads that aren't only linked to tagging.
+- Treat subscriptions as a democratized unit of management aligned with business needs and priorities.
 
 - Make subscription owners aware of their roles and responsibilities:
 
@@ -70,7 +72,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
   - Take full ownership of budget spending and resource utilization.
 
-  - When required, ensure policy compliance and remediate.
+  - Ensure policy compliance and remediate when necessary.
 
 - Use the following principles when identifying requirements for new subscriptions:
 
@@ -82,19 +84,19 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
   - **Target network topology:** Virtual networks can't be shared across subscriptions, but they can connect with different technologies such as virtual network peering or ExpressRoute. Therefore, it's important to consider which workloads must communicate with each other when deciding if a new subscription is required.
 
-- Align group subscriptions under management groups to the management group structure and policy requirements at scale. This ensures that subscriptions with the same set of policies and RBAC assignments can inherit them from a management group, avoiding duplication of assignments.
+- Group subscriptions together under management groups aligned within the management group structure and policy requirements at scale. This ensures that subscriptions with the same set of policies and RBAC assignments can inherit them from a management group, avoiding duplicate assignments.
 
-- Establish a dedicated management subscription in the `Platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
+- Establish a dedicated `management` subscription in the `platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
 
-- Establish a dedicated identity subscription in the `Platform` management group to host Windows Server Active Directory domain controllers, when necessary.
+- Establish a dedicated `identity` subscription in the `platform` management group to host Windows Server Active Directory domain controllers, when necessary.
 
-- Establish a dedicated connectivity subscription in the `Platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. This ensures that all foundation network resources are billed together and isolated from other workloads.
+- Establish a dedicated `connectivity` subscription in the `platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. This ensures that all foundation network resources are billed together and isolated from other workloads.
 
 - Avoid a rigid subscription model, opting instead for a set of flexible criteria to group subscriptions across the organization. This ensures that as your organization's structure and workload composition changes, you're able to create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions; what works for one business unit may not work for another. Some apps may coexist within the same landing zone subscription while others may require their own subscription.
 
 ## Configure subscription quota and capacity
 
-Every Azure region contains a finite set of resources at any given time. When considering an enterprise-scale Azure adoption involving large resource quantities, it's key to ensure that sufficient capacity and stock-keeping units (SKUs) are available, and that the attained capacity can be understood and monitored.
+Each Azure region contains a finite number of resources. When considering an enterprise-scale Azure adoption involving large resource quantities, ensure that sufficient capacity and SKUs are available and the attained capacity can be understood and monitored.
 
 **Design considerations:**
 
@@ -108,13 +110,13 @@ Every Azure region contains a finite set of resources at any given time. When co
 
 - Use subscriptions as scale units, and scale out resources and subscriptions as required. This ensures that your workload can use the required resources for scaling out, when needed, without hitting subscription limits in the Azure platform.
 
-- Use reserved instances to prioritize reserved capacity in required regions. This ensures that your workload will have the required services even if there's a high demand for that resource in a given region at any time.
+- Use reserved instances to prioritize reserved capacity in required regions. This ensures that your workload will have the required capacity even when there's a high demand for that resource in a specific region.
 
-- Establish a dashboard with custom views to monitor utilized capacity levels. Set up alerts if capacity utilization is reaching critical levels (for example, 90 percent CPU utilization). This ensures that you can plan for capacity before your workloads require scaling out.
+- Establish a dashboard with custom views to monitor utilized capacity levels. Set up alerts if capacity utilization is reaching critical levels (for example, 90 percent CPU utilization).
 
 - Raise support requests for quota increase as a part of subscription provisioning (for example, total available VM cores within a subscription). This ensures your quota limits are set before your workloads require to go over the default limits.
 
-- Ensure required services and features are available within the chosen deployment regions. This ensures your workload can run as expected in those regions.
+- Ensure required services and features are available within the chosen deployment regions.
 
 ## Establish cost management
 
@@ -130,6 +132,6 @@ Cost transparency across a technical estate is a critical management challenge f
 
 **Design recommendations:**
 
-- Make Azure Cost Management available to app owners.
+- Use Azure Cost Management for cost aggregation and make it available to application owners.
 
 - Use Azure resource tags for cost categorization and resource grouping. This allows you to have a chargeback mechanism for workloads that share a subscription or for a given workload that spans across multiple subscriptions.
