@@ -31,20 +31,6 @@ _Figure 1: An Azure enterprise enrollment hierarchy._
   - Service administrator
   - Notification contact
 
-### Why enterprise enrollment
-
-- Enterprise enrollment provides organizational representations and makes it easier for enterprises to roll costs to their respective departments.
-- Enterprise enrollment supports setting an administrator for departments or for entire organizations.
-- The Azure enterprise portal enables enterprise enrollment and also helps organizations to set key contacts who receive critical communication from Microsoft.
-
-### Scenarios where enterprise enrollment isn't possible
-
-- Enterprise enrollment is part of an Enterprise Agreement. Customers who aren't Azure enterprise customers won't have access to the enterprise portal and won't be able to manage subscriptions here.
-
-- You can manage resources without the enterprise portal via [Azure management groups](https://docs.microsoft.com/azure/governance/management-groups/overview). Features and implementation of hierarchy in management groups will differ from enterprise enrollment.
-
-- Management groups can be used to organize hierarchies for unified policies and access management, while enterprise enrollment organizes subscriptions into departments and accounts for unified account, expense, administration, and communication management.
-
 **Design considerations:**
 
 - The enrollment provides a hierarchical organizational structure to govern the management of customers subscriptions.
@@ -63,6 +49,8 @@ _Figure 1: An Azure enterprise enrollment hierarchy._
 
 **Design recommendations:**
 
+- Only use the authentication type "Work and School Account" for all account types. Avoid using the MSA account type.
+
 - Set up the notification contact email address to ensure notifications are sent to an appropriate group mailbox.
 
 - Assign a budget for each account and establish an alert associated with the budget.
@@ -73,7 +61,7 @@ _Figure 1: An Azure enterprise enrollment hierarchy._
 
 - Restrict and minimize the number of account owners within the enrollment to avoid the proliferation of admin access to subscriptions and associated Azure resources.
 
-- If multiple Azure AD tenants are used, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
+- If multiple Azure Active Directory (Azure AD) tenants are used, verify that the account owner is associated with the same tenant as where subscriptions for the account are provisioned.
 
 - Set up Enterprise Dev/Test/production environments at an EA account level to support holistic isolation.
 
@@ -87,11 +75,11 @@ _Figure 1: An Azure enterprise enrollment hierarchy._
 
 An Azure AD tenant provides identity and access management, which is an important part of your security posture, to ensure that authenticated and authorized users have access to only the resources for which they have access permissions. Azure AD not only provides these services to applications and services deployed in Azure, but to services and applications deployed outside of Azure (such as on-premises or third-party cloud providers). Azure AD is also used by software as a service (SaaS) applications such as Microsoft 365 and the Azure Marketplace. Organizations already using on-premises Active Directory can use their existing infrastructure and extend authentication to the cloud by integrating with Azure AD. Each Azure AD directory has one or more domains. A directory can have many subscriptions associated with it, but only one Azure AD tenant.
 
-It is important to ask basic security questions during the Azure AD design phase, such as how an organization manages credentials and how it controls human, application, and programmatic access.
+It's important to ask basic security questions during the Azure AD design phase, such as how an organization manages credentials and how it controls human, application, and programmatic access.
 
 **Design considerations:**
 
-Multiple tenants can function in the same enterprise enrollment.
+- Multiple Azure AD tenants can function in the same enterprise enrollment.
 
 **Design recommendations:**
 
@@ -99,7 +87,7 @@ Multiple tenants can function in the same enterprise enrollment.
 
 - If your organization doesn't have an identity infrastructure, start by implementing an Azure-ad-only identity deployment. Such deployment with [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) and [Microsoft enterprise mobility + security](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) provides end-to-end protection for SaaS and enterprise applications as well as for devices.
 
-- Multi-factor authentication provides another layer of security and a second barrier of authentication. Enforce [multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) for all privileged accounts for greater security. Multi-factor authentication doesn't stop phishing or social engineering, such as a hacker taking physical possession of your phone, SIM swapping, or cloning. Multi-factor authentication should be implemented via a device management policy (such as strong PIN locking, encryption, and erasing a device remotely when it's lost). Out-of-band multi-factor authentication (such as biometric) is also considered a secure form of multi-factor authentication.
+- Multi-factor authentication provides another layer of security and a second barrier of authentication. Enforce [multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) for all privileged accounts for greater security.
 
 - Plan and implement for [emergency access](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-emergency-access) or break-glass accounts to prevent tenant-wide account lockout.
 
