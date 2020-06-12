@@ -119,10 +119,10 @@ The following pros and cons should be considered when making design decisions:
 
 - Pros:
 
-  - No more writing Resource Manager templates! The last Resource Manager template has been written.
-  - Resources export consistently throughout their lifecycle regardless of how they're created and updated⁠&mdash;the Azure portal, Azure CLI, PowerShell, or third-party tools.
+  - No more writing Resource Manager templates. The last Resource Manager template has been written.
+  - Resources export consistently throughout their lifecycle regardless of how they're created and updated via the Azure portal, Azure CLI, PowerShell, or third-party tools.
   - It's easier to detect drift between a configuration stored in Git versus the current configuration; we're essentially comparing two JSON documents.
-  - It's possible to manage implicit dependencies between simple resources on both the client side and the server side. Azure doesn't have many circular dependencies between resources, and it's possible to work out implicit dependencies based on resource schemas already published. For example, a virtual machine might depend on kernel-level virtual switches but not vice-versa (for example, policy definition -> Policy assignment -> Role assignment -> Remediation or virtual network -> ExpressRoute or Key Vault -> Azure SQL).
+  - It's possible to manage implicit dependencies between simple resources on both the client side and the server side. Azure doesn't have many circular dependencies between resources, and it's possible to work out implicit dependencies based on resource schemas already published. For example, a virtual machine might depend on kernel-level virtual switches but not vice-versa (for example, Policy definition -> Policy assignment -> Role assignment -> Remediation or virtual network -> ExpressRoute or Key Vault -> Azure SQL).
 
 - Cons:
 

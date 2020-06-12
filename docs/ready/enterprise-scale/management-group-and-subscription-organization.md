@@ -6,7 +6,7 @@ ms.author: brblanch
 ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
-ms.subservice: ready
+ms.subservice: ready 
 ---
 
 # Management group and subscription organization
@@ -46,7 +46,7 @@ Management group structures within an Azure Active Directory tenant help to supp
 
 - Limit the number of Azure Policy assignments made at the root management group scope. This minimizes debugging inherited policies in lower-level management groups.
 
-- Do not create any subscriptions under the root management group. This ensures that subscriptions don't only inherit the small set of Azure policies assigned at the root-level management group, which aren't representative of a full set necessary for any given workload.
+- Do not create any subscriptions under the root management group. This ensures that subscriptions don't only inherit the small set of Azure policies assigned at the root-level management group, which don't represent a full set necessary for a workload.
 
 ## Subscription organization and governance
 
@@ -82,7 +82,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
   - **Target network topology:** Virtual networks can't be shared across subscriptions, but they can connect with different technologies such as virtual network peering or ExpressRoute. Therefore, it's important to consider which workloads must communicate with each other when deciding if a new subscription is required.
 
-- Align group subscriptions under management groups to the management group structure and policy requirements at scale. This ensures that subscriptions with the same set of policies and RBAC assignments can inherit those from a management group, avoiding duplication of assignments.
+- Align group subscriptions under management groups to the management group structure and policy requirements at scale. This ensures that subscriptions with the same set of policies and RBAC assignments can inherit them from a management group, avoiding duplication of assignments.
 
 - Establish a dedicated management subscription in the `Platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
 
@@ -106,7 +106,7 @@ Every Azure region contains a finite set of resources at any given time. When co
 
 **Design recommendations:**
 
-- Use subscriptions as scale units, scaling out resources and subscriptions as required. This ensures that your workload can use the required resources for scaling out, when needed, without hitting subscription limits in the Azure platform.
+- Use subscriptions as scale units, and scale out resources and subscriptions as required. This ensures that your workload can use the required resources for scaling out, when needed, without hitting subscription limits in the Azure platform.
 
 - Use reserved instances to prioritize reserved capacity in required regions. This ensures that your workload will have the required services even if there's a high demand for that resource in a given region at any time.
 

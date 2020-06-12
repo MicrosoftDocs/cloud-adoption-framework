@@ -16,7 +16,7 @@ ms.subservice: ready
 An enterprise enrollment, often referred to as an Enterprise Agreement, represents the commercial relationship between Microsoft and how the customer uses Azure. It provides the basis for billing across all customer subscriptions and impacts administration of the customer estate. Enterprise enrollment, also known as EA, is managed via an Azure enterprise portal. Azure enterprise enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost-enrollment groups within an organization.
 
 ![Azure EA hierarchies](./media/ea.png)
-_Figure 1: An EA enrollment hierarchy._
+_Figure 1: An Azure enterprise enrollment hierarchy._
 
 - Departments help to segment costs into logical groupings and to set a budget or quota at the department level (note: the quota isn't enforced firmly and is used for reporting purposes).
 
@@ -87,7 +87,7 @@ _Figure 1: An EA enrollment hierarchy._
 
 An Azure AD tenant provides identity and access management, which is an important part of your security posture, to ensure that authenticated and authorized users have access to only the resources for which they have access permissions. Azure AD not only provides these services to applications and services deployed in Azure, but to services and applications deployed outside of Azure (such as on-premises or third-party cloud providers). Azure AD is also used by software as a service (SaaS) applications such as Microsoft 365 and the Azure Marketplace. Organizations already using on-premises Active Directory can use their existing infrastructure and extend authentication to the cloud by integrating with Azure AD. Each Azure AD directory has one or more domains. A directory can have many subscriptions associated with it, but only one Azure AD tenant.
 
-It is important to ask basic security questions during the Azure AD design phase&mdash;how an organization is managing credentials, control of human and application access, and how to control programmatic access.
+It is important to ask basic security questions during the Azure AD design phase, such as how an organization manages credentials and how it controls human, application, and programmatic access.
 
 **Design considerations:**
 
@@ -107,4 +107,4 @@ Multiple tenants can function in the same enterprise enrollment.
 
 - If dev/test/production are going to be isolated environments from an identity perspective, then separate them at a tenant level via multiple tenants.
 
-- Avoid creating a new Azure AD tenant unless there's a strong IAM justification and processes are already in place.
+- Avoid creating a new Azure AD tenant unless there's a strong identity and access management justification and processes are already in place.

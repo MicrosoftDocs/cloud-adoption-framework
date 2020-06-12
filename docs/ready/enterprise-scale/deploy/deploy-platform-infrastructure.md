@@ -131,7 +131,7 @@ _Figure 3: The process to deploy definitions._
 
 4. Create a PR to `master`. GitHub Actions run a PR check and push the changes to the target Azure environment. You can monitor the status in the actions log. Once all the checks are successful, you can squash and merge your changes to the `master` branch.
 
-(Optional): Reinitialize or update the repository in your `master` branch. This will match all definitions with the resource ids that are required for the assignments in the next section.
+(Optional): Reinitialize or update the repository in your `master` branch. This will match all definitions to the resource IDs required for the assignments in the next section.
 
 ``` powershell
     Initialize-AzOpsRepository -Verbose

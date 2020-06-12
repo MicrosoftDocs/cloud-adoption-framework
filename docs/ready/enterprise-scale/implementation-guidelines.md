@@ -15,11 +15,11 @@ ms.subservice: ready
 
 This section covers how to get started with the enterprise-scale platform-native reference implementation and outline design objectives, current design, FAQ, and known issues.
 
-Two categories of activities must take place to implement enterprise-scale architecture. One is what must be true for enterprise scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The second category includes **File** > **New** > **Region** and **File** > **New** > **Landing Zone**. These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IaC)_ and automation with deployment pipelines.
+Two sets of activities must take place to implement enterprise-scale architecture. The first set is what must be true for enterprise scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The second set includes **File** > **New** > **Region** and **File** > **New** > **Landing Zone**. These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IaC)_ and automation with deployment pipelines.
 
 Some of the tables below include blank columns. Use these columns to capture values and notes specific to your environment.
 
-## What must be true for a CAF enterprise-scale landing zone
+## What must be true for an enterprise-scale landing zone
 
 ### Enterprise Agreement (EA) enrollment and Azure AD tenants
 
@@ -35,11 +35,11 @@ Some of the tables below include blank columns. Use these columns to capture val
 
 | Activities                                                                                                                            | Parameters required | Enterprise-scale example configuration   |
 |---------------------------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------------|
-| 1. Create a management group hierarchy (ideally using no more than 3 or 4 levels).                      |                                  |
+| 1. Create a management group hierarchy (ideally with no more than three or four levels).                      |                                  |
 | 2. Create a top-level sandbox management group for users to experiment with Azure.                                              |                     |                                  |
 | 3. Publish a subscription provisioning criteria along with the responsibilities of a subscription owner (potentially as a wiki). |                     |                                  |
 | 4. Create management and connectivity subscriptions for platform management and global networking and connectivity resources.  |                     |                                  |
-| 5. Set up a Git repo and service principal to use with a platform CI/CD pipeline.                                            |                     |                                  |
+| 5. Set up a Git repo and service principal to use with a platform continuous integration/continuous deployment pipeline.                                            |                     |                                  |
 | 6. Create custom role definitions and manage entitlements using Azure AD PIM for subscription and management group scopes.              |                     |                                  |
 
 ### Global networking and connectivity
@@ -57,12 +57,12 @@ Some of the tables below include blank columns. Use these columns to capture val
 | 5. Create required firewall policies within the connectivity subscription and assign them to secure virtual hubs.                                                 | Azure Firewall policy name <br> Firewall policy inbound/outbound rules | Firewall policy name: `contoso-global-fw-policy` <br> Allow outbound rules to `*.microsoft.com`  |
 | 6. Using Azure Firewall Manager, ensure all connected virtual networks to a secure virtual hub are protected by Azure Firewall.                                                | Virtual hub name <br> internet traffic - traffic from virtual networks | Virtual hub name: `vhub-neu` <br> internet traffic - traffic from virtual networks - send via Azure Firewall |
 | 7. Deploy and configure an Azure Private DNS zone within the global connectivity subscription.                                                             | Private DNS zone name               | Private DNS zone name: `azure.contoso.com` |
-| 8. Provision ExpressRoute circuits with private peering.                                                                                                 | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) |
+| 8. Provision ExpressRoute circuits with private peering.                                                                                                 | [Follow the instructions per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) | [Follow the instructions per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-routing-portal-resource-manager#private) |
 | 9. Connect on-premises HQs/DCs to Azure Virtual Hub via ExpressRoute circuits.                                                                                | Authorization key <br> Virtual hub name | Authorization key: `xxxxxxxx` <br> Virtual hub: `vhub-neu` |
-| 10. (Optional): Setup encryption over ExpressRoute private peering.                                                                                         | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) |
-| 11. (Optional): Connect branches to the virtual hub via VPN.                                                                                                | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) | [Follow instructions as per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) |
+| 10. (Optional): Set up encryption over ExpressRoute private peering.                                                                                         | [Follow the instructions per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) | [Follow the instructions per article](https://docs.microsoft.com/azure/virtual-wan/vpn-over-expressroute) |
+| 11. (Optional): Connect branches to the virtual hub via VPN.                                                                                                | [Follow the instructions per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) | [Follow the instructions per article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-site-to-site-portal) |
 | 12. Protect virtual network traffic across virtual hubs with NSGs.                                                                                                             | Inbound rules <br> Outbound rules | Inbound rules <br> Outbound rules |
-| 13. Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) | [Follow instructions as per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) |
+| 13. Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. | [Follow the instructions per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) | [Follow the instructions per article](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach) |
 
 <!-- markdownlint-enable MD033 -->
 
@@ -72,7 +72,7 @@ Some of the tables below include blank columns. Use these columns to capture val
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------------|
 | 1. Define and apply a service whitelisting framework to ensure Azure services meet enterprise security and governance requirements (see appendix). |                     |                                  |
 | 2. Create custom role-based access control (RBAC) role definitions.                                                                                                              |                     |                                  |
-| 3. Enable Privileged Identity Management (PIM) and discover Azure resources to facilitate PIM.                                                             |                     |                                  |
+| 3. Enable PIM and discover Azure resources to facilitate PIM.                                                             |                     |                                  |
 | 4. Create Azure AD-only groups for the Azure control plane management of resources using PIM.                                                             |                     |                                  |
 | 5. Apply Azure Policy to ensure Azure services are compliant to enterprise requirements.                                                             |                     |                                  |
 | 6. Define a naming convention and enforce it via Azure Policy.                                                                                       |                     |                                  |
@@ -85,9 +85,9 @@ Some of the tables below include blank columns. Use these columns to capture val
 |------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------------|
 | 1. Create policy compliance and security dashboards for organizational and resource-centric views.            |                     |                                  |
 | 2. Create a workflow for platform secrets (service principals and automation account) and key rollover.     |                     |                                  |
-| 3. (Optional): Set up an organization-wide virtual machine gallery image.                                                  |                     |                                  |
-| 4. Set up long-term archiving and retention for logs within Azure Monitor logs.                                    |                     |                                  |
-| 5. Set up business continuity and disaster recovery (BCDR) for key vaults used to store platform secrets.                                                  |                     |                                  |
+| 3. Optional: set up an organization-wide virtual machine (VM) gallery image.                                                  |                     |                                  |
+| 4. Set up long-term archiving and retention for logs within Azure Monitor Logs.                                    |                     |                                  |
+| 5. Set up business continuity and disaster recovery for key vaults used to store platform secrets.                                                  |                     |                                  |
 | 6. Using Azure Firewall Manager, ensure that all connected virtual networks to a secure virtual hub are protected by Azure Firewall. |                     |                                  |
 
 The table below provides a list of example Azure policies to enforce typical networking, security, and monitoring controls at a management group scope.
@@ -109,7 +109,7 @@ The table below provides a list of example Azure policies to enforce typical net
 |            | 13. Storage accounts should use a virtual network service endpoint.                               |
 |            | 14. Subnets should be associated with a network security group.                                   |
 |            | 15. Monitor unprotected network endpoints in Azure Security Center.                          |
-| Security   | 1. [Preview]: Audit the Microsoft Monitoring Agent deployment - virtual machine (VM) image (OS) unlisted.                         |
+| Security   | 1. [Preview]: Audit the Microsoft Monitoring Agent deployment - VM image (OS) unlisted.                         |
 |            | 2. [Preview]: Audit the Microsoft Monitoring Agent deployment in VMSS - VM image (OS) unlisted.                 |
 |            | 3. [Preview]: Audit Azure Monitor Log Analytics agent deployment - VM image (OS) unlisted.                      |
 |            | 4. [Preview]: Audit Azure Monitor Log Analytics agent deployment in VMSS - VM image (OS) unlisted.              |
@@ -142,8 +142,8 @@ The table below provides a list of example Azure policies to enforce typical net
 |            | 31. Deploy diagnostic settings for Service Bus to Azure Monitor Log Analytics workspace.                        |
 |            | 32. Deploy diagnostic settings for stream analytics to event hub.                                 |
 |            | 33. Deploy diagnostic settings for stream analytics to Azure Monitor Log Analytics workspace.                   |
-|            | 34. The Azure Monitor Log Analytics agent should be installed on virtual machine scale sets.                    |
-|            | 35. The Azure Monitor Log Analytics agent should be installed on virtual machines.                              |
+|            | 34. The Azure Monitor Log Analytics agent should be installed on VM scale sets.                    |
+|            | 35. The Azure Monitor Log Analytics agent should be installed on VMs.                              |
 | Monitoring | 36. [Preview]: Audit the Microsoft Dependency Agent deployment - VM image (OS) unlisted.                        |
 |            | 37. [Preview]: Audit the Microsoft Dependency Agent deployment in VMSS - VM image (OS) unlisted.                |
 |            | 38. [Preview]: Audit Azure Monitor Log Analytics agent deployment - VM image (OS) unlisted.                     |
@@ -177,8 +177,8 @@ The table below provides a list of example Azure policies to enforce typical net
 |            | 66. Deploy diagnostic settings for Service Bus to Azure Monitor Log Analytics workspace.                        |
 |            | 67. Deploy diagnostic settings for stream analytics to event hub.                                 |
 |            | 68. Deploy diagnostic settings for stream analytics to Azure Monitor Log Analytics workspace.                   |
-|            | 69. The Azure Monitor Log Analytics agent should be installed on virtual machine scale sets.                    |
-|            | 70. The Azure Monitor Log Analytics agent should be installed on virtual machines.                              |
+|            | 69. The Azure Monitor Log Analytics agent should be installed on VM scale sets.                    |
+|            | 70. The Azure Monitor Log Analytics agent should be installed on VMs.                              |
 | Key Vault  | 71. [Preview]: Manage allowed certificate key types.                                              |
 |            | 72. [Preview]: Manage allowed curve names for elliptic curve cryptography certificates.           |
 |            | 73. [Preview]: Manage certificate lifetime action triggers.                                       |
@@ -199,13 +199,13 @@ The table below provides a list of example Azure policies to enforce typical net
 
 2. Secure the virtual hub with Azure Firewall Manager by deploying an Azure Firewall within the virtual hub, and link existing or new firewall policies to Azure Firewall.
 
-3. Using Azure Firewall Manager, ensure that all connected virtual networks to a secure virtual hub are protected by Azure Firewall
+3. Using Azure Firewall Manager, ensure that all connected virtual networks to a secure virtual hub are protected by Azure Firewall.
 
-4. Connect the virtual hub to on-premises using ExpressRoute or alternatively via VPN.
+4. Connect the virtual hub to on-premises using ExpressRoute or via a VPN.
 
 5. (Optional) set up encryption over ExpressRoute private peering.
 
-6. Protect virtual network traffic across virtual hubs with NSGs.
+6. Protect virtual network traffic across virtual hubs with network security groups.
 
 ### File -&gt; new -&gt; landing zone for applications and workloads
 
@@ -246,16 +246,16 @@ The table below provides a list of example Azure policies to enforce typical ent
 |                   | 9. Inherit a tag from the resource group if missing                                                    |
 |                   | 10. Require tag and its value                                                                          |
 |                   | 11. Require tag and its value on resource groups                                                       |
-| Compute           | 12. Allowed virtual machine SKUs                                                                       |
-|                   | 13. Audit virtual machines without disaster recovery configured                                        |
+| Compute           | 12. Allowed VM SKUs                                                                       |
+|                   | 13. Audit VMs without disaster recovery configured                                        |
 |                   | 14. Audit VMs that do not use managed disks                                                            |
-|                   | 15. Deploy default Microsoft infrastructure as a service (IaaS) antimalware extension for Windows Server                              |
-|                   | 16. Diagnostic logs in virtual machine scale sets should be enabled                                    |
+|                   | 15. Deploy default Microsoft infrastructure as a service (IaaS) anti-malware extension for Windows Server                              |
+|                   | 16. Diagnostic logs in VM scale sets should be enabled                                    |
 |                   | 17. Microsoft Antimalware for Azure should be configured to automatically update protection signatures |
 |                   | 18. Microsoft Antimalware Extension for Windows should be deployed on Windows servers                          |
 |                   | 19. Only approved VM extensions should be installed                                                    |
-|                   | 20. Require automatic OS image patching on virtual machine scale sets                                  |
+|                   | 20. Require automatic OS image patching on VM scale sets                                  |
 |                   | 21. Unattached disks should be encrypted                                                               |
 |                   | 22. Network interfaces should not have public IPs                                                      |
-|                   | 23. Virtual machines should be connected to an approved virtual network                                |
+|                   | 23. VMs should be connected to an approved virtual network                                |
 |                   | 24. Virtual networks should use specified virtual network gateway                                      |

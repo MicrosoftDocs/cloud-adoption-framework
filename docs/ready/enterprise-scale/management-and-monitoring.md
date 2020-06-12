@@ -25,43 +25,43 @@ _Figure 1: Platform management and monitoring._
 
 - Use an Azure Monitor Log Analytics workspace as an administrative boundary.
 
-- Application-centric platform monitoring, encompassing both hot and cold telemetry paths for metrics and logs, respectively.
+- Application-centric platform monitoring, encompassing both hot and cold telemetry paths for metrics and logs, respectively:
 
-  - Operating system metrics (performance counters and custom metrics).
+  - Operating system metrics (performance counters and custom metrics)
 
-  - Operating system logs (Internet Information Services (IIS), Event Tracing for Windows, and syslogs).
+  - Operating system logs (Internet Information Services (IIS), Event Tracing for Windows, and syslogs)
 
-  - Resource health events.
+  - Resource health events
 
-- Security audit logging and achieving a horizontal security lens across the customer's entire Azure estate.
+- Security audit logging and achieving a horizontal security lens across the customer's entire Azure estate:
 
-  - Potential integration with on-premises security information and event management (SIEM) systems such as ServiceNow or ArcSight.
+  - Potential integration with on-premises security information and event management (SIEM) systems such as ServiceNow or ArcSight
 
-  - Azure activity logs.
+  - Azure activity logs
 
-  - Azure AD audit reports.
+  - Azure AD audit reports
 
-  - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow; and event logs.
+  - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow; and event logs
 
-  - Azure Monitor, Network Watcher, Security Center, and Azure Sentinel.
+  - Azure Monitor, Network Watcher, Security Center, and Azure Sentinel
 
-- Azure data retention thresholds and archiving requirements.
+- Azure data retention thresholds and archiving requirements:
 
-  - The default retention period for Azure Monitor logs is 30 days, with a maximum of two years.
+  - The default retention period for Azure Monitor logs is 30 days, with a maximum of two years
 
-  - The default retention period for Azure Active Directory reports (premium) is 30 days.
+  - The default retention period for Azure Active Directory reports (premium) is 30 days
 
-  - The default retention period for the Azure diagnostic service is 90 days.
+  - The default retention period for the Azure diagnostic service is 90 days
 
 - Operational requirements:
 
-  - Operational dashboards with native tools such as Azure Monitor logs or third-party tooling.
+  - Operational dashboards with native tools such as Azure Monitor logs or third-party tooling
 
-  - Controlling privileged activities with centralized roles.
+  - Controlling privileged activities with centralized roles
 
-  - [Managed identities for Azure resources](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) for access to Azure services.
+  - [Managed identities for Azure resources](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) for access to Azure services
 
-  - Resource locks to protect editing and deleting resources.
+  - Resource locks to protect editing and deleting resources
 
 **Design recommendations:**
 
@@ -88,7 +88,7 @@ Within the context of the enterprise-scale architecture, centralized logging is 
 
 - Include [service](https://docs.microsoft.com/azure/service-health/service-health-overview) and [resource](https://docs.microsoft.com/azure/service-health/resource-health-overview) health events as part of the overall platform monitoring solution. Tracking service and resource health from the platform perspective is an important component of resource management in Azure.
 
-- Do not send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that _data born in Azure stays in azure_. If on-premises SIEM integration is required, [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
+- Do not send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that _data born in Azure stays in azure_. If on-premises SIEM integration is required, then [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
 
 ## Planning for app management and monitoring
 
@@ -96,17 +96,17 @@ To expand on the previous section, this section will consider federated manageme
 
 **Design considerations:**
 
-- App monitoring can use a dedicated workspaces or a centralized monitor logs workspace.
+- App monitoring while using a dedicated workspaces or a centralized monitor logs workspace
 
-- App performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources.
+- App performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources
 
-- Data aggregation across all app components.
+- Data aggregation across all app components
 
 - [Health modeling and operationalization](https://docs.microsoft.com/azure/cloud-adoption-framework/manage/monitor/cloud-models-monitor-overview):
 
-  - How to measure the health of the workload and its subsystems.
-  - A _traffic-light_ model to represent health.
-  - How to respond to failures across app components.
+  - How to measure the health of the workload and its subsystems
+  - A traffic-light model to represent health
+  - How to respond to failures across app components
 
 **Design recommendations:**
 

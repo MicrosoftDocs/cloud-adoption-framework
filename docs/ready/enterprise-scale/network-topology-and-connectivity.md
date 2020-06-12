@@ -23,7 +23,7 @@ It is vital that enterprise customers plan for IP addressing in Azure to ensure 
 
 - Overlapping IP address spaces across on-premises and Azure regions will create major contention challenges.
 
-- While virtual network (VNet) address space can be added after creation, this process will require an outage if the VNet is already connected to another VNet via virtual network peering, because the peering will have to be deleted and recreated.
+- While virtual network (VNet) address space can be added after creation, this process will require an outage if the VNet is already connected to another VNet via virtual network peering because the peering will need to be deleted and recreated.
 
 - Azure reserves five IP addresses within each subnet, which should be factored in when sizing VNets and encompassed subnets.
 

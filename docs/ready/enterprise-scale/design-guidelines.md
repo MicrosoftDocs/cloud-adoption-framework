@@ -11,13 +11,13 @@ ms.subservice: ready
 
 # Design guidelines
 
-This article and the article series that follows outline how the enterprise-scale architecture provides an opinionated position on each of the [Azure landing zone design areas](../landing-zone/design-areas.md). Together this article series creates a step-by-step set of design guidelines which can be followed to implement the design principles embodied in the enterprise-scale solution.
+This article and the articles series that follows outline how the enterprise-scale architecture provides an opinionated position on each of the Microsoft [Azure landing zone design areas](../landing-zone/design-areas.md). This article series creates a step-by-step set of design guidelines that can be followed to implement the design principles embodied in the enterprise-scale solution.
 
-Within the center of enterprise-scale architecture is a critical design path comprised of fundamental design topics with heavily interrelated and dependent design decisions. This repo provides design guidance across these architecturally significant technical domains to support the critical design decisions that must occur to define the enterprise-scale architecture. For each of the considered domains, readers should review the provided considerations and recommendations and use them to structure and drive designs within each area.
+The core of enterprise-scale architecture contains a critical design path comprised of fundamental design topics with heavily interrelated and dependent design decisions. This repo provides design guidance across these architecturally significant technical domains to support the critical design decisions that must occur to define the enterprise-scale architecture. For each of the considered domains, readers should review the provided considerations and recommendations and use them to structure and drive designs within each area.
 
 For example, a customer is likely to ask how many subscriptions they need for their estate. In this case, the reader should review [subscription organization and governance](./management-group-and-subscription-organization.md#subscription-organization-and-governance) and use the outlined recommendations to drive subscription decisions.
 
-## Critical design areas
+# Critical design areas
 
 The following eight critical design areas help to translate customer requirements to Microsoft Azure constructs and capabilities and to address the mismatch between on-premises and cloud-design infrastructure, which typically creates dissonance and friction between the enterprise-scale definition and Azure adoption.
 

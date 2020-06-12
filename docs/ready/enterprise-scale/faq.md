@@ -23,8 +23,8 @@ From enterprise-scale point of view, a subscription is the landing zone in Azure
 
 ### Why enterprise-scale Azure Resource Manager templates require permissions at the tenant root '/' scope
 
-Management group creation is tenant-level `put` API. In order to use example templates, it's a prerequisite to grant permission at the root scope.
+Management group creation is a tenant-level `put` application programming interface. The prerequisite for using example templates is to grant permission at the root scope.
 
 ### Why sync a fork with the upstream repo
 
-This allows you to control how frequently you want to take bug/patches. This is interim solution while we package pipeline codebase as GitHub action so this step won't be required in future.
+This allows you to control how frequently you want to take bug/patches. This is an interim solution while we package pipeline codebase as GitHub Actions, so this step won't be required in future.

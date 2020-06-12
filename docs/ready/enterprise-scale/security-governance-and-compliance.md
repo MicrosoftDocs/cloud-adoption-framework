@@ -19,9 +19,9 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Subscription and scale limits as they apply to Azure Key Vault: Key Vault has transaction limits for keys and secrets. To throttle transactions per vault in a certain period, see ([Azure limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits)).
 
-- Key Vault serves a security boundary since access permissions for keys, secrets, and certificates are at the vault level. Key Vault access policy assignments grant permissions separately to keys, secrets, or certificates, but they don't support granular, object-level permissions like a specific key, secret, or certificate ([key management](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices))
+- Key Vault serves a security boundary since access permissions for keys, secrets, and certificates are at the vault level. Key Vault access policy assignments grant permissions separately to keys, secrets, or certificates, but they don't support granular, object-level permissions like a specific key, secret, or certificate ([key management](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices)).
 
-- You can isolate application-specific and workload-specific secrets and shared secrets, as appropriate ([control access](https://docs.microsoft.com/azure/key-vault/general/best-practices))
+- You can isolate application-specific and workload-specific secrets and shared secrets, as appropriate ([control access](https://docs.microsoft.com/azure/key-vault/general/best-practices)).
 
 <!-- cSpell:ignore FIPS -->
 
@@ -90,7 +90,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Azure Policy has limits, such as the restriction of definitions at any given scope: ([policy limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits))
 
-- Regulatory compliance policies such as the health insurance portability and accountability act, payment card industry (PCI), data security standards (dss), service organization controls (SOC) trust service principals, and criteria.
+- Regulatory compliance policies such as the health insurance portability and accountability act, payment card industry (PCI), data security standards, service organization controls (SOC) trust service principals, and criteria.
 
 **Design recommendations:**
 
@@ -136,7 +136,7 @@ It is crucial for enterprise customers to have visibility into what is happening
 
 - Use Azure AD reporting capabilities to generate access control audit reports
 
-- Export Azure activity logs to Azure Monitor logs for long term data retention and export to Azure Storage for long-term storage beyond two years, if necessary
+- Export Azure activity logs to Azure Monitor logs for long-term data retention and export to Azure Storage for long-term storage beyond two years, if necessary
 
 - Enable Security Center (Standard SKU) for all subscriptions, using Azure Policy to ensure compliance
 
@@ -162,7 +162,7 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 - Consistent security across Azure services in terms of data management and control plane operations
 
-- _Multitenancy under the hood_ for key platform components, from Hyper-V and the HSMs underpinning Key Vault to database engines
+- Multitenancy under the hood for key platform components, from Hyper-V and the HSMs underpinning Key Vault to database engines
 
 **Design recommendations:**
 

@@ -52,7 +52,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Role-based access control (RBAC) (holistic)
 
-  - Key management (for central services, simple mail-transfer protocol, and domain controller)
+  - Key management (for central services, simple mail-transfer protocol and domain controller)
 
   - Policy management and enforcement (holistic)
 
@@ -66,17 +66,17 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 - **AppDevOps**
 
-  - App migration or transformation.
+  - App migration or transformation
 
-  - App management and monitoring.
+  - App management and monitoring
 
-  - RBAC (app resources).
+  - RBAC (app resources)
 
-  - Security monitoring and audit (app resources).
+  - Security monitoring and audit (app resources)
 
-  - Cost management (app resources).
+  - Cost management (app resources)
 
-  - Network management (app resources).
+  - Network management (app resources)
 
   - In some instances, customers may wish to break AppDevOps into more granular roles such as AppDataOps for database management like traditional database administrator roles or AppSecOps, where more security sensitive apps are concerned.
 

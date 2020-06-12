@@ -13,12 +13,12 @@ ms.subservice: ready
 
 Enterprise-scale reference implementation is rooted in the principle that everything in Azure is a resource. To operate at scale, it should be managed declaratively to determine the target goal state of the overall platform.
 
-With this principle, this reference implementation has following three tenets:
+With this principle, this reference implementation has the following three tenets:
 
 ![Enterprise agreement enrollment](./media/implementation-scope.png)
 _Figure 1: Enterprise Agreement enrollment._
 
-Git -> Clone -> Azure/enterprise-scale: provide the Git repo for Azure platform configuration. The Git -> Clone or Git -> Fork (preferred) metaphor references that this repo will provide everything that must be true for enterprise-scale—that customers can use as-is in their own environment.
+Git -> Clone -> Azure/enterprise-scale: provide the Git repo for Azure platform configuration. The Git -> Clone or Git -> Fork (preferred) metaphor describes that this repo will provide everything that must be true for enterprise-scale—that customers to use as-is in their own environment.
 
 ## Discovery
 
@@ -87,7 +87,7 @@ A key design principle of enterprise-scale is policy-driven governance, and all 
 - The template must allow declaring the goal state at tenant, management group, and subscriptions scopes using policies.
 - Export Azure configuration in a manner that can be consumed and imported back into the platform.
 
-## 3. Operationalize the Azure environment at scale for day-to-day activities
+## Operationalize the Azure environment at scale for day-to-day activities
 
 In a production environment, changes are bound to happen. Ideally, these changes are made in a structured way and by using the principles of IaC: a change would be made by adding or updating a resource definition in an Azure DevOps or GitHub repo and rely on an automated test and release process to effectuate the change. This gives the IT department a fully transparent change history and full roll-back and roll-forward capabilities.
 

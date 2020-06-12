@@ -3,7 +3,7 @@ title: CAF enterprise-scale landing zone architecture
 description: CAF enterprise-scale landing zone architecture
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 02/01/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -24,7 +24,7 @@ It is important to highlight that not all enterprises adopt Azure the same way, 
 
 ## Landing zone: Expanded definition
 
-[Landing zone considerations](../../ready/considerations/index.md), provides a detailed definition for the term _landing zone_. The audience of the CAF enterprise-scale landing zone needs an even more specific definition.
+[Landing zone considerations](../../ready/considerations/index.md) provides a detailed definition for the term _landing zone_. The audience of the CAF enterprise-scale landing zone needs an even more specific definition.
 
 - **Scope:** Within the CAF enterprise-scale landing zone, the scope of a landing zone grows considerably to support application migrations and green field development at an enterprise scale in Azure. This expansion allows for design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
 
@@ -57,9 +57,9 @@ The following list expands on the landing zone illustration by outlining the cor
 
 In addition to the key aspects denoted above, the design, configuration, deployment, and integration of each landing zone should meet critical customer requirements relating to:
 
-- Business continuity and disaster recovery at platform and application levels.
-- Service management such as incident response and support.
-- A service catalog (for example, a configuration management database).
+- Business continuity and disaster recovery at platform and application levels
+- Service management, such as incident response and support
+- A service catalog (for example, a configuration management database)
 
 ## High-level architecture
 
