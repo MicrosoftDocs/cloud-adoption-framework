@@ -232,7 +232,7 @@ You can leverage Azure now to gradually begin managing all or some aspects of yo
 
 | Tertiary objectives | Goal and outcome |
 |---------------------|------------------|
-| Activity monitoring | Observe, measure, learn and improve usage, security and compliance from sources such as Azure activity logs, audit logs, and the Microsoft 365 unified audit log for subscription level events, actions on resources, user and administrator activity, content, data, and for your security and compliance needs in Azure and Microsoft 365. |
+| Activity monitoring | Observe, measure, learn, and improve usage, security, and compliance from sources such as Azure activity logs, audit logs, and the Microsoft 365 unified audit log for subscription level events, actions on resources, user and administrator activity, content, data, and for your security and compliance needs in Azure and Microsoft 365. |
 | Service usage | Service Owners want analytics and insights to measure, learn, and improve the usage of Azure and Microsoft 365 services (IaaS, PaaS, SaaS) with service usage reports, analytics and insights. Ensure plans include who will need access to the admin portals, dashboards, insights and reports. |
 | Service and resource health | Observe the health of your cloud resources, as well as service outages and advisories from Microsoft, to stay informed about incidents and maintenance. Include Resource Health in monitoring of the availability of your resources and alert on changes in availability. |
 | Capacity and performance monitoring | In support of health monitoring, your needs may require more depth and specialization. |
