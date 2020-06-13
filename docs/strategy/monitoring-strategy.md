@@ -18,7 +18,7 @@ As you undergo your digital transformation to the cloud, it's important that you
 
 To ease your journey to the cloud, use the [Strategy](index.md) and [Plan](../plan/index.md) phases of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. It needs to be included in the Strategy and Plan phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.  
 
-The following are important areas which strongly influence a sound monitoring strategy:
+The following are important areas that strongly influence a sound monitoring strategy:
 
 * Monitor the health of your applications, based on its components and their relationship with other dependencies. Start with the cloud service platform, resources, the network, and lastly the application by collecting metrics and logs where applicable. For the hybrid cloud model, include on-premises infrastructure and other systems the application relies on.
 
@@ -161,7 +161,7 @@ Your monitoring strategy should include these components:
 
 ### Consider business continuity
 
-Azure Monitor collects, indexes, and analyzes real-time machine and resource-generated data to support your operations and help drive business decisions. Under rare circumstances, it is possible that facilities in an entire region can become inaccessible, for example due to network failures. Or facilities can be lost entirely, for example due to a natural disaster. By relying on these services in the cloud, your planning isn't focused around infrastructure resiliency and high availability, rather its planning for:
+Azure Monitor collects, indexes, and analyzes real time machine and resource-generated data to support your operations and help drive business decisions. Under rare circumstances, it is possible that facilities in an entire region can become inaccessible, for example due to network failures. Or facilities can be lost entirely, for example due to a natural disaster. By relying on these services in the cloud, your planning isn't focused around infrastructure resiliency and high availability, rather its planning for:
 
 * Availability for data ingestion from all your dependent services and resources in Azure, resources in other clouds, and from on-premises.
 
@@ -203,7 +203,7 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 
 * **Learn and Improve**: Providers and consumers participating in Learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (Example: New, modified, retired, etc.) and continues to match the actual service warranty.
 
-To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five Rs of rationalization introduced earlier in the Cloud Adoption Framework Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
+To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five **Rs** of rationalization introduced earlier in the Cloud Adoption Framework Plan phase. If you are leveraging Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
 |Type |Monitoring objective |Example objective |
 |-----|---------------------|------------------|
@@ -246,7 +246,7 @@ You can leverage Azure now to gradually begin managing all or some aspects of yo
 
 Ultimately, you’ll deliver monitoring configurations or solutions into production. As an IT Operations Manager or Monitoring Team Lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile, DevOps style of approach ensures monitoring is embedded within the teams who will be building and operating cloud services. While traditional project management works, it is not fast enough nor typically accepted as a standard practice by operations teams.
 
-Include in your strategy and operating model how you communicate monitoring plans, objectives, and configurations (the solutions). For example, how you might leverage Azure DevOps boards:
+Include in your strategy and operating model how you communicate monitoring plans, objectives, and configurations (the solutions). For example, how you might leverage Azure Boards:
 
 |Agile term|What to include|Examples|
 |----------|---------------|--------|
