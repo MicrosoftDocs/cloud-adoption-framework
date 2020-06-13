@@ -268,7 +268,7 @@ First, identify the roles who will own and manage resource groups in Azure as pa
 
 * What managers require access to other Azure reader roles such as **Reports Reader**.
 
-In summary your monitoring consumer roles probably need very broad access, versus your developers and system administrators who only need role-based access to certain Azure resources. As an additional restriction, ensure you exempt readers from access to sensitive monitoring data such as security, sign-in and user activity logs.
+In summary your monitoring consumer roles probably need broad access, versus your developers and system administrators who only need role-based access to certain Azure resources. As an additional restriction, ensure you exempt readers from access to sensitive monitoring data such as security, sign-in and user activity logs.
 
 ## Establish readiness
 
