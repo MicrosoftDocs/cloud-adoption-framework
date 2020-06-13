@@ -3,7 +3,7 @@ title: "Cloud monitoring strategy"
 description: Gain an understanding of how to define an effective cloud monitoring strategy.
 author: mgoedtel
 ms.author: magoedte
-ms.date: 05/22/2020
+ms.date: 06/12/2020
 ms.topic: guide
 ms.service: cloud-adoption-framework
 ms.subservice: operate
@@ -16,7 +16,7 @@ As you undergo your digital transformation to the cloud, it's important that you
 
 ## Where to start?
 
-To ease your journey to the cloud, use the [Strategy](../../strategy/index.md) and [Plan](../../plan/index.md) phases of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. It needs to be included in the Strategy and Plan phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.  
+To ease your journey to the cloud, use the [Strategy](index.md) and [Plan](../plan/index.md) phases of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. It needs to be included in the Strategy and Plan phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.  
 
 The following are important areas which strongly influence a sound monitoring strategy:
 
