@@ -16,7 +16,7 @@ Each Azure landing zone implementation option provide a deployment approach and 
 > [!NOTE]
 > The following design areas outline the things that should be considered prior to deploying a landing zone. This article is purposefully not deep or actionable, but serves as a simple reference. The next step in the [landing zone implementation options](./implementation-options.md) article will be provide opinionated design principles and actionable steps for deployment.  
 
-Regardless of the deployment option, each of the following should be considered & decisions should be made for each design area. Those decisions will impact the platform foundation that each landing zone will depend on.
+Regardless of the deployment option, each of the following should be considered and decisions should be made for each design area. Those decisions will impact the platform foundation that each landing zone will depend on.
 
 | Design areas  | Objective  | Relevant methodologies |
 |---|---|---|
