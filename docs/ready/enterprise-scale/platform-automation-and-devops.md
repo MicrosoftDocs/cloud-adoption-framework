@@ -20,7 +20,7 @@ Many traditional IT operating models aren't compatible with the cloud, and custo
 
 **Design considerations:**
 
-- Where central teams are concerned, the continuous integration/continuous deployment pipelines should be used to manage policy definitions, role definitions, policy assignments, and template galleries. These pipelines will help ensure multiple subscriptions can be operationally managed while still conforming to a desired state.
+- Where central teams are concerned, CI/CD pipelines should be used to manage policy definitions, role definitions, policy assignments, management group hierarchies, and subscriptions. These pipelines help ensure that multiple subscriptions can be operationally managed while still conforming to a desired state.
 
 - The blanket app of a DevOps model won't instantly establish capable DevOps teams.
 
