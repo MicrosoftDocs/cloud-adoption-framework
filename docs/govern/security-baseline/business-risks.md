@@ -14,8 +14,6 @@ ms.custom: governance
 
 This article discusses the reasons that customers typically adopt a Security Baseline discipline within a cloud governance strategy. It also provides a few examples of potential business risks that can drive policy statements.
 
-<!-- markdownlint-disable MD026 -->
-
 ## Relevance
 
 Security is a key concern for any IT organization. Cloud deployments face many of the same security risks as workloads hosted in traditional on-premises datacenters. The nature of public cloud platforms, with a lack of direct ownership of the physical hardware storing and running your workloads, means cloud security requires its own policy and processes.
@@ -27,7 +25,7 @@ The amount you invest into security policy and processes will depend a great dea
 The Security Baseline discipline covers the corporate policies and manual processes that you can put in place to protect your cloud deployment against security risks.
 
 > [!NOTE]
->While it is important to understand the [Identity Baseline discipline](../identity-baseline/index.md) in the context of the Security Baseline discipline and how that relates to access control, the [Five Disciplines of Cloud Governance](../index.md) treats it as a separate discipline.
+> While it's important to understand the [Identity Baseline discipline](../identity-baseline/index.md) in the context of the Security Baseline discipline and how that relates to access control, the [Five Disciplines of Cloud Governance](../index.md) treats it as a separate discipline.
 
 ## Business risk
 

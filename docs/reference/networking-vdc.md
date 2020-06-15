@@ -22,8 +22,6 @@ Microsoft Azure delivers hyperscale services and infrastructure with enterprise-
 
 Customers can use Azure to seamlessly extend their infrastructure into the cloud and build multitier architectures.
 
-<!-- markdownlint-disable MD026 -->
-
 ## What is a virtual datacenter?
 
 The cloud began as a platform for hosting public-facing applications. Enterprises recognized the value of the cloud and began migrating internal line-of-business applications. These applications brought additional security, reliability, performance, and cost considerations that required additional flexibility when delivering cloud services. New infrastructure and networking services were designed to provide this flexibility, and new features provided for elastic scale, disaster recovery, and other considerations.
@@ -110,19 +108,19 @@ Virtual networks are also anchor points for integrating platform as a service (P
 
 A virtual datacenter can be built using one of these high-level topologies, based on your needs and scale requirements:
 
-In a _Flat_ topology, all resources are deployed in a single virtual network. Subnets allow for flow control and segregation.
+In a _Flat topology_, all resources are deployed in a single virtual network. Subnets allow for flow control and segregation.
 
 ![11][11]
 
-In a _Mesh_ topology, virtual network peering connects all virtual networks directly to each other.
+In a _Mesh topology_, virtual network peering connects all virtual networks directly to each other.
 
 ![12][12]
 
-A _Peering hub and spoke_ topology is well suited for distributed applications and teams with delegated responsibilities.
+A _Peering hub and spoke topology_ is well suited for distributed applications and teams with delegated responsibilities.
 
 ![13][13]
 
-An _Azure Virtual WAN_ topology can support large-scale branch office scenarios and global WAN services.
+An _Azure Virtual WAN topology_ can support large-scale branch office scenarios and global WAN services.
 
 ![14][14]
 

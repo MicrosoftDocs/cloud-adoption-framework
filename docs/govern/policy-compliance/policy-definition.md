@@ -13,8 +13,6 @@ ms.subservice: govern
 
 Once you've analyzed the known risks and related risk tolerances for your organization's cloud transformation journey, your next step is to establish policy that will explicitly address those risks and define the steps needed to remediate them where possible.
 
-<!-- markdownlint-disable MD026 -->
-
 ## How can corporate IT policy become cloud-ready?
 
 In traditional governance and incremental governance, corporate policy creates the working definition of governance. Most IT governance actions seek to implement technology to monitor, enforce, operate, and automate those corporate policies. Cloud governance is built on similar concepts.
@@ -30,8 +28,6 @@ Cloud governance is the product of an ongoing adoption effort over time, as a tr
 What is different about a Cloud Adoption Framework is the purchasing cycle and it can enable authentic transformation. Since there is not a large capital expenditure acquisition requirement, engineers can begin experimentation and adoption sooner. In most corporate cultures, elimination of the capital expense barrier to adoption can lead to tighter feedback loops, organic growth, and incremental execution.
 
 The shift to cloud adoption requires a shift in governance. In many organizations, corporate policy transformation allows for improved governance and higher rates of adherence through incremental policy changes and automated enforcement of those changes, powered by newly defined capabilities that you configure with your cloud service provider.
-
-<!-- markdownlint-enable MD026 -->
 
 ## Review existing policies
 

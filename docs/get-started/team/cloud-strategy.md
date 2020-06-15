@@ -38,13 +38,11 @@ Creating a cloud strategy team is often necessary for the following reasons:
 
 | Reason | Considerations |
 |---|---|
-| **Cloud adoption is important to the business** | <li> The cloud adoption effort has board-level visibility. <li> Success of the cloud adoption effort will improve market positioning, customer retention, or revenue. <li> The programs in the adoption portfolio map directly to strategic business outcomes. <li> The portfolio of workloads in this adoption effort is strategic and mission-critical and could affect multiple business units. |
-| **Cloud adoption requires ongoing executive support** | <li> The cloud adoption effort will affect how you manage organizational change. <li> The effort will require additional training from multiple business users and could interrupt certain business functions. <li> The existing IT operations team or vendor is motivated to remain in an existing datacenter. <li> The existing IT team hasn't fully bought into the effort. |
-| **Cloud adoption presents risk to the business** | <li> Failure to complete the migration within the specified time window will result in negative market impact or increased hosting costs. <li> Workloads slated for adoption need to be protected from data leakage that could affect business success or customer security. <li> Metrics that are being used to measure the cloud effort are business aligned, creating a dependency and risk on the technical success. |
+| **Cloud adoption is important to the business.** | <li> The cloud adoption effort has board-level visibility. <li> Success of the cloud adoption effort will improve market positioning, customer retention, or revenue. <li> The programs in the adoption portfolio map directly to strategic business outcomes. <li> The portfolio of workloads in this adoption effort is strategic and mission-critical and could affect multiple business units. |
+| **Cloud adoption requires ongoing executive support.** | <li> The cloud adoption effort will affect how you manage organizational change. <li> The effort will require additional training from multiple business users and could interrupt certain business functions. <li> The existing IT operations team or vendor is motivated to remain in an existing datacenter. <li> The existing IT team hasn't fully bought into the effort. |
+| **Cloud adoption presents risk to the business.** | <li> Failure to complete the migration within the specified time window will result in negative market impact or increased hosting costs. <li> Workloads slated for adoption need to be protected from data leakage that could affect business success or customer security. <li> Metrics that are being used to measure the cloud effort are business aligned, creating a dependency and risk on the technical success. |
 
 If any or all of the preceding reasons represent your existing business considerations, the information in the rest of this article will help you establish your cloud strategy team.
-
-<!-- markdownlint-disable MD026 -->
 
 **Accountable person or team:**
 

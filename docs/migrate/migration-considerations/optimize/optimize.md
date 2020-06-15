@@ -17,8 +17,6 @@ In the traditional on-premises models of IT, requisition of IT systems is costly
 
 In the cloud, the accounting and provisioning models eliminate the time delays that lead to overbuying. When an asset needs additional resources, it can be scaled up or out almost instantly. This means that assets can safely be reduced in size to minimize resources and costs consumed. During benchmarking and optimization, the cloud adoption team seeks to find the balance between performance and costs, provisioning assets to be no larger and no smaller than necessary to meet production demands.
 
-<!-- markdownlint-disable MD026 -->
-
 ## Should assets be optimized during or after the migration?
 
 When should an asset be optimized&mdash;during or after the migration? The simple answer is _both_. However, that's not entirely accurate. To explain, take a look at two basic scenarios for optimizing resource sizing:

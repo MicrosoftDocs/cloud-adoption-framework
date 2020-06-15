@@ -30,7 +30,7 @@ Azure Monitor is the Azure native platform service that provides a single source
 - Are built on Azure.
 - Support a business capability that's based on virtual machine (VM) workloads or complex architectures that use microservices and other platform resources.
 
-It monitors all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, and subscription-level events and Azure service health.
+It monitors all layers of the stack, starting with tenant services, such as Azure Active Directory Domain Services, and subscription-level events and Azure Service Health.
 
 It also monitors infrastructure resources, such as VMs, storage, and network resources. At the top layer, it monitors your application.
 

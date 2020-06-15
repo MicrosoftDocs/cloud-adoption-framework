@@ -14,8 +14,6 @@ ms.custom: governance
 
 This article discusses the reasons that customers typically adopt an Identity Baseline discipline within a cloud governance strategy. It also provides a few examples of business risks that drive policy statements.
 
-<!-- markdownlint-disable MD026 -->
-
 ## Relevance
 
 Traditional on-premises directories are designed to allow businesses to strictly control permissions and policies for users, groups, and roles within their internal networks and datacenters. These directories typically support single-tenant implementations, with services applicable only within the on-premises environment.

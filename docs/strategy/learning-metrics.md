@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # How can we align efforts to meaningful learning metrics?
 
 The [business outcomes overview](./business-outcomes/index.md) discussed ways to measure and communicate the impact a transformation will have on the business. Unfortunately, it can take years for some of those outcomes to produce measurable results. The board and C-suite are unhappy with reports that show a 0% delta for long periods of time.

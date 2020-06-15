@@ -1,6 +1,5 @@
 ---
 title: Refactor landing zones
-titleSuffix: Microsoft Cloud Adoption Framework for Azure
 description: The process for refactoring landing zones
 author: BrianBlanchard
 ms.author: brblanch

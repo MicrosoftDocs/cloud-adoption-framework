@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # Motivations: Why are we moving to the cloud?
 
 <!-- docsTest:ignore "is a common question" "Our board" -->

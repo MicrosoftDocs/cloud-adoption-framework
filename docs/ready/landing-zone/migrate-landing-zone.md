@@ -9,18 +9,68 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore vCPUs jumpbox -->
-
 # Deploy a migration landing zone
 
 A _migration landing zone_ is an environment that has been provisioned and prepared to host workloads that are being migrated from an on-premises environment into Azure.
 
-## Deploy the first landing zone
+## Deploy the blueprint
 
-Before you use the migration landing zone blueprint in the Cloud Adoption Framework, review the following assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [migration landing zone blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone) can be deployed using the [deployment steps][deploy-sample].
+Before you use the migration landing zone blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [migration landing zone blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone) can be deployed using the [deployment steps][deploy-sample].
 
 > [!div class="nextstepaction"]
 > [Deploy the blueprint sample][deploy-sample]
+
+## Design principles
+
+This implementation option provides an opinionated approach to the common design areas shared by all Azure landing zones. See the assumptions and decisions below for addition technical detail.
+
+### Deployment options
+
+This implementation option deploys a _minimum viable product (MVP)_ to start a migration. As the migration progresses, the customer will follow a modular refactoring-based approach to mature the operating model in parallel guidance, using the [Govern methodology](../../govern/index.md) and the [Manage methodology](../../manage/index.md) to address those complex topics in parallel to the initial migration effort.
+
+The specific resources deployed by this MVP approach are outlined in the [decisions section below](#decisions).
+
+### Enterprise enrollment
+
+This implementation option does not take an inherent position on enterprise enrollment. This approach is designed to be applicable to customers regardless of contractual agreements with Microsoft or Microsoft partners. Prior to deployment of this implementation option, it is assumed that the customer has created a target subscription.
+
+### Identity
+
+This implementation option assumes that the target subscription is already associated with an Azure Active Directory instance in accordance with [identity management best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+
+### Network topology and connectivity
+
+This implementation option creates a virtual network with subnets for gateway, firewall, jumpbox, and landing zone.  As a next step iteration, the team would follow the [networking decisions guide](../considerations/networking-options.md) to implement the appropriate form of connectivity between the gateway subnet & other networks in alignment with [network security best practices](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+
+### Resource organization
+
+This implementation option creates a single landing zone, in which resources will be organized into workloads defined by specific resource groups. Choosing this minimalist approach to resource organization defers the technical decision of resource organization until the team's cloud operating model is more clearly defined.
+
+This approach is based on an assumption that the cloud adoption effort will not exceed [subscription limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits). This option also assumes limited architectural complexity and security requirements within this landing zone.
+
+If this changes through the course of the cloud adoption plan, the resource organization may need to be refactored using the guidance in the [Govern methodology](../../govern/index.md).
+
+### Governance disciplines
+
+This implementation option does not implement any governance tooling. In the absence of defined policy automation, this landing zone should not be used for any mission critical workloads or sensitive data. It is assumed that this landing zone is being used for limited production deployment to initiate learning, iteration, and development of the overall operating model in parallel to these early stage migration efforts.
+
+To accelerate parallel development of governance disciplines, review the [Govern methodology](../../govern/index.md) and consider deploying the [CAF foundation blueprint](./foundation-blueprint.md) in addition to the migrate landing zone.
+
+> [!WARNING]
+> As the governance disciplines mature, refactoring may be required. refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+
+### Operations baseline
+
+This implementation option does not implement any operations. In the absence of a defined operations baseline, this landing zone should not be used for any mission critical workloads or sensitive data. It is assumed that this landing zone is being used for limited production deployment to initiate learning, iteration, and development of the overall operating model in parallel to these early stage migration efforts.
+
+To accelerate parallel development of an operations baseline, review the [Manage methodology](../../manage/index.md) and consider deploying the [Azure server management guide](../../manage/azure-server-management/index.md).
+
+> [!WARNING]
+> As the operations baseline is developed, refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+
+### Business continuity and disaster recovery (BCDR)
+
+This implementation option does not implement any BCDR solution. It is assumed that the solution for protection and recover will be addressed by the development of the operations baseline.
 
 ## Assumptions
 

@@ -8,5 +8,5 @@ $filename = "../docs/migrate/azure-best-practices/contoso-migration-infrastructu
 cmd /c "markdownlint $filename -c ..\docs\.markdownlint.json --fix"
 
 $files = @( (Get-Item $fileName) )
-#$files = $(Get-ChildItem -Recurse -Path "../docs/ready/enterprise-scale/*.md") 
+$files = $(Get-ChildItem -Recurse -Path "../docs/ready/enterprise-scale/*.md") 
 Test-AllLocalPaths $files $true $true

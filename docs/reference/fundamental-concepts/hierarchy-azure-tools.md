@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # How do Azure products support the portfolio hierarchy?
 
 In [Understanding and aligning the portfolio hierarchy](./hosting-hierarchy.md), a set of definitions for the portfolio hierarchy and role mapping established a hierarchy of scope for most portfolio approaches. As described in that article, you might not need each of the outlined levels or _scopes_. Minimizing the number of layers reduces complexity, so these layers shouldn't all be viewed as a requirement.

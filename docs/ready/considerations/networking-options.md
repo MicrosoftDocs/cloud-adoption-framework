@@ -34,9 +34,9 @@ Answer the following questions about your workloads to help you make decisions b
 - **Will your workloads be accessible over the internet?** Azure provides services that are designed to help you manage and secure external access to your applications and services:
   - [Azure Firewall](https://docs.microsoft.com/azure/firewall/overview)
   - [Network appliances](https://azure.microsoft.com/solutions/network-appliances)
-  - [Azure Front Door Service](https://docs.microsoft.com/azure/frontdoor/front-door-overview)
+  - [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview)
   - [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway)
-  - [Azure traffic manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
+  - [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
 - **Will you need to support custom DNS management?** [Azure DNS](https://docs.microsoft.com/azure/dns/dns-overview) is a hosting service for DNS domains. Azure DNS provides name resolution by using the Azure infrastructure. If your workloads require name resolution that goes beyond the features that are provided by Azure DNS, you might need to deploy additional solutions. If your workloads also require Active Directory services, consider using [Azure Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/overview) to augment Azure DNS capabilities. For more capabilities, you can also [deploy custom IaaS virtual machines](https://docs.microsoft.com/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances) to support your requirements.
 
 ## Common networking scenarios
@@ -49,17 +49,17 @@ Azure networking is composed of multiple products and services that provide diff
 | --- | --- |
 | I need the networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network) |
 | I need to balance inbound and outbound connections and requests to my applications or services. | [Azure Load Balancer](https://docs.microsoft.com/azure/load-balancer) |
-| I want to optimize delivery from application server farms while increasing application security with a Web Application Firewall. | [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway) <br> [Azure Front Door Service](https://docs.microsoft.com/azure/frontdoor) |
+| I want to optimize delivery from application server farms while increasing application security with a Web Application Firewall. | [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway) <br> [Azure Front Door](https://docs.microsoft.com/azure/frontdoor) |
 | I need to securely use the internet to access Azure Virtual Network through high-performance VPN gateways. | [Azure VPN gateway](https://docs.microsoft.com/azure/vpn-gateway) |
 | I want to ensure ultra-fast DNS responses and ultra-high availability for all my domain needs. | [Azure DNS](https://docs.microsoft.com/azure/dns) |
-| I need to accelerate the delivery of high-bandwidth content to customers worldwide, from applications and stored content to streaming video. | [Azure content delivery network](https://docs.microsoft.com/azure/cdn) |
+| I need to accelerate the delivery of high-bandwidth content to customers worldwide, from applications and stored content to streaming video. | [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn) |
 | I need to protect my Azure applications from DDoS attacks. | [Azure DDoS protection](https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview) |
-| I need to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. | [Azure traffic manager](https://docs.microsoft.com/azure/traffic-manager) <br><br> [Azure Front Door Service](https://docs.microsoft.com/azure/frontdoor) |
+| I need to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. | [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager) <br><br> [Azure Front Door](https://docs.microsoft.com/azure/frontdoor) |
 | I need to add private network connectivity to access Microsoft cloud services from my corporate networks, as if they were on-premises and residing in my own datacenter. | [Azure ExpressRoute](https://docs.microsoft.com/azure/expressroute) |
 | I want to monitor and diagnose conditions at a network-scenario level. | [Azure Network Watcher](https://docs.microsoft.com/azure/network-watcher) |
 | I need native firewall capabilities, with built-in high availability, unrestricted cloud scalability, and zero maintenance. | [Azure Firewall](https://docs.microsoft.com/azure/firewall/overview) |
 | I need to connect business offices, retail locations, and sites securely. | [Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan) |
-| I need a scalable, security-enhanced delivery point for global microservices-based web applications. | [Azure Front Door Service](https://docs.microsoft.com/azure/frontdoor) |
+| I need a scalable, security-enhanced delivery point for global microservices-based web applications. | [Azure Front Door](https://docs.microsoft.com/azure/frontdoor) |
 
 <!-- markdownlint-enable MD033 -->
 
@@ -83,13 +83,14 @@ The following table summarizes the primary scenarios that these patterns support
 
 ### Azure Virtual Datacenter
 
-In addition using one of these architecture patterns, if your enterprise IT group manages large cloud environments, consider consulting the [Azure Virtual Datacenter guidance](../../reference/vdc.md) when you design your Azure-based cloud infrastructure. Azure Virtual Datacenter provides a combined approach to networking, security, management, and infrastructure if your organization meets the following criteria:
+In addition using one of these architecture patterns, if your enterprise IT group manages large cloud environments, consider consulting the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). When you design your Azure-based cloud infrastructure. CAF enterprise-scale landing zone provides a combined approach to networking, security, management, and infrastructure if you have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**.
 
-- Your enterprise is subject to regulatory compliance that requires centralized monitoring and audit capabilities.
-- Your cloud estate will consist of more than 10,000 IaaS VMs or an equivalent scale of PaaS services.
-- You need to enable agile deployment capabilities for workloads to support developer and operations teams while maintaining common policy and governance compliance and Central IT control over core services.
-- Your industry depends on a complex platform that requires deep domain expertise (for example, finance, oil and gas, or manufacturing).
-- Your existing IT governance policies require tighter parity with existing features, even during early-stage adoption.
+For organizations that meet the following criteria, you may also want to start with the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md):
+
+- Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
+- You need to maintain common policy and governance compliance and central IT control over core services.
+- Your industry depends on a complex platform which requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, oil and gas, or manufacturing.
+- Your existing IT governance policies require tighter parity with existing features, even during early stage adoption.
 
 ## Follow Azure networking best practices
 

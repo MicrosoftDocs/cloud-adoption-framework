@@ -14,8 +14,6 @@ ms.custom: governance
 
 This article discusses the reasons that customers typically adopt a Resource Consistency discipline within a cloud governance strategy. It also provides a few examples of potential business risks that can drive policy statements.
 
-<!-- markdownlint-disable MD026 -->
-
 ## Relevance
 
 When it comes to deploying resources and workloads, the cloud offers increased agility and flexibility over most traditional on-premises datacenters. These potential cloud-based advantages also come with potential management drawbacks that can seriously jeopardize the success of your cloud adoption. What assets have you deployed? What teams own what assets? Do you have enough resources supporting a workload? How do you know if workloads are healthy?

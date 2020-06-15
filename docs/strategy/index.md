@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # Develop a cloud adoption strategy
 
 The cloud delivers fundamental technology benefits that can help your enterprise execute multiple business strategies. By using cloud-based approaches, you can improve business agility, reduce costs, accelerate time to market, and enable expansion into new markets. To take advantage of this great potential, start by documenting your business strategy in a way that's both understandable to cloud technicians and palatable to your business stakeholders.

@@ -3,15 +3,13 @@ title: Understand and align the portfolio hierarchy
 description: Understand and align the portfolio hierarchy
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 05/15/2020
+ms.date: 04/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
 <!-- cSpell:ignore matrixed ISVs -->
-
-<!-- markdownlint-disable MD026 -->
 
 # Understand and align the portfolio hierarchy
 
@@ -25,20 +23,28 @@ This article provides clear definitions for the levels of the portfolio hierarch
 
 ## Portfolio hierarchy
 
+### Workloads
+
 Workloads and their supporting assets are at the core of any portfolio. The additional scopes or layers below define how those workloads are viewed and to what extent they're affected by the matrix of potential supporting teams.
 
-When you're deploying your first workload, the workload and its assets might be the only defined scope. The other layers might be explicitly defined as more workloads are deployed.
+<!-- cSpell:ignore buildout -->
 
-![A hierarchy of portfolio, platform, landing zones, workloads, and assets. Listed from highest to lowest order in a nested parent/child relationship.](../../_images/ready/hierarchy.png)
+![Image of a workload in the cloud, showing workloads and assets together](../../_images/ready/buildout-workload-assets.png)
 
 Although the terms can vary, all IT solutions include assets and workloads:
 
 - **Asset:** The smallest unit of technical function that supports a workload or solution.
 - **Workload:** The smallest unit of IT support for the business. A workload is a collection of assets (infrastructure, applications, and data) that supports a common business goal or the execution of a common business process.
 
+When you're deploying your first workload, the workload and its assets might be the only defined scope. The other layers might be explicitly defined as more workloads are deployed.
+
+### IT Portfolio
+
 When companies support workloads through matrixed approaches or centralized approaches, a broader hierarchy likely exists to support those workloads:
 
-- **Landing zone:** Landing zones provide workloads with access to all of the _foundational utilities_ (or shared plumbing) that are provided from a _platform foundation_ that's required to support one or more workloads.
+![Image of an IT portfolio with multiple public and private cloud platforms](../../_images/ready/buildout-cloud-platforms.png)
+
+- **Landing zone:** Landing zones provide workloads with access to all of the _foundational utilities_ (or shared plumbing) that are provided from a _platform foundation_ that's required to support one or more workloads. Landing zones are such a critical component in the cloud, they the entire Ready methodology in the Cloud Adoption Framework is dedicated to landing zones. See "[What is a landing zone](../../ready/landing-zone/index.md)" for a deeper definition.
 - **Foundational utilities:** These shared IT services are required for workloads to operate within the technology and business portfolio.
 - **Platform foundation:** This organizational construct centralizes foundational solutions and helps ensure that those controls are enforced for all landing zones.
 - **Cloud platforms:** Depending on the overall strategy for supporting the full _portfolio_, customers might need multiple cloud platforms with distinct deployments of the platform foundation to govern multiple regions, hybrid solutions, or even multicloud solutions.
@@ -58,10 +64,10 @@ An accountable team manages each layer of the portfolio hierarchy. The following
 - **Portfolio:** The cloud strategy team and the cloud center of excellence (CCoE) use the Strategy and Plan methodologies to guide decisions that affect the overall portfolio. The cloud strategy team is accountable for the enterprise level of the cloud portfolio hierarchy. The cloud strategy team should also be informed of decisions about the environment, landing zones, and high-priority workloads.
 - **Cloud platforms:** The cloud governance team is accountable for the disciplines that ensure consistency across each environment in alignment with the Govern methodology. The cloud governance team is accountable for governance of all resources in all environments. The cloud governance team should be consulted on changes that might require an exception or change to governing policies. The cloud governance team should also be informed of progress with workload and asset adoption.
 - **Landing zones and cloud foundation:** The cloud platform team is accountable for developing the landing zones and platform utilities that support adoption. The cloud automation team is accountable for automating the development of, and ongoing support for, those landing zones and platform utilities. Both teams use the Ready methodology to guide implementation. Both teams should be informed of progress with workload adoption and any changes to the enterprise or environment.
-- **Workloads:** Adoption happens at the workload level. Cloud adoption teams use the Migrate and Innovate methodologies to establish scalable processes to accelerate adoption. After adoption is complete, the ownership of workloads is likely transferred to a cloud operations team that uses the Manage methodology to guide operations management. Both teams should be comfortable using the Microsoft Azure Well-Architected Framework to make detailed architectural decisions that affect the workloads they support. Both teams should be informed of changes to landing zones and environments. Both teams might occasionally contribute to landing zone features.
-- **Assets:** Assets are typically the responsibility of the cloud operations team. That team uses the management baseline in the Manage methodology to guide operations management decisions. It should also use Azure Advisor and the Microsoft Azure Well-Architected Framework to make detailed resource and architectural changes that are required to deliver on operations requirements.
+- **Workloads:** Adoption happens at the workload level. Cloud adoption teams use the Migrate and Innovate methodologies to establish scalable processes to accelerate adoption. After adoption is complete, the ownership of workloads is likely transferred to a cloud operations team that uses the Manage methodology to guide operations management. Both teams should be comfortable using the Azure Architecture Framework to make detailed architectural decisions that affect the workloads they support. Both teams should be informed of changes to landing zones and environments. Both teams might occasionally contribute to landing zone features.
+- **Assets:** Assets are typically the responsibility of the cloud operations team. That team uses the management baseline in the Manage methodology to guide operations management decisions. It should also use Azure Advisor and the Azure Architecture Framework to make detailed resource and architectural changes that are required to deliver on operations requirements.
 
-### Accountability variants:
+### Accountability variants
 
 - **Single environment:** When an enterprise needs only one environment, a CCoE is typically not required.
 - **Single landing zone:** If an environment has only a single landing zone, the governance and platform capabilities can likely be combined into one team.
@@ -111,11 +117,11 @@ It's important to understand the strategic objectives of the cloud adoption effo
 
 ### Innovation or development-led portfolio
 
-Some companies, especially fast-growing established startups, have a higher-than-average percentage of custom development projects. In development-heavy portfolios, the environment, landing zone, and workloads are often compressed&mdash;there might be specific environments (production or nonproduction environments) for specific workloads. This results in a 1:1 ratio between environment, landing zone, and workload.
+Some companies, especially fast-growing established startups, have a higher-than-average percentage of custom development projects. In development-heavy portfolios, the environment, landing zone, and workloads are often compressed, so there might be specific environments (either production or nonproduction) for specific workloads. This results in a 1:1 ratio between environment, landing zone, and workload.
 
 Because the environment hosts custom solutions, the DevOps pipeline and application-level reporting might replace the need for operations and governance functions. For those customers, a reduced focus on operations, governance, or other supporting roles is likely. A stronger emphasis on the responsibilities of the cloud adoption and cloud automation teams is also typical.
 
-**Portfolio alignment:** The IT portfolio will likely focus on workloads and workload owners to drive critical architecture decisions. Those teams are likely to find more value in the Microsoft Azure Well-Architected Framework guidance during adoption and operations activities.
+**Portfolio alignment:** The IT portfolio will likely focus on workloads and workload owners to drive critical architecture decisions. Those teams are likely to find more value in the Azure Architecture Framework guidance during adoption and operations activities.
 
 **Boundary definitions:** The logical boundaries, even at an enterprise level, will likely focus on production and nonproduction environment segmentation. There might also be clear segmentation between products in the company's software portfolio. At times, there might also be segmentation between development and hosted customer instances.
 

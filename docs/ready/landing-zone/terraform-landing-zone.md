@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore arnaudlh arnaul Arnaud vCPUs eastasia southeastasia lalogs tfvars -->
+<!-- cSpell:ignore arnaudlh arnaul Arnaud vCPUs eastasia southeastasia lalogs tfvars NetworkMonitoring ADAssessment ADReplication AgentHealthAssessment DnsAnalytics KeyVaultAnalytics -->
 
 # Use Terraform to build your landing zones
 
@@ -40,7 +40,7 @@ The components deployed and their purpose include the following:
 | Resource groups | Core resource groups needed for the foundation |
 | Activity logging | Auditing all subscription activities and archiving: <li> Storage account <li> Azure Event Hubs |
 | Diagnostics logging | All operation logs kept for a specific number of days: <li> Storage account <li> Event Hubs |
-| Log Analytics | Stores all the operation logs. Deploy common solutions for deep application best practices review: <li> Networkmonitoring <li> Adassessment <li> Adreplication <li> Agenthealthassessment <li> Dnsanalytics <li> Keyvaultanalytics |
+| Log Analytics | Stores the operation logs. Deploy common solutions for deep application best practices review: <li> NetworkMonitoring <li> AdAssessment <li> AdReplication <li> AgentHealthAssessment <li> DnsAnalytics <li> KeyVaultAnalytics |
 | Azure Security Center | Security hygiene metrics and alerts sent to email and phone number |
 
 <!-- markdownlint-enable MD033 -->
@@ -84,15 +84,15 @@ The following decisions are represented in the Terraform landing zone:
 The minimum set of tags shown below must be present on all resources and resource groups:
 
 | Tag name          | Description                                                                                        | Key             | Example value                                    |
-|-------------------|----------------------------------------------------------------------------------------------------|-----------------|--------------------------------------------------|
-| Business unit     | Top-level division of your company that owns the subscription or workload the resource belongs to. | Businessunit    | Finance, marketing, {product name}, corp, shared |
-| Cost center       | Accounting cost center associated with this resource.                                              | Costcenter      | Number                                           |
-| Disaster recovery | Business criticality of the application, workload, or service.                                     | Dr              | Dr-enabled, non-dr-enabled                       |
-| Environment       | Deployment environment of the application, workload, or service.                                   | Env             | Prod, dev, QA, stage, test, training             |
-| Owner name        | Owner of the application, workload, or service.                                                    | Owner           | Email                                            |
-| Deployment type   | Defines how the resources are being maintained.                                                    | Deploymenttype  | Manual, Terraform                                |
-| Version           | Version of the blueprint deployed.                                                                 | Version         | V0.1                                             |
-| Application name  | Name of the associated application, service, or workload associated with the resource.             | Applicationname | "App name"                                       |
+|-------------------|----------------------------------------------------------------------------------------------------|-------------------|--------------------------------------------------|
+| Business unit     | Top-level division of your company that owns the subscription or workload the resource belongs to. | `BusinessUnit`    | Finance, marketing, {product name}, corp, shared |
+| Cost center       | Accounting cost center associated with this resource.                                              | `CostCenter`      | Number                                           |
+| Disaster recovery | Business criticality of the application, workload, or service.                                     | `DR`              | Dr-enabled, non-dr-enabled                       |
+| Environment       | Deployment environment of the application, workload, or service.                                   | `Env`             | Prod, dev, QA, stage, test, training             |
+| Owner name        | Owner of the application, workload, or service.                                                    | `Owner`           | Email                                            |
+| Deployment type   | Defines how the resources are being maintained.                                                    | `DeploymentType`  | Manual, Terraform                                |
+| Version           | Version of the blueprint deployed.                                                                 | `Version`         | V0.1                                             |
+| Application name  | Name of the associated application, service, or workload associated with the resource.             | `ApplicationName` | "App name"                                       |
 
 <!-- cSpell:ignore caf -->
 

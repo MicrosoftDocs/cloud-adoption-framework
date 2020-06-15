@@ -15,8 +15,6 @@ Every business decision creates new risks. Making an investment in anything crea
 
 This article is not focused on cloud risks. Instead it discusses the business risks associated with various forms of cloud transformation. Later in the article, the discussion shifts focus to discuss ways of understanding the business's tolerance for risk.
 
-<!-- markdownlint-disable MD026 -->
-
 ## What business risks are associated with a cloud transformation?
 
 True business risks are based on the details of specific transformations. Several common risks provide a conversation starter to understand business-specific risks.

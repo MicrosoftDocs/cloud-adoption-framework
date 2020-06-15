@@ -26,7 +26,7 @@ Perimeter networks make use of the following Azure features and services:
 - [Azure Load Balancer][alb]
 - [Azure Application Gateway][appgw] and [Web Application Firewall (WAF)][appgwwaf]
 - [Public IPs][PIP]
-- [Azure Front Door Service][afd] with [Web Application Firewall][afdwaf]
+- [Azure Front Door][afd] with [Web Application Firewall][afdwaf]
 - [Azure Firewall][Azure-firewall]
 
 > [!NOTE]
@@ -77,11 +77,11 @@ Azure Load Balancer can also probe the health of the various server instances. W
 
 As an example of using a hub and spoke network topology, you can deploy an external load balancer to both the hub and the spokes. In the hub, the load balancer efficiently routes traffic to services in the spokes. In the spokes, load balancers manage application traffic.
 
-## Azure Front Door Service
+## Azure Front Door
 
-[Azure Front Door Service][afd] is Microsoft's highly available and scalable web application acceleration platform and global HTTPS load balancer. You can use Azure Front Door Service to build, operate, and scale out your dynamic web application and static content. It runs in more than 100 locations at the edge of Microsoft's global network.
+[Azure Front Door][afd] is Microsoft's highly available and scalable web application acceleration platform and global HTTPS load balancer. You can use Azure Front Door to build, operate, and scale out your dynamic web application and static content. It runs in more than 100 locations at the edge of Microsoft's global network.
 
-Azure Front Door Service provides your application with unified regional/stamp maintenance automation, BCDR automation, unified client/user information, caching, and service insights. The platform offers performance, reliability, and support SLAs. It also offers compliance certifications and auditable security practices that are developed, operated, and supported natively by Azure.
+Azure Front Door provides your application with unified regional/stamp maintenance automation, BCDR automation, unified client/user information, caching, and service insights. The platform offers performance, reliability, and support SLAs. It also offers compliance certifications and auditable security practices that are developed, operated, and supported natively by Azure.
 
 ## Azure Application Gateway
 
