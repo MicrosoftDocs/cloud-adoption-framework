@@ -28,8 +28,6 @@ This implementation option provides an opinionated approach to the common design
 
 This implementation option deploys a _minimum viable product (MVP)_ to serve as the foundation for your governance disciplines. The team will follow a modular refactoring-based approach to mature the governance disciplines using the [Govern methodology](../../govern/index.md).
 
-The specific resources deployed by this MVP approach are outlined in the [decisions section below](#decisions).
-
 ### Enterprise enrollment
 
 This implementation option does not take an inherent position on enterprise enrollment. This approach is designed to be applicable to customers regardless of contractual agreements with Microsoft or Microsoft partners. Prior to deployment of this implementation option, it is assumed that the customer has already created a target subscription.
