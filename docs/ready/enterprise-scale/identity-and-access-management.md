@@ -40,11 +40,11 @@ _Figure 1: Identity and access management._
 
 - Centralized versus federated resource ownership.
 
-  - Shared resources or any aspect of the environment implementing or enforcing a security boundary such as the network must be managed centrally. This is both a requirement of many regulatory frameworks as well as standard practice for any organization that grants or denies access to confidential or critical business resources. 
+  - Shared resources or any aspect of the environment implementing or enforcing a security boundary such as the network must be managed centrally. This is both a requirement of many regulatory frameworks as well as standard practice for any organization that grants or denies access to confidential or critical business resources.
 
   - Managing application resources that don't violate security boundaries or other aspects required to maintain security and compliance can be delegated to application teams. Allowing users to provision resources within a securely managed environment allows organizations to take advantage of the agile nature of cloud while preventing the violation of any critical security or governance boundary.
 
-<!-- docsTest:ignore Azure-AD-only Azure-AD-managed -->
+<!-- docsTest:ignore Azure-AD-only Azure-AD-managed NetOps SecOps AppOps -->
 
 **Design recommendations:**
 
@@ -54,7 +54,7 @@ _Figure 1: Identity and access management._
 
 - Enforce multi-factor authentication for any user with rights to the Azure environments. This is a requirement of many compliance frameworks and greatly lowers the risk of credential theft and unauthorized access.
 
-- Use [Azure AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero-standing access and least-privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, utilize Azure native tools as outlined above, or use both as needed.
+- Use [Azure AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, utilize Azure native tools as outlined above, or use both as needed.
 
 - Use Azure-AD-only groups for Azure control plane resources in Azure AD PIM when granting access to resources.
 
@@ -68,14 +68,13 @@ _Figure 1: Identity and access management._
 
 - Use custom RBAC role definitions within the Azure AD tenant while considering the following key roles:
 
-| Role                             | Usage                                                                                                     | Actions:                                                                                                                                                                                                           | No actions:                                                                                                                                                                   |
-|----------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Azure Platform Owner             | Management group and subscription lifecycle management                                                    | *                                                                                                                                                                                                                  |                                                                                                                                                                               |
-| Network Management (NetOps)      | Platform-wide global connectivity management: VNets, UDRs, NSGs, NVAs, VPN, ER, etc.                      | `*/read`, `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*`                              |                                                                                                                                                                               |
-| Security Operations (SecOps)     | Security Administrator role with a horizontal view across the entire Azure estate and the Key Vault purge policy | `*/read`, `*/register/action`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`, <br> `Microsoft.Insights/alertRules/*`, `Microsoft.Authorization/policyDefinitions/*`, `Microsoft.Authorization/policyAssignments/*`, `Microsoft.Authorization/policySetDefinitions/*`, `Microsoft.PolicyInsights/*`, `Microsoft.Security/*` |                                                                                                                                                                               |
-| Subscription Owner               | Delegated Role for Subscription Owner derived from subscription Owner role                                | *                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
-| Application Owners DevOps/AppOps | Contributor role granted for application/operations team at resource group level                          |                                                                                                                                                                                                                    | `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`                                   |
-
+| Role | Usage | Actions | No actions |
+|---|---|---|---|
+| Azure platform owner               | Management group and subscription lifecycle management                                                           | `*`                                                                                                                                                                                                                  |                                                                                                                                                                                         |
+| Network management (NetOps)        | Platform-wide global connectivity management: VNets, UDRs, NSGs, NVAs, VPN, ExpressRoute, and others            | `*/read`, `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*`                              |                                                                                                                                                                               |
+| Security operations (SecOps)       | Security administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy | `*/read`, `*/register/action`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`, `Microsoft.Insights/alertRules/*`, `Microsoft.Authorization/policyDefinitions/*`, `Microsoft.Authorization/policyAssignments/*`, `Microsoft.Authorization/policySetDefinitions/*`, `Microsoft.PolicyInsights/*`, `Microsoft.Security/*` |                                                                            |
+| Subscription owner                 | Delegated role for subscription owner derived from subscription owner role                                       | `*`                                                                                                                                                                                                                  | `Microsoft.Authorization/*/write`, `Microsoft.Network/vpnGateways/*`, `Microsoft.Network/expressRouteCircuits/*`, `Microsoft.Network/routeTables/write`, `Microsoft.Network/vpnSites/*` |
+| Application owners (DevOps/AppOps) | Contributor role granted for application/operations team at resource group level                                 |                                                                                                                                                                                                                    | `Microsoft.Network/publicIPAddresses/write`, `Microsoft.Network/virtualNetworks/write`, `Microsoft.KeyVault/locations/deletedVaults/purge/action`                                         |
 
 - Use Azure Security Center just-in-time (JIT) access for all infrastructure as a service (IaaS) resources to enable network-level protection for ephemeral user access to IaaS virtual machines.
 
@@ -93,8 +92,7 @@ A critical design decision that an enterprise organization must make when adopti
 
 - Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone.
 
-- Applications relying on domain services and using older protocol can use [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/).
-
+- Applications relying on domain services and using older protocols can use [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services).
 
 **Design recommendations:**
 

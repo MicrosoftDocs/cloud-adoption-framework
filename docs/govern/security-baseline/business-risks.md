@@ -25,7 +25,7 @@ The amount you invest into security policy and processes will depend a great dea
 The Security Baseline discipline covers the corporate policies and manual processes that you can put in place to protect your cloud deployment against security risks.
 
 > [!NOTE]
->While it is important to understand the [Identity Baseline discipline](../identity-baseline/index.md) in the context of the Security Baseline discipline and how that relates to access control, the [Five Disciplines of Cloud Governance](../index.md) treats it as a separate discipline.
+> While it's important to understand the [Identity Baseline discipline](../identity-baseline/index.md) in the context of the Security Baseline discipline and how that relates to access control, the [Five Disciplines of Cloud Governance](../index.md) treats it as a separate discipline.
 
 ## Business risk
 

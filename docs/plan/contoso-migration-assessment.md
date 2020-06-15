@@ -278,11 +278,11 @@ Before deploying the VM, Contoso checks that the OVA file is secure:
 1. On the machine on which the file was downloaded, Contoso opens an administrator Command Prompt window.
 2. Contoso runs the following command to generate the hash for the OVA file:
 
-    `C:\>CertUtil -HashFile <file_location> [Hashing Algorithm]`
+    `C:\> CertUtil -HashFile <file_location> [Hashing Algorithm]`
 
     **Example:**
 
-    `C:\>CertUtil -HashFile C:\AzureMigrate\AzureMigrate.ova SHA256`
+    `C:\> CertUtil -HashFile C:\AzureMigrate\AzureMigrate.ova SHA256`
 
 3. The generated hash should match the hash values listed in the [Verify security](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware#verify-security) section of the [Assess VMware VMs for migration](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware) tutorial.
 

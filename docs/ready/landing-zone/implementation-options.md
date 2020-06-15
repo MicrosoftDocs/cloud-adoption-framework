@@ -36,11 +36,11 @@ The following grid captures some of the landing zones' implementation options an
 
 The following table looks at the same implementation options from a slightly different perspective to guide more technical decision processes.
 
-| Implementation option                         | Hub                          | Spoke    | Cloud model | Deployment Technology|Deployment instructions |
-|-----------------------------------------------|------------------------------|----------|-------------|-----------------|--|--|--|
-| [CAF Enterprise-scale](./enterprise-scale.md) | Included                     | Included | Azure only | Azure Resource Manager templates, Azure portal, Azure Policy and GitHub | [Deploy](../enterprise-scale/implementation-guidelines.md) |
-| [CAF Migrate](./migrate-landing-zone.md)      | Refactor required            | Included | Azure only  | Azure Resource Manager templates, Azure portal, and Azure Blueprint | [Deploy](./migrate-landing-zone.md) |
-| [CAF Terraform](./terraform-landing-zone.md)  | Included in Virtual Datacenter module   | Included | Multicloud  | Terraform       | [Deploy](terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
+| Implementation option | Hub | Spoke | Deployment technology | Deployment instructions |
+|---|---|---|---|---|
+| [CAF Enterprise-scale](./enterprise-scale.md) | Included                              | Included | Azure Resource Manager templates, Azure portal, Azure Policy and GitHub | [Deploy](../enterprise-scale/implementation-guidelines.md) |
+| [CAF Migrate](./migrate-landing-zone.md)      | Refactor required                     | Included | Azure Resource Manager templates, Azure portal, and Azure Blueprint | [Deploy](./migrate-landing-zone.md) |
+| [CAF Terraform](./terraform-landing-zone.md)  | Included in Virtual Datacenter module | Included | Terraform | [Deploy](terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
 
 ## Next steps
 

@@ -83,8 +83,6 @@ function Get-MyInvalidTermExpressions {
         'For more,'
         'For more (?=details|about|on)'
 
-        'NorthStar!!enterprise-scale'
-        'North Star!!enterprise-scale'
         'enterprise scale architecture!!enterprise-scale architecture'
         'thought out!!considered'
         'go with!!use'

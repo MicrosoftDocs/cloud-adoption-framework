@@ -49,7 +49,7 @@ _Figure 1: An Azure enterprise enrollment hierarchy._
 
 **Design recommendations:**
 
-- Only use the authentication type "Work and School Account" for all account types. Avoid using the MSA account type.
+- Only use the authentication type `Work or school account` for all account types. Avoid using the `Microsoft account (MSA)` account type.
 
 - Set up the notification contact email address to ensure notifications are sent to an appropriate group mailbox.
 

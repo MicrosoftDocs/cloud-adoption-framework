@@ -41,7 +41,7 @@ _Figure 1: Platform management and monitoring._
 
   - Azure AD audit reports
 
-  - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow; and event logs
+  - Azure diagnostic services, logs, and metrics; Azure Key Vault audit events; network security group (NSG) flow logs; and event logs
 
   - Azure Monitor, Network Watcher, Security Center, and Azure Sentinel
 
@@ -67,7 +67,7 @@ _Figure 1: Platform management and monitoring._
 
 - Use a single [monitor logs workspace](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where role-based access control (RBAC) and data sovereignty requirements mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
-In the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This doesn't preclude the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular RBAC is enforced to ensure app teams will only have access to the logs from their resources. In this model, app teams benefit from the use of existing platform infrastructure by reducing their management overhead. For any non-compute resources (such as Web Apps or Cosmos DB databases), application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.
+In the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This doesn't preclude the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular RBAC is enforced to ensure app teams will only have access to the logs from their resources. In this model, app teams benefit from the use of existing platform infrastructure by reducing their management overhead. For any non-compute resources (such as web apps or Azure Cosmos DB databases), application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.
 
 <!-- docsTest:ignore WORM -->
 
@@ -80,7 +80,7 @@ In the context of the enterprise-scale architecture, centralized logging is prim
 - Use [update management in Azure Automation](https://docs.microsoft.com/azure/automation/automation-update-management) as a long-term patching mechanism for both Windows and Linux VMs.
  Enforcing update management configurations through policy ensures that all VMs are included in the patch management regimen, provides application teams with the ability to manage patch deployment for their VMs, and provides Central IT with visibility and enforcement capabilities across all VMs.
 
-- Use Azure Network Watcher to proactively monitor traffic flows via [NSG flow logs, version 2](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview). The Network Watcher [traffic analytics](https://docs.microsoft.com/azure/network-watcher/traffic-analytics) feature uses NSG flow logs to gather deep insights about IP traffic within a virtual network and providing critical information for effective management and monitoring. Traffic analytics provide information such as most communicating hosts and app protocols, most conversing host pairs, allowed/blocked traffic, inbound/outbound traffic, open internet ports, most blocking rules, traffic distribution per an Azure datacenter, virtual network, subnets, or rogue networks.
+- Use Azure Network Watcher to proactively monitor traffic flows via [Network Watcher NSG flow logs v2](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview). [Traffic Analytics](https://docs.microsoft.com/azure/network-watcher/traffic-analytics) analyzes NSG flow logs to gather deep insights about IP traffic within a virtual network and providing critical information for effective management and monitoring. Traffic Analytics provide information such as most communicating hosts and app protocols, most conversing host pairs, allowed or blocked traffic, inbound and outbound traffic, open internet ports, most blocking rules, traffic distribution per an Azure datacenter, virtual network, subnets, or rogue networks.
 
 - Use resource locks to prevent accidental deletion of critical shared services.
 
@@ -88,7 +88,7 @@ In the context of the enterprise-scale architecture, centralized logging is prim
 
 - Include [service](https://docs.microsoft.com/azure/service-health/service-health-overview) and [resource](https://docs.microsoft.com/azure/service-health/resource-health-overview) health events as part of the overall platform monitoring solution. Tracking service and resource health from the platform perspective is an important component of resource management in Azure.
 
-- Do not send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that _data born in Azure stays in azure_. If on-premises SIEM integration is required, then [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
+- Do not send raw log entries back to on-premises monitoring systems. Instead, adopt a principle that *data born in Azure stays in Azure*. If on-premises SIEM integration is required, then [send critical alerts](https://docs.microsoft.com/azure/security-center/continuous-export) instead of logs.
 
 ## Planning for app management and monitoring
 

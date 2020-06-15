@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- cSpell:ignore BGPs MACsec MPLS privatelink -->
+<!-- cSpell:ignore autoregistration BGPs MACsec MPLS MSEE onprem privatelink VPNs -->
 
 # Network topology and connectivity
 
@@ -23,7 +23,7 @@ It is vital that enterprise customers plan for IP addressing in Azure to ensure 
 
 - Overlapping IP address spaces across on-premises and Azure regions will create major contention challenges.
 
-- While virtual network (VNet) address space can be added after creation, this process will require an outage if the VNet is already connected to another VNet via virtual network peering because the peering will need to be deleted and recreated.
+- While virtual network (VNet) address space can be added after creation, this process requires an outage if the VNet is already connected to another VNet via virtual network peering, because the peering will need to be deleted and re-created.
 
 - Azure reserves five IP addresses within each subnet, which should be factored in when sizing VNets and encompassed subnets.
 
@@ -71,26 +71,26 @@ DNS is a critical design topic in the overall enterprise-scale architecture, and
 
 - Auto-registration should be enabled for Azure DNS to automatically manage the lifecycle of the DNS records for the virtual machines deployed within a VNet.
 
-- Use a virtual machine as a resolver for cross-premises DNS resolution with Azure Private DNS. 
+- Use a virtual machine as a resolver for cross-premises DNS resolution with Azure Private DNS.
 
 - Create the Azure Private DNS zone within a global connectivity subscription. Additional Azure Private DNS zones might be created (for example, `privatelink.database.windows.net` or `privatelink.blob.core.windows.net` for Azure Private Link).
 
-## Define an Azure networking topology
+## Define an Azure network topology
 
 Network topology is a critical foundational element of the enterprise-scale architecture, as it ultimately defines how applications can communicate with each other. This section explores relevant technologies and topology approaches for enterprise Azure deployments, focusing on two core approaches: topologies based on Azure Virtual WAN, and traditional topologies.
 
-An networking topology based on Azure Virtual WAN is the preferred enterprise-scale approach for large-scale, multiregion deployments where the customer needs to connect their global locations to both Azure and on-premises. A Virtual WAN network topology should also be used whenever the customer intends to leverage SD-WAN deployments fully integrated with Azure. Virtual WAN is used to meet large-scale interconnectivity requirements. Since it's a Microsoft-managed service, it also reduces overall network complexity and helps to modernize the customer's network.
+A network topology based on Azure Virtual WAN is the preferred enterprise-scale approach for large-scale multiregion deployments where the customer needs to connect their global locations to both Azure and on-premises. A Virtual WAN network topology should also be used whenever the customer intends to use SD-WAN deployments fully integrated with Azure. Virtual WAN is used to meet large-scale interconnectivity requirements. Since it's a Microsoft-managed service, it also reduces overall network complexity and helps to modernize the customer's network.
 
-A traditional Azure networking topology should be used for customers who only intend to deploy resources in a few Azure regions, don't need a global interconnected network, have a low number of remote or branch locations per region (less than 30), or require full control and granularity for manually configuring their Azure network. This traditional topology will support these customers to build a secure network foundation in Azure.
+A traditional Azure network topology should be used for customers who only intend to deploy resources in a few Azure regions, don't need a global interconnected network, have a low number of remote or branch locations per region (fewer than 30), or require full control and granularity for manually configuring their Azure network. This traditional topology will help these customers build a secure network foundation in Azure.
 
 ## Virtual WAN network topology (Microsoft-managed)
 
-![Network topology and connectivity](./media/net-con2.png)
-_Figure 1: Virtual-WAN-based network topology._
+![Network topology and connectivity](./media/virtual-wan-topology.png)
+_Figure 1: Virtual WAN network topology._
 
 **Design considerations:**
 
-- [Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about) is a Microsoft-managed solution where end-to-end global transit connectivity is provided out-of-the-box. Virtual WAN hubs eliminate the need to manually configure network connectivity. For example, customers don't need to set up user-defined routing (UDR) or network virtual appliances (NVA)s to enable global transit connectivity.
+- [Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about) is a Microsoft-managed solution where end-to-end global transit connectivity is provided by default. Virtual WAN hubs eliminate the need to manually configure network connectivity. For example, customers don't need to set up user-defined routing (UDR) or network virtual appliances (NVAs) to enable global transit connectivity.
 
 - Virtual WAN greatly simplifies end-to-end network connectivity in Azure and cross-premises by creating [hub-and-spoke network architecture](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-global-transit-network-architecture) that spans multiple Azure regions and on-premises locations (any-to-any connectivity) out-of-the-box, as depicted in the figure below:
 
@@ -104,15 +104,15 @@ _Figure 2: Global transit network with Virtual WAN._
   - Branch to virtual network
   - Branch to branch
 
-- Virtual WAN hubs are locked down, and the only resources that customer can deploy within them are virtual network gateways (point-to-site VPNs, site-to-site VPNs, and ExpressRoute), Azure Firewall via Firewall Manager, and route tables.
+- Virtual WAN hubs are locked down, and the only resources that customer can deploy within them are virtual network gateways (point-to-site VPN, site-to-site VPN, and ExpressRoute), Azure Firewall via Firewall Manager, and route tables.
 
-- Virtual WAN increases the limit of up to 200 prefixes advertised from Azure to on-premises via ExpressRoute private peering to 10,000 prefixes per single Virtual WAN hub. The limit of 10,000 prefixes also includes VPNs (site-to-site and point-to-site VPNs).
+- Virtual WAN increases the limit of up to 200 prefixes advertised from Azure to on-premises via ExpressRoute private peering to 10,000 prefixes per Virtual WAN hub. The limit of 10,000 prefixes also includes site-to-site VPN and point-to-site VPN.
 
 - VNet-to-VNet transitive connectivity (within a region and across regions) is in public preview.
 
 - Virtual WAN hub to hub connectivity is currently in public preview.
 
-- Virtual WAN integrates with a variety of SD-WAN [providers](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-locations-partners).
+- Virtual WAN integrates with a variety of [SD-WAN providers](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-locations-partners).
 
 - Many managed service providers offer [managed services](https://docs.microsoft.com/azure/networking/networking-partners-msp) for Virtual WAN.
 
@@ -130,7 +130,7 @@ _Figure 2: Global transit network with Virtual WAN._
 
   The following figure depicts a sample global customer deployment with datacenters spread across Europe and the United States, as well as a large number of branch offices within both regions. The environment is globally connected via Virtual WAN and ExpressRoute Global Reach.
 
-![Sample network topology](./media/eg-net-top.png)
+![Sample network topology](./media/global-reach-topology.png)
 _Figure 3: Sample network topology._
 
 - Use Virtual WAN as a global connectivity resource, with a Virtual WAN hub per Azure region to connect multiple landing zones together across Azure regions via their local Virtual WAN hub.
@@ -141,7 +141,7 @@ _Figure 3: Sample network topology._
 
 - Connect end users to the Virtual WAN hub via a point-to-site VPN.
 
-- It is recommended that the principle, "Traffic in Azure stays in Azure," is followed so that communication across resources in Azure occurs via the Microsoft backbone network even when they're in different regions.
+- Follow the principle, "traffic in Azure stays in Azure" so that communication across resources in Azure occurs via the Microsoft backbone network, even when the resources are in different regions.
 
 - Deploy Azure Firewall in Virtual WAN hubs for east-west and south-north traffic protection/filtering within an Azure region.
 
@@ -149,11 +149,11 @@ _Figure 3: Sample network topology._
 
 - When deploying third-party networking technologies and NVAs, follow the third-party vendor's guidance to ensure there aren't conflicting configurations with Azure networking.
 
-- Do not build a transit network on top of Azure Virtual WAN, as Virtual WAN satisfies all transitive networking topology requirements, including the ability to use third-party NVAs.
+- Do not build a transit network on top of Azure Virtual WAN, because Virtual WAN satisfies all transitive network topology requirements including the ability to use third-party NVAs.
 
 - It is recommended to not use existing on-premises networks like multiprotocol label switching (MPLS) to connect Azure resources across Azure regions, as Azure networking technologies support the interconnection of Azure resources across regions through the Microsoft backbone.
 
-- For brownfield scenarios where you are migrating from non-Virtual WAN-based hub-and-spoke network topology, refer to this migration [article](https://docs.microsoft.com/azure/virtual-wan/migrate-from-hub-spoke-topology).
+- For brownfield scenarios where you're migrating from a hub-and-spoke network topology not based on Virtual WAN, see [Migrate to Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/migrate-from-hub-spoke-topology).
 
 - Azure Virtual WAN and Azure Firewall resources should be created within the connectivity subscription.
 
@@ -163,13 +163,13 @@ _Figure 3: Sample network topology._
 
 While Virtual WAN offers a wide range of powerful capabilities, there are some cases where a traditional Azure networking approach may be optimal:
 
-- If a global transitive network across multiple Azure regions or cross-premises isn't required (for example, a branch in the United States requiring connectivity to a virtual network in Europe).
+- If a global transitive network across multiple Azure regions or cross-premises isn't required, such as a branch in the United States requiring connectivity to a virtual network in Europe.
 
 - If there isn't a need to connect to a large number of remote locations via VPN or integration with an SD-WAN solution.
 
 - If the customer's preference is to have granular control and configuration when setting up a network topology in Azure.
 
-![Network topology and connectivity](./media/cmanged-nt.png)
+![Network topology and connectivity](./media/customer-managed-topology.png)
 _Figure 4: A customer-managed Azure network topology._
 
 **Design considerations:**
@@ -184,7 +184,7 @@ _Figure 4: A customer-managed Azure network topology._
 
 - ExpressRoute circuits can be used to establish connectivity across VNets within the same geo-political region or by using the premium add-on for connectivity across geo-political regions.
 
-  - VNet to VNet traffic may experience additional latency since traffic must hairpin at the Microsoft Enterprise edge routers (MSEE).
+  - VNet-to-VNet traffic may experience additional latency since traffic must hairpin at the Microsoft enterprise edge (MSEE) routers.
 
   - Bandwidth will be constrained to the ExpressRoute gateway stock-keeping unit (SKU).
 
@@ -192,7 +192,7 @@ _Figure 4: A customer-managed Azure network topology._
 
 - VPN gateways with border gateway protocol (BGP) are transitive within Azure and on-premises, but don't transit across ExpressRoute gateways.
 
-- When multiple ExpressRoute circuits are connected to the same VNet, connection weights and BGP techniques must be used to ensure an optimal path for traffic between on-premises and Azure. For more information, see [Optimize ExpressRoute Routing](https://docs.microsoft.com/azure/expressroute/expressroute-optimize-routing).
+- When multiple ExpressRoute circuits are connected to the same VNet, connection weights and BGP techniques must be used to ensure an optimal path for traffic between on-premises and Azure. For more information, see [Optimize ExpressRoute routing](https://docs.microsoft.com/azure/expressroute/expressroute-optimize-routing).
 
 - Using BGP techniques to influence ExpressRoute routing is a configuration outside the Azure cloud. Therefore, the customer or their connectivity provider must configure their on-premises routers accordingly.
 
@@ -220,13 +220,13 @@ _Figure 4: A customer-managed Azure network topology._
 
 - For regional deployments, primarily use the hub-and-spoke topology, with landing zones VNets connecting with virtual network peering to a central hub VNet for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via NVA, as depicted in the figure below.
 
-![Network topology and connectivity](./media/hs.png)
+![Network topology and connectivity](./media/hub-and-spoke-topology.png)
 
 _Figure 5: Hub-and-spoke network topology._
 
-- When a high level of isolation is needed, dedicated ExpressRoute bandwidth is required for specific business units or the maximum number of connections per ExpressRoute gateway (up to four) is reached, use the multiple VNets connected with multiple ExpressRoute circuits topology, as depicted in the picture below:
+- When a high level of isolation is needed, dedicated ExpressRoute bandwidth is required for specific business units, or the maximum number of connections per ExpressRoute gateway (up to four) is reached, use the multiple VNets connected with multiple ExpressRoute circuits topology, as depicted in the picture below:
 
-![Network topology and connectivity](./media/mvneths.png)
+![Network topology and connectivity](./media/vnet-multiple-circuits.png)
 _Figure 6: Multiple virtual networks connected with multiple ExpressRoute circuits._
 
 - Deploy a set of minimal shared services, including ExpressRoute gateways, VPN gateways (as required) and Azure Firewall or third-party NVAs (as required) in the central hub VNet. If necessary, also Active Directory domain controllers and DNS servers.
@@ -237,13 +237,13 @@ _Figure 6: Multiple virtual networks connected with multiple ExpressRoute circui
 
 - L7 inbound NVAs (such as Azure Application Gateway) shouldn't be deployed as a shared service in the central hub VNet. Instead, they should be deployed together with the app in their respective landing zone.
 
-- Use existing customer network (MPLS and SD-WAN) for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
+- Use the existing customer network (MPLS and SD-WAN) for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 
 - For network architectures with multiple hub-and-spoke topologies across Azure regions, use global VNet peering to connect landing zone VNets when a small number of landing zones need to communicate across regions. This approach offers benefits like high network bandwidth with global VNet peering (as allowed by the VM SKU), but it will bypass the central NVA (in case traffic inspection or filtering is required). This would also be subject to [global VNet peering limitations](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
 
-- When a customer deploys hub-and-spoke network architecture in two Azure regions and transit connectivity between all landing zones across regions is required, use ExpressRoute with dual circuits to provide transit connectivity for landing zones VNets across Azure regions. In this scenario, landing zones can transit within a region via NVA in local hub VNet and across regions via ExpressRoute circuit, with the traffic hairpinning at the MSEE. This design is depicted in the image below:
+- When a customer deploys hub-and-spoke network architecture in two Azure regions and transit connectivity between all landing zones across regions is required, use ExpressRoute with dual circuits to provide transit connectivity for landing zones VNets across Azure regions. In this scenario, landing zones can transit within a region via NVA in local hub VNet and across regions via ExpressRoute circuit, and traffic must hairpin at the Microsoft enterprise edge (MSEE) routers. This design is depicted in the image below:
 
-![Network topology and connectivity](./media/mvnethspp.png)
+![Network topology and connectivity](./media/vnet-dual-circuits.png)
 _Figure 7: Landing zone connectivity design._
 
 - When a customer requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones VNets across Azure regions is required, while this architecture could be implemented by interconnecting central hub VNets with global VNet peering and using UDRs and NVAs to enable global transit routing, the complexity and management overhead is high. Instead, we recommend deploying global transit network architecture with Virtual WAN.
@@ -268,7 +268,10 @@ This section will expand on the network topology to consider recommended models 
 
 - ExpressRoute Global Reach is available in many [ExpressRoute peering locations](https://docs.microsoft.com/azure/expressroute/expressroute-global-reach#availability).
 
-- ExpressRoute Direct allows to create multiple ExpressRoute circuits at no additional cost, up to the ExpressRoute Direct port capacity (10 Gbs or 100G) and allows you to connect directly to Microsoft's ExpressRoute routers. For the 100 Gbps SKU, the minimum circuit bandwidth is 5 Gbps. For the 10 Gbps SKU, the minimum circuit bandwidth is 1 Gbps.
+- ExpressRoute Direct allows creation of multiple ExpressRoute circuits at no additional cost, up to the ExpressRoute Direct port capacity (10 Gbps or 100 Gbps) and allows you to connect directly to Microsoft's ExpressRoute routers. For the 100 Gbps SKU, the minimum circuit bandwidth is 5 Gbps. For the 10 Gbps SKU, the minimum circuit bandwidth is 1 Gbps.
+
+<!-- cSpell:ignore prepending -->
+<!-- docsTest:ignore "AS PATH prepending -->
 
 **Design recommendations:**
 
@@ -292,7 +295,7 @@ This section will expand on the network topology to consider recommended models 
 
 - When traffic isolation or dedicated bandwidth is required (such as for separating production and nonproduction environments), different ExpressRoute circuits should be used to ensure isolated routing domains and to alleviate noisy-neighbor risks.
 
-- Proactively monitor ExpressRoute circuits using Azure Network Performance Monitor.
+- Proactively monitor ExpressRoute circuits using Network Performance Monitor.
 
 - Do not explicitly use ExpressRoute circuits from a single peering location, as this creates a single point of failure and makes the customer susceptible to peering location outages.
 
@@ -314,7 +317,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
 - Enterprise customers often have concerns regarding public endpoints for PaaS services that must be appropriately mitigated.
 
-- For [supported services](https://docs.microsoft.com/azure/private-link/private-link-overview#availability), Private Link addresses data exfiltration concerns associated with service endpoints. Alternately, outbound filtering via NVAs can be used to provide data exfiltration risk mitigations.
+- For [supported services](https://docs.microsoft.com/azure/private-link/private-link-overview#availability), Private Link addresses data exfiltration concerns associated with service endpoints. Alternately, outbound filtering via NVAs can be used to provide steps to mitigate data exfiltration.
 
 **Design recommendations:**
 
@@ -322,7 +325,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
 - Azure PaaS services that have been injected into a VNet still perform management plane operations using public IP addresses. Ensure that this communication is locked down within the VNet using UDRs and NSGs.
 
-- Use Private Link, where available, for shared Azure PaaS services. Private Link is generally available for several services and is in public preview for numerous ones. Private Link availability is detailed [here](https://docs.microsoft.com/azure/private-link/private-endpoint-overview#private-link-resource). 
+- Use Private Link, where available, for shared Azure PaaS services. Private Link is generally available for several services and is in public preview for numerous ones. Private Link availability is detailed [here](https://docs.microsoft.com/azure/private-link/private-endpoint-overview#private-link-resource).
 
 - Access Azure PaaS services from on-premises via ExpressRoute private peering, using either VNet injection for dedicated Azure services or Azure Private Link for available shared Azure services. To access Azure PaaS services from on-premises when VNet injection or Private Link aren't available, use ExpressRoute with Microsoft peering. This would avoid transiting over the public internet.
 
@@ -340,9 +343,9 @@ This section describes recommended connectivity models for inbound and outbound 
 
 **Design considerations:**
 
-- Azure-native network security services such as Azure Firewall, Application Gateway Web Application Firewall (WAF), and Azure Front Door Service are fully managed services, meaning that customers don't incur the operational and management costs associated with infrastructure deployments, which can become complex at scale.
+- Azure-native network security services such as Azure Firewall, Azure Web Application Firewall (WAF) on Azure Application Gateway, and Azure Front Door are fully managed services, so customers don't incur the operational and management costs associated with infrastructure deployments, which can become complex at scale.
 
-- The enterprise scale architecture is fully compatible with third-party NVAs, should the customer prefer to use NVAs or for situations where native services don't satisfy specific customer requirements.
+- The enterprise-scale architecture is fully compatible with third-party NVAs, should the customer prefer to use NVAs or for situations where native services don't satisfy specific customer requirements.
 
 **Design recommendations:**
 
@@ -360,11 +363,11 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Configure supported third-party SaaS security providers within Firewall Manager if the customer wishes to use such solutions to protect outbound connections.
 
-- Use App Gateway WAF within a landing zone VNet for protecting inbound HTTP/S traffic from the internet.
+- Use WAF within a landing zone VNet for protecting inbound HTTP/S traffic from the internet.
 
-- Use Azure Front Door WAF policies to provide global protection across Azure regions for inbound HTTP/S connections to a landing zone.
+- Use Azure Front Door and WAF policies to provide global protection across Azure regions for inbound HTTP/S connections to a landing zone.
 
-- When using Azure Front Door and Application Gateway to protect HTTP/S apps, use WAF policies in Azure Front Door and lock down Application Gateway to receive traffic only from Azure Front Door.
+- When using Azure Front Door and Azure Application Gateway to protect HTTP/S apps, use WAF policies in Azure Front Door and lock down Azure Application Gateway to receive traffic only from Azure Front Door.
 
 - If third-party NVAs are required for east-west and/or south-north traffic protection/filtering:
 
@@ -384,7 +387,7 @@ This section explores key recommendations to deliver internal and external facin
 
 - Azure Load Balancer (internal and public) provides high availability for app delivery at a regional level.
 
-- Application Gateway allows the secure delivery of HTTP/S apps at a regional level.
+- Azure Application Gateway allows the secure delivery of HTTP/S apps at a regional level.
 
 - Azure Front Door allows the secure delivery of highly available HTTP/S apps across Azure regions.
 
@@ -398,13 +401,13 @@ This section explores key recommendations to deliver internal and external facin
 
 - Use a third-party NVA if Application Gateway v2 can't be used for the security of HTTP/S apps.
 
-- An Application Gateway v2 or third-party NVAs used for inbound HTTP/S connections should be deployed within the landing zone VNet and with the apps that they're securing.
+- Azure Application Gateway v2 or third-party NVAs used for inbound HTTP/S connections should be deployed within the landing zone VNet and with the apps that they're securing.
 
 - All public IP addresses in a landing zone should be protected with a DDoS standard protection plan.
 
 - Global HTTP/S apps that span Azure regions should be delivered and protected using Azure Front Door with WAF policies.
 
-- When using Azure Front Door and Application Gateway to protect HTTP/S apps, use WAF policies in Azure Front Door and lock down Application Gateway to receive traffic only from Azure Front Door.
+- When using Front Door and Application Gateway to protect HTTP/S apps, use WAF policies in Azure Front Door and lock down Application Gateway to receive traffic only from Front Door.
 
 - Global apps that span protocols other than HTTP/S should be delivered using Traffic Manager.
 
@@ -426,15 +429,15 @@ This section explores key recommendations to deliver highly secure internal netw
 
 **Design recommendations:**
 
-- Delegate subnet creation to the landing zone owner. This will enable them to define how to segment workloads across subnets (for example, a single, large subnet, multi-tier app, or VNet-injected app). The platform team can use Azure Policy to ensure an NSG with specific rules (such as deny inbound SSH or RDP from internet, or allow/block traffic across landing zones) is always associated to subnets with deny only policies.
+- Delegate subnet creation to the landing zone owner. This will enable them to define how to segment workloads across subnets (for example, a single large subnet, multitier app, or VNet-injected app). The platform team can use Azure Policy to ensure an NSG with specific rules (such as deny inbound SSH or RDP from internet, or allow/block traffic across landing zones) is always associated to subnets with deny-only policies.
 
 - NSGs must be used to protect traffic across subnets, as well as east-west traffic across the platform (inter-landing-zone traffic).
 
-- The app team should use app security groups at the subnet level NSGs to protect multi-tier VMs within their landing zone.
+- The app team should use app security groups at the subnet level NSGs to protect multitier VMs within their landing zone.
 
 - Use NSGs and app security groups to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 
-- It is recommended to enable NSG flow logs and feed them into Traffic Analytics to gain insights into internal and external traffic flows.
+- Enable NSG flow logs and feed them into Traffic Analytics to gain insights into internal and external traffic flows.
 
 - Use NSGs to selectively whitelist inter-landing-zone connectivity.
 
@@ -460,11 +463,11 @@ This section explores key recommendations to achieve network encryption between 
 ![Encryption flows](./media/enc-flows.png)
 _Figure 8: Encryption flows._
 
-- When establishing VPN connections from on-premises to Azure using VPN gateways, traffic is encrypted at a protocol level using IPsec tunnels, as depicted in Flow A in the diagram above.
+- When establishing VPN connections from on-premises to Azure using VPN gateways, traffic is encrypted at a protocol level using IPsec tunnels, as depicted in `Flow A` in the diagram above.
 
-- When using ExpressRoute Direct, configure [media access control security (MACsec)](https://docs.microsoft.com/azure/expressroute/expressroute-howto-MACsec) in order to encrypt traffic at layer-two (L2) level between the customer's routers and MSEE, as depicted in flow B in the diagram above.
+- When using ExpressRoute Direct, configure [media access control security (MACsec)](https://docs.microsoft.com/azure/expressroute/expressroute-howto-MACsec) in order to encrypt traffic at the layer-two level between the customer's routers and MSEE, as depicted in `Flow B` in the diagram above.
 
-- For Virtual WAN scenarios where MACsec isn't an option (for example, not using ExpressRoute Direct), use Virtual WAN VPN gateway to establish IPsec tunnels over ExpressRoute private peering. This is depicted by Flow C in the diagram above.
+- For Virtual WAN scenarios where MACsec isn't an option (for example, not using ExpressRoute Direct), use Virtual WAN VPN gateway to establish IPsec tunnels over ExpressRoute private peering. This is depicted by `Flow C` in the diagram above.
 
 - For non-virtual-WAN scenarios, and where MACsec isn't an option (for example, not using ExpressRoute Direct), today the only options is to use third-party NVAs to establish IPsec tunnels over ExpressRoute private peering or establish a VPN tunnel over ExpressRoute with Microsoft peering.
 
@@ -478,13 +481,15 @@ In many industries, customers require that traffic in Azure, particularly inboun
 
 **Design considerations:**
 
-- [Azure Virtual Network TAP](https://docs.microsoft.com/azure/virtual-network/virtual-network-tap-overview) is in preview, but your must reach to azurevnettap@microsoft.com for availability details.
+<!-- docsTest:ignore TAP -->
 
-- Packet capture in Network Watcher is GA, but captures are limited to a maximum period of 5 hours.
+- [Azure Virtual Network TAP](https://docs.microsoft.com/azure/virtual-network/virtual-network-tap-overview) is in preview, but your must contact `azurevnettap@microsoft.com` for availability details.
+
+- Packet capture in Network Watcher is generally available, but captures are limited to a maximum period of 5 hours.
 
 **Design recommendations:**
 
-As alternative to Virtual Network TAP, evaluate the following options:
+As an alternative to the Azure Virtual Network TAP, evaluate the following options:
 
 - Use Network Watcher packet to capture despite the limited capture window.
 

@@ -46,7 +46,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Platform-as-code (managing templates, scripts, and other assets)
 
-  - Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, graph API registration, and define roles)
+  - Responsible for overall operations on Microsoft Azure within the Azure Active Directory tenant (managing service principals, Graph API registration, and define roles)
 
 - **SecOps** (security operations)
 

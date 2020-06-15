@@ -116,7 +116,7 @@ function Get-CasingExpressions
         '(Azure )?Event Grid'
         'Azure Files'
         'Azure Firewall'
-        'Azure Front Door Service'
+        'Azure Front Door'
         'Azure function'
         'Azure Functions'
         'Azure Graph'
@@ -891,7 +891,6 @@ function Get-InvalidTermExpressions {
         'multi-cloud!!multicloud'
         "no ops!!no-ops"
 # TODO: Revisit.        "non-(?!business|cloud|DR|EA|mission|IaaS|internet|PaaS)!!non"
-        "northstar!!~~DO NOT USE"
         "off-site!!offsite"
         "on-board(?:ed|ing)?!!onboard"
         "on[ -]going!!ongoing"

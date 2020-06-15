@@ -21,7 +21,7 @@ This section will help readers capture customer disaster recovery (DR) requireme
 
 - Business continuity and DR for platform as a service (PaaS) services and the availability of native DR and high-availability features.
 
-- Support for multi-region deployments for failover purposes, with component proximity for performance reasons.
+- Support for multiregion deployments for failover purposes, with component proximity for performance reasons.
 
 - Application operations with reduced functionality or degraded performance in the presence of an outage.
 

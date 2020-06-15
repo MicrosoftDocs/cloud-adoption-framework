@@ -150,7 +150,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
     - [Microsoft cybersecurity reference architecture](https://aka.ms/mcra) to build a cybersecurity architecture for a hybrid enterprise that spans on-premises and cloud resources.
     - [Security operations center (SOC) reference architecture](https://docs.microsoft.com/security/compass/security-operations-videos-and-decks#part-1-introduction---soc-learnings-strategies-and-technical-integration-2430) to modernize security detection, response, and recovery.
     - [Zero-trust user access reference architecture](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-3#part-5-zero-trust-user-access-reference-architecture-842) to modernize access control architecture for cloud generation.
-    - [Azure Security Center](https://docs.microsoft.com/azure/security-center/) and [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/) to help secure cloud assets.
+    - [Azure Security Center](https://docs.microsoft.com/azure/security-center) and [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security) to help secure cloud assets.
   - **Security awareness and education plan**, so all teams have basic critical security knowledge.
   - **Asset sensitivity marking** to designate sensitive assets by using a taxonomy aligned to business impact. The taxonomy is built jointly by business stakeholders, security teams, and other interested parties.
 
@@ -212,7 +212,7 @@ During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/
   Microsoft provides several native capabilities in Azure to enable this:
   - [Secure score](https://docs.microsoft.com/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.
   - [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview): Cloud architects and central IT groups can define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements.
-  - [Azure Policy](https://docs.microsoft.com/azure/governance/policy/): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
+  - [Azure Policy](https://docs.microsoft.com/azure/governance/policy): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
 - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 
 <!-- markdownlint-disable MD033 -->

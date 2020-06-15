@@ -15,7 +15,7 @@ ms.subservice: ready
 
 This section covers how to get started with the enterprise-scale platform-native reference implementation and outline design objectives, current design, FAQ, and known issues.
 
-Two sets of activities must take place to implement enterprise-scale architecture. The first set is what must be true for enterprise scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The second set includes **File** > **New** > **Region** and **File** > **New** > **Landing Zone**. These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IaC)_ and automation with deployment pipelines.
+Two sets of activities must take place to implement enterprise-scale architecture. The first set is what must be true for enterprise scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The second set includes **File** > **New** > **Region** and **File** > **New** > **Landing zone**. These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IaC)_ and automation with deployment pipelines.
 
 Some of the tables below include blank columns. Use these columns to capture values and notes specific to your environment.
 
@@ -29,7 +29,7 @@ Some of the tables below include blank columns. Use these columns to capture val
 | 2. Create departments/business domains/geo-based/org hierarchy. |                     |                                  |
 | 3. Create an EA account and assign budget. |                                  |
 | 4. Set up Azure AD Connect for each Azure AD tenant if identity is to be synchronized from on-premises. |                     |                                  |
-| 5. Establish zero-standing access to Azure resources and just-in time access via Azure AD Privileged Identity Management (PIM).    |                     |                                  |
+| 5. Establish zero standing access to Azure resources and just-in time access via Azure AD Privileged Identity Management (PIM).    |                     |                                  |
 
 ### Management group and subscription
 
@@ -86,7 +86,7 @@ Some of the tables below include blank columns. Use these columns to capture val
 | 1. Create policy compliance and security dashboards for organizational and resource-centric views.            |                     |                                  |
 | 2. Create a workflow for platform secrets (service principals and automation account) and key rollover.     |                     |                                  |
 | 3. Optional: set up an organization-wide virtual machine (VM) gallery image.                                                  |                     |                                  |
-| 4. Set up long-term archiving and retention for logs within Azure Monitor Logs.                                    |                     |                                  |
+| 4. Set up long-term archiving and retention for logs within Azure Monitor logs.                                    |                     |                                  |
 | 5. Set up business continuity and disaster recovery for key vaults used to store platform secrets.                                                  |                     |                                  |
 | 6. Using Azure Firewall Manager, ensure that all connected virtual networks to a secure virtual hub are protected by Azure Firewall. |                     |                                  |
 

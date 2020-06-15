@@ -42,7 +42,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 - Assign `Contributor` permission to the SPN mentioned above at the root management group scope (`/`), which allows tenant-level operations. This ensures that the SPN can be used to deploy and manage resources to any subscription within your organization.
 
-- Create a `platform` management group under the root management group to support common platform policy and role-based access control (RBAC) assignment. This ensures that different policies can be applied to the subscriptions used for your Azure foundation, and that the billing for common resources is centralized in one set of foundational subscriptions.
+- Create a `Platform` management group under the root management group to support common platform policy and role-based access control (RBAC) assignment. This ensures that different policies can be applied to the subscriptions used for your Azure foundation, and that the billing for common resources is centralized in one set of foundational subscriptions.
 
 - Limit the number of Azure Policy assignments made at the root management group scope (`/`). This minimizes debugging inherited policies in lower-level management groups.
 
@@ -60,7 +60,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Subscriptions provide a management boundary for governance and isolation, creating a clear separation of concerns.
 
-- There is a manual process (planned future automation) which can be conducted to limit an Azure AD tenant to only use Enterprise Enrollment subscriptions. This prevents creation of MSDN subscriptions at the root management group scope.
+- There is a manual process (planned future automation) which can be conducted to limit an Azure AD tenant to only use enterprise enrollment subscriptions. This prevents creation of MSDN subscriptions at the root management group scope.
   
 **Design recommendations:**
 
@@ -86,11 +86,11 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Group subscriptions together under management groups aligned within the management group structure and policy requirements at scale. This ensures that subscriptions with the same set of policies and RBAC assignments can inherit them from a management group, avoiding duplicate assignments.
 
-- Establish a dedicated `management` subscription in the `platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
+- Establish a dedicated management subscription in the `Platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
 
-- Establish a dedicated `identity` subscription in the `platform` management group to host Windows Server Active Directory domain controllers, when necessary.
+- Establish a dedicated identity subscription in the `Platform` management group to host Windows Server Active Directory domain controllers, when necessary.
 
-- Establish a dedicated `connectivity` subscription in the `platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. This ensures that all foundation network resources are billed together and isolated from other workloads.
+- Establish a dedicated connectivity subscription in the `Platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. This ensures that all foundation network resources are billed together and isolated from other workloads.
 
 - Avoid a rigid subscription model, opting instead for a set of flexible criteria to group subscriptions across the organization. This ensures that as your organization's structure and workload composition changes, you're able to create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions; what works for one business unit may not work for another. Some apps may coexist within the same landing zone subscription while others may require their own subscription.
 

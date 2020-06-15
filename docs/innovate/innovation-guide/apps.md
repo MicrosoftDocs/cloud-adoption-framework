@@ -288,9 +288,9 @@ Azure Red Hat OpenShift provides flexible self-service deployment of fully manag
 
 As you start to transition from your initial testing phase, evaluate ways to isolate and remove points of failure. Because of the distributed nature of the Azure cloud platform, you can design your application to minimize failures while also improving performance.
 
-## Azure Front Door Service
+## Azure Front Door
 
-Azure Front Door Service provides a scalable, secure entry point that you can use to deliver your application around the globe. Azure Front Door Service combines optimization of traffic for best performance and instant global failover. You should use Azure Front Door Service rather than Azure Traffic Manager if you need Transport Layer Security (TLS) protocol termination (SSL offload) or per-HTTP/HTTPS request application-layer processing.
+Azure Front Door provides a scalable, secure entry point that you can use to deliver your application around the globe. Azure Front Door combines optimization of traffic for best performance and instant global failover. You should use Azure Front Door rather than Azure Traffic Manager if you need Transport Layer Security (TLS) protocol termination (SSL offload) or per-HTTP/HTTPS request application-layer processing.
 
 ### Action
 
@@ -334,11 +334,11 @@ To configure or monitor Traffic Manager profiles:
 
 ## Azure Content Delivery Network
 
-Azure offers a distributed content delivery network (CDN) that allows you to ensure timely delivery of assets by caching them close to your users. This caching helps to improve your customers' experiences. During content download, it also prevents issues that are caused by network problems that occur between the CDN endpoint and the datacenter that hosts your application. Content Delivery Network can also be used by applications that aren't hosted in Azure.
+Azure offers a distributed content delivery network (CDN) that allows you to ensure timely delivery of assets by caching them close to your users. This caching helps to improve your customers' experiences. During content download, it also prevents issues that are caused by network problems that occur between the CDN endpoint and the datacenter that hosts your application. Azure CDN can also be used by applications that aren't hosted in Azure.
 
 ### Action
 
-To configure or monitor Content Delivery Network profiles:
+To configure or monitor Azure CDN profiles:
 
 1. Go to **CDN profiles**.
 2. Configure a new profile: Select **Add** and follow the prompts.

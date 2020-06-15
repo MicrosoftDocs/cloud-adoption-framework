@@ -91,12 +91,12 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 ### Azure services
 
-**Service** | **Description** | **Cost**
---- | --- | ---
-[AKS](https://docs.microsoft.com/sql/dma/dma-overview?view=ssdt-18vs2017) | Simplifies Kubernetes management, deployment, and operations. Provides a fully managed Kubernetes container orchestration service. | AKS is a free service. Pay for only the virtual machines, and associated storage and networking resources consumed. [Learn more](https://azure.microsoft.com/pricing/details/kubernetes-service).
-[Azure Functions](https://azure.microsoft.com/services/functions) | Accelerates development with an event-driven, serverless compute experience. Scale on demand. | Pay only for consumed resources. Plan is billed based on per-second resource consumption and executions. [Learn more](https://azure.microsoft.com/pricing/details/functions).
-[Azure Container Registry](https://azure.microsoft.com/services/container-registry) | Stores images for all types of container deployments. | Cost based on features, storage, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/container-registry).
-[Azure App Service](https://azure.microsoft.com/services/app-service/containers) | Quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform. | App Service plans are billed on a per second basis. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows).
+| Service | Description | Cost |
+|---|---|---|
+| [AKS](https://docs.microsoft.com/sql/dma/dma-overview?view=ssdt-18vs2017) | Simplifies Kubernetes management, deployment, and operations. Provides a fully managed Kubernetes container orchestration service. | AKS is a free service. Pay for only the virtual machines, and associated storage and networking resources consumed. [Learn more](https://azure.microsoft.com/pricing/details/kubernetes-service). |
+| [Azure Functions](https://azure.microsoft.com/services/functions) | Accelerates development with an event-driven, serverless compute experience. Scale on demand. | Pay only for consumed resources. Plan is billed based on per-second resource consumption and executions. [Learn more](https://azure.microsoft.com/pricing/details/functions). |
+| [Azure Container Registry](https://azure.microsoft.com/services/container-registry) | Stores images for all types of container deployments. | Cost based on features, storage, and usage duration. [Learn more](https://azure.microsoft.com/pricing/details/container-registry). |
+| [Azure App Service](https://azure.microsoft.com/services/app-service/containers) | Quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform. | App Service plans are billed on a per second basis. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
 
 ## Prerequisites
 
@@ -197,7 +197,7 @@ The Contoso admins provision as follows:
 
 Contoso creates an Azure DevOps project, and configures a CI build to create the container and then pushes it to the container registry. The instructions in this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repository.
 
-1. From visualstudio.com, they create a new organization (**contosodevops360.visualstudio.com**), and configure it to use Git.
+1. From `visualstudio.com`, they create a new organization (**contosodevops360.visualstudio.com**), and configure it to use Git.
 
 2. They create a new project (**SmartHotelBackend**) using Git for version control, and Agile for the workflow.
 
@@ -418,9 +418,9 @@ Contoso admins provision the web app using the Azure portal.
 
     ![Web app staging slot](./media/contoso-migration-rebuild/web-app3.png)
 
-### Provision the Azure function app
+### Provision the function app
 
-In the Azure portal, Contoso admins provision the Function App.
+In the Azure portal, Contoso admins provision the function app.
 
 1. They select **Function App**.
 

@@ -47,6 +47,8 @@ The scope of contributions to this repo is that as a platform evolves and new se
 
 The implementation guide and reference implementation must be updated accordingly as new services, resources, resource properties, and API versions emerge. Code contributions would primarily focus on Microsoft Azure Policy definitions and assignments for Contoso implementation.
 
+<!-- cSpell:ignore azops apiversion northeurope -->
+
 ## How to submit a PR to the upstream repo
 
 1. Create a new branch based on upstream/master by executing the following command:
@@ -114,6 +116,8 @@ Retrieve resource definitions by calling the `Get-AzResource` function and givin
 
 Get-AzResource -ResourceId '/providers/Microsoft.Management/managementGroups/contoso/providers/Microsoft.Authorization/policyDefinitions/DINE-Diagnostics-ActivityLog' | ConvertTo-Json -depth 100
 ```
+
+<!-- docsTest:ignore "Policy definition" -->
 
 The following pros and cons should be considered when making design decisions:
 
