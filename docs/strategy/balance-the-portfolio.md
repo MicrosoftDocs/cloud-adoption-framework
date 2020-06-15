@@ -9,9 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- docsTest:ignore "Team 1" "Team 2" -->
-<!-- cSpell:ignore CSAT -->
-
 # Balance the portfolio
 
 Cloud adoption is a portfolio-management effort, cleverly disguised as technical implementation. Like any portfolio management exercise, balancing the portfolio is critical. At a strategic level, this means balancing migration, innovation, and experimentation to get the most out of the cloud. When the cloud adoption effort leans too far in one direction, complexity finds its way into the adoption efforts. This article will guide the reader through approaches to achieve balance in the portfolio.
@@ -20,7 +17,8 @@ Cloud adoption is a portfolio-management effort, cleverly disguised as technical
 
 Balancing the portfolio is strategic in nature. As such, the approach taken in this article is equally strategic. To ground the strategy in data-driven decisions, this article assumes the reader has evaluated the existing [digital estate](../digital-estate/index.md) or has begun that process. The objective of this approach is to aid in evaluating workloads to ensure proper balance across the portfolio through qualitative questions and portfolio refinement.
 
-<!-- docsTest:ignore 2M months years datacenters improvement TODO -->
+<!-- docsTest TODO: Handle capitalization following numbers and back-ticks -->
+<!-- cSpell:ignore 2M months years datacenters improvement CSAT -->
 
 ### Document business outcomes
 

@@ -10,8 +10,6 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # Prepare corporate IT policy for the cloud
 
 Cloud governance is the product of an ongoing adoption effort over time, as a true lasting transformation doesn't happen overnight. Attempting to deliver complete cloud governance before addressing key corporate policy changes using a fast aggressive method seldom produces the desired results. Instead we recommend an incremental approach.

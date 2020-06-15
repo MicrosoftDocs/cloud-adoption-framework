@@ -63,7 +63,7 @@ To set up a Service Health alert:
 
 1. Go to **Service Health**.
 2. Select **Health alerts**.
-3. Create a service health alert.
+3. Create a Service Health alert.
 
 <!-- markdownlint-disable DOCSMD001 -->
 

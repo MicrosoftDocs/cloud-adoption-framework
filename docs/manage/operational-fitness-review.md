@@ -13,15 +13,15 @@ ms.subservice: operate
 
 As your enterprise begins to operate workloads in Azure, the next step is to establish a process for _operational fitness review_. This process enumerates, implements, and iteratively reviews the _nonfunctional requirements_ for these workloads. Nonfunctional requirements are related to the expected operational behavior of the service.
 
-There are five essential categories of nonfunctional requirements, which are called the [pillars of software quality](https://docs.microsoft.com/azure/architecture/guide/pillars):
+There are five essential categories of nonfunctional requirements, known as the [pillars of architecture excellence](https://docs.microsoft.com/azure/architecture/framework):
 
-- Scalability
-- Availability
-- Resiliency (including business continuity and disaster recovery)
-- Management
+- Cost optimization
+- Operational excellence
+- Performance efficiency
+- Reliability
 - Security
 
-A process for operational fitness review ensures that your mission-critical workloads meet the expectations of your business with respect to the quality pillars.
+A process for operational fitness review ensures that your mission-critical workloads meet the expectations of your business with respect to the pillars.
 
 Create a process for operational fitness review to fully understand the problems that result from running workloads in a production environment, and how to remediate and resolve those problems. This article outlines a high-level process for operational fitness review that your enterprise can use to achieve this goal.
 
@@ -116,13 +116,17 @@ Adapt the details of the process and meeting to fit your specific needs. We reco
 
 ## Recommended resources
 
-- [Pillars of software quality](https://docs.microsoft.com/azure/architecture/guide/pillars).
-    This section of the Azure Application Architecture Guide describes the five pillars of software quality: scalability, availability, resiliency, management, and security.
+- [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework): Learn about guiding tenets for improving the quality of a workload. The framework consists of five pillars of architecture excellence:
+  - Cost optimization
+  - Operational excellence
+  - Performance efficiency
+  - Reliability
+  - Security
 - [Ten design principles for Azure applications](https://docs.microsoft.com/azure/architecture/guide/design-principles).
-    This section of the Azure Application Architecture Guide discusses a set of design principles to make your application more scalable, resilient, and manageable.
+    Follow these design principles to make your application more scalable, resilient, and manageable.
 - [Designing resilient applications for Azure](https://docs.microsoft.com/azure/architecture/resiliency).
-    This guide starts with a definition of the term _resiliency_ and related concepts. Then, it describes a process for achieving resiliency by using a structured approach over the lifetime of an application, from design and implementation to deployment and operations.
+    Build and maintain reliable systems using a structured approach over the lifetime of an application, from design and implementation to deployment and operations.
 - [Cloud design patterns](https://docs.microsoft.com/azure/architecture/patterns).
-    These design patterns are useful for engineering teams when building applications on the pillars of software quality.
+    Use design patterns to build applications on the pillars of architecture excellence.
 - [Azure Advisor](https://docs.microsoft.com/azure/advisor).
-    Advisor provides recommendations that are personalized based on your usage and configurations to help you optimize your resources for high availability, security, performance, and cost.
+    Azure Advisor provides personalized recommendations based on your usage and configurations to help optimize your resources for high availability, security, performance, and cost.

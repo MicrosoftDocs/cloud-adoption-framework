@@ -15,8 +15,6 @@ As discussed in the [business outcomes overview](./index.md), it can be difficul
 
 Download the [business outcome template spreadsheet](https://archcenter.blob.core.windows.net/cdn/business-outcome-template.xlsx) to begin brainstorming and tracking business outcomes. Continue reading to learn how to use the template. Review the [business outcomes section](./index.md) for ideas on potential business outcomes that could come up in executive conversations.
 
-<!-- markdownlint-disable MD026 -->
-
 ## Use the business outcome template
 
 In this template, business outcomes focus on three topics:

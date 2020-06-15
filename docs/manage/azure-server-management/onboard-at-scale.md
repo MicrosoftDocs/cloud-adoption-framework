@@ -31,7 +31,7 @@ This article covers the three processes that are necessary to complete these tas
 
 All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
 
-Azure Policy has a [built-in policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
+Azure Policy has a [built-in policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics Agent and the [Microsoft Dependency Agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
 <!-- TODOBACKLOG: Add these when available.
 **Preview:** Enable Azure Monitor for virtual machine scale sets.
@@ -51,7 +51,7 @@ To assign the policies that described in the previous section:
 
 2. On the **Assign Policy** page, set the **Scope** by selecting the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
 
-3. Select the ellipsis (**…**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
+3. Select the ellipsis (**...**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale2.png)
 
@@ -61,7 +61,7 @@ To assign the policies that described in the previous section:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale3.png)
 
-6. Select the **Managed Identity location** check box. If this policy is of the type [DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
+6. Select the **Managed Identity location** check box. If this policy is of the type `[DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists)`, a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
 
 7. Select **Assign**.
 
@@ -72,7 +72,7 @@ After you complete the wizard, the policy assignment will be deployed to the env
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard Azure server management services to servers.
 
-For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal, then select **Settings** > **Advanced settings**.
+For on-premises servers, you need to download and install the [Log Analytics Agent and the Microsoft Dependency Agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal, then select **Settings** > **Advanced settings**.
 
 ![Screenshot of Log Analytics workspace advanced settings in the Azure portal](./media/onboarding-on-premises.png)
 

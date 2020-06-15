@@ -22,8 +22,6 @@ For simplicity, we've categorized this guidance into three stages:
 
 ![The three stages of onboarding the Azure server management suite](./media/operations-stages.png)
 
-<!-- markdownlint-disable MD026 -->
-
 ## Why use Azure server management services?
 
 Azure server management services offer the following benefits:

@@ -55,7 +55,7 @@ The following bullets provide an overview of the phases of this process (picture
 
 Migration iterations will deliver technical value by migrating assets and workloads. A migration wave is the smallest collection of workloads, which deliver tangible and measurable business value. Each iteration should end in a report outlining the technical efforts completed. However, business change and strategic planning generally happens at a slightly higher level. As the cloud adoption team delivers on the migration effort, the cloud strategy team focuses on planning the next 1-2 migration waves. The cloud strategy team also tracks technical progress as a learning metric to better understand the timelines for realizing business value. In that regard, migration waves are the iterative change management approach to tracking business outcomes, people, and timelines.
 
-As outlined in the graphic in the prior section, processes within the [Plan](../plan/index.md) methodology, the [Ready](../ready/index.md) methodology, and to some extent the [Strategy](../strategy/index.md) methodology of the Cloud Adoption Framework provide guidance on planning and managing the migration waves. The management of those waves will prioritize and define the migration effort to be delivered by the technical teams.
+As outlined in the graphic in the prior section, processes within the [Plan methodology](../plan/index.md), the [Ready methodology](../ready/index.md), and to some extent the [Strategy methodology](../strategy/index.md) of the Cloud Adoption Framework provide guidance on planning and managing the migration waves. The management of those waves will prioritize and define the migration effort to be delivered by the technical teams.
 
 ## Next steps
 

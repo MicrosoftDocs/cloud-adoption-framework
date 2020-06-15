@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # What role does replication play in the migration process?
 
 On-premises datacenters are filled with physical assets like servers, appliances, and network devices. However, each server is only a physical shell. The real value comes from the binary running on the server. The applications and data are the purpose for the datacenter. Those are the primary binaries to migrate. Powering these applications and data stores are other digital assets and binary sources, like operating systems, network routes, files, and security protocols.

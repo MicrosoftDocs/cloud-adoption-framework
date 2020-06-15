@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # How do retrospectives help build a growth mindset?
 
 "Culture eats strategy for breakfast." The best migration plan can easily be undone, if it doesn't have executive support and encouragement from leadership. Learning, growing, and even failure are at the heart of a growth mindset. They are also at the heart of any transformation effort.

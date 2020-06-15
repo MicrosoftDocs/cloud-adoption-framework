@@ -54,23 +54,21 @@ Platform specialization consists of a disciplined execution of the following fou
 
 ::: zone-end
 
-Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is out of scope for the environment view that is taken throughout Cloud Adoption Framework for Azure.
+Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is out of scope for the environment view that is taken throughout the Cloud Adoption Framework for Azure.
 
-As a complement to Cloud Adoption Framework, Microsoft Azure Well-Architected Framework provides best practices for improving the resiliency and design of a specific system. Those design improvements can be applied to the systems design of either a platform or a specific workload.
+As a complement to this framework, the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) provides guiding tenets for improving the quality of a platform or a specific workload.The framework focuses on improvement across five pillars of architecture excellence:
 
-Microsoft Azure Well-Architected Framework focuses on improvement across five pillars of system design:
-
-- **Scalability:** Scaling the common platform assets to handle increased load.
-- **Availability:** Reducing business interruptions by improving potential uptime.
-- **Resiliency:** Improving recovery times to reduce the duration of interruptions.
-- **Security:** Protecting applications and data from external threats.
-- **Management:** Operational processes specific to those common platform assets.
+- **Cost optimization:** Manage costs to maximize the value delivered.
+- **Operational excellence:** Follow operational processes that keep a system running in production.
+- **Performance efficiency:** Scale systems to adapt to changes in load.
+- **Reliability:** Design systems to recover from failures and continue to function.
+- **Security:** Protect applications and data from threats.
 
 Technical debt and architectural flaws cause most business interruptions. For existing deployments, you can view system-design improvements as payments against existing technical debt. For new deployments, you can view those improvements as avoidance of technical debt.
 
 The following **Automated remediation** tab shows ways to remediate technical debt that can't or shouldn't be addressed.
 
-Learn more about [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) to improve system design.
+Learn more about the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) to improve system design.
 
 As system design improves, return to this article to find new opportunities to improve and scale those improvements across your environment.
 

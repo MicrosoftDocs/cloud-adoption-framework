@@ -163,6 +163,7 @@ They set these up as follows:
 **Need more help?**
 
 Learn about setting up the [Azure Migrate: Server Migration tool](https://docs.microsoft.com/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
+
 ### Prepare on-premises VMs
 
 After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. To do this, Contoso admins do the following before migration:

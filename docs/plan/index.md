@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # Develop a cloud adoption plan
 
 Cloud adoption plans convert the aspirational goals of a cloud adoption strategy into an actionable plan. The collective cloud teams can use the cloud adoption plan to guide their technical efforts and align them with the business strategy.
