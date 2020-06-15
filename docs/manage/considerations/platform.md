@@ -42,15 +42,15 @@ After the platform is packaged, the cloud management team can add it to the grow
 
 ## Define your own platform operations
 
-Although management tools and processes can help improve platform operations, that is often not enough to achieve the desired states of stability and reliability. True platform operations requires a focus on architecture-quality pillars. When a platform justifies a deeper investment in operations, the following five pillars should be considered before the platform becomes a part of any service catalog:
+Although management tools and processes can help improve platform operations, that is often not enough to achieve the desired states of stability and reliability. True platform operations requires a focus on pillars of architecture excellence. When a platform justifies a deeper investment in operations, consider the following five pillars before the platform becomes a part of any service catalog:
 
-- **Scalability:** The ability of a system to handle increased load.
-- **Availability:** The percentage of time that a system is functional and working.
-- **Resiliency:** The ability of a system to recover from failures and continue to function.
-- **Management:** The operations processes that keep a system running in production.
-- **Security:** Protecting applications and data from threats.
+- **Cost optimization:** Manage costs to maximize the value delivered.
+- **Operational excellence:** Follow operational processes that keep a system running in production.
+- **Performance efficiency:** Scale systems to adapt to changes in load.
+- **Reliability:** Design systems to recover from failures and continue to function.
+- **Security:** Protect applications and data from threats.
 
-The [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
+The [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
 
 ## Get started with specific platforms
 

@@ -15,8 +15,6 @@ As discussed in the [business outcomes overview](./index.md), several potential 
 
 Traditionally, chief investment officers and IT teams were considered a source of stability in core mission-critical processes. This is still true. Few businesses can function well when their IT platform is unstable. However, in today's business world, much more is expected. IT can expand beyond a simple cost center by partnering with the business to provide market advantages. Many chief investment officers and executives assume that stability is simply a baseline for IT. For these leaders, business agility is the measure of IT's contribution to the business.
 
-<!-- markdownlint-disable MD026 -->
-
 ## Why is agility so important?
 
 Markets change at a faster pace today than ever before. As of 2015, only 57 companies were still in the Fortune 500 61 years later&mdash;an 88.6 percent turnover rate. This represents market change at a previously unheard-of rate. IT agility or even business agilities are unlikely to affect an organization listing on the Fortune 500, but these figures help us understand the pace at which markets continue to change.

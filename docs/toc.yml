@@ -176,28 +176,56 @@ items:
         href: ready/azure-setup-guide/monitoring-reporting.md
       - name: Stay current with Azure
         href: ready/azure-setup-guide/staying-current.md
-    - name: First landing zone
+    - name: Azure landing zones
       items:
       - name: What is a landing zone?
         href: ready/landing-zone/index.md
-      - name: Refactor landing zones
-        href: ready/landing-zone/refactor.md
-      - name: Choose your first landing zone
-        href: ready/landing-zone/first-landing-zone.md
-      - name: Migration landing zone blueprint
-        href: ready/landing-zone/migrate-landing-zone.md
-      - name: Terraform landing zones
-        href: ready/landing-zone/terraform-landing-zone.md
-    - name: Expand the landing zone
-      items:
-      - name: Overview
-        href: ready/considerations/index.md
-      - name: Test-driven development (TDD) for landing zones
-        href: ready/considerations/test-driven-development.md
-      - name: Landing zone TDD in Azure
-        href: ready/considerations/azure-test-driven-development.md
+      - name: Design areas
+        href: ready/landing-zone/design-areas.md
+      - name: Implementation options
+        href: ready/landing-zone/implementation-options.md
+      - name: Start with enterprise scale
+        items:
+        - name: Overview
+          href: ready/enterprise-scale/index.md
+        - name: Implement enterprise-scale landing zones
+          href: ready/enterprise-scale/implementation.md
+        - name: Architecture
+          href: ready/enterprise-scale/architecture.md
+        - name: Design principles
+          href: ready/enterprise-scale/design-principles.md
+        - name: Design guidelines
+          href: ready/enterprise-scale/design-guidelines.md
+        - name: Critical design areas
+          items:
+          - name: Enterprise enrollment and Azure AD tenants
+            href: ready/enterprise-scale/enterprise-enrollment-and-azure-ad-tenants.md
+          - name: Identity and access management
+            href: ready/enterprise-scale/identity-and-access-management.md
+          - name: Management group and subscription organization
+            href: ready/enterprise-scale/management-group-and-subscription-organization.md
+          - name: Network topology and connectivity
+            href: ready/enterprise-scale/network-topology-and-connectivity.md
+          - name: Management and monitoring
+            href: ready/enterprise-scale/management-and-monitoring.md
+          - name: Business continuity and disaster recovery
+            href: ready/enterprise-scale/business-continuity-and-disaster-recovery.md
+          - name: Security, governance, and compliance
+            href: ready/enterprise-scale/security-governance-and-compliance.md
+          - name: Platform automation and DevOps
+            href: ready/enterprise-scale/platform-automation-and-devops.md
+        - name: Implementation guidelines
+          href: ready/enterprise-scale/implementation-guidelines.md
+
       - name: Start small and expand
         items:
+        - name: CAF Migration landing zone blueprint
+          href: ready/landing-zone/migrate-landing-zone.md
+        - name: CAF Foundation blueprint
+          href: ready/landing-zone/foundation-blueprint.md
+        - name: Terraform landing zones
+          href: ready/landing-zone/terraform-landing-zone.md
+
         - name: Basic landing zone considerations
           items:
           - name: Overview
@@ -234,10 +262,15 @@ items:
               href: https://docs.microsoft.com/azure/security/fundamentals/network-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Azure operational security best practices
               href: https://docs.microsoft.com/azure/security/fundamentals/operational-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-      - name: Start with enterprise scale
+
+      - name: Infrastructure-as-code theory
         items:
-        - name: Overview
-          href: ready/considerations/enterprise-scale.md
+        - name: Refactor landing zones
+          href: ready/landing-zone/refactor.md
+        - name: Test-driven development (TDD) for landing zones
+          href: ready/considerations/test-driven-development.md
+        - name: Landing zone TDD in Azure
+          href: ready/considerations/azure-test-driven-development.md
 
     - name: Best practices
       items:
@@ -253,6 +286,8 @@ items:
           href: ready/azure-best-practices/organize-subscriptions.md
         - name: Naming and tagging
           href: ready/azure-best-practices/naming-and-tagging.md
+        - name: Move resources
+          href: https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
       - name: Networking
         items:
         - name: Network boundary security

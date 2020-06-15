@@ -86,7 +86,7 @@ This section of the article will change the governance MVP design to include new
     1. Audit and enforce criticality and data classification across all subscriptions to identify any subscriptions with mission-critical assets.
     2. Audit and enforce the use of approved images only.
 5. Azure Monitor implementation:
-    1. Once a mission-critical workload is identified, create an Azure Monitor workspace.
+    1. Once a mission-critical workload is identified, create an Azure Monitor Log Analytics workspace.
     2. During deployment testing, the cloud operations team deploys the necessary agents and tests discovery.
 6. Update Azure Policy for all subscriptions that contain mission-critical applications.
     1. Audit and enforce the application of an NSG to all NICs and subnets. Networking and IT security define the NSG.

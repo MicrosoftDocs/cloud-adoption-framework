@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # How will global market decisions affect the transformation journey?
 
 The cloud opens new opportunities to perform on a global scale. Barriers to global operations are significantly reduced, by empowering companies to deploy assets in market, without the need to invest heavily in new datacenters. Unfortunately, this also adds a great deal of complexity from technical and legal perspectives.

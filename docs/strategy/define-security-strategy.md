@@ -142,7 +142,7 @@ Building a resilient security posture in the cloud requires several parallel com
 
 - **Modernize infrastructure and application security:** For technical elements under the organization's control, prioritize modernizing security tooling and associate skill sets to minimize coverage gaps for securing resources in the cloud. This is composed of two different complementary efforts:
 
-  - **Infrastructure security:** Organizations should take advantage of cloud to modernize their approach to protecting and monitoring the common components used by many applications such as operating systems, networks and container infrastructure. These cloud capabilities can often including managing infrastructure components across both IaaS and on-premises environments. Optimizing this strategy is important because this infrastructure is a dependency of the applications and data that run on it, which often enable critical business processes and store critical business data.
+  - **Infrastructure security:** Organizations should use the cloud to modernize their approach to protecting and monitoring the common components used by many applications, such as operating systems, networks, and container infrastructure. These cloud capabilities can often including managing infrastructure components across both IaaS and on-premises environments. Optimizing this strategy is important because this infrastructure is a dependency of the applications and data that run on it, which often enable critical business processes and store critical business data.
   - **Application security:** Organizations should also modernize the way they secure the unique applications and technology that is developed by or for their organization. This discipline is changing rapidly with the adoption of agile DevOps processes, the increasing use of open source components, and introduction of cloud APIs and cloud services to replace application components or interconnect applications.
 
     Getting this right is critical because these applications often enable critical business processes and store critical business data.
@@ -176,7 +176,7 @@ This section describes the key relationships that frequently change on the journ
 
 - **Between application and infrastructure teams (and cloud providers):** This relationship is undergoing significant changes because of multiple trends in the IT and security industry aimed at increasing innovation speed and developer productivity.
 
-  The old norms and organizational functions have been disrupted, but new norms and functions are still emerging, so we recommend accepting the ambiguity, keeping up with current thinking, and experiment with what works for your organizations until it does. We do not recommend adopting a "wait and see" approach in this space as doing so could put your organization at a major competitive disadvantage.
+  The old norms and organizational functions have been disrupted, but new norms and functions are still emerging, so we recommend accepting the ambiguity, keeping up with current thinking, and experiment with what works for your organizations until it does. We don;t recommend adopting a wait-and-see approach in this space because it might put your organization at a major competitive disadvantage.
 
   These trends are challenging the traditional norms for roles and relationships of applications and infrastructure:
 

@@ -28,7 +28,7 @@ Azure provides virtual networks with these capabilities:
 - You can implement multiple VNets within each Azure subscription and Azure region.
 - Each VNet is isolated from other VNets.
 - VNets can contain private and public IP addresses defined in [RFC 1918](https://tools.ietf.org/html/rfc1918), expressed in CIDR notation. Public IP addresses specified in a VNet's address space are not directly accessible from the internet.
-- VNets can connect to each other using VNet peering. Connected VNets can be in the same or different regions. Thus resources in one VNet can connect to resources in other VNets.
+- VNets can connect to each other using virtual network peering. Connected VNets can be in the same or different regions. Thus resources in one VNet can connect to resources in other VNets.
 - By default, Azure routes traffic between subnets within a VNet, connected VNets, on-premises networks, and the internet.
 
 When planning your VNet topology, you should consider how to arrange IP address spaces, how to implement a hub and spoke network, how to segment VNets into subnets, setting up DNS, and implementing Azure availability zones.
@@ -37,9 +37,9 @@ When planning your VNet topology, you should consider how to arrange IP address 
 
 When you create VNets as part of your migration, it's important to plan out your VNet IP address space.
 
-- You should assign an address space that isn't larger than a CIDR range of /16 for each VNet. VNets allow for the use of 65,536 IP addresses, and assigning a smaller prefix than /16, such as a /15 which has 131,072 addresses, would result in the the excess IP addresses becoming unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
+- You should assign an address space that isn't larger than a CIDR range of `/16` for each VNet. VNets allow for the use of 65,536 IP addresses, and assigning a smaller prefix than `/16`, such as a `/15` which has 131,072 addresses, would result in the the excess IP addresses becoming unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
 - The VNet address space shouldn't overlap with on-premises network ranges.
-- Network Address Translation (NAT) shouldn't be used.
+- Don't use network address translation (NAT).
 - Overlapping addresses can cause networks that can't be connected and routing that doesn't work properly. If networks overlap, you'll need to redesign the network or use network address translation (NAT).
 
 **Learn more:**
@@ -53,7 +53,7 @@ When you create VNets as part of your migration, it's important to plan out your
 A hub and spoke network topology isolates workloads while sharing services such as identity and security.
 
 - The hub is an Azure VNet that acts as a central point of connectivity.
-- The spokes are VNets that connect to the hub VNet using VNet peering.
+- The spokes are VNets that connect to the hub VNet using virtual network peering.
 - Shared services are deployed in the hub, while individual workloads are deployed as spokes.
 
 Consider the following:
@@ -68,9 +68,9 @@ _Hub and spoke topology_
 
 **Learn more:**
 
-- [Read about](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) a hub and spoke topology.
-- Get network recommendations for running Azure [Windows](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/windows-vm) and [Linux](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/linux-vm) VMs.
-- Learn about [VNet peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview).
+- Read about a [hub and spoke topology](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
+- Get network recommendations for running [Windows VMs](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/windows-vm) and [Linux VMs](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/linux-vm) in Azure.
+- Learn about [virtual network peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview).
 
 ## Best practice: Design subnets
 

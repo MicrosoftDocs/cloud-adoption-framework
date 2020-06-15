@@ -60,8 +60,8 @@ Continued iteration of refinement to the Migrate methodology and the Ready metho
 | [Improve landing zone security](../ready/considerations/landing-zone-security.md)                       | **New article:** Overview of the best practices in this section, related back to the TDD cycle. |
 | [Improve landing zone operations](../ready/considerations/landing-zone-operations.md)                       | **New article:** List of best practices in the Manage methodology, with a transition to that modular approach to improving operations, reliability, and performance. |
 | [Improve landing zone governance](../ready/considerations/landing-zone-governance.md)                       | **New article:** List of best practices related to Govern methodology, with a transition to that modular approach to improving governance, cost management, and scale. |
-| [Start with enterprise scale](../ready/considerations/enterprise-scale.md)                       | **New article:** Demonstrate an approach that shows the differences in the process, when a customer starts with enterprise-scale landing zone templates. This article helps customers understand qualifiers that would support this decision. |
-| Table of contents update                       | The table of contents was updated to reflect the new articles.  |
+| [Start with enterprise scale](../ready/enterprise-scale/index.md)                       | **New article:** Demonstrate an approach that shows the differences in the process, when a customer starts with enterprise-scale landing zone templates. This article helps customers understand qualifiers that would support this decision. |
+| Table of contents update                       | The Table of contents was updated to reflect the new articles.  |
 
 ## March 27, 2020
 

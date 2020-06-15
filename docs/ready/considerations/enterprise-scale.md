@@ -15,8 +15,6 @@ At times, it is unwise for a cloud platform team to start small and scale. Teams
 
 ![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor-enterprise-scale.png)
 
-<!-- markdownlint-disable MD026 -->
-
 ## Qualifiers: Should I start with enterprise scale?
 
 For most adoption patterns, a "start small and expand" approach is preferable, as it allows the team to learn from real experiences. For companies that fit into the references in this article a more robust approach is required.

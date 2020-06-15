@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- markdownlint-disable MD026 -->
-
 # First cloud adoption project
 
 There's a learning curve and a time commitment associated with cloud adoption planning. Even for experienced teams, proper planning takes time: time to align stakeholders, time to collect and analyze data, time to validate long-term decisions, and time to align people, processes, and technology. In the most productive adoption efforts, planning grows in parallel with adoption, improving with each release and with each workload migration to the cloud. It's important to understand the difference between a cloud adoption plan and a cloud adoption strategy. You need a well-defined strategy to facilitate and guide the implementation of a cloud adoption plan.

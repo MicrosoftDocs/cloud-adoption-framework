@@ -14,7 +14,7 @@ ms.subservice: operate
 [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) can help you apply governance to your cloud resources. This service can help you create guardrails that ensure company-wide compliance to governance policy requirements. To create policies, use either the Azure portal or PowerShell cmdlets. This article provides PowerShell cmdlet examples.
 
 > [!NOTE]
-> With Azure Policy, enforcement policies (**deployIfNotExists**) aren't automatically deployed to existing VMs. Remediation is required to keep VMs in compliance. For more information, see [Remediate noncompliant resources with Azure Policy](https://docs.microsoft.com/azure/governance/policy/how-to/remediate-resources).
+> With Azure Policy, enforcement policies (`DeployIfNotExists`) aren't automatically deployed to existing VMs. Remediation is required to keep VMs in compliance. For more information, see [Remediate noncompliant resources with Azure Policy](https://docs.microsoft.com/azure/governance/policy/how-to/remediate-resources).
 
 ## Common policy examples
 
