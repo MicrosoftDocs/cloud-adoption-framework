@@ -67,7 +67,7 @@ _Figure 1: Platform management and monitoring._
 
 - Use a single [monitor logs workspace](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where role-based access control (RBAC) and data sovereignty requirements mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
-Within the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This doesn't preclude using the same workspace for app logging. With a workspace configured in resource-centric access-control mode, granular RBAC is enforced to ensure that application teams only have access to the logs from their resources. In this model, application teams benefit from using existing platform infrastructure to reduce their management overhead.
+In the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This doesn't preclude the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular RBAC is enforced to ensure app teams will only have access to the logs from their resources. In this model, app teams benefit from the use of existing platform infrastructure by reducing their management overhead. For any non-compute resources (such as Web Apps or Cosmos DB databases), application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.
 
 <!-- docsTest:ignore WORM -->
 
@@ -84,7 +84,7 @@ Within the context of the enterprise-scale architecture, centralized logging is 
 
 - Use resource locks to prevent accidental deletion of critical shared services.
 
-- Use [deny policies](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deny) to supplement Azure AD RBAC assignments. Deny policies are used to prevent deploying and configuring resources that don't match defined standards by preventing the request from being sent to the resource provider. The combination of deny policies and RBAC assignments ensures that the appropriate guard rails are in place to enforce who can deploy resources and which ones to deploy.
+- Use [deny policies](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deny) to supplement Azure AD RBAC assignments. Deny policies are used to prevent deploying and configuring resources that don't match defined standards by preventing the request from being sent to the resource provider. The combination of deny policies and RBAC assignments ensures the appropriate guard rails are in place to enforce **who** can deploy and configure resources and **what** resources they can deploy and configure.
 
 - Include [service](https://docs.microsoft.com/azure/service-health/service-health-overview) and [resource](https://docs.microsoft.com/azure/service-health/resource-health-overview) health events as part of the overall platform monitoring solution. Tracking service and resource health from the platform perspective is an important component of resource management in Azure.
 
@@ -96,7 +96,9 @@ To expand on the previous section, this section will consider federated manageme
 
 **Design considerations:**
 
-- App monitoring while using a dedicated workspaces or a centralized monitor logs workspace
+- Application monitoring can use dedicated Log Analytics workspaces.
+
+- For applications that are deployed to virtual machines, logs should be stored centrally to the dedicated Log Analytics workspace from a platform perspective, and application teams can access the logs subject to the RBAC they have on their applications/virtual machines.
 
 - App performance and health monitoring for both infrastructure as a service (IaaS) and platform as a service (PaaS) resources
 
