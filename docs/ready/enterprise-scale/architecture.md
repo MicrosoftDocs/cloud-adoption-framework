@@ -14,7 +14,7 @@ ms.custom: csu
 
 # Cloud Adoption Framework enterprise-scale landing zone architecture
 
-The principal challenges facing enterprise customers adopting Microsoft Azure are how to allow legacy or modern applications to seamlessly move at their own pace and how to provide secure and streamlined operations, management, and governance for all relevant applications across the entire platform. To address these challenges, customers require a forward-looking and Azure-native design approach in the context of the Cloud Adoption Framework (CAF) enterprise-scale landing zone architecture.
+Enterprise-scale is an architecture approach and reference implementation that enables effective construction and operationalization of landing zones on Azure, at scale and aligned with Azure Roadmap and Microsoft Cloud Adoption Framework for Azure.
 
 ## An overview of enterprise-scale landing zone architecture
 
