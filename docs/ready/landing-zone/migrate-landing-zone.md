@@ -15,7 +15,7 @@ A _migration landing zone_ is an environment that has been provisioned and prepa
 
 ## Deploy the blueprint
 
-Before you use the migration landing zone blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [migration landing zone blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone) can be deployed using the [deployment steps][deploy-sample].
+Before you use the CAF Migration landing zone blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [CAF Migration landing zone blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone) can be deployed using the [deployment steps][deploy-sample].
 
 > [!div class="nextstepaction"]
 > [Deploy the blueprint sample][deploy-sample]
@@ -54,7 +54,7 @@ If this changes through the course of the cloud adoption plan, the resource orga
 
 This implementation option does not implement any governance tooling. In the absence of defined policy automation, this landing zone should not be used for any mission critical workloads or sensitive data. It is assumed that this landing zone is being used for limited production deployment to initiate learning, iteration, and development of the overall operating model in parallel to these early stage migration efforts.
 
-To accelerate parallel development of governance disciplines, review the [Govern methodology](../../govern/index.md) and consider deploying the [CAF foundation blueprint](./foundation-blueprint.md) in addition to the migrate landing zone.
+To accelerate parallel development of governance disciplines, review the [Govern methodology](../../govern/index.md) and consider deploying the [CAF foundation blueprint](./foundation-blueprint.md) in addition to the CAF Migration landing zone.
 
 > [!WARNING]
 > As the governance disciplines mature, refactoring may be required. Refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
@@ -106,7 +106,7 @@ The following decisions are represented in the landing zone blueprint.
 
 ## Customize or deploy a landing zone
 
-Learn more and download a reference sample of the CAF Migrate landing zone blueprint for deployment or customization from [Azure blueprint samples][deploy-sample].
+Learn more and download a reference sample of the CAF Migration landing zone blueprint for deployment or customization from [Azure blueprint samples][deploy-sample].
 
 > [!div class="nextstepaction"]
 > [Deploy the blueprint sample][deploy-sample]
@@ -122,4 +122,4 @@ After deploying your first landing zone, you're ready to [expand your landing zo
 
 <!-- links -->
 
-[Deploy-sample]: https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/deploy
+[deploy-sample]: https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/deploy

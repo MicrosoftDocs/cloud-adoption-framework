@@ -21,7 +21,7 @@ The following exercises help guide you through the process of creating a landing
 | | |
 |---|---|
 | <br> ![1](../_images/icons/1.png) | <br> [Azure setup guide](./azure-setup-guide/index.md): Review the Azure setup guide to become familiar with the tools and approaches you need to use to create a landing zone.                                |
-| <br> ![2](../_images/icons/2.png) | <br> [First landing zone](./landing-zone/first-landing-zone.md): Choose the most appropriate landing zone option, to establish a code-based starting point for your environment.                                |
+| <br> ![2](../_images/icons/2.png) | <br> [Azure landing zones](./landing-zone/index.md): Choose the most appropriate landing zone option, to establish a code-based starting point for your environment.                                |
 | <br> ![3](../_images/icons/3.png) | <br> [Expand the landing zone](./considerations/index.md): Meet the platform requirements of your cloud adoption plan by expanding the first landing zone.                                |
 | <br> ![4](../_images/icons/4.png) | <br> [Best practices](./azure-best-practices/index.md): Validate landing zone modifications against best practices to ensure the proper configuration of your current and future landing zones.                        |
 

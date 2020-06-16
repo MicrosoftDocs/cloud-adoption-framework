@@ -67,7 +67,11 @@ As adoption needs grow, so does the need to create balance and structure. To mee
 
 Watch this video to get an overview of common team structures at various stages of organizational maturity.
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4wvTS>]
+<!-- markdownlint-disable MD034 -->
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wvTS]
+
+<!-- markdownlint-enable MD034 -->
 
 ## Step 5: Align RACI charts
 

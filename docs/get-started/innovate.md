@@ -172,7 +172,7 @@ All assets hosted in the cloud live within a landing zone. That landing zone mig
 
 **Guidance to support deliverable completion:**
 
-- [Choose a landing zone](../ready/landing-zone/first-landing-zone.md): Use this article to find the right approach to deploying a landing zone based on your adoption pattern. Then deploy that standardized code base.
+- [Choose a landing zone](../ready/landing-zone/index.md): Use this section to find the right approach to deploying a landing zone based on your adoption pattern. Then deploy that standardized code base.
 - [Expand your landing zone](../ready/considerations/index.md): Regardless of the starting point, identify gaps in the deployed landing zone to add required components for resource organization, security, governance, compliance, and operations.
 
 <!-- markdownlint-disable MD033 -->

@@ -21,8 +21,6 @@ The following diagram and documentation represent an ideal view of the functions
 
 **Security is a team sport:** Its critical that individuals on the security team see each other as part of a whole security team, part of the whole organization, and part of a larger security community defending against the same adversaries. This holistic view enables the team to work well in general. It's especially important as the teams work through any unplanned gaps and overlaps discovered during the evolution of roles and responsibilities.
 
-<!-- cSpell:ignore apsec -->
-
 ## Security functions
 
 Each of the following articles provide information about each function. Each article provides a summary of objectives, how the function can evolve because of the threat environment or cloud technology changes, and the relationships and dependencies that are critical to its success.
@@ -32,7 +30,7 @@ Each of the following articles provide information about each function. Each art
 - [Security architecture](./cloud-security-architecture.md)
 - [Security compliance management](./cloud-security-compliance-management.md)
 - [People security](./cloud-security-people.md)
-- [Application security and DevSecOps](./cloud-security-apsec-devsecops.md)
+- [Application security and DevSecOps](./cloud-security-application-security-devsecops.md)
 - [Data security](./cloud-security-data-security.md)
 - [Infrastructure and endpoint security](./cloud-security-infrastructure-endpoint.md)
 - [Identity and keys](./cloud-security-identity-keys.md)

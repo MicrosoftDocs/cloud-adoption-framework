@@ -27,11 +27,11 @@ In addition to the recommended design areas, platform development velocity (how 
 
 The following grid captures some of the landing zones' implementation options and variables that may drive the decision.
 
-<!-- docsTest:ignore "CAF Migrate" "CAF Foundation" "CAF Enterprise-scale" "CAF Terraform" -->
+<!-- docsTest:ignore "CAF Migration" "CAF Foundation" "CAF Enterprise-scale" "CAF Terraform" -->
 
 | Implementation option | Description | Deployment velocity | Deeper design principles | Deployment instructions |
 |---------|---------|---------|---------|---------|---------|---------|---------|
-| [CAF Migrate](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets | Start small | [Design principles](./migrate-landing-zone.md#design-principles) | [Deploy](./migrate-landing-zone.md) |
+| [CAF Migration](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets | Start small | [Design principles](./migrate-landing-zone.md#design-principles) | [Deploy](./migrate-landing-zone.md) |
 | [CAF Foundation](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy | Start small | [Design principles](./foundation-blueprint.md#design-principles) | [Deploy](./foundation-blueprint.md) |
 | [CAF Enterprise-scale](./enterprise-scale.md) | Deploys an enterprise ready platform foundation with all the necessary shared services to support the full IT portfolio. | Enterprise-scale | [Design principles](../enterprise-scale/design-principles.md) | [Deploy](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md) |
 | [CAF Terraform](./terraform-landing-zone.md) | Third-party path for multicloud operating models. This path can limit Azure-first operating models. | Start small | [Design principles](./terraform-landing-zone.md#design-decisions) | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
@@ -40,8 +40,8 @@ The following table looks at the same implementation options from a slightly dif
 
 | Implementation option | Hub | Spoke | Deployment technology | Deployment instructions |
 |---|---|---|---|---|
-| [CAF Enterprise-scale](./enterprise-scale.md) | Included                              | Included | Azure Resource Manager templates, Azure portal, Azure Policy and GitHub | [Deploy](../enterprise-scale/implementation-guidelines.md) |
-| [CAF Migrate](./migrate-landing-zone.md)      | Refactor required                     | Included | Azure Resource Manager templates, Azure portal, and Azure Blueprints | [Deploy](./migrate-landing-zone.md) |
+| [CAF Enterprise-scale](./enterprise-scale.md) | Included  | Included | Azure Resource Manager templates, Azure portal, Azure Policy and GitHub | [Deploy](../enterprise-scale/implementation-guidelines.md) |
+| [CAF Migration](./migrate-landing-zone.md) | Refactor required | Included | Azure Resource Manager templates, Azure portal, and Azure Blueprints | [Deploy](./migrate-landing-zone.md) |
 | [CAF Terraform](./terraform-landing-zone.md)  | Included in virtual datacenter module | Included | Terraform | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
 
 ## Next steps
