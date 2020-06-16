@@ -11,16 +11,6 @@ ms.subservice: ready
 
 <!-- cSpell:ignore multisubscription -->
 
-# What is a landing zone?
-
- When your portfolio includes multiple workloads, it's possible to scale, accelerate, and optimize the collection of workloads by adhering to a common set of design areas found in all Azure landing zones.
-
-<!-- markdownlint-disable MD034 -->
-
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4xdvm>]
-
-<!-- markdownlint-enable MD034 -->
-
 ## What are Azure landing zones
 
 Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security, governance, networking, and identity. Azure landing zones enable application migrations and green field development at an enterprise scale in Azure, consider all platform resources that are required to support the customer's application portfolio, and don't differentiate between IaaS or PaaS.
