@@ -219,12 +219,14 @@ items:
 
       - name: Start small and expand
         items:
-        - name: CAF Migrate blueprint
+        - name: CAF Migration landing zone blueprint
           href: ready/landing-zone/migrate-landing-zone.md
         - name: CAF Foundation blueprint
           href: ready/landing-zone/foundation-blueprint.md
         - name: Terraform landing zones
           href: ready/landing-zone/terraform-landing-zone.md
+        - name: Expand your landing zone
+          href: ready/considerations/index.md
 
         - name: Basic landing zone considerations
           items:
@@ -1359,7 +1361,7 @@ items:
         - name: People security
           href: organize/cloud-security-people.md
         - name: Application security and DevSecOps
-          href: organize/cloud-security-apsec-devsecops.md
+          href: organize/cloud-security-application-security-devsecops.md
         - name: Data security
           href: organize/cloud-security-data-security.md
         - name: Infrastructure and endpoint security
