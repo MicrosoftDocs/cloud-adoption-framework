@@ -109,25 +109,24 @@ The articles in the series are summarized below.
 
 **Article** | **Details**
 --- | ---
-[SAP Migration Guide](https://azure.microsoft.com/en-us/resources/sap-on-azure-implementation-guide/)| Get practical guidance to move your on-premises SAP® workloads to the cloud.
-[Migrating SAP Applications to Azure](https://azure.microsoft.com/en-us/resources/migrating-sap-applications-to-azure/) | Whitepaper and roadmap for your SAP® journey to the cloud.
-[Migration Methodologies for SAP on Azure](https://azure.microsoft.com/en-us/resources/migration-methodologies-for-sap-on-azure/) | Overview of various migration options to move SAP® applications to Azure.
+[SAP Migration Guide](https://azure.microsoft.com/resources/sap-on-azure-implementation-guide/)| Get practical guidance to move your on-premises SAP® workloads to the cloud.
+[Migrating SAP Applications to Azure](https://azure.microsoft.com/resources/migrating-sap-applications-to-azure/) | Whitepaper and roadmap for your SAP® journey to the cloud.
+[Migration Methodologies for SAP on Azure](https://azure.microsoft.com/resources/migration-methodologies-for-sap-on-azure/) | Overview of various migration options to move SAP® applications to Azure.
 
 ### Specialized workloads
 
 **Article** | **Details**
 --- | ---
-[Moving on-premises VMware infrastructure to Azure](./contoso-migration-vmware-to-azure-migration-scenario.md) | This article provides an example ofmoving an on-premises VMware® VMs to Azure using Azure VMware Solutions.
-[Azure NetApp Files](https://azure.microsoft.com/en-us/services/netapp/) | Enterprise file storage, powered by NetApp®. Run Linux and Windows file workloads in Azure.
-[Oracle on Azure](https://azure.microsoft.com/en-us/solutions/oracle/) | Run your Oracle® Database and enterprise applications n Azure and Oracle Cloud.
-[CRAY in Azure](https://azure.microsoft.com/en-us/solutions/high-performance-computing/cray/)  | High Performance Computing with Cray® in Azure. A dedicated supercomputer on your virtual network. 
+[Moving on-premises VMware infrastructure to Azure](./contoso-migration-vmware-to-azure.md) | This article provides an example of moving an on-premises VMware® VMs to Azure using Azure VMware Solutions.
+[Azure NetApp Files](https://azure.microsoft.com/services/netapp/) | Enterprise file storage, powered by NetApp®. Run Linux and Windows file workloads in Azure.
+[Oracle on Azure](https://azure.microsoft.com/solutions/oracle/) | Run your Oracle® Database and enterprise applications n Azure and Oracle Cloud.
+[CRAY in Azure](https://azure.microsoft.com/solutions/high-performance-computing/cray/)  | High Performance Computing with Cray® in Azure. A dedicated supercomputer on your virtual network. 
 
 ### VDI
 
 **Article** | **Details**
 --- | ---
-[Migrate Remote Desktop Services to Azure IaaS](./contoso-migration-rds-to-iaas.md) | This article show to migrate an on-premises Remote Desktop Services to Azure IaaS.
-[Moving on-premises Remote Desktop Services to Azure Windows Virtual Desktop](./contoso-migration-rds-to-wvd.md) | This article show to migrate an on-premises Remote Desktop Services to Windows Virutal Desktop in Azure.
+[Moving on-premises Remote Desktop Services to Azure Windows Virtual Desktop](./contoso-migration-rds-to-wvd.md) | This article show to migrate an on-premises Remote Desktop Services to Windows Virtual Desktop in Azure.
 
 ### Migration scaling
 
