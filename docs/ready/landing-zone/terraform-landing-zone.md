@@ -83,18 +83,19 @@ The following decisions are represented in the Terraform landing zone:
 
 The minimum set of tags shown below must be present on all resources and resource groups:
 
-| Tag name          | Description                                                                                        | Key             | Example value                                    |
-|-------------------|----------------------------------------------------------------------------------------------------|-------------------|--------------------------------------------------|
-| Business unit     | Top-level division of your company that owns the subscription or workload the resource belongs to. | `BusinessUnit`    | Finance, marketing, {product name}, corp, shared |
-| Cost center       | Accounting cost center associated with this resource.                                              | `CostCenter`      | Number                                           |
-| Disaster recovery | Business criticality of the application, workload, or service.                                     | `DR`              | Dr-enabled, non-dr-enabled                       |
-| Environment       | Deployment environment of the application, workload, or service.                                   | `Env`             | Prod, dev, QA, stage, test, training             |
-| Owner name        | Owner of the application, workload, or service.                                                    | `Owner`           | Email                                            |
-| Deployment type   | Defines how the resources are being maintained.                                                    | `DeploymentType`  | Manual, Terraform                                |
-| Version           | Version of the blueprint deployed.                                                                 | `Version`         | V0.1                                             |
-| Application name  | Name of the associated application, service, or workload associated with the resource.             | `ApplicationName` | "App name"                                       |
+<!-- TODO: Review capitalization and hyphenation -->
+<!-- TODO: Eliminate either "Tag name" or "Key" column -->
 
-<!-- cSpell:ignore caf -->
+| Tag name          | Description                                                                                        | Key             | Example values                                    |
+|-------------------|----------------------------------------------------------------------------------------------------|-------------------|--------------------------------------------------|
+| Business unit     | Top-level division of your company that owns the subscription or workload the resource belongs to. | `BusinessUnit`    | `finance`, `marketing`, `<product-name>`, `corp`, `shared` |
+| Cost center       | Accounting cost center associated with this resource.                                              | `CostCenter`      | `<cost-center-number>`                                     |
+| Disaster recovery | Business criticality of the application, workload, or service.                                     | `DR`              | `dr-enabled`, `non-dr-enabled`                   |
+| Environment       | Deployment environment of the application, workload, or service.                                   | `Env`             | `prod`, `dev`, `qa`, `staging`, `test`, `training` |
+| Owner name        | Owner of the application, workload, or service.                                                    | `Owner`           | `email`                                            |
+| Deployment type   | Defines how the resources are being maintained.                                                    | `DeploymentType`  | `manual`, `terraform`                                |
+| Version           | Version of the blueprint deployed.                                                                 | `Version`         | `v0.1`                                             |
+| Application name  | Name of the associated application, service, or workload associated with the resource.             | `ApplicationName` | `<app-name>`                                       |
 
 ## Customize and deploy your first landing zone
 
@@ -202,7 +203,7 @@ The foundation landing zone lays the groundwork for a complex environment in a d
 - Adding other modules to the blueprint.
 - Layering additional landing zones on top of it.
 
-Layering landing zones is a good practice for decoupling systems, versioning each component that you're using, and allowing fast innovation and stability for your infrastructure as code deployment.
+Layering your landing zones is a good practice for decoupling systems, versioning each component that you're using, and allowing fast innovation and stability for your infrastructure as code deployment.
 
 Future reference architectures will demonstrate this concept for a hub and spoke topology.
 
