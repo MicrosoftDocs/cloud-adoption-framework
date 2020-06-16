@@ -19,7 +19,7 @@ Each of the following implementation options is built for a specific set of oper
 
 In addition to the recommended design areas, platform development velocity (how fast your platform team can develop the required skills) is a key factor in choosing the best deployment option. There are two primary modes to consider:
 
-**Start with enterprise scale:** When business requirements necessitate a rich initial implementation of landing zones, with fully integrated governance, security, and operations from the start, Microsoft suggests the enterprise scale approach. This approach can use the Azure Portal or infrastructure-as-code to setup and configure your environment. It is also possible to transition between portal and infrastructure-as-code (recommended) when your organization is ready. As with any other Azure Infrastructure-as-code approaches, you will require skills in Azure Resource Manager Templates and GitHub.
+**Start with enterprise scale:** When business requirements necessitate a rich initial implementation of landing zones, with fully integrated governance, security, and operations from the start, Microsoft suggests the enterprise-scale approach. This approach can use the Azure portal or infrastructure as code to set up and configure your environment. It is also possible to transition between the portal and infrastructure as code (recommended) when your organization is ready. As with any other Azure infrastructure-as-code approaches, you'll need skills in Azure Resource Manager templates and GitHub.
 
 **Start small and scale:** If it is more important to develop these skills and commit to your own decisions as you learn more about the cloud, then a more modular approach may be beneficial. In this approach, the landing zones will only focus on implementing the basic landing zones considerations required to start cloud adoption. As adoption scales, modules in the Govern and Manage methodologies will build on top of your initial landing zones. The design principles of any Azure landing zones' design will outline the specific design areas which will need to be refactored over time.
 
@@ -27,20 +27,22 @@ In addition to the recommended design areas, platform development velocity (how 
 
 The following grid captures some of the landing zones' implementation options and variables that may drive the decision.
 
+<!-- docsTest:ignore "CAF Migrate" "CAF Foundation" "CAF Enterprise-scale" "CAF Terraform" -->
+
 | Implementation option | Description | Deployment velocity | Deeper design principles | Deployment instructions |
 |---------|---------|---------|---------|---------|---------|---------|---------|
 | [CAF Migrate](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets | Start small | [Design principles](./migrate-landing-zone.md#design-principles) | [Deploy](./migrate-landing-zone.md) |
 | [CAF Foundation](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy | Start small | [Design principles](./foundation-blueprint.md#design-principles) | [Deploy](./foundation-blueprint.md) |
 | [CAF Enterprise-scale](./enterprise-scale.md) | Deploys an enterprise ready platform foundation with all the necessary shared services to support the full IT portfolio. | Enterprise-scale | [Design principles](../enterprise-scale/design-principles.md) | [Deploy](https://github.com/Azure/Enterprise-Scale/blob/master/docs/reference/contoso/Readme.md) |
-| [CAF Terraform](./terraform-landing-zone.md) | Third-party path for multi-cloud operating models. This path can limit Azure-first operating models. | Start small | [Design principles](./terraform-landing-zone.md#design-decisions) | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
+| [CAF Terraform](./terraform-landing-zone.md) | Third-party path for multicloud operating models. This path can limit Azure-first operating models. | Start small | [Design principles](./terraform-landing-zone.md#design-decisions) | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
 
 The following table looks at the same implementation options from a slightly different perspective to guide more technical decision processes.
 
 | Implementation option | Hub | Spoke | Deployment technology | Deployment instructions |
 |---|---|---|---|---|
 | [CAF Enterprise-scale](./enterprise-scale.md) | Included                              | Included | Azure Resource Manager templates, Azure portal, Azure Policy and GitHub | [Deploy](../enterprise-scale/implementation-guidelines.md) |
-| [CAF Migrate](./migrate-landing-zone.md)      | Refactor required                     | Included | Azure Resource Manager templates, Azure portal, and Azure Blueprint | [Deploy](./migrate-landing-zone.md) |
-| [CAF Terraform](./terraform-landing-zone.md)  | Included in Virtual Datacenter module | Included | Terraform | [Deploy](terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
+| [CAF Migrate](./migrate-landing-zone.md)      | Refactor required                     | Included | Azure Resource Manager templates, Azure portal, and Azure Blueprints | [Deploy](./migrate-landing-zone.md) |
+| [CAF Terraform](./terraform-landing-zone.md)  | Included in virtual datacenter module | Included | Terraform | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
 
 ## Next steps
 

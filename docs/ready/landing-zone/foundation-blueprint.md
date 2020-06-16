@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
+<!-- docsTest:ignore "CAF Foundation blueprint -->
+
 # Deploy a CAF Foundation blueprint
 
 The CAF Foundation blueprint does not deploy a landing zone. Instead, it deploys the tools required to establish a governance MVP (minimum viable product) to begin developing your governance disciplines. This blueprint is designed to be additive to an existing landing zone and can be applied to the CAF migration landing zone with a single action.
@@ -42,27 +44,27 @@ This implementation option assumes the landing zone already has a defined networ
 
 ### Resource organization
 
-This implementation option demonstrates how Azure Policy can be used to add some elements of resource organization through the application of tags. Specifically, a CostCenter tag will be appended to resources using Azure policy.
+This implementation option demonstrates how Azure Policy can add some elements of resource organization through the application of tags. Specifically, a `CostCenter` tag will be appended to resources using Azure Policy.
 
 The governance team should compare and contrast the elements of resource organization to be addressed by tagging versus those that should be addressed through subscription design. These fundamental decisions will inform resource organization as your cloud adoption plans progress.
 
 To aid in this comparison early in adoption cycles, the following articles should be considered:
 
-- Ready Best Practice [Initial Azure Subscriptions](../azure-best-practices/initial-subscriptions.md): At this stage of adoption scale, does your operating model require 2, 3, or 4 subscriptions?
-- Ready Best Practice [Scale subscriptions](../azure-best-practices/scale-subscriptions.md): As adoption scales, what criteria will be used to drive subscription scaling?
-- Ready Best Practice [Organize subscriptions](../azure-best-practices/organize-subscriptions.md): How will you organize subscriptions as you scale?
-- Ready Best Practice [Tagging standards](../azure-best-practices/naming-and-tagging.md#metadata-tags): What other criteria need to be consistently captured in tags to augment your subscription design?
+- [Initial Azure subscriptions](../azure-best-practices/initial-subscriptions.md): At this stage of adoption scale, does your operating model require 2, 3, or 4 subscriptions?
+- [Scale subscriptions](../azure-best-practices/scale-subscriptions.md): As adoption scales, what criteria will be used to drive subscription scaling?
+- [Organize subscriptions](../azure-best-practices/organize-subscriptions.md): How will you organize subscriptions as you scale?
+- [Tagging standards](../azure-best-practices/naming-and-tagging.md#metadata-tags): What other criteria need to be consistently captured in tags to augment your subscription design?
 
 To aid in this comparison when teams are further along with cloud adoption, see the governance patters section of the [governance guide - prescriptive guidance](../../govern/guides/complex/prescriptive-guidance.md#application-of-governance-defined-patterns) article. This section of the prescriptive guidance demonstrates a set of patterns based on a specific narrative and operating model. That guidance also includes links to other patterns that should be considered.
 
 ### Governance disciplines
 
-This implementation approach demonstrates one approach to maturity in the Cost Management discipline of the Governance methodology. Specifically, it demonstrates how Azure Policy can be used to create an allow list of specific SKUs. Limiting the types and sizes of resources that can be deployed into a landing zone reduces the risk of overspend.
+This implementation demonstrates one approach to maturity in the Cost Management discipline of the Govern methodology. Specifically, it demonstrates how Azure Policy can be used to create an allow list of specific SKUs. Limiting the types and sizes of resources that can be deployed into a landing zone reduces the risk of overspending.
 
-To accelerate parallel development of the other governance disciplines, review the [Govern methodology](../../govern/index.md). To continue maturing the cost management discipline of governance, see the [governance guide - Cost Management discipline guidance](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices)
+To accelerate parallel development of the other governance disciplines, review the [Govern methodology](../../govern/index.md). To continue maturing the Cost Management discipline of governance, see the [Cost Management discipline guidance](../../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices).
 
 > [!WARNING]
-> As the governance disciplines mature, refactoring may be required. refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
+> As the governance disciplines mature, refactoring may be required. Refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
 
 ### Operations baseline
 
@@ -95,7 +97,7 @@ Learn more and download a reference sample of the CAF Foundation blueprint for d
 
 ## Next steps
 
-After deploying your first landing zone, you are ready to [Expand your landing zone](../considerations/index.md)
+After deploying your first landing zone, you're ready to [expand your landing zone](../considerations/index.md).
 
 > [!div class="nextstepaction"]
 > [Expand your landing zone](../considerations/index.md)

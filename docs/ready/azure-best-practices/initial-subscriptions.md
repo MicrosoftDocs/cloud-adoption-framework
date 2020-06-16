@@ -41,7 +41,7 @@ If innovation goals are part of your cloud adoption strategy, consider creating 
 
 ## Shared services subscription
 
-If you are planning to host **more than 1,000 VMs or compute instances in the cloud within 24 months**, create another Azure subscription to host shared services. This will prepare you in advance to support your end-state enterprise architecture.
+If you're planning to host **more than 1,000 VMs or compute instances in the cloud within 24 months**, create another Azure subscription to host shared services. This will prepare you to support your end-state enterprise architecture.
 
 ![An initial subscription model showing keys next to boxes labeled "production" and "shared services"](../../_images/ready/initial-subscription-model-with-shared-services.png)
 

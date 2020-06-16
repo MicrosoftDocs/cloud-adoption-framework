@@ -214,12 +214,12 @@ items:
             href: ready/enterprise-scale/security-governance-and-compliance.md
           - name: Platform automation and DevOps
             href: ready/enterprise-scale/platform-automation-and-devops.md
-        - name: Implementation guidelines
+        - name: Implementation guidelines
           href: ready/enterprise-scale/implementation-guidelines.md
 
       - name: Start small and expand
         items:
-        - name: CAF Migration landing zone blueprint
+        - name: CAF Migrate blueprint
           href: ready/landing-zone/migrate-landing-zone.md
         - name: CAF Foundation blueprint
           href: ready/landing-zone/foundation-blueprint.md

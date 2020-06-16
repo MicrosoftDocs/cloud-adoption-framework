@@ -110,19 +110,19 @@ _Figure 2: Global transit network with Virtual WAN._
 
 - VNet-to-VNet transitive connectivity (within a region and across regions) is in public preview.
 
-- Virtual WAN hub to hub connectivity is currently in public preview.
+- Virtual WAN hub-to-hub connectivity is currently in public preview.
 
 - Virtual WAN integrates with a variety of [SD-WAN providers](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-locations-partners).
 
 - Many managed service providers offer [managed services](https://docs.microsoft.com/azure/networking/networking-partners-msp) for Virtual WAN.
 
-- VPN gateways in Virtual WAN scale up to 20 Gbps and 20,000 connections per virtual hub.
+- VPN gateways in Virtual WAN can scale up to 20 Gbps and 20,000 connections per virtual hub.
 
 - ExpressRoute circuits with the premium add-on are required, and they should be from an ExpressRoute Global Reach location.
 
 - Azure Firewall Manager (currently in public preview) allows the deployment of the Azure Firewall in the Virtual WAN hub.
 
-- Virtual WAN hub to hub traffic via Azure Firewall is currently not supported. As alternative, use a native hub to hub transit routing capabilities in Virtual WAN, and use NSGs to allow/block VNet traffic across hubs.
+- Virtual WAN hub-to-hub traffic via Azure Firewall is currently not supported. As alternative, use a native hub to hub transit routing capabilities in Virtual WAN, and use NSGs to allow/block VNet traffic across hubs.
 
 **Design recommendations:**
 

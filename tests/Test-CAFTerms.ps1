@@ -24,7 +24,6 @@ function Get-MyCasingExpressions
         'Migrate methodolog(y|ies)'
         'Migrate phase'
 
-
         'Organize methodolog(y|ies)'
         'Organize phase'
         'Plan methodolog(y|ies)'
