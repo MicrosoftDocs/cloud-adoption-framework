@@ -53,7 +53,7 @@ To customize the enterprise-scale architecture, see the [design guidelines](../e
 
 ## Next steps
 
-After deploying your first landing zone, you are ready to [Expand your landing zone](../considerations/index.md)
+After deploying your first landing zone, you're ready to [expand your landing zone](../considerations/index.md)
 
 > [!div class="nextstepaction"]
 > [Expand your landing zone](../considerations/index.md)

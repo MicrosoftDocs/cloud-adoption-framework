@@ -25,11 +25,11 @@ Both of the primary blockers are rooted in one belief, the cloud environment and
 
 ### Blocker: Acting too soon
 
-It took years and significant effort to reach the current state of security, governance, and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching 100% feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspend in the cloud environment. Don't try to apply current-state requirements to a future-state environment as an early stage gate. Such an approach rarely proves profitable.
+It took years and significant effort to reach the current state of security, governance, and operations in the current datacenter. It also required observations, learning, and customization to meet the unique constraints of that environment. Replicating those same procedures and configurations will take time. Reaching complete feature parity may also result in an environment that underperforms in the cloud. This parity approach also commonly leads to significant unplanned overspending in the cloud environment. Don't try to apply current-state requirements to a future-state environment as an early stage gate. Such an approach rarely proves profitable.
 
 ![Common blocker: Acting too soon](../../_images/ready/blocker-act-too-soon.png)
 
-In the image above, the customer has an objective of 100 workloads living in the cloud. To get there, the customer will likely deploy their first workload. Then their first 10 or so workloads, before they are ready to release one of those workloads to production. Eventually, they will reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red x in the image shows where customers commonly get stuck. Waiting for 100% alignment can delay the first workload by weeks, months, or even years.
+In the image above, the customer has an objective of 100 workloads running in the cloud. To get there, the customer will likely deploy their first workload. Then their first 10 or so workloads, before they're ready to release one of those workloads to production. Eventually, they'll reach the objective of the adoption plan and have a robust portfolio in the cloud. But the red _x_ in the image shows where customers commonly get stuck. Waiting for total alignment can delay the first workload by weeks, months, or even years.
 
 ### Blocker: Acting too late
 
@@ -50,7 +50,11 @@ The remainder of this article will focus on some key constraints that can empowe
 
 ## Theory
 
-The concept of refactoring a landing zone is simple in theory, but requires proper guardrails. The concept pictured above outlines the basic flow as follows. When you are ready to build your first landing zone, start with an initial landing zone defined via a template. Once that landing zone is deployed, use the decisions trees in the subsequent articles under the "expand your landing zone" section of this article series (see table of contents) to refactor and add to your initial landing zone. Repeat decisions trees and refactoring until you have an enterprise ready environment that meets the enhanced requirements of your security, operations, and governance teams.
+The concept of refactoring a landing zone is simple, but execution requires proper guardrails. The concept shown above outlines the basic flow:
+
+- When you're ready to build your first landing zone, start with an initial landing zone defined via a template.
+- Once that landing zone is deployed, use the decision trees in the subsequent articles under the `Expand your landing zone` section of the table of contents to refactor and add to your initial landing zone.
+- Repeat decision trees and refactoring until you have an enterprise-ready environment that meets the enhanced requirements of your security, operations, and governance teams.
 
 ## Development approach
 
