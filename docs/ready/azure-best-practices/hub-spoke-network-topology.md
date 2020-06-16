@@ -33,7 +33,7 @@ Smaller cloud estates might not benefit from the added structure and capabilitie
 
 ![Examples of a hub and spoke network topology](../../_images/azure-best-practices/network-hub-spoke-high-level.png)
 
-As shown in the diagram, Azure supports two types of hub and spoke design. It supports communication, shared resources, and centralized security policy (`VNet hub` in the diagram), or a virtual WAN type (`Virtual WAN` in the diagram) for large-scale branch-to-branch and branch-to-Azure communications.
+As shown in the diagram, Azure supports two types of hub and spoke design. It supports communication, shared resources, and centralized security policy (labeled as `VNet hub` in the diagram), or a design based on Azure Virtual WAN (labeled as `Virtual WAN` in the diagram) for large-scale branch-to-branch and branch-to-Azure communications.
 
 A hub is a central network zone that controls and inspects ingress or egress traffic between zones: internet, on-premises, and spokes. The hub and spoke topology gives your IT department an effective way to enforce security policies in a central location. It also reduces the potential for misconfiguration and exposure.
 
@@ -58,7 +58,7 @@ In Azure, every component, whatever the type, is deployed in an Azure subscripti
 
 A single hub and spoke implementation can scale up to a large number of spokes. But as with every IT system, there are platform limits. The hub deployment is bound to a specific Azure subscription, which has restrictions and limits. One example is a maximum number of virtual network peerings. For more information, see [Azure subscription and service limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-In cases where limits might be an issue, you can scale up the architecture further by extending the model from a single hub and spoke to a cluster of hubs and spokes. You can interconnect multiple hubs in one or more Azure regions by using virtual network peering, Azure ExpressRoute, a virtual WAN, or a site-to-site VPN.
+In cases where limits might be an issue, you can scale up the architecture further by extending the model from a single hub and spoke to a cluster of hubs and spokes. You can interconnect multiple hubs in one or more Azure regions by using virtual network peering, Azure ExpressRoute, Azure Virtual WAN, or a site-to-site VPN.
 
 ![Cluster of hubs and spokes](../../_images/azure-best-practices/network-hub-spokes-cluster.png)
 
@@ -75,9 +75,3 @@ A typical example of this scenario is the case where application processing serv
 ![Spokes connecting to each other and a hub](../../_images/azure-best-practices/network-spoke-to-spoke.png)
 
 Spokes can also be interconnected to a spoke that acts as a hub. This approach creates a two-level hierarchy: the spoke in the higher level (level 0) becomes the hub of lower spokes (level 1) of the hierarchy. The spokes of a hub and spoke implementation are required to forward the traffic to the central hub so that the traffic can transit to its destination in either the on-premises network or the public internet. An architecture with two levels of hubs introduces complex routing that removes the benefits of a simple hub and spoke relationship.
-
-<!-- images -->
-
-[1]: ../../_images/azure-best-practices/network-hub-spoke-high-level.png "High-level example of hub and spoke"
-[2]: ../../_images/azure-best-practices/network-hub-spokes-cluster.png "Cluster of hubs and spokes"
-[3]:  "Spoke-to-spoke"

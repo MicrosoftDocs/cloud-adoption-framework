@@ -15,7 +15,7 @@ Test-driven development is a common software development and DevOps process that
 
 ![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
 
-In the cloud, infrastructure is the output of code. Well-structured, tested, and verified code produces a viable landing zone. Per the [definition of landing zones](../landing-zone/index.md), "a landing zone is an environment for hosting your workloads, preprovisioned through code. It includes foundational capabilities using defined set of cloud services and best practices so you are **set up for success**." This article outlines one approach to use test-driven development to fulfill the last part of that definition, while meeting quality, security, operations, and governance requirements.
+In the cloud, infrastructure is the output of code execution. Well-structured, tested, and verified code produces a viable landing zone. A [landing zone](../landing-zone/index.md) is an environment for hosting your workloads, preprovisioned through code. It includes foundational capabilities using a defined set of cloud services and best practices that set you up for success. This guidance describes an approach that uses test-driven development to fulfill the last part of that definition, while meeting quality, security, operations, and governance requirements.
 
 This approach can be used to meet simple feature requests during early development. Later in the cloud adoption lifecycle, this process can be used to meet security, operations, governance, or compliance requirements.
 

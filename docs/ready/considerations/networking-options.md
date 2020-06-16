@@ -83,12 +83,12 @@ The following table summarizes the primary scenarios that these patterns support
 
 ### Azure Virtual Datacenter
 
-In addition using one of these architecture patterns, if your enterprise IT group manages large cloud environments, consider consulting the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). When you design your Azure-based cloud infrastructure. CAF enterprise-scale landing zone provides a combined approach to networking, security, management, and infrastructure if you have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**.
+In addition using one of these architecture patterns, if your enterprise IT group manages large cloud environments, consider consulting the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). When you design your Azure-based cloud infrastructure, the CAF enterprise-scale landing zone provides a combined approach to networking, security, management, and infrastructure if you have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infrastructure, or data assets) in the cloud**.
 
 For organizations that meet the following criteria, you may also want to start with the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md):
 
 - Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
-- You need to maintain common policy and governance compliance and central IT control over core services.
+- You need to maintain common policy and governance compliance and Central IT control over core services.
 - Your industry depends on a complex platform which requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, oil and gas, or manufacturing.
 - Your existing IT governance policies require tighter parity with existing features, even during early stage adoption.
 

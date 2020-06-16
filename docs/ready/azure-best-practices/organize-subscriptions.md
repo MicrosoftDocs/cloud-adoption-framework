@@ -43,7 +43,7 @@ When you define your management group hierarchy, first create the root managemen
 
 When you move a subscription to an existing management group, it inherits the policies and role assignments from the management group hierarchy above it. Once you have established multiple subscriptions for your Azure workloads, you can create additional subscriptions to contain Azure services that other subscriptions share.
 
-If you expect your Azure environment to grow, you should create management groups for production and nonproduction now, and apply appropriate policies and access controls at the management group level. New subscriptions will inherit the appropriate controls as they are added to each management group.
+If you expect your Azure environment to grow, you should create management groups for production and nonproduction now, and apply appropriate policies and access controls at the management group level. New subscriptions will inherit the appropriate controls as they're added to each management group.
 
 ![Example of a management group hierarchy](../../_images/ready/management-group-hierarchy-v2.png)
 

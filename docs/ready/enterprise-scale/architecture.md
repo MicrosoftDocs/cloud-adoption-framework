@@ -10,11 +10,11 @@ ms.subservice: ready
 ms.custom: csu
 ---
 
-<!-- cSpell:ignore rkuehfus CAF HSMs -->
+<!-- cSpell:ignore CAF -->
 
 # Cloud Adoption Framework enterprise-scale landing zone architecture
 
-The principal challenges facing enterprise customers adopting Microsoft Azure are how to allow legacy or modern applications to seamlessly move at their own pace and how to provide secure and streamlined operations, management, and governance for all relevant applications across the entire platform. To address these challenges, customers require a forward-looking and Azure-native design approach in the context of the Cloud Adoption Framework (CAF) enterprise-scale landing zone architecture.
+Enterprise-scale is an architecture approach and reference implementation that enables effective construction and operationalization of landing zones on Azure, at scale and aligned with the Azure roadmap and the Microsoft Cloud Adoption Framework for Azure.
 
 ## An overview of enterprise-scale landing zone architecture
 
@@ -51,7 +51,7 @@ The following list expands on the landing zone illustration by outlining the cor
 
 - **Network topology and connectivity:** The end-to-end network topology must be built and deployed across Azure regions and on-premises customer environments to ensure north-south and east-west connectivity between platform deployments. Required services and resources such as firewalls and network virtual appliances must be identified, deployed, and configured throughout network security design to ensure that security requirements are fully met.
 
-- **Shared services infrastructure:** Centrally controlled but decentrally deployed services such as domain controllers must be designed, configured, and built to help application teams consume and integrate with necessary and common services and resources. It is important to note that not all traditional and shared on-premises services should be provided in the cloud. For example, file shares and hardware security modules should be considered as application-level resources that use native Azure services.
+- **Shared services infrastructure:** Centrally controlled but broadly deployed services such as domain controllers must be designed, configured, and built to help application teams consume and integrate with necessary and common services and resources. It is important to note that not all traditional and shared on-premises services should be provided in the cloud. For example, file shares and hardware security modules should be considered as application-level resources that use native Azure services.
 
 - **DevOps:** An end-to-end DevOps experience with robust software development lifecycle practices must be designed, built, and deployed to ensure a safe, repeatable, and consistent delivery of infrastructure-as-code artifacts. Such artifacts are to be developed, tested, and deployed using dedicated integration, release, and deployment pipelines with strong source control and traceability.
 

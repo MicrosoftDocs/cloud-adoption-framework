@@ -210,7 +210,7 @@ When you create a VPN gateway in Azure, you must use a special subnet named Gate
 
 For multiple VPN connections, Azure Virtual WAN is a networking service that provides optimized and automated branch-to-branch connectivity through Azure.
 
-- Virtual WAN allows you to connect and configure branch devices to communicate with Azure. This can be done manually, or by using preferred provider devices through a Virtual WAN partner.
+- Virtual WAN allows you to connect and configure branch devices to communicate with Azure. This can be done manually, or by using preferred provider devices through an Azure Virtual WAN partner.
 - Using preferred provider devices allows for simple use, connectivity, and configuration management.
 - The Azure WAN built-in dashboard provides instant troubleshooting insights that save time, and provide an easy way to track large-scale site-to-site connectivity.
 
