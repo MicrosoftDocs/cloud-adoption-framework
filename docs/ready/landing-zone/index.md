@@ -1,5 +1,5 @@
 ---
-title: What is a landing zone?
+title: What is an Azure landing zone?
 description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 <!-- cSpell:ignore multisubscription -->
 
-## What are Azure landing zones
+# What is an Azure landing zone?
 
 Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security, governance, networking, and identity. Azure landing zones enable application migrations and green field development at an enterprise scale in Azure, consider all platform resources that are required to support the customer's application portfolio, and don't differentiate between IaaS or PaaS.
 
