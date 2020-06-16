@@ -9,3 +9,4 @@ _repo.*/
 .cspell.json
 *.bak
 .vscode/launch.json
+docs/_images/security/security-diagram(case conflict).png
