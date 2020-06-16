@@ -79,6 +79,6 @@ The following table illustrates a common pattern for dividing IT responsibilitie
 
 The breakdown of actions and permissions in these standard roles are often the same across your applications, subscriptions, or entire cloud estate, even if these roles are performed by different people at different levels. Accordingly, you can create a common set of RBAC role definitions to apply across different scopes within your environment. Users and groups can then be assigned a common role, but only for the scope of resources, resource groups, subscriptions, or management groups that they're responsible for managing.
 
-<!-- cSpell:ignore NetOps SecOps -->
+<!-- cSpell:ignore NetOps SecOps " -->
 
 For example, in a [hub and spoke network topology](../azure-best-practices/hub-spoke-network-topology.md) with multiple subscriptions, you might have a common set of role definitions for the hub and all workload spokes. A hub subscription's NetOps role can be assigned to members of the organization's Central IT staff, who are responsible for maintaining networking for shared services used by all workloads. A workload spoke subscription's NetOps role can then be assigned to members of that specific workload team, allowing them to configure networking within that subscription to best support their workload requirements. The same role definition is used for both, but scope-based assignments ensure that users have only the access that they need to perform their job.
