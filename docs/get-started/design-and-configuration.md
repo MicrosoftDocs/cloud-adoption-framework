@@ -107,7 +107,7 @@ Initially, the cloud adoption team needs a landing zone that can support the req
 
 **Guidance to support deliverable completion:**
 
-- [Choose a landing zone](../ready/landing-zone/first-landing-zone.md): Use this article to find the right approach to deploying a landing zone based on your short-term adoption plan. Then deploy that standardized code base.
+- [Choose a landing zone](../ready/landing-zone/index.md): Use this section to find the right approach to deploying a landing zone based on your short-term adoption plan. Then deploy that standardized code base.
 - [Expand your landing zone](../ready/considerations/index.md): Don't attempt to meet long-term governance, security, or operation constraints yet, unless they're required to support the short-term adoption plan.
 
 <!-- markdownlint-disable MD033 -->

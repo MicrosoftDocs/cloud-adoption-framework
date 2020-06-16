@@ -36,8 +36,6 @@ People security commonly partners with the following types of roles:
 - Security operations, for insider risk
 - Physical security, for insider risk
 
-<!-- cSpell:ignore apsec -->
-
 ## Next steps
 
-Review the function of [application security and DevSecOps](./cloud-security-apsec-devsecops.md).
+Review the function of [application security and DevSecOps](./cloud-security-application-security-devsecops.md).
