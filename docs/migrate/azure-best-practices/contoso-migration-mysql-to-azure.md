@@ -132,7 +132,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ### Security
 
-- Contoso needs to ensure that their new Auzre MySQL instance and databases are secure. [Learn more](https://docs.microsoft.com//azure/MySQL/concepts-security).
+- Contoso needs to ensure that their new Azure MySQL instance and databases are secure. [Learn more](https://docs.microsoft.com//azure/MySQL/concepts-security).
 - In particular, Contoso should review the Firewall and virtual network configurations.
 - Setup Private Link so that all database traffic is kept inside Azure and the on-premises network
 - Enable Advanced Thread Protection (ATP)
