@@ -162,7 +162,7 @@ A cloud provider and their practices and processes can be accountable to meet co
 
 As with previous transitions to a new generation of technology like desktop computing and enterprise server computing, the shift to cloud computing is disrupting long-established relationships, roles, responsibilities, and skill sets. The job descriptions we have become accustomed to over the last few decades do not cleanly map to an enterprise that now includes cloud capabilities. As the industry collectively works to normalize a new model, organizations will have to focus on providing as much clarify as possible to help manage the uncertainty of ambiguity during this period of change.
 
-Security teams are affected these changes in the business and technology they support as well as their own internal modernization efforts to better orient to threat actors. Attackers are actively evolving to constantly search for the easiest weak points to exploit in the people, process, and technology of the organization and security must develop capabilities and skills to address these angles.
+Security teams are affected by these changes in the business and technology they support as well as their own internal modernization efforts to better orient to threat actors. Attackers are actively evolving to constantly search for the easiest weak points to exploit in the people, process, and technology of the organization and security must develop capabilities and skills to address these angles.
 
 This section describes the key relationships that frequently change on the journey to the cloud, including lessons learned on minimizing risk and embracing the opportunities to improve:
 
