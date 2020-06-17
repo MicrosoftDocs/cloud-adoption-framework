@@ -17,15 +17,15 @@ Many companies today have long had analytical data warehouses in place in their 
 
 Azure Synapse Analytics is a single service for seamless collaboration and accelerated time to insight.
 
-*Data warehousing*: **Database admins** support the management of data lakes and data warehouses while intelligently optimizing workloads and automatically securing data.
+**Data warehousing**: *Database admins* support the management of data lakes and data warehouses while intelligently optimizing workloads and automatically securing data.
 
-*Data integration*: **Data engineers** use a code-free environment to easily connect multiple sources and types of data.
+**Data integration**: *Data engineers* use a code-free environment to easily connect multiple sources and types of data.
 
-*Big data & machine learning*: **Data scientists** build proofs of concept rapidly and provision resources as needed, while working in the language of their choice (T-SQL, Python, Scala, .NET, SparkSQL).
+**Big data & machine learning**: *Data scientists* build proofs of concept rapidly and provision resources as needed, while working in the language of their choice (T-SQL, Python, Scala, .NET, SparkSQL).
 
-*Management & security*: **IT pros** protect and manage data more efficiently, enfore privacy requirements, and secure access to cloud and hybrid configurations.
+**Management & security**: *IT pros* protect and manage data more efficiently, enfore privacy requirements, and secure access to cloud and hybrid configurations.
 
-*Business intelligence*: **Business analysts** securely access datasets, build dashboards, and share data withing and outside their organization.
+**Business intelligence**: *Business analysts* securely access datasets, build dashboards, and share data withing and outside their organization.
 
 An example of a classic data warehouse architecture is shown in Figure 1 where known structured data is extracted from core transaction processing systems, copied into a staging area from where it is cleaned, transformed, and integrated into production tables in a data warehouse. It is often the case that several years of historical transaction data are incrementally built up here to provide the data needed to understand changes in sales, customer purchasing behavior, and customer segmentation over time and to provide year-on-year financial reporting and analysis to help with decision making. From there, subsets of data are extracted into data marts to analyze activity associated with a specific business process to support decision making in a specific part of the business.
 
