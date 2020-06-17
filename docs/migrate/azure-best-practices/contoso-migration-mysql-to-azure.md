@@ -62,13 +62,13 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 As part of the solution design process Contoso did a review of the features in Azure for hosting their MySQL data.  The following considerations helped them decide to utilize Azure.
 
 - Similar to Azure SQL, Azure MySQL allows for [firewall rules](https://docs.microsoft.com//azure/MySQL/concepts-firewall-rules).
-- Azure MySQL can be utilize with [Virtual Networks](https://docs.microsoft.com//azure/MySQL/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible
-- Azure MySQL has the required compliance and privacy certifications that Contoso must meet
-- Report and application processing performance can be enhanced by utilizing read replicas
+- Azure MySQL can be utilize with [Virtual Networks](https://docs.microsoft.com//azure/MySQL/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible.
+- Azure MySQL has the required compliance and privacy certifications that Contoso must meet for their auditors.
+- Report and application processing performance can be enhanced by utilizing read replicas.
 - Ability to expose the service to internal network traffic only (no-public access) using [Private Link](https://docs.microsoft.com//azure/MySQL/concepts-data-access-security-private-link).
 - They chose not to move to Azure Database for MySQL as they are looking at potentially using the MariDB ColumnStore and GraphDBMS database model in the future.
 - Aside from MySQL features, Contoso is a big proponent of true open source projects and choose not to utilize MySQL.
-- The [bandwidth and latency](https://docs.microsoft.com//azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or Site-To-Site VPN)
+- The [bandwidth and latency](https://docs.microsoft.com//azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or Site-To-Site VPN).
 
 ### Solution review
 
@@ -105,11 +105,34 @@ Azure automatically manages upgrades for patch updates. For example, 10.2.21 to 
 
 Contoso will need to setup a Virtual Network Gateway connection from their on-premises environment to the Virtual Network where their MySQL database is located.  This will allow the on-premises application to be able to access the database over the gateway when the connection strings are updated.
 
-![Migration process](././media/contoso-migration-mysql-to-azure/migration-process.png)
+![Migration process](./media/contoso-migration-mysql-to-azure/migration-process.png)
 
 #### Migration
 
-Since MySQL is very similar to MySQL, you can use the same common utilities and tools such as MySQL Workbench, mysqldump, Toad or Navicat to connect to and migrate data to Azure Database for MySQL.
+Contoso admins migrate the database using Azure Database Migration Services using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform both online, offline and hybrid (preview) migrations using MySQL 5.6 or 5.7.
+
+> [!NOTE]
+> MySQL 8.0 is supported in Azure Database for MySQL, but the DMS tool does not yet support that version.
+
+As a summary, they must perform the following:
+
+- Ensure all migration prerequisites are met:
+
+  - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine, and migration across source and target with same versions.
+  - Enable binary logging in my.ini (Windows) or my.cnf (Unix). Failure to do this will cause a `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
+  - User must have `ReplicationAdmin` role.
+  - Migrate the database schemas without foreign keys and triggers.
+
+- Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
+
+- Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet.
+
+- Ensure that the Azure Database Migration Service can access the MySQL database via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
+
+- Run the Azure Database Migration Service Tool:
+
+#### Migration using native tools
+As an alterntive to using the Database Migraiton Services, Contoso can use common utilities and tools such as MySQL Workbench, mysqldump, Toad or Navicat to connect to and migrate data to Azure Database for MySQL.
 
 - Dump and Restore with `mysqldump`
   - Use the exclude-triggers option in mysqldump, this will prevent triggers from executing during import and improve performance.
