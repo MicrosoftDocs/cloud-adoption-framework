@@ -129,7 +129,10 @@ As a summary, they must perform the following:
 
 - Ensure that the Azure Database Migration Service can access the MySQL database via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
 
-- Run the Azure Database Migration Service Tool:
+- Create a new Azure Database Migration Service Project
+
+![Azure Database Migration Project](./media/contoso-migration-mysql-to-azure/migration-dms-new-project.png)
+
 
 #### Migration using native tools
 As an alterntive to using the Database Migraiton Services, Contoso can use common utilities and tools such as MySQL Workbench, mysqldump, Toad or Navicat to connect to and migrate data to Azure Database for MySQL.
