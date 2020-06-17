@@ -52,25 +52,25 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 ### Current app
 
 - The MariaDB hosts employee data that is used for all aspects of the companies Human Resources (HR) department. A LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl/Python) application is used as the front end to handle employee HR requests.
-- Contoso has 100K employees located all over the world so uptime is very important
+- Contoso has 100K employees located all over the world, so uptime is very important for their databases.
 
 ### Proposed solution
 
-- Evaluate the environments for migration compatibility
-- Utilize common open source tools to migrate the database(s) to MariaDB for Azure instance
-- Modify all applications and processes to utilize the new MariaDB for Azure instance
+- Evaluate the environments for migration compatibility.
+- Utilize common open source tools to migrate the database(s) to MariaDB for Azure instance.
+- Modify all applications and processes to utilize the new MariaDB for Azure instance.
 
 ### Database considerations
 
 As part of the solution design process Contoso did a review of the features in Azure for hosting their MariaDB data.  The following considerations helped them decide to utilize Azure.
 
 - Similar to Azure SQL, Azure MariaDB allows for [firewall rules](https://docs.microsoft.com/azure/mariadb/concepts-firewall-rules).
-- Azure MariaDB can be utilize with [Virtual Networks](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible
-- Azure MariaDB has the required compliance and privacy certifications that Contoso must meet
-- Report and application processing performance will be enhanced by utilizing read replicas
+- Azure MariaDB can be utilized with [Virtual Networks](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible
+- Azure MariaDB has the required compliance and privacy certifications that Contoso must meet for their auditors.
+- Report and application processing performance will be enhanced by utilizing read replicas.
 - Ability to expose the service to internal network traffic only (no-public access) using [Private Link](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-private-link).
-- They chose not to move to Azure Database for MySQL as they are looking at potentially using the MariDB ColumnStore and GraphDBMS database model in the future. Additionally, Contoso is a big proponent of open source projects and choose not to utilize MySQL.
-- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or Site-To-Site VPN)
+- They chose not to move to Azure Database for MySQL as they are looking at potentially using the MariDB ColumnStore and GraphDBMS database model in the future.
+- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or Site-To-Site VPN).
 
 ### Solution review
 
@@ -111,7 +111,7 @@ Before you can migrate your MariaDB databases, you will need to ensure that thos
 
 #### Migration
 
-Since MariaDB is very similar to MySQL, you can use the same common utilities and tools such as MySQL Workbench, mysqldump, Toad or Navicat to connect to and migrate data to Azure Database for MariaDB.
+Since MariaDB is very similar to MySQL, they can use the same common utilities and tools such as MySQL Workbench, mysqldump, Toad or Navicat to connect to and migrate data to Azure Database for MariaDB.
 
 Contoso utilized the following steps to migrate their databases.
 
