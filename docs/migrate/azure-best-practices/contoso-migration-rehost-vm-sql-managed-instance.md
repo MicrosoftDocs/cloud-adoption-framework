@@ -288,7 +288,7 @@ They set these up as follows:
 Here are the Azure components Contoso needs to migrate the VMs to Azure:
 
 - A VNet in which Azure VMs will be located when they're created during migration.
-- The Azure Migrate: Server Migration tool (OVA) provisioned and configured.
+- The Azure Migrate appliance (Server Discovery tool), provisioned and configured.
 
 They set these up as follows:
 
@@ -299,7 +299,7 @@ They set these up as follows:
     - The app front-end VM (WEBVM) will migrate to the front-end subnet (PROD-FE-EUS2), in the production network.
     - The app database VM (SQLVM) will migrate to the database subnet (PROD-DB-EUS2), in the production network.
 
-2. Provision the Azure Migrate: Server Migration tool.
+2. Provision the Azure Migrate appliance (Server Discovery tool).
 
     - From Azure Migrate, download the OVA image and import it into VMWare.
 
@@ -327,7 +327,7 @@ They set these up as follows:
 
 **Need more help?**
 
-Learn about setting up the [Azure Migrate: Server Migration tool](https://docs.microsoft.com/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
+Learn about setting up the [Azure Migrate appliance](https://docs.microsoft.com/azure/migrate/migrate-services-overview#azure-migrate-server-migration-tool).
 
 ### Prepare on-premises VMs
 
