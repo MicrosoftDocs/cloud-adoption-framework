@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 The first three cloud management disciplines describe a management baseline. The preceding articles in this guide outline a minimum viable product (MVP) for cloud management services, which is referred to as a management baseline. This article outlines a few common improvements to the baseline.
 
-The purpose of a management baseline is to create a consistent offering that provides a minimum level of business commitment for _all_ supported workloads. With this baseline of common, repeatable management offerings, the team can deliver highly optimized operational management with minimal deviation.
+The purpose of a management baseline is to create a consistent offering that provides a minimum level of business commitment for **all** supported workloads. With this baseline of common, repeatable management offerings, the team can deliver highly optimized operational management with minimal deviation.
 
 However, you might need a greater commitment to the business beyond the standard offering. The following image and list show three ways to go beyond the management baseline.
 

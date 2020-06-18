@@ -15,7 +15,7 @@ After a collection of workloads and their supporting assets have been deployed t
 
 The objective of "release workloads" is to prepare migrated workloads for promotion to production usage.
 
-## Definition of _done_
+## Definition of done
 
 The optimization process is complete when a workload has been properly configured, sized, and deployed to production.
 

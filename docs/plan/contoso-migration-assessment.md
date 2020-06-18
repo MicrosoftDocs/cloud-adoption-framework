@@ -506,7 +506,7 @@ The assessment report shows the information that's summarized in the table. To s
 | Setting | Indication | Details |
 | --- | --- | --- |
 | **Azure VM readiness** | Indicates whether the VM is ready for migration. | Possible states: <li> Ready for Azure <li> Ready with conditions <li> Not ready for Azure <li> Readiness unknown <br><br> If a VM isn't ready, Azure Migrate shows some remediation steps. |
-| **Azure VM size** | For ready VMs, Azure Migrate provides an Azure VM size recommendation. | Sizing recommendation depends on assessment properties: <li> If you used performance-based sizing, sizing considers the performance history of the VMs. <li> If you used _as on-premises_, sizing is based on the on-premises VM size and utilization. <li> Data isn't used. |
+| **Azure VM size** | For ready VMs, Azure Migrate provides an Azure VM size recommendation. | Sizing recommendation depends on assessment properties: <li> If you used performance-based sizing, then sizing considers the performance history of the VMs. <li> If you used _as on-premises_ sizing, then sizing is based on the on-premises VM size and utilization. <li> Data isn't used. |
 | **Suggested tool** | Because Azure machines are running the agents, Azure Migrate looks at the processes that are running inside the machine. It identifies whether the machine is a database machine. | |
 | **VM information** | The report shows settings for the on-premises VM, including operating system, boot type, and disk and storage information. | |
 

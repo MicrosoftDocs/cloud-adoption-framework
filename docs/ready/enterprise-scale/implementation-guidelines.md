@@ -13,7 +13,7 @@ ms.subservice: ready
 
 # Implementation guidelines
 
-This section covers how to get started with the enterprise-scale platform-native reference implementation and outline design objectives, current design, FAQ, and known issues.
+This section helps you get started with the enterprise-scale platform-native reference implementation and outline design objectives, current design, FAQ, and known issues.
 
 Two sets of activities must take place to implement enterprise-scale architecture. The first set is what must be true for enterprise scale. It encompasses activities that must be performed by the Azure Active Directory administrators to establish an initial configuration. These are sequential by nature and are primarily one-off activities. The second set includes **File** > **New** > **Region** and **File** > **New** > **Landing zone**. These are recurring activities required to instantiate a landing zone, and they need user input to kickstart the workflow to coordinate resource creation within Azure AD. To operationalize at scale, it's key for these activities to follow the principle of _infrastructure as code (IaC)_ and automation with deployment pipelines.
 
@@ -25,22 +25,22 @@ Some of the tables below include blank columns. Use these columns to capture val
 
 | Activities | Parameters required | Enterprise-scale example configuration |
 |---|---|---|
-| 1. Set up the EA administrator and notification account. |                     |                                  |
-| 2. Create departments/business domains/geo-based/org hierarchy. |                     |                                  |
-| 3. Create an EA account and assign budget. |                                  |
-| 4. Set up Azure AD Connect for each Azure AD tenant if identity is to be synchronized from on-premises. |                     |                                  |
-| 5. Establish zero standing access to Azure resources and just-in time access via Azure AD Privileged Identity Management (PIM).    |                     |                                  |
+| 1. Set up the EA administrator and notification account. | | |
+| 2. Create departments/business domains/geo-based/org hierarchy. | | |
+| 3. Create an EA account and assign budget. | | |
+| 4. Set up Azure AD Connect for each Azure AD tenant if identity is to be synchronized from on-premises. | | |
+| 5. Establish zero standing access to Azure resources and just-in time access via Azure AD Privileged Identity Management (PIM). | | |
 
 ### Management group and subscription
 
-| Activities                                                                                                                            | Parameters required | Enterprise-scale example configuration   |
-|---------------------------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------------|
-| 1. Create a management group hierarchy (ideally with no more than three or four levels).                      |                                  |
-| 2. Create a top-level sandbox management group for users to experiment with Azure.                                              |                     |                                  |
-| 3. Publish a subscription provisioning criteria along with the responsibilities of a subscription owner (potentially as a wiki). |                     |                                  |
-| 4. Create management and connectivity subscriptions for platform management and global networking and connectivity resources.  |                     |                                  |
-| 5. Set up a Git repo and service principal to use with a platform continuous integration/continuous deployment pipeline.                                            |                     |                                  |
-| 6. Create custom role definitions and manage entitlements using Azure AD PIM for subscription and management group scopes.              |                     |                                  |
+| Activities | Parameters required | Enterprise-scale example configuration |
+|---|---|---|
+| 1. Create a management group hierarchy (ideally with no more than three or four levels). | | |
+| 2. Create a top-level sandbox management group for users to experiment with Azure. | | |
+| 3. Publish a subscription provisioning criteria along with the responsibilities of a subscription owner (potentially as a wiki). | | |
+| 4. Create management and connectivity subscriptions for platform management and global networking and connectivity resources. | | |
+| 5. Set up a Git repo and service principal to use with a platform continuous integration/continuous deployment pipeline. | | |
+| 6. Create custom role definitions and manage entitlements using Azure AD PIM for subscription and management group scopes. | | |
 
 ### Global networking and connectivity
 
@@ -68,37 +68,37 @@ Some of the tables below include blank columns. Use these columns to capture val
 
 ### Security, governance, and compliance
 
-| Activities                                                                                                                                              | Parameters required | Enterprise-scale example configuration   |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------------|
-| 1. Define and apply a service whitelisting framework to ensure Azure services meet enterprise security and governance requirements (see appendix). |                     |                                  |
-| 2. Create custom role-based access control (RBAC) role definitions.                                                                                                              |                     |                                  |
-| 3. Enable PIM and discover Azure resources to facilitate PIM.                                                             |                     |                                  |
-| 4. Create Azure AD-only groups for the Azure control plane management of resources using PIM.                                                             |                     |                                  |
-| 5. Apply Azure Policy to ensure Azure services are compliant to enterprise requirements.                                                             |                     |                                  |
-| 6. Define a naming convention and enforce it via Azure Policy.                                                                                       |                     |                                  |
-| 7. Create a policy matrix at all scopes (for example, enable monitoring for all Azure services).                                                             |                     |                                  |
-| 8. Apply Azure policies related to networking, security, and monitoring (refer to the example policies list provided below).                |                     |                                  |
+| Activities | Parameters required | Enterprise-scale example configuration |
+|---|---|---|
+| 1. Define and apply a service whitelisting framework to ensure Azure services meet enterprise security and governance requirements (see appendix). | | |
+| 2. Create custom role-based access control (RBAC) role definitions. | | |
+| 3. Enable PIM and discover Azure resources to facilitate PIM. | | |
+| 4. Create Azure AD-only groups for the Azure control plane management of resources using PIM. | | |
+| 5. Apply Azure Policy to ensure Azure services are compliant to enterprise requirements. | | |
+| 6. Define a naming convention and enforce it via Azure Policy. | | |
+| 7. Create a policy matrix at all scopes (for example, enable monitoring for all Azure services). | | |
+| 8. Apply Azure policies related to networking, security, and monitoring (refer to the example policies list provided below). | | |
 
 ### Platform management and monitoring
 
-| Activities                                                                                                       | Parameters required | Enterprise-scale example configuration   |
-|------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------------|
-| 1. Create policy compliance and security dashboards for organizational and resource-centric views.            |                     |                                  |
-| 2. Create a workflow for platform secrets (service principals and automation account) and key rollover.     |                     |                                  |
-| 3. Optional: set up an organization-wide virtual machine (VM) gallery image.                                                  |                     |                                  |
-| 4. Set up long-term archiving and retention for logs within Azure Monitor logs.                                    |                     |                                  |
-| 5. Set up business continuity and disaster recovery for key vaults used to store platform secrets.                                                  |                     |                                  |
-| 6. Using Azure Firewall Manager, ensure that all connected virtual networks to a secure virtual hub are protected by Azure Firewall. |                     |                                  |
+| Activities | Parameters required | Enterprise-scale example configuration |
+|---|---|---|
+| 1. Create policy compliance and security dashboards for organizational and resource-centric views. | | |
+| 2. Create a workflow for platform secrets (service principals and automation account) and key rollover. | | |
+| 3. (Optional:) Set up an organization-wide virtual machine (VM) gallery image. | | |
+| 4. Set up long-term archiving and retention for logs within Azure Monitor logs. | | |
+| 5. Set up business continuity and disaster recovery for key vaults used to store platform secrets. | | |
+| 6. Using Azure Firewall Manager, ensure that all connected virtual networks to a secure virtual hub are protected by Azure Firewall. | | |
 
 The table below provides a list of example Azure policies to enforce typical networking, security, and monitoring controls at a management group scope.
 
-| Category   | Policy                                                                                           |
-|------------|--------------------------------------------------------------------------------------------------|
-| Network    | 1. (Preview): Container Registry should use a virtual network service endpoint.                   |
-|            | 2. A custom IP security/internet key exchange policy must be applied to all Azure Virtual Network gateway connections.    |
+| Category   | Policy |
+|------------|--------------------------------------------------------------------------------------------------_|
+| Network    | 1. (Preview:) Container Registry should use a virtual network service endpoint.                   |
+|            | 2. A custom IP security/internet key exchange policy must be applied to all Azure Virtual Network gateway connections. |
 |            | 3. App Service should use a virtual network service endpoint (internal apps only).                |
-|            | 4. Azure VPN gateways should not use a basic stock-keeping unit (SKU).                                                 |
-|            | 5. Azure Cosmos DB should use a virtual network service endpoint.                                       |
+|            | 4. Azure VPN gateways should not use a basic stock-keeping unit (SKU).                            |
+|            | 5. Azure Cosmos DB should use a virtual network service endpoint.                                 |
 |            | 6. Deploy Network Watcher when virtual networks are created.                                      |
 |            | 7. Event hub should use a virtual network service endpoint.                                       |
 |            | 8. Gateway subnets should not be configured with a network security group.                        |
@@ -203,7 +203,7 @@ The table below provides a list of example Azure policies to enforce typical net
 
 4. Connect the virtual hub to on-premises using ExpressRoute or via a VPN.
 
-5. (Optional) set up encryption over ExpressRoute private peering.
+5. (Optional:) Set up encryption over ExpressRoute private peering.
 
 6. Protect virtual network traffic across virtual hubs with network security groups.
 

@@ -17,7 +17,7 @@ As described in [Innovation in the digital economy](./index.md), innovation requ
 
 ## Summary of each discipline of digital invention
 
-The following disciplines are not _all_ required to drive innovation in any given case. By following the guidance in [Build with customer empathy](./build.md), the objective is to test a hypothesis in every iteration. By defining the output of each iteration as a [minimum viable product (MVP)](../../govern/policy-compliance/index.md), this should enable you to involve the fewest possible number of disciplines.
+Not every discipline is required to drive innovation for each specific case. By following the guidance in [Build with customer empathy](./build.md), the objective is to test a hypothesis in every iteration. By defining the output of each iteration as a [minimum viable product (MVP)](../../govern/policy-compliance/index.md), this should enable you to involve the fewest possible number of disciplines.
 
 - **[Democratize data](./data.md):** By getting data into the hands of customers, partners, and employees, you encourage innovative observation. Ingest, centralize, govern, and share data.
 - **[Engage through apps](./apps.md):** People connect with knowledge through apps and experiences. Empower professional and citizen developers to create apps quickly.
