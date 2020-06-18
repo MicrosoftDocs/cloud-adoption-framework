@@ -54,7 +54,7 @@ If this changes through the course of the cloud adoption plan, the resource orga
 
 This implementation option does not implement any governance tooling. In the absence of defined policy automation, this landing zone should not be used for any mission critical workloads or sensitive data. It is assumed that this landing zone is being used for limited production deployment to initiate learning, iteration, and development of the overall operating model in parallel to these early stage migration efforts.
 
-To accelerate parallel development of governance disciplines, review the [Govern methodology](../../govern/index.md) and consider deploying the [CAF foundation blueprint](./foundation-blueprint.md) in addition to the CAF Migration landing zone.
+To accelerate parallel development of governance disciplines, review the [Govern methodology](../../govern/index.md) and consider deploying the [CAF foundation blueprint](./foundation-blueprint.md) in addition to the CAF Migration landing zone blueprint.
 
 > [!WARNING]
 > As the governance disciplines mature, refactoring may be required. Refactoring may be required. Specifically, resources may later need to be [moved to a new subscription or resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json).
@@ -122,4 +122,4 @@ After deploying your first landing zone, you're ready to [expand your landing zo
 
 <!-- links -->
 
-[deploy-sample]: https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/deploy
+[Deploy-sample]: https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/deploy

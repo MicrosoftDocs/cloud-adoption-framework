@@ -35,7 +35,7 @@ Perimeter networks make use of the following Azure features and services:
 > - [Implement a DMZ between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
 > - [Implement a DMZ between Azure and the internet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
 
-Usually, your Central IT and security teams are responsible for defining requirements for operating your perimeter networks.
+Usually, your Central IT team and security teams are responsible for defining requirements for operating your perimeter networks.
 
 ![Example of a hub and spoke network topology](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
 

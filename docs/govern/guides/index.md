@@ -81,7 +81,7 @@ To begin a governance journey, choose one of the two options below. The options 
 
 Compared to traditional on-premises environments, Azure allows workload development teams and their business sponsors to take advantage of the increased deployment agility that cloud platforms offer. As your cloud adoption efforts expand to include mission-critical data and workloads, this agility may conflict with corporate security and policy compliance requirements established by your IT teams. This is especially true for large enterprises that have existing sophisticated governance and regulatory requirements.
 
-The CAF enterprise-scale landing zone architecture aims to address these concerns earlier in the adoption lifecycle by architectures, implementations, and guidance to help achieve a balance between Cloud Adoption teams and Central IT requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a shared service architecture and well-managed landing zones.
+The CAF enterprise-scale landing zone architecture aims to address these concerns earlier in the adoption lifecycle by architectures, implementations, and guidance to help achieve a balance between Cloud Adoption teams and central IT team requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a shared service architecture and well-managed landing zones.
 
 CAF enterprise-scale landing zone deploys your own "isolated cloud" within the Azure platform, integrating management processes, regulatory requirements, and security processes required by your governance policies. Within this virtual boundary, CAF enterprise-scale landing zone offers example models for deploying workloads while ensuring consistent compliance and provides basic guidance on implementing an organization's separation of roles and responsibilities in the cloud.
 
@@ -94,7 +94,7 @@ The [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md) a
 For organizations that meet the following criteria, you may also want to start with the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md):
 
 - Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
-- You need to maintain common policy and governance compliance and Central IT control over core services.
+- You need to maintain common policy and governance compliance and centralized IT control over core services.
 - Your industry depends on a complex platform that requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, manufacturing, and oil and gas.
 - Your existing IT governance policies require tighter parity with existing features, even during early stage adoption.
 

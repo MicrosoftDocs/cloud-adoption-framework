@@ -1,6 +1,6 @@
 ---
 title: Start with enterprise-scale landing zones
-description: Start with enterprise-scale landing zones
+description: Start with enterprise-scale landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

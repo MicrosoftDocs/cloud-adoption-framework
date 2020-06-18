@@ -1,6 +1,6 @@
 ---
 title: Identity and access management
-description: Identity and access management
+description: Identity and access management.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

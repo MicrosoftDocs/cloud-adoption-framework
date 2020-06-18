@@ -258,7 +258,7 @@ Often, using only a resource group name related to resources won't provide enoug
 
 ## Best practice: Implement blueprints
 
-Just as blueprint allows engineers and architects to sketch a project's design parameters, Azure Blueprints enable cloud architects and central IT groups to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Using Azure Blueprints, development teams can rapidly build and create new environments that meet organizational compliance requirements, and that have a set of built-in components, such as networking, to speed up development and delivery.
+Just as blueprint allows engineers and architects to sketch a project's design parameters, Azure Blueprints enable cloud architects and central IT teams to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Using Azure Blueprints, development teams can rapidly build and create new environments that meet organizational compliance requirements, and that have a set of built-in components, such as networking, to speed up development and delivery.
 
 - Use blueprints to orchestrate the deployment of resource groups, Azure Resource Manager templates, and policy and role assignments.
 - Blueprints are stored in a globally distributed Azure Cosmos DB. Blueprint objects are replicated to multiple Azure regions. Replication provides low latency, high availability, and consistent access to blueprint, regardless of the region to which a blueprint deploys resources.

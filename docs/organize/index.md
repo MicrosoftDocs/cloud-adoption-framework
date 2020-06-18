@@ -42,7 +42,7 @@ The following is a list of functions that are required to succeed at cloud adopt
 - [Cloud strategy](./cloud-strategy.md): Align technical change to business needs.
 - [Cloud adoption](./cloud-adoption.md): Deliver technical solutions.
 - [Cloud governance](./cloud-governance.md): Manage risk.
-- [Central IT](./central-it.md): Support from existing IT staff.
+- [Central IT team](./central-it.md): Support from existing IT staff.
 - [Cloud operations](./cloud-operations.md): Support and operate adopted solutions.
 - [Cloud center of excellence](./cloud-center-of-excellence.md): Improve quality, speed, and resiliency of adoption.
 - [Cloud platform](./cloud-platform.md): Operate and mature the platform.

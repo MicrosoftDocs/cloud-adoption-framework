@@ -38,8 +38,8 @@ The Cloud Adoption Framework includes tools that help you quickly implement tech
 | [Naming and tagging tracking template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/CAF%20Readiness%20Naming%20and%20Tagging%20tracking%20template.xlsx) | Document decisions about naming and tagging standards to ensure consistency and reduce onboarding time. |
 | [CAF&nbsp;foundation&nbsp;blueprint](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone-governance) | Use a lightweight implementation of an initial governance foundation to provide hands-on experience with governance tools in Azure. |
 | [CAF migration landing zone blueprint](https://github.com/Microsoft/CloudAdoptionFramework/tree/master/ready/migration-landing-zone) | Provision and prepare to host workloads being migrated from an on-premises environment into Azure. For more information about this blueprint, see [Deploy a migration landing zone](../ready/landing-zone/migrate-landing-zone.md). |
-| [Terraform landing zone blueprint](../ready/landing-zone/terraform-landing-zone.md) | Open-source code base for the Terraform version of the CAF landing zone blueprints. |
-| [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | The Terraform registry website, filtered to list all of the Cloud Adoption Framework modules needed to create a Terraform landing zone. |
+| [Terraform modules](../ready/landing-zone/terraform-landing-zone.md) | Open-source code base for the Terraform version of the CAF landing zones. |
+| [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | The Terraform registry website, filtered to list all of the Cloud Adoption Framework modules needed to create a landing zone via Terraform. |
 
 ## Govern
 

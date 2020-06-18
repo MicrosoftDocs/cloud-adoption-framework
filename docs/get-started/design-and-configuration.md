@@ -38,7 +38,7 @@ A clear and concise business strategy helps the cloud platform team understand w
 
 | Accountable team | Responsible and supporting teams | Informed teams |
 | --- | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT | <li> Cloud platform team |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team | <li> Cloud platform team |
 
 ## Step 2: Assess the digital estate
 
@@ -101,7 +101,7 @@ Initially, the cloud adoption team needs a landing zone that can support the req
 **Deliverables:**
 
 - Deploy a first landing zone for initial low-risk migrations.
-- Develop a plan to refactor with the cloud center of excellence team or Central IT.
+- Develop a plan to refactor with the cloud center of excellence or the central IT team.
 - Timeline risks:
   - Governance, operations, and security requirements for the first 10 workloads can slow this process. Actual refactoring of the first landing zone and subsequent landing zones takes longer, but it should happen in parallel with migration efforts.
 
@@ -115,7 +115,7 @@ Initially, the cloud adoption team needs a landing zone that can support the req
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 5: Deploy an initial governance foundation
 
@@ -141,7 +141,7 @@ As those decisions are made, they feed back into the parallel efforts of the clo
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
 | --- | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT | <li> Cloud platform team |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team | <li> Cloud platform team |
 
 ## Step 6: Implement an operations baseline
 
@@ -170,7 +170,7 @@ As those plans are made, they feed back into the parallel efforts of the cloud p
 
 | Accountable team | Responsible and supporting teams | Consulted teams |
 | --- | --- | --- |
-| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT | <li> Cloud platform team |
+| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team | <li> Cloud platform team |
 
 ## Step 7: Expand the landing zone
 
@@ -196,7 +196,7 @@ As the cloud adoption team begins their first few migrations, the cloud platform
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Value statement
 

@@ -32,7 +32,7 @@ Organizational structures tend to move through the common maturity model that's 
 
 1. [Cloud adoption team only](#cloud-adoption-team-only)
 2. [MVP best practice](#best-practice-minimum-viable-product-mvp)
-3. [Central IT](#central-it)
+3. [Central IT team](#central-it-team)
 4. [Strategic alignment](#strategic-alignment)
 5. [Operational alignment](#operational-alignment)
 6. [Cloud center of excellence (CCoE)](#cloud-center-of-excellence)
@@ -59,13 +59,13 @@ This proven approach is considered an MVP because it may not be sustainable. Eac
 
 The following sections describe a fully staffed, proven organizational structure along with approaches to aligning the appropriate structure to your organization.
 
-## Central IT
+## Central IT team
 
-As adoption scales, the cloud governance team may struggle to keep pace with the flow of innovation from multiple cloud adoption teams. This is especially true in environments that have heavy compliance, operations, or security requirements. At this stage, it is common for companies to shift cloud responsibilities to an existing Central IT team. If that team can reassess tools, processes, and people to better support cloud adoption at scale, then including the Central IT team can add significant value. Bringing in subject matter experts from operations, automation, security, and administration to modernize Central IT can drive effective operational innovations.
+As adoption scales, the cloud governance team may struggle to keep pace with the flow of innovation from multiple cloud adoption teams. This is especially true in environments that have heavy compliance, operations, or security requirements. At this stage, it is common for companies to shift cloud responsibilities to an existing Central IT team. If that team can reassess tools, processes, and people to better support cloud adoption at scale, then including the central IT team can add significant value. Bringing in subject matter experts from operations, automation, security, and administration to modernize the central IT team can drive effective operational innovations.
 
-Unfortunately, the Central IT phase can be one of the riskiest phases of organizational maturity. The Central IT team must come to the table with a strong growth mindset. If the team views the cloud as an opportunity to grow and adapt, then it can provide great value throughout the process. But if the Central IT team views cloud adoption primarily as a threat to their existing model, then the Central IT team becomes an obstacle to the cloud adoption teams and the business objectives they support. Some Central IT teams have spent months or even years attempting to force the cloud into alignment with on-premises approaches, with only negative results. The cloud doesn't require that everything change within Central IT, but it does require significant change. If resistance to change is prevalent within the Central IT team, this phase of maturity can quickly become a cultural antipattern.
+Unfortunately, the central IT team phase can be one of the riskiest phases of organizational maturity. The Central IT team must come to the table with a strong growth mindset. If the team views the cloud as an opportunity to grow and adapt, then it can provide great value throughout the process. But if the Central IT team views cloud adoption primarily as a threat to their existing model, then the Central IT team becomes an obstacle to the cloud adoption teams and the business objectives they support. Some Central IT teams have spent months or even years attempting to force the cloud into alignment with on-premises approaches, with only negative results. The cloud doesn't require that everything change within the central IT team, but it does require significant change. If resistance to change is prevalent within the Central IT team, this phase of maturity can quickly become a cultural antipattern.
 
-Cloud adoption plans heavily focused on platform as a service (PaaS), DevOps, or other solutions that require less operations support are less likely to see value during this phase of maturity. On the contrary, these types of solutions are the most likely to be hindered or blocked by attempts to centralize IT. A higher level of maturity, like a [cloud center of excellence (CCoE)](#cloud-center-of-excellence), is more likely to yield positive results for those types of transformational efforts. To understand the differences between Central IT in the cloud and a CCoE, see [Cloud center of excellence](./cloud-center-of-excellence.md).
+Cloud adoption plans heavily focused on platform as a service (PaaS), DevOps, or other solutions that require less operations support are less likely to see value during this phase of maturity. On the contrary, these types of solutions are the most likely to be hindered or blocked by attempts to centralize IT. A higher level of maturity, like a [cloud center of excellence (CCoE)](#cloud-center-of-excellence), is more likely to yield positive results for those types of transformational efforts. To understand the differences between centralized IT in the cloud and a CCoE, see [Cloud center of excellence](./cloud-center-of-excellence.md).
 
 ## Strategic alignment
 
@@ -81,9 +81,9 @@ Cloud operations can be delivered by the existing IT operations roles. But it's 
 
 ## Cloud center of excellence
 
-At the highest state of maturity, a cloud center of excellence aligns teams around a modern cloud-first operating model. This approach provides Central IT functions like governance, security, platform, and automation.
+At the highest state of maturity, a cloud center of excellence aligns teams around a modern cloud-first operating model. This approach provides centralized IT functions like governance, security, platform, and automation.
 
-The primary difference between this structure and the Central IT structure above is a focus on self-service. The teams in this structure organize with the intent of delegating control as much as possible. Aligning governance and compliance practices to cloud-native solutions creates guardrails and protection mechanisms. Unlike the Central IT model, the cloud-native approach maximizes innovation and minimizes operational overhead. For this model to be adopted, mutual agreement to modernize IT processes will be required from business and IT leadership. This model is unlikely to occur organically and often requires executive support.
+The primary difference between this structure and the Central IT team structure above is a focus on self-service. The teams in this structure organize with the intent of delegating control as much as possible. Aligning governance and compliance practices to cloud-native solutions creates guardrails and protection mechanisms. Unlike the Central IT team model, the cloud-native approach maximizes innovation and minimizes operational overhead. For this model to be adopted, mutual agreement to modernize IT processes will be required from business and IT leadership. This model is unlikely to occur organically and often requires executive support.
 
 ## Next steps
 
