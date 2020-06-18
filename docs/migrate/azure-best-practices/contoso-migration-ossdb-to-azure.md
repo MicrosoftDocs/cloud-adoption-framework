@@ -131,7 +131,7 @@ As the databases were inventoried each type of database was reviewed to determin
 | --- | --- | --- | --- |
 **MySQL** | All supported versions, upgrade to a supported version before migration | MySQL Database for Azure (Paas) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online)
 **PostgreSQL** | All supported versions, upgrade to a supported version before migration | PostgreSQL Database for Azure (PaaS) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)
-**MariaDB** | All supported versions, upgrade to a supported version before migration | MariaDB Database for Azure (PaaS) | [Guild](https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?step=1)
+**MariaDB** | All supported versions, upgrade to a supported version before migration | MariaDB Database for Azure (PaaS) | [Guide](https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?step=1)
 
 <!-- markdownlint-enable MD033 -->
 
