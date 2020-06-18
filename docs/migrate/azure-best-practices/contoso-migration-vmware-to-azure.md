@@ -3,7 +3,7 @@ title: "Moving on-premises VMware infrastructure to Azure (Scenario)"
 description: Learn how Contoso moves on-premises VMware VMs to Azure
 author: deltadan
 ms.author: abuck
-ms.date: 05/11/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -40,7 +40,7 @@ Working closely with business partners, the Contoso IT team will define the busi
 With the Business drivers in mind, Contoso has pinned down goals for this migration:
 
 - Continue managing their existing environments with VMware tools familiar to their teams, while modernizing the applications with Native Azure services.
-- Seamlessly move Contoso's VMware-based workloads from their data center to Azure and integrate the VMware environment with Azure. Even the IP addresses for the VMs should not change.
+- Seamlessly move Contoso's VMware-based workloads from their data center to Azure and integrate the VMware environment with Azure. 
 - After migration, the app in Azure should have the same performance capabilities as it does today in VMware. The app will remain as critical in the cloud as it is on-premises.
 
 These goals support the decision to leverage AVS and validate it as the best migration method for Contoso.
@@ -68,14 +68,11 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 
 ### Proposed architecture
 
-- Deploy AVS into the West US Azure region.
-- Connect the on-premises data center to AVS running in West US using [ExpressRoute](https://docs.microsoft.com//azure/vmware-cloudsimple/on-premises-connection).
-- Use Layer 2 stretched networks to connect the on-premises VMware environment to the AVS Private Cloud using an NSX Layer 2 VPN.
+- Deploy [AVS Private Cloud](https://docs.microsoft.com/en-us/azure/azure-vmware/concepts-private-clouds-clusters) into the West US Azure region.
+- Connect the on-premises data center to AVS running in West US using Virtual networks [ExpressRoute](https://docs.microsoft.com/en-us/azure/azure-vmware/concepts-networking) with Global Reach enabled.
 - Migrate VMs to dedicated Azure VMware Solutions using [VMware Hybrid Cloud Extension (HCX)](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html).
 
-![Migration process](./media/contoso-migration-vmware-to-azure/onpremises-stretched-network-expressroute.png)
-
->Note: The [Layer 2 stretched network](https://docs.microsoft.com//azure/vmware-cloudsimple/migration-layer-2-vpn) enables live migration of workloads from your on-premises VMware environment to the Private Cloud in Azure. With this stretched Layer 2 network, the subnet from on-premises will be available on the Private Cloud. After migration, new IP address assignment is not required for the VMs.
+![Proposed Architecture](./media/contoso-migration-vmware-to-azure/onpremises-stretched-network-expressroute.png)
 
 ## Solution Review
 
@@ -83,14 +80,17 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 **Consideration** | **Details**
 --- | ---
-Pros | Bare metal VMware infrastructure with high performance. Infrastructure that is fully dedicated to Contoso and is physically isolated from infrastructure of other customers.<br/><br/>Since Contoso is using a rehost using VMware there is, no special configuration or migration complexity.<br/><br/>Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit and extended support for legacy Windows and SQL platforms.<br/><br/>Contoso will retain full control of the app VMs in Azure.
-Cons | Contoso will need to continue supporting the app as VMware VMs rather than moving them to a managed service such as Azure App Service and Azure SQL Database.<br/><br/>Azure VMware Solutions are provisioned and priced based on a minimum of three large nodes rather than individual VMs in Azure IaaS. Learn more about the [pricing](https://azure.microsoft.com//pricing/details/azure-vmware-cloudsimple/) of AVS.
+Pros | Bare metal VMware infrastructure with high performance. Infrastructure that is fully dedicated to Contoso and is physically isolated from infrastructure of other customers.<br/><br/>Since Contoso is using a rehost using VMware there is, no special configuration or migration complexity.<br/><br/>Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit and [Extended Security Updates](https://www.microsoft.com/cloud-platform/windows-server-2008) for legacy Windows and SQL platforms.<br/><br/>Contoso will retain full control of the app VMs in Azure.<br/><br/>
+Cons | Contoso will need to continue supporting the app as VMware VMs rather than moving them to a managed service such as Azure App Service and Azure SQL Database.<br/><br/>Azure VMware Solutions are provisioned and priced based on a minimum of three large nodes rather than individual VMs in Azure IaaS. They will need to plan their capacity needs as they don on-premises today rather than benefits from the on-demand nature of other services in Azure.
+
+> ![NOTE]
+> Learn more about the [pricing](https://azure.microsoft.com/pricing/details/azure-vmware/) of Azure VMware Solutions.
 
 ## Migration process
 
 Contoso will move VMs to AVS using the VMware HCX tool. The VMs will run in an AVS Private Cloud.  [VMware HCX migration types](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html) include Bulk Migration, Cold Migration, and even while a workload is running through live migration using vMotion or Replication Assisted vMotion (RAV).
 
-- As a first step, Contoso prepares the Azure components for AVS, and prepares the on-premises VMware infrastructure.
+- As a first step, Contoso prepares the Azure components for AVS.
 - Contoso creates the AVS Service using the Azure portal and then provisions the AVS Nodes.
 - The AVS Private cloud is then created and the networking is configured including the ExpressRoute circuits.
 - Contoso next configures the HCX components to connect their on-premises vSphere environment to the AVS Private Cloud.
@@ -103,45 +103,28 @@ Contoso will move VMs to AVS using the VMware HCX tool. The VMs will run in an A
 
 ## Scenarios steps
 
-1. Create AVS Service
-2. Provision AVS Nodes
-3. Create AVS Private Cloud
-4. Configure Networking
-5. Migrate VMs using HCX
+1. Network planning
+1. Create an AVS private Cloud
+1. Configure Networking
+1. Migrate VMs using HCX
 
-### Step 1: Create AVS Services
-
-Contoso will provision the AVS service in the West US Azure region, where the AVS service is available. The AVS service allows them o provision nodes, reserve nodes, and create AVS Private Clouds. The AVS also service defines the edge network of Azure VMware Solution by AVS. This edge network is used by services that include VPN, ExpressRoute, and Internet connectivity to their AVS Private Clouds.
-
->Note:  Azure VMware Solution is available in the US East, US West, and West Europe regions.
-
-1. First, they select the subscription, resource group, and provide a name for the service and networking information as needed.
-
->Note: Learn more about the [networking prerequisites](https://docs.microsoft.com//azure/vmware-cloudsimple/cloudsimple-network-checklist) for Azure VMware Solutions.
-
-![Migration process](./media/contoso-migration-vmware-to-azure/create-cloudsimple.png)
-
-Once the service is created and added to the list of services in Contoso's subscription, they will move on to create their AVS nodes.
-
->Note: Learn to create an AVS service using a [tutorial](https://docs.microsoft.com//azure/vmware-cloudsimple/quickstart-create-cloudsimple-service).
-
-### Step 2: Provision AVS Nodes
-
-Using the Azure portal, Contoso will provision nodes for their AVS deployment.  The AVS nodes are the VMware ESXi hosts to be deployed on bare metal in the Azure region.
-
-1. Contoso selects the correct subscription, resource group, and name prefix to use used for the AVS nodes.
-
-2. Also, provided are the name prefix, the Availability Zone in the data center along with the desired node type (size), and count they wish to deploy.
-
-![Migration process](./media/contoso-migration-vmware-to-azure/create-cloudsimple-step1.png)
-
->Note: Learn to create AVS nodes using a [tutorial](https://docs.microsoft.com//azure/vmware-cloudsimple/quickstart-create-cloudsimple-service#provision-nodes).
-
-### Step 3: Create an AVS Private Cloud
-
+### Step 1: Network planning
 With the AVS nodes now deployed, Contoso moves on to creating the AVS Private cloud. An AVS Private Cloud is an isolated VMware stack that supports ESXi hosts, vCenter, vSAN, and NSX.
 
 AVS Private Clouds are managed through the AVS portal. They have their own vCenter server in its own management domain. The stack runs on dedicated nodes and isolated bare metal hardware nodes.
+
+>![NOTE]
+> Learn about network planning for AVS using a [tutorial](https://docs.microsoft.com/azure/azure-vmware/tutorial-network-checklist).
+
+### Step 2: Create an AVS private Cloud
+
+Contoso will provision the AVS service in the West US Azure region, where the AVS service is available. The AVS service allows them o provision nodes, reserve nodes, and create AVS Private Clouds. The AVS also service defines the edge network of Azure VMware Solution by AVS. This edge network is used by services that include VPN, ExpressRoute, and Internet connectivity to their AVS Private Clouds.
+
+>![NOTE]
+> Learn to create AVS private Clouds using a [tutorial](https://docs.microsoft.com/azure/azure-vmware/tutorial-create-private-cloud).
+
+### Step 3: Configure Networking
+
 
 From the Azure portal, Contoso follows these steps:
 
@@ -165,7 +148,7 @@ After reviewing the final information, the AVS Private Cloud provisioning proces
 
 >Note: Learn to configure an AVS Private Cloud environment using a [tutorial](https://docs.microsoft.com//azure/vmware-cloudsimple/quickstart-create-private-cloud).
 
-### Step 4: Configure Networking
+### Step 4: Migrate VMs using HCX
 
 Once the AVS Private Cloud is provisioned, Contoso will use the following steps to configure the networking:
 
