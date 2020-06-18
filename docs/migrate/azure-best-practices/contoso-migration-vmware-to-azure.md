@@ -73,7 +73,7 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 - Use Layer 2 stretched networks to connect the on-premises VMware environment to the AVS Private Cloud using an NSX Layer 2 VPN.
 - Migrate VMs to dedicated Azure VMware Solutions using [VMware Hybrid Cloud Extension (HCX)](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html).
 
-![Migration process](/media/vmware-to-azure-migration-scenario/onpremises-stretched-network-expressroute.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/onpremises-stretched-network-expressroute.png)
 
 >Note: The [Layer 2 stretched network](https://docs.microsoft.com//azure/vmware-cloudsimple/migration-layer-2-vpn) enables live migration of workloads from your on-premises VMware environment to the Private Cloud in Azure. With this stretched Layer 2 network, the subnet from on-premises will be available on the Private Cloud. After migration, new IP address assignment is not required for the VMs.
 
@@ -96,7 +96,7 @@ Contoso will move VMs to AVS using the VMware HCX tool. The VMs will run in an A
 - Contoso next configures the HCX components to connect their on-premises vSphere environment to the AVS Private Cloud.
 - The VMs are then replicated and moved to Azure using VMware HCX.
 
-    ![Migration process](/media/vmware-to-azure-migration-scenario/onpremises-vmwarehcx-azure.png)
+    ![Migration process](./media/contoso-migration-vmware-to-azure/onpremises-vmwarehcx-azure.png)
 
 > ![NOTE]
 >  NSX-T is not a requirement, most environments will have standard VDS-based networking
@@ -119,7 +119,7 @@ Contoso will provision the AVS service in the West US Azure region, where the AV
 
 >Note: Learn more about the [networking prerequisites](https://docs.microsoft.com//azure/vmware-cloudsimple/cloudsimple-network-checklist) for Azure VMware Solutions.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/create-cloudsimple.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/create-cloudsimple.png)
 
 Once the service is created and added to the list of services in Contoso's subscription, they will move on to create their AVS nodes.
 
@@ -133,7 +133,7 @@ Using the Azure portal, Contoso will provision nodes for their AVS deployment.  
 
 2. Also, provided are the name prefix, the Availability Zone in the data center along with the desired node type (size), and count they wish to deploy.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/create-cloudsimple-step1.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/create-cloudsimple-step1.png)
 
 >Note: Learn to create AVS nodes using a [tutorial](https://docs.microsoft.com//azure/vmware-cloudsimple/quickstart-create-cloudsimple-service#provision-nodes).
 
@@ -151,11 +151,11 @@ From the Azure portal, Contoso follows these steps:
 
 3. In the AVS portal, Contoso provides a name and selects the location for the AVS Private Cloud.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/create-privatecloud.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/create-privatecloud.png)
 
 4. Next, they select the node type, consistent with what was provisioned on Azure, along with the node count. At least three nodes are required to create an AVS Private Cloud.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/create-privatecloud-step1.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/create-privatecloud-step1.png)
 
 5. On the Advanced Options, they enter the CIDR range for vSphere/vSAN subnets. Contoso makes sure that the CIDR range doesn't overlap with any of their on-premises or other Azure subnets (virtual networks) or with the Gateway subnet.
 
@@ -179,7 +179,7 @@ The first step is to create a Point-to-Site connection which will allow the admi
 
 1. Contoso launches AVS portal and selects Network, VPN Gateway and then New VPN Gateway.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/new-vpn-gateway.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/new-vpn-gateway.png)
 
 2. Contoso then selects Point-to-Site VPN and enters a name for the Gateway, selecting the Azure region where the AVS Private Cloud is deployed. A client subnet will used to provide DHCP addresses to clients.
 
@@ -189,7 +189,7 @@ The first step is to create a Point-to-Site connection which will allow the admi
 
 5. Contoso selects Users and then clicks Download my VPN configuration.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/download-vpn-configuration.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/download-vpn-configuration.png)
 
 6. Using the downloaded configuration, the administrator starts an on-demand
 
@@ -206,15 +206,15 @@ Contoso's administrator next needs to create VLANs where the VMs will be deploye
 
 1. From the Azure VMware Solutions portal, the administrator will use the VLANS/Subnets menu to click Create VLAN/Subnet.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/create-vlan-subset.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/create-vlan-subset.png)
 
 2. Selecting the AVS Private Cloud for the new VLAN/subnet and then a VLAN ID from the list. Also, a Subnet name to identify the subnet along with a CIDR range and mask are entered making sure that the range doesn't overlap existing subnets. The VLAN will need to be assigned to an existing portgroup or create a new portgroup.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/create-vlan-subset-step1.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/create-vlan-subset-step1.png)
 
 3. With the VLANs/Subnets created the administrators can now connect to the NSX manager to further configure the VMware networking.  This is done by locating the FQDN on the Resources page in the portal.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/vsphere-management-network-private-cloud.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/vsphere-management-network-private-cloud.png)
 
 >Note: This is where distributed port groups or NSX-T logical switches can be configured. To learn more about how [VMware networking](https://docs.vmware.com/en/VMware-vSphere/6.5/vsphere-esxi-vcenter-server-65-networking-guide.pdf) can be configured.
 
@@ -240,7 +240,7 @@ Contoso completes the following steps to connect ExpressRoute:
 
 1. Using the portal, they create an ExpressRoute authorization.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/expressroute-authorization.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/expressroute-authorization.png)
 
 2. Contoso creates a [support ticket](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) with the VMware Solutions (AVS) team providing the requested information and authorization key for the connection to be created.
 
@@ -259,7 +259,7 @@ To move VMware VMs to Azure using HCX, Contoso will need to follow these high-le
 
 In order to use HCX for migrations administrators [must install the HCX plug-in](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html) on both the Source and Target data center vSphere.  In public cloud deployments, HCX is installed and configured by the public cloud provider.
 
-![Migration process](/media/vmware-to-azure-migration-scenario/hcx-manager.png)
+![Migration process](./media/contoso-migration-vmware-to-azure/hcx-manager.png)
 
 > Note: Learn more about [HCX Installation Workflow for HCX Public Clouds](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-FDE5473E-6B71-4A71-85B6-8C9BA2B73686.html).
 
