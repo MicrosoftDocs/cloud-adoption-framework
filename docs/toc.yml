@@ -104,6 +104,8 @@ items:
         href: strategy/global-markets.md
       - name: Define security strategy
         href: strategy/define-security-strategy.md
+      - name: Define monitoring strategy
+        href: strategy/monitoring-strategy.md
     - name: Skills relevant to strategy
       href: strategy/suggested-skills.md
 
