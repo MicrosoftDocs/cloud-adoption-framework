@@ -1,6 +1,6 @@
 ---
 title: Design guidelines
-description: Design guidelines
+description: Design guidelines.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

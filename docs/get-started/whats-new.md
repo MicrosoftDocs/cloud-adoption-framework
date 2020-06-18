@@ -135,8 +135,8 @@ In response to feedback about continuity in the migration approach through multi
 |---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | [What&nbsp;is&nbsp;a&nbsp;landing&nbsp;zone?](../ready/landing-zone/index.md)                 | **New article:** Defines the term landing zone.                                                      |
 | First landing zone         | **New article:** Expands on the comparison of various landing zones.                                                     |
-| [CAF Migration landing zone](../ready/landing-zone/migrate-landing-zone.md) | Separated the definition of the Cloud Adoption Framework blueprint from the selection of the first landing zone.         |
-| [Terraform landing zone](../ready/landing-zone/terraform-landing-zone.md) | Moved to the new "landing zone" section of the Ready methodology, to elevate Terraform in the landing zone conversation. |
+| [CAF Migration landing zone](../ready/landing-zone/migrate-landing-zone.md) | Separated the blueprint definition from the selection of the first landing zone.         |
+| [CAF Terraform modules](../ready/landing-zone/terraform-landing-zone.md) | Moved to the new "landing zone" section of the Ready methodology, to elevate Terraform in the landing zone conversation. |
 
 ### Migration updates
 

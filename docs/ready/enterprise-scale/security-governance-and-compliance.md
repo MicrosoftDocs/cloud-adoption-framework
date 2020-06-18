@@ -1,6 +1,6 @@
 ---
 title: Security governance and compliance
-description: Security governance and compliance
+description: Security governance and compliance.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

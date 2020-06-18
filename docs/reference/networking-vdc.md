@@ -184,11 +184,11 @@ Each role group should have a unique prefix on their names. This prefix makes it
 
 Many organizations use a variation of the following groups to provide a major breakdown of roles:
 
-- The central IT group, **Corp,** has the ownership rights to control infrastructure components. Examples are networking and security. The group needs to have the role of contributor on the subscription, control of the hub, and network contributor rights in the spokes. Large organizations frequently split up these management responsibilities between multiple teams. Examples are a network operations **CorpNetOps** group with exclusive focus on networking and a security operations **CorpSecOps** group responsible for the firewall and security policy. In this specific case, two different groups need to be created for assignment of these custom roles.
+- The central IT team, **Corp,** has the ownership rights to control infrastructure components. Examples are networking and security. The group needs to have the role of contributor on the subscription, control of the hub, and network contributor rights in the spokes. Large organizations frequently split up these management responsibilities between multiple teams. Examples are a network operations **CorpNetOps** group with exclusive focus on networking and a security operations **CorpSecOps** group responsible for the firewall and security policy. In this specific case, two different groups need to be created for assignment of these custom roles.
 - The dev-test group, **AppDevOps,** has the responsibility to deploy app or service workloads. This group takes the role of virtual machine contributor for IaaS deployments or one or more PaaS contributor's roles. See [Built-in roles for Azure resources][Roles]. Optionally, the dev/test team might need visibility on security policies (network security groups) and routing policies (user-defined routes) inside the hub or a specific spoke. In addition to the role of contributor for workloads, this group would also need the role of network reader.
 - The operation and maintenance group, **CorpInfraOps** or **AppInfraOps,** has the responsibility of managing workloads in production. This group needs to be a subscription contributor on workloads in any production subscriptions. Some organizations might also evaluate if they need an additional escalation support team group with the role of subscription contributor in production and the central hub subscription. The additional group fixes potential configuration issues in the production environment.
 
-The VDC is designed so that groups created for the central IT group, managing the hub, have corresponding groups at the workload level. In addition to managing hub resources only, the central IT group can control external access and top-level permissions on the subscription. Workload groups can also control resources and permissions of their virtual network independently from central IT.
+The VDC is designed so that groups created for the central IT team, managing the hub, have corresponding groups at the workload level. In addition to managing hub resources only, the central IT team can control external access and top-level permissions on the subscription. Workload groups can also control resources and permissions of their virtual network independently from the central IT team.
 
 The virtual datacenter is partitioned to securely host multiple projects across different lines of business. All projects require different isolated environments (Dev, UAT, and production). Separate Azure subscriptions for each of these environments can provide natural isolation.
 
@@ -200,7 +200,7 @@ Typically in IT, an environment (or tier) is a system in which multiple applicat
 
 A common architecture for these types of multitier environments consists of DevOps for development and testing, UAT for staging, and production environments. Organizations can use single or multiple Azure AD tenants to define access and rights to these environments. The previous diagram shows a case where two different Azure AD tenants are used: one for DevOps and UAT, and the other exclusively for production.
 
-The presence of different Azure AD tenants enforces the separation between environments. The same group of users, such as the central IT, need to authenticate by using a different URI to access a different Azure AD tenant to modify the roles or permissions of either the DevOps or production environments of a project. The presence of different user authentications to access different environments reduces possible outages and other issues caused by human errors.
+The presence of different Azure AD tenants enforces the separation between environments. The same group of users, such as the central IT team, need to authenticate by using a different URI to access a different Azure AD tenant to modify the roles or permissions of either the DevOps or production environments of a project. The presence of different user authentications to access different environments reduces possible outages and other issues caused by human errors.
 
 #### Component type: Infrastructure
 
@@ -208,7 +208,7 @@ This component type is where most of the supporting infrastructure resides. It's
 
 ![6][6]
 
-Infrastructure components provide an interconnection for the different components of a VDC implementation, and are present in both the hub and the spokes. The responsibility for managing and maintaining the infrastructure components is typically assigned to the central IT or security team.
+Infrastructure components provide an interconnection for the different components of a VDC implementation, and are present in both the hub and the spokes. The responsibility for managing and maintaining the infrastructure components is typically assigned to the central IT team or security team.
 
 One of the primary tasks of the IT infrastructure team is to guarantee the consistency of IP address schemas across the enterprise. The private IP address space assigned to a VDC implementation must be consistent and NOT overlapping with private IP addresses assigned on your on-premises networks.
 
@@ -244,7 +244,7 @@ Perimeter network components include:
 - [Azure Firewall][AzFW] and [Azure Firewall Manager][AzFWMgr]
 - [Standard DDoS Protection][DDoS]
 
-Usually, the central IT and security teams have responsibility for requirement definition and operation of the perimeter networks.
+Usually, the central IT team and security teams have responsibility for requirement definition and operation of the perimeter networks.
 
 ![7][7]
 

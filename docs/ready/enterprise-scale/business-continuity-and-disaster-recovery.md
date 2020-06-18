@@ -1,6 +1,6 @@
 ---
 title: Business continuity and disaster recovery
-description: Business continuity and disaster recovery
+description: Business continuity and disaster recovery.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

@@ -48,7 +48,7 @@ To avoid common migration blockers, create a clear and concise business strategy
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 2: Align partner support
 
@@ -66,7 +66,7 @@ Partners, Microsoft services, or various Microsoft programs are available to sup
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 3: Gather data and analyze assets and workloads
 
@@ -158,7 +158,7 @@ All migrated assets are deployed within a landing zone. Initially, the landing z
 **Deliverables:**
 
 - Deploy a first landing zone for initial, low-risk migrations.
-- Develop a plan to refactor with the cloud center of excellence or Central IT.
+- Develop a plan to refactor with the cloud center of excellence or the central IT team.
 - Timeline risks:
   - Governance, operations, and security requirements for the first 10 workloads can slow this process.
   - Actual refactoring of the first landing zone and subsequent landing zones takes longer, but it should happen in parallel with migration efforts.
@@ -168,7 +168,7 @@ All migrated assets are deployed within a landing zone. Initially, the landing z
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud platform team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 8: Migrate your first 10 workloads
 
@@ -194,7 +194,7 @@ Continuous improvement of the adoption team's ability to migrate workloads.
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
+| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team |
 
 ## Step 9: Hand off production workloads to cloud governance
 
@@ -214,7 +214,7 @@ Governance is a key factor to the long-term success of any migration effort. Spe
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team |
 
 ## Step 10: Hand off production workloads to cloud operations
 
@@ -239,7 +239,7 @@ Operations management is another requirement to reach migration success. Migrati
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
+| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team |
 
 ## Value statement
 
