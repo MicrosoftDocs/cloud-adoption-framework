@@ -44,7 +44,7 @@ Azure provides a many built-in role definitions, with three core roles for provi
 
 Beginning from these core access levels, additional built-in roles provide more detailed controls for accessing specific resource types or Azure features. For example, you can manage access to virtual machines by using the following built-in roles:
 
-- The [virtual machine administrator login](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#virtual-machine-administrator-login) role can view virtual machines in the portal and sign in as _administrator_.
+- The [virtual machine administrator login](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#virtual-machine-administrator-login) role can view virtual machines in the portal and sign in as `administrator`.
 - The [virtual machine Contributor](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) role can manage virtual machines, but it can't access them or the virtual network or storage account they're connected to.
 - The [virtual machine user login](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#virtual-machine-user-login) role can view virtual machines in the portal and sign in as a regular user.
 

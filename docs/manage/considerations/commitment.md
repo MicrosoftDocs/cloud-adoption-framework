@@ -81,7 +81,7 @@ Before you run the numbers, it's important to look at the soft-cost factors. Sof
 A few examples of soft-cost factors would include:
 
 - Daily workload usage by the board or CEO.
-- Workload usage by a top _x percent_ of customers that leads to a greater revenue impact elsewhere.
+- Workload usage by the top _x%_ of customers that leads to a greater revenue impact elsewhere.
 - Impact on employee satisfaction.
 
 The next data point that's required to make a commitment is a list of soft-cost factors. These factors don't need to be documented at this stage, but business stakeholders should be aware of the importance of these factors and their exclusion from the following calculations.

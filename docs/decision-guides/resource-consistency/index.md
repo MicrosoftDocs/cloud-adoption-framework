@@ -32,7 +32,7 @@ Resource groups act as containers for resources with a common lifecycle as well 
 1. Are the contents of the resource group managed, updated, and monitored together and done so by the same people or teams?
 1. Are the contents of the resource group retired together?
 
-If you answered _no_ to any of the above points, the resource in question should be placed elsewhere, in another resource group.
+If you answered **no** to any of the above points, the resource in question should be placed elsewhere, in another resource group.
 
 > [!IMPORTANT]
 > Resource groups are also region specific; however, it is common for resources to be in different regions within the same resource group because they're managed together as described above. For more information about region selection, see [Multiple regions](../../migrate/azure-best-practices/multiple-regions.md).

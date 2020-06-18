@@ -19,7 +19,7 @@ In the cloud, the accounting and provisioning models eliminate the time delays t
 
 ## Should assets be optimized during or after the migration?
 
-When should an asset be optimized&mdash;during or after the migration? The simple answer is _both_. However, that's not entirely accurate. To explain, take a look at two basic scenarios for optimizing resource sizing:
+Should an asset be optimized during or after the migration? The simple answer is **both**. However, that's not entirely accurate. To explain, take a look at two basic scenarios for optimizing resource sizing:
 
 - **Planned resizing.** Often, an asset is clearly oversized and underutilized and should be resized during deployment. Determining if an asset has been successfully resized in this case requires user acceptance testing after migration. If a power user does not experience performance or functionality losses during testing, you can conclude the asset has been successfully sized.
 - **Optimization.** In cases where the need for optimization is unclear, IT teams should use a data-driven approach to resource size management. Using benchmarks of the asset's performance, an IT team can make educated decisions regarding the most appropriate size, services, scale, and architecture of a solution. They can then resize and test performance theories post-migration.

@@ -58,7 +58,7 @@ The following table illustrates a few common use scenario requirements and the r
 
 ## Regional availability
 
-Azure lets you deliver services at the scale you need to reach your customers and partners, _wherever they are_. A key factor in planning your cloud deployment is to determine what Azure region will host your workload resources.
+Azure lets you deliver services at the scale you need to reach your customers and partners, **wherever they are**. A key factor in planning your cloud deployment is to determine what Azure region will host your workload resources.
 
 Most database services are generally available in most Azure regions. But there are a few regions, mostly targeting governmental customers, that support only a subset of these products. Before you decide which regions you will deploy your database resources to, we recommend that you refer to the [regions page](https://azure.microsoft.com/global-infrastructure/services/?regions=all&products=data-factory,sql-server-stretch-database,redis-cache,database-migration,sql-data-warehouse,postgresql,mariadb,cosmos-db,mysql,sql-database) to check the latest status of regional availability.
 
