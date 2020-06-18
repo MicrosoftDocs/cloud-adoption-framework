@@ -47,7 +47,7 @@ Azure App Service is a great example of this approach. During early iterations, 
 Mixed reality solutions represent the next level of maturity for ambient experiences. This approach augments or replicates the customer's surroundings; it creates an extension of reality for the customer to operate within.
 
 > [!IMPORTANT]
-> If a virtual reality (VR) device is required and *is not already part of a customer's immediate surrounding or natural behaviors*, augmented or virtual reality is more of an alternative experience and less of an ambient experience.
+> If a virtual reality (VR) device is required and it's not already part of a customer's immediate surroundings or natural behaviors, augmented or virtual reality is more of an alternative experience and less of an ambient experience.
 
 Mixed reality experiences are increasingly common among remote workforces. Their use is growing even faster in industries that require collaboration or specialty skills that aren't readily available in the local market. Situations that require centralized implementation support of a complex product for a remote labor force are particularly fertile ground for augmented reality. In these scenarios, the central support team and remote employees might use augmented reality to work on, troubleshoot, and install the product.
 

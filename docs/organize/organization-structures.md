@@ -46,7 +46,7 @@ The nucleus of all cloud adoption efforts is the cloud adoption team. This team 
 For small-scale or early-stage adoption efforts, this team might be as small as one person. In larger-scale or late-stage efforts, it's common to have several cloud adoption teams, each with around six engineers. Regardless of size or tasks, the consistent aspect of any cloud adoption team is that it provides the means to onboarding solutions into the cloud. For some organizations, this may be a sufficient organizational structure. The [cloud adoption team](./cloud-adoption.md) article provides more insight into the structure, composition, and function of the cloud adoption team.
 
 > [!WARNING]
-> Operating with _only_ a cloud adoption team (or multiple cloud adoption teams) is considered an _antipattern_ and should be avoided. At a minimum, consider the [MVP best practice](#best-practice-minimum-viable-product-mvp).
+> Operating with **only** a cloud adoption team (or multiple cloud adoption teams) is considered an antipattern and should be avoided. At a minimum, consider the [MVP best practice](#best-practice-minimum-viable-product-mvp).
 
 ## Best practice: Minimum viable product (MVP)
 

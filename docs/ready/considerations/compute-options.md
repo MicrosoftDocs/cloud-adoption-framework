@@ -57,7 +57,7 @@ The following table illustrates a few common use scenarios and the recommended c
 
 ## Regional availability
 
-Azure lets you deliver services at the scale you need to reach your customers and partners _wherever they are_. A key factor in planning your cloud deployment is to determine which Azure region will host your workload resources.
+Azure lets you deliver services at the scale you need to reach your customers and partners **wherever they are**. A key factor in planning your cloud deployment is to determine which Azure region will host your workload resources.
 
 Some compute options, such as Azure App Service, are generally available in most Azure regions. But some compute services are supported only in certain regions. Some virtual machine types and their associated storage types have limited regional availability. Before you decide which regions you will deploy your compute resources to, we recommend that you refer to the [regions page](https://azure.microsoft.com/global-infrastructure/services/?regions=all&products=azure-vmware-cloudsimple,cloud-services,batch,container-instances,app-service,service-fabric,functions,kubernetes-service,virtual-machine-scale-sets,virtual-machines) to check the latest status of regional availability.
 

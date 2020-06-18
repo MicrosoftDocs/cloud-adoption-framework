@@ -21,7 +21,7 @@ Fortunately, the process of developing a cloud adoption strategy and cloud adopt
 
 - **[Criticality](./criticality.md):** Mapping workloads to business processes. Ranking criticality to focus investments.
 - **[Impact](./impact.md):** Understanding the impact of potential outages to aid in evaluating return on investment for cloud management.
-- **[Commitment](./commitment.md):** Developing true partnerships, by creating and documenting agreements _with the business_.
+- **[Commitment](./commitment.md):** Developing true partnerships, by creating and documenting agreements with the business.
 
 > [!NOTE]
 > Underlying these terms are classic IT terms such as SLA, RTO, and RPO. Mapping specific business and IT terms is covered in more detail in the [Commitment](./commitment.md) article.
