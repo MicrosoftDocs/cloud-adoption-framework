@@ -38,7 +38,7 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 2: Evaluate the business justification
 
@@ -135,7 +135,7 @@ These links help the adoption team understand the approach taken by the cloud go
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
+| <li> Cloud governance team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team |
 
 ## Step 6: Define operational needs and business commitments
 
@@ -157,7 +157,7 @@ Define the plan for long-term operational responsibilities for the planned innov
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud operations team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
+| <li> Cloud operations team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team |
 
 ## Step 7: Deploy an aligned landing zone
 
@@ -166,7 +166,7 @@ All assets hosted in the cloud live within a landing zone. That landing zone mig
 **Deliverables:**
 
 - Deploy a first landing zone for initial, low-risk experimentation during early innovation.
-- Develop a plan to refactor with the cloud center of excellence or Central IT to ensure governance, security, and operational alignment.
+- Develop a plan to refactor with the cloud center of excellence or the Central IT team to ensure governance, security, and operational alignment.
 - Timeline risks:
   - Governance, operations, and security requirements for the first 10 workloads can slow this process. Actual refactoring of the first landing zone and subsequent landing zones takes longer, but it should happen in parallel with migration efforts.
 
@@ -180,7 +180,7 @@ All assets hosted in the cloud live within a landing zone. That landing zone mig
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud platform team <li> Cloud adoption team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud platform team <li> Cloud adoption team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 8: Innovate in the cloud
 
@@ -209,7 +209,7 @@ The Innovate methodology provides guidance on the tools and product management a
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud center of excellence <li> Cloud center of excellence or Central IT |
+| <li> Cloud adoption team | <li> Cloud center of excellence <li> Cloud center of excellence or central IT team |
 
 ## Value statement
 

@@ -1,6 +1,6 @@
 ---
 title: Template
-description: Template
+description: Template.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/30/2020

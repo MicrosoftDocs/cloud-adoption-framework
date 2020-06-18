@@ -53,7 +53,7 @@ Not all workloads are created equal. In any environment, there are workloads tha
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
+| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 2: Consistently apply the management baseline
 
@@ -78,7 +78,7 @@ Enterprise reliability requires consistent application of the management baselin
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud center of excellence or central IT team |
 
 ## Step 3: Define your strategy
 
@@ -100,7 +100,7 @@ Strategic decisions directly affect reliability. They ripple through the adoptio
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT team |
 
 ## Step 4: Develop a cloud adoption plan
 
@@ -131,7 +131,7 @@ When you align the adoption plan with the digital estate analysis, you can plan 
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT team |
 
 ## Step 5: Implement landing zone best practices
 
@@ -151,7 +151,7 @@ The Ready methodology of the Cloud Adoption Framework for Azure focuses heavily 
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud operations team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
+| <li> Cloud adoption team | <li> Cloud operations team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 6: Complete waves of adoption effort and change
 
@@ -174,7 +174,7 @@ Long-term operations can be affected by the decisions made during migration and 
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
+| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Value statement
 
