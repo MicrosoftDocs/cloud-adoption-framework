@@ -193,11 +193,13 @@ To move VMware VMs to Azure using HCX, Contoso will need to follow these high-le
 
 [VMware HCX](https://cloud.vmware.com/vmware-hcx) is an add-on to the VMware Cloud (VMC) and Software-Defined Data Center (SDDC). After enabling the HCX add-on from the VMC console, the HCX Cloud components are deployed and the HCX plug-in is available in the vSphere Client.
 
+- Contoso is deploying the HCX using an OVA provided by VMware.
+
 ![HCX OVA](./media/contoso-migration-vmware-to-azure/configure-template.png)
 
 In order to use HCX for migrations administrators [must install the HCX plug-in](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html) on both the Source and Target data center vSphere.  In public cloud deployments, HCX is installed and configured by the public cloud provider.
 
-Contoso has selected to enable migration in HCX among other options.
+- During the configuration of HCX, Contoso has selected to enable migration among other options including Disaster Recovery.
 
 ![HCX Configure](./media/contoso-migration-vmware-to-azure/hcx-manager.png)
 
@@ -207,7 +209,7 @@ Contoso has selected to enable migration in HCX among other options.
 
 When both the on-premises data center (source), and AVS Private Cloud (destination) configured with VMware Cloud and HCX, Contoso can begin migrating VMs.  Virtual Machines can be moved to and from VMware HCX-enabled data centers using multiple migration technologies.
 
-Contoso's HCX application is online and the status is green. They are now ready to migrate and protect AVS VMs using HCX
+- Contoso's HCX application is online and the status is green. They are now ready to migrate and protect AVS VMs using HCX
 
 ![HCX status](./media/contoso-migration-vmware-to-azure/appliance-status.png)
 
