@@ -90,14 +90,13 @@ Cons | Contoso will need to continue supporting the app as VMware VMs rather tha
 
 Contoso will move VMs to AVS using the VMware HCX tool. The VMs will run in an AVS Private Cloud.  [VMware HCX migration types](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html) include Bulk Migration, Cold Migration, and even while a workload is running through live migration using vMotion or Replication Assisted vMotion (RAV).
 
-> [!div class="checklist"]
-> * Contoso plans their networking in Azure and ExpressRoute.
-> * Contoso creates the AVS Private Cloud using the Azure portal.
-> * The network is then configured including the ExpressRoute circuits.
-> * Contoso next configures the HCX components to connects their on-premises vSphere environment to the AVS Private Cloud.
-> * The VMs are then replicated and moved to Azure using VMware HCX.
+- Contoso plans their networking in Azure and ExpressRoute.
+- Contoso creates the AVS Private Cloud using the Azure portal.
+- The network is then configured including the ExpressRoute circuits.
+- Contoso next configures the HCX components to connects their on-premises vSphere environment to the AVS Private Cloud.
+- The VMs are then replicated and moved to Azure using VMware HCX.
 
-    ![Migration process](./media/contoso-migration-vmware-to-azure/onpremises-vmwarehcx-azure.png)
+ ![Migration process](./media/contoso-migration-vmware-to-azure/onpremises-vmwarehcx-azure.png)
 
 ## Scenarios steps
 
