@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Prerequisites for migration
 
-Prior to beginning any migrations, your migration target _environment_ must be prepared for the coming changes. In this case, environment refers to the technical foundation in the cloud. Environment also means the business environment and mindset driving the migration. Likewise, the environment includes the culture of the teams executing the changes and those receiving the output. Lack of preparation for these changes is the most common reason for failure of migrations. This series of articles walks you through suggested prerequisites to prepare the environment.
+Prior to beginning any migrations, your migration target environment must be prepared for the coming changes. In this case, _environment_ refers to the technical foundation in the cloud. Environment also means the business environment and mindset driving the migration. Likewise, the environment includes the culture of the teams executing the changes and those receiving the output. Lack of preparation for these changes is the most common reason for failure of migrations. This series of articles walks you through suggested prerequisites to prepare the environment.
 
 ## Objective
 

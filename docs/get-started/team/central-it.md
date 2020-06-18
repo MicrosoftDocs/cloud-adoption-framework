@@ -18,7 +18,7 @@ When cloud adoption expands from one team to multiple teams relatively quickly, 
 
 ## Prerequisites
 
-- [Break down silos and fiefdoms](../../organize/fiefdoms-silos.md): Learn about two common organizational _antipatterns_ and ways to guide the teams to productive collaboration.
+- [Break down silos and fiefdoms](../../organize/fiefdoms-silos.md): Learn about two common organizational antipatterns and ways to guide the teams to productive collaboration.
 - [Microsoft Learn](https://docs.microsoft.com/learn): From basic overviews to deep technical training, IT staff learn how to apply Azure to their business.
 - [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): A free online resource to help map your cloud career path. Learn from industry experts about your cloud role and the skills you need. Follow a learning curriculum at your own pace to build the skills that you need to stay relevant.
 - We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).

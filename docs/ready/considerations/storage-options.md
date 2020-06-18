@@ -134,7 +134,7 @@ Azure disk encryption allows you to encrypt managed disks that are attached to I
 
 ## Regional availability
 
-You can use Azure to deliver services at the scale that you need to reach your customers and partners _wherever they are_. The [managed disks](https://azure.microsoft.com/global-infrastructure/services/?products=managed-disks) and [Azure Storage](https://azure.microsoft.com/global-infrastructure/services/?products=storage) regional availability pages show the regions where these services are available. Checking the regional availability of a service beforehand can help you make the right decision for your workload and customer needs.
+You can use Azure to deliver services at the scale that you need to reach your customers and partners **wherever they are**. The [managed disks](https://azure.microsoft.com/global-infrastructure/services/?products=managed-disks) and [Azure Storage](https://azure.microsoft.com/global-infrastructure/services/?products=storage) regional availability pages show the regions where these services are available. Checking the regional availability of a service beforehand can help you make the right decision for your workload and customer needs.
 
 Managed disks are available in all Azure regions that have premium SSD and standard SSD offerings. Although ultra SSD currently is in public preview, it's offered in only one availability zone, the East US 2 region. Verify the regional availability when you plan mission-critical, top-tier workloads that require ultra SSD.
 
