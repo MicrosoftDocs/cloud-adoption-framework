@@ -80,7 +80,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 **Consideration** | **Details**
 --- | ---
-Pros | Bare metal VMware infrastructure with high performance. Infrastructure that is fully dedicated to Contoso and is physically isolated from infrastructure of other customers.<br/><br/>Since Contoso is using a rehost using VMware there is, no special configuration or migration complexity.<br/><br/>Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit and [Extended Security Updates](https://www.microsoft.com/cloud-platform/windows-server-2008) for legacy Windows and SQL platforms.<br/><br/>Contoso will retain full control of the app VMs in Azure.<br/><br/>
+Pros | Bare metal VMware infrastructure with high performance. Infrastructure that is fully dedicated to Contoso and is physically isolated from infrastructure of other customers.<br/><br/>Since Contoso is using a rehost using VMware there is, no special configuration or migration complexity.<br/><br/>Contoso can take advantage of their investment in Software Assurance, using the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) and [Extended Security Updates](https://www.microsoft.com/cloud-platform/windows-server-2008) for legacy Windows and SQL platforms.<br/><br/>Contoso will retain full control of the app VMs in Azure.<br/><br/>
 Cons | Contoso will need to continue supporting the app as VMware VMs rather than moving them to a managed service such as Azure App Service and Azure SQL Database.<br/><br/>Azure VMware Solutions are provisioned and priced based on a minimum of three large nodes rather than individual VMs in Azure IaaS. They will need to plan their capacity needs as they don on-premises today rather than benefits from the on-demand nature of other services in Azure.
 
 > ![NOTE]
@@ -90,11 +90,12 @@ Cons | Contoso will need to continue supporting the app as VMware VMs rather tha
 
 Contoso will move VMs to AVS using the VMware HCX tool. The VMs will run in an AVS Private Cloud.  [VMware HCX migration types](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-8A31731C-AA28-4714-9C23-D9E924DBB666.html) include Bulk Migration, Cold Migration, and even while a workload is running through live migration using vMotion or Replication Assisted vMotion (RAV).
 
-- Contoso plans their networking in Azure and ExpressRoute.
-- Contoso creates the AVS Private Cloud using the Azure portal.
-- The network is then configured including the ExpressRoute circuits.
-- Contoso next configures the HCX components to connects their on-premises vSphere environment to the AVS Private Cloud.
-- The VMs are then replicated and moved to Azure using VMware HCX.
+> [!div class="checklist"]
+> * Contoso plans their networking in Azure and ExpressRoute.
+> * Contoso creates the AVS Private Cloud using the Azure portal.
+> * The network is then configured including the ExpressRoute circuits.
+> * Contoso next configures the HCX components to connects their on-premises vSphere environment to the AVS Private Cloud.
+> * The VMs are then replicated and moved to Azure using VMware HCX.
 
     ![Migration process](./media/contoso-migration-vmware-to-azure/onpremises-vmwarehcx-azure.png)
 
@@ -123,7 +124,12 @@ AVS private clouds require a minimum of a /22 CIDR network address block for sub
 
 ### Step 2: Create an AVS private Cloud
 
-With their IP Address planning completed, Contoso will next focus on provisioning the AVS service in the West US Azure region. AVS gives Contoso the ability to deploy a vSphere cluster in Azure. An AVS private cloud is an isolated VMware stack that supports ESXi hosts, vCenter, vSAN, and NSX. The stack runs on dedicated and isolated bare metal hardware nodes in an Azure region. The minimum initial deployment for an AVS private cloud is three hosts. Additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster. 
+With their network and IP address planning completed, Contoso will next focus on provisioning the AVS service in the West US Azure region. AVS gives Contoso the ability to deploy a vSphere cluster in Azure. 
+
+An AVS private cloud is an isolated VMware stack that supports ESXi hosts, vCenter, vSAN, and NSX. The stack runs on dedicated and isolated bare metal hardware nodes in an Azure region. The minimum initial deployment for an AVS private cloud is three hosts. Additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster.
+
+>![NOTE]
+> Learn more about AVS [private cloud concepts](https://docs.microsoft.com/azure/azure-vmware/concepts-private-clouds-clusters).
 
 AVS Private Clouds are managed through the AVS portal. They have their own vCenter server in its own management domain. 
 
@@ -149,36 +155,62 @@ az provider register -n Microsoft.AVS --subscription <your subscription ID>
 
 ### Step 3: Configure Networking
 
-An Azure VMware Solution (AVS) private cloud requires a virtual network. Because AVS won't support your on-premises vCenter during preview, additional steps for integration with your on-premises environment are needed. Setting up an ExpressRoute circuit and a Virtual Network Gateway are also required and will be addressed in this tutorial.
-
->Important: IP addresses in the vSphere/vSAN CIDR range are reserved for use by the AVS Private Cloud infrastructure. The IP addresses in this range on any VMs. Learn more about [VLANS and subnets for AVS](https://docs.microsoft.com//azure/vmware-cloudsimple/cloudsimple-vlans-subnets).
-
-After reviewing the final information, the AVS Private Cloud provisioning process starts. It can take up to two hours for the AVS Private Cloud to be provisioned.
+An Azure VMware Solution (AVS) private cloud requires a virtual network. Because AVS won't support your on-premises vCenter during preview, additional steps for integration with your on-premises environment are needed. Setting up an ExpressRoute circuit and a Virtual Network Gateway will connect their virtual networks to the AVS private cloud.
 
 >![NOTE]
 > Learn about configuring networking for AVS using a [tutorial](https://docs.microsoft.com/azure/azure-vmware/tutorial-configure-networking).
 
+- Contoso first creates a virtual network with an GatewaySubnet.
 
-## Step 4: Migrate using VMware HCX
+> [!IMPORTANT]
+> Contoso must use an address space that **does not** overlap with the address space used when they created the private cloud.
+
+- Next, they create the ExpressRoute VPN Gateway making sure to select the correct SKU.
+
+![ExpressRoute VPN Gateway](./media/contoso-migration-vmware-to-azure/create-virtual-network-gateway.png)
+
+- They need the authorization key to connect ExpressRoute to the virtual network. This is found on the Connectivity screen of the AVS private cloud resource in the Azure portal.
+
+![ER Auth Key](./media/contoso-migration-vmware-to-azure/request-auth-key.png)
+
+- Finally, they connect the ExpressRoute to the VPN Gateway connecting the AVS private cloud to their virtual network. This is accomplished by creating an Connection in Azure.
+
+![Connect ER to Vnet](./media/contoso-migration-vmware-to-azure/add-connection.png)
+
+>![NOTE]
+> Learn how to access the private cloud and connect to vSphere using this [tutorial](https://docs.microsoft.com/azure/azure-vmware/tutorial-access-private-cloud).
+
+### Step 4: Migrate using VMware HCX
 
 To move VMware VMs to Azure using HCX, Contoso will need to follow these high-level steps:
 
-1. Install and configure VMware HCX
-2. Perform migrations to Azure using HCX
+- Install and configure VMware HCX
+- Perform migrations to Azure using HCX
 
-### Install and configure VMware HCX for Public Cloud
+>![NOTE]
+> Learn how to install HCX for AVS using this [tutorial](https://docs.microsoft.com/azure/azure-vmware/hybrid-cloud-extension-installation).
+
+#### Install and configure VMware HCX for Public Cloud
 
 [VMware HCX](https://cloud.vmware.com/vmware-hcx) is an add-on to the VMware Cloud (VMC) and Software-Defined Data Center (SDDC). After enabling the HCX add-on from the VMC console, the HCX Cloud components are deployed and the HCX plug-in is available in the vSphere Client.
 
+![HCX OVA](./media/contoso-migration-vmware-to-azure/configure-template.png)
+
 In order to use HCX for migrations administrators [must install the HCX plug-in](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html) on both the Source and Target data center vSphere.  In public cloud deployments, HCX is installed and configured by the public cloud provider.
 
-![Migration process](./media/contoso-migration-vmware-to-azure/hcx-manager.png)
+Contoso has selected to enable migration in HCX among other options.
+
+![HCX Configure](./media/contoso-migration-vmware-to-azure/hcx-manager.png)
 
 > Note: Learn more about [HCX Installation Workflow for HCX Public Clouds](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-FDE5473E-6B71-4A71-85B6-8C9BA2B73686.html).
 
 #### Perform migrations to Azure using HCX
 
 When both the on-premises data center (source), and AVS Private Cloud (destination) configured with VMware Cloud and HCX, Contoso can begin migrating VMs.  Virtual Machines can be moved to and from VMware HCX-enabled data centers using multiple migration technologies.
+
+Contoso's HCX application is online and the status is green. They are now ready to migrate and protect AVS VMs using HCX
+
+![HCX status](./media/contoso-migration-vmware-to-azure/appliance-status.png)
 
 #### VMware HCX Bulk Migration
 
@@ -203,4 +235,5 @@ This migration method uses the VMware NFC protocol. It is automatically selected
 
 VMware HCX Replication Assisted vMotion (RAV) combines advantages from VMware HCX Bulk Migration (parallel operations, resiliency, and scheduling) with VMware HCX vMotion (zero downtime virtual machine state migration).
 
->Note: Learn more about [migrating VMs using HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html).
+> ![IMPORTANT] 
+> See [VMware HCX documentation](https://docs.vmware.com/en/VMware-HCX/index.html) and [Migrating Virtual Machines with VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html?hWord=N4IghgNiBcIBIGEAaACAtgSwOYCcwBcMB7AOxAF8g) in the VMware technical documentation.
