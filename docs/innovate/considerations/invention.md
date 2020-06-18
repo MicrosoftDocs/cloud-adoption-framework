@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Develop digital inventions
 
-As described in [Innovation in the digital economy](./index.md), innovation requires a balance of _invention_ and _adoption_. Customer feedback and partnership are required to drive adoption. The disciplines described in the next section define a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind. Each of the disciplines is briefly described, along with deeper links into each process.
+As described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption. Customer feedback and partnership are required to drive adoption. The disciplines described in the next section define a series of approaches to developing digital inventions while keeping adoption and customer empathy in mind. Each of the disciplines is briefly described, along with deeper links into each process.
 
 ![Cloud Adoption Framework Innovate methodology](../../_images/innovate/innovate-methodology.png)
 

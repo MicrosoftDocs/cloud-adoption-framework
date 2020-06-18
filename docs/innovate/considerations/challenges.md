@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Common blockers and challenges to innovation
 
-As described in [Innovation in the digital economy](./index.md), innovation requires a balance of invention and adoption. This article expands on the common challenges and blockers to innovation, as it aims to help you understand how this approach can add value during your innovation cycles. Formula for innovation: **Innovation = Invention + Adoption**
+As described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption. This article expands on the common challenges and blockers to innovation, as it aims to help you understand how this approach can add value during your innovation cycles. Formula for innovation: **Innovation = Invention + Adoption**
 
 ## Adoption challenges
 

@@ -19,7 +19,7 @@ Large or small, the companies that thrive in the digital economy as innovative l
 
 ## The build-measure-learn feedback loop
 
-As described in [Innovation in the digital economy](./index.md), innovation requires a balance of invention and adoption. Customer feedback and partnership drive adoption. By turning your customers into strong, loyal partners during innovation cycles, you can realize better products and gain quicker traction in the market.
+As described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption. Customer feedback and partnership drive adoption. By turning your customers into strong, loyal partners during innovation cycles, you can realize better products and gain quicker traction in the market.
 
 ![Diagram of the build-measure-learn feedback loop](../../_images/innovate/bml-feedback-loop.png)
 
