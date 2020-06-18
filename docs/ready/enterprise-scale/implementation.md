@@ -1,6 +1,6 @@
 ---
 title: Implement enterprise-scale landing zones in Azure
-description: Review options to implement the enterprise-scale architecture
+description: Review options to implement the enterprise-scale architecture.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

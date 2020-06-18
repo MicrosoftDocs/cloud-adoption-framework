@@ -39,7 +39,7 @@ This approach and architecture includes the following assumptions. If these assu
 - **Limited production scope:** This landing zones default configuration is more likely to meet your mission critical and sensitive data hosting needs.
 - **Advanced skills required:** Technical skill requirements are significantly higher for teams implementing this approach. Learn more about the technical skills requirements on the [enterprise-scale landing-zone overview](../enterprise-scale/index.md).
 
-If these assumptions align with your current adoption needs, then this implementation might be a good starting point for building your landing zone(s) and environments.
+If these assumptions align with your current adoption needs, then this implementation might be a good starting point for building your landing zones and environments.
 
 ## Decisions
 

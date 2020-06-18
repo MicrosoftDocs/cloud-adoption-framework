@@ -87,7 +87,7 @@ There are several more processes related to inventory and visibility. The preced
 
 When you're developing processes for operational monitoring, it's equally important to determine responsibilities for daily operation and regular support of each process.
 
-In a central IT organization, IT would provide the operational expertise. The business would be consultative in nature, when issues require remediation.
+In a centralized IT organization, IT provides the operational expertise. The business would be consultative in nature, when issues require remediation.
 
 In a cloud center of excellence organization, business operations would provide the expertise and hold responsibility for management of these processes. IT would focus on the automation and support of teams, as they operate the environment.
 

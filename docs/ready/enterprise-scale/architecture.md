@@ -1,6 +1,6 @@
 ---
 title: CAF enterprise-scale landing zone architecture
-description: CAF enterprise-scale landing zone architecture
+description: CAF enterprise-scale landing zone architecture.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -28,11 +28,11 @@ It is important to highlight that not all enterprises adopt Azure the same way, 
 
 - **Scope:** Within the CAF enterprise-scale landing zone, the scope of a landing zone grows considerably to support application migrations and green field development at an enterprise scale in Azure. This expansion allows for design that can scale across the customer's full IT portfolio, which looks well beyond a short-term cloud adoption plan.
 
-- **Refactoring:** The number of subscriptions required to support a full enterprise-scale IT portfolio can be large. At first, the Cloud Adoption Framework encourages a high-frequency of refactoring, but this should stabilize before the tenth production workload is deployed to the cloud. When working across an enterprise portfolio, ten applications can be deployed quickly and make refactoring impractical. Instead, it's recommended for Central IT or a cloud center of excellence to deliver a more complete landing zone during the first release.
+- **Refactoring:** The number of subscriptions required to support a full enterprise-scale IT portfolio can be large. At first, the Cloud Adoption Framework encourages a high-frequency of refactoring, but this should stabilize before the tenth production workload is deployed to the cloud. When working across an enterprise portfolio, ten applications can be deployed quickly and make refactoring impractical. Instead, a Central IT team or a cloud center of excellence should deliver a more complete landing zone during the first release.
 
 - **Goal:** Provide consistent landing zones based on an application archetype subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise. See the image below.
 
-- **Principal purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to mature the customer's landing zones faster. The CAF enterprise-scale landing zone broadens the principle purpose of the landing zone to focus on aspects of governance, compliance, security, and operational management. Each of these is addressed in the first release of the landing zone(s) and supporting shared services.
+- **Principal purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to mature the customer's landing zones faster. The CAF enterprise-scale landing zone broadens the principle purpose of the landing zone to focus on aspects of governance, compliance, security, and operational management. Each of these is addressed in the first release of the landing zones and supporting shared services.
 
 This is similar to how city utilities such as water, gas, and electricity are accessible before new homes are constructed. In this context, the network, identity and access management, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process before it begins.
 

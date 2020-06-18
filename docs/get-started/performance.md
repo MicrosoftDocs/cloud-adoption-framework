@@ -45,7 +45,7 @@ The operations management baseline, outlined in the Microsoft Cloud Adoption Fra
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
+| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 2: Consistent application of the management baseline
 
@@ -67,7 +67,7 @@ As the management baseline is improved, it's important to ensure that those impr
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud center of excellence or central IT team |
 
 ## Step 3: Define strategy
 
@@ -89,7 +89,7 @@ Strategic decisions directly affect performance, rippling through the adoption l
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT team |
 
 ## Step 4: Assess and plan for workload adoption
 
@@ -116,7 +116,7 @@ Understanding the plan also invites the cloud operations team into the developme
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT team |
 
 ## Step 5: Expand the landing zones
 
@@ -138,7 +138,7 @@ Consult the cloud operations team to help review the landing zone for operations
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud operations team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
+| <li> Cloud adoption team | <li> Cloud operations team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 6: Adoption
 
@@ -161,7 +161,7 @@ Long-term operations might be affected by the decisions that you make during mig
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
+| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud operations team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Value statement
 

@@ -1,6 +1,6 @@
 ---
 title: Management and monitoring
-description: Management and monitoring
+description: Management and monitoring.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -77,8 +77,7 @@ In the context of the enterprise-scale architecture, centralized logging is prim
 
 - Monitor in-guest virtual machine (VM) configuration drift using Azure Policy. Enabling [guest configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration) audit capabilities through policy helps app team workloads to immediately consume feature capabilities with little effort.
 
-- Use [update management in Azure Automation](https://docs.microsoft.com/azure/automation/automation-update-management) as a long-term patching mechanism for both Windows and Linux VMs.
- Enforcing update management configurations through policy ensures that all VMs are included in the patch management regimen, provides application teams with the ability to manage patch deployment for their VMs, and provides Central IT with visibility and enforcement capabilities across all VMs.
+- Use [update management in Azure Automation](https://docs.microsoft.com/azure/automation/automation-update-management) as a long-term patching mechanism for both Windows and Linux VMs. Enforcing update management configurations through policy ensures that all VMs are included in the patch management regimen, provides application teams with the ability to manage patch deployment for their VMs, and provides visibility and enforcement capabilities to the Central IT team across all VMs.
 
 - Use Azure Network Watcher to proactively monitor traffic flows via [Network Watcher NSG flow logs v2](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview). [Traffic Analytics](https://docs.microsoft.com/azure/network-watcher/traffic-analytics) analyzes NSG flow logs to gather deep insights about IP traffic within a virtual network and providing critical information for effective management and monitoring. Traffic Analytics provide information such as most communicating hosts and app protocols, most conversing host pairs, allowed or blocked traffic, inbound and outbound traffic, open internet ports, most blocking rules, traffic distribution per an Azure datacenter, virtual network, subnets, or rogue networks.
 

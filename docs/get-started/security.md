@@ -64,7 +64,7 @@ In addition to meeting any explicit regulatory compliance requirements, we recom
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud security team <br><br><br> | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Cloud security team <br><br><br> | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 During this initial step, governance teams should also start coordinating the creation of security baselines that can be monitored, managed, and enforced across environments. Additional guidance on building this is discussed later in step 4.
 
@@ -120,7 +120,7 @@ Successful programs incorporate these elements into their security strategy proc
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Security leadership team (chief information security officer (CISO) or equivalent) | <li> Cloud strategy team <li> Cloud security team <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Security leadership team (chief information security officer (CISO) or equivalent) | <li> Cloud strategy team <li> Cloud security team <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 **Strategy approval:**
 
@@ -183,7 +183,7 @@ This should not be a traditional, detailed plan of 3-5 years. The cloud and thre
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud security team | <li> Cloud strategy team <li> Cloud governance team <li> Any risk teams in your organization <li> Cloud center of excellence or central IT |
+| <li> Cloud security team | <li> Cloud strategy team <li> Cloud governance team <li> Any risk teams in your organization <li> Cloud center of excellence or central IT team |
 
 **Security plan approval:**
 
@@ -211,7 +211,7 @@ During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/
 
   Microsoft provides several native capabilities in Azure to enable this:
   - [Secure score](https://docs.microsoft.com/azure/security-center/secure-score-security-controls): Use a scored assessment of your Azure security posture to track security efforts and projects in your organization.
-  - [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview): Cloud architects and central IT groups can define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements.
+  - [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview): Cloud architects and centralized IT groups can define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements.
   - [Azure Policy](https://docs.microsoft.com/azure/governance/policy): This is the foundation of the visibility and control capabilities that the other services use. Azure Policy is integrated into [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager), so you can audit changes and enforce policies across any resource in Azure before, during, or after its creation.
 - [Improve landing zone operations](../ready/considerations/landing-zone-security.md): Use best practices for improving security within a landing zone.
 
@@ -220,7 +220,7 @@ During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud security team | <li> Cloud adoption team <li> Cloud platform team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT |
+| <li> Cloud security team | <li> Cloud adoption team <li> Cloud platform team <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 5: Secure existing cloud workloads
 
@@ -247,7 +247,7 @@ For more information, see [Identify and classify business-critical applications]
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud adoption team <li> Cloud strategy team <li> Cloud security team <li> Cloud governance team <li> Cloud center of excellence or central IT |
+| <li> Cloud adoption team | <li> Cloud adoption team <li> Cloud strategy team <li> Cloud security team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 6: Govern to manage and improve security posture
 
@@ -271,7 +271,7 @@ Consistent application of security requirements comes from sound governance disc
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud security team <li> Cloud center of excellence or central IT |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud security team <li> Cloud center of excellence or central IT team |
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
 title: FAQ
-description: FAQ
+description: FAQ.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
