@@ -46,14 +46,14 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 **Data sources** | All databases will be moved to Azure with no exceptions.  Based on the database and application analysis of the SQL features being used, they will move to PaaS or IaaS. All databases must move.
 **App** | Apps will need to be moved to the cloud where possible. If they cannot move, then they will be allowed to connect to the migrated database over the Azure network through private connections only.
 **Costs** | Contoso wants to understand not only its migration options, but also the costs associated with the infrastructure after it moves to the cloud.
-**Azure** | Resource Management groups will need to be created for the various departments along with Resource Groups to managed all databases that are migrated. All resources will need to be tagged with department information for charge-back requirements.
+**Management** | Resource Management groups will need to be created for the various departments along with Resource Groups to managed all databases that are migrated. All resources will need to be tagged with department information for charge-back requirements.
 **Limitations** | Initially, not all branch offices that run applications will have a direct ExpressRoute link to Azure, so these offices will need to connect through Virtual Network Gateways.
 
 <!-- markdownlint-enable MD033 -->
 
 ## Solution design
 
-Contoso has already performed a [migration assessment](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/contoso-migration-assessment) of their digital estate using [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) and [Service Map](https://docs.microsoft.com/azure/azure-monitor/insights/service-map).
+Contoso has already performed a [migration assessment](https://docs.microsoft.com//azure/cloud-adoption-framework/plan/contoso-migration-assessment) of their digital estate using [Azure Migrate](https://docs.microsoft.com//azure/migrate/migrate-services-overview) with the [Service Map](https://docs.microsoft.com//azure/azure-monitor/insights/service-map) feature.
 
 ![Migration process](./media/contoso-migration-ossdb-to-azure/migration-process.png)
 
@@ -96,9 +96,10 @@ Data migrations follow a standard repeatable pattern.  This involves the followi
 
 #### Step 1 - Discovery
 
-Contoso utilized Azure Migrate and Service Map to surface the dependencies across the Contoso environment. Service Map automatically discovered application components on Windows and Linux systems and mapped the communication between services. Service Map surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across their TCP-connected architecture.  Contoso was only required to install the [Microsoft Monitoring Agent](https://docs.microsoft.com/azure/log-analytics/log-analytics-agent-windows) and [Microsoft Dependency](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows) agents.
 
-With the Azure Migration and Service map data, Contoso has identified over 300 database instances that must be migrated.  Of these instances, roughly 40% can be moved to PaaS based services. Of the remaining 60%, they must be moved to an IaaS-based approach with a Virtual Machine running the respective database software.
+Contoso utilized Azure Migrate with the Service Map to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Using the Service Map feature of Azure Migrate they surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across their TCP-connected architecture.  Contoso was only required to install the [Microsoft Monitoring Agent](https://docs.microsoft.com/azure/log-analytics/log-analytics-agent-windows) and [Microsoft Dependency](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows) agents.
+
+With the Azure Migration, Contoso has identified over 300 database instances that must be migrated.  Of these instances, roughly 40% can be moved to PaaS based services. Of the remaining 60%, they must be moved to an IaaS-based approach with a Virtual Machine running the respective database software.
 
 #### Step 2 - Application Assessment
 
@@ -124,13 +125,13 @@ If Contoso were to evaluate moving the applications at a later date, the [five R
 
 #### Step 3- Database Assessment
 
-As each database workload was discovered, the Database Migration Assessment (DMA) tool was utilized to determine what features were being used. When DMA was not able to be executed on a data source, the following guidelines were followed on the database migrations.
+As the databases were inventoried each type of database was reviewed to determine the method to migrate it to Azure. The following guidelines were followed on the database migrations.
 
 **Database Type** | **Details** | **Target** | **Migration Guide**
 | --- | --- | --- | --- |
-**MySQL** | All supported versions, upgrade to a supported version before migration | MySQL Database for Azure (Paas) | [Link](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online)
-**PostgreSQL** | All supported versions, upgrade to a supported version before migration | PostgreSQL Database for Azure (PaaS) | [Link](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)
-**MariaDB** | All supported versions, upgrade to a supported version before migration | MariaDB Database for Azure (PaaS) | [Link](https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?step=1)
+**MySQL** | All supported versions, upgrade to a supported version before migration | MySQL Database for Azure (Paas) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online)
+**PostgreSQL** | All supported versions, upgrade to a supported version before migration | PostgreSQL Database for Azure (PaaS) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)
+**MariaDB** | All supported versions, upgrade to a supported version before migration | MariaDB Database for Azure (PaaS) | [Guild](https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?step=1)
 
 <!-- markdownlint-enable MD033 -->
 
