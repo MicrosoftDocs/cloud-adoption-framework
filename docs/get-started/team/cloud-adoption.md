@@ -63,7 +63,7 @@ If your company's cloud adoption effort is mature enough to have supporting team
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> The cloud strategy team is accountable for maintaining a clear RACI structure across the cloud adoption lifecycle. | Review guidance and requirements from: <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT <li> Other cloud adoption teams or individuals listed in the RACI |
+| <li> The cloud strategy team is accountable for maintaining a clear RACI structure across the cloud adoption lifecycle. | Review guidance and requirements from: <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT team <li> Other cloud adoption teams or individuals listed in the RACI |
 
 ## Step 3: Begin your adoption journey
 
@@ -93,7 +93,7 @@ All other steps on those checklists are designed to make the effort more managea
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT <li> Cloud strategy team |
+| <li> Cloud adoption team | <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT team <li> Cloud strategy team |
 
 ## Step 4: Expand your skills with scenarios and best practices
 

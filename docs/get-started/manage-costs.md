@@ -59,7 +59,7 @@ These deliverables are the result of a few recurring tasks:
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Cloud governance team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 The governance team can detect and drive significant cost optimization across most enterprises. Basic, data-driven resource sizing can have an immediate and measurable impact on costs.
 
@@ -85,7 +85,7 @@ Strategic decisions directly affect cost controls, rippling through the adoption
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud adoption team <li> Cloud center of excellence or central IT |
+| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 3: Develop a cloud adoption plan
 
@@ -109,7 +109,7 @@ The adoption plan provides clarity on the timeline of activities during adoption
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT |
+| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 4: Implement best practices for landing zones
 
@@ -133,7 +133,7 @@ The Ready methodology of the Microsoft Cloud Adoption Framework for Azure focuse
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT |
+| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 5: Complete waves of migration effort
 
@@ -160,7 +160,7 @@ Long-term operational costs are a common theme in each area of migration process
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT |
+| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 6: Drive customer-focused innovation
 
@@ -180,7 +180,7 @@ Innovation and development of new products require a much deeper degree of archi
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT |
+| <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 7: Implement sound operations
 
@@ -199,7 +199,7 @@ Establishing a solid management baseline will help you collect data and create o
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT |
+| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Value statement
 

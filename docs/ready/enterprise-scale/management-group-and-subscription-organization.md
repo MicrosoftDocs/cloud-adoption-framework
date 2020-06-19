@@ -1,6 +1,6 @@
 ---
 title: Management group and subscription organization
-description: Management group and subscription organization
+description: Management group and subscription organization.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -61,8 +61,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 - Subscriptions provide a management boundary for governance and isolation, creating a clear separation of concerns.
 
 - There is a manual process (planned future automation) which can be conducted to limit an Azure AD tenant to only use enterprise enrollment subscriptions. This prevents creation of MSDN subscriptions at the root management group scope.
-  
-**Design recommendations:**
+  **Design recommendations:**
 
 - Treat subscriptions as a democratized unit of management aligned with business needs and priorities.
 

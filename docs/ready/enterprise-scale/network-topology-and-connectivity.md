@@ -151,7 +151,7 @@ _Figure 3: Sample network topology._
 
 - Do not build a transit network on top of Azure Virtual WAN, because Virtual WAN satisfies all transitive network topology requirements including the ability to use third-party NVAs.
 
-- It is recommended to not use existing on-premises networks like multiprotocol label switching (MPLS) to connect Azure resources across Azure regions, as Azure networking technologies support the interconnection of Azure resources across regions through the Microsoft backbone.
+- Don't use existing on-premises networks like multiprotocol label switching (MPLS) to connect Azure resources across Azure regions, as Azure networking technologies support the interconnection of Azure resources across regions through the Microsoft backbone.
 
 - For brownfield scenarios where you're migrating from a hub-and-spoke network topology not based on Virtual WAN, see [Migrate to Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/migrate-from-hub-spoke-topology).
 
@@ -186,7 +186,7 @@ _Figure 4: A traditional Azure network topology._
 
   - VNet-to-VNet traffic may experience additional latency since traffic must hairpin at the Microsoft enterprise edge (MSEE) routers.
 
-  - Bandwidth will be constrained to the ExpressRoute gateway stock-keeping unit (SKU).
+  - Bandwidth will be constrained to the ExpressRoute gateway SKU.
 
   - You must still deploy and manage UDRs, should they require inspection/logging for cross-VNet traffic.
 
@@ -459,8 +459,7 @@ This section explores key recommendations to achieve network encryption between 
 
 - Azure doesn't currently offer native encryption over global VNet peering. If encryption between Azure regions is required today, it's possible to connect VNets using VPN gateways rather than global VNet peering.
 
-**Design recommendations:**
-![Encryption flows](./media/enc-flows.png)
+**Design recommendations:** ![Encryption flows](./media/enc-flows.png)
 _Figure 8: Encryption flows._
 
 - When establishing VPN connections from on-premises to Azure using VPN gateways, traffic is encrypted at a protocol level using IPsec tunnels, as depicted in `Flow A` in the diagram above.

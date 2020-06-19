@@ -59,8 +59,8 @@ During the process of [rationalizing the digital estate](../../../digital-estate
 
 Scale of the migration is the next important prerequisite decision. The processes needed to migrate 1,000 assets are different from the processes required to move 10,000 assets. Before beginning any migration effort, it is important to answer the following questions:
 
-- **How many assets support the migrating workloads today?** Assets would include data structures, applications, VMs, and necessary IT appliances. It's recommended that you choose a relatively small workload for your first migration candidate.
-- **Of those assets, how many are planned for migration?** It is common for a percentage of assets to be terminated during a migration process, due to lack of sustained end-user dependency.
+- **How many assets support the migrating workloads today?** Assets include data structures, applications, VMs, and necessary IT appliances. Choose a relatively small workload for your first migration candidate.
+- **Of those assets, how many are planned for migration?** It's common for some assets to be terminated during a migration process, due to lack of sustained end-user dependency.
 - **What are the top-down estimates of the scale of migrateable assets?** For the workloads included for migration, estimate the number of supporting assets such as applications, virtual machines, data sources, and IT appliances. See the [digital estate](../../../digital-estate/index.md) section of the Cloud Adoption Framework for guidance on identifying relevant assets.
 
 ### Effort timing

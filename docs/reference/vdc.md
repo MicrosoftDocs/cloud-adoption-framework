@@ -9,8 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: reference
 ---
 
-<!-- docsTest:ignore "Azure Virtual Datacenter" "Azure Virtual Datacenter: Concepts" "Lift and Shift Guide" -->
-<!-- cSpell:ignore tracsman jonor CAF -->
+<!-- docsTest:ignore "Azure Virtual Datacenter" -->
+<!-- cSpell:ignore tracsman jonor -->
 
 # Azure Virtual Datacenter
 

@@ -1,6 +1,6 @@
 ---
 title: Contribution guide
-description: Contribution guide
+description: Contribution guide.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

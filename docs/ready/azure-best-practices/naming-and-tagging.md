@@ -69,7 +69,7 @@ Keep the length of naming components short to prevent exceeding resource name le
 
 Each workload can consist of many individual resources and services. Incorporating resource type prefixes into your resource names makes it easier to visually identify application or service components.
 
-The following list provides recommended Azure resource type prefixes to use when you define your naming conventions.
+This list recommends Azure resource type prefixes to use when you define your naming conventions.
 
 <!-- cSpell:ignore apim snet traf vmss stvm arcm ntfns sqldb psql sqldw sqlstrdb ssimp srch hbase appi migr -->
 
@@ -216,7 +216,7 @@ What tags you apply to resources and what tags are required or optional differs 
 | End date of the project   | Date when the application, workload, or service is scheduled for retirement.                                                                                                                                         | _EndDate_         | _{date}_                                                   |
 | Environment               | Deployment environment of the application, workload, or service.                                                                                                                                                     | _Env_             | _Prod_, _Dev_, _QA_, _Stage_, _Test_                       |
 | Owner name                | Owner of the application, workload, or service.                                                                                                                                                                      | _Owner_           | _{email}_                                                  |
-| Requester name            | User who requested the creation of this application.                                                                                                                                                                 | _Requestor_       | _{email}_                                                  |
+| Requester name            | User who requested the creation of this application.                                                                                                                                                                 | _Requester_       | _{email}_                                                  |
 | Service class             | Service level agreement level of the application, workload, or service.                                                                                                                                              | _ServiceClass_    | _Dev_, _Bronze_, _Silver_, _Gold_                          |
 | Start date of the project | Date when the application, workload, or service was first deployed.                                                                                                                                                  | _StartDate_       | _{date}_                                                   |
 

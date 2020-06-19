@@ -1,6 +1,6 @@
 ---
 title: Enterprise enrollment and Azure Active Directory tenants
-description: Enterprise enrollment and Azure Active Directory tenants
+description: Enterprise enrollment and Azure Active Directory tenants.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

@@ -37,7 +37,7 @@ When a datacenter is properly maintained, patched, and updated, there is likely 
 
 ## Decision framework
 
-While remediation for smaller workloads can be straightforward, which is one of the reasons it's recommended you choose smaller workload for your initial migration. However, as your migration efforts mature and you begin to tackle larger workloads, remediation can be a time consuming and costly process. For example, remediation efforts for a Windows Server 2003 migration involving a 5,000+ VM pool of assets can delay a migration by months. When such large-scale remediation is required, the following questions can help guide decisions:
+Because remediation for smaller workloads can be straightforward, you should choose a smaller workload for your initial migration. However, as your migration efforts mature and you begin to tackle larger workloads, remediation can be a time consuming and costly process. For example, remediation efforts for a Windows Server 2003 migration involving a 5,000+ VM pool of assets can delay a migration by months. When such large-scale remediation is required, the following questions can help guide decisions:
 
 - Have all workloads affected by the remediation been identified and notated in the migration backlog?
 - For workloads that are not affected, will a migration produce a similar return on investment (ROI)?

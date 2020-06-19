@@ -42,11 +42,11 @@ There are two areas of specialization:
 - **Platform specialization:** Invest in ongoing operations of a shared platform, distributing the investment across multiple workloads.
 - **Workload specialization:** Invest in ongoing operations of a specific workload, generally reserved for mission-critical workloads.
 
-### Central IT or cloud center of excellence (CCoE)
+### Central IT team or cloud center of excellence (CCoE)
 
-Decisions between platform specialization and workload specialization are based on the criticality and impact of each workload. However, these decisions are also indicative of larger cultural decisions between Central IT and CCoE organizational models.
+Decisions between platform specialization and workload specialization are based on the criticality and impact of each workload. However, these decisions are also indicative of larger cultural decisions between central IT team and CCoE organizational models.
 
-Workload specialization often triggers a cultural change. Traditional IT and Central IT both build processes that can provide support at scale. Scale support is more achievable for repeatable services found in a management baseline, enhanced baseline, or even platform operations. Workload specialization doesn't often scale. This lack of scale makes it difficult for a centralized IT organization to provide necessary support without reaching organizational scale limitations.
+Workload specialization often triggers a cultural change. Traditional IT and centralized IT both build processes that can provide support at scale. Scale support is more achievable for repeatable services found in a management baseline, enhanced baseline, or even platform operations. Workload specialization doesn't often scale. This lack of scale makes it difficult for a centralized IT organization to provide necessary support without reaching organizational scale limitations.
 
 Alternatively, a cloud center of excellence approach scales through purposeful delegation of responsibility and selective centralization. Workload specialization tends to better align with the delegated responsibility approach of a CCoE.
 
@@ -57,7 +57,7 @@ The natural alignment of roles in a CCoE is outlined as follows:
 - Cloud management delivers the management baseline centrally and helps support the use of the service catalog.
 - But the business unit (in the form of a business DevOps team or cloud adoption team) holds responsibility for day-to-day operations of the workload, pipeline, or performance.
 
-As for the alignment of areas of management, Central IT and CCoE models can generally deliver on Platform Specialization, with minimal cultural change. Delivering on workload specialization might be a little more complex for Central IT teams.
+As for aligning areas of management, central IT team and CCoE models can generally deliver on Platform Specialization, with minimal cultural change. Delivering on workload specialization might be more complex for central IT teams.
 
 ## Management specialization processes
 

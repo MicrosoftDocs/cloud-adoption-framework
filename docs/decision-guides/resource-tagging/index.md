@@ -63,7 +63,7 @@ As part of your planning process, use the following questions to help determine 
 - Does your naming and tagging policies need to integrate with existing naming and organizational policies within your company?
 - Will you implement a chargeback or showback accounting system? Will you need to associate resources with accounting information for departments, business groups, and teams in more detail than a simple subscription-level breakdown allows?
 - Does tagging need to represent details such regulatory compliance requirements for a resource? What about operational details such as uptime requirements, patching schedules, or security requirements?
-- What tags will be required for all resources based on Central IT policy? What tags will be optional? Are individual teams allowed to implement their own custom tagging schemes?
+- What tags will be required for all resources based on centralized IT policy? What tags will be optional? Are individual teams allowed to implement their own custom tagging schemes?
 
 The common tagging patterns listed below provide examples of how tagging can be used to organize cloud assets. These patterns are not meant to be exclusive and can be used in parallel, providing multiple ways of organizing assets based on your company's needs.
 

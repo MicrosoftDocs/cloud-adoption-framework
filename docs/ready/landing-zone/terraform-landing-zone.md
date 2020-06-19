@@ -62,7 +62,7 @@ If these assumptions match your current environment, this blueprint might be a g
 
 ## Design decisions
 
-The following decisions are represented in the Terraform landing zone:
+The following decisions are represented in the CAF Terraform modules:
 
 | Component              | Decisions                                                                                                                                                                                                                                                                | Alternative approaches                                                                                                                                                                                                                                          |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -208,4 +208,4 @@ Layering your landing zones is a good practice for decoupling systems, versionin
 Future reference architectures will demonstrate this concept for a hub and spoke topology.
 
 > [!div class="nextstepaction"]
-> [Review the foundation Terraform landing zone sample](https://github.com/azure/caf-terraform-landingzones)
+> [Review the sample foundation Terraform landing zone](https://github.com/azure/caf-terraform-landingzones)

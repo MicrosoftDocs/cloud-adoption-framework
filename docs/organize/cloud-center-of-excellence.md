@@ -1,6 +1,6 @@
 ---
 title: "Understand cloud center of excellence (CCoE) functions"
-description: Understand the functions of a cloud center of excellence (CCoE), including the source, the scope and the deliverable.
+description: Understand the functions of a cloud center of excellence (CCoE), including the source, scope, and deliverables.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2020

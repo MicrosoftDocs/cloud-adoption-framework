@@ -96,8 +96,8 @@ The table below provides a list of example Azure policies to enforce typical net
 |------------|--------------------------------------------------------------------------------------------------_|
 | Network    | 1. (Preview:) Container Registry should use a virtual network service endpoint.                   |
 |            | 2. A custom IP security/internet key exchange policy must be applied to all Azure Virtual Network gateway connections. |
-|            | 3. App Service should use a virtual network service endpoint (internal apps only).                |
-|            | 4. Azure VPN gateways should not use a basic stock-keeping unit (SKU).                            |
+|            | 3. App Service should use a virtual network service endpoint (internal apps only)..                |
+|            | 4. Azure VPN gateways should not use a SKU.                            |
 |            | 5. Azure Cosmos DB should use a virtual network service endpoint.                                 |
 |            | 6. Deploy Network Watcher when virtual networks are created.                                      |
 |            | 7. Event hub should use a virtual network service endpoint.                                       |
@@ -209,7 +209,7 @@ The table below provides a list of example Azure policies to enforce typical net
 
 ### File -&gt; new -&gt; landing zone for applications and workloads
 
-1. Create a subscription and assign the requestor as the subscription owner.
+1. Create a subscription and assign the requester as the subscription owner.
 
 2. Assign the subscription within the management group hierarchy.
 

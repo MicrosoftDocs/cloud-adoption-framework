@@ -34,7 +34,7 @@ Workload specialization consists of a disciplined execution of the following fou
 
 Workload specialization often triggers a cultural change in traditional IT build processes that focus on delivering a management baseline, enhanced baselines, and platform operations. Those types of offerings can be scaled across the environment. Workload specialization is similar in execution to platform specialization. But unlike common platforms, the specialization required by individual workloads often doesn't scale.
 
-When workload specialization is required, operational management commonly evolves beyond a central IT perspective. The approach suggested in Cloud Adoption Framework is a distribution of cloud management functionality.
+When workload specialization is required, operational management commonly evolves beyond a centralized IT perspective. The approach suggested in Cloud Adoption Framework is a distribution of cloud management functionality.
 
 In this model, operational tasks like monitoring, deployment, DevOps, and other innovation-focused functions shift to an application-development or business-unit organization. The cloud platform team and the core cloud monitoring team still delivers on the management baseline across the environment.
 

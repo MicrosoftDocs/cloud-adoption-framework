@@ -70,7 +70,7 @@ For optimal collaboration and efficiency, we recommend that cloud adoption teams
 
 Additional support from existing IT staff may be needed. IT can be a valuable contributor to cloud adoption by becoming a cloud broker and a partner for innovation and business agility.
 
-- [Central IT responsibilities](../organize/central-it.md)
+- [Central IT team responsibilities](../organize/central-it.md)
 
 ## What's next
 
