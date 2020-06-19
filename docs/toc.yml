@@ -68,6 +68,10 @@ items:
       items:
       - name: Overview
         href: strategy/business-outcomes/index.md
+      - name: Data innovation
+        href: strategy/business-outcomes/data-innovations.md
+      - name: Data democratization
+        href: strategy/business-outcomes/data-democratization.md
       - name: Fiscal outcomes
         href: strategy/business-outcomes/fiscal-outcomes.md
       - name: Agility outcomes
@@ -88,6 +92,8 @@ items:
         href: strategy/cloud-migration-business-case.md
       - name: Create a financial model
         href: strategy/financial-models.md
+      - name: Financial model for analytics
+        href: strategy/financial-model-analytics.md
       - name: Understand cloud accounting
         href: strategy/cloud-accounting.md
     - name: Align your partner strategy
@@ -554,6 +560,17 @@ items:
             - name: Migrate Oracle to Azure Database for PostgreSQL online
               href: https://docs.microsoft.com/azure/dms/tutorial-oracle-azure-postgresql-online?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
+        - name: Analytics solutions
+          items: 
+          - name: Overview
+            href: migrate/azure-best-practices/analytics/analytics-solutions-overview.md
+          - name: Teradata
+            href: migrate/azure-best-practices/analytics/analytics-solutions-teradata.md
+          - name: Netezza
+            href: migrate/azure-best-practices/analytics/analytics-solutions-netezza.md
+          - name: Exadata
+            href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
+
         - name: Mainframes
           items:
           - name: Overview
@@ -607,6 +624,10 @@ items:
           href: migrate/azure-best-practices/migrate-best-practices-costs.md
         - name: Scale a migration
           href: migrate/azure-best-practices/contoso-migration-scale.md
+        - name: Schema migration Data Definition Languages
+          href: migrate/azure-best-practices/analytics/schema-migration-dds.md
+        - name: High availability for Azure Synapse
+          href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
 
@@ -1348,6 +1369,8 @@ items:
         href: organize/cloud-platform.md
       - name: Cloud automation functions
         href: organize/cloud-automation.md
+      - name: Cloud data functions
+        href: organize/cloud-data.md
       - name: Cloud security functions
         items:
         - name: Cloud security team functions
