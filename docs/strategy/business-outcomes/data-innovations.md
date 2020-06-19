@@ -27,7 +27,27 @@ Many companies have had data warehouses running in their data centers for years 
 
 There are several business and technology reasons why you should consider migrating your data warehouse to Azure Synapse to help you lower total cost of ownership, improve price/performance and use a rich ecosystem of additional data and analytical technologies that can help you modernize your data warehouse and also shorten time to value.
 
-The business cases and technology advances include:
+The use cases, business cases and technology advances include:
+
+**Use cases**
+
+- Connected product innovation
+- Factory of the Future
+- Clinical analytics
+- Compliance analytics
+- Cost-based analytics
+- Omni-channel optimization
+- Personalization
+- Intelligent supply chain
+- Dynamic pricing
+- Procurement analytics
+- Digital control tower
+- Risk management
+- Customer analytics
+- Fraud detection
+- Claims analytics
+
+**Business cases**
 
 - Build end-to-end analytics solutions with a single analytics service
 - Use the Azure Synapse studio, which provides a unified workspace for data prep, data management, data warehousing, big data, and AI tasks
