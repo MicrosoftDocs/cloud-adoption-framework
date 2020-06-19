@@ -1,6 +1,6 @@
 ---
 title: Start with enterprise-scale landing zones
-description: Start with enterprise-scale landing zones
+description: Cloud Adoption Framework enterprise-scale landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -11,23 +11,23 @@ ms.subservice: ready
 
 # Start with enterprise-scale landing zones
 
-The enterprise-scale architecture represents the strategic design path and target technical state for the customer's Azure environment. It will continue to evolve alongside the Azure platform and is ultimately defined by the various design decisions that organizations must make to define their Azure journey.
+The enterprise-scale architecture represents the strategic design path and target technical state for your Azure environment. It will continue to evolve alongside the Azure platform and is ultimately defined by the various design decisions that an organization must make to define their Azure journey.
 
-Not all enterprises adopt Azure in the same way, so the enterprise-scale architecture may vary between customers. Ultimately, the technical considerations and design recommendations of the enterprise-scale architecture may lead to different trade-offs based on the customer's scenario. Some variation is expected, but if core recommendations are followed, the resulting target architecture will put the customer on a path to sustainable scale.
+Not all enterprises adopt Azure in the same way, so the enterprise-scale architecture may vary between various organizations. Ultimately, the technical considerations and design recommendations of the enterprise-scale architecture may lead to different trade-offs based on your organization's scenario. Some variation is expected, but if core recommendations are followed, the resulting target architecture will put your organization on a path to sustainable scale.
 
 ## Prescriptive guidance
 
-The enterprise-scale architecture provides prescriptive guidance coupled with Azure best practices, and it follows design principles across the critical design areas for the customer's Azure environment.
+The enterprise-scale architecture provides prescriptive guidance coupled with Azure best practices, and it follows design principles across the critical design areas for an organization's Azure environment.
 
 ## Qualifiers: Should I start with enterprise scale?
 
-The enterprise-scale architecture is modular by design and allow customers to start with foundational landing zones that support their application portfolios, regardless of whether the applications are being migrated or are newly developed and deployed to Azure. The architecture can scale alongside the customer's business requirements regardless of scale point.
+The enterprise-scale architecture is modular by design and allow you to start with foundational landing zones that support your application portfolios, regardless of whether the applications are being migrated or are newly developed and deployed to Azure. The architecture can scale alongside the your business requirements regardless of scale point.
 
 ## Start with an enterprise-scale landing zone
 
-The enterprise-scale approach to construct landing zones includes four sets of assets to support cloud teams:
+The enterprise-scale approach to construct landing zones includes three sets of assets to support cloud teams:
 
-- [Design guidelines](./design-guidelines.md): Guide to the critical decisions that drive the design of the CAF enterprise-scale landing zone.
+- [Design guidelines](./design-guidelines.md): Guide to the critical decisions that drive the design of the Cloud Adoption Framework enterprise-scale landing zone.
 - [Architecture](./architecture.md): Conceptual reference architecture that demonstrates design areas and best practices.
 - [Implementations](./implementation.md): Azure Resource Manager template of the architecture to accelerate adoption.
 
@@ -47,5 +47,3 @@ While this guide shares the same design principles as the standard Ready methodo
 
 [Implement a CAF enterprise-scale landing zone](./implementation.md)
 
-> [!div class="nextstepaction"]
-> [Implement a CAF enterprise-scale landing zone](./implementation.md)

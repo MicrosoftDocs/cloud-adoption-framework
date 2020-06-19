@@ -1,6 +1,6 @@
 ---
 title: Business continuity and disaster recovery
-description: Business continuity and disaster recovery
+description: Cloud Adoption Framework enterprise-scale business continuity and disaster recovery.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -13,7 +13,7 @@ ms.subservice: ready
 
 ## Planning for business continuity and disaster recovery
 
-This section will help readers capture customer disaster recovery (DR) requirements to design suitable platform-level capabilities that application workloads can consume to meet their specific recovery time objective (RTO) and recovery point objective (RPO) requirements.
+Capture disaster recovery (DR) requirements to design suitable platform-level capabilities that application workloads can consume to meet their specific recovery time objective (RTO) and recovery point objective (RPO) requirements.
 
 **Design considerations:**
 

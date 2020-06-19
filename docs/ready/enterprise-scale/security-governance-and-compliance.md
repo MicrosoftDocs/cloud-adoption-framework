@@ -1,6 +1,6 @@
 ---
 title: Security governance and compliance
-description: Security governance and compliance
+description: Cloud Adoption Framework enterprise-scale security governance and compliance.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -13,7 +13,7 @@ ms.subservice: ready
 
 ## Define encryption and key management
 
-Encryption is a vital step towards ensuring data privacy, compliance, and data residency in Microsoft Azure. It is also one of the most important security concerns of many enterprise customers. This section will go over the design considerations and recommendations as they pertain to encryption and key management.
+Encryption is a vital step towards ensuring data privacy, compliance, and data residency in Microsoft Azure. It is also one of the most important security concerns of many enterprises. This section covers the design considerations and recommendations as they pertain to encryption and key management.
 
 **Design considerations:**
 
@@ -112,7 +112,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 ## Define security monitoring and an audit policy
 
-It is crucial for enterprise customers to have visibility into what is happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
+It is crucial for an enterprise to have visibility into what is happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
 
 **Design considerations:**
 
@@ -152,7 +152,7 @@ It is crucial for enterprise customers to have visibility into what is happening
 
 ## Plan for platform security
 
-It is essential to maintain a healthy security posture as enterprise customers adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is key.
+It is essential to maintain a healthy security posture as you adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is key.
 
 **Design considerations:**
 
@@ -166,7 +166,7 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 **Design recommendations:**
 
-- A joint examination of each required service should be conducted within the context of underlying customer requirements. If the customer wants to bring their own keys, this might not be supported across all considered services. Relevant mitigation will need to be implemented so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
+- A joint examination of each required service should be conducted within the context of your underlying requirements. If you want to bring your own keys, this might not be supported across all considered services. Relevant mitigation will need to be implemented so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
 - Develop a security whitelisting plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
 
@@ -174,7 +174,7 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
-- Align customer security requirements with Azure platform road maps to stay up to date with newly released security controls.
+- Align your security requirements with Azure platform road maps to stay up to date with newly released security controls.
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
 

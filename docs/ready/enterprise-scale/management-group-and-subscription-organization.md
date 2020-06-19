@@ -50,7 +50,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 
 ## Subscription organization and governance
 
-Subscriptions are a unit of management, billing, and scale within Azure, and they play a critical role when designing for large-scale Azure adoption. This section helps capture customer subscription requirements and design target subscriptions based on critical factors such as environment type, ownership and governance model, organizational structure, and application portfolios.
+Subscriptions are a unit of management, billing, and scale within Azure, and they play a critical role when designing for large-scale Azure adoption. This section helps you capture subscription requirements and design target subscriptions based on critical factors such as environment type, ownership and governance model, organizational structure, and application portfolios.
 
 **Design considerations:**
 

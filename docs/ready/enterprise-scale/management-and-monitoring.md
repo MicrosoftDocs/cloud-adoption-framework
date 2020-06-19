@@ -1,6 +1,6 @@
 ---
 title: Management and monitoring
-description: Management and monitoring
+description: Explore how to operationally maintain a Microsoft Azure enterprise estate with centralized management and monitoring at a platform level.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -33,7 +33,7 @@ _Figure 1: Platform management and monitoring._
 
   - Resource health events
 
-- Security audit logging and achieving a horizontal security lens across the customer's entire Azure estate:
+- Security audit logging and achieving a horizontal security lens across your organization's entire Azure estate:
 
   - Potential integration with on-premises security information and event management (SIEM) systems such as ServiceNow or ArcSight
 
@@ -92,7 +92,7 @@ In the context of the enterprise-scale architecture, centralized logging is prim
 
 ## Planning for app management and monitoring
 
-To expand on the previous section, this section will consider federated management and monitoring of customer app workloads and explain how application teams can operationally maintain these workloads.
+To expand on the previous section, this section will consider federated management and monitoring of app workloads and explain how application teams can operationally maintain these workloads.
 
 **Design considerations:**
 

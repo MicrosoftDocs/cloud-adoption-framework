@@ -1,6 +1,6 @@
 ---
 title: Implementation guidelines
-description: Implementation guidelines
+description: Cloud Adoption Framework enterprise-scale implementation guidelines
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
