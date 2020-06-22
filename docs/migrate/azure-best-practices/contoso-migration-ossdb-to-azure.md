@@ -59,8 +59,6 @@ Contoso has already performed a [migration assessment](https://docs.microsoft.co
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 **Consideration** | **Details**
 --- | ---
 **Pros** | Azure will provide a single pane of glass into the database workloads<br/><br/>Costs will be monitored via Cost Management<br/><br/>Business charge-back billing will be easy to perform with the Billing API<br/><br/>Server and software maintenance will be reduced to only the IaaS based environments.
@@ -106,20 +104,6 @@ The results from the assessment provided Contoso with the visibility that they u
 - 100 Java applications
 - ~50 NodeJS applications
 - ~25 PHP applications
-
-Although helpful in determining the existing application vectors, only the database workloads were considered for migration during this phase as per the CTO's directives.
-
-If Contoso were to evaluate moving the applications at a later date, the [five Rs of rationalization](https://docs.microsoft.com/azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization) will be used to make the appropriate decisions.
-
-- **Rehost** - traditionally known as a lift and shift migration, a rehost effort moves a current state asset to the chosen cloud provider, with minimal change to overall architecture.
-
-- **Refactor** - Changing an application to support PaaS based hosting.
-
-- **Rearchitect** - Aging applications aren't compatible with cloud providers because of the architectural decisions.
-
-- **Rebuild** - The delta that must be overcome to carry an application forward can be too large to justify further investment.
-
-- **Replace** - When a software as a service (SaaS) application can provide all the necessary functionality for the hosted application.
 
 #### Step 3- Database Assessment
 

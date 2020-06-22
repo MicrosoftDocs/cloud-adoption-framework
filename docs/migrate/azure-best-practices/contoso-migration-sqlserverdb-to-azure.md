@@ -48,8 +48,6 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 **Management** | Resource Management groups will need to be created for the various departments along with Resource Groups to managed all SQL databases that are migrated. All resources will need to be tagged with department information for charge-back requirements.
 **Limitations** | Initially, not all branch offices that run applications will have a direct ExpressRoute link to Azure, so these offices will need to connect through Virtual Network Gateways.
 
-<!-- markdownlint-enable MD033 -->
-
 ## Solution design
 
 Contoso has already performed a [migration assessment](https://docs.microsoft.com//azure/cloud-adoption-framework/plan/contoso-migration-assessment) of their digital estate using [Azure Migrate](https://docs.microsoft.com//azure/migrate/migrate-services-overview) with the [Service Map](https://docs.microsoft.com//azure/azure-monitor/insights/service-map) feature.
@@ -111,25 +109,11 @@ The results from the assessment provided Contoso with the visibility that they u
 - 25 NodeJS applications
 - 10 Java applications
 
-Although helpful in determining the existing application vectors, only the database workloads were considered for migration during this phase as per the CTO's directives.
-
-If Contoso were to evaluate moving the applications at a later date, the [five Rs of rationalization](https://docs.microsoft.com//azure/cloud-adoption-framework/digital-estate/5-rs-of-rationalization) will be used to make the appropriate decisions.
-
-- **Rehost** - traditionally known as a lift and shift migration, a rehost effort moves a current state asset to the chosen cloud provider, with minimal change to overall architecture.
-
-- **Refactor** - Changing an application to support PaaS based hosting.
-
-- **Rearchitect** - Aging applications aren't compatible with cloud providers because of the architectural decisions.
-
-- **Rebuild** - The delta that must be overcome to carry an application forward can be too large to justify further investment.
-
-- **Replace** - When a software as a service (SaaS) application can provide all the necessary functionality for the hosted application.
-
 #### Step 3- Database Assessment
 
 As each database workload was discovered, the Database Migration Assessment (DMA), tool was utilized to determine which features were being used. DMA helps Contoso assess their database migrations to Azure by detecting compatibility issues that can impact database functionality in a new version of SQL Server or Azure SQL Database.
 
-Contoso followed these steps to assess their databases and then upload that data to Azure Migrate:
+Contoso followed these steps to assess their databases and then upload results data to Azure Migrate:
 
 1. Download DMA
 1. Create an Assessment Project
@@ -145,14 +129,12 @@ Contoso used the DMA to run the assessment and then uploaded the data directly t
 
 ![Upload DMA to Azure Migrate](./media/contoso-migration-sqlserverdb-to-azure/upload-db-data.png)
 
-With the database information now loaded into Azure Migrate, Contoso has identified over 1000 database instances that must be migrated.  Of these instances, roughly 40% can be moved to SQL Database for Azure. Of the remaining 60%, they must be moved to either an IaaS-based approach with a SQL Server on Azure Virtual Machines or moved to Azure SQL Server Managed Instances. Of the 60%, about 10% will require a virtual machine based approach, the remaining will be moved to Managed Instances.
+With the database information now loaded into Azure Migrate, Contoso has identified over 1,000 database instances that must be migrated. Of these instances, roughly 40% can be moved to SQL Database for Azure. Of the remaining 60%, they must be moved to either an IaaS-based approach with a SQL Server on Azure Virtual Machines or moved to Azure SQL Server Managed Instances. Of the 60%, about 10% will require a virtual machine based approach, the remaining will be moved to Managed Instances.
 
 When DMA was not able to be executed on a data source, the following guidelines were followed on the database migrations.
 
 > ![NOTE]
 > As part of the assessment phase, Contoso discovered various Open Source databases. Separately, they followed [this guide](ossdb-to-azure.md) for their migration planning.
-
-<!-- markdownlint-enable MD033 -->
 
 #### Step 4 - Migration Planning
 
