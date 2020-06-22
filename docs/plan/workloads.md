@@ -64,6 +64,7 @@ After initial priorities have been defined and workloads have been added to the 
 | Workload description | In one sentence, what does this workload do? |         |
 | Adoption motivations | Which of the cloud adoption motivations are affected by this workload? |         |
 | Primary sponsor | Of those stakeholders affected, who is the primary sponsor requesting the preceding motivations? |         |
+| Business Impact | What is the Business impact of the data on this workload?  Low (LBI) - Medium (MBI) - High (HBI) |         |
 | Business unit | Which business unit is responsible for the cost of this workload? |         |
 | Business processes | Which business processes will be affected by changes to the workload? |         |
 | Business teams | Which business teams will be affected by changes? |         |
