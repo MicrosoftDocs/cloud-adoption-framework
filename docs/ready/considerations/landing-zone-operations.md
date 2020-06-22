@@ -1,6 +1,6 @@
 ---
 title: Improve landing zone operations
-description: Improve landing zone operations
+description: Improve landing zone operations.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2020

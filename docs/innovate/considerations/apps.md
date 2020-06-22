@@ -88,7 +88,7 @@ If an application can't be easily extended, it may be necessary to refactor the 
 
 ## Operating model innovations
 
-In addition to modern, innovative approaches to app creation, there have been notable innovations in app _operations_. These approaches have spawned many organizational movements. One of the most prominent is the [cloud center of excellence](../../organize/cloud-center-of-excellence.md) operating model. When fully staffed and mature, business teams have the option to provide their own operational support for a solution.
+In addition to modern innovative approaches to app creation, there have been notable innovations in app operations. These approaches have spawned many organizational movements. One of the most prominent is the [cloud center of excellence](../../organize/cloud-center-of-excellence.md) operating model. When fully staffed and mature, business teams have the option to provide their own operational support for a solution.
 
 The type of self-service operational management model found in a cloud center of excellence allows for tighter controls and faster iterations within the solution environment. These goals are accomplished by transferring operational control and accountability to the business team.
 

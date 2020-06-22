@@ -25,7 +25,7 @@ The objective or goal of any adoption effort can have a significant impact on th
 
 No business would pursue just one of these outcomes. Without operations, there are no customers, and vice versa. Cloud adoption is no different. Companies commonly work to achieve each of these outcomes, but trying to focus on all of them simultaneously can spread your efforts too thin and slow progress on work that could most benefit your business needs.
 
-This prerequisite isn't a demand for you to pick one of these three goals, but instead to help your cloud strategy team and your cloud adoption team establish a set of operational priorities that will guide execution for the next three to six months. These priorities are set by ranking each of the three itemized options from _most significant_ to _least significant_, as they relate to the efforts this team can contribute to in the next one or two quarters.
+This prerequisite isn't a demand for you to pick one of these three goals, but instead to help your cloud strategy team and your cloud adoption team establish a set of operational priorities that will guide execution for the next three to six months. These priorities are set by ranking each of the three itemized options from most significant to least significant, as they relate to the efforts this team can contribute to in the next one or two quarters.
 
 ### Act on migration outcomes
 
@@ -59,8 +59,8 @@ During the process of [rationalizing the digital estate](../../../digital-estate
 
 Scale of the migration is the next important prerequisite decision. The processes needed to migrate 1,000 assets are different from the processes required to move 10,000 assets. Before beginning any migration effort, it is important to answer the following questions:
 
-- **How many assets support the migrating workloads today?** Assets would include data structures, applications, VMs, and necessary IT appliances. It's recommended that you choose a relatively small workload for your first migration candidate.
-- **Of those assets, how many are planned for migration?** It is common for a percentage of assets to be terminated during a migration process, due to lack of sustained end-user dependency.
+- **How many assets support the migrating workloads today?** Assets include data structures, applications, VMs, and necessary IT appliances. Choose a relatively small workload for your first migration candidate.
+- **Of those assets, how many are planned for migration?** It's common for some assets to be terminated during a migration process, due to lack of sustained end-user dependency.
 - **What are the top-down estimates of the scale of migrateable assets?** For the workloads included for migration, estimate the number of supporting assets such as applications, virtual machines, data sources, and IT appliances. See the [digital estate](../../../digital-estate/index.md) section of the Cloud Adoption Framework for guidance on identifying relevant assets.
 
 ### Effort timing

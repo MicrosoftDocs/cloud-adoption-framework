@@ -1,5 +1,5 @@
 ---
-title: Deploy a CAF foundation blueprint in Azure
+title: Deploy a CAF Foundation blueprint in Azure
 description: Learn how to deploy a CAF foundation blueprint in Azure.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,15 +9,15 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-<!-- docsTest:ignore "CAF Foundation blueprint -->
+<!-- docsTest:ignore "CAF Foundation blueprint" -->
 
 # Deploy a CAF Foundation blueprint
 
-The CAF Foundation blueprint does not deploy a landing zone. Instead, it deploys the tools required to establish a governance MVP (minimum viable product) to begin developing your governance disciplines. This blueprint is designed to be additive to an existing landing zone and can be applied to the CAF migration landing zone with a single action.
+The CAF Foundation blueprint does not deploy a landing zone. Instead, it deploys the tools required to establish a governance MVP (minimum viable product) to begin developing your governance disciplines. This blueprint is designed to be additive to an existing landing zone and can be applied to the CAF Migration landing zone blueprint with a single action.
 
 ## Deploy the blueprint
 
-Before you use the CAF Foundation blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [CAF Foundation blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone) can be deployed using the [deployment steps][deploy-sample].
+Before you use the CAF Foundation blueprint in the Cloud Adoption Framework, review the following design principles, assumptions, decisions, and implementation guidance. If this guidance aligns with the desired cloud adoption plan, the [CAF Foundation blueprint](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-foundation) can be deployed using the [deployment steps][deploy-sample].
 
 > [!div class="nextstepaction"]
 > [Deploy the blueprint sample][deploy-sample]

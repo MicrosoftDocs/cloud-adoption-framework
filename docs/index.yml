@@ -93,8 +93,8 @@ productDirectory:
       links:
         - url: ./ready/azure-setup-guide/index.md
           text: Azure setup guide
-        - url: ./ready/landing-zone/migrate-landing-zone.md
-          text: First landing zone
+        - url: ./ready/landing-zone/index.md
+          text: Azure landing zones
         - url: ./ready/considerations/index.md
           text: Expand the landing zone
         - url: ./ready/azure-best-practices/index.md

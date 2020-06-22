@@ -58,7 +58,7 @@ Before the cloud operations team implements any ongoing operations practices, it
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li>  Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or Central IT |
+| <li>  Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 3: Establish a cadence with other teams
 

@@ -1,6 +1,6 @@
 ---
 title: Refactor landing zones
-description: The process for refactoring landing zones
+description: The process for refactoring landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2020
@@ -78,9 +78,9 @@ Configuring an enterprise-ready environment will take time. This approach will n
 
 All initial landing zone templates have limitations. Guardrails or policies during refactoring should reflect those limitations. Before beginning a landing zone refactoring process, it is important to understand the long-term requirements of the cloud adoption plan and classification of the candidate workloads, compared to the initial template limitations.
 
-As an example of establishing refactoring guardrails, lets compare the development approach in the prior example and the CAF Migrate landing zone blueprint.
+As an example of establishing refactoring guardrails, lets compare the development approach in the prior example and the CAF Migration landing zone blueprint.
 
-- Per the [assumptions details of the CAF Migrate landing zone blueprint](./migrate-landing-zone.md#assumptions), this initial landing zone is not designed for sensitive data or mission-critical workloads. Those features will have to be added through refactoring.
+- Per the [assumptions of the CAF Migration landing zone blueprint](./migrate-landing-zone.md#assumptions), this initial landing zone is not designed for sensitive data or mission-critical workloads. Those features will have to be added through refactoring.
 - In this example, lets assume that the portfolio of 100 workloads will require both mission critical and sensitive data hosting capabilities.
 
 To balance these two competing requirements, the adoption team and platform team will operate under the following agreed upon conditions:
@@ -102,7 +102,7 @@ Each subsection of "expanding your landing zone" maps to one of the additions ou
 
 ## Next steps
 
-To get started on a refactoring process, [choose your first landing zone](./first-landing-zone.md).
+To get started on a refactoring process, get started using [Azure landing zones](./index.md).
 
 > [!div class="nextstepaction"]
-> [Choose your first landing zone](./first-landing-zone.md)
+> [Azure landing zones](./index.md)

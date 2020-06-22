@@ -31,14 +31,14 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 - [Motivations](../strategy/motivations.md): The first step to strategic alignment is to gain agreement on the motivations that drive the innovation effort. Start by understanding and categorizing motivations and common themes from various stakeholders across business and IT.
 - [Business outcomes](../strategy/business-outcomes/index.md): After motivations are aligned, it's possible to capture the desired business outcomes. This information provides clear metrics you can use to measure the overall transformation.
-- [Balance the portfolio](../strategy/balance-the-portfolio.md): Innovation isn't the right adoption path for every workload. This approach to adoption is more relevant to new custom-built applications or workloads that _require_ rearchitecture or full rebuilds. When motivations heavily favor innovation for all workloads, it's important to evaluate the portfolio to ensure those investments can produce the desired return on investment (ROI). Modernization of specific resources and small-scale rebuilding efforts can be innovative but might be better served by following [Get started: Accelerate migration](./migrate.md).
+- [Balance the portfolio](../strategy/balance-the-portfolio.md): Innovation isn't the right adoption path for every workload. This approach to adoption is more relevant to new custom-built applications or workloads that **require** rearchitecture or full rebuilds. When motivations heavily favor innovation for all workloads, it's important to evaluate the portfolio to ensure those investments can produce the desired return on investment (ROI). Modernization of specific resources and small-scale rebuilding efforts can be innovative but might be better served by following [Get started: Accelerate migration](./migrate.md).
 
 <!-- markdownlint-disable MD033 -->
 <br>
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 2: Evaluate the business justification
 
@@ -135,7 +135,7 @@ These links help the adoption team understand the approach taken by the cloud go
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud governance team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
+| <li> Cloud governance team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team |
 
 ## Step 6: Define operational needs and business commitments
 
@@ -157,7 +157,7 @@ Define the plan for long-term operational responsibilities for the planned innov
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud operations team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or Central IT |
+| <li> Cloud operations team <li> Cloud adoption team | <li> Cloud strategy team <li> Cloud center of excellence or central IT team |
 
 ## Step 7: Deploy an aligned landing zone
 
@@ -166,13 +166,13 @@ All assets hosted in the cloud live within a landing zone. That landing zone mig
 **Deliverables:**
 
 - Deploy a first landing zone for initial, low-risk experimentation during early innovation.
-- Develop a plan to refactor with the cloud center of excellence or Central IT to ensure governance, security, and operational alignment.
+- Develop a plan to refactor with the cloud center of excellence or the Central IT team to ensure governance, security, and operational alignment.
 - Timeline risks:
   - Governance, operations, and security requirements for the first 10 workloads can slow this process. Actual refactoring of the first landing zone and subsequent landing zones takes longer, but it should happen in parallel with migration efforts.
 
 **Guidance to support deliverable completion:**
 
-- [Choose a landing zone](../ready/landing-zone/first-landing-zone.md): Use this article to find the right approach to deploying a landing zone based on your adoption pattern. Then deploy that standardized code base.
+- [Choose a landing zone](../ready/landing-zone/index.md): Use this section to find the right approach to deploying a landing zone based on your adoption pattern. Then deploy that standardized code base.
 - [Expand your landing zone](../ready/considerations/index.md): Regardless of the starting point, identify gaps in the deployed landing zone to add required components for resource organization, security, governance, compliance, and operations.
 
 <!-- markdownlint-disable MD033 -->
@@ -180,7 +180,7 @@ All assets hosted in the cloud live within a landing zone. That landing zone mig
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud platform team <li> Cloud adoption team | <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud platform team <li> Cloud adoption team | <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 8: Innovate in the cloud
 
@@ -209,7 +209,7 @@ The Innovate methodology provides guidance on the tools and product management a
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud adoption team | <li> Cloud center of excellence <li> Cloud center of excellence or Central IT |
+| <li> Cloud adoption team | <li> Cloud center of excellence <li> Cloud center of excellence or central IT team |
 
 ## Value statement
 

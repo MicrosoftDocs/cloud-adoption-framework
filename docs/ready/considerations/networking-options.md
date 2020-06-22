@@ -88,7 +88,7 @@ In addition using one of these architecture patterns, if your enterprise IT grou
 For organizations that meet the following criteria, you may also want to start with the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md):
 
 - Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
-- You need to maintain common policy and governance compliance and Central IT control over core services.
+- You need to maintain common policy and governance compliance and centralized IT control over core services.
 - Your industry depends on a complex platform which requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, oil and gas, or manufacturing.
 - Your existing IT governance policies require tighter parity with existing features, even during early stage adoption.
 

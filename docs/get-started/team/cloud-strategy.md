@@ -113,7 +113,7 @@ This exercise will surface conversations that can help build alignment among the
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 5: Establish business outcomes
 
@@ -158,7 +158,7 @@ Each member of the strategy team should review common myths and approaches to bu
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## Step 7: Support adoption through a regular cadence
 
@@ -182,7 +182,7 @@ After a go-forward decision has been agreed upon with the cloud strategy team, t
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud adoption team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud governance team <li> Cloud adoption team <li> Cloud center of excellence or central IT team |
 
 ## What's next
 

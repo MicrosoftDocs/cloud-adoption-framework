@@ -291,7 +291,7 @@ The responsibility for securing VNets is shared between Microsoft and you. Micro
 Although Microsoft invests heavily in protecting the cloud infrastructure, you must also protect your cloud services and resource groups. A multilayered approach to security provides the best defense. Putting a perimeter network in place is an important part of that defense strategy.
 
 - A perimeter network protects internal network resources from an untrusted network.
-- It's the outermost layer that's exposed to the internet. It generally sits between the internet and the enterprise infrastructure, usually with some form of protection on both sides.
+- It's the outermost layer that's exposed to the internet. It typically sits between the internet and the enterprise infrastructure, usually with some form of protection on both sides.
 - In a typical enterprise network topology, the core infrastructure is heavily fortified at the perimeters, with multiple layers of security devices. The boundary of each layer consists of devices and policy enforcement points.
 - Each layer can include a combination of the network security solutions that include firewalls, Denial of Service (DoS) prevention, intrusion detection/intrusion protection systems (IDS/IPS), and VPN devices.
 - Policy enforcement on the perimeter network can use firewall policies, access control lists (ACLs), or specific routing.

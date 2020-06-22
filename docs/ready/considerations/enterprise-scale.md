@@ -1,6 +1,6 @@
 ---
 title: Start with enterprise-scale landing zones
-description: Start with enterprise-scale landing zones
+description: Start with enterprise-scale landing zones.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2020
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Start with enterprise-scale landing zones
 
-At times, it is unwise for a cloud platform team to start small and scale. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to replicate the desired processes, tools, and architectures based on the new constraints of any cloud environment. To accelerate that learning process, a slightly different starting point is required. Comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, which is now more complex, more to follow later in this article.
+Sometimes it's unwise for a cloud platform team to start small and expand. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to replicate the desired processes, tools, and architectures based on the new constraints of any cloud environment. To accelerate that learning process, a slightly different starting point is required. Comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, which is now more complex, more to follow later in this article.
 
 ![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor-enterprise-scale.png)
 
@@ -25,7 +25,7 @@ When the adoption team has a midterm objective (within 24 months) to host more t
 
 ### Security, compliance, and culture
 
-Multiple business motivations might require an enterprise-scale landing zone and shared-services architecture before any adoption can begin. The need for an enterprise-scale landing zone solution can be obvious for companies whose businesses are built around sensitive data and complex interdependent architectures. It may also be obvious when companies require cloud environments that meet strict third-party requirements before using the cloud. Cultures with deeply rooted Central IT control models might also need an architecture that starts with centralized control to pass change-control requirements.
+Multiple business motivations might require an enterprise-scale landing zone and shared-services architecture before any adoption can begin. The need for an enterprise-scale landing zone solution can be obvious for companies whose businesses are built around sensitive data and complex interdependent architectures. It may also be obvious when companies require cloud environments that meet strict third-party requirements before using the cloud. Cultures with deeply rooted centralized IT control models might also need an architecture that starts with centralized control to pass change-control requirements.
 
 ### All-in on the cloud
 
@@ -44,7 +44,7 @@ Suggested skills:
 
 If these skills aren't available within the cloud platform team (through staff, partners, or other support mechanisms), a "start small and expand" approach is likely to reach enterprise readiness faster with a higher-quality output. Such an approach would allow for less costly, skills acquisition within the existing team.
 
-## Start with an enterprise-scale landing zone(s)
+## Start with an enterprise-scale landing zone
 
 Microsoft has a long history of investing in tools and approaches to make it easier for customers to develop and manage enterprise-scale landing zones. In recent years, this invest has resulted in guidance and tools across Azure. This investment approach continues and may result in regular updates to this section of this specific article.
 
@@ -52,7 +52,7 @@ Microsoft has a long history of investing in tools and approaches to make it eas
 
 Each of the following templates provides customers with an enterprise-scale initial landing zone including infrastructure patterns:
 
-- [ISO 27001 shared services](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-shared)
+- [ISO 27001 Shared Services](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-shared)
 - [ISO 27001 App Service Environment/SQL Database workload](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-ase-sql-workload)
 - [UK OFFICIAL and UK NHS governance](https://docs.microsoft.com/azure/governance/blueprints/samples/ukofficial)
 
@@ -60,8 +60,7 @@ The additional samples in the [Azure blueprint samples article](https://docs.mic
 
 ## Next steps
 
-Choose one of the enterprise-scale landing zone blueprints.
-From there, the same guidance in [Start small and expand](./index.md) can be used to expand your enterprise-scale landing zone(s) to fit your distinct requirements.
+Choose one of the enterprise-scale landing zones. From there, the same guidance in [Start small and expand](./index.md) can be used to expand your enterprise-scale landing zones to fit your distinct requirements.
 
 > [!div class="nextstepaction"]
 > [Resume the "start small and expand" guidance using your enterprise-scale landing zone as the initial source](./index.md)

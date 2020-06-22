@@ -1,6 +1,6 @@
 ---
 title: Design principles
-description: Design principles
+description: Design principles.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -31,10 +31,10 @@ Enterprise-scale architecture shouldn't consider any abstraction layers (such as
 
 Enterprise-scale architecture should focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations (such as moving virtual machines), and it shouldn't differentiate between old and new applications or infrastructure as a service or platform as a service applications. Ultimately, it should provide a safe and secure foundation for all application types to be deployed onto the customer Azure platform.
 
-## Aligning Azure-native design and road maps
+## Aligning Azure-native design and roadmaps
 
-The enterprise-scale architecture approach advocates using Azure-native platform services and capabilities whenever possible, which should align with with Azure platform road maps to ensure that new capabilities are available within customer environments. Azure platform road maps should help to inform the migration strategy and enterprise-scale trajectory.
+The enterprise-scale architecture approach advocates using Azure-native platform services and capabilities whenever possible, which should align with Azure platform roadmaps to ensure that new capabilities are available within customer environments. Azure platform roadmaps should help to inform the migration strategy and enterprise-scale trajectory.
 
 ## Recommendations
 
-Be prepared to trade off functionality, as it's unlikely that everything will be required on day one. Use preview services and take dependencies on service road maps in order to remove technical blockers.
+Be prepared to trade off functionality, as it's unlikely that everything will be required on day one. Use preview services and take dependencies on service roadmaps in order to remove technical blockers.

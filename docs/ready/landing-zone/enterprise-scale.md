@@ -39,7 +39,7 @@ This approach and architecture includes the following assumptions. If these assu
 - **Limited production scope:** This landing zones default configuration is more likely to meet your mission critical and sensitive data hosting needs.
 - **Advanced skills required:** Technical skill requirements are significantly higher for teams implementing this approach. Learn more about the technical skills requirements on the [enterprise-scale landing-zone overview](../enterprise-scale/index.md).
 
-If these assumptions align with your current adoption needs, then this implementation might be a good starting point for building your landing zone(s) and environments.
+If these assumptions align with your current adoption needs, then this implementation might be a good starting point for building your landing zones and environments.
 
 ## Decisions
 
@@ -47,9 +47,9 @@ For a full set of decisions that shape the enterprise-scale implementation, see 
 
 ## Customize or deploy a landing zone
 
-For an example of deploying the enterprise-scale implementation, see the [Contoso enterprise-scale implementation guide](https://github.com/Azure/Enterprise-Scale/blob/master/docs/reference/contoso/Readme.md).
+For an example of deploying the enterprise-scale implementation, see the [Contoso enterprise-scale implementation guide](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md).
 
-To customize the enterprise-scale architecture, see the [design guidelines](../enterprise-scale/design-guidelines.md)
+To customize the enterprise-scale architecture, see the [design guidelines](../enterprise-scale/design-guidelines.md).
 
 ## Next steps
 

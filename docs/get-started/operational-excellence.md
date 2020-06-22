@@ -48,7 +48,7 @@ A clear business strategy is the foundation for any digital transformation and o
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT team |
 
 ## Step 2: Develop an organizational change management plan to span cloud adoption
 
@@ -76,7 +76,7 @@ Organizational change management is an iterative approach to subtly realign peop
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or Central IT |
+| <li> Cloud strategy team | <li> Cloud adoption team <li> Cloud governance team <li> Cloud operations team <li> Cloud center of excellence or central IT team |
 
 ## Step 3: Manage change across cloud adoption efforts
 

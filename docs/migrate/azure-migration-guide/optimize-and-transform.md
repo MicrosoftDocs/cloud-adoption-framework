@@ -19,7 +19,7 @@ Now that you have migrated your services to Azure, the next phase includes revie
 
 This phase is also an opportunity to optimize your environment and perform possible transformations of the environment. For example, you may have performed a "rehost" migration, and now that your services are running on Azure you can revisit the solutions configuration or consumed services, and possibly perform some "refactoring" to modernize and increase the functionality of your solution.
 
-The remainder of this article focuses on tools for optimizing the migrated workload. When the balance of performance and cost have been reached, a workload is ready to be promoted to production. For guidance on promotion options, see the process improvement articles on [Optimize and promote](../migration-considerations/optimize/index.md).
+The remainder of this article focuses on tools for optimizing the migrated workload. When the proper balance between performance and cost has been reached, a workload is ready to be promoted to production. For guidance on promotion options, see the process improvement articles on [Optimize and promote](../migration-considerations/optimize/index.md).
 
 # [Right-size assets](#tab/optimize)
 

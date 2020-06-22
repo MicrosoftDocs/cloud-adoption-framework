@@ -253,7 +253,7 @@ With Always On enabled, Contoso can set up the Always On availability group that
 
 ## Step 3: Deploy the Azure Load Balancer
 
-Contoso admins now want to deploy an internal load balancer that sits in front of the cluster nodes. The load balancer listens for traffic, and directs it to the appropriate node.
+Contoso admins now want to deploy an internal load balancer in front of the cluster nodes. The load balancer listens for traffic, and directs it to the appropriate node.
 
 ![Load balancing](./media/contoso-migration-rehost-vm-sql-ag/architecture-lb.png)
 

@@ -209,6 +209,16 @@
          "source_path": "docs/getting-started/index.yml",
          "redirect_url": "/azure/cloud-adoption-framework/get-started/",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/landing-zone/first-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-apsec-devsecops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/organize/cloud-security-application-security-devsecops",
+         "redirect_document_id": false
       }
    ]
 }

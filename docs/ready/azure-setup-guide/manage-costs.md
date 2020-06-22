@@ -96,8 +96,7 @@ To submit a new support request:
 1. Go to **Help + Support**.
 2. Select **New support request**.
 
-**View a support request:**
-To view your support requests and their status:
+**View a support request:** To view your support requests and their status:
 
 1. Go to **Help + Support**.
 2. Select **All support requests**.

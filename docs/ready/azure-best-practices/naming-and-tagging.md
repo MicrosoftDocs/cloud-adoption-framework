@@ -59,17 +59,17 @@ Keep the length of naming components short to prevent exceeding resource name le
 
 | Naming component            | Description                                                                                                                                                                                                      | Examples                                         |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| Business unit               | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. | _fin_, _mktg_, _product_, _it_, _corp_           |
-| Subscription type           | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads.                                                       | _prod_, _shared_, _client_                       |
-| Application or service name | Name of the application, workload, or service that the resource is a part of.                                                                                                                                    | _navigator_, _emissions_, _sharepoint_, _hadoop_ |
-| Deployment environment      | The stage of the development lifecycle for the workload that the resource supports.                                                                                                                              | _prod_, _dev_, _qa_, _stage_, _test_             |
-| Region                      | The Azure region where the resource is deployed.                                                                                                                                                                 | _westus_, _eastus2_, _westeurope_, _usgovia_     |
+| Business unit               | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this component might represent a single corporate top-level organizational element. | `fin`, `mktg`, `product`, `it`, `corp`           |
+| Subscription type           | Summary description of the purpose of the subscription that contains the resource. Often broken down by deployment environment type or specific workloads.                                                       | `prod`, `shared`, `client`                       |
+| Application or service name | Name of the application, workload, or service that the resource is a part of.                                                                                                                                    | `navigator`, `emissions`, `sharepoint`, `hadoop` |
+| Deployment environment      | The stage of the development lifecycle for the workload that the resource supports.                                                                                                                              | `prod`, `dev`, `qa`, `stage`, `test`             |
+| Region                      | The Azure region where the resource is deployed.                                                                                                                                                                 | `westus`, `eastus2`, `westeurope`, `usgovia`     |
 
 ### Recommended resource-type prefixes
 
 Each workload can consist of many individual resources and services. Incorporating resource type prefixes into your resource names makes it easier to visually identify application or service components.
 
-The following list provides recommended Azure resource type prefixes to use when you define your naming conventions.
+This list recommends Azure resource type prefixes to use when you define your naming conventions.
 
 <!-- cSpell:ignore apim snet traf vmss stvm arcm ntfns sqldb psql sqldw sqlstrdb ssimp srch hbase appi migr -->
 
@@ -183,6 +183,7 @@ The following list provides recommended Azure resource type prefixes to use when
 | Asset type              | Name prefix |
 |-------------------------|-------------|
 | Blueprint               | bp-         |
+| Blueprint assignment    | bpa-        |
 | Key vault               | kv-         |
 | Log Analytics workspace | log-        |
 | Application Insights    | appi-       |
@@ -215,7 +216,7 @@ What tags you apply to resources and what tags are required or optional differs 
 | End date of the project   | Date when the application, workload, or service is scheduled for retirement.                                                                                                                                         | _EndDate_         | _{date}_                                                   |
 | Environment               | Deployment environment of the application, workload, or service.                                                                                                                                                     | _Env_             | _Prod_, _Dev_, _QA_, _Stage_, _Test_                       |
 | Owner name                | Owner of the application, workload, or service.                                                                                                                                                                      | _Owner_           | _{email}_                                                  |
-| Requester name            | User who requested the creation of this application.                                                                                                                                                                 | _Requestor_       | _{email}_                                                  |
+| Requester name            | User who requested the creation of this application.                                                                                                                                                                 | _Requester_       | _{email}_                                                  |
 | Service class             | Service level agreement level of the application, workload, or service.                                                                                                                                              | _ServiceClass_    | _Dev_, _Bronze_, _Silver_, _Gold_                          |
 | Start date of the project | Date when the application, workload, or service was first deployed.                                                                                                                                                  | _StartDate_       | _{date}_                                                   |
 

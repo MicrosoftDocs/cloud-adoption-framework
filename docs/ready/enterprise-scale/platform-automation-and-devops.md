@@ -1,6 +1,6 @@
 ---
 title: Platform automation and DevOps
-description: Platform automation and DevOps
+description: Platform automation and DevOps.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -34,7 +34,7 @@ Many traditional IT operating models aren't compatible with the cloud, and custo
 
 **Design recommendations:**
 
-Establish a cross-functional DevOps platform team to build, manage, and maintain your enterprise-scale architecture. This team should include members from your Central IT, security, compliance, and business units teams to ensure that a wide spectrum of your enterprise is represented. The list below presents a recommended set of DevOps roles for a central platform team:
+Establish a cross-functional DevOps platform team to build, manage, and maintain your enterprise-scale architecture. This team should include members from your Central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. The list below presents a recommended set of DevOps roles for a central platform team:
 
 - **PlatformOps** (platform operations) for:
 
@@ -84,8 +84,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 - Use a policy-driven approach with clear RBAC boundaries to centrally enforce consistency and security across application teams. This ensures a least privilege approach is taken by using a combination of RBAC assignments and Azure Policy, and that workloads are compliant with Azure Policy assignments at all times.
 
-- To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for application teams to draw upon.
-For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target enterprise-scale architecture.
+- To accelerate Azure adoption, the central platform team should establish a common set of templates and libraries for application teams to draw upon. For example, horizontal (cross-function) guidance can help to support migrations through subject matter expertise and to ensure alignment with the overall target enterprise-scale architecture.
 
 - Do not restrict application teams to use central artifacts or approaches as it hinders agility. Consistent baseline configurations can be enforced through a policy-driven infrastructure approach and RBAC assignments. This ensures app (business unit) teams are flexible enough to innovate while still able to draw from a predefined set of templates.
 
@@ -101,7 +100,7 @@ Central teams strive to maintain full control while app owners seek to maximize 
 
 **Design recommendations:**
 
-The list below presents a recommended distribution of responsibilities between Central IT and application teams striving to empower migration/transformation activities with minimal central dependencies while still supporting the centralized governance of security and operability across the entire estate.
+The list below presents a recommended distribution of responsibilities between the Central IT team and application teams striving to empower migration/transformation activities with minimal central dependencies while still supporting the centralized governance of security and operability across the entire estate.
 
 - **App functions**
 

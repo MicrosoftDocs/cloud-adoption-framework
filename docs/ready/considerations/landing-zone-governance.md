@@ -1,6 +1,6 @@
 ---
 title: Improve landing zone governance
-description: Improve landing zone governance
+description: Improve landing zone governance.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/15/2020

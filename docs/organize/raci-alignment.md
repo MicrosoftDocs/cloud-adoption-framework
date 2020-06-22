@@ -14,11 +14,11 @@ ms.custom: organize
 
 # Align responsibilities across teams
 
-Learn to align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed_ (RACI) parties. This article provides an example RACI matrix for the organizational structures described in [Establish team structures](./organization-structures.md):
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. This article provides an example RACI matrix for the organizational structures described in [Establish team structures](./organization-structures.md):
 
 - [Cloud adoption team only](#cloud-adoption-team-only)
 - [MVP best practice](#best-practice-minimum-viable-product-mvp)
-- [Central IT](#central-it)
+- [Central IT team](#central-it-team)
 - [Strategic alignment](#strategic-alignment)
 - [Operational alignment](#operational-alignment)
 - [Cloud center of excellence (CCoE)](#cloud-center-of-excellence-ccoe)
@@ -49,15 +49,15 @@ The last row of each table (except the first) contains a link to the most-aligne
 |                          |                                       |                                       |                                       |                                           |                                                                                   |                                                                               |                                                                               |                                                                                   |
 | Aligned cloud capability | [Cloud adoption](./cloud-adoption.md) | [Cloud strategy](./cloud-strategy.md) | [Cloud strategy](./cloud-strategy.md) | [Cloud operations](./cloud-operations.md) | [CCoE](./cloud-center-of-excellence.md) and [cloud governance](./cloud-governance.md) | [CCoE](./cloud-center-of-excellence.md) - [cloud platform](./cloud-platform.md) | [CCoE](./cloud-center-of-excellence.md) and [cloud platform](./cloud-platform.md) | [CCoE](./cloud-center-of-excellence.md) and [cloud automation](./cloud-automation.md) |
 
-## Central IT
+## Central IT team
 
 |                          | Solution delivery                     | Business alignment                    | Change management                     | Solution operations                       | Governance                                | Platform maturity             | Platform operations           | Platform automation           |
 | ------------------------ | ------------------------------------- | ------------------------------------- | ------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
 | Cloud adoption team      | Accountable                           | Accountable                           | Responsible                           | Responsible                               | Informed                                  | Informed                      | Informed                      | Informed                      |
 | Cloud governance team    | Consulted                             | Informed                              | Informed                              | Informed                                  | Accountable                               | Consulted                     | Responsible                   | Informed                      |
-| Central IT               | Consulted                             | Informed                              | Accountable                           | Accountable                               | Responsible                               | Accountable                   | Accountable                   | Accountable                   |
+| Central IT team               | Consulted                             | Informed                              | Accountable                           | Accountable                               | Responsible                               | Accountable                   | Accountable                   | Accountable                   |
 |                          |                                       |                                       |                                       |                                           |                                           |                               |                               |                               |
-| Aligned cloud capability | [Cloud adoption](./cloud-adoption.md) | [Cloud strategy](./cloud-strategy.md) | [Cloud strategy](./cloud-strategy.md) | [Cloud operations](./cloud-operations.md) | [Cloud governance](./cloud-governance.md) | [Central IT](./central-it.md) | [Central IT](./central-it.md) | [Central IT](./central-it.md) |
+| Aligned cloud capability | [Cloud adoption](./cloud-adoption.md) | [Cloud strategy](./cloud-strategy.md) | [Cloud strategy](./cloud-strategy.md) | [Cloud operations](./cloud-operations.md) | [Cloud governance](./cloud-governance.md) | [Central IT team](./central-it.md) | [Central IT team](./central-it.md) | [Central IT team](./central-it.md) |
 
 ## Strategic alignment
 
