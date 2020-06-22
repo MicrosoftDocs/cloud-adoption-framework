@@ -10,8 +10,6 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
-<!-- cSpell:ignore contosodevmigration contosomigration onmicrosoft visualstudio sourceconnectionstring CONTOSOTFS DACPAC SQLDB SQLSERVERNAME INSTANCENAME azuredevopsmigration validateonly -->
-
 # Refactor a Team Foundation Server deployment to Azure DevOps Services
 
 This article shows how the fictional company Contoso refactors their on-premises Team Foundation Server (TFS) deployment by migrating it to Azure DevOps Services in Azure. The Contoso development team has used TFS for team collaboration and source control for the past five years. Now, they want to move to a cloud-based solution for dev and test work, and for source control. Azure DevOps Services will play a role as they move to an Azure DevOps model, and develop new cloud-native apps.
@@ -62,8 +60,6 @@ Contoso will complete the migration process as follows:
 ## Prerequisites
 
 Here's what Contoso needs to run this scenario.
-
-<!-- markdownlint-disable MD033 -->
 
 | **Requirements** | **Details** |
 | --- | --- |

@@ -10,8 +10,6 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore givenscj WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless SQLMI iisreset -->
-
 # Rehost an on-premises app on an Azure VM and SQL Database Managed Instance
 
 This article shows how the fictional company Contoso migrates a two-tier Windows .NET front-end app running on VMware VMs to an Azure VM using the Azure Migrate service. It also shows how Contoso migrates the app database to Azure SQL Database Managed Instance.
@@ -81,8 +79,6 @@ As part of the solution design process, Contoso did a feature comparison between
 
 Contoso evaluates the proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 | **Consideration** | **Details** |
 | --- | --- |
 | **Pros** | WEBVM will be moved to Azure without changes, making the migration simple. <br><br> SQL Managed Instance supports Contoso's technical requirements and goals. <br><br> Managed Instance will provide 100% compatibility with their current deployment, while moving them away from SQL Server 2008 R2. <br><br> They can take advantage of their investment in Software Assurance and using the Azure Hybrid Benefit for SQL Server and Windows Server. <br><br> They can reuse the Azure Database Migration Service for additional future migrations. <br><br> SQL Managed Instance has built-in fault tolerance that Contoso doesn't need to configures. This ensures that the data tier is no longer a single point of failover. |
@@ -111,8 +107,6 @@ Contoso will migrate the web and data tiers of its SmartHotel360 app to Azure by
 ## Prerequisites
 
 Contoso and other users must meet the following prerequisites for this scenario:
-
-<!-- markdownlint-disable MD033 -->
 
 | Requirements | Details |
 | --- | --- |

@@ -28,8 +28,6 @@ The IT leadership team has worked closely with business partners to understand w
 
 The Contoso cloud team has pinned down goals for this migration and will use them to determine the best migration method.
 
-<!-- markdownlint-disable MD033 -->
-
 **Requirements** | **Details**
 --- | ---
 **Upgrades** | Contoso would like to ensure that they have the latest patches installed when available but do not want to manage these updates.
@@ -37,8 +35,6 @@ The Contoso cloud team has pinned down goals for this migration and will use the
 **Backup and restore** | Contoso is looking for the ability to do point in time restores when and if data updates fail or are corrupted for any reason.
 **Azure** | They would like to be able to monitor the system and fire alerts based on performance and security
 **Performance** | In some cases they will have parallel data processing pipelines in different geographic regions and will need to be able to read data from those regions.
-
-<!-- markdownlint-enable MD033 -->
 
 ## Solution design
 
@@ -72,14 +68,10 @@ As part of the solution design process Contoso did a review of the features in A
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 **Consideration** | **Details**
 --- | ---
 **Pros** | All currently required and in use features are available in Azure PostgreSQL.<br/><br/>
 **Cons** | Contoso will still need to do manual migration from major version of PostgreSQL.
-
-<!-- markdownlint-enable MD033 -->
 
 ## Proposed architecture
 

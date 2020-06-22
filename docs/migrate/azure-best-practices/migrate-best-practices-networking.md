@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-<!-- cSpell:ignore NSGs CIDR FQDNs BGP's ACLs WAFs -->
-
 # Best practices to set up networking for workloads migrated to Azure
 
 As you plan and design for migration, in addition to the migration itself, one of the most critical steps is the design and implementation of Azure networking. This article describes best practices for networking when migrating to IaaS and PaaS implementations in Azure.
@@ -371,8 +369,6 @@ _Application security group example_
 - In our example, each network interface belongs to only one application security group, but in fact an interface can belong to multiple groups, in accordance with Azure limits.
 - None of the network interfaces have an associated NSG. NSG1 is associated to both subnets and contains the following rules.
 
-<!-- markdownlint-disable MD033 -->
-
 | **Rule name** | **Purpose** | **Details** |
 | --- | --- | --- |
 | `Allow-HTTP-Inbound-Internet` | Allow traffic from the internet to the web servers. Inbound traffic from the internet is denied by the `DenyAllInbound` default security rule, so no additional rule is needed for the `AsgLogic` or `AsgDb` application security groups. | Priority: `100`<br><br> Source: `internet`<br/><br/> Source port: `*`<br/><br/> Destination: `AsgWeb`<br/><br/> Destination port: `80`<br/><br/> Protocol: `TCP`<br/><br/> Access: `Allow` |
@@ -491,8 +487,6 @@ For more complex network topologies, you might use security products from Micros
 ## Best practice: Implement firewalls and NVAs in hub networks
 
 In the hub, the perimeter network (with access to the internet) is normally managed through an Azure firewall, a firewall farm, or a web application firewall (WAF). Consider the following comparisons.
-
-<!-- markdownlint-disable MD033 -->
 
 | **Firewall type** | **Details** |
 | --- | --- |

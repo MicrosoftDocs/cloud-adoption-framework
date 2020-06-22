@@ -10,10 +10,6 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
-<!-- docsTest:ignore SmartHotel360 SmartHotel360-Backend Pet.Checker vcenter.contoso.com contoso-datacenter git aks ContosoRG PetCheckerFunction -->
-
-<!-- cSpell:ignore givenscj WEBVM SQLVM contosohost vcenter contosodc smarthotel contososmarthotel smarthotelcontoso smarthotelpetchecker petchecker smarthotelakseus smarthotelacreus smarthotelpets kubectl contosodevops visualstudio azuredeploy cloudapp smarthotelsettingsurl appsettings -->
-
 # Rebuild an on-premises app on Azure
 
 This article demonstrates how the fictional company Contoso rebuilds a two-tier Windows .NET app running on VMware VMs as part of a migration to Azure. Contoso migrates the app's front-end VM to an Azure App Service web app. The app back end is built using microservices deployed to containers managed by Azure Kubernetes Service (AKS). The site interacts with Azure Functions to provide pet photo functionality.
@@ -70,8 +66,6 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 Contoso evaluates the proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 **Consideration** | **Details**
 --- | ---
 **Pros** | Using PaaS and serverless solutions for the end-to-end deployment significantly reduces management time that Contoso must provide. <br><br> Moving to a microservices-based architecture allows Contoso to easily extend the solution over time. <br><br> New functionality can be brought online without disrupting any of the existing solutions code bases. <br><br> The web app will be configured with multiple instances with no single point of failure. <br><br> Autoscaling will be enabled so that the app can handle differing traffic volumes. <br><br> With the move to PaaS services, Contoso can retire out-of-date solutions running on Windows Server 2008 R2 operating system. <br><br> Azure Cosmos DB has built-in fault tolerance, which requires no configuration by Contoso. This means that the data tier is no longer a single point of failover.
@@ -101,8 +95,6 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 ## Prerequisites
 
 Here's what Contoso needs for this scenario:
-
-<!-- markdownlint-disable MD033 -->
 
 | **Requirements** | **Details** |
 | --- | --- |
