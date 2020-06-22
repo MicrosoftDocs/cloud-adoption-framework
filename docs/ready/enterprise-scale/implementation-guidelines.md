@@ -93,21 +93,21 @@ The following list shows Azure Policy assignments used when implementing network
 
 ### Security, governance, and compliance
 
-1. Define and apply a [Service Enablement Framework](./G-Security-Governance-and-Compliance.md#5-service-enablement-framework) to ensure Azure services meet enterprise security and governance requirements.
+1. Define and apply a [Service Enablement Framework](./security-governance-and-compliance.md#service-enablement-framework) to ensure Azure services meet enterprise security and governance requirements.
 
-2. Create custom Azure RBAC role definitions
+2. Create custom Azure RBAC role definitions.
 
-3. Enable Azure AD PIM and discover Azure resources to facilitate privileged identity management
+3. Enable Azure AD PIM and discover Azure resources to facilitate privileged identity management.
 
-4. Create Azure AD only groups for the Azure control plane management of resources using Azure AD PIM
+4. Create Azure-AD-only groups for the Azure control plane management of resources using Azure AD PIM.
 
-5. Apply Azure Policy listed in the first table below to ensure Azure services are compliant to enterprise requirements
+5. Apply policies listed in the first table below to ensure Azure services are compliant to enterprise requirements.
 
-6. Define a naming convention and enforce it via Azure Policy
+6. Define a naming convention and enforce it via Azure Policy.
 
-7. Create a policy matrix at all scopes e.g. enable monitoring for all Azure services via Azure Policy
+7. Create a policy matrix at all scopes (for example, enable monitoring for all Azure services via Azure Policy).
 
-Detailed list of Azure Policies should be used to enforce company wide compliance status.
+The following policies should be used to enforce company-wide compliance status.
 
 | Name                       | Description                                                        |
 |----------------------------|--------------------------------------------------------------------|
@@ -127,55 +127,55 @@ Detailed list of Azure Policies should be used to enforce company wide complianc
 
 ### Platform indentity
 
-1. If you decide to create the indentity ressources via Azure Policies, assign the Policies listed in the table below to the "Indentity" subscription. By doing this Azure Policy will ensure the resource in the list below are created based on parameters provided.
+1. If you decide to create the identity resources via Azure Policy, assign the policies listed in the table below to the identity subscription. By doing this, Azure Policy ensures the resources in the list below are created based on the parameters provided.
 
-2. Deploy the AD domain controllers
+2. Deploy the AD domain controllers.
 
-Detailed list of Azure Policies that can be used when implementing identity resources for an enterprise-scale deployment.
+The following list shows policies that can be used when implementing identity resources for an enterprise-scale deployment.
 
 | Name                         | Description                                                               |
 |------------------------------|---------------------------------------------------------------------------|
-| [DataProtectionSecurityCenter](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-DataProtectionSecurityCenter.parameters.json) | ASC DataProtection, utomatically created by Azure Security Center         |
-| [Deploy-vNet-Identity](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vNet.parameters.json)         | Deploys a VNet into the idenity subscription to host for explample DC     |
+| [DataProtectionSecurityCenter](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-DataProtectionSecurityCenter.parameters.json) | ASC DataProtection, automatically created by Azure Security Center         |
+| [Deploy-VNet-Identity](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vNet.parameters.json)         | Deploys a VNet into the identity subscription to host for example DC.     |
 
 ### Platform management and monitoring
 
-1. Create Policy Compliance and Security Dashboards for organizational and resource centric views
+1. Create policy compliance and security dashboards for organizational and resource-centric views.
 
-2. Create a workflow for platform secrets (service principles and automation account) and key rollover
+2. Create a workflow for platform secrets (service principals and automation account) and key rollover.
 
-3. Setup long-term archiving and retention for logs within Log Analytics
+3. Setup long-term archiving and retention for logs within Log Analytics.
 
-4. Setup Azure Key Vaults to store platform secrets
+4. Setup Azure Key Vault to store platform secrets.
 
-5. If you decide to create the platform management ressources via Azure Policies, assign the Policies listed in the table below to the "Management" subscription. By doing this Azure Policy will ensure the resource in the list below are created based on parameters provided.
+5. If you decide to create the platform management resources via Azure Policy, assign the policies listed in the table below to the management subscription. By doing this, Azure Policy ensures the resource in the list below are created based on parameters provided.
 
 | Name                   | Description                                                                            |
 |------------------------|----------------------------------------------------------------------------------------|
 | [Deploy-LA-Config](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-LA-Config.parameters.json)       | Configuration of the Log Analytics workspace                                           |
 | [Deploy-Log-Analytics](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-Log-Analytics.parameters.json)   | Deploys a Log Analytics Workspace |
 
-## **File->New->Region**
+## **File-> New-> Region**
 
-1. If you decide to create the networking ressources via Azure Policies, assign the Policies listed in the table below to the "Connectivity" subscription. By doing this Azure Policy will ensure the resource in the list below are created based on parameters provided.
-   * Within the "Connectivity" subscription, create a new VHub within the existing Azure VWAN.
-   * Secure VHub by deploying an Azure Firewall within the VHub and link existing or new Firewall Policies to Azure Firewall.
-   * Ensure all connected VNets to a secure VHub are protected by Azure Firewall
+1. If you decide to create the networking resources via Azure Policy, assign the policies listed in the table below to the connectivity subscription. By doing this, Azure Policy will ensure the resource in the list below are created based on parameters provided.
+   - Within the connectivity subscription, create a new virtual hub within the existing virtual WAN.
+   - Secure virtual hub by deploying Azure Firewall within the virtual hub and link existing or new firewall policies to Azure Firewall.
+   - Ensure all VNets connected to a secure virtual hub are protected by Azure Firewall.
 
-2. Connect the VHub to on-premises using ExpressRoute or alternatively via VPN.
+2. Connect the virtual hub to the on-premises network via either ExpressRoute or VPN.
 
-3. Protect VNet traffic across VHubs with NSGs.
+3. Protect VNet traffic across virtual hubs via NSGs.
 
-4. (Optional) Setup encryption over ExpressRoute Private Peering.
+4. (Optional:) Set up encryption over ExpressRoute private peering.
 
 | Name                     | Description                                                                            |
 |--------------------------|----------------------------------------------------------------------------------------|
-| [Deploy-vHUB](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vHUB.parameters.json)        | This Policy deploys a VHub, Azure Firewall, Gateways(VPN/ER) and configures default route on connected VNets to Azure Firewall|
+| [Deploy-VHub](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-vHUB.parameters.json)        | This policy deploys a virtual hub, Azure Firewall, gateways (VPN/ExpressRoute) and configures default route on connected VNets to Azure Firewall. |
 
-## File->New->"Landing zone" for applications and workloads
+## File -> New -> Landing Zone for applications and workloads
 
-1. Create a subscription and move it under the "Landing Zones" management group scope
+1. Create a subscription and move it under the `Landing Zones` management group scope.
 
-2. Create Azure AD groups for the subscription (N) – Owner, Reader, Contributor etc.
+2. Create Azure AD groups for the subscription – Owner, Reader, Contributor, etc.
 
 3. Create Azure AD PIM entitlements for established Azure AD groups.
