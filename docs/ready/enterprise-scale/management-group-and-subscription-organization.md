@@ -61,7 +61,8 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 - Subscriptions provide a management boundary for governance and isolation, creating a clear separation of concerns.
 
 - There is a manual process (planned future automation) which can be conducted to limit an Azure AD tenant to only use enterprise enrollment subscriptions. This prevents creation of MSDN subscriptions at the root management group scope.
-  **Design recommendations:**
+
+**Design recommendations:**
 
 - Treat subscriptions as a democratized unit of management aligned with business needs and priorities.
 
@@ -113,7 +114,7 @@ Each Azure region contains a finite number of resources. When considering an ent
 
 - Establish a dashboard with custom views to monitor utilized capacity levels. Set up alerts if capacity utilization is reaching critical levels (for example, 90 percent CPU utilization).
 
-- Raise support requests for quota increase as a part of subscription provisioning (for example, total available VM cores within a subscription). This ensures your quota limits are set before your workloads require to go over the default limits.
+- Raise support requests for quota increase as a part of subscription provisioning (for example, total available VM cores within a subscription). This ensures your quota limits are set before your workloads require going over the default limits.
 
 - Ensure required services and features are available within the chosen deployment regions.
 
