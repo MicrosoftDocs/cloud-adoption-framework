@@ -149,9 +149,9 @@ _Figure 3: Sample network topology._
 
 - When deploying third-party networking technologies and NVAs, follow the third-party vendor's guidance to ensure there aren't conflicting configurations with Azure networking.
 
-- Do not build a transit network on top of Azure Virtual WAN, because Virtual WAN satisfies all transitive network topology requirements including the ability to use third-party NVAs.
+- Do not build a transit network on top of Azure Virtual WAN, because Virtual WAN satisfies all transitive network topology requirements including the ability to use third-party NVAs. This is because the work would be redundant and increase complexity. 
 
-- Don't use existing on-premises networks like multiprotocol label switching (MPLS) to connect Azure resources across Azure regions, as Azure networking technologies support the interconnection of Azure resources across regions through the Microsoft backbone.
+- Don't use existing on-premises networks like multiprotocol label switching (MPLS) to connect Azure resources across Azure regions, as Azure networking technologies support the interconnection of Azure resources across regions through the Microsoft backbone. This is because of the performance and uptime characteristics of the Microsoft backbone as well as routing simplicity.
 
 - For brownfield scenarios where you're migrating from a hub-and-spoke network topology not based on Virtual WAN, see [Migrate to Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/migrate-from-hub-spoke-topology).
 
@@ -218,7 +218,7 @@ _Figure 4: A customer-managed Azure network topology._
 
   - There is a heavy dependency on centralized NVAs and complex/granular routing.
 
-- For regional deployments, primarily use the hub-and-spoke topology, with landing zones VNets connecting with virtual network peering to a central hub VNet for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via NVA, as depicted in the figure below.
+- For regional deployments, primarily use the hub-and-spoke topology, with landing zones VNets connecting with virtual network peering to a central hub VNet for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via NVA, as depicted in the figure below. This allows for appropriate traffic control to meet most requirements for segmentation and inspection.
 
 ![Network topology and connectivity](./media/hub-and-spoke-topology.png)
 
@@ -395,7 +395,7 @@ This section explores key recommendations to deliver internal and external facin
 
 **Design recommendations:**
 
-- App delivery for both internal- and external-facing apps should be performed within landing zones.
+- App delivery for both internal- and external-facing apps should be performed within landing zones. This is because app delivery is part of the application.
 
 - For secure delivery of HTTP/S apps, use app gateway v2 and ensure that WAF protection/policies are enabled.
 
