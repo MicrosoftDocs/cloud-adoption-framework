@@ -65,7 +65,7 @@ DNS is a critical design topic in the overall enterprise-scale architecture, and
 
 - For environments where name resolution across Azure and on-premises is required, use existing DNS infrastructure (for example, Active Directory integrated DNS) deployed onto at least two Azure VMs and configure DNS settings in VNets to use those DNS servers.
 
-  - Azure Private DNS can still be used where the Azure Private DNS zone is linked to the VNets and DNS servers are used as hybrid resolvers with conditional forwarding to on-premises DNS names (such as `onprem.contoso.com`) using on-premises DNS servers. On-premises servers can be configured with conditional forwarders to resolver VMs in Azure for the Azure Private DNS zone (for example, `azure.contoso.com`).
+- Azure Private DNS can still be used where the Azure Private DNS zone is linked to the VNets and DNS servers are used as hybrid resolvers with conditional forwarding to on-premises DNS names (such as `onprem.contoso.com`) using on-premises DNS servers. On-premises servers can be configured with conditional forwarders to resolver VMs in Azure for the Azure Private DNS zone (for example, `azure.contoso.com`).
 
 - Special workloads that require and deploy their own DNS (such as Red Hat OpenShift) should use their preferred DNS solution.
 
@@ -371,7 +371,8 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - If third-party NVAs are required for east-west and/or south-north traffic protection/filtering:
 
-- For Virtual WAN network topologies, deploy the NVAs to a separate VNet (for example, NVA VNet), and connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs, as described in this [article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-route-table-portal). For non-Virtual WAN network topologies, deploy the third-party NVAs in the central hub VNet.
+   - For Virtual WAN network topologies, deploy the NVAs to a separate VNet (for example, NVA VNet), and connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs, as described in this [article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-route-table-portal).
+   - For non-Virtual WAN network topologies, deploy the third-party NVAs in the central hub VNet.
 
 - If third-party NVAs are required for inbound HTTP/S connections, they should be deployed within a landing zone VNet and together with the apps that they're protecting and exposing to the internet.
 
