@@ -125,7 +125,7 @@ AVS private clouds require a minimum of a /22 CIDR network address block for sub
 
 With their network and IP address planning completed, Contoso will next focus on provisioning the AVS service in the West US Azure region. AVS gives Contoso the ability to deploy a vSphere cluster in Azure. 
 
-An AVS private cloud is an isolated VMware stack that supports ESXi hosts, vCenter, vSAN, and NSX. The stack runs on dedicated and isolated bare metal hardware nodes in an Azure region. The minimum initial deployment for an AVS private cloud is three hosts. Additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster.
+An AVS private cloud is an isolated VMware SDDC that supports ESXi hosts, vCenter, vSAN, and NSX. The stack runs on dedicated and isolated bare metal hardware nodes in an Azure region. The minimum initial deployment for an AVS private cloud is three hosts. Additional hosts can be added one at a time, up to a maximum of 16 hosts per cluster.
 
 >![NOTE]
 > Learn more about AVS [private cloud concepts](https://docs.microsoft.com/azure/azure-vmware/concepts-private-clouds-clusters).
@@ -191,13 +191,16 @@ To move VMware VMs to Azure using HCX, Contoso will need to follow these high-le
 
 #### Install and configure VMware HCX for Public Cloud
 
-[VMware HCX](https://cloud.vmware.com/vmware-hcx) is an add-on to the VMware Cloud (VMC) and Software-Defined Data Center (SDDC). After enabling the HCX add-on from the VMC console, the HCX Cloud components are deployed and the HCX plug-in is available in the vSphere Client.
+[VMware HCX](https://cloud.vmware.com/vmware-hcx) is a VMware product part of the Azure VMware Solutions default installation. By default HCX Advanced is installed but can be upgraded to HCX Enterprise for more features as an additional feature. AVS automates the "Cloud Manager" component of HCX in AVS and provides the customer activation keys and download link to the "Connector" HCX appliance required to be configured on the on-premise side and in the customers vCenter domain. These will then be paired with the AVs cloud appliance and customers can start to enjoy services like migration and L2 stretch if so desired.
 
 - Contoso is deploying the HCX using an OVA provided by VMware.
 
 ![HCX OVA](./media/contoso-migration-vmware-to-azure/configure-template.png)
 
-In order to use HCX for migrations administrators [must install the HCX plug-in](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html) on both the Source and Target data center vSphere.  In public cloud deployments, HCX is installed and configured by the public cloud provider.
+Please refer to this guide for configuring HCX for your AVS Private cloud.
+
+>![NOTE]
+> Learn how to install HCX for AVS using this [tutorial](https://docs.microsoft.com/azure/azure-vmware/hybrid-cloud-extension-installation).
 
 - During the configuration of HCX, Contoso has selected to enable migration among other options including Disaster Recovery.
 
