@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- cSpell:ignore givenscj WEBVM SQLVM contosohost vcenter contosodc AOAG SQLAOG SQLAOGAVSET contosoadmin contosocloudwitness MSSQLSERVER BEPOOL contosovmsacc SHAOG NSGs inetpub iisreset -->
+
 # Rehost an on-premises app with Azure Virtual Machines and SQL Server Always On availability groups
 
 This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET app running on VMware virtual machines (VMs) as part of a migration to Azure. Contoso migrates the app front-end VM to an Azure VM, and the app database to an Azure SQL Server VM, running in a Windows Server failover cluster with SQL Server Always On availability groups.
@@ -83,6 +85,8 @@ As part of the solution design process, Contoso did a feature comparison between
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
+<!-- markdownlint-disable MD033 -->
+
 **Consideration** | **Details**
 --- | ---
 **Pros** | WEBVM will be moved to Azure without changes, making the migration simple.<br/><br/> The SQL Server tier will run on SQL Server 2017 and Windows Server 2016. This retires their current Windows Server 2008 R2 operating system, and running SQL Server 2017 supports Contoso's technical requirements and goals. IT provides 100% compatibility while moving away from SQL Server 2008 R2.<br/><br/> Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit.<br/><br/> A high availability SQL Server deployment in Azure provides fault tolerance so that the app data tier is no longer a single point of failover.
@@ -115,6 +119,8 @@ Contoso admins will migrate the app VMs to Azure.
 ## Prerequisites
 
 Here's what Contoso needs to do for this scenario.
+
+<!-- markdownlint-disable MD033 -->
 
 **Requirements** | **Details**
 --- | ---

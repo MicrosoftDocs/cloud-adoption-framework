@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc smarthotel SHWEB SHWCF -->
+
 # Refactor an on-premises app to an Azure App Service web app and Azure SQL database
 
 This article demonstrates how the fictional company Contoso refactors a two-tier Windows .NET app running on VMware VMs as part of a migration to Azure. They migrate the app front-end VM to an Azure App Service web app, and the app database to an Azure SQL database.
@@ -29,6 +31,8 @@ The IT leadership team has worked closely with business partners to understand w
 ## Migration goals
 
 The Contoso cloud team has pinned down goals for this migration. These goals were used to determine the best migration method.
+
+<!-- markdownlint-disable MD033 -->
 
 **Requirements** | **Details**
 --- | ---
@@ -66,6 +70,8 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
+<!-- markdownlint-disable MD033 -->
+
 **Consideration** | **Details**
 --- | ---
 **Pros** | The SmartHotel360 app code doesn't require changes for migration to Azure. <br><br> Contoso can take advantage of their investment in Software Assurance using the Azure Hybrid Benefit for both SQL Server and Windows Server. <br><br> After the migration, Windows Server 2008 R2 won't need to be supported. For more information, see the [Microsoft Lifecycle Policy](https://aka.ms/lifecycle). <br><br> Contoso can configure the web tier of the app with multiple instances, so that it's no longer a single point of failure. <br><br> The database will no longer depend on the aging SQL Server 2008 R2. <br><br> SQL Database supports the technical requirements. Contoso assessed the on-premises database using the Data Migration Assistant and found that it's compatible. <br><br> Azure SQL Database has built-in fault tolerance that Contoso doesn't have to set up. This ensures that the data tier is no longer a single point of failover. <br><br> If Contoso uses the Azure Database Migration Service to migrate their database, it will have the infrastructure ready for migrating databases at scale.
@@ -100,10 +106,14 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 Here's Contoso needs to run this scenario:
 
+<!-- markdownlint-disable MD033 -->
+
 **Requirements** | **Details**
 --- | ---
 **Azure subscription** | Contoso created subscriptions during an early article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.
 **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure.
+
+<!--markdownlint-enable MD033 -->
 
 ## Scenario steps
 

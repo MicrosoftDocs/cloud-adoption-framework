@@ -49,6 +49,8 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 **Management** | Resource Management groups will need to be created for the various departments along with Resource Groups to managed all databases that are migrated. All resources will need to be tagged with department information for charge-back requirements.
 **Limitations** | Initially, not all branch offices that run applications will have a direct ExpressRoute link to Azure, so these offices will need to connect through Virtual Network Gateways.
 
+<!-- markdownlint-enable MD033 -->
+
 ## Solution design
 
 Contoso has already performed a [migration assessment](https://docs.microsoft.com//azure/cloud-adoption-framework/plan/contoso-migration-assessment) of their digital estate using [Azure Migrate](https://docs.microsoft.com//azure/migrate/migrate-services-overview) with the [Service Map](https://docs.microsoft.com//azure/azure-monitor/insights/service-map) feature.
@@ -114,6 +116,8 @@ As the databases were inventoried each type of database was reviewed to determin
 **MySQL** | All supported versions, upgrade to a supported version before migration | MySQL Database for Azure (Paas) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online)
 **PostgreSQL** | All supported versions, upgrade to a supported version before migration | PostgreSQL Database for Azure (PaaS) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)
 **MariaDB** | All supported versions, upgrade to a supported version before migration | MariaDB Database for Azure (PaaS) | [Guide](https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?step=1)
+
+<!-- markdownlint-enable MD033 -->
 
 #### Step 4 - Migration Planning
 

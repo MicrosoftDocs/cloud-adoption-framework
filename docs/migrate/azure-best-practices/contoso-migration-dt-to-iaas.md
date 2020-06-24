@@ -9,6 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 services: azure-migrate
 ---
+
+<!-- cSpell:ignore deltadan contoso contoso's host vcenter contosodc NSGs agentless -->
+
 # Rehost on-premises DevTest environment on Azure VMs
 
 This article demonstrates how the fictional company Contoso rehosts their DevTest environment for two applications running on VMware VMs, by migrating to Azure VMs.
@@ -77,6 +80,8 @@ To support ongoing development Contoso has decided to continue use of the existi
 
 Contoso evaluates the proposed design by putting together a pros and cons list.
 
+<!-- markdownlint-disable MD033 -->
+
 **Consideration** | **Details**
 --- | ---
 **Pros** | All of the development VMs will be moved to Azure without changes, making the migration simple.<br/><br/> Since Contoso is using a lift and shift approach for both sets of VMs, no special configuration or migration tools are needed for the app database.<br/><br/> Contoso can take advantage of their investment in the Dev/Test subscription to save on licensing fees.<br/><br/> Contoso will retain full control of the app VMs in Azure.<br/><br/>Developers will be provided with rights to the subscription which empowers them to create new resources without waiting for IT to respond to their requests
@@ -85,6 +90,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 > [!NOTE]
 > Contoso could address the Cons in their list by using [Azure DevTest Labs](https://azure.microsoft.com/services/devtest-lab/).
 
+<!-- markdownlint-enable MD033 -->
 
 ### Migration process
 
@@ -115,6 +121,8 @@ Here's what Contoso needs to run this scenario.
 **Azure Dev/Test subscription** | Contoso creates a [DevTest subscription](https://azure.microsoft.com/offers/ms-azr-0023p/) to take advantage of up to 80% reduction in costs.<br/><br/> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial).<br/><br/> If you create a free account, you're the administrator of your subscription and can perform all actions.<br/><br/> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions.<br/><br/> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control).
 **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure.<br/><br/> Learn more about specific [prerequisites](https://docs.microsoft.com/azure/migrate/dt-to-iaas#prerequisites) requirements for Azure Migrate Server Migration.
 **On-premises servers** | On-premises vCenter Servers should be running version 5.5, 6.0, 6.5 or 6.7<br/><br/> ESXi hosts should run version 5.5, 6.0, 6.5 or 6.7<br/><br/> One or more VMware VMs should be running on the ESXi host.
+
+<!-- markdownlint-enable MD033 -->
 
 ## Scenario steps
 

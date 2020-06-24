@@ -31,6 +31,8 @@ The IT leadership team has worked closely with business partners to understand w
 
 The Contoso cloud team has pinned down goals for this migration and will use them to determine the best migration method.
 
+<!-- markdownlint-disable MD033 -->
+
 **Requirements** | **Details**
 --- | ---
 **Availability** | Currently internal staff are having a hard time with the hosting environment for the MariaDB instance. Contoso would like to have as close to 99.99% availability for the database layer.
@@ -40,6 +42,8 @@ The Contoso cloud team has pinned down goals for this migration and will use the
 **Monitoring** | Contoso currently uses tools to monitor the metrics of the MariaDB and provide notifications when CPU, Memory or storage are having issues.  They would like to have this same capability in Azure.
 **Business Continuity** | The HR application data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like as minimum of downtime as possible.
 **Azure** | Contoso wants to move the app to Azure, but doesn't want to run it on VMs. Contoso requirements state to use Azure PaaS services for the data tier.
+
+<!-- markdownlint-enable MD033 -->
 
 ## Solution design
 
@@ -78,6 +82,8 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 --- | ---
 **Pros** | Azure Database for MariaDB offers a 99.99% financially backed service level agreement (SLA) for [high availability](https://docs.microsoft.com/azure/mariadb/concepts-high-availability).<br/><br/>Azure offers the ability to scale up or down during peak load times each quarter.  Contoso can save even more buy purchasing [reserved capacity](https://docs.microsoft.com/azure/mariadb/concept-reserved-pricing).<br/><br/>Azure provides Point-in-time restore and Geo-restore capabilities for Azure Database for MariaDB.<br/><br/>
 **Cons** | Contoso is limited to the MariaDB release versions that are supported in Azure which are currently 10.2 and 10.3.<br/><br/>Azure Database for MariaDB does have some [limitations](https://docs.microsoft.com/azure/mariadb/concepts-limits) such as scaling down storage.
+
+<!-- markdownlint-enable MD033 -->
 
 ## Proposed architecture
 

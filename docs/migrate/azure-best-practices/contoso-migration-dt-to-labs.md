@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- cSpell:ignore deltadan VMware contoso contoso's host vcenter -->
+
 # Moving DevTest to Azure using DevTest Labs (Scenario)
 This article demonstrates how the fictional company Contoso moves their DevTest environment to Azure using DevTest Labs.
 
@@ -88,6 +90,8 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 **Pros** | All of the current development VMs (application and database), will be replaced by new VMs running in Azure DevTest Labs. This means they can take advantage of the features of a purpose built cloud development environment.<br/><br/> Contoso can take advantage of their investment in the Dev/Test subscription to save on licensing fees.<br/><br/> Contoso will retain full control of the app VMs in Azure.<br/><br/>Developers will be provided with rights to the subscription which empowers them to create new resources without waiting for IT to respond to their requests
 **Cons** | The migration will only move development to the cloud, but since they are still using VMs they won't be using using PaaS Services in their development. This means that Contoso will need have to start supporting the operations of their VMs including security patches. This was maintained by IT in the past, so they will need to find a solution to this new operational task.<br/><br/> Contoso will have to build new application and database VMs, but in doing so they will be automating the process. This means they can take advantage of building VMs in the cloud and tools provided by DevTest Labs, so this is a positive outcome even with a con on their list.
 
+<!-- markdownlint-enable MD033 -->
+
 ### Migration process
 
 Contoso will migrate their development application and databases VMs to new Azure VMs using Azure DevTest Labs.
@@ -104,6 +108,8 @@ Contoso will migrate their development application and databases VMs to new Azur
 ## Prerequisites
 
 Here's what Contoso needs to run this scenario.
+
+<!-- markdownlint-disable MD033 -->
 
 **Requirements** | **Details**
 --- | ---

@@ -41,6 +41,8 @@ The Contoso cloud team has pinned down goals for this migration. These goals wer
 **Business Continuity** | The HR application data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like as minimum of downtime as possible.
 **Azure** | Contoso wants to move the app to Azure, but doesn't want to run it on VMs. Contoso wants to use Azure PaaS services for the data tier.
 
+<!-- markdownlint-enable MD033 -->
+
 ## Solution design
 
 After pinning down goals and requirements, Contoso designs and review a deployment solution, and identifies the migration process, including the tools and services that will be used for migration.
@@ -72,10 +74,14 @@ As part of the solution design process Contoso did a review of the features in A
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
+<!-- markdownlint-disable MD033 -->
+
 **Consideration** | **Details**
 --- | ---
 **Pros** | Azure Database for MySQL offers a 99.99% financially backed service level agreement (SLA) for [high availability](https://docs.microsoft.com//azure/MySQL/concepts-high-availability).<br/><br/>Azure offers the ability to scale up or down during peak load times each quarter.  Contoso can save even more buy purchasing [reserved capacity](https://docs.microsoft.com//azure/MySQL/concept-reserved-pricing).<br/><br/>Azure provides Point-in-time restore and Geo-restore capabilities for Azure Database for MySQL.<br/><br/>
 **Cons** | Contoso will be limited to the MySQL release versions that are supported in Azure which are currently 10.2 and 10.3.<br/><br/>Azure Database for MySQL does have some [limitations](https://docs.microsoft.com//azure/MySQL/concepts-limits) such as scaling down storage.
+
+<!-- markdownlint-enable MD033 -->
 
 ## Proposed architecture
 

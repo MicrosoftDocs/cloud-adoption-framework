@@ -10,6 +10,10 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- docsTest:ignore ARO POC Y/N None/Some/Severe Rehost/Refactor/Rearchitect/Rebuild -->
+
+<!-- cSpell:ignore VHDs autosnooze unsnooze Hanu Scalr -->
+
 # Scale a migration to Azure
 
 This article demonstrates how the fictional company Contoso performs a migration at scale to Azure. They consider how to plan and perform a migration of more than 3000 workloads, 8000 databases, and over 10,000 VMs.
@@ -42,11 +46,15 @@ After pinning down goals and requirements, Contoso reviews the IT footprint, and
 
 After planning and setting up an [Azure infrastructure](./contoso-migration-infrastructure.md) and trying out different proof-of-concept (POC) migration combinations as detailed in the table above, Contoso is ready to embark on a full migration to Azure at scale. Here's what Contoso wants to migrate.
 
+<!-- markdownlint-disable MD033 -->
+
 | **Item** | **Volume** | **Details** |
 | --- | --- | --- |
 | Workloads | > 3,000 apps | <li> Apps run on VMs. <li> Apps are Windows, SQL-based, and OSS LAMP. |
 | Databases | ~ 8,500 databases | Databases include SQL Server, MySQL, and PostgreSQL. |
 | VMs | > 35,000 VMs | VMs run on VMware hosts and managed by vCenter servers. |
+
+<!--markdownlint-enable MD033 -->
 
 ## Migration process
 
@@ -177,6 +185,8 @@ With their assessment complete Contoso needs to identify tools to move their app
 
 There are four broad migration strategies that Contoso can consider.
 
+<!-- markdownlint-disable MD033 -->
+
 | **Strategy** | **Details** | **Usage** |
 | --- | --- | --- |
 | Rehost | <li> Often referred to as a _lift and shift_ migration, this is a no-code option for migrating existing apps to Azure quickly. <li> An app is migrated as-is, with the benefits of the cloud, without the risks or costs associated with code changes. | <li> Contoso can rehost less-strategic apps, requiring no code changes. |
@@ -230,14 +240,19 @@ Contoso can use Azure Migrate:
 
 In addition to the VMs being replicated, Site Recovery requires several components for VMware migration.
 
+<!-- markdownlint-disable MD033 -->
+
 | **Component** | **Details** |
 | --- | --- |
 | Configuration server | <li> Usually a VMware VM configured using an OVF template. <li> The configuration server component coordinates communications between on-premises and Azure, and manages data replication. |
 | Process server | <li> Installed by default on the configuration server. <li> The process server component receives replication data; optimizes it with caching, compression, and encryption; and sends it to Azure storage. <li> The process server also installs Azure Site Recovery Mobility Service on VMs you want to replicate, and performs automatic discovery of on-premises machines. <li> Scaled deployments need additional, standalone process servers to handle large volumes of replication traffic. |
 | Mobility service | <li> The mobility service agent is installed on each VMware VM that will be migrated with Azure Site Recovery. |
 
+<!--markdownlint-enable MD033 -->
 
 Contoso needs to figure out how to deploy these components, based on capacity considerations.
+
+<!-- markdownlint-disable MD033 -->
 
 <br>
 

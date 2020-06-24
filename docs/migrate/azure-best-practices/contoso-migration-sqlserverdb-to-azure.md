@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- cSpell:ignore deltadan VMware contoso contoso's host vcenter -->
+
 # Migrating SQL Server Databases to Azure (Scenario)
 
 This article demonstrates how a fictional company Contoso assessed, planned and migrated their various on-premises SQL Server databases to Azure.
@@ -38,6 +40,8 @@ The IT leadership team has worked closely with business partners to understand t
 
 The Contoso cloud team has pinned down goals for the various migrations. These goals were used to determine the best migration methods.
 
+<!-- markdownlint-disable MD033 -->
+
 **Requirements** | **Details**
 --- | ---
 **Performance** | After migration, apps in Azure should have the same performance capabilities that apps have today in Contoso's on-premises environment. Moving to the cloud doesn't mean that app performance is less critical.
@@ -59,6 +63,8 @@ The assessment results in multiple workloads spread across multiple departments.
 ### Solution Review
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
+
+<!-- markdownlint-disable MD033 -->
 
 **Consideration** | **Details**
 --- | ---
