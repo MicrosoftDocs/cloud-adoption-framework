@@ -1,0 +1,29 @@
+---
+title: "Innovate with AI"
+description: Tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale.
+author: JanetCThomas
+ms.author: janet
+ms.date: 06/24/2020
+ms.topic: conceptual
+ms.service: cloud-adoption-framework
+ms.subservice: innovate
+---
+
+# AI in the Cloud Adoption Framework
+
+Review a prescriptive framework that includes the tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale.
+
+The list of required actions is categorized by persona to drive a successful deployment of AI in applications, from proof of concept to production, then scaling and optimization.
+
+## Get started
+
+To prepare for this phase of the cloud adoption lifecycle, use the following exercises:
+
+<!-- markdownlint-disable MD033 -->
+
+| | |
+|---|---|
+| ![Item 1 icon](../../_images/icons/1.png) | <br>Machine Learning model development, deployment and management: Examine patterns and practices of building your own ML models, including MLOps, AutomatedML, and Responsible ML tools such as interpretML and FairLearn. |
+| ![Item 2 icon](../../_images/icons/2.png) | <br>[Cluster design and operations](./cluster-design-operations.md): [Adding domain-specific AI models to your applications](https://www.oreilly.com/library/view/building-intelligent-apps/9781492058632/ ): Learn about best practices for adding AI capabilities into your applications with Cognitive Services as well as the key scenarios in which you can deploy them.  |
+| ![Item 3 icon](../../_images/icons/3.png) | <br>[Build your own conversational AI solution](https://www.oreilly.com/library/view/a-developers-guide/9781492080619/ ): Learn how to build your own virtual assistant—a conversational AI application that can understand language, speech, perceive vast amounts of information, and respond intelligently. |
+| ![Item 4 icon](../../_images/icons/4.png) | <br>[Build AI-driven knowledge mining solutions](https://azure.microsoft.com/resources/a-developers-guide-to-building-ai-driven-knowledge-mining-solutions/): Learn how to use knowledge mining to extract structured data from your unstructured content—and discover actionable information across all of your organization’s data. |

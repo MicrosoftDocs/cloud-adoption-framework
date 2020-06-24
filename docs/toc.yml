@@ -730,7 +730,7 @@ items:
         items:
         - name: Kubernetes
           items:
-          - name: Innovation scenarios overview
+          - name: Innovation with Kubernetes
             href: innovate/kubernetes/index.md
           - name: Application development and deployment
             href: innovate/kubernetes/application-development.md
@@ -738,7 +738,19 @@ items:
             href: innovate/kubernetes/cluster-design-operations.md
           - name: Cluster and application security
             href: innovate/kubernetes/cluster-application-security.md
-
+        - name: Artificial intelligence (AI)
+          items:
+          - name: Innovate with AI
+            href: innovate/ai/index.md
+          - name: Machine learning
+            href: innovate/ai/machine-learning.md
+          - name: AI applications
+            href: innovate/ai/ai-applications.md
+          - name: Conversational AI
+            href: innovate/ai/conversational-ai.md
+          - name: Knowledge mining
+            href: innovate/ai/knowledge-mining.md  
+            
       - name: Best practices
         items:
         - name: Overview and Azure toolchain
