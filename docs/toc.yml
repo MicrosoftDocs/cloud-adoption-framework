@@ -112,6 +112,8 @@ items:
         href: strategy/define-security-strategy.md
       - name: Define monitoring strategy
         href: strategy/monitoring-strategy.md
+      - name: Responsible AI
+        href: strategy/responsible-ai.md
     - name: Skills relevant to strategy
       href: strategy/suggested-skills.md
 
