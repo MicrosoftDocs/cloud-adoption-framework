@@ -27,15 +27,15 @@ For a data warehouse migration to proceed smoothly your plan should seek to esta
 - Allocated budget for the complete migration
 - Your migration strategy
 - How you can de-risk the migration project to avoid delays and/or rework
-- Your existing data warehouse system, its architecture, schema, data volumes, data flows, security and operational dependencies
-- Differences between your existing on premises data warehouse DBMS and Azure Synapse e.g. data types, SQL functions, logic
+- Your existing data warehouse system, its architecture, schema, data volumes, data flows, security, and operational dependencies
+- Differences between your existing on premises data warehouse DBMS and Azure Synapse, for example, data types, SQL functions, logic
 - What needs to be migrated and priorities
-- The migration tasks, approaches, order and deadlines
+- The migration tasks, approaches, order, and deadlines
 - How you will control migration
 - How to prevent user disruption while undertaking the migration
 - What you need to do on-premises to avoid delays and enable migration
 - Tools to enable secure migration of schemas, data, and ETL processing to Azure
-- Data model design changes needed during and/or post migration
+- Data model design changes needed during and post migration
 - Any pre or post migration technology changes and how to minimize rework
 - Post migration technology deprecation
 - How you will implement testing and quality assurance to prove success
@@ -53,7 +53,7 @@ There are several things that should be addressed before you even begin a data w
 Key roles in a migration project include:
 
 - Business owner
-- Project manager (with agile methodology experience e.g. scrum)
+- Project manager (with agile methodology experience, for example, scrum)
 - Project coordinator
 - Cloud engineer
 - Database administrator (existing data warehouse DBMS and Azure Synapse)
@@ -67,7 +67,7 @@ In addition the team need the support of your on-premises infrastructure team.
 
 ### Skills and training to ready the team for migration
 
-With respect to skills, expertise is important in a data warehouse migration. Therefore, ensure the appropriate members of your migration team are trained in Azure cloud fundamentals, Azure Blob Store, Azure Data Lake Storage, Azure Databox, Azure ExpressRoute, Azure identity management, Azure Data Factory and Azure Synapse. Your data modelers will most likely need to fine tune your Microsoft Azure Synapse data model(s) once migration from your existing data warehouse has occurred.
+With respect to skills, expertise is important in a data warehouse migration. Therefore, ensure the appropriate members of your migration team are trained in Azure cloud fundamentals, Azure Blob Store, Azure Data Lake Storage, Azure Data box, Azure ExpressRoute, Azure identity management, Azure Data Factory and Azure Synapse. Your data modelers will most likely need to fine-tune your Microsoft Azure Synapse data model(s) once migration from your existing data warehouse has occurred.
 
 ### Assessing your existing data warehouse
 
@@ -81,17 +81,17 @@ In addition to preparing and readying your migration team for your target enviro
 
 - AzCopy to Azure Blob Store
 - Microsoft Azure ExpressRoute to transfer compressed data directly to Azure
-- File export to Microsoft Azure Databox
+- File export to Microsoft Azure Data box
 
-The main factors influencing which of these options is selected are data volume size (in Terabytes) and network speed (in Mbps). A calculation of is needed to determine how long it would take to migrate the data via the network bearing in mind that data may be compressed in your data warehouse and become uncompressed when you export it. This can slow data transfer. It is best to recompressing data (via Gzip) when moving data by any of the above methods as PolyBase can process gzipped data directly.
+The main factors influencing which of these options is selected are data volume size (in Terabytes) and network speed (in Mbps). A calculation is needed to determine how long it would take to migrate the data via the network bearing in mind that data may be compressed in your data warehouse and become uncompressed when you export it. This can slow data transfer. It is best to recompressing data (via Gzip) when moving data by any of the above methods as PolyBase can process gzipped data directly.
 
-Large data volumes will likely be migrated via Azure Databox if it is going to take too long to move the data.
+Large data volumes will likely be migrated via Azure Data box if it is going to take too long to move the data.
 
-In addition, in order for Azure Data Factory to control the execution of exports of your existing data warehouse data from Azure, self-hosted integration run-time software will need to be installed in your data center to enable migration to proceed. Given these requirements if formal approval need to be sought to make this possible, then starting the appropriate approval processes early to enable this to happen will help avoid delays down the line.
+In addition, in order for Azure Data Factory to control the execution of exports of your existing data warehouse data from Azure, self-hosted integration run-time software will need to be installed in your data center to enable migration to proceed. Given these requirements if formal approval is needed to make this possible, then starting the appropriate approval processes early to enable this to happen will help avoid delays down the line.
 
 ### Azure preparation for schema and data migration
 
-In terms of preparation on the Azure side, data import will need to be managed either be via Microsoft Azure ExpressRoute or Microsoft Azure Databox. Azure Data Factory pipelines are an ideal way to load your data into Azure Blob Storage and then load from there into Azure Synapse using PolyBase. Therefore preparation is needed on the Azure side to develop such a pipeline.
+In terms of preparation on the Azure side, data import will need to be managed either via Microsoft Azure ExpressRoute or Microsoft Azure Data box. Azure Data Factory pipelines are an ideal way to load your data into Azure Blob Storage and then load from there into Azure Synapse using PolyBase. Therefore preparation is needed on the Azure side to develop such a pipeline.
 
 The alternative is to use your existing ETL tool on Azure if it supports Azure Synapse which means setting up the tool on Azure from Azure Marketplace and readying a pipeline to import your data and load it into Azure Blob Storage.
 
@@ -99,7 +99,7 @@ The alternative is to use your existing ETL tool on Azure if it supports Azure S
 
 ### Migration goals
 
-In any strategy there needs to be a set of objectives or goals that should be defined to indicate success. Targets can then be set to achieve these goals and people given responsibility for reaching them. Examples of migration goals and corresponding metrics to set targets for in a cloud data warehouse migration project are shown in the table below:
+In any strategy, there needs to be a set of objectives or goals that should be defined to indicate success. Targets can then be set to achieve these goals and people given responsibility for reaching them. Examples of migration goals and corresponding metrics to set targets for in a cloud data warehouse migration project are shown in the table below:
 
 Types of goal and metric examples:
 
@@ -113,7 +113,7 @@ Types of goal and metric examples:
 
 **Run at lower costs**:
 
-- Cost of compute by workload e.g. number of compute hours x cost per hour for:
+- Cost of compute by workload, for example, number of compute hours x cost per hour for:
   - Standard reporting
   - Ad hoc queries
   - Batch ELT processing
@@ -132,15 +132,15 @@ A successful data warehouse migration could therefore be interpreted as a data w
 
 ### Migration approach
 
-With respect to strategy you have a number of choices when migrating your existing data warehouse to Azure Synapse. These are:
+With respect to strategy, you have a number of choices when migrating your existing data warehouse to Azure Synapse. These are:
 
 - Lift and shift your existing data warehouse as-is  
 - Simplify your existing data warehouse and then migrate it  
-- Complete re-design on Azure Synapse and migrate your data
+- Complete redesign on Azure Synapse and migrate your data
 
-The outcome from the assessment of your existing data warehouse will have a significant bearing on this. A good outcome may indicate a lift and shift strategy, a mediocre outcome stemming from a low agility rating may indicate that simplification is needed before migration, whereas a very poor outcome may indicate a complete re-design is needed.
+The outcome from the assessment of your existing data warehouse will have a significant bearing on this. A good outcome may indicate a lift and shift strategy, a mediocre outcome stemming from a low agility rating may indicate that simplification is needed before migration, whereas a poor outcome may indicate a complete redesign is needed.
 
-Lift and shift will leave your architecture as is, trying to minimize the work in moving your existing system. If your existing ETL tool already supports Azure Synapse you may be able to change the target with minimal effort. Nevertheless there will be differences in table types, data types, SQL functions, views, stored procedure business logic etc. These differences and ways around them are detailed in lower level documents in this migration series.
+Lift and shift will leave your architecture as is, trying to minimize the work in moving your existing system. If your existing ETL tool already supports Azure Synapse you may be able to change the target with minimal effort. Nevertheless there will be differences in table types, data types, SQL functions, views, stored procedure business logic etc. These differences and ways around them are detailed in lower-level documents in this migration series.
 
 Simplifying your existing data warehouse prior to migration is about reducing complexity to ease migration. It could include:
 
@@ -151,18 +151,18 @@ It is of course possible to simplify first and lift and shift what remains after
 
 ### Migration scope
 
-Whichever of these you decide upon, it is important to clearly define the scope of the migration i.e. what exactly you are going to migrate and whether you migrate incrementally or all at once. An example of incremental migration could be to migrate your data marts first followed by your data warehouse. This allows you to focus on high priority business areas while allowing your team to incrementally build up expertise as each mart is individually migrated before migrating the data warehouse itself.  
+Whichever of these you decide upon, it is important to clearly define the scope of the migration that is, what exactly you are going to migrate and whether you migrate incrementally or all at once. An example of incremental migration could be to migrate your data marts first followed by your data warehouse. This allows you to focus on high priority business areas while allowing your team to incrementally build up expertise as each mart is individually migrated before migrating the data warehouse itself.  
 
 ### Defining what has to be migrated
 
-With regards to the migration itself it is important to make an inventory of what needs to be migrated. This includes schema, data, ETL processes (Pipelines), authorization privileges, users, BI tool semantic access layers and analytic applications. A detail understanding of what is involved in migrating these is given in each of the lower level migration documents in this series. Links to these are shown below:
+With regards to the migration itself, it's important to make an inventory of what needs to be migrated. This includes schema, data, ETL processes (Pipelines), authorization privileges, users, BI tool semantic access layers, and analytic applications. A detail understanding of what is involved in migrating the inventory, is given in each of the lower-level migration documents in this series. Links to these are shown below:
 
 - Schema migration, design and performance considerations
 - Data migration, ETL processing and load
 - Access security and data warehouse operations
 - Migration of visualization and reports
 - Minimizing the impact of SQL issues
-- 3rd party tools to help you in your data warehouse migration
+- Third-party tools to help you in your data warehouse migration
 
 If you are uncertain about the best way to do things, then conduct tests in a proof of concept lab (see section on de-risking your DW migration project) to identify optimal techniques.
 
@@ -170,15 +170,15 @@ If you are uncertain about the best way to do things, then conduct tests in a pr
 
 Data warehouse migration to Azure Synapse involves tasks that need to be conducted:
 
-- On-premises e.g. data export
-- On the network e.g. data transfer
-- In the Azure cloud e.g. data transformation, integration and load
+- On-premises, for example, data export
+- On the network, for example, data transfer
+- In the Azure cloud, for example, data transformation, integration, and load
 
 The problem is that managing these tasks can be complicated if scripts and utilities are all being developed, tested and run independently in both on-premises and Azure environments. It adds complexity especially if version control, test management and migration execution are not coordinated.
 
 Ideally, it is best to avoid these complexities and control these from a common place with a source control repository to manage change from development to test and production. Also migration execution will involve tasks that need to be performed on-premises, on the network and on Azure. Given that Azure Synapse is the target environment, controlling migration execution from Azure would make things a lot easier to manage. A good way to do this is to use Azure Data Factory (ADF) to create a migration control pipeline to control execution both on-premises and on Azure. This would introduce automation and minimize room for error. ADF therefore becomes a migration orchestration tool and not just and enterprise data integration tool.
 
-Other options to control migration available from Microsoft partners running on Azure include data warehouse automation tools to try to automate migration. Vendors like WhereScape and Attunity for example. Most of these automation tools are aimed at a lift and shift approach to migration. Even then, there may be some things that may not be supported by such tools e.g. stored procedures. These products and several others are detailed in a separate guide dedicated to third party tools to help you migrate to Azure Synapse.  
+Other options to control migration available from Microsoft partners running on Azure include data warehouse automation tools to try to automate migration. Vendors like WhereScape and Attunity for example. Most of these automation tools are aimed at a lift and shift approach to migration. Even then, there may be some things that may not be supported by such tools, for example, stored procedures. These products and several others are detailed in a separate guide dedicated to third-party tools to help you migrate to Azure Synapse.  
 
 ### Migration testing
 
@@ -186,14 +186,14 @@ The first thing you need for testing is to define a series of tests and a set of
 
 - Schema
 - Data types converted where necessary
-- Use user defined schema in Azure Synapse to distinguish between data warehouse and data mart tables
+- Use user-defined schema in Azure Synapse to distinguish between data warehouse and data mart tables
 - Users
 - Roles and assignments of users to those roles
 - Data access security privileges
-- Data privacy – e.g. for GDPR compliance
+- Data privacy – for example, for GDPR compliance
 - Privileges that govern administration capabilities
 - Data quality and integrity
-- ETL processing that populate Azure Synapse both into the data warehouse and from the data warehouse to any data marts. This includes testing
+- ETL processing that populates Azure Synapse both into the data warehouse and from the data warehouse to any data marts. This includes testing
 - All rows are correct in all tables including history
 - Slowly changing dimension processing
 - Change data capture processing
@@ -218,16 +218,16 @@ Another critical factor in data warehouse migration is de-risking the project in
 
 <!-- TO DO insert high resolution graphic here -->
 
-The purpose of this is to break the dependency between business users utilizing self-service BI tools and the physical schema of the underlying data warehouse and data marts that are being migrated. By introducing data virtualization, any schema alternations made during data warehouse and data mart migration to Azure Synapse (e.g. to optimize performance) can be hidden from business users because they only access virtual tables in the data virtualization layer. If structural change is needed, only the mappings between the data warehouse or data marts and any virtual tables would need to be changed so that users remain unaware of those changes and unaware of the migration.
+The purpose of this is to break the dependency between business users utilizing self-service BI tools and the physical schema of the underlying data warehouse and data marts that are being migrated. By introducing data virtualization, any schema alternations made during data warehouse and data mart migration to Azure Synapse (for example, to optimize performance) can be hidden from business users because they only access virtual tables in the data virtualization layer. If structural change is needed, only the mappings between the data warehouse or data marts and any virtual tables would need to be changed so that users remain unaware of those changes and unaware of the migration.
 
 - Look to archive any existing tables identified as never used prior to data warehouse migration as there is little point migrating tables that are not used. One possible way of doing this is to archive the unused data to Azure blob storage or to Azure Data Lake and create external tables in Azure Synapse to that data so that it is still online.
 - Consider the possibility of introducing a virtual machine (VM) on Azure with a development version (usually free) of the existing legacy data warehouse DBMS running on this VM. This allows you to quickly move existing data warehouse schema to the VM and them move it on into Azure Synapse while working entirely on the Azure cloud.
 - Define migration order and dependencies
 - Ensure your infrastructure and operations teams are ready for the migration of your data as early as possible into the migration project
-- Identify the differences in DBMS functionality and where proprietary business logic could become a problem e.g. using stored procedures for ELT processing is highly likely to not migrate easily and will not contain any metadata lineage as the transformations are buried in code.
+- Identify the differences in DBMS functionality and where proprietary business logic could become a problem, for example, using stored procedures for ELT processing is highly likely to not migrate easily and will not contain any metadata lineage as the transformations are buried in code.
 - Considering a strategy to migrate data marts first followed by the data warehouse that is the source to the data marts. The reason for this is that it enables incremental migration, it makes it more manageable and it is possible to prioritize migration based on business needs
-- Considering the possibility of using data virtualization to simplify your current data warehouse architecture before you migrate e.g. to replace data marts with virtual data marts so that you can eliminate physical data stores and ETL jobs for data marts without losing any functionality prior to migration. Doing this would reduce the number of data stores to migrate, reduce copies of data, reduce the total cost of ownership and improve agility. This requires switching from physical to virtual data marts before migrating your data warehouse. In many ways you could consider this a data warehouse modernization step prior to migration.
+- Considering the possibility of using data virtualization to simplify your current data warehouse architecture before you migrate, for example, to replace data marts with virtual data marts so that you can eliminate physical data stores and ETL jobs for data marts without losing any functionality prior to migration. Doing this would reduce the number of data stores to migrate, reduce copies of data, reduce the total cost of ownership and improve agility. This requires switching from physical to virtual data marts before migrating your data warehouse. In many ways you could consider this a data warehouse modernization step prior to migration.
 
 ## Next step
 
-For more information on data warehouse migrations, attend a virtual Azure Analytics workshop with Informatica: https://now.informatica.com/Microsoft_CDW_Workshops.html#fbid=uqwtl_SXNFV
+For more information on data warehouse migrations, attend a virtual [Azure Analytics workshop with Informatica](https://now.informatica.com/Microsoft_CDW_Workshops.html#fbid=uqwtl_SXNFV).
