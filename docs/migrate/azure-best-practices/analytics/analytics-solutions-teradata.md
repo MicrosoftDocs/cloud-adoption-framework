@@ -19,23 +19,7 @@ While there are similarities between Teradata and Azure Synapse in that both are
 - Upgrading a Teradata configuration is a major task involving additional physical hardware and a potentially lengthy database reconfiguration. Since storage and compute resources are separate in the Azure environment these can easily be scaled (upwards and downwards) independently leveraging the elastic scalability capability.
 - Azure Synapse can be paused or resized as required to reduce resource utilization and therefore cost.
 
-Microsoft Azure is a globally available, highly secure, scalable cloud environment which includes Azure Synapse within an eco-system of supporting tools and capabilities.
-
-<!-- TODO insert high resolution image -->
-
- (Source section: Migration to Azure Synapse Analytics Section 1.1 – Design and performance for Teradata migrations)
-
-Azure Synapse provides best-of-breed relational database performance by using techniques such as massively parallel processing (MPP) and automatic in-memory caching. The results of this approach can be seen in independent benchmarks such as the one run recently by GigaOm – see <!-- https://gigaom.com/report/datawarehouse-cloud-benchmark/  this link doesn't work -->which compares Azure Synapse to other popular cloud data warehouse offerings. Customers who have already migrated to this environment have seen many benefits including:
-
-- Improved performance and price/performance
-- Increased agility and shorter time to value
-- Faster server deployment and application development
-- Elastic scalability – only pay for actual usage
-- Improved security/compliance
-- Reduced storage and Disaster Recovery costs  
-- Lower overall TCO and better cost control (OPEX)
-
- To maximize these benefits it is necessary to migrate existing (or new) data and applications to the Azure Synapse platform, and in many organizations this will include migration of an existing data warehouse from legacy on-premise platforms such as Teradata. At a high level, the basic process will include the following steps:
+To maximize these benefits it is necessary to migrate existing (or new) data and applications to the Azure Synapse platform, and in many organizations this will include migration of an existing data warehouse from legacy on-premise platforms such as Teradata. At a high level, the basic process will include the following steps:
 
 <!-- markdownlint-disable MD033 -->
 
@@ -227,7 +211,7 @@ Existing indexes within the source Teradata environment can however provide a us
 **Data partitioning**:
 In an enterprise data warehouse fact tables can contain many billions of rows and partitioning is a way to optimize the maintenance and querying of these tables by splitting them into separate parts to reduce the amount of data processed. The partitioning specification for a table is defined in the CREATE TABLE statement.
 
-Only 1 field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. Note that it is possible to change the partitioning of a table after initial load if necessary by recreating the table with the new distribution using the CREATE TABLE AS (or CTAS) statement. See <!-- TODO this link doesn't work https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehousetables-partition --> for a detailed discussion of partitioning in Azure Synapse.
+Only 1 field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. Note that it is possible to change the partitioning of a table after initial load if necessary by recreating the table with the new distribution using the CREATE TABLE AS (or CTAS) statement. See https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition for a detailed discussion of partitioning in Azure Synapse.
 
 **Data table statistics**:
 Ensure that statistics on data tables are up to date – this can be achieved by building in a COLLECT STATISTICS step to ETL/ELT jobs, or by enabling automatic statistics collection on the table.
@@ -240,4 +224,5 @@ Azure Synapse uses Resource Classes to manage workloads. In general, large resou
 
 ## Next steps
 
-<!-- TODO Can we close on a call to action? Is there a single reference implementation or reference architecture that we can send the reader to, if they want to implement this guidance? -->
+For more information on implementing a Teradata migration, talk with your Microsoft account representative about on-premises migration offers.
+
