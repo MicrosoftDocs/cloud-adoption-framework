@@ -20,27 +20,7 @@ While there are similarities between Netezza and Azure Synapse in that both are 
 - Azure Synapse can be paused or resized as required to reduce resource utilization and therefore cost.
 Microsoft Azure is a globally available, highly secure, scalable cloud environment that includes Azure Synapse within an ecosystem of supporting tools and capabilities.
 
-<!-- TODO add high resolution graphic -->
-
-Azure Synapse provides best-of-breed relational database performance by using techniques such as MPP and automatic in-memory caching—the results of this approach can be seen in independent benchmarks such as the one run recently by GigaOm—see <!-- TODO https://gigaom.com/report/data-warehouse-cloud-benchmark/ --> which compares Azure Synapse to other popular cloud data warehouse offerings. Customers who have already migrated to this environment have seen many benefits including:  
-
-- Improved performance and price/performance
-- Increased agility and shorter time to value
-- Faster server deployment and application development
-- Elastic scalability—only pay for actual usage
-- Improved security/compliance
-- Reduced storage and Disaster Recovery costs  
-- Lower overall TCO and better cost control (OPEX)
-
-To maximize these benefits, it is necessary to migrate existing (or new) data and applications to the Azure Synapse platform. In many organizations, this will include migration of an existing data warehouse from legacy on-premises platforms such as Netezza. At a high level, the basic process will include the following steps.
-
-<!-- markdownlint-disable MD033 -->
-
-| ![1](./_images/icons/1.png) **Preparation** | ![2](./_images/icons/2.png) **Migration** | ![3](./_images/icons/3.png) **Post migration** |
-|---|---|---|
-|<li>Define scope - what is to be migrated<li>Build inventory of data and processes for mitration<li>Define data model changes (if any)<li>Identify appropriate Azure (and third party) tools and features to be used<li>Train staff early on new platform<li>Set up Azure target platform | <li>Start small and simple<li>Automate where possible<li>Leverage Azure built in tools and features to reduce migration effort<li>Migrate metadata for tables and views<li>Migrate historical data to be maintained<li>Migrate or refactor stored procedures and business processes<li>Migrate or refactor ETL/ELT incremental load processes | <li>Monitor and document all stages of the process<li>Use experience gained to build a template for future migrations<li>Re-engineer the data model if required (using new platform performance and scalability)<li>Test applications and query tools<li>Benchmark and optimize query performance |
-
-This paper looks at schema migration with a view to obtain equivalent or better performance of your migrated Netezza data warehouse and data marts on Azure Synapse. The topics included in this paper apply specifically to migrations from an existing Netezza environment.
+Below looks at schema migration with a view to obtain equivalent or better performance of your migrated Netezza data warehouse and data marts on Azure Synapse. The topics included in this paper apply specifically to migrations from an existing Netezza environment.
 
 ## Design considerations
 
@@ -214,5 +194,5 @@ PolyBase is the most efficient method for loading large amounts of data into the
 Azure Synapse uses resource classes to manage workloads. In general, large resource classes provide better individual query performance while smaller resource classes enable higher levels of concurrency. Utilization can be monitored via Dynamic Management Views to ensure that the appropriate resources are being utilized efficiently.
 
 ## Next steps
-<!-- TODO -->
-Can we close on a call to action? Is there a single reference implementation or reference architecture that we can send the reader to, if they want to implement this guidance?
+For more information on implementing a Netezza migration, talk with your Microsoft account representative about on-premises migration offers.
+
