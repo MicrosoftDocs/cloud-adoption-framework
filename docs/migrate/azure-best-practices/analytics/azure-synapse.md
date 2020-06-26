@@ -27,6 +27,3 @@ User-defined restore points are also supported, allowing manual triggering of sn
 
 As well as the snapshots described above, Azure Synapse also performs as standard a geo-backup once per day to a paired data center. The RPO for a geo-restore is 24 hours. You can restore the geo-backup to a server in any other region where Azure Synapse is supported. A geo-backup ensures that a data warehouse can be restored in case the restore points in the primary region are not available.
 
-## Next steps
-
-<!-- TODO Can we close on a call to action? -->
