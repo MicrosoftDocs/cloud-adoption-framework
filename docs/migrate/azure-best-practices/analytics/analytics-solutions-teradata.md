@@ -23,13 +23,9 @@ To maximize these benefits it is necessary to migrate existing (or new) data and
 
 <!-- markdownlint-disable MD033 -->
 
-| ![1](./_images/icons/1.png) **Preparation** | ![2](./_images/icons/2.png) **Migration** | ![3](./_images/icons/3.png) **Post migration** |
+| **Preparation** | **Migration** | **Post migration** |
 |---|---|---|
 |<li>Define scope - what is to be migrated<li>Build inventory of data and processes for mitration<li>Define data model changes (if any)<li>Identify appropriate Azure (and third party) tools and features to be used<li>Train staff early on new platform<li>Set up Azure target platform | <li>Start small and simple<li>Automate where possible<li>Leverage Azure built in tools and features to reduce migration effort<li>Migrate metadata for tables and views<li>Migrate historical data to be maintained<li>Migrate or refactor stored procedures and business processes<li>Migrate or refactor ETL/ELT incremental load processes | <li>Monitor and document all stages of the process<li>Use experience gained to build a template for future migrations<li>Re-engineer the data model if required (using new platform performance and scalability)<li>Test applications and query tools<li>Benchmark and optimize query performance |
-
-## Design considerations
-
-<!-- TODO - write intro paragraphg -->
 
 ### Migration scope
 
@@ -114,11 +110,7 @@ The Azure environment also includes specific features for complex analytics on t
 **Teradata data type mapping**:
 Some Teradata datatypes are not directly supported in the Azure Synapse. The table below shows these data types together with the recommended approach for handling them. In the table, Teradata Column Type is the type that is stored within the system catalog (e.g. in DBC.ColumnsV)
 
-<!-- TODO  insert table graphics or recreate the table -->
 Use the metadata from the Teradata catalog tables to determine whether any of these data types are to be migrated and allow for this in the migration plan. For instance, a SQL query such as the one below can be used to find any occurrences of unsupported data types that need attention.
-
-<!-- TODO this should probably be a code snippet that the user can copy and use -->
-![SQL query](../_images/analytics/sql-query.png)
 
 There are third-party vendors who offer tools and services to automate migration including the mapping of data types as described above. Also, if a third-party ETL tool such as Informatica or Talend is already in use in the Teradata environment, these can implement any required data transformations.
 
@@ -152,8 +144,6 @@ When migrating from a mature legacy data warehouse environment such as Teradata 
 As part of the preparation phase, an inventory of these objects that are to be migrated should be created and the method of handling them defined, with an appropriate allocation of resources assigned in the project plan.
 
 It may be that there are facilities in the Azure environment that replace the functionality implemented as functions or stored procedures in the Teradata environment; in which case it is generally more efficient to use the built-in Azure facilities rather than recoding the Teradata functions.
-
-<!-- TODO link doesn't work Third-party vendors offer tools and services that can automate the migration, see for examples https://www.ispirer.com/products/teradata-to-azure-sql-data-warehousemigration  -->
 
 For more information on each of these elements:
 
