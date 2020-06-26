@@ -230,4 +230,4 @@ The purpose of this is to break the dependency between business users utilizing 
 
 ## Next step
 
-<!-- add next logical step or call to action -->
+For more information on data warehouse migrations, attend a virtual Azure Analytics workshop with Informatica: https://now.informatica.com/Microsoft_CDW_Workshops.html#fbid=uqwtl_SXNFV
