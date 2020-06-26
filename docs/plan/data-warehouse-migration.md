@@ -214,9 +214,9 @@ It is also important to communicate the cut-over to all users, so they know what
 Another critical factor in data warehouse migration is de-risking the project in order to maximize the likelihood of a success. There are several things that can be done to de-risk a data warehouse migration. They include:
 
 - Establishing a proof of concept (POC) lab to enable your team to try things, conduct tests, understand any issues and identify fixes and optimizations that help that validate migration approaches, improve performance and lower costs. It also helps establish ways to automate tasks, leverage built-in tools and build templates to capture best practice, learn from the experience and keep track of lessons learned. It is an invaluable way to mitigate risk and increase your chances of success. In addition, you can assign owners to tests who are accountable for achieving migration goals and targets as defined in your migration strategy
-- Introduce data virtualization between BI tools and your data warehouse and data marts. This is shown in the following illustration.
+- Introduce data virtualization between BI tools and your data warehouse and data marts. Introduce user transparency using data virtualization to reduce risk in a data warehouse migration, and hide the migration from users by using data virtualization BI tools, as shown in the following diagram.
 
-<!-- TO DO insert high resolution graphic here -->
+![Data warehouse migration diagram](../_images/data-warehouse-migration.png)
 
 The purpose of this is to break the dependency between business users utilizing self-service BI tools and the physical schema of the underlying data warehouse and data marts that are being migrated. By introducing data virtualization, any schema alternations made during data warehouse and data mart migration to Azure Synapse (for example, to optimize performance) can be hidden from business users because they only access virtual tables in the data virtualization layer. If structural change is needed, only the mappings between the data warehouse or data marts and any virtual tables would need to be changed so that users remain unaware of those changes and unaware of the migration.
 
