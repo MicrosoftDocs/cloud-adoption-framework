@@ -66,6 +66,8 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 ![CAF enterprise-scale landing zone architecture](./media/ns-arch.png)
 _Figure 2: CAF enterprise-scale landing zone architecture._
 
+[This file] (enterprise-scale-architecture.vsdx path tbd) displays the CAF enterprise-scale landing zone architecture diagram in Visio.
+
 ## Next steps
 
 Customize implementation of this architecture using the CAF [design guidelines](./design-guidelines.md).
