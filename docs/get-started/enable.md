@@ -16,8 +16,8 @@ Often times, customer success in cloud adoption efforts has little to do with te
 ## Alignment 
 
 Particularly as you drive innovation, alignment between business and technical teams is paramount to the success of your solution. 
-- For business stakeholders, we have formulated the [Microsoft AI Business School](https://www.microsoft.com/en-us/ai/ai-business-school) to support with business strategy development and examples of best practices. 
-- For technical stakeholders, the [Microsoft AI learning paths](https://docs.microsoft.com/en-us/learn/) are available to help you build new AI skills.
+- For business stakeholders, we have formulated the [Microsoft AI Business School](https://www.microsoft.com/ai/ai-business-school) to support with business strategy development and examples of best practices. 
+- For technical stakeholders, the [Microsoft AI learning paths](https://docs.microsoft.com/learn/) are available to help you build new AI skills.
 
 ## Blockers
 
