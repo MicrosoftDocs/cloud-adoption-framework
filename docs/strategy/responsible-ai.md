@@ -15,11 +15,11 @@ We are committed to the advancement of Artificial Intelligence (AI) driven by et
 
 ## Responsible AI Principles
 
-As you implement AI solutions, we recommend to consider the following AI principles in your solution:
+As you implement AI solutions, we recommend considering the following AI principles in your solution:
 
 - Fairness: AI systems should treat all people fairly
-- Reliability & Safety: AI systems should perform reliably and safely
-- Privacy & Security: AI systems should be secure and respect privacy
+- Reliability and safety: AI systems should perform reliably and safely
+- Privacy and security: AI systems should be secure and respect privacy
 - Inclusiveness: AI systems should empower everyone and engage people
 - Transparency: AI systems should be understandable
 - Accountability: People should be accountable for AI systems
@@ -46,8 +46,8 @@ Put responsible AI into practice with these guidelines designed to help you anti
 Research, open source projects, and Azure Machine Learning all designed to help developers and data scientists understand, protect, and control AI systems.
 
 - **Understand**: AI systems can behave unexpectedly for a variety of reasons. These software tools can help you understand the behavior of your AI systems, so that you can better tailor them to your needs. For example, InterpretML, Fairlearn.
-- **Protect**:  AI systems rely on data. These software tools can help you protect that data by preserving privacy and ensuring confidentiality. E.g. Confidential computing for ML, WhiteNoise differential privacy, SEAL homomorphic encryption, Presidio.
-- **Control**:  Responsible AI needs governance and control through the development cycle. Azure Machine Learning enables an audit trail for better traceability, lineage, and control, to meet regulatory requirements. E.g. Audit trail and traceability.
+- **Protect**:  AI systems rely on data. These software tools can help you protect that data by preserving privacy and ensuring confidentiality. For example, Confidential computing for ML, WhiteNoise differential privacy, SEAL homomorphic encryption, Presidio.
+- **Control**:  Responsible AI needs governance and control through the development cycle. Azure Machine Learning enables an audit trail for better traceability, lineage, and control, to meet regulatory requirements. For example, Audit trail and traceability.
 
 ## Next Steps
 
