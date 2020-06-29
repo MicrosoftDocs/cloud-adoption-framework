@@ -1,9 +1,9 @@
 ---
-title: "Azure innovation: Predict and influence"
-description: Learn about Azure solutions for predicting customers' needs and integrating predictions back into your solution to influence customer behavior.
+title: "Azure innovation: Innovate with AI"
+description: Learn about Azure solutions to predict customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/17/2019
+ms.date: 06/26/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -13,45 +13,88 @@ ms.localizationpriority: high
 
 ::: zone target="docs"
 
-# Azure innovation guide: Predict and influence
+# Azure innovation guide: Innovate with AI
 
 ::: zone-end
 
 ::: zone target="chromeless"
 
-# Predict and influence
+# Innovate with AI
 
 ::: zone-end
 
-As an innovator, your company has insights into the data, behavior, and needs of its customer base. Studying those insights can aid in predicting your customers' needs, possibly before your customers themselves are aware of those needs. This article introduces a few approaches to delivering predictive solutions. In the final sections, the article introduces approaches to integrating the predictions back into your solution to influence customer behaviors.
+As an innovator, your company has rich information about its business and its customers. Using artificial intelligence (AI), your company can make predictions about customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences. This article introduces a few approaches to innovating with AI.
 
 The following table can help you find the best solution, based on your implementation needs.
 
-| Service | Prebuilt models | Build and experiment | Train and build with Python | Required skills |
-|---|---|---|---|---|
-| Azure Cognitive Services | Yes | No | No | API and developer skills |
-| Azure Machine Learning Studio | Yes | Yes | No | General understanding of predictive algorithms |
-| Azure Machine Learning service | Yes | Yes | Yes | Data scientist |
+| Service / solution category | Description                                                                                                                              | Required skills              |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
+| Machine learning            | Azure Machine Learning Build, deploy, and manage your own machine learning models.                                                       | Data scientist and developer |
+| AI applications             | Azure Cognitive Services Use domain-specific AI models for Vision, Speech, Language, and Decision that can be customized with your data. | Developer                    |
+| Conversational AI           | Azure Bot Service Improve customer engagement by adding bots to your applications and websites.                                          | Developer                    |
+| Knowledge mining            | Azure Cognitive Search Uncover insights lying latent in your content, including documents, contracts, images, and other data types.      | Developer                    |
 
-## [Azure Cognitive Services](#tab/CognitiveServices)
+## [Machine learning](#tab/MachineLearning)
 
-The fastest and easiest path to predicting customer needs is Azure Cognitive Services. Cognitive Services allows predictions to be made based on existing models, which require no additional training. These services are optimal, and effective when you have no data scientist on staff to train the predictive model. For some services, no training is required. Other services require only minimal training.
+Azure provides advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models across the cloud and edge, using Azure Machine Learning, Azure Databricks, and Open Neural Network Exchange (ONNX). Develop models faster using automated machine learning. Use tools and frameworks of your choice without being locked in.
 
-For a list of available services and the amount of training that might be required, see [Cognitive Services and machine learning](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-and-machine-learning#service-requirements-for-the-data-model).
+For more information on getting started with Azure Machine Learning, see the [What is Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml) and [Getting started with your first ML experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open source model format and runtime for machine learning, see our [ONNX and Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-onnx) documentation.
 
 ### Action
 
-To use a Cognitive Services API:
+A data scientist can use Azure Machine Learning to train and build a model by using advanced languages such as Python and R, as well as using a drag-and-drop visual experience. To get started with Azure Machine Learning:
 
-1. In the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.CognitiveServices%2FAccounts), go to **Cognitive Services**.
-2. Select **Add** to find a Cognitive Services API in Azure Marketplace.
-3. Do either of the following:
-   - If you know the name of the service you want to use, enter the name in the **Search the Marketplace** box.
-   - For a list of Cognitive Services APIs, select the **See More** link next to the Cognitive Services heading.
+1. In the Azure portal, search for **Machine Learning**.
+
+1. Select **Add**, then follow the steps in the portal to create a workspace.
+
+1. The new workspace provides a code-driven approach for data scientists to train and build models that require more advanced analytics to accurately predict customer needs.
 
 ::: zone target="chromeless"
 
+<!-- markdownlint-disable DOCSMD001 -->
+
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2Fworkspaces]" submitText="Go to Azure Machine Learning resources" :::
+
+<!-- markdownlint-enable DOCSMD001 -->
+
+::: zone-end
+
+::: zone target="docs"
+
+Go directly to Azure Machine Learning resources in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2Fworkspaces).
+
+::: zone-end
+
+## [AI applications](#tab/AIApplications)
+
+The fastest and easiest path to predicting customer needs is Azure Cognitive Services. Cognitive Services allows predictions to be made based on existing models, which require no additional training. These services are optimal, and effective when you have no data scientist on staff to train the predictive model. For some services, no training is required. Other services require only minimal training.
+
+For a list of available services and the amount of training that might be required, see the [Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-and-machine-learning#service-requirements-for-the-data-model) documentation.
+
+### Action
+
+To get started with a Cognitive Services API:
+
+1. In the Azure portal, search for **Cognitive Services**.
+
+1. Select **Add** to find a Cognitive Services API in Azure Marketplace.
+
+1. Search for and select a service:
+
+    - If you know the name of the service you want to use, enter the name in **Search the Marketplace**, then select the service.
+
+    - For a list of Cognitive Services APIs, next to the **Cognitive Services** heading, select **See More**, then select the service.
+
+1. Select **Create**, then follow the steps in the portal to provision the service.
+
+::: zone target="chromeless"
+
+<!-- markdownlint-disable DOCSMD001 -->
+
 ::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2FAccounts]" submitText="Go to Cognitive Services" :::
+
+<!-- markdownlint-enable DOCSMD001 -->
 
 ::: zone-end
 
@@ -61,26 +104,27 @@ Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com
 
 ::: zone-end
 
-## [Azure Machine Learning Studio](#tab/MachineLearningStudio)
+## [Conversational AI](#tab/ConversationalAI)
 
-If the existing models within Cognitive Services don't align with your desired prediction, Azure Machine Learning Studio might provide a way to build the desired predictions, without requiring deep data-scientist skills.
+Interact more naturally with your customers and improve customer engagement through conversational experiences powered by Bot Framework and Azure Bot Service. Use Cognitive Services APIs like Language Understanding, Speech, and QnA Maker to empower your customers to self-serve on common tasks, so your call center agents can focus on more nuanced, higher value cases.
 
-<!-- markdownlint-disable MD024 -->
+For more information on how to build bots, see the [Azure Bot Service](https://docs.microsoft.com/learn/paths/create-bots-with-the-azure-bot-service/) learning path.
 
 ### Action
 
-You can use Azure Machine Learning Studio to build and experiment with a model by doing the following:
+Use Azure Bot Service to build, test, deploy, and manage intelligent bots. To get started with Azure Bot Service:
 
-1. In the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2FWorkspaces), go to **Azure Machine Learning Studio**.
-2. Select **Create Machine Learning Studio Workspace**, and then follow the prompts to create a workspace.
+1. In the Azure portal, search for **Bot Services**.
 
-   The new workspace provides a drag-and-drop interface for building and experimenting with a model, as an alternative to deep training.
+1. Select **Add**, then select **Web App Bot** or **Bot Channels Registration**.
+
+1. Select **Create**, then follow the steps in the portal to provision the service.
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2FWorkspaces]" submitText="Go to Azure Machine Learning Studio" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FbotServices]" submitText="Go to Azure Bot Service" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -88,27 +132,21 @@ You can use Azure Machine Learning Studio to build and experiment with a model b
 
 ::: zone target="docs"
 
-Go directly to Azure Machine Learning Studio in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2FWorkspaces).
+Go directly to Azure Bot Service in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FbotServices).
 
 ::: zone-end
 
-## [Azure Machine Learning service](#tab/MachineLearningService)
+Use QnA Maker to find the most appropriate answer for any given natural language input, from your custom knowledge base (KB) of information. To get started with QnA Maker:
 
-Azure Machine Learning service provides the deeper, code-based approach that's required for deeper training of customer datasets. By using languages such as Python, data scientists can train and then build an algorithm to predict customer needs.
+1. In the Azure portal, search for **QnA Maker**.
 
-### Action
-
-A data scientist can use Azure Machine Learning service to train and build a model by using advanced languages such as Python:
-
-1. Go to **Azure Machine Learning service**.
-2. Select **Create Machine Learning service workspaces**, and then follow the prompts to create a workspace.
-3. The new workspace provides a code-driven approach for data scientists to train and build models that require more advanced analytics for accurately predicting customer needs.
+1. Follow the steps in the portal to provision the service.
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2FWorkspaces]" submitText="Go to Azure Machine Learning service" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2FAccounts]" submitText="Go to Cognitive Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -116,9 +154,43 @@ A data scientist can use Azure Machine Learning service to train and build a mod
 
 ::: zone target="docs"
 
-Go directly to Azure Machine Learning Studio in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2FWorkspaces).
+Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2FAccounts).
 
 ::: zone-end
+
+## [Knowledge mining](#tab/KnowledgeMining)
+
+Uncover latent insights from all your content - documents, images, and media - with Azure Cognitive Search. Using the only cloud search service with built-in AI capabilities, discover patterns and relationships in your content, understand sentiment, extract key phrases, and more.
+
+Formerly known as Azure Search, Azure Cognitive Search uses the same integrated Microsoft natural language stack that Bing and Office have used for more than a decade, and AI services across vision, language, and speech. Spend more time innovating and less time maintaining a complex cloud search solution.
+
+For more information, see [What is Azure Cognitive Search?](https://docs.microsoft.com/azure/search/search-what-is-azure-search)
+
+### Action
+
+To get started with Azure Cognitive Search:
+
+1. In the Azure portal, search for **Azure Cognitive Search**.
+
+1. Follow the steps in the portal to provision the service.
+
+::: zone target="chromeless"
+
+<!-- markdownlint-disable DOCSMD001 -->
+
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Search%2FsearchServices]" submitText="Go to Azure Cognitive Search" :::
+
+<!-- markdownlint-enable DOCSMD001 -->
+
+::: zone-end
+
+::: zone target="docs"
+
+Go directly to Azure Cognitive Search in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Search%2FsearchServices).
+
+::: zone-end
+
+---
 
 ## Influence
 
