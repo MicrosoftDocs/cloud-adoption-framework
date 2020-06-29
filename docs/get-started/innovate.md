@@ -206,7 +206,7 @@ The Innovate methodology provides guidance on the tools and product management a
 
 ## Step 9: Assess Innovation Maturity of your Organization
 
-To support the development of your innovation strategy, The Artificial Intelligence Maturity Model is a free tool which helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity which include foundational, approaching, aspirational, and mature. Each one of these levels of maturity includes a specific set of characteristics to help identify the organization's ability to adopt specific types of AI solutions and associated risks and strategies. The assessment takes 5-10 minutes and measures a customer's capability across four categories: strategy, culture, organizational characteristics and capabilities.  By measuring these, we can compute the customer's score and provide an estimation of the AI innovation maturity on a curve.
+To support the development of your innovation strategy, The Artificial Intelligence Maturity Model is a free tool which helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity which include foundational, approaching, aspirational, and mature. Each one of these levels of maturity includes a specific set of characteristics to help identify your organization's ability to adopt specific types of AI solutions, associated risks, and strategies. The assessment takes 5-10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics and capabilities.  By measuring these, we can compute your organization's score and provide an estimation of the AI innovation maturity on a curve.
 
 **Deliverables:**
 
@@ -214,7 +214,7 @@ To support the development of your innovation strategy, The Artificial Intellige
 
 **Guidance to support deliverable completion:**
 
-- Once assessment has been complete, the tool's output will provide a customer score with estimation of the AI innovation maturity status.
+- Once the assessment has been complete, the tool's output will provide a score with an estimation of the AI innovation maturity status.
 
 <!-- markdownlint-disable MD033 -->
 <br>
