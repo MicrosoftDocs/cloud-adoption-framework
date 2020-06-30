@@ -53,7 +53,6 @@ Research, open source projects, and Azure Machine Learning all designed to help 
 
 For further resources to support your responsible solution development, visit:
 
-- Guidelines for responsible AI
 - [Responsible AI Overview](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1:primaryr6)
 - [Responsible AI resources](https://www.microsoft.com/ai/responsible-ai-resources)
 - [Responsible bots: 10 guidelines for developers of conversational AI](https://www.microsoft.com/research/publication/responsible-bots/)
