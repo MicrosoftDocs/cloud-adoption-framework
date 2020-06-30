@@ -85,6 +85,7 @@ To operationalize at scale, these activities must follow infrastructure-as-code 
 9. (Optional:) Configure ExpressRoute Global Reach for connecting on-premises HQs/DCs when more than one on-premises location is connected to Azure via ExpressRoute. Follow the instructions in [Configure ExpressRoute Global Reach](https://docs.microsoft.com/azure/expressroute/expressroute-howto-set-global-reach).
 
 The following list shows Azure Policy assignments used when implementing networking resources for an enterprise-scale deployment:
+
 | Name                     | Description                                                                            |
 |--------------------------|----------------------------------------------------------------------------------------|
 | [Deploy-FirewallPolicy](https://github.com/Azure/Enterprise-Scale/tree/main/azopsreference/3fc1081d-6105-4e19-b60c-1ec1252cf560/contoso/.AzState/Microsoft.Authorization_policyDefinitions-Deploy-FirewallPolicy.parameters.json)  | Creates a firewall policy. |
