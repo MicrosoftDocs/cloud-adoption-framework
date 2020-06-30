@@ -91,7 +91,7 @@ To simplify development and unit testing at scale with multiple developers contr
     }],
 ```
 
-A [generic multiresource template](https://raw.githubusercontent.com/uday31in/AzOps/master/src/template.json) is available to ensure that bug fixes are incorporated with the latest API version.
+A [generic multiresource template](https://github.com/uday31in/AzOps/blob/main/template/template.json) is available to ensure that bug fixes are incorporated with the latest API version.
 
 - Template.parameters.json
 
