@@ -80,9 +80,9 @@ The cloud strategy team drives critical prioritization and discovery efforts dur
 
 Cloud strategy team members must be able to allocate time to planning and developing the cloud strategy:
 
-- During early planning efforts, allocate an hour each week to meet with the team. After the adoption plan is solidified (usually within 46 weeks), the time requirements can be reduced.
-- Throughout the adoption efforts, allocate 12 hours each month to review progress and validate continued priorities.
-- Additional time is likely required from delegated members of the executive's team on an as-needed basis. Each member of the cloud strategy team should appoint a delegate who can allocate 510 hours per week to support ongoing prioritization questions and report on any urgent needs.
+- During early planning efforts, allocate an hour each week to meet with the team. After the adoption plan is solidified (usually within 4-6 weeks), the time requirements can be reduced.
+- Throughout the adoption efforts, allocate 1-2 hours each month to review progress and validate continued priorities.
+- Additional time is likely required from delegated members of the executive's team on an as-needed basis. Each member of the cloud strategy team should appoint a delegate who can allocate 5-10 hours per week to support ongoing prioritization questions and report on any urgent needs.
 
 ## Next steps
 
