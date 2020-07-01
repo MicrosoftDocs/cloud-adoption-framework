@@ -34,12 +34,12 @@ Learn how to develop your own responsible AI strategy and principles based on th
 
 Put responsible AI into practice with these guidelines designed to help you anticipate and address potential issues throughout the software development lifecycle.
 
-- Human-AI interaction guidelines
-- Conversational AI guidelines
-- Inclusive design guidelines
-- AI fairness checklist
-- Datasheets for datasets template
-- AI security engineering guidance
+- [Human-AI interaction guidelines](https://aka.ms/aiguidelines)
+- [Conversational AI guidelines](https://www.microsoft.com/research/publication/responsible-bots/)
+- [Inclusive design guidelines](https://www.microsoft.com/design/inclusive/)
+- [AI fairness checklist](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA)
+- [Datasheets for datasets template](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t8QB)
+- [AI security engineering guidance](https://blogs.microsoft.com/on-the-issues/2019/12/06/ai-machine-learning-security/)
 
 ## Tools for Responsible AI
 
