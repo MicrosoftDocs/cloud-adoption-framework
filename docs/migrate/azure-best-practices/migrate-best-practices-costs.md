@@ -159,7 +159,7 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 Due to years of software investment in systems such as Windows Server and SQL Server, Microsoft is in a unique position to offer customers value in the cloud, with substantial discounts that other cloud providers can't necessarily provide.
 
-An integrated Microsoft on-premises/Azure product portfolio generates competitive and cost advantages. If you currently have an operating system or other software licensing through Software Assurance (sa), you can take those licenses with you to the cloud for with Azure Hybrid Benefit.
+An integrated Microsoft on-premises/Azure product portfolio generates competitive and cost advantages. If you currently have an operating system or other software licensing through Software Assurance (SA), you can take those licenses with you to the cloud for with Azure Hybrid Benefit.
 
 **Learn more:**
 

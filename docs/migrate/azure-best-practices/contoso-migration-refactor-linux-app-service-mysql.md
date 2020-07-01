@@ -40,7 +40,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 ## Current architecture
 
-- The app is tiered across two VMs (OSTICKETWEB and OSTICKETMYSQL).
+- The app is tiered across two VMs (`OSTICKETWEB` and `OSTICKETMYSQL`).
 - The VMs are located on VMware ESXi host `contosohost1.contoso.com` (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), running on a VM.
 - Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (`contosodc1`).
@@ -51,14 +51,14 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 Here's the proposed architecture:
 
-- The web tier app on OSTICKETWEB will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 Docker container.
+- The web tier app on `OSTICKETWEB` will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 Docker container.
 - The app code will be moved to GitHub, and the Azure App Service web app will be configured for continuous delivery with GitHub.
-- Azure app servers will be deployed in both the primary (East US 2) and secondary (Central US) region.
+- Azure app servers will be deployed in both the primary region (`East US 2`) and secondary region (`Central US`).
 - Traffic Manager will be set up in front of the two web apps in both regions.
-- Traffic Manager will be configured in priority mode to force the traffic through East US 2.
-- If the Azure app server in East US 2 goes offline, users can access the failed over app in Central US.
+- Traffic Manager will be configured in priority mode to force the traffic through `East US 2`.
+- If the Azure app server in `East US 2` goes offline, users can access the failed over app in `Central US`.
 - The app database will be migrated to the Azure Database for MySQL service using Azure Database Migration Service. The on-premises database will be backed up locally, and restored directly to Azure Database for MySQL.
-- The database will reside in the primary East US 2 region, in the database subnet (`PROD-DB-EUS2`) in the production network (`VNET-PROD-EUS2`):
+- The database will reside in the primary region (`East US 2`) in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`):
 - Since they're migrating a production workload, Azure resources for the app will reside in the production resource group `ContosoRG`.
 - The Traffic Manager resource will be deployed in Contoso's infrastructure resource group `ContosoInfraRG`.
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
@@ -116,12 +116,12 @@ Here's how Contoso will complete the migration:
 
 Contoso admins provision two web apps (one in each region) using Azure App Service.
 
-1. They create a web app resource in the primary East US 2 region (**osticket-eus2**) from the Azure Marketplace.
+1. They create a web app resource (`osticket-eus2`) in the primary region (`East US 2`) via the Azure Marketplace.
 2. They put the resource in the production resource group `ContosoRG`.
 
     ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app1.png)
 
-3. They create a new App Service plan in the primary region (**`APP-SVP-EUS2`**), using the standard size.
+3. They create a new App Service plan (`APP-SVP-EUS2`) in the primary region, using the standard size.
 
      ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app2.png)
 
@@ -129,7 +129,7 @@ Contoso admins provision two web apps (one in each region) using Azure App Servi
 
     ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app3.png)
 
-5. They create a second web app (`osticket-cus`), and Azure App Service plan for the Central US region.
+5. They create a second web app (`osticket-cus`) and Azure App Service plan for `Central US`.
 
     ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app4.png)
 
@@ -142,11 +142,11 @@ Contoso admins provision two web apps (one in each region) using Azure App Servi
 
 Contoso admins set up Traffic Manager to direct inbound web requests to the web apps running on the osTicket web tier.
 
-1. They create a Traffic Manager resource (`osticket.trafficmanager.net`) from the Azure Marketplace. They use priority routing so that East US 2 is the primary site. They place the resource in their infrastructure resource group (`ContosoInfraRG`). Note that Traffic Manager is global and not bound to a specific location.
+1. They create a Traffic Manager resource (`osticket.trafficmanager.net`) from the Azure Marketplace. They use priority routing so that `East US 2` is the primary site. They place the resource in their infrastructure resource group (`ContosoInfraRG`). Note that Traffic Manager is global and not bound to a specific location.
 
     ![Traffic Manager](./media/contoso-migration-refactor-linux-app-service-mysql/traffic-manager1.png)
 
-2. Now, they configure Traffic Manager with endpoints. They add the East US 2 web app as the primary site (**osticket-eus2**), and the Central US app as secondary (`osticket-cus`).
+2. Now, they configure Traffic Manager with endpoints. They add the web app in `East US 2` as the primary site (`osticket-eus2`), and the app in `Central US` as the secondary site (`osticket-cus`).
 
     ![Traffic Manager](./media/contoso-migration-refactor-linux-app-service-mysql/traffic-manager2.png)
 
@@ -161,18 +161,18 @@ Contoso admins set up Traffic Manager to direct inbound web requests to the web 
 
 ## Step 3: Provision Azure Database for MySQL
 
-Contoso admins provision a MySQL database instance in the primary East US 2 region.
+Contoso admins provision a MySQL database instance in the primary region (`East US 2`).
 
 1. In the Azure portal, they create an Azure Database for MySQL resource.
 
     ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/mysql-1.png)
 
-2. They add the name **contosoosticket** for the Azure database. They add the database to the production resource group `ContosoRG`, and specify credentials for it.
+2. They add the name `contosoosticket` for the Azure database. They add the database to the production resource group `ContosoRG`, and specify credentials for it.
 3. The on-premises MySQL database is version 5.7, so they select this version for compatibility. They use the default sizes, which match their database requirements.
 
      ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/mysql-2.png)
 
-4. For **Backup Redundancy Options**, they select to use **Geo-Redundant**. This option allows them to restore the database in their secondary Central US region if an outage occurs. They can only configure this option when they provision the database.
+4. For **Backup Redundancy Options**, they select to use **Geo-Redundant**. This option allows them to restore the database in their secondary region (`Central US`) if an outage occurs. They can only configure this option when they provision the database.
 
     ![Redundancy](./media/contoso-migration-refactor-linux-app-service-mysql/db-redundancy.png)
 
@@ -187,7 +187,7 @@ Contoso admins provision a MySQL database instance in the primary East US 2 regi
 There are several ways to move the MySQL database. Each option requires you to create an Azure Database for MySQL instance for the target. Once created, you can perform the migration using two paths:
 
 - 4A: Azure Database Migration Service
-- 4b: MySQL workbench backup and restore
+- 4b: MySQL Workbench backup and restore
 
 ### Step 4a: Migrate the database (Azure Database Migration Service)
 
@@ -200,7 +200,7 @@ As a summary, you must perform the following:
 
 - Ensure all migration prerequisites are met:
   - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine and migration across source and target with same versions.
-  - Enable binary logging in my.ini (Windows) or my.cnf (unix). Failure to do this will cause `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` during the migration wizard.
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` during the migration wizard.
   - The user must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
@@ -221,7 +221,7 @@ As a summary, you must perform the following:
 
     ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-target.png)
 
-  - Select the database(s) to migrate.
+  - Select the databases to migrate.
 
     ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-databases.png)
 
@@ -245,15 +245,15 @@ As a summary, you must perform the following:
 
     ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-apps.png)
 
-### Step 4b: Migrate the database (MySQL workbench)
+### Step 4b: Migrate the database (MySQL Workbench)
 
-1. They check the [prerequisites and downloads MySQL workbench](https://dev.mysql.com/downloads/workbench/?utm_source=tuicool).
-2. They install MySQL workbench for Windows in accordance with the [installation instructions](https://dev.mysql.com/doc/workbench/en/wb-installing.html). The machine on which they install must be accessible to the OSTICKETMYSQL VM, and Azure via the internet.
-3. In MySQL workbench, they create a MySQL connection to OSTICKETMYSQL.
+1. They check the [prerequisites and downloads MySQL Workbench](https://dev.mysql.com/downloads/workbench/?utm_source=tuicool).
+2. They install MySQL Workbench for Windows in accordance with the [installation instructions](https://dev.mysql.com/doc/workbench/en/wb-installing.html). The machine on which they install must be accessible to the `OSTICKETMYSQL` VM, and Azure via the internet.
+3. In MySQL Workbench, they create a MySQL connection to `OSTICKETMYSQL`.
 
     ![MySQL Workbench](./media/contoso-migration-refactor-linux-app-service-mysql/workbench1.png)
 
-4. They export the database as **osticket**, to a local self-contained file.
+4. They export the database as `osticket`, to a local self-contained file.
 
     ![MySQL Workbench](./media/contoso-migration-refactor-linux-app-service-mysql/workbench2.png)
 
@@ -261,7 +261,7 @@ As a summary, you must perform the following:
 
     ![MySQL Workbench](./media/contoso-migration-refactor-linux-app-service-mysql/workbench3.png)
 
-6. Now, they can import (restore) the database in the Azure Database for MySQL instance, from the self-contained file. A new schema (osticket) is created for the instance.
+6. Now, they can import (restore) the database in the Azure Database for MySQL instance, from the self-contained file. A new schema (`osticket`) is created for the instance.
 
     ![MySQL Workbench](./media/contoso-migration-refactor-linux-app-service-mysql/workbench4.png)
 
@@ -311,11 +311,11 @@ Contoso admins create a new private GitHub repo and set up a connection to the o
 
     ![GitHub](./media/contoso-migration-refactor-linux-app-service-mysql/github5.png)
 
-6. For each web app (**osticket-eus2** and `osticket-cus`), they modify the **Application settings** in the Azure portal.
+6. For each web app (`osticket-eus2` and `osticket-cus`), they modify the **Application settings** in the Azure portal.
 
     ![GitHub](./media/contoso-migration-refactor-linux-app-service-mysql/github6.png)
 
-7. They enter the connection string with the name **osticket**, and copy the string from notepad into the **value area**. They select **MySQL** in the dropdown list next to the string, and save the settings.
+7. They enter the connection string with the name `osticket`, and copy the string from notepad into the **value area**. They select **MySQL** in the dropdown list next to the string, and save the settings.
 
     ![GitHub](./media/contoso-migration-refactor-linux-app-service-mysql/github7.png)
 
@@ -323,7 +323,7 @@ Contoso admins create a new private GitHub repo and set up a connection to the o
 
 As the final step in the migration process, Contoso admins configure the web apps with the osTicket web sites.
 
-1. In the primary web app (**osticket-eus2**), they open **Deployment option** and set the source to **GitHub**.
+1. In the primary web app (`osticket-eus2`), they open **Deployment option** and set the source to **GitHub**.
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app1.png)
 
@@ -348,7 +348,7 @@ As the final step in the migration process, Contoso admins configure the web app
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app6.png)
 
-8. They configure both the **osticket-eus2** and `osticket-cus` web apps to allow the custom host names.
+8. They configure both the `osticket-eus2` and `osticket-cus` web apps to allow the custom host names.
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app7.png)
 
@@ -356,7 +356,7 @@ As the final step in the migration process, Contoso admins configure the web app
 
 Finally, they set up automatic scaling for the app. This ensures that as agents use the app, the app instances increase and decrease according to business needs.
 
-1. In App Service **`APP-SRV-EUS2`**, they open **Scale Unit**.
+1. In App Service `APP-SRV-EUS2`, they open **Scale Unit**.
 2. They configure a new autoscale setting with a single rule that increases the instance count by one when the CPU percentage for the current instance is above 70% for 10 minutes.
 
     ![Autoscale](./media/contoso-migration-refactor-linux-app-service-mysql/autoscale1.png)
@@ -375,7 +375,7 @@ For cleanup, Contoso needs to do the following:
 - Remove the on-premises VMs from local backup jobs.
 - Update internal documentation show new locations and IP addresses.
 - Review any resources that interact with the on-premises VMs, and update any relevant settings or documentation to reflect the new configuration.
-- Reconfigure monitoring to point at the osticket-trafficmanager.net URL, to track that the app is up and running.
+- Reconfigure monitoring to point at the `osticket-trafficmanager.net` URL, to track that the app is up and running.
 
 ## Review the deployment
 

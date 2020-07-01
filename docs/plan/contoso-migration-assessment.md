@@ -82,19 +82,19 @@ In this scenario, Contoso downloads and runs Data Migration Assistant to assess 
 ![Migration assessment architecture](../migrate/azure-best-practices/media/contoso-migration-assessment/migration-assessment-architecture.png)
 
 - Contoso is a fictional name that represents a typical enterprise organization.
-- Contoso has an on-premises datacenter (**contoso-datacenter**) and on-premises domain controllers (**CONTOSODC1**, **CONTOSODC2**).
-- VMware VMs are located on VMware ESXi hosts running version 6.5 (**contosohost1**, **contosohost2**).
-- The VMware environment is managed by vCenter Server 6.5 (**vcenter.contoso.com**, running on a VM).
+- Contoso has an on-premises datacenter (`contoso-datacenter`) and on-premises domain controllers (`CONTOSODC1`, `CONTOSODC2`).
+- VMware VMs are located on VMware ESXi hosts running version 6.5 (`contosohost1`, `contosohost2`).
+- The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`, running on a VM).
 - The SmartHotel360 travel app has these characteristics:
-  - The app is tiered across two VMware VMs (**WEBVM** and **SQLVM**).
-  - The VMs are located on VMware ESXi host **contosohost1.contoso.com**.
+  - The app is tiered across two VMware VMs (`WEBVM` and `SQLVM`).
+  - The VMs are located on VMware ESXi host `contosohost1.contoso.com`.
   - The VMs are running Windows Server 2008 R2 Datacenter with SP1.
-- The VMware environment is managed by vCenter Server (**vcenter.contoso.com**) running on a VM.
+- The VMware environment is managed by vCenter Server (`vcenter.contoso.com`) running on a VM.
 - The osTicket service desk app:
-  - The app is tiered across two VMs (**OSTICKETWEB** and **OSTICKETMYSQL**).
+  - The app is tiered across two VMs (`OSTICKETWEB` and `OSTICKETMYSQL`).
   - The VMs are running Ubuntu Linux Server 16.04-LTS.
-  - **OSTICKETWEB** is running Apache 2 and PHP 7.0.
-  - **OSTICKETMYSQL** is running MySQL 5.7.22.
+  - `OSTICKETWEB` is running Apache 2 and PHP 7.0.
+  - `OSTICKETMYSQL` is running MySQL 5.7.22.
 
 ## Prerequisites
 
@@ -157,7 +157,7 @@ Now, Contoso can run an assessment to analyze its on-premises SQL Server databas
 4. Contoso selects reports to help it discover information about compatibility and new features:
 
     - **Compatibility issues** note changes that might break migration or that require a minor adjustment before migration. This report keeps Contoso informed about any features currently in use that are deprecated. Issues are organized by compatibility level.
-    - **New feature recommendation** notes new features in the target SQL Server platform that can be used for the database after migration. New feature recommendations are organized under the headings **Performance**, **Security**, and **Storage**.
+    - **New feature recommendation** notes new features in the target SQL Server platform that can be used for the database after migration. New feature recommendations are organized under the headings **Performance**, **Security**, and **Storage.**
 
     ![Data Migration Assistant - Compatibility issues and new features](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-2.png)
 
@@ -212,7 +212,7 @@ Contoso needs to create a VMware account that Azure Migrate can use to automatic
 VM discovery requires a read-only account in vCenter Server that has the following properties:
 
 - **User type:** At least a read-only user.
-- **Permissions:** For the datacenter object, select the **Propagate to Child Objects** checkbox. For **Role**, select **Read-only**.
+- **Permissions:** For the datacenter object, select the **Propagate to Child Objects** checkbox. For **Role**, select **Read-only.**
 - **Details:** The user is assigned at the datacenter level, with access to all objects in the datacenter.
 - To restrict access, assign the **No access** role with the **Propagate to child** object to the child objects (vSphere hosts, data stores, VMs, and networks).
 
@@ -244,7 +244,7 @@ Set up a new Azure Migrate project as follows.
 
 1. In **Migrate project**, select your Azure subscription, and create a resource group if you don't have one.
 
-1. In **Project Details*, specify the project name, and the geography in which you want to create the project. United States, Asia, Europe, Australia, United Kingdom, Canada, India, and Japan are supported.
+1. In **Project Details**, specify the project name, and the geography in which you want to create the project. United States, Asia, Europe, Australia, United Kingdom, Canada, India, and Japan are supported.
 
     - The project geography is used only to store the metadata gathered from on-premises VMs.
     - You can select any target region when you run a migration.
@@ -451,14 +451,14 @@ Contoso can now verify machine dependencies and create a group. Then, it runs th
     ![Azure Migrate - View group dependencies](../migrate/azure-best-practices/media/contoso-migration-assessment/sqlvm-dependencies.png)
 
 4. Contoso selects the VMs to add to the group (`SQLVM` and `WEBVM`). Contoso holds the `Ctrl` key while selecting multiple VMs.
-5. Contoso selects **Create Group**, and then enters a name (**smarthotelapp**).
+5. Contoso selects **Create Group**, and then enters a name (`smarthotelapp`).
 
     > [!NOTE]
     > To view more granular dependencies, you can expand the time range. You can select a specific duration or select start and end dates.
 
 ### Run an assessment
 
-1. In **Groups**, Contoso opens the group (**smarthotelapp**), and then selects **Create assessment**.
+1. In **Groups**, Contoso opens the group (`smarthotelapp`), and then selects **Create assessment**.
 
     ![Azure Migrate: Create an assessment](../migrate/azure-best-practices/media/contoso-migration-assessment/run-vm-assessment.png)
 
@@ -525,7 +525,7 @@ This view shows the total compute and storage cost of running the VMs in Azure. 
 
 - When the assessment finishes, Contoso retains the Azure Migrate appliance to use in future evaluations.
 - Contoso turns off the VMware VM. Contoso will use it again when it evaluates additional VMs.
-- Contoso keeps the 1Contoso Migration1 project in Azure. The project currently is deployed in the `ContosoFailoverRG` resource group in the East US Azure region.
+- Contoso keeps the `Contoso Migration` project in Azure. The project currently is deployed in the `ContosoFailoverRG` resource group in the East US Azure region.
 - The collector VM has a 180-day evaluation license. If this limit expires, Contoso will need to download the collector and set it up again.
 
 ## Conclusion

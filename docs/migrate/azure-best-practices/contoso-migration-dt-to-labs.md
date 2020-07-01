@@ -43,7 +43,7 @@ The development leadership team has outlined what they want to achieve with this
 <!-- -->
 
 > [!NOTE]
-> Azure customers with enterprise agreements can also benefit from the [Azure dev/test subscription offer](https://azure.microsoft.com/offers/ms-azr-0148p/). To learn more, review this [video](https://channel9.msdn.com/blogs/ea.azure.com/enabling-and-creating-ea-devtest-subscriptions-through-the-ea-portal) on creating an Azure Dev/Test subscription using the Enterprise Agreement portal.
+> Azure customers with enterprise agreements can also benefit from the [Azure Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0148p). To learn more, review this [video](https://channel9.msdn.com/blogs/ea.azure.com/enabling-and-creating-ea-devtest-subscriptions-through-the-ea-portal) on creating an Azure Dev/Test subscription using the Enterprise Agreement portal.
 
 ## Migration goals
 
@@ -226,19 +226,19 @@ With Azure DevTest Labs configured and the remote developers workstation up and 
 
     - Contoso selects **Formulas** > **+ Add**, and then selects a `Windows 2012 R2 Datacenter` base.
 
-    ![Windows 2012R2 Base](./media/contoso-migration-dt-to-labs/win2012base.png)
+    ![Windows 2012 R2 base](./media/contoso-migration-dt-to-labs/win2012base.png)
 
     - Next, the size of the VM is configured along with the artifacts to be installed. In this case, the developers will have access to common development tools such as Visual Studio Code, Git, and Chocolatey.
 
-    ![Windows 2012R2 base configuration](./media/contoso-migration-dt-to-labs/win2012baseconfig.png)
+    ![Windows Server 2012 R2 base](./media/contoso-migration-dt-to-labs/win2012baseconfig.png)
 
     - To create the database VM formula, Contoso follows the same basic steps this time selecting a SQL Server 2012 image for the base.
 
-     ![SQL 2012R2 base](./media/contoso-migration-dt-to-labs/sql2012base.png)
+     ![SQL Server 2012 R2 base](./media/contoso-migration-dt-to-labs/sql2012base.png)
 
     - The formula is configured, with the size and artifacts, including SQL Server Management Studio, which is required for this database development VM formula.
 
-    ![SQL 2012R2 base config](./media/contoso-migration-dt-to-labs/sql2012baseconfig.png)
+    ![SQL 2012 R2 base](./media/contoso-migration-dt-to-labs/sql2012baseconfig.png)
 
     Learn more about using [formulas](https://docs.microsoft.com/azure/lab-services/devtest-lab-manage-formulas) with Azure DevTest Labs.
 
@@ -268,7 +268,7 @@ With Azure DevTest Labs configured and the remote developers workstation up and 
 
     ![Contoso VMs](./media/contoso-migration-dt-to-labs/contosovms.png)
 
-    - Contoso can now restore their development databases either from backups or using some type of code generation process to build the schema on the VMs. With the SQL management studio already installed using the artifacts, these are simple tasks that don't require installing any tools.
+    - Contoso can now restore their development databases either from backups or using some type of code generation process to build the schema on the VMs. With the SQL Server Management Studio already installed using the artifacts, these are simple tasks that don't require installing any tools.
 
 ## Clean up after migration
 

@@ -114,7 +114,7 @@ Before you can migrate your MariaDB databases, you will need to ensure that thos
 
 #### Migration
 
-Since MariaDB is very similar to MySQL, they can use the same common utilities and tools such as MySQL workbench, mysqldump, toad or navicat to connect to and migrate data to Azure Database for MariaDB.
+Since MariaDB is very similar to MySQL, they can use the same common utilities and tools such as MySQL Workbench, mysqldump, Toad or Navicat to connect to and migrate data to Azure Database for MariaDB.
 
 Contoso used the following steps to migrate their databases.
 
@@ -163,8 +163,8 @@ Contoso used the following steps to migrate their databases.
   source employees.sql;
   ```
 
-- Using phpadmin or a similar tool (MySQL workbench, toad, navicat), verify the restore by checking record counts in each table
-  
+- Using phpadmin or a similar tool (such as MySQL Workbench, Toad, and Navicat), verify the restore by checking record counts in each table
+
 - Update all application connection strings to point to the migrated database
 
 - Test all applications for proper operation

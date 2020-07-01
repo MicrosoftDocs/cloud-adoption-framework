@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- docsTest:ignore ".NET" -->
+
 <!-- cSpell:ignore givenscj WEBVM SQLVM contosohost vcenter contosodc smarthotel SQLMI SHWCF SHWEB -->
 
 # Refactor an on-premises app to an Azure App Service web app and Azure SQL Managed Instance
@@ -148,7 +150,7 @@ To set up an Azure SQL Managed Instance, Contoso needs a subnet that meets the f
 
 Contoso admins set up the virtual network as follows:
 
-1. They create a new virtual network (**`VNET-SQLMI-EU2`**) in the primary East US 2 region. It adds the virtual network to the `ContosoNetworkingRG` resource group.
+1. They create a new virtual network (`VNET-SQLMI-EU2`) in the primary region (`East US 2`). It adds the virtual network to the `ContosoNetworkingRG` resource group.
 2. They assign an address space of `10.235.0.0/24`. They ensure that the range doesn't overlap with any other networks in its enterprise.
 3. They add two subnets to the network:
     - `SQLMI-DS-EUS2` (`10.235.0.0/25`).
@@ -158,14 +160,14 @@ Contoso admins set up the virtual network as follows:
 
 4. After the virtual network and subnets are deployed, they peer networks as follows:
 
-    - Peers **`VNET-SQLMI-EUS2`** with **`VNET-HUB-EUS2`** (the hub virtual network for the East US 2).
-    - Peers **`VNET-SQLMI-EUS2`** with **`VNET-PROD-EUS2`** (the production network).
+    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for `East US 2`).
+    - Peers `VNET-SQLMI-EUS2` with `VNET-PROD-EUS2` (the production network).
 
       ![Network peering](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
 
 5. They set custom DNS settings. DNS points first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
 
-    - Located in the **`PROD-DC-EUS2`** subnet, in the East US 2 production network (**`VNET-PROD-EUS2`**).
+    - Located in the `PROD-DC-EUS2` subnet of the production network (`VNET-PROD-EUS2`) in the `East US 2` region.
     - `CONTOSODC3` address: `10.245.42.4`.
     - `CONTOSODC4` address: `10.245.42.5`.
     - Azure DNS resolver: `168.63.129.16`.
@@ -200,7 +202,7 @@ Contoso considers these factors:
 
     ![Route table prefix](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-prefix.png)
 
-3. They associate the route table with the **`SQLMI-DB-EUS2`** subnet (in the **`VNET-SQLMI-EUS2`** network).
+3. They associate the route table with the `SQLMI-DB-EUS2` subnet (in the `VNET-SQLMI-EUS2` network).
 
     ![Route table subnet](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-subnet.png)
 
@@ -212,7 +214,7 @@ Learn how to [set up routes for a managed instance](https://docs.microsoft.com/a
 
 Now, Contoso admins can provision a SQL Managed Instance:
 
-1. Because the managed instance serves a business app, they deploy the managed instance in the company's primary East US 2 region. They add the managed instance to the `ContosoRG` resource group.
+1. Because the managed instance serves a business app, they deploy the managed instance in the company's primary region (`East US 2`). They add the managed instance to the `ContosoRG` resource group.
 2. They select a pricing tier, size compute, and storage for the instance. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed).
 
     ![Managed Instance](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-create.png)
@@ -240,7 +242,7 @@ As a summary, you must perform the following:
   - Create a migration project.
   - Add a source (on-premises database).
   - Select a target.
-  - Select the database(s) to migrate.
+  - Select the databases to migrate.
   - Configure advanced settings.
   - Start the replication.
   - Resolve any errors.
@@ -254,11 +256,11 @@ With the database migrated, Contoso admins can now provision the two web apps.
 
     ![Web app](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app1.png)
 
-2. They provide an app name (**SHWEB-eus2**), run it on Windows, and place it un the production resource group `ContosoRG`. They create a new web app and Azure App Service plan.
+2. They provide an app name (`SHWEB-EUS2`), run it on Windows, and place it un the production resource group `ContosoRG`. They create a new web app and Azure App Service plan.
 
     ![Web app](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app2.png)
 
-3. After the web app is provisioned, they repeat the process to create a web app for the WCF service (**SHWCF-eus2**)
+3. After the web app is provisioned, they repeat the process to create a web app for the WCF service (`SHWCF-EUS2`).
 
     ![Web app](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app3.png)
 
@@ -288,7 +290,7 @@ Contoso needs to build the DevOps infrastructure and pipelines for the applicati
 
 Contoso admins need to make sure the web apps and database can all communicate. To do this, they configure connection strings in the code and in the web apps.
 
-1. In the web app for the WCF service (**SHWCF-eus2**) > **Settings** > **Application settings**, they add a new connection string named `DefaultConnection`.
+1. In the web app for the WCF service (`SHWCF-EUS2`) > **Settings** > **Application settings**, they add a new connection string named `DefaultConnection`.
 2. The connection string is pulled from the `SmartHotel-Registration` database, and should be updated with the correct credentials.
 
     ![Connection string](./media/contoso-migration-refactor-web-app-sql-managed-instance/string1.png)
@@ -319,7 +321,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
      ![ASP.NET template](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline3.png)
 
-4. The name **ContosoSmartHotelRefactor-ASP.NET-CI** is used for the build. They select **Save & Queue**.
+4. The name `ContosoSmartHotelRefactor-ASP.NET-CI` is used for the build. They select **Save & Queue**.
 
      ![Save and queue](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline4.png)
 
@@ -329,7 +331,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
 6. The folder **Drop** contains the build results.
 
-    - The two zip files are the packages that contain the apps.
+    - The two .zip files are the packages that contain the apps.
     - These files are used in the release pipeline for deployment to Azure App Service.
 
      ![Artifact](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline6.png)
@@ -342,7 +344,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
     ![Azure App Service deployment template](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline8.png)
 
-9. They name the release pipeline **ContosoSmartHotel360Refactor**, and specify the name of the WCF web app (SHWCF-eus2) for the **Stage** name.
+9. They name the release pipeline `ContosoSmartHotel360Refactor`, and specify the name of the WCF web app (`SHWCF-EUS2`) for the **Stage** name.
 
     ![Environment](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline9.png)
 
@@ -354,7 +356,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
      ![Select the app service name](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline11.png)
 
-12. On the pipeline > **Artifacts**, they select **+Add an artifact**, and select to build with the **ContosoSmarthotel360Refactor** pipeline.
+12. On the pipeline > **Artifacts**, they select **+Add an artifact**, and select to build with the `ContosoSmarthotel360Refactor` pipeline.
 
      ![Build](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline12.png)
 
@@ -374,7 +376,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
     ![Save WCF](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline16.png)
 
-17. They select **Pipeline** > **Stages**, **+Add** to add an environment for **SHWEB-EUS2**. They select another Azure App Service deployment.
+17. They select **Pipeline** > **Stages**, **+Add** to add an environment for `SHWEB-EUS2`. They select another Azure App Service deployment.
 
     ![Add environment](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline17.png)
 
@@ -427,7 +429,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 - Contoso needs to review backup requirements for the Azure SQL Managed Instance database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 - Contoso also needs to learn about managing SQL Database backups and restores. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups) about automatic backups.
 - Contoso should consider implementing failover groups to provide regional failover for the database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview).
-- Contoso needs to consider deploying the web app in the main East US 2 and Central US region for resilience. Contoso could configure Traffic Manager to ensure failover when regional outages occur.
+- Contoso needs to consider deploying the web app in the main region (`East US 2`) and the secondary region (`Central US`) for resilience. Contoso could configure Traffic Manager to ensure failover when regional outages occur.
 
 ### Licensing and cost optimization
 

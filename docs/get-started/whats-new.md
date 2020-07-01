@@ -59,7 +59,7 @@ We've brought all the cloud adoption tools and templates together in one place t
 
 | Article | Description |
 |----------|-------------|
-| [Tools and templates](../reference/tools-templates.md) | Find the tools, templates and assessments that can help you accelerate your cloud adoption journey. |
+| [Tools and templates](../reference/tools-templates.md) | Find the tools, templates, and assessments that can help you accelerate your cloud adoption journey. |
 
 ## April 4, 2020
 

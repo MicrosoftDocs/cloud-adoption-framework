@@ -10,11 +10,13 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- docsTest:ignore ".NET" -->
+
 <!-- cSpell:ignore givenscj WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless -->
 
 # Rehost an on-premises app on Azure VMs
 
-This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .net front-end app running on VMware VMs, by migrating the app VMs to Azure VMs.
+This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end app running on VMware VMs, by migrating the app VMs to Azure VMs.
 
 The SmartHotel360 app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
@@ -129,7 +131,7 @@ They set these up as follows:
 
 1. Set up a network-Contoso already set up a network that can be for Azure Migrate: Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
-    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary East US 2 region.
+    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
     - The app front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`), in the production network.
     - The app database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`), in the production network.

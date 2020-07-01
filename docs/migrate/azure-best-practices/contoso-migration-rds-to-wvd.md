@@ -1,5 +1,5 @@
 ---
-title: "Moving on-premises remote desktop services to Azure Windows Virtual Desktop (scenario) "
+title: "Moving on-premises Remote Desktop Services to Azure Windows Virtual Desktop (scenario) "
 description: Learn how Contoso migrates their on-premises RDS to Azure using Windows Virtual Desktop
 author: benstegink
 ms.author: abuck
@@ -10,32 +10,32 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore benstegink FSLogix -->
+<!-- cSpell:ignore benstegink Logix -->
 
-# Moving on-premises remote desktop services to Azure Windows Virtual Desktop (scenario)
+# Moving on-premises Remote Desktop Services to Azure Windows Virtual Desktop (scenario)
 
 <!-- markdownlint-disable MD033 -->
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Assess and migrate on-premises rds environment. <br><br> Run workloads using Azure WVD. <br><br> Manage WVD with [WVD management ux](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
+| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environment. <br><br> Run workloads using Azure WVD. <br><br> Manage WVD with [WVD management ux](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
 
-Windows Virtual Desktop (WVD), is a comprehensive desktop and app virtualization service running in the cloud. It's the only virtual desktop infrastructure (VDI) that delivers simplified management, multi-session Windows 10, optimizations for Microsoft 365 apps for enterprise, and support for remote desktop services (rds) environments. Deploy and scale Windows desktops and apps on Azure in minutes, and get built-in security and compliance features.
+Windows Virtual Desktop (WVD), is a comprehensive desktop and app virtualization service running in the cloud. It's the only virtual desktop infrastructure (VDI) that delivers simplified management, multi-session Windows 10, optimizations for Microsoft 365 Apps for enterprise, and support for Remote Desktop Services (RDS) environments. Deploy and scale Windows desktops and apps on Azure in minutes, and get built-in security and compliance features.
 
 > [!NOTE]
-> This article focuses on using Azure Windows Virtual Desktop (WVD) service, to move an on-premises rds environment to Azure.
+> This article focuses on using Azure Windows Virtual Desktop (WVD) service, to move an on-premises RDS environment to Azure.
 
 ## Business drivers
 
 Working closely with business partners, the Contoso IT team will define the business drivers for a VDI migration to Azure. These drivers may include:
 
-- **Current environment end-of-life (eol):** Datacenter is out of capacity, reaching the end of a lease, or datacenter closing down. Migrating to the cloud provides unlimited capacity. Current software may also be reaching it's end of life where it has become necessary to upgrade the software running Contoso's current virtual desktop interface (VDI) solution.
+- **Current environment end-of-life:** Datacenter is out of capacity, reaching the end of a lease, or datacenter closing down. Migrating to the cloud provides unlimited capacity. Current software may also be reaching it's end of life where it has become necessary to upgrade the software running Contoso's current virtual desktop interface (VDI) solution.
 - **Multi-session Windows 10 VDI:** Provide Contoso users with the only multi-session Windows 10 desktop virtualized in the cloud that's highly scalable, always up to date, and available on any device.
-- **Optimize for Microsoft 365 apps for enterprise:** Deliver the best Microsoft 365 apps for enterprise experience, with multi-session virtual desktop scenarios to provide the most productive virtualized experience for Contoso's users.
+- **Optimize for Microsoft 365 Apps for enterprise:** Deliver the best Microsoft 365 Apps for enterprise experience, with multi-session virtual desktop scenarios to provide the most productive virtualized experience for Contoso's users.
 - **Deploy and scale in minutes:** Quickly virtualize and deploy modern and legacy desktop apps to the cloud in minutes with unified management in the Azure portal.
 - **Secure and productive on Azure and Microsoft 365:** Deploy a complete, intelligent solution that enhances creativity and collaboration for everyone. Shift to Microsoft 365 and get Office 365, Windows 10, and enterprise mobility + security.
 
-## Rds on-premises to WVD in the cloud goals
+## RDS on-premises to WVD in the cloud goals
 
 With the business drivers in mind, Contoso has pinned down goals for this migration:
 
@@ -55,7 +55,7 @@ Contoso will capitalize on existing Microsoft 365 licenses, while using the scal
 Additional benefits may include:
 
 - Access to WVD from anywhere
-- Optimized Microsoft 365 apps for enterprise environment
+- Optimized Microsoft 365 Apps for enterprise environment
 - WVD for development/test environments
 
 ## Solutions design
@@ -64,15 +64,15 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 
 ### Current architecture
 
-- Remote desktop service (rds) is deployed to an on-premises datacenter
+- Remote desktop service (RDS) is deployed to an on-premises datacenter
 - Microsoft 365 is licensed and in use by the organization
 
 ### Proposed architecture
 
-- Sync Active Directory (ad) or Azure Active Directory Domain Services (Azure AD DS) with Azure Active Directory (Azure AD)
+- Sync Active Directory or Azure Active Directory Domain Services (Azure AD DS) with Azure Active Directory (Azure AD)
 - Deploy Windows Virtual Desktop (WVD) to Azure
-- Migrate on-premises rds server to Azure
-- Convert user profile disks (upd) to FSLogix profile containers
+- Migrate on-premises RDS server to Azure
+- Convert user profile disks (UPD) to FSLogix profile containers
 
 ![Migration process](./media/contoso-migration-rds-to-wvd/proposed-architecture.png)
 
@@ -91,7 +91,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 Contoso will move VMs to WVD in Azure using the lakeside assessment tool and Azure Migrate.
 
-- As a first step, Contoso runs the assessment tool against their on-premises rds infrastructure to establish the scale of the WVD deploy in Azure.
+- As a first step, Contoso runs the assessment tool against their on-premises RDS infrastructure to establish the scale of the WVD deploy in Azure.
 - Migrate to WVD: Windows 10 multi-session or persistent virtual machines.
 - Optimize the WVD multi-session scaling up and down as needed to manage costs.
 - Virtualize applications and assign users as needed to continue to secure and manage the WVD environment.
@@ -100,19 +100,19 @@ Contoso will move VMs to WVD in Azure using the lakeside assessment tool and Azu
 
 ## Scenarios steps
 
-1. Assess current rds environment
-2. Create the WVD infrastructure and new images in Azure and migrate and persistent VMs to Azure
-3. Convert user profile disks (upds) to FSLogix profile containers
-4. Replicate any persistent VMs to Azure
+1. Assess the current RDS environment.
+2. Create the WVD infrastructure and new images in Azure and migrate and persistent VMs to Azure.
+3. Convert user profile disks (UPDs) to FSLogix profile containers.
+4. Replicate any persistent VMs to Azure.
 
 ## Step 1: Assess the current on-premises environment
 
-Contoso will provision the WVD service in the East US 2 Azure region. The WVD service allows them to provision virtual machines, host pools, and create application groups. The WVD service also configures an availability set for all the servers in the WVD solution. The WVD services allows Contoso to create both a high available VDI environment as well as scale up and down quickly as needed.
+Contoso will provision the WVD service in the `East US 2` Azure region. The WVD service allows them to provision virtual machines, host pools, and create application groups. The WVD service also configures an availability set for all the servers in the WVD solution. The WVD services allows Contoso to create both a high available VDI environment as well as scale up and down quickly as needed.
 
 > [!NOTE]
-> There are two scenarios Contoso is reviewing during the assessment. Multi-session (shared) instances of rds as well as persistent, or user dedicated, virtual machines.
+> There are two scenarios that Contoso is reviewing during the assessment: multi-session (shared) instances of RDS, and persistent (or user-dedicated) virtual machines.
 
-- First, insure domain service (ad or Azure AD DS), is synchronized with Azure AD and that the domain service is accessible from the Azure subscription and virtual network to be connected where the WVD will be deployed.
+- First, ensure domain services (Active Directory or Azure AD DS), is synchronized with Azure AD and that the domain service is accessible from the Azure subscription and virtual network to be connected where the WVD will be deployed.
 
 > [!NOTE]
 > Learn more about [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express) for synchronizing active director on-premises with Azure AD.
@@ -123,7 +123,7 @@ Contoso will provision the WVD service in the East US 2 Azure region. The WVD se
 
 ![New Azure Migrate project](./media/contoso-migration-rds-to-wvd/new-azure-migrate.png)
 
-- Choose the option to asses and migrate servers, select VDI, and add a tool.
+- Choose the option to assess and migrate servers, select VDI, and add a tool.
 
 ![Azure Migration goals of VDI](./media/contoso-migration-rds-to-wvd/azure-migrate-goals-vdi.png)
 
@@ -150,7 +150,7 @@ Contoso will provision the WVD service in the East US 2 Azure region. The WVD se
 
 ![login to connect azure and lakeside](./media/contoso-migration-rds-to-wvd/lakeside-login.png)
 
-- Contoso continues with the lakeside tool to create a new tenant and start assessing their current on-premises rds environment. From the dashboard Contoso can access the deployment guide, download the assessment client to deploy to their current environment as well as review the data collected from these agents.
+- Contoso continues with the lakeside tool to create a new tenant and start assessing their current on-premises RDS environment. From the dashboard Contoso can access the deployment guide, download the assessment client to deploy to their current environment as well as review the data collected from these agents.
 
 ![Lakeside dashboard](./media/contoso-migration-rds-to-wvd/lakeside-new-tenant-dashboard.png)
 
@@ -176,9 +176,9 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop (WVD) envi
 
 ![Provision a windows virtual desktop host pool](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool.png)
 
-- They specify the subscription, resource group, and region. Next choose they name for the hostpool, desktop type, and default desktop users. Desktop type is set pooled since Contoso is starting with a new shared environment for some of their users. Default desktop users can be left blank. The move on to configuring the virtual machines.
+- They specify the subscription, resource group, and region. Next choose they name for the host pool, desktop type, and default desktop users. Desktop type is set pooled since Contoso is starting with a new shared environment for some of their users. Default desktop users can be left blank. The move on to configuring the virtual machines.
 
-![Migration process](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-basics_alt.png)
+![Migration process](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-basics-alt.png)
 
 - As this point in time, Contoso configures the VM, starting with choosing a custom size by clicking change size, or they choose to take the default.
 - WVD is chosen as the VM name prefix for these pooled desktops.
@@ -186,7 +186,7 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop (WVD) envi
 - Based on the personas of the users from the lakeside assessment, Contoso sets the total users to 150.
 - Other settings include the disk type, the ad domain join upn, an admin password, an option OU path to add the machines to, the virtual network and subnet to add the servers to.
 
-![Configure virtual machines](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-configurevirtualmachines_alt.png)
+![Configure virtual machines](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-configurevirtualmachines-alt.png)
 
 > [!NOTE]
 > Contoso can't create a new virtual network at this step. Before reaching this step they should have already created a virtual network that has access to Active Directory.
@@ -197,14 +197,16 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop (WVD) envi
 
 ![Review and create virtual machines](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-reviewcreate.png)
 
-## Step 3: Convert the upds to FSLogix profile containers
+## Step 3: Convert the UPDs to FSLogix profile containers
 
-Since WVD doesn't support user profile disks (upds) Contoso needs to convert all the upds to FSLogix. This process is done using the fslogixmigration PowerShell module that can be download from [https://aka.ms/fslogixmigrationpreviewmodule](https://aka.ms/FSLogixMigrationPreviewModule).
+Since WVD doesn't support user profile disks (UPDs), Contoso needs to convert all the UPDs to FSLogix. This process is done using the FSLogix migration PowerShell module that can be download from [https://aka.ms/fslogixmigrationpreviewmodule](https://aka.ms/FSLogixMigrationPreviewModule).
 
-Once Contoso has imported the fslogixmigration module, they run the following PowerShell cmdlets to migrate from upds to FSLogix.
+<!-- docsTest:ignore FSLogixMigration -->
+
+Once Contoso has imported the FSLogixMigration module, they run the following PowerShell cmdlets to migrate from UPDs to FSLogix.
 
 > [!IMPORTANT]
-> The PowerShell modules for Hyper-V, activedirectory, and pester are prerequisites to running the cmdlets to convert upds to FSLogix.
+> The PowerShell modules for Hyper-V, activedirectory, and pester are prerequisites to running the cmdlets to convert UPDs to FSLogix.
 
 - UDP conversion
 
@@ -288,4 +290,4 @@ For business continuity and disaster recovery (BCDR), Contoso takes the followin
 
 ## Conclusion
 
-In this article, Contoso moved their rds deployment to Windows Virtual Desktop hosted in Azure.
+In this article, Contoso moved their RDS deployment to Windows Virtual Desktop hosted in Azure.

@@ -10,6 +10,8 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- docsTest:ignore ".NET" -->
+
 <!-- cSpell:ignore givenscj WEBVM SQLVM contosohost vcenter contosodc AOAG SQLAOG SQLAOGAVSET contosoadmin contosocloudwitness MSSQLSERVER BEPOOL contosovmsacc SHAOG NSGs inetpub iisreset -->
 
 # Rehost an on-premises app with Azure Virtual Machines and SQL Server Always On availability groups
@@ -110,9 +112,9 @@ Contoso admins will migrate the app VMs to Azure.
   - With everything prepared, they can start replicating the VM.
   - After replication is enabled and working, they migrate the VM using Azure Migrate.
 - Once they have verified the database, they will migrate the database to a SQL Server cluster in Azure, using the data migration service (Database Migration Service).
-  - As a first step they'll need to provision SQL Server VMs in Azure, set up the cluster and an internal load balancer, and configure always on availability groups.
+  - As a first step they'll need to provision SQL Server VMs in Azure, set up the cluster and an internal load balancer, and configure Always On availability groups.
   - With this in place, they can migrate the database.
-- After the migration, they'll enable always on protection for the database.
+- After the migration, they'll enable Always On availability groups for the database.
 
     ![Migration process](./media/contoso-migration-rehost-vm-sql-ag/migration-process.png)
 
@@ -126,7 +128,7 @@ Here's what Contoso needs to do for this scenario.
 | --- | --- |
 | **Azure subscription** | Contoso already created a subscription in an early article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you owner or contributor permissions. <br><br>  |
 | **Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). <br><br> Learn more about specific [prerequisites](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prerequisites) requirements for Azure Migrate: Server Migration. |
-| **On-premises servers** | The on-premises vCenter server should be running version 5.5, 6.0, 6.5 or 6.7 <br><br> An ESXi host running version 5.5, 6.0, 6.5 or 6.7 <br><br> One or more VMware VMs running on the ESXi host. |
+| **On-premises servers** | The on-premises vCenter server should be running version 5.5, 6.0, 6.5 or 6.7. <br><br> An ESXi host running version 5.5, 6.0, 6.5 or 6.7. <br><br> One or more VMware VMs running on the ESXi host. |
 | **On-premises VMs** | [Review Linux machines](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
 
 <!-- markdownlint-enable MD033 -->
@@ -144,7 +146,7 @@ Here's how Contoso will run the migration:
 > - **Step 5: Prepare on-premises VMware for Azure Migrate.** Prepare accounts for VM discovery and agent installation. Prepare on-premises VMs so that users can connect to Azure VMs after migration.
 > - **Step 6: Replicate VMs.** Enable VM replication to Azure.
 > - **Step 7: Migrate the database with data migration service (Database Migration Service).** Migrate the database to Azure using the data migration service.
-> - **Step 8: Protect the database.** Create an always on availability group for the cluster.
+> - **Step 8: Protect the database.** Create an Always On availability group for the cluster.
 > - **Step 9: Migrate the VMs with Azure Migrate** run a test migration to make sure everything's working as expected. Then run a migration Azure.
 
 ## Step 1: Prepare a SQL Server Always On availability group cluster
@@ -160,18 +162,18 @@ Contoso admins set up the cluster as follows:
     - Names for the VMs: `SQLAOG1` and `SQLAOG2`.
     - Since machines are business-critical, they enable SSD for the VM disk type.
     - They specify machine credentials.
-    - They deploy the VMs in the primary East US 2 region, in the `ContosoRG` resource group.
+    - They deploy the VMs in the primary region (`East US 2`), in the `ContosoRG` resource group.
 
-3. In **Size**, they start with d2s_v3 SKU for both VMs. They'll scale later as they need to.
+3. In **Size**, they start with the d2s_v3 SKU for both VMs. They'll scale later as they need to.
 4. In **Settings**, they do the following:
 
     - Since these VMs are critical databases for the app, they use managed disks.
-    - They place the machines in the production network of the East US 2 primary region (**`VNET-PROD-EUS2`**), in the database subnet (**`PROD-DB-EUS2`**).
-    - They create a new availability set: `SQLAOGAVSET`, with two fault domains and five update domains.
+    - They place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+    - They create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains.
 
       ![SQL VM](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
 
-5. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private), on default port 1433. For authentication, they use the same credentials as they use onsite (**contosoadmin**).
+5. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private), on default port 1433. For authentication, they use the same credentials as they use onsite (`contosoadmin`).
 
     ![SQL VM](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-db.png)
 
@@ -188,7 +190,7 @@ Here's how Contoso admins set up the cluster:
 2. They add the SQL Server VMs to the Active Directory domain in the Contoso on-premises datacenter.
 3. They create the cluster in Azure.
 4. They configure the cloud witness.
-5. Lastly, they enable SQL always on availability groups.
+5. Lastly, they enable SQL Always On availability groups.
 
 ### Set up a storage account as cloud witness
 
@@ -196,9 +198,9 @@ To set up a cloud witness, Contoso needs an Azure Storage account that will hold
 
 Contoso admins create a storage account as follows:
 
-1. They specify a recognizable name for the account (**contosocloudwitness**).
+1. They specify a recognizable name for the account (`contosocloudwitness`).
 2. They deploy a general all-purpose account, with LRS.
-3. They place the account in a third region - South Central US. They place it outside the primary and secondary region so that it remains available during regional failure.
+3. They place the account in a third region (`South Central US`). They place it outside the primary and secondary region so that it remains available during regional failure.
 4. They place it in their resource group that holds infrastructure resources, `ContosoInfraRG`.
 
     ![Cloud witness](./media/contoso-migration-rehost-vm-sql-ag/witness-storage.png)
@@ -209,7 +211,7 @@ Contoso admins create a storage account as follows:
 
 ### Add SQL Server VMs to Contoso domain
 
-1. Contoso adds sqlaog1 and sqlaog2 to contoso.com domain.
+1. Contoso adds `SQLAOG1` and `SQLAOG2` to the `contoso.com` domain.
 2. Then, on each VM they install the Windows failover cluster feature and tools.
 
 ### Set up the cluster
@@ -236,7 +238,7 @@ Before setting up the cluster, Contoso admins take a snapshot of the OS disk on 
 
 ### Enable SQL Server Always On availability groups
 
-Contoso admins can now enable always on:
+Contoso admins can now enable Always On availability groups:
 
 1. In SQL Server Configuration Manager, they enable **Always On availability groups** for the **SQL Server (MSSQLSERVER)** service.
 
@@ -244,7 +246,7 @@ Contoso admins can now enable always on:
 
 2. They restart the service for changes to take effect.
 
-With always on enabled, Contoso can set up the always on availability group that will protect the SmartHotel360 database.
+With Always On availability groups enabled, Contoso can set up the Always On availability group that will protect the SmartHotel360 database.
 
 **Need more help?**
 
@@ -259,9 +261,9 @@ Contoso admins now want to deploy an internal load balancer that sits in front o
 
 They create the load balancer as follows:
 
-1. In the Azure portal > **Networking** > **Load balancer**, they set up a new internal load balancer: **`ILB-PROD-DB`-EUS2-SQLAOG**.
-2. They place the load balancer in the production network **`VNET-PROD-EUS2`**, in the database subnet **`PROD-DB-EUS2`**.
-3. They assign it a static IP address: `10.245.40.100`.
+1. In the Azure portal > **Networking** > **Load balancer**, they set up a new internal load balancer: `ILB-PROD-DB-EUS2-SQLAOG`.
+2. They place the load balancer in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`).
+3. They assign it a static IP address (`10.245.40.100`).
 4. As a networking element, they deploy the load balancer in the networking resource group `ContosoNetworkingRG`.
 
     ![Load balancing](./media/contoso-migration-rehost-vm-sql-ag/lb-create.png)
@@ -273,7 +275,7 @@ After the internal load balancer is deployed, they need to set it up. They creat
 To distribute traffic to the VMs in the cluster, Contoso admins set up a back-end address pool that contains the IP addresses of the NICs for VMs that will receive network traffic from the load balancer.
 
 1. In the load balancer settings in the portal, Contoso adds a back-end pool: `ILB-PROD-DB-EUS-SQLAOG-BEPOOL`.
-2. They associate the pool with availability set SQLAOGAVSET. The VMs in the set (`SQLAOG1` and `SQLAOG2`) are added to the pool.
+2. They associate the pool with availability set `SQLAOGAVSET`. The VMs in the set (`SQLAOG1` and `SQLAOG2`) are added to the pool.
 
     ![Back-end pool](./media/contoso-migration-rehost-vm-sql-ag/backend-pool.png)
 
@@ -301,7 +303,7 @@ They create the rule as follows:
 1. In the load balancer settings in the portal, they add a new rule: `SQLAlwaysOnEndPointListener`.
 2. They set a front-end listener to receive incoming SQL client traffic on TCP port 1433.
 3. They specify the back-end pool to which traffic will be routed, and the port on which VMs listen for traffic.
-4. They enable floating IP (direct server return). This is always required for SQL always on.
+4. They enable floating IP (direct server return). This is always required for SQL Server Always On.
 
     ![Probe](./media/contoso-migration-rehost-vm-sql-ag/nlb-probe.png)
 
@@ -321,7 +323,7 @@ Contoso admins set these up as follows:
 
 1. Contoso already created a network/subnet they can use for Azure Migrate when they [deployed the Azure infrastructure](./contoso-migration-rehost-vm-sql-ag.md).
 
-    - The SmartHotel360 app is a production app, and `WEBVM` will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary east us2 region.
+    - The SmartHotel360 app is a production app, and `WEBVM` will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - `WEBVM` will be placed in the `ContosoRG` resource group, which is used for production resources, and in the production subnet (`PROD-FE-EUS2`).
 
 2. Contoso admins create an Azure Storage account (`contosovmsacc20180528`) in the primary region.
@@ -332,7 +334,7 @@ Contoso admins set these up as follows:
 
 Here's what Contoso admins prepare on-premises:
 
-- An account on the vCenter server or vsphere ESXi host, to automate VM discovery.
+- An account on the vCenter server or vSphere ESXi host, to automate VM discovery.
 - On-premises VM settings, so that Contoso can connect to the replicated Azure VM after migration.
 
 ### Prepare an account for automatic discovery
@@ -437,20 +439,20 @@ As a summary, you must perform the following:
   - Create a migration project.
   - Add a source (on-premises database).
   - Select a target.
-  - Select the database(s) to migrate.
+  - Select the databases to migrate.
   - Configure advanced settings.
   - Start the replication.
   - Resolve any errors.
   - Perform the final cutover.
 
-## Step 8: Protect the database with always on
+## Step 8: Protect the database with SQL Server Always On
 
-With the app database running on `SQLAOG1`, Contoso admins can now protect it using always on availability groups. They configure always on using SQL management studio, and then assign a listener using Windows clustering.
+With the app database running on `SQLAOG1`, Contoso admins can now protect it using Always On availability groups. They configure SQL Server Always On using SQL Server Management Studio, and then assign a listener using Windows clustering.
 
-### Create an always on availability group
+### Create an Always On availability group
 
-1. In SQL management studio, they select and hold (or right-click) **always on high availability** to start the **New Availability Group Wizard**.
-2. In **Specify Options**, they name the availability group `SHAOG`. In **Select Databases**, they select the SmartHotel360 database.
+1. In SQL Server Management Studio, they select and hold (or right-click) **Always On High Availability** to start the **New Availability Group Wizard**.
+2. In **Specify Options**, they name the availability group `SHAOG`. In **Select Databases**, they select the `SmartHotel360` database.
 
     ![Always On availability group](./media/contoso-migration-rehost-vm-sql-ag/aog-1.png)
 
@@ -470,7 +472,7 @@ With the app database running on `SQLAOG1`, Contoso admins can now protect it us
 
     ![Always On availability group](./media/contoso-migration-rehost-vm-sql-ag/aog-5.png)
 
-7. After the group is created, Contoso can see it in SQL management studio.
+7. After the group is created, Contoso can see it in SQL Server Management Studio.
 
 ### Configure a listener on the cluster
 
@@ -480,7 +482,7 @@ As a last step in setting up the SQL deployment, Contoso admins configure the in
 
 ### Verify the configuration
 
-With everything set up, Contoso now has a functional availability group in Azure that uses the migrated database. Admins verify this by connecting to the internal load balancer in SQL management studio.
+With everything set up, Contoso now has a functional availability group in Azure that uses the migrated database. Admins verify this by connecting to the internal load balancer in SQL Server Management Studio.
 
 ![ILB connect](./media/contoso-migration-rehost-vm-sql-ag/ilb-connect.png)
 
@@ -488,7 +490,7 @@ With everything set up, Contoso now has a functional availability group in Azure
 
 - Learn about creating an [availability group](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial#create-the-availability-group) and [listener](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-tutorial#configure-listener).
 - Manually [set up the cluster to use the load balancer IP address](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#configure-the-cluster-to-use-the-load-balancer-ip-address).
-- Learn more about [creating and using sas](https://docs.microsoft.com/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2).
+- Learn more about [creating and using SAS](https://docs.microsoft.com/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2).
 
 ## Step 9: Migrate the VM with Azure Migrate
 
@@ -529,9 +531,9 @@ Running a test migration helps ensure that everything's working as expected befo
 
 ### Update the connection string
 
-As the final step in the migration process, Contoso admins update the connection string of the application to point to the migrated database running on the SHAOG listener. This configuration will be changed on the `WEBVM` now running in Azure. This configuration is located in the web.config of the asp application.
+As the final step in the migration process, Contoso admins update the connection string of the application to point to the migrated database running on the `SHAOG` listener. This configuration will be changed on the `WEBVM` now running in Azure. This configuration is located in the web.config of the asp application.
 
-1. Locate the file at `C:\inetpub\SmartHotelWeb\web.config`. Change the name of the server to reflect the FQDN of the aog: shaog.contoso.com.
+1. Locate the file at `C:\inetpub\SmartHotelWeb\web.config`. Change the name of the server to reflect the FQDN of the Always On availability group: `shaog.contoso.com`.
 
     ![Failover](./media/contoso-migration-rehost-vm-sql-ag/failover4.png)
 
@@ -554,7 +556,7 @@ Now, Contoso needs to complete these cleanup steps:
 - Remove the VMs from local backup jobs.
 - Update internal documentation to show the new locations and IP addresses for VMs.
 - Review any resources that interact with the decommissioned VMs, and update any relevant settings or documentation to reflect the new configuration.
-- Add the two new VMs (sqlaog1 and sqlaog2) should be added to production monitoring systems.
+- Add the two new VMs (`SQLAOG1` and `SQLAOG2`) should be added to production monitoring systems.
 
 ### Review the deployment
 
@@ -562,11 +564,11 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ### Security
 
-The Contoso security team reviews the virtual machines `WEBVM`, `SQLAOG1` and `SQLAOG2` to determine any security issues.
+The Contoso security team reviews the virtual machines `WEBVM`, `SQLAOG1`, and `SQLAOG2` to determine any security issues.
 
 - The team reviews the network security groups (NSGs) for the VM to control access. NSGs are used to ensure that only traffic allowed to the application can pass.
 - The team considers securing the data on the disk using Azure Disk Encryption and Key Vault.
-- The team should evaluate transparent data encryption (TDE), and then enable it on the SmartHotel360 database running on the new SQL aog. [Learn more](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017).
+- The team should evaluate transparent data encryption (TDE), and then enable it on the SmartHotel360 database running on the new Always On availability group. [Learn more](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017).
 
 For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
@@ -574,7 +576,7 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
 
-- To keep data safe, Contoso backs up the data on the WEBVM, sqlaog1 and sqlaog2 VMs using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup?toc=/azure/virtual-machines/linux/toc.json).
+- To keep data safe, Contoso backs up the data on the `WEBVM`, `SQLAOG1`, and `SQLAOG2` VMs using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup?toc=/azure/virtual-machines/linux/toc.json).
 - Contoso will also learn about how to use Azure Storage to back up SQL Server directly to Blob storage. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore).
 - To keep apps up and running, Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 

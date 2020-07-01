@@ -10,6 +10,8 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
+<!-- docsTest:ignore ".NET" -->
+
 <!-- cSpell:ignore savision -->
 
 # Cloud monitoring guide: Monitoring strategy for cloud deployment models
@@ -71,15 +73,15 @@ The following table summarizes the requirements that Azure Monitor and System Ce
 
 | Requirement | Azure Monitor | Operations Manager |
 |---|---|---|
-| Infrastructure requirements | No | Yes <br>  Requires, at a minimum, a management server and a SQL server to host the operational database and the reporting data warehouse database. The complexity increases when high availability and disaster recovery are required, and there are machines in multiple sites, untrusted systems, and other complex design considerations. |
-| Limited connectivity - no internet <br>  or isolated network | No | Yes |
+| Infrastructure requirements | No | Yes <br><br> Requires, at a minimum, a management server and a SQL server to host the operational database and the reporting data warehouse database. The complexity increases when high availability and disaster recovery are required, and there are machines in multiple sites, untrusted systems, and other complex design considerations. |
+| Limited connectivity - no internet or isolated network | No | Yes |
 | Limited connectivity - controlled internet access | Yes | Yes |
 | Limited connectivity - frequently disconnected | Yes | Yes |
 | Configurable health monitoring | No | Yes |
-| Web app availability test (isolated network) | Yes, limited <br>  Azure Monitor has limited support in this area and requires custom firewall exceptions. | Yes |
+| Web app availability test (isolated network) | Yes, limited <br><br> Azure Monitor has limited support in this area and requires custom firewall exceptions. | Yes |
 | Web app availability test (globally distributed) | No | Yes |
-| Monitor VM workloads | Yes, limited <br>  Can collect IIS and SQL Server error logs, Windows events, and performance counters. Requires creating custom queries, alerts, and visualizations. | Yes <br>  Supports monitoring most of the server workloads with available management packs. Requires either the Log Analytics Windows agent or Operations Manager agent on the VM, reporting back to the management group on the corporate network. |
-| Monitor Azure IaaS | Yes | Yes <br>  Supports monitoring most of the infrastructure from the corporate network. Tracks availability state, metrics, and alerts for Azure VMs, SQL, and storage via the Azure management pack. |
+| Monitor VM workloads | Yes, limited <br><br> Can collect IIS and SQL Server error logs, Windows events, and performance counters. Requires creating custom queries, alerts, and visualizations. | Yes <br><br> Supports monitoring most of the server workloads with available management packs. Requires either the Log Analytics Windows agent or Operations Manager agent on the VM, reporting back to the management group on the corporate network. |
+| Monitor Azure IaaS | Yes | Yes <br><br> Supports monitoring most of the infrastructure from the corporate network. Tracks availability state, metrics, and alerts for Azure VMs, SQL, and storage via the Azure management pack. |
 | Monitor Azure PaaS | Yes | Yes, limited <br><br> Based on what's supported in the Azure management pack. |
 | Azure service monitoring | Yes | Yes <br><br> Although there's no native monitoring of Azure Service Health provided today through a management pack, you can create custom workflows to query Service Health alerts. Use the Azure REST API to get alerts through your existing notifications. |
 | Modern web application monitoring | Yes | No |

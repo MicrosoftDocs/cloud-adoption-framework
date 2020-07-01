@@ -248,22 +248,22 @@ Now Contoso admins run a full migration to complete the move.
 
 ## Step 5: Provision Azure Database for MySQL
 
-Contoso admins provision a MySQL database instance in the primary East US 2 region.
+Contoso admins provision a MySQL database instance in the primary region (`East US 2`).
 
 1. In the Azure portal, they create an Azure Database for MySQL resource.
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/mysql-1.png)
 
-2. They add the name **contosoosticket** for the Azure database. They add the database to the production resource group `ContosoRG`, and specify credentials for it.
+2. They add the name `contosoosticket` for the Azure database. They add the database to the production resource group `ContosoRG`, and specify credentials for it.
 3. The on-premises MySQL database is version 5.7, so they select this version for compatibility. They use the default sizes, which match their database requirements.
 
      ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/mysql-2.png)
 
-4. For **Backup Redundancy Options**, they select to use **Geo-Redundant**. This option allows them to restore the database in their secondary Central US region if an outage occurs. They can only configure this option when they provision the database.
+4. For **Backup Redundancy Options**, they select to use **Geo-Redundant**. This option allows them to restore the database in their secondary region (`Central US`) if an outage occurs. They can only configure this option when they provision the database.
 
      ![Redundancy](./media/contoso-migration-rehost-linux-vm-mysql/db-redundancy.png)
 
-5. In the **`VNET-PROD-EUS2`** network > **Service endpoints**, they add a service endpoint (a database subnet) for the SQL service.
+5. In the `VNET-PROD-EUS2` network > **Service endpoints**, they add a service endpoint (a database subnet) for the SQL service.
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/mysql-3.png)
 
@@ -276,7 +276,7 @@ Contoso admins provision a MySQL database instance in the primary East US 2 regi
 There are several ways to move the MySQL database. Each require you to create an Azure Database for MySQL instance for the target. Once created, you can perform the migration using two paths:
 
 - 6A: Azure Database Migration Service
-- 6b: MySQL workbench backup and restore
+- 6b: MySQL Workbench backup and restore
 
 ### Step 6a: Migrate the database (Azure Database Migration Service)
 
@@ -290,7 +290,7 @@ As a summary, you must perform the following:
 - Ensure all migration prerequisites are met:
 
   - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine, and migration across source and target with same versions.
-  - Enable binary logging in my.ini (Windows) or my.cnf (unix). Failure to do this will cause a `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error: `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
   - User must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 
@@ -316,7 +316,7 @@ As a summary, you must perform the following:
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-target.png)
 
-  - Select the database(s) to migrate.
+  - Select the databases to migrate.
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-databases.png)
 
@@ -340,21 +340,21 @@ As a summary, you must perform the following:
 
     ![MySQL](./media/contoso-migration-rehost-linux-vm-mysql/migration-dms-cutover-apps.png)
 
-### Step 6b: Migrate the database (MySQL workbench)
+### Step 6b: Migrate the database (MySQL Workbench)
 
-Contoso admins migrate the database using backup and restore, with MySQL tools. They install MySQL workbench, back up the database from OSTICKETMYSQL, and then restore it to Azure Database for MySQL server.
+Contoso admins migrate the database using backup and restore, with MySQL tools. They install MySQL Workbench, back up the database from `OSTICKETMYSQL`, and then restore it to Azure Database for MySQL server.
 
-### Install MySQL workbench
+### Install MySQL Workbench
 
-1. They check the [prerequisites and downloads MySQL workbench](https://dev.mysql.com/downloads/workbench/?utm_source=tuicool).
+1. They check the [prerequisites and downloads MySQL Workbench](https://dev.mysql.com/downloads/workbench/?utm_source=tuicool).
 
-2. They install MySQL workbench for Windows in accordance with the [installation instructions](https://dev.mysql.com/doc/workbench/en/wb-installing.html).
+2. They install MySQL Workbench for Windows in accordance with the [installation instructions](https://dev.mysql.com/doc/workbench/en/wb-installing.html).
 
-3. In MySQL workbench, they create a MySQL connection to OSTICKETMYSQL.
+3. In MySQL Workbench, they create a MySQL connection to OSTICKETMYSQL.
 
     ![MySQL Workbench](./media/contoso-migration-rehost-linux-vm-mysql/workbench1.png)
 
-4. They export the database as **osticket**, to a local self-contained file.
+4. They export the database as `osticket` to a local self-contained file.
 
     ![MySQL Workbench](./media/contoso-migration-rehost-linux-vm-mysql/workbench2.png)
 
@@ -362,7 +362,7 @@ Contoso admins migrate the database using backup and restore, with MySQL tools. 
 
     ![MySQL Workbench](./media/contoso-migration-rehost-linux-vm-mysql/workbench3.png)
 
-6. Now, they can import (restore) the database in the Azure Database for MySQL instance, from the self-contained file. A new schema (osticket) is created for the instance.
+6. Now, they can import (restore) the database in the Azure Database for MySQL instance, from the self-contained file. A new schema (`osticket`) is created for the instance.
 
     ![MySQL Workbench](./media/contoso-migration-rehost-linux-vm-mysql/workbench4.png)
 

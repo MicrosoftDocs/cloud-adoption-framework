@@ -288,7 +288,7 @@ The following section provides some example names for common Azure resource type
 | Storage account (diagnostic logs) | Global | stdiag\<first 2 letters of subscription name and number\>\<region\>\<\#\#\#\> | <li> stdiagsh001eastus2001 <li> stdiagsh001westus001 |
 | Azure StorSimple                  | Global | ssimp\<App Name\>\<Environment\>                                              | <li> ssimpnavigatorprod <li> ssimpemissionsdev |
 
-### Example names: AI and Machine Learning
+### Example names: AI and machine learning
 
 | Asset type                       | Scope          | Format                            | Examples                                                          |
 |----------------------------------|----------------|-----------------------------------|-------------------------------------------------------------------|

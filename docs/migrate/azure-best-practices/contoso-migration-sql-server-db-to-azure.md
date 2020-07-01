@@ -10,7 +10,9 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore -->
+<!-- docsTest:ignore ".NET" -->
+
+<!-- cSpell:ignore BACPAC -->
 
 # Migrating SQL Server databases to Azure (scenario)
 
@@ -56,7 +58,7 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 
 Contoso has already performed a [migration assessment](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/contoso-migration-assessment) of their digital estate using [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) with the [Service Map](https://docs.microsoft.com/azure/azure-monitor/insights/service-map) feature.
 
-The assessment results in multiple workloads spread across multiple departments. The overall size of the migration project will require a full project management office (pmo), to manage the specifics of communication, resources and schedule planning.
+The assessment results in multiple workloads spread across multiple departments. The overall size of the migration project will require a full project management office (PMO), to manage the specifics of communication, resources and schedule planning.
 
 ![Migration process](./media/contoso-migration-sql-server-db-to-azure/migration-process.png)
 
@@ -107,11 +109,13 @@ Contoso also added the database migration assessment (DMA) tool to their Azure M
 
 #### Step 2: Application assessment
 
-The results from the assessment provided Contoso with the visibility that they utilizes mainly .net-based applications, however, over the years various projects have used other technologies such as PHP and nodejs. Vendor purchased systems also introduced non-.net-based applications. They have identified the following:
+<!-- docsTest:ignore "mainly .NET-based" "non-.NET-based" -->
 
-- ~800 .Net applications
+The results from the assessment provided Contoso with the visibility that they utilizes mainly .NET-based applications, however, over the years various projects have used other technologies such as PHP and Node.js. Vendor purchased systems also introduced non-.NET-based applications. They have identified the following:
+
+- ~800 Windows .NET applications
 - ~50 PHP applications
-- 25 Nodejs applications
+- 25 Node.js applications
 - 10 Java applications
 
 #### Step 3: Database assessment
@@ -120,9 +124,9 @@ As each database workload was discovered, the database migration assessment (DMA
 
 Contoso followed these steps to assess their databases and then upload results data to Azure Migrate:
 
-1. Download DMA
-1. Create an assessment project
-1. In DMA logon to the Azure Migrate project and sync assessment summary
+1. Download DMA.
+1. Create an assessment project.
+1. In DMA, logon to the Azure Migrate project and sync the assessment summary.
 
 ![Azure Migrate and DMA](./media/contoso-migration-sql-server-db-to-azure/azure-migrate-dma.png)
 
@@ -146,9 +150,12 @@ When DMA was not able to be executed on a data source, the following guidelines 
 With the information at hand, Contoso uses the following guidelines to determine which migration method to use for each database.
 
 | Target | Database usage | Details | Online migration | Offline migration | Max size | Migration guide |
-| --- | --- | --- | --- | ---| --- | --- | Azure SQL Database (PaaS)  | *SQL Server (data only)*** | These databases simply use basic tables, columns, stored procedures and functions | [Data migration service](https://docs.microsoft.com/sql/dma/dma-overview), [transactional replication](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transactional-replication) | [Bacpac](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-ver15) | 1Tib | [Link](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql) | Azure SQL Managed Instance  | *SQL Server (advanced features)*** | These databases use triggers and other [advanced concepts](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#service-broker) such as custom .net types, service brokers, etc. | [Data migration service](https://docs.microsoft.com/sql/dma/dma-overview), [transactional replication](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transactional-replication) | [Bacpac](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-ver15), [native backup/restore](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore) | 2Tib-8tib | [Link](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) | SQL Server on Azure Virtual Machines (IaaS)  | *SQL Server (3rd-party integrations)*** | The SQL Server must have [non-supported managed instances features](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#service-broker) (cross-instance service brokers, cryptographic providers, buffer pool, compatibility levels below 100, database mirroring, filestream, polybase, anything that requires access to file shares, external scripts, extended stored procedures, etc) or third-party software installed to support the activities of the database | [Transactional replication](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transactional-replication) | [Bacpac](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-ver15), [snapshot replication](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transactional-replication), [native backup/restore](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore), convert physical machine to VM | 4Gib-64tib | [Link](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql) |
+| --- | --- | --- | --- | ---| --- | --- |
+| Azure SQL Database (PaaS) | SQL Server (data only) | These databases simply use basic tables, columns, stored procedures and functions | [Data migration service](https://docs.microsoft.com/sql/dma/dma-overview), [transactional replication](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transactional-replication) | [BACPAC](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-ver15) | 1 TiB | [Link](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql) |
+| Azure SQL Managed Instance | SQL Server (advanced features) | These databases use triggers and other [advanced concepts](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#service-broker) such as custom .NET types, service brokers, etc. | [Data migration service](https://docs.microsoft.com/sql/dma/dma-overview), [transactional replication](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transactional-replication) | [BACPAC](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-ver15), [native backup/restore](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore) | 2 TiB - 8 TiB | [Link](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) |
+| SQL Server on Azure Virtual Machines (IaaS) | SQL Server (third-party integrations) | The SQL Server must have [non-supported SQL Managed Instance features](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#service-broker) (cross-instance service brokers, cryptographic providers, buffer pool, compatibility levels below 100, database mirroring, filestream, polybase, anything that requires access to file shares, external scripts, extended stored procedures, etc.) or third-party software installed to support the activities of the database. | [Transactional replication](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transactional-replication) | [BACPAC](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database), [bcp](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-ver15), [snapshot replication](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transactional-replication), [native backup/restore](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore), convert physical machine to VM | 4 GiB - 64 TiB | [Link](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql) |
 
-Due to the large number of databases, Contoso setup a project management office (pmo) to keep track of every database migration instance. [Accountability and responsibilities](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/) were assigned to each business and application team.
+Due to the large number of databases, Contoso set up a project management office (PMO) to keep track of every database migration instance. [Accountability and responsibilities](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/) were assigned to each business and application team.
 
 Contoso also performed a [workload readiness review](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/evaluate). This review examined the infrastructure, database and network components.
 

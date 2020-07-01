@@ -65,11 +65,11 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 As part of the solution design process Contoso did a review of the features in Azure for hosting their MySQL data. The following considerations helped them decide to use Azure.
 
 - Similar to Azure SQL Database, Azure Database for MySQL allows for [firewall rules](https://docs.microsoft.com/azure/mysql/concepts-firewall-rules).
-- Azure Database for MySQL can be used with [Azure Virtual Networks](https://docs.microsoft.com/azure/mysql/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible.
+- Azure Database for MySQL can be used with [Azure Virtual Network](https://docs.microsoft.com/azure/mysql/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible.
 - Azure Database for MySQL has the required compliance and privacy certifications that Contoso must meet for their auditors.
 - Report and application processing performance can be enhanced by using read replicas.
 - Ability to expose the service to internal network traffic only (no public access) using [Private Link](https://docs.microsoft.com/azure/mysql/concepts-data-access-security-private-link).
-- They chose not to move to Azure Database for MySQL as they are looking at potentially using the MariaDB ColumnStore and GraphDBMS database model in the future.
+- They chose not to move to Azure Database for MySQL as they're looking at potentially using the MariaDB ColumnStore and GraphDBMS database model in the future.
 - Aside from MySQL features, Contoso is a big proponent of true open source projects and choose not to use MySQL.
 - The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or site-to-site VPN).
 
@@ -122,7 +122,7 @@ As a summary, they must perform the following:
 - Ensure all migration prerequisites are met:
 
   - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine, and migration across source and target with same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the migration wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009`.
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the migration wizard: `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009`.
   - User must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 

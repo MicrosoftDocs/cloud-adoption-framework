@@ -94,7 +94,7 @@ Azure Hybrid Benefit provides a cost-effective method for migration, allowing Co
 
 #### License Mobility
 
-License Mobility through Software Assurance gives Microsoft volume licensing customers like Contoso the flexibility to deploy eligible server apps with active sa on Azure. This eliminates the need to purchase new licenses. With no associated mobility fees, existing licenses can easily be deployed in Azure. For more information, see [License Mobility through Software Assurance on Azure](https://azure.microsoft.com/pricing/license-mobility).
+License Mobility through Software Assurance gives Microsoft volume licensing customers like Contoso the flexibility to deploy eligible server apps with active SA on Azure. This eliminates the need to purchase new licenses. With no associated mobility fees, existing licenses can easily be deployed in Azure. For more information, see [License Mobility through Software Assurance on Azure](https://azure.microsoft.com/pricing/license-mobility).
 
 #### Reserve instances for predictable workloads
 
@@ -160,7 +160,7 @@ Contoso admins set up Azure resource groups as shown in the following table.
 
 | Resource group | Details |
 | --- | --- |
-| `ContosoCobRG` | This group contains all resources related to continuity of business (cob). It includes vaults that Contoso will use for the Azure Site Recovery service, and the Azure Backup service. <br><br> It also includes resources used for migration, including Azure Migrate and Azure Database Migration Service. |
+| `ContosoCobRG` | This group contains all resources related to continuity of business. It includes vaults that Contoso will use for the Azure Site Recovery service, and the Azure Backup service. <br><br> It also includes resources used for migration, including Azure Migrate and Azure Database Migration Service. |
 | `ContosoDevRG` | This group contains development and test resources. |
 | `ContosoFailoverRG` | This group serves as a landing zone for failed over resources. |
 | `ContosoNetworkingRG` | This group contains all networking resources. |
@@ -330,7 +330,7 @@ As a reminder, the Contoso on-premises network infrastructure currently consists
 
 Here's how Contoso decided to implement hybrid connectivity:
 
-1. Set up a new site-to-site VPN connection between the Contoso datacenter in New York and the two Azure regions in East US 2 and Central US.
+1. Set up a new site-to-site VPN connection between the Contoso datacenter in New York and the two Azure regions, `East US 2` and `Central US`.
 2. Branch office traffic bound for virtual networks in Azure will route through the main Contoso datacenter.
 3. As Contoso scales up Azure deployment, it will establish an ExpressRoute connection between the datacenter and the Azure regions. When this happens, Contoso will retain the VPN site-to-site connection for failover purposes only.
     - Learn more about [choosing between a VPN and ExpressRoute hybrid solution](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/considerations).
@@ -398,7 +398,7 @@ With a network and routing topology in place, Contoso is ready to set up Azure n
 
 - Contoso will implement a class a private network in Azure (`10.0.0.0/8`). This works, since on-premises it currently has a class B private address space (`172.160.0.0/16`), so Contoso can be sure there won't be any overlap between address ranges.
 - Contoso will deploy VNets in both the primary and secondary regions.
-- Contoso will use a naming convention that includes the prefix `VNET` and the region abbreviation `EUS2` or `CUS`. Using this standard, the hub networks will be named `VNET-HUB-EUS2` (in the `East US 2` region), and `VNET-HUB-CUS` (in the `Central US` region).
+- Contoso will use a naming convention that includes the prefix `VNET` and the region abbreviation `EUS2` or `CUS`. Using this standard, the hub networks will be named `VNET-HUB-EUS2` in the `East US 2` region and `VNET-HUB-CUS` in the `Central US` region.
 
 #### Virtual networks in `East US 2`
 
@@ -490,7 +490,7 @@ The VNets in `Central US` are summarized in the following table.
 
 #### Subnets in the Central US production network (`VNET-PROD-CUS`)
 
-In parallel with the production network in the primary East US 2 region, there's a production network in the secondary Central US region.
+In parallel with the production network in the primary region (`East US 2`), there's a production network in the secondary region (`Central US`).
 
 | Subnet | CIDR | Addresses | In subnet |
 | --- | --- | --- | --- |

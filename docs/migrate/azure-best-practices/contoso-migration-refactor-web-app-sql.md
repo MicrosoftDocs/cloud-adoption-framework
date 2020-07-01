@@ -64,7 +64,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
   - With Software Assurance, Contoso can exchange existing licenses for discounted rates on a SQL Database, using the Azure Hybrid Benefit for SQL Server. This could provide savings of up to 30%.
   - SQL Database provides security features such as always encrypted, dynamic data masking, and row-level security/threat detection.
 - For the app web tier, Contoso has decided to use Azure App Service. This PaaS service enables that to deploy the app with just a few configuration changes. Contoso will use Visual Studio to make the change, and deploy two web apps. One for the website, and one for the WCF service.
-- To meet requirements for a DevOps pipeline, Contoso has selected to use Azure DevOps for source code management (scm) with Git repos. Automated builds and release will be used to build the code, and deploy it to the Azure App Service.
+- To meet requirements for a DevOps pipeline, Contoso has selected to use Azure DevOps for source code management (SCM) with Git repos. Automated builds and release will be used to build the code, and deploy it to the Azure App Service.
 
 ### Solution review
 
@@ -132,11 +132,11 @@ Here's how Contoso will run the migration:
 
     ![Provision SQL](./media/contoso-migration-refactor-web-app-sql/provision-sql1.png)
 
-2. They specify a database name to match the database running on the on-premises VM (**SmartHotel.registration**). They place the database in the `ContosoRG` resource group. This is the resource group they use for production resources in Azure.
+2. They specify a database name to match the database running on the on-premises VM (`SmartHotel.Registration`). They place the database in the `ContosoRG` resource group. This is the resource group they use for production resources in Azure.
 
-    ![Provision SQL](./media/contoso-migration-refactor-web-app-sql/provision-sql2.png)
+    ![Provision an Azure SQL Database instance](./media/contoso-migration-refactor-web-app-sql/provision-sql2.png)
 
-3. They set up a new SQL Server instance (**SQL-smarthotel-eus2**) in the primary region.
+3. They set up a new SQL Server instance (`sql-smarthotel-eus2`) in the primary region.
 
     ![Provision SQL](./media/contoso-migration-refactor-web-app-sql/provision-sql3.png)
 
@@ -171,7 +171,7 @@ As a summary, you must perform the following:
   - Create a migration project.
   - Add a source (on-premises database).
   - Select a target.
-  - Select the database(s) to migrate.
+  - Select the databases to migrate.
   - Configure advanced settings.
   - Start the replication.
   - Resolve any errors.
@@ -185,11 +185,11 @@ With the database migrated, Contoso admins can now provision the two web apps.
 
     ![Web app](./media/contoso-migration-refactor-web-app-sql/web-app1.png)
 
-2. They provide an app name (**SHWEB-eus2**), run it on Windows, and place it un the production resource group `ContosoRG`. They create a new web app and Azure App Service plan.
+2. They provide an app name (`SHWEB-EUS2`), run it on Windows, and place it un the production resource group `ContosoRG`. They create a new web app and Azure App Service plan.
 
     ![Web app](./media/contoso-migration-refactor-web-app-sql/web-app2.png)
 
-3. After the web app is provisioned, they repeat the process to create a web app for the WCF service (**SHWCF-eus2**)
+3. After the web app is provisioned, they repeat the process to create a web app for the WCF service (`SHWCF-EUS2`)
 
     ![Web app](./media/contoso-migration-refactor-web-app-sql/web-app3.png)
 
@@ -219,16 +219,16 @@ Contoso needs to build the DevOps infrastructure and pipelines for the applicati
 
 Contoso admins need to make sure the web apps and database can all communicate. To do this, they configure connection strings in the code and in the web apps.
 
-1. In the web app for the WCF service (**SHWCF-eus2**) > **Settings** > **Application settings**, they add a new connection string named `DefaultConnection`.
+1. In the web app for the WCF service (`SHWCF-eus2`) > **Settings** > **Application settings**, they add a new connection string named `DefaultConnection`.
 2. The connection string is pulled from the `SmartHotel-Registration` database, and should be updated with the correct credentials.
 
     ![Connection string](./media/contoso-migration-refactor-web-app-sql/string1.png)
 
-3. Using Visual Studio, they open the `SmartHotel.Registration.wcf` project from the solution file. The `connectionStrings` section of the `web.config` file for the WCF service SmartHotel.registration.WCF should be updated with the connection string.
+3. Using Visual Studio, they open the `SmartHotel.Registration.wcf` project from the solution file. The `connectionStrings` section of the `web.config` file for the WCF service `SmartHotel.Registration.wcf` should be updated with the connection string.
 
      ![Connection string](./media/contoso-migration-refactor-web-app-sql/string2.png)
 
-4. The `client` section of the `web.config` file for the SmartHotel.registration.web should be changed to point to the new location of the WCF service. This is the URL of the WCF web app hosting the service endpoint.
+4. The `client` section of the `web.config` file for the `SmartHotel.registration.web` should be changed to point to the new location of the WCF service. This is the URL of the WCF web app hosting the service endpoint.
 
     ![Connection string](./media/contoso-migration-refactor-web-app-sql/strings3.png)
 
@@ -250,7 +250,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
      ![ASP.NET template](./media/contoso-migration-refactor-web-app-sql/pipeline3.png)
 
-4. The name **ContosoSmartHotelRefactor-ASP.NET-CI** is used for the build. They select **Save & Queue**.
+4. The name `ContosoSmartHotelRefactor-ASP.NET-CI` is used for the build. They select **Save & Queue**.
 
      ![Save and queue](./media/contoso-migration-refactor-web-app-sql/pipeline4.png)
 
@@ -273,7 +273,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
     ![Azure App Service deployment template](./media/contoso-migration-refactor-web-app-sql/pipeline8.png)
 
-9. They name the release pipeline **ContosoSmartHotel360Refactor**, and specify the name of the WCF web app (SHWCF-eus2) for the **Stage** name.
+9. They name the release pipeline `ContosoSmartHotel360Refactor`, and specify the name of the WCF web app (SHWCF-eus2) for the **Stage** name.
 
     ![Environment](./media/contoso-migration-refactor-web-app-sql/pipeline9.png)
 
@@ -285,7 +285,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
      ![Select the app service name](./media/contoso-migration-refactor-web-app-sql/pipeline11.png)
 
-12. On the pipeline > **Artifacts**, they select **+Add an artifact**, then select to build with the **ContosoSmarthotel360Refactor** pipeline.
+12. On the pipeline > **Artifacts**, they select **+Add an artifact**, then select to build with the `ContosoSmarthotel360Refactor` pipeline.
 
      ![Build](./media/contoso-migration-refactor-web-app-sql/pipeline12.png)
 
@@ -305,7 +305,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
     ![Save WCF](./media/contoso-migration-refactor-web-app-sql/pipeline16.png)
 
-17. They select **Pipeline** > **Stages**, **+Add** to add an environment for **SHWEB-EUS2**. They select another Azure App Service deployment.
+17. They select **Pipeline** > **Stages**, **+Add** to add an environment for `SHWEB-EUS2`. They select another Azure App Service deployment.
 
     ![Add environment](./media/contoso-migration-refactor-web-app-sql/pipeline17.png)
 
@@ -358,7 +358,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 - Contoso needs to review backup requirements for the Azure SQL Database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 - Contoso also needs to learn about managing SQL Database backups and restores. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups) about automatic backups.
 - Contoso should consider implementing failover groups to provide regional failover for the database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview).
-- Contoso needs to consider deploying the web app in the main East US 2 and Central US region for resilience. Contoso could configure Traffic Manager to ensure failover during regional outages.
+- Contoso needs to consider deploying the web app in the main region (`East US 2`) and the secondary region (`Central US`) region for resilience. Contoso could configure Traffic Manager to ensure failover during regional outages.
 
 ### Licensing and cost optimization
 

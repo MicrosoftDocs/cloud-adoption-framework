@@ -10,11 +10,13 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
+<!-- docsTest:ignore ".NET" -->
+
 <!-- cSpell:ignore givenscj WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless SQLMI iisreset -->
 
 # Rehost an on-premises app on an Azure VM and SQL Managed Instance
 
-This article shows how the fictional company Contoso migrates a two-tier Windows .net front-end app running on VMware VMs to an Azure VM using the Azure Migrate service. It also shows how Contoso migrates the app database to Azure SQL Managed Instance.
+This article shows how the fictional company Contoso migrates a two-tier Windows .NET front-end app running on VMware VMs to an Azure VM using the Azure Migrate service. It also shows how Contoso migrates the app database to Azure SQL Managed Instance.
 
 The SmartHotel360 app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
@@ -131,7 +133,7 @@ Here's how Contoso plans to set up the deployment:
 > [!div class="checklist"]
 >
 > - **Step 1: Prepare a SQL Managed Instance.** Contoso needs an existing managed instance to which the on-premises SQL Server database will migrate.
-> - **Step 2: Prepare the Azure Database Migration Service.** Contoso must register the database migration provider, create an instance, and then create an Azure Database Migration Service project. Contoso also must set up a shared access signature (sas) uniform resource identifier (uri) for the Azure Database Migration Service. An sas uri provides delegated access to resources in Contoso's storage account, so Contoso can grant limited permissions to storage objects. Contoso sets up an sas uri, so the Azure Database Migration Service can access the storage account container to which the service uploads the SQL Server backup files.
+> - **Step 2: Prepare the Azure Database Migration Service.** Contoso must register the database migration provider, create an instance, and then create an Azure Database Migration Service project. Contoso also must set up a shared access signature (SAS) uniform resource identifier (URI) for the Azure Database Migration Service. An SAS URI provides delegated access to resources in Contoso's storage account, so Contoso can grant limited permissions to storage objects. Contoso sets up an SAS URI, so the Azure Database Migration Service can access the storage account container to which the service uploads the SQL Server backup files.
 > - **Step 3: Prepare Azure for Azure Migrate: Server Migration.** They add the server migration tool to their Azure Migrate project.
 > - **Step 4: Prepare on-premises VMware for Azure Migrate: Server Migration.** They prepare accounts for VM discovery, and prepare to connect to Azure VMs after migration.
 > - **Step 5: Replicate VMs.** They set up replication, and start replicating VMs to Azure Storage.
@@ -155,24 +157,24 @@ To set up an Azure SQL Managed Instance, Contoso needs a subnet that meets the f
 
 Contoso admins set up the virtual network as follows:
 
-1. They create a new virtual network (**`VNET-SQLMI-EU2`**) in the primary East US 2 region. It adds the virtual network to the `ContosoNetworkingRG` resource group.
+1. They create a new virtual network (`VNET-SQLMI-EU2`) in the primary region (`East US 2`). It adds the virtual network to the `ContosoNetworkingRG` resource group.
 2. They assign an address space of `10.235.0.0/24`. They ensure that the range doesn't overlap with any other networks in its enterprise.
 3. They add two subnets to the network:
-    - **`SQLMI-DS-EUS2`** (`10.235.0.0`.25).
-    - **`SQLMI-SAW-EUS2`** (`10.235.0.128/29`). This subnet is used to attach a directory to the managed instance.
+    - `SQLMI-DS-EUS2` (`10.235.0.0/25`).
+    - `SQLMI-SAW-EUS2` (`10.235.0.128/29`). This subnet is used to attach a directory to the managed instance.
 
       ![Managed Instance - Create virtual network](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
 
 4. After the virtual network and subnets are deployed, they peer networks as follows:
 
-    - Peers **`VNET-SQLMI-EUS2`** with **`VNET-HUB-EUS2`** (the hub virtual network for the East US 2).
-    - Peers **`VNET-SQLMI-EUS2`** with **`VNET-PROD-EUS2`** (the production network).
+    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network in `East US 2`).
+    - Peers `VNET-SQLMI-EUS2` with `VNET-PROD-EUS2` (the production network).
 
       ![Network peering](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
 
 5. They set custom DNS settings. DNS points first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
 
-    - Located in the **`PROD-DC-EUS2`** subnet, in the East US 2 production network (**`VNET-PROD-EUS2`**).
+    - Located in the `PROD-DC-EUS2` subnet, in the `East US 2` production network (`VNET-PROD-EUS2`).
     - `CONTOSODC3` address: `10.245.42.4`.
     - `CONTOSODC4` address: `10.245.42.5`.
     - Azure DNS resolver: `168.63.129.16`.
@@ -207,7 +209,7 @@ Contoso considers these factors:
 
     ![Route table prefix](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-prefix.png)
 
-3. They associate the route table with the **`SQLMI-DB-EUS2`** subnet (in the **`VNET-SQLMI-EUS2`** network).
+3. They associate the route table with the `SQLMI-DB-EUS2` subnet (in the `VNET-SQLMI-EUS2` network).
 
     ![Route table subnet](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-subnet.png)
 
@@ -219,7 +221,7 @@ Learn how to [set up routes for a managed instance](https://docs.microsoft.com/a
 
 Now, Contoso admins can provision a SQL Managed Instance:
 
-1. Because the managed instance serves a business app, they deploy the managed instance in the company's primary East US 2 region. They add the managed instance to the `ContosoRG` resource group.
+1. Because the managed instance serves a business app, they deploy the managed instance in the company's primary region (`East US 2`). They add the managed instance to the `ContosoRG` resource group.
 2. They select a pricing tier, size compute, and storage for the instance. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed).
 
     ![Managed Instance](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-create.png)
@@ -240,14 +242,14 @@ Learn how to [provision a managed instance](https://docs.microsoft.com/azure/sql
 To prepare the Azure Database Migration Service, Contoso admins need to do a few things:
 
 - Register the Azure Database Migration Service provider in Azure.
-- Provide the Azure Database Migration Service with access to Azure Storage for uploading the backup files that are used to migrate a database. To provide access to Azure Storage, they create an Azure Blob storage container. They generate an sas uri for the Blob storage container.
+- Provide the Azure Database Migration Service with access to Azure Storage for uploading the backup files that are used to migrate a database. To provide access to Azure Storage, they create an Azure Blob storage container. They generate an SAS URI for the Blob storage container.
 - Create an Azure Database Migration Service project.
 
 Then, they complete the following steps:
 
 1. They register the database migration provider under its subscription. ![Database Migration Service - Register](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-subscription.png)
 
-2. They create a Blob storage container. Contoso generates an sas uri so that the Azure Database Migration Service can access it.
+2. They create a Blob storage container. Contoso generates an SAS URI so that the Azure Database Migration Service can access it.
 
     ![Database Migration Service - Generate an SAS URI](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-sas.png)
 
@@ -255,16 +257,16 @@ Then, they complete the following steps:
 
     ![Database Migration Service - Create instance](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-instance.png)
 
-4. They place the Azure Database Migration Service instance in the **`PROD-DC-EUS2`** subnet of the **`VNET-PROD-DC`-EUS2** virtual network.
+4. They place the Azure Database Migration Service instance in the `PROD-DC-EUS2` subnet of the `VNET-PROD-DC-EUS2` virtual network.
     - The Azure Database Migration Service is placed here because the service must be in a virtual network that can access the on-premises SQL Server VM via a VPN gateway.
-    - The **`VNET-PROD-EUS2`** is peered to **`VNET-HUB-EUS2`** and is allowed to use remote gateways. The **Use remote gateways** option ensures that the Azure Database Migration Service can communicate as required.
+    - `VNET-PROD-EUS2` is peered to `VNET-HUB-EUS2` and is allowed to use remote gateways. The **Use remote gateways** option ensures that the Azure Database Migration Service can communicate as required.
 
         ![Database Migration Service - Configure network](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-network.png)
 
 **Need more help?**
 
 - Learn how to [set up the Azure Database Migration Service](https://docs.microsoft.com/azure/dms/quickstart-create-data-migration-service-portal).
-- Learn how to [create and use sas](https://docs.microsoft.com/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2).
+- Learn how to [create and use SAS](https://docs.microsoft.com/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2).
 
 ## Step 3: Prepare Azure for the Azure Migrate: Server Migration tool
 
@@ -277,10 +279,10 @@ They set these up as follows:
 
 1. **Set up a network:** Contoso already set up a network that can be for Azure Migrate: Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
-    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary East US 2 region.
+    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
-    - The app front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`), in the production network.
-    - The app database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`), in the production network.
+    - The app front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`) of the production network.
+    - The app database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`) of the production network.
 
 ## Step 4: Prepare on-premises VMware for Azure Migrate: Server Migration
 
@@ -293,7 +295,7 @@ They set these up as follows:
 
 1. Set up a network-Contoso already set up a network that can be for Azure Migrate: Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
-    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary East US 2 region.
+    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
     - The app front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`), in the production network.
     - The app database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`), in the production network.
@@ -437,7 +439,7 @@ Contoso admins need to create an Azure Database Migration Service project, and t
     - The network share created on the on-premises VM. The Azure Database Migration Service takes source backups to this share.
         - The service account that runs the source SQL Server instance must have write permissions on this share.
         - The FQDN path to the share must be used.
-    - The sas uri that provides the Azure Database Migration Service with access to the storage account container to which the service uploads the backup files for migration.
+    - The SAS URI that provides the Azure Database Migration Service with access to the storage account container to which the service uploads the backup files for migration.
 
         ![Database Migration Service - Configure migration settings](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-migration-settings.png)
 

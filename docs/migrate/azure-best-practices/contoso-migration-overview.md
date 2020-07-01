@@ -70,7 +70,7 @@ The articles in the series are summarized below.
 | --- | --- |
 | [Migrate SQL Server databases to Azure](./contoso-migration-sql-server-db-to-azure.md) | This article demonstrates how a fictional company Contoso assessed, planned and migrated their various on-premises SQL Server databases to Azure. |
 | [Rehost an app on an Azure VM and SQL Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift and shift migration to Azure for an on-premises app. This involves migrating the app front-end VM using Azure Migrate, and the app database to an Azure SQL Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview). |
-| [Rehost an app on Azure VMs using SQL Server Always On availability groups](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure-hosted SQL Server VMs. It uses Azure Migrate to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an always on availability group. |
+| [Rehost an app on Azure VMs using SQL Server Always On availability groups](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure-hosted SQL Server VMs. It uses Azure Migrate to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group. |
 
 ### Linux and open source databases
 
@@ -121,7 +121,7 @@ The articles in the series are summarized below.
 
 | Article | Details |
 | --- | --- |
-| [Moving on-premises remote desktop services to Azure Windows Virtual Desktop](./contoso-migration-rds-to-wvd.md) | This article show to migrate an on-premises remote desktop services to Windows Virtual Desktop in Azure. |
+| [Moving on-premises Remote Desktop Services to Azure Windows Virtual Desktop](./contoso-migration-rds-to-wvd.md) | This article show to migrate an on-premises Remote Desktop Services to Windows Virtual Desktop in Azure. |
 
 ### Migration scaling
 
@@ -131,7 +131,9 @@ The articles in the series are summarized below.
 
 ### Demo apps
 
-The example articles provided in this section use two demo apps: `SmartHotel360` and `osTicket`.
+<!-- docsTest:ignore SmartHotel360 osTicket -->
+
+The example articles provided in this section use two demo apps: SmartHotel360 and osTicket.
 
 - **SmartHotel360:** This app was developed by Microsoft as a test app that you can use when working with Azure. It's provided as open source and you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360). It's an ASP.NET app connected to a SQL Server database. In the scenarios discussed in these articles, the current version of this app is deployed to two VMware VMs running Windows Server 2008 R2, and SQL Server 2008 R2. These app VMs are hosted on-premises and managed by vCenter server.
 - **osTicket:** An open-source service desk ticketing app that runs on Linux. You can download it from [GitHub](https://github.com/osTicket/osTicket). In the scenarios discussed in these articles, the current version of this app is deployed on-premises to two VMware VMs running Ubuntu 16.04 lts, using Apache 2, PHP 7.0, and MySQL 5.7.

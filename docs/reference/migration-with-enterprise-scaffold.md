@@ -248,7 +248,7 @@ This information can be viewed and acted on at multiple levels and are continual
 
 ### Deep application monitoring
 
-- **Application Insights:** Application Insights enables you to collect application-specific telemetry and monitor the performance, availability, and usage of applications in the cloud or on-premises. By instrumenting your application with supported SDKs for multiple languages including .NET, JavaScript, JAVA, Node.js, Ruby, and Python. Application Insights events are ingested into the same Log Analytics data store that supports infrastructure and security monitoring to enable you to correlate and aggregate events over time through a rich query language.
+- **Application Insights:** Application Insights enables you to collect application-specific telemetry and monitor the performance, availability, and usage of applications in the cloud or on-premises. By instrumenting your application with supported SDKs for multiple languages including .NET, JavaScript, Java, Node.js, Ruby, and Python. Application Insights events are ingested into the same Log Analytics data store that supports infrastructure and security monitoring to enable you to correlate and aggregate events over time through a rich query language.
 
 ### Deep infrastructure monitoring
 

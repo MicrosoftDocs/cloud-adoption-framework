@@ -99,16 +99,16 @@ Data migrations follow a standard repeatable pattern. This involves the followin
 
 #### Step 1: Discovery
 
-Contoso used Azure Migrate with the Service Map to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Using the Service Map feature of Azure Migrate they surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across their TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](https://docs.microsoft.com/azure/log-analytics/log-analytics-agent-windows) and the [Microsoft dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows).
+Contoso used Azure Migrate with the Service Map to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Using the Service Map feature of Azure Migrate they surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across their TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](https://docs.microsoft.com/azure/log-analytics/log-analytics-agent-windows) and the [Microsoft Dependency Agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows).
 
 With the Azure migration, Contoso has identified over 300 database instances that must be migrated. Of these instances, roughly 40 percent can be moved to PaaS-based services. Of the remaining 60 percent, they must be moved to an IaaS-based approach with a virtual machine running the respective database software.
 
 #### Step 2: Application assessment
 
-The results from the assessment provided Contoso with the visibility that they utilizes primarily Java, PHP and nodejs applications. They have identified the following:
+The results from the assessment provided Contoso with the visibility that they utilizes primarily Java, PHP and Node.js applications. They have identified the following:
 
 - 100 Java applications
-- ~50 Nodejs applications
+- ~50 Node.js applications
 - ~25 PHP applications
 
 #### Step 3: Database assessment
@@ -125,7 +125,7 @@ As the databases were inventoried each type of database was reviewed to determin
 
 #### Step 4: Migration planning
 
-Due to the large number of databases, Contoso setup a project management office (pmo) to keep track of every database migration instance. [Accountability and responsibilities](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/) were assigned to each business and application team.
+Due to the large number of databases, Contoso setup a project management office (PMO) to keep track of every database migration instance. [Accountability and responsibilities](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/) were assigned to each business and application team.
 
 Contoso also performed a [workload readiness review](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/evaluate). This review examined the infrastructure, database and network components.
 
@@ -166,7 +166,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 #### Backups
 
 - Ensure that the Azure databases are backed up using geo-restore. This allows backups to be used in a paired region in case of a regional outage.
-- **(Important:)** Ensure that the Azure resource has a [resource lock](https://docs.microsoft.com/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers cannot be restored.
+- **Important:** Ensure that the Azure resource has a [resource lock](https://docs.microsoft.com/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers cannot be restored.
 
 #### Licensing and cost optimization
 

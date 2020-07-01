@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
-<!-- docsTest:ignore SmartHotel360 SmartHotel360-Backend Pet.Checker vcenter.contoso.com contoso-datacenter git aks `ContosoRG` PetCheckerFunction -->
+<!-- docsTest:ignore "Enable .NET" SmartHotel360 SmartHotel360-Backend Pet.Checker contoso-datacenter git aks PetCheckerFunction -->
 
 <!-- cSpell:ignore givenscj SQLVM WEBVM contosohost vcenter contosodc smarthotel contososmarthotel smarthotelcontoso smarthotelpetchecker petchecker smarthotelakseus smarthotelacreus smarthotelpets kubectl contosodevops visualstudio azuredeploy cloudapp smarthotelsettingsurl appsettings -->
 
@@ -35,7 +35,7 @@ The Contoso cloud team has pinned down app requirements for this migration. Thes
 
 - The app in Azure is still as critical as it is today. It should perform well and scale easily.
 - The app shouldn't use IaaS components. Everything should be built to use PaaS or serverless services.
-- The app builds should run in cloud services, and containers should reside in a private enterprise-wide Container Registry in the cloud.
+- The app builds should run in cloud services, and containers should reside in a private enterprise-wide registry in the cloud.
 - The API service used for pet photos should be accurate and reliable in the real world, since decisions made by the app must be honored in their hotels. Any pet granted access is allowed to stay at the hotels.
 - To meet requirements for a DevOps pipeline, Contoso will use a Git repository in Azure Repos for source code management. Automated builds and releases will be used to build code and deploy to Azure App Service, Azure Functions, and AKS.
 - Different CI/CD pipelines are needed for microservices on the back end, and for the web site on the front end.
@@ -108,7 +108,7 @@ Here's what Contoso needs for this scenario:
 | --- | --- |
 | Azure subscription | <li> Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <li> If you create a free account, you're the administrator of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you owner or contributor permissions. |
 | Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
-| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li>  [Visual Studio 2017 community edition: Version 15.5](https://visualstudio.microsoft.com) <li> .Net workload enabled. <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads) <li> [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) <li> [Docker community edition (Windows 10) or Docker enterprise edition (Windows Server)](https://docs.docker.com/docker-for-windows/install) set to use Windows containers. |
+| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li>  [Visual Studio Community 2017: Version 15.5](https://visualstudio.microsoft.com) <li> Enable .NET workload. <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads) <li> [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) <li> [Docker community edition (Windows 10) or Docker enterprise edition (Windows Server)](https://docs.docker.com/docker-for-windows/install) set to use Windows containers. |
 
 <!-- markdownlint-enable MD033 -->
 
@@ -129,8 +129,8 @@ Here's how Contoso will run the migration:
 
 Contoso admins run a deployment script to create the managed Kubernetes cluster using AKS and Azure Container Registry.
 
-- The instructions for this section use the **SmartHotel360-Backend** repository.
-- The **SmartHotel360-Backend** GitHub repository contains all of the software for this part of the deployment.
+- The instructions for this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) GitHub repository.
+- The repository contains all of the software for this part of the deployment.
 
 ### Ensure prerequisites
 
@@ -143,7 +143,7 @@ Contoso admins run a deployment script to create the managed Kubernetes cluster 
 
 The Contoso admins provision as follows:
 
-1. They open the folder using Visual Studio Code, and move to the **/deploy/k8s** directory, which contains the script **gen-aks-env.ps1**.
+1. They open the folder using Visual Studio Code, and move to the `/deploy/k8s` directory, which contains the script `gen-aks-env.ps1`.
 
 2. They run the script to create the managed Kubernetes cluster, using AKS and Azure Container Registry.
 
@@ -165,7 +165,7 @@ The Contoso admins provision as follows:
 
     ![AKS](./media/contoso-migration-rebuild/aks5.png)
 
-7. They run the following command, passing the resource group name of `ContosoRG`, the name of the AKS cluster **smarthotel-aks-eus2**, and the new registry name.
+7. They run the following command, passing the resource group name of `ContosoRG`, the name of the AKS cluster `smarthotel-aks-eus2`, and the new registry name.
 
     `.\gen-aks-env.ps1  -resourceGroupName ContosoRg -orchestratorName smarthotelakseus2 -registryName smarthotelacreus2`
 
@@ -235,7 +235,7 @@ Contoso creates an Azure DevOps project, and configures a CI build to create the
 
     ![Azure DevOps](./media/contoso-migration-rebuild/vsts9.png)
 
-11. Now, they configure the second Docker task (to push). They select the subscription and the `smarthotelacreus2` Container Registry.
+11. Now, they configure the second Docker task (to push). They select the subscription and the container registry (`smarthotelacreus2`).
 
     ![Azure DevOps](./media/contoso-migration-rebuild/vsts10.png)
 
@@ -266,7 +266,7 @@ They deploy as follows:
 
 1. They open a developer command prompt, and use the command `az login` for the Azure subscription.
 
-2. They use the `deploy.cmd` file to deploy the Azure resources in the `ContosoRG` resource group and `EUS2` region, by typing the following command:
+2. They use the `deploy.cmd` file to deploy the Azure resources in the `ContosoRG` resource group and `East US 2` region, by typing the following command:
 
     `.\deploy.cmd azuredeploy ContosoRG -c eastus2`
 
@@ -368,11 +368,11 @@ Instructions for this section use the [SmartHotel360-website](https://github.com
 
 Contoso admins provision an Azure Cosmos DB database to be used for pet information.
 
-1. They create an **Azure Cosmos DB** in the Azure Marketplace.
+1. They create an **Azure Cosmos DB** database via the Azure Marketplace.
 
     ![Azure Cosmos DB](./media/contoso-migration-rebuild/cosmos1.png)
 
-2. They specify a name (**contososmarthotel**), select the SQL API, and place it in the production resource group `ContosoRG`, in the main East US 2 region.
+2. They specify a name (`contososmarthotel`), select the SQL API, and place it in the production resource group `ContosoRG` in the main region (`East US 2`).
 
     ![Azure Cosmos DB](./media/contoso-migration-rebuild/cosmos2.png)
 
@@ -392,7 +392,7 @@ Contoso admins provision the Computer Vision API. The API will be called by the 
 
      ![Computer Vision](./media/contoso-migration-rebuild/vision1.png)
 
-2. They provision the API (**smarthotelpets**) in the production resource group `ContosoRG`, in the main East US 2 region.
+2. They provision the API (`smarthotelpets`) in the production resource group `ContosoRG`, in the main region (`East US 2`).
 
     ![Computer Vision](./media/contoso-migration-rebuild/vision2.png)
 
@@ -408,7 +408,7 @@ Contoso admins provision the web app using the Azure portal.
 
     ![Web app](./media/contoso-migration-rebuild/web-app1.png)
 
-2. They provide an app name (**smarthotelcontoso**), run it on Windows, and place it in the production resource group `ContosoRG`. They create a new Application Insights instance for app monitoring.
+2. They provide an app name (`smarthotelcontoso`), run it on Windows, and place it in the production resource group `ContosoRG`. They create a new Application Insights instance for app monitoring.
 
     ![Web app name](./media/contoso-migration-rebuild/web-app2.png)
 
@@ -426,7 +426,7 @@ In the Azure portal, Contoso admins provision the function app.
 
     ![Create function app](./media/contoso-migration-rebuild/function-app1.png)
 
-2. They provide an app name (**smarthotelpetchecker**). They place the app in the production resource group `ContosoRG`. They set the hosting place to **Consumption Plan**, and place the app in the East US 2 region. A new storage account is created, along with an Application Insights instance for monitoring.
+2. They provide an app name (`smarthotelpetchecker`). They place the app in the production resource group `ContosoRG`. They set the hosting place to **Consumption Plan**, and place the app in the `East US 2` region. A new storage account is created, along with an Application Insights instance for monitoring.
 
     ![Function app settings](./media/contoso-migration-rebuild/function-app2.png)
 
@@ -462,13 +462,13 @@ Now Contoso admins configure the web app to use Contoso resources.
 4. They update the `/config-sample.json/sample.json` file.
 
     - This is the configuration file for the web when using the public endpoint.
-    - They edit the **urls** and **pets_config** sections with the values for the AKS API endpoints, storage accounts, and Azure Cosmos DB database.
+    - They edit the `urls` and `pets_config` sections with the values for the AKS API endpoints, storage accounts, and Azure Cosmos DB database.
     - The URLs should match the DNS name of the new web app that Contoso will create.
-    - For Contoso, this is **smarthotelcontoso.eastus2.cloudapp.azure.com**.
+    - For Contoso, this is `smarthotelcontoso.eastus2.cloudapp.azure.com`.
 
     ![Json settings](./media/contoso-migration-rebuild/configure-webapp2.png)
 
-5. After the file is updated, they rename it **smarthotelsettingsurl**, and upload it to the Blob storage they created earlier.
+5. After the file is updated, they rename it `smarthotelsettingsurl`, and upload it to the Blob storage they created earlier.
 
     ![Rename and upload](./media/contoso-migration-rebuild/configure-webapp3.png)
 
@@ -476,7 +476,7 @@ Now Contoso admins configure the web app to use Contoso resources.
 
     ![App URL](./media/contoso-migration-rebuild/configure-webapp4.png)
 
-7. In the `appsettings.production.json` file, they update the `SettingsURL` to the URL of the new file.
+7. In the `appsettings.Production.json` file, they update the `SettingsURL` to the URL of the new file.
 
     ![Update URL](./media/contoso-migration-rebuild/configure-webapp5.png)
 
@@ -558,7 +558,7 @@ Contoso admins deploy the app as follows.
 
 1. They clone the repository locally to the development machine by connecting to the Azure DevOps project.
 2. In Visual Studio, they open the folder to show all the files in the repo.
-3. They open the 1`src/PetCheckerFunction/local.settings.json` file, and add the app settings for storage, the Azure Cosmos DB database, and the Computer Vision API.
+3. They open the `src/PetCheckerFunction/local.settings.json` file, and add the app settings for storage, the Azure Cosmos DB database, and the Computer Vision API.
 
     ![Deploy the function](./media/contoso-migration-rebuild/function5.png)
 
@@ -568,7 +568,7 @@ Contoso admins deploy the app as follows.
 7. They accept the defaults for the template.
 8. In **Triggers**, they select **Enable continuous integration**, then select **Save & Queue** to start a build.
 9. After the build succeeds, they build a release pipeline, adding **Azure App Service deployment with slot**.
-10. They name the environment **Prod**, then select the subscription. They set the **App type** to **Function App**, and the App Service name as **smarthotelpetchecker**.
+10. They name the environment **Prod**, then select the subscription. They set the **App type** to **Function App**, and the App Service name as `smarthotelpetchecker`.
 
     ![Function app](./media/contoso-migration-rebuild/petchecker2.png)
 

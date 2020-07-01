@@ -11,6 +11,8 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+<!-- docsTest:ignore ".NET" -->
+
 <!-- cSpell:ignore billyclaymyersmsft wimyers functionapp -->
 
 ::: zone target="docs"

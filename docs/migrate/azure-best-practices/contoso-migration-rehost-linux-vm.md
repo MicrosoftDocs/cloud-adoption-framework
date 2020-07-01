@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore givenscj OSTICKETWEB OSTICKETMYSQL OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc contosoosticket osticket InnoDB binlog systemctl NSGs distros -->
+<!-- cSpell:ignore givenscj OSTICKETWEB OSTICKETMYSQL OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc osTicket InnoDB binlog systemctl NSGs distros -->
 
 # Rehost an on-premises Linux app to Azure VMs
 
@@ -124,12 +124,12 @@ They set these components up as follows:
 
 1. **Set up a network:** Contoso already set up a network that can be for Azure Migrate: Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
-    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary East US 2 region.
+    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
-    - The app front-end VM (OSTICKETWEB) will migrate to the front-end subnet (`PROD-FE-EUS2`), in the production network.
-    - The app database VM (OSTICKETMYSQL) will migrate to the database subnet (`PROD-DB-EUS2`), in the production network.
+    - The app front-end VM (`OSTICKETWEB`) will migrate to the front-end subnet (`PROD-FE-EUS2`), in the production network.
+    - The app database VM (`OSTICKETMYSQL`) will migrate to the database subnet (`PROD-DB-EUS2`), in the production network.
 
-2. **Provision the Azure Migrate: Server Migration tool:** With the network and storage account in place, Contoso now creates a Recovery Services vault (contosomigrationvault), and places it in the `ContosoFailoverRG` resource group in the primary East US 2 region.
+2. **Provision the Azure Migrate: Server Migration tool:** With the network and storage account in place, Contoso now creates a Recovery Services vault (`ContosoMigrationVault`), and places it in the `ContosoFailoverRG` resource group in their primary region (`East US 2`).
 
     ![Azure Migrate Server Migration tool](./media/contoso-migration-rehost-linux-vm/server-migration-tool.png)
 
@@ -276,7 +276,7 @@ Now, Contoso needs to clean up as follows:
 
 - Remove the on-premises VMs from the vCenter inventory.
 - Remove the on-premises VMs from local backup jobs.
-- Update their internal documentation to show the new location, and IP addresses for OSTICKETWEB and OSTICKETMYSQL.
+- Update their internal documentation to show the new location, and IP addresses for `OSTICKETWEB` and `OSTICKETMYSQL`.
 - Review any resources that interact with the VMs, and update any relevant settings or documentation to reflect the new configuration.
 - Contoso used the Azure Migrate service with management VM to assess the VMs for migration. Admins should remove the migration VM and web VMs from VMware esx server.
 
