@@ -86,7 +86,7 @@ _Figure 1: Identity and access management._
 
 ### Planning for authentication inside a landing zone
 
-A critical design decision that an enterprise organization must make when adopting Azure is whether to extend an existing on-premises identity domain into Azure or to create a brand new one. Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows Server, Azure AD Domain Services, or both. Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
+A critical design decision that an enterprise organization must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or to create a brand new one. Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows server, Azure AD Domain Services, or both. Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
 
 **Design considerations:**
 
@@ -102,13 +102,13 @@ A critical design decision that an enterprise organization must make when adopti
 
 - If an organization has a scenario where an application using integrated Windows authentication must be accessed remotely through Azure AD, then consider using [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
-- There is a difference between Azure AD, Azure AD Domain Services, and AD DS running on Windows Server. Evaluate your application needs, and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
+- There is a difference between Azure AD, Azure AD Domain Services, and AD DS running on Windows server. Evaluate your application needs, and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
 
-- Evaluate the compatibility of workloads for AD DS on Windows Server and for Azure AD Domain Services.
+- Evaluate the compatibility of workloads for AD DS on Windows server and for Azure AD Domain Services.
 
-- Ensure your network design allows resources that require AD DS on Windows Server for local authentication and management to access the appropriate domain controllers.
+- Ensure your network design allows resources that require AD DS on Windows server for local authentication and management to access the appropriate domain controllers.
 
-  - For AD DS on Windows Server, consider shared services environments that offer local authentication and host management in a larger enterprise-wide network context.
+  - For AD DS on Windows server, consider shared services environments that offer local authentication and host management in a larger enterprise-wide network context.
 
 - Deploy Azure AD Domain Services within the primary region, as this service can only be projected into one subscription.
 

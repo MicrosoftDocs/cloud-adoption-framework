@@ -88,7 +88,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Establish a dedicated management subscription in the `Platform` management group to support global management capabilities such as Azure Monitor Log Analytics workspaces and Azure Automation runbooks.
 
-- Establish a dedicated identity subscription in the `Platform` management group to host Windows Server Active Directory domain controllers, when necessary.
+- Establish a dedicated identity subscription in the `Platform` management group to host Windows server Active Directory domain controllers, when necessary.
 
 - Establish a dedicated connectivity subscription in the `Platform` management group to host an Azure Virtual WAN hub, private DNS, ExpressRoute circuit, and other networking resources. This ensures that all foundation network resources are billed together and isolated from other workloads.
 
@@ -132,6 +132,6 @@ Cost transparency across a technical estate is a critical management challenge f
 
 **Design recommendations:**
 
-- Use Azure Cost Management for cost aggregation and make it available to application owners.
+- Use Azure Cost Management and Billing for cost aggregation and make it available to application owners.
 
 - Use Azure resource tags for cost categorization and resource grouping. This allows you to have a chargeback mechanism for workloads that share a subscription or for a given workload that spans across multiple subscriptions.

@@ -17,7 +17,7 @@ After workloads have been assessed, they can be deployed to the cloud or staged 
 
 The objective of a migration is to migrate a single workload to the cloud.
 
-## Definition of _done_
+## Definition of done
 
 The migration phase is complete when a workload is staged and ready for testing in the cloud, including all dependent assets required for the workload to function. During the optimize process, the workload is prepared for production usage.
 

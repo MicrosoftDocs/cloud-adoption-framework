@@ -147,7 +147,7 @@ Building a resilient security posture in the cloud requires several parallel com
 
     Getting this right is critical because these applications often enable critical business processes and store critical business data.
 
-  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](https://docs.microsoft.com/en-us/security/ciso-workshop/ciso-workshop-module-3).
+  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-3).
 
 ### Security and trust
 

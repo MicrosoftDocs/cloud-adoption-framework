@@ -29,8 +29,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Key rotation and secret expiration.
 
-  Certificate procurement and signing using Key Vault: ([about certs](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates))
-  Alerting/notifications and automated certificate renewals.
+  Certificate procurement and signing using Key Vault: ([about certs](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates)) alerting/notifications and automated certificate renewals.
 
 - Disaster recovery requirements for keys, certificates, and secrets.
 
@@ -174,7 +173,7 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
-- Align customer security requirements with Azure platform road maps to stay up to date with newly released security controls.
+- Align customer security requirements with Azure platform roadmaps to stay up to date with newly released security controls.
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
 

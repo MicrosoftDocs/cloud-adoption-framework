@@ -24,8 +24,8 @@ The following checklists provides Azure cloud migration best practices that go b
 ## Migration best practices for technology driven scope expansion
 
 - **[VMware migration](./vmware-host.md):** Migrating VMware hosts can accelerate the overall migration process. Each migrated VMware host can move multiple workloads to the cloud using a lift and shift approach. After migration, those VMs and workloads can stay in VMware or be migrated to modern cloud capabilities.
-- **[SQL Server migration](./sql-migration.md):** Migrating SQL Servers can accelerate the overall migration process. Each SQL Server migrated can move multiple databases and services, potentially accelerating multiple workloads.
-- **[Multiple datacenters](./multiple-datacenters.md):** Migrating multiple datacenters adds significant complexity. During the Assess, Migrate, Optimization, and Manage processes, additional considerations are discussed to prepare for more complex environments.
+- **[SQL Server migration](./sql-migration.md):** Migrating SQL servers can accelerate the overall migration process. Each SQL Server migrated can move multiple databases and services, potentially accelerating multiple workloads.
+- **[Multiple datacenters](./multiple-datacenters.md):** Migrating multiple datacenters adds significant complexity. During the assess, migrate, optimization, and manage processes, additional considerations are discussed to prepare for more complex environments.
 - **[Data requirements exceed network capacity](./network-capacity-exceeded.md):** Companies frequently choose to migrate to the cloud because the capacity, speed, or stability of an existing datacenter is no longer satisfactory. Unfortunately, those same constraints add complexity to the migration process, requiring additional planning during the assessment and migration processes.
 - **[Governance or compliance strategy](./governance-or-compliance.md):** When governance and compliance are vital to the success of a migration, additional alignment between IT governance teams and the cloud adoption team is required.
 

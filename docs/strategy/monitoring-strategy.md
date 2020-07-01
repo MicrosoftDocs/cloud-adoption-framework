@@ -195,9 +195,9 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 
 * **Measure**: Configure collection of metrics and logs from all resources to monitor for symptoms/conditions that are issues, which indicate potential or actual impact to the availability of the service, or impact of the consumers of the service/application. For example:
 
-    * When using a feature in the application, is it showing response time latency, returning an error when I selected something, or unresponsive?
-    
-    * Ensure services are meeting service agreements by measuring the utility of the service or application.
+  * When using a feature in the application, is it showing response time latency, returning an error when I selected something, or unresponsive?
+
+  * Ensure services are meeting service agreements by measuring the utility of the service or application.
 
 * **Respond**: Based on the context of known issues to observe and measure, evaluate what qualifies as a bug, auto-remediation, or requires manual response based on what is classified as an incident, problem, or change.
 
@@ -258,7 +258,7 @@ Include in your strategy and operating model how you communicate monitoring plan
 
 As early as possible, establish how you intend to govern your cloud monitoring investment. Remember that Azure Monitor is a *tenant* service with visibility across management groups and subscriptions, and users can be scoped to limit their actions with Azure role-based access control.
 
-Define who will have what level of access in Azure to support their role and responsibility. We recommend you to set **Reader** role access for monitoring consumers as early as possible and then start controlling who are granted the **Contributor** role. 
+Define who will have what level of access in Azure to support their role and responsibility. We recommend you to set **Reader** role access for monitoring consumers as early as possible and then start controlling who are granted the **Contributor** role.
 
 First, identify the roles who will own and manage resource groups in Azure as part of your governance framework:
 

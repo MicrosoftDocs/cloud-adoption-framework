@@ -63,10 +63,11 @@ Before you move your workloads to the cloud, estimate the monthly cost of runnin
 To forecast your monthly bill for Azure resources, there are several tools you can use.
 
 <!-- TODO: Change "input costs" -->
+
 - **Azure pricing calculator:** Select the products you want to estimate, for example VMs and storage, then input costs into the calculator to build an estimate.
 
     ![Azure pricing calculator](../../migrate/azure-best-practices/media/migrate-best-practices-costs/pricing.png)
-    _Azure pricing calculator_
+    _Azure pricing calculator._
 
 - **Azure Migrate:** To estimate costs, you need to review and account for all the resources required to run your workloads in Azure. To acquire this data, you create inventory of your assets, including servers, VMs, databases, and storage. You can use Azure Migrate to collect this information.
   - Azure Migrate discovers and assesses your on-premises environment to provide an inventory.
@@ -76,7 +77,7 @@ To forecast your monthly bill for Azure resources, there are several tools you c
     - **Storage cost:** Azure Migrate calculates total monthly storage costs by aggregating the storage costs of all VMs in an assessment. You can calculate the monthly storage cost for a specific machine by aggregating the monthly cost of all disks attached to it.
 
     ![Azure Migrate](../../migrate/azure-best-practices/media/migrate-best-practices-costs/assess.png)
-    _Azure Migrate assessment_
+    _Azure Migrate assessment._
 
 **Learn more:**
 
@@ -89,7 +90,7 @@ To forecast your monthly bill for Azure resources, there are several tools you c
 
 You can choose various options when you deploy Azure VMs to support workloads. Each VM type has specific features and different combinations of CPU, memory, and disks. VMs are grouped as shown below:
 
-| Type | Details | Use |
+| Type | Details | Usage |
 |---|---|---|
 | **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small to midsize databases, low to medium volume. | Traffic web servers. |
 | **Compute-optimized** | High CPU-to-memory. | Good for medium-volume traffic web server, network appliances, batch processes, app servers. |
@@ -288,7 +289,7 @@ In Azure Cost Management, you can:
   - You can export costs management data to Azure Storage, for analysis.
 
     ![View budgets in Azure Cost Management](../../migrate/azure-best-practices/media/migrate-best-practices-costs/budget.png)
-    _Azure Cost Management budget_
+    _Budgets in Azure Cost Management and Billing._
 
 - **Do a cost analysis:** Get a cost analysis to explore and analyze your organizational costs, to help you understand how costs are accrued, and identify spending trends.
   - Cost analysis is available to EA users.

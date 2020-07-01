@@ -446,11 +446,11 @@ Contoso can now verify machine dependencies and create a group. Then, it runs th
     - Dependent machines that have the Azure Migrate agents installed are shown as separate boxes.
     - Machines that don't have the agents installed show port and IP address information.
 
-3. For machines that have the agent installed (WEBVM), Contoso selects the machine box to view more information. The information includes the FQDN, operating system, and MAC address.
+3. For machines that have the agent installed (`WEBVM`), Contoso selects the machine box to view more information. The information includes the FQDN, operating system, and MAC address.
 
     ![Azure Migrate - View group dependencies](../migrate/azure-best-practices/media/contoso-migration-assessment/sqlvm-dependencies.png)
 
-4. Contoso selects the VMs to add to the group (SQLVM and WEBVM). Contoso holds the `Ctrl` key while selecting multiple VMs.
+4. Contoso selects the VMs to add to the group (`SQLVM` and `WEBVM`). Contoso holds the `Ctrl` key while selecting multiple VMs.
 5. Contoso selects **Create Group**, and then enters a name (**smarthotelapp**).
 
     > [!NOTE]
@@ -525,7 +525,7 @@ This view shows the total compute and storage cost of running the VMs in Azure. 
 
 - When the assessment finishes, Contoso retains the Azure Migrate appliance to use in future evaluations.
 - Contoso turns off the VMware VM. Contoso will use it again when it evaluates additional VMs.
-- Contoso keeps the **Contoso Migration** project in Azure. The project currently is deployed in the **ContosoFailoverRG** resource group in the East US Azure region.
+- Contoso keeps the 1Contoso Migration1 project in Azure. The project currently is deployed in the `ContosoFailoverRG` resource group in the East US Azure region.
 - The collector VM has a 180-day evaluation license. If this limit expires, Contoso will need to download the collector and set it up again.
 
 ## Conclusion
