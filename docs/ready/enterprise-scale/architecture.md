@@ -34,7 +34,7 @@ It is important to highlight that not all enterprises adopt Azure the same way, 
 
 - **Principal purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to mature the customer's landing zones faster. The CAF enterprise-scale landing zone broadens the principle purpose of the landing zone to focus on aspects of governance, compliance, security, and operational management. Each of these is addressed in the first release of the landing zones and supporting shared services.
 
-This is similar to how city utilities such as water, gas, and electricity are accessible before new homes are constructed. In this context, the network, identity and access management, policies, management, and monitoring are shared 'utility' services that must be readily available to help streamline the application migration process before it begins.
+This is similar to how city utilities such as water, gas, and electricity are accessible before new homes are constructed. In this context, the network, identity and access management, policies, management, and monitoring are shared utility services that must be readily available to help streamline the application migration process before it begins.
 
 ![Landing zone](./media/lz-design.png)
 _Figure 1: Landing zone design._
@@ -65,6 +65,8 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 
 ![CAF enterprise-scale landing zone architecture](./media/ns-arch.png)
 _Figure 2: CAF enterprise-scale landing zone architecture._
+
+_Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/blob/master/ready/enterprise-scale-architecture.vsdx) that contains this architecture diagram._
 
 ## Next steps
 
