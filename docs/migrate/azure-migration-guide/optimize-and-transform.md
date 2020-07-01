@@ -38,7 +38,7 @@ The following are some common services that you can resize.
 
 ## Resize a Virtual Machine
 
-Azure Migrate performs a right-sizing analysis as part of its premigration assessment phase, and virtual machines migrated using this tool will likely already be sized based on your premigration requirements.
+Azure Migrate performs a right-sizing analysis as part of its pre-migration assessment phase, and virtual machines migrated using this tool will likely already be sized based on your pre-migration requirements.
 
 However, for virtual machines created or migrated using other methods, or in cases where your post-migration virtual machine requirements need adjustment, you may want to further refine your virtual machine sizing.
 

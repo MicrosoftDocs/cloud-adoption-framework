@@ -17,7 +17,7 @@ This section of the Cloud Adoption Framework provides examples of several common
 
 Azure provides access to a comprehensive set of cloud services. As developers and IT professionals, you can use these services to build, deploy, and manage applications on a range of tools and frameworks, through a global network of datacenters. As your business faces challenges associated with the digital shift, the Azure cloud helps you to figure out how to optimize resources and operations, engage with your customers and employees, and transform your products.
 
-But Azure recognizes that even with all the advantages that the cloud provides in terms of speed and flexibility, minimized costs, performance, and reliability, many organizations are going to need to run on-premises datacenters for some time to come. In response to cloud adoption barriers, Azure provides a hybrid cloud strategy that builds bridges between your on-premises datacenters, and the Azure public cloud. For example, using Azure cloud resources like Azure Backup to protect on-premises resources, or using Azure analytics to gain insights into on-premises workloads.
+However, Azure recognizes that even with all the advantages that the cloud provides in terms of speed and flexibility, minimized costs, performance, and reliability, many organizations are going to need to run on-premises datacenters for some time to come. In response to cloud adoption barriers, Azure provides a hybrid cloud strategy that builds bridges between your on-premises datacenters, and the Azure public cloud. For example, using Azure cloud resources like Azure Backup to protect on-premises resources, or using Azure analytics to gain insights into on-premises workloads.
 
 As part of the hybrid cloud strategy, Azure provides growing solutions for migrating on-premises apps and workloads to the cloud. With simple steps, you can comprehensively assess your on-premises resources to figure out how they'll run in the Azure cloud. Then, with a deep assessment in hand, you can confidently migrate resources to Azure. When resources are up and running in Azure, you can optimize them to retain and improve access, flexibility, security, and reliability.
 
@@ -87,7 +87,7 @@ The articles in the series are summarized below.
 
 | Article | Details |
 | --- | --- |
-| [Migrate dev/test to Azure IaaS](./contoso-migration-dt-to-iaas.md) | This article demonstrates how the Contoso rehosts their dev/test environment for two applications running on VMware VMs, by migrating to Azure VMs. |
+| [Migrate dev/test environments to Azure IaaS](./contoso-migration-dt-to-iaas.md) | This article demonstrates how the Contoso rehosts their dev/test environment for two applications running on VMware VMs, by migrating to Azure VMs. |
 | [Migrating to Azure DevTest Labs](./contoso-migration-dt-to-labs.md)  | This article discusses how Contoso moves their dev/test workloads to Azure using DevTest Labs. |
 
 ### ASP.NET, PHP web apps
@@ -104,18 +104,18 @@ The articles in the series are summarized below.
 
 | Article | Details |
 | --- | --- |
-| [SAP migration guide](https://azure.microsoft.com/resources/sap-on-azure-implementation-guide/) | Get practical guidance to move your on-premises SAP workloads to the cloud. |
-| [Migrating SAP applications to Azure](https://azure.microsoft.com/resources/migrating-sap-applications-to-azure/) | Whitepaper and roadmap for your SAP journey to the cloud. |
-| [Migration methodologies for SAP on Azure](https://azure.microsoft.com/resources/migration-methodologies-for-sap-on-azure/) | Overview of various migration options to move SAP applications to Azure. |
+| [SAP migration guide](https://azure.microsoft.com/resources/sap-on-azure-implementation-guide) | Get practical guidance to move your on-premises SAP workloads to the cloud. |
+| [Migrating SAP applications to Azure](https://azure.microsoft.com/resources/migrating-sap-applications-to-azure) | Whitepaper and roadmap for your SAP journey to the cloud. |
+| [Migration methodologies for SAP on Azure](https://azure.microsoft.com/resources/migration-methodologies-for-sap-on-azure) | Overview of various migration options to move SAP applications to Azure. |
 
 ### Specialized workloads
 
 | Article | Details |
 | --- | --- |
 | [Moving on-premises VMware infrastructure to Azure](./contoso-migration-vmware-to-azure.md) | This article provides an example of moving an on-premises VMware VMs to Azure using Azure VMware Solution. |
-| [Azure NetApp Files](https://azure.microsoft.com/services/netapp/) | Enterprise file storage, powered by netapp. Run Linux and Windows file workloads in Azure. |
-| [Oracle on Azure](https://azure.microsoft.com/solutions/oracle/) | Run your Oracle database and enterprise applications n Azure and Oracle cloud. |
-| [Cray in Azure](https://azure.microsoft.com/solutions/high-performance-computing/cray/)  | High performance computing with cray in Azure. A dedicated supercomputer on your virtual network. |
+| [Azure NetApp Files](https://azure.microsoft.com/services/netapp) | Enterprise file storage, powered by netapp. Run Linux and Windows file workloads in Azure. |
+| [Oracle on Azure](https://azure.microsoft.com/solutions/oracle) | Run your Oracle database and enterprise applications n Azure and Oracle cloud. |
+| [Cray in Azure](https://azure.microsoft.com/solutions/high-performance-computing/cray)  | High performance computing with cray in Azure. A dedicated supercomputer on your virtual network. |
 
 ### VDI
 

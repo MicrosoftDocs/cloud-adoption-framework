@@ -34,8 +34,8 @@ The following best practices are typically completed by a member of the cloud go
 - **Tagging is critical to all governance:** Ensure all workloads and resources follow [proper naming and tagging conventions](../../ready/azure-best-practices/naming-and-tagging.md) and [enforce tagging conventions using Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/govern-tags).
 - **Identify right size opportunities:** Review your current resource utilization and performance requirements across the environment to identify resources which have remained underutilized for a period of time (generally more than 90 days).
 - **Right-size provisioned SKUs:** Modify underutilized resource to use the smallest instance or SKU that can support the performance requirements of each resource.
-- **Autoshutdown for VMs:** When a VM isn't in constant use, consider automated shutdown. The VM won't be deleted or decommissioned, but it will stop consuming compute and memory costs until it's turned back on.
-- **Autoshutdown all nonproduction assets:** If a VM is part of a nonproduction environment, specifically development environments, establish an autoshutdown policy to reduce unused costs. Whenever possible, use Azure DevTest Labs as a self-service option to help developers hold themselves accountable for cost.
+- **Auto-shutdown for VMs:** When a VM isn't in constant use, consider automated shutdown. The VM won't be deleted or decommissioned, but it will stop consuming compute and memory costs until it's turned back on.
+- **Auto-shutdown all nonproduction assets:** If a VM is part of a nonproduction environment, specifically development environments, establish an auto-shutdown policy to reduce unused costs. Whenever possible, use Azure DevTest Labs as a self-service option to help developers hold themselves accountable for cost.
 - **Shut down and decommission unused resources:** Yes, we said it twice. If a resource hasn't been used in more than 90 days and doesn't have a clear uptime requirement, turn it off. More importantly, if a machine has been stopped or shut down for more than 90 days, then deprovision and delete that resource. Validate that any data retention policies are met through backup or other mechanisms.
 - **Clean up orphaned disks:** Delete unused storage, especially VM storage that is no longer attached to any VMs.
 - **Right-size redundancy:** If the resource doesn't require a high degree of redundancy, remove geo-redundant storage.
@@ -267,8 +267,8 @@ Additionally, consider general cost reductions for any nonproduction environment
 **Learn more:**
 
 - [Use tags](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources) to identify dev, test, or QA targets for resizing or termination.
-- [Autoshutdown VMs](https://docs.microsoft.com/azure/cost-management-billing/manage/getting-started#consider-cost-cutting-features-like-auto-shutdown-for-vms) sets a nightly termination time for VMs. Using this feature will stop nonproduction VMs each night, requiring developers to restart those VMs when they're ready to resume development.
-- Encourage development teams to use [Azure DevTest Labs](https://docs.microsoft.com/azure/lab-services/devtest-lab-overview) to establish their own cost-control approaches and avoid impact of the standard auto shutdown timing in the prior step.
+- [Auto-shutdown VMs](https://docs.microsoft.com/azure/cost-management-billing/manage/getting-started#consider-cost-cutting-features-like-auto-shutdown-for-vms) sets a nightly termination time for VMs. Using this feature will stop nonproduction VMs each night, requiring developers to restart those VMs when they're ready to resume development.
+- Encourage development teams to use [Azure DevTest Labs](https://docs.microsoft.com/azure/lab-services/devtest-lab-overview) to establish their own cost-control approaches and avoid impact of the standard auto-shutdown timing in the prior step.
 
 ## Best practice: Use Azure Cost Management
 
@@ -362,7 +362,7 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 The ultimate goal of running a VM in the cloud is to maximize the CPU, memory, and disk that it uses. If you discover VMs that aren't optimized, or have frequent periods when VMs aren't used, it makes sense to either shut them down, or downscale them using virtual machine scale sets.
 
-You can optimize a VM with Azure Automation, virtual machine scale sets, autoshutdown, and scripted or third-party solutions.
+You can optimize a VM with Azure Automation, virtual machine scale sets, auto-shutdown, and scripted or third-party solutions.
 
 **Learn more:**
 

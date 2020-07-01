@@ -308,12 +308,12 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 The ultimate goal of running a VM in the cloud is to maximize the CPU, memory, and disk that it uses. If you discover VMs that aren't optimized, or have frequent periods when VMs aren't used, it makes sense to either shut them down, or downscale them using virtual machine scale sets.
 
-You can optimize a VM with Azure Automation, virtual machine scale sets, autoshutdown, and scripted or third-party solutions.
+You can optimize a VM with Azure Automation, virtual machine scale sets, auto-shutdown, and scripted or third-party solutions.
 
 **Learn more:**
 
 - Learn about [vertical autoscaling](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-vertical-scale-reprovision).
-- [Schedule](https://azure.microsoft.com/updates/azure-devtest-labs-schedule-vm-auto-start) a VM autostart.
+- [Schedule a VM autostart](https://azure.microsoft.com/updates/azure-devtest-labs-schedule-vm-auto-start).
 - Learn how to [start or stop VMs off hours in Azure Automation](https://docs.microsoft.com/azure/automation/automation-solution-vm-management).
 - Get more information about [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview), and the [Azure resource optimization (ARO) toolkit](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
@@ -323,7 +323,7 @@ Azure provides a REST API that has access to your tenant billing information.
 
 - You can use the Budgets API to integrate external systems and workflows that are triggered by metrics that you build from the API data.
 - You can pull usage and resource data into your preferred data analysis tools.
-- The Azure resource usage and ratecard APIs can help you accurately predict and manage your costs.
+- The Azure Resource Usage and RateCard APIs can help you accurately predict and manage your costs.
 - The APIs are implemented as a resource provider and are included in the APIs exposed by the Azure Resource Manager.
 - The Budgets API can be integrated with Azure Logic Apps and runbooks.
 

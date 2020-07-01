@@ -54,7 +54,7 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 
 ## Solution design
 
-Contoso has already performed a [migration assessment](https://docs.microsoft.com//azure/cloud-adoption-framework/plan/contoso-migration-assessment) of their digital estate using [Azure Migrate](https://docs.microsoft.com//azure/migrate/migrate-services-overview) with the [Service Map](https://docs.microsoft.com//azure/azure-monitor/insights/service-map) feature.
+Contoso has already performed a [migration assessment](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/contoso-migration-assessment) of their digital estate using [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) with the [Service Map](https://docs.microsoft.com/azure/azure-monitor/insights/service-map) feature.
 
 ![Migration process](./media/contoso-migration-oss-db-to-azure/migration-process.png)
 
@@ -83,7 +83,7 @@ For the billing requirements, each of the Azure resources are then [tagged](http
 
 Data migrations follow a standard repeatable pattern. This involves the following steps based on [Microsoft best practices](https://datamigration.microsoft.com/):
 
-- Premigration
+- Pre-migration:
   - Discovery - inventory database assets and application stack
   - Assess - assess workloads and fix recommendations
   - Convert - convert source schema to work in the target
@@ -99,9 +99,9 @@ Data migrations follow a standard repeatable pattern. This involves the followin
 
 #### Step 1: Discovery
 
-Contoso used Azure Migrate with the Service Map to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Using the Service Map feature of Azure Migrate they surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across their TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](https://docs.microsoft.com/azure/log-analytics/log-analytics-agent-windows) and [Microsoft dependency](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows) agents.
+Contoso used Azure Migrate with the Service Map to surface the dependencies across the Contoso environment. Azure Migrate automatically discovered application components on Windows and Linux systems and mapped the communication between services. Using the Service Map feature of Azure Migrate they surfaced the connections between Contoso servers, processes, inbound and outbound connection latency, and ports across their TCP-connected architecture. Contoso was only required to install the [Microsoft Monitoring Agent](https://docs.microsoft.com/azure/log-analytics/log-analytics-agent-windows) and the [Microsoft dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud#install-the-dependency-agent-on-windows).
 
-With the Azure migration, Contoso has identified over 300 database instances that must be migrated. Of these instances, roughly 40% can be moved to PaaS-based services. Of the remaining 60%, they must be moved to an IaaS-based approach with a virtual machine running the respective database software.
+With the Azure migration, Contoso has identified over 300 database instances that must be migrated. Of these instances, roughly 40 percent can be moved to PaaS-based services. Of the remaining 60 percent, they must be moved to an IaaS-based approach with a virtual machine running the respective database software.
 
 #### Step 2: Application assessment
 
@@ -131,13 +131,13 @@ Contoso also performed a [workload readiness review](https://docs.microsoft.com/
 
 #### Step 5: Test migrations
 
-The first part of the migration preparation involved a test migration of each of the databases to the presetup environments. In order to save time, they scripted all of the operations for the migrations and recorded the timings for each. In order to speed up the migration, they identified what migration operations could be run concurrently.
+The first part of the migration preparation involved a test migration of each of the databases to the pre-setup environments. In order to save time, they scripted all of the operations for the migrations and recorded the timings for each. In order to speed up the migration, they identified what migration operations could be run concurrently.
 
 Any rollback procedures were identified for each of the database workloads in case of some unexpected failures.
 
-For the IaaS-based workloads, they presetup all the required third-party software.
+For the IaaS-based workloads, they set up all the required third-party software beforehand.
 
-After the test migration, Contoso was able to use the various Azure [cost estimation tools](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/estimate) to get a more accurate picture of the future operational costs of their migration.
+After the test migration, Contoso was able to use the various Azure [cost-estimation tools](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/estimate) to get a more accurate picture of the future operational costs of their migration.
 
 #### Step 6: Migration
 
@@ -160,20 +160,20 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 - Contoso needs to ensure that their new Azure database workloads are secure. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview).
 - In particular, Contoso should review the firewall and virtual network configurations.
-- Set up Private Link so that all database traffic is kept inside Azure and the on-premises network
-- Enable Azure Advanced Threat Protection (ATP)
+- Set up Private Link so that all database traffic is kept inside Azure and the on-premises network.
+- Enable Azure Advanced Threat Protection (ATP).
 
 #### Backups
 
 - Ensure that the Azure databases are backed up using geo-restore. This allows backups to be used in a paired region in case of a regional outage.
-- **(Important:)** ensure that the Azure server resource has a [resource lock](https://docs.microsoft.com/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers cannot be restored.
+- **(Important:)** Ensure that the Azure resource has a [resource lock](https://docs.microsoft.com/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers cannot be restored.
 
 #### Licensing and cost optimization
 
 - Many Azure database workloads can be scaled up or down, therefore performance monitoring of the server and databases is important to ensure you're meeting your needs but also keeping costs at a minimum.
 - Both CPU and storage have costs associated. There are several pricing tiers to select from. Be sure the appropriate pricing plan is selected for the data workloads.
-- Each read replica is billed based on the compute and storage selected
-- Use reserved capacity to save on costs
+- Each read replica is billed based on the compute and storage selected.
+- Use reserved capacity to save on costs.
 
 ## Conclusion
 

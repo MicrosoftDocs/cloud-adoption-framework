@@ -9,11 +9,14 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 services: azure-migrate
 ---
+
+<!-- docsTest:ignore ColumnStore HR -->
+
 # Migrating MariaDB to Azure (scenario)
 
 This article demonstrates how a fictional company Contoso planned and migrated their on-premises MariaDB open source database platform to Azure.  
 
-Contoso is using MariaDB over MySQL due to its myriad of storage engines, cache and index performance, open source support with features and extensions, and its analytics columnstore support. Their goal in migrating is to continue to use MariaDB, but not worry about managing the environment needed to support it.
+Contoso is using MariaDB over MySQL due to its myriad of storage engines, cache and index performance, open source support with features and extensions, and its analytics ColumnStore support. Their goal in migrating is to continue to use MariaDB, but not worry about managing the environment needed to support it.
 
 ## Business drivers
 
@@ -35,12 +38,12 @@ The Contoso cloud team has pinned down goals for this migration and will use the
 
 | Requirements | Details |
 | --- | --- |
-| **Availability** | Currently internal staff are having a hard time with the hosting environment for the MariaDB instance. Contoso would like to have as close to 99.99% availability for the database layer. |
+| **Availability** | Currently internal staff are having a hard time with the hosting environment for the MariaDB instance. Contoso would like to have as close to 99.99 percent availability for the database layer. |
 | **Scalability** | The on-premises database host is quickly running out of capacity, Contoso needs a way to scale their instances past their current limitations or scale it down if the business environment changes to save on costs. |
-| **Performance** | Contoso hr have several reports they run on a daily, weekly and monthly basis. When they run these reports, they notice considerable performance issues with the LAMP app. They need to be able to run the reports without affecting the employee facing application. |
+| **Performance** | The Contoso human resources ) HR) department have several reports they run on a daily, weekly and monthly basis. When they run these reports, they notice considerable performance issues with the LAMP app. They need to be able to run the reports without affecting the employee facing application. |
 | **Security** | Contoso needs to know that the database will only be accessible to their internal applications and not visible or accessible via the internet. |
-| **Monitoring** | Contoso currently uses tools to monitor the metrics of the MariaDB and provide notifications when CPU, memory or storage are having issues. They would like to have this same capability in Azure. |
-| **Business continuity** | The hr application data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like as minimum of downtime as possible. |
+| **Monitoring** | Contoso currently uses tools to monitor the metrics of the MariaDB and provide notifications when CPU, memory, or storage are having issues. They would like to have this same capability in Azure. |
+| **Business continuity** | The HR application data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like as minimum of downtime as possible. |
 | **Azure** | Contoso wants to move the app to Azure, but doesn't want to run it on VMs. Contoso requirements state to use Azure PaaS services for the data tier. |
 
 <!-- markdownlint-enable MD033 -->
@@ -57,16 +60,16 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 ### Proposed solution
 
 - Evaluate the environments for migration compatibility.
-- Use common open source tools to migrate the database(s) to MariaDB for Azure instance.
-- Modify all applications and processes to use the new MariaDB for Azure instance.
+- Use common open source tools to migrate databases to the Azure Database for MariaDB instance.
+- Modify all applications and processes to use the new Azure Database for MariaDB instance.
 
 ### Database considerations
 
-As part of the solution design process Contoso did a review of the features in Azure for hosting their MariaDB data. The following considerations helped them decide to use Azure.
+As part of the solution design process Contoso reviewed the features in Azure for hosting their MariaDB databases. The following considerations helped them decide to use Azure.
 
-- Similar to Azure SQL, Azure MariaDB allows for [firewall rules](https://docs.microsoft.com/azure/mariadb/concepts-firewall-rules).
-- Azure MariaDB can be used with [virtual networks](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible
-- Azure MariaDB has the required compliance and privacy certifications that Contoso must meet for their auditors.
+- Similar to Azure SQL, Azure Database for MariaDB allows for [firewall rules](https://docs.microsoft.com/azure/mariadb/concepts-firewall-rules).
+- Azure Database for MariaDB can be used with [virtual networks](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible
+- Azure Database for MariaDB has the required compliance and privacy certifications that Contoso must meet for their auditors.
 - Report and application processing performance will be enhanced by using read replicas.
 - Ability to expose the service to internal network traffic only (no-public access) using [Private Link](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-private-link).
 - They chose not to move to Azure Database for MySQL as they're looking at potentially using the maridb columnstore and graphdbms database model in the future.
@@ -151,7 +154,7 @@ Contoso used the following steps to migrate their databases.
     mysqldump -h localhost -u root -p -–skip-triggers -–single-transaction –-extended-insert -–order-by-primary -–disable-keys Employees > Employees.sql
     ```
 
-- Restore the database. Replace with the endpoint for your Azure MariaDB instance and the username
+- Restore the database. Replace with the endpoint for your Azure Database for MariaDB instance and the username
 
   ```cmd
   mysql -h {name}.mariadb.database.azure.com -u user@{name} -p –ssl
@@ -179,7 +182,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ### Security
 
-- Contoso needs to ensure that their new Azure MariaDB instance and databases are secure. [Learn more](https://docs.microsoft.com/azure/mariadb/concepts-security).
+- Contoso needs to ensure that their new Azure Database for MariaDB instance and databases are secure. [Learn more](https://docs.microsoft.com/azure/mariadb/concepts-security).
 - In particular, Contoso should review the [firewall](https://docs.microsoft.com/azure/mariadb/concepts-firewall-rules) and virtual network configurations you limit connections to only the applications that require it.
 - Configure any outbound IP requirements to allow connections to the MariaDB [gateway IP addresses](https://docs.microsoft.com/azure/mariadb/concepts-connectivity-architecture).
 - Update all applications to [require SSL](https://docs.microsoft.com/azure/mariadb/concepts-ssl-connection-security) connections to the databases.
@@ -189,16 +192,16 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ### Backups
 
-- Ensure that the Azure MariaDB databases are backed up using geo-restore. This allows backups to be used in a paired region in case of a regional outage.
-- **Important:** Ensure that the Azure MariaDB server resource has a [resource lock](https://docs.microsoft.com/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers cannot be restored.
+- Ensure that the Azure Database for MariaDB databases are backed up using geo-restore. This allows backups to be used in a paired region in case of a regional outage.
+- **Important:** Ensure that the Azure Database for MariaDB server resource has a [resource lock](https://docs.microsoft.com/azure/azure-resource-manager/management/lock-resources) to prevent it from being deleted. Deleted servers cannot be restored.
 
 ### Licensing and cost optimization
 
-- Azure MariaDB can be scaled up or down, therefore performance monitoring of the server and databases is important to ensure you're meeting your needs but also keeping costs at a minimum.
+- Azure Database for MariaDB can be scaled up or down, therefore performance monitoring of the server and databases is important to ensure you're meeting your needs but also keeping costs at a minimum.
 - Both CPU and storage have costs associated. There are several pricing tiers to select from. Be sure the appropriate pricing plan is selected for the data workloads.
 - Each read replica is billed based on the compute and storage selected
 - Use reserved capacity to save on costs
 
 ## Conclusion
 
-In this article, Contoso migrated their MariaDB databases to an Azure MariaDB SQL Managed Instance.
+In this article, Contoso migrated their MariaDB databases to an Azure Database for MariaDB SQL Managed Instance.

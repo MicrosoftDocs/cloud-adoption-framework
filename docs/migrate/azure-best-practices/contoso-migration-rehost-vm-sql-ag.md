@@ -384,7 +384,7 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
 
 With discovery completed, you can begin replication of VMware VMs to Azure.
 
-1. In the Azure Migrate project > **Servers**, **Azure Migrate: Server Migration**, click **Replicate**.
+1. In the Azure Migrate project > **Servers**, **Azure Migrate: Server Migration**, select **Replicate**.
 
     ![Replicate VMs](./media/contoso-migration-rehost-vm/select-replicate.png)
 
@@ -401,14 +401,14 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 
     ![Select assessment](./media/contoso-migration-rehost-vm/select-assessment.png)
 
-5. In **Virtual machines**, search for VMs as needed, and check each VM you want to migrate. Then click **Next: Target settings**.
+5. In **Virtual machines**, search for VMs as needed, and check each VM you want to migrate. Then select **Next: Target settings**.
 
 6. In **Target settings**, select the subscription, and target region to which you'll migrate, and specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure VNet/subnet to which the Azure VMs will be joined after migration.
 
 7. In **Azure Hybrid Benefit**, select the following:
 
-    - Select **No** if you don't want to apply Azure Hybrid Benefit. Then click **Next**.
-    - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and you want to apply the benefit to the machines you're migrating. Then click **Next**.
+    - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
+    - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and you want to apply the benefit to the machines you're migrating. Then select **Next**.
 
 8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
@@ -416,11 +416,11 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
     - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group you specify for the migration.
 
-9. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (standard SSD/HDD or premium-managed disks) in Azure. Then click **Next**.
+9. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (standard SSD/HDD or premium-managed disks) in Azure. Then select **Next**.
     - You can exclude disks from replication.
     - If you exclude disks, won't be present on the Azure VM after migration.
 
-10. In **Review and start replication**, review the settings, and click **Replicate** to start the initial replication for the servers.
+10. In **Review and start replication**, review the settings, and select **Replicate** to start the initial replication for the servers.
 
 > [!NOTE]
 > You can update replication settings any time before replication starts, in **Manage** > **Replicating machines**. Settings can't be changed after replication starts.
