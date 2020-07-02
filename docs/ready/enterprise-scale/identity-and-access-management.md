@@ -78,7 +78,7 @@ _Figure 1: Identity and access management._
 
 - Use Azure Security Center just-in-time (JIT) access for all infrastructure as a service (IaaS) resources to enable network-level protection for ephemeral user access to IaaS virtual machines.
 
-- Use Azure-AD-managed identities for Azure resources to avoiding authentication based on user names and passwords. As many security breaches of public cloud resources originated with credential theft embedded in code or other text sources, enforcing managed identities for programmatic access greatly reduces the risk credential theft.
+- Use Azure-AD-managed identities for Azure resources to avoid authentication based on user names and passwords. As many security breaches of public cloud resources originated with credential theft embedded in code or other text sources, enforcing managed identities for programmatic access greatly reduces the risk credential theft.
 
 - Use privileged identities for automation runbooks that require elevated access permissions. Automated workflows that violate critical security boundaries should be governed by the same tools and policies users of equivalent privilege are.
 
@@ -86,7 +86,7 @@ _Figure 1: Identity and access management._
 
 ### Planning for authentication inside a landing zone
 
-A critical design decision that an enterprise organization must make when adopting Azure is whether to extend and existing on-premises identity domain into Azure or to create a brand new one. Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows Server, Azure AD Domain Services, or both. Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
+A critical design decision that an enterprise organization must make when adopting Azure is whether to extend an existing on-premises identity domain into Azure or to create a brand new one. Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows Server, Azure AD Domain Services, or both. Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
 
 **Design considerations:**
 
