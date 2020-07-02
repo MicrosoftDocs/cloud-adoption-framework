@@ -87,8 +87,8 @@ The articles in the series are summarized below.
 
 | Article | Details |
 | --- | --- |
-| [Migrate dev/test environments to Azure IaaS](./contoso-migration-dt-to-iaas.md) | This article demonstrates how the Contoso rehosts their dev/test environment for two applications running on VMware VMs, by migrating to Azure VMs. |
-| [Migrating to Azure DevTest Labs](./contoso-migration-dt-to-labs.md)  | This article discusses how Contoso moves their dev/test workloads to Azure using DevTest Labs. |
+| [Migrate dev/test environments to Azure IaaS](./contoso-migration-devtest-to-iaas.md) | This article demonstrates how the Contoso rehosts their dev/test environment for two applications running on VMware VMs, by migrating to Azure VMs. |
+| [Migrating to Azure DevTest Labs](./contoso-migration-devtest-to-labs.md)  | This article discusses how Contoso moves their dev/test workloads to Azure using DevTest Labs. |
 
 ### ASP.NET, PHP web apps
 

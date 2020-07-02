@@ -26,7 +26,7 @@ Contoso has several options available when moving their dev/test environment to 
 | [DevTest Labs](https://docs.microsoft.com/azure/devtest-labs/devtest-lab-overview) | Quickly provision development and test environments <br><br> minimize waste with quotas and policies <br><br> Set automated shutdowns to minimize costs <br><br> Build Windows and Linux environments |
 
 > [!NOTE]
-> This article focuses on using DevTest Labs to move an on-premises dev/test environment to Azure. Read how Contoso moved [dev/test to Azure IaaS](./contoso-migration-dt-to-iaas.md) via Azure Migrate.
+> This article focuses on using DevTest Labs to move an on-premises dev/test environment to Azure. Read how Contoso moved [dev/test to Azure IaaS](./contoso-migration-devtest-to-iaas.md) via Azure Migrate.
 
 ## Business drivers
 
@@ -72,7 +72,7 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 - The on-premises dev/test VMs in the Contoso datacenter will be decommissioned after the migration is done.
 - Developers and testers will have access to Windows Virtual Desktop for their workstations.
 
-![Scenario architecture](./media/contoso-migration-dt-to-labs/architecture.png)
+![Scenario architecture](./media/contoso-migration-devtest-to-labs/architecture.png)
 _Figure 1: Scenario architecture._
 
 ### Database considerations
@@ -101,7 +101,7 @@ Contoso will migrate their development app and databases VMs to new Azure VMs us
 - Contoso will create Windows virtual desktops for developers to use remote locations.
 - Create VMs within DevTest Labs for development and migrate databases.
 
-![Migration process](./media/contoso-migration-dt-to-labs/migration-process-devtest-labs.png)
+![Migration process](./media/contoso-migration-devtest-to-labs/migration-process-devtest-labs.png)
 _Figure 2: The migration process._
 
 ## Prerequisites
@@ -132,13 +132,13 @@ They set these up as follows:
 
 Contoso follows the link to the [Azure Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p) and provisions a new subscription, saving them up to 80 percent on their systems. This offer allows Contoso to run Windows 10 images on Azure for dev/test. They will gain access to [Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/overview) to simplify the management experience of the remote developers.
 
-    ![DevTest offer](./media/contoso-migration-dt-to-labs/devtest-subscription.png)
-    _Figure 3: An Azure Dev/Test subscription offer._
+![DevTest offer](./media/contoso-migration-devtest-to-labs/devtest-subscription.png)
+_Figure 3: An Azure Dev/Test subscription offer._
 
 With their new subscription provisioned, Contoso uses the Azure portal to create a new DevTest Labs instance. The new lab is created in the `ContosoDevRG` resource group.
 
-    ![Create DevTest Labs with the portal](./media/contoso-migration-dt-to-labs/new-lab.png)
-    _Figure 4: Creating a new DevTest labs instance._
+![Create DevTest Labs with the portal](./media/contoso-migration-devtest-to-labs/new-lab.png)
+_Figure 4: Creating a new DevTest Labs instance._
 
 ## Step 2: Configure the development virtual network, assign a resource group, and set policies
 
@@ -154,19 +154,19 @@ They set these up as follows:
 
     - In the portal, Contoso opens the DevTest Labs instance and selects **Configuration and policies:**
 
-      ![Configuration and policies](./media/contoso-migration-dt-to-labs/config-lab.png)
-      _Figure 5: DevTest Labs instance: Configuration and policies._
+      ![Configuration and policies](./media/contoso-migration-devtest-to-labs/configure-lab.png)
+      _Figure 5: DevTest Labs instance: configuration and policies._
 
     - Contoso selects **Virtual Networks** > **+ Add**, and then selects `vnet-dev-eus2`, and then **Save**. This allows the development VNet to be used for VM deployments. There is also a virtual network that was created during the deployment of the DevTest Labs instance.
 
-      ![Virtual networks](./media/contoso-migration-dt-to-labs/vnets.png)
+      ![Virtual networks](./media/contoso-migration-devtest-to-labs/vnets.png)
       _Figure 6: Virtual networks._
 
 2. Assign a resource group:
 
     - To ensure that resources are deployed to the `ContosoDevRG` resource group, Contoso configures this in the lab settings. They also assign their developers the `Contributor` role.
 
-      ![Assign resource group](./media/contoso-migration-dt-to-labs/assign-resource-group.png)
+      ![Assign resource group](./media/contoso-migration-devtest-to-labs/assign-resource-group.png)
       _Figure 7: Assigning a resource group._
 
     > [!NOTE]
@@ -178,22 +178,22 @@ They set these up as follows:
 
     - Auto-shutdown is enabled with a local time of 7:00:00 pm and the correct timezone.
 
-      ![Auto-shutdown](./media/contoso-migration-dt-to-labs/autoshutdown.png)
+      ![Auto-shutdown](./media/contoso-migration-devtest-to-labs/autoshutdown.png)
       _Figure 8: Auto-shutdown._
 
     - Auto-start is enabled to have their VMs up and running when the developers come online to work. They're configured to the local timezone and for the days of the week when they work.
 
-      ![Auto-start](./media/contoso-migration-dt-to-labs/autostart.png)
+      ![Auto-start](./media/contoso-migration-devtest-to-labs/autostart.png)
       _Figure 9: Auto-start._
 
     - The allowed VM sizes are configured, insuring that large and expensive VMs are not allowed to be started.
 
-      ![Allowed VM sizes](./media/contoso-migration-dt-to-labs/vm-sizes.png)
+      ![Allowed VM sizes](./media/contoso-migration-devtest-to-labs/vm-sizes.png)
       _Figure 10: Allowed VM sizes._
 
     - The support message is configured.
 
-      ![Support message](./media/contoso-migration-dt-to-labs/support.png)
+      ![Support message](./media/contoso-migration-devtest-to-labs/support.png)
       _Figure 11: A support message._
 
 ## Step 3: Create Windows 10 multi-session virtual desktops for developers to use from remote locations
@@ -204,22 +204,22 @@ Contoso creates a Windows 10 multi-session VM from a base:
 
 - Contoso opens **All virtual machines**> **+ Add** and then selects a `Windows 10 enterprise multi-session` base.
 
-  ![Windows 10 base](./media/contoso-migration-dt-to-labs/windows-10-vm-base.png)
+  ![Windows 10 base](./media/contoso-migration-devtest-to-labs/windows-10-vm-base.png)
   _Figure 12: A Windows 10 Enterprise multi-session base._
 
 - Next, the size of the VM is configured along with the artifacts to be installed. In this case, the developers have access to common development tools such as Visual Studio Code, Git, and Chocolatey.
 
-  ![Artifacts](./media/contoso-migration-dt-to-labs/artifacts.png)
+  ![Artifacts](./media/contoso-migration-devtest-to-labs/artifacts.png)
   _Figure 13: Artifacts._
 
 - The VM configuration is reviewed for accuracy.
 
-  ![Create a virtual machine from a base](./media/contoso-migration-dt-to-labs/vm-from-base.png)
+  ![Create a virtual machine from a base](./media/contoso-migration-devtest-to-labs/vm-from-base.png)
   _Figure 14: Create a virtual machine from a base._
 
 - Once the VM is created, Contoso's remote developers can then connect and use this development workstation for their work. The artifacts selected are installed saving developers time configuring their workstation.
 
-  ![RemoteDevs VM](./media/contoso-migration-dt-to-labs/remote-vm.png)
+  ![RemoteDevs VM](./media/contoso-migration-devtest-to-labs/remote-vm.png)
   _Figure 15: A remote developer VM._
 
 ## Step 4: Create formulas and VMs within DevTest Labs for development and migrate databases
@@ -231,56 +231,57 @@ Create formulas (reusable bases) for app and database VMs and provision app and 
 Create formulas for app and database VMs:
 
 - Contoso selects **Formulas** > **+ Add**, and then selects a `Windows 2012 R2 Datacenter` base.
-  ![Windows 2012 R2 base](./media/contoso-migration-dt-to-labs/windows-2012-base.png)
+
+  ![Windows 2012 R2 base](./media/contoso-migration-devtest-to-labs/windows-2012-base.png)
   _Figure 16: A Windows 2012 R2 base._
 
 - Next, the size of the VM is configured along with the artifacts to be installed. In this case, the developers will have access to common development tools such as Visual Studio Code, Git, and Chocolatey.
 
-  ![Windows 2012 R2 base configuration](./media/contoso-migration-dt-to-labs/windows-2012-base-configuration.png)
+  ![Windows 2012 R2 base configuration](./media/contoso-migration-devtest-to-labs/windows-2012-base-configuration.png)
   _Figure 17: A Windows 2012 R2 base configuration._
 
 - To create the database VM formula, Contoso follows the same basic steps this time selecting a SQL Server 2012 image for the base.
 
-  ![SQL 2012 R2 base](./media/contoso-migration-dt-to-labs/sql-2012-base.png)
+  ![SQL 2012 R2 base](./media/contoso-migration-devtest-to-labs/sql-2012-base.png)
   _Figure 18: An SQL Server 2012 image._
 
 - The formula is configured with the size and artifacts, including SQL Server Management Studio, which is required for this database development VM formula.
 
-  ![SQL 2012 R2 base configuration](./media/contoso-migration-dt-to-labs/sql-2012-base-configuration.png)
+  ![SQL 2012 R2 base configuration](./media/contoso-migration-devtest-to-labs/sql-2012-base-configuration.png)
   _Figure 19: An SQL 2020 R2 base configuration._
 
 Learn more about using [formulas](https://docs.microsoft.com/azure/lab-services/devtest-lab-manage-formulas) with DevTest Labs.
 
 - Contoso has now created the Windows base formulas for their developers to use for their apps and databases.
 
-  ![Configured database VM](./media/contoso-migration-dt-to-labs/contoso-formulas.png)
+  ![Configured database VM](./media/contoso-migration-devtest-to-labs/contoso-formulas.png)
   _Figure 20: Windows base formulas._
 
 Provision app and database VMs using the formulas:
 
 - With the formulas created, Contoso next selects **All virtual machines** and then the `Windows2012AppDevVmBase` formula to match the configuration of their current app development VMs.
 
-  ![App VM](./media/contoso-migration-dt-to-labs/app-vm.png)
+  ![App VM](./media/contoso-migration-devtest-to-labs/app-vm.png)
   _Figure 21: An app development VM._
 
 - The VM is configured with the size and artifacts that are required for this app VM.
 
-  ![Configured App VM](./media/contoso-migration-dt-to-labs/app-vm-configuration.png)
+  ![Configured App VM](./media/contoso-migration-devtest-to-labs/app-vm-configuration.png)
   _Figure 22: Size and artifact configurations for a VM._
 
 - Next, the database VM is provisioned using the **SQLDbDevVmBase** formula to match the configuration of their current database development VMs.
 
-  ![Database VM](./media/contoso-migration-dt-to-labs/database-vm.png)
+  ![Database VM](./media/contoso-migration-devtest-to-labs/database-vm.png)
   _Figure 23: A database VM._
 
 - The VM is configured with the size and artifacts that are required.
 
-  ![Database VM Config](./media/contoso-migration-dt-to-labs/database-vm-config.png)
+  ![Database VM Config](./media/contoso-migration-devtest-to-labs/database-vm-config.png)
   _Figure 24: Database configurations for a VM._
 
 - With their first VMs created along with their remote developer's workstation, Contoso's developers are ready to start writing code in Azure.
 
-  ![Contoso VMs](./media/contoso-migration-dt-to-labs/contoso-vms.png)
+  ![Contoso VMs](./media/contoso-migration-devtest-to-labs/contoso-vms.png)
   _Figure 25: Contoso VMs._
 
 - Contoso can now restore their development databases either from backups or using some type of code generation process to build the schema on the VMs. With the SQL Server Management Studio already installed using the artifacts, these are simple tasks that don't require installing any tools.

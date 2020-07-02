@@ -1,5 +1,5 @@
 ---
-title: Migrate MariaDB databases to Microsoft Azure 
+title: Migrate MariaDB databases to Microsoft Azure
 description: Learn how Contoso migrated their on-premises MariaDB Databases to Azure.
 author: deltadan
 ms.author: abuck
@@ -14,7 +14,7 @@ services: azure-migrate
 
 # Migrating MariaDB databases to Azure
 
-This article demonstrates how the fictional company Contoso planned and migrated their on-premises MariaDB open source database platform to Azure.  
+This article demonstrates how the fictional company Contoso planned and migrated their on-premises MariaDB open source database platform to Azure.
 
 Contoso is using MariaDB over MySQL due to its myriad of storage engines, cache and index performance, open source support with features and extensions, and its analytics ColumnStore support. Their goal in migrating is to continue to use MariaDB, but not worry about managing the environment needed to support it.
 
@@ -145,10 +145,10 @@ Contoso used the following steps to migrate their databases.
   - Select your compute and storage.
   - Enter an administrator username and password.
   - Select **Review + create**.
-  
+
     ![Migration process](./media/contoso-migration-mariadb-to-azure/azure_mariadb_create.png)
     _Figure 5: Review and create._
-  
+
   - Select **Create**.
   - Record the server hostname, username, and password.
   - Select **Connection Security**.
@@ -171,7 +171,7 @@ Contoso used the following steps to migrate their databases.
   ```
 
 - Using phpadmin or a similar tool (MySQL Workbench, toad, navicat), verify the restore by checking record counts in each table.
-  
+
 - Update all app connection strings to point to the migrated database.
 
 - Test all apps for proper operation

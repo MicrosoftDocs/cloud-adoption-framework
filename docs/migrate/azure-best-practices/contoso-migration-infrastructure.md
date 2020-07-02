@@ -218,7 +218,7 @@ To facilitate integration, Contoso uses the [Azure AD Connect tool](https://docs
 5. In **Ready to configure**, they select **Start the synchronization process when configuration completes** to start the sync immediately. Then they install.
 
     Note the following:
-  
+
     - Contoso has a direct connection to Azure. If your on-premises Active Directory is behind a proxy, review [troubleshoot Azure AD connectivity](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-troubleshoot-connectivity).
 
     - After the first synchronization, on-premises Active Directory objects are visible in the Azure AD directory.

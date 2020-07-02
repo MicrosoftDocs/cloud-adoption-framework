@@ -240,7 +240,7 @@ As a summary, you must perform the following:
     ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-complete.png)
 
     ![MySQL](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-complete-02.png)
-  
+
   - Reinstate any foreign keys and triggers.
 
   - Modify applications to use the new database.

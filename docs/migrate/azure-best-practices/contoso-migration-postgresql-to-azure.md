@@ -1,5 +1,5 @@
 ---
-title: Migrate PostgreSQL databases to Microsoft Azure 
+title: Migrate PostgreSQL databases to Microsoft Azure
 description: Learn how Contoso migrated their on-premises PostgreSQL databases to Azure.
 author: deltadan
 ms.author: abuck
@@ -126,15 +126,15 @@ Contoso will need to assess the current database for replication issues. These i
 Contoso can perform the migration in several ways including:
 
 - [Dump and restore](https://docs.microsoft.com/azure/postgresql/howto-migrate-using-dump-and-restore)
-  
+
 - [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online)
-  
+
 - [Import/export](https://docs.microsoft.com/azure/postgresql/howto-migrate-using-export-and-import)
 
 Contoso has selected Azure Database Migration Service to allow them to reuse the migration project whenever they need to perform major-to-major upgrades. Because a single Database Migration Service activity only accommodates up to four databases, Contoso sets up several jobs using these steps:
 
 - Preparation:
-  
+
   - Set up a virtual network (VNet) to access the database. You can create a VNet connection using [VPN gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
 
 <!-- docsTest:ignore "Azure Database Migration Services" -->
@@ -172,11 +172,11 @@ Contoso has selected Azure Database Migration Service to allow them to reuse the
       - For example, if you want to migrate four databases, set the value to 4.
     - `max_wal_senders` = [number of databases running concurrently]
       - The recommended value is 10.
-  
+
 - Migration `User` must have the `REPLICATION` role on the source database.
-  
+
 - Add the Database Migration Service instance IP address to the `PostgreSQLpg_hba.conf` file.
-  
+
 - Export the database schemas.
 
   - Run the following commands:
