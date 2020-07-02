@@ -1011,6 +1011,8 @@ items:
             href: innovate/best-practices/predict.md
           - name: Machine learning
             items:
+            - name: What is Machine Learning
+              href: innovate\best-practices\machine-learning.md
             - name: Azure Machine Learning workflow
               href: https://docs.microsoft.com/azure/machine-learning/concept-azure-machine-learning-architecture?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: ScaleR in HDInsight solution
@@ -1021,14 +1023,10 @@ items:
             items:
             - name: Deploy predictions
               href: https://docs.microsoft.com/azure/machine-learning/how-to-deploy-and-where?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Setting up HDInsight clusters
-              href: https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Conversational AI
             items:
-            - name: Azure Machine Learning from experiment to operational services
-              href: https://docs.microsoft.com/azure/machine-learning/studio/model-progression-experiment-to-web-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Operationalize ML Services on Azure HDInsight
-              href: https://docs.microsoft.com/azure/hdinsight/r-server/r-server-operationalize?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+            - name: Azure Machine Learning from experiment to operational services 
+              href: https://docs.microsoft.com/en-us/azure/machine-learning/studio/model-progression-experiment-to-web-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
       - name: Process improvements
         items:
