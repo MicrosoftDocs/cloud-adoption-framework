@@ -81,7 +81,7 @@ Network topology is a critical foundational element of the enterprise-scale arch
 
 A network topology based on Azure Virtual WAN is the preferred enterprise-scale approach for large-scale multiregion deployments where the customer needs to connect their global locations to both Azure and on-premises. A Virtual WAN network topology should also be used whenever the customer intends to use software-defined WAN (SD-WAN) deployments fully integrated with Azure. Virtual WAN is used to meet large-scale interconnectivity requirements. Since it's a Microsoft-managed service, it also reduces overall network complexity and helps to modernize the customer's network.
 
-A traditional Azure network topology should be used for customers who only intend to deploy resources in a few Azure regions, don't need a global interconnected network, have a low number of remote or branch locations per region (fewer than 30), or require full control and granularity for manually configuring their Azure network. This traditional topology will help these customers build a secure network foundation in Azure.
+A traditional Azure network topology should be used for customers who only intend to deploy resources in a few Azure regions, don't need a global interconnected network, have a low number of remote or branch locations per region (fewer than 30 IPSec tunnels required), or require full control and granularity for manually configuring their Azure network. This traditional topology will help these customers build a secure network foundation in Azure.
 
 ## Virtual WAN network topology (Microsoft-managed)
 
@@ -108,9 +108,11 @@ _Figure 2: Global transit network with Virtual WAN._
 
 - Virtual WAN increases the limit of up to 200 prefixes advertised from Azure to on-premises via ExpressRoute private peering to 10,000 prefixes per Virtual WAN hub. The limit of 10,000 prefixes also includes site-to-site VPN and point-to-site VPN.
 
-- VNet-to-VNet transitive connectivity (within a region and across regions) is in public preview.
+- VNet-to-VNet transitive connectivity (within a region and across regions) is now in general availability (GA).
 
-- Virtual WAN hub-to-hub connectivity is currently in public preview.
+- Virtual WAN hub-to-hub connectivity is now in general availability (GA).
+
+- Transit connectivity between the VNets in Standard Virtual WAN is enabled due to the presence of a router in every virtual hub. Every virtual hub router supports an aggregate throughput up to 50 Gbps.
 
 - Virtual WAN integrates with a variety of [SD-WAN providers](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-locations-partners).
 
@@ -120,7 +122,7 @@ _Figure 2: Global transit network with Virtual WAN._
 
 - ExpressRoute circuits with the premium add-on are required, and they should be from an ExpressRoute Global Reach location.
 
-- Azure Firewall Manager (currently in public preview) allows the deployment of the Azure Firewall in the Virtual WAN hub.
+- Azure Firewall Manager, now in general availability (GA), allows the deployment of the Azure Firewall in the Virtual WAN hub.
 
 - Virtual WAN hub-to-hub traffic via Azure Firewall is currently not supported. As alternative, use a native hub to hub transit routing capabilities in Virtual WAN, and use NSGs to allow/block VNet traffic across hubs.
 
@@ -325,7 +327,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
 - Azure PaaS services that have been injected into a VNet still perform management plane operations using public IP addresses. Ensure that this communication is locked down within the VNet using UDRs and NSGs.
 
-- Use Private Link, where available, for shared Azure PaaS services. Private Link is generally available for several services and is in public preview for numerous ones. Private Link availability is detailed [here](https://docs.microsoft.com/azure/private-link/private-endpoint-overview#private-link-resource).
+- Use Private Link, where available, for shared Azure PaaS services. Private Link is generally available for several services and is in public preview for numerous ones. Private Link availability is detailed [here](https://docs.microsoft.com/en-us/azure/private-link/private-link-overview#availability).
 
 - Access Azure PaaS services from on-premises via ExpressRoute private peering, using either VNet injection for dedicated Azure services or Azure Private Link for available shared Azure services. To access Azure PaaS services from on-premises when VNet injection or Private Link aren't available, use ExpressRoute with Microsoft peering. This would avoid transiting over the public internet.
 
@@ -357,7 +359,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
   - East-west traffic filtering (if required by the customer)
 
-- Use Firewall Manager with Virtual WAN to deploy and manage Azure firewalls across Virtual WAN hubs or in hub VNets. Firewall Manager is currently in preview for both Virtual WAN and regular VNets.
+- Use Firewall Manager with Virtual WAN to deploy and manage Azure firewalls across Virtual WAN hubs or in hub VNets. Firewall Manager is now in general availability (GA) for both Virtual WAN and regular VNets.
 
 - Create a global Azure Firewall policy to govern security posture across the global network environment and assign it to all Azure Firewall instances. Allow for granular policies to meet requirements of specific regions by delegating incremental firewall policies to local security teams via RBAC.
 
