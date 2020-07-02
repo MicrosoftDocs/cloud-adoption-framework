@@ -1005,11 +1005,11 @@ items:
             - name: Azure IoT configuration for cloud-to-device communications
               href: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-c2d-guidance?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
-        - name: Predict and influence
+        - name: Innovate with AI
           items:
           - name: Overview
             href: innovate/best-practices/predict.md
-          - name: Patterns
+          - name: Machine learning
             items:
             - name: Azure Machine Learning workflow
               href: https://docs.microsoft.com/azure/machine-learning/concept-azure-machine-learning-architecture?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
@@ -1017,13 +1017,13 @@ items:
               href: https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-r-scaler-sparkr?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Analyze data with Azure Machine Learning
               href: https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-analyze-with-azure-machine-learning?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Predictions
+          - name: AI applications
             items:
             - name: Deploy predictions
               href: https://docs.microsoft.com/azure/machine-learning/how-to-deploy-and-where?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Setting up HDInsight clusters
               href: https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Interactions
+          - name: Conversational AI
             items:
             - name: Azure Machine Learning from experiment to operational services
               href: https://docs.microsoft.com/azure/machine-learning/studio/model-progression-experiment-to-web-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
