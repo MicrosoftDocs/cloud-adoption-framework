@@ -110,7 +110,7 @@ Here's what Contoso needs to run this scenario.
 
 | Requirements | Details |
 | --- | --- |
-| **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p) to take advantage of up to 80% reduction in costs. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator (admin) of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the admin, you need to work with the admin to assign you owner or contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p) to take advantage of up to 80% reduction in costs. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the admin of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the admin, you need to work with the admin to assign you owner or contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure. |
 
 ## Scenario steps
@@ -214,8 +214,8 @@ Contoso creates a Windows 10 multi-session VM from a base:
 
 - The VM configuration is reviewed for accuracy.
 
-  ![Create a virtual machine from base](./media/contoso-migration-dt-to-labs/vm-from-base.png)
-  _Figure 14: Create a virtual machine from base._
+  ![Create a virtual machine from a base](./media/contoso-migration-dt-to-labs/vm-from-base.png)
+  _Figure 14: Create a virtual machine from a base._
 
 - Once the VM is created, Contoso's remote developers can then connect and use this development workstation for their work. The artifacts selected are installed saving developers time configuring their workstation.
 

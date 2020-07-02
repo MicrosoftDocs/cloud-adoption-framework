@@ -20,7 +20,7 @@ This article demonstrates how the fictional company Contoso planned and migrated
 
 The IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
 
-- **Increase availability.** Contoso has had availability issues with their MySQL on-premises environment. The business requires the applications that use this data store to be more reliable.
+- **Increase availability.** Contoso has had availability issues with their MySQL on-premises environment. The business requires the apps that use this data store to be more reliable.
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
 - **Increase agility.**  Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace to enable the success in a global economy. It mustn't become a business blocker.
 - **Scale.** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
@@ -35,10 +35,10 @@ The Contoso cloud team has pinned down goals for this migration. These goals wer
 | --- | --- |
 | **Availability** | Currently internal staff are having a hard time with the hosting environment for the MySQL instance. Contoso would like to have as close to 99.99% availability for the database layer. |
 | **Scalability** | The on-premises database host is quickly running out of capacity, Contoso needs a way to scale their instances past their current limitations or scale it down if the business environment changes to save on costs. |
-| **Performance** | The Contoso human resources (HR) department runs various reports daily, weekly, and monthly. When they run these reports, they experience significant performance issues with the LAMP-based app. They need to be able to run the reports without affecting the employee-facing application. |
-| **Security** | Contoso needs to know that the database will only be accessible to their internal applications and not visible or accessible via the internet. |
+| **Performance** | The Contoso human resources (HR) department runs various reports daily, weekly, and monthly. When they run these reports, they experience significant performance issues with the LAMP-based app. They need to be able to run the reports without affecting the employee-facing app. |
+| **Security** | Contoso needs to know that the database will only be accessible to their internal apps and not visible or accessible via the internet. |
 | **Monitoring** | Contoso currently uses tools to monitor the metrics of the MySQL and provide notifications when CPU, memory, or storage are having issues. They would like to have this same capability in Azure. |
-| **Business continuity** | The HR application data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like as minimum of downtime as possible. |
+| **Business continuity** | The HR app data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like as minimum of downtime as possible. |
 | **Azure** | Contoso wants to move the app to Azure, but doesn't want to run it on VMs. Contoso wants to use Azure PaaS services for the data tier. |
 
 <!-- markdownlint-enable MD033 -->
@@ -49,7 +49,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 ### Current app
 
-- The MySQL database stores employee data that is used for all aspects of the company's HR department. A LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl/Python) application is used as the front end to handle employee HR requests.
+- The MySQL database stores employee data that is used for all aspects of the company's HR department. A LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl/Python) app is used as the front end to handle employee HR requests.
 - Contoso has 100k employees located all over the world so uptime is very important.
 
 ### Proposed solution
@@ -67,11 +67,11 @@ As part of the solution design process Contoso did a review of the features in A
 - Similar to Azure SQL Database, Azure Database for MySQL allows for [firewall rules](https://docs.microsoft.com/azure/mysql/concepts-firewall-rules).
 - Azure Database for MySQL can be used with [Azure Virtual Network](https://docs.microsoft.com/azure/mysql/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible.
 - Azure Database for MySQL has the required compliance and privacy certifications that Contoso must meet for their auditors.
-- Report and application processing performance can be enhanced by using read replicas.
+- Report and app processing performance can be enhanced by using read replicas.
 - Ability to expose the service to internal network traffic only (no public access) using [Private Link](https://docs.microsoft.com/azure/mysql/concepts-data-access-security-private-link).
 - They chose not to move to Azure Database for MySQL as they're looking at potentially using the MariaDB ColumnStore and GraphDBMS database model in the future.
 - Aside from MySQL features, Contoso is a big proponent of true open source projects and choose not to use MySQL.
-- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or site-to-site VPN).
+- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the app to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or site-to-site VPN).
 
 ### Solution review
 
@@ -107,7 +107,7 @@ Azure automatically manages upgrades for patch updates. For example, 10.2.21 to 
 
 #### Network
 
-Contoso will need to set up a virtual network gateway connection from their on-premises environment to the virtual network where their MySQL database is located. This will allow the on-premises application to be able to access the database over the gateway when the connection strings are updated.
+Contoso will need to set up a virtual network gateway connection from their on-premises environment to the virtual network where their MySQL database is located. This will allow the on-premises app to be able to access the database over the gateway when the connection strings are updated.
 
 ![Migration process](./media/contoso-migration-mysql-to-azure/migration-process.png)
 _Figure 2: The migration process._
@@ -148,15 +148,12 @@ As an alternative to using Azure Database Migration Service, Contoso can use com
   - Use the single-transaction option to set the translation isolation mode to repeatable read and send a start transaction SQL statement before dumping data
   - Use the disable-keys option in mysqldump to disable foreign key constraints before load. Removing this will provide performance gains.
   - Use Azure Blob storage to store the backup files and perform the restore from there for faster restore.
-- Update application connection strings
+  - Update app connection strings.
   - Once the database has been migrated Contoso must update the connection strings to point to the new Azure Database for MySQL.
 
-## Clean up after migration
+## Cleanup after migration
 
-After migration, Contoso needs to complete these cleanup steps:
-
-- Backup the on-premises database for retention purposes
-- Retire the on-premises MySQL server
+After migration, Contoso needs to backup the on-premises database for retention purposes and retire the on-premises MySQL server.
 
 ## Review the deployment
 
