@@ -1,5 +1,5 @@
 ---
-title: Migrating PostgreSQL to Microsoft Azure 
+title: Migrate PostgreSQL databases to Microsoft Azure 
 description: Learn how Contoso migrated their on-premises PostgreSQL databases to Azure.
 author: deltadan
 ms.author: abuck
@@ -10,9 +10,11 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-# Migrating PostgreSQL to Microsoft Azure scenario
+<!-- cSpell:ignore BYOK postgres psql dvdrental -->
 
-This article demonstrates how a fictional company Contoso planned and migrated their on-premises PostgreSQL open source database platform to Azure.
+# Migrate PostgreSQL databases to Microsoft Azure
+
+This article demonstrates how the fictional company Contoso planned and migrated their on-premises PostgreSQL open source database platform to Azure.
 
 ## Business drivers
 
@@ -51,7 +53,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 ### Proposed solution
 
-- Use the Azure Database Migration Service to migrate the database to an Azure Database for PostgreSQL instance.
+- Use Azure Database Migration Service o migrate the database to an Azure Database for PostgreSQL instance.
 - Modify all applications and processes to use the new Azure Database for PostgreSQL instance.
 - Build new data processing pipeline using Azure Data Factory that connect to the Azure Database for PostgreSQL instance.
 
@@ -129,60 +131,62 @@ Contoso can perform the migration in several ways including:
   
 - [Import/export](https://docs.microsoft.com/azure/postgresql/howto-migrate-using-export-and-import)
 
-Contoso has selected the Azure Database Migration Service to allow them to reuse the migration project whenever they need to perform major-to-major upgrades. Because a single Database Migration Service migration activity only accommodates up to four databases, Contoso sets up several jobs using these steps:
+Contoso has selected Azure Database Migration Service to allow them to reuse the migration project whenever they need to perform major-to-major upgrades. Because a single Database Migration Service activity only accommodates up to four databases, Contoso sets up several jobs using these steps:
 
 - Preparation:
   
   - Set up a virtual network (VNet) to access the database. You can create a VNet connection using [VPN gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
 
-  - Create a Database Migration Service resource:
-    - In the [Azure portal](https://portal.azure.com), select **Add a resource**.
-    - Search for **Azure Database Migration Services** and select it.
-    - Select **+ Add**.
-    - Select the subscription and resource group for the service.
-    - Type a name for the service.
-    - Select the closest location to your datacenter or VPN gateway.
-    - Select **Azure** for the service mode.
-    - Select a pricing tier.
-    - Select **Review + create**.
+<!-- docsTest:ignore "Azure Database Migration Services" -->
 
-      ![Migration process](./media/contoso-migration-postgresql-to-azure/azure_migration_service_create.png)
-      _Figure 3: Review and create._
+- Create an Azure Database Migration Service instance:
+  - In the [Azure portal](https://portal.azure.com), select **Add a resource**.
+  - Search for **Azure Database Migration Service** and select it.
+  - Select **+ Add**.
+  - Select the subscription and resource group for the service.
+  - Type a name for the instance.
+  - Select the closest location to your datacenter or VPN gateway.
+  - Select **Azure** for the service mode.
+  - Select a pricing tier.
+  - Select **Review + create**.
 
-    - Select **Create**.
+    ![Migration process](./media/contoso-migration-postgresql-to-azure/azure_migration_service_create.png)
+    _Figure 3: Review and create._
 
-  - Create an Azure Database for PostgreSQL instance.
+  - Select **Create**.
 
-  - On the on-premises server, configure the `postgresql.conf` file.
+- Create an Azure Database for PostgreSQL instance.
 
-    - Set the server to listen on the proper IP address that the Database Migration Service will use to access the server and databases.
-      - Set the `listen_addresses` variable.
-    - Enable SSL.
-      - Set the `ssl=on` variable.
-      - Verify that you're using a publicly signed SSL certificate for the server that supports tls 1.2. Otherwise, the Database Migration Service tool will raise an error.
-    - Update the `pg_hba.conf` file.
-      - Add entries that are specific to the Database Migration Service service.
-    - Logical replication must be enabled on the source server by modified the values in the `postgresql.conf` file for each server.
-      - `wal_level` = `logical`
-      - `max_replication_slots` = [at least the maximum number of databases for migration]
-        - For example, if you want to migrate four databases, set the value to 4.
-      - `max_wal_senders` = [number of databases running concurrently]
-        - The recommended value is 10.
+- On the on-premises server, configure the `postgresql.conf` file.
+
+  - Set the server to listen on the proper IP address that Azure Database Migration Service will use to access the server and databases.
+    - Set the `listen_addresses` variable.
+  - Enable SSL.
+    - Set the `ssl=on` variable.
+    - Verify that you're using a publicly signed SSL certificate for the server that supports tls 1.2. Otherwise, the Database Migration Service tool will raise an error.
+  - Update the `pg_hba.conf` file.
+    - Add entries that are specific to the Database Migration Service instance.
+  - Logical replication must be enabled on the source server by modified the values in the `postgresql.conf` file for each server.
+    - `wal_level` = `logical`
+    - `max_replication_slots` = [at least the maximum number of databases for migration]
+      - For example, if you want to migrate four databases, set the value to 4.
+    - `max_wal_senders` = [number of databases running concurrently]
+      - The recommended value is 10.
   
-  - Migration `User` must have the `REPLICATION` role on the source database.
+- Migration `User` must have the `REPLICATION` role on the source database.
   
-  - Add the Database Migration Service IP address to the `PostgreSQLpg_hba.conf` file.
+- Add the Database Migration Service instance IP address to the `PostgreSQLpg_hba.conf` file.
   
-  - Export the database schemas.
+- Export the database schemas.
 
-    - Run the following commands:
+  - Run the following commands:
 
     ```cmd
     pg_dump -U postgres -s dvdrental > dvdrental_schema.sql
     ```
 
-    - Copy the file, name the copy `dvdrental_schema_foreign.sql`, remove all non-foreign key and trigger-related items.
-    - Remove all foreign key and trigger-related items from the `dvdrental_schema.sql` file.
+  - Copy the file, name the copy `dvdrental_schema_foreign.sql`, remove all non-foreign key and trigger-related items.
+  - Remove all foreign key and trigger-related items from the `dvdrental_schema.sql` file.
 
 - Import the database schema (step 1):
 
@@ -202,7 +206,9 @@ Contoso has selected the Azure Database Migration Service to allow them to reuse
   - Select **New Activity** > **Online data migration**.
   - Type a name.
   - Select **PostgreSQL** as the source.
-  - For the target, select **Azure Database for PostgreSQL**. ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project02.png)
+  - For the target, select **Azure Database for PostgreSQL**.
+
+    ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project02.png)
     _Figure 5: A new migration project is highlighted._
 
   - Select **Save**.

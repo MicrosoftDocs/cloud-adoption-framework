@@ -93,7 +93,7 @@ Contoso will migrate the app front-end and database VMs to Azure VMs using the A
 
 | Service  | Description | Cost |
 | --- | --- | --- |
-| [Azure Migrate: Server Migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm) | The service orchestrates and manages migration of your on-premises apps and workloads, and AWS/gcp VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing. |
+| [Azure Migrate: Server Migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm) | The service orchestrates and manages migration of your on-premises apps and workloads, and AWS/GCP VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing. |
 
 ## Prerequisites
 

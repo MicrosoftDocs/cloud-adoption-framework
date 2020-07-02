@@ -10,6 +10,8 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
+<!-- cSpell:ignore SIEM -->
+
 # Cloud monitoring guide: Formulate a monitoring strategy
 
 As you undergo your digital transformation to the cloud, it's important that you plan and develop an effective cloud monitoring strategy with participation of developers, operations staff, and infrastructure engineers. The strategy should be growth-oriented, defined minimally, then refined iteratively; always aligned with business needs. Its outcome delivers an agile operations modality centered around the ability of the organization to proactively monitor complex distributed applications the business depends on.

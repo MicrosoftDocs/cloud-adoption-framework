@@ -49,7 +49,7 @@ The following image shows the components of the scaffold. The foundation relies 
 
 ## Define your hierarchy
 
-The foundation of the scaffold is the hierarchy and relationship of the Azure Enterprise Enrollment through to subscriptions and resource groups. The enterprise enrollment defines the shape and use of Azure services within your company from a contractual point of view. Within the Enterprise Agreement, you can further subdivide the environment into departments, accounts, subscriptions, and resource groups to match your organization's structure.
+The foundation of the scaffold is the hierarchy and relationship of the Enterprise Agreement (EA) enrollment through to subscriptions and resource groups. The enrollment defines the shape and use of Azure services within your company from a contractual point of view. Within the Enterprise Agreement, you can further subdivide the environment into departments, accounts, subscriptions, and resource groups to match your organization's structure.
 
 ![Hierarchy](../_images/reference/agreement.png)
 
@@ -59,7 +59,7 @@ Every enterprise is different and the hierarchy in the above image allows for si
 
 ### Departments and Accounts
 
-The three common patterns for Azure Enrollments are:
+The three common patterns for EA enrollments are:
 
 - The **functional** pattern:
 
@@ -164,11 +164,11 @@ You will find several Policy examples that show how Policy and Initiatives can b
 
 One of the first, and most crucial, questions you ask yourself when starting with the public cloud is "who should have access to resources?" and "how do I control this access?" Controlling access to the Azure portal and resources in the portal is critical to the long-term safety of your assets in the cloud.
 
-To secure access to your resources you will first configure your identity provider and then configure Roles and access. Azure Active Directory (Azure AD), connected to your on-premises Active Directory, is the foundation of Azure Identity. However, Azure AD is **not** the same as on-premises Active Directory, and it's important to understand what an Azure AD tenant is and how it relates to your Azure enrollment. Review [resource access management in Azure](../govern/resource-consistency/resource-access-management.md) to gain a solid understanding of Azure AD and on-premises Active Directory. To connect and synchronize your on-premises directory to Azure AD, install and configure the [Azure AD Connect tool](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) on-premises.
+To secure access to your resources you will first configure your identity provider and then configure Roles and access. Azure Active Directory (Azure AD), connected to your on-premises Active Directory, is the foundation of Azure Identity. However, Azure AD is **not** the same as on-premises Active Directory, and it's important to understand what an Azure AD tenant is and how it relates to your enrollment. Review [resource access management in Azure](../govern/resource-consistency/resource-access-management.md) to gain a solid understanding of Azure AD and on-premises Active Directory. To connect and synchronize your on-premises directory to Azure AD, install and configure the [Azure AD Connect tool](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) on-premises.
 
 ![Diagram of AD architecture](../_images/reference/ad-architecture.png)
 
-When Azure was initially released, access controls to a subscription were basic: Administrator or Co-Administrator. Access to a subscription in the Classic model implied access to all the resources in the portal. This lack of fine-grained control led to the proliferation of subscriptions to provide a level of reasonable access control for an Azure Enrollment. This proliferation of subscriptions is no longer needed. With role-based access control (RBAC), you can assign users to standard roles that provide common access such as "owner", "contributor" or "reader", or even create your own roles.
+When Azure was initially released, access controls to a subscription were basic: Administrator or Co-Administrator. Access to a subscription in the Classic model implied access to all the resources in the portal. This lack of fine-grained control led to the proliferation of subscriptions to provide a level of reasonable access control for an enrollment. This proliferation of subscriptions is no longer needed. With role-based access control (RBAC), you can assign users to standard roles that provide common access such as "owner", "contributor" or "reader", or even create your own roles.
 
 When implementing role-based access, the following are highly recommended:
 
@@ -284,12 +284,12 @@ These are tools to provide you instant information on cost as well as the abilit
 
 - **Power BI Azure Consumption Insights:** Do you want to create your own visualizations for your organization? If so, then the Azure Consumption Insights content pack for Power BI is your tool of choice. Using this content pack and Power BI you can create custom visualizations to represent your organization, do deeper analysis on costs and add in other data sources for further enrichment.
 
-- **Azure Consumption APIs:** The [Consumption APIs](https://docs.microsoft.com/rest/api/consumption) give you programmatic access to cost and usage data in addition to information on budgets, reserved instances, and marketplace charges. These APIs are accessible only for Enterprise Enrollments and some Web Direct subscriptions however they give you the ability to integrate your cost data into your own tools and data warehouses. You can also [access these APIs via the Azure CLI](https://docs.microsoft.com/cli/azure/consumption?view=azure-cli-latest).
+- **Azure Consumption APIs:** The [Consumption APIs](https://docs.microsoft.com/rest/api/consumption) give you programmatic access to cost and usage data in addition to information on budgets, reserved instances, and marketplace charges. These APIs are accessible only for EA enrollments and some Web Direct subscriptions however they give you the ability to integrate your cost data into your own tools and data warehouses. You can also [access these APIs via the Azure CLI](https://docs.microsoft.com/cli/azure/consumption?view=azure-cli-latest).
 
 Customers who are long-term and mature cloud users follow certain best practices:
 
 - **Actively monitor costs.** Organizations that are mature Azure users constantly monitor costs and take actions when needed. Some organizations even dedicate people to do analysis and suggest changes to usage, and these people more than pay for themselves the first time they find an unused HDInsight cluster that's been running for months.
-- **Use Reserved VM Instances.** Another key tenet for managing costs in the cloud is to use the right tool for the job. If you have an IaaS VM that must stay on 24x7, then using a Reserved VM Instance will save you significant money. Finding the right balance between automating the shutdown of VMs and using Reserved VM Instances takes experience and analysis.
+- **Use Azure Reserved VM Instances.** Another key tenet for managing costs in the cloud is to use the right tool for the job. If you have an IaaS VM that must stay on 24x7, then using a reserved instance will save you significant money. Finding the right balance between automating the shutdown of VMs and using reserved instances takes experience and analysis.
 - **Use automation effectively.** Many workloads don't need to run every day. Turning off a VM for a four-hour period every day can save you 15% of your cost. Automation will pay for itself quickly.
 - **Use resource tags for visibility.** As mentioned elsewhere in this document, using resource tags will allow for better analysis of costs.
 

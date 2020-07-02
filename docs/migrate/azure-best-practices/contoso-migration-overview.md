@@ -70,7 +70,7 @@ The articles in the series are summarized below.
 | --- | --- |
 | [Migrate SQL Server databases to Azure](./contoso-migration-sql-server-db-to-azure.md) | This article demonstrates how a fictional company Contoso assessed, planned and migrated their various on-premises SQL Server databases to Azure. |
 | [Rehost an app on an Azure VM and SQL Managed Instance](./contoso-migration-rehost-vm-sql-managed-instance.md) | This article provides an example of a lift and shift migration to Azure for an on-premises app. This involves migrating the app front-end VM using Azure Migrate, and the app database to an Azure SQL Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview). |
-| [Rehost an app on Azure VMs using SQL Server Always On availability groups](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure-hosted SQL Server VMs. It uses Azure Migrate to migrate the app VMs, and the Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group. |
+| [Rehost an app on Azure VMs using SQL Server Always On availability groups](./contoso-migration-rehost-vm-sql-ag.md) | This example shows how to migrate an app and data using Azure-hosted SQL Server VMs. It uses Azure Migrate to migrate the app VMs, and Azure Database Migration Service to migrate the app database to a SQL Server cluster that's protected by an Always On availability group. |
 
 ### Linux and open source databases
 
@@ -113,9 +113,9 @@ The articles in the series are summarized below.
 | Article | Details |
 | --- | --- |
 | [Moving on-premises VMware infrastructure to Azure](./contoso-migration-vmware-to-azure.md) | This article provides an example of moving an on-premises VMware VMs to Azure using Azure VMware Solution. |
-| [Azure NetApp Files](https://azure.microsoft.com/services/netapp) | Enterprise file storage, powered by netapp. Run Linux and Windows file workloads in Azure. |
+| [Azure NetApp Files](https://azure.microsoft.com/services/netapp) | Enterprise file storage, powered by NetApp. Run Linux and Windows file workloads in Azure. |
 | [Oracle on Azure](https://azure.microsoft.com/solutions/oracle) | Run your Oracle database and enterprise applications n Azure and Oracle cloud. |
-| [Cray in Azure](https://azure.microsoft.com/solutions/high-performance-computing/cray)  | High performance computing with cray in Azure. A dedicated supercomputer on your virtual network. |
+| [Cray in Azure](https://azure.microsoft.com/solutions/high-performance-computing/cray) | High performance computing with Cray in Azure. A dedicated supercomputer on your virtual network. |
 
 ### VDI
 

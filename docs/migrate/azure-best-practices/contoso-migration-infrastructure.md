@@ -36,7 +36,7 @@ Before Contoso can migrate to Azure, it's critical to prepare an Azure infrastru
 
 Before we start reviewing the infrastructure, consider reading some background information about relevant Azure capabilities:
 
-- Several options are available for purchasing Azure access, including pay-as-you-go, enterprise agreements (EA), open licensing from Microsoft resellers, or from Microsoft partners known as cloud solution providers (CSPs). Learn about [purchase options](https://azure.microsoft.com/pricing/purchase-options), and read about how [Azure subscriptions are organized](https://azure.microsoft.com/blog/organizing-subscriptions-and-resource-groups-within-the-enterprise).
+- Several options are available for purchasing Azure access, including pay-as-you-go subscriptions, a Microsoft Enterprise Agreement (EA), Open Licensing from Microsoft resellers, or purchasing from Microsoft partners in the Cloud Solution Provider (CSP) program. Learn about [purchase options](https://azure.microsoft.com/pricing/purchase-options), and read about how [Azure subscriptions are organized](https://azure.microsoft.com/blog/organizing-subscriptions-and-resource-groups-within-the-enterprise).
 - Get an overview of Azure [identity and access management](https://www.microsoft.com/security/business/identity). In particular, learn about [Azure AD and extending on-premises Active Directory to the cloud](https://docs.microsoft.com/azure/active-directory/identity-fundamentals). There's a useful downloadable e-book about [identity and access management (IAM) in a hybrid environment](https://azure.microsoft.com/resources/hybrid-cloud-identity).
 - Azure provides a robust networking infrastructure with options for hybrid connectivity. Get an overview of [networking and network access control](https://docs.microsoft.com/azure/security/security-network-overview).
 - Read the [introduction to Azure security](https://docs.microsoft.com/azure/security/fundamentals/overview), and learn how to create a plan for [Azure governance](https://docs.microsoft.com/azure/governance).
@@ -72,12 +72,12 @@ Contoso is enrolling in an [Enterprise Agreement (EA)](https://azure.microsoft.c
 
 After paying for Azure, Contoso needs to figure out how to manage Azure subscriptions. Contoso has an EA, and thus no limit on the number of Azure subscriptions it can set up.
 
-- An Azure enterprise enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
-- As a first step, Contoso has defined a structure known as an enterprise scaffold for enterprise enrollment. Contoso used the [Azure enterprise scaffold guidance](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-subscription-governance) to help understand and design a scaffold.
+- An Azure Enterprise Agreement enrollment defines how a company shapes and uses Azure services, and defines a core governance structure.
+- As a first step, Contoso has defined a structure known as an enterprise scaffold for their enrollment. Contoso used the [Azure enterprise scaffold guidance](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-subscription-governance) to help understand and design a scaffold.
 - For now, Contoso has decided to use a functional approach to manage subscriptions.
   - Inside the enterprise, it will use a single IT department that controls the Azure budget. This will be the only group with subscriptions.
-  - Contoso will extend this model in the future, so that other corporate groups can join as departments in the enterprise enrollment.
-  - Inside the IT department, Contoso has structured two subscriptions, production, and development.
+  - Contoso will extend this model in the future, so that other corporate groups can join as departments in the enrollment hierarchy.
+  - Inside the IT department, Contoso has structured two subscriptions, `Production` and `Development`.
   - If Contoso requires additional subscriptions in the future, it needs to manage access, policies, and compliance for those subscriptions. Contoso will do that by introducing [Azure management groups](https://docs.microsoft.com/azure/azure-resource-manager/management-groups-overview), as an additional layer above subscriptions.
 
   ![Enterprise structure](./media/contoso-migration-infrastructure/enterprise-structure.png)
@@ -88,21 +88,21 @@ With subscriptions configured, Contoso can look at Microsoft licensing. The lice
 
 #### Azure Hybrid Benefit
 
-When deploying VMs in Azure, standard images include a license that will charge Contoso by the minute for the software being used. But Contoso has been a long-term Microsoft customer, and has maintained EAs and open licenses with Software Assurance.
+When deploying VMs in Azure, standard images include a license that will charge Contoso by the minute for the software being used. However, Contoso has been a long-term Microsoft customer, and has maintained EAs and open licenses with Software Assurance.
 
-Azure Hybrid Benefit provides a cost-effective method for migration, allowing Contoso to save on Azure VMs and SQL Server workloads by converting or reusing Windows Server datacenter and standard edition licenses covered with Software Assurance. This allows Contoso to pay a lower base compute rate for VMs and SQL Server. For more information, see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit).
+Azure Hybrid Benefit provides a cost-effective method for migration, allowing Contoso to save on Azure VMs and SQL Server workloads by converting or reusing Windows Server Datacenter and Standard edition licenses covered with Software Assurance. This allows Contoso to pay a lower base compute rate for VMs and SQL Server. For more information, see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit).
 
 #### License Mobility
 
-License Mobility through Software Assurance gives Microsoft volume licensing customers like Contoso the flexibility to deploy eligible server apps with active SA on Azure. This eliminates the need to purchase new licenses. With no associated mobility fees, existing licenses can easily be deployed in Azure. For more information, see [License Mobility through Software Assurance on Azure](https://azure.microsoft.com/pricing/license-mobility).
+License Mobility through Software Assurance gives Microsoft Volume Licensing customers like Contoso the flexibility to deploy eligible server apps with active SA on Azure. This eliminates the need to purchase new licenses. With no associated mobility fees, existing licenses can easily be deployed in Azure. For more information, see [License Mobility through Software Assurance on Azure](https://azure.microsoft.com/pricing/license-mobility).
 
 #### Reserve instances for predictable workloads
 
 Predictable workloads are those that always need to be available with VMs running. For example, line-of-business apps such as an SAP ERP system. On the other hand, unpredictable workloads are those that are variable, such as VMs that are on during high demand and off when demand is low.
 
-![Reserved instance](./media/contoso-migration-infrastructure/reserved-instance.png)
+![Azure Virtual Machine Reserved instances](./media/contoso-migration-infrastructure/reserved-instance.png)
 
-In exchange for using reserved instances for specific VM instances must be maintained for large durations of time, Contoso can get both a discount and prioritized capacity. Using [Azure reserved instances](https://azure.microsoft.com/pricing/reserved-vm-instances) together with Azure Hybrid Benefit can save Contoso up to 82% off regular pay-as-you-go pricing (as of April 2018).
+In exchange for using reserved instances for specific VM instances must be maintained for large durations of time, Contoso can get both a discount and prioritized capacity. Using [Azure Reserved Virtual Machine Instances](https://azure.microsoft.com/pricing/reserved-vm-instances) together with Azure Hybrid Benefit can save Contoso up to 82% off regular pay-as-you-go pricing (as of April 2018).
 
 ## Step 2: Manage hybrid identity
 
@@ -432,7 +432,7 @@ VNets in `East US 2` are summarized in the following table.
 | `IB-TrustZone`   | `10.240.1.0/24`  | 251 |
 | `OB-UntrustZone` | `10.240.2.0/24`  | 251 |
 | `OB-TrustZone`   | `10.240.3.0/24`  | 251 |
-| `GatewaySubnets` | `10.240.10.0/24` | 251 |
+| `GatewaySubnet`  | `10.240.10.0/24` | 251 |
 
 #### Subnets in the `East US 2` development network (`VNET-DEV-EUS2`)
 
@@ -762,7 +762,7 @@ Contoso can limit network traffic to resources in a virtual network using networ
 
 Contoso will implement a mix of NSGs and ASGs. Contoso is concerned about NSG management. It's also worried about the overuse of NSGs, and the added complexity for operations staff. Here's what Contoso will do:
 
-- All traffic into and out of all subnets (north-south), will be subject to an NSG rule, except for the gatewaysubnets in the hub networks.
+- All traffic into and out of all subnets (north/south) will be subject to an NSG rule, except for the gateway subnets in the hub networks.
 - Any firewalls or domain controller will be protected by both subnet NSGs and NIC NSGs.
 - All production applications will have ASGs applied.
 

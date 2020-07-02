@@ -1,6 +1,6 @@
 ---
-title: Migrating MySQL server databases to Microsoft Azure scenario
-description: Learn how Contoso migrated their on-premises MySQL Databases to Azure.
+title: Migrate MySQL databases to Microsoft Azure
+description: Learn how Contoso migrated their on-premises MySQL databases to Azure.
 author: deltadan
 ms.author: abuck
 ms.date: 07/01/2020
@@ -12,9 +12,9 @@ services: azure-migrate
 
 <!-- cSpell:ignore HR mysqldump InnoDB binlog Navicat -->
 
-# Migrating MySQL server databases to Microsoft Azure scenario
+# Migrate MySQL databases to Azure
 
-This article demonstrates how a fictional company Contoso planned and migrated their on-premises MySQL open source database platform to Azure.
+This article demonstrates how the fictional company Contoso planned and migrated their on-premises MySQL open source database platform to Azure.
 
 ## Business drivers
 
@@ -54,7 +54,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 ### Proposed solution
 
-- Use the Azure Database Migration Service to migrate the database to Azure Database for MySQL instance.
+- Use Azure Database Migration Service to migrate the database to Azure Database for MySQL instance.
 - Modify all applications and processes to use the new Azure Database for MySQL instance.
 
 ### Database considerations
@@ -114,7 +114,7 @@ _Figure 2: The migration process._
 
 #### Migration
 
-Contoso admins migrate the database using Azure database migration services using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform both online, offline and hybrid (preview) migrations using MySQL 5.6 or 5.7.
+Contoso admins migrate the database using Azure Database Migration Service using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform online, offline, and hybrid (preview) migrations using MySQL 5.6 or 5.7.
 
 > [!NOTE]
 > MySQL 8.0 is supported in Azure Database for MySQL, but the Database Migration Service tool does not yet support that version.
@@ -123,25 +123,25 @@ As a summary, they must perform the following:
 
 - Ensure all migration prerequisites are met:
 
-  - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine, and migration across source and target with same versions.
+  - The MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL community edition, InnoDB engine, and migration across source and target with same versions.
   - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the migration wizard: `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009`.
   - User must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 
 - Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
 
-- Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet.
+- Create an Azure Database Migration Service instance with a `Premium` SKU that is connected to the VNet.
 
-- Ensure that the Azure Database Migration Service can access the MySQL database via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
+- Ensure that the instance can access the MySQL database via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
 
-- Create a new Azure Database Migration Service project
+- Create a new Database Migration Service project:
 
-![Azure Database Migration Project](./media/contoso-migration-mysql-to-azure/migration-dms-new-project.png)
-_Figure 3: An Azure Database Migration Project._
+  ![Create a new Database Migration Service project](./media/contoso-migration-mysql-to-azure/migration-dms-new-project.png)
+  _Figure 3: An Azure database migration project._
 
 #### Migration using native tools
 
-As an alternative to using the database migration services, Contoso can use common utilities and tools such as MySQL Workbench, mysqldump, Toad or Navicat to connect to and migrate data to Azure Database for MySQL.
+As an alternative to using Azure Database Migration Service, Contoso can use common utilities and tools such as MySQL Workbench, mysqldump, Toad or Navicat to connect to and migrate data to Azure Database for MySQL.
 
 - Dump and restore with mysqldump:
   - Use the exclude-triggers option in mysqldump, this will prevent triggers from executing during import and improve performance.

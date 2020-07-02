@@ -27,7 +27,7 @@ This article describes best practices for costing and sizing before and after mi
 
 Before you move your workloads to the cloud, estimate the monthly cost of running them in Azure. Proactively managing cloud costs helps you adhere to your operating expense budget. If budget is limited, take this into account before migration. Consider converting workloads to Azure serverless technologies, where appropriate, to reduce costs.
 
-The best practices in this section help you to estimate costs, perform right-sizing for VMs and storage, use Azure Hybrid Benefit, use reserved VMs, and estimate cloud spending across subscriptions.
+The best practices in this section help you to estimate costs, perform right-sizing for virtual machines (VMs) and storage, use Azure Hybrid Benefit, use Azure Reserved VM Instances, and estimate cloud spending across subscriptions.
 
 ## Best practice: Estimate monthly workload costs
 
@@ -45,8 +45,8 @@ To forecast your monthly bill for migrated workloads, there are several tools yo
 - Azure Migrate discovers and assesses your on-premises environment to provide an inventory.
 - Azure Migrate can map and show you dependencies between VMs so that you have a complete picture.
 - An Azure Migrate assessment contains estimated cost.
-  - Compute costs: using the Azure VM size recommended when you create an assessment, Azure Migrate uses the Azure Billing APIs to calculate estimated monthly VM costs. The estimation considers the operating system, Software Assurance, reserved instances, VM uptime, location, and currency settings. It aggregates the cost across all VMs in the assessment, and calculates a total monthly compute cost.
-  - Storage cost: Azure Migrate calculates total monthly storage costs by aggregating the storage costs of all VMs in an assessment. You can calculate the monthly storage cost for a specific machine by aggregating the monthly cost of all disks attached to it.
+  - **Compute costs:** Using the Azure VM size recommended when you create an assessment, Azure Migrate uses the Azure Billing APIs to calculate estimated monthly VM costs. The estimation considers the operating system, Software Assurance, Azure Reserved Virtual Machine Instances, VM uptime, location, and currency settings. It aggregates the cost across all VMs in the assessment, and calculates a total monthly compute cost.
+  - **Storage cost:** Azure Migrate calculates total monthly storage costs by aggregating the storage costs of all VMs in an assessment. You can calculate the monthly storage cost for a specific machine by aggregating the monthly cost of all disks attached to it.
 
     ![Azure Migrate](./media/migrate-best-practices-costs/assess.png)
     _Azure Migrate assessment_
@@ -64,7 +64,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 | Type  | Details | Usage |
 | --- | --- | --- |
-| **General-purposeeneral purpose** | Balanced CPU-to-memory. | Good for testing and development, small- to medium-size databases, low- to medium-volume traffic web servers. |
+| **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small- to medium-size databases, low- to medium-volume traffic web servers. |
 | **Compute-optimized** | High CPU-to-memory. | Good for medium-volume traffic web server, network appliances, batch processes, app servers. |
 | **Memory-optimized** | High memory-to-CPU. | Good for relational databases, medium- to large-size cache, in-memory analytics. |
 | **Storage optimized** | High disk throughput and I/O. | Good for big data, SQL and NoSQL databases. |
@@ -127,10 +127,10 @@ Azure provides different types of storage accounts and performance tiers.
 
 | Account type  | Details | Usage |
 | --- | --- | --- |
-| **General-purposeeneral purpose v2 standard** | Supports blobs (block, page, append), files, disks, queues, and tables. <br><br> Supports hot, cool, and archive access tiers. ZRS is supported. | Use for most scenarios and most types of data. Standard storage accounts can be HDD or SSD-based. |
-| **General-purposeeneral purpose v2 premium** | Supports Blob storage data (page blobs). Supports hot, cool, and archive access tiers. ZRS is supported. <br><br> Stored on SSD. | Microsoft recommends using for all VMs. |
-| **General-purposeeneral purpose v1** | Access tiering isn't supported. Doesn't support ZRS | Use if apps need the Azure classic deployment model. |
-| **Blob** | Specialized storage account for storing unstructured objects. Provides block blobs and append blobs only (no file, queue, table or disk storage services). Provides the same durability, availability, scalability and performance as general-purposeeneral purpose v2. | You can't store page blobs in these accounts, and therefore can't store VHD files. You can set an access tier to hot or cool. |
+| **General-purpose v2 standard** | Supports blobs (block, page, append), files, disks, queues, and tables. <br><br> Supports hot, cool, and archive access tiers. ZRS is supported. | Use for most scenarios and most types of data. Standard storage accounts can be HDD or SSD-based. |
+| **General-purpose v2 premium** | Supports Blob storage data (page blobs). Supports hot, cool, and archive access tiers. ZRS is supported. <br><br> Stored on SSD. | Microsoft recommends using for all VMs. |
+| **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS | Use if apps need the Azure classic deployment model. |
+| **Blob** | Specialized storage account for storing unstructured objects. Provides block blobs and append blobs only (no file, queue, table or disk storage services). Provides the same durability, availability, scalability and performance as general-purpose v2. | You can't store page blobs in these accounts, and therefore can't store VHD files. You can set an access tier to hot or cool. |
 
 <!--markdownlint-enable MD033 -->
 
@@ -178,13 +178,13 @@ Using Azure Reserved VM Instances, you prepay for a one-year or three-year term 
 - Reservations provide a billing discount, and don't affect the runtime state of your resources.
 - You can cancel reserved instances.
 
-![Reserved instances](./media/migrate-best-practices-costs/reserve.png)
-_Azure reserved vms_
+![Azure virtual machine Reserved instances](./media/migrate-best-practices-costs/reserve.png)
+_Azure Reserved VM Instances._
 
 **Learn more:**
 
 - Learn about [Azure Reservations](https://docs.microsoft.com/azure/cost-management-billing/reservations/save-compute-costs-reservations).
-- Read the [reserved instances FAQ](https://azure.microsoft.com/pricing/reserved-vm-instances/#faq).
+- Read the [Azure Reserved VM Instances FAQ](https://azure.microsoft.com/pricing/reserved-vm-instances/#faq).
 - Review [pricing guidance for for SQL Server Azure VMs](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-pricing-guidance).
 
 ## Best practice: Aggregate cloud spend across subscriptions

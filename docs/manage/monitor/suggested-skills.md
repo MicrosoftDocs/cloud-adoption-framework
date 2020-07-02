@@ -30,7 +30,7 @@ Developing the necessary skills can be accelerated with the following learning p
 
 - Learn how to secure resources using policy, role-based access control, and other Azure services by viewing [Implement resource management security in Azure](https://docs.microsoft.com/learn/paths/implement-resource-mgmt-security).
 
-- Introduction to [Monitoring Microsoft Azure Resources and Workloads](https://app.pluralsight.com/library/courses/microsoft-azure-resources-workloads-monitoring-update/table-of-contents) helps you learn how to use Microsoft Azure monitoring tools to monitor Azure network resources as well as resources on-premises.
+- [Monitoring Microsoft Azure Resources and Workloads](https://app.pluralsight.com/library/courses/microsoft-azure-resources-workloads-monitoring-update/table-of-contents) helps you learn how to use Azure monitoring tools to monitor Azure network resources as well as resources located on-premises.
 
 ## Infrastructure monitoring
 
@@ -76,7 +76,7 @@ Microsoft and partners offer a variety of options for all audiences to develop t
 
 - [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): Serves as a free online resource to help map your cloud career path. Learn what industry experts suggest for your cloud role and the skills to get you there. Follow a learning curriculum at your own pace to build the skills you need most to stay relevant.
 
-Turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams]( https://www.microsoft.com/learning/certification-overview.aspx).
+Turn your knowledge of Azure into official recognition with [Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
 
 ## Azure DevOps and Project Management
 

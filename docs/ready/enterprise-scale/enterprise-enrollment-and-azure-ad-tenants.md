@@ -1,5 +1,5 @@
 ---
-title: Enterprise enrollment and Azure Active Directory tenants
+title: Enterprise Agreement enrollment and Azure Active Directory tenants
 description: Enterprise enrollment and Azure Active Directory tenants.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,14 +9,12 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Enterprise enrollment and Azure Active Directory tenants
+# Enterprise Agreement enrollment and Azure Active Directory tenants
 
-## Planning for enterprise enrollment
-
-An enterprise enrollment, often referred to as an Enterprise Agreement, represents the commercial relationship between Microsoft and how the customer uses Azure. It provides the basis for billing across all customer subscriptions and impacts administration of the customer estate. Enterprise enrollment, also known as EA, is managed via an Azure enterprise portal. Azure enterprise enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost-enrollment groups within an organization.
+An Enterprise Agreement (EA) enrollment represents the commercial relationship between Microsoft and how the customer uses Azure. It provides the basis for billing across all customer subscriptions and impacts administration of the customer estate. Your EA enrollment is managed via an Azure enterprise portal. An enrollment often represents an organization's hierarchy, including departments, accounts, and subscriptions. This hierarchy represents cost-enrollment groups within an organization.
 
 ![Azure EA hierarchies](./media/ea.png)
-_Figure 1: An Azure enterprise enrollment hierarchy._
+_Figure 1: An Azure EA enrollment hierarchy._
 
 - Departments help to segment costs into logical groupings and to set a budget or quota at the department level (note: the quota isn't enforced firmly and is used for reporting purposes).
 
@@ -24,7 +22,7 @@ _Figure 1: An Azure enterprise enrollment hierarchy._
 
 - Subscriptions are the smallest unit in the Azure enterprise portal. They're containers for Azure services managed by the service administrator. They're where an organization deploys Azure services.
 
-- Enterprise enrollment roles link users with their functional role. These roles are:
+- EA enrollment roles link users with their functional role. These roles are:
   - Enterprise administrator
   - Department administrator
   - Account owner
@@ -55,7 +53,7 @@ _Figure 1: An Azure enterprise enrollment hierarchy._
 
 - Assign a budget for each account and establish an alert associated with the budget.
 
-- An organization can have a variety of structures such as functional, divisional, geographic, matrix, or team structure. Use organizational structure to map organization structure to enterprise enrollment.
+- An organization can have a variety of structures such as functional, divisional, geographic, matrix, or team structure. Use organizational structure to map your organization structure to your enrollment hierarchy.
 
 - Create a new department for IT if business domains have independent IT capabilities.
 
@@ -79,7 +77,7 @@ It's important to ask basic security questions during the Azure AD design phase,
 
 **Design considerations:**
 
-- Multiple Azure AD tenants can function in the same enterprise enrollment.
+- Multiple Azure AD tenants can function in the same enrollment.
 
 **Design recommendations:**
 

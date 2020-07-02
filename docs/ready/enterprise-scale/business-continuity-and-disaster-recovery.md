@@ -37,7 +37,7 @@ This section will help readers capture customer disaster recovery (DR) requireme
 
 - Consistent backups for applications and data.
 
-  - VM snapshots and using Microsoft Azure Backup and Recovery Services vaults.
+  - VM snapshots and using Azure Backup and Recovery Services vaults.
 
   - Subscription limits restricting the number of Recovery Services vaults and the size of each vault.
 

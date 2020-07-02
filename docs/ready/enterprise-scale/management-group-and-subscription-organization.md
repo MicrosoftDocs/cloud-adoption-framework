@@ -60,7 +60,7 @@ Subscriptions are a unit of management, billing, and scale within Azure, and the
 
 - Subscriptions provide a management boundary for governance and isolation, creating a clear separation of concerns.
 
-- There is a manual process (planned future automation) which can be conducted to limit an Azure AD tenant to only use enterprise enrollment subscriptions. This prevents creation of MSDN subscriptions at the root management group scope.
+- There is a manual process (planned future automation) which can be conducted to limit an Azure AD tenant to use only enterprise agreement (EA) enrollment subscriptions. This prevents creation of MSDN subscriptions at the root management group scope.
 
 **Design recommendations:**
 

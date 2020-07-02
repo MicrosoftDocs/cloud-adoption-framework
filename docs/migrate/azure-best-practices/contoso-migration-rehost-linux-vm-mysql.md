@@ -77,7 +77,7 @@ To migrate the database:
 | Service | Description | Cost |
 | --- | --- | --- |
 | [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Contoso uses the Azure Migrate service to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | [Azure Migrate](https://azure.microsoft.com/pricing/details/azure-migrate) is available at no additional charge, however, you may incur charges depending on the tools (first-party or ISV) you decide to use for assessment and migration. |
-| [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | The Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
+| [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
 | [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL server engine. It provides a fully managed enterprise-ready community MySQL database for app development and deployment. | Learn more about Azure Database for MySQL [pricing](https://azure.microsoft.com/pricing/details/mysql) and scalability options. |
 
 ## Prerequisites
@@ -278,9 +278,9 @@ There are several ways to move the MySQL database. Each require you to create an
 - 6A: Azure Database Migration Service
 - 6b: MySQL Workbench backup and restore
 
-### Step 6a: Migrate the database (Azure Database Migration Service)
+### Step 6a: Migrate the database via Azure Database Migration Service
 
-Contoso admins migrate the database using Azure database migration services using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform both online, offline and hybrid (preview) migrations using MySQL 5.6 or 5.7.
+Contoso admins migrate the database via Azure Database Migration Service by following the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online). They can perform both online, offline and hybrid (preview) migrations using MySQL 5.6 or 5.7.
 
 > [!NOTE]
 > MySQL 8.0 is supported in Azure Database for MySQL, but the Database Migration Service tool does not yet support that version.
@@ -296,11 +296,11 @@ As a summary, you must perform the following:
 
 - Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
 
-- Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet.
+- Create an Azure Database Migration Service instance using a `Premium` SKU that is connected to the VNet.
 
-- Ensure that the Azure Database Migration Service can access the MySQL database via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
+- Ensure that the instance can access the MySQL database via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.
 
-- Run the Azure Database Migration Service tool:
+- Run the Database Migration Service tool:
 
   - Create a migration project.
 

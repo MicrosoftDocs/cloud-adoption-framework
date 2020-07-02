@@ -1,6 +1,6 @@
 ---
-title: Rehost an on-premises dev/test environment on Microsoft Azure Virtual Machines via Azure Migrate
-description: Learn how Contoso rehosts an on-premises DevTest by migrating on-premises machines to Azure with a lift-and-shift approach and the Azure Migrate service.
+title: Rehost an on-premises dev/test environment on Azure Virtual Machines via Azure Migrate
+description: Learn how Contoso rehosts an on-premises dev/test environment by migrating on-premises machines to Azure via a lift-and-shift approach and the Azure Migrate service.
 author: deltadan
 ms.author: abuck
 ms.date: 07/1/2020
@@ -13,9 +13,9 @@ services: azure-migrate
 <!-- docsTest:ignore SmartHotel360 -->
 <!-- cSpell:ignore vcenter contosohost contosodc NSGs agentless osTicket WEBVMDEV SQLVMDEV OSTICKETWEBDEV OSTICKETMYSQLDEV -->
 
-# Rehost an on-premises development/testing environment on Microsoft Azure Virtual Machines
+# Rehost an on-premises dev/test environment on Azure Virtual Machines
 
-This article demonstrates how the fictional company Contoso rehosts their development/testing (dev/test) environment for two applications (apps) running on VMware VMs by migrating to Microsoft Azure VMs.
+This article demonstrates how the fictional company Contoso rehosts their dev/test environment for two applications running on VMware VMs by migrating to Azure Virtual Machines (VMs).
 
 The [SmartHotel360](https://github.com/Microsoft/SmartHotel360) and [osTicket](https://github.com/osTicket/osTicket) apps used in this example are open source. You can download them for your own testing purposes.
 
@@ -33,10 +33,10 @@ Contoso has several options available when moving dev/test environments to Azure
 
 ## Business drivers
 
-The development leadership team has outlined what they want to achieve with this migration.  They aim to quickly move dev/test capabilities out of their on-premises datacenter, and no longer purchase hardware to develop software. They also seek to empower developers to create and run their environments without involvement from IT.
+The development leadership team has outlined what they want to achieve with this migration. They aim to quickly move dev/test capabilities out of their on-premises datacenter, and no longer purchase hardware to develop software. They also seek to empower developers to create and run their environments without involvement from IT.
 
 > [!NOTE]
-> Contoso will use the [Pay-as-you-go Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p) for their environments. Each active Visual Studio subscriber on their team can use the Microsoft software included with their subscription on Azure Virtual Machines for dev/test at no extra charge. Contoso will just pay the Linux rate for VMs they run, even VMs with SQL Server, SharePoint Server, or other software that is normally billed at a higher rate.
+> Contoso will use the [Pay-As-You-Go Dev/Test subscription offer](https://azure.microsoft.com/offers/ms-azr-0023p) for their environments. Each active Visual Studio subscriber on their team can use the Microsoft software included with their subscription on Azure Virtual Machines for dev/test at no extra charge. Contoso will just pay the Linux rate for VMs they run, even VMs with SQL Server, SharePoint Server, or other software that is normally billed at a higher rate.
 
 ## Migration goals
 
@@ -65,15 +65,15 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 - The database VM will reside in the database subnet (`DEV-DB-EUS2`) in the development network.
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
 
-![Scenario architecture](./media/contoso-migration-dt-to-iaas/architecture.png)
-_Figure 1: Proposed architecture._
+  ![Scenario architecture](./media/contoso-migration-dt-to-iaas/architecture.png)
+  _Figure 1: Proposed architecture._
 
 ### Database considerations
 
 To support ongoing development Contoso has decided to continue use of the existing VMs, migrated to Azure. In the future, Contoso will pursue the use of PaaS services such as [Azure SQL Database](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) and [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview).
 
 - Database VMs will be migrated as is without changes.
-- With the use of the Azure Dev.Test subscription offer, the Windows and SQL servers will not incur licensing fees which will keep the compute costs to a minimum.
+- With the use of the Azure Dev/Test subscription offer, the Windows and SQL servers will not incur licensing fees which will keep the compute costs to a minimum.
 - In the future, Contoso will look to integrate their development with PaaS services.
 
 ### Solution review
@@ -98,13 +98,14 @@ Contoso will migrate their development front-end and database to Azure VMs using
 - After replication is enabled and working, Contoso will migrate the VMs by testing the migration and if successful, failing it over to Azure.
 - Once the development VMs are up and running in Azure, they will reconfigure their development workstations to point at the VMs now running in Azure.
 
-![Migration process](./media/contoso-migration-dt-to-iaas/migration-process-az-migrate.png)
-_Figure 2: An overview of the migration process._
+  ![Migration process](./media/contoso-migration-dt-to-iaas/migration-process-az-migrate.png)
+  _Figure 2: An overview of the migration process._
 
 ### Azure services
 
 | Service | Description | Cost |
-| --- | --- | --- | [Azure Migrate: Server Migration](https://docs.microsoft.com/azure/migrate) | The service orchestrates and manages migration of your on-premises apps and workloads, and AWS or gcp VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing. |
+| --- | --- | --- |
+| [Azure Migrate: Server Migration](https://docs.microsoft.com/azure/migrate) | The service orchestrates and manages migration of your on-premises apps and workloads, and AWS or GCP VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing. |
 
 ## Prerequisites
 
@@ -144,25 +145,25 @@ They set these up as follows:
 
     - From Azure Migrate, download the .OVA image and import it into VMware.
 
-        ![Download the .OVA file](./media/contoso-migration-dt-to-iaas/migration-download-ova.png)
-        _Figure 3: Download the .OVA file._
+      ![Download the .OVA file](./media/contoso-migration-dt-to-iaas/migration-download-ova.png)
+      _Figure 3: Download the .OVA file._
 
     - Start the imported image and configure the tool, including the following steps:
 
       - Set up the prerequisites.
 
         ![Configure the tool](./media/contoso-migration-dt-to-iaas/migration-setup-prerequisites.png)
-         _Figure 4: Setting up the prerequisites._
+        _Figure 4: Setting up the prerequisites._
 
       - Point the tool to the Azure subscription.
 
         ![Configure the tool](./media/contoso-migration-dt-to-iaas/migration-register-azure.png)
-         _Figure 5: The Azure subscription._
+        _Figure 5: The Azure subscription._
 
       - Set the VMware vCenter credentials.
 
         ![Configure the tool](./media/contoso-migration-dt-to-iaas/migration-vcenter-server.png)
-         _Figure 6:Setting the VMWare vCenter credentials._
+        _Figure 6: Setting the VMware vCenter credentials._
 
       - Add any Windows-based credentials for discovery.
 
@@ -223,8 +224,8 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
     - If you didn't run an assessment, or you don't want to use the assessment settings, select the **No** options.
     - If you selected to use the assessment, select the VM group, and assessment name.
 
-    ![Select assessment](./media/contoso-migration-dt-to-iaas/select-assessment.png)
-     _Figure 10: How to set up the prerequisites._
+      ![Select assessment](./media/contoso-migration-dt-to-iaas/select-assessment.png)
+      _Figure 10: How to set up the prerequisites._
 
 5. In **Virtual machines**, search for VMs as needed, and check each VM you want to migrate. Then select **Next: Target settings**.
 
@@ -235,8 +236,8 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
     - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
     - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and you want to apply the benefit to the machines you're migrating. Then select **Next**.
 
-    > [!NOTE]
-    > In the case of Contoso, they will select **No** to Azure Hybrid Benefit, since this is an Azure Dev/Test subscription. This means they will pay for the compute only. [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit) should only be used for production systems that have software assurance benefits.
+      > [!NOTE]
+      > In the case of Contoso, they will select **No** to Azure Hybrid Benefit, since this is an Azure Dev/Test subscription. This means they will pay for the compute only. [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit) should only be used for production systems that have Software Assurance benefits.
 
 8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
@@ -259,8 +260,8 @@ Contoso admins run a quick test migration and then a full migration to migrate t
 
 1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, select **Test migrated servers**.
 
-     ![Test migrated servers](./media/contoso-migration-dt-to-iaas/test-migrated-servers.png)
-     _Figure 11: Testing migrated servers._
+    ![Test migrated servers](./media/contoso-migration-dt-to-iaas/test-migrated-servers.png)
+    _Figure 11: Testing migrated servers._
 
 2. Select and hold (or right-click) the VM to test, then select **Test migrate**.
 
@@ -323,7 +324,7 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ### Licensing and cost optimization
 
-Contoso will ensure that all development Azure resources are created using this dev/test subscription to save 80 percent. They will enable [Azure cost management and billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
+Contoso will ensure that all development Azure resources are created using this dev/test subscription to save 80 percent. They will enable [Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
 
 ## Conclusion
 

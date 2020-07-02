@@ -104,7 +104,7 @@ For more information, see:
 
 ## Azure Database Migration Service
 
-The Azure Database Migration Service is a fully managed service that enables seamless migrations from multiple database sources to Azure data platforms, with minimal downtime (online migrations). The Azure Database Migration Service performs all of the required steps. You can initiate your migration projects assured that the process takes advantage of best practices recommended by Microsoft.
+Azure Database Migration Service is a fully managed service that enables seamless migrations from multiple database sources to Azure data platforms, with minimal downtime (online migrations). Database Migration Service performs all of the required steps. You can initiate your migration projects assured that the process takes advantage of best practices recommended by Microsoft.
 
 ### Create an Azure Database Migration Service instance
 
@@ -138,7 +138,7 @@ The service is now ready to migrate the supported source databases (for example,
 For more information, see:
 
 - [Azure Database Migration Service overview](https://docs.microsoft.com/azure/dms/dms-overview)
-- [Create an instance of the Azure Database Migration Service](https://docs.microsoft.com/azure/dms/quickstart-create-data-migration-service-portal)
+- [Create an instance of Azure Database Migration Service](https://docs.microsoft.com/azure/dms/quickstart-create-data-migration-service-portal)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade)
 - [Azure portal: Create a migration project](https://portal.azure.com/#create/Microsoft.AzureMigrate)
 
@@ -146,21 +146,21 @@ For more information, see:
 
 ## Data Migration Assistant
 
-The Data Migration Assistant (DMA) helps you upgrade to a modern data platform by detecting compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
+Data Migration Assistant helps you upgrade to a modern data platform by detecting compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
 
 > [!NOTE]
-> For large migrations (in terms of number and size of databases), we recommend that you use the Azure Database Migration Service, which can migrate databases at scale.
+> For large migrations (in terms of number and size of databases), we recommend that you use Azure Database Migration Service, which can migrate databases at scale.
 >
 
-Start using the Data Migration Assistant with these steps:
+Start using Data Migration Assistant with these steps:
 
-1. Download and install the Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
+1. Download and install Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
 1. Create an assessment by selecting the **New (+)** icon, then select the **Assessment** project type.
 1. Set the source and target server type, then select **Create**.
 1. Configure the assessment options as required (recommend all defaults).
 1. Add the databases to assess.
 1. Select **Next** to start the assessment.
-1. View results within the Data Migration Assistant tool set.
+1. View results in Data Migration Assistant.
 
 For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](https://docs.microsoft.com/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports and then use provided Power BI reports to analyze the results.
 

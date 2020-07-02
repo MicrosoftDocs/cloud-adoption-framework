@@ -197,9 +197,9 @@ _Site-to-site vpn_
 
 When you create a VPN gateway in Azure, you must use a special subnet named `GatewaySubnet`. When creating this subnet note these best practices:
 
-- The prefix length of the gateway subnet can have a maximum prefix length of 29 (for example, `10.119.255.248/29`). The current recommendation is that you use a prefix length of 27 (for example, `10.119.255.224/27`).
+- `GatewaySubnet` can have a maximum prefix length of 29 (for example, `10.119.255.248/29`). The current recommendation is that you use a prefix length of 27 (for example, `10.119.255.224/27`).
 - When you define the address space of the gateway subnet, use the very last part of the VNet address space.
-- When using the Azure gatewaysubnet, never deploy any VMs or other devices such as Application Gateway to the gateway subnet.
+- When using the Azure gateway subnet, never deploy any VMs or other devices such as Application Gateway to the gateway subnet.
 - Don't assign a network security group (NSG) to this subnet. It will cause the gateway to stop functioning.
 
 **Learn more:**
@@ -390,7 +390,7 @@ _Application security group example_
 
 VNet service endpoints extend your VNet private address space and identity to Azure services over a direct connection.
 
-- Endpoints allow you to secure critical Azure service resources to your VNets only. Traffic from your VNet to the Azure service always remains on the Microsoft Azure backbone network.
+- Endpoints allow you to secure critical Azure service resources to your VNets only. Traffic from your VNet to the Azure service always remains on the Azure backbone network.
 - VNet private address space can be overlapping and thus cannot be used to uniquely identify traffic originating from a VNet.
 - After service endpoints are enabled in your VNet, you can secure Azure service resources by adding a VNet rule to the service resources. This provides improved security by fully removing public internet access to resources, and allowing traffic only from your VNet.
 

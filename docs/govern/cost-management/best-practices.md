@@ -73,7 +73,7 @@ To forecast your monthly bill for Azure resources, there are several tools you c
   - Azure Migrate discovers and assesses your on-premises environment to provide an inventory.
   - Azure Migrate can map and show you dependencies between VMs so that you have a complete picture.
   - An Azure Migrate assessment contains estimated cost.
-    - **Compute costs:** Using the Azure VM size recommended when you create an assessment, Azure Migrate uses the Azure Billing APIs to calculate estimated monthly VM costs. The estimation considers the operating system, Software Assurance, reserved instances, VM uptime, location, and currency settings. It aggregates the cost across all VMs in the assessment, and calculates a total monthly compute cost.
+    - **Compute costs:** Using the Azure VM size recommended when you create an assessment, Azure Migrate uses the Azure Billing APIs to calculate estimated monthly VM costs. The estimate considers the operating system, Software Assurance, Azure Reserved VM Instances, VM uptime, location, and currency settings. It aggregates the cost across all VMs in the assessment, and calculates a total monthly compute cost.
     - **Storage cost:** Azure Migrate calculates total monthly storage costs by aggregating the storage costs of all VMs in an assessment. You can calculate the monthly storage cost for a specific machine by aggregating the monthly cost of all disks attached to it.
 
     ![Azure Migrate](../../migrate/azure-best-practices/media/migrate-best-practices-costs/assess.png)
@@ -192,7 +192,7 @@ Once resources are in production, data can be aggregated and trends analyzed at 
 - Analyze data to generate a budget baseline for Azure resource groups and resources.
 - Identify patterns of use that would allow you to reduce size and stop or pause resources to further reduce your costs.
 
-Best practices in this section include using Azure Hybrid Benefit and reserved VMs, reduce cloud spending across subscriptions, using Azure Cost Management for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
+Best practices in this section include using Azure Hybrid Benefit and Azure Reserved Virtual Machine Instances, reduce cloud spending across subscriptions, using Azure Cost Management for cost budgeting and analysis, monitoring resources and implementing resource group budgets, and optimizing monitoring, storage, and VMs.
 
 ## Best practice: Take advantage of Azure Hybrid Benefit
 
@@ -206,18 +206,18 @@ An integrated Microsoft on-premises/Azure product portfolio generates competitiv
 - Learn more about [Azure Hybrid Benefit for Windows Server](https://azure.microsoft.com/pricing/hybrid-benefit).
 - Review [pricing guidance for SQL Server Azure VMs](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-pricing-guidance).
 
-## Best practice: Use reserved VM instances
+## Best practice: Use Azure VM Reserved instances
 
 Most cloud platforms are set up as pay-as-you-go. This model presents disadvantages, since you don't necessarily know how dynamic workloads will be. When you specify clear intentions for a workload, you contribute to infrastructure planning.
 
-Using Azure Reserved VM Instances, you prepay for either a one-year or three-year term for VM instances.
+Using Azure Reserved VM Instances, you prepay for either a one-year or three-year term for reserved instances.
 
 - Prepayment provides a discount on the resources you use.
-- You can significantly reduce VM, SQL Database compute, Azure Cosmos DB, or other resource costs by up to 72% on pay-as-you-go prices.
-- Reservations provide a billing discount, and don't affect the runtime state of your resources.
+- You can significantly reduce costs for VM compute, SQL Database compute, Azure Cosmos DB, or other resources by up to 72% on pay-as-you-go prices.
+- Reserved instances provide a billing discount, and don't affect the runtime state of your resources.
 - You can cancel reserved instances.
 
-![Reserved instances](../../migrate/azure-best-practices/media/migrate-best-practices-costs/reserve.png)
+![Azure Reserved Virtual Machine Instances](../../migrate/azure-best-practices/media/migrate-best-practices-costs/reserve.png)
 _Figure 1: Azure reserved VMs._
 
 **Learn more:**

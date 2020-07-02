@@ -63,7 +63,7 @@ Resizing production virtual machines can cause service disruptions. Try to apply
 
 Partners can use the Partner Center to review the usage.
 
-- [Microsoft Azure VM sizing for maximum reservation usage](https://docs.microsoft.com/partner-center/azure-usage)
+- [Azure VM sizing for maximum reservation usage](https://docs.microsoft.com/partner-center/azure-usage)
 
 ::: zone-end
 

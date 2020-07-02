@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: site-recovery
 ---
 
-<!-- cSpell:ignore contosodev contosodevmigration contosomigration onmicrosoft visualstudio sourceconnectionstring smarthotelcontainer identitymaplog CONTOSOTFS DACPAC SQLDB SQLSERVERNAME INSTANCENAME sqlpackage SSDT azuredevopsmigration validateonly -->
+<!-- cSpell:ignore contosodev contosodevmigration contosomigration onmicrosoft visualstudio sourceconnectionstring smarthotelcontainer identitymaplog CONTOSOTFS DACPAC SQLDB SQLSERVERNAME INSTANCENAME sqlpackage SSDT azuredevopsmigration validateonly ImportType -->
 
 # Refactor a team foundation server deployment to Azure DevOps Services
 
@@ -321,7 +321,7 @@ They open the `import.json` file, and fill out the following fields:
 
 - **Location:** Location of the SAS key that was generated above.
 - **Dacpac:** Set the name to the DACPAC file you uploaded to the storage account. Include the `.dacpac` extension.
-- **Importtype:** Set to `DryRun` for now.
+- **ImportType:** Set to `DryRun` for now.
 
 ![Import settings](./media/contoso-migration-tfs-vsts/import1.png)
 
@@ -430,7 +430,7 @@ With the dry run complete, Contoso admins move on to the production migration. T
 
 With migration complete, Contoso wants to move from TFVC to Git for source code management. They need to import the source code currently in their Azure DevOps Services organization as Git repos in the same organization.
 
-1. In the Azure DevOps Services portal, they open one of the TFVC repos (**$/policyconnect**) and review it.
+1. In the Azure DevOps Services portal, they open one of the TFVC repos (`$/PolicyConnect`) and review it.
 
     ![Git](./media/contoso-migration-tfs-vsts/git1.png)
 

@@ -169,7 +169,7 @@ Contoso will use Azure Migrate as follows:
 
 In addition to Azure Migrate, Contoso will focus on using tools specifically for database assessment. Tools such as the [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) will help assess SQL Server databases for migration.
 
-The Data Migration Assistant (DMA) can help Contoso to figure out whether on-premises databases are compatible with a range of Azure database solutions, such as Azure SQL Database, SQL Server running on an Azure IaaS VM, and Azure SQL Managed Instance.
+Data Migration Assistant (DMA) can help Contoso to figure out whether on-premises databases are compatible with a range of Azure database solutions, such as Azure SQL Database, SQL Server running on an Azure IaaS VM, and Azure SQL Managed Instance.
 
 In addition to Database Migration Service, Contoso has some other scripts that they use to discover and documenting the SQL Server databases. These are located in the GitHub repo.
 
@@ -269,9 +269,9 @@ Contoso needs to figure out how to deploy these components, based on capacity co
 
 #### Azure Database Migration Service
 
-The Azure Database Migration Service is a fully managed service that enables seamless migrations from multiple database sources to Azure data platforms with minimal downtime.
+Azure Database Migration Service is a fully managed service that enables seamless migrations from multiple database sources to Azure data platforms with minimal downtime.
 
-- Database Migration Service integrates functionality of existing tools and services. It uses the Data Migration Assistant (DMA), to generate assessment reports that pinpoint recommendations about database compatibility and any required modifications.
+- Database Migration Service integrates functionality of existing tools and services. It uses Data Migration Assistant (DMA), to generate assessment reports that pinpoint recommendations about database compatibility and any required modifications.
 - Database Migration Service uses a simple, self-guided migration process, with intelligent assessment that helps address potential issues before the migration.
 - Database Migration Service can migrate at scale from multiple sources to the target Azure database.
 - Database Migration Service provides support from SQL Server 2005 to SQL Server 2017.
@@ -284,7 +284,7 @@ Contoso will use Database Migration Service when migrating from SQL Server.
 
 - When provisioning Database Migration Service, Contoso needs to size it correctly and set it to optimize performance for data migrations. Contoso will select the "business-critical tier with 4 vCores" option, thus allowing the service to take advantage of multiple vCPUs for parallelization and faster data transfer.
 
-    ![DMS scaling](./media/contoso-migration-scale/dms.png)
+    ![Database Migration Service scaling](./media/contoso-migration-scale/dms.png)
 
 - Another scaling tactic for Contoso is to temporarily scale up the Azure SQL or MySQL database target instance to the Premium tier SKU during the data migration. This minimizes database throttling that could affect data transfer activities when using lower-level SKUs.
 

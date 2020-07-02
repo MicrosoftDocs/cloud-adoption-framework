@@ -100,7 +100,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | The Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
+| [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
 | [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-overview) | Contoso uses the Azure Migrate service to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | As of may 2018, Azure Migrate is a free service. |
 
 ## Migration process
@@ -111,7 +111,7 @@ Contoso admins will migrate the app VMs to Azure.
   - As a first step, they'll prepare and set up Azure components, and prepare the on-premises VMware infrastructure.
   - With everything prepared, they can start replicating the VM.
   - After replication is enabled and working, they migrate the VM using Azure Migrate.
-- Once they have verified the database, they will migrate the database to a SQL Server cluster in Azure, using the data migration service (Database Migration Service).
+- Once they have verified the database, they will migrate the database to a SQL Server cluster in Azure, using Azure Database Migration Service.
   - As a first step they'll need to provision SQL Server VMs in Azure, set up the cluster and an internal load balancer, and configure Always On availability groups.
   - With this in place, they can migrate the database.
 - After the migration, they'll enable Always On availability groups for the database.
@@ -145,9 +145,9 @@ Here's how Contoso will run the migration:
 > - **Step 4: Prepare Azure for Azure Migrate.** Create an Azure Storage account to hold replicated data.
 > - **Step 5: Prepare on-premises VMware for Azure Migrate.** Prepare accounts for VM discovery and agent installation. Prepare on-premises VMs so that users can connect to Azure VMs after migration.
 > - **Step 6: Replicate VMs.** Enable VM replication to Azure.
-> - **Step 7: Migrate the database with data migration service (Database Migration Service).** Migrate the database to Azure using the data migration service.
+> - **Step 7: Migrate the database via Azure Database Migration Service.** Migrate the database to Azure using the data migration service.
 > - **Step 8: Protect the database.** Create an Always On availability group for the cluster.
-> - **Step 9: Migrate the VMs with Azure Migrate** run a test migration to make sure everything's working as expected. Then run a migration Azure.
+> - **Step 9: Migrate the VMs via Azure Migrate** run a test migration to make sure everything's working as expected. Then run a migration Azure.
 
 ## Step 1: Prepare a SQL Server Always On availability group cluster
 
@@ -427,15 +427,15 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 > [!NOTE]
 > You can update replication settings any time before replication starts, in **Manage** > **Replicating machines**. Settings can't be changed after replication starts.
 
-## Step 7: Migrate the database with Azure Database Migration Service
+## Step 7: Migrate the database via Azure Database Migration Service
 
-Contoso admins migrate it using Azure database migration services (Database Migration Service) using the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
+Contoso admins migrate it via Azure Database Migration Service by following the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
 
 As a summary, you must perform the following:
 
-- Create an Azure Database Migration Service with a `Premium` SKU that is connected to the VNet.
-- Ensure that the Azure Database Migration Service can access the remote SQL Server via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the virtual network level, the network VPN, and the machine that hosts SQL Server.
-- Configure the Azure Database Migration Service:
+- Create an Azure Database Migration Service instance using a `Premium` SKU that is connected to the VNet.
+- Ensure that the instance can access the remote SQL Server via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the virtual network level, the network VPN, and the machine that hosts SQL Server.
+- Configure the instance:
   - Create a migration project.
   - Add a source (on-premises database).
   - Select a target.

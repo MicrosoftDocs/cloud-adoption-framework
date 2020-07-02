@@ -1,5 +1,5 @@
 ---
-title: Migrating MariaDB to Microsoft Azure scenario 
+title: Migrate MariaDB databases to Microsoft Azure 
 description: Learn how Contoso migrated their on-premises MariaDB Databases to Azure.
 author: deltadan
 ms.author: abuck
@@ -10,11 +10,11 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- docsTest:ignore ColumnStore HR -->
+<!-- cSpell:ignore ColumnStore mysqldump Navicat phpadmin -->
 
-# Migrating MariaDB to Microsoft Azure scenario
+# Migrating MariaDB databases to Azure
 
-This article demonstrates how a fictional company Contoso planned and migrated their on-premises MariaDB open source database platform to Azure.  
+This article demonstrates how the fictional company Contoso planned and migrated their on-premises MariaDB open source database platform to Azure.  
 
 Contoso is using MariaDB over MySQL due to its myriad of storage engines, cache and index performance, open source support with features and extensions, and its analytics ColumnStore support. Their goal in migrating is to continue to use MariaDB, but not worry about managing the environment needed to support it.
 
@@ -22,7 +22,7 @@ Contoso is using MariaDB over MySQL due to its myriad of storage engines, cache 
 
 The IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
 
-- **Increase availability.** Contoso has had availability issues with their MariaDB on-premises environment, the business requires the applications (apps) that use this data store to be more reliable.
+- **Increase availability.** Contoso has had availability issues with their MariaDB on-premises environment, the business requires the applications that use this data store to be more reliable.
 
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
 
@@ -54,7 +54,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 ### Current app
 
-- The MariaDB hosts employee data that is used for all aspects of the companies human resources (hr) department. A LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl/Python) app is used as the front end to handle employee hr requests.
+- The MariaDB hosts employee data that is used for all aspects of the companies human resources (HR) department. A LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl/Python) app is used as the front end to handle employee HR requests.
 - Contoso has 100,000 employees located all over the world, so uptime is very important for their databases.
 
 ### Proposed solution
@@ -72,7 +72,7 @@ As part of the solution design process Contoso reviewed the features in Azure fo
 - Azure Database for MariaDB has the required compliance and privacy certifications that Contoso must meet for their auditors.
 - Report and app processing performance will be enhanced by using read replicas.
 - Ability to expose the service to internal network traffic only (no-public access) using [Private Link](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-private-link).
-- They chose not to move to Azure Database for MySQL as they're looking at potentially using the maridb columnstore and graphdbms database model in the future.
+- They chose not to move to Azure Database for MySQL as they're looking at potentially using the MariaDB ColumnStore and graphdbms database model in the future.
 - The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the app to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or site-to-site VPN).
 
 ### Solution review
@@ -109,10 +109,10 @@ Supported versions:
 
 The network:
 
-Contoso will need to set up a virtual network gateway connection from their on-premises environment to the virtual network where their MariaDB database is located. This will allow the on-premises app to access the database over the gateway when the connection strings are updated.
+- Contoso will need to set up a virtual network gateway connection from their on-premises environment to the virtual network where their MariaDB database is located. This will allow the on-premises app to access the database over the gateway when the connection strings are updated.
 
-![Migration process](./media/contoso-migration-mariadb-to-azure/migration-process.png)
-_Figure 2: The migration process._
+  ![Migration process](./media/contoso-migration-mariadb-to-azure/migration-process.png)
+  _Figure 2: The migration process._
 
 #### Migration
 
@@ -138,20 +138,22 @@ Contoso used the following steps to migrate their databases.
     ![Migration process](./media/contoso-migration-mariadb-to-azure/azure-mariadb-create.png)
     _Figure 4: A new MariaDB instance in Azure._
 
-  - Select **Create**
-  - Select your subscription and resource group
-  - Select a server name and location
-  - Select your target version (10.2 or 10.3)
-  - Select your compute and storage
-  - Enter an administrator (admin) username and password
-  - Select **Review + create** ![migration process](./media/contoso-migration-mariadb-to-azure/azure_mariadb_create.png)
+  - Select **Create**.
+  - Select your subscription and resource group.
+  - Select a server name and location.
+  - Select your target version (10.2 or 10.3).
+  - Select your compute and storage.
+  - Enter an administrator username and password.
+  - Select **Review + create**.
+  
+    ![Migration process](./media/contoso-migration-mariadb-to-azure/azure_mariadb_create.png)
     _Figure 5: Review and create._
   
-  - Select **Create**
-  - Record the server hostname, username and password
-  - Select **Connection Security**
-  - Select **Add Client IP** (the IP from which you will be restoring the database from)
-  - Select **Save**
+  - Select **Create**.
+  - Record the server hostname, username, and password.
+  - Select **Connection Security**.
+  - Select **Add Client IP** (the IP from which you will be restoring the database from).
+  - Select **Save**.
 
 - Run the following commands to export the database called `Employees`. Repeat for each database:
 
@@ -167,7 +169,8 @@ Contoso used the following steps to migrate their databases.
   use database employees;
   source employees.sql;
   ```
-- Using phpadmin or a similar tool (MySQL workbench, toad, navicat), verify the restore by checking record counts in each table.
+
+- Using phpadmin or a similar tool (MySQL Workbench, toad, navicat), verify the restore by checking record counts in each table.
   
 - Update all app connection strings to point to the migrated database.
 

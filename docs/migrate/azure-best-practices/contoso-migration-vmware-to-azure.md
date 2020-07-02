@@ -48,7 +48,7 @@ These goals support the decision to use AVS and validate it as the best migratio
 
 ## Benefits of running VMware workloads in Azure
 
-Using Azure VMware Solution (AVS), Contoso can now seamlessly run, manage, and secure applications across VMware environments and Microsoft Azure with a common operating framework.
+Using Azure VMware Solution (AVS), Contoso can now seamlessly run, manage, and secure applications across VMware environments and Azure with a common operating framework.
 
 Contoso will capitalize on existing VMware investments, skills, and tools, including VMware vSphere, vSAN, and vCenter, while using the scale, performance, and innovation of Azure. Additional benefits may include:
 
@@ -112,7 +112,7 @@ Contoso needs to plan out their networking including Azure Virtual Network and c
 
 This connectivity is delivered through Azure ExpressRoute and will require some specific network address ranges and firewall ports for enabling the services. This high bandwidth, low latency connection allows Contoso's users to access services running in their Azure subscription from the AVS private cloud environment.
 
-Contoso will need to plan a IP addresses scheme which includes non-overlapping address space for their [virtual networks](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm). They will need to include a gatewaysubnet for the [ExpressRoute gateway](https://docs.microsoft.com/azure/expressroute/expressroute-about-virtual-network-gateways).
+Contoso will need to plan a IP addresses scheme which includes non-overlapping address space for their [virtual networks](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm). They will need to include a gateway subnet for the [ExpressRoute gateway](https://docs.microsoft.com/azure/expressroute/expressroute-about-virtual-network-gateways).
 
 The AVS private cloud is connected to Contoso's Azure Virtual Network using another Azure ExpressRoute connection. ExpressRoute Global Reach will be enabled to allow [direct connection](https://docs.microsoft.com/azure/azure-vmware/concepts-networking#on-premises-interconnectivity) from on-premises to VMs running on the AVS private cloud. The ExpressRoute Premium SKU is required to enable global reach.
 
@@ -161,7 +161,7 @@ An Azure VMware Solution (AVS) private cloud requires a virtual network. Because
 >[!NOTE]
 > Learn about configuring networking for AVS using a [tutorial](https://docs.microsoft.com/azure/azure-vmware/tutorial-configure-networking).
 
-- Contoso first creates a virtual network with an gatewaysubnet.
+- Contoso first creates a virtual network with an gateway subnet.
 
 > [!IMPORTANT]
 > Contoso must use an address space that **does not** overlap with the address space used when they created the private cloud.

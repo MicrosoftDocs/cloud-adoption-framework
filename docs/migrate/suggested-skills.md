@@ -34,7 +34,7 @@ The following tools can aid the team in execution of assess activities:
 During Assess processes, architects will design solutions for each workload. The following skilling resources help prepare architects for these tasks:
 
 - [Foundations for Cloud Architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
-- [Microsoft Azure Architecture - Getting Started](https://www.pluralsight.com/courses/azure-architecture-getting-started): A Pluralsight course to give architects a foundational knowledge in Azure architecture.
+- [Microsoft Azure Architecture: Getting Started](https://www.pluralsight.com/courses/azure-architecture-getting-started): A Pluralsight course to give architects a foundational knowledge in Azure architecture.
 - [Designing Migrations for Microsoft Azure](https://www.pluralsight.com/courses/microsoft-azure-migrations-designing): A Pluralsight course to help architects design a migration solution.
 
 ## Migrate skilling resources
