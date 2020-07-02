@@ -1,9 +1,9 @@
 ---
-title: "Migrating MySQL server databases to Azure (scenario) "
-description: Learn how Contoso migrates their on-premises MySQL Databases to Azure
+title: Migrating MySQL server databases to Microsoft Azure scenario
+description: Learn how Contoso migrated their on-premises MySQL Databases to Azure.
 author: deltadan
 ms.author: abuck
-ms.date: 05/11/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,7 +12,7 @@ services: azure-migrate
 
 <!-- cSpell:ignore HR mysqldump InnoDB binlog Navicat -->
 
-# Migrating MySQL to Azure (scenario)
+# Migrating MySQL server databases to Microsoft Azure scenario
 
 This article demonstrates how a fictional company Contoso planned and migrated their on-premises MySQL open source database platform to Azure.
 
@@ -20,9 +20,9 @@ This article demonstrates how a fictional company Contoso planned and migrated t
 
 The IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
 
-- **Increase availability.** Contoso has had availability issues with their MySQL on-premises environment, the business requires the applications that use this data store to be more reliable.
+- **Increase availability.** Contoso has had availability issues with their MySQL on-premises environment. The business requires the applications that use this data store to be more reliable.
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-- **Increase agility.**  Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable the success in a global economy. It mustn't get in the way, or become a business blocker.
+- **Increase agility.**  Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace to enable the success in a global economy. It mustn't become a business blocker.
 - **Scale.** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
 
 ## Migration goals
@@ -89,6 +89,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 ## Proposed architecture
 
 ![Scenario architecture](./media/contoso-migration-mysql-to-azure/architecture.png)
+_Figure 1: Scenario architecture._
 
 ### Migration process
 
@@ -109,6 +110,7 @@ Azure automatically manages upgrades for patch updates. For example, 10.2.21 to 
 Contoso will need to set up a virtual network gateway connection from their on-premises environment to the virtual network where their MySQL database is located. This will allow the on-premises application to be able to access the database over the gateway when the connection strings are updated.
 
 ![Migration process](./media/contoso-migration-mysql-to-azure/migration-process.png)
+_Figure 2: The migration process._
 
 #### Migration
 
@@ -135,6 +137,7 @@ As a summary, they must perform the following:
 - Create a new Azure Database Migration Service project
 
 ![Azure Database Migration Project](./media/contoso-migration-mysql-to-azure/migration-dms-new-project.png)
+_Figure 3: An Azure Database Migration Project._
 
 #### Migration using native tools
 

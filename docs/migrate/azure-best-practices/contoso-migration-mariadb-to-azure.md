@@ -1,9 +1,9 @@
 ---
-title: "Migrating MariaDB to Azure (scenario) "
-description: Learn how Contoso migrates their on-premises MariaDB Databases to Azure
+title: Migrating MariaDB to Microsoft Azure scenario 
+description: Learn how Contoso migrated their on-premises MariaDB Databases to Azure.
 author: deltadan
 ms.author: abuck
-ms.date: 05/11/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,7 +12,7 @@ services: azure-migrate
 
 <!-- docsTest:ignore ColumnStore HR -->
 
-# Migrating MariaDB to Azure (scenario)
+# Migrating MariaDB to Microsoft Azure scenario
 
 This article demonstrates how a fictional company Contoso planned and migrated their on-premises MariaDB open source database platform to Azure.  
 
@@ -22,7 +22,7 @@ Contoso is using MariaDB over MySQL due to its myriad of storage engines, cache 
 
 The IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
 
-- **Increase availability.** Contoso has had availability issues with their MariaDB on-premises environment, the business requires the applications that use this data store to be more reliable.
+- **Increase availability.** Contoso has had availability issues with their MariaDB on-premises environment, the business requires the applications (apps) that use this data store to be more reliable.
 
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
 
@@ -40,10 +40,10 @@ The Contoso cloud team has pinned down goals for this migration and will use the
 | --- | --- |
 | **Availability** | Currently internal staff are having a hard time with the hosting environment for the MariaDB instance. Contoso would like to have as close to 99.99 percent availability for the database layer. |
 | **Scalability** | The on-premises database host is quickly running out of capacity, Contoso needs a way to scale their instances past their current limitations or scale it down if the business environment changes to save on costs. |
-| **Performance** | The Contoso human resources ) HR) department have several reports they run on a daily, weekly and monthly basis. When they run these reports, they notice considerable performance issues with the LAMP app. They need to be able to run the reports without affecting the employee facing application. |
-| **Security** | Contoso needs to know that the database will only be accessible to their internal applications and not visible or accessible via the internet. |
+| **Performance** | The Contoso human resources ) HR) department have several reports they run on a daily, weekly and monthly basis. When they run these reports, they notice considerable performance issues with the LAMP app. They need to be able to run the reports without affecting the employee-facing app. |
+| **Security** | Contoso needs to know that the database will only be accessible to their internal apps and not visible or accessible via the internet. |
 | **Monitoring** | Contoso currently uses tools to monitor the metrics of the MariaDB and provide notifications when CPU, memory, or storage are having issues. They would like to have this same capability in Azure. |
-| **Business continuity** | The HR application data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like as minimum of downtime as possible. |
+| **Business continuity** | The HR app data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like as minimum of downtime as possible. |
 | **Azure** | Contoso wants to move the app to Azure, but doesn't want to run it on VMs. Contoso requirements state to use Azure PaaS services for the data tier. |
 
 <!-- markdownlint-enable MD033 -->
@@ -54,14 +54,14 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 ### Current app
 
-- The MariaDB hosts employee data that is used for all aspects of the companies human resources (hr) department. A LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl/Python) application is used as the front end to handle employee hr requests.
-- Contoso has 100k employees located all over the world, so uptime is very important for their databases.
+- The MariaDB hosts employee data that is used for all aspects of the companies human resources (hr) department. A LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl/Python) app is used as the front end to handle employee hr requests.
+- Contoso has 100,000 employees located all over the world, so uptime is very important for their databases.
 
 ### Proposed solution
 
 - Evaluate the environments for migration compatibility.
 - Use common open source tools to migrate databases to the Azure Database for MariaDB instance.
-- Modify all applications and processes to use the new Azure Database for MariaDB instance.
+- Modify all apps and processes to use the new Azure Database for MariaDB instance.
 
 ### Database considerations
 
@@ -70,10 +70,10 @@ As part of the solution design process Contoso reviewed the features in Azure fo
 - Similar to Azure SQL, Azure Database for MariaDB allows for [firewall rules](https://docs.microsoft.com/azure/mariadb/concepts-firewall-rules).
 - Azure Database for MariaDB can be used with [virtual networks](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible
 - Azure Database for MariaDB has the required compliance and privacy certifications that Contoso must meet for their auditors.
-- Report and application processing performance will be enhanced by using read replicas.
+- Report and app processing performance will be enhanced by using read replicas.
 - Ability to expose the service to internal network traffic only (no-public access) using [Private Link](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-private-link).
 - They chose not to move to Azure Database for MySQL as they're looking at potentially using the maridb columnstore and graphdbms database model in the future.
-- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or site-to-site VPN).
+- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the app to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or site-to-site VPN).
 
 ### Solution review
 
@@ -91,6 +91,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 ## Proposed architecture
 
 ![Scenario architecture](./media/contoso-migration-mariadb-to-azure/architecture.png)
+_Figure 1: Scenario architecture._
 
 ### Migration process
 
@@ -98,19 +99,20 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 
 Before you can migrate your MariaDB databases, you will need to ensure that those instances meet all the Azure prerequisites for a successful migration.
 
-- Supported versions
+Supported versions:
 
-  - MariaDB uses the x.y.z naming scheme. X is the major version, y is the minor version, and z is the patch version.
+- MariaDB uses the x.y.z naming scheme. X is the major version, y is the minor version, and z is the patch version.
 
-  - Azure currently supports 10.2.25 and 10.3.16.
+- Azure currently supports 10.2.25 and 10.3.16.
 
-  - Azure automatically manages upgrades for patch updates. For example, 10.2.21 to 10.2.23. Minor and major version upgrades aren't supported. For example, upgrading from MariaDB 10.2 to MariaDB 10.3 isn't supported. If you'd like to upgrade from 10.2 to 10.3, take a database dump and restore it to a server created with the target engine version.
+- Azure automatically manages upgrades for patch updates. For example, 10.2.21 to 10.2.23. Minor and major version upgrades aren't supported. For example, upgrading from MariaDB 10.2 to MariaDB 10.3 isn't supported. If you'd like to upgrade from 10.2 to 10.3, take a database dump and restore it to a server created with the target engine version.
 
-- Network
+The network:
 
-  - Contoso will need to set up a virtual network gateway connection from their on-premises environment to the virtual network where their MariaDB database is located. This will allow the on-premises application to be able to access the database over the gateway when the connection strings are updated.
+Contoso will need to set up a virtual network gateway connection from their on-premises environment to the virtual network where their MariaDB database is located. This will allow the on-premises app to access the database over the gateway when the connection strings are updated.
 
-  ![Migration process](./media/contoso-migration-mariadb-to-azure/migration-process.png)
+![Migration process](./media/contoso-migration-mariadb-to-azure/migration-process.png)
+_Figure 2: The migration process._
 
 #### Migration
 
@@ -118,13 +120,14 @@ Since MariaDB is very similar to MySQL, they can use the same common utilities a
 
 Contoso used the following steps to migrate their databases.
 
-- Determined the on-premises MariaDB version by running the following commands and observing the output. In most cases, your version should not matter much in terms of the schema and data dump. But if you're using features at the application level, you should ensure those applications are compatible with the target version in Azure.
+- Determine the on-premises MariaDB version by running the following commands and observing the output. In most cases, your version should not matter much in terms of the schema and data dump. If you're using features at the app level, you should ensure those apps are compatible with the target version in Azure.
 
   ```cmd
     mysql -h localhost -u root -P
   ```
 
   ![Migration process](./media/contoso-migration-mariadb-to-azure/mariadb_version.png)
+  _Figure 4: Determining the on-premises MariaDB version._
 
 - Create a new MariaDB instance in Azure
 
@@ -133,14 +136,16 @@ Contoso used the following steps to migrate their databases.
   - Search for `MariaDB`
 
     ![Migration process](./media/contoso-migration-mariadb-to-azure/azure-mariadb-create.png)
+    _Figure 4: A new MariaDB instance in Azure._
 
   - Select **Create**
   - Select your subscription and resource group
   - Select a server name and location
   - Select your target version (10.2 or 10.3)
   - Select your compute and storage
-  - Enter an admin username and password
+  - Enter an administrator (admin) username and password
   - Select **Review + create** ![migration process](./media/contoso-migration-mariadb-to-azure/azure_mariadb_create.png)
+    _Figure 5: Review and create._
   
   - Select **Create**
   - Record the server hostname, username and password
@@ -162,12 +167,11 @@ Contoso used the following steps to migrate their databases.
   use database employees;
   source employees.sql;
   ```
+- Using phpadmin or a similar tool (MySQL workbench, toad, navicat), verify the restore by checking record counts in each table.
+  
+- Update all app connection strings to point to the migrated database.
 
-- Using phpadmin or a similar tool (such as MySQL Workbench, Toad, and Navicat), verify the restore by checking record counts in each table
-
-- Update all application connection strings to point to the migrated database
-
-- Test all applications for proper operation
+- Test all apps for proper operation
 
 ## Clean up after migration
 
@@ -183,9 +187,9 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 ### Security
 
 - Contoso needs to ensure that their new Azure Database for MariaDB instance and databases are secure. [Learn more](https://docs.microsoft.com/azure/mariadb/concepts-security).
-- In particular, Contoso should review the [firewall](https://docs.microsoft.com/azure/mariadb/concepts-firewall-rules) and virtual network configurations you limit connections to only the applications that require it.
+- In particular, Contoso should review the [firewall](https://docs.microsoft.com/azure/mariadb/concepts-firewall-rules) and virtual network configurations you limit connections to only the apps that require it.
 - Configure any outbound IP requirements to allow connections to the MariaDB [gateway IP addresses](https://docs.microsoft.com/azure/mariadb/concepts-connectivity-architecture).
-- Update all applications to [require SSL](https://docs.microsoft.com/azure/mariadb/concepts-ssl-connection-security) connections to the databases.
+- Update all apps to [require SSL](https://docs.microsoft.com/azure/mariadb/concepts-ssl-connection-security) connections to the databases.
 - Set up [Private Link](https://docs.microsoft.com/azure/mariadb/concepts-data-access-security-private-link) so that all database traffic is kept inside Azure and the on-premises network.
 - Enable [Azure Advanced Threat Protection (ATP)](https://docs.microsoft.com/azure/mariadb/concepts-data-access-and-security-threat-protection).
 - Configure Log Analytics to monitor and alert on security and logs entries of interest.

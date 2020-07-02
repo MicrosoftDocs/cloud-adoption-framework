@@ -1,16 +1,16 @@
 ---
-title: "Migrating open source databases to Azure (scenario) "
-description: Learn how Contoso migrates their on-premises Open Source Databases to Azure
+title: Migrating open source databases to Microsoft Azure scenario
+description: Learn how Contoso migrated their on-premises open source databases to Azure
 author: deltadan
 ms.author: abuck
-ms.date: 05/11/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 services: azure-migrate
 ---
 
-# Migrating open source databases to Azure (scenario)
+# Migrating open source databases to Microsoft Azure scenario 
 
 This article demonstrates how a fictional company Contoso assessed, planned and migrated their various on-premises open source databases to Azure.
 
@@ -57,6 +57,7 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 Contoso has already performed a [migration assessment](https://docs.microsoft.com/azure/cloud-adoption-framework/plan/contoso-migration-assessment) of their digital estate using [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) with the [Service Map](https://docs.microsoft.com/azure/azure-monitor/insights/service-map) feature.
 
 ![Migration process](./media/contoso-migration-oss-db-to-azure/migration-process.png)
+_Figure 1: The migration process._
 
 ### Solution review
 

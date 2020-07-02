@@ -1,16 +1,16 @@
 ---
-title: "Migrate PostgreSQL to Azure (scenario) "
-description: Learn how Contoso migrates their on-premises PostgreSQL Databases to Azure
+title: Migrating PostgreSQL to Microsoft Azure 
+description: Learn how Contoso migrated their on-premises PostgreSQL databases to Azure.
 author: deltadan
 ms.author: abuck
-ms.date: 05/11/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 services: azure-migrate
 ---
 
-# Migrate PostgreSQL to Azure (scenario)
+# Migrating PostgreSQL to Microsoft Azure scenario
 
 This article demonstrates how a fictional company Contoso planned and migrated their on-premises PostgreSQL open source database platform to Azure.
 
@@ -84,6 +84,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 ## Proposed architecture
 
 ![Scenario architecture](./media/contoso-migration-postgresql-to-azure/architecture.png)
+_Figure 1: Scenario architecture._
 
 ### Migration process
 
@@ -116,6 +117,7 @@ Contoso will need to assess the current database for replication issues. These i
 - Migration of multiple tables with same name but different case may cause unpredictable behavior
 
   ![Migration process](./media/contoso-migration-postgresql-to-azure/migration-process.png)
+  _Figure 2: The migration process._
 
 #### Migration
 
@@ -131,9 +133,7 @@ Contoso has selected the Azure Database Migration Service to allow them to reuse
 
 - Preparation:
   
-  - Setup a virtual network (VNet) to access the database:
-
-    - You can create a VNet connection using [VPN gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
+  - Set up a virtual network (VNet) to access the database. You can create a VNet connection using [VPN gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
 
   - Create a Database Migration Service resource:
     - In the [Azure portal](https://portal.azure.com), select **Add a resource**.
@@ -147,6 +147,7 @@ Contoso has selected the Azure Database Migration Service to allow them to reuse
     - Select **Review + create**.
 
       ![Migration process](./media/contoso-migration-postgresql-to-azure/azure_migration_service_create.png)
+      _Figure 3: Review and create._
 
     - Select **Create**.
 
@@ -196,50 +197,60 @@ Contoso has selected the Azure Database Migration Service to allow them to reuse
   - Select **New Migration Project**.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project.png)
+    _Figure 4: Starting a new migration._
 
   - Select **New Activity** > **Online data migration**.
   - Type a name.
   - Select **PostgreSQL** as the source.
   - For the target, select **Azure Database for PostgreSQL**. ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project02.png)
+    _Figure 5: A new migration project is highlighted._
 
   - Select **Save**.
   - Enter the source information.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_source.png)
+    _Figure 6: Entering source information._
 
   - Select **Save**.
   - Enter the target information.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_target.png)
+    _Figure 7: Selecting target information._
 
   - Select **Save**.
   - Select the databases you would like to migrate. The schema for each database should have been migrated previously.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_db.png)
+    _Figure 8: Selecting databases._
 
   - Select **Save**.
   - Configure the advanced settings.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_advanced.png)
+    _Figure 9: Configuring advanced settings._
 
   - Select **Save**.
-  - Give the activity a name, then select **Run**.
+  - Give the activity a name and select **Run**.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_summary.png)
+    _Figure 10: Naming and running the activity._
 
   - Monitor the migration. You may need to retry it if anything fails (for example, if foreign key references were missing).
   - Once the `Full load completed` matches your table count, select **Start Cutover**.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_complete.png)
+    _Figure 11: Monitoring the migration to start the cutover._
 
   - Stop all transactions from the source server.
   - Select the **Confirm** checkbox, then select **Apply**.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_cutover.png)
+    _Figure 12: Running the cutover._
 
   - Wait for the cutover to complete.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_finished.png)
+    _Figure 13: Completing the cutover._
 
   > [!NOTE]
   > The above Database Migration Service steps can also be performed via the [Azure CLI](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online).

@@ -1,9 +1,9 @@
 ---
-title: "Moving on-premises Remote Desktop Services to Azure Windows Virtual Desktop (scenario) "
-description: Learn how Contoso migrates their on-premises RDS to Azure using Windows Virtual Desktop
+title: Moving on-premises remote desktop services to Microsoft Azure Windows Virtual Desktop scenario
+description: Learn how Contoso migrated their on-premises RDS to Azure using Windows Virtual Desktop
 author: benstegink
 ms.author: abuck
-ms.date: 06/01/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,18 +12,18 @@ services: azure-migrate
 
 <!-- cSpell:ignore benstegink Logix -->
 
-# Moving on-premises Remote Desktop Services to Azure Windows Virtual Desktop (scenario)
+# Moving on-premises remote desktop services to Microsoft Azure Windows Virtual Desktop scenario
 
 <!-- markdownlint-disable MD033 -->
 
 | Migration options | Outcome |
 |--- | --- |
-| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Assess and migrate on-premises RDS environment. <br><br> Run workloads using Azure WVD. <br><br> Manage WVD with [WVD management ux](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
+| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Assess and migrate on-premises remote desktop services (rds) environments. <br><br> Run workloads using Azure WVD. <br><br> Manage WVD with [WVD management ux](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux). |
 
-Windows Virtual Desktop (WVD), is a comprehensive desktop and app virtualization service running in the cloud. It's the only virtual desktop infrastructure (VDI) that delivers simplified management, multi-session Windows 10, optimizations for Microsoft 365 Apps for enterprise, and support for Remote Desktop Services (RDS) environments. Deploy and scale Windows desktops and apps on Azure in minutes, and get built-in security and compliance features.
+Windows Virtual Desktop (WVD), is a comprehensive desktop and app virtualization service running in the cloud. It's the only virtual desktop infrastructure (VDI) that delivers simplified management, multi-session Windows 10, optimizations for Microsoft 365 apps for enterprise, and support for rds environments. Deploy and scale Windows desktops and apps on Azure in minutes, and get built-in security and compliance features.
 
 > [!NOTE]
-> This article focuses on using Azure Windows Virtual Desktop (WVD) service, to move an on-premises RDS environment to Azure.
+> This article focuses on using Azure Windows Virtual Desktop (WVD) service to move an on-premises rds environment to Azure.
 
 ## Business drivers
 
@@ -60,12 +60,11 @@ Additional benefits may include:
 
 ## Solutions design
 
-After pinning down goals and requirements, Contoso designs and reviews a deployment solution, and identifies the migration process.
+After pinning down goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process.
 
 ### Current architecture
 
-- Remote desktop service (RDS) is deployed to an on-premises datacenter
-- Microsoft 365 is licensed and in use by the organization
+Rds is deployed to an on-premises datacenter and Microsoft 365 is licensed and in use by the organization.
 
 ### Proposed architecture
 
@@ -74,7 +73,8 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 - Migrate on-premises RDS server to Azure
 - Convert user profile disks (UPD) to FSLogix profile containers
 
-![Migration process](./media/contoso-migration-rds-to-wvd/proposed-architecture.png)
+![Proposed architecture](./media/contoso-migration-rds-to-wvd/proposed-architecture.png)
+_Figure 1: Proposed architecture._
 
 ## Solution review
 
@@ -89,7 +89,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 ## Migration process
 
-Contoso will move VMs to WVD in Azure using the lakeside assessment tool and Azure Migrate.
+Contoso will move VMs to WVD in Azure using the Lakeside assessment tool and Azure Migrate.
 
 - As a first step, Contoso runs the assessment tool against their on-premises RDS infrastructure to establish the scale of the WVD deploy in Azure.
 - Migrate to WVD: Windows 10 multi-session or persistent virtual machines.
@@ -97,6 +97,7 @@ Contoso will move VMs to WVD in Azure using the lakeside assessment tool and Azu
 - Virtualize applications and assign users as needed to continue to secure and manage the WVD environment.
 
     ![Migration process](./media/contoso-migration-rds-to-wvd/migration-process-01.png)
+    _Figure 2: The migration process._
 
 ## Scenarios steps
 
@@ -122,37 +123,44 @@ Contoso will provision the WVD service in the `East US 2` Azure region. The WVD 
 - Create a new Azure Migrate project
 
 ![New Azure Migrate project](./media/contoso-migration-rds-to-wvd/new-azure-migrate.png)
+_Figure 3: Creating a new Azure Migrate project._
 
 - Choose the option to assess and migrate servers, select VDI, and add a tool.
 
-![Azure Migration goals of VDI](./media/contoso-migration-rds-to-wvd/azure-migrate-goals-vdi.png)
+![Azure Migrate goals of VDI](./media/contoso-migration-rds-to-wvd/azure-migrate-goals-vdi.png)
+_Figure 4: Target Azure Migrate goals._
 
 - Set the subscription, resource group, migrate project name, and geography for the migrate job data.
 
 ![Add a tool to the migrate project](./media/contoso-migration-rds-to-wvd/add-a-tool.png)
+_Figure 5: Adding job data to the migration._
 
 > [!IMPORTANT]
 > This isn't where the new WVD environment will be deployed as only the the data related to the Azure Migrate project will be stored here.
 
-- Choose lakeside: systrack as the assessment tool
+- Choose Lakeside: systrack as the assessment tool
 
-- Select Azure Migrate: Server Migration for the migration tool
+- Select Azure Migrate: Server Migration for the migration tool.
 
-- Add the tools to the migration project
+- Add the tools to the migration project.
 
-![review and add the tools](./media/contoso-migration-rds-to-wvd/add-tools.png)
+![Review and add the tools](./media/contoso-migration-rds-to-wvd/add-tools.png)
+_Figure 6: Adding tools to the migration._
 
-- Start the assessment of the current environment by clicking to register with Azure Migrate in the lakeside tool
+- Start the assessment of the current environment by clicking to register with Azure Migrate in the Lakeside tool.
 
 ![Lakeside register with Azure Migrate](./media/contoso-migration-rds-to-wvd/lakeside-register-with-azure-migrate.png)
+_Figure 7: Assessing the current environment._
 
-- Contoso connects Azure Migrate and lakeside, and accepts any requested permissions.
+- Contoso connects Azure Migrate and Lakeside and accepts any requested permissions.
 
-![login to connect azure and lakeside](./media/contoso-migration-rds-to-wvd/lakeside-login.png)
+![Login to connect Azure and Lakeside](./media/contoso-migration-rds-to-wvd/lakeside-login.png)
+_Figure 8: Connecting Azure to lakeside._
 
-- Contoso continues with the lakeside tool to create a new tenant and start assessing their current on-premises RDS environment. From the dashboard Contoso can access the deployment guide, download the assessment client to deploy to their current environment as well as review the data collected from these agents.
+- Contoso continues with the Lakeside tool to create a new tenant and start assessing their current on-premises rds environment. From the dashboard Contoso can access the deployment guide, download the assessment client to deploy to their current environment as well as review the data collected from these agents.
 
 ![Lakeside dashboard](./media/contoso-migration-rds-to-wvd/lakeside-new-tenant-dashboard.png)
+_Figure 9: The Lakeside dashboard._
 
 - Once Contoso has captured an adequate amount of data, they review the assessment data to determine the best migration path. In this assessment data Contoso has the raw assessment data from the desktops data as well as the data broken into different user personas. The includes information such as:
   - Number of users in each persona
@@ -163,7 +171,10 @@ Contoso will provision the WVD service in the `East US 2` Azure region. The WVD 
   - Concurrent user reports
   - Top software packages in use
 
-![Lakeside dashboard reports](./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png) This data is analyzed by Contoso to determine the most cost effect use of both pooled WVD resources and personal WVD resources.
+![Lakeside dashboard reports](./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png)
+_Figure 10: Lakeside dashboard reports._
+
+This data is analyzed by Contoso to determine the most cost effect use of both pooled WVD resources and personal WVD resources.
 
 > [!NOTE]
 > Contoso will also need to migrate their application servers to Azure in order to get them closer to the WVD environment and reduce network latency for their users.
@@ -172,21 +183,24 @@ Contoso will provision the WVD service in the `East US 2` Azure region. The WVD 
 
 Using the Azure portal, Contoso will create a Windows Virtual Desktop (WVD) environment to user for pooled resources. Later they will go through the migration steps to attach personal desktops to the same environment.
 
-- Contoso selects the correct subscription and creates a new Windows Virtual Desktop host pool
+- Contoso selects the correct subscription and creates a new Windows Virtual Desktop host pool.
 
 ![Provision a windows virtual desktop host pool](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool.png)
+_Figure 11: A new Windows Virtual Desktop host pool._
 
-- They specify the subscription, resource group, and region. Next choose they name for the host pool, desktop type, and default desktop users. Desktop type is set pooled since Contoso is starting with a new shared environment for some of their users. Default desktop users can be left blank. The move on to configuring the virtual machines.
+- They specify the subscription, resource group, and region. Next, the choose the name for the hostpool, desktop type, and default desktop users. Desktop type is set pooled since Contoso is starting with a new shared environment for some of their users. Default desktop users can be left blank. They move on to configure the virtual machines.
 
-![Migration process](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-basics-alt.png)
+![Migration process](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-basics_alt.png)
+_Figure 12: Prerequisites for configuring virtual machines._
 
 - As this point in time, Contoso configures the VM, starting with choosing a custom size by clicking change size, or they choose to take the default.
 - WVD is chosen as the VM name prefix for these pooled desktops.
 - For the virtual machine settings, since Contoso is creating the pooled servers in order to use the new Windows 10 multi-session functionality. They leave image source set to gallery, enabling them to select the Windows 10 Enterprise multi-session image for the VMs.
-- Based on the personas of the users from the lakeside assessment, Contoso sets the total users to 150.
+- Based on the personas of the users from the Lakeside assessment, Contoso sets the total users to 150.
 - Other settings include the disk type, the ad domain join upn, an admin password, an option OU path to add the machines to, the virtual network and subnet to add the servers to.
 
-![Configure virtual machines](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-configurevirtualmachines-alt.png)
+![Configure virtual machines](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-configurevirtualmachines_alt.png)
+_Figure 13: Configuring virtual machines._
 
 > [!NOTE]
 > Contoso can't create a new virtual network at this step. Before reaching this step they should have already created a virtual network that has access to Active Directory.
@@ -196,6 +210,7 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop (WVD) envi
 - Contoso performs one more validation of their WVD settings and creates the new environment of pooled WVD virtual machines.
 
 ![Review and create virtual machines](./media/contoso-migration-rds-to-wvd/wvd-newhostpool-reviewcreate.png)
+_Figure 14: Reviewing and creating virtual machines._
 
 ## Step 3: Convert the UPDs to FSLogix profile containers
 
@@ -231,14 +246,17 @@ The next step in the migration process for Contoso is to migrate their persisten
 - Contoso starts by selecting discover in the Azure Migrate: Server Migration tools
 
 ![Azure Migrate: Server Migration Discover](./media/contoso-migration-rds-to-wvd/wvd-persistent-discover.png)
+_Figure 15: Discovering a server migration._
 
-- Next they convert an appliance in their environment that's going to manage the replication of the machines to WVD. Insuring that the target region is set to East US 2 where their WVD environment as been created.
+- Next they convert an appliance in their environment that's going to manage the replication of the machines to WVD. They ensure that the target region is set to East US 2 where their WVD environment as been created.
 
 ![Create appliance for managing the replication](./media/contoso-migration-rds-to-wvd/wvd-persistent-appliance.png)
+_Figure 16: Converting an appliance._
 
-- The replication provider is downloaded, installed and registered to the Azure Migrate project in order to start the replication to Azure.
+- The replication provider is downloaded, installed, and registered to the Azure Migrate project in order to start the replication to Azure.
 
 ![Download and configure replication](./media/contoso-migration-rds-to-wvd/wvd-persistent-replication.png)
+_Figure 17: Prerequisites for replicating to Azure._
 
 - The replication of the hosts into Azure blog storage is now started and Contoso can continue to let the replication occur until they're ready to test the VMs and then migrate them into production.
 - As machines start running in Azure, Contoso makes sure to install the WVD agent on each machine.
@@ -257,9 +275,10 @@ Export-RDSRegistrationInfo -TenantName "Contoso" -HostPoolName "ContosoWVD" | Se
 > [!NOTE]
 > Contoso can also automate this process by using msiexec commands and passing in the registration token as a variable.
 
-- As the last step before the final migration, Contoso maps the servers to their respective users and groups using the users item in the Azure WVD settings.
+- As the last step before the final migration, Contoso uses the user's item in the Azure WVD settings to map the servers to their respective users and groups.
 
-![assign WVD resources to users and groups](./media/contoso-migration-rds-to-wvd/wvd-persistent-usermapping.png)
+![Assign WVD resources to users and groups](./media/contoso-migration-rds-to-wvd/wvd-persistent-usermapping.png)
+_Figure 18: The last step prior to the final migration._
 
 - One host pools are assigned to users. Contoso finalizes the migration of those machines and continues to gradually migrate the rest of their on-premises VDI hosts to Azure.
 

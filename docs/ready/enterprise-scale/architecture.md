@@ -63,7 +63,7 @@ In addition to the key aspects denoted above, the design, configuration, deploym
 
 ## High-level architecture
 
-![CAF enterprise-scale landing zone architecture](./media/ns-arch.png)
+[![CAF enterprise-scale landing zone architecture](./media/ns-arch.png)](./media/ns-arch.png#lightbox)
 _Figure 2: CAF enterprise-scale landing zone architecture._
 
 _Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/blob/master/ready/enterprise-scale-architecture.vsdx) that contains this architecture diagram._
