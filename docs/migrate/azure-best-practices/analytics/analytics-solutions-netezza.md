@@ -101,15 +101,13 @@ As of May 2019, Microsoft has announced that Azure Synapse will support material
 **Netezza data type mapping**:
 Most Netezza datatypes have a direct equivalent in the Azure Synapse. Below is a table that shows these data types together with the recommended approach for mapping these.
 
-<!-- TODO  insert table graphics or recreate the table -->
-
 There are third-party vendors who offer tools and services to automate migration including the mapping of data types as described above. Also, if a third-party ETL tool such as Informatica or Talend is already in use in the Netezza environment, these can implement any required data transformations.
 
 **SQL DML syntax differences**:
 There are a few differences in SQL Data Manipulation Language (DML) syntax between Netezza SQL and Azure Synapse to be aware of when migrating:
 
 <!-- TODO this should probably be a code snippet that the user can copy and use -->
-![SQL query](../_images/analytics/sql-query-netezza.png)
+![SQL query](../../../_images/analytics/sql-query-netezza.png)
 
 ### Functions, stored procedures and sequences
 
