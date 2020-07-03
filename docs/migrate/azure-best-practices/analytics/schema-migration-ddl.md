@@ -130,9 +130,8 @@ An alphabetic list of supported data types is shown below:
 
 The table below lists some common data types which are not currently supported together with the recommended approach for storing these in Azure Synapse. (For specific environments, e.g. Teradata or Netezza, see the associated documents for more detailed information.)
 
-|                       |                                                                 |
-|-----------------------|-----------------------------------------------------------------|
 | **Unsupported data type** | **Workaround**                                                      |
+|-----------------------|-----------------------------------------------------------------|
 | geometry              | varbinary                                                       |
 | geography             | varbinary                                                       |
 | hierarchyid           | nvarchar(4000)                                                  |

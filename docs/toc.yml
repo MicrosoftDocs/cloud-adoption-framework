@@ -92,8 +92,6 @@ items:
         href: strategy/cloud-migration-business-case.md
       - name: Create a financial model
         href: strategy/financial-models.md
-      - name: Financial model for analytics
-        href: strategy/financial-model-analytics.md
       - name: Understand cloud accounting
         href: strategy/cloud-accounting.md
     - name: Align your partner strategy
@@ -629,7 +627,7 @@ items:
         - name: Scale a migration
           href: migrate/azure-best-practices/contoso-migration-scale.md
         - name: Schema migration Data Definition Languages
-          href: migrate/azure-best-practices/analytics/schema-migration-dds.md
+          href: migrate/azure-best-practices/analytics/schema-migration-ddl.md
         - name: High availability for Azure Synapse
           href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
