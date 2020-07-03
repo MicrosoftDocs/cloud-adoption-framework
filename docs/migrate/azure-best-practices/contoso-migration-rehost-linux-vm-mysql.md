@@ -84,16 +84,12 @@ To migrate the database:
 
 Here's what Contoso needs for this scenario.
 
-<!-- markdownlint-disable MD033 -->
-
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you owner or contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure subscription** | Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
-| **On-premises servers** | The on-premises vCenter server should be running version 5.5, 6.0, 6.5 or 6.7. <br><br> An ESXi host running version 5.5, 6.0, 6.5 or 6.7. <br><br> One or more VMware VMs running on the ESXi host. |
+| **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, 6.5 or 6.7. <br><br> An ESXi host running version 5.5, 6.0, 6.5 or 6.7. <br><br> One or more VMware VMs running on the ESXi host. |
 | **On-premises VMs** | [Review Linux machines](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Scenario steps
 
@@ -273,7 +269,7 @@ Contoso admins provision a MySQL database instance in the primary region (`East 
 
 ## Step 6: Migrate the database
 
-There are several ways to move the MySQL database. Each require you to create an Azure Database for MySQL instance for the target. Once created, you can perform the migration using two paths:
+There are several ways to move the MySQL database. Each option requires you to create an Azure Database for MySQL instance for the target. Once created, you can perform the migration using two paths:
 
 - 6A: Azure Database Migration Service
 - 6b: MySQL Workbench backup and restore
@@ -290,7 +286,7 @@ As a summary, you must perform the following:
 - Ensure all migration prerequisites are met:
 
   - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine, and migration across source and target with same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error: `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error: `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
   - User must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 
@@ -342,7 +338,7 @@ As a summary, you must perform the following:
 
 ### Step 6b: Migrate the database (MySQL Workbench)
 
-Contoso admins migrate the database using backup and restore, with MySQL tools. They install MySQL Workbench, back up the database from `OSTICKETMYSQL`, and then restore it to Azure Database for MySQL server.
+Contoso admins migrate the database using backup and restore, with MySQL tools. They install MySQL Workbench, back up the database from `OSTICKETMYSQL`, and then restore it to Azure Database for MySQL.
 
 ### Install MySQL Workbench
 

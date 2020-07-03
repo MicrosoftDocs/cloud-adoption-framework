@@ -22,23 +22,21 @@ Contoso is having various issues with maintaining all the wide array of versions
 
 The IT leadership team has worked closely with business partners to understand the business and technical requirements:
 
-- **Increase security** Contoso needs to be able to monitor and protect all data resources in a more timely and efficient manner. They would also like to get a more centralized reporting system setup on database access patterns.
+- **Increase security:** Contoso needs to be able to monitor and protect all data resources in a more timely and efficient manner. They would also like to get a more centralized reporting system setup on database access patterns.
 
-- **Optimize compute resources** Contoso has deployed a large on-premises server infrastructure. They have several SQL Server instances that consume but do not really use the underlying CPU, memory and disk allocated in efficient ways.
+- **Optimize compute resources:** Contoso has deployed a large on-premises server infrastructure. They have several SQL Server instances that consume but do not really use the underlying CPU, memory and disk allocated in efficient ways.
 
-- **Increase efficiency** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements. Database administration should be reduced and/or minimized after the migration.
+- **Increase efficiency:** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements. Database administration should be reduced and/or minimized after the migration.
 
-- **Increase agility**  Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable the success in a global economy. It mustn't get in the way, or become a business blocker.
+- **Increase agility:** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable the success in a global economy. It mustn't get in the way, or become a business blocker.
 
-- **Scale** as the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
+- **Scale:** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
 
-- **Costs** business and applications owners want to know they won't be stuck with high cloud costs as compared to running the applications on-premises.
+- **Costs:** Business and applications owners want to know they won't be stuck with high cloud costs as compared to running the applications on-premises.
 
 ## Migration goals
 
 The Contoso cloud team has pinned down goals for the various migrations. These goals were used to determine the best migration methods.
-
-<!-- markdownlint-disable MD033 -->
 
 | Requirements | Details |
 | --- | --- |
@@ -49,8 +47,6 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 | **Costs** | Contoso wants to understand not only its migration options, but also the costs associated with the infrastructure after it moves to the cloud. |
 | **Management** | Resource management groups will need to be created for the various departments along with resource groups to managed all databases that are migrated. All resources will need to be tagged with department information for charge-back requirements. |
 | **Limitations** | Initially, not all branch offices that run applications will have a direct ExpressRoute link to Azure, so these offices will need to connect through virtual network gateways. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Solution design
 
@@ -63,14 +59,10 @@ _Figure 1: The migration process._
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Azure will provide a single pane of glass into the database workloads <br><br> Costs will be monitored via cost management <br><br> Business charge-back billing will be easy to perform with the Azure Billing APIs <br><br> Server and software maintenance will be reduced to only the IaaS-based environments. |
+| **Pros** | Azure will provide a single pane of glass into the database workloads <br><br> Costs will be monitored via Azure Cost Management and Billing <br><br> Business charge-back billing will be easy to perform with the Azure Billing APIs <br><br> Server and software maintenance will be reduced to only the IaaS-based environments. |
 | **Cons** | Due to the requirement of IaaS-based virtual machines, there will still need to be management of the software on those machines. |
-
-<!-- markdownlint-enable MD033 -->
 
 ### Budget and management
 
@@ -85,18 +77,18 @@ For the billing requirements, each of the Azure resources are then [tagged](http
 Data migrations follow a standard repeatable pattern. This involves the following steps based on [Microsoft best practices](https://datamigration.microsoft.com/):
 
 - Pre-migration:
-  - Discovery - inventory database assets and application stack
-  - Assess - assess workloads and fix recommendations
-  - Convert - convert source schema to work in the target
+  - **Discovery:** Inventory database assets and application stack
+  - **Assess:** Assess workloads and fix recommendations
+  - **Convert:** Convert source schema to work in the target
 - Migration
-  - Migrate - migrate the source schema, source data and objects to target
-  - Sync data - sync data (for minimal downtime)
-  - Cutover - cut over the source to target
+  - **Migrate:** Migrate the source schema, source data and objects to target
+  - **Sync data:** Sync data (for minimal downtime)
+  - **Cutover:** Cut over the source to target
 - Post-migration
-  - Remediate applications - iteratively make and necessary changes to your applications
-  - Perform tests - iteratively run functional and performance tests
-  - Optimize - based on tests, address performance issues and then retest to confirm performance improvements
-  - Retire assets - old VMs and hosting environments are backed up and retired
+  - **Remediate applications:** Iteratively make and necessary changes to your applications
+  - **Perform tests:** Iteratively run functional and performance tests
+  - **Optimize:** Based on tests, address performance issues and then retest to confirm performance improvements
+  - **Retire assets:** Old VMs and hosting environments are backed up and retired
 
 #### Step 1: Discovery
 
@@ -121,8 +113,6 @@ As the databases were inventoried each type of database was reviewed to determin
 | **MySQL** | All supported versions, upgrade to a supported version before migration | Azure Database for MySQL (PaaS) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online)
 | **PostgreSQL** | All supported versions, upgrade to a supported version before migration | Azure Database for PostgreSQL (PaaS) | [Guide](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online) |
 | **MariaDB** | All supported versions, upgrade to a supported version before migration | Azure Database for MySQL (PaaS) | [Guide](https://datamigration.microsoft.com/scenario/mariadb-to-azuremariadb?step=1) |
-
-<!-- markdownlint-enable MD033 -->
 
 #### Step 4: Migration planning
 

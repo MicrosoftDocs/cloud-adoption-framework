@@ -46,7 +46,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 - The app is tiered across two VMs (`WEBVM` and `SQLVM`).
 - The VMs are located on VMware ESXi host `contosohost1.contoso.com` (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), running on a VM.
-- Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (`contosodc1`).
+- Contoso has an on-premises datacenter (`contoso-datacenter`), with an on-premises domain controller (`contosodc1`).
 
 ### Proposed architecture
 
@@ -69,14 +69,10 @@ As part of the solution design process, Contoso did a feature comparison between
 
 Contoso evaluates the proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 | Consideration  | Details |
 | --- | --- |
 | **Pros** | Both the app VMs will be moved to Azure without changes, making the migration simple. <br><br> Since Contoso is using a lift and shift approach for both app VMs, no special configuration or migration tools are needed for the app database. <br><br> Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the app VMs in Azure. |
 | **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles. [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the app will remain a single point of failure. <br><br> SQLVM is running on SQL Server 2008 R2, which is no longer in mainstream support. But it is supported for Azure VMs. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the app on Azure VMs, rather than moving to a managed service such as Azure App Service and Azure SQL Database. |
-
-<!-- markdownlint-enable MD033 -->
 
 ### Migration process
 
@@ -99,15 +95,11 @@ Contoso will migrate the app front-end and database VMs to Azure VMs using the A
 
 Here's what Contoso needs to run this scenario.
 
-<!-- markdownlint-disable MD033 -->
-
 | Requirements  | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you owner or contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure. <br><br> Learn more about specific [prerequisites](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prerequisites) requirements for Azure Migrate: Server Migration. |
 | **On-premises servers** | On-premises vCenter servers should be running version 5.5, 6.0, 6.5 or 6.7. <br><br> ESXi hosts should run version 5.5, 6.0, 6.5 or 6.7. <br><br> One or more VMware VMs should be running on the ESXi host. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Scenario steps
 
@@ -176,7 +168,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
     - Ensure that TCP and UDP rules are added for the **Public** profile.
     - Check that RDP or SSH is allowed in the operating system firewall.
 
-2. For access over site-to-site VPN, they:
+2. For access over Site-to-Site VPN, they:
 
     - Enable RDP or SSH on the on-premises VM before migration.
     - Check that RDP or SSH is allowed in the operating system firewall.

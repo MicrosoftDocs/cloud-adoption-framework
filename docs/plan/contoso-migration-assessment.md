@@ -24,14 +24,10 @@ As Contoso considers migrating to Azure, the company needs a technical and finan
 
 To get started and to better understand the technologies involved, Contoso assesses two of its on-premises apps, summarized in the following table. The company assesses for migration scenarios that rehost and refactor apps for migration. Learn more about rehosting and refactoring in the [migration examples overview](../migrate/azure-best-practices/contoso-migration-overview.md).
 
-<!-- markdownlint-disable MD033 -->
-
 | App name | Platform | App tiers | Details |
 | --- | --- | --- | --- |
 | SmartHotel360 <br><br> (manages Contoso travel requirements) | Runs on Windows with a SQL Server database | Two-tiered app. The front-end ASP.NET website runs on one VM (`WEBVM`) and the SQL Server runs on another VM (`SQLVM`). | VMs run on a VMware ESXi host managed by vCenter Server. <br><br> You can download the sample app from [GitHub](https://github.com/Microsoft/SmartHotel360). |
 | osTicket <br><br> (Contoso service desk app) | Runs on Linux/Apache with MySQL PHP (LAMP) | Two-tiered app. A front-end PHP website runs on one VM (`OSTICKETWEB`) and the MySQL database runs on another VM (`OSTICKETMYSQL`). | The app is used by customer service apps to track issues for internal employees and external customers. <br><br> You can download the sample from [GitHub](https://github.com/osTicket/osTicket). |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Current architecture
 
@@ -150,7 +146,7 @@ Now, Contoso can run an assessment to analyze its on-premises SQL Server databas
     ![Data Migration Assistant - Select source](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-1.png)
 
     > [!NOTE]
-    > Currently, Data Migration Assistant doesn't support assessment for migrating to an Azure SQL Database Managed Instance. As a workaround, Contoso uses SQL Server on an Azure VM as the supposed target for the assessment.
+    > Currently, Data Migration Assistant doesn't support assessment for migrating to Azure SQL Database Managed Instance. As a workaround, Contoso uses SQL Server on an Azure VM as the supposed target for the assessment.
 
 3. In **Select Target Version**, Contoso selects SQL Server 2017 as the target version. Contoso needs to select this version because it's the version that's used by the SQL Database Managed Instance.
 
@@ -501,16 +497,12 @@ The assessment report shows the information that's summarized in the table. To s
 - Read/write IOPS and throughput for each disk attached to the VM.
 - Network in/out information for each network adapter attached to the VM.
 
-<!-- markdownlint-disable MD033 -->
-
 | Setting | Indication | Details |
 | --- | --- | --- |
 | **Azure VM readiness** | Indicates whether the VM is ready for migration. | Possible states: <li> Ready for Azure <li> Ready with conditions <li> Not ready for Azure <li> Readiness unknown <br><br> If a VM isn't ready, Azure Migrate shows some remediation steps. |
 | **Azure VM size** | For ready VMs, Azure Migrate provides an Azure VM size recommendation. | Sizing recommendation depends on assessment properties: <li> If you used performance-based sizing, then sizing considers the performance history of the VMs. <li> If you used _as on-premises_ sizing, then sizing is based on the on-premises VM size and utilization. <li> Data isn't used. |
 | **Suggested tool** | Because Azure machines are running the agents, Azure Migrate looks at the processes that are running inside the machine. It identifies whether the machine is a database machine. | |
 | **VM information** | The report shows settings for the on-premises VM, including operating system, boot type, and disk and storage information. | |
-
-<!-- markdownlint-enable MD033 -->
 
 #### Review monthly cost estimates
 

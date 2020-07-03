@@ -30,17 +30,13 @@ The IT leadership team has worked closely with business partners to understand w
 
 The Contoso cloud team has pinned down goals for this migration and will use them to determine the best migration method.
 
-<!-- markdownlint-disable MD033 -->
-
 | Requirements | Details |
 | --- | --- |
 | **Upgrades** | Contoso would like to ensure that they have the latest patches installed when available but do not want to manage these updates. |
 | **Integrations** | Contoso would like to integrate the data in the database with data and AI pipelines for Machine Learning. |
 | **Backup and restore** | Contoso is looking for the ability to do point in time restores when and if data updates fail or are corrupted for any reason. |
-| **Azure** | They would like to be able to monitor the system and fire alerts based on performance and security |
+| **Azure** | They would like to be able to monitor the system and fire alerts based on performance and security. |
 | **Performance** | In some cases they will have parallel data processing pipelines in different geographic regions and will need to be able to read data from those regions. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Solution design
 
@@ -49,7 +45,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 ### Current environment
 
 - PostgreSQL 9.6.7 running on a physical Linux machine (`sql-pg-01.contoso.com`) in the Contoso datacenter.
-- Contoso already has an Azure subscription with a site-to-site virtual network gateway to on-premises datacenter network.
+- Contoso already has an Azure subscription with a Site-to-Site virtual network gateway to on-premises datacenter network.
 
 ### Proposed solution
 
@@ -68,20 +64,16 @@ As part of the solution design process, Contoso reviewed the features in Azure f
 - Processing performance can be enhanced by using read replicas.
 - Support for bring your own key (BYOK) for data encryption.
 - Ability to expose the service to internal network traffic only (no-public access) using Private Link.
-- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or site-to-site VPN).
+- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the application to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or Site-to-Site VPN).
 
 ### Solution review
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 | Consideration | Details |
 |--- | --- |
 | **Pros** | All currently required and in-use features are available in Azure Database for PostgreSQL. <br><br> |
 | **Cons** | Contoso will still need to do manual migration from major version of PostgreSQL. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Proposed architecture
 
@@ -113,10 +105,10 @@ Contoso will need to set up a virtual network gateway connection from their on-p
 
 Contoso will need to assess the current database for replication issues. These issues include:
 
-- The source database version is compatible for migration to the target database version
+- The source database version is compatible for migration to the target database version.
 - Ensure primary keys exist on all tables to be replicated.
-- Database names can't include a semi-colon(;)
-- Migration of multiple tables with same name but different case may cause unpredictable behavior
+- Database names can't include a semicolon (`;`).
+- Migration of multiple tables with same name but different case may cause unpredictable behavior.
 
   ![Migration process](./media/contoso-migration-postgresql-to-azure/migration-process.png)
   _Figure 2: The migration process._
@@ -287,7 +279,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 ### Security
 
 - Contoso needs to ensure that their new Azure Database for PostgreSQL instance and databases are secure. [Learn more](https://docs.microsoft.com/azure/postgresql/concepts-security).
-- In particular, Contoso should review the [firewall](https://docs.microsoft.com/azure/postgresql/concepts-firewall-rules) and virtual network configurations you limit connections to only the applications that require it.
+- In particular, Contoso should review the [firewall rules](https://docs.microsoft.com/azure/postgresql/concepts-firewall-rules) and virtual network configurations to verify that connections are limited to only the applications that require it.
 - Implement [bring your own key (BYOK)](https://docs.microsoft.com/azure/postgresql/concepts-data-encryption-postgresql) for data encryption.
 - Update all applications to [require SSL](https://docs.microsoft.com/azure/postgresql/concepts-ssl-connection-security) connections to the databases.
 - Setup [Private Link](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-private-link) so that all database traffic is kept inside Azure and the on-premises network.
@@ -307,4 +299,4 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ## Conclusion
 
-In this article, Contoso migrated their PostgreSQL databases to an Azure Database for PostgreSQL managed instance.
+In this article, Contoso migrated their PostgreSQL databases to an Azure Database for PostgreSQL instance.

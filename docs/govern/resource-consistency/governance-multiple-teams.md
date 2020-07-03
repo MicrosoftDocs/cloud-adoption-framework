@@ -237,7 +237,7 @@ Therefore, you can select any of these two examples resource management models d
 You've learned about several different models for governing access to Azure resources. Now you'll walk through the steps necessary to implement the resource management model with one subscription for each of the **shared infrastructure**, **production**, and **development** environments from the design guide. You'll have one **subscription owner** account for all three environments. Each workload will be isolated in a **resource group** with a **workload owner** added with the **contributor** role.
 
 > [!NOTE]
-> Read [understanding resource access in Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles) to learn more about the relationship between Azure accounts and subscriptions.
+> See [Understanding resource access in Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles) to learn more about the relationship between Azure accounts and subscriptions.
 
 Follow these steps:
 

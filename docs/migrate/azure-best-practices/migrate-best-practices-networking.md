@@ -31,7 +31,7 @@ Azure provides virtual networks with these capabilities:
 - VNets can connect to each other using virtual network peering. Connected VNets can be in the same or different regions. Thus resources in one VNet can connect to resources in other VNets.
 - By default, Azure routes traffic between subnets within a VNet, connected VNets, on-premises networks, and the internet.
 
-When planning your VNet topology, you should consider how to arrange IP address spaces, how to implement a hub and spoke network, how to segment VNets into subnets, setting up DNS, and implementing Azure availability zones.
+When planning your VNet topology, you should consider how to arrange IP address spaces, how to implement a hub and spoke network, how to segment VNets into subnets, setting up DNS, and implementing Azure Availability Zones.
 
 ## Best practice: Plan IP addressing
 
@@ -119,20 +119,20 @@ Azure adds a DNS server by default when you deploy a VNet. This allows you to ra
 - Learn about [name resolution when you use your own DNS server](https://docs.microsoft.com/azure/migrate/contoso-migration-infrastructure).
 - Learn about [DNS naming rules and restrictions](../../ready/azure-best-practices/naming-and-tagging.md).
 
-## Best practice: Set up availability zones
+## Best practice: Set up Availability Zones
 
-Availability zones increase high-availability to protect your apps and data from datacenter failures.
+Availability Zones increase high-availability to protect your apps and data from datacenter failures.
 
-- Availability zones are unique physical locations within an Azure region.
+- Availability Zones are unique physical locations within an Azure region.
 - Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking.
 - To ensure resiliency, there's a minimum of three separate zones in all enabled regions.
-- The physical separation of availability zones within a region protects applications and data from datacenter failures.
-- Zone-redundant services replicate your applications and data across availability zones to protect from single points of failure. - - With availability zones, Azure offers an SLA of 99.99 percent VM uptime.
+- The physical separation of Availability Zones within a region protects applications and data from datacenter failures.
+- Zone-redundant services replicate your applications and data across Availability Zones to protect from single points of failure. - - With Availability Zones, Azure offers an SLA of 99.99 percent VM uptime.
 
     ![Availability zone](./media/migrate-best-practices-networking/availability-zone.png)
     _Availability zone_
 
-- You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone, and replicating them in other zones. Azure services that support availability zones fall into two categories:
+- You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone, and replicating them in other zones. Azure services that support Availability Zones fall into two categories:
   - **Zonal services:** You associate a resource with a specific zone, such as VMs, managed disks, or IP addresses.
   - **Zone-redundant services:** The resource replicates automatically across zones, such as zone-redundant storage or Azure SQL Database.
 - You can deploy a standard Azure load balanced with internet-facing workloads or app tiers, to provide zonal fault tolerance.
@@ -142,46 +142,46 @@ Availability zones increase high-availability to protect your apps and data from
 
 **Learn more:**
 
-- Read the [availability zones overview](https://docs.microsoft.com/azure/availability-zones/az-overview).
+- Read the [Availability Zones overview](https://docs.microsoft.com/azure/availability-zones/az-overview).
 
 ## Design hybrid cloud networking
 
 For a successful migration, it's critical to connect on-premises corporate networks to Azure. This creates an always-on connection known as a hybrid-cloud network, where services are provided from the Azure cloud to corporate users. There are two options for creating this type of network:
 
-- **Site-to-site VPN:** You establish a site-to-site connection between your compatible on-premises VPN device and an Azure VPN gateway that's deployed in a VNet. Any authorized on-premises resource can access VNets. Site-to-site communications are sent through an encrypted tunnel over the internet.
+- **Site-to-Site VPN:** You establish a Site-to-Site connection between your compatible on-premises VPN device and an Azure VPN gateway that's deployed in a VNet. Any authorized on-premises resource can access VNets. Site-to-Site communications are sent through an encrypted tunnel over the internet.
 - **Azure ExpressRoute:** You establish an Azure ExpressRoute connection between your on-premises network and Azure, through an ExpressRoute partner. This connection is private, and traffic doesn't go over the internet.
 
 **Learn more:**
 
 - Learn more about [hybrid-cloud networking](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn).
 
-## Best practice: Implement a highly available site-to-site VPN
+## Best practice: Implement a highly available Site-to-Site VPN
 
-To implement a site-to-site VPN, you set up a VPN gateway in Azure.
+To implement a Site-to-Site VPN, you set up a VPN gateway in Azure.
 
 - A VPN gateway is a specific type of VNet gateway that sends encrypted traffic between an Azure VNet and an on-premises location over the public internet.
 - A VPN gateway can also send encrypted traffic between Azure VNets over the Microsoft network.
 - Each VNet can have only one VPN gateway.
 - You can create multiple connections to the same VPN gateway. When you create multiple connections, all VPN tunnels share the available gateway bandwidth.
 - Every Azure VPN gateway consists of two instances in an active-standby configuration.
-  - For planned maintenance or unplanned disruption to the active instance, failover occurs and the standby instance takes over automatically, and resumes the site-to-site or VNet-to-VNet connection.
+  - For planned maintenance or unplanned disruption to the active instance, failover occurs and the standby instance takes over automatically, and resumes the Site-to-Site or VNet-to-VNet connection.
   - The switchover causes a brief interruption.
   - For planned maintenance, connectivity should be restored within 10 to 15 seconds.
   - For unplanned issues, the connection recovery takes longer, about one to 1.5 minutes in the worst case.
-  - Point-to-site (p2s) VPN client connections to the gateway will be disconnected, and the users will need to reconnect from client machines.
+  - Point-to-Site VPN client connections to the gateway will be disconnected, and the users will need to reconnect from client machines.
 
-When setting up a site-to-site VPN, you do the following:
+When setting up a Site-to-Site VPN, you do the following:
 
 - You need a VNet whose address range doesn't overlap with the on-premises network to which the VPN will connect.
 - You create a gateway subnet in the network.
 - You create a VPN gateway, specify the gateway type (VPN) and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
 - You create a local network gateway on-premises, and configure your on-premises VPN device.
-- You create a failover site-to-site VPN connection between the VNet gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. Route-based also supports both site-to-site (from any computer) and point-to-site (from a single computer) connections concurrently.
+- You create a failover Site-to-Site VPN connection between the VNet gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. Route-based also supports both Site-to-Site (from any computer) and Point-to-Site (from a single computer) connections concurrently.
 - You specify the gateway SKU that you want to use. This will depend on your workload requirements, throughput, features, and SLAs.
 - Border gateway protocol (BGP) is an optional feature you can use with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your VNets.
 
 ![VPN](./media/migrate-best-practices-networking/vpn.png)
-_Site-to-site vpn_
+_Site-to-Site vpn_
 
 **Learn more:**
 
@@ -212,7 +212,7 @@ For multiple VPN connections, Azure Virtual WAN is a networking service that pro
 
 - Virtual WAN allows you to connect and configure branch devices to communicate with Azure. This can be done manually, or by using preferred provider devices through an Azure Virtual WAN partner.
 - Using preferred provider devices allows for simple use, connectivity, and configuration management.
-- The Azure WAN built-in dashboard provides instant troubleshooting insights that save time, and provide an easy way to track large-scale site-to-site connectivity.
+- The Azure WAN built-in dashboard provides instant troubleshooting insights that save time, and provide an easy way to track large-scale Site-to-Site connectivity.
 
 **Learn more:** Learn about [Azure Virtual WAN](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about).
 
@@ -226,7 +226,7 @@ The Azure ExpressRoute service extends your on-premises infrastructure into the 
 - With ExpressRoute Direct, you can connect directly to Microsoft routers at 100gbps, for larger bandwidth needs.
 - ExpressRoute uses BGP to exchange routes between on-premises networks, Azure instances, and Microsoft public addresses.
 
-Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a rapid start, it's common to initially use a site-to-site VPN to establish connectivity between the virtual datacenter and on-premises resources, and then migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
+Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a rapid start, it's common to initially use a Site-to-Site VPN to establish connectivity between the virtual datacenter and on-premises resources, and then migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
 
 **Learn more:**
 
@@ -334,7 +334,7 @@ A service tag represents a group of IP address prefixes. Using a service tag hel
 - Microsoft manages the address prefixes associated with a service tag, and automatically updates the service tag as addresses change.
 - You can't create your own service tag, or specify which IP addresses are included within a tag.
 
-Service tags take the manual work out of assigning a rule to groups of Azure services. For example, if you want to allow a VNet subnet containing web servers access to an Azure SQL Database, you could create an outbound rule to port 1433, and use the **Sql** service tag.
+Service tags take the manual work out of assigning a rule to groups of Azure services. For example, if you want to allow a subnet containing web servers to access to Azure SQL Database, you can create an outbound rule to port 1433, and use the **Sql** service tag.
 
 - This **Sql** tag denotes the address prefixes of the Azure SQL Database and Azure SQL Data Warehouse services.
 - If you specify **Sql** as the value, traffic is allowed or denied to SQL.
@@ -370,15 +370,11 @@ _Application security group example_
 - In our example, each network interface belongs to only one application security group, but in fact an interface can belong to multiple groups, in accordance with Azure limits.
 - None of the network interfaces have an associated NSG. `NSG1` is associated to both subnets and contains the following rules.
 
-<!-- markdownlint-disable MD033 -->
-
 | Rule name  | Purpose | Details |
 | --- | --- | --- |
 | `Allow-HTTP-Inbound-Internet` | Allow traffic from the internet to the web servers. Inbound traffic from the internet is denied by the `DenyAllInbound` default security rule, so no additional rule is needed for the `AsgLogic` or `AsgDb` application security groups. | Priority: `100`<br><br> Source: `internet` <br><br> Source port: `*` <br><br> Destination: `AsgWeb` <br><br> Destination port: `80` <br><br> Protocol: `TCP` <br><br> Access: `Allow` |
 | `Deny-Database-All` | `AllowVNetInBound` default security rule allows all communication between resources in the same VNet, this rule is needed to deny traffic from all resources. | Priority: `120` <br><br> Source: `*` <br><br> Source port: `*` <br><br> Destination: `AsgDb` <br><br> Destination port: `1433` <br><br> Protocol: `All` <br><br> Access: `Deny` |
 | `Allow-Database-BusinessLogic` | Allow traffic from the `AsgLogic` application security group to the `AsgDb` application security group. The priority for this rule is higher than the `Deny-Database-All` rule, so this rule is processed first. Therefore, traffic from the `AsgLogic` application security group is allowed, and all other traffic is blocked. | Priority: `110` <br><br> Source: `AsgLogic` <br><br> Source port: `*` <br><br> Destination: `AsgDb` <br><br> Destination port: `1433` <br><br> Protocol: `TCP` <br><br> Access: `Allow` |
-
-<!--markdownlint-enable MD033 -->
 
 - The rules that specify an application security group as the source or destination are only applied to the network interfaces that are members of the application security group. If the network interface is not a member of an application security group, the rule is not applied to the network interface, even though the network security group is associated to the subnet.
 
@@ -491,15 +487,11 @@ For more complex network topologies, you might use security products from Micros
 
 In the hub, the perimeter network (with access to the internet) is normally managed through an Azure Firewall, a firewall farm, or a Web Application Firewall (WAF). Consider the following comparisons.
 
-<!-- markdownlint-disable MD033 -->
-
 | Firewall type  | Details |
 | --- | --- |
 | WAFs | Web applications are common, and tend to suffer from vulnerabilities and potential exploits. <br><br> WAFs are designed to detect attacks against web applications (HTTP/HTTPS), more specifically than a generic firewall. <br><br> Compared with traditional firewall technology, WAFs have a set of specific features that protect internal web servers from threats. |
 | Azure Firewall | Like NVA firewall farms, Azure Firewall uses a common administration mechanism, and a set of security rules to protect workloads hosted in spoke networks, and to control access to on-premises networks. <br><br> The Azure Firewall has built-in scalability. |
 | NVA firewalls | Like Azure Firewall NVA firewall farms have common administration mechanism, and a set of security rules to protect workloads hosted in spoke networks, and to control access to on-premises networks. <br><br> NVA firewalls can be manually scaled behind a load balancer. <br><br> Though an NVA firewall has less specialized software than a WAF, it has broader application scope to filter and inspect any type of traffic in egress and ingress. <br><br> If you want to use NVA you can find them in the Azure Marketplace. |
-
-<!--markdownlint-enable MD033 -->
 
 We recommend using one set of Azure firewalls (or NVAs) for traffic originating on the internet, and another for traffic originating on-premises.
 

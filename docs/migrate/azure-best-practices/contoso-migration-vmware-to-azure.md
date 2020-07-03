@@ -132,7 +132,7 @@ An AVS private cloud is an isolated VMware software-defined datacenter that supp
 >[!NOTE]
 > Learn more about AVS [private cloud concepts](https://docs.microsoft.com/azure/azure-vmware/concepts-private-clouds-clusters).
 
-AVS private clouds are managed through the AVS portal. They have their own vCenter server in its own management domain.
+AVS private clouds are managed through the AVS portal. They have their own vCenter Server in its own management domain.
 
 >[!NOTE]
 > Learn to create AVS private clouds using a [tutorial](https://docs.microsoft.com/azure/azure-vmware/tutorial-create-private-cloud).

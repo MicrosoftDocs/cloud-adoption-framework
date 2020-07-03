@@ -1,5 +1,5 @@
 ---
-title: "Migrating SQL Server databases to Azure (scenario) "
+title: "Migrating SQL Server databases to Azure "
 description: Learn how Contoso migrates their on-premises SQL Databases to Azure
 author: deltadan
 ms.author: abuck
@@ -12,7 +12,7 @@ services: azure-migrate
 
 <!-- cSpell:ignore BACPAC FILESTREAM -->
 
-# Migrating SQL Server databases to Azure (scenario)
+# Migrate SQL Server databases to Azure
 
 This article demonstrates how a fictional company Contoso assessed, planned and migrated their various on-premises SQL Server databases to Azure.
 
@@ -40,8 +40,6 @@ The IT leadership team has worked closely with business partners to understand t
 
 The Contoso cloud team has pinned down goals for the various migrations. These goals were used to determine the best migration methods.
 
-<!-- markdownlint-disable MD033 -->
-
 | Requirements | Details |
 | --- | --- |
 | **Performance** | After migration, apps in Azure should have the same performance capabilities that apps have today in Contoso's on-premises environment. Moving to the cloud doesn't mean that app performance is less critical. |
@@ -64,11 +62,9 @@ The assessment results in multiple workloads spread across multiple departments.
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Azure will provide a single pane of glass into the database workloads <br><br> Costs will be monitored via cost management <br><br> Business charge-back billing will be easy to perform with the Azure Billing APIs <br><br> Server and software maintenance will be reduced to only the IaaS-based environments. |
+| **Pros** | Azure will provide a single pane of glass into the database workloads <br><br> Costs will be monitored via Azure Cost Management and Billing <br><br> Business charge-back billing will be easy to perform with the Azure Billing APIs <br><br> Server and software maintenance will be reduced to only the IaaS-based environments. |
 | **Cons** | Due to the requirement of IaaS-based virtual machines, there will still need to be management of the software on those machines. |
 
 ### Budget and management
@@ -84,18 +80,18 @@ For the billing requirements, each of the Azure resources are then [tagged](http
 Data migrations follow a standard repeatable pattern. This involves the following steps based on [Microsoft best practices](https://datamigration.microsoft.com/):
 
 - Pre-migration:
-  - Discovery - inventory database assets and application stack
-  - Assess - assess workloads and fix recommendations
-  - Convert - convert source schema to work in the target
+  - **Discovery:** Inventory database assets and application stack
+  - **Assess:** Assess workloads and fix recommendations
+  - **Convert:** Convert source schema to work in the target
 - Migration
-  - Migrate - migrate the source schema, source data and objects to target
-  - Sync data - sync data (for minimal downtime)
-  - Cutover - cut over the source to target
+  - **Migrate:** Migrate the source schema, source data and objects to target
+  - **Sync data:** Sync data (for minimal downtime)
+  - **Cutover:** Cut over the source to target
 - Post-migration
-  - Remediate applications - iteratively make and necessary changes to your applications
-  - Perform tests - iteratively run functional and performance tests
-  - Optimize - based on tests, address performance issues and then retest to confirm performance improvements
-  - Retire assets - old VMs and hosting environments are backed up and retired
+  - **Remediate applications:** Iteratively make and necessary changes to your applications
+  - **Perform tests:** Iteratively run functional and performance tests
+  - **Optimize:** Based on tests, address performance issues and then retest to confirm performance improvements
+  - **Retire assets:** Old VMs and hosting environments are backed up and retired
 
 #### Step 1: Discovery
 

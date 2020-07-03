@@ -10,7 +10,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-<!-- cSpell:ignore CDO CDO's CIO CIO's -->
+<!-- cSpell:ignore CDO's CIO's -->
 
 # Governance guide for complex enterprises: The supporting narrative
 

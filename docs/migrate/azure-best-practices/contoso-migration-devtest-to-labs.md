@@ -110,7 +110,7 @@ Here's what Contoso needs to run this scenario.
 
 | Requirements | Details |
 | --- | --- |
-| **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p) to take advantage of up to 80% reduction in costs. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the admin of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the admin, you need to work with the admin to assign you owner or contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure Dev/Test subscription** | Contoso creates an [Azure Dev/Test subscription](https://azure.microsoft.com/offers/ms-azr-0023p) to take advantage of up to 80% reduction in costs. <br><br> If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the admin of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the admin, you need to work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure. |
 
 ## Scenario steps
@@ -121,7 +121,7 @@ Here's how Contoso admins will run the migration:
 >
 > - **Step 1: Provision a new Azure Dev/Test subscription and create a DevTest Labs instance.**
 > - **Step 2: Configure the development virtual network, assign a resource group and set policies.**
-> - **Step 3: Create Windows 10 multi-session virtual desktops for developers to use from remote locations.**
+> - **Step 3: Create Windows 10 Enterprise multi-session virtual desktops for developers to use from remote locations.**
 > - **Step 4: Create formulas and VMs within DevTest Labs for development and migrate databases.**
 
 ## Step 1: Provision a new Azure Dev/Test subscription and create a DevTest Labs instance
@@ -196,11 +196,11 @@ They set these up as follows:
       ![Support message](./media/contoso-migration-devtest-to-labs/support.png)
       _Figure 11: A support message._
 
-## Step 3: Create Windows 10 multi-session virtual desktops for developers to use from remote locations
+## Step 3: Create Windows 10 Enterprise multi-session virtual desktops for developers to use from remote locations
 
 Contoso needs to create a Windows Virtual Desktop for remote developers.
 
-Contoso creates a Windows 10 multi-session VM from a base:
+Contoso creates a Windows 10 Enterprise multi-session VM from a base:
 
 - Contoso opens **All virtual machines**> **+ Add** and then selects a `Windows 10 enterprise multi-session` base.
 

@@ -10,7 +10,7 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- cSpell:ignore HR mysqldump InnoDB binlog Navicat -->
+<!-- cSpell:ignore mysqldump InnoDB binlog Navicat -->
 
 # Migrate MySQL databases to Azure
 
@@ -29,8 +29,6 @@ The IT leadership team has worked closely with business partners to understand w
 
 The Contoso cloud team has pinned down goals for this migration. These goals were used to determine the best migration method.
 
-<!-- markdownlint-disable MD033 -->
-
 | Requirements | Details |
 | --- | --- |
 | **Availability** | Currently internal staff are having a hard time with the hosting environment for the MySQL instance. Contoso would like to have as close to 99.99% availability for the database layer. |
@@ -38,10 +36,8 @@ The Contoso cloud team has pinned down goals for this migration. These goals wer
 | **Performance** | The Contoso human resources (HR) department runs various reports daily, weekly, and monthly. When they run these reports, they experience significant performance issues with the LAMP-based app. They need to be able to run the reports without affecting the employee-facing app. |
 | **Security** | Contoso needs to know that the database will only be accessible to their internal apps and not visible or accessible via the internet. |
 | **Monitoring** | Contoso currently uses tools to monitor the metrics of the MySQL and provide notifications when CPU, memory, or storage are having issues. They would like to have this same capability in Azure. |
-| **Business continuity** | The HR app data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like as minimum of downtime as possible. |
+| **Business continuity** | The HR data store is an important part of Contoso's daily operations and if it were to become corrupted or need to be restored they would like to minimize downtime as much as possible. |
 | **Azure** | Contoso wants to move the app to Azure, but doesn't want to run it on VMs. Contoso wants to use Azure PaaS services for the data tier. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Solution design
 
@@ -50,7 +46,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 ### Current app
 
 - The MySQL database stores employee data that is used for all aspects of the company's HR department. A LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl/Python) app is used as the front end to handle employee HR requests.
-- Contoso has 100k employees located all over the world so uptime is very important.
+- Contoso has 100,000 employees worldwide, so uptime is very important.
 
 ### Proposed solution
 
@@ -62,7 +58,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 <!-- TODO: Verify GraphDBMS term -->
 <!-- docsTest:ignore ColumnStore GraphDBMS -->
 
-As part of the solution design process Contoso did a review of the features in Azure for hosting their MySQL data. The following considerations helped them decide to use Azure.
+As part of the solution design process, Contoso did a review of the features in Azure for hosting their MySQL data. The following considerations helped them decide to use Azure.
 
 - Similar to Azure SQL Database, Azure Database for MySQL allows for [firewall rules](https://docs.microsoft.com/azure/mysql/concepts-firewall-rules).
 - Azure Database for MySQL can be used with [Azure Virtual Network](https://docs.microsoft.com/azure/mysql/concepts-data-access-security-vnet) to prevent the instance from being publicly accessible.
@@ -71,20 +67,16 @@ As part of the solution design process Contoso did a review of the features in A
 - Ability to expose the service to internal network traffic only (no public access) using [Private Link](https://docs.microsoft.com/azure/mysql/concepts-data-access-security-private-link).
 - They chose not to move to Azure Database for MySQL as they're looking at potentially using the MariaDB ColumnStore and GraphDBMS database model in the future.
 - Aside from MySQL features, Contoso is a big proponent of true open source projects and choose not to use MySQL.
-- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the app to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or site-to-site VPN).
+- The [bandwidth and latency](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) from the app to the database will be sufficient enough based on the chosen gateway (either ExpressRoute or Site-to-Site VPN).
 
 ### Solution review
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 | Consideration | Details |
 | --- | --- |
 | **Pros** | Azure Database for MySQL offers a 99.99 percent financially backed service-level agreement (SLA) for [high availability](https://docs.microsoft.com/azure/mysql/concepts-high-availability). <br><br> Azure offers the ability to scale up or down during peak load times each quarter. Contoso can save even more buy purchasing [reserved capacity](https://docs.microsoft.com/azure/mysql/concept-reserved-pricing). <br><br> Azure provides point-in-time restore and geo-restore capabilities for Azure Database for MySQL. <br><br> |
 | **Cons** | Contoso will be limited to the MySQL release versions that are supported in Azure which are currently 10.2 and 10.3. <br><br> Azure Database for MySQL does have some [limitations](https://docs.microsoft.com/azure/mysql/concepts-limits) such as scaling down storage. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Proposed architecture
 
@@ -124,7 +116,7 @@ As a summary, they must perform the following:
 - Ensure all migration prerequisites are met:
 
   - The MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL community edition, InnoDB engine, and migration across source and target with same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the migration wizard: `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009`.
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the migration wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009`.
   - User must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 
@@ -145,10 +137,10 @@ As an alternative to using Azure Database Migration Service, Contoso can use com
 
 - Dump and restore with mysqldump:
   - Use the exclude-triggers option in mysqldump, this will prevent triggers from executing during import and improve performance.
-  - Use the single-transaction option to set the translation isolation mode to repeatable read and send a start transaction SQL statement before dumping data
+  - Use the single-transaction option to set the translation isolation mode to `REPEATABLE READ` and send a `START TRANSACTION` SQL statement before dumping data.
   - Use the disable-keys option in mysqldump to disable foreign key constraints before load. Removing this will provide performance gains.
   - Use Azure Blob storage to store the backup files and perform the restore from there for faster restore.
-  - Update app connection strings.
+  - Update application connection strings.
   - Once the database has been migrated Contoso must update the connection strings to point to the new Azure Database for MySQL.
 
 ## Cleanup after migration
@@ -180,4 +172,4 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ## Conclusion
 
-In this article, Contoso migrated their MySQL databases to an Azure Database for MySQL managed instance.
+In this article, Contoso migrated their MySQL databases to an Azure Database for MySQL instance.

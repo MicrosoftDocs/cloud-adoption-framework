@@ -43,7 +43,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 - The app is tiered across two VMs (`OSTICKETWEB` and `OSTICKETMYSQL`).
 - The VMs are located on VMware ESXi host `contosohost1.contoso.com` (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), running on a VM.
-- Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (`contosodc1`).
+- Contoso has an on-premises datacenter (`contoso-datacenter`), with an on-premises domain controller (`contosodc1`).
 
 ![Current architecture](./media/contoso-migration-refactor-linux-app-service-mysql/current-architecture.png)
 
@@ -51,7 +51,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 Here's the proposed architecture:
 
-- The web tier app on `OSTICKETWEB` will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 Docker container.
+- The web tier app on `OSTICKETWEB` will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 docker container.
 - The app code will be moved to GitHub, and the Azure App Service web app will be configured for continuous delivery with GitHub.
 - Azure App Service will be deployed in both the primary region (`East US 2`) and secondary region (`Central US`).
 - Traffic Manager will be set up in front of the two web apps in both regions.
@@ -72,7 +72,7 @@ Contoso will complete the migration process as follows:
 1. As a first step, Contoso admins set up the Azure infrastructure, including provisioning Azure App Service, setting up Traffic Manager, and provisioning an Azure Database for MySQL instance.
 2. After preparing the Azure infrastructure, they migrate the database using Azure Database Migration Service.
 3. After the database is running in Azure, they up a GitHub private repository for Azure App Service with continuous delivery, and load it with the osTicket app.
-4. In the Azure portal, they load the app from GitHub to the Docker container running Azure App Service.
+4. In the Azure portal, they load the app from GitHub to the docker container running Azure App Service.
 5. They tweak DNS settings, and configure autoscaling for the app.
 
 ![Migration process](./media/contoso-migration-refactor-linux-app-service-mysql/migration-process.png)
@@ -90,14 +90,10 @@ Contoso will complete the migration process as follows:
 
 Here's what Contoso needs to run this scenario.
 
-<!-- markdownlint-disable MD033 -->
-
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you owner or contributor permissions. |
+| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
 | **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Scenario steps
 
@@ -125,7 +121,7 @@ Contoso admins provision two web apps (one in each region) using Azure App Servi
 
      ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app2.png)
 
-4. They select a Linux OS with PHP 7.0 runtime stack, which is a Docker container.
+4. They select a Linux OS with PHP 7.0 runtime stack, which is a docker container.
 
     ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app3.png)
 
@@ -200,7 +196,7 @@ As a summary, you must perform the following:
 
 - Ensure all migration prerequisites are met:
   - MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports - MySQL community edition, InnoDB engine and migration across source and target with same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` during the migration wizard.
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` during the migration wizard.
   - The user must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
@@ -337,7 +333,7 @@ As the final step in the migration process, Contoso admins configure the web app
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app3.png)
 
-4. After the configuration is updated and the osTicket web app is loaded from GitHub to the Docker container running the Azure App Service, the site shows as active.
+4. After the configuration is updated and the osTicket web app is loaded from GitHub to the docker container running the Azure App Service, the site shows as active.
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app4.png)
 

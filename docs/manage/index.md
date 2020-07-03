@@ -17,8 +17,6 @@ Delivering on a [cloud strategy](../strategy/index.md) requires solid planning, 
 
 To prepare you for this phase of the cloud adoption lifecycle, the framework suggests the following exercises:
 
-<!-- markdownlint-disable MD033 -->
-
 | | |
 |---|---|
 | <br> ![1](../_images/icons/1.png) | <br> [Establish a management baseline](./azure-management-guide/index.md): Define the criticality classifications, cloud management tools, and processes required to deliver your minimum commitment to operations management.                                |

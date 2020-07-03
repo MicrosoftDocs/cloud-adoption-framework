@@ -39,7 +39,7 @@ Before we start reviewing the infrastructure, consider reading some background i
 - Several options are available for purchasing Azure access, including pay-as-you-go subscriptions, a Microsoft Enterprise Agreement (EA), Open Licensing from Microsoft resellers, or purchasing from Microsoft partners in the Cloud Solution Provider (CSP) program. Learn about [purchase options](https://azure.microsoft.com/pricing/purchase-options), and read about how [Azure subscriptions are organized](https://azure.microsoft.com/blog/organizing-subscriptions-and-resource-groups-within-the-enterprise).
 - Get an overview of Azure [identity and access management](https://www.microsoft.com/security/business/identity). In particular, learn about [Azure AD and extending on-premises Active Directory to the cloud](https://docs.microsoft.com/azure/active-directory/identity-fundamentals). There's a useful downloadable e-book about [identity and access management (IAM) in a hybrid environment](https://azure.microsoft.com/resources/hybrid-cloud-identity).
 - Azure provides a robust networking infrastructure with options for hybrid connectivity. Get an overview of [networking and network access control](https://docs.microsoft.com/azure/security/security-network-overview).
-- Read the [introduction to Azure security](https://docs.microsoft.com/azure/security/fundamentals/overview), and learn how to create a plan for [Azure governance](https://docs.microsoft.com/azure/governance).
+- Read the [introduction to Azure security](https://docs.microsoft.com/azure/security/fundamentals/overview) and learn how to create a plan for [Azure governance](https://docs.microsoft.com/azure/governance).
 
 ## On-premises architecture
 
@@ -117,7 +117,7 @@ Giving and controlling user access to Azure resources with identity and access m
 
 ### Create an Azure AD directory
 
-Contoso is using the Azure AD free edition that's included with an Azure subscription. Contoso admins create an Azure AD directory:
+Contoso is using the Azure AD Free edition that's included with an Azure subscription. Contoso admins create an Azure AD directory:
 
 1. In the [Azure portal](https://portal.azure.com), they navigate to **Create a resource** > **Identity** > **Azure Active Directory**.
 2. In **Create directory**, they specify a name for the directory, an initial domain name, and the region where the directory should be created.
@@ -156,8 +156,6 @@ Azure resource groups gather Azure resources together. Using a resource group ID
 
 Contoso admins set up Azure resource groups as shown in the following table.
 
-<!-- markdownlint-disable MD033 -->
-
 | Resource group | Details |
 | --- | --- |
 | `ContosoCobRG` | This group contains all resources related to continuity of business. It includes vaults that Contoso will use for the Azure Site Recovery service, and the Azure Backup service. <br><br> It also includes resources used for migration, including Azure Migrate and Azure Database Migration Service. |
@@ -165,8 +163,6 @@ Contoso admins set up Azure resource groups as shown in the following table.
 | `ContosoFailoverRG` | This group serves as a landing zone for failed over resources. |
 | `ContosoNetworkingRG` | This group contains all networking resources. |
 | `ContosoRG` | This group contains resources related to production apps and databases. |
-
-<!-- markdownlint-enable MD033 -->
 
 They create resource groups as follows:
 
@@ -275,16 +271,16 @@ Availability sets help protect apps and data from a local hardware and networkin
 
 Contoso will implement availability sets whenever VM workloads require high availability. For more information, see [Manage the availability of Windows virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability).
 
-**Availability zones:**
+**Availability Zones:**
 
-Availability zones help protect apps and data from failures affecting an entire datacenter within a region.
+Availability Zones help protect apps and data from failures affecting an entire datacenter within a region.
 
-- Each availability zone represents a unique physical location within an Azure region.
+- Each Availability Zone represents a unique physical location within an Azure region.
 - Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking.
 - There's a minimum of three separate zones in all enabled regions.
 - The physical separation of zones within a region protects applications and data from datacenter failures.
 
-Contoso will deploy availability zones as applications require scalability, high-availability, and resiliency. For more information, see [Regions and availability zones in Azure](https://docs.microsoft.com/azure/availability-zones/az-overview).
+Contoso will deploy Availability Zones as applications require scalability, high-availability, and resiliency. For more information, see [Regions and Availability Zones in Azure](https://docs.microsoft.com/azure/availability-zones/az-overview).
 
 ### Configure backup
 
@@ -296,7 +292,7 @@ Azure Backup allows you to back up and restore Azure VM disks.
 - Backups are application consistent, ensuring backed up data is transactionally consistent and that applications will boot up post-restore.
 - Azure Backup supports locally redundant storage (LRS) to replicate multiple copies of your backup data within a datacenter if a local hardware failure occurs.
 - If a regional outage occurs, Azure Backup also supports geo-redundant storage (GRS), replicating your backup data to a secondary paired region.
-- Azure Backup encrypts data in-transit using aes-256. Backed-up data at rest is encrypted using [storage service encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
+- Azure Backup encrypts data in-transit using AES-256. Backed-up data at rest is encrypted using [Azure Storage encryption](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
 
 Contoso will use Azure Backup with GRS on all production VMs to ensure that workload data is backed up and can be quickly restored if a disruption occurs. For more information, see the [overview of Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview).
 
@@ -330,9 +326,9 @@ As a reminder, the Contoso on-premises network infrastructure currently consists
 
 Here's how Contoso decided to implement hybrid connectivity:
 
-1. Set up a new site-to-site VPN connection between the Contoso datacenter in New York and the two Azure regions, `East US 2` and `Central US`.
+1. Set up a new Site-to-Site VPN connection between the Contoso datacenter in New York and the two Azure regions, `East US 2` and `Central US`.
 2. Branch office traffic bound for virtual networks in Azure will route through the main Contoso datacenter.
-3. As Contoso scales up Azure deployment, it will establish an ExpressRoute connection between the datacenter and the Azure regions. When this happens, Contoso will retain the VPN site-to-site connection for failover purposes only.
+3. As Contoso scales up Azure deployment, it will establish an ExpressRoute connection between the datacenter and the Azure regions. When this happens, Contoso will retain the VPN Site-to-Site connection for failover purposes only.
     - Learn more about [choosing between a VPN and ExpressRoute hybrid solution](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/considerations).
     - Verify [ExpressRoute locations and support](https://docs.microsoft.com/azure/expressroute/expressroute-locations-providers).
 
@@ -382,19 +378,21 @@ Within the hub and spoke model that Contoso has chosen, it needs to think about 
 - The network architecture has two boundaries, an untrusted front-end perimeter zone and a back-end trusted zone.
 - A firewall will have a network adapter in each zone, controlling access to trusted zones.
 - From the internet:
-  - internet traffic will hit a load-balanced public IP address on the perimeter network.
+  - Internet traffic will hit a load-balanced public IP address on the perimeter network.
   - This traffic is routed through the firewall, and subject to firewall rules.
   - After network access controls are implemented, traffic will be forwarded to the appropriate location in the trusted zone.
   - Outbound traffic from the VNet will be routed to the internet using user-defined routes. The traffic is forced through the firewall, and inspected in line with Contoso policies.
 - From the Contoso datacenter:
-  - Incoming traffic over site-to-site VPN or ExpressRoute hits the public IP address of the Azure VPN gateway.
+  - Incoming traffic over Site-to-Site VPN or ExpressRoute hits the public IP address of the Azure VPN gateway.
   - Traffic is routed through the firewall and subject to firewall rules.
   - After applying firewall rules, traffic is forwarded to an internal load balancer (Standard SKU) on the trusted internal zone subnet.
-  - Outbound traffic from the trusted subnet to the on-premises datacenter over VPN is routed through the firewall, and rules applied, before going over the VPN site-to-site connection.
+  - Outbound traffic from the trusted subnet to the on-premises datacenter over VPN is routed through the firewall, and rules applied, before going over the VPN Site-to-Site connection.
 
 ### Design and set up Azure networks
 
 With a network and routing topology in place, Contoso is ready to set up Azure networks and subnets.
+
+<!-- docsTest:ignore "class B" -->
 
 - Contoso will implement a class a private network in Azure (`10.0.0.0/8`). This works, since on-premises it currently has a class B private address space (`172.160.0.0/16`), so Contoso can be sure there won't be any overlap between address ranges.
 - Contoso will deploy VNets in both the primary and secondary regions.
@@ -524,7 +522,7 @@ For any connections from spoke VNets through the hub to the on-premises datacent
 
 ##### Domain controller
 
-For the domain controllers in the `VNET-PROD-EUS2` network, Contoso wants traffic to flow both between the eus2 hub/production network, and over the VPN connection to on-premises. To do this, Contoso admins must allow the following:
+For the domain controllers in the `VNET-PROD-EUS2` network, Contoso wants traffic to flow both between the `EUS2` hub/production network, and over the VPN connection to on-premises. To do this, Contoso admins must allow the following:
 
 1. **Allow forwarded traffic** and **Allow gateway transit configurations** on the peered connection. In our example, this would be the `VNET-HUB-EUS2` to `VNET-PROD-EUS2` connection.
 
@@ -555,7 +553,7 @@ Contoso admins have decided that the Azure DNS service isn't a good choice in th
 <!-- docsTest:ignore "on premises" -->
 
 - Since this is a hybrid network, all the VMs on-premises and in Azure need to be able to resolve names to function properly. This means that custom DNS settings must be applied to all the VNets.
-- Contoso currently has DCs deployed in the Contoso datacenter and at the branch offices. The primary DNS servers are contosodc1 (`172.16.0.10`) and contosodc2 (`172.16.0.1`).
+- Contoso currently has DCs deployed in the Contoso datacenter and at the branch offices. The primary DNS servers are `contosodc1` (`172.16.0.10`) and `contosodc2` (`172.16.0.1`).
 - Once the VNets are deployed, the on-premises domain controllers are configured as DNS servers in the networks.
 - If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers in Azure must be added to the list. To do this, Contoso configures DNS server settings on each VNet. For example, the custom DNS settings for the `VNET-HUB-EUS2` network would be as follows:
 
@@ -565,10 +563,10 @@ In addition to the on-premises domain controllers, Contoso will implement four m
 
 | Region | DC | VNet | Subnet | IP address |
 | --- | --- | --- | --- | --- |
-| Eus2 | Contosodc3 | `VNET-PROD-EUS2` | `PROD-DC-EUS2` | `10.245.42.4` |
-| Eus2 | Contosodc4 | `VNET-PROD-EUS2` | `PROD-DC-EUS2` | `10.245.42.5` |
-| Cus | Contosodc5 | `VNET-PROD-CUS` | `PROD-DC-CUS` | `10.255.42.4` |
-| Cus | Contosodc6 | `VNET-PROD-CUS` | `PROD-DC-CUS` | `10.255.42.4` |
+| `East US 2` | `contosodc3` | `VNET-PROD-EUS2` | `PROD-DC-EUS2` | `10.245.42.4` |
+| `East US 2` | `contosodc4` | `VNET-PROD-EUS2` | `PROD-DC-EUS2` | `10.245.42.5` |
+| `Central US` | `contosodc5` | `VNET-PROD-CUS` | `PROD-DC-CUS` | `10.255.42.4` |
+| `Central US` | `contosodc6` | `VNET-PROD-CUS` | `PROD-DC-CUS` | `10.255.42.4` |
 
 After deploying the on-premises domain controllers, Contoso needs to update the DNS settings on networks on either region to include the new domain controllers in the DNS server list.
 
@@ -595,13 +593,13 @@ After updating network settings, Contoso admins are ready to build out the domai
 
      ![Active Directory disk](./media/contoso-migration-infrastructure/ad-disk.png)
 
-5. After the disk is added, they connect to the VM over remote desktop, and open server manager.
+5. After the disk is added, they connect to the VM over Remote Desktop Services, and open Server Manager.
 
-6. Then in **File and Storage Services**, they run the new volume wizard, ensuring that the drive is given the letter F: or above on the local VM.
+6. Then in **File and Storage Services**, they run the new volume wizard, ensuring that the drive is assigned the letter F: or above on the local VM.
 
      ![New Volume Wizard](./media/contoso-migration-infrastructure/volume-wizard.png)
 
-7. In server manager, they add the **Active Directory Domain Services** role. Then, they configure the VM as a domain controller.
+7. In Server Manager, they add the **Active Directory Domain Services** role. Then, they configure the VM as a domain controller.
 
       ![Server role](./media/contoso-migration-infrastructure/server-role.png)
 
@@ -613,9 +611,9 @@ After updating network settings, Contoso admins are ready to build out the domai
 
 ### Set up Active Directory
 
-Active Directory is a critical service in networking, and must be configured correctly. Contoso admins will build Active Directory sites for the Contoso datacenter, and for the eus2 and cus regions.
+Active Directory is a critical service in networking, and must be configured correctly. Contoso admins will build Active Directory sites for the Contoso datacenter, and for the `East US 2` and `Central US` regions.
 
-1. They create two new sites (`AZURE-EUS2`, and `AZURE-CUS`) along with the datacenter site (`ContosoDatacenter`).
+1. They create two new sites (`AZURE-EUS2`, and `AZURE-CUS`) along with the datacenter site (`contoso-datacenter`).
 2. After creating the sites, they create subnets in the sites, to match the VNets and datacenter.
 
     ![DC subnets](./media/contoso-migration-infrastructure/dc-subnets.png)
@@ -628,7 +626,7 @@ Active Directory is a critical service in networking, and must be configured cor
 
     ![DC replication](./media/contoso-migration-infrastructure/ad-resolution.png)
 
-5. With everything complete, a list of the domain controllers and sites is shown in the on-premises Active Directory administrative center.
+5. With everything complete, a list of the domain controllers and sites is shown in the on-premises Active Directory Administrative Center.
 
     ![Active Directory Administrative Center](./media/contoso-migration-infrastructure/ad-center.png)
 
@@ -650,7 +648,7 @@ Policies specify a policy definition, and a policy assignment specifies the scop
 
 Contoso wants to begin a couple of policies:
 
-- It wants a policy to ensure that resources can be deployed in the eus2 and cus regions only.
+- It wants a policy to ensure that resources can be deployed in the `East US 2` and `Central US` regions only.
 - It wants to limit VM SKUs to approved SKUs only. The intention is to ensure that expensive VM SKUs aren't used.
 
 #### Limit resources to regions
@@ -664,7 +662,7 @@ Contoso uses the built-in policy definition **Allowed locations** to limit resou
 
     ![Policy allowed regions](./media/contoso-migration-infrastructure/policy-region.png)
 
-5. By default the policy is set with **Deny**, meaning that if someone starts a deployment in the subscription that isn't in eus2 or cus, the deployment will fail. Here's what happens if someone in the Contoso subscription tries to set up a deployment in West US.
+5. By default the policy is set with **Deny**, meaning that if someone starts a deployment in the subscription that isn't in either the `East US 2` or `Central US` region, the deployment fails. Here's what happens if someone in the Contoso subscription tries to set up a deployment in West US.
 
     ![Policy failed](./media/contoso-migration-infrastructure/policy-failed.png)
 
@@ -689,7 +687,7 @@ Contoso has long been using the ITIL framework for the management of its systems
 
 Contoso will [lock resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-lock-resources) as follows:
 
-- Any production or failover component must be in a resource group that has a readonly lock. This means that to modify or delete production items, the lock must be removed.
+- Any production or failover component must be in a resource group that has a `ReadOnly` lock. This means that to modify or delete production items, the lock must be removed.
 - Nonproduction resource groups will have `CanNotDelete` locks. This means that authorized users can read or modify a resource, but cannot delete it.
 
 ### Set up tagging
@@ -718,7 +716,7 @@ After creating the tag, Contoso will go back and create new policy definitions a
 
 ## Step 6: Consider security
 
-Security is crucial in the cloud, and Azure provides a wide array of security tools and capabilities. These help you to create secure solutions, on the secure Azure platform. Read [confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud) to learn more about Azure security.
+Security is crucial in the cloud, and Azure provides a wide array of security tools and capabilities. These help you to create secure solutions, on the secure Azure platform. See [confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud) to learn more about Azure security.
 
 There are a few aspects for Contoso to consider:
 
@@ -784,7 +782,7 @@ The NSGs associated with the ASGs will be configured with least privilege to ens
 Azure Disk Encryption integrates with Azure Key Vault to help control and manage the disk-encryption keys and secrets in a key vault subscription. It ensures that all data on VM disks are encrypted at rest in Azure Storage.
 
 - Contoso has determined that specific VMs require encryption.
-- Contoso will apply encryption to VMs with customer, confidential, or ppi data.
+- Contoso will apply encryption to VMs with customer, confidential, or personal data.
 
 ## Conclusion
 

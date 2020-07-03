@@ -93,8 +93,6 @@ Tuning and maintaining on-premises storage (SAN or NAS), and the networks to sup
 
 Azure provides different types of storage data.
 
-<!-- markdownlint-disable MD033 -->
-
 | Data type  | Details | Usage |
 | --- | --- | --- |
 | **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. <br><br> | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
@@ -103,13 +101,9 @@ Azure provides different types of storage data.
 | **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS) | Connect app components with asynchronous message queueing. |
 | **Tables** | Store tables. | Now part of Azure Cosmos DB Table API. |
 
-<!--markdownlint-enable MD033 -->
-
 ### Access tiers
 
 Azure Storage provides different options for accessing block blob data. Selecting the right access tier helps ensure that you store block blob data in the most cost-effective manner.
-
-<!-- markdownlint-disable MD033 -->
 
 | Type  | Details | Usage |
 | --- | --- | --- |
@@ -117,13 +111,9 @@ Azure Storage provides different options for accessing block blob data. Selectin
 | **Cool** | Lower storage cost than hot. Higher access charges than hot. <br><br> Store for minimum of 30 days. | Store short-term, data is available but accessed infrequently. |
 | **Archive** | Used for individual block blobs. <br><br> Most cost-effective option for storage. Data access is more expensive than hot and cold. | Use for data that can tolerate server hours of retrieval latency and will remain in the tier for at least 180 days. |
 
-<!--markdownlint-enable MD033 -->
-
 ### Storage account types
 
 Azure provides different types of storage accounts and performance tiers.
-
-<!-- markdownlint-disable MD033 -->
 
 | Account type  | Details | Usage |
 | --- | --- | --- |
@@ -132,8 +122,6 @@ Azure provides different types of storage accounts and performance tiers.
 | **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS | Use if apps need the Azure classic deployment model. |
 | **Blob** | Specialized storage account for storing unstructured objects. Provides block blobs and append blobs only (no file, queue, table or disk storage services). Provides the same durability, availability, scalability and performance as general-purpose v2. | You can't store page blobs in these accounts, and therefore can't store VHD files. You can set an access tier to hot or cool. |
 
-<!--markdownlint-enable MD033 -->
-
 ### Storage redundancy options
 
 Storage accounts can use different types of redundancy for resilience and high availability.
@@ -141,7 +129,7 @@ Storage accounts can use different types of redundancy for resilience and high a
 | Type  | Details | Usage |
 | --- | --- | --- |
 | **Locally redundant storage (LRS)** | Protects against a local outage by replicating within a single storage unit to a separate fault domain and update domain. Keeps multiple copies of your data in one datacenter. Provides at least 99.999999999 percent (eleven 9's) durability of objects over a given year. | Consider if your app stores data that can be easily reconstructed. |
-| **Zone-redundant storage (ZRS)** | Protects again a datacenter outage by replicating across three storage clusters in a single region. Each storage cluster is physically separated and located in its own availability zone. Provides at least 99.9999999999 percent (twelve 9's) durability of objects over a given year by keeping multiple copies of your data across multiple datacenters or regions. | Consider if you need consistency, durability, and high availability. Might not protect against a regional disaster when multiple zones are permanently affected. |
+| **Zone-redundant storage (ZRS)** | Protects again a datacenter outage by replicating across three storage clusters in a single region. Each storage cluster is physically separated and located in its own Availability Zone. Provides at least 99.9999999999 percent (twelve 9's) durability of objects over a given year by keeping multiple copies of your data across multiple datacenters or regions. | Consider if you need consistency, durability, and high availability. Might not protect against a regional disaster when multiple zones are permanently affected. |
 | **Geo-redundant storage (GRS)** | Protects against an entire region outage by replicating data to a secondary region hundreds of miles away from the primary. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a given year. | Replica data isn't available unless Microsoft initiates a failover to the secondary region. If failover occurs, read and write access is available. |
 | **Read-access geo-redundant storage (RA-GRS)** | Similar to GRS. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a given year. | Provides and 99.99 percent read availability by allowing read access from the second region used for GRS. |
 

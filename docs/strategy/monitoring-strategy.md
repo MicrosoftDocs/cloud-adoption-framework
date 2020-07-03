@@ -82,7 +82,7 @@ Define your current and future architecture of systems management that includes 
 
 - Align monitoring to the future services and resources that you will be monitoring in the cloud.
 
-- Identify monitoring gaps across the three dimensions - depth, breadth and across the health model.
+- Identify monitoring gaps in the three dimensions (depth, breadth and across) of the health model.
 
 - Model the financial aspects, costs, and support factors that support a cost-benefit analysis.
 
@@ -108,7 +108,7 @@ Some key questions include:
 
 To assemble this architecture, here are several considerations:
 
-- A data flow approach starting from service assets and going up the stack - metrics and log data emitted by infrastructure, IoT devices, mobile devices, etc. Are all of the items under management—to-monitoring tools (mid-tier). Move upward and outward (ITSM tools, global monitoring, security information and event management (SIEM), custom alert enrichment, etc.).
+- A data-flow approach starting from service assets and going up the stack: metrics and log data emitted by infrastructure, IoT devices, mobile devices, and others. Are all of the items under management—to-monitoring tools (mid-tier). Move upward and outward (ITSM tools, global monitoring, security information and event management (SIEM), custom alert enrichment, etc.).
 
 - Whether to continue with [System Center Operations Manager](https://docs.microsoft.com/system-center/scom/welcome?view=sc-om-2019) or other monitoring tools.
 

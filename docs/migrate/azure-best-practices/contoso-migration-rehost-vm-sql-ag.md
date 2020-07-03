@@ -44,7 +44,7 @@ The Contoso cloud team has pinned down goals for this migration. These goals wer
 
 - Contoso wants to upgrade from their current SQL Server 2008 R2 platform, to SQL Server 2017.
 
-- Contoso doesn't want to use an Azure SQL Database for this app, and is looking for alternatives.
+- Contoso doesn't want to use Azure SQL Database for this app, and is looking for alternatives.
 
 ## Solution design
 
@@ -55,7 +55,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 - The app is tiered across two VMs (`WEBVM` and `SQLVM`).
 - The VMs are located on VMware ESXi host `contosohost1.contoso.com` (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), running on a VM.
-- Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (`contosodc1`).
+- Contoso has an on-premises datacenter (`contoso-datacenter`), with an on-premises domain controller (`contosodc1`).
 
 ### Proposed architecture
 
@@ -87,14 +87,10 @@ As part of the solution design process, Contoso did a feature comparison between
 
 Contoso evaluates their proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 | Consideration | Details |
 | --- | --- |
 | **Pros** | `WEBVM` will be moved to Azure without changes, making the migration simple. <br><br> The SQL Server tier will run on SQL Server 2017 and Windows Server 2016. This retires their current Windows Server 2008 R2 operating system, and running SQL Server 2017 supports Contoso's technical requirements and goals. IT provides 100% compatibility while moving away from SQL Server 2008 R2. <br><br> Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit. <br><br> A high availability SQL Server deployment in Azure provides fault tolerance so that the app data tier is no longer a single point of failover. |
 | **Cons** | `WEBVM` is running Windows Server 2008 R2. The operating system is supported by Azure for specific roles (July 2018). [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web tier of the app will remain a single point of failover. <br><br> Contoso will need to continue supporting the web tier as an Azure VM rather than moving to a managed service such as Azure App Service. <br><br> With the chosen solution, Contoso will need to continue managing two SQL Server VMs rather than moving to a managed platform such as Azure SQL Managed Instance. In addition, with Software Assurance, Contoso could exchange their existing licenses for discounted rates on Azure SQL Managed Instance. |
-
-<!-- markdownlint-enable MD033 -->
 
 ### Azure services
 
@@ -122,16 +118,12 @@ Contoso admins will migrate the app VMs to Azure.
 
 Here's what Contoso needs to do for this scenario.
 
-<!-- markdownlint-disable MD033 -->
-
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso already created a subscription in an early article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you owner or contributor permissions. <br><br>  |
+| **Azure subscription** | Contoso already created a subscription in an early article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. <br><br>  |
 | **Azure infrastructure** | Contoso set up the Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). <br><br> Learn more about specific [prerequisites](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prerequisites) requirements for Azure Migrate: Server Migration. |
-| **On-premises servers** | The on-premises vCenter server should be running version 5.5, 6.0, 6.5 or 6.7. <br><br> An ESXi host running version 5.5, 6.0, 6.5 or 6.7. <br><br> One or more VMware VMs running on the ESXi host. |
+| **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, 6.5 or 6.7. <br><br> An ESXi host running version 5.5, 6.0, 6.5 or 6.7. <br><br> One or more VMware VMs running on the ESXi host. |
 | **On-premises VMs** | [Review Linux machines](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Scenario steps
 
@@ -334,7 +326,7 @@ Contoso admins set these up as follows:
 
 Here's what Contoso admins prepare on-premises:
 
-- An account on the vCenter server or vSphere ESXi host, to automate VM discovery.
+- An account on the vCenter Server or vSphere ESXi host, to automate VM discovery.
 - On-premises VM settings, so that Contoso can connect to the replicated Azure VM after migration.
 
 ### Prepare an account for automatic discovery
@@ -360,7 +352,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
     - Ensure that TCP and UDP rules are added for the **Public** profile.
     - Check that RDP or SSH is allowed in the operating system firewall.
 
-2. For access over site-to-site VPN, they:
+2. For access over Site-to-Site VPN, they:
 
     - Enable RDP or SSH on the on-premises VM before migration.
     - Check that RDP or SSH is allowed in the operating system firewall.
@@ -418,7 +410,7 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
     - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group you specify for the migration.
 
-9. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (standard SSD/HDD or premium-managed disks) in Azure. Then select **Next**.
+9. In **Disks**, specify whether the VM disks should be replicated to Azure, and select the disk type (standard SSD/HDD or premium managed disks) in Azure. Then select **Next**.
     - You can exclude disks from replication.
     - If you exclude disks, won't be present on the Azure VM after migration.
 
@@ -531,14 +523,14 @@ Running a test migration helps ensure that everything's working as expected befo
 
 ### Update the connection string
 
-As the final step in the migration process, Contoso admins update the connection string of the application to point to the migrated database running on the `SHAOG` listener. This configuration will be changed on the `WEBVM` now running in Azure. This configuration is located in the web.config of the asp application.
+As the final step in the migration process, Contoso admins update the connection string of the application to point to the migrated database running on the `SHAOG` listener. This configuration will be changed on the `WEBVM` now running in Azure. This configuration is located in the web.config of the ASP.NET application.
 
 1. Locate the file at `C:\inetpub\SmartHotelWeb\web.config`. Change the name of the server to reflect the FQDN of the Always On availability group: `shaog.contoso.com`.
 
     ![Failover](./media/contoso-migration-rehost-vm-sql-ag/failover4.png)
 
 2. After updating the file and saving it, they restart IIS on `WEBVM`. They do this using `iisreset /restart` from a command prompt.
-3. After IIS has been restarted, the application is now using the database running on the SQL mi.
+3. After IIS has been restarted, the application is now using the database running on the managed instance.
 
 **Need more help?**
 

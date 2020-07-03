@@ -61,14 +61,10 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 Contoso evaluates the proposed design by putting together a pros and cons list.
 
-<!-- markdownlint-disable MD033 -->
-
 | Consideration | Details |
 | --- | --- |
 | **Pros** | Both the app VMs will be moved to Azure without changes, making the migration simple. <br><br> Since Contoso is using a lift and shift approach for both app VMs, no special configuration or migration tools are needed for the app database. <br><br> Contoso will retain full control of the app VMs in Azure. <br><br> The app VMs are running Ubuntu 16.04-tls, an endorsed Linux distribution. [Learn more](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros). |
 | **Cons** | The web and data tier of the app will remain a single point of failover. <br><br> Contoso will need to continue supporting the app as Azure VMs rather than moving to a managed service such as Azure App Service and Azure Database for MySQL. <br><br> Contoso realizes that, by keeping things simple with a lift and shift VM migration, they're not taking full advantage of the features provided by [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview) (built-in high availability, predictable performance, simple scaling, automatic backups, and built-in security). |
-
-<!-- markdownlint-enable MD033 -->
 
 ### Migration process
 
@@ -91,16 +87,12 @@ Contoso will migrate as follows:
 
 Here's what Contoso needs for this scenario.
 
-<!-- markdownlint-disable MD033 -->
-
 Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions in an early article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you owner or contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure subscription** | Contoso created subscriptions in an early article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure. <br><br> Learn more about specific [prerequisites](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-linux-vm#prerequisites) requirements for Azure Migrate: Server Migration. |
-| **On-premises servers** | The on-premises vCenter server should be running version 5.5, 6.0, or 6.5 <br><br> An ESXi host running version 5.5, 6.0 or 6.5 <br><br> One or more VMware VMs running on the ESXi host. |
+| **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, or 6.5 <br><br> An ESXi host running version 5.5, 6.0 or 6.5 <br><br> One or more VMware VMs running on the ESXi host. |
 | **On-premises VMs** | [Review Linux Distros](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
-
-<!-- markdownlint-enable MD033 -->
 
 ## Scenario steps
 

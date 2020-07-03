@@ -41,19 +41,18 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Delegated Key Vault instantiation and privileged access: ([secure access](https://docs.microsoft.com/azure/key-vault/general/secure-your-key-vault))
 
-- Requirements surrounding using customer-managed keys for native encryption mechanisms such as storage service encryption (SSE): [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
+- Requirements surrounding using customer-managed keys for native encryption mechanisms such as Azure Storage encryption:
 
-- Whole-disk encryption for virtual machines (VMs).
-
-- Data-in-transit encryption.
-
-- Data-at-rest encryption.
+  - [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
+  - Whole-disk encryption for virtual machines (VMs).
+  - Data-in-transit encryption.
+  - Data-at-rest encryption.
 
 **Design recommendations:**
 
-- Use a federated Key Vault model to avoid transaction scale limits.
+- Use a federated Azure Key Vault model to avoid transaction scale limits.
 
-- Provision Key Vault with the soft delete and purge policies enabled to allow retention protection for deleted objects.
+- Provision Azure Key Vault with the soft delete and purge policies enabled to allow retention protection for deleted objects.
 
 - Follow a least privilege model by limiting authorization to permanently delete keys, secrets, and certificates to specialized custom Azure Active Directory roles.
 
