@@ -64,7 +64,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 
 | Type | Details | Usage |
 | --- | --- | --- |
-| **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small- to medium-size databases, low- to medium-volume traffic web servers. |
+| **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small- to medium-sized databases, low- to medium-volume traffic web servers. |
 | **Compute-optimized** | High CPU-to-memory. | Good for medium-volume traffic web server, network appliances, batch processes, app servers. |
 | **Memory-optimized** | High memory-to-CPU. | Good for relational databases, medium- to large-size cache, in-memory analytics. |
 | **Storage optimized** | High disk throughput and I/O. | Good for big data, SQL and NoSQL databases. |
