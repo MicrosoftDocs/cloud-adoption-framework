@@ -98,7 +98,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 Here's what Contoso needs for this scenario:
 
-| Requirements  | Details |
+| Requirements | Details |
 | --- | --- |
 | Azure subscription | <li> Contoso created subscriptions during an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <li> If you create a free account, you're the administrator of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
 | Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). |

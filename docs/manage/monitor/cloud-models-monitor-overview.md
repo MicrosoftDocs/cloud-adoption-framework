@@ -10,8 +10,6 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
-<!-- docsTest:ignore ".NET" -->
-
 <!-- cSpell:ignore savision -->
 
 # Cloud monitoring guide: Monitoring strategy for cloud deployment models

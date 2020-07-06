@@ -64,7 +64,7 @@ Consider the following:
 - Hub and spoke VNets can be implemented in different resource groups, and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same, or different, Azure Active Directory (Azure AD) tenants. This allows for decentralized management of each workload, while sharing services maintained in the hub network.
 
 ![Change management](./media/migrate-best-practices-networking/hub-spoke.png)
-_Hub and spoke topology_
+_Hub and spoke topology._
 
 **Learn more:**
 
@@ -80,14 +80,14 @@ To provide isolation within a VNet, you segment it into one or more subnets, and
 - By default, Azure routes network traffic between all subnets in a VNet.
 - Your subnet decisions are based on your technical and organizational requirements.
 - You create subnets using CIDR notation.
-- When deciding on network range for subnets, it's important to note that Azure retains five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of /29 (with eight IP addresses), Azure will retain five addresses, so you only have three usable addresses that can be assigned to hosts on the subnet.
-- For most cases, use /28 as the smallest subnet.
+- When deciding on network range for subnets, it's important to note that Azure retains five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of `/29` (with eight IP addresses), Azure will retain five addresses, so you only have three usable addresses that can be assigned to hosts on the subnet.
+- For most cases, use `/28` as the smallest subnet.
 
 **Example:**
 
 The table shows an example of a VNet with an address space of `10.245.16.0/20` segmented into subnets, for a planned migration.
 
-| Subnet  | CIDR | Addresses | Usage |
+| Subnet | CIDR | Addresses | Usage |
 | --- | --- | --- | --- |
 | `DEV-FE-EUS2` | `10.245.16.0/22` | 1019 | Front-end/web tier VMs |
 | `DEV-APP-EUS2` | `10.245.20.0/22` | 1019 | App-tier VMs |
@@ -112,7 +112,7 @@ Azure adds a DNS server by default when you deploy a VNet. This allows you to ra
 - In the Azure Resource Manager deployment model, you can specify DNS servers for a VNet and a network interface, but the best practice is to use the setting only on VNets.
 
     ![DNS servers](./media/migrate-best-practices-networking/dns2.png)
-    _DNS servers for vnet_
+    _DNS servers for VNet._
 
 **Learn more:**
 
@@ -130,7 +130,7 @@ Availability Zones increase high-availability to protect your apps and data from
 - Zone-redundant services replicate your applications and data across Availability Zones to protect from single points of failure. - - With Availability Zones, Azure offers an SLA of 99.99 percent VM uptime.
 
     ![Availability zone](./media/migrate-best-practices-networking/availability-zone.png)
-    _Availability zone_
+    _Availability Zone._
 
 - You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone, and replicating them in other zones. Azure services that support Availability Zones fall into two categories:
   - **Zonal services:** You associate a resource with a specific zone, such as VMs, managed disks, or IP addresses.
@@ -138,7 +138,7 @@ Availability Zones increase high-availability to protect your apps and data from
 - You can deploy a standard Azure load balanced with internet-facing workloads or app tiers, to provide zonal fault tolerance.
 
     ![Load balancer](./media/migrate-best-practices-networking/load-balancer.png)
-    _Load balancer_
+    _Load balancer._
 
 **Learn more:**
 
@@ -181,7 +181,7 @@ When setting up a Site-to-Site VPN, you do the following:
 - Border gateway protocol (BGP) is an optional feature you can use with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your VNets.
 
 ![VPN](./media/migrate-best-practices-networking/vpn.png)
-_Site-to-Site vpn_
+_Site-to-Site VPN._
 
 **Learn more:**
 
@@ -220,10 +220,10 @@ For multiple VPN connections, Azure Virtual WAN is a networking service that pro
 
 The Azure ExpressRoute service extends your on-premises infrastructure into the Microsoft cloud by creating private connections between the virtual Azure datacenter and on-premises networks.
 
-- ExpressRoute connections can be over an any-to-any (IP VPN) network, a point-to-point ethernet network, or through a connectivity provider. They don't go over the public internet.
+- ExpressRoute connections can be over an any-to-any (IP VPN) network, a point-to-point Ethernet network, or through a connectivity provider. They don't go over the public internet.
 - ExpressRoute connections offer higher security, reliability, and higher speeds (up to 10 Gbps), along with consistent latency.
 - ExpressRoute is useful for virtual datacenters, as customers can get the benefits of compliance rules associated with private connections.
-- With ExpressRoute Direct, you can connect directly to Microsoft routers at 100gbps, for larger bandwidth needs.
+- With ExpressRoute Direct, you can connect directly to Microsoft routers at 100 Gbps, for larger bandwidth needs.
 - ExpressRoute uses BGP to exchange routes between on-premises networks, Azure instances, and Microsoft public addresses.
 
 Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a rapid start, it's common to initially use a Site-to-Site VPN to establish connectivity between the virtual datacenter and on-premises resources, and then migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
@@ -241,36 +241,36 @@ When you have multiple ExpressRoute circuits, you have more than one path to con
 
 Let's review an example:
 
-- You have two offices in the US, one in los angeles and one in New York.
+- You have two offices in the US, one in Los Angeles and one in New York.
 - Your offices are connected on a WAN, which can be either your own backbone network or your service provider's IP VPN.
-- You have two ExpressRoute circuits, one in US west and one in US east, that are also connected on the WAN. Obviously, you have two paths to connect to the Microsoft network.
+- You have two ExpressRoute circuits, one in `West US` and one in `East US`, that are also connected on the WAN. Obviously, you have two paths to connect to the Microsoft network.
 
 **Problem:**
 
-Now imagine you have an Azure deployment (for example, Azure App Service) in both US west and US east.
+Now imagine you have an Azure deployment (for example, Azure App Service) in both `West US` and `East US`.
 
 - You want users in each office to access their nearest Azure services for an optimal experience.
-- Thus you want to connect users in los angeles to Azure US west and users in New York to Azure US east.
+- Thus you want to connect users in Los Angeles to Azure `West US` and users in New York to Azure `East US`.
 - This works for east coast users, but not for those on the west coast. The problem is:
-  - On each ExpressRoute circuit, we advertise both prefixes in Azure US east (`23.100.0.0/16`) and Azure US west (`13.100.0.0/16`).
+  - On each ExpressRoute circuit, we advertise both prefixes in Azure: `East US` (`23.100.0.0/16`) and Azure `West US` (`13.100.0.0/16`).
   - Without knowing which prefix is from which region, prefixes aren't treated differently.
-  - Your WAN network can assume that both prefixes are closer to US east than US west, and thus route users from both offices to the ExpressRoute circuit in US east, providing a suboptimal experience for users in the los angeles office.
+  - Your WAN network can assume that both prefixes are closer to `East US` than `West US`, and thus route users from both offices to the ExpressRoute circuit in `East US`, providing a suboptimal experience for users in the Los Angeles office.
 
 ![VPN](./media/migrate-best-practices-networking/bgp1.png)
-_BGP communities unoptimized connection_
+_BGP communities unoptimized connection._
 
 **Solution:**
 
-To optimize routing for both office users, you need to know which prefix is from Azure US west and which is from Azure US east. You can encode this information by using BGP community values.
+To optimize routing for both office users, you need to know which prefix is from Azure `West US` and which is from Azure `East US`. You can encode this information by using BGP community values.
 
-- You assign a unique BGP community value to each Azure region. For example, 12076:51004 for US east; 12076:51006 for US west.
+- You assign a unique BGP community value to each Azure region. For example, 12076:51004 for `East US`; 12076:51006 for `West US`.
 - Now that it's clear which prefix belongs to which Azure region, you can configure a preferred ExpressRoute circuit.
 - Because you're using BGP to exchange routing information, you can use BGP's local preference to influence routing.
-- In our example, you assign a higher local preference value to `13.100.0.0/16` in US west than in US east, and similarly, a higher local preference value to `23.100.0.0/16` in US east than in US west.
-- This configuration ensures that when both paths to Microsoft are available, users in los angeles will connect to Azure US west using the west circuit, and users New York connect to Azure US east using the east circuit. Routing is optimized on both sides.
+- In our example, you assign a higher local preference value to `13.100.0.0/16` in `West US` than in `East US`, and similarly, a higher local preference value to `23.100.0.0/16` in `East US` than in `West US`.
+- This configuration ensures that when both paths to Microsoft are available, users in Los Angeles connect to the `West US` region using the west circuit, and users in New York connect to the `East US` region using the east circuit. Routing is optimized on both sides.
 
 ![VPN](./media/migrate-best-practices-networking/bgp2.png)
-_BGP communities optimized connection_
+_BGP communities optimized connection._
 
 **Learn more:**
 
@@ -285,6 +285,8 @@ The responsibility for securing VNets is shared between Microsoft and you. Micro
 - Read an [overview of best practices for network security](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices).
 - Learn how to [design for secure networks](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm#security).
 
+<!-- docsTest:ignore "IDS/IPS" -->
+
 ## Best practice: Implement an Azure perimeter network
 
 Although Microsoft invests heavily in protecting the cloud infrastructure, you must also protect your cloud services and resource groups. A multilayered approach to security provides the best defense. Putting a perimeter network in place is an important part of that defense strategy.
@@ -292,7 +294,7 @@ Although Microsoft invests heavily in protecting the cloud infrastructure, you m
 - A perimeter network protects internal network resources from an untrusted network.
 - It's the outermost layer that's exposed to the internet. It generally sits between the internet and the enterprise infrastructure, usually with some form of protection on both sides.
 - In a typical enterprise network topology, the core infrastructure is heavily fortified at the perimeters, with multiple layers of security devices. The boundary of each layer consists of devices and policy enforcement points.
-- Each layer can include a combination of the network security solutions that include firewalls, denial of service (DoS) prevention, intrusion detection/intrusion protection systems (IDs/IPs), and VPN devices.
+- Each layer can include a combination of the network security solutions that include firewalls, denial of service (DoS) prevention, intrusion detection/intrusion protection systems (IDS/IPS), and VPN devices.
 - Policy enforcement on the perimeter network can use firewall policies, access control lists (ACLs), or specific routing.
 - As incoming traffic arrives from the internet, it's intercepted and handled by a combination of defense solution to block attacks and harmful traffic, while allowing legitimate requests into the network.
 - Incoming traffic can route directly to resources in the perimeter network. The perimeter network resource can then communicate with other resources deeper in the network, moving traffic forward into the network after validation.
@@ -300,7 +302,7 @@ Although Microsoft invests heavily in protecting the cloud infrastructure, you m
 The following figure shows an example of a single subnet perimeter network in a corporate network, with two security boundaries.
 
 ![VPN](./media/migrate-best-practices-networking/perimeter.png)
-_Perimeter network deployment_
+_Perimeter network deployment._
 
 **Learn more:**
 
@@ -358,9 +360,9 @@ Application security groups enable you to configure network security as a natura
 **Example:**
 
 ![Application security group](./media/migrate-best-practices-networking/asg.png)
-_Application security group example_
+_Application security group example._
 
-| Network interface  | Application security group |
+| Network interface | Application security group |
 | --- | --- |
 | `NIC1` | `AsgWeb` |
 | `NIC2` | `AsgWeb` |
@@ -370,7 +372,7 @@ _Application security group example_
 - In our example, each network interface belongs to only one application security group, but in fact an interface can belong to multiple groups, in accordance with Azure limits.
 - None of the network interfaces have an associated NSG. `NSG1` is associated to both subnets and contains the following rules.
 
-| Rule name  | Purpose | Details |
+| Rule name | Purpose | Details |
 | --- | --- | --- |
 | `Allow-HTTP-Inbound-Internet` | Allow traffic from the internet to the web servers. Inbound traffic from the internet is denied by the `DenyAllInbound` default security rule, so no additional rule is needed for the `AsgLogic` or `AsgDb` application security groups. | Priority: `100`<br><br> Source: `internet` <br><br> Source port: `*` <br><br> Destination: `AsgWeb` <br><br> Destination port: `80` <br><br> Protocol: `TCP` <br><br> Access: `Allow` |
 | `Deny-Database-All` | `AllowVNetInBound` default security rule allows all communication between resources in the same VNet, this rule is needed to deny traffic from all resources. | Priority: `120` <br><br> Source: `*` <br><br> Source port: `*` <br><br> Destination: `AsgDb` <br><br> Destination port: `1433` <br><br> Protocol: `All` <br><br> Access: `Deny` |
@@ -391,7 +393,7 @@ VNet service endpoints extend your VNet private address space and identity to Az
 - After service endpoints are enabled in your VNet, you can secure Azure service resources by adding a VNet rule to the service resources. This provides improved security by fully removing public internet access to resources, and allowing traffic only from your VNet.
 
 ![Service endpoints](./media/migrate-best-practices-networking/endpoint.png)
-_Service endpoints_
+_Service endpoints._
 
 **Learn more:**
 
@@ -423,7 +425,7 @@ Azure has platform security features that are easy to use, and provide rich coun
 Azure Firewall is a managed cloud-based network security service that protects your VNet resources. It is a fully stateful managed firewall with built-in high availability and unrestricted cloud scalability.
 
 ![Service endpoints](./media/migrate-best-practices-networking/firewall.png)
-_Azure firewall_
+_Azure Firewall._
 
 - Azure Firewall can centrally create, enforce, and log application and network connectivity policies across subscriptions and VNets.
 - Azure Firewall uses a static public IP address for your VNet resources, allowing outside firewalls to identify traffic originating from your VNet.
@@ -461,7 +463,7 @@ The Web Application Firewall (WAF) is a feature of Azure Application Gateway.
 Azure Network Watcher provides tools to monitor resources and communications in an Azure VNet. For example, you can monitor communications between a VM and an endpoint such as another VM or FQDN, view resources and resource relationships in a VNet, or diagnose network traffic issues.
 
 ![Network Watcher](./media/migrate-best-practices-networking/network-watcher.png)
-_Network watcher_
+_Network Watcher._
 
 - With Network Watcher you can monitor and diagnose networking issues without logging into VMs.
 - You can trigger packet capture by setting alerts, and gain access to real-time performance information at the packet level. When you see an issue, you can investigate it in detail.
@@ -487,7 +489,7 @@ For more complex network topologies, you might use security products from Micros
 
 In the hub, the perimeter network (with access to the internet) is normally managed through an Azure Firewall, a firewall farm, or a Web Application Firewall (WAF). Consider the following comparisons.
 
-| Firewall type  | Details |
+| Firewall type | Details |
 | --- | --- |
 | WAFs | Web applications are common, and tend to suffer from vulnerabilities and potential exploits. <br><br> WAFs are designed to detect attacks against web applications (HTTP/HTTPS), more specifically than a generic firewall. <br><br> Compared with traditional firewall technology, WAFs have a set of specific features that protect internal web servers from threats. |
 | Azure Firewall | Like NVA firewall farms, Azure Firewall uses a common administration mechanism, and a set of security rules to protect workloads hosted in spoke networks, and to control access to on-premises networks. <br><br> The Azure Firewall has built-in scalability. |

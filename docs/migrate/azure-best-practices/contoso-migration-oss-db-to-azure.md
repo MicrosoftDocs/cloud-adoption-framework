@@ -1,6 +1,6 @@
 ---
-title: Migrate open source databases to Azure
-description: Learn how Contoso migrated their on-premises open source databases to Azure.
+title: Migrate open-source databases to Azure
+description: Learn how Contoso migrated their on-premises open-source databases to Azure.
 author: deltadan
 ms.author: abuck
 ms.date: 07/01/2020
@@ -10,21 +10,21 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-# Migrate open source databases to Azure
+# Migrate open-source databases to Azure
 
-This article demonstrates how a fictional company Contoso assessed, planned and migrated their various on-premises open source databases to Azure.
+This article demonstrates how a fictional company Contoso assessed, planned, and migrated their various on-premises open-source databases to Azure.
 
 As Contoso considers migrating to Azure, the company needs a technical and financial assessment to determine whether its on-premises workloads are good candidates for cloud migration. In particular, the Contoso team wants to assess machine and database compatibility for migration. Additionally, it wants to estimate capacity and costs for running Contoso's resources in Azure.
 
 ## Business drivers
 
-Contoso is having various issues with maintaining all the wide array of versions of open source database workloads that exist on their network. After the latest investor's meeting, the CFO and cto have made the decision to move all these workloads to Azure. This will allow them to shift from a structured capital expense model to a fluid operating expense model.
+Contoso is having various issues with maintaining all the wide array of versions of open-source database workloads that exist on their network. After the latest investor's meeting, the CFO and CTO have made the decision to move all these workloads to Azure. This will allow them to shift from a structured capital expense model to a fluid operating expense model.
 
 The IT leadership team has worked closely with business partners to understand the business and technical requirements:
 
 - **Increase security:** Contoso needs to be able to monitor and protect all data resources in a more timely and efficient manner. They would also like to get a more centralized reporting system setup on database access patterns.
 
-- **Optimize compute resources:** Contoso has deployed a large on-premises server infrastructure. They have several SQL Server instances that consume but do not really use the underlying CPU, memory and disk allocated in efficient ways.
+- **Optimize compute resources:** Contoso has deployed a large on-premises server infrastructure. They have several SQL Server instances that consume but do not really use the underlying CPU, memory, and disk allocated in efficient ways.
 
 - **Increase efficiency:** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements. Database administration should be reduced and/or minimized after the migration.
 
@@ -45,7 +45,7 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 | **Data sources** | All databases will be moved to Azure with no exceptions. Based on the database and application analysis of the SQL features being used, they will move to PaaS or IaaS. All databases must move. |
 | **App** | Apps will need to be moved to the cloud where possible. If they cannot move, then they will be allowed to connect to the migrated database over the Azure network through private connections only. |
 | **Costs** | Contoso wants to understand not only its migration options, but also the costs associated with the infrastructure after it moves to the cloud. |
-| **Management** | Resource management groups will need to be created for the various departments along with resource groups to managed all databases that are migrated. All resources will need to be tagged with department information for charge-back requirements. |
+| **Management** | Resource management groups will need to be created for the various departments along with resource groups to manage all databases that are migrated. All resources will need to be tagged with department information for charge-back requirements. |
 | **Limitations** | Initially, not all branch offices that run applications will have a direct ExpressRoute link to Azure, so these offices will need to connect through virtual network gateways. |
 
 ## Solution design
@@ -77,18 +77,18 @@ For the billing requirements, each of the Azure resources are then [tagged](http
 Data migrations follow a standard repeatable pattern. This involves the following steps based on [Microsoft best practices](https://datamigration.microsoft.com/):
 
 - Pre-migration:
-  - **Discovery:** Inventory database assets and application stack
-  - **Assess:** Assess workloads and fix recommendations
-  - **Convert:** Convert source schema to work in the target
-- Migration
-  - **Migrate:** Migrate the source schema, source data and objects to target
-  - **Sync data:** Sync data (for minimal downtime)
-  - **Cutover:** Cut over the source to target
-- Post-migration
-  - **Remediate applications:** Iteratively make and necessary changes to your applications
-  - **Perform tests:** Iteratively run functional and performance tests
-  - **Optimize:** Based on tests, address performance issues and then retest to confirm performance improvements
-  - **Retire assets:** Old VMs and hosting environments are backed up and retired
+  - **Discovery:** Inventory database assets and application stack.
+  - **Assess:** Assess workloads and fix recommendations.
+  - **Convert:** Convert source schema to work in the target.
+- Migration:
+  - **Migrate:** Migrate the source schema, source data, and objects to target.
+  - **Sync data:** Sync data (for minimal downtime).
+  - **Cutover:** Cut over the source to target.
+- Post-migration:
+  - **Remediate applications:** Iteratively make and necessary changes to your applications.
+  - **Perform tests:** Iteratively run functional and performance tests.
+  - **Optimize:** Based on tests, address performance issues and then retest to confirm performance improvements.
+  - **Retire assets:** Old VMs and hosting environments are backed up and retired.
 
 #### Step 1: Discovery
 
@@ -98,7 +98,7 @@ With the Azure migration, Contoso has identified over 300 database instances tha
 
 #### Step 2: Application assessment
 
-The results from the assessment provided Contoso with the visibility that they utilizes primarily Java, PHP and Node.js applications. They have identified the following:
+The results from the assessment provided Contoso with the visibility that they utilize primarily Java, PHP, and Node.js applications. They have identified the following:
 
 - 100 Java applications
 - ~50 Node.js applications
@@ -118,7 +118,7 @@ As the databases were inventoried each type of database was reviewed to determin
 
 Due to the large number of databases, Contoso setup a project management office (PMO) to keep track of every database migration instance. [Accountability and responsibilities](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/) were assigned to each business and application team.
 
-Contoso also performed a [workload readiness review](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/evaluate). This review examined the infrastructure, database and network components.
+Contoso also performed a [workload readiness review](https://docs.microsoft.com/azure/cloud-adoption-framework/migrate/migration-considerations/assess/evaluate). This review examined the infrastructure, database, and network components.
 
 #### Step 5: Test migrations
 
@@ -168,4 +168,4 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ## Conclusion
 
-In this article, Contoso assessed, planned and migrated their open source databases to Azure PaaS and IaaS solutions.
+In this article, Contoso assessed, planned, and migrated their open-source databases to Azure PaaS and IaaS solutions.

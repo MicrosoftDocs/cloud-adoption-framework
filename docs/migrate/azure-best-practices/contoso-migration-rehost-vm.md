@@ -10,8 +10,6 @@ ms.subservice: migrate
 services: azure-migrate
 ---
 
-<!-- docsTest:ignore ".NET" -->
-
 <!-- cSpell:ignore givenscj WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless -->
 
 # Rehost an on-premises app on Azure VMs
@@ -69,7 +67,7 @@ As part of the solution design process, Contoso did a feature comparison between
 
 Contoso evaluates the proposed design by putting together a pros and cons list.
 
-| Consideration  | Details |
+| Consideration | Details |
 | --- | --- |
 | **Pros** | Both the app VMs will be moved to Azure without changes, making the migration simple. <br><br> Since Contoso is using a lift and shift approach for both app VMs, no special configuration or migration tools are needed for the app database. <br><br> Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the app VMs in Azure. |
 | **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles. [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the app will remain a single point of failure. <br><br> SQLVM is running on SQL Server 2008 R2, which is no longer in mainstream support. But it is supported for Azure VMs. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the app on Azure VMs, rather than moving to a managed service such as Azure App Service and Azure SQL Database. |
@@ -87,7 +85,7 @@ Contoso will migrate the app front-end and database VMs to Azure VMs using the A
 
 ### Azure services
 
-| Service  | Description | Cost |
+| Service | Description | Cost |
 | --- | --- | --- |
 | [Azure Migrate: Server Migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm) | The service orchestrates and manages migration of your on-premises apps and workloads, and AWS/GCP VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing. |
 
@@ -95,7 +93,7 @@ Contoso will migrate the app front-end and database VMs to Azure VMs using the A
 
 Here's what Contoso needs to run this scenario.
 
-| Requirements  | Details |
+| Requirements | Details |
 | --- | --- |
 | **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
 | **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure. <br><br> Learn more about specific [prerequisites](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prerequisites) requirements for Azure Migrate: Server Migration. |

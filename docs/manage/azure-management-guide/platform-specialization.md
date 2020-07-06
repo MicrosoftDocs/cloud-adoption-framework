@@ -25,7 +25,7 @@ Both workload and platform operations require changes to design and architecture
 
 This table outlines a few common processes, tools, and potential effects common in customers' enhanced management baselines:
 
-| Process | Tool | Purpose  | Suggested management level |
+| Process | Tool | Purpose | Suggested management level |
 |---|---|---|---|
 | Improve system design | Microsoft Azure Well-Architected Framework | Improving the architectural design of the platform to improve operations | N/A |
 | Automate remediation | Azure Automation | Responding to advanced platform data with platform-specific automation | Platform operations |

@@ -124,7 +124,7 @@ Contoso will provision the WVD service in the `East US 2` Azure region. The WVD 
   ![New Azure Migrate project](./media/contoso-migration-rds-to-wvd/new-azure-migrate.png)
   _Figure 3: Creating a new Azure Migrate project._
 
-- Choose the option to assess and migrate servers, select VDI, and add a tool.
+- Choose the option to assess and migrate servers, select `VDI`, and add a tool.
 
   ![Azure Migrate goals of VDI](./media/contoso-migration-rds-to-wvd/azure-migrate-goals-vdi.png)
   _Figure 4: Target Azure Migrate goals._
@@ -137,9 +137,9 @@ Contoso will provision the WVD service in the `East US 2` Azure region. The WVD 
 > [!IMPORTANT]
 > This isn't where the new WVD environment will be deployed as only the the data related to the Azure Migrate project will be stored here.
 
-- Choose Lakeside: SysTrack as the assessment tool.
+- Select **Lakeside: SysTrack** as the assessment tool.
 
-- Select Azure Migrate: Server Migration for the migration tool.
+- Select **Azure Migrate: Server Migration** as the migration tool.
 
 - Add the tools to the migration project.
 

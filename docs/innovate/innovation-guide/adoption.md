@@ -83,7 +83,7 @@ To record quantitative data on your APIs:
 
 1. Go to **API Management services**.
 2. Select the desired API from the list.
-3. Select **Diagnostic Settings** in the **Monitoring** section.
+3. Select **Diagnostic settings** in the **Monitoring** section.
 
 To view quantitative data on your APIs:
 
