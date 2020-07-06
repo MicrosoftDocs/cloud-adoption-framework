@@ -1,8 +1,8 @@
 ---
 title: Start with enterprise-scale landing zones
 description: Start with enterprise-scale landing zones.
-author: BrianBlanchard
-ms.author: brblanch
+author: alexbuckgit
+ms.author: abuck
 ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework
