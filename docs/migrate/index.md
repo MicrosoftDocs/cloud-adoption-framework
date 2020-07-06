@@ -1,12 +1,14 @@
 ---
 title: "Cloud migration"
-description: Learn how to establish the iterative processes to assess, migrate, optimize, secure, and manage the workloads you want to migrate to the cloud.
+description: Migrate to Azure. Learn about the phases of migration. Prepare for a successfully migration to Azure using an iterative processes to assess, migrate, optimize, secure, and manage workloads.
+keywords: azure cloud migration, cloud adoption, migrate to azure, lift and shift, migration waves, migration planning, migrate methodology, cloud migration framework
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: azure-migrate-seo
 ---
 
 # Cloud migration in the Cloud Adoption Framework
@@ -51,7 +53,7 @@ The following bullets provide an overview of the phases of this process (picture
 > [!NOTE]
 > When building a migration factory, some teams may choose to disperse each of the above phases across multiple teams and multiple sprints. This approach can improve repeatability and accelerate migration efforts.
 
-## Migration waves
+## Migration waves and iterative change management
 
 Migration iterations will deliver technical value by migrating assets and workloads. A migration wave is the smallest collection of workloads, which deliver tangible and measurable business value. Each iteration should end in a report outlining the technical efforts completed. However, business change and strategic planning generally happens at a slightly higher level. As the cloud adoption team delivers on the migration effort, the cloud strategy team focuses on planning the next 1-2 migration waves. The cloud strategy team also tracks technical progress as a learning metric to better understand the timelines for realizing business value. In that regard, migration waves are the iterative change management approach to tracking business outcomes, people, and timelines.
 
@@ -59,7 +61,7 @@ As outlined in the graphic in the prior section, processes within the [Plan meth
 
 ## Next steps
 
-The steps outlined above, and subsequent guidance in the Migrate methodology, can help you develop skills to improve execution of the processes within each migration sprint. The [Azure migration guide](./azure-migration-guide/index.md) is a brief series of articles that outlines the most common tools and approaches needed during your first migration wave.
+The steps outlined above, and subsequent guidance in the Migrate methodology, can help you develop skills to improve processes within each migration sprint. The [Azure migration guide](./azure-migration-guide/index.md) is a brief series of articles that outlines the most common tools and approaches needed during your first migration wave.
 
 > [!div class="nextstepaction"]
 > [Azure migration guide](./azure-migration-guide/index.md)
