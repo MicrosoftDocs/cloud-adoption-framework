@@ -48,8 +48,8 @@ In addition to assessments and recommendations, the Azure Security Center provid
 - **Adaptive application controls.** Keep software and malware off VMs by controlling which apps run on them using dynamic allow lists.
   - Adaptive application controls allow you to approve apps, and prevent rogue users or administrators from installing unapproved or vetting software apps on your VMs.
     - You can block or alert attempts to run malicious apps, avoid unwanted or malicious apps, and ensure compliance with your organization's app security policy.
-- **File integrity monitoring.** Ensure the integrity of files running on VMs.
-  - You don't need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File integrity monitoring examines system files and registry settings for changes, and notifies you if something is updated.
+- **File Integrity Monitoring.** Ensure the integrity of files running on VMs.
+  - You don't need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File Integrity Monitoring examines system files and registry settings for changes, and notifies you if something is updated.
   - Security Center recommends which files you should monitor.
 
 **Learn more:**
@@ -57,7 +57,7 @@ In addition to assessments and recommendations, the Azure Security Center provid
 - Learn more about [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro).
 - Learn more about [just in time VM access](https://docs.microsoft.com/azure/security-center/security-center-just-in-time).
 - Learn about [applying adaptive application controls](https://docs.microsoft.com/azure/security-center/security-center-adaptive-application).
-- [Get started](https://docs.microsoft.com/azure/security-center/security-center-file-integrity-monitoring) with file integrity monitoring.
+- [Get started](https://docs.microsoft.com/azure/security-center/security-center-file-integrity-monitoring) with File Integrity Monitoring.
 
 ## Best practice: Encrypt data
 
@@ -78,9 +78,9 @@ Encryption is an important part of Azure security practices. Ensuring that encry
 
 Unlike IaaS where you manage your own VMs and infrastructure, in a PaaS model platform and infrastructure is managed by the provider, leaving you to focus on core app logic and capabilities. With so many different types of PaaS services, each service is evaluated individually for security purposes. As an example, let's see how we might enable encryption for Azure SQL Database.
 
-- **Always encrypted:** Use the always encrypted wizard in SQL Server Management Studio to protect data at rest.
-  - You create an always encrypted key to encrypt individual column data.
-  - Always encrypted keys can be stored as encrypted in database metadata, or stored in trusted key stores such as Azure Key Vault.
+- **Always Encrypted:** Use the Always Encrypted wizard in SQL Server Management Studio to protect data at rest.
+  - You create an Always Encrypted key to encrypt individual column data.
+  - Always Encrypted keys can be stored as encrypted in database metadata, or stored in trusted key stores such as Azure Key Vault.
   - App changes will probably be needed to use this feature.
 - **Transparent data encryption (TDE):** Protect the Azure SQL Database with real-time encryption and decryption of the database, associated backups, and transaction log files at rest.
   - TDE allows encryption activities to take place without changes at the app layer.
@@ -91,7 +91,7 @@ Unlike IaaS where you manage your own VMs and infrastructure, in a PaaS model pl
 - Learn about [Azure Disk Encryption for virtual machines and virtual machine scale sets](https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss).
 - Enable [Azure Disk Encryption for Windows VMs](https://docs.microsoft.com/azure/virtual-machines/windows/disk-encryption-overview).
 - Learn about [Azure Storage encryption for data at rest](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
-- Read the [always encrypted overview](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault).
+- Read the [Always Encrypted overview](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault).
 - Read about [transparent data encryption for SQL Database and Azure synapse](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql).
 - Learn about [Azure SQL transparent data encryption with customer-managed key](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql).
 
