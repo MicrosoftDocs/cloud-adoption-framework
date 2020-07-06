@@ -25,7 +25,7 @@ Contoso has several options available when moving dev/test environments to Azure
 
 | Migration options | Outcome |
 | --- | --- |
-| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | [Assess](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware) and [migrate](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <br><br> Run dev/test servers using Azure IaaS. <br><br> Manage VMs with [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager) |
+| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | [Assess](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware) and [migrate](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware) on-premises VMs. <br><br> Run dev/test servers using Azure IaaS. <br><br> Manage VMs with [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager). |
 | [Azure DevTest Labs](https://docs.microsoft.com/azure/devtest-labs/devtest-lab-overview) | Quickly provision development and test environments. <br><br> minimize waste with quotas and policies. <br><br> Set automated shutdowns to minimize costs. <br><br> Build Windows and Linux environments. |
 
 > [!NOTE]
@@ -130,7 +130,7 @@ Here's how Contoso admins will run the migration:
 
 ## Step 1: Prepare Azure for the Azure Migrate: Server Migration tool
 
-The Azure components Contoso needs to migrate the VMs to Azure are a VNet in which Azure VMs will be located when they're created during migration and the Azure Migrate: Server Migration tool (OVA), provisioned and configured.
+The Azure components Contoso needs to migrate the VMs to Azure are a VNet in which Azure VMs will be located when they're created during migration and the Azure Migrate: Server Migration tool, provisioned and configured.
 
 They set these up as follows:
 

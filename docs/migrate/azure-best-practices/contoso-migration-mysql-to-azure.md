@@ -115,8 +115,8 @@ As a summary, they must perform the following:
 
 - Ensure all migration prerequisites are met:
 
-  - The MySQL server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL community edition, InnoDB engine, and migration across source and target with same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the migration wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009`.
+  - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with same versions.
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard: `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009`.
   - User must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 
@@ -145,7 +145,7 @@ As an alternative to using Azure Database Migration Service, Contoso can use com
 
 ## Cleanup after migration
 
-After migration, Contoso needs to backup the on-premises database for retention purposes and retire the on-premises MySQL server.
+After migration, Contoso needs to backup the on-premises database for retention purposes and retire the on-premises MySQL database server.
 
 ## Review the deployment
 

@@ -33,7 +33,7 @@ The IT leadership team has worked closely with business partners to understand w
 
 The Contoso cloud team has pinned down goals for this migration. These goals were used to determine the best migration method.
 
-| Requirements  | Details |
+| Requirements | Details |
 | --- | --- |
 | Move to Azure quickly | Contoso wants to start moving apps and VMs to Azure as quickly as possible. |
 | Compile a full inventory | Contoso wants a complete inventory of all apps, databases, and VMs in the organization. |
@@ -46,7 +46,7 @@ After pinning down goals and requirements, Contoso reviews the IT footprint, and
 
 After planning and setting up an [Azure infrastructure](./contoso-migration-infrastructure.md) and trying out different proof-of-concept (POC) migration combinations as detailed in the table above, Contoso is ready to embark on a full migration to Azure at scale. Here's what Contoso wants to migrate.
 
-| Item  | Volume | Details |
+| Item | Volume | Details |
 | --- | --- | --- |
 | Workloads | > 3,000 Apps | <li> Apps run on VMs. <li> Apps are Windows, SQL-based, and OSS LAMP. |
 | Databases | ~ 8,500 Databases | Databases include SQL Server, MySQL, and PostgreSQL. |
@@ -77,7 +77,7 @@ Contoso runs thousands of apps across a range of servers. In addition to the CMD
 
 Contoso identifies some common categories to classify assets in the inventory. These classifications are critical to Contoso's decision making for migration. The classification list helps to establish migration priorities, and identify complex issues.
 
-| Category  | Assigned value | Details |
+| Category | Assigned value | Details |
 | --- | --- | --- |
 | Business group | List of business group names | Which group is responsible for the inventory item? |
 | POC candidate | Y/N | Can the app be used as a POC or early adopter for cloud migration? |
@@ -103,7 +103,7 @@ As the last step in the discovery and assessment process, Contoso can evaluate a
 
 To capture this evaluation process, they add a couple of additional classifications to the inventory.
 
-| Category  | Assigned value | Details |
+| Category | Assigned value | Details |
 | --- | --- | --- |
 | Business group | List of business group names | Which group is responsible for the inventory item? |
 | POC candidate | Y/N | Can the app be used as a POC or early adopter for cloud migration? |
@@ -148,7 +148,7 @@ Contoso needs to use Azure Migrate correctly given the scale of this migration.
 - Contoso admins learn how to [deploy Azure Migrate at scale](https://docs.microsoft.com/azure/migrate/scale-hyper-v-assessment).
 - Contoso notes the Azure Migrate limits summarized in the following table.
 
-| Action  | Limit |
+| Action | Limit |
 | --- | --- |
 | Create Azure Migrate project | 10,000 VMs |
 | Discovery | 10,000 VMs |
@@ -181,7 +181,7 @@ With their assessment complete Contoso needs to identify tools to move their app
 
 There are four broad migration strategies that Contoso can consider.
 
-| Strategy  | Details | Usage |
+| Strategy | Details | Usage |
 | --- | --- | --- |
 | Rehost | <li> Often referred to as a _lift and shift_ migration, this is a no-code option for migrating existing apps to Azure quickly. <li> An app is migrated as-is, with the benefits of the cloud, without the risks or costs associated with code changes. | <li> Contoso can rehost less-strategic apps, requiring no code changes. |
 | Refactor | <li> Also referred to as "repackaging", this strategy requires minimal app code or configuration changes need to connect the app to Azure PaaS, and take better advantage of cloud capabilities. | <li> Contoso can refactor strategic apps to retain the same basic functionality, but move them to run on an Azure platform such as Azure App Service. <li> This requires minimum code changes. <li> On the other hand, Contoso will have to maintain a VM platform since this won't be managed by Microsoft. |
@@ -232,17 +232,17 @@ Contoso can use Azure Migrate:
 
 In addition to the VMs being replicated, Site Recovery requires several components for VMware migration.
 
-| Component  | Details |
+| Component | Details |
 | --- | --- |
-| Configuration server | <li> Usually a VMware VM configured using an ovf template. <li> The configuration server component coordinates communications between on-premises and Azure, and manages data replication. |
+| Configuration server | <li> Usually a VMware VM configured using an OVF template. <li> The configuration server component coordinates communications between on-premises and Azure, and manages data replication. |
 | Process server | <li> Installed by default on the configuration server. <li> The process server component receives replication data; optimizes it with caching, compression, and encryption; and sends it to Azure Storage. <li> The process server also installs Azure Site Recovery Mobility service on VMs you want to replicate, and performs automatic discovery of on-premises machines. <li> Scaled deployments need additional, standalone process servers to handle large volumes of replication traffic. |
-| Mobility service | <li> the Mobility service agent is installed on each VMware VM that will be migrated with Azure Site Recovery. |
+| Mobility service | <li> The Mobility service agent is installed on each VMware VM that will be migrated with Azure Site Recovery. |
 
 Contoso needs to figure out how to deploy these components, based on capacity considerations.
 
 <br>
 
-| Component  | Capacity requirements |
+| Component | Capacity requirements |
 | --- | --- |
 | Maximum daily change rate | <li> A single process server can handle a daily change rate up to 2 TB. Since a VM can only use one process server, the maximum daily data change rate that's supported for a replicated VM is 2 TB. |
 | Maximum throughput | <li> A standard Azure Storage account can handle a maximum of 20,000 requests per second, and I/O operations per second (IOPS) across a replicating VM should be within this limit. For example, if a VM has 5 disks, and each disk generates 120 IOPS (8K size) on the VM, then it will be within the Azure per disk IOPS limit of 500. <li> The number of storage accounts needed equals the total source machine IOPS, divided by 20,000. A replicated machine can belong to only a single storage account in Azure. |
@@ -270,7 +270,7 @@ Contoso will use Database Migration Service when migrating from SQL Server.
 
     ![Database Migration Service scaling](./media/contoso-migration-scale/dms.png)
 
-- Another scaling tactic for Contoso is to temporarily scale up the Azure SQL or MySQL database target instance to the Premium tier SKU during the data migration. This minimizes database throttling that could affect data transfer activities when using lower-level SKUs.
+- Another scaling tactic that Contoso can use is to temporarily scale up the Azure SQL Database or Azure Database for MySQL target instance to the Premium pricing tier during data migration. This minimizes database throttling that could affect data transfer activities when using lower tiers.
 
 ##### Use other tools
 
@@ -302,11 +302,11 @@ Contoso will also use scripts to locate unused resources.
 - Contoso will take advantage of work done by Microsoft's IT department, and consider implementing the Azure resource optimization (ARO) toolkit.
 - Contoso can deploy an Azure Automation account with preconfigured runbooks and schedules to its subscription, and start saving money. Azure resource optimization happens automatically on a subscription after a schedule is enabled or created, including optimization on new resources.
 - This provides decentralized automation capabilities to reduce costs. Features include:
-  - Autosnooze Azure VMs based on low CPU.
+  - Autosnooze Azure VMs based on low CPU utilization.
   - Schedule Azure VMs to snooze and unsnooze.
   - Schedule Azure VMs to snooze or unsnooze in ascending and descending order using Azure tags.
   - Bulk deletion of resource groups on-demand.
-- Get started with the ARO toolkit in this [GitHub repo](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+- Get started with the Azure resource optimization (ARO) toolkit via this [GitHub repo](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
 
 ### Partner optimization tools
 

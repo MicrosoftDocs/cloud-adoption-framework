@@ -36,7 +36,7 @@ Azure Migrate provides the following functionality:
 1. Unified assessment, migration, and progress tracking.
 1. Extensible approach with ISV integration (such as Cloudamize).
 
-To perform a migration using Azure Migrate follow these steps:
+To perform a migration using Azure Migrate, follow these steps:
 
 1. Search for Azure Migrate under **All services**. Select **Azure Migrate** to continue.
 1. Select **Add a tool** to start your migration project.

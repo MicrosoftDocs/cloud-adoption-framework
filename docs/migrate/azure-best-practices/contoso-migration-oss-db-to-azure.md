@@ -18,7 +18,7 @@ As Contoso considers migrating to Azure, the company needs a technical and finan
 
 ## Business drivers
 
-Contoso is having various issues with maintaining all the wide array of versions of open source database workloads that exist on their network. After the latest investor's meeting, the CFO and cto have made the decision to move all these workloads to Azure. This will allow them to shift from a structured capital expense model to a fluid operating expense model.
+Contoso is having various issues with maintaining all the wide array of versions of open source database workloads that exist on their network. After the latest investor's meeting, the CFO and CTO have made the decision to move all these workloads to Azure. This will allow them to shift from a structured capital expense model to a fluid operating expense model.
 
 The IT leadership team has worked closely with business partners to understand the business and technical requirements:
 

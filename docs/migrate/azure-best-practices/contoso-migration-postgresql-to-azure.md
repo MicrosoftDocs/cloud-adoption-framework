@@ -155,7 +155,7 @@ Contoso has selected Azure Database Migration Service to allow them to reuse the
     - Set the `listen_addresses` variable.
   - Enable SSL.
     - Set the `ssl=on` variable.
-    - Verify that you're using a publicly signed SSL certificate for the server that supports tls 1.2. Otherwise, the Database Migration Service tool will raise an error.
+    - Verify that you're using a publicly signed SSL certificate for the server that supports TLS 1.2. Otherwise, the Database Migration Service tool will raise an error.
   - Update the `pg_hba.conf` file.
     - Add entries that are specific to the Database Migration Service instance.
   - Logical replication must be enabled on the source server by modified the values in the `postgresql.conf` file for each server.

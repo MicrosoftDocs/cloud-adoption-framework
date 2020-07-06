@@ -49,7 +49,7 @@ Here's a diagram showing the current Contoso on-premises infrastructure.
 
 - Contoso has one main datacenter located in the city of New York in the eastern United States.
 - There are three additional local branches across the United States.
-- The main datacenter is connected to the internet with a fiber metro ethernet connection (500 Mbps).
+- The main datacenter is connected to the internet with a fiber optic Metro Ethernet connection (500 Mbps).
 - Each branch is connected locally to the internet using business class connections, with IPsec VPN tunnels back to the main datacenter. This approach allows the entire network to be permanently connected, and optimizes internet connectivity.
 - The main datacenter is fully virtualized with VMware. Contoso has two ESXi 6.5 virtualization hosts, managed by vCenter Server 6.5.
 - Contoso uses Active Directory for identity management, and DNS servers on the internal network.
@@ -503,7 +503,7 @@ The `VNET-ASR-CUS` network is used for purposes of failover between regions. Sit
 
 `VNET-ASR-CUS` is the same basic subnet as the production VNet in East US 2, but without the need for a domain controller subnet.
 
-| Subnet  | CIDR | Addresses | In subnet |
+| Subnet | CIDR | Addresses | In subnet |
 | --- | --- | --- | --- |
 | `ASR-FE-CUS` | `10.255.16.0/22` | 1019 | Front-ends/web-tier VMs |
 | `ASR-APP-CUS` | `10.255.20.0/22` | 1019 | App-tier VMs |
@@ -662,7 +662,7 @@ Contoso uses the built-in policy definition **Allowed locations** to limit resou
 
     ![Policy allowed regions](./media/contoso-migration-infrastructure/policy-region.png)
 
-5. By default the policy is set with **Deny**, meaning that if someone starts a deployment in the subscription that isn't in either the `East US 2` or `Central US` region, the deployment fails. Here's what happens if someone in the Contoso subscription tries to set up a deployment in West US.
+5. By default the policy is set with **Deny**, meaning that if someone starts a deployment in the subscription that isn't in either the `East US 2` or `Central US` region, the deployment fails. Here's what happens if someone in the Contoso subscription tries to set up a deployment in `West US`.
 
     ![Policy failed](./media/contoso-migration-infrastructure/policy-failed.png)
 
@@ -698,7 +698,7 @@ In addition to providing information about resources and owners, tags will enabl
 
 Contoso needs to visualize its Azure assets in a way that makes sense for the business, such as by role or department. Note that resources don't need to reside in the same resource group to share a tag. Contoso will create a tag taxonomy so that everyone uses the same tags.
 
-| Tag name  | Value |
+| Tag name | Value |
 | --- | --- |
 | `CostCenter` | 12345: It must be a valid cost center from SAP. |
 | `BusinessUnit` | Name of business unit (from SAP). Matches `CostCenter`. |

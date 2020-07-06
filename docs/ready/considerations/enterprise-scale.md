@@ -13,7 +13,7 @@ ms.subservice: ready
 
 Sometimes it's unwise for a cloud platform team to start small and expand. Teams worked for years within the constraints of the company's existing on-premises environment to reach the current state of maturity across security, operations, and governance. It will take time to replicate the desired processes, tools, and architectures based on the new constraints of any cloud environment. To accelerate that learning process, a slightly different starting point is required. Comparing the image below to the [early refactoring guidance within this methodology](../landing-zone/refactor.md), the fundamental change is the starting point, which is now more complex, more to follow later in this article.
 
-![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor-enterprise-scale.png)
+![Landing zone refactoring illustration, described later in this article](../../_images/ready/refactor-enterprise-scale.png)
 
 ## Qualifiers: Should I start with enterprise scale?
 

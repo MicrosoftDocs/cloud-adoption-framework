@@ -43,7 +43,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Requirements surrounding using customer-managed keys for native encryption mechanisms such as Azure Storage encryption:
 
-  - [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
+  - [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal).
   - Whole-disk encryption for virtual machines (VMs).
   - Data-in-transit encryption.
   - Data-at-rest encryption.

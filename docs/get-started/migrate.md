@@ -249,7 +249,7 @@ The steps outlined in this guide can help your teams speed up their migration ef
 
 The Cloud Adoption Framework is a lifecycle solution. It can help you begin a migration journey. It can also help you advance the maturity of the teams that support the migration efforts. The following teams can use these next steps to continue to advance the maturity of their efforts. These parallel processes aren't linear and shouldn't be viewed as blockers. Instead, each is a parallel value stream to help mature your company's overall cloud readiness.
 
-| Team  | Next iteration |
+| Team | Next iteration |
 |---|---|
 | Cloud&nbsp;adoption&nbsp;team | [Process improvements](../migrate/migration-considerations/index.md) provide insight about moving toward a migration factory with efficient ongoing migration capabilities. |
 | Cloud&nbsp;strategy&nbsp;team | The [Strategy methodology](../strategy/index.md) and the [Plan methodology](../plan/index.md) are iterative processes that evolve with the adoption plan. Return to these overview pages and continue to iterate on your business and technical strategies. |

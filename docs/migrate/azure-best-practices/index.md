@@ -4,7 +4,7 @@ description: Explore the Azure Cloud Migration Checklist to learn how to impleme
 keywords: azure cloud migration best practices, azure migration checklist, cloud migration checklist, cloud migration best practices
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
