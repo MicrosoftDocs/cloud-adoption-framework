@@ -11,13 +11,13 @@ ms.subservice: innovate
 
 # Machine Learning
 
-Infusing AI into an application can be difficult and time-consuming. Until recently, you needed both a deep understanding of machine learning and months of development to acquire data, train models, and deploy them at scale. Even then, success was not guaranteed. The path was filled with blockers, gotchas, and pitfalls causing teams to fail to realize value from their AI investments.  
+Azure empowers you with the most advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models using Azure Machine Learning. Azure Machine Learning can be used for any kind of machine learning, from classical Machine Learning to deep learning, supervised, and unsupervised learning. Whether you prefer to write Python or R code or zero-code/low-code options such as the [designer](https://docs.microsoft.com/azure/machine-learning/tutorial-designer-automobile-price-train-score), you can build, train, and track highly accurate machine learning and deep-learning models in an Azure Machine Learning Workspace.
+You can even start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray RLlib.
 
-Microsoft Azure Cognitive Services remove these challenges and are designed to be productive, enterprise ready, and trusted. They make it possible for you to build on the latest breakthroughs in AI without building and deploying your own models; instead you can deploy AI models using just a few simple lines of code so that even without a large data science team, you can quickly create applications that see, hear, speak, understand, and even begin to reason. The Cognitive Services portfolio is growing fast, and services are currently grouped into five categories: Vision, Speech, Language, Decision, and Web Search.
+For more information on getting started with [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/), visit Azure Machine Learning.  You will find a tutorial on getting [started with your first ML experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open source model format and runtime for machine learning, visit the [ONNX documents page](https://docs.microsoft.com/azure/machine-learning/concept-onnx).
 
-Common scenarios for conversational AI or chatbot solutions include:
-
-- Predictive Maintenance  
+Common scenarios for machine learning solutions include: 
+- Predictive Maintenance 
 - Inventory Management
 - Fraud Detection
 - Demand Forecasting
@@ -28,7 +28,7 @@ As you get started, the checklist and resources below will help you plan your ap
 
 - Are you familiar with the multitude of capabilities and services offered within Azure Cognitive Services, and which ones in particular you will be using?
 - Determine whether or not you have custom data with which you want to train and customize these models. There are Cognitive Services that are customizable.
-- There are several ways to use Azure Cognitive Services. Explore the quickstart tutorials for getting up and running for both SDK and REST APIs. Note: The Cognitive Services SDKs are available for many popular dev languages, including C#, Python, Java, JavaScript and Go.
+- There are several ways to use Azure Cognitive Services. Explore the quick start tutorials for getting up and running for both SDK and REST APIs. Note: The Cognitive Services SDKs are available for many popular dev languages, including C#, Python, Java, JavaScript and Go.
 - Determine if you will need to deploy these Cognitive Services in containers.
 
 ## Checklist
