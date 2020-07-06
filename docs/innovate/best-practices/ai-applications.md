@@ -13,18 +13,15 @@ ms.subservice: innovate
 
 On Azure, you can build intelligent apps faster using the tools and technologies of your choice and artificial intelligence (AI) that’s already built-in.
 
-- Easily build and deploy anywhere
-	Use your team’s existing skillsets and tools you know and love to build intelligent apps and deploy without a change in code. Build once, deploy anywhere: in the cloud, on premises, and to edge devices, with the confidence of global distribution to more data centers than any other provider.
+- **Easily build and deploy anywhere**: Use your team’s existing skill sets and tools you know and love to build intelligent apps and deploy without a change in code. Build once, deploy anywhere: in the cloud, on premises, and to edge devices, with the confidence of global distribution to more data centers than any other provider.
 
-- Create an impact using an open platform
-	Choose your favorite technologies, including open source. Azure supports a range of deployment options, popular stacks and languages, and a comprehensive set of data engines. Capitalize on this flexibility, plus the performance, scale, and security delivered by Microsoft technologies to build apps for any scenario.
+- **Create an impact using an open platform**: Choose your favorite technologies, including open source. Azure supports a range of deployment options, popular stacks and languages, and a comprehensive set of data engines. Capitalize on this flexibility, plus the performance, scale, and security delivered by Microsoft technologies to build apps for any scenario.
 
-- Develop apps with built-in intelligence
-Building intelligent apps using Azure is easy, because no other platform brings analytics and native AI to your data wherever it lives and in the languages you use. Take advantage of a rich set of [cognitive APIs](https://azure.microsoft.com/services/cognitive-services/) to easily build new experiences into your apps for human-like intelligence.
+- **Develop apps with built-in intelligence**: Building intelligent apps using Azure is easy, because no other platform brings analytics and native AI to your data wherever it lives and in the languages you use. Take advantage of a rich set of [cognitive APIs](https://azure.microsoft.com/services/cognitive-services/) to easily build new experiences into your apps for human-like intelligence.
 
 ## What are Azure Cognitive Services?
 
-Azure Cognitive Services can simplify infusing AI into your applications and leverage the latest breakthroughs in AI using a few simple lines of code. They bring the ability to create applications that see, hear, speak, understand and even begin to bring reason into your business processes. Azure Cognitive Services provide the AI intelligence in a form that is easy to leverage and incorporate into your application. 
+Azure Cognitive Services can simplify infusing AI into your applications and utilize the latest breakthroughs in AI using a few simple lines of code. They bring the ability to create applications that see, hear, speak, understand and even begin to bring reason into your business processes. Azure Cognitive Services provide the AI intelligence in a form that is easy to use and incorporate into your application.
 
 Azure Cognitive Services are APIs, SDKs, and services available to help developers build intelligent applications without having direct AI or data science skills or knowledge. Azure Cognitive Services enable developers to easily add cognitive features into their applications. The goal of Azure Cognitive Services is to help developers create applications that can see, hear, speak, understand, and even begin to reason. The catalog of services within Azure Cognitive Services can be categorized into five main pillars - Vision, Speech, Language, Web Search, and Decision.
 
