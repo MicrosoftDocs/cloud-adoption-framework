@@ -70,7 +70,7 @@ _Download a [Visio file](https://github.com/microsoft/CloudAdoptionFramework/blo
 
 ## Next steps
 
-Customize implementation of this architecture using the CAF design guidelines.
+Customize implementation of this architecture using the CAF enterprise-scale design guidelines.
 
 > [!div class="nextstepaction"]
 > [Design guidelines](./design-guidelines.md)
