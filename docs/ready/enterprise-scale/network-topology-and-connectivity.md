@@ -441,7 +441,7 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Enable NSG flow logs and feed them into Traffic Analytics to gain insights into internal and external traffic flows.
 
-- Use NSGs to selectively whitelist inter-landing-zone connectivity.
+- Use NSGs to selectively allow inter-landing-zone connectivity.
 
 - For Virtual WAN topologies, route traffic across landing zones via Azure Firewall if your organization requires filtering and logging capabilities for traffic flowing across landing zones.
 
