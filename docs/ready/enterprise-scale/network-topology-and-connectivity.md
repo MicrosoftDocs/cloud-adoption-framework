@@ -327,7 +327,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
 - Azure PaaS services that have been injected into a VNet still perform management plane operations using public IP addresses. Ensure that this communication is locked down within the VNet using UDRs and NSGs.
 
-- Use Private Link, where available, for shared Azure PaaS services. Private Link is generally available for several services and is in public preview for numerous ones. Private Link availability is detailed [here](https://docs.microsoft.com/en-us/azure/private-link/private-link-overview#availability).
+- Use Private Link, where available, for shared Azure PaaS services. Private Link is generally available for several services and is in public preview for numerous ones. Private Link availability is detailed [here](https://docs.microsoft.com/azure/private-link/private-link-overview#availability).
 
 - Access Azure PaaS services from on-premises via ExpressRoute private peering, using either VNet injection for dedicated Azure services or Azure Private Link for available shared Azure services. To access Azure PaaS services from on-premises when VNet injection or Private Link aren't available, use ExpressRoute with Microsoft peering. This would avoid transiting over the public internet.
 
