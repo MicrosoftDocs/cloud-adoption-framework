@@ -1,6 +1,6 @@
 ---
-title: Design principles
-description: Cloud Adoption Framework enterprise-scale design principles.
+title: CAF enterprise-scale design principles
+description: Learn about enterprise-scale design principles in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Design principles
+# CAF enterprise-scale design principles
 
 The enterprise-scale architecture prescribed in this guidance is based on the design principles described here. These principles serve as a compass for subsequent design decisions across critical technical domains. Familiarize yourself with these principles to better understand their impact and the trade-offs associated with nonadherence.
 

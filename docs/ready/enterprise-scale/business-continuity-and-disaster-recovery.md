@@ -1,6 +1,6 @@
 ---
-title: Business continuity and disaster recovery
-description: Cloud Adoption Framework enterprise-scale business continuity and disaster recovery.
+title: CAF enterprise-scale business continuity and disaster recovery
+description: Learn about enterprise-scale business continuity and disaster recovery in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Business continuity and disaster recovery
+# CAF enterprise-scale business continuity and disaster recovery
 
 ## Planning for business continuity and disaster recovery
 

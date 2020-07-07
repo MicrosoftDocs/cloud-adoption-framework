@@ -1,6 +1,6 @@
 ---
 title: Implement CAF enterprise-scale landing zones in Azure
-description: Review options to implement the Cloud Adoption Framework enterprise-scale architecture.
+description: Review options to implement the CAF enterprise-scale architecture.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

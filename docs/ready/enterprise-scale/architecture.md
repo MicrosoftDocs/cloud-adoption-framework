@@ -1,6 +1,6 @@
 ---
 title: CAF enterprise-scale landing zone architecture
-description: Cloud Adoption Framework enterprise-scale landing zone architecture.
+description: Learn about enterprise-scale landing zone architecture in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

@@ -1,6 +1,6 @@
 ---
-title: Implementation guidelines
-description: Cloud Adoption Framework enterprise-scale implementation guidelines
+title: CAF enterprise-scale implementation guidelines
+description: Learn about CAF enterprise-scale implementation guidelines in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 <!-- cSpell:ignore interdomain VMSS VWAN -->
 
-# Implementation guidelines
+# CAF enterprise-scale implementation guidelines
 
 This section covers how to get started with the enterprise-scale platform-native reference implementation and outline design objectives.
 

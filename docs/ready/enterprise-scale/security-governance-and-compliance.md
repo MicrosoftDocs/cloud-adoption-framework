@@ -1,6 +1,6 @@
 ---
-title: Security governance and compliance
-description: Cloud Adoption Framework enterprise-scale security governance and compliance.
+title: CAF enterprise-scale security governance and compliance
+description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Security, governance, and compliance
+# CAF enterprise-scale security governance and compliance
 
 ## Define encryption and key management
 

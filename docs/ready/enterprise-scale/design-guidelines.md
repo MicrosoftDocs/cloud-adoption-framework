@@ -1,6 +1,6 @@
 ---
-title: Design guidelines
-description: Cloud Adoption Framework enterprise-scale design guidelines.
+title: CAF enterprise-scale design guidelines
+description: Learn about enterprise-scale design guidelines in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Design guidelines
+# CAF enterprise-scale design guidelines
 
 This article and the articles series that follows outline how the enterprise-scale architecture provides an opinionated position on each of the Microsoft [Azure landing zone design areas](../landing-zone/design-areas.md). This provides a step-by-step set of design guidelines that can be followed to implement the design principles embodied in the enterprise-scale solution.
 
