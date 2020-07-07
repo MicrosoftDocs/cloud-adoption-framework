@@ -26,13 +26,6 @@ Common scenarios for machine learning solutions include:
 - Intelligent Recommendations
 - Sales Forecasting
 
-As you get started, the checklist and resources below will help you plan your application development and deployment.
-
-- Are you familiar with the multitude of capabilities and services offered within Azure Cognitive Services, and which ones in particular you will be using?
-- Determine whether or not you have custom data with which you want to train and customize these models. There are Cognitive Services that are customizable.
-- There are several ways to use Azure Cognitive Services. Explore the quick start tutorials for getting up and running for both SDK and REST APIs. Note: The Cognitive Services SDKs are available for many popular dev languages, including C#, Python, Java, JavaScript and Go.
-- Determine if you will need to deploy these Cognitive Services in containers.
-
 ## Checklist
 
 **Get started by first familiarize yourself with Azure Machine Learning**, then choose which experience to begin with. You can follow along steps to use a Jupyter notebook with Python, the visual drag and drop experience, automated ML.
