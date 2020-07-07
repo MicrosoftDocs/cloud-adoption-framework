@@ -3,7 +3,7 @@ title: Landing zone deployment options
 description: Determine which landing zone deployment option best fits your requirements.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 06/15/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -35,8 +35,9 @@ Some of the implementation options for landing zones and the variables that may 
 | [CAF Foundation blueprint](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy. | Start small | [Design principles](./foundation-blueprint.md#design-principles) | [Deploy](./foundation-blueprint.md) |
 | [CAF Enterprise-scale landing zone](./enterprise-scale.md) | Deploys an enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio. | Enterprise-scale | [Design principles](../enterprise-scale/design-principles.md) | [Deploy](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md) |
 | [CAF Terraform modules](./terraform-landing-zone.md) | Third-party path for multicloud operating models. This path can limit Azure-first operating models. | Start small | [Design principles](./terraform-landing-zone.md#design-decisions) | [Deploy](./terraform-landing-zone.md#customize-and-deploy-your-first-landing-zone) |
+| [Partner landing zones](./partner-landing-zone.md) | Partners who provide offerings aligned to the Cloud Adoption Framework Ready methodology may provide their own customized implementation option | Variable | [Design principles](./partner-landing-zone.md) | [Find a partner](https://www.microsoft.com/azure/partners/adopt?filters=ready) |
 
-The following table looks at the same implementation options from a slightly different perspective to guide more technical decision processes.
+The following table looks at some of these implementation options from a slightly different perspective to guide more technical decision processes.
 
 | Implementation option | Hub | Spoke | Deployment technology | Deployment instructions |
 |---|---|---|---|---|
