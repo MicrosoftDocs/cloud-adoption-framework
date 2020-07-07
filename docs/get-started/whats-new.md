@@ -27,7 +27,7 @@ Proper configuration of the cloud environment is often the first and most common
 | [Azure landing zones - Design Areas](../ready/landing-zone/design-areas.md) | All Azure landing zones share a common set of 8 design areas. Before deploying any of the Azure landing zones, customers should consider each of these design to make critical decisions. |
 | [Azure landing zones - Implementation Options](../ready/landing-zone/implementation-options.md) | Choose the best Azure landing zone implementation option, depending on your cloud adoption plan and cloud operating model. |
 
-The existing CAF Blueprint definitions and CAF Terraform modules provide a starting point for Azure landing zone implementation. However, several customers have requested a richer implementation option that can meet the demands of enterprise-scale cloud adoption plans. This release adds **CAF Enterprise-scale** to the Azure landing zone implementation options to fill that need. The following lists a few of the articles to get you started with the CAF Enterprise-scale architecture and reference implementations.
+The existing CAF Blueprint definitions and CAF Terraform modules provide a starting point for Azure landing zone implementation. However, some customers need a richer implementation option that can meet the demands of enterprise-scale cloud adoption plans. This release adds **CAF enterprise-scale** to the Azure landing zone implementation options to fill that need. The following lists a few of the articles to get you started with the CAF enterprise-scale architecture and reference implementations.
 
 | Article | Description |
 |---|---|
