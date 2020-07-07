@@ -32,7 +32,7 @@ The existing CAF blueprint definitions and CAF Terraform modules provide a start
 | Article | Description |
 |---|---|
 | [Enterprise-scale overview](../ready/enterprise-scale/index.md) | Overview to enterprise-scale |
-| [Implement enterprise-scale landing zones](../ready/enterprise-scale/implementation.md) | Rapid implementation options and github examples |
+| [Implement enterprise-scale landing zones](../ready/enterprise-scale/implementation.md) | Rapid implementation options and GitHub examples |
 | [Enterprise-scale architecture](../ready/enterprise-scale/architecture.md) | Understand the architecture behind enterprise-scale |
 | [Enterprise-scale design principles](../ready/enterprise-scale/design-principles.md) | Understand the architectural design principles that guide decisions during implementation to evaluate if this approach fits your cloud operating model |
 | [Enterprise-scale design guideline](../ready/enterprise-scale/design-guidelines.md) | Evaluate the enterprise-scale guidelines for fulfilling the common design areas of Azure landing zones |
