@@ -29,8 +29,8 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Key rotation and secret expiration.
 
-  Certificate procurement and signing using Key Vault: ([about certs](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates))
-  Alerting/notifications and automated certificate renewals.
+  - Certificate procurement and signing using Key Vault ([about certificates](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates))
+  - Alerting/notifications and automated certificate renewals
 
 - Disaster recovery requirements for keys, certificates, and secrets.
 
@@ -42,7 +42,7 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Delegated Key Vault instantiation and privileged access: ([secure access](https://docs.microsoft.com/azure/key-vault/general/secure-your-key-vault))
 
-- Requirements surrounding using customer-managed keys for native encryption mechanisms such as storage service encryption (SSE): [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
+- Requirements surrounding using customer-managed keys for native encryption mechanisms such as Azure Storage encryption (SSE): [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
 
 - Whole-disk encryption for virtual machines (VMs).
 
@@ -174,11 +174,11 @@ It is essential to maintain a healthy security posture as you adopt Azure. Besid
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
-- Align your security requirements with Azure platform road maps to stay up to date with newly released security controls.
+- Align your security requirements with Azure platform roadmaps to stay up to date with newly released security controls.
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
 
-## Service-enablement framework
+## Service enablement framework
 
 As business units request to deploy workloads to Azure, additional visibility into a workload is needed to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required that has not been onboarded, allowing the service needs to occur. The following table provides a framework to assess enterprise security readiness of Azure services:
 
@@ -211,7 +211,7 @@ As business units request to deploy workloads to Azure, additional visibility in
 |                              |                                                                       | Does the data plane integrate with Azure AD?                                                                                                      |
 |                              |                                                                       | Does Azure to Azure (service to service) authentication use a MSI/service principal?                                                         |
 |                              |                                                                       | Is Azure to IaaS (service to virtual network) authentication via Azure AD?                                                                                   |
-|                              |                                                                       | How are any applicable keys/sas managed?                                                                                                     |
+|                              |                                                                       | How are any applicable keys/SAS managed?                                                                                                     |
 |                              |                                                                       | How can access be revoked?                                                                                                                   |
 |                              | Segregation of duties                                                 | Does the service separate control plane and data plane operations within Azure AD?                                                                |
 |                              | Multi-factor authentication and conditional access                                            | Is multi-factor authentication enforced for user to service interactions?                                                                                            |

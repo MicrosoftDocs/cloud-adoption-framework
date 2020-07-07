@@ -33,7 +33,7 @@ Enterprise-scale architecture should focus on application-centric migrations and
 
 ## Aligning Azure-native design and roadmaps
 
-The enterprise-scale architecture approach advocates using Azure-native platform services and capabilities whenever possible. This should align with Azure platform road maps to ensure that new capabilities are available within your environments. Azure platform road maps should help to inform the migration strategy and enterprise-scale trajectory.
+The enterprise-scale architecture approach advocates using Azure-native platform services and capabilities whenever possible. This should align with Azure platform roadmaps to ensure that new capabilities are available within your environments. Azure platform roadmaps should help to inform the migration strategy and enterprise-scale trajectory.
 
 ## Recommendations
 

@@ -112,7 +112,7 @@ Each Azure region contains a finite number of resources. When considering an ent
 
 - Use reserved instances to prioritize reserved capacity in required regions. This ensures that your workload will have the required capacity even when there's a high demand for that resource in a specific region.
 
-- Establish a dashboard with custom views to monitor utilized capacity levels. Set up alerts if capacity utilization is reaching critical levels (for example, 90 percent CPU utilization).
+- Establish a dashboard with custom views to monitor used capacity levels. Set up alerts if capacity utilization is reaching critical levels (for example, 90 percent CPU utilization).
 
 - Raise support requests for quota increase as a part of subscription provisioning (for example, total available VM cores within a subscription). This ensures your quota limits are set before your workloads require going over the default limits.
 
@@ -132,6 +132,6 @@ Cost transparency across a technical estate is a critical management challenge f
 
 **Design recommendations:**
 
-- Use Azure Cost Management for cost aggregation and make it available to application owners.
+- Use Azure Cost Management and Billing for cost aggregation and make it available to application owners.
 
 - Use Azure resource tags for cost categorization and resource grouping. This allows you to have a chargeback mechanism for workloads that share a subscription or for a given workload that spans across multiple subscriptions.

@@ -54,7 +54,7 @@ _Figure 1: Identity and access management._
 
 - Enforce multi-factor authentication for any user with rights to the Azure environments. This is a requirement of many compliance frameworks and greatly lowers the risk of credential theft and unauthorized access.
 
-- Use [Azure AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, utilize Azure native tools as outlined above, or use both as needed.
+- Use [Azure AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, use Azure native tools as outlined above, or use both as needed.
 
 - Use Azure-AD-only groups for Azure control plane resources in Azure AD PIM when granting access to resources.
 

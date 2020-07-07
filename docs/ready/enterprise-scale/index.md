@@ -1,5 +1,5 @@
 ---
-title: Start with enterprise-scale landing zones
+title: Start with CAF enterprise-scale landing zones
 description: Cloud Adoption Framework enterprise-scale landing zones.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Start with enterprise-scale landing zones
+# Start with CAF enterprise-scale landing zones
 
 The enterprise-scale architecture represents the strategic design path and target technical state for your Azure environment. It will continue to evolve alongside the Azure platform and is ultimately defined by the various design decisions that an organization must make to define their Azure journey.
 
@@ -23,15 +23,15 @@ The enterprise-scale architecture provides prescriptive guidance coupled with Az
 
 The enterprise-scale architecture is modular by design and allow you to start with foundational landing zones that support your application portfolios, regardless of whether the applications are being migrated or are newly developed and deployed to Azure. The architecture can scale alongside the your business requirements regardless of scale point.
 
-## Start with an enterprise-scale landing zone
+## Start with a CAF enterprise-scale landing zone
 
 The enterprise-scale approach to construct landing zones includes three sets of assets to support cloud teams:
 
-- [Design guidelines](./design-guidelines.md): Guide to the critical decisions that drive the design of the Cloud Adoption Framework enterprise-scale landing zone.
+- [Design guidelines](./design-guidelines.md): Guide to the critical decisions that drive the design of the CAF enterprise-scale landing zone.
 - [Architecture](./architecture.md): Conceptual reference architecture that demonstrates design areas and best practices.
 - [Implementations](./implementation.md): Azure Resource Manager template of the architecture to accelerate adoption.
 
-<!-- TODO: Reinstate once template.md is ready. 
+<!-- TODO: Reinstate once template.md is ready.
 - [Template](./template.md): A documentation template to quickly capture decisions and any deviation from the suggested architecture or implementation.
 -->
 
@@ -46,4 +46,3 @@ While this guide shares the same design principles as the standard Ready methodo
 ## Next steps
 
 [Implement a CAF enterprise-scale landing zone](./implementation.md)
-

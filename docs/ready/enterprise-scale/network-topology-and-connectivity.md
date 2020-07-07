@@ -104,9 +104,9 @@ _Figure 2: Global transit network with Virtual WAN._
   - Branch to virtual network
   - Branch to branch
 
-- Virtual WAN hubs are locked down, and the only resources that you can deploy within them are virtual network gateways (point-to-site VPN, site-to-site VPN, and ExpressRoute), Azure Firewall via Firewall Manager, and route tables.
+- Virtual WAN hubs are locked down, and the only resources that you can deploy within them are virtual network gateways (Point-to-Site VPN, Site-to-Site VPN, and ExpressRoute), Azure Firewall via Firewall Manager, and route tables.
 
-- Virtual WAN increases the limit of up to 200 prefixes advertised from Azure to on-premises via ExpressRoute private peering to 10,000 prefixes per Virtual WAN hub. The limit of 10,000 prefixes also includes site-to-site VPN and point-to-site VPN.
+- Virtual WAN increases the limit of up to 200 prefixes advertised from Azure to on-premises via ExpressRoute private peering to 10,000 prefixes per Virtual WAN hub. The limit of 10,000 prefixes also includes Site-to-Site VPN and Point-to-Site VPN.
 
 - VNet-to-VNet transitive connectivity (within a region and across regions) is in public preview.
 
@@ -137,9 +137,9 @@ _Figure 3: Sample network topology._
 
 - Connect Virtual WAN hubs to on-premises datacenters using ExpressRoute.
 
-- Connect branches and remote locations to the nearest Virtual WAN hub via site-to-site VPN, or enable branch connectivity to Virtual WAN via an SD-WAN partner solution.
+- Connect branches and remote locations to the nearest Virtual WAN hub via Site-to-Site VPN, or enable branch connectivity to Virtual WAN via an SD-WAN partner solution.
 
-- Connect end users to the Virtual WAN hub via a point-to-site VPN.
+- Connect end users to the Virtual WAN hub via a Point-to-Site VPN.
 
 - Follow the principle, "traffic in Azure stays in Azure" so that communication across resources in Azure occurs via the Microsoft backbone network, even when the resources are in different regions.
 
@@ -200,7 +200,7 @@ _Figure 4: A traditional Azure network topology._
 
 - While the maximum number of virtual network peering connections per VNet is 500, the maximum number of routes that can be advertised from Azure to on-premises via ExpressRoute private peering is 200.
 
-- A VPN gateway's maximum aggregated throughput is 10 Gbps and support up to 30 site-to-site/VNet-to-VNet tunnels.
+- A VPN gateway's maximum aggregated throughput is 10 Gbps and supports up to 30 Site-to-Site or VNet-to-VNet tunnels.
 
 **Design recommendations:**
 
