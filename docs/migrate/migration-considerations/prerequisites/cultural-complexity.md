@@ -38,7 +38,7 @@ Ultimately, the cloud adoption team is accountable for each of these activities.
 Each process within the discussion of the Cloud Adoption Framework migration principles includes a process article outlining specific activities to align roles and responsibilities. For clarity during execution, a single accountable party should be assigned for each activity, along with any responsible parties required to support those activities. However, the following list contains a series of common roles and responsibilities that have a higher degree of impact on migration execution. These roles should be identified early in the migration effort.
 
 > [!NOTE]
-> In the following table, an accountable party should start the alignment of roles. That column should be customized to fit existing processes for efficient execution. Ideally a single person should be named as the accountable party.
+> In the following table, an accountable party should start the alignment of roles. That column should be customized to fit existing processes for efficient execution. Ideally, a single person should be assigned as the accountable party.
 
 | Process | Activity | Description | Accountable party |
 |---------|---------|---------|---------|

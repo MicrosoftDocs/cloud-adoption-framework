@@ -44,7 +44,7 @@ To view quantitative data on your applications:
 
 1. Go to **Application Insights**.
    - If your application doesn't appear in the list, select **Add** and follow the prompts to start configuring Application Insights.
-   - If the desired app is in the list, select the application.
+   - If the desired application is in the list, select it.
 1. The **Overview** pane includes some statistics on the application. Select **Application Dashboard** to build a custom dashboard for data that's more relevant to your hypothesis.
 
 ::: zone target="chromeless"
@@ -83,7 +83,7 @@ To record quantitative data on your APIs:
 
 1. Go to **API Management services**.
 2. Select the desired API from the list.
-3. Select **Diagnostic Settings** in the **Monitoring** section.
+3. Select **Diagnostic settings** in the **Monitoring** section.
 
 To view quantitative data on your APIs:
 
@@ -119,7 +119,7 @@ The backlog (or board) is where feedback is recorded as user stories. It's also 
 
 ### Action
 
-Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](https://azure.microsoft.com/services/devops).
+Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops).
 
 ::: zone-end
 

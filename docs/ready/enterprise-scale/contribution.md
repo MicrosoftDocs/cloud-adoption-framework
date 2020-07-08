@@ -211,7 +211,7 @@ Get-AzPolicyAlias -ListAvailable
 
 For Azure CLI:
 
-```cli
+```bash
 # List all available providers
 
 az provider list --query [*].namespace
