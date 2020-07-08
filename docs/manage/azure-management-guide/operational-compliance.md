@@ -159,7 +159,7 @@ To create a blueprint:
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
 1. Select **Next : Artifacts >>**, and review the artifacts included in the blueprint.
-1. Select **Save Draft**.
+1. Select **Save draft**.
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Policy/BlueprintsMenuBlade/GetStarted]" submitText="Create a blueprint" :::
 
@@ -173,7 +173,7 @@ To create a blueprint:
 1. In the **Blueprint name** box, enter the blueprint name.
 1. Select **Definition location**, and choose the appropriate location.
 1. Select **Next : Artifacts >>**, and review the artifacts included in the blueprint.
-1. Select **Save Draft**.
+1. Select **Save draft**.
 
 ::: zone-end
 

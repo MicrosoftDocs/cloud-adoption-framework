@@ -185,8 +185,8 @@ Another benefit of functions is that they can be triggered by different actions 
 To configure or monitor Azure Functions deployments:
 
 1. Go to **Function App**.
-2. Configure a new app: Select **Add** and follow the prompts.
-3. Manage existing apps: Select the desired app from the list of function apps.
+2. Configure a new function app: Select **Add** and follow the prompts.
+3. Manage existing function apps: Select the desired app from the list of function apps.
 
 ::: zone target="chromeless"
 
@@ -215,8 +215,8 @@ Integrate data and apps instead of writing complex integration code between disp
 To configure or monitor Azure logic apps:
 
 1. Go to **Logic Apps**.
-2. Configure a new app: Select **Add** and follow the prompts.
-3. Manage existing apps: Select the desired logic app from the list.
+2. Configure a new logic app: Select **Add** and follow the prompts.
+3. Manage existing logic apps: Select the desired logic app from the list.
 
 ::: zone target="chromeless"
 

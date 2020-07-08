@@ -112,7 +112,7 @@ The outcome of a sprint captures and documents the changes made to a workload, t
 - **Architecture.** Documentation of the architecture deployed to the cloud.
 - **Performance metrics.** Output of automated testing or business testing performed to validate performance at the time of deployment.
 - **Unique requirements or configuration.** Any unique aspects of the deployment, configuration, or technical requirements necessary to operate the workload.
-- **Operational approval.** Sign-off of validating operational readiness from the application owner and the IT operations staff responsible for managing the workload post deployment.
+- **Operational approval.** Sign-off of validating operational readiness from the application owner and the IT operations staff responsible for managing the workload after deployment.
 - **Architecture approval.** Sign-off from the workload owner and the cloud adoption team to validate any architecture changes required to host each asset.
 
 ## Next steps

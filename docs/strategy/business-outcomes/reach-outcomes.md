@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
+<!-- docsTest:ignore "global reach" -->
+
 # Examples of global reach outcomes
 
 As discussed in [Business outcomes](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: reach. Understanding the company's globalization strategy will help to better articulate the business outcomes that are the target of a business's transformation journey.

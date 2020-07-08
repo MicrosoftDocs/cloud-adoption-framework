@@ -21,7 +21,7 @@ The _Assess_ process is the first of four incremental activities that occur with
 
 Assess a migration candidate, evaluating the workload, associated assets, and dependencies prior to migration.
 
-## Definition of _done_
+## Definition of done
 
 This process is complete when the following are known about a single migration candidate:
 

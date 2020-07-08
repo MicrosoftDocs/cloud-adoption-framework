@@ -75,7 +75,7 @@ To reduce complexity, you should follow a traditional approach to portfolio rati
   - Is this application a third-party application?
   - Has budget been approved to invest in ongoing development of the application in the next 12 months?
   - Would additional development of this application improve the customer experience? Create a competitive differentiator? Drive additional revenue for the business?
-  - Will the data within this workload contribute to a downstream innovation related to BI, Machine Learning, IoT, or related technologies?
+  - Will the data within this workload contribute to a downstream innovation related to BI, machine learning, IoT, or related technologies?
   - Is the workload compatible with modern application platforms like Azure App Service?
 - The answers to the above questions and any other required qualitative analysis would then influence adjustments to the prioritized backlog. These adjustments may include:
   - If a workload could be replaced with a PaaS solution, it may be removed from the migration backlog entirely. At a minimum, additional due diligence to decide between rehost and replace would be added as a task, temporarily reducing that workload's priority from the migration backlog.

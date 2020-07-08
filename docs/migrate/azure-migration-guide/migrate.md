@@ -36,7 +36,7 @@ Azure Migrate provides the following functionality:
 1. Unified assessment, migration, and progress tracking.
 1. Extensible approach with ISV integration (such as Cloudamize).
 
-To perform a migration using Azure Migrate follow these steps:
+To perform a migration using Azure Migrate, follow these steps:
 
 1. Search for Azure Migrate under **All services**. Select **Azure Migrate** to continue.
 1. Select **Add a tool** to start your migration project.
@@ -104,13 +104,13 @@ For more information, see:
 
 ## Azure Database Migration Service
 
-The Azure Database Migration Service is a fully managed service that enables seamless migrations from multiple database sources to Azure data platforms, with minimal downtime (online migrations). The Azure Database Migration Service performs all of the required steps. You can initiate your migration projects assured that the process takes advantage of best practices recommended by Microsoft.
+Azure Database Migration Service is a fully managed service that enables seamless migrations from multiple database sources to Azure data platforms, with minimal downtime (online migrations). Database Migration Service performs all of the required steps. You can initiate your migration projects assured that the process takes advantage of best practices recommended by Microsoft.
 
 ### Create an Azure Database Migration Service instance
 
 If this is the first time using Azure Database Migration Service, you need to register the resource provider for your Azure subscription:
 
-1. Select **All services**, then **Subscriptions**, and choose the target subscription.
+1. Select **All services** > **Subscriptions**, and choose the target subscription.
 1. Select **Resource providers**.
 1. Search for `migration`, and then to the right of **Microsoft.DataMigration**, select **Register**.
 
@@ -138,7 +138,7 @@ The service is now ready to migrate the supported source databases (for example,
 For more information, see:
 
 - [Azure Database Migration Service overview](https://docs.microsoft.com/azure/dms/dms-overview)
-- [Create an instance of the Azure Database Migration Service](https://docs.microsoft.com/azure/dms/quickstart-create-data-migration-service-portal)
+- [Create an instance of Azure Database Migration Service](https://docs.microsoft.com/azure/dms/quickstart-create-data-migration-service-portal)
 - [Azure Migrate in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_ManagementGroups/HierarchyBlade)
 - [Azure portal: Create a migration project](https://portal.azure.com/#create/Microsoft.AzureMigrate)
 
@@ -146,21 +146,21 @@ For more information, see:
 
 ## Data Migration Assistant
 
-The Data Migration Assistant (DMA) helps you upgrade to a modern data platform by detecting compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
+Data Migration Assistant helps you upgrade to a modern data platform by detecting compatibility issues that can affect database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
 
 > [!NOTE]
-> For large migrations (in terms of number and size of databases), we recommend that you use the Azure Database Migration Service, which can migrate databases at scale.
+> For large migrations (in terms of number and size of databases), we recommend that you use Azure Database Migration Service, which can migrate databases at scale.
 >
 
-Start using the Data Migration Assistant with these steps:
+Start using Data Migration Assistant with these steps:
 
-1. Download and install the Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
+1. Download and install Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
 1. Create an assessment by selecting the **New (+)** icon, then select the **Assessment** project type.
 1. Set the source and target server type, then select **Create**.
 1. Configure the assessment options as required (recommend all defaults).
 1. Add the databases to assess.
 1. Select **Next** to start the assessment.
-1. View results within the Data Migration Assistant tool set.
+1. View results in Data Migration Assistant.
 
 For an enterprise, we recommend following the approach outlined in [Assess an enterprise and consolidate assessment reports with DMA](https://docs.microsoft.com/sql/dma/dma-consolidatereports) to assess multiple servers, combine the reports and then use provided Power BI reports to analyze the results.
 
@@ -257,7 +257,7 @@ Microsoft also offers the following project management tools, which can work tog
 - [Microsoft Planner](https://tasks.office.com): A simple, visual way to organize teamwork.
 - [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and Portfolio Management, Resource Capacity Management, Financial Management, Timesheet and Schedule Management.
 - [Microsoft Teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates Planner and other tools to improve collaboration.
-- [Azure DevOps Services](https://azure.microsoft.com/services/devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
+- [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
 These are not the only tools available. Many other third-party tools are widely used in the project management community.
 
@@ -265,7 +265,7 @@ These are not the only tools available. Many other third-party tools are widely 
 
 As you migrate into cloud technologies this presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
 
-Azure DevOps provides all of the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps](https://azure.microsoft.com/services/devops). For guided training, see [CI/CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
+Azure DevOps provides all of the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops). For guided training, see [CI/CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
 ## Suggested skills
 

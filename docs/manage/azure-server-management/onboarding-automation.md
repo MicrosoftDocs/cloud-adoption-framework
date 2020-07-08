@@ -33,14 +33,14 @@ The files described in the following table are used in this sample. You can cust
 
 | File name | Description |
 |-----------|-------------|
-| New-AMSDeployment.ps1 | The main, orchestrating script that automates onboarding. It creates resource groups, and location, workspace, and Automation accounts, if they don't exist already. This PowerShell script requires an existing subscription. |
-| Workspace-AutomationAccount.json | A Resource Manager template that deploys the workspace and Automation account resources. |
-| WorkspaceSolutions.json | A Resource Manager template that enables the solutions you want in the Log Analytics workspace. |
-| ScopeConfig.json | A Resource Manager template that uses the opt-in model for on-premises servers with the Change Tracking solution. Using the opt-in model is optional. |
-| Enable-VMInsightsPerfCounters.ps1 | A PowerShell script that enables VM Insights for servers and configures performance counters. |
-| ChangeTracking-FileList.json | A Resource Manager template that defines the list of files that will be monitored by Change Tracking. |
+| `New-AMSDeployment.ps1` | The main, orchestrating script that automates onboarding. It creates resource groups, and location, workspace, and Automation accounts, if they don't exist already. This PowerShell script requires an existing subscription. |
+| `Workspace-AutomationAccount.json` | A Resource Manager template that deploys the workspace and Automation account resources. |
+| `WorkspaceSolutions.json` | A Resource Manager template that enables the solutions you want in the Log Analytics workspace. |
+| `ScopeConfig.json` | A Resource Manager template that uses the opt-in model for on-premises servers with the Change Tracking solution. Using the opt-in model is optional. |
+| `Enable-VMInsightsPerfCounters.ps1` | A PowerShell script that enables VM Insights for servers and configures performance counters. |
+| `ChangeTracking-FileList.json` | A Resource Manager template that defines the list of files that will be monitored by Change Tracking. |
 
-Use the following command to run New-AMSDeployment.ps1:
+Use the following command to run `New-AMSDeployment.ps1`:
 
 ```powershell
 .\New-AMSDeployment.ps1 -SubscriptionName '{Subscription Name}' -WorkspaceName '{Workspace Name}' -WorkspaceLocation '{Azure Location}' -AutomationAccountName {Account Name} -AutomationAccountLocation {Account Location}

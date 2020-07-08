@@ -49,7 +49,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 1. Select **Create (or edit) a new policy**.
 1. Configure the schedule and retention period.
 1. Select **OK**.
-1. Select **Enable Backup**.
+1. Select **Enable backup**.
 
 ::: zone target="chromeless"
 

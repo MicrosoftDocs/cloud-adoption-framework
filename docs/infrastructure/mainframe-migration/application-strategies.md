@@ -1,6 +1,6 @@
 ---
 title: Mainframe app migration strategies
-description: Learn strategies like rehosting, retiring, rebuilding, or replacing apps to migrate from mainframe environments to Azure.
+description: Learn strategies like rehosting, retiring, rebuilding, or replacing applications to migrate from mainframe environments to Azure.
 author: njray
 ms.author: v-nanra
 ms.date: 12/26/2018
@@ -121,7 +121,7 @@ The cloud's distributed architectures rely on a different set of development too
 
 ## Migrate databases and data
 
-Application migration usually involves rehosting the data tier. You can migrate SQL Server, open-source, and other relational databases to fully managed solutions on Azure, such as [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), [Azure Database Service for PostgreSQL](https://docs.microsoft.com/azure/postgresql/overview), and [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview) with [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
+Application migration usually involves rehosting the data tier. You can migrate SQL Server, open-source, and other relational databases to fully managed solutions on Azure, such as [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/overview), and [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview) with [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
 
 For example, you can migrate if the mainframe data tier uses:
 

@@ -1,6 +1,6 @@
 ---
 title: Innovation tools to migrate data
-description: Learn about the Azure Database Migration Service and other tools that migrate and modernize data to prepare for cloud inventions and innovations.
+description: Learn about Azure Database Migration Service and other tools that migrate and modernize data to prepare for cloud inventions and innovations.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -27,7 +27,7 @@ To support Oracle and NoSQL migrations, you can also use [Database Migration Ser
 
 ## Considerations and guidance
 
-When you use Azure Database Migration Service for migration and modernization of data, it's important to understand:
+When you use Azure Database Migration Service  to migrate and modernize data, it's important to understand:
 
 - The current platform for hosting the data source.
 - The current version.
@@ -45,9 +45,9 @@ We suggest that you decide your acceptable business downtime and test an offline
 |---|---|---|---|---|
 | SQL Server | Azure SQL Database | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql) |
 | SQL Server | Azure SQL Database | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online) |
-| SQL Server | Azure SQL Database managed instance | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) |
-| SQL Server | Azure SQL Database managed instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) |
-| RDS SQL Server | Azure SQL Database or Azure SQL Database managed instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online) |
+| SQL Server | Azure SQL Managed Instance | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) |
+| SQL Server | Azure SQL Managed Instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) |
+| RDS SQL Server | Azure SQL Database or Azure SQL Managed Instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online) |
 | MySQL | Azure Database for MySQL | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online) |
 | PostgreSQL | Azure Database for PostgreSQL | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online) |
 | MongoDB | Azure Cosmos DB Mongo API | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db) |
