@@ -10,7 +10,7 @@ ms.subservice: organize
 ms.custom: organize
 ---
 
-# Building technical skills
+# Build technical skills
 
 Organizational and environmental (technical) readiness can require new skills for technical and nontechnical contributors. The following information can help your organization build the necessary skills.
 
@@ -50,7 +50,7 @@ The following information describes resources for additional learning.
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and its partners offer options to help all audiences develop their skills for using Microsoft Azure services.
+Microsoft and its partners offer options to help all audiences develop their skills for using Azure services.
 
 - [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): A free online resource to help map your cloud career path. Learn from industry experts about your cloud role and the skills you need. Follow a learning curriculum at your own pace to build the skills that you need to stay relevant.
 

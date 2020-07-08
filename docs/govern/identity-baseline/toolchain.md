@@ -22,13 +22,13 @@ The following tools are included in the discovery guide for hybrid identity.
 
 **Active Directory (IaaS):** An instance of the Active Directory application running in a virtual machine in Azure.
 
-Identity is the control plane for IT security. So authentication is an organization's access guard to the cloud. Organizations need an identity control plane that strengthens their security and keeps their cloud apps safe from intruders.
+Identity is the control plane for IT security. So authentication is an organization's access guard to the cloud. Organizations need an identity control plane that strengthens their security and keeps their cloud applications safe from intruders.
 
 ## Cloud authentication
 
-Choosing the correct authentication method is the first concern for organizations wanting to move their apps to the cloud.
+Choosing the correct authentication method is the first concern for organizations wanting to move their applications to the cloud.
 
-When you choose this method, Azure AD handles users' sign-in process. Coupled with seamless single sign-on (SSO), users can sign in to cloud apps without having to reenter their credentials. With cloud authentication, you can choose from two options:
+When you choose this method, Azure AD handles users' sign-in process. Coupled with seamless single sign-on (SSO), users can sign in to cloud applications without having to reenter their credentials. With cloud authentication, you can choose from two options:
 
 **Azure AD password hash synchronization:** The simplest way to enable authentication for on-premises directory objects in Azure AD. This method can also be used with any method as a back-up failover authentication method in case your on-premises server goes down.
 

@@ -25,7 +25,7 @@ During a transformation, the same relative risks exist.
 
 - During early experimentation, a few assets are deployed with little to no relevant data. The risk is small.
 - When the first workload is deployed, risk goes up a little. This risk is easily remediated by choosing an inherently low risk application with a small user base.
-- As more workloads come online, risks change at each release. New apps go live and risks change.
+- As more workloads come online, risks change at each release. New applications go live and risks change.
 - When a company brings the first 10 or 20 applications online, the risk profile is much different than when the 1000th application goes into production in the cloud.
 
 The assets that accumulated in the traditional, on-premises estate likely accumulated over time. The maturity of the business and IT teams was likely growing in a similar fashion. That parallel growth can tend to create some unnecessary policy baggage.

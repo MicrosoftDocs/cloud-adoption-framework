@@ -17,14 +17,12 @@ Delivering on a [cloud strategy](../strategy/index.md) requires solid planning, 
 
 To prepare you for this phase of the cloud adoption lifecycle, the framework suggests the following exercises:
 
-<!-- markdownlint-disable MD033 -->
-
 | | |
 |---|---|
 | <br> ![1](../_images/icons/1.png) | <br> [Establish a management baseline](./azure-management-guide/index.md): Define the criticality classifications, cloud management tools, and processes required to deliver your minimum commitment to operations management.                                |
 | <br> ![2](../_images/icons/2.png) | <br> [Define business commitments](./considerations/business-alignment.md): Document supported workloads to establish operational commitments with the business and agree on cloud management investments for each workload.                                |
 | <br> ![3](../_images/icons/3.png) | <br> [Expand the management baseline](./best-practices.md): Based on business commitments and operations decisions, make use of the included best practices to implement the required cloud management tooling.                                |
-| <br> ![4](../_images/icons/4.png) | <br> [Advanced operations and design principles](./design-principles.md): Platforms or Workloads that require a higher level of business commitment might require a deeper architecture review to deliver on resiliency and reliability commitments.  |
+| <br> ![4](../_images/icons/4.png) | <br> [Advanced operations and design principles](./design-principles.md): Platforms or Workloads that require a higher level of business commitment might require a deeper architecture review to deliver on resiliency and reliability commitments. |
 
 The preceding steps create actionable approaches to deliver on the Cloud Adoption Framework's Manage methodology.
 

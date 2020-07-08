@@ -364,7 +364,7 @@ You can implement a highly reliable cloud messaging service between applications
 
 ![10][10]
 
-These examples barely scratch the surface of the types of workloads you can create in Azure; everything from a basic Web and SQL app to the latest in IoT, Big Data, Machine Learning, AI, and so much more.
+These examples barely scratch the surface of the types of workloads you can create in Azure&mdash;everything from a basic Web and SQL app to the latest in IoT, big data, machine learning, AI, and so much more.
 
 ### Highly availability: multiple virtual datacenters
 
