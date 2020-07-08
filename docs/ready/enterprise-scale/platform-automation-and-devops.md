@@ -16,7 +16,7 @@ _Figure 1: Platform automation and DevOps._
 
 ## Planning for a DevOps approach
 
-Many traditional IT operating models aren't compatible with the cloud, and customers must undergo operational and organizational transformation to deliver against enterprise migration targets. It's highly recommended to use a DevOps approach for both application and central teams.
+Many traditional IT operating models aren't compatible with the cloud, and organizations must undergo operational and organizational transformation to deliver against enterprise migration targets. It's highly recommended to use a DevOps approach for both application and central teams.
 
 **Design considerations:**
 
@@ -26,7 +26,7 @@ Many traditional IT operating models aren't compatible with the cloud, and custo
 
 - Investing in engineering capabilities and resources is critical.
 
-- The customer can arrange internal and external DevOps roles and functions from a variety of sources that align with their organization's strategy.
+- You can arrange internal and external DevOps roles and functions from a variety of sources that align with your organization's strategy.
 
 - For some legacy apps, the associated app team may not have engineering resources required to align with a DevOps strategy.
 
@@ -78,7 +78,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
   - Network management (app resources)
 
-  - In some instances, customers may wish to break AppDevOps into more granular roles such as AppDataOps for database management like traditional database administrator roles or AppSecOps, where more security sensitive apps are concerned.
+  - In some instances, you might want to break AppDevOps into more granular roles such as AppDataOps for database management like traditional database administrator roles or AppSecOps, where more security sensitive apps are concerned.
 
 - Provide a central app DevOps function to support apps that don't have existing DevOps capabilities or a business case to establish one (for example, legacy apps with minimal development capabilities)
 
@@ -92,7 +92,7 @@ Establish a cross-functional DevOps platform team to build, manage, and maintain
 
 ## Define central and federated responsibilities
 
-The distribution of roles, responsibilities, and trust between Central IT teams and apps teams is paramount to the operational transformation customers must undergo when adopting the cloud at scale.
+The distribution of roles, responsibilities, and trust between Central IT teams and apps teams is paramount to the operational transformation your organization must undergo when adopting the cloud at scale.
 
 **Design considerations:**
 
