@@ -1,5 +1,5 @@
 ---
-title: "Azure setup guide: Before you start"
+title: Azure setup guide: Before you start
 description: Learn how to set up Azure effectively for your organization with step-by-step guidance.
 author: timleyden
 ms.author: kfollis
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 # Azure setup guide: Before you start
 
 > [!NOTE]
-> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in Azure Quickstart Center. See the tip in the article for a link.
+> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in the Azure Quickstart Center. See the tip in the article for a link.
 
 ::: zone-end
 
@@ -28,7 +28,7 @@ ms.localizationpriority: high
 
 ::: zone-end
 
-Before you start building and deploying solutions using Azure services, you need to prepare your environment. In this guide, we introduce features that help you organize resources, control costs, and secure and manage your organization. For more information, best practices, and considerations related to preparing your cloud environment, see the [Cloud Adoption Framework's readiness section](../index.md).
+Before you start building and deploying solutions using Azure services, you need to prepare your environment. In this guide, we introduce features that help you organize resources, control costs, and secure and manage your organization. For more information, best practices, and considerations related to preparing your cloud environment, see the Cloud Adoption Framework's [readiness section](../index.md).
 
 You'll learn how to:
 

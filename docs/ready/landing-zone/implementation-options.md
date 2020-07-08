@@ -1,6 +1,6 @@
 ---
-title: Landing zone deployment options
-description: Determine which landing zone deployment option best fits your requirements.
+title: Landing zone implementation options
+description: Determine which landing zone implementation option best fits your requirements.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020

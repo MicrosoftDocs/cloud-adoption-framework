@@ -1,5 +1,5 @@
 ---
-title: Azure governance, security, and compliance
+title: Governance, security, and compliance in Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to set up governance, security, and compliance for your Azure environment.
 author: tvuylsteke
 ms.author: kfollis
