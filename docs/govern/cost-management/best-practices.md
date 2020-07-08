@@ -206,7 +206,7 @@ An integrated Microsoft on-premises/Azure product portfolio generates competitiv
 - Learn more about [Azure Hybrid Benefit for Windows Server](https://azure.microsoft.com/pricing/hybrid-benefit).
 - Review [pricing guidance for SQL Server Azure VMs](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-pricing-guidance).
 
-## Best practice: Use Azure VM Reserved instances
+## Best practice: Use Azure Reserved VM Instances
 
 Most cloud platforms are set up as pay-as-you-go. This model presents disadvantages, since you don't necessarily know how dynamic workloads will be. When you specify clear intentions for a workload, you contribute to infrastructure planning.
 
