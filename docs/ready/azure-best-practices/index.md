@@ -1,5 +1,5 @@
 ---
-title: "Best practices for Azure readiness"
+title: Best practices for Azure readiness
 description: Learn about best practices and additional guidance to help your team establish and prepare your Azure environment.
 author: BrianBlanchard
 ms.author: brblanch
@@ -39,7 +39,7 @@ Prepare your cloud networking infrastructure to support your workloads.
 Design your identity and access control infrastructure to improve the security and management efficiency of your workloads.
 
 - [Azure identity management and access control security best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Learn best practices for identity management and access control using built-in Azure capabilities.
-- [Best practices for role-based access control](../considerations/roles.md). Enable fine-grained group-based access management for resources organized around user roles.
+- [Best practices for role-based access control](../considerations/roles.md). Enable fine-grained and group-based access management for resources organized around user roles.
 - [Securing privileged access for hybrid and cloud deployments in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Ensure that your organization's administrative access and privileged accounts are secure across your cloud and on-premises environment.
 
 ## Storage

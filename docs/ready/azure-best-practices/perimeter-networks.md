@@ -1,5 +1,5 @@
 ---
-title: "Perimeter networks"
+title: Perimeter networks
 description: Use the Cloud Adoption Framework for Azure to learn how to set up Azure effectively for your organization.
 author: tracsman
 ms.author: jonor
@@ -38,6 +38,7 @@ Perimeter networks make use of the following Azure features and services:
 Usually, your Central IT team and security teams are responsible for defining requirements for operating your perimeter networks.
 
 ![Example of a hub and spoke network topology](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
+_Figure 1: Example hub-and-spoke network topology._
 
 The diagram above shows an example [hub and spoke network topology](./hub-spoke-network-topology.md) that implements enforcement of two perimeters with access to the internet and an on-premises network. Both perimeters reside in the DMZ hub. In the DMZ hub, the perimeter network to the internet can scale up to support many lines of business via multiple farms of WAFs and Azure Firewall instances that help protect the spoke virtual networks. The hub also allows for connectivity via VPN or Azure ExpressRoute as needed.
 
@@ -101,7 +102,7 @@ With some Azure features, you can associate service endpoints to a [public IP][P
 
 [Azure DDoS Protection Standard][DDoS] provides additional mitigation capabilities over the [basic service][DDoS] tier that are tuned specifically to Azure Virtual Network resources. DDoS protection standard is simple to enable and requires no application changes.
 
-You can tune protection policies through dedicated traffic monitoring and machine-learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples are Azure Load Balancer, Azure Application Gateway, and Azure Service Fabric instances.
+You can tune protection policies through dedicated traffic monitoring and machine-learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples are Azure Load Balancer, Application Gateway, and Service Fabric instances.
 
 Real-time telemetry is available through Azure Monitor views both during an attack and for historical purposes. You can add application-layer protection by using the Web Application Firewall in Azure Application Gateway. Protection is provided for IPv4 Azure public IP addresses.
 
