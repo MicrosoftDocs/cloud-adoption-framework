@@ -1,6 +1,6 @@
 ---
 title: Identity and access management
-description: Identity and access management.
+description: Examine design considerations and recommendations related to identity and access management in an enterprise environment.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -13,9 +13,9 @@ ms.subservice: ready
 
 Identity provides the basis of large percentage of security assurance. Identity enable access based on identity authentication and authorization controls in cloud services to protect data and resources and to decide which requests should be permitted.
 
-Identity and access management (IAM) is boundary security in the public cloud and must be treated as the foundation of any secure and fully compliant public cloud architecture. Microsoft Azure offers a comprehensive set of services, tools and reference architectures to enable organizations to make highly secure, operationally efficient environments and those will be outlined below.
+Identity and access management (IAM) is boundary security in the public cloud and must be treated as the foundation of any secure and fully compliant public cloud architecture. Microsoft Azure offers a comprehensive set of services, tools and reference architectures to enable organizations to make highly secure, operationally efficient environments and as outlined here.
 
-This section will examine design considerations and recommendations related to identity and access management in an enterprise environment.
+This section examines design considerations and recommendations related to identity and access management in an enterprise environment.
 
 ## Why we need identity and access management
 
@@ -23,7 +23,7 @@ The technological landscape in the enterprise is becoming complex and heterogeno
 
 ### Planning for identity and access management
 
-Enterprise organizations will typically follow a least-privileged approach to operational access, and this model should be expanded to consider Azure through Azure AD role-based access control (RBAC) and custom role definitions. It is critical to plan how to govern control and data plane access to resources in Azure. Any design for IAM and RBAC must meet regulatory, security, and operational requirements before it can be accepted.
+Enterprise organizations typically follow a least-privileged approach to operational access. This model should be expanded to consider Azure through Azure AD role-based access control (RBAC) and custom role definitions. It is critical to plan how to govern control and data plane access to resources in Azure. Any design for IAM and RBAC must meet regulatory, security, and operational requirements before it can be accepted.
 
 Identity and access management is a multistep process involving careful planning for identity integration and other security considerations, such as blocking legacy authentication and planning for modern passwords. Staging planning also involves selection of business-to-business (B2B) or business-to-consumer (B2C) identity and access management. While these requirements vary, there are common design considerations and recommendations to consider for an enterprise landing zone.
 
@@ -54,7 +54,7 @@ _Figure 1: Identity and access management._
 
 - Enforce multi-factor authentication for any user with rights to the Azure environments. This is a requirement of many compliance frameworks and greatly lowers the risk of credential theft and unauthorized access.
 
-- Use [Azure AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, utilize Azure native tools as outlined above, or use both as needed.
+- Use [Azure AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, use Azure native tools as outlined above, or use both as needed.
 
 - Use Azure-AD-only groups for Azure control plane resources in Azure AD PIM when granting access to resources.
 
