@@ -1,6 +1,6 @@
 ---
-title: Business continuity and disaster recovery
-description: Business continuity and disaster recovery.
+title: CAF enterprise-scale business continuity and disaster recovery
+description: Learn about enterprise-scale business continuity and disaster recovery in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Business continuity and disaster recovery
+# CAF enterprise-scale business continuity and disaster recovery
 
 ## Planning for business continuity and disaster recovery
 
-This section will help readers capture customer disaster recovery (DR) requirements to design suitable platform-level capabilities that application workloads can consume to meet their specific recovery time objective (RTO) and recovery point objective (RPO) requirements.
+Capture disaster recovery (DR) requirements to design suitable platform-level capabilities that application workloads can consume to meet their specific recovery time objective (RTO) and recovery point objective (RPO) requirements.
 
 **Design considerations:**
 
@@ -25,15 +25,15 @@ This section will help readers capture customer disaster recovery (DR) requireme
 
 - Application operations with reduced functionality or degraded performance in the presence of an outage.
 
-- Workload suitability for availability zones or availability sets.
+- Workload suitability for Availability Zones or availability sets.
 
   - Data sharing and dependencies between zones.
 
-  - Impact of availability zones on update domains compared to availability sets and percentage of workloads that can be under maintenance simultaneously.
+  - Impact of Availability Zones on update domains compared to availability sets and percentage of workloads that can be under maintenance simultaneously.
 
-  - Support for specific virtual machine (VM) stock-keeping units with availability zones.
+  - Support for specific virtual machine (VM) stock-keeping units with Availability Zones.
 
-  - Using availability zones is required if Microsoft Azure ultra disk storage is used.
+  - Using Availability Zones is required if Microsoft Azure ultra disk storage is used.
 
 - Consistent backups for applications and data.
 
