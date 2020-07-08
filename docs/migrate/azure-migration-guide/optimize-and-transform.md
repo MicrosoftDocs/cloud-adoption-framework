@@ -82,7 +82,7 @@ Partners can use the Partner Center to review the usage.
 
 ## Resize a SQL Database
 
-1. Go to either **SQL databases**, or **SQL servers** and then select the server.
+1. Go to either **SQL databases**, or **SQL servers**, then select the server.
 1. Select the desired database.
 1. Select **Configure** and the desired new service tier size.
 1. Select **Apply**.

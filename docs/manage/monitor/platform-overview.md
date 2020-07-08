@@ -160,7 +160,7 @@ Management packs include various predefined alerting rules for different critica
 
 ### Azure Monitor
 
-With Azure Monitor, you can create alerts based on a metric crossing a threshold, or based on a scheduled query result. Although alerts based on metrics can achieve near-real-time results, scheduled queries have a longer response time, depending on the speed of data ingestion and indexing. Instead of being limited to a specific agent, log query alerts in Azure Monitor let you analyze data across all data stored in multiple workspaces. These alerts also include data from a specific Application Insights app by using a cross-workspace query.
+With Azure Monitor, you can create alerts based on a metric crossing a threshold, or based on a scheduled query result. Although alerts based on metrics can achieve near-real-time results, scheduled queries have a longer response time, depending on the speed of data ingestion and indexing. Instead of being limited to a specific agent, log query alerts in Azure Monitor let you analyze data across all data stored in multiple workspaces. These alerts also include data from a specific Application Insights application by using a cross-workspace query.
 
 Although monitoring solutions can include alert rules, you ordinarily create them based on your own requirements.
 

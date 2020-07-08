@@ -1,9 +1,9 @@
 ---
-title: "Moving on-premises VMware infrastructure to Azure"
-description: Learn how Contoso moves on-premises VMware VMs to Azure
+title: Move on-premises VMware infrastructure to Azure
+description: Learn how Contoso moves on-premises VMware VMs to Azure.
 author: deltadan
 ms.author: abuck
-ms.date: 06/11/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,7 +12,7 @@ services: azure-migrate
 
 <!-- docsTest:ignore "Bulk Migration" "Cold Migration" -->
 
-# Moving on-premises VMware infrastructure to Azure
+# Move on-premises VMware infrastructure to Azure
 
 Contoso has several options available when migrating VMware virtual machines (VMs) from an on-premises datacenter to Azure.
 
@@ -42,7 +42,7 @@ With the business drivers in mind, Contoso has pinned down goals for this migrat
 
 - Continue managing their existing environments with VMware tools familiar to their teams, while modernizing the applications with native Azure services.
 - Seamlessly move Contoso's VMware-based workloads from their datacenter to Azure and integrate the VMware environment with Azure.
-- After migration, the app in Azure should have the same performance capabilities as it does today in VMware. The app will remain as critical in the cloud as it is on-premises.
+- After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application remains as critical in the cloud as it is on-premises.
 
 These goals support the decision to use AVS and validate it as the best migration method for Contoso.
 
@@ -81,8 +81,8 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Bare metal VMware infrastructure with high performance. Infrastructure that is fully dedicated to Contoso and is physically isolated from infrastructure of other customers. <br><br> Since Contoso is using a rehost using VMware there is, no special configuration or migration complexity. <br><br> Contoso can take advantage of their investment in Software Assurance, using the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) and [extended security updates](https://www.microsoft.com/cloud-platform/windows-server-2008) for legacy Windows and SQL platforms. <br><br> Contoso will retain full control of the app VMs in Azure. <br><br> |
-| **Cons** | Contoso will need to continue supporting the app as VMware VMs rather than moving them to a managed service such as Azure App Service and Azure SQL Database. <br><br> Azure VMware Solution are provisioned and priced based on a minimum of three large nodes rather than individual VMs in Azure IaaS. They will need to plan their capacity needs as they don on-premises today rather than benefits from the on-demand nature of other services in Azure. |
+| **Pros** | Bare metal VMware infrastructure with high performance. Infrastructure that is fully dedicated to Contoso and is physically isolated from infrastructure of other customers. <br><br> Since Contoso is using a rehost using VMware there is, no special configuration or migration complexity. <br><br> Contoso can take advantage of their investment in Software Assurance, using the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) and [extended security updates](https://www.microsoft.com/cloud-platform/windows-server-2008) for legacy Windows and SQL platforms. <br><br> Contoso will retain full control of the application VMs in Azure. <br><br> |
+| **Cons** | Contoso will need to continue supporting the application as VMware VMs rather than moving them to a managed service such as Azure App Service and Azure SQL Database. <br><br> Azure VMware Solution are provisioned and priced based on a minimum of three large nodes rather than individual VMs in Azure IaaS. They will need to plan their capacity needs as they don on-premises today rather than benefits from the on-demand nature of other services in Azure. |
 
 > [!NOTE]
 > Learn more about the [pricing](https://azure.microsoft.com/pricing/details/azure-vmware/) of Azure VMware Solution.

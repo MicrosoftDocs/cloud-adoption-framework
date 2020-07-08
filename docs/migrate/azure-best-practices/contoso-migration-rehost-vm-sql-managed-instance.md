@@ -1,9 +1,9 @@
 ---
-title: "Rehost an on-premises app by migrating to Azure VMs and Azure SQL Managed Instance"
+title: Rehost an on-premises application by migrating to Azure VMs and Azure SQL Managed Instance
 description: Learn how Contoso rehosts an on-premises app on Azure VMs and by using Azure SQL Managed Instance.
 author: givenscj
 ms.author: abuck
-ms.date: 04/02/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,11 +12,11 @@ services: azure-migrate
 
 <!-- cSpell:ignore givenscj WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless SQLMI iisreset -->
 
-# Rehost an on-premises app on an Azure VM and SQL Managed Instance
+# Rehost an on-premises application by migrating to Azure VMs and Azure SQL Managed Instance
 
-This article shows how the fictional company Contoso migrates a two-tier Windows .NET front-end app running on VMware VMs to an Azure VM using the Azure Migrate service. It also shows how Contoso migrates the app database to Azure SQL Managed Instance.
+This article shows how the fictional company Contoso migrates a two-tier Windows .NET front-end application running on VMware VMs to an Azure VM using the Azure Migrate service. It also shows how Contoso migrates the application database to Azure SQL Managed Instance.
 
-The SmartHotel360 app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
+The SmartHotel360 application used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
 ## Business drivers
 
@@ -31,10 +31,10 @@ Contoso's IT leadership team has worked closely with the company's business part
 
 The Contoso cloud team has identified goals for this migration. The company uses migration goals to determine the best migration method.
 
-- After migration, the app in Azure should have the same performance capabilities that the app has today in Contoso's on-premises VMware environment. Moving to the cloud doesn't mean that app performance is less critical.
-- Contoso doesn't want to invest in the app. The app is critical and important to the business, but Contoso simply wants to move the app in its current form to the cloud.
-- Database administration tasks should be minimized after the app is migrated.
-- Contoso doesn't want to use an Azure SQL Database for this app. It's looking for alternatives.
+- After migration, the application in Azure should have the same performance capabilities that the application has today in Contoso's on-premises VMware environment. Moving to the cloud doesn't mean that application performance is less critical.
+- Contoso doesn't want to invest in the application. The application is critical and important to the business, but Contoso simply wants to move the application in its current form to the cloud.
+- Database administration tasks should be minimized after the application is migrated.
+- Contoso doesn't want to use an Azure SQL Database for this application. It's looking for alternatives.
 
 ## Solution design
 
@@ -42,7 +42,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 ### Current architecture
 
-- Contoso has one main datacenter (`contoso-datacenter`) . The datacenter is located in the city of New York in the eastern United States.
+- Contoso has one main datacenter (`contoso-datacenter`) . The datacenter is located in the New York City in the eastern United States.
 - Contoso has three additional local branches across the United States.
 - The main datacenter is connected to the internet with a fiber optic Metro Ethernet connection (500 Mbps).
 - Each branch is connected locally to the internet by using business-class connections with IPsec VPN tunnels back to the main datacenter. The setup allows Contoso's entire network to be permanently connected and optimizes internet connectivity.
@@ -50,16 +50,16 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 - Contoso uses Active Directory for identity management. Contoso uses DNS servers on the internal network.
 - Contoso has an on-premises domain controller (`contosodc1`).
 - The domain controllers run on VMware VMs. The domain controllers at local branches run on physical servers.
-- The SmartHotel360 app is tiered across two VMs (`WEBVM` and `SQLVM`) that are located on a VMware ESXi version 6.5 host (`contosohost1.contoso.com`).
+- The SmartHotel360 application is tiered across two VMs (`WEBVM` and `SQLVM`) that are located on a VMware ESXi version 6.5 host (`contosohost1.contoso.com`).
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`) running on a VM.
 
 ![Current Contoso architecture](./media/contoso-migration-rehost-vm-sql-managed-instance/contoso-architecture.png)
 
 ### Proposed architecture
 
-In this scenario, Contoso wants to migrate its two-tier on-premises travel app as follows:
+In this scenario, Contoso wants to migrate its two-tier on-premises travel application as follows:
 
-- Migrate the app database (`SmartHotelDB`) to an Azure SQL Managed Instance.
+- Migrate the application database (`SmartHotelDB`) to an Azure SQL Managed Instance.
 - Migrate the front-end `WEBVM` to an Azure VM.
 - The on-premises VMs in the Contoso datacenter will be decommissioned when the migration is finished.
 
@@ -69,10 +69,10 @@ In this scenario, Contoso wants to migrate its two-tier on-premises travel app a
 
 As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Managed Instance. The following considerations helped them to decide to use SQL Managed Instance.
 
-- SQL Managed Instance aims to deliver almost 100% compatibility with the latest on-premises SQL Server version. Microsoft recommends SQL Managed Instance for customers who are running SQL Server on-premises or on IaaS VMs and want to migrate their apps to a fully managed service with minimal design changes.
-- Contoso is planning to migrate a large number of apps from on-premises to IaaS. Many of these are ISV provided. Contoso realizes that using SQL Managed Instance will help ensure database compatibility for these apps, rather than using SQL Database, which might not be supported.
+- SQL Managed Instance aims to deliver almost 100% compatibility with the latest on-premises SQL Server version. Microsoft recommends SQL Managed Instance for customers who are running SQL Server on-premises or on IaaS VMs and want to migrate their applications to a fully managed service with minimal design changes.
+- Contoso is planning to migrate a large number of applications from on-premises to IaaS. Many of these are ISV provided. Contoso realizes that using SQL Managed Instance will help ensure database compatibility for these applications, rather than using SQL Database, which might not be supported.
 - Contoso can perform a lift and shift migration to SQL Managed Instance using the fully automated Azure Database Migration Service. With this service in place, Contoso can reuse it for future database migrations.
-- SQL Managed Instance supports SQL Server Agent, an important component of the SmartHotel360 app. Contoso needs this compatibility, otherwise it will have to redesign maintenance plans required by the app.
+- SQL Managed Instance supports SQL Server Agent, an important component of the SmartHotel360 application. Contoso needs this compatibility, otherwise it will have to redesign maintenance plans required by the application.
 - With Software Assurance, Contoso can exchange their existing licenses for discounted rates on a SQL Managed Instance using the Azure Hybrid Benefit for SQL Server. This can allow Contoso to save up to 30% on SQL Managed Instance.
 - SQL Managed Instance is fully contained in the virtual network, so it provides greater isolation and security for Contoso's data. Contoso can get the benefits of the public cloud, while keeping the environment isolated from the public internet.
 - SQL Managed Instance supports many security features, including always-encrypted, dynamic data masking, row-level security, and threat detection.
@@ -84,11 +84,11 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 | Consideration | Details |
 | --- | --- |
 | **Pros** | `WEBVM` will be moved to Azure without changes, making the migration simple. <br><br> SQL Managed Instance supports Contoso's technical requirements and goals. <br><br> SQL Managed Instance will provide 100% compatibility with their current deployment, while moving them away from SQL Server 2008 R2. <br><br> They can take advantage of their investment in Software Assurance and using the Azure Hybrid Benefit for SQL Server and Windows Server. <br><br> They can reuse Azure Database Migration Service for additional future migrations. <br><br> SQL Managed Instance has built-in fault tolerance that Contoso doesn't need to configures. This ensures that the data tier is no longer a single point of failover. |
-| **Cons** | The `WEBVM` is running Windows Server 2008 R2. Although this operating system is supported by Azure, it is no longer supported platform. [Learn more](https://support.microsoft.com/help/956893). <br><br> The web tier remains a single point of failover with only `WEBVM` providing services. <br><br> Contoso will need to continue supporting the app web tier as a VM rather than moving to a managed service, such as Azure App Service. <br><br> For the data tier, SQL Managed Instance might not be the best solution if Contoso wants to customize the operating system or the database server, or if they want to run third-party apps along with SQL Server. Running SQL Server on an IaaS VM could provide this flexibility. |
+| **Cons** | The `WEBVM` is running Windows Server 2008 R2. Although this operating system is supported by Azure, it is no longer supported platform. [Learn more](https://support.microsoft.com/help/956893). <br><br> The web tier remains a single point of failover with only `WEBVM` providing services. <br><br> Contoso will need to continue supporting the application web tier as a VM rather than moving to a managed service, such as Azure App Service. <br><br> For the data tier, SQL Managed Instance might not be the best solution if Contoso wants to customize the operating system or the database server, or if they want to run third-party applications along with SQL Server. Running SQL Server on an IaaS VM could provide this flexibility. |
 
 ### Migration process
 
-Contoso will migrate the web and data tiers of its SmartHotel360 app to Azure by completing these steps:
+Contoso will migrate the web and data tiers of its SmartHotel360 application to Azure by completing these steps:
 
 1. Contoso already has its Azure infrastructure in place, so it just needs to add a couple of specific Azure components for this scenario.
 2. The data tier will be migrated by using Azure Database Migration Service. This service connects to the on-premises SQL Server VM across a Site-to-Site VPN connection between the Contoso datacenter and Azure. The service then migrates the database.
@@ -110,7 +110,7 @@ Contoso and other users must meet the following prerequisites for this scenario:
 
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | You should have already created a subscription when you perform the assessment in the first article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator of the subscription, you need to work with the admin to assign you Owner or Contributor permissions to the necessary resource groups and resources. |
+| **Azure subscription** | You should have already created a subscription when you perform the assessment in the first article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator of the subscription, you need to work with the admin to assign you Owner or Contributor permissions to the necessary resource groups and resources. |
 | **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
 | **On-premises servers** | The on-premises vCenter Server should be running version 5.5, 6.0, or 6.5. <br><br> An ESXi host running version 5.5, 6.0 or 6.5. <br><br> One or more VMware VMs running on the ESXi host. |
 | **On-premises VMs** | [Review Linux machines](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) that are endorsed to run on Azure. |
@@ -211,7 +211,7 @@ Learn how to [set up routes for a managed instance](https://docs.microsoft.com/a
 
 Now, Contoso admins can provision a SQL Managed Instance:
 
-1. Because the managed instance serves a business app, they deploy the managed instance in the company's primary region (`East US 2`). They add the managed instance to the `ContosoRG` resource group.
+1. Because the managed instance serves a business application, they deploy the managed instance in the company's primary region (`East US 2`). They add the managed instance to the `ContosoRG` resource group.
 2. They select a pricing tier, size compute, and storage for the instance. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed).
 
     ![Managed Instance](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-create.png)
@@ -269,10 +269,10 @@ They set these up as follows:
 
 1. **Set up a network:** Contoso already set up a network that can be for Azure Migrate: Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
-    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+    - The SmartHotel360 application is a production application, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
-    - The app front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`) of the production network.
-    - The app database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`) of the production network.
+    - The application front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`) of the production network.
+    - The application database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`) of the production network.
 
 ## Step 4: Prepare on-premises VMware for Azure Migrate: Server Migration
 
@@ -285,10 +285,10 @@ They set these up as follows:
 
 1. Set up a network-Contoso already set up a network that can be for Azure Migrate: Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
-    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+    - The SmartHotel360 application is a production application, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
-    - The app front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`), in the production network.
-    - The app database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`), in the production network.
+    - The application front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`), in the production network.
+    - The application database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`), in the production network.
 
 2. Provision the Azure Migrate appliance.
 
@@ -348,7 +348,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 **Need more help?**
 
-- Learn about [preparing VMs for migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration).
+- Learn about [preparing VMs for migration](https://docs.microsoft.com/azure/migrate/prepare-for-migration).
 
 ## Step 5: Replicate the on-premises VMs
 
@@ -360,7 +360,7 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 
     ![Replicate VMs](./media/contoso-migration-rehost-vm/select-replicate.png)
 
-2. In **Replicate**, > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
+2. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
 
 3. In **On-premises appliance**, select the name of the Azure Migrate appliance that you set up > **OK**.
 
@@ -368,7 +368,7 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 
 4. In **Virtual machines**, select the machines you want to replicate.
     - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. To do this, in **Import migration settings from an Azure Migrate assessment?**, select the **Yes** option.
-    - If you didn't run an assessment, or you don't want to use the assessment settings, select the **No** options.
+    - If you didn't run an assessment, or you don't want to use the assessment settings, select the **No** option.
     - If you selected to use the assessment, select the VM group, and assessment name.
 
     ![Select assessment](./media/contoso-migration-rehost-vm/select-assessment.png)
@@ -490,7 +490,7 @@ As the final step in the migration process, Contoso admins update the connection
 2. They update the string with the user name and password of the SQL Managed Instance.
 3. After the string is configured, they replace the current connection string in the `web.config` file of its application.
 4. After updating the file and saving it, they restart IIS on `WEBVM` by running `iisreset /restart` in a command prompt window.
-5. After IIS is restarted, the app uses the database that's running on the SQL Managed Instance.
+5. After IIS is restarted, the application uses the database that's running on the SQL Managed Instance.
 6. At this point, they can shut down on-premises the SQLVM machine. The migration has been completed.
 
 **Need more help?**
@@ -501,7 +501,7 @@ As the final step in the migration process, Contoso admins update the connection
 
 ## Clean up after migration
 
-With the migration complete, the SmartHotel360 app is running on an Azure VM and the SmartHotel360 database is available in the Azure SQL Managed Instance.
+With the migration complete, the SmartHotel360 application is running on an Azure VM and the SmartHotel360 database is available in the Azure SQL Managed Instance.
 
 Now, Contoso needs to do the following cleanup tasks:
 
@@ -520,7 +520,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 The Contoso security team reviews the Azure VMs and SQL Managed Instance to check for any security issues with its implementation:
 
-- The team reviews the network security groups that are used to control access for the VM. Network security groups help ensure that only traffic that is allowed to the app can pass.
+- The team reviews the network security groups that are used to control access for the VM. Network security groups help ensure that only traffic that is allowed to the application can pass.
 - Contoso's security team also is considering securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
 - The team enables threat detection on the managed instance. Threat detection sends an alert to Contoso's security team/service desk system to open a ticket if a threat is detected. Learn more about [threat detection for SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-threat-detection).
 
@@ -532,8 +532,8 @@ To learn more about security practices for VMs, see [Security best practices for
 
 For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
 
-- Keep data safe: Contoso backs up the data on the VMs using the Azure Backup service. [Learn more](https://docs.microsoft.com/azure/backup/backup-overview).
-- Keep apps up and running: Contoso replicates the app VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- Keep data safe: Contoso backs up the data on the VMs using the Azure Backup service. For more information, see [An overview of Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction).
+- Keep applications up and running: Contoso replicates the application VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 - Contoso learns more about managing SQL Managed Instance, including [database backups](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ### Licensing and cost optimization
@@ -543,4 +543,4 @@ For business continuity and disaster recovery (BCDR), Contoso takes the followin
 
 ## Conclusion
 
-In this article, Contoso rehosts the SmartHotel360 app in Azure by migrating the app front-end VM to Azure by using the Azure Migrate service. Contoso migrates the on-premises database to an Azure SQL Managed Instance by using Azure Database Migration Service.
+In this article, Contoso rehosts the SmartHotel360 application in Azure by migrating the application front-end VM to Azure by using the Azure Migrate service. Contoso migrates the on-premises database to an Azure SQL Managed Instance by using Azure Database Migration Service.

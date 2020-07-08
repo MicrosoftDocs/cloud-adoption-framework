@@ -1,9 +1,9 @@
 ---
-title: "Migrating SQL Server databases to Azure "
-description: Learn how Contoso migrates their on-premises SQL Databases to Azure
+title: Migrate SQL Server databases to Azure
+description: Learn how Contoso migrates their on-premises SQL Databases to Azure.
 author: deltadan
 ms.author: abuck
-ms.date: 05/11/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -42,12 +42,12 @@ The Contoso cloud team has pinned down goals for the various migrations. These g
 
 | Requirements | Details |
 | --- | --- |
-| **Performance** | After migration, apps in Azure should have the same performance capabilities that apps have today in Contoso's on-premises environment. Moving to the cloud doesn't mean that app performance is less critical. |
+| **Performance** | After migration, applications in Azure should have the same performance capabilities that applications have today in Contoso's on-premises environment. Moving to the cloud doesn't mean that application performance is less critical. |
 | **Compatibility** | Contoso needs to understand the compatibility of its applications and databases with Azure. Contoso also needs to understand its Azure hosting options. |
 | **Data sources** | All databases will be moved to Azure with no exceptions. Based on the database and application analysis of the SQL features being used, they will move to PaaS, IaaS or managed instances. All databases must move. |
-| **App** | Apps will need to be moved to the cloud where possible. If they cannot move, then they will be allowed to connect to the migrated database over the Azure network through private connections only. |
+| **Application** | Applications must be moved to the cloud wherever possible. If they cannot move, then they will be allowed to connect to the migrated database over the Azure network through private connections only. |
 | **Costs** | Contoso wants to understand not only its migration options, but also the costs associated with the infrastructure after it moves to the cloud. |
-| **Management** | Resource management groups will need to be created for the various departments along with resource groups to managed all SQL databases that are migrated. All resources will need to be tagged with department information for charge-back requirements. |
+| **Management** | Resource management groups must be created for the various departments along with resource groups to managed all SQL databases that are migrated. All resources must be tagged with department information for charge-back requirements. |
 | **Limitations** | Initially, not all branch offices that run applications will have a direct ExpressRoute link to Azure, so these offices will need to connect through virtual network gateways. |
 
 ## Solution design
@@ -190,8 +190,8 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 - Contoso needs to ensure that their new Azure database workloads are secure. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview).
 - In particular, Contoso should review the firewall and virtual network configurations.
-- Setup [Private Link](https://docs.microsoft.comazure/azure-sql/database/private-endpoint-overview) so that all database traffic is kept inside Azure and the on-premises network.
-- Enable [Azure Advanced Threat Protection](https://docs.microsoft.com/azure/azure-sql/database/threat-detection-overview) for Azure SQL Database
+- Setup [Private Link](https://docs.microsoft.com/azure/azure-sql/database/private-endpoint-overview) so that all database traffic is kept inside Azure and the on-premises network.
+- Enable [Azure Advanced Threat Protection](https://docs.microsoft.com/azure/azure-sql/database/threat-detection-overview) for Azure SQL Database.
 
 #### Backups
 

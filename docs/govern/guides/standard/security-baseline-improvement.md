@@ -74,7 +74,7 @@ The following changes to policy will help remediate the new risks and guide impl
 9. Whenever possible, node configuration management should apply policy requirements to the configuration of any guest operating system.
 10. Governance tooling must enforce that automatic updates are enabled on all deployed assets. Violations must be reviewed with operational management teams and remediated in accordance with operations policies. Assets that are not automatically updated must be included in processes owned by IT operations.
 11. Creation of new subscriptions or management groups for any mission-critical applications or protected data will require a review from the cloud governance team, to ensure that the proper blueprint is assigned.
-12. A least-privilege access model will be applied to any management group or subscription that contains mission-critical apps or protected data.
+12. A least-privilege access model will be applied to any management group or subscription that contains mission-critical applications or protected data.
 13. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to security management tooling used in the cloud.
 14. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
 15. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.

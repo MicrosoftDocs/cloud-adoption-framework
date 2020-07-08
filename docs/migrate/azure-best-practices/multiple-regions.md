@@ -1,16 +1,16 @@
 ---
-title: "Regions decision guide"
-description: Learn about cloud platform regions, and the factors and characteristics that can affect your Azure region selections.
+title: Azure regions decision guide
+description: Learn about cloud platform regions and the factors and characteristics that can affect your Azure region selections.
 author: doodlemania2
 ms.author: dermar
-ms.date: 10/17/2019
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
 ---
 
-# Azure regions
+# Azure regions decision guide
 
 Azure is comprised of many regions around the world. Each [Azure region](https://azure.microsoft.com/global-infrastructure/regions) has specific characteristics that make choosing which region to use incredibly important.
 

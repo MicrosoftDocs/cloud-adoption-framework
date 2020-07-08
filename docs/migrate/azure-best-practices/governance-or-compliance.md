@@ -1,9 +1,9 @@
 ---
-title: "Governance or compliance strategy"
+title: Governance or compliance strategy
 description: Governance or compliance strategy
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -23,9 +23,9 @@ Configuration of the base Azure environment could change significantly when inte
 
 **Common governance approach:** For most organizations, the [Cloud Adoption Framework governance model](../../govern/guides/index.md) is a sufficient approach that consists of a minimum viable product (MVP) implementation, followed by targeted iterations of governance maturity to address tangible risks identified in the adoption plan. This approach provides the minimum tooling needed to establish consistent governance, so the team can understand the tools. It then expands on those tools to address common governance concerns.
 
-**ISO 27001 compliance blueprints:** For customer who are required to adhere to ISO compliance standards, the [ISO 27001 Shared Services blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-shared) can serve as a more effective MVP to produce richer governance constraints earlier in the iterative process. The [ISO 27001 App Service Environment/SQL Database sample](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-ase-sql-workload) expands on the blueprint to map controls and deploy a common architecture for an application environment. As additional compliance blueprints are released, they will be referenced here as well.
+**ISO 27001 compliance blueprints:** For customer who are required to adhere to ISO compliance standards, the [ISO 27001 Shared Services blueprint samples](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-shared) can serve as a more effective MVP to produce richer governance constraints earlier in the iterative process. The [ISO 27001 App Service Environment/SQL Database workload blueprint sample](https://docs.microsoft.com/azure/governance/blueprints/samples/iso27001-ase-sql-workload) expands on the blueprint to map controls and deploy a common architecture for an application environment. As additional compliance blueprints are released, they will be referenced here as well.
 
-**CAF enterprise-scale landing zone:** A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). The CAF enterprise-scale landing zone approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infrastructure, or data assets) in the cloud. CAF enterprise-scale landing zone is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
+**CAF enterprise-scale landing zone:** A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). The CAF enterprise-scale landing zone approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (applications, infrastructure, or data assets) in the cloud. CAF enterprise-scale landing zone is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
 
 ### Partnership option to complete prerequisites
 

@@ -97,7 +97,7 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 | **Memory-optimized** | High memory-to-CPU. | Good for relational databases, medium- to large-size cache, in-memory analytics. |
 | **Storage optimized** | High disk throughput and I/O. | Suitable for big data, SQL, and NoSQL databases. |
 | **GPU optimized** | Specialized VMs. Single or multiple GPUs. | Heavy graphics and video editing. |
-| **High performance** | Fastest and most powerful CPU. VMs with optional high-throughput network interfaces (RDMA). | Critical high-performance apps. |
+| **High performance** | Fastest and most powerful CPU. VMs with optional high-throughput network interfaces (RDMA). | Critical high-performance applications. |
 
 - It's important to understand the pricing differences between these VMs, and the long-term budget effects.
 - Each type has several VM series within it.
@@ -157,7 +157,7 @@ Azure provides different types of storage accounts and performance tiers.
 | --- | --- | --- |
 | **General-purpose v2 Standard tier** | Supports blobs (block, page, append), files, disks, queues, and tables. <br><br> Supports hot, cool, and archive access tiers. Zone-redundant storage (ZRS) is supported. | Use for most scenarios and most types of data. Standard storage accounts can be HDD or SSD-based. |
 | **General-purpose v2 Premium tier** | Supports Blob storage data (page blobs). Supports hot, cool, and archive access tiers. ZRS is supported. <br><br> Stored on SSD. | Microsoft recommends using for all VMs. |
-| **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS | Use if apps need the Azure classic deployment model. |
+| **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS | Use if applications need the Azure classic deployment model. |
 | **Blob** | Specialized storage account for storing unstructured objects. Provides block blobs and append blobs only (no file, queue, table, or disk storage services). Provides the same durability, availability, scalability, and performance as general-purpose v2. | You can't store page blobs in these accounts, and therefore can't store VHD files. You can set an access tier to hot or cool. |
 
 <!--markdownlint-enable MD033 -->

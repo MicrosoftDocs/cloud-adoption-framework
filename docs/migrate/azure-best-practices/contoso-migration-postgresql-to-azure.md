@@ -21,10 +21,10 @@ This article demonstrates how the fictional company Contoso planned and migrated
 The IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
 
 - **Big data:** Contoso uses PostgreSQL for several of their big data and AI initiatives, they'd like to be able to build scalable repeatable pipelines to automate many of these analytical workloads.
-- **Increase efficiency:** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering quicker on customer requirements.
-- **Increase agility:** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable the success in a global economy. It mustn't get in the way, or become a business blocker.
+- **Increase efficiency:** Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, delivering quicker on customer requirements.
+- **Increase agility:** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace to enable the success in a global economy and to not become a business blocker.
 - **Scale:** As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
-- **Increased security:** Contoso realizes that regulatory issues will cause them to adjust their on-premises strategy based on auditing, logging and compliance requirements.
+- **Increased security:** Contoso realizes that regulatory issues will cause them to adjust their on-premises strategy based on auditing, logging, and compliance requirements.
 
 ## Migration goals
 
@@ -36,16 +36,15 @@ The Contoso cloud team has pinned down goals for this migration and will use the
 | **Integrations** | Contoso would like to integrate the data in the database with data and AI pipelines for Machine Learning. |
 | **Backup and restore** | Contoso is looking for the ability to do point in time restores when and if data updates fail or are corrupted for any reason. |
 | **Azure** | They would like to be able to monitor the system and fire alerts based on performance and security. |
-| **Performance** | In some cases they will have parallel data processing pipelines in different geographic regions and will need to be able to read data from those regions. |
+| **Performance** | In some cases, they will have parallel data processing pipelines in different geographic regions and must read data from those regions. |
 
 ## Solution design
 
-After pinning down goals and requirements, Contoso designs and review a deployment solution, and identifies the migration process, including the tools and services that they will use for migration.
+After pinning down goals and requirements, Contoso designs and review a deployment solution and identifies the migration process, including the tools and services that they will use for migration.
 
 ### Current environment
 
-- PostgreSQL 9.6.7 running on a physical Linux machine (`sql-pg-01.contoso.com`) in the Contoso datacenter.
-- Contoso already has an Azure subscription with a Site-to-Site virtual network gateway to on-premises datacenter network.
+PostgreSQL 9.6.7 is running on a physical Linux machine (`sql-pg-01.contoso.com`) in the Contoso datacenter. Contoso already has an Azure subscription with a Site-to-Site virtual network gateway to on-premises datacenter network.
 
 ### Proposed solution
 
@@ -88,14 +87,14 @@ Before you can migrate your PostgreSQL databases, ensure that those instances me
 
 #### Supported versions
 
-Only migrations to the same or a higher version are supported. For example, migrating PostgreSQL 9.5 to Azure Database for PostgreSQL 9.6 or 10 is supported, but migrating from PostgreSQL 11 to PostgreSQL 9.6 isn't supported.
+Only migrations to the same or a higher version are supported. Migrating PostgreSQL 9.5 to Azure Database for PostgreSQL 9.6 or 10 is supported, but migrating from PostgreSQL 11 to PostgreSQL 9.6 isn't supported.
 
 Microsoft aims to support _n-2_ versions of the PostgreSQL engine in Azure Database for PostgreSQL - single server. The versions would be the current major version on Azure (_n_) and the two prior major versions (_-2_).
 
 For the latest updates on supported versions [see here](https://docs.microsoft.com/azure/postgresql/concepts-supported-versions).
 
 > [!NOTE]
-> Automatic major version upgrade is not supported. For example, there is no automatic upgrade from PostgreSQL 9.5 to PostgreSQL 9.6. To upgrade to the next major version, dump the database and restore it to a server created with the target engine version.
+> Automatic major version upgrade is not supported. For example, there isn't an automatic upgrade from PostgreSQL 9.5 to PostgreSQL 9.6. To upgrade to the next major version, dump the database and restore it to a server created with the target engine version.
 
 #### Network
 
@@ -125,9 +124,7 @@ Contoso can perform the migration in several ways including:
 
 Contoso has selected Azure Database Migration Service to allow them to reuse the migration project whenever they need to perform major-to-major upgrades. Because a single Database Migration Service activity only accommodates up to four databases, Contoso sets up several jobs using these steps:
 
-- Preparation:
-
-  - Set up a virtual network (VNet) to access the database. You can create a VNet connection using [VPN gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
+To prepare, set up a virtual network (VNet) to access the database. You can create a VNet connection using [VPN gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
 
 <!-- docsTest:ignore "Azure Database Migration Services" -->
 
@@ -177,7 +174,7 @@ Contoso has selected Azure Database Migration Service to allow them to reuse the
     pg_dump -U postgres -s dvdrental > dvdrental_schema.sql
     ```
 
-  - Copy the file, name the copy `dvdrental_schema_foreign.sql`, remove all non-foreign key and trigger-related items.
+  - Copy the file, name the copy `dvdrental_schema_foreign.sql`, and remove all non-foreign key and trigger-related items.
   - Remove all foreign key and trigger-related items from the `dvdrental_schema.sql` file.
 
 - Import the database schema (step 1):
@@ -240,7 +237,7 @@ Contoso has selected Azure Database Migration Service to allow them to reuse the
     _Figure 11: Monitoring the migration to start the cutover._
 
   - Stop all transactions from the source server.
-  - Select the **Confirm** checkbox, then select **Apply**.
+  - Select the **Confirm** check box, then select **Apply**.
 
     ![New migration project is highlighted](./media/contoso-migration-postgresql-to-azure/azure_migration_service_cutover.png)
     _Figure 12: Running the cutover._
@@ -261,16 +258,11 @@ Contoso has selected Azure Database Migration Service to allow them to reuse the
 
 - Reconfigure any applications or processes that use the on-premises database to point to the new Azure Database for PostgreSQL database instance.
 
-- Post-migration
-
-  - Once the migration is complete, ensure that you have also set up cross-region read replicas if required.
+- For post-migration, ensure that you have also set up cross-region read replicas, if required, once the migration is complete.
 
 ## Clean up after migration
 
-After migration, Contoso needs to complete these cleanup steps:
-
-- Backup the on-premises database for retention purposes
-- Retire the old PostgreSQL server
+After migration, Contoso needs to back up the on-premises database for retention purposes and retire the old PostgreSQL server as part of the cleanup process.
 
 ## Review the deployment
 
@@ -279,8 +271,8 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 ### Security
 
 - Contoso needs to ensure that their new Azure Database for PostgreSQL instance and databases are secure. [Learn more](https://docs.microsoft.com/azure/postgresql/concepts-security).
-- In particular, Contoso should review the [firewall rules](https://docs.microsoft.com/azure/postgresql/concepts-firewall-rules) and virtual network configurations to verify that connections are limited to only the applications that require it.
-- Implement [bring your own key (BYOK)](https://docs.microsoft.com/azure/postgresql/concepts-data-encryption-postgresql) for data encryption.
+- Contoso should review the [firewall rules](https://docs.microsoft.com/azure/postgresql/concepts-firewall-rules) and virtual network configurations to verify that connections are limited to only the applications that require it.
+- Implement [BYOK](https://docs.microsoft.com/azure/postgresql/concepts-data-encryption-postgresql) for data encryption.
 - Update all applications to [require SSL](https://docs.microsoft.com/azure/postgresql/concepts-ssl-connection-security) connections to the databases.
 - Setup [Private Link](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-private-link) so that all database traffic is kept inside Azure and the on-premises network.
 - Enable [Azure Advanced Threat Protection (ATP)](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-threat-protection).
@@ -288,14 +280,16 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ### Backups
 
-- Ensure that the Azure Database for PostgreSQL databases are backed up using geo-restore. This allows backups to be used in a paired region in case of a regional outage.
-- **Important:** Ensure that the Azure Database for PostgreSQL resource has a resource lock to prevent it from being deleted. Deleted servers cannot be restored.
+Ensure that the Azure Database for PostgreSQL databases are backed up using geo-restore. This allows backups to be used in a paired region in case of a regional outage.
+
+> [!IMPORTANT]
+> Ensure that the Azure Database for PostgreSQL resource has a resource lock to prevent it from being deleted. Deleted servers cannot be restored.
 
 ### Licensing and cost optimization
 
-- Azure Database for PostgreSQL can be scaled up or down, therefore performance monitoring of the server and databases is important to ensure you're meeting your needs but also keeping costs at a minimum.
+- Azure Database for PostgreSQL can be scaled up or down. Performance monitoring of the server and databases is important to ensure that you're meeting your needs while keeping costs at a minimum.
 - Both CPU and storage have costs associated. There are several pricing tiers to select from. Be sure the appropriate pricing plan is selected for the data workloads.
-- Each read replicas is billed based on the compute and storage selected
+- Each read replicas is billed based on the compute and storage selected.
 
 ## Conclusion
 

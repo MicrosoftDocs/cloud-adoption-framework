@@ -21,7 +21,7 @@ During plan, build, or migrate, a company generally has four execution partnersh
 
 - **Guided self-service.** The existing technical team executes the migration, with help from Microsoft.
 - **FastTrack for Azure.** Use the Microsoft FastTrack for Azure program to accelerate migration.
-- **Solutions Partner.** Get connected with Azure Solutions Partners or Cloud Solutions Partners (CSPs) to accelerate migration.
+- **Solutions Partner.** Get connected with Azure partners or cloud solution providers (CSPs) to accelerate migration.
 - **Supported self-service.** Execution is completed by the existing technical staff with support from Microsoft.
 
 ## Guided self-service

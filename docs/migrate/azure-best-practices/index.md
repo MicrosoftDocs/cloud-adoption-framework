@@ -1,6 +1,6 @@
 ---
-title: "Azure migration best practices checklist"
-description: Explore the Azure Cloud Migration Checklist to learn how to implement the Azure tools used to align with cloud migration best practices.
+title: Azure cloud migration best practices checklist
+description: Explore the Azure cloud migration checklist to learn how to implement the Azure tools used to align with cloud migration best practices.
 keywords: azure cloud migration best practices, azure migration checklist, cloud migration checklist, cloud migration best practices
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,7 @@ ms.subservice: migrate
 ms.custom: azure-migrate-seo
 ---
 
-# Cloud migration best practices checklist
+# Azure cloud migration migration best practices checklist
 
 Start with the [Azure migration guide](../azure-migration-guide/index.md) in the Cloud Adoption Framework if you're interested in migrating to Azure. That guide walks you through a set of tools and basic approaches to migrating virtual machines to the cloud.
 

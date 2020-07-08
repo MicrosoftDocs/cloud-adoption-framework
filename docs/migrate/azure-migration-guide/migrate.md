@@ -110,7 +110,7 @@ Azure Database Migration Service is a fully managed service that enables seamles
 
 If this is the first time using Azure Database Migration Service, you need to register the resource provider for your Azure subscription:
 
-1. Select **All services**, then **Subscriptions**, and choose the target subscription.
+1. Select **All services** > **Subscriptions**, and choose the target subscription.
 1. Select **Resource providers**.
 1. Search for `migration`, and then to the right of **Microsoft.DataMigration**, select **Register**.
 

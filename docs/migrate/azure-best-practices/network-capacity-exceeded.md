@@ -1,9 +1,9 @@
 ---
-title: "Network capacity exceeded"
-description: Data requirements exceed network capacity during a migration effort.
+title: Best practices when data requirements exceed network capacity during a migration effort
+description: Best practices when data requirements exceed network capacity during a migration effort
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 <!-- cSpell:ignore HDFS databox VHDX -->
 
-# Data requirements exceed network capacity during a migration effort
+# Best practices when data requirements exceed network capacity during a migration effort
 
 In a cloud migration, assets are replicated and synchronized over the network between the existing datacenter and the cloud. It is not uncommon for the existing data size requirements of various workloads to exceed network capacity. In such a scenario, the process of migration can be radically slowed, or in some cases, stopped entirely. The following guidance will expand the scope of the [Azure migration guide](../azure-migration-guide/index.md) to provide a solution that works around network limitations.
 

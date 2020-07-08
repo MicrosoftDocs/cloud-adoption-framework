@@ -44,7 +44,7 @@ To view quantitative data on your applications:
 
 1. Go to **Application Insights**.
    - If your application doesn't appear in the list, select **Add** and follow the prompts to start configuring Application Insights.
-   - If the desired app is in the list, select the application.
+   - If the desired application is in the list, select it.
 1. The **Overview** pane includes some statistics on the application. Select **Application Dashboard** to build a custom dashboard for data that's more relevant to your hypothesis.
 
 ::: zone target="chromeless"

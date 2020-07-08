@@ -59,8 +59,8 @@ One of the keys to data protection in the cloud is accounting for the possible s
 
 - Data encryption controls are built into services from virtual machines to storage and SQL Database.
 - As data moves between clouds and customers, it can be protected using industry-standard encryption protocols.
-- Azure Key Vault enables users to safeguard and control cryptographic keys, passwords, connection strings and certificates used by cloud apps and services.
-- Azure Information Protection will help classify, label, and protect your sensitive data within apps.
+- Azure Key Vault enables users to safeguard and control cryptographic keys, passwords, connection strings and certificates used by cloud applications and services.
+- Azure Information Protection will help classify, label, and protect your sensitive data within applications.
 
 While these features are built into Azure, each of the above requires configuration and could increase costs. Alignment of each cloud-native feature with a [data classification strategy](../policy-compliance/data-classification.md) is highly suggested.
 

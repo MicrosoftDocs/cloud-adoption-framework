@@ -1,9 +1,9 @@
 ---
-title: "Securing and managing workloads migrated to Azure"
+title: Best practices to secure and manage workloads migrated to Azure
 description: Use the Cloud Adoption Framework for Azure to learn best practices for operating, managing, and securing your migrated workloads.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/08/2018
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 <!-- cSpell:ignore FIPS SIEM majeure NSGs -->
 
-# Best practices for securing and managing workloads migrated to Azure
+# Best practices to secure and manage workloads migrated to Azure
 
 As you plan and design for migration, in addition to thinking about the migration itself, you need to consider your security and management model in Azure after migration. This article describes planning and best practices for securing your Azure deployment after migrating, and for ongoing tasks to keep your deployment running at an optimal level.
 
@@ -45,9 +45,9 @@ In addition to assessments and recommendations, the Azure Security Center provid
   - Having VM RDP port 3389 open on the internet exposes VMs to continual bad actor activity. Azure IP addresses are well-known, and hackers continually probe them for attacks on open 3389 ports.
   - Just in time uses network security groups (NSGs) and incoming rules that limit the amount of time that a specific port is open.
   - With just in time enabled, Security Center checks that a user has role-based access control (RBAC) write access permissions for a VM. In addition, specify rules for how users can connect to VMs. If permissions are OK, an access request is approved and Security Center configures NSGs to allow inbound traffic to the selected ports for the amount of time you specify. NSGs are return to their previous state when the time expires.
-- **Adaptive application controls.** Keep software and malware off VMs by controlling which apps run on them using dynamic allow lists.
-  - Adaptive application controls allow you to approve apps, and prevent rogue users or administrators from installing unapproved or vetting software apps on your VMs.
-    - You can block or alert attempts to run malicious apps, avoid unwanted or malicious apps, and ensure compliance with your organization's app security policy.
+- **Adaptive application controls.** Keep software and malware off VMs by controlling which applications run on them using dynamic allow lists.
+  - Adaptive application controls allow you to approve applications, and prevent rogue users or administrators from installing unapproved or vetting software applications on your VMs.
+    - You can block or alert attempts to run malicious applications, avoid unwanted or malicious applications, and ensure compliance with your organization's application security policy.
 - **File Integrity Monitoring.** Ensure the integrity of files running on VMs.
   - You don't need to install software to cause VM issues. Changing a system file can also cause VM failure or performance degradation. File Integrity Monitoring examines system files and registry settings for changes, and notifies you if something is updated.
   - Security Center recommends which files you should monitor.
@@ -76,14 +76,14 @@ Encryption is an important part of Azure security practices. Ensuring that encry
 
 ### Encryption for PaaS
 
-Unlike IaaS where you manage your own VMs and infrastructure, in a PaaS model platform and infrastructure is managed by the provider, leaving you to focus on core app logic and capabilities. With so many different types of PaaS services, each service is evaluated individually for security purposes. As an example, let's see how we might enable encryption for Azure SQL Database.
+Unlike IaaS where you manage your own VMs and infrastructure, in a PaaS model platform and infrastructure is managed by the provider, leaving you to focus on core application logic and capabilities. With so many different types of PaaS services, each service is evaluated individually for security purposes. As an example, let's see how we might enable encryption for Azure SQL Database.
 
 - **Always Encrypted:** Use the Always Encrypted wizard in SQL Server Management Studio to protect data at rest.
   - You create an Always Encrypted key to encrypt individual column data.
   - Always Encrypted keys can be stored as encrypted in database metadata, or stored in trusted key stores such as Azure Key Vault.
-  - App changes will probably be needed to use this feature.
+  - Application changes will probably be needed to use this feature.
 - **Transparent data encryption (TDE):** Protect the Azure SQL Database with real-time encryption and decryption of the database, associated backups, and transaction log files at rest.
-  - TDE allows encryption activities to take place without changes at the app layer.
+  - TDE allows encryption activities to take place without changes at the application layer.
   - TDE can use encryption keys provided by Microsoft, or you can bring your own key.
 
 **Learn more:**
@@ -114,18 +114,18 @@ In particular, older Azure-migrated VMs may not have the appropriate level of an
 
 Migrated web apps face a couple of issues:
 
-- Most legacy web applications tend to have sensitive information inside configuration files. Files containing such information can present security issues when apps are backed up, or when app code is checked into or out of source control.
+- Most legacy web applications tend to have sensitive information inside configuration files. Files containing such information can present security issues when applications are backed up, or when application code is checked into or out of source control.
 - In addition, when you migrate web apps residing in a VM, you're likely moving that machine from an on-premises network and firewall-protected environment to an environment facing the internet. Make sure that you set up a solution that does the same work as your on-premises protection resources.
 
 Azure provides a couple of solutions:
 
 - **Azure Key Vault:** Today, web app developers are taking steps to ensure that sensitive information isn't leaked from these files. One method to secure information is to extract it from files and put it into an Azure Key Vault.
-  - You can use Key Vault to centralize storage of app secrets, and control their distribution. It avoids the need to store security information in app files.
-  - Apps can securely access information in the vault using URIs, without needing custom code.
+  - You can use Key Vault to centralize storage of application secrets, and control their distribution. It avoids the need to store security information in application files.
+  - Applications can securely access information in the vault using URIs, without needing custom code.
   - Azure Key Vault allows you to lock down access via Azure security controls and to seamlessly implement 'rolling keys'. Microsoft does not see or extract your data.
-- **App Service Environment:** If an app you migrate needs extra protection, you can consider adding an App Service Environment and Web Application Firewall to protect the app resources.
-  - The Azure App Service Environment provides a fully isolated and dedicated environment in which to running App Service apps such as Windows and Linux web apps, docker containers, mobile apps, and functions.
-  - It's useful for apps that are very high scale, require isolation and secure network access or have high memory utilization.
+- **Azure App Service Environment:** If an application that you migrate needs extra protection, consider adding an App Service Environment and Web Application Firewall to protect the application resources.
+  - The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, docker containers, mobile apps, and function apps.
+  - It's useful for applications that are very high scale, require isolation and secure network access or have high memory utilization.
 - **Web Application Firewall:** A feature of Azure Application Gateway that provides centralized protection for web apps.
   - It protects web apps without requiring back-end code modifications.
   - It protects multiple web apps at the same time behind an Application Gateway.
@@ -138,7 +138,7 @@ Azure provides a couple of solutions:
 
 - Read the [Azure Key Vault overview](https://docs.microsoft.com/azure/key-vault/general/overview).
 - Learn about [Web Application Firewall](https://docs.microsoft.com/azure/application-gateway/waf-overview).
-- Read an [introduction to App Service environments](https://docs.microsoft.com/azure/app-service/environment/intro).
+- Read an [introduction to App Service Environments](https://docs.microsoft.com/azure/app-service/environment/intro).
 - Learn how to [configure a web app to read secrets from Key Vault](https://docs.microsoft.com/azure/key-vault/tutorial-web-application-keyvault).
 - Learn about [Web Application Firewall](https://docs.microsoft.com/azure/application-gateway/waf-overview).
 
@@ -146,7 +146,7 @@ Azure provides a couple of solutions:
 
 As you migrate your workloads and run them in Azure, staff with workload access move around. Your security team should review access to your Azure tenant and resource groups on a regular basis. Azure has offerings for identity management and access control security, including role-based access control (RBAC) to authorize permissions to access Azure resources.
 
-- RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by apps and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
+- RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by applications and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
 - RBAC can assign roles to security principles, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
 - RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
 - Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
@@ -184,7 +184,7 @@ Azure provides other security features that provide advanced security options. S
 - **Implement Azure AD administrative units (AU).** Delegating administrative duties to support staff can be tricky with just basic Azure access control. Giving support staff access to administer all the groups in Azure AD might not be the ideal approach for organizational security. Using AU allows you to segregate Azure resources into containers in a similar way to on-premises organizational units (OU). To use AU the AU admin must have a premium Azure AD license. [Learn more](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-administrative-units).
 - **Use multi-factor authentication.** If you have a premium Azure AD license, you can enable and enforce multi-factor authentication on your admin accounts. Phishing is the most common way that accounts credentials are compromised. Once a bad actor has admin account credentials, there's no stopping them from far-reaching actions, such as deleting all your resource groups. You can establish multi-factor authentication in several ways, including with email, an authenticator app, and phone text messages. As an administrator, you can select the least intrusive option. Multi-factor authentication integrates with threat analytics and conditional access policies to randomly require a multi-factor authentication challenge respond. Learn more about [security guidance](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication-security-best-practices), and [how to set up multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication-security-best-practices).
 - **Implement conditional access.** In most small and medium-sized organizations, Azure admins and the support team are probably located in a single geography. In this case, most logins will come from the same areas. If the IP addresses of these locations are fairly static, it makes sense that you shouldn't see administrator logins from outside these areas. Even if a remote bad actor compromises an administrator's credentials, you can implement security features like conditional access combined with multi-factor authentication to prevent signing in from remote locations, or from spoofed locations from random IP addresses. Learn more about [conditional access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) and [review best practices](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) for conditional access in Azure AD.
-- **Review enterprise application permissions.** Over time, admins select Microsoft and third-party links without knowing their impact on the organization. Links can present consent screens that assign permissions to Azure apps, and might allow access to read Azure AD data, or even full access to manage your entire Azure subscription. You should regularly review the apps to which your admins and users have allowed access to Azure resources. Ensure that these apps have only the permissions that are necessary. Additionally, quarterly or semi-annually you can email users with a link to app pages so that they're aware of the apps to which they've allowed access to their organizational data. [Learn more](https://docs.microsoft.com/azure/active-directory/manage-apps/application-types) about application types, and [how to control](https://docs.microsoft.com/azure/active-directory/manage-apps/remove-user-or-group-access-portal) app assignments in Azure AD.
+- **Review enterprise application permissions.** Over time, admins select Microsoft and third-party links without knowing their impact on the organization. Links can present consent screens that assign permissions to Azure apps, and might allow access to read Azure AD data, or even full access to manage your entire Azure subscription. You should regularly review the applications to which your admins and users have allowed access to Azure resources. Ensure that these applications have only the permissions that are necessary. Additionally, quarterly or semi-annually you can email users with a link to application pages so that they're aware of the applications to which they've allowed access to their organizational data. [Learn more](https://docs.microsoft.com/azure/active-directory/manage-apps/application-types) about application types, and [how to control](https://docs.microsoft.com/azure/active-directory/manage-apps/remove-user-or-group-access-portal) application assignments in Azure AD.
 
 ## Managed migrated workloads
 
@@ -272,7 +272,7 @@ Just as blueprint allows engineers and architects to sketch a project's design p
 
 Building secure, scalable, and manageable workloads in Azure can be daunting. With continual changes, it can be difficult to keep up with different features for an optimal environment. Having a reference to learn from can be helpful when designing and migrating your workloads. Azure and Azure partners have built several sample reference architectures for various types of environments. These samples are designed to provide ideas that you can learn from and build on.
 
-Reference architectures are arranged by scenario. They contain best practices and advice on management, availability, scalability, and security. The Azure App Service Environment provides a fully isolated and dedicated environment in which to run App Service apps, including Windows and Linux web apps, docker containers, mobile apps, and functions. App Service adds the power of Azure to your application, with security, load balancing, autoscaling, and automated management. You can also take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps and GitHub, package management, staging environments, custom domain, and SSL certificates. App Service is useful for apps that need isolation and secure network access, and those that use high amounts of memory and other resources that need to scale.
+Reference architectures are arranged by scenario. They contain best practices and advice on management, availability, scalability, and security. The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, docker containers, mobile apps, and functions. App Service adds the power of Azure to your application, with security, load balancing, autoscaling, and automated management. You can also take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps and GitHub, package management, staging environments, custom domain, and SSL certificates. App Service is useful for applications that need isolation and secure network access, and those that use high amounts of memory and other resources that need to scale.
 
 **Learn more:**
 
@@ -322,7 +322,7 @@ Planning for business continuity and disaster recovery (BCDR), is a critical exe
 Broadly, your BCDR strategy must consider:
 
 - **Data backup:** How to keep your data safe so that you can recover it easily if outages occur.
-- **Disaster recovery:** How to keep your apps resilient and available if outages occur.
+- **Disaster recovery:** How to keep your applications resilient and available if outages occur.
 
 ### Set up BCDR
 
@@ -348,7 +348,7 @@ You can use Azure Backup to back up VMs in a couple of ways.
 
 - **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once per day, and you can restore the VM disk as needed. Azure Backup takes app-aware data snapshots (vss), and no agent is installed on the VM.
 - **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups as well as granular backup and restore options. Backup is up to three times a day, at the file/folder level. It isn't app-aware and Linux isn't supported. Install the Microsoft Azure Recovery Services (MARS) agent on each VM that you want to back up using this method.
-- **Protect the VM to Azure Backup server.** Azure Backup server is provided free with Azure Backup. The VM is backed up to local Azure Backup server storage. You then back up the Azure Backup server to Azure in a vault. Backup is app-aware, with full granularity over backup frequency and retention. You can back up at the app level, for example by backing up SQL Server or SharePoint.
+- **Protect the VM to Azure Backup server.** Azure Backup server is provided free with Azure Backup. The VM is backed up to local Azure Backup server storage. You then back up the Azure Backup server to Azure in a vault. Backup is app-aware, with full granularity over backup frequency and retention. You can back up at the application level, for example by backing up SQL Server or SharePoint.
 
 For security, Azure Backup encrypts data in-flight using AES-256 and sends it over HTTPS to Azure. Backed-up data at-rest in Azure is encrypted using [Azure Storage encryption](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
 
@@ -381,13 +381,13 @@ Azure VMs are stored as page blobs in Azure Storage.
 
 In addition, you can use third-party solutions to back up Azure VMs and storage containers to local storage or other cloud providers. For more information, see [Backup solutions in the Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=backup&page=1).
 
-### Set up disaster recovery for IaaS apps
+### Set up disaster recovery for IaaS applications
 
-In addition to protecting data, BCDR planning must consider how to keep apps and workloads available if a disaster occurs. For workloads running on Azure IaaS VMs and Azure Storage consider these solutions:
+In addition to protecting data, BCDR planning must consider how to keep applications and workloads available if a disaster occurs. For workloads running on Azure IaaS VMs and Azure Storage consider these solutions:
 
 #### Azure Site Recovery
 
-Azure Site Recovery is the primary Azure service for ensuring that Azure VMs can be brought online and VM apps made available when outages occur.
+Azure Site Recovery is the primary Azure service for ensuring that Azure VMs can be brought online and VM applications made available when outages occur.
 
 Site Recovery replicates VMs from a primary to secondary Azure region. When disaster strikes, you fail VMs over from the primary region, and continue accessing them as normal in the secondary region. When operations return to normal, you can fail back VMs to the primary region.
 
@@ -463,7 +463,7 @@ With diagnostic logging enabled for Azure resources, you can start to use loggin
 - Alerts proactively notify you when conditions are found in your monitoring data. You can then address issues before system users notice them. You can alert on things like metric values, log search queries, activity log events, platform health, and website availability.
 - When alerts are triggered, you can run a logic app playbook. A playbook helps you to automate and orchestrate a response to a specific alert. Playbooks are based on Azure Logic Apps. You can use logic app templates to create playbooks, or create your own.
 - As a simple example, you can create an alert that triggers when a port scan happens against a network security group. You can set up a playbook that runs and locks down the IP address of the scan origin.
-- Another example might be an app with a memory leak. When the memory usage gets to a certain point, a playbook can recycle the process.
+- Another example is an application with a memory leak. When the memory usage gets to a certain point, a playbook can recycle the process.
 
   ![Alerts](./media/migrate-best-practices-security-management/alerts.png)
   _Alerts._

@@ -1,9 +1,9 @@
 ---
-title: "Refactor a Linux app to Azure App Service and Azure Database for MySQL"
-description: "Use the Cloud Adoption Framework for Azure to learn how to refactor a Linux service desk app to Azure App Service and Azure Database for MySQL."
+title: Refactor a Linux application to Azure App Service, Traffic Manager, and Azure Database for MySQL
+description: Use the Cloud Adoption Framework for Azure to learn how to refactor a Linux service desk app to Azure App Service and Azure Database for MySQL.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -11,11 +11,11 @@ ms.subservice: migrate
 
 <!-- cSpell:ignore WEBVM SQLVM contosohost vcenter contosodc OSTICKETWEB OSTICKETMYSQL osTicket contosoosticket trafficmanager InnoDB binlog DBHOST DBUSER CNAME -->
 
-# Refactor a Linux app to multiple regions using Azure App Service, Traffic Manager, and Azure Database for MySQL
+# Refactor a Linux application to multiple regions using Azure App Service, Traffic Manager, and Azure Database for MySQL
 
-This article shows how the fictional company Contoso refactors a two-tier Linux-based Apache MySQL PHP (LAMP) app, migrating it from on-premises to Azure using Azure App Service with GitHub integration and Azure Database for MySQL.
+This article shows how the fictional company Contoso refactors a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_(software_bundle)) application, migrating it from on-premises to Azure using Azure App Service with GitHub integration and Azure Database for MySQL.
 
-osTicket, the service desk app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from the [osTicket repo in GitHub](https://github.com/osTicket/osTicket).
+osTicket, the service desk application used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from the [osTicket repo in GitHub](https://github.com/osTicket/osTicket).
 
 ## Business drivers
 
@@ -23,16 +23,16 @@ The IT leadership team has worked closely with business partners to understand w
 
 - **Address business growth.** Contoso is growing and moving into new markets. It needs additional customer service agents.
 - **Scale.** The solution should be built so that Contoso can add more customer service agents as the business scales.
-- **Improve resiliency.** In the past, issues with the system affected internal users only. With the new business model, external users will be affected, and Contoso need the app up and running at all times.
+- **Improve resiliency.** In the past, issues with the system affected internal users only. With the new business model, external users will be affected, and Contoso need the application up and running at all times.
 
 ## Migration goals
 
 The Contoso cloud team has pinned down goals for this migration, in order to determine the best migration method:
 
 - The application should scale beyond current on-premises capacity and performance. Contoso is moving the application to take advantage of Azure's on-demand scaling.
-- Contoso wants to move the app code base to a continuous delivery pipeline. As app changes are pushed to GitHub, Contoso wants to deploy those changes without tasks for operations staff.
-- The application must be resilient with capabilities for growth and failover. Contoso wants to deploy the app in two different Azure regions, and set it up to scale automatically.
-- Contoso wants to minimize database admin tasks after the app is moved to the cloud.
+- Contoso wants to move the application code base to a continuous delivery pipeline. As application changes are pushed to GitHub, Contoso wants to deploy those changes without tasks for operations staff.
+- The application must be resilient with capabilities for growth and failover. Contoso wants to deploy the application in two different Azure regions, and set it up to scale automatically.
+- Contoso wants to minimize database admin tasks after the application is moved to the cloud.
 
 ## Solution design
 
@@ -40,7 +40,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 ## Current architecture
 
-- The app is tiered across two VMs (`OSTICKETWEB` and `OSTICKETMYSQL`).
+- The application is tiered across two VMs (`OSTICKETWEB` and `OSTICKETMYSQL`).
 - The VMs are located on VMware ESXi host `contosohost1.contoso.com` (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), running on a VM.
 - Contoso has an on-premises datacenter (`contoso-datacenter`), with an on-premises domain controller (`contosodc1`).
@@ -51,15 +51,15 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 Here's the proposed architecture:
 
-- The web tier app on `OSTICKETWEB` will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 docker container.
-- The app code will be moved to GitHub, and the Azure App Service web app will be configured for continuous delivery with GitHub.
+- The web tier application on `OSTICKETWEB` will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 docker container.
+- The application code will be moved to GitHub, and the Azure App Service web app will be configured for continuous delivery with GitHub.
 - Azure App Service will be deployed in both the primary region (`East US 2`) and secondary region (`Central US`).
 - Traffic Manager will be set up in front of the two web apps in both regions.
 - Traffic Manager will be configured in priority mode to force the traffic through `East US 2`.
-- If the Azure app server in `East US 2` goes offline, users can access the failed over app in `Central US`.
-- The app database will be migrated to the Azure Database for MySQL service using Azure Database Migration Service. The on-premises database will be backed up locally, and restored directly to Azure Database for MySQL.
+- If the Azure app server in `East US 2` goes offline, users can access the failed over application in `Central US`.
+- The application database will be migrated to the Azure Database for MySQL service using Azure Database Migration Service. The on-premises database will be backed up locally, and restored directly to Azure Database for MySQL.
 - The database will reside in the primary region (`East US 2`) in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`):
-- Since they're migrating a production workload, Azure resources for the app will reside in the production resource group `ContosoRG`.
+- Since they're migrating a production workload, Azure resources for the application will reside in the production resource group `ContosoRG`.
 - The Traffic Manager resource will be deployed in Contoso's infrastructure resource group `ContosoInfraRG`.
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
 
@@ -71,9 +71,9 @@ Contoso will complete the migration process as follows:
 
 1. As a first step, Contoso admins set up the Azure infrastructure, including provisioning Azure App Service, setting up Traffic Manager, and provisioning an Azure Database for MySQL instance.
 2. After preparing the Azure infrastructure, they migrate the database using Azure Database Migration Service.
-3. After the database is running in Azure, they up a GitHub private repository for Azure App Service with continuous delivery, and load it with the osTicket app.
-4. In the Azure portal, they load the app from GitHub to the docker container running Azure App Service.
-5. They tweak DNS settings, and configure autoscaling for the app.
+3. After the database is running in Azure, they up a GitHub private repository for Azure App Service with continuous delivery, and load it with the osTicket application.
+4. In the Azure portal, they load the application from GitHub to the docker container running Azure App Service.
+5. They tweak DNS settings, and configure autoscaling for the application.
 
 ![Migration process](./media/contoso-migration-refactor-linux-app-service-mysql/migration-process.png)
 
@@ -84,7 +84,7 @@ Contoso will complete the migration process as follows:
 | [Azure App Service](https://azure.microsoft.com/services/app-service) | The service runs and scales applications using the Azure PaaS service for websites. | Pricing is based on the size of the instances, and the features required. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
 | [Traffic Manager](https://azure.microsoft.com/services/traffic-manager) | A load balancer that uses DNS to direct users to Azure, or external websites and services. | Pricing is based on the number of DNS queries received, and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager). |
 | [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
-| [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL database engine. It provides a fully managed, enterprise-ready community MySQL database for app development and deployment. | Pricing based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql). |
+| [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL database engine. It provides a fully managed, enterprise-ready community MySQL database for application development and deployment. | Pricing based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql). |
 
 ## Prerequisites
 
@@ -92,7 +92,7 @@ Here's what Contoso needs to run this scenario.
 
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
+| **Azure subscription** | Contoso created subscriptions earlier in this article series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. |
 | **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
 
 ## Scenario steps
@@ -105,7 +105,7 @@ Here's how Contoso will complete the migration:
 > - **Step 2: Set up Traffic Manager.** They set up Traffic Manager in front of the web apps, for routing and load balancing traffic.
 > - **Step 3: Provision MySQL.** In Azure, they provision an instance of Azure Database for MySQL.
 > - **Step 4: Migrate the database.** They migrate the database using Azure Database Migration Service.
-> - **Step 5: Set up GitHub.** They set up a local GitHub repository for the app web sites/code.
+> - **Step 5: Set up GitHub.** They set up a local GitHub repository for the application web sites/code.
 > - **Step 6: Deploy the web apps.** They deploy the web apps from GitHub.
 
 ## Step 1: Provision Azure App Service
@@ -115,7 +115,7 @@ Contoso admins provision two web apps (one in each region) using Azure App Servi
 1. They create a web app resource (`osticket-eus2`) in the primary region (`East US 2`) via the Azure Marketplace.
 2. They put the resource in the production resource group `ContosoRG`.
 
-    ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app1.png)
+    ![Azure web app](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app1.png)
 
 3. They create a new App Service plan (`APP-SVP-EUS2`) in the primary region, using the standard size.
 
@@ -142,13 +142,13 @@ Contoso admins set up Traffic Manager to direct inbound web requests to the web 
 
     ![Traffic Manager](./media/contoso-migration-refactor-linux-app-service-mysql/traffic-manager1.png)
 
-2. Now, they configure Traffic Manager with endpoints. They add the web app in `East US 2` as the primary site (`osticket-eus2`), and the app in `Central US` as the secondary site (`osticket-cus`).
+2. Now, they configure Traffic Manager with endpoints. They add the web app in `East US 2` as the primary site (`osticket-eus2`), and the web app in `Central US` as the secondary site (`osticket-cus`).
 
-    ![Traffic Manager](./media/contoso-migration-refactor-linux-app-service-mysql/traffic-manager2.png)
+    ![Add endpoints in Traffic Manager](./media/contoso-migration-refactor-linux-app-service-mysql/traffic-manager2.png)
 
 3. After adding the endpoints, they can monitor them.
 
-    ![Traffic Manager](./media/contoso-migration-refactor-linux-app-service-mysql/traffic-manager3.png)
+    ![Monitor endpoints in Traffic Manager](./media/contoso-migration-refactor-linux-app-service-mysql/traffic-manager3.png)
 
 **Need more help?**
 
@@ -338,7 +338,7 @@ As the final step in the migration process, Contoso admins configure the web app
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app4.png)
 
 5. They repeat the above steps for the secondary web app (`osticket-cus`).
-6. After the site is configured, it's accessible via the Traffic Manager profile. The DNS name is the new location of the osTicket app. [Learn more](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain#map-a-cname-record).
+6. After the site is configured, it's accessible via the Traffic Manager profile. The DNS name is the new location of the osTicket application. [Learn more](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain#map-a-cname-record).
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app5.png)
 
@@ -352,20 +352,20 @@ As the final step in the migration process, Contoso admins configure the web app
 
 ### Set up autoscaling
 
-Finally, they set up automatic scaling for the app. This ensures that as agents use the app, the app instances increase and decrease according to business needs.
+Finally, they set up automatic scaling for the application. This ensures that as agents use the application, the application instances increase and decrease according to business needs.
 
-1. In App Service `APP-SRV-EUS2`, they open **Scale Unit**.
+1. In app service `APP-SRV-EUS2`, they open **Scale Unit**.
 2. They configure a new autoscale setting with a single rule that increases the instance count by one when the CPU percentage for the current instance is above 70% for 10 minutes.
 
     ![Autoscale](./media/contoso-migration-refactor-linux-app-service-mysql/autoscale1.png)
 
-3. They configure the same setting on `APP-SRV-CUS` to ensure that the same behavior applies if the app fails over to the secondary region. The only difference is that they set the default instance to 1 since this is for failovers only.
+3. They configure the same setting on `APP-SRV-CUS` to ensure that the same behavior applies if the application fails over to the secondary region. The only difference is that they set the default instance to 1 since this is for failovers only.
 
    ![Autoscale](./media/contoso-migration-refactor-linux-app-service-mysql/autoscale2.png)
 
 ## Clean up after migration
 
-With migration complete, the osTicket app is refactored to running in an Azure App Service web app with continuous delivery using a private GitHub repo. The app's running in two regions for increased resilience. The osTicket database is running in Azure Database for MySQL after migration to the PaaS platform.
+With migration complete, the osTicket application is refactored to running in an Azure App Service web app with continuous delivery using a private GitHub repo. The application runs in two regions for increased resilience. The osTicket database is running in Azure Database for MySQL after migration to the PaaS platform.
 
 For cleanup, Contoso needs to do the following:
 
@@ -373,15 +373,15 @@ For cleanup, Contoso needs to do the following:
 - Remove the on-premises VMs from local backup jobs.
 - Update internal documentation show new locations and IP addresses.
 - Review any resources that interact with the on-premises VMs, and update any relevant settings or documentation to reflect the new configuration.
-- Reconfigure monitoring to point at the `osticket-trafficmanager.net` URL, to track that the app is up and running.
+- Reconfigure monitoring to point at the `osticket-trafficmanager.net` URL, to track that the application is up and running.
 
 ## Review the deployment
 
-With the app now running, Contoso need to fully operationalize and secure their new infrastructure.
+With the application now running, Contoso need to fully operationalize and secure their new infrastructure.
 
 ### Security
 
-The Contoso security team reviewed the app to determine any security issues. They identified that the communication between the osTicket app and the MySQL database instance isn't configured for SSL. They will need to do this to ensure that database traffic can't be hacked. [Learn more](https://docs.microsoft.com/azure/mysql/howto-configure-ssl).
+The Contoso security team reviewed the application to determine any security issues. They identified that the communication between the osTicket application and the MySQL database instance isn't configured for SSL. They will need to do this to ensure that database traffic can't be hacked. [Learn more](https://docs.microsoft.com/azure/mysql/howto-configure-ssl).
 
 ### Backups
 

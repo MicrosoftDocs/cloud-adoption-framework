@@ -164,11 +164,11 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 **Design recommendations:**
 
-- A joint examination of each required service should be conducted within the context of underlying customer requirements. If the customer wants to bring their own keys, this might not be supported across all considered services. Relevant mitigation will need to be implemented so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
+- A joint examination of each required service should be conducted within the context of underlying customer requirements. If the customer wants to bring their own keys, this might not be supported across all considered services. Relevant mitigation must be implemented so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
-- Develop a security whitelisting plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
+- Develop a security allow-list plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
 
-- Determine incident response plan for Azure services before whitelisting.
+- Determine incident response plan for Azure services before allowing.
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 

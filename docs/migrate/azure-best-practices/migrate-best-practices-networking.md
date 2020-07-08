@@ -1,9 +1,9 @@
 ---
-title: "Set up networking for workloads migrated to Azure"
+title: Best practices to set up networking for workloads migrated to Azure
 description: Use the Cloud Adoption Framework for Azure to learn best practices for setting up networking for your migrated workloads.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/04/2018
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -121,7 +121,7 @@ Azure adds a DNS server by default when you deploy a VNet. This allows you to ra
 
 ## Best practice: Set up Availability Zones
 
-Availability Zones increase high-availability to protect your apps and data from datacenter failures.
+Availability Zones increase high-availability to protect your applications and data from datacenter failures.
 
 - Availability Zones are unique physical locations within an Azure region.
 - Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking.
@@ -135,7 +135,7 @@ Availability Zones increase high-availability to protect your apps and data from
 - You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone, and replicating them in other zones. Azure services that support Availability Zones fall into two categories:
   - **Zonal services:** You associate a resource with a specific zone, such as VMs, managed disks, or IP addresses.
   - **Zone-redundant services:** The resource replicates automatically across zones, such as zone-redundant storage or Azure SQL Database.
-- You can deploy a standard Azure load balanced with internet-facing workloads or app tiers, to provide zonal fault tolerance.
+- You can deploy a standard Azure load balanced with internet-facing workloads or application tiers, to provide zonal fault tolerance.
 
     ![Load balancer](./media/migrate-best-practices-networking/load-balancer.png)
     _Load balancer._
@@ -235,13 +235,13 @@ Deploying ExpressRoute connections usually involves engaging with an ExpressRout
 
 ### Best practice: Optimize ExpressRoute routing with BGP communities
 
-When you have multiple ExpressRoute circuits, you have more than one path to connect to Microsoft. As a result, suboptimal routing can happen and your traffic might take a longer path to reach Microsoft, and Microsoft to your network. The longer the network path,the higher the latency. Latency has direct impact on app performance and user experience.
+When you have multiple ExpressRoute circuits, you have more than one path to connect to Microsoft. As a result, suboptimal routing can happen and your traffic might take a longer path to reach Microsoft, and Microsoft to your network. The longer the network path,the higher the latency. Latency has direct impact on application performance and user experience.
 
 **Example:**
 
 Let's review an example:
 
-- You have two offices in the US, one in Los Angeles and one in New York.
+- You have two offices in the US, one in Los Angeles and one in New York City.
 - Your offices are connected on a WAN, which can be either your own backbone network or your service provider's IP VPN.
 - You have two ExpressRoute circuits, one in `West US` and one in `East US`, that are also connected on the WAN. Obviously, you have two paths to connect to the Microsoft network.
 
@@ -351,7 +351,7 @@ Service tags take the manual work out of assigning a rule to groups of Azure ser
 
 ## Best practice: Use application security groups
 
-Application security groups enable you to configure network security as a natural extension of an app structure.
+Application security groups enable you to configure network security as a natural extension of an application structure.
 
 - You can group VMs and define network security policies based on application security groups.
 - Application security groups enable you to reuse your security policy at scale without manual maintenance of explicit IP addresses.
@@ -442,7 +442,7 @@ _Azure Firewall._
 
 ## Best practice: Deploy a Web Application Firewall (WAF)
 
-Web applications are increasingly targets of malicious attacks that exploit commonly known vulnerabilities. Exploits include SQL injection attacks and cross-site scripting attacks. Preventing such attacks in application code can be challenging, and can require rigorous maintenance, patching and monitoring at multiple layers of the application topology. A centralized Web Application Firewall helps make security management much simpler and helps app administrators guard against threats or intrusions. A web app firewall can react to security threats faster, by patching known vulnerabilities at a central location, instead of securing individual web applications. Existing application gateways can be converted to a Web Application Firewall enabled Application Gateway easily.
+Web applications are increasingly targets of malicious attacks that exploit commonly known vulnerabilities. Exploits include SQL injection attacks and cross-site scripting attacks. Preventing such attacks in application code can be challenging, and can require rigorous maintenance, patching and monitoring at multiple layers of the application topology. A centralized Web Application Firewall helps make security management much simpler and helps application administrators guard against threats or intrusions. A web app firewall can react to security threats faster, by patching known vulnerabilities at a central location, instead of securing individual web applications. Existing application gateways can be converted to a Web Application Firewall enabled Application Gateway easily.
 
 The Web Application Firewall (WAF) is a feature of Azure Application Gateway.
 
@@ -450,8 +450,8 @@ The Web Application Firewall (WAF) is a feature of Azure Application Gateway.
 - WAF protects without modification to back-end code.
 - It can protect multiple web apps at the same time behind an Application Gateway.
 - WAF is integrated with Azure Security Center.
-- You can customize WAF rules and rule groups to suit your app requirements.
-- As a best practice, you should use a WAF in front on any web-facing app, including apps on Azure VMs or as an Azure App Service.
+- You can customize WAF rules and rule groups to suit your application requirements.
+- As a best practice, you should use a WAF in front on any web-facing application, including applications on Azure VMs or as an Azure App Service.
 
 **Learn more:**
 

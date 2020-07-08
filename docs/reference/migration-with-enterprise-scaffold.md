@@ -188,8 +188,7 @@ One of the biggest blockers to cloud adoption traditionally has been concerns ov
 
 ### Azure Security Center
 
-The [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) provides a unified view of the security status of resources across your environment in addition to advanced threat protection. Azure Security Center is an open platform that enables Microsoft partners to create software that plugs into and enhance its capabilities. The baseline capabilities of Azure Security Center (free tier) provide assessment and recommendations that will enhance your security posture. Its paid tiers enable additional and valuable capabilities such as just-in-time admin access and adaptive application controls (whitelisting).
-
+The [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) provides a unified view of the security status of resources across your environment in addition to advanced threat protection. Azure Security Center is an open platform that enables Microsoft partners to create software that plugs into and enhance its capabilities. The baseline capabilities of Azure Security Center (free tier) provide assessment and recommendations that will enhance your security posture. Its paid tiers enable additional and valuable capabilities such as just-in-time admin access and adaptive application controls (allow lists).
 > [!TIP]
 > Azure Security Center is a powerful tool that is regularly improved with new capabilities you can use to detect threats and protect your enterprise. It is highly recommended to always enable Azure Security Center.
 

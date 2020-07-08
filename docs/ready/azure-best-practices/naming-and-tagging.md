@@ -112,7 +112,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 | Container instance          | aci-        |
 | AKS cluster                 | aks-        |
 | Service Fabric cluster      | sf-         |
-| App service environment     | ase-        |
+| App Service environment     | ase-        |
 | App Service plan            | plan-       |
 | Web app                     | app-        |
 | Function app                | func-       |
@@ -207,7 +207,7 @@ What tags you apply to resources and what tags are required or optional differs 
 
 | Tag Name                  | Description                                                                                                                                                                                                          | Key               | Example value                                              |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|------------------------------------------------------------|
-| Application name          | Name of the application, service, or workload the resource is associated with.                                                                                                                                       | _ApplicationName_ | _{app name}_                                               |
+| Application name          | Name of the application, service, or workload the resource is associated with.                                                                                                                                       | _ApplicationName_ | _{application name}_                                               |
 | Approver name             | Person responsible for approving costs related to this resource.                                                                                                                                                     | _Approver_        | _{email}_                                                  |
 | Budget required/approved  | Money allocated for this application, service, or workload.                                                                                                                                                          | _BudgetAmount_    | _{\$}_                                                     |
 | Business unit             | Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this tag might represent a single corporate or shared top-level organizational element. | _BusinessUnit_    | _FINANCE_, _MARKETING_, _{Product Name}_, _CORP_, _SHARED_ |

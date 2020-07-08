@@ -123,7 +123,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 To create Azure Digital Twins:
 
 1. In the left pane, select **Create a resource**.
-2. Search for **digital twins**, and then select **Digital Twins**.
+2. Search for **digital twins**, then select **Digital Twins**.
 3. Select **Create** to start the deployment process.
 4. To review existing Digital Twins, select this button:
 

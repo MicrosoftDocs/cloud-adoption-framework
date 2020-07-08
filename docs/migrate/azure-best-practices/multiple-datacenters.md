@@ -1,9 +1,9 @@
 ---
-title: "Multiple datacenters"
+title: Multiple datacenters
 description: Multiple datacenters
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate

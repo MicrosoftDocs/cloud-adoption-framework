@@ -23,7 +23,7 @@ It is vital that enterprise customers plan for IP addressing in Azure to ensure 
 
 - Overlapping IP address spaces across on-premises and Azure regions will create major contention challenges.
 
-- While virtual network (VNet) address space can be added after creation, this process requires an outage if the VNet is already connected to another VNet via virtual network peering, because the peering will need to be deleted and re-created.
+- While virtual network (VNet) address space can be added after creation, this process requires an outage if the VNet is already connected to another VNet via virtual network peering, because the peering must be deleted and re-created.
 
 - Azure reserves five IP addresses within each subnet, which should be factored in when sizing VNets and encompassed subnets.
 
@@ -377,7 +377,7 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - Use [Azure DDoS Protection Standard protection plans](https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview) to protect all public endpoints hosted within customer VNets.
 
-- Do not replicate on-premises DMZ concepts and architectures into Azure, as customers can get similar security capabilities in Azure as with on-premises, but the implementation and architecture will need to be adapted to the cloud.
+- Do not replicate on-premises DMZ concepts and architectures into Azure, as customers can get similar security capabilities in Azure as with on-premises, but the implementation and architecture must be adapted to the cloud.
 
 ## Planning for app delivery
 
@@ -439,7 +439,7 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Enable NSG flow logs and feed them into Traffic Analytics to gain insights into internal and external traffic flows.
 
-- Use NSGs to selectively whitelist inter-landing-zone connectivity.
+- Use NSGs to selectively allow inter-landing-zone connectivity.
 
 - For Virtual WAN topologies, route traffic across landing zones via Azure Firewall if the customer requires filtering and logging capabilities for traffic flowing across landing zones.
 

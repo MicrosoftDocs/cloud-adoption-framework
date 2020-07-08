@@ -1,9 +1,9 @@
 ---
-title: "Costing and sizing workloads migrated to Azure"
+title: Best practices to cost and size workloads migrated to Azure
 description: Use the Cloud Adoption Framework for Azure to learn best practices for costing and sizing workloads migrated to Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 12/08/2018
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 <!-- docsTest:ignore ARO -->
 
-# Best practices for costing and sizing workloads migrated to Azure
+# Best practices to cost and size workloads migrated to Azure
 
 As you plan and design for migration, focusing on costs ensures the long-term success of your Azure migration. During a migration project, it's critical that all teams (such as finance, management, and application development teams) understand associated costs.
 
@@ -65,11 +65,11 @@ You can choose various options when you deploy Azure VMs to support workloads. E
 | Type | Details | Usage |
 | --- | --- | --- |
 | **General-purpose** | Balanced CPU-to-memory. | Good for testing and development, small- to medium-sized databases, low- to medium-volume traffic web servers. |
-| **Compute-optimized** | High CPU-to-memory. | Good for medium-volume traffic web server, network appliances, batch processes, app servers. |
+| **Compute-optimized** | High CPU-to-memory. | Good for medium-volume traffic web server, network appliances, batch processes, application servers. |
 | **Memory-optimized** | High memory-to-CPU. | Good for relational databases, medium- to large-size cache, in-memory analytics. |
 | **Storage optimized** | High disk throughput and I/O. | Good for big data, SQL and NoSQL databases. |
 | **GPU optimized** | Specialized VMs. Single or multiple GPUs. | Heavy graphics and video editing. |
-| **High performance** | Fastest and most powerful CPU. VMs with optional high-throughput network interfaces (RDMA) | Critical high-performance apps. |
+| **High performance** | Fastest and most powerful CPU. VMs with optional high-throughput network interfaces (RDMA) | Critical high-performance applications. |
 
 - It's important to understand the pricing differences between these VMs, and the long-term budget effects.
 - Each type has several VM series within it.
@@ -98,7 +98,7 @@ Azure provides different types of storage data.
 | **Blobs** | Optimized to store massive amounts of unstructured objects, such as text or binary data. <br><br> | Access data from everywhere over HTTP/HTTPS. <br><br> Use for streaming and random access scenarios. For example, to serve images and documents directly to a browser, stream video and audio, and store backup and disaster recovery data. |
 | **Files** | Managed file shares accessed over SMB 3.0. | Use when migrating on-premises file shares, and to provide multiple access/connections to file data. |
 | **Disks** | Based on page blobs. <br><br> Disk type: standard (HDD or SSD) or premium (SSD). <br><br> Disk management: unmanaged (you manage disk settings and storage) or managed (you select the disk type and Azure manages the disk for you). | Use premium disks for VMs. Use managed disks for simple management and scaling. |
-| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect app components with asynchronous message queueing. |
+| **Queues** | Store and retrieve large numbers of messages accessed via authenticated calls (HTTP or HTTPS). | Connect application components with asynchronous message queueing. |
 | **Tables** | Store tables. | Now part of Azure Cosmos DB Table API. |
 
 ### Access tiers
@@ -109,7 +109,7 @@ Azure Storage provides different options for accessing block blob data. Selectin
 | --- | --- | --- |
 | **Hot** | Higher storage cost than cool. Lower access charges than cool. <br><br> This is the default tier. | Use for data in active use that's accessed frequently. |
 | **Cool** | Lower storage cost than hot. Higher access charges than hot. <br><br> Store for minimum of 30 days. | Store short-term, data is available but accessed infrequently. |
-| **Archive** | Used for individual block blobs. <br><br> Most cost-effective option for storage. Data access is more expensive than hot and cold. | Use for data that can tolerate server hours of retrieval latency and will remain in the tier for at least 180 days. |
+| **Archive** | Used for individual block blobs. <br><br> Most cost-effective option for storage. Data access is more expensive than hot and cold. | Use for data that can tolerate several hours of retrieval latency and will remain in the tier for at least 180 days. |
 
 ### Storage account types
 
@@ -119,7 +119,7 @@ Azure provides different types of storage accounts and performance tiers.
 | --- | --- | --- |
 | **General-purpose v2 standard** | Supports blobs (block, page, append), files, disks, queues, and tables. <br><br> Supports hot, cool, and archive access tiers. ZRS is supported. | Use for most scenarios and most types of data. Standard storage accounts can be HDD or SSD-based. |
 | **General-purpose v2 premium** | Supports Blob storage data (page blobs). Supports hot, cool, and archive access tiers. ZRS is supported. <br><br> Stored on SSD. | Microsoft recommends using for all VMs. |
-| **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS | Use if apps need the Azure classic deployment model. |
+| **General-purpose v1** | Access tiering isn't supported. Doesn't support ZRS | Use if applications need the Azure classic deployment model. |
 | **Blob** | Specialized storage account for storing unstructured objects. Provides block blobs and append blobs only (no file, queue, table or disk storage services). Provides the same durability, availability, scalability and performance as general-purpose v2. | You can't store page blobs in these accounts, and therefore can't store VHD files. You can set an access tier to hot or cool. |
 
 ### Storage redundancy options
@@ -128,7 +128,7 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 | Type | Details | Usage |
 | --- | --- | --- |
-| **Locally redundant storage (LRS)** | Protects against a local outage by replicating within a single storage unit to a separate fault domain and update domain. Keeps multiple copies of your data in one datacenter. Provides at least 99.999999999 percent (eleven 9's) durability of objects over a given year. | Consider if your app stores data that can be easily reconstructed. |
+| **Locally redundant storage (LRS)** | Protects against a local outage by replicating within a single storage unit to a separate fault domain and update domain. Keeps multiple copies of your data in one datacenter. Provides at least 99.999999999 percent (eleven 9's) durability of objects over a given year. | Consider if your application stores data that can be easily reconstructed. |
 | **Zone-redundant storage (ZRS)** | Protects again a datacenter outage by replicating across three storage clusters in a single region. Each storage cluster is physically separated and located in its own Availability Zone. Provides at least 99.9999999999 percent (twelve 9's) durability of objects over a given year by keeping multiple copies of your data across multiple datacenters or regions. | Consider if you need consistency, durability, and high availability. Might not protect against a regional disaster when multiple zones are permanently affected. |
 | **Geo-redundant storage (GRS)** | Protects against an entire region outage by replicating data to a secondary region hundreds of miles away from the primary. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a given year. | Replica data isn't available unless Microsoft initiates a failover to the secondary region. If failover occurs, read and write access is available. |
 | **Read-access geo-redundant storage (RA-GRS)** | Similar to GRS. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a given year. | Provides and 99.99 percent read availability by allowing read access from the second region used for GRS. |

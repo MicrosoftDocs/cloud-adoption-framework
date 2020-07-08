@@ -44,7 +44,7 @@ To begin a governance journey, choose one of the two options below. The options 
 <!-- docsTest:ignore "Azure Virtual Datacenter" -->
 
 > [!WARNING]
-> A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). The CAF enterprise-scale landing zone approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (apps, infra, or data assets) in the cloud. CAF enterprise-scale landing zone is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
+> A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). The CAF enterprise-scale landing zone approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data assets) in the cloud. CAF enterprise-scale landing zone is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
 
 <!-- markdownlint-disable MD028 -->
 

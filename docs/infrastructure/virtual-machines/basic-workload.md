@@ -1,6 +1,6 @@
 ---
 title: Deploy a basic workload in Azure
-description: Learn about core cloud infrastructure components and basic workloads, like basic web apps, single virtual machines, and virtual networks.
+description: Learn about core cloud infrastructure components and basic workloads, like basic web applications, single virtual machines, and virtual networks.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 12/31/2018
@@ -30,7 +30,7 @@ Regardless of whether the workload is a web application or a VM, each of these d
 
 ## Basic web application (PaaS)
 
-For a basic web application, select one of the 5-minute quickstarts from the [web apps documentation](https://docs.microsoft.com/azure/app-service) and follow the steps.
+For a basic web application, select one of the 5-minute quickstarts from the [Azure App Service documentation](https://docs.microsoft.com/azure/app-service) and follow the steps.
 
 > [!NOTE]
 > Some of the Quickstart guides will deploy a resource group by default. In this case, it's not necessary to create a resource group explicitly. Otherwise, deploy the web application to the resource group created above.

@@ -1,9 +1,9 @@
 ---
-title: "Rehost an app on Azure VMs with Azure Migrate"
+title: Rehost an application on Azure VMs with Azure Migrate
 description: Learn how Contoso rehosts an on-premises app with a lift and shift migration of on-premises machines to Azure, using the Azure Migrate service.
 author: givenscj
 ms.author: abuck
-ms.date: 04/02/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -12,44 +12,44 @@ services: azure-migrate
 
 <!-- cSpell:ignore givenscj WEBVM SQLVM OSTICKETWEB OSTICKETMYSQL contosohost vcenter contosodc NSGs agentless -->
 
-# Rehost an on-premises app on Azure VMs
+# Rehost an on-premises application on Azure VMs with Azure Migrate
 
-This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end app running on VMware VMs, by migrating the app VMs to Azure VMs.
+This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware VMs, by migrating the application VMs to Azure VMs.
 
-The SmartHotel360 app used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
+The SmartHotel360 application used in this example is provided as open source. If you'd like to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
 ## Business drivers
 
 The IT leadership team has worked closely with business partners to understand what they want to achieve with this migration:
 
 - **Address business growth.** Contoso is growing, and as a result there is pressure on their on-premises systems and infrastructure.
-- **Limit risk.** The SmartHotel360 app is critical for the Contoso business. It wants to move the app to Azure with zero risk.
-- **Extend.** Contoso doesn't want to modify the app, but does want to ensure that it's stable.
+- **Limit risk.** The SmartHotel360 application is critical for the Contoso business. It wants to move the application to Azure with zero risk.
+- **Extend.** Contoso doesn't want to modify the application, but does want to ensure that it's stable.
 
 ## Migration goals
 
 The Contoso cloud team has pinned down goals for this migration. These goals are used to determine the best migration method:
 
-- After migration, the app in Azure should have the same performance capabilities as it does today in VMware. The app will remain as critical in the cloud as it is on-premises.
-- Contoso doesn't want to invest in this app. It is important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
-- Contoso doesn't want to change the ops model for this app. Contoso do want to interact with it in the cloud in the same way that they do now.
-- Contoso doesn't want to change any app functionality. Only the app location will change.
+- After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as it is on-premises.
+- Contoso doesn't want to invest in this application. It is important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
+- Contoso doesn't want to change the ops model for this application. Contoso do want to interact with it in the cloud in the same way that they do now.
+- Contoso doesn't want to change any application functionality. Only the application location will change.
 
 ## Solution design
 
 After pinning down goals and requirements, Contoso designs and review a deployment solution, and identifies the migration process, including the Azure services that Contoso will use for the migration.
 
-### Current app
+### Current application
 
-- The app is tiered across two VMs (`WEBVM` and `SQLVM`).
+- The application is tiered across two VMs (`WEBVM` and `SQLVM`).
 - The VMs are located on VMware ESXi host `contosohost1.contoso.com` (version 6.5).
 - The VMware environment is managed by vCenter Server 6.5 (`vcenter.contoso.com`), running on a VM.
 - Contoso has an on-premises datacenter (`contoso-datacenter`), with an on-premises domain controller (`contosodc1`).
 
 ### Proposed architecture
 
-- Since the app is a production workload, the app VMs in Azure will reside in the production resource group `ContosoRG`.
-- The app VMs will be migrated to the primary Azure region (East US 2) and placed in the production network (`VNET-PROD-EUS2`).
+- Since the application is a production workload, the application VMs in Azure will reside in the production resource group `ContosoRG`.
+- The application VMs will be migrated to the primary Azure region (East US 2) and placed in the production network (`VNET-PROD-EUS2`).
 - The web front-end VM will reside in the front-end subnet (`PROD-FE-EUS2`) in the production network.
 - The database VM will reside in the database subnet (`PROD-DB-EUS2`) in the production network.
 - The on-premises VMs in the Contoso datacenter will be decommissioned after the migration is done.
@@ -60,7 +60,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 
 As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server. The following considerations helped them to decide to use SQL Server running on an Azure IaaS VM:
 
-- Using an Azure VM running SQL Server seems to be an optimal solution if Contoso needs to customize the operating system and the database, or if it might want to colocate and run third-party apps on the same VM.
+- Using an Azure VM running SQL Server seems to be an optimal solution if Contoso needs to customize the operating system and the database, or if it might want to colocate and run third-party applications on the same VM.
 - With Software Assurance, in future Contoso can exchange existing licenses for discounted rates on a SQL Managed Instance using the Azure Hybrid Benefit for SQL Server. This can save up to 30% on SQL Managed Instance.
 
 ### Solution review
@@ -69,12 +69,12 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Both the app VMs will be moved to Azure without changes, making the migration simple. <br><br> Since Contoso is using a lift and shift approach for both app VMs, no special configuration or migration tools are needed for the app database. <br><br> Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the app VMs in Azure. |
-| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles. [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the app will remain a single point of failure. <br><br> SQLVM is running on SQL Server 2008 R2, which is no longer in mainstream support. But it is supported for Azure VMs. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the app on Azure VMs, rather than moving to a managed service such as Azure App Service and Azure SQL Database. |
+| **Pros** | Both the application VMs will be moved to Azure without changes, making the migration simple. <br><br> Since Contoso is using a lift and shift approach for both application VMs, no special configuration or migration tools are needed for the application database. <br><br> Contoso can take advantage of their investment in Software Assurance, using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the application VMs in Azure. |
+| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles. [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the application remain as single points of failure. <br><br> SQLVM is running on SQL Server 2008 R2, which is no longer in mainstream support. But it is supported for Azure VMs. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the application on Azure VMs, rather than moving to a managed service such as Azure App Service and Azure SQL Database. |
 
 ### Migration process
 
-Contoso will migrate the app front-end and database VMs to Azure VMs using the Azure Migrate: Server Migration tool agentless method.
+Contoso will migrate the application front-end and database VMs to Azure VMs using the Azure Migrate: Server Migration tool agentless method.
 
 - As a first step, Contoso prepares and sets up Azure components for Azure Migrate: Server Migration, and prepares the on-premises VMware infrastructure.
 - They already have the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, so Contoso just needs to add configure the replication of the VMs through the Azure Migrate: Server Migration tool.
@@ -87,7 +87,7 @@ Contoso will migrate the app front-end and database VMs to Azure VMs using the A
 
 | Service | Description | Cost |
 | --- | --- | --- |
-| [Azure Migrate: Server Migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm) | The service orchestrates and manages migration of your on-premises apps and workloads, and AWS/GCP VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing. |
+| [Azure Migrate: Server Migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm) | The service orchestrates and manages migration of your on-premises applications and workloads, and AWS/GCP VM instances. | During replication to Azure, Azure Storage charges are incurred. Azure VMs are created, and incur charges, when the migration occurs and the VMs are running in Azure. [Learn more](https://azure.microsoft.com/pricing/details/azure-migrate) about charges and pricing. |
 
 ## Prerequisites
 
@@ -95,8 +95,8 @@ Here's what Contoso needs to run this scenario.
 
 | Requirements | Details |
 | --- | --- |
-| **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/free-trial). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
-| **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure. <br><br> Learn more about specific [prerequisites](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prerequisites) requirements for Azure Migrate: Server Migration. |
+| **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, review [this article](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
+| **Azure infrastructure** | [Learn how](./contoso-migration-infrastructure.md) Contoso set up an Azure infrastructure. <br><br> Learn more about specific [prerequisites](./contoso-migration-devtest-to-iaas.md#prerequisites) requirements for Azure Migrate: Server Migration. |
 | **On-premises servers** | On-premises vCenter servers should be running version 5.5, 6.0, 6.5 or 6.7. <br><br> ESXi hosts should run version 5.5, 6.0, 6.5 or 6.7. <br><br> One or more VMware VMs should be running on the ESXi host. |
 
 ## Scenario steps
@@ -121,10 +121,10 @@ They set these up as follows:
 
 1. Set up a network-Contoso already set up a network that can be for Azure Migrate: Server Migration when they [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
-    - The SmartHotel360 app is a production app, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+    - The SmartHotel360 application is a production application, and the VMs will be migrated to the Azure production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - Both VMs will be placed in the `ContosoRG` resource group, which is used for production resources.
-    - The app front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`), in the production network.
-    - The app database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`), in the production network.
+    - The application front-end VM (`WEBVM`) will migrate to the front-end subnet (`PROD-FE-EUS2`), in the production network.
+    - The application database VM (`SQLVM`) will migrate to the database subnet (`PROD-DB-EUS2`), in the production network.
 
 2. Provision the Azure Migrate: Server Migration tool.
 
@@ -183,7 +183,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 **Need more help?**
 
-- Learn about [preparing VMs for migration](https://docs.microsoft.com/azure/migrate/contoso-migration-rehost-vm#prepare-vms-for-migration).
+- Learn about [preparing VMs for migration](https://docs.microsoft.com/azure/migrate/prepare-for-migration).
 
 ## Step 2: Replicate the on-premises VMs
 
@@ -195,7 +195,7 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 
     ![Replicate VMs](./media/contoso-migration-rehost-vm/select-replicate.png)
 
-2. In **Replicate**, > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
+2. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
 
 3. In **On-premises appliance**, select the name of the Azure Migrate appliance that you set up > **OK**.
 
@@ -203,7 +203,7 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 
 4. In **Virtual machines**, select the machines you want to replicate.
     - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. To do this, in **Import migration settings from an Azure Migrate assessment?**, select the **Yes** option.
-    - If you didn't run an assessment, or you don't want to use the assessment settings, select the **No** options.
+    - If you didn't run an assessment, or you don't want to use the assessment settings, select the **No** option.
     - If you selected to use the assessment, select the VM group, and assessment name.
 
     ![Select assessment](./media/contoso-migration-rehost-vm/select-assessment.png)
@@ -275,7 +275,7 @@ Now Contoso admins run a full migration.
 
 ## Clean up after migration
 
-With migration complete, the SmartHotel360 app tiers are now running on Azure VMs.
+With migration complete, the SmartHotel360 application tiers are now running on Azure VMs.
 
 Now, Contoso needs to complete these cleanup steps:
 
@@ -288,13 +288,13 @@ Now, Contoso needs to complete these cleanup steps:
 
 ## Review the deployment
 
-With the app now running, Contoso now needs to fully operationalize and secure it in Azure.
+With the application now running, Contoso now needs to fully operationalize and secure it in Azure.
 
 ### Security
 
 The Contoso security team reviews the Azure VMs, to determine any security issues.
 
-- To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the app can reach it.
+- To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it.
 - The team also consider securing the data on the disk using Azure Disk Encryption and Key Vault.
 
 For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
@@ -304,7 +304,7 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
 
 - Keep data safe: Contoso backs up the data on the VMs using [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview).
-- Keep apps up and running: Contoso [replicates the app VMs in Azure to a secondary region using Site Recovery](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- Keep applications up and running: Contoso [replicates the application VMs in Azure to a secondary region using Site Recovery](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 
@@ -313,4 +313,4 @@ For business continuity and disaster recovery (BCDR), Contoso takes the followin
 
 ## Conclusion
 
-In this article, Contoso rehosted the SmartHotel360 app in Azure by migrating the app VMs to Azure VMs using the Azure Migrate: Server Migration tool.
+In this article, Contoso rehosted the SmartHotel360 application in Azure by migrating the application VMs to Azure VMs using the Azure Migrate: Server Migration tool.

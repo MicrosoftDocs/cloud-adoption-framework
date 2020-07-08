@@ -16,7 +16,7 @@ services: site-recovery
 
 # Assess on-premises workloads for migration to Azure
 
-This article shows how the fictional company Contoso assesses an on-premises app for migration to Azure. In the example scenario, Contoso's on-premises SmartHotel360 app currently runs on VMware. Contoso assesses the app's VMs using the Azure Migrate service, and the app's SQL Server database using Data Migration Assistant.
+This article shows how the fictional company Contoso assesses an on-premises app for migration to Azure. In the example scenario, Contoso's on-premises SmartHotel360 application currently runs on VMware. Contoso assesses the application VMs using the Azure Migrate service, and the SQL Server application database using Data Migration Assistant.
 
 ## Overview
 
@@ -27,7 +27,7 @@ To get started and to better understand the technologies involved, Contoso asses
 | App name | Platform | App tiers | Details |
 | --- | --- | --- | --- |
 | **SmartHotel360** <br><br> (manages Contoso travel requirements) | Runs on Windows with a SQL Server database | Two-tiered app. The front-end ASP.NET website runs on one VM (`WEBVM`) and the SQL Server runs on another VM (`SQLVM`). | VMs run on a VMware ESXi host managed by vCenter Server. <br><br> You can download the sample app from [GitHub](https://github.com/Microsoft/SmartHotel360). |
-| **osTicket** <br><br> (Contoso service desk app) | Runs on Linux/Apache with MySQL PHP (LAMP) | Two-tiered app. A front-end PHP website runs on one VM (`OSTICKETWEB`) and the MySQL database runs on another VM (`OSTICKETMYSQL`). | The app is used by customer service apps to track issues for internal employees and external customers. <br><br> You can download the sample from [GitHub](https://github.com/osTicket/osTicket). |
+| **osTicket** <br><br> (Contoso service desk app) | Runs on a [LAMP](https://wikipedia.org/wiki/LAMP_(software_bundle)) stack. | Two-tiered app. A front-end PHP website runs on one VM (`OSTICKETWEB`) and the MySQL database runs on another VM (`OSTICKETMYSQL`). | The app is used by customer service apps to track issues for internal employees and external customers. <br><br> You can download the sample from [GitHub](https://github.com/osTicket/osTicket). |
 
 ## Current architecture
 
@@ -161,7 +161,7 @@ Now, Contoso can run an assessment to analyze its on-premises SQL Server databas
 
     ![Data Migration Assistant: Connect to a server](../migrate/azure-best-practices/media/contoso-migration-assessment/dma-assessment-3.png)
 
-6. In **Add source**, Contoso adds the database it wants to assess, and then selects **Next** to start the assessment.
+6. In **Add source**, Contoso adds the database it wants to assess, then selects **Next** to start the assessment.
 
 7. The assessment is created.
 
@@ -298,7 +298,7 @@ Now, Contoso can import the downloaded file to the vCenter Server instance and p
 
 5. In **Network Mapping**, Contoso specifies the network in which to connect the collector VM. The network needs internet connectivity to send metadata to Azure.
 
-6. Contoso reviews the settings, and then selects **Power on after deployment** > **Finish**. A message that confirms successful completion appears when the appliance is created.
+6. Contoso reviews the settings, then selects **Power on after deployment** > **Finish**. A message that confirms successful completion appears when the appliance is created.
 
 ### Run the collector to discover VMs
 
@@ -372,7 +372,7 @@ Contoso runs the installation on each VM.
 
 1. Contoso double-clicks the downloaded agent.
 
-2. In **Destination Folder**, Contoso keeps the default installation folder, and then selects **Next**.
+2. In **Destination Folder**, Contoso keeps the default installation folder, and selects **Next**.
 
 3. In **Agent Setup Options**, Contoso selects **Connect the agent to Azure Log Analytics** > **Next**.
 
@@ -410,7 +410,7 @@ Contoso runs the installation on each VM.
 
     - Contoso enters the workspace ID and key in the command.
     - Commands are for 64-bit.
-    - The workspace ID and primary key are located in the Log Analytics workspace in the Azure portal. Select **Settings**, and then select the **Connected Sources** tab.
+    - The workspace ID and primary key are located in the Log Analytics workspace in the Azure portal. Select **Settings**, and select the **Connected Sources** tab.
     - Run the following commands to download the Log Analytics agent, validate the checksum, and install and onboard the agent:
 
         `wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w 6b7fcaff-7efb-4356-ae06-516cacf5e25d -s k7gAMAw5Bk8pFVUTZKmk2lG4eUciswzWfYLDTxGcD8pcyc4oT8c6ZRgsMy3MmsQSHuSOcmBUsCjoRiG2x9A8Mg==`
@@ -454,7 +454,7 @@ Contoso can now verify machine dependencies and create a group. Then, it runs th
 
 ### Run an assessment
 
-1. In **Groups**, Contoso opens the group (`smarthotelapp`), and then selects **Create assessment**.
+1. In **Groups**, Contoso opens the group (`smarthotelapp`), then selects **Create assessment**.
 
     ![Azure Migrate: Create an assessment](../migrate/azure-best-practices/media/contoso-migration-assessment/run-vm-assessment.png)
 

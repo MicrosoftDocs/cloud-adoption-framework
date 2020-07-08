@@ -1,9 +1,9 @@
 ---
-title: "Scale a migration to Azure"
+title: Scale a migration to Azure
 description: Use the Cloud Adoption Framework for Azure to learn how to plan for and perform a migration at scale to Azure.
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 10/08/2018
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -35,9 +35,9 @@ The Contoso cloud team has pinned down goals for this migration. These goals wer
 
 | Requirements | Details |
 | --- | --- |
-| Move to Azure quickly | Contoso wants to start moving apps and VMs to Azure as quickly as possible. |
-| Compile a full inventory | Contoso wants a complete inventory of all apps, databases, and VMs in the organization. |
-| Assess and classify apps | Contoso wants fully take advantage of the cloud. As a default Contoso assumes that all services will run as PaaS. IaaS will be used where PaaS isn't appropriate. |
+| Move to Azure quickly | Contoso wants to start moving applications and VMs to Azure as quickly as possible. |
+| Compile a full inventory | Contoso wants a complete inventory of all applications, databases, and VMs in the organization. |
+| Assess and classify applications | Contoso wants fully take advantage of the cloud. As a default Contoso assumes that all services will run as PaaS. IaaS will be used where PaaS isn't appropriate. |
 | Train and move to DevOps | Contoso wants to move to a DevOps model. Contoso will provide Azure and DevOps training, and reorganize teams as necessary. |
 
 After pinning down goals and requirements, Contoso reviews the IT footprint, and identifies the migration process.
@@ -48,7 +48,7 @@ After planning and setting up an [Azure infrastructure](./contoso-migration-infr
 
 | Item | Volume | Details |
 | --- | --- | --- |
-| Workloads | > 3,000 Apps | <li> Apps run on VMs. <li> Apps are Windows, SQL-based, and OSS LAMP. |
+| Workloads | > 3,000 Applications | <li> Applications run on VMs. <li> Application platforms include Windows, SQL Server, and [LAMP](https://wikipedia.org/wiki/LAMP_(software_bundle)). |
 | Databases | ~ 8,500 Databases | Databases include SQL Server, MySQL, and PostgreSQL. |
 | VMs | > 35,000 VMs | VMs run on VMware hosts and managed by vCenter servers. |
 
@@ -58,16 +58,16 @@ Now that Contoso has pinned down business drivers and migration goals, it can al
 
 ## Plan
 
-Contoso kicks off the planning process by discovering and assessing on-premises apps, data, and infrastructure. Here's what Contoso will do:
+Contoso kicks off the planning process by discovering and assessing on-premises applications, data, and infrastructure. Here's what Contoso will do:
 
-- Contoso needs to discover apps, maps dependencies across apps, and decide on migration order and priority.
-- As Contoso assesses, it will build out a comprehensive inventory of apps and resources. Along with the new inventory, Contoso will use and update the existing configuration management database (CMDB) and service catalog.
-  - The CMDB holds technical configurations for Contoso apps.
-  - The service catalog documents the operational details of apps, including associated business partners, and service-level agreements (SLAs).
+- Contoso needs to discover applications, maps dependencies across applications, and decide on migration order and priority.
+- As Contoso assesses, it will build out a comprehensive inventory of applications and resources. Along with the new inventory, Contoso will use and update the existing configuration management database (CMDB) and service catalog.
+  - The CMDB holds technical configurations for Contoso applications.
+  - The service catalog documents the operational details of applications, including associated business partners, and service-level agreements (SLAs).
 
-### Discover apps
+### Discover applications
 
-Contoso runs thousands of apps across a range of servers. In addition to the CMDB and service catalog, Contoso needs discovery and assessment tools.
+Contoso runs thousands of applications across a range of servers. In addition to the CMDB and service catalog, Contoso needs discovery and assessment tools.
 
 - The tools must provide a mechanism that can feed assessment data into the migration process.
 - Assessment tools must provide data that helps build up an intelligent inventory of Contoso's physical and virtual resources. Data should include profile information, and performance metrics.
@@ -80,41 +80,41 @@ Contoso identifies some common categories to classify assets in the inventory. T
 | Category | Assigned value | Details |
 | --- | --- | --- |
 | Business group | List of business group names | Which group is responsible for the inventory item? |
-| POC candidate | Y/N | Can the app be used as a POC or early adopter for cloud migration? |
+| POC candidate | Y/N | Can the application be used as a POC or early adopter for cloud migration? |
 | Technical debt | None/Some/Severe | Is the inventory item running or using an out-of-support product, platform, or operating system? |
-| Firewall implications | Y/N | Does the app communicate with the internet or outside traffic? Does it integrate with a firewall? |
-| Security issues | Y/N | Are there known security issues with the app? Does the app use unencrypted data or out-of-date platforms? |
+| Firewall implications | Y/N | Does the application communicate with the internet or outside traffic? Does it integrate with a firewall? |
+| Security issues | Y/N | Are there known security issues with the application? Does the application use unencrypted data or out-of-date platforms? |
 
-### Discover app dependencies
+### Discover application dependencies
 
-As part of the assessment process, Contoso needs to identify where apps are running, and figure out the dependencies and connections between app servers. Contoso maps the environment in steps.
+As part of the assessment process, Contoso needs to identify where applications are running, and figure out the dependencies and connections between application servers. Contoso maps the environment in steps.
 
-1. As a first step, Contoso discovers how servers and machines map to individual apps, network locations, and groups.
-2. With this information, Contoso can clearly identify apps that have few dependencies and are suitable for a quick migration.
-3. Contoso can use mapping to help them identify more complex dependencies and communications between app servers. Contoso can then group these servers logically to represent apps, and plan a migration strategy based on these groups.
+1. As a first step, Contoso discovers how servers and machines map to individual applications, network locations, and groups.
+2. With this information, Contoso can clearly identify applications that have few dependencies and are suitable for a quick migration.
+3. Contoso can use mapping to help them identify more complex dependencies and communications between application servers. Contoso can then group these servers logically to represent applications, and plan a migration strategy based on these groups.
 
-With mapping completed, Contoso can ensure that all app components are identified and accounted for when building the migration plan.
+With mapping completed, Contoso can ensure that all application components are identified and accounted for when building the migration plan.
 
 ![Dependency mapping](./media/contoso-migration-scale/dependency-map.png)
 
-### Evaluate apps
+### Evaluate applications
 
-As the last step in the discovery and assessment process, Contoso can evaluate assessment and mapping results to figure out how to migrate each app in the service catalog.
+As the last step in the discovery and assessment process, Contoso can evaluate assessment and mapping results to figure out how to migrate each application in the service catalog.
 
 To capture this evaluation process, they add a couple of additional classifications to the inventory.
 
 | Category | Assigned value | Details |
 | --- | --- | --- |
 | Business group | List of business group names | Which group is responsible for the inventory item? |
-| POC candidate | Y/N | Can the app be used as a POC or early adopter for cloud migration? |
+| POC candidate | Y/N | Can the application be used as a POC or early adopter for cloud migration? |
 | Technical debt | None/Some/Severe | Is the inventory item running or using an out-of-support product, platform, or operating system? |
-| Firewall implications | Y/N | Does the app communicate with the internet or outside traffic? Does it integrate with a firewall? |
-| Security issues | Y/N | Are there known security issues with the app? Does the app use unencrypted data or out-of-date platforms? |
-| Migration strategy | Rehost/Refactor/Rearchitect/Rebuild | What kind of migration is needed for the app? How will the app be deployed in Azure? [Learn more](./contoso-migration-overview.md#migration-patterns). |
+| Firewall implications | Y/N | Does the application communicate with the internet or outside traffic? Does it integrate with a firewall? |
+| Security issues | Y/N | Are there known security issues with the application? Does the application use unencrypted data or out-of-date platforms? |
+| Migration strategy | Rehost/Refactor/Rearchitect/Rebuild | What kind of migration is needed for the application? How will the application be deployed in Azure? [Learn more](./contoso-migration-overview.md#migration-patterns). |
 | Technical complexity | 1-5 | How complex is the migration? This value should be defined by Contoso DevOps and relevant partners. |
-| Business criticality | 1-5 | How important is the app for the business? For example, a small workgroup app might be assigned a score of one, while a critical app used across the org might be assigned a score of five. This score will affect the migration priority level. |
-| Migration priority | 1/2/3 | What the migration priority for the app? |
-| Migration risk | 1-5 | What's the risk level for migrating the app? This value should be agreed on by Contoso DevOps and relevant partners. |
+| Business criticality | 1-5 | How important is the application for the business? For example, a small workgroup application might be assigned a score of one, while a critical application used across the org might be assigned a score of five. This score will affect the migration priority level. |
+| Migration priority | 1/2/3 | What the migration priority for the application? |
+| Migration risk | 1-5 | What's the risk level for migrating the application? This value should be agreed on by Contoso DevOps and relevant partners. |
 
 ### Determine costs
 
@@ -122,7 +122,7 @@ To determine costs and the potential savings of Azure migration, Contoso can use
 
 ### Identify assessment tools
 
-Contoso decides which tool to use for discovery, assessment, and building the inventory. Contoso identifies a mix of Azure tools and services, native app tools and scripts, and partner tools. In particular, Contoso is interested in how Azure Migrate can be used to assess at scale.
+Contoso decides which tool to use for discovery, assessment, and building the inventory. Contoso identifies a mix of Azure tools and services, native application tools and scripts, and partner tools. In particular, Contoso is interested in how Azure Migrate can be used to assess at scale.
 
 #### Azure Migrate
 
@@ -175,7 +175,7 @@ There are several other partner tools that can help Contoso in assessing the on-
 
 ## Phase 2: Migrate
 
-With their assessment complete Contoso needs to identify tools to move their apps, data, and infrastructure to Azure.
+With their assessment complete Contoso needs to identify tools to move their applications, data, and infrastructure to Azure.
 
 ### Migration strategies
 
@@ -183,10 +183,10 @@ There are four broad migration strategies that Contoso can consider.
 
 | Strategy | Details | Usage |
 | --- | --- | --- |
-| Rehost | <li> Often referred to as a _lift and shift_ migration, this is a no-code option for migrating existing apps to Azure quickly. <li> An app is migrated as-is, with the benefits of the cloud, without the risks or costs associated with code changes. | <li> Contoso can rehost less-strategic apps, requiring no code changes. |
-| Refactor | <li> Also referred to as "repackaging", this strategy requires minimal app code or configuration changes need to connect the app to Azure PaaS, and take better advantage of cloud capabilities. | <li> Contoso can refactor strategic apps to retain the same basic functionality, but move them to run on an Azure platform such as Azure App Service. <li> This requires minimum code changes. <li> On the other hand, Contoso will have to maintain a VM platform since this won't be managed by Microsoft. |
-| Rearchitect | <li> This strategy modifies or extends an app code base to optimize the app architecture for cloud capabilities and scale. <li> It modernizes an app into a resilient, highly scalable, independently deployable architecture. <li> Azure services can accelerate the process, scale applications with confidence, and manage apps with ease. |
-| Rebuild | <li> This approach rebuilds an app from scratch using cloud-native technologies. <li> Azure platform as a service (PaaS) provides a complete development and deployment environment in the cloud. It eliminates some expense and complexity of software licenses, and removes the need for an underlying app infrastructure, middleware, and other resources. | <li> Contoso can rewrite critical apps from the ground up, to take advantage of cloud technologies such as serverless compute or microservices. <li> Contoso will manage the app and services it develops, and Azure manages everything else. |
+| Rehost | <li> Often referred to as a _lift and shift_ migration, this is a no-code option for migrating existing applications to Azure quickly. <li> An application is migrated as-is, with the benefits of the cloud, without the risks or costs associated with code changes. | <li> Contoso can rehost less-strategic applications, requiring no code changes. |
+| Refactor | <li> Also referred to as "repackaging", this strategy requires minimal application code or configuration changes need to connect the application to Azure PaaS, and take better advantage of cloud capabilities. | <li> Contoso can refactor strategic applications to retain the same basic functionality, but move them to run on an Azure platform such as Azure App Service. <li> This requires minimum code changes. <li> On the other hand, Contoso will have to maintain a VM platform since this won't be managed by Microsoft. |
+| Rearchitect | <li> This strategy modifies or extends an application code base to optimize the application architecture for cloud capabilities and scale. <li> It modernizes an application into a resilient, highly scalable, independently deployable architecture. <li> Azure services can accelerate the process, scale applications with confidence, and manage applications with ease. |
+| Rebuild | <li> This approach rebuilds an application from scratch using cloud-native technologies. <li> Azure platform as a service (PaaS) provides a complete development and deployment environment in the cloud. It eliminates some expense and complexity of software licenses, and removes the need for an underlying application infrastructure, middleware, and other resources. | <li> Contoso can rewrite critical applications from the ground up, to take advantage of cloud technologies such as serverless compute or microservices. <li> Contoso will manage the application and services it develops, and Azure manages everything else. |
 
 Data must also be considered, especially with the volume of databases that Contoso has. Contoso's default approach is to use PaaS services such as Azure SQL Database to take full advantage of cloud features. By moving to a PaaS service for databases, Contoso will only have to maintain data, leaving the underlying platform to Microsoft.
 
@@ -314,20 +314,20 @@ Partner tools such as [Hanu](https://hanu.com/insight) and [Scalr]( https://www.
 
 ## Phase 4: Secure and manage
 
-In this phase, Contoso uses Azure security and management resources to govern, secure, and monitor cloud apps in Azure. These resources help you run a secure and well-managed environment while using products available in the Azure portal. Contoso begins using these services during migration and, with Azure hybrid support, continues using many of them for a consistent experience across the hybrid cloud.
+In this phase, Contoso uses Azure security and management resources to govern, secure, and monitor cloud applications in Azure. These resources help you run a secure and well-managed environment while using products available in the Azure portal. Contoso begins using these services during migration and, with Azure hybrid support, continues using many of them for a consistent experience across the hybrid cloud.
 
 ### Security
 
 Contoso will rely on the Azure Security Center for unified security management and Azure Advanced Threat Protection across hybrid cloud workloads.
 
-- The Security Center provides full visibility into, and control over, the security of cloud apps in Azure.
+- The Security Center provides full visibility into, and control over, the security of cloud applications in Azure.
 - Contoso can quickly detect and take action in response to threats, and reduce security exposure by enabling adaptive threat protection.
 
 [Learn more](https://azure.microsoft.com/services/security-center) about the Security Center.
 
 ### Monitoring
 
-Contoso needs visibility into the health and performance of the newly migrated apps, infrastructure, and data now running Azure. Contoso will use built-in Azure cloud monitoring tools such as Azure Monitor, Log Analytics workspace, and Application Insights.
+Contoso needs visibility into the health and performance of the newly migrated applications, infrastructure, and data now running Azure. Contoso will use built-in Azure cloud monitoring tools such as Azure Monitor, Log Analytics workspace, and Application Insights.
 
 - Using these tools, Contoso can easily collect data from sources and gain rich insights. For example, Contoso can gauge CPU disk and memory utilization for VMs, view applications and network dependencies across multiple VMs, and track application performance.
 - Contoso will use these cloud monitoring tools to take action and integrate with service solutions.
@@ -337,10 +337,10 @@ Contoso needs visibility into the health and performance of the newly migrated a
 
 Contoso will need a business continuity and disaster recovery (BCDR) strategy for their Azure resources.
 
-- Azure provides [built-in BCDR features](https://docs.microsoft.com/azure/architecture/resiliency/disaster-recovery-azure-applications) to keep data safe and apps/services up and running.
+- Azure provides [built-in BCDR features](https://docs.microsoft.com/azure/architecture/resiliency/disaster-recovery-azure-applications) to protect data and keep applications and services running.
 - In addition to built-in features, Contoso wants to ensure that it can recover from failures, avoid costly business disruptions, meet compliance goals, and protect data against ransomware and human errors. To do this:
   - Contoso will deploy Azure Backup as a cost-efficient solution for backup of Azure resources. Because it's built-in, Contoso can set up cloud backups in a few simple steps.
-  - Contoso will set up disaster recovery for Azure VMs using Azure Site Recovery for replication, failover, and failback between Azure regions that it specifies. This ensures that apps running on Azure VMs will remain available in a secondary region of Contoso's choosing if an outage occurs in the primary region. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+  - Contoso will set up disaster recovery for Azure VMs using Azure Site Recovery for replication, failover, and failback between Azure regions that it specifies. This ensures that applications running on Azure VMs remain available in a secondary region of Contoso's choosing if an outage occurs in the primary region. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ## Conclusion
 
