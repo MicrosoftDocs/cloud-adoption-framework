@@ -196,11 +196,11 @@ Build cloud-native apps without provisioning and managing infrastructure by usin
 - Boosting team performance.
 - Improving organizational impact.
 
-#### Azure Logic Apps (TODO: H4)
+#### Azure Logic Apps
 
 Integrate data and apps instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft Office 365, and Dropbox.
 
-**Action** (TODO: bold)
+**Action**
 
 To configure or monitor Azure logic apps:
 
@@ -218,11 +218,11 @@ To configure or monitor Azure logic apps:
 
 ::: zone-end
 
-**Serverless API management** (TODO: bold)
+#### Serverless API management
 
 Publish, secure, transform, maintain, and monitor APIs by using Azure API Management, a fully managed service that offers a usage model designed and implemented to be natural fit for serverless applications.
 
-#### Action (TODO: H4)
+##### Action
 
 To configure or monitor API Management services:
 
@@ -244,11 +244,11 @@ To configure or monitor API Management services:
 
 For modernizing your application portfolio, Azure provides various container services to migrate your existing apps to containers and build cloud-native microservices apps so you can deliver value to your users faster. Use end-to-end developer and CI/CD tools to develop, update, and deploy your containerized applications. Manage containers at scale with a fully managed Kubernetes container orchestration service that integrates with Azure Active Directory. Wherever you are in your app modernization journey, accelerate your containerized application development while meeting your security requirements.
 
-#### Azure Container Instances
+**Azure Container Instances**
 
 Run Docker containers on-demand in a managed serverless Azure environment. Azure Container Instances is a solution for any scenario that can operate in isolated containers without orchestration. When you run your workloads in Container Instances, you can focus on designing and building your applications instead of managing the infrastructure that runs them.
 
-##### Action
+#### Action
 
 To configure or monitor container instances:
 
