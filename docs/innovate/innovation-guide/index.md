@@ -11,18 +11,12 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="docs"
+# Before you start
 
-# Azure innovation guide: Before you start
+::: zone target="docs"
 
 > [!NOTE]
 > This guide provides a starting point for innovation guidance in the Cloud Adoption Framework. It is also available in the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade).
-
-::: zone-end
-
-::: zone target="chromeless"
-
-# Before you start
 
 ::: zone-end
 
