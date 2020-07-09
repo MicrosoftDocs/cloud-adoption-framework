@@ -96,7 +96,6 @@ To innovate, many developers use open-source code. 80 to 90 percent of new appli
 ### Learn more
 
 - [Open source on Azure](https://azure.microsoft.com/overview/choose-azure-opensource)
-
 - [Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-overview)
 
 ## [Innovation characteristics](#tab/Characteristics)

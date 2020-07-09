@@ -11,17 +11,7 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="docs"
-
 # Prerequisites for migrating to Azure
-
-::: zone-end
-
-::: zone target="chromeless"
-
-# Prerequisites
-
-::: zone-end
 
 The resources in this section will help prepare your current environment for migration to Azure.
 

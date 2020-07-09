@@ -13,17 +13,7 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore MSPs -->
 
-::: zone target="chromeless"
-
-# Assistance
-
-::: zone-end
-
-::: zone target="docs"
-
-# Obtain assistance during your journey to Azure
-
-::: zone-end
+# Get assistance
 
 We know that getting the right support at the right time will accelerate your migration efforts. Review the assistance avenues below to meet your needs.
 

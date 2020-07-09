@@ -11,7 +11,7 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-# Azure migration guide: Before you start
+# Azure migration guide overview
 
 The [Cloud Adoption Framework's Migrate methodology](../index.md) guides readers through an iterative process of migrating one workload, or a small collection of workloads per release. In each iteration, the process of Assess, Migration, and Optimize and Promote is followed to ensure that workloads are ready to meet production demands. That cloud-agnostic process can guide migration to any cloud provider.
 

@@ -11,7 +11,7 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-# Before you start
+# Azure innovation guide overview
 
 ::: zone target="docs"
 
