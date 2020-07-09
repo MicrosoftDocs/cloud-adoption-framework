@@ -33,9 +33,9 @@ As an innovator, your company has rich information about its business and its cu
 
 ## [Machine learning](#tab/MachineLearning)
 
-Azure provides advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models across the cloud and edge, using Azure Machine Learning, Azure Databricks, and Open Neural Network Exchange (ONNX). Develop models faster using automated machine learning. Use tools and frameworks of your choice without being locked in.
+Azure provides advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models across the cloud and edge, using Azure Machine Learning. Develop models faster using automated machine learning. Use tools and frameworks of your choice without being locked in.
 
-For more information on getting started with Azure Machine Learning, see [What is Azure Machine Learning?](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml) and [Getting started with your first ML experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open source model format and runtime for machine learning, see our [ONNX and Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-onnx) documentation.
+For more information on getting started with Azure Machine Learning, see [What is Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml) and [Getting started with your first ML experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open source model format and runtime for machine learning, see our [ONNX Runtime](http://onnxruntime.ai) documentation.
 
 ### Action
 
@@ -45,7 +45,7 @@ A data scientist can use Azure Machine Learning to train and build a model by us
 
 1. Select **Add**, then follow the steps in the portal to create a workspace.
 
-1. The new workspace provides a code-driven approach for data scientists to train and build models that require more advanced analytics to accurately predict customer needs.
+1. The new workspace provides both low-code and code-driven approach for data scientists to train, build, deploy, and manage models.
 
 ::: zone target="chromeless"
 
