@@ -44,23 +44,19 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 - Linux on Azure
 - SAP on Azure
 - Business continuity and disaster recovery (BCDR)
-- High-performance computing*
+- High-performance computing
 - Cloud-native applications
 - DevOps
 - Application modernization
-- Cloud-scale analytics**
+- Cloud-scale analytics
 - Intelligent applications
-- Intelligent agents**
+- Intelligent agents
 - Data modernization to Azure
 - Security and management
 - Globally distributed data
-- IoT:**
-
-*Limited preview in United States, Canada, united kingdom, and western Europe.
-
-**Limited preview in united kingdom and western Europe.
-
-**Available in h2 2019
+- Windows Virtual Desktop
+- Azure Marketplace
+- Fundamentals and governance
 
 During a typical FastTrack for Azure engagement, Microsoft helps to define the business vision to plan and develop Azure solutions successfully. The team assesses architectural needs and provides guidance, design principles, tools, and resources to help build, deploy, and manage Azure solutions. The team matches skilled partners for deployment services on request and periodically checks in to ensure that deployment is on track and to help remove blockers.
 
@@ -70,17 +66,17 @@ The main phases of a typical FastTrack for Azure engagement are:
 - **Solution enablement.** Learn design principles for building applications, review architecture of applications and solutions, and receive guidance and tools to drive proof of concept (PoC) work through to production.
 - **Continuous partnership.** Azure engineers and program managers check in every so often to ensure that deployment is on track and to help remove blockers.
 
-## Microsoft services offerings aligned to Cloud Adoption Framework approaches
+## Microsoft Services offerings aligned to Cloud Adoption Framework approaches
 
 ![Microsoft Services Cloud Adoption Framework approach](../../../_images/migrate/mcs-program-approach.jpg)
 
-**Assess:** Microsoft services uses a [unified data- and tool-driven approach](https://download.microsoft.com/download/C/7/C/C7CEA89D-7BDB-4E08-B998-737C13107361/Secure_Cloud_Insights_Datasheet_EN_US.pdf) consisting of architectural workshops, Azure real-time information, security and identity threat models and various tools to provide insights into challenges, risks, recommendations and issues to an existing Azure environment with a key outcome such as [high-level modernization roadmap](https://download.microsoft.com/download/F/7/2/F72FAD7E-8BBD-4E04-8C7B-9AC4FE04A150/Cloud_Adoption_Discovery_and_Roadmap_Datasheet.pdf).
+**Assess:** Microsoft Services uses a [unified data- and tool-driven approach](https://download.microsoft.com/download/C/7/C/C7CEA89D-7BDB-4E08-B998-737C13107361/Secure_Cloud_Insights_Datasheet_EN_US.pdf) consisting of architectural workshops, Azure real-time information, security and identity threat models and various tools to provide insights into challenges, risks, recommendations and issues to an existing Azure environment with a key outcome such as [high-level modernization roadmap](https://download.microsoft.com/download/F/7/2/F72FAD7E-8BBD-4E04-8C7B-9AC4FE04A150/Cloud_Adoption_Discovery_and_Roadmap_Datasheet.pdf).
 
-**Adopt:** Through Microsoft services' [Azure cloud foundation](https://download.microsoft.com/download/D/8/7/D872DFD0-1C46-4145-95E4-B5EAB2958B96/Hybrid_Cloud_Foundation_Datasheet_EN_US.pdf), establish your core Azure designs, patterns and governance architecture by mapping your requirements to the most appropriate reference architecture and plan, design and deploy the infrastructure, management, security, and identity required for workloads.
+**Adopt:** Using the [Azure cloud foundation](https://download.microsoft.com/download/D/8/7/D872DFD0-1C46-4145-95E4-B5EAB2958B96/Hybrid_Cloud_Foundation_Datasheet_EN_US.pdf) from Microsoft Services, establish your core Azure designs, patterns and governance architecture by mapping your requirements to the most appropriate reference architecture and plan, design and deploy the infrastructure, management, security, and identity required for workloads.
 
-**Migrate/optimize:** Microsoft services' [cloud modernization solution](https://download.microsoft.com/download/3/7/3/373F90E3-8568-44F3-B096-CD9C1CD28AB7/Cloud_Modernization_Datasheet_EN_US.pdf) offers a comprehensive approach to move applications and infrastructure to Azure, as well as to optimize and modernize after cloud deployment, backed by streamlined migration.
+**Migrate/optimize:** The [cloud modernization solution](https://download.microsoft.com/download/3/7/3/373F90E3-8568-44F3-B096-CD9C1CD28AB7/Cloud_Modernization_Datasheet_EN_US.pdf) from Microsoft Services offers a comprehensive approach to move applications and infrastructure to Azure, as well as to optimize and modernize after cloud deployment, backed by streamlined migration.
 
-**Innovate:** Microsoft services' [cloud center of excellence (CCoE) solution](https://download.microsoft.com/download/F/8/B/F8BBE4BD-E5F8-4DFB-82F7-C0A4E17051BB/Cloud_Center_of_Excellence_Datasheet_EN_US.pdf) offers a DevOps coaching engagement and uses DevOps principles combined with prescriptive cloud-native service management and security controls to help drive business innovation, increase agility, and reduce time to value within a secure, predictable, and flexible services delivery and operations management capability.
+**Innovate:** The [cloud center of excellence (CCoE) solution](https://download.microsoft.com/download/F/8/B/F8BBE4BD-E5F8-4DFB-82F7-C0A4E17051BB/Cloud_Center_of_Excellence_Datasheet_EN_US.pdf) from Microsoft Services offers a DevOps coaching engagement and uses DevOps principles combined with prescriptive cloud-native service management and security controls to help drive business innovation, increase agility, and reduce time to value within a secure, predictable, and flexible services delivery and operations management capability.
 
 ## Azure support
 

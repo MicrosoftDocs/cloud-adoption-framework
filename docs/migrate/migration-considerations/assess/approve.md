@@ -32,9 +32,9 @@ Regular approval activities can help minimize or avoid surprises as a result of 
 
 ## Existing culture
 
-Your IT teams likely have existing mechanisms for managing change involving your on-premises assets. Typically these mechanisms are governed by traditional Information Technology Infrastructure Library-based (ITIL-based) change management processes. In many enterprise migrations, these processes involve a change advisory board (cab) that is responsible for reviewing, documenting, and approving all IT-related requests for changes (RFC).
+Your IT teams likely have existing mechanisms for managing change involving your on-premises assets. Typically these mechanisms are governed by traditional Information Technology Infrastructure Library-based (ITIL-based) change management processes. In many enterprise migrations, these processes involve a change advisory board (CAB) that's responsible for reviewing, documenting, and approving all IT-related requests for changes (RFC).
 
-The cab generally includes experts from multiple IT and business teams, offering a variety of perspectives and detailed review for all IT-related changes. A cab approval process is a proven way to reduce risk and minimize the business impact of changes involving stable workloads managed by IT operations.
+The CAB generally includes experts from multiple IT and business teams, offering a variety of perspectives and detailed review for all IT-related changes. A CAB approval process is a proven way to reduce risk and minimize the business impact of changes involving stable workloads managed by IT operations.
 
 ## Technical approval
 
@@ -44,9 +44,9 @@ Organizational readiness for the approval of technical change is among the most 
 
 Every change management approach has its own set of controls and approval processes. Migration is a series of continuous changes that start with a high degree of ambiguity and develop additional clarity through the course of execution. As such, migration is best governed by agile-based change management approaches, with the cloud strategy team serving as a product owner.
 
-However, the scale and frequency of change during a cloud migration doesn't fit well with the nature of ITIL processes. The requirements of a cab approval can risk the success of a migration, slowing or stopping the effort. Further, in the early stages of migration, ambiguity is high and subject matter expertise tends to be low. For the first several workload migrations or releases, the cloud adoption team is often in a learning mode. As such, it could be difficult for the team to provide the types of data needed to pass a cab approval.
+However, the scale and frequency of change during a cloud migration doesn't fit well with the nature of ITIL processes. The requirements of a CAB approval can risk the success of a migration, slowing or stopping the effort. Further, in the early stages of migration, ambiguity is high and subject matter expertise tends to be low. For the first several workload migrations or releases, the cloud adoption team is often in a learning mode. As such, it could be difficult for the team to provide the types of data needed to pass a CAB approval.
 
-The following best practices can help the cab maintain a degree of comfort during migration without become a painful blocker.
+The following best practices can help the CAB maintain a degree of comfort during migration without become a painful blocker.
 
 ### Standardize change
 
