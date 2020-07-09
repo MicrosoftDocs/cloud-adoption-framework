@@ -113,7 +113,7 @@ Here's how Contoso will run the migration:
 > [!div class="checklist"]
 >
 > - **Step 1: Provision AKS and Azure Container Registry.** Contoso provisions the managed AKS cluster and the container registry using PowerShell.
-> - **Step 2: Build docker containers.** They set up continuous integration (CI) for docker containers using Azure DevOps and push them to the container registry.
+> - **Step 2: Build Docker containers.** They set up continuous integration (CI) for Docker containers using Azure DevOps and push them to the container registry.
 > - **Step 3: Deploy back-end microservices.** They deploy the rest of the infrastructure that will be used by back-end microservices.
 > - **Step 4: Deploy front-end infrastructure.** They deploy the front-end infrastructure, including Blob storage for the pet phones, the Azure Cosmos DB, and Computer Vision API.
 > - **Step 5: Migrate the back end.** They deploy microservices and run on AKS to migrate the back end.
@@ -243,10 +243,10 @@ Contoso creates an Azure DevOps project, and configures a CI build to create the
     ![Azure DevOps](./media/contoso-migration-rebuild/vsts9.png)
     _Figure 20: The specifics of the task._
 
-11. Now, they configure the second docker task (to push). They select the subscription and the container registry (`smarthotelacreus2`).
+11. Now, they configure the second Docker task (to push). They select the subscription and the container registry (`smarthotelacreus2`).
 
     ![Azure DevOps](./media/contoso-migration-rebuild/vsts10.png)
-    _Figure 21: Configuring the second docker task._
+    _Figure 21: Configuring the second Docker task._
 
 12. They enter the file to the `docker-compose.yaml` file and select **Push service images**, including the latest tag. When the action changes to **Push service images**, the name of the Azure DevOps task changes to **Push services automatically**.
 
@@ -270,7 +270,7 @@ Contoso creates an Azure DevOps project, and configures a CI build to create the
 
 ### Deploy the back-end infrastructure
 
-With the AKS cluster created and the docker images built, Contoso admins now deploy the rest of the infrastructure that will be used by back-end microservices. Instructions in the section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repo. In the `/deploy/k8s/arm` folder, there's a single script to create all items.
+With the AKS cluster created and the Docker images built, Contoso admins now deploy the rest of the infrastructure that will be used by back-end microservices. Instructions in the section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repo. In the `/deploy/k8s/arm` folder, there's a single script to create all items.
 
 They deploy as follows:
 

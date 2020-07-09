@@ -47,7 +47,7 @@ If an organization is planning an Azure migration on its own, Microsoft is alway
 - High-performance computing*
 - Cloud-native applications
 - DevOps
-- application modernization
+- Application modernization
 - Cloud-scale analytics**
 - Intelligent applications
 - Intelligent agents**

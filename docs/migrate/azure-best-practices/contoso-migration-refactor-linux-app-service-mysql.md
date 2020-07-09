@@ -51,7 +51,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 Here's the proposed architecture:
 
-- The web tier application on `OSTICKETWEB` will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 docker container.
+- The web tier application on `OSTICKETWEB` will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 Docker container.
 - The application code will be moved to GitHub, and the Azure App Service web app will be configured for continuous delivery with GitHub.
 - Azure App Service will be deployed in both the primary region (`East US 2`) and secondary region (`Central US`).
 - Traffic Manager will be set up in front of the two web apps in both regions.
@@ -72,7 +72,7 @@ Contoso will complete the migration process as follows:
 1. As a first step, Contoso admins set up the Azure infrastructure, including provisioning Azure App Service, setting up Traffic Manager, and provisioning an Azure Database for MySQL instance.
 2. After preparing the Azure infrastructure, they migrate the database using Azure Database Migration Service.
 3. After the database is running in Azure, they up a GitHub private repository for Azure App Service with continuous delivery, and load it with the osTicket application.
-4. In the Azure portal, they load the application from GitHub to the docker container running Azure App Service.
+4. In the Azure portal, they load the application from GitHub to the Docker container running Azure App Service.
 5. They tweak DNS settings, and configure autoscaling for the application.
 
 ![Migration process](./media/contoso-migration-refactor-linux-app-service-mysql/migration-process.png)
@@ -121,7 +121,7 @@ Contoso admins provision two web apps (one in each region) using Azure App Servi
 
      ![Create an App Service plan](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app2.png)
 
-4. They select a Linux OS with PHP 7.0 runtime stack, which is a docker container.
+4. They select a Linux OS with PHP 7.0 runtime stack, which is a Docker container.
 
     ![Create a web app](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app3.png)
 
@@ -333,7 +333,7 @@ As the final step in the migration process, Contoso admins configure the web app
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app3.png)
 
-4. After the configuration is updated and the osTicket web app is loaded from GitHub to the docker container running the Azure App Service, the site shows as active.
+4. After the configuration is updated and the osTicket web app is loaded from GitHub to the Docker container running the Azure App Service, the site shows as active.
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app4.png)
 

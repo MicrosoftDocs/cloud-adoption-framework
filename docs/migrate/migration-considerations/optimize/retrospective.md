@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # How do retrospectives help build a growth mindset?
 
-"Culture eats strategy for breakfast." The best migration plan can easily be undone, if it doesn't have executive support and encouragement from leadership. Learning, growing, and even failure are at the heart of a growth mindset. they're also at the heart of any transformation effort.
+"Culture eats strategy for breakfast." The best migration plan can easily be undone, if it doesn't have executive support and encouragement from leadership. Learning, growing, and even failure are at the heart of a growth mindset. They're also at the heart of any transformation effort.
 
 Humility and curiosity have never been more important than they're during a business transformation. Embracing digital transformation requires both in ample supply. These traits are strengthened by regular introspection and an environment of encouragement. When employees are encouraged to take risks, they find better solutions. When employees are allowed to fail and learn, they succeed. Retrospectives are an opportunity for such investigation and growth.
 

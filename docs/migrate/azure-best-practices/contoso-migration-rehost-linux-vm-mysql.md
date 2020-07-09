@@ -423,6 +423,8 @@ The Contoso security team review the VM and database to determine any security i
 
 For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
+<!-- docsTest:ignore "Quickstart: Set" -->
+
 ### BCDR
 
 For business continuity and disaster recovery, Contoso takes the following actions:

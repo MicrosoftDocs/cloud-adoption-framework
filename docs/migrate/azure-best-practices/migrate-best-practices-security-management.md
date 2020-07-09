@@ -124,7 +124,7 @@ Azure provides a couple of solutions:
   - Applications can securely access information in the vault using URIs, without needing custom code.
   - Azure Key Vault allows you to lock down access via Azure security controls and to seamlessly implement 'rolling keys'. Microsoft does not see or extract your data.
 - **Azure App Service Environment:** If an application that you migrate needs extra protection, consider adding an App Service Environment and Web Application Firewall to protect the application resources.
-  - The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, docker containers, mobile apps, and function apps.
+  - The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, Docker containers, mobile apps, and function apps.
   - It's useful for applications that are very high scale, require isolation and secure network access or have high memory utilization.
 - **Web Application Firewall:** A feature of Azure Application Gateway that provides centralized protection for web apps.
   - It protects web apps without requiring back-end code modifications.
@@ -272,7 +272,7 @@ Just as blueprint allows engineers and architects to sketch a project's design p
 
 Building secure, scalable, and manageable workloads in Azure can be daunting. With continual changes, it can be difficult to keep up with different features for an optimal environment. Having a reference to learn from can be helpful when designing and migrating your workloads. Azure and Azure partners have built several sample reference architectures for various types of environments. These samples are designed to provide ideas that you can learn from and build on.
 
-Reference architectures are arranged by scenario. They contain best practices and advice on management, availability, scalability, and security. The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, docker containers, mobile apps, and functions. App Service adds the power of Azure to your application, with security, load balancing, autoscaling, and automated management. You can also take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps and GitHub, package management, staging environments, custom domain, and SSL certificates. App Service is useful for applications that need isolation and secure network access, and those that use high amounts of memory and other resources that need to scale.
+Reference architectures are arranged by scenario. They contain best practices and advice on management, availability, scalability, and security. The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, Docker containers, mobile apps, and functions. App Service adds the power of Azure to your application, with security, load balancing, autoscaling, and automated management. You can also take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps and GitHub, package management, staging environments, custom domain, and SSL certificates. App Service is useful for applications that need isolation and secure network access, and those that use high amounts of memory and other resources that need to scale.
 
 **Learn more:**
 
