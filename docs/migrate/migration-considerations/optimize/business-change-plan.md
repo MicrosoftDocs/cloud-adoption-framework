@@ -9,6 +9,10 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
+<!-- cSpell:ignore Eason -->
+
+<!-- docsTest:ignore "Eason Matrix" -->
+
 # Business change plan
 
 Traditionally, IT has overseen the release of new workloads. During a major transformation, like a datacenter migration or a cloud migration, a similar pattern of IT lead adoption could be applied. However, the traditional approach might miss opportunities to realize additional business value. For this reason, before a migrated workload is promoted to production, implementing a broader approach to user adoption is suggested. This article outlines the ways in which a business change plan adds to a standard user adoption plan.
@@ -17,11 +21,10 @@ Traditionally, IT has overseen the release of new workloads. During a major tran
 
 User adoption plans focus on how users will adopt a new technology or change to a given technology. This approach is time tested for introducing users to new tools. In a typical user adoption plan, IT focuses on the installation, configuration, maintenance, and training associated with the technical changes being introduced to the business environment.
 
-Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason matrix, illustrated in the figure below, represents the drivers behind those themes across a spectrum of adoption types.
+Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason Matrix, illustrated in the figure below, represents the drivers behind those themes across a spectrum of adoption types.
 
 ![Eason Matrix of user adoption concerns](../../../_images/migrate/eason-matrix.jpg)
-
-*Eason matrix of user adoption types.*
+_Diagram: Eason Matrix of user adoption types._
 
 These themes are often based on the assumption that introduction of new solutions to users should focus largely on risk control and facilitation of change. Additionally, IT has focused mostly on risk from the technology change and facilitation of that change.
 
@@ -61,6 +64,8 @@ After business change is documented and planned, [business testing](./business-t
 
 ## References
 
-<!-- cSpell:ignore Eason -->
+<!-- docsTest:disable -->
 
-- Eason, k. (1988) _Information technology and organizational change_, New York: taylor and francis.
+- Eason, K. (1988) _Information Technology and Organizational Change_, New York: Taylor and Francis.
+
+<!-- docsTest:enable -->
