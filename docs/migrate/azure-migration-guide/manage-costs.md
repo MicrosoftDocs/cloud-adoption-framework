@@ -50,14 +50,14 @@ These manual cost calculators can be used on their own to forecast potential spe
 
 Azure Migrate calculates monthly cost estimates based on data captured by the collector and Service Map. The following steps will load the cost estimates:
 
-1. Navigate to Azure Migrate assessment in the portal.
+1. Navigate to **Azure Migrate assessment** in the portal.
 1. In the project **Overview** page, select **+ Create assessment**.
 1. Select **View all** to review the assessment properties.
 1. Create the group, and specify a group name.
 1. Select the machines that you want to add to the group.
-1. Select **Create Assessment**, to create the group and the assessment.
+1. Select **Create assessment**, to create the group and the assessment.
 1. After the assessment is created, view it in **Overview** > **Dashboard**.
-1. In the assessment details section of the portal navigation, select **Cost details**.
+1. In the **Assessment details** section of the portal navigation, select **Cost details**.
 
 The resulting estimate, pictured below, identifies the monthly costs of compute and storage, which often represent the largest portion of cloud costs.
 
@@ -68,7 +68,7 @@ _Figure 1: Diagram of the cost details view of an assessment in Azure Migrate._
 ## Additional resources
 
 - [Set up and review an assessment with Azure Migrate](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware#set-up-an-assessment)
-- For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, guidance on the [Cost Management discipline](../../govern/cost-management/index.md) and the [cost management improvement in the governance guide for complex enterprises](../../govern/guides/complex/cost-management-improvement.md).
+- For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, see [Cost Management discipline guidance](../../govern/cost-management/index.md) and [Cost Management discipline improvement](../../govern/guides/complex/cost-management-improvement.md).
 
 # [Estimate and optimize VM costs during and after migration](#tab/EstimateOptimize)
 
@@ -82,7 +82,7 @@ The following steps provide cost recommendations for assets (infrastructure, app
 
 1. Navigate to **Azure Advisor** in the portal. To do so, select **Advisor** in the left navigation pane of the Azure portal. If you do not see Advisor in the left pane, select **All services**. In the service menu pane, under **Monitoring and Management**, select **Advisor**.
 2. The Advisor dashboard will display a summary of your recommendations for all selected subscriptions. You can choose the subscriptions that you want recommendations to be displayed for using the subscription filter dropdown.
-3. To see cost recommendations, select the cost tab.
+3. To see cost recommendations, select the **Cost** tab.
 
 ## Azure Cost Management and Billing
 
@@ -92,8 +92,8 @@ Prerequisites: the remainder of this tab assumes the reader has completed setup 
 
 The following steps will load Azure Cost Management and Billing cost analysis data for your subscriptions:
 
-1. Navigate to **Cost Management + Billing** in the portal. If you do not see cost management + billing in the left pane, select **All services**. In the service menu pane, under **Monitoring and Management**, select **Cost Management + Billing**.
-2. In cost management + billing, select **Cost Management** in the left navigation pane to begin analyzing and optimizing cloud costs.
+1. Navigate to **Cost Management + Billing** in the portal. If you do not see **Cost Management + Billing** in the left pane, select **All services**. In the service menu pane, under **Monitoring and Management**, select **Cost Management + Billing**.
+2. In **Cost Management + Billing**, select **Cost Management** in the left navigation pane to begin analyzing and optimizing cloud costs.
 3. In cost management, select **Cost analysis**.
     1. Use the **Scope** pill to switch to a different scope in cost analysis.
 
@@ -101,7 +101,7 @@ This analysis will allow you to review total costs, budget (if available), and a
 
 ## Additional resources
 
-- For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, guidance on the [Cost Management discipline](../../govern/cost-management/index.md) and the [incremental cost management improvement in the governance guide for complex enterprises](../../govern/guides/complex/cost-management-improvement.md).
+- For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, see the [Cost Management discipline](../../govern/cost-management/index.md) and [Cost Management discipline improvement](../../govern/guides/complex/cost-management-improvement.md).
 - For more information about Azure Advisor, see [Reducing service costs using Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations).
 - For more information about Azure Cost Management and Billing, see [Understand and work with scopes](https://docs.microsoft.com/azure/cost-management/understand-work-scopes) and [explore and analyze costs with cost analysis](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis).
 
