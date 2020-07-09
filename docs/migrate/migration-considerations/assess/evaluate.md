@@ -37,7 +37,7 @@ Be sure to document any discrepancies in host configuration, replicated VM confi
 - When possible, document any applications or other assets that make calls to each database.
 
 > [!NOTE]
-> Synchronization of any asset consumes bandwidth during the replication processes. A very common pitfall is to overlook the bandwidth consumption required to keep assets synchronized between the point of replication and release. Databases are common consumers of bandwidth during release cycles, and databases with large storage footprints or a high rate of change are especially concerning. Consider an approach of replicating the data structure, with controlled updates before user acceptance testing (uat) and release. In such scenarios, alternatives to Azure Site Recovery may be more appropriate. For more information, see guidance from the [Azure Database Migration Guide](https://datamigration.microsoft.com).
+> Synchronization of any asset consumes bandwidth during the replication processes. A very common pitfall is to overlook the bandwidth consumption required to keep assets synchronized between the point of replication and release. Databases are common consumers of bandwidth during release cycles, and databases with large storage footprints or a high rate of change are especially concerning. Consider an approach of replicating the data structure, with controlled updates before user acceptance testing (UAT) and release. In such scenarios, alternatives to Azure Site Recovery may be more appropriate. For more information, see guidance from the [Azure Database Migration Guide](https://datamigration.microsoft.com).
 
 ## Common network evaluation activities
 

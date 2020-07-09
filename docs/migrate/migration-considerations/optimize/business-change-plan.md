@@ -60,7 +60,7 @@ The business change plan varies from company to company. The goal of these quest
 After business change is documented and planned, [business testing](./business-test.md) can begin.
 
 > [!div class="nextstepaction"]
-> [Guidance for business testing (uat) during migration](./business-test.md)
+> [Guidance for business testing (UAT) during migration](./business-test.md)
 
 ## References
 
