@@ -1,4 +1,4 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework
+# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
 
 items:
   - name: Cloud Adoption Framework for Azure
@@ -359,6 +359,7 @@ items:
           href: migrate/azure-migration-guide/manage-costs.md
         - name: Obtain assistance
           href: migrate/azure-migration-guide/assistance.md
+
       - name: Migration scenarios
         items:
         - name: Overview
@@ -367,14 +368,94 @@ items:
           items:
           - name: Rehost a Windows app on Azure VMs
             href: migrate/azure-best-practices/contoso-migration-rehost-vm.md
-        - name: Linux workloads
+
+        - name: SQL Server workloads
           items:
+          - name: Migrate SQL Server databases to Azure
+            href: migrate/azure-best-practices/contoso-migration-sql-server-db-to-azure.md
+          - name: Rehost an app on Azure VMs and Azure SQL Managed Instance
+            href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md
+          - name: Rehost an app on Azure VMs and SQL Server Always On availability groups
+            href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md
+
+        - name: Linux and open-source databases
+          items:
+          - name: Migrate open source databases to Azure
+            href: migrate/azure-best-practices/contoso-migration-oss-db-to-azure.md
+          - name: Migrate MySQL to Azure
+            href: migrate/azure-best-practices/contoso-migration-mysql-to-azure.md
+          - name: Migrate PostgreSQL to Azure
+            href: migrate/azure-best-practices/contoso-migration-postgresql-to-azure.md
+          - name: Migrate MariaDB to Azure
+            href: migrate/azure-best-practices/contoso-migration-mariadb-to-azure.md
           - name: Rehost a Linux app on Azure VMs
             href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm.md
           - name: Rehost a Linux app on Azure VMs and Azure Database for MySQL
             href: migrate/azure-best-practices/contoso-migration-rehost-linux-vm-mysql.md
-          - name: Refactor a Linux app on Azure App Service and Azure Database for MySQL
+
+        - name: Dev/test workloads 
+          items:
+          - name: Migrate dev/test environments to Azure IaaS
+            href: migrate/azure-best-practices/contoso-migration-devtest-to-iaas.md
+          - name: Migrate to Azure DevTest Labs
+            href: migrate/azure-best-practices/contoso-migration-devtest-to-labs.md
+
+        - name: ASP.NET and PHP web apps
+          items:
+          - name: Refactor a Windows app onto App Service and Azure SQL Database
+            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md
+          - name: Refactor a Windows app onto App Service and SQL Managed Instance
+            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
+          - name: Refactor a Linux app onto App Service and MySQL
             href: migrate/azure-best-practices/contoso-migration-refactor-linux-app-service-mysql.md
+          - name: Rebuild an app in Azure
+            href: migrate/azure-best-practices/contoso-migration-rebuild.md
+          - name: Refactor TFS to Azure DevOps Services
+            href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
+            
+        - name: Java apps
+          items:
+          - name: Migration overview
+            href: https://docs.microsoft.com/azure/java/migration-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+          - name: Spring to Azure App Service
+            href: https://docs.microsoft.com/azure/java/migrate-java-se-to-java-se-app-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+          - name: Tomcat to Azure App Service
+            href: https://docs.microsoft.com/azure/java/migrate-tomcat-to-tomcat-app-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+          - name: Tomcat to containers on AKS
+            href: https://docs.microsoft.com/azure/java/migrate-tomcat-to-containers-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+          - name: WebLogic to Azure Virtual Machines
+            href: https://docs.microsoft.com/azure/java/migrate-weblogic-to-virtual-machines?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+          - name: WildFly to WildFly on AKS
+            href: https://docs.microsoft.com/azure/java/migrate-wildfly-to-wildfly-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+          - name: WebLogic to WildFly on AKS
+            href: https://docs.microsoft.com/azure/java/migrate-weblogic-to-wildfly-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+          - name: WebSphere to WildFly on AKS
+            href: https://docs.microsoft.com/azure/java/migrate-websphere-to-wildfly-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+          - name: JBoss EAP to WildFly on AKS
+            href: https://docs.microsoft.com/azure/java/migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
+
+        - name: SAP
+          items:
+          - name: SAP migration guide
+            href: https://azure.microsoft.com/resources/sap-on-azure-implementation-guide
+          - name: Migrate SAP applications to Azure
+            href: https://azure.microsoft.com/resources/migrating-sap-applications-to-azure
+          - name: Migration methodologies for SAP on Azure
+            href: https://azure.microsoft.com/resources/migration-methodologies-for-sap-on-azure
+
+        - name: Specialized workloads
+          items:
+          - name: Move on-premises VMware infrastructure to Azure
+            href: migrate/azure-best-practices/contoso-migration-vmware-to-azure.md
+          - name: Azure NetApp Files
+            href: https://azure.microsoft.com/services/netapp
+          - name: Oracle in Azure
+            href: https://azure.microsoft.com/solutions/oracle
+          - name: Cray in Azure
+            href: https://azure.microsoft.com/solutions/high-performance-computing/cray
+          - name: VDI
+            href: migrate/azure-best-practices/contoso-migration-rds-to-wvd.md
+
         - name: VMware hosts
           items:
           - name: Considerations when rehosting VMware
@@ -432,43 +513,6 @@ items:
             - name: Set up CloudSimple Private Cloud as disaster recovery site using VMware SRM
               href: https://docs.microsoft.com/azure/vmware-cloudsimple/disaster-recovery-site-recovery-manager?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
-        - name: ASP.NET apps
-          items:
-          - name: Refactor an app onto Azure App Service and Azure SQL Database
-            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql.md
-          - name: Refactor an app onto Azure App Service and Azure SQL Managed Instance
-            href: migrate/azure-best-practices/contoso-migration-refactor-web-app-sql-managed-instance.md
-          - name: Rebuild an app in Azure App Service
-            href: migrate/azure-best-practices/contoso-migration-rebuild.md
-          - name: Refactor TFS to Azure DevOps Services
-            href: migrate/azure-best-practices/contoso-migration-tfs-vsts.md
-        - name: Java apps
-          items:
-          - name: Migration overview
-            href: https://docs.microsoft.com/azure/java/migration-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Spring to Azure App Service
-            href: https://docs.microsoft.com/azure/java/migrate-java-se-to-java-se-app-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Tomcat to Azure App Service
-            href: https://docs.microsoft.com/azure/java/migrate-tomcat-to-tomcat-app-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Tomcat to containers on AKS
-            href: https://docs.microsoft.com/azure/java/migrate-tomcat-to-containers-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: WebLogic to Azure Virtual Machines
-            href: https://docs.microsoft.com/azure/java/migrate-weblogic-to-virtual-machines?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: WildFly to WildFly on AKS
-            href: https://docs.microsoft.com/azure/java/migrate-wildfly-to-wildfly-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: WebLogic to WildFly on AKS
-            href: https://docs.microsoft.com/azure/java/migrate-weblogic-to-wildfly-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: WebSphere to WildFly on AKS
-            href: https://docs.microsoft.com/azure/java/migrate-websphere-to-wildfly-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: JBoss EAP to WildFly on AKS
-            href: https://docs.microsoft.com/azure/java/migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-
-        - name: SQL Server
-          items:
-          - name: Rehost an app on Azure VMs and Azure SQL Managed Instance
-            href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-managed-instance.md
-          - name: Rehost an app on Azure VMs and SQL Server Always On availability groups
-            href: migrate/azure-best-practices/contoso-migration-rehost-vm-sql-ag.md
         - name: Data platforms
           items:
           - name: Overview

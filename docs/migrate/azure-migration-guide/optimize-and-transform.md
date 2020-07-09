@@ -19,11 +19,11 @@ Now that you have migrated your services to Azure, the next phase includes revie
 
 This phase is also an opportunity to optimize your environment and perform possible transformations of the environment. For example, you may have performed a "rehost" migration, and now that your services are running on Azure you can revisit the solutions configuration or consumed services, and possibly perform some "refactoring" to modernize and increase the functionality of your solution.
 
-The remainder of this article focuses on tools for optimizing the migrated workload. When the proper balance between performance and cost has been reached, a workload is ready to be promoted to production. For guidance on promotion options, see the process improvement articles on [Optimize and promote](../migration-considerations/optimize/index.md).
+The remainder of this article focuses on tools for optimizing the migrated workload. When the proper balance between performance and cost has been reached, a workload is ready to be promoted to production. For guidance on promotion options, see the process improvement articles on [optimize and promote](../migration-considerations/optimize/index.md).
 
 # [Right-size assets](#tab/optimize)
 
-All Azure services that provide a consumption-based cost model can be resized through the Azure portal, CLI, or PowerShell. The first step in correctly sizing a service is to review its usage metrics. The Azure Monitor service provides access to these metrics. You may need to configure the collection of the metrics for the service you are analyzing, and allow an appropriate time to collect meaningful data based on your workload patterns.
+All Azure services that provide a consumption-based cost model can be resized through the Azure portal, CLI, or PowerShell. The first step in correctly sizing a service is to review its usage metrics. The Azure Monitor service provides access to these metrics. You may need to configure the collection of the metrics for the service you're analyzing, and allow an appropriate time to collect meaningful data based on your workload patterns.
 
 1. Go to **Monitor**.
 1. Select **Metrics** and configure the chart to show the metrics for the service to analyze.
@@ -36,7 +36,7 @@ All Azure services that provide a consumption-based cost model can be resized th
 
 The following are some common services that you can resize.
 
-## Resize a Virtual Machine
+## Resize a virtual machine
 
 Azure Migrate performs a right-sizing analysis as part of its pre-migration assessment phase, and virtual machines migrated using this tool will likely already be sized based on your pre-migration requirements.
 
@@ -57,7 +57,7 @@ Resizing production virtual machines can cause service disruptions. Try to apply
 
 ::: zone target="docs"
 
-- [Manage Reservations for Azure resources](https://docs.microsoft.com/azure/billing/billing-manage-reserved-vm-instance)
+- [Manage reservations for Azure resources](https://docs.microsoft.com/azure/billing/billing-manage-reserved-vm-instance)
 - [Resize a Windows VM](https://docs.microsoft.com/azure/virtual-machines/windows/resize-vm)
 - [Resize a Linux virtual machine using Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/change-vm-size)
 
@@ -97,7 +97,7 @@ Partners can use the Partner Center to review the usage.
 
 It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 
-Azure Cost Management works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
+Azure Cost Management and Billing works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
 
 1. Select **Cost Management + Billing**.
 1. Select **Advisor recommendations** and the **Costs** tab.

@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Prepare for cultural complexity: aligning roles and responsibilities
+# Prepare for cultural complexity: Aligning roles and responsibilities
 
 An understanding of the culture required to operate the existing datacenters is important to the success of any migration. In some organizations, datacenter management is contained within centralized IT operations teams. In these centralized teams, roles and responsibilities tend to be well defined and well understood throughout the team. For larger enterprises, especially those bound by third-party compliance requirements, the culture tends to be more nuanced and complex. Cultural complexity can lead to roadblocks that are difficult to understand and time consuming to overcome.
 
@@ -29,7 +29,7 @@ In any migration, there are a few key functions that are best executed by the bu
 | Optimize | Change plan | Define a plan for consumption of change within the business, including periods of low activities and change freezes. |
 | Optimize | Testing | Align power users capable of validating performance and functionality. |
 | Secure and manage | Interruption impact | Aid the cloud adoption team in quantifying the impact of a business process interruption. |
-| Secure and manage | Service-level agreement (SLA) validation | Aid the cloud adoption team in defining service level agreements and acceptable tolerances for business outages. |
+| Secure and manage | Service-level agreement (SLA) validation | Aid the cloud adoption team in defining service-level agreements and acceptable tolerances for business outages. |
 
 Ultimately, the cloud adoption team is accountable for each of these activities. However, establishing responsibilities and a regular cadence with the business for the completion of these activities on an established rhythm can improve stakeholder alignment and cohesiveness with the business.
 

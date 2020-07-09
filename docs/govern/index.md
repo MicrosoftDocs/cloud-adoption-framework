@@ -20,10 +20,10 @@ Cloud governance is an iterative process. For organizations with existing polici
 
 | | |
 |---|---|
-| <br> ![1](../_Images/icons/1.png) | <br> [Methodology](./methodology.md): Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework to begin thinking through the end state solution. |
-| <br> ![2](../_Images/icons/2.png) | <br> [Benchmark](./benchmark.md): Assess your current state and future state to establish a vision for applying the framework. |
-| <br> ![3](../_Images/icons/3.png) | <br> [Initial governance foundation](./initial-foundation.md): Begin your governance journey with a small, easily implemented set of governance tools. This initial governance foundation is called a minimum viable product (MVP).                                |
-| <br> ![4](../_Images/icons/4.png) | <br> [Improve the initial governance foundation](./foundation-improvements.md): Throughout implementation of the cloud adoption plan, iteratively add governance controls to address tangible risks as you progress toward the end state. |
+| <br> ![1](../_images/icons/1.png) | <br> [Methodology](./methodology.md): Establish a basic understanding of the methodology that drives cloud governance in the Cloud Adoption Framework to begin thinking through the end state solution. |
+| <br> ![2](../_images/icons/2.png) | <br> [Benchmark](./benchmark.md): Assess your current state and future state to establish a vision for applying the framework. |
+| <br> ![3](../_images/icons/3.png) | <br> [Initial governance foundation](./initial-foundation.md): Begin your governance journey with a small, easily implemented set of governance tools. This initial governance foundation is called a minimum viable product (MVP).                                |
+| <br> ![4](../_images/icons/4.png) | <br> [Improve the initial governance foundation](./foundation-improvements.md): Throughout implementation of the cloud adoption plan, iteratively add governance controls to address tangible risks as you progress toward the end state. |
 
 ## Objective of this content
 

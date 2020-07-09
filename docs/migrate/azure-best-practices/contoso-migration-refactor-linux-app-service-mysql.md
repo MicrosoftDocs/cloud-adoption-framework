@@ -51,7 +51,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 Here's the proposed architecture:
 
-- The web tier application on `OSTICKETWEB` will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 docker container.
+- The web tier application on `OSTICKETWEB` will be migrated by building an Azure App Service in two Azure regions. Azure App Service for Linux will be implemented using the PHP 7.0 Docker container.
 - The application code will be moved to GitHub, and the Azure App Service web app will be configured for continuous delivery with GitHub.
 - Azure App Service will be deployed in both the primary region (`East US 2`) and secondary region (`Central US`).
 - Traffic Manager will be set up in front of the two web apps in both regions.
@@ -72,7 +72,7 @@ Contoso will complete the migration process as follows:
 1. As a first step, Contoso admins set up the Azure infrastructure, including provisioning Azure App Service, setting up Traffic Manager, and provisioning an Azure Database for MySQL instance.
 2. After preparing the Azure infrastructure, they migrate the database using Azure Database Migration Service.
 3. After the database is running in Azure, they up a GitHub private repository for Azure App Service with continuous delivery, and load it with the osTicket application.
-4. In the Azure portal, they load the application from GitHub to the docker container running Azure App Service.
+4. In the Azure portal, they load the application from GitHub to the Docker container running Azure App Service.
 5. They tweak DNS settings, and configure autoscaling for the application.
 
 ![Migration process](./media/contoso-migration-refactor-linux-app-service-mysql/migration-process.png)
@@ -115,15 +115,15 @@ Contoso admins provision two web apps (one in each region) using Azure App Servi
 1. They create a web app resource (`osticket-eus2`) in the primary region (`East US 2`) via the Azure Marketplace.
 2. They put the resource in the production resource group `ContosoRG`.
 
-    ![Azure web app](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app1.png)
+    ![Create a web app](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app1.png)
 
-3. They create a new App Service plan (`APP-SVP-EUS2`) in the primary region, using the standard size.
+3. They create an App Service plan (`APP-SVP-EUS2`) in the primary region, using the standard size.
 
-     ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app2.png)
+     ![Create an App Service plan](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app2.png)
 
-4. They select a Linux OS with PHP 7.0 runtime stack, which is a docker container.
+4. They select a Linux OS with PHP 7.0 runtime stack, which is a Docker container.
 
-    ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app3.png)
+    ![Create a web app](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app3.png)
 
 5. They create a second web app (`osticket-cus`) and Azure App Service plan for `Central US`.
 
@@ -196,7 +196,7 @@ As a summary, you must perform the following:
 
 - Ensure all migration prerequisites are met:
   - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` during the migration wizard.
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard: `Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see https://go.microsoft.com/fwlink/?linkid=873009`.
   - The user must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 - Create a virtual network that connects via ExpressRoute or VPN to your on-premises network.
@@ -333,7 +333,7 @@ As the final step in the migration process, Contoso admins configure the web app
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app3.png)
 
-4. After the configuration is updated and the osTicket web app is loaded from GitHub to the docker container running the Azure App Service, the site shows as active.
+4. After the configuration is updated and the osTicket web app is loaded from GitHub to the Docker container running the Azure App Service, the site shows as active.
 
     ![Configure app](./media/contoso-migration-refactor-linux-app-service-mysql/configure-app4.png)
 
@@ -354,12 +354,12 @@ As the final step in the migration process, Contoso admins configure the web app
 
 Finally, they set up automatic scaling for the application. This ensures that as agents use the application, the application instances increase and decrease according to business needs.
 
-1. In app service `APP-SRV-EUS2`, they open **Scale Unit**.
-2. They configure a new autoscale setting with a single rule that increases the instance count by one when the CPU percentage for the current instance is above 70% for 10 minutes.
+1. In App Service `APP-SVP-EUS2`, they open **Scale Unit**.
+2. They configure a new autoscale setting with a single rule that increases the instance count by one when the CPU percentage for the current instance is above 70 percent for 10 minutes.
 
     ![Autoscale](./media/contoso-migration-refactor-linux-app-service-mysql/autoscale1.png)
 
-3. They configure the same setting on `APP-SRV-CUS` to ensure that the same behavior applies if the application fails over to the secondary region. The only difference is that they set the default instance to 1 since this is for failovers only.
+3. They configure the same setting on `APP-SVP-CUS` to ensure that the same behavior applies if the application fails over to the secondary region. The only difference is that they set the default instance to 1 since this is for failovers only.
 
    ![Autoscale](./media/contoso-migration-refactor-linux-app-service-mysql/autoscale2.png)
 

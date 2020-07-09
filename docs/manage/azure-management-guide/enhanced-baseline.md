@@ -30,12 +30,12 @@ However, you might need a greater commitment to the business beyond the standard
 - **Workload operations:**
   - Largest per-workload operations investment.
   - Highest degree of resiliency.
-  - Suggested for the approximately 20% of workloads that drive business value.
+  - Suggested for the approximately 20 percent of workloads that drive business value.
   - Typically reserved for high-criticality or mission-critical workloads.
 - **Platform operations:**
   - Operations investment is spread across many workloads.
   - Resiliency improvements affect all workloads that use the defined platform.
-  - Suggested for the approximately 20% of platforms that have highest criticality.
+  - Suggested for the approximately 20 percent of platforms that have highest criticality.
   - Typically reserved for medium-criticality to high-criticality workloads.
 
 Both workload operations and platform operations require changes to design and architecture principles. Those changes can take time and might result in increased operating expenses. To reduce the number of workloads that require such investments, an enhanced management baseline can provide enough of an improvement to the business commitment.

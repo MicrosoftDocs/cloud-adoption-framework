@@ -52,7 +52,7 @@ To avoid common migration blockers, create a clear and concise business strategy
 
 ## Step 2: Align partner support
 
-Partners, Microsoft services, or various Microsoft programs are available to support you throughout the migration process.
+Partners, Microsoft Services, or various Microsoft programs are available to support you throughout the migration process.
 
 - [Understand partnership options](../migrate/migration-considerations/assess/partnership-options.md) to find the right level of partnership and support.
 
