@@ -56,4 +56,4 @@ Common scenarios for machine learning solutions include:
 
 ## Next step
 
-[AI applications](./ai-applications.md)
+Explore other AI solution categories: [AI apps and agents](./ai-applications.md), [Knowledge mining](./knowledge-mining.md)
