@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Standard enterprise governance guide: Improve the Resource Consistency discipline
 
-This article advances the narrative by adding resource consistency controls to support mission-critical apps.
+This article advances the narrative by adding resource consistency controls to support mission-critical applications.
 
 ## Advancing the narrative
 
@@ -59,7 +59,7 @@ The following changes to policy will help remediate the new risks and guide impl
 1. All deployed assets must be categorized by criticality and data classification. Classifications are to be reviewed by the cloud governance team and the application owner before deployment to the cloud.
 2. Subnets containing mission-critical applications must be protected by a firewall solution capable of detecting intrusions and responding to attacks.
 3. Governance tooling must audit and enforce network configuration requirements defined by the security management team.
-4. Governance tooling must validate that all assets related to mission-critical apps or protected data are included in monitoring for resource depletion and optimization.
+4. Governance tooling must validate that all assets related to mission-critical applications or protected data are included in monitoring for resource depletion and optimization.
 5. Governance tooling must validate that the appropriate level of logging data is being collected for all mission-critical applications or protected data.
 6. Governance process must validate that backup, recovery, and SLA adherence are properly implemented for mission-critical applications and protected data.
 7. Governance tooling must limit virtual machine deployments to approved images only.
@@ -67,7 +67,7 @@ The following changes to policy will help remediate the new risks and guide impl
 9. Governance tooling must validate tagging related to cost, criticality, SLA, application, and data classification. All values must align to predefined values managed by the governance team.
 10. Governance processes must include audits at the point of deployment and at regular cycles to ensure consistency across all assets.
 11. Trends and exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to security management tooling used in the cloud.
-12. Before release into production, all mission-critical apps and protected data must be added to the designated operational monitoring solution. Assets that cannot be discovered by the chosen IT operations tooling, cannot be released for production use. Any changes required to make the assets discoverable must be made to the relevant deployment processes to ensure assets will be discoverable in future deployments.
+12. Before release into production, all mission-critical applications and protected data must be added to the designated operational monitoring solution. Assets that cannot be discovered by the chosen IT operations tooling, cannot be released for production use. Any changes required to make the assets discoverable must be made to the relevant deployment processes to ensure assets will be discoverable in future deployments.
 13. When discovered, operational management teams will size assets, to ensure that assets meet performance requirements.
 14. Deployment tooling must be approved by the cloud governance team to ensure ongoing governance of deployed assets.
 15. Deployment scripts must be maintained in a central repository accessible by the cloud governance team for periodic review and auditing.

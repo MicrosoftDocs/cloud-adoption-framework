@@ -16,8 +16,6 @@ Cloud adoption can't happen without well-organized people. Successful cloud adop
 
 The following exercises will help guide the process of creating a landing zone to support cloud adoption.
 
-<!-- markdownlint-disable MD033 -->
-
 | | |
 |---|---|
 | <br> ![1](../_Images/icons/1.png) | <br> [Structure type](#structure-type): Define the type of organizational structure that best fits your operating model.                                |

@@ -20,7 +20,7 @@ Threat intelligence teams are emerging and evolving to meet the needs of the sec
 These teams should focus on on a strategy that includes:
 
 - **Strategic threat intelligence** tailored to executive audiences increases awareness of cybersecurity risk, funding requirements, and supports sound risk decision making by organizational leadership.
-- **Incremental program growth** to provide quick wins with direct incident support and evolving into a threat intelligence platform (tip) to track and inform stakeholders.
+- **Incremental program growth** to provide quick wins with direct incident support and evolving into a threat intelligence platform to track and inform stakeholders.
 - **Tactical and operational threat intelligence** to guide decision making during incident investigation and threat detections.
 
 ## Team composition and key relationships

@@ -72,7 +72,7 @@ At each iteration, an MVP solution can take many different shapes. The common re
 
 In some cases, the fastest path to innovation means temporarily avoiding these disciplines entirely, until the cloud adoption team is confident that the hypothesis has been accurately validated. Coming from a technology company like Microsoft, this guidance might sound counterintuitive. However, this simply emphasizes that customer needs, not a specific technology decision, are the highest priority in an MVP solution.
 
-Typically, an MVP solution consists of a simple web app or data solution with minimal features and limited polish. For organizations that have professional development expertise, this path is often the fastest one to learning and iteration. The following list includes several other approaches a team might take to build an MVP:
+Typically, an MVP solution consists of a simple application or data solution with minimal features and limited polish. For organizations that have professional development expertise, this path is often the fastest one to learning and iteration. The following list includes several other approaches a team might take to build an MVP:
 
 - A predictive algorithm that's wrong 99 percent of the time but that demonstrates specific desired outcomes.
 - An IoT device that doesn't communicate securely at production scale but that demonstrates the value of nearly real-time data within a process.
