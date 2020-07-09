@@ -34,7 +34,7 @@ Historical data can help manage costs by analyzing usage and costs over time to 
 
 ## Improve efficiency
 
-Determine optimal VM usage, identify idle VMs, or remove idle VMs and unattached disks with cost management. Using information in sizing optimization and inefficiency reports, create a plan to downsize or remove idle VMs.
+Determine optimal VM usage, identify idle VMs, or remove idle VMs and unattached disks using Cost Management and Billing. Using information in sizing optimization and inefficiency reports, create a plan to downsize or remove idle VMs.
 
 ## Next steps
 

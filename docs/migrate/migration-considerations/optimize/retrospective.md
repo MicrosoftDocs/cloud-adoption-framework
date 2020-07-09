@@ -13,7 +13,7 @@ ms.subservice: migrate
 
 "Culture eats strategy for breakfast." The best migration plan can easily be undone, if it doesn't have executive support and encouragement from leadership. Learning, growing, and even failure are at the heart of a growth mindset. They're also at the heart of any transformation effort.
 
-Humility and curiosity have never been more important than they're during a business transformation. Embracing digital transformation requires both in ample supply. These traits are strengthened by regular introspection and an environment of encouragement. When employees are encouraged to take risks, they find better solutions. When employees are allowed to fail and learn, they succeed. Retrospectives are an opportunity for such investigation and growth.
+Humility and curiosity are never more important than during a business transformation. Embracing digital transformation requires both in ample supply. These traits are strengthened by regular introspection and an environment of encouragement. When employees are encouraged to take risks, they find better solutions. When employees are allowed to fail and learn, they succeed. Retrospectives are an opportunity for such investigation and growth.
 
 Retrospectives reinforce the principles of a growth mindset: experimentation, testing, learning, sharing, growing, and empowering. They provide a safe place for team members to share the challenges faced in the current sprint. And they allow the team to discuss and collaborate on ways to overcome those challenges. Retrospectives empower the team to create sustainable growth.
 
