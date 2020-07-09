@@ -21,7 +21,7 @@ This phase is also an opportunity to optimize your environment and perform possi
 
 The remainder of this article focuses on tools for optimizing the migrated workload. When the proper balance between performance and cost has been reached, a workload is ready to be promoted to production. For guidance on promotion options, see the process improvement articles on [Optimize and promote](../migration-considerations/optimize/index.md).
 
-# [Right-size assets](#tab/optimize)
+## [Right-size assets](#tab/optimize)
 
 All Azure services that provide a consumption-based cost model can be resized through the Azure portal, CLI, or PowerShell. The first step in correctly sizing a service is to review its usage metrics. The Azure Monitor service provides access to these metrics. You may need to configure the collection of the metrics for the service you are analyzing, and allow an appropriate time to collect meaningful data based on your workload patterns.
 
@@ -36,7 +36,7 @@ All Azure services that provide a consumption-based cost model can be resized th
 
 The following are some common services that you can resize.
 
-## Resize a Virtual Machine
+### Resize a Virtual Machine
 
 Azure Migrate performs a right-sizing analysis as part of its pre-migration assessment phase, and virtual machines migrated using this tool will likely already be sized based on your pre-migration requirements.
 
@@ -67,7 +67,7 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone-end
 
-## Resize a storage account
+### Resize a storage account
 
 1. Go to **Storage accounts**.
 1. Select the desired storage account.
@@ -80,7 +80,7 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone-end
 
-## Resize a SQL Database
+### Resize a SQL Database
 
 1. Go to either **SQL databases**, or **SQL servers**, then select the server.
 1. Select the desired database.
@@ -93,7 +93,7 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone-end
 
-# [Cost management](#tab/ManageCost)
+## [Cost management](#tab/ManageCost)
 
 It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 

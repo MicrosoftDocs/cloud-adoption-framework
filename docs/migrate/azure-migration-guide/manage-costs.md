@@ -31,11 +31,11 @@ The processes described in this article may also require a partnership with IT m
 
 <!-- markdownlint-disable MD024 MD025 -->
 
-# [Estimate VM costs prior to migration](#tab/EstimateVMCosts)
+## [Estimate VM costs prior to migration](#tab/EstimateVMCosts)
 
 Prior to migration of any asset (infrastructure, app, or data), there is an opportunity to estimate costs and refine sizing based on observed performance criteria for those assets. Estimating costs serves two purposes: it allows for cost control, and it provides a checkpoint to ensure that current budgets account for necessary performance requirements.
 
-## Cost calculators
+### Cost calculators
 
 For manual cost calculations, there are two handy calculators that can provide a quick cost estimate based on the architecture of the workload to be migrated.
 
@@ -44,7 +44,7 @@ For manual cost calculations, there are two handy calculators that can provide a
 
 These manual cost calculators can be used on their own to forecast potential spend and savings. They can also be used in conjunction with the cost forecasting tools of Azure Migrate to adjust the cost expectations to fit alternative architectures or performance constraints.
 
-## Azure Migrate calculations
+### Azure Migrate calculations
 
 **Prerequisites:** The remainder of this tab assumes the reader has already populated Azure Migrate with a collection of assets (infrastructure, apps, and data) to be migrated. The prior article on assessments provides instructions on collecting the initial data. Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
 
@@ -65,16 +65,16 @@ The resulting estimate, pictured below, identifies the monthly costs of compute 
 
 _Figure 1: Diagram of the Cost Details view of an assessment in Azure Migrate._
 
-## Additional resources
+### Additional resources
 
 - [Set up and review an assessment with Azure Migrate](https://docs.microsoft.com/azure/migrate/tutorial-assess-vmware#set-up-an-assessment)
 - For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, guidance on the [Cost Management discipline](../../govern/cost-management/index.md) and the [Cost Management improvement in the governance guide for complex enterprises](../../govern/guides/complex/cost-management-improvement.md).
 
-# [Estimate and optimize VM costs during and after migration](#tab/EstimateOptimize)
+## [Estimate and optimize VM costs during and after migration](#tab/EstimateOptimize)
 
 Estimating cost prior to migration provides a solid target for cost expectations. It also provides opportunities to consider the performance and cost needs of each asset (infrastructure, apps, and data) to be migrated. However, it is still an estimate. Once the asset is migrated and under load, more accurate cost calculations can be made, based on actual or synthesized load.
 
-## Azure Advisor cost recommendations
+### Azure Advisor cost recommendations
 
 Within 24 hours of migrating assets (infrastructure, apps, and data) to Azure, Azure Advisor begins monitoring each asset's performance to provide you with feedback on the asset. One item of feedback collected relates to the balance between cost and utilization.
 
@@ -84,7 +84,7 @@ The following steps provide cost recommendations for assets (infrastructure, app
 2. The Advisor dashboard will display a summary of your recommendations for all selected subscriptions. You can choose the subscriptions that you want recommendations to be displayed for using the subscription filter dropdown.
 3. To see cost recommendations, select the Cost tab.
 
-## Azure Cost Management
+### Azure Cost Management
 
 Azure Cost Management can provide a more holistic view of spending habits, including detailed view of costs and spending trends over time. For large or complex migrations, this view may provide the insights needed to make broad sweeping cost management decisions.
 
@@ -99,44 +99,44 @@ The following steps will load Azure Cost Management cost analysis data for your 
 
 This analysis will allow you to review total costs, budget (if available), and accumulated costs. Each calculation can be viewed by service, by resource, and over time. Most importantly, costs can be analyzed by tags. Properly naming and tagging assets (infrastructure, apps, and data) is the fundamental starting point of all sound governance and cost management processes. Proper tags allow for better management of costs and clearer impacts of performance and cost optimizations.
 
-## Additional resources
+### Additional resources
 
 - For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, guidance on the [Cost Management discipline](../../govern/cost-management/index.md) and the [incremental Cost Management improvement in the governance guide for complex enterprises](../../govern/guides/complex/cost-management-improvement.md).
 - For more information about Azure Advisor, see [Reducing service costs using Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-cost-recommendations).
 - For more information about Azure Cost Management, see [Understand and work with scopes](https://docs.microsoft.com/azure/cost-management/understand-work-scopes) and [Explore and analyze costs with Cost Analysis](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis).
 
-# [Tips and tricks to optimize costs](#tab/TipsTricks)
+## [Tips and tricks to optimize costs](#tab/TipsTricks)
 
 In addition to the tools mentioned in this article, there are some tips and tricks that can help quickly reduce overall cloud costs. The following are a few high-level tips to be aware of:
 
-## Avoid unnecessary spending
+### Avoid unnecessary spending
 
 Most assets (infrastructure, apps, and data) in an existing datacenter could theoretically be migrated to the cloud. However, that doesn't mean they should be. During assessment of each workload, validate that the workload should be migrated. The Cloud Adoption Framework article on [incremental rationalization](../../digital-estate/rationalize.md) can help determine which assets should be migrated.
 
-## Reduce waste
+### Reduce waste
 
 After you've deployed your infrastructure in Azure, it's important to make sure it is being used. The easiest way to start saving immediately is to review your resources and remove any that aren't being used.
 
-## Reduce overprovisioning
+### Reduce overprovisioning
 
 Even with the best approaches to estimation, there are likely to be overprovisioned and underutilized assets (infrastructure, apps, and data). Review of those assets using the tools in the prior two tabs will identify potential means of reducing asset sizing to better match performance requirements and reduce costs.
 
-## Take advantage of available discounts
+### Take advantage of available discounts
 
 Speak with your Microsoft account representative to understand how you can take advantage of current discount options. The following are a few examples of discounts that are commonly used to reduce costs.
 
-## Azure Reservations
+### Azure Reservations
 
 [Azure Reservations](https://docs.microsoft.com/azure/cost-management-billing/reservations/save-compute-costs-reservations) allow you to prepay for one year or three years of virtual machine or SQL Database compute capacity. Prepaying will allow you to get a discount on the resources you use. Reservations can significantly reduce your virtual machine or SQL database compute costs, up to 72 percent on pay-as-you-go prices with either a one-year or three-year upfront commitment. Reservations provide a billing discount and don't affect the runtime state of your virtual machines or SQL databases.
 
-## Use Azure Hybrid Benefit
+### Use Azure Hybrid Benefit
 
 If you already have Windows Server or SQL Server licenses in your on-premises deployments, you can use the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit) program to save in Azure. With the Windows Server benefit, each license covers the cost of the OS (up to two virtual machines), and you only pay for base compute costs. You can use existing SQL Server licenses to save up to 55 percent on vCore-based SQL Database options. Options include SQL Server in Azure Virtual Machines and SQL Server Integration Services.
 
-## Low-priority VMs with Batch
+### Low-priority VMs with Batch
 
 For lower priority background processes, Batch offers a means of managing the background service VMs and reducing costs. However, it is important to understand the performance impact of [low-priority VMs with Batch](https://docs.microsoft.com/azure/batch/batch-low-pri-vms) before choosing this discounted option.
 
-## Additional resources
+### Additional resources
 
 For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, guidance on the [Cost Management discipline](../../govern/cost-management/index.md) and the [incremental Cost Management improvements in the governance guide for complex enterprises](../../govern/guides/complex/cost-management-improvement.md).
