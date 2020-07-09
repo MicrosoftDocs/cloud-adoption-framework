@@ -290,7 +290,7 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 For business continuity and disaster recovery, Contoso takes the following actions:
 
 - **Keep data safe.** Contoso backs up the data on the VMs using [Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction).
-- **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region using Site Recovery. For more information, see [Quickstart: set up disaster recovery to a secondary Azure region for an Azure VM](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region using Site Recovery. For more information, see [Quickstart: Set up disaster recovery to a secondary Azure region for an Azure VM](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 

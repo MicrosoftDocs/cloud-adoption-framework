@@ -68,7 +68,7 @@ Begin a server migration assessment using Azure Migrate via these steps:
 
 Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services. With Service Map, you can view your servers in the way that you think of them: as interconnected systems that deliver critical services. Service Map shows connections between servers, processes, inbound and outbound connection latency, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.
 
-Azure Migrate uses Service Map to enhance the reporting capabilities and dependencies across the environment. For full details of this integration, see [Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization). If you use the Azure migration service, then no additional steps are required to configure and obtain the benefits of Service Map. The following instructions are provided for your reference if you'd like to use Service Map for other purposes or projects.
+Azure Migrate uses Service Map to enhance the reporting capabilities and dependencies across the environment. For full details of this integration, see [Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization). If you use the Azure Migrate service, then no additional steps are required to configure and obtain the benefits of Service Map. The following instructions are provided for your reference if you'd like to use Service Map for other purposes or projects.
 
 ### Enable dependency visualization using Service Map
 
@@ -109,9 +109,9 @@ Before migration, use that data, along with discovery conversations with the pro
 
 The first step in challenging these assumptions is a [review of all five Rs of rationalization](../../digital-estate/rationalize.md).
 
-    - Does the assumed rationalization approach work for this workload? Is it the best approach?
-    - Will any of the [physics of replication](../migration-considerations/migrate/replicate.md#replication-risks---physics-of-replication) impact the migration of this workload?
-    - Does this workload require any [remediation activities](../migration-considerations/assess/evaluate.md) before migration?
+- Does the assumed rationalization approach work for this workload? Is it the best approach?
+- Will any of the [physics of replication](../migration-considerations/migrate/replicate.md#replication-risks---physics-of-replication) impact the migration of this workload?
+- Does this workload require any [remediation activities](../migration-considerations/assess/evaluate.md) before migration?
 
 These types of questions help challenge assumptions and lead to the best path for each workload.
 

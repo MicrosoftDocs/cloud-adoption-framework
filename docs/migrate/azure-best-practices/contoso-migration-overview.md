@@ -71,21 +71,21 @@ This series focus on each migration scenario, driven by slightly different busin
 
 | Article | Details |
 | --- | --- |
-| [Migrating open source databases to Azure](./contoso-migration-oss-db-to-azure.md) | This article demonstrates how a fictional company Contoso assessed, planned and migrated their various on-premises open source databases to Azure. |
-| [Migrating MySQL to Azure](./contoso-migration-mysql-to-azure.md) | This article demonstrates how a fictional company Contoso planned and migrated their on-premises MySQL open source database platform to Azure. |
-| [Migrating PostgreSQL to Azure](./contoso-migration-postgresql-to-azure.md) | This article demonstrates how a fictional company Contoso planned and migrated their on-premises PostgreSQL open source database platform to Azure. |
-| [Migrating MariaDB to Azure](./contoso-migration-mariadb-to-azure.md) | This article demonstrates how a fictional company Contoso planned and migrated their on-premises MariaDB open source database platform to Azure. |
+| [Migrate open source databases to Azure](./contoso-migration-oss-db-to-azure.md) | This article demonstrates how a fictional company Contoso assessed, planned and migrated their various on-premises open source databases to Azure. |
+| [Migrate MySQL to Azure](./contoso-migration-mysql-to-azure.md) | This article demonstrates how a fictional company Contoso planned and migrated their on-premises MySQL open source database platform to Azure. |
+| [Migrate PostgreSQL to Azure](./contoso-migration-postgresql-to-azure.md) | This article demonstrates how a fictional company Contoso planned and migrated their on-premises PostgreSQL open source database platform to Azure. |
+| [Migrate MariaDB to Azure](./contoso-migration-mariadb-to-azure.md) | This article demonstrates how a fictional company Contoso planned and migrated their on-premises MariaDB open source database platform to Azure. |
 | [Rehost a Linux application on Azure VMs and Azure Database for MySQL](./contoso-migration-rehost-linux-vm-mysql.md) | This article provides an example of migrating a Linux-hosted application to Azure VMs by using Azure Migrate. It migrates the application database to Azure Database for MySQL by using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview). |
 | [Rehost a Linux application on Azure VMs](./contoso-migration-rehost-linux-vm.md) | This example shows how to complete a lift-and-shift migration of a Linux-based application to Azure VMs while using the Azure Migrate service. |
 
-### Dev/test
+### Dev/test workloads
 
 | Article | Details |
 | --- | --- |
 | [Migrate dev/test environments to Azure IaaS](./contoso-migration-devtest-to-iaas.md) | This article demonstrates how Contoso rehosts their dev/test environment for two applications running on VMware VMs by migrating to Azure VMs. |
-| [Migrating to Azure DevTest Labs](./contoso-migration-devtest-to-labs.md) | This article discusses how Contoso moves their dev/test workloads to Azure using DevTest Labs. |
+| [Migrate to Azure DevTest Labs](./contoso-migration-devtest-to-labs.md) | This article discusses how Contoso moves their dev/test workloads to Azure using DevTest Labs. |
 
-### ASP.NET, PHP web apps
+### ASP.NET and PHP web apps
 
 | Article | Details |
 | --- | --- |
@@ -93,21 +93,21 @@ This series focus on each migration scenario, driven by slightly different busin
 | [Refactor a Windows application using Azure App Service and SQL Managed Instance](./contoso-migration-refactor-web-app-sql-managed-instance.md) | This example shows how to migrate an on-premises Windows-based application to an Azure web app and migrates the application database to an Azure SQL Managed Instance using the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview). |
 | [Refactor a Linux application to multiple regions using Azure App Service, Traffic Manager, and Azure Database for MySQL](./contoso-migration-refactor-linux-app-service-mysql.md) | This example shows how to migrate an on-premises Linux-based application to an Azure web app on multiple Azure regions while using Azure Traffic Manager integrating with GitHub for continuous delivery. The application database is migrated to an Azure Database for MySQL instance. |
 | [Rebuild an application in Azure](./contoso-migration-rebuild.md) | This article provides an example of rebuilding an on-premises application using a range of Azure capabilities and managed services, including Azure App Service, AKS, Azure Functions, Cognitive Services, and Azure Cosmos DB. |
-| [Refactor Team Foundation Server on Azure DevOps Services](./contoso-migration-tfs-vsts.md) | This article shows an example migration of an on-premises Team Foundation Server deployment to Azure DevOps Services in Azure. |
+| [Refactor Team Foundation Server to Azure DevOps Services](./contoso-migration-tfs-vsts.md) | This article shows an example migration of an on-premises Team Foundation Server deployment to Azure DevOps Services in Azure. |
 
 ### SAP
 
 | Article | Details |
 | --- | --- |
 | [SAP migration guide](https://azure.microsoft.com/resources/sap-on-azure-implementation-guide) | Get practical guidance to move your on-premises SAP workloads to the cloud. |
-| [Migrating SAP applications to Azure](https://azure.microsoft.com/resources/migrating-sap-applications-to-azure) | Whitepaper and roadmap for your SAP journey to the cloud. |
+| [Migrate SAP applications to Azure](https://azure.microsoft.com/resources/migrating-sap-applications-to-azure) | Whitepaper and roadmap for your SAP journey to the cloud. |
 | [Migration methodologies for SAP on Azure](https://azure.microsoft.com/resources/migration-methodologies-for-sap-on-azure) | Overview of various migration options to move SAP applications to Azure. |
 
 ### Specialized workloads
 
 | Article | Details |
 | --- | --- |
-| [Moving on-premises VMware infrastructure to Azure](./contoso-migration-vmware-to-azure.md) | This article provides an example of moving an on-premises VMware VMs to Azure using Azure VMware Solution. |
+| [Move on-premises VMware infrastructure to Azure](./contoso-migration-vmware-to-azure.md) | This article provides an example of moving an on-premises VMware VMs to Azure using Azure VMware Solution. |
 | [Azure NetApp Files](https://azure.microsoft.com/services/netapp) | Enterprise file storage powered by NetApp. Run Linux and Windows file workloads in Azure. |
 | [Oracle on Azure](https://azure.microsoft.com/solutions/oracle) | Run your Oracle database and enterprise applications in Azure and Oracle cloud. |
 | [Cray in Azure](https://azure.microsoft.com/solutions/high-performance-computing/cray) | High performance computing with Cray in Azure. A dedicated supercomputer on your virtual network. |
@@ -116,7 +116,7 @@ This series focus on each migration scenario, driven by slightly different busin
 
 | Article | Details |
 | --- | --- |
-| [Moving on-premises Remote Desktop Services to Azure Windows Virtual Desktop](./contoso-migration-rds-to-wvd.md) | This article show to migrate an on-premises Remote Desktop Services to Windows Virtual Desktop in Azure. |
+| [Move on-premises Remote Desktop Services to Azure Windows Virtual Desktop](./contoso-migration-rds-to-wvd.md) | This article show to migrate an on-premises Remote Desktop Services to Windows Virtual Desktop in Azure. |
 
 ### Migration scaling
 

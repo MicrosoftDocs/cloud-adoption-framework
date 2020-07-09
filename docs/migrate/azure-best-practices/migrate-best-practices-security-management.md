@@ -78,7 +78,7 @@ Encryption is an important part of Azure security practices. Ensuring that encry
 
 Unlike IaaS where you manage your own VMs and infrastructure, in a PaaS model platform and infrastructure is managed by the provider, leaving you to focus on core application logic and capabilities. With so many different types of PaaS services, each service is evaluated individually for security purposes. As an example, let's see how we might enable encryption for Azure SQL Database.
 
-- **Always Encrypted:** Use the Always Encrypted wizard in SQL Server Management Studio to protect data at rest.
+- **Always Encrypted:** Use the Always Encrypted Wizard in SQL Server Management Studio to protect data at rest.
   - You create an Always Encrypted key to encrypt individual column data.
   - Always Encrypted keys can be stored as encrypted in database metadata, or stored in trusted key stores such as Azure Key Vault.
   - Application changes will probably be needed to use this feature.

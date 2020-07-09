@@ -147,7 +147,7 @@ Contoso admins set up the cluster as follows:
 
     ![SQL VM SKU](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-sku.png)
 
-2. In the **Create virtual machine Wizard** > **Basics**, they configure:
+2. In the **Create Virtual Machine Wizard** > **Basics**, they configure:
 
     - Names for the VMs: `SQLAOG1` and `SQLAOG2`.
     - Since machines are business-critical, they enable SSD for the VM disk type.

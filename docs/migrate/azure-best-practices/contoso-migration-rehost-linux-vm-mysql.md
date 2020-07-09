@@ -286,7 +286,7 @@ As a summary, you must perform the following:
 - Ensure all migration prerequisites are met:
 
   - The MySQL server database source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with same versions.
-  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error: `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more information, see https://go.microsoft.com/fwlink/?linkid=873009` error during the migration wizard.
+  - Enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard: `error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full. For more information, see https://go.microsoft.com/fwlink/?linkid=873009`.
   - User must have `ReplicationAdmin` role.
   - Migrate the database schemas without foreign keys and triggers.
 
@@ -429,7 +429,7 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 - **Keep data safe.** Contoso backs up the data on the application VM using [Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction). They don't need to configure backup for the database. Azure Database for MySQL automatically creates and stores server backups. They selected to use geo-redundancy for the database, so it's resilient and production-ready.
 
-- **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region using Site Recovery. For more information, see [Quickstart: set up disaster recovery to a secondary Azure region for an Azure VM](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region using Site Recovery. For more information, see [Quickstart: Set up disaster recovery to a secondary Azure region for an Azure VM](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 

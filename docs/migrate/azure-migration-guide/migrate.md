@@ -123,7 +123,7 @@ If this is the first time using Azure Database Migration Service, you need to re
 After you register the resource provider, you can create an instance of Azure Database Migration Service.
 
 1. Select **+ Create a resource** and search the marketplace for **Azure Database Migration Service**.
-1. Complete the **Create Migration Service** wizard, then select **Create**.
+1. Complete the Create Migration Service Wizard, then select **Create**.
 
 The service is now ready to migrate the supported source databases (for example, SQL Server, MySQL, PostgreSQL, or MongoDB).
 
