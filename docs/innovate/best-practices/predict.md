@@ -17,8 +17,7 @@ You can accelerate this type of digital invention through each of the following 
 Best practices and technical guidance to accelerate digital invention are listed in the table of contents on the left side of this page. Those articles are grouped by solution area:
 
 - Machine Learning
-- AI apps and agens
-- Conversational AI
+- AI apps and agents
 - Knowledge Mining
 
 ## Get started
