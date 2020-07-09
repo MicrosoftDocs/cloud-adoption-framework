@@ -138,11 +138,11 @@ Microservices is a software architecture style in which apps are composed of sma
 - Isolate points of failure.
 - Deliver value faster.
 
-#### Azure Kubernetes Service (AKS)
+### Microservices: Azure Kubernetes Service (AKS)
 
 Use a fully managed Kubernetes service to handle provisioning, upgrading, and scaling of cluster resources on demand. AKS makes deploying and managing containerized applications easy. It offers serverless Kubernetes, an integrated continuous integration and continuous delivery (CI/CD) experience, and enterprise-grade security and governance. Unite your development and operations teams on a single platform to rapidly build, deliver, and scale applications with confidence.
 
-##### Action
+#### Action
 
 To configure or monitor an AKS service:
 
@@ -160,7 +160,7 @@ To configure or monitor an AKS service:
 
 ::: zone-end
 
-### Event-based solutions
+### Event-based solutions (TODO: Remove heading and promote Azure Functions?)
 
 #### Azure Functions
 
@@ -196,11 +196,11 @@ Build cloud-native apps without provisioning and managing infrastructure by usin
 - Boosting team performance.
 - Improving organizational impact.
 
-#### Azure Logic Apps
+#### Azure Logic Apps (TODO: H4)
 
 Integrate data and apps instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft Office 365, and Dropbox.
 
-##### Action
+**Action** (TODO: bold)
 
 To configure or monitor Azure logic apps:
 
@@ -218,11 +218,11 @@ To configure or monitor Azure logic apps:
 
 ::: zone-end
 
-#### Serverless API management
+**Serverless API management** (TODO: bold)
 
 Publish, secure, transform, maintain, and monitor APIs by using Azure API Management, a fully managed service that offers a usage model designed and implemented to be natural fit for serverless applications.
 
-##### Action
+#### Action (TODO: H4)
 
 To configure or monitor API Management services:
 
