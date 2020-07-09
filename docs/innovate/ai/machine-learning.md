@@ -15,7 +15,7 @@ Azure empowers you with the most advanced machine learning capabilities. Quickly
 
 You can even start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray RLlib.
 
-For more information on getting started with [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/), visit Azure Machine Learning.  You will find a tutorial on getting [started with your first ML experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open source model format and runtime for machine learning, visit the [ONNX documents page](https://docs.microsoft.com/azure/machine-learning/concept-onnx).
+For more information on getting started with [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/), visit Azure Machine Learning.  You will find a tutorial on getting [started with your first ML experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open source model format and runtime for machine learning, visit the [ONNX Runtime](http://onnxruntime.ai).
 
 Common scenarios for machine learning solutions include:
 
