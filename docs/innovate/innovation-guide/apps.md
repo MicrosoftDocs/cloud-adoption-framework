@@ -266,7 +266,7 @@ To configure or monitor container instances:
 
 ::: zone-end
 
-#### Azure Red Hat OpenShift
+**Azure Red Hat OpenShift**
 
 Azure Red Hat OpenShift provides flexible self-service deployment of fully managed OpenShift clusters. Maintain regulatory compliance and focus on your application development while your master, infrastructure, and application nodes are patched, updated, and monitored by both Microsoft and Red Hat. Choose your own registry, networking, storage, or CI/CD solutions. Or start quickly by using built-in solutions with automated source code management, container and application builds, deployments, scaling, health management, and more.
 
