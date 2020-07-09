@@ -10,7 +10,7 @@ ms.subservice: govern
 ms.custom: governance
 ---
 
-<!-- cSpell:ignore CFO's MPLS -->
+<!-- cSpell:ignore MPLS -->
 
 # Governance guide for complex enterprises: Improve the Identity Baseline discipline
 
@@ -33,7 +33,7 @@ The cloud governance team is expanding. Given the need for additional support re
 
 ### Changes in the current state
 
-The IT team has approval to move forward with the CIO and CFO's plans to retire two datacenters. The team is concerned that 750 (15%) of the assets in those datacenters will have to be moved somewhere other than the cloud.
+The IT team has approval to move forward with the plans of the CIO and CFO to retire two datacenters. The team is concerned that 750 (15%) of the assets in those datacenters will have to be moved somewhere other than the cloud.
 
 ### Incrementally improve the future state
 

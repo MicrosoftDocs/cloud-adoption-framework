@@ -38,7 +38,7 @@ The existing CAF blueprint definitions and CAF Terraform modules provide a start
 | [Enterprise-scale design guideline](../ready/enterprise-scale/design-guidelines.md) | Evaluate the enterprise-scale guidelines for fulfilling the common design areas of Azure landing zones |
 | [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activities required for an enterprise-scale implementation before deployment |
 
-Partners are an important aspect of successful cloud adoption. Throughout the Cloud Adoption Framework guidance, we have added references to show the important role partners play & how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert MSP partners](https://www.microsoft.com/solution-providers/search?cacheId=9c2fed4f-f9e2-42fb-8966-4c565f08f11e), or [Advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
+Partners are an important aspect of successful cloud adoption. Throughout the cloud adoption framework guidance, we have added references to show the important role partners play and how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert MSP partners](https://www.microsoft.com/solution-providers/search?cacheId=9c2fed4f-f9e2-42fb-8966-4c565f08f11e), or [Advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
 
 ## May 15, 2020
 
@@ -59,7 +59,7 @@ We've brought all the cloud adoption tools and templates together in one place t
 
 | Article | Description |
 |----------|-------------|
-| [Tools and templates](../reference/tools-templates.md) | Find the tools, templates and assessments that can help you accelerate your cloud adoption journey. |
+| [Tools and templates](../reference/tools-templates.md) | Find the tools, templates, and assessments that can help you accelerate your cloud adoption journey. |
 
 ## April 4, 2020
 
@@ -69,8 +69,8 @@ Continued iteration of refinement to the Migrate methodology and the Ready metho
 
 | Article                                                                                                                 | Description                                                                                                                                                                                |
 |-------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Migrate methodology](../migrate/index.md)                       | These changes streamline the phases of the migration effort (assess workloads, deploy workloads, and release workloads). The changes also remove the details regarding the migration backlog. Removing those details and referencing plan, ready, and Adopt methodologies instead creates flexibility for various different cloud adoption programs to better align with the methodology.  |
-| Table of contents update                       | The table of contents for the Azure migration guide and process improvements have been updated to reflect the changes to the methodology.  |
+| [Migrate methodology](../migrate/index.md)                       | These changes streamline the phases of the migration effort (assess workloads, deploy workloads, and release workloads). The changes also remove the details regarding the migration backlog. Removing those details and referencing plan, ready, and Adopt methodologies instead creates flexibility for various different cloud adoption programs to better align with the methodology. |
+| Updated table of contents | The table of contents for the Azure migration guide and process improvements have been updated to reflect the changes to the methodology. |
 
 ### Ready updates
 
@@ -84,7 +84,7 @@ Continued iteration of refinement to the Migrate methodology and the Ready metho
 | [Improve landing zone operations](../ready/considerations/landing-zone-operations.md)                       | **New article:** List of best practices in the Manage methodology, with a transition to that modular approach to improving operations, reliability, and performance. |
 | [Improve landing zone governance](../ready/considerations/landing-zone-governance.md)                       | **New article:** List of best practices related to Govern methodology, with a transition to that modular approach to improving governance, cost management, and scale. |
 | [Start with enterprise scale](../ready/enterprise-scale/index.md)                       | **New article:** Demonstrate an approach that shows the differences in the process, when a customer starts with enterprise-scale landing zone templates. This article helps customers understand qualifiers that would support this decision. |
-| Table of contents update                       | The Table of contents was updated to reflect the new articles.  |
+| Table of contents update                       | The Table of contents was updated to reflect the new articles. |
 
 ## March 27, 2020
 

@@ -31,7 +31,7 @@ It's hard to maintain a strong security infrastructure when security controls ar
 
 ### Cloud-native identity policies
 
-Identity is becoming the new boundary control plane for security, taking over that role from the traditional network-centric perspective. Network perimeters have become increasingly porous and that perimeter defense cannot be as effective as it was before the advent of bring-your-own-device (BYOD) and cloud applications. Azure identity management and access control enable seamless, secure access to all your applications.
+Identity is becoming the new boundary control plane for security, taking over that role from the traditional network-centric perspective. Network perimeters have become increasingly porous and that perimeter defense cannot be as effective as it was before the advent of bring your own device (BYOD) and cloud applications. Azure identity management and access control enable seamless secure access to all your applications.
 
 A sample cloud-native policy for identity across cloud and on-premises directories, could include requirements like the following:
 
@@ -59,8 +59,8 @@ One of the keys to data protection in the cloud is accounting for the possible s
 
 - Data encryption controls are built into services from virtual machines to storage and SQL Database.
 - As data moves between clouds and customers, it can be protected using industry-standard encryption protocols.
-- Azure Key Vault enables users to safeguard and control cryptographic keys, passwords, connection strings and certificates used by cloud apps and services.
-- Azure Information Protection will help classify, label, and protect your sensitive data within apps.
+- Azure Key Vault enables users to safeguard and control cryptographic keys, passwords, connection strings and certificates used by cloud applications and services.
+- Azure Information Protection will help classify, label, and protect your sensitive data within applications.
 
 While these features are built into Azure, each of the above requires configuration and could increase costs. Alignment of each cloud-native feature with a [data classification strategy](../policy-compliance/data-classification.md) is highly suggested.
 
