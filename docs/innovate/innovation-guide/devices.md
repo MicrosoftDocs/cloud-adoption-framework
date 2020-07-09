@@ -123,7 +123,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 To create Azure Digital Twins:
 
 1. In the left pane, select **Create a resource**.
-2. Search for **digital twins**, and then select **Digital Twins**.
+2. Search for **digital twins**, then select **Digital Twins**.
 3. Select **Create** to start the deployment process.
 4. To review existing Digital Twins, select this button:
 
@@ -139,7 +139,7 @@ To create Azure Digital Twins:
 
 ## [Location intelligence](#tab/AzureMaps)
 
-In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners **TomTom** and **Moovit**. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
+In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
 **Data Service Preview:** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
 
@@ -186,7 +186,7 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ::: zone target="docs"
 
-- [Azure Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors)
+- [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview)
 
 ::: zone-end
 
@@ -217,7 +217,7 @@ The process of rendering is computationally intensive. There can be many frames 
 
 ### Learn more
 
-- [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering)
+- [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/overview/about)
 
 - [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)
 

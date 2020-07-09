@@ -38,7 +38,7 @@ The following are some common services that you can resize.
 
 ## Resize a Virtual Machine
 
-Azure Migrate performs a right-sizing analysis as part of its premigration assessment phase, and virtual machines migrated using this tool will likely already be sized based on your premigration requirements.
+Azure Migrate performs a right-sizing analysis as part of its pre-migration assessment phase, and virtual machines migrated using this tool will likely already be sized based on your pre-migration requirements.
 
 However, for virtual machines created or migrated using other methods, or in cases where your post-migration virtual machine requirements need adjustment, you may want to further refine your virtual machine sizing.
 
@@ -63,7 +63,7 @@ Resizing production virtual machines can cause service disruptions. Try to apply
 
 Partners can use the Partner Center to review the usage.
 
-- [Microsoft Azure VM sizing for maximum reservation usage](https://docs.microsoft.com/partner-center/azure-usage)
+- [Azure VM sizing for maximum reservation usage](https://docs.microsoft.com/partner-center/azure-usage)
 
 ::: zone-end
 
@@ -82,7 +82,7 @@ Partners can use the Partner Center to review the usage.
 
 ## Resize a SQL Database
 
-1. Go to either **SQL databases**, or **SQL servers** and then select the server.
+1. Go to either **SQL databases**, or **SQL servers**, then select the server.
 1. Select the desired database.
 1. Select **Configure** and the desired new service tier size.
 1. Select **Apply**.

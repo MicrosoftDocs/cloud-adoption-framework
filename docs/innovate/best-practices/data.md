@@ -50,7 +50,7 @@ In Azure, the following tools are commonly used to accelerate digital invention 
 - [SQL Server Integration Services](https://docs.microsoft.com/sql/integration-services)
 - [Azure Stack](https://docs.microsoft.com/azure-stack)
 - [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database)
-- [Microsoft Azure StorSimple](https://docs.microsoft.com/azure/storsimple)
+- [Azure StorSimple](https://docs.microsoft.com/azure/storsimple)
 - [Azure Files](https://docs.microsoft.com/azure/storage/files)
 - [Azure File Sync](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)
 - [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase)
