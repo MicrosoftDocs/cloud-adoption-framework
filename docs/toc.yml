@@ -1017,15 +1017,13 @@ items:
               href: https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-r-scaler-sparkr?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Analyze data with Azure Machine Learning
               href: https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-analyze-with-azure-machine-learning?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: AI applications
+          - name: AI apps and agents
             items:
-            - name: What are AI applications
+            - name: What are AI apps
               href: innovate\best-practices\ai-applications.md
             - name: Deploy predictions
               href: https://docs.microsoft.com/azure/machine-learning/how-to-deploy-and-where?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Conversational AI
-            items:
-            - name: What is conversational AI
+            - name: What are AI agents
               href: innovate\best-practices\conversational-ai.md
             - name: Azure Machine Learning from experiment to operational services 
               href: https://docs.microsoft.com/en-us/azure/machine-learning/studio/model-progression-experiment-to-web-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
