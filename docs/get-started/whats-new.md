@@ -24,21 +24,21 @@ Proper configuration of the cloud environment is often the first and most common
 | Article | Description |
 |---|---|
 | [Azure landing zones](../ready/landing-zone/index.md) | Azure landing zones create a common set of design areas and implementation options to accelerate environment creation aligned to the cloud adoption plan and cloud operating model. This new article defines Azure landing zones more clearly. |
-| [Azure landing zones - Design Areas](../ready/landing-zone/design-areas.md) | All Azure landing zones share a common set of 8 design areas. Before deploying any of the Azure landing zones, customers should consider each of these design to make critical decisions. |
-| [Azure landing zones - Implementation Options](../ready/landing-zone/implementation-options.md) | Choose the best Azure landing zone implementation option, depending on your cloud adoption plan and cloud operating model. |
+| [Azure landing zones: Design areas](../ready/landing-zone/design-areas.md) | All Azure landing zones share a common set of 8 design areas. Before deploying any of the Azure landing zones, customers should consider each of these design to make critical decisions. |
+| [Azure landing zones: Implementation options](../ready/landing-zone/implementation-options.md) | Choose the best Azure landing zone implementation option, depending on your cloud adoption plan and cloud operating model. |
 
-The existing CAF Blueprint definitions and CAF Terraform modules provide a starting point for Azure landing zone implementation. However, several customers have requested a richer implementation option that can meet the demands of enterprise-scale cloud adoption plans. This release adds **CAF Enterprise-scale** to the Azure landing zone implementation options to fill that need. The following lists a few of the articles to get you started with the CAF Enterprise-scale architecture and reference implementations.
+The existing CAF blueprint definitions and CAF Terraform modules provide a starting point for Azure landing zone implementation. However, some customers need a richer implementation option that can meet the demands of enterprise-scale cloud adoption plans. This release adds **CAF enterprise-scale** to the Azure landing zone implementation options to fill that need. The following lists a few of the articles to get you started with the CAF enterprise-scale architecture and reference implementations.
 
 | Article | Description |
 |---|---|
 | [Enterprise-scale overview](../ready/enterprise-scale/index.md) | Overview to enterprise-scale |
-| [Implement enterprise-scale landing zones](../ready/enterprise-scale/implementation.md) | Rapid implementation options and github examples |
+| [Implement enterprise-scale landing zones](../ready/enterprise-scale/implementation.md) | Rapid implementation options and GitHub examples |
 | [Enterprise-scale architecture](../ready/enterprise-scale/architecture.md) | Understand the architecture behind enterprise-scale |
 | [Enterprise-scale design principles](../ready/enterprise-scale/design-principles.md) | Understand the architectural design principles that guide decisions during implementation to evaluate if this approach fits your cloud operating model |
 | [Enterprise-scale design guideline](../ready/enterprise-scale/design-guidelines.md) | Evaluate the enterprise-scale guidelines for fulfilling the common design areas of Azure landing zones |
-| [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activites required for an enterprise-scale implementation before deployment |
+| [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activities required for an enterprise-scale implementation before deployment |
 
-Partners are an important aspect of successful cloud adoption. Throughout the cloud adoption framework guidance, we have added references to show the important role partners play & how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert MSP partners](https://www.microsoft.com/en-us/solution-providers/search?cacheId=9c2fed4f-f9e2-42fb-8966-4c565f08f11e), or [Advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
+Partners are an important aspect of successful cloud adoption. Throughout the cloud adoption framework guidance, we have added references to show the important role partners play and how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert MSP partners](https://www.microsoft.com/solution-providers/search?cacheId=9c2fed4f-f9e2-42fb-8966-4c565f08f11e), or [Advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
 
 ## May 15, 2020
 
@@ -59,7 +59,7 @@ We've brought all the cloud adoption tools and templates together in one place t
 
 | Article | Description |
 |----------|-------------|
-| [Tools and templates](../reference/tools-templates.md) | Find the tools, templates and assessments that can help you accelerate your cloud adoption journey. |
+| [Tools and templates](../reference/tools-templates.md) | Find the tools, templates, and assessments that can help you accelerate your cloud adoption journey. |
 
 ## April 4, 2020
 
@@ -69,8 +69,8 @@ Continued iteration of refinement to the Migrate methodology and the Ready metho
 
 | Article                                                                                                                 | Description                                                                                                                                                                                |
 |-------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Migrate methodology](../migrate/index.md)                       | These changes streamline the phases of the migration effort (assess workloads, deploy workloads, and release workloads). The changes also remove the details regarding the migration backlog. Removing those details and referencing plan, ready, and Adopt methodologies instead creates flexibility for various different cloud adoption programs to better align with the methodology.  |
-| Table of contents update                       | The table of contents for the Azure migration guide and process improvements have been updated to reflect the changes to the methodology.  |
+| [Migrate methodology](../migrate/index.md)                       | These changes streamline the phases of the migration effort (assess workloads, deploy workloads, and release workloads). The changes also remove the details regarding the migration backlog. Removing those details and referencing plan, ready, and Adopt methodologies instead creates flexibility for various different cloud adoption programs to better align with the methodology. |
+| Updated table of contents | The table of contents for the Azure migration guide and process improvements have been updated to reflect the changes to the methodology. |
 
 ### Ready updates
 
@@ -84,7 +84,7 @@ Continued iteration of refinement to the Migrate methodology and the Ready metho
 | [Improve landing zone operations](../ready/considerations/landing-zone-operations.md)                       | **New article:** List of best practices in the Manage methodology, with a transition to that modular approach to improving operations, reliability, and performance. |
 | [Improve landing zone governance](../ready/considerations/landing-zone-governance.md)                       | **New article:** List of best practices related to Govern methodology, with a transition to that modular approach to improving governance, cost management, and scale. |
 | [Start with enterprise scale](../ready/enterprise-scale/index.md)                       | **New article:** Demonstrate an approach that shows the differences in the process, when a customer starts with enterprise-scale landing zone templates. This article helps customers understand qualifiers that would support this decision. |
-| Table of contents update                       | The Table of contents was updated to reflect the new articles.  |
+| Table of contents update                       | The Table of contents was updated to reflect the new articles. |
 
 ## March 27, 2020
 

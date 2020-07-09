@@ -24,7 +24,7 @@ The policies and standards should:
 - Architectural assessment of current state and what is technically possible to design, implement, and enforce
 - Organizational culture and preferences
 - Industry best practices
-- Accountability of security risk assigned to appropriate business stakeholder(s) who are accountable for other risks and business outcomes.
+- Accountability of security risk assigned to appropriate business stakeholders who are accountable for other risks and business outcomes.
 
 **Security standards** define the processes and rules to support execution of the security policy.
 

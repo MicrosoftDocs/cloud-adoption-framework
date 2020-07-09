@@ -45,11 +45,11 @@ Azure Policy has a [built-in policy initiative](https://docs.microsoft.com/azure
 
 To assign the policies that described in the previous section:
 
-1. In the Azure portal, go to **Azure Policy** > **Assignments** > **Assign initiative**.
+1. In the Azure portal, go to **Policy** > **Assignments** > **Assign initiative**.
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale1.png)
 
-2. On the **Assign Policy** page, set the **Scope** by selecting the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
+2. On the **Assign policy** page, set the **Scope** by selecting the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
 
 3. Select the ellipsis (**...**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
 
@@ -61,7 +61,7 @@ To assign the policies that described in the previous section:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale3.png)
 
-6. Select the **Managed Identity location** check box. If this policy is of the type `[DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists)`, a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
+6. Select the **Managed Identity location** check box. If this policy is of the type [`DeployIfNotExists`](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
 
 7. Select **Assign**.
 

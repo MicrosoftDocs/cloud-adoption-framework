@@ -24,7 +24,7 @@ Before beginning any cloud migration, review the [Plan](../../../strategy/index.
 - [Get started: Accelerate migration](../../../get-started/migrate.md)
 - [Why are we moving to the cloud?](../../../strategy/motivations.md)
 
-## Definition of _done_
+## Definition of done
 
 Prerequisites are completed when the following are true:
 

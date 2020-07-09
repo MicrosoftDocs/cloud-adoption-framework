@@ -43,7 +43,7 @@ Answer the following questions about your workloads to help you make decisions b
 
 The following table illustrates a few common use scenarios and the recommended compute services for handling them:
 
-| **Scenario** | **Compute service** |
+| Scenario  | Compute service |
 | --- | --- |
 | I need to provision Linux and Windows virtual machines in seconds with the configurations of my choice. | [Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines) |
 | I need to achieve high availability by autoscaling to create thousands of VMs in minutes. | [Virtual machine scale sets](https://azure.microsoft.com/services/virtual-machine-scale-sets) |
@@ -73,6 +73,6 @@ Part of your compliance efforts might include controlling where your compute res
 
 When you prepare your landing zone environment, you can establish controls that limit what resources each user can deploy. The controls can help you manage costs and limit security risks, while still allowing developers and IT teams to deploy and configure resources that are needed to support your workloads.
 
-After you identify and document your landing zone's requirements, you can use [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) to control the compute resources that you allow users to create. Controls can take the form of [allowing or denying the creation of compute resource types](https://docs.microsoft.com/azure/governance/policy/samples/allowed-resource-types). For example, you might restrict users to creating only Azure App Service or Azure Functions resources. You also can use policy to control the allowable options when a resource is created, like [restricting what virtual machine SKUs can be provisioned](https://docs.microsoft.com/azure/governance/policy/samples/allowed-skus-storage) or [allowing only specific VM images](https://docs.microsoft.com/azure/governance/policy/samples/allowed-custom-images).
+After you identify and document your landing zone's requirements, you can use [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) to control the compute resources that you allow users to create. Controls can take the form of [allowing or denying the creation of compute resource types](https://docs.microsoft.com/azure/governance/policy/samples/allowed-resource-types). For example, you might restrict users to creating only Azure App Service or Azure Functions resources. You also can use policy to control the allowable options when a resource is created, like [restricting what virtual machine SKUs can be provisioned](https://docs.microsoft.com/azure/governance/policy/samples/built-in-policies#compute) or [allowing only specific VM images](https://docs.microsoft.com/azure/governance/policy/samples/allowed-custom-images).
 
 Policies can be scoped to resources, resource groups, subscriptions, and management groups. You can include your policies in [Azure blueprint](https://docs.microsoft.com/azure/governance/blueprints/overview) definitions and apply them repeatedly throughout your cloud estate.
