@@ -47,6 +47,8 @@ To support the preceding criteria, this list provides an example of a first proj
 
 - **Innovation motivations:** When innovation is the primary motivation, creation of a targeted dev/test environment can be a great first project.
 
+<!-- docsTest:ignore "data migration services" -->
+
 Additional examples of first adoption projects include:
 
 - **Business continuity and disaster recovery (BCDR):** Beyond Azure Site Recovery, you can implement multiple BCDR strategies as a first project.

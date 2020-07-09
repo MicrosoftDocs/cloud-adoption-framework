@@ -47,7 +47,7 @@ Greater detail on the specific workload is required to provide clear workload op
 | Requirement                          | Tool                 | Purpose                                                                                |
 | ------------------------------------ | -------------------- | -------------------------------------------------------------------------------------- |
 | Application monitoring               | Application Insights | Monitoring and diagnostics for apps                                                    |
-| Performance, availability, and usage | Application Insights | Advanced application monitoring with app dashboard, composite maps, usage, and tracing |
+| Performance, availability, and usage | Application Insights | Advanced application monitoring with the application dashboard, composite maps, usage, and tracing |
 
 ### Deploy Application Insights
 

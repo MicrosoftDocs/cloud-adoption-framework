@@ -45,7 +45,7 @@ Azure networking is composed of multiple products and services that provide diff
 
 <!-- markdownlint-disable MD033 -->
 
-| **Scenario** | **Networking product or service** |
+| Scenario | Networking product or service |
 | --- | --- |
 | I need the networking infrastructure to connect everything, from virtual machines to incoming VPN connections. | [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network) |
 | I need to balance inbound and outbound connections and requests to my applications or services. | [Azure Load Balancer](https://docs.microsoft.com/azure/load-balancer) |
@@ -69,8 +69,8 @@ After you identify the Azure networking services that you need to support your w
 
 The following table summarizes the primary scenarios that these patterns support:
 
-| **Scenario**                                                                                                                                                                                                                                                                                                                                                          | **Suggested network architecture**                                                  |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Scenario  | Suggested network architecture                                                  |
+| --- | --- |
 | All of the Azure-hosted workloads deployed to your landing zone will be entirely PaaS-based, won't require a virtual network, and aren't part of a wider cloud adoption effort that includes IaaS resources.                                                                                                                                                          | [PaaS-only](../../decision-guides/software-defined-network/paas-only.md)            |
 | Your Azure-hosted workloads will deploy IaaS-based resources like virtual machines or otherwise require a virtual network, but don't require connectivity to your on-premises environment.                                                                                                                                                                            | [Cloud-native](../../decision-guides/software-defined-network/cloud-native.md)      |
 | Your Azure-hosted workloads require limited access to on-premises resources, but you're required to treat cloud connections as untrusted.                                                                                                                                                                                                                             | [Cloud DMZ](../../decision-guides/software-defined-network/cloud-dmz.md)            |

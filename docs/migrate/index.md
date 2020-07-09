@@ -17,16 +17,12 @@ Any enterprise-scale [cloud adoption plan](../plan/index.md), will include workl
 
 To prepare you for this phase of the cloud adoption lifecycle, we recommend the following:
 
-<!-- markdownlint-disable MD033 -->
-
 | | |
 |---|---|
 | <br> ![1](../_images/icons/1.png) | <br> [Migrate your first workload](./azure-migration-guide/index.md): Use the Azure migration guide to become familiar with the Azure native tools and approach to migration.                                |
 | <br> ![2](../_images/icons/2.png) | <br> [Migration scenarios](./azure-best-practices/index.md): Use additional migration tools and approaches to act on other migration scenarios.                                |
 | <br> ![3](../_images/icons/3.png) | <br> [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices.                                |
 | <br> ![4](../_images/icons/4.png) | <br> [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration.                        |
-
-<!-- markdownlint-enable MD033 -->
 
 The migrate methodology and the steps above build on the following assumptions:
 
@@ -44,7 +40,7 @@ In a standard two-week long iteration, an experienced migration team can complet
 
 The following bullets provide an overview of the phases of this process (pictured above):
 
-- **Assess workloads:** Assess workloads to evaluate cost, modernization, and deployment tooling. This process focuses on validating or challenging the assumptions made during earlier discovery and assessments by looking more closely at rationalization options. This is also when user patterns and dependencies are studied more closely to ensure workloads will achieve technical success post migration.
+- **Assess workloads:** Assess workloads to evaluate cost, modernization, and deployment tooling. This process focuses on validating or challenging the assumptions made during earlier discovery and assessments by looking more closely at rationalization options. This is also when user patterns and dependencies are studied more closely to ensure workloads will achieve technical success after migration.
 - **Deploy workloads:** After workloads are assessed, the existing functionality of those workloads is replicated (or improved) in the cloud. This could involve a _lift and shift_ or _rehost_ to the cloud. But more commonly during this phase, many of the assets supporting these workloads will be modernized to capitalize on the benefits of the cloud.
 - **Release workloads:** Once functionality is replicated to the cloud, workloads can be tested, optimized, documented, and released for ongoing operations. Critical during this process, is the effort to review the migrated workloads and hand them off to governance, operations management, and security teams for ongoing support of those workloads.
 
