@@ -88,13 +88,13 @@ The following steps provide cost recommendations for assets (infrastructure, app
 
 Azure Cost Management and Billing can provide a more holistic view of spending habits, including detailed view of costs and spending trends over time. For large or complex migrations, this view may provide the insights needed to make broad sweeping cost management decisions.
 
-Prerequisites: the remainder of this tab assumes the reader has completed setup of Azure Cost Management and Billing during completion of the Azure setup guide. For more information on configuring Azure Cost Management and Billing, see [Manage costs and billing for Azure resources](../../ready/azure-setup-guide/manage-costs.md) in the Azure setup guide. Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
+**Prerequisites:** The remainder of this tab assumes the reader has completed setup of Azure Cost Management and Billing during completion of the Azure setup guide. For more information on configuring Azure Cost Management and Billing, see [Manage costs and billing for Azure resources](../../ready/azure-setup-guide/manage-costs.md) in the Azure setup guide. Once the data is populated, follow the next few steps to estimate monthly costs based on the data collected.
 
 The following steps will load Azure Cost Management and Billing cost analysis data for your subscriptions:
 
 1. Navigate to **Cost Management + Billing** in the portal. If you do not see **Cost Management + Billing** in the left pane, select **All services**. In the service menu pane, under **Monitoring and Management**, select **Cost Management + Billing**.
 2. In **Cost Management + Billing**, select **Cost Management** in the left navigation pane to begin analyzing and optimizing cloud costs.
-3. In cost management, select **Cost analysis**.
+3. In **Cost Management**, select **Cost analysis**.
     1. Use the **Scope** pill to switch to a different scope in cost analysis.
 
 This analysis will allow you to review total costs, budget (if available), and accumulated costs. Each calculation can be viewed by service, by resource, and over time. Most importantly, costs can be analyzed by tags. Properly naming and tagging assets (infrastructure, apps, and data) is the fundamental starting point of all sound governance and cost management processes. Proper tags allow for better management of costs and clearer impacts of performance and cost optimizations.
@@ -139,4 +139,4 @@ For lower priority background processes, batch offers a means of managing the ba
 
 ## Additional resources
 
-For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, guidance on the [Cost Management discipline](../../govern/cost-management/index.md) and the [incremental cost management improvements in the governance guide for complex enterprises](../../govern/guides/complex/cost-management-improvement.md).
+For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, guidance on the [Cost Management discipline](../../govern/cost-management/index.md) and the [Cost Management disciple improvements](../../govern/guides/complex/cost-management-improvement.md).
