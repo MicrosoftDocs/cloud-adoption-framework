@@ -97,7 +97,7 @@ The above links suggest that assumptions are acceptable and often encouraged dur
 
 Two equally weighted steps are required to successfully deliver [incremental rationalization](../../digital-estate/rationalize.md#incremental-rationalization). Both steps require data and insights into the environment. However, each approach respects the amount of time and granularity of detail required to be successful in a migration effort.
 
-- [Power of 10 release planning](../../digital-estate/rationalize.md#release-planning): During initial rationalization and release planning, only one of the [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md) is to be used in the assessment. Estimate and plan based on the rationalization option that best aligns with the overall motivations defined in the [cloud adoption strategy document](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- [Power of 10 release planning](../../digital-estate/rationalize.md#release-planning): During initial rationalization and release planning, only one of the [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md) is to be used in the assessment. Estimate and plan based on the rationalization option that best aligns with the overall motivations defined in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
 
 - **Detailed assessment of each workload:** The assumptions associated with Power of 10 release planning are acceptable enough to build a plan. But those same assumptions can cause significant issues, if not evaluated prior to migration.
 

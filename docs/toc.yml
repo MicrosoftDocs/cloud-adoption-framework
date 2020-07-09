@@ -1,4 +1,4 @@
-# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework
+# docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
 
 items:
   - name: Cloud Adoption Framework for Azure

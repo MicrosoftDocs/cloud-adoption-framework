@@ -29,11 +29,11 @@ We know that getting the right support at the right time will accelerate your mi
 
 # [Support plans](#tab/SupportPlans)
 
-## Microsoft support
+## Microsoft Support
 
 Microsoft offers a basic support plan to all Azure customers. You have 24x7 access to billing and subscription support, online self-help, documentation, whitepapers, and support forums.
 
-If you need help from Microsoft support while using Azure, follow these steps to create a support request:
+If you need help from Microsoft Support while using Azure, follow these steps to create a support request:
 
 ::: zone target="docs"
 
