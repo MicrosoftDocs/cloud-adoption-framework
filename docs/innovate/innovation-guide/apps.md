@@ -160,9 +160,15 @@ To configure or monitor an AKS service:
 
 ::: zone-end
 
-### Event-based solutions (TODO: Remove heading and promote Azure Functions?)
+### Serverless solutions
 
-#### Azure Functions
+Build cloud-native apps without provisioning and managing infrastructure by using a fully managed platform that handles scaling, availability, and performance for you. Benefits of Azure serverless solutions include:
+
+- Increasing developer velocity.
+- Boosting team performance.
+- Improving organizational impact.
+
+### Serverless solutions: Azure Functions
 
 Azure Functions provides a platform for running small units of code or functions in the cloud. Functions can be a way to start refactoring your code into a microservices architecture.
 
@@ -170,7 +176,7 @@ The Azure Functions runtime supports many languages, including C#, Java, JavaScr
 
 Another benefit of functions is that they can be triggered by different actions and events, like HTTPTriggers, TimerTriggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information about triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
 
-##### Action
+#### Action
 
 To configure or monitor Azure Functions deployments:
 
@@ -188,19 +194,11 @@ To configure or monitor Azure Functions deployments:
 
 ::: zone-end
 
-### Serverless solutions
-
-Build cloud-native apps without provisioning and managing infrastructure by using a fully managed platform that handles scaling, availability, and performance for you. Benefits of Azure serverless solutions include:
-
-- Increasing developer velocity.
-- Boosting team performance.
-- Improving organizational impact.
-
-#### Azure Logic Apps
+### Serverless solutions: Azure Logic Apps
 
 Integrate data and apps instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft Office 365, and Dropbox.
 
-**Action**
+#### Action
 
 To configure or monitor Azure logic apps:
 
@@ -218,11 +216,11 @@ To configure or monitor Azure logic apps:
 
 ::: zone-end
 
-#### Serverless API management
+### Serverless solutions: API management
 
 Publish, secure, transform, maintain, and monitor APIs by using Azure API Management, a fully managed service that offers a usage model designed and implemented to be natural fit for serverless applications.
 
-##### Action
+#### Action
 
 To configure or monitor API Management services:
 
@@ -244,7 +242,7 @@ To configure or monitor API Management services:
 
 For modernizing your application portfolio, Azure provides various container services to migrate your existing apps to containers and build cloud-native microservices apps so you can deliver value to your users faster. Use end-to-end developer and CI/CD tools to develop, update, and deploy your containerized applications. Manage containers at scale with a fully managed Kubernetes container orchestration service that integrates with Azure Active Directory. Wherever you are in your app modernization journey, accelerate your containerized application development while meeting your security requirements.
 
-**Azure Container Instances**
+### Containers: Azure Container Instances
 
 Run Docker containers on-demand in a managed serverless Azure environment. Azure Container Instances is a solution for any scenario that can operate in isolated containers without orchestration. When you run your workloads in Container Instances, you can focus on designing and building your applications instead of managing the infrastructure that runs them.
 
@@ -266,7 +264,7 @@ To configure or monitor container instances:
 
 ::: zone-end
 
-**Azure Red Hat OpenShift**
+### Containers: Azure Red Hat OpenShift
 
 Azure Red Hat OpenShift provides flexible self-service deployment of fully managed OpenShift clusters. Maintain regulatory compliance and focus on your application development while your master, infrastructure, and application nodes are patched, updated, and monitored by both Microsoft and Red Hat. Choose your own registry, networking, storage, or CI/CD solutions. Or start quickly by using built-in solutions with automated source code management, container and application builds, deployments, scaling, health management, and more.
 
