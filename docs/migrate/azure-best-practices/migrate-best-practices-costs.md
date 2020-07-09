@@ -206,7 +206,7 @@ Microsoft provides Azure Cost Management and Billing to help you track spending:
 - Tracks resource usage and manage cloud costs with a single, unified view.
 - Provides rich operational and financial insights to help you make informed decisions.
 
-In Cost Management and Billing, you can:
+With Cost Management and Billing, you can:
 
 - **Create a budget:** Create a budget for financial accountability.
   - You can account for the services you consume or subscribe to for a specific period (monthly, quarterly, annually) and a scope (subscriptions/resource groups). For example, you can create an Azure subscription budget for a monthly, quarterly, or annual period.

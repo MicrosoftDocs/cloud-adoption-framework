@@ -139,4 +139,4 @@ For lower priority background processes, batch offers a means of managing the ba
 
 ## Additional resources
 
-For a more comprehensive plan on cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, guidance on the [Cost Management discipline](../../govern/cost-management/index.md) and the [Cost Management disciple improvements](../../govern/guides/complex/cost-management-improvement.md).
+For a more comprehensive plan for cost management across larger numbers of assets (infrastructure, apps, and data), see the [Cloud Adoption Framework governance model](../../govern/guides/index.md). In particular, see the [Cost Management discipline](../../govern/cost-management/index.md) and [Cost Management discipline improvement](../../govern/guides/complex/cost-management-improvement.md).
