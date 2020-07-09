@@ -13,7 +13,7 @@ ms.date: 05/15/2020
 
 Cloud migration teams are the modern-day equivalent of technical implementation teams or project teams. But the nature of the cloud may require a more fluid team structure. Some migration teams focus exclusively on cloud migration, while others focus on innovations that take advantage of cloud technologies. Some include the broad technical expertise required to complete large adoption efforts, like a full datacenter migration, while others have a tighter technical focus and may move between projects to accomplish specific goals, for example, a team of data platform specialists who help convert SQL VMs to SQL PaaS instances.
 
-Regardless of the type or number of cloud migration teams, these team(s) generally provides subject matter expertise for IT, business analysis, or implementation partners.
+Regardless of the type or number of cloud migration teams, these teams generally provides subject matter expertise for IT, business analysis, or implementation partners.
 
 ## Prerequisites
 

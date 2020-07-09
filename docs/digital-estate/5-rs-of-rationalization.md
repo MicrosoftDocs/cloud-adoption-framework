@@ -118,7 +118,7 @@ In some scenarios, the delta that must be overcome to carry an application forwa
 Common drivers might include:
 
 - Accelerating innovation.
-- Building apps faster.
+- Building applications faster.
 - Reducing operational cost.
 
 Quantitative analysis factors:
