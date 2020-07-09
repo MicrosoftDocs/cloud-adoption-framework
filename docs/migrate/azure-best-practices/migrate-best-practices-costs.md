@@ -184,7 +184,7 @@ To do this, you can use Azure Cost Management and Billing APIs. Then, after aggr
 **Learn more:**
 
 - Read the [Azure Consumption APIs overview](https://docs.microsoft.com/azure/billing/billing-consumption-api-overview).
-- Learn about [connecting to Azure Consumption Insights in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-connect-azure-consumption-insights).
+- Learn how to [connect to Azure Consumption Insights in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-connect-azure-consumption-insights).
 - Learn how to [manage access to billing information for Azure using role-based access control (RBAC)](https://docs.microsoft.com/azure/billing/billing-manage-access).
 
 ## After migration
@@ -206,7 +206,7 @@ Microsoft provides Azure Cost Management and Billing to help you track spending:
 - Tracks resource usage and manage cloud costs with a single, unified view.
 - Provides rich operational and financial insights to help you make informed decisions.
 
-In cost management, you can:
+With Cost Management and Billing, you can:
 
 - **Create a budget:** Create a budget for financial accountability.
   - You can account for the services you consume or subscribe to for a specific period (monthly, quarterly, annually) and a scope (subscriptions/resource groups). For example, you can create an Azure subscription budget for a monthly, quarterly, or annual period.
@@ -214,16 +214,17 @@ In cost management, you can:
   - Email notifications can be sent when budget thresholds are reached.
   - You can export costs management data to Azure Storage, for analysis.
 
-    ![Cost Management budget](./media/migrate-best-practices-costs/budget.png)
-    _Azure Cost Management and Billing budget._
+  ![Cost Management budget](./media/migrate-best-practices-costs/budget.png)
+  _Azure Cost Management and Billing budget._
 
 - **Do a cost analysis:** Get a cost analysis to explore and analyze your organizational costs, to help you understand how costs are accrued, and identify spending trends.
   - Cost analysis is available to EA users.
   - You can view cost analysis data for various scopes, including by department, account, subscription or resource group.
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
 
-    ![Azure Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
-    _Figure: Azure Cost Management and Billing analysis._
+  ![Azure Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
+  _Figure: Azure Cost Management and Billing analysis._
+
 - **Get recommendations:** Get Advisor recommendations that show you how you can optimize and improve efficiency.
 
 **Learn more:**

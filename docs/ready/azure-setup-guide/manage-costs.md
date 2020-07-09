@@ -32,13 +32,13 @@ Azure Cost Management and Billing provides a few ways to help you predict and ma
 
 ### Predict and manage costs
 
-1. Go to [cost management + billing](https://portal.azure.com/#blade/Microsoft_Azure_Billing/ModernBillingMenuBlade/Overview).
+1. Go to [Cost Management + Billing](https://portal.azure.com/#blade/Microsoft_Azure_Billing/ModernBillingMenuBlade/Overview).
 1. Select **Cost Management**.
 1. Explore the features that help to analyze and optimize cloud costs.
 
 ### Manage invoices and payment methods
 
-1. Go to [cost management + billing](https://portal.azure.com/#blade/Microsoft_Azure_Billing/ModernBillingMenuBlade/Overview).
+1. Go to [Cost Management + Billing](https://portal.azure.com/#blade/Microsoft_Azure_Billing/ModernBillingMenuBlade/Overview).
 1. Select **Invoices** or **Payment methods** from the **Billing** section in the left pane.
 
 ## Billing and subscription support

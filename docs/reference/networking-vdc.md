@@ -190,7 +190,7 @@ Many organizations use a variation of the following groups to provide a major br
 
 The VDC is designed so that groups created for the central IT team, managing the hub, have corresponding groups at the workload level. In addition to managing hub resources only, the central IT team can control external access and top-level permissions on the subscription. Workload groups can also control resources and permissions of their virtual network independently from the central IT team.
 
-The virtual datacenter is partitioned to securely host multiple projects across different lines of business. All projects require different isolated environments (Dev, UAT, and production). Separate Azure subscriptions for each of these environments can provide natural isolation.
+The virtual datacenter is partitioned to securely host multiple projects across different lines of business. All projects require different isolated environments (dev, UAT, and production). Separate Azure subscriptions for each of these environments can provide natural isolation.
 
 ![5][5]
 

@@ -1,8 +1,8 @@
 ---
 title: "Get started: Build a cloud platform team"
 description: This guide helps the cloud platform team understand scope, deliverables, and the capabilities they provide.
-author: JanetCThomas
-ms.author: janet
+author: alexbuckgit
+ms.author: abuck
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual

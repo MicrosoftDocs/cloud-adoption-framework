@@ -1,5 +1,5 @@
 ---
-title: "Secure and Manage"
+title: "Secure and manage"
 description: Learn more about security and management methods that you can use to manage your environment after you migrate to Azure.
 author: matticusau
 ms.author: mlavery
@@ -47,13 +47,13 @@ Azure Service Health provides personalized guidance and support when issues in A
 
 Azure Service Health includes:
 
-- **Azure Status:** A global view of the health of Azure services.
-- **Service Health:** A personalized view of the health of your Azure services.
-- **Resource Health:** A deeper view of the health of the individual resources provisioned to you by your Azure services.
+- **Azure status:** A global view of the health of Azure services.
+- **Service health:** A personalized view of the health of your Azure services.
+- **Resource health:** A deeper view of the health of the individual resources provisioned to you by your Azure services.
 
 Combined, these experiences give you a comprehensive view of Azure health, at a level of detail relevant to you.
 
-### Access Service Health
+### Access service health
 
 1. Go to **Monitor** in the Azure portal.
 2. Select **Service Health**.
@@ -97,7 +97,7 @@ Azure Advisor is a personalized cloud consultant that helps you follow best prac
 
 ## [Azure Security Center](#tab/security)
 
-Azure Security Center is a unified infrastructure security management system that strengthens the security posture of your datacenters and provides advanced threat protection across your hybrid workloads in the cloud&mdash;whether they're in Azure or not&mdash;as well as on-premises.
+Azure Security Center is a unified infrastructure security management system that strengthens the security posture of your datacenters and provides Azure Advanced Threat Protection across your hybrid workloads in the cloud&mdash;whether they're in Azure or not&mdash;as well as on-premises.
 
 ### Access Azure Security Center
 
@@ -163,8 +163,8 @@ The following steps outline the process to use Site Recovery service to replicat
 
 1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
 1. In **Operations**, select **Disaster recovery**.
-1. In **Configure disaster recovery** > **Target region** select the target region to which you'll replicate.
-1. For this Quickstart, accept the other default settings.
+1. In **Configure disaster recovery** > **Target region**, select the target region to which you'll replicate.
+1. For this quickstart, accept the other default settings.
 1. Select **Enable replication**. This starts a job to enable replication for the VM.
 
 ::: zone target="chromeless"

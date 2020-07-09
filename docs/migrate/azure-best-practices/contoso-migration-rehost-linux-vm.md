@@ -285,6 +285,8 @@ The Contoso security team reviews the OSTICKETWEB and OSTICKETMYSQL VMs to deter
 
 For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
+<!-- docsTest:ignore "Quickstart: Set" -->
+
 ### BCDR
 
 For business continuity and disaster recovery, Contoso takes the following actions:

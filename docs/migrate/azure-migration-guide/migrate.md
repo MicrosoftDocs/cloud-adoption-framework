@@ -21,7 +21,7 @@ In this phase of the journey, you use the output of the Assess phase to initiate
 
 ## [Native migration tools](#tab/Tools)
 
-The following sections describe the native Azure tools available to perform or assist with migration. For information on choosing the right tools to support your migration efforts, see the [Cloud Adoption Framework's Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
+The following sections describe the native Azure tools available to perform or assist with migration. For information on choosing the right tools to support your migration efforts, see the [Cloud Adoption Framework's migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md).
 
 ### Azure Migrate
 
@@ -41,12 +41,12 @@ To perform a migration using Azure Migrate, follow these steps:
 1. Search for Azure Migrate under **All services**. Select **Azure Migrate** to continue.
 1. Select **Add a tool** to start your migration project.
 1. Select the subscription, resource group, and geography to host the migration.
-1. Select **Select assessment tool** > **Azure Migrate: Server Assessment** >  **Next**.
+1. Select **Select assessment tool** > **Azure Migrate: Server assessment** >  **Next**.
 1. Select **Review + add tools**, and verify the configuration. Select **Add tools** to initiate the job to create the migration project and register the selected solutions.
 
 #### Learn more
 
-- [Azure Migrate tutorial - Migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
+- [Azure Migrate tutorial - migrate physical or virtualized servers to Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-physical-virtual-machines)
 
 ### Azure Site Recovery
 
@@ -55,37 +55,37 @@ The Azure Site Recovery service can manage the migration of on-premises resource
 The following steps outline the process to use Site Recovery to migrate:
 
 > [!TIP]
-> Depending on your scenario, these steps may differ slightly. For more information, see the [Migrate on-premises machines to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure) article.
+> Depending on your scenario, these steps may differ slightly. For more information, see the [migrate on-premises machines to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure) article.
 
 #### Prepare Azure Site Recovery service
 
-1. In the Azure portal, select **+Create a resource > Management Tools > Backup and Site Recovery**.
+1. In the Azure portal, select **+ Create a resource** > **Management tools** > **Backup and Site Recovery**.
 1. If you haven't yet created a recovery vault, complete the wizard to create a **Recovery Services vault** resource.
-1. In the **Resource** menu, select **Site Recovery > Prepare Infrastructure > Protection goal**.
+1. In the **Resource** menu, select **Site Recovery** > **Prepare infrastructure** > **Protection goal**.
 1. In **Protection goal**, select what you want to migrate.
-    1. **VMware:** Select **To Azure > Yes, with VMware vSphere Hypervisor**.
-    1. **Physical machine:** Select **To Azure > Not virtualized/Other**.
-    1. **Hyper-V:** Select **To Azure > Yes, with Hyper-V**. If Hyper-V VMs are managed by VMM, select **Yes**.
+    1. **VMware:** Select **to Azure** > **Yes, with VMware vSphere hypervisor**.
+    1. **Physical machine:** Select **to Azure** > **Not virtualized/other**.
+    1. **Hyper-V:** Select **to Azure** > **Yes, with Hyper-V**. If Hyper-V VMs are managed by VMM, select **Yes**.
 
 #### Configure migration settings
 
 1. Set up the source environment as appropriate.
 1. Set up the target environment.
-    1. Select **Prepare infrastructure > Target**, then select the Azure subscription you want to use.
+    1. Select **prepare infrastructure** > **Target**, then select the Azure subscription you want to use.
     1. Specify the Resource Manager deployment model.
-    1. Site Recovery checks that you have one or more compatible Azure storage accounts and networks.
+    1. Site Recovery checks that you have one or more compatible Azure Storage accounts and networks.
 1. Set up a replication policy.
 1. Enable replication.
 1. Run a test migration (test failover).
 
 #### Migrate to Azure using failover
 
-1. In **Settings > Replicated items** select the machine > **Failover**.
-1. In **Failover** select a **Recovery Point** to fail over to. Select the latest recovery point.
+1. In **Settings** > **Replicated items**, select the machine > **Failover**.
+1. In **Failover**, select a **Recovery Point** to fail over to. Select the latest recovery point.
 1. Configure any encryption key settings as required.
-1. Select **Shut down machine before beginning failover**. Site Recovery will attempt to shut down virtual machines before triggering the failover. Failover continues even if shutdown fails. You can follow the failover progress on the Jobs page.
+1. Select **Shut down machine before beginning failover**. Site Recovery will attempt to shut down virtual machines before triggering the failover. Failover continues even if shutdown fails. You can follow the failover progress on the jobs page.
 1. Check that the Azure VM appears in Azure as expected.
-1. In **Replicated items**, right-click the VM and choose **Complete Migration**.
+1. In **Replicated items**, select and hold (or right-click) the VM and choose **Complete Migration**.
 1. Perform any post-migration steps as required (see relevant information in this guide).
 
 ::: zone target="chromeless"
@@ -122,8 +122,8 @@ If this is the first time using Azure Database Migration Service, you need to re
 
 After you register the resource provider, you can create an instance of Azure Database Migration Service.
 
-1. Select **+Create a resource** and search the marketplace for **Azure Database Migration Service**.
-1. Complete the **Create Migration Service** wizard, then select **Create**.
+1. Select **+ Create a resource** and search the marketplace for **Azure Database Migration Service**.
+1. Complete the Create Migration Service Wizard, then select **Create**.
 
 The service is now ready to migrate the supported source databases (for example, SQL Server, MySQL, PostgreSQL, or MongoDB).
 
@@ -154,7 +154,7 @@ Data Migration Assistant helps you upgrade to a modern data platform by detectin
 
 Start using Data Migration Assistant with these steps:
 
-1. Download and install Data Migration Assistant from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595).
+1. Download and install Data Migration Assistant from the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=53595).
 1. Create an assessment by selecting the **New (+)** icon, then select the **Assessment** project type.
 1. Set the source and target server type, then select **Create**.
 1. Configure the assessment options as required (recommend all defaults).
@@ -170,35 +170,35 @@ For more information, including detailed usage steps, see:
 - [Assess an enterprise and consolidate assessment reports with DMA](https://docs.microsoft.com/sql/dma/dma-consolidatereports)
 - [Analyze consolidated assessment reports created by Data Migration Assistant with Power BI](https://docs.microsoft.com/sql/dma/dma-powerbiassesreport)
 
-### SQL Server Migration Assistant
+### SQL Server migration assistant
 
-Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE. The general concept is to collect, assess, and then review with these tools, however, due to the variances in the process for each of the source systems we recommend reviewing the detailed [SQL Server Migration Assistant documentation](https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant).
+Microsoft SQL Server migration assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft access, DB2, MySQL, Oracle, and SAP ASE. The general concept is to collect, assess, and then review with these tools, however, due to the variances in the process for each of the source systems we recommend reviewing the detailed [SQL Server migration assistant documentation](https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant).
 
 For more information, see:
 
-- [SQL Server Migration Assistant overview](https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant)
+- [SQL Server migration assistant overview](https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant)
 
-### Database Experimentation Assistant
+### Database experimentation assistant
 
-Database Experimentation Assistant (DEA) is a new A/B testing solution for SQL Server upgrades. It will assist in evaluating a targeted version of SQL for a given workload. Customers who are upgrading from previous SQL Server versions (SQL Server 2005 and above) to any new version of the SQL Server can use these analysis metrics.
+Database experimentation assistant (dea) is a new a/B testing solution for SQL Server upgrades. It will assist in evaluating a targeted version of SQL for a given workload. Customers who are upgrading from previous SQL Server versions (SQL Server 2005 and above) to any new version of the SQL Server can use these analysis metrics.
 
-The Database Experimentation Assistant contains the following workflow activities:
+The database experimentation assistant contains the following workflow activities:
 
-- **Capture:** The first step of SQL Server A/B testing is to capture a trace on your source server. The source server usually is the production server.
-- **Replay:** The second step of SQL Server A/B testing is to replay the trace file that was captured to your target servers. Then, collect extensive traces from the replays for analysis.
+- **Capture:** The first step of SQL Server a/B testing is to capture a trace on your source server. The source server usually is the production server.
+- **Replay:** The second step of SQL Server a/B testing is to replay the trace file that was captured to your target servers. Then, collect extensive traces from the replays for analysis.
 - **Analysis:** The final step is to generate an analysis report by using the replay traces. The analysis report can help you gain insight about the performance implications of the proposed change.
 
 For more information, see:
 
-- [Overview of Database Experimentation Assistant](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-overview)
+- [Overview of database experimentation assistant](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-overview)
 
-### Azure Cosmos DB Data Migration Tool
+### Azure Cosmos DB data migration tool
 
-Azure Cosmos DB Data Migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The Data Migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
+Azure Cosmos DB data migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon dynamodb, and even Azure Cosmos DB SQL API collections. The data migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
 
 For more information, see:
 
-- [Azure Cosmos DB Data Migration Tool](https://docs.microsoft.com/azure/cosmos-db/import-data)
+- [Azure Cosmos DB data migration tool](https://docs.microsoft.com/azure/cosmos-db/import-data)
 
 <!-- markdownlint-disable MD025 -->
 
@@ -236,13 +236,13 @@ Movere is a discovery solution that provides the data and insights needed to pla
 
 [Learn more](https://www.movere.io)
 
-### Azure Cosmos DB Partners
+### Azure Cosmos DB partners
 
 You can choose from a variety of experienced systems integrator partners and tools to support your Azure Cosmos DB migrations for your NoSQL database requirements.
 
 [Learn more](https://docs.microsoft.com/azure/cosmos-db/partners-migration-cosmosdb#migration-tools)
 
-Visit the [Azure Migration Center](https://azure.microsoft.com/migration/support) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
+Visit the [Azure migration center](https://azure.microsoft.com/migration/support) to discover organizations offering ready-to-use partner technology solutions to fit your migration scenarios and learn more about additional third-party migration tools and support services.
 
 Visit the [Azure Database Migration Guide](https://datamigration.microsoft.com) to see a range of database migration options and step-by-step guidance with native and partners.
 
@@ -254,9 +254,9 @@ Azure DevOps is the suggested tool for project management during a cloud migrati
 
 Microsoft also offers the following project management tools, which can work together to provide broader capabilities:
 
-- [Microsoft Planner](https://tasks.office.com): A simple, visual way to organize teamwork.
-- [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and Portfolio Management, Resource Capacity Management, Financial Management, Timesheet and Schedule Management.
-- [Microsoft Teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates Planner and other tools to improve collaboration.
+- [Microsoft planner](https://tasks.office.com): A simple, visual way to organize teamwork.
+- [Microsoft Project](https://products.office.com/project/project-and-portfolio-management-software): Project and portfolio management, resource capacity management, financial management, timesheet and schedule management.
+- [Microsoft teams](https://products.office.com/microsoft-teams): Team collaboration and communication tool. Teams also integrates planner and other tools to improve collaboration.
 - [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops): The Cloud Adoption Framework planning template is not required to use Azure DevOps. You can use the service without the template to manage your infrastructure as code or use the work items and boards to perform project management. As you mature, your organization can take advantage of the CI/CD capabilities.
 
 These are not the only tools available. Many other third-party tools are widely used in the project management community.
@@ -265,7 +265,7 @@ These are not the only tools available. Many other third-party tools are widely 
 
 As you migrate into cloud technologies this presents a great opportunity to set up your organization for DevOps and CI/CD. Even if your organization is only managing infrastructure, as you begin to manage your infrastructure as code and use the industry patterns and practices for DevOps you can begin to increase your agility through CI/CD pipelines, therefore allowing you to adapt to change, growth, release, and even recovery scenarios faster.
 
-Azure DevOps provides all of the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops). For guided training, see [CI/CD with Azure DevOps - Quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
+Azure DevOps provides all of the required functionality and integration with Azure, on-premises environments, or even other clouds. For more information, see [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops). For guided training, see [CI/CD with Azure DevOps - quickstart](https://microsoft.github.io/PartsUnlimited/pandp/200.1x-PandP-CICDQuickstartwithVSTS.html).
 
 ### Suggested skills
 
@@ -277,4 +277,4 @@ Here is an example of a tailored learning path on Microsoft Learn that complemen
 
 ## [Cost management](#tab/ManageCost)
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [Optimize and transform](./optimize-and-transform.md)** section.
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [optimize and transform](./optimize-and-transform.md)** section.
