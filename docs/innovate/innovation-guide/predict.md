@@ -25,7 +25,7 @@ ms.localizationpriority: high
 
 As an innovator, your company has rich information about its business and its customers. Using artificial intelligence (AI), your company can make predictions about customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences. This article introduces a few approaches to innovating with AI. The following table can help you find the best solution, based on your implementation needs.
 
-| Service / solution category | Description                                                                                                                              | Required skills              |
+| Solution category | Description                                                                                                                              | Required skills              |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
 | Machine learning            | **Azure Machine Learning**</br>Build, deploy, and manage your own machine learning models.                                                       | Data scientist and developer |
 | AI apps and agents             | **Azure Cognitive Services**</br>Use domain-specific AI models for Vision, Speech, Language, and Decision that can be customized with your data.</br>,</br>**Azure Bot Service**</br>Improve customer engagement by adding bots to your applications and websites. | Developer                    |
