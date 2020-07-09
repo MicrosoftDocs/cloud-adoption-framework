@@ -128,7 +128,7 @@ This guide covers the following scenarios:
 - **Datacenter modernization:** Extend your datacenter or modernize your datacenter with cloud technology to ensure your business remains current and competitive.
 - **Application or service modernization:** Update your applications to take advantage of cloud-native functionality. Even if your initial objective is a rehost migration strategy, the ability to create plans for application or service review and potential modernization is a common process in any migration.
 
-#### Organizational alignment and stakeholders
+### Organizational alignment and stakeholders
 
 The complete list of stakeholders varies between migration projects. It is best to assume that you won't know all of the stakeholders at the start of migration planning, since stakeholders are often only identified during certain phases of the project. However, before starting any migration projects, identify key business leaders from finance, IT infrastructure, and application groups that have a stake in your organization's overall cloud migration efforts.
 
