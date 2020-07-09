@@ -15,7 +15,7 @@ An enterprise-scale landing zone is an environment that's been provisioned with 
 
 ## Approach
 
-The _start small_ approach outlined in the Ready methodology starts with a single landing zone and integrates richer enterprise features as the cloud adoption plan moves towards enterprise-scale. That approach creates a structured hands-on learning path aligned with the needs of each release or migration wave. With that approach, the landing zones might support production workloads, but they aren't truly enterprise-ready for the first several releases.
+The start small approach outlined in the Ready methodology starts with a single landing zone and integrates richer enterprise features as the cloud adoption plan moves towards enterprise-scale. That approach creates a structured hands-on learning path aligned with the needs of each release or migration wave. With that approach, the landing zones might support production workloads, but they aren't truly enterprise-ready for the first several releases.
 
 When customers need to get to enterprise readiness faster, a more complex architecture is required. A single landing zone can not deliver at enterprise scale in isolation. An enterprise-scale architecture requires an enterprise-ready environment, which hosts enterprise-ready landing zones. Both approaches follow the same principles and best practices. But the enterprise-scale approach applies multiple best practices via a single JSON file that uses a GitHub action and deployment pipeline to deploy all aspects of the environment including multiple landing zones. This highly opinionated implementation uses the same ARM template, Azure Policy, and RBAC tools used in the smaller blueprint approaches.
 

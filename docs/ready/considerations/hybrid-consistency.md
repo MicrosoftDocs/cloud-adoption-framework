@@ -1,5 +1,5 @@
 ---
-title: "Create hybrid cloud consistency"
+title: Create hybrid cloud consistency
 description: Use the Cloud Adoption Framework for Azure to learn how to define the approach to create hybrid cloud consistency.
 author: BrianBlanchard
 ms.author: brblanch
@@ -65,4 +65,4 @@ You can speed up Azure Stack initiatives by using the complete Azure ecosystem:
 - Azure ensures that most applications and services that are certified for Azure will work on Azure Stack. Several ISVs are extending their solutions to Azure Stack. These ISVs include Bitnami, Docker, kemp technologies, pivotal cloud foundry, Red Hat enterprise Linux, and suse Linux.
 - You can opt to have Azure Stack delivered and operated as a fully managed service. Several partners will have managed service offerings across Azure and Azure Stack shortly. These partners include tieto, Yourhosting, Revera, Pulsant, and ntt. These partners deliver managed services for Azure via the cloud solution provider (CSP) program. They're extending their offerings to include hybrid solutions.
 - As an example of a complete, fully managed hybrid cloud solution, Avanade delivers an all-in-one offer. It includes cloud transformation services, software, infrastructure, setup and configuration, and ongoing managed services. This way customers can consume Azure Stack just as they do with Azure today.
-- Providers can help accelerate application modernization initiatives by building end-to-end Azure solutions for customers. They bring deep Azure skill sets, domain and industry knowledge, and process expertise, such as DevOps. Every Azure Stack cloud is an opportunity for a provider to design the solution and lead and influence system deployment. They can also customize the included capabilities and deliver operational activities. Examples of providers include Avanade, DXC, Dell EMC Services, Infront Consulting Group, HPE Pointnext, and PWC (formerly PricewaterhouseCoopers).
+- Providers can help accelerate application modernization initiatives by building end-to-end Azure solutions for customers. They bring deep Azure skill sets, domain and industry knowledge, and process expertise such as DevOps. Every Azure Stack cloud is an opportunity for a provider to design the solution and lead and influence system deployment. They can also customize the included capabilities and deliver operational activities. Examples of providers include Avanade, DXC, Dell EMC Services, Infront Consulting Group, HPE Pointnext, and PWC (formerly PricewaterhouseCoopers).
