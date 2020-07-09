@@ -305,7 +305,7 @@ They create the pipeline:
     ![Database connections](./media/contoso-migration-rebuild/back-pipe1.png)
     _Figure 28: Database connections._
 
-2. They open Azure DevOps and in the SmartHotel360 project, they select **+New Pipeline** in **Releases**.
+2. They open Azure DevOps and, in the SmartHotel360 project, they select **+ New Pipeline** in **Releases**.
 
     ![New pipeline](./media/contoso-migration-rebuild/back-pipe2.png)
     _Figure 29: The new pipeline.
@@ -529,7 +529,7 @@ Now Contoso admins configure the web app to use Contoso resources.
 
 Contoso admins can now publish the website.
 
-1. They open Azure DevOps, and in the `SmartHotelFrontend` project in **Builds and Releases**, they select **+New Pipeline**.
+1. They open Azure DevOps, and in the `SmartHotelFrontend` project in **Builds and Releases**, they select **+ New Pipeline**.
 2. They select **Azure DevOps Git** as a source.
 3. They select the **ASP.NET Core** template.
 4. They review the pipeline and check that **Publish Web Projects** and **Zip Published Projects** are selected.
@@ -560,7 +560,7 @@ Contoso admins can now publish the website.
     _Figure 65: Enabling continuous deployment._
 
 11. In **Environment**, they select **1 job, 1 task** under **Staging**.
-12. After selecting the subscription and app name, they open the **Deploy Azure App Service** task. The deployment is configured to use the **staging** deployment slot. This automatically builds code for review and approval in this slot.
+12. After selecting the subscription and web app name, they open the **Deploy Azure App Service** task. The deployment is configured to use the **staging** deployment slot. This automatically builds code for review and approval in this slot.
 
      ![Slot](./media/contoso-migration-rebuild/vsts-publish-front7.png)
     _Figure 66: Using a slot._
@@ -571,7 +571,7 @@ Contoso admins can now publish the website.
     _Figure 67: Adding a new stage._
 
 14. They select **Azure App Service deployment with slot**, and name the environment **Prod**.
-15. They select **1 job, 2 tasks**, then select the subscription, app service name, and the **staging** slot.
+15. They select **1 job, 2 tasks**, then select the subscription, the app service name, and the **staging** slot.
 
     ![Environment name](./media/contoso-migration-rebuild/vsts-publish-front10.png)
     _Figure 68: An environment name._

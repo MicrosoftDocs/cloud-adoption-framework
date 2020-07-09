@@ -43,10 +43,10 @@ Begin a server migration assessment using Azure Migrate via these steps:
 1. In **Discover, assess and migrate servers**, select **Add tools**.
 1. In **Migrate project**, select your Azure subscription, then create a resource group if you don't have one.
 1. In **Project Details**, specify the project name and geography where you want to create the project, then select **Next**.
-1. In **Select assessment tool**, select **Skip adding an assessment tool for now > Next**.
-1. In **Select migration tool**, select **Azure Migrate: Server Migration > Next**.
+1. In **Select assessment tool**, select **Skip adding an assessment tool for now** > **Next**.
+1. In **Select migration tool**, select **Azure Migrate: Server Migration** > **Next**.
 1. In **Review + add tools**, review the settings, then select **Add tools**.
-1. After adding the tool, it appears in **Azure Migrate project > Servers > Migration tools**.
+1. After adding the tool, it appears in **Azure Migrate project** > **Servers** > **Migration tools**.
 
 ::: zone target="chromeless"
 
@@ -68,7 +68,7 @@ Begin a server migration assessment using Azure Migrate via these steps:
 
 Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services. With Service Map, you can view your servers in the way that you think of them: as interconnected systems that deliver critical services. Service Map shows connections between servers, processes, inbound and outbound connection latency, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.
 
-Azure Migrate uses Service Map to enhance the reporting capabilities and dependencies across the environment. For full details of this integration, see [Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization). If you use the Azure Migration service, then no additional steps are required to configure and obtain the benefits of Service Map. The following instructions are provided for your reference if you'd like to use Service Map for other purposes or projects.
+Azure Migrate uses Service Map to enhance the reporting capabilities and dependencies across the environment. For full details of this integration, see [Dependency visualization](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization). If you use the Azure migration service, then no additional steps are required to configure and obtain the benefits of Service Map. The following instructions are provided for your reference if you'd like to use Service Map for other purposes or projects.
 
 ### Enable dependency visualization using Service Map
 
@@ -97,7 +97,7 @@ The above links suggest that assumptions are acceptable and often encouraged dur
 
 Two equally weighted steps are required to successfully deliver [incremental rationalization](../../digital-estate/rationalize.md#incremental-rationalization). Both steps require data and insights into the environment. However, each approach respects the amount of time and granularity of detail required to be successful in a migration effort.
 
-- [Power of 10 release planning](../../digital-estate/rationalize.md#release-planning): During initial rationalization and release planning, only one of the [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md) is to be used in the assessment. Estimate and plan based on the rationalization option that best aligns with the overall motivations defined in the [Cloud Adoption Strategy document](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- [Power of 10 release planning](../../digital-estate/rationalize.md#release-planning): During initial rationalization and release planning, only one of the [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md) is to be used in the assessment. Estimate and plan based on the rationalization option that best aligns with the overall motivations defined in the [cloud adoption strategy document](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
 
 - **Detailed assessment of each workload:** The assumptions associated with Power of 10 release planning are acceptable enough to build a plan. But those same assumptions can cause significant issues, if not evaluated prior to migration.
 

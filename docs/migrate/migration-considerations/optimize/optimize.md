@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Benchmark and resize cloud assets
 
-Monitoring usage and spending is critically important for cloud infrastructures. Organizations pay for the resources they consume over time. When usage exceeds agreement thresholds, unexpected cost overages can quickly accumulate. Cost Management reports monitor spending to analyze and track cloud usage, costs, and trends. Using overtime reports, detect anomalies that differ from normal trends. Inefficiencies in cloud deployment are visible in optimization reports. Note inefficiencies in cost-analysis reports.
+Monitoring usage and spending is critically important for cloud infrastructures. Organizations pay for the resources they consume over time. When usage exceeds agreement thresholds, unexpected cost overages can quickly accumulate. Cost management reports monitor spending to analyze and track cloud usage, costs, and trends. Using overtime reports, detect anomalies that differ from normal trends. Inefficiencies in cloud deployment are visible in optimization reports. Note inefficiencies in cost-analysis reports.
 
 In the traditional on-premises models of IT, requisition of IT systems is costly and time consuming. The processes often require lengthy capital expenditure review cycles and may even require an annual planning process. As such, it is common practice to buy more than is needed. It is equally common for IT administrators to then overprovision assets in preparation for anticipated future demands.
 
@@ -26,15 +26,15 @@ Should an asset be optimized during or after the migration? The simple answer is
 
 During the migration, use educated guesses and experiment with sizing. However, true optimization of resources requires data based on actual performance in a cloud environment. For true optimization to occur, the IT team must first implement approaches to monitoring performance and resource utilization.
 
-## Benchmark and optimize with Azure Cost Management
+## Benchmark and optimize with Azure Cost Management and Billing
 
-[Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) manages cloud spend with transparency and accuracy. This service monitors, benchmarks, allocates, and optimizes cloud costs.
+[Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) manages cloud spend with transparency and accuracy. This service monitors, benchmarks, allocates, and optimizes cloud costs.
 
-Historical data can help manage costs by analyzing usage and costs over time to identify trends, which are then used to forecast future spending. Cost Management also includes useful projected cost reports. Cost allocation manages costs by analyzing costs based on tagging policies. Use cost allocation for showback/chargeback to show resource utilization and associated costs to influence consumption behaviors or charge tenant customers. Access control helps manage costs by ensuring that users and teams access only the Cost Management data that they need. Alerting helps manage costs through automatic notification when unusual spending or overspending occurs. Alerts can also notify other stakeholders automatically for spending anomalies and overspending risks. Various reports support alerts based on budget and cost thresholds.
+Historical data can help manage costs by analyzing usage and costs over time to identify trends, which are then used to forecast future spending. Cost management also includes useful projected cost reports. Cost allocation manages costs by analyzing costs based on tagging policies. Use cost allocation for showback/chargeback to show resource utilization and associated costs to influence consumption behaviors or charge tenant customers. Access control helps manage costs by ensuring that users and teams access only the cost management data that they need. Alerting helps manage costs through automatic notification when unusual spending or overspending occurs. Alerts can also notify other stakeholders automatically for spending anomalies and overspending risks. Various reports support alerts based on budget and cost thresholds.
 
 ## Improve efficiency
 
-Determine optimal VM usage, identify idle VMs, or remove idle VMs and unattached disks with Cost Management. Using information in sizing optimization and inefficiency reports, create a plan to downsize or remove idle VMs.
+Determine optimal VM usage, identify idle VMs, or remove idle VMs and unattached disks with cost management. Using information in sizing optimization and inefficiency reports, create a plan to downsize or remove idle VMs.
 
 ## Next steps
 

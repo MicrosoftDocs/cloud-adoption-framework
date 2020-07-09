@@ -24,7 +24,9 @@ To prepare you for this phase of the cloud adoption lifecycle, we recommend the 
 | <br> ![3](../_images/icons/3.png) | <br> [Best practices](./azure-best-practices/index.md): Address common migration needs through the application of consistent best practices.                                |
 | <br> ![4](../_images/icons/4.png) | <br> [Process improvements](./migration-considerations/index.md): Migration is a process heavy activity. As migration efforts scale, use these process improvements to evaluate and mature various aspects of migration.                        |
 
-The migrate methodology and the steps above build on the following assumptions:
+The Migrate methodology and the steps above build on the following assumptions:
+
+<!-- docsTest:ignore "plan, ready, and Adopt methodologies" -->
 
 - The methodology governing migration sprints fits within migration waves or releases, which are defined using the Plan, Ready, and Adopt methodologies. Within each migration sprint, a batch of workloads is migrated to the cloud.
 - Before migrating workloads, at least one [landing zone](../ready/index.md) has been identified, configured, and deployed to meet the needs of the near-term cloud adoption plan.
@@ -32,7 +34,7 @@ The migrate methodology and the steps above build on the following assumptions:
 
 ## Migration effort
 
-The effort required to migrate workloads generally falls into three types of effort (or phases) for each workload: Assess workloads, Deploy workloads, and Release workloads. This section of the Cloud Adoption Framework teaches readers how to maximize the return from each phase required to migrate a workload to production.
+The effort required to migrate workloads generally falls into three types of effort (or phases) for each workload: assess workloads, deploy workloads, and release workloads. This section of the Cloud Adoption Framework teaches readers how to maximize the return from each phase required to migrate a workload to production.
 
 In a standard two-week long iteration, an experienced migration team can complete this process for 2-5 workloads of low-medium complexity. More complex workloads, such as SAP, may take several two-week iterations to complete all three phases of migration effort for a single workload. Experience and complexity both have a significant impact on timelines and migration velocity.
 

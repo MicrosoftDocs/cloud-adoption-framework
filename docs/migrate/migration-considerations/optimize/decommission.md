@@ -21,7 +21,7 @@ When cost savings are the primary motivation for a migration, decommissioning is
 
 After a migrated workload is promoted, the assets to be retired should continue to be monitored to validate that no additional production traffic is being routed to the wrong assets.
 
-## Testing windows and dependency validation
+## testing windows and dependency validation
 
 Even with the best planning, production workloads may still contain dependencies on assets that are presumed retired. In such cases, turning off a retired asset could cause unexpected system failures. As such, the termination of any assets should be treated with the same level of rigor as a system maintenance activity. Proper testing and outage windows should be established to facilitate the termination of the resource.
 

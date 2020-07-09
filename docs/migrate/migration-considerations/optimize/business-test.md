@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Guidance for business testing (UAT) during migration
+# Guidance for business testing (uat) during migration
 
 Traditionally seen as an IT function, user acceptance testing during a business transformation can be orchestrated solely by IT. However, this function is often most effectively executed as a business function. IT then supports this business activity by facilitating the testing, developing testing plans, and automating tests when possible. Although IT can often serve as a surrogate for testing, there is no replacement for firsthand observation of real users attempting to take advantage of a new solution in the context of a real or replicated business process.
 

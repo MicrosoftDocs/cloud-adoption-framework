@@ -17,11 +17,11 @@ Traditionally, IT has overseen the release of new workloads. During a major tran
 
 User adoption plans focus on how users will adopt a new technology or change to a given technology. This approach is time tested for introducing users to new tools. In a typical user adoption plan, IT focuses on the installation, configuration, maintenance, and training associated with the technical changes being introduced to the business environment.
 
-Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason Matrix, illustrated in the figure below, represents the drivers behind those themes across a spectrum of adoption types.
+Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason matrix, illustrated in the figure below, represents the drivers behind those themes across a spectrum of adoption types.
 
 ![Eason Matrix of user adoption concerns](../../../_images/migrate/eason-matrix.jpg)
 
-*Eason Matrix of user adoption types.*
+*Eason matrix of user adoption types.*
 
 These themes are often based on the assumption that introduction of new solutions to users should focus largely on risk control and facilitation of change. Additionally, IT has focused mostly on risk from the technology change and facilitation of that change.
 
@@ -57,10 +57,10 @@ The business change plan varies from company to company. The goal of these quest
 After business change is documented and planned, [business testing](./business-test.md) can begin.
 
 > [!div class="nextstepaction"]
-> [Guidance for business testing (UAT) during migration](./business-test.md)
+> [Guidance for business testing (uat) during migration](./business-test.md)
 
 ## References
 
 <!-- cSpell:ignore Eason -->
 
-- Eason, K. (1988) _Information technology and organizational change_, New York: Taylor and Francis.
+- Eason, k. (1988) _Information technology and organizational change_, New York: taylor and francis.

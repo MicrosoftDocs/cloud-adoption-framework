@@ -19,7 +19,7 @@ Ensure business, culture, and technical readiness prior to beginning an iterativ
 
 ## Review business drivers
 
-Before beginning any cloud migration, review the [Plan](../../../strategy/index.md) and [Ready](../../../ready/index.md) guidance in the Cloud Adoption Framework to ensure your organization is prepared for cloud adoption and migration processes. In particular, review the business requirements and expected outcomes driving the migration:
+Before beginning any cloud migration, review the [plan](../../../strategy/index.md) and [ready](../../../ready/index.md) guidance in the Cloud Adoption Framework to ensure your organization is prepared for cloud adoption and migration processes. In particular, review the business requirements and expected outcomes driving the migration:
 
 - [Get started: Accelerate migration](../../../get-started/migrate.md)
 - [Why are we moving to the cloud?](../../../strategy/motivations.md)
@@ -60,7 +60,7 @@ The remaining articles in this series help with the execution of each.
 
 ## Next steps
 
-With a general understanding of the prerequisites, you are ready to address the first prerequisite [early migration decisions](./decisions.md).
+With a general understanding of the prerequisites, you're ready to address the first prerequisite [early migration decisions](./decisions.md).
 
 > [!div class="nextstepaction"]
 > [Early migration decisions](./decisions.md)

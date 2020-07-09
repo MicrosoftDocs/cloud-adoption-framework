@@ -138,7 +138,7 @@ Azure provides a couple of solutions:
 
 - Read the [Azure Key Vault overview](https://docs.microsoft.com/azure/key-vault/general/overview).
 - Learn about [Web Application Firewall](https://docs.microsoft.com/azure/application-gateway/waf-overview).
-- Read an [introduction to App Service Environments](https://docs.microsoft.com/azure/app-service/environment/intro).
+- Read an [introduction to App Service environments](https://docs.microsoft.com/azure/app-service/environment/intro).
 - Learn how to [configure a web app to read secrets from Key Vault](https://docs.microsoft.com/azure/key-vault/tutorial-web-application-keyvault).
 - Learn about [Web Application Firewall](https://docs.microsoft.com/azure/application-gateway/waf-overview).
 
@@ -422,7 +422,7 @@ Azure managed disks simplify disk management for Azure Virtual Machines by manag
 
 You might have moved your workloads to Azure for its immense scaling capabilities. But moving your workload doesn't mean that Azure will automatically implement scaling without your input. As an example:
 
-- If your marketing organization pushes a new tv advertisement that drives 300% more traffic, this could cause site availability issues. Your newly migrated workload might hit assigned limits and crash.
+- If your marketing organization pushes a new tv advertisement that drives 300 percent more traffic, this could cause site availability issues. Your newly migrated workload might hit assigned limits and crash.
 - Another example might be a distributed denial-of-service (DDoS) attack on your migrated workload. In this case you might not want to scale, but to prevent the source of the attacks from reaching your resources.
 
 These two cases have different resolutions, but for both you need an insight into what's happening with usage and performance monitoring.

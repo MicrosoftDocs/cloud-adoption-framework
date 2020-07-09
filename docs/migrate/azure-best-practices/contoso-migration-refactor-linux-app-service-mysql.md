@@ -115,15 +115,15 @@ Contoso admins provision two web apps (one in each region) using Azure App Servi
 1. They create a web app resource (`osticket-eus2`) in the primary region (`East US 2`) via the Azure Marketplace.
 2. They put the resource in the production resource group `ContosoRG`.
 
-    ![Azure web app](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app1.png)
+    ![Create a web app](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app1.png)
 
-3. They create a new App Service plan (`APP-SVP-EUS2`) in the primary region, using the standard size.
+3. They create an App Service plan (`APP-SVP-EUS2`) in the primary region, using the standard size.
 
-     ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app2.png)
+     ![Create an App Service plan](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app2.png)
 
 4. They select a Linux OS with PHP 7.0 runtime stack, which is a docker container.
 
-    ![Azure App](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app3.png)
+    ![Create a web app](./media/contoso-migration-refactor-linux-app-service-mysql/azure-app3.png)
 
 5. They create a second web app (`osticket-cus`) and Azure App Service plan for `Central US`.
 
@@ -354,12 +354,12 @@ As the final step in the migration process, Contoso admins configure the web app
 
 Finally, they set up automatic scaling for the application. This ensures that as agents use the application, the application instances increase and decrease according to business needs.
 
-1. In app service `APP-SRV-EUS2`, they open **Scale Unit**.
-2. They configure a new autoscale setting with a single rule that increases the instance count by one when the CPU percentage for the current instance is above 70% for 10 minutes.
+1. In App Service `APP-SVP-EUS2`, they open **Scale Unit**.
+2. They configure a new autoscale setting with a single rule that increases the instance count by one when the CPU percentage for the current instance is above 70 percent for 10 minutes.
 
     ![Autoscale](./media/contoso-migration-refactor-linux-app-service-mysql/autoscale1.png)
 
-3. They configure the same setting on `APP-SRV-CUS` to ensure that the same behavior applies if the application fails over to the secondary region. The only difference is that they set the default instance to 1 since this is for failovers only.
+3. They configure the same setting on `APP-SVP-CUS` to ensure that the same behavior applies if the application fails over to the secondary region. The only difference is that they set the default instance to 1 since this is for failovers only.
 
    ![Autoscale](./media/contoso-migration-refactor-linux-app-service-mysql/autoscale2.png)
 
