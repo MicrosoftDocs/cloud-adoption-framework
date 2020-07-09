@@ -49,7 +49,6 @@ Here are a few features you'll find:
 ### Learn more
 
 - [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-
 - [Azure IoT Hub Device Provisioning Service (DPS)](https://docs.microsoft.com/azure/iot-dps)
 
 ::: zone-end
@@ -176,6 +175,8 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ::: zone target="docs"
 
+### Learn more
+
 - [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview)
 
 ::: zone-end
@@ -208,7 +209,6 @@ The process of rendering is computationally intensive. There can be many frames 
 ### Learn more
 
 - [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/overview/about)
-
 - [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)
 
 ::: zone-end

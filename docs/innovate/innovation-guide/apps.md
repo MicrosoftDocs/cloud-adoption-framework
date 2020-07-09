@@ -105,7 +105,7 @@ As mobile apps continue to grow in popularity, the need for a platform that can 
 
 Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your app across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](https://docs.microsoft.com/appcenter/push).
 
-#### Learn more
+### Learn more
 
 - [App Service overview](https://docs.microsoft.com/azure/app-service/overview)
 - [Web App for Containers: Run a custom container](https://docs.microsoft.com/azure/app-service/containers/quickstart-docker)
@@ -270,7 +270,7 @@ To configure or monitor container instances:
 
 Azure Red Hat OpenShift provides flexible self-service deployment of fully managed OpenShift clusters. Maintain regulatory compliance and focus on your application development while your master, infrastructure, and application nodes are patched, updated, and monitored by both Microsoft and Red Hat. Choose your own registry, networking, storage, or CI/CD solutions. Or start quickly by using built-in solutions with automated source code management, container and application builds, deployments, scaling, health management, and more.
 
-#### Learn more
+### Learn more
 
 - [Azure Red Hat OpenShift](https://docs.microsoft.com/azure/openshift/intro-openshift)
 
@@ -344,7 +344,7 @@ To configure or monitor Azure CDN profiles:
 
 ::: zone-end
 
-#### Learn more
+### Learn more
 
 - [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview)
 - [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager)
