@@ -117,7 +117,7 @@ Enterprises use GitHub to host source code and Azure Pipelines for continuous in
 
 ## Characteristics of innovative applications
 
-With Azure, your developers can build cloud-native applications by using canonical modern application patterns. Azure supports and provides all the building blocks that your developer teams need to build applications that use containers, managed databases, artificial intelligence, and serverless capabilities.
+With Azure, your developers can build cloud-native applications by using canonical modern application patterns. Azure supports and provides all the building blocks that your developer teams need to build applications that use containers, managed databases, , and serverless capabilities.
 
 ## Scale innovation
 

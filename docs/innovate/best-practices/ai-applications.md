@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# What are AI applications
+# What are AI applications?
 
-On Azure, you can build intelligent apps faster using the tools and technologies of your choice and artificial intelligence (AI) that’s already built-in.
+On Azure, you can build intelligent apps faster using the tools and technologies of your choice and AI that’s already built-in.
 
 - **Easily build and deploy anywhere**: Use your team’s existing skill sets and tools you know and love to build intelligent apps and deploy without a change in code. Build once, deploy anywhere: in the cloud, on premises, and to edge devices, with the confidence of global distribution to more data centers than any other provider.
 
@@ -84,7 +84,7 @@ To understand privacy and data management, go to the [Trust Center](https://serv
 
 ## How are Cognitive Services and Azure Machine Learning (AML) similar?
 
-Both have the end-goal of applying artificial intelligence (AI) to enhance business operations, though how each provides this in the respective offerings is different.
+Both have the end-goal of applying AI to enhance business operations, though how each provides this in the respective offerings is different.
 Generally, the audiences are different:
 
 - Cognitive Services are for developers without machine-learning experience.

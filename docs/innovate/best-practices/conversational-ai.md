@@ -90,7 +90,7 @@ There are common patterns used for implementation of a Conversational AI Applica
 
 The design elements to knowledge bots is available in [Design Knowledge Bots](https://docs.microsoft.com/azure/bot-service/bot-service-design-pattern-knowledge-base?view=azure-bot-service-4.0)
 
-- Handoff to Human: Regardless of how much artificial intelligence a bot possesses, there may still be times when it needs to hand off the conversation to a human being. In such cases the bot should recognize when it needs to hand off and provide the user with a smooth transition.
+- Handoff to Human: Regardless of how much AI a bot possesses, there may still be times when it needs to hand off the conversation to a human being. In such cases the bot should recognize when it needs to hand off and provide the user with a smooth transition.
 
 The patterns to hand off are available in [Transition conversations from bot to human](https://docs.microsoft.com/azure/bot-service/bot-service-design-pattern-handoff-human?view=azure-bot-service-4.0)
 

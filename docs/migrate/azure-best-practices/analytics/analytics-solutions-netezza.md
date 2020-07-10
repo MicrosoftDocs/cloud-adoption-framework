@@ -62,7 +62,7 @@ The recommended approach for this is to initially move the existing data model a
 
 It makes sense to automate and orchestrate the migration process by making use of the capabilities in the Azure environment. This approach also minimizes the impact on the existing Netezza environment (which may already be running close to full capacity).
 
-Azure Data Factory is a cloud-based data integration service that allows creation of data-driven workflows in the cloud for orchestrating and automating data movement and data transformation. Using Azure Data Factory, you can create and schedule datadriven workflows (called pipelines) that can ingest data from disparate data stores. It can process and transform the data by using compute services such as Azure HDInsight Hadoop, Spark, Azure Data Lake Analytics, and Azure Machine Learning.
+Azure Data Factory is a cloud-based data integration service that allows creation of data-driven workflows in the cloud for orchestrating and automating data movement and data transformation. Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores. It can process and transform the data by using compute services such as Azure HDInsight Hadoop, Spark, Azure Data Lake Analytics, and Azure Machine Learning.
 
 By creating metadata to list the data tables to be migrated and their location it is possible to use the ADF facilities to manage the migration process.
 
@@ -106,10 +106,10 @@ There are third-party vendors who offer tools and services to automate migration
 **SQL DML syntax differences**:
 There are a few differences in SQL Data Manipulation Language (DML) syntax between Netezza SQL and Azure Synapse to be aware of when migrating:
 
-<!-- TODO this should probably be a code snippet that the user can copy and use -->
+<!-- TODO: this should probably be a code snippet that the user can copy and use -->
 ![SQL query](../../../_images/analytics/sql-query-netezza.png)
 
-### Functions, stored procedures and sequences
+### Functions, stored procedures, and sequences
 
 When migrating from a mature legacy data warehouse environment such as Netezza there are often elements other than simple tables and views that need to be migrated to the new target environment. Examples of this in Netezza are Functions, Stored Procedures and Sequences.
 As part of the preparation phase, an inventory of these objects that are to be migrated should be created and the method of handling them defined, with an appropriate allocation of resources assigned in the project plan.

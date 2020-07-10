@@ -64,7 +64,7 @@ The existing system to be migrated may be implemented as several layers (for exa
 - Data ingest and staging – Azure blob storage in conjunction with PolyBase for fast parallel data loading could be used for part of the ETL/ELT process rather than relational tables
 - Reporting layer and data marts – the performance characteristics of Azure Synapse may eliminate the need to physically instantiate aggregated tables for reporting purposes or data marts. It may be possible to implement these as views onto the core data warehouse or via a third-party data virtualization layer. At the basic level, the process for data migration of historical data and possibly also incremental updates can be achieved as shown below:
 
-![Modern data warehouse](../../../_images/analytics/Analytics-schema-migration-ddl.png)
+![Modern data warehouse](../../../_images/analytics/schema-migration-ddl.png)
 
 If these approaches (or similar) can be used the number of tables to be migrated will be reduced and also some processes may be simplified or eliminated, again reducing the migration workload. The applicability of these approaches is dependent on the individual use case, but the general principle is to consider leveraging the features and facilities of the Azure ecosystem where possible to reduce the migration workload and build a cost-effective target environment. This also holds true for other functions such as backup/restore and workflow management and monitoring.
 
