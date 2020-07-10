@@ -9,11 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
+<!-- cSpell:ignore scikit RLlib ONNX Jupyter -->
+
 # Machine Learning
 
 Azure empowers you with the most advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models using Azure Machine Learning. Azure Machine Learning can be used for any kind of machine learning, from classical Machine Learning to deep learning, supervised, and unsupervised learning. Whether you prefer to write Python or R code or zero-code/low-code options such as the [designer](https://docs.microsoft.com/azure/machine-learning/tutorial-designer-automobile-price-train-score), you can build, train, and track highly accurate machine learning and deep-learning models in an Azure Machine Learning Workspace.
 
-You can even start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray RLlib.
+You can even start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray and RLlib.
 
 For more information on getting started with [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/), visit Azure Machine Learning.  You will find a tutorial on getting [started with your first ML experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open source model format and runtime for machine learning, visit the [ONNX Runtime](http://onnxruntime.ai).
 

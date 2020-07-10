@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
+<!-- cSpell:ignore scikit RLlib Jupyter MLflow Kubeflow -->
+
 # What is Machine Learning
 
 Machine learning is a data science technique that allows computers to use existing data to forecast future behaviors, outcomes, and trends. By using machine learning, computers learn without being explicitly programmed.
@@ -20,7 +22,7 @@ Forecasts or predictions from machine learning can make apps and devices smarter
 Azure Machine Learning provides all the tools developers and data scientists need for their machine learning workflows, including:
 
 - The [Azure Machine Learning designer (preview)](https://docs.microsoft.com/azure/machine-learning/tutorial-designer-automobile-price-train-score): drag-n-drop modules to build your experiments and then deploy pipelines
-- Jupyter notebooks: use our [example notebooks](https://github.com/Azure/MachineLearningNotebooks) or create your own notebooks to leverage our SDK for Python samples.
+- Jupyter notebooks: use our [example notebooks](https://github.com/Azure/MachineLearningNotebooks) or create your own notebooks to use our SDK for Python samples.
 - R scripts or notebooks in which you use the [SDK for R](https://azure.github.io/azureml-sdk-for-r/reference/index.html) to write your own code, or use the R modules in the designer.
 - The [Many Models Solution Accelerator (preview)](https://github.com/microsoft/solution-accelerator-many-models) builds on Azure Machine Learning and enables you to train, operate, and manage hundreds or even thousands of machine learning models.
 - [Visual Studio Code extension](https://docs.microsoft.com/azure/machine-learning/tutorial-setup-vscode-extension).
@@ -86,9 +88,9 @@ For more information on Automated Machine Learning see [Automated machine learni
 
 Throughout the development and use of AI systems, trust must be at the core. Trust in the platform, process, and models. As AI and autonomous systems integrate more into the fabric of society, it's important to proactively make an effort to anticipate and mitigate the unintended consequences of these technologies.
 
-- Understand your models and build for fairness: Explain model behavior and uncover features that have the most impact on predictions. Use built-in explainers for both glass-box and black-box models during model training and inferencing. Use interactive visualizations to compare models and perform what-if analysis to improve model accuracy. Test your models for fairness using state-of-the-art algorithms. Mitigate unfairness throughout the ML lifecycle, compare mitigated models, and make intentional fairness versus accuracy trade-offs as desired.
+- Understand your models and build for fairness: Explain model behavior and uncover features that have the most impact on predictions. Use built-in explainers for both glass-box and black-box models during model training and inference. Use interactive visualizations to compare models and perform what-if analysis to improve model accuracy. Test your models for fairness using state-of-the-art algorithms. Mitigate unfairness throughout the ML lifecycle, compare mitigated models, and make intentional fairness versus accuracy trade-offs as desired.
 - Protect data privacy and confidentiality: Build models that preserve privacy using the latest innovations in differential privacy, which injects precise levels of statistical noise in data to limit the disclosure of sensitive information. Identify data leaks and intelligently limit repeat queries to manage exposure risk. Use encryption and confidential machine learning (coming soon) techniques specifically designed for machine learning to securely build models using confidential data.
-- Control and govern through every step of the ML process: Access built-in capabilities to automatically track lineage and create an audit trial across the ML lifecycle. Obtain full visibility into the ML process by tracking datasets, models, experiments, code, and more. Use custom tags to implement model datasheets, document key model metadata, increase accountability, and ensure responsible process.
+- Control and govern through every step of the ML process: Access built-in capabilities to automatically track lineage and create an audit trial across the ML lifecycle. Obtain full visibility into the ML process by tracking datasets, models, experiments, code, and more. Use custom tags to implement model data sheets, document key model metadata, increase accountability, and ensure responsible process.
 
 Learn more about how to implement [Responsible ML](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml).
 

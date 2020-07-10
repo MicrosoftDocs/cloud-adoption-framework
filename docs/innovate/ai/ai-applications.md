@@ -56,7 +56,6 @@ Review reference architectures for AI solutions.
 
 - [AI + Machine Learning](https://docs.microsoft.com/azure/architecture/browse/#ai--machine-learning)
 
-
 ## AI agents
 
 Microsoft’s Azure AI platform aims to empower developers to innovate and accelerate their projects.  Specifically for Conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK & tools enabling developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services (domain-specific AI services available as APIs) like Language Understanding, QnA maker, and Speech to add the abilities for your chatbot to understand and speak with your end users.  
@@ -65,11 +64,12 @@ Common scenarios for conversational AI or chatbot solutions include:
 
 - Informational Q&A chatbot
 - Customer Service or support chatbot
-- IT Helpdesk/ HR chatbot
-- e-commerce/ sales chatbot
+- IT help desk or HR chatbot
+- e-commerce or sales chatbot
 - Speech-enabled devices
 
-Note: We offer Power Virtual Agents, built on top of the Bot Framework, for developers who want to build a chatbot with a primarily no-code/low-code experience. Additionally, developers neither host the bot themselves, control the natural language or other AI models themselves with Cognitive Services.
+> [!NOTE]
+> We offer Power Virtual Agents, built on top of the Bot Framework, for developers who want to build a chatbot with a primarily no-code/low-code experience. Additionally, developers neither host the bot themselves, control the natural language or other AI models themselves with Cognitive Services.
 
 ## AI agents checklist
 
@@ -100,6 +100,7 @@ Learn how to add cognitive services to make your bot even more intelligent.
 Learn how to build your own virtual assistant with Bot Framework solution accelerators, and select a common set of skills (for example, Calendar, e-mail, Point of interest, To-do).
 
 - [Bot Framework Virtual Assistant solution](https://microsoft.github.io/botframework-solutions/index)
+
 ## Next step
 
 Explore other AI solution categories: [Machine learning](./machine-learning.md), [knowledge mining](./knowledge-mining.md)
