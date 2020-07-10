@@ -75,7 +75,7 @@ Common scenarios for conversational AI or chatbot solutions include:
 
 Familiarize yourself with Azure Bot Service and Microsoft Bot Framework.
 
-- Bot Framework is open-source offering comprised of an SDK (available in C#, js, Python, and Java) to help you design, build, and test your bot. It also offers a free visual authoring canvas in Bot Framework Composer, and a testing tool in Bot Framework Emulator.
+- Bot Framework is an open-source offering that provides an SDK (available in C#, JavaScript, Python, and Java) to help you design, build, and test your bot. It also offers a free visual authoring canvas in Bot Framework Composer and a testing tool in Bot Framework Emulator.
 - Azure Bot Service is a dedicated service within Azure that allows you to host or publish your bot in Azure and connect to popular channels.
 
 - [Learn about Azure Bot Service and Bot Framework overview](https://docs.microsoft.com/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)
@@ -90,7 +90,7 @@ One of the simplest ways to get started is to use QnA Maker, part of Azure Cogni
 Download and use Bot Framework SDK and tools for bot development
 
 - [5 minute quickstart with Bot Framework Composer](https://docs.microsoft.com/composer/)
-- [Build and test bots with Bot Framework SDK (C#, js, Python)](https://docs.microsoft.com/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0)
+- [Build and test bots with Bot Framework SDK (C#, JavaScript, Python)](https://docs.microsoft.com/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0)
 
 Learn how to add Cognitive Services to make your bot even more intelligent.
 

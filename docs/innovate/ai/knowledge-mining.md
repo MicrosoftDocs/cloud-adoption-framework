@@ -27,25 +27,24 @@ Key scenarios for knowledge mining include:
 
 ## Checklist
 
-- **Get started** with free knowledge mining solution accelerators, bootcamps and workshops.
+- **Get started** with free knowledge mining solution accelerators, boot camps, and workshops.
 
   - [Knowledge mining solution accelerator](https://github.com/Azure-Samples/azure-search-knowledge-mining)
   - [Knowledge mining workshop](https://github.com/Azure-Samples/azure-search-knowledge-mining/tree/master/workshops)
   - [Knowledge mining boot camp](https://azure.github.io/LearnAI-KnowledgeMiningBootcamp/)
   - [Knowledge mining e-book](https://azure.microsoft.com/resources/a-developers-guide-to-building-ai-driven-knowledge-mining-solutions/)
 
-**Use Power Skills**: Azure Search Power Skills provide useful functions deployable as custom skills for Azure Cognitive Search. The skills can be used as [templates](https://github.com/Azure-Samples/azure-search-power-skills/blob/master/Template/HelloWorld/README.md) or starting points for your own custom skills, or they can be deployed and used as they're if they happen to meet your requirements. We also invite you to contribute your own work by submitting a [pull request](https://github.com/Azure-Samples/azure-search-power-skills/compare).
+- **Use Power Skills**: [Azure Search Power Skills](https://github.com/Azure-Samples/azure-search-power-skills) provide useful functions deployable as custom skills for Azure Cognitive Search. The skills can be used as [templates](https://github.com/Azure-Samples/azure-search-power-skills/blob/master/Template/HelloWorld/README.md) or starting points for your own custom skills, or they can be deployed and used as-is if they happen to meet your requirements. We also invite you to contribute your own work by submitting a [pull request](https://github.com/Azure-Samples/azure-search-power-skills/compare).
 
-- [Azure Search Power Skills (GitHub repo)](https://github.com/Azure-Samples/azure-search-power-skills)
+- **Explore additional resources**:
 
-**Explore additional resources**:
-
-- [Azure Cognitive Search product page](https://azure.microsoft.com/services/search/)
-- [Built-in cognitive skills for text and image processing during indexing](https://docs.microsoft.com/azure/search/cognitive-search-predefined-skills)
-- [Documentation resources for AI enrichment in Azure Cognitive Search](https://docs.microsoft.com/azure/search/cognitive-search-resources-documentation)
-- [Design tips and tricks for AI enrichment](https://docs.microsoft.com/azure/search/cognitive-search-concept-troubleshooting)
-- [Full text search](https://docs.microsoft.com/azure/search/search-lucene-query-architecture)
+  - [Azure Cognitive Search overview](https://docs.microsoft.com/azure/search/search-what-is-azure-search)
+  - [Built-in cognitive skills for text and image processing during indexing](https://docs.microsoft.com/azure/search/cognitive-search-predefined-skills)
+  - [Documentation resources for AI enrichment in Azure Cognitive Search](https://docs.microsoft.com/azure/search/cognitive-search-resources-documentation)
+  - [Design tips and tricks for AI enrichment](https://docs.microsoft.com/azure/search/cognitive-search-concept-troubleshooting)
+  - [Full text search](https://docs.microsoft.com/azure/search/search-lucene-query-architecture)
 
 ## Next step
 
 Best practices: innovating with AI
+<!-- TODO: Need more information here. -->
