@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Migration environment planning checklist: validate environmental readiness prior to migration
+# Migration environment planning checklist: Validate environmental readiness prior to migration
 
 As an initial step in the migration process, you need to create the right environment in the cloud to receive, host, and support migrating assets. This article provides a list of things to validate in the current environment prior to migration.
 

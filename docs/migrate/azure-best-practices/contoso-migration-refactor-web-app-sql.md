@@ -57,7 +57,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
   - Azure SQL Database is a managed relational database service. It delivers predictable performance at multiple service levels, with near-zero administration. Advantages include dynamic scalability with no downtime, built-in intelligent optimization, and global scalability and availability.
   - Contoso can use the lightweight Data Migration Assistant (DMA) to assess the on-premises database to Azure SQL.
   - Contoso can use Azure Database Migration Service to migrate the on-premises database to Azure SQL.
-  - With Software Assurance, Contoso can exchange existing licenses for discounted rates on a SQL Database, using the Azure Hybrid Benefit for SQL Server. This could provide savings of up to 30%.
+  - With Software Assurance, Contoso can exchange existing licenses for discounted rates on a SQL Database, using the Azure Hybrid Benefit for SQL Server. This could provide savings of up to 30 percent.
   - SQL Database provides security features such as Always Encrypted, dynamic data masking, row-level security, and SQL threat detection.
 - For the application web tier, Contoso has decided to use Azure App Service. This PaaS service enables that to deploy the application with just a few configuration changes. Contoso will use Visual Studio to make the change, and deploy two web apps. One for the website, and one for the WCF service.
 - To meet requirements for a DevOps pipeline, Contoso has selected to use Azure DevOps for source code management (SCM) with Git repos. Automated builds and release will be used to build the code, and deploy it to the Azure App Service.
@@ -253,7 +253,7 @@ Contoso admins now configure Azure DevOps to perform build and release process.
 
      ![Artifact](./media/contoso-migration-refactor-web-app-sql/pipeline6.png)
 
-7. They select **Releases** > **+New pipeline**.
+7. They select **Releases** > **+ New pipeline**.
 
     ![New pipeline](./media/contoso-migration-refactor-web-app-sql/pipeline7.png)
 

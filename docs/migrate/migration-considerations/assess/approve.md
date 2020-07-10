@@ -32,7 +32,7 @@ Regular approval activities can help minimize or avoid surprises as a result of 
 
 ## Existing culture
 
-Your IT teams likely have existing mechanisms for managing change involving your on-premises assets. Typically these mechanisms are governed by traditional Information Technology Infrastructure Library–based (ITIL-based) change management processes. In many enterprise migrations, these processes involve a Change Advisory Board (CAB) that is responsible for reviewing, documenting, and approving all IT-related requests for changes (RFC).
+Your IT teams likely have existing mechanisms for managing change involving your on-premises assets. Typically these mechanisms are governed by traditional Information Technology Infrastructure Library-based (ITIL-based) change management processes. In many enterprise migrations, these processes involve a change advisory board (CAB) that's responsible for reviewing, documenting, and approving all IT-related requests for changes (RFC).
 
 The CAB generally includes experts from multiple IT and business teams, offering a variety of perspectives and detailed review for all IT-related changes. A CAB approval process is a proven way to reduce risk and minimize the business impact of changes involving stable workloads managed by IT operations.
 
@@ -40,7 +40,7 @@ The CAB generally includes experts from multiple IT and business teams, offering
 
 Organizational readiness for the approval of technical change is among the most common reasons for cloud migration failure. More projects are stalled by a series of technical approvals than any deficit in a cloud platform. Preparing the organization for technical change approval is an important requirement for migration success. The following are a few best practices to ensure that the organization is ready for technical approval.
 
-### ITIL Change Advisory Board challenges
+### ITIL change advisory board challenges
 
 Every change management approach has its own set of controls and approval processes. Migration is a series of continuous changes that start with a high degree of ambiguity and develop additional clarity through the course of execution. As such, migration is best governed by agile-based change management approaches, with the cloud strategy team serving as a product owner.
 
@@ -52,7 +52,7 @@ The following best practices can help the CAB maintain a degree of comfort durin
 
 It is tempting for a cloud adoption team to consider detailed architectural decisions for each workload being migrated to the cloud. It is equally tempting to use cloud migration as a catalyst to refactor past architectural decisions. For organizations that are migrating a few hundred VMs or a few dozen workloads, either approach can be properly managed. When migrating a datacenter consisting of 1,000 or more assets, each of these approaches is considered a high-risk antipattern that significantly reduces the likelihood of success. Modernizing, refactoring, and rearchitecting every application require diverse skill sets and a significant variety of changes, and these tasks create dependencies on human efforts at scale. Each of these dependencies injects risk into the migration effort.
 
-The article on [digital estate rationalization](../../../digital-estate/rationalize.md) discusses the agility and time-saving impact of basic assumptions when rationalizing a digital estate. There is an additional benefit of standardized change. By choosing a default rationalization approach to govern the migration effort, the Cloud Advisory Board or product owner can review and approve the application of one change to a long list of workloads. This reduces technical approval of each workload to those that require a significant architecture change to be cloud compatible.
+The article on [digital estate rationalization](../../../digital-estate/rationalize.md) discusses the agility and time-saving impact of basic assumptions when rationalizing a digital estate. There is an additional benefit of standardized change. By choosing a default rationalization approach to govern the migration effort, the cloud advisory board or product owner can review and approve the application of one change to a long list of workloads. This reduces technical approval of each workload to those that require a significant architecture change to be cloud compatible.
 
 ### Clarify expectations and roles of approvers
 

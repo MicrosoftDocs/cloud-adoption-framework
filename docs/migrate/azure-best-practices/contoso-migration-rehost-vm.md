@@ -61,7 +61,7 @@ After pinning down goals and requirements, Contoso designs and review a deployme
 As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server. The following considerations helped them to decide to use SQL Server running on an Azure IaaS VM:
 
 - Using an Azure VM running SQL Server seems to be an optimal solution if Contoso needs to customize the operating system and the database, or if it might want to colocate and run third-party applications on the same VM.
-- With Software Assurance, in future Contoso can exchange existing licenses for discounted rates on a SQL Managed Instance using the Azure Hybrid Benefit for SQL Server. This can save up to 30% on SQL Managed Instance.
+- With Software Assurance, in future Contoso can exchange existing licenses for discounted rates on a SQL Managed Instance using the Azure Hybrid Benefit for SQL Server. This can save up to 30 percent on SQL Managed Instance.
 
 ### Solution review
 

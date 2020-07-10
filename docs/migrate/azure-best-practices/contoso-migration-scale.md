@@ -310,7 +310,7 @@ Contoso will also use scripts to locate unused resources.
 
 ### Partner optimization tools
 
-Partner tools such as [Hanu](https://hanu.com/insight) and [Scalr]( https://www.scalr.com/cost-optimization) can be used.
+Partner tools such as [Hanu](https://hanu.com/insight) and [Scalr](https://www.scalr.com/cost-optimization) can be used.
 
 ## Phase 4: Secure and manage
 
