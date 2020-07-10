@@ -21,7 +21,7 @@ This guide uses the sections of the Cloud Adoption Framework that are highlighte
 
 To support the development of your innovation strategy, the AI Maturity Model is a free tool that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each one of these levels of maturity includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies. The assessment takes 5-10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. By measuring your capabilities, we can calculate your organization's score and provide an estimate of your AI-innovation maturity on a curve.
 
-Use the [AI Maturity Model](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems. Upon completion, the assessment provides a score with an estimate of your AI-innovation maturity status.
+Use the [AI Maturity Model](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems. Upon completion, the assessment provides a score with an estimate of your AI innovation maturity status.
 
 ## Step 1: Document the business strategy
 

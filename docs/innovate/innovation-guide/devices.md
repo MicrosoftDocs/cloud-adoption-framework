@@ -25,7 +25,7 @@ ms.localizationpriority: high
 
 ::: zone-end
 
-Innovate through intermittently connected and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with artificial intelligence (AI) technology, you can build every type of intelligent application and system you can envision.
+Innovate through intermittently connected and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with AI technology, you can build every type of intelligent application and system you can envision.
 
 Azure customers employ a continually expanding set of connected systems and devices that gather and analyze data&mdash;close to their users, the data, or both. Users get real-time insights and experiences, delivered by highly responsive and contextually aware apps. By moving parts of the workload to the edge, these devices can spend less time sending messages to the cloud and react more quickly to spatial events.
 

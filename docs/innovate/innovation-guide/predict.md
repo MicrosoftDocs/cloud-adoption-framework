@@ -11,6 +11,8 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore ONNX -->
+
 ::: zone target="docs"
 
 # Azure innovation guide: Innovate with AI
@@ -23,7 +25,7 @@ ms.localizationpriority: high
 
 ::: zone-end
 
-As an innovator, your company has rich information about its business and its customers. Using artificial intelligence (AI), your company can make predictions about customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences. This article introduces a few approaches to innovating with AI. The following table can help you find the best solution, based on your implementation needs.
+As an innovator, your company has rich information about its business and its customers. Using AI, your company can make predictions about customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences. This article introduces a few approaches to innovating with AI. The following table can help you find the best solution, based on your implementation needs.
 
 | Solution category | Description                                                                                                                              | Required skills              |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
@@ -35,7 +37,9 @@ As an innovator, your company has rich information about its business and its cu
 
 Azure provides advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models across the cloud and edge, using Azure Machine Learning. Develop models faster using automated machine learning. Use tools and frameworks of your choice without being locked in.
 
-For more information on getting started with Azure Machine Learning, see [What is Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml) and [Getting started with your first ML experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open source model format and runtime for machine learning, see our [ONNX Runtime](http://onnxruntime.ai) documentation.
+For more information on getting started with Azure Machine Learning, see [Azure Machine Learning overview](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml) and [Getting started with your first ML experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open source model format and runtime for machine learning, see our [ONNX Runtime](http://onnxruntime.ai) documentation.
+
+<!-- markdownlint-disable MD024 -->
 
 ### Action
 
@@ -51,7 +55,7 @@ A data scientist can use Azure Machine Learning to train and build a model by us
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2Fworkspaces]" submitText="Go to Azure Machine Learning resources" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2FWorkspaces]" submitText="Go to Azure Machine Learning resources" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -59,12 +63,11 @@ A data scientist can use Azure Machine Learning to train and build a model by us
 
 ::: zone target="docs"
 
-Go directly to Azure Machine Learning resources in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2Fworkspaces).
+Go directly to Azure Machine Learning resources in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2FWorkspaces).
 
 ::: zone-end
 
 ## [AI apps and agents](#tab/AIAppsAndAgents)
-
 
 Azure provides a set of pre-built AI services called Cognitive Services to easily build AI applications. Additionally, Azure offers Bot Service, which allows developers to build conversational AI agents that improve customer and employee engagement.
 
@@ -126,7 +129,7 @@ To get started with Azure Bot Service:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FbotServices]" submitText="Go to Azure Bot Service" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FBotServices]" submitText="Go to Azure Bot Service" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -134,7 +137,7 @@ To get started with Azure Bot Service:
 
 ::: zone target="docs"
 
-Go directly to Azure Bot Service in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FbotServices).
+Go directly to Azure Bot Service in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.BotService%2FBotServices).
 
 ::: zone-end
 
@@ -158,7 +161,7 @@ To get started with Azure Cognitive Search:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Search%2FsearchServices]" submitText="Go to Azure Cognitive Search" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Search%2FSearchServices]" submitText="Go to Azure Cognitive Search" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -166,7 +169,7 @@ To get started with Azure Cognitive Search:
 
 ::: zone target="docs"
 
-Go directly to Azure Cognitive Search in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Search%2FsearchServices).
+Go directly to Azure Cognitive Search in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Search%2FSearchServices).
 
 ::: zone-end
 

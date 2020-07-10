@@ -1,8 +1,8 @@
 ---
 title: "AI applications"
 description: Infusing AI into an application with Microsoft Azure Cognitive Services.
-author: JanetCThomas
-ms.author: janet
+author: v-hanki
+ms.author: v-hanki
 ms.date: 06/24/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
