@@ -37,7 +37,7 @@ Depending on the path that the cloud adoption team takes, Azure provides tools t
 - Azure Kubernetes Service (AKS)
 - Azure Migrate
 - Azure Stack
-- PowerApps
+- Power Apps
 - Microsoft Flow
 - Power BI
 
