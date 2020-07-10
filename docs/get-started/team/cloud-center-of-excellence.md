@@ -1,8 +1,8 @@
 ---
 title: "Get started: Build a cloud center of excellence"
 description: This guide helps a cloud center of excellence (CCoE) team understand scope, deliverables, and the capabilities required for a successful cloud adoption journey.
-author: JanetCThomas
-ms.author: janet
+author: alexbuckgit
+ms.author: abuck
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual

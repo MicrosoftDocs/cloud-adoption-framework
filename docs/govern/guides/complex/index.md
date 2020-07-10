@@ -49,7 +49,7 @@ These patterns provide room for growth without making the hierarchy needlessly c
 
 [!INCLUDE [governance-of-resources](../../../../includes/governance-of-resources.md)]
 
-<!-- See comments for suggestion to possibly add here -->
+<!-- TODO: See comments for suggestion to possibly add here -->
 
 ## Incremental governance improvements
 

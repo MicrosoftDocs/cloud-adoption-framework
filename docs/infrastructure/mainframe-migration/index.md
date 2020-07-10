@@ -1,6 +1,6 @@
 ---
 title: "Mainframe migration overview"
-description: Migrate mainframe workloads, apps, and databases to Azure, for a proven, highly available, scalable infrastructure without many of the drawbacks of mainframes.
+description: Migrate mainframe workloads, applications, and databases to Azure, for a proven, highly available, scalable infrastructure without many of the drawbacks of mainframes.
 author: njray
 ms.author: v-nanra
 ms.date: 12/27/2018

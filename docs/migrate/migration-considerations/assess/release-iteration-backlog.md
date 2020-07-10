@@ -1,5 +1,5 @@
 ---
-title: "Iteration and Release Backlog"
+title: "Iteration and release backlog"
 description: Use the Cloud Adoption Framework for Azure to learn how to build an iteration and release backlog to organize your tasks.
 author: BrianBlanchard
 ms.author: brblanch
@@ -15,7 +15,7 @@ This article assumes that migration processes are incremental in nature, running
 
 ## Release backlog
 
-A _release backlog_ consists of a series of assets (VMs, databases, files, and applications, among others) that must be migrated before a workload can be released for production usage in the cloud. During each iteration, the cloud adoption team documents and estimates the efforts required to move each asset to the cloud. See the "Iteration backlog" section that follows.
+A _release backlog_ consists of a series of assets (VMs, databases, files, and applications, among others) that must be migrated before a workload can be released for production usage in the cloud. During each iteration, the cloud adoption team documents and estimates the efforts required to move each asset to the cloud. See the "iteration backlog" section that follows.
 
 ## Iteration backlog
 

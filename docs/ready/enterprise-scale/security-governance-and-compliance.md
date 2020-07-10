@@ -42,19 +42,17 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Delegated Key Vault instantiation and privileged access: ([secure access](https://docs.microsoft.com/azure/key-vault/general/secure-your-key-vault))
 
-- Requirements surrounding using customer-managed keys for native encryption mechanisms such as Azure Storage encryption (SSE): [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
-
-- Whole-disk encryption for virtual machines (VMs).
-
-- Data-in-transit encryption.
-
-- Data-at-rest encryption.
+- Requirements surrounding using customer-managed keys for native encryption mechanisms such as Azure Storage encryption (SSE):
+  - [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal).
+  - Whole-disk encryption for virtual machines (VMs).
+  - Data-in-transit encryption.
+  - Data-at-rest encryption.
 
 **Design recommendations:**
 
-- Use a federated Key Vault model to avoid transaction scale limits.
+- Use a federated Azure Key Vault model to avoid transaction scale limits.
 
-- Provision Key Vault with the soft delete and purge policies enabled to allow retention protection for deleted objects.
+- Provision Azure Key Vault with the soft delete and purge policies enabled to allow retention protection for deleted objects.
 
 - Follow a least privilege model by limiting authorization to permanently delete keys, secrets, and certificates to specialized custom Azure Active Directory roles.
 
@@ -168,9 +166,9 @@ It is essential to maintain a healthy security posture as you adopt Azure. Besid
 
 - A joint examination of each required service should be conducted within the context of your underlying requirements. If you want to bring your own keys, this might not be supported across all considered services. Relevant mitigation will need to be implemented so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
-- Develop a security whitelisting plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
+- Develop a security allow-list plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
 
-- Determine incident response plan for Azure services before whitelisting.
+- Determine incident response plan for Azure services before allowing.
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
@@ -217,7 +215,7 @@ As business units request to deploy workloads to Azure, additional visibility in
 |                              | Multi-factor authentication and conditional access                                            | Is multi-factor authentication enforced for user to service interactions?                                                                                            |
 | Governance                   | Data export and import                                                  | Does service allow you to import and export data securely and encrypted?                                                                     |
 |                              | Data privacy and usage                                                  | Can Microsoft engineers access the data?                                                                                                     |
-|                              |                                                                       | Is any Microsoft support interaction with the service audited?                                                                               |
+|                              |                                                                       | Is any Microsoft Support interaction with the service audited?                                                                               |
 |                              | Data residency                                                        | Is data contained to the service deployment region?                                                                                          |
 | Operations                   | Monitoring                                                            | Does the service integrate with Azure Monitor?                                                                                               |
 |                              | Backup management                                                     | Which workload data need to be backed?                                                                                                       |
