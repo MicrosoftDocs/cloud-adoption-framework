@@ -23,7 +23,7 @@ ms.localizationpriority: high
 
 ::: zone-end
 
-One of the first steps in democratizing data is to enhance data discoverability. Cataloging and managing data sharing can help enterprises get the most value from their existing information assets. A data catalog makes data sources easy to discover and understand by the users who manage the data. Azure Data Catalog enables management inside an enterprise, whereas Azure Data Share enables management and sharing outside the enterprise.
+One of the first steps in democratizing data is to enhance data discoverability. Cataloging and managing data sharing can help enterprises get the most value from their existing information assets. Data catalogs make data sources easy to discover and understand by the users who manage the data. Azure Data Catalog enables management inside an enterprise, whereas Azure Data Share enables management and sharing outside the enterprise.
 
 Azure services that provide data processing, like Azure Time Series Insights and Stream Analytics, are other capabilities that customers and partners are successfully using for their innovation needs.
 
@@ -49,9 +49,9 @@ Azure Data Catalog addresses the discovery challenges of data consumers and enab
 
 ### Action
 
-You can use only one Azure data catalog per organization. If a data catalog has already been created for your organization, you can't add more catalogs.
+You can use only one Azure Data Catalog per organization. If a catalog has already been created for your organization, you can't add more catalogs.
 
-To create an Azure data catalog for your organization:
+To create a catalog for your organization:
 
 1. Go to **Azure Data Catalog**.
 2. Select **Create**.
@@ -72,12 +72,13 @@ Achieving a balance between openly sharing data and exercising control over what
 
 > [!div class="checklist"]
 >
-> - Create a Data Share.
-> - Add datasets to your Data Share.
-> - Enable a synchronization schedule for your Data Share.
-> - Add recipients to your Data Share.
+> - Create a data share.
+> - Add datasets to your data share.
+> - Enable a synchronization schedule for your data share.
+> - Add recipients to your data share.
 
 ::: zone target="docs"
+
 **Go to the [Azure Data Share documentation](https://docs.microsoft.com/azure/data-share)**
 
 ::: zone-end

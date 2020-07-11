@@ -23,8 +23,6 @@ Key scenarios for knowledge mining include:
 - **Technical content review and research:** Quickly review documents and extract key information to make informed decisions
 - **Auditing and compliance management:** Quickly identify key areas and flag important ideas or information in documents
 
-<!-- docsTest:ignore "Azure Search" "Power Skills -->
-
 ## Checklist
 
 - **Get started** with free knowledge mining solution accelerators, boot camps, and workshops.
@@ -34,9 +32,9 @@ Key scenarios for knowledge mining include:
   - [Knowledge mining boot camp](https://azure.github.io/LearnAI-KnowledgeMiningBootcamp/)
   - [Knowledge mining e-book](https://azure.microsoft.com/resources/a-developers-guide-to-building-ai-driven-knowledge-mining-solutions/)
 
-- **Use Power Skills**: [Azure Search Power Skills](https://github.com/Azure-Samples/azure-search-power-skills) provide useful functions deployable as custom skills for Azure Cognitive Search. The skills can be used as [templates](https://github.com/Azure-Samples/azure-search-power-skills/blob/master/Template/HelloWorld/README.md) or starting points for your own custom skills, or they can be deployed and used as-is if they happen to meet your requirements. We also invite you to contribute your own work by submitting a [pull request](https://github.com/Azure-Samples/azure-search-power-skills/compare).
+- **Use power skills:** [Azure search power skills](https://github.com/Azure-Samples/azure-search-power-skills) provide useful functions deployable as custom skills for Azure Cognitive Search. The skills can be used as [templates](https://github.com/Azure-Samples/azure-search-power-skills/blob/master/Template/HelloWorld/README.md) or starting points for your own custom skills, or they can be deployed and used as-is if they happen to meet your requirements. We also invite you to contribute your own work by submitting a [pull request](https://github.com/Azure-Samples/azure-search-power-skills/compare).
 
-- **Explore additional resources**:
+- **Explore additional resources:**
 
   - [Azure Cognitive Search overview](https://docs.microsoft.com/azure/search/search-what-is-azure-search)
   - [Built-in cognitive skills for text and image processing during indexing](https://docs.microsoft.com/azure/search/cognitive-search-predefined-skills)

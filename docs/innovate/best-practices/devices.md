@@ -32,7 +32,7 @@ In Azure, you commonly use the following tools to accelerate digital invention a
 
 | Category | Tools |
 |---|---|
-| Mobile experiences | <li> Azure App Service <li> Power Apps <li> Microsoft Flow <li> Intune |
+| Mobile experiences | <li> Azure App Service <li> Power Apps <li> Power Automate <li> Intune |
 | Mixed reality | <li> Unity <li> Azure Spatial Anchors <li> HoloLens |
 | Integrated reality | <li> Azure IoT Hub <li> Azure Sphere <li> Azure Kinect DK |
 | Adjusted reality | <li> IoT cloud to device <li> Azure Digital Twins + HoloLens |

@@ -30,24 +30,24 @@ Common scenarios for machine learning solutions include:
 
 ## Checklist
 
-- **Get started by first familiarize yourself with Azure Machine Learning**, then choose which experience to begin with. You can follow along steps to use a Jupyter notebook with Python, the visual drag and drop experience, automated machine learning.
+- **Get started by first familiarize yourself with Azure Machine Learning**, then choose which experience to begin with. You can follow along with steps to use a Jupyter notebook with Python, the visual drag and drop experience, or automated machine learning (AutoML).
 
-  - [Azure Machine Learning product page](https://azure.microsoft.com/services/machine-learning/#documentation)
+  - [Azure Machine Learning overview](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml)
   - [Create your first machine learning experiment with a Jupyter notebook with Python](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup)
   - [Visual drag-and-drop experiments](https://docs.microsoft.com/azure/machine-learning/tutorial-designer-automobile-price-train-score)
-  - [Use the automated machine learning UI](https://docs.microsoft.com/azure/machine-learning/tutorial-first-experiment-automated-ml)
+  - [Use the AutoML UI](https://docs.microsoft.com/azure/machine-learning/tutorial-first-experiment-automated-ml)
   - [Configure your dev environment](https://docs.microsoft.com/azure/machine-learning/how-to-configure-environment)
 
 - **Experiment with more advanced tutorials** to predict taxi fees, classify images, and build a pipeline for batch scoring
 
-  - [Use automated machine learning to predict taxi fees](https://docs.microsoft.com/azure/machine-learning/tutorial-auto-train-models)
+  - [Use AutoML to predict taxi fees](https://docs.microsoft.com/azure/machine-learning/tutorial-auto-train-models)
   - [Classify images with scikit-learn](https://docs.microsoft.com/azure/machine-learning/tutorial-train-models-with-aml)
   - [Build an Azure Machine Learning pipeline for batch scoring](https://docs.microsoft.com/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
 
 - **Follow along with video tutorials** to learn more about the benefits of Azure Machine Learning, including no-code model building, MLOps, ONNX Runtime, model interpretability and transparency and more.
 
   - [What's new with Azure Machine Learning](https://channel9.msdn.com/Shows/AI-Show/Allup-Azure-ML)
-  - [Use automated machine learning to build models](https://aka.ms/automlvideo)
+  - [Use AutoML to build models](https://aka.ms/automlvideo)
   - [Build zero-code models with Azure Machine Learning designer](https://aka.ms/studioanddesigner)
   - [MLOps for managing the end-to-end lifecycle](https://aka.ms/mlopsvideo)
   - [Incorporating ONNX Runtime into your models](https://www.youtube.com/watch?v=qy7X2JGLUC4)

@@ -13,12 +13,11 @@ ms.subservice: innovate
 
 Using AI, your company can make predictions about customer's needs, automate business processes, discover information lying latent in unstructured data, and deliver new ways to engage with customers to deliver better experiences.
 
-You can accelerate this type of digital invention through each of the following solution areas.
-Best practices and technical guidance to accelerate digital invention are listed in the table of contents on the left side of this page. Those articles are grouped by solution area:
+You can accelerate this type of digital invention through each of the following solution areas. Best practices and technical guidance to accelerate digital invention are listed in the table of contents on the left side of this page. Those articles are grouped by solution area:
 
 - Machine Learning
-- AI apps and agents
-- Knowledge Mining
+- AI applications and agents
+- Knowledge mining
 
 ## Get started
 

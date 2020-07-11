@@ -15,9 +15,9 @@ Companies often have different kinds of existing data that they can [democratize
 
 ## Use of this article
 
-This article outlines a series of approaches that align with the Migrate process. You can best align these approaches to the standard Migrate toolchain.
+This article outlines a series of approaches that align with the migrate process. You can best align these approaches to the standard migrate toolchain.
 
-During the Assess process within the Migrate methodology, a cloud adoption team assesses the current state and desired future state for the migrated asset. When that process is part of an innovation effort, both cloud adoption teams can use this article to help make those assessments.
+During the assess process within the Migrate methodology, a cloud adoption team assesses the current state and desired future state for the migrated asset. When that process is part of an innovation effort, both cloud adoption teams can use this article to help make those assessments.
 
 ## Primary toolset
 
@@ -45,10 +45,10 @@ We suggest that you decide your acceptable business downtime and test an offline
 |---|---|---|---|---|
 | SQL Server | Azure SQL Database | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-azure-sql) |
 | SQL Server | Azure SQL Database | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online) |
-| SQL Server | Azure SQL Database managed instance | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) |
-| SQL Server | Azure SQL Database managed instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) |
-| RDS SQL Server | Azure SQL Database or Azure SQL Database managed instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online) |
+| SQL Server | Azure SQL Managed Instance | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) |
+| SQL Server | Azure SQL Managed Instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) |
+| RDS SQL Server | Azure SQL Database or Azure SQL Managed Instance | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-rds-sql-server-azure-sql-and-managed-instance-online) |
 | MySQL | Azure Database for MySQL | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mysql-azure-mysql-online) |
 | PostgreSQL | Azure Database for PostgreSQL | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online) |
-| MongoDB | Azure Cosmos DB Mongo API | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db) |
-| MongoDB | Azure Cosmos DB Mongo API | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db-online) |
+| MongoDB | Azure Cosmos DB mongo API | Database Migration Service | Offline | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db) |
+| MongoDB | Azure Cosmos DB mongo API | Database Migration Service | Online | [Tutorial](https://docs.microsoft.com/azure/dms/tutorial-mongodb-cosmos-db-online) |

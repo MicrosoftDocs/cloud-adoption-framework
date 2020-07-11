@@ -282,4 +282,4 @@ As you continue into the operations mode of cloud security, consider these next 
 - Review security information in [Built-in security controls for Azure services](https://docs.microsoft.com/azure/security/fundamentals/security-controls).
 - Review Azure security tools and services in [Security services and technologies available on Azure](https://docs.microsoft.com/azure/security/azure-security-services-technologies).
 - Review the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/guidance/risk-assessment). It contains extensive guidance, reports, and related documentation that can help you perform risk assessments as part of your regulatory compliance processes.
-- Review third-party tools available to facilitate meeting your security requirements. See [Integrate security solutions in Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-partner-integration).
+- Review third-party tools available to facilitate meeting your security requirements. For more information, see [Integrate security solutions in Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-partner-integration).

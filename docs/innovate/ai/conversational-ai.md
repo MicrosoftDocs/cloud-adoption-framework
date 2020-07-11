@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Conversational AI
 
-Microsoft's Azure AI platform aims to empower developers to innovate and accelerate their projects. Specifically for conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools enabling developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services (domain-specific AI services available as APIs) like language understanding, QnA Maker, and speech to add the abilities for your chatbot to understand and speak with your end users.
+Microsoft's Azure AI platform aims to empower developers to innovate and accelerate their projects. Specifically for conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools enabling developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services (domain-specific AI services available as APIs) like Language Understanding (LUIS), QnA Maker, and Speech service to add the abilities for your chatbot to understand and speak with your end users.
 
 Common scenarios for conversational AI or chatbot solutions include:
 

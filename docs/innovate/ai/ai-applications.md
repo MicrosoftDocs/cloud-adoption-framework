@@ -34,13 +34,13 @@ As you get started, the checklist and resources below will help you plan your ap
 
 ## AI applications checklist
 
-To get started, first familiarize yourself with the various categories and services within Azure Cognitive Services. Visit the product pages to learn more and to interact with demos to learn more about the capabilities available, such as vision, speech, language and decision. There is also an e-book that walks through common scenarios and how to build your first application with Cognitive Services.
+To get started, first familiarize yourself with the various categories and services within Azure Cognitive Services. Visit the product pages to learn more and to interact with demos to learn more about the capabilities available, such as vision, speech, language, and decision. There is also an e-book that walks through common scenarios and how to build your first application with Cognitive Services.
 
 - [Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/welcome)
 - [Interactive demos across the product/service pages](https://azure.microsoft.com/services/cognitive-services/)
 - [Building intelligent applications with cognitive APIs](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/) (e-book)
 
-Select the service you want to use across vision, language, speech, decision or web search. Each category on the page offers a set of quick starts, tutorials, how-to guides, whether you want to use the REST API or SDKs.
+Select the service you want to use across vision, language, speech, decision, or web search. Each category on the page offers a set of quick starts, tutorials, how-to guides, whether you want to use the REST API or SDKs.
 
 You can also download the intelligent kiosk to experience and demo these services.
 
@@ -58,7 +58,7 @@ Review reference architectures for AI solutions.
 
 ## AI agents
 
-Microsoft's Azure AI platform aims to empower developers to innovate and accelerate their projects. Specifically for conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools enabling developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services (domain-specific AI services available as APIs) like language understanding, QnA Maker, and speech to add the abilities for your chatbot to understand and speak with your end users.
+Microsoft's Azure AI platform aims to empower developers to innovate and accelerate their projects. Specifically for conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools enabling developers to build rich conversational experiences. Additionally, developers can use Azure Cognitive Services (domain-specific AI services available as APIs) like Language Understanding (LUIS), QnA Maker, and Speech service to add the abilities for your chatbot to understand and speak with your end users.
 
 Common scenarios for conversational AI or chatbot solutions include:
 

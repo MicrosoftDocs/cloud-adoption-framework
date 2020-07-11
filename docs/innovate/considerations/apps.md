@@ -1,5 +1,5 @@
 ---
-title: Engage via apps for digital invention
+title: Engage via applications for digital invention
 description: Understand how to create app solutions to shape data and create experiences that engage customers and support innovation.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,13 +9,13 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# Engage through applications
+# Engage via applications
 
 As discussed in [Democratize data](./data.md), data is the new oil. It fuels most innovations across the digital economy. Building on that analogy, applications are the fueling stations and infrastructure required to get that fuel into the right hands.
 
-In some cases, data alone is enough to drive change and meet customer needs. More commonly though, solutions to customer needs require applications to shape the data and create an experience. Applications are the way we engage the user. They are the home for the processes required to respond to customer triggers. They are customers' means of providing data and receiving guidance. This article summarizes several principles that can help align you with the right application solution, based on the hypotheses to be validated.
+In some cases, data alone is enough to drive change and meet customer needs. More commonly though, solutions to customer needs require applications to shape the data and create an experience. Applications are the way we engage the user and the home for the processes required to respond to customer triggers. Applications are how customers provide data and receive guidance. This article summarizes several principles that can help align you with the right application solution, based on the hypotheses to be validated.
 
-![Engage via apps](../../_images/innovate/engage-via-apps.png)
+![Engage via applications](../../_images/innovate/engage-via-apps.png)
 
 ## Shared code
 
@@ -23,21 +23,21 @@ Teams that more quickly and accurately respond to customer feedback, market chan
 
 To be ready for innovation, all application development should start with a shared code repository. The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which allows you to create a shared code repository quickly. Alternatively, [Azure Repos](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops) is a set of version control tools in Azure DevOps Services that you can use to manage your code. Azure Repos provides two types of version control:
 
-- [Git](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git): distributed version control.
-- [Team Foundation Version Control (TFVC)](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc): centralized version control.
+- [Git](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git): Distributed version control.
+- [Team Foundation Version Control (TFVC)](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc): Centralized version control.
 
 ## Citizen developers
 
 Professional developers are a vital component of innovation. When a hypothesis proves accurate at scale, professional developers are required to stabilize and prepare the solution for scale. Most of the principles referenced in this article require support from professional developers. Unfortunately, current trends suggest there's a greater demand for professional developers than there are developers. Moreover, the cost and pace of innovation can be less favorable when professional development is deemed necessary. In response to these challenges, citizen developers provide a way to scale development efforts and accelerate early hypothesis testing.
 
-The use of citizen developers can be viable and effective when early hypotheses can be validated through tools like [Power Apps](https://docs.microsoft.com/powerapps/powerapps-overview) for app interfaces, [AI Builder](https://docs.microsoft.com/powerapps/use-ai-builder) for processes and predictions, [Microsoft Power Automate](https://docs.microsoft.com/power-automate) for workflows, and [Power BI](https://docs.microsoft.com/power-bi) for data consumption.
+The use of citizen developers can be viable and effective when early hypotheses can be validated through tools like [Power Apps](https://docs.microsoft.com/powerapps/powerapps-overview) for application interfaces, [AI Builder](https://docs.microsoft.com/powerapps/use-ai-builder) for processes and predictions, [Microsoft Power Automate](https://docs.microsoft.com/power-automate) for workflows, and [Power BI](https://docs.microsoft.com/power-bi) for data consumption.
 
 > [!NOTE]
 > When you rely on citizen developers to test hypotheses, it's advisable to have some professional developers on hand to provide support, review, and guidance. After a hypothesis is validated at scale, a process for transitioning the application into a more robust programming model will accelerate returns on the innovation. By involving professional developers in process definitions early on, you can realize cleaner transitions later.
 
 ## Intelligent experiences
 
-Intelligent experiences combine the speed and scale of modern web applications with the intelligence of cognitive services and bots. Alone, each of these technologies might be sufficient to meet your customers' needs. When smartly combined, they broaden the spectrum of needs that can be met through a digital experience, while helping to contain development costs.
+Intelligent experiences combine the speed and scale of modern web applications with the intelligence of Cognitive Services and bots. Alone, each of these technologies might be sufficient to meet your customers' needs. When smartly combined, they broaden the spectrum of needs that can be met through a digital experience, while helping to contain development costs.
 
 ### Modern web apps
 
@@ -47,7 +47,7 @@ When an application or experience is required to meet a customer need, modern we
 
 Machine learning and AI are increasingly available to developers. The wide-spread availability of common APIs with predictive capabilities allows developers to better meet the needs of the customer through expanded access to data and predictions.
 
-Adding intelligence to a solution can enable speech to text, text translation, computer vision, and even visual search. With these expanded capabilities, it's easier for developers to build solutions that take advantage of intelligence to create an interactive and modern experience.
+Adding intelligence to a solution can enable speech to text, text translation, Computer Vision, and even visual search. With these expanded capabilities, it's easier for developers to build solutions that take advantage of intelligence to create an interactive and modern experience.
 
 ### Bots
 
@@ -67,7 +67,7 @@ A cloud-native solution allows centralized development teams to maintain control
 
 Many customer hypotheses can best be delivered by a modernized version of an existing solution. When the current business logic meets customer needs (or comes really close), you might be able to accelerate innovation by building on top of a modernized solution.
 
-Most forms of modernization, including slight refactoring of the application, are included in the [Migrate methodology](../../migrate/index.md) within the Cloud Adoption Framework. That methodology guides cloud adoption teams through the process of migrating a [digital estate](../../digital-estate/index.md) to the cloud. The [Azure Migration Guide](../../migrate/azure-migration-guide/index.md) provides a streamlined approach to the same methodology, which is suitable for a small number of workloads or even a single application.
+Most forms of modernization, including slight refactoring of the application, are included in the [Migrate methodology](../../migrate/index.md) within the Cloud Adoption Framework. That methodology guides cloud adoption teams through the process of migrating a [digital estate](../../digital-estate/index.md) to the cloud. The [Azure migration guide](../../migrate/azure-migration-guide/index.md) provides a streamlined approach to the same methodology, which is suitable for a small number of workloads or even a single application.
 
 After a solution has been migrated and modernized, there are a variety of ways it can be used to create new, innovative solutions to customer needs. For example, [citizen developers](#citizen-developers) could test hypotheses, or professional developers could create [intelligent experiences](#intelligent-experiences) or [cloud-native solutions](#cloud-native-solutions).
 
@@ -77,7 +77,7 @@ Extending a solution is one common form of modernization. This is approach can b
 
 - Existing business logic should meet (or comes close to meeting) the existing customer need.
 - An improved experience would better meet the needs of a specific customer cohort.
-- The business logic required by the minimum viable product (MVP) solution has been centralized, usually via an [N-tier](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier), web services, API, or [microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices) design. This approach consists of wrapping the existing solution within a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
+- The business logic required by the minimum viable product (MVP) solution has been centralized, usually via an [n-tier](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier), web services, API, or [microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices) design. This approach consists of wrapping the existing solution within a new experience hosted in the cloud. In Azure, this solution would likely live in Azure App Service.
 
 ### Rebuild an existing solution
 
@@ -88,7 +88,7 @@ If an application can't be easily extended, it may be necessary to refactor the 
 
 ## Operating model innovations
 
-In addition to modern innovative approaches to app creation, there have been notable innovations in app operations. These approaches have spawned many organizational movements. One of the most prominent is the [cloud center of excellence](../../organize/cloud-center-of-excellence.md) operating model. When fully staffed and mature, business teams have the option to provide their own operational support for a solution.
+In addition to modern innovative approaches to application creation, there have been notable innovations in application operations. These approaches have spawned many organizational movements. One of the most prominent is the [cloud center of excellence](../../organize/cloud-center-of-excellence.md) operating model. When fully staffed and mature, business teams have the option to provide their own operational support for a solution.
 
 The type of self-service operational management model found in a cloud center of excellence allows for tighter controls and faster iterations within the solution environment. These goals are accomplished by transferring operational control and accountability to the business team.
 
@@ -104,7 +104,7 @@ In parallel, Azure provides serverless transaction data options that also reduce
 
 ## Next steps
 
-Depending on the hypothesis and solution, the principles in this article can aid in designing apps that meet MVP definitions and engage users. Up next are the principles for [empowering adoption](./ci-cd.md), which offer ways to get the application and data into the hands of customers more quickly and efficiently.
+Depending on the hypothesis and solution, the principles in this article can aid in designing applications that meet MVP definitions and engage users. Up next are the principles for [empowering adoption](./ci-cd.md), which offer ways to get the application and data into the hands of customers more quickly and efficiently.
 
 > [!div class="nextstepaction"]
 > [Empower adoption](./ci-cd.md)

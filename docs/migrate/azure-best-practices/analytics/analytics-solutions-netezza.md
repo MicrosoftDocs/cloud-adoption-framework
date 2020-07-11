@@ -183,7 +183,7 @@ Existing system managed zone maps within the source Netezza environment can howe
 **Data partitioning**:
 In an enterprise data warehouse fact tables can contain many billions of rows and partitioning is a way to optimize the maintenance and querying of these tables by splitting them into separate parts to reduce the amount of data processed. The partitioning specification for a table is defined in the CREATE TABLE statement.
 
-Only 1 field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. Note that it is possible to change the partitioning of a table after initial load if necessary, by recreating the table with the new distribution using the CREATE TABLE AS (or CTAS) statement. See <!-- TODO verify link https://docs.microsoft.com/en-us/azure/sql-datawarehouse/sql-data-warehouse-tables-partition --> for a detailed discussion of partitioning in Azure Synapse.
+Only one field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. Note that it is possible to change the partitioning of a table after initial load if necessary, by recreating the table with the new distribution using the CREATE TABLE AS (or CTAS) statement. See <!-- TODO verify link https://docs.microsoft.com/en-us/azure/sql-datawarehouse/sql-data-warehouse-tables-partition --> for a detailed discussion of partitioning in Azure Synapse.
 
 **PolyBase for data loading**:
 PolyBase is the most efficient method for loading large amounts of data into the Warehouse as it is able to leverage parallel loading streams

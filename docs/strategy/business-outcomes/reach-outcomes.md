@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
+<!-- cSpell:ignore Personalizer -->
+
 # Examples of global reach outcomes
 
 As discussed in [Business outcomes](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: reach. Understanding the company's globalization strategy will help to better articulate the business outcomes that are the target of a business's transformation journey.
@@ -23,7 +25,7 @@ Expanding into a new market can be one of the most valuable business outcomes du
 
 - **Example:** A cosmetics manufacturer has identified a trend. Some products are being shipped to the Asia Pacific region even though no sales teams are operating in that region. The minimum systems required by a remote sales force are small, but latency prevents a remote access solution. To capitalize on this trend, the vice president of sales would like to experiment with sales teams in Japan and South Korea. Because the company has undergone a cloud migration, it was able to deploy the necessary systems in both Japan and South Korea within days. This allowed the vice president of sales to grow revenue in the region by _x%_ within three months. Those two markets continue to outperform other parts of the world, leading to sales operations throughout the region.
 
-- **Example:** An online retailer who ships products globally can engage with their customers across time zones and multiple languages using an Azure Bot Service solution together with Cognitive Services such as Translator, Language Understanding, QnA Maker, Text Analytics. This ensures their customers are able to get the information they need when they need it, and it is provided to them in their language. The retailer uses [Personalizer](https://azure.microsoft.com/services/cognitive-services/personalizer/) service to further customize the experience and catalog offerings for their customers, ensuring geographical tastes, preferences, and availability are reflected.
+- **Example:** An online retailer who ships products globally can engage with their customers across time zones and multiple languages using an Azure Bot Service solution together with Cognitive Services such as Translator, Language Understanding (LUIS), QnA Maker, and Text Analytics. This ensures their customers are able to get the information they need when they need it, and it is provided to them in their language. The retailer uses [Personalizer](https://azure.microsoft.com/services/cognitive-services/personalizer/) service to further customize the experience and catalog offerings for their customers, ensuring geographical tastes, preferences, and availability are reflected.
 
 ## Data sovereignty
 
