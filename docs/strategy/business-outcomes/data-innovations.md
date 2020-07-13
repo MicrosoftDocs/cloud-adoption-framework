@@ -29,7 +29,7 @@ There are several business and technology reasons why you should consider migrat
 
 The use cases, business cases and technology advances include:
 
-**Use cases**
+## Use cases
 
 - Connected product innovation
 - Factory of the Future
@@ -47,7 +47,7 @@ The use cases, business cases and technology advances include:
 - Fraud detection
 - Claims analytics
 
-**Business cases**
+## Business cases
 
 - Build end-to-end analytics solutions with a single analytics service
 - Use the Azure Synapse studio, which provides a unified workspace for data prep, data management, data warehousing, big data, and AI tasks
@@ -61,17 +61,17 @@ The use cases, business cases and technology advances include:
 - Automatically protect sensitive data in real-time with dynamic data masking
 - Industry-leading security with built-in security features like automated threat detection and always-on data encryption.
 
-**Buying Drivers**
+## Buying Drivers
 
-- No hardware to buy or maintenance costs – pay only for what you use
+- No hardware to buy or maintenance costs, so you pay only for what you use
 - No infrastructure to manage so you can focus on competitive insights
-- Massively parallel SQL query processing with dynamic scalability1 when you need it and shut down or paused when you don’t
+- Massively parallel SQL query processing with dynamic scalability when you need it and shut down or paused when you don't
 - Ability to independently scale storage from compute
 - Avoiding unnecessary expensive upgrades because of staging areas on your data warehouse are getting too big, using up storage capacity forcing an upgrade – i.e. move the staging area to Azure Data Lake Storage and process with an ETL tool like Azure Data Factory or your existing ETL tool running on Azure at lower cost
-- Extract, Load and Transform (ELT) workloads running on your existing data warehouse DBMS are too expensive with SQL query processing doing the work. This is where you are loading staging tables in your data warehouse DBMS and then running ELT processing by generating SQL, so the DBMS transforms your data from staging to production tables. It’s a very common practice. However, as staging data volumes increase, more storage and compute power underpinning your on-premises data warehouse is being consumed by ELT and is having an impact on query, reporting and analysis workloads that are used to support decisions and drive value. This is forcing expensive hardware upgrades when you could avoid this by doing this processing on the Azure cloud using Azure Data Lake Storage and Azure Data Factory
+- Extract, Load and Transform (ELT) workloads running on your existing data warehouse DBMS are too expensive with SQL query processing doing the work. This is where you are loading staging tables in your data warehouse DBMS and then running ELT processing by generating SQL, so the DBMS transforms your data from staging to production tables. It's a very common practice. However, as staging data volumes increase, more storage and compute power underpinning your on-premises data warehouse is being consumed by ELT and is having an impact on query, reporting and analysis workloads that are used to support decisions and drive value. This is forcing expensive hardware upgrades when you could avoid this by doing this processing on the Azure cloud using Azure Data Lake Storage and Azure Data Factory
 - The cost of data marts is proving too expensive to build due to cost of storage and databases software licenses on on-premises hardware versus in building them on Microsoft Azure Synapse. This is especially the case if your data warehouse is a Data Vault design which often causes an increased demand for data marts
 - There is a need to analyze real-time machine generated data like clickstream and streaming IoT data in your data warehouse but the cost of analyzing and storing this high-velocity, high volume data on-premises hardware is too high and would force expensive upgrades that can require significant capital
-- Although elasticity is about scaling up/out and scaling down, as your Data Warehouse grows you can’t scale down storage and so you are paying a premium for storage on expensive data warehouse hardware in the data center when Azure Synapse can store your data in cloud storage at lower cost
+- Although elasticity is about scaling up/out and scaling down, as your Data Warehouse grows you can't scale down storage and so you are paying a premium for storage on expensive data warehouse hardware in the data center when Azure Synapse can store your data in cloud storage at lower cost
   
 ## Next steps
 

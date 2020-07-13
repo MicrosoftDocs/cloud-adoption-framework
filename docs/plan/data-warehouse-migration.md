@@ -44,7 +44,7 @@ For a data warehouse migration to proceed smoothly your plan should seek to esta
 - Your checkpoints to assess progress and enable decisions to be made
 - Your contingency plan and points of rollback in case things go wrong
 
-In order to do achieve this we need to prepare and set certain wheels in motion before any migration starts. Let’s look at what that entails in more detail.
+In order to do achieve this we need to prepare and set certain wheels in motion before any migration starts. Let's look at what that entails in more detail.
 
 ## Pre-migration preparation
 
@@ -75,7 +75,7 @@ With respect to skills, expertise is important in a data warehouse migration. Th
 
 Another part of preparing to migrate is the need for a full assessment of your existing data warehouse to fully understand the architecture, data stores, schema, business logic, data flows, the DBMS functionality utilized, warehouse operation and the dependencies. The more understanding is gained here the better. A detailed knowledge of how the system works helps to communicate and cover off all bases.
 
-The purpose of the assessment is not just to ensure detailed understanding of the current set-up across the migration team but also to understand strengths and weaknesses in the current setup. The outcome of an assessment of your current data warehouse therefore can impact your migration strategy in terms of ‘lift and shift’ versus something more than that. For example, if the outcome of an assessment is that your data warehouse is at end of life then clearly the strategy would be more of a data migration to a newly designed data warehouse on Azure Synapse versus a lift and shift approach.
+The purpose of the assessment is not just to ensure detailed understanding of the current set-up across the migration team but also to understand strengths and weaknesses in the current setup. The outcome of an assessment of your current data warehouse therefore can impact your migration strategy in terms of lift and shift versus something more than that. For example, if the outcome of an assessment is that your data warehouse is at end of life then clearly the strategy would be more of a data migration to a newly designed data warehouse on Azure Synapse versus a lift and shift approach.
 
 ### On-premises preparation for data migration
 
@@ -203,13 +203,13 @@ The first thing you need for testing is to define a series of tests and a set of
 - Results of all known queries, reports and dashboards
 - Performance and scalability
 - Analytical functionality
-- Costs in what is a new ‘pay as you go’ environment
+- Costs in what is a new pay-as-you-go environment
 
 It is also best practice to automate testing as much as possible, in order to make each test repeatable and to allow a consistent approach to evaluating results. If reports and dashboards are inconsistent, then having the ability to compare metadata lineage across original and migrated systems is extremely valuable during migration testing as it can highlight differences and pinpoint where they occurred when these are not easy to detect.  
 
 In terms of security the best way to do this is to create roles, assign access privileges to roles and then attach users to roles. To access to your newly migrated data warehouse, set up an automated process to create new users and to do role assignment. Do the same to detach uses from roles.  
 
-It is also important to communicate the cut-over to all users, so they know what’s changing and what to expect.
+It is also important to communicate the cutover to all users, so they know what's changing and what to expect.
 
 ## De-risking your DW migration project
 
