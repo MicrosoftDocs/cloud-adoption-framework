@@ -85,11 +85,13 @@ Connect your bot to channels such as Facebook, messenger, Kik, Skype, Slack, Mic
 
 Use the data collected in Azure portal to identify opportunities to improve the capabilities and performance of your bot. You can get service-level and instrumentation data like traffic, latency, and integrations. Analytics also provides conversation-level reporting on user, message, and channel data. For more information, see [How to gather analytics](https://docs.microsoft.com/azure/bot-service/bot-service-manage-analytics?view=azure-bot-service-4.0).
 
+<!-- docsTest:ignore "John Doe" "Jane Doe" -->
+
 ### Patterns for common use cases
 
 There are common patterns used for implementation of a conversational AI application:
 
-- Knowledge base: a knowledge bot can be designed to provide information about virtually any topic. For example, one knowledge bot might answer questions about events such as, "what bot events are there at this conference?", "when is the next reggae show?" Another might answer IT-related questions such as "how do I update my operating system?". Yet another might answer questions about contacts such as "who is john doe?" Or "what is jane doe's email address?"
+- Knowledge base: a knowledge bot can be designed to provide information about virtually any topic. For example, one knowledge bot might answer questions about events such as, "what bot events are there at this conference?", "when is the next reggae show?" Another might answer IT-related questions such as "how do I update my operating system?". Yet another might answer questions about contacts such as "who is John Doe?" Or "what is Jane Doe's email address?"
 
 The design elements to knowledge bots is available in [Design knowledge bots](https://docs.microsoft.com/azure/bot-service/bot-service-design-pattern-knowledge-base?view=azure-bot-service-4.0)
 
