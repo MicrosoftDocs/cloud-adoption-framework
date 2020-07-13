@@ -180,7 +180,7 @@ For more information, see:
 
 ### Database experimentation assistant
 
-Database experimentation assistant (dea) is a new a/B testing solution for SQL Server upgrades. It will assist in evaluating a targeted version of SQL for a given workload. Customers who are upgrading from previous SQL Server versions (SQL Server 2005 and above) to any new version of the SQL Server can use these analysis metrics.
+Database experimentation assistant (DEA) is a new A/B testing solution for SQL Server upgrades. It will assist in evaluating a targeted version of SQL for a given workload. Customers who are upgrading from previous SQL Server versions (SQL Server 2005 and above) to any new version of the SQL Server can use these analysis metrics.
 
 The database experimentation assistant contains the following workflow activities:
 
@@ -194,7 +194,7 @@ For more information, see:
 
 ### Azure Cosmos DB data migration tool
 
-Azure Cosmos DB data migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon dynamodb, and even Azure Cosmos DB SQL API collections. The data migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
+Azure Cosmos DB data migration tool can import data from various sources into Azure Cosmos DB collections and tables. You can import from JSON files, CSV files, SQL, MongoDB, Azure Table storage, Amazon DynamoDB, and even Azure Cosmos DB SQL API collections. The data migration tool can also be used when migrating from a single partition collection to a multipartition collection for the SQL API.
 
 For more information, see:
 
@@ -277,4 +277,4 @@ Here is an example of a tailored learning path on Microsoft Learn that complemen
 
 ## [Cost management](#tab/ManageCost)
 
-As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [optimize and transform](./optimize-and-transform.md)** section.
+As you migrate resources to your cloud environment, it's important to perform periodic cost analysis. This helps you avoid unexpected usage charges, since the migration process can place additional usage requirements on your services. You can also resize resources as needed to balance cost and workload, which is discussed in more detail in the [optimize and transform](./optimize-and-transform.md) section.
