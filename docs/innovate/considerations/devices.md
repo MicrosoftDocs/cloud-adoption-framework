@@ -25,6 +25,8 @@ A standard web experience is the most common application development technique u
 
 ![Ambient experiences](../../_images/innovate/ambient-experiences.png)
 
+<!-- docsTest:ignore "learning with the customer" -->
+
 Ambient experiences typically require more than a web app these days. Through [measurement](./measure.md) and [learning with the customer](./learn.md) the behavior that triggers the customer's need can be observed, tracked, and used to build a more ambient experience. The following list summarizes a few approaches to integration of ambient solutions into your hypotheses, with more details about each in the following paragraphs.
 
 - **[Mobile experience](#mobile-experience):** As with laptops, mobile apps are ubiquitous in customer environments. In some situations, this might provide a sufficient level of interactivity to make a solution ambient.
@@ -59,11 +61,13 @@ Beyond mobile reality or even mixed reality lies integrated reality. Integrated 
 
 This experience is ideal when some form of device is consistently within the same surroundings in which the customer need occurs. Common scenarios include factory floors, elevators, and even your car. These types of large devices already contain compute power. You can also use data from the device itself to detect customer behaviors and send those behaviors to the cloud. This automatic capture of customer behavior data dramatically reduces the need for a customer to input data. Additionally, the web, mobile, or VR experience can function as a feedback loop to share what's been learned from the integrated reality solution.
 
+<!-- docsTest:ignore "advanced computer vision" -->
+
 Examples of integrated reality in Azure could include:
 
 - [Azure Internet of Things (IoT) solutions](https://docs.microsoft.com/azure/iot-fundamentals): A collection of services in Azure that each aid in managing devices and the flow of data from those devices into the cloud and back out to end users.
 - [Azure Sphere](https://docs.microsoft.com/azure-sphere): A combination of hardware and software that provides an intrinsically secure way to enable an existing device to securely transmit data between the device and Azure IoT solutions.
-- [Azure Kinect DK](https://docs.microsoft.com/azure/Kinect-dk), AI sensors with advanced computer vision and speech models. These sensors can collect visual and audio data from the immediate surroundings and feed those inputs into your solution.
+- [Azure Kinect DK](https://docs.microsoft.com/azure/Kinect-dk), AI sensors with advanced Computer Vision and speech models. These sensors can collect visual and audio data from the immediate surroundings and feed those inputs into your solution.
 
 You can use all three of these tools to collect data from the natural surroundings and at the point of customer need. From there, your solution can respond to those data inputs to solve the need, sometimes before the customer is even aware that a trigger for that need has occurred.
 
