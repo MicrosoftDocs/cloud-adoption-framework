@@ -164,7 +164,7 @@ The following steps outline the process to use Site Recovery service to replicat
 1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
 1. In **Operations**, select **Disaster recovery**.
 1. In **Configure disaster recovery** > **Target region** select the target region to which you'll replicate.
-1. For this Quickstart, accept the other default settings.
+1. For this quickstart, accept the other default settings.
 1. Select **Enable replication**. This starts a job to enable replication for the VM.
 
 ::: zone target="chromeless"

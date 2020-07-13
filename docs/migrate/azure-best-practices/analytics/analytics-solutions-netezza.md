@@ -62,7 +62,7 @@ The recommended approach for this is to initially move the existing data model a
 
 It makes sense to automate and orchestrate the migration process by making use of the capabilities in the Azure environment. This approach also minimizes the impact on the existing Netezza environment (which may already be running close to full capacity).
 
-Azure Data Factory is a cloud-based data integration service that allows creation of data-driven workflows in the cloud for orchestrating and automating data movement and data transformation. Using Azure Data Factory, you can create and schedule datadriven workflows (called pipelines) that can ingest data from disparate data stores. It can process and transform the data by using compute services such as Azure HDInsight Hadoop, Spark, Azure Data Lake Analytics, and Azure Machine Learning.
+Azure Data Factory is a cloud-based data integration service that allows creation of data-driven workflows in the cloud for orchestrating and automating data movement and data transformation. Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores. It can process and transform the data by using compute services such as Azure HDInsight Hadoop, Spark, Azure Data Lake Analytics, and Azure Machine Learning.
 
 By creating metadata to list the data tables to be migrated and their location it is possible to use the ADF facilities to manage the migration process.
 
@@ -106,10 +106,10 @@ There are third-party vendors who offer tools and services to automate migration
 **SQL DML syntax differences**:
 There are a few differences in SQL Data Manipulation Language (DML) syntax between Netezza SQL and Azure Synapse to be aware of when migrating:
 
-<!-- TODO this should probably be a code snippet that the user can copy and use -->
+<!-- TODO: this should probably be a code snippet that the user can copy and use -->
 ![SQL query](../../../_images/analytics/sql-query-netezza.png)
 
-### Functions, stored procedures and sequences
+### Functions, stored procedures, and sequences
 
 When migrating from a mature legacy data warehouse environment such as Netezza there are often elements other than simple tables and views that need to be migrated to the new target environment. Examples of this in Netezza are Functions, Stored Procedures and Sequences.
 As part of the preparation phase, an inventory of these objects that are to be migrated should be created and the method of handling them defined, with an appropriate allocation of resources assigned in the project plan.
@@ -176,14 +176,14 @@ CREATE TABLE statements in both Netezza and Azure Synapse allow for specificatio
 Compared to Netezza, Azure Synapse provides an additional way to achieve local joins for small table-large table joins (typically dimension table to fact table in a start schema model) is to replicate the smaller dimension table across all nodes, therefore ensuring any value of the join key of the larger table will have a matching dimension row locally available. The overhead of replicating the dimension tables is relatively low provided the tables are not very large. In this case, the hash distribution approach as described above is more appropriate.
 
 **Data indexing**:
-Azure Synapse provides a number of user definable indexing options, but these are different in operation and usage to the system managed zone maps in Netezza. Understand the different indexing options as described in <!-- TODO verify link  https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-datawarehouse-tables-index -->
+Azure Synapse provides a number of user definable indexing options, but these are different in operation and usage to the system managed zone maps in Netezza. Understand the different indexing options as described in <!-- TODO verify link: https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-datawarehouse-tables-index -->
 
 Existing system managed zone maps within the source Netezza environment can however provide a useful indication of how the data is currently used and provide an indication of candidate columns for indexing within the Azure Synapse environment.
 
 **Data partitioning**:
 In an enterprise data warehouse fact tables can contain many billions of rows and partitioning is a way to optimize the maintenance and querying of these tables by splitting them into separate parts to reduce the amount of data processed. The partitioning specification for a table is defined in the CREATE TABLE statement.
 
-Only 1 field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. Note that it is possible to change the partitioning of a table after initial load if necessary, by recreating the table with the new distribution using the CREATE TABLE AS (or CTAS) statement. See <!-- TODO verify link https://docs.microsoft.com/en-us/azure/sql-datawarehouse/sql-data-warehouse-tables-partition --> for a detailed discussion of partitioning in Azure Synapse.
+Only one field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. Note that it is possible to change the partitioning of a table after initial load if necessary, by recreating the table with the new distribution using the CREATE TABLE AS (or CTAS) statement. See <!-- TODO verify link https://docs.microsoft.com/en-us/azure/sql-datawarehouse/sql-data-warehouse-tables-partition --> for a detailed discussion of partitioning in Azure Synapse.
 
 **PolyBase for data loading**:
 PolyBase is the most efficient method for loading large amounts of data into the Warehouse as it is able to leverage parallel loading streams

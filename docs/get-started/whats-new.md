@@ -24,8 +24,8 @@ Proper configuration of the cloud environment is often the first and most common
 | Article | Description |
 |---|---|
 | [Azure landing zones](../ready/landing-zone/index.md) | Azure landing zones create a common set of design areas and implementation options to accelerate environment creation aligned to the cloud adoption plan and cloud operating model. This new article defines Azure landing zones more clearly. |
-| [Azure landing zones - Design Areas](../ready/landing-zone/design-areas.md) | All Azure landing zones share a common set of 8 design areas. Before deploying any of the Azure landing zones, customers should consider each of these design to make critical decisions. |
-| [Azure landing zones - Implementation Options](../ready/landing-zone/implementation-options.md) | Choose the best Azure landing zone implementation option, depending on your cloud adoption plan and cloud operating model. |
+| [Azure landing zones: Design areas](../ready/landing-zone/design-areas.md) | All Azure landing zones share a common set of 8 design areas. Before deploying any of the Azure landing zones, customers should consider each of these design to make critical decisions. |
+| [Azure landing zones: Implementation Options](../ready/landing-zone/implementation-options.md) | Choose the best Azure landing zone implementation option, depending on your cloud adoption plan and cloud operating model. |
 
 The existing CAF Blueprint definitions and CAF Terraform modules provide a starting point for Azure landing zone implementation. However, several customers have requested a richer implementation option that can meet the demands of enterprise-scale cloud adoption plans. This release adds **CAF Enterprise-scale** to the Azure landing zone implementation options to fill that need. The following lists a few of the articles to get you started with the CAF Enterprise-scale architecture and reference implementations.
 
@@ -36,7 +36,7 @@ The existing CAF Blueprint definitions and CAF Terraform modules provide a start
 | [Enterprise-scale architecture](../ready/enterprise-scale/architecture.md) | Understand the architecture behind enterprise-scale |
 | [Enterprise-scale design principles](../ready/enterprise-scale/design-principles.md) | Understand the architectural design principles that guide decisions during implementation to evaluate if this approach fits your cloud operating model |
 | [Enterprise-scale design guideline](../ready/enterprise-scale/design-guidelines.md) | Evaluate the enterprise-scale guidelines for fulfilling the common design areas of Azure landing zones |
-| [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activites required for an enterprise-scale implementation before deployment |
+| [Implementation guidelines](../ready/enterprise-scale/implementation-guidelines.md) | Review the activities required for an enterprise-scale implementation before deployment |
 
 Partners are an important aspect of successful cloud adoption. Throughout the cloud adoption framework guidance, we have added references to show the important role partners play & how customers can better engage partners. For a list of validated CAF partners, see the [CAF-aligned partner offers](https://aka.ms/adopt/partneroffers), [Azure expert MSP partners](https://www.microsoft.com/en-us/solution-providers/search?cacheId=9c2fed4f-f9e2-42fb-8966-4c565f08f11e), or [Advanced specialist partners](https://www.microsoft.com/azure/partners/advspec).
 

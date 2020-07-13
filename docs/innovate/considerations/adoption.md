@@ -33,7 +33,7 @@ Each phase of the process helps you build better solutions with your customers.
 
 ## Next steps
 
-Learn how to [Build with customer empathy](./build.md) to begin your build-measure-learn cycle.
+Learn how to [build with customer empathy](./build.md) to begin your build-measure-learn cycle.
 
 > [!div class="nextstepaction"]
 > [Build with customer empathy](./build.md)

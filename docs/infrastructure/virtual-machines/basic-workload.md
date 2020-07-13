@@ -33,7 +33,7 @@ Regardless of whether the workload is a web application or a VM, each of these d
 For a basic web application, select one of the 5-minute quickstarts from the [web apps documentation](https://docs.microsoft.com/azure/app-service) and follow the steps.
 
 > [!NOTE]
-> Some of the Quickstart guides will deploy a resource group by default. In this case, it's not necessary to create a resource group explicitly. Otherwise, deploy the web application to the resource group created above.
+> Some quickstart guides deploy a resource group by default. In this case, it's not necessary to create a resource group explicitly. Otherwise, deploy the web application to the resource group created above.
 
 Once you deploy a simple workload, you can learn more about best practices for deploying a [basic web application](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app) to Azure.
 

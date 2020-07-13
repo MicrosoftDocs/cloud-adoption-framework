@@ -1,6 +1,6 @@
 ---
 title: Empower adoption with digital invention
-description: Use the maturity model of the innovate methodology to reduce friction that slows adoption, while keeping best practices in place.
+description: Use the maturity model of the Innovate methodology to reduce friction that slows adoption, while keeping best practices in place.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -21,7 +21,7 @@ There are a few key friction points to adoption that can be minimized through a 
 
 As described in [Measure for customer impact](./measure.md), positive validation of any hypothesis requires iteration and determination. You'll experience far more failures than wins during any innovation cycle. This is expected. However, when a customer need, hypothesis, and solution align at scale, the world changes quickly. This article aims to minimize [technical spikes](./build.md#reduce-complexity-and-delay-technical-spikes) that slow innovation but still make sure you keep a few solid best practices in place. Doing so will help the team design for future success while delivering on current customer needs.
 
-## Empower adoption: the maturity model
+## Empower adoption: The maturity model
 
 The primary objective of the [Innovate methodology](./index.md) is to build customer partnerships and accelerate feedback loops, which will lead to market innovations. The following image and sections describe initial implementations that support this methodology.
 
@@ -42,7 +42,7 @@ As described in [Measure for customer impact](./measure.md), positive validation
 
 When you're scaling innovation, there's no more valuable tool than a shared code base for the solution. Unfortunately, there's no reliable way of predicting which iteration or which MVP will yield the winning combination. That's why it's never too early to establish a shared code base or repository. This is the one [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) that should never be delayed. As the team iterates through various MVP solutions, a shared repo enables easy collaboration and accelerated development. When changes to the solution drag down learning metrics, version control lets you roll back to an earlier, more effective version of the solution.
 
-The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops) feature of Azure DevOps can be used to create a [Git](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git) or [Team Foundation](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc) repository.
+The most widely adopted tool for managing code repositories is [GitHub](https://guides.github.com), which lets you create a shared code repository in just a few steps. Additionally, the [Azure Repos](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops) feature of Azure DevOps can be used to create a [Git](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#git) or [team foundation](https://docs.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops#tfvc) repository.
 
 ## Feedback loops
 
@@ -58,8 +58,7 @@ As adoptions scale and a hypothesis gets closer to true innovation at scale, the
 
 In continuous integration, code changes are frequently merged into the main branch. Automated build and test processes make sure that code in the main branch is always production quality. This ensures that developers are working together to develop shared solutions that provide accurate and reliable feedback loops.
 
-Azure DevOps and [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines) provide continuous integration capabilities with just a few steps in GitHub or a variety of other repositories.
-Learn more about [continuous integration](https://docs.microsoft.com/azure/devops/learn/what-is-continuous-integration), or for more information, check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration). There are also solution architectures to accelerate creation of your [CI/CD pipelines through Azure DevOps](https://azure.microsoft.com/solutions/devops).
+Azure DevOps and [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines) provide continuous integration capabilities with just a few steps in GitHub or a variety of other repositories. Learn more about [continuous integration](https://docs.microsoft.com/azure/devops/learn/what-is-continuous-integration) or check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration). There are also solution architectures to accelerate creation of your [CI/CD pipelines through Azure DevOps](https://azure.microsoft.com/solutions/devops).
 
 ## Reliable testing
 

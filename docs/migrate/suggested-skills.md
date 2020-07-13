@@ -19,7 +19,7 @@ There are four distinct processes that are completed iteratively in the Migrate 
 
 ## Prerequisites skilling resources
 
-Implementation of Migrate processes will build on the skills acquired during the [Plan](../strategy/suggested-skills.md) and [Ready](../organize/suggested-skills.md) phases of the migration journey.
+Implementation of the Migrate methodology will build on the skills acquired during the [Plan](../strategy/suggested-skills.md) and [Ready](../organize/suggested-skills.md) phases of the migration journey.
 
 ## Assess skilling resources
 

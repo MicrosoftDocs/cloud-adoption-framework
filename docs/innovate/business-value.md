@@ -38,9 +38,11 @@ If one or two of the answers are directionally aligned, recognize that your hard
 
 If either team fails to answer all four questions in 30 minutes, then alignment and the considerations in the following sections are likely to have a significant impact on this effort and others. Pay careful attention to each of the following sections.
 
+<!-- docsTest:ignore "Strategy, Plan, Ready, and Adopt" -->
+
 ## Address the big picture first
 
-The Cloud Adoption Framework follows a prescribed path through these phases: strategy, plan, ready, and adopt. Cloud innovation fits within the adopt phase of this process. The answers to [qualifying questions](#qualifying-questions) three and four concern outcomes and motivations. When these answers are misaligned, it indicates that your organization missed something during the strategy phase of the cloud adoption lifecycle. Several of the following scenarios are likely to be at play.
+The Cloud Adoption Framework follows a prescribed path through four phases: Strategy, Plan, Ready, and Adopt. Cloud innovation fits within the Adopt phase of this process. The answers to [qualifying questions](#qualifying-questions) three and four concern outcomes and motivations. When these answers are misaligned, it indicates that your organization missed something during the Strategy phase of the cloud adoption lifecycle. Several of the following scenarios are likely to be at play.
 
 - **Alignment opportunity:** When business stakeholders can't agree on motivations and business outcomes related to a cloud innovation effort, it's a symptom of a larger challenge. The exercises in the [Strategy methodology](../strategy/index.md) can be useful in developing alignment among business stakeholders. Additionally, it's highly recommended that the same stakeholders form a [cloud strategy team](../organize/cloud-strategy.md) that meets regularly.
 

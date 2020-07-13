@@ -174,7 +174,7 @@ Example:
         ],
         "properties": {
           "policyDefinitions": [
-                <copy-paste of Json representation of the resource>
+                <copy-paste of JSON representation of the resource>
           ],
           "policyAssignments" :[
           ],

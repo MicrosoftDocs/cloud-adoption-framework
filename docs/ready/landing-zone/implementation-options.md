@@ -30,7 +30,7 @@ Some of the implementation options for landing zones and the variables that may 
 <!-- docsTest:ignore "CAF Enterprise-scale" "CAF Terraform" -->
 
 | Implementation option | Description | Deployment velocity | Deeper design principles | Deployment instructions |
-|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|
 | [CAF Migration landing zone blueprint](./migrate-landing-zone.md) | Deploys the basic foundation for migrating low risk assets. | Start small | [Design principles](./migrate-landing-zone.md#design-principles) | [Deploy](./migrate-landing-zone.md) |
 | [CAF Foundation blueprint](./foundation-blueprint.md) | Adds the minimum tools need to begin developing a governance strategy. | Start small | [Design principles](./foundation-blueprint.md#design-principles) | [Deploy](./foundation-blueprint.md) |
 | [CAF Enterprise-scale landing zone](./enterprise-scale.md) | Deploys an enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio. | Enterprise-scale | [Design principles](../enterprise-scale/design-principles.md) | [Deploy](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md) |

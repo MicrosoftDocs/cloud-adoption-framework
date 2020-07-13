@@ -52,7 +52,6 @@ A standardized naming convention is the starting point for organizing your cloud
 > [!NOTE]
 > [Naming rules and restrictions](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules) vary per Azure resource. Your naming conventions must comply with these rules.
 
-
 ## Resource tagging patterns
 
 For more sophisticated organization than a consistent naming convention only can provide, cloud platforms support the ability to tag resources.
@@ -74,11 +73,10 @@ The common tagging patterns listed below provide examples of how tagging can be 
 | Tag type | Examples | Description |
 |-----|-----|-----|
 | Functional | app&nbsp;=&nbsp;catalogsearch1 <br> tier&nbsp;=&nbsp;web <br> webserver&nbsp;=&nbsp;apache <br> env&nbsp;=&nbsp;prod <br> env&nbsp;=&nbsp;staging <br> env&nbsp;=&nbsp;dev | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |
-| Classification | confidentiality&nbsp;=&nbsp;private <br> SLA&nbsp;=&nbsp;24hours | Classifies a resource by how it is used and what policies apply to it. |
+| Classification | confidentiality&nbsp;=&nbsp;private <br> SLA&nbsp;=&nbsp;24 hours | Classifies a resource by how it is used and what policies apply to it. |
 | Accounting | department&nbsp;=&nbsp;finance <br> program&nbsp;=&nbsp;business-initiative <br> region&nbsp;=&nbsp;northamerica | Allows a resource to be associated with specific groups within an organization for billing purposes. |
 | Partnership | owner&nbsp;=&nbsp;jsmith <br> contactalias&nbsp;=&nbsp;catsearchowners <br> stakeholders&nbsp;=&nbsp;user1;user2;user3 | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
 | Purpose | businessprocess&nbsp;=&nbsp;support <br> businessimpact&nbsp;=&nbsp;moderate <br> revenueimpact&nbsp;=&nbsp;high | Aligns resources to business functions to better support investment decisions. |
-
 
 <!-- docsTest:enable -->
 <!-- markdownlint-enable MD033 -->

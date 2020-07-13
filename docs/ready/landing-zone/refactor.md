@@ -19,7 +19,7 @@ The Ready methodology uses the concept of refactoring to accelerate migration an
 
 ## Common blockers
 
-When customers adopt the cloud, landing zone considerations are the single most common blocker to adoption and cloud-related business results. Customers tend to lean towards one of the following two blockers. Often times various teams will each lean towards one of these two blockers, resulting in cultural deadlocks that make adoption difficult.
+When customers adopt the cloud, landing zone considerations are the single most common blocker to adoption and cloud-related business results. Customers tend to lean towards one of the following two blockers. Various teams often lean towards one of these two blockers, resulting in cultural deadlocks that make adoption difficult.
 
 Both of the primary blockers are rooted in one belief, the cloud environment and the existing datacenters should be at or near feature parity regarding operations, governance, and security. This is a wise long-term goal. But the pain comes from the delicate balance between the timing to achieve that goal and the speed required to deliver business results.
 

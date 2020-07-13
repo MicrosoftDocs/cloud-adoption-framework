@@ -17,7 +17,7 @@ In a cloud migration, assets are replicated and synchronized over the network be
 
 ## General scope expansion
 
-Most of this effort required in this scope expansion will occur during the prerequisites, assess, and migrate processes of a migration.
+Most of this effort required in this scope expansion will occur during the Prerequisites, Assess, and Migrate phases of a migration.
 
 ## Suggested prerequisites
 
@@ -48,11 +48,11 @@ If connectivity to Azure is available, an analysis should be conducted before us
 
 **Drift analysis:** Each asset to be transferred offline should be analyzed for storage and configuration drift. Storage drift is the amount of change in the underlying storage over time. Configuration drift is change in the configuration of the asset over time. From the time the storage is copied to the time the asset is promoted to production, any drift could be lost. If that drift needs to be reflected in the migrated asset, some form of synchronization would be required, between the local asset and the migrated asset. This should be flagged for consideration during migration execution.
 
-## Migrate process changes
+## Migration process changes
 
 When using offline transfer mechanisms, [replication processes](../migration-considerations/migrate/replicate.md) are not likely required. However, [synchronization processes](../migration-considerations/migrate/replicate.md) may still be a requirement. Understanding the results of the drift analysis completed during the Assess process will inform the tasks required during migration, if an asset is being transferred offline.
 
-### Suggested action during the migrate process
+### Suggested action during the migration process
 
 **Copy storage:** This approach could be used to transfer data of HDFS, backups, archives, file servers, or applications. Existing technical guidance explains how to use this approach to transfer data from an [HDFS store](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster) or from disks using [SMB](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data), [NFS](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-nfs), [REST](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
 

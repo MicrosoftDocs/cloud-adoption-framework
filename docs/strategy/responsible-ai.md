@@ -9,9 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
+<!-- docsTest:ignore InterpretML FairLearn -->
+
 # Responsible AI
 
-We are committed to the advancement of Artificial Intelligence (AI) driven by ethical principles that put people first. We want to partner with you to support this endeavor.
+We are committed to the advancement of AI, driven by ethical principles that put people first. We want to partner with you to support this endeavor.
 
 ## Responsible AI Principles
 

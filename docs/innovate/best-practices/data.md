@@ -41,8 +41,8 @@ In Azure, the following tools are commonly used to accelerate digital invention 
 - [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql)
 - [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql)
 - [Azure Database for MariaDB](https://docs.microsoft.com/azure/mariadb)
-- [Azure Database for PostgreSQL Hyperscale](https://docs.microsoft.com/azure/postgresql/concepts-hyperscale-nodes)
-- [Azure Data Lake](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Database for PostgreSQL hyperscale](https://docs.microsoft.com/azure/postgresql/concepts-hyperscale-nodes)
+- [Azure Data Lake Storage](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
 - [Azure Database Migration Service](https://docs.microsoft.com/azure/dms)
 - [Azure SQL Database, with or without Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database)
 - [Azure Data Factory](https://docs.microsoft.com/azure/data-factory)
@@ -52,7 +52,7 @@ In Azure, the following tools are commonly used to accelerate digital invention 
 - [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database)
 - [Microsoft Azure StorSimple](https://docs.microsoft.com/azure/storsimple)
 - [Azure Files](https://docs.microsoft.com/azure/storage/files)
-- [Azure File Sync](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)
+- [Azure file sync](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)
 - [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase)
 
 As the invention approaches adoption at scale, the aspects of each solution require refinement and technical maturity. As that happens, more of these services are likely to be required. Use the table of contents on the left side of this page for Azure tools guidance relevant to your hypothesis-testing process.
