@@ -166,7 +166,7 @@ items:
       items:
       - name: Setup guide overview
         href: ready/azure-setup-guide/index.md
-      - name: Organize your resources
+      - name: Organize resources
         href: ready/azure-setup-guide/organize-resources.md
       - name: Manage access
         href: ready/azure-setup-guide/manage-access.md
