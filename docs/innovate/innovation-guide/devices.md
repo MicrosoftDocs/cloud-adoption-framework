@@ -13,17 +13,7 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore umarmohamedusman umarm Moovit -->
 
-::: zone target="docs"
-
-# Azure innovation guide: Interact through devices
-
-::: zone-end
-
-::: zone target="chromeless"
-
 # Interact through devices
-
-::: zone-end
 
 Innovate through intermittently connected and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with artificial intelligence (AI) technology, you can build every type of intelligent application and system you can envision.
 
@@ -59,7 +49,6 @@ Here are a few features you'll find:
 ### Learn more
 
 - [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-
 - [Azure IoT Hub Device Provisioning Service (DPS)](https://docs.microsoft.com/azure/iot-dps)
 
 ::: zone-end
@@ -186,6 +175,8 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ::: zone target="docs"
 
+### Learn more
+
 - [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview)
 
 ::: zone-end
@@ -218,7 +209,6 @@ The process of rendering is computationally intensive. There can be many frames 
 ### Learn more
 
 - [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/overview/about)
-
 - [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)
 
 ::: zone-end

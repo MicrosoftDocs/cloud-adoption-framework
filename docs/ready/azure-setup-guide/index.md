@@ -13,18 +13,12 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore timleyden -->
 
-::: zone target="docs"
+# Azure setup guide overview
 
-# Azure setup guide: Before you start
+::: zone target="docs"
 
 > [!NOTE]
 > This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in Azure Quickstart Center. See the tip in the article for a link.
-
-::: zone-end
-
-::: zone target="chromeless"
-
-# Before you start
 
 ::: zone-end
 
