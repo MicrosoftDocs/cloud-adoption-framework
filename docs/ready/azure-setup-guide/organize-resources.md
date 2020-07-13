@@ -60,6 +60,9 @@ Use subscriptions to manage costs and resources that are created by users, teams
 1. Go to [subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
 1. Select **Add**.
 
+> [!NOTE]
+> Subscriptions can also be created programmatically. For more information, see [Programmatically create Azure subscriptions](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/programmatically-create-subscription?tabs=azure-powershell).
+
 ### Create a resource group
 
 Create a resource group to hold resources like web apps, databases, and storage accounts that share the same lifecycle, permissions, and policies.
