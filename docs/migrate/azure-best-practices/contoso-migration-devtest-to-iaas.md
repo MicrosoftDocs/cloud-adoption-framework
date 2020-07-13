@@ -193,7 +193,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 3. Install the [Azure Windows agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-windows) and the [Azure Linux agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-linux).
 
-For Windows, there shouldn't be Windows updates pending on the VM when you're triggering a migration. If there are, you won't be able to log in to the VM until the update finishes. After migration, you can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, verify that the VM is running and review [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+For Windows, there shouldn't be Windows updates pending on the VM when you're triggering a migration. If there are, the admins won't be able to log in to the VM until the update finishes. After migration, they can check **Boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running and review [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 
@@ -203,14 +203,14 @@ Learn how to [prepare VMs for migration](https://docs.microsoft.com/azure/migrat
 
 Before Contoso admins can run a migration to Azure, they need to set up and enable replication. With discovery completed, they can begin replicating VMware VMs to Azure.
 
-1. In the Azure Migrate project > **Servers** > **Azure Migrate: Server Migration**, select **Replicate**.
+1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**. Then select **Replicate**.
 
-    ![Replicate VMs](./media/contoso-migration-devtest-to-iaas/select-replicate.png)
+    ![Screenshot that shows the Replicate button under migration tools.](./media/contoso-migration-devtest-to-iaas/select-replicate.png)
     _Figure 8: Replicating VMs._
 
 2. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
 
-3. In **On-premises appliance**, select the name of the Azure Migrate appliance that you set up, then select **OK**.
+3. In **On-premises appliance**, select the name of the Azure Migrate appliance that you set up, and then select **OK**.
 
     ![Source settings](./media/contoso-migration-devtest-to-iaas/source-settings.png)
     _Figure 9: The source settings._
