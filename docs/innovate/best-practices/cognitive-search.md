@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
+<!-- cSpell:ignore Lucene -->
+
 <!-- docsTest:ignore "Azure Search" "JFK Files" -->
 
 # What is Azure Cognitive Search?
@@ -29,13 +31,13 @@ Azure Cognitive Search is well suited for the following application scenarios:
 - Raw content is large undifferentiated text, image files, or application files such as Microsoft Office content types on an Azure data source such as Azure Blob storage or Azure Cosmos DB. You can apply cognitive skills during indexing to add structure or extract meaning from image and application files.
 - Easy implementation of search-related features. Azure Cognitive Search APIs simplify query construction, faceted navigation, filters (including geo-spatial search), synonym mapping, type-ahead queries, and relevance tuning. Using built-in features, you can satisfy end-user expectations for a search experience similar to commercial web search engines.
 - Indexing unstructured text, or extracting text and information from image files. The [AI enrichment](https://docs.microsoft.com/azure/search/cognitive-search-concept-intro) feature of Azure Cognitive Search adds AI processing to an indexing pipeline. Some common use-cases include ocr over scanned document, entity recognition and key phrase extraction over large documents, language detection and text translation, and sentiment analysis.
-- Linguistic requirements satisfied using the custom and language analyzers of Azure Cognitive Search. If you have non-english content, Azure Cognitive Search supports both Lucene analyzers and Microsoft's natural language processors. You can also configure analyzers to achieve specialized processing of raw content, such as filtering out diacritics.
+- Linguistic requirements satisfied using the custom and language analyzers of Azure Cognitive Search. If you have non-English content, Azure Cognitive Search supports both Lucene analyzers and Microsoft's natural language processors. You can also configure analyzers to achieve specialized processing of raw content, such as filtering out diacritics.
 
 ## How to use Azure Cognitive Search
 
 ### Step 1: Provision service
 
-You can provision an Azure Cognitive Search service in the [Azure portal](https://portal.azure.com/) or through the [Azure resource management API](https://docs.microsoft.com/rest/api/searchmanagement/). You can choose either the free service shared with other subscribers, or a paid tier that dedicates resources used only by your service. For paid tiers, you can scale a service in two dimensions:
+You can provision an Azure Cognitive Search service in the [Azure portal](https://portal.azure.com/) or through the [Azure Resource Manager REST API](https://docs.microsoft.com/rest/api/searchmanagement/). You can choose either the free service shared with other subscribers, or a paid tier that dedicates resources used only by your service. For paid tiers, you can scale a service in two dimensions:
 
 - Add replicas to grow your capacity to handle heavy query loads.
 - Add partitions to grow storage for more documents.

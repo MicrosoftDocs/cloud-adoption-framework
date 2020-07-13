@@ -1,6 +1,6 @@
 ---
 title: Empower adoption with digital invention
-description: Use the maturity model of the innovate methodology to reduce friction that slows adoption, while keeping best practices in place.
+description: Use the maturity model of the Innovate methodology to reduce friction that slows adoption, while keeping best practices in place.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019

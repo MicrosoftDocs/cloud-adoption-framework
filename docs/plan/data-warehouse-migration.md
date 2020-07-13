@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
+<!-- cSpell:ignore Informatica gzipped Attunity -->
+
 # Plan a data warehouse migration
 
 A data warehouse migration is a challenge for any company. In order to do this well and avoid any unwelcome surprises and unplanned costs you need to thoroughly research the challenge, mitigate risk and plan your migration ensure you are ready as possible. At a high level, your plan should cover the core data warehouse migration process steps and any tasks within them. The main process steps are:
@@ -57,7 +59,7 @@ Key roles in a migration project include:
 - Project coordinator
 - Cloud engineer
 - Database administrator (existing data warehouse DBMS and Azure Synapse)
-- Data modeler(s)
+- Data modelers
 - ETL developers
 - Data virtualization specialist (could be a DBA)
 - Testing engineer
@@ -67,7 +69,7 @@ In addition the team need the support of your on-premises infrastructure team.
 
 ### Skills and training to ready the team for migration
 
-With respect to skills, expertise is important in a data warehouse migration. Therefore, ensure the appropriate members of your migration team are trained in Azure cloud fundamentals, Azure Blob Store, Azure Data Lake Storage, Azure Data box, Azure ExpressRoute, Azure identity management, Azure Data Factory and Azure Synapse. Your data modelers will most likely need to fine-tune your Microsoft Azure Synapse data model(s) once migration from your existing data warehouse has occurred.
+With respect to skills, expertise is important in a data warehouse migration. Therefore, ensure the appropriate members of your migration team are trained in Azure cloud fundamentals, Azure Blob Store, Azure Data Lake Storage, Azure Data box, Azure ExpressRoute, Azure identity management, Azure Data Factory and Azure Synapse. Your data modelers will most likely need to fine-tune your Microsoft Azure Synapse data models once migration from your existing data warehouse has occurred.
 
 ### Assessing your existing data warehouse
 
@@ -128,7 +130,7 @@ Types of goal and metric examples:
 
 - Tasks automated, administrative headcount
 
-A successful data warehouse migration could therefore be interpreted as a data warehouse that runs as fast or faster and at lower cost than the legacy system you migrated from. Assigning owners of these goals creates accountability for reaching them. It also ensures that testing in a proof of concept lab (as defined in the derisking section in this guide) will be deemed successful if the tests identify ways that the goals can be achieved.
+A successful data warehouse migration could therefore be interpreted as a data warehouse that runs as fast or faster and at lower cost than the legacy system you migrated from. Assigning owners of these goals creates accountability for reaching them. It also ensures that testing in a proof of concept lab (as defined in the de-risking section in this guide) will be deemed successful if the tests identify ways that the goals can be achieved.
 
 ### Migration approach
 
@@ -197,7 +199,7 @@ The first thing you need for testing is to define a series of tests and a set of
 - All rows are correct in all tables including history
 - Slowly changing dimension processing
 - Change data capture processing
-- Calculations and aggregations that leverage functions that could differ across systems
+- Calculations and aggregations that use functions that could differ across systems
 - Results of all known queries, reports and dashboards
 - Performance and scalability
 - Analytical functionality
@@ -213,7 +215,7 @@ It is also important to communicate the cut-over to all users, so they know what
 
 Another critical factor in data warehouse migration is de-risking the project in order to maximize the likelihood of a success. There are several things that can be done to de-risk a data warehouse migration. They include:
 
-- Establishing a proof of concept (POC) lab to enable your team to try things, conduct tests, understand any issues and identify fixes and optimizations that help that validate migration approaches, improve performance and lower costs. It also helps establish ways to automate tasks, leverage built-in tools and build templates to capture best practice, learn from the experience and keep track of lessons learned. It is an invaluable way to mitigate risk and increase your chances of success. In addition, you can assign owners to tests who are accountable for achieving migration goals and targets as defined in your migration strategy
+- Establishing a proof of concept (POC) lab to enable your team to try things, conduct tests, understand any issues and identify fixes and optimizations that help that validate migration approaches, improve performance and lower costs. It also helps establish ways to automate tasks, use built-in tools and build templates to capture best practice, learn from the experience and keep track of lessons learned. It is an invaluable way to mitigate risk and increase your chances of success. In addition, you can assign owners to tests who are accountable for achieving migration goals and targets as defined in your migration strategy.
 - Introduce data virtualization between BI tools and your data warehouse and data marts. Introduce user transparency using data virtualization to reduce risk in a data warehouse migration, and hide the migration from users by using data virtualization BI tools, as shown in the following diagram.
 
 ![Data warehouse migration diagram](../_images/data-warehouse-migration.png)
@@ -228,6 +230,6 @@ The purpose of this is to break the dependency between business users utilizing 
 - Considering a strategy to migrate data marts first followed by the data warehouse that is the source to the data marts. The reason for this is that it enables incremental migration, it makes it more manageable and it is possible to prioritize migration based on business needs
 - Considering the possibility of using data virtualization to simplify your current data warehouse architecture before you migrate, for example, to replace data marts with virtual data marts so that you can eliminate physical data stores and ETL jobs for data marts without losing any functionality prior to migration. Doing this would reduce the number of data stores to migrate, reduce copies of data, reduce the total cost of ownership and improve agility. This requires switching from physical to virtual data marts before migrating your data warehouse. In many ways you could consider this a data warehouse modernization step prior to migration.
 
-## Next step
+## Next steps
 
 For more information on data warehouse migrations, attend a virtual [Azure Analytics workshop with Informatica](https://now.informatica.com/Microsoft_CDW_Workshops.html#fbid=uqwtl_SXNFV).

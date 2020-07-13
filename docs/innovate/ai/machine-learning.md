@@ -56,7 +56,7 @@ Common scenarios for machine learning solutions include:
 
 - [Review reference architectures for AI solutions](https://docs.microsoft.com/azure/architecture/browse/#ai--machine-learning)
 
-## Next step
+## Next steps
 
 Explore other AI solution categories:
 

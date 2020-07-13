@@ -50,10 +50,10 @@ Learn how to add Cognitive Services to make your bot even more intelligent.
 - [A developer's guide to building AI applications](https://www.oreilly.com/library/view/a-developers-guide/9781492080619/) (e-book)
 - [Learn more about Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/)
 
-Learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills (for example, calendar, e-mail, point of interest, to-do).
+Learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills such as calendar, e-mail, point of interest, and to-do.
 
 - [Bot Framework Virtual Assistant solution](https://microsoft.github.io/botframework-solutions/index)
 
-## Next step
+## Next steps
 
 [Knowledge mining](./knowledge-mining.md)

@@ -63,7 +63,7 @@ The use cases, business cases and technology advances include:
 
 **Buying Drivers**
 
-- No hardware to buy or maintenance  costs – pay only for what you use
+- No hardware to buy or maintenance costs – pay only for what you use
 - No infrastructure to manage so you can focus on competitive insights
 - Massively parallel SQL query processing with dynamic scalability1 when you need it and shut down or paused when you don’t
 - Ability to independently scale storage from compute

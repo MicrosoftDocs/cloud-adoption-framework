@@ -42,7 +42,7 @@ Key scenarios for knowledge mining include:
   - [Design tips and tricks for AI enrichment](https://docs.microsoft.com/azure/search/cognitive-search-concept-troubleshooting)
   - [Full text search](https://docs.microsoft.com/azure/search/search-lucene-query-architecture)
 
-## Next step
+## Next steps
 
 Best practices: innovating with AI
 <!-- TODO: Need more information here. -->

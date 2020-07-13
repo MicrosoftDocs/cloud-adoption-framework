@@ -76,13 +76,15 @@ Azure Cognitive Services provides a layered security model, including [authentic
 
 Cognitive Services provides containers for deployment in the Azure cloud or on-premises. Learn more about [Cognitive Services containers](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-container-support).
 
+<!-- docsTest:ignore "HIPAA BAA" "CSA STAR" -->
+
 ### Certifications and compliance
 
-Cognitive Services has been awarded certifications such as csa star certification, FedRAMP Moderate, and HIPAA baa.
+Cognitive Services has been awarded certifications such as CSA STAR certification, FedRAMP Moderate, and HIPAA BAA.
 
 You can [download](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) certifications for your own audits and security reviews.
 
-To understand privacy and data management, go to the [trust center](https://servicetrust.microsoft.com/).
+To understand privacy and data management, go to the [Microsoft Trust Center](https://servicetrust.microsoft.com/).
 
 ## How are Cognitive Services and Azure Machine Learning similar?
 
@@ -93,7 +95,7 @@ Both have the end-goal of applying AI to enhance business operations, though how
 
 ## How is a cognitive service different from machine learning?
 
-A cognitive service provides a trained model for you. This brings data and an algorithm together, available from a REST API(s) or SDK. You can implement this service within minutes, depending on your scenario. A cognitive service provides answers to general problems such as key phrases in text or item identification in images.
+A cognitive service provides a trained model for you. This brings data and an algorithm together, available from a REST API or SDK. You can implement this service within minutes, depending on your scenario. A cognitive service provides answers to general problems such as key phrases in text or item identification in images.
 
 Machine learning is a process that generally requires a longer period of time to implement successfully. This time is spent on data collection, cleaning, transformation, algorithm selection, model training, and deployment to get to the same level of functionality provided by a cognitive service. With machine learning, it is possible to provide answers to highly specialized and/or specific problems. Machine learning problems require familiarity with the specific subject matter and data of the problem under consideration, as well as expertise
 

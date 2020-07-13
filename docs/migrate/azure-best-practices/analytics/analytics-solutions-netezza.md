@@ -176,7 +176,7 @@ CREATE TABLE statements in both Netezza and Azure Synapse allow for specificatio
 Compared to Netezza, Azure Synapse provides an additional way to achieve local joins for small table-large table joins (typically dimension table to fact table in a start schema model) is to replicate the smaller dimension table across all nodes, therefore ensuring any value of the join key of the larger table will have a matching dimension row locally available. The overhead of replicating the dimension tables is relatively low provided the tables are not very large. In this case, the hash distribution approach as described above is more appropriate.
 
 **Data indexing**:
-Azure Synapse provides a number of user definable indexing options, but these are different in operation and usage to the system managed zone maps in Netezza. Understand the different indexing options as described in <!-- TODO verify link  https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-datawarehouse-tables-index -->
+Azure Synapse provides a number of user definable indexing options, but these are different in operation and usage to the system managed zone maps in Netezza. Understand the different indexing options as described in <!-- TODO verify link: https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-datawarehouse-tables-index -->
 
 Existing system managed zone maps within the source Netezza environment can however provide a useful indication of how the data is currently used and provide an indication of candidate columns for indexing within the Azure Synapse environment.
 

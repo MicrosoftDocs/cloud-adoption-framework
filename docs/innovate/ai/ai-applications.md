@@ -29,7 +29,7 @@ As you get started, the checklist and resources below will help you plan your ap
 
 - Are you familiar with the multitude of capabilities and services offered within Azure Cognitive Services, and which ones in particular you will be using?
 - Determine whether or not you have custom data with which you want to train and customize these models. There are Cognitive Services that are customizable.
-- There are several ways to use Azure Cognitive Services. Explore the quickstart tutorials for getting up and running for both SDK and REST APIs. Note: the Cognitive Services SDKs are available for many popular dev languages, including C#, Python, Java, JavaScript and go.
+- There are several ways to use Azure Cognitive Services. Explore the quickstart tutorials for getting up and running for both SDK and REST APIs. Note: the Cognitive Services SDKs are available for many popular dev languages, including C#, Python, Java, JavaScript and Go.
 - Determine if you will need to deploy these Cognitive Services in containers.
 
 ## AI applications checklist
@@ -42,13 +42,15 @@ To get started, first familiarize yourself with the various categories and servi
 
 Select the service you want to use across vision, language, speech, decision, or web search. Each category on the page offers a set of quick starts, tutorials, how-to guides, whether you want to use the REST API or SDKs.
 
-You can also download the intelligent kiosk to experience and demo these services.
+<!-- docsTest:ignore "Intelligent Kiosk" -->
+
+You can also download the Intelligent Kiosk to experience and demo these services.
 
 - [Cognitive Services documentation](https://docs.microsoft.com/azure/cognitive-services/)
 - [Building intelligent applications with cognitive APIs](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/) (e-book)
-- [Install the intelligent kiosk to familiarize yourself with Cognitive Services capabilities](https://github.com/Microsoft/Cognitive-Samples-IntelligentKiosk)
+- [Install the Intelligent Kiosk to familiarize yourself with Cognitive Services capabilities](https://github.com/Microsoft/Cognitive-Samples-IntelligentKiosk)
 
-Learn more about container support for Azure Cognitive Services
+Learn more about container support for Azure Cognitive Services.
 
 - [Container support in Azure Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-container-support?tabs=luis)
 
@@ -97,10 +99,13 @@ Learn how to add Cognitive Services to make your bot even more intelligent.
 - [A developer's guide to building AI applications](https://www.oreilly.com/library/view/a-developers-guide/9781492080619/) (e-book)
 - [Learn more about Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/)
 
-Learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills (for example, calendar, e-mail, point of interest, to-do).
+Learn how to build your own Virtual Assistant with Bot Framework solution accelerators, and select a common set of skills such as calendar, e-mail, point of interest, and to-do.
 
 - [Bot Framework Virtual Assistant solution](https://microsoft.github.io/botframework-solutions/index)
 
-## Next step
+## Next steps
 
-Explore other AI solution categories: [Machine learning](./machine-learning.md), [knowledge mining](./knowledge-mining.md)
+Explore other AI solution categories:
+
+- [Machine learning](./machine-learning.md)
+- [Knowledge mining](./knowledge-mining.md)
