@@ -1,9 +1,9 @@
 ---
 title: "Analytics solutions"
 description: Use the Cloud Adoption Framework for Azure to learn about analytic solutions with Teradata, Netezza, and Exadata.
-author: BrianBlanchard
+author: v-hanki
 ms.author: brblanch
-ms.date: 05/22/2019
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
