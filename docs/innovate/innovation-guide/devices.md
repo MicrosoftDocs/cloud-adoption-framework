@@ -194,10 +194,10 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ### Action
 
-To use Spatial Anchors:
+To use Azure Spatial Anchors:
 
-1. Go to **Spatial Anchors Accounts**.
-2. Select **Create spatial anchors accounts**.
+1. Go to **Spatial Anchors accounts**.
+2. Select **Create Spatial Anchors account**.
 
 <!-- markdownlint-disable DOCSMD001 -->
 

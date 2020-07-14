@@ -140,21 +140,21 @@ Building a resilient security posture in the cloud requires several parallel com
 
 - **Trust but verify:** For responsibilities performed by the cloud provider, organizations should take a "trust but verify" approach. Organizations should evaluate the security practices of their cloud providers and the security controls they offer to ensure the cloud provider meets the security needs of the organization.
 
-- **Modernize infrastructure and application security:** For technical elements under the organization's control, prioritize modernizing security tooling and associate skill sets to minimize coverage gaps for securing resources in the cloud. This is composed of two different complementary efforts:
+- **Modernize infrastructure and application security:** For technical elements under the organization's control, prioritize modernizing security tooling and associated skill sets to minimize coverage gaps for securing resources in the cloud. This is composed of two different complementary efforts:
 
   - **Infrastructure security:** Organizations should use the cloud to modernize their approach to protecting and monitoring the common components used by many applications, such as operating systems, networks, and container infrastructure. These cloud capabilities can often including managing infrastructure components across both IaaS and on-premises environments. Optimizing this strategy is important because this infrastructure is a dependency of the applications and data that run on it, which often enable critical business processes and store critical business data.
   - **Application security:** Organizations should also modernize the way they secure the unique applications and technology that is developed by or for their organization. This discipline is changing rapidly with the adoption of agile DevOps processes, the increasing use of open source components, and introduction of cloud APIs and cloud services to replace application components or interconnect applications.
 
     Getting this right is critical because these applications often enable critical business processes and store critical business data.
 
-  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](https://docs.microsoft.com/en-us/security/ciso-workshop/ciso-workshop-module-3).
+  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-3).
 
 ### Security and trust
 
-Note that the use of the word "trust" in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
+Note that the use of the word *trust* in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
 
 - [Zero trust](https://www.microsoft.com/security/business/zero-trust) is a common industry term for a strategic approach to security that assumes a corporate or intranet network is hostile (worthy of "zero trust") and designs security accordingly.
-- [Trust but verify](https://en.wikipedia.org/wiki/trust,_but_verify) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
+- [Trust but verify](https://wikipedia.org/wiki/trust,_but_verify) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
 
 A cloud provider and their practices and processes can be accountable to meet contractual and regulatory requirements and could earn or lose trust. A network is a nonliving connection which cannot face consequences if it is used by attackers (much like you cannot hold a road or a car accountable for criminals using them).
 

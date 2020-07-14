@@ -1,7 +1,7 @@
 ---
 title: "MLOps with Azure Machine Learning"
 description: Use the Cloud Adoption Framework for Azure to understand the various transitions that must be made to enable operational management in the cloud.
-author: v-hanki   
+author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
 ms.topic: conceptual

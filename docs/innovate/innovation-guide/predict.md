@@ -147,7 +147,7 @@ Use Azure Cognitive Search to uncover latent insights from your content, includi
 
 <!-- docsTest:ignore "Azure Search" -->
 
-Azure Cognitive Search (formerly known as Azure Search) uses the same integrated Microsoft natural language stack that Bing and office have used for more than a decade, and AI services across vision, language, and speech. Spend more time innovating and less time maintaining a complex cloud search solution.
+Azure Cognitive Search (formerly known as Azure Search) uses the same integrated Microsoft natural language stack that Bing and Microsoft Office have used for more than a decade, and AI services across vision, language, and speech. Spend more time innovating and less time maintaining a complex cloud search solution.
 
 For more information, see [What is Azure Cognitive Search?](https://docs.microsoft.com/azure/search/search-what-is-azure-search)
 

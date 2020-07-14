@@ -15,7 +15,7 @@ ms.subservice: innovate
 
 In Azure, you can build intelligent applications faster using the tools and technologies of your choice and AI that's already built-in.
 
-- **Easily build and deploy anywhere:** Use your team's existing skillsets and tools you know and love to build intelligent applications and deploy without a change in code. Build once, deploy anywhere: in the cloud, on-premises, and to edge devices, with the confidence of global distribution to more datacenters than any other provider.
+- **Easily build and deploy anywhere:** Use your team's existing skill set and tools you know and love to build intelligent applications and deploy without a change in code. Build once, deploy anywhere: in the cloud, on-premises, and to edge devices, with the confidence of global distribution to more datacenters than any other provider.
 
 - **Create an impact using an open platform:** Choose your favorite technologies, including open source. Azure supports a range of deployment options, popular stacks and languages, and a comprehensive set of data engines. Capitalize on this flexibility, plus the performance, scale, and security delivered by Microsoft technologies to build applications for any scenario.
 
