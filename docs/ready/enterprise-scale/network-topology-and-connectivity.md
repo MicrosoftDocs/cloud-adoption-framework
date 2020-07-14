@@ -239,7 +239,7 @@ _Figure 6: Multiple virtual networks connected with multiple ExpressRoute circui
 
 - L7 inbound NVAs (such as Azure Application Gateway) shouldn't be deployed as a shared service in the central hub VNet. Instead, they should be deployed together with the app in their respective landing zone.
 
-- Use the your existing network (MPLS and SD-WAN) for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
+- Use your existing network (MPLS and SD-WAN) for connecting branch locations with corporate headquarters. Transit in Azure between ExpressRoute and VPN gateways isn't supported.
 
 - For network architectures with multiple hub-and-spoke topologies across Azure regions, use global VNet peering to connect landing zone VNets when a small number of landing zones need to communicate across regions. This approach offers benefits like high network bandwidth with global VNet peering (as allowed by the VM SKU), but it will bypass the central NVA (in case traffic inspection or filtering is required). This would also be subject to [global VNet peering limitations](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview#constraints-for-peered-virtual-networks).
 
@@ -287,7 +287,7 @@ This section will expand on the network topology to consider recommended models 
 
 - Deploy a zone redundant ExpressRoute gateway in the supported Azure regions.
 
-- For scenarios that require bandwidth higher than 10 Gbps or dedicated 10/100 Gbps ports, use ExpressRoute Direct.
+- For scenarios that require bandwidth higher than 10 Gbps or dedicated 10/100-Gbps ports, use ExpressRoute Direct.
 
 - When low latency is required, or throughput from on-premises to Azure must be greater than 10 Gbps, enable FastPath to bypass the ExpressRoute gateway from the data path.
 
