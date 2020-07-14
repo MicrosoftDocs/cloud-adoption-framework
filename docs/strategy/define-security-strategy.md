@@ -147,11 +147,11 @@ Building a resilient security posture in the cloud requires several parallel com
 
     Getting this right is critical because these applications often enable critical business processes and store critical business data.
 
-  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](https://docs.microsoft.com/en-us/security/ciso-workshop/ciso-workshop-module-3).
+  - **Modern perimeter:** Organizations should have a comprehensive approach for protecting data across all workloads, organizations should establish a modern perimeter of consistent, centrally managed identity controls to protect their data, devices, and accounts. This is heavily influenced by a zero trust strategy discussed in detail in [module 3 of the CISO workshop](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-3).
 
 ### Security and trust
 
-Note that the use of the word "trust" in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
+Note that the use of the word *trust* in security can be confusing. This documentation refers to it in two ways that illustrate useful applications of this concept:
 
 - [Zero trust](https://www.microsoft.com/security/business/zero-trust) is a common industry term for a strategic approach to security that assumes a corporate or intranet network is hostile (worthy of "zero trust") and designs security accordingly.
 - [Trust but verify](https://en.wikipedia.org/wiki/trust,_but_verify) is an expression that captures the essence of two different organizations working together toward a common goal despite having some other potentially divergent interests. This concisely captures many of the nuances of the early stages of partnering with a commercial cloud provider for organizations.
