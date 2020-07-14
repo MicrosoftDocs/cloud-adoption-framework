@@ -29,11 +29,11 @@ A variety of applications and ambient experiences use data to make predictions:
 
 Solutions that consistently provide accurate predictive capabilities commonly include five core characteristics:
 
-    - Data
-    - Insights
-    - Patterns
-    - Predictions
-    - Interactions
+- Data
+- Insights
+- Patterns
+- Predictions
+- Interactions
 
 Each aspect is required to develop predictive capabilities. Like all great innovations, the development of predictive capabilities requires a [commitment to iteration](./index.md#commitment-to-iteration). In each iteration, one or more of the following characteristics is matured to validate increasingly complex customer hypotheses.
 
