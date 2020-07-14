@@ -10,6 +10,8 @@ ms.subservice: decision-guide
 ms.custom: governance
 ---
 
+<!-- cSpell:ignore BYOK -->
+
 # Encryption decision guide
 
 Encrypting data protects it against unauthorized access. Properly implemented encryption policy provides additional layers of security for your cloud-based workloads and guards against attackers and other unauthorized users from both inside and outside your organization and networks.
@@ -45,9 +47,9 @@ With cloud-native key management, all keys and secrets are generated, managed, a
 - You trust the cloud key management solution with creating, managing, and hosting your organization's secrets and keys.
 - You enable all on-premises applications and services that rely on accessing encryption services or secrets to access the cloud key management system.
 
-### Bring your own key
+### Bring your own key (BYOK)
 
-With a bring-your-own-key approach, you generate keys on dedicated HSM hardware within your on-premises environment, then securely transferring these keys to a cloud-based management system such as Azure Key Vault for use with your cloud-hosted resources.
+With a BYOK approach, you generate keys on dedicated HSM hardware within your on-premises environment, then securely transferring these keys to a cloud-based management system such as Azure Key Vault for use with your cloud-hosted resources.
 
 **Bring-your-own-key assumptions:** Generating keys on-premises and using them with a cloud-based key management system includes these assumptions:
 

@@ -41,7 +41,7 @@ Implementing a hub and spoke virtual networking architecture assumes the followi
 
 ## Global hub and spoke
 
-Hub and spoke architectures are commonly implemented with virtual networks deployed to the same Azure region to minimize latency between networks. Large organizations with global reach might need to deploy workloads across multiple regions for availability, disaster recovery, or regulatory requirements. The hub and spoke model can use of Azure [global virtual network peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview) to extend centralized management and shared services across regions and support workloads distributed across the world.
+Hub and spoke architectures are commonly implemented with virtual networks deployed to the same Azure region to minimize latency between networks. Large organizations with a global presence might need to deploy workloads across multiple regions for availability, disaster recovery, or regulatory requirements. The hub and spoke model can use of Azure [global virtual network peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview) to extend centralized management and shared services across regions and support workloads distributed across the world.
 
 ## Learn more
 

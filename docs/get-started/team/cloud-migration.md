@@ -1,8 +1,8 @@
 ---
 title: "Get started: Build a cloud migration team"
 description: This guide helps a cloud migration team understand scope, deliverables, and the capabilities required for a successful cloud migration.
-author: JanetCThomas
-ms.author: janet
+author: alexbuckgit
+ms.author: abuck
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual

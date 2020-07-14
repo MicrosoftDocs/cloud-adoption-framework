@@ -11,19 +11,21 @@ ms.subservice: migrate
 
 <!-- cSpell:ignore ITSM TOGAF -->
 
-# Prepare for technical complexity: agile change management
+# Prepare for technical complexity: Agile change management
 
-When an entire datacenter can be deprovisioned and re-created with a single line of code, traditional processes struggle to keep up. The guidance throughout the Cloud Adoption Framework is built on practices like IT service management (ITSM), The Open Group Architecture Framework (TOGAF), and others. However, to ensure agility and responsiveness to business change, this framework molds those practices to fit agile methodologies and DevOps approaches.
+When an entire datacenter can be deprovisioned and re-created with a single line of code, traditional processes struggle to keep up. The guidance throughout the Cloud Adoption Framework is built on practices like IT service management (ITSM), the open group architecture framework (TOGAF), and others. However, to ensure agility and responsiveness to business change, this framework molds those practices to fit agile methodologies and DevOps approaches.
 
-When shifting to an agile model where flexibility and iteration are emphasized, technical complexity and change management are handled differently than they are in a traditional waterfall model focusing on a linear series of migration steps. This article outlines a high-level approach to change management in an agile-based migration effort. At the end of this article, you should have a general understanding of the levels of change management and documentation involved in an incremental migration approach. Additional training and decisions are required to select and implement agile practices based on that understanding. The intention of this article is to prepare cloud architects for a facilitated conversation with project management to explain the general concept of change management in this approach.
+When shifting to an agile model where flexibility and iteration are emphasized, technical complexity and change management are handled differently than they're in a traditional waterfall model focusing on a linear series of migration steps. This article outlines a high-level approach to change management in an agile-based migration effort. At the end of this article, you should have a general understanding of the levels of change management and documentation involved in an incremental migration approach. Additional training and decisions are required to select and implement agile practices based on that understanding. The intention of this article is to prepare cloud architects for a facilitated conversation with project management to explain the general concept of change management in this approach.
+
+<!-- docsTest:ignore INVEST -->
 
 ## Address technical complexity
 
-When changing any technical system, complexity and interdependency inject risk into project plans. Cloud migrations are no exception. When moving thousands&mdash;or tens of thousands&mdash;of assets to the cloud, these risks are amplified. Detecting and mapping all dependencies across a large digital estate could take years. Few businesses can tolerate such a long analysis cycle. To balance the need for architectural analysis and business acceleration, the Cloud Adoption Framework focuses on an INVEST model for product backlog management. The following sections summarize this type of model.
+When changing any technical system, complexity and interdependency inject risk into project plans. Cloud migrations are no exception. When moving thousands (or tens of thousands) of assets to the cloud, these risks are amplified. Detecting and mapping all dependencies across a large digital estate could take years. Few businesses can tolerate such a long analysis cycle. To balance the need for architectural analysis and business acceleration, the Cloud Adoption Framework focuses on an INVEST model for product backlog management. The following sections summarize this type of model.
 
 ## INVEST in workloads
 
-The term _workload_ appears throughout the Cloud Adoption Framework. A workload is a unit of application functionality that can be migrated to the cloud. It could be a single application, a layer of an application, or a collection of an application. The definition is flexible and may change at various phrases of migration. The Cloud Adoption Framework uses the term _invest_ to define a workload.
+The term _workload_ appears throughout the Cloud Adoption Framework. A workload is a unit of application functionality that can be migrated to the cloud. It could be a single application, a layer of an application, or a collection of an application. The definition is flexible and may change at various phrases of migration. The Cloud Adoption Framework uses the term *INVEST* to define a workload.
 
 INVEST is a common acronym in many agile methodologies for writing user stories or product backlog items, both of which are units of output in agile project management tools. The measurable unit of output in a migration is a migrated workload. The Cloud Adoption Framework modifies the INVEST acronym a bit to create a construct for defining workloads:
 
@@ -90,13 +92,13 @@ To stabilize business impact, the cloud strategy team should establish a monthly
 
 A _sprint_, or _iteration_, is a consistent, time-bound unit of work. In the migration process, this is often measured in two-week increments. However, it's not unheard of to have one-week or four-week iterations. Creating time-bound iterations forces consistent intervals of effort completion and allows for more frequent adjustment to plans, based on new learnings. During any given sprint, there are usually tasks for the assessment, migration, and optimization of workloads defined in the migration backlog. Those units of work should be tracked and managed in the same project-management tool as the migration and release backlog, to drive consistency across each level of change management.
 
-A _sprint backlog_, or _iteration backlog_, consists of the technical work to be completed in a single sprint or iteration, dealing with migrating individual assets. That work should be derived from the list of workloads being migrated. When using tools like Azure DevOps (previously Visual Studio Online) for project management, the work items in a sprint would be children of the product backlog Items in a release backlog and the epics in a migration backlog. Such a parent-child relationship allows for clarity at all levels of change management.
+A _sprint backlog_, or _iteration backlog_, consists of the technical work to be completed in a single sprint or iteration, dealing with migrating individual assets. That work should be derived from the list of workloads being migrated. When using tools like Azure DevOps (previously Visual Studio online) for project management, the work items in a sprint would be children of the product backlog items in a release backlog and the epics in a migration backlog. Such a parent-child relationship allows for clarity at all levels of change management.
 
 Within a single sprint or iteration, the cloud adoption team would work to deliver the committed amount of technical work, driving toward the migration of a defined workload. This is the end result of the change management strategy. When complete, these efforts can be tested by validating production readiness of a workload staged in the cloud.
 
 ### Large or complex sprint structures
 
-For a small migration with a self-contained migration team, a single sprint could include all four phases of a migration for a single workload (_assess_, _migrate_, _optimize_, and _secure and manage_). More commonly, each of these processes shared by multiple teams in distinct work items across numerous sprints. Depending on the effort type, effort scale, and roles, these sprints can take a few different shapes.
+For a small migration with a self-contained migration team, a single sprint could include all four phases of a migration for a single workload (_Assess_, _Migrate_, _Optimize_, and _Secure and manage_). More commonly, each of these processes shared by multiple teams in distinct work items across numerous sprints. Depending on the effort type, effort scale, and roles, these sprints can take a few different shapes.
 
 - **Migration factory.** Large-scale migrations sometimes require an approach that resembles a factory in the execution model. In this model, various teams are allocated to the execution of a specific migration process (or subset of the process). After completion, the output of one team's sprint populates the backlog for the next team. This is an efficient approach for large-scale rehost migrations of many potential workloads involving thousands of virtual machines moving through phases of assessment, architecture, remediation, and migration. However, for this approach to work, a new homogenous environment with streamlined change management and approval processes is a must.
 - **Migration waves.** Another approach that works well for large migrations is a wave model. In this model, division of labor isn't nearly as clear. Teams dedicate themselves to the migration process execution of individual workloads. However, the nature of each sprint changes. In one sprint, the team may complete assessment and architecture work. In another sprint, it may complete the migration work. In yet another sprint, the focus would be on optimization and production release. This approach allows a core team to stay aligned to workloads, seeing them through the process in its entirety. When using this approach, the diversity of skills and context switching could reduce the potential velocity of the team, slowing the migration effort. Additionally, roadblocks during approval cycles can cause significant delays. It is important to maintain options in the release backlog to keep the team moving during blocked periods, with this model. It is also important to cross-train team members and to ensure that skill sets align with the theme of each sprint.
@@ -112,12 +114,12 @@ The outcome of a sprint captures and documents the changes made to a workload, t
 - **Architecture.** Documentation of the architecture deployed to the cloud.
 - **Performance metrics.** Output of automated testing or business testing performed to validate performance at the time of deployment.
 - **Unique requirements or configuration.** Any unique aspects of the deployment, configuration, or technical requirements necessary to operate the workload.
-- **Operational approval.** Sign-off of validating operational readiness from the application owner and the IT operations staff responsible for managing the workload post deployment.
+- **Operational approval.** Sign-off of validating operational readiness from the application owner and the IT operations staff responsible for managing the workload after deployment.
 - **Architecture approval.** Sign-off from the workload owner and the cloud adoption team to validate any architecture changes required to host each asset.
 
 ## Next steps
 
-After change management approaches have been established, its time to address the final prerequisite, [Migration backlog review](./migration-backlog-review.md)
+After change management approaches have been established, its time to address the final prerequisite, [migration backlog review](./migration-backlog-review.md)
 
 > [!div class="nextstepaction"]
 > [Migration backlog review](./migration-backlog-review.md)

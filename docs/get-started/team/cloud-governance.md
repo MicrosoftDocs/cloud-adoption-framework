@@ -22,7 +22,7 @@ The official guidance in the Cloud Adoption Framework for Azure is to always cre
 **Deliverables:**
 
 - Determine whether you need a cloud governance team.
-- Document the decision and the responsible individuals in the [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
+- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Document the decision and the responsible individuals using the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 

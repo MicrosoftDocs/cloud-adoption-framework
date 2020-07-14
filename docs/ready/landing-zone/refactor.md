@@ -15,7 +15,7 @@ A landing zone is an environment for hosting your workloads, **preprovisioned th
 
 The Ready methodology uses the concept of refactoring to accelerate migration and remove common blockers. The steps in the ready overview discuss a process that starts with predefined landing zone template that aligns best with your hosting function. Then refactor or add to the source code to expand the landing zones ability to deliver that function through improved security, operations, or governance. The following image illustrates the concept of refactoring.
 
-![Landing zone refactoring illustration - described in later section of this article](../../_images/ready/refactor.png)
+![Landing zone refactoring illustration, described later in this article](../../_images/ready/refactor.png)
 
 ## Common blockers
 

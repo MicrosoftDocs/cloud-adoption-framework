@@ -72,11 +72,11 @@ The common tagging patterns listed below provide examples of how tagging can be 
 
 | Tag type | Examples | Description |
 |-----|-----|-----|
-| Functional | app&nbsp;=&nbsp;catalogsearch1 <br> tier&nbsp;=&nbsp;web <br> webserver&nbsp;=&nbsp;apache <br> env&nbsp;=&nbsp;prod <br> env&nbsp;=&nbsp;staging <br> env&nbsp;=&nbsp;dev | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |
-| Classification | confidentiality&nbsp;=&nbsp;private <br> SLA&nbsp;=&nbsp;24 hours | Classifies a resource by how it is used and what policies apply to it. |
-| Accounting | department&nbsp;=&nbsp;finance <br> program&nbsp;=&nbsp;business-initiative <br> region&nbsp;=&nbsp;northamerica | Allows a resource to be associated with specific groups within an organization for billing purposes. |
-| Partnership | owner&nbsp;=&nbsp;jsmith <br> contactalias&nbsp;=&nbsp;catsearchowners <br> stakeholders&nbsp;=&nbsp;user1;user2;user3 | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
-| Purpose | businessprocess&nbsp;=&nbsp;support <br> businessimpact&nbsp;=&nbsp;moderate <br> revenueimpact&nbsp;=&nbsp;high | Aligns resources to business functions to better support investment decisions. |
+| Functional | `app` = `catalogsearch1` <br> `tier` = `web` <br> `webserver` = `apache` <br> `env` = `prod` <br> `env` = `staging` <br> `env` = `dev` | Categorize resources in relation to their purpose within a workload, what environment they've been deployed to, or other functionality and operational details. |
+| Classification | `confidentiality` = `private` <br> `SLA` = `24hours` | Classifies a resource by how it is used and what policies apply to it. |
+| Accounting | `department` = `finance` <br> `program` = `business-initiative` <br> `region` = `northamerica` | Allows a resource to be associated with specific groups within an organization for billing purposes. |
+| Partnership | `owner` = `jsmith` <br> `contactalias` = `catsearchowners` <br> `stakeholders` = `user1;user2;user3` | Provides information about what people (outside of IT) are related or otherwise affected by the resource. |
+| Purpose | `businessprocess` = `support` <br> `businessimpact` = `moderate` <br> `revenueimpact` = `high` | Aligns resources to business functions to better support investment decisions. |
 
 <!-- docsTest:enable -->
 <!-- markdownlint-enable MD033 -->

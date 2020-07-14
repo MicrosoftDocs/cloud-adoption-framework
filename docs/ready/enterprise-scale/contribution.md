@@ -1,8 +1,8 @@
 ---
 title: Contribution guide
 description: Contribution guide.
-author: BrianBlanchard
-ms.author: brblanch
+author: alexbuckgit
+ms.author: abuck
 ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
@@ -91,7 +91,7 @@ To simplify development and unit testing at scale with multiple developers contr
     }],
 ```
 
-A [generic multiresource template](https://raw.githubusercontent.com/uday31in/AzOps/master/src/template.json) is available to ensure that bug fixes are incorporated with the latest API version.
+A [generic multiresource template](https://github.com/uday31in/AzOps/blob/main/template/template.json) is available to ensure that bug fixes are incorporated with the latest API version.
 
 - Template.parameters.json
 
@@ -211,7 +211,7 @@ Get-AzPolicyAlias -ListAvailable
 
 For Azure CLI:
 
-```cli
+```bash
 # List all available providers
 
 az provider list --query [*].namespace

@@ -21,13 +21,13 @@ Life in the digital economy is full of distractions. We're all bombarded with so
 
 ## Interact with devices
 
-A standard web experience is the most common application development technique used to meet a customer's needs. This approach assumes that the customer is in front of their computer. If your customer consistently meets their point of need while in front of their laptop, build a web app. That web app will provide an ambient experience for that customer in that scenario. However, we know that this scenario is less and less likely in our current era.
+A standard web experience is the most common application development technique used to meet a customer's needs. This approach assumes that the customer is in front of their computer. If your customer consistently meets their point of need while in front of their laptop, build a web application. That application will provide an ambient experience for that customer in that scenario. However, we know that this scenario is less and less likely in our current era.
 
 ![Ambient experiences](../../_images/innovate/ambient-experiences.png)
 
 <!-- docsTest:ignore "learning with the customer" -->
 
-Ambient experiences typically require more than a web app these days. Through [measurement](./measure.md) and [learning with the customer](./learn.md) the behavior that triggers the customer's need can be observed, tracked, and used to build a more ambient experience. The following list summarizes a few approaches to integration of ambient solutions into your hypotheses, with more details about each in the following paragraphs.
+Ambient experiences typically require more than a web application these days. Through [measurement](./measure.md) and [learning with the customer](./learn.md), the behavior that triggers the customer's need can be observed, tracked, and used to build a more ambient experience. The following list summarizes a few approaches to integration of ambient solutions into your hypotheses, with more details about each in the following paragraphs.
 
 - **[Mobile experience](#mobile-experience):** As with laptops, mobile apps are ubiquitous in customer environments. In some situations, this might provide a sufficient level of interactivity to make a solution ambient.
 - **[Mixed reality](#mixed-reality):** Sometimes a customer's typical surroundings must be altered to make an interaction ambient. This factor creates something of a false reality in which the customer interacts with the solution and has a need met. In this case, the solution is ambient within the false reality.

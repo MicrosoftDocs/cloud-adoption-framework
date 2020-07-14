@@ -1,8 +1,8 @@
 ---
 title: FAQ
 description: FAQ.
-author: BrianBlanchard
-ms.author: brblanch
+author: alexbuckgit
+ms.author: abuck
 ms.date: 06/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

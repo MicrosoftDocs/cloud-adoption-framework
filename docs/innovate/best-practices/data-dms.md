@@ -1,6 +1,6 @@
 ---
 title: Innovation tools to migrate data
-description: Learn about the Azure Database Migration Service and other tools that migrate and modernize data to prepare for cloud inventions and innovations.
+description: Learn about Azure Database Migration Service and other tools that migrate and modernize data to prepare for cloud inventions and innovations.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
@@ -27,7 +27,7 @@ To support Oracle and NoSQL migrations, you can also use [Database Migration Ser
 
 ## Considerations and guidance
 
-When you use Azure Database Migration Service for migration and modernization of data, it's important to understand:
+When you use Azure Database Migration Service  to migrate and modernize data, it's important to understand:
 
 - The current platform for hosting the data source.
 - The current version.

@@ -1,6 +1,6 @@
 ---
-title: Implement enterprise-scale landing zones in Azure
-description: Review options to implement the enterprise-scale architecture.
+title: Implement CAF enterprise-scale landing zones in Azure
+description: Review options to implement the CAF enterprise-scale architecture.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Implement enterprise-scale landing zones in Azure
+# Implement CAF enterprise-scale landing zones in Azure
 
-When business requirements necessitate a rich initial implementation of landing zones with fully integrated governance, security, and operations from the start, Microsoft suggests using the enterprise-scale example options on this page. This approach can use the Microsoft Azure portal or infrastructure as code to set up and configure your environment. It's also possible to transition between the portal and infrastructure as code (recommended) when your organization is ready. As with any other Microsoft Azure infrastructure-as-code approach, you'll need Azure Resource Manager templates and GitHub skills.
+When business requirements necessitate a rich initial implementation of landing zones with fully integrated governance, security, and operations from the start, use the enterprise-scale example options listed here. With this approach, you can use the Microsoft Azure portal or infrastructure as code to set up and configure your environment. It's also possible to transition between the portal and infrastructure as code (recommended) when your organization is ready. As with any other Microsoft Azure infrastructure-as-code approach, you'll need Azure Resource Manager templates and GitHub skills.
 
 ## Example implementation
 
@@ -25,4 +25,4 @@ The table below lists example modular implementations.
 
 ## Next steps
 
-The above examples provide an easy deployment option to support continued learning for the enterprise-scale approach. Before using these examples in a production version of enterprise-scale, you should first review the [enterprise-scale architecture](./architecture.md).
+These examples provide an easy deployment option to support continued learning for the enterprise-scale approach. Before using these examples in a production version of enterprise-scale, you should first review the [enterprise-scale architecture](./architecture.md).

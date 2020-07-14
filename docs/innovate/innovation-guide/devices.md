@@ -13,17 +13,7 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore umarmohamedusman umarm Moovit -->
 
-::: zone target="docs"
-
-# Azure innovation guide: Interact through devices
-
-::: zone-end
-
-::: zone target="chromeless"
-
 # Interact through devices
-
-::: zone-end
 
 Innovate through intermittently connected and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with AI technology, you can build every type of intelligent application and system you can envision.
 
@@ -59,7 +49,6 @@ Here are a few features you'll find:
 ### Learn more
 
 - [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-
 - [Azure IoT Hub Device Provisioning Service (DPS)](https://docs.microsoft.com/azure/iot-dps)
 
 ::: zone-end
@@ -123,7 +112,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 To create Azure Digital Twins:
 
 1. In the left pane, select **Create a resource**.
-2. Search for **digital twins**, and then select **Digital Twins**.
+2. Search for **digital twins**, then select **Digital Twins**.
 3. Select **Create** to start the deployment process.
 4. To review existing digital twins, select this button:
 
@@ -139,7 +128,7 @@ To create Azure Digital Twins:
 
 ## [Location intelligence](#tab/AzureMaps)
 
-In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners **TomTom** and **Moovit**. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
+In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
 **Azure Maps Data Service (preview):** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
 
@@ -186,7 +175,9 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ::: zone target="docs"
 
-- [Azure Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors)
+### Learn more
+
+- [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview)
 
 ::: zone-end
 
@@ -217,8 +208,7 @@ The process of rendering is computationally intensive. There can be many frames 
 
 ### Learn more
 
-- [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering)
-
+- [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/overview/about)
 - [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)
 
 ::: zone-end

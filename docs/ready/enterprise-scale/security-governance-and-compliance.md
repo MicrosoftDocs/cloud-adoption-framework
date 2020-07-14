@@ -1,6 +1,6 @@
 ---
-title: Security governance and compliance
-description: Security governance and compliance.
+title: CAF enterprise-scale security governance and compliance
+description: Learn about enterprise-scale security governance and compliance in the Microsoft Cloud Adoption Framework for Azure.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 06/15/2020
@@ -9,11 +9,11 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Security, governance, and compliance
+# CAF enterprise-scale security governance and compliance
 
 ## Define encryption and key management
 
-Encryption is a vital step towards ensuring data privacy, compliance, and data residency in Microsoft Azure. It is also one of the most important security concerns of many enterprise customers. This section will go over the design considerations and recommendations as they pertain to encryption and key management.
+Encryption is a vital step towards ensuring data privacy, compliance, and data residency in Microsoft Azure. It is also one of the most important security concerns of many enterprises. This section covers the design considerations and recommendations as they pertain to encryption and key management.
 
 **Design considerations:**
 
@@ -29,8 +29,8 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Key rotation and secret expiration.
 
-  Certificate procurement and signing using Key Vault: ([about certs](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates))
-  Alerting/notifications and automated certificate renewals.
+  - Certificate procurement and signing using Key Vault ([about certificates](https://docs.microsoft.com/azure/key-vault/certificates/about-certificates))
+  - Alerting/notifications and automated certificate renewals
 
 - Disaster recovery requirements for keys, certificates, and secrets.
 
@@ -42,19 +42,17 @@ Encryption is a vital step towards ensuring data privacy, compliance, and data r
 
 - Delegated Key Vault instantiation and privileged access: ([secure access](https://docs.microsoft.com/azure/key-vault/general/secure-your-key-vault))
 
-- Requirements surrounding using customer-managed keys for native encryption mechanisms such as storage service encryption (SSE): [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal))
-
-- Whole-disk encryption for virtual machines (VMs).
-
-- Data-in-transit encryption.
-
-- Data-at-rest encryption.
+- Requirements surrounding using customer-managed keys for native encryption mechanisms such as Azure Storage encryption (SSE):
+  - [Customer-managed keys](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-portal).
+  - Whole-disk encryption for virtual machines (VMs).
+  - Data-in-transit encryption.
+  - Data-at-rest encryption.
 
 **Design recommendations:**
 
-- Use a federated Key Vault model to avoid transaction scale limits.
+- Use a federated Azure Key Vault model to avoid transaction scale limits.
 
-- Provision Key Vault with the soft delete and purge policies enabled to allow retention protection for deleted objects.
+- Provision Azure Key Vault with the soft delete and purge policies enabled to allow retention protection for deleted objects.
 
 - Follow a least privilege model by limiting authorization to permanently delete keys, secrets, and certificates to specialized custom Azure Active Directory roles.
 
@@ -112,7 +110,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 ## Define security monitoring and an audit policy
 
-It is crucial for enterprise customers to have visibility into what is happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
+It is crucial for an enterprise to have visibility into what is happening within their technical cloud estate. Security monitoring and audit logging of Azure platform services is a key component of a scalable framework.
 
 **Design considerations:**
 
@@ -152,7 +150,7 @@ It is crucial for enterprise customers to have visibility into what is happening
 
 ## Plan for platform security
 
-It is essential to maintain a healthy security posture as enterprise customers adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is key.
+It is essential to maintain a healthy security posture as you adopt Azure. Besides visibility, you have to be able to control the initial settings and changes as the Azure services evolve. Therefore, planning for platform security is key.
 
 **Design considerations:**
 
@@ -166,19 +164,19 @@ It is essential to maintain a healthy security posture as enterprise customers a
 
 **Design recommendations:**
 
-- A joint examination of each required service should be conducted within the context of underlying customer requirements. If the customer wants to bring their own keys, this might not be supported across all considered services. Relevant mitigation will need to be implemented so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
+- A joint examination of each required service should be conducted within the context of your underlying requirements. If you want to bring your own keys, this might not be supported across all considered services. Relevant mitigation will need to be implemented so that inconsistencies don't hinder desired outcomes. Choose appropriate region pairs and disaster recovery regions that minimize latency.
 
-- Develop a security whitelisting plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
+- Develop a security allow-list plan to assess services security configuration, monitoring, alerts, and how to integrate these with existing systems.
 
-- Determine incident response plan for Azure services before whitelisting.
+- Determine incident response plan for Azure services before allowing.
 
 - Use Azure AD reporting capabilities to generate access control audit reports.
 
-- Align customer security requirements with Azure platform road maps to stay up to date with newly released security controls.
+- Align your security requirements with Azure platform roadmaps to stay up to date with newly released security controls.
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
 
-## Service-enablement framework
+## Service enablement framework
 
 As business units request to deploy workloads to Azure, additional visibility into a workload is needed to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required that has not been onboarded, allowing the service needs to occur. The following table provides a framework to assess enterprise security readiness of Azure services:
 
@@ -211,13 +209,13 @@ As business units request to deploy workloads to Azure, additional visibility in
 |                              |                                                                       | Does the data plane integrate with Azure AD?                                                                                                      |
 |                              |                                                                       | Does Azure to Azure (service to service) authentication use a MSI/service principal?                                                         |
 |                              |                                                                       | Is Azure to IaaS (service to virtual network) authentication via Azure AD?                                                                                   |
-|                              |                                                                       | How are any applicable keys/sas managed?                                                                                                     |
+|                              |                                                                       | How are any applicable keys/SAS managed?                                                                                                     |
 |                              |                                                                       | How can access be revoked?                                                                                                                   |
 |                              | Segregation of duties                                                 | Does the service separate control plane and data plane operations within Azure AD?                                                                |
 |                              | Multi-factor authentication and conditional access                                            | Is multi-factor authentication enforced for user to service interactions?                                                                                            |
 | Governance                   | Data export and import                                                  | Does service allow you to import and export data securely and encrypted?                                                                     |
 |                              | Data privacy and usage                                                  | Can Microsoft engineers access the data?                                                                                                     |
-|                              |                                                                       | Is any Microsoft support interaction with the service audited?                                                                               |
+|                              |                                                                       | Is any Microsoft Support interaction with the service audited?                                                                               |
 |                              | Data residency                                                        | Is data contained to the service deployment region?                                                                                          |
 | Operations                   | Monitoring                                                            | Does the service integrate with Azure Monitor?                                                                                               |
 |                              | Backup management                                                     | Which workload data need to be backed?                                                                                                       |
