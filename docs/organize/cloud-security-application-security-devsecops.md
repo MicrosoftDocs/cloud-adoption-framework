@@ -20,6 +20,7 @@ Application development is rapidly being reshaped in multiple aspects simultaneo
 This modernization of antiquated development models presents both opportunity and a requirement to modernize security of applications and development processes. The fusion of security into DevOps processes is often referred to as DevSecOps and drives changes including:
 
 <!-- TODO: Link needed below? -->
+
 - **Security is integrated, not outside approval:** The rapid pace of change in application development makes classic arms-length "scan and report" approaches obsolete. These legacy approaches cant keep up with releases without grinding development to a halt and creating time-to-market delays, developer underutilization, and growth of issue backlog.
   - **Shift left** to engage security earlier in application development processes as fixing issues earlier is cheaper, faster, and more effective. If you wait until after the cake is baked, it is harder to change the shape.
   - **Native integration:** Security practices must be integrated seamlessly to avoid unhealthy friction in development workflows and continuous integration/continuous deployment (CI/CD) processes. To see how GitHub is approaching this, see [Securing software, together](https://github.blog/2019-09-18-securing-software-together).

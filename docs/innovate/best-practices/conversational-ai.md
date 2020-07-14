@@ -1,7 +1,7 @@
 ---
 title: What is conversational AI?
 description: What is cognitive search?
-author: JanetCThomas
+author: v-hanki
 ms.author: janet
 ms.date: 07/02/2020
 ms.topic: conceptual

@@ -1,7 +1,7 @@
 ---
 title: What is Azure Cognitive Search?
 description: What is Azure Cognitive Search?
-author: JanetCThomas
+author: v-hanki
 ms.author: janet
 ms.date: 07/02/2020
 ms.topic: conceptual

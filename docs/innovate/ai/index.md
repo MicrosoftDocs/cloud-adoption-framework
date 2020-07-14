@@ -2,7 +2,7 @@
 title: "Innovate with AI"
 description: Tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale.
 author: v-hanki
-ms.author: v-hanki
+ms.author: janet
 ms.date: 06/24/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework

@@ -2,7 +2,7 @@
 title: "Machine Learning"
 description: These checklists and resources can help you plan your application development and deployment.
 author: v-hanki
-ms.author: v-hanki
+ms.author: janet
 ms.date: 06/24/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
