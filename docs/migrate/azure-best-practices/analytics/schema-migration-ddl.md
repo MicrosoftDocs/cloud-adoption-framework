@@ -9,7 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Schema Migration Data Definition Languages (DDL)
+<!-- cSpell:ignore DDLs Attunity Inmon Denodo Teradata Netezza Wherescape DMVs multinode equi -->
+
+# Schema Migration Data Definition Languages (DDLs)
 
 ## Design considerations
 
@@ -95,7 +97,7 @@ Data virtualization can also be used to provide end users with a consistent view
 
 **Key and integrity constraints in Azure Synapse:**
 
-Primary key and foreign key constraints are not currently enforced within Azure Synapse, however the definition for PRIMARY KEY can be included in the CREATE TABLE statement with the NOT ENFORCED clause. This means that third-party reporting products can use the metadata for the table to understand the keys within the data model and therefore generate the most efficient queries.
+Primary key and foreign key constraints are not currently enforced within Azure Synapse, however the definition for `PRIMARY KEY` can be included in the `CREATE TABLE` statement with the `NOT ENFORCED` clause. This means that third-party reporting products can use the metadata for the table to understand the keys within the data model and therefore generate the most efficient queries.
 
 **Data type support in Azure Synapse:**
 
@@ -148,18 +150,18 @@ The table below lists some common data types that are not currently supported to
 
 Depending on the source environment, there are some issues that can cause problems when migrating data:
 
-- Handling of NULL data&mdash;there can be subtle differences in the way that NULL data is handled in different database products, for example, collation sequence, handling of empty character string
-- DATE, TIME, INTERVAL, TIME ZONE data and associated functions&mdash;these can vary wildly from product to product
+- There can be subtle differences in the way that `NULL` data is handled in different database products, for example, collation sequence and handling of empty character strings.
+- `DATE`, `TIME`, `INTERVAL`, `TIME ZONE` data and associated functions can vary widely from product to product.
 
-Recommendation: test these thoroughly to ensure that the desired results are achieved in the target environment. The migration exercise can also uncover bugs or incorrect results that are currently part of the existing source system. The migration process is a good opportunity to correct any anomalies. Best practices for defining columns in Azure Synapse It is common in legacy systems to find columns specified with inefficient data types, for example, a field defined as VARCHAR(20) when the actual data values would fit into a CHAR(5) field, or using INTEGER fields when all values will fit within a SMALLINT field. This can lead to inefficiencies in both storage and query performance, especially in large fact tables.
+Test these thoroughly to ensure that the desired results are achieved in the target environment. The migration exercise can also uncover bugs or incorrect results that are currently part of the existing source system. The migration process is a good opportunity to correct any anomalies. Best practices for defining columns in Azure Synapse It is common in legacy systems to find columns specified with inefficient data types, for example, a field defined as `VARCHAR(20)` when the actual data values would fit into a `CHAR(5)` field, or using `INTEGER` fields when all values will fit within a `SMALLINT` field. This can lead to inefficiencies in both storage and query performance, especially in large fact tables.
 
 A migration exercise can be a good time to check existing data definitions and rationalize data definitions. This can be automated by using SQL queries to find the maximum numeric value or the maximum character length within a data field and comparing that to the data type. Some third-party data exploration or migration tools also incorporate this feature.
 
 In general, it is good practice to minimize the total defined row length for a table (for example, by using the smallest data type for each column as described above) as this will give the best query performance. The PolyBase utility, which is the recommended method of data loading from external tables for Azure Synapse, supports a maximum defined row length of 1 MB. For rows greater than 1 MB in length PolyBase cannot be used to load that table, BCP must be used instead.
 
-For the most efficient join execution, define the columns used on both sides of the join as the same data type. If the key of a dimension table is defined as SMALLINT, then the corresponding reference columns in the FACT table(s) that use that dimension should also be defined as SMALLINT.
+For the most efficient join execution, define the columns used on both sides of the join as the same data type. If the key of a dimension table is defined as `SMALLINT` then the corresponding reference columns in fact tables that use that dimension should also be defined as `SMALLINT`.
 
-Avoid defining character fields with a large default size. If the maximum size of data within a field is 50 characters, use `VARCHAR(50)`. Similarly, don't used NVARCHAR if VARCHAR will suffice. NVARCHAR stores Unicode data (allowing for different language character sets whereas VARCHAR stores ASCII data and takes less space.
+Avoid defining character fields with a large default size. If the maximum size of data within a field is 50 characters, use `VARCHAR(50)`. Similarly, don't used `NVARCHAR` if `VARCHAR` will suffice. `NVARCHAR` stores Unicode data to allow for different language character sets, while `VARCHAR` stores ASCII data and takes less space.
 
 ## Design recommendations summary
 
@@ -209,9 +211,9 @@ The ideal processing scenario when running a SQL query in a multinode environmen
 
 In typical analytics queries there are frequently multiple joins between several tables (for example, between fact tables and dimension tables) as well as aggregations and therefore it can be difficult to achieve the ideal scenario.
 
-One way to influence the processing of queries is to use the distribution options within Azure Synapse to specify where individual data rows of each table are stored. For example, if two large tables are frequently joined on a given data column such as CUSTOMER_ID, by distributing the two tables using the CUSTOMER_ID columns whenever that join is performed the data from each side of the join will already be colocated on the same processing node, eliminating the need to move data between nodes. The distribution specification for a table is defined in the CREATE TABLE statement.
+One way to influence the processing of queries is to use the distribution options within Azure Synapse to specify where individual data rows of each table are stored. For example, if two large tables are frequently joined on a given data column such as 1`CUSTOMER_ID`, by distributing the two tables using the `CUSTOMER_ID` columns whenever that join is performed the data from each side of the join will already be colocated on the same processing node, eliminating the need to move data between nodes. The distribution specification for a table is defined in the `CREATE TABLE` statement.
 
-The distribution options available and recommendations of when to use them are described below. It is possible to change the distribution of a table after initial load, if necessary, by re-creating the table with the new distribution using the CREATE TABLE AS statement.
+The distribution options available and recommendations of when to use them are described below. It is possible to change the distribution of a table after initial load, if necessary, by re-creating the table with the new distribution using the `CREATE TABLE AS` statement.
 
 **Round robin**:
 
@@ -221,7 +223,7 @@ This is the default table distribution and is designed to spread the data evenly
 
 Based on a hashing algorithm applied to a user-defined key (for example, CUSTOMER_ID in the example above), the system assigns the row to a hash bucket, which in turn is assigned to a specific node. All data rows hash distributed on the same value will therefore end up on the same processing node.
 
-This method is useful for large tables that are frequently joined or aggregated on a given key. Other large tables to be joined should also be hashed on the same key if possible. If there are multiple candidates for the hash key, choose the most frequently joined one. The hash column should not contain NULLs and typically is not a date (as many queries filter on date). Hashing is generally more efficient if the key to be hashed is an integer value—not CHAR or VARCHAR. Also, avoid choosing keys that have a highly skewed range of values, such as a small number of key values that represent a high percentage of the data rows.
+This method is useful for large tables that are frequently joined or aggregated on a given key. Other large tables to be joined should also be hashed on the same key if possible. If there are multiple candidates for the hash key, choose the most frequently joined one. The hash column should not contain NULLs and typically is not a date (as many queries filter on date). Hashing is generally more efficient if the key to be hashed is an integer value, not `CHAR` or `VARCHAR`. Also, avoid choosing keys that have a highly skewed range of values, such as a small number of key values that represent a high percentage of the data rows.
 
 **Replicated**:
 
@@ -237,9 +239,9 @@ Azure Synapse includes several options for indexing data in large tables to redu
 - Clustered index
 - Non-clustered index
 
-There is also a non-indexed option called HEAP for tables that wouldn't benefit from any of the index options. The use of indexes generally is a tradeoff between improved query times versus longer load times and more storage space usage. In general, indexes can speed up SELECT, UPDATE, DELETE and MERGE operations on large tables where only a small proportion of the data rows are affected, and the indexes can be used to avoid full table scans.
+There is also a non-indexed option called `HEAP` for tables that wouldn't benefit from any of the index options. The use of indexes generally is a tradeoff between improved query times versus longer load times and more storage space usage. In general, indexes can speed up `SELECT`, `UPDATE`, `DELETE` and `MERGE` operations on large tables where only a small proportion of the data rows are affected, and the indexes can be used to avoid full table scans.
 
-Indexes are automatically created when UNIQUE or PRIMARY KEY constraints are defined on columns.
+Indexes are automatically created when `UNIQUE` or `PRIMARY KEY` constraints are defined on columns.
 
 **Clustered columnstore index**:
 
@@ -259,13 +261,13 @@ Heap tables incur none of the overhead associated with the creation and maintena
 
 ### Data partitioning
 
-In an enterprise data warehouse fact tables can contain many billions of rows and partitioning is a way to optimize the maintenance and querying of these tables by splitting them into separate parts to reduce the amount of data processed when running queries. The partitioning specification for a table is defined in the CREATE TABLE statement.
+In an enterprise data warehouse fact tables can contain many billions of rows and partitioning is a way to optimize the maintenance and querying of these tables by splitting them into separate parts to reduce the amount of data processed when running queries. The partitioning specification for a table is defined in the `CREATE TABLE` statement.
 
-Only one field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. Note that it is possible to change the partitioning of a table after initial load if necessary by re-creating the table with the new distribution using the CREATE TABLE AS statement.
+Only one field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. Note that it is possible to change the partitioning of a table after initial load if necessary by re-creating the table with the new distribution using the `CREATE TABLE AS` statement.
 
 **Partitioning for query optimization**:
 
-If queries against a large fact table are frequently filtered by a certain data column, then partitioning on that column can significantly reduce the amount of data that needs to be processed to perform the queries. A common example is to use a date field to split the table into smaller groups each containing data for a single day. When a query contains a WHERE clause which filters on the date, only those partitions that match the date filter need to be accessed.
+If queries against a large fact table are frequently filtered by a certain data column, then partitioning on that column can significantly reduce the amount of data that needs to be processed to perform the queries. A common example is to use a date field to split the table into smaller groups each containing data for a single day. When a query contains a `WHERE` clause which filters on the date, only those partitions that match the date filter need to be accessed.
 
 **Partitioning for table maintenance optimization**:
 
@@ -275,11 +277,11 @@ It is common in data warehouse environments to maintain a rolling window of deta
 
 When a query is submitted to Azure Synapse it is first processed by the query optimizer which determines the best internal methods to use to execute the query efficiently. The optimizer compares the various query execution plans available based on a cost-based algorithm, and the accuracy of the cost estimates is dependent on the statistics available. It is therefore good practice to ensure that statistics are up to date.
 
-In Azure Synapse if the AUTO_CREATE_STATISTICS option is turned on this will trigger automatic update of statistics. Statistics can also be created or updated manually via the CREATE STATISTICS command.
+In Azure Synapse if the `AUTO_CREATE_STATISTICS` option is turned on this will trigger automatic update of statistics. Statistics can also be created or updated manually via the `CREATE STATISTICS` command.
 
 It is good practice to refresh statistics when there has been substantial change in the contents (for example, a daily update), this can be incorporated into ETL process.
 
-All tables in the database should have statistics collected on at least one column (to ensure that basic information such as row count and table size is available to the optimizer). Other columns that should have statistics collected are those that are specified in JOIN, DISTINCT, ORDER BY and GROUP BY processing.
+All tables in the database should have statistics collected on at least one column (to ensure that basic information such as row count and table size is available to the optimizer). Other columns that should have statistics collected are those that are specified in `JOIN`, `DISTINCT`, `ORDER BY` and `GROUP BY` processing.
 
 ### Workload management
 
@@ -290,7 +292,7 @@ Azure Synapse incorporates comprehensive features for managing resource utilizat
 
 ### Performance recommendations
 
-Use any performance improvement methods (for example, indexes, data distribution) as indications of candidates to similar measures in the new target environment, but benchmark to confirm that they're necessary in Azure Synapse. Build COLLECT STATISTICS steps into ETL/ELT processes to ensure statistics are up to date, or turn on automatic statistics creation.
+Use any performance improvement methods (for example, indexes, data distribution) as indications of candidates to similar measures in the new target environment, but benchmark to confirm that they're necessary in Azure Synapse. Build `COLLECT STATISTICS` steps into ETL/ELT processes to ensure statistics are up to date, or turn on automatic statistics creation.
 
 Understand the tuning options available within Azure Synapse and also the performance characteristics of associated utilities (for example, PolyBase for fast parallel data loading) and use these as appropriate to build an efficient end to end implementation.
 
