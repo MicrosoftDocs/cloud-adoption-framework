@@ -12,7 +12,7 @@ services: azure-migrate
 
 # Migrate open-source databases to Azure
 
-This article demonstrates how a fictional company Contoso assessed, planned, and migrated its various on-premises open-source databases to Azure.
+This article demonstrates how the fictional company Contoso assessed, planned, and migrated its various on-premises open-source databases to Azure.
 
 As Contoso considers migrating to Azure, the company needs a technical and financial assessment to determine whether its on-premises workloads are good candidates for cloud migration. In particular, the Contoso team wants to assess machine and database compatibility for migration. Additionally, it wants to estimate capacity and costs for running Contoso's resources in Azure.
 
