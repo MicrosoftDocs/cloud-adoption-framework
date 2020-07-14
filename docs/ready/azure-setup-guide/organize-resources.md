@@ -1,3 +1,4 @@
+---
 title: Organize Azure resources effectively
 description: Understand best practices for effectively organizing your Azure resources to simplify resource management.
 author: laraaleite
