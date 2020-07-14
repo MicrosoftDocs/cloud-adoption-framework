@@ -1,7 +1,7 @@
 ---
 title: "Responsible AI"
 description: Responsible AI.
-author: JanetCThomas
+author: v-hanki
 ms.author: janet
 ms.date: 06/25/2020
 ms.topic: conceptual
