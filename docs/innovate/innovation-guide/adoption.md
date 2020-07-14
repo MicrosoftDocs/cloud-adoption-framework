@@ -11,17 +11,7 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="docs"
-
-# Azure innovation guide: Prepare for customer feedback
-
-::: zone-end
-
-::: zone target="chromeless"
-
 # Prepare for customer feedback
-
-::: zone-end
 
 User adoption, engagement, and retention are key to successful innovation. Why?
 

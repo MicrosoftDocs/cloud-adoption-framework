@@ -164,9 +164,9 @@ items:
       href: ready/index.md
     - name: Azure setup guide
       items:
-      - name: Before you start
+      - name: Setup guide overview
         href: ready/azure-setup-guide/index.md
-      - name: Organize your resources
+      - name: Organize resources
         href: ready/azure-setup-guide/organize-resources.md
       - name: Manage access
         href: ready/azure-setup-guide/manage-access.md
@@ -347,7 +347,7 @@ items:
         href: migrate/index.md
       - name: Azure migration guide
         items:
-        - name: Before you start
+        - name: Migration guide overview
           href: migrate/azure-migration-guide/index.md
         - name: Assess workloads
           href: migrate/azure-migration-guide/assess.md
@@ -357,7 +357,7 @@ items:
           href: migrate/azure-migration-guide/optimize-and-transform.md
         - name: Migration-focused cost-control mechanisms
           href: migrate/azure-migration-guide/manage-costs.md
-        - name: Obtain assistance
+        - name: Get assistance
           href: migrate/azure-migration-guide/assistance.md
 
       - name: Migration scenarios
@@ -734,17 +734,17 @@ items:
         href: innovate/index.md
       - name: Azure innovation guide
         items:
-        - name: Before you start
+        - name: Innovation guide overview
           href: innovate/innovation-guide/index.md
         - name: Prepare for customer feedback
           href: innovate/innovation-guide/adoption.md
         - name: Democratize data
           href: innovate/innovation-guide/data.md
-        - name: Engage through apps
+        - name: Engage customers through apps
           href: innovate/innovation-guide/apps.md
         - name: Empower adoption
           href: innovate/innovation-guide/ci-cd.md
-        - name: Interact with devices
+        - name: Interact through devices
           href: innovate/innovation-guide/devices.md
         - name: Predict and influence
           href: innovate/innovation-guide/predict.md
