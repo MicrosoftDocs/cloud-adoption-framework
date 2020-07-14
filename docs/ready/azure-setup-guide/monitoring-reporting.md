@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 Azure offers many services that together provide a comprehensive solution for collecting, analyzing, and acting on telemetry from your applications and the Azure resources that support them. In addition, these services can extend to monitoring critical on-premises resources to provide a hybrid monitoring environment.
 
-# [Azure Monitor](#tab/AzureMonitor)
+## [Azure Monitor](#tab/AzureMonitor)
 
 Azure Monitor provides a single unified hub for all monitoring and diagnostics data in Azure. You can use it to get visibility across your resources. With Azure Monitor, you can find and fix problems and optimize performance. You also can understand customer behavior.
 
@@ -40,7 +40,7 @@ To monitor other resources, find additional solutions in the Azure Marketplace.
 
 To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview).
 
-## Learn more
+### Learn more
 
 To learn more, see [Azure Monitor documentation](https://docs.microsoft.com/azure/monitoring-and-diagnostics).
 
@@ -50,13 +50,13 @@ To learn more, see [Azure Monitor documentation](https://docs.microsoft.com/azur
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-## Action
+### Action
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview]" submitText="Explore Azure Monitor" :::
 
 ::: zone-end
 
-# [Azure Service Health](#tab/AzureServiceHealth)
+## [Azure Service Health](#tab/AzureServiceHealth)
 
 Azure Service Health provides a personalized view of the health of the Azure services and regions you use. Information about active issues is posted to Azure Service Health to help you understand the impact to your resources. Regular updates keep you informed as the issue is resolved.
 
@@ -72,7 +72,7 @@ Azure Service Health includes:
 
 <!-- markdownlint-disable MD024 -->
 
-## Action
+### Action
 
 To set up a Service Health alert:
 
@@ -88,13 +88,13 @@ To set up a Service Health alert:
 
 To set up an Azure Service Health alert, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/healthalerts).
 
-## Learn more
+### Learn more
 
 For more information, see [Azure Service Health](https://docs.microsoft.com/azure/service-health).
 
 ::: zone-end
 
-# [Azure Advisor](#tab/AzureAdvisor)
+## [Azure Advisor](#tab/AzureAdvisor)
 
 Azure Advisor is a free, personalized cloud consultant that helps you follow and implement best practices for Azure deployments. It analyzes your resource configuration and usage telemetry and recommends solutions that can help optimize your environment. The recommendations are divided into the following categories:
 
@@ -108,7 +108,7 @@ Recommendations in Advisor are based on the resources you deploy and the actions
 
 ::: zone target="chromeless"
 
-## Action
+### Action
 
 ::: form action="OpenBlade[#blade/Microsoft_Azure_Expert/AdvisorBlade]" submitText="Explore Azure Advisor" :::
 
@@ -118,13 +118,13 @@ Recommendations in Advisor are based on the resources you deploy and the actions
 
 To explore Azure Advisor, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Expert/AdvisorBlade).
 
-## Learn more
+### Learn more
 
 To learn more, see [Azure Advisor documentation](https://docs.microsoft.com/azure/advisor).
 
 ::: zone-end
 
-# [Azure Security Center](#tab/AzureSecurityCenter)
+## [Azure Security Center](#tab/AzureSecurityCenter)
 
 Azure Security Center also plays an important part in your monitoring strategy. It can help you monitor the security of your machines, networks, storage, data services, and applications. Security Center provides advanced threat detection by using machine learning and behavioral analytics to help identify active threats targeting your Azure resources. It also provides threat protection that blocks malware or other unwanted code, and reduces the surface area exposed to brute force and other network attacks.
 
@@ -134,7 +134,7 @@ Azure Security Center is offered in two tiers: free and standard. Features like 
 
 ::: zone target="chromeless"
 
-## Action
+### Action
 
 **Try Standard tier for free for your first 30 days.**
 
@@ -148,7 +148,7 @@ After you turn on and set up security policies for a subscription's resources, y
 
 To explore Azure Security Center, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
 
-## Learn more
+### Learn more
 
 To learn more, see [Azure Security Center documentation](https://docs.microsoft.com/azure/security-center).
 
