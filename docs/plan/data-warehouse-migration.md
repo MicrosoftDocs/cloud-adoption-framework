@@ -15,9 +15,9 @@ ms.subservice: plan
 
 A data warehouse migration is a challenge for any company. In order to execute it well and avoid any unwelcome surprises and unplanned costs, you need to thoroughly research the challenge, mitigate risk, and plan your migration to ensure that you're as ready as possible. At a high level, your plan should cover the core data warehouse migration process steps and any tasks within them. The main process steps are:
 
-- Preparation
+- Pre-migration preparation
 - Migration strategy and execution
-- Post migration
+- Post-migration
 
 For example, preparation includes things like readying your data warehouse migration team in terms of skills training and technology familiarization. It also includes setting up a proof of concept lab, understanding how you will manage test and production environments, gaining appropriate clearance to migrate your data and a production system outside of the corporate firewall and setting up migration software in your datacenter to enable migration to proceed.
 
@@ -104,15 +104,15 @@ In any strategy, there needs to be a set of objectives or goals that should be d
 
 Types of goal and metric examples:
 
-**Improve overall performance**:
+#### Improve overall performance
 
 - Data migration performance
 - ELT performance
-- Data Loading performance
-- Complex Query performance
+- Data loading performance
+- Complex query performance
 - Number of concurrent users
 
-**Run at lower costs**:
+#### Run at lower cost
 
 - Cost of compute by workload, for example, number of compute hours x cost per hour for:
   - Standard reporting
@@ -120,16 +120,16 @@ Types of goal and metric examples:
   - Batch ELT processing
 - Cost of storage (staging, production tables, indexes, temporary space)
 
-**Operate with better availability and service levels**:
+#### Operate with better availability and service levels
 
 - Service level agreements
 - High availability
 
-**Improve productively**:
+#### Improve productively
 
-- Tasks automated, administrative headcount
+- Tasks automated, reduced administrative headcount
 
-A successful data warehouse migration could therefore be interpreted as a data warehouse that runs as fast or faster and at lower cost than the legacy system you migrated from. Assigning owners of these goals creates accountability for reaching them. It also ensures that testing in a proof of concept lab (as defined in the de-risking section in this guide) will be deemed successful if the tests identify ways that the goals can be achieved.
+A successful data warehouse migration can therefore be interpreted as a data warehouse that runs as fast or faster and at lower cost than the legacy system you migrated from. Assigning owners of these goals creates accountability for reaching them. It also ensures that testing in a proof of concept lab (as defined in the de-risking section in this guide) will be deemed successful if the tests identify ways that the goals can be achieved.
 
 ### Migration approach
 
@@ -141,11 +141,11 @@ You have several strategic options for migrating your existing data warehouse to
 
 The findings of the assessment of your existing data warehouse should significantly influence your strategy. A good assessment outcome might recommend a lift and shift strategy. A mediocre outcome due to a low agility rating might indicate that simplification is needed before migration. A poor outcome might indicate a complete redesign is needed.
 
-Lift and shift will leave your architecture as is, trying to minimize the work in moving your existing system. If your existing ETL tool already supports Azure Synapse, you might be able to change the target with minimal effort. Nevertheless there will be differences in table types, data types, SQL functions, views, stored procedure business logic etc. These differences and ways around them are detailed in lower-level documents in this migration series.
+Lift and shift leaves your architecture as-is, trying to minimize the work in moving your existing system. If your existing ETL tool already supports Azure Synapse, you might be able to change the target with minimal effort. Nevertheless there will be differences in table types, data types, SQL functions, views, stored procedure business logic etc. These differences and ways around them are detailed in lower-level documents in this migration series.
 
 Simplifying your existing data warehouse prior to migration is about reducing complexity to ease migration. It could include:
 
-- Removing or archiving unused tables before migrating to avoid migrating data that is not used
+- Removing or archiving unused tables before migrating to avoid migrating data that is not used.
 - Converting physical data marts to virtual data marts using data virtualization software to reduce what you have to migrate. Conversion also improves agility and reduces total cost of ownership, so it could be considered as modernization during migration.
 
 You can also simplify first and then lift and shift what remains.
@@ -171,9 +171,9 @@ If you are uncertain about the best approach, conduct tests in a proof of concep
 
 Data warehouse migration to Azure Synapse involves tasks that need to be conducted:
 
-- On-premises, for example, data export
-- On the network, for example, data transfer
-- In the Azure cloud, for example, data transformation, integration, and load
+- On-premises, such as data export.
+- On the network, such as data transfer.
+- In the Azure cloud, such as data transformation, integration, and load.
 
 The problem is that managing these tasks can be complicated if scripts and utilities are all being developed, tested, and run independently in both on-premises and Azure environments. It adds complexity especially if version control, test management and migration execution are not coordinated.
 
@@ -226,7 +226,7 @@ The purpose of this is to break the dependency between business users utilizing 
 - Define migration order and dependencies.
 - Ensure your infrastructure and operations teams are ready for the migration of your data as early as possible into the migration project.
 - Identify the differences in DBMS functionality and where proprietary business logic could become a problem. For example, using stored procedures for ELT processing is unlikely to migrate easily and won't contain any metadata lineage since the transformations are buried in code.
-- Considering a strategy to migrate data marts first followed by the data warehouse that is the source to the data marts. The reason for this is that it enables incremental migration, it makes it more manageable and it is possible to prioritize migration based on business needs
+- Considering a strategy to migrate data marts first followed by the data warehouse that is the source to the data marts. The reason for this is that it enables incremental migration, it makes it more manageable and it is possible to prioritize migration based on business needs.
 - Considering the possibility of using data virtualization to simplify your current data warehouse architecture before you migrate, for example, to replace data marts with virtual data marts so that you can eliminate physical data stores and ETL jobs for data marts without losing any functionality prior to migration. Doing this would reduce the number of data stores to migrate, reduce copies of data, reduce the total cost of ownership and improve agility. This requires switching from physical to virtual data marts before migrating your data warehouse. In many ways, you could consider this a data warehouse modernization step prior to migration.
 
 ## Next steps

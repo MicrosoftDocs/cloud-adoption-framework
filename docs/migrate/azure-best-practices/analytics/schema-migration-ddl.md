@@ -219,17 +219,17 @@ One way to influence the processing of queries is to use the distribution option
 
 The distribution options available and recommendations of when to use them are described below. It is possible to change the distribution of a table after initial load, if necessary, by re-creating the table with the new distribution using the `CREATE TABLE AS SELECT` statement.
 
-**Round-robin**:
+#### Round-robin
 
 This table distribution is the default option and spreads the data evenly across the nodes in the system. This method is good for fast data loading and for data that is relatively low volume and doesn't have an obvious candidate for hashing, so it's frequently used for staging tables as part of an ETL or ELT process.
 
-**Hashed**:
+#### Hashed
 
 Based on a hashing algorithm applied to a user-defined key (like `CUSTOMER_ID` in the example above), the system assigns the row to a hash bucket, which is then assigned to a specific node. All data rows hash distributed on the same value will therefore end up on the same processing node.
 
 This method is useful for large tables that are frequently joined or aggregated on a given key. Other large tables to be joined should be hashed on the same key if possible. If there are multiple candidates for the hash key, choose the most frequently joined one. The hash column shouldn't contain nulls and typically isn't a date because many queries filter on date). Hashing is typically more efficient if the key to hash is an integer value rather than `CHAR` or `VARCHAR`. Also avoid choosing keys that have a highly skewed range of values, such as a small number of key values that represent a high percentage of the data rows.
 
-**Replicated**:
+#### Replicated
 
 Choosing replicated as the distribution option for a table will cause a complete copy of that table to be replicated on each compute node for query processing purposes.
 
@@ -247,19 +247,19 @@ There is also a non-indexed option called `HEAP` for tables that wouldn't benefi
 
 Indexes are automatically created when `UNIQUE` or `PRIMARY KEY` constraints are defined on columns.
 
-**Clustered columnstore index**:
+#### Clustered columnstore index
 
 This is the default indexing option within Azure Synapse Analytics and provides the best compression and query performance for large tables. For smaller tables (less than 60 million rows), these indexes are not efficient and so the heap option should be used. Similarly, if the data in a table is transient (perhaps part of an ETL/ELT process) heap or a temporary table may be more efficient.
 
-**Clustered index**:
+#### Clustered index
 
 If there is a requirement to regularly retrieve a single row or small number of rows from a large table based on a strong filter condition, a clustered index might be more efficient than a clustered columnstore index. Only one clustered index is allowed per table. Replication
 
-**Non-clustered index**:
+#### Non-clustered index
 
 Non-clustered indexes are similar to clustered indexes in that they can speed up retrieval of single rows or a small number of rows based on a filter condition. Internally non-clustered indexes are stored separately from the data and multiple non-clustered indexes can be defined on a table. However, each additional index will require more storage and will reduce the throughput of data insert or loading.
 
-**Heap**:
+#### Heap
 
 Heap tables incur none of the overhead associated with the creation and maintenance of indexes at data load time and therefore can be useful for quickly loading transient data (for example, as part of an ETL process). Reads of the data that follow immediately may also benefit from caching in this case. Heap tables can also be useful for storing tables of less than 60 million rows as clustered columnstore indexes are inefficient below that size.
 
@@ -269,11 +269,11 @@ In an enterprise data warehouse, fact tables can contain many billions of rows a
 
 Only one field per table can be used for partitioning, which is frequently a date field since many queries are filtered by a date or date range. You can change the partitioning of a table after initial load if necessary by re-creating the table with the new distribution using the `CREATE TABLE AS SELECT` statement.
 
-**Partitioning for query optimization**:
+#### Partitioning for query optimization
 
 If queries against a large fact table are frequently filtered by a certain data column, then partitioning on that column can significantly reduce the amount of data that needs to be processed to perform the queries. A common example is to use a date field to split the table into smaller groups each containing data for a single day. When a query contains a `WHERE` clause that filters on the date, only those partitions that match the date filter need to be accessed.
 
-**Partitioning for table maintenance optimization**:
+#### Partitioning for table maintenance optimization
 
 It is common in data warehouse environments to maintain a rolling window of detailed fact data, for example, sales transactions going back for five years. By partitioning on the sales date the removal of old data beyond the rolling window becomes much more efficient. Dropping the oldest partition is quicker and use fewer resources than deletes of all of the individual rows.
 
@@ -292,7 +292,7 @@ All tables in the database should have statistics collected on at least one colu
 Azure Synapse Analytics incorporates comprehensive features for managing resource utilization across mixed workloads. Creating resource classes for different workload types (such as queries versus data load) helps you manage your workload by setting limits on the number of queries that run concurrently and on the compute resources assigned to each query. There's a trade-off between memory and concurrency.
 
 - Smaller resource classes reduce the maximum memory per query, but increase concurrency.
-- Larger resource classes increase the maximum memory per query, but reduce concurrency
+- Larger resource classes increase the maximum memory per query, but reduce concurrency.
 
 ### Performance recommendations
 

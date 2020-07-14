@@ -10,7 +10,7 @@ ms.subservice: operate
 services: azure-monitor
 ---
 
-<!-- cSpell:ignore SIEM -->
+<!-- cSpell:ignore SIEM Nagios Zabbix DIKW -->
 
 # Cloud monitoring guide: Formulate a monitoring strategy
 
@@ -18,7 +18,7 @@ As you undergo your digital transformation to the cloud, it's important that you
 
 ## Where to start?
 
-To ease your journey to the cloud, use the [Strategy phase](./index.md) and the [Plan phase](../plan/index.md) of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. Include monitoring in the Strategy and Plan phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.
+To ease your journey to the cloud, use the [Strategy phase](./index.md) and the [Plan phase](../plan/index.md) of the Cloud Adoption Framework. Monitoring influences and justifies the motivations, business outcomes, and initiatives. Include monitoring in the strategy and plan phases, your initiatives, and projects. For example, examine how the first adoption project establishes early operations management in Azure. Imagine what the cloud operating model needs to look like, including the role of monitoring. Monitoring is best served with a service-based approach, as an operations function, where monitoring is an advisory service and a provider of expertise to business and IT consumers.
 
 The following are important areas that strongly influence a sound monitoring strategy:
 
@@ -32,7 +32,7 @@ The following are important areas that strongly influence a sound monitoring str
 
 - Collect only the metrics and logs that are useful, measurable, and identifiable to the business and IT organization.
 
-- Define an integration plan with existing ITSM solutions such as Remedy or ServiceNow for incident generation or upstream monitoring. Determine which alerts should be forwarded, whether alert enrichment is required to support specific filtering requirements, and how to configure.
+- Define an integration plan with existing ITSM solutions such as remedy or ServiceNow for incident generation or upstream monitoring. Determine which alerts should be forwarded, whether alert enrichment is required to support specific filtering requirements, and how to configure.
 
 - Understand who needs visibility, what they need to see, and how it should be visualized based on their roles and responsibilities.
 
@@ -56,7 +56,7 @@ As a manageability expert, you may be working closely with a steering committee,
 
 ## High-level modeling
 
-As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services, for example, do not eliminate your monitoring responsibility. You'll decide who needs access, who gets alerts, and who needs access to analytics at a minimum. [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/) and [Azure Arc](https://azure.microsoft.com/services/azure-arc/) are Azure services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure. And you need to look beyond the common cloud models as shown below. If you're using Office applications delivered by [Microsoft 365](https://docs.microsoft.com/microsoft-365/?view=o365-worldwide) services in your organization, you'll need to include security and compliance monitoring with Microsoft 365 in addition to [Azure Security Center](https://docs.microsoft.com/azure/security-center/). This includes identities, endpoint management, and device monitoring outside of your corporate network.
+As the business determines what services to move, you need to invest your resources carefully. On-premises, you own all responsibilities for monitoring and are heavily invested. The moves made toward SaaS services, for example, do not eliminate your monitoring responsibility. You'll decide who needs access, who gets alerts, and who needs access to analytics at a minimum. [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/) and [Azure Arc](https://azure.microsoft.com/services/azure-arc/) are Azure services with the flexibility of addressing monitoring scenarios across all four cloud models, not just resources inside Azure. And you need to look beyond the common cloud models as shown below. If you're using office applications delivered by [Microsoft 365](https://docs.microsoft.com/microsoft-365/?view=o365-worldwide) services in your organization, you'll need to include security and compliance monitoring with Microsoft 365 in addition to [Azure Security Center](https://docs.microsoft.com/azure/security-center/). This includes identities, endpoint management, and device monitoring outside of your corporate network.
 
 ![Cloud models diagram](./media/monitoring-strategy/cloud-models.png)
 
@@ -92,7 +92,7 @@ One principle of monitoring is service visibility. For a service, asset or compo
 
 1. Monitoring in-depth by collecting meaningful and relevant signals.
 2. Monitor end-to-end or breadth from the lowest layer of the stack up to the application.
-3. East to West with a focus on its aspects of health (availability, performance, security, and continuity).
+3. East to west with a focus on its aspects of health (availability, performance, security, and continuity).
 
 ![three-sided cube example](./media/monitoring-strategy/three-sided-cube.png)
 
@@ -108,9 +108,9 @@ Some key questions include:
 
 To assemble this architecture, here are several considerations:
 
-- A data flow approach starting from service assets and going up the stack - metrics and log data emitted by infrastructure, IoT devices, mobile devices, etc. are all of the items under management—to-monitoring tools (mid-tier). Move upward and outward (ITSM tools, global monitoring, Security Information and Event Management (SIEM), custom alert enrichment, etc.).
+- A data flow approach starting from service assets and going up the stack - metrics and log data emitted by infrastructure, IoT devices, mobile devices, etc. Are all of the items under management—to-monitoring tools (mid-tier). Move upward and outward (ITSM tools, global monitoring, security information and event management (SIEM), custom alert enrichment, etc.).
 
-- Whether to continue with [Systems Center Operations Manager](https://docs.microsoft.com/system-center/scom/welcome?view=sc-om-2019) or other monitoring tool(s).
+- Whether to continue with [systems center Operations Manager](https://docs.microsoft.com/system-center/scom/welcome?view=sc-om-2019) or other monitoring tool(s).
 
 - The economic cost.
 
@@ -138,9 +138,9 @@ Consider a single policy in your governance plan for event significance, through
 
 As a monitoring expert or systems administrator, you've discovered that cloud monitoring is faster and easier to establish, leading to inexpensive demos or proofs-of-value. To overcome the tendency to stay in demo mode, you need to stay in constant touch with strategy and be able to execute on production-focused monitoring plans. Because strategy has plenty of uncertainty and unknowns, you won't know all of the monitoring requirements in advance. Therefore, decide on the first set of adoption plans, based on what is minimally viable to the business and IT management. You may call this a core capability - *that which is needed to begin the journey*. Here are two example initiatives that help declare forward motion:
 
-- Initiative 1: *To reduce the diversity and complexity of our current monitoring investment, we will invest in establishing a core capability using Azure Monitor first, given the same skills and readiness applies to other areas of cloud monitoring.*
+- Initiative 1: *to reduce the diversity and complexity of our current monitoring investment, we will invest in establishing a core capability using Azure Monitor first, given the same skills and readiness applies to other areas of cloud monitoring.*
 
-- Initiative 2: *To decide on how we use our license plans for identity, access, and overall Information protection, we will help the Security and Privacy offices establish early activity monitoring of users and content as they migrate to the cloud, to clarify questions on classification labels, data loss prevention, encryption, and retention policies.*
+- Initiative 2: *to decide on how we use our license plans for identity, access, and overall information protection, we will help the security and privacy offices establish early activity monitoring of users and content as they migrate to the cloud, to clarify questions on classification labels, data loss prevention, encryption, and retention policies.*
 
 ### Consider scale
 
@@ -152,7 +152,7 @@ Consider scale in your strategy and who will be defining and standardizing *moni
 
 ### Consider privacy and security
 
-In Azure, you'll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs. Additionally, specialized logs that record user activity such as the Azure Active Directory Sign-in and Audit logs, and if integrated, the Microsoft 365 Unified Audit log, as they contain sensitive data that may need to be protected under privacy laws.
+In Azure, you'll need to secure certain monitoring data emitted by resources and the control plane actions that are logged in Azure, known as activity logs. Additionally, specialized logs that record user activity such as the Azure Active Directory sign-in and audit logs, and if integrated, the Microsoft 365 unified audit log, as they contain sensitive data that may need to be protected under privacy laws.
 
 Your monitoring strategy should include these components:
 
@@ -170,7 +170,7 @@ Create a recovery plan, and make sure that it covers data restoration, network o
 
 ### Consider maturity
 
-Maturity is an important consideration in your monitoring strategy. We recommend you start minimally, gather data and with this information, determine the strategy. The first monitoring solutions you'll want are those that ensure observability, to include responsive processes, such as Incident and Problem Management. Here, you will:
+Maturity is an important consideration in your monitoring strategy. We recommend you start minimally, gather data and with this information, determine the strategy. The first monitoring solutions you'll want are those that ensure observability, to include responsive processes, such as incident and problem management. Here, you will:
 
 - Create one or more Log Analytics workspaces
 
@@ -186,7 +186,9 @@ Learning cycles includes getting monitoring data and insights into the hands of 
 
 ![Monitoring and control strategy](./media/monitoring-strategy/monitoring-and-control-strategy.png)
 
-<Sup>1</Sup> The `DIKW` model is an often used method, with roots in knowledge management, to explain the ways we move from data `D` to information `I`, knowledge `K`, and wisdom `W` with a component of actions and decisions.
+<!-- docsTest:ignore "Data to Information, Knowledge, and Wisdom" -->
+
+<Sup>1</Sup> The DIKW model is an often used method, with roots in knowledge management, to explain the ways we move from Data to Information, Knowledge, and Wisdom with a component of actions and decisions.
 
 Monitoring is foundational for services you build in Azure. Your strategy can address these four disciplines of modern monitoring, to help you define minimum viable monitoring, and gain confidence in steps. Moving your capability from reactive to proactive and scaling its reach to end users is but one goal.
 
@@ -194,64 +196,64 @@ Monitoring is foundational for services you build in Azure. Your strategy can ad
 
 - **Measure:** Configure collection of metrics and logs from all resources to monitor for symptoms/conditions that are issues, which indicate potential or actual impact to the availability of the service, or impact of the consumers of the service/application. For example:
 
-    - When using a feature in the application, is it showing response time latency, returning an error when I selected something, or unresponsive?
+  - When using a feature in the application, is it showing response time latency, returning an error when I selected something, or unresponsive?
 
-    - Ensure services are meeting service agreements by measuring the utility of the service or application.
+  - Ensure services are meeting service agreements by measuring the utility of the service or application.
 
 - **Respond:** Based on the context of known issues to observe and measure, evaluate what qualifies as a bug, auto-remediation, or requires manual response based on what is classified as an incident, problem, or change.
 
-- **Learn and improve:** Providers and consumers participating in Learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (Example: New, modified, retired, etc.) and continues to match the actual service warranty.
+- **Learn and improve:** Providers and consumers participating in learning cycles implies consuming actual monitoring data through insights, reports and workbooks, to continually improve the target service and to enact tuning and optimization of the monitoring configuration. Change is important too, that the monitoring configuration is changing in tandem with changes to the service (example: new, modified, retired, etc.) and continues to match the actual service warranty.
 
-To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five **Rs** of rationalization introduced earlier in the Cloud Adoption Framework Plan phase. If you're using Systems Center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
+To help you align monitoring plans to strategy, use the following table to categorize the different monitoring scenarios that occur in more detail. This works with the five Rs of rationalization introduced earlier in the Cloud Adoption Framework Plan phase. If you're using systems center Operations Manager, you have hybrid and cloud options available to rationalize your investment.
 
 | Type | Monitoring objective | Example objective |
 |-----|---------------------|------------------|
 | 1 | Only on-premises | System Center Operations Manager. Continue to monitor services, infrastructure, networking up the application layer in owned datacenters with no cloud considerations. |
 | 2 | On-premises to the cloud | Continue using System Center Operations Manager, and apply the Microsoft 365 and Azure management packs. |
 | 3 | On-premises to/with cloud (cooperative) where services run in both the cloud and on-premises | Establish initial monitoring with Azure Monitor. Connect Azure Monitor to System Center Operations Manager and alert sources, such as Zabbix or Nagios. Deploy Azure Monitor monitoring agents, multihoming with System Center Operations Manager where they monitor cooperatively. |
-| 4 | Hybrid migration | Monitor the migration, for example, Exchange to Microsoft 365 Exchange Online. Exchange Online Service Health and Service Usage, Security and Compliance&mdash;all from Microsoft 365. Gradually decommission monitoring Exchange on-premises with System Center Operations Manager until migration is complete. |
-| 5 | Hybrid forever | System Center Operations Manager, Azure AD, Azure Monitor, Azure Security Center, Intune,&mdash;a range of tools for a mixture of digital assets. |
-| 6 | Cloud native | Azure Monitor, Azure Policy, Azure Security Center, Microsoft 365, Azure Service Health, Azure Resource Health, etc. |
-| 7 | multicloud owned tenants (consolidate) | Centralize the monitoring of many tenants. Azure Lighthouse, Azure Policy, Azure Monitor, and Azure Sentinel. |
-| 8 | multicloud ecosystem | Centralize the monitoring of different cloud providers: Microsoft, Amazon, Google, etc. |
+| 4 | Hybrid migration | Monitor the migration, for example, Microsoft Exchange to Microsoft 365 Exchange Online. Exchange Online service health and service usage, security and compliance, all from Microsoft 365. Gradually decommission monitoring exchange on-premises with System Center Operations Manager until migration is complete. |
+| 5 | Hybrid forever | System Center Operations Manager, Azure AD, Azure Monitor, Azure Security Center, Intune, and others; a range of tools for a mixture of digital assets. |
+| 6 | Cloud native | Azure Monitor, Azure Policy, Azure Security Center, Microsoft 365, Azure Service Health, Azure Resource Health, and others. |
+| 7 | Multicloud owned tenants (consolidate) | Centralize the monitoring of many tenants. Azure Lighthouse, Azure Policy, Azure Monitor, and Azure Sentinel. |
+| 8 | Multicloud ecosystem | Centralize the monitoring of different cloud providers: Microsoft, Amazon, Google, and others. |
 | 9 | Provider > Consumer | Monitoring solutions and services as a cloud provider. |
 
 ## Formulate monitoring requirements
 
 As you progress through this process, your strategy reveals there may be much to do in the long run. Ultimately your mindset extends outside the corporate network into the workplace, to devices and endpoints, and further outward to the identity-as-security boundary. The new edge defined with cloud monitoring is a strong motivator in contrast with a datacenter and workplace mindset.
 
-You can use Azure now to gradually begin managing all or some aspects of your on-premises resources, even for services you'll keep on-premises. You also want strategy to define your monitoring boundaries of responsibility in alignment with the business' cloud adoption strategy, based on the cloud service model your business adopts. Even for services based on IaaS, you'll get metrics, logs, views, and alerting capabilities through Azure Service Health and here, you'll configure alerts from availability monitoring of your Azure resources with Resource Health. With SaaS services, such as Microsoft 365, much is already provided, and you need to configure appropriate access to portals, dashboards, analytics, and alerts. From a service perspective, a large service with distributed components such as Microsoft 365 Exchange Online have a number of objectives, not just the need to observe its health and status.
+You can use Azure now to gradually begin managing all or some aspects of your on-premises resources, even for services you'll keep on-premises. You also want strategy to define your monitoring boundaries of responsibility in alignment with the business' cloud adoption strategy, based on the cloud service model your business adopts. Even for services based on IaaS, you'll get metrics, logs, views, and alerting capabilities through Azure Service Health and here, you'll configure alerts from availability monitoring of your Azure resources with resource health. With SaaS services, such as Microsoft 365, much is already provided, and you need to configure appropriate access to portals, dashboards, analytics, and alerts. From a service perspective, a large service with distributed components such as Microsoft 365 Exchange Online have a number of objectives, not just the need to observe its health and status.
 
 | Primary objective | Goal and outcome |
 |-------------------|------------------|
-| Health and status monitoring | Holistically observe, measure, learn, and improve the long-term warranty of the service or component, including service levels, in these aspects taken together: availability, capacity, performance, security, and compliance. A healthy system, service or component is online, performing well, secure and compliant. Health Monitoring includes logs and is stateful with real-time health states and metrics. It also includes trending reports, insights, and trends focused on "service usage." |
-| Utility monitoring | Observe, measure, learn, and improve the quality or qualitative aspects of how a system delivers value. User Experience is one type of monitoring use case. |
+| Health and status monitoring | Holistically observe, measure, learn, and improve the long-term warranty of the service or component, including service levels, in these aspects taken together: availability, capacity, performance, security, and compliance. A healthy system, service or component is online, performing well, secure and compliant. Health monitoring includes logs and is stateful with real-time health states and metrics. It also includes trending reports, insights, and trends focused on service usage. |
+| Utility monitoring | Observe, measure, learn, and improve the quality or qualitative aspects of how a system delivers value. User experience is one type of monitoring use case. |
 | Security monitoring | Observe, measure, learn, and improve protection in support of cybersecurity strategy and functions such as security operations, identity and access, information protection, privacy, threat management and compliance. Monitor using Azure Security Center and Azure Sentinel, as well as Microsoft 365. |
-| Cost monitoring | Monitor usage and estimate costs using Azure Monitor and Azure Cost Management and Billing as a new primary objective. The Cost Management APIs provide the ability to explore cost and usage data using multidimensional analysis. |
+| Cost monitoring | Monitor usage and estimate costs using Azure Monitor and Azure Cost Management and Billing as a new primary objective. The cost management APIs provide the ability to explore cost and usage data using multidimensional analysis. |
 
 | Tertiary objectives | Goal and outcome |
 |---------------------|------------------|
 | Activity monitoring | Observe, measure, learn, and improve usage, security, and compliance from sources such as Azure activity logs, audit logs, and the Microsoft 365 unified audit log for subscription level events, actions on resources, user and administrator activity, content, data, and for your security and compliance needs in Azure and Microsoft 365. |
-| Service usage | Service Owners want analytics and insights to measure, learn, and improve the usage of Azure and Microsoft 365 services (IaaS, PaaS, SaaS) with service usage reports, analytics, and insights. Ensure plans include who will need access to the admin portals, dashboards, insights and reports. |
-| Service and resource health | Observe the health of your cloud resources, as well as service outages and advisories from Microsoft, to stay informed about incidents and maintenance. Include Resource Health in monitoring of the availability of your resources and alert on changes in availability. |
+| Service usage | Service owners want analytics and insights to measure, learn, and improve the usage of Azure and Microsoft 365 services (IaaS, PaaS, SaaS) with service usage reports, analytics, and insights. Ensure plans include who will need access to the admin portals, dashboards, insights and reports. |
+| Service and resource health | Observe the health of your cloud resources, as well as service outages and advisories from Microsoft, to stay informed about incidents and maintenance. Include resource health in monitoring of the availability of your resources and alert on changes in availability. |
 | Capacity and performance monitoring | In support of health monitoring, your needs may require more depth and specialization. |
 | Change and compliance monitoring | Observe, measure, learn and improve configuration management of resources, which should now include security in the formulation, influenced by good use of Azure Policy to standardize monitoring configurations and enforce security hardening. Log data to filter on key changes being made on resources. |
 | Identity and access monitoring | Observe, measure, learn, and improve both the usage and security of Active Directory, Azure Active Directory, and identity management that integrates users, applications, devices, and other resources no matter where they are. |
-| Information protection | Not only Azure Monitor, but Azure Information Protection (AIP) depending on the plan, includes usage analytics critical to your development of a robust Information Protection strategy across Azure and Microsoft. |
-| Privacy monitoring | Organizations face expanding privacy needs to include information protection of the digital estate, data classification, and data loss prevention to mitigate risks to privacy breaches and infractions. Microsoft 365 Information Protection includes monitoring capabilities that can also be integrated with Azure Monitor. |
-| Threat management and integrated threat protection | The cloud brings together the separate, traditional roles of security monitoring with health monitoring. Integrated threat protection, for example, involves monitoring to accelerate an optimal state of Zero Trust. Integrating Azure Advanced Threat Protection allows a migration from using System Center Operations Manager to monitor Active Directory, and integrate your AD security-related signals to detect advanced attacks in hybrid environments. |
+| Information protection | Not only Azure Monitor, but Azure Information Protection (aip) depending on the plan, includes usage analytics critical to your development of a robust information protection strategy across Azure and Microsoft. |
+| Privacy monitoring | Organizations face expanding privacy needs to include information protection of the digital estate, data classification, and data loss prevention to mitigate risks to privacy breaches and infractions. Microsoft 365 information protection includes monitoring capabilities that can also be integrated with Azure Monitor. |
+| Threat management and integrated threat protection | The cloud brings together the separate, traditional roles of security monitoring with health monitoring. Integrated threat protection, for example, involves monitoring to accelerate an optimal state of zero trust. Integrating Azure Advanced Threat Protection allows a migration from using System Center Operations Manager to monitor Active Directory, and integrate your ad security-related signals to detect advanced attacks in hybrid environments. |
 
 ## Agile solution releases
 
-Ultimately, you'll deliver monitoring configurations or solutions into production. As an IT Operations Manager or Monitoring Team Lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile, DevOps style of approach ensures monitoring is embedded within the teams who will be building and operating cloud services. While traditional project management works, it is not fast enough nor typically accepted as a standard practice by operations teams.
+Ultimately, you'll deliver monitoring configurations or solutions into production. As an IT Operations Manager or monitoring team lead, consider a standard, simple taxonomy to improve communication with consumers, managers, and IT operations. An agile, DevOps style of approach ensures monitoring is embedded within the teams who will be building and operating cloud services. While traditional project management works, it is not fast enough nor typically accepted as a standard practice by operations teams.
 
 Include in your strategy and operating model how you communicate monitoring plans, objectives, and configurations (the solutions). For example, how you might use Azure Boards:
 
 | Agile term | What to include | Examples |
 |----------|---------------|--------|
-| Epics | Broad monitoring<br> Initiatives of the monitoring strategy | Consolidate Azure cloud monitoring<br> Hybrid cloud monitoring<br> Private cloud monitoring<br> Establish core monitoring service |
-| Features | Individual monitoring<br> Plans and projects | Monitoring requirements<br> Monitoring consumers and providers<br> Objectives<br> Tools<br> Schedule |
-| User stories and tasks | The end result is a monitoring configuration and/or solution | Network monitoring (For example, ExpressRoute) <br> Standardized IaaS VM monitoring (For example Azure Monitor for VMs, Application Insight, Azure Policy, settings, policies, reports, workspaces.) |
+| Epics | Broad monitoring <br> Initiatives of the monitoring strategy | Consolidate Azure cloud monitoring <br> Hybrid cloud monitoring <br> Private cloud monitoring <br> Establish core monitoring service |
+| Features | Individual monitoring <br> Plans and projects | Monitoring requirements <br> Monitoring consumers and providers <br> Objectives <br> Tools <br> Schedule |
+| User stories and tasks | The end result is a monitoring configuration and/or solution | Network monitoring (for example, ExpressRoute) <br> Standardized IaaS VM monitoring (for example Azure Monitor for VMs, Application Insights, Azure Policy, settings, policies, reports, workspaces.) |
 
 ## Establish minimum governance
 
@@ -261,9 +263,9 @@ Define who will have what level of access in Azure to support their role and res
 
 First, identify the roles who will own and manage resource groups in Azure as part of your governance framework:
 
-- Whether a Monitoring team or one or more administrators of resources and resource groups will have privileged access to the **Monitoring Contributor** role.
+- Whether a monitoring team or one or more administrators of resources and resource groups will have privileged access to the **Monitoring Contributor** role.
 
-- The consumers who should be granted the **Monitoring Reader** role, which enables access to features in Azure Monitor, as well as investigate issues within the Monitoring section that is included with each Azure resource.
+- The consumers who should be granted the **Monitoring Reader** role, which enables access to features in Azure Monitor, as well as investigate issues within the monitoring section that is included with each Azure resource.
 
 - What managers require access to other Azure reader roles such as **Reports Reader**.
 
