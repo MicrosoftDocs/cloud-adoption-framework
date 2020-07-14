@@ -19,7 +19,7 @@ ms.subservice: migrate
 
 When preparing to migrate existing data to Azure Synapse Analytics, it is important to clearly define the scope of the exercise (especially for an initial migration project). Time spent up front in understanding the database objects and associated processes to be migrated will pay dividends in reducing effort and risk later in the project.
 
-An inventory of database objects to be migrated should be created. Depending on the source platform, this will generally include some or all of the following:
+Create an inventory of database objects to be migrated. Depending on the source platform, this inventory will include some or all of the following objects:
 
 - Tables
 - Views
@@ -28,13 +28,13 @@ An inventory of database objects to be migrated should be created. Depending on 
 - Stored procedures
 - Data distribution and partitioning
 
-The basic information for these objects (including metrics such as row counts, physical size, data compression ratios, and object dependencies) should be available via queries against system catalog tables in the source system. The system metadata is the best source for this important information. External documentation may be out of date and not in sync with changes that have been applied to the data structure since the initial implementation.
+The basic information for these objects (including metrics such as row counts, physical size, data compression ratios, and object dependencies) should be available via queries against system catalog tables in the source system. The system metadata is the best source for this information. External documentation might be stale and not in sync with changes that have been applied to the data structure since the initial implementation.
 
 It may also be possible to analyze actual object usage from query logs or use tooling from Microsoft partners to help, for example, Attunity Visibility. It might be that some tables don't need to be migrated as they're no longer used in production queries.
 
-Data sizing and workload information (for example, levels of concurrency required) is important as this is used to define an appropriate configuration for the Azure Synapse Analytics. It is also good practice to understand the expected data and workload future growth as this may also affect the recommended target configuration.
+Data sizing and workload information (for example, levels of concurrency required) is important since it's used to define an appropriate configuration for the Azure Synapse Analytics. It is also good practice to understand the expected data and workload future growth as this may also affect the recommended target configuration.
 
-When using data volumes to estimate the storage required for the new target platform, it is important to understand the data compression ratio (if any) on the source database. Simply taking the amount of storage used on the source system is likely to be a false basis for sizing. It should be possible from monitoring and metadata information to determine uncompressed raw data size, as well as any overheads for indexing, data replication, logging , or other processes in the current system.
+When using data volumes to estimate the storage required for the new target platform, it is important to understand the data compression ratio (if any) on the source database. Simply taking the amount of storage used on the source system is likely to be a false basis for sizing. It should be possible from monitoring and metadata information to determine uncompressed raw data size, as well as any overheads for indexing, data replication, logging, or other processes in the current system.
 
 The uncompressed raw data size of the tables to be migrated is a good starting point for estimating the storage required in the new target Azure Synapse Analytics environment.
 
@@ -42,18 +42,18 @@ There will also be a compression factor as well as indexing overhead in the new 
 
 The data model performance tuning process can be left until late in the migration process so that it takes place when there are real data volumes within the data warehouse. But it is recommended that some performance tuning options can be implemented earlier in the process. For example, in Azure Synapse Analytics it generally makes sense to define small dimension tables as replicated tables and to define large fact tables as clustered columnstore indexes. Similarly, indexes defined in the source environment provide a good indication of which columns might benefit from indexing in the new environment. Using this information when initially defining the tables prior to loading will save time later in the process.
 
-It is good practice to measure the compression ratio and index overhead for your own data in Azure Synapse Analytics as the migration project progresses, this will provide a sound basis for future capacity planning.
+It is good practice to measure the compression ratio and index overhead for your own data in Azure Synapse Analytics as the migration project progresses. This measure enables future capacity planning.
 
 It may be possible to simply your existing data warehouse prior to migration by about reducing complexity to ease migration. It could include:
 
 - Removing or archiving unused tables before migrating to avoid migrating data that is not used. Archiving to Azure Blob storage and defining the data as an external table could keep the data available but at lower cost.
-- Converting physical data marts to virtual data marts using data virtualization software to reduce what you have to migrate. This would also improve agility and reduce total cost of ownership and so could be considered as modernization during migration.
+- Converting physical data marts to virtual data marts using data virtualization software to reduce what you have to migrate. This conversion also improves agility and reduces total cost of ownership, and could be considered as modernization during migration.
 
 One objective of the migration exercise may also be to modernize the warehouse by changing the underlying data model, for example, moving from an Inmon style data model to a data vault approach. This should be decided as part of the preparation phase and a strategy for the transition should be incorporated into the migration plan. The recommended approach in this scenario is to first migrate the data model as is to the new platform and then do the transition to the new model in Azure Synapse Analytics, using the scalability and performance characteristics of the platform to execute the transformation with no impact on the source system.
 
 ### Data model migration
 
-Depending on the platform and the origins of the source system, the data model of some or all parts may already be in a star or snowflake schema form. If so, this can be directly migrated to Azure Synapse Analytics as is. This scenario is the easiest and lowest risk migration to achieve. An as-is migration could also be the first stage of a more complex migration which includes a transition to a new underlying data model such as data vault as described above.
+Depending on the platform and the origins of the source system, the data model of some or all parts may already be in a star or snowflake schema form. If so, this can be directly migrated to Azure Synapse Analytics as is. This scenario is the easiest and lowest risk migration to achieve. An as-is migration could also be the first stage of a more complex migration that includes a transition to a new underlying data model such as data vault as described above.
 
 While any set of relational tables and views can be migrated to Azure Synapse Analytics, for analytical query workloads against a large data set, a star or snowflake data model generally gives the best overall performance. If the source data model is not already in this form, it may be worth using the migration process to re-engineer the model.
 
@@ -103,32 +103,38 @@ Some legacy database systems include support for data types that are not current
 
 An alphabetic list of supported data types is shown below:
 
-- Bigint
-- Binary [ ( n ) ]
-- Bit
-- Char [ ( n ) ]
-- Date
-- Datetime
-- Datetime2 [ ( n ) ]
-- Datetimeoffset [ ( n ) ]
-- Decimal [ ( precision [ , scale ] ) ]
-- Float [ ( n ) ]
-- Int
-- Money
-- Nchar [ ( n ) ]
-- Numeric [ ( precision [ , scale ] ) ]
-- Nvarchar [ ( n | Max ) ]
-- Real [ ( n ) ]
-- Smalldatetime
-- Smallint
-- Smallmoney
-- Time [ ( n ) ]
-- Tinyint
-- Uniqueidentifier
-- Varbinary [ ( n | Max ) ]
-- Varchar [ ( n | Max ) ]
+<!-- TODO: Review format of this list. Are the arguments necessary for this list? -->
 
-The table below lists some common data types that are not currently supported together with the recommended approach for storing these in Azure Synapse Analytics. (For specific environments, for example, Teradata or Netezza, see the associated documents for more detailed information.)
+<!-- docsTest:disable -->
+
+- `bigint`
+- `binary [ (n) ]`
+- `bit`
+- `char [ (n) ]`
+- `date`
+- `datetime`
+- `datetime2 [ (n) ]`
+- `datetimeoffset [ (n) ]`
+- `decimal [ (precision [, scale ]) ]`
+- `float [ (n) ]`
+- `int`
+- `money`
+- `nchar [ (n) ]`
+- `numeric [ (precision [ , scale ]) ]`
+- `nvarchar [ (n | MAX) ]`
+- `real [ (n) ]`
+- `smalldatetime`
+- `smallint`
+- `smallmoney`
+- `time [ (n) ]`
+- `tinyint`
+- `uniqueidentifier`
+- `varbinary [ (n | MAX) ]`
+- `varchar [ (n | MAX) ]`
+
+<!-- docsTest:enable -->
+
+The table below lists some common data types that are not currently supported together with the recommended approach for storing these in Azure Synapse Analytics. (For specific environments such as Teradata or Netezza, see the associated documents for more detailed information.)
 
 | **Unsupported data type** | **Workaround**                                                      |
 |-----------------------|-----------------------------------------------------------------|
@@ -179,7 +185,7 @@ The database to be migrated will already have had performance tuning applied usi
 
 For example, the presence of a non-unique index on a table can indicate that field(s) used in the index are used frequently for filtering, grouping or joining. This will still be the case in the new environment and so this should be borne in mind when choosing which fields to index there. Migration recommendations for specific source platforms such as Teradata and Netezza are described in detail in separate documents.
 
-Use the performance and scalability of the target Azure Synapse Analytics environment to experiment with different performance options such as data distribution to determine the best choice from alternative approaches (for example, replicated versus has distributed for a large dimension table). This doesn't mean that data has to be reloaded from external sources. It is relatively quick and easy to test alternative approaches in Azure Synapse Analytics by creating copies of any table with different partitioning or distribution options via a `CREATE TABLE AS` statement.
+Use the performance and scalability of the target Azure Synapse Analytics environment to experiment with different performance options such as data distribution to determine the best choice of alternative approaches (for example, replicated versus hash-distributed for a large dimension table). This doesn't mean that data must be reloaded from external sources. It's relatively quick and easy to test alternative approaches in Azure Synapse Analytics by creating copies of any table with different partitioning or distribution options via a `CREATE TABLE AS SELECT` statement.
 
 Make use of the monitoring tools provided by the Azure environment to understand how queries are executed and where bottlenecks may be occurring. There are also tools available from third-party Microsoft partners that provide monitoring dashboards and automated resource management and alerting.
 
@@ -209,25 +215,25 @@ The ideal processing scenario when running a SQL query in a multinode environmen
 
 In typical analytics queries there are frequently multiple joins between several tables (for example, between fact tables and dimension tables) as well as aggregations and therefore it can be difficult to achieve the ideal scenario.
 
-One way to influence the processing of queries is to use the distribution options within Azure Synapse Analytics to specify where individual data rows of each table are stored. For example, if two large tables are frequently joined on a given data column such as 1`CUSTOMER_ID`, by distributing the two tables using the `CUSTOMER_ID` columns whenever that join is performed the data from each side of the join will already be colocated on the same processing node, eliminating the need to move data between nodes. The distribution specification for a table is defined in the `CREATE TABLE` statement.
+One way to influence the processing of queries is to use the distribution options within Azure Synapse Analytics to specify where individual data rows of each table are stored. For example, if two large tables are frequently joined on a given data column such as `CUSTOMER_ID`, by distributing the two tables using the `CUSTOMER_ID` columns whenever that join is performed the data from each side of the join will already be colocated on the same processing node, eliminating the need to move data between nodes. The distribution specification for a table is defined in the `CREATE TABLE` statement.
 
-The distribution options available and recommendations of when to use them are described below. It is possible to change the distribution of a table after initial load, if necessary, by re-creating the table with the new distribution using the `CREATE TABLE AS` statement.
+The distribution options available and recommendations of when to use them are described below. It is possible to change the distribution of a table after initial load, if necessary, by re-creating the table with the new distribution using the `CREATE TABLE AS SELECT` statement.
 
-**Round robin**:
+**Round-robin**:
 
-This is the default table distribution and is designed to spread the data evenly across the nodes within the system. This method is good for fast data loading and for data that is relatively low volume and doesn't have an obvious candidate for hashing, so is frequently used for staging tables as part of an ETL or ELT process.
+This table distribution is the default option and spreads the data evenly across the nodes in the system. This method is good for fast data loading and for data that is relatively low volume and doesn't have an obvious candidate for hashing, so it's frequently used for staging tables as part of an ETL or ELT process.
 
 **Hashed**:
 
-Based on a hashing algorithm applied to a user-defined key (for example, customer_id in the example above), the system assigns the row to a hash bucket, which in turn is assigned to a specific node. All data rows hash distributed on the same value will therefore end up on the same processing node.
+Based on a hashing algorithm applied to a user-defined key (like `CUSTOMER_ID` in the example above), the system assigns the row to a hash bucket, which is then assigned to a specific node. All data rows hash distributed on the same value will therefore end up on the same processing node.
 
-This method is useful for large tables that are frequently joined or aggregated on a given key. Other large tables to be joined should also be hashed on the same key if possible. If there are multiple candidates for the hash key, choose the most frequently joined one. The hash column should not contain nulls and typically is not a date (as many queries filter on date). Hashing is generally more efficient if the key to be hashed is an integer value, not `CHAR` or `VARCHAR`. Also, avoid choosing keys that have a highly skewed range of values, such as a small number of key values that represent a high percentage of the data rows.
+This method is useful for large tables that are frequently joined or aggregated on a given key. Other large tables to be joined should be hashed on the same key if possible. If there are multiple candidates for the hash key, choose the most frequently joined one. The hash column shouldn't contain nulls and typically isn't a date because many queries filter on date). Hashing is typically more efficient if the key to hash is an integer value rather than `CHAR` or `VARCHAR`. Also avoid choosing keys that have a highly skewed range of values, such as a small number of key values that represent a high percentage of the data rows.
 
 **Replicated**:
 
 Choosing replicated as the distribution option for a table will cause a complete copy of that table to be replicated on each compute node for query processing purposes.
 
-This approach is useful for relatively small tables (typically less than 2 GB compressed) that are relatively static and frequently joined to larger tables via an equi-join, these are often dimensional tables in a star schema.
+This approach is useful for relatively small tables (typically less than 2 GB compressed) that are relatively static and frequently joined to larger tables via an equi-join. These tables are often dimensional tables in a star schema.
 
 ### Indexing
 
@@ -237,17 +243,17 @@ Azure Synapse Analytics includes several options for indexing data in large tabl
 - Clustered index
 - Non-clustered index
 
-There is also a non-indexed option called `HEAP` for tables that wouldn't benefit from any of the index options. The use of indexes generally is a tradeoff between improved query times versus longer load times and more storage space usage. In general, indexes can speed up `SELECT`, `UPDATE`, `DELETE` and `MERGE` operations on large tables where only a small proportion of the data rows are affected, and the indexes can be used to avoid full table scans.
+There is also a non-indexed option called `HEAP` for tables that wouldn't benefit from any of the index options. The use of indexes is a tradeoff between improved query times versus longer load times and more storage space usage. Indexes often speed up `SELECT`, `UPDATE`, `DELETE` and `MERGE` operations on large tables that affect a small percentage of the data rows, and the indexes can help avoid full table scans.
 
 Indexes are automatically created when `UNIQUE` or `PRIMARY KEY` constraints are defined on columns.
 
 **Clustered columnstore index**:
 
-This is the default indexing option within Azure Synapse Analytics and provides the best compression and query performance for large tables. For smaller tables (less than 60 million rows) these indexes are not efficient and so the heap option should be used. Similarly, if the data in a table is transient (perhaps part of an ETL/ELT process) heap or a temporary table may be more efficient.
+This is the default indexing option within Azure Synapse Analytics and provides the best compression and query performance for large tables. For smaller tables (less than 60 million rows), these indexes are not efficient and so the heap option should be used. Similarly, if the data in a table is transient (perhaps part of an ETL/ELT process) heap or a temporary table may be more efficient.
 
 **Clustered index**:
 
-If there is a requirement to regularly retrieve a single row or small number of rows from a large table based on a strong filter condition a clustered index may be more efficient than a clustered columnstore index. Only one clustered index is allowed per table. Replication
+If there is a requirement to regularly retrieve a single row or small number of rows from a large table based on a strong filter condition, a clustered index might be more efficient than a clustered columnstore index. Only one clustered index is allowed per table. Replication
 
 **Non-clustered index**:
 
@@ -259,13 +265,13 @@ Heap tables incur none of the overhead associated with the creation and maintena
 
 ### Data partitioning
 
-In an enterprise data warehouse fact tables can contain many billions of rows and partitioning is a way to optimize the maintenance and querying of these tables by splitting them into separate parts to reduce the amount of data processed when running queries. The partitioning specification for a table is defined in the `CREATE TABLE` statement.
+In an enterprise data warehouse, fact tables can contain many billions of rows and partitioning is a way to optimize the maintenance and querying of these tables by splitting them into separate parts to reduce the amount of data processed when running queries. The partitioning specification for a table is defined in the `CREATE TABLE` statement.
 
-Only one field per table can be used for partitioning, and this is frequently a date field as many queries will be filtered by date or a date range. Note that it is possible to change the partitioning of a table after initial load if necessary by re-creating the table with the new distribution using the `CREATE TABLE AS` statement.
+Only one field per table can be used for partitioning, which is frequently a date field since many queries are filtered by a date or date range. You can change the partitioning of a table after initial load if necessary by re-creating the table with the new distribution using the `CREATE TABLE AS SELECT` statement.
 
 **Partitioning for query optimization**:
 
-If queries against a large fact table are frequently filtered by a certain data column, then partitioning on that column can significantly reduce the amount of data that needs to be processed to perform the queries. A common example is to use a date field to split the table into smaller groups each containing data for a single day. When a query contains a `WHERE` clause which filters on the date, only those partitions that match the date filter need to be accessed.
+If queries against a large fact table are frequently filtered by a certain data column, then partitioning on that column can significantly reduce the amount of data that needs to be processed to perform the queries. A common example is to use a date field to split the table into smaller groups each containing data for a single day. When a query contains a `WHERE` clause that filters on the date, only those partitions that match the date filter need to be accessed.
 
 **Partitioning for table maintenance optimization**:
 
@@ -273,17 +279,17 @@ It is common in data warehouse environments to maintain a rolling window of deta
 
 ### Statistics
 
-When a query is submitted to Azure Synapse Analytics it is first processed by the query optimizer which determines the best internal methods to use to execute the query efficiently. The optimizer compares the various query execution plans available based on a cost-based algorithm, and the accuracy of the cost estimates is dependent on the statistics available. It is therefore good practice to ensure that statistics are up to date.
+When a query is submitted to Azure Synapse Analytics, it's first processed by the query optimizer, which determines the best internal methods to use to execute the query efficiently. The optimizer compares the various query-execution plans that are available based on a cost-based algorithm, and the accuracy of the cost estimates is dependent on the statistics available. It is therefore good practice to ensure that statistics are up to date.
 
-In Azure Synapse Analytics if the `AUTO_CREATE_STATISTICS` option is turned on this will trigger automatic update of statistics. Statistics can also be created or updated manually via the `CREATE STATISTICS` command.
+In Azure Synapse Analytics, if the `AUTO_CREATE_STATISTICS` option is turned on, it will trigger an automatic update of statistics. Statistics can also be created or updated manually via the `CREATE STATISTICS` command.
 
-It is good practice to refresh statistics when there has been substantial change in the contents (for example, a daily update), this can be incorporated into ETL process.
+Refresh statistics when the contents have been changed substantially (such as in a daily update). This refresh can be incorporated into ETL process.
 
-All tables in the database should have statistics collected on at least one column (to ensure that basic information such as row count and table size is available to the optimizer). Other columns that should have statistics collected are those that are specified in `JOIN`, `DISTINCT`, `ORDER BY` and `GROUP BY` processing.
+All tables in the database should have statistics collected on at least one column (to ensure that basic information such as row count and table size is available to the optimizer). Other columns that should have statistics collected are columns specified in `JOIN`, `DISTINCT`, `ORDER BY`, and `GROUP BY` processing.
 
 ### Workload management
 
-Azure Synapse Analytics incorporates comprehensive features for managing resource utilization across mixed workloads. This can be achieved by creating resource classes for different workload types (for example, queries versus data load). Resource classes can help you manage your workload by setting limits on the number of queries that run concurrently and on the compute resources assigned to each query. There's a trade-off between memory and concurrency.
+Azure Synapse Analytics incorporates comprehensive features for managing resource utilization across mixed workloads. Creating resource classes for different workload types (such as queries versus data load) helps you manage your workload by setting limits on the number of queries that run concurrently and on the compute resources assigned to each query. There's a trade-off between memory and concurrency.
 
 - Smaller resource classes reduce the maximum memory per query, but increase concurrency.
 - Larger resource classes increase the maximum memory per query, but reduce concurrency
@@ -292,14 +298,14 @@ Azure Synapse Analytics incorporates comprehensive features for managing resourc
 
 Use any performance improvement methods (for example, indexes, data distribution) as indications of candidates to similar measures in the new target environment, but benchmark to confirm that they're necessary in Azure Synapse Analytics. Build `COLLECT STATISTICS` steps into ETL/ELT processes to ensure statistics are up to date, or turn on automatic statistics creation.
 
-Understand the tuning options available within Azure Synapse Analytics and also the performance characteristics of associated utilities (for example, PolyBase for fast parallel data loading) and use these as appropriate to build an efficient end to end implementation.
+Understand the tuning options available in Azure Synapse Analytics and the performance characteristics of associated utilities, such as PolyBase for fast parallel data loading. Use these options to build an efficient end-to-end implementation.
 
-Use the flexibility, scalability, and performance of the Azure environment to implement any data model changes or performance tuning options in-situ to reduce the impact on existing source systems.
+Use the flexibility, scalability, and performance of the Azure environment to implement any data model changes or performance tuning options in-place to reduce the impact on existing source systems.
 
 Understand the dynamic management views available in Azure Synapse Analytics to provide both system-wide resource utilization information and detailed execution information for individual queries.
 
-Understand Azure resource classes and allocate these as appropriate for efficient management of mixed workloads and concurrency.
+Understand Azure resource classes and allocate them appropriately to ensure efficient management of mixed workloads and concurrency.
 
 Consider using a virtualization layer as part of the Azure Synapse Analytics environment to shield changes in the warehouse implementation from business users and reporting tools.
 
-Research migration tools and services provided by third-party providers, such Attunity Replicate for Microsoft migrations, Wherescape, and Datometry. These can automate parts of the migration process and reduce the elapsed time and risk involved in a migration project.
+Research migration tools and services provided by third-party providers, such Attunity Replicate for Microsoft migrations, Wherescape, and Datometry. These tools can automate parts of the migration process and reduce the elapsed time and risk involved in a migration project.

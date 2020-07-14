@@ -13,7 +13,7 @@ ms.subservice: migrate
 
 # Analytics solutions
 
-Current market offerings fall short in meeting an organizations growing needs. The legacy on-premises environments including Teradata, Netezza, and Oracle Exadata are expensive, slow to innovate, and inelastic. Existing users of on-premises systems are now considering taking advantage of the innovations that are provided by newer environments (for example, cloud, IaaS, PaaS), and looking to delegate tasks, such as infrastructure maintenance and platform development to the cloud provider. Microsoft Azure is a globally available, highly secure, scalable cloud environment, which includes Azure Synapse Analytics within an ecosystem of supporting tools and capabilities.
+Current market offerings fall short in meeting an organization's growing needs. The legacy on-premises environments including Teradata, Netezza, and Oracle Exadata are expensive, slow to innovate, and inelastic. Existing users of on-premises systems are now considering taking advantage of the innovations that are provided by newer environments (for example, cloud, IaaS, PaaS), and looking to delegate tasks, such as infrastructure maintenance and platform development to the cloud provider. Microsoft Azure is a globally available, highly secure, scalable cloud environment, which includes Azure Synapse Analytics within an ecosystem of supporting tools and capabilities.
 
 ![Design and performance for Teradata migrations](../../../_images/analytics/analytics-solutions-overview.png)
 
@@ -27,7 +27,7 @@ Azure Synapse Analytics provides best-of-breed relational database performance b
 - Reduced storage and disaster recovery costs.
 - Lower overall TCO and better cost control (operating expenses).
 
-To maximize these benefits, it's necessary to migrate existing (or new) data and applications to the Azure Synapse Analytics platform. In many organizations this includes migration of an existing data warehouse from legacy on-premises platforms such as Teradata, Netezza, or Exadata. Organizations need to modernize their data estate with an analytics offering that is price-performant, rapidly innovates, and that is scalable and truly elastic. Learn more in the following sections for migration best practices on Teradata, Netezza, and Exadata.
+To maximize these benefits, it's necessary to migrate existing (or new) data and applications to the Azure Synapse Analytics platform. In many organizations, this approach includes migrating an existing data warehouse from a legacy on-premises platform such as Teradata, Netezza, or Exadata. Organizations need to modernize their data estate with an analytics offering that is price-performant, rapidly innovates, and that is scalable and truly elastic. Learn more in the following sections for migration best practices on Teradata, Netezza, and Exadata.
 
 ## Next steps
 
