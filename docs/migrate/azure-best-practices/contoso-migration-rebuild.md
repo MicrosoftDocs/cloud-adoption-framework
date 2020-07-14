@@ -39,7 +39,7 @@ The Contoso cloud team has pinned down application requirements for this migrati
 - The API service that's used for pet photos should be accurate and reliable in the real world, because decisions made by the application must be honored in their hotels. Any pet granted access is allowed to stay at the hotels.
 - To meet requirements for a DevOps pipeline, Contoso will use a Git repository in Azure Repos for source code management. Automated builds and releases will be used to build code and deploy to Azure App Service, Azure Functions, and AKS.
 - Separate continuous integration/continuous development (CI/CD) pipelines are needed for microservices on the back end and for the website on the front end.
-- The back-end services and the front-end web app have different release cycles. To meet this requirement, they will deploy two different pipelines.
+- The back-end services and the front-end web app have different release cycles. To meet this requirement, Contoso will deploy two different pipelines.
 - Contoso needs management approval for all front-end website deployment, and the CI/CD pipeline must provide this.
 
 ## Solution design
@@ -59,9 +59,9 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 - The front end of the application is deployed as an Azure App Service web app in the primary Azure region.
 - An Azure function provides uploads of pet photos, and the site interacts with this functionality.
 - The pet photo function uses the Computer Vision API of Azure Cognitive Services along with Azure Cosmos DB.
-- The back end of the site is built using microservices. These will be deployed to containers managed in AKS.
-- Containers will be built using Azure DevOps, and pushed to Azure Container Registry.
-- For now, Contoso will manually deploy the web app and function code using Visual Studio.
+- The back end of the site is built by using microservices. These microservices will be deployed to containers that are managed in AKS.
+- Containers will be built using Azure DevOps and then pushed to Azure Container Registry.
+- For now, Contoso will manually deploy the web app and function code by using Visual Studio.
 - Contoso will deploy microservices by using a PowerShell script that calls Kubernetes command-line tools.
 
     ![Diagram of scenario architecture for migration to Azure.](./media/contoso-migration-rebuild/architecture.png)  
@@ -73,7 +73,7 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Using PaaS and serverless solutions for the end-to-end deployment significantly reduces the management time that Contoso must provide. <br><br> Moving to a microservices-based architecture allows Contoso to easily extend the solution over time. <br><br> New functionality can be brought online without disrupting any of the existing solutions' code bases. <br><br> The web app will be configured with multiple instances, with no single point of failure. <br><br> Autoscaling will be enabled so that the application can handle differing traffic volumes. <br><br> With the move to PaaS services, Contoso can retire out-of-date solutions running on the Windows Server 2008 R2 operating system. <br><br> Azure Cosmos DB has built-in fault tolerance, which requires no configuration by Contoso. This means that the data tier is no longer a single point of failover. |
+| **Pros** | Using PaaS and serverless solutions for the end-to-end deployment significantly reduces the management time that Contoso must provide. <br><br> Moving to a microservices-based architecture allows Contoso to easily extend the solution over time. <br><br> New functionality can be brought online without disrupting any of the existing solutions' code bases. <br><br> The web app will be configured with multiple instances, with no single point of failure. <br><br> Autoscaling will be enabled so that the application can handle differing traffic volumes. <br><br> With the move to PaaS services, Contoso can retire out-of-date solutions that run on the Windows Server 2008 R2 operating system. <br><br> Azure Cosmos DB has built-in fault tolerance, which requires no configuration by Contoso. This means that the data tier is no longer a single point of failover. |
 | **Cons** | Containers are more complex than other migration options. The learning curve could be an issue for Contoso. They introduce a new level of complexity that provides value in spite of the curve. <br><br> The operations team at Contoso needs to ramp up to understand and support Azure, containers, and microservices for the application. <br><br> Contoso hasn't fully implemented DevOps for the entire solution. Contoso needs to consider that for the deployment of services to AKS, Azure Functions, and Azure App Service. |
 
 ### Migration process
@@ -119,11 +119,11 @@ Here's how Contoso will run the migration:
 > - **Step 5: Migrate the back end.** Contoso deploys microservices and runs them on AKS to migrate the back end.
 > - **Step 6: Publish the front end.** Contoso publishes the SmartHotel360 application to Azure App Service along with the function app to be called by the pet service.
 
-## Step 1: Provision back-end resources
+## Provision back-end resources
 
 Contoso admins run a deployment script to create the managed Kubernetes cluster by using AKS and Azure Container Registry. The instructions for this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) GitHub repository. The repository contains all the software for this part of the deployment.
 
-### Ensure prerequisites
+### Ensure that prerequisites are met
 
 Before they start, Contoso admins ensure that all prerequisite software is installed on the dev machine they're using for the deployment. They clone the repository locally to the dev machine by using Git:
 
