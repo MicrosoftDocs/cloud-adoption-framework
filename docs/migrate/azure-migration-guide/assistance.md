@@ -13,23 +13,13 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore MSPs -->
 
-::: zone target="chromeless"
-
-# Assistance
-
-::: zone-end
-
-::: zone target="docs"
-
-# Obtain assistance during your journey to Azure
-
-::: zone-end
+# Get assistance
 
 We know that getting the right support at the right time will accelerate your migration efforts. Review the assistance avenues below to meet your needs.
 
-# [Support plans](#tab/SupportPlans)
+## [Support plans](#tab/SupportPlans)
 
-## Microsoft Support
+### Microsoft Support
 
 Microsoft offers a basic support plan to all Azure customers. You have 24x7 access to billing and subscription support, online self-help, documentation, whitepapers, and support forums.
 
@@ -89,7 +79,7 @@ Need support engineer assistance for deep technical guidance?
 
 ::: zone target="docs"
 
-## Online communities
+### Online communities
 
 The following online communities provide community-based support:
 
@@ -98,9 +88,9 @@ The following online communities provide community-based support:
 
 ::: zone-end
 
-# [Partners](#tab/Partners)
+## [Partners](#tab/Partners)
 
-## Azure solutions partner
+### Azure solutions partner
 
 Microsoft certified solution providers specialize in providing modern customer solutions based on Microsoft technologies across the world. Optimize your business in the cloud with help from an experienced partner.
 
