@@ -27,7 +27,7 @@ To maximize these benefits, it's necessary to migrate existing (or new) data and
 
 | Preparation | Migration | Post migration |
 |---|---|---|
-| <li> Define scope - what is to be migrated <li> Build inventory of data and processes for migration <li> Define data model changes (if any) <li> Identify appropriate Azure (and third-party) tools and features to be used <li> Train staff early on new platform <li> Set up Azure target platform |  <li> Start small and simple <li> Automate where possible <li> Use Azure built in tools and features to reduce migration effort <li> Migrate metadata for tables and views <li> Migrate historical data to be maintained <li> Migrate or refactor stored procedures and business processes <li> Migrate or refactor etl/elt incremental load processes |  <li> Monitor and document all stages of the process <li> Use experience gained to build a template for future migrations <li> Re-engineer the data model if required (using new platform performance and scalability) <li> Test applications and query tools <li> Benchmark and optimize query performance |
+| <li> Define scope - what is to be migrated <li> Build inventory of data and processes for migration <li> Define data model changes (if any) <li> Identify appropriate Azure (and third-party) tools and features to be used <li> Train staff early on new platform <li> Set up Azure target platform |  <li> Start small and simple <li> Automate where possible <li> Use Azure built in tools and features to reduce migration effort <li> Migrate metadata for tables and views <li> Migrate historical data to be maintained <li> Migrate or refactor stored procedures and business processes <li> Migrate or refactor ETL/ELT incremental load processes |  <li> Monitor and document all stages of the process <li> Use experience gained to build a template for future migrations <li> Re-engineer the data model if required (using new platform performance and scalability) <li> Test applications and query tools <li> Benchmark and optimize query performance |
 
 ## Migration scope
 
@@ -43,7 +43,7 @@ A good candidate for an initial migration from a Teradata environment, which wou
 
 In terms of size, it is important that the data volume to be migrated in the initial exercise is large enough to demonstrate the capabilities and benefits of the Azure Synapse Analytics environment, while keeping the time to demonstrate value short, typically in the 1-10 TB range.
 
-One possible approach for the initial migration project that will minimize the risk and reduce the implementation time for the initial project is to confine the scope of the migration to just the data marts (for example, the OLAP database part of a Teradata warehouse). This approach, by definition, limits the scope of the migration and can typically be achieved within short timescales and so can be a good starting point. However, this will not address the broader topics such as etl migration and historical data migration as part of the initial migration project. These would have to be addressed in later phases of the project as the migrated data mart layer is back filled with the data and processes required to build them.
+One possible approach for the initial migration project that will minimize the risk and reduce the implementation time for the initial project is to confine the scope of the migration to just the data marts (for example, the OLAP database part of a Teradata warehouse). This approach, by definition, limits the scope of the migration and can typically be achieved within short timescales and so can be a good starting point. However, this will not address the broader topics such as ETL migration and historical data migration as part of the initial migration project. These would have to be addressed in later phases of the project as the migrated data mart layer is back filled with the data and processes required to build them.
 
 ## Lift and shift as-is versus a phased approach incorporating changes
 
@@ -85,7 +85,7 @@ By creating metadata to list the data tables to be migrated and their location, 
 
 ### Separate databases versus schemas
 
-In a Teradata environment it is common to define multiple separate databases for individual parts of the overall environment, for example, there may be a separate database for data ingestion and staging tables, a database for the core warehouse tables and another database for data marts (sometimes called a semantic layer). Processing such as etl/elt pipelines may implement cross-database joins and will move data between these separate databases.
+In a Teradata environment it is common to define multiple separate databases for individual parts of the overall environment, for example, there may be a separate database for data ingestion and staging tables, a database for the core warehouse tables and another database for data marts (sometimes called a semantic layer). Processing such as ETL/ELT pipelines may implement cross-database joins and will move data between these separate databases.
 
 In the Azure Synapse Analytics environment there is a single database, and schemas are used to separate the tables into logically separate groups. Therefore, the recommendation is to use a series of schemas within the target Azure Synapse Analytics to mimic the separate databases that will be migrated from the Teradata environment. If schemas are already being used within the Teradata environment, then it may be necessary to use a new naming convention to move the existing Teradata tables and views to the new environment (for example, concatenate the existing Teradata schema and table names into the new Azure Synapse Analytics table name and use schema names in the new environment to maintain the original separate database names). Another option is to use SQL views over the underlying tables to maintain the logical structures, but there are some potential downsides to this approach:
 
@@ -122,7 +122,7 @@ Some Teradata data types are not directly supported in the Azure Synapse Analyti
 
 Use the metadata from the Teradata catalog tables to determine whether any of these data types are to be migrated and allow for this in the migration plan. For instance, a SQL query such as the one below can be used to find any occurrences of unsupported data types that need attention.
 
-There are third-party vendors who offer tools and services to automate migration including the mapping of data types as described above. Also, if a third-party etl tool such as Informatica or Talend is already in use in the Teradata environment, these can implement any required data transformations.
+There are third-party vendors who offer tools and services to automate migration including the mapping of data types as described above. Also, if a third-party ETL tool such as Informatica or Talend is already in use in the Teradata environment, these can implement any required data transformations.
 
 ## SQL DML syntax differences
 

@@ -61,14 +61,14 @@ If any changes to the data model are done as part of the migration project, the 
 
 The existing system to be migrated may be implemented as several layers (for example, data ingest/staging layer, data warehouse layer and reporting or data marts layer) each of which consist of a number of relational tables and views. While these could all be migrated to Azure Synapse Analytics as-is, it might be more cost-effective and performant to use some of the features and capabilities of the Azure ecosystem rather than migrating everything directly. For example:
 
-- **Data ingest and staging:** Azure Blob storage in conjunction with PolyBase for fast parallel data loading could be used for part of the etl/elt process rather than relational tables.
+- **Data ingest and staging:** Azure Blob storage in conjunction with PolyBase for fast parallel data loading could be used for part of the ETL/ELT process rather than relational tables.
 - **Reporting layer and data marts:** The performance characteristics of Azure Synapse Analytics may eliminate the need to physically instantiate aggregated tables for reporting purposes or data marts. It may be possible to implement these as views onto the core data warehouse or via a third-party data virtualization layer. At the basic level, the process for data migration of historical data and possibly also incremental updates can be achieved as shown below:
 
 ![Modern data warehouse](../../../_images/analytics/schema-migration-ddl.png)
 
 If these or similar approaches can be used, the number of tables to be migrated is reduced and some processes might be simplified or eliminated, again reducing the migration workload. The applicability of these approaches is dependent on the individual use case, but the general principle is to consider using the features and facilities of the Azure ecosystem where possible to reduce the migration workload and build a cost-effective target environment. This also holds true for other functions such as backup/restore and workflow management and monitoring.
 
-There are also products and services available from Microsoft partners to assist in data warehouse migration and in some cases automate parts of the process. If the existing system incorporates a third-party etl product, it may be that this already supports Azure Synapse Analytics as a target environment and the existing etl workflows could be redirected to the new target Azure SQL Data Warehouse.
+There are also products and services available from Microsoft partners to assist in data warehouse migration and in some cases automate parts of the process. If the existing system incorporates a third-party ETL product, it may be that this already supports Azure Synapse Analytics as a target environment and the existing ETL workflows could be redirected to the new target Azure SQL Data Warehouse.
 
 ### Data marts: Physical or virtual
 
@@ -84,9 +84,9 @@ There is also another potential benefit of this approach. By implementing the ag
 
 The primary drivers for choosing to implement physical or virtual data mart implementation are:
 
-- More agility as a virtual data mart is easier to change than physical tables and the associated etl processes.
+- More agility as a virtual data mart is easier to change than physical tables and the associated ETL processes.
 - Lower total cost of ownership because of fewer data stores and copies of data in a virtualized implementation.
-- Elimination of etl jobs to migrate and simplified dw architecture in a virtualized environment.
+- Elimination of ETL jobs to migrate and simplified dw architecture in a virtualized environment.
 - Performance: historically physical data marts have been more performant though virtualization products are now implementing intelligent caching techniques to mitigate this
 
 Data virtualization can also be used to provide end users with a consistent view of data while a migration project takes place.
@@ -199,7 +199,7 @@ Temporary tables have some restrictions:
 - Views and partitions on temporary tables are not allowed.
 - Permissions on temporary tables can't be changed.
 
-Temporary tables are commonly used within etl/elt processing where transient intermediate results are used as part of a transformation process.
+Temporary tables are commonly used within ETL/ELT processing where transient intermediate results are used as part of a transformation process.
 
 ### Table distribution options
 
@@ -215,7 +215,7 @@ The distribution options available and recommendations of when to use them are d
 
 **Round robin**:
 
-This is the default table distribution and is designed to spread the data evenly across the nodes within the system. This method is good for fast data loading and for data that is relatively low volume and doesn't have an obvious candidate for hashing, so is frequently used for staging tables as part of an etl or elt process.
+This is the default table distribution and is designed to spread the data evenly across the nodes within the system. This method is good for fast data loading and for data that is relatively low volume and doesn't have an obvious candidate for hashing, so is frequently used for staging tables as part of an ETL or ELT process.
 
 **Hashed**:
 
@@ -243,7 +243,7 @@ Indexes are automatically created when `UNIQUE` or `PRIMARY KEY` constraints are
 
 **Clustered columnstore index**:
 
-This is the default indexing option within Azure Synapse Analytics and provides the best compression and query performance for large tables. For smaller tables (less than 60 million rows) these indexes are not efficient and so the heap option should be used. Similarly, if the data in a table is transient (perhaps part of an etl/elt process) heap or a temporary table may be more efficient.
+This is the default indexing option within Azure Synapse Analytics and provides the best compression and query performance for large tables. For smaller tables (less than 60 million rows) these indexes are not efficient and so the heap option should be used. Similarly, if the data in a table is transient (perhaps part of an ETL/ELT process) heap or a temporary table may be more efficient.
 
 **Clustered index**:
 
@@ -255,7 +255,7 @@ Non-clustered indexes are similar to clustered indexes in that they can speed up
 
 **Heap**:
 
-Heap tables incur none of the overhead associated with the creation and maintenance of indexes at data load time and therefore can be useful for quickly loading transient data (for example, as part of an etl process). Reads of the data that follow immediately may also benefit from caching in this case. Heap tables can also be useful for storing tables of less than 60 million rows as clustered columnstore indexes are inefficient below that size.
+Heap tables incur none of the overhead associated with the creation and maintenance of indexes at data load time and therefore can be useful for quickly loading transient data (for example, as part of an ETL process). Reads of the data that follow immediately may also benefit from caching in this case. Heap tables can also be useful for storing tables of less than 60 million rows as clustered columnstore indexes are inefficient below that size.
 
 ### Data partitioning
 
@@ -277,7 +277,7 @@ When a query is submitted to Azure Synapse Analytics it is first processed by th
 
 In Azure Synapse Analytics if the `AUTO_CREATE_STATISTICS` option is turned on this will trigger automatic update of statistics. Statistics can also be created or updated manually via the `CREATE STATISTICS` command.
 
-It is good practice to refresh statistics when there has been substantial change in the contents (for example, a daily update), this can be incorporated into etl process.
+It is good practice to refresh statistics when there has been substantial change in the contents (for example, a daily update), this can be incorporated into ETL process.
 
 All tables in the database should have statistics collected on at least one column (to ensure that basic information such as row count and table size is available to the optimizer). Other columns that should have statistics collected are those that are specified in `JOIN`, `DISTINCT`, `ORDER BY` and `GROUP BY` processing.
 
@@ -290,7 +290,7 @@ Azure Synapse Analytics incorporates comprehensive features for managing resourc
 
 ### Performance recommendations
 
-Use any performance improvement methods (for example, indexes, data distribution) as indications of candidates to similar measures in the new target environment, but benchmark to confirm that they're necessary in Azure Synapse Analytics. Build `COLLECT STATISTICS` steps into etl/elt processes to ensure statistics are up to date, or turn on automatic statistics creation.
+Use any performance improvement methods (for example, indexes, data distribution) as indications of candidates to similar measures in the new target environment, but benchmark to confirm that they're necessary in Azure Synapse Analytics. Build `COLLECT STATISTICS` steps into ETL/ELT processes to ensure statistics are up to date, or turn on automatic statistics creation.
 
 Understand the tuning options available within Azure Synapse Analytics and also the performance characteristics of associated utilities (for example, PolyBase for fast parallel data loading) and use these as appropriate to build an efficient end to end implementation.
 
