@@ -1,9 +1,9 @@
 ---
-title: What is conversational AI?
-description: What is cognitive search?
-author: JanetCThomas
+title: What are AI agents
+description: Learn about AI agents and conversational interfaces. Plan, build, test, publish connect and evaluate a bot.  
+author: v-hanki
 ms.author: janet
-ms.date: 07/02/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 <!-- cSpell:ignore Twilio -->
 
-# What is conversational AI?
+# What are AI agents
 
 Users are engaging more and more with conversational interfaces, which can present a more natural experience where humans express their needs through natural language and quickly complete tasks. For a lot of companies, conversational AI applications are becoming a competitive differentiator. Many organizations are strategically making bots available within the same messaging platforms in which their customers spend time.
 

@@ -2,8 +2,8 @@
 title: "Conversational AI"
 description: For Conversational AI, Azure offers the Azure Bot Service and Bot Framework SDK and tools enabling developers to build rich conversational experiences.
 author: v-hanki
-ms.author: v-hanki
-ms.date: 06/24/2020
+ms.author: janet
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
