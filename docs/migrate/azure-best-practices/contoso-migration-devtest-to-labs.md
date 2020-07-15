@@ -137,7 +137,7 @@ The admins follow the link to the [Azure Dev/Test subscription offer](https://az
 
 _Figure 3: An Azure Dev/Test subscription offer._
 
-With their new subscription provisioned, Contoso admins use the Azure portal to create a new DevTest Labs instance. The new lab is created in the **ContosoDevRG** resource group.
+With their new subscription provisioned, Contoso admins use the Azure portal to create a new DevTest Labs instance. The new lab is created in the `ContosoDevRG` resource group.
 
 ![Screenshot of the Create button for DevTest Labs on the portal.](./media/contoso-migration-devtest-to-labs/new-lab.png)
 
@@ -163,7 +163,7 @@ With the DevTest Labs instance created, Contoso performs the following configura
 
 2. Assign a resource group:
 
-    - To ensure that resources are deployed to the **ContosoDevRG** resource group, Contoso configures this in the lab settings. It also assigns its developers the **Contributor** role.
+    - To ensure that resources are deployed to the `ContosoDevRG` resource group, Contoso configures this in the lab settings. It also assigns its developers the **Contributor** role.
 
       ![Screenshot of selections to assign a resource group.](./media/contoso-migration-devtest-to-labs/assign-resource-group.png)
       
