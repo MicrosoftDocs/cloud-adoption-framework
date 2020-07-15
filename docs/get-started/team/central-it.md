@@ -1,8 +1,8 @@
 ---
 title: "Get started: Align a Central IT team"
 description: This guide helps a Central IT team understand the scope, deliverables, and capabilities required for a successful cloud adoption journey.
-author: JanetCThomas
-ms.author: janet
+author: alexbuckgit
+ms.author: abuck
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual

@@ -1,8 +1,8 @@
 ---
 title: "Improve operations"
 description: Use the Cloud Adoption Framework to improve operations. These scenarios can help you with cost management, security, reliability, performance, and more.
-author: JanetCThomas
-ms.author: janet
+author: alexbuckgit
+ms.author: abuck
 ms.date: 05/15/2020
 ms.topic: overview
 ms.service: cloud-adoption-framework

@@ -1,8 +1,8 @@
 ---
 title: "Get started: Build a cloud automation team"
 description: This guide helps the cloud automation team understand scope, deliverables, and the capabilities they are responsible for.
-author: JanetCThomas
-ms.author: janet
+author: alexbuckgit
+ms.author: abuck
 ms.service: cloud-adoption-framework
 ms.subservice: overview
 ms.topic: conceptual

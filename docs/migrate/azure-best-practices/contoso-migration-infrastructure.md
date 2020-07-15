@@ -198,17 +198,17 @@ To facilitate integration, Contoso uses the [Azure AD Connect tool](https://docs
 2. They start the `AzureADConnect.msi` installation using **Express Settings**. This is the most common installation, and it can be used for a single-forest topology with password-hash synchronization for authentication.
 
     ![Azure AD Connect Wizard](./media/contoso-migration-infrastructure/ad-connect-wiz1.png)
-    _Figure 9: Azure AD Connect wizard._
+    _Figure 9: Azure AD Connect Wizard._
 
 3. In **Connect to Azure AD**, they specify the credentials for connecting to Azure AD (in the form `admin@contoso.com` or `admin@contoso.onmicrosoft.com`).
 
     ![Azure AD Connect Wizard: Connect to Azure AD](./media/contoso-migration-infrastructure/ad-connect-wiz2.png)
-    _Figure 10: Azure AD Connect wizard: connect to Azure AD._
+    _Figure 10: Azure AD Connect Wizard: connect to Azure AD._
 
 4. In **Connect to AD DS**, they specify credentials for the on-premises directory (in the form `CONTOSO\admin` or `contoso.com\admin`).
 
      ![Azure AD Connect Wizard: Connect to AD DS](./media/contoso-migration-infrastructure/ad-connect-wiz3.png)
-    _Figure 11: Azure AD Connect wizard: connect to AD DS._
+    _Figure 11: Azure AD Connect Wizard: connect to AD DS._
 
 5. In **Ready to configure**, they select **Start the synchronization process when configuration completes** to start the sync immediately. Then they install.
 
@@ -597,10 +597,10 @@ After updating network settings, Contoso admins are ready to build out the domai
 
 5. After the disk is added, they connect to the VM over Remote Desktop Services and open Server Manager.
 
-6. Then in **File and Storage Services**, they run the new volume wizard, ensuring that the drive is assigned the letter F: or above on the local VM.
+6. Then in **File and Storage Services**, they run the New Volume Wizard, ensuring that the drive is assigned the letter F: or above on the local VM.
 
-     ![New volume wizard](./media/contoso-migration-infrastructure/volume-wizard.png)
-    _Figure 31: A new volume wizard._
+     ![New Volume Wizard](./media/contoso-migration-infrastructure/volume-wizard.png)
+    _Figure 31: New Volume Wizard._
 
 7. In Server Manager, they add the **Active Directory Domain Services** role. Then, they configure the VM as a domain controller.
 
