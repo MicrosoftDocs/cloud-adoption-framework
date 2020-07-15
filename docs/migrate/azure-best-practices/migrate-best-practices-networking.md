@@ -13,7 +13,7 @@ ms.subservice: migrate
 
 # Best practices to set up networking for workloads migrated to Azure
 
-As you plan and design for migration, in addition to the migration itself, one of the most critical steps is the design and implementation of Azure networking. This article describes best practices for networking when migrating to IaaS and PaaS implementations in Azure.
+As you plan and design for migration, in addition to the migration itself, one of the most critical steps is the design and implementation of Azure networking. This article describes best practices for networking when you're migrating to infrastructure as a service (IaaS) and platform as a service (PaaS) implementations in Azure.
 
 > [!IMPORTANT]
 > The best practices and opinions described in this article are based on the Azure platform and service features available at the time of writing. Features and capabilities change over time. Not all recommendations might be applicable for your deployment, so select those that work for you.
@@ -22,25 +22,28 @@ As you plan and design for migration, in addition to the migration itself, one o
 
 Azure provides virtual networks with these capabilities:
 
-- Azure resources communicate privately, directly, and securely with each other over VNets.
-- You can configure endpoint connections on VNets for VMs and services that require internet communication.
-- A VNet is a logical isolation of the Azure cloud that's dedicated to your subscription.
-- You can implement multiple VNets within each Azure subscription and Azure region.
-- Each VNet is isolated from other VNets.
-- VNets can contain private and public IP addresses defined in [RFC 1918](https://tools.ietf.org/html/rfc1918), expressed in CIDR notation. Public IP addresses specified in a VNet's address space are not directly accessible from the internet.
-- VNets can connect to each other using virtual network peering. Connected VNets can be in the same or different regions. Thus resources in one VNet can connect to resources in other VNets.
-- By default, Azure routes traffic between subnets within a VNet, connected VNets, on-premises networks, and the internet.
+- Azure resources communicate privately, directly, and securely with each other over virtual networks.
+- You can configure endpoint connections on virtual networks for VMs and services that require internet communication.
+- A virtual network is a logical isolation of the Azure cloud that's dedicated to your subscription.
+- You can implement multiple virtual networks within each Azure subscription and Azure region.
+- Each virtual network is isolated from other virtual networks.
+- Virtual networks can contain private and public IP addresses defined in [RFC 1918](https://tools.ietf.org/html/rfc1918), expressed in CIDR notation. Public IP addresses specified in a virtual network's address space aren't directly accessible from the internet.
+- Virtual networks can connect to each other by using virtual network peering. Connected virtual networks can be in the same or different regions. Thus, resources in one virtual network can connect to resources in other virtual networks.
+- By default, Azure routes traffic between subnets within a virtual network, connected virtual networks, on-premises networks, and the internet.
 
-When planning your VNet topology, you should consider how to arrange IP address spaces, how to implement a hub and spoke network, how to segment VNets into subnets, setting up DNS, and implementing Azure Availability Zones.
+When planning your virtual network topology, you should consider how to arrange IP address spaces, how to implement a hub and spoke network, how to segment virtual networks into subnets, setting up DNS, and implementing Azure availability zones.
 
 ## Best practice: Plan IP addressing
 
-When you create VNets as part of your migration, it's important to plan out your VNet IP address space.
+When you create virtual networks as part of your migration, it's important to plan out your virtual network IP address space.
 
-- You should assign an address space that isn't larger than a CIDR range of `/16` for each VNet. VNets allow for the use of 65,536 IP addresses, and assigning a smaller prefix than `/16`, such as a `/15` which has 131,072 addresses, would result in the the excess IP addresses becoming unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
-- The VNet address space shouldn't overlap with on-premises network ranges.
+You should assign an address space that isn't larger than a CIDR range of `/16` for each virtual network. Virtual networks allow for the use of 65,536 IP addresses. Assigning a smaller prefix than `/16`, such as a `/15`, which has 131,072 addresses, will result in the the excess IP addresses becoming unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
+
+Other tips for planning are:
+
+- The virtual network address space shouldn't overlap with on-premises network ranges.
 - Don't use network address translation (NAT).
-- Overlapping addresses can cause networks that can't be connected and routing that doesn't work properly. If networks overlap, you'll need to redesign the network or use network address translation (NAT).
+- Overlapping addresses can cause networks that can't be connected, and routing that doesn't work properly. If networks overlap, you'll need to redesign the network or use NAT.
 
 **Learn more:**
 
@@ -50,20 +53,17 @@ When you create VNets as part of your migration, it's important to plan out your
 
 ## Best practice: Implement a hub and spoke network topology
 
-A hub and spoke network topology isolates workloads while sharing services such as identity and security.
-
-- The hub is an Azure VNet that acts as a central point of connectivity.
-- The spokes are VNets that connect to the hub VNet using virtual network peering.
-- Shared services are deployed in the hub, while individual workloads are deployed as spokes.
+A hub and spoke network topology isolates workloads while sharing services, such as identity and security. The hub is an Azure virtual network that acts as a central point of connectivity.
+The spokes are virtual networks that connect to the hub virtual network by using peering. Shared services are deployed in the hub, while individual workloads are deployed as spokes.
 
 Consider the following:
 
-- Implementing a hub and spoke topology in Azure centralizes common services such as connections to on-premises networks, firewalls, and isolation between VNets. The hub VNet provides a central point of connectivity to on-premises networks, and a place to host services use by workloads hosted in spoke VNets.
+- Implementing a hub and spoke topology in Azure centralizes common services, such as connections to on-premises networks, firewalls, and isolation between virtual networks. The hub virtual network provides a central point of connectivity to on-premises networks, and a place to host services used by workloads hosted in spoke virtual networks.
 - A hub and spoke configuration is typically used by larger enterprises. Smaller networks might consider a simpler design to save on costs and complexity.
-- Spoke VNets can be used to isolate workloads, with each spoke managed separately from other spokes. Each workload can include multiple tiers, and multiple subnets that are connected with Azure load balancers.
-- Hub and spoke VNets can be implemented in different resource groups, and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same, or different, Azure Active Directory (Azure AD) tenants. This allows for decentralized management of each workload, while sharing services maintained in the hub network.
+- You can use spoke virtual networks to isolate workloads, with each spoke managed separately from other spokes. Each workload can include multiple tiers, and multiple subnets that are connected with Azure load balancers.
+- You can implement hub and spoke virtual networks in different resource groups, and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same, or different, Azure Active Directory (Azure AD) tenants. This allows for decentralized management of each workload, while sharing services maintained in the hub network.
 
-![Change management](./media/migrate-best-practices-networking/hub-spoke.png)
+![Diagram of hub and spoke topology](./media/migrate-best-practices-networking/hub-spoke.png)
 _Hub and spoke topology._
 
 **Learn more:**
@@ -74,22 +74,22 @@ _Hub and spoke topology._
 
 ## Best practice: Design subnets
 
-To provide isolation within a VNet, you segment it into one or more subnets, and allocate a portion of the VNet's address space to each subnet.
+To provide isolation within a virtual network, you segment it into one or more subnets, and allocate a portion of the virtual network's address space to each subnet.
 
-- You can create multiple subnets within each VNet.
-- By default, Azure routes network traffic between all subnets in a VNet.
+- You can create multiple subnets within each virtual network.
+- By default, Azure routes network traffic between all subnets in a virtual network.
 - Your subnet decisions are based on your technical and organizational requirements.
-- You create subnets using CIDR notation.
-- When deciding on network range for subnets, it's important to note that Azure retains five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of `/29` (with eight IP addresses), Azure will retain five addresses, so you only have three usable addresses that can be assigned to hosts on the subnet.
-- For most cases, use `/28` as the smallest subnet.
+- You create subnets by using CIDR notation.
+
+When you're deciding on network range for subnets, be aware that Azure retains five IP addresses from each subnet that can't be used. For example, if you create the smallest available subnet of `/29` (with eight IP addresses), Azure will retain five addresses. In this case, you only have three usable addresses that can be assigned to hosts on the subnet. For most cases, use `/28` as the smallest subnet.
 
 **Example:**
 
-The table shows an example of a VNet with an address space of `10.245.16.0/20` segmented into subnets, for a planned migration.
+The table shows an example of a virtual network with an address space of `10.245.16.0/20` segmented into subnets, for a planned migration.
 
 | Subnet | CIDR | Addresses | Usage |
 | --- | --- | --- | --- |
-| `DEV-FE-EUS2` | `10.245.16.0/22` | 1019 | Front-end/web tier VMs |
+| `DEV-FE-EUS2` | `10.245.16.0/22` | 1019 | Front-end or web-tier VMs |
 | `DEV-APP-EUS2` | `10.245.20.0/22` | 1019 | App-tier VMs |
 | `DEV-DB-EUS2` | `10.245.24.0/23` | 507 | Database VMs |
 
@@ -100,19 +100,19 @@ The table shows an example of a VNet with an address space of `10.245.16.0/20` s
 
 ## Best practice: Set up a DNS server
 
-Azure adds a DNS server by default when you deploy a VNet. This allows you to rapidly build VNets and deploy resources. But this DNS server only provides services to the resources on that VNet. If you want to connect multiple VNets together, or connect to an on-premises server from VNets, you need additional name resolution capabilities. For example, you might need Active Directory to resolve DNS names between virtual networks. To do this, you deploy your own custom DNS server in Azure.
+Azure adds a DNS server by default when you deploy a virtual network. This allows you to rapidly build virtual networks and deploy resources. But this DNS server only provides services to the resources on that virtual network. If you want to connect multiple virtual networks together, or connect to an on-premises server from virtual networks, you need additional name resolution capabilities. For example, you might need Active Directory to resolve DNS names between virtual networks. To do this, you deploy your own custom DNS server in Azure.
 
-- DNS servers in a virtual network can forward DNS queries to the recursive resolvers in Azure. This enables you to resolve host names within that virtual network. For example, a domain controller running in Azure can respond to DNS queries for its own domains, and forward all other queries to Azure.
-- DNS forwarding allows VMs to see both your on-premises resources (via the domain controller) and Azure-provided host names (using the forwarder). Access to the recursive resolvers in Azure is provided using the virtual IP address `168.63.129.16`.
-- DNS forwarding also enables DNS resolution between VNets, and allows on-premises machines to resolve host names provided by Azure.
-  - To resolve a VM host name, the DNS server VM must reside in the same VNet, and be configured to forward host name queries to Azure.
-  - Because the DNS suffix is different in each VNet, you can use conditional forwarding rules to send DNS queries to the correct VNet for resolution.
-- When you use your own DNS servers, you can specify multiple DNS servers for each VNet. You can also specify multiple DNS servers per network interface (for Azure Resource Manager), or per cloud service (for the classic deployment model).
-- DNS servers specified for a network interface or cloud service take precedence over DNS servers specified for the VNet.
-- In the Azure Resource Manager deployment model, you can specify DNS servers for a VNet and a network interface, but the best practice is to use the setting only on VNets.
+- DNS servers in a virtual network can forward DNS queries to the recursive resolvers in Azure. This enables you to resolve host names within that virtual network. For example, a domain controller that runs in Azure can respond to DNS queries for its own domains, and forward all other queries to Azure.
+- DNS forwarding allows VMs to see both your on-premises resources (via the domain controller) and Azure-provided host names (using the forwarder). You can access the recursive resolvers in Azure by using the virtual IP address `168.63.129.16`.
+- DNS forwarding also enables DNS resolution between virtual networks, and allows on-premises machines to resolve host names provided by Azure.
+  - To resolve a VM host name, the DNS server VM must reside in the same virtual network, and be configured to forward host name queries to Azure.
+  - Because the DNS suffix is different in each virtual network, you can use conditional forwarding rules to send DNS queries to the correct virtual network for resolution.
+- When you use your own DNS servers, you can specify multiple DNS servers for each virtual network. You can also specify multiple DNS servers per network interface (for Azure Resource Manager), or per cloud service (for the classic deployment model).
+- DNS servers specified for a network interface or cloud service take precedence over DNS servers specified for the virtual network.
+- In Azure Resource Manager, you can specify DNS servers for a virtual network and a network interface, but the best practice is to use the setting only on virtual networks.
 
-    ![DNS servers](./media/migrate-best-practices-networking/dns2.png)
-    _DNS servers for VNet._
+    ![Screenshot of DNS servers for a virtual network.](./media/migrate-best-practices-networking/dns2.png)
+    _DNS servers for a virtual network._
 
 **Learn more:**
 
@@ -121,23 +121,24 @@ Azure adds a DNS server by default when you deploy a VNet. This allows you to ra
 
 ## Best practice: Set up Availability Zones
 
-Availability Zones increase high-availability to protect your applications and data from datacenter failures.
+Availability Zones increase high-availability to protect your applications and data from datacenter failures. Availability Zones are unique physical locations within an Azure region. Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking. To ensure resiliency, there's a minimum of three separate zones in all enabled regions. The physical separation of Availability Zones within a region protects applications and data from datacenter failures.
 
-- Availability Zones are unique physical locations within an Azure region.
-- Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking.
-- To ensure resiliency, there's a minimum of three separate zones in all enabled regions.
-- The physical separation of Availability Zones within a region protects applications and data from datacenter failures.
-- Zone-redundant services replicate your applications and data across Availability Zones to protect from single points of failure. - - With Availability Zones, Azure offers an SLA of 99.99 percent VM uptime.
+Here are a few additional points to be aware of as you set up Availability Zones:
 
-    ![Availability zone](./media/migrate-best-practices-networking/availability-zone.png)
-    _Availability Zone._
+- Zone-redundant services replicate your applications and data across Availability Zones to protect from single points of failure.
+
+- With Availability Zones, Azure offers an SLA of 99.99 percent VM uptime.
+
+    ![Diagram of Availability Zones within an Azure region.](./media/migrate-best-practices-networking/availability-zone.png)
+    
+    _Availability Zones._
 
 - You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone, and replicating them in other zones. Azure services that support Availability Zones fall into two categories:
   - **Zonal services:** You associate a resource with a specific zone, such as VMs, managed disks, or IP addresses.
   - **Zone-redundant services:** The resource replicates automatically across zones, such as zone-redundant storage or Azure SQL Database.
-- You can deploy a standard Azure load balanced with internet-facing workloads or application tiers, to provide zonal fault tolerance.
+- To provide zonal fault tolerance, you can deploy a standard Azure load balancer with internet-facing workloads or application tiers.
 
-    ![Load balancer](./media/migrate-best-practices-networking/load-balancer.png)
+    ![Diagram of standard Azure load balancer](./media/migrate-best-practices-networking/load-balancer.png)
     _Load balancer._
 
 **Learn more:**
