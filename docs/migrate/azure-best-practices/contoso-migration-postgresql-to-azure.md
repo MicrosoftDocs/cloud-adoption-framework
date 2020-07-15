@@ -76,7 +76,8 @@ Contoso evaluates the proposed design by putting together a pros and cons list.
 
 ## Proposed architecture
 
-![Diagram of scenario architecture.](./media/contoso-migration-postgresql-to-azure/architecture.png)
+![Diagram of the scenario architecture.](./media/contoso-migration-postgresql-to-azure/architecture.png)
+
 _Figure 1: Scenario architecture._
 
 ### Migration process
@@ -186,7 +187,8 @@ To prepare, set up a virtual network to access the database. You can create a vi
 1. If the service isn't started, select **Start Service**.
 1. Select **New Migration Project**.
 
-    ![Screenshot shows the New Migration Project option highlighted.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project.png)
+    ![Screenshot that shows the New Migration Project option highlighted.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project.png)
+
     _Figure 4: Starting a new migration._
 
 1. Select **New Activity** > **Online data migration**.
@@ -194,49 +196,50 @@ To prepare, set up a virtual network to access the database. You can create a vi
 1. Select **PostgreSQL** as the source.
 1. For the target, select **Azure Database for PostgreSQL** and then select **Save**.
 
-    ![Screenshot shows the New migration project pane.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project02.png)
+    ![Screenshot that shows the New migration project pane.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_new_project02.png)
+
     _Figure 5: A new migration project is highlighted._
 
 1. Enter the source information, and select **Save**.
 
-    ![Screenshot shows entering source information.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_source.png)
+    ![Screenshot that shows entering source information.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_source.png)
     _Figure 6: Entering source information._
 
 1. Enter the target information, and select **Save**.
 
-    ![Screenshot shows selecting target information.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_target.png)
+    ![Screenshot that shows selecting target information.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_target.png)
     _Figure 7: Selecting target information._
 
 1. Select the databases you want to migrate. The schema for each database should have been migrated previously. Then select **Save**.
 
-    ![Screenshot shows selecting databases.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_db.png)
+    ![Screenshot that shows selecting databases.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_db.png)
     _Figure 8: Selecting databases._
 
 1. Configure the advanced settings, and select **Save**.
 
-    ![Screenshot shows configuring advanced settings.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_advanced.png)
+    ![Screenshot that shows configuring advanced settings.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_advanced.png)
     _Figure 9: Configuring advanced settings._
 
 1. Give the activity a name, and select **Run**.
 
-    ![Screenshot shows naming and running the activity.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_summary.png)
+    ![Screenshot that shows naming and running the activity.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_summary.png)
     _Figure 10: Naming and running the activity._
 
 1. Monitor the migration. You might need to retry it if anything fails. An example is if foreign key references were missing.
 1. After `Full load completed` matches your table count, select **Start Cutover**.
 
-    ![Screenshot shows monitoring the migration to start the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_complete.png)
+    ![Screenshot that shows monitoring the migration to start the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_complete.png)
     _Figure 11: Monitoring the migration to start the cutover._
 
 1. Stop all transactions from the source server.
 1. Select the **Confirm** check box, and then select **Apply**.
 
-    ![Screenshot shows running the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_cutover.png)
+    ![Screenshot that shows running the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_cutover.png)
     _Figure 12: Running the cutover._
 
 1. Wait for the cutover to complete.
 
-    ![Screenshot shows completing the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_finished.png)
+    ![Screenshot that shows completing the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_finished.png)
     _Figure 13: Completing the cutover._
 
       > [!NOTE]

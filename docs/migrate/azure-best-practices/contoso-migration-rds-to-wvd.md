@@ -121,17 +121,18 @@ Provision the Windows Virtual Desktop service in the `East US 2` Azure region. W
 
 1. Create a new Azure Migrate project.
 
-   ![Screenshot shows creating a new Azure Migrate project.](./media/contoso-migration-rds-to-wvd/new-azure-migrate.png)
+   ![Screenshot that shows creating a new Azure Migrate project.](./media/contoso-migration-rds-to-wvd/new-azure-migrate.png)
    _Figure 3: Creating a new Azure Migrate project._
 
 1. Select the option to assess and migrate servers, select **VDI**, and add a tool.
 
-   ![Screenshot shows Azure Migrate goals of VDI.](./media/contoso-migration-rds-to-wvd/azure-migrate-goals-vdi.png)
+   ![Screenshot that shows Azure Migrate goals of VDI.](./media/contoso-migration-rds-to-wvd/azure-migrate-goals-vdi.png)
+
    _Figure 4: Target Azure Migrate goals._
 
 1. Set the subscription, resource group, project name, and geography for the migrate job data.
 
-   ![Screenshot shows adding job data to the Azure Migrate project.](./media/contoso-migration-rds-to-wvd/add-a-tool.png)
+   ![Screenshot that shows adding job data to the Azure Migrate project.](./media/contoso-migration-rds-to-wvd/add-a-tool.png)
    _Figure 5: Adding job data to the migration._
 
     > [!IMPORTANT]
@@ -143,17 +144,18 @@ Provision the Windows Virtual Desktop service in the `East US 2` Azure region. W
 
 1. Add the tools to the migration project.
 
-   ![Screenshot shows adding tools to the project.](./media/contoso-migration-rds-to-wvd/add-tools.png)
+   ![Screenshot that shows adding tools to the project.](./media/contoso-migration-rds-to-wvd/add-tools.png)
    _Figure 6: Adding tools to the migration._
 
 1. Start the assessment of the current environment by selecting **Register with Azure Migrate** in the Lakeside tool.
 
-   ![Screenshot shows Lakeside registration with Azure Migrate.](./media/contoso-migration-rds-to-wvd/lakeside-register-with-azure-migrate.png)
+   ![Screenshot that shows Lakeside registration with Azure Migrate.](./media/contoso-migration-rds-to-wvd/lakeside-register-with-azure-migrate.png)
+
    _Figure 7: Assessing the current environment._
 
 1. Connect Azure Migrate and Lakeside, and accept any requested permissions.
 
-   ![Screenshot shows signing in to connect Azure and Lakeside.](./media/contoso-migration-rds-to-wvd/lakeside-login.png)
+   ![Screenshot that shows signing in to connect Azure and Lakeside.](./media/contoso-migration-rds-to-wvd/lakeside-login.png)
    _Figure 8: Connecting Azure to lakeside._
 
 1. Use the Lakeside tool to create a new tenant and start assessing the current on-premises RDS environment. From the dashboard, you can access the deployment guide, download the assessment client to deploy to the current environment, and review the data collected from these agents.
@@ -170,7 +172,7 @@ Provision the Windows Virtual Desktop service in the `East US 2` Azure region. W
 - Concurrent user reports.
 - Top software packages in use.
 
-    ![Screenshot shows Lakeside dashboard reports.](./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png)
+    ![Screenshot that shows Lakeside dashboard reports.](./media/contoso-migration-rds-to-wvd/lakeside-dashboard-reports.png)
     _Figure 10: Lakeside dashboard reports._
 
 Analyze the data to determine the most cost-effective use of both pooled Windows Virtual Desktop resources and personal Windows Virtual Desktop resources.
@@ -184,12 +186,12 @@ Use the Azure portal to create a Windows Virtual Desktop environment to use for 
 
 1. Select the correct subscription, and create a new Windows Virtual Desktop host pool.
 
-   ![Screenshot shows provisioning a Windows Virtual Desktop host pool.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool.png)
+   ![Screenshot that shows provisioning a Windows Virtual Desktop host pool.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool.png)
   _Figure 11: A new Windows Virtual Desktop host pool._
 
 1. Specify the subscription, resource group, and region. Then select the name for the host pool, desktop type, and default desktop users. Desktop type is set to **Pooled** because Contoso is starting with a new shared environment for some of its users. Default desktop users can be left blank. Move on to configure the virtual machines.
 
-   ![Screenshot shows prerequisites for configuring virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-basics-alt.png)
+   ![Screenshot that shows prerequisites for configuring virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-basics-alt.png)
    _Figure 12: Prerequisites for configuring virtual machines._
 
    - To configure the VM, choose a custom size by selecting **Change size** or use the default.
@@ -198,7 +200,7 @@ Use the Azure portal to create a Windows Virtual Desktop environment to use for 
    - Based on the personas of the users from the Lakeside assessment, set the total users to **150**.
    - Other settings include the disk type, an AD domain join UPN field, an admin password, an optional OU path to which machines are added, the virtual network, and a subnet for adding servers.
 
-   ![Screenshot shows configuring virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-configure-virtual-machines-alt.png)
+   ![Screenshot that shows configuring virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-configure-virtual-machines-alt.png)
    _Figure 13: Configuring virtual machines._
 
     > [!NOTE]
@@ -211,7 +213,7 @@ Use the Azure portal to create a Windows Virtual Desktop environment to use for 
 
 1. Perform one more validation of the Windows Virtual Desktop settings, and create the new environment of pooled Windows Virtual Desktop virtual machines.
 
-   ![Screenshot shows reviewing and creating virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-review-create.png)
+   ![Screenshot that shows reviewing and creating virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-review-create.png)
    _Figure 14: Reviewing and creating virtual machines._
 
 ## Step 3: Convert the UPDs to FSLogix profile containers
@@ -247,17 +249,17 @@ The next step in the migration process is to migrate the persistent virtual mach
 
 1. Select **Discover** in the Azure Migrate: Server Migration tools.
 
-   ![Screenshot shows the Azure Migrate: Server Migration Discover option.](./media/contoso-migration-rds-to-wvd/wvd-persistent-discover.png)
+   ![Screenshot that shows the Azure Migrate: Server Migration Discover option.](./media/contoso-migration-rds-to-wvd/wvd-persistent-discover.png)
    _Figure 15: Discovering a server migration._
 
 1. Convert an appliance in the environment that's going to manage the replication of the machines to Windows Virtual Desktop. Ensure that the target region is set to `East US 2`, where the Windows Virtual Desktop environment was created.
 
-   ![Screenshot shows creating an appliance for managing the replication.](./media/contoso-migration-rds-to-wvd/wvd-persistent-appliance.png)
+   ![Screenshot that shows creating an appliance for managing the replication.](./media/contoso-migration-rds-to-wvd/wvd-persistent-appliance.png)
    _Figure 16: Converting an appliance._
 
 1. The replication provider is downloaded, installed, and registered to the Azure Migrate project to start the replication to Azure.
 
-   ![Screenshot shows downloading and configuring replication.](./media/contoso-migration-rds-to-wvd/wvd-persistent-replication.png)
+   ![Screenshot that shows downloading and configuring replication.](./media/contoso-migration-rds-to-wvd/wvd-persistent-replication.png)
    _Figure 17: Prerequisites for replicating to Azure._
 
 1. The replication of the hosts into Azure Blob storage is now started. You can continue to let the replication occur until you're ready to test the VMs and then migrate them into production.
@@ -275,7 +277,7 @@ The next step in the migration process is to migrate the persistent virtual mach
 
 1. As the last step before the final migration, use the **Users** item in the Azure Windows Virtual Desktop settings to map the servers to their respective users and groups.
 
-   ![Screenshot shows assigning Windows Virtual Desktop resources to users and groups.](./media/contoso-migration-rds-to-wvd/wvd-persistent-user-mapping.png)
+   ![Screenshot that shows assigning Windows Virtual Desktop resources to users and groups.](./media/contoso-migration-rds-to-wvd/wvd-persistent-user-mapping.png)
    _Figure 18: The last step prior to the final migration._
 
 After host pools are assigned to users, you can finalize the migration of those machines and continue to gradually migrate the rest of the on-premises VDI hosts to Azure.
