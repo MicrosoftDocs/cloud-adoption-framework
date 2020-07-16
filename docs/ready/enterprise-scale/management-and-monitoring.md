@@ -35,7 +35,7 @@ _Figure 1: Platform management and monitoring._
 
 - Security audit logging and achieving a horizontal security lens across your organization's entire Azure estate:
 
-  - Potential integration with on-premises security information and event management (SIEM) systems such as ServiceNow or ArcSight
+  - Potential integration with on-premises security information and event management (SIEM) systems such as qRadar or ArcSight
 
   - Azure activity logs
 
@@ -65,7 +65,7 @@ _Figure 1: Platform management and monitoring._
 
 **Design recommendations:**
 
-- Use a single [monitor logs workspace](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where role-based access control (RBAC) and data sovereignty requirements mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
+- Use a single [monitor logs workspace](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where role-based access control (RBAC), data sovereignty requirements and data retention policies mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
 In the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This doesn't preclude the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular RBAC is enforced to ensure app teams will only have access to the logs from their resources. In this model, app teams benefit from the use of existing platform infrastructure by reducing their management overhead. For any non-compute resources (such as web apps or Azure Cosmos DB databases), application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.
 
