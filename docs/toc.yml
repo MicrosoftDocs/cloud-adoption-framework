@@ -1,4 +1,5 @@
 # docsTest:ignore "NET Core" "Cloud Operating Model" "Virtual Datacenter" Framework app
+#cSpell:ignore devtest mariadb
 
 items:
   - name: Cloud Adoption Framework for Azure
@@ -363,6 +364,8 @@ items:
       - name: Migration scenarios
         items:
         - name: Overview
+          href: migrate/contoso-migration-overview.md
+        - name: Contoso overview
           href: migrate/azure-best-practices/contoso-migration-overview.md
         - name: Windows Server workloads
           items:
@@ -513,6 +516,23 @@ items:
             - name: Set up CloudSimple Private Cloud as disaster recovery site using VMware SRM
               href: https://docs.microsoft.com/azure/vmware-cloudsimple/disaster-recovery-site-recovery-manager?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
+        - name: Windows Virtual Desktop
+          items:
+          - name: Overview
+            href: scenarios/wvd/index.md
+          - name: Planning
+            href: scenarios/wvd/plan.md
+          - name: Azure landing zone review
+            href: scenarios/wvd/ready.md
+          - name: Proof of concept
+            href: scenarios/wvd/proof-of-concept.md
+          - name: Assess
+            href: scenarios/wvd/migrate-assess.md
+          - name: Migrate (or Deploy)
+            href: scenarios/wvd/migrate-deploy.md
+          - name: Release
+            href: scenarios/wvd/migrate-release.md
+
         - name: Data platforms
           items:
           - name: Overview
@@ -598,6 +618,21 @@ items:
             - name: Migrate Oracle to Azure Database for PostgreSQL online
               href: https://docs.microsoft.com/azure/dms/tutorial-oracle-azure-postgresql-online?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
+        - name: Azure Stack
+          items:
+          - name: Overview
+            href: scenarios/azure-stack/index.md
+          - name: Planning
+            href: scenarios/azure-stack/plan.md
+          - name: Azure landing zone review
+            href: scenarios/azure-stack/ready.md
+          - name: Assess
+            href: scenarios/azure-stack/migrate-assess.md
+          - name: Migrate (or Deploy)
+            href: scenarios/azure-stack/migrate-deploy.md
+          - name: Govern
+            href: scenarios/azure-stack/govern.md
+
         - name: Mainframes
           items:
           - name: Overview
@@ -608,6 +643,7 @@ items:
             href: infrastructure/mainframe-migration/migration-strategies.md
           - name: Mainframe application migration
             href: infrastructure/mainframe-migration/application-strategies.md
+
         - name: Migrate secure workloads
           items:
           - name: Securing and managing workloads after migration
