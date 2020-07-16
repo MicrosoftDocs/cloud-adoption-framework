@@ -1,6 +1,6 @@
 ---
-title: "Azure in your datacenter - Azure Stack Hub"
-description: Deploy Azure in your data center - Azure Stack Hub
+title: "Deploy workloads to Azure Stack Hub"
+description: Learn to deploy workloads in your datacenter using Azure Stack Hub.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2020
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Deploying workloads to Azure Stack Hub
+# Deploy workloads to Azure Stack Hub
 
 Azure Stack allows customers to run their own instance of Azure in their datacenter. Organizations pick Azure Stack as part of their cloud strategy because it helps them handle situations when the public cloud won't work for them. The three most common reasons use Azure Stack are because of poor network connectivity to the public cloud, regulatory or contractual requirements, or backend systems that cannot be exposed to the internet.
 

@@ -1,6 +1,6 @@
 ---
-title: "Azure in your datacenter - Azure Stack Hub"
-description: Deploy Azure in your data center - Azure Stack Hub
+title: Strategic option to run Azure in your datacenter
+description: Deploy Azure in your datacenter using Azure Stack Hub.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2020
