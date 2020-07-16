@@ -1,5 +1,5 @@
 ---
-title: "Windows Virtual Desktop - proof of concept"
+title: "Windows Virtual Desktop proof of concept"
 description: Use the Cloud Adoption Framework for Azure to learn Virtual desktop migration best practices to reduce complexity and standardize the migration process.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Windows Virtual Desktop proof of concept
 
-To validate configuration of the Azure landing zone and the end user network capacity, a proof of concept should be completed and tested prior to end user desktop deployment. The following is an overly simplified approach to the migration process to outline a proof of concept implementation.
+To validate configuration of the Azure landing zone and end-user network capacity, complete and test a proof of concept prior to end-user desktop deployment. The following approach to the migration process is simplified to outline a proof-of-concept implementation.
 
 1. **Assess:** Host pools should be deployed using the default VM sizes. Assessment data will help identify the expected number of concurrent user sessions and the number of virtual machines required to support those concurrent sessions.
 2. **Deploy:** [Create a host pool](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops using a Windows 10 gallery image from the Azure Marketplace and the sizing from step 1.
@@ -24,13 +24,13 @@ To validate configuration of the Azure landing zone and the end user network cap
 
 The proof of concept approach could meet some production needs. But, this approach is built on a number of assumptions.
 
-It is very unlikely that all of the following will prove true for any enterprise migration of WVD. The adoption team should assume that the production deployment will require a separate deployment that more closely aligns to the production requirements identified during the Windows Virtual Desktop assessment.
+It is unlikely that the following assumption will all prove to be true for any enterprise migration of WVD. The adoption team should assume that the production deployment will require a separate deployment that more closely aligns to the production requirements identified during the Windows Virtual Desktop assessment.
 
 1. End users have a low latency connection to the assigned landing zone in Azure.
 2. All users can work from a shared pool of desktops.
 3. All users can use the Windows 10 Enterprise multi-session image from the Azure Marketplace.
-4. All user profiles will be migrated to either: Azure Files, Azure NetApp Files or a VM-based storage service for the FSLogix profile containers.
-5. All users can be described by a common persona with a density of 6 users per 1 vCPU and 4 GB of RAM, [as per the VM sizing recommendations](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/virtual-machine-recs#multi-session-recommendations)
+4. All user profiles will be migrated to either Azure Files, Azure NetApp Files, or a VM-based storage service for the FSLogix profile containers.
+5. All users can be described by a common persona with a density of six users per 1 vCPU and 4 GB of RAM, [as per the VM sizing recommendations](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/virtual-machine-recs#multi-session-recommendations)
 6. All workloads are compatible with Windows 10 multi-session.
 7. Latency between the virtual desktops and application groups is acceptable for production usage.
 
