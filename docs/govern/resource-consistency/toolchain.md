@@ -1,10 +1,10 @@
 ---
 title: "Resource Consistency tools in Azure"
-description: Resource Consistency tools in Azure
+description: See how Azure native tools can help mature policies and processes that support the Resource Consistency discipline.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -12,11 +12,11 @@ ms.custom: governance
 
 # Resource Consistency tools in Azure
 
-[Resource Consistency](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on ways of establishing policies related to the operational management of an environment, application, or workload. Within the Five Disciplines of Cloud Governance, the Resource Consistency discipline involves monitoring of application, workload, and asset performance. It also involves the tasks required to meet scale demands, remediate performance SLA violations, and proactively avoid performance SLA violations through automated remediation.
+[Resource consistency](./index.md) is one of the [Five Disciplines of Cloud Governance](../governance-disciplines.md). This discipline focuses on ways of establishing policies related to the operational management of an environment, application, or workload. Within the Five Disciplines of Cloud Governance, the Resource Consistency discipline involves monitoring of application, workload, and asset performance. It also involves the tasks required to meet scale demands, remediate performance SLA violations, and proactively avoid performance SLA violations through automated remediation.
 
-The following is a list of Azure tools that can help mature the policies and processes that support this governance discipline.
+The following is a list of Azure tools that can help mature the policies and processes that support this discipline.
 
-| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)  | [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) | [Azure Automation](https://docs.microsoft.com/azure/automation/automation-intro) | [Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) | [Azure Backup](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup) | [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) |
+| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview)  | [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview) | [Azure Automation](https://docs.microsoft.com/azure/automation/automation-intro) | [Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) | [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) | [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) |
 |---------|---------|---------|---------|---------|---------|---------|---------|
 | Deploy resources                             | Yes | Yes | Yes | Yes | No  | No | No |
 | Manage resources                             | Yes | Yes | Yes | Yes | No  | No | No |
@@ -35,12 +35,12 @@ The following is a list of Azure tools that can help mature the policies and pro
 | Apply automated remediation                  | No  | No  | No  | Yes | No  | No | No |
 | Manage billing                               | Yes | No  | No  | No  | No  | No | No |
 | Plan resources for disaster recovery         | Yes | Yes | Yes | No  | No  | Yes | Yes |
-|Recover data during an outage or SLA violation     | No | No  | No  | No  | No  | Yes | Yes |
-|Recover applications and data during an outage or SLA violation     | No | No  | No  | No  | No  | Yes | Yes |
+| Recover data during an outage or SLA violation     | No | No  | No  | No  | No  | Yes | Yes |
+| Recover applications and data during an outage or SLA violation     | No | No  | No  | No  | No  | Yes | Yes |
 
 Along with these Resource Consistency tools and features, you will need to monitor your deployed resources for performance and health issues. [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) is the default monitoring and reporting solution in Azure. Azure Monitor provides features for monitoring your cloud resources. This list shows which feature addresses common monitoring requirements.
 
-| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal) | [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) | [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview) | [Azure Monitor Rest API](https://docs.microsoft.com/rest/api/monitor) |
+| Tool | [Azure portal](https://azure.microsoft.com/features/azure-portal) | [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) | [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview) | [Azure Monitor REST API](https://docs.microsoft.com/rest/api/monitor) |
 |----------------------------------------------------|--------------|----------------------|---------------|------------------------|
 | Log virtual machine telemetry data                 | No           | No                   | Yes           | No                     |
 | Log virtual networking telemetry data              | No           | No                   | Yes           | No                     |
@@ -58,4 +58,4 @@ When planning your deployment, you will need to consider where logging data is s
 
 ## Next steps
 
-Learn how to create, assign, and manage [policy definitions](https://docs.microsoft.com/azure/governance/policy) in Azure.
+Learn to create, assign, and manage [policy definitions](https://docs.microsoft.com/azure/governance/policy) in Azure.

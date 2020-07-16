@@ -1,19 +1,18 @@
 ---
 title: "Cloud governance guides"
-description: Learn about the actionable governance guides provided in the Cloud Adoption Framework.
+description: Review cloud governance guides that illustrate best practices for an incremental approach to any governance scenario.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
-ms.topic: landing-page
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
-layout: LandingPage
 ---
 
 # Cloud governance guides
 
-The actionable governance guides in this section illustrate the incremental approach of the Cloud Adoption Framework governance model, based on the [governance methodology](../methodology.md) previously described. You can establish an agile approach to cloud governance that will grow to meet the needs of any cloud governance scenario.
+The actionable governance guides in this section illustrate the incremental approach of the Cloud Adoption Framework governance model, based on the [Govern methodology](../methodology.md) previously described. You can establish an agile approach to cloud governance that will grow to meet the needs of any cloud governance scenario.
 
 ## Review and adopt cloud governance best practices
 
@@ -21,36 +20,15 @@ To begin your cloud adoption journey, choose one of the following governance gui
 
 <!-- markdownlint-disable MD033 -->
 
-<ul class="panelContent cardsZ">
-<li style="display: flex; flex-direction: column;">
-    <a href="./standard/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Standard governance guide</h3>
-                        <p>A guide for most organizations based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li style="display: flex; flex-direction: column;">
-    <a href="./complex/index.md" style="display: flex; flex-direction: column; flex: 1 0 auto;">
-        <div class="cardSize" style="flex: 1 0 auto; display: flex;">
-            <div class="cardPadding" style="display: flex;">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Governance guide for complex enterprises</h3>
-                        <p>A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-</ul>
+- [Standard governance guide](./standard/index.md): A guide for most organizations based on the recommended two-subscription model, designed for deployments in multiple regions but not spanning public and sovereign/government clouds.
+
+> [!div class="nextstepaction"]
+> [Standard governance guide](./standard/index.md)
+
+- [Governance guide for complex enterprises](./complex/index.md): A guide for enterprises that are managed by multiple independent IT business units or span public and sovereign/government clouds.
+
+> [!div class="nextstepaction"]
+> [Governance guide for complex enterprises](./complex/index.md)
 
 <!-- markdownlint-enable MD033 -->
 
@@ -60,10 +38,13 @@ To begin your cloud adoption journey, choose one of the following governance gui
 
 The guides demonstrate how to implement a governance MVP. From there, each guide shows how the cloud governance team can work ahead of the cloud adoption teams as a partner to accelerate adoption efforts. The Cloud Adoption Framework governance model guides the application of governance from foundation through subsequent improvements and evolutions.
 
-To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the complexity of the enterprise for ease of navigation. However, the reader's decision may be more complex. The following tables outline the differences between the two options.
+To begin a governance journey, choose one of the two options below. The options are based on synthesized customer experiences. The titles are based on the complexity of the enterprise for ease of navigation. Your decision may be more complex. The following tables outline the differences between the two options.
+
+<!-- TODO: Refactor VDC content below. -->
+<!-- docsTest:ignore "Azure Virtual Datacenter" -->
 
 > [!WARNING]
-> A more robust governance starting point may be required. In such cases, consider the [Azure Virtual Datacenter](#azure-virtual-datacenter) approach briefly described [below](#azure-virtual-datacenter). This approach is commonly suggested during enterprise-scale adoption efforts, and especially for efforts which exceed 10,000 assets. It is also the de facto choice for complex governance scenarios when any of the following are required: extensive third-party compliance requirements, deep domain expertise, or parity with mature IT governance policies and compliance requirements.
+> A more robust governance starting point may be required. In such cases, consider the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md). The CAF enterprise-scale landing zone approach focuses on adoption teams who have a mid-term objective (within 24 months) to host more than 1,000 assets (infrastructure, apps, or data assets) in the cloud. CAF enterprise-scale landing zone is the de facto choice for complex governance scenarios for these larger cloud adoption efforts.
 
 <!-- markdownlint-disable MD028 -->
 
@@ -72,16 +53,16 @@ To begin a governance journey, choose one of the two options below. The options 
 
 ### Business characteristics
 
-| Characteristic | Standard Organization | Complex Enterprise |
+| Characteristic | Standard organization | Complex enterprise |
 |---|---|---|
 | Geography (country or geopolitical region) | Customers or staff reside largely in one geography | Customers or staff reside in multiple geographies or require sovereign clouds. |
-| Business units affected | Business Units that share a common IT infrastructure | Multiple business units that do not share a common IT infrastructure |
-| IT budget | Single IT budget | Budget allocated across business units and currencies |
+| Business units affected | Business units that share a common IT infrastructure | Multiple business units that do not share a common IT infrastructure. |
+| IT budget | Single IT budget | Budget allocated across business units and currencies. |
 | IT investments | Capital expense-driven investments are planned yearly and usually cover only basic maintenance. | Capital expense-driven investments are planned yearly and often include maintenance and a refresh cycle of three to five years. |
 
 ### Current state before adopting cloud governance
 
-| State | Standard Enterprise | Complex enterprise |
+| State | Standard enterprise | Complex enterprise |
 |---|---|---|
 | Datacenter or third-party hosting providers | Fewer than five datacenters | More than five datacenters |
 | Networking | No WAN, or 1 &ndash; 2 WAN providers | Complex network or global WAN |
@@ -89,31 +70,33 @@ To begin a governance journey, choose one of the two options below. The options 
 
 ### Desired future state after incremental improvement of cloud governance
 
-| State | Standard Organization | Complex Enterprise |
+| State | Standard organization | Complex enterprise |
 |---|---|---|
-| Cost Management – cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
-| Security Baseline – protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. May need to consider third-party compliance. |
+| Cost management&mdash;cloud accounting | Showback model. Billing is centralized through IT. | Chargeback model. Billing could be distributed through IT procurement. |
+| Security baseline&mdash;protected data | Company financial data and IP. Limited customer data. No third-party compliance requirements. | Multiple collections of customers' financial and personal data. May need to consider third-party compliance. |
 
-## Azure Virtual Datacenter
+## CAF enterprise-scale landing zone
 
-Azure Virtual Datacenter is an approach to making the most of the Azure cloud platform's capabilities while respecting an enterprise's security and governance requirements.
+[CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md) is an approach to making the most of the Azure cloud platform's capabilities while respecting an enterprise's security and governance requirements.
 
-Compared to traditional on-premises environments, Azure allows workload development teams and their business sponsors to take advantage of the increased deployment agility that cloud platforms offer. However, as your cloud adoption efforts expand to include mission-critical data and workloads, this agility may conflict with corporate security and policy compliance requirements established by your IT teams. This is especially true for large enterprises that have existing sophisticated governance and regulatory requirements.
+Compared to traditional on-premises environments, Azure allows workload development teams and their business sponsors to take advantage of the increased deployment agility that cloud platforms offer. As your cloud adoption efforts expand to include mission-critical data and workloads, this agility may conflict with corporate security and policy compliance requirements established by your IT teams. This is especially true for large enterprises that have existing sophisticated governance and regulatory requirements.
 
-The Azure Virtual Datacenter approach aims to address these concerns earlier in the adoption lifecycle by providing models, reference architectures, sample automation artifacts, and guidance to help achieve a balance between developer and IT governance requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a virtual datacenter itself: the implementation of isolation boundaries around your cloud infrastructure through the application of access and security controls, network policies, and compliance monitoring.
+The CAF enterprise-scale landing zone architecture aims to address these concerns earlier in the adoption lifecycle by architectures, implementations, and guidance to help achieve a balance between Cloud Adoption teams and central IT team requirements during enterprise cloud adoption efforts. Central to this approach is the concept of a shared service architecture and well-managed landing zones.
 
-A virtual datacenter can be thought of as your own isolated cloud within the Azure platform, integrating management processes, regulatory requirements, and security processes required by your governance policies. Within this virtual boundary, Azure Virtual Datacenter offers example models for deploying workloads while ensuring consistent compliance and provides basic guidance on implementing an organization's separation of roles and responsibilities in the cloud.
+CAF enterprise-scale landing zone deploys your own "isolated cloud" within the Azure platform, integrating management processes, regulatory requirements, and security processes required by your governance policies. Within this virtual boundary, CAF enterprise-scale landing zone offers example models for deploying workloads while ensuring consistent compliance and provides basic guidance on implementing an organization's separation of roles and responsibilities in the cloud.
 
-### Azure Virtual Datacenter assumptions
+### CAF enterprise-scale landing zone qualifications
 
-Although smaller teams may benefit from the models and recommendations the Azure Virtual Datacenter provides, this approach is designed to guide enterprise IT groups managing large cloud environments. For organizations that meet the following criteria it's recommended that you consider consulting the Azure Virtual Datacenter guidance when designing your Azure-based cloud infrastructure:
+Although smaller teams may benefit from the architecture and recommendations the CAF enterprise-scale landing zone provides. Our objective is to continue to streamline the CAF enterprise-scale landing zone implementations to make them more friendly for smaller teams. Currently, this approach is designed to guide Central IT teams managing large cloud environments.
+
+The [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md) approach focuses on adoption teams who have a mid-term objective (within 24 months) to **host more than 1,000 assets (apps, infra, or data assets) in the cloud**.
+
+For organizations that meet the following criteria, you may also want to start with the [CAF enterprise-scale landing zone](../../ready/enterprise-scale/index.md):
 
 - Your enterprise is subject to regulatory compliance requirements that require centralized monitoring and audit capabilities.
-- You need to maintain common policy and governance compliance and central IT control over core services.
-- Your industry depends on a complex platform which requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, oil and gas, or manufacturing.
+- You need to maintain common policy and governance compliance and centralized IT control over core services.
+- Your industry depends on a complex platform that requires complex controls and deep domain expertise to govern the platform. This is most common in large enterprises within finance, manufacturing, and oil and gas.
 - Your existing IT governance policies require tighter parity with existing features, even during early stage adoption.
-
-For more information, visit the [Azure Virtual Datacenter](../../reference/vdc.md) section of the Cloud Adoption Framework.
 
 ## Next steps
 

@@ -1,39 +1,42 @@
 ---
 title: Enhanced management baseline in Azure
-description: Common improvements to the management baseline
+description: Use the Cloud Adoption Framework for Azure to understand common improvements to the management baseline.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
+<!-- cSpell:ignore ITSMC -->
+
 # Enhanced management baseline in Azure
 
 The first three cloud management disciplines describe a management baseline. The preceding articles in this guide outline a minimum viable product (MVP) for cloud management services, which is referred to as a management baseline. This article outlines a few common improvements to the baseline.
 
-The purpose of a management baseline is to create a consistent offering that provides a minimum level of business commitment for *all* supported workloads. With this baseline of common, repeatable management offerings, the team can deliver highly optimized operational management with minimal deviation.
+The purpose of a management baseline is to create a consistent offering that provides a minimum level of business commitment for **all** supported workloads. With this baseline of common, repeatable management offerings, the team can deliver highly optimized operational management with minimal deviation.
 
 However, you might need a greater commitment to the business beyond the standard offering. The following image and list show three ways to go beyond the management baseline.
 
 ![Beyond the cloud management baseline](../../_images/manage/beyond-the-baseline.png)
 
+- **Enhanced management baseline:**
+  - Add enhancements to the management baseline, when the majority of workloads in the portfolio have a shared requirement.
+  - Improved business commitments using additional cloud-native operations tools and processes.
+  - Baseline enhancements should have no impact on the architecture of specific workloads.
 - **Workload operations:**
   - Largest per-workload operations investment.
   - Highest degree of resiliency.
-  - Suggested for the approximately 20% of workloads that drive business value.
+  - Suggested for the approximately 20 percent of workloads that drive business value.
   - Typically reserved for high-criticality or mission-critical workloads.
 - **Platform operations:**
   - Operations investment is spread across many workloads.
   - Resiliency improvements affect all workloads that use the defined platform.
-  - Suggested for the approximately 20% of platforms that have highest criticality.
+  - Suggested for the approximately 20 percent of platforms that have highest criticality.
   - Typically reserved for medium-criticality to high-criticality workloads.
-- **Enhanced management baseline:**
-  - Lowest relative operations investment.
-  - Slightly improved business commitments using additional cloud-native operations tools and processes.
 
 Both workload operations and platform operations require changes to design and architecture principles. Those changes can take time and might result in increased operating expenses. To reduce the number of workloads that require such investments, an enhanced management baseline can provide enough of an improvement to the business commitment.
 
@@ -41,12 +44,13 @@ This table outlines a few processes, tools, and potential effects common in cust
 
 | Discipline  | Process  | Tool | Potential impact | Learn more |
 |---|---|---|---|---|
-|Inventory and visibility|Service change tracking|Azure Resource Graph|Greater visibility into changes to Azure services might help detect negative effects sooner or remediate faster.|[Overview of Azure Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview)|
-|Inventory and visibility|IT service management (ITSM) integration|IT Service Management Connector|Automated ITSM connection creates awareness sooner.|[IT Service Management Connector (ITSMC)](https://docs.microsoft.com/azure/azure-monitor/platform/itsmc-overview)|
-|Operational compliance|Operations automation|Azure Automation|Automate operational compliance for faster and more accurate response to change.|See the following sections|
-|Operational compliance|Multicloud operations|Azure Automation Hybrid Runbook Worker|Automate operations across multiple clouds.|[Hybrid Runbook Worker overview](https://docs.microsoft.com/azure/automation/automation-hybrid-runbook-worker)|
-|Operational compliance|Guest automation| Desired State Configuration (DSC)|Code-based configuration of guest operating systems to reduce errors and configuration drift.|[DSC Overview](https://docs.microsoft.com/powershell/scripting/dsc/overview/overview)|
-|Protect and recover|Breach notification|Azure Security Center|Extend protection to include security-breach recovery triggers.|See the following sections|
+| Inventory and visibility | Service change tracking | Azure Resource Graph | Greater visibility into changes to Azure services might help detect negative effects sooner or remediate faster. | [Overview of Azure Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview) |
+| Inventory and visibility | IT service management (ITSM) integration | IT Service Management Connector | Automated ITSM connection creates awareness sooner. | [IT Service Management Connector (ITSMC)](https://docs.microsoft.com/azure/azure-monitor/platform/itsmc-overview) |
+| Operational compliance | Operations automation | Azure Automation | Automate operational compliance for faster and more accurate response to change. | See the following sections |
+| Operational compliance | Performance automation | Azure Automation | Automate operational compliance with performance expectations to resolve common resource specific scaling or sizing issues. | See the following sections |
+| Operational compliance | Multicloud operations | Azure Automation Hybrid Runbook Worker | Automate operations across multiple clouds. | [Hybrid Runbook Worker overview](https://docs.microsoft.com/azure/automation/automation-hybrid-runbook-worker) |
+| Operational compliance | Guest automation |  Desired State Configuration (DSC) | Code-based configuration of guest operating systems to reduce errors and configuration drift. | [DSC Overview](https://docs.microsoft.com/powershell/scripting/dsc/overview/overview) |
+| Protect and recover | Breach notification | Azure Security Center | Extend protection to include security-breach recovery triggers. | See the following sections |
 
 ::: zone target="docs"
 
@@ -69,7 +73,7 @@ The basic unit of code for delivering automated remediation is a runbook. Runboo
 
 To create or manage runbooks:
 
-1. Go to [Azure Automation](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts).
+1. Go to **Azure Automation**.
 1. Select **Automation accounts** and choose one of the listed accounts.
 1. Go to **Process automation**.
 1. With the options presented, you can create or manage runbooks, schedules, and other automated remediation functionality.
@@ -78,7 +82,7 @@ To create or manage runbooks:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Assign Policy" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts]" submitText="Go to Azure Automation" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

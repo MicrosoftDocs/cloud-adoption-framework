@@ -1,10 +1,10 @@
 ---
-title: "Azure innovation guide: Predict and influence" 
-description: Learn to predict and influence using Azure.
+title: "Azure innovation: Predict and influence"
+description: Learn about Azure solutions for predicting customers' needs and integrating predictions back into your solution to influence customer behavior.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-edit, AQC
@@ -27,11 +27,11 @@ As an innovator, your company has insights into the data, behavior, and needs of
 
 The following table can help you find the best solution, based on your implementation needs.
 
-|Service  |Prebuilt models  |Build and experiment  |Train and build with Python|Required skills|
-|---------|---------|---------|---------|---------|
-|Azure Cognitive Services|Yes|No|No|API and developer skills|
-|Azure Machine Learning Studio|Yes|Yes|No|General understanding of predictive algorithms|
-|Azure Machine Learning service|Yes|Yes|Yes|Data scientist|
+| Service | Prebuilt models | Build and experiment | Train and build with Python | Required skills |
+|---|---|---|---|---|
+| Azure Cognitive Services | Yes | No | No | API and developer skills |
+| Azure Machine Learning Studio | Yes | Yes | No | General understanding of predictive algorithms |
+| Azure Machine Learning service | Yes | Yes | Yes | Data scientist |
 
 ## [Azure Cognitive Services](#tab/CognitiveServices)
 
@@ -43,7 +43,7 @@ For a list of available services and the amount of training that might be requir
 
 To use a Cognitive Services API:
 
-1. In the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2Faccounts), go to **Cognitive Services**.
+1. In the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.CognitiveServices%2FAccounts), go to **Cognitive Services**.
 2. Select **Add** to find a Cognitive Services API in Azure Marketplace.
 3. Do either of the following:
    - If you know the name of the service you want to use, enter the name in the **Search the Marketplace** box.
@@ -51,17 +51,13 @@ To use a Cognitive Services API:
 
 ::: zone target="chromeless"
 
-<!-- markdownlint-disable DOCSMD001 -->
-
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2Faccounts]" submitText="Go to Cognitive Services" :::
-
-<!-- markdownlint-enable DOCSMD001 -->
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2FAccounts]" submitText="Go to Cognitive Services" :::
 
 ::: zone-end
 
 ::: zone target="docs"
 
-Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2Faccounts).
+Go directly to Cognitive Services in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.CognitiveServices%2FAccounts).
 
 ::: zone-end
 
@@ -75,7 +71,7 @@ If the existing models within Cognitive Services don't align with your desired p
 
 You can use Azure Machine Learning Studio to build and experiment with a model by doing the following:
 
-1. In the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2Fworkspaces), go to **Azure Machine Learning Studio**.
+1. In the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2FWorkspaces), go to **Azure Machine Learning Studio**.
 2. Select **Create Machine Learning Studio Workspace**, and then follow the prompts to create a workspace.
 
    The new workspace provides a drag-and-drop interface for building and experimenting with a model, as an alternative to deep training.
@@ -84,7 +80,7 @@ You can use Azure Machine Learning Studio to build and experiment with a model b
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2Fworkspaces]" submitText="Go to Azure Machine Learning Studio" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2FWorkspaces]" submitText="Go to Azure Machine Learning Studio" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -92,7 +88,7 @@ You can use Azure Machine Learning Studio to build and experiment with a model b
 
 ::: zone target="docs"
 
-Go directly to Azure Machine Learning Studio in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2Fworkspaces).
+Go directly to Azure Machine Learning Studio in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearning%2FWorkspaces).
 
 ::: zone-end
 
@@ -112,7 +108,7 @@ A data scientist can use Azure Machine Learning service to train and build a mod
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2Fworkspaces]" submitText="Go to Azure Machine Learning service" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2FWorkspaces]" submitText="Go to Azure Machine Learning service" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -120,7 +116,7 @@ A data scientist can use Azure Machine Learning service to train and build a mod
 
 ::: zone target="docs"
 
-Go directly to Azure Machine Learning Studio in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2Fworkspaces).
+Go directly to Azure Machine Learning Studio in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.MachineLearningServices%2FWorkspaces).
 
 ::: zone-end
 

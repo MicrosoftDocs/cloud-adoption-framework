@@ -1,17 +1,17 @@
 ---
-title: "Gather inventory data for a digital estate"
-description: How to gather inventory for a digital estate.
+title: Inventory data for a digital estate
+description: Learn to make an inventory list of IT assets that support specific business functions, for later analysis and rationalization.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
 # Gather inventory data for a digital estate
 
-Developing an inventory is the first step in [digital estate planning](./index.md). In this process, a list of IT assets that support specific business functions are collected for later analysis and rationalization. This article assumes that a bottom-up approach to analysis is most appropriate for planning. For more information, see [Approaches to digital estate planning](./approach.md).
+Developing an inventory is the first step for [digital estate planning](./index.md). In this process, a list of IT assets that support specific business functions are collected for later analysis and rationalization. This article assumes that a bottom-up approach to analysis is most appropriate for planning. For more information, see [Approaches to digital estate planning](./approach.md).
 
 ## Take inventory of a digital estate
 

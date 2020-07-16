@@ -1,25 +1,28 @@
 ---
-title: "Configure Azure server management services for a subscription"
-description: Configure Azure server management services for a subscription
+title: "Configure the service for a subscription"
+description: Learn to configure Azure server management services for a subscription by deploying service agents to your servers and enabling management solutions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
 
+<!-- cSpell:ignore VMUUID kusto -->
+
 # Configure Azure server management services at scale
 
 You must complete these two tasks to onboard Azure server management services to your servers:
-- Deploy service agents to your servers
-- Enable the management solutions
+
+- Deploy service agents to your servers.
+- Enable the management solutions.
 
 This article covers the three processes that are necessary to complete these tasks:
 
-1. Deploy the required agents to Azure VMs by using Azure Policy
-1. Deploy the required agents to on-premises servers
-1. Enable and configuring the solutions
+1. Deploy the required agents to Azure VMs by using Azure Policy.
+1. Deploy the required agents to on-premises servers.
+1. Enable and configuring the solutions.
 
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard virtual machines to Azure server management services.
@@ -28,11 +31,11 @@ This article covers the three processes that are necessary to complete these tas
 
 All the management solutions that are discussed in [Azure management tools and services](./tools-services.md) require that the Log Analytics agent is installed on Azure virtual machines and on-premises servers. You can onboard your Azure VMs at scale by using Azure Policy. Assign policy to ensure that the agent is installed on your Azure VMs and connected to the correct Log Analytics workspace.
 
-Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics agent and the [Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
+Azure Policy has a [built-in policy initiative](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure#initiatives) that includes the Log Analytics Agent and the [Microsoft Dependency Agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#the-microsoft-dependency-agent), which is required by Azure Monitor for VMs.
 
-<!-- TODO: Add these when available.
-- [Preview]: Enable Azure Monitor for virtual machine scale sets.
-- [Preview]: Enable Azure Monitor for VMs.
+<!-- TODOBACKLOG: Add these when available.
+**Preview:** Enable Azure Monitor for virtual machine scale sets.
+**Preview:** Enable Azure Monitor for VMs.
  -->
 
 > [!NOTE]
@@ -42,13 +45,13 @@ Azure Policy has a built-in [policy initiative](https://docs.microsoft.com/azure
 
 To assign the policies that described in the previous section:
 
-1. In the Azure portal, go to **Azure Policy** > **Assignments** > **Assign initiative**.
+1. In the Azure portal, go to **Policy** > **Assignments** > **Assign initiative**.
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale1.png)
 
-2. On the **Assign Policy** page, set the **Scope** by selecting the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
+2. On the **Assign policy** page, set the **Scope** by selecting the ellipsis (…) and then selecting either a management group or subscription. Optionally, select a resource group. Then choose **Select** at the bottom of the **Scope** page. The scope determines which resources or group of resources the policy is assigned to.
 
-3. Select the ellipsis (**…**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
+3. Select the ellipsis (**...**) next to **Policy definition** to open the list of available definitions. To filter the initiative definitions, enter **Azure Monitor** in the **Search** box:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale2.png)
 
@@ -58,7 +61,7 @@ To assign the policies that described in the previous section:
 
     ![Screenshot of the portal's policy interface](./media/onboarding-at-scale3.png)
 
-6. Select the **Managed Identity location** check box. If this policy is of the type [DeployIfNotExists](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
+6. Select the **Managed Identity location** check box. If this policy is of the type [`DeployIfNotExists`](https://docs.microsoft.com/azure/governance/policy/concepts/effects#deployifnotexists), a managed identity will be required to deploy the policy. In the portal, the account will be created as indicated by the check box selection.
 
 7. Select **Assign**.
 
@@ -69,7 +72,7 @@ After you complete the wizard, the policy assignment will be deployed to the env
 > [!NOTE]
 > Create the required [Log Analytics workspace and Azure Automation account](./prerequisites.md#create-a-workspace-and-automation-account) before you onboard Azure server management services to servers.
 
-For on-premises servers, you need to download and install the [Log Analytics agent and the Microsoft Dependency agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal and select **Settings** > **Advanced settings**.
+For on-premises servers, you need to download and install the [Log Analytics Agent and the Microsoft Dependency Agent](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-enable-hybrid-cloud) manually and configure them to connect to the correct workspace. You must specify the workspace ID and key information. To get that information, go to your Log Analytics workspace in the Azure portal, then select **Settings** > **Advanced settings**.
 
 ![Screenshot of Log Analytics workspace advanced settings in the Azure portal](./media/onboarding-on-premises.png)
 
@@ -117,14 +120,14 @@ To create or modify the saved search, follow these steps:
 
 1. Enter the computer name or the VMUUID to include the computers that you want to opt in for Change Tracking.
 
-    ```kusto
-    Heartbeat
-    | where AzureEnvironment=~"Azure" or Computer in~ ("list of the on-premises server names", "server1")
-    | distinct Computer
-    ```
+  ```kusto
+  Heartbeat
+  | where AzureEnvironment=~"Azure" or Computer in~ ("list of the on-premises server names", "server1")
+  | distinct Computer
+  ```
 
-    > [!NOTE]
-    > The server name must exactly match the value in the expression, and it shouldn't contain a domain name suffix.
+  > [!NOTE]
+  > The server name must exactly match the value in the expression, and it shouldn't contain a domain name suffix.
 
 1. Select **Save**. By default, the scope configuration is linked to the **MicrosoftDefaultComputerGroup** saved search. It will be automatically updated.
 
@@ -134,7 +137,7 @@ To create or modify the saved search, follow these steps:
 
 To implement this solution:
 
-1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
+1. In the Azure portal, open **All services**, then select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
 3. Search for **Activity Log Analytics** and select it.
 4. Select **Create**.
@@ -147,7 +150,7 @@ The Azure Log Analytics Agent Health solution reports on the health, performance
 
 To implement this solution:
 
-1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
+1. In the Azure portal, open **All services**, then select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
 3. Search for **Azure Log Analytics agent health** and select it.
 4. Select **Create**.
@@ -162,9 +165,9 @@ The Antimalware Assessment solution helps you identify servers that are infected
 
 To implement this solution:
 
-1. In the Azure portal, open **All services** and select **Management + Governance** > **Solutions**.
+1. In the Azure portal, open **All services**, select select **Management + Governance** > **Solutions**.
 2. In the **Solutions** view, select **Add**.
-3. Search for and select **Antimalware Assessment**.
+3. Search for and then select **Antimalware Assessment**.
 4. Select **Create**.
 
 You need to specify the **Workspace name** of the workspace that you created in the previous section where the solution is enabled.
@@ -173,13 +176,13 @@ After creation is complete, the workspace resource instance displays **AntiMalwa
 
 ### Azure Monitor for VMs
 
-You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace. 
+You can enable [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) through the view page for the VM instance, as described in [Enable management services on a single VM for evaluation](./onboard-single-vm.md). You shouldn't enable solutions directly from the **Solutions** page as you do for the other solutions that are described in this article. For large-scale deployments, it may be easier to use [automation](./onboarding-automation.md) to enable the correct solutions in the workspace.
 
 ### Azure Security Center
 
-We recommend that you onboard all your servers at least to the Azure Security Center *Free* tier. This option provides a basic level of security assessments and actionable security recommendations for your environment. If you upgrade to the *Standard* tier, you get additional benefits, which are discussed in detail on the [Security Center pricing page](https://docs.microsoft.com/azure/security-center/security-center-pricing).
+We recommend that you onboard all your servers at least to the Free tier of Azure Security Center. This option provides basic security assessments and actionable security recommendations for your environment. The Standard tier provides additional benefits. For more information, see [Azure Security Center pricing](https://docs.microsoft.com/azure/security-center/security-center-pricing).
 
-To enable the Azure Security Center Free tier, follow these steps:
+To enable the Free tier of Azure Security Center, follow these steps:
 
 1. Go to the **Security Center** portal page.
 2. Under **POLICY & COMPLIANCE**, select **Security policy**.

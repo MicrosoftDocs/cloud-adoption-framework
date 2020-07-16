@@ -1,14 +1,16 @@
 ---
 title: "Cloud monitoring guide: Alerting"
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
+description: Use the Cloud Adoption Framework for Azure to learn how to determine when to use Azure Monitor or System Center Operations Manager in Microsoft Azure.
 author: MGoedtel
 ms.author: magoedte
 ms.date: 06/26/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor
 ---
+
+<!-- cSpell:ignore kusto multiresource multisignal -->
 
 # Cloud monitoring guide: Alerting
 
@@ -55,13 +57,13 @@ Depending on the feature and configuration you're using, you can store monitorin
 
 Azure Monitor has four types of alerts, each somewhat tied to the repository that the data is stored in:
 
-- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric): Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to “normal” state.
+- [Metric alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-metric): Alerts on data in the Azure Monitor metrics database. Alerts occur when a monitored value crosses a user-defined threshold, and then again when it returns to "normal" state.
 
 - [Log query alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-log-query): Available to alerts on content in the Application Insights or Azure logs stores. It can also alert based on cross-workspace queries.
 
-- [Activity log alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log): Alerts on items in the activity log store, with the exception of Service Health data.
+- [Activity log alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log): Alerts on items in the activity log store, with the exception of Azure Service Health data.
 
-- [Service Health alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log-service-notifications): A special type of alert that's used only for Service Health issues that come from the activity log store, such as outages and upcoming planned maintenance. Note that this type of alert is configured through [Azure Service Health](https://docs.microsoft.com/azure/service-health/service-health-overview), a companion service to Azure Monitor.
+- [Azure Service Health alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-activity-log-service-notifications): A special type of alert that's used only for Azure Service Health issues that come from the activity log store, such as outages and upcoming planned maintenance. Note that this type of alert is configured through [Azure Service Health](https://docs.microsoft.com/azure/service-health/service-health-overview), a companion service to Azure Monitor.
 
 ### Enable alerting through partner tools
 
@@ -73,12 +75,14 @@ Azure Monitor includes support for integrating with other monitoring platforms, 
 
 [Management solutions](https://docs.microsoft.com/azure/azure-monitor/insights/solutions-inventory) generally store their data in the Azure logs store. The two exceptions are Azure Monitor for VMs and Azure Monitor for containers. The following table describes the alerting experience based on the particular data type and where it is stored.
 
-Solution| Data type | Alert behavior
-:---|:---|:---
-Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics store. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over time.
-|| Calculated performance data that uses percentiles from nodes, controllers, containers, and pods are written to the logs store. Container logs and inventory information are also written to the logs store. | Create log query alerts if you want to be alerted based on variation of measured utilization from clusters and containers. Log query alerts can also be configured based on pod-phase counts and status node counts.
-Azure Monitor for VMs | Health criteria are metrics written to the metrics store. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only Action Groups that are configured to send SMS or email notifications.
-|| Map and guest operating system performance log data is written to the logs store. | Create log query alerts.
+| Solution | Data type | Alert behavior |
+|---| ---| --- |
+| Azure Monitor for containers | Calculated average performance data from nodes and pods are written to the metrics store. | Create metric alerts if you want to be alerted based on variation of measured utilization performance, aggregated over time. |
+| | Calculated performance data that uses percentiles from nodes, controllers, containers, and pods are written to the logs store. Container logs and inventory information are also written to the logs store. | Create log query alerts if you want to be alerted based on variation of measured utilization from clusters and containers. Log query alerts can also be configured based on pod-phase counts and status node counts. |
+| Azure Monitor for VMs | Health criteria are metrics written to the metrics store. | Alerts are generated when the health state changes from healthy to unhealthy. This alert supports only Action Groups that are configured to send SMS or email notifications. |
+| | Map and guest operating system performance log data is written to the logs store. | Create log query alerts. |
+
+<!-- docsTest:ignore "speed driven by cost" -->
 
 ### Fastest speed driven by cost
 
@@ -86,7 +90,7 @@ Latency is one of the most critical decisions driving alerting and a quick resol
 
 That said, there are some important footnotes to this rule.
 
-**Guest OS telemetry** has a number of paths to get into the system.
+**Guest OS telemetry** has multiple paths to get into the system.
 
 - The fastest way to alert on this data is to import it as custom metrics. Do this by using the Azure Diagnostics extension and then using a metric alert. However, custom metrics are currently in preview and are [more expensive than other options](https://azure.microsoft.com/pricing/details/monitor).
 
@@ -113,10 +117,10 @@ If you aren't using Azure Monitor for VMs, make the job of creating alerts and m
 
 Used together, these features can save time by minimizing alert notifications and the management of the underlying alerts.
 
-### Alerts limitations
+### Limits on alerts
 
-Be sure to note the [limitations](https://docs.microsoft.com/azure/azure-subscription-service-limits#azure-monitor-limits) on the number of alerts you can create. Some limits (but not all of them) can be increased by calling support.
+Be sure to note the [limits on the number of alerts you can create](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-monitor-limits). Some limits (but not all of them) can be increased by calling support.
 
 ### Best query experience
 
-If you're looking for trends across all your data, it makes sense to import all your data into Azure Logs, unless it's already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import activity log and Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This approach also gives you the ability to create complex query conditions and alert on them.
+If you're looking for trends across all your data, it makes sense to import all your data into Azure Logs, unless it's already in Application Insights. You can create queries across both workspaces, so there's no need to move data between them. You can also import activity log and Azure Service Health data into your Log Analytics workspace. You pay for this ingestion and storage, but you get all your data in one place for analysis and querying. This approach also gives you the ability to create complex query conditions and alert on them.

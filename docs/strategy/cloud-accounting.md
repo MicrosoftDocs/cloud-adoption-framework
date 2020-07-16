@@ -1,39 +1,39 @@
 ---
 title: "What is cloud accounting?"
-description: Explanation of the concept of cloud accounting
+description: Use the Cloud Adoption Framework for Azure to understand common cloud accounting models for IT as you begin your cloud migration journey.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
 
-<!-- markdownlint-disable MD026 -->
+<!-- cSpell:ignore CIOs -->
 
 # What is cloud accounting?
 
-The cloud changes how IT accounts for costs, as is described in [Creating a financial model for cloud transformation](./financial-models.md). Various IT accounting models are much easier to support because of how the cloud allocates costs. So it's important to understand how to account for cloud costs before you begin a cloud transformation journey. This article outlines the most common cloud accounting models for IT.
+The cloud changes how IT accounts for costs, as is described in [Create a financial model for cloud transformation](./financial-models.md). Various IT accounting models are much easier to support because of how the cloud allocates costs. So it's important to understand how to account for cloud costs before you begin a cloud transformation journey. This article outlines the most common cloud accounting models for IT.
 
 ## Traditional IT accounting (cost center model)
 
 It's often accurate to consider IT a cost center. In the traditional IT accounting model, IT consolidates purchasing power for all IT assets. As we pointed out in the [financial models](./financial-models.md) article, that purchasing power consolidation can include software licenses, recurring charges for CRM licensing, purchase of employee desktops, and other large costs.
 
-When IT serves as a cost center, the perceived value of IT is largely viewed through a procurement management lens. This perception makes it difficult for the board or other executives to understand the true value that IT provides. Procurement costs tend to skew the view of IT by outweighing any other value added by the organization. This view explains why IT is often lumped into the CFO's or COO's responsibilities. This perception of IT is limited and can be short sighted.
+When IT serves as a cost center, the perceived value of IT is largely viewed through a procurement management lens. This perception makes it difficult for the board or other executives to understand the true value that IT provides. Procurement costs tend to skew the view of IT by outweighing any other value added by the organization. This view explains why IT is often lumped into the responsibilities of either the chief financial officer or the chief operating officer. This perception of IT is limited and might be shortsighted.
 
 ## Central IT accounting (profit center model)
 
-To overcome the cost center view of IT, some CIOs opted for a central IT model of accounting. In this type of model, IT is treated like a competing business unit and a peer to revenue-producing business units. In some cases, this model can be entirely logical. For example, some organizations have a professional IT services division that generates a revenue stream. Frequently, central IT models don't generate significant revenue, making it difficult to justify the model.
+To overcome the cost center view of IT, some CIOs opted for a centralized IT model of accounting. In this type of model, IT is treated like a competing business unit and a peer to revenue-producing business units. In some cases, this model can be entirely logical. For example, some organizations have a professional IT services division that generates a revenue stream. Frequently, centralized IT models don't generate significant revenue, making it difficult to justify the model.
 
-Regardless of the revenue model, central IT accounting models are unique because of how the IT unit accounts for costs. In a traditional IT model, the IT team records costs and pays those costs from shared funds like operations and maintenance (O&M) or a dedicated profit and loss (P&L) account.
+Regardless of the revenue model, centralized IT accounting models are unique because of how the IT unit accounts for costs. In a traditional IT model, the IT team records costs and pays those costs from shared funds like operations and maintenance (O&M) or a dedicated profit and loss (P&L) account.
 
-In a central IT accounting model, the IT team marks up the services provided to account for overhead, management, and other estimated expenses. It then bills the competing business units for the marked-up services. In this model, the CIO is expected to manage the P&L associated with the sale of those services. This can create inflated IT costs and contention between central IT and business units, especially when IT needs to cut costs or isn't meeting agreed-upon SLAs. During times of technology or market change, any new technology would cause a disruption to central IT's P&L, making transformation difficult.
+In a Central IT accounting model, the IT team marks up the services provided to account for overhead, management, and other estimated expenses. It then bills the competing business units for the marked-up services. In this model, the CIO is expected to manage the P&L associated with the sale of those services. This can create inflated IT costs and contention between Central IT and business units, especially when IT needs to cut costs or isn't meeting agreed-upon SLAs. During times of technology or market change, any new technology would cause a disruption to Central IT's P&L, making transformation difficult.
 
 ## Chargeback
 
 One of the common first steps in changing IT's reputation as a cost center is implementing a chargeback model of accounting. This model is especially common in smaller enterprises or highly efficient IT organizations. In the chargeback model, any IT costs that are associated with a specific business unit are treated like an operating expense in that business unit's budget. This practice reduces the cumulative cost effects on IT, allowing business values to show more clearly.
 
-In a legacy on-premises model, chargeback is difficult to realize because someone still has to carry the large capital expenses and depreciation. The ongoing conversion from capital expenditures to operating expenses associated with usage is a difficult accounting exercise. This difficulty is a major reason for the creation of the traditional IT accounting model and the central IT accounting model. The operating expenses model of cloud cost accounting is almost required if you want to efficiently deliver a chargeback model.
+In a legacy on-premises model, chargeback is difficult to realize because someone still has to carry the large capital expenses and depreciation. The ongoing conversion from capital expenditures to operating expenses associated with usage is a difficult accounting exercise. This difficulty is a major reason for the creation of the traditional IT accounting model and the Central IT accounting model. The operating expenses model of cloud cost accounting is almost required if you want to efficiently deliver a chargeback model.
 
 But you shouldn't implement this model without considering the implications. Here are a few consequences that are unique to a chargeback model:
 
@@ -53,7 +53,7 @@ This model provides a balance between a true chargeback model and more tradition
 
 The choice of accounting models is crucial in system design. The choice of accounting model can affect subscription strategies, naming standards, tagging standards, and policy and blueprint designs.
 
-After you've worked with the business to make decisions about a cloud accounting model and [global markets](./global-markets.md), you have enough information to [develop an Azure foundation](../ready/index.md).
+After you've worked with the business to make decisions about a cloud accounting model and [global markets](./global-markets.md), you have enough information to [choose your first cloud adoption project](./first-adoption-project.md).
 
 > [!div class="nextstepaction"]
-> [Develop an Azure foundation](../ready/index.md)
+> [Choose your first cloud adoption project](./first-adoption-project.md)

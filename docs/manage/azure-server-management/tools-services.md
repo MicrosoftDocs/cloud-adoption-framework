@@ -1,10 +1,10 @@
 ---
-title: "Azure server management tools and services"
-description: Azure server management tools and services
+title: "Azure server management services"
+description: Use the Cloud Adoption Framework for Azure to learn about areas within the suite of Azure server management services.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -32,11 +32,11 @@ Migration services can help you migrate your workloads into Azure. To provide th
 
 ## Protect
 
-To protect your data, you need to plan for backup, high availability, encryption, authorization, and related operational issues. These topics are covered extensively online, so here we'll focus on building a Business Continuity Disaster Recovery (BCDR) plan. We'll include references to documentation that describes in detail how to implement and deploy this type of plan.
+To protect your data, you need to plan for backup, high availability, encryption, authorization, and related operational issues. These topics are covered extensively online, so here we'll focus on building a business continuity and disaster recovery (BCDR) plan. We'll include references to documentation that describes in detail how to implement and deploy this type of plan.
 
 When you build data-protection strategies, first consider breaking down your workload applications into their different tiers. This approach helps because each tier typically requires its own unique protection plan. To learn more about designing applications to be resilient, see [Designing resilient applications for Azure](https://docs.microsoft.com/azure/architecture/resiliency).
 
-The most basic data protection is backup. To speed up the recovery process if servers are lost, back up not just data but also server configurations. Backup is an effective mechanism to handle accidental data deletion and ransomware attacks. [Azure Backup](https://docs.microsoft.com/azure/backup) can help you protect your data on Azure and on-premises servers running Windows or Linux. For details about what Backup can do and for how-to guides, see the [Azure Backup documentation](https://docs.microsoft.com/azure/backup/backup-overview).
+The most basic data protection is backup. To speed up the recovery process if servers are lost, back up not just data but also server configurations. Backup is an effective mechanism to handle accidental data deletion and ransomware attacks. [Azure Backup](https://docs.microsoft.com/azure/backup) can help you protect your data on Azure and on-premises servers running Windows or Linux. For details about what Backup can do and for how-to guides, see the [Azure Backup service overview](https://docs.microsoft.com/azure/backup/backup-overview).
 
 Recovery via backup can take a long time. The industry standard is usually one day. If a workload requires business continuity for hardware failures or datacenter outage, consider using data replication. [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) provides continuous replication of your VMs, a solution that provides bare-minimum data loss. Site Recovery also supports several replication scenarios, such as replication:
 
@@ -52,8 +52,8 @@ For your file-server data, another service to consider is [Azure File Sync](http
 
 [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) provides a view into various resources, like applications, containers, and virtual machines. It also collects data from several sources:
 
-- Azure Monitor for VMs ([insights](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview)) provides an in-depth view of virtual-machine health, performance trends, and dependencies. The service monitors the health of the operating systems of your Azure virtual machines, virtual-machine scale sets, and machines in your on-premises environment.
-- Log Analytics ([logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-collection#logs)) is a feature of Azure Monitor. Its role is central to the overall Azure management story. It serves as the data store for log analysis and for many other Azure services. It offers a rich query language and an analytics engine that provides insights into the operation of your applications and resources.
+- [Azure Monitor for VMs](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) provides an in-depth view of VM health, performance trends, and dependencies. The service monitors the health of the operating systems of your Azure virtual machines, virtual-machine scale sets, and machines in your on-premises environment.
+- [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview) is a feature of Azure Monitor. Its role is central to the overall Azure management story. It serves as the data store for log analysis and for many other Azure services. It offers a rich query language and an analytics engine that provides insights into the operation of your applications and resources.
 - [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-logs-overview) is also a feature of Azure Monitor. It provides insight into subscription-level events that occur in Azure.
 
 ## Configure
@@ -68,7 +68,7 @@ Several services fit into this category. They can help you to:
 
 These services are essential to supporting ongoing operations:
 
-- [Update Management](https://docs.microsoft.com/azure/automation/automation-update-management#view-update-assessments) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
+- [Update Management](https://docs.microsoft.com/azure/automation/automation-update-management) automates the deployment of patches across your environment, including deployment to operating-system instances running outside of Azure. It supports both Windows and Linux operating systems, and tracks key OS vulnerabilities and nonconformance caused by missing patches.
 - [Change Tracking and Inventory](https://docs.microsoft.com/azure/automation/change-tracking) provides insight into the software that's running in your environment, and highlights any changes that have occurred.
 - [Azure Automation](https://docs.microsoft.com/azure/automation/automation-intro) lets you run Python and PowerShell scripts or runbooks to automate tasks across your environment. When you use Automation with the [Hybrid Runbook Worker](https://docs.microsoft.com/azure/automation/automation-hybrid-runbook-worker), you can extend your runbooks to your on-premises resources as well.
 - [Azure Automation State Configuration](https://docs.microsoft.com/azure/automation/automation-dsc-overview) enables you to push PowerShell Desired State Configuration (DSC) configurations directly from Azure. DSC also lets you monitor and preserve configurations for guest operating systems and workloads.

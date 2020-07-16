@@ -1,17 +1,17 @@
 ---
-title: "Cloud innovation: Interact with devices"
-description: Introduction to Cloud innovation - Interact with devices
+title: Interact with devices via digital invention
+description: Learn about advanced approaches to reduce innovation effort through customer interaction with ambient experiences and devices, rather than apps.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
 # Ambient experiences: Interact with devices
 
-In [Build with customer empathy](./build.md), we discussed the three tests of true innovation: Solve a customer need, keep the customer coming back, and scale across a base of customer cohorts. Each test of your hypothesis requires effort and iterations on the approach to adoption. This article offers insights on some advanced approaches to reduce that effort through *ambient experiences*. By interacting with devices, instead of an application, the customer may be more likely to turn to your solution first.
+In [Build with customer empathy](./build.md), we discussed the three tests of true innovation: Solve a customer need, keep the customer coming back, and scale across a base of customer cohorts. Each test of your hypothesis requires effort and iterations on the approach to adoption. This article offers insights on some advanced approaches to reduce that effort through _ambient experiences_. By interacting with devices, instead of an application, the customer may be more likely to turn to your solution first.
 
 ## Ambient experiences
 
@@ -19,13 +19,13 @@ An ambient experience is a digital experience that relates to the immediate surr
 
 Life in the digital economy is full of distractions. We're all bombarded with social, email, web, visual, and verbal messaging, each of which is a risk of distraction. This risk increases with every second that elapses between the customer's point of need and the moment they encounter a solution. Countless customers are lost in that brief time gap. To foster an increase in repeat adoption, you have to reduce the number of distractions by reducing time to solution (TTS).
 
-## Interacting with devices
+## Interact with devices
 
-A standard web experience is the most common application development technique used to meet a customer's needs. This approach assumes that the customer is in front of their computer. If your customer consistently meets their point of need while in front of their laptop, build a web app. That web app will provide an ambient experience for that customer in that scenario. However, we know that this scenario is less and less likely in our current era.
+A standard web experience is the most common application development technique used to meet a customer's needs. This approach assumes that the customer is in front of their computer. If your customer consistently meets their point of need while in front of their laptop, build a web application. That application will provide an ambient experience for that customer in that scenario. However, we know that this scenario is less and less likely in our current era.
 
 ![Ambient experiences](../../_images/innovate/ambient-experiences.png)
 
-Ambient experiences typically require more than a web app these days. Through [measurement](./measure.md) and [learning with the customer](./learn.md) the behavior that triggers the customer's need can be observed, tracked, and used to build a more ambient experience. The following list summarizes a few approaches to integration of ambient solutions into your hypotheses, with more details about each in the following paragraphs.
+Ambient experiences typically require more than a web application these days. Through [measurement](./measure.md) and [learning with the customer](./learn.md) the behavior that triggers the customer's need can be observed, tracked, and used to build a more ambient experience. The following list summarizes a few approaches to integration of ambient solutions into your hypotheses, with more details about each in the following paragraphs.
 
 - **[Mobile experience](#mobile-experience):** As with laptops, mobile apps are ubiquitous in customer environments. In some situations, this might provide a sufficient level of interactivity to make a solution ambient.
 - **[Mixed reality](#mixed-reality):** Sometimes a customer's typical surroundings must be altered to make an interaction ambient. This factor creates something of a false reality in which the customer interacts with the solution and has a need met. In this case, the solution is ambient within the false reality.
@@ -40,14 +40,14 @@ In the first stage of ambient experience, the user moves away from the computer.
 
 When customers are mobile and change locations frequently, that may represent the most relevant form of ambient experience for a particular solution. Over the past decade, innovation has frequently been triggered by the integration of existing solutions with a mobile experience.
 
-Azure App Services is a great example of this approach. During early iterations, the [web app feature of Azure App Services](https://docs.microsoft.com/azure/app-service/overview) can be used to test the hypothesis. As the hypotheses become more complex, the [mobile app feature of Azure App Services](https://docs.microsoft.com/azure/app-service-mobile) can extend the web app to run in a variety of mobile platforms.
+Azure App Service is a great example of this approach. During early iterations, the [web app feature of Azure App Service](https://docs.microsoft.com/azure/app-service/overview) can be used to test the hypothesis. As the hypotheses become more complex, the [mobile app feature of Azure App Service](https://docs.microsoft.com/azure/app-service-mobile) can extend the web app to run in a variety of mobile platforms.
 
 ## Mixed reality
 
 Mixed reality solutions represent the next level of maturity for ambient experiences. This approach augments or replicates the customer's surroundings; it creates an extension of reality for the customer to operate within.
 
 > [!IMPORTANT]
-> If a virtual reality (VR) device is required and *is not already part of a customer's immediate surrounding or natural behaviors*, augmented or virtual reality is more of an alternative experience and less of an ambient experience.
+> If a virtual reality (VR) device is required and it's not already part of a customer's immediate surroundings or natural behaviors, augmented or virtual reality is more of an alternative experience and less of an ambient experience.
 
 Mixed reality experiences are increasingly common among remote workforces. Their use is growing even faster in industries that require collaboration or specialty skills that aren't readily available in the local market. Situations that require centralized implementation support of a complex product for a remote labor force are particularly fertile ground for augmented reality. In these scenarios, the central support team and remote employees might use augmented reality to work on, troubleshoot, and install the product.
 
@@ -69,7 +69,7 @@ You can use all three of these tools to collect data from the natural surroundin
 
 ## Adjusted reality
 
-The highest form of ambient experience is adjusted reality, often referred to as *ambient intelligence*. Adjusted reality is an approach to using information from your solution to change the customer's reality without requiring them to interact directly with an application. In this approach, the application you initially built to prove your hypothesis might no longer be relevant at all. Instead, devices in the environment help modulate the inputs and outputs to meet customer needs.
+The highest form of ambient experience is adjusted reality, often referred to as _ambient intelligence_. Adjusted reality is an approach to using information from your solution to change the customer's reality without requiring them to interact directly with an application. In this approach, the application you initially built to prove your hypothesis might no longer be relevant at all. Instead, devices in the environment help modulate the inputs and outputs to meet customer needs.
 
 Virtual assistants and smart speakers offer great examples of adjusted reality. Alone, a smart speaker is an example of simple integrated reality. But add a smart light and motion sensor to a smart speaker solution and it's easy to create a basic solution that turns on the lights when you enter a room.
 

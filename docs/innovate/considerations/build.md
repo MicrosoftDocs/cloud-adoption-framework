@@ -1,30 +1,32 @@
 ---
-title: "Cloud innovation: Build with customer empathy"
-description: Learn to build with customer empathy.
+title: Build adoption with customer empathy
+description: Learn to create solutions that drive innovation based on customer empathy, a deep understanding of the customer's experience.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/27/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
+<!--docsTest:ignore "Oxford English Dictionary" -->
+
 # Build with customer empathy
 
-"Necessity is the mother of invention." This proverb captures the indelibility of the human spirit and our natural drive to invent. As explained in the Oxford English Dictionary, "When the need for something becomes imperative, you are forced to find ways of getting or achieving it." Few would deny these universal truths about invention. However, as described in [Innovation in the digital economy](./index.md), innovation requires a balance of *invention* and *adoption*.
+"Necessity is the mother of invention." This proverb captures the indelibility of the human spirit and our natural drive to invent. As explained in the Oxford English Dictionary, "When the need for something becomes imperative, you are forced to find ways of getting or achieving it." Few would deny these universal truths about invention. However, as described in [Innovation in the digital economy](./index.md), innovation requires a balance between invention and adoption.
 
-Continuing with the analogy, innovation comes from a more extended family. *Customer empathy is the proud parent of innovation.* Creating a solution that drives innovation requires a legitimate customer need&mdash;one that keeps the customer coming back to solve critical challenges. These solutions are based on what a customer needs rather than on their wants or whims. To find customers' true needs, we start with empathy&mdash;a deep understanding of the customer's experience. Empathy is an underdeveloped skill for many engineers, product managers, and even business leaders. Fortunately, the diverse interactions and rapid pace of the cloud architect role have already started fostering this skill.
+Continuing with the analogy, innovation comes from a more extended family. _Customer empathy is the proud parent of innovation._ Creating a solution that drives innovation requires a legitimate customer need that keeps the customer coming back to solve critical challenges. These solutions are based on what a customer needs rather than on their wants or whims. To find their true needs, we start with empathy&mdash;a deep understanding of the customer's experience. Empathy is an underdeveloped skill for many engineers, product managers, and even business leaders. Fortunately, the diverse interactions and rapid pace of the cloud architect role have already started fostering this skill.
 
 Why is empathy so important? From the first release of a minimum viable product (MVP) to the general availability of a market-grade solution, customer empathy helps us understand and share in the experience of the customer. Empathy helps us build a better solution. More importantly, it better positions us to invent solutions that will encourage adoption. In a digital economy, those who can most readily empathize with customer needs can build a brighter future that redefines and leads the market.
 
 ## How to build with empathy
 
-Planning is intrinsically an exercise in defining assumptions. The more we plan, the more we see assumptions creep into the foundation of a great idea. Assumptions tend to be the product of self-empathy&mdash;in other words, "what would I want if I were in this position?" Starting with the build phase minimizes the period in which assumptions can invade a solution. This approach also accelerates the feedback loop with real customers, triggering earlier opportunities to learn and sharpen empathy.
+Planning is intrinsically an exercise in defining assumptions. The more we plan, the more we see assumptions creep into the foundation of a great idea. Assumptions tend to be the product of self-empathy&mdash;in other words, "what would I want if I were in this position?" Starting with the Build phase minimizes the period in which assumptions can invade a solution. This approach also accelerates the feedback loop with real customers, triggering earlier opportunities to learn and sharpen empathy.
 
 > [!CAUTION]
 > Properly defining what to build can be tricky and requires some practice. If you build something too quickly, if might not reflect customer needs. If you spend too much time trying to understand initial customer needs and solution requirements, the market may meet them before you have a chance to build anything at all. In either scenario, the opportunity to learn can be significantly delayed or reduced. Sometimes the data can even be corrupted.
 
-The most innovative solutions in history began with an intuitive belief. That gut feeling comes from both existing expertise and firsthand observation. We start with the build phase because it allows for a rapid test of that intuition. From there, we can cultivate deeper understanding and clearer degrees of empathy. At every iteration or release of a solution, balance comes from building MVPs that demonstrate customer empathy.
+The most innovative solutions in history began with an intuitive belief. That gut feeling comes from both existing expertise and firsthand observation. We start with the Build phase because it allows for a rapid test of that intuition. From there, we can cultivate deeper understanding and clearer degrees of empathy. At every iteration or release of a solution, balance comes from building MVPs that demonstrate customer empathy.
 
 To steady this balancing act, the following two sections discuss the concepts of building with empathy and defining an MVP.
 
@@ -60,7 +62,7 @@ The [disciplines of invention](./invention.md) found in the [Innovate methodolog
 
 Feature breadth and the different disciplines of invention can't all be created in a single iteration. It might take several releases for an MVP solution to include the complexity of multiple disciplines. Depending on the investment in development, there might be multiple parallel teams working within different disciplines to test multiple hypotheses. Although it's smart to maintain architectural alignment between those teams, it's unwise to try to build complex, integrated solutions until value hypotheses can be validated.
 
-Complexity is best detected in the frequency or volume of *technical spikes*. Technical spikes are efforts to create technical solutions that can't be easily tested with customers. When customer value and customer empathy are untested, technical spikes represent a risk to innovation and should be minimized. For the types of mature tested solutions found in a migration effort, technical spikes can be common throughout adoption. However, they delay the testing of hypotheses in innovation efforts and should be postponed whenever possible.
+Complexity is best detected in the frequency or volume of _technical spikes_. Technical spikes are efforts to create technical solutions that can't be easily tested with customers. When customer value and customer empathy are untested, technical spikes represent a risk to innovation and should be minimized. For the types of mature tested solutions found in a migration effort, technical spikes can be common throughout adoption. However, they delay the testing of hypotheses in innovation efforts and should be postponed whenever possible.
 
 A relentless simplification approach is suggested for any MVP definition. This approach means removing anything that doesn't add to your ability to validate the hypothesis. To minimize complexity, reduce the number of integrations and features that aren't required to test the hypothesis.
 
@@ -70,9 +72,9 @@ At each iteration, an MVP solution can take many different shapes. The common re
 
 In some cases, the fastest path to innovation means temporarily avoiding these disciplines entirely, until the cloud adoption team is confident that the hypothesis has been accurately validated. Coming from a technology company like Microsoft, this guidance might sound counterintuitive. However, this simply emphasizes that customer needs, not a specific technology decision, are the highest priority in an MVP solution.
 
-Typically, an MVP solution consists of a simple web app or data solution with minimal features and limited polish. For organizations that have professional development expertise, this path is often the fastest one to learning and iteration. The following list includes several other approaches a team might take to build an MVP:
+Typically, an MVP solution consists of a simple application or data solution with minimal features and limited polish. For organizations that have professional development expertise, this path is often the fastest one to learning and iteration. The following list includes several other approaches a team might take to build an MVP:
 
-- A predictive algorithm that's wrong 99% of the time but that demonstrates specific desired outcomes.
+- A predictive algorithm that's wrong 99 percent of the time but that demonstrates specific desired outcomes.
 - An IoT device that doesn't communicate securely at production scale but that demonstrates the value of nearly real-time data within a process.
 - An application built by a citizen developer to test a hypothesis or meet smaller-scale needs.
 - A manual process that re-creates the benefits of the application to follow.
@@ -98,7 +100,9 @@ There are many legal, compliance, and industry requirements that might require a
 
 ## References
 
-Some of the concepts in this article build on topics discussed in [*The Lean Startup*](http://theleanstartup.com/book) (Eric Ries, Crown Business, 2011).
+<!-- cSpell:ignore Ries -->
+
+Some of the concepts in this article build on topics discussed in [_The Lean Startup_](http://theleanstartup.com/book) by Eric Ries.
 
 ## Next steps
 

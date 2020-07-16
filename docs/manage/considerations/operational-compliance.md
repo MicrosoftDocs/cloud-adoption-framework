@@ -1,10 +1,10 @@
 ---
-title: "Operational compliance - Cloud Management and Operations"
-description: Operational compliance - Cloud Management and Operations
+title: "Operational compliance in cloud management"
+description: Use the Cloud Adoption Framework for Azure to learn how to maintain compliance with operational commitments.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -25,7 +25,7 @@ Maintaining compliance with operational commitments requires analysis, automatio
 
 ### Resource consistency
 
-The most effective step that a cloud management team can take toward operational compliance is to establish consistency in resource organization and tagging. When resources are consistently organized and tagged, all other operational tasks become easier. For deeper guidance on resource consistency, see the [Governance phase](../../govern/index.md) of the cloud adoption lifecycle. Specifically, the [initial governance foundation articles](../../govern/initial-foundation.md) demonstrate how to start developing resource consistency.
+The most effective step that a cloud management team can take toward operational compliance is to establish consistency in resource organization and tagging. When resources are consistently organized and tagged, all other operational tasks become easier. For deeper guidance on resource consistency, see the [Governance methodology](../../govern/index.md). Specifically, review the [initial governance foundation articles](../../govern/initial-foundation.md) to learn how to start developing resource consistency.
 
 ### Environment consistency
 
@@ -49,7 +49,7 @@ Any cloud management baseline should include a means of scheduling, controlling,
 
 As an enhanced baseline for cloud management, some workloads may benefit from automated remediation. When a workload commonly encounters issues that can't be resolved through code or architectural changes, automating remediation can help reduce the burden of cloud management and increase user satisfaction.
 
-Many would argue that any issue that's common enough to automate should be resolved through resolution of technical debt. When a long-term resolution is prudent, it should be the default option. However, a number of business scenarios make it difficult to justify large investments in the resolution of technical debt. When such a resolution can't be justified, but remediation is a common and costly burden, automated remediation is the next best solution.
+Many would argue that any issue that's common enough to automate should be resolved through resolution of technical debt. When a long-term resolution is prudent, it should be the default option. However, some business scenarios make it difficult to justify large investments in the resolution of technical debt. When such a resolution can't be justified, but remediation is a common and costly burden, automated remediation is the next best solution.
 
 ## Next steps
 

@@ -1,25 +1,29 @@
 ---
-title: "Optimize and Transform"
-description: This part of the Azure migration guide covers areas of optimization, including reviewing the design of the solution, right sizing the services, and analyzing costs.
+title: "Optimize and promote"
+description: Learn how to review the solution for possible areas of optimization, including the design of the solution, right-sizing the services, and analyzing costs.
 author: matticusau
 ms.author: mlavery
-ms.date: 04/04/2019
-ms.topic: guide
+ms.date: 02/25/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-# Optimize and transform
+<!-- markdownlint-disable MD025 DOCSMD001 -->
 
-Now that you have migrated your services to Azure, the next phase includes reviewing the solution for possible areas of optimization. This could include reviewing the design of the solution, right-sizing the services, and analyzing costs.
+# Release workloads (test, optimize, and handoff)
+
+Now that you have migrated your services to Azure, the next phase includes reviewing the solution for possible areas of optimization. This effort could include reviewing the design of the solution, right-sizing the services, and analyzing costs.
 
 This phase is also an opportunity to optimize your environment and perform possible transformations of the environment. For example, you may have performed a "rehost" migration, and now that your services are running on Azure you can revisit the solutions configuration or consumed services, and possibly perform some "refactoring" to modernize and increase the functionality of your solution.
 
-# [Right-size assets](#tab/optimize)
+The remainder of this article focuses on tools for optimizing the migrated workload. When the proper balance between performance and cost has been reached, a workload is ready to be promoted to production. For guidance on promotion options, see the process improvement articles on [optimize and promote](../migration-considerations/optimize/index.md).
 
-All Azure services that provide a consumption-based cost model can be resized through the Azure portal, CLI, or PowerShell. The first step in correctly sizing a service is to review its usage metrics. The Azure Monitor service provides access to these metrics. You may need to configure the collection of the metrics for the service you are analyzing, and allow an appropriate time to collect meaningful data based on your workload patterns.
+## [Right-size assets](#tab/optimize)
+
+All Azure services that provide a consumption-based cost model can be resized through the Azure portal, CLI, or PowerShell. The first step in correctly sizing a service is to review its usage metrics. The Azure Monitor service provides access to these metrics. You may need to configure the collection of the metrics for the service you're analyzing, and allow an appropriate time to collect meaningful data based on your workload patterns.
 
 1. Go to **Monitor**.
 1. Select **Metrics** and configure the chart to show the metrics for the service to analyze.
@@ -32,9 +36,9 @@ All Azure services that provide a consumption-based cost model can be resized th
 
 The following are some common services that you can resize.
 
-## Resize a Virtual Machine
+### Resize a virtual machine
 
-Azure Migrate performs a right-sizing analysis as part of its premigration assessment phase, and virtual machines migrated using this tool will likely already be sized based on your premigration requirements.
+Azure Migrate performs a right-sizing analysis as part of its pre-migration assessment phase, and virtual machines migrated using this tool will likely already be sized based on your pre-migration requirements.
 
 However, for virtual machines created or migrated using other methods, or in cases where your post-migration virtual machine requirements need adjustment, you may want to further refine your virtual machine sizing.
 
@@ -43,8 +47,7 @@ However, for virtual machines created or migrated using other methods, or in cas
 1. Select **Size** and the desired new size from the list. You may need to adjust the filters to find the size you need.
 1. Select **Resize**.
 
-Note that resizing production virtual machines has the potential to cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
-
+Resizing production virtual machines can cause service disruptions. Try to apply the correct sizing for your VMs before you promote them to production.
 
 ::: zone target="chromeless"
 
@@ -54,17 +57,17 @@ Note that resizing production virtual machines has the potential to cause servic
 
 ::: zone target="docs"
 
-- [Manage Reservations for Azure resources](https://docs.microsoft.com/azure/billing/billing-manage-reserved-vm-instance)
+- [Manage reservations for Azure resources](https://docs.microsoft.com/azure/billing/billing-manage-reserved-vm-instance)
 - [Resize a Windows VM](https://docs.microsoft.com/azure/virtual-machines/windows/resize-vm)
 - [Resize a Linux virtual machine using Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/change-vm-size)
 
 Partners can use the Partner Center to review the usage.
 
-- [Microsoft Azure VM sizing for maximum reservation usage](https://docs.microsoft.com/partner-center/azure-usage)
+- [Azure VM sizing for maximum reservation usage](https://docs.microsoft.com/partner-center/azure-usage)
 
 ::: zone-end
 
-## Resize a storage account
+### Resize a storage account
 
 1. Go to **Storage accounts**.
 1. Select the desired storage account.
@@ -77,24 +80,24 @@ Partners can use the Partner Center to review the usage.
 
 ::: zone-end
 
-## Resize a SQL Database
+### Resize a SQL Database
 
-1. Go to either **SQL databases**, or **SQL servers** and then select the server.
+1. Go to either **SQL databases**, or **SQL servers**, then select the server.
 1. Select the desired database.
 1. Select **Configure** and the desired new service tier size.
 1. Select **Apply**.
 
 ::: zone target="chromeless"
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Sql%2Fservers%2Fdatabases]" submitText="Go to SQL Databases" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Sql%2FServers%2FDatabases]" submitText="Go to SQL Databases" :::
 
 ::: zone-end
 
-# [Cost Management](#tab/ManageCost)
+## [Cost management](#tab/ManageCost)
 
-It's important to perform ongoing cost analysis and review. This provides you with an opportunity to resize resources as needed to balance cost and workload.
+It's important to perform ongoing cost analysis and review. This effort provides you with an opportunity to resize resources as needed to balance cost and workload.
 
-Azure Cost Management works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
+Azure Cost Management and Billing works with Azure Advisor to provide cost optimization recommendations. Azure Advisor helps you optimize and improve efficiency by identifying idle and underutilized resources.
 
 1. Select **Cost Management + Billing**.
 1. Select **Advisor recommendations** and the **Costs** tab.
@@ -120,8 +123,8 @@ You can also use **Advisor** and select the **Costs** tab to identify recommenda
 
 ::: zone target="docs"
 
-- [Tutorial: Optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management/tutorial-acm-opt-recommendations)
+- [Tutorial: Optimize costs from recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Prevent unexpected charges with Azure billing and cost management](https://docs.microsoft.com/azure/billing/billing-getting-started)
-- [Explore and analyze costs with Cost analysis](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis)
+- [Explore and analyze costs with cost analysis](https://docs.microsoft.com/azure/cost-management/quick-acm-cost-analysis)
 
 ::: zone-end

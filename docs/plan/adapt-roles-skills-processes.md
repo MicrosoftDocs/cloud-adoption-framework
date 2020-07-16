@@ -1,10 +1,10 @@
 ---
-title: "Adapt existing roles, skills, and processes for the cloud" 
-description: Describes a process to adapt existing roles, skills, and processes for the cloud.
+title: "Adapt roles, skills, and processes for the cloud"
+description: Use the Cloud Adoption Framework for Azure to learn to adapt your existing roles, skills, and processes as your organization makes the shift to cloud computing.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
@@ -17,7 +17,7 @@ Roles will likely change as institutions similarly shift to cloud computing. For
 
 IT staff members might feel anxious about their roles and positions because they realize that they need a different set of skills to support cloud solutions. But agile employees who explore and learn new cloud technologies shouldn't fear. They can lead the adoption of cloud services and help the organization learn and embrace the associated changes.
 
-For guidance on building a new skill set, see the [Skills readiness path](./suggested-skills.md).
+For guidance on building a new skill set, see the [skills readiness path](./suggested-skills.md).
 
 ## Capture concerns
 

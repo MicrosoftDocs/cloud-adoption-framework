@@ -1,27 +1,17 @@
 ---
-title: "Azure innovation guide: Prepare for customer feedback" 
-description: Prepare for customer feedback
+title: "Azure innovation: Prepare for feedback"
+description: Learn how to use Azure tools to collect quantitative and qualitative feedback on web apps and APIs hosted in GitHub.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="docs"
-
-# Azure innovation guide: Prepare for customer feedback
-
-::: zone-end
-
-::: zone target="chromeless"
-
 # Prepare for customer feedback
-
-::: zone-end
 
 User adoption, engagement, and retention are key to successful innovation. Why?
 
@@ -44,14 +34,14 @@ To view quantitative data on your applications:
 
 1. Go to **Application Insights**.
    - If your application doesn't appear in the list, select **Add** and follow the prompts to start configuring Application Insights.
-   - If the desired app is in the list, select the application.
+   - If the desired application is in the list, select it.
 1. The **Overview** pane includes some statistics on the application. Select **Application Dashboard** to build a custom dashboard for data that's more relevant to your hypothesis.
 
 ::: zone target="chromeless"
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/microsoft.insights%2Fcomponents]" submitText="Go to Application Insights" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Insights%2FComponents]" submitText="Go to Application Insights" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -59,7 +49,7 @@ To view quantitative data on your applications:
 
 ::: zone target="docs"
 
-To view the data about your apps, go to the [Azure portal](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/microsoft.insights%2Fcomponents).
+To view the data about your apps, go to the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Insights%2FComponents).
 
 ::: zone-end
 
@@ -71,7 +61,7 @@ To view the data about your apps, go to the [Azure portal](https://ms.portal.azu
 
 ## [Quantitative feedback for APIs](#tab/Quantitative-APIs)
 
-The connected economy is changing the way businesses innovate. Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the _innovator’s dilemma_: how to set the pace of change without stumbling over ongoing business activity.
+The connected economy is changing the way businesses innovate. Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the _innovator's dilemma_: how to set the pace of change without stumbling over ongoing business activity.
 
 Enterprises are using APIs externally to change how they interact with their customers and partners. Internally, they're using APIs to seamlessly connect distinct parts of the business. API economy operates on four building blocks: social, mobile, analytics, and cloud. Apps and services can be linked rapidly and cost-effectively to create an extended value proposition.
 
@@ -83,7 +73,7 @@ To record quantitative data on your APIs:
 
 1. Go to **API Management services**.
 2. Select the desired API from the list.
-3. Select **Diagnostic Settings** in the **Monitoring** section.
+3. Select **Diagnostic settings** in the **Monitoring** section.
 
 To view quantitative data on your APIs:
 
@@ -95,7 +85,7 @@ To view quantitative data on your APIs:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2Fservice]" submitText="Go to API Management services" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2FService]" submitText="Go to API Management services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -103,7 +93,7 @@ To view quantitative data on your APIs:
 
 ::: zone target="docs"
 
-To open API Management services, go to the [Azure portal](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2Fservice).
+To open API Management services, go to the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2FService).
 
 ::: zone-end
 
@@ -119,8 +109,7 @@ The backlog (or board) is where feedback is recorded as user stories. It's also 
 
 ### Action
 
-Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure.
-To get started with either tool, go to [Azure DevOps](https://dev.azure.com).
+Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops).
 
 ::: zone-end
 
@@ -134,9 +123,9 @@ To create a DevOps project:
 
 1. Go to **Azure DevOps Projects**.
 2. Select **Create DevOps project**.
-3. Select **Runtime, Framework and Service**.
+3. Select **Runtime, Framework, and Service**.
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/microsoft.visualstudio%2Faccount%2Fproject]" submitText="Go to Azure DevOps Projects" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.VisualStudio%2FAccount%2FProject]" submitText="Go to Azure DevOps Projects" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -165,7 +154,7 @@ To view current deployments in your pipeline:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites]" submitText="Go to App Services" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2FSites]" submitText="Go to App Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -173,7 +162,7 @@ To view current deployments in your pipeline:
 
 ::: zone target="docs"
 
-To view your applications in App Service, go to the [Azure portal](https://ms.portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites).
+To view your applications in App Service, go to the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2FSites).
 
 ::: zone-end
 

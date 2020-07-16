@@ -1,19 +1,21 @@
 ---
-title: "Enable tracking and alerting for critical changes"
-description: Enable tracking and alerting for critical changes
+title: "Tracking and alerts for critical changes"
+description: Enable tracking and alerting for critical changes in your hybrid environment with Azure Change Tracking and Inventory.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
+
+<!-- cSpell:ignore HKEY kusto -->
 
 # Enable tracking and alerting for critical changes
 
 Azure Change Tracking and Inventory provide alerts on the configuration state of your hybrid environment and changes to that environment. It can report critical file, service, software, and registry changes that might affect your deployed servers.
 
-By default, the Azure Automation inventory service doesn't monitor files or registry settings. The solution does provide a list of registry keys that we recommend for monitoring. To see this list, go to your Automation account in the Azure portal and select **Inventory** > **Edit Settings**.
+By default, the Azure Automation inventory service doesn't monitor files or registry settings. The solution does provide a list of registry keys that we recommend for monitoring. To see this list, go to your Automation account in the Azure portal, then select **Inventory** > **Edit settings**.
 
 ![Screenshot of the Azure Automation Inventory view in the Azure portal](./media/change-tracking1.png)
 
@@ -25,13 +27,13 @@ To enable file-content tracking for the hosts file, follow the steps in [Enable 
 
 You can also add an alert for changes to files that you're tracking. For example, say you want to set an alert for changes to the hosts file. Select **Log Analytics** on the command bar or Log Search for the linked Log Analytics workspace. In Log Analytics, use the following query to search for changes to the hosts file:
 
-```kusto
-ConfigurationChange | where FieldsChanged contains "FileContentChecksum" and FileSystemPath contains "hosts"
-```
+  ```kusto
+  ConfigurationChange | where FieldsChanged contains "FileContentChecksum" and FileSystemPath contains "hosts"
+  ```
 
 ![Screenshot of the Log Analytics query editor in the Azure portal](./media/change-tracking2.png)
 
-This query searches for changes to the contents of files that have a path that contains the word “hosts.” You can also search for a specific file by changing the path parameter. (For example, `FileSystemPath ==  "c:\\windows\\system32\\drivers\\etc\\hosts"`.)
+This query searches for changes to the contents of files that have a path that contains the word "hosts." You can also search for a specific file by changing the path parameter. (For example, `FileSystemPath ==  "c:\\windows\\system32\\drivers\\etc\\hosts"`.)
   
 After the query returns the results, select **New alert rule** to open the alert-rule editor. You can also get to this editor via Azure Monitor in the Azure portal.
 
@@ -91,7 +93,7 @@ Use the following query to detect changes to well-known registry keys.
 
 ## Next steps
 
-Learn how to use Azure Automation to [create update schedules](./update-schedules.md) to manage updates to your servers.
+Learn how Azure Automation can [create update schedules](./update-schedules.md) to manage updates for your servers.
 
 > [!div class="nextstepaction"]
 > [Create update schedules](./update-schedules.md)

@@ -1,29 +1,31 @@
 ---
 title: "Building technical skills"
-description: Overview of skills readiness path during the Ready phase of migration. 
+description: Use the Cloud Adoption Framework for Azure to learn how to help your organization develop the necessary skills to structure teams to meet the desired outcomes.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/10/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: organize
 ms.custom: organize
 ---
 
-# Skills readiness path during the Ready phase of a migration
+# Build technical skills
 
-During the *ready* phase of a migration, the objective is to prepare for the journey ahead. This phase is accomplished in two primary areas: organizational and environmental (technical) readiness. Both may require new skills for technical and nontechnical contributors. The following information can help your organization build the necessary skills.
+Organizational and environmental (technical) readiness can require new skills for technical and nontechnical contributors. The following information can help your organization build the necessary skills.
 
 ## Organizational readiness learning paths
 
 Depending on the motivations and business outcomes that are associated with a cloud-adoption effort, leaders may need to establish new organizational structures or virtual teams (v-teams) to facilitate various functions. The following articles can help your organization develop the necessary skills to structure those teams to meet the desired outcomes:
 
-- [Initial organization alignment](./index.md): An overview of alignment and team structures to help meet specific goals.
-- [Break down silos and fiefdoms](./fiefdoms-silos.md): Learn about two common organizational *antipatterns* and ways to guide the teams to productive collaboration.
+- [Align your organization](../get-started/org-alignment.md): Discover approaches to establishing the proper organizational structures.
+- [Organization alignment exercises](./index.md): Get an overview of alignment and team structures to help meet specific goals.
+- [Establish teams](../get-started/help.md#establish-teams): Learn how to establish teams within your organization that are responsible for delivering cloud functionality.
+- [Break down silos and fiefdoms](./fiefdoms-silos.md): Learn about two common organizational antipatterns and ways to guide the teams to productive collaboration.
 
 ## Environmental (technical) readiness learning paths
 
-During the ready phase, technical staff have to create a migration landing zone to host, operate, and govern workloads that they migrate to the cloud. Use the following paths to accelerate development of the necessary skills:
+During the Ready phase, technical staff have to create a migration landing zone to host, operate, and govern workloads that they migrate to the cloud. Use the following paths to accelerate development of the necessary skills:
 
 - [Create an Azure account](https://docs.microsoft.com/learn/modules/create-an-azure-account): The first step to using Azure is to create an account. Your account holds the Azure services that you provision and handles your personal settings, like identity, billing, and preferences.
 - [Azure portal](https://docs.microsoft.com/learn/modules/tour-azure-portal): Tour the Azure portal features and services, and customize the portal.
@@ -34,13 +36,13 @@ During the ready phase, technical staff have to create a migration landing zone 
 - [Azure network services](https://docs.microsoft.com/learn/modules/intro-to-azure-networking): Learn Azure networking basics and how to improve resiliency and reduce latency.
 - [Azure compute options](https://docs.microsoft.com/learn/modules/intro-to-azure-compute): Review the Azure compute services.
 - [Secure resources with RBAC](https://docs.microsoft.com/learn/modules/secure-azure-resources-with-rbac): Use role-based access control (RBAC) to secure resources.
-- [Azure Storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure/index): Learn about the benefits of Azure data storage.
+- [Azure Storage options](https://docs.microsoft.com/learn/modules/intro-to-data-in-azure): Learn about the benefits of Azure data storage.
 
-During the ready phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
+During the Ready phase, architects have to design solutions that span all Azure environments. The following resources can prepare them for these tasks:
 
-- [Foundations for cloud architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to help architect the right foundational solutions.
-- [Microsoft Azure architecture](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to ground architects in Azure architecture.
-- [Designing migrations for Microsoft Azure](https://app.pluralsight.com/library/courses/cloud-architecture-foundations): A PluralSight course to help architects design a migration solution.
+- [Foundations for cloud architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architect the right foundational solutions.
+- [Microsoft Azure architecture](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to ground architects in Azure architecture.
+- [Designing migrations for Microsoft Azure](https://www.pluralsight.com/courses/cloud-architecture-foundations): A Pluralsight course to help architects design a migration solution.
 
 ## Deeper skills exploration
 
@@ -48,12 +50,11 @@ The following information describes resources for additional learning.
 
 ### Typical mappings of cloud IT roles
 
-Microsoft and its partners offer options to help all audiences develop their skills for using Microsoft Azure services.
+Microsoft and its partners offer options to help all audiences develop their skills for using Azure services.
 
-- [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/microsoft-azure): Offers training from the people who helped build Azure. From a basic overview to deep technical training, IT staff learn how to apply Azure to their business.
 - [Microsoft IT Pro Career Center](https://www.microsoft.com/itpro): A free online resource to help map your cloud career path. Learn from industry experts about your cloud role and the skills you need. Follow a learning curriculum at your own pace to build the skills that you need to stay relevant.
 
-We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/azure-certification.aspx).
+We recommend that you turn your knowledge of Azure into official recognition with [Microsoft Azure certification training and exams](https://www.microsoft.com/learning/certification-overview.aspx).
 
 ### Microsoft Learn
 
@@ -67,8 +68,8 @@ The following are a few examples of role-specific learning paths on Microsoft Le
 
 - [Administrators](https://docs.microsoft.com/learn/browse/?roles=administrator) have access to modules that focus on Azure fundamentals, configuring containers, and even advanced administration in the cloud.
 
-- [Developers](https://docs.microsoft.com/learn/browse/?roles=developer&term=infrastructure) can use Learn resources to help during architecture, governance, modernization activities.
+- [Developers](https://docs.microsoft.com/learn/browse/?roles=developer&term=infrastructure) can use Microsoft Learn resources to help during architecture, governance, modernization activities.
 
 ## Learn more
 
-For additional learning paths, browse the [Microsoft Learn catalog](https://docs.microsoft.com/learn/browse). Use the Roles filter to align learning paths with your role.
+For additional learning paths, browse the [Microsoft Learn catalog](https://docs.microsoft.com/learn/browse). Use the roles filter to align learning paths with your role.

@@ -1,17 +1,17 @@
 ---
-title: "Cloud innovation: Predict and influence"
-description: Introduction to Cloud innovation - Predict and influence
+title: Predict and influence customer behavior
+description: Use predictive modeling to develop predictive capabilities through data, insights, patterns, predictions, and interactions.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
 # Predict and influence
 
-There are two classes of applications in the digital economy: *historical* and *predictive*. Many customer needs can be met solely by using historical data, including nearly real-time data. Most solutions focus primarily on aggregating data in the moment. They then process and share that data back to the customer in the form of a digital or ambient experience.
+There are two classes of applications in the digital economy: _historical_ and _predictive_. Many customer needs can be met solely by using historical data, including nearly real-time data. Most solutions focus primarily on aggregating data in the moment. They then process and share that data back to the customer in the form of a digital or ambient experience.
 
 As predictive modeling becomes more cost-effective and readily available, customers demand forward-thinking experiences that lead to better decisions and actions. However, that demand doesn't always suggest a predictive solution. In most cases, a historical view can provide enough data to empower the customer to make a decision on their own.
 
@@ -27,7 +27,15 @@ A variety of applications and ambient experiences use data to make predictions:
 
 ## Develop predictive capabilities
 
-Solutions that consistently provide accurate predictive capabilities commonly include five core characteristics: *data*, *insights*, *patterns*, *predictions*, and *interactions*. Each aspect is required to develop predictive capabilities. Like all great innovations, the development of predictive capabilities requires a [commitment to iteration](./index.md#commitment-to-iteration). In each iteration, one or more of the following characteristics is matured to validate increasingly complex customer hypotheses.
+Solutions that consistently provide accurate predictive capabilities commonly include five core characteristics:
+
+    - Data
+    - Insights
+    - Patterns
+    - Predictions
+    - Interactions
+
+Each aspect is required to develop predictive capabilities. Like all great innovations, the development of predictive capabilities requires a [commitment to iteration](./index.md#commitment-to-iteration). In each iteration, one or more of the following characteristics is matured to validate increasingly complex customer hypotheses.
 
 ![Steps to predictive capabilities](../../_images/innovate/predict-and-influence.png)
 

@@ -1,10 +1,10 @@
 ---
 title: "Policy enforcement decision guide"
-description: Learn about policy enforcement subscriptions as a core design priority in Azure migrations.
+description: Use the Cloud Adoption Framework for Azure to learn about policy enforcement subscriptions as a core design priority in Azure migrations.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
@@ -45,13 +45,13 @@ As your cloud estate grows, additional tools such as [Azure Security Center](htt
 
 In Azure, you can apply configuration settings and resource creation rules at the management group, subscription, or resource group level to help ensure policy alignment.
 
-[Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) is an Azure service for creating, assigning, and managing policies. These policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service level agreements. Azure Policy evaluates your resources for noncompliance with assigned policies. For example, you might want to limit the SKU size of virtual machines in your environment. After implementing a corresponding policy, new and existing resources are evaluated for compliance. With the right policy, existing resources can be brought into compliance.
+[Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) is an Azure service for creating, assigning, and managing policies. These policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service-level agreements. Azure Policy evaluates your resources for noncompliance with assigned policies. For example, you might want to limit the SKU size of virtual machines in your environment. After implementing a corresponding policy, new and existing resources are evaluated for compliance. With the right policy, existing resources can be brought into compliance.
 
 ## Cross-organization policy
 
 As your cloud estate grows to span many subscriptions that require enforcement, you will need to focus on a cloud-estate-wide enforcement strategy to ensure policy consistency.
 
-Your [subscription design](../subscriptions/index.md) must account for policy in relation to your organizational structure. In addition to helping support complex organization within your subscription design, [Azure management groups](../../ready/azure-best-practices/scaling-subscriptions.md#manage-multiple-subscriptions) can be used to assign Azure Policy rules across multiple subscriptions.
+Your [subscription design](../subscriptions/index.md) must account for policy in relation to your organizational structure. In addition to helping support complex organization within your subscription design, [Azure management groups](../../ready/azure-best-practices/organize-subscriptions.md) can be used to assign Azure Policy rules across multiple subscriptions.
 
 ## Automated enforcement
 

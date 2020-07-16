@@ -1,10 +1,10 @@
 ---
 title: "How to use the business outcome template"
-description: Explanation of the business outcome template
+description: Learn to use the business outcome template to capture business outcomes that will be used in the development of customer transformation journey strategies.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ---
@@ -15,27 +15,25 @@ As discussed in the [business outcomes overview](./index.md), it can be difficul
 
 Download the [business outcome template spreadsheet](https://archcenter.blob.core.windows.net/cdn/business-outcome-template.xlsx) to begin brainstorming and tracking business outcomes. Continue reading to learn how to use the template. Review the [business outcomes section](./index.md) for ideas on potential business outcomes that could come up in executive conversations.
 
-<!-- markdownlint-disable MD026 -->
-
 ## Use the business outcome template
 
-Introduced by Kate Johnson at the Microsoft Digital Transformation Academy, business outcomes focus on three topics:
+In this template, business outcomes focus on three topics:
 
-- Aligning to stakeholders or business decision makers
-- Understanding business drivers and objectives
-- Mapping outcomes to specific solutions and technical capability
+- Aligning to stakeholders or business decision makers.
+- Understanding business drivers and objectives.
+- Mapping outcomes to specific solutions and technical capability.
 
 ![Business outcomes visualized as a house with stakeholders, over business outcomes, over technical capabilities](../../_images/strategy/business-outcome-house.png)
 
-*Figure 1 - Business outcomes visualized as a house with stakeholders, over business outcomes, over technical capabilities.*
+_Figure 1: Business outcomes visualized as a house with stakeholders, over business outcomes, over technical capabilities._
 
 The business outcome template focuses on simplified conversations that can quickly engage stakeholders without getting too deep into the technical solution. By rapidly understanding and aligning the key performance indicators (KPIs) and business drivers that are important to stakeholders, your team can think about high-level approaches and transformations before diving into the implementation details.
 
-An example can be found on the "Example Outcome" tab of the spreadsheet, as shown below. To track multiple outcomes, add them to the "Collective Outcomes" tab.
+An example can be found on the "example outcome" tab of the spreadsheet, as shown below. To track multiple outcomes, add them to the "collective outcomes" tab.
 
 ![Example of a business outcome template](../../_images/strategy/business-outcome-template.png)
 
-*Figure 2 - Example of a business outcome template.*
+_Figure 2: Example of a business outcome template._
 
 ## Why is this template relevant?
 
@@ -43,7 +41,7 @@ Discovery is a fundamental tenet of enterprise architecture. If discovery is lim
 
 ![Five areas of focus in discovery: stakeholders, outcomes, drivers, KPIs, and capabilities](../../_images/strategy/business-outcome-focus-areas.png)
 
-*Figure 3 - Five areas of focus in discovery: stakeholders, outcomes, drivers, KPIs, and capabilities.*
+_Figure 3: Five areas of focus in discovery: stakeholders, outcomes, drivers, KPIs, and capabilities._
 
 **Stakeholders:** Who in the organization is likely to see the greatest value in a specific business outcome? Who is most likely to support this transformation, especially when things get tough or time consuming? Who has the greatest stake in the success of this transformation? This person is a potential stakeholder.
 

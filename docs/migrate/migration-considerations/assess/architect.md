@@ -1,10 +1,10 @@
 ---
 title: "Architect workloads prior to migration"
-description: Architect workloads prior to migration
+description: Use the Cloud Adoption Framework for Azure to learn how to define the new architecture before cloud migration begins.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---

@@ -1,10 +1,10 @@
 ---
-title: "Cloud monitoring guide: Collect the right data"
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure
+title: "Collect monitoring data in the cloud"
+description: Learn to observe the health and availability of your cloud solution to collect the right monitoring data.
 author: MGoedtel
 ms.author: magoedte
 ms.date: 06/26/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor
@@ -16,9 +16,9 @@ This article describes some considerations for collecting monitoring data in a c
 
 To observe the health and availability of your cloud solution, you must configure the monitoring tools to collect a level of signals that are based on predictable failure states. These signals are the symptoms of the failure, not the cause. The monitoring tools use metrics and, for advanced diagnostics and root cause analysis, logs.
 
-Plan for monitoring and migration carefully. Start by including the monitoring service owner, the manager of operations, and other related personnel during the planning phase, and continue engaging them throughout the development and release cycle. Their focus will be to develop a monitoring configuration that's based on the following criteria:
+Plan for monitoring and migration carefully. Start by including the monitoring service owner, the manager of operations, and other related personnel during the Plan phase, and continue engaging them throughout the development and release cycle. Their focus will be to develop a monitoring configuration that's based on the following criteria:
 
-- What's the composition of the service, and are those dependencies monitored today? If so, are there multiple tools involved? Is there an opportunity to consolidate, without introducing risks?
+- What is the composition of the service? Are those dependencies monitored today? If so, are there multiple tools involved? Is there an opportunity to consolidate, without introducing risks?
 - What is the SLA of the service, and how will I measure and report it?
 - What should the service dashboard look like when an incident is raised? What should the dashboard look like for the service owner, and for the team that supports the service?
 - What metrics does the resource produce that I need to monitor?  

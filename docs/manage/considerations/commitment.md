@@ -1,10 +1,10 @@
 ---
-title: "Business commitment: Cloud management and operations"
-description: "Business commitment: Cloud management and operations"
+title: "Business commitment in cloud management"
+description: "Calculate future returns from the classification and impact of interruptions to various workloads to make better business decisions and commitments."
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -25,12 +25,12 @@ For each workload in the portfolio, the cloud operations team and cloud strategy
 
 As you're establishing a commitment with the business, there are a few key aspects to align:
 
-- IT operations prerequisites
-- Management responsibility
-- Cloud tenancy
-- Soft-cost factors
-- Loss avoidance ROI
-- Validation of management level
+- IT operations prerequisites.
+- Management responsibility.
+- Cloud tenancy.
+- Soft-cost factors.
+- Loss avoidance ROI.
+- Validation of management level.
 
 To aid in your decision process, the remainder of this article describes each of these aspects in greater detail.
 
@@ -44,7 +44,7 @@ The [Azure Management Guide](../azure-management-guide/index.md) outlines the ma
 <!-- -->
 
 > [!TIP]
-> If you're using the [Ops Management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, the Ops management fields should be updated to reflect these prerequisites. Those fields include _Commitment level_, _Composite SLA_, and _Monthly cost_. Monthly cost should represent the cost of the added operational management tools on a monthly basis.
+> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, the operations management fields should be updated to reflect these prerequisites. Those fields include _Commitment level_, _Composite SLA_, and _Monthly cost_. Monthly cost should represent the cost of the added operational management tools on a monthly basis.
 
 The operations management baseline serves as an initial starting point to be validated in each of the following sections.
 
@@ -52,15 +52,15 @@ The operations management baseline serves as an initial starting point to be val
 
 In a traditional on-premises environment, the cost of managing the environment is commonly assumed to be a sunk cost that's owned by IT operations. In the cloud, management is a purposeful decision with direct budgetary impact. The costs of each management function can be more directly attributed to each workload that's deployed to the cloud. This approach allows for greater control, but it does create a requirement for cloud operations teams and cloud strategy teams to first commit to an agreement about responsibilities.
 
-Organizations might also choose to [outsource some of their ongoing management functions to a service provider](https://www.microsoft.com/cloud-adoption-framework-offers?ot=manage). These service providers can use [Azure Lighthouse](https://azure.com/lighthouse) to give organizations more precise control in granting access to their resources, along with greater visibility into the actions performed by the service providers.
+Organizations might also choose to [outsource some of their ongoing management functions to a service provider](https://aka.ms/adopt/partneroffers). These service providers can use [Azure Lighthouse](https://docs.microsoft.com/azure/lighthouse/overview) to give organizations more precise control in granting access to their resources, along with greater visibility into the actions performed by the service providers.
 
-- **Delegated responsibility:** Because there's no need to centralize and assume operational management overhead, IT operations for many organizations are considering new approaches. One common approach is referred to as _delegated responsibility_. In a cloud center of excellence model, platform operations and platform automation provide self-service management tools that can be used by business-led operations teams, independent of a central IT operations team. This approach gives business stakeholders complete control over management-related budgets. It also allows the cloud center of excellence (CCoE) team to ensure that a minimum set of guardrails has been properly implemented. In this model, IT acts as a broker and a guide to help the business make wise decisions. Business operations oversee day to day operations of dependent workloads.
+- **Delegated responsibility:** Because there's no need to centralize and assume operational management overhead, IT operations for many organizations are considering new approaches. One common approach is referred to as _delegated responsibility_. In a cloud center of excellence model, platform operations and platform automation provide self-service management tools that can be used by business-led operations teams, independent of a centralized IT operations team. This approach gives business stakeholders complete control over management-related budgets. It also allows the cloud center of excellence (CCoE) team to ensure that a minimum set of guardrails has been properly implemented. In this model, IT acts as a broker and a guide to help the business make wise decisions. Business operations oversee day to day operations of dependent workloads.
 
-- **Centralized responsibility:** Compliance requirements, technical complexity, and some shared service models might require a _central IT_ model. In this model, IT continues to exercise its operations management responsibilities. Environmental design, management controls, and governance tooling might be centrally managed and controlled, which restricts the role of business stakeholders in making management commitments. But the visibility into the cost and architecture of cloud approaches makes it much easier for centralized IT to communicate the cost and level of management for each workload.
+- **Centralized responsibility:** Compliance requirements, technical complexity, and some shared service models might require a _Central IT team_ model. In this model, IT continues to exercise its operations management responsibilities. Environmental design, management controls, and governance tooling might be centrally managed and controlled, which restricts the role of business stakeholders in making management commitments. But the visibility into the cost and architecture of cloud approaches makes it much easier for centralized IT to communicate the cost and level of management for each workload.
 
 - **Mixed model:** Classification is at the heart of a _mixed model_ of management responsibilities. Companies that are in the midst of a transformation from on-premises to cloud might require an on-premises-first operating model for a while. Companies with strict compliance requirements, or that depend on long-term contracts with IT outsourcing vendors, might require a centralized operating model.
 
-  Regardless of their constraints, today's businesses must innovate. When rapid innovation must flourish, in the midst of a central-IT, centralized-responsibility model, a mixed-model approach might provide balance. In this approach, central IT provides a centralized operating model for all workloads that are mission-critical or contain sensitive information. At the same time, all other workload classifications might be placed in a cloud environment that's designed for delegated responsibilities. The centralized responsibility approach serves as the general operating model. The business then has flexibility to adopt a specialized operating model, based on its required level of support and sensitivity.
+  Regardless of their constraints, today's businesses must innovate. When rapid innovation must flourish, in the midst of a central-IT, centralized-responsibility model, a mixed-model approach might provide balance. In this approach, a central IT team provides a centralized operating model for all workloads that are mission-critical or contain sensitive information. At the same time, all other workload classifications might be placed in a cloud environment that's designed for delegated responsibilities. The centralized responsibility approach serves as the general operating model. The business then has flexibility to adopt a specialized operating model, based on its required level of support and sensitivity.
 
 The first step is committing to a responsibility approach, which then shapes the following commitments.
 
@@ -81,7 +81,7 @@ Before you run the numbers, it's important to look at the soft-cost factors. Sof
 A few examples of soft-cost factors would include:
 
 - Daily workload usage by the board or CEO.
-- Workload usage by a top _x percent_ of customers that leads to a greater revenue impact elsewhere.
+- Workload usage by the top _x%_ of customers that leads to a greater revenue impact elsewhere.
 - Impact on employee satisfaction.
 
 The next data point that's required to make a commitment is a list of soft-cost factors. These factors don't need to be documented at this stage, but business stakeholders should be aware of the importance of these factors and their exclusion from the following calculations.
@@ -105,11 +105,11 @@ For managed solutions, several design principles and template solutions can be a
 The following calculations will walk through formulas to help you better understand the differences between losses and increased management investments. For guidance on calculating the cost of increased management, see [Workload automation](./workload.md) and [Platform automation](./platform.md).
 
 > [!TIP]
-> If you're using the [Ops Management workbook](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, update the Ops management fields to reflect to reflect each conversation. Those fields include _Commitment level_, _Composite SLA_, and _Monthly cost_. Monthly cost should represent the monthly cost of the added operational management tools. After they're updated, the fields will update the ROI formulas and each of the following fields.
+> If you're using the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx) to plan for cloud management, update the operations management fields to reflect to reflect each conversation. Those fields include _Commitment level_, _Composite SLA_, and _Monthly cost_. Monthly cost should represent the monthly cost of the added operational management tools. After they're updated, the fields will update the ROI formulas and each of the following fields.
 
 ### Estimate outage (hours per year)
 
-Composite SLA is the service-level agreement that's based on the deployment of each asset in the workload. That field drives _Estimated Outage_ (labeled _Est. Outage_ in the workbook). To calculate estimated outage in hours per year without using the workbook, apply the following formula:
+Composite SLA is the service-level agreement that's based on the deployment of each asset in the workload. That field drives _estimated outage_ (labeled `Est. Outage` in the workbook). To calculate estimated outage in hours per year without using the workbook, apply the following formula:
 
 > _Estimated outage = (1 - Composite SLA percentage) &#215; Number of hours in a year_
 
@@ -117,17 +117,17 @@ The workbook uses the default value of _8,760 hours per year_.
 
 ### Standard loss impact
 
-_Standard loss impact_ (labeled _Standard impact_ in the workbook) forecasts the financial impact of any outage, assuming that the _Estimated outage_ prediction proves accurate. To calculate this forecast without using the workbook, apply the following formula:
+_Standard loss impact_ (labeled `Standard Impact` in the workbook) forecasts the financial impact of any outage, assuming that the _estimated outage_ prediction proves accurate. To calculate this forecast without using the workbook, apply the following formula:
 
-> _Standard Impact = Estimated outage @ three 9s of uptime &#215; Time-value impact_
+> _Standard impact = Estimated outage @ three 9s of uptime &#215; Time-value impact_
 
 This serves as a baseline for cost, should the business stakeholders choose to invest in a higher level of management.
 
-### Composite SLA impact
+### Composite-SLA impact
 
-_Composite SLA impact_ (labeled _Commitment level impact_ in the workbook) provides updated fiscal impact, based on the changes to the uptime SLA. This calculation allows you to compare the projected financial impact of both options. To calculate this forecast impact without the spreadsheet, apply the following formula:
+_Composite-SLA impact_ (labeled `Commitment level impact` in the workbook) provides updated fiscal impact, based on the changes to the uptime SLA. This calculation allows you to compare the projected financial impact of both options. To calculate this forecast impact without the spreadsheet, apply the following formula:
 
-> _Composite SLA impact = Estimated outage &#215; Time-value impact_
+> _Composite-SLA impact = Estimated outage &#215; Time-value impact_
 
 The value represents the potential losses to be avoided by the changed commitment level and new composite SLA.
 
@@ -139,7 +139,7 @@ _Comparison basis_ evaluates standard impact and composite SLA impact to determi
 
 If the cost of managing a workload exceeds the potential losses, the proposed investment in cloud management might not be fruitful. To compare the _Return on Loss Avoidance_, see the column labeled _Annual ROI****_. To calculate this column on your own, use the following formula:
 
-> _Return on Loss Avoidance = (Comparison basis - (Monthly cost &#215; 12)) &#247; (Monthly cost &#215; 12))_
+> _Return on Loss Avoidance = (Comparison basis - (Monthly cost &#215; 12) ) &#247; (Monthly cost &#215; 12) )_
 
 Unless there are other soft-cost factors to consider, this comparison can quickly suggest whether there should be a deeper investment in cloud operations, resiliency, reliability, or other areas.
 

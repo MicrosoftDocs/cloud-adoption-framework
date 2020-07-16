@@ -1,10 +1,10 @@
 ---
 title: "Software Defined Networking: Hybrid network"
-description: Discussion of how hybrid networks allow your cloud virtual networks to connect to on-premises resources.
+description: Use the Cloud Adoption Framework for Azure to learn how hybrid networks can connect cloud virtual networks to on-premises resources.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
@@ -12,7 +12,7 @@ ms.custom: governance
 
 # Software Defined Networking: Hybrid network
 
-The hybrid cloud network architecture allows virtual networks to access your on-premises resources and services and vice versa, using a Dedicated WAN connection such as ExpressRoute or other connection method to directly connect the networks.
+The hybrid cloud network architecture allows virtual networks to access your on-premises resources and services and vice versa, using a dedicated WAN connection such as ExpressRoute or other connection method to directly connect the networks.
 
 ![Hybrid network](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/images/expressroute.png)
 

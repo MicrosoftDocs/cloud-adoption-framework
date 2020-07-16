@@ -1,17 +1,17 @@
 ---
-title: "Understand staging activities during a migration"
-description: Understand staging activities during a migration
+title: "Staging activities during a migration"
+description: Use the Cloud Adoption Framework for Azure to understand staging activities and associated deliverables needed during a migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
 # Understand staging activities during a migration
 
-As described in the article on promotion models, *staging* is the point at which assets have been migrated to the cloud. However, they are not yet ready to be promoted to production. This is often the last step in the migrate process of a migration. After staging, the workload is managed by an IT operations or cloud operations team to prepare it for production usage.
+As described in the article on promotion models, _staging_ is the point at which assets have been migrated to the cloud. However, they're not ready to be promoted to production yet. This is often the last step in the migrate process of a migration. After staging, the workload is managed by an IT operations or cloud operations team to prepare it for production usage.
 
 ## Deliverables
 

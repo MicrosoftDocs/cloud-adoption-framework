@@ -1,113 +1,61 @@
 ---
 title: "Introduction to the Azure migration guide"
-description: Learn how to effectively migrate your organization's services to Azure with step-by-step guidance.
+description: Use the Cloud Adoption Framework for Azure to learn how to effectively migrate your organization's services to Azure.
 author: matticusau
 ms.author: mlavery
-ms.date: 04/04/2019
-ms.topic: guide
+ms.date: 02/25/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="docs"
+# Azure migration guide overview
 
-# Azure migration guide: Before you start
+The [Cloud Adoption Framework's Migrate methodology](../index.md) guides readers through an iterative process of migrating one workload, or a small collection of workloads per release. In each iteration, the process of assess, migration, and optimize and promote is followed to ensure that workloads are ready to meet production demands. That cloud-agnostic process can guide migration to any cloud provider.
 
-::: zone-end
-
-::: zone target="chromeless"
-
-# Before you start
-
-::: zone-end
-
-Before you migrate resources to Azure, you need to choose the migration method and the features you'll use to govern and secure your environment. This guide leads you through this decision process.
+This guide demonstrates a simplified version of that process when migrating from your on-premises environment to **Azure**.
 
 ::: zone target="docs"
 
 > [!TIP]
-> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Migrate your environment to Azure**, and then follow the step-by-step instructions.
+> For an interactive experience, view this guide in the Azure portal. Go to the [Azure Quickstart Center](https://portal.azure.com/?feature.quickstart=true#blade/Microsoft_Azure_Resources/QuickstartCenterBlade) in the Azure portal, select **Azure migration guide**, and then follow the step-by-step instructions.
 
 ::: zone-end
 
-# [Overview](#tab/Overview)
+## [Migration tools](#tab/MigrationTools)
 
-This guide walks you through the basics of migrating applications and resources from your on-premises environment to Azure. It is designed for migration scopes with minimal complexity. To determine the suitability of this guide for your migration, see the **When to use this guide** tab.
-
-When you migrate to Azure, you may migrate your applications as-is using IaaS-based virtual machine solutions (known as a _rehost_ or _lift and shift_ migration), or you may have the flexibility to use managed services and other cloud-native features to modernize your applications. See the **Migration options** tab for more information on these choices. As you develop your migration strategy, you might consider:
-
-- Will my migrating applications work in the cloud?
-- What is the best strategy (with regard to technology, tools, and migrations) for my application? See the Microsoft Cloud Adoption Framework's [Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md) for more information.
-- How do I minimize downtime during the migration?
-- How do I control costs?
-- How do I track resource costs and bill them accurately?
-- How do I ensure we remain compliant and meet regulations?
-- How do I meet legal requirements for data sovereignty in certain countries?
-
-This guide helps answer these questions. It suggests the tasks and features to consider as you prepare to deploy resources in Azure, including:
+This guide is the suggested path for your first migration to Azure, as it will expose you to the methodology and the cloud-native tools most commonly used during migration to Azure. Those tools are presented across the following pages:
 
 > [!div class="checklist"]
 >
-> - **Configure prerequisites.** Plan and prepare for migration.
-> - **Assess your technical fit.** Validate the technical readiness and suitability for migration.
-> - **Manage costs and billing.** Look at the costs of your resources.
-> - **Migrate your services.** Perform the actual migration.
-> - **Organize your resources.** Lock resources critical to your system and tag resources to track them.
-> - **Optimize and transform.** Use the post-migration opportunity to review your resources.
-> - **Secure and manage.** Ensure that your environment is secure and monitored properly.
+> - **Assess each workload's technical fit.** Validate the technical readiness and suitability for migration.
+> - **Migrate your services.** Perform the actual migration, by replicating on-premises resources to Azure.
+> - **Manage costs and billing.** Understand the tools required to control costs in Azure.
+> - **Optimize and promote.** Optimize for cost and performance balance before promoting your workload to production.
 > - **Get assistance.** Get help and support during your migration or post-migration activities.
 
-::: zone target="docs"
+It is assumed that a landing zone has already been deployed, in alignment with the best practices in the [Cloud Adoption Framework's Ready methodology](../../ready/index.md).
 
-To learn more about organizing and structuring your subscriptions, managing your deployed resources, and complying with your corporate policy requirements, see [Governance in Azure](https://docs.microsoft.com/azure/security/governance-in-azure).
+## [When to use this guide](#tab/WhenToUseThisGuide)
 
-::: zone-end
+While the tools discussed in this guide support a wide variety of migration scenarios, this guide will focus on limited scope efforts with _minimal complexity_. To determine whether this migration guide is suitable for your project, consider if the following conditions apply to your situation:
 
-# [When to use this guide](#tab/WhenToUseThisGuide)
-
-While the tools discussed in this guide support a wide variety of migration scenarios, this guide will focus on limited scope efforts with _minimal complexity_. To determine whether this migration guide is suitable for your project, consider if the following conditions apply to you:
-
-- You are migrating a homogeneous environment.
+- The workloads for initial migration aren't mission critical and don't contain sensitive data.
+- You're migrating a homogeneous environment.
 - Only a few business units need to align to complete the migration.
 - You're not planning to automate the entire migration.
 - You're migrating a small number of servers.
 - The dependency mapping of the components to be migrated is simple to define.
 - Your industry has minimal regulatory requirements relevant to this migration.
 
-If any of these conditions _don't_ apply to your situation, you should instead consider the [expanded scope guide](../expanded-scope/index.md). We also recommend you request assistance from one of our Microsoft teams or partners to perform migrations requiring the expanded scope guide. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
-
-<!-- markdownlint-enable MD033 -->
+If any of these conditions don't apply to your situation, you should instead consider other [best practices for cloud migration](../azure-best-practices/index.md). We also recommend you request assistance from one of our Microsoft teams or partners to perform more complex migrations. Customers who engage with Microsoft or certified partners are more successful in these scenarios. More information about requesting assistance is available in this guide.
 
 ::: zone target="docs"
 
 For more information, see:
 
-- [Expanded scope guide](../expanded-scope/index.md)
+- [Best practices for cloud migration](../azure-best-practices/index.md)
 
 ::: zone-end
-
-# [Migration options](#tab/MigrationOptions)
-
-You can perform a cloud migration several ways. Some are better suited to different scenarios than others. As you determine how to migrate your environment, consider the following options when deciding on a migration strategy:
-
-- **Rehost:** Also known as "lift and shift", a rehost effort moves the current state to Azure, with minimal change to overall architecture.
-- **Refactor:** Platform as a service (PaaS) options can reduce operational costs associated with many applications. It can be prudent to slightly refactor an application to fit a PaaS model. This also refers to the application development process of refactoring code to allow an application to deliver on new business opportunities.
-- **Rearchitect:** Some aging applications aren't compatible with cloud providers because of the architectural decisions made when the application was built. In these cases, the application may need to be rearchitected as part of a migration.
-- **Rebuild:** In some scenarios, the changes required to migrate an application can be too large to justify further investment, and the solution must be rebuilt.
-- **Replace:** Solutions are generally implemented using the best technology and techniques available at the time. In some cases, modern software as a service (SaaS) applications can meet all of the functionality provided by the hosted application. In these scenarios, a workload could be scheduled for future replacement, thus removing it from consideration as part of the migration.
-
-::: zone target="chromeless"
-
-These methods are not mutually exclusive&mdash;for example, while your initial migration might use a **rehost** model, you may choose to implement **refactor** or **rearchitect** as part of the post-migration optimization phase. This is revisited in the **Optimize and transform** section of this guide.
-
-::: zone-end
-
-::: zone target="docs"
-
-These methods are not mutually exclusive&mdash;for example, while your initial migration might use a **rehost** model, you may choose to implement **refactor** or **rearchitect** as part of the post-migration optimization phase. This is revisited in the [Optimize and transform](./optimize-and-transform.md) section of this guide.
-
-::: zone-end
-
-![Infographic of the migration options](../../_images/migrate/migration-options.png)

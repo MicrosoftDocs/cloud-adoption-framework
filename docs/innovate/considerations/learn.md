@@ -1,13 +1,15 @@
 ---
-title: "Cloud innovation: Learn"
-description: Introduction to Cloud innovation - Learn content
+title: Learn with customers to drive innovation
+description: Learn with and from customer partners to build a minimum viable product (MVP) solution with empathy, and generate customer impact metrics.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
+
+<!-- cSpell:ignore Satya Nadella Ries -->
 
 # Learn with customers
 
@@ -38,7 +40,7 @@ Few could deny the radical transformation within Microsoft culture that's occurr
 - **Continuous learning:** Customer focus and customer empathy stem from a learn-it-all mindset. The Innovate method strives to be learn-it-all, not know-it-all.
 - **Beginner's mindset:** Demonstrate empathy by approaching every conversation with a beginner's mindset. Whether you're new to your field or a 30-year veteran, assume you know little, and you'll learn a lot.
 - **Listen more:** Customers want to partner with you. Unfortunately, an ego-driven need to be right blocks that partnership. To learn beyond the metrics, speak less and listen more.
-- **Encourage others:** Don't just listen; use the things you *do* say to encourage others. In every meeting, find ways to pull in diverse perspectives from those who may not be quick to share.
+- **Encourage others:** Don't just listen; use the things you **do** say to encourage others. In every meeting, find ways to pull in diverse perspectives from those who may not be quick to share.
 - **Share the code:** When we feel our obligation is to the ownership of a code base, we lose sight of the true power of innovation. Focus on owning and driving outcomes for your customers. Share your code (publicly with the world or privately within your company) to invite diverse perspectives into the solution and the code base.
 - **Challenge what works:** Success doesn't necessarily mean you're demonstrating true customer empathy. Avoid having a fixed mindset and a bias toward doing what's worked before. Look for learning in positive and negative metrics by engaging your customers.
 - **Be inclusive:** Work hard to invite diverse perspectives into the mix. There are many variables that can divide humans into segregated groups. Cultural norms, past behaviors, gender, religion, sexual preference, even physical abilities. True innovation comes when we challenge ourselves to see past our differences and consciously strive to include all customers, partners, and coworkers.

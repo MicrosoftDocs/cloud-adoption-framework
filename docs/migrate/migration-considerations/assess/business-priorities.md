@@ -1,25 +1,23 @@
 ---
-title: "Maintain business priorities during a long-term transformation process"
-description: Maintain business priorities during a long-term transformation process.
+title: "Business priorities during a transformation process"
+description: Use the Cloud Adoption Framework for Azure to learn to maintain business alignment during long-term transformation process.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
 # Business priorities: Maintaining alignment
 
-*Transformation* is often defined as a dramatic or spontaneous change. At the board level, change can look like a dramatic transformation. However, for those who work through the process of change in an organization, transformation is a bit misleading. Under the surface, transformation is better described as a series of properly executed transitions from one state to another.
+_Transformation_ is often defined as a dramatic or spontaneous change. At the board level, change can look like a dramatic transformation. However, for those who work through the process of change in an organization, transformation is a bit misleading. Under the surface, transformation is better described as a series of properly executed transitions from one state to another.
 
 The amount of time required to rationalize or transition a workload will vary, depending on the technical complexity involved. However, even when this process can be applied to a single workload or group of applications quickly, it takes time to produce substantial changes among a user base. It takes longer for changes to propagate through various layers of existing business processes. If transformation is expected to shape behavior patterns in consumers, the results can take longer to produce significant results.
 
 Unfortunately, the market doesn't wait for businesses to transition. Consumer behavior patterns change on their own, often unexpectedly. The market's perception of a company and its products can be swayed by social media or a competitor's positioning. Fast and unexpected market changes require companies to be nimble and responsive.
 
 The ability to execute processes and technical transitions requires a consistent, stable effort. Quick decisions and nimble actions are needed to respond to market conditions. These two are at odds, making it easy for priorities to fall out of alignment. This article describes approaches to maintaining transitional alignment during migration efforts.
-
-<!-- markdownlint-disable MD026 -->
 
 ## How can business and technical priorities stay aligned during a migration?
 

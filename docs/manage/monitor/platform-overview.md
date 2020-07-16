@@ -1,14 +1,16 @@
 ---
-title: "Cloud monitoring guide: Monitoring platforms overview"
-description: Choose when to use Azure Monitor or System Center Operations Manager in Microsoft Azure.
+title: "Cloud monitoring platforms overview"
+description: See a high-level overview of two monitoring platforms to help you understand how each delivers core monitoring functionality.
 author: mgoedtel
 ms.author: magoedte
 ms.date: 07/31/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 services: azure-monitor
 ---
+
+<!-- cSpell:ignore opsman ITSM -->
 
 # Cloud monitoring guide: Monitoring platforms overview
 
@@ -20,7 +22,7 @@ This article provides a high-level overview of our monitoring platforms to help 
 
 ## The story of System Center Operations Manager
 
-In 2000, we entered the operations management field with Microsoft Operations Manager (MOM) 2000. In 2007, we introduced a reengineered version of the product, named System Center Operations Manager. It moved beyond simple monitoring of a Windows server and concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
+In 2000, we entered the operations management field with Microsoft Operations Manager 2000. In 2007, we introduced a reengineered version of the product, System Center Operations Manager. It moved beyond simple monitoring of a Windows server and concentrated on robust, end-to-end service and application monitoring, including heterogenous platforms, network devices, and other application or service dependencies. It's an established, enterprise-grade monitoring platform for on-premises environments, in the same class as IBM Tivoli or HP Operations Manager in the industry. It has grown to support monitoring compute and platform resources running in Azure, Amazon Web Services (AWS), and other cloud providers.
 
 ## The story of Azure Monitor
 
@@ -38,7 +40,7 @@ At the 2018 Ignite conference, we announced that the Azure Monitor brand expande
 - **Application Insights**, for application monitoring.
 - **Log Analytics**, the primary location for collecting and analyzing log data.
 - A new **unified alerting service**, which brought together alert mechanisms from each of the other services mentioned earlier.  
-- **Azure Network Watcher**, for monitoring, diagnosing, and viewing metrics for resources in an Azure virtual network.
+- **Azure Network Watcher**, for monitoring, diagnosing, and viewing metrics for resources in a virtual network.
 
 ## The story of Operations Management Suite (OMS)
 
@@ -56,13 +58,13 @@ The functionality of the services that were part of OMS did not change when OMS 
 
 ### Operations Manager
 
-Operations Manager requires significant infrastructure and maintenance to support a management group, which is a basic unit of functionality. At a minimum, a management group consists of one or more management servers, a SQL Server instance, hosting the operational and reporting data warehouse database, and agents. The complexity of a management group design depends on a number of factors, such as the scope of workloads to monitor, and the number of devices or computers supporting the workloads. If you require high availability and site resiliency, as is commonly the case with enterprise monitoring platforms, the infrastructure requirements and associated maintenance can increase dramatically.
+Operations Manager requires significant infrastructure and maintenance to support a management group, which is a basic unit of functionality. At a minimum, a management group consists of one or more management servers, a SQL Server instance, hosting the operational and reporting data warehouse database, and agents. The complexity of a management group design depends on multiple factors, such as the scope of workloads to monitor, and the number of devices or computers supporting the workloads. If you require high availability and site resiliency, as is commonly the case with enterprise monitoring platforms, the infrastructure requirements and associated maintenance can increase dramatically.
 
 ![Diagram of Operations Manager management group](./media/monitoring-management-guidance-cloud-and-on-premises/operations-manager-management-group-optimized.svg)
 
 ### Azure Monitor
 
-Azure Monitor is a software as a service (SaaS) service, where all the infrastructure supporting it is running in Azure and managed by Microsoft. It's designed to perform monitoring, analytics, and diagnostics at scale, and is available in all national clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) that are necessary to support Azure Monitor are maintained by Microsoft.  
+Azure Monitor is a software as a service (SaaS) offering, so its supporting infrastructure runs in Azure and is managed by Microsoft. It's performs monitoring, analytics, and diagnostics at scale. It is available in all national clouds. Core parts of the infrastructure (collectors, metrics and logs store, and analytics) that support Azure Monitor are maintained by Microsoft.  
 
 ![Diagram of Azure Monitor](./media/monitoring-management-guidance-cloud-and-on-premises/azure-monitor-greyed-optimized.svg)
 
@@ -110,9 +112,9 @@ Insights, such as Azure Monitor for containers and Azure Monitor for VMs, use th
 
 Azure Monitor separates data collection from actions taken against that data, which supports distributed microservices in a cloud environment. It consolidates data from multiple sources into a common data platform, and provides analysis, visualization, and alerting capabilities based on the collected data.
 
-All data that's collected by Azure Monitor is stored as either logs or metrics, and different features of Monitor rely on either. Metrics contain numerical values in time series that are well suited for near-real-time alerting and fast detection of issues. Logs contain text or numerical data, and are supported by a powerful query language that make them especially useful for performing complex analysis.
+Data collected by Azure Monitor is stored as either logs or metrics, and different features of Azure Monitor rely on either. Metrics contain numerical values in time series that are well suited for near-real-time alerting and quick detection of issues. Logs contain text or numerical data and can be queried using a powerful language especially useful for performing complex analysis.
 
-Because Monitor separates data collection from actions against that data, it might not be able to provide near-real-time alerting in many cases. To alert on log data, queries are run on a recurring schedule defined in the alert. This behavior allows Azure Monitor to easily correlate data from all monitored sources, and you can interactively analyze data in a variety of ways. This is especially helpful for doing root cause analysis and identifying where else an issue might occur.
+Because Azure Monitor separates data collection from actions against that data, it might be unable to provide near-real-time alerting in many cases. To alert on log data, queries are run on a recurring schedule defined in the alert. This behavior allows Azure Monitor to easily correlate data from all monitored sources, and you can interactively analyze data in a variety of ways. This is especially helpful for doing root cause analysis and identifying where else an issue might occur.
 
 ## Health monitoring
 
@@ -158,7 +160,7 @@ Management packs include various predefined alerting rules for different critica
 
 ### Azure Monitor
 
-With Azure Monitor, you can create alerts based on a metric crossing a threshold, or based on a scheduled query result. Although alerts based on metrics can achieve near-real-time results, scheduled queries have a longer response time, depending on the speed of data ingestion and indexing. Instead of being limited to a specific agent, log query alerts in Azure Monitor let you analyze data across all data stored in multiple workspaces. These alerts also include data from a specific Application Insights app by using a cross-workspace query.
+With Azure Monitor, you can create alerts based on a metric crossing a threshold, or based on a scheduled query result. Although alerts based on metrics can achieve near-real-time results, scheduled queries have a longer response time, depending on the speed of data ingestion and indexing. Instead of being limited to a specific agent, log query alerts in Azure Monitor let you analyze data across all data stored in multiple workspaces. These alerts also include data from a specific Application Insights application by using a cross-workspace query.
 
 Although monitoring solutions can include alert rules, you ordinarily create them based on your own requirements.
 

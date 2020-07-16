@@ -1,10 +1,10 @@
 ---
-title: "Governance guide for complex enterprises: Multiple layers of governance"
-description: "Governance guide for complex enterprises: Multiple layers of governance"
+title: "Complex enterprise governance: Multiple governance layers"
+description: Use the Cloud Adoption Framework for Azure to learn about greater levels of complexity with multiple layers of governance in large enterprises.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/05/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -17,7 +17,7 @@ When large enterprises require multiple layers of governance, there are greater 
 A few common examples of such complexities include:
 
 - Distributed governance functions.
-- Corporate IT supporting Business unit IT organizations.
+- Corporate IT supporting business unit IT organizations.
 - Corporate IT supporting geographically distributed IT organizations.
 
 This article explores some ways to navigate this type of complexity.
@@ -30,7 +30,7 @@ In many large enterprises, the Five Disciplines of Cloud Governance can be block
 
 The inherent capabilities of the cloud can remove blockers to innovation but increase risks. In this governance guide, we showed how the example company created guardrails to manage the risks. Rather than tackling each of the disciplines required to protect the environment, the cloud governance team leads a risk-based approach to govern what could be deployed, while the other teams build the necessary cloud maturities. Most importantly, as each team reaches cloud maturity, governance applies their solutions holistically. As each team matures and adds to the overall solution, the cloud governance team can open stage gates, allowing additional innovation and adoption to thrive.
 
-This model illustrates the growth of a partnership between the cloud governance team and existing enterprise teams (Security, IT Governance, Networking, Identity, and others). The guide starts with the governance MVP and grows to a holistic end state through governance iterations.
+This model illustrates the growth of a partnership between the cloud governance team and existing enterprise teams (security, IT governance, networking, identity, and others). The guide starts with the governance MVP and grows to a holistic end state through governance iterations.
 
 ## Requirements to supporting such a team sport
 
@@ -46,8 +46,8 @@ Tools like management groups allow corporate IT to create a hierarchy structure 
 
 The important aspect of each of these tools is the ability to apply multiple blueprints to a hierarchy. This allows governance to be a layered process. The following is one example of this hierarchical application of governance:
 
-- **Corporate IT:** Corporate IT creates a set of standards and policies that apply to all cloud adoption. This is materialized in a "Baseline" blueprint. Corporate IT then owns the management group hierarchy, ensuring that a version of the baseline is applied to all subscriptions in the hierarchy.
-- **Regional or Business Unit IT:** Various IT teams can apply an additional layer of governance by creating their own blueprint. Those blueprints would create additive policies and standards. Once developed, Corporate IT could apply those blueprints to the applicable nodes within the management group hierarchy.
-- **Cloud adoption teams:** Detailed decisions and implementation about applications or workloads can be made by each cloud adoption team, within the context of governance requirements. At times the team can also request additional Azure Resource Consistency templates to accelerate adoption efforts.
+- **Corporate IT:** Corporate IT creates a set of standards and policies that apply to all cloud adoption. This is materialized in a _baseline_ blueprint. Corporate IT then owns the management group hierarchy, ensuring that a version of the baseline is applied to all subscriptions in the hierarchy.
+- **Regional or business unit IT:** Various IT teams can apply an additional layer of governance by creating their own blueprint. Those blueprints would create additive policies and standards. Once developed, corporate IT could apply those blueprints to the applicable nodes within the management group hierarchy.
+- **Cloud adoption teams:** Detailed decisions and implementation about applications or workloads can be made by each cloud adoption team, within the context of governance requirements. The team can also request additional Azure resource consistency templates to accelerate adoption efforts.
 
 The details regarding governance implementation at each level will require coordination between each team. The governance MVP and governance improvements outlined in this guide can aid in aligning that coordination.

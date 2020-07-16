@@ -1,15 +1,17 @@
 ---
 title: Protect and recover in Azure
-description: Ensure business stability by reducing recovery time
+description: Learn how to ensure business stability by reducing recovery time and the likelihood of business interruption.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
+
+<!-- cSpell:ignore siterecovery -->
 
 # Protect and recover in Azure
 
@@ -21,10 +23,10 @@ In [Operational compliance in Azure](./operational-compliance.md) the objective 
 
 For any enterprise-grade environment, this table outlines the suggested minimum for any management baseline:
 
-|Process  |Tool  |Purpose  |
-|---------|---------|---------|
-|Protect data|Azure Backup|Back up data and virtual machines in the cloud.|
-|Protect the environment|Azure Security Center|Strengthen security and provide advanced threat protection across your hybrid workloads.|
+| Process                 | Tool                  | Purpose                                                                                  |
+| ----------------------- | --------------------- | ---------------------------------------------------------------------------------------- |
+| Protect data            | Azure Backup          | Back up data and virtual machines in the cloud.                                          |
+| Protect the environment | Azure Security Center | Strengthen security and provide advanced threat protection across your hybrid workloads. |
 
 ::: zone target="docs"
 
@@ -33,7 +35,7 @@ For any enterprise-grade environment, this table outlines the suggested minimum 
 ::: zone-end
 ::: zone target="chromeless"
 
-## [Azure Backup](#tab/UpdbackupateManagement)
+## [Azure Backup](#tab/AzureBackup)
 
 ::: zone-end
 
@@ -41,13 +43,13 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 
 ### Enable backup for an Azure VM
 
-1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
+1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
 1. On the **Operations** pane, select **Backup**.
 1. Create or select an existing Azure Recovery Services vault.
 1. Select **Create (or edit) a new policy**.
 1. Configure the schedule and retention period.
 1. Select **OK**.
-1. Select **Enable Backup**.
+1. Select **Enable backup**.
 
 ::: zone target="chromeless"
 
@@ -57,7 +59,7 @@ With Azure Backup, you can back up, protect, and recover your data in the Micros
 
 ::: zone target="docs"
 
-[Overview](https://docs.microsoft.com/azure/backup/backup-introduction-to-azure-backup)
+[Overview](https://docs.microsoft.com/azure/backup/backup-overview)
 
 ## Azure Site Recovery
 
@@ -82,7 +84,7 @@ The following steps outline the process to use Site Recovery for Azure-to-Azure 
 
 ### Enable replication for the Azure VM
 
-1. In the Azure portal, select **Virtual machines**, and select the VM you want to replicate.
+1. In the Azure portal, select **Virtual machines**, then select the VM you want to replicate.
 1. On the **Operations** pane, select **Disaster recovery**.
 1. Select **Configure disaster recovery** > **Target region**, and choose the target region to which you'll replicate.
 1. For this quickstart, accept the default values for all other options.

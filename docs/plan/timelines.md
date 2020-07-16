@@ -1,10 +1,10 @@
 ---
 title: "Timelines in a cloud adoption plan"
-description: Timelines in a cloud adoption plan
+description: Use the Cloud Adoption Framework for Azure to learn how to estimate timelines based on your cloud adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 07/01/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
@@ -13,7 +13,7 @@ ms.subservice: plan
 
 In the previous article in this series, workloads and tasks were assigned to [releases and iterations](./iteration-paths.md). Those assignments feed the timeline estimates in this article.
 
-Work breakdown structures (WBS) are commonly used in sequential project-management tools. They represent how dependent tasks will be completed over time. Such structures work well when tasks are sequential in nature. The interdependencies in tasks found in cloud adoption make such structures difficult to manage. To fill this gap, you can estimate timelines based on iteration-path assignments by hiding complexity.
+Work breakdown structures are commonly used in sequential project-management tools. They represent how dependent tasks will be completed over time. Such structures work well when tasks are sequential in nature. The interdependencies in tasks found in cloud adoption make such structures difficult to manage. To fill this gap, you can estimate timelines based on iteration-path assignments by hiding complexity.
 
 ## Estimate timelines
 
@@ -25,4 +25,6 @@ For any level of granularity, use the last day of the iteration as the date for 
 
 ## Delivery plans in Azure DevOps
 
-If you're using Azure DevOps to manage your cloud adoption plan, consider using the [Microsoft Delivery Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-plans) extension. This extension can quickly create a visual representation of the timeline that is based on iteration and release assignments.
+<!-- docsTest:ignore "Microsoft Delivery Plans" -->
+
+If you're using Azure DevOps to manage your cloud adoption plan, consider using the [Microsoft Delivery Plans extension](https://marketplace.visualstudio.com/items?itemname=ms.vss-plans). This extension can quickly create a visual representation of the timeline that is based on iteration and release assignments.

@@ -1,10 +1,10 @@
 ---
-title: Platform specialization for cloud management in Azure
-description: Improve platform-specific cloud management operations.
+title: Specialized platforms for cloud management
+description: Use the Cloud Adoption Framework for Azure to improve platform-specific cloud management operations, including improving the system design and automated remediation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ms.custom: fasttrack-edit, AQC
@@ -25,14 +25,14 @@ Both workload and platform operations require changes to design and architecture
 
 This table outlines a few common processes, tools, and potential effects common in customers' enhanced management baselines:
 
-|Process  |Tool  |Purpose  |Suggested management level  |
-|---------|---------|---------|---------|
-|Improve system design|Azure Architecture Framework|Improving the architectural design of the platform to improve operations|N/A|
-|Automate remediation|Azure Automation|Responding to advanced platform data with platform-specific automation|Platform operations|
-|Service catalog|Managed applications center|Providing a self-service catalog of approved solutions that meet organizational standards|Platform operations|
-|Container performance|Azure Monitor for containers|Monitoring and diagnostics of containers|Platform operations|
-|Platform as a service (PaaS) data performance|Azure SQL Analytics|Monitoring and diagnostics for PaaS databases|Platform operations|
-|Infrastructure as a service (IaaS) data performance|SQL Server Health Check|Monitoring and diagnostics for IaaS databases|Platform operations|
+| Process | Tool | Purpose | Suggested management level |
+|---|---|---|---|
+| Improve system design | Microsoft Azure Well-Architected Framework | Improving the architectural design of the platform to improve operations | N/A |
+| Automate remediation | Azure Automation | Responding to advanced platform data with platform-specific automation | Platform operations |
+| Service catalog | Managed applications center | Providing a self-service catalog of approved solutions that meet organizational standards | Platform operations |
+| Container performance | Azure Monitor for containers | Monitoring and diagnostics of containers | Platform operations |
+| Platform as a service (PaaS) data performance | Azure SQL Analytics | Monitoring and diagnostics for PaaS databases | Platform operations |
+| Infrastructure as a service (IaaS) data performance | SQL Server Health Check | Monitoring and diagnostics for IaaS databases | Platform operations |
 
 ## High-level process
 
@@ -54,23 +54,21 @@ Platform specialization consists of a disciplined execution of the following fou
 
 ::: zone-end
 
-Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is out of scope for the environment view that is taken throughout Cloud Adoption Framework for Azure.
+Improving system design is the most effective approach to improving operations of any common platform. Through system-design improvements, stability can increase and business interruptions can decrease. Design of individual systems is out of scope for the environment view that is taken throughout the Cloud Adoption Framework for Azure.
 
-As a complement to Cloud Adoption Framework, Azure Architecture Framework provides best practices for improving the resiliency and design of a specific system. Those design improvements can be applied to the systems design of either a platform or a specific workload.
+As a complement to this framework, the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) provides guiding tenets for improving the quality of a platform or a specific workload.The framework focuses on improvement across five pillars of architecture excellence:
 
-Azure Architecture Framework focuses on improvement across five pillars of system design:
-
-- **Scalability:** Scaling the common platform assets to handle increased load
-- **Availability:** Reducing business interruptions by improving uptime potential
-- **Resiliency:** Improving recovery times to reduce the duration of interruptions
-- **Security:** Protecting applications and data from external threats
-- **Management:** Operational processes specific to those common platform assets
+- **Cost optimization:** Manage costs to maximize the value delivered.
+- **Operational excellence:** Follow operational processes that keep a system running in production.
+- **Performance efficiency:** Scale systems to adapt to changes in load.
+- **Reliability:** Design systems to recover from failures and continue to function.
+- **Security:** Protect applications and data from threats.
 
 Technical debt and architectural flaws cause most business interruptions. For existing deployments, you can view system-design improvements as payments against existing technical debt. For new deployments, you can view those improvements as avoidance of technical debt.
 
 The following **Automated remediation** tab shows ways to remediate technical debt that can't or shouldn't be addressed.
 
-Learn more about [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) to improve system design.
+Learn more about the [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) to improve system design.
 
 As system design improves, return to this article to find new opportunities to improve and scale those improvements across your environment.
 
@@ -114,7 +112,7 @@ For instructions on publishing to a service catalog, see the article series on [
 
 1. In the Azure portal, go to **Managed applications center (preview)**.
 2. On the **Browse** pane, select **Service Catalog applications**.
-3. Click **+ Add** to choose an application definition from your company's service catalog.
+3. Select **+ Add** to choose an application definition from your company's service catalog.
 
 Any managed applications you're servicing are displayed.
 

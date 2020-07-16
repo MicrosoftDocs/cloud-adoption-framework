@@ -1,10 +1,10 @@
 ---
-title: "Build consensus on the business value of cloud innovation"
-description: Learn to build consensus on the business value of cloud innovation.
+title: Build consensus on innovation business value
+description: Use the Cloud Adoption Framework for Azure to learn how to build consensus around stakeholders' definitions of cloud innovation business value.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
@@ -42,7 +42,7 @@ If either team fails to answer all four questions in 30 minutes, then alignment 
 
 The Cloud Adoption Framework follows a prescribed path through these phases: strategy, plan, ready, and adopt. Cloud innovation fits within the adopt phase of this process. The answers to [qualifying questions](#qualifying-questions) three and four concern outcomes and motivations. When these answers are misaligned, it indicates that your organization missed something during the strategy phase of the cloud adoption lifecycle. Several of the following scenarios are likely to be at play.
 
-- **Alignment opportunity:** When business stakeholders can't agree on motivations and business outcomes related to a cloud innovation effort, it's a symptom of a larger challenge. The exercises in the [cloud strategy phase](../strategy/index.md) can be useful in developing alignment among business stakeholders. Additionally, it's highly recommended that the same stakeholders form a [cloud strategy team](../organize/cloud-strategy.md) that meets regularly.
+- **Alignment opportunity:** When business stakeholders can't agree on motivations and business outcomes related to a cloud innovation effort, it's a symptom of a larger challenge. The exercises in the [Strategy methodology](../strategy/index.md) can be useful in developing alignment among business stakeholders. Additionally, it's highly recommended that the same stakeholders form a [cloud strategy team](../organize/cloud-strategy.md) that meets regularly.
 
 - **Communication opportunity:** When the development team can't agree on motivations and business outcomes, it might be a symptom of strategic communication gaps. You can quickly resolve this issue by reviewing the cloud strategy with the cloud adoption team. Several weeks after the review, the team should repeat the qualifying questions exercise.
 
@@ -59,7 +59,7 @@ It's fairly common for the answers to questions one and two to be misaligned. Du
 
 - **Hypothesis opportunity:** It's common for various stakeholders and development teams to have too many expectations for a solution. Unrealistic expectations can be a sign that the hypothesis is too vague. Follow the guidance on [building with customer empathy](./considerations/build.md) to construct a clearer hypothesis.
 - **Build opportunity:** Teams might be misaligned because they disagree on the way to solve the customer need. Such disagreement typically indicates that the team is being [delayed by a premature technical spike](./considerations/build.md#reduce-complexity-and-delay-technical-spikes). To keep the team focused on the customer, start the first iteration and build a small minimum viable product (MVP) to address part of the hypothesis. For more guidance to help the team move forward, see [Develop digital inventions](./considerations/invention.md).
-- **Training opportunity:** Either team can be misaligned because they need deep technical requirements and extensive functional requirements. This need can lead to an opportunity for training in agile methodologies. When the team culture isn't ready for agile processes, you might find innovation and keeping pace with the market to be a challenge.  For training resources about DevOps and agile practices, see:
+- **Training opportunity:** Either team can be misaligned because they need deep technical requirements and extensive functional requirements. This need can lead to an opportunity for training in agile methodologies. When the team culture isn't ready for agile processes, you might find innovation and keeping pace with the market to be a challenge. For training resources about DevOps and agile practices, see:
   - [Evolve your DevOps practices](https://docs.microsoft.com/learn/paths/evolve-your-devops-practices)
   - [Build applications with Azure DevOps](https://docs.microsoft.com/learn/paths/build-applications-with-azure-devops)
   - [Deploy applications with Azure DevOps](https://docs.microsoft.com/learn/paths/deploy-applications-with-azure-devops)

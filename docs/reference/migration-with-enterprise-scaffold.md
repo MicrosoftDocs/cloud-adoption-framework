@@ -1,19 +1,22 @@
 ---
 title: Azure enterprise scaffold
-description: Describes an enterprise scaffold that can help ensure a secure and manageable environment.
+description: Azure enterprise scaffold is now the Microsoft Cloud Adoption Framework for Azure. Learn to address the need for governance and balance it with the need for agility.
 author: rdendtler
 ms.author: rodend
 ms.date: 09/22/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: reference
 ROBOTS: NOINDEX
 ---
 
+<!-- docsTest:disable -->
+<!-- cSpell:ignore rodend subscope ITSM Hashi -->
+
 # Azure enterprise scaffold: Prescriptive subscription governance
 
 > [!NOTE]
-> Azure enterprise scaffolding has been integrated into the Microsoft Cloud Adoption Framework. The content in this article is now represented in the [Ready](../ready/index.md) section of the new framework. This article will be deprecated in early 2020. To begin using the new process, see the [Ready overview](../ready/index.md), [creating your first landing zone](../ready/azure-setup-guide/migration-landing-zone.md), and [landing zone considerations](../ready/considerations/index.md).
+> Azure enterprise scaffolding has been integrated into the Microsoft Cloud Adoption Framework. The content in this article is now represented in the [Ready](../ready/index.md) section of the new framework. This article will be deprecated in early 2020. To begin using the new process, see the [Ready overview](../ready/index.md), [Azure landing zones](../ready/landing-zone/index.md), and [landing zone considerations](../ready/considerations/index.md).
 
 Enterprises are increasingly adopting the public cloud for its agility and flexibility. They rely on the cloud's strengths to generate revenue and optimize resource usage for the business. Microsoft Azure provides a multitude of services and capabilities that enterprises assemble like building blocks to address a wide array of workloads and applications.
 
@@ -42,11 +45,11 @@ The enterprise scaffold can serve as the foundation of each new subscription wit
 >
 The following image shows the components of the scaffold. The foundation relies on a solid plan for the management hierarchy and subscriptions. The pillars consist of Resource Manager policies and strong naming standards. The rest of the scaffold are core Azure capabilities and features that enable and connect a secure and manageable environment.
 
-![Enterprise scaffold](../_images/reference/scaffoldv2.png)
+![Enterprise scaffold](../_images/reference/scaffold-v2.png)
 
 ## Define your hierarchy
 
-The foundation of the scaffold is the hierarchy and relationship of the Azure Enterprise Enrollment through to subscriptions and resource groups. The enterprise enrollment defines the shape and use of Azure services within your company from a contractual point of view. Within the Enterprise Agreement, you can further subdivide the environment into departments, accounts, subscriptions, and resource groups to match your organization's structure.
+The foundation of the scaffold is the hierarchy and relationship of the Enterprise Agreement (EA) enrollment through to subscriptions and resource groups. The enrollment defines the shape and use of Azure services within your company from a contractual point of view. Within the Enterprise Agreement, you can further subdivide the environment into departments, accounts, subscriptions, and resource groups to match your organization's structure.
 
 ![Hierarchy](../_images/reference/agreement.png)
 
@@ -56,7 +59,7 @@ Every enterprise is different and the hierarchy in the above image allows for si
 
 ### Departments and Accounts
 
-The three common patterns for Azure Enrollments are:
+The three common patterns for EA enrollments are:
 
 - The **functional** pattern:
 
@@ -70,7 +73,7 @@ The three common patterns for Azure Enrollments are:
 
   ![The geographic pattern](../_images/reference/geographic.png)
 
-Though each of these patterns has its place, the **business unit** pattern is increasingly being adopted for its flexibility in modeling an organization's cost model as well as reflecting span of control. Microsoft Core Engineering and Operations group has created an effective subset of the **business unit** pattern modeled on **Federal**, **State**, and **Local**. For more information, see [Organizing subscriptions and resource groups within the Enterprise](https://azure.microsoft.com/blog/organizing-subscriptions-and-resource-groups-within-the-enterprise).
+Though each of these patterns has its place, the **business unit** pattern is increasingly being adopted for its flexibility in modeling an organization's cost model as well as reflecting span of control. Microsoft Core Engineering and Operations group has created an effective subset of the **business unit** pattern modeled on **Federal**, **State**, and **Local**. For more information, see [Organizing your subscriptions and resource groups](../ready/azure-best-practices/organize-subscriptions.md).
 
 ### Azure management groups
 
@@ -93,7 +96,7 @@ The first two patterns are the most commonly used, and both are highly recommend
 
 ### Resource groups
 
-Azure Resource Manager enables you to put resources into meaningful groups for management, billing, or natural affinity. Resource groups are containers of resources that have a common lifecycle or share an attribute such as "all SQL servers" or "Application A".
+Azure Resource Manager enables you to organize resources into meaningful groups for management, billing, or natural affinity. Resource groups are containers of resources that have a common lifecycle or share an attribute such as "all SQL servers" or "Application A".
 
 Resource groups can't be nested, and resources can only belong to one resource group. Some actions can act on all resources in a resource group. For example, deleting a resource group removes all resources within the resource group. Like subscriptions, there are common patterns when creating resource groups and will vary from "Traditional IT" workloads to "Agile IT" workloads:
 
@@ -110,7 +113,7 @@ The first pillar of the scaffold is a consistent naming standard. Well-designed 
 > [!TIP]
 > For naming conventions:
 >
-> - Review and adopt where possible the [Patterns and Practices guidance](https://docs.microsoft.com/azure/architecture/best-practices/resource-naming). This guidance helps you decide on a meaningful naming standard and provides extensive examples.
+> - Review and adopt the [Cloud Adoption Framework naming and tagging guidance](../ready/azure-best-practices/naming-and-tagging.md) wherever possible. This guidance helps you decide on a meaningful naming standard and provides extensive examples.
 > - Using Resource Manager Policies to help enforce naming standards.
 >
 > Remember that it's difficult to change names later, so a few minutes now will save you trouble later.
@@ -119,7 +122,7 @@ Concentrate your naming standards on those resources that are more commonly used
 
 ### Resource Tags
 
-Resource tags are tightly aligned with naming standards. As resources are added to subscriptions, it becomes increasingly important to logically categorize them for billing, management, and operational purposes. For more information, see [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags).
+Resource tags are tightly aligned with naming standards. As resources are added to subscriptions, it becomes increasingly important to logically categorize them for billing, management, and operational purposes. For more information, see [Use tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources).
 
 > [!IMPORTANT]
 > Tags can contain personal information and may fall under the regulations of GDPR. Plan for management of your tags carefully. If you're looking for general information about GDPR, see the GDPR section of the [Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
@@ -155,17 +158,17 @@ Initiatives provide enterprises the ability to group logical policies and track 
 
 After the creation of policies and grouping them into logical initiatives you must assign the policy to a scope, whether it is a management group, a subscription or even a resource group. Assignments allow you to also exclude a subscope from the assignment of a policy. For example, if you deny the creation of public IPs within a subscription, you could create an assignment with an exclusion for a resource group connected to your protected DMZ.
 
-You will find several Policy examples that show how Policy and Initiatives can be applied to various resources within Azure on this [GitHub](https://github.com/Azure/azure-policy) repository.
+You will find several Policy examples that show how Policy and Initiatives can be applied to various resources within Azure on this [GitHub](https://github.com/azure/azure-policy) repository.
 
 ## Identity and access management
 
 One of the first, and most crucial, questions you ask yourself when starting with the public cloud is "who should have access to resources?" and "how do I control this access?" Controlling access to the Azure portal and resources in the portal is critical to the long-term safety of your assets in the cloud.
 
-To secure access to your resources you will first configure your identity provider and then configure Roles and access. Azure Active Directory (Azure AD), connected to your on-premises Active Directory, is the foundation of Azure Identity. That said, Azure AD is *not* the same as on-premises Active Directory, and it's important to understand what an Azure AD tenant is and how it relates to your Azure enrollment. Review the available [information](../govern/resource-consistency/resource-access-management.md) to gain a solid foundation on Azure AD and on-premises Active Directory. To connect and synchronize your Active Directory to Azure AD, install and configure the [Azure AD Connect tool](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) on-premises.
+To secure access to your resources you will first configure your identity provider and then configure Roles and access. Azure Active Directory (Azure AD), connected to your on-premises Active Directory, is the foundation of Azure Identity. However, Azure AD is **not** the same as on-premises Active Directory, and it's important to understand what an Azure AD tenant is and how it relates to your enrollment. Review [resource access management in Azure](../govern/resource-consistency/resource-access-management.md) to gain a solid understanding of Azure AD and on-premises Active Directory. To connect and synchronize your on-premises directory to Azure AD, install and configure the [Azure AD Connect tool](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) on-premises.
 
 ![Diagram of AD architecture](../_images/reference/ad-architecture.png)
 
-When Azure was initially released, access controls to a subscription were basic: Administrator or Co-Administrator. Access to a subscription in the Classic model implied access to all the resources in the portal. This lack of fine-grained control led to the proliferation of subscriptions to provide a level of reasonable access control for an Azure Enrollment. This proliferation of subscriptions is no longer needed. With role-based access control (RBAC), you can assign users to standard roles that provide common access such as "owner", "contributor" or "reader" or even create your own roles.
+When Azure was initially released, access controls to a subscription were basic: Administrator or Co-Administrator. Access to a subscription in the Classic model implied access to all the resources in the portal. This lack of fine-grained control led to the proliferation of subscriptions to provide a level of reasonable access control for an enrollment. This proliferation of subscriptions is no longer needed. With role-based access control (RBAC), you can assign users to standard roles that provide common access such as "owner", "contributor" or "reader", or even create your own roles.
 
 When implementing role-based access, the following are highly recommended:
 
@@ -175,9 +178,9 @@ When implementing role-based access, the following are highly recommended:
 - Follow the principle of granting the **least privilege** required to do the expected work.
 
 > [!IMPORTANT]
->Consider using [Azure AD Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure), Azure [Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-getstarted) and [Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) capabilities to provide better security and more visibility to administrative actions across your Azure subscriptions. These capabilities come from a valid Azure AD Premium license (depending on the feature) to further secure and manage your identity. Azure AD PIM enables "Just-in-Time" administrative access with approval workflow, as well as a full audit of administrator activations and activities. Azure Multi-Factor Authentication is another critical capability and enables two-step verification for login to the Azure portal. When combined with Conditional Access Controls you can effectively manage your risk of compromise.
+> Consider using [Azure AD Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure), Azure [Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-getstarted) and [Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) capabilities to provide better security and more visibility to administrative actions across your Azure subscriptions. These capabilities come from a valid Azure AD Premium license (depending on the feature) to further secure and manage your identity. Azure AD PIM enables "Just-in-Time" administrative access with approval workflow, as well as a full audit of administrator activations and activities. Azure Multi-Factor Authentication is another critical capability and enables two-step verification for signing into the Azure portal. When combined with Conditional Access Controls you can effectively manage your risk of compromise.
 
-Planning and preparing for your identity and access controls and following Azure Identity Management best practice ([link](https://docs.microsoft.com/azure/security/azure-security-identity-management-best-practices)) is one of the best risk mitigation strategies that you can employ and should be considered mandatory for every deployment.
+Planning and preparing for your identity and access controls and following [Azure Identity Management best practices](https://docs.microsoft.com/azure/security/fundamentals/identity-management-best-practices) is one of the best risk mitigation strategies that you can employ and should be considered mandatory for every deployment.
 
 ## Security
 
@@ -185,10 +188,9 @@ One of the biggest blockers to cloud adoption traditionally has been concerns ov
 
 ### Azure Security Center
 
-The [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) provides a unified view of the security status of resources across your environment in addition to advanced threat protection. Azure Security Center is an open platform that enables Microsoft partners to create software that plugs into and enhance its capabilities. The baseline capabilities of Azure Security Center (free tier) provide assessment and recommendations that will enhance your security posture. Its paid tiers enable additional and valuable capabilities such as just-in-time admin access and adaptive application controls (whitelisting).
-
+The [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) provides a unified view of the security status of resources across your environment in addition to advanced threat protection. Azure Security Center is an open platform that enables Microsoft partners to create software that plugs into and enhance its capabilities. The baseline capabilities of Azure Security Center (free tier) provide assessment and recommendations that will enhance your security posture. Its paid tiers enable additional and valuable capabilities such as just-in-time admin access and adaptive application controls (allow lists).
 > [!TIP]
->Azure Security Center is a powerful tool that is regularly improved with new capabilities you can use to detect threats and protect your enterprise. It is highly recommended to always enable Azure Security Center.
+> Azure Security Center is a powerful tool that is regularly improved with new capabilities you can use to detect threats and protect your enterprise. It is highly recommended to always enable Azure Security Center.
 
 ### Locks for Azure resources
 
@@ -229,7 +231,7 @@ This information can be viewed and acted on at multiple levels and are continual
 
 - **Alerts:** You can collect every log, event, and metric from Azure resources, but without the ability to be notified of critical conditions and act, this data is only useful for historic purposes and forensics. Azure Alerts proactively notify you of conditions you define across all your applications and infrastructure. You create alert rules across logs, events, and metrics that use action groups to notify sets of recipients. Action groups also provide the ability to automate remediation using external actions such as webhooks to run Azure Automation runbooks and Azure Functions.
 
-- **Dashboards:** Dashboards enable you to aggregate monitoring views and combine data across resources and subscriptions to give you an enterprise-wide view into the telemetry of Azure resources. You can create and configure your own views and share them with others. For example, you could create a dashboard consisting of various tiles for database administrators to provide information across all Azure database services, including Azure SQL DB, Azure DB for PostgreSQL and Azure DB for MySQL.
+- **Dashboards:** Dashboards enable you to aggregate monitoring views and combine data across resources and subscriptions to give you an enterprise-wide view into the telemetry of Azure resources. You can create and configure your own views and share them with others. For example, you could create a dashboard consisting of various tiles for database administrators to provide information across all Azure database services, including Azure SQL Database, Azure DB for PostgreSQL and Azure DB for MySQL.
 
 - **Metrics Explorer:** Metrics are numerical values generated by Azure resources (such as % CPU or Disk I/O) that provide insight into the operation and performance of your resources. Using Metrics Explorer, you can define and send the metrics that interest you to Log Analytics for aggregation and analysis.
 
@@ -237,15 +239,15 @@ This information can be viewed and acted on at multiple levels and are continual
 
 - **Azure Monitor:** Azure Monitor is the core platform service that provides a single source for monitoring Azure resources. The Azure portal interface of Azure Monitor provides a centralized jump off point for all the monitoring features across Azure including the deep monitoring capabilities of Application Insights, Log Analytics, Network Monitoring, Management Solutions and Service Maps. With Azure Monitor you can visualize, query, route, archive, and act on the metrics and logs coming from Azure resources across your entire cloud estate. In addition to the portal you can retrieve data through the Monitor PowerShell cmdlets, cross-platform CLI, or the Azure Monitor REST APIs.
 
-- **Azure Advisor:** Azure Advisor constantly monitors telemetry across your subscriptions and environments and provides recommendations on best practices on how to optimize your Azure resources to save money and improve performance, security, and availability of the resources that make up your applications.
+- **Azure Advisor:** Azure Advisor constantly monitors telemetry across your subscriptions and environments. It also recommends best practices for cost-optimizing your Azure resources and improving the performance, security, and availability of your application resources.
 
-- **Service Health:** Azure Service Health identifies any issues with Azure Services that may affect your applications as well as assists you in planning for scheduled maintenance windows.
+- **Azure Service Health:** Azure Service Health identifies any issues with Azure Services that may affect your applications as well as assists you in planning for scheduled maintenance windows.
 
-- **Activity log:** The activity log describes all operations on resources in your subscriptions. It provides an audit trail to determine the 'what', 'who', and 'when' of any create, update, delete operation on resources. Activity log events are stored in the platform and are available to query for 90 days. You can ingest activity logs into Log Analytics for longer retention periods and deeper querying and analysis across multiple resources.
+- **Activity log:** The activity log describes all operations on resources in your subscriptions. It provides an audit trail to determine the _what_, _who_, and _when_ of any create, update, delete operation on resources. Activity log events are stored in the platform and are available to query for 90 days. You can ingest activity logs into Log Analytics for longer retention periods and deeper querying and analysis across multiple resources.
 
 ### Deep application monitoring
 
-- **Application Insights:** Application Insights enables you to collect application-specific telemetry and monitor the performance, availability, and usage of applications in the cloud or on-premises. By instrumenting your application with supported SDKs for multiple languages including .NET, JavaScript, JAVA, Node.js, Ruby, and Python. Application Insights events are ingested into the same Log Analytics data store that supports infrastructure and security monitoring to enable you to correlate and aggregate events over time through a rich query language.
+- **Application Insights:** Application Insights enables you to collect application-specific telemetry and monitor the performance, availability, and usage of applications in the cloud or on-premises. By instrumenting your application with supported SDKs for multiple languages including .NET, JavaScript, Java, Node.js, Ruby, and Python. Application Insights events are ingested into the same Log Analytics data store that supports infrastructure and security monitoring to enable you to correlate and aggregate events over time through a rich query language.
 
 ### Deep infrastructure monitoring
 
@@ -264,27 +266,29 @@ This information can be viewed and acted on at multiple levels and are continual
 
 One of the major changes that you will face when you move from on-premises cloud to the public cloud is the switch from capital expenditure (buying hardware) to operating expenditure (paying for service as you use it). This switch also requires more careful management of your costs. The benefit of the cloud is that you can fundamentally and positively affect the cost of a service you use by merely shutting down or resizing it when it's not needed. Deliberately managing your costs in the cloud is a best practice and one that mature customers do daily.
 
-Microsoft provides several tools for you to be able to visualize, track, and manage your costs. We also provide a full set of APIs to enable you to customize and integrate cost management into your own tools and dashboards. These tools are loosely grouped into Azure portal capabilities and external capabilities.
+Microsoft provides several tools that help you visualize, track, and manage your costs. We also provide a full set of APIs to enable you to customize and integrate cost management into your own tools and dashboards. These tools are loosely grouped into Azure portal capabilities and external capabilities.
 
 ### Azure portal capabilities
 
 These are tools to provide you instant information on cost as well as the ability to take actions.
 
-- **Subscription resource cost:** Located in the portal, the [Azure Cost Analysis](https://docs.microsoft.com/azure/cost-management/overview) view provides a quick look at your costs and information on daily spend by resource or resource group.
-- **Azure Cost Management:** This product is the result of the purchase of Cloudyn by Microsoft and allows you to manage and analyze your Azure spending as well as what you spend on other public cloud providers. There are both free and paid tiers, with a great wealth of capabilities as seen in the [overview](https://docs.microsoft.com/azure/cost-management/overview).
-- **Azure budgets and action groups:** Knowing what something costs and doing something about it until recently has been more of a manual exercise. With the introduction of Azure Budgets and its APIs, it's now possible to create actions (as seen in [this example](https://channel9.msdn.com/Shows/Azure-Friday/Managing-costs-with-the-Azure-Budgets-API-and-Action-Groups)) when costs hit a threshold. For example, shutting down a "test" resource group when it hits 100% of its budget, or [another example].
-- **Azure Advisor** Knowing what something costs is only half the battle; the other half is knowing what to do with that information. [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) provides you recommendations on actions to take to save money, improve reliability or even increase security.
+- **Subscription resource cost:** Located in the portal, [Azure Cost Management](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) view provides a quick look at your costs and information on daily spend by resource or resource group.
+- **Azure Cost Management:** This allows you to manage and analyze your Azure spending as well as what you spend on other public cloud providers. There are both free and paid tiers, with a great wealth of capabilities.
+- **Azure budgets and action groups:** Knowing what something costs and doing something about it until recently has been more of a manual exercise. With the introduction of Azure Budgets and its APIs, now you can [create actions](https://channel9.msdn.com/Shows/Azure-Friday/Managing-costs-with-the-Azure-Budgets-API-and-Action-Groups) that run when costs hit a threshold. For example, you could shut down a "test" resource group when it hits 100% of its budget.
+- **Azure Advisor:** Knowing what something costs is only half the battle; the other half is knowing what to do with that information. [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) provides you recommendations on actions to take to save money, improve reliability or even increase security.
 
 ### External cost management tools
 
+<!-- TODO: Content packs are deprecated. -->
+
 - **Power BI Azure Consumption Insights:** Do you want to create your own visualizations for your organization? If so, then the Azure Consumption Insights content pack for Power BI is your tool of choice. Using this content pack and Power BI you can create custom visualizations to represent your organization, do deeper analysis on costs and add in other data sources for further enrichment.
 
-- **Consumption API:** The [consumption APIs](https://docs.microsoft.com/rest/api/consumption) give you programmatic access to cost and usage data in addition to information on budgets, reserved instances, and marketplace charges. These APIs are accessible only for Enterprise Enrollments and some Web Direct subscriptions however they give you the ability to integrate your cost data into your own tools and data warehouses. You can also [access these APIs via the Azure CLI](https://docs.microsoft.com/cli/azure/consumption?view=azure-cli-latest).
+- **Azure Consumption APIs:** The [Consumption APIs](https://docs.microsoft.com/rest/api/consumption) give you programmatic access to cost and usage data in addition to information on budgets, reserved instances, and marketplace charges. These APIs are accessible only for EA enrollments and some Web Direct subscriptions however they give you the ability to integrate your cost data into your own tools and data warehouses. You can also [access these APIs via the Azure CLI](https://docs.microsoft.com/cli/azure/consumption?view=azure-cli-latest).
 
 Customers who are long-term and mature cloud users follow certain best practices:
 
 - **Actively monitor costs.** Organizations that are mature Azure users constantly monitor costs and take actions when needed. Some organizations even dedicate people to do analysis and suggest changes to usage, and these people more than pay for themselves the first time they find an unused HDInsight cluster that's been running for months.
-- **Use Reserved VM Instances.** Another key tenet for managing costs in the cloud is to use the right tool for the job. If you have an IaaS VM that must stay on 24x7, then using a Reserved VM Instance will save you significant money. Finding the right balance between automating the shutdown of VMs and using Reserved VM Instances takes experience and analysis.
+- **Use Azure Reserved VM Instances.** Another key tenet for managing costs in the cloud is to use the right tool for the job. If you have an IaaS VM that must stay on 24x7, then using a reserved instance will save you significant money. Finding the right balance between automating the shutdown of VMs and using reserved instances takes experience and analysis.
 - **Use automation effectively.** Many workloads don't need to run every day. Turning off a VM for a four-hour period every day can save you 15% of your cost. Automation will pay for itself quickly.
 - **Use resource tags for visibility.** As mentioned elsewhere in this document, using resource tags will allow for better analysis of costs.
 
@@ -307,9 +311,9 @@ Automation is a full-time job, and it will rapidly become one of the most import
 
 ## Templates and DevOps
 
-As highlighted in the Automate section, your goal as an organization should be to provision resources through source-controlled templates and scripts and to minimize interactive configuration of your environments. This approach of "infrastructure as code" along with a disciplined DevOps process for continuous deployment can ensure consistency and reduce drift across your environments. Almost every Azure resource is deployable through [Azure Resource Manager JSON templates](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy) in conjunction with PowerShell or the Azure cross platform CLI and tools such as Terraform from Hashicorp (which has first class support and integrated into the Azure Cloud Shell).
+As highlighted in the Automate section, your goal as an organization should be to provision resources through source-controlled templates and scripts and to minimize interactive configuration of your environments. This approach of "infrastructure as code" along with a disciplined DevOps process for continuous deployment can ensure consistency and reduce drift across your environments. Almost every Azure resource is deployable through [Azure Resource Manager JSON templates](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy) in conjunction with PowerShell or the Azure cross platform CLI and tools such as Terraform by HashiCorp, which has first class support and integration with the Azure Cloud Shell).
 
-Article such as [Best practices for using Azure Resource Manager templates](https://blogs.msdn.microsoft.com/mvpawardprogram/2018/05/01/azure-resource-manager) provide an excellent discussion of best practices and lessons learned for applying a DevOps approach to Azure Resource Manager templates with the [Azure DevOps](https://docs.microsoft.com/azure/devops/user-guide/?view=vsts) toolchain. Take the time and effort to develop a core set of templates specific to your organization's requirements, and to develop continuous delivery pipelines with DevOps toolchains (such as Azure DevOps, Jenkins, Bamboo, TeamCity, and Concourse), especially for your production and QA environments. There is a large library of [Azure Quickstart templates](https://github.com/Azure/azure-quickstart-templates) on GitHub that you can use as a starting point for templates, and you can quickly create cloud-based delivery pipelines with Azure DevOps.
+Article such as [Best practices for using Azure Resource Manager templates](https://blogs.msdn.microsoft.com/mvpawardprogram/2018/05/01/azure-resource-manager) provide an excellent discussion of best practices and lessons learned for applying a DevOps approach to Azure Resource Manager templates with the [Azure DevOps](https://docs.microsoft.com/azure/devops/user-guide/?view=vsts) toolchain. Take the time and effort to develop a core set of templates specific to your organization's requirements, and to develop continuous delivery pipelines with DevOps toolchains (such as Azure DevOps, Jenkins, Bamboo, TeamCity, and Concourse), especially for your production and QA environments. There is a large library of [Azure Quickstart templates](https://github.com/azure/azure-quickstart-templates) on GitHub that you can use as a starting point for templates, and you can quickly create cloud-based delivery pipelines with Azure DevOps.
 
 As a best practice for production subscriptions or resource groups, your goal should be using RBAC security to disallow interactive users by default and using automated continuous delivery pipelines based on service principals to provision all resources and deliver all application code. No admin or developer should touch the Azure portal to interactively configure resources. This level of DevOps takes a concerted effort and uses all the concepts of the Azure scaffold, providing a consistent and more secure environment that will meet your organization's need to scale.
 
@@ -324,16 +328,22 @@ The final component of the Azure scaffold reference model is core to how your or
 
 - **Virtual networks** are container objects for subnets. Though not strictly necessary, it is often used when connecting applications to internal corporate resources.
 - **User-defined routes** allow you to manipulate the route table within a subnet enabling you to send traffic through a network virtual appliance or to a remote gateway on a peered virtual network.
-- **Virtual network peering** enables you to seamlessly connect two or more Azure virtual networks, creating more complex hub and spoke designs or shared services networks.
+- **Virtual network peering** enables you to seamlessly connect two or more virtual networks in Azure, creating more complex hub and spoke designs or shared services networks.
 - **Service endpoints.** In the past, PaaS services relied on different methods to secure access to those resources from your virtual networks. Service endpoints allow you to secure access to enabled PaaS services from **only** connected endpoints, increasing overall security.
 - **Security groups** are an extensive set of rules that provide the ability to allow or deny inbound and outbound traffic to/from Azure resources. [Security groups](https://docs.microsoft.com/azure/virtual-network/security-overview) consist of security rules that can be augmented with **service tags** (which define common Azure services such as Azure Key Vault or Azure SQL Database) and **application security groups** (which define and application structure, such as web servers or app servers).
 
 > [!TIP]
-> Use service tags and application security groups in your network security groups not only to enhance the readability of your rules&mdash;which is crucial to understanding impact&mdash;but also to enable effective microsegmentation within a larger subnet, reducing sprawl and increasing flexibility.
+> Use service tags and application security groups in your network security groups to:
+>
+> - Enhance the readability of your rules, which is crucial to understanding impact.
+> - Enable effective microsegmentation within a larger subnet, reducing sprawl and increasing flexibility.
+
+<!-- TODO: Refactor VDC content below. -->
+<!-- docsTest:ignore "Azure Virtual Datacenter" -->
 
 ### Azure Virtual Datacenter
 
-Azure provides you both internal capabilities and third-party capabilities from our extensive partner network that enable you to have an effective security stance. More importantly, Microsoft provides best practices and guidance in the form of the [Azure Virtual Datacenter (VDC)](./networking-vdc.md). As you move from a single workload to multiple workloads that use hybrid capabilities, the VDC guidance will provide you with "recipes" to enable a flexible, network that will grow as your workloads in Azure grow.
+Azure provides both internal and third-party capabilities from our extensive partner network that give you an effective security stance. More importantly, Microsoft provides best practices and guidance in the form of the [Azure Virtual Datacenter (VDC)](./networking-vdc.md). As you move from a single workload to multiple workloads that use hybrid capabilities, the VDC guidance will provide you with "recipes" to enable a flexible, network that will grow as your workloads in Azure grow.
 
 ## Next steps
 

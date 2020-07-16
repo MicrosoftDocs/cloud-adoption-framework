@@ -1,23 +1,23 @@
 ---
 title: "Optimize migrated workloads"
-description: Optimize migrated workloads
+description: Use the Cloud Adoption Framework for Azure to prepare your migrated workload and assets to be promoted to production.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
-# Optimize migrated workloads
+# Release workloads
 
-After a workload and its supporting assets have been migrated to the cloud, it must be prepared before it can be promoted to production. In this process, activities ready the workload, size the dependent assets, and prepare the business for when the migrated cloud-based workload enters production usage.
+After a collection of workloads and their supporting assets have been deployed to the cloud, it must be prepared before it can be released. In this phase of the migration effort, the collection of workloads are load tested and validated with the business. They're then optimized and documented. Once the business and IT teams have reviewed and signed off on workload deployments, those workloads can be released or handed off to governance, security, and operations teams for ongoing operations.
 
-The objective of optimization is to prepare a migrated workload for promotion to production usage.
+The objective of "release workloads" is to prepare migrated workloads for promotion to production usage.
 
-## Definition of *done*
+## Definition of done
 
-The optimization process is complete when a workload has been properly configured, sized, and is being used in production.
+The optimization process is complete when a workload has been properly configured, sized, and deployed to production.
 
 ## Accountability during optimization
 
@@ -41,7 +41,7 @@ In addition to core activities, there are a few parallel activities that require
 
 ## Next steps
 
-With a general understanding of the optimization process, you are ready to begin the process by [establishing a business change plan for the candidate workload](./business-change-plan.md).
+With a general understanding of the optimization process, you're ready to begin the process by [establishing a business change plan for the candidate workload](./business-change-plan.md).
 
 > [!div class="nextstepaction"]
 > [Business change plan](./business-change-plan.md)

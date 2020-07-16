@@ -1,10 +1,10 @@
 ---
 title: "Software Defined Networking: PaaS-only"
-description: Discussion of the PaaS-only model for Software Defined Networking in the cloud.
+description: Learn about the advantages and limitations of a PaaS-only architectural model in Software Defined Networking in the cloud.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
@@ -14,9 +14,9 @@ ms.custom: governance
 
 When you implement a platform as a service (PaaS) resource, the deployment process automatically creates an assumed underlying network with a limited number of controls over that network, including load balancing, port blocking, and connections to other PaaS services.
 
-In Azure, several PaaS resource types can be [deployed into](https://docs.microsoft.com/azure/virtual-network/virtual-network-for-azure-services) or [connected to](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview) a virtual network, allowing these resources to integrate with your existing virtual networking infrastructure. Other services, such as [App Service Environments](https://docs.microsoft.com/azure/app-service/environment/intro), [Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/intro-kubernetes), and [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) must be deployed within virtual network. However, in many cases a PaaS only networking architecture, relying only on the default native networking capabilities provided by PaaS resources, is sufficient to meet a workload's connectivity and traffic management requirements.
+In Azure, several PaaS resource types can be [deployed into a virtual network](https://docs.microsoft.com/azure/virtual-network/virtual-network-for-azure-services) or [connected to a virtual network](https://docs.microsoft.com/azure/virtual-network/virtual-network-service-endpoints-overview), integrating these resources with your existing virtual networking infrastructure. Other services, such as [App Service Environment](https://docs.microsoft.com/azure/app-service/environment/intro), [Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/intro-kubernetes), and [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) must be deployed within a virtual network. In many cases, a PaaS-only networking architecture, relying solely on the default native networking capabilities provided by PaaS resources, is sufficient to meet a workload's connectivity and traffic management requirements.
 
-If you are considering a PaaS only networking architecture, be sure you validate that the required assumptions align with your requirements.
+If you're considering a PaaS only networking architecture, be sure you validate that the required assumptions align with your requirements.
 
 ## PaaS-only assumptions
 

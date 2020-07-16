@@ -1,10 +1,10 @@
 ---
-title: "Protect and recover - Cloud Management and Operations"
-description: Protect and recover - Cloud Management and Operations
+title: "Protect and recover in cloud management"
+description: Learn the importance of preparing for a potential workload outage. This preparation allows your team to detect failures sooner and recover more quickly.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -57,17 +57,17 @@ To learn more about this thought process, see [platform operations discipline](.
 
 ### Protect and recover VMs
 
-Most workloads have some dependency on virtual machines, which host various aspects of the solution. For the workload to support a business process after a system failure, a number of virtual machines must be recovered quickly.
+Most workloads have some dependency on virtual machines, which host various aspects of the solution. For the workload to support a business process after a system failure, some virtual machines must be recovered quickly.
 
 Every minute of downtime on those virtual machines could cause lost revenue or reduced profitability. When VM downtime has a direct impact on the fiscal performance of the business, RTO is very important. Virtual machines can be recovered more quickly by using replication to a secondary site and automated recovery, a model that's referred to as a hot-warm recovery model. At the highest state of recovery, virtual machines can be replicated to a fully functional, secondary site. This more expensive approach is referred to as a high-availability, or hot-hot, recovery model.
 
 Each of the preceding models reduces the RTO, resulting in a faster restoration of business process capabilities. However, each model also results in significantly increased cloud management costs.
 
-For more about this thought process, see [workload operations discipline](./workload.md).
+For more information about this thought process, see [workload operations discipline](./workload.md).
 
 ## Next steps
 
-After this management baseline component is met, the team can look ahead to avoid outages in [platform operations](./platform.md) and [workload operations](./workload.md).
+After this management baseline component is met, the team can look ahead to avoid outages in its [platform operations](./platform.md) and [workload operations](./workload.md).
 
 > [!div class="nextstepaction"]
 > [Platform operations](./platform.md)

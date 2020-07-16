@@ -1,10 +1,10 @@
 ---
 title: "Software Defined Networking: Cloud-native"
-description: Discussion of cloud-native virtual networking services.
+description: Use the Cloud Adoption Framework for Azure to learn about cloud-native virtual networks, which are required for deploying VMs to the cloud.
 author: rotycenh
-ms.author: v-tyhopk
+ms.author: abuck
 ms.date: 02/11/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: decision-guide
 ms.custom: governance
@@ -12,9 +12,9 @@ ms.custom: governance
 
 # Software Defined Networking: Cloud-native
 
-A cloud-native virtual network is a required when deploying IaaS resources such as virtual machines to a cloud platform. Access to virtual networks from external sources, similar to the web, need to be explicitly provisioned. These types of virtual networks support the creation of subnets, routing rules, and virtual firewall and traffic management devices.
+A cloud-native virtual network is required when deploying IaaS resources such as virtual machines to a cloud platform. Access to virtual networks from external sources, similar to the web, need to be explicitly provisioned. These types of virtual networks support the creation of subnets, routing rules, and virtual firewall and traffic management devices.
 
-A cloud-native virtual network has no dependencies on your organization's on-premises or other noncloud resources to support the cloud-hosted workloads. All required resources are provisioned either in the virtual network itself or by using managed PaaS offerings.
+A cloud-native virtual network has no dependencies on your organization's on-premises or other non-cloud resources to support the cloud-hosted workloads. All required resources are provisioned either in the virtual network itself or by using managed PaaS offerings.
 
 ## Cloud-native assumptions
 
@@ -35,5 +35,5 @@ Additional issues your cloud adoption teams should consider when discussing a cl
 
 For more information about cloud-native virtual networking in Azure, see:
 
-- [Azure Virtual Network: How-to guides](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm). Newly created Azure Virtual Networks are cloud-native by default. Use these guides to help plan the design and deployment of your virtual networks.
-- [Subscription limits: Networking](https://docs.microsoft.com/azure/azure-subscription-service-limits?toc=/azure/virtual-network/toc.json#networking-limits). Any single virtual network and connected resources can only exist within a single subscription, and are bound by subscription limits.
+- [Azure Virtual Network guides](https://docs.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm): Newly created virtual networks are cloud-native by default. Use these guides to help plan the design and deployment of your virtual networks.
+- [Azure networking limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits): Each virtual network and connected resources exists in a single subscription. These resources bound by subscription limits.

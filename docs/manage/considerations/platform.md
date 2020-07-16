@@ -1,10 +1,10 @@
 ---
-title: "Platform operations - Cloud Management and Operations"
-description: Platform operations - Cloud Management and Operations
+title: "Platform operations in cloud management"
+description: Build an understanding of the dependency within your organization for common platform operations in cloud management.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: operate
 ---
@@ -13,7 +13,7 @@ ms.subservice: operate
 
 A cloud management baseline that spans [inventory and visibility](./inventory.md), [operational compliance](./operational-compliance.md), and [protection and recovery](./protect.md) might provide a sufficient level of cloud management for most workloads in the IT portfolio. However, that baseline is seldom enough to support the full portfolio. This article builds on the most common next step in cloud management, portfolio operations.
 
-A quick study of the assets in the IT portfolio highlights patterns across the workloads that are being supported. Within those workloads, there will be a number of common platforms. Depending on the past technical decisions within the company, those platforms could vary widely.
+A quick study of the assets in the IT portfolio highlights patterns across the workloads that are being supported. Within those workloads, there will be common platforms. Depending on the past technical decisions within the company, those platforms could vary widely.
 
 For some organizations, there will be a heavy dependence on SQL Server, Oracle, or other open-source data platforms. In other organizations, the commonalities might be rooted in the hosting platforms for virtual machines (VMs) or containers. Still others might have a common dependency on applications or Enterprise Resource Planning (ERP) systems, such as SAP, Oracle, or others.
 
@@ -27,11 +27,11 @@ As the cloud management team establishes higher degrees of operational managemen
 
 For reference, some organizations refer to an early-stage service catalog as an _approved list_. The primary difference is that a service catalog comes with ongoing operational commitments from the cloud center of excellence (CCoE). An approved list is similar, in that it provides a preapproved list of solutions that a team can use in the cloud. However, typically there isn't an operational benefit associated with applications on an approved list.
 
-Much like the debate between Central IT and CCoE, the difference is one of priorities. A service catalog assumes good intent but provides operational, governance, and security guardrails that accelerate innovation. An approved list hinders innovation until operations, compliance, and security gates can be passed for a solution. Both solutions are viable, but they require the company to make subtle prioritization decisions to invest more in innovation or compliance.
+Much like the debate between centralized IT and CCoE, the difference is one of priorities. A service catalog assumes good intent but provides operational, governance, and security guardrails that accelerate innovation. An approved list hinders innovation until operations, compliance, and security gates can be passed for a solution. Both solutions are viable, but they require the company to make subtle prioritization decisions to invest more in innovation or compliance.
 
 ### Build the service catalog
 
-Cloud management is seldom successful at delivering a service catalog in a silo. Proper development of the catalog requires a partnership across Central IT or the CCoE. This approach tends to be most successful when an IT organization reaches a CCoE level of maturity, but could be implemented sooner.
+Cloud management is seldom successful at delivering a service catalog in a silo. Proper development of the catalog requires a partnership across the central IT team or the CCoE. This approach tends to be most successful when an IT organization reaches a CCoE level of maturity, but could be implemented sooner.
 
 When it's building the service catalog within a CCoE model, the cloud platform team builds out the desired-state platform. The cloud governance and cloud security teams validate governance and compliance within the deployment. The cloud management team establishes ongoing operations for that platform. And the cloud automation team packages the platform for scalable, repeatable deployment.
 
@@ -42,15 +42,15 @@ After the platform is packaged, the cloud management team can add it to the grow
 
 ## Define your own platform operations
 
-Although management tools and processes can help improve platform operations, that is often not enough to achieve the desired states of stability and reliability. True platform operations requires a focus on architecture-quality pillars. When a platform justifies a deeper investment in operations, the following five pillars should be considered before the platform becomes a part of any service catalog:
+Although management tools and processes can help improve platform operations, that is often not enough to achieve the desired states of stability and reliability. True platform operations requires a focus on pillars of architecture excellence. When a platform justifies a deeper investment in operations, consider the following five pillars before the platform becomes a part of any service catalog:
 
-- **Scalability:** The ability of a system to handle increased load.
-- **Availability:** The percentage of time that a system is functional and working.
-- **Resiliency:** The ability of a system to recover from failures and continue to function.
-- **Management:** The operations processes that keep a system running in production.
-- **Security:** Protecting applications and data from threats.
+- **Cost optimization:** Manage costs to maximize the value delivered.
+- **Operational excellence:** Follow operational processes that keep a system running in production.
+- **Performance efficiency:** Scale systems to adapt to changes in load.
+- **Reliability:** Design systems to recover from failures and continue to function.
+- **Security:** Protect applications and data from threats.
 
-The [Azure Architecture Framework](https://docs.microsoft.com/azure/architecture/guide/pillars) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
+The [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework) provides an approach to evaluating specific workloads for adherence to these pillars, in an effort to improve overall operations. These pillars can be applied to both platform operations and workload operations.
 
 ## Get started with specific platforms
 

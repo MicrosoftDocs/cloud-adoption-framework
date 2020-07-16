@@ -1,10 +1,10 @@
 ---
-title: "Cloud innovation: Democratize data"
-description: Introduction to Cloud innovation - Democratize data
+title: Democratize data with digital invention
+description: Learn about democratization, the process of getting data into the right hands to test hypotheses and drive innovation.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 10/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
@@ -38,7 +38,7 @@ The primary tools for sharing data directly with data consumers include self-ser
 
 Sharing data can quickly produce an MVP that you can use in customer conversations. However, to turn that shared data into useful and actionable knowledge, a bit more is generally required. After a hypothesis has been validated through data sharing, the next phase of development is typically data governance.
 
-Data governance is a broad topic that could require it's own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.md). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
+Data governance is a broad topic that could require its own dedicated framework. That degree of granularity is outside the scope of the [Cloud Adoption Framework](../../index.yml). However, there are several aspects of data governance that you should consider as soon as the customer hypothesis is validated. For example:
 
 - **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) before being shared publicly to protect the interests of customers and the company.
 - **If the data is sensitive, has it been secured?** Protection of sensitive data should be a requirement for any democratized data. The example workload focused on [securing data solutions](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/securing-data-solutions) provides a few references for securing data.
@@ -51,18 +51,18 @@ When democratization of data is important to a customer-focused hypothesis, make
 When data is disrupted across an IT environment, opportunities to innovate can be extremely constrained, expensive, and time-consuming. The cloud provides new opportunities to centralize data across data silos. When centralization of multiple data sources is required to [build with customer empathy](./build.md), the cloud can accelerate the testing of hypotheses.
 
 > [!CAUTION]
-> Centralization of data represents a risk point in any innovation process. When data centralization is a [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes) (as opposed to a source of customer value), we suggest that you delay centralization until the customer hypotheses have been validated.
+> Centralization of data represents a risk point in any innovation process. When data centralization is a [technical spike](./build.md#reduce-complexity-and-delay-technical-spikes), and not a source of customer value, we suggest that you delay centralization until the customer hypotheses have been validated.
 
-If centralization of data is required, you should first define the appropriate data store for the centralized data. It's a good practice to establish a data warehouse in the cloud. This scalable option provides a central location for all your data. This type of solution is available in Online Analytical Processing (OLAP) or Big Data options.
+If centralization of data is required, you should first define the appropriate data store for the centralized data. It's a good practice to establish a data warehouse in the cloud. This scalable option provides a central location for all your data. This type of solution is available in Online Analytical Processing (OLAP) or big data options.
 
-The reference architectures for [OLAP](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/online-analytical-processing) and [Big Data](https://docs.microsoft.com/azure/architecture/data-guide/big-data) solutions can help you choose the most relevant solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
+The reference architectures for [OLAP](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/online-analytical-processing) and [Big data](https://docs.microsoft.com/azure/architecture/data-guide/big-data) solutions can help you choose the most relevant solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
 
 > [!IMPORTANT]
 > Depending on the customer need and the aligned solution, a simpler approach may be sufficient. The cloud architect should challenge the team to consider lower cost solutions that could result in faster validation of the customer hypothesis, especially during early development. The following section on collecting data covers some scenarios that might suggest a different solution for your situation.
 
 ### Collect data
 
-When you need data to be centralized to address a customer need, it's very likely that you'll also have to collect the data from various sources and move it into the centralized data store. There are two primary forms of data collection: *integration* and *ingestion*.
+When you need data to be centralized to address a customer need, it's very likely that you'll also have to collect the data from various sources and move it into the centralized data store. There are two primary forms of data collection: _integration_ and _ingestion_.
 
 **Integration:** Data that resides in an existing data store can be integrated into the centralized data store by using traditional data movement techniques. This is especially common for scenarios that involve multicloud data storage. These techniques involve extracting the data from the existing data store and then loading it into the central data store. At some point in this process, the data is typically transformed to be more usable and relevant in the central store.
 
@@ -70,11 +70,11 @@ Cloud-based tools have turned these techniques into pay-per-use tools, reducing 
 
 **Ingestion:** Some data doesn't reside in an existing data store. When this transient data is a primary source of innovation, you'll want to consider alternative approaches. Transient data can be found in a variety of existing sources like applications, APIs, data streams, IoT devices, a blockchain, an application cache, in media content, or even in flat files.
 
-You can integrate these various forms of data into a central data store on an OLAP or Big Data solution. However, for early iterations of the build–measure–learn cycle, an Online Transactional Processing (OLTP) solution might be more than sufficient to validate a customer hypothesis. OLTP solutions aren't the highest-quality solution for any reporting scenario. However, when you're [building with customer empathy](./build.md), it's more important to focus on customer needs than on technical tooling decisions. After the customer hypothesis is validated at scale, a more suitable platform might be required. The reference architecture on [OLTP data stores](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/online-transaction-processing) can help you determine which data store is most appropriate for your solution.
+You can integrate these various forms of data into a central data store on an OLAP or big data solution. However, for early iterations of the build–measure–learn cycle, an Online Transactional Processing (OLTP) solution might be more than sufficient to validate a customer hypothesis. OLTP solutions aren't the highest-quality solution for any reporting scenario. However, when you're [building with customer empathy](./build.md), it's more important to focus on customer needs than on technical tooling decisions. After the customer hypothesis is validated at scale, a more suitable platform might be required. The reference architecture on [OLTP data stores](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/online-transaction-processing) can help you determine which data store is most appropriate for your solution.
 
 **Virtualize:** Integration and ingestion of data can sometimes slow innovation. When a solution for data virtualization is already available, it might represent a more reasonable approach. Ingestion and integration can both duplicate storage and development requirements, add data latency, increase attack surface area, trigger quality issues, and increase governance efforts. Data virtualization is a more contemporary alternative that leaves the original data in a single location and creates pass-through or cached queries of the source data.
 
-SQL Server 2017 and Azure SQL Data Warehouse both support [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) which is the approach to data virtualization most commonly used in Azure.
+SQL Server 2017 and Azure SQL Data Warehouse both support [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide), which is the approach to data virtualization most commonly used in Azure.
 
 ## Next steps
 

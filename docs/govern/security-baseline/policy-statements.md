@@ -1,10 +1,10 @@
 ---
 title: "Security Baseline sample policy statements"
-description: Security Baseline sample policy statements
+description: Refer to these sample Security Baseline policy statements to help draft policy statements to address your organization's needs.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/17/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: govern
 ms.custom: governance
@@ -26,7 +26,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** All deployed assets must be categorized by criticality and data classification. Classifications must be reviewed by the cloud governance team and the application owner before deployment to the cloud.
 
-**Potential design option:** Establish [resource tagging standards](../../decision-guides/resource-tagging/index.md) and ensure IT staff apply them consistently to any deployed resources using [Azure resource tags](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags).
+**Potential design option:** Establish [resource tagging standards](../../decision-guides/resource-tagging/index.md) and ensure IT staff apply them consistently to any deployed resources using [Azure resource tags](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources).
 
 ## Data encryption
 
@@ -34,7 +34,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** All protected data must be encrypted when at rest.
 
-**Potential design option:** See the [Azure encryption overview](https://docs.microsoft.com/azure/security/security-azure-encryption-overview) article for a discussion of how data at rest encryption is performed on the Azure platform. Additional controls such as in account data encryption and control over how storage account settings can be changed should also be considered.
+**Potential design option:** See the [Azure encryption overview](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview) article for a discussion of how data at rest encryption is performed on the Azure platform. Additional controls such as in account data encryption and control over how storage account settings can be changed should also be considered.
 
 ## Network isolation
 
@@ -42,7 +42,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** Network subnets containing protected data must be isolated from any other subnets. Network traffic between protected data subnets is to be audited regularly.
 
-**Potential design option:** In Azure, network and subnet isolation is managed through [Azure Virtual Networks](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
+**Potential design option:** In Azure, network and subnet isolation is managed through [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).
 
 ## Secure external access
 
@@ -50,15 +50,15 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** No subnet containing protected data can be directly accessed over public internet or across datacenters. Access to those subnets must be routed through intermediate subnets. All access into those subnets must come through a firewall solution capable of performing packet scanning and blocking functions.
 
-**Potential design option:** In Azure, secure public endpoints by deploying a [DMZ between the public internet and your cloud-based network](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=https://docs.microsoft.com/azure/cloud-adoption-framework/toc.json&bc=https://docs.microsoft.com/azure/cloud-adoption-framework/_bread/toc.json). Consider deployment, configuration and automation of [Azure Firewall](https://docs.microsoft.com/azure/firewall).
+**Potential design option:** In Azure, secure public endpoints by deploying a [DMZ between the public internet and your cloud-based network](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Consider deployment, configuration, and automation of [Azure Firewall](https://docs.microsoft.com/azure/firewall/overview).
 
 ## DDoS protection
 
 **Technical risk:** Distributed denial of service (DDoS) attacks can result in a business interruption.
 
-**Policy statement:** Deploy automated DDoS mitigation mechanisms to all publicly accessible network endpoints. No public facing web site backed by IaaS should be exposed to the internet without DDoS.
+**Policy statement:** Deploy automated DDoS mitigation mechanisms to all publicly accessible network endpoints. No public-facing web site backed by IaaS should be exposed to the internet without DDoS.
 
-**Potential design option:** Use [Azure DDoS Protection](https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview) Standard to minimize disruptions caused by DDoS attacks.
+**Potential design option:** Use [Azure DDoS Protection Standard](https://docs.microsoft.com/azure/virtual-network/ddos-protection-overview) to minimize disruptions caused by DDoS attacks.
 
 ## Secure on-premises connectivity
 
@@ -72,7 +72,7 @@ The following sample policy statements address common security-related business 
 
 **Technical risk:** Changes to network configuration can lead to new vulnerabilities and data exposure risks.
 
-**Policy statement:** Governance tooling must audit and enforce network configuration requirements defined by the Security Baseline team.
+**Policy statement:** Governance tooling must audit and enforce network configuration requirements defined by the security baseline team.
 
 **Potential design option:** In Azure, network activity can be monitored using [Azure Network Watcher](https://docs.microsoft.com/azure/network-watcher/network-watcher-monitoring-overview), and [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-network-recommendations) can help identify security vulnerabilities. Azure Policy allows you to restrict network resources and resource configuration policy according to limits defined by the security team.
 
@@ -80,15 +80,15 @@ The following sample policy statements address common security-related business 
 
 **Technical risk:** Over time, new security threats and attack types emerge, increasing the risk of exposure or disruption of your cloud resources.
 
-**Policy statement:** Trends and potential exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tooling used in the cloud.
+**Policy statement:** Trends and potential exploits that could affect cloud deployments should be reviewed regularly by the security team to provide updates to Security Baseline tools used in the cloud.
 
-**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tooling, and update policy to remediate any new risks. Leverage [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) and [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) to gain actionable insights on emerging threats specific to your deployments.
+**Potential design option:** Establish a regular security review meeting that includes relevant IT and governance team members. Review existing security data and metrics to establish gaps in current policy and Security Baseline tools, and update policy to remediate any new risks. Use [Azure Advisor](https://docs.microsoft.com/azure/advisor/advisor-overview) and [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro) to gain actionable insights on emerging threats specific to your deployments.
 
 ## Next steps
 
 Use the samples mentioned in this article as a starting point to develop policies that address specific security risks that align with your cloud adoption plans.
 
-To begin developing your own custom policy statements related to Security Baseline, download the [Security Baseline template](./template.md).
+To begin developing your own custom Security Baseline policy statements, download the [Security Baseline discipline template](./template.md).
 
 To accelerate adoption of this discipline, choose the [actionable governance guide](../guides/index.md) that most closely aligns with your environment. Then modify the design to incorporate your specific corporate policy decisions.
 

@@ -1,13 +1,15 @@
 ---
-title: "Mainframe migration: Mainframe application migration"
-description: Migrate applications from mainframe environments to Azure, a proven, highly available, and scalable infrastructure for systems that currently run on mainframes.
+title: Mainframe app migration strategies
+description: Learn strategies like rehosting, retiring, rebuilding, or replacing applications to migrate from mainframe environments to Azure.
 author: njray
 ms.author: v-nanra
 ms.date: 12/26/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore njray nanra Attunity Codit DRDA ISAM ISQL LPARS VSAM ODBC JDBC GDGs REXX TIP dbextents Raincode Tmax -->
 
 # Mainframe application migration
 
@@ -25,7 +27,7 @@ Application migration typically involves one or more of the following strategies
 
 - **Replace:** This approach replaces mainframe functionality with equivalent features in the cloud. Software as a service (SaaS) is one option, which is using a solution created specifically for an enterprise concern, such as finance, human resources, manufacturing, or enterprise resource planning. In addition, many industry-specific apps are now available to solve problems that custom mainframe solutions used to previously solve.
 
-You should consider starting by planning those workloads that you want to initially migrate, and then determine those requirements for moving associated applications, legacy codebases, and databases.
+You should consider starting by planning those workloads that you want to initially migrate, and then determine those requirements for moving associated applications, legacy code bases, and databases.
 
 ## Mainframe emulation in Azure
 
@@ -99,7 +101,7 @@ Use:
 
 ### Monitoring
 
-- Use monitoring tools, [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview), [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview), and even the Azure logs enable administrators to monitor any over performance of batch runs and help eliminate bottlenecks.
+- Use monitoring tools, [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview), [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview), and Azure logs enable administrators to monitor any over performance of batch runs and help eliminate bottlenecks.
 
 ## Migrate development environments
 
@@ -119,7 +121,7 @@ The cloud's distributed architectures rely on a different set of development too
 
 ## Migrate databases and data
 
-Application migration usually involves rehosting the data tier. You can migrate SQL Server, open-source, and other relational databases to fully managed solutions on Azure, such as [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), [Azure Database Service for PostgreSQL](https://docs.microsoft.com/azure/postgresql/overview), and [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview) with [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
+Application migration usually involves rehosting the data tier. You can migrate SQL Server, open-source, and other relational databases to fully managed solutions on Azure, such as [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/overview), and [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/overview) with [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
 
 For example, you can migrate if the mainframe data tier uses:
 
@@ -157,7 +159,7 @@ The following figure shows a possible Azure deployment using a primary and a sec
 
 ## Perform a staged mainframe to Azure
 
-Moving solutions from a mainframe to Azure may involve a *staged* migration, whereby some applications are moved first, and others remain on the mainframe temporarily or permanently. This approach typically requires systems that allow applications and databases to interoperate between the mainframe and Azure.
+Moving solutions from a mainframe to Azure may involve a _staged_ migration, whereby some applications are moved first, and others remain on the mainframe temporarily or permanently. This approach typically requires systems that allow applications and databases to interoperate between the mainframe and Azure.
 
 A common scenario is to move an application to Azure while keeping the data used by the application on the mainframe. Specific software is used to enable the applications on Azure to access data from the mainframe. Fortunately, a wide range of solutions provide integration between Azure and existing mainframe environments, support for hybrid scenarios, and migration over time. Microsoft partners, independent software vendors, and system integrators can help you on your journey.
 
@@ -168,6 +170,8 @@ One option is [Microsoft Host Integration Server](https://docs.microsoft.com/hos
 If you are considering a mainframe migration, the partner ecosystem is available to assist you.
 
 Azure provides a proven, highly available, and scalable infrastructure for systems that currently run on mainframes. Some workloads can be migrated with relative ease. Other workloads that depend on legacy system software, such as CICS and IMS, can be rehosted using partner solutions and migrated to Azure over time. Regardless of the choice you make, Microsoft and our partners are available to assist you in optimizing for Azure while maintaining mainframe system software functionality.
+
+<!-- docsTest:ignore "IBM DB2 pureScale" -->
 
 ## Learn more
 

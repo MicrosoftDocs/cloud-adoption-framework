@@ -1,27 +1,19 @@
 ---
-title: "Azure innovation guide: Interact through devices" 
-description: Azure innovation guide - Interact through devices
+title: "Azure innovation: Interact via devices"
+description: Learn how Azure provides a framework for building immersive and effective business solutions through connected and perceptive edge devices.
 author: umarmohamedusman
 ms.author: umarm
 ms.date: 10/10/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="docs"
-
-# Azure innovation guide: Interact through devices
-
-::: zone-end
-
-::: zone target="chromeless"
+<!-- cSpell:ignore umarmohamedusman umarm Moovit -->
 
 # Interact through devices
-
-::: zone-end
 
 Innovate through intermittently connected and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with artificial intelligence (AI) technology, you can build every type of intelligent application and system you can envision.
 
@@ -30,12 +22,12 @@ Azure customers employ a continually expanding set of connected systems and devi
 > [!div class="checklist"]
 >
 > - Industrial assets
-> - HoloLens 2
-> - Azure Sphere
-> - Kinect DK
+> - [Microsoft HoloLens 2](https://docs.microsoft.com/hololens)
+> - [Azure Sphere](https://docs.microsoft.com/azure-sphere/product-overview/what-is-azure-sphere)
+> - [Azure Kinect DK](https://docs.microsoft.com/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
-> - Azure SQL Database Edge
-> - IoT Plug and Play
+> - [Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview)
+> - [IoT Plug and Play](https://docs.microsoft.com/azure/iot-pnp/overview-iot-plug-and-play)
 
 <!-- markdownlint-disable MD025 -->
 
@@ -54,9 +46,10 @@ Here are a few features you'll find:
 
 ::: zone target="docs"
 
-**Go to [IoT Hub](https://docs.microsoft.com/azure/iot-dps)**
+### Learn more
 
-**Go to [Device Provisioning Services](https://docs.microsoft.com/azure/iot-dps)**
+- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Azure IoT Hub Device Provisioning Service (DPS)](https://docs.microsoft.com/azure/iot-dps)
 
 ::: zone-end
 
@@ -75,16 +68,16 @@ To create an IoT hub:
 
 <!-- markdownlint-enable DOCSMD001 -->
 
-The IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning.
+The Azure IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning.
 
 <!-- markdownlint-disable MD024 -->
 
 ### Action
 
-To create IoT Hub Device Provisioning Services:
+To create an Azure IoT Hub Device Provisioning Service:
 
-1. Go to **IoT Hub Device Provisioning Services**.
-2. Select **Create Device Provisioning Services**.
+1. Go to **Device Provisioning Services**.
+2. Select **Add**.
 
 <!-- markdownlint-disable DOCSMD001 -->
 
@@ -106,7 +99,9 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 
 ::: zone target="docs"
 
-**Go to [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins)**
+### Learn more
+
+- [Azure Digital Twins](https://docs.microsoft.com/azure/digital-twins/about-digital-twins)
 
 ::: zone-end
 
@@ -117,7 +112,7 @@ Build reusable, highly scalable, spatially aware experiences that link streaming
 To create Azure Digital Twins:
 
 1. In the left pane, select **Create a resource**.
-2. Search for **digital twins**, and then select **Digital Twins**.
+2. Search for **digital twins**, then select **Digital Twins**.
 3. Select **Create** to start the deployment process.
 4. To review existing Digital Twins, select this button:
 
@@ -133,7 +128,7 @@ To create Azure Digital Twins:
 
 ## [Location intelligence](#tab/AzureMaps)
 
-In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners **TomTom** and **Moovit**. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
+In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
 **Data Service Preview:** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
 
@@ -143,7 +138,9 @@ In addition to traditional location capabilities such as nearby, traffic, and ro
 
 ::: zone target="docs"
 
-**Go to [Azure Maps](https://docs.microsoft.com/azure/azure-maps)**
+### Learn more
+
+- [Azure Maps](https://docs.microsoft.com/azure/azure-maps)
 
 ::: zone-end
 
@@ -158,7 +155,7 @@ To use Location Intelligence:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Maps%2Faccounts]" submitText="Go to Azure Maps Account" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Maps%2FAccounts]" submitText="Go to Azure Maps Account" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -178,7 +175,9 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ::: zone target="docs"
 
-**Go to [Azure Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors)**
+### Learn more
+
+- [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview)
 
 ::: zone-end
 
@@ -193,7 +192,7 @@ To use Spatial experiences:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.MixedReality%2FspatialAnchorsAccounts]" submitText="Go to Spatial Anchors Accounts" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResource/resourceType/Microsoft.MixedReality%2FSpatialAnchorsAccounts]" submitText="Go to Spatial Anchors Accounts" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
@@ -207,9 +206,10 @@ The process of rendering is computationally intensive. There can be many frames 
 
 ::: zone target="docs"
 
-**Go to [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering)**
+### Learn more
 
-**Go to [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)**
+- [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/overview/about)
+- [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)
 
 ::: zone-end
 
@@ -224,7 +224,7 @@ To use Remote Rendering:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Batch%2FbatchAccounts]" submitText="Go to Azure Batch" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Batch%2FBatchAccounts]" submitText="Go to Azure Batch" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 

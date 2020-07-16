@@ -1,24 +1,44 @@
 ---
-title: "Azure migration best practices"
-description: Introduction to Azure Migration Best Practices
+title: Azure cloud migration best practices checklist
+description: Explore the Azure cloud migration checklist to learn how to implement the Azure tools used to align with cloud migration best practices.
+keywords: azure cloud migration best practices, azure migration checklist, cloud migration checklist, cloud migration best practices
 author: BrianBlanchard
 ms.author: brblanch
-ms.date: 04/04/2019
-ms.topic: guide
+ms.date: 07/01/2020
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
+ms.custom: azure-migrate-seo
 ---
 
-# Azure migration best practices
+# Azure cloud migration migration best practices checklist
 
-Azure provides several tools in Azure to help execute a migration effort. This section of the Cloud Adoption Framework is designed to help readers implement those tools in alignment with best practices for migration. These best practices are aligned to one of the processes within the Cloud Adoption Framework migration model pictured below.
+Start with the [Azure migration guide](../azure-migration-guide/index.md) in the Cloud Adoption Framework if you're interested in migrating to Azure. That guide walks you through a set of tools and basic approaches to migrating virtual machines to the cloud.
 
-Expand any process in the table of contents on the left to see best practices typically required during that process.
+The following checklists provides Azure cloud migration best practices that go beyond the basic cloud-native tools. These outline the common areas of complexity that might require the scope of the migration to expand beyond the [Azure migration guide](../azure-migration-guide/index.md).
 
-![Cloud Adoption Framework migration model](../../_images/operational-transformation-migrate.png)
+## Migration best practices for business-driven scope expansion
 
-> [!NOTE]
-> Digital estate planning and asset assessment represent two different levels of migration planning and assessment:
->
-> - **Digital estate planning:** You plan or rationalize the digital estate during planning, to establish an overall migration backlog. However, this plan is based on some assumptions and details that need to be validated before a workload can be migrated.
-> - **Asset assessment:** You assess a workload's individual assets before migration of the workload, to evaluate cloud compatibility and understand architecture and sizing constraints. This process validates initial assumptions and provides the details needed to migrate an individual asset.
+- **[Support global markets](./multiple-regions.md):** The business operates in multiple geographic regions with disparate data sovereignty requirements. To meet those requirements, additional considerations should be factored into the prerequisite review and distribution of assets during migration.
+
+## Migration best practices for technology-driven scope expansion
+
+- **[VMware migration](./vmware-host.md):** Migrating VMware hosts can accelerate the overall migration process. Each migrated VMware host can move multiple workloads to the cloud using a lift and shift approach. After migration, those VMs and workloads can stay in VMware or be migrated to modern cloud capabilities.
+- **[SQL Server migration](./sql-migration.md):** Migrating SQL servers can accelerate the overall migration process. Each SQL Server migrated can move multiple databases and services, potentially accelerating multiple workloads.
+- **[Multiple datacenters](./multiple-datacenters.md):** Migrating multiple datacenters adds significant complexity. During the assess, migrate, optimization, and manage processes, additional considerations are discussed to prepare for more complex environments.
+- **[Data requirements exceed network capacity](./network-capacity-exceeded.md):** Companies frequently choose to migrate to the cloud because the capacity, speed, or stability of an existing datacenter is no longer satisfactory. Unfortunately, those same constraints add complexity to the migration process, requiring additional planning during the assessment and migration processes.
+- **[Governance or compliance strategy](./governance-or-compliance.md):** When governance and compliance are vital to the success of a migration, additional alignment between IT governance teams and the cloud adoption team is required.
+
+## Additional migration best practices
+
+- [Set up networking for workloads migrated to Azure](./migrate-best-practices-networking.md)
+- [Deploy a migration infrastructure](./contoso-migration-infrastructure.md)
+- [Costing and sizing workloads migrated to Azure](./migrate-best-practices-costs.md)
+- [Scale a migration to Azure](./contoso-migration-scale.md)
+
+## Next steps
+
+[Multiple datacenters](./multiple-datacenters.md) is a good starting point when reviewing Azure migration best practices.
+
+> [!div class="nextstepaction"]
+> [Multiple datacenters](./multiple-datacenters.md)

@@ -1,10 +1,10 @@
 ---
 title: "Cloud rationalization"
-description: Review the options available for rationalizing a digital estate.
+description: Learn about cloud rationalization, the process of evaluating assets to determine the best way to migrate or modernize each asset in the cloud.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 09/16/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: plan
 ms.custom: governance
@@ -16,13 +16,19 @@ Cloud rationalization is the process of evaluating assets to determine the best 
 
 ## Rationalization context
 
-The "five Rs of rationalization" listed in this article are a great way to label a potential future state for any workload that's being considered as a cloud candidate. However, this labeling process should be put into the correct context before you attempt to rationalize an environment. Review the following myths to provide that context:
+The _five Rs of rationalization_ listed in this article are a great way to label a potential future state for any workload that's being considered as a cloud candidate. This labeling process should be put into the correct context before you attempt to rationalize an environment. Review the following myths to provide that context:
 
-- **Myth: It's easy to make rationalization decisions early in the process.** Accurate rationalization requires a deep knowledge of the workload and associated assets (apps, VMs, and data). Most importantly, accurate rationalization decisions take time. We recommend using an [incremental rationalization process](./rationalize.md#incremental-rationalization).
+### Myth: It's easy to make rationalization decisions early in the process
 
-- **Myth: Cloud adoption has to wait for all workloads to be rationalized.** Rationalizing an entire IT portfolio or even a single datacenter can delay the realization of business value by months or even years. Full rationalization should be avoided when possible. Instead, use the [power of 10 approach to release planning](./rationalize.md#release-planning) to make wise decisions about the next 10 workloads that are slated for cloud adoption.
+ Accurate rationalization requires a deep knowledge of the workload and associated assets (apps, VMs, and data). Most importantly, accurate rationalization decisions take time. We recommend using an [incremental rationalization process](./rationalize.md#incremental-rationalization).
 
-- **Myth: Business justification has to wait for all workloads to be rationalized.** To develop a business justification for a cloud adoption effort, make a few basic assumptions at the portfolio level. When motivations are aligned to innovation, assume rearchitecture. When motivations are aligned to migration, assume rehost. These assumptions can accelerate the business justification process. Assumptions are then challenged and budgets refined during the assessment phase of each workload's adoption cycles.
+### Myth: Cloud adoption has to wait for all workloads to be rationalized
+
+Rationalizing an entire IT portfolio or even a single datacenter can delay the realization of business value by months or even years. Full rationalization should be avoided when possible. Instead, use the [Power of 10 approach to release planning](./rationalize.md#release-planning) to make wise decisions about the next 10 workloads that are slated for cloud adoption.
+
+### Myth: Business justification has to wait for all workloads to be rationalized
+
+To develop a business justification for a cloud adoption effort, make a few basic assumptions at the portfolio level. When motivations are aligned to innovation, assume rearchitecture. When motivations are aligned to migration, assume rehost. These assumptions can accelerate the business justification process. Assumptions are then challenged and budgets refined during the assessment phase of each workload's adoption cycles.
 
 Now review the following five Rs of rationalization to familiarize yourself with the long-term process. While developing your cloud adoption plan, choose the option that best aligns with your motivations, business outcomes, and current state environment. The goal in digital estate rationalization is to set a baseline, not to rationalize every workload.
 
@@ -36,22 +42,22 @@ Also known as a _lift and shift_ migration, a rehost effort moves a current stat
 
 Common drivers might include:
 
-- Reducing capital expense
-- Freeing up datacenter space
-- Achieving rapid return on investment in the cloud
+- Reducing capital expense.
+- Freeing up datacenter space.
+- Achieving rapid return on investment in the cloud.
 
 Quantitative analysis factors:
 
-- VM size (CPU, memory, storage)
-- Dependencies (network traffic)
-- Asset compatibility
+- VM size (CPU, memory, storage).
+- Dependencies (network traffic).
+- Asset compatibility.
 
 Qualitative analysis factors:
 
-- Tolerance for change
-- Business priorities
-- Critical business events
-- Process dependencies
+- Tolerance for change.
+- Business priorities.
+- Critical business events.
+- Process dependencies.
 
 ## Refactor
 
@@ -61,23 +67,23 @@ Platform as a service (PaaS) options can reduce the operational costs that are a
 
 Common drivers might include:
 
-- Faster and shorter updates
-- Code portability
-- Greater cloud efficiency (resources, speed, cost, managed operations)
+- Faster and shorter updates.
+- Code portability.
+- Greater cloud efficiency (resources, speed, cost, managed operations).
 
 Quantitative analysis factors:
 
-- Application asset size (CPU, memory, storage)
-- Dependencies (network traffic)
-- User traffic (page views, time on page, load time)
-- Development platform (languages, data platform, middle-tier services)
-- Database (CPU, memory, storage, version)
+- Application asset size (CPU, memory, storage).
+- Dependencies (network traffic).
+- User traffic (page views, time on page, load time).
+- Development platform (languages, data platform, middle-tier services).
+- Database (CPU, memory, storage, version).
 
 Qualitative analysis factors:
 
-- Continued business investments
-- Bursting options/timelines
-- Business process dependencies
+- Continued business investments.
+- Bursting options or timelines.
+- Business process dependencies.
 
 ## Rearchitect
 
@@ -87,22 +93,22 @@ In other cases, applications that are cloud-compatible, but not cloud-native, mi
 
 Common drivers might include:
 
-- Application scale and agility
-- Easier adoption of new cloud capabilities
-- Mix of technology stacks
+- Application scale and agility.
+- Easier adoption of new cloud capabilities.
+- Mix of technology stacks.
 
 Quantitative analysis factors:
 
-- Application asset size (CPU, memory, storage)
-- Dependencies (network traffic)
-- User traffic (page views, time on page, load time)
-- Development platform (languages, data platform, middle tier services)
-- Database (CPU, memory, storage, version)
+- Application asset size (CPU, memory, storage).
+- Dependencies (network traffic).
+- User traffic (page views, time on page, load time).
+- Development platform (languages, data platform, middle tier services).
+- Database (CPU, memory, storage, version).
 
 Qualitative analysis factors:
 
-- Growing business investments
-- Operational costs
+- Growing business investments.
+- Operational costs.
 - Potential feedback loops and DevOps investments.
 
 ## Rebuild
@@ -111,23 +117,23 @@ In some scenarios, the delta that must be overcome to carry an application forwa
 
 Common drivers might include:
 
-- Accelerate innovation
-- Build apps faster
-- Reduce operational cost
+- Accelerating innovation.
+- Building applications faster.
+- Reducing operational cost.
 
 Quantitative analysis factors:
 
-- Application asset size (CPU, memory, storage)
-- Dependencies (network traffic)
-- User traffic (page views, time on page, load time)
-- Development platform (languages, data platform, middle tier services)
-- Database (CPU, memory, storage, version)
+- Application asset size (CPU, memory, storage).
+- Dependencies (network traffic).
+- User traffic (page views, time on page, load time).
+- Development platform (languages, data platform, middle tier services).
+- Database (CPU, memory, storage, version).
 
 Qualitative analysis factors:
 
-- Declining end-user satisfaction
-- Business processes limited by functionality
-- Potential cost, experience, or revenue gains
+- Declining end-user satisfaction.
+- Business processes limited by functionality.
+- Potential cost, experience, or revenue gains.
 
 ## Replace
 
@@ -135,24 +141,24 @@ Solutions are typically implemented by using the best technology and approach av
 
 Common drivers might include:
 
-- Standardizing around industry-best practices
-- Accelerating adoption of business process-driven approaches
-- Reallocating development investments into applications that create competitive differentiation or advantages
+- Standardizing around industry best practices.
+- Accelerating adoption of business-process-driven approaches.
+- Reallocating development investments into applications that create competitive differentiation or advantages.
 
 Quantitative analysis factors:
 
-- General operating cost reductions
-- VM size (CPU, memory, storage)
-- Dependencies (network traffic)
-- Assets to be retired
-- Database (CPU, memory, storage, version)
+- General operating-cost reductions.
+- VM size (CPU, memory, storage).
+- Dependencies (network traffic).
+- Assets to be retired.
+- Database (CPU, memory, storage, version).
 
 Qualitative analysis factors:
 
-- Cost benefit analysis of the current architecture versus a SaaS solution
-- Business process maps
-- Data schemas
-- Custom or automated processes
+- Cost benefit analysis of the current architecture versus a SaaS solution.
+- Business process maps.
+- Data schemas.
+- Custom or automated processes.
 
 ## Next steps
 

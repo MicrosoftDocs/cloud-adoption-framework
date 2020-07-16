@@ -1,10 +1,10 @@
 ---
 title: "Prepare a migrated application for production promotion"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+description: Use the Cloud Adoption Framework for Azure to understand validation that's involved in preparing a migrated application for production promotion.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
@@ -24,7 +24,7 @@ Transformation happens when business users or customers take advantage of a tech
 
 ## Final technical readiness tests
 
-*Ready* is the last step prior to production release. That means it is also the last chance to test the workload. The following are a few tests that are suggested during this phase:
+_Ready_ is the last step prior to production release. That means it is also the last chance to test the workload. The following are a few tests that are suggested during this phase:
 
 - **Network isolation testing.** Test and monitor network traffic to ensure proper isolation and no unexpected network vulnerabilities. Also validate that any network routing to be severed during cutover is not experiencing unexpected traffic.
 - **Dependency testing.** Ensure that all workload application dependencies have been migrated and are accessible from the migrated assets.

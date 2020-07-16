@@ -1,10 +1,10 @@
 ---
-title: "Build a business justification for cloud migration"
-description: Considerations for building a business justification for cloud migration.
+title: "Business justification for cloud migration"
+description: Use the Cloud Adoption Framework for Azure to learn to start developing a business justification for cloud migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 12/10/2018
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: strategy
 ms.custom: governance
@@ -16,19 +16,29 @@ Cloud migrations can generate early return on investment (ROI) from cloud transf
 
 ## Dispelling cloud migration myths
 
-**Myth: The cloud is always cheaper.** It's commonly believed that operating a datacenter in the cloud is always cheaper than operating one on-premises. While this assumption might generally be true, it's not always the case. Sometimes cloud operating costs are higher. These higher costs are often caused by poor cost governance, misaligned system architectures, process duplication, atypical system configurations, or greater staffing costs. Fortunately, you can mitigate many of these problems to create early ROI. Following the guidance in [Build the business justification](#build-the-business-justification) can help you detect and avoid these misalignments. Dispelling the other myths described here can help too.
+### Myth: The cloud is always cheaper
 
-**Myth: Everything should go into the cloud.** In fact, some business drivers might lead you to choose a hybrid solution. Before you finalize a business model, it's smart to complete a first-round quantitative analysis, as described in the [digital estate articles](../digital-estate/5-rs-of-rationalization.md). For more information on the individual quantitative drivers involved in rationalization, see [The 5 Rs of rationalization](../digital-estate/5-rs-of-rationalization.md). Either approach will use easily obtained inventory data and a brief quantitative analysis to identify workloads or applications that could result in higher costs in the cloud. These approaches could also identify dependencies or traffic patterns that would necessitate a hybrid solution.
+It's commonly believed that operating a datacenter in the cloud is always cheaper than operating one on-premises. While this assumption might generally be true, it's not always the case. Sometimes cloud operating costs are higher. These higher costs are often caused by poor cost governance, misaligned system architectures, process duplication, atypical system configurations, or greater staffing costs. Fortunately, you can mitigate many of these problems to create early ROI. Following the guidance in [Build the business justification](#build-the-business-justification) can help you detect and avoid these misalignments. Dispelling the other myths described here can help too.
 
-**Myth: Mirroring my on-premises environment will help me save money in the cloud.** During digital estate planning, it's not unheard of for businesses to detect unused capacity of more than 50% of the provisioned environment. If assets are provisioned in the cloud to match current provisioning, cost savings are hard to realize. Consider reducing the size of the deployed assets to align with usage patterns rather than provisioning patterns.
+### Myth: Everything should go into the cloud
 
-**Myth: Server costs drive business cases for cloud migration.** Sometimes this assumption is true. For some companies, it's important to reduce ongoing capital expenses related to servers. But it depends on several factors. Companies with a five-year to eight-year hardware refresh cycle are unlikely to see fast returns on their cloud migration. Companies with standardized or enforced refresh cycles can hit a break-even point quickly. In either case, other expenses might be the financial triggers that justify the migration. Here are a few examples of costs that are commonly overlooked when companies take a server-only or VM-only view of costs:
+In fact, some business drivers might lead you to choose a hybrid solution. Before you finalize a business model, it's smart to complete a first-round quantitative analysis, as described in the [digital estate articles](../digital-estate/5-rs-of-rationalization.md). For more information about the individual quantitative drivers involved in rationalization, see the [five Rs of rationalization](../digital-estate/5-rs-of-rationalization.md). Either approach will use easily obtained inventory data and a brief quantitative analysis to identify workloads or applications that could result in higher costs in the cloud. These approaches could also identify dependencies or traffic patterns that would necessitate a hybrid solution.
 
-- Costs of software for virtualization, servers, and middleware can be extensive. Cloud providers eliminate some of these costs. Two examples of a cloud provider reducing virtualization costs are the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#services) and [Azure reservations](https://azure.microsoft.com/reservations) programs.
+### Myth: Mirroring my on-premises environment will help me save money in the cloud
+
+During digital estate planning, it's not unheard of for businesses to detect unused capacity of more than 50% of the provisioned environment. If assets are provisioned in the cloud to match current provisioning, cost savings are hard to realize. Consider reducing the size of the deployed assets to align with usage patterns rather than provisioning patterns.
+
+### Myth: Server costs drive business cases for cloud migration
+
+Sometimes this assumption is true. For some companies, it's important to reduce ongoing capital expenses related to servers. But it depends on several factors. Companies with a five-year to eight-year hardware refresh cycle are unlikely to see fast returns on their cloud migration. Companies with standardized or enforced refresh cycles can hit a break-even point quickly. In either case, other expenses might be the financial triggers that justify the migration. Here are a few examples of costs that are commonly overlooked when companies take a server-only or VM-only view of costs:
+
+- Costs of software for virtualization, servers, and middleware can be extensive. Cloud providers eliminate some of these costs. Two examples of a cloud provider reducing virtualization costs are the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#services) and [Azure Reservations](https://azure.microsoft.com/reservations) programs.
 - Business losses caused by outages can quickly exceed hardware or software costs. If your current datacenter is unstable, work with the business to quantify the impact of outages in terms of opportunity costs or actual business costs.
 - Environmental costs can also be significant. For the average American family, a home is the biggest investment and the highest cost in the budget. The same is often true for datacenters. Real estate, facilities, and utility costs represent a fair portion of on-premises costs. When datacenters are retired, those facilities can be repurposed, or your business could potentially be released from these costs entirely.
 
-**Myth: An operating expense model is better than a capital expense model.** As explained in the [fiscal outcomes](./business-outcomes/fiscal-outcomes.md) article, an operating expense model can be a good thing. But some industries view operating expenditures negatively. Here are a few examples that would trigger tighter integration with the accounting and business units regarding the operating expense conversation:
+### Myth: An operating expense model is better than a capital expense model
+
+As explained in the [fiscal outcomes](./business-outcomes/fiscal-outcomes.md) article, an operating expense model can be a good thing. But some industries view operating expenditures negatively. Here are a few examples that would trigger tighter integration with the accounting and business units regarding the operating expense conversation:
 
 - When a business sees capital assets as a driver for business valuation, capital expense reductions could be a negative outcome. Though it's not a universal standard, this sentiment is most commonly seen in the retail, manufacturing, and construction industries.
 - A private equity firm or a company that's seeking capital influx might consider operating expense increases as a negative outcome.
@@ -38,7 +48,9 @@ Businesses are more likely to see operating expense as more favorable than capit
 
 Before you provide a business justification that focuses on a conversion from capital expense to operating expense, understand which is better for your business. Accounting and procurement can often help align the message to financial objectives.
 
-**Myth: Moving to the cloud is like flipping a switch.** Migrations are a manually intense technical transformation. When developing a business justification, especially justifications that are time sensitive, consider the following aspects that could increase the time it takes to migrate assets:
+### Myth: Moving to the cloud is like flipping a switch
+
+Migrations are a manually intense technical transformation. When developing a business justification, especially justifications that are time sensitive, consider the following aspects that could increase the time it takes to migrate assets:
 
 - **Bandwidth limitations:** The amount of bandwidth between the current datacenter and the cloud provider will drive timelines during migration.
 - **Testing timelines:** Testing applications with the business to ensure readiness and performance can be time consuming. Aligning power users and testing processes is critical.
@@ -63,8 +75,8 @@ We can unpack this equation to get a migration-specific view of the formulas for
 
 ## Migration-specific initial investment
 
-- Cloud providers like Azure offer calculators to estimate cloud investments. The [Azure pricing calculator](https://azure.microsoft.com/pricing) is one example.
-- Some cloud providers also provide cost-delta calculators. The [Azure Total Cost of Ownership (TCO) Calculator](https://azure.com/tco) is one example.
+- Cloud providers offer calculators to estimate cloud investments. Microsoft provides the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator).
+- Some cloud providers also offer cost-delta calculators. Microsoft provides the [Azure total cost of ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator).
 - For more refined cost structures, consider a [digital estate planning](../digital-estate/index.md) exercise.
 - Estimate the cost of migration.
 - Estimate the cost of any expected training opportunities. [Microsoft Learn](https://docs.microsoft.com/learn) might be able to help mitigate those costs.
@@ -79,7 +91,7 @@ After you consider the opportunities unlocked by the cloud, work with the busine
 
 ## Migration-specific cost deltas
 
-Calculate any changes to costs that will come from the proposed migration. See the [financial models](./financial-models.md) article for details about the types of cost deltas. Cloud providers often offer tools for cost-delta calculations. The [Azure Total Cost of Ownership (TCO) Calculator](https://azure.com/tco) is one example.
+Calculate any changes to costs that will come from the proposed migration. See the [financial models](./financial-models.md) article for details about the types of cost deltas. Cloud providers often offer tools for cost-delta calculations. The [Azure total cost of ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator) is one example.
 
 Other examples of costs that might be reduced by a cloud migration:
 

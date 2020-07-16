@@ -1,6 +1,26 @@
 {
    "redirections": [
       {
+         "source_path": "docs/migrate/expanded-scope/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/expanded-scope/terraform-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/terraform-landing-zone",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/azure-best-practices/contoso-migration-assessment.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/contoso-migration-assessment",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/expanded-scope/balance-the-portfolio.md",
+         "redirect_url": "/azure/cloud-adoption-framework/strategy/balance-the-portfolio",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/ready/initial-org-alignment.md",
          "redirect_url": "/azure/cloud-adoption-framework/plan/initial-org-alignment",
          "redirect_document_id": true
@@ -13,6 +33,11 @@
       {
          "source_path": "docs/ready/considerations/scaling-subscriptions.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/scaling-subscriptions",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/scaling-subscriptions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-best-practices/scale-subscriptions",
          "redirect_document_id": true
       },
       {
@@ -41,6 +66,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/ready/considerations/enterprise-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/infrastructure/misc/hybrid-consistency.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/hybrid-consistency",
          "redirect_document_id": true
@@ -48,6 +78,11 @@
       {
          "source_path": "docs/reference/azure-scaffold-examples.md",
          "redirect_url": "/azure/cloud-adoption-framework/reference/azure-scaffold",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/reference/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/getting-started/whats-new",
          "redirect_document_id": true
       },
       {
@@ -94,6 +129,101 @@
          "source_path": "docs/migrate/azure-migration-guide/organize-resources.md",
          "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-migration-guide/index",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/govern/security-baseline/cloud-security-baseline.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/security-baseline/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/migration-considerations/secure-and-manage/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/about",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-setup-guide/migration-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/migrate-landing-zone",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/technical-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/suggested-skills",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/expanded-scope/sql-migration.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/sql-migration",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/expanded-scope/vmware-host.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/vmware-host",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/expanded-scope/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/suggested-skills",
+         "redirect_document_id": true
+      },      
+      {
+         "source_path": "docs/migrate/expanded-scope/multiple-datacenters.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-datacenters",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/expanded-scope/governance-or-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/governance-or-compliance",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/expanded-scope/network-capacity-exceeded.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/azure-best-practices/network-capacity-exceeded",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/migrate/about.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/index",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/enable.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/enable",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/innovate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/innovate",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/migrate.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/whats-new.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/whats-new",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/what-is-azure.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/what-is-azure",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/getting-started/index.yml",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/landing-zone/first-landing-zone.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-security-apsec-devsecops.md",
+         "redirect_url": "/azure/cloud-adoption-framework/organize/cloud-security-application-security-devsecops",
+         "redirect_document_id": false
       }
    ]
 }

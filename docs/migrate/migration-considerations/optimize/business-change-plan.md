@@ -1,13 +1,17 @@
 ---
-title: "Guidance to developing a business change plan"
-description: A process within cloud migration that focuses on the tasks of migrating workloads to the cloud.
+title: "Develop a business change plan"
+description: Use the Cloud Adoption Framework for Azure to learn about how a business change plan can help you implement a broader user adoption plan.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 04/04/2019
-ms.topic: guide
+ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
+
+<!-- cSpell:ignore Eason -->
+
+<!-- docsTest:ignore "Eason Matrix" -->
 
 # Business change plan
 
@@ -20,8 +24,7 @@ User adoption plans focus on how users will adopt a new technology or change to 
 Although approaches may vary, general themes are present in most user adoption plans. These themes are typically based on a risk control and facilitation approach that aligns to incremental improvement. The Eason Matrix, illustrated in the figure below, represents the drivers behind those themes across a spectrum of adoption types.
 
 ![Eason Matrix of user adoption concerns](../../../_images/migrate/eason-matrix.jpg)
-
-*Eason Matrix of user adoption types.*
+_Diagram: Eason Matrix of user adoption types._
 
 These themes are often based on the assumption that introduction of new solutions to users should focus largely on risk control and facilitation of change. Additionally, IT has focused mostly on risk from the technology change and facilitation of that change.
 
@@ -61,4 +64,8 @@ After business change is documented and planned, [business testing](./business-t
 
 ## References
 
-- Eason, K. (1988) _Information technology and organizational change_, New York: Taylor and Francis.
+<!-- docsTest:disable -->
+
+- Eason, K. (1988) _Information Technology and Organizational Change_, New York: Taylor and Francis.
+
+<!-- docsTest:enable -->
