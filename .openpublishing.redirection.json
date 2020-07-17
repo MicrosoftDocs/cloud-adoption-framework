@@ -71,6 +71,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/ready/landing-zone/enterprise-scale.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
+         "redirect_document_id": true
+      },
+      {
          "source_path": "docs/infrastructure/misc/hybrid-consistency.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/considerations/hybrid-consistency",
          "redirect_document_id": true
