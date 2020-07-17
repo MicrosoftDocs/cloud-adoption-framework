@@ -9,9 +9,9 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Deploy an enterprise-scale landing zone
+# Deploy a CAF enterprise-scale landing zone in Azure
 
-An _enterprise-scale landing zone_ is an environment that's been provisioned with all of the supporting resources required to host more complex workloads. Starting with an enterprise-scale landing zone allows you to host mission-critical and secure workloads in alignment with security, governance, compliance, and operational requirements from the first deployment.
+An enterprise-scale landing zone is an environment that's been provisioned with all of the supporting resources required to host more complex workloads. Starting with an enterprise-scale landing zone allows you to host mission-critical and secure workloads in alignment with security, governance, compliance, and operational requirements from the first deployment.
 
 ## Approach
 

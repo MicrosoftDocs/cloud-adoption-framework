@@ -3,7 +3,7 @@ title: "Get started: Build new products and services in the cloud"
 description: Learn about the Innovate methodology as an approach to guide the development of new cloud products and services.
 author: JanetCThomas
 ms.author: janet
-ms.date: 05/15/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: overview
@@ -16,6 +16,12 @@ Creating new products and services in the cloud requires a different approach th
 This guide uses the sections of the Cloud Adoption Framework that are highlighted in the following illustration. While innovation is less predictable than a standard migration, it still fits within the context of the broader cloud adoption plan. This guide can help your enterprise provide the support needed to innovate and provide the structure required to create a balanced portfolio throughout cloud adoption.
 
 ![Get started with accelerating innovation in the cloud](../_images/get-started/innovation-map.png)
+
+## Preparation
+
+To support the development of your innovation strategy, the AI Maturity Model is a free tool that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each one of these levels of maturity includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies. The assessment takes 5-10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. By measuring your capabilities, we can calculate your organization's score and provide an estimate of your AI-innovation maturity on a curve.
+
+Use the [AI Maturity Model](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems. Upon completion, the assessment provides a score with an estimate of your AI innovation maturity status.
 
 ## Step 1: Document the business strategy
 
@@ -203,6 +209,18 @@ The Innovate methodology provides guidance on the tools and product management a
 - [Azure innovation guide](../innovate/innovation-guide/index.md): Use the Azure innovation guide to speed up the deployment of innovative solutions by understanding the tools and processes that can help you create a minimum viable product (MVP).
 - [Innovation best practices](../innovate/best-practices/index.md): Combine Azure services to create a toolchain for digital invention.
 - [Feedback loops](../innovate/considerations/adoption.md): Develop improved feedback loops to quickly deliver impactful innovations to your customers.
+
+## Step 9: Assess the Innovation Maturity of your Organization
+
+To support the development of your innovation strategy, The AI Maturity Model is a free tool which helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity which include foundational, approaching, aspirational, and mature. Each one of these levels of maturity includes a specific set of characteristics to help identify your organization's ability to adopt specific types of AI solutions, associated risks, and strategies. The assessment takes 5-10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics and capabilities.  By measuring these, we can compute your organization's score and provide an estimation of the AI innovation maturity on a curve.
+
+**Deliverables:**
+
+- Use the [AI Maturity Model tool](https://aiready.microsoft.com) to assess your organization's AI maturity to create AI-based systems.
+
+**Guidance to support deliverable completion:**
+
+- Once the assessment has been complete, the tool's output will provide a score with an estimation of the AI innovation maturity status.
 
 <!-- markdownlint-disable MD033 -->
 <br>
