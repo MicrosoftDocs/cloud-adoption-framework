@@ -166,7 +166,7 @@ Contoso admins provision a MySQL database instance in the primary region (`East 
 2. They add the name `contosoosticket` for the Azure database. They add the database to the production resource group `ContosoRG` and then specify credentials for it.
 3. The on-premises MySQL database is version 5.7, so they select this version for compatibility. They use the default sizes, which match their database requirements.
 
-     ![Screenshot of the "MySQL server" pane, with version 5.7 selected.](./media/contoso-migration-refactor-linux-app-service-mysql/mysql-2.png)
+    ![Screenshot of the "MySQL server" pane, with version 5.7 selected.](./media/contoso-migration-refactor-linux-app-service-mysql/mysql-2.png)
 
 4. For **Backup Redundancy Options**, they select to use **Geo-Redundant**. This option allows them to restore the database in their secondary region (`Central US`) if an outage occurs. They can only configure this option when they provision the database.
 
@@ -214,7 +214,7 @@ In brief, Contoso does the following:
 
   b. Add a source (on-premises database).
 
-  ![Screenshot of the Migration wizard "Add source Details" pane.](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-source.png)
+    ![Screenshot of the Migration wizard "Add source Details" pane.](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-source.png)
 
   c. Select a target.
 
@@ -234,11 +234,11 @@ In brief, Contoso does the following:
 
   g. Perform the final cutover.
 
-    ![Screenshot of the osticket details pane.](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover.png)
+    ![Screenshot of the osTicket details pane.](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover.png)
 
     ![Screenshot of the "Complete cutover" pane.](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-complete.png)
 
-    ![Screenshot of ](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-complete-02.png)
+    ![Screenshot of the migration activities status table.](./media/contoso-migration-refactor-linux-app-service-mysql/migration-dms-cutover-complete-02.png)
 
   h. Reinstate any foreign keys and triggers.
 
@@ -274,15 +274,15 @@ In brief, Contoso does the following:
 
 8. Finally, the admins need to update the database information on the web apps. On the MySQL instance, they open **Connection Strings**.
 
-     ![Screenshot of the "Connection Strings" link in the MySQL instance.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench7.png)
+    ![Screenshot of the "Connection Strings" link in the MySQL instance.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench7.png)
 
 9. In the strings list, they locate the web app settings, and copy them by selecting **Click to copy**.
 
     ![Screenshot of the web app settings in the MySQL instance.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench8.png)
 
-10. They open a new file in Notepad, paste the string into it, and update the string to match the osticket database, MySQL instance, and credentials settings.
+10. They open a new file in Notepad, paste the string into it, and update the string to match the osTicket database, MySQL instance, and credentials settings.
 
-     ![Screenshot of the connection string pasted in a Notepad file.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench9.png)
+    ![Screenshot of the connection string pasted in a Notepad file.](./media/contoso-migration-refactor-linux-app-service-mysql/workbench9.png)
 
 11. They can verify the server name and login from **Overview** in the MySQL instance in the Azure portal.
 
@@ -318,7 +318,7 @@ Contoso admins create a new private GitHub repo and set up a connection to the o
 
 7. They enter the connection string with the name `osticket`, and copy the string from Notepad into the **value area**. They select **MySQL** in the dropdown list next to the string, and save the settings.
 
-    ![Screenshot of the "Connection strings" pane, highlighting the osticket connection string.](./media/contoso-migration-refactor-linux-app-service-mysql/github7.png)
+    ![Screenshot of the "Connection strings" pane, highlighting the osTicket connection string.](./media/contoso-migration-refactor-linux-app-service-mysql/github7.png)
 
 ## Step 6: Configure the web apps
 
@@ -370,7 +370,7 @@ Finally, the Contoso admins set up automatic scaling for the application. Automa
 
 With migration complete, the osTicket application is refactored to running in an Azure App Service web app with continuous delivery using a private GitHub repo. The application runs in two regions for increased resilience. The osTicket database is running in Azure Database for MySQL after migration to the PaaS platform.
 
-For cleanup, Contoso needs to do the following:
+To clean up after the migration, Contoso needs to do the following:
 
 - Remove the VMware VMs from the vCenter inventory.
 - Remove the on-premises VMs from local backup jobs.
