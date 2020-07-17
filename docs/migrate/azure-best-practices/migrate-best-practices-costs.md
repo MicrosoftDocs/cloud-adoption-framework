@@ -93,7 +93,7 @@ Tuning and maintaining on-premises storage (SAN or NAS), and the networks to sup
 
 - Data that isn't accessed much and isn't business-critical doesn't need to be placed on the most expensive storage.
 - Conversely, important business-critical data should be located on higher tier storage options.
-- During migration planning, take an inventory of data and classify it by importance, in order to map it to the most suitable storage. Consider budget and costs, as well as performance. Cost shouldn't necessarily be the main factor. Picking the least expensive option could expose the workload to performance and availability risks.
+- During migration planning, take an inventory of data and classify it by importance, in order to map it to the most suitable storage. Consider budget and costs, as well as performance. Cost shouldn't necessarily be the main factor. Picking the least expensive option might expose the workload to performance and availability risks.
 
 ### Storage data types
 
@@ -238,7 +238,7 @@ With Azure Cost Management and Billing, you can:
 
 In Azure you pay for what you use, when resources are consumed, and you don't pay when they aren't. For VMs, billing occurs when a VM is allocated, and you aren't charged after a VM is deallocated. With this in mind, you should monitor VMs in use, and verify VM sizing.
 
-Continually evaluate your VM workloads to determine baselines. For example, if your workload is used heavily Monday through Friday, 8 AM to 6 PM, but hardly used outside those hours, you could downgrade VMs outside peak times. This might mean changing VM sizes, or using virtual machine scale sets to autoscale VMs up or down. Some companies "snooze" VMs, by putting them on a calendar that specifies when they should be available, and when they're not needed.
+Continually evaluate your VM workloads to determine baselines. For example, if your workload is used heavily Monday through Friday, 8 AM to 6 PM, but hardly used outside those hours, you can downgrade VMs outside peak times. This might mean changing VM sizes, or using virtual machine scale sets to autoscale VMs up or down. Some companies "snooze" VMs, by putting them on a calendar that specifies when they should be available, and when they're not needed.
 
 You can monitor VM usage by using Microsoft tools, such as Azure Cost Management and Billing, Azure Monitor, and Azure Advisor. Third-party tools are also available.
 
@@ -316,7 +316,7 @@ The Azure Resource Usage and RateCard APIs can help you accurately predict and m
 
 ## Best practice: Implement serverless technologies
 
-VM workloads are often migrated "as is" to avoid downtime. Often, VMs may host tasks that are intermittent, taking a short period to run, or alternatively taking many hours. Examples include VMs that run scheduled tasks, such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs.
+VM workloads are often migrated "as is" to avoid downtime. Often, VMs can host tasks that are intermittent, taking a short period to run, or alternatively taking many hours. Examples include VMs that run scheduled tasks, such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs.
 
 After migration, and after a thorough review of these types of tasks, you might consider migrating them to serverless technologies, such as Azure Functions or Azure Batch jobs. With this solution, you no longer need to manage and maintain the VMs, and you'll save money.
 

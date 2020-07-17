@@ -31,7 +31,7 @@ Azure provides virtual networks with these capabilities:
 - Virtual networks can connect to each other by using virtual network peering. Connected virtual networks can be in the same or different regions. Thus, resources in one virtual network can connect to resources in other virtual networks.
 - By default, Azure routes traffic between subnets within a virtual network, connected virtual networks, on-premises networks, and the internet.
 
-When planning your virtual network topology, you should consider how to arrange IP address spaces, how to implement a hub and spoke network, how to segment virtual networks into subnets, setting up DNS, and implementing Azure availability zones.
+When planning your virtual network topology, you should consider how to arrange IP address spaces, how to implement a hub and spoke network, how to segment virtual networks into subnets, setting up DNS, and implementing Azure Availability Zones.
 
 ## Best practice: Plan IP addressing
 
@@ -167,7 +167,7 @@ To implement a Site-to-Site VPN, you set up a VPN gateway in Azure.
 
 Every Azure VPN gateway consists of two instances in an active-standby configuration:
 
-- For planned maintenance or unplanned disruption to the active instance, failover occurs and the standby instance takes over automatically. This instance resumes the Site-to-Site or network-to-network connection.
+- For planned maintenance or unplanned disruption to the active instance, failover occurs and the standby instance takes over automatically. This instance resumes the site-to-site or network-to-network connection.
 - The switchover causes a brief interruption.
 - For planned maintenance, connectivity should be restored within 10 to 15 seconds.
 - For unplanned issues, the connection recovery takes longer, up to 1.5 minutes in the worst case.
@@ -179,7 +179,7 @@ When setting up a Site-to-Site VPN:
 - You create a gateway subnet in the network.
 - You create a VPN gateway, specify the gateway type (VPN), and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
 - You create a local network gateway on-premises, and configure your on-premises VPN device.
-- You create a failover Site-to-Site VPN connection between the virtual network gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. The route-based option also supports both Site-to-Site (from any computer) and Point-to-Site (from a single computer) connections, concurrently.
+- You create a failover Site-to-Site VPN connection between the virtual network gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. The route-based option also supports both site-to-site (from any computer) and point-to-site (from a single computer) connections, concurrently.
 - You specify the gateway SKU that you want to use. This depends on your workload requirements, throughput, features, and SLAs.
 - Border gateway protocol (BGP) is an optional feature. You can use it with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your virtual networks.
 
