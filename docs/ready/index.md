@@ -1,5 +1,5 @@
 ---
-title: "Prepare for cloud adoption"
+title: Prepare for cloud adoption
 description: Learn how to create a landing zone to host the workloads that you plan to build in the cloud or migrate to the cloud.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Ensure the environment is prepared for the cloud adoption plan
 
-Before adoption can begin, you must create a landing zone to host the workloads that you plan to build in the cloud or migrate to the cloud. This section of the framework guides you through the creation of a landing zone.
+Before adoption can begin, you must create a landing zone to host the workloads that you plan to build in or migrate to the cloud . This section of the framework guides you through how a landing zone is created.
 
 The following exercises help guide you through the process of creating a landing zone to support cloud adoption.
 
