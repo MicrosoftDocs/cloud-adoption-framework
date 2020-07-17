@@ -50,7 +50,7 @@ For an initial migration effort, definition of done may be overly simple. The fo
 - Network segmentation to align with proposed network design.
 - Access to compute, storage, and networking resources to host the workloads aligned to the digital estate discovery.
 - Naming and tagging schema for ease of use.
-- This environment should be treated as a _demilitarized zone (DMZ)_ with access to the public internet.
+- This environment should be treated as a perimeter network with access to the public internet.
 - During adoption efforts, the cloud adoption team would like temporary access to the environment to change service configurations.
 - For awareness only: prior to production release, these workloads will require integration with the corporate identity provider to govern ongoing identity and access for operations management purposes. At which time the cloud adoption team's access should be revoked.
 

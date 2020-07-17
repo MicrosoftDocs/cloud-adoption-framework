@@ -36,7 +36,7 @@ Each landing zone is part of a broader solution for organizing resources across 
 
 ## Governance considerations
 
-The Cloud Adoption Framework's Govern methodologies establish a process for governing the environment as a whole. There are many use cases that might require you to make governance decisions on a per-landing-zone basis. In many scenarios, governance baselines are enforced on a per-landing-zone basis even though the baselines are established holistically. It's true for the first few landing zones that an organization deploys.
+The Cloud Adoption Framework's Govern methodologies establish a process for governing the environment as a whole. Many use cases might require you to make governance decisions on a per-landing-zone basis. In many scenarios, governance baselines are enforced on a per-landing-zone basis even though the baselines are established holistically. It's true for the first few landing zones that an organization deploys.
 
 The following articles can help you make governance-related decisions about your landing zone. You can factor each decision into your governance baselines.
 

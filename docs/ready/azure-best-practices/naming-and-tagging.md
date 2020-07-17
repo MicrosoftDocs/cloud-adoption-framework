@@ -46,7 +46,7 @@ From the name, you can quickly identify the resource's type, its associated work
 
 All Azure resource types have a scope that defines the level that resource names must be unique. A resource must have a unique name within its scope.
 
-For example, a virtual network has a resource group scope, which means that there can be only one network named `vnet-prod-westus-001` in a given resource group. Other resource groups can have their own virtual network named `vnet-prod-westus-001`. Another example, subnets, tare scoped to virtual networks, which means that each subnet within a virtual network must be uniquely named.
+For example, a virtual network has a resource group scope, which means that there can be only one network named `vnet-prod-westus-001` in a given resource group. Other resource groups could have their own virtual network named `vnet-prod-westus-001`. Subnets are scoped to virtual networks, so each subnet within a virtual network must be uniquely named.
 
 Some resource names, such as PaaS services with public endpoints or virtual machine DNS labels, have global scopes, which means that they must be unique across the entire Azure platform.
 

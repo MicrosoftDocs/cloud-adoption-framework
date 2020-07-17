@@ -37,11 +37,11 @@ The examples listed above can be used as tools for accelerating TDD cycles. They
 
 [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints): Azure blueprint groups policies and other deployment tools into a repeatable package that can be assigned to multiple landing zones. Blueprints prove useful when multiple adoption efforts share common definitions of done, which you may want to update over time. It can also help with deployment during subsequent efforts to expand and refactor landing zones.
 
-[Azure resource graph](https://docs.microsoft.com/azure/governance/resource-graph): Resource graph provides a query language for creating data-driven tests based on information about the assets deployed within a landing zone. Later in the adoption plan, this tool can also define complex tests based on the interactions between workload assets and the underlying cloud environment.
+[Azure Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview): Resource Graph provides a query language for creating data-driven tests based on information about the assets deployed within a landing zone. Later in the adoption plan, this tool can also define complex tests based on the interactions between workload assets and the underlying cloud environment.
 
-[Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/overview): These templates provide the primary source code for any environment deployed in Azure. When using third-party tools like Terraform to develop source code and which deploy a landing zone, the tools will generate their own templates. Those templates are then submitted to the Azure Resource Manager.
+[Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/overview): These templates provide the primary source code for any environment deployed in Azure. Some third-party tools like Terraform generate their own ARM templates, which are then submitted to Azure Resource Manager.
 
-[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview): Resource Manager provides a consistent platform for build and deploy functions. This platform is what manages a landing zone's deployment from source code.
+[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview): Resource Manager provides a consistent platform for build and deploy functions. This platform can deploy landing zones based on source code definitions.
 
 ## Next steps
 

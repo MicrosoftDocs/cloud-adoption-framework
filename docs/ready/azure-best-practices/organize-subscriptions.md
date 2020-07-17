@@ -15,7 +15,7 @@ If you have only a few subscriptions, then managing them independently is relati
 
 ## Azure management groups
 
-Azure management groups allow an organization's subscriptions access, policies, and compliance to be managed efficiently. Each management group is a container for one or more subscriptions.
+Azure management groups help you efficiently manage access, policies, and compliance for your subscriptions. Each management group is a container for one or more subscriptions.
 
 Management groups are arranged in a single hierarchy. You define this hierarchy in your Azure Active Directory (Azure AD) tenant to align with your organization's structure and needs. The top level is called the _root management group_. You can define up to six levels of management groups in your hierarchy. Each subscription is contained by only one management group.
 
@@ -53,7 +53,7 @@ _Figure 2: An example of a management group hierarchy._
 
 Some basic examples of using management groups to separate different workloads include:
 
-**Production versus nonproduction workloads:** Use management groups to more easily manage different roles and policies between production and nonproduction subscriptions. For example, nonproduction subscriptions may grant developers contributor access, while in production developers have only reader access.
+**Production versus nonproduction workloads:** Use management groups to more easily manage different roles and policies between production and nonproduction subscriptions. For example, developers might have contributor access in nonproduction subscriptions but only reader access in nonproduction subscriptions.
 
 **Internal services versus external services:** Enterprises often have different requirements, policies, and roles for internal services versus external customer-facing services.
 

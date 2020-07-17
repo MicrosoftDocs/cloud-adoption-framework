@@ -176,6 +176,8 @@ It is essential to maintain a healthy security posture as you adopt Azure. Besid
 
 - Implement a zero-trust approach for access to the Azure platform, where appropriate.
 
+<!-- docsTest:ignore "and conditional access" -->
+
 ## Service enablement framework
 
 As business units request to deploy workloads to Azure, additional visibility into a workload is needed to determine how to achieve appropriate levels of governance, security, and compliance. When a new service is required that has not been onboarded, allowing the service needs to occur. The following table provides a framework to assess enterprise security readiness of Azure services:

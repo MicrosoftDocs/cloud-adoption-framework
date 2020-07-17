@@ -96,7 +96,7 @@ When customer empathy is strong, a clearly existing problem should be easy to id
 
 ## When not to apply this approach
 
-There are many legal, compliance, and industry requirements that might require an alternative approach. If public releases of a developing solution create risk to patent timing, intellectual property protection, customer data leaks, or violation of established compliance requirements, this approach may not be suitable. When perceived risks like these exist, consult legal counsel before adopting any guided approach to release management.
+Many legal, compliance, and industry requirements that might necessitate an alternate approach. If public releases of a developing solution create risk to patent timing, intellectual property protection, customer data leaks, or violation of established compliance requirements, this approach may not be suitable. When perceived risks like these exist, consult legal counsel before adopting any guided approach to release management.
 
 ## References
 

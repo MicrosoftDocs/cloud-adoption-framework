@@ -71,7 +71,7 @@ In the example iteration paths above, the cloud adoption team is migrating their
 In this example, the planned iterations run as follows:
 
 - The cloud platform team starts the development efforts by deploying an initial landing zone. That landing zone allows the cloud adoption team to deploy and begin testing their first workload.
-- To prepare for the cloud adoption team's next deployment of 10 workloads, the cloud platform team works ahead to refactor and add a connected environment, treating the cloud as a demilitarized zone.
+- To prepare for the cloud adoption team's next deployment of 10 workloads, the cloud platform team works ahead to refactor and add a connected environment, treating the cloud as a perimeter network.
 - Before the adoption team can release their first production workload, the security team requires a security review. While the adoption team deploys their first 10 workloads, the platform team moves ahead to define and implement security requirements.
 - By the time the first workload is released to production, both teams should have enough learnings to prepare for a longer term shared service model. Centralizing core service architectures will help align governance and operations team. Centralizing core services will help prepare the adoption team to scale and release the next several waves of production workloads.
 - As the team approaches their goal of migrating 100 workloads, the team will natural begin to move towards more of a cloud center of excellence collaboration model and team structure.
@@ -98,12 +98,12 @@ For this example, the above set of agreed upon conditions will allow the adoptio
 
 ## Meeting long-term requirements while refactoring
 
-The section of the Ready methodology on expanding your landing zone will aid in moving towards the longer term requirements. As the cloud adoption team progresses with their adoption plan, the [Expanding your landing zone section](../considerations/index.md)) will provide guidance to help make decisions and refactor in accordance with the evolving requirements of various teams.
+The section of the Ready methodology on expanding your landing zone will aid in moving towards the longer term requirements. As the cloud adoption team progresses with their adoption plan, review [Expand your landing zone](../considerations/index.md)) for guidance to help make decisions and refactor to meet the evolving requirements of various teams.
 
 ![Parallel landing zone iteration](../../_images/ready/refactor-methodologies.png)
-_Figure 5: Deeper methodologies assisting parallel landing zone iteration._
+_Figure 5: Deeper methodologies assisting a parallel landing zone iteration._
 
-Each subsection of [Expanding your landing zone](../considerations/index.md) maps to one of the additions outlined in the image above. Beyond those basic expansions, the deeper methodologies (such as govern or manage) of this framework will aid in going beyond basic landing zone modifications to implement long-term disciplines.
+Each subsection of [Expand your landing zone](../considerations/index.md) maps to one of the additions outlined in the image above. Beyond those basic expansions, the deeper methodologies (such as govern or manage) of this framework will aid in going beyond basic landing zone modifications to implement long-term disciplines.
 
 ## Next steps
 

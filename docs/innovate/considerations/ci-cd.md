@@ -17,7 +17,7 @@ The ultimate test of innovation is customer reaction to your invention. Did the 
 
 ## Reduce friction that affects adoption
 
-There are a few key friction points to adoption that can be minimized through a combination of technology and processes. For readers with knowledge of continuous integration (CI) and continuous deployment (CD) or DevOps processes, the following will be familiar. This article establishes a starting point for cloud adoption teams that fuels innovation and feedback loops. In the future, this starting point might foster more robust CI/CD or DevOps approaches as the products and teams mature.
+A few key friction points to adoption can be minimized through a combination of technology and processes. For readers with knowledge of continuous integration (CI) and continuous deployment (CD) or DevOps processes, the following will be familiar. This article establishes a starting point for cloud adoption teams that fuels innovation and feedback loops. In the future, this starting point might foster more robust CI/CD or DevOps approaches as the products and teams mature.
 
 As described in [Measure for customer impact](./measure.md), positive validation of any hypothesis requires iteration and determination. You'll experience far more failures than wins during any innovation cycle. This is expected. However, when a customer need, hypothesis, and solution align at scale, the world changes quickly. This article aims to minimize [technical spikes](./build.md#reduce-complexity-and-delay-technical-spikes) that slow innovation but still make sure you keep a few solid best practices in place. Doing so will help the team design for future success while delivering on current customer needs.
 
@@ -59,7 +59,7 @@ As adoptions scale and a hypothesis gets closer to true innovation at scale, the
 In continuous integration, code changes are frequently merged into the main branch. Automated build and test processes make sure that code in the main branch is always production quality. This ensures that developers are working together to develop shared solutions that provide accurate and reliable feedback loops.
 
 Azure DevOps and [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines) provide continuous integration capabilities with just a few steps in GitHub or a variety of other repositories.
-Learn more about [continuous integration](https://docs.microsoft.com/azure/devops/learn/what-is-continuous-integration), or for more information, check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration). There are also solution architectures to accelerate creation of your [CI/CD pipelines through Azure DevOps](https://azure.microsoft.com/solutions/devops).
+Learn more about [continuous integration](https://docs.microsoft.com/azure/devops/learn/what-is-continuous-integration), or for more information, check out the [hands-on lab](https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration). Solution architectures are available that can accelerate creation of your [CI/CD pipelines via Azure DevOps](https://azure.microsoft.com/solutions/devops).
 
 ## Reliable testing
 

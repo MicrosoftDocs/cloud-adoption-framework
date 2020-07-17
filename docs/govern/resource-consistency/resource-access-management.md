@@ -48,10 +48,10 @@ _Figure 4: Azure Resource Manager._
 
 The following figure shows three clients: [PowerShell](https://docs.microsoft.com/powershell/azure/overview), the [Azure portal](https://portal.azure.com), and the [Azure CLI](https://docs.microsoft.com/cli/azure):
 
-![Diagram of Azure clients connecting to the Azure Resource Manager API](../../_images/govern/design/governance-1-13.png)
-_Figure 5: Azure clients connect to the Azure Resource Manager RESTful API._
+![Diagram of Azure clients connecting to the Resource Manager REST API](../../_images/govern/design/governance-1-13.png)
+_Figure 5: Azure clients connect to the Resource Manager REST API._
 
-While these clients connect to Azure Resource Manager using the RESTful API, Azure Resource Manager does not include functionality to manage resources directly. Rather, most resource types in Azure have their own [resource provider](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#terminology).
+While these clients connect to Resource Manager using the REST API, Resource Manager does not include functionality to manage resources directly. Rather, most resource types in Azure have their own [resource provider](https://docs.microsoft.com/azure/azure-resource-manager/management/overview#terminology).
 
 ![Azure resource providers](../../_images/govern/design/governance-1-14.png)
 _Figure 6: Azure resource providers._

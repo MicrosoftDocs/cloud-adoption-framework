@@ -15,9 +15,9 @@ ms.custom: virtual-network
 
 # Perimeter networks
 
-[Perimeter networks][perimeter-network] enable secure connectivity between your cloud networks and your on-premises or physical datacenter networks, along with any connectivity to and from the internet. They're also known as demilitarized zones (DMZs).
+[Perimeter networks][perimeter-network] enable secure connectivity between your cloud networks and your on-premises or physical datacenter networks, along with any connectivity to and from the internet. A perimeter network is sometimes called a demilitarized zone or DMZ.
 
-For perimeter networks to be effective, incoming packets must flow through security appliances hosted in secure subnets before reaching back-end servers. Examples are the firewall, intrusion detection systems, and intrusion prevention systems. Before they leave the network, internet-bound packets from workloads should also flow through the security appliances in the perimeter network. The purposes of this flow are policy enforcement, inspection, and auditing.
+For perimeter networks to be effective, incoming packets must flow through security appliances hosted in secure subnets before reaching back-end servers. Examples include the firewall, intrusion detection systems, and intrusion prevention systems. Before they leave the network, internet-bound packets from workloads should also flow through the security appliances in the perimeter network. The purposes of this flow are policy enforcement, inspection, and auditing.
 
 Perimeter networks make use of the following Azure features and services:
 
@@ -32,13 +32,13 @@ Perimeter networks make use of the following Azure features and services:
 > [!NOTE]
 > Azure reference architectures provide example templates that you can use to implement your own perimeter networks:
 >
-> - [Implement a DMZ between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
-> - [Implement a DMZ between Azure and the internet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+> - [Implement a perimeter network between Azure and your on-premises datacenter](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)
+> - [Implement a perimeter network between Azure and the internet](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
 
 Usually, your Central IT team and security teams are responsible for defining requirements for operating your perimeter networks.
 
 ![Example of a hub and spoke network topology](../../_images/azure-best-practices/network-high-level-perimeter-networks.png)
-_Figure 1: Example hub-and-spoke network topology._
+_Figure 1: Example of a hub and spoke network topology._
 
 The diagram above shows an example [hub and spoke network topology](./hub-spoke-network-topology.md) that implements enforcement of two perimeters with access to the internet and an on-premises network. Both perimeters reside in the DMZ hub. In the DMZ hub, the perimeter network to the internet can scale up to support many lines of business via multiple farms of WAFs and Azure Firewall instances that help protect the spoke virtual networks. The hub also allows for connectivity via VPN or Azure ExpressRoute as needed.
 
@@ -102,7 +102,7 @@ With some Azure features, you can associate service endpoints to a [public IP][P
 
 [Azure DDoS Protection Standard][DDoS] provides additional mitigation capabilities over the [basic service][DDoS] tier that are tuned specifically to Azure Virtual Network resources. DDoS protection standard is simple to enable and requires no application changes.
 
-You can tune protection policies through dedicated traffic monitoring and machine-learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples are Azure Load Balancer, Application Gateway, and Service Fabric instances.
+You can tune protection policies through dedicated traffic monitoring and machine-learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples include Azure Load Balancer, Application Gateway, and Service Fabric instances.
 
 Real-time telemetry is available through Azure Monitor views both during an attack and for historical purposes. You can add application-layer protection by using the Web Application Firewall in Azure Application Gateway. Protection is provided for IPv4 Azure public IP addresses.
 

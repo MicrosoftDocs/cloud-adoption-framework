@@ -14,7 +14,7 @@ Security Baseline:
 
 - Any asset deployed to the cloud must have an approved data classification.
 - No assets identified with a protected level of data may be deployed to the cloud, until sufficient requirements for security and governance can be approved and implemented.
-- Until minimum network security requirements can be validated and governed, cloud environments are seen as a demilitarized zone and should meet similar connection requirements to other datacenters or internal networks.
+- Until minimum network security requirements can be validated and governed, cloud environments are seen as perimeter networks and should meet similar connection requirements to other datacenters or internal networks.
 
 Resource Consistency:
 
