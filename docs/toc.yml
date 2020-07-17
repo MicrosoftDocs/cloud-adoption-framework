@@ -372,6 +372,8 @@ items:
       - name: Migration scenarios
         items:
         - name: Overview
+          href: scenarios/index.md
+        - name: Contoso overview
           href: migrate/azure-best-practices/contoso-migration-overview.md
         - name: Windows Server workloads
           items:
