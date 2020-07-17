@@ -17,14 +17,14 @@ An operations team focuses on monitoring, repairing, and remediating issues rela
 
 ## Step 1: Determine whether a cloud operations team is needed
 
-Before you can release any workloads into production, an agreement must be reached on the accountability for delivery of [cloud operations functions](../../organize/cloud-operations.md). For some portfolios, operational responsibilities might rest with the DevOps and cloud adoption teams. In other cases, a managed service provider with cloud operations experience might assume ongoing operational duties.
+Before you can release any workloads into production, an agreement must be reached on the accountability for delivery of [cloud operations functions](../../organize/cloud-operations.md). For some portfolios, operational responsibilities might belong to the DevOps and cloud adoption teams. In other cases, a managed service provider with cloud operations experience might assume ongoing operational duties.
 
 If no DevOps or service-provider operations agreements are in place, it's safe to assume that someone within IT will need to commit to ongoing operational duties regarding the management of production workloads.
 
 **Deliverables:**
 
 - Determine whether you need a cloud operations team.
-- Document the decision and responsible individuals in the [RACI (responsible, accountable, consulted, and informed) template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
+- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Document the decision and responsible individuals in the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 

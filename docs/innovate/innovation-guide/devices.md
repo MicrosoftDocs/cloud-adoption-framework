@@ -13,21 +13,11 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore umarmohamedusman umarm Moovit -->
 
-::: zone target="docs"
-
-# Azure innovation guide: Interact through devices
-
-::: zone-end
-
-::: zone target="chromeless"
-
 # Interact through devices
 
-::: zone-end
+Innovate through intermittently connected and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with AI technology, you can build every type of intelligent application and system you can envision.
 
-Innovate through intermittently connected and perceptive edge devices. Orchestrate millions of such devices, acquire and process limitless data, and take advantage of a growing number of multisensory, multidevice experiences. For devices at the edge of your network, Azure provides a framework for building immersive and effective business solutions. With ubiquitous computing, enabled by Azure combined with artificial intelligence (AI) technology, you can build every type of intelligent application and system you can envision.
-
-Azure customers employ a continually expanding set of connected systems and devices that gather and analyze data&mdash;close to their users, the data, or both. Users get real-time insights and experiences, delivered by highly responsive and contextually aware apps. By moving parts of the workload to the edge, these devices can spend less time sending messages to the cloud and react more quickly to spatial events.
+Azure customers employ a continually expanding set of connected systems and devices that gather and analyze data (close to their users, the data, or both). Users get real-time insights and experiences, delivered by highly responsive and contextually aware applications. By moving parts of the workload to the edge, these devices can spend less time sending messages to the cloud and react more quickly to spatial events.
 
 > [!div class="checklist"]
 >
@@ -37,7 +27,7 @@ Azure customers employ a continually expanding set of connected systems and devi
 > - [Azure Kinect DK](https://docs.microsoft.com/azure/kinect-dk/about-azure-kinect-dk)
 > - Drones
 > - [Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview)
-> - [IoT Plug and Play](https://docs.microsoft.com/azure/iot-pnp/overview-iot-plug-and-play)
+> - [IoT plug and play](https://docs.microsoft.com/azure/iot-pnp/overview-iot-plug-and-play)
 
 <!-- markdownlint-disable MD025 -->
 
@@ -58,8 +48,7 @@ Here are a few features you'll find:
 
 ### Learn more
 
-- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-
+- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
 - [Azure IoT Hub Device Provisioning Service (DPS)](https://docs.microsoft.com/azure/iot-dps)
 
 ::: zone-end
@@ -79,7 +68,7 @@ To create an IoT hub:
 
 <!-- markdownlint-enable DOCSMD001 -->
 
-The Azure IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables zero-touch, just-in-time provisioning.
+The Azure IoT Hub Device Provisioning Service is a helper service for Azure IoT Hub that enables zero-touch, just-in-time provisioning.
 
 <!-- markdownlint-disable MD024 -->
 
@@ -125,7 +114,7 @@ To create Azure Digital Twins:
 1. In the left pane, select **Create a resource**.
 2. Search for **digital twins**, then select **Digital Twins**.
 3. Select **Create** to start the deployment process.
-4. To review existing Digital Twins, select this button:
+4. To review existing digital twins, select this button:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
@@ -141,7 +130,7 @@ To create Azure Digital Twins:
 
 In addition to traditional location capabilities such as nearby, traffic, and routing, the Azure Maps service enables enterprises to create solutions by using real-time location intelligence that's powered by world-class mobility technology partners TomTom and Moovit. Easily integrate advanced location and mobility capabilities into your applications with geospatial services.
 
-**Data Service Preview:** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
+**Azure Maps Data Service (preview):** Upload and store geospatial data for use with spatial operations or image composition to reduce latency, increase productivity, and enable new scenarios within your applications.
 
 **Spatial operations:** Enhance your location intelligence with a library of common geospatial mathematical calculations, including geofencing, closest point, great circle distance, and buffers.
 
@@ -159,7 +148,7 @@ In addition to traditional location capabilities such as nearby, traffic, and ro
 
 ### Action
 
-To use Location Intelligence:
+To use location intelligence:
 
 1. Go to **Azure Maps Accounts**.
 2. Select **Create Azure Maps accounts**.
@@ -178,13 +167,15 @@ Azure Spatial Anchors enables developers to work with mixed-reality platforms to
 
 **Add context to the real world:** Give your users a better understanding of their data, where they need it, and when they need it by placing and connecting your digital content to physical points of interest.
 
-**Share holograms across devices:** Accelerate decisions and results by bringing 3D to your team and customers on the device of their choice. Spatial Anchors makes it easy for people in the same space to participate in multiuser, mixed-reality applications.
+**Share holograms across devices:** Accelerate decisions and results by bringing 3D to your team and customers on the device of their choice. Spatial anchors makes it easy for people in the same space to participate in multiuser, mixed-reality applications.
 
-**Engaging experiences:** Connect spatial anchors by creating relationships between them, and deliver a user experience that might include two or more points of interest that a user must interact with to complete a task. Your app can let a user place a virtual artifact in the real world. In an industrial setting, a user could receive contextual information about a machine by pointing a supported device camera at it.
+**Engaging experiences:** Connect spatial anchors by creating relationships between them, and deliver a user experience that might include two or more points of interest that a user must interact with to complete a task. Your application can let a user place a virtual artifact in the real world. In an industrial setting, a user could receive contextual information about a machine by pointing a supported device camera at it.
 
 Azure Spatial Anchors is composed of a managed service and client SDKs for supported device platforms.
 
 ::: zone target="docs"
+
+### Learn more
 
 - [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview)
 
@@ -194,10 +185,10 @@ Azure Spatial Anchors is composed of a managed service and client SDKs for suppo
 
 ### Action
 
-To use Spatial experiences:
+To use Azure Spatial Anchors:
 
-1. Go to **Spatial Anchors Accounts**.
-2. Select **Create spatial anchors accounts**.
+1. Go to **Spatial Anchors accounts**.
+2. Select **Create Spatial Anchors account**.
 
 <!-- markdownlint-disable DOCSMD001 -->
 
@@ -218,7 +209,6 @@ The process of rendering is computationally intensive. There can be many frames 
 ### Learn more
 
 - [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/overview/about)
-
 - [Rendering using Azure](https://docs.microsoft.com/azure/batch/batch-rendering-service)
 
 ::: zone-end

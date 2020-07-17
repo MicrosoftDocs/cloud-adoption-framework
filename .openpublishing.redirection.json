@@ -224,6 +224,61 @@
          "source_path": "docs/organize/cloud-security-apsec-devsecops.md",
          "redirect_url": "/azure/cloud-adoption-framework/organize/cloud-security-application-security-devsecops",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/blockers-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/operating-model-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/team-roadmap-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/central-it.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-automation.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-center-of-excellence.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-migration.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/get-started/cloud-platform.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/contribution.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/faq.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/template.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/index",
+         "redirect_document_id": false
       }
    ]
 }

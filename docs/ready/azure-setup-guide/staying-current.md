@@ -19,7 +19,7 @@ Cloud platforms like Azure change faster than many organizations are accustomed 
 
 <!-- markdownlint-disable MD025 -->
 
-# [Top resources](#tab/TopResources)
+## [Top resources](#tab/TopResources)
 
 <!-- markdownlint-enable MD025 -->
 
@@ -42,7 +42,7 @@ The following resources can help you stay current with Azure:
 
 <!-- markdownlint-disable MD025 -->
 
-# [Additional resources](#tab/AdditionalResources)
+## [Additional resources](#tab/AdditionalResources)
 
 <!-- markdownlint-enable MD025 -->
 

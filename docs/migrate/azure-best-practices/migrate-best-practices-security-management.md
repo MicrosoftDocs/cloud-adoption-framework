@@ -78,7 +78,7 @@ Encryption is an important part of Azure security practices. Ensuring that encry
 
 Unlike IaaS where you manage your own VMs and infrastructure, in a PaaS model platform and infrastructure is managed by the provider, leaving you to focus on core application logic and capabilities. With so many different types of PaaS services, each service is evaluated individually for security purposes. As an example, let's see how we might enable encryption for Azure SQL Database.
 
-- **Always Encrypted:** Use the Always Encrypted wizard in SQL Server Management Studio to protect data at rest.
+- **Always Encrypted:** Use the Always Encrypted Wizard in SQL Server Management Studio to protect data at rest.
   - You create an Always Encrypted key to encrypt individual column data.
   - Always Encrypted keys can be stored as encrypted in database metadata, or stored in trusted key stores such as Azure Key Vault.
   - Application changes will probably be needed to use this feature.
@@ -124,7 +124,7 @@ Azure provides a couple of solutions:
   - Applications can securely access information in the vault using URIs, without needing custom code.
   - Azure Key Vault allows you to lock down access via Azure security controls and to seamlessly implement 'rolling keys'. Microsoft does not see or extract your data.
 - **Azure App Service Environment:** If an application that you migrate needs extra protection, consider adding an App Service Environment and Web Application Firewall to protect the application resources.
-  - The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, docker containers, mobile apps, and function apps.
+  - The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, Docker containers, mobile apps, and function apps.
   - It's useful for applications that are very high scale, require isolation and secure network access or have high memory utilization.
 - **Web Application Firewall:** A feature of Azure Application Gateway that provides centralized protection for web apps.
   - It protects web apps without requiring back-end code modifications.
@@ -138,7 +138,7 @@ Azure provides a couple of solutions:
 
 - Read the [Azure Key Vault overview](https://docs.microsoft.com/azure/key-vault/general/overview).
 - Learn about [Web Application Firewall](https://docs.microsoft.com/azure/application-gateway/waf-overview).
-- Read an [introduction to App Service Environments](https://docs.microsoft.com/azure/app-service/environment/intro).
+- Read an [introduction to App Service environments](https://docs.microsoft.com/azure/app-service/environment/intro).
 - Learn how to [configure a web app to read secrets from Key Vault](https://docs.microsoft.com/azure/key-vault/tutorial-web-application-keyvault).
 - Learn about [Web Application Firewall](https://docs.microsoft.com/azure/application-gateway/waf-overview).
 
@@ -272,7 +272,7 @@ Just as blueprint allows engineers and architects to sketch a project's design p
 
 Building secure, scalable, and manageable workloads in Azure can be daunting. With continual changes, it can be difficult to keep up with different features for an optimal environment. Having a reference to learn from can be helpful when designing and migrating your workloads. Azure and Azure partners have built several sample reference architectures for various types of environments. These samples are designed to provide ideas that you can learn from and build on.
 
-Reference architectures are arranged by scenario. They contain best practices and advice on management, availability, scalability, and security. The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, docker containers, mobile apps, and functions. App Service adds the power of Azure to your application, with security, load balancing, autoscaling, and automated management. You can also take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps and GitHub, package management, staging environments, custom domain, and SSL certificates. App Service is useful for applications that need isolation and secure network access, and those that use high amounts of memory and other resources that need to scale.
+Reference architectures are arranged by scenario. They contain best practices and advice on management, availability, scalability, and security. The Azure App Service Environment provides a fully isolated and dedicated environment for running applications such as Windows and Linux web apps, Docker containers, mobile apps, and functions. App Service adds the power of Azure to your application, with security, load balancing, autoscaling, and automated management. You can also take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps and GitHub, package management, staging environments, custom domain, and SSL certificates. App Service is useful for applications that need isolation and secure network access, and those that use high amounts of memory and other resources that need to scale.
 
 **Learn more:**
 
@@ -350,7 +350,7 @@ You can use Azure Backup to back up VMs in a couple of ways.
 - **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups as well as granular backup and restore options. Backup is up to three times a day, at the file/folder level. It isn't app-aware and Linux isn't supported. Install the Microsoft Azure Recovery Services (MARS) agent on each VM that you want to back up using this method.
 - **Protect the VM to Azure Backup server.** Azure Backup server is provided free with Azure Backup. The VM is backed up to local Azure Backup server storage. You then back up the Azure Backup server to Azure in a vault. Backup is app-aware, with full granularity over backup frequency and retention. You can back up at the application level, for example by backing up SQL Server or SharePoint.
 
-For security, Azure Backup encrypts data in-flight using AES-256 and sends it over HTTPS to Azure. Backed-up data at-rest in Azure is encrypted using [Azure Storage encryption](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
+For security, Azure Backup encrypts data in-flight using AES-256 and sends it over HTTPS to Azure. Backed-up data at rest in Azure is encrypted using [Azure Storage encryption](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
 
 ![Azure Backup](./media/migrate-best-practices-security-management/iaas-backup.png)
 _Azure Backup._
@@ -422,7 +422,7 @@ Azure managed disks simplify disk management for Azure Virtual Machines by manag
 
 You might have moved your workloads to Azure for its immense scaling capabilities. But moving your workload doesn't mean that Azure will automatically implement scaling without your input. As an example:
 
-- If your marketing organization pushes a new tv advertisement that drives 300% more traffic, this could cause site availability issues. Your newly migrated workload might hit assigned limits and crash.
+- If your marketing organization pushes a new tv advertisement that drives 300 percent more traffic, this could cause site availability issues. Your newly migrated workload might hit assigned limits and crash.
 - Another example might be a distributed denial-of-service (DDoS) attack on your migrated workload. In this case you might not want to scale, but to prevent the source of the attacks from reaching your resources.
 
 These two cases have different resolutions, but for both you need an insight into what's happening with usage and performance monitoring.

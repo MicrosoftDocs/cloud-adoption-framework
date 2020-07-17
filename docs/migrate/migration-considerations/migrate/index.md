@@ -39,7 +39,7 @@ In addition to the high-level accountability, there are actions that an individu
 
 ## Next steps
 
-With a general understanding of the migration process, you are ready to [decide on a promotion model](./promotion-models.md).
+With a general understanding of the migration process, you're ready to [decide on a promotion model](./promotion-models.md).
 
 > [!div class="nextstepaction"]
 > [Decide on a promotion model](./promotion-models.md)

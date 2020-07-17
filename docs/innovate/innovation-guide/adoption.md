@@ -11,17 +11,7 @@ ms.custom: fasttrack-edit, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="docs"
-
-# Azure innovation guide: Prepare for customer feedback
-
-::: zone-end
-
-::: zone target="chromeless"
-
 # Prepare for customer feedback
-
-::: zone-end
 
 User adoption, engagement, and retention are key to successful innovation. Why?
 
@@ -30,7 +20,7 @@ Building an innovative new solution isn't about giving users what they want or t
 - **Quantitative (testing feedback):** This feedback measures the actions we hope to see.
 - **Qualitative (customer feedback):** This feedback tells us what those metrics mean in the customer's voice.
 
-Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed apps. The article on [building GitHub repositories](https://docs.microsoft.com/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml) can help you get started with your repo.
+Before you integrate feedback loops, you need to have a shared repository for your solution. A centralized repo will provide a way to record and act on all the feedback coming in about your project. [GitHub](https://github.com) is the home for open source software. It's also one of the most commonly used platforms for hosting source code repositories for commercially developed applications. The article on [building GitHub repositories](https://docs.microsoft.com/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml) can help you get started with your repo.
 
 Each of the following tools in Azure integrates with (or is compatible with) projects hosted in GitHub:
 
@@ -59,7 +49,7 @@ To view quantitative data on your applications:
 
 ::: zone target="docs"
 
-To view the data about your apps, go to the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Insights%2FComponents).
+To view the data about your applications, go to the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Insights%2FComponents).
 
 ::: zone-end
 
@@ -73,7 +63,7 @@ To view the data about your apps, go to the [Azure portal](https://portal.azure.
 
 The connected economy is changing the way businesses innovate. Markets and industries are being disrupted faster than ever. Disruption takes many forms and businesses must grapple with the _innovator's dilemma_: how to set the pace of change without stumbling over ongoing business activity.
 
-Enterprises are using APIs externally to change how they interact with their customers and partners. Internally, they're using APIs to seamlessly connect distinct parts of the business. API economy operates on four building blocks: social, mobile, analytics, and cloud. Apps and services can be linked rapidly and cost-effectively to create an extended value proposition.
+Enterprises are using APIs externally to change how they interact with their customers and partners. Internally, they're using APIs to seamlessly connect distinct parts of the business. API economy operates on four building blocks: social, mobile, analytics, and cloud. Applications and services can be linked rapidly and cost-effectively to create an extended value proposition.
 
 <!-- markdownlint-disable MD024 -->
 
@@ -119,7 +109,7 @@ The backlog (or board) is where feedback is recorded as user stories. It's also 
 
 ### Action
 
-Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops).
+Azure Board and Azure Pipelines require a portal that's separate from GitHub and Azure. Get started using [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops).
 
 ::: zone-end
 
@@ -158,7 +148,7 @@ To view current deployments in your pipeline:
 
 1. Go to **App Services**.
 2. Select the desired application from the list.
-3. Select **Deployment Center** in the **Deployment** section of the App Services pane.
+3. Select **Deployment Center** in the **Deployment** section of the **App Services** pane.
 
 ::: zone target="chromeless"
 
@@ -181,4 +171,4 @@ To view your applications in App Service, go to the [Azure portal](https://porta
 Start building out your deployment pipelines:
 
 - [Create your first pipeline](https://docs.microsoft.com/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2)
-- [GitHub Release tasks](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops)
+- [`GitHub Release` tasks](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops)
