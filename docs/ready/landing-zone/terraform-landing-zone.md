@@ -1,6 +1,6 @@
 ---
-title: "Use Terraform to build your landing zones"
-description: Learn to use Terraform to build your landing zones.
+title: Use Terraform to build your landing zones
+description: Learn to use Terraform by HashiCorp to build your landing zones.
 author: arnaudlh
 ms.author: arnaul
 ms.date: 02/25/2020
@@ -13,7 +13,7 @@ ms.subservice: ready
 
 # Use Terraform to build your landing zones
 
-Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is HashiCorp Terraform. This section shows how to use a sample landing zone to deploy foundational governance, accounting, and security capabilities for an Azure subscription.
+Azure provides native services for deploying your landing zones. Other third-party tools can also help with this effort. One such tool that customers and partners often use to deploy landing zones is Terraform by HashiCorp. This section shows how to use a sample landing zone to deploy foundational governance, accounting, and security capabilities for an Azure subscription.
 
 ## Purpose of the landing zone
 
@@ -28,6 +28,7 @@ Reuse of components is a fundamental principle of infrastructure as code. Module
 The first landing zone deploys the following components in your subscription:
 
 ![Foundational landing zone using Terraform](../../_images/ready/foundations-terraform-landing-zone.png)
+_Figure 1: A foundation landing zone using Terraform._
 
 ## Capabilities
 
@@ -198,10 +199,7 @@ After you've reviewed the configuration, you can deploy the configuration as you
 
 ## Next steps
 
-The foundation landing zone lays the groundwork for a complex environment in a decomposed manner. This edition provides a set of simple capabilities that can be extended by:
-
-- Adding other modules to the blueprint.
-- Layering additional landing zones on top of it.
+The foundation landing zone lays the groundwork for a complex environment in a decomposed manner. This edition provides a set of simple capabilities that can be extended by adding other modules to the blueprint or layering additional landing zones on top of it.
 
 Layering your landing zones is a good practice for decoupling systems, versioning each component that you're using, and allowing fast innovation and stability for your infrastructure as code deployment.
 

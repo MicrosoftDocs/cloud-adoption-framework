@@ -11,7 +11,7 @@ ms.subservice: ready
 
 <!-- docsTest:ignore "CAF Foundation blueprint" -->
 
-# Deploy a CAF Foundation blueprint
+# Deploy a CAF Foundation blueprint in Azure
 
 The CAF Foundation blueprint does not deploy a landing zone. Instead, it deploys the tools required to establish a governance MVP (minimum viable product) to begin developing your governance disciplines. This blueprint is designed to be additive to an existing landing zone and can be applied to the CAF Migration landing zone blueprint with a single action.
 
@@ -28,11 +28,11 @@ This implementation option provides an opinionated approach to the common design
 
 ### Deployment options
 
-This implementation option deploys a _minimum viable product (MVP)_ to serve as the foundation for your governance disciplines. The team will follow a modular refactoring-based approach to mature the governance disciplines using the [Govern methodology](../../govern/index.md).
+This implementation option deploys an MVP to serve as the foundation for your governance disciplines. The team will follow a modular refactoring-based approach to mature the governance disciplines using the [Govern methodology](../../govern/index.md).
 
 ### Enterprise enrollment
 
-This implementation option does not take an inherent position on enterprise enrollment. This approach is designed to be applicable to customers regardless of contractual agreements with Microsoft or Microsoft partners. Prior to deployment of this implementation option, it is assumed that the customer has already created a target subscription.
+This implementation option does not take an inherent position on enterprise enrollment. This approach is designed to be applicable to customers regardless of contractual agreements with Microsoft or Microsoft partners. Prior to deployment of this implementation option, it's assumed that the customer has already created a target subscription.
 
 ### Identity
 
@@ -50,7 +50,7 @@ The governance team should compare and contrast the elements of resource organiz
 
 To aid in this comparison early in adoption cycles, the following articles should be considered:
 
-- [Initial Azure subscriptions](../azure-best-practices/initial-subscriptions.md): At this stage of adoption scale, does your operating model require 2, 3, or 4 subscriptions?
+- [Initial Azure subscriptions](../azure-best-practices/initial-subscriptions.md): At this stage of adoption scale, does your operating model require two, three, or four subscriptions?
 - [Scale subscriptions](../azure-best-practices/scale-subscriptions.md): As adoption scales, what criteria will be used to drive subscription scaling?
 - [Organize subscriptions](../azure-best-practices/organize-subscriptions.md): How will you organize subscriptions as you scale?
 - [Tagging standards](../azure-best-practices/naming-and-tagging.md#metadata-tags): What other criteria need to be consistently captured in tags to augment your subscription design?
