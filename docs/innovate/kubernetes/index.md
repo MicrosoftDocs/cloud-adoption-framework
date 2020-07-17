@@ -25,8 +25,8 @@ To prepare for this phase of the cloud adoption lifecycle, use the following exe
 
 | | |
 |---|---|
-| ![Item 1 icon](../../_images/icons/1.png) | <br>[Application development and deployment](./application-development.md): Examine patterns and practices of application development, configure DevOps pipelines, and implement site reliability engineering (SRE) best practices. |
-| ![Item 2 icon](../../_images/icons/2.png) | <br>[Cluster design and operations](./cluster-design-operations.md): Identify for cluster configuration and network design. Future proof scalability by automating infrastructure provisioning. Maintain high availability by planning for business continuity and disaster recovery. |
-| ![Item 3 icon](../../_images/icons/3.png) | <br>[Cluster and application security](./cluster-application-security.md): Familiarize yourself with Kubernetes security essentials. Review the secure setup for clusters and application security guidance. |
+| ![Item 1 icon](../../_images/icons/1.png) | <br> [Application development and deployment](./application-development.md): Examine patterns and practices of application development, configure CI/CD pipelines, and implement site reliability engineering (SRE) best practices. |
+| ![Item 2 icon](../../_images/icons/2.png) | <br> [Cluster design and operations](./cluster-design-operations.md): Identify for cluster configuration and network design. Ensure future scalability by automating infrastructure provisioning. Maintain high availability by planning for business continuity and disaster recovery. |
+| ![Item 3 icon](../../_images/icons/3.png) | <br> [Cluster and application security](./cluster-application-security.md): Familiarize yourself with Kubernetes security essentials. Review the secure setup for clusters and application security guidance. |
 
 <!-- markdownlint-enable MD033 -->

@@ -25,7 +25,7 @@ Software defined datacenters and other cloud technologies are helping solve long
 - **Automated templates** for configuring infrastructure and security are much easier with software defined datacenters in the cloud. Azure example is [Azure Blueprints](https://docs.microsoft.com/azure/governance/blueprints/overview)
 - **Just in time (JIT) and just enough access (JEA)** enable practical application of least privilege principles to privileged access for servers and endpoints.
 - **User experience** becomes critical as users increasingly can choose or purchase their endpoint devices.
-- **Unified endpoint management** allows managing security posture of all endpoint devices including mobile and traditional pcs as well as providing critical device integrity signals for zero trust access control solutions.
+- **Unified endpoint management** allows managing security posture of all endpoint devices including mobile and traditional PCs as well as providing critical device integrity signals for zero trust access control solutions.
 - **Network security architectures** and controls are partially diminished with the shift to cloud application architectures, but they remain a fundamental security measure. For more information, see [Network security and containment](https://docs.microsoft.com/azure/architecture/framework/security/network-security-containment).
 
 ## Team composition and key relationships

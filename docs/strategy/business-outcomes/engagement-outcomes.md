@@ -41,6 +41,12 @@ During customer-obsessed transformations such as a cloud-enabled application inn
 >
 > ExakTime
 
+## Intelligent Contact Center
+
+Customer satisfaction and experience are at the core of successful organizations. Freeing up your employees to focus on superior customer service can go a long way towards customer loyalty and retention. With the AI technology available today, many steps during a customer call can be automated, enabling the contact center agent more time to focus on delivering superior customer service.
+
+- **Example:** An Insurance company has implemented digital agents to respond rapidly to customer requests through their website and mobile app by building an Azure Bot Service solution. Extending an enhanced customer service experience to their Contact Center, the insurance company implemented live call transcription, sentiment analysis and key phrase detection to help the Contact center agent with recommended next steps and form processing. This led to reduced repetition from the customer calling the contact center, and enabled the contact center agent to focus more on providing a great customer experience rather than completing administrational and operational work.
+
 ## Next steps
 
 Learn more about [performance outcomes](./performance-outcomes.md).
