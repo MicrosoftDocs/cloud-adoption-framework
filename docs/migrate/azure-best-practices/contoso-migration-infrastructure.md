@@ -188,7 +188,7 @@ They create resource groups as follows:
 
 ##### Scale resource groups
 
-In future, Contoso will add other resource groups based on needs. For example, they might define a resource group for each application or service so that each can be managed and secured independently.
+In future, Contoso will add other resource groups based on needs. For example, it might define a resource group for each application or service so that each can be managed and secured independently.
 
 #### Create matching security groups on-premises
 
@@ -252,7 +252,7 @@ To facilitate integration, Contoso uses the [Azure AD Connect tool](https://docs
 
 ### Set up RBAC
 
-Azure [RBAC](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) enables fine-grained access management for Azure. Using RBAC, you can grant only the amount of access that users need to perform tasks. You assign the appropriate RBAC role to users, groups, and applications at a scope level. The scope of a role assignment can be a subscription, a resource group, or a single resource.
+Azure [RBAC](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) enables fine-grained access management for Azure. By using RBAC, you can grant only the amount of access that users need to perform tasks. You assign the appropriate RBAC role to users, groups, and applications at a scope level. The scope of a role assignment can be a subscription, a resource group, or a single resource.
 
 Contoso admins then assign roles to the Active Directory groups that they synchronized from on-premises.
 
@@ -269,9 +269,9 @@ Contoso admins then assign roles to the Active Directory groups that they synchr
 
 ### Set up regions
 
-Azure resources are deployed within regions. Regions are organized into geographies, and data residency, sovereignty, compliance, and resiliency requirements are honored within geographical boundaries.
+Azure resources are deployed within regions. Regions are organized into geographies. Data residency, sovereignty, compliance, and resiliency requirements are honored within geographical boundaries.
 
-A region is composed of a set of datacenters. These datacenters are deployed within a latency-defined perimeter, and connected through a dedicated regional low-latency network.
+A region consists of a set of datacenters. These datacenters are deployed within a latency-defined perimeter, and connected through a dedicated regional low-latency network.
 
 Each Azure region is paired with a different region for resiliency. Read about [Azure regions](https://azure.microsoft.com/global-infrastructure/regions), and understand [how regions are paired](https://docs.microsoft.com/azure/best-practices-availability-paired-regions).
 
@@ -313,7 +313,7 @@ Contoso will use Availability Zones whenever applications need greater scalabili
 
 You can use Azure Backup to back up and restore Azure VM disks.
 
-Azure Backup allows automated backups of VM disk images stored in Azure Storage. Backups are application consistent, ensuring backed-up data is transactionally consistent and that applications will start post-restore.
+Azure Backup allows automated backups of VM disk images stored in Azure Storage. Backups are application consistent, to ensure that backed-up data is transactionally consistent and that applications will start post-restore.
 
 Azure Backup supports locally redundant storage (LRS) to replicate multiple copies of backup data within a datacenter if a local hardware failure occurs. If a regional outage occurs, Azure Backup also supports geo-redundant storage (GRS), which replicates backup data to a secondary paired region.
 
@@ -333,10 +333,10 @@ Contoso will implement [Azure Site Recovery](https://docs.microsoft.com/azure/si
 
 ## Step 4: Design a network infrastructure
 
-With the regional design in place, Contoso is ready to consider a network strategy. It needs to think about how the on-premises datacenter and Azure connect and communicate with each other, and how to design the network infrastructure in Azure. Specifically Contoso needs to:
+With the regional design in place, Contoso is ready to consider a network strategy. It needs to think about how the on-premises datacenter and Azure connect and communicate with each other, and how to design the network infrastructure in Azure. Specifically, Contoso needs to:
 
 - **Plan hybrid network connectivity.** Figure out how it's going to connect networks across on-premises and Azure.
-- **Design an Azure network infrastructure.** Decide how it will deploy networks over regions. How will networks communicate within the same region, and across regions?
+- **Design an Azure network infrastructure.** Decide how it will deploy networks over regions. How will networks communicate within the same region and across regions?
 - **Design and set up Azure networks.** Set up Azure networks and subnets, and decide what will reside in them.
 
 ### Plan hybrid network connectivity
@@ -435,10 +435,7 @@ With a network and routing topology in place, Contoso is ready to set up Azure n
   - `VNET-PROD-EUS2`. Azure IaaS production components will be located in this network.
   
   Each virtual network will have its own unique address space without overlap. Contoso intends to configure routing without requiring NAT.
-- **Subnets:**
-  - There will be a subnet in each network for each application tier.
-  - Each subnet in the production network will have a matching subnet in the development virtual network.
-  - The production network has a subnet for domain controllers.
+- **Subnets:** There will be a subnet in each network for each application tier. Each subnet in the production network will have a matching subnet in the development virtual network. The production network has a subnet for domain controllers.
 
 The following table summarizes virtual networks in `East US 2`.
 
@@ -601,7 +598,7 @@ Contoso admins have decided that the Azure DNS service isn't a good choice in th
     
     _Figure 27: A custom DNS._
 
-In addition to the on-premises domain controllers, Contoso will implement four domain controllers to support the Azure networks, two for each region. This is what Contoso will deploy in Azure:
+In addition to the on-premises domain controllers, Contoso will implement four domain controllers to support the Azure networks (two for each region):
 
 | Region | DC | Virtual network | Subnet | IP address |
 | --- | --- | --- | --- | --- |
@@ -642,7 +639,7 @@ After updating network settings, Contoso admins are ready to build out the domai
 
 5. After the disk is added, they connect to the VM over Remote Desktop Services and open Server Manager.
 
-6. In **File and Storage Services**, they run the New Volume Wizard, ensuring that the drive is assigned the letter F or above on the local VM.
+6. In **File and Storage Services**, they run the New Volume Wizard. They ensure that the drive is assigned the letter F or above on the local VM.
 
     ![Screenshot that shows the New Volume Wizard.](./media/contoso-migration-infrastructure/volume-wizard.png)
     
@@ -679,7 +676,7 @@ Active Directory is a critical service for a network and must be configured corr
     
     _Figure 35: Datacenter links._
 
-4. After everything is configured, they confirm that the Active Directory replication topology is in place.
+4. They confirm that the Active Directory replication topology is in place.
 
     ![Screenshot that shows the datacenter replication topology.](./media/contoso-migration-infrastructure/ad-resolution.png)
     
@@ -697,8 +694,8 @@ Azure provides a range of governance controls across services and the Azure plat
 
 As it configures identity and access control, Contoso has already begun to put some aspects of governance and security in place. Broadly, it needs to consider three areas:
 
-- **Policy:** Azure Policy applies and enforces rules and effects over your resources for resources to comply with corporate requirements and SLAs.
-- **Locks:** Azure allows you to lock subscriptions, resources groups, and other resources so that they can be modified only by those with authority to do so.
+- **Policy:** Azure Policy applies and enforces rules and effects over your resources, so the resources comply with corporate requirements and SLAs.
+- **Locks:** Azure allows you to lock subscriptions, resource groups, and other resources so that they can be modified only by those with authority.
 - **Tags:** Resources can be controlled, audited, and managed with tags. Tags attach metadata to resources, providing information about resources or owners.
 
 ### Set up policies
@@ -825,7 +822,7 @@ Contoso can use ASGs to reuse the security policy at scale without manual mainte
 Contoso will implement a mix of NSGs and ASGs. Contoso is concerned about NSG management. It's also worried about the overuse of NSGs and the added complexity for operations staff. Here's what Contoso will do:
 
 - All traffic into and out of all subnets (north/south) will be subject to an NSG rule, except for the gateway subnets in the hub networks.
-- Any firewalls or domain controller will be protected by both subnet NSGs and NIC NSGs.
+- Any firewalls or domain controllers will be protected by both subnet NSGs and NIC NSGs.
 - All production applications will have ASGs applied.
 
 Contoso has built a model of how this security configuration will look for its applications.
@@ -853,9 +850,7 @@ Contoso has determined that specific VMs require encryption. Contoso will apply 
 
 In this article, Contoso set up an Azure infrastructure and policy for Azure subscription, hybrid identify, disaster recovery, network, governance, and security.
 
-Not every step taken here is required for a cloud migration. In this case, Contoso planned a network infrastructure that could handle all types of migrations while being secure, resilient, and scalable.
-
-With this infrastructure, Contoso is ready to move on and try out migration.
+Not every step taken here is required for a cloud migration. In this case, Contoso planned a network infrastructure that can handle all types of migrations while being secure, resilient, and scalable.
 
 ## Next steps
 
