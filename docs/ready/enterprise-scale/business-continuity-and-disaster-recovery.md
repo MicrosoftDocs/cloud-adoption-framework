@@ -43,13 +43,13 @@ Capture disaster recovery (DR) requirements to design suitable platform-level ca
 
   - Geo-replication and DR capabilities for PaaS services.
 
-- Network connectivity in case of a failover.
+- Network connectivity if a failover occurs.
 
   - Bandwidth capacity planning for Azure ExpressRoute.
 
   - Paired failover regions.
 
-  - Traffic routing in case of a regional, zonal, or network outage.
+  - Traffic routing if a regional, zonal, or network outage occurs.
 
 - Planned and unplanned failovers.
 

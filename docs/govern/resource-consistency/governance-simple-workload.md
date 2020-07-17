@@ -58,7 +58,7 @@ When the subscription is created, the Azure **account owner** associates an Azur
 ![The Azure account owner associates the Azure AD tenant with the subscription](../../_images/govern/design/governance-1-4.png)
 _Figure 4: The Azure account owner associates the Azure AD tenant with the subscription._
 
-You may have noticed that there is currently no user associated with the subscription, which means that no one has permission to manage resources. In reality, the **account owner** is the owner of the subscription and has permission to take any action on a resource in the subscription. In practical terms, the **account owner** is more than likely a finance person in your organization and is not responsible for creating, reading, updating, and deleting resources - those tasks will be performed by the **workload owner**. Therefore, you need to add the **workload owner** to the subscription and assign permissions.
+You may have noticed that there is currently no user associated with the subscription, which means that no one has permission to manage resources. In reality, the **account owner** is the owner of the subscription and has permission to take any action on a resource in the subscription. In practical terms, the **account owner** is more than likely a finance person in your organization and is not responsible for creating, reading, updating, and deleting resources. Those tasks will be performed by the **workload owner**, so you need to add the **workload owner** to the subscription and assign permissions.
 
 Since the **account owner** is currently the only user with permission to add the **workload owner** to the subscription, they add the **workload owner** to the subscription:
 

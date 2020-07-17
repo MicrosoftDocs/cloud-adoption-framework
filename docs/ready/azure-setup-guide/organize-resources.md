@@ -1,5 +1,5 @@
 ---
-title: Organize Azure resources effectively
+title: Organize your Azure resources effectively
 description: Understand best practices for effectively organizing your Azure resources to simplify resource management.
 author: laraaleite
 ms.author: kfollis
@@ -13,9 +13,9 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore laraaleite profx fsubscriptions fresource -->
 
-# Organize your Azure resources
+# Organize your Azure resources effectively
 
-Organizing your cloud-based resources is critical to securing, managing, and tracking the costs related to your workloads. To organize your resources, define a management group hierarchy, follow a well-considered naming convention, and apply resource tagging.
+Organizing your cloud-based resources is critical to securing, managing, and tracking the costs related to your workloads. To organize your resources, define a management group hierarchy, follow a well-considered naming convention and apply resource tagging.
 
 <!-- markdownlint-disable MD024 MD025 -->
 
@@ -24,6 +24,7 @@ Organizing your cloud-based resources is critical to securing, managing, and tra
 Azure provides four levels of management scope: management groups, subscriptions, resource groups, and resources. The following image shows the relationship of these levels.
 
    ![Diagram that shows the relationship of management hierarchy levels](./media/organize-resources/scope-levels.png)
+    _Figure 1: How the four management-scope levels relate to each other._
 
 - **Management groups:** These groups are containers that help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.
 - **Subscriptions:** A subscription logically associates user accounts and the resources that were created by those user accounts. Each subscription has limits or quotas on the amount of resources you can create and use. Organizations can use subscriptions to manage costs and the resources that are created by users, teams, or projects.
@@ -32,7 +33,7 @@ Azure provides four levels of management scope: management groups, subscriptions
 
 ### Scope of management settings
 
-You can apply management settings, like policies and role-based access control, at any of the management levels. The level you select determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy is also applied to all resource groups and resources in that subscription.
+You can apply management settings like policies and role-based access control at any of the management levels. The level you select determines how widely the setting is applied. Lower levels inherit settings from higher levels. For example, when you apply a policy to a subscription, that policy is also applied to all resource groups and resources in that subscription.
 
 Usually, it makes sense to apply critical settings at higher levels and project-specific requirements at lower levels. For example, you might want to make sure all resources for your organization are deployed to certain regions. To do that, apply a policy to the subscription that specifies the allowed locations. As other users in your organization add new resource groups and resources, the allowed locations are automatically enforced. Learn more about policies in the governance, security, and compliance section of this guide.
 
@@ -58,7 +59,7 @@ Create a management group to help you manage access, policy, and compliance for 
 Use subscriptions to manage costs and resources that are created by users, teams, or projects.
 
 1. Go to [subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade).
-1. Select **Add**.
+2. Select **Add**.
 
 > [!NOTE]
 > Subscriptions can also be created programmatically. For more information, see [Programmatically create Azure subscriptions](https://docs.microsoft.com/azure/azure-resource-manager/management/programmatically-create-subscription?tabs=azure-powershell).
@@ -127,9 +128,9 @@ Create a resource group to hold resources like web apps, databases, and storage 
 
 A good naming standard helps to identify resources in the Azure portal, on a billing statement, and in automation scripts. Your naming strategy should include business and operational details as components of resource names:
 
-- The business-related side of this strategy should ensure that resource names include the organizational information that's needed to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
+The business-related side of this strategy should ensure that resource names include the organizational information that's needed to identify the teams. Use a resource along with the business owners who are responsible for resource costs.
 
-- The operational side should ensure that names include information that IT teams need. Use the details that identify the workload, application, environment, criticality, and other information that's useful for managing resources.
+The operational side should ensure that names include information that IT teams need. Use the details that identify the workload, application, environment, criticality, and other information that's useful for managing resources.
 
 Different resource types have different [naming rules and restrictions](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules). For more information and recommendations aimed specifically at supporting enterprise cloud adoption efforts, see the Cloud Adoption Framework's [guidance on naming and tagging](../azure-best-practices/naming-and-tagging.md).
 

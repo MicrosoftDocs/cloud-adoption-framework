@@ -53,7 +53,7 @@ In a digital economy, the greatest challenge architects face is to clearly under
 
 ## Next steps
 
-Based on the knowledge gained regarding the build-measure-learn model and growth mindset, you are now ready to [develop digital inventions](./invention.md) within the [Innovate methodology](./index.md).
+With the knowledge you've gained about the build-measure-learn model and a growth mindset, you're ready to [develop digital inventions](./invention.md) within the [Innovate methodology](./index.md).
 
 > [!div class="nextstepaction"]
 > [Develop digital inventions](./invention.md)

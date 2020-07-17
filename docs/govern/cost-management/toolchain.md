@@ -24,7 +24,7 @@ The following is a list of Azure native tools that can help mature the policies 
 | Budget control     | No         | Yes         | No         | Yes         |
 | Monitor spending on single resource    | Yes         | Yes         | Yes         | No         |
 | Monitor spending across multiple resources    | No         | Yes        | Yes         | No         |
-| Control spending on single resource     | Yes - manual sizing         | Yes         | No         | Yes         |
+| Control spending on single resource     | Yes, manual sizing         | Yes         | No         | Yes         |
 | Enforce spending across multiple resources    | No         | Yes         | No         | Yes         |
 | Enforce accounting metadata on resources    | No         | No         | No         | Yes         |
 | Monitor and detect trends     | Yes          | Yes        | Yes         | No         |
