@@ -13,9 +13,9 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore jelledruyts andym endjin -->
 
-# Stay current with Microsoft Azure
+# Stay current with Azure
 
-Cloud platforms like Microsoft Azure change faster than many organizations are accustomed to. This pace of change means that organizations have to adapt people and processes to a new cadence. If you're responsible for helping your organization keep up with change, you might feel overwhelmed at times. The resources listed in this section can help you stay up to date.
+Cloud platforms like Azure change faster than many organizations are accustomed to. This pace of change means that organizations have to adapt people and processes to a new cadence. If you're responsible for helping your organization keep up with change, you might feel overwhelmed at times. The resources listed in this section can help you stay up to date.
 
 <!-- markdownlint-disable MD025 -->
 

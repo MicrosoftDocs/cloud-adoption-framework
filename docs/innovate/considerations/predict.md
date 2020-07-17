@@ -23,17 +23,17 @@ A variety of applications and ambient experiences use data to make predictions:
 
 - **E-commerce:** Based on what other similar consumers have purchased, an e-commerce website suggests products that may be worth adding to your cart.
 - **Adjusted reality:** IoT offers more advanced instances of predictive functionality. For example, a device on an assembly line detects a rise in a machine's temperature. A cloud-based predictive model determines how to respond. Based on that prediction, another device slows down the assembly line until the machine can cool.
-- **Consumer products:** Cell phones, smart homes, even your car, all use predictive capabilities, which they exploit to suggest user behavior based on factors like location or time of day. When a prediction and the initial hypothesis are aligned, the prediction leads to action. At a very mature stage, this alignment can make products like a self-driving car a reality.
+- **Consumer products:** Cell phones, smart homes, even your car, all use predictive capabilities, which they analyze to suggest user behavior based on factors like location or time of day. When a prediction and the initial hypothesis are aligned, the prediction leads to action. At a very mature stage, this alignment can make products like a self-driving car a reality.
 
 ## Develop predictive capabilities
 
 Solutions that consistently provide accurate predictive capabilities commonly include five core characteristics:
 
-    - Data
-    - Insights
-    - Patterns
-    - Predictions
-    - Interactions
+- Data
+- Insights
+- Patterns
+- Predictions
+- Interactions
 
 Each aspect is required to develop predictive capabilities. Like all great innovations, the development of predictive capabilities requires a [commitment to iteration](./index.md#commitment-to-iteration). In each iteration, one or more of the following characteristics is matured to validate increasingly complex customer hypotheses.
 
@@ -44,7 +44,7 @@ Each aspect is required to develop predictive capabilities. Like all great innov
 
 ## Data
 
-Data is the most elemental of the characteristics mentioned earlier. Each of the disciplines for developing digital inventions generates data. That data, of course, contributes to the development of predictions. For more guidance on ways to get data into a predictive solution, see [Democratizing data](./data.md) and [Interacting with devices](./devices.md).
+Data is the most elemental of the characteristics mentioned earlier. Each of the disciplines for developing digital inventions generates data. That data, of course, contributes to the development of predictions. For more guidance on ways to get data into a predictive solution, see [Democratizing data](./data.md) and [interacting with devices](./devices.md).
 
 A variety of data sources can be used to deliver predictive capabilities:
 
@@ -60,7 +60,7 @@ Using insights as a starting point, machine learning develops and applies predic
 
 [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/service/overview-what-is-azure-ml) is the cloud-native service in Azure for building and training models based on your data. This tool also includes a [workflow for accelerating the development of machine learning algorithms](https://docs.microsoft.com/azure/machine-learning/service/concept-azure-machine-learning-architecture). This workflow can be used to develop algorithms through a visual interface or Python.
 
-For more robust machine learning models, [ML services in Azure HDInsight](https://docs.microsoft.com/azure/hdinsight/r-server/r-server-overview) provides a machine learning platform built on Apache Hadoop clusters. This approach enables more granular control of the underlying clusters, storage, and compute nodes. Azure HDInsight also offers more advanced integration through tools like ScaleR and SparkR to create predictions based on integrated and ingested data, even working with data from a stream. The [flight delay prediction solution](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-r-scaler-sparkr) demonstrates each of these advanced capabilities when used to predict flight delays based on weather conditions. The HDInsight solution also allows for enterprise controls, such as data security, network access, and performance monitoring to operationalize patterns.
+For more robust machine learning models, [ML Services in Azure HDInsight](https://docs.microsoft.com/azure/hdinsight/r-server/r-server-overview) provides a machine learning platform built on Apache Hadoop clusters. This approach enables more granular control of the underlying clusters, storage, and compute nodes. Azure HDInsight also offers more advanced integration through tools like ScaleR and SparkR to create predictions based on integrated and ingested data, even working with data from a stream. The [flight delay prediction solution](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-r-scaler-sparkr) demonstrates each of these advanced capabilities when used to predict flight delays based on weather conditions. The HDInsight solution also allows for enterprise controls, such as data security, network access, and performance monitoring to operationalize patterns.
 
 ## Predictions
 
@@ -80,7 +80,7 @@ Learn more about how to create an ambient experience through an [adjusted realit
 
 ## Next steps
 
-Having acquainted yourself with the [Disciplines of invention](./invention.md) and the [Innovate methodology](./index.md), you're now ready to learn how to [build with customer empathy](./build.md).
+Having acquainted yourself with [disciplines of invention](./invention.md) and the [Innovate methodology](./index.md), you're now ready to learn how to [build with customer empathy](./build.md).
 
 > [!div class="nextstepaction"]
 > [Build with empathy](./build.md)

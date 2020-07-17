@@ -354,7 +354,7 @@ You can use Azure Backup to back up VMs in a couple of ways.
 - **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups as well as granular backup and restore options. Backup is up to three times a day, at the file/folder level. It isn't app-aware and Linux isn't supported. Install the Microsoft Azure Recovery Services (MARS) agent on each VM that you want to back up using this method.
 - **Protect the VM to Azure Backup server.** Azure Backup server is provided free with Azure Backup. The VM is backed up to local Azure Backup server storage. You then back up the Azure Backup server to Azure in a vault. Backup is app-aware, with full granularity over backup frequency and retention. You can back up at the application level, for example by backing up SQL Server or SharePoint.
 
-For security, Azure Backup encrypts data in-flight using AES-256 and sends it over HTTPS to Azure. Backed-up data at-rest in Azure is encrypted using [Azure Storage encryption](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
+For security, Azure Backup encrypts data in-flight using AES-256 and sends it over HTTPS to Azure. Backed-up data at rest in Azure is encrypted using [Azure Storage encryption](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
 
 ![Azure Backup](./media/migrate-best-practices-security-management/iaas-backup.png)
 _Azure Backup._

@@ -15,7 +15,7 @@ There are several ways to measure for customer impact. This article will help yo
 
 ## Strategic metrics
 
-During the [strategy phase](../../strategy/index.md) of the cloud adoption lifecycle, we examine [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics by which to test customer impact. When innovation is successful, you tend to see results that are aligned with your strategic objectives.
+During the [Strategy phase](../../strategy/index.md) of the cloud adoption lifecycle, we examine [motivations](../../strategy/motivations.md) and [business outcomes](../../strategy/business-outcomes/index.md). These practices provide a set of metrics by which to test customer impact. When innovation is successful, you tend to see results that are aligned with your strategic objectives.
 
 Before establishing learning metrics, define a small number of strategic metrics that you want this innovation to affect. Generally those strategic metrics align with one or more of the following outcome areas:
     - [Business agility](../../strategy/business-outcomes/agility-outcomes.md)
@@ -40,7 +40,7 @@ Learning about changes to customer behavior starts by mapping the flow that you 
 
 ![Customer flow used to determine learning metrics](../../_images/innovate/customer-flow-learning-metrics.png)
 
-In most cases, a customer flow will have an easily defined starting point and no more than two end points. Between the start and end points are a variety of learning metrics to be used as measures in the feedback loop:
+In most cases, a customer flow will have an easily defined starting point and no more than two endpoints. Between the start and endpoints are a variety of learning metrics to be used as measures in the feedback loop:
 
 1. **Starting point—initial trigger:** The starting point is the scenario that triggers the need for this solution. When the solution is built with customer empathy, that initial trigger should inspire a customer to try the MVP solution.
 2. **Customer need met:** The hypothesis is validated when a customer need has been met by using the solution.
@@ -71,6 +71,6 @@ As learning metrics accumulate, the team can begin to [learn with customers](./l
 > [!div class="nextstepaction"]
 > [Learn with customers](./learn.md)
 
-<!-- cSpell:ignore Ries -->
+<!-- cSpell:ignore Eric Ries -->
 
-Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.
+Some of the concepts in this article build on topics first described in [The lean startup](http://theleanstartup.com/book), written by Eric Ries.

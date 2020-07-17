@@ -123,7 +123,7 @@ To begin using Azure Cost Management and Billing, see [How to optimize your clou
 - [Optimize costs based on recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Use cost alerts to monitor usage and spending](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending)
 
-<-- docsTest: "AWS Cost and Usage" -->
+<!-- docsTest: "AWS Cost and Usage" -->
 
 ### Use Azure Cost Management and Billing to govern AWS costs
 
