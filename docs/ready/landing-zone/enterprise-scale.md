@@ -1,8 +1,8 @@
 ---
 title: Deploy a CAF enterprise-scale landing zone in Azure
 description: Learn how to deploy a migration landing zone in Azure.
-author: BrianBlanchard
-ms.author: brblanch
+author: alexbuckgit
+ms.author: abuck
 ms.date: 09/27/2019
 ms.topic: guide
 ms.service: cloud-adoption-framework
