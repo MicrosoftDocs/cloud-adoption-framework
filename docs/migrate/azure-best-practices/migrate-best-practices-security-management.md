@@ -304,14 +304,11 @@ The following diagram shows an example of creating a hierarchy for governance by
 
 ## Best practice: Deploy Azure Policy
 
-Azure Policy is a service in Azure that you use to create, assign and, manage policies.
+Azure Policy is a service that you use to create, assign, and manage policies. Policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service-level agreements.
 
-- Policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service-level agreements.
-- Azure Policy evaluates your resources, scanning for those not compliant with your policies.
-- For example, you could create a policy that allows only a specific SKU size for VMs in your environment. Azure Policy will evaluate this setting when creating and updating resources, and when scanning existing resources.
-- Azure provides some built-in policies that you can assign, or you can create your own.
+Azure Policy evaluates your resources, scanning for those not compliant with your policies. For example, you could create a policy that allows only a specific SKU size for VMs in your environment. Azure Policy will evaluate this setting when you create and update resources, and when scanning existing resources. Note that Azure provides some built-in policies that you can assign, or you can create your own.
 
-  ![Azure Policy](./media/migrate-best-practices-security-management/policy.png)
+  ![Screenshot of Azure Policy.](./media/migrate-best-practices-security-management/policy.png)
   _Azure Policy._
 
 **Learn more:**
@@ -321,7 +318,7 @@ Azure Policy is a service in Azure that you use to create, assign and, manage po
 
 ## Best practice: Implement a BCDR strategy
 
-Planning for business continuity and disaster recovery (BCDR), is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts may include a force majeure clause that excuses obligations due to a greater force such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run, and recover where necessary, when disaster strike. Your ability to do this can make or break your company's future.
+Planning for business continuity and disaster recovery (BCDR) is a critical exercise that you should complete as part of your Azure migration planning process. In legal terms, your contracts might include a *force majeure* clause that excuses obligations due to a greater force, such as hurricanes or earthquakes. But you also have obligations around your ability to ensure that services will continue to run, and recover where necessary, when disaster strikes. Your ability to do this can make or break your company's future.
 
 Broadly, your BCDR strategy must consider:
 
@@ -330,14 +327,14 @@ Broadly, your BCDR strategy must consider:
 
 ### Set up BCDR
 
-When migrating to Azure, it's important to understand that although the Azure platform provides these inbuilt resiliency capabilities, you need to design your Azure deployment to take advantage of Azure features and services that provide high availability, disaster recovery, and backup.
+When migrating to Azure, understand that although the Azure platform provides some built-in resiliency capabilities, you need to design your Azure deployment to take advantage of them.
 
-- Your BCDR solution will depend on your company objectives and is influenced by your Azure deployment strategy. Infrastructure as a service (IaaS) and platform as a service (PaaS) deployments present different challenges for BCDR.
-- Once in place, your BCDR solutions should be tested regularly to check that your strategy remains viable.
+- Your BCDR solution will depend on your company objectives, and is influenced by your Azure deployment strategy. Infrastructure as a service (IaaS) and platform as a service (PaaS) deployments present different challenges for BCDR.
+- After they are in place, your BCDR solutions should be tested regularly to check that your strategy remains viable.
 
 ### Back up an IaaS deployment
 
-In most cases, an on-premises workload is retired after migration, and your on-premises strategy for backing up data must be extended or replaced. If you migrate your entire datacenter to Azure, you'll need to design and implement a full backup solution using Azure technologies, or third-party integrated solutions.
+In most cases, an on-premises workload is retired after migration, and your on-premises strategy for backing up data must be extended or replaced. If you migrate your entire datacenter to Azure, you'll need to design and implement a full backup solution by using Azure technologies, or third-party integrated solutions.
 
 For workloads running on Azure IaaS VMs, consider these backup solutions:
 
@@ -346,32 +343,29 @@ For workloads running on Azure IaaS VMs, consider these backup solutions:
 
 #### Azure Backup
 
-Azure Backup creates data recovery points that are stored in Azure Storage. Azure Backup can back up Azure VM disks, and Azure Files (preview). Azure Files provide file shares in the cloud, accessible via SMB.
+Azure Backup creates data recovery points that are stored in Azure Storage. Azure Backup can back up Azure VM disks, and Azure Files (preview). Azure Files provide file shares in the cloud, accessible via Server Message Block.
 
-You can use Azure Backup to back up VMs in a couple of ways.
+You can use Azure Backup to back up VMs in the following ways:
 
-- **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once per day, and you can restore the VM disk as needed. Azure Backup takes app-aware data snapshots (vss), and no agent is installed on the VM.
-- **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups as well as granular backup and restore options. Backup is up to three times a day, at the file/folder level. It isn't app-aware and Linux isn't supported. Install the Microsoft Azure Recovery Services (MARS) agent on each VM that you want to back up using this method.
+- **Direct backup from VM settings.** You can back up VMs with Azure Backup directly from the VM options in the Azure portal. You can back up the VM once per day, and you can restore the VM disk as needed. Azure Backup takes app-aware data snapshots, and no agent is installed on the VM.
+- **Direct backup in a Recovery Services vault.** You can back up your IaaS VMs by deploying an Azure Backup Recovery Services vault. This provides a single location to track and manage backups, as well as granular backup and restore options. Backup is up to three times a day, at the file and folder levels. It isn't app-aware, and Linux isn't supported. Install the Microsoft Azure Recovery Services (MARS) agent on each VM that you want to back up by using this method.
 - **Protect the VM to Azure Backup server.** Azure Backup server is provided free with Azure Backup. The VM is backed up to local Azure Backup server storage. You then back up the Azure Backup server to Azure in a vault. Backup is app-aware, with full granularity over backup frequency and retention. You can back up at the application level, for example by backing up SQL Server or SharePoint.
 
-For security, Azure Backup encrypts data in-flight using AES-256 and sends it over HTTPS to Azure. Backed-up data at rest in Azure is encrypted using [Azure Storage encryption](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
+For security, Azure Backup encrypts data in-flight by using AES-256. It sends it over HTTPS to Azure. Backed-up data-at-rest in Azure is encrypted by using [Azure Storage encryption](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
 
-![Azure Backup](./media/migrate-best-practices-security-management/iaas-backup.png)
+![Screenshot of Azure Backup.](./media/migrate-best-practices-security-management/iaas-backup.png)
 _Azure Backup._
 
 **Learn more:**
 
-- Learn about the [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) service.
+- Learn about [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview).
 - Plan a [backup infrastructure for Azure VMs](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction).
 
 #### Storage snapshots
 
-Azure VMs are stored as page blobs in Azure Storage.
+Azure VMs are stored as page blobs in Azure Storage. Snapshots capture the blob state at a specific point in time. As an alternative backup method for Azure VM disks, you can take a snapshot of storage blobs and copy them to another storage account.
 
-- Snapshots capture the blob state at a specific point in time.
-- As an alternative backup method for Azure VM disks, you can take a snapshot of storage blobs and copy them to another storage account.
-- You can copy an entire blob, or use an incremental snapshot copy to copy only delta changes and reduce storage space.
-- As an extra precaution, you can enable soft delete for Blob storage accounts. With this feature enabled, a blob that's deleted is marked for deletion but not immediately purged. During the interim period, the blob can be restored.
+You can copy an entire blob, or use an incremental snapshot copy to copy only delta changes and reduce storage space. As an extra precaution, you can enable soft delete for Blob storage accounts. With this feature enabled, a blob that's deleted is marked for deletion, but not immediately purged. During the interim period, you can restore the blob.
 
 **Learn more:**
 
@@ -383,19 +377,19 @@ Azure VMs are stored as page blobs in Azure Storage.
 
 #### Third-party backup
 
-In addition, you can use third-party solutions to back up Azure VMs and storage containers to local storage or other cloud providers. For more information, see [Backup solutions in the Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=backup&page=1).
+In addition, you can use third-party solutions to back up Azure VMs and storage containers to local storage or other cloud providers. For more information, see [Backup solutions in Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=backup&page=1).
 
 ### Set up disaster recovery for IaaS applications
 
-In addition to protecting data, BCDR planning must consider how to keep applications and workloads available if a disaster occurs. For workloads running on Azure IaaS VMs and Azure Storage consider these solutions:
+In addition to protecting data, BCDR planning must consider how to keep applications and workloads available if a disaster occurs. For workloads that run on Azure IaaS VMs and Azure Storage, consider the solutions in the following sections.
 
 #### Azure Site Recovery
 
-Azure Site Recovery is the primary Azure service for ensuring that Azure VMs can be brought online and VM applications made available when outages occur.
+Azure Site Recovery is the primary Azure service for ensuring that Azure VMs can be brought online, and VM applications made available, when outages occur.
 
-Site Recovery replicates VMs from a primary to secondary Azure region. When disaster strikes, you fail VMs over from the primary region, and continue accessing them as normal in the secondary region. When operations return to normal, you can fail back VMs to the primary region.
+Site Recovery replicates VMs from a primary to a secondary Azure region. If disaster strikes, you fail VMs over from the primary region, and continue accessing them as normal in the secondary region. When operations return to normal, you can fail back VMs to the primary region.
 
-  ![Azure Site Recovery](./media/migrate-best-practices-security-management/site-recovery.png)
+  ![Diagram of Azure Site Recovery.](./media/migrate-best-practices-security-management/site-recovery.png)
   _Site Recovery._
 
 **Learn more:**
@@ -413,7 +407,7 @@ Azure managed disks simplify disk management for Azure Virtual Machines by manag
 - You can convert existing disks to managed disks.
 - You should create VMs in availability sets for high resilience and availability. When planned or unplanned outages occur, availability sets ensure that at least one VM in the set remains available.
 
-  ![Managed disks](./media/migrate-best-practices-security-management/managed-disks.png)
+  ![Diagram of managed disks.](./media/migrate-best-practices-security-management/managed-disks.png)
   _Managed disks._
 
 **Learn more:**
@@ -424,17 +418,17 @@ Azure managed disks simplify disk management for Azure Virtual Machines by manag
 
 ## Best practice: Monitor resource usage and performance
 
-You might have moved your workloads to Azure for its immense scaling capabilities. But moving your workload doesn't mean that Azure will automatically implement scaling without your input. As an example:
+You might have moved your workloads to Azure for its immense scaling capabilities. But moving your workload doesn't mean that Azure will automatically implement scaling without your input. Here are two examples:
 
-- If your marketing organization pushes a new tv advertisement that drives 300 percent more traffic, this could cause site availability issues. Your newly migrated workload might hit assigned limits and crash.
-- Another example might be a distributed denial-of-service (DDoS) attack on your migrated workload. In this case you might not want to scale, but to prevent the source of the attacks from reaching your resources.
+- If your marketing organization pushes a new television advertisement that drives 300 percent more traffic, this might cause site availability issues. Your newly migrated workload might hit assigned limits, and crash.
+- If there's a distributed denial-of-service (DDoS) attack on your migrated workload, in this case you don't want to scale. You want to prevent the source of the attacks from reaching your resources.
 
-These two cases have different resolutions, but for both you need an insight into what's happening with usage and performance monitoring.
+These two cases have different resolutions, but for both you need insight into what's happening with usage and performance monitoring.
 
-- Azure Monitor can help surface these metrics, and provide response with alerts, autoscaling, Event Hubs, Logic Apps and more.
-- In addition to Azure monitoring, you can integrate your third-party SIEM application to monitor the Azure logs for auditing and performance events.
+- Azure Monitor can help surface these metrics, and provide response with alerts, autoscaling, event hubs, and logic apps.
+- You can also integrate your third-party SIEM application to monitor the Azure logs for auditing and performance events.
 
-  ![Azure Monitor](./media/migrate-best-practices-security-management/monitor.png)
+  ![Screenshot of Azure Monitor.](./media/migrate-best-practices-security-management/monitor.png)
   _Azure Monitor._
 
 **Learn more:**
@@ -446,13 +440,11 @@ These two cases have different resolutions, but for both you need an insight int
 
 ## Best practice: Enable diagnostic logging
 
-Azure resources generate a fair number of logging metrics and telemetry data.
+Azure resources generate a fair number of logging metrics and telemetry data. By default, most resource types don't have diagnostic logging enabled. By enabling diagnostic logging across your resources, you can query logging data, and build alerts and playbooks based on it.
 
-- By default, most resource types don't have diagnostic logging enabled.
-- By enabling diagnostic logging across your resources, you can query logging data, and build alerts and playbooks based on it.
-- When you enable diagnostic logging, each resource will have a specific set of categories. You select one or more logging categories, and a location for the log data. Logs can be sent to a storage account, event hub, or to Azure Monitor logs.
+When you enable diagnostic logging, each resource will have a specific set of categories. You select one or more logging categories, and a location for the log data. Logs can be sent to a storage account, event hub, or to Azure Monitor logs.
 
-![Diagnostic logging](./media/migrate-best-practices-security-management/diagnostics.png)
+![Screenshot of diagnostic logging.](./media/migrate-best-practices-security-management/diagnostics.png)
 _Diagnostic logging._
 
 **Learn more:**
@@ -464,12 +456,12 @@ _Diagnostic logging._
 
 With diagnostic logging enabled for Azure resources, you can start to use logging data to create custom alerts.
 
-- Alerts proactively notify you when conditions are found in your monitoring data. You can then address issues before system users notice them. You can alert on things like metric values, log search queries, activity log events, platform health, and website availability.
+- Alerts proactively notify you when conditions are found in your monitoring data. You can then address issues before system users notice them. You can alert on metric values, log search queries, activity log events, platform health, and website availability.
 - When alerts are triggered, you can run a logic app playbook. A playbook helps you to automate and orchestrate a response to a specific alert. Playbooks are based on Azure Logic Apps. You can use logic app templates to create playbooks, or create your own.
 - As a simple example, you can create an alert that triggers when a port scan happens against a network security group. You can set up a playbook that runs and locks down the IP address of the scan origin.
 - Another example is an application with a memory leak. When the memory usage gets to a certain point, a playbook can recycle the process.
 
-  ![Alerts](./media/migrate-best-practices-security-management/alerts.png)
+  ![Screenshot of alerts.](./media/migrate-best-practices-security-management/alerts.png)
   _Alerts._
 
 **Learn more:**
@@ -481,10 +473,10 @@ With diagnostic logging enabled for Azure resources, you can start to use loggin
 
 The Azure portal is a web-based unified console that allows you to build, manage, and monitor everything from simple web apps to complex cloud applications. It includes a customizable dashboard and accessibility options.
 
-- You can create multiple dashboards and share them with others who have access to your Azure subscriptions.
+- You can create multiple dashboards, and share them with others who have access to your Azure subscriptions.
 - With this shared model, your team has visibility into the Azure environment, allowing them to be proactive when managing systems in the cloud.
 
-  ![Azure dashboard](./media/migrate-best-practices-security-management/dashboard.png)
+  ![Screenshot of Azure dashboard.](./media/migrate-best-practices-security-management/dashboard.png)
   _Azure dashboard._
 
 **Learn more:**
@@ -499,7 +491,7 @@ At some point, you will need to collaborate with your support staff or Microsoft
 - In the unlikely event that an Azure service issue affects your workload, admins should know how to submit a support ticket to Microsoft in the most appropriate and efficient way.
 - Familiarize yourself with the various support plans offered for Azure. They range from response times dedicated to developer instances, to premier support with a response time of less than 15 minutes.
 
-  ![Support plans](./media/migrate-best-practices-security-management/support.png)
+  ![Screenshot of support plans.](./media/migrate-best-practices-security-management/support.png)
   _Support plans._
 
 **Learn more:**
@@ -509,14 +501,14 @@ At some point, you will need to collaborate with your support staff or Microsoft
 
 ## Best practice: Manage updates
 
-Keeping Azure VMs updated with the latest operating system and software updates is a massive chore. The ability to surface all VMs, to figure out which updates they need, and to automatically push those updates is extremely valuable.
+Keeping Azure VMs updated with the latest operating system and software updates is a massive chore. The ability to surface all VMs, figure out which updates they need, and automatically push those updates is extremely valuable.
 
-- You can use update management in Azure Automation to manage operating system updates for machines running Windows and Linux computers that are deployed in Azure, on-premises, and in other cloud providers.
+- You can use update management in Azure Automation to manage operating system updates. This applies to machines that run Windows and Linux computers that are deployed in Azure, on-premises, and in other cloud providers.
 - Use update management to quickly assess the status of available updates on all agent computers, and manage update installation.
 - You can enable update management for VMs directly from an Azure Automation account. You can also update a single VM from the VM page in the Azure portal.
-- In addition, Azure VMs can be registered with System Center Configuration Manager. You could then migrate the Configuration Manager workload to Azure, and do reporting and software updates from a single web interface.
+- In addition, you can register Azure VMs with System Center Configuration Manager. You can then migrate the Configuration Manager workload to Azure, and do reporting and software updates from a single web interface.
 
-  ![VM updates](./media/migrate-best-practices-security-management/updates.png)
+  ![Diagram of VM updates.](./media/migrate-best-practices-security-management/updates.png)
   _Updates._
 
 **Learn more:**
@@ -531,16 +523,16 @@ As with any production system, making any type of change can affect your environ
 
 - You can build best practice frameworks for change management to raise awareness in administrators and support staff.
 - You can use Azure Automation to help with configuration management and change tracking for your migrated workflows.
-- When enforcing change management process, you can use audit logs to link Azure change logs to presumably (or not) existing change requests. So that if you see a change made without a corresponding change request, you can investigate what went wrong in the process.
+- When enforcing change management process, you can use audit logs to link Azure change logs to existing change requests. Then, if you see a change made without a corresponding change request, you can investigate what went wrong in the process.
 
-Azure has a change tracking solution in Azure Automation:
+Azure has a change-tracking solution in Azure Automation:
 
 - The solution tracks changes to Windows and Linux software and files, Windows registry keys, Windows services, and Linux daemons.
-- Changes on monitored servers are sent to the Azure Monitor service in the cloud for processing.
-- Logic is applied to the received data and the cloud service records the data.
+- Changes on monitored servers are sent to Azure Monitor for processing.
+- Logic is applied to the received data, and the cloud service records the data.
 - On the change tracking dashboard, you can easily see the changes that were made in your server infrastructure.
 
-  ![Change management](./media/migrate-best-practices-security-management/change.png)
+  ![Screenshot of change management.](./media/migrate-best-practices-security-management/change.png)
   _Change management._
 
 **Learn more:**
