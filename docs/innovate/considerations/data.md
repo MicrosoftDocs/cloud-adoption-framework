@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Democratize data
 
-Coal, oil, and human potential were the three most consequential assets during the Industrial Revolution. These assets built companies, shifted markets, and ultimately changed nations. In the digital economy, there are three equally important assets: data, devices, and human potential. Each of these assets holds great innovation potential. For any innovation effort in the modern era, data is the new oil.
+Coal, oil, and human potential were the three most consequential assets during the industrial revolution. These assets built companies, shifted markets, and ultimately changed nations. In the digital economy, there are three equally important assets: data, devices, and human potential. Each of these assets holds great innovation potential. For any innovation effort in the modern era, data is the new oil.
 
 Across every company today, there are pockets of data that could be used to find and meet customer needs more effectively. Unfortunately, the process of mining that data to drive innovation has long been costly and time-consuming. Many of the most valuable solutions to customer needs go unmet because the right people can't access the data they need.
 
@@ -42,7 +42,7 @@ Data governance is a broad topic that could require its own dedicated framework.
 
 - **Is the shared data sensitive?** [Data should be classified](../../govern/policy-compliance/data-classification.md) before being shared publicly to protect the interests of customers and the company.
 - **If the data is sensitive, has it been secured?** Protection of sensitive data should be a requirement for any democratized data. The example workload focused on [securing data solutions](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/securing-data-solutions) provides a few references for securing data.
-- **Is the data catalogued?** Capturing details about the data being shared will aid in long-term data management. Tools for documenting data, like Azure Data Catalog, can make this process much easier in the cloud. Guidance regarding the [annotation of data](https://docs.microsoft.com/azure/data-catalog/data-catalog-how-to-annotate) and [documentation of data sources](https://docs.microsoft.com/azure/data-catalog/data-catalog-how-to-documentation) can help accelerate the process.
+- **Is the data cataloged?** Capturing details about the data being shared will aid in long-term data management. Tools for documenting data, like Azure Data Catalog, can make this process much easier in the cloud. Guidance regarding the [annotation of data](https://docs.microsoft.com/azure/data-catalog/data-catalog-how-to-annotate) and the [documentation of data sources](https://docs.microsoft.com/azure/data-catalog/data-catalog-how-to-documentation) can help accelerate the process.
 
 When democratization of data is important to a customer-focused hypothesis, make sure the governance of shared data is somewhere in the release plan. This will help protect customers, data consumers, and the company.
 
@@ -55,7 +55,7 @@ When data is disrupted across an IT environment, opportunities to innovate can b
 
 If centralization of data is required, you should first define the appropriate data store for the centralized data. It's a good practice to establish a data warehouse in the cloud. This scalable option provides a central location for all your data. This type of solution is available in Online Analytical Processing (OLAP) or big data options.
 
-The reference architectures for [OLAP](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/online-analytical-processing) and [Big data](https://docs.microsoft.com/azure/architecture/data-guide/big-data) solutions can help you choose the most relevant solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
+The reference architectures for [OLAP](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/online-analytical-processing) and [big data](https://docs.microsoft.com/azure/architecture/data-guide/big-data) solutions can help you choose the most relevant solution in Azure. If a hybrid solution is required, the reference architecture for [extending on-premises data](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/hybrid-on-premises-and-cloud) can also help accelerate solution development.
 
 > [!IMPORTANT]
 > Depending on the customer need and the aligned solution, a simpler approach may be sufficient. The cloud architect should challenge the team to consider lower cost solutions that could result in faster validation of the customer hypothesis, especially during early development. The following section on collecting data covers some scenarios that might suggest a different solution for your situation.
@@ -70,7 +70,7 @@ Cloud-based tools have turned these techniques into pay-per-use tools, reducing 
 
 **Ingestion:** Some data doesn't reside in an existing data store. When this transient data is a primary source of innovation, you'll want to consider alternative approaches. Transient data can be found in a variety of existing sources like applications, APIs, data streams, IoT devices, a blockchain, an application cache, in media content, or even in flat files.
 
-You can integrate these various forms of data into a central data store on an OLAP or big data solution. However, for early iterations of the build–measure–learn cycle, an Online Transactional Processing (OLTP) solution might be more than sufficient to validate a customer hypothesis. OLTP solutions aren't the highest-quality solution for any reporting scenario. However, when you're [building with customer empathy](./build.md), it's more important to focus on customer needs than on technical tooling decisions. After the customer hypothesis is validated at scale, a more suitable platform might be required. The reference architecture on [OLTP data stores](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/online-transaction-processing) can help you determine which data store is most appropriate for your solution.
+You can integrate these various forms of data into a central data store on an OLAP or big data solution. However, for early iterations of the build-measure-learn cycle, an online transactional processing (OLTP) solution might be more than sufficient to validate a customer hypothesis. OLTP solutions aren't the best option for any reporting scenario. However, when you're [building with customer empathy](./build.md), it's more important to focus on customer needs than on technical tooling decisions. After the customer hypothesis is validated at scale, a more suitable platform might be required. The reference architecture on [OLTP data stores](https://docs.microsoft.com/azure/architecture/data-guide/relational-data/online-transaction-processing) can help you determine which data store is most appropriate for your solution.
 
 **Virtualize:** Integration and ingestion of data can sometimes slow innovation. When a solution for data virtualization is already available, it might represent a more reasonable approach. Ingestion and integration can both duplicate storage and development requirements, add data latency, increase attack surface area, trigger quality issues, and increase governance efforts. Data virtualization is a more contemporary alternative that leaves the original data in a single location and creates pass-through or cached queries of the source data.
 
@@ -78,7 +78,7 @@ SQL Server 2017 and Azure SQL Data Warehouse both support [PolyBase](https://doc
 
 ## Next steps
 
-With a strategy for democratizing data in place, you'll next want to evaluate approaches to [engaging customers through apps](./apps.md).
+With a strategy for democratizing data in place, you'll next want to evaluate approaches to [engaging customers through applications](./apps.md).
 
 > [!div class="nextstepaction"]
-> [Engaging customers through apps](./apps.md)
+> [Engaging customers through applications](./apps.md)

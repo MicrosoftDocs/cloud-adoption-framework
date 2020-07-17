@@ -82,9 +82,9 @@ Contoso will complete the migration process as follows:
 | Service | Description | Cost |
 | --- | --- | --- |
 | [Azure App Service](https://azure.microsoft.com/services/app-service) | The service runs and scales applications by using Azure platform as a service (PaaS) for websites. | Pricing is based on the size of the instances and the features required. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
-| [Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager) | A load balancer that uses DNS to direct users to Azure, or external websites and services. | Pricing is based on the number of DNS queries received and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager). |
+| [Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager) | A load balancer that uses DNS to direct users to Azure or to external websites and services. | Pricing is based on the number of received DNS queries and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager). |
 | [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms, with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
-| [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL database engine. It provides a fully managed, enterprise-ready community MySQL database for application development and deployment. | Pricing is based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql). |
+| [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL database engine. It provides a fully managed, enterprise-ready, community MySQL database for application development and deployment. | Pricing is based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql). |
 
 ## Prerequisites
 

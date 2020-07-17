@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: ready
 ---
 
-# Modular design areas considered by all Azure landing zones
+# Design areas of a well-architected landing zone
 
 Each Azure landing zone implementation option provide a deployment approach and defined design principles that helps you implement the following design areas. Before choosing an implementation option, use this article to gain an understanding of those design areas.
 
