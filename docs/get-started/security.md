@@ -42,18 +42,25 @@ In addition to meeting any explicit regulatory compliance requirements, we recom
 **Deliverables and supporting guidance:**
 
 - **Technical:** Mitigate top risks and increase visibility and control of assets by enabling passwordless or multi-factor authentication for admins, and by enabling threat protection for cloud resources.
+
   - [Passwordless or multi-factor authentication for admins](https://docs.microsoft.com/azure/architecture/framework/security/critical-impact-accounts#passwordless-or-multi-factor-authentication-for-admins)
   - [Security operations](https://docs.microsoft.com/azure/architecture/framework/security/security-operations) and [Threat protection in Azure Security Center](https://docs.microsoft.com/azure/security-center/threat-protection)
+
 - **Process:** Enable rapid security decisions and continuous improvement by assigning security roles and responsibilities, and by establishing an incident response process.
+
   - [Clear lines of responsibility](https://docs.microsoft.com/azure/architecture/framework/security/governance#clear-lines-of-responsibility), [Assign privileges for managing the environment](https://docs.microsoft.com/azure/architecture/framework/security/governance#assign-privileges-for-managing-the-environment), and Operationalize Secure Score <!-- TODO: Improve this and add link to AAF article -->
   - Security roles and responsibilities <!-- TODO: add link to bookmark -->
   - [Incident response reference guide](https://aka.ms/irrg)
+
 - **People:** Provide security teams with the education, tools, and access required to successfully deploy and operate during the transition to the cloud environment.
+
   - **Educate everyone on concepts** of how cloud and cloud security are evolving:
     - [Evolution of threat environment, roles, and digital strategies](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
     - [Transformation of security, strategies, tools, and threats](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
   - **Train technical staff** on technical details of cloud security capabilities for the platforms they use. Microsoft provides extensive [Azure security documentation](https://docs.microsoft.com/azure/security).
+
 - **Long-term architectural decisions:** Establish a long-term foundation with the right decisions. These are difficult and expensive to change later.
+
   - [Build an enterprise segmentation strategy and align technical architectures with it (network segmentation, identity segmentation, etc.)](https://docs.microsoft.com/azure/architecture/framework/security/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
   - [Single enterprise directory](https://docs.microsoft.com/azure/architecture/framework/security/identity#single-enterprise-directory)
   - [Authentication strategy for services](https://docs.microsoft.com/azure/architecture/framework/security/applications-services#prefer-identity-authentication-over-keys)
@@ -84,8 +91,10 @@ The strategy step should result in a document that can easily be communicated to
 We recommended capturing the strategy in a presentation to facilitate easy discussion and updating. This presentation can be supported with a document, depending on the culture and preferences.
 
 - **Strategy presentation:** You might have a single strategy presentation, or you might choose to also create summary versions for leadership audiences.
+
   - **Full presentation:** This should include the full set of elements for the security strategy in the main presentation or in optional reference slides.
   - **Executive summaries:** Versions to use with senior executives and board members might contain only critical elements relevant to their role, such as risk appetite, top priorities, or accepted risks.
+
 - You can also record motivations, outcomes, and business justifications in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
 
 **Best practices for building security strategy:**
@@ -93,6 +102,7 @@ We recommended capturing the strategy in a presentation to facilitate easy discu
 Successful programs incorporate these elements into their security strategy process:
 
 - **Align closely to business strategy:** Security's charter is to protect business value. It's critical to align all security efforts to that purpose and minimize internal conflict.
+
   - **Build a shared understanding** of business, IT, and security requirements.
   - **Integrate security early into cloud adoption** to avoid last-minute crises from avoidable risks.
   - **Use an agile approach** to immediately establish minimum security requirements and continuously improve security assurances over time.
@@ -101,6 +111,7 @@ Successful programs incorporate these elements into their security strategy proc
   For more information, see [Transformations, mindsets, and expectations](../strategy/define-security-strategy.md#transformations-mindsets-and-expectations).
 
 - **Modernize security strategy:** The security strategy should include considerations for all aspects of modern technology environment, current threat landscape, and security community resources.
+
   - **Adapt to the shared responsibility model** of the cloud.
   - **Include all cloud types and multicloud deployments**.
   - **Prefer native cloud controls** to avoid unnecessary and harmful friction.
@@ -109,8 +120,11 @@ Successful programs incorporate these elements into their security strategy proc
 **Related resources for additional context:**
 
 - [Evolution of threat environment, roles, and digital strategies](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#evolution-of-threat-environment-roles--digital-strategies-2004)
+
 - [Transformation of security, strategies, tools, and threats](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#transformation-of-security-strategies-tools--threats-1513)
+
 - Strategy considerations for the Cloud Adoption Framework:
+
   - [Modernize your security strategy](../strategy/define-security-strategy.md#modernize-your-security-strategy)
   - [Cybersecurity resilience](../strategy/define-security-strategy.md#cybersecurity-resilience)
   - [How cloud is changing security relationships and responsibilities](../strategy/define-security-strategy.md#how-the-cloud-is-changing-security)
@@ -139,35 +153,49 @@ Security planning and cloud adoption planning should not be done in isolation. I
   The security plan should include all of these elements:
 
   - **Organizational functions plan**, so teams know how current security roles and responsibilities will change with the move to the cloud.
+
   - **Security skills plan** to support team members as they navigate the significant changes in technology, roles, and responsibilities.
+
   - **Technical security architecture and capabilities roadmap** to guide technical teams.
-  Microsoft provides reference architectures and technology capabilities to help you as you build your architecture and roadmap, including:
+  
+    Microsoft provides reference architectures and technology capabilities to help you as you build your architecture and roadmap, including:
+
     - [Azure components and reference model](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) to accelerate planning and design of Azure security roles.
 
       ![Azure administration model](../_images/security/azure-administration-model.png)
 
       ![Azure RBAC model](../_images/security/azure-rbac-model.png)
+
     - [Microsoft cybersecurity reference architecture](https://aka.ms/mcra) to build a cybersecurity architecture for a hybrid enterprise that spans on-premises and cloud resources.
     - [Security operations center (SOC) reference architecture](https://docs.microsoft.com/security/compass/security-operations-videos-and-decks#part-1-introduction---soc-learnings-strategies-and-technical-integration-2430) to modernize security detection, response, and recovery.
     - [Zero-trust user access reference architecture](https://docs.microsoft.com/security/ciso-workshop/ciso-workshop-module-3#part-5-zero-trust-user-access-reference-architecture-842) to modernize access control architecture for cloud generation.
     - [Azure Security Center](https://docs.microsoft.com/azure/security-center) and [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security) to help secure cloud assets.
+
   - **Security awareness and education plan**, so all teams have basic critical security knowledge.
+
   - **Asset sensitivity marking** to designate sensitive assets by using a taxonomy aligned to business impact. The taxonomy is built jointly by business stakeholders, security teams, and other interested parties.
 
-- **Security changes to the cloud plan:** Update other sections of the cloud adoption plan to reflect changes triggered by the security plan.
+  - **Security changes to the cloud plan:** Update other sections of the cloud adoption plan to reflect changes triggered by the security plan.
 
 **Best practices for security planning:**
+
 Your security plan is likely to be more successful if your planning takes the approach of:
 
 - **Assume a hybrid environment:** That includes software as a service (SaaS) applications and on-premises environments. It also includes multiple cloud infrastructure as a service (IaaS) and platform as a service (PaaS) providers, if applicable.
-- **Adopt agile security:** Establish minimum security requirements first and move all noncritical items to a prioritized list of next steps.
-This should not be a traditional, detailed plan of 3-5 years. The cloud and threat environment change too fast to make that type of plan useful. Your plan should focus on developing the beginning steps and end state:
+
+- **Adopt agile security:** Establish minimum security requirements first and move all noncritical items to a prioritized list of next steps. This should not be a traditional, detailed plan of 3-5 years. The cloud and threat environment change too fast to make that type of plan useful. Your plan should focus on developing the beginning steps and end state:
+
   - **Quick wins** for the immediate future that will deliver a high impact before longer-term initiatives begin. The time frame can be 3-12 months, depending on organizational culture, standard practices, and other factors.
   - **Clear vision** of the desired end state to guide each team's planning process (which might take multiple years to achieve).
+
 - **Share the plan broadly:** Increase awareness of, feedback from, and buy-in by stakeholders.
+
 - **Meet the strategic outcomes:** Ensure that your plan aligns to and accomplishes the strategic outcomes described in the security strategy.
+
 - **Set ownership, accountability, and deadlines:** Ensure that the owners for each task are identified and are committed to completing that task in a specific time frame.
+
 - **Connect with the human side of security:** Engage people during this period of transformation and new expectations by:
+
   - **Actively supporting team member transformation** with clear communication and coaching on:
     - What skills they need to learn.
     - Why they need to learn the skills (and the benefits of doing so).
@@ -175,6 +203,7 @@ This should not be a traditional, detailed plan of 3-5 years. The cloud and thre
   
     You can document the plan by using the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx). And you can use [online Microsoft security training](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction) to help with education of your team members.
   - **Making security awareness engaging** to help people genuinely connect with their part of keeping the organization safe.
+
 - **Review Microsoft learnings and guidance:** Microsoft has published insights and perspectives to help your organization plan its transformation to the cloud and a modern security strategy. The material includes recorded training, documentation, and security best practices and recommended standards.
   For technical guidance to help build your plan and architecture, see the [Microsoft security documentation](https://docs.microsoft.com/security).
 
@@ -207,6 +236,7 @@ During [landing zone](https://docs.microsoft.com/azure/cloud-adoption-framework/
   - [Azure security standards for strategy and architecture](https://docs.microsoft.com/security/compass/compass): Strategy and architectural recommendations to shape your environment's security posture.
   - [Azure security benchmarks](https://docs.microsoft.com/azure/security/benchmarks/introduction): Specific configuration recommendations for securing Azure environments.
   - [Azure security baseline training](https://docs.microsoft.com/learn/modules/create-security-baselines).
+
 - **Provide guardrails:** Safeguards should include automated policy auditing and enforcement. For these new environments, teams should strive to both audit and enforce the organization's security baselines. These efforts can help minimize security surprises during the development of workloads, as well as continuous integration and continuous deployment (CI/CD) of workloads.
 
   Microsoft provides several native capabilities in Azure to enable this:
