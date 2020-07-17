@@ -68,6 +68,10 @@ items:
       items:
       - name: Overview
         href: strategy/business-outcomes/index.md
+      - name: Data innovation
+        href: strategy/business-outcomes/data-innovations.md
+      - name: Data democratization
+        href: strategy/business-outcomes/data-democratization.md
       - name: Fiscal outcomes
         href: strategy/business-outcomes/fiscal-outcomes.md
       - name: Agility outcomes
@@ -106,6 +110,8 @@ items:
         href: strategy/define-security-strategy.md
       - name: Define monitoring strategy
         href: strategy/monitoring-strategy.md
+      - name: Responsible AI
+        href: strategy/responsible-ai.md
     - name: Skills relevant to strategy
       href: strategy/suggested-skills.md
 
@@ -157,6 +163,8 @@ items:
       items:
       - name: Digital estate assessment in Azure
         href: plan/contoso-migration-assessment.md
+      - name: Plan a data warehouse migration
+        href: plan/data-warehouse-migration.md
 
   - name: Ready
     items:
@@ -598,6 +606,17 @@ items:
             - name: Migrate Oracle to Azure Database for PostgreSQL online
               href: https://docs.microsoft.com/azure/dms/tutorial-oracle-azure-postgresql-online?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
+        - name: Analytics solutions
+          items: 
+          - name: Overview
+            href: migrate/azure-best-practices/analytics/analytics-solutions-overview.md
+          - name: Teradata
+            href: migrate/azure-best-practices/analytics/analytics-solutions-teradata.md
+          - name: Netezza
+            href: migrate/azure-best-practices/analytics/analytics-solutions-netezza.md
+          - name: Exadata
+            href: migrate/azure-best-practices/analytics/analytics-solutions-exadata.md
+
         - name: Mainframes
           items:
           - name: Overview
@@ -651,6 +670,10 @@ items:
           href: migrate/azure-best-practices/migrate-best-practices-costs.md
         - name: Scale a migration
           href: migrate/azure-best-practices/contoso-migration-scale.md
+        - name: Schema migration Data Definition Languages
+          href: migrate/azure-best-practices/analytics/schema-migration-ddl.md
+        - name: High availability for Azure Synapse
+          href: migrate/azure-best-practices/analytics/azure-synapse.md
         - name: Governance or compliance
           href: migrate/azure-best-practices/governance-or-compliance.md
 
@@ -746,14 +769,14 @@ items:
           href: innovate/innovation-guide/ci-cd.md
         - name: Interact through devices
           href: innovate/innovation-guide/devices.md
-        - name: Predict and influence
+        - name: Innovate with AI
           href: innovate/innovation-guide/predict.md
 
       - name: Innovation scenarios
         items:
         - name: Kubernetes
           items:
-          - name: Innovation scenarios overview
+          - name: Innovation with Kubernetes
             href: innovate/kubernetes/index.md
           - name: Application development and deployment
             href: innovate/kubernetes/application-development.md
@@ -761,7 +784,17 @@ items:
             href: innovate/kubernetes/cluster-design-operations.md
           - name: Cluster and application security
             href: innovate/kubernetes/cluster-application-security.md
-
+        - name: Artificial intelligence (AI)
+          items:
+          - name: Innovate with AI
+            href: innovate/ai/index.md
+          - name: Machine learning
+            href: innovate/ai/machine-learning.md
+          - name: AI apps and agents
+            href: innovate/ai/ai-applications.md
+          - name: Knowledge mining
+            href: innovate/ai/knowledge-mining.md  
+            
       - name: Best practices
         items:
         - name: Overview and Azure toolchain
@@ -932,6 +965,8 @@ items:
             items:
             - name: Continuous integration with Azure Pipelines and GitHub
               href: https://www.azuredevopslabs.com/labs/azuredevops/continuousintegration
+            - name: MLOps with Azure Machine Learning
+              href: manage/mlops-machine-learning.md
           - name: Reliable testing
             items:
             - name: Manage and track test plans
@@ -1012,31 +1047,30 @@ items:
             - name: Azure IoT configuration for cloud-to-device communications
               href: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-c2d-guidance?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
 
-        - name: Predict and influence
+        - name: Innovate with AI
           items:
           - name: Overview
             href: innovate/best-practices/predict.md
-          - name: Patterns
+          - name: Machine learning
             items:
+            - name: What is Machine Learning
+              href: innovate\best-practices\machine-learning.md
             - name: Azure Machine Learning workflow
               href: https://docs.microsoft.com/azure/machine-learning/concept-azure-machine-learning-architecture?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: ScaleR in HDInsight solution
-              href: https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-r-scaler-sparkr?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
             - name: Analyze data with Azure Machine Learning
               href: https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-analyze-with-azure-machine-learning?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Predictions
+          - name: AI apps and agents
             items:
+            - name: What are AI apps
+              href: innovate\best-practices\ai-applications.md
+            - name: What are AI agents
+              href: innovate\best-practices\conversational-ai.md
             - name: Deploy predictions
               href: https://docs.microsoft.com/azure/machine-learning/how-to-deploy-and-where?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Setting up HDInsight clusters
-              href: https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          - name: Interactions
+          - name: Knowledge mining
             items:
-            - name: Azure Machine Learning from experiment to operational services
-              href: https://docs.microsoft.com/azure/machine-learning/studio/model-progression-experiment-to-web-service?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-            - name: Operationalize ML Services on Azure HDInsight
-              href: https://docs.microsoft.com/azure/hdinsight/r-server/r-server-operationalize?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-
+            - name: What is Azure Cognitive search
+              href: innovate\best-practices\cognitive-search.md
       - name: Process improvements
         items:
         - name: Overview
@@ -1392,6 +1426,8 @@ items:
         href: organize/cloud-platform.md
       - name: Cloud automation functions
         href: organize/cloud-automation.md
+      - name: Cloud data functions
+        href: organize/cloud-data.md
       - name: Cloud security functions
         items:
         - name: Cloud security team functions

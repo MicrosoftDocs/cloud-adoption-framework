@@ -1,5 +1,5 @@
 ---
-title: "Azure innovation: Engage via apps"
+title: "Azure innovation: Engage via applications"
 description: Learn about Azure services that help you easily modernize your existing web and API apps and build cloud-native apps.
 author: billyclaymyersmsft
 ms.author: wimyers
@@ -13,13 +13,11 @@ ms.localizationpriority: high
 
 <!-- cSpell:ignore billyclaymyersmsft wimyers functionapp -->
 
-# Engage customers through apps
+# Engage customers through applications
 
-Innovation with apps includes both modernizing your existing apps that are hosted on-premises and building cloud-native apps by using containers or serverless technologies. Azure provides PaaS services like Azure App Service to help you easily modernize your existing web and API apps written in .NET, .NET Core, Java, Node.js, Ruby, Python, or PHP for deployment in Azure.
+Innovation with applications includes both modernizing your existing applications that are hosted on-premises and building cloud-native applications by using containers or serverless technologies. Azure provides PaaS services like Azure App Service to help you easily modernize your existing web and API apps written in .NET, .NET Core, Java, Node.js, Ruby, Python, or PHP for deployment in Azure.
 
-With an open-standard container model, building microservices or containerizing your existing apps and deploying them on Azure is simple when you use managed services like Azure Kubernetes Service, Azure Container Instances, and Web App for Containers. Serverless technologies like Azure Functions and Azure Logic Apps use a consumption model (pay for what you use) and help you focus on building your application rather than deploying and managing infrastructure.
-
-<!-- markdownlint-disable MD025 -->
+With an open-standard container model, building microservices or containerizing your existing applications and deploying them on Azure is simple when you use managed services like Azure Kubernetes Service, Azure Container Instances, and Web App for Containers. Serverless technologies like Azure Functions and Azure Logic Apps use a consumption model (pay for what you use) and help you focus on building your application rather than deploying and managing infrastructure.
 
 ## [Deliver value faster](#tab/DeliverValueFaster)
 
@@ -36,8 +34,8 @@ Azure App Service provides first-class support for languages like ASP.NET, ASP.N
 To configure or monitor Azure App Service deployments:
 
 1. Go to **App Services**.
-2. Configure a new service: Select **Add** and follow the prompts.
-3. Manage existing services: Select the desired app from the list of hosted applications.
+2. Configure a new service: select **Add** and follow the prompts.
+3. Manage existing services: select the desired application from the list of hosted applications.
 
 ::: zone target="chromeless"
 
@@ -51,7 +49,7 @@ To configure or monitor Azure App Service deployments:
 
 ### Azure Cognitive Services
 
-With Azure Cognitive Services, you can infuse advanced intelligence directly into your app through a set of APIs that let you take advantage of Microsoft-supported AI and machine learning algorithms.
+With Azure Cognitive Services, you can infuse advanced intelligence directly into your application through a set of APIs that let you take advantage of Microsoft-supported AI and machine learning algorithms.
 
 <!-- markdownlint-disable MD024 -->
 
@@ -60,8 +58,8 @@ With Azure Cognitive Services, you can infuse advanced intelligence directly int
 To configure or monitor Azure Cognitive Services deployments:
 
 1. Go to **Cognitive Services**.
-2. Configure a new service: Select **Add** and follow the prompts.
-3. Manage existing services: Select the desired service from the list of hosted services.
+2. Configure a new service: select **Add** and follow the prompts.
+3. Manage existing services: select the desired service from the list of hosted services.
 
 ::: zone target="chromeless"
 
@@ -79,11 +77,11 @@ Azure Bot Service extends your standard application by adding a natural bot inte
 
 #### Action
 
-To configure or monitor Azure Bot Services deployments:
+To configure or monitor Azure Bot Service deployments:
 
 1. Go to **Bot Services**.
-2. Configure a new service: Select **Add** and follow the prompts.
-3. Manage existing services: Select the desired bot from the list of hosted services.
+2. Configure a new service: select **Add** and follow the prompts.
+3. Manage existing services: select the desired bot from the list of hosted services.
 
 ::: zone target="chromeless"
 
@@ -103,7 +101,7 @@ During your innovation journey, you'll eventually find yourself on the path to D
 
 As mobile apps continue to grow in popularity, the need for a platform that can provide automated testing on real devices of various configurations grows. Visual Studio App Center not only provides a place where you can test your applications across iOS, Android, Windows, and macOS, it also provides a monitoring platform that can use Azure Application Insights to analyze your telemetry quickly and easily. For more information, see [Visual Studio App Center](https://docs.microsoft.com/appcenter).
 
-Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your app across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](https://docs.microsoft.com/appcenter/push).
+Visual Studio App Center also provides a notification service that lets you use a single call to send notifications to your application across platforms without having to contact each notification service individually. For more information, see [Visual Studio App Center Push (ACP)](https://docs.microsoft.com/appcenter/push).
 
 ### Learn more
 
@@ -118,7 +116,7 @@ Visual Studio App Center also provides a notification service that lets you use 
 - [Azure SDK for Go documentation](https://docs.microsoft.com/azure/go)
 - [DevOps solutions](https://azure.microsoft.com/solutions/devops)
 
-## [Create cloud-native apps](#tab/CloudNative)
+## [Create cloud-native applications](#tab/CloudNative)
 
 ### What are cloud-native applications?
 
@@ -130,7 +128,7 @@ Cloud-native applications are built from the ground up, optimized for cloud scal
 
 ### Microservices
 
-Microservices is a software architecture style in which apps are composed of small independent modules that communicate with each other via well-defined API contracts. These service modules are highly decoupled building blocks that are small enough to implement a single functionality. Microservices helps you:
+Microservices is a software architecture style in which applications are composed of small independent modules that communicate with each other via well-defined API contracts. These service modules are highly decoupled building blocks that are small enough to implement a single functionality. Microservices helps you:
 
 - Build services independently.
 - Scale services autonomously.
@@ -147,8 +145,8 @@ Use a fully managed Kubernetes service to handle provisioning, upgrading, and sc
 To configure or monitor an AKS service:
 
 1. Go to **Azure Kubernetes Services**.
-2. Configure a new service: Select **Add** and follow the prompts.
-3. Manage existing services: Select the desired Kubernetes service from the list.
+2. Configure a new service: select **Add** and follow the prompts.
+3. Manage existing services: select the desired Kubernetes service from the list.
 
 ::: zone target="chromeless"
 
@@ -174,7 +172,7 @@ Azure Functions provides a platform for running small units of code or functions
 
 The Azure Functions runtime supports many languages, including C#, Java, JavaScript, and Python. For a complete list, see [Supported languages in Azure Functions](https://docs.microsoft.com/azure/azure-functions/supported-languages).
 
-Another benefit of functions is that they can be triggered by different actions and events, like HTTPTriggers, TimerTriggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information about triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
+Another benefit of functions is that they can be triggered by different actions and events, like HTTP triggers, timer triggers, and triggers from other Azure services like Blob storage, Event Grid, and Service Bus. For more information about triggers and bindings, see [Azure Functions triggers and bindings concepts](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
 
 #### Action
 
@@ -182,7 +180,7 @@ To configure or monitor Azure Functions deployments:
 
 1. Go to **Function App**.
 2. Configure a new function app: Select **Add** and follow the prompts.
-3. Manage existing function apps: Select the desired app from the list of function apps.
+3. Manage existing function apps: Select the desired function app from the list.
 
 ::: zone target="chromeless"
 
@@ -196,11 +194,11 @@ To configure or monitor Azure Functions deployments:
 
 ### Serverless solutions: Azure Logic Apps
 
-Integrate data and apps instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft Office 365, and Dropbox.
+Integrate data and applications instead of writing complex integration code between disparate systems. Visually create serverless workflows with Azure Logic Apps and use your own APIs, serverless functions, or out-of-the-box software as a service (SaaS) connectors, including Salesforce, Microsoft Office 365, and Dropbox.
 
 #### Action
 
-To configure or monitor Azure logic apps:
+To configure or monitor Azure Logic Apps:
 
 1. Go to **Logic Apps**.
 2. Configure a new logic app: Select **Add** and follow the prompts.
@@ -225,8 +223,8 @@ Publish, secure, transform, maintain, and monitor APIs by using Azure API Manage
 To configure or monitor API Management services:
 
 1. Go to **API Management services**.
-2. Configure a new service: Select **Add** and follow the prompts.
-3. Manage existing services: Select the desired service from the list.
+2. Configure a new service: select **Add** and follow the prompts.
+3. Manage existing services: select the desired service from the list.
 
 ::: zone target="chromeless"
 
@@ -240,19 +238,19 @@ To configure or monitor API Management services:
 
 ### Containers
 
-For modernizing your application portfolio, Azure provides various container services to migrate your existing apps to containers and build cloud-native microservices apps so you can deliver value to your users faster. Use end-to-end developer and CI/CD tools to develop, update, and deploy your containerized applications. Manage containers at scale with a fully managed Kubernetes container orchestration service that integrates with Azure Active Directory. Wherever you are in your app modernization journey, accelerate your containerized application development while meeting your security requirements.
+For modernizing your application portfolio, Azure provides various container services to migrate your existing applications to containers and build cloud-native microservices applications so you can deliver value to your users faster. Use end-to-end developer and CI/CD tools to develop, update, and deploy your containerized applications. Manage containers at scale with a fully managed Kubernetes container orchestration service that integrates with Azure Active Directory. Wherever you're in your application modernization journey, accelerate your containerized application development while meeting your security requirements.
 
 ### Containers: Azure Container Instances
 
-Run Docker containers on-demand in a managed serverless Azure environment. Azure Container Instances is a solution for any scenario that can operate in isolated containers without orchestration. When you run your workloads in Container Instances, you can focus on designing and building your applications instead of managing the infrastructure that runs them.
+Run Docker containers on-demand in a managed serverless Azure environment. Azure Container Instances is a solution for any scenario that can operate in isolated containers without orchestration. When you run your workloads in container instances, you can focus on designing and building your applications instead of managing the infrastructure that runs them.
 
 #### Action
 
 To configure or monitor container instances:
 
 1. Go to **Container instances**.
-2. Configure a new container instance: Select **Add** and follow the prompts.
-3. Manage existing container instances: Select the desired container instance from the list.
+2. Configure a new container instance: select **Add** and follow the prompts.
+3. Manage existing container instances: select the desired container instance from the list.
 
 ::: zone target="chromeless"
 
@@ -278,15 +276,15 @@ As you start to transition from your initial testing phase, evaluate ways to iso
 
 ### Azure Front Door
 
-Azure Front Door provides a scalable, secure entry point that you can use to deliver your application around the globe. Azure Front Door combines optimization of traffic for best performance and instant global failover. You should use Azure Front Door rather than Azure Traffic Manager if you need Transport Layer Security (TLS) protocol termination (SSL offload) or per-HTTP/HTTPS request application-layer processing.
+Azure Front Door provides a scalable, secure entry point that you can use to deliver your application around the globe. Azure Front Door combines optimization of traffic for best performance and instant global failover. You should use Azure Front Door rather than Azure Traffic Manager if you need transport layer security (TLS) protocol termination (SSL offload) or per-HTTP/HTTPS request application-layer processing.
 
 #### Action
 
-To configure or monitor Front Doors:
+To configure or monitor front doors:
 
 1. Go to **Front Doors**.
-2. Configure a new Front Door: Select **Add** and follow the prompts.
-3. Manage existing Front Doors: Select the desired Front Door from the list.
+2. Configure a new Front Door: select **Add** and follow the prompts.
+3. Manage existing Front Door instances: select the desired Front Door instance from the list.
 
 ::: zone target="chromeless"
 
@@ -307,8 +305,8 @@ Traffic Manager provides DNS-based load balancing that can be routed based on va
 To configure or monitor Traffic Manager profiles:
 
 1. Go to **Traffic Manager profiles**.
-2. Configure a new profile: Select **Add** and follow the prompts.
-3. Manage existing profiles: Select the desired profile from the list.
+2. Configure a new profile: select **Add** and follow the prompts.
+3. Manage existing profiles: select the desired profile from the list.
 
 ::: zone target="chromeless"
 
@@ -329,8 +327,8 @@ Azure offers a distributed content delivery network (CDN) that allows you to ens
 To configure or monitor Azure CDN profiles:
 
 1. Go to **CDN profiles**.
-2. Configure a new profile: Select **Add** and follow the prompts.
-3. Manage existing profiles: Select the desired profile from the list.
+2. Configure a new profile: select **Add** and follow the prompts.
+3. Manage existing profiles: select the desired profile from the list.
 
 ::: zone target="chromeless"
 
@@ -346,4 +344,4 @@ To configure or monitor Azure CDN profiles:
 
 - [Azure Front Door](https://docs.microsoft.com/azure/frontdoor/front-door-overview)
 - [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager)
-- [Content Delivery Network](https://docs.microsoft.com/azure/cdn)
+- [Azure Content Delivery Network](https://docs.microsoft.com/azure/cdn)

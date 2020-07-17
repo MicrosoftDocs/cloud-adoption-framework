@@ -34,7 +34,7 @@ Each instance of the fabric controller is connected to another set of servers ru
 
 For example, the front end hosts the services that handle customer requests to allocate Azure resources such as [virtual machines](https://docs.microsoft.com/azure/virtual-machines), and services like [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction). First, the front end validates the user and verifies the user is authorized to allocate the requested resources. If so, the front end checks a database to locate a server rack with sufficient capacity and then instructs the fabric controller on that rack to allocate the resource.
 
-So fundamentally, Azure is a huge collection of servers and networking hardware running a complex set of distributed applications to orchestrate the configuration and operation of the virtualized hardware and software on those servers. It is this orchestration that makes Azure so powerful&mdash;users are no longer responsible for maintaining and upgrading hardware because Azure does all this behind the scenes.
+So fundamentally, Azure is a huge collection of servers and networking hardware running a complex set of distributed applications to orchestrate the configuration and operation of the virtualized hardware and software on those servers. It is this orchestration that makes Azure so powerful, because users are no longer responsible for maintaining and upgrading hardware because Azure does all this behind the scenes.
 
 ## Next steps
 
