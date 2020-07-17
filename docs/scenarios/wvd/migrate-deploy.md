@@ -9,6 +9,8 @@ ms.service: cloud-adoption-framework
 ms.subservice: migrate
 ---
 
+<!-- cSpell:ignore NTFS Logix -->
+
 # Windows Virtual Desktop deployment or migration
 
 The guidance in this article assumes that you've [established a plan for Windows Virtual Desktop](./plan.md), [assessed the desktop deployment requirements](./migrate-assess.md), [completed a proof of concept](./proof-of-concept.md), and are now ready to migrate or deploy your Windows Virtual Desktop instances.
@@ -47,15 +49,17 @@ Some applications may require remediation, modernization, or migration to Azure 
 
 The [initial scope](#initial-scope) assumes you're using a [VM-based FSLogix user profile container](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-user-profile).
 
-It is possible to use [Azure NetApp Files to host user profiles](https://docs.microsoft.com/azure/virtual-desktop/create-fslogix-profile-container). It will require a few extra steps in the scope, including:
-    - Per NetApp instance: configuration of NetApp files, volumes, and ad connections
-    - Per host/persona: configure FSLogix on session host virtual machines
-    - Per user: assign users to the host session
+You can use [Azure NetApp Files to host user profiles](https://docs.microsoft.com/azure/virtual-desktop/create-fslogix-profile-container). It will require a few extra steps in the scope, including:
 
-It is also possible to use [Azure Files to host user profiles](https://docs.microsoft.com/azure/virtual-desktop/create-file-share). It will require a few extra steps in the scope, including:
-    - Per Azure Files instance: configuration of the storage account, disk type, ad connection ([Azure AD DS is also supported](https://docs.microsoft.com/azure/virtual-desktop/create-profile-container-adds),       assign RBAC access for an ad user group and apply NTFS permissions, and get the storage account access key
-    - Per host/persona: configure FSLogix on session host virtual machines
-    - Per user: assign users to the host session
+- **Per NetApp instance:** Configuration of NetApp files, volumes, and Active Directory connections.
+- **Per host/persona:** Configure FSLogix on session host virtual machines.
+- **Per user:** Assign users to the host session.
+
+You can also use [Azure Files to host user profiles](https://docs.microsoft.com/azure/virtual-desktop/create-file-share), which requires a few extra steps in the scope, including:
+
+- **Per Azure Files instance:** Configure the storage account, disk type, and Active Directory connection ([Azure AD DS is also supported](https://docs.microsoft.com/azure/virtual-desktop/create-profile-container-adds), assign RBAC access for an Active Directory user group and apply NTFS permissions, and get the storage account access key.
+- **Per host/persona:** Configure FSLogix on session host virtual machines.
+- **Per user:** Assign users to the host session.
 
 The user profiles for some personas or users may also require a data migration effort, which can delay the migration of specific personas until user profiles can be remediated within your local Active Directory or individual user desktops. This could significantly impact the scope outside of the WVD scenario. Once remediated, the initial scope or the above approaches can be resumed.
 
