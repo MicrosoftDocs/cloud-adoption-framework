@@ -139,7 +139,7 @@ The hub often contains the common service components consumed by the spokes. The
 
 A virtual datacenter reduces overall cost by using the shared hub infrastructure between multiple spokes.
 
-The role of each spoke can be to host different types of workloads. The spokes also provide a modular approach for repeatable deployments of the same workloads. Examples are dev and test, user acceptance testing, preproduction, and production. The spokes can also segregate and enable different groups within your organization. An example is DevOps groups. Inside a spoke, it's possible to deploy a basic workload or complex multitier workloads with traffic control between the tiers.
+The role of each spoke can be to host different types of workloads. The spokes also provide a modular approach for repeatable deployments of the same workloads. Examples include dev/test, user acceptance testing, preproduction, and production. The spokes can also segregate and enable different groups within your organization. An example is DevOps groups. Inside a spoke, it's possible to deploy a basic workload or complex multitier workloads with traffic control between the tiers.
 
 ### Subscription limits and multiple hubs
 
@@ -231,7 +231,7 @@ Infrastructure components have the following functionality:
 
 Components of a perimeter network (sometimes called a DMZ network) connect your on-premises or physical datacenter networks, along with any internet connectivity. The perimeter typically requires a significant time investment from your network and security teams.
 
-Incoming packets should flow through the security appliances in the hub before reaching the back-end servers and services in the spokes. Examples are the firewall, IDS, and IPS. Before they leave the network, internet-bound packets from the workloads should also flow through the security appliances in the perimeter network. This flow enables policy enforcement, inspection, and auditing.
+Incoming packets should flow through the security appliances in the hub before reaching the back-end servers and services in the spokes. Examples include the firewall, IDS, and IPS. Before they leave the network, internet-bound packets from the workloads should also flow through the security appliances in the perimeter network. This flow enables policy enforcement, inspection, and auditing.
 
 Perimeter network components include:
 
@@ -284,7 +284,7 @@ Azure Front Door also provides a web application firewall (WAF), which protects 
 
 [Public IPs][PIP]. With some Azure features, you can associate service endpoints to a public IP address so that your resource is accessible from the internet. This endpoint uses NAT to route traffic to the internal address and port on the virtual network in Azure. This path is the primary way for external traffic to pass into the virtual network. You can configure public IP addresses to determine which traffic is passed in and how and where it's translated onto the virtual network.
 
-[Azure DDoS Protection Standard][DDoS] provides additional mitigation capabilities over the [Basic service][DDoS] tier that are tuned specifically to Azure Virtual Network resources. DDoS Protection Standard is simple to enable and requires no application changes. Protection policies are tuned through dedicated traffic monitoring and machine learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples are Azure Load Balancer, Azure Application Gateway, and Azure Service Fabric instances. Near real-time, system-generated logs are available through Azure Monitor views during an attack and for history. Application layer protection can be added through the Azure Application Gateway web application firewall. Protection is provided for IPv4 and IPv6 Azure public IP addresses.
+[Azure DDoS Protection Standard][DDoS] provides additional mitigation capabilities over the [Basic service][DDoS] tier that are tuned specifically to Azure Virtual Network resources. DDoS Protection Standard is simple to enable and requires no application changes. Protection policies are tuned through dedicated traffic monitoring and machine learning algorithms. Policies are applied to public IP addresses associated to resources deployed in virtual networks. Examples include Azure Load Balancer, Azure Application Gateway, and Azure Service Fabric instances. Near real-time, system-generated logs are available through Azure Monitor views during an attack and for history. Application layer protection can be added through the Azure Application Gateway web application firewall. Protection is provided for IPv4 and IPv6 Azure public IP addresses.
 
 The hub and spoke topology uses virtual network peering and user-defined routes to route traffic properly.
 

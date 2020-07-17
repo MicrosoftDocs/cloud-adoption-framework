@@ -62,7 +62,7 @@ The reference architectures for [OLAP](https://docs.microsoft.com/azure/architec
 
 ### Collect data
 
-When you need data to be centralized to address a customer need, it's very likely that you'll also have to collect the data from various sources and move it into the centralized data store. There are two primary forms of data collection: _integration_ and _ingestion_.
+When you need data to be centralized to address a customer need, it's very likely that you'll also have to collect the data from various sources and move it into the centralized data store. The two primary forms of data collection are _integration_ and _ingestion_.
 
 **Integration:** Data that resides in an existing data store can be integrated into the centralized data store by using traditional data movement techniques. This is especially common for scenarios that involve multicloud data storage. These techniques involve extracting the data from the existing data store and then loading it into the central data store. At some point in this process, the data is typically transformed to be more usable and relevant in the central store.
 
