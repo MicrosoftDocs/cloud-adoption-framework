@@ -14,7 +14,7 @@ services: azure-migrate
 
 # Rehost an on-premises application on Azure VMs with Azure Migrate
 
-This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware virtual mashines (VMs) by migrating the application VMs to Azure VMs.
+This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware virtual machines (VMs) by migrating the application VMs to Azure VMs.
 
 The SmartHotel360 application used in this example is provided as open source. If you want to use it for your own testing purposes, download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
