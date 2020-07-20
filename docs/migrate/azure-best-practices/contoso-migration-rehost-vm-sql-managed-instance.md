@@ -341,7 +341,7 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
     - [Azure Linux agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-linux)
     - [Azure Windows agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-windows)
 
-1. Miscellaneous
+1. Other considerations:
 
    - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, you won't be able to log in to the VM until the update completes.
    - After migration, you can check **boot diagnostics** to view a screenshot of the VM. If this doesn't work, you should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).

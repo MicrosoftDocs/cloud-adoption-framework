@@ -172,14 +172,14 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
     - Check that RDP or SSH is allowed in the operating system firewall.
     - For Windows, set the operating system's SAN policy on the on-premises VM to **OnlineAll**.
 
-1. They install the Azure agent.
+1. They install the Azure agent:
 
     - [Azure Windows agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-windows)
 
 1. Other considerations:
 
-   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, they won't be able to log in to the VM until the update completes.
-   - After migration, they can check **boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, you won't be able to log in to the VM until the update completes.
+   - After migration, you can check **boot diagnostics** to view a screenshot of the VM. If this doesn't work, you should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 
