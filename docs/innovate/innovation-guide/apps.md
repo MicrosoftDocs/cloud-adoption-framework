@@ -280,10 +280,10 @@ Azure Front Door provides a scalable, secure entry point that you can use to del
 
 #### Action
 
-To configure or monitor front doors:
+To configure or monitor Front Door instances:
 
 1. Go to **Front Doors**.
-2. Configure a new Front Door: select **Add** and follow the prompts.
+2. Configure a new Front Door instance: select **Add** and follow the prompts.
 3. Manage existing Front Door instances: select the desired Front Door instance from the list.
 
 ::: zone target="chromeless"

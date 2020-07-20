@@ -378,7 +378,7 @@ Azure provides a REST API that can access your tenant billing information.
 - You can use the Budgets API to integrate external systems and workflows that are triggered by metrics that you build from the API data.
 - You can pull usage and resource data into your preferred data analysis tools.
 - The Azure Resource Usage API and the Azure Resource RateCard API can help you accurately predict and manage your costs.
-- The APIs are implemented as a resource provider and are included in the APIs exposed by the Azure Resource Manager.
+- The APIs are implemented as a resource provider and are included in the APIs exposed by Azure Resource Manager.
 - The Budgets API can be integrated with Azure Logic Apps and Azure Automation runbooks.
 
 **Learn more:**

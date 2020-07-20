@@ -71,6 +71,4 @@ As learning metrics accumulate, the team can begin to [learn with customers](./l
 > [!div class="nextstepaction"]
 > [Learn with customers](./learn.md)
 
-<!-- cSpell:ignore Eric Ries -->
-
-Some of the concepts in this article build on topics first described in [The lean startup](http://theleanstartup.com/book), written by Eric Ries.
+Some of the concepts in this article build on topics first described in [The Lean Startup](http://theleanstartup.com/book), written by Eric Ries.
