@@ -30,7 +30,7 @@ The following is a list of Azure tools that can help mature the policies and pro
 
 The following are additional tools that may be required to accomplish specific deployment acceleration objectives. Often these tools are used outside of the governance team, but are still considered an aspect of the Deployment Acceleration discipline.
 
-|  | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview)  | [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) | [Azure DevOps](https://docs.microsoft.com/azure/devops) | [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) | [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) |
+|  | [Azure portal](https://azure.microsoft.com/features/azure-portal)  | [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/overview)  | [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) | [Azure DevOps](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops) | [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview) | [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) |
 |---------|---------|---------|---------|---------|---------|---------|
 | Manual deployment (single asset)     | Yes | Yes  | No  | Not efficiently | No | Yes |
 | Manual deployment (full environment)     | Not efficiently | Yes | No  | Not efficiently | No | Yes |

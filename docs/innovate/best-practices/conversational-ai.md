@@ -63,7 +63,7 @@ As part of the Azure Bot Service and Bot Framework, we offer additional componen
 | Add cards and buttons | Enhance the user experience with media other than text, such as graphics, menus, and cards | How to [add cards](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0) |
 
 > [!NOTE]
-> The table above is not a comprehensive list. Please review the full documentation on [Azure.com](https://docs.microsoft.com/azure/bot-service/?view=azure-bot-service-4.0)
+> The table above is not a comprehensive list. For more information, see the [Azure Bot Service documentation](https://docs.microsoft.com/azure/bot-service/).
 
 ### Test
 

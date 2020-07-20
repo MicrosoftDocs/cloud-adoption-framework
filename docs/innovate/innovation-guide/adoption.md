@@ -85,7 +85,7 @@ To view quantitative data on your APIs:
 
 <!-- markdownlint-disable DOCSMD001 -->
 
-::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2FService]" submitText="Go to API Management services" :::
+::: form action="OpenBlade[#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.ApiManagement%2FService]" submitText="Go to API Management Services" :::
 
 <!-- markdownlint-enable DOCSMD001 -->
 
