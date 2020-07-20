@@ -79,7 +79,7 @@ This initial landing zone includes the following assumptions or constraints. If 
 - **Subscription limits:** This adoption effort isn't expected to exceed [subscription limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
 - **Compliance:** No third-party compliance requirements are needed in this landing zone.
 - **Architectural complexity:** Architectural complexity doesn't require additional production subscriptions.
-- **Shared services:** There are no existing shared services in Azure that require this subscription to be treated like a spoke in a hub and spoke architecture.
+- **Shared services:** No existing shared services in Azure require this subscription to be treated like a spoke in a hub and spoke architecture.
 - **Limited production scope:** This landing zone could potentially host production workloads. It is not a suitable environment for sensitive data or mission-critical workloads.
 
 If these assumptions align with your current adoption needs, then this blueprint might be a starting point for building your landing zone.

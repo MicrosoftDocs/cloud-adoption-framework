@@ -50,7 +50,7 @@ The following sample policy statements address common security-related business 
 
 **Policy statement:** No subnet containing protected data can be directly accessed over public internet or across datacenters. Access to those subnets must be routed through intermediate subnets. All access into those subnets must come through a firewall solution capable of performing packet scanning and blocking functions.
 
-**Potential design option:** In Azure, secure public endpoints by deploying a [DMZ between the public internet and your cloud-based network](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Consider deployment, configuration, and automation of [Azure Firewall](https://docs.microsoft.com/azure/firewall/overview).
+**Potential design option:** In Azure, secure public endpoints by deploying a [perimeter network between the public internet and your cloud-based network](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json). Consider deployment, configuration, and automation of [Azure Firewall](https://docs.microsoft.com/azure/firewall/overview).
 
 ## DDoS protection
 
