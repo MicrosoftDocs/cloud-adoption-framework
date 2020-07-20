@@ -1,5 +1,5 @@
 ---
-title: "Track costs across business units and environments"
+title: Track costs across business units, environments, or projects
 description: Use the Cloud Adoption Framework for Azure to understand the decisions and implementation approaches to creating tracking mechanisms.
 author: BrianBlanchard
 ms.author: brblanch
@@ -14,6 +14,7 @@ ms.subservice: ready
 [Building a cost-conscious organization](../../organize/cost-conscious-organization.md) requires visibility and properly defined access (or scope) to cost-related data. This best-practice article outlines decisions and implementation approaches to creating tracking mechanisms.
 
 ![Outline of the cost-conscious process](../../_images/ready/cost-optimization-process.png)
+_Figure 1: Outline of a cost-conscious process._
 
 ## Establish a well-managed environment hierarchy
 
@@ -27,10 +28,7 @@ _Tagging_ is an easy way to classify assets. Tagging associates metadata to an a
 
 Tagging is a primary way to understand the data in any cost reporting. It's a fundamental part of any well-managed environment. It's also the first step in establishing proper governance of any environment.
 
-The first step in accurately tracking cost information across business units, environments, and projects is to define a tagging standard. The second step is to ensure that the tagging standard is consistently applied. The following articles can help you accomplish each of these steps:
-
-- [Develop naming and tagging standards](../azure-best-practices/naming-and-tagging.md)
-- [Establish a governance MVP to enforce tagging standards](../../govern/guides/complex/index.md)
+The first step in accurately tracking cost information across business units, environments, and projects is to define a tagging standard. The second step is to ensure that the tagging standard is consistently applied. The following articles can help you accomplish: [developing naming and tagging standards](../azure-best-practices/naming-and-tagging.md) and [establishing a governance MVP to enforce tagging standards](../../govern/guides/complex/index.md)
 
 ### Resource organization
 
@@ -39,6 +37,7 @@ There are several approaches to organizing assets. This section outlines a best 
 For a large enterprise, the following model for management groups, subscriptions, and resource groups will create a hierarchy that allows each team to have the right level of visibility to perform their duties. When the enterprise needs cost controls to prevent budget overrun, it can apply governance tooling like Azure Blueprints or Azure Policy to the subscriptions within this structure to quickly block future cost errors.
 
 ![Diagram of resource organization for a large enterprise](../../_images/govern/large-enterprise-resource-organization.png)
+_Figure 2: Resource organization for a large enterprise._
 
 In the preceding diagram, the root of the management group hierarchy contains a node for each business unit. In this example, the multinational company needs visibility into the regional business units, so it creates a node for geography under each business unit in the hierarchy.
 
@@ -61,8 +60,7 @@ The rest of this article assumes the use of the best-practice approach in the pr
 
 Managing cost is a team activity. The organization readiness section of the Cloud Adoption Framework defines a small number of core teams and outlines how those teams support cloud adoption efforts. This article expands on the team definitions to define the scope and roles to assign to members of each team for the proper level of visibility into cost management data.
 
-- **Roles** define what a user can do to various assets.
-- **Scope** defines which assets (user, group, service principal, or managed identity) a user can do those things to.
+**Roles** define what a user can do to various assets. The **Scope** defines which assets (user, group, service principal, or managed identity) a user can do those things to.
 
 As a general best practice, we suggest a least-privilege model in assigning people to various roles and scopes.
 
@@ -123,7 +121,7 @@ To begin using Azure Cost Management and Billing, see [How to optimize your clou
 - [Optimize costs based on recommendations](https://docs.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Use cost alerts to monitor usage and spending](https://docs.microsoft.com/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending)
 
-<-- docsTest: "AWS Cost and Usage" -->
+<!-- docsTest: "AWS Cost and Usage" -->
 
 ### Use Azure Cost Management and Billing to govern AWS costs
 

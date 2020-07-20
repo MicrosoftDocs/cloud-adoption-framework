@@ -1,6 +1,6 @@
 ---
-title: "Recommended role-based access control"
-description: Learn how to separate duties within your team and grant role-based access control so users and groups can perform their jobs.
+title: Recommended role-based access control
+description: Learn how to separate duties within your team and grant role-based access control so that users and groups can perform their jobs.
 author: rotycenh
 ms.author: brblanch
 ms.date: 11/28/2018
@@ -73,7 +73,7 @@ The following table illustrates a common pattern for dividing IT responsibilitie
 | Security operations | SecOps | Provides general security oversight. <br> Establishes and enforces security policy such as encryption at rest. <br><br> Manages encryption keys. <br><br> Manages firewall rules. |
 | Network operations | Netops | Manages network configuration and operations within virtual networks, such as routes and peerings. |
 | Systems operations | Sysops | Specifies compute and storage infrastructure options, and maintains resources that have been deployed. |
-| Development, test, and operations | DevOps | Builds and deploys workload features and applications. <br><br> Operates features and applications to meet service-level agreements (SLAs) and other quality standards. |
+| Development, test, and operations | DevOps | Builds and deploys workload features and applications. <br><br> Operates features and applications to meet service-level agreements and other quality standards. |
 
 <!-- markdownlint-enable MD033 -->
 

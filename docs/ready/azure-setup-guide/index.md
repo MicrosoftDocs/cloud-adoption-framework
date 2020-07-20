@@ -3,7 +3,7 @@ title: "Azure setup guide: Before you start"
 description: Learn how to set up Azure effectively for your organization with step-by-step guidance.
 author: timleyden
 ms.author: kfollis
-ms.date: 04/09/2019
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: ready
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 ::: zone target="docs"
 
 > [!NOTE]
-> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in Azure Quickstart Center. See the tip in the article for a link.
+> This guide provides a starting point for readiness guidance in the Cloud Adoption Framework and is also available in the Azure Quickstart Center. See the tip in the article for a link.
 
 ::: zone-end
 

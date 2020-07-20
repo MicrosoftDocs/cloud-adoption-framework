@@ -1,5 +1,5 @@
 ---
-title: "Skills readiness path"
+title: Skills readiness path during the Ready phase of a migration journey
 description: Use the Cloud Adoption Framework for Azure to learn how to build the skills necessary to complete your migration journey.
 author: BrianBlanchard
 ms.author: brblanch
@@ -15,10 +15,10 @@ During the Ready phase of a migration journey, the objective is to prepare for t
 
 ## Organizational readiness learning paths
 
-Depending on the motivations and business outcomes associated with a cloud adoption effort, leaders might be required to establish new organizational structures or virtual teams (v-teams) to facilitate various functions. The following articles help to develop the skills that are necessary to structure those teams in accordance with desired outcomes:
+Depending on the motivations and business outcomes associated with a cloud adoption effort, leaders might be required to establish new organizational structures or virtual teams to facilitate various functions. The following articles help to develop the skills that are necessary to structure those teams in accordance with desired outcomes:
 
 - [Initial organization alignment](./index.md): Overview of organizational alignment and various team structures to facilitate specific goals.
-- [Break down silos and fiefdoms](../organize/fiefdoms-silos.md): Understand two common organizational antipatterns and ways to guide the team to productive collaboration.
+- [Break down silos and fiefdoms](../organize/fiefdoms-silos.md): Understand two common organizational anti-patterns and ways to guide the team to productive collaboration.
 
 ## Environmental (technical) readiness learning paths
 
@@ -67,7 +67,7 @@ The following examples are a few tailored learning paths on Microsoft Learn whic
 
 [Store data in Azure](https://docs.microsoft.com/learn/paths/store-data-in-azure): Azure provides a variety of ways to store data: unstructured, archival, relational, and more. Learn the basics of storage management in Azure, how to create a storage account, and how to choose the right model for the data you want to store in the cloud.
 
-[Architect great solutions in Azure](https://docs.microsoft.com/learn/paths/architect-great-solutions-in-azure): Learn how to design and build secure, scalable, high-performing solutions in Azure by examining the core principles found in every good architecture.
+[Architect great solutions in Azure](https://docs.microsoft.com/learn/paths/architect-great-solutions-in-azure): Learn how to design and build secure, scalable, and high-performing solutions in Azure by examining the core principles found in sound architecture.
 
 ## Learn more
 
