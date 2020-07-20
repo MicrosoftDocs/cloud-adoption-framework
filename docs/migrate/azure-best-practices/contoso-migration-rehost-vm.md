@@ -14,7 +14,7 @@ services: azure-migrate
 
 # Rehost an on-premises application on Azure VMs with Azure Migrate
 
-This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware VMs by migrating the application VMs to Azure VMs.
+This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware virtual mashines (VMs) by migrating the application VMs to Azure VMs.
 
 The SmartHotel360 application used in this example is provided as open source. If you want to use it for your own testing purposes, download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
@@ -70,7 +70,7 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 | Consideration | Details |
 | --- | --- |
 | **Pros** | Both the application VMs will be moved to Azure without changes, which makes the migration simple. <br><br> Because Contoso is using a lift-and-shift approach for both application VMs, no special configuration or migration tools are needed for the application database. <br><br> Contoso can take advantage of its investment in Software Assurance by using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the application VMs in Azure. |
-| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles. To learn more, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the application remain as single points of failure. <br><br> SQLVM is running on SQL Server 2008 R2, which is no longer in mainstream support. But it is supported for Azure VMs. To learn more, see [Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the application on Azure VMs rather than moving to a managed service, such as Azure App Service and Azure SQL Database. |
+| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles. To learn more, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the application remain as single points of failure. <br><br> `SQLVM` is running on SQL Server 2008 R2, which is no longer in mainstream support. But it is supported for Azure VMs. To learn more, see [Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the application on Azure VMs rather than moving to a managed service, such as Azure App Service and Azure SQL Database. |
 
 ### Migration process
 

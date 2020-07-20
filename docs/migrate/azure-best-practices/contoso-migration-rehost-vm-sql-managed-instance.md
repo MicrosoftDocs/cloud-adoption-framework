@@ -14,7 +14,7 @@ services: azure-migrate
 
 # Rehost an on-premises application by migrating to Azure VMs and Azure SQL Managed Instance
 
-This article shows how the fictional company Contoso migrates a two-tier Windows .NET front-end application running on VMware VMs to an Azure virtual machine (VM) by using Azure Migrate. It also shows how Contoso migrates the application database to Azure SQL Managed Instance.
+This article shows how the fictional company Contoso migrates a two-tier Windows .NET front-end application running on VMware virtual machines (VMs) to an Azure VM by using Azure Migrate. It also shows how Contoso migrates the application database to Azure SQL Managed Instance.
 
 The SmartHotel360 application used in this example is provided as open source. If you want to use it for your own testing purposes, download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
