@@ -137,7 +137,7 @@ To set up an Azure SQL Managed Instance, Contoso needs a subnet that meets the f
 Contoso admins set up the virtual network as follows:
 
 1. They create a new virtual network (VNET-SQLMI-EU2) in the primary region (East US 2). It adds the virtual network to the ContosoNetworkingRG resource group.
-1. They assign an address space of `10.235.0.0/24`. They ensure that the range doesn't overlap with any other networks in its enterprise.
+1. They assign an address space of **10.235.0.0/24**. They ensure that the range doesn't overlap with any other networks in its enterprise.
 1. They add two subnets to the network:
     - `SQLMI-DS-EUS2` (`10.235.0.0/25`).
     - `SQLMI-SAW-EUS2` (`10.235.0.128/29`). This subnet is used to attach a directory to the managed instance.
@@ -146,19 +146,19 @@ Contoso admins set up the virtual network as follows:
 
 1. After the virtual network and subnets are deployed, they peer networks as follows:
 
-    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for East US 2).
+    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for East US 2).  
     - Peers `VNET-SQLMI-EUS2` with `VNET-PROD-EUS2` (the production network).
 
       ![Screenshot of the peered networks.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
 
 1. They set custom DNS settings. The DNS settings point first to Contoso's Azure domain controllers. Azure DNS is secondary. The Contoso Azure domain controllers are located as follows:
 
-    - Located in the PROD-DC-EUS2 subnet of the production network (VNET-PROD-EUS2) in the East US 2 region.
-    - `CONTOSODC3` address: `10.245.42.4`.
-    - `CONTOSODC4` address: `10.245.42.5`.
-    - Azure DNS resolver: `168.63.129.16`.
+    - Located in the PROD-DC-EUS2 subnet of the production network (VNET-PROD-EUS2) in the East US 2 region.  
+    - `CONTOSODC3` address: `10.245.42.4`  
+    - `CONTOSODC4` address: `10.245.42.5`  
+    - Azure DNS resolver: `168.63.129.16`
 
-      ![Screenshot of Network DNS servers list.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
+    ![Screenshot of Network DNS servers list.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-dns.png)
 
 **Need more help?**
 
@@ -184,7 +184,7 @@ To set up routing, Contoso admins do the following:
 
     ![Screenshot of the "Create route table" pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table.png)
 
-1. To comply with SQL Managed Instance requirements, after the route table (MIRouteTable) is deployed, the admins add a route that has an address prefix of `0.0.0.0/0`. The **Next hop type** option is set to **Internet**.
+1. To comply with SQL Managed Instance requirements, after the route table (MIRouteTable) is deployed, the admins add a route with an address prefix of **0.0.0.0/0**. The **Next hop type** option is set to **Internet**.
 
     ![Screenshot of the "Add route" pane for adding an address prefix.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-prefix.png)
 
@@ -217,13 +217,13 @@ Learn how to [provision a managed instance](https://docs.microsoft.com/azure/sql
 
 ## Step 2: Migrate via Azure Database Migration Service
 
-Contoso admins migrate the managed instance via Azure Database Migration Service by following the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
+Contoso admins migrate the managed instance via Azure Database Migration Service by following the instructions in the [step-by-step migration tutorial](https://docs.microsoft.com/azure/dms/tutorial-sql-server-azure-sql-online). They can perform online, offline, and hybrid (preview) migrations.
 
-In brief, Contoso admins perform the following:
+In brief, Contoso admins do the following:
 
-- Create an Azure Database Migration Service instance with a Premium SKU that's connected to the virtual network.
-- Ensure that Database Migration Service can access the remote SQL Server via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the virtual network level, the network VPN, and the machine that hosts SQL Server.
-- Configure Azure Database Migration Service:
+- They create an Azure Database Migration Service instance with a Premium SKU that's connected to the virtual network.
+- They ensure that Database Migration Service can access the remote SQL Server via the virtual network. This would entail ensuring that all incoming ports are allowed from Azure to SQL Server at the virtual network level, the network VPN, and the machine that hosts SQL Server.
+- They configure Azure Database Migration Service:
   - Create a migration project.
   - Add a source (on-premises database).
   - Select a target.
@@ -237,11 +237,11 @@ In brief, Contoso admins perform the following:
 
 With the database migrated, Contoso admins can now provision the two web apps.
 
-1. They select **Web App** in the portal.
+1. In the Azure portal, they select **Web App**.
 
     ![Screenshot of the "Web App" link.](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app1.png)
 
-1. They provide a name for the web app (SHWEB-EUS2), run it on Windows, and place it in the ContosoRG production resource group. They create a new web app and Azure App Service plan.
+1. They provide a name for the web app, **SHWEB-EUS2**, run it on Windows, and place it in the **ContosoRG** production resource group. They create a new web app and Azure App Service plan.
 
     ![Screenshot of the "Web App" pane for creating the first web app.](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app2.png)
 
@@ -323,7 +323,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
 1. They select **Releases** > **+ New pipeline**.
 
-    ![New pipeline](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline7.png)
+    ![Screenshot showing the "New pipeline" link.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline7.png)
 
 1. They select the deployment template for Azure App Service.
 
@@ -341,7 +341,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
      ![Screenshot of selecting the app service name.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline11.png)
 
-1. On the pipeline, they select **Artifacts**, select **+ Add an artifact**, and then select to build with the **ContosoSmarthotel360Refactor** pipeline.
+1. On the pipeline, they select **Artifacts**, select **+ Add an artifact**, select **Build** as the source type, and then build with the **ContosoSmarthotel360Refactor** pipeline.
 
      ![Screenshot of the Build button on the "Add an artifact" pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline12.png)
 
@@ -357,7 +357,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
     ![Screenshot of the option to select "Deploy Azure App Service."](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline15.png)
 
-1. In **Select a file or folder**, they expand the **drop** folder, select the *SmartHotel.Registration.Wcf.zip* file that was creating during the build, and then select **Save**.
+1. In **Select a file or folder**, they expand the **drop** folder, select the *SmartHotel.Registration.Wcf.zip* file that was created during the build, and then select **Save**.
 
     ![Screenshot of the "Select a file or folder" pane for selecting the WCF file.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline16.png)
 
