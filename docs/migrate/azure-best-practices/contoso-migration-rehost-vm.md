@@ -28,7 +28,7 @@ The IT leadership team has worked closely with business partners to understand w
 
 ## Migration goals
 
-The Contoso cloud team has pinned down goals for this migration. These goals are used to determine the best migration method:
+The Contoso cloud team has pinned down goals for this migration. It used these goals to determine the best migration method:
 
 - After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as it is on-premises.
 - Contoso doesn't want to invest in this application. It's important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
@@ -125,25 +125,25 @@ To migrate the VMs to Azure, Contoso needs a virtual network in which Azure VMs 
 
     1. From Azure Migrate, download the OVA image and import it into VMware.
 
-      ![Screenshot that shows the download button for the O V A file.](./media/contoso-migration-rehost-vm/migration-download-ova.png)
+       ![Screenshot that shows the download button for the O V A file.](./media/contoso-migration-rehost-vm/migration-download-ova.png)
 
     1. Start the imported image and configure the tool, including the following steps:
 
-      - Set up the prerequisites.
+       - Set up the prerequisites.
 
-        ![Screenshot that shows the area for setting up prerequisite license terms.](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
+         ![Screenshot that shows the area for setting up prerequisite license terms.](./media/contoso-migration-rehost-vm/migration-setup-prerequisites.png)
 
-      - Point the tool to the Azure subscription.
+       - Point the tool to the Azure subscription.
 
-        ![Screenshot that shows selections for registering with Azure Migrate.](./media/contoso-migration-rehost-vm/migration-register-azure.png)
+         ![Screenshot that shows selections for registering with Azure Migrate.](./media/contoso-migration-rehost-vm/migration-register-azure.png)
 
-      - Set the VMware vCenter credentials.
+       - Set the VMware vCenter credentials.
 
-        ![Screenshot that shows selections for specifying a vCenter server.](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
+         ![Screenshot that shows selections for specifying a vCenter server.](./media/contoso-migration-rehost-vm/migration-vcenter-server.png)
 
-      - Add any Windows-based credentials for discovery.
+       - Add any Windows-based credentials for discovery.
 
-        ![Screenshot of the area for discovering applications and dependencies on virtual machines.](./media/contoso-migration-rehost-vm/migration-credentials.png)
+         ![Screenshot of the area for discovering applications and dependencies on virtual machines.](./media/contoso-migration-rehost-vm/migration-credentials.png)
 
 When you complete the configuration, the tool will take some time to enumerate all the VMs. You'll see them populate the Azure Migrate tool in Azure when this process finishes.
 
@@ -205,7 +205,7 @@ With discovery completed, you can begin replication of VMware VMs to Azure.
 
 6. In **Target settings**, select the subscription and target region to which you'll migrate. Then specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure virtual network or subnet to which the Azure VMs will be joined after migration.
 
-7. In **Azure Hybrid Benefit**, select the following:
+7. In **Azure Hybrid Benefit**:
 
     - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
     - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and you want to apply the benefit to the machines you're migrating. Then select **Next**.
@@ -276,12 +276,12 @@ Now, Contoso needs to complete these cleanup steps:
 - Remove the `WEBVM` machine from the vCenter inventory.
 - Remove the `SQLVM` machine from the vCenter inventory.
 - Remove `WEBVM` and `SQLVM` from local backup jobs.
-- Update internal documentation to show the new location, and IP addresses for the VMs.
+- Update internal documentation to show the new location and IP addresses for the VMs.
 - Review any resources that interact with the VMs, and update any relevant settings or documentation to reflect the new configuration.
 
 ## Review the deployment
 
-With the application now running, Contoso now needs to fully operationalize and secure it in Azure.
+With the application now running, Contoso needs to fully operationalize and secure it in Azure.
 
 ### Security
 
@@ -293,7 +293,7 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
 
-- Keep data safe: Contoso backs up the data on the VMs by using [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview).
+- Keep data safe: Contoso [backs up the data on the VMs by using Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview).
 - Keep applications up and running: Contoso [replicates the application VMs in Azure to a secondary region by using Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
