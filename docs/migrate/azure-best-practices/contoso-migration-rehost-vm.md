@@ -242,14 +242,14 @@ Contoso admins run a quick test migration and then a full migration to migrate t
 
      ![Screenshot that shows the Test migrated servers item.](./media/contoso-migration-rehost-vm/test-migrated-servers.png)
 
-1. Select and hold (or right-click) the VM to test, then select **Test migrate**.
+1. Select and hold (or right-click) the VM to test, and then select **Test migrate**.
 
     ![Screenshot that shows the Test migrate item.](./media/contoso-migration-rehost-vm/test-migrate.png)
 
 1. In **Test Migration**, select the Azure virtual network in which the Azure VM will be located after the migration. We recommend the use of a nonproduction virtual network.
 1. The **Test migration** job starts. Monitor the job in the portal notifications.
 1. After the migration finishes, view the migrated Azure VM in **Virtual Machines** in the Azure portal. The machine name has a suffix **-Test**.
-1. After the test is done, select and hold (or right-click) the Azure VM in **Replicating machines** and then select **Clean up test migration**.
+1. After the test is done, select and hold (or right-click) the Azure VM in **Replicating machines**, and then select **Clean up test migration**.
 
     ![Screenshot that shows the Clean up test migration item.](./media/contoso-migration-rehost-vm/clean-up.png)
 
@@ -261,7 +261,7 @@ Now Contoso admins run a full migration.
 
     ![Screenshot that shows the Replicating servers item.](./media/contoso-migration-rehost-vm/replicating-servers.png)
 
-1. In **Replicating machines**, select and hold (or right-click) the VM > **Migrate**.
+1. In **Replicating machines**, select and hold (or right-click) the VM, and then select **Migrate**.
 1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
     - By default, Azure Migrate shuts down the on-premises VM and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This action ensures no data loss.
     - If you don't want to shut down the VM, select **No**.
@@ -303,8 +303,8 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
 
-- **Keep data safe:** Contoso backs up the data on the VMs by using [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview).
-- **Keep applications up and running:** Contoso [replicates the application VMs in Azure to a secondary region using Site Recovery](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- **Keep data safe.** Contoso backs up the data on the VMs by using [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview).
+- **Keep applications up and running.** Contoso [replicates the application VMs in Azure to a secondary region using Site Recovery](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ### Licensing and cost optimization
 

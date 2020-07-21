@@ -471,7 +471,7 @@ Now Contoso admins run a full migration to complete the move.
 
     ![Screenshot that shows the Replicating servers item.](./media/contoso-migration-rehost-linux-vm/replicating-servers.png)
 
-1. In **Replicating machines**, select and hold (or right-click) the VM > **Migrate**.
+1. In **Replicating machines**, select and hold (or right-click) the VM, and then select **Migrate**.
 1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
     - By default, Azure Migrate shuts down the on-premises VM and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This action ensures no data loss.
     - If you don't want to shut down the VM, select **No**.
@@ -532,9 +532,9 @@ To learn more about security practices for VMs, see [Security best practices for
 
 For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
 
-- **Keep data safe:** Contoso backs up the data on the VMs by using the Azure Backup service. For more information, see [An overview of Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction).
-- **Keep applications up and running:** Contoso replicates the application VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
-- **Learn more:** Contoso learns more about managing SQL Managed Instance, which includes [database backups](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+- **Keep data safe.** Contoso backs up the data on the VMs by using the Azure Backup service. For more information, see [An overview of Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction).
+- **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- **Learn more.** Contoso learns more about managing SQL Managed Instance, which includes [database backups](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ### Licensing and cost optimization
 
