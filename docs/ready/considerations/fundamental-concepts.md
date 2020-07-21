@@ -1,6 +1,6 @@
 ---
 title: Azure fundamental concepts
-description: Use the Cloud Adoption Framework for Azure to learn fundamental concepts and terms used in Azure, and how the concepts relate to one another.
+description: Use the Cloud Adoption Framework for Azure to learn fundamental concepts and terms used in Azure and how the concepts relate to one another.
 author: alexbuckgit
 ms.author: abuck
 ms.date: 05/20/2019
@@ -22,7 +22,7 @@ It's helpful to know the following definitions as you begin your Azure cloud ado
 - **Azure account:** The email address that you provide when you create an Azure subscription is the Azure account for the subscription. The party that's associated with the email account is responsible for the monthly costs that are incurred by the resources in the subscription. When you create an Azure account, you provide contact information and billing details, like a credit card. You can use the same Azure account (email address) for multiple subscriptions. Each subscription is associated with only one Azure account.
 - **Account administrator:** The party associated with the email address that's used to create an Azure subscription. The account administrator is responsible for paying for all costs that are incurred by the subscription's resources.
 - **Azure Active Directory (Azure AD):** The Microsoft cloud-based identity and access management service. Azure AD allows your employees to sign in and access resources.
-- **Azure AD tenant:** A dedicated and trusted instance of Azure AD. An Azure AD tenant is automatically created when your organization first signs up for a Microsoft cloud service subscription like Microsoft Azure, Microsoft Intune, or Office 365. An Azure tenant represents a single organization.
+- **Azure AD tenant:** A dedicated and trusted instance of Azure AD. An Azure AD tenant is automatically created when your organization first signs up for a Microsoft cloud service subscription like Microsoft Azure, Intune, or Office 365. An Azure tenant represents a single organization.
 - **Azure AD directory:** Each Azure AD tenant has a single, dedicated, and trusted directory. The directory includes the tenant's users, groups, and apps. The directory is used to perform identity and access management functions for tenant resources. A directory can be associated with multiple subscriptions, but each subscription is associated with only one directory.
 - **Resource groups:** Logical containers that you use to group related resources in a subscription. Each resource can exist in only one resource group. Resource groups allow for more granular grouping within a subscription, and are commonly used to represent a collection of assets required to support a workload, application, or specific function within a subscription.
 - **Management groups:** Logical containers that you use for one or more subscriptions. You can define a hierarchy of management groups, subscriptions, resource groups, and resources to efficiently manage access, policies, and compliance through inheritance.
@@ -51,9 +51,9 @@ When you create an Azure subscription, you make several key choices about the su
 
 Azure defines three types of roles for administering subscriptions, identities, and resources:
 
-- Classic subscription administrator roles.
-- Azure role-based access control (RBAC) roles.
-- Azure Active Directory (Azure AD) administrator roles.
+- Classic subscription administrator roles
+- Azure role-based access control (RBAC) roles
+- Azure Active Directory (Azure AD) administrator roles
 
 The account administrator role for an Azure subscription is assigned to the email account that's used to create the Azure subscription. The account administrator is the billing owner of the subscription. The account administrator can manage the subscription details in the [Azure account center](https://account.azure.com/subscriptions).
 
@@ -72,7 +72,7 @@ Every Azure resource is logically associated with only one subscription. When yo
 While a subscription isn't tied to a specific Azure region, each Azure resource is deployed to only one region. You can have resources in multiple regions that are associated with the same subscription.
 
 > [!NOTE]
-> Most Azure resources are deployed to a specific region. But certain resource types are considered global resources, such as policies that you set by using the Azure Policy services.
+> Most Azure resources are deployed to a specific region. Certain resource types are considered global resources, such as policies that you set by using the Azure Policy services.
 
 ## Related resources
 

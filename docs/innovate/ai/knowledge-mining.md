@@ -44,5 +44,7 @@ Key scenarios for knowledge mining include:
 
 ## Next steps
 
-Best practices: innovating with AI
-<!-- TODO: Need more information here. -->
+Explore other AI solution categories:
+
+- [AI applications and agents](./ai-applications.md)
+- [Machine learning](./machine-learning.md)

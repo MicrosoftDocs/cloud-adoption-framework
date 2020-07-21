@@ -57,7 +57,7 @@ The following assumptions or constraints were considered when this initial landi
 - **Subscription limits:** This adoption effort is unlikely to exceed [subscription limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits). Two common indicators are an excess of 25,000 VMs or 10,000 vCPUs.
 - **Compliance:** No third-party compliance requirements are needed for this landing zone.
 - **Architectural complexity:** Architectural complexity doesn't require additional production subscriptions.
-- **Shared services:** There are no existing shared services in Azure that require this subscription to be treated like a spoke in a hub and spoke architecture.
+- **Shared services:** No existing shared services in Azure require this subscription to be treated like a spoke in a hub and spoke architecture.
 
 If these assumptions match your current environment, this blueprint might be a good way to start building your landing zone.
 

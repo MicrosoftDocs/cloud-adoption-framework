@@ -34,6 +34,7 @@ The [Manage methodology](../../manage/index.md) provides overall guidance for bu
 <!-- cSpell:ignore caf -->
 
 ![Manage methodology](../../_images/manage/caf-manage.png)
+_Figure 1: The CAF Manage methodology._
 
 1. [Establish a management baseline](../../manage/azure-server-management/index.md): A management baseline establishes the foundation for operations management. The guidance under this first step can be applied to any landing zone to improve initial operations.
 2. [Define business commitments](../../manage/considerations/business-alignment.md): Understanding the criticality and impact of each workload within a landing zone will establish a "definition of done" for any ongoing management improvements for any landing zone. This process will also identify the reliability, performance, and operations requirements of each workload.
@@ -45,6 +46,7 @@ The [Manage methodology](../../manage/index.md) provides overall guidance for bu
 Before beginning any security improvements, it's important to understand the "definition of done" and all "acceptance criteria". For more information, see the articles on [test-driven development of landing zones](./test-driven-development.md) and [test-driven development in Azure](./azure-test-driven-development.md).
 
 ![Test-driven development process for cloud landing zones](../../_images/ready/test-driven-development-process.png)
+_Figure 2: The test-driven development process for cloud landing zones._
 
 ## Next steps
 
