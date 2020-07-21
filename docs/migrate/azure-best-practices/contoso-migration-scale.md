@@ -157,7 +157,7 @@ Contoso needs to use Azure Migrate correctly given the scale of this migration.
 Contoso will use Azure Migrate as follows:
 
 - In vCenter Contoso will organize VMs into folders. This will make it easy for them to focus as they run an assessment against VMs in a specific folder.
-- Azure Migrate uses Azure Service Map to assess dependencies between machines. This requires agents to be installed on VMs to be assessed.
+- Azure Migrate to assess dependencies between machines. This requires agents to be installed on VMs to be assessed.
   - Contoso will use automated scripts to install the required Windows or Linux agents.
   - By scripting, Contoso can push the installation to VMs within a vCenter folder.
 
