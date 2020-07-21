@@ -44,7 +44,7 @@ Take action by defining and tagging assets with a defined data classification.
 
 ## Next steps
 
-After classifying data, secure any sensitive data, especially any data that is classified as confidential or highly confidential.
+Continue learning from this article series by reviewing the article on securing sensitive data. That data is especially applicable for data that is classified as confidential or highly confidential.
 
 > [!div class="nextstepaction"]
 > [Secure sensitive data](https://docs.microsoft.com/azure/architecture/data-guide/scenarios/securing-data-solutions?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
