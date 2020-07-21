@@ -130,7 +130,9 @@ When dealing with global asset and user base complexities, a few key activities 
 **Evaluate cross datacenter dependencies:** The [dependency visualization tools in Azure Migrate](https://docs.microsoft.com/azure/migrate/concepts-dependency-visualization) can help pinpoint dependencies. Using these tools before migration is a best practice. When dealing with global complexity, it becomes a necessary step to the assessment process. Through [dependency grouping](https://docs.microsoft.com/azure/migrate/how-to-create-group-machine-dependencies), the visualization can help identify the IP addresses and ports of any assets required to support the workload.
 
 > [!IMPORTANT]
-> Two important notes: first, a subject matter expert with an understanding of asset placement and IP address schemas is required to identify assets that reside in a secondary datacenter. Second, it is important to evaluate both downstream dependencies and clients in the visual to understand bidirectional dependencies.
+>
+> - A subject matter expert with an understanding of asset placement and IP address schemas is required to identify assets that reside in a secondary datacenter.
+> - Evaluate both downstream dependencies and clients in the visual to understand bidirectional dependencies.
 
 **Identify global user impact:** The outputs from the prerequisite user profile analysis should identify any workload affected by global user profiles. When a migration candidate is in the affected workload list, the architect preparing for migration should consult networking and operations subject matter experts to validate network routing and performance expectations. At a minimum, the architecture should include an ExpressRoute connection between the closest network operations center (NOC) and Azure. The [reference architecture for ExpressRoute](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/expressroute) connections can aid in configuration of the necessary connection.
 
@@ -139,11 +141,11 @@ When dealing with global asset and user base complexities, a few key activities 
 > [!WARNING]
 > When using either of the reference architectures above, it may be necessary to exclude specific data elements from replication processes to adhere to data sovereignty requirements. This will add an additional step to the promotion process.
 
-## Migrate process changes
+## Migration process changes
 
 When migrating an application that must be deployed to multiple regions, a few considerations must be taken into account by the cloud adoption team. These considerations consist of Azure Site Recovery vault design, configuration/process server design, network bandwidth designs, and data synchronization.
 
-### Suggested action during the migrate process
+### Suggested action during the migration process
 
 **Azure Site Recovery vault design:** Azure Site Recovery is the suggested tool for cloud-native replication and synchronization of digital assets to Azure. Site Recovery replicates data about the asset to a Site Recovery vault, which is bound to a specific subscription in a specific region and Azure datacenter. When replicating assets to a second region, a second Site Recovery vault may be required.
 

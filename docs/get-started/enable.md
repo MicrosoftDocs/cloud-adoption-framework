@@ -1,5 +1,5 @@
 ---
-title: Enable customer success with a sound operating model
+title: Enable customer success with a sound operating model and organizational alignment
 description: Use the free, self-service Cloud Adoption Framework and other tools to help you make cloud adoption decisions that enable customer success.
 author: BrianBlanchard
 ms.author: brblanch
@@ -9,9 +9,16 @@ ms.service: cloud-adoption-framework
 ms.subservice: overview
 ---
 
-# Enable customer success with a sound operating model
+# Enable customer success with a sound operating model and organizational alignment
 
-Often times, customer success in cloud adoption efforts has little to do with technical skills or adoption-related projects. Your operating model creates opportunities to enable adoption, or possibly roadblocks which could slow down cloud adoption.
+Customer success in cloud adoption efforts often has little to do with technical skills or adoption-related projects. Your operating model creates opportunities to enable adoption, or possibly roadblocks which could slow down cloud adoption.
+
+## Alignment
+
+Particularly as you drive innovation, alignment between business and technical teams is paramount to the success of your solution.
+
+- For business stakeholders, we've created the [Microsoft AI Business School](https://www.microsoft.com/ai/ai-business-school) to support business strategy development and provide example best practices.
+- For technical stakeholders, the [Microsoft AI learning paths](https://docs.microsoft.com/learn/) are available to help you build new AI skills.
 
 ## Blockers
 

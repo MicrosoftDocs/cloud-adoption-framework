@@ -23,7 +23,7 @@ This approach can be used to meet simple feature requests during early developme
 
 "Set up for success" is a subjective statement. This statement provides the cloud platform team with little actionable information during landing zone development or refactoring efforts. This lack of clarity can lead to missed expectations and vulnerabilities in a cloud environment. Before refactoring or expanding any landing zone, the cloud platform team should seek clarity regarding the "definition of done" for each landing zone.
 
-Definition of done is a simple agreement between the cloud platform team and other affected teams. This agreement outlines the expected value added features, which should be included in any landing zone development effort. Often times the definition of done is a checklist, which aligns with the short-term cloud adoption plan. In mature processes, those expected features in the checklist will each have their own acceptance criteria to create even more clarity. When the value-added features each meet the acceptance criteria, the landing zone is sufficiently configured to enable the success of the current wave or release of adoption effort.
+Definition of done is a simple agreement between the cloud platform team and other affected teams. This agreement outlines the expected value added features, which should be included in any landing zone development effort. The definition of done is often a checklist that's aligned with the short-term cloud adoption plan. In mature processes, those expected features in the checklist will each have their own acceptance criteria to create even more clarity. When the value-added features each meet the acceptance criteria, the landing zone is sufficiently configured to enable the success of the current wave or release of adoption effort.
 
 As teams adopt additional workloads and cloud features, the definition of done and acceptance criteria will become increasingly more complex.
 
@@ -50,7 +50,7 @@ For an initial migration effort, definition of done may be overly simple. The fo
 - Network segmentation to align with proposed network design.
 - Access to compute, storage, and networking resources to host the workloads aligned to the digital estate discovery.
 - Naming and tagging schema for ease of use.
-- This environment should be treated as a _demilitarized zone (DMZ)_ with access to the public internet.
+- This environment should be treated as a perimeter network with access to the public internet.
 - During adoption efforts, the cloud adoption team would like temporary access to the environment to change service configurations.
 - For awareness only: prior to production release, these workloads will require integration with the corporate identity provider to govern ongoing identity and access for operations management purposes. At which time the cloud adoption team's access should be revoked.
 

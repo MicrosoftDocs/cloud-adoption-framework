@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 # Innovation in the digital economy
 
-The digital economy is an undeniable force in almost every industry. During the Industrial Revolution, gasoline, conveyor belts, and human ingenuity were key resources for promoting market innovation. Product quality, price, and logistics drove markets as companies sought to deliver better products to their customers more quickly. Today's digital economy shifts the way in which customers interact with corporations. The primary forms of capital and market differentiators have all shifted as a result. In the digital economy, customers are less concerned with logistics and more concerned with their overall experience of using a product. This shift arises from direct interaction with technology in our daily lives and from a realization of the value associated with those interactions.
+The digital economy is an undeniable force in almost every industry. During the industrial revolution, gasoline, conveyor belts, and human ingenuity were key resources for promoting market innovation. Product quality, price, and logistics drove markets as companies sought to deliver better products to their customers more quickly. Today's digital economy shifts the way in which customers interact with corporations. The primary forms of capital and market differentiators have all shifted as a result. In the digital economy, customers are less concerned with logistics and more concerned with their overall experience of using a product. This shift arises from direct interaction with technology in our daily lives and from a realization of the value associated with those interactions.
 
 In the Innovate methodology of the Cloud Adoption Framework, we'll focus on understanding customer needs and rapidly building innovations that shape how your customers interact with your products. We'll also illustrate an approach to delivering on the value of a minimum viable product (MVP). Finally, we'll map decisions common to innovation cycles to help you understand how the cloud can unlock innovation and create partnerships with your customers.
 
@@ -56,7 +56,7 @@ Transparency is important because measuring customer impact doesn't address the 
 
 ## Commitment to iteration
 
-Only one promise rings true across all innovation cycles&mdash;you won't get it right on the first try. Measurement helps you understand what adjustments you should make to achieve the desired results. Changes that lead to favorable outcomes stem from iterations of the build-measure-learn process. The cloud adoption team and the cloud strategy team must commit to an iterative mindset before adopting a growth mindset or a build-measure-learn approach.
+Only one promise rings true across all innovation cycles: you won't get it right on the first try. Measurement helps you understand what adjustments you should make to achieve the desired results. Changes that lead to favorable outcomes stem from iterations of the build-measure-learn process. The cloud adoption team and the cloud strategy team must commit to an iterative mindset before adopting a growth mindset or a build-measure-learn approach.
 
 ## Next steps
 
