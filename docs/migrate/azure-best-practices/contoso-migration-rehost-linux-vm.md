@@ -14,7 +14,7 @@ services: azure-migrate
 
 # Rehost an on-premises Linux application to Azure VMs
 
-This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_(software_bundle)) application by using Azure infrastructure as a service (IaaS) VMs.
+This article shows how the fictional company Contoso rehosts a two-tier [LAMP-based](https://wikipedia.org/wiki/LAMP_(software_bundle)) application by using Azure infrastructure as a service (IaaS) virtual machines (VMs).
 
 The service desk application used in this example, osTicket, is provided as open source. If you want to use it for your own testing purposes, you can download it from [GitHub](https://github.com/osTicket/osTicket).
 
@@ -59,7 +59,7 @@ After pinning down goals and requirements, Contoso designs and reviews a deploym
 
 ### Solution review
 
-Contoso evaluates the proposed design by putting together a pros and cons list.
+Contoso evaluates the proposed design by putting together a list of pros and cons.
 
 | Consideration | Details |
 | --- | --- |
@@ -148,7 +148,7 @@ Before Contoso admins can run a migration to Azure, they need to set up and enab
 
 With discovery finished, begin replication of VMware VMs to Azure.
 
-1. In the Azure Migrate project > **Servers**, **Azure Migrate: Server Migration**, select **Replicate**.
+1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**, and select **Replicate**.
 
     ![Screenshot that shows the Replicate option.](./media/contoso-migration-rehost-linux-vm/select-replicate.png)
 
@@ -165,26 +165,26 @@ With discovery finished, begin replication of VMware VMs to Azure.
 
     ![Screenshot that shows selecting assessments.](./media/contoso-migration-rehost-linux-vm/select-assessment.png)
 
-5. On the **Virtual machines** tab, search for VMs as needed, and select each VM you want to migrate. Then select **Next: Target settings**.
+5. In **Virtual machines**, search for VMs as needed, and select each VM you want to migrate. Then select **Next: Target settings**.
 
-6. On the **Target settings** tab, select the subscription and target region to which you'll migrate. Specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure virtual network/subnet to which the Azure VMs will be joined after migration.
+6. In **Target settings**, select the subscription and target region to which you'll migrate. Specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure virtual network/subnet to which the Azure VMs will be joined after migration.
 
 7. In **Azure Hybrid Benefit**:
 
     - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
     - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions and you want to apply the benefit to the machines you're migrating. Then select **Next**.
 
-8. On the **Compute** tab, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
+8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
     - **VM size:** If you're using assessment recommendations, the VM size drop-down list will contain the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
     - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group you specify for the migration.
 
-9. On the **Disks** tab, specify whether the VM disks should be replicated to Azure. Select the disk type (standard SSD/HDD or premium-managed disks) in Azure. Then select **Next**.
+9. In **Disks**, specify whether the VM disks should be replicated to Azure. Select the disk type (standard SSD/HDD or premium-managed disks) in Azure. Then select **Next**.
     - You can exclude disks from replication.
     - If you exclude disks, they won't be present on the Azure VM after migration.
 
-10. On the **Review + Start replication** tab, review the settings. Then select **Replicate** to start the initial replication for the servers.
+10. In **Review + Start replication**, review the settings. Then select **Replicate** to start the initial replication for the servers.
 
 > [!NOTE]
 > You can update replication settings any time before replication starts in **Manage** > **Replicating machines**. Settings can't be changed after replication starts.
@@ -214,11 +214,11 @@ Contoso admins run a quick test migration and then a migration to move the VMs.
 
 Now Contoso admins run a full migration to complete the move.
 
-1. In the Azure Migrate project > **Servers** > **Azure Migrate: Server Migration**, select **Replicating servers**.
+1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**, and select **Replicating servers**.
 
     ![Screenshot that shows the Replicating servers option.](./media/contoso-migration-rehost-linux-vm/replicating-servers.png)
 
-1. In **Replicating machines**, select and hold (or right-click) the VM > **Migrate**.
+1. In **Replicating machines**, select and hold (or right-click) the VM and select **Migrate**.
 1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
     - By default, Azure Migrate shuts down the on-premises VM and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This action ensures no data loss.
     - If you don't want to shut down the VM, select **No**.
