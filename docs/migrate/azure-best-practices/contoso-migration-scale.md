@@ -24,7 +24,7 @@ The IT leadership team has worked closely with business partners to understand w
 
 - **Address business growth.** Contoso is growing, causing pressure on on-premises systems and infrastructure.
 - **Increase efficiency.** Contoso needs to remove unnecessary procedures, and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable the success in a global economy. It mustn't get in the way, or become a business blocker.
+- **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable success in a global economy. It mustn't get in the way, or become a business blocker.
 - **Scale.** As the business grows successfully, the Contoso IT team must provide systems that are able to grow at the same pace.
 - **Improve cost models.** Contoso wants to lessen capital requirements in the IT budget. Contoso wants to use cloud abilities to scale and reduce the need for expensive hardware.
 - **Lower licensing costs.** Contoso wants to minimize cloud costs.
@@ -60,10 +60,10 @@ Now that Contoso has established business drivers and migration goals, it can al
 
 Contoso kicks off the planning process by discovering and assessing on-premises applications, data, and infrastructure. Here's what Contoso will do:
 
-- Contoso needs to discover applications, maps dependencies across applications, and decide on migration order and priority.
+- Contoso needs to discover applications, map dependencies across applications, and decide on migration order and priority.
 - As Contoso assesses, it will build out a comprehensive inventory of applications and resources. Along with the new inventory, Contoso will use and update these existing items:
   - The configuration management database (CMDB). It holds technical configurations for Contoso applications.
-  - The service catalog. It documents the operational details of applications, including associated business partners, and service-level agreements (SLAs).
+  - The service catalog. It documents the operational details of applications, including associated business partners and service-level agreements (SLAs).
 
 ### Discover applications
 
@@ -71,7 +71,7 @@ Contoso runs thousands of applications across a range of servers. In addition to
 
 The tools must provide a mechanism that can feed assessment data into the migration process. Assessment tools must provide data that helps build up an intelligent inventory of Contoso's physical and virtual resources. Data should include profile information and performance metrics.
 
-When discovery is complete, Contoso should have a full inventory of assets, and the metadata associated with them. The company will use this inventory to define the migration plan.
+When discovery is complete, Contoso should have a full inventory of assets and the metadata associated with them. The company will use this inventory to define the migration plan.
 
 ### Identify classifications
 
@@ -135,18 +135,16 @@ The Azure Migrate service helps you to discover and assess on-premises VMware VM
    Azure Migrate performs discovery via a VMware VM running the Azure Migrate Collector. The same collector can discover VMs on different vCenter servers, and send data to different projects.
 
 2. **Assess readiness:** Assess whether on-premises machines are suitable for running in Azure. An assessment includes:
-    - **Size recommendations:** Get size recommendations for Azure VMs, based on the performance history of on-premises VMs.
-    - **Estimated monthly costs:** Get estimated costs for running on-premises machines in Azure.
+   - **Size recommendations:** Get size recommendations for Azure VMs, based on the performance history of on-premises VMs.
+   - **Estimated monthly costs:** Get estimated costs for running on-premises machines in Azure.
 
 3. **Identify dependencies:** Visualize dependencies of on-premises machines, to create optimal machine groups for assessment and migration.
 
 ![Diagram of how the Azure Migrate service works.](./media/contoso-migration-scale/azure-migrate.png)
 
-**Migrate at scale:**
-
 Contoso needs to use Azure Migrate correctly, given the scale of this migration:
 
-- Contoso does an app-by-app assessment with Azure Migrate. This asessment ensures that Azure Migrate returns timely data to the Azure portal.
+- Contoso does an app-by-app assessment with Azure Migrate. This assessment ensures that Azure Migrate returns timely data to the Azure portal.
 - Contoso admins learn how to [deploy Azure Migrate at scale](https://docs.microsoft.com/azure/migrate/scale-hyper-v-assessment).
 - Contoso notes the Azure Migrate limits summarized in the following table.
 
@@ -158,7 +156,7 @@ Contoso needs to use Azure Migrate correctly, given the scale of this migration:
 
 Contoso will use Azure Migrate as follows:
 
-- In vCenter, Contoso will organize VMs into folders. This will make it easy for them to focus as they run an assessment against VMs in a specific folder.
+- In vCenter, Contoso will organize VMs into folders. This will make it easy for the admins to focus as they run an assessment against VMs in a specific folder.
 - Azure Migrate uses Azure Service Map to assess dependencies between machines. This requires agents to be installed on VMs to be assessed.
   
   Contoso will use automated scripts to install the required Windows or Linux agents. By scripting, Contoso can push the installation to VMs within a vCenter folder.
@@ -188,7 +186,7 @@ Contoso can consider four broad migration strategies.
 | Rehost | <li> Often called a _lift-and-shift_ migration, this is a no-code option for migrating existing applications to Azure quickly. <li> An application is migrated as is, with the benefits of the cloud, and without the risks or costs associated with code changes. | <li> Contoso can rehost less-strategic applications that require no code changes. |
 | Refactor | <li> Also called *repackaging*, this strategy requires minimal application code or configuration changes to connect the application to Azure PaaS, and take better advantage of cloud capabilities. | <li> Contoso can refactor strategic applications to retain the same basic functionality, but move them to run on an Azure platform such as Azure App Service. <li> This requires minimum code changes. <li> On the other hand, Contoso will have to maintain a VM platform because Microsoft won't manage this. |
 | Rearchitect | <li> This strategy modifies or extends an application code base to optimize the application architecture for cloud capabilities and scale. <li> It modernizes an application into a resilient, highly scalable, independently deployable architecture. <li> Azure services can accelerate the process, scale applications with confidence, and manage applications with ease. |
-| Rebuild | <li> This approach rebuilds an application from scratch by using cloud-native technologies. <li> Azure PaaS provides a complete development and deployment environment in the cloud. It eliminates some expense and complexity of software licenses. It also removes the need for an underlying application infrastructure, middleware, and other resources. | <li> Contoso can rewrite critical applications from the ground up, to take advantage of cloud technologies such as serverless compute or microservices. <li> Contoso will manage the application and services that it develops, and Azure manages everything else. |
+| Rebuild | <li> This approach rebuilds an application from scratch by using cloud-native technologies. <li> Azure PaaS provides a complete development and deployment environment in the cloud. It eliminates some expense and complexity of software licenses. It also removes the need for an underlying application infrastructure, middleware, and other resources. | <li> Contoso can rewrite critical applications to take advantage of cloud technologies such as serverless compute or microservices. <li> Contoso will manage the application and services that it develops, and Azure will manage everything else. |
 
 Data must also be considered, especially with the volume of databases that Contoso has. Contoso's default approach is to use PaaS services such as Azure SQL Database to take full advantage of cloud features. By moving to a PaaS service for databases, Contoso will only have to maintain data. It will leave the underlying platform to Microsoft.
 
@@ -206,9 +204,9 @@ Contoso is primarily using these Azure services and tools for the migration:
 
 Azure Migrate is the primary Azure service for orchestrating migration from within Azure, and from on-premises sites to Azure.
 
-Azure Migrate orchestrates replication from your on-premises locations to Azure. When replication is set up and running, on-premises machines can be failed over to Azure, completing the migration.
+Azure Migrate orchestrates replication from on-premises locations to Azure. When replication is set up and running, on-premises machines can be failed over to Azure, completing the migration.
 
-Contoso already [completed a POC](./contoso-migration-rehost-vm.md) to see how Azure Migrate can help them to migrate to the cloud.
+Contoso already [completed a POC](./contoso-migration-rehost-vm.md) to see how Azure Migrate can help it to migrate to the cloud.
 
 ##### Use Azure Migrate at scale
 
@@ -216,7 +214,7 @@ Contoso plans to perform multiple lift-and-shift migrations. To ensure that this
 
 Contoso needs to gather information about their traffic volumes. In particular:
 
-- It needs to determine the rate of change for VMs it wants to replicate.
+- It needs to determine the rate of change for VMs that it wants to replicate.
 - It needs to take network connectivity from the on-premises site to Azure into account.
 
 In response to capacity and volume requirements, Contoso will need to allocate sufficient bandwidth based on the daily data change rate for the required VMs, to meet its recovery point objective (RPO). Last, it must determine how many servers are needed to run the Azure Migrate components for the deployment.
@@ -270,7 +268,7 @@ Database Migration Service isn't the only Microsoft database migration tool. Get
 
 Contoso will use Database Migration Service when migrating from SQL Server.
 
-When provisioning Database Migration Service, Contoso needs to size it correctly and set it to optimize performance for data migrations. Contoso will select the Business Critical tier with 4 vCores. This option allows the service to take advantage of multiple vCPUs for parallelization and faster data transfer.
+When provisioning Database Migration Service, Contoso needs to size it correctly and set it to optimize performance for data migrations. Contoso will select the Business Critical tier with four vCores. This option allows the service to take advantage of multiple vCPUs for parallelization and faster data transfer.
 
 ![Screenshot that shows Database Migration Service scaling, with the Business Critical option selected.](./media/contoso-migration-scale/dms.png)
 
@@ -285,7 +283,7 @@ In addition to Database Migration Service, Contoso can use other tools and servi
 
 ## Ready for production
 
-After Contoso moves resources to Azure, they need to streamline them to improve performance, and maximize ROI with Cost Management tools. Given that Azure is a pay-for-use service, it's critical for Contoso to understand how systems are performing, and to ensure they're sized properly.
+After Contoso moves resources to Azure, it needs to streamline them to improve performance, and maximize ROI with cost management tools. Because Azure is a pay-for-use service, it's critical for Contoso to understand how systems are performing and to ensure they're sized properly.
 
 ### Azure Cost Management and Billing
 
@@ -293,60 +291,64 @@ To make the most of their cloud investment, Contoso will take advantage of the f
 
 Azure Cost Management and Billing provides simple dashboard reports to help with cost allocation, showbacks, and chargebacks. The tool can help optimize cloud spending by identifying underutilized resources that Contoso can then manage and adjust.
 
-You can learn more in an [overview Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview).
+You can learn more in an [overview of Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview).
 
-![Azure Cost Management](./media/contoso-migration-scale/cost-management.png)
+![Screenshot of an example graph of cost over time in Azure Cost Management.](./media/contoso-migration-scale/cost-management.png)
 
 ### Native tools
 
 Contoso will also use scripts to locate unused resources.
 
-- During large migrations, there are often leftover pieces of data such as virtual hard drives (VHDs), which incur a charge, but provide no value to the company. Scripts are available in the GitHub repo.
-- Contoso will take advantage of work done by Microsoft's IT department, and consider implementing the Azure resource optimization (ARO) toolkit.
-- Contoso can deploy an Azure Automation account with preconfigured runbooks and schedules to its subscription, and start saving money. Azure resource optimization happens automatically on a subscription after a schedule is enabled or created, including optimization on new resources.
-- This provides decentralized automation capabilities to reduce costs. Features include:
-  - Autosnooze Azure VMs based on low CPU utilization.
-  - Schedule Azure VMs to snooze and unsnooze.
-  - Schedule Azure VMs to snooze or unsnooze in ascending and descending order using Azure tags.
-  - Bulk deletion of resource groups on-demand.
-- Get started with the Azure resource optimization (ARO) toolkit via this [GitHub repo](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+During large migrations, there are often leftover pieces of data such as virtual hard drives (VHDs), which incur a charge but provide no value to the company. Scripts are available in [the GitHub repo](https://github.com/azure/azure-quickstart-templates/tree/master/azure-resource-optimization-toolkit).
+
+Contoso will take advantage of work done by Microsoft's IT department and consider implementing the Azure Resource Optimization (ARO) toolkit. The toolkit is also in the GitHub repo.
+
+Contoso can deploy an Azure Automation account with preconfigured runbooks and schedules to its subscription, and start saving money. Resource optimization happens automatically on a subscription after a schedule is enabled or created, including optimization on new resources. This provides decentralized automation capabilities to reduce costs. Features include:
+
+- Autosnooze Azure VMs based on low CPU utilization.
+- Schedule Azure VMs to snooze and unsnooze.
+- Schedule Azure VMs to snooze or unsnooze in ascending and descending order by using Azure tags.
+- Bulk delete resource groups on demand.
 
 ### Partner optimization tools
 
-Partner tools such as [Hanu](https://hanu.com/insight) and [Scalr](https://www.scalr.com/cost-optimization) can be used.
+Contoso can use partner tools such as [Hanu](https://hanu.com/insight) and [Scalr](https://www.scalr.com/cost-optimization).
 
 ## Phase 4: Secure and manage
 
-In this phase, Contoso uses Azure security and management resources to govern, secure, and monitor cloud applications in Azure. These resources help you run a secure and well-managed environment while using products available in the Azure portal. Contoso begins using these services during migration and, with Azure hybrid support, continues using many of them for a consistent experience across the hybrid cloud.
+In this phase, Contoso uses Azure security and management resources to govern, secure, and monitor cloud applications in Azure. These resources help an organization run a secure and well-managed environment while using products available in the Azure portal. 
+
+Contoso begins using these services during migration. With Azure hybrid support, Contoso continues using many of them for a consistent experience across the hybrid cloud.
 
 ### Security
 
-Contoso will rely on the Azure Security Center for unified security management and Azure Advanced Threat Protection across hybrid cloud workloads.
+Contoso will rely on Azure Security Center for unified security management and Azure Advanced Threat Protection across hybrid cloud workloads.
 
-- The Security Center provides full visibility into, and control over, the security of cloud applications in Azure.
-- Contoso can quickly detect and take action in response to threats, and reduce security exposure by enabling adaptive threat protection.
+Security Center provides full visibility into, and control over, the security of cloud applications in Azure. Contoso can quickly detect and take action in response to threats, and reduce security exposure by enabling adaptive threat protection.
 
-[Learn more](https://azure.microsoft.com/services/security-center) about the Security Center.
+[Learn more](https://azure.microsoft.com/services/security-center) about Security Center.
 
 ### Monitoring
 
-Contoso needs visibility into the health and performance of the newly migrated applications, infrastructure, and data now running Azure. Contoso will use built-in Azure cloud monitoring tools such as Azure Monitor, Log Analytics workspace, and Application Insights.
+Contoso needs visibility into the health and performance of the newly migrated applications, infrastructure, and data now running in Azure. Contoso will use built-in Azure cloud monitoring tools such as Azure Monitor, a Log Analytics workspace, and Application Insights.
 
-- Using these tools, Contoso can easily collect data from sources and gain rich insights. For example, Contoso can gauge CPU disk and memory utilization for VMs, view applications and network dependencies across multiple VMs, and track application performance.
-- Contoso will use these cloud monitoring tools to take action and integrate with service solutions.
-- Learn more about [Azure monitoring](https://docs.microsoft.com/azure/azure-monitor/overview).
+By using these tools, Contoso can easily collect data from sources and gain insights. For example, Contoso can gauge CPU disk and memory utilization for VMs, view applications and network dependencies across multiple VMs, and track application performance. Contoso will use these cloud monitoring tools to take action and integrate with service solutions.
+ 
+Learn more about [Azure monitoring](https://docs.microsoft.com/azure/azure-monitor/overview).
 
 ### Business continuity and disaster recovery
 
-Contoso will need a business continuity and disaster recovery (BCDR) strategy for their Azure resources.
+Contoso will need a business continuity and disaster recovery (BCDR) strategy for its Azure resources.
 
-Azure provides [built-in BCDR features](https://docs.microsoft.com/azure/architecture/resiliency/disaster-recovery-azure-applications) to protect data and keep applications and services running.
+Azure provides [built-in BCDR features](https://docs.microsoft.com/azure/architecture/resiliency/disaster-recovery-azure-applications) to help protect data and keep applications and services running.
 
 In addition to built-in features, Contoso wants to ensure that it can recover from failures, avoid costly business disruptions, meet compliance goals, and protect data against ransomware and human errors. To do this:
 
-- Contoso will deploy Azure Backup as a cost-efficient solution for backup of Azure resources. Because it's built-in, Contoso can set up cloud backups in a few simple steps.
-- Contoso will set up disaster recovery for Azure VMs using Azure Site Recovery for replication, failover, and failback between Azure regions that it specifies. This ensures that applications running on Azure VMs remain available in a secondary region of Contoso's choosing if an outage occurs in the primary region. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- Contoso will deploy Azure Backup as a cost-efficient solution for backup of Azure resources. Because it's built in, Contoso can set up cloud backups in a few simple steps.
+- Contoso will set up disaster recovery for Azure VMs by using Azure Site Recovery for replication, failover, and failback between Azure regions that it specifies. This ensures that applications running on Azure VMs remain available in a secondary region of Contoso's choosing if an outage occurs in the primary region. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 
 ## Conclusion
 
-In this article, Contoso planned for an Azure migration at scale. They divided the migration process into four stages. From assessment and migration, through to optimization, security, and management after migration was complete. Mostly, it's important to plan a migration project as a whole process, but to migrate systems within an organization by breaking down sets into classifications and numbers that make sense for the business. By assessing data and applying classifications, and project can be broken down into a series of smaller migrations, which can run safely and rapidly. The sum of these smaller migrations quickly turns into a large successful migration to Azure.
+In this article, Contoso planned for an Azure migration at scale. It divided the migration process into four stages. The stages ran from assessment and migration, through to optimization, security, and management after migration was complete. 
+
+Mostly, it's important to plan a migration project as a whole process, but to migrate systems within an organization by breaking down sets into classifications and numbers that make sense for the business. By assessing data and applying classifications, projects can be broken down into a series of smaller migrations, which can run safely and rapidly. The sum of these smaller migrations quickly turns into a large successful migration to Azure.
