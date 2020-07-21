@@ -140,23 +140,23 @@ Contoso admins set up the cluster as follows:
 
     ![Screenshot that shows a SQL VM SKU.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-sku.png)
 
-1. In **Create Virtual Machine Wizard** > **Basics**, they configure:
+1. In **Create Virtual Machine Wizard** > **Basics**, configure:
 
     - Names for the VMs: `SQLAOG1` and `SQLAOG2`.
-    - Because machines are business critical, they enable SSD for the VM disk type.
-    - They specify machine credentials.
-    - They deploy the VMs in the primary region (`East US 2`) in the `ContosoRG` resource group.
+    - Because machines are business critical, enable SSD for the VM disk type.
+    - Specify machine credentials.
+    - Deploy the VMs in the primary region (`East US 2`) in the `ContosoRG` resource group.
 
-1. In **Size**, they start with `D2S v3` instances for both VMs. They'll scale later as needed.
-1. In **Settings**, they do the following actions:
+1. In **Size**, start with `D2S v3` instances for both VMs. They'll scale later as needed.
+1. In **Settings**, do the following actions:
 
-    - Because these VMs are critical databases for the application, they use managed disks.
-    - They place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
-    - They create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains.
+    - Because these VMs are critical databases for the application, use managed disks.
+    - Place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
+    - Create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains.
 
       ![Screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
 
-1. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private) on default port 1433. For authentication, they use the same credentials as they use on-site (`contosoadmin`).
+1. In **SQL Server settings**, limit SQL connectivity to the virtual network (private) on default port 1433. For authentication, use the same credentials as you use on-site (`contosoadmin`).
 
     ![Screenshot that shows SQL Server settings.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-db.png)
 
@@ -181,14 +181,14 @@ To set up a cloud witness, Contoso needs an Azure Storage account that will hold
 
 Contoso admins create a storage account, as follows:
 
-1. They specify a recognizable name for the account (`contosocloudwitness`).
-1. They deploy a general all-purpose account, with LRS.
-1. They place the account in a third region (`South Central US`). They place it outside the primary and secondary region so that it remains available during regional failure.
-1. They place it in the resource group that holds infrastructure resources, `ContosoInfraRG`.
+1. Specify a recognizable name for the account (`contosocloudwitness`).
+1. Deploy a general all-purpose account, with LRS.
+1. Place the account in a third region (`South Central US`). Place it outside the primary and secondary region so that it remains available during regional failure.
+1. Place it in the resource group that holds infrastructure resources, `ContosoInfraRG`.
 
     ![Screenshot that shows the cloud witness account name.](./media/contoso-migration-rehost-vm-sql-ag/witness-storage.png)
 
-1. When the storage account is created, primary and secondary access keys are generated for it. They need the primary access key to create the cloud witness. The key appears under the storage account name > **Access keys**.
+1. When the storage account is created, primary and secondary access keys are generated for it. Primary access key are needed to create the cloud witness. The key appears under the storage account name > **Access keys**.
 
     ![Screenshot that shows the access key.](./media/contoso-migration-rehost-vm-sql-ag/access-key.png)
 
@@ -197,7 +197,7 @@ Contoso admins create a storage account, as follows:
 ### Add SQL Server VMs to Contoso domain
 
 1. Contoso adds `SQLAOG1` and `SQLAOG2` to the `contoso.com` domain.
-1. On each VM, they install the Windows Failover Cluster feature and tools.
+1. On each VM, install the Windows Failover Cluster feature and tools.
 
 ### Set up the cluster
 
@@ -205,11 +205,11 @@ Before setting up the cluster, Contoso admins take a snapshot of the OS disk on 
 
 ![Screenshot that shows the Create snapshot pane.](./media/contoso-migration-rehost-vm-sql-ag/snapshot.png)
 
-1. They run a script to create the Windows failover cluster.
+1. Run a script to create the Windows failover cluster.
 
     ![Screenshot that shows a script to create the Windows failover cluster.](./media/contoso-migration-rehost-vm-sql-ag/create-cluster1.png)
 
-1. After the cluster is created, they verify that the VMs appear as cluster nodes.
+1. After the cluster is created, verify that the VMs appear as cluster nodes.
 
      ![Screenshot that shows the clusters are created.](./media/contoso-migration-rehost-vm-sql-ag/create-cluster2.png)
 
@@ -218,7 +218,7 @@ Before setting up the cluster, Contoso admins take a snapshot of the OS disk on 
 ### Configure the cloud witness
 
 1. Contoso admins configure the cloud witness by using the **Quorum Configuration Wizard** in Failover Cluster Manager.
-1. In the wizard, they select to create a cloud witness with the storage account.
+1. In the wizard, select to create a cloud witness with the storage account.
 1. After the cloud witness is configured, it appears in the Failover Cluster Manager snap-in.
 
     ![Screenshot that shows the Cloud witness is configured.](./media/contoso-migration-rehost-vm-sql-ag/cloud-witness.png)
@@ -227,11 +227,11 @@ Before setting up the cluster, Contoso admins take a snapshot of the OS disk on 
 
 Contoso admins can now enable Always On availability groups:
 
-1. In SQL Server Configuration Manager, they enable **Always On availability groups** for the **SQL Server (MSSQLSERVER)** service.
+1. In SQL Server Configuration Manager, enable **Always On availability groups** for the **SQL Server (MSSQLSERVER)** service.
 
     ![Screenshot that shows the Enable Always On Availability Groups check box.](./media/contoso-migration-rehost-vm-sql-ag/enable-always-on.png)
 
-1. They restart the service for changes to take effect.
+1. Restart the service for changes to take effect.
 
 With Always On availability groups enabled, Contoso can set up the Always On availability group that will protect the SmartHotel360 database.
 
@@ -246,16 +246,16 @@ Contoso admins now want to deploy an internal load balancer that sits in front o
 
 ![Diagram that shows load balancing.](./media/contoso-migration-rehost-vm-sql-ag/architecture-lb.png)
 
-They create the load balancer as follows:
+Create the load balancer as follows:
 
-1. In the Azure portal > **Networking** > **Load balancer**, they set up a new internal load balancer: `ILB-PROD-DB-EUS2-SQLAOG`.
-1. They place the load balancer in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`).
-1. They assign it a static IP address (`10.245.40.100`).
-1. As a networking element, they deploy the load balancer in the networking resource group `ContosoNetworkingRG`.
+1. In the Azure portal, go to **Networking** > **Load balancer**, and set up a new internal load balancer: `ILB-PROD-DB-EUS2-SQLAOG`.
+1. Place the load balancer in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`).
+1. Assign it a static IP address (`10.245.40.100`).
+1. As a networking element, deploy the load balancer in the networking resource group `ContosoNetworkingRG`.
 
     ![Screenshot that shows the Create load balancer pane.](./media/contoso-migration-rehost-vm-sql-ag/lb-create.png)
 
-After the internal load balancer is deployed, they need to set it up. They create a back-end address pool, set up a health probe, and configure a load-balancing rule.
+After the internal load balancer is deployed, you need to set it up. Create a back-end address pool, set up a health probe, and configure a load-balancing rule.
 
 ### Add a back-end pool
 
@@ -272,9 +272,9 @@ Contoso admins create a health probe so that the load balancer can monitor the a
 
 Create the probe as follows:
 
-1. In the load balancer settings in the portal, they create a health probe: **SQLAlwaysOnEndPointProbe**.
-1. They set the probe to monitor VMs on TCP port 59999.
-1. They set an interval of 5 seconds between probes, and a threshold of 2. If two probes fail, the VM will be considered unhealthy.
+1. In the load balancer settings in the portal, create a health probe: **SQLAlwaysOnEndPointProbe**.
+1. Set the probe to monitor VMs on TCP port 59999.
+1. Set an interval of 5 seconds between probes, and a threshold of 2. If two probes fail, the VM will be considered unhealthy.
 
     ![Screenshot that shows the Add health probe screen.](./media/contoso-migration-rehost-vm-sql-ag/nlb-probe.png)
 
@@ -287,10 +287,10 @@ Now, Contoso admins set up a load balancer rule to define how traffic is distrib
 
 Create the rule as follows:
 
-1. In the load balancer settings in the portal, they add a new rule: `SQLAlwaysOnEndPointListener`.
-1. They set a front-end listener to receive incoming SQL client traffic on TCP port 1433.
-1. They specify the back-end pool to which traffic will be routed and the port on which VMs listen for traffic.
-1. They enable floating IP (direct server return), which is always required for SQL Server Always On.
+1. In the load balancer settings in the portal, add a new rule: `SQLAlwaysOnEndPointListener`.
+1. Set a front-end listener to receive incoming SQL client traffic on TCP port 1433.
+1. Specify the back-end pool to which traffic will be routed and the port on which VMs listen for traffic.
+1. Enable floating IP (direct server return), which is always required for SQL Server Always On.
 
     ![Screenshot that shows health probe settings.](./media/contoso-migration-rehost-vm-sql-ag/nlb-probe.png)
 
@@ -315,7 +315,7 @@ Contoso admins set up these components as follows:
 
 1. Contoso admins create an Azure Storage account (`contosovmsacc20180528`) in the primary region.
 
-    - They use a general-purpose account with standard storage and LRS replication.
+    - Use a general-purpose account with standard storage and LRS replication.
 
 ## Step 5: Prepare on-premises VMware for Azure Migrate
 
@@ -334,8 +334,8 @@ Azure Migrate needs access to VMware servers to:
 
 Contoso admins set up the account as follows:
 
-1. They create a role at the vCenter level.
-1. They assign that role the required permissions.
+1. Create a role at the vCenter level.
+1. Assign that role the required permissions.
 
 ### Prepare to connect to Azure VMs after migration
 
@@ -360,8 +360,8 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 1. Miscellaneous
 
-   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, they won't be able to sign in to the VM until the update completes.
-   - After migration, they can check **Boot diagnostics** to view a screenshot of the VM. If it doesn't work, they should verify that the VM is running and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, you won't be able to sign in to the VM until the update completes.
+   - After migration, you can check **Boot diagnostics** to view a screenshot of the VM. If it doesn't work, you should verify that the VM is running and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 
@@ -371,45 +371,45 @@ Learn about how to [prepare VMs for migration](https://docs.microsoft.com/azure/
 
 Before Contoso admins can run a migration to Azure, they need to set up and enable replication.
 
-With discovery finished, they begin replication of VMware VMs to Azure.
+With discovery finished, they can begin replication of VMware VMs to Azure.
 
-1. In the Azure Migrate project > **Servers**, **Azure Migrate: Server Migration**, they select **Replicate**.
+1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**, and select **Replicate**.
 
     ![Screenshot that shows the Replicate option.](./media/contoso-migration-rehost-vm/select-replicate.png)
 
-1. In **Replicate** > **Source settings** > **Are your machines virtualized?**, they select **Yes, with VMware vSphere**.
+1. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
 
-1. In **On-premises appliance**, they select the name of the Azure Migrate appliance that was set up, and then select **OK**.
+1. In **On-premises appliance**, select the name of the Azure Migrate appliance that was set up, and then select **OK**.
 
     ![Screenshot that shows the Source settings tab.](./media/contoso-migration-rehost-vm/source-settings.png)
 
-1. On the **Virtual machines** tab, they select the machines they want to replicate.
-    - If they 've run an assessment for the VMs, they can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. In **Import migration settings from an Azure Migrate assessment?**, they select the **Yes** option.
-    - If they  didn't run an assessment, or they don't want to use the assessment settings, they select the **No** option.
-    - If they selected to use the assessment, they select the VM group and assessment name.
+1. In **Virtual machines**, select the machines you want to replicate.
+    - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. In **Import migration settings from an Azure Migrate assessment?**, select the **Yes** option.
+    - If you didn't run an assessment, or you don't want to use the assessment settings, select the **No** option.
+    - If you selected to use the assessment, select the VM group and assessment name.
 
     ![Screenshot that shows selecting assessments.](./media/contoso-migration-rehost-vm/select-assessment.png)
 
-1. On the **Virtual machines** tab, they search for VMs as needed, and check each VM they want to migrate. Then select **Next: Target settings**.
+1. In **Virtual machines**, search for VMs as needed, and check each VM you want to migrate. Then select **Next: Target settings**.
 
-1. On the **Target settings** tab, they select the subscription, and target region to which they'll migrate, and specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, they select the Azure VNet/subnet to which the Azure VMs will be joined after migration.
+1. In **Target settings**, select the subscription, and target region to which you'll migrate, and specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure virtual network/subnet to which the Azure VMs will be joined after migration.
 
 1. In **Azure Hybrid Benefit**:
 
-    - They select **No** if they don't want to apply Azure Hybrid Benefit. Then they select **Next**.
-    - They select **Yes** if they have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and they want to apply the benefit to the machines they're migrating. Then they select **Next**.
+    - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
+    - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions, and you want to apply the benefit to the machines you're migrating. Then select **Next**.
 
-1. On the **Compute** tab, they review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
+1. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
-    - **VM size:** If they're using assessment recommendations, the VM size drop-down list will contain the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, they can pick a manual size in **Azure VM size.**
-    - **OS disk:** They specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
-    - **Availability set:** If the VM should be in an Azure availability set after migration, they specify the set. The set must be in the target resource group specified for the migration.
+    - **VM size:** If you're using assessment recommendations, the VM size drop-down list contains the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, you can pick a manual size in **Azure VM size.**
+    - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
+    - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group specified for the migration.
 
-1. On the **Disks** tab, they specify whether the VM disks should be replicated to Azure. Then they select the disk type (standard SSD/HDD or premium managed disks) in Azure and select **Next**.
-    - They can exclude disks from replication.
+1. In **Disks**, specify whether the VM disks should be replicated to Azure. Then select the disk type (standard SSD/HDD or premium managed disks) in Azure and select **Next**.
+    - You can exclude disks from replication.
     - If disks are excluded, they won't be present on the Azure VM after migration.
 
-1. On the **Review + Start replication** tab, they review the settings. Then they select **Replicate** to start the initial replication for the servers.
+1. In **Review + Start replication**, review the settings. Then select **Replicate** to start the initial replication for the servers.
 
 > [!NOTE]
 > Replication settings can be updated any time before replication starts in **Manage** > **Replicating machines**. Settings can't be changed after replication starts.
@@ -438,20 +438,20 @@ With the application database running on `SQLAOG1`, Contoso admins can now prote
 
 ### Create an Always On availability group
 
-1. In SQL Server Management Studio, they select and hold (or right-click) **Always On High Availability** to start the **New Availability Group Wizard**.
-1. In **Specify Options**, they name the availability group `SHAOG`. In **Select Databases**, they select the `SmartHotel360` database.
+1. In SQL Server Management Studio, select and hold (or right-click) **Always On High Availability** to start the **New Availability Group Wizard**.
+1. In **Specify Options**, name the availability group `SHAOG`. In **Select Databases**, select the `SmartHotel360` database.
 
     ![Screenshot that shows the Select Databases pane.](./media/contoso-migration-rehost-vm-sql-ag/aog-1.png)
 
-1. In **Specify Replicas**, they add the two SQL nodes as availability replicas, and configure them to provide automatic failover with synchronous commit.
+1. In **Specify Replicas**, add the two SQL nodes as availability replicas, and configure them to provide automatic failover with synchronous commit.
 
      ![Screenshot that shows the Replicas tab.](./media/contoso-migration-rehost-vm-sql-ag/aog-2.png)
 
-1. They configure a listener for the group (`SHAOG`) and port. The IP address of the internal load balancer is added as a static IP address (`10.245.40.100`).
+1. Configure a listener for the group (`SHAOG`) and port. The IP address of the internal load balancer is added as a static IP address (`10.245.40.100`).
 
     ![Screenshot that shows the Create an availability group listener option.](./media/contoso-migration-rehost-vm-sql-ag/aog-3.png)
 
-1. In **Select Data Synchronization**, they enable automatic seeding. With this option, SQL Server automatically creates secondary replicas for every database in the group, so Contoso doesn't have to manually back up and restore them. After validation, the availability group is created.
+1. In **Select Data Synchronization**, enable automatic seeding. With this option, SQL Server automatically creates secondary replicas for every database in the group, so Contoso doesn't have to manually back up and restore them. After validation, the availability group is created.
 
     ![Screenshot that shows the Always On availability group was created.](./media/contoso-migration-rehost-vm-sql-ag/aog-4.png)
 
@@ -487,8 +487,8 @@ Contoso admins run a quick test failover and then migrate the VM.
 
 Running a test migration helps ensure that everything's working as expected before the migration.
 
-1. They run a test failover to the latest available point in time (`Latest processed`).
-1. They select **Shut down machine before beginning failover** so that Azure Migrate attempts to shut down the source VM before triggering the failover. Failover continues even if shutdown fails.
+1. Run a test failover to the latest available point in time (`Latest processed`).
+1. Select **Shut down machine before beginning failover** so that Azure Migrate attempts to shut down the source VM before triggering the failover. Failover continues even if shutdown fails.
 1. Test failover runs:
 
     - A prerequisites check runs to make sure all of the conditions required for migration are in place.
@@ -496,23 +496,23 @@ Running a test migration helps ensure that everything's working as expected befo
     - An Azure VM is created by using the data processed in the previous step.
 
 1. After the failover finishes, the replica Azure VM appears in the Azure portal. Check that the VM is the appropriate size, that it's connected to the right network, and that it's running.
-1. After verifying, they clean up the failover, and record and save any observations.
+1. After verifying, clean up the failover, and record and save any observations.
 
 ### Run a failover
 
-1. After verifying that the test failover worked as expected, they create a recovery plan for migration, and add `WEBVM` to the plan.
+1. After verifying that the test failover worked as expected, create a recovery plan for migration, and add `WEBVM` to the plan.
 
      ![Screenshot that shows the Create recovery plan](./media/contoso-migration-rehost-vm-sql-ag/recovery-plan.png)
 
-1. They run a failover on the plan. They select the latest recovery point. They specify that Azure Migrate should try to shut down the on-premises VM before triggering the failover.
+1. Run a failover on the plan. Select the latest recovery point. Specify that Azure Migrate should try to shut down the on-premises VM before triggering the failover.
 
     ![Screenshot that shows the Failover pane.](./media/contoso-migration-rehost-vm-sql-ag/failover1.png)
 
-1. After the failover, they verify that the Azure VM appears as expected in the Azure portal.
+1. After the failover, verify that the Azure VM appears as expected in the Azure portal.
 
     ![Screenshot that shows an overview pane for the virtual machine.](./media/contoso-migration-rehost-vm-sql-ag/failover2.png)
 
-1. After verifying the VM in Azure, they complete the migration to finish the migration process, stop replication for the VM, and stop Azure Migrate billing for the VM.
+1. After verifying the VM in Azure, complete the migration to finish the migration process, stop replication for the VM, and stop Azure Migrate billing for the VM.
 
     ![Screenshot that shows the Complete Migration item.](./media/contoso-migration-rehost-vm-sql-ag/failover3.png)
 
@@ -520,11 +520,11 @@ Running a test migration helps ensure that everything's working as expected befo
 
 As the final step in the migration process, Contoso admins update the connection string of the application to point to the migrated database running on the `SHAOG` listener. This configuration will be changed on the `WEBVM` now running in Azure. This configuration is located in the `web.config` of the ASP.NET application.
 
-1. Contoso admins locate the file at `C:\inetpub\SmartHotelWeb\web.config`. They change the name of the server to reflect the FQDN of the Always On availability group: `shaog.contoso.com`.
+1. Contoso admins locate the file at `C:\inetpub\SmartHotelWeb\web.config` and change the name of the server to reflect the FQDN of the Always On availability group: `shaog.contoso.com`.
 
     ![Screenshot that shows the FQDN of the Always On availability group.](./media/contoso-migration-rehost-vm-sql-ag/failover4.png)
 
-1. After updating the file and saving it, they restart IIS on `WEBVM`. They use `iisreset /restart` from a command prompt.
+1. After updating the file and saving it, restart IIS on `WEBVM`. Use `iisreset /restart` from a command prompt.
 1. After IIS is restarted, the application now uses the database running on the managed instance.
 
 **Need more help?**
