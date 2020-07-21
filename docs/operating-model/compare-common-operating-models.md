@@ -24,11 +24,7 @@ The following image maps common operating models based on the range of complexit
 
 Cloud operating model is primarily driven by two factors: Strategic priorities (or motivations) and the scope of the portfolio to be managed.
 
-Strategic priorities or motivations: Each operating model is capable of delivering the typical [strategic motivations for cloud adoption](../strategy/motivations.md). However, some operating models tend to make it a little easier to realize some specific motivations.
-
-[Portfolio Scope](../reference/fundamental-concepts/hosting-hierarchy.md): The portfolio scope row below identifies the largest scope that a specific operating model is designed to support. Example: Centralized operations is designed for a small number of landing zones. But that operating model decision could inject operational risks for an organization which is attempting to manage a large, complex portfolio which could require a large number of landing zones or variable complexity in landing sone design.
-
-||Decentralized  |Centralized  |Enterprise          |Complex|
+||Decentralized operations (ops) |Centralized operations (ops) |Enterprise operations (ops) |Complex  operations (ops) |
 |---------              |---------      |---------    |---------          |---------|
 |Strategic priority|Innovation|Control|Democratization|Integration|
 |Portfolio scope|Workload|Landing zone |Cloud Platform|Full Portfolio|
@@ -37,11 +33,18 @@ Strategic priorities or motivations: Each operating model is capable of deliveri
 |Foundation utilities|N/A|N/A or Low support|Centralized & more support|Most support|
 |Cloud foundation|N/A|N/A|Hybrid, provider specific, or regional foundations|Distributed and synchronized|
 
+**Strategic priorities or [motivations](../strategy/motivations.md):** Each operating model is capable of delivering the typical [strategic motivations for cloud adoption](../strategy/motivations.md). However, some operating models tend to make it a little easier to realize some specific motivations.
+
+**[Portfolio Scope](../reference/fundamental-concepts/hosting-hierarchy.md):** The portfolio scope row below identifies the largest scope that a specific operating model is designed to support. Example: Centralized operations is designed for a small number of landing zones. But that operating model decision could inject operational risks for an organization which is attempting to manage a large, complex portfolio which could require a large number of landing zones or variable complexity in landing sone design.
+
+> [!IMPORTANT]
+> Adopting the cloud often triggers a reflection on the current operating model & may lead to a shift from one of the common operating models to another. But cloud adoption isn't the only trigger. As business priorities and the scope of cloud adoption change how the portfolio needs to be supported, there could be other shifts in the most-appropriately aligned operating model. When the board or other executive teams develop 5 to 10 year business plans, those plans often include a requirement (explicit or implied) to adjust the operating model. While these common models are a good reference for guiding decisions, keep in mind that your operating model may change or you may need to customize one of these models to meet your requirements and constraints.
+
 ### Accountability alignment
 
 Many teams and individuals will be responsible for supporting different functions. But each of the common operating models focuses final accountability for decisions and their outcomes on one team or one individual. This impacts how the operating model is funded & what level of support is provided for each function.
 
-||Decentralized  |Centralized  |Enterprise          |Complex|
+||Decentralized ops |Centralized ops  |Enterprise ops          |Complex ops|
 |---------              |---------      |---------    |---------          |---------|
 |Business alignment|[Workload team](../organize/cloud-adoption.md)|[Central Cloud strategy](../organize/cloud-strategy.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Variable - [Form a broad cloud strategy team?](../get-started/team/cloud-strategy.md)|
 |[Cloud operations](../organize/cloud-operations.md)|[Workload team](../organize/cloud-adoption.md)|[Central IT](../organize/central-it.md)|[CCoE](../organize/cloud-center-of-excellence.md)|Based on portfolio analysis - See [Business Alignment](../manage/considerations/business-alignment.md) and [Business commitments](../manage/considerations/commitment.md)|
@@ -55,13 +58,13 @@ As described in the prior article in this series, [Defining your operating model
 
 But there are ways to accelerate your operating model implementation, as outlined in the table below.
 
-||Decentralized  |Centralized  |Enterprise          |Complex|
+||Decentralized ops  |Centralized ops  |Enterprise ops          |Complex ops|
 |---------              |---------      |---------    |---------          |---------|
 |Starting point|[Well-Architected Framework (WAF)](/azure/architecture/framework/)|Azure landing zones: [Start Small options](../ready/landing-zone/implementation-options.md)|Azure landing zones: [CAF enterprise-scale](../ready/enterprise-scale/implementation.md)|[Business Alignment](../manage/considerations/business-alignment.md)|
-|Iterations|A focus on workloads will allow the team to iterate within WAF|The start small option will require additional iteration on each methodology, but that can be done as cloud adoption efforts mature.|As illustrated by the reference implementations, future iterations will typical focus on minor configuration additions|After a portfolio review consider following the paths for centralized operations or enterprise operations, based on the most common needs across the portfolio.|
+|Iterations|A focus on workloads will allow the team to iterate within WAF|The start small option will require additional iteration on each methodology, but that can be done as cloud adoption efforts mature.|As illustrated by the reference implementations, future iterations will typical focus on minor configuration additions|Review the [Azure landing zone implementation options](../ready/landing-zone/implementation-options.md) to start with the option that best meets your operations baseline. Follow the iteration path defined in that options design principles.|
 
 > [!WARNING]
-> Below is a potential TODO. First, we will solicit feedback on the operating model comparison tables above to see if that is sufficient
+> Below is a potential TODO. First, we will solicit feedback on the operating model comparison tables above to see if that is sufficient. If the tables leave too many questions unanswered, we'll populate a template similar to what is roughed out below.
 
 ## Decentralized operations
 
@@ -119,9 +122,9 @@ TODO Summary, Pros, Cons, Guidance
 
 **Guidance:** 
 
-## Distributed operations
+## Complex operations
 
-![Distributed operations](../_images/operating-model/distributed-operations.png)
+![Complex operations](../_images/operating-model/complex-operations.png)
 
 TODO Summary, Pros, Cons, Guidance
 
