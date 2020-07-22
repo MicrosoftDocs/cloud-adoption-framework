@@ -32,7 +32,7 @@ Beyond the common blockers, a few key opportunities can be scaled across the por
 
 The following guides will help you get started with operating model alignment and improve over time.
 
-|                                                                                     |                                                                                                                                |
+| Guide                                                                                    | Description                                                                                                                               |
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | [How do we deliver operational excellence during cloud transformation?](./operational-excellence.md)                   | The steps in this guide will help the strategy team lead organizational change management to consistently ensure operational excellence. |
 | [How do we manage enterprise costs?](./manage-costs.md)                                          | Start optimizing enterprise costs and manage cost across the environment.                                                                           |
