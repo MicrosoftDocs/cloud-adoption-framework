@@ -21,7 +21,7 @@ Azure is comprised of many regions around the world. Each [Azure region](https:/
     - [Azure China](https://azure.microsoft.com/global-infrastructure/china)
     - [Azure Germany](https://azure.microsoft.com/global-infrastructure/germany): Note, however, that Azure Germany is being deprecated in favor of standard nonsovereign Azure regions in Germany.
     - [Azure US government](https://azure.microsoft.com/global-infrastructure/government)
-    - Two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia) are managed by Microsoft, but are provided for the Australian government and its customers and contractors. Therfore, these regions carry client constraints similar to the other sovereign clouds.
+    - Two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia) are managed by Microsoft, but are provided for the Australian government and its customers and contractors. Therefore, these regions carry client constraints similar to the other sovereign clouds.
 
 ## Operate in multiple geographic regions
 
@@ -99,7 +99,7 @@ In each of the following processes, guidance for addressing this complexity is i
 
 The location of existing datacenters can affect a migration strategy. For example:
 
-**Architecture decisions:** The target region is one of the first steps in migration strategy design. This is often influenced by the location of the existing assets. Additionally, the availablility of cloud services and the unit cost of those services can vary from one region to the next. As such, understanding the current and future location of assets affects architecture decisions, and can also affect budget estimates.
+**Architecture decisions:** The target region is one of the first steps in migration strategy design. This is often influenced by the location of the existing assets. Additionally, the availability of cloud services and the unit cost of those services can vary from one region to the next. As such, understanding the current and future location of assets affects architecture decisions, and can also affect budget estimates.
 
 **Datacenter dependencies:** Based on the data in the preceding table, it's likely that dependencies exist between the various datacenters around the globe. In many organizations that operate on this type of scale, those dependencies might not be documented or well understood. The approaches you use to evaluate user profiles help to identify some of these dependencies. But you should consider additional steps during the assess process to mitigate risks associated with this complexity.
 
