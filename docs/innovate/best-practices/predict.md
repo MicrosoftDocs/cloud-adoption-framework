@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-# Innovate with AI
+# Innovate using AI
 
 Using AI, your company can make predictions about customers' needs and automate business processes. You also can discover information lying latent in unstructured data and deliver new ways to engage with customers to deliver better experiences.
 

@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 <!-- cSpell:ignore scikit RLlib ONNX Jupyter -->
 
-# Machine Learning
+# Machine learning
 
 Azure empowers you with the most advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models by using Azure Machine Learning. Azure Machine Learning can be used for any kind of machine learning, from classical machine learning to deep learning, supervised, and unsupervised learning. Whether you prefer to write Python or R code, or use zero-code or low-code options such as the [designer](https://docs.microsoft.com/azure/machine-learning/tutorial-designer-automobile-price-train-score), you can build, train, and track highly accurate machine learning and deep-learning models in an Azure Machine Learning workspace.
 
