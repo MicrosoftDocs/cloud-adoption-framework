@@ -1,6 +1,6 @@
 ---
 title: Schema migration data definition languages (DDLs)
-description: Use Azure Synapse features to address high availability and disaster recovery requirements.
+description: Review design considerations and performance options for DDLs when you're migrating schemas to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
 ms.date: 07/14/2020
@@ -11,13 +11,15 @@ ms.subservice: migrate
 
 <!-- cSpell:ignore DDLs Attunity "Attunity Replicate" "Attunity Visibility" Inmon Denodo Teradata Netezza Wherescape DMVs multinode equi Datometry -->
 
-# Schema migration data definition languages (DDLs)
+# Data definition languages for schema migration
+
+This article describes design considerations and performance options for data definition languages (DDLs) when you're migrating schemas to Azure Synapse Analytics.
 
 ## Design considerations
 
 ### Preparation for migration
 
-When preparing to migrate existing data to Azure Synapse Analytics, it is important to clearly define the scope of the exercise (especially for an initial migration project). Time spent up front in understanding the database objects and associated processes to be migrated will pay dividends in reducing effort and risk later in the project.
+When you're preparing to migrate existing data to Azure Synapse Analytics, it's important to clearly define the scope of the exercise (especially for an initial migration project). Time spent up front in understanding the database objects and associated processes to be migrated will pay dividends in reducing effort and risk later in the project.
 
 Create an inventory of database objects to be migrated. Depending on the source platform, this inventory will include some or all of the following objects:
 
@@ -28,21 +30,21 @@ Create an inventory of database objects to be migrated. Depending on the source 
 - Stored procedures
 - Data distribution and partitioning
 
-The basic information for these objects (including metrics such as row counts, physical size, data compression ratios, and object dependencies) should be available via queries against system catalog tables in the source system. The system metadata is the best source for this information. External documentation might be stale and not in sync with changes that have been applied to the data structure since the initial implementation.
+The basic information for these objects should include metrics such as row counts, physical size, data compression ratios, and object dependencies. This information should be available via queries against system catalog tables in the source system. The system metadata is the best source for this information. External documentation might be stale and not in sync with changes that have been applied to the data structure since the initial implementation.
 
-It may also be possible to analyze actual object usage from query logs or use tooling from Microsoft partners to help, for example, Attunity Visibility. It might be that some tables don't need to be migrated as they're no longer used in production queries.
+You might also be able to analyze actual object usage from query logs or use tooling from Microsoft partners (such as Attunity Visibility) to help. It's possible that some tables don't need to be migrated because they're no longer used in production queries.
 
-Data sizing and workload information (for example, levels of concurrency required) is important since it's used to define an appropriate configuration for the Azure Synapse Analytics. It is also good practice to understand the expected data and workload future growth as this may also affect the recommended target configuration.
+Data sizing and workload information (for example, levels of concurrency required) is important because it's used to define an appropriate configuration for Azure Synapse Analytics. It's also good practice to understand the expected growth of data and workloads, because this information might also affect the recommended target configuration.
 
-When using data volumes to estimate the storage required for the new target platform, it is important to understand the data compression ratio (if any) on the source database. Simply taking the amount of storage used on the source system is likely to be a false basis for sizing. It should be possible from monitoring and metadata information to determine uncompressed raw data size, as well as any overheads for indexing, data replication, logging, or other processes in the current system.
+When you're using data volumes to estimate the storage required for the new target platform, it's important to understand the data compression ratio (if any) on the source database. Simply taking the amount of storage used on the source system is likely to be a false basis for sizing. Monitoring and metadata information can help you determine uncompressed raw data size. It can also help you determine any overheads for indexing, data replication, logging, or other processes in the current system.
 
 The uncompressed raw data size of the tables to be migrated is a good starting point for estimating the storage required in the new target Azure Synapse Analytics environment.
 
-There will also be a compression factor as well as indexing overhead in the new target platform, but these will probably be different to the source system. The Azure Synapse Analytics storage pricing also includes seven days of snapshot backups. This can have an impact on the overall cost of storage required compared to the existing environment.
+The new target platform will also include a compression factor and indexing overhead, but these will probably be different from the source system. Azure Synapse Analytics storage pricing also includes seven days of snapshot backups. This can have an impact on the overall cost of storage required, compared to the existing environment.
 
-The data model performance tuning process can be left until late in the migration process so that it takes place when there are real data volumes within the data warehouse. But it is recommended that some performance tuning options can be implemented earlier in the process. For example, in Azure Synapse Analytics it generally makes sense to define small dimension tables as replicated tables and to define large fact tables as clustered columnstore indexes. Similarly, indexes defined in the source environment provide a good indication of which columns might benefit from indexing in the new environment. Using this information when initially defining the tables prior to loading will save time later in the process.
+You can leave the performance tuning process for the data model until late in the migration process, so that it happens when real data volumes are in the data warehouse. But we recommend that you implement some performance tuning options earlier in the process. For example, in Azure Synapse Analytics, it generally makes sense to define small dimension tables as replicated tables and to define large fact tables as clustered columnstore indexes. Similarly, indexes defined in the source environment provide a good indication of which columns might benefit from indexing in the new environment. Using this information when you're initially defining the tables before loading will save time later in the process.
 
-It is good practice to measure the compression ratio and index overhead for your own data in Azure Synapse Analytics as the migration project progresses. This measure enables future capacity planning.
+It's good practice to measure the compression ratio and index overhead for your own data in Azure Synapse Analytics as the migration project progresses. This measure enables future capacity planning.
 
 It may be possible to simply your existing data warehouse prior to migration by about reducing complexity to ease migration. It could include:
 
@@ -167,7 +169,7 @@ For the most efficient join execution, define the columns used on both sides of 
 
 Avoid defining character fields with a large default size. If the maximum size of data within a field is 50 characters, use `VARCHAR(50)`. Similarly, don't used `NVARCHAR` if `VARCHAR` will suffice. `NVARCHAR` stores Unicode data to allow for different language character sets, while `VARCHAR` stores ASCII data and takes less space.
 
-## Design recommendations summary
+## Summary of design recommendations
 
 Don't migrate unnecessary objects or processes. Use built-in features and functions in the target Azure environment where appropriate to reduce the actual number of objects and processes to migrate. Consider using a virtualization layer to reduce or eliminate the number of physical data marts to migrate and to push down processing into the data warehouse.
 
