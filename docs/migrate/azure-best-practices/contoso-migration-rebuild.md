@@ -133,7 +133,7 @@ Before they start, Contoso admins ensure that all prerequisite software is insta
 
 The Contoso admins provision AKS and Azure Container Registry as follows:
 
-1. In Visual Studio Code, they open the folder and go to the */deploy/k8s* directory, which contains the script `gen-aks-env.ps1`.
+1. In Visual Studio Code, they open the folder and go to the `/deploy/k8s` directory, which contains the script `gen-aks-env.ps1`.
 
 2. They run the script to create the managed Kubernetes cluster, using AKS and Azure Container Registry.
 
@@ -238,7 +238,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
     ![Screenshot of building and configuring the build in Azure DevOps.](./media/contoso-migration-rebuild/vsts8.png)  
     _Figure 19: Building and configuring the build._
 
-10. They specify the path of the *docker-compose.yaml* file in the *src* folder of the repo. They choose to build service images and include the latest tag. When the action changes to **Build service images**, the name of the Azure DevOps task changes to **Build services automatically**.
+10. They specify the path of the `docker-compose.yaml` file in the *src* folder of the repo. They choose to build service images and include the latest tag. When the action changes to **Build service images**, the name of the Azure DevOps task changes to **Build services automatically**.
 
     ![Screenshot of various task-building specifics in Azure DevOps.](./media/contoso-migration-rebuild/vsts9.png)  
     _Figure 20: The specifics of the task._
@@ -278,7 +278,7 @@ The admins deploy the infrastructure as follows:
 
 1. They open a developer command prompt and then use the command `az login` for the Azure subscription.
 
-2. They use the *deploy.cmd* file to deploy the Azure resources in the `ContosoRG` resource group and `East US 2` region by typing the following command:
+2. They use the `deploy.cmd` file to deploy the Azure resources in the ContosoRG resource group and East US 2 region by typing the following command:
 
     `.\deploy.cmd azuredeploy ContosoRG -c eastus2`
 
@@ -502,7 +502,7 @@ Now Contoso admins configure the web app to use Contoso resources.
     - This variable must contain a URL that points to a configuration file.
     - By default, the setting that's used is a public endpoint.
 
-4. They update the */config-sample.json/sample.json* file.
+4. They update the `/config-sample.json/sample.json` file.
 
     - This is the configuration file for the web when it uses the public endpoint.
     - They edit the `urls` and `pets_config` sections with the values for the AKS API endpoints, storage accounts, and Azure Cosmos DB database.
@@ -685,7 +685,7 @@ With the migrated resources in Azure, Contoso now needs to fully operationalize 
 ### Licensing and cost optimization
 
 - After all resources are deployed, Contoso should assign Azure tags based on their [infrastructure planning](./contoso-migration-infrastructure.md#set-up-tagging).
-- All licensing is built into the cost of the PaaS services that Contoso is consuming. This will be deducted from the Enterprise Agreement (EA).
+- All licensing is built into the cost of the PaaS services that Contoso is consuming. This will be deducted from the Enterprise Agreement.
 - Contoso will enable [Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
 
 ## Conclusion
