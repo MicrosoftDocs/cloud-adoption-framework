@@ -22,6 +22,7 @@ As part of your landing zone evaluation and preparation, you need to identify th
 For each application or service you'll deploy to your landing zone environment, use the following decision tree as a starting point to help you determine the appropriate data store services to use:
 
 ![Azure database services decision tree](../../_images/ready/data-decision-tree.png)
+_Figure 1: An Azure database services decision tree._
 
 ### Key questions
 
@@ -72,7 +73,7 @@ Part of your compliance efforts might include controlling where your database re
 
 ## Establish controls for database services
 
-When you prepare your landing zone environment, you can establish controls that limit what data stores users can deploy. Controls can help you manage costs and limit security risks, while still allowing developers and IT teams to deploy and configure resources that are needed to support your workloads.
+When you prepare your landing zone environment, you can establish controls that limit what data stores users can deploy. Controls can help you manage costs and limit security risks while still allowing developers and IT teams to deploy and configure resources that are needed to support your workloads.
 
 After you identify and document your landing zone's requirements, you can use [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview) to control the database resources that you allow users to create. Controls can take the form of [allowing or denying the creation of database resource types](https://docs.microsoft.com/azure/governance/policy/samples/allowed-resource-types). For example, you might restrict users to creating only Azure SQL Database resources. You can also use policy to control the allowable options when a resource is created, like [restricting what SQL Database SKUs can be provisioned](https://docs.microsoft.com/azure/governance/policy/samples/allowed-sql-db-skus) or [allowing only specific versions of SQL Server](https://docs.microsoft.com/azure/governance/policy/samples/require-sql-12) to be installed on an IaaS VM.
 

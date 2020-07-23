@@ -9,8 +9,6 @@ ms.service: cloud-adoption-framework
 ms.subservice: innovate
 ---
 
-<!-- cSpell:ignore Satya Nadella Ries -->
-
 # Learn with customers
 
 Our current customers represent our best resource for learning. By partnering with us, they help us [build with customer empathy](./build.md) to find the best solution to their needs. They also help create a minimum viable product (MVP) solution by generating metrics from which we [measure customer impact](./measure.md). In this article, we'll describe how to learn with and from our customer-partners.
@@ -37,7 +35,7 @@ For better or worse, the practice of continuous learning is an art that requires
 Few could deny the radical transformation within Microsoft culture that's occurred over the last several years. This multifaceted transformation, led by Satya Nadella, has been hailed as a surprising business success story. At the heart of this story is the simple belief we call the growth mindset. An entire section of this framework could be dedicated to the adoption of a growth mindset. But to simplify this guidance, we'll focus on a few key points that inform the process of learning with customers:
 
 - **Customer first:** If a hypothesis is designed to improve the experience of real customers, you have to meet real customers where they are. Don't just rely on metrics. Compare and analyze metrics based on firsthand observation of customer experiences.
-- **Continuous learning:** Customer focus and customer empathy stem from a learn-it-all mindset. The Innovate method strives to be learn-it-all, not know-it-all.
+- **Continuous learning:** Customer focus and customer empathy stem from a learn-it-all mindset. The Innovate methodology strives to be learn-it-all, not know-it-all.
 - **Beginner's mindset:** Demonstrate empathy by approaching every conversation with a beginner's mindset. Whether you're new to your field or a 30-year veteran, assume you know little, and you'll learn a lot.
 - **Listen more:** Customers want to partner with you. Unfortunately, an ego-driven need to be right blocks that partnership. To learn beyond the metrics, speak less and listen more.
 - **Encourage others:** Don't just listen; use the things you **do** say to encourage others. In every meeting, find ways to pull in diverse perspectives from those who may not be quick to share.
@@ -47,7 +45,7 @@ Few could deny the radical transformation within Microsoft culture that's occurr
 
 ## Next steps
 
-As a next step to understanding this methodology, [Common blockers and challenges to innovation](./challenges.md) can prepare you for the changes ahead.
+As a next step to understanding this methodology, see [Common blockers and challenges to innovation](./challenges.md) to prepare for the changes ahead.
 
 > [!div class="nextstepaction"]
 > [Understanding common blockers and challenges](./challenges.md)

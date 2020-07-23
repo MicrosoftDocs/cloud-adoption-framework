@@ -11,21 +11,11 @@ ms.custom: fasttrack-new, AQC
 ms.localizationpriority: high
 ---
 
-::: zone target="docs"
-
 # Prerequisites for migrating to Azure
-
-::: zone-end
-
-::: zone target="chromeless"
-
-# Prerequisites
-
-::: zone-end
 
 The resources in this section will help prepare your current environment for migration to Azure.
 
-# [Overview](#tab/Overview)
+## [Overview](#tab/Overview)
 
 Reasons for migrating to Azure include removing risks associated with legacy hardware, reducing capital expense, freeing up datacenter space, and quickly realizing return on investment (ROI).
 
@@ -37,7 +27,7 @@ Reasons for migrating to Azure include removing risks associated with legacy har
 
 Each of the above scenarios may be entry points for extending your cloud footprint using another methodology (rehost, refactor, rearchitect, rebuild, or replace).
 
-## Migration characteristics
+### Migration characteristics
 
 The guide assumes that prior to this migration, your digital estate consists mostly of on-premises hosted infrastructure and may include hosted business-critical applications. After a successful migration, your data estate may look very much how it did on-premises but with the infrastructure hosted in cloud resources. Alternatively, the ideal data estate is a variation of your current data estate, since it has aspects of your on-premises infrastructure with components that have been refactored to optimize and take advantage of the cloud platform.
 
@@ -53,7 +43,7 @@ The focus of this migration journey is to achieve:
 > - [Windows Server 2008 and Windows Server 2008 R2](https://www.microsoft.com/cloud-platform/windows-server-2008).
 > - [SQL Server 2008 and SQL Server 2008 R2](https://www.microsoft.com/sql-server/sql-server-2008).
 
-# [Understand migration approaches](#tab/Approach)
+## [Understand migration approaches](#tab/Approach)
 
 The strategy and tools you use to migrate an application to Azure will largely depend on your business motivations, technology requirements, and timelines, as well as a deep understanding of the actual workload and assets (infrastructure, apps, and data) being migrated.
 
@@ -63,12 +53,12 @@ An IaaS-focused migration, where servers (along with their associated applicatio
 
 When assessing workloads for migration, identify applications that would not require substantial modification to run using PaaS technologies such as Azure App Service or orchestrators like Azure Kubernetes Service. These applications should be the first candidates for modernization and cloud optimization.
 
-## Learn more
+### Learn more
 
 - [Cloud Adoption Framework migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)
 - The [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
 
-# [Planning checklist](#tab/Checklist)
+## [Planning checklist](#tab/Checklist)
 
 Before starting a migration, you'll need to complete some prerequisites. The exact details of these activities vary depending on the environment being migrated. Generally, the following checklist applies:
 
@@ -95,7 +85,7 @@ Assuming you choose a rehost approach to migration, the following activities wil
 
 <!-- markdownlint-disable MD024 -->
 
-## Learn more
+### Learn more
 
 - The [five Rs of rationalization](../../digital-estate/5-rs-of-rationalization.md)
 - [Migration tools decision guide](../../decision-guides/migrate-decision-guide/index.md)
