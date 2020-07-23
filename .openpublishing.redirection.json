@@ -81,6 +81,11 @@
          "redirect_document_id": true
       },
       {
+         "source_path": "docs/infrastructure/virtual-machines/basic-workload.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/migrate",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/reference/azure-scaffold-examples.md",
          "redirect_url": "/azure/cloud-adoption-framework/reference/azure-scaffold",
          "redirect_document_id": true
