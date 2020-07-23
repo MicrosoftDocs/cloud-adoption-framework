@@ -1,6 +1,6 @@
 ---
 title: What are AI applications?
-description: What is cognitive search?
+description: What is Azure Cognitive Services?
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
@@ -16,9 +16,7 @@ ms.subservice: innovate
 In Azure, you can build intelligent applications faster by using the tools and technologies of your choice and built-in AI.
 
 - **Easily build and deploy anywhere:** Use your team's existing skill set and the tools you know to build intelligent applications and deploy them without a change in code. You can build once and then deploy in the cloud, on-premises, and to edge devices. You can be confident of global distribution to more datacenters than with any other provider.
-
 - **Create an impact by using an open platform:** Choose your favorite technologies, which can be open source. Azure supports a range of deployment options, popular stacks and languages, and a comprehensive set of data engines. Capitalize on this flexibility, plus the performance, scale, and security delivered by Microsoft technologies to build applications for any scenario.
-
 - **Develop applications with built-in intelligence:** Building intelligent applications using Azure is easy, because no other platform brings analytics and native AI to your data wherever it lives and in the languages you use. You can take advantage of a rich set of [cognitive APIs](https://azure.microsoft.com/services/cognitive-services/) to easily build new experiences into your applications for human-like intelligence.
 
 ## What is Azure Cognitive Services?
