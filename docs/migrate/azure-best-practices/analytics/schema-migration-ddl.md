@@ -46,64 +46,71 @@ You can leave the performance tuning process for the data model until late in th
 
 It's good practice to measure the compression ratio and index overhead for your own data in Azure Synapse Analytics as the migration project progresses. This measure enables future capacity planning.
 
-It may be possible to simply your existing data warehouse prior to migration by about reducing complexity to ease migration. It could include:
+It may be possible to simplify your existing data warehouse prior to migration by reducing complexity to ease migration. This effort might include:
 
-- Removing or archiving unused tables before migrating to avoid migrating data that is not used. Archiving to Azure Blob storage and defining the data as an external table could keep the data available but at lower cost.
-- Converting physical data marts to virtual data marts using data virtualization software to reduce what you have to migrate. This conversion also improves agility and reduces total cost of ownership, and could be considered as modernization during migration.
+- Removing or archiving unused tables before migrating to avoid migrating data that is not used. Archiving to Azure Blob storage and defining the data as an external table might keep the data available but at lower cost.
+- Converting physical data marts to virtual data marts by using data virtualization software to reduce what you have to migrate. This conversion also improves agility and reduces total cost of ownership. You might consider it as modernization during migration.
 
-One objective of the migration exercise may also be to modernize the warehouse by changing the underlying data model, for example, moving from an Inmon style data model to a data vault approach. This should be decided as part of the preparation phase and a strategy for the transition should be incorporated into the migration plan. The recommended approach in this scenario is to first migrate the data model as is to the new platform and then do the transition to the new model in Azure Synapse Analytics, using the scalability and performance characteristics of the platform to execute the transformation with no impact on the source system.
+One objective of the migration exercise might also be to modernize the warehouse by changing the underlying data model. One example is moving from an Inmon-style data model to a data vault approach. You should decide this as part of the preparation phase, and incorporate a strategy for the transition into the migration plan. The recommended approach in this scenario is to first migrate the data model as is to the new platform. Then do the transition to the new model in Azure Synapse Analytics, by using the scalability and performance characteristics of the platform to execute the transformation with no impact on the source system.
 
 ### Data model migration
 
-Depending on the platform and the origins of the source system, the data model of some or all parts may already be in a star or snowflake schema form. If so, this can be directly migrated to Azure Synapse Analytics as is. This scenario is the easiest and lowest risk migration to achieve. An as-is migration could also be the first stage of a more complex migration that includes a transition to a new underlying data model such as data vault as described above.
+Depending on the platform and the origins of the source system, the data model of some or all parts may already be in a star or snowflake schema form. If so, you can directly migrate it to Azure Synapse Analytics as is. This scenario is the easiest and lowest-risk migration to achieve. An as-is migration can also be the first stage of a more complex migration that includes a transition to a new underlying data model such as a data vault, as described earlier.
 
-While any set of relational tables and views can be migrated to Azure Synapse Analytics, for analytical query workloads against a large data set, a star or snowflake data model generally gives the best overall performance. If the source data model is not already in this form, it may be worth using the migration process to re-engineer the model.
+Any set of relational tables and views can be migrated to Azure Synapse Analytics. But for analytical query workloads against a large data set, a star or snowflake data model generally gives the best overall performance. If the source data model is not already in this form, it might be worth using the migration process to re-engineer the model.
 
-If any changes to the data model are done as part of the migration project, the best practice is to perform these changes in the new target environment, that is, migrate the existing model first, then use the power and flexibility of Azure Synapse Analytics to transform the data to the new model there. This approach minimizes the impact on the existing system and uses the performance and scalability of Azure Synapse Analytics to make any changes quickly and cost-effectively.
+If any changes to the data model are done as part of the migration project, the best practice is to perform these changes in the new target environment. That is, migrate the existing model first, then use the power and flexibility of Azure Synapse Analytics to transform the data to the new model there. This approach minimizes the impact on the existing system and uses the performance and scalability of Azure Synapse Analytics to make any changes quickly and cost-effectively.
 
-The existing system to be migrated may be implemented as several layers (for example, data ingest/staging layer, data warehouse layer and reporting or data marts layer) each of which consist of a number of relational tables and views. While these could all be migrated to Azure Synapse Analytics as-is, it might be more cost-effective and performant to use some of the features and capabilities of the Azure ecosystem rather than migrating everything directly. For example:
+The existing system to be migrated can be implemented as several layers (for example, data ingest/staging layer, data warehouse layer, and reporting or data marts layer). Each layer consists of relational tables and views. Although you can migrate all these to Azure Synapse Analytics as is, it might be more cost-effective and performant to use some of the features and capabilities of the Azure ecosystem rather than migrating everything directly. For example:
 
-- **Data ingest and staging:** Azure Blob storage in conjunction with PolyBase for fast parallel data loading could be used for part of the ETL/ELT process rather than relational tables.
-- **Reporting layer and data marts:** The performance characteristics of Azure Synapse Analytics may eliminate the need to physically instantiate aggregated tables for reporting purposes or data marts. It may be possible to implement these as views onto the core data warehouse or via a third-party data virtualization layer. At the basic level, the process for data migration of historical data and possibly also incremental updates can be achieved as shown below:
+- **Data ingest and staging:** You can use Azure Blob storage in conjunction with PolyBase for fast parallel data loading for part of the ETL/ELT process, rather than relational tables.
+- **Reporting layer and data marts:** The performance characteristics of Azure Synapse Analytics might eliminate the need to physically instantiate aggregated tables for reporting purposes or data marts. It might be possible to implement these as views onto the core data warehouse or via a third-party data virtualization layer. At the basic level, you can achieve the process for data migration of historical data and possibly also incremental updates as shown in this diagram:
 
-![Modern data warehouse](../../../_images/analytics/schema-migration-ddl.png)
+![Diagram that illustrates a modern data warehouse.](../../../_images/analytics/schema-migration-ddl.png)
 
-If these or similar approaches can be used, the number of tables to be migrated is reduced and some processes might be simplified or eliminated, again reducing the migration workload. The applicability of these approaches is dependent on the individual use case, but the general principle is to consider using the features and facilities of the Azure ecosystem where possible to reduce the migration workload and build a cost-effective target environment. This also holds true for other functions such as backup/restore and workflow management and monitoring.
+If you can use these or similar approaches, the number of tables to be migrated is reduced and some processes might be simplified or eliminated, again reducing the migration workload. The applicability of these approaches depends on the individual use case, but the general principle is to consider using the features and facilities of the Azure ecosystem where possible to reduce the migration workload and build a cost-effective target environment. This also holds true for other functions, such as backup/restore and workflow management and monitoring.
 
-There are also products and services available from Microsoft partners to assist in data warehouse migration and in some cases automate parts of the process. If the existing system incorporates a third-party ETL product, it may be that this already supports Azure Synapse Analytics as a target environment and the existing ETL workflows could be redirected to the new target Azure SQL Data Warehouse.
+Products and services available from Microsoft partners can assist in data warehouse migration and in some cases automate parts of the process. If the existing system incorporates a third-party ETL product, this might already support Azure Synapse Analytics as a target environment. The existing ETL workflows can be redirected to the new target Azure SQL data warehouse.
 
 ### Data marts: Physical or virtual
 
-In legacy data warehouse environments, it is common practice to create a number of data marts that are structured to provide good performance for ad hoc self-service queries and reports for a given department or business function within an organization. As such, a data mart typically consists of a subset of the data warehouse containing aggregated versions of the data in a form that enables users to easily query that data with fast response times via user-friendly query tools such as Tableau, MicroStrategy, or Microsoft Power BI. This form is generally a dimensional data model, and one use of data marts is to expose the data in a usable form even if the underlying warehouse data model is something different (for example, data vault). This approach is also known as a three-tier model.
+In older data warehouse environments, it's common practice to create a number of data marts that are structured to provide good performance for ad hoc self-service queries and reports for a department or business function within an organization. A data mart typically consists of a subset of the data warehouse that contains aggregated versions of the data. It's in a form that enables users to easily query that data with fast response times via user-friendly query tools such as Tableau, MicroStrategy, or Microsoft Power BI. This form is generally a dimensional data model. 
 
-Separate data marts for individual business units within an organization can also be used to implement robust data security regimes, by only allowing user access to specific data marts relevant to them and eliminating, obfuscating, or anonymizing sensitive data.
+One use of data marts is to expose the data in a usable form, even if the underlying warehouse data model is something different (for example, data vault). This approach is also known as a three-tier model.
 
-If these data marts are implemented as physical tables, they required additional storage resources to store them and also additional processing to build and refresh them on a regular basis. It also implies that the data in the mart is only as up to date as the last refresh operation, so may not be suitable for highly volatile data dashboards.
+You can use separate data marts for individual business units within an organization to implement robust data security regimes. For example, you can allow user access to specific data marts relevant to them and eliminate, obfuscate, or anonymize sensitive data.
 
-With the advent of relatively cheap scalable massively parallel processing (mpp) architectures such as Azure Synapse Analytics and their inherent performance characteristics, it may be that data mart functionality can be provided without having to instantiate the mart as a set of physical tables. This is achieved by effectively virtualizing the data marts via SQL views on to the main data warehouse or via a virtualization layer using features such as views in Azure Synapse Analytics or third-party virtualization products such as Denodo. This approach simplifies or eliminates the need for additional storage and aggregation processing, and reduces the overall number of database objects to be migrated.
+If these data marts are implemented as physical tables, they required additional storage resources to store them. They also required additional processing to build and refresh them on a regular basis. Physical tables imply that the data in the mart is only as up to date as the last refresh operation, so they may not be suitable for highly volatile data dashboards.
 
-There is also another potential benefit of this approach. By implementing the aggregation and join logic within a virtualization layer and presenting external reporting tools via a virtualized view, the processing required to create these views is pushed down into the data warehouse, which is generally the best place to run operations such as joins and aggregations on large data volumes.
+With the advent of relatively cheap scalable massively parallel processing (MPP) architectures such as Azure Synapse Analytics and their inherent performance characteristics, yoy might be able to provide data mart functionality without having to instantiate the mart as a set of physical tables. You achieve this by effectively virtualizing the data marts through one of these methods:
+
+- SQL views on the main data warehouse.
+- A virtualization layer that uses features such as views in Azure Synapse Analytics or third-party virtualization products such as Denodo. 
+
+This approach simplifies or eliminates the need for additional storage and aggregation processing. It reduces the overall number of database objects to be migrated.
+
+There is another potential benefit of this approach. By implementing the aggregation and join logic within a virtualization layer and presenting external reporting tools via a virtualized view, the processing required to create these views is pushed down into the data warehouse. The data warehouse is generally the best place to run operations such as joins and aggregations on large data volumes.
 
 The primary drivers for choosing to implement physical or virtual data mart implementation are:
 
-- More agility as a virtual data mart is easier to change than physical tables and the associated ETL processes.
+- More agility. A virtual data mart is easier to change than physical tables and the associated ETL processes.
 - Lower total cost of ownership because of fewer data stores and copies of data in a virtualized implementation.
-- Elimination of ETL jobs to migrate and simplified dw architecture in a virtualized environment.
-- Performance: historically physical data marts have been more performant though virtualization products are now implementing intelligent caching techniques to mitigate this
+- Elimination of ETL jobs to migrate and simplified data warehouse architecture in a virtualized environment.
+- Performance. Historically, physical data marts have been more performant. Virtualization products are now implementing intelligent caching techniques to mitigate this.
 
-Data virtualization can also be used to provide end users with a consistent view of data while a migration project takes place.
+You can also use data virtualization to give users a consistent view of data while a migration project takes place.
 
 ### Data mapping
 
-**Key and integrity constraints in Azure Synapse Analytics:**
+#### Key and integrity constraints in Azure Synapse Analytics
 
-Primary key and foreign key constraints are not currently enforced within Azure Synapse Analytics, however the definition for `PRIMARY KEY` can be included in the `CREATE TABLE` statement with the `NOT ENFORCED` clause. This means that third-party reporting products can use the metadata for the table to understand the keys within the data model and therefore generate the most efficient queries.
+Primary key and foreign key constraints are not currently enforced within Azure Synapse Analytics. However, you can include the definition for `PRIMARY KEY` in the `CREATE TABLE` statement with the `NOT ENFORCED` clause. This means that third-party reporting products can use the metadata for the table to understand the keys within the data model and therefore generate the most efficient queries.
 
-**Data type support in Azure Synapse Analytics:**
+#### Data type support in Azure Synapse Analytics
 
-Some legacy database systems include support for data types that are not currently directly supported within Azure Synapse Analytics. However, these data types can generally be handled either by using a supported data type to store the data as is, or by transforming the data to a supported data type.
+Some older database systems include support for data types that are not directly supported within Azure Synapse Analytics. You can generally handle these data types by using a supported data type to store the data as is, or by transforming the data to a supported data type.
 
-An alphabetic list of supported data types is shown below:
+Here's an alphabetical list of supported data types:
 
 <!-- TODO: Review format of this list. Are the arguments necessary for this list? -->
 
@@ -136,7 +143,7 @@ An alphabetic list of supported data types is shown below:
 
 <!-- docsTest:enable -->
 
-The table below lists some common data types that are not currently supported together with the recommended approach for storing these in Azure Synapse Analytics. (For specific environments such as Teradata or Netezza, see the associated documents for more detailed information.)
+The following table lists common data types that are not currently supported, together with the recommended approach for storing these in Azure Synapse Analytics. (For specific environments such as Teradata or Netezza, see the associated documents for more detailed information.)
 
 | **Unsupported data type** | **Workaround**                                                      |
 |-----------------------|-----------------------------------------------------------------|
@@ -152,30 +159,34 @@ The table below lists some common data types that are not currently supported to
 | `xml`                   | `varchar`                                                         |
 | User-defined type     | Convert back to the native data type when possible              |
 
-**Potential data issues:**
+#### Potential data issues
 
-Depending on the source environment, there are some issues that can cause problems when migrating data:
+Depending on the source environment, some issues can cause problems when you're migrating data:
 
-- There can be subtle differences in the way that `NULL` data is handled in different database products, for example, collation sequence and handling of empty character strings.
-- `DATE`, `TIME`, `INTERVAL`, `TIME ZONE` data and associated functions can vary widely from product to product.
+- There can be subtle differences in the way that `NULL` data is handled in different database products. Examples include collation sequence and handling of empty character strings.
+- `DATE`, `TIME`, `INTERVAL`, and `TIME ZONE` data, and associated functions, can vary widely from product to product.
 
-Test these thoroughly to ensure that the desired results are achieved in the target environment. The migration exercise can also uncover bugs or incorrect results that are currently part of the existing source system. The migration process is a good opportunity to correct any anomalies. Best practices for defining columns in Azure Synapse Analytics It is common in legacy systems to find columns specified with inefficient data types, for example, a field defined as `VARCHAR(20)` when the actual data values would fit into a `CHAR(5)` field, or using `INTEGER` fields when all values will fit within a `SMALLINT` field. This can lead to inefficiencies in both storage and query performance, especially in large fact tables.
+Test these thoroughly to ensure that the desired results are achieved in the target environment. The migration exercise can also uncover bugs or incorrect results that are currently part of the existing source system. The migration process is a good opportunity to correct any anomalies. 
 
-A migration exercise can be a good time to check existing data definitions and rationalize data definitions. This can be automated by using SQL queries to find the maximum numeric value or the maximum character length within a data field and comparing that to the data type. Some third-party data exploration or migration tools also incorporate this feature.
+#### Best practices for defining columns in Azure Synapse Analytics
 
-In general, it is good practice to minimize the total defined row length for a table (for example, by using the smallest data type for each column as described above) as this will give the best query performance. The PolyBase utility, which is the recommended method of data loading from external tables for Azure Synapse Analytics, supports a maximum defined row length of 1 MB. For rows greater than 1 MB in length PolyBase cannot be used to load that table, bcp must be used instead.
+It's common in older systems to find columns specified with inefficient data types. For example, you might find a field defined as `VARCHAR(20)` when the actual data values would fit into a `CHAR(5)` field, or the use of `INTEGER` fields when all values will fit within a `SMALLINT` field. Insufficient data types can lead to inefficiencies in both storage and query performance, especially in large fact tables.
 
-For the most efficient join execution, define the columns used on both sides of the join as the same data type. If the key of a dimension table is defined as `SMALLINT` then the corresponding reference columns in fact tables that use that dimension should also be defined as `SMALLINT`.
+A migration exercise can be a good time to check existing data definitions and rationalize data definitions. You can automate this by using SQL queries to find the maximum numeric value or the maximum character length within a data field and comparing that to the data type. Some third-party data exploration or migration tools also incorporate this feature.
 
-Avoid defining character fields with a large default size. If the maximum size of data within a field is 50 characters, use `VARCHAR(50)`. Similarly, don't used `NVARCHAR` if `VARCHAR` will suffice. `NVARCHAR` stores Unicode data to allow for different language character sets, while `VARCHAR` stores ASCII data and takes less space.
+In general, it's a good practice to minimize the total defined row length for a table. For example, you can use the smallest data type for each column as described earlier. This technique will give the best query performance. The PolyBase utility, which is the recommended method of data loading from external tables for Azure Synapse Analytics, supports a maximum defined row length of 1 MB. For rows greater than 1 MB in length, you can't use PolyBase to load that table. You must use Bulk Copy Program (BCP) instead.
+
+For the most efficient join execution, define the columns used on both sides of the join as the same data type. If the key of a dimension table is defined as `SMALLINT`, then the corresponding reference columns in fact tables that use that dimension should also be defined as `SMALLINT`.
+
+Avoid defining character fields with a large default size. If the maximum size of data within a field is 50 characters, use `VARCHAR(50)`. Similarly, don't use `NVARCHAR` if `VARCHAR` will suffice. `NVARCHAR` stores Unicode data to allow for different language character sets. `VARCHAR` stores ASCII data and takes less space.
 
 ## Summary of design recommendations
 
-Don't migrate unnecessary objects or processes. Use built-in features and functions in the target Azure environment where appropriate to reduce the actual number of objects and processes to migrate. Consider using a virtualization layer to reduce or eliminate the number of physical data marts to migrate and to push down processing into the data warehouse.
+Don't migrate unnecessary objects or processes. Use built-in features and functions in the target Azure environment where appropriate to reduce the actual number of objects and processes to migrate. Consider using a virtualization layer to reduce or eliminate the number of physical data marts that you'll migrate and to push down processing into the data warehouse.
 
-Automate wherever possible. Use metadata from system catalogs in the source system to generate DDL for the target environment. If possible, automate the generation of documentation as well. Microsoft partners such as Wherescape can provide specialized tools and services to assist with this.
+Automate wherever possible. Use metadata from system catalogs in the source system to generate DDLs for the target environment. If possible, automate the generation of documentation as well. Microsoft partners such as Wherescape can provide specialized tools and services to assist with this.
 
-Perform any required data model changes or data mapping optimizations on the target platform. These changes can be done more efficiently in Azure Synapse Analytics. This approach reduces the impact on source systems that might already be running close to full capacity.
+Perform any required data model changes or data mapping optimizations on the target platform. You can make these changes more efficiently in Azure Synapse Analytics. This approach reduces the impact on source systems that might already be running close to full capacity.
 
 ## Performance options
 
