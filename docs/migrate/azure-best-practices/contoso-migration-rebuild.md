@@ -272,7 +272,7 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
 
 With the AKS cluster created and the Docker images built, Contoso admins now deploy the rest of the infrastructure that will be used by back-end microservices. 
 - Instructions in this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repo. 
-- In the */deploy/k8s/arm* folder, there's a single script to create all items.
+- In the `/deploy/k8s/arm` folder, there's a single script to create all items.
 
 The admins deploy the infrastructure as follows:
 
