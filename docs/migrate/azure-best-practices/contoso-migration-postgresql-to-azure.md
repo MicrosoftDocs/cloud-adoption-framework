@@ -40,7 +40,7 @@ The Contoso cloud team has pinned down goals for this migration and will use the
 
 ## Solution design
 
-After pinning down goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process. The tools and services it will use for migration also are identified.
+After pinning down goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process. The tools and services it will use for migration are also identified.
 
 ### Current environment
 
@@ -67,7 +67,7 @@ As part of the solution design process, Contoso reviewed the features in Azure f
 
 ### Solution review
 
-Contoso evaluates the proposed design by putting together a pros and cons list.
+Contoso evaluates its proposed design by putting together a list of pros and cons.
 
 | Consideration | Details |
 |--- | --- |
@@ -84,7 +84,7 @@ _Figure 1: Scenario architecture._
 
 #### Preparation
 
-Before you can migrate your PostgreSQL databases, ensure that those instances meet all the Azure prerequisites for a successful migration.
+Before Contoso can migrate its PostgreSQL databases, it ensures that Contoso's instances meet all the Azure prerequisites for a successful migration.
 
 #### Supported versions
 
@@ -99,11 +99,11 @@ For the latest updates on supported versions, see [Supported PostgreSQL major ve
 
 #### Network
 
-Contoso needs to set up a virtual network gateway connection from its on-premises environment to the virtual network where its Azure Database for PostgreSQL database is located. This connection allows the on-premises application to access the database but not be migrated to the cloud.
+Contoso will need to set up a virtual network gateway connection from its on-premises environment to the virtual network where its Azure Database for PostgreSQL database is located. This connection allows the on-premises application to access the database but not be migrated to the cloud.
 
 #### Assessment
 
-Contoso needs to assess the current database for replication issues. These issues include:
+Contoso will need to assess the current database for replication issues. These issues include:
 
 - The source database version is compatible for migration to the target database version.
 - Primary keys must exist on all tables to be replicated.
@@ -123,7 +123,7 @@ Contoso can perform the migration in several ways:
 
 Contoso has selected Azure Database Migration Service to allow the company to reuse the migration project whenever it needs to perform major-to-major upgrades. Because a single Database Migration Service activity only accommodates up to four databases, Contoso sets up several jobs by using the following steps.
 
-To prepare, set up a virtual network to access the database. You can create a virtual network connection by using [VPN gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
+To prepare, set up a virtual network to access the database. Create a virtual network connection by using [VPN gateways](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) in various ways.
 
 <!-- docsTest:ignore "Azure Database Migration Services" -->
 
@@ -134,7 +134,7 @@ To prepare, set up a virtual network to access the database. You can create a vi
 1. Select **+ Add**.
 1. Select the subscription and resource group for the service.
 1. Enter a name for the instance.
-1. Select the closest location to your datacenter or VPN gateway.
+1. Select the closest location to the Contoso datacenter or VPN gateway.
 1. Select **Azure** for the service mode.
 1. Select a pricing tier.
 1. Select **Review + create**.
@@ -152,13 +152,13 @@ To prepare, set up a virtual network to access the database. You can create a vi
     - Set the `listen_addresses` variable.
 1. Enable SSL.
     1. Set the `ssl=on` variable.
-    1. Verify that you're using a publicly signed SSL certificate for the server that supports TLS 1.2. Otherwise, the Database Migration Service tool will raise an error.
+    1. Verify that Contoso is using a publicly signed SSL certificate for the server that supports TLS 1.2. Otherwise, the Database Migration Service tool will raise an error.
 1. Update the `pg_hba.conf` file.
     - Add entries that are specific to the Database Migration Service instance.
 1. Logical replication must be enabled on the source server by modifying the values in the `postgresql.conf` file for each server.
     1. `wal_level` = `logical`
     1. `max_replication_slots` = [at least the maximum number of databases for migration]
-        - For example, if you want to migrate four databases, set the value to 4.
+        - For example, if Contoso wants to migrate four databases, it sets the value to 4.
     1. `max_wal_senders` = [number of databases running concurrently]
         - The recommended value is 10.
 
@@ -166,7 +166,7 @@ To prepare, set up a virtual network to access the database. You can create a vi
 
 1. Add the Database Migration Service instance IP address to the `PostgreSQLpg_hba.conf` file.
 
-1. To export the database schemas. run the following commands:
+1. To export the database schemas, run the following commands:
 
     ```cmd
     pg_dump -U postgres -s dvdrental > dvdrental_schema.sql
@@ -183,7 +183,7 @@ To prepare, set up a virtual network to access the database. You can create a vi
 
 ### Migration
 
-1. In the Azure portal, go to your Database Migration Service resource.
+1. In the Azure portal, Contoso goes to its Database Migration Service resource.
 1. If the service isn't started, select **Start Service**.
 1. Select **New Migration Project**.
 
@@ -210,7 +210,7 @@ To prepare, set up a virtual network to access the database. You can create a vi
     ![Screenshot that shows selecting target information.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_target.png)
     _Figure 7: Selecting target information._
 
-1. Select the databases you want to migrate. The schema for each database should have been migrated previously. Then select **Save**.
+1. Select the databases to migrate. The schema for each database should have been migrated previously. Then select **Save**.
 
     ![Screenshot that shows selecting databases.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_db.png)
     _Figure 8: Selecting databases._
@@ -225,8 +225,8 @@ To prepare, set up a virtual network to access the database. You can create a vi
     ![Screenshot that shows naming and running the activity.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_summary.png)
     _Figure 10: Naming and running the activity._
 
-1. Monitor the migration. You might need to retry it if anything fails. An example is if foreign key references were missing.
-1. After `Full load completed` matches your table count, select **Start Cutover**.
+1. Monitor the migration. Retry it if anything fails. An example is if foreign key references were missing.
+1. After `Full load completed` matches the table count, select **Start Cutover**.
 
     ![Screenshot that shows monitoring the migration to start the cutover.](./media/contoso-migration-postgresql-to-azure/azure_migration_service_complete.png)
     _Figure 11: Monitoring the migration to start the cutover._
@@ -253,7 +253,7 @@ To prepare, set up a virtual network to access the database. You can create a vi
 
 1. Reconfigure any applications or processes that use the on-premises database to point to the new Azure Database for PostgreSQL database instance.
 
-1. For post-migration, ensure that you've also set up cross-region read replicas, if necessary, after the migration is finished.
+1. For post-migration, Contos will ensure that it also set up cross-region read replicas, if necessary, after the migration is finished.
 
 ## Clean up after migration
 
@@ -284,7 +284,7 @@ Ensure that the Azure Database for PostgreSQL databases is backed up by using ge
 
 ### Licensing and cost optimization
 
-- Azure Database for PostgreSQL can be scaled up or down. Performance monitoring of the server and databases is important to ensure that you're meeting your needs while keeping costs at a minimum.
+- Azure Database for PostgreSQL can be scaled up or down. Performance monitoring of the server and databases is important to ensure that needs are met while keeping costs at a minimum.
 - Both CPU and storage have costs associated. There are several pricing tiers to select from. Be sure the appropriate pricing plan is selected for the data workloads.
 - Each read replica is billed based on the compute and storage selected.
 
