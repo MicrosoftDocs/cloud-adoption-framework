@@ -131,7 +131,7 @@ Learn about how to [set up the Azure Migrate: Server Migration tool](https://doc
 
 ## Step 2: Prepare on-premises VMware for Azure Migrate: Server Migration
 
-After migration to Azure, Contoso wants to be able to connect to the replicated VMs in Azure. There's a couple of things that the Contoso admins need to do:
+After migration to Azure, Contoso wants to be able to connect to the replicated VMs in Azure. There are a couple of things that the Contoso admins need to do:
 
 - To access Azure VMs over the internet, they enable SSH on the on-premises Linux VM before migration. For Ubuntu, this step can be completed by using the following command: `sudo apt-get ssh install -y`.
 - Install the [Azure Linux agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-linux)
@@ -287,7 +287,7 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 <!-- docsTest:ignore "Quickstart: Set" -->
 
-### BCDR
+### Business continuity and disaster recovery
 
 For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
 
