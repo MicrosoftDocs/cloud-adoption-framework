@@ -417,7 +417,7 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 ### Business continuity and disaster recovery
 
-For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
+For business continuity and disaster recovery, Contoso takes the following actions:
 
 - **Keep data safe.** Contoso backs up the data on the application VM by using [Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction). The company doesn't need to configure backup for the database. Azure Database for MySQL automatically creates and stores server backups. Contoso selected to use geo-redundancy for the database so that it's resilient and production ready.
 - **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region by using Site Recovery. For more information, see [Quickstart: Set up disaster recovery to a secondary Azure region for an Azure VM](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
