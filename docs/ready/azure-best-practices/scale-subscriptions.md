@@ -1,5 +1,5 @@
 ---
-title: "Create additional subscriptions to scale your Azure environment"
+title: Create additional subscriptions to scale your Azure environment
 description: Use the Cloud Adoption Framework for Azure to learn how to develop a strategy for scaling your environment using multiple Azure subscriptions.
 author: alexbuckgit
 ms.author: abuck

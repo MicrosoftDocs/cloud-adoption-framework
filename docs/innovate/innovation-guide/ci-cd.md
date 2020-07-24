@@ -13,7 +13,7 @@ ms.localizationpriority: high
 
 # Empower adoption
 
-You know that innovation is critical to business success. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. _Developers_ are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
+You know that innovation is critical to business success. You don't accomplish innovation solely through the introduction of new technologies. You need to focus on supporting the people who catalyze change and create the new value that you seek. Developers are at the center of digital transformation, and to empower them to achieve more, you need to accelerate developer velocity. To unleash the creative energy of developer teams, you need to help them build productively, foster global and secure collaboration, and remove barriers so they can scale innovation.
 
 ## Generate value
 
@@ -38,7 +38,7 @@ Empowering developers to invent means accelerating developer velocity, enabling 
 ### Build productively
 
 There are several areas of opportunity where Azure can help you build productively:
-  
+
 > [!div class="checklist"]
 >
 > - Ensure developers become and stay proficient in their domain by helping them advance their knowledge.
@@ -56,7 +56,7 @@ Azure DevOps provides best-in-class tools for every developer. Azure developer s
 
 ::: zone target="docs"
 
-**Go to the [Get started documentation for Azure DevOps](https://docs.microsoft.com/azure/devops/user-guide/?view=azure-devops)**
+**Go to [Azure DevOps documentation](https://docs.microsoft.com/azure/devops/user-guide/?view=azure-devops)**
 
 ::: zone-end
 
@@ -91,7 +91,7 @@ GitHub, the largest developer community, is at the heart of the open-source comm
 
 ### Open-source innovation
 
-To innovate, many developers use open-source code. 80 to 90 percent of new application development begins with open-source code. Open source isn't just about code. It's also about interconnected communities and developers around the globe building together. By using an open development model with GitHub, teams innovate and collaborate, identify security vulnerabilities early, and discover expert talent. Enterprise development teams can integrate GitHub repositories with Microsoft Teams and Azure. Teams is the only solution that brings together chat, voice, and collaboration with the power of Microsoft Office apps, meetings, and business process workflows, all in a single user experience. It's the hub for teamwork and innovation.
+To innovate, many developers use open-source code. 80 to 90 percent of new application development begins with open-source code. Open source isn't just about code. It's also about interconnected communities and developers around the globe building together. By using an open development model with GitHub, teams innovate and collaborate, identify security vulnerabilities early, and discover expert talent. Enterprise development teams can integrate GitHub repositories with Microsoft Teams and Azure. Teams is the only solution that brings together chat, voice, and collaboration with the power of Microsoft Office applications, meetings, and business process workflows, all in a single user experience. It's the hub for teamwork and innovation.
 
 ### Learn more
 
@@ -106,13 +106,15 @@ Enterprises use GitHub to host source code and Azure Pipelines for continuous in
 
 ### Characteristics of innovative applications
 
-With Azure, your developers can build cloud-native applications by using canonical modern application patterns. Azure supports and provides all the building blocks that your developer teams need to build applications that use containers, managed databases, artificial intelligence, and serverless capabilities.
+With Azure, your developers can build cloud-native applications by using canonical modern application patterns. Azure supports and provides all the building blocks that your developer teams need to build applications that use containers, managed databases, AI, and serverless capabilities.
 
 ### Scale innovation
 
 Sparking innovation for customer experiences and line-of-business applications is a high priority for every business leader. Whether you're building web, mobile, IoT, or mixed reality experiences, innovation is key to the future success of your organization. To scale innovation, organizations need to focus on packaging and shipping their unique business value as composable services so that partners and employees can participate in shared value generation easily and efficiently.
 
-Azure has a unique offering to help you spark and scale innovation in your organization. To drive more innovation, professional developers today can create applications and building blocks that empower other experts in your organization to build apps on a reliable foundation. With Azure, they get security from the ground up, backed by a team of experts, and proactive compliance trusted by enterprises, governments, and startups.
+<!-- docsTest:ignore "spark and scale" -->
+
+Azure has a unique offering to help you spark and scale innovation in your organization. To drive more innovation, professional developers today can create applications and building blocks that empower other experts in your organization to build applications on a reliable foundation. With Azure, they get security from the ground up, backed by a team of experts, and proactive compliance trusted by enterprises, governments, and startups.
 
 ## [LiveOps innovation](#tab/LiveOps)
 
@@ -120,7 +122,7 @@ Azure has a unique offering to help you spark and scale innovation in your organ
 
 Innovative organizations are embracing a mentality of live operations (LiveOps). LiveOps is a design process for continual engagement with customers. The end-to-end customer journey is the focus. It's an approach to design and direction that's focused on delivering value to your customers, with an emphasis on customer satisfaction and outcomes.
 
-LiveOps also helps to humanize data. A LiveOps approach makes data more actionable, so your organization can take actions, in real time, that will have an impact on your apps, your customers, and your business. It's a process that's focused on experimentation, emphasizing iteration and evolution, and driving consistent and frequent change. LiveOps is an approach to combining DevOps with your CRM.
+LiveOps also helps to humanize data. A LiveOps approach makes data more actionable, so your organization can take actions, in real time, that will have an impact on your applications, your customers, and your business. It's a process that's focused on experimentation, emphasizing iteration and evolution, and driving consistent and frequent change. LiveOps is an approach to combining DevOps with your CRM.
 
 ### LiveOps transition
 
@@ -128,7 +130,7 @@ Game development is one example of an industry that's embracing LiveOps today. M
 
 ### Azure PlayFab
 
-[Azure PlayFab](https://docs.microsoft.com/gaming/playfab/what-is-playfab) is a complete back-end platform for live games and an example of a leading LiveOps application platform. With Azure PlayFab, you can continuously monitor your code, get real-time analytics, and release real-time updates to optimize your apps and increase monetization. The PlayFab objective is to deliver the intelligent cloud for games, empowering developers to better engage, retain, and monetize their players.
+[Azure PlayFab](https://docs.microsoft.com/gaming/playfab/what-is-playfab) is a complete back-end platform for live games and an example of a leading LiveOps application platform. With Azure PlayFab, you can continuously monitor your code, get real-time analytics, and release real-time updates to optimize your applications and increase monetization. The PlayFab objective is to deliver the intelligent cloud for games, empowering developers to better engage, retain, and monetize their players.
 
 PlayFab offers differentiated, higher-margin LiveOps tools and services to boost profitability and extend game lifespans. PlayFab is fully device and platform agnostic and can be easily integrated with social identity providers like Facebook or Steam, store platforms to orchestrate commerce, and device platforms like iOS, Android, Xbox, and PlayStation. The Azure data estate enables PlayFab to provide intelligent services to help our customers make better games and smarter decisions, acquire and keep players, and learn faster by running more experiments and iterating more quickly.
 
