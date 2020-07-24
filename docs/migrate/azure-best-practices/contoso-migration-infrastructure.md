@@ -313,7 +313,7 @@ Contoso will use Availability Zones whenever applications need greater scalabili
 
 You can use Azure Backup to back up and restore Azure VM disks.
 
-Azure Backup allows automated backups of VM disk images stored in Azure Storage. Backups are application consistent, to ensure that backed-up data is transactionally consistent and that applications will start post-restore.
+Azure Backup allows automated backups of VM disk images stored in Azure Storage. Backups are application consistent to ensure that backed-up data is transactionally consistent and that applications will start post-restore.
 
 Azure Backup supports locally redundant storage (LRS) to replicate multiple copies of backup data within a datacenter if a local hardware failure occurs. If a regional outage occurs, Azure Backup also supports geo-redundant storage (GRS), which replicates backup data to a secondary paired region.
 
@@ -421,7 +421,7 @@ With a network and routing topology in place, Contoso is ready to set up Azure n
 
 <!-- docsTest:ignore "class B" -->
 
-- Contoso will implement a class A private network in Azure (`10.0.0.0/8`). This works because on-premises, it currently has a class B private address space (`172.160.0.0/16`). So Contoso can be sure there won't be any overlap between address ranges.
+- Contoso will implement a class-A private network in Azure (`10.0.0.0/8`). This works because of on-premises; it currently has a class-B private address space (`172.160.0.0/16`). Contoso can be sure there won't be any overlap between address ranges.
 - Contoso will deploy virtual networks in both the primary and secondary regions.
 - Contoso will use a naming convention that includes the prefix `VNET` and the region abbreviation `EUS2` or `CUS`. Using this standard, the hub networks will be named `VNET-HUB-EUS2` in the `East US 2` region and `VNET-HUB-CUS` in the `Central US` region.
 
@@ -434,7 +434,7 @@ With a network and routing topology in place, Contoso is ready to set up Azure n
   - `VNET-DEV-EUS2`. This virtual network will provide the dev/test team with a fully functional network for dev projects. It will act as a production pilot area, and will rely on the production infrastructure to function.
   - `VNET-PROD-EUS2`. Azure IaaS production components will be located in this network.
   
-  Each virtual network will have its own unique address space without overlap. Contoso intends to configure routing without requiring NAT.
+  Each virtual network will have its own unique address space without overlap. Contoso intends to configure routing without requiring network address translation (NAT).
 - **Subnets:** There will be a subnet in each network for each application tier. Each subnet in the production network will have a matching subnet in the development virtual network. The production network has a subnet for domain controllers.
 
 The following table summarizes virtual networks in `East US 2`.
@@ -695,7 +695,7 @@ Azure provides a range of governance controls across services and the Azure plat
 As it configures identity and access control, Contoso has already begun to put some aspects of governance and security in place. Broadly, it needs to consider three areas:
 
 - **Policy:** Azure Policy applies and enforces rules and effects over your resources, so the resources comply with corporate requirements and SLAs.
-- **Locks:** Azure allows you to lock subscriptions, resource groups, and other resources so that they can be modified only by those with authority.
+- **Locks:** Azure allows you to lock subscriptions, resource groups, and other resources so that they can be modified only by those with permissions.
 - **Tags:** Resources can be controlled, audited, and managed with tags. Tags attach metadata to resources, providing information about resources or owners.
 
 ### Set up policies
