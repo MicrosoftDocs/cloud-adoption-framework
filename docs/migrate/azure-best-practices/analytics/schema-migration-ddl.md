@@ -323,7 +323,7 @@ Understand the tuning options available in Azure Synapse Analytics and the perfo
 
 Use the flexibility, scalability, and performance of the Azure environment to implement any data model changes or performance tuning options in place. This effort will reduce the impact on existing source systems.
 
-Understand the dynamic management views available in Azure Synapse Analytics. These view provide both system-wide resource utilization information and detailed execution information for individual queries.
+Understand the dynamic management views available in Azure Synapse Analytics. These views provide both system-wide resource utilization information and detailed execution information for individual queries.
 
 Understand Azure resource classes and allocate them appropriately to ensure efficient management of mixed workloads and concurrency.
 
