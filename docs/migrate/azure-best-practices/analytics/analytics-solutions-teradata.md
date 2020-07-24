@@ -1,6 +1,6 @@
 ---
-title: "Analytics solutions for Teradata"
-description: Use the Cloud Adoption Framework for Azure to learn about analytic solutions with Teradata.
+title: Analytics solutions for Teradata
+description: Use the Cloud Adoption Framework for Azure to learn about analytics solutions with Teradata.
 author: v-hanki
 ms.author: brblanch
 ms.date: 07/14/2019
@@ -13,13 +13,13 @@ ms.subservice: migrate
 
 # Analytics solutions for Teradata
 
-Existing users of Teradata data warehouse systems are now looking to take advantage of the innovations provided by newer environments (for example, cloud, IaaS, PaaS) and to delegate tasks such as infrastructure maintenance and platform development to the cloud provider.
+Organizations that currently use Teradata data warehouse systems are looking to take advantage of innovative offerings in cloud, infrastructure as a service (IaaS), and platform as a service (PaaS) environments. Organizations are looking to delegate tasks like infrastructure maintenance and platform development to the cloud provider. Azure Synapse Analytics offer this.
 
-While there are similarities between Teradata and Azure Synapse Analytics in that both are SQL databases designed to use massively parallel processing (MPP) techniques to achieve high query performance on large data volumes, there are also some basic differences in approach:
+Although Teradata and Azure Synapse Analytics are similar in that they both are SQL databases that are designed to use massively parallel processing (MPP) techniques to achieve high query performance on large data volumes, they have some basic differences in approach:
 
-- Legacy Teradata systems will usually be installed on-premises, using proprietary hardware whereas Azure Synapse Analytics uses cloud-based storage and compute resources.
-- Upgrading a Teradata configuration is a major task involving additional physical hardware and a potentially lengthy database reconfiguration. Since storage and compute resources are separate in the Azure environment, these resources can easily be scaled (upwards and downwards) independently using the elastic scalability capability.
-- Azure Synapse Analytics can be paused or resized as required to reduce resource utilization and therefore cost.
+- Legacy Teradata systems usually are installed on-premises by using proprietary hardware. Azure Synapse uses cloud-based storage and compute resources.
+- Upgrading a Teradata configuration is a major task that involves additional physical hardware and a potentially lengthy database reconfiguration. In the Azure environment, storage and compute resources are separate, and  these resources can easily be scaled (upward and downward) independently by using the elastic scalability capability in Azure.
+- You can pause or resize Azure Synapse as required to reduce resource utilization and, therefore, cost.
 
 To maximize these benefits, it's necessary to migrate existing (or new) data and applications to the Azure Synapse Analytics platform, and in many organizations this will include migration of an existing data warehouse from legacy on-premises platforms such as Teradata. At a high level, the basic process will include the following steps:
 
@@ -168,19 +168,19 @@ For more information on each of these elements, see below.
 
 ### Functions
 
-In common with most database products, Teradata supports system functions and also user-defined functions within the SQL implementation. When migrating to another database platform such as Azure Synapse, common system functions are generally available and can be migrated without change. Some system functions may have slightly different syntax, but the required changes can be automated in this case.
+Like most database products, Teradata supports system functions and user-defined functions within its SQL implementation. When migrating to another database platform like Azure Synapse, common system functions are generally available and can be migrated without change. Some system functions might have a slightly different syntax. In that scenario, the required changes can be automated.
 
 For system functions where there is no equivalent, or for arbitrary user-defined functions these may need to be recoded using the languages available in the target environment. Azure Synapse uses the popular Transact-SQL language for implementation of user-defined functions.
 
 ### Stored procedures
 
-Most modern database products allow for procedures to be stored within the database. Teradata provides the SPL language for this purpose. A stored procedure typically contains SQL statements and some procedural logic and may return data or a status.
+In most modern database products, you can store procedures in the database. Teradata provides the SPL language for this purpose. A stored procedure typically contains SQL statements and some procedural logic. It might return data or a status.
 
-SQL Azure Data Warehouse also supports stored procedures using T-SQL, so if there are stored procedures to be migrated, they must be recoded accordingly.
+Azure SQL Data Warehouse also supports stored procedures by using T-SQL. If you have stored procedures to migrate, they must be recoded accordingly.
 
 ### Triggers
 
-Creation of triggers is not supported within Azure Synapse but can be implemented within Azure Data Factory.
+You can't use triggers in Azure Synapse. However, you can use triggers in Azure Data Factory.
 
 ### Sequences
 
