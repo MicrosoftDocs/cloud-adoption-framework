@@ -363,7 +363,7 @@ Application security groups enable you to configure network security as a natura
 **Example:**
 
 ![Diagram of application security group](./media/migrate-best-practices-networking/asg.png)
-_Application security group example._
+_Figure 9: Application security group example._
 
 | Network interface | Application security group |
 | --- | --- |
@@ -395,7 +395,7 @@ Virtual network service endpoints extend your virtual network private address sp
 - After you enable service endpoints in your virtual network, you can secure Azure service resources by adding a virtual network rule to the service resources. This provides improved security by fully removing public internet access to resources, and allowing traffic only from your virtual network.
 
 ![Diagram of service endpoints.](./media/migrate-best-practices-networking/endpoint.png)
-_Figure 9: Service endpoints._
+_Figure 10: Service endpoints._
 
 **Learn more:**
 
@@ -427,7 +427,7 @@ Azure has platform-level security features, including Azure Firewall, Web Applic
 Azure Firewall is a managed, cloud-based, network security service that helps protect your virtual network resources. It's a fully stateful, managed firewall, with built-in high availability and unrestricted cloud scalability.
 
 ![Diagram of Azure Firewall.](./media/migrate-best-practices-networking/firewall.png)
-_Figure 10: Azure Firewall._
+_Figure 11: Azure Firewall._
 
 Here are a few points to be aware of if you deploy the service:
 
@@ -469,7 +469,7 @@ Here are some additional notes about WAF:
 Azure Network Watcher provides tools to monitor resources and communications in an Azure virtual network. For example, you can monitor communications between a VM and an endpoint, such as another VM or FQDN. You can also view resources and resource relationships in a virtual network, or diagnose network traffic issues.
 
 ![Screenshot of Network Watcher.](./media/migrate-best-practices-networking/network-watcher.png)
-_Figure 11: Network Watcher._
+_Figure 12: Network Watcher._
 
 Here are a few more details:
 
