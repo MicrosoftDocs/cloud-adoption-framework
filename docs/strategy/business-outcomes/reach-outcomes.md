@@ -26,7 +26,7 @@ Expanding into a new market can be one of the most valuable business outcomes du
 
 ### Example
 
-A cosmetics manufacturer has identified a trend. Some products are being shipped to the Asia Pacific region even though no sales teams are operating in that region. The minimum systems required by a remote sales force are small, but latency prevents a remote access solution. To capitalize on this trend, the vice president of sales would like to experiment with sales teams in Japan and South Korea. Because the company has undergone a cloud migration, it was able to deploy the necessary systems in both Japan and South Korea within days. This allowed the vice president of sales to grow revenue in the region by _x%_ within three months. Those two markets continue to outperform other parts of the world, leading to sales operations throughout the region.
+A cosmetics manufacturer has identified a trend. Some products are being shipped to the Asia Pacific region even though no sales teams are operating in that region. The minimum systems required by a remote sales force are small, but latency prevents a remote access solution. To capitalize on this trend, the vice president of sales wants to experiment with sales teams in Japan and South Korea. Because the company has undergone a cloud migration, it was able to deploy the necessary systems in both Japan and South Korea within days. This allowed the vice president of sales to grow revenue in the region by _x%_ within three months. Those two markets continue to outperform other parts of the world, leading to sales operations throughout the region.
 
 ### Example
 
@@ -38,7 +38,7 @@ Operating in new markets introduces additional governance constraints. Azure pro
 
 ### Example
 
-A US-based utilities provider was awarded a contract to provide utilities in Canada. Canadian data sovereignty law requires that Canadian data stays in Canada. This company had been working their way through a cloud-enabled application innovation effort for years. As a result, their software could be deployed through fully scripted DevOps processes. With a few minor changes to the code base, they were able to deploy a working copy of the code to an Azure datacenter in Canada, meeting data sovereignty compliance and retaining the customer.
+A US-based utilities provider was awarded a contract to provide utilities in Canada. Canadian data sovereignty law requires that Canadian data stays in Canada. This company had been working their way through a cloud-enabled application innovation effort for years. As a result, their software was deployed through fully scripted DevOps processes. With a few minor changes to the code base, they were able to deploy a working copy of the code to an Azure datacenter in Canada, meeting data sovereignty compliance and retaining the customer.
 
 ## Next steps
 
