@@ -23,7 +23,7 @@ Azure Synapse Analytics is a single service for seamless collaboration and accel
 
 **Big data and machine learning**: *Data scientists* build proofs of concept rapidly and provision resources as needed, while working in the language of their choice (for example, T-SQL, Python, Scala, .NET, or SparkSQL).
 
-**Management and security**: *IT pros* protect and manage data more efficiently, enfore privacy requirements, and secure access to cloud and hybrid configurations.
+**Management and security**: *IT pros* protect and manage data more efficiently, enforce privacy requirements, and secure access to cloud and hybrid configurations.
 
 **Business intelligence**: *Business analysts* securely access datasets, build dashboards, and share data within and outside their organization.
 
