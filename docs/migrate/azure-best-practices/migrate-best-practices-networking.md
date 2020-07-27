@@ -64,7 +64,7 @@ Consider the following:
 - You can implement hub and spoke virtual networks in different resource groups, and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same, or different, Azure Active Directory (Azure AD) tenants. This allows for decentralized management of each workload, while sharing services maintained in the hub network.
 
 ![Diagram of hub and spoke topology](./media/migrate-best-practices-networking/hub-spoke.png)
-_Hub and spoke topology._
+_Figure 1: Hub and spoke topology._
 
 **Learn more:**
 
@@ -112,7 +112,7 @@ Azure adds a DNS server by default when you deploy a virtual network. This allow
 - In Azure Resource Manager, you can specify DNS servers for a virtual network and a network interface, but the best practice is to use the setting only on virtual networks.
 
     ![Screenshot of DNS servers for a virtual network.](./media/migrate-best-practices-networking/dns2.png)
-    _DNS servers for a virtual network._
+    _Figure 2: DNS servers for a virtual network._
 
 **Learn more:**
 
@@ -131,7 +131,7 @@ Here are a few additional points to be aware of as you set up Availability Zones
 
     ![Diagram of Availability Zones within an Azure region.](./media/migrate-best-practices-networking/availability-zone.png)
     
-    _Availability Zones._
+    _Figure 3: Availability Zones._
 
 - You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone, and replicating them in other zones. Azure services that support Availability Zones fall into two categories:
   - **Zonal services:** You associate a resource with a specific zone, such as VMs, managed disks, or IP addresses.
@@ -139,7 +139,7 @@ Here are a few additional points to be aware of as you set up Availability Zones
 - To provide zonal fault tolerance, you can deploy a standard Azure load balancer with internet-facing workloads or application tiers.
 
     ![Diagram of standard Azure load balancer](./media/migrate-best-practices-networking/load-balancer.png)
-    _Load balancer._
+    _Figure 4: Load balancer._
 
 **Learn more:**
 
@@ -184,7 +184,7 @@ When setting up a Site-to-Site VPN:
 - Border gateway protocol (BGP) is an optional feature. You can use it with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your virtual networks.
 
 ![Diagram of Site-to-Site VPN.](./media/migrate-best-practices-networking/vpn.png)
-_Site-to-Site VPN._
+_Figure 5: Site-to-Site VPN._
 
 **Learn more:**
 
@@ -260,7 +260,7 @@ Now imagine that you have an Azure deployment (for example, Azure App Service) i
   - Your WAN network can assume that both prefixes are closer to `East US` than `West US`, and thus route users from both offices to the ExpressRoute circuit in `East US`. This provides a worse experience for users in the Los Angeles office.
 
 ![Diagram of VPN with route path through wrong circuit.](./media/migrate-best-practices-networking/bgp1.png)
-_BGP communities unoptimized connection._
+_Figure 6: BGP communities unoptimized connection._
 
 **Solution:**
 
@@ -273,7 +273,7 @@ To optimize routing for both offices, you need to know which prefix is from Azur
 - This configuration ensures that when both paths to Microsoft are available, users in Los Angeles connect to the `West US` region by using the west circuit, and users in New York connect to the `East US` region by using the east circuit.
 
 ![Diagram of VPN with route path through correct circuit.](./media/migrate-best-practices-networking/bgp2.png)
-_BGP communities optimized connection._
+_Figure 7: BGP communities optimized connection._
 
 **Learn more:**
 
@@ -305,7 +305,7 @@ Although Microsoft invests heavily in protecting the cloud infrastructure, you m
 Here's an example of a single subnet perimeter network in a corporate network, with two security boundaries.
 
 ![Diagram of Azure Virtual Network perimeter network deployment.](./media/migrate-best-practices-networking/perimeter.png)
-_Perimeter network deployment._
+_Figure 8: Perimeter network deployment._
 
 **Learn more:**
 
@@ -395,7 +395,7 @@ Virtual network service endpoints extend your virtual network private address sp
 - After you enable service endpoints in your virtual network, you can secure Azure service resources by adding a virtual network rule to the service resources. This provides improved security by fully removing public internet access to resources, and allowing traffic only from your virtual network.
 
 ![Diagram of service endpoints.](./media/migrate-best-practices-networking/endpoint.png)
-_Service endpoints._
+_Figure 9: Service endpoints._
 
 **Learn more:**
 
@@ -427,7 +427,7 @@ Azure has platform-level security features, including Azure Firewall, Web Applic
 Azure Firewall is a managed, cloud-based, network security service that helps protect your virtual network resources. It's a fully stateful, managed firewall, with built-in high availability and unrestricted cloud scalability.
 
 ![Diagram of Azure Firewall.](./media/migrate-best-practices-networking/firewall.png)
-_Azure Firewall._
+_Figure 10: Azure Firewall._
 
 Here are a few points to be aware of if you deploy the service:
 
@@ -469,7 +469,7 @@ Here are some additional notes about WAF:
 Azure Network Watcher provides tools to monitor resources and communications in an Azure virtual network. For example, you can monitor communications between a VM and an endpoint, such as another VM or FQDN. You can also view resources and resource relationships in a virtual network, or diagnose network traffic issues.
 
 ![Screenshot of Network Watcher.](./media/migrate-best-practices-networking/network-watcher.png)
-_Network Watcher._
+_Figure 11: Network Watcher._
 
 Here are a few more details:
 

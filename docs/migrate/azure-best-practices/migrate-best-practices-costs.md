@@ -15,7 +15,7 @@ ms.subservice: migrate
 
 As you plan and design for migration, focusing on costs ensures the long-term success of your Azure migration. During a migration project, it's critical that all teams (such as finance, management, and application development teams) understand associated costs.
 
-- Before migration, estimating the amount you spend for your migration, with a baseline for monthly, quarterly, and yearly budget targets, is critical to success.
+- Before migration, it's important to have a baseline for monthly, quarterly, and yearly budget targets in order to estimate the amount you'd spend on your migration and ensure its success.
 - After migration, you should optimize costs, continually monitor workloads, and plan for future usage patterns. Migrated resources might start out as one type of workload, but shift to another type over time, based on usage, costs, and shifting business requirements.
 
 This article describes best practices for preparing for and managing cost and size, both before and after migration.
@@ -43,8 +43,8 @@ To forecast your monthly bill for migrated workloads, there are several tools yo
 
 - **Azure pricing calculator:** Select the products you want to estimate, such as VMs and storage. Then, input costs into the calculator to build an estimate.
 
-  ![Screenshot of Azure pricing calculator.](./media/migrate-best-practices-costs/pricing.png)
-    _Azure pricing calculator._
+  ![Screenshot of the Azure pricing calculator.](./media/migrate-best-practices-costs/pricing.png)
+    _Figure 1: Azure pricing calculator._
 
 - **Azure Migrate:** To estimate costs, you need to review and account for all the resources required to run your workloads in Azure. To acquire this data, you create inventory of your assets, including servers, VMs, databases, and storage. You can use Azure Migrate to collect this information.
 
@@ -55,7 +55,7 @@ To forecast your monthly bill for migrated workloads, there are several tools yo
     - **Storage cost:** Azure Migrate calculates total monthly storage costs by aggregating the storage costs of all VMs in an assessment. You can calculate the monthly storage cost for a specific machine by aggregating the monthly cost of all disks attached to it.
 
     ![Screenshot of Azure Migrate](./media/migrate-best-practices-costs/assess.png)
-    _Azure Migrate assessment._
+    _Figure 2: Azure Migrate assessment._
 
 **Learn more:**
 
@@ -134,10 +134,10 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 | Type | Details | Usage |
 | --- | --- | --- |
-| **Locally redundant storage (LRS)** | Protects against a local outage by replicating within a single storage unit to a separate fault domain and update domain. Keeps multiple copies of your data in one datacenter. Provides at least 99.999999999 percent (eleven 9's) durability of objects over a particular year. | Consider if your application stores data that can be easily reconstructed. |
-| **Zone-redundant storage (ZRS)** | Protects again a datacenter outage by replicating across three storage clusters in a single region. Each storage cluster is physically separated and located in its own availability zone. Provides at least 99.9999999999 percent (twelve 9's) durability of objects over a particular year, by keeping multiple copies of your data across multiple datacenters or regions. | Consider if you need consistency, durability, and high availability. Might not protect against a regional disaster, when multiple zones are permanently affected. |
-| **Geo-redundant storage (GRS)** | Protects against an entire region outage, by replicating data to a secondary region hundreds of miles away from the primary. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a particular year. | Replica data isn't available unless Microsoft initiates a failover to the secondary region. If failover occurs, read and write access is available. |
-| **Read-access geo-redundant storage (RA-GRS)** | Similar to GRS. Provides at least 99.99999999999999 percent (sixteen 9's) durability of objects over a particular year. | Provides 99.99 percent read availability, by allowing read access from the second region used for GRS. |
+| **Locally redundant storage (LRS)** | Protects against a local outage by replicating within a single storage unit to a separate fault domain and update domain. Keeps multiple copies of your data in one datacenter. Provides at least 99.999999999 percent (eleven nines) durability of objects over a particular year. | Consider if your application stores data that can be easily reconstructed. |
+| **Zone-redundant storage (ZRS)** | Protects again a datacenter outage by replicating across three storage clusters in a single region. Each storage cluster is physically separated and located in its own availability zone. Provides at least 99.9999999999 percent (twelve nines) durability of objects over a particular year, by keeping multiple copies of your data across multiple datacenters or regions. | Consider if you need consistency, durability, and high availability. Might not protect against a regional disaster, when multiple zones are permanently affected. |
+| **Geo-redundant storage (GRS)** | Protects against an entire region outage, by replicating data to a secondary region hundreds of miles away from the primary. Provides at least 99.99999999999999 percent (sixteen nines) durability of objects over a particular year. | Replica data isn't available unless Microsoft initiates a failover to the secondary region. If failover occurs, read and write access is available. |
+| **Read-access geo-redundant storage (RA-GRS)** | Similar to GRS. Provides at least 99.99999999999999 percent (sixteen nines) durability of objects over a particular year. | Provides 99.99 percent read availability, by allowing read access from the second region used for GRS. |
 
 **Learn more:**
 
@@ -151,7 +151,7 @@ Storage accounts can use different types of redundancy for resilience and high a
 
 ## Best practice: Take advantage of Azure Hybrid Benefit
 
-A portfolio that integrates on-premises Microsoft software with Azure can provide you with competitive and cost advantages. If you currently have an operating system or other software licensing through Software Assurance (SA), you can take those licenses with you to the cloud, with Azure Hybrid Benefit.
+A portfolio that integrates on-premises Microsoft software with Azure can provide you with competitive and cost advantages. If you currently have an operating system or other software licensing through Software Assurance, you can take those licenses with you to the cloud, with Azure Hybrid Benefit.
 
 **Learn more:**
 
@@ -170,8 +170,8 @@ When you use Azure Reserved VM Instances, you prepay for a one-year or three-yea
 - Reservations provide a billing discount, and don't affect the runtime state of your resources.
 - You can cancel reserved instances.
 
-![Comparison of pay-as-you-go and Azure Hybrid Benefit with reserved instances.](./media/migrate-best-practices-costs/reserve.png)
-_Azure Reserved VM Instances._
+![Screenshot of comparison of pay-as-you-go and Azure Hybrid Benefit with reserved instances.](./media/migrate-best-practices-costs/reserve.png)
+_Figure 3: Azure Reserved VM Instances._
 
 **Learn more:**
 
@@ -214,15 +214,15 @@ With Azure Cost Management and Billing, you can:
   - You can export costs management data to Azure Storage, for analysis.
 
   ![Screenshot of Cost Management budget.](./media/migrate-best-practices-costs/budget.png)
-  _Azure Cost Management and Billing budget._
+  _Figure 4: Azure Cost Management and Billing budget._
 
 - Do a cost analysis to explore and analyze your organizational costs, to help you understand how costs are accrued, and identify spending trends.
   - Cost analysis is available to Enterprise Agreement users.
   - You can view cost analysis data for various scopes, including by department, account, subscription, or resource group.
   - You can get a cost analysis that shows total costs for the current month, and accumulated daily costs.
 
-  ![Azure Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
-  _Figure: Azure Cost Management and Billing analysis._
+  ![Screenshot of Azure Cost Management analysis](./media/migrate-best-practices-costs/analysis.png)
+  _Figure 5: Azure Cost Management and Billing analysis._
 
 - Get Advisor recommendations that show you how you can optimize and improve efficiency.
 
@@ -254,7 +254,7 @@ You can monitor VM usage by using Microsoft tools, such as Azure Cost Management
 
 ## Best practice: Implement resource group budgets
 
-Often, you might find it useful to represent cost boundaries with resource groups. A resource group budget helps you track the costs associated with a resource group. You can trigger alerts and run a wide variety of playbooks, as the budget is reached or exceeded.
+Often, you might find it useful to represent cost boundaries with resource groups. A resource group budget helps you track the costs associated with a resource group. You can trigger alerts and run a wide variety of playbooks when you reach or exceed your budget.
 
 **Learn more:**
 
@@ -269,7 +269,7 @@ As you move resources into Azure and enable diagnostic logging for them, you gen
 - Not all log data is equal, and some resources will generate more log data than others.
 - Due to regulations and compliance, it's likely that you'll need to retain log data for some resources longer than for others.
 - You should walk a careful line between optimizing your log storage costs, and keeping the log data you need.
-- We recommend evaluating and setting up the logging immediately after completing a migration, so that you aren't spending money retaining logs of no importance.
+- We recommend evaluating and setting up the logging immediately after completing a migration so that you don't spend money on retaining logs of no importance.
 
 **Learn more:**
 
@@ -282,7 +282,7 @@ If you followed best practices for selecting storage before migration, you're pr
 Identifying and moving stale data to cheaper storage areas can have a huge impact on your monthly storage budget and cost savings. Azure provides many ways to help you identify and then store this stale data.
 
 - Take advantage of access tiers for general-purpose v2 storage, moving less important data from hot to cool and archived tiers.
-- Use StorSimple to help move stale data, based on customized policies.
+- Use StorSimple to help move stale data that's based on customized policies.
 
 **Learn more:**
 
@@ -316,9 +316,9 @@ The Azure Resource Usage and RateCard APIs can help you accurately predict and m
 
 ## Best practice: Implement serverless technologies
 
-VM workloads are often migrated "as is" to avoid downtime. Often, VMs can host tasks that are intermittent, taking a short period to run, or alternatively taking many hours. Examples include VMs that run scheduled tasks, such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs.
+VM workloads are often migrated "as-is" to avoid downtime. Often, VMs can host tasks that are intermittent, run over a short period, or alternately, take up many hours. Examples include VMs that run scheduled tasks, such as Windows task scheduler or PowerShell scripts. When these tasks aren't running, you're nevertheless absorbing VM and disk storage costs.
 
-After migration, and after a thorough review of these types of tasks, you might consider migrating them to serverless technologies, such as Azure Functions or Azure Batch jobs. With this solution, you no longer need to manage and maintain the VMs, and you'll save money.
+After migrating and thoroughly reviewing these types of tasks, you might consider migrating them to serverless technologies like Azure Functions or Batch jobs. These solutions can cut costs, and you'd no longer need to manage and maintain the VMs.
 
 **Learn more:**
 
