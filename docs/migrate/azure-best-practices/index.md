@@ -8,7 +8,7 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
-ms.custom: azure-migrate-seo
+ms.custom: seo-azure-migrate
 ---
 
 # Azure cloud migration migration best practices checklist
