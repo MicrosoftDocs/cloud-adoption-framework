@@ -97,7 +97,7 @@ Both have the end-goal of applying AI to enhance business operations, though how
 
 A cognitive service provides a trained model for you. This brings data and an algorithm together, available from a REST API or SDK. You can implement this service within minutes, depending on your scenario. A cognitive service provides answers to general problems such as key phrases in text or item identification in images.
 
-Machine learning is a process that generally requires a longer period of time to implement successfully. This time is spent on data collection, cleaning, transformation, algorithm selection, model training, and deployment to get to the same level of functionality provided by a cognitive service. With machine learning, it is possible to provide answers to highly specialized and/or specific problems. Machine learning problems require familiarity with the specific subject matter and data of the problem under consideration, as well as expertise
+Machine learning is a process that generally requires a longer period of time to implement successfully. This time is spent on data collection, cleaning, transformation, algorithm selection, model training, and deployment to get to the same level of functionality provided by a cognitive service. With machine learning, it is possible to provide answers to highly specialized and/or specific problems. Machine learning problems require familiarity with the specific subject matter and data of the problem under consideration, as well as expertise.
 
 ## Next steps
 
