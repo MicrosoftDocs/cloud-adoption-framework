@@ -71,7 +71,7 @@ The answers to these questions might require the plan to include remediation to 
 
 ## Next steps
 
-For information about specific elements of the cloud adoption journey, see:
+For guidance on specific elements of the cloud adoption journey, see:
 
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
