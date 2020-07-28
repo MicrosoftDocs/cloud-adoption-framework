@@ -11,7 +11,7 @@ ms.subservice: strategy
 
 # Migrate or deploy Windows Virtual Desktop instances to Azure
 
-Migrating your organization's end-user desktops to the cloud is a common scenario in cloud migrations. Doing so helps improve employee productivity and accelerate the migration of various workloads to support their user experience.
+Migrating an organization's end-user desktops to the cloud is a common scenario in cloud migrations. Doing so helps improve employee productivity and accelerate the migration of various workloads to support their user experience.
 
 ## Strategy and motivations
 
@@ -39,7 +39,7 @@ When the migration to the cloud is finished, the overhead and costs of managing 
 
 ## Next steps
 
-For guidance for specific points throughout the cloud adoption journey, see:
+For guidance on specific elements of the cloud adoption journey, see:
 
 - [Plan for Windows Virtual Desktop migration or deployment](./plan.md)
 - [Review your environment or Azure landing zone(s)](./ready.md)
