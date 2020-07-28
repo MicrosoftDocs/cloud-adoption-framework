@@ -23,7 +23,7 @@ The answers to these questions start with data. In the *Plan* methodology, speci
 
 If you use [Movere](https://docs.microsoft.com/azure/migrate/migrate-services-overview#movere) as your data collection tool, you will likely have the data you need to develop personas and answer these questions by using data in [Azure Migrate](https://docs.microsoft.com/azure/migrate), just like any other migration scenario.
 
-If you don't have the data needed to answer all the questions in this section, there's an additional third-party software vendor that can provide a separate discovery process to augment the data you have. [Lakeside](https://docs.microsoft.com/azure/migrate/migrate-services-overview#isv-integration) is also integrated with Azure Migrate within the virtual desktop infrastructure (VDI) migration goals section. It can help you map out a plan for WVD deployment including personas, host pools, applications, and user profiles.
+If you don't have the data you require to answer all the questions in this section, there's an additional third-party software vendor that can provide a separate discovery process to augment the data you have. [Lakeside](https://docs.microsoft.com/azure/migrate/migrate-services-overview#isv-integration) is also integrated with Azure Migrate within the virtual desktop infrastructure migration goals section. It can help you map out a plan for WVD deployment including personas, host pools, applications, and user profiles.
 
 ### User personas
 
@@ -38,9 +38,9 @@ How many distinct personas will be required to support all of the users included
 - **User count**: How many users will be in each distinct persona?
 - **Max session counts**: Based on geography and hours of operation, how many concurrent users are expected for each persona during maximum load?
 
-Distinctions in each of the preceding questions will start to illustrate user personas by **business function, cost center**, geographic region, and technical requirements. The following table can aid in recording responses to populate a completed assessment or design document.
+Distinctions in each of the preceding questions will start to illustrate user personas by business function, cost center, geographic region, and technical requirements. The following table can aid in recording responses to populate a completed assessment or design document.
 
-|  | Persona group&nbsp;1  | Persona group&nbsp;2  | Persona group&nbsp;3  |
+| Criterion  | Persona group&nbsp;1  | Persona group&nbsp;2  | Persona group&nbsp;3  |
 |---------|---------|---------|---------|
 | Pools  | Pools | Pools | Dedicated (security concerns) |
 | Density | Light (6&nbsp;users/vCPU) | Heavy (2&nbsp;users/vCPU) | Dedicated (1&nbsp;user/vCPU) |
@@ -71,7 +71,7 @@ The answers to these questions might require the plan to include remediation to 
 
 ## Next steps
 
-For guidance for specific points throughout the cloud adoption journey, see:
+For information about specific elements of the cloud adoption journey, see:
 
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)
 - [Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
