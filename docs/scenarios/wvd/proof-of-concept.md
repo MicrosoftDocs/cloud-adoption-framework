@@ -42,7 +42,7 @@ To calculate the cost of the WVD scenario based on the proof-of-concept configur
 
 ## Next steps
 
-For guidance for specific points throughout the cloud adoption journey, see:
+For guidance on specific elements of the cloud adoption journey, see:
 
 - [Assess for Windows Virtual Desktop migration or deployment](./migrate-assess.md)
 - [Deploy or migrate Windows Virtual Desktop instances](./migrate-deploy.md)
