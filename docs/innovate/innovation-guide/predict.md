@@ -38,7 +38,7 @@ As an innovator, your company has rich information about its business and its cu
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
 | Machine learning            | **Azure Machine Learning** <br> Build, deploy, and manage your own machine learning models.                                                       | Data scientist and developer |
 | AI applications and agents             | **Azure Cognitive Services** <br> Use domain-specific AI models for vision, speech, language, and decision that can be customized with your data. <br><br> **Azure Bot Service** <br> Improve customer engagement by adding bots to your applications and websites. | Developer                    |
-| Knowledge mining            | **Search APIs in Azure Cognitive Services** <br> Uncover insights that are latent in your content, including documents, contracts, images, and other data types.      | Developer                    |
+| Knowledge mining            | **Azure Cognitive Search** <br> Uncover insights that are latent in your content, including documents, contracts, images, and other data types.      | Developer                    |
 
 ## Machine learning
 
@@ -150,11 +150,11 @@ Go directly to Azure Bot Service in the [Azure portal](https://portal.azure.com/
 
 ## Knowledge mining
 
-Use the Search APIs in Cognitive Services to uncover latent insights from your content, including documents, images, and media. You can discover patterns and relationships in your content, understand sentiment, and extract key phrases.
+Use Azure Cognitive Search to uncover latent insights from your content, including documents, images, and media. You can discover patterns and relationships in your content, understand sentiment, and extract key phrases.
 
 <!-- docsTest:ignore "Azure Search" -->
 
-These APIs use the same natural language stack that Bing and Microsoft Office use. Spend more time innovating and less time maintaining a complex cloud search solution.
+Azure Cognitive Search uses the same natural language stack that Bing and Microsoft Office use. Spend more time innovating and less time maintaining a complex cloud search solution.
 
 For more information, see [What is Azure Cognitive Search?](https://docs.microsoft.com/azure/search/search-what-is-azure-search)
 

@@ -24,8 +24,8 @@ Azure Machine Learning provides the following MLOps capabilities:
 - **Register, package, and deploy models from anywhere**. You can also track associated metadata required to use the model.
 - **Capture the governance data for the end-to-end lifecycle**. The logged information can include who is publishing models, why changes were made, and when models were deployed or used in production.
 - **Notify and alert on events in the lifecycle**. For example, you can get alerts for experiment completion, model registration, model deployment, and data drift detection.
-- **Monitor applications for operational and machine language-related issues**. Compare model inputs between training and inference, explore model-specific metrics, and provide monitoring and alerts on your machine language infrastructure.
-- **Automate the end-to-end machine language lifecycle with Azure Machine Learning and Azure Pipelines**. With pipelines, you can frequently update models, test new models, and continuously roll out new machine language models alongside your other applications and services.
+- **Monitor applications for operational and machine learning-related issues**. Compare model inputs between training and inference, explore model-specific metrics, and provide monitoring and alerts on your machine learning infrastructure.
+- **Automate the end-to-end machine learning lifecycle with Azure Machine Learning and Azure Pipelines**. With pipelines, you can frequently update models, test new models, and continuously roll out new machine learning models alongside your other applications and services.
 
 ## Best practices for MLOps with Azure Machine Learning
 
