@@ -154,9 +154,7 @@ To set up the cluster, the Contoso admins:
     - They place the machines in the database subnet (`PROD-DB-EUS2`) of the production network (`VNET-PROD-EUS2`) in the primary region (`East US 2`).
     - They create a new availability set (`SQLAOGAVSET`) with two fault domains and five update domains.
 
-      ![Figure 4 shows a screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
-
-    _Figure 4 shows a new availability set._
+      ![Screenshot that shows a new availability set.](./media/contoso-migration-rehost-vm-sql-ag/sql-vm-settings.png)
 
 1. In **SQL Server settings**, they limit SQL connectivity to the virtual network (private) on default port 1433. For authentication, they use the same credentials as used on-site (`contosoadmin`).
 
