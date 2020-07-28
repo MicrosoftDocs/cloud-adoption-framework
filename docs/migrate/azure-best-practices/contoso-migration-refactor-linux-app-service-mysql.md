@@ -31,7 +31,7 @@ To determine the best migration method, the Contoso cloud team has pinned down t
 
 - The application should scale beyond current on-premises capacity and performance. Contoso is moving the application to take advantage of Azure's on-demand scaling.
 - Contoso wants to move the application code base to a continuous delivery pipeline. As application changes are pushed to GitHub, Contoso wants to deploy those changes without tasks for operations staff.
-- The application must be resilient, with capabilities for growth and failover. Contoso wants to deploy the application in two different Azure regions, and set it up to scale automatically.
+- The application must be resilient, with capabilities for growth and failover. Contoso wants to deploy the application in two different Azure regions and set it up to scale automatically.
 - Contoso wants to minimize database admin tasks after the application is moved to the cloud.
 
 ## Solution design
@@ -82,7 +82,7 @@ Contoso completes the migration process as follows:
 | Service | Description | Cost |
 | --- | --- | --- |
 | [Azure App Service](https://azure.microsoft.com/services/app-service) | The service runs and scales applications by using Azure platform as a service (PaaS) for websites. | Pricing is based on the size of the instances and the features required. [Learn more](https://azure.microsoft.com/pricing/details/app-service/windows). |
-| [Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager) | A load balancer that uses DNS to direct users to Azure or to external websites and services. | Pricing is based on the number of received DNS queries and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager). |
+| [Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager) | A load balancer that uses Domain Name System (DNS) to direct users to Azure or to external websites and services. | Pricing is based on the number of received DNS queries and the number of monitored endpoints. | [Learn more](https://azure.microsoft.com/pricing/details/traffic-manager). |
 | [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms, with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
 | [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql) | The database is based on the open-source MySQL database engine. It provides a fully managed, enterprise-ready community MySQL database for application development and deployment. | Pricing is based on compute, storage, and backup requirements. [Learn more](https://azure.microsoft.com/pricing/details/mysql). |
 
@@ -200,12 +200,12 @@ In brief, Contoso does the following:
       
     "Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see `https://go.microsoft.com/fwlink/?linkid=873009`."
     
-  - The user must have the *ReplicationAdmin* role.  
+  - The user must have the `ReplicationAdmin` role.  
   - Migrate the database schemas without foreign keys and triggers.  
-- They create a virtual network that connects via ExpressRoute or VPN to the on-premises network.  
+- They create a virtual privte network (VPN) that connects via ExpressRoute or VPN to the on-premises network.  
 - They create an Azure Database Migration Service instance with a Premium SKU that's connected to the virtual network.  
 - They ensure that Azure Database Migration Service can access the MySQL database via the virtual network. This entails ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.  
-- They run the Database Migration Service tool, and then do the following:  
+- They run the Database Migration Service tool and then do the following:  
 
   a. Create a migration project that's based on the Premium SKU.
 
@@ -293,7 +293,7 @@ In brief, Contoso does the following:
 
 Contoso admins create a new private GitHub repo and set up a connection to the osTicket database in Azure Database for MySQL. Then, they load the web app into Azure App Service.
 
-1. They browse to the osTicket software public GitHub repo, and fork it to the Contoso GitHub account.
+1. They browse to the osTicket software public GitHub repo and fork it to the Contoso GitHub account.
 
     ![Screenshot of GitHub repo page, highlighting the Fork button.](./media/contoso-migration-refactor-linux-app-service-mysql/github1.png)
 
