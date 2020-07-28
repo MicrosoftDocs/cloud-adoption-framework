@@ -13,17 +13,17 @@ ms.subservice: migrate
 
 Windows Virtual Desktop (WVD) and deployment scenarios follow the same *Migrate* methodology as other migration efforts. This consistent approach allows migration factories or existing migration teams to adopt the process with little change to non-technical requirements.
 
-![Diagram of the Cloud Adoption Framework migration model.](../../_images/migrate/methodology.png)
+![Diagram of the Cloud Adoption Framework Migrate methodology.](../../_images/migrate/methodology.png)
 
 ## Plan your migration
 
 As they do for other migrations, the team will assess workloads, deploy them, and then release them to end users. However, Windows Virtual Desktop includes specific requirements that will necessitate a review of the Azure landing zones during the assessment of the workloads. The process will also require a proof of concept prior to the first deployment.
 
-For a reference when building your plan, see the [cloud adoption plan DevOps template](../../plan/template.md) for an existing migration backlog in Azure DevOps. That template can be used to create a detailed plan of activities.
+To build your plan, see the [cloud adoption plan DevOps template](../../plan/template.md) for an existing migration backlog in Azure DevOps. Use the template to create a detailed plan of activities.
 
-## Next step
+## Next steps
 
-For guidance for specific points throughout the cloud adoption journey, see:
+For guidance on specific elements of the cloud adoption journey, see:
 
 - [Review your environment or Azure landing zones](./ready.md)
 - [Complete a Windows Virtual Desktop proof of concept](./proof-of-concept.md)
