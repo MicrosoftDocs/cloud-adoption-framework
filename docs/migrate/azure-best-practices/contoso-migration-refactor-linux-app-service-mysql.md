@@ -202,7 +202,7 @@ In brief, Contoso does the following:
     
   - The user must have the `ReplicationAdmin` role.  
   - Migrate the database schemas without foreign keys and triggers.  
-- They create a virtual privte network (VPN) that connects via ExpressRoute or VPN to the on-premises network.  
+- They create a virtual private network (VPN) that connects via ExpressRoute or VPN to the on-premises network.  
 - They create an Azure Database Migration Service instance with a Premium SKU that's connected to the virtual network.  
 - They ensure that Azure Database Migration Service can access the MySQL database via the virtual network. This entails ensuring that all incoming ports are allowed from Azure to MySQL at the virtual network level, the network VPN, and the machine that hosts MySQL.  
 - They run the Database Migration Service tool and then do the following:  
