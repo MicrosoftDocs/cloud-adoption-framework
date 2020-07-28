@@ -147,7 +147,7 @@ Azure provides a couple of solutions:
 As you migrate your workloads and run them in Azure, staff with workload access move around. Your security team should review access to your Azure tenant and resource groups on a regular basis. Azure has offerings for identity management and access control security, including role-based access control (RBAC) to authorize permissions to access Azure resources.
 
 - RBAC assigns access permissions for security principals. Security principals represent users, groups (a set of users), service principals (identity used by applications and services), and managed identities (an Azure Active Directory identity automatically managed by Azure).
-- RBAC can assign roles to security principles, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
+- RBAC can assign roles to security principals, such as owner, contributor and reader, and role definitions (a collection of permissions) that define the operations that can be performed by the roles.
 - RBAC can also set scopes that set the boundary for a role. Scope can be set at several levels, including a management group, subscription, resource group, or resource.
 - Ensure that admins with Azure access can access only resources that you want to allow. If the predefined roles in Azure aren't granular enough, you can create custom roles to separate and limit access permissions.
 
