@@ -71,6 +71,4 @@ After all considerations are factored into your production scope for the Windows
 
 ## Next steps
 
-The next step is to deploy or migrate Windows Virtual Desktop instances. For guidance for specific points throughout the cloud adoption journey, see:
-
-- [Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
+[Release your Windows Virtual Desktop deployment to production](./migrate-release.md)
