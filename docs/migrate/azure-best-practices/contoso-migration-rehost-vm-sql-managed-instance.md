@@ -23,7 +23,7 @@ The SmartHotel360 application used in this example is provided as open source. I
 Contoso's IT leadership team has worked closely with the company's business partners to understand what the business wants to achieve with this migration. They want to:
 
 - **Address business growth.** Contoso is growing. As a result, pressure has increased on the company's on-premises systems and infrastructure.
-- **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for its developers and users. The business needs IT to be fast and not waste time or money so that the company can deliver faster on customer requirements.
+- **Increase efficiency.** Contoso needs to remove unnecessary procedures and streamline processes for its developers and users. The business needs IT to be fast and not waste time or money for the company to deliver faster on customer requirements.
 - **Increase agility.** Contoso IT needs to be more responsive to the needs of the business. It must react faster than the changes that occur in the marketplace for the company to be successful in a global economy. IT at Contoso must not get in the way or become a business blocker.
 - **Scale.** As the company's business grows successfully, Contoso IT must provide systems that can grow at the same pace.
 
@@ -44,7 +44,7 @@ After pinning down the company's goals and requirements, Contoso designs and rev
 
 - Contoso has one main datacenter (`contoso-datacenter`). The datacenter is located in New York City in the eastern United States.
 - Contoso has three additional local branches across the United States.
-- The main datacenter is connected to the internet with a fiber-optic Metro Ethernet connection (500 Mbps).
+- The main datacenter is connected to the internet with a fiber-optic Metro Ethernet connection (500 megabits per second).
 - Each branch is connected locally to the internet by using business-class connections with IPsec VPN tunnels back to the main datacenter. The setup allows Contoso's entire network to be permanently connected and optimizes internet connectivity.
 - The main datacenter is fully virtualized with VMware. Contoso has two ESXi 6.5 virtualization hosts that are managed by vCenter Server 6.5.
 - Contoso uses Active Directory for identity management. Contoso uses DNS servers on the internal network.
@@ -60,7 +60,7 @@ After pinning down the company's goals and requirements, Contoso designs and rev
 In this scenario, Contoso wants to migrate its two-tier on-premises travel application as follows:
 
 - Migrate the application database (`SmartHotelDB`) to an Azure SQL Managed Instance.
-- Migrate the front end `WEBVM` to an Azure VM.
+- Migrate the front end, `WEBVM`, to an Azure VM.
 - The on-premises VMs in the Contoso datacenter will be decommissioned when the migration is finished.
 
 ![Diagram of the scenario architecture.](./media/contoso-migration-rehost-vm-sql-managed-instance/architecture.png)
@@ -69,13 +69,13 @@ In this scenario, Contoso wants to migrate its two-tier on-premises travel appli
 
 As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Managed Instance. The following considerations helped the company decide to use SQL Managed Instance.
 
-- SQL Managed Instance aims to deliver almost 100% compatibility with the latest on-premises SQL Server version. Microsoft recommends SQL Managed Instance for customers who are running SQL Server on-premises or on infrastructure as a service (IaaS) VMs and want to migrate their applications to a fully managed service with minimal design changes.
+- SQL Managed Instance aims to deliver almost 100% compatibility with the latest on-premises SQL Server version. We recommend SQL Managed Instance for customers who are running SQL Server on-premises or on infrastructure as a service (IaaS) VMs and want to migrate their applications to a fully managed service with minimal design changes.
 - Contoso is planning to migrate a large number of applications from on-premises to IaaS. Many of these applications are ISV provided. Contoso realizes that using SQL Managed Instance will help ensure database compatibility for these applications, rather than using SQL Database, which might not be supported.
 - Contoso can perform a lift-and-shift migration to SQL Managed Instance by using the fully automated Azure Database Migration Service. With this service in place, Contoso can reuse it for future database migrations.
 - SQL Managed Instance supports SQL Server Agent, an important component of the SmartHotel360 application. Contoso needs this compatibility. Otherwise, it will have to redesign maintenance plans required by the application.
 - With Software Assurance, Contoso can exchange its existing licenses for discounted rates on a SQL Managed Instance by using the Azure Hybrid Benefit for SQL Server. For this reason, Contoso can save up to 30 percent on SQL Managed Instance.
 - SQL Managed Instance is fully contained in the virtual network, so it provides greater isolation and security for Contoso's data. Contoso can get the benefits of the public cloud while keeping the environment isolated from the public internet.
-- SQL Managed Instance supports many security features. They include always encrypted, dynamic data masking, row-level security, and threat detection.
+- SQL Managed Instance supports many security features. They include Always Encrypted, dynamic data masking, row-level security, and threat detection.
 
 ### Solution review
 
@@ -83,7 +83,7 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | `WEBVM` will be moved to Azure without changes, which makes the migration simple. <br><br> SQL Managed Instance supports Contoso's technical requirements and goals. <br><br> SQL Managed Instance will provide 100% compatibility with Contoso's current deployment, while moving the company away from SQL Server 2008 R2. <br><br> Contoso can take advantage of its investment in Software Assurance and use the Azure Hybrid Benefit for SQL Server and Windows Server. <br><br> Contoso can reuse Azure Database Migration Service for additional future migrations. <br><br> SQL Managed Instance has built-in fault tolerance that Contoso doesn't need to configure. This feature ensures that the data tier is no longer a single point of failover. |
+| **Pros** | `WEBVM` will be moved to Azure without changes, which makes the migration simple. <br><br> SQL Managed Instance supports Contoso's technical requirements and goals. <br><br> SQL Managed Instance will provide 100 percent compatibility with Contoso's current deployment while moving the company away from SQL Server 2008 R2. <br><br> Contoso can take advantage of its investment in Software Assurance and use the Azure Hybrid Benefit for SQL Server and Windows Server. <br><br> Contoso can reuse Azure Database Migration Service for additional future migrations. <br><br> SQL Managed Instance has built-in fault tolerance that Contoso doesn't need to configure. This feature ensures that the data tier is no longer a single point of failover. |
 | **Cons** | `WEBVM` is running Windows Server 2008 R2. Although this operating system is supported by Azure, it's no longer a supported platform. To learn more, see [Support policy for Microsoft SQL Server products](https://support.microsoft.com/help/956893). <br><br> The web tier remains a single point of failover with only `WEBVM` providing services. <br><br> Contoso will need to continue supporting the application web tier as a VM rather than moving to a managed service, such as Azure App Service. <br><br> For the data tier, SQL Managed Instance might not be the best solution if Contoso wants to customize the operating system or the database server, or if the company wants to run third-party applications along with SQL Server. Running SQL Server on an IaaS VM could provide this flexibility. |
 
 ### Migration process
@@ -102,7 +102,7 @@ Contoso will migrate the web and data tiers of its SmartHotel360 application to 
 | --- | --- | --- |
 | [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
 | [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) | SQL Managed Instance is a managed database service that represents a fully managed SQL Server instance in the Azure cloud. It uses the same code as the latest version of SQL Server Database Engine and has the latest features, performance improvements, and security patches. | Using a SQL Managed Instance running in Azure incurs charges based on capacity. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed). |
-| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Contoso uses Azure Migrate to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no additional charge. You might incur charges depending on the tools (first-party or ISV) you decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate). |
+| [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Contoso uses Azure Migrate to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no additional charge. They might incur charges depending on the tools (first-party or independent software vendor) they decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate). |
 
 ## Prerequisites
 
@@ -124,11 +124,11 @@ Here's how Contoso plans to set up the deployment:
 >
 > - **Step 1: Prepare a SQL Managed Instance.** Contoso needs an existing managed instance to which the on-premises SQL Server database will migrate.
 > - **Step 2: Prepare Azure Database Migration Service.** Contoso must register the database migration provider, create an instance, and then create a Database Migration Service project. Contoso also must set up a shared access signature (SAS) uniform resource identifier (URI) for the Database Migration Service instance. An SAS URI provides delegated access to resources in Contoso's storage account so that Contoso can grant limited permissions to storage objects. Contoso sets up an SAS URI so that Azure Database Migration Service can access the storage account container to which the service uploads the SQL Server backup files.
-> - **Step 3: Prepare Azure for Azure Migrate: Server Migration.** Contoso adds the server migration tool to its Azure Migrate project.
+> - **Step 3: Prepare Azure for the Azure Migrate: Server Migration tool.** Contoso adds the server migration tool to its Azure Migrate project.
 > - **Step 4: Prepare on-premises VMware for Azure Migrate: Server Migration.** Contoso prepares accounts for VM discovery and prepares to connect to Azure VMs after migration.
 > - **Step 5: Replicate the on-premises VMs.** Contoso sets up replication and starts replicating VMs to Azure Storage.
 > - **Step 6: Migrate the database via Azure Database Migration Service.** Contoso migrates the database.
-> - **Step 7: Migrate the VM with Azure Migrate: Server Migration.** Contoso runs a test migration to make sure everything's working and then runs a full migrate to move the VMs to Azure.
+> - **Step 7: Migrate the VMs with Azure Migrate: Server Migration.** Contoso runs a test migration to make sure everything's working and then runs a full migrate to move the VM to Azure.
 
 ## Step 1: Prepare a SQL Managed Instance
 
@@ -145,17 +145,17 @@ To set up an Azure SQL Managed Instance, Contoso needs a subnet that meets the f
 
 ### Set up a virtual network for the managed instance
 
-Contoso admins set up the virtual network as follows:
+To set up the virtual network, the Contoso admins:
 
 1. Create a new virtual network (`VNET-SQLMI-EU2`) in the primary region (`East US 2`). It adds the virtual network to the `ContosoNetworkingRG` resource group.
-1. Assign an address space of `10.235.0.0/24`. Ensure that the range doesn't overlap with any other networks in its enterprise.
+1. Assign an address space of `10.235.0.0/24`. They ensure that the range doesn't overlap with any other networks in its enterprise.
 1. Add two subnets to the network:
     - `SQLMI-DS-EUS2` (`10.235.0.0/25`).
     - `SQLMI-SAW-EUS2` (`10.235.0.128/29`). This subnet is used to attach a directory to the managed instance.
 
       ![Screenshot that shows the SQL Managed Instance: Create virtual network pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
 
-1. After the virtual network and subnets are deployed, peer networks as follows:
+1. After the virtual network and subnets are deployed, they peer networks as follows:
 
     - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network in `East US 2`).
     - Peers `VNET-SQLMI-EUS2` with `VNET-PROD-EUS2` (the production network).
@@ -189,13 +189,13 @@ Contoso considers these factors:
 - A subnet can be associated with only one route table.
 - There are no additional charges for creating route tables in Microsoft Azure.
 
- To set up routing, Contoso admins do the following steps:
+ To set up routing, the Contoso admins do the following steps:
 
 1. Create a user-defined route table in the `ContosoNetworkingRG` resource group.
 
     ![Screenshot that shows the route table.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table.png)
 
-1. To comply with SQL Managed Instance requirements, after the route table (`MIRouteTable`) is deployed, add a route that has an address prefix of `0.0.0.0/0`. The **Next hop type** option is set to **Internet**.
+1. To comply with SQL Managed Instance requirements, after the route table (`MIRouteTable`) is deployed, they add a route that has an address prefix of `0.0.0.0/0`. The **Next hop type** option is set to **Internet**.
 
     ![Screenshot that shows the route table prefix.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-route-table-prefix.png)
 
@@ -209,10 +209,10 @@ Learn how to [set up routes for a managed instance](https://docs.microsoft.com/a
 
 ### Create a managed instance
 
-Now Contoso admins can provision a SQL Managed Instance:
+Now the Contoso admins can provision a SQL Managed Instance:
 
-1. Because the managed instance serves a business application, deploy the managed instance in the company's primary region (`East US 2`). Add the managed instance to the `ContosoRG` resource group.
-1. Select a pricing tier, size compute, and storage for the instance. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed).
+1. Because the managed instance serves a business application, they deploy the managed instance in the company's primary region (`East US 2`). They add the managed instance to the `ContosoRG` resource group.
+1. They select a pricing tier, size compute, and storage for the instance. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed).
 
     ![Screenshot that shows the SQL Managed Instance pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-create.png)
 
@@ -229,7 +229,7 @@ Learn how to [provision a managed instance](https://docs.microsoft.com/azure/sql
 
 ## Step 2: Prepare Azure Database Migration Service
 
-To prepare Azure Database Migration Service, Contoso admins need to do a few things:
+To prepare Azure Database Migration Service, the Contoso admins need to do a few things:
 
 - Register the Database Migration Service provider in Azure.
 - Grant permission for Database Migration Service to access Azure Storage for uploading the backup files that are used to migrate a database. To provide access to Azure Storage, create an Azure Blob storage container. Generate an SAS URI for the Blob storage container.
@@ -265,7 +265,7 @@ Here are the Azure components Contoso needs to migrate the VMs to Azure:
 - A virtual network in which Azure VMs will be located when they're created during migration.
 - The Azure Migrate: Server Migration tool provisioned.
 
-Contoso set up these components as follows:
+The Contoso admins set up these components:
 
 1. Set up a network. Contoso already set up a network that can be used for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](./contoso-migration-infrastructure.md).
 
@@ -281,7 +281,7 @@ Here are the Azure components Contoso needs to migrate the VMs to Azure:
 - A virtual network in which Azure VMs will be located when they're created during migration.
 - The Azure Migrate appliance, provisioned and configured.
 
-Contoso set up these components as follows:
+The Contoso admins set up these components by following these steps:
 
 1. Set up a network. Contoso already set up a network that can be used for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](./contoso-migration-infrastructure.md).
 
@@ -322,7 +322,7 @@ Learn about how to set up the [Azure Migrate appliance](https://docs.microsoft.c
 
 ### Prepare on-premises VMs
 
-After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. Contoso admins must do the following steps before migration:
+After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. The Contoso admins must do the following steps before migration:
 
 1. For access over the internet, they:
 
@@ -343,8 +343,8 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 1. Other considerations:
 
-   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, you won't be able to log in to the VM until the update completes.
-   - After migration, you can check **boot diagnostics** to view a screenshot of the VM. If this doesn't work, you should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, they won't be able to log in to the VM until the update finishes.
+   - After migration, they can check **boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 
@@ -352,58 +352,58 @@ Learn about how to [prepare VMs for migration](https://docs.microsoft.com/azure/
 
 ## Step 5: Replicate the on-premises VMs
 
-Before Contoso admins can run a migration to Azure, they need to set up and enable replication.
+Before the Contoso admins can run a migration to Azure, they need to set up and enable replication.
 
 With discovery completed, they can begin replication of VMware VMs to Azure.
 
-1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**. Then select **Replicate**.
+1. In the Azure Migrate project, they go to **Servers** > **Azure Migrate: Server Migration**. Then they select **Replicate**.
 
     ![Screenshot that shows the Replicate option.](./media/contoso-migration-rehost-vm/select-replicate.png)
 
-1. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
+1. In **Replicate** > **Source settings** > **Are your machines virtualized?**, they select **Yes, with VMware vSphere**.
 
-1. In **On-premises appliance**, select the name of the Azure Migrate appliance that was set up, and then select **OK**.
+1. In **On-premises appliance**, they select the name of the Azure Migrate appliance that was set up and then select **OK**.
 
     ![Screenshot that shows the Source settings tab.](./media/contoso-migration-rehost-vm/source-settings.png)
 
-1. In **Virtual machines**, select the machines you want to replicate.
-    - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. In **Import migration settings from an Azure Migrate assessment?**, select the **Yes** option.
-    - If you didn't run an assessment, or you don't want to use the assessment settings, select the **No** option.
-    - If you selected to use the assessment, select the VM group and assessment name.
+1. In **Virtual machines**, they select the machines they want to replicate:
+    - If they've run an assessment for the VMs, they can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. In **Import migration settings from an Azure Migrate assessment?**, they select the **Yes** option.
+    - If they didn't run an assessment or they don't want to use the assessment settings, they select the **No** option.
+    - If they selected to use the assessment, they select the VM group and assessment name.
 
     ![Screenshot that shows selecting assessments.](./media/contoso-migration-rehost-vm/select-assessment.png)
 
-1. In **Virtual machines**, search for VMs as needed and check each VM you want to migrate. Then select **Next: Target settings**.
+1. In **Virtual machines**, they search for VMs as needed and check each VM they want to migrate. Then they select **Next: Target settings**.
 
-1. In **Target settings**, select the subscription and target region to which you'll migrate. Also specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure virtual network/subnet to which the Azure VMs will be joined after migration.
+1. In **Target settings**, they select the subscription and target region to which they'll migrate. They also specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, they select the Azure virtual network/subnet to which the Azure VMs will be joined after migration.
 
-1. In **Azure Hybrid Benefit**:
+1. In **Azure Hybrid Benefit**, they:
 
-    - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
-    - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions and you want to apply the benefit to the machines you're migrating. Then select **Next**.
+    - Select **No** if they don't want to apply Azure Hybrid Benefit. Then they select **Next**.
+    - Select **Yes** if they have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions and they want to apply the benefit to the machines they're migrating. Then they select **Next**.
 
-1. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
+1. In **Compute**, they review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
-    - **VM size:** If you're using assessment recommendations, the VM size drop-down list contains the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, you can pick a manual size in **Azure VM size.**
-    - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
-    - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group specified for the migration.
+    - **VM size:** If they're using assessment recommendations, the VM size drop-down list contains the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, they can pick a manual size in **Azure VM size.**
+    - **OS disk:** They specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
+    - **Availability set:** If the VM should be in an Azure availability set after migration, they specify the set. The set must be in the target resource group specified for the migration.
 
-1. In **Disks**, specify whether the VM disks should be replicated to Azure. Then select the disk type (standard SSD/HDD or premium-managed disks) in Azure and select **Next**.
-    - You can exclude disks from replication.
+1. In **Disks**, they specify whether the VM disks should be replicated to Azure. Then they select the disk type (standard SSD/HDD or premium-managed disks) in Azure and select **Next**.
+    - They can exclude disks from replication.
     - If disks are excluded, they won't be present on the Azure VM after migration.
 
-1. In **Review + start replication**, review the settings. Then select **Replicate** to start the initial replication for the servers.
+1. In **Review + start replication**, they review the settings. Then they select **Replicate** to start the initial replication for the servers.
 
 > [!NOTE]
 > Replication settings can be updated any time before replication starts in **Manage** > **Replicating machines**. Settings can't be changed after replication starts.
 
 ## Step 6: Migrate the database via Azure Database Migration Service
 
-Contoso admins need to create a Database Migration Service project and then migrate the database.
+The Contoso admins need to create a Database Migration Service project and then migrate the database.
 
 ### Create an Azure Database Migration Service project
 
-1. The admins create a Database Migration Service project. Select the **SQL Server** source server type and **Azure SQL Managed Instance** as the target.
+1. The admins create a Database Migration Service project. They select the **SQL Server** source server type and **Azure SQL Managed Instance** as the target.
 
      ![Screenshot that shows the New migration project pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-project.png)
 
@@ -411,19 +411,19 @@ Contoso admins need to create a Database Migration Service project and then migr
 
 ### Migrate the database
 
-1. In the Migration Wizard, specify the source VM on which the on-premises database is located. Enter the credentials to access the database.
+1. In the Migration Wizard, they specify the source VM on which the on-premises database is located. They enter the credentials to access the database.
 
     ![Screenshot that shows the Source details pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-wizard-source.png)
 
-1. Select the database to migrate (`SmartHotel.Registration`).
+1. They select the database to migrate (`SmartHotel.Registration`).
 
     ![Screenshot that shows the Select source databases pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-wizard-source-db.png)
 
-1. For the target, enter the name of the managed instance in Azure and the access credentials.
+1. For the target, they enter the name of the managed instance in Azure and the access credentials.
 
     ![Screenshot that shows the Target details pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-target-details.png)
 
-1. In **New Activity** > **Run migration**, specify settings to run the migration:
+1. In **New Activity** > **Run migration**, they specify settings to run the migration:
     - Source and target credentials.
     - The database to migrate.
     - The network share created on the on-premises VM. Azure Database Migration Service takes source backups to this share.
@@ -433,65 +433,65 @@ Contoso admins need to create a Database Migration Service project and then migr
 
         ![Screenshot that shows the Configure migration settings screen.](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-migration-settings.png)
 
-1. Save the migration settings, and then run the migration.
-1. In **Overview**, monitor the migration status.
+1. They save the migration settings and then run the migration.
+1. In **Overview**, they monitor the migration status.
 
     ![Screenshot that shows the status.](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-monitor1.png)
 
-1. When migration is finished, verify that the target databases exist on the managed instance.
+1. When migration is finished, they verify that the target databases exist on the managed instance.
 
     ![Screenshot that shows verifying the database migration.](./media/contoso-migration-rehost-vm-sql-managed-instance/dms-monitor2.png)
 
 ## Step 7: Migrate the VMs with Azure Migrate: Server Migration
 
-Contoso admins run a quick test migration and verify the VM is working properly. Then migrate the VM.
+The Contoso admins run a quick test migration and verify the VM is working properly. Then they migrate the VM.
 
 ### Run a test migration
 
-1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, select **Test migrated servers**.
+1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, they select **Test migrated servers**.
 
      ![Screenshot that shows the Test migrated servers item.](./media/contoso-migration-rehost-linux-vm/test-migrated-servers.png)
 
-1. Select and hold (or right-click) the VM to test, and select **Test migrate**.
+1. They select and hold (or right-click) the VM to test, and then they select **Test migrate**.
 
     ![Screenshot that shows the Test migrate item.](./media/contoso-migration-rehost-linux-vm/test-migrate.png)
 
-1. In **Test migration**, select the Azure virtual network in which the Azure VM will be located after the migration. We recommend the use of a nonproduction virtual network.
-1. The **Test migration** job starts. Monitor the job in the portal notifications.
-1. After the migration finishes, view the migrated Azure VM in **Virtual Machines** in the Azure portal. The machine name has a suffix **-Test**.
-1. After the test is done, select and hold (or right-click) the Azure VM in **Replicating machines** and then select **Clean up test migration**.
+1. In **Test migration**, they select the Azure virtual network in which the Azure VM will be located after the migration. We recommend using a nonproduction virtual network.
+1. The **Test migration** job starts. They monitor the job in the portal notifications.
+1. After the migration finishes, they view the migrated Azure VM in **Virtual Machines** in the Azure portal. The machine name has a suffix **-Test**.
+1. After the test is done, they select and hold (or right-click) the Azure VM in **Replicating machines** and then select **Clean up test migration**.
 
     ![Screenshot that shows the Clean up test migration item.](./media/contoso-migration-rehost-linux-vm/clean-up.png)
 
-### Migrate the VMs
+### Migrate the VM
 
-Now Contoso admins run a full migration to complete the move.
+Now the Contoso admins run a full migration to complete the move.
 
-1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**, and select **Replicating servers**.
+1. In the Azure Migrate project, they go to **Servers** > **Azure Migrate: Server Migration** and select **Replicating servers**.
 
     ![Screenshot that shows the Replicating servers item.](./media/contoso-migration-rehost-linux-vm/replicating-servers.png)
 
-1. In **Replicating machines**, select and hold (or right-click) the VM, and then select **Migrate**.
-1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
+1. In **Replicating machines**, they select and hold (or right-click) the VM, and then they select **Migrate**.
+1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, they select **Yes** > **OK**.
     - By default, Azure Migrate shuts down the on-premises VM and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This action ensures no data loss.
-    - If you don't want to shut down the VM, select **No**.
-1. A migration job starts for the VM. Track the job in Azure notifications.
-1. After the job finishes, you can view and manage the VM from the **Virtual Machines** page.
-1. Finally, update the DNS records for `WEBVM` on one of the Contoso domain controllers.
+    - If they don't want to shut down the VM, they select **No**.
+1. A migration job starts for the VM. They track the job in Azure notifications.
+1. After the job finishes, they can view and manage the VM from the **Virtual Machines** page.
+1. Finally, they update the DNS records for `WEBVM` on one of the Contoso domain controllers.
 
 ### Update the connection string
 
-As the final step in the migration process, Contoso admins update the connection string of the application to point to the migrated database that's running on Contoso's SQL Managed Instance.
+As the final step in the migration process, the Contoso admins update the connection string of the application to point to the migrated database that's running on Contoso's SQL Managed Instance.
 
-1. In the Azure portal, find the connection string by selecting **Settings** > **Connection strings**.
+1. In the Azure portal, they find the connection string by selecting **Settings** > **Connection strings**.
 
     ![Screenshot that shows the Connection strings option.](./media/contoso-migration-rehost-vm-sql-managed-instance/failover4.png)
 
-1. Update the string with the user name and password of the SQL Managed Instance.
-1. After the string is configured, replace the current connection string in the `web.config` file of its application.
-1. After updating the file and saving it, restart IIS on `WEBVM` by running `iisreset /restart` in a command prompt window.
+1. They update the string with the user name and password of the SQL Managed Instance.
+1. After the string is configured, they replace the current connection string in the `web.config` file of its application.
+1. After they update the file and save it, they restart IIS on `WEBVM` by running `iisreset /restart` in a command prompt window.
 1. After IIS is restarted, the application uses the database that's running on the SQL Managed Instance.
-1. At this point, you can shut down the on-premises SQLVM machine. The migration is finished.
+1. At this point, they can shut down the on-premises SQLVM machine. The migration is finished.
 
 **Need more help?**
 
@@ -503,7 +503,7 @@ As the final step in the migration process, Contoso admins update the connection
 
 With the migration finished, the SmartHotel360 application is running on an Azure VM and the SmartHotel360 database is available in the Azure SQL Managed Instance.
 
-Now, Contoso needs to do these cleanup tasks:
+Now, Contoso needs to perform these cleanup tasks:
 
 - Remove the `WEBVM` machine from the vCenter Server inventory.
 - Remove the `SQLVM` machine from the vCenter Server inventory.
@@ -528,12 +528,12 @@ The Contoso security team reviews the Azure VMs and SQL Managed Instance to chec
 
 To learn more about security practices for VMs, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
-### BCDR
+### Business continuity and disaster recovery
 
-For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
+For business continuity and disaster recovery, Contoso takes the following actions:
 
 - **Keep data safe.** Contoso backs up the data on the VMs by using the Azure Backup service. For more information, see [An overview of Azure VM backup](https://docs.microsoft.com/azure/backup/backup-azure-vms-introduction).
-- **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region using Site Recovery. [Learn more](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
+- **Keep applications up and running.** Contoso replicates the application VMs in Azure to a secondary region using Site Recovery. To learn more, see [Set up disaster recovery to a secondary Azure region for an Azure VM](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
 - **Learn more.** Contoso learns more about managing SQL Managed Instance, which includes [database backups](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ### Licensing and cost optimization

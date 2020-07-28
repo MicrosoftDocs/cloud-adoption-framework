@@ -1,6 +1,6 @@
 ---
 title: Rehost an application on Azure VMs with Azure Migrate
-description: Learn how Contoso rehosts an on-premises app with a lift-and-shift migration of on-premises machines to Azure by using the Azure Migrate service.
+description: Learn how Contoso rehosts an on-premises app with a lift-and-shift migration of on-premises machines to Azure by using Azure Migrate.
 author: givenscj
 ms.author: abuck
 ms.date: 07/01/2020
@@ -31,13 +31,13 @@ The IT leadership team has worked closely with business partners to understand w
 The Contoso cloud team has pinned down goals for this migration. These goals are used to determine the best migration method:
 
 - After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as it is on-premises.
-- Contoso doesn't want to invest in this application. It's important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
+- Although this application is important to Contoso, the company doesn't want to invest in it at this time. It wants to move it safely to the cloud in its current form.
 - Contoso doesn't want to change the ops model for this application. Contoso does want to interact with it in the cloud in the same way that it does now.
 - Contoso doesn't want to change any application functionality. Only the application location will change.
 
 ## Solution design
 
-After pinning down goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process. The Azure services that Contoso will use for the migration also are identified.
+After pinning down goals and requirements, Contoso designs and reviews a deployment solution and identifies the migration process. The Azure services that Contoso will use for the migration are also identified.
 
 ### Current application
 
@@ -69,8 +69,8 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Both the application VMs will be moved to Azure without changes, which makes the migration simple. <br><br> Because Contoso is using a lift-and-shift approach for both application VMs, no special configuration or migration tools are needed for the application database. <br><br> Contoso can take advantage of its investment in Software Assurance by using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the application VMs in Azure. |
-| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles. To learn more, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the application remain as single points of failure. <br><br> `SQLVM` is running on SQL Server 2008 R2, which is no longer in mainstream support. But it is supported for Azure VMs. To learn more, see [Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the application on Azure VMs rather than moving to a managed service, such as Azure App Service and Azure SQL Database. |
+| **Pros** | Both the application VMs will be moved to Azure without changes, which makes the migration simple. <br><br> Because Contoso is using a lift-and-shift approach for both application VMs, the application database doesn't require special configuration and migration tools. <br><br> Contoso can take advantage of its investment in Software Assurance by using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the application VMs in Azure. |
+| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. The operating system is supported by Azure for specific roles. To learn more, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the application remain as single points of failure. <br><br> `SQLVM` is running on SQL Server 2008 R2, which is no longer in mainstream support, but it's supported for Azure VMs. To learn more, see [Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the application on Azure VMs rather than moving to a managed service, such as Azure App Service and Azure SQL Database. |
 
 ### Migration process
 
@@ -79,7 +79,7 @@ Contoso will migrate the application front-end and database VMs to Azure VMs by 
 - As a first step, Contoso prepares and sets up Azure components for Azure Migrate: Server Migration and prepares the on-premises VMware infrastructure.
 - Contoso already has the [Azure infrastructure](./contoso-migration-infrastructure.md) in place, so it just needs to configure the replication of the VMs through the Azure Migrate: Server Migration tool.
 - With everything prepared, Contoso can start replicating the VMs.
-- After replication is enabled and working, Contoso will migrate the VM by testing the migration and, if successful, failing it over to Azure.
+- After replication is enabled and working, Contoso will migrate the VM by testing the migration and failing it over to Azure, if successful.
 
 ![Diagram of the migration process.](./media/contoso-migration-rehost-vm/migration-process-az-migrate.png)
 
@@ -91,7 +91,7 @@ Contoso will migrate the application front-end and database VMs to Azure VMs by 
 
 ## Prerequisites
 
-Here's what Contoso needs to run this scenario.
+Contoso and other users must meet the following prerequisites for this scenario.
 
 | Requirements | Details |
 | --- | --- |
@@ -105,10 +105,9 @@ Here's how Contoso admins will run the migration:
 
 > [!div class="checklist"]
 >
-> - **Step 1: Prepare Azure for Azure Migrate: Server Migration.** They add the server migration tool to their Azure Migrate project.
-> - **Step 2: Prepare on-premises VMware for Azure Migrate: Server Migration.** They prepare accounts for VM discovery and prepare to connect to Azure VMs after migration.
-> - **Step 3: Replicate VMs.** They set up replication and start replicating VMs to Azure Storage.
-> - **Step 4: Migrate the VMs with Azure Migrate: Server Migration.** They run a test migration to make sure everything's working and then run a full migration to move the VMs to Azure.
+> - **Step 1: Prepare Azure for the Azure Migrate: Server Migration tool.** They add the server migration tool to their Azure Migrate project.
+> - **Step 2: Replicate the on-premises VMs.** They set up replication and start replicating VMs to Azure Storage.
+> - **Step 3: Migrate the VMs with Azure Migrate: Server Migration.** They run a test migration to make sure everything's working and then run a full migration to move the VMs to Azure.
 
 ## Step 1: Prepare Azure for the Azure Migrate: Server Migration tool
 
@@ -117,7 +116,7 @@ Here are the Azure components Contoso needs to migrate the VMs to Azure:
 - A virtual network in which Azure VMs will be located when they're created during migration.
 - The Azure Migrate: Server Migration tool (OVA) provisioned and configured.
 
-Contoso admins set up these components as follows:
+The Contoso admins set up these components by following these steps:
 
 1. Set up a network. Contoso already set up a network that can be used for Azure Migrate: Server Migration when it [deployed the Azure infrastructure](./contoso-migration-infrastructure.md)
 
@@ -158,7 +157,7 @@ Learn about how to set up the [Azure Migrate: Server Migration tool](https://doc
 
 ### Prepare on-premises VMs
 
-After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. Contoso admins must do the following before migration:
+After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. The Contoso admins must do the following steps before migration:
 
 1. For access over the internet, they:
 
@@ -178,8 +177,8 @@ After migration, Contoso wants to connect to the Azure VMs and allow Azure to ma
 
 1. Other considerations:
 
-   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, you won't be able to log in to the VM until the update completes.
-   - After migration, you can check **boot diagnostics** to view a screenshot of the VM. If this doesn't work, you should verify that the VM is running, and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
+   - For Windows, there should be no Windows updates pending on the VM when triggering a migration. If there are, they won't be able to log in to the VM until the update finishes.
+   - After migration, they can check **boot diagnostics** to view a screenshot of the VM. If this doesn't work, they should verify that the VM is running and review these [troubleshooting tips](https://social.technet.microsoft.com/wiki/contents/articles/31666.troubleshooting-remote-desktop-connection-after-failover-using-asr.aspx).
 
 **Need more help?**
 
@@ -187,82 +186,82 @@ Learn about how to [prepare VMs for migration](https://docs.microsoft.com/azure/
 
 ## Step 2: Replicate the on-premises VMs
 
-Before Contoso admins can run a migration to Azure, they need to set up and enable replication.
+Before the Contoso admins can run a migration to Azure, they need to set up and enable replication.
 
 With discovery completed, they can begin replication of VMware VMs to Azure.
 
-1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**. Then select **Replicate**.
+1. In the Azure Migrate project, they go to **Servers** > **Azure Migrate: Server Migration**. Then they select **Replicate**.
 
     ![Screenshot that shows the Replicate option.](./media/contoso-migration-rehost-vm/select-replicate.png)
 
-1. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
+1. In **Replicate** > **Source settings** > **Are your machines virtualized?**, they select **Yes, with VMware vSphere**.
 
-1. In **On-premises appliance**, select the name of the Azure Migrate appliance that was set up, and then select **OK**.
+1. In **On-premises appliance**, they select the name of the Azure Migrate appliance that was set up and then select **OK**.
 
     ![Screenshot that shows the Source settings tab.](./media/contoso-migration-rehost-vm/source-settings.png)
 
-1. In **Virtual machines**, select the machines you want to replicate.
-    - If you've run an assessment for the VMs, you can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. In **Import migration settings from an Azure Migrate assessment?**, select the **Yes** option.
-    - If you didn't run an assessment, or you don't want to use the assessment settings, select the **No** option.
-    - If you selected to use the assessment, select the VM group and assessment name.
+1. In **Virtual machines**, they select the machines they want to replicate:
+    - If they've run an assessment for the VMs, they can apply VM sizing and disk type (premium/standard) recommendations from the assessment results. In **Import migration settings from an Azure Migrate assessment?**, they select the **Yes** option.
+    - If they didn't run an assessment or they don't want to use the assessment settings, they select the **No** option.
+    - If they selected to use the assessment, they select the VM group and assessment name.
 
     ![Screenshot that shows selecting assessments.](./media/contoso-migration-rehost-vm/select-assessment.png)
 
-1. In **Virtual machines**, search for VMs as needed and check each VM you want to migrate. Then select **Next: Target settings**.
+1. In **Virtual machines**, they search for VMs as needed and check each VM they want to migrate. Then they select **Next: Target settings**.
 
-1. In **Target settings**, select the subscription and target region to which you'll migrate. Specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure virtual network/subnet to which the Azure VMs will be joined after migration.
+1. In **Target settings**, they select the subscription and target region to which they'll migrate. They specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, they select the Azure virtual network/subnet to which the Azure VMs will be joined after migration.
 
-1. In **Azure Hybrid Benefit**, select the following:
+1. In **Azure Hybrid Benefit**, they:
 
-    - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
-    - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions and you want to apply the benefit to the machines you're migrating. Then select **Next**.
+    - Select **No** if they don't want to apply Azure Hybrid Benefit. Then they select **Next**.
+    - Select **Yes** if they have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions and they want to apply the benefit to the machines they're migrating. Then they select **Next**.
 
-1. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
+1. In **Compute**, they review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
-    - **VM size:** If you're using assessment recommendations, the VM size drop-down list contains the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, you can pick a manual size in **Azure VM size.**
-    - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
-    - **Availability set:** If the VM should be in an Azure availability set after migration, specify the set. The set must be in the target resource group you specified for the migration.
+    - **VM size:** If they're using assessment recommendations, the VM size drop-down list contains the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, they can pick a manual size in **Azure VM size.**
+    - **OS disk:** They specify the OS (boot) disk for the VM. The OS disk is the disk that has the operating system bootloader and installer.
+    - **Availability set:** If the VM should be in an Azure availability set after migration, they specify the set. The set must be in the target resource group they specified for the migration.
 
-1. In **Disks**, specify whether the VM disks should be replicated to Azure. Select the disk type (standard SSD/HDD or premium-managed disks) in Azure, and select **Next**.
-    - You can exclude disks from replication.
+1. In **Disks**, they specify whether the VM disks should be replicated to Azure and select the disk type (standard SSD/HDD or premium-managed disks) in Azure. Then they select **Next**.
+    - They can exclude disks from replication.
     - If disks are excluded, they won't be present on the Azure VM after migration.
 
-1. In **Review + start replication**, review the settings. Then select **Replicate** to start the initial replication for the servers.
+1. In **Review + start replication**, they review the settings. Then they select **Replicate** to start the initial replication for the servers.
 
 > [!NOTE]
 > Replication settings can be updated any time before replication starts in **Manage** > **Replicating machines**. Settings can't be changed after replication starts.
 
-## Step 3: Migrate the VMs
+## Step 3: Migrate the VMs with Azure Migrate: Server Migration
 
-Contoso admins run a quick test migration and then a full migration to migrate the VMs.
+The Contoso admins run a quick test migration and then a full migration to migrate the VMs.
 
 ### Run a test migration
 
-1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, select **Test migrated servers**.
+1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, they select **Test migrated servers**.
 
      ![Screenshot that shows the Test migrated servers item.](./media/contoso-migration-rehost-vm/test-migrated-servers.png)
 
-1. Select and hold (or right-click) the VM to test, and then select **Test migrate**.
+1. They select and hold (or right-click) the VM to test, and then they select **Test migrate**.
 
     ![Screenshot that shows the Test migrate item.](./media/contoso-migration-rehost-vm/test-migrate.png)
 
-1. In **Test Migration**, select the Azure virtual network in which the Azure VM will be located after the migration. We recommend the use of a nonproduction virtual network.
-1. The **Test migration** job starts. Monitor the job in the portal notifications.
-1. After the migration finishes, view the migrated Azure VM in **Virtual Machines** in the Azure portal. The machine name has a suffix **-Test**.
-1. After the test is done, select and hold (or right-click) the Azure VM in **Replicating machines**, and then select **Clean up test migration**.
+1. In **Test Migration**, they select the Azure virtual network in which the Azure VM will be located after the migration. We recommend using a nonproduction virtual network.
+1. The **Test migration** job starts. They monitor the job in the portal notifications.
+1. After the migration finishes, they view the migrated Azure VM in **Virtual Machines** in the Azure portal. The machine name has a suffix **-Test**.
+1. After the test is done, they select and hold (or right-click) the Azure VM in **Replicating machines**, and then they select **Clean up test migration**.
 
     ![Screenshot that shows the Clean up test migration item.](./media/contoso-migration-rehost-vm/clean-up.png)
 
 ### Migrate the VMs
 
-Now Contoso admins run a full migration.
+Now the Contoso admins run a full migration.
 
-1. In the Azure Migrate project, go to **Servers** > **Azure Migrate: Server Migration**, and select **Replicating servers**.
+1. In the Azure Migrate project, they go to **Servers** > **Azure Migrate: Server Migration** and they select **Replicating servers**.
 
     ![Screenshot that shows the Replicating servers item.](./media/contoso-migration-rehost-vm/replicating-servers.png)
 
-1. In **Replicating machines**, select and hold (or right-click) the VM, and then select **Migrate**.
-1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, select **Yes** > **OK**.
+1. In **Replicating machines**, they select and hold (or right-click) the VM, and then they select **Migrate**.
+1. In **Migrate** > **Shut down virtual machines and perform a planned migration with no data loss**, they select **Yes** > **OK**.
     - By default, Azure Migrate shuts down the on-premises VM and runs an on-demand replication to synchronize any VM changes that occurred since the last replication occurred. This action ensures no data loss.
     - If you don't want to shut down the VM, select **No**.
 1. A migration job starts for the VM. Track the job in Azure notifications.
@@ -301,7 +300,7 @@ For more information, see [Security best practices for IaaS workloads in Azure](
 
 ## Business continuity and disaster recovery
 
-For business continuity and disaster recovery (BCDR), Contoso takes the following actions:
+For business continuity and disaster recovery, Contoso takes the following actions:
 
 - **Keep data safe.** Contoso backs up the data on the VMs by using [Azure Backup](https://docs.microsoft.com/azure/backup/backup-overview).
 - **Keep applications up and running.** Contoso [replicates the application VMs in Azure to a secondary region using Site Recovery](https://docs.microsoft.com/azure/site-recovery/azure-to-azure-quickstart).
