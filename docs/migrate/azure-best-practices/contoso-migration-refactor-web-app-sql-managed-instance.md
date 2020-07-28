@@ -45,7 +45,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 
 ### Current application
 
-- The SmartHotel360 on-premises application is tiered across two VMs, WEBVM and SQLVM.
+- The SmartHotel360 on-premises application is tiered across two VMs, `WEBVM` and `SQLVM`.
 - The VMs are located on VMware ESXi host contosohost1.contoso.com version 6.5.
 - The VMware environment is managed by vCenter Server 6.5 (vcenter.contoso.com), which runs on a VM.
 - Contoso has an on-premises datacenter (contoso-datacenter), with an on-premises domain controller (contosodc1).
@@ -61,7 +61,7 @@ After pinning down their goals and requirements, Contoso designs and reviews a d
 As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Managed Instance. They decided to use SQL Managed Instance based on the following considerations:
 
 - SQL Managed Instance aims to deliver almost 100 percent compatibility with the latest on-premises SQL Server version. Microsoft recommends SQL Managed Instance for customers who are running SQL Server on-premises or on infrastructure as a service (IaaS) VMs who want to migrate their applications to a fully managed service with minimal design changes.
-- Contoso is planning to migrate a large number of applications from on-premises to IaaS VMs. Many of these VMs are independent software vendor (ISV)-provided. Contoso realizes that using SQL Managed Instance will help ensure database compatibility for these applications. They'll use SQL Managed Instance rather than SQL Database, which might not be supported.
+- Contoso is planning to migrate a large number of applications from on-premises to IaaS VMs. Many of these VMs are provided by independent software vendors. Contoso realizes that using SQL Managed Instance will help ensure database compatibility for these applications. They'll use SQL Managed Instance rather than SQL Database, which might not be supported.
 - Contoso can simply do a lift and shift migration to SQL Managed Instance by using the fully automated Azure Database Migration Service. With this service in place, Contoso can reuse it for future database migrations.
 - SQL Managed Instance supports SQL Server Agent, an important component of the SmartHotel360 application. Contoso needs this compatibility; otherwise, they'll have to redesign the maintenance plans required by the application.
 - With Software Assurance, Contoso can exchange their existing licenses for discounted rates on a SQL Managed Instance by using the Azure Hybrid Benefit for SQL Server. This allows Contoso to save up to 30 percent on SQL Managed Instance.
@@ -84,7 +84,7 @@ Contoso evaluates their proposed design by putting together a pros and cons list
 ### Migration process
 
 1. Contoso provisions an Azure SQL Managed Instance and then migrates the SmartHotel360 database to it by using Azure Database Migration Service.
-1. Contoso provisions and configures web apps, and deploys the SmartHotel360 application to them.
+1. Contoso provisions and configures web apps and deploys the SmartHotel360 application to them.
 
     ![Diagram of the migration process.](./media/contoso-migration-refactor-web-app-sql-managed-instance/migration-process.png)
 
@@ -117,7 +117,7 @@ Here's how Contoso will run the migration:
 > - **Step 3: Provision web apps**. Contoso provisions the two web apps.
 > - **Step 4: Set up Azure DevOps**. Contoso creates a new Azure DevOps project, and imports the Git repo.
 > - **Step 5: Configure connection strings**. Contoso configures connection strings so that the web tier web app, the WCF service web app, and the SQL Managed Instance can communicate.
-> - **Step 6: Set up build and release pipelines in Azure DevOps**. As a final step, Contoso sets up build and release pipelines in Azure DevOps to create the application, and then deploys them to two separate web apps.
+> - **Step 6: Set up build and release pipelines in Azure DevOps**. As a final step, Contoso sets up build and release pipelines in Azure DevOps to create the application. The team then deploys the pipelines to two separate web apps.
 
 ## Step 1: Set up a SQL Managed Instance
 
@@ -146,7 +146,7 @@ Contoso admins set up the virtual network as follows:
 
 1. After the virtual network and subnets are deployed, they peer networks as follows:
 
-    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for East US 2).  
+    - Peers `VNET-SQLMI-EUS2` with `VNET-HUB-EUS2` (the hub virtual network for `East US 2`).  
     - Peers `VNET-SQLMI-EUS2` with `VNET-PROD-EUS2` (the production network).
 
       ![Screenshot of the peered networks.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-peering.png)
@@ -245,7 +245,7 @@ With the database migrated, Contoso admins can now provision the two web apps.
 
     ![Screenshot of the "Web App" pane for creating the first web app.](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app2.png)
 
-1. After the web app is provisioned, the admins repeat the process to create a web app for the WCF service (SHWCF-EUS2).
+1. After the web app is provisioned, the admins repeat the process to create a web app for the WCF service (`SHWCF-EUS2`).
 
     ![Screenshot of the "Web App" pane for creating the second web app.](./media/contoso-migration-refactor-web-app-sql-managed-instance/web-app3.png)
 
@@ -280,11 +280,11 @@ The Contoso admins make sure that the web apps and database can communicate with
 
     ![Screenshot of the connection string settings pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/string1.png)
 
-1. In Visual Studio, the admins open the **SmartHotel.Registration.wcf** project from the solution file. In the project, they update the `connectionStrings` section of the *web.config* file with the connection string.
+1. In Visual Studio, the admins open the `SmartHotel.Registration.wcf` project from the solution file. In the project, they update the `connectionStrings` section of the *web.config* file with the connection string.
 
      ![Screenshot of the connectionStrings section of the web.config file in the SmartHotel.Registration.wcf project.](./media/contoso-migration-refactor-web-app-sql-managed-instance/string2.png)
 
-1. They change the `client` section of the *web.config* file for SmartHotel.Registration.Web to point to the new location of the WCF service. This is the URL of the WCF web app that hosts the service endpoint.
+1. They change the `client` section of the `web.config` file for SmartHotel.Registration.Web to point to the new location of the WCF service. This is the URL of the WCF web app that hosts the service endpoint.
 
     ![Screenshot of the client section of the web.config file in the SmartHotel.Registration.wcf project.](./media/contoso-migration-refactor-web-app-sql-managed-instance/strings3.png)
 
@@ -341,7 +341,7 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
      ![Screenshot of selecting the app service name.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline11.png)
 
-1. On the pipeline, they select **Artifacts**, select **+ Add an artifact**, select **Build** as the source type, and then build with the **ContosoSmarthotel360Refactor** pipeline.
+1. On the pipeline, they select **Artifacts**, select **+ Add an artifact**, select **Build** as the source type, and then build with the `ContosoSmarthotel360Refactor` pipeline.
 
      ![Screenshot of the Build button on the "Add an artifact" pane.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline12.png)
 
@@ -357,11 +357,11 @@ The Contoso admins now configure Azure DevOps to perform the build and release p
 
     ![Screenshot of the option to select "Deploy Azure App Service."](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline15.png)
 
-1. In **Select a file or folder**, they expand the **drop** folder, select the *SmartHotel.Registration.Wcf.zip* file that was created during the build, and then select **Save**.
+1. In **Select a file or folder**, they expand the **drop** folder, select the `SmartHotel.Registration.Wcf.zip` file that was created during the build, and then select **Save**.
 
     ![Screenshot of the "Select a file or folder" pane for selecting the WCF file.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline16.png)
 
-1. They select **Pipeline** > **Stages**, and then select **+ Add** to add an environment for SHWEB-EUS2. They select another Azure App Service deployment.
+1. They select **Pipeline** > **Stages**, and then select **+ Add** to add an environment for `SHWEB-EUS2`. They select another Azure App Service deployment.
 
     ![Screenshot of the "1 job, 1 task" link for adding an environment.](./media/contoso-migration-refactor-web-app-sql-managed-instance/pipeline17.png)
 
@@ -406,7 +406,7 @@ With the resources now migrated to Azure, Contoso needs to fully operationalize 
 
 ### Security
 
-- Contoso helps ensure that their new SmartHotel-Registration database is secure. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview).
+- Contoso helps ensure that their new `SmartHotel-Registration` database is secure. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview).
 - In particular, Contoso updates the web apps to use SSL with certificates.
 
 ### Backups
@@ -414,7 +414,7 @@ With the resources now migrated to Azure, Contoso needs to fully operationalize 
 - The Contoso team reviews the backup requirements for the Azure SQL Managed Instance database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 - They also learn about managing SQL Database backups and restores. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups) about automatic backups.
 - They consider implementing failover groups to provide regional failover for the database. [Learn more](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview).
-- They consider deploying the web app in the main region (East US 2) and the secondary region (Central US) for resilience. The team could configure Traffic Manager to ensure failover during regional outages.
+- They consider deploying the web app in the main region (`East US 2`) and the secondary region (`Central US`) for resilience. The team could configure Traffic Manager to ensure failover during regional outages.
 
 ### Licensing and cost optimization
 
