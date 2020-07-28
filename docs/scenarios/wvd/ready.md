@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Windows Virtual Desktop Azure landing zone review
 
-Before the Contoso team migrates to Windows Virtual Desktop (WVD), they'll need an Azure landing zone that's capable of hosting desktops and any supporting workloads. The following checklist will help them evaluate the landing zone for compatibility. Guidance in the [*Ready* methodology](../../ready/index.md) of this framework can help them build a compatible Azure landing zone, if one has not been provided.
+Before the Contoso team migrates to Windows Virtual Desktop (WVD), they'll need an Azure landing zone that's capable of hosting desktops and any supporting workloads. The following checklist can help them evaluate the landing zone for compatibility. Guidance in the [*Ready* methodology](../../ready/index.md) of this framework can help them build a compatible Azure landing zone, if one has not been provided.
 
 ## Evaluate compatibility
 
@@ -29,7 +29,7 @@ To understand how to architect Windows Virtual Desktop, review the [WVD requirem
 
 ## Next steps
 
-For guidance for specific points throughout the cloud adoption journey, see:
+For guidance on specific elements of the cloud adoption journey, see:
 
 - [Complete a Windows Virtual Desktop proof of concept](./proof-of-concept.md)
 - [Assess for Windows Virtual Desktop migration or deployment](./migrate-assess.md)
