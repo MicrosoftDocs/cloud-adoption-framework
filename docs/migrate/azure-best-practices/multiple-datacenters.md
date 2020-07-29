@@ -19,7 +19,7 @@ Most of the effort required in this scope expansion occurs during the prerequisi
 
 ## Suggested prerequisites
 
-Before beginning the migration, you should create epics, representing datacenters, within the project management tool, for each datacenter to be migrated. It's important to understand the business outcomes and motivations for this migration. Use those motivations to prioritize the list of epics (or datacenters). For instance, if migration is driven by a desire to exit datacenters before leases must be renewed, then each epic would be prioritized based on lease renewal date.
+Before starting the migration, you should create epics within the project management tool for each datacenter that's to be migrated. Each epic represents a datacenter. It's important to understand the business outcomes and motivations for this migration. Use those motivations to prioritize the list of epics (or datacenters). For instance, if migration is driven by a desire to exit datacenters before leases must be renewed, then each epic would be prioritized based on lease renewal date.
 
 Within each epic, the workloads to be assessed and migrated are managed as features. Each asset within that workload is managed as a user story. The work required to assess, migrate, optimize, promote, secure, and manage each asset is represented as tasks for each asset.
 
@@ -47,7 +47,7 @@ Migrating multiple datacenters is similar to consolidating datacenters. After mi
 
 The following are activities that greatly affect the success of a cloud migration:
 
-- **Evaluate network conflicts:** When you're consolidating datacenters into a single cloud provider, there's a likelihood of creating network, DNS, or other conflicts. During migration, it's important to test for conflicts to avoid interruptions to production systems hosted in the cloud.
+- **Evaluate network conflicts:** When you're consolidating datacenters into a single cloud provider, you're likely to create network, DNS, or other conflicts. During migration, it's important to test for conflicts to avoid interruptions to production systems hosted in the cloud.
 - **Update routing tables:** Often, modifications to routing tables are required when consolidating networks or datacenters.
 
 ## Optimize and promote process changes

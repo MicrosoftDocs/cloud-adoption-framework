@@ -38,7 +38,7 @@ The following checklists provide Azure cloud migration best practices that go be
 
 ## Next steps
 
-The following is a good starting point when you're reviewing Azure migration best practices.
+The following is a good starting point for reviewing Azure migration best practices.
 
 > [!div class="nextstepaction"]
 > [Multiple datacenters](./multiple-datacenters.md)

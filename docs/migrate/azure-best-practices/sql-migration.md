@@ -11,8 +11,9 @@ ms.subservice: migrate
 
 # SQL Server migration best practices for Azure
 
-Migrating SQL Server to Azure can accelerate the standard methodology outlined in the Cloud Adoption Framework, and pictured here.
+Migrating SQL Server to Azure can accelerate the standard methodology outlined in the Cloud Adoption Framework. The process is shown in the following diagram.
 
 ![Diagram of Cloud Adoption Framework migration model.](../../_images/migrate/methodology.png)
+*Figure 1*
 
 The table of contents on the left outlines best practices that can guide the execution of your SQL Server migration. You can migrate by using Azure Database Migration Guide, Azure Database Migration Service, or other tools. Bookmark this page for quick reference to the full list of best practices.
