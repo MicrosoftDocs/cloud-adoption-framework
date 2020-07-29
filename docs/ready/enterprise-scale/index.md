@@ -21,7 +21,7 @@ The enterprise-scale architecture provides prescriptive guidance coupled with Az
 
 ## Qualifiers: Should I start with enterprise scale?
 
-The enterprise-scale architecture is modular by design and allow you to start with foundational landing zones that support your application portfolios, regardless of whether the applications are being migrated or are newly developed and deployed to Azure. The architecture can scale alongside the your business requirements regardless of scale point.
+The enterprise-scale architecture is modular by design and allow you to start with foundational landing zones that support your application portfolios, regardless of whether the applications are being migrated or are newly developed and deployed to Azure. The architecture can scale alongside your business requirements regardless of scale point.
 
 ## Start with a CAF enterprise-scale landing zone
 
