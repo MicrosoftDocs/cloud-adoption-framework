@@ -253,7 +253,7 @@ To prepare, set up a virtual network to access the database. Create a virtual ne
 
 1. Reconfigure any applications or processes that use the on-premises database to point to the new Azure Database for PostgreSQL database instance.
 
-1. For post-migration, Contos will ensure that it also set up cross-region read replicas, if necessary, after the migration is finished.
+1. For post-migration, Contoso will ensure that it also set up cross-region read replicas, if necessary, after the migration is finished.
 
 ## Clean up after migration
 
