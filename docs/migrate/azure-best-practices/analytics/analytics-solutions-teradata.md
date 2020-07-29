@@ -47,7 +47,7 @@ A good candidate for an initial migration from a Teradata environment that would
 
 For size, it's important that the data volume you migrate in the initial exercise is large enough to demonstrate the capabilities and benefits of the Azure Synapse environment while keeping the time to demonstrate value short. The size that typically meets the requirements is in the range of 1 TB to 10 TB.
 
-An approach for the initial migration project that minimizes risk and implementation time is to confine the scope of the migration to data marts. This approach is a good starting point because it clearly limits the scope of the migration and typically can be achieved on a short timescale. An initial migration of data marts only doesn't address broader concerns like how to migrate ETL and historical data. These areas must be addressed in later phases as the migrated data mart layer is backfilled with the data and processes that are required to build them.
+An approach for the initial migration project that minimizes risk and implementation time is to confine the scope of the migration to data marts (for example, the OLAP database part of a Teradata data warehouse). This approach is a good starting point because it clearly limits the scope of the migration and typically can be achieved on a short timescale. An initial migration of data marts only doesn't address broader concerns like how to migrate ETL and historical data. These areas must be addressed in later phases as the migrated data mart layer is backfilled with the data and processes that are required to build them.
 
 ## Lift-and-shift approach vs. phased approach
 
@@ -61,23 +61,23 @@ Regardless of the drivers and scope that you choose for your migration, generall
 
   The recommended approach is to initially move the existing data model as-is to Azure. Then, take advantage of the performance and flexibility of Azure services to apply the re-engineering changes without affecting the existing source system.
 
-## Migration via a VM Teradata instance
+## Virtual machine colocation to support migration
 
-An optional approach for running a migration from an on-premises Teradata environment is to use the Azure environment that provides cheap cloud storage and elastic scalability to create a Teradata instance within a VM in Azure, colocated with the target Azure Synapse Analytics environment.
+An optional approach for running a migration from an on-premises Teradata environment is to use the inexpensive cloud storage and elastic scalability in the Azure environment to create a Teradata instance within a VM in Azure, colocated with the target Azure Synapse Analytics environment.
 
-With this approach, you can use standard Teradata utilities like Teradata Parallel Data Transporter (or third-party data replication tools like Attunity Replicate) to efficiently move the subset of Teradata tables that are to be migrated onto the VM instance. Then, all migration tasks take place in the Azure environment. This approach has several benefits:
+With this approach, you can use standard Teradata utilities like Teradata Parallel Data Transporter (or third-party data replication tools like Attunity Replicate) to efficiently move the subset of Teradata tables that are being migrated to the VM instance. Then, all migration tasks take place in the Azure environment. This approach has several benefits:
 
 - After the initial replication of data, the source system isn't affected by other migration tasks.
 - Familiar Teradata interfaces, tools, and utilities are available in the Azure environment.
 - After the migration shifts to the Azure environment, you don't have to worry about potential issues with network bandwidth availability between the on-premises source system and the cloud target system.
-- Tools like Azure Data Factory can efficiently call utilities like Teradata Parallel Transporter to migrate data quickly and easily.
+- Tools like Azure Data Factory efficiently call utilities like Teradata Parallel Transporter to migrate data quickly and easily.
 - The migration process is orchestrated and controlled entirely from within the Azure environment.
 
 ## Metadata migration
 
 It makes sense to automate and orchestrate the migration process by using the capabilities of the Azure environment. This approach also minimizes the effect on the existing Teradata environment, which might already be running close to full capacity.
 
-Azure Data Factory is a cloud-based data integration service. You can use Data Factory to create data-driven workflows in the cloud to orchestrate and automate data movement and data transformation. Data Factory pipelines can ingest data from disparate datastores, and then process and transform the data by using compute services like Azure HDInsight for Apache Hadoop and Apache Spark, Azure Data Lake Analytics, and Azure Machine Learning. You start by creating metadata to list the data tables you want to migrate, with their locations, and then use Data Factory capabilities to manage the migration process.
+Data Factory is a cloud-based data integration service. You can use Data Factory to create data-driven workflows in the cloud to orchestrate and automate data movement and data transformation. Data Factory pipelines can ingest data from disparate datastores, and then process and transform the data by using compute services like Azure HDInsight for Apache Hadoop and Apache Spark, Azure Data Lake Analytics, and Azure Machine Learning. You start by creating metadata to list the data tables you want to migrate, with their locations, and then use Data Factory capabilities to manage the migration process.
 
 ## Design differences between Teradata and Azure Synapse
 
@@ -180,9 +180,9 @@ Here's some additional information about migrating functions, stored procedures,
 
   Teradata provides Stored Procedure Language to create stored procedures. Azure Synapse supports stored procedures by using T-SQL. If you migrate stored procedures to Azure Synapse, you must recode them by using T-SQL.
 
-- **Triggers**: You can't create triggers in Azure Synapse, but you can implement triggers in Azure Data Factory.
+- **Triggers**: You can't create triggers in Azure Synapse, but you can implement triggers in Data Factory.
 
-- **Sequences**: Azure Synapse sequences are handled similar to how they are handled in Teradata, by using `IDENTITY` columns or by using SQL code to create the next sequence number in a series.
+- **Sequences**: Azure Synapse sequences are handled similarly to how they are handled in Teradata, by using `IDENTITY` columns or by using SQL code to create the next sequence number in a series.
 
 ## Metadata and data extraction
 
@@ -200,7 +200,7 @@ Consider the following information when you plan how to extract metadata and dat
 
   Migrate the raw data to from existing Teradata tables by using standard Teradata utilities like `BTEQ` and `FASTEXPORT`. Generally during a migration exercise, it's important to extract the data as efficiently as possible. The recommended approach in recent versions of Teradata is to use Teradata Parallel Transporter, a utility that uses multiple parallel `FASTEXPORT` streams to achieve the best throughput.
 
-  You can call Teradata Parallel Transporter directly from Azure Data Factory. We recommend this approach for managing the data migration process, whether the Teradata instance in on-premises or copied to a VM in the Azure environment, as described earlier.  
+  You can call Teradata Parallel Transporter directly from Data Factory. We recommend this approach for managing the data migration process, whether the Teradata instance in on-premises or copied to a VM in the Azure environment, as described earlier.  
 
   The data formats we recommend for extracted data are delimited text files (also called *comma-separated values*), optimized row columnar files, or Parquet files.
 
