@@ -1,9 +1,9 @@
 ---
-title: "Analytics solutions for Teradata"
-description: Use the Cloud Adoption Framework for Azure to learn about analytic solutions with Teradata.
+title: Azure Synapse Analytics solutions and migration for Teradata 
+description: Use the Cloud Adoption Framework for Azure to learn about analytics solutions for Teradata and migrating to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
-ms.date: 07/14/2019
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.service: cloud-adoption-framework
 ms.subservice: migrate
@@ -11,55 +11,59 @@ ms.subservice: migrate
 
 <!-- cSpell:ignore DATEADD DATEDIFF Attunity Teradata Inmon NUSI Informatica Talend BTEQ FASTEXPORT QUALIFY ORC Parquet "Parallel Data Transporter" "Attunity Replicate" -->
 
-# Analytics solutions for Teradata
+# Azure Synapse Analytics solutions and migration for Teradata
 
-Existing users of Teradata data warehouse systems are now looking to take advantage of the innovations provided by newer environments (for example, cloud, IaaS, PaaS) and to delegate tasks such as infrastructure maintenance and platform development to the cloud provider.
+Existing users of Teradata data warehouse systems are now are looking to take advantage of innovative cloud, infrastructure as a service (IaaS), and platform as a service (PaaS) offerings in newer environments like Azure. Many organizations are ready to take the step of shifting expensive tasks like infrastructure maintenance and platform development to a cloud provider. 
 
-While there are similarities between Teradata and Azure Synapse Analytics in that both are SQL databases designed to use massively parallel processing (MPP) techniques to achieve high query performance on large data volumes, there are also some basic differences in approach:
+Azure Synapse Analytics is a limitless analytics service that brings together enterprise data warehousing and Big Data analytics. It gives you the freedom to query data on your terms, by using either serverless on-demand or provisioned resources, at scale. Learn what to plan for as you migrate a legacy Teradata system to Azure Synapse.
 
-- Legacy Teradata systems will usually be installed on-premises, using proprietary hardware whereas Azure Synapse Analytics uses cloud-based storage and compute resources.
-- Upgrading a Teradata configuration is a major task involving additional physical hardware and a potentially lengthy database reconfiguration. Since storage and compute resources are separate in the Azure environment, these resources can easily be scaled (upwards and downwards) independently using the elastic scalability capability.
-- Azure Synapse Analytics can be paused or resized as required to reduce resource utilization and therefore cost.
+Although Teradata and Azure Synapse are similar in that they both are SQL databases that are designed to use massively parallel processing techniques to achieve high query performance on large data volumes, they have some basic differences:
 
-To maximize these benefits, it's necessary to migrate existing (or new) data and applications to the Azure Synapse Analytics platform, and in many organizations this will include migration of an existing data warehouse from legacy on-premises platforms such as Teradata. At a high level, the basic process will include the following steps:
+- Legacy Teradata systems are installed on-premises, and they use proprietary hardware. Azure Synapse is cloud-based and uses Azure storage and compute resources.
+- Upgrading a Teradata configuration is a major task that involves extra physical hardware and a potentially lengthy database reconfiguration or dump and reload. In Azure Synapse,  storage and compute resources are separate, so you can easily scale these resources up or down independently by using the elastic scalability of Azure.
+- Without a physical system to support, you can pause or resize Azure Synapse as needed to reduce resource utilization and cost. In Microsoft Azure, you have access to a globally available, highly secure, scalable cloud environment that includes Azure Synapse in an ecosystem of supporting tools and capabilities.
+
+In this article, we look at schema migration, with a view to obtaining equivalent or increased performance of your migrated Teradata data warehouse and data marts on Azure Synapse. We consider concerns that apply specifically to migrating from an existing Teradata environment.
+
+At a high level, the migration process includes the steps that are listed in the following table:
 
 <!-- markdownlint-disable MD033 -->
 
-| Preparation | Migration | Post migration |
-|---|---|---|
-| <li> Define scope - what is to be migrated <li> Build inventory of data and processes for migration <li> Define data model changes (if any) <li> Identify appropriate Azure (and third-party) tools and features to be used <li> Train staff early on new platform <li> Set up Azure target platform |  <li> Start small and simple <li> Automate where possible <li> Use Azure built in tools and features to reduce migration effort <li> Migrate metadata for tables and views <li> Migrate historical data to be maintained <li> Migrate or refactor stored procedures and business processes <li> Migrate or refactor ETL/ELT incremental load processes |  <li> Monitor and document all stages of the process <li> Use experience gained to build a template for future migrations <li> Re-engineer the data model if necessary, using new platform performance and scalability <li> Test applications and query tools <li> Benchmark and optimize query performance |
+| Preparation        | Migration                             | Post-migration |
+| :----------------- | :----------------------------- | :---------------- |
+| <ul><li> Define scope: what do we want to migrate?</li><li>Build an inventory of data and processes to migrate.</li><li>Define any data model changes.</li><li>Identify the best Azure and third-party tools and features to use.</li><li>Train staff early on the new platform.</li><li>Set up the Azure target platform.</li></ul> |  <ul><li> Start small and simple.</li><li>Automate where possible.</li><li>Use Azure built-in tools and features to reduce the migration effort.</li><li>Migrate metadata for tables and views.</li><li>Migrate relevant historical data.</li><li>Migrate or refactor stored procedures and business processes.</li><li>Migrate or refactor ETL/ELT incremental load processes.</li></ul> | <ul><li> Monitor and document all stages of the migration process.</li><li>Use experience gained to build a template for future migrations.</li><li>Re-engineer the data model if necessary by using the new platform's performance and scalability.</li><li>Test applications and query tools.</li><li>Benchmark and optimize query performance.</li></ul> |
 
-## Migration scope
+When you migrate from a legacy Teradata environment to Azure Synapse, you must consider some specific factors, in addition to the more general subjects described in the Teradata documentation. 
 
-### Choose the workload for the initial migration
+## Initial migration workload
 
-Legacy Teradata environments have typically evolved over time to encompass multiple subject areas and mixed workloads. When deciding where to start on an initial migration project, you should choose an area that will be able to:
+Legacy Teradata environments typically evolve over time to encompass multiple subject areas and mixed workloads. When you are deciding where to start on an initial migration project, it makes sense to choose an area that:
 
-- Prove the viability of migrating to Azure Synapse Analytics by quickly delivering the benefits of the new environment.
-- Allow the in-house technical staff to gain relevant experience of the processes and tools involved that can be used in migrations of other areas.
-- Create a template for further migration exercises that is specific to the source Teradata environment and the current tools and processes that are already in place.
+- Proves the viability of migrating to Azure Synapse by quickly delivering the benefits of the new environment.
+- Allows in-house technical staff to gain experience with new processes and tools so that they can use them to migrate other areas.
+- Creates a template based on the current tools and processes to use in additional migration from the source Teradata environment.
 
-A good candidate for an initial migration from a Teradata environment, which would enable the items above, is typically one that implements a BI/analytics workload (that is, not an OLTP workload) with a data model that can be migrated with minimal modifications—normally a star or snowflake schema.
+A good candidate for an initial migration from a Teradata environment that would support these objectives typically is one that implements a Power BI/analytics workload rather than an OLTP workload. The workload should have a data model that can be migrated with minimal modifications, such as a star or snowflake schema.
 
-In terms of size, it is important that the data volume to be migrated in the initial exercise is large enough to demonstrate the capabilities and benefits of the Azure Synapse Analytics environment, while keeping the time to demonstrate value short, typically in the 1-10 TB range.
+For size, it's important that the data volume you migrate in the initial exercise is large enough to demonstrate the capabilities and benefits of the Azure Synapse environment while keeping the time to demonstrate value short. The size that typically meets the requirements is in the range of 1 TB to 10 TB.
 
-One possible approach for the initial migration project that will minimize the risk and reduce the implementation time for the initial project is to confine the scope of the migration to just the data marts (for example, the OLAP database part of a Teradata warehouse). This approach, by definition, limits the scope of the migration and can typically be achieved within short timescales and so can be a good starting point. However, this approach will not address the broader topics such as ETL migration and historical data migration as part of the initial migration project. These must be addressed in later phases of the project as the migrated data mart layer is back filled with the data and processes required to build them.
+An approach for the initial migration project that minimizes risk and implementation time is to confine the scope of the migration to data marts. This approach is a good starting point because it clearly limits the scope of the migration and typically can be achieved on a short timescale. An initial migration of data marts only doesn't address broader concerns like how to migrate ETL and historical data. These areas must be addressed in later phases as the migrated data mart layer is backfilled with the data and processes that are required to build them.
 
-## Lift and shift as-is versus a phased approach incorporating changes
+## Lift-and-shift approach vs. phased approach
 
-Whatever the drivers and scope of the intended migration, broadly speaking there are two types of migration:
+Regardless of the drivers and scope that you choose for your migration, generally, you can choose from two types of migration:
 
-### Lift and shift
+- **Lift-and-shift approach**: In this approach, the existing data model, such as a star schema, is migrated unchanged to the new Azure Synapse platform. In this scenario, the emphasis is on minimizing risk and the time it takes to migrate by reducing the work that has to be done to achieve the benefits of moving to the Azure cloud environment.
 
-In this case, the existing data model (for example, a star schema) is migrated unchanged to the new Azure Synapse Analytics platform. The emphasis here is on minimizing risk and the time taken to migrate by reducing the work that has to be done to achieve the benefits of moving to the Azure cloud environment.
+  This approach is a good fit for existing Teradata environments in which a single data mart is to be migrated if the data is already in a well-designed star or snowflake schema, or if you have time and cost pressures to move to a more modern cloud environment.
 
-This is a good fit for existing Teradata environments where a single data mart is to be migrated, or the data is already in a well-designed star or snowflake schema, or perhaps there are time pressures to move to a more modern environment.
+- **Phased approach that incorporates modifications**: When a legacy warehouse has evolved over time, you might need to reengineer the data warehouse to maintain the required performance or support new data sources like IoT streams. Migrating to Azure Synapse for the well-known benefits of a scalable cloud environment might be considered part of the re-engineering process. This process might include changing the underlying data model, such as moving from an Inmon model to Azure Data Vault.
 
-### Phased approach incorporating modifications
+  The recommended approach is to initially move the existing data model as-is to Azure. Then, take advantage of the performance and flexibility of Azure services to apply the re-engineering changes without affecting the existing source system.
 
-For cases where a legacy warehouse has evolved over a long time it may be necessary to re-engineer to maintain the required performance levels or support new data (for example, IoT streams). Migration to Azure Synapse Analytics to obtain the benefits of a scalable cloud environment might be considered as part of the re-engineering process. This could include a change of the underlying data model (for example, a move from an Inmon model to data vault).
 
-The recommended approach for this is to initially move the existing data model as-is into the Azure environment (optionally using a VM Teradata instance in Azure as described below) then to use the performance and flexibility of the Azure environment to apply the re-engineering changes, using the Azure capabilities where appropriate to make the changes without affecting the existing source system.
+
+
 
 ## Using a VM Teradata instance as part of a migration
 
@@ -73,30 +77,39 @@ With this approach, standard Teradata utilities such as Teradata Parallel Data T
 - Tools such as Azure Data Factory can efficiently call utilities such as Teradata Parallel Transporter to migrate data quickly and easily.
 - The migration process is orchestrated and controlled entirely within the Azure environment.
 
-## Use Azure Data Factory to implement a metadata-driven migration
 
-It makes sense to automate and orchestrate the migration process by making use of the capabilities in the Azure environment. This approach also minimizes the impact on the existing Teradata environment (which may already be running close to full capacity).
 
-Azure Data Factory is a cloud-based data integration service that allows creation of data-driven workflows in the cloud for orchestrating and automating data movement and data transformation. Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores. It can process and transform the data by using compute services such as Azure HDInsight Hadoop, Spark, Azure Data Lake Analytics, and Azure Machine Learning.
 
-By creating metadata to list the data tables to be migrated and their location, it is possible to use the Azure Data Factory facilities to manage and automate parts of the migration process.
 
-## Design differences between Teradata and Azure Synapse Analytics
+## Metadata migration
 
-### Separate databases versus schemas
+It makes sense to automate and orchestrate the migration process by using the capabilities of the Azure environment. This approach also minimizes the effect on the existing Teradata environment, which might already be running close to full capacity.
 
-In a Teradata environment, it's common to define multiple separate databases for individual parts of the overall environment, for example, there may be a separate database for data ingestion and staging tables, a database for the core warehouse tables and another database for data marts (sometimes called a semantic layer). Processing such as ETL/ELT pipelines may implement cross-database joins and will move data between these separate databases.
+Azure Data Factory is a cloud-based data integration service. You can use Data Factory to create data-driven workflows in the cloud to orchestrate and automate data movement and data transformation. Data Factory pipelines can ingest data from disparate datastores, and then process and transform the data by using compute services like Azure HDInsight for Apache Hadoop and Apache Spark, Azure Data Lake Analytics, and Azure Machine Learning. You start by creating metadata to list the data tables you want to migrate, with their locations, and then use Data Factory capabilities to manage the migration process.
 
-The Azure Synapse Analytics environment has a single database, and schemas are used to separate the tables into logically separate groups. Therefore, the recommendation is to use a series of schemas within the target Azure Synapse Analytics to mimic the separate databases that will be migrated from the Teradata environment. If schemas are already being used within the Teradata environment, then it may be necessary to use a new naming convention to move the existing Teradata tables and views to the new environment (for example, concatenate the existing Teradata schema and table names into the new Azure Synapse Analytics table name and use schema names in the new environment to maintain the original separate database names). Another option is to use SQL views over the underlying tables to maintain the logical structures, but there are some potential downsides to this approach:
+## Design differences between Teradata and Azure Synapse
 
-- Views in Azure Synapse Analytics are read-only, so any updates to the data must take place on the underlying base tables.
-- There may already be a layer (or layers) of views in existence and adding an extra layer of views might affect performance.
+As you plan your migration from a legacy Teradata environment to Azure Synapse, it's important to consider the design differences between the two platforms.
 
-### Table considerations
+### Multiple databases vs. a single database and schemas
 
-When migrating tables between different technologies, it's typically only the raw data along with the metadata that describes it that is physically moved between the two environments. Other database elements from the source system (for example, indexes) are not migrated as these elements may not be needed, or they may be implemented differently within the new target environment.
+In a Teradata environment, you might have multiple, separate databases for different parts of the overall environment. For example, you might have a separate database for data ingestion and staging tables, a database for core warehouse tables, and another database for data marts (sometimes called a *semantic layer*). Processing separate databases as ETL/ELT pipelines in Azure Synapse might require implementing cross-database joins and moving data between the separate databases.
 
-However, it is important to understand where performance optimizations such as indexes have been used in the source environment as this information can give useful indication of where performance optimization might be added in the new target environment. For example, if a NUSI has been created within the source Teradata environment, it may indicate that a non-clustered index should be created within the migrated Azure Synapse Analytics, but other native performance optimization techniques (such as table replication) might be more applicable than a straight like-for-like creation of indexes.
+The Azure Synapse environment has a single database. Schemas are used to separate tables into logically separate groups. We recommend that you use a series of schemas in the target Azure Synapse to mimic any separate databases that you migrate from Teradata. If you use schemas in the Teradata environment, you might need to use a new naming convention to move the existing Teradata tables and views to the new environment. For example, you might concatenate the existing Teradata schema and table names into the new Azure Synapse table name, and then use schema names in the new environment to maintain the original separate database names. 
+
+Another option is to use SQL views over the underlying tables to maintain the logical structures. There are some potential downsides to using SQL views:
+
+- Views in Azure Synapse are read-only, so you must make any updates to the data on the underlying base tables.
+- If layers of views already exist, adding another layer of views might affect performance.
+
+### Tables
+
+When you migrate tables between different technologies, you physically move only raw data and the metadata that describes it between the two environments. You don't migrate database elements like indexes from the source system because they might not be needed or they might be implemented differently in the new environment.
+
+However, understanding where performance optimizations like indexes have been used in the source environment can be a helpful indication of where you might optimize performance in the new environment. For example, if queries in the source Teradata environment frequently use zone maps, you might conclude that it would be advantageous to create a nonclustered index in the migrated Azure Synapse environment, or that using other native performance optimization techniques like table replication might be preferable to creating a like-for-like index.
+
+
+
 
 ### High availability for the database
 
@@ -155,6 +168,10 @@ There are a few differences in SQL Data Manipulation Language (DML) syntax betwe
     `SELECT * FROM CUSTOMER WHERE (POSTCODE LIKE 'CV1%') OR (POSTCODE LIKE 'CV2%') OR (POSTCODE LIKE 'CV3%') ;`
 
 - Depending on system settings, character comparisons in Teradata may be non-case-specific by default. In Azure Synapse these comparisons are always case-specific.
+
+
+
+
 
 ## Functions, stored procedures, triggers, and sequences
 
@@ -235,14 +252,10 @@ Only one field per table can be used for partitioning, and this is frequently a 
 
 Ensure that statistics on data tables are up to date. This can be achieved by building in a `COLLECT STATISTICS` step to ETL/ELT jobs, or by enabling automatic statistics collection on the table.
 
-### PolyBase for data loading
+- **PolyBase for data loading**: PolyBase is the most efficient method to use to load large amounts of data into a warehouse. You can use PolyBase to load data in parallel streams.
 
-PolyBase is the most efficient method for loading large amounts of data into the warehouse, as it can use parallel loading streams.
-
-### Use resource classes for workload management
-
-Azure Synapse Analytics uses resource classes to manage workloads. In general, large resource classes provide better individual query performance, while smaller resource classes enable higher levels of concurrency. Utilization can be monitored via dynamic management views to ensure that the appropriate resources are being used efficiently.
+- **Resource classes for workload management**: Azure Synapse uses resource classes to manage workloads. In general, large resource classes provide better individual query performance. Smaller resource classes give you higher levels of concurrency. You can use dynamic management views to monitor utilization to help ensure that the appropriate resources are used efficiently.
 
 ## Next steps
 
-For more information on implementing a Teradata migration, talk with your Microsoft account representative about on-premises migration offers.
+For more information about implementing a Netezza migration, talk with your Microsoft account representative about on-premises migration offers.
