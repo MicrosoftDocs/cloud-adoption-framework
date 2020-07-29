@@ -62,7 +62,7 @@ To forecast your monthly bill for migrated workloads, there are several tools yo
 - [Use](https://azure.microsoft.com/pricing/calculator) the Azure pricing calculator.
 - Read the [Azure Migrate overview](https://docs.microsoft.com/azure/migrate/migrate-services-overview).
 - [Read about](https://docs.microsoft.com/azure/migrate/concepts-assessment-calculation) Azure Migrate assessments.
-- Learn more about the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
+- Learn more about [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview).
 
 ## Best practice: Right-size VMs
 
