@@ -37,7 +37,7 @@ When planning your virtual network topology, you should consider how to arrange 
 
 When you create virtual networks as part of your migration, it's important to plan out your virtual network IP address space.
 
-You should assign an address space that isn't larger than a CIDR range of `/16` for each virtual network. Virtual networks allow for the use of 65,536 IP addresses. Assigning a smaller prefix than `/16`, such as a `/15`, which has 131,072 addresses, will result in the the excess IP addresses becoming unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
+You should assign an address space that isn't larger than a CIDR range of `/16` for each virtual network. Virtual networks allow for the use of 65,536 IP addresses. Assigning a smaller prefix than `/16`, such as a `/15`, which has 131,072 addresses, will result in the excess IP addresses becoming unusable elsewhere. It's important not to waste IP addresses, even if they're in the private ranges defined by RFC 1918.
 
 Other tips for planning are:
 
@@ -238,7 +238,7 @@ Deploying ExpressRoute connections usually involves engaging with an ExpressRout
 
 ### Best practice: Optimize ExpressRoute routing with BGP communities
 
-When you have multiple ExpressRoute circuits, you have more than one path to connect to Microsoft. As a result, suboptimal routing can happen and your traffic might take a longer path to reach Microsoft, and Microsoft to your network. The longer the network path,the higher the latency. Latency directly affects application performance and the user experience.
+When you have multiple ExpressRoute circuits, you have more than one path to connect to Microsoft. As a result, suboptimal routing can happen and your traffic might take a longer path to reach Microsoft, and Microsoft to your network. The longer the network path, the higher the latency. Latency directly affects application performance and the user experience.
 
 **Example:**
 
