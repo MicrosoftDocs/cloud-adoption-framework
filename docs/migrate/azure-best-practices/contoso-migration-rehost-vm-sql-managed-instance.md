@@ -59,7 +59,7 @@ After pinning down the company's goals and requirements, Contoso designs and rev
 
 In this scenario, Contoso wants to migrate its two-tier on-premises travel application as follows:
 
-- Migrate the application database (`SmartHotelDB`) to an Azure SQL Managed Instance.
+- Migrate the application database (`SmartHotelDB`) to an Azure SQL managed instance.
 - Migrate the front end, `WEBVM`, to an Azure VM.
 - The on-premises VMs in the Contoso datacenter will be decommissioned when the migration is finished.
 
@@ -73,7 +73,7 @@ As part of the solution design process, Contoso did a feature comparison between
 - Contoso is planning to migrate a large number of applications from on-premises to IaaS. Many of these applications are ISV provided. Contoso realizes that using SQL Managed Instance will help ensure database compatibility for these applications, rather than using SQL Database, which might not be supported.
 - Contoso can perform a lift-and-shift migration to SQL Managed Instance by using the fully automated Azure Database Migration Service. With this service in place, Contoso can reuse it for future database migrations.
 - SQL Managed Instance supports SQL Server Agent, an important component of the SmartHotel360 application. Contoso needs this compatibility. Otherwise, it will have to redesign maintenance plans required by the application.
-- With Software Assurance, Contoso can exchange its existing licenses for discounted rates on a SQL Managed Instance by using the Azure Hybrid Benefit for SQL Server. For this reason, Contoso can save up to 30 percent on SQL Managed Instance.
+- With Software Assurance, Contoso can exchange its existing licenses for discounted rates on a SQL managed instance by using the Azure Hybrid Benefit for SQL Server. For this reason, Contoso can save up to 30 percent on SQL Managed Instance.
 - SQL Managed Instance is fully contained in the virtual network, so it provides greater isolation and security for Contoso's data. Contoso can get the benefits of the public cloud while keeping the environment isolated from the public internet.
 - SQL Managed Instance supports many security features. They include Always Encrypted, dynamic data masking, row-level security, and threat detection.
 
@@ -101,7 +101,7 @@ Contoso will migrate the web and data tiers of its SmartHotel360 application to 
 | Service | Description | Cost |
 | --- | --- | --- |
 | [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview) | Azure Database Migration Service enables seamless migration from multiple database sources to Azure data platforms with minimal downtime. | Learn about [supported regions](https://docs.microsoft.com/azure/dms/dms-overview#regional-availability) and [Azure Database Migration Service pricing](https://azure.microsoft.com/pricing/details/database-migration). |
-| [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) | SQL Managed Instance is a managed database service that represents a fully managed SQL Server instance in the Azure cloud. It uses the same code as the latest version of SQL Server Database Engine and has the latest features, performance improvements, and security patches. | Using a SQL Managed Instance running in Azure incurs charges based on capacity. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed). |
+| [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) | SQL Managed Instance is a managed database service that represents a fully managed SQL Server instance in the Azure cloud. It uses the same code as the latest version of SQL Server Database Engine and has the latest features, performance improvements, and security patches. | Using a SQL managed instance running in Azure incurs charges based on capacity. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed). |
 | [Azure Migrate](https://docs.microsoft.com/azure/migrate/migrate-services-overview) | Contoso uses Azure Migrate to assess its VMware VMs. Azure Migrate assesses the migration suitability of the machines. It provides sizing and cost estimates for running in Azure. | Azure Migrate is available at no additional charge. They might incur charges depending on the tools (first-party or independent software vendor) they decide to use for assessment and migration. Learn more about [Azure Migrate pricing](https://azure.microsoft.com/pricing/details/azure-migrate). |
 
 ## Prerequisites
@@ -122,7 +122,7 @@ Here's how Contoso plans to set up the deployment:
 
 > [!div class="checklist"]
 >
-> - **Step 1: Prepare a SQL Managed Instance.** Contoso needs an existing managed instance to which the on-premises SQL Server database will migrate.
+> - **Step 1: Prepare a SQL managed instance.** Contoso needs an existing managed instance to which the on-premises SQL Server database will migrate.
 > - **Step 2: Prepare Azure Database Migration Service.** Contoso must register the database migration provider, create an instance, and then create a Database Migration Service project. Contoso also must set up a shared access signature (SAS) uniform resource identifier (URI) for the Database Migration Service instance. An SAS URI provides delegated access to resources in Contoso's storage account so that Contoso can grant limited permissions to storage objects. Contoso sets up an SAS URI so that Azure Database Migration Service can access the storage account container to which the service uploads the SQL Server backup files.
 > - **Step 3: Prepare Azure for the Azure Migrate: Server Migration tool.** Contoso adds the server migration tool to its Azure Migrate project.
 > - **Step 4: Prepare on-premises VMware for Azure Migrate: Server Migration.** Contoso prepares accounts for VM discovery and prepares to connect to Azure VMs after migration.
@@ -130,15 +130,15 @@ Here's how Contoso plans to set up the deployment:
 > - **Step 6: Migrate the database via Azure Database Migration Service.** Contoso migrates the database.
 > - **Step 7: Migrate the VMs with Azure Migrate: Server Migration.** Contoso runs a test migration to make sure everything's working and then runs a full migrate to move the VM to Azure.
 
-## Step 1: Prepare a SQL Managed Instance
+## Step 1: Prepare a SQL managed instance
 
-To set up an Azure SQL Managed Instance, Contoso needs a subnet that meets the following requirements:
+To set up an Azure SQL managed instance, Contoso needs a subnet that meets the following requirements:
 
 - The subnet must be dedicated. It must be empty. It can't contain any other cloud service. The subnet can't be a gateway subnet.
 - After the managed instance is created, Contoso shouldn't add resources to the subnet.
 - The subnet can't have a network security group associated with it.
 - The subnet must have a user-defined route table. The only route assigned should be `0.0.0.0/0` next-hop internet.
-- If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers in Azure must be added to the list. Learn how to [configure custom DNS for an Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-custom-dns).
+- If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers in Azure must be added to the list. Learn how to [configure custom DNS for an Azure SQL managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-custom-dns).
 - The subnet must not have a service endpoint (storage or SQL) associated with it. Service endpoints should be disabled on the virtual network.
 - The subnet must have a minimum of 16 IP addresses. Learn how to [size the managed instance subnet](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-vnet-configuration).
 - In Contoso's hybrid environment, custom DNS settings are required. Contoso configures DNS settings to use one or more of the company's Azure DNS servers. Learn more about [DNS customization](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-custom-dns).
@@ -153,7 +153,7 @@ To set up the virtual network, the Contoso admins:
     - `SQLMI-DS-EUS2` (`10.235.0.0/25`).
     - `SQLMI-SAW-EUS2` (`10.235.0.128/29`). This subnet is used to attach a directory to the managed instance.
 
-      ![Screenshot that shows the SQL Managed Instance: Create virtual network pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
+      ![Screenshot that shows the SQL managed instance: Create virtual network pane.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-vnet.png)
 
 1. After the virtual network and subnets are deployed, they peer networks as follows:
 
@@ -174,7 +174,7 @@ To set up the virtual network, the Contoso admins:
 **Need more help?**
 
 - Read the [SQL Managed Instance overview](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
-- Learn how to [create a virtual network for a SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-vnet-configuration).
+- Learn how to [create a virtual network for a SQL managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-vnet-configuration).
 - Learn how to [set up peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-peering).
 - Learn how to [update Azure Active Directory DNS settings](https://docs.microsoft.com/azure/active-directory-domain-services/tutorial-create-instance).
 
@@ -209,7 +209,7 @@ Learn how to [set up routes for a managed instance](https://docs.microsoft.com/a
 
 ### Create a managed instance
 
-Now the Contoso admins can provision a SQL Managed Instance:
+Now the Contoso admins can provision a SQL managed instance:
 
 1. Because the managed instance serves a business application, they deploy the managed instance in the company's primary region (`East US 2`). They add the managed instance to the `ContosoRG` resource group.
 1. They select a pricing tier, size compute, and storage for the instance. Learn more about [SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/sql-database/managed).
@@ -218,7 +218,7 @@ Now the Contoso admins can provision a SQL Managed Instance:
 
 1. After the managed instance is deployed, two new resources appear in the `ContosoRG` resource group:
 
-    - The new SQL Managed Instance.
+    - The new SQL managed instance.
     - A virtual cluster in case Contoso has multiple managed instances.
 
       ![Screenshot that shows two new resources.](./media/contoso-migration-rehost-vm-sql-managed-instance/mi-resources.png)
@@ -481,16 +481,16 @@ Now the Contoso admins run a full migration to complete the move.
 
 ### Update the connection string
 
-As the final step in the migration process, the Contoso admins update the connection string of the application to point to the migrated database that's running on Contoso's SQL Managed Instance.
+As the final step in the migration process, the Contoso admins update the connection string of the application to point to the migrated database that's running on Contoso's SQL managed instance.
 
 1. In the Azure portal, they find the connection string by selecting **Settings** > **Connection strings**.
 
     ![Screenshot that shows the Connection strings option.](./media/contoso-migration-rehost-vm-sql-managed-instance/failover4.png)
 
-1. They update the string with the user name and password of the SQL Managed Instance.
+1. They update the string with the user name and password of the SQL managed instance.
 1. After the string is configured, they replace the current connection string in the `web.config` file of its application.
 1. After they update the file and save it, they restart IIS on `WEBVM` by running `iisreset /restart` in a command prompt window.
-1. After IIS is restarted, the application uses the database that's running on the SQL Managed Instance.
+1. After IIS is restarted, the application uses the database that's running on the SQL managed instance.
 1. At this point, they can shut down the on-premises SQLVM machine. The migration is finished.
 
 **Need more help?**
@@ -501,7 +501,7 @@ As the final step in the migration process, the Contoso admins update the connec
 
 ## Clean up after migration
 
-With the migration finished, the SmartHotel360 application is running on an Azure VM and the SmartHotel360 database is available in the Azure SQL Managed Instance.
+With the migration finished, the SmartHotel360 application is running on an Azure VM and the SmartHotel360 database is available in the Azure SQL managed instance.
 
 Now, Contoso needs to perform these cleanup tasks:
 
@@ -518,7 +518,7 @@ With the migrated resources in Azure, Contoso needs to fully operationalize and 
 
 ### Security
 
-The Contoso security team reviews the Azure VMs and SQL Managed Instance to check for any security issues with its implementation:
+The Contoso security team reviews the Azure VMs and SQL managed instance to check for any security issues with its implementation:
 
 - The team reviews the network security groups that are used to control access for the VM. Network security groups help ensure that only traffic that's allowed to the application can pass.
 - Contoso's security team also is considering securing the data on the disk by using Azure Disk Encryption and Azure Key Vault.
@@ -543,4 +543,4 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ## Conclusion
 
-In this article, Contoso rehosts the SmartHotel360 application in Azure by migrating the application front-end VM to Azure by using Azure Migrate. Contoso migrates the on-premises database to an Azure SQL Managed Instance by using Azure Database Migration Service.
+In this article, Contoso rehosts the SmartHotel360 application in Azure by migrating the application front-end VM to Azure by using Azure Migrate. Contoso migrates the on-premises database to an Azure SQL managed instance by using Azure Database Migration Service.
