@@ -59,7 +59,7 @@ After pinning down the company's goals and requirements, Contoso designs and rev
 
 In this scenario, Contoso wants to migrate its two-tier on-premises travel application as follows:
 
-- Migrate the application database (`SmartHotelDB`) to an Azure SQL managed instance.
+- Migrate the application database (`SmartHotelDB`) to a SQL managed instance.
 - Migrate the front end, `WEBVM`, to an Azure VM.
 - The on-premises VMs in the Contoso datacenter will be decommissioned when the migration is finished.
 
@@ -132,13 +132,13 @@ Here's how Contoso plans to set up the deployment:
 
 ## Step 1: Prepare a SQL managed instance
 
-To set up an Azure SQL managed instance, Contoso needs a subnet that meets the following requirements:
+To set up a SQL managed instance, Contoso needs a subnet that meets the following requirements:
 
 - The subnet must be dedicated. It must be empty. It can't contain any other cloud service. The subnet can't be a gateway subnet.
 - After the managed instance is created, Contoso shouldn't add resources to the subnet.
 - The subnet can't have a network security group associated with it.
 - The subnet must have a user-defined route table. The only route assigned should be `0.0.0.0/0` next-hop internet.
-- If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers in Azure must be added to the list. Learn how to [configure custom DNS for an Azure SQL managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-custom-dns).
+- If an optional custom DNS is specified for the virtual network, the virtual IP address `168.63.129.16` for the recursive resolvers in Azure must be added to the list. Learn how to [configure custom DNS for a SQL managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-custom-dns).
 - The subnet must not have a service endpoint (storage or SQL) associated with it. Service endpoints should be disabled on the virtual network.
 - The subnet must have a minimum of 16 IP addresses. Learn how to [size the managed instance subnet](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-vnet-configuration).
 - In Contoso's hybrid environment, custom DNS settings are required. Contoso configures DNS settings to use one or more of the company's Azure DNS servers. Learn more about [DNS customization](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-custom-dns).
@@ -543,4 +543,4 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ## Conclusion
 
-In this article, Contoso rehosts the SmartHotel360 application in Azure by migrating the application front-end VM to Azure by using Azure Migrate. Contoso migrates the on-premises database to an Azure SQL managed instance by using Azure Database Migration Service.
+In this article, Contoso rehosts the SmartHotel360 application in Azure by migrating the application front-end VM to Azure by using Azure Migrate. Contoso migrates the on-premises database to a SQL managed instance by using Azure Database Migration Service.
