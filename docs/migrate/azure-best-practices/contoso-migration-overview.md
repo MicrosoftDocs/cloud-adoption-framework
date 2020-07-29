@@ -15,7 +15,7 @@ This section of the Cloud Adoption Framework for Azure provides examples of seve
 
 ## Introduction
 
-Azure provides access to a comprehensive set of cloud services. As developers and IT professionals, you can use these services to build, deploy, and manage applications on a range of tools and frameworks through a global network of datacenters. As your business faces challenges associated with the digital shift, the Azure cloud helps you to figure out how to:
+Azure provides access to a comprehensive set of cloud services. As developers and IT professionals, you can use these services to build, deploy, and manage applications on a range of tools and frameworks through a global network of datacenters. As your business faces challenges associated with the digital shift, the Azure plaftorm helps you to figure out how to:
 
 - Optimize resources and operations.
 - Engage with your customers and employees.
@@ -23,7 +23,7 @@ Azure provides access to a comprehensive set of cloud services. As developers an
 
 The cloud provides advantages for speed and flexibility, minimized costs, performance, and reliability. But many organizations will need to continue to run on-premises datacenters. In response to cloud adoption barriers, Azure provides a hybrid cloud strategy that builds bridges between your on-premises datacenters and the Azure public cloud. An example is using Azure cloud resources like Azure Backup to protect on-premises resources or Azure analytics to gain insights into on-premises workloads.
 
-As part of the hybrid cloud strategy, Azure provides growing solutions for migrating on-premises applications and workloads to the cloud. With simple steps, you can comprehensively assess your on-premises resources to figure out how they'll run in the Azure cloud. Then, with a deep assessment in hand, you can confidently migrate resources to Azure. When resources are up and running in Azure, you can optimize them to retain and improve access, flexibility, security, and reliability.
+As part of the hybrid cloud strategy, Azure provides growing solutions for migrating on-premises applications and workloads to the cloud. With simple steps, you can comprehensively assess your on-premises resources to figure out how they'll run in the Azure platform. Then, with a deep assessment in hand, you can confidently migrate resources to Azure. When resources are up and running in Azure, you can optimize them to retain and improve access, flexibility, security, and reliability.
 
 ## Migration patterns
 
