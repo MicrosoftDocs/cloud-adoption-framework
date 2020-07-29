@@ -184,7 +184,7 @@ The data is analyzed by Contoso to determine the most cost-effective use of both
 
 Using the Azure portal, Contoso will create a Windows Virtual Desktop environment to use for pooled resources. Later, it will go through the migration steps to attach personal desktops to the same environment.
 
-1. Contoso selects the correct subscription, and create a new Windows Virtual Desktop host pool.
+1. Contoso selects the correct subscription, and creates a new Windows Virtual Desktop host pool.
 
    ![Screenshot that shows provisioning a Windows Virtual Desktop host pool.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool.png)
   _Figure 11: A new Windows Virtual Desktop host pool._
@@ -211,7 +211,7 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop environmen
     > [!NOTE]
     > Contoso can't use a user account that requires multifactor authentication in this step. If Contoso plans to use multifactor authentication for its users, it will need to create a service principal for this purpose.
 
-1. Contoso performs one more validation of the Windows Virtual Desktop settings, and create the new environment of pooled Windows Virtual Desktop virtual machines.
+1. Contoso performs one more validation of the Windows Virtual Desktop settings, and creates the new environment of pooled Windows Virtual Desktop virtual machines.
 
    ![Screenshot that shows reviewing and creating virtual machines.](./media/contoso-migration-rds-to-wvd/wvd-new-host-pool-review-create.png)
    _Figure 14: Reviewing and creating virtual machines._
