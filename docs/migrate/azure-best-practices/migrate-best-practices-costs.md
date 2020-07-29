@@ -166,7 +166,7 @@ Most cloud platforms use a pay-as-you-go payment model. This model presents disa
 When you use Azure Reserved VM Instances, you prepay for a one-year or three-year term for VM instances.
 
 - Prepayment provides a discount on the resources you use.
-- You can significantly reduce VM, Azure SQL Database compute, Azure Cosmos DB, or other resource costs, compared to pay-as-you-go prices.
+- You can significantly reduce VM, Azure SQL Database compute, Azure Cosmos DB, or other resource costs that compare to pay-as-you-go prices.
 - Reservations provide a billing discount, and don't affect the runtime state of your resources.
 - You can cancel reserved instances.
 
@@ -183,7 +183,7 @@ _Figure 3: Azure Reserved VM Instances._
 
 Eventually, it's very likely that you'll have more than one Azure subscription. For example, you might need an additional subscription to separate development and production boundaries, or you might have a platform that requires a separate subscription for each client. Having the ability to aggregate data reporting across all the subscriptions into a single platform is a valuable feature.
 
-To do this, you can use Azure Cost Management and Billing APIs. Then, after aggregating data into a single source, such as Azure SQL, you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group, or other information. You don't need to provide them with full access to Azure billing data.
+To do this, you can use Azure Cost Management and Billing APIs. Then, after aggregating data into a single source such as Azure SQL you can use tools like Power BI to surface the aggregated data. You can create aggregated subscription reports, and granular reports. For example, for users who need proactive insights into cost management, you can create specific views of costs, based on department, resource group, or other information. You don't need to provide them with full access to Azure billing data.
 
 **Learn more:**
 
@@ -193,7 +193,7 @@ To do this, you can use Azure Cost Management and Billing APIs. Then, after aggr
 
 ## After migration
 
-After a successful migration of your workloads, and a few weeks of collecting consumption data, you'll have a clear idea of resources costs. As you analyze data, you can start to generate a budget baseline for Azure resource groups and resources. Then, as you understand where your cloud budget is being spent, you can analyze how to further reduce your costs.
+After a successful migration of your workloads and a few weeks of collecting consumption data, you'll have a clear idea of resources costs. As you analyze data, you can start to generate a budget baseline for Azure resource groups and resources. Then, as you understand where your cloud budget is being spent, you can analyze how to further reduce your costs.
 
 ## Best practice: Use Azure Cost Management and Billing
 
@@ -201,7 +201,7 @@ Microsoft provides Azure Cost Management and Billing to help you track spending.
 
 - Helps you to monitor and control Azure spending, and optimize use of resources.
 - Reviews your entire subscription and all of its resources, and makes recommendations.
-- Provides you with a full API, to integrate external tools and financial systems for reporting.
+- Provides you with a full API to integrate external tools and financial systems for reporting.
 - Tracks resource usage and helps you manage cloud costs with a single, unified view.
 - Provides rich operational and financial insights to help you make informed decisions.
 
@@ -292,7 +292,7 @@ Identifying and moving stale data to cheaper storage areas can have a huge impac
 
 ## Best practice: Automate VM optimization
 
-The ultimate goal of running a VM in the cloud is to maximize the CPU, memory, and disk that it uses. If you discover VMs that aren't optimized, or have frequent periods when VMs aren't used, it makes sense to either shut them down, or downscale them by using virtual machine scale sets.
+The ultimate goal of running a VM in the cloud is to maximize the CPU, memory, and disk that it uses. If you discover VMs that aren't optimized or have frequent periods when VMs aren't used, it makes sense to either shut them down or downscale them by using virtual machine scale sets.
 
 You can optimize a VM with Azure Automation, virtual machine scale sets, auto-shutdown, and scripted or third-party solutions.
 
@@ -307,7 +307,7 @@ You can optimize a VM with Azure Automation, virtual machine scale sets, auto-sh
 
 Azure provides a REST API that has access to your tenant billing information. You can use the Budgets API to integrate external systems and workflows that are triggered by metrics that you build from the API data. You can pull usage and resource data into your preferred data analysis tools. You can integrate the Budgets API with Azure Logic Apps and runbooks.
 
-The Azure Resource Usage and RateCard APIs can help you accurately predict and manage your costs. The APIs are implemented as a resource provider, and are included in the APIs exposed by the Azure Resource Manager.
+The Azure Resource Usage and RateCard APIs can help you accurately predict and manage your costs. The APIs are implemented as a resource provider and are included in the APIs exposed by the Azure Resource Manager.
 
 **Learn more:**
 
