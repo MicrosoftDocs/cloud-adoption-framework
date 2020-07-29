@@ -31,7 +31,7 @@ Azure provides virtual networks with these capabilities:
 - Virtual networks can connect to each other by using virtual network peering. Connected virtual networks can be in the same or different regions. Thus, resources in one virtual network can connect to resources in other virtual networks.
 - By default, Azure routes traffic between subnets within a virtual network, connected virtual networks, on-premises networks, and the internet.
 
-When planning your virtual network topology, you should consider how to arrange IP address spaces, how to implement a hub and spoke network, how to segment virtual networks into subnets, setting up DNS, and implementing Azure Availability Zones.
+When planning your virtual network topology, you should consider how to arrange IP address spaces, how to implement a hub-and-spoke network, how to segment virtual networks into subnets, setting up DNS, and implementing Azure Availability Zones.
 
 ## Best practice: Plan IP addressing
 
@@ -51,24 +51,24 @@ Other tips for planning are:
 - Review the [Azure Virtual Network FAQ](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq).
 - Learn about [Azure networking limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-## Best practice: Implement a hub and spoke network topology
+## Best practice: Implement a hub-and-spoke network topology
 
-A hub and spoke network topology isolates workloads while sharing services, such as identity and security. The hub is an Azure virtual network that acts as a central point of connectivity.
+A hub-and-spoke network topology isolates workloads while sharing services, such as identity and security. The hub is an Azure virtual network that acts as a central point of connectivity.
 The spokes are virtual networks that connect to the hub virtual network by using peering. Shared services are deployed in the hub, while individual workloads are deployed as spokes.
 
 Consider the following:
 
-- Implementing a hub and spoke topology in Azure centralizes common services, such as connections to on-premises networks, firewalls, and isolation between virtual networks. The hub virtual network provides a central point of connectivity to on-premises networks, and a place to host services used by workloads hosted in spoke virtual networks.
-- A hub and spoke configuration is typically used by larger enterprises. Smaller networks might consider a simpler design to save on costs and complexity.
+- Implementing a hub-and-spoke topology in Azure centralizes common services, such as connections to on-premises networks, firewalls, and isolation between virtual networks. The hub virtual network provides a central point of connectivity to on-premises networks, and a place to host services used by workloads hosted in spoke virtual networks.
+- A hub-and-spoke configuration is typically used by larger enterprises. Smaller networks might consider a simpler design to save on costs and complexity.
 - You can use spoke virtual networks to isolate workloads, with each spoke managed separately from other spokes. Each workload can include multiple tiers, and multiple subnets that are connected with Azure load balancers.
-- You can implement hub and spoke virtual networks in different resource groups, and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same, or different, Azure Active Directory (Azure AD) tenants. This allows for decentralized management of each workload, while sharing services maintained in the hub network.
+- You can implement hub-and-spoke virtual networks in different resource groups, and even in different subscriptions. When you peer virtual networks in different subscriptions, the subscriptions can be associated to the same, or different, Azure Active Directory (Azure AD) tenants. This allows for decentralized management of each workload, while sharing services maintained in the hub network.
 
-![Diagram of hub and spoke topology](./media/migrate-best-practices-networking/hub-spoke.png)
-_Figure 1: Hub and spoke topology._
+![Diagram of hub-and-spoke topology](./media/migrate-best-practices-networking/hub-spoke.png)
+_Figure 1: Hub-and-spoke topology._
 
 **Learn more:**
 
-- Read about a [hub and spoke topology](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
+- Read about a [hub-and-spoke topology](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
 - Get network recommendations for running [Windows VMs](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/windows-vm) and [Linux VMs](https://docs.microsoft.com/azure/architecture/reference-architectures/n-tier/linux-vm) in Azure.
 - Learn about [virtual network peering](https://docs.microsoft.com/azure/virtual-network/virtual-network-peering-overview).
 
@@ -149,16 +149,16 @@ Here are a few additional points to be aware of as you set up Availability Zones
 
 For a successful migration, it's critical to connect on-premises corporate networks to Azure. This creates an always-on connection known as a hybrid-cloud network, where services are provided from the Azure cloud to corporate users. There are two options for creating this type of network:
 
-- **Site-to-Site VPN:** You establish a site-to-site connection between your compatible on-premises VPN device and an Azure VPN gateway that's deployed in a virtual network. Any authorized, on-premises resource can access virtual networks. Site-to-site communications are sent through an encrypted tunnel over the internet.
+- **Site-to-site VPN:** You establish a site-to-site connection between your compatible on-premises VPN device and an Azure VPN gateway that's deployed in a virtual network. Any authorized, on-premises resource can access virtual networks. Site-to-site communications are sent through an encrypted tunnel over the internet.
 - **Azure ExpressRoute:** You establish an Azure ExpressRoute connection between your on-premises network and Azure, through an ExpressRoute partner. This connection is private, and traffic doesn't go over the internet.
 
 **Learn more:**
 
 - Learn more about [hybrid-cloud networking](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/vpn).
 
-## Best practice: Implement a highly available Site-to-Site VPN
+## Best practice: Implement a highly available site-to-site VPN
 
-To implement a Site-to-Site VPN, you set up a VPN gateway in Azure.
+To implement a site-to-site VPN, you set up a VPN gateway in Azure.
 
 - A VPN gateway is a specific type of virtual network gateway. It sends encrypted traffic between an Azure virtual network and an on-premises location over the public internet.
 - A VPN gateway can also send encrypted traffic between Azure virtual networks over the Microsoft network.
@@ -171,20 +171,20 @@ Every Azure VPN gateway consists of two instances in an active-standby configura
 - The switchover causes a brief interruption.
 - For planned maintenance, connectivity should be restored within 10 to 15 seconds.
 - For unplanned issues, the connection recovery takes longer, up to 1.5 minutes in the worst case.
-- Point-to-Site VPN client connections to the gateway are disconnected, and users need to reconnect from client machines.
+- Point-to-site VPN client connections to the gateway are disconnected, and users need to reconnect from client machines.
 
-When setting up a Site-to-Site VPN:
+When setting up a site-to-site VPN:
 
 - You need a virtual network whose address range doesn't overlap with the on-premises network to which the VPN will connect.
 - You create a gateway subnet in the network.
 - You create a VPN gateway, specify the gateway type (VPN), and whether the gateway is policy-based or route-based. A route-based VPN is considered more capable and future-proof.
 - You create a local network gateway on-premises, and configure your on-premises VPN device.
-- You create a failover Site-to-Site VPN connection between the virtual network gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. The route-based option also supports both site-to-site (from any computer) and point-to-site (from a single computer) connections, concurrently.
+- You create a failover site-to-site VPN connection between the virtual network gateway and the on-premises device. Using route-based VPN allows for either active-passive or active-active connections to Azure. The route-based option also supports both site-to-site (from any computer) and point-to-site (from a single computer) connections, concurrently.
 - You specify the gateway SKU that you want to use. This depends on your workload requirements, throughput, features, and SLAs.
 - Border gateway protocol (BGP) is an optional feature. You can use it with Azure ExpressRoute and route-based VPN gateways to propagate your on-premises BGP routes to your virtual networks.
 
-![Diagram of Site-to-Site VPN.](./media/migrate-best-practices-networking/vpn.png)
-_Figure 5: Site-to-Site VPN._
+![Diagram of site-to-site VPN.](./media/migrate-best-practices-networking/vpn.png)
+_Figure 5: Site-to-site VPN._
 
 **Learn more:**
 
@@ -229,7 +229,7 @@ The Azure ExpressRoute service extends your on-premises infrastructure into the 
 - With ExpressRoute Direct, you can connect directly to Microsoft routers at 100 Gbps, for larger bandwidth needs.
 - ExpressRoute uses BGP to exchange routes between on-premises networks, Azure instances, and Microsoft public addresses.
 
-Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a rapid start, it's common to initially use a Site-to-Site VPN to establish connectivity between the virtual datacenter and on-premises resources. Then you migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
+Deploying ExpressRoute connections usually involves engaging with an ExpressRoute service provider. For a rapid start, it's common to initially use a site-to-site VPN to establish connectivity between the virtual datacenter and on-premises resources. Then you migrate to an ExpressRoute connection when a physical interconnection with your service provider is established.
 
 **Learn more:**
 
@@ -444,7 +444,7 @@ Here are a few points to be aware of if you deploy the service:
 - Read the [Azure Firewall overview](https://docs.microsoft.com/azure/firewall/overview).
 - Learn about [FQDN tags in Azure Firewall](https://docs.microsoft.com/azure/firewall/fqdn-tags).
 
-## Best practice: Deploy a Web Application Firewall (WAF)
+## Best practice: Deploy Web Application Firewall
 
 Web applications are increasingly targets of malicious attacks that exploit commonly known vulnerabilities. Exploits include SQL injection attacks and cross-site scripting attacks. Preventing such attacks in application code can be challenging, and can require rigorous maintenance, patching, and monitoring at multiple layers of the application topology.
 
