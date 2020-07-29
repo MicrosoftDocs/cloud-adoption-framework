@@ -188,7 +188,7 @@ Consider the following information when you plan how to extract metadata and dat
 
 For more detailed information about the process of migrating data and ETL from a Netezza environment, see the Netezza documentation about data migration ETL and load.
 
-## Similarities in performance-tuning concepts
+## Performance-tuning recommendations
 
 When you move to Azure Synapse from a Netezza environment, many of the performance-tuning concepts you use will be familiar.
 
@@ -199,9 +199,7 @@ For example, these concepts are the same for both environments:
 - Ensuring that data types of columns to be joined are identical optimizes join processing by reducing the need to transform data for matching.
 - Ensuring that statistics are up to date helps the optimizer produce the best execution plan.
 
-## Differences in performance-tuning concepts
-
-This section highlights lower-level implementation differences between Netezza and Azure Synapse for performance-tuning.
+There are some differences between platforms when it comes to optimization. In the following list of performance-tuning recommendations, lower-level implementation differences between Netezza and Azure Synapse, and alternatives for your migration, are highlighted:
 
 - **Data distribution options**: In both Netezza and Azure Synapse, you can use a `CREATE TABLE` statement to specify a distribution definition. Use `DISTRIBUTE ON` for Netezza and `DISTRIBUTION =` for Azure Synapse.
 
