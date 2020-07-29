@@ -11,7 +11,7 @@ ms.subservice: migrate
 ms.custom: seo-azure-migrate
 ---
 
-# Azure cloud migration migration best practices checklist
+# Azure cloud migration best practices checklist
 
 Start with the [Azure migration guide](../azure-migration-guide/index.md) in the Cloud Adoption Framework if you're interested in migrating to Azure. That guide walks you through a set of tools and basic approaches to migrating virtual machines to the cloud.
 
