@@ -1,6 +1,6 @@
 ---
 title: Rehost an application on Azure VMs by using Azure Migrate
-description: Learn how Contoso rehosts an on-premises app with a lift-and-shift migration of on-premises machines to Azure, by using the Azure Migrate service.
+description: Learn how contoso uses the Azure Migrate service to perform a lift-and-shift migration of on-premises machines to Azure and rehost an on-premises app.
 author: givenscj
 ms.author: abuck
 ms.date: 07/01/2020
@@ -14,7 +14,7 @@ services: azure-migrate
 
 # Rehost an on-premises application on Azure VMs by using Azure Migrate
 
-This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware virtual machines (VMs), by migrating the application VMs to Azure VMs.
+This article demonstrates how the fictional company Contoso rehosts a two-tier Windows .NET front-end application running on VMware virtual machines (VMs) by migrating application VMs to Azure VMs.
 
 The SmartHotel360 application used in this example is provided as open source. If you want to use it for your own testing purposes, you can download it from [GitHub](https://github.com/Microsoft/SmartHotel360).
 
@@ -24,14 +24,14 @@ The IT leadership team has worked closely with business partners to understand w
 
 - **Address business growth.** Contoso is growing, so there's pressure on the company's on-premises systems and infrastructure.
 - **Limit risk.** The SmartHotel360 application is critical for the Contoso business. The company wants to move the application to Azure with zero risk.
-- **Extend.** Contoso doesn't want to modify the application, but does want to ensure that it's stable.
+- **Extend.** Contoso doesn't want to modify the application, but it does want to ensure that the application is stable.
 
 ## Migration goals
 
 The Contoso cloud team has pinned down goals for this migration. It used these goals to determine the best migration method:
 
 - After migration, the application in Azure should have the same performance capabilities as it does today in VMware. The application will remain as critical in the cloud as it is on-premises.
-- Contoso doesn't want to invest in this application. It's important to the business, but in its current form Contoso simply wants to move it safely to the cloud.
+- Although this application is important to Contoso, the company doesn't want to invest in it at this time. Contoso wants to move the application safely to the cloud in its current form.
 - Contoso doesn't want to change the ops model for this application. Contoso does want to interact with it in the cloud in the same way that it does now.
 - Contoso doesn't want to change any application functionality. Only the application location will change.
 
@@ -60,7 +60,7 @@ After establishing goals and requirements, Contoso designs and reviews a deploym
 
 As part of the solution design process, Contoso did a feature comparison between Azure SQL Database and SQL Server. The following considerations helped the company to decide to use SQL Server running on an Azure IaaS VM:
 
-- Using an Azure VM running SQL Server seems to be an optimal solution if Contoso needs to customize the operating system and the database, or if it might want to co-locate and run partner applications on the same VM.
+- Using an Azure VM running SQL Server seems to be an optimal solution if Contoso needs to customize the operating system and the database, or co-locate and run partner applications on the same VM.
 - With Software Assurance, Contoso can later exchange existing licenses for discounted rates on Azure SQL Managed Instance by using the Azure Hybrid Benefit for SQL Server. This can save up to 30 percent on SQL Managed Instance.
 
 ### Solution review
@@ -69,8 +69,8 @@ Contoso evaluates the proposed design by putting together a list of pros and con
 
 | Consideration | Details |
 | --- | --- |
-| **Pros** | Both the application VMs will be moved to Azure without changes, making the migration simple. <br><br> Because Contoso is using a lift-and-shift approach for both application VMs, it doesn't need any special configuration or migration tools for the application database. <br><br> Contoso can take advantage of its investment in Software Assurance, by using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the application VMs in Azure. |
-| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. Azure supports the operating system for specific roles. [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the application remain as single points of failure. <br><br> `SQLVM` is running on SQL Server 2008 R2, which is no longer in mainstream support. But it is supported for Azure VMs. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the application on Azure VMs, rather than moving to a managed service such as Azure App Service or Azure SQL Database. |
+| **Pros** | Both the application VMs will be moved to Azure without changes, making the migration simple. <br><br> Because Contoso is using a lift-and-shift approach for both application VMs, it doesn't need any special configuration or migration tools for the application database. <br><br> Contoso can take advantage of its investment in Software Assurance by using the Azure Hybrid Benefit. <br><br> Contoso will retain full control of the application VMs in Azure. |
+| **Cons** | `WEBVM` and `SQLVM` are running Windows Server 2008 R2. Azure supports the operating system for specific roles. [Learn more](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines). <br><br> The web and data tiers of the application remain as single points of failure. <br><br> `SQLVM` is running on SQL Server 2008 R2. SQL Server 2008 R2 is no longer in mainstream support, but it is supported for Azure VMs. [Learn more](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support). <br><br> Contoso must continue supporting the application on Azure VMs rather than moving to a managed service such as Azure App Service or Azure SQL Database. |
 
 ### Migration process
 
@@ -284,7 +284,7 @@ With the application now running, Contoso needs to fully operationalize and secu
 
 ### Security
 
-The Contoso security team reviews the Azure VMs, to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Key Vault.
+The Contoso security team reviews the Azure VMs to determine any security issues. To control access, the team reviews the network security groups (NSGs) for the VMs. NSGs are used to ensure that only traffic allowed to the application can reach it. The team also considers securing the data on the disk by using Azure Disk Encryption and Key Vault.
 
 For more information, see [Security best practices for IaaS workloads in Azure](https://docs.microsoft.com/azure/security/fundamentals/iaas).
 
@@ -297,9 +297,9 @@ For business continuity and disaster recovery, Contoso takes the following actio
 
 ### Licensing and cost optimization
 
-Contoso has existing licensing for its VMs and will take advantage of the Azure Hybrid Benefit. Contoso will convert the existing Azure VMs, to take advantage of this pricing.
+Contoso has existing licensing for its VMs and will take advantage of the Azure Hybrid Benefit. Contoso will convert the existing Azure VMs to take advantage of this pricing.
 
-Contoso will enable [Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage the Azure resources.
+Contoso will enable [Azure Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/cost-management-billing-overview) to help monitor and manage Azure resources.
 
 ## Conclusion
 
