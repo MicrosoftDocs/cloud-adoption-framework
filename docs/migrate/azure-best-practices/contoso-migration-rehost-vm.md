@@ -106,11 +106,10 @@ Here's how Contoso admins will run the migration:
 > [!div class="checklist"]
 >
 > - **Step 1: Prepare Azure for Azure Migrate: Server Migration.** They add the server migration tool to their Azure Migrate project.
-> - **Step 2: Prepare on-premises VMware for Azure Migrate: Server Migration.** They prepare accounts for VM discovery and prepare to connect to Azure VMs after migration.
-> - **Step 3: Replicate VMs.** They set up replication and start replicating VMs to Azure Storage.
-> - **Step 4: Migrate the VMs with Azure Migrate: Server Migration.** They run a test migration to make sure everything's working, and then run a full migration to move the VMs to Azure.
+> - **Step 2: Replicate on-premises VMs.** They set up replication and start replicating VMs to Azure Storage.
+> - **Step 3: Migrate the VMs with Azure Migrate: Server Migration.** They run a test migration to make sure everything's working, and then run a full migration to move the VMs to Azure.
 
-## Step 1: Prepare Azure for the Azure Migrate: Server Migration tool
+## Step 1: Prepare Azure for Azure Migrate: Server Migration
 
 To migrate the VMs to Azure, Contoso needs a virtual network in which Azure VMs will be located when they're created during migration. It also needs the Azure Migrate: Server Migration tool (OVA file) provisioned and configured.
 
