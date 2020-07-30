@@ -155,19 +155,19 @@ Learn about how to set up the [Azure Migrate: Server Migration tool](https://doc
 
 After migration, Contoso wants to connect to the Azure VMs and allow Azure to manage the VMs. The Contoso admins must do the following steps before migration:
 
-1. For access over the internet, they:
+1. For access over the internet:
 
     - Enable RDP or SSH on the on-premises VM before migration.
     - Ensure that TCP and UDP rules are added for the **Public** profile.
     - Check that RDP or SSH is allowed in the operating system firewall.
 
-2. For access over site-to-site VPN, they:
+2. For access over site-to-site VPN:
 
     - Enable RDP or SSH on the on-premises VM before migration.
     - Check that RDP or SSH is allowed in the operating system firewall.
     - For Windows, set the operating system's SAN policy on the on-premises VM to **OnlineAll**.
 
-3. They install the  [Azure Windows agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-windows).
+3. Install the  [Azure Windows agent](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-windows).
 
 Other considerations:
 
@@ -188,7 +188,7 @@ With discovery completed, they can begin replication of VMware VMs to Azure.
 
     ![Screenshot of selections for replicating virtual machines.](./media/contoso-migration-rehost-vm/select-replicate.png)
 
-2. In **Replicate** > **Source settings** > **Are your machines virtualized?**, they select **Yes, with VMware vSphere**.
+2. In **Replicate** > **Source settings** > **Are your machines virtualized?**, select **Yes, with VMware vSphere**.
 
 3. In **On-premises appliance**, select the name of the Azure Migrate appliance that you set up, and then select **OK**.
 
@@ -201,16 +201,16 @@ With discovery completed, they can begin replication of VMware VMs to Azure.
 
     ![Screenshot that shows the box for selecting virtual machines to be migrated.](./media/contoso-migration-rehost-vm/select-assessment.png)
 
-5. In **Virtual machines**, they search for VMs as needed and check each VM they want to migrate. Then they select **Next: Target settings**.
+5. In **Virtual machines**, search for VMs as needed and check each VM that you want to migrate. Then select **Next: Target settings**.
 
 6. In **Target settings**, select the subscription and target region to which you'll migrate. Then specify the resource group in which the Azure VMs will reside after migration. In **Virtual Network**, select the Azure virtual network or subnet to which the Azure VMs will be joined after migration.
 
 7. In **Azure Hybrid Benefit**:
 
-    - Select **No** if they don't want to apply Azure Hybrid Benefit. Then they select **Next**.
-    - Select **Yes** if they have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions and they want to apply the benefit to the machines they're migrating. Then they select **Next**.
+    - Select **No** if you don't want to apply Azure Hybrid Benefit. Then select **Next**.
+    - Select **Yes** if you have Windows Server machines that are covered with active Software Assurance or Windows Server subscriptions and you want to apply the benefit to the machines that you're migrating. Then select **Next**.
 
-8. In **Compute**, they review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
+8. In **Compute**, review the VM name, size, OS disk type, and availability set. VMs must conform with [Azure requirements](https://docs.microsoft.com/azure/migrate/migrate-support-matrix-vmware#vmware-requirements).
 
     - **VM size:** If you're using assessment recommendations, the VM size drop-down list will contain the recommended size. Otherwise, Azure Migrate picks a size based on the closest match in the Azure subscription. Alternatively, pick a manual size in **Azure VM size**.
     - **OS disk:** Specify the OS (boot) disk for the VM. The OS disk has the operating system bootloader and installer.
@@ -231,7 +231,7 @@ The Contoso admins run a quick test migration and then a full migration to migra
 
 ### Run a test migration
 
-1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, they select **Test migrated servers**.
+1. In **Migration goals** > **Servers** > **Azure Migrate: Server Migration**, select **Test migrated servers**.
 
     ![Screenshot of the button for starting a test of migrated servers.](./media/contoso-migration-rehost-vm/test-migrated-servers.png)
 
