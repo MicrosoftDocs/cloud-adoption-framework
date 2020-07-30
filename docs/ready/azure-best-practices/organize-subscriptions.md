@@ -53,7 +53,7 @@ _Figure 2: An example of a management group hierarchy._
 
 Some basic examples of using management groups to separate different workloads include:
 
-**Production versus nonproduction workloads:** Use management groups to more easily manage different roles and policies between production and nonproduction subscriptions. For example, developers might have contributor access in nonproduction subscriptions but only reader access in nonproduction subscriptions.
+**Production versus nonproduction workloads:** Use management groups to more easily manage different roles and policies between production and nonproduction subscriptions. For example, developers might have contributor access in production subscriptions but only reader access in nonproduction subscriptions.
 
 **Internal services versus external services:** Enterprises often have different requirements, policies, and roles for internal services versus external customer-facing services.
 
