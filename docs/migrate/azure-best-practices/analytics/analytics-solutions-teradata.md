@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Analytics migration for Teradata 
+title: Azure Synapse Analytics solutions for Teradata 
 description: Use the Cloud Adoption Framework for Azure to learn about analytics solutions for Teradata and migrating to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
