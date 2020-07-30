@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Analytics solutions and migration for Teradata 
+title: Azure Synapse Analytics migration for Teradata 
 description: Use the Cloud Adoption Framework for Azure to learn about analytics solutions for Teradata and migrating to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
@@ -196,7 +196,7 @@ Consider the following information when you plan how to extract metadata and dat
 
   The information that specifies the current table and view definitions is maintained in system catalog tables. System catalog tables are the best source of the information because the tables likely are up to date and complete. User-maintained documentation might not be in sync with current table definitions.
 
-  You can access the information by using views on the catalog, such as `DBC.ColumnsV`. You also can use views to generate the equivalent `CREATE TABLE` statements for the equivalent tables in Azure Synapse.  
+  You can access the information by using views on the catalog, such as `DBC.ColumnsV`. You also can use views to generate the equivalent `CREATE TABLE` Data Definition Language (DDL) statements for the equivalent tables in Azure Synapse.  
 
   Third-party migration and ETL tools also use the catalog information to achieve the same result.
 

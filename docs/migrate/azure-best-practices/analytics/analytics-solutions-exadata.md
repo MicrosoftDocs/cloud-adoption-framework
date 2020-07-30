@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Analytics solutions and migration for an Oracle data warehouse
+title: Azure Synapse Analytics migration for an Oracle data warehouse
 description: Use the Cloud Adoption Framework for Azure to learn about migrating an Oracle data warehouse schema to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
