@@ -1,6 +1,6 @@
 ---
-title: "Plan for Azure Stack Hub migration"
-description: Plan for Azure Stack Hub migration
+title: "Plan your Azure Stack Hub migration"
+description: Plan your Azure Stack Hub migration
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2020
@@ -9,7 +9,7 @@ ms.service: cloud-adoption-framework
 ms.subservice: plan
 ---
 
-# Plan for Azure Stack Hub migration
+# Plan your Azure Stack Hub migration
 
 This article assumes that you've reviewed how to [integrate Azure Stack into your cloud strategy](./index.md) and that your journey aligns with the examples in that article.
 
@@ -43,7 +43,7 @@ The following resources can help your team understand the differences between Az
 - [Azure Stack Hub datacenter integration walkthrough](https://docs.microsoft.com/azure-stack/operator/azure-stack-customer-journey)
 - [Azure Stack virtual machine (VM) features](https://docs.microsoft.com/azure-stack/user/azure-stack-vm-considerations?view=azs-1910)
 
-When you understand the best platform for each workload, you can integrate those decisions into a [cloud adoption plan](../../plan/template.md) to manage public and private cloud migrations as one aligned effort.
+When you understand the best platform for each workload, you can integrate your decisions into a [cloud adoption plan](../../plan/template.md) to manage public and private cloud migrations as one aligned effort.
 
 ## Next steps
 
