@@ -11,7 +11,7 @@ ms.subservice: overview
 
 # Enable customer success with a sound operating model and organizational alignment
 
-Customer success in cloud adoption efforts often has little to do with technical skills or adoption-related projects. Your operating model creates opportunities to enable adoption, or possibly roadblocks that might slow down cloud adoption.
+Customer success in cloud adoption efforts often has little to do with technical skills or adoption-related projects. Your operating model creates opportunities to enable adoption or roadblocks that might slow down cloud adoption.
 
 ## Alignment
 
@@ -36,14 +36,14 @@ The following guides will help you get started with operating model alignment an
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | [How do we deliver operational excellence during cloud transformation?](./operational-excellence.md)                   | The steps in this guide will help the strategy team lead organizational change management to consistently ensure operational excellence. |
 | [How do we manage enterprise costs?](./manage-costs.md)                                          | Start optimizing enterprise costs and manage cost across the environment.                                                                           |
-| [How do we consistently secure the enterprise cloud environment?](./security.md)             | This getting-started guide can help ensure that the proper security requirements have been applied across the enterprise to minimize risk of breach and accelerate recovery when a breach occurs.                                       |
-| [How do we apply the right controls to improve reliability?](./reliability.md)                   | This getting-started guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
-| [How do we ensure performance across the enterprise?](./performance.md)                               | This getting-started guide can help you establish processes for maintaining performance across the enterprise.                               |
-| [How do we align our organization?](./org-alignment.md)                               | This getting-started guide can help you establish an appropriately staffed organizational structure.                               |
+| [How do we consistently secure the enterprise cloud environment?](./security.md)             | This get-started guide can help ensure that the proper security requirements have been applied across the enterprise to minimize risk of breach and accelerate recovery when a breach occurs.                                       |
+| [How do we apply the right controls to improve reliability?](./reliability.md)                   | This get-started guide helps minimize disruptions related to inconsistencies in configuration, resource organization, security baselines, or resource protection policies. |
+| [How do we ensure performance across the enterprise?](./performance.md)                               | This get-started guide can help you establish processes for maintaining performance across the enterprise.                               |
+| [How do we align our organization?](./org-alignment.md)                               | This get-started guide can help you establish an appropriately staffed organizational structure.                               |
 
 ## Shared architecture principles
 
-The core principles of a well-managed operating model are based on a set of common architecture principles. The getting-started guidance in this article series will help supporting teams as they scale these principles across the cloud platform and throughout the portfolio of workloads.
+The core principles of a well-managed operating model are based on a set of common architecture principles. The get-started guidance in this article series will help supporting teams as they scale these principles across the cloud platform and throughout the portfolio of workloads.
 
 ![Diagram that illustrates shared architecture principles.](../_images/shared-principles.png)
 
