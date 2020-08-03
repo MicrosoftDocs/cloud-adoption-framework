@@ -14,36 +14,36 @@ services: site-recovery
 
 # Refactor a Team Foundation Server deployment to Azure DevOps Services
 
-This article shows how the fictional company Contoso refactors their on-premises Visual Studio Team Foundation Server deployment by migrating it to Azure DevOps Services in Azure. The Contoso development team has used Team Foundation Server for team collaboration and source control for the past five years. Now, they want to move to a cloud-based solution for dev and test work, and for source control. Azure DevOps Services will play a role as the Contoso team moves to an Azure DevOps model and develops new cloud-native applications.
+This article shows how the fictional company Contoso refactors its on-premises Visual Studio Team Foundation Server deployment by migrating it to Azure DevOps Services in Azure. The Contoso development team has used Team Foundation Server for team collaboration and source control for the past five years. Now, the team wants to move to a cloud-based solution for dev and test work and for source control. Azure DevOps Services will play a role as the Contoso team moves to an Azure DevOps model and develops new cloud-native applications.
 
 ## Business drivers
 
-The Contoso IT leadership team has worked closely with business partners to identify future goals. Partners aren't overly concerned with dev tools and technologies, but they have captured these points:
+The Contoso IT leadership team has worked closely with business partners to identify future goals. The partners aren't overly concerned with dev tools and technologies, but the team has captured these points:
 
-- **Software**: Regardless of the core business, all companies are now software companies, including Contoso. Business leadership is interested in how IT can help lead the company with new working practices for users and new experiences for their customers.
-- **Efficiency**: Contoso needs to streamline their processes and remove unnecessary procedures for developers and users. This will allow the company to deliver on customer requirements more efficiently. The business needs IT to move quickly, without wasting time or money.
-- **Agility**: To enable their success in a global economy, Contoso IT needs to be more responsive to the needs of the business. It must be able to react more quickly to changes in the marketplace. IT must not get in the way or become a business blocker.
+- **Software**: Regardless of the core business, all companies are now software companies, including Contoso. Business leadership is interested in how IT can help lead the company with new working practices for users and new experiences for its customers.
+- **Efficiency**: Contoso needs to streamline its processes and remove unnecessary procedures for developers and users. Doing so will allow the company to deliver on customer requirements more efficiently. The business needs IT to move quickly, without wasting time or money.
+- **Agility**: To enable its success in a global economy, Contoso IT needs to be more responsive to the needs of the business. It must be able to react more quickly to changes in the marketplace. IT must not get in the way or become a business blocker.
 
 ## Migration goals
 
-The Contoso cloud team has pinned down the following goals for the migration to Azure DevOps Services:
+The Contoso cloud team has pinned down the following goals for its migration to Azure DevOps Services:
 
-- The team needs a tool to migrate their data to the cloud. Few manual processes should be needed.
+- The team needs a tool to migrate its data to the cloud. Few manual processes should be needed.
 - Work item data and history for the last year must be migrated.
-- They don't want to set up new user names and passwords. All current system assignments must be maintained.
-- They want to move away from Team Foundation Version Control (TFVC) to Git for source control.
-- The transition to Git will be a tip migration that imports only the latest version of the source code. It will happen during a downtime when all work will be halted as the code base shifts. They understand that only the current master branch history will be available after the move.
-- They're concerned about the change and want to test it before doing a full move. They want to retain access to Team Foundation Server even after the move to Azure DevOps Services.
-- They have multiple collections, and they want to start with one that has only a few projects to better understand the process.
-- They understand that Team Foundation Server collections are a one-to-one relationship with Azure DevOps Services organizations, so they'll have multiple URLs. But this matches their current model of separation for code bases and projects.
+- The team doesn't want to set up new user names and passwords. All current system assignments must be maintained.
+- The team wants to move away from Team Foundation Version Control (TFVC) to Git for source control.
+- The transition to Git will be a tip migration that imports only the latest version of the source code. The transition will happen during a downtime, when all work will be halted as the code base shifts. The team understands that only the current master branch history will be available after the move.
+- The team is concerned about the change and wants to test it before it does a full move. The team wants to retain access to Team Foundation Server even after the move to Azure DevOps Services.
+- The team has multiple collections and, to better understand the process, it wants to start with one that has only a few projects.
+- The team understands that Team Foundation Server collections are a one-to-one relationship with Azure DevOps Services organizations, so it will have multiple URLs. But this matches its current model of separation for code bases and projects.
 
 ## Proposed architecture
 
-- Contoso will move their Team Foundation Server projects to the cloud, and they'll no longer host their projects or source control on-premises.
+- Contoso will move its Team Foundation Server projects to the cloud, and it will no longer host its projects or source control on-premises.
 - Team Foundation Server will be migrated to Azure DevOps Services.
 - Currently, Contoso has one Team Foundation Server collection, named `ContosoDev`, which will be migrated to an Azure DevOps Services organization called `contosodevmigration.visualstudio.com`.
 - The projects, work items, bugs, and iterations from the last year will be migrated to Azure DevOps Services.
-- Contoso will use their Azure Active Directory (Azure AD) instance, which they set up when they [deployed their Azure infrastructure](./contoso-migration-infrastructure.md) at the beginning of their migration planning.
+- Contoso will use its Azure Active Directory (Azure AD) instance, which it set up when it [deployed its Azure infrastructure](./contoso-migration-infrastructure.md) at the beginning of the migration planning.
 
 ![Diagram of the proposed architecture.](./media/contoso-migration-tfs-vsts/architecture.png)
 
@@ -51,11 +51,11 @@ The Contoso cloud team has pinned down the following goals for the migration to 
 
 Contoso will complete the migration process as follows:
 
-1. Significant preparation is required. First, Contoso must upgrade their Team Foundation Server implementation to a supported level. Contoso is currently running Team Foundation Server 2017 Update 3, but to use database migration it needs to run a supported 2018 version with the latest updates.
-1. After they upgrade, Contoso will run the Team Foundation Server migration tool and validate their collection.
+1. Significant preparation is required. First, Contoso must upgrade its Team Foundation Server implementation to a supported level. Contoso is currently running Team Foundation Server 2017 Update 3, but to use database migration it needs to run a supported 2018 version with the latest updates.
+1. After Contoso upgrades, it will run the Team Foundation Server migration tool and validate its collection.
 1. Contoso will build a set of preparation files and then perform a migration dry run for testing.
 1. Contoso will then run another migration, this time a full migration that includes work items, bugs, sprints, and code.
-1. After the migration, Contoso will move their code from TFVC to Git.
+1. After the migration, Contoso will move its code from TFVC to Git.
 
 ![Diagram of the Contoso migration process.](./media/contoso-migration-tfs-vsts/migration-process.png)
 
@@ -66,7 +66,7 @@ To run this scenario, Contoso needs to meet the following prerequisites:
 | Requirements | Details |
 | --- | --- |
 | **Azure subscription** | Contoso created subscriptions in an earlier article in this series. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <br><br> If you create a free account, you're the administrator of your subscription and can perform all actions. <br><br> If you use an existing subscription and you're not the administrator, you need to work with the admin to assign you Owner or Contributor permissions. <br><br> If you need more granular permissions, see [Manage Site Recovery access with role-based access control (RBAC)](https://docs.microsoft.com/azure/site-recovery/site-recovery-role-based-linked-access-control). |
-| **Azure infrastructure** | Contoso set up their Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
+| **Azure infrastructure** | Contoso set up its Azure infrastructure as described in [Azure infrastructure for migration](./contoso-migration-infrastructure.md). |
 | **On-premises Team Foundation Server instance** | The on-premises instance needs to either run Team Foundation Server 2018 upgrade 2 or be upgraded to it as part of this process. |
 
 ## Scenario steps
@@ -76,9 +76,9 @@ Here's how Contoso will complete the migration:
 > [!div class="checklist"]
 >
 > - **Step 1: Create an Azure storage account**. This storage account will be used during the migration process.
-> - **Step 2: Upgrade Team Foundation Server**. Contoso will upgrade their deployment to Team Foundation Server 2018 upgrade 2.
-> - **Step 3: Validate the Team Foundation Server collection**. Contoso will validate the Team Foundation Server collection in preparation for migration.
-> - **Step 4: Build the migration files**. Contoso will create the migration files using the Team Foundation Server migration tool.
+> - **Step 2: Upgrade Team Foundation Server**. Contoso will upgrade its deployment to Team Foundation Server 2018 upgrade 2.
+> - **Step 3: Validate the Team Foundation Server collection**. Contoso will validate the Team Foundation Server collection in preparation for the migration.
+> - **Step 4: Build the migration files**. Contoso will create the migration files by using the Team Foundation Server migration tool.
 
 ## Step 1: Create an Azure storage account
 
@@ -104,7 +104,7 @@ Contoso admins upgrade the Team Foundation Server instance to Team Foundation Se
 
 They upgrade as follows:
 
-1. To start, they back up their Team Foundation Server instance, which is running on a VMware virtual machine (VM), and they take a VMware snapshot.
+1. To start, the admins back up their Team Foundation Server instance, which is running on a VMware virtual machine (VM), and they take a VMware snapshot.
 
     ![Screenshot of the "Getting Started" pane for upgrading Team Foundation Server.](./media/contoso-migration-tfs-vsts/upgrade1.png)
 
@@ -155,7 +155,7 @@ Contoso admins run the Team Foundation Server migration tool against the `contos
 
     ![Screenshot showing the error encountered during identity validation.](./media/contoso-migration-tfs-vsts/collection4.png)
 
-1. They run `TfsMigrator validate /help` at the command line, and see that the command `/tenantDomainName` seems to be required to validate identities.
+1. They run `TfsMigrator validate /help` at the command line, and they see that the command `/tenantDomainName` seems to be required to validate identities.
 
      ![Screenshot showing the command that is required to validate identities.](./media/contoso-migration-tfs-vsts/collection5.png)
 
@@ -186,7 +186,7 @@ With the validation complete, Contoso admins can use the Team Foundation Server 
     - Prepares the connection to Azure AD to find a match for each identity.
     - Contoso has already deployed Azure AD and synchronized it by using Azure AD Connect, so the prepare command should be able to find the matching identities and mark them as **Active**.
 
-1. An Azure AD sign-in screen appears, and they enter the credentials of a global admin.
+1. An Azure AD sign-in screen appears, and the admins enter the credentials of a global admin.
 
     ![Screenshot of the Azure AD sign-in window with admin credentials.](./media/contoso-migration-tfs-vsts/prep2.png)
 
@@ -198,17 +198,17 @@ With the validation complete, Contoso admins can use the Team Foundation Server 
 
     ![Prepare](./media/contoso-migration-tfs-vsts/prep4.png)
 
-1. The `import.json` file provides import settings. It includes information such as the desired organization name, and storage account details. Most of the fields are populated automatically. Some fields require user input. Contoso opens the file and adds the Azure DevOps Services organization name to be created, `contosodevmigration`. With this name, their Azure DevOps Services URL will be `contosodevmigration.visualstudio.com`.
+1. The `import.json` file provides import settings. It includes information such as the desired organization name, and storage account details. Most of the fields are populated automatically. Some fields require user input. The admins open the file and add the Azure DevOps Services organization name to be created, `contosodevmigration`. With this name, the Contoso Azure DevOps Services URL will be `contosodevmigration.visualstudio.com`.
 
     ![Screenshot showing the Azure DevOps Services organization name.](./media/contoso-migration-tfs-vsts/prep5.png)
 
     > [!NOTE]
     > The organization must be created before the migration begins. It can be changed after the migration is completed.
 
-1. They review the identity log map file that shows the accounts that will be brought into Azure DevOps Services during the import.
+1. The admins review the identity log map file, which shows the accounts that will be brought into Azure DevOps Services during the import.
 
     - Active identities refer to identities that will become users in Azure DevOps Services after the import.
-    - In Azure DevOps Services, these identities will be licensed and will be displayed as users in the organization after migration.
+    - In Azure DevOps Services, these identities will be licensed and displayed as users in the organization after migration.
     - The identities are marked as **Active** in the **Expected Import Status** column in the file.
 
     ![Screenshot of the identity log map file, showing the accounts to be brought into Azure DevOps Services.](./media/contoso-migration-tfs-vsts/prep6.png)
@@ -232,7 +232,7 @@ Here is the migration process they'll follow:
     The backup can also be restored directly to Azure DevOps Services, and it's used as the packaging method for getting collection data to the cloud. Contoso will use the `sqlpackage.exe` tool to generate the DACPAC. This tool is included in SQL Server Data Tools.
 
 1. **Upload to storage**. After the DACPAC is created, the admins upload it to Azure Storage. After they've uploaded it, they get a shared access signature (SAS) to allow the Team Foundation Server migration tool access to the storage.
-1. **Fill out the import**. Contoso can then complete the missing fields in the import file, including the DACPAC setting. To ensure that everything's working properly before the full migration, they'll specify that they want to perform a _dry-run_ import.
+1. **Fill out the import**. Contoso can then complete the missing fields in the import file, including the DACPAC setting. To ensure that everything's working properly before the full migration, the admins will specify that they want to perform a _dry-run_ import.
 1. **Perform a dry-run import**. A dry-run import helps them test the collection migration. Dry runs have a limited life, so they're deleted before a production migration runs. They're deleted automatically after a set duration. A note that informs Contoso when the dry run will be deleted is included in the success email that's sent after the import finishes. The team takes note and plans accordingly.
 1. **Complete the production migration**. With the dry-run migration completed, Contoso admins do the final migration by updating the `import.json` file and then running import again.
 
@@ -242,7 +242,7 @@ Here is the migration process they'll follow:
 
 Before they detach the collection, Contoso admins take a local SQL Server instance backup and a VMware snapshot of the Team Foundation Server instance.
 
-1. In the Team Foundation Server Administration Console, they select the collection they want to detach, **ContosoDev**.
+1. In the Team Foundation Server Administration Console, the admins select the collection they want to detach, **ContosoDev**.
 
     ![Screenshot of the "Team Project Collections" section of the Foundation Server Administration Console.](./media/contoso-migration-tfs-vsts/migrate1.png)
 
@@ -272,9 +272,9 @@ Before they detach the collection, Contoso admins take a local SQL Server instan
 
 ### Generate a DACPAC
 
-Contoso creates a backup, or DACPAC, to import into Azure DevOps Services.
+Contoso admins create a backup, or DACPAC, to import into Azure DevOps Services.
 
-- The Contoso admins use the `sqlpackage.exe` utility in SQL Server Data Tools (SSDT) to create the DACPAC. There are multiple versions of `sqlpackage.exe` installed with SQL Server Data Tools, and they're located under folders with names like `120`, `130`, and `140`. It's important to use the right version to prepare the DACPAC.
+- The admins use the `sqlpackage.exe` utility in SQL Server Data Tools (SSDT) to create the DACPAC. There are multiple versions of `sqlpackage.exe` installed with SQL Server Data Tools, and they're located under folders with names like `120`, `130`, and `140`. It's important to use the right version to prepare the DACPAC.
 
 - Team Foundation Server 2018 imports need to use *sqlpackage.exe* from the *140* folder or higher. For `CONTOSOTFS`, this file is located in `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\140`.
 
@@ -296,13 +296,13 @@ Contoso admins generate the DACPAC as follows:
 
 ### Upload the file to storage
 
-After Contoso creates the DACPAC file, they upload it to the Azure storage account.
+After the admins create the DACPAC file, they upload it to the Azure storage account.
 
 1. They download and install [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer).
 
     ![Screenshot of "Download Storage Explorer free."](./media/contoso-migration-tfs-vsts/backup5.png)
 
-1. In Storage Explorer, they connect to their subscription and then search for and select the storage account they created for the migration (`contosodevmigration`). They create a new blob container, `azuredevopsmigration`.
+1. In Storage Explorer, the admins connect to their subscription and then search for and select the storage account they created for the migration (`contosodevmigration`). They create a new blob container, `azuredevopsmigration`.
 
     ![Screenshot of the "Create Blob Container" link in Storage Explorer.](./media/contoso-migration-tfs-vsts/backup6.png)
 
@@ -323,7 +323,7 @@ After Contoso creates the DACPAC file, they upload it to the Azure storage accou
     ![Screenshot of the URL of the shared access signature in Storage Explorer.](./media/contoso-migration-tfs-vsts/backup10.png)
 
 > [!NOTE]
-> The migration must happen within the allowed time window or the permissions will expire. Don't generate an SAS key from the Azure portal. Keys that are generated from the portal are account-scoped and won't work with the import.
+> The migration must happen within the allowed time window or the permissions will expire. Do *not* generate an SAS key from the Azure portal. Keys that are generated from the portal are account-scoped and won't work with the import.
 
 ### Fill in the import settings
 
@@ -341,7 +341,7 @@ They open the *import.json* file and complete the following fields:
 
 Contoso admins perform a dry-run migration to make sure that everything's working as expected.
 
-1. They open a command prompt, and go to the `TfsMigrator` location (`C:\TFSMigrator`).
+1. They open a command prompt and then go to the `TfsMigrator` location (`C:\TFSMigrator`).
 1. They want to make sure that the file is formatted properly and that the SAS key is working. They validate the import file by running the following command: 
 
     `TfsMigrator import /importFile:C:\TFSMigrator\import.json /validateonly`
@@ -368,7 +368,7 @@ Contoso admins perform a dry-run migration to make sure that everything's workin
 
     ![Screenshot of the message asking Contoso to confirm that they want to continue with the migration.](./media/contoso-migration-tfs-vsts/test4.png)
 
-1. The Azure AD sign-in window opens. The Contoso admin signs in to Azure AD with admin permissions.
+1. The Azure AD sign-in window opens. Contoso admins sign in to Azure AD with admin permissions.
 
     ![Screenshot of the Azure AD sign-in window in Visual Studio.](./media/contoso-migration-tfs-vsts/test5.png)
 
@@ -425,7 +425,7 @@ Now that the dry run is complete, Contoso admins move on to the production migra
 
     ![Screenshot showing that the data is being copied to the cloud.](./media/contoso-migration-tfs-vsts/full5.png)
 
-1. After the migration finishes, a dev lead signs into Azure DevOps Services to check that the migration worked properly. After signing in, the dev lead can see that projects have been migrated.
+1. After the migration finishes, a dev lead signs into Azure DevOps Services to ensure that the migration worked properly. After signing in, the dev lead can see that projects have been migrated.
 
     ![Screenshot showing that the projects have been migrated.](./media/contoso-migration-tfs-vsts/full6.png)
 
@@ -453,12 +453,12 @@ With the migration now completed, Contoso admins want to move source code manage
 
     ![Screenshot of the "Import repository" link in the Azure DevOps Services portal.](./media/contoso-migration-tfs-vsts/git2.png)
 
-1. In the **Source type** drop-down list, they select **TFVC**. In the **Path** box, they specify the path to the repo, and then select **Import**. They've decided to leave the **Migrate History** check box cleared.
+1. In the **Source type** drop-down list, they select **TFVC**. In the **Path** box, they specify the path to the repo, and then select **Import**. They decide to leave the **Migrate History** check box cleared.
 
     ![Screenshot of the "Import from TFVC" pane.](./media/contoso-migration-tfs-vsts/git3.png)
 
     > [!NOTE]
-    > Because TFVC and Git store version control information differently, we recommend that Contoso *not* migrate their repository history. This is the approach that Microsoft took when we migrated Windows and other products from centralized version control to Git.
+    > Because TFVC and Git store version control information differently, we recommend that Contoso *not* migrate its repository history. This is the approach that Microsoft took when we migrated Windows and other products from centralized version control to Git.
 
 1. After the import finishes, the admins review the code.
 
@@ -478,11 +478,11 @@ For more information, see [Import repositories from TFVC to Git](https://docs.mi
 
 ## Clean up after migration
 
-With the migration now complete, Contoso needs to do the following:
+With the migration now complete, the Contoso team needs to do the following:
 
 - Review the [post-import](https://docs.microsoft.com/azure/devops/articles/migration-post-import?view=vsts) article for information about additional import activities.
 - Either delete the TFVC repos or place them in read-only mode. The code bases must not be used, but they can be referenced for their history.
 
 ## Post-migration training
 
-Contoso will need to provide Azure DevOps Services and Git training for relevant team members.
+The Contoso team will need to provide Azure DevOps Services and Git training for relevant team members.
