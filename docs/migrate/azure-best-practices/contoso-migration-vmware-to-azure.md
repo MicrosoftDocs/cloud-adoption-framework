@@ -30,7 +30,7 @@ Working closely with business partners, the Contoso IT team defines the business
 - **Datacenter evacuation or shutdown**: Seamlessly move VMware-based workloads when they consolidate or retire existing datacenters.
 - **Disaster recovery and business continuity**: Use a VMware stack deployed in Azure as a primary or secondary on-demand disaster recovery site for on-premises datacenter infrastructure.
 - **Application modernization**: Tap into the Azure ecosystem to modernize Contoso applications without having to rebuild VMware-based environments.
-- **Implementing DevOps**: Bring Azure DevOps tool chains to VMware environments and modernize applications at their own pace.
+- **Implementing DevOps**: Bring Azure DevOps tool chains to VMware environments and modernize applications at its own pace.
 - **Ensure operational continuity**: Redeploy vSphere-based applications to Azure while avoiding hypervisor conversions and application refactoring. Extend support for legacy applications that run Windows and SQL Server.
 
 ## Goals for migrating VMware on-premises to VMware in the cloud
@@ -95,7 +95,7 @@ Contoso will move its VMs to Azure VMware Solution by using the VMware HCX tool.
 
 To complete the process, the Contoso team:
 
-- Plans their networking in Azure and ExpressRoute.
+- Plans its networking in Azure and ExpressRoute.
 - Creates the Azure VMware Solution private cloud by using the Azure portal.
 - Configures the network to include the ExpressRoute circuits.
 - Configures the HCX components to connect its on-premises vSphere environment to the Azure VMware Solution private cloud.
