@@ -94,10 +94,10 @@ productDirectory:
       links:
         - url: ./ready/azure-setup-guide/index.md
           text: Azure setup guide
+        - url: ./operating-model/index.md
+          text: Operating model alignment
         - url: ./ready/landing-zone/index.md
           text: Azure landing zones
-        - url: ./ready/considerations/index.md
-          text: Expand the landing zone
         - url: ./ready/azure-best-practices/index.md
           text: Best practices for Azure readiness
     # Card

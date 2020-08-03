@@ -187,6 +187,16 @@ items:
         href: ready/azure-setup-guide/monitoring-reporting.md
       - name: Stay current with Azure
         href: ready/azure-setup-guide/staying-current.md
+    - name: Operating model
+      items:
+      - name: Overview
+        href: operating-model/index.md
+      - name: Help defining your operating model
+        href: operating-model/methodologies.md
+      - name: Compare common operating models
+        href: operating-model/compare-common-operating-models.md
+      - name: Common operating model terms
+        href: operating-model/terms.md
     - name: Azure landing zones
       items:
       - name: What is a landing zone?
@@ -1138,17 +1148,6 @@ items:
             href: innovate/considerations/devices.md
           - name: Predict and influence
             href: innovate/considerations/predict.md
-
-  - name: Operating model
-    items:
-    - name: Overview
-      href: operating-model/index.md
-    - name: Help defining your operating model
-      href: operating-model/methodologies.md
-    - name: Compare common operating models
-      href: operating-model/compare-common-operating-models.md
-    - name: Common operating model terms
-      href: operating-model/terms.md
 
   - name: Govern
     items:

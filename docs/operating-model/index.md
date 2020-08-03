@@ -14,6 +14,10 @@ ms.custom: operating-model
 
 Adopting the cloud creates an opportunity to "hit refresh" on you operate technology systems. This article series will create clarity around cloud operating models and the considerations which will impact your cloud cloud adoption strategy. But first, this initial article will provide clarity on the term cloud operating model.
 
+## Define your operating model
+
+Before deploying your cloud architecture, it's important to understand how you want to operate in the cloud. Understanding your strategic direction, people organization, and GRC (governance, risk, and compliance) needs will create clarity on your future state cloud operating model. From there, Azure Landing Zones provide a variety of architecture and implementation options that can support your operating model. The next few articles will share a few grounding terms and provide examples of common operating models based on actual customer experiences, together those can guide your decision to implement the right Azure Landing Zone.
+
 ## What is an operating model?
 
 Prior to the existence of cloud technologies, technology teams established operating models to define how technology would support the business. There are a number of factors in any companies IT operating model, but a few remain consistent: **Alignment to business strategy, organization of people, change management (or adoption processes), operations management, governance/compliance, and security**. Each of these modular tenants is essential to long term technology operations.
