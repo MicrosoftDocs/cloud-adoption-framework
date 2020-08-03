@@ -327,7 +327,7 @@ Building on the previous connectivity sections, this section will explore recomm
 
 - Azure PaaS services that have been injected into a VNet still perform management plane operations using public IP addresses. Ensure that this communication is locked down within the VNet using UDRs and NSGs.
 
-- Use Private Link, where available, for shared Azure PaaS services. Private Link is generally available for several services and is in public preview for numerous ones. Private Link availability is detailed [here](https://docs.microsoft.com/azure/private-link/private-link-overview#availability).
+- Use Private Link, where available, for shared Azure PaaS services. Private Link is generally available for several services and is in public preview for numerous ones. For more information, see [Azure Private Link availability](https://docs.microsoft.com/azure/private-link/private-link-overview#availability).
 
 - Access Azure PaaS services from on-premises via ExpressRoute private peering, using either VNet injection for dedicated Azure services or Azure Private Link for available shared Azure services. To access Azure PaaS services from on-premises when VNet injection or Private Link aren't available, use ExpressRoute with Microsoft peering. This would avoid transiting over the public internet.
 
@@ -373,8 +373,8 @@ This section describes recommended connectivity models for inbound and outbound 
 
 - If third-party NVAs are required for east-west and/or south-north traffic protection/filtering:
 
-   - For Virtual WAN network topologies, deploy the NVAs to a separate VNet (for example, NVA VNet), and connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs, as described in this [article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-route-table-portal).
-   - For non-Virtual WAN network topologies, deploy the third-party NVAs in the central hub VNet.
+  - For Virtual WAN network topologies, deploy the NVAs to a separate VNet (for example, NVA VNet), and connect it to the regional Virtual WAN hub and to the landing zones that require access to NVAs, as described in this [article](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-route-table-portal).
+  - For non-Virtual WAN network topologies, deploy the third-party NVAs in the central hub VNet.
 
 - If third-party NVAs are required for inbound HTTP/S connections, they should be deployed within a landing zone VNet and together with the apps that they're protecting and exposing to the internet.
 

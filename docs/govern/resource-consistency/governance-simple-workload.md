@@ -108,9 +108,4 @@ Finally, now that the subscription is created and your Azure AD tenant is associ
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Deploy a basic workload to Azure](../../infrastructure/virtual-machines/basic-workload.md)
-
-<!-- --->
-
-> [!div class="nextstepaction"]
 > [Learn about resource access for multiple teams](./governance-multiple-teams.md)
