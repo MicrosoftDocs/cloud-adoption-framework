@@ -31,7 +31,7 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 - [Motivations](../strategy/motivations.md): The first step to strategic alignment is to gain agreement on the motivations that drive the innovation effort. Start by understanding and categorizing motivations and common themes from stakeholders across business and IT.
 - [Business outcomes](../strategy/business-outcomes/index.md): After motivations are aligned, it's possible to capture the desired business outcomes. This information provides clear metrics that you can use to measure the overall transformation.
-- [Balancing the portfolio](../strategy/balance-the-portfolio.md): Innovation isn't the right adoption path for every workload. This approach to adoption is more relevant to new custom-built applications or workloads that *require* rearchitecture or full rebuilds. When motivations heavily favor innovation for all workloads, it's important to evaluate the portfolio to ensure that those investments can produce the desired return on investment (ROI). Modernization of specific resources and small-scale rebuilding efforts can be innovative but might be better served by following [Get started: Accelerate migration](./migrate.md).
+- [Balancing the portfolio](../strategy/balance-the-portfolio.md): Innovation isn't the right adoption path for every workload. This approach to adoption is more relevant to new custom-built applications or workloads that *require* rearchitecture or full rebuilds. When motivations heavily favor innovation for all workloads, it's important to evaluate the portfolio to ensure that those investments can produce the desired return on investment. Modernization of specific resources and small-scale rebuilding efforts can be innovative but might be better served by following [Get started: Accelerate migration](./migrate.md).
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -75,7 +75,7 @@ In most enterprises, innovation can be accelerated through the use of existing a
 
 **Guidance to support deliverable completion:**
 
-Discovery and assessment provide a deeper level of technical alignment. You can then create an action plan for migrating any dependent workloads that the planned innovation requires. This scenario is common when companies have existing data sources, centralized applications, or required service layers that are needed to deliver the innovation within the context of the rest of the enterprise. 
+Discovery and assessment provide a deeper level of technical alignment. You can then create an action plan for migrating any dependent workloads that the planned innovation requires. This scenario is common when companies have existing data sources, centralized applications, or service layers that are necessary for delivering innovation within the context of the rest of the enterprise. 
 
 When there are dependent systems, the following articles can guide the discovery and assessment:
 
@@ -163,9 +163,9 @@ Define the plan for long-term operational responsibilities for the planned innov
 
 ## Step 7: Deploy an aligned landing zone
 
-All assets hosted in the cloud live within a landing zone. That landing zone might have explicit governance, security, and operational requirements. Or it might be a new subscription, with no support from other teams. In either scenario, it's important to start with a landing zone that aligns to governance and operational requirements from the beginning. 
+All assets hosted in the cloud live within a landing zone. That landing zone might have explicit governance, security, and operational requirements. Or, it might be a new subscription without support from other teams. In either scenario, it's important to start with a landing zone that aligns to governance and operational requirements from the beginning. 
 
-Starting with an approved landing zone helps your team discover policy violations early in development, instead of when the solution is released to production. Early discovery helps remove blockers and gives the adoption team and governance team enough time to make changes.
+Starting with an approved landing zone helps your team to discover policy violations early during development versus when the solution is released to production. Early discovery helps your team to remove blockers and gives adoption and governance teams enough time to make changes.
 
 **Deliverables:**
 
@@ -212,7 +212,7 @@ The Innovate methodology provides guidance on the tools and product management a
 
 To support the development of your innovation strategy, the AI Maturity Model is a free tool that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each level includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies. 
 
-The assessment takes 5-10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. By measuring these, we can compute your organization's score and provide an estimation of the AI innovation maturity on a curve.
+The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these catergories allows the AI Maturity Model to compute your organization's score and provide an estimation of the AI innovation maturity on a curve.
 
 **Deliverables:**
 
@@ -235,7 +235,7 @@ The steps outlined in this guide can help you and your teams create innovative s
 
 ## Next steps
 
-The Cloud Adoption Framework is a lifecycle solution. It can help you begin an innovation journey. It can also help you advance the maturity of the teams that support the innovation efforts. 
+The Cloud Adoption Framework is a lifecycle solution. It can help you begin an innovation journey. It can help your organization to start an innovation journey and to advance the maturity of the teams that support innovation efforts. 
 
 The following teams can use these next steps to continue to advance the maturity of their efforts. These parallel processes aren't linear and shouldn't be viewed as blockers. Instead, each is a parallel value stream to help mature your company's overall cloud readiness.
 
