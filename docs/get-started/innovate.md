@@ -212,7 +212,7 @@ The Innovate methodology provides guidance on the tools and product management a
 
 To support the development of your innovation strategy, the AI Maturity Model is a free tool that helps organizations assess their ability to create and own AI-based systems. There are four levels of maturity: foundational, approaching, aspirational, and mature. Each level includes a specific set of characteristics to help determine your organization's ability to adopt specific types of AI solutions, mitigate associated risks, and implement strategies. 
 
-The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these catergories allows the AI Maturity Model to compute your organization's score and provide an estimation of the AI innovation maturity on a curve.
+The assessment takes 5 to 10 minutes and measures your organization's capability across four categories: strategy, culture, organizational characteristics, and capabilities. Measuring these categories allows the AI Maturity Model to compute your organization's score and provide an estimation of the AI innovation maturity on a curve.
 
 **Deliverables:**
 
