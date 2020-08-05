@@ -25,7 +25,7 @@ Most of the effort required in this scope expansion occurs during the prerequisi
 
 As outlined in [Replication risks: physics of replication](../migration-considerations/migrate/replicate.md#replication-risks---physics-of-replication), you can use that inventory to estimate total migration data size, which can be compared to total available migration bandwidth. If that comparison doesn't align with the required time to business change, then this article can help accelerate migration velocity reducing the time required to migrate the datacenter.
 
-**Offline transfer of independent data stores:** The following diagram shows examples of both online and offline data transfers with Azure Data Box. You can use these approaches to ship large volumes of data to the cloud, prior to workload migration. In an offline data transfer, you copy source data to Azure Data Box, which is then physically shipped to Microsoft for transfer into an Azure Storage account as a file or a blob. You can use this process to ship data that isn't directly tied to a specific workload, prior to other migration efforts. Doing so reduces the amount of data that needs to be shipped over the network, in an effort to complete a migration within network constraints.
+**Offline transfer of independent data stores:** The following diagram shows examples of both online and offline data transfers with Azure Data Box. You can use these approaches to ship large volumes of data to the cloud, prior to workload migration. In an offline data transfer, you copy source data to Azure Data Box, which is then physically shipped to Microsoft for transfer into an Azure Storage account as a file or a blob. Prior to other migration efforts, you can use this process to ship data that isn't directly tied to a specific workload. Doing this reduces the amount of data that needs to be shipped over the network and supports completing a migration within network constraints.
 
 You can use this approach to transfer data from HDFS, backups, archives, file servers, and applications. Existing technical guidance explains how to use this approach to transfer data from an [HDFS store](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster), or from disks by using [SMB](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data), [NFS](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-nfs), [rest](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
 
@@ -39,11 +39,11 @@ If the storage requirements of a workload (or workloads) exceed network capacity
 
 Network transmission is the recommended approach unless the network is unavailable. The speed of transferring data over the network, even when bandwidth is constrained, is typically faster than physically shipping the data by using an offline transfer mechanism.
 
-If connectivity to Azure is available, you should conduct an analysis before using Data Box, especially if migration of the workload is time sensitive. Data Box is only advisable when the time to transfer the necessary data exceeds the time to populate, ship, and restore data by using Data Box.
+If connectivity to Azure is available, you should conduct an analysis before using Data Box, especially if migration of the workload is time sensitive. Data Box is only advisable when the time to transfer the necessary data exceeds the time to populate, ship, and restore it.
 
 ### Suggested action during the assess process
 
-**Network capacity analysis:** When workload-related data transfer requirements are at risk of exceeding network capacity, the cloud adoption team adds an additional analysis task to the assess process, called network capacity analysis. During this analysis, a member of the team  estimates the amount of available network capacity and required data transfer time. Note that this team member should have subject matter expertise regarding the local network and network connectivity.
+**Network capacity analysis:** When workload-related data transfer requirements are at risk of exceeding network capacity, the cloud adoption team adds an additional analysis task to the assess process called network capacity analysis. During this analysis, a member of the team  estimates the amount of available network capacity and required data transfer time. Note that this team member should have subject matter expertise regarding the local network and network connectivity.
 
 Available capacity is compared to the storage requirements of all assets to be migrated during the current release. If the storage requirements exceed the available bandwidth, then assets supporting the workload are selected for offline transfer.
 
@@ -54,11 +54,11 @@ Available capacity is compared to the storage requirements of all assets to be m
 
 ## Migration process changes
 
-When you're using offline transfer mechanisms, [replication processes](../migration-considerations/migrate/replicate.md) aren't likely required. But [synchronization processes](../migration-considerations/migrate/replicate.md) might still be a requirement. Understanding the results of the drift analysis completed during the assess process will inform the tasks required during migration, if an asset is being transferred offline.
+When you're using offline transfer mechanisms, [replication processes](../migration-considerations/migrate/replicate.md) aren't typically required, whereas [synchronization processes](../migration-considerations/migrate/replicate.md) might still be necessary. If an asset is being transferred offline, understanding the drift analysis results from the assess process will inform the tasks required during migration.
 
 ### Suggested action during the migration process
 
-**Copy storage:** You can use this approach to transfer data of HDFS, backups, archives, file servers, or applications. Existing technical guidance explains how to use this approach to transfer data from an [HDFS store](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster), or from disks by using [SMB](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data), [NFS](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-nfs), [rest](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
+**Copy storage:** You can use this approach to transfer data of HDFS, backups, archives, file servers, or applications. Existing technical guidance explains how to use this approach to transfer data from an [HDFS store](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-migrate-on-premises-hdfs-cluster) or from disks by using [SMB](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data), [NFS](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-nfs), [rest](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-rest), or [data copy service](https://docs.microsoft.com/azure/databox/data-box-deploy-copy-data-via-copy-service) to Data Box.
 
 There are also third-party partner solutions that use Azure Data Box for a migration. With these solutions, you move a large volume of data via an offline transfer, but you synchronize it later at a lower scale over the network.
 
@@ -66,7 +66,7 @@ There are also third-party partner solutions that use Azure Data Box for a migra
 
 **Restore the asset:** [Verify that the data](https://docs.microsoft.com/azure/databox/data-box-deploy-picked-up#verify-data-upload-to-azure) is available in the storage account. If so, you can use the data as a blob or in Azure Files. If the data is a VHD/VHDX file, you can convert the file to managed disks. Those managed disks can then be used to instantiate a virtual machine, which creates a replica of the original on-premises asset.
 
-**Synchronization:** If synchronization of drift is a requirement for a migrated asset, you can use one of the third-party partner solutions to synchronize the files, until the asset is restored.
+**Synchronization:** If synchronization of drift is a requirement for a migrated asset, you can use one of the third-party partner solutions to synchronize the files until the asset is restored.
 
 ## Optimize and promote process changes
 
