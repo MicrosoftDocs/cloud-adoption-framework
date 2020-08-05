@@ -88,7 +88,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Ensure continuous compliance with compliance reporting and auditing.
 
-- Understand that Azure Policy has limits, such as the restriction of definitions at any given scope: [policy limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
+- Understand that Azure Policy has limits, such as the restriction of definitions at any particular scope: [policy limits](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
 - Understand regulatory compliance policies. These might include the health insurance portability and accountability act, payment card industry, data security standards, service organization controls trust service principals, and criteria.
 
@@ -106,7 +106,7 @@ Governance provides mechanisms and processes to maintain control over your appli
 
 - Use built-in policies where possible to minimize operational overhead.
 
-- Assign the built-in policy contributor role at a given scope to enable application-level governance.
+- Assign the built-in policy contributor role at a particular scope to enable application-level governance.
 
 - Limit the number of Azure Policy assignments made at the root management group scope to avoid managing through exclusions at inherited scopes.
 

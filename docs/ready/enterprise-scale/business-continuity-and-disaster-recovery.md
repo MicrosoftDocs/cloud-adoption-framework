@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Enterprise-scale business continuity and disaster recovery
 
-Your organization or enterprise needs to design suitable, platform-level capabilities that application workloads can consume to meet their specific requirements. Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery requirements (DR) in order to design capabilities appropriately for these workloads.
+Your organization or enterprise needs to design suitable, platform-level capabilities that application workloads can consume to meet their specific requirements. Specifically, these application workloads have requirements pertaining to recover time objective (RTO) and recovery point objective (RPO). Be sure that you capture disaster recovery (DR) requirements in order to design capabilities appropriately for these workloads.
 
 ## Design considerations
 
@@ -29,7 +29,7 @@ Consider the following factors:
 
   - Data sharing and dependencies between zones.
 
-  - Impact of Availability Zones on update domains compared to availability sets, and the percentage of workloads that can be under maintenance simultaneously.
+  - The impact of Availability Zones on update domains compared to availability sets, and the percentage of workloads that can be under maintenance simultaneously.
 
   - Support for specific virtual machine (VM) stock-keeping units with Availability Zones.
 
