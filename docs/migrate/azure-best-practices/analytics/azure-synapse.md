@@ -1,6 +1,6 @@
 ---
-title: "High availability for Azure Synapse Analytics"
-description: Use Azure Synapse features to address high availability and disaster recovery requirements.
+title: High availability for Azure Synapse Analytics
+description: Use Azure Synapse Analytics features to address high availability and disaster recovery requirements.
 author: v-hanki
 ms.author: brblanch
 ms.date: 07/14/2020
@@ -21,7 +21,7 @@ Azure Synapse Analytics uses database snapshots to provide high availability of 
 
 Azure Synapse Analytics automatically takes snapshots throughout the day to create restore points that are available for seven days. This retention period can't be changed. Azure Synapse Analytics supports an eight-hour recovery point objective (RPO). You can restore a data warehouse in the primary region from any one of the snapshots taken in the past seven days.
 
-The service also supports user-defined restore points. Manual triggering of snapshots can create restore points of a data warehouse before and after large modifications. This capability ensures that restore points are logically consistent. Logical consistency provides additional data protection against workload interruptions or user errors for quick recovery time.
+The service also supports user-defined restore points. Manually triggering snapshots can create restore points of a data warehouse before and after large modifications. This capability ensures that restore points are logically consistent. Logical consistency provides additional data protection against workload interruptions or user errors for quick recovery time.
 
 ## Disaster recovery
 
