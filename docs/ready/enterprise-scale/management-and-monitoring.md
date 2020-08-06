@@ -65,7 +65,7 @@ _Figure 1: Platform management and monitoring._
 
 ## Plan for app management and monitoring
 
-To expand on the previous section, this section considers federated management and monitoring of app workloads and explains how application teams can operationally maintain these workloads.
+To expand on the previous section, this section will consider a federated model and explain how application teams can operationally maintain these workloads.
 
 **Design considerations:**
 

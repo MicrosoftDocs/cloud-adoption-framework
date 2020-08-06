@@ -70,21 +70,21 @@ _Figure 1: Identity and access management._
 
 ### Plan for authentication inside a landing zone
 
-A critical design decision that an enterprise organization must make when adopting Azure is whether to extend an existing on-premises identity domain into Azure or to create a brand new one. Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows server, Azure AD Domain Services, or both. Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
+A critical design decision that an enterprise organization must make when adopting Azure is whether to extend an existing on-premises identity domain into Azure or to create a brand new one. Requirements for authentication inside the landing zone should be thoroughly assessed and incorporated into plans to deploy Active Directory Domain Services (AD DS) in Windows server, Azure AD Domain Services (Azure AD DS), or both. Most Azure environments will use at least Azure AD for Azure fabric authentication and AD DS local host authentication and group policy management.
 
 **Design considerations:**
 
 - Consider centralized and delegated responsibilities to manage resources deployed inside the landing zone.
-- Applications that rely on domain services and use older protocols can use [Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services).
+- Applications that rely on domain services and use older protocols can use [Azure AD DS](https://docs.microsoft.com/azure/active-directory-domain-services).
 
 **Design recommendations:**
 
 - Use centralized and delegated responsibilities to manage resources deployed inside the landing zone based on role and security requirements.
 - Privileged operations such as creating service principal objects, registering applications in Azure AD, and procuring and handling certificates or wildcard certificates require special permissions. Consider which users will be handling such requests and how to secure and monitor their accounts with the degree of diligence required.
 - If an organization has a scenario where an application that uses integrated Windows authentication must be accessed remotely through Azure AD, consider using [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
-- There's a difference between Azure AD, Azure AD Domain Services, and AD DS running on Windows server. Evaluate your application needs, and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
-- Evaluate the compatibility of workloads for AD DS on Windows server and for Azure AD Domain Services.
+- There's a difference between Azure AD, Azure AD DS, and AD DS running on Windows server. Evaluate your application needs, and understand and document the authentication provider that each one will be using. Plan accordingly for all applications.
+- Evaluate the compatibility of workloads for AD DS on Windows server and for Azure AD DS.
 - Ensure your network design allows resources that require AD DS on Windows server for local authentication and management to access the appropriate domain controllers.
   - For AD DS on Windows server, consider shared services environments that offer local authentication and host management in a larger enterprise-wide network context.
-- Deploy Azure AD Domain Services within the primary region because this service can only be projected into one subscription.
+- Deploy Azure AD DS within the primary region because this service can only be projected into one subscription.
 - Use managed identities instead of service principals for authentication to Azure services. This approach reduces exposure to credential theft.
