@@ -29,7 +29,7 @@ Enterprise-scale architecture shouldn't consider any abstraction layers, such as
 
 ## Application-centric and archetype-neutral
 
-Enterprise-scale architecture should focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations, such as moving virtual machines. It shouldn't differentiate between old and new applications, infrastructure as a service (IaaS), or platform as a service (PaaS) applications. Ultimately, it should provide a safe and secure foundation for all application types to be deployed onto your Azure platform.
+Enterprise-scale architecture should focus on application-centric migrations and development rather than pure infrastructure lift-and-shift migrations, such as moving virtual machines. It shouldn't differentiate between old and new applications, infrastructure as a service, or platform as a service applications. Ultimately, it should provide a safe and secure foundation for all application types to be deployed onto your Azure platform.
 
 ## Align Azure-native design and roadmaps
 

@@ -14,13 +14,13 @@ ms.custom: csu
 
 # Cloud Adoption Framework enterprise-scale landing zone architecture
 
-Enterprise-scale is an architectural approach and a reference implementation that enables effective construction and operationalization of landing zones on Azure, at scale. It's aligned with the Azure roadmap and the Cloud Adoption Framework for Azure.
+Enterprise-scale is an architectural approach and a reference implementation that enables effective construction and operationalization of landing zones on Azure, at scale. This approach aligns with the Azure roadmap and the Cloud Adoption Framework for Azure.
 
 ## An overview of Cloud Adoption Framework enterprise-scale landing zone architecture
 
-The Cloud Adoption Framework enterprise-scale landing zone architecture represents the strategic design path and target technical state for an organization's Azure environment. It will continue to evolve in lockstep with the Azure platform. Ultimately, it's defined by the various design decisions that your organization must make to define your Azure journey.
+The Cloud Adoption Framework enterprise-scale landing zone architecture represents the strategic design path and target technical state for an organization's Azure environment. It will continue to evolve in lockstep with the Azure platform. It will continue to evolve alongside the Azure platform and is defined by the various design decisions that your organization must make to map your Azure journey.
 
-Not all enterprises adopt Azure the same way, so the Cloud Adoption Framework enterprise-scale landing zone architecture varies between customers. The technical considerations and design recommendations presented in this guide might yield different trade-offs based on your organization's scenario. Some variation is expected. But if you follow the core recommendations, the resulting target architecture will set you on a path to sustainable scale.
+Not all enterprises adopt Azure the same way, so the Cloud Adoption Framework enterprise-scale landing zone architecture varies between customers. The technical considerations and design recommendations in this guide might yield different trade-offs based on your organization's scenario. Some variation is expected, but if you follow the core recommendations, the resulting target architecture will set your organization on a path to sustainable scale.
 
 ## Landing zone: Expanded definition
 
@@ -30,7 +30,7 @@ Not all enterprises adopt Azure the same way, so the Cloud Adoption Framework en
 
 - **Refactoring:** The number of subscriptions required to support a full enterprise-scale IT portfolio can be large. At first, the Cloud Adoption Framework encourages a high frequency of refactoring, which should stabilize before the tenth production workload is deployed to the cloud. When you work across an enterprise portfolio, 10 applications can be deployed quickly and make refactoring impractical. Instead, a central IT team or a cloud center of excellence should deliver a more complete landing zone during the first release.
 
-- **Goal:** Provide consistent landing zones based on an application archetype subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise. See Figure 1.
+- **Goal:** Provide consistent landing zones based on an application archetype subscription strategy to minimize subscription sprawl. Expand the definition of requisite components to better fit the governance and compliance needs of a cloud-mature enterprise. For an overview, see Figure 1.
 
 - **Principal purpose:** Limited refactoring opportunities and a defined subscription strategy create an opportunity to mature the customer's landing zones faster. The Cloud Adoption Framework enterprise-scale landing zone broadens the principle purpose of the landing zone to focus on aspects of governance, compliance, security, and operational management. Each of these areas is addressed in the first release of the landing zone and supporting shared services.
 
@@ -42,7 +42,7 @@ _Figure 1: Landing zone design._
 
 ## Expanded list of requisite components
 
-This list expands on the landing zone illustration. It outlines the core technical constructs that must be designed and developed within the context of customer requirements to create compliant technical landing zone environments and the conditions for successful Azure adoption.
+The following list expands on the landing zone illustration. It outlines the core technical constructs that must be designed and developed within the context of customer requirements to create compliant technical landing zone environments and the conditions for successful Azure adoption.
 
 - **Identity and access management:** Azure Active Directory design and integration must be built to ensure both server and user authentication. Resource-based access control (RBAC) must be modeled and deployed to enforce separation of duties and the required entitlements for platform operation and management. Key management must be designed and deployed to ensure secure access to resources and support operations such as rotation and recovery. Ultimately, access roles are assigned to application owners at the control and data planes to create and manage resources autonomously.
 

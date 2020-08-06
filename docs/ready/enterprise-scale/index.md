@@ -11,9 +11,9 @@ ms.subservice: ready
 
 # Start with Cloud Adoption Framework enterprise-scale landing zones
 
-The enterprise-scale architecture represents the strategic design path and target technical state for your Azure environment. It will continue to evolve alongside the Azure platform. Ultimately, it's defined by the various design decisions that an organization must make to define their Azure journey.
+The enterprise-scale architecture represents the strategic design path and target technical state for your Azure environment. It will continue to evolve alongside the Azure platform and is defined by the various design decisions that your organization must make to map your Azure journey.
 
-Not all enterprises adopt Azure in the same way, so the enterprise-scale architecture might vary between various organizations. The technical considerations and design recommendations of the enterprise-scale architecture might lead to different trade-offs based on your organization's scenario. Some variation is expected. But if you follow the core recommendations, the resulting target architecture will put your organization on a path to sustainable scale.
+Not all enterprises adopt Azure in the same way, so the Cloud Adoption Framework enterprise-scale landing zone architecture varies between customers. The technical considerations and design recommendations of the enterprise-scale architecture might lead to different trade-offs based on your organization's scenario. Some variation is expected, but if you follow the core recommendations, the resulting target architecture will set your organization on a path to sustainable scale.
 
 ## Prescriptive guidance
 
