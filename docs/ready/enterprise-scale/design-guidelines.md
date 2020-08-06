@@ -23,11 +23,11 @@ The following eight critical design areas can help you translate your requiremen
 
 The impact of decisions made within these critical areas will reverberate across enterprise-scale architecture and influence other decisions. Familiarize yourself with these eight areas to better understand the consequences of encompassed decisions, which could later produce trade-offs within related areas.
 
-1. [Enterprise agreement (EA) enrollment and Azure Active Directory tenants](./enterprise-enrollment-and-azure-ad-tenants.md)
-2. [Identity and access management](./identity-and-access-management.md)
-3. [Management group and subscription organization](./management-group-and-subscription-organization.md)
-4. [Network topology and connectivity](./network-topology-and-connectivity.md)
-5. [Management and monitoring](./management-and-monitoring.md)
-6. [Business continuity and disaster recovery](./business-continuity-and-disaster-recovery.md)
-7. [Security, governance, and compliance](./security-governance-and-compliance.md)
-8. [Platform automation and DevOps](./platform-automation-and-devops.md)
+- [Enterprise agreement (EA) enrollment and Azure Active Directory tenants](./enterprise-enrollment-and-azure-ad-tenants.md)
+- [Identity and access management](./identity-and-access-management.md)
+- [Management group and subscription organization](./management-group-and-subscription-organization.md)
+- [Network topology and connectivity](./network-topology-and-connectivity.md)
+- [Management and monitoring](./management-and-monitoring.md)
+- [Business continuity and disaster recovery](./business-continuity-and-disaster-recovery.md)
+- [Security, governance, and compliance](./security-governance-and-compliance.md)
+- [Platform automation and DevOps](./platform-automation-and-devops.md)
