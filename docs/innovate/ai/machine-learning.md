@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning"
+title: Machine learning
 description: These checklists and resources can help you plan your application development and deployment.
 author: v-hanki
 ms.author: janet
@@ -13,26 +13,26 @@ ms.subservice: innovate
 
 # Machine learning
 
-Azure empowers you with the most advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models by using Azure Machine Learning. Azure Machine Learning can be used for any kind of machine learning, from classical machine learning to deep learning, supervised, and unsupervised learning. Whether you prefer to write Python or R code, or use zero-code or low-code options such as the [designer](https://docs.microsoft.com/azure/machine-learning/tutorial-designer-automobile-price-train-score), you can build, train, and track highly accurate machine learning and deep-learning models in an Azure Machine Learning workspace.
+Azure empowers you with the most advanced machine learning capabilities. Quickly and easily build, train, and deploy your machine learning models by using Azure Machine Learning. Machine Learning can be used for any kind of machine learning, from classical to deep, supervised, and unsupervised learning. Whether you prefer to write Python or R code, or use zero-code or low-code options such as the [designer](https://docs.microsoft.com/azure/machine-learning/tutorial-designer-automobile-price-train-score), you can build, train, and track highly accurate machine learning and deep learning models in a Machine Learning workspace.
 
 You can even start training on your local machine and then scale out to the cloud. The service also interoperates with popular deep learning and reinforcement open-source tools such as PyTorch, TensorFlow, scikit-learn, and Ray and RLlib.
 
-Get started with [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/). You'll find a tutorial on how to get [started with your first machine learning experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open-source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
+Get started with [Machine Learning](https://docs.microsoft.com/azure/machine-learning/). You'll find a tutorial on how to get [started with your first machine learning experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). To learn more about the open-source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
 
 Common scenarios for machine learning solutions include:
 
-- Predictive maintenance.
-- Inventory management.
-- Fraud detection.
-- Demand forecasting.
-- Intelligent recommendations.
-- Sales forecasting.
+- Predictive maintenance
+- Inventory management
+- Fraud detection
+- Demand forecasting
+- Intelligent recommendations
+- Sales forecasting
 
 ## Checklist
 
-- **Get started by first familiarizing yourself with Azure Machine Learning**, and then choose which experience to begin with. You can follow along with steps to use a Jupyter notebook with Python, the visual drag-and-drop experience, or automated machine learning (AutoML).
+- **Get started by first familiarizing yourself with Machine Learning**, and then choose which experience to begin with. You can follow along with steps to use a Jupyter notebook with Python, the visual drag-and-drop experience, or automated machine learning (AutoML).
 
-  - [Azure Machine Learning overview](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml)
+  - [Machine Learning overview](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml)
   - [Create your first machine learning experiment with a Jupyter notebook with Python](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup)
   - [Visual drag-and-drop experiments](https://docs.microsoft.com/azure/machine-learning/tutorial-designer-automobile-price-train-score)
   - [Use the AutoML UI](https://docs.microsoft.com/azure/machine-learning/tutorial-first-experiment-automated-ml)
@@ -42,13 +42,13 @@ Common scenarios for machine learning solutions include:
 
   - [Use AutoML to predict taxi fees](https://docs.microsoft.com/azure/machine-learning/tutorial-auto-train-models)
   - [Classify images with scikit-learn](https://docs.microsoft.com/azure/machine-learning/tutorial-train-models-with-aml)
-  - [Build an Azure Machine Learning pipeline for batch scoring](https://docs.microsoft.com/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
+  - [Build a Machine Learning pipeline for batch scoring](https://docs.microsoft.com/azure/machine-learning/tutorial-pipeline-batch-scoring-classification)
 
-- **Follow along with video tutorials** to learn more about the benefits of Azure Machine Learning, such as no-code model building, MLOps, ONNX Runtime, model interpretability and transparency, and more.
+- **Follow along with video tutorials** to learn more about the benefits of Machine Learning, such as no-code model building, MLOps, ONNX Runtime, model interpretability and transparency, and more.
 
-  - [What's new with Azure Machine Learning](https://channel9.msdn.com/Shows/AI-Show/Allup-Azure-ML)
+  - [What's new with Machine Learning](https://channel9.msdn.com/Shows/AI-Show/Allup-Azure-ML)
   - [Use AutoML to build models](https://aka.ms/automlvideo)
-  - [Build zero-code models with Azure Machine Learning designer](https://aka.ms/studioanddesigner)
+  - [Build zero-code models with Machine Learning designer](https://aka.ms/studioanddesigner)
   - [MLOps for managing the end-to-end lifecycle](https://aka.ms/mlopsvideo)
   - [Incorporating ONNX Runtime into your models](https://www.youtube.com/watch?v=qy7X2JGLUC4)
   - [Model interpretability and transparency](https://aka.ms/azuremlinterpret)

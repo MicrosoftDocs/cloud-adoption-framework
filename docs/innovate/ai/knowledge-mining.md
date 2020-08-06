@@ -1,6 +1,6 @@
 ---
-title: "Knowledge mining"
-description: Tools, programs, and content (best practices, configuration templates, and architecture guidance) to simplify adoption of AI and cloud-native practices at scale.
+title: Knowledge mining
+description: Tools, programs, and content--best practices, configuration templates, and architecture guidance--to simplify adoption of AI and cloud-native practices at scale.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020

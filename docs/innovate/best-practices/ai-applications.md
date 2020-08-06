@@ -1,6 +1,6 @@
 ---
 title: What are AI applications?
-description: What is Azure Cognitive Services?
+description: Learn how you can integrate AI capabilities and breakthroughs into your applications with Azure Cognitive Services.
 author: v-hanki
 ms.author: janet
 ms.date: 07/14/2020
@@ -21,17 +21,17 @@ In Azure, you can build intelligent applications faster by using the tools and t
 
 ## What is Azure Cognitive Services?
 
-Azure Cognitive Services can simplify infusing AI into your applications and use the latest breakthroughs in AI by using a few simple lines of code. Azure Cognitive Services brings the ability to create applications that see, hear, speak, understand, and even begin to bring reason into your business processes. Cognitive Services provides AI intelligence in a form that's easy to use and incorporate into your application.
+Azure Cognitive Services can simplify how you integrate AI capabilities and breakthroughs into your applications with a few simple lines of code. It supports you to create applications that see, hear, speak, understand, and even start to reason between your business processes. Cognitive Services provides AI intelligence in a form that's easy to use and incorporate into your applications.
 
-Azure Cognitive Services is made up of APIs, SDKs, and services available to help developers build intelligent applications without having direct AI or data science skills or knowledge. Azure Cognitive Services enables developers to easily add cognitive features into their applications. The catalog of services within Azure Cognitive Services can be categorized into five main parts: vision, speech, language, web search, and decision.
+Cognitive Services is made up of APIs, SDKs, and services available to help developers build intelligent applications without having direct AI or data science skills or knowledge. Cognitive Services enables developers to easily add cognitive features into their applications. The catalog of services within Cognitive Services can be categorized into five main parts: vision, speech, language, web search, and decision.
 
 ### Vision APIs
 
 | Service name | Service description |
 | --- | --- |
-| [Computer Vision](https://docs.microsoft.com/azure/cognitive-services/computer-vision/) | The Computer Vision service provides you with access to advanced algorithms for processing images and returning information. |
-| [Custom Vision](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home) | The Custom Vision service allows you to build custom image classifiers. |
-| [Face](https://docs.microsoft.com/azure/cognitive-services/face/) | The Face service provides access to advanced face algorithms to enable face attribute detection and recognition. |
+| [Computer Vision](https://docs.microsoft.com/azure/cognitive-services/computer-vision/) | Computer Vision  provides you with access to advanced algorithms for processing images and returning information. |
+| [Custom Vision](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home) | Custom Vision allows you to build custom image classifiers. |
+| [Face](https://docs.microsoft.com/azure/cognitive-services/face/) | The Face service provides access to advanced face algorithms that detect and recognize facial attributes. |
 | [Form Recognizer](https://docs.microsoft.com/azure/cognitive-services/form-recognizer/) (preview) | Form Recognizer identifies and extracts key-value pairs and table data from form documents. It then outputs structured data, which includes the relationships, in the original file. |
 | [Ink Recognizer](https://docs.microsoft.com/azure/cognitive-services/ink-recognizer/) (preview) | Ink Recognizer allows you to recognize and analyze digital ink-stroke data, shapes, and handwritten content, and output a document structure with all recognized entities. |
 | [Video Indexer](https://docs.microsoft.com/azure/cognitive-services/video-indexer/video-indexer-overview) | Video Indexer enables you to extract insights from your videos. |
@@ -43,7 +43,7 @@ Azure Cognitive Services is made up of APIs, SDKs, and services available to hel
 | [Speech](https://docs.microsoft.com/azure/cognitive-services/speech-service/) | Speech service adds speech-enabled features to applications. |
 | [Speaker Recognition](https://docs.microsoft.com/azure/cognitive-services/speaker-recognition/home "Speaker Recognition API") (preview) | The Speaker Recognition API provides algorithms for Speaker Identification and verification. |
 | [Bing Speech](https://docs.microsoft.com/azure/cognitive-services/speech/home) (retiring) | The Bing Speech API provides you with an easy way to create speech-enabled features in your applications. |
-| [Translator speech](https://docs.microsoft.com/azure/cognitive-services/translator-speech/) (retiring) | Translator speech is a machine translation service. |
+| [Translator Speech](https://docs.microsoft.com/azure/cognitive-services/translator-speech/) (retiring) | Translator Speech is a machine translation service. |
 
 ### Language APIs
 
@@ -60,19 +60,19 @@ Azure Cognitive Services is made up of APIs, SDKs, and services available to hel
 | --- | --- |
 | [Anomaly Detector](https://docs.microsoft.com/azure/cognitive-services/anomaly-detector/) (preview) | Anomaly Detector allows you to monitor and detect abnormalities in your time series data. |
 | [Content Moderator](https://docs.microsoft.com/azure/cognitive-services/content-moderator/overview "Content Moderator") | Content Moderator provides monitoring for possible offensive, undesirable, and risky content. |
-| [Personalizer](https://docs.microsoft.com/azure/cognitive-services/personalizer/) | Personalizer allows you to choose the best experience to show to your users by learning from their real-time behavior. |
+| [Personalizer](https://docs.microsoft.com/azure/cognitive-services/personalizer/) | Personalizer allows you to learn from users' real-time behavior in order to choose the most tailored experience for them. |
 
 ### Supported cultural languages
 
 Cognitive Services supports a wide range of cultural languages at the service level. You can find the language availability for each API in the [supported languages list](https://docs.microsoft.com/azure/cognitive-services/language-support).
 
-### Securing resources
+### Secure resources
 
-Azure Cognitive Services provides a layered security model, which includes [authentication](https://docs.microsoft.com/azure/cognitive-services/authentication) via Azure Active Directory credentials, a valid resource key, and [Azure Virtual Network](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-virtual-networks).
+Cognitive Services provides a layered security model, which includes [authentication](https://docs.microsoft.com/azure/cognitive-services/authentication) via Azure Active Directory credentials, a valid resource key, and [Azure Virtual Network](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-virtual-networks).
 
 ### Container support
 
-Cognitive Services provides containers for deployment in the Azure cloud or on-premises. Learn more about [Cognitive Services containers](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-container-support).
+Cognitive Services provides containers for deployment in the cloud or on-premises. Learn more about [Cognitive Services containers](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-container-support).
 
 <!-- docsTest:ignore "HIPAA BAA" "CSA STAR" -->
 
@@ -84,12 +84,12 @@ You can [download](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3
 
 To understand privacy and data management, go to the [Microsoft Trust Center](https://servicetrust.microsoft.com/).
 
-## How are Azure Cognitive Services and Azure Machine Learning similar?
+## How are Cognitive Services and Azure Machine Learning similar?
 
-Azure Cognitive Services and Azure Machine Learning have the common goal of applying AI to enhance business operations. How each one provides this capability in their respective offerings is different. Generally, the audiences are different:
+Cognitive Services and Azure Machine Learning have the common goal of applying AI to enhance business operations. How each one provides this capability in their respective offerings is different. Generally, the audiences are different:
 
-- Azure Cognitive Services is for developers without machine-learning experience.
-- Azure Machine Learning is tailored for data scientists.
+- Cognitive Services is for developers without machine learning experience.
+- Machine Learning is tailored for data scientists.
 
 ## How is a cognitive service different from machine learning?
 

@@ -24,7 +24,7 @@ Organizations around the world are transforming their businesses with conversati
 
 ## Build a bot
 
-Azure Bot Service and Bot Framework offer an integrated set of tools and services to help with this process. Choose your favorite development environment or command-line tools to create your bot. SDKs exist for C#, JavaScript, TypeScript, and Python. (The SDK for Java is under development.) We provide tools for various stages of bot development to help you design and build bots.
+Azure Bot Service and Bot Framework offer an integrated set of tools and services to help with this process. Choose your favorite development environment or command-line tools to create your bot. SDKs exist for C#, JavaScript, TypeScript, and Python. The SDK for Java is under development. We provide tools for various stages of bot development to help you design and build bots.
 
 ![Diagram that shows tools for various stages of bot development.](../../_images/ai-bot-dev-tools.png)
 
@@ -79,11 +79,11 @@ When you're ready to make your bot available on the web, [publish it to Azure](h
 
 ### Connect
 
-Connect your bot to channels such as Facebook, Messenger, Kik, Skype, Slack, Microsoft Teams, Telegram, text/SMS, twilio, Cortana, and Skype. Bot Framework does most of the work necessary to send and receive messages from all of these different platforms. Your bot application receives a unified, normalized stream of messages no matter the number and type of channels it's connected to. For information on how to add channels, see [Channels](https://docs.microsoft.com/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0).
+Connect your bot to channels such as Facebook, Messenger, Kik, Skype, Slack, Microsoft Teams, Telegram, text/SMS, twilio, Cortana, and Skype. Bot Framework does most of the work necessary to send and receive messages from all of these different platforms. Your bot application receives a unified, normalized stream of messages no matter number and type of channels to which it's connected. For information on how to add channels, see [Channels](https://docs.microsoft.com/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0).
 
 ### Evaluate
 
-Use the data collected in the Azure portal to identify opportunities to improve the capabilities and performance of your bot. You can get service-level and instrumentation data like traffic, latency, and integrations. Analytics also provides conversation-level reporting on user, message, and channel data. For more information, see [How to gather analytics](https://docs.microsoft.com/azure/bot-service/bot-service-manage-analytics?view=azure-bot-service-4.0).
+Use the data collected in the Azure portal to identify opportunities to improve the capabilities and performance of your bot. You can get service-level and instrumentation data like traffic, latency, and integrations. Analytics also provide conversation-level reporting on user, message, and channel data. For more information, see [How to gather analytics](https://docs.microsoft.com/azure/bot-service/bot-service-manage-analytics?view=azure-bot-service-4.0).
 
 <!-- docsTest:ignore "John Doe" "Jane Doe" -->
 
@@ -109,7 +109,7 @@ There are common patterns used for implementation of a conversational AI applica
 
 ## Next steps
 
-- Review machine learning white-papers and e-books about [Azure Bot Service](https://azure.microsoft.com/resources/whitepapers/search/?service=bot-service).
+- Review machine learning white papers and e-books about [Azure Bot Service](https://azure.microsoft.com/resources/whitepapers/search/?service=bot-service).
 - Review [AI + Machine Learning architectures](https://docs.microsoft.com/azure/architecture/browse/).
 - [Building intelligent applications with cognitive APIs (e-book)](https://azure.microsoft.com/resources/building-intelligent-apps-with-cognitive-apis/).
 - [FAQ chatbot architecture](https://azure.microsoft.com/resources/faq-chatbot-architecture/).
