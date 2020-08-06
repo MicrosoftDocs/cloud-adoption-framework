@@ -13,7 +13,7 @@ ms.subservice: ready
 
 The Cloud Adoption Framework approaches cloud adoption as a self-service activity. The objective is to empower each of the teams supporting adoption through standardized approaches. In reality, it is not safe to assume that a self-service approach will be sufficient for all adoption activities.
 
-Successful cloud adoption programs typically involve at least one level of third party support. Many cloud adoption efforts require support from a Systems Integration (SI) or consulting partner who provides services to accelerate cloud adoption. Additionally, successful cloud adoption efforts tend to engage one or more Independent Software Vendors (ISV) who provide software-based services that accelerate cloud adoption. SIs, ISVs, and other forms of Microsoft partners have aligned their offerings to specific methodologies found in the cloud adoption framework. When a partner is aligned to a the Ready methodology of this framework, they will likely offer their own Azure landing zone implementation option.
+Successful cloud adoption programs typically involve at least one level of third party support. Many cloud adoption efforts require support from a Systems Integration (SI), or consulting partner who provide services to accelerate cloud adoption. Managed Service Provider (MSP) provide enduring value by supporting landing zones and cloud adoption, but they also provide post-adoption operations management support. Additionally, successful cloud adoption efforts tend to engage one or more Independent Software Vendors (ISV) who provide software-based services that accelerate cloud adoption. The rich partner ecosystems of SIs, ISVs, MSPs and other forms of Microsoft partners have aligned their offerings to specific methodologies found in the cloud adoption framework. When a partner is aligned to the Ready methodology of this framework, they will likely offer their own Azure landing zone implementation option.
 
 This article provides a series of questions to help create an understanding of the scope of the partner's Azure landing zone offering.
 
@@ -28,7 +28,7 @@ This article provides a series of questions to help create an understanding of t
 
 If you need to find a partner to implement your Azure landing zone(s), start with the approved list of Cloud Adoption Framework (CAF) aligned partners. Specifically start with partners who have [offers aligned to the CAF Ready methodology](https://www.microsoft.com/azure/partners/adopt?filters=ready).
 
-Additionally, all [Azure Expert Managed Service Providers (MSPs)](https://www.microsoft.com/en-us/solution-providers/search?cacheId=9c2fed4f-f9e2-42fb-8966-4c565f08f11e) have been audited to validate their ability to deliver each methodology in the Cloud Adoption Framework. While they may not all have an aligned offer, each of these partners has demonstrated alignment during technical delivery.
+Additionally, all [Azure Expert Managed Service Providers (MSPs)](https://www.microsoft.com/azure/partners/azureexpertmsp?filters=all) have been audited to validate their ability to deliver each methodology in the Cloud Adoption Framework. While they may not all have an aligned offer, each of these partners has demonstrated alignment during technical delivery.
 
 ## Validate partner offer
 
@@ -58,16 +58,6 @@ Partners who offer an Azure landing zone solution may support one or more option
 - Manual configuration: Does the solution empower the IT team to manually configure the landing zone, without injecting errors into the landing zone source code?
 
 **Question for the partner:** Which of the Azure landing zone implementation options are supported by the partner's solution? See the [Azure landing zone implementation options](./implementation-options.md) article for a full list of options.
-
-### Enterprise enrollment
-
-Customers can purchase Azure in a "Pay-as-you-go" option, paying for what you use each month. But there are a few options for purchasing Azure that may better meet the business requirements.
-
-**Question for the partner:** Which of the following buying options does the partner solution support?
-
-- Pay-as-you-go (PAYG): The solution deploys and manages landing zones in individual PAYG subscriptions.
-- Enterprise tenant: The solution deploys and manages landing zones in an business enrolment/contract which connects multiple subscriptions under one billing and security account.
-- Partner tenant: The solution deploys and manages landing zones in partner-owned subscriptions to support managed services &/or IT outsourcing options.
 
 ### Identity
 
@@ -100,6 +90,7 @@ Sound governance and operational management of the cloud starts with best practi
 - Tagging standards: Does the landing zone configuration follow & enforce a specific [standards for tagging assets](../azure-best-practices/naming-and-tagging.md#metadata-tags)?
 - Subscription design: What [subscription design strategies](../../decision-guides/subscriptions/index.md) are supported by the partner's offer?
 - Management group design: Does the partner offer follow a defined pattern for the [Azure management group hierarchy](../azure-best-practices/organize-subscriptions.md) to organize subscriptions?
+- Resource group alignment: How are resource groups used to group assets deployed to the cloud? In the partner's offer are resource groups used to group assets into workload, deployment packages, or other organization standards?
 
 **Question for the partner:** Does the partner provide on-boarding documentation to [track foundational decisions](../../get-started/cloud-concepts.md) and educate staff? See the [initial decision template](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/references/initial-decisions-checklist.docx) for an example of such documentation.
 
