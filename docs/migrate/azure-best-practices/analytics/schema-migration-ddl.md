@@ -178,7 +178,7 @@ It's common for older systems to contain columns with inefficient data types. Fo
 
 It's a good time to check and rationalize current data definitions during a migration exercise. You can automate these tasks by using SQL queries to find the maximum numeric value or character length within a data field and comparing the result to the data type.
 
-In general, it's a good practice to minimize the total defined row length for a table. For the best query performance, you can use the smallest data type for each column, as described earlier. The recommended approach to load data from external tables in Azure Synapse Analytics is to use the PolyBase utility, which upports a maximum defined row length of 1 megabyte (MB). PolyBase won't load tables with rows longer than 1 MB, and you must use the Bulk Copy Program instead.
+In general, it's a good practice to minimize the total defined row length for a table. For the best query performance, you can use the smallest data type for each column, as described earlier. The recommended approach to load data from external tables in Azure Synapse Analytics is to use the PolyBase utility, which supports a maximum defined row length of 1 megabyte (MB). PolyBase won't load tables with rows longer than 1 MB, and you must use the Bulk Copy Program instead.
 
 For the most efficient join execution, define the columns on both sides of the join as the same data type. If the key of a dimension table is defined as `SMALLINT`, then the corresponding reference columns in fact tables using that dimension should also be defined as `SMALLINT`.
 
