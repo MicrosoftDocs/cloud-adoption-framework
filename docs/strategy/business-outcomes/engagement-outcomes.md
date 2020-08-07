@@ -1,5 +1,5 @@
 ---
-title: "Examples of customer engagement outcomes"
+title: Examples of customer engagement outcomes
 description: Learn about examples of customer engagement to understand the needs of customers and the ecosystem around them during their business transformation journey.
 author: BrianBlanchard
 ms.author: brblanch
@@ -15,7 +15,7 @@ ms.subservice: strategy
 
 As discussed in the [business outcomes overview](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: customer engagement. Understanding the needs of customers, and the ecosystem around customers, helps you to articulate the business outcomes that are the target of a business's transformation journey.
 
-During cloud-enabled data innovation efforts, you can assume that customers are engaged. For example, the following are potentially disruptive functions that require a high degree of customer engagement:
+During cloud-enabled data innovation efforts, you can assume that customers are engaged. The following functions are potentially disruptive and require a high degree of customer engagement:
 
 - Aggregating data
 - Testing theories
@@ -34,11 +34,11 @@ During customer-obsessed transformations such as a cloud-enabled application inn
 
 A services company that provides business-to-business (B2B) services is trying to retain market share in a competitive market. Customers who have left for a competing service provider found that their overly complex technical solution interferes with their business processes, and is the primary reason for leaving. In this case, cycle time is imperative.
 
-Today, it takes 12 months for a feature to progress from request to release. If it's prioritized by the executive team, that cycle can be reduced to 6 to 9 months. Through a cloud-enabled application innovation effort, cloud-native application models, and Azure DevOps integration, the team cut cycle time down to 1 month. This allows the business and application development teams to interact more directly with customers.
+It currently takes 12 months for a feature to progress from request to release. If it's prioritized by the executive team, this cycle can shorten from nine to six months. The team can cut cycle time down to one month through a cloud-enabled application innovation effort, cloud-native application models, and Azure DevOps integration. This frees business and application development teams to interact more directly with customers.
 
 ## Intelligent contact center
 
-Customer satisfaction and experience are at the core of successful organizations. Freeing up your employees to focus on superior customer service can go a long way towards customer loyalty and retention. With the AI technology available today, many steps during a customer call can be automated, enabling the contact center agent more time to focus on delivering superior customer service.
+Customer satisfaction and experience are at the core of successful organizations. Freeing your employees to focus on superior customer service can strongly affect customer loyalty and retention. With the AI technology available today, many steps during a customer call can be automated, enabling the contact center agent more time to focus on delivering superior customer service.
 
 ### Example
 

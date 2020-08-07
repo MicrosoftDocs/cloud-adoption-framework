@@ -1,5 +1,5 @@
 ---
-title: "Examples of global reach outcomes"
+title: Examples of global reach outcomes
 description: Use the Cloud Adoption Framework for Azure to understand global reach outcomes in the context of a cloud transformation.
 author: BrianBlanchard
 ms.author: brblanch
@@ -16,9 +16,9 @@ ms.subservice: strategy
 
 As discussed in [Business outcomes](./index.md), several potential business outcomes can serve as the foundation for any transformation journey conversation with the business. This article focuses on a common business measure: reach. *Reach* is a concise term that, in this case, refers to a company's globalization strategy. Understanding the company's globalization strategy helps you better articulate the business outcomes that are the target of a business's transformation journey.
 
-Across the Fortune 500 and smaller enterprises, globalization of services and the customer base has been a focus for over three decades. As the world shrinks, it's increasingly likely for any business to engage in global commerce. Supporting global operations is challenging and costly. Hosting datacenters around the world can consume more than 80 percent of an annual IT budget. By themselves, wide area networks that use private lines to connect those datacenters can cost millions of dollars per year.
+Fortune 500 and smaller enterprises have focused on the globalization of services and customers for over three decades, and most business are likely to engage in global commerce as this globalization continues to pull focus. Hosting datacenters around the world can consume more than 80 percent of an annual IT budget, and wide-area networks using private lines to connect those datacenters can cost millions of dollars per year. Therefore, supporting global operations is both challenging and costly.
 
-Cloud solutions move the cost of globalization to the cloud provider. In Azure, customers can quickly deploy resources in the same region as customers or operations, without having to buy and provision a datacenter. Microsoft owns one of the largest wide area networks in the world, connecting datacenters around the globe. Connectivity and global operating capacity are available to global customers on demand.
+Cloud solutions move the cost of globalization to the cloud provider. In Azure, customers can quickly deploy resources in the same region as customers or operations, without buying and provisioning a datacenter. Microsoft owns one of the largest wide-area networks in the world, connecting datacenters around the globe. Connectivity and global operating capacity are available to global customers on demand.
 
 ## Global access
 

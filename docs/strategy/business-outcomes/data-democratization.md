@@ -1,5 +1,5 @@
 ---
-title: "Data democratization"
+title: Data democratization
 description: Enable business with data innovation and a centralized repository of data.
 author: BrianBlanchard
 ms.author: brblanch
@@ -11,9 +11,9 @@ ms.subservice: strategy
 
 # Data democratization
 
-Many companies have long had analytical data warehouses in place in their datacenters to support decision making in different parts of their business. Sales, marketing, and finance departments in particular are heavy users of such systems, producing standard reports and dashboards. They also employ business analysts to perform *ad hoc* query and analysis on data in data marts. These data marts are designed for multi-dimensional analysis, by using self-service business intelligence (BI) tools.
+Many companies have kept data warehouses in their datacenters to help different parts of their business to analyze data and make decisions. Sales, marketing, and finance departments have relied heavily on these systems in order to produce standard reports and dashboards. Companies also employ business analysts to perform ad hoc query and analysis on data in data marts. These data marts use self-service business intelligence tools to perform multi-dimensional analysis.
 
-By enabling a business with data innovation and a modern data estate, you empower more people, from your IT stakeholder to your data professional. They can take action on this repository of data, which by being centralized becomes what's sometimes referred to as "the single source of truth."
+A business that's supported by data innovation and a modern data estate can empower a broad range of contributors, from an IT stakeholder to a data professional and beyond. They can take action on this repository of centralized data, which is often referred to as "the single source of truth."
 
 Azure Synapse Analytics is a single service for seamless collaboration and accelerated time-to-insight. To understand this service in more detail, first consider the various roles and skills involved in a typical data estate:
 
@@ -27,7 +27,7 @@ Azure Synapse Analytics is a single service for seamless collaboration and accel
 
 **Business intelligence**: *Business analysts* securely access datasets, build dashboards, and share data within and outside their organization.
 
-The following diagram shows an example of a classic data warehouse architecture. Known structured data is extracted from core transaction processing systems, and copied into a staging area. From there, it's cleaned, transformed, and integrated into production tables in a data warehouse. It's often the case that several years of historical transaction data are incrementally built up here. This provides the data needed to understand changes in sales, customer purchasing behavior, and customer segmentation over time. It also provides yearly financial reporting and analysis to help with decision making.
+The following diagram shows an example of a classic data warehouse architecture. Known structured data is extracted from core transaction processing systems and copied into a staging area. From there, it's cleaned, transformed, and integrated into production tables in a data warehouse. It's often the case that several years of historical transaction data are incrementally built up here. This provides the data needed to understand changes in sales, customer purchasing behavior, and customer segmentation over time. It also provides yearly financial reporting and analysis to help with decision making.
 
 From there, subsets of data are extracted into data marts to analyze activity associated with a specific business process. This supports decision making in a specific part of the business.
 
