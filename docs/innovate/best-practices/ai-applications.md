@@ -86,7 +86,7 @@ To understand privacy and data management, go to the [Microsoft Trust Center](ht
 
 ## How are Cognitive Services and Azure Machine Learning similar?
 
-Cognitive Services and Azure Machine Learning have the common goal of applying AI to enhance business operations. How each one provides this capability in their respective offerings is different. Generally, the audiences are different:
+Cognitive Services and Azure Machine Learning have the common goal of applying AI to enhance business operations. How each one provides this capability in the respective offerings is different. Generally, the audiences are different:
 
 - Cognitive Services is for developers without machine learning experience.
 - Machine Learning is tailored for data scientists.
