@@ -16,7 +16,7 @@ ms.custom: csu
 
 Enterprise-scale is an architectural approach and a reference implementation that enables effective construction and operationalization of landing zones on Azure, at scale. This approach aligns with the Azure roadmap and the Cloud Adoption Framework for Azure.
 
-## An overview of Cloud Adoption Framework enterprise-scale landing zone architecture
+## Architecture overview
 
 The Cloud Adoption Framework enterprise-scale landing zone architecture represents the strategic design path and target technical state for an organization's Azure environment. It will continue to evolve in lockstep with the Azure platform. It will continue to evolve alongside the Azure platform and is defined by the various design decisions that your organization must make to map your Azure journey.
 
