@@ -23,7 +23,7 @@ The following eight critical design areas can help you translate your requiremen
 
 The impact of decisions made within these critical areas will reverberate across enterprise-scale architecture and influence other decisions. Familiarize yourself with these eight areas to better understand the consequences of encompassed decisions, which could later produce trade-offs within related areas.
 
-- [Enterprise agreement (EA) enrollment and Azure Active Directory tenants](./enterprise-enrollment-and-azure-ad-tenants.md)
+- [Enterprise Agreement (EA) enrollment and Azure Active Directory tenants](./enterprise-enrollment-and-azure-ad-tenants.md)
 - [Identity and access management](./identity-and-access-management.md)
 - [Management group and subscription organization](./management-group-and-subscription-organization.md)
 - [Network topology and connectivity](./network-topology-and-connectivity.md)
