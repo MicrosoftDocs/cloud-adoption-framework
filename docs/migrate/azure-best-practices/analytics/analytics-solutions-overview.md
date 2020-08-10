@@ -13,7 +13,9 @@ ms.subservice: migrate
 
 # Azure Synapse Analytics solutions
 
-Current market offerings fall short in meeting an organization's growing needs. Legacy on-premises environments, including Teradata, Netezza, and Oracle Exadata, are expensive, slow to innovate, and inelastic. Organizations that use on-premises systems are now considering taking advantage of innovative cloud, infrastructure as a service, and platform as a service offerings in newer environments like Azure. Many organizations are ready to take the step of shifting expensive tasks like infrastructure maintenance and platform development to a cloud provider. In Microsoft Azure, an organization has access to a globally available, highly secure, scalable cloud environment that includes Azure Synapse Analytics in an ecosystem of supporting tools and capabilities.
+Current market offerings fall short in meeting an organization's growing needs. Legacy on-premises environments, including Teradata, Netezza, and Oracle Exadata, are expensive, slow to innovate, and inelastic. Organizations that use on-premises systems are now considering taking advantage of innovative cloud, infrastructure as a service, and platform as a service offerings in newer environments like Azure. 
+
+Many organizations are ready to take the step of shifting expensive tasks like infrastructure maintenance and platform development to a cloud provider. In Microsoft Azure, an organization has access to a globally available, highly secure, scalable cloud environment that includes Azure Synapse Analytics in an ecosystem of supporting tools and capabilities.
 
 ![Design and performance for Teradata migrations](../../../_images/analytics/analytics-solutions-overview.png)
 
