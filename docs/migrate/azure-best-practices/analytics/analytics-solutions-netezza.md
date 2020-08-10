@@ -31,7 +31,7 @@ At a high level, the migration process includes the steps that are listed in the
 
 | Preparation        | Migration                             | Post-migration |
 | :----------------- | :----------------------------- | :---------------- |
-| <ul><li> Define scope: What do we want to migrate?</li><li>Build an inventory of data and processes to migrate.</li><li>Define any data model changes.</li><li>Identify the best Azure and third-party tools and features to use.</li><li>Train staff early on the new platform.</li><li>Set up the Azure target platform.</li></ul> |  <ul><li> Start small and simple.</li><li>Automate where possible.</li><li>Use Azure built-in tools and features to reduce the migration effort.</li><li>Migrate metadata for tables and views.</li><li>Migrate relevant historical data.</li><li>Migrate or refactor stored procedures and business processes.</li><li>Migrate or refactor ETL or ELT incremental load processes.</li></ul> | <ul><li> Monitor and document all stages of the migration process.</li><li>Use experience gained to build a template for future migrations.</li><li>Re-engineer the data model if necessary by using the new platform's performance and scalability.</li><li>Test applications and query tools.</li><li>Benchmark and optimize query performance.</li></ul> |
+| <ul><li> Define scope: What do we want to migrate?</li><li>Build an inventory of data and processes to migrate.</li><li>Define any data model changes.</li><li>Identify the best Azure and third-party tools and features to use.</li><li>Train staff early on the new platform.</li><li>Set up the Azure target platform.</li></ul> |  <ul><li> Start small and simple.</li><li>Automate where possible.</li><li>Use Azure built-in tools and features to reduce the migration effort.</li><li>Migrate metadata for tables and views.</li><li>Migrate relevant historical data.</li><li>Migrate or refactor stored procedures and business processes.</li><li>Migrate or refactor ETL or ELT incremental load processes.</li></ul> | <ul><li> Monitor and document all stages of the migration process.</li><li>Use experience gained to build a template for future migrations.</li><li>Reengineer the data model if necessary by using the new platform's performance and scalability.</li><li>Test applications and query tools.</li><li>Benchmark and optimize query performance.</li></ul> |
 
 When you migrate from a legacy Netezza environment to Azure Synapse, you must consider some specific factors, in addition to the more general subjects described in the Netezza documentation. 
 
@@ -57,9 +57,9 @@ Regardless of the drivers and scope that you choose for your migration, you can 
 
   This approach is a good fit for existing Teradata environments in which a single data mart is to be migrated, and if the data is already in a well-designed star or snowflake schema. This approach is a good choice also if you have time and cost pressures to move to a more modern cloud environment.
 
-- **Phased approach that incorporates modifications**: When a legacy warehouse has evolved over time, you might need to re-engineer the data warehouse to maintain the required performance or to support new data sources like IoT streams. Migrating to Azure Synapse for the well-known benefits of a scalable cloud environment might be considered part of the re-engineering process. This process might include changing the underlying data model, such as moving from an Inmon model to an Azure data vault.
+- **Phased approach that incorporates modifications**: When a legacy warehouse has evolved over time, you might need to reengineer the data warehouse to maintain the required performance or to support new data sources like IoT streams. Migrating to Azure Synapse for the well-known benefits of a scalable cloud environment might be considered part of the reengineering process. This process might include changing the underlying data model, such as moving from an Inmon model to an Azure data vault.
 
-  The approach we recommend is to initially move the existing data model as-is to Azure. Then, take advantage of the performance and flexibility of Azure services to apply the re-engineering changes without affecting the existing source system.
+  The approach we recommend is to initially move the existing data model as-is to Azure. Then, take advantage of the performance and flexibility of Azure services to apply the reengineering changes without affecting the existing source system.
 
 ## Metadata migration
 
@@ -116,7 +116,7 @@ Netezza implements some database objects that aren't directly supported in Azure
 
   Some third-party vendors offer tools and services that can automate migration tasks, including data type mapping. If a third-party ETL tool like Informatica or Talend is already used in the Netezza environment, you can use the tool to implement any data transformations that are required.
 
-- **SQL DML syntax**: You should be aware of a few differences in SQL Data Manipulation Language (DML) syntax between Netezza SQL and Azure Synapse. 
+- **SQL SQL Data Manipulation Language (DML) syntax**: You should be aware of a few differences in SQL DML syntax between Netezza SQL and Azure Synapse. 
 
   Here are some key functions and how they are different:
 
@@ -168,11 +168,11 @@ Here's some additional information about migrating functions, stored procedures,
 
 Consider the following information when you plan how to extract metadata and data from the Netezza environment:
 
-- **DDL generation**: It's possible to edit existing Netezza `CREATE TABLE` and `CREATE VIEW` scripts to create the equivalent definitions, with modified data types if necessary, as described earlier. This task usually involves removing or modifying any clauses that are specific to Netezza, like `ORGANIZE ON`.
+- **Data Definition Language (DDL) generation**: It's possible to edit existing Netezza `CREATE TABLE` and `CREATE VIEW` scripts to create the equivalent definitions, with modified data types if necessary, as described earlier. This task usually involves removing or modifying any clauses that are specific to Netezza, like `ORGANIZE ON`.
 
   In Netezza, the information that specifies the current table and view definitions is maintained in system catalog tables. System catalog tables are the best source of the information because the tables likely are up to date and complete. User-maintained documentation might not be in sync with current table definitions. 
   
-  You can access system catalog tables in Netezza by using a utility like nz_ddl_table. You can use the tables to generate `CREATE TABLE` Data Definition Language (DDL) statements, which you can then edit for the equivalent tables in Azure Synapse. Third-party migration and ETL tools also use the catalog information to achieve the same results.
+  You can access system catalog tables in Netezza by using a utility like nz_ddl_table. You can use the tables to generate `CREATE TABLE` DDL statements, which you can then edit for the equivalent tables in Azure Synapse. Third-party migration and ETL tools also use the catalog information to achieve the same results.
 
 - **Data extraction**: You can extract raw data to migrate from an existing Netezza table into a flat, delimited file by using standard Netezza utilities like nzsql and nzunload, and by using external tables. Compress the files by using gzip, and then use AzCopy or an Azure data transport service like Azure Data Box to upload the files to Azure Blob storage.
 
