@@ -125,7 +125,7 @@ For more information about encryption and key management in Azure, see:
 
 ## Next steps
 
-Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the [decision guides overview](../index.md).
+Encryption is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. To learn about alternative patterns or models used when making design decisions for other types of infrastructure, see the architectural decision guides overview.
 
 > [!div class="nextstepaction"]
-> [Architectural decision guides](../index.md)
+> [Architectural decision guides overview](../index.md)

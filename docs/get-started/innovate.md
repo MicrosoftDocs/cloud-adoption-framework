@@ -23,7 +23,7 @@ To avoid common blockers, create a clear and concise business strategy for innov
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to record motivations and desired business outcomes.
+- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations and desired business outcomes.
 
 <!-- docsTest:ignore "Get started: Accelerate migration" -->
 
@@ -46,7 +46,7 @@ In this first pass at building the business case, evaluate the initial high-leve
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to record the business justification.
+- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record the business justification.
 
 **Guidance to support deliverable completion:**
 
@@ -71,7 +71,7 @@ In most enterprises, innovation can be accelerated through the use of existing a
   - Quantitative analysis on any supporting inventory required to support the planned innovation.
   - Qualitative analysis of any supporting workloads required to deliver the innovation.
 - Calculate the cost of new inventory required to support the innovation effort.
-- Update the business justification in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) with refined calculations.
+- Update the business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) with refined calculations.
 
 **Guidance to support deliverable completion:**
 
@@ -91,7 +91,7 @@ When there are dependent systems, the following articles can guide the discovery
 
 ## Step 4: Plan for migration of dependent assets
 
-When new innovation depends on existing workloads or assets, the cloud adoption plan template provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect discovery results, rationalization, needed skills, and partner contracting.
+When new innovation depends on existing workloads or assets, a cloud adoption plan provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect discovery results, rationalization, needed skills, and partner contracting.
 
 **Deliverables:**
 
@@ -104,7 +104,7 @@ When new innovation depends on existing workloads or assets, the cloud adoption 
 
 **Guidance to support deliverable completion:**
 
-- [Cloud adoption plan template](../plan/template.md): Deploy the basic template.
+- [Cloud adoption plan](../plan/template.md): Define your plan using the basic template.
 - [Workload alignment](../plan/workloads.md): Define workloads in the backlog.
 - [Effort alignment](../plan/assets.md): Align assets and workloads in the backlog to clearly define the effort for prioritized workloads.
 - [People and time alignment](../plan/iteration-paths.md): Establish iteration, velocity, and releases for the workloads.

@@ -71,4 +71,4 @@ Cloud platform expertise usually comes from a working team. Expect participants 
 
 As your cloud platform becomes better defined, aligning [cloud automation functions](./cloud-automation.md) can accelerate adoption. It can also help establish best practices while reducing business and technical risks.
 
-Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+Learn to align responsibilities across teams by developing a cross-team matrix that identifies responsible, accountable, consulted, and informed (RACI) parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

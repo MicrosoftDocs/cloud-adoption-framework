@@ -25,7 +25,7 @@ A clear and concise business strategy helps the cloud platform team understand w
 
 **Deliverables:**
 
-- Use the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to record motivations, desired business outcomes, and high-level business justification.
+- Use the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to record motivations, desired business outcomes, and high-level business justification.
 
 **Guidance to support deliverable completion:**
 
@@ -51,7 +51,7 @@ The output of the digital estate assessment provides the cloud platform team wit
 - Raw data on the existing inventory.
 - Quantitative analysis of the existing inventory to refine the business justification.
 - Qualitative analysis of the first 10 workloads.
-- Updated business justification in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Updated business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
 **Guidance to support deliverable completion:**
 
@@ -67,7 +67,7 @@ The output of the digital estate assessment provides the cloud platform team wit
 
 ## Step 3: Create a cloud adoption plan
 
-The cloud adoption plan template provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect assessment results, rationalization, needed skills, and partner contracting.
+Your cloud adoption plan provides an accelerated approach to developing a project backlog. The backlog can then be modified to reflect assessment results, rationalization, needed skills, and partner contracting.
 
 A review of the short-term cloud adoption plan and backlog helps the cloud platform team understand the needs of the environment for the next few months. This background helps them to tighten the "definition of done" for the first few landing zones.
 
@@ -82,7 +82,7 @@ A review of the short-term cloud adoption plan and backlog helps the cloud platf
 
 **Guidance to support deliverable completion:**
 
-- [Cloud adoption plan template](../plan/template.md): Deploy the basic template.
+- [Cloud adoption plan](../plan/template.md): Define your plan using the basic template.
 - [Workload alignment](../plan/workloads.md): Define workloads in the backlog.
 - [Effort alignment](../plan/assets.md): Align assets and workloads in the backlog to clearly define efforts for prioritized workloads.
 - [People and time alignment](../plan/iteration-paths.md): Establish iteration, velocity, and releases for the migrated workloads.
