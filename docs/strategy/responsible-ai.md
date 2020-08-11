@@ -48,7 +48,7 @@ Put responsible AI into practice with these guidelines, designed to help you ant
 There are tools available that can help developers and data scientists understand, protect, and control AI systems. These tools can come from a variety of sources, including Azure Machine Learning, open source projects, and research.
 
 - **Understand**: AI systems can behave unexpectedly for a variety of reasons. Software tools can help you understand the behavior of your AI systems so that you can better tailor them to your needs. Examples of this type of tool include InterpretML and Fairlearn.
-- **Protect**:  AI systems rely on data. Software tools can help you protect that data by preserving privacy and ensuring confidentiality. Examples of this type of tool include confidential computing for machine learning, WhiteNoise differential privacy, SEAL homomorphic encryption, and Presidio.
+- **Protect**: AI systems rely on data. Software tools can help you protect that data by preserving privacy and ensuring confidentiality. Examples of this type of tool include confidential computing for machine learning, WhiteNoise differential privacy, SEAL homomorphic encryption, and Presidio.
 - **Control**: Responsible AI needs governance and control through the development cycle. Azure Machine Learning enables an audit trail for better traceability, lineage, and control to meet regulatory requirements. Examples include Audit trail and traceability.
 
 ## Next steps

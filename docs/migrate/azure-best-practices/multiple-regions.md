@@ -18,10 +18,10 @@ Azure comprises many regions around the world. Each [Azure region](https://azure
 - **Capacity:** Each region has a maximum capacity. This can affect which types of subscriptions can deploy which types of services and under what circumstances. This is different than subscription quotas. If you're planning a large-scale datacenter migration to Azure, you might want to consult with your local Azure field team or account manager to confirm that you can deploy at the scale necessary.
 - **Constraints:** Certain constraints are placed on the deployment of services in certain regions. For example, some regions are only available as a backup or failover target. Other constraints that are important to note are [data sovereignty requirements](https://azure.microsoft.com/global-infrastructure/geographies).
 - **Sovereignty:** Certain regions are dedicated to specific sovereign entities. While all regions are Azure regions, these sovereign regions are completely isolated from the rest of Azure. They aren't necessarily managed by Microsoft and might be restricted to certain types of customers. These sovereign regions are:
-    - [Azure China](https://azure.microsoft.com/global-infrastructure/china)
-    - [Azure Germany](https://azure.microsoft.com/global-infrastructure/germany): Azure Germany is being deprecated in favor of standard nonsovereign Azure regions in Germany.
-    - [Azure US government](https://azure.microsoft.com/global-infrastructure/government)
-    - Two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia) are managed by Microsoft but are provided for the Australian government and its customers and contractors. Therefore, these regions carry client constraints similar to the other sovereign clouds.
+  - [Azure China](https://azure.microsoft.com/global-infrastructure/china)
+  - [Azure Germany](https://azure.microsoft.com/global-infrastructure/germany): Azure Germany is being deprecated in favor of standard nonsovereign Azure regions in Germany.
+  - [Azure US government](https://azure.microsoft.com/global-infrastructure/government)
+  - Two regions in [Australia](https://azure.microsoft.com/global-infrastructure/australia) are managed by Microsoft but are provided for the Australian government and its customers and contractors. Therefore, these regions carry client constraints similar to the other sovereign clouds.
 
 ## Operate in multiple geographic regions
 

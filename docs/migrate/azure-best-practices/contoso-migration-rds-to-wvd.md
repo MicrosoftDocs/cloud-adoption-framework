@@ -205,7 +205,7 @@ Using the Azure portal, Contoso will create a Windows Virtual Desktop environmen
 
     > [!NOTE]
     > Contoso can't create a new virtual network at this step. Before reaching this step, Contoso should have already created a virtual network that has access to Active Directory.
-    
+
    <!-- -->
 
     > [!NOTE]

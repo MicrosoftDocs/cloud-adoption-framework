@@ -130,7 +130,7 @@ Here are a few additional points to be aware of as you set up Availability Zones
 - With Availability Zones, Azure offers an SLA of 99.99 percent VM uptime.
 
     ![Diagram of Availability Zones within an Azure region.](./media/migrate-best-practices-networking/availability-zone.png)
-    
+
     _Figure 3: Availability Zones._
 
 - You can plan and build high-availability into your migration architecture by colocating compute, storage, networking, and data resources within a zone, and replicating them in other zones. Azure services that support Availability Zones fall into two categories:

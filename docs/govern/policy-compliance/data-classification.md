@@ -36,7 +36,7 @@ Resource tags are a good approach for metadata storage, and you can use these ta
 
 ## Take action
 
-Take action by defining and tagging assets with a defined data classification. 
+Take action by defining and tagging assets with a defined data classification.
 
 - [Choose one of the actionable governance guides](../guides/index.md) for examples of applying tags across your portfolio.
 - Review the [naming and tagging standards](../../ready/azure-best-practices/naming-and-tagging.md#metadata-tags) article to define a more comprehensive tagging standard.

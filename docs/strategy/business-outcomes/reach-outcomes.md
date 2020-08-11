@@ -24,13 +24,13 @@ Cloud solutions move the cost of globalization to the cloud provider. In Azure, 
 
 Expanding into a new market can be one of the most valuable business outcomes during a transformation. The ability to quickly deploy resources in market without a longer-term commitment allows sales and operations leaders to explore options that wouldn't have been considered in the past.
 
-### Example
+### Manufacturing example
 
-A cosmetics manufacturer has identified a trend. Some products are being shipped to the Asia Pacific region even though no sales teams are operating in that region. The minimum systems required by a remote sales force are small, but latency prevents a remote access solution. To capitalize on this trend, the vice president of sales wants to experiment with sales teams in Japan and South Korea. Because the company has undergone a cloud migration, it was able to deploy the necessary systems in both Japan and South Korea within days. This allowed the vice president of sales to grow revenue in the region by _x%_ within three months. Those two markets continue to outperform other parts of the world, leading to sales operations throughout the region.
+A cosmetics manufacturer has identified a trend. Some products are being shipped to the Asia Pacific region even though no sales teams are operating in that region. The minimum systems required by a remote sales force are small, but latency prevents a remote access solution. To capitalize on this trend, the vice president of sales wants to experiment with sales teams in Japan and South Korea. Because the company has undergone a cloud migration, it was able to deploy the necessary systems in both Japan and South Korea within days. This allowed the vice president of sales to grow revenue in the region by *x%* within three months. Those two markets continue to outperform other parts of the world, leading to sales operations throughout the region.
 
-### Example
+### Retail example
 
-An online retailer that ships products globally can engage with their customers across time zones and multiple languages. The retailer uses Azure Bot Service and various features in Azure Cognitive Services, such as Translator, Language Understanding (LUIS), QnA Maker, and Text Analytics. This ensures their customers are able to get the information they need when they need it, and that it's provided to them in their language. The retailer uses [Personalizer](https://azure.microsoft.com/services/cognitive-services/personalizer/) to further customize the experience and catalog offerings for their customers, ensuring geographical tastes, preferences, and availability are reflected.
+An online retailer that ships products globally can engage with their customers across time zones and multiple languages. The retailer uses Azure Bot Service and various features in Azure Cognitive Services, such as Translator, Language Understanding (LUIS), QnA Maker, and Text Analytics. This ensures their customers are able to get the information they need when they need it, and that it's provided to them in their language. The retailer uses the [Personalizer service](https://azure.microsoft.com/services/cognitive-services/personalizer/) to further customize the experience and catalog offerings for their customers, ensuring geographical tastes, preferences, and availability are reflected.
 
 ## Data sovereignty
 

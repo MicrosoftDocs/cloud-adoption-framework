@@ -129,9 +129,9 @@ Contoso decides which tool to use for discovery, assessment, and building the in
 The Azure Migrate service helps you to discover and assess on-premises VMware VMs, in preparation for migration to Azure. Here's what Azure Migrate does:
 
 1. **Discover:** Discover on-premises VMware VMs.
-   
+
    Azure Migrate supports discovery from multiple vCenter servers (serially) and can run discoveries in separate Azure Migrate projects.
-   
+
    Azure Migrate performs discovery via a VMware VM running the Azure Migrate Collector. The same collector can discover VMs on different vCenter servers and send data to different projects.
 
 2. **Assess readiness:** Assess whether on-premises machines are suitable for running in Azure. An assessment includes:
@@ -315,7 +315,7 @@ Contoso can use partner tools such as [Hanu](https://hanu.com/insight) and [Scal
 
 ## Phase 4: Secure and manage
 
-In this phase, Contoso uses Azure security and management resources to govern, secure, and monitor cloud applications in Azure. These resources help an organization run a secure and well-managed environment while using products available in the Azure portal. 
+In this phase, Contoso uses Azure security and management resources to govern, secure, and monitor cloud applications in Azure. These resources help an organization run a secure and well-managed environment while using products available in the Azure portal.
 
 Contoso begins using these services during migration. With Azure hybrid support, Contoso continues using many of them for a consistent experience across the hybrid cloud.
 
@@ -332,7 +332,7 @@ Security Center provides full visibility into and control over the security of c
 Contoso needs visibility into the health and performance of the newly migrated applications, infrastructure, and data now running in Azure. Contoso will use built-in Azure cloud monitoring tools such as Azure Monitor, a Log Analytics workspace, and Application Insights.
 
 By using these tools, Contoso can easily collect data from sources and gain insights. For example, Contoso can gauge CPU disk and memory utilization for VMs, view applications and network dependencies across multiple VMs, and track application performance. Contoso will use these cloud monitoring tools to take action and integrate with service solutions.
- 
+
 Learn more about [Azure monitoring](https://docs.microsoft.com/azure/azure-monitor/overview).
 
 ### Business continuity and disaster recovery
@@ -348,6 +348,6 @@ In addition to built-in features, Contoso wants to ensure that it can recover fr
 
 ## Conclusion
 
-In this article, Contoso planned for an Azure migration at scale. It divided the migration process into four stages. The stages ran from assessment and migration, through to optimization, security, and management after migration was complete. 
+In this article, Contoso planned for an Azure migration at scale. It divided the migration process into four stages. The stages ran from assessment and migration, through to optimization, security, and management after migration was complete.
 
 It's important for an organization to plan a migration project as a whole process and to migrate its systems by breaking down sets into classifications and numbers that make sense for the business. By assessing data and applying classifications, projects can be broken down into a series of smaller migrations, which can run safely and rapidly. The sum of these smaller migrations quickly turns into a large successful migration to Azure.

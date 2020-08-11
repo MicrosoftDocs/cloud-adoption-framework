@@ -17,7 +17,7 @@ There are multiple audiences involved in an Analytics conversation, including th
 
 Using Azure Synapse, database administrators can match their expanding responsibilities for data warehouses and data lakes. They can use familiar languages and tools, such as T-SQL to run as many workloads as they want with ease. They can assign resources to escalate critical workloads based on intelligent workload importance, workload isolation, and enhanced concurrency capabilities.
 
-**Infrastructure teams**: These teams deal with the provisioning and architecture of the underlying compute resources required for large analytics systems. In many cases, they are managing transitions between datacenter-based and cloud-based systems, and current needs for interoperability across both.  Typical DR as well as business continuity and high availability are common concerns.
+**Infrastructure teams**: These teams deal with the provisioning and architecture of the underlying compute resources required for large analytics systems. In many cases, they are managing transitions between datacenter-based and cloud-based systems, and current needs for interoperability across both. Typical DR as well as business continuity and high availability are common concerns.
 
 With Azure Synapse, IT professionals can protect and manage their organization's data more efficiently. They can enable big data processing with both on-demand and provisioned compute, and secure access to cloud and hybrid configurations through tight integration with Azure Active Directory. Lastly, they can enforce privacy requirements using data masking as well as row-level and column-level security.
 
