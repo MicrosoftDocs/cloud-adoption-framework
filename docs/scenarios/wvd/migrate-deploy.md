@@ -13,11 +13,11 @@ ms.subservice: migrate
 
 # Windows Virtual Desktop deployment or migration
 
-The guidance in this article assumes that you've [established a plan for Windows Virtual Desktop (WVD)](./plan.md), [assessed the desktop deployment requirements](./migrate-assess.md), [completed a proof of concept](./proof-of-concept.md), and are now ready to migrate or deploy your Windows Virtual Desktop instances.
+The guidance in this article assumes that you've [established a plan for Windows Virtual Desktop)](./plan.md), [assessed the desktop deployment requirements](./migrate-assess.md), [completed a proof of concept](./proof-of-concept.md), and are now ready to migrate or deploy your Windows Virtual Desktop instances.
 
 ## Initial scope
 
-The deployment of WVD instances follows a process that's similar to the [proof of concept](./proof-of-concept.md) process. Use this initial scope as a baseline to explain the various scope changes that are required by the output of the assessment.
+The deployment of Windows Virtual Desktop instances follows a process that's similar to the [proof of concept](./proof-of-concept.md) process. Use this initial scope as a baseline to explain the various scope changes that are required by the output of the assessment.
 
 - [Create a host pool](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows&nbsp;10 gallery image from Azure Marketplace and the sizing from step 1 of that procedure.
 - [Create RemoteApp application groups](https://docs.microsoft.com/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that have already been migrated.
@@ -63,7 +63,7 @@ You can also use [Azure Files to host user profiles](https://docs.microsoft.com/
 - **Per host/persona**: Configure FSLogix on session host virtual machines.
 - **Per user**: Assign users to the host session.
 
-The user profiles for some personas or users might also require a data migration effort, which can delay the migration of specific personas until user profiles can be remediated within your local Active Directory or individual user desktops. This delay could significantly affect the scope outside of the WVD scenario. After they've been remediated, the initial scope or the preceding approaches can be resumed.
+The user profiles for some personas or users might also require a data migration effort, which can delay the migration of specific personas until user profiles can be remediated within your local Active Directory or individual user desktops. This delay could significantly affect the scope outside of the Windows Virtual Desktop scenario. After they've been remediated, the initial scope and the preceding approaches can be resumed.
 
 ## Deploy or migrate Windows Virtual Desktop
 
