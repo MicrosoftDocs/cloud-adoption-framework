@@ -36,7 +36,7 @@ In each of the preceding migration scenarios, the same basic process will guide 
 
 ![Diagram of the Cloud Adoption Framework migration model.](../_images/migrate/methodology.png)
 
-In each scenario, you'll structure migration waves to guide the releases of multiple workloads. Establishing a cloud adoption plan and Azure landing zones through the *Plan* and *Ready* methodologies helps add structure to your migration waves.
+In each scenario, you'll structure migration waves to guide the releases of multiple workloads. Establishing a cloud adoption plan and Azure landing zones through the Plan and Ready methodologies helps to add structure to your migration waves.
 
 During each iteration, follow the Migrate methodology to assess, deploy, and release workloads. To modify those processes to fit your organization's specific scenario, select any of the migration scenarios listed in the table.
 
