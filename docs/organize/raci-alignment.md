@@ -23,7 +23,7 @@ Learn to align responsibilities across teams by developing a cross-team matrix t
 - [Operational alignment](#operational-alignment)
 - [Cloud center of excellence (CCoE)](#cloud-center-of-excellence-ccoe)
 
-To track organizational structure decisions over time, download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+To track organizational structure decisions over time, download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).
 
 The examples in this article specify these RACI constructs:
 
@@ -95,7 +95,7 @@ The last row of each table (except the first) contains a link to the most-aligne
 
 ## Next steps
 
-To track decisions about organization structure over time, download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx). Copy and modify the most closely aligned sample from the RACI matrices in this article.
+To track decisions about organization structure over time, download and modify the RACI template. Copy and modify the most closely aligned sample from the RACI matrices in this article.
 
 > [!div class="nextstepaction"]
-> [Download the RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx)
+> [Download the RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx)

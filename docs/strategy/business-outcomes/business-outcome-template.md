@@ -13,7 +13,7 @@ ms.subservice: strategy
 
 As discussed in the [business outcomes overview](./index.md), it can be difficult to bridge the gap between business and technical conversations. This simple template is designed to help teams uniformly capture business outcomes to be used later in the development of customer transformation journey strategies.
 
-Download the [business outcome template spreadsheet](https://archcenter.blob.core.windows.net/cdn/business-outcome-template.xlsx) to begin brainstorming and tracking business outcomes. Continue reading to learn how to use the template. Review the [business outcomes section](./index.md) for ideas on potential business outcomes that could come up in executive conversations.
+Download the [business outcome template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/strategy/business-outcome-template.xlsx) to begin brainstorming and tracking business outcomes. Continue reading to learn how to use the template. Review the [business outcomes section](./index.md) for ideas on potential business outcomes that could come up in executive conversations.
 
 ## Use the business outcome template
 
@@ -55,7 +55,7 @@ _Figure 3: Five areas of focus in discovery: stakeholders, outcomes, drivers, KP
 
 ## Next steps
 
-Learn about [aligning your technical efforts](../learning-metrics.md) to meaningful learning metrics.
+Learn to align your technical efforts to meaningful learning metrics.
 
 > [!div class="nextstepaction"]
 > [Align your technical efforts](../learning-metrics.md)

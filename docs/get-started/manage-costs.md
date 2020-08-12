@@ -23,10 +23,12 @@ Governance is the cornerstone of cost optimization within any large enterprise. 
 
 The cloud governance team is well prepared to evaluate and act on overspending or unplanned spending through a combination of monitoring performance, reducing resource sizing, and safely terminating unused resources. Enterprise cost optimization starts with a shared team understanding of the tools, processes, and dependencies required to wisely act on cost concerns at an environment level.
 
+<!-- docsTest:ignore "your cost management policies" -->
+
 **Deliverables:**
 
 - Implement wise cost management changes across the enterprise.
-- Document your cost management policies, processes, and design guidance in the [Cost Management Discipline template](../govern/cost-management/template.md).
+- Document your cost management policies, processes, and design guidance in the [Cost Management discipline template](../govern/cost-management/template.md).
 
 These deliverables are the result of a few recurring tasks:
 
@@ -52,7 +54,7 @@ These deliverables are the result of a few recurring tasks:
 
 - Trade-offs at the workload level might be needed to implement effective cost optimization changes. The [Microsoft Azure Well-Architected Framework](https://docs.microsoft.com/azure/architecture/framework/cost/tradeoffs) and [Microsoft Azure Well-Architected Review](https://docs.microsoft.com/assessments/?id=azure-architecture-review) can help guide those conversations with the technical owner of a specific workload.
 - If you're new to cloud governance, establish [governance policies, processes, and disciplines](../govern/index.md) using the Govern methodology.
-- If you're new to the Cost Management discipline, consider following the [cost management improvements article](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
+- If you're new to the Cost Management discipline, consider following the [Cost Management discipline improvements article](../govern/guides/complex/cost-management-improvement.md), with a focus on the [implementation](../govern/guides/complex/cost-management-improvement.md#incremental-improvement-of-the-best-practices) section.
 
 <!-- markdownlint-disable MD033 -->
 <br>
@@ -71,7 +73,7 @@ Strategic decisions directly affect cost controls, rippling through the adoption
 
 **Deliverables:**
 
-- Record motivations, outcomes, and business justification in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Record motivations, outcomes, and business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 - Create your first budget by using Azure Cost Management.
 
 **Guidance to support deliverable completion:**

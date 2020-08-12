@@ -18,7 +18,8 @@ services: azure-migrate
 This article demonstrates how the fictional company Contoso planned and migrated its on-premises MariaDB open-source database platform to Azure.
 
 Contoso is using MariaDB instead of MySQL because of its:
-- Myriad storage engines. 
+
+- Myriad storage engines.
 - Cache and index performance.
 - Open-source support with features and extensions.
 - Analytics ColumnStore support.
