@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Windows Virtual Desktop planning
 
-Windows Virtual Desktop (WVD) and deployment scenarios follow the same *Migrate* methodology as other migration efforts. This consistent approach allows migration factories or existing migration teams to adopt the process with little change to non-technical requirements.
+Windows Virtual Desktop and deployment scenarios follow the same Migrate methodology as other migration efforts. This consistent approach allows migration factories or existing migration teams to adopt the process with little change to non-technical requirements.
 
 ![Diagram of the Cloud Adoption Framework Migrate methodology.](../../_images/migrate/methodology.png)
 
