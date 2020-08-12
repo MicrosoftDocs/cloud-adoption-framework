@@ -222,7 +222,7 @@ _Figure 4: A traditional Azure network topology._
 
 - For regional deployments, primarily use the hub and spoke topology, with landing zones VNets connecting with virtual network peering to a central hub VNet for cross-premises connectivity via ExpressRoute, VPN for branch connectivity, spoke-to-spoke connectivity via NVAs and UDRs, and internet-outbound protection via NVA, as depicted in the figure below.
 
-![Network topology and connectivity](./media/hub and spoke-topology.png)
+![Network topology and connectivity](./media/hub-and-spoke-topology.png)
 
 _Figure 5: Hub and spoke network topology._
 
