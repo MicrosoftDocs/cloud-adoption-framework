@@ -197,9 +197,9 @@ In brief, Contoso does the following:
 - They ensure that all migration prerequisites are met:
   - The MySQL database server source must match the version that Azure Database for MySQL supports. Azure Database for MySQL supports MySQL Community Edition, the InnoDB storage engine, and migration across source and target with the same versions.  
   - They enable binary logging in `my.ini` (Windows) or `my.cnf` (Unix). Failure to do this will cause the following error in the Migration Wizard:  
-      
+
     "Error in binary logging. Variable binlog_row_image has value 'minimal'. Please change it to 'full'. For more information, see `https://go.microsoft.com/fwlink/?linkid=873009`."
-    
+
   - The user must have the `ReplicationAdmin` role.  
   - Migrate the database schemas without foreign keys and triggers.  
 - They create a virtual private network (VPN) that connects via ExpressRoute or VPN to the on-premises network.  

@@ -95,7 +95,7 @@ We recommended capturing the strategy in a presentation to facilitate easy discu
   - **Full presentation:** This should include the full set of elements for the security strategy in the main presentation or in optional reference slides.
   - **Executive summaries:** Versions to use with senior executives and board members might contain only critical elements relevant to their role, such as risk appetite, top priorities, or accepted risks.
 
-- You can also record motivations, outcomes, and business justifications in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- You can also record motivations, outcomes, and business justifications in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 
 **Best practices for building security strategy:**
 
@@ -148,7 +148,7 @@ Security planning and cloud adoption planning should not be done in isolation. I
 
 **Deliverables:**
 
-- **Security plan:** A security plan should be part of the main planning documentation for the cloud. It might be a document that uses the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx), a detailed slide deck, or a project file. Or it might be a combination of these formats, depending on organization's size, culture, and standard practices.
+- **Security plan:** A security plan should be part of the main planning documentation for the cloud. It might be a document that uses the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx), a detailed slide deck, or a project file. Or it might be a combination of these formats, depending on organization's size, culture, and standard practices.
 
   The security plan should include all of these elements:
 
@@ -201,7 +201,7 @@ Your security plan is likely to be more successful if your planning takes the ap
     - Why they need to learn the skills (and the benefits of doing so).
     - How to get this knowledge (and provide resources to help them learn).
   
-    You can document the plan by using the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx). And you can use [online Microsoft security training](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction) to help with education of your team members.
+    You can document the plan by using the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx). And you can use [online Microsoft security training](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction) to help with education of your team members.
   - **Making security awareness engaging** to help people genuinely connect with their part of keeping the organization safe.
 
 - **Review Microsoft learnings and guidance:** Microsoft has published insights and perspectives to help your organization plan its transformation to the cloud and a modern security strategy. The material includes recorded training, documentation, and security best practices and recommended standards.

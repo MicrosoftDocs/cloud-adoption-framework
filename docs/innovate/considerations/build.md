@@ -46,7 +46,7 @@ This last step is the culmination of an empathy-driven hypothesis. It defines th
 
 After core assumptions are proven, later iterations will focus on growth tests in addition to empathy tests. After empathy is built, tested, and validated, you can begin to understand the addressable market at scale. This can be done through an expansion of the standard hypothesis formula described earlier. Based on available data, estimate the size of the total market (the number of potential customers).
 
-From there, estimate the percentage of that total market that experiences a similar challenge and that might therefore be interested in this solution. This is your addressable market. The next hypothesis to be tested is: how will _x_% of customers' lives be improved by using the proposed solution to address this manageable challenge? A small sampling of customers will reveal leading indicators that suggest a percentage impact on the pool of customers engaged.
+From there, estimate the percentage of that total market that experiences a similar challenge and that might therefore be interested in this solution. This is your addressable market. The next hypothesis to be tested is: how will *x%* of customers' lives be improved by using the proposed solution to address this manageable challenge? A small sampling of customers will reveal leading indicators that suggest a percentage impact on the pool of customers engaged.
 
 ### Define a solution to test the hypothesis
 

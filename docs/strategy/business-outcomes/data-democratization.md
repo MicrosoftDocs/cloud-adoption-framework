@@ -36,4 +36,3 @@ From there, subsets of data are extracted into data marts to analyze activity as
 For a business to run efficiently, it needs all types of data for the different skills and roles described earlier. You need raw data that has been cleansed for data scientists to build machine-learning models. You need cleaned and structured data for a data warehouse to provide reliable performance to business applications and dashboards. Most importantly, you need to be able to go from raw data to insights in minutes, not days.
 
 Azure Synapse Analytics has a native, built-in business intelligence tool with Power BI. This fully enables you to go from raw data to a dashboard serving insights in minutes, by using one service within one single interface.
-

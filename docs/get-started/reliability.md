@@ -86,7 +86,7 @@ Strategic decisions directly affect reliability. They ripple through the adoptio
 
 **Deliverables:**
 
-- Record motivations, outcomes, and business justification in the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx).
+- Record motivations, outcomes, and business justification in the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx).
 - Ensure the management baseline provides operational support that aligns to the strategic direction of cloud adoption.
 
 **Guidance to support deliverable completion:**
@@ -110,7 +110,7 @@ When you align the adoption plan with the digital estate analysis, you can plan 
 
 **Deliverables:**
 
-- Update the [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) to reflect changes that are needed to achieve the desired strategy. The changes recorded can include:
+- Update the [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) to reflect changes that are needed to achieve the desired strategy. The changes recorded can include:
 
   - An assessment of the existing digital estate.
   - A cloud adoption plan that reflects the required changes and the work involved.

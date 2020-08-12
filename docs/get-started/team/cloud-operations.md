@@ -24,7 +24,7 @@ If no DevOps or service-provider operations agreements are in place, it's safe t
 **Deliverables:**
 
 - Determine whether you need a cloud operations team.
-- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Document the decision and responsible individuals in the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx) in the `Org Alignment` worksheet.
+- Align responsibilities across teams by developing a cross-team matrix that identifies _responsible, accountable, consulted, and informed (RACI)_ parties. Document the decision and responsible individuals in the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx) in the `Org Alignment` worksheet.
 
 **Guidance to support deliverable completion:**
 
@@ -49,8 +49,8 @@ Before the cloud operations team implements any ongoing operations practices, it
 
 **Guidance to support deliverable completion:**
 
-- To understand team motivations, metrics, and strategy, review your company's [strategy and plan template](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/Microsoft-Cloud-Adoption-Framework-Strategy-and-Plan-Template.docx) with members of the cloud strategy team.
-- To understand timelines and prioritization, review your company's [cloud adoption plan template](../../plan/template.md) with members of the cloud adoption team.
+- To understand team motivations, metrics, and strategy, review your company's [strategy and plan template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/plan/cloud-adoption-framework-strategy-and-plan-template.docx) with members of the cloud strategy team.
+- To understand timelines and prioritization, review your company's [cloud adoption plan](../../plan/template.md) with members of the cloud adoption team.
 - To understand the operational requirements and commitments that the team has established with the business, begin developing the [operations management workbook](https://raw.githubusercontent.com/Microsoft/CloudAdoptionFramework/master/manage/opsmanagementworkbook.xlsx).
 
 <!-- markdownlint-disable MD033 -->
@@ -58,7 +58,7 @@ Before the cloud operations team implements any ongoing operations practices, it
 
 | Accountable team | Responsible and supporting teams |
 | --- | --- |
-| <li>  Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
+| <li> Cloud operations team | <li> Cloud strategy team <li> Cloud adoption team <li> Cloud governance team <li> Cloud center of excellence or central IT team |
 
 ## Step 3: Establish a cadence with other teams
 
@@ -197,4 +197,4 @@ Learn more about:
 - [Cloud center of excellence functions](../../organize/cloud-center-of-excellence.md)
 - [Organizational antipatterns: Silos and fiefdoms](../../organize/fiefdoms-silos.md)
 
-Align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI spreadsheet template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx).
+Align responsibilities across teams by developing a cross-team matrix that identifies RACI parties. Download and modify the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx).

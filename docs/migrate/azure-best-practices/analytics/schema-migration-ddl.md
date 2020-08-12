@@ -42,7 +42,7 @@ The uncompressed raw data size of the tables to be migrated is a good starting p
 
 The new target platform will also include a compression factor and indexing overhead, but these will probably be different from the source system. Azure Synapse Analytics storage pricing also includes seven days of snapshot backups. When compared to the existing environment, this can have an impact on the overall cost of storage required.
 
-You can delay performance tuning for the data model until late in the migration process and time this with when real data volumes are in the data warehouse. However, we recommend that you implement some performance tuning options earlier on. 
+You can delay performance tuning for the data model until late in the migration process and time this with when real data volumes are in the data warehouse. However, we recommend that you implement some performance tuning options earlier on.
 
 For example, in Azure Synapse Analytics, it makes sense to define small dimension tables as replicated tables and to define large fact tables as clustered columnstore indexes. Similarly, indexes defined in the source environment provide a good indication of which columns might benefit from indexing in the new environment. Using this information when you're initially defining the tables before loading will save time later in the process.
 
@@ -53,7 +53,7 @@ It might be possible to simplify your existing data warehouse before migration b
 - Removing or archiving unused tables before migrating to avoid migrating data that's not used. Archiving to Azure Blob storage and defining the data as an external table might keep the data available for a lower cost.
 - Converting physical data marts to virtual data marts by using data virtualization software to reduce what you have to migrate. This conversion also improves agility and reduces total cost of ownership. You might consider it as modernization during migration.
 
-One objective of the migration exercise might also be to modernize the warehouse by changing the underlying data model. One example is moving from an Inmon-style data model to a data vault approach. You should decide this as part of the preparation phase and incorporate a strategy for the transition into the migration plan. 
+One objective of the migration exercise might also be to modernize the warehouse by changing the underlying data model. One example is moving from an Inmon-style data model to a data vault approach. You should decide this as part of the preparation phase and incorporate a strategy for the transition into the migration plan.
 
 The recommended approach in this scenario is to first migrate the data model as is to the new platform and then transition to the new model in Azure Synapse Analytics. Use the platform's scalability and performance characteristics to execute the transformation without affecting the source system.
 
@@ -78,7 +78,7 @@ Products and services available from Microsoft partners can assist in data wareh
 
 ### Data marts: Physical or virtual
 
-It's a common practice for organizations with older data warehouse environments to create data marts that provide their departments or business functions with good ad hoc self-service query and report performance. A data mart typically consists of a subset of the data warehouse that contains aggregated versions of the original data. Its form, typically a dimensional data model, supports users to easily query the data and receive fast response times from user-friendly tools like Tableau, MicroStrategy, or Microsoft Power BI. 
+It's a common practice for organizations with older data warehouse environments to create data marts that provide their departments or business functions with good ad hoc self-service query and report performance. A data mart typically consists of a subset of the data warehouse that contains aggregated versions of the original data. Its form, typically a dimensional data model, supports users to easily query the data and receive fast response times from user-friendly tools like Tableau, MicroStrategy, or Microsoft Power BI.
 
 One use of data marts is to expose the data in a usable form, even if the underlying warehouse data model is something different (for example, data vault). This approach is also known as a three-tier model.
 
@@ -89,7 +89,7 @@ If these data marts are implemented as physical tables, they require additional 
 With the advent of relatively cheap scalable massively parallel processing (MPP) architectures such as Azure Synapse Analytics and their inherent performance characteristics, you might be able to provide data mart functionality without having to instantiate the mart as a set of physical tables. You achieve this by effectively virtualizing the data marts through one of these methods:
 
 - SQL views on the main data warehouse.
-- A virtualization layer that uses features such as views in Azure Synapse Analytics or third-party virtualization products such as Denodo. 
+- A virtualization layer that uses features such as views in Azure Synapse Analytics or third-party virtualization products such as Denodo.
 
 This approach simplifies or eliminates the need for additional storage and aggregation processing. It reduces the overall number of database objects to be migrated.
 
@@ -170,7 +170,7 @@ Depending on the source environment, some issues can cause problems when you're 
 - There can be subtle differences in the way that `NULL` data is handled in different database products. Examples include collation sequence and handling of empty character strings.
 - `DATE`, `TIME`, `INTERVAL`, and `TIME ZONE` data and associated functions can vary widely from product to product.
 
-Test these thoroughly to determine if the desired results are achieved in the target environment. The migration exercise can uncover bugs or incorrect results that are currently part of the existing source system, and the migration process is a good opportunity to correct anomalies. 
+Test these thoroughly to determine if the desired results are achieved in the target environment. The migration exercise can uncover bugs or incorrect results that are currently part of the existing source system, and the migration process is a good opportunity to correct anomalies.
 
 #### Best practices for defining columns in Azure Synapse Analytics
 
@@ -244,7 +244,7 @@ Round-robin table distribution is the default option and spreads the data evenly
 
 The system assigns the row to a hash bucket, a task based on a hashing algorithm applied to a user-defined key like `CUSTOMER_ID` in the preceding example. The bucket is then assigned to a specific node, and all data rows hash-distributed on the same value end up on the same processing node.
 
-This method is useful for large tables that are frequently joined or aggregated on a key. Other large tables to be joined should be hashed on the same key if possible. If there are multiple candidates for the hash key, choose the most frequently joined one. 
+This method is useful for large tables that are frequently joined or aggregated on a key. Other large tables to be joined should be hashed on the same key if possible. If there are multiple candidates for the hash key, choose the most frequently joined one.
 
 The hash column shouldn't contain nulls and isn't typically a date because many queries filter on date. Hashing is typically more efficient if the key to hash is an integer value instead `CHAR` or `VARCHAR`. Avoid choosing keys with a highly skewed range of values, like when a small number of key values represent a large percentage of the data rows.
 
@@ -272,7 +272,7 @@ Clustered columnstore index is the default indexing option within Azure Synapse 
 
 #### Clustered index
 
-If there's a requirement to regularly retrieve a single row or small number of rows from a large table based on a strong filter condition, a clustered index might be more efficient than a clustered columnstore index. Only one clustered index is allowed per table. 
+If there's a requirement to regularly retrieve a single row or small number of rows from a large table based on a strong filter condition, a clustered index might be more efficient than a clustered columnstore index. Only one clustered index is allowed per table.
 
 #### Non-clustered index
 
@@ -298,7 +298,7 @@ It's common in data warehouse environments to maintain a rolling window of detai
 
 ### Statistics
 
-When a query is submitted to Azure Synapse Analytics, it's first processed by the query optimizer. The optimizer determines the best internal methods to execute the query efficiently. 
+When a query is submitted to Azure Synapse Analytics, it's first processed by the query optimizer. The optimizer determines the best internal methods to execute the query efficiently.
 
 The optimizer compares the various query-execution plans that are available based on a cost-based algorithm. The accuracy of the cost estimates is dependent on the statistics available. It's a good practice to ensure that statistics are up to date.
 

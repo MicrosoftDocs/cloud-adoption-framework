@@ -46,7 +46,7 @@ When you're first building a cloud adoption team, aligning with one of the Adopt
 
 ## Step 2: Align your team with other supporting teams
 
-If your company's cloud adoption effort is mature enough to have supporting teams, you might be able to find a list of the teams and subject matter experts in your company's version of the [RACI template](https://archcenter.blob.core.windows.net/cdn/fusion/management/raci-template.xlsx), including cloud governance, cloud operations, a cloud center of excellence, or other similar teams.
+If your company's cloud adoption effort is mature enough to have supporting teams, you might be able to find a list of the teams and subject matter experts in your company's version of the [RACI template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/organize/raci-template.xlsx), including cloud governance, cloud operations, a cloud center of excellence, or other similar teams.
 
 **Deliverables:**
 

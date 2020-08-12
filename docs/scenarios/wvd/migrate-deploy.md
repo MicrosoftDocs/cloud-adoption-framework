@@ -31,7 +31,7 @@ Each persona is likely going to require an iteration of the initial scope outlin
 
 ## Scope considerations
 
-Each of the following sets of considerations should be included in the design documentation for each persona group to be migrated or deployed. Once the scope considerations are factored into the  [initial scope](#initial-scope) above, the deployment or migration can begin.
+Each of the following sets of considerations should be included in the design documentation for each persona group to be migrated or deployed. Once the scope considerations are factored into the [initial scope](#initial-scope) above, the deployment or migration can begin.
 
 ### Azure landing zone considerations
 

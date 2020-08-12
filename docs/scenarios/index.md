@@ -44,4 +44,4 @@ During each iteration, follow the Migrate methodology to assess workloads, deplo
 
 ## Next steps
 
-If you aren't migrating a specific scenario, start by following the [four step CAF migration process](../migrate/index.md).
+If you aren't migrating a specific scenario, start by following the [four-step CAF migration process](../migrate/index.md).
