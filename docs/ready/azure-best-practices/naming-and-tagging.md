@@ -88,6 +88,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 |----------------------------------|-------------|
 | Virtual network                  | vnet-       |
 | Subnet                           | snet-       |
+| Virtual network peering          | peer-       |
 | Network interface (NIC)          | nic-        |
 | Public IP address                | pip-        |
 | Load balancer (internal)         | lbi-        |
@@ -99,6 +100,7 @@ This list recommends Azure resource type prefixes to use when you define your na
 | VPN connection                   | cn-         |
 | Application gateway              | agw-        |
 | Route table                      | route-      |
+| User defined route (UDR)         | udr-        |
 | Traffic Manager profile          | traf-       |
 
 ### Compute and Web
