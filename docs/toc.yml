@@ -27,8 +27,6 @@ items:
         href: reference/fundamental-concepts/hosting-hierarchy.md
       - name: Azure hierarchy support
         href: reference/fundamental-concepts/hierarchy-azure-tools.md
-      - name: Operating model terminology
-        href: operating-model/terms.md
 
     - name: Accelerate migration
       href: get-started/migrate.md
