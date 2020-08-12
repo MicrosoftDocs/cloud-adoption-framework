@@ -242,7 +242,7 @@ The following section provides some example names for common Azure resource type
 > [!NOTE]
 > The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E.  mktg-prod-*001*
 >
-> Padding aids in human readability and sorting of assets when those assets are managed in a configuration management databases (CMDBs), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with how manh of those systems manage inventory naming. 
+> Padding aids in human readability and sorting of assets when those assets are managed in a configuration management databases (CMDBs), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with interfaces those systems use to manage inventory naming.
 >
 > Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches which may iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and run time.
 >
