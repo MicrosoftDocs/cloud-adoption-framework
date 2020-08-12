@@ -241,7 +241,12 @@ The following section provides some example names for common Azure resource type
 
 > [!NOTE]
 > The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E.  mktg-prod-*001*
-> Padding aids in human readability and sorting of assets when those assets are referenced in traditional configuration management databases (CMDBs) or traditional accounting tools that may be used to manage your inventory of assets. This more traditional asset padding approach can prove problematic in infrastructure-as-code approaches which may iterate through the asset number during deployment or automated configuration management tasks. Before deciding on a number schema (with or without pads) evaluate which will have a bigger impact on long term operations: CMDB/inventory management solutions or code-based inventory management.  
+>
+> Padding aids in human readability and sorting of assets when those assets are managed in a configuration management databases (CMDBs), IT Asset Management tool, or traditional accounting tools. When the deployed asset is managed centrally as part of a larger inventory or portfolio of IT assets, the padding approach aligns with how manh of those systems manage inventory naming. 
+>
+> Unfortunately, the traditional asset padding approach can prove problematic in infrastructure-as-code approaches which may iterate through assets based on a non-padded number. This approach is common during deployment or automated configuration management tasks. Those scripts would have to routinely strip the padding and convert the padded number to a real number, which slows script development and run time.
+>
+> Which approach you choose to implement is a personal decision. The padding in this article is meant to illustrate the importance of using a consistent approach to inventory numbering, not which approach is superior. Before deciding on a number schema (with or without padding) evaluate which will have a bigger impact on long term operations: CMDB/asset management solutions or code-based inventory management. Then consistently follow the padding option that best fits your operational needs. 
 
 ### Example names: Networking
 
