@@ -38,7 +38,7 @@ How many distinct personas will be required to support all of the users included
 
 Distinctions in each of the above questions will start to illustrate user personas by **business function, cost center**, geographic region, and technical requirements. The following table can aid in recording responses to populate a completed assessment or design document.
 
-|  | Persona group 1  | Persona group 2  | Persona group 3  |
+| Category | Persona group 1  | Persona group 2  | Persona group 3  |
 |---------|---------|---------|---------|
 | Pools  | Pools | Pools | Dedicated (security concerns) |
 | Density | Light (6 users/vCPU) | Heavy (2 users/vCPU) | Dedicate (1 users/vCPU) |

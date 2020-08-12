@@ -422,9 +422,9 @@ Learn more about the Azure capabilities discussed in this document.
 | --- | --- | --- |
 | [Azure Active Directory][azure-ad] <br>[Multi-Factor Authentication][multi-factor-authentication] <br> [Role-Based Access Control][RBAC] <br> [Default Azure AD Roles][Roles] <br><br><br> | [Network Watcher][NetWatch] <br> [Azure Monitor][MonitorOverview] <br> [Log Analytics][LogAnalytics] <br> | [Management Group][MgmtGrp] <br> [Subscription Management](../ready/azure-best-practices/scale-subscriptions.md) <br> [Resource Group Management][RGMgmt] <br> [Azure Subscription Limits][limits] <br><br><br> |
 
-| Security | Other Azure Services | |
-|-|-|-|
-| [Azure Firewall][AzFW] <br> [Firewall Manager][AzFWMgr] <br> [Application Gateway WAF][AppGWWAF] <br> [Front Door WAF][AFDWAF] <br> [Azure DDoS][DDoS] <br> | [Azure Storage][Storage] <br> [Azure SQL][SQL] <br> [Azure Web Apps][WebApps] <br> [Azure Cosmos DB][cosmos-db] <br> [HDInsight][HDInsight] | [Event Hubs][EventHubs] <br> [Service Bus][ServiceBus] <br> [Azure IoT][IoT] <br> [Azure Machine Learning][machine-learning] |
+| Security | Other Azure Services |
+|-|-|
+| [Azure Firewall][AzFW] <br> [Firewall Manager][AzFWMgr] <br> [Application Gateway WAF][AppGWWAF] <br> [Front Door WAF][AFDWAF] <br> [Azure DDoS][DDoS] <br> | [Azure Storage][Storage] <br> [Azure SQL][SQL] <br> [Azure Web Apps][WebApps] <br> [Azure Cosmos DB][cosmos-db] <br> [HDInsight][HDInsight] <br> [Event Hubs][EventHubs] <br> [Service Bus][ServiceBus] <br> [Azure IoT][IoT] <br> [Azure Machine Learning][machine-learning] |
 
 <!-- markdownlint-enable MD033 -->
 

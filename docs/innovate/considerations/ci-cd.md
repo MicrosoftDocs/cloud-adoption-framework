@@ -11,7 +11,7 @@ ms.subservice: innovate
 
 <!-- cSpell:ignore deprioritize -->
 
-# Empower adoption
+# Empower adoption with digital invention
 
 The ultimate test of innovation is customer reaction to your invention. Did the hypothesis prove true? Do customers use the solution? Does it scale to meet the needs of the desired percentage of users? Most importantly, do they keep coming back? None of these questions can be asked until the minimum viable product (MVP) solution has been deployed. In this article, we'll focus on the discipline of empowering adoption.
 
