@@ -239,6 +239,10 @@ The following section provides some example names for common Azure resource type
 | Resource group                  | Subscription                       | rg-\<App or service name\>-\<Subscription type\>-\<\#\#\#\> | <li> rg-mktgsharepoint-prod-001 <li> rg-acctlookupsvc-share-001 <li> rg-ad-dir-services-shared-001 |
 | API management service instance | Global                             | apim-\<App or service name\>                                | apim-navigator-prod                                                                                                     |
 
+> [!NOTE]
+> The example names above and elsewhere in this document reference a three digit padding (\<\#\#\#\>). I.E.  mktg-prod-*001*
+> Padding aids in human readability and sorting of assets when those assets are referenced in traditional configuration management databases (CMDBs) or traditional accounting tools that may be used to manage your inventory of assets. This more traditional asset padding approach can prove problematic in infrastructure-as-code approaches which may iterate through the asset number during deployment or automated configuration management tasks. Before deciding on a number schema (with or without pads) evaluate which will have a bigger impact on long term operations: CMDB/inventory management solutions or code-based inventory management.  
+
 ### Example names: Networking
 
 | Asset type                   | Scope           | Format                                                               | Examples                                                                                                                      |
