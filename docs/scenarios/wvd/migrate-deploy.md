@@ -27,7 +27,7 @@ Deployment and migration consist of persona migration, application migration, an
 
 ## Iterative methodology
 
-Each persona will likely require an iteration of the previously outlined initial scope, resulting in multiple host pools. Depending on the Windows Virtual Desktop assessment, the adoption team should define iterations that are based on the number of personas or users per persona. Breaking the process into persona-driven iterations helps reduce the change velocity impact on the business and allows the team to focus on proper testing or onboarding of each of the persona pools.
+Each persona will likely require an iteration of the previously outlined initial scope, resulting in multiple host pools. Depending on the Windows Virtual Desktop assessment, the adoption team should define iterations that are based on the number of personas or users per persona. Breaking the process into persona-driven iterations helps to reduce the change velocity impact on the business and allows the team to focus on proper testing or onboarding of each of the persona pools.
 
 ## Scope considerations
 
@@ -43,23 +43,23 @@ If the assigned Azure landing zone doesn't meet your requirements, scope should 
 
 Some personas might have a dependency on legacy solutions, which are not compatible with Windows&nbsp;10 multi-session. In these cases, some personas might require dedicated desktops. This dependency might not be discovered until deployment and testing. 
 
-If they're discovered late in the process, future iterations should be allocated to modernization or migration of the legacy application, to reduce the long-term cost of the desktop experience. Those future iterations should be prioritized and completed based on the overall pricing impact of modernization versus the extra cost associated with dedicated desktops. To avoid pipeline disruptions and the realization of business outcomes, this prioritization should not affect current iterations.
+If they're discovered late in the process, future iterations should be allocated to modernization or migration of the legacy application. This will reduce the long-term cost of the desktop experience. Those future iterations should be prioritized and completed based on the overall pricing impact of modernization versus the extra cost associated with dedicated desktops. To avoid pipeline disruptions and the realization of business outcomes, this prioritization should not affect current iterations.
 
-Some applications might require remediation, modernization, or migration to Azure to support the desired end-user experience. Those changes are likely to come after release. Alternatively, when desktop latency can affect business functions, the application changes might create blocking dependencies for the migration of some personas.
+Some applications might require remediation, modernization, or migration to Azure to support the desired end-user experience. Those changes are likely to come after release. Alternately, when desktop latency can affect business functions, the application changes might create blocking dependencies for the migration of some personas.
 
 ### User profile considerations
 
-The [initial scope](#initial-scope) assumes you're using a [VM-based FSLogix user profile container](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-user-profile).
+The [initial scope](#initial-scope) assumes that you're using a [VM-based FSLogix user profile container](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-user-profile).
 
-You can use [Azure NetApp Files to host user profiles](https://docs.microsoft.com/azure/virtual-desktop/create-fslogix-profile-container). It will require a few extra steps in the scope, including:
+You can use [Azure NetApp Files to host user profiles](https://docs.microsoft.com/azure/virtual-desktop/create-fslogix-profile-container). Doing so will require a few extra steps in the scope, including:
 
 - **Per NetApp instance**: Configure NetApp files, volumes, and Active Directory connections.
 - **Per host/persona**: Configure FSLogix on session host virtual machines.
 - **Per user**: Assign users to the host session.
 
-You can also use [Azure Files to host user profiles](https://docs.microsoft.com/azure/virtual-desktop/create-file-share), which requires a few extra steps in the scope, including:
+You can also use [Azure Files to host user profiles](https://docs.microsoft.com/azure/virtual-desktop/create-file-share). Doing so will require a few extra steps in the scope, including:
 
-- **Per Azure Files instance**: Configure the storage account, disk type, and Active Directory connection ([Active Directory Domain Services (AD DS) is also supported](https://docs.microsoft.com/azure/virtual-desktop/create-profile-container-adds), assign role-based access control (RBAC) access for an Active Directory user group, apply New Technology File System (NTFS) permissions, and get the storage account access key.
+- **Per Azure Files instance**: Configure the storage account, disk type, and Active Directory connection ([Active Directory Domain Services (AD DS) is also supported](https://docs.microsoft.com/azure/virtual-desktop/create-profile-container-adds), assign role-based access control access for an Active Directory user group, apply New Technology File System permissions, and get the storage account access key.
 - **Per host/persona**: Configure FSLogix on session host virtual machines.
 - **Per user**: Assign users to the host session.
 
