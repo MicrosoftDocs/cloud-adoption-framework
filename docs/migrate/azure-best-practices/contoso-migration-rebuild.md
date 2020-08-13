@@ -104,7 +104,7 @@ Here's what Contoso needs for this scenario:
 | --- | --- |
 | Azure subscription | <li> Contoso created subscriptions in an earlier article. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free). <li> If you create a free account, you're the admin of your subscription and can perform all actions. <li> If you use an existing subscription and you're not the admin, you need to work with the admin to assign Owner or Contributor permissions to you. |
 | Azure infrastructure | <li> Learn [how Contoso set up an Azure infrastructure](./contoso-migration-infrastructure.md). |
-| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li>  [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads) <li> [The Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install), set to use Windows containers |
+| Developer prerequisites | Contoso needs the following tools on a developer workstation: <li> [Visual Studio Community 2017 version 15.5](https://visualstudio.microsoft.com) <li> .NET workload, enabled <li> [Git](https://git-scm.com) <li> [Azure PowerShell](https://azure.microsoft.com/downloads) <li> [The Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) <li> [Docker Community Edition (Windows 10) or Docker Enterprise Edition (Windows Server)](https://docs.docker.com/docker-for-windows/install), set to use Windows containers |
 
 ## Scenario steps
 
@@ -270,8 +270,9 @@ Contoso creates an Azure DevOps project, configures a CI build to create the con
 
 ### Deploy the back-end infrastructure
 
-With the AKS cluster created and the Docker images built, Contoso admins now deploy the rest of the infrastructure that will be used by back-end microservices. 
-- Instructions in this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repo. 
+With the AKS cluster created and the Docker images built, Contoso admins now deploy the rest of the infrastructure that will be used by back-end microservices.
+
+- Instructions in this section use the [SmartHotel360-Backend](https://github.com/Microsoft/SmartHotel360-Backend) repo.
 - In the `/deploy/k8s/arm` folder, there's a single script to create all items.
 
 The admins deploy the infrastructure as follows:

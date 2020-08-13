@@ -91,7 +91,7 @@ In the context of the enterprise-scale architecture, centralized logging is prim
 
 ## Planning for app management and monitoring
 
-To expand on the previous section, this section will consider federated management and monitoring of app workloads and explain how application teams can operationally maintain these workloads.
+To expand on the previous section, this section will consider a federated model and explain how application teams can operationally maintain these workloads.
 
 **Design considerations:**
 
