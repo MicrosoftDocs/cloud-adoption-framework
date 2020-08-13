@@ -1,6 +1,6 @@
 ---
 title: "Assess workloads for Azure Stack Hub migration"
-description: Assess workloads for Azure Stack Hub migration
+description: Assess workloads for Azure Stack Hub migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2020
@@ -59,14 +59,14 @@ Assess the impact of licensing and support:
 
 - Avoid duplication of effort and optimize service-level agreements (SLAs) by examining the correlation between IT-managed cloud services and application-specific services.
 - Consider the automation that's required to orchestrate the provisioning of services during deployment and migration of applications.
-- To help meet your operations requirements, consdier [scalability and availability](https://azure.microsoft.com/blog/azure-stack-iaas-part-six/) services such as pay per use, VM availability sets, virtual machine scale sets, network adapters, and the ability to add and resize VMs and disks.
+- To help meet your operations requirements, consdier [scalability and availability](https://azure.microsoft.com/blog/azure-stack-iaas-part-six/) services such as pay per use, virtual machine (VM) availability sets, VM scale sets, network adapters, and the ability to add and resize VMs and disks.
 
 ## Monitoring
 
 - Monitor system health and operational status and performance by using well-defined metrics that form the basis of the SLAs that you offer your end users.
 - Check security and compliance, evaluating how well the cloud environment meets the regulatory and compliance requirements that are imposed by the application.
 - What are the processes for backup/restore and replication/failover?
-- Find data-protection services for infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS) resources.
+- Find data-protection services for infrastructure as a service, platform as a service, and software as a service resources.
 - Incorporate multiple vendors, technologies, and capabilities to achieve a comprehensive protection strategy.
 
 ## Next steps
