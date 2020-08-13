@@ -61,7 +61,7 @@ For IT environments integrating cloud and on-premises resources, you may need us
 
 ## Next steps
 
-Policy enforcement is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the [decision guides overview](../index.md) to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
+Policy enforcement is just one of the core infrastructure components requiring architectural decisions during a cloud adoption process. Visit the architectural decision guides overview to learn about alternative patterns or models used when making design decisions for other types of infrastructure.
 
 > [!div class="nextstepaction"]
 > [Architectural decision guides](../index.md)

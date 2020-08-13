@@ -24,7 +24,7 @@ The Contoso IT leadership team has worked closely with business partners to unde
 
 - **Address business growth**. Contoso is growing, and there is pressure on their on-premises systems and infrastructure.
 - **Increase efficiency**. Contoso needs to remove unnecessary procedures and streamline processes for developers and users. The business needs IT to be fast and not waste time or money, thus delivering faster on customer requirements.
-- **Increase agility**.  Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable success in a global economy. Reaction time must not get in the way, or become a business blocker.
+- **Increase agility**. Contoso IT needs to be more responsive to the needs of the business. It must be able to react faster than the changes in the marketplace, to enable success in a global economy. Reaction time must not get in the way, or become a business blocker.
 - **Scale**. As the business grows successfully, Contoso IT must provide systems that are able to grow at the same pace.
 - **Reduce costs**. Contoso wants to minimize licensing costs.
 

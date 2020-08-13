@@ -244,7 +244,7 @@ To prepare, set up a virtual network to access the database. Create a virtual ne
 
       > [!NOTE]
       > The previous Database Migration Service steps can also be performed via the [Azure CLI](https://docs.microsoft.com/azure/dms/tutorial-postgresql-azure-postgresql-online).
-    
+
 1. Import the database schema (step 2):
 
       ```cmd

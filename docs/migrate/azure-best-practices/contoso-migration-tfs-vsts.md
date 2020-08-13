@@ -217,17 +217,17 @@ With the validation complete, Contoso admins can use the Team Foundation Server 
 
 With the preparation completed, Contoso admins can focus on the migration. After they run the migration, they'll switch from using TFVC to Git for version control.
 
-Before they start, the admins schedule downtime with the dev team, so that they can plan to take the collection offline for migration. 
+Before they start, the admins schedule downtime with the dev team, so that they can plan to take the collection offline for migration.
 
 Here is the migration process they'll follow:
 
-1. **Detach the collection**. Identity data for the collection resides in the configuration database for the Team Foundation Server instance while the collection is attached and online. 
+1. **Detach the collection**. Identity data for the collection resides in the configuration database for the Team Foundation Server instance while the collection is attached and online.
 
-    When a collection is detached from the Team Foundation Server instance, a copy of that identity data is made and then packaged with the collection for transport. Without this data, the identity portion of the import can't be executed. 
+    When a collection is detached from the Team Foundation Server instance, a copy of that identity data is made and then packaged with the collection for transport. Without this data, the identity portion of the import can't be executed.
 
     We recommended that the collection stay detached until the import has been completed, because changes that occur during the import can't be imported.
 
-1. **Generate a backup**. The next step is to generate a backup that can be imported into Azure DevOps Services. The data-tier application component package (DACPAC) is a SQL Server feature that allows database changes to be packaged into a single file and then deployed to other instances of SQL. 
+1. **Generate a backup**. The next step is to generate a backup that can be imported into Azure DevOps Services. The data-tier application component package (DACPAC) is a SQL Server feature that allows database changes to be packaged into a single file and then deployed to other instances of SQL.
 
     The backup can also be restored directly to Azure DevOps Services, and it's used as the packaging method for getting collection data to the cloud. Contoso will use the `sqlpackage.exe` tool to generate the DACPAC. This tool is included in SQL Server Data Tools.
 
@@ -342,7 +342,7 @@ They open the *import.json* file and complete the following fields:
 Contoso admins perform a dry-run migration to make sure that everything's working as expected.
 
 1. They open a command prompt and then go to the `TfsMigrator` location (`C:\TFSMigrator`).
-1. They want to make sure that the file is formatted properly and that the SAS key is working. They validate the import file by running the following command: 
+1. They want to make sure that the file is formatted properly and that the SAS key is working. They validate the import file by running the following command:
 
     `TfsMigrator import /importFile:C:\TFSMigrator\import.json /validateonly`
 

@@ -22,7 +22,7 @@ Management group structures within an Azure Active Directory (Azure AD) tenant s
 **Design considerations:**
 
 - Management groups can be used to aggregate policy and initiative assignments via Azure Policy.
-- A management group tree can support up to [six levels of depth](https://docs.microsoft.com/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the root or subscription level.
+- A management group tree can support up to [six levels of depth](https://docs.microsoft.com/azure/governance/management-groups/overview#hierarchy-of-management-groups-and-subscriptions). This limit doesn't include the tenant root level or the subscription level.
 
 **Design recommendations:**
 

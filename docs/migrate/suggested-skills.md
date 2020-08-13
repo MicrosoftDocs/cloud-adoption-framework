@@ -41,7 +41,7 @@ During assess processes, architects will design solutions for each workload. The
 
 The following tutorial can prepare the team for migration activities:
 
-- [Migrate to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure): Using Azure Site Recovery to migrate VMs to Azure.
+- [Migrate to Azure](https://docs.microsoft.com/azure/site-recovery/migrate-tutorial-on-premises-azure): Using Azure Migrate to migrate VMs to Azure.
 - [Rehosting workloads to Azure](https://www.pluralsight.com/courses/microsoft-azure-workloads-rehosting): A Pluralsight course that teaches viewers how to rehost workloads to Azure.
 - [Migrating physical and virtual servers to Azure](https://www.pluralsight.com/courses/microsoft-azure-migrating-physical-virtual-servers): A Pluralsight course for migrating servers to Azure.
 - [Import and export data to Azure](https://www.pluralsight.com/courses/microsoft-azure-import-export-data): A Pluralsight course on the movement of data to and from Azure.
