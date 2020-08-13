@@ -1,5 +1,5 @@
 ---
-title: "One Migration approach to Azure adoption"
+title: "The One Migration approach to Azure adoption"
 description: Follow the One Migration approach of Azure Migrate to migrate and modernize entire IT portfolios.
 author: BrianBlanchard
 ms.author: brblanch
@@ -12,17 +12,15 @@ ms.subservice: migrate
 <!-- docsTest:ignore "One Migration" -->
 <!-- cSpell:ignore HANA -->
 
-# One migration approach to migrating the IT portfolio
+# The One Migration approach to migrating the IT portfolio
 
-Azure and Azure Migrate are both well known for hosting Microsoft technologies. But you might not know about Azure's ability to support migrations beyond Windows and SQL Server. The migration scenarios captured in the Migrate methodology demonstrate the same set of consistent guidelines and processes for migrating both Microsoft and third-party technologies.
+Azure and Azure Migrate are both well known for hosting Microsoft technologies. But you might not be aware of Azure's ability to support migrations beyond Windows and SQL Server. The *One Migration* scenarios captured in the Migrate methodology demonstrate the same set of consistent guidelines and processes for migrating both Microsoft and third-party technologies.
 
 ## Migration scenarios
 
-The image and list below outline a number of migration scenarios that follow the same iterative methodology for migration and modernization.
+The following diagram and table outline a number of scenarios that follow the same iterative Migrate methodology for migration and modernization.
 
-![Cloud Adoption Framework migration model](../_images/migrate/one-migrate.png)
-
-### Links to migration scenarios
+![Diagram of the Cloud Adoption Framework migration model.](../_images/migrate/one-migrate.png)
 
 | | | | |
 |---------|---------|---------|---------|
@@ -32,16 +30,16 @@ The image and list below outline a number of migration scenarios that follow the
 | **Hybrid** | [Azure Stack](./azure-stack/index.md) | [VMware](../migrate/azure-best-practices/vmware-host.md) | |
 | **Additional scenarios** | [Secure workloads](../migrate/azure-best-practices/migrate-best-practices-security-management.md) | [Mainframes](../infrastructure/mainframe-migration/index.md) | NetApp and SAP HANA |
 
-## Migrate methodology
+## Migration methodology
 
-In each of the migration scenarios, the same consistent processes guide migration efforts when moving existing workloads to the cloud.
+In each of the preceding migration scenarios, the same basic process will guide your efforts as you move your existing workloads to the cloud, as shown here:
 
-![Cloud Adoption Framework migration model](../_images/migrate/methodology.png)
+![Diagram of the Cloud Adoption Framework migration model.](../_images/migrate/methodology.png)
 
-Structure migration waves to guide releases of multiple workloads. Establishing a cloud adoption plan and Azure landing zones through the plan and Ready methodologies helps add structure to your migration waves.
+In each scenario, you'll structure migration waves to guide the releases of multiple workloads. Establishing a cloud adoption plan and Azure landing zones through the Plan and Ready methodologies helps to add structure to your migration waves.
 
-During each iteration, follow the Migrate methodology to assess workloads, deploy workloads, and release workloads. To modify those processes to fit your specific scenarios, click on any of the migration scenarios listed above.
+During each iteration, follow the Migrate methodology to assess, deploy, and release workloads. To modify those processes to fit your organization's specific scenario, select any of the migration scenarios listed in the table.
 
 ## Next steps
 
-If you aren't migrating a specific scenario, start by following the [four-step CAF migration process](../migrate/index.md).
+If you aren't migrating a specific scenario, start by following the [four-step Cloud Adoption Framework migration process](../migrate/index.md).

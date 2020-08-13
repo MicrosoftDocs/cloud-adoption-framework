@@ -11,35 +11,35 @@ ms.subservice: strategy
 
 # Migrate or deploy Windows Virtual Desktop instances to Azure
 
-Migrating end-user desktops to the cloud is a common scenario in cloud migrations. This scenario enables productivity boosts and accelerates the migration of various workloads to support the end-user experience.
+Migrating an organization's end-user desktops to the cloud is a common scenario in cloud migrations. Doing so helps improve employee productivity and accelerate the migration of various workloads to support the organization's user experience.
 
 ## Strategy and motivations
 
-Virtual desktop migrations are motivated by a few common target outcomes, pictured and listed below:
+Virtual desktop migrations are motivated by a few common target outcomes, as shown and listed here:
 
-![Motivations for virtual desktop migration](../../_images/migrate/wvd/motivations.png)
+![List of motivations for virtual desktop migration.](../../_images/migrate/wvd/motivations.png)
 
-- There is a clear desire to extend productivity to PC, phones, tablets, or browsers that might not be under the direct control of IT.
-- End users have a need to access corporate data and applications from their devices.
-- As workloads are migrated to the cloud, end users need more support to have a low-latency, performant experience.
-- Cost of current or proposed virtual desktop experiences needs to be optimized so you can scale remote work cost effectively.
-- The IT team wants to transform the workplace, which often starts with transforming the end-user experience.
+- Organizations want to extend productivity to PCs, phones, tablets, or browsers that might not be under the direct control of the IT team.
+- Employees need to access corporate data and applications from their devices.
+- As workloads are migrated to the cloud, employees need more support for a low-latency, more optimized experience.
+- The costs of current or proposed virtual desktop experiences need to be optimized to help organizations scale their remote work more effectively.
+- The IT team wants to transform the workplace, which often starts with transforming employees' user experience.
 
-Virtualization of the end-user desktops in the cloud can help realize each of these motivations.
+Virtualization of your end users' desktops in the cloud can help your team realize each of these outcomes.
 
-## Approach: WVD refactor and modernization
+## Approach: Windows Virtual Desktop refactor and modernization
 
-In the approach outlined in this article, the existing citrix, VMware, or remote desktop service (RDS) farms will be modernized to use a platform as a service (PaaS) solution, called Windows Virtual Desktop (WVD).
+In the approach outlined in this article series, the existing Citrix, VMware, or Remote Desktop Services farms are modernized and replaced with a platform as a service solution called Windows Virtual Desktop.
 
-In this approach, the management of virtual desktops is modernized and replaced with the platform as a service offering in Azure, called Windows Virtual Desktop. The desktop image is either migrated to Azure or new images are generated. The user profile is also migrated to Azure or a new profile is created. For the most part, the client solution is enabled but largely unchanged by this migration effort.
+In this scenario, desktop images are either migrated to Azure or new images are generated. Similarly, user profiles are either migrated to Azure or new profiles are created. For the most part, the client solution is enabled but largely unchanged by this migration effort.
 
-![Solution diagram for virtual desktop migration scenario](../../_images/migrate/wvd/scenario-solution.png)
+![Diagram of the virtual desktop migration scenario.](../../_images/migrate/wvd/scenario-solution.png)
 
-When finished the overhead and costs of managing a virtual desktop farm is replaced with cloud-native solution, which manages the virtual desktop experience for customers. Your team only has to be concerned with support of the desktop images, available applications, Azure Active Directory, and user profiles.
+When the migration to the cloud is finished, the overhead and costs of managing a virtual desktop farm are replaced with a cloud-native solution that manages the virtual desktop experience for your team. The team needs to be concerned only with support of the desktop images, available applications, Azure Active Directory, and user profiles.
 
-## Next step: Integrate this strategy into your cloud adoption journey
+## Next steps
 
-The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey.
+For guidance on specific elements of the cloud adoption journey, see:
 
 - [Plan for Windows Virtual Desktop migration or deployment](./plan.md)
 - [Review your environment or Azure landing zone(s)](./ready.md)
