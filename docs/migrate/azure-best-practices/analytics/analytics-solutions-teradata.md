@@ -132,7 +132,7 @@ Use the metadata from the Teradata catalog tables to determine whether any of th
 
 Third-party vendors offer tools and services that can automate migration, including mapping data types between platforms. If you already use a third-party ETL tool like Informatica or Talend in the Teradata environment, you can use the tool to implement any required data transformations.
 
-## SQL DML syntax differences
+## SQL Data Manipulation Language (DML) syntax differences
 
 You should be aware of a few differences in SQL Data Manipulation Language (DML) syntax between Teradata SQL and Azure Synapse:
 
@@ -192,11 +192,11 @@ Here's more information about migrating functions, stored procedures, triggers, 
 
 Consider the following information when you plan how to extract metadata and data from the Teradata environment:
 
-- **Data Definition Language (DDL) generation**: As described earlier, you can edit existing Teradata `CREATE TABLE` and `CREATE VIEW` scripts to create the equivalent definitions, with modified data types, if necessary. In this scenario, you usually must remove extra Teradata-specific clauses (for example, `FALLBACK`).
+- **Data Definition Language (DDL) generation**: As described earlier, it's possible to edit existing Teradata `CREATE TABLE` and `CREATE VIEW` scripts to create the equivalent definitions, with modified data types, if necessary. In this scenario, you usually must remove extra Teradata-specific clauses (for example, `FALLBACK`).
 
   The information that specifies the current table and view definitions is maintained in system catalog tables. System catalog tables are the best source of the information because the tables likely are up to date and complete. User-maintained documentation might not be in sync with current table definitions.
 
-  You can access the information by using views on the catalog, such as `DBC.ColumnsV`. You also can use views to generate the equivalent `CREATE TABLE` DDL statements for the equivalent tables in Azure Synapse.  
+  You can access the information by using views on the catalog, such as `DBC.ColumnsV`. You also can use views to generate the equivalent `CREATE TABLE` Data Definition Language (DDL) statements for the equivalent tables in Azure Synapse.  
 
   Third-party migration and ETL tools also use the catalog information to achieve the same result.
 
