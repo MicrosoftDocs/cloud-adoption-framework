@@ -1,6 +1,6 @@
 ---
 title: "Plan your Azure Stack Hub migration"
-description: Plan your Azure Stack Hub migration
+description: Plan your Azure Stack Hub migration.
 author: BrianBlanchard
 ms.author: brblanch
 ms.date: 05/19/2020
@@ -24,7 +24,7 @@ Alignment of your organization's digital estate starts with a few simple questio
 - How will data privacy affect data migration?
 - Is migration defined as a modernization journey?
 - If so, have you defined the next steps and the goals required after the migration?
-- What are the service-level agreement (SLA), recovery point objective (RPO), recovery time objective (RTO), and availability requirements?
+- What are the service-level agreement, recovery point objective, recovery time objective, and availability requirements?
 
 For some workloads, your answers to these questions will fuel conversations about the value of Azure versus Azure Stack Hub for that workload.
 
@@ -41,7 +41,7 @@ The following resources can help your team understand the differences between Az
 - [Azure Stack overview and roadmap](https://azure.microsoft.com/resources/videos/ignite-2018-azure-stack-overview-and-roadmap/)
 - [Azure Stack capacity planning](https://docs.microsoft.com/azure/azure-stack/capacity-planning)
 - [Azure Stack Hub datacenter integration walkthrough](https://docs.microsoft.com/azure-stack/operator/azure-stack-customer-journey)
-- [Azure Stack virtual machine (VM) features](https://docs.microsoft.com/azure-stack/user/azure-stack-vm-considerations?view=azs-1910)
+- [Azure Stack virtual machine features](https://docs.microsoft.com/azure-stack/user/azure-stack-vm-considerations?view=azs-1910)
 
 When you understand the best platform for each workload, you can integrate your decisions into a [cloud adoption plan](../../plan/template.md) to manage public and private cloud migrations as one aligned effort.
 
