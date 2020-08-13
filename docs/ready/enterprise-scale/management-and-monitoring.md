@@ -25,8 +25,8 @@ _Figure 1: Platform management and monitoring._
 
 - Use an Azure Monitor Log Analytics workspace as an administrative boundary.
 - Application-centric platform monitoring, encompassing both hot and cold telemetry paths for metrics and logs, respectively:
-  - Operating system metrics, for example, performance counters and custom metrics
-  - Operating system logs, for example, Internet Information Services, Event Tracing for Windows, and syslogs
+  - Operating system metrics; for example, performance counters and custom metrics
+  - Operating system logs; for example, Internet Information Services, Event Tracing for Windows, and syslogs
   - Resource health events
 - Security audit logging and achieving a horizontal security lens across your organization's entire Azure estate:
   - Potential integration with on-premises security information and event management (SIEM) systems such as ServiceNow or ArcSight
@@ -49,7 +49,7 @@ _Figure 1: Platform management and monitoring._
 
 - Use a single [monitor logs workspace](https://docs.microsoft.com/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally except where role-based access control (RBAC) and data sovereignty requirements mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams. Logging centralization drives reports about change management, service health, configuration, and most other aspects of IT operations. Converging on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
-    In the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This emphasis doesn't prevent the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular RBAC is enforced to ensure app teams will only have access to the logs from their resources. In this model, app teams benefit from the use of existing platform infrastructure by reducing their management overhead. For any non-compute resources (such as web apps or Azure Cosmos DB databases), application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.
+    In the context of the enterprise-scale architecture, centralized logging is primarily concerned with platform operations. This emphasis doesn't prevent the use of the same workspace for VM-based application logging. With a workspace configured in resource-centric access control mode, granular RBAC is enforced to ensure app teams will only have access to the logs from their resources. In this model, app teams benefit from the use of existing platform infrastructure by reducing their management overhead. For any non-compute resources such as web apps or Azure Cosmos DB databases, application teams can use their own Log Analytics workspaces and configure diagnostics and metrics to be routed here.
 
 <!-- docsTest:ignore WORM -->
 
