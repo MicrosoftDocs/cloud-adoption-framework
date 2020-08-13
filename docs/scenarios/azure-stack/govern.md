@@ -17,7 +17,7 @@ The business processes, disciplines, and many of the best practices outlined in 
 
 ## Azure Stack Hub governance considerations
 
-The following series of blogs show how your organization can implement cloud governance concepts for Azure Stack Hub:
+The following series of blogs shows how your organization can implement cloud governance concepts for Azure Stack Hub:
 
 - [Organizational services](https://azure.microsoft.com/blog/azure-stack-iaas-part-seven/) such as resource groups, role-based access control (RBAC), change auditing, locks, and tags.
 - [Security services](https://azure.microsoft.com/blog/azure-stack-iaas-part-four/), including default firewalls, restrictions, VM updates and patch management, and malware status.
