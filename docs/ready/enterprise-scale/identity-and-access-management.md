@@ -11,7 +11,7 @@ ms.subservice: ready
 
 # Identity and access management
 
-Identity provides the basis of a large percentage of security assurance. Identity enables access based on identity authentication and authorization controls in cloud services to protect data and resources and to decide which requests should be permitted.
+Identity provides the basis of a large percentage of security assurance. It enables access based on identity authentication and authorization controls in cloud services to protect data and resources and to decide which requests should be permitted.
 
 Identity and access management (IAM) is boundary security in the public cloud. It must be treated as the foundation of any secure and fully compliant public cloud architecture. Azure offers a comprehensive set of services, tools, and reference architectures to enable organizations to make highly secure, operationally efficient environments as outlined here.
 
@@ -44,7 +44,7 @@ _Figure 1: Identity and access management._
 
 **Design recommendations:**
 
-- Use Azure AD [RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to manage data-plane access to resources where possible. Examples are Azure Key Vault, a storage account, or a SQL database.
+- Use Azure AD [RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to manage data-plane access to resources, where possible. Examples are Azure Key Vault, a storage account, or a SQL database.
 - Deploy Azure AD conditional-access policies for any user with rights to Azure environments. Doing so provides another mechanism to help protect a controlled Azure environment from unauthorized access.
 - Enforce multifactor authentication (MFA) for any user with rights to the Azure environments. MFA enforcement is a requirement of many compliance frameworks. It greatly lowers the risk of credential theft and unauthorized access.
 - Use [Azure AD Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure) to establish zero standing access and least privilege. Map your organization's roles to the minimum level of access needed. Azure AD PIM can either be an extension of existing tools and processes, use Azure native tools as outlined, or use both as needed.
