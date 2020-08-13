@@ -11,7 +11,7 @@ ms.subservice: migrate
 
 # Windows Virtual Desktop post-deployment
 
-The release process for the migration or deployment Windows Virtual Desktop instances is relatively straightforward. This process mirrors the one used during the [Windows Virtual Desktop proof of concept](./proof-of-concept.md):
+The release process for the migration or deployment of Windows Virtual Desktop instances is relatively straightforward. This process mirrors the one that's used during the [Windows Virtual Desktop proof of concept](./proof-of-concept.md):
 
 - Test the performance and latency of application groups and deployed desktops for a sampling of users.
 - Onboard end users to teach them how to connect via:
@@ -25,7 +25,7 @@ The release process for the migration or deployment Windows Virtual Desktop inst
 
 After the release has been completed, it's common to add [logging and diagnostics to better operate Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/diagnostics-log-analytics#push-diagnostics-data-to-your-workspace). It's also common for operations teams to onboard the pooled hosts and desktop virtual machines into the [Azure server management best practices](../../manage/azure-server-management/index.md) to manage reporting, patching, and business continuity and disaster recovery configurations.
 
-Although the release process is out of scope for this migration scenario, the process might expose the need to migrate additional workloads to Azure during subsequent iterations of migration. If you haven't configured Office 365 or Azure Active Directory (Azure AD), your cloud adoption team might choose to onboard into those services upon release of desktop scenarios. For a hybrid operating model, operations teams might also choose to integrate Intune, System Center, or other configuration management tools to improve operations, compliance, and security.
+Although the release process is out of scope for this migration scenario, the process might expose the need to migrate additional workloads to Azure during subsequent iterations of migration. If you haven't configured Office 365 or Azure Active Directory, your cloud adoption team might choose to onboard into those services upon the release of the desktop scenarios. For a hybrid operating model, operations teams might also choose to integrate Intune, System Center, or other configuration management tools to improve operations, compliance, and security.
 
 ## Next steps
 
