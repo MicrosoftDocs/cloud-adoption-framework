@@ -11,9 +11,9 @@ ms.subservice: operate
 
 # Manage workloads that run on Azure Stack Hub
 
-Operations and management of hybrid solutions across public and private cloud platforms is complex and could introduce risk to business operations. Because Azure Stack Hub is your organization's private instance of Azure running in your datacenter, the risk of hybrid operations is greatly reduced.
+Operations and management of hybrid solutions across public and private cloud platforms is complex and could introduce risk to business operations. Because the Azure Stack hub is your organization's private instance of Azure running in your datacenter, the risk of hybrid operations is greatly reduced.
 
-As outlined in the [*Manage* methodology](../../manage/index.md) of the Cloud Adoption Framework, suggested operations management activities focus on the following list of core responsibilities. The same responsibilities hold true for the operations management teams that support Azure Stack Hub.
+As outlined in the [Manage methodology](../../manage/index.md) of the Cloud Adoption Framework, suggested operations management activities focus on the following list of core responsibilities. The same responsibilities hold true for the operations management teams that support Azure Stack Hub.
 
 - **Inventory and visibility**: Create an inventory of assets across multiple clouds. Develop visibility into the run state of each asset.
 - **Operational compliance**: Establish controls and processes to ensure that each state is properly configured and running in a well-governed environment.
