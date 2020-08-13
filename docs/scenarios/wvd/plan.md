@@ -17,7 +17,7 @@ Windows Virtual Desktop and deployment scenarios follow the same Migrate methodo
 
 ## Plan your migration
 
-As they do for other migrations, the team will assess workloads, deploy them, and then release them to end users. However, Windows Virtual Desktop includes specific requirements that will necessitate a review of the Azure landing zones during the assessment of the workloads. The process will also require a proof of concept prior to the first deployment.
+As with other migrations, your team will assess workloads, deploy them, and then release them to end users. However, Windows Virtual Desktop includes specific requirements that will necessitate a review of the Azure landing zones during the assessment of the workloads. The process will also require a proof of concept prior to the first deployment.
 
 To build your plan, see the [cloud adoption plan DevOps template](../../plan/template.md) for an existing migration backlog in Azure DevOps. Use the template to create a detailed plan of activities.
 
