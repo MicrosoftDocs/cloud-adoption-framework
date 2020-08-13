@@ -11,9 +11,9 @@ ms.subservice: govern
 
 # Govern an Azure instance in your datacenter
 
-Governing hybrid solutions across public and private cloud platforms adds complexity. Because Azure Stack Hub is your own private instance of Azure running in your datacenter, that complexity is inherently reduced.
+Governing hybrid solutions across public and private cloud platforms adds complexity. Because your Azure Stack hub is your own private instance of Azure running in your datacenter, that complexity is inherently reduced.
 
-The business processes, disciplines, and many of the best practices outlined in the [govern methodology](../../govern/index.md) of the Cloud Adoption Framework can still be applied to hybrid governance with Azure Stack Hub. Many cloud-native tools used in the public cloud version of Azure can also be used in Azure Stack Hub.
+The business processes, disciplines, and many of the best practices outlined in the [govern methodology](../../govern/index.md) of the Cloud Adoption Framework can still be applied to hybrid governance with Azure Stack Hub. Many cloud-native tools used in the public cloud version of Azure can also be used in your Azure Stack hub.
 
 ## Azure Stack Hub governance considerations
 
