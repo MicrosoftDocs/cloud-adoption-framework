@@ -21,7 +21,7 @@ The following series of blogs show how your organization can implement cloud gov
 
 - [Organizational services](https://azure.microsoft.com/blog/azure-stack-iaas-part-seven/) such as resource groups, role-based access control (RBAC), change auditing, locks, and tags.
 - [Security services](https://azure.microsoft.com/blog/azure-stack-iaas-part-four/), including default firewalls, restrictions, VM updates and patch management, and malware status.
-- [DevOps options](https://azure.microsoft.com/blog/azure-stack-iaas-part-seven-2/), including infrastructure as code (IaC), a portal with PowerShell and command-line interface (CLI), Azure Application Insights, and integration with Azure DevOps and Jenkins.
+- [DevOps options](https://azure.microsoft.com/blog/azure-stack-iaas-part-seven-2/), including infrastructure as code, a portal with PowerShell and command-line interface, Azure Application Insights, and integration with Azure DevOps and Jenkins.
 
 ## Governance toolchain for Azure Stack Hub
 
@@ -30,7 +30,7 @@ For guidance on applying cloud-native governance tools to Azure Stack Hub enviro
 - [Azure Resource Manager templates and Desired State Configuration](https://docs.microsoft.com/azure-stack/user/azure-stack-arm-templates?view=azs-2002)
 - [PowerShell](https://docs.microsoft.com/azure-stack/user/azure-stack-powershell-overview?view=azs-2002)
 - [Azure Policy](https://docs.microsoft.com/azure-stack/user/azure-stack-policy-module?view=azs-2002)
-- [Role-based access control (RBAC)](https://docs.microsoft.com/azure-stack/user/azure-stack-manage-permissions?view=azs-2002)
+- [Role-based access control](https://docs.microsoft.com/azure-stack/user/azure-stack-manage-permissions?view=azs-2002)
 
 ## Next steps
 
