@@ -24,7 +24,7 @@ As outlined in the [Manage methodology](../../manage/index.md) of the Cloud Adop
 
 ## Considerations for Azure Stack Hub operations management
 
-Some of the standard operations management activities require slightly different technical considerations. The following articles outline those consideration.
+Some of the standard operations management activities require slightly different technical considerations. The following articles outline those considerations.
 
 - [Self-service support](https://azure.microsoft.com/blog/azure-stack-iaas-part-five/) for your customers, including boot diagnostics, screenshots, serial logs, and metrics.
 - [Guest management](https://azure.microsoft.com/blog/azure-stack-iaas-part-one/), including virtual machine (VM) extensions, the ability to run custom code, software inventory, and change tracking.
