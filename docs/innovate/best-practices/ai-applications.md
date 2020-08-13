@@ -29,7 +29,7 @@ Cognitive Services is made up of APIs, SDKs, and services available to help deve
 
 | Service name | Service description |
 | --- | --- |
-| [Computer Vision](https://docs.microsoft.com/azure/cognitive-services/computer-vision/) | Computer Vision  provides you with access to advanced algorithms for processing images and returning information. |
+| [Computer Vision](https://docs.microsoft.com/azure/cognitive-services/computer-vision/) | Computer Vision provides you with access to advanced algorithms for processing images and returning information. |
 | [Custom Vision](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home) | Custom Vision allows you to build custom image classifiers. |
 | [Face](https://docs.microsoft.com/azure/cognitive-services/face/) | The Face service provides access to advanced face algorithms that detect and recognize facial attributes. |
 | [Form Recognizer](https://docs.microsoft.com/azure/cognitive-services/form-recognizer/) (preview) | Form Recognizer identifies and extracts key-value pairs and table data from form documents. It then outputs structured data, which includes the relationships, in the original file. |

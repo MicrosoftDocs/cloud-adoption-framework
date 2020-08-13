@@ -68,7 +68,7 @@ In addition to the key aspects denoted here, the design, configuration, deployme
 
 _Figure 2: Cloud Adoption Framework enterprise-scale landing zone architecture._
 
-Download the [PDF file](https://github.com/microsoft/CloudAdoptionFramework/blob/master/ready/enterprise-scale-architecture.pdf) that contains this architecture diagram.
+Download the [PDF file](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/enterprise-scale-architecture.pdf) that contains this architecture diagram.
 
 ## Next steps
 

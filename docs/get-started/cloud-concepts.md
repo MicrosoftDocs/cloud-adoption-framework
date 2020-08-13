@@ -84,7 +84,7 @@ All existing workloads and assets should be properly named and tagged in accorda
 **Guidance to support deliverable completion:**
 
 - Create a [naming and tagging standard](../ready/azure-best-practices/naming-and-tagging.md).
-- Populate the [naming and tagging conventions workbook](https://archcenter.blob.core.windows.net/cdn/fusion/readiness/CAF%20Readiness%20Naming%20and%20Tagging%20tracking%20template.xlsx) to track decisions.
+- Populate the [naming and tagging conventions tracking template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/ready/naming-and-tagging-conventions-tracking-template.xlsx) to track decisions.
 - [Review and update existing tags in Azure](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-resources).
 - [Enforce tagging policies in Azure](https://docs.microsoft.com/azure/azure-resource-manager/management/tag-policies).
 

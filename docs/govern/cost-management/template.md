@@ -19,7 +19,7 @@ As your discussions progress, use this template's structure as a model for captu
 > [!IMPORTANT]
 > This template is a limited sample. Before updating this template to reflect your requirements, you should review the subsequent steps for defining an effective Cost Management discipline within your cloud governance strategy.
 
-[Download the Cost Management discipline template](https://archcenter.blob.core.windows.net/cdn/fusion/governance/Cost%20Management%20Discipline%20Template.docx)
+[Download the Cost Management discipline template](https://raw.githubusercontent.com/microsoft/CloudAdoptionFramework/master/govern/cost-management-discipline-template.docx)
 
 ## Next steps
 
