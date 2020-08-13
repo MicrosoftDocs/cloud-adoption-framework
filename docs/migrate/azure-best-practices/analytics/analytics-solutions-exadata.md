@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Analytics solutions for Exadata
+title: Azure Synapse Analytics migration for Oracle data warehouse
 description: Use the Cloud Adoption Framework for Azure to learn about migrating an Oracle data warehouse schema to Azure Synapse Analytics.
 author: v-hanki
 ms.author: brblanch
@@ -25,5 +25,5 @@ To maintain or improve performance of your schema after migration, consider perf
 
 A good practice in Azure Synapse includes using data distribution to colocate data to be joined onto the same processing node. Another good practice in Azure Synapse is ensuring that data types of columns to be joined are identical. Using identical joined columns optimizes join processing by reducing the need to transform data for matching. In Azure Synapse, often it isn't necessary to migrate every Oracle index because other features provide high performance. You can instead use parallel query processing, in-memory data, and result set caching and data distribution options that reduce I/O.
 
-SSMA for Oracle that can help you migrate an Oracle data warehouse or data mart to Azure Synapse. SSMA is designed to automate the process of migrating tables, views, and data from an existing Oracle environment. Among other features, SSMA recommends index types and data distributions for target Azure Synapse tables, and it applies data type mappings during migration. Although SSMA isn't the most efficient approach for very high volumes of data, it's useful for smaller tables.
+SSMA for Oracle can help you migrate an Oracle data warehouse or data mart to Azure Synapse. SSMA is designed to automate the process of migrating tables, views, and data from an existing Oracle environment. Among other features, SSMA recommends index types and data distributions for target Azure Synapse tables, and it applies data type mappings during migration. Although SSMA isn't the most efficient approach for very high volumes of data, it's useful for smaller tables.
 
