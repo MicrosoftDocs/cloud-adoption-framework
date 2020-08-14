@@ -1,5 +1,5 @@
 ---
-title: "Azure innovation: Innovate with AI"
+title: 'Azure innovation: Innovate with AI'
 description: Learn about Azure solutions to predict customer needs, automate business processes, discover information lying latent in unstructured data, and engage with customers in new ways to deliver better experiences.
 author: BrianBlanchard
 ms.author: brblanch
@@ -32,7 +32,7 @@ As an innovator, your company has rich information about its business and its cu
  - Discover information that's latent in unstructured data.
  - Engage with customers in new ways to deliver better experiences.
  
- This article introduces a few approaches to innovating with AI. The following table can help you find the best solution, based on your implementation needs.
+ This article introduces a few approaches to innovating with AI. The following table can help you find the best solution for your implementation needs.
 
 | Solution category | Description                                                                                                                              | Required skills              |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
@@ -42,7 +42,7 @@ As an innovator, your company has rich information about its business and its cu
 
 ## Machine learning
 
-Azure provides advanced machine learning capabilities. Build, train, and deploy your machine learning models across the cloud and edge, by using Azure Machine Learning. Develop models faster by using automated machine learning. Use tools and frameworks of your choice, without being locked in.
+Azure provides advanced machine learning capabilities. Build, train, and deploy your machine learning models across the cloud and edge by using Azure Machine Learning. Develop models faster by using automated machine learning. Use tools and frameworks of your choice without being locked in.
 
 For more information, see [Azure Machine Learning overview](https://docs.microsoft.com/azure/machine-learning/overview-what-is-azure-ml) and [Getting started with your first machine learning experiment](https://docs.microsoft.com/azure/machine-learning/tutorial-1st-experiment-sdk-setup). For more information on the open source model format and runtime for machine learning, see [ONNX Runtime](http://onnxruntime.ai).
 
@@ -54,7 +54,7 @@ A data scientist can use Azure Machine Learning to train and build a model by us
 
 1. In the Azure portal, search for and select **Machine Learning**.
 
-1. Select **Add**, and then follow the steps in the portal to create a workspace.
+1. Select **Add**, and follow the steps in the portal to create a workspace.
 
 1. The new workspace provides both low-code and code-driven approaches for data scientists to train, build, deploy, and manage models.
 
@@ -80,9 +80,9 @@ Azure provides a set of pre-built AI services called Cognitive Services to build
 
 ### AI applications
 
-Cognitive Services enables you to incorporate the AI capabilities of vision, speech, language, and decision into your applications. You don't require additional training for predictive models. These services are particularly useful when you have no data scientist on staff to train the predictive model. For some services, no training is required; other services require only minimal training.
+Cognitive Services enables you to incorporate the AI capabilities of vision, speech, language, and decision into your applications. Most predictive models don't require additional training. These services are useful when you don't have data scientists on staff to train the predictive model. Other services require minimal training.
 
-For a list of available services across vision, speech, language, and decision, and the amount of training that might be required, see the [Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-and-machine-learning#service-requirements-for-the-data-model) documentation.
+For more information about the training that might be required and a list of available services across vision, speech, language, and decision-making, see the [Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-and-machine-learning#service-requirements-for-the-data-model) documentation.
 
 #### Action
 

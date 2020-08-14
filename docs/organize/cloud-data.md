@@ -15,9 +15,9 @@ There are multiple audiences involved in an analytics conversation, including th
 
 Azure Synapse Analytics enables the entire business, from the IT stakeholder to the business analyst, to collaborate on analytics solutions and understand cloud data functions. The following sections discuss these roles in more detail.
 
-## DBAs and database architects
+## Database administrators and architects
 
-Database administrators and architects are responsible for the integration and ingestion of data sources into a centralized repository. These experts also handle the administration and performance required for the system, and the accessibility and efficiency of query and analytic modeling against that data.
+Database administrators and architects are responsible for integrating and routing data sources into a centralized repository. These experts also handle the administration and performance required for the system, and the accessibility and efficiency of query and analytic modeling against that data.
 
 Using Azure Synapse Analytics, database administrators can match their expanding responsibilities for data warehouses and data lakes. They can use familiar languages and tools, such as T-SQL, to run as many workloads as they want. They can assign resources to escalate critical workloads based on intelligent workload importance, workload isolation, and enhanced concurrency capabilities.
 
@@ -52,11 +52,11 @@ Using Azure Synapse Analytics, data scientists can build proofs of concept in mi
 
 ## Business analysts
 
-These teams build and use dashboards, reports, and other forms of data visualization to gain rapid insights required for operations. Often, each line-of-business department will have dedicated business analysts, who gather and package information and analytics from specialized applications. These specialized apps can be for credit cards, retail banking, commercial banking, treasury, marketing, and other organizations.  
+These teams build and use dashboards, reports, and other forms of data visualization to gain rapid insights required for operations. Often, each line-of-business department will have dedicated business analysts who gather and package information and analytics from specialized applications. These specialized apps can be for credit cards, retail banking, commercial banking, treasury, marketing, and other organizations.  
 
 Using Azure Synapse Analytics, business analysts can securely access datasets and use Power BI to build dashboards. They can also securely share data within and outside their organization through Azure Data Share.
 
 ## Executives
 
-Executives are responsible for charting strategy and ensuring strategic initiatives are implemented effectively, across both IT and line-of-business departments. Solutions must be cost-effective, prevent disruption to the business, allow for easy extensibility as requirements change and grow, and deliver results to the business.
+Executives are responsible for charting strategy and ensuring strategic initiatives are implemented effectively across both IT and line-of-business departments. Solutions must be cost-effective, prevent disruption to the business, allow for easy extensibility as requirements change and grow, and deliver results to the business.
 
