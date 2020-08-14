@@ -32,7 +32,7 @@ The [Govern methodology](../../govern/index.md) provides overall guidance for bu
 
 ## Next steps
 
-Cloud adoption will continue to expand with each wave or release of new workloads. To stay ahead of these requirements, it is suggested that cloud platform teams periodically [review additional landing zone best practices](../azure-best-practices/index.md).
+Cloud adoption will continue to expand with each wave or release of new workloads. To stay ahead of these requirements, cloud platform teams should periodically review additional landing zone best practices.
 
 > [!div class="nextstepaction"]
 > [Review additional landing zone best practices](../azure-best-practices/index.md)
