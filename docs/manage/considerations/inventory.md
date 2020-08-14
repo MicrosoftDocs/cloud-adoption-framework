@@ -107,7 +107,7 @@ Offline processes and communication about commitments to business stakeholders o
 
 ### IT Service Management (ITSM) integration
 
-ITSM integration is often the first example of acting on inventory and visibility. When deviations from expected performance patterns arise, ITSM integration uses alerts from the cloud platform to trigger tickets in a separate service management tool to trigger remediation activities. Some operating models might require ITSM integration as an aspect of the enhanced management baseline.
+ITSM integration is often the first example of acting on inventory and visibility. When deviations from expected performance patterns arise, ITSM integration uses alerts from the cloud platform to trigger tickets in a separate Service Management tool to trigger remediation activities. Some operating models might require ITSM integration as an aspect of the enhanced management baseline.
 
 ### Data centralization
 
