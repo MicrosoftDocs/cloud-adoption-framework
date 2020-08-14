@@ -431,7 +431,7 @@ Learn more about the Azure capabilities discussed in this document.
         [Azure Front Door][azure-front-door] <br>
         [Azure Load Balancer (L4)][ALB] <br>
         [Application Gateway (L7)][AppGW] <br>
-        [Azure Traffic Manager][azure-traffic-manager] <br>
+        [Azure Traffic Manager][azure-traffic-manager]
     :::column-end:::
     :::column:::
         **Connectivity** <br>
@@ -439,7 +439,7 @@ Learn more about the Azure capabilities discussed in this document.
         [Virtual Private Network][VPN] <br>
         [Virtual WAN][virtual-wan] <br>
         [ExpressRoute][ExR] <br>
-        [ExpressRoute Direct][ExRD] <br>
+        [ExpressRoute Direct][ExRD]
     :::column-end:::
 :::row-end:::
 
@@ -449,20 +449,20 @@ Learn more about the Azure capabilities discussed in this document.
         [Azure Active Directory][azure-ad] <br>
         [Multi-Factor Authentication][multi-factor-authentication] <br>
         [Role-Based Access Control][RBAC] <br>
-        [Default Azure AD Roles][Roles] <br>
+        [Default Azure AD Roles][Roles]
     :::column-end:::
     :::column:::
         **Monitoring** <br>
         [Network Watcher][NetWatch] <br>
         [Azure Monitor][MonitorOverview] <br>
-        [Log Analytics][LogAnalytics] <br>
+        [Log Analytics][LogAnalytics]
     :::column-end:::
     :::column:::
         **Best practices** <br>
         [Management Group][MgmtGrp] <br>
         [Subscription Management](../ready/azure-best-practices/scale-subscriptions.md) <br>
         [Resource Group Management][RGMgmt] <br>
-        [Azure Subscription Limits][limits] <br>
+        [Azure Subscription Limits][limits]
     :::column-end:::
 :::row-end:::
 
@@ -473,7 +473,7 @@ Learn more about the Azure capabilities discussed in this document.
         [Firewall Manager][AzFWMgr] <br>
         [Application Gateway WAF][AppGWWAF] <br>
         [Front Door WAF][AFDWAF] <br>
-        [Azure DDoS][DDoS] <br>
+        [Azure DDoS][DDoS]
     :::column-end:::
     :::column:::
         **Other Azure services** <br>
