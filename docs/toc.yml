@@ -189,8 +189,8 @@ items:
       items:
       - name: Overview
         href: operating-model/index.md
-      - name: Help defining your operating model
-        href: operating-model/methodologies.md
+      - name: Define your operating model
+        href: operating-model/define.md
       - name: Compare common cloud operating models
         href: operating-model/compare.md
       - name: Common operating model terms

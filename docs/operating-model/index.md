@@ -10,11 +10,12 @@ ms.subservice: overview
 ms.custom: operating-model
 ---
 
-<!-- cspell:ignore GRC reimagine -->
+<!-- docsTest:ignore GRC -->
+<!-- cspell:ignore reimagine -->
 
 # Understand cloud operating models
 
-Adopting the cloud creates an opportunity to revisit how you operate technology systems. This article series will clarify cloud operating models and the considerations that impact your cloud adoption strategy. But first, let's clarify the term _cloud operating model_.
+Adopting the cloud creates an opportunity to revisit how you operate technology systems. This article series will clarify cloud operating models and the considerations that impact your cloud adoption strategy. But first, let's clarify the term *cloud operating model*.
 
 ## Define your operating model
 
@@ -22,7 +23,7 @@ Before deploying your cloud architecture, it's important to understand how you w
 
 ## What is an operating model?
 
-Prior to the existence of cloud technologies, technology teams established operating models to define how technology would support the business. Any company's IT operating model has a number of factors, but a few remain consistent: *Alignment to business strategy, organization of people, change management (or adoption processes), operations management, governance/compliance, and security*. Each factor is essential to long-term technology operations.
+Prior to the existence of cloud technologies, technology teams established operating models to define how technology would support the business. Any company's IT operating model has a number of factors, but a few remain consistent: *alignment to business strategy, organization of people, change management (or adoption processes), operations management, governance/compliance, and security*. Each factor is essential to long-term technology operations.
 
 When technology operations shift to the cloud, these vital processes are still relevant, but they're likely to change in some ways. Current operating models focus heavily on physical assets in physical locations funded largely through capital expenditure cycles. These assets are used to support the workloads that the business needs to maintain business operations. The mission of most operating models is to prioritize stability of the workloads by investing in the stability of the underlying physical assets.
 
@@ -48,7 +49,7 @@ If you updated your operating model to remove every reference to the procurement
 
 To help you imagine your future state operating model, these articles discuss the following subjects:
 
-- [Define your cloud operating model](./methodologies.md)
+- [Define your cloud operating model](./define.md)
 - [Compare common cloud operating models](./compare.md)
 - [Implement your operating model with Azure landing zones](../ready/landing-zone/implementation-options.md)
 
